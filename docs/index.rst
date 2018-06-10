@@ -3,7 +3,9 @@ Welcome to the Android APS documentation
 
 What is AndroidAPS?
 
-Primary goals that made this app to be born:
+AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of OpenAPS "oref0" algorithm.
+
+Primary goals behind AndroidAPS:
 
 * modular app where is possible to easy add new modules without touching the rest of code
 * app that allow localization
@@ -36,14 +38,13 @@ What you need to get started:
 	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
 
 	Please note - this project has no association with and is not endorsed by:
-
 - `SOOIL <http://www.sooil.com/eng/>`_
 - `Dexcom <http://www.dexcom.com/>`_
 - `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
    :caption: Getting Started with AndroidAPS
 
@@ -57,7 +58,7 @@ What you need to get started:
    How to help </Getting-Started/How-can-I-help.md>
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
    :caption: How to Install AndroidAPS
 
@@ -67,7 +68,7 @@ What you need to get started:
  
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
    :caption: Configuration 
    
@@ -81,7 +82,7 @@ What you need to get started:
    Sensitivity Detection and COB </Configuration/Sensitivity-detection-and-COB.md>
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
    :caption: Usage
     
@@ -95,7 +96,7 @@ What you need to get started:
    Dev branch </Usage/Dev-branch.md>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
    :caption: Where to go for help 
 
