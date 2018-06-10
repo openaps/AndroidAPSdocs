@@ -165,7 +165,6 @@ html_theme_path = []
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #html_logo = None
-html_logo = '_static/openaps-logo.png'
 html_logo = None
 
 # The name of an image file (relative to this directory) to use as a favicon of
@@ -276,14 +275,13 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'OpenAPS.tex', u'OpenAPS Documentation',
+    (master_doc, 'AndroidAPS.tex', u'AndroidAPS Documentation',
      author, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
-latex_logo = '_static/openaps-logo.png'
+latex_logo = None
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -307,7 +305,7 @@ latex_logo = '_static/openaps-logo.png'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'openaps', u'OpenAPS Documentation',
+    (master_doc, 'AndroidAPS', u'AndroidAPS Documentation',
      [author], 1)
 ]
 
@@ -321,8 +319,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'OpenAPS', u'OpenAPS Documentation',
-     author, 'OpenAPS', 'One line description of project.',
+    (master_doc, 'AndroidAPS', u'AndroidAPS Documentation',
+     author, 'AndroidAPS', 'AndroidAPS Documentation.',
      'Miscellaneous'),
 ]
 
@@ -408,12 +406,12 @@ epub_exclude_files = ['search.html']
 # If false, no index is generated.
 #epub_use_index = True
 
-github_doc_root = 'https://github.com/openaps/docs/tree/master/'
+github_doc_root = 'https://github.com/openaps/AndroidAPSdocs/tree/master/'
 hosted_root = 'http://localhost:8000/'
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
   rtd_version = os.environ.get('READTHEDOCS_VERSION')
-  hosted_root = 'https://openaps.readthedocs.org/en/%s/' % rtd_version
+  hosted_root = 'https://AndroidAPS.readthedocs.org/en/%s/' % rtd_version
 def setup(app):
     app.add_config_value('recommonmark_config', {
             # 'url_resolver': lambda url: github_doc_root + url,
