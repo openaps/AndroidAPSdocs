@@ -1,11 +1,11 @@
 Welcome to the Android APS documentation
 ==============================================
 
-What is AndroidAPS?
+**What is AndroidAPS?**
 
 AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of OpenAPS "oref0" algorithm.
 
-Primary goals behind AndroidAPS:
+**Primary goals behind AndroidAPS:**
 
 * modular app where is possible to easy add new modules without touching the rest of code
 * app that allow localization
@@ -18,7 +18,7 @@ Primary goals behind AndroidAPS:
 * app where is possible easy to add/remove constraints for user safety
 * all-in-one app you need for managing T1D with APS and Nightscout
 
-What you need to get started:
+**What you need to get started:**
 
 * An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
 * An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
@@ -37,10 +37,7 @@ What you need to get started:
 
 	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
 
-	Please note - this project has no association with and is not endorsed by:
-- `SOOIL <http://www.sooil.com/eng/>`_
-- `Dexcom <http://www.dexcom.com/>`_
-- `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_
+	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
 
 
 .. toctree::
