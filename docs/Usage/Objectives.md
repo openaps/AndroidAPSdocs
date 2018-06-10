@@ -1,3 +1,5 @@
+# Understanding the Objectives
+
 AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
 
 If you are upgrading phones then you can export your settings to keep your progress through the objectives; in the three dots in the top right corner select _Export settings_, it will tell you which folder it has saved the file to.  On your new phone copy the file over to that location and then select _Import settings_.  Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to back up your settings frequently just in case.
