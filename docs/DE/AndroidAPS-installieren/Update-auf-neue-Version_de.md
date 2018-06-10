@@ -1,4 +1,4 @@
-# Installieren
+# Update auf neue Version
 
 # Installiere git (falls du es noch nicht hast)
 * jede git Version sollte funktionieren. Zum Beispiel https://git-scm.com/download/win
