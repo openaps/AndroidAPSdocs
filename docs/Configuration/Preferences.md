@@ -1,3 +1,5 @@
+# Preferences
+
 ## Password for settings
 This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences.  To remove the password option then when within the Preferences delete the text within this field.
 ## Patient age
@@ -42,14 +44,14 @@ _Note: As a safety feature, Max Basal IOB is hard-limited to 7u._
 ## Absorption Settings
 If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh.  If you often eat high fat or protein meals you will need to increase your meal absorption time.
 ## Pump settings
-The options here will vary depending on which pump driver you have selected in 'Config Builder'.  Pair and set your pump up according to the [[DanaR Insulin Pump]] or [[DanaRS Insulin Pump]] or [[Accu Chek Combo Pump]] instructions where relevant. If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+The options here will vary depending on which pump driver you have selected in 'Config Builder'.  Pair and set your pump up according to the [DanaR Insulin Pump](/docs/Usage/DanaR-Insulin-Pump) or [DanaRS Insulin Pump](/docs/Usage/DanaRS-Insulin-Pump) or [Accu Chek Combo Pump](/docs/Usage/Accu-Chek-Combo-Pump) instructions where relevant. If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 ## NS Client
 * Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables).  This enables data to be read and written between both the nightscout website and AndroidAPS.  Double check for typos here if you are stuck in Objective 1.
 * 'Log app start to nightscout' will record a note in your careportal entries every time the app is started.  The app should not be needing to start more than once a day, more frequently than this suggests a problem.  
 * 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.  
 * 'Alarm options' allows you to select which default nightscout alarms to use through the app.  For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+)
 ## SMS Communicator
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing.  Further information is described in [[SMS Commands]] but it will only display in Preferences if you have selected this option in the Config Builder.
+This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing.  Further information is described in [SMS Commands](/docs/Usage/SMS-Commands) but it will only display in Preferences if you have selected this option in the Config Builder.
 ## Other
 * You can set defaults for your temp targets here, for the different types of temp target (eating soon and activity).  When you select a temp target then if you choose for example "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [[Open APS features]].  
 * You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
@@ -64,8 +66,8 @@ Enabling this setting is useful when you are using data from unfiltered sources 
 For further tips regarding data smoothing when using xDrip+ as the data source, see [Smoothing Blood Glucose Data in xDrip+](https://github.com/MilosKozak/AndroidAPS/wiki/Smoothing-blood-glucose-data-in-xDrip).
 
 * OpenAPS preferences.json - before changing any of these settings, please view the descriptions of the safety values used and why in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
-* 'Ignore profile switch events' will not send your current AndroidAPS profile to the pump.  It is encouraged not to select this unless you are testing code, as for safety sending profile switch events to the pump's basal profile 1 means than should AndroidAPS stop working or loose connection with the pump then your pump will revert to the same profile as default rather than you having to manually enter it into the pump.  For more information on profiles see [[Profiles]].
+* 'Ignore profile switch events' will not send your current AndroidAPS profile to the pump.  It is encouraged not to select this unless you are testing code, as for safety sending profile switch events to the pump's basal profile 1 means than should AndroidAPS stop working or loose connection with the pump then your pump will revert to the same profile as default rather than you having to manually enter it into the pump.  For more information on profiles see [Profiles](/docs/Usage/Profiles).
 * 'BT Watchdog' select this option if you keep loosing connection with your pump.  When the pump looses connection it will toggle bluetooth off and on for you to improve the connection.
 
 ## Wear Settings
-For more information on the wear watchface settings see [[Watchfaces]].
+For more information on the wear watchface settings see [Watchfaces](/docs/Configuration/Watchfaces).
