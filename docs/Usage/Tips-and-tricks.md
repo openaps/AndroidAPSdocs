@@ -2,7 +2,7 @@
 
 The founding principle of closed looping is that your basal rate and carb ratio is accurate.  All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one off adjustments (exercise, stress etc).  The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal.   If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting.  You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed.  Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
 
-# Practicalities of looping
+## Practicalities of looping
 * If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 * If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
@@ -17,7 +17,7 @@ The founding principle of closed looping is that your basal rate and carb ratio 
   * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
   * [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
-# Batteries
+## Batteries
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does.  It is best to change battery at 25% as communication becomes challenging then.  You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site.  Tricks to increase battery life include:
 * reduce the length of time the LCD stays on (within pump settings menu)
 * reduce the length of time the backlight stays on (within pump settings menu)
@@ -28,7 +28,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 * for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%.  Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
 * see also more tips for [particular types of battery](https://github.com/MilosKozak/AndroidAPS/wiki/Accu-Chek-Combo:-Tipps-for-Basic-usage#battery-type-and-causes-of-short-battery-life) to use for Combo pump
 
-# Changing reservoirs and canulas
+## Changing reservoirs and canulas
 The change of cartridge can not be done via AndroidAPS, but must be carried out as before directly via the pump.
 * Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAAPS and select 'Suspend Loop for 1h'
 * Now disconnect the pump, and change the reservoir as per pump instructions.
