@@ -1,4 +1,6 @@
-# Warum klappt das Koppeln mit der Pumpe in der App “ruffy” nicht?
+# Probleme bei der Ersteinrichtung
+
+## Warum klappt das Koppeln mit der Pumpe in der App “ruffy” nicht?
 Das kann mehrere Ursachen haben. Probiere folgende Schritte aus:
 1. Lege eine **frische bzw. volle Batterie** in die Pumpe ein. Siehe Abschnitt zur Batterie unten.
 Achte darauf, dass die Pumpe direkt neben dem Smartphone liegt.
@@ -12,7 +14,8 @@ Achte darauf, dass die Pumpe direkt neben dem Smartphone liegt.
 1. Falls die Pumpe das Handy überhaupt nicht als möglichen Kommunikationspartner anzeigt, ist der Bluetooth-Stack Deines Smartphones vermutlich nicht kompatibel mit der Pumpe. Stelle sicher, dass Du wirklich ein relativ neues LineageOS ≥ 14.1 oder Android ≥ 8.1 (Oreo) nutzt. Falls möglich, probiere eventuell ein anderes Smartphone aus.
 Eine Liste der bereits erfolgreich eingesetzten Smartphones findest Du unter [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 
-# Pumpe nicht erreichbar. Was kann ich dagegen tun?
-## Alarmierung zur Nicht-Erreichbarkeit der Pumpe aktivieren
+##  Pumpe nicht erreichbar. Was kann ich dagegen tun?
+
+### Alarmierung zur Nicht-Erreichbarkeit der Pumpe aktivieren
 * Stelle sicher, dass in AndroidAPS unter **Einstellungen / Lokale Alarme** der **Alarm, wenn Pumpe nicht erreichbar ist** eingeschaltet ist und setze **Pumpe ist nicht erreichbar Grenze [Min]** auf **31 Minuten**. 
 * Diese Dauer ist lang genug, um das Handy mal versehentlich auf dem Tisch liegen zu lassen, wenn man den Raum verlässt. Auf der anderen Seite ist es gerade etwas länger als eine temporäre Basalrate und wart damit rechtzeitig, wenn die Therapie nicht planmäßig weitergeführt werden kann.
