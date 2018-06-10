@@ -1,5 +1,8 @@
+# Beispiel Konfiguration
+
+
 ![](https://user-images.githubusercontent.com/32912987/34470732-6a3b4b62-ef38-11e7-8428-03e1aec39ee7.png)
-# Beschreibung
+## Beschreibung
 
 In dieser Variante ist das Smartphone **Samsung Galaxy S7** das "Herzstück" und die Schaltzentrale der Loop. Es liest mit der originalen, aber von der Community leicht modifizierten Dexcom-App das kontinuierliche Glukosemesssystem **Dexcom G5** aus und steuert auf Basis dieser Daten über die App "AndroidAPS" (AAPS) die Insulinpumpe **DanaR** von SOOIL (per Handeingabe auf Vorschlag der App oder vollautomatisch nach Eingabe der Mahlzeit-KH). Weitere Geräte werden nicht benötigt.
 
@@ -11,7 +14,7 @@ Das System funktioniert **offline**, also ohne dass zum Betrieb eine Datenverbin
 
 Dennoch werden die Daten bei bestehender Datenverbindung automatisch zu **Nightscout** "in die Cloud" hochgeladen werden, um umfangreiche Auswertungen für den Arztbesuch zu erhalten oder jederzeit die aktuellen Werte mit Familienmitgliedern zu teilen.
 
-# Benötigte Komponenten
+## Benötigte Komponenten
 1. [Samsung Galaxy S7](http://www.samsung.com/de/smartphones/galaxy-s7/overview/)
 
 Bezugsquelle: Elektrofachhandel, Internetshops
@@ -36,7 +39,7 @@ Bezugsquelle: Da die Uhr ein Auslaufmodell ist, muss man im Fachhandel oder im I
 
 Alternativen: [Android Wear Smartwatches](https://github.com/MilosKozak/AndroidAPS/wiki/Smartwatch-Visualisierung_de)
 
-# Nightscout online einrichten
+## Nightscout online einrichten
 [Nightscout.info](http://www.nightscout.info/) ist eine Website, über die die meisten Daten der eingerichteten Loop "in der Cloud" gesammelt werden können. Das ermöglicht umfangreiche Statistiken und Auswertungen, aber auch die Synchronisation der Werte mit weiteren Geräten oder das Teilen der Behandlungsdaten mit Familienmitgliedern, Freunden oder Ärzten.
 
 1. Nightscout über Heroku installieren
@@ -68,27 +71,27 @@ PUMP_URGENT_BATT_P = `26`
 
 > Tipp: Falls eine ältere Version angezeigt wird, z.B. "0.10.1-...", dann muss Nightscout aktualisiert werden. Dazu nach der Anleitung unter [http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) vorgehen. Sollte sich trotz erfolgreichem Update die Versionsanzeige nicht aktualisieren, dann ist noch ein "Redeploy" von Hand erforderlich, siehe die Anleitung [unter http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie/update-my-fork-troubleshooting-part-2](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie/update-my-fork-troubleshooting-part-2).
 
-# Computer/Notebook vorbereiten
+## Computer/Notebook vorbereiten
 Um aus dem frei verfügbaren OpenSource-Quellcode von AAPS eine Android-App selbst erstellen zu können, wird 
 Android Studio auf dem Computer oder Notebook (Windows, Mac, Linux) benötigt > Installieren wie unter
 [https://developer.android.com/studio/install.html](https://developer.android.com/studio/install.html) beschrieben.
 
-# Smartphone einrichten
+## Smartphone einrichten
 <img src="https://user-images.githubusercontent.com/32912987/34470734-6ee34ade-ef38-11e7-9214-337a9c607243.png" width="250">
 
-## Firmware des Samsung Galaxy S7 überprüfen
+### Firmware des Samsung Galaxy S7 überprüfen
 * Menü > Einstellungen > Telefoninfo > Softwareinfo: Hier sollte die getestete Firmware-Version stehen: "Android-Version 7.0 
 * Falls nicht: Menü > Einstellungen > Software-Update durchführen
 
-## Installation von unbekannten Quellen erlauben
+### Installation von unbekannten Quellen erlauben
 Menü > Einstellungen > Gerätesicherheit > Unbekannte Quellen > Schieber nach rechts (= aktiv)
 
 Diese Einstellung sollte aus Sicherheitsgründen wieder auf inaktiv gestellt werden, wenn die Installation aller hier beschriebenen Apps abgeschlossen ist.
 
-## Bluetooth aktivieren
+### Bluetooth aktivieren
 Menü > Einstellungen > Verbindungen > Bluetooth > Schieber nach rechts (= aktiv)
 
-## Dexcom App (modifizierte Version) installieren
+### Dexcom App (modifizierte Version) installieren
 <img src="https://user-images.githubusercontent.com/32912987/34470739-77d835e6-ef38-11e7-9c47-37a71f74e6cc.png" width="250"> <br>
 
 Die Original-App von Dexcom aus dem Google Play Store wird nicht funktionieren, weil sie die Werte nicht an andere Apps weitergibt. Darum ist eine von der Community leicht modifizierte Version erforderlich. Nur sie kann später mit AAPS kommunizieren. Unter [https://github.com/dexcomapp/dexcomapp?files=1](https://github.com/dexcomapp/dexcomapp?files=1) ist eine mmol/l-Version und eine mg/dl-Version der modifizierten Dexcom-App hinterlegt. Vorteil gegenüber frei entwickelten Auslese-Apps wie xDrip+ ist, dass es sich um die vom Hersteller zertifizierte Auslese-/Glukoseberechnungsmethode handelt und "verpasste Werte" nach dem erneuten Verbinden noch aufgefüllt werden (das kann xDrip+ derzeit noch nicht).
@@ -173,6 +176,6 @@ Die Uhr wird wie folgt eingerichtet:
 * In der Smartwatch: Einstellungen > Ziffernblatt ändern > AAPSv2
 * Ggf. beide Geräte einmal neu starten
 
-# Pumpe einrichten
+## Pumpe einrichten
 
 siehe [Einrichtung DanaR für AAPS](https://github.com/MilosKozak/AndroidAPS/wiki/DanaR-Insulinpumpe_de)
