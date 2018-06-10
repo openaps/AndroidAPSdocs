@@ -14,4 +14,4 @@
 ![ConfigBuilder1](https://img1.picload.org/image/dgdgcilr/aaps-config-builder-small.jpg)
 ![ConfigBuilder2](https://img1.picload.org/image/dgdgcila/aaps-config-builder2-small.jpg)
 
-[[/images/objectives.png|alt=Objectives]]
+![Objectives](../images/objectives.png)
