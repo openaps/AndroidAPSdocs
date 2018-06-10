@@ -2,7 +2,7 @@
 .. toctree::
    :maxdepth: 2
    :glob:
-   :caption: Getting Started with AndroidAPS
+   :caption: Getting Started
 
    Safety First </Getting-Started/Safety-first>
    Screenshots </Getting-Started/Screenshots>
