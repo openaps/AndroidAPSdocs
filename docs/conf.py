@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# OpenAPS documentation build configuration file, created by
+# AndroidAPS documentation build configuration file, created by
 # sphinx-quickstart on Mon Mar 21 15:48:05 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -63,9 +63,9 @@ source_suffix = ['.md', '.rst', ]
 master_doc = 'index'
 
 # General information about the project.
-project = u'OpenAPS'
-copyright = u'2017, the #OpenAPS community'
-author = u'the #OpenAPS community'
+project = u'AndroidAPS'
+copyright = u'AndroidAPS community'
+author = u'AndroidAPS community'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -127,26 +127,16 @@ todo_include_todos = True
 # a list of builtin themes.
 #html_theme = 'default`
 
-
-extra_nav_links = {
-  'docs': 'https://github.com/openaps/docs',
-  'openaps': 'https://github.com/openaps/openaps',
-  'dexcom_reader': 'https://github.com/openaps/dexcom_reader',
-  'decocare': 'https://github.com/bewest/decoding-carelink',
-  'openaps.org': 'https://openaps.org/',
-}
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 # alabaster
-theme_github_user = 'openaps'
-theme_github_repo = 'docs'
+theme_github_user = 'openAPS'
+theme_github_repo = 'AndroidAPSdocs'
 html_theme_options = {
   'show_related': True,
   'github_user': theme_github_user,
   'github_repo': theme_github_repo,
-  'logo': 'openaps-logo.png',
-  # TODO: ???? doesn't work?
   'extra_nav_links': extra_nav_links,
 }
 
@@ -155,7 +145,7 @@ html_theme = 'default'
 html_theme_options = {
   'display_github': True,
   'github_user': 'openaps',
-  'github_repo': 'docs',
+  'github_repo': 'AndroidAPSdocs',
 }
 import sphinx_rtd_theme
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path( )]
@@ -175,7 +165,6 @@ html_theme_path = []
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #html_logo = None
-html_logo = '_static/openaps-logo.png'
 html_logo = None
 
 # The name of an image file (relative to this directory) to use as a favicon of
@@ -264,7 +253,7 @@ html_sidebars = {
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'OpenAPSdoc'
+htmlhelp_basename = 'AndroidAPSdocs'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -286,14 +275,13 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'OpenAPS.tex', u'OpenAPS Documentation',
+    (master_doc, 'AndroidAPS.tex', u'AndroidAPS Documentation',
      author, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
-latex_logo = '_static/openaps-logo.png'
+latex_logo = None
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -317,7 +305,7 @@ latex_logo = '_static/openaps-logo.png'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'openaps', u'OpenAPS Documentation',
+    (master_doc, 'AndroidAPS', u'AndroidAPS Documentation',
      [author], 1)
 ]
 
@@ -331,8 +319,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'OpenAPS', u'OpenAPS Documentation',
-     author, 'OpenAPS', 'One line description of project.',
+    (master_doc, 'AndroidAPS', u'AndroidAPS Documentation',
+     author, 'AndroidAPS', 'One line description of project.',
      'Miscellaneous'),
 ]
 
@@ -418,12 +406,12 @@ epub_exclude_files = ['search.html']
 # If false, no index is generated.
 #epub_use_index = True
 
-github_doc_root = 'https://github.com/openaps/docs/tree/master/'
+github_doc_root = 'https://github.com/openaps/AndroidAPSdocs/tree/master/'
 hosted_root = 'http://localhost:8000/'
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
   rtd_version = os.environ.get('READTHEDOCS_VERSION')
-  hosted_root = 'https://openaps.readthedocs.org/en/%s/' % rtd_version
+  hosted_root = 'https://AndroidAPS.readthedocs.org/en/%s/' % rtd_version
 def setup(app):
     app.add_config_value('recommonmark_config', {
             # 'url_resolver': lambda url: github_doc_root + url,
