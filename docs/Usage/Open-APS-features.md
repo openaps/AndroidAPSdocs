@@ -1,3 +1,5 @@
+# OpenAPS Features
+
 Some of the features in AndroidAPS are from OpenAPS oref0 code so please refer to the OpenAPS docs for these:
 * [Advanced Meal Assist (AMA)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama) after you give yourself a meal bolus, the system can high-temp more quickly after a meal bolus IF you enter carbs reliably.  Turn it on in the Config tab, you will need to have completed Objective 7 to use this feature.
 * [Autosens](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode) analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  Turn it on in the Preferences menu, you will need to have completed Objective 6 to use this feature.
