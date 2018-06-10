@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# AndroidAPS documentation build configuration file, created by
-# sphinx-quickstart on Mon Mar 21 15:48:05 2016.
+# AndroidAPS documentation build configuration file
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -253,50 +252,6 @@ html_sidebars = {
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'AndroidAPSdocs'
-
-# -- Options for LaTeX output ---------------------------------------------
-
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
-
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
-
-# Latex figure (float) alignment
-#'figure_align': 'htbp',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'AndroidAPS.tex', u'AndroidAPS Documentation',
-     author, 'manual'),
-]
-
-# The name of an image file (relative to this directory) to place at the top of
-# the title page.
-latex_logo = None
-
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
-#latex_use_parts = False
-
-# If true, show page references after internal links.
-#latex_show_pagerefs = False
-
-# If true, show URL addresses after external links.
-#latex_show_urls = False
-
-# Documents to append as an appendix to all manuals.
-#latex_appendices = []
-
-# If false, no module index is generated.
-#latex_domain_indices = True
 
 
 # -- Options for manual page output ---------------------------------------
