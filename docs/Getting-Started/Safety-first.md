@@ -1,3 +1,5 @@
+# Safety first
+
 **When you decide to build your own closed loop always think about security and impact of all your actions**
 
 ## General
