@@ -1,9 +1,11 @@
-_These instructions are for configuring the app and your pump if you have a DanaR.  Visit [[DanaRS Insulin Pump]] if you have the DanaRS launched in 2017 instead._
+# DanaR Pump
+
+_These instructions are for configuring the app and your pump if you have a DanaR.  Visit [DanaRS Insulin Pump](/docs/Configuration/DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead._
 
 * In the pump go to Main Menu > Setting > User Option
 * Turn on "8. Extended Bolus"
 
-[[https://github.com/MilosKozak/AndroidAPS/wiki/images/danar1.png]]
+![DanaR pump](https://github.com/MilosKozak/AndroidAPS/wiki/images/danar1.png)
 
 * Go to Main Menu > Setting > Discovery
 * In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Default password is either 1234 or 0000).  If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
