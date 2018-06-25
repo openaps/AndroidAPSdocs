@@ -1,15 +1,17 @@
-# Safety first
+# La seguridad es lo primero
 
-**When you decide to build your own closed loop always think about security and impact of all your actions**
+**Cuando decides hacer un sistema de lazo cerrado siempre piensa en la seguridad y el impacto de todas tus acciones **
 
 ## General
 
-* AndroidAPS is a just a tool to help you manage diabetes. Not something you can install and forget!
-* Don't absolutely trust any device taking control of insulin delivery. Watch it all the time, learn how it works and learn how to predict it's actions.
-* Remember the phone paired with pump can do anything with the pump. Dedicate this phone for APS and communication with your child. Do not allow to install other apps and games (!!!) to prevent installing together some unwanted code like trojans, viruses or bots.
-* Install all security updates provided by phone manufacter and Google.
+* AndroidAPS es una herramienta de ayuda al manejo de la diabetes. No algo para instalar y olvidarte 
+*	Nunca confíes en un dispositivo que controla la infusión de insulina. Obsérvalo permanentemente, aprende cómo funciona y cómo predice las acciones.
+*	Recuerda que el teléfono emparejado con la bomba hace todas las acciones. Dedica ese teléfono al APS y a la comunicación con tu hij@. NO permitas la instalación de juegos o otras apps para evitar virus, troyanos...
+*	Instala las actualizaciones del fabricante de tu teléfono y de Google. 
 
-## SMS Communicator
 
-* If you enable SMS Communicator, consider what could happen when the phone enabled for remote commands is stolen! So always protect it at least by PIN code
-* Since AndoridAPS 1.1 you will receive SMS notification of important remote actions like bolus or profile change. Setup at least 2 numbers for SMS communication to be notified about actions of second phone (for case it's stolen)
+## Comunicación SMS 
+
+* Si habilitas la comunicación SMS considera que podría pasar si el móvil se pierde o roba, por lo que protege siempre el móvil con código PIN
+*	Desde AndroidAPS 1.1 recibirás notificaciones de acciones importantes como bolos, o cambios en perfil. Configura al menos 2 números para la comunicación SMS en caso que un teléfono sea robado o perdido. 
+
