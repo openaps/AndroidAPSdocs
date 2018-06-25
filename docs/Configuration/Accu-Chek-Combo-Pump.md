@@ -25,7 +25,7 @@ Please be aware that this is not complete list and reflects personal user experi
 
 ## Limitations
 
-- Extended bolus and multiwave bolus are not supported (see [[Extended Carbs]] instead)
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](https://androidaps.readthedocs.io/en/latest/Usage/Extended-Carbs.html) instead)
 - Only one basal profile is supported.
 - Setting a basal profile other than 1 on the pump, or delivering extended boluses or multiwave
   boluses from the pump interferes with TBRs and forces the loop into low-suspend only mode for 6 hours
@@ -78,11 +78,11 @@ Please be aware that this is not complete list and reflects personal user experi
       recover more quickly from error situations and reduces the amount of vibrations that can occur during
       such errors
 
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-menu-settings.png)
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-pump-options-settings.png)
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-tbr-settings.png)
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-bolus-settings.png)
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-insulin-settings.png)
+![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-menu-settings.png)
+![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-pump-options-settings.png)
+![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-tbr-settings.png)
+![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-bolus-settings.png)
+![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-insulin-settings.png)
 
 - Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org) and use the `combo` branch.
 - Make sure to read the wiki to understand how to setup AndroidAPS.
