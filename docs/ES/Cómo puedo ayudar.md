@@ -19,3 +19,4 @@ En el caso improbable, que lo anterior esté completamente cubierto y queda algo
 **Tengo equipo de repuesto, ¿a dónde lo envío?** Actualmente estamos recopilando "se proporcionará más tarde" para comenzar a distribuirlos para la prueba. Al final del proceso, cualquier equipo sobrante será donado a uno de los grupos de Facebook Pay-for-Forward que existen para apoyar a la comunidad T1. Si desea donar equipo de repuesto, envíe un correo electrónico a developers@androidaps.org y le enviaremos una dirección.
 
 **No tengo efectivo ni equipo, ¿cómo puedo ayudar?** Las habilidades necesarias incluyen diseño gráfico, diseño UX, traductores, editores de wiki o simplemente pagarlo al responder las preguntas simples en gitter y Facebook para permitir a los desarrolladores el tiempo y el espacio para enfocarse en las cosas más duras. 
+
