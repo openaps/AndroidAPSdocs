@@ -20,3 +20,4 @@ En el caso improbable, que lo anterior esté completamente cubierto y queda algo
 
 **No tengo efectivo ni equipo, ¿cómo puedo ayudar?** Las habilidades necesarias incluyen diseño gráfico, diseño UX, traductores, editores de wiki o simplemente pagarlo al responder las preguntas simples en gitter y Facebook para permitir a los desarrolladores el tiempo y el espacio para enfocarse en las cosas más duras. 
 
+
