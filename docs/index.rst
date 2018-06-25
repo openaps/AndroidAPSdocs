@@ -1,31 +1,32 @@
-Welcome to the Android APS documentation
+Bienvenido a la documentación AndroidAPS
 ==============================================
 
-**What is AndroidAPS?**
+**Qué es AndroidAPS?**
 
-AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of OpenAPS "oref0" algorithm.
+AndroidAPS es una app que puede comunicar las bombas de insulina con bluetooth y ejecuta una versión del algoritmo “oref0” de OpenAPS.
 
-**Primary goals behind AndroidAPS:**
+** Objetivos principales **
 
-* modular app where is possible to easy add new modules without touching the rest of code
-* app that allow localization
-* app where we can easy select what will be included in final apk just by easy change and compilation
-* app which support open and closed APS mode
-* app where you can see how APS works: input params, result and final decision
-* allow to add more APS algorithms and let user decide what to use
-* app independent to pump driver and containing "Virtual pump" to allow users safely play with APS
-* app with tight Nightscout integration
-* app where is possible easy to add/remove constraints for user safety
-* all-in-one app you need for managing T1D with APS and Nightscout
+* App modular que sea usable para añadir más módulos sin tocar el resto de código 
+* App que permita la localización
+* App que permita la fácil selección de lo que queremos que la apk final
+* App que permita lazo abierto y cerrado de APS
+* App donde puedas ver cómo funciona APS: los parámetros de entrada, los resultados y las decisiones que toma. 
+* Que permita añadir más algoritmos y permita usuario decidir cuál usar
+* App independiente del driver de la bomba y que contenga una bomba virtual que permita al usuario testear con seguridad APS
+* App con integración con Nightscout
+* App en la que sea posible añadir o eliminar limitaciones para seguridad del usuario
+* Todo en uno-app que necesitas para manejar la diabetes tipo 1 con APS y Nightscout
 
-**What you need to get started:**
 
-* An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+**Qué necesitas para empezar:**
+
+* Teléfono Android 5.0 o superior. Revisar esta `_lista <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`
+* Una app que reciba datos de tu MCG: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
-* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 or later
-* A supported pump: Dana-R or Dana-RS Insulin Pump (unless you build your own driver for other insulin pump) or Accu-Chek Combo (currently in wider testing)
-* A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5, Freestyle Libre, Eversense or Medtronic Guardian
+* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 o posterior
+* Bomba de insulina compatible: Dana-R, Dana-RS o Accu-Check Combo
+* Un monitor continuo de glucosa (MCG): Dexcom G4/G5, Freestyle Libre, Eversense o Medtronic Guardian
 
 
 .. note:: 
@@ -105,7 +106,7 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
    :glob:
    :caption: CZ
    
-   Instrukce v češtině  </CZ/Instrukce-v-češtině.md>
+   Instrukce v češtině  </CZ/Instrukce-v-češtině.md>
 
 .. toctree::
    :maxdepth: 2
@@ -180,7 +181,7 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
 
    Начало </български/Въведение/Начало.md>
    Безопасност </български/Въведение/Безопасност.md>
-   Скрийншоти </български/Въведение/Скрийншоти.md>
+   Скрийншоти </български/Въведение/Скрийншоти.md>
    Архитектура, security implementation </български/Въведение/Архитектура-security-implementation.md>
    Терминология </български/Въведение/Терминология.md>
 
@@ -198,7 +199,7 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
    :caption: Конфигуриране
 
    DanaR инсулинова помпа </български/Конфигуриране/DanaR-инсулинова-помпа.md>
-   Найтскаут (Nightscout) </български/Конфигуриране/Найтскаут-(Nightscout).md>
+   Найтскаут (Nightscout) </български/Конфигуриране/Найтскаут-(Nightscout).md>
    Източник на данни за КЗ </български/Конфигуриране/Източник-на-данни-за-КЗ.md>
    Опции </български/Конфигуриране/Опции.md>
 
@@ -212,7 +213,7 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
    Работа с профили след v1.5 </български/Използване/Работа-с-профили-след-v1.5.md>
    SMS Команди </български/Използване/SMS-Команди.md>
    Съвети и похвати </български/Използване/Съвети-и-похвати.md>
-   Достъп до лог файлове  </български/Използване/Достъп-до-лог-файлове.md>
+   Достъп до лог файлове  </български/Използване/Достъп-до-лог-файлове.md>
 
 .. toctree::
    :maxdepth: 2
