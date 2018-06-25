@@ -15,3 +15,4 @@
 
 * Si habilitas la comunicación SMS considera que podría pasar si el móvil se pierde o roba, por lo que protege siempre el móvil con código PIN
 * Desde AndroidAPS 1.1 recibirás notificaciones de acciones importantes como bolos, o cambios en perfil. Configura al menos 2 números para la comunicación SMS en caso que un teléfono sea robado o perdido. 
+
