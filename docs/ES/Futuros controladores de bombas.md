@@ -90,3 +90,4 @@ Otro
 Otras bombas de insulina
 
 Si tiene otras bombas en las que le gustaría ver el estado, contácteme (@andyrozman en gitter). En futuras versiones, se agregará una gran cantidad de configuraciones de la bomba para que estén abiertas en lazo (podrá seleccionar el tipo de bomba virtual en la configuración y se cargará su configuración - Solicitud de función n.º 863).
+
