@@ -17,12 +17,15 @@ carbohidratos se calcula a partir del tiempo máximo de aborsción de carbohidra
 La sensibilidad se calcula como promedio ponderado de las desviaciones. Las nuevas desviaciones tienen un mayor peso. La absorción mínima de carbohidratos se calcula a partir del tiempo máximo de la absorción de carbohidratos de las preferencias. Este algotimo es más rápido en los siguientes cambios de sensbilidad. 
 
 
-Ejemplo
+### Ejemplos COB 
+
 Oref0- los carbohidratos no absorbidos son cortados después de tiempo específico.
 
-AAPS, peso ponderado – absorción es calculada para tener COB =0 despues de tiempo
-específico. 
+![COB from oref0](../images/cob_oref0.png)
 
+AAPS, peso ponderado – absorción es calculada para tener COB =0 despues de tiempo específico. 
+
+![COB from AAPS](../images/cob_aaps.png)
 
 Si absorción mínima de Carbs es usada en lugar del valor calculado de las desviaciones, un punto verde aparece en la gráfica COB.
 
