@@ -126,11 +126,11 @@ Esta configuración permite el control remoto de la aplicación enviando instruc
 * 'Alertas locales' le permite decidir si recibe una advertencia y a partir de cuánto tiempo no recibe los valores de glucosa en sangre (datos obsoletos) o si la bomba no está disponible. Si con frecuencia recibe alertas de bomba inaccesible, active BT Watchdog en Configuración
 
 
-## Ajustes avanzados “” requiere más trabajo
+## Ajustes avanzados `` requiere más trabajo
 
-### OpenAPS MA 
+* OpenAPS MA 
 
-Siempre utiliza el delta promedio corto en lugar de ... Habilitar esta configuración es útil cuando utiliza datos de orígenes no filtrados como xDrip +, a diferencia de fuentes filtradas como un Dexcom Receiver oficial. Los datos filtrados parecen ser uniformes, mientras que los datos no filtrados pueden parecer oscilantes. Estos datos no filtrados podrían hacer que el AndroidAPS aplique cambios de basal temporal con mayor frecuencia de la que realmente se necesita, ya que el algoritmo de OpenAPS reacciona ante los datos de alto nivel. Con esta configuración habilitada, el algoritmo OpenAPS utilizará el promedio corto delta (el cambio promedio en la glucosa en sangre durante los últimos 15 minutos) en lugar de la última lectura de glucosa en sangre recibida. Esto efectivamente tiene un efecto de "suavizado" en los datos e intenta compensar las lecturas con saltos. Los usuarios de los sensores Abbott Freestyle Libre que recopilan sus datos de glucosa a través de dispositivos como LimiTTers pueden encontrar que esta configuración proporciona mejores resultados con AAPS.
+    * Siempre utiliza el delta promedio corto en lugar de ... Habilitar esta configuración es útil cuando utiliza datos de orígenes no filtrados como xDrip +, a diferencia de fuentes filtradas como un Dexcom Receiver oficial. Los datos filtrados parecen ser uniformes, mientras que los datos no filtrados pueden parecer oscilantes. Estos datos no filtrados podrían hacer que el AndroidAPS aplique cambios de basal temporal con mayor frecuencia de la que realmente se necesita, ya que el algoritmo de OpenAPS reacciona ante los datos de alto nivel. Con esta configuración habilitada, el algoritmo OpenAPS utilizará el promedio corto delta (el cambio promedio en la glucosa en sangre durante los últimos 15 minutos) en lugar de la última lectura de glucosa en sangre recibida. Esto efectivamente tiene un efecto de "suavizado" en los datos e intenta compensar las lecturas con saltos. Los usuarios de los sensores Abbott Freestyle Libre que recopilan sus datos de glucosa a través de dispositivos como LimiTTers pueden encontrar que esta configuración proporciona mejores resultados con AAPS.
 
 Para obtener más consejos sobre el suavizado de datos al utilizar xDrip + como origen de datos, consulte Suavizado de datos de glucosa en sangre en xDrip +.
 
