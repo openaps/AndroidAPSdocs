@@ -1,6 +1,6 @@
 
 
-Contraseña
+## Contraseña
 y ajustes 
 
 Permite
@@ -11,11 +11,7 @@ en preferencias elimina el texto en el campo contraseña.
 
 
 
- 
-
-
-
-Edad
+## Edad
 paciente
 
 Los algoritmos
@@ -24,37 +20,23 @@ adolescente o adulto aquí.
 
 
 
- 
 
+## General
 
-
-General
-
-Selecciona
+* Selecciona
 la lengua aquí. Si no está disponible, o no todas las palabras han sido
 traducidas entonces puedes hacer sugerencias. Los archivos de traducciones
 están disponibles aquí: App>Src>Main>Res>Values>String o
 pregunta en la sala de gitter.
 
-Ajuste
+* Ajuste
 rápido de wizard permite añadir un botón rápido para los snack o comidas,
 introduce los carbohidratos en la pantalla principal y selecciona el botón
 wizard para calcular el bolo para esos carbohidratos basado en tus ratios (no
 teniendo en cuenta glucosa o insulina a bordo)
 
 
-
-
-
- 
-
-
-
- 
-
-
-
-Careportal
+## Careportal
 
 'Introducido por'
 es el texto que se muestra en el campo '' ingresado por ''. Introduzca un
@@ -64,31 +46,17 @@ teléfono que no es el de pacientes, es posible que desee distinguir entre
 propietarios de teléfonos aquí).
 
 
+## Seguridad en los tratamientos
 
  
+### Max bolo permitido [U]
 
-
-
-Seguridad
-en los tratamientos
-
- 
-
-
-
-Max bolo permitido [U]
-
- 
 
 Esta es la cantidad máxima de insulina en bolo que AAPS puede poner. Esta configuración existe como un límite de seguridad para evitar la administración de un bolo masivo debido a una entrada accidental o error del usuario. Se recomienda establecer esto en una cantidad razonable que corresponda aproximadamente a la cantidad máxima de insulina en bolo que probablemente necesitará para una dosis de comida o corrección. Esta restricción también se aplica a los resultados de la Calculadora de bolo.
 
  
 
-Máx. Carbohidratos permitidos [g]
-
- 
-
-
+### Máx. Carbohidratos permitidos [g]
 
 Esta
 es la cantidad máxima de carbohidratos que la calculadora de bolo AAPS puede
@@ -99,16 +67,7 @@ corresponda aproximadamente a la cantidad máxima de carbohidratos que
 probablemente necesite para una comida. 
 
 
-
- 
-
-
-
-Loop
-
- 
-
-
+## Loop
 
 Puede
 alternar entre lazo abierto y cerrado aquí. Abrir lazo significa que las
@@ -121,37 +80,16 @@ al mantener presionado este botón de pantalla de inicio también podrá alterna
 entre los dos.
 
 
+## OpenaAPS AMA
 
- 
-
-
-
-OpenaAPS
-AMA
-
- 
-
-
-
-OpenAPS
-Advanced Meal Assist (AMA) permite que el sistema funcione más agresivamente de
+### OpenAPS Advanced Meal Assist (AMA)### permite que el sistema funcione más agresivamente de
 manera temporal después de un bolo de comida SI se ingresa carbohidratos.
 Enciéndalo en la pestaña de Configuración para ver la configuración de
 seguridad aquí, deberá completar el Objetivo 7 para usar esta función. Puede
 leer más sobre la configuración y Autosens en los documentos de OpenAPS.
 
 
-
- 
-
-
-
-Max U/hr de Temp Basal 
-
-
-
- 
-
+### Max U/hr de Temp Basal 
 
 
 Esta configuración existe
@@ -162,19 +100,8 @@ basal más alta en su perfil y multiplicarla por 4. Por ejemplo, si la tasa
 basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 4 para
 obtener un valor de 2u / hr.
 
-
-
- 
-
-
-
 Max IOB que OpenAPS puede
 proporcionar [U]
-
-
-
- 
-
 
 
 Cantidad
@@ -217,8 +144,6 @@ Puede comenzar de manera conservadora con este valor y aumentarlo lentamente con
 
 Estas son solo pautas; el cuerpo de todos somos diferentes Puede encontrar que necesita más o menos de lo que se recomienda aquí, pero siempre comience de manera conservadora y ajuste lentamente.
 
- 
-
 
 
 Nota:
@@ -226,12 +151,8 @@ Como medida de seguridad, Max Basal IOB está limitada a 7
 
 
 
- 
 
-
-
-Ajustes
-de absorción
+## Ajustes de absorción
 
 Si
 ha seleccionado usar AMA Autosens, podrá ingresar su tiempo máximo de absorción
@@ -241,16 +162,7 @@ de absorción de las comidas.
 
 
 
- 
-
-
-
-Configuración de la bomba
-
-
-
- 
-
+## Configuración de la bomba
 
 
 Las
@@ -262,15 +174,7 @@ asegúrese de haber seleccionado Virtual Pump en config builder.
 
 
 
- 
-
-
-
-NS
-Client
-
- 
-
+## NS Client
 
 
 Establezca su URL de 'nightscout' aquí (https://yourwebsitename.herokuapp.com
@@ -297,16 +201,7 @@ alarmas (por ejemplo, xdrip +)
 
 
 
-
-
-
-
-
- 
-
-
-
-Comunicaciones
+## Comunicaciones
 SMS
 
 Esta
@@ -317,11 +212,8 @@ mostrará en Preferencias si seleccionó esta opción en Config Builder.
 
 
 
- 
 
-
-
-Otros
+## Otros
 
 Puede establecer los valores predeterminados para sus objetivos temporales aquí, para los diferentes tipos de objetivos temporales (eating soon y actividad). Cuando selecciona un objetivo temporal, si elige, por ejemplo, "eating soon" en el cuadro desplegable, automáticamente rellenará la duración y el valor en función de las cifras que proporcionó aquí. Para obtener más información sobre el uso de Objetivos temporales, vea Abrir las características de APS.
 
@@ -338,14 +230,7 @@ inaccesible, active BT Watchdog en Configuración
 
 
 
-
-
- 
-
-
-
-Ajustes
-avanzados “” requiere más trabajo
+## Ajustes avanzados “” requiere más trabajo
 
 OpenAPS MA ◦
 
@@ -365,15 +250,6 @@ con saltos. Los usuarios de los sensores Abbott Freestyle Libre que recopilan
 sus datos de glucosa a través de dispositivos como LimiTTers pueden encontrar
 que esta configuración proporciona mejores resultados con AAPS.
 
-
-
-
-
- 
-
-
-
- 
 
 
 
@@ -397,23 +273,13 @@ más información sobre los perfiles, consulte Perfiles.
 
 'BT Watchdog' seleccione esta opción si sigue perdiendo la conexión con su
 bomba. Cuando la bomba pierda la conexión, activará y desactivará el bluetooth
-para que pueda mejorar la conexión.
+para que pueda mej orar la conexión.
 
 
 
+## Ajustes Wear
 
-
-
-
- 
-
-
-
-Ajustes
-Wear
-
-Para más info ver
-ajustes en Wear watchfaces 
+Para más info ver ajustes en Wear watchfaces 
 
 
 
