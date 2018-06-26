@@ -26,7 +26,7 @@ Section F: enables you to administer a bolus (normally you would use the Calcula
 
 # The Calculator
 
-
+![Homescreen](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Bolus_calculator.png)
 
 
 When you want to make a meal bolus this is where you will normally make it from. 
