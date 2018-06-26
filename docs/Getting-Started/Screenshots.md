@@ -30,3 +30,5 @@ Section F: enables you to administer a bolus (normally you would use the Calcula
 
 
 When you want to make a meal bolus this is where you will normally make it from. 
+
+Section A: contains is where you input the information about the bolus that you want. The 
