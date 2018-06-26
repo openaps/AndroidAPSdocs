@@ -2,7 +2,7 @@
 
 Homescreen
 
-![Overview](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_20180625-211627.png)
+![Overview](https://github.com/roppenheimer/AndroidAPSdocs/blob/patch-3/docs/images/Home_screen.png)
 
 This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
 
