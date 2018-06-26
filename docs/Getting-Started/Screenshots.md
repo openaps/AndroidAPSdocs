@@ -31,4 +31,10 @@ Section F: enables you to administer a bolus (normally you would use the Calcula
 
 When you want to make a meal bolus this is where you will normally make it from. 
 
-Section A: contains is where you input the information about the bolus that you want. The 
+Section A: contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected and the bolus will be delayed. You can put a negative number in this field if you are bolusing for past carbs.
+
+SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
+
+Section B: shows the calculated bolus. If the amount of insulin on boead already exceeds the calculated bolus then it will just display the amount of carbs still required.
+
+Section C: shows the various elements that have been used to calculate the bolus. You can deselect any thaty ou do not want to include but you normally wouldn't want to.
