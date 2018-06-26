@@ -22,4 +22,4 @@ The blue line shows the basal delivery of your pump. The dotted blue line is wha
 
 Section F: is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation (this is the difference between your actual BG and what the system expected it to be).
 
-Section F: enables you to adminsiter a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
+Section F: enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
