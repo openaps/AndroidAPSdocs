@@ -1,6 +1,6 @@
 # Understanding the AndroidAPS screens
 
-Homescreen
+# Homescreen
 
 ![Homescreen](https://github.com/roppenheimer/AndroidAPSdocs/blob/patch-3/docs/images/Home_screen.png)
 
@@ -23,3 +23,10 @@ The blue line shows the basal delivery of your pump. The dotted blue line is wha
 Section F: is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
 
 Section F: enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
+
+# The Calculator
+
+
+
+
+When you want to make a meal bolus this is where you will normally make it from. 
