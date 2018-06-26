@@ -37,4 +37,4 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 
 Section B: shows the calculated bolus. If the amount of insulin on boead already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
-Section C: shows the various elements that have been used to calculate the bolus. You can deselect any thaty ou do not want to include but you normally wouldn't want to.
+Section C: shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
