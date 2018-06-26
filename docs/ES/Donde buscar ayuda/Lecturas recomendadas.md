@@ -1,4 +1,4 @@
-# Lecturas recomedadas sobre lazo cerrados "hazlo tú mismo" o DIY PA
+# Lecturas recomedadas sobre lazos cerrados "hazlo tú mismo" o DIY PA
 
 [http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/](http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/)
 
