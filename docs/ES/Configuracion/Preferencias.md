@@ -1,49 +1,25 @@
 
 
-## Contraseña
-y ajustes 
+## Contraseña y ajustes 
 
-Permite
-establecer una contraseña para prevenir el uso accidental o no autorizado de
-las preferencias. Después de introducir la contraseña aquí se te requerirá
-introducirla para acceder a preferencias. Para eliminar la opción de contraseña
-en preferencias elimina el texto en el campo contraseña. 
+Permite establecer una contraseña para prevenir el uso accidental o no autorizado de las preferencias. Después de introducir la contraseña aquí se te requerirá  introducirla para acceder a preferencias. Para eliminar la opción de contraseña en preferencias elimina el texto en el campo contraseña. 
 
 
+## Edad paciente
 
-## Edad
-paciente
-
-Los algoritmos
-son diferentes dependiendo de la edad del usuario, por tanto, selecciona niño,
-adolescente o adulto aquí.
-
-
+Los algoritmos son diferentes dependiendo de la edad del usuario, por tanto, selecciona niño, adolescente o adulto aquí.
 
 
 ## General
 
-* Selecciona
-la lengua aquí. Si no está disponible, o no todas las palabras han sido
-traducidas entonces puedes hacer sugerencias. Los archivos de traducciones
-están disponibles aquí: App>Src>Main>Res>Values>String o
-pregunta en la sala de gitter.
+* Selecciona la lengua aquí. Si no está disponible, o no todas las palabras han sido traducidas entonces puedes hacer sugerencias. Los archivos de traducciones están disponibles aquí: App>Src>Main>Res>Values>String o pregunta en la sala de gitter.
 
-* Ajuste
-rápido de wizard permite añadir un botón rápido para los snack o comidas,
-introduce los carbohidratos en la pantalla principal y selecciona el botón
-wizard para calcular el bolo para esos carbohidratos basado en tus ratios (no
-teniendo en cuenta glucosa o insulina a bordo)
+* Ajuste rápido de wizard permite añadir un botón rápido para los snack o comidas, introduce los carbohidratos en la pantalla principal y selecciona el botón wizard para calcular el bolo para esos carbohidratos basado en tus ratios (no teniendo en cuenta glucosa o insulina a bordo)
 
 
 ## Careportal
 
-'Introducido por'
-es el texto que se muestra en el campo '' ingresado por ''. Introduzca un
-nombre, ya sea el nombre de la aplicación, el nombre de la persona o el nombre
-del teléfono (por ejemplo, si está usando AndroidAPS como NS Client en un
-teléfono que no es el de pacientes, es posible que desee distinguir entre
-propietarios de teléfonos aquí).
+'Introducido por' es el texto que se muestra en el campo '' ingresado por ''. Introduzca un nombre, ya sea el nombre de la aplicación, el nombre de la persona o el nombre del teléfono (por ejemplo, si está usando AndroidAPS como NS Client en un teléfono que no es el de pacientes, es posible que desee distinguir entre propietarios de teléfonos aquí).
 
 
 ## Seguridad en los tratamientos
@@ -58,10 +34,7 @@ Esta es la cantidad máxima de insulina en bolo que AAPS puede poner. Esta confi
 
 ### Máx. Carbohidratos permitidos [g]
 
-Esta
-es la cantidad máxima de carbohidratos que la calculadora de bolo AAPS puede
-dosificar. Esta configuración existe como un límite de seguridad para evitar la
-administración de un bolo masivo debido a una entrada accidental o error del
+Esta es la cantidad máxima de carbohidratos que la calculadora de bolo AAPS puede dosificar. Esta configuración existe como un límite de seguridad para evitar la administración de un bolo masivo debido a una entrada accidental o error del
 usuario. Se recomienda establecer esto en una cantidad razonable que
 corresponda aproximadamente a la cantidad máxima de carbohidratos que
 probablemente necesite para una comida. 
@@ -118,11 +91,7 @@ Este valor se calcula y monitorea independientemente de su tasa basal normal. So
 
 Este valor se mide en unidades de insulina (u).
 
- 
-
 Cuando comience el lazo cerrado, se recomienda establecer Max Basal IOB en 0 durante un período de tiempo, mientras se está acostumbrando al sistema. Esto evita que AAPS administre insulina basal adicional. Durante este tiempo, AAPS aún podrá limitar o cortar su insulina basal para ayudar a prevenir la hipoglucemia.
-
- 
 
 Este es un paso importante para:
 
@@ -133,84 +102,47 @@ Aproveche la oportunidad de perfeccionar su perfil basal y el Factor de sensibil
 Vea cómo AAPS limita su insulina basal para prevenir la hipoglucemia.
 
  
-
 Cuando se sienta cómodo, puede permitir que el sistema comience a administrarle insulina basal adicional, aumentando el valor de IOB basal máxima. La pauta recomendada para esto es tomar la tasa basal más alta en su perfil y multiplicarla por 3. Por ejemplo, si la tasa basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 3 para obtener un valor de 1.5u. .
-
  
 
 Puede comenzar de manera conservadora con este valor y aumentarlo lentamente con el tiempo.
 
- 
 
 Estas son solo pautas; el cuerpo de todos somos diferentes Puede encontrar que necesita más o menos de lo que se recomienda aquí, pero siempre comience de manera conservadora y ajuste lentamente.
-
 
 
 Nota:
 Como medida de seguridad, Max Basal IOB está limitada a 7
 
 
-
-
 ## Ajustes de absorción
 
-Si
-ha seleccionado usar AMA Autosens, podrá ingresar su tiempo máximo de absorción
-de comidas y la frecuencia con la que desea que autosense se actualice. Si come
-comidas con alto contenido de grasas o proteínas, necesitará aumentar el tiempo
+Si ha seleccionado usar AMA Autosens, podrá ingresar su tiempo máximo de absorción de comidas y la frecuencia con la que desea que autosense se actualice. Si come comidas con alto contenido de grasas o proteínas, necesitará aumentar el tiempo
 de absorción de las comidas.
-
 
 
 ## Configuración de la bomba
 
-
-Las
-opciones aquí variarán según el controlador de la bomba que haya seleccionado
-en 'Config Builder'. Empareje y configure su bomba de acuerdo con la bomba de
-insulina DanaR o la bomba de insulina DanaRS o las instrucciones de la bomba
-Combo Accu Chek cuando corresponda. Si usa AndroidAPS en lazo abierto,
-asegúrese de haber seleccionado Virtual Pump en config builder.
-
+Las opciones aquí variarán según el controlador de la bomba que haya seleccionado en 'Config Builder'. Empareje y configure su bomba de acuerdo con la bomba de insulina DanaR o la bomba de insulina DanaRS o las instrucciones de la bomba Combo Accu Chek cuando corresponda. Si usa AndroidAPS en lazo abierto, asegúrese de haber seleccionado Virtual Pump en config builder.
 
 
 ## NS Client
 
+Establezca su URL de 'nightscout' aquí (https://yourwebsitename.herokuapp.com o https://yourwebsitename.azurewebsites.net), y la 'API secret' (una contraseña de 12 caracteres registrada en sus variables heroku o azul). Esto permite que los datos se lean y escriban entre el sitio web nightscout y AndroidAPS.Verifique si hay errores tipográficos aquí sí está atrapado en el Objetivo 1.
 
-Establezca su URL de 'nightscout' aquí (https://yourwebsitename.herokuapp.com
-o https://yourwebsitename.azurewebsites.net), y la 'API secret' (una contraseña
-de 12 caracteres registrada en sus variables heroku o azul). Esto permite que
-los datos se lean y escriban entre el sitio web nightscout y AndroidAPS.
-Verifique si hay errores tipográficos aquí sí está atrapado en el Objetivo 1.
+'Inicio de sesión de la aplicación de registro en Nightscout' grabará una nota en sus entradas de careportal cada vez que se inicie la aplicación. La aplicación no debería necesitar comenzar más de una vez al día, mayor frecuencia denota un problema.
 
-'Inicio de sesión de la aplicación de registro en Nightscout' grabará una
-nota en sus entradas de careportal cada vez que se inicie la aplicación. La
-aplicación no debería necesitar comenzar más de una vez al día, mayor
-frecuencia denota un problema.
+'Habilitar transmisiones locales' compartirá los datos de su careportal con otras aplicaciones del teléfono, como xdrip.
 
-'Habilitar transmisiones locales' compartirá los datos de su careportal con
-otras aplicaciones del teléfono, como xdrip.
-
-'Opciones de alarma' le permite seleccionar qué alarmas nightscout predeterminadas
-usar a través de la aplicación. Para que suenen las alarmas, debe establecer los valores
-de alarma Urgente alto, Alto, Bajo y Urgente bajo en sus variables heroku o azure.
-Solo funcionarán mientras tenga una conexión a Nightscout y están destinados a
-padres / cuidadores, si tiene la fuente CGM en su teléfono y luego usan esas
-alarmas (por ejemplo, xdrip +)
+'Opciones de alarma' le permite seleccionar qué alarmas nightscout predeterminadas usar a través de la aplicación. Para que suenen las alarmas, debe establecer los valores de alarma Urgente alto, Alto, Bajo y Urgente bajo en sus variables heroku o azure.
+Solo funcionarán mientras tenga una conexión a Nightscout y están destinados a padres / cuidadores, si tiene la fuente CGM en su teléfono y luego usan esas alarmas (por ejemplo, xdrip +)
 
 
 
 
-## Comunicaciones
-SMS
+## Comunicaciones SMS
 
-Esta
-configuración permite el control remoto de la aplicación enviando instrucciones
-por mensaje de texto al teléfono del paciente que la aplicación seguidora, como
-suspender el lazo o el bolo. Más información en Comandos SMS, pero solo se
-mostrará en Preferencias si seleccionó esta opción en Config Builder.
-
-
+Esta configuración permite el control remoto de la aplicación enviando instrucciones por mensaje de texto al teléfono del paciente que la aplicación seguidora, como suspender el lazo o el bolo. Más información en Comandos SMS, pero solo se mostrará en Preferencias si seleccionó esta opción en Config Builder.
 
 
 ## Otros
@@ -223,63 +155,27 @@ Puede cambiar la visualización en la pantalla de inicio y observar los valores 
 
 'Cortar títulos de pestaña' le permite ver más títulos de pestañas en la pantalla, por ejemplo, la pestaña 'Abrir APS' se convierte en 'OAPS', 'Objetivos' se convierte en 'Obj', etc.
 
-'Alertas locales' le permite decidir si recibe una advertencia y a partir
-de cuánto tiempo no recibe los valores de glucosa en sangre (datos obsoletos) o
-si la bomba no está disponible. Si con frecuencia recibe alertas de bomba
-inaccesible, active BT Watchdog en Configuración
-
+'Alertas locales' le permite decidir si recibe una advertencia y a partir de cuánto tiempo no recibe los valores de glucosa en sangre (datos obsoletos) o si la bomba no está disponible. Si con frecuencia recibe alertas de bomba inaccesible, active BT Watchdog en Configuración
 
 
 ## Ajustes avanzados “” requiere más trabajo
 
 OpenAPS MA ◦
 
-Siempre utiliza el delta
-promedio corto en lugar de ... Habilitar esta configuración es útil cuando
-utiliza datos de orígenes no filtrados como xDrip +, a diferencia de fuentes
-filtradas como un Dexcom Receiver oficial. Los datos filtrados parecen ser uniformes,
-mientras que los datos no filtrados pueden parecer oscilantes. Estos datos no
-filtrados podrían hacer que el AndroidAPS aplique cambios de basal temporal con
-mayor frecuencia de la que realmente se necesita, ya que el algoritmo de
-OpenAPS reacciona ante los datos de alto nivel. Con esta configuración
-habilitada, el algoritmo OpenAPS utilizará el promedio corto delta (el cambio
-promedio en la glucosa en sangre durante los últimos 15 minutos) en lugar de la
-última lectura de glucosa en sangre recibida. Esto efectivamente tiene un
-efecto de "suavizado" en los datos e intenta compensar las lecturas
-con saltos. Los usuarios de los sensores Abbott Freestyle Libre que recopilan
-sus datos de glucosa a través de dispositivos como LimiTTers pueden encontrar
-que esta configuración proporciona mejores resultados con AAPS.
+Siempre utiliza el delta promedio corto en lugar de ... Habilitar esta configuración es útil cuando utiliza datos de orígenes no filtrados como xDrip +, a diferencia de fuentes filtradas como un Dexcom Receiver oficial. Los datos filtrados parecen ser uniformes, mientras que los datos no filtrados pueden parecer oscilantes. Estos datos no filtrados podrían hacer que el AndroidAPS aplique cambios de basal temporal con mayor frecuencia de la que realmente se necesita, ya que el algoritmo de OpenAPS reacciona ante los datos de alto nivel. Con esta configuración habilitada, el algoritmo OpenAPS utilizará el promedio corto delta (el cambio promedio en la glucosa en sangre durante los últimos 15 minutos) en lugar de la última lectura de glucosa en sangre recibida. Esto efectivamente tiene un efecto de "suavizado" en los datos e intenta compensar las lecturas con saltos. Los usuarios de los sensores Abbott Freestyle Libre que recopilan sus datos de glucosa a través de dispositivos como LimiTTers pueden encontrar que esta configuración proporciona mejores resultados con AAPS.
+
+Para obtener más consejos sobre el suavizado de datos al utilizar xDrip + como origen de datos, consulte Suavizado de datos de glucosa en sangre en xDrip +.
 
 
+Preferencias de OpenAPS.json: antes de cambiar cualquiera de estas configuraciones, vea las descripciones de los valores de seguridad utilizados y por qué en los documentos de OpenAPS.
 
+'Ignorar eventos de cambio de perfil' no enviará su perfil actual de AndroidAPS a la bomba. Se recomienda no seleccionar esto a menos que esté probando el código, ya que por seguridad enviar los eventos de cambio de perfil de envío al perfil basal 1 de la bomba significa que AndroidAPS dejará de funcionar o perderá la conexión con la bomba y su bomba volverá al mismo perfil predeterminado. que tienes que ingresarlo manualmente en la bomba. Para obtener más información sobre los perfiles, consulte Perfiles.
 
-Para obtener más consejos
-sobre el suavizado de datos al utilizar xDrip + como origen de datos, consulte
-Suavizado de datos de glucosa en sangre en xDrip +.
-
-
-
-Preferencias de OpenAPS.json: antes de cambiar cualquiera de estas
-configuraciones, vea las descripciones de los valores de seguridad utilizados y
-por qué en los documentos de OpenAPS.
-
-'Ignorar eventos de cambio de perfil' no enviará su perfil actual de
-AndroidAPS a la bomba. Se recomienda no seleccionar esto a menos que esté
-probando el código, ya que por seguridad enviar los eventos de cambio de perfil
-de envío al perfil basal 1 de la bomba significa que AndroidAPS dejará de
-funcionar o perderá la conexión con la bomba y su bomba volverá al mismo perfil
-predeterminado. que tienes que ingresarlo manualmente en la bomba. Para obtener
-más información sobre los perfiles, consulte Perfiles.
-
-'BT Watchdog' seleccione esta opción si sigue perdiendo la conexión con su
-bomba. Cuando la bomba pierda la conexión, activará y desactivará el bluetooth
-para que pueda mej orar la conexión.
+'BT Watchdog' seleccione esta opción si sigue perdiendo la conexión con su bomba. Cuando la bomba pierda la conexión, activará y desactivará el bluetooth para que pueda mej orar la conexión.
 
 
 
 ## Ajustes Wear
 
 Para más info ver ajustes en Wear watchfaces 
-
-
 
