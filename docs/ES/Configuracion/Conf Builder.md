@@ -42,13 +42,13 @@ Si observas la barra de objetivos (Obj), puede ver la información del progreso 
 SI observas la barra de tratamientos (treat) puedes ver los tratamientos que han sido subidos a Nightscout. Si deseas editar o borrar una entrada (por ej: si has comida menos carbohidratos de lo esperado) entonces selecciona “remove” e introduce el nuevo valor (cambia la hora si es necesario) a través de la barra Careportal.
 
 ## General
-*	Acciones permite hacer cambios de perfiles (ver perfiles para más info), objetivos temporales, y para aquellos que usan Dana R/RS o Combo para establecer una basal temporal manual o purgar la cánula. 
-*	Careportal permite registrar entradas de tratamiento específicas y ver el tiempo del sensor actual, insulina, cánula y bomba en la barra de Careportal. 
-*	Comunicador SMS permite a cuidadores controlar algunas funciones de AndroidAPS vía SMS, ver Comandos SMS para más info. 
-*	Comida permite ver y usar la base de datos de NS, ver Nightscout Readme para más información sobre configuración o http://[yournightscoutsiteaddress]/food para acceder a tu base de datos.
-*	Wear permite ver y controlar AndroidAPS desde Android Wear, ver watchfaces para más info. 
-*	Xdrip
-*	Notifiaciones muestra un resumen de valor glucosa actual, delta, basal temporal activa, perfil basal activo, iob y su distribución entre basal iob e iob de bolos en las pantallas del móvil o pantalla de bloqueo.
-*	NS Client
+*	<b>Acciones</b> permite hacer cambios de perfiles (ver perfiles para más info), objetivos temporales, y para aquellos que usan Dana R/RS o Combo para establecer una basal temporal manual o purgar la cánula. 
+*	<b<Careportal</b> permite registrar entradas de tratamiento específicas y ver el tiempo del sensor actual, insulina, cánula y bomba en la barra de Careportal. 
+*	<b>Comunicador SMS</b> permite a cuidadores controlar algunas funciones de AndroidAPS vía SMS, ver Comandos SMS para más info. 
+*	<b>Comida</b> permite ver y usar la base de datos de NS, ver Nightscout Readme para más información sobre configuración o http://[yournightscoutsiteaddress]/food para acceder a tu base de datos.
+*	<b>Wear</b> permite ver y controlar AndroidAPS desde Android Wear, ver watchfaces para más info. 
+*	<b>Xdrip</b>
+*	<b>Notifiaciones</b> muestra un resumen de valor glucosa actual, delta, basal temporal activa, perfil basal activo, iob y su distribución entre basal iob e iob de bolos en las pantallas del móvil o pantalla de bloqueo.
+*	<b>NS Client</b>
 
 
