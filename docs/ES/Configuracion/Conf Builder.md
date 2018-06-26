@@ -1,5 +1,5 @@
 
-# Conf Builder#
+# Conf Builder
 
 El Conf Builder (configurador) es la barra donde se activa o desactiva las características modulares. Las cajas a la izquierda permiten seleccionar cual usar, las cajas a la derecha visualizan estas como barra en AndroidAPS. Cuando haya ajustes adicionales disponibles en el módulo, puedes pinchar en la gráfica que te llevará a los ajustes específicos dentro de preferencias.
 
