@@ -43,7 +43,7 @@ SI observas la barra de tratamientos (treat) puedes ver los tratamientos que han
 
 ## General
 *	<b>Acciones</b> permite hacer cambios de perfiles (ver perfiles para más info), objetivos temporales, y para aquellos que usan Dana R/RS o Combo para establecer una basal temporal manual o purgar la cánula. 
-*	<b<Careportal</b> permite registrar entradas de tratamiento específicas y ver el tiempo del sensor actual, insulina, cánula y bomba en la barra de Careportal. 
+*	<b>Careportal</b> permite registrar entradas de tratamiento específicas y ver el tiempo del sensor actual, insulina, cánula y bomba en la barra de Careportal. 
 *	<b>Comunicador SMS</b> permite a cuidadores controlar algunas funciones de AndroidAPS vía SMS, ver Comandos SMS para más info. 
 *	<b>Comida</b> permite ver y usar la base de datos de NS, ver Nightscout Readme para más información sobre configuración o http://[yournightscoutsiteaddress]/food para acceder a tu base de datos.
 *	<b>Wear</b> permite ver y controlar AndroidAPS desde Android Wear, ver watchfaces para más info. 
