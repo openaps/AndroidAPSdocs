@@ -23,7 +23,7 @@ AndroidAPS es una app que puede comunicar las bombas de insulina con bluetooth y
 **Qué necesitas para empezar:**
 
 * Teléfono Android 5.0 o superior. Revisar esta [lista](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
-* Una app que reciba datos de tu MCG: [xDrip](http://stephenblackwasalreadytaken.github.io/xDrip/ / [xDrip+](https://github.com/jamorham/xDrip-plus), [Glimp](http://www.nightscout.info/wiki/welcome/nightscout-for-libre) o [600SeriesAndroidUploader](https://github.com/pazaan/600SeriesAndroidUploader)
+* Una app que reciba datos de tu MCG: [xDrip](http://stephenblackwasalreadytaken.github.io/xDrip/) / [xDrip+](https://github.com/jamorham/xDrip-plus), [Glimp](http://www.nightscout.info/wiki/welcome/nightscout-for-libre) o [600SeriesAndroidUploader](https://github.com/pazaan/600SeriesAndroidUploader)
 * [AndroidAPS](https://github.com/MilosKozak/AndroidAPS) app
 * [Nightscout](https://github.com/nightscout/cgm-remote-monitor) 0.10.2 o posterior
 * Bomba de insulina compatible: Dana-R, Dana-RS o Accu-Check Combo
