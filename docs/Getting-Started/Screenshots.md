@@ -2,7 +2,7 @@
 
 # The Homescreen
 
-![Homescreen](https://github.com/roppenheimer/AndroidAPSdocs/blob/patch-3/docs/images/Home_screen.png)
+![Homescreen](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_Home_screen.png)
 
 This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
 
@@ -26,7 +26,7 @@ Section F: enables you to administer a bolus (normally you would use the Calcula
 
 # The Calculator
 
-![Calculator](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Bolus_calculator.png)
+![Calculator](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_Bolus_calculator.png)
 
 
 When you want to make a meal bolus this is where you will normally make it from. 
@@ -38,3 +38,10 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 Section B: shows the calculated bolus. If the amount of insulin on boead already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
 Section C: shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
+
+
+
+
+![Calculator](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_insulin_profile.png)
+
+
