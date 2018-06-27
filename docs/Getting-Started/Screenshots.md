@@ -52,5 +52,5 @@ For a more detailed discussion of the different types of insulin, their activity
 
 # Pump Status
 
-![Pump Status](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_pump_Combo.png)
+![Insulin Profile](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_pump_Combo.png)
 
