@@ -78,11 +78,13 @@ Please be aware that this is not complete list and reflects personal user experi
       recover more quickly from error situations and reduces the amount of vibrations that can occur during
       such errors
 
-![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-menu-settings.png)
-![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-pump-options-settings.png)
-![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-tbr-settings.png)
-![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-bolus-settings.png)
-![](https://androidaps.readthedocs.io/en/latest/images/combo/combo-insulin-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org) and use the `combo` branch.
 - Make sure to read the wiki to understand how to setup AndroidAPS.
