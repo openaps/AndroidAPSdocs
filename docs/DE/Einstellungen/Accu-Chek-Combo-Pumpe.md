@@ -47,11 +47,14 @@ Derzeit ist nicht absehbar, dass dieses Verhalten verhindert werden kann. Wenn d
     - Stelle die Tastensperre der pumpe an, um zu verhindern, dass du von der Pumpe Bolus abgibst. Besonders, wenn du daran gewöhnt bist, Bolus von der Pumpe aus abzugeben.
     - Stelle die Anzeigedauer und das Menü-Timeout auf das Minimum (5,5 bzw. 5). Das erlaubt AndroidAPS in Fehlerzuständen schneller wieder fortzusetzen und verringert die Anzahl an Vibrationen die während so einem Fehler auftreten können.
 
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-menu-settings-de.png)
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-pump-options-settings-de.png)
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-tbr-settings-de.png)
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-bolus-settings-de.png)
-![](https://github.com/MilosKozak/AndroidAPS/blob/combo/documentation/images/combo-insulin-settings-de.png)
+
+![Screenshot der Menü-Einstellungen](../../images/combo/combo-menu-settings.png)
+
+![Screenshot TBR-Einstellungen](../../images/combo/combo-tbr-settings.png)
+
+![Screenshot der Bolus-Einstellungen](../../images/combo/combo-bolus-settings.png)
+
+![Screenshot der Ampullen-Einstellungen](../../images/combo/combo-insulin-settings.png)
 
 
 - Installiere AndroidAPS wie im Wiki unter http://wiki.AndroidAPS.org beschrieben. Die Version mit Combo-Unterstützung befindet sich im Branch `combo`.
