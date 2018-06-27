@@ -63,7 +63,7 @@ Here we see the status of the insulin pump - in this case an Accu-Chek Combo. Th
 This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus. 
 
 # Loop, OpenAPS AMA
-You don't normally need to worry about these, they show the results of the OpenAPS algorith which runs each time the system gets a fresh reading from the CGM.
+You don't normally need to worry about these, they show the results of the OpenAPS algorith which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
 
 
 
