@@ -52,6 +52,6 @@ For a more detailed discussion of the different types of insulin, their activity
 
 # Pump Status
 
-![Insulin Profile](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_pump_Combo.png)
+![Pump Status](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_pump_Combo.png)
 
 Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
