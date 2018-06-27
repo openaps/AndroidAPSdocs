@@ -22,7 +22,7 @@ AndroidAPS es una app que puede comunicar las bombas de insulina con bluetooth y
 
 **Qué necesitas para empezar:**
 
-* Teléfono Android 5.0 o superior. Revisar esta `_lista <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`
+* Teléfono Android 5.0 o superior. Revisar esta [lista] (<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>)
 * Una app que reciba datos de tu MCG: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
 * `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 o posterior
