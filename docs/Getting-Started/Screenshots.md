@@ -39,9 +39,12 @@ Section B: shows the calculated bolus. If the amount of insulin on boead already
 
 Section C: shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
+# Insulin Profile
 
+![Insulin Profile](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_insulin_profile.png)
 
+This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
 
-![Calculator](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_insulin_profile.png)
+For a more detailed discussion of the different types of insulin, their activity profiles and why it matters you can read an article here [URL]
 
-
+You will normally be using one of the Oref profiles - and the important thing to note is that the decay has a long tail. If you have been used to manual pumping you have probably been used to assuming that insuln decays over about 3.5 hours. However, when you are looping the long tail matters as the calculations are far more precise and the small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
