@@ -21,4 +21,4 @@ Las ventajas de DanaRS como bomba de insulina, sin embargo, son:
 *	Todas las bombas AndroidAPS compatibles son waterproof. Aunque solo la Dana es tiene garantizado waterproof debido a su sellado en el compartimento de la batería y el reservorio. 
 
 La Combo es una buena bomba y loopeable, teniendo la ventaja de más tipos de equipos de infusión entre los que escoger teniendo el estándar luer lock. La batería es común por lo que se puede comprar en cualquier parte.
-Detalles del estado de [otras bombas](Futuros-controladores-de-bombas.md) que pudieran usarse con AndroidAPS están en esta página. 
+Detalles del estado de [Futuros controladores de bombas](Futuros-controladores-de-bombas.md) que pudieran usarse con AndroidAPS están en esta página. 
