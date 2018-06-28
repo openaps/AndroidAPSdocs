@@ -1,3 +1,5 @@
+# Compilando la APK
+
 1.	Instalar [Android Studio](https://developer.android.com/studio/install.html)
 
 2.	Usar git clone en Android Studio según las siguientes fotos para clonar el repositorio.
@@ -32,7 +34,7 @@
 
 11.	Espera a que se cree la APK. Recibirás un pop-up cuando termine. 
 
-[[https://github.com/MilosKozak/AndroidAPS/wiki/images/androidstudio3.png]]
+![][https://github.com/MilosKozak/AndroidAPS/wiki/images/androidstudio3.png)
 
 12.	Pincha en “mostrar en explorer”. Encontrarás que la APK está generada, a veces tarda un tiempo en aparecer. 
 
