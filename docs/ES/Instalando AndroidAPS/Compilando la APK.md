@@ -15,7 +15,7 @@
 
 6.	Seleccionar “app” como módulo 
 ![Select 'app' as Module](https://user-images.githubusercontent.com/9692866/38299495-8885e446-37fa-11e8-9d19-cb05fd1bb506.png)
-[[https://github.com/gempickfordwaugh/AndroidAPS/raw/b09d7dc444f59b799888bcd596e36e1d562a9674/generate%20signed%20APK.png]]
+![](https://github.com/gempickfordwaugh/AndroidAPS/raw/b09d7dc444f59b799888bcd596e36e1d562a9674/generate%20signed%20APK.png]
 
 
 7.	Selecciona un un keystore y password, si es la primera vez al crear esto, o completando los detalles de uno existente. Para más información sobre uso de Keysore ver [https://developer.android.com/studio/publish/app-signing.html#generate-key]
