@@ -1,6 +1,6 @@
 # Understanding the AndroidAPS screens
 
-# The Homescreen
+## The Homescreen
 
 ![Homescreen](../images/Screenshot_Home_screen.png)
 
@@ -24,7 +24,7 @@ Section F: is also configurable using the options in section D. In this example 
 
 Section F: enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
 
-# The Calculator
+## The Calculator
 
 ![Calculator](../images/Screenshot_Bolus_calculator.png)
 
@@ -39,7 +39,7 @@ Section B: shows the calculated bolus. If the amount of insulin on boead already
 
 Section C: shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
-# Insulin Profile
+## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
@@ -52,22 +52,22 @@ For a more detailed discussion of the different types of insulin, their activity
 And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
 
-# Pump Status
+## Pump Status
 
 ![Pump Status](../images/Screenshot_pump_Combo.png)
 
 Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
 
-# Care Portal
+## Care Portal
 
 ![Care Portal](../images/Screenshot_care_portal.png)
 
 This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus. 
 
-# Loop, OpenAPS AMA
+## Loop, OpenAPS AMA
 You don't normally need to worry about these, they show the results of the OpenAPS algorith which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
 
-# Profile
+## Profile
 
 ![Profile](../images/Screenshot_profile.png)
 
@@ -83,11 +83,11 @@ Basal: is the basal profile programmed into your pump.
 
 Target: is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
-# Treatment, xDrip, NSClient
+## Treatment, xDrip, NSClient
 
 These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem. 
 
-# Config Builder
+## Config Builder
 
 ![Config Builder](../images/Screenshot_config_builder.png)
 
@@ -95,6 +95,6 @@ This is where you will set up the configuraton of your AndroidAPS rig. This scre
 
 The tick box on the right determines if that particular module will be displayed in the top menu bar and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
-# Settings and Preferences
+## Settings and Preferences
 
 At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences and settings, and emables you to export your settings if ever you need to transfer to a different rig. These are discussed elsewhere. 
