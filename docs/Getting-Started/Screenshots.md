@@ -67,6 +67,7 @@ You don't normally need to worry about these, they show the results of the OpenA
 
 # Profile
 
+![Profile](../images/Screenshot_profile.png)
 
 # Treatment, xDrip, NSClient
 
