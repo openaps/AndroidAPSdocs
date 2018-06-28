@@ -58,7 +58,7 @@ Here we see the status of the insulin pump - in this case an Accu-Chek Combo. Th
 
 # Care Portal
 
-[Image to follow]
+![Care Portal](../images/Screenshot_care_portal.png)
 
 This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus. 
 
