@@ -43,4 +43,4 @@ AndroidAPS es una app que puede comunicar las bombas de insulina con bluetooth y
 	* Todos los productos y nombres de compañias, marcas, servicios, marcas registradas  y servicios registrados  son propiedad de sus respectivos tenedores. Su uso aquí es informativo y no implica afiliación o pago por ello. 
 
 	NOTA- este proyecto no tiene asociación o contraprestación alguna por parte
-	de: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
+	de: [SOOIL](http://www.sooil.com/eng/), [Dexcom](http://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care]( http://www.accu-chek.com/).
