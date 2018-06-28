@@ -33,10 +33,14 @@ AndroidAPS es una app que puede comunicar las bombas de insulina con bluetooth y
 .. nota:: 
 	**Advertencia**
 
-	* Toda la información y el código descrito aquí solo es de carácter informativo y de educación. Actualmente Nightscout no dispone de HIPAA privacy compliance. Use Nightscout y AndroidAPS bajo su responsabilidad, no use esta información para o código para tomar decisiones médicas.
+	* Toda la información y el código descrito aquí solo es de carácter informativo y de educación. 
+	Actualmente Nightscout no dispone de HIPAA privacy compliance. Use Nightscout y AndroidAPS bajo su responsabilidad, 
+	no use esta información para o código para tomar decisiones médicas.
 
-	* El uso del código de github.com no tiene garantía o soporte formal de ningún tipo. Por favor revise el repositorio de Licencia para más detalles.
+	* El uso del código de github.com no tiene garantía o soporte formal de ningún tipo. 
+	Por favor revise el repositorio de Licencia para más detalles.
 
 	* Todos los productos y nombres de compañias, marcas, servicios, marcas registradas  y servicios registrados  son propiedad de sus respectivos tenedores. Su uso aquí es informativo y no implica afiliación o pago por ello. 
 
-	NOTA- este proyecto no tiene asociación o contraprestación alguna por parte de: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
+	NOTA- este proyecto no tiene asociación o contraprestación alguna por parte
+	de: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
