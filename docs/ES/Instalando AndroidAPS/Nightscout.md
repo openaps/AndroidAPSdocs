@@ -17,6 +17,6 @@ Tu sitio debe ser versión 10 o superior, por lo que comprueba que tengas la [ú
              *	PUMP_WARN_BATT_P = 51
              *	PUMP_URGENT_BATT_P = 26
 
-![](https://github.com/MilosKozak/AndroidAPS/wiki/images/nightscout1.png]
+![](https://github.com/MilosKozak/AndroidAPS/wiki/images/nightscout1.png)
 
 * Pinchar en guardar arriba en el panel.
