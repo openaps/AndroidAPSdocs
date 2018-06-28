@@ -72,3 +72,9 @@ You don't normally need to worry about these, they show the results of the OpenA
 # Treatment, xDrip, NSClient
 
 These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem. 
+
+# Config Builder
+
+![Config Builder](../images/Screenshot_config_builder.png)
+
+
