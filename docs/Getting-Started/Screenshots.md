@@ -94,3 +94,7 @@ These are simply logs of treatments (boluses and carbs), xDrip messages and mess
 This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
 The tick box on the right determines if that particular module will be displayed in the top menu bar and the small gear wheel symbol allows access to the setting for that module, if there are any.
+
+# Settings and Preferences
+
+At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences and settings, and emables you to export your settings if ever you need to transfer to a different rig. These are discussed elsewhere. 
