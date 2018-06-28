@@ -241,3 +241,7 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
    :caption: How to edit these docs
 
    Instructions to make a PR </make-a-PR>
+
+.. |br| raw:: html
+
+   <br />
