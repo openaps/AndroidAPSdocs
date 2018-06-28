@@ -26,7 +26,7 @@ Section F: enables you to administer a bolus (normally you would use the Calcula
 
 # The Calculator
 
-![Calculator](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_Bolus_calculator.png)
+![Calculator](../images/Screenshot_Bolus_calculator.png)
 
 
 When you want to make a meal bolus this is where you will normally make it from. 
@@ -41,7 +41,7 @@ Section C: shows the various elements that have been used to calculate the bolus
 
 # Insulin Profile
 
-![Insulin Profile](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_insulin_profile.png)
+![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
 This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
 
@@ -52,7 +52,7 @@ For a more detailed discussion of the different types of insulin, their activity
 
 # Pump Status
 
-![Pump Status](https://github.com/roppenheimer/AndroidAPSdocs/blob/master/docs/images/Screenshot_pump_Combo.png)
+![Pump Status](../images/Screenshot_pump_Combo.png)
 
 Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
 
