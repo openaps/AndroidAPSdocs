@@ -69,6 +69,14 @@ You don't normally need to worry about these, they show the results of the OpenA
 
 ![Profile](../images/Screenshot_profile.png)
 
+AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a "Switch Profile" on your AndroidAPS rig to refresh the download. Data such as the basal profile would then be automatically copied over to your pump.
+
+DIA: stand for Duration of Insulin Action and you can read an excellent blog article about it here:
+IC: is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
+ISF: is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
+Basal: is the basal profile programmed into your pump.
+Target: is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+
 # Treatment, xDrip, NSClient
 
 These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem. 
