@@ -1,3 +1,7 @@
+.. toctree::
+   :maxdepth: -1
+   :titlesonly:
+
 Welcome to the Android APS documentation
 ==============================================
 
