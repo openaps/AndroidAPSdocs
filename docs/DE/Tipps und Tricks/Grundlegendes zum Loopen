@@ -1,4 +1,4 @@
-# Tipps und Tricks
+# Grundlegendes zum Loopen
 
 ## Grundlegendes
 * Die wichtigste Voraussetzung für den closed Loop ist, dass deine Basalrate und Faktoren genau sind. Die Einstellungen die der Loop für dich machen kann sind sicherheitshalber begrenzt (siehe maximal erlaubte temporäre [Basalrate](https://openaps.org/reference-design/)), das heißt, dass du die vorhandenen Ressourcen nicht für eine schlecht eingestellte Basalrate verschwenden solltest. Falls der Loop z.B. vor dem Essen immer die Insulinzufuhr zurück dreht, heißt das höchstwahrscheinlich, dass du die Basalrate anpassen musst. Du kannst [autotune](https://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/autotune.html) verwenden um deine Daten zu analysieren, und Vorschläge zur Änderung der Basalrate/Faktoren zu bekommen (Jedoch mit Vorsicht zu genießen, das System kann z.B. nicht unterscheiden, ob du wegen Sport zu niedrig wurdest, oder ob die Basalrate nicht passt), oder du kannst deine Basalrate mit einem "altmodischen" Basalratentest testen.
