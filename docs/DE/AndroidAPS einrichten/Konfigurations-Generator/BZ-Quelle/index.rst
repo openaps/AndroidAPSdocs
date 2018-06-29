@@ -1,3 +1,5 @@
+# BZ-Quelle
+
 **Für Dexcom Benutzer:**<Br>
 _Mit xdrip…_<br>
 * Falls noch nicht eingerichtet downloade [xdrip](https://github.com/NightscoutFoundation/xDrip) und folge den Anleitungen auf Nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
