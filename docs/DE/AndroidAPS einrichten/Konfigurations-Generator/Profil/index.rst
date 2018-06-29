@@ -1,4 +1,4 @@
-# Profilfunktion ab Version 1.5
+# Profil (ab Version 1.5)
 
 Seit der Version 1.5 hat sich die Funktion der Profile geändert.
 
