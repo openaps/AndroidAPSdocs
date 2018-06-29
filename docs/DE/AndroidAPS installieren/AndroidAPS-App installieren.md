@@ -1,4 +1,4 @@
-# AndroidAPS installieren
+# AndroidAPS-App installieren
 
 * Downloade das [AndroidAPS repository](https://github.com/MilosKozak/AndroidAPS) und extrahiere den Ordner.
 
