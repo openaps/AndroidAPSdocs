@@ -66,7 +66,7 @@ Cantidad de insulina basal adicional (en unidades) que se acumula en el cuerpo, 
 
 * Este valor se mide en unidades de insulina (u).
 
-Cuando comience el lazo cerrado, se recomienda establecer Max Basal IOB en 0 durante un período de tiempo, mientras se está acostumbrando al sistema. Esto evita que AAPS administre insulina basal adicional. Durante este tiempo, AAPS aún podrá limitar o cortar su insulina basal para ayudar a prevenir la hipoglucemia.
+Cuando comience el lazo cerrado, se recomienda establecer **Max Basal IOB en 0** durante un período de tiempo, mientras se está acostumbrando al sistema. Esto evita que AAPS administre insulina basal adicional. Durante este tiempo, AAPS aún podrá limitar o cortar su insulina basal para ayudar a prevenir la hipoglucemia.
 
 Este es un paso importante para:
 
@@ -75,7 +75,7 @@ Este es un paso importante para:
 * Vea cómo AAPS limita su insulina basal para prevenir la hipoglucemia.
 
  
-Cuando se sienta cómodo, puede permitir que el sistema comience a administrarle insulina basal adicional, aumentando el valor de IOB basal máxima. La pauta recomendada para esto es tomar la tasa basal más alta en su perfil y multiplicarla por 3. Por ejemplo, si la tasa basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 3 para obtener un valor de 1.5u. .
+Cuando se sienta cómodo, puede permitir que el sistema comience a administrarle insulina basal adicional, aumentando el valor de IOB basal máxima. La pauta recomendada para esto es tomar la **tasa basal más alta en su perfil** y **multiplicarla por 3**. Por ejemplo, si la tasa basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 3 para obtener un valor de 1.5u. .
  
 > Puede comenzar de manera conservadora con este valor y aumentarlo lentamente con el tiempo.
 
