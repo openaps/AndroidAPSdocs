@@ -16,6 +16,7 @@ Die Ziele, die zur Entstehung führten:
 - Eine App, die alles enthält, um mit dem Diabetes klar zu kommen (APS+Nightscout)
 
 **Was man benötigt**
+
 - Android Smartphone (5.0 oder neuer)
 - xDrip/xDrip+, oder Glimp, oder 600SeriesAndroidUploader
 - AndroidAPS
