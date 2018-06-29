@@ -2,39 +2,18 @@
 
 # Bomba Accu Chek Combo
 
-**Este software es parte de una solución hazlo tú mismo y no es un producto,
-pero requiere que USTED lea, aprenda y entienda el sistema, incluso cómo
-usarlo. No es algo que haga todo el manejo de su diabetes, pero le permite
-mejorar su diabetes y su calidad de vida si está dispuesto a dedicar el tiempo
-necesario. No te precipites, pero date tiempo para aprender. Solo Usted es
-responsable de lo que hace con él.**
+**Este software es parte de una solución hazlo tú mismo y no es un producto, pero requiere que USTED lea, aprenda y entienda el sistema, incluso cómo usarlo. No es algo que haga todo el manejo de su diabetes, pero le permite mejorar su diabetes y su calidad de vida si está dispuesto a dedicar el tiempo necesario. No te precipites, pero date tiempo para aprender. Solo Usted es responsable de lo que hace con él.**
 
 
 ## Hardware necesario
  
-* Una bomba de insulina Roche Accu-Chek Combo
-(cualquier firmware, todos funcionan)
+* Una bomba de insulina Roche Accu-Chek Combo (cualquier firmware, todos funcionan)
 
-* Un dispositivo Smartpix o Realtyme junto
-con el software de configuración 360 para configurar la bomba. Roche envía los
-dispositivos Smartpix y el software de configuración de forma gratuita a sus
-clientes previa solicitud.
+* Un dispositivo Smartpix o Realtyme junto con el software de configuración 360 para configurar la bomba. Roche envía los dispositivos Smartpix y el software de configuración de forma gratuita a sus clientes previa solicitud.
 
-* Un teléfono compatible: un teléfono Android
-con un teléfono con LineageOS 14.1 (anteriormente CyanogenMod) o Android 8.1
-(Oreo). El LineageOS 14.1 tiene que ser una versión reciente de al menos junio
-de 2017, ya que el cambio necesario para vincular la bomba Combo solo se
-introdujo en ese momento. Se puede encontrar una lista de teléfonos en el
-documento AAPS Phones. Tenga en cuenta que esta no es una lista completa y
-refleja la experiencia personal del usuario. Le recomendamos que
-también añada su experiencia y, por lo tanto, ayude a los demás (#cadenadeayuda).
+* Un teléfono compatible: un teléfono Android con un teléfono con LineageOS 14.1 (anteriormente CyanogenMod) o Android 8.1 (Oreo). El LineageOS 14.1 tiene que ser una versión reciente de al menos junio de 2017, ya que el cambio necesario para vincular la bomba Combo solo se introdujo en ese momento. Se puede encontrar una lista de teléfonos en el documento [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Tenga en cuenta que esta no es una lista completa y refleja la experiencia personal del usuario. Le recomendamos que también añada su experiencia y, por lo tanto, ayude a los demás (#cadenadeayuda).
 
-* Tenga en cuenta que, aunque Android 8.1
-permite comunicarse con el Combo, todavía hay problemas con AAPS en 8.1. Para
-usuarios avanzados, es posible realizar el emparejamiento en un teléfono
-rooteado y transferirlo a otro teléfono rooteado para usar con ruffy / AAPS,
-que también debe estar rooteado. Esto permite el uso de teléfonos con Android
-<8.1 pero no ha sido ampliamente probado: https://github.com/gregorybel/combo-pairing/blob/master/README.md
+* Tenga en cuenta que, aunque Android 8.1 permite comunicarse con el Combo, todavía hay problemas con AAPS en 8.1. Para usuarios avanzados, es posible realizar el emparejamiento en un teléfono rooteado y transferirlo a otro teléfono rooteado para usar con ruffy / AAPS, que también debe estar rooteado. Esto permite el uso de teléfonos con Android <8.1 pero no ha sido ampliamente probado: https://github.com/gregorybel/combo-pairing/blob/master/README.md
 
 
 ## Limitaciones
@@ -69,14 +48,16 @@ que también debe estar rooteado. Esto permite el uso de teléfonos con Android
     * Establezca el tiempo de espera de la pantalla y el tiempo de espera del menú en un mínimo de 5.5 y 5 respectivamente. Esto permite que el AAPS se recupere más rápidamente de situaciones de error y reduce la cantidad de vibraciones que pueden ocurrir durante tales errores.
 
 
-(https://androidaps.readthedocs.io/en/latest/images/combo/combo-menu-settings.png)
-(https://androidaps.readthedocs.io/en/latest/images/combo/combo-pump-options-settings.png)
-(https://androidaps.readthedocs.io/en/latest/images/combo/combo-tbr-settings.png)
-(https://androidaps.readthedocs.io/en/latest/images/combo/combo-bolus-settings.png)
-(https://androidaps.readthedocs.io/en/latest/images/combo/combo-insulin-settings.png)
+![menú ajustes](../images/combo/combo-menu-settings.png)
+
+![ajustes de reservorio insulina](../images/combo/combo-insulin-settings.png)
+
+![](../images/combo/combo-insulin-settings.png)
+
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 
-* Instale AndroidAPS como se describe en la wiki de AndroidAPS y use la rama de combo.
+* Instale AndroidAPS como se describe [AndroidAPS wiki](http://wiki.AndroidAPS.org) y use la rama de combo.
 * Asegúrese de leer la wiki para comprender cómo configurar AndroidAPS.
 * Seleccione el complemento MDI en AndroidAPS, no el complemento Combo en este punto para evitar que el complemento Combo interfiera con ruffy durante el proceso de emparejamiento.
 * Siga el enlace http://ruffy.AndroidAPS.org y clone ruffy a través de git. Use la misma rama que usa para AndroidAPS, ahora esa es la rama combo, más adelante habrá ramas master y dev.
@@ -84,7 +65,7 @@ que también debe estar rooteado. Esto permite el uso de teléfonos con Android
 * Cuando AAPS usa ruffy, la aplicación ruffy no se puede usar. La manera más fácil es simplemente reiniciar el teléfono después del proceso de emparejamiento y dejar que AAPS comience con ruffy en segundo plano. 
 * Si la bomba es completamente nueva, debe poner un bolo con la bomba, para que se cree una primera entrada de historia de la bomba.
 * Antes de habilitar el complemento Combo en AAPS, asegúrese de que su perfil esté configurado correctamente y activado (!) Y su perfil basal esté actualizado, ya que AAPS sincronizará el perfil basal con la bomba. Luego active el complemento Combo. Presione el botón Actualizar en la pestaña Combo para inicializar la bomba.
-* Para verificar su configuración, con la bomba desconectada, use AAPS para establecer un TBR de 500% durante 15 minutos y ponga un bolo. La bomba ahora debería tener un TBR en ejecución y el bolo en la historia. AAPS debe mostrar la TBR y el bolo. 
+* Para verificar su configuración, con la bomba **desconectada**, use AAPS para establecer un TBR de 500% durante 15 minutos y ponga un bolo. La bomba ahora debería tener un TBR en ejecución y el bolo en la historia. AAPS debe mostrar la TBR y el bolo. 
 
 
 ## Uso
