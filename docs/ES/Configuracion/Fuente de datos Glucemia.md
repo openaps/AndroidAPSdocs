@@ -4,7 +4,7 @@
 
 _Si usa xdrip ..._<br>
 
-*	Si aún no está configurado, descargue xdrip y siga las instrucciones en nightscout (([G4 sin share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 con share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).).
+*	Si aún no está configurado, descargue [xdrip](https://github.com/NightscoutFoundation/xDrip) y siga las instrucciones en nightscout ([G4 sin share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 con share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 *	En xdrip, vaya a Configuración> Compatibilidad de Interapp> Transmitir datos localmente y seleccione ON.
 *	En xdrip, vaya a Configuración> Compatibilidad de Interapp> Aceptar tratamientos y seleccione OFF.
 *	Si desea poder usar AndroidAPS para calibrar, en xdrip vaya a Configuración> Compatibilidad de Interapp> Aceptar calibraciones y seleccione ON. También es posible que desee revisar las opciones en Configuración> Configuración menos común> Configuración de calibración avanzada.
@@ -13,7 +13,7 @@ _Si usa xdrip ..._<br>
 _Si usa la aplicación Dexcom G5 ..._<br>
 
 *	Sólo dev.
-*	Descarga el apk de aquí, solo esta versión funciona ya sea mg/dl o mmol/l.
+*	Descarga el apk de [aquí](https://github.com/dexcomapp/dexcomapp), solo esta versión funciona ya sea mg/dl o mmol/l.
 *	Desinstale la aplicación original de Dexcom, si todavía no lo ha hecho.
 *	Seleccione la aplicación Dexcom G5 en ConfigBuilder
 
