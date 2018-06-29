@@ -1,4 +1,4 @@
-# Profil "Free Peak 0ref"
+# Free-Peak Oref
 
 Bei dem Profil "Free Peak 0ref" für Fiasp, kann eingegeben werden, wann die höchste Wirkdauer erreicht wird.
 
