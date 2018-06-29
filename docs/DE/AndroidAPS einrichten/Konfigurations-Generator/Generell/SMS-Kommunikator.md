@@ -1,4 +1,4 @@
-# SMS Commands
+# SMS-Kommunikator
 
 Gehe in deinen Einstellungen im  Android-Telefon zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 
