@@ -45,7 +45,7 @@ _Si usa Glimp ..._<br>
 *	Seleccione MM640g en ConfigBuilder (configuración en AndroidAPS).
 
 **Para usuarios de otros CGM cargados en nightscout**<Br>
-Si tiene alguna otra configuración de CGM que envíe sus datos a [Nightscout](http://www.nightscout.info).
+Si tiene alguna otra configuración de CGM que envíe sus datos a [Nightscout](http://www.nightscout.info) entonces
 
 *	En las preferencias de AndroidAPS, ingrese su sitio web nightscout y el APIsecret.
 *	Seleccione NSClient en ConfigBuilder (configuración en AndroidAPS)
