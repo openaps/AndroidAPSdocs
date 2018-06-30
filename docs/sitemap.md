@@ -5,10 +5,10 @@
 ###     Oref(0) 
 ###     Oref(1)
 	
-# Android APS
+# Meet Android APS
 ##	AAPS screenshots explaind
 ##	AAPS settings and how they work
-##	Tuning your rig
+
 	
 # Building your rig
 ##	A typical rig (G5, xDrip, AAPS, Ruffy, Combo (diagram)
@@ -21,6 +21,8 @@
 ##	ns.10be.de
 		
 # Building the software
+
+# Tuning your rig
 
 # Troubleshooting
 
