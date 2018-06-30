@@ -1,10 +1,20 @@
 
 
 .. toctree::
-   :maxdepth: -1
+   :maxdepth: 4
    :titlesonly:
+   
+   CZ
+   EN
+   DE
+   ES
+   български
 
-čeština </cz/index> English </en/index> Deutsch </de/index> Español </es/index> Българска версия </bg/index>
+čeština </CZ/index> 
+English </EN/index> 
+Deutsch </DE/index> 
+Español </ES/index> 
+Българска версия </български/index>
 
 .. toctree::
    :maxdepth: 1
