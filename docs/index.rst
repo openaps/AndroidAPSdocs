@@ -1,14 +1,16 @@
+Welcome to AndroidAPS documentation!
+====================================
 
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :titlesonly:
+
    
-   CZ
-   EN
-   DE
-   ES
-   български
+   
+   English Version </EN/index>
+   Deutsche Version </DE/index>
+   Българска версия </български/index>
 
 čeština </CZ/index> 
 English </EN/index> 
