@@ -25,16 +25,15 @@ Die Ziele, die zur Entstehung führten:
 - Ein CGM (Dexcom G4/G5/G6, Freestyle Libre, Eversense oder Medtronic Guardian)
 
 .. toctree::
-   :maxdepth: -1
+   :maxdepth: 2
    :titlesonly:
-   
-#.. toctree::
-#  :maxdepth: 2
-#   :glob:
-#   :caption: DE - Zum Starten 
 
-#   Home_de </DE/Zum-Starten/Home_de.md>
-#   Sicherheit Geht Vor </DE/Zum-Starten/Sicherheit_Geht_Vor_de.md>
-#   Screenshots </DE/Zum-Starten/Screenshots.md>
-#   Objectives_de </DE/Zum-Starten/Objectives_de.md>
-#   Glossar_de </DE/Zum-Starten/Glossar_de.md>
+   
+   
+   Home </Home/index>
+   Voraussetzungen </Voraussetzungen/index>
+   AndroidAPS installieren </AndroidAPS installieren/index>
+   AndroidAPS einrichten </AndroidAPS einrichten/index>
+   Tipps und Tricks </Tipps und Tricks/index>
+   Hilfe in der Community </Hilfe in der Community/index>
+ 
