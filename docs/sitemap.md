@@ -1,9 +1,9 @@
 
 # Introducing the Artificial Panchreas
-##	How it works
-##	Understanding the algorithm
-###	Oref(0) 
-###	Oref(1)
+##   How it works
+##   Understanding the algorithm
+###     Oref(0) 
+###     Oref(1)
 	
 # Android APS
 ##	AAPS screenshots explaind
