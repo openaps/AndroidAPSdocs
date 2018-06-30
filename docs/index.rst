@@ -3,13 +3,13 @@ Welcome to AndroidAPS documentation!
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :titlesonly:
 
    
    
    Българска версия </български/index>
-   čeština </CZ/index>
+   Czech </CZ/index>
    Deutsch </DE/index>
    English </EN/index>
    Español </ES/index>
