@@ -24,6 +24,12 @@ Section F: is also configurable using the options in section D. In this example 
 
 Section F: enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
 
+### Predicton lines
+
+![Prediction lines](../images/Screenshot_prediction_lines.png)
+
+
+
 ## The Calculator
 
 ![Calculator](../images/Screenshot_Bolus_calculator.png)
