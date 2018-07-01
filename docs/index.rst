@@ -3,7 +3,7 @@ Welcome to AndroidAPS documentation!
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :titlesonly:
    :caption: AndroidAPS documentation
    
@@ -14,7 +14,7 @@ Welcome to AndroidAPS documentation!
    Español </ES/index>
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :glob:
    :caption: How to edit these docs
 

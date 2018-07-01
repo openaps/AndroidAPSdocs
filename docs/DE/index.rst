@@ -34,3 +34,8 @@ Die Ziele, die zur Entstehung führten:
    Hilfe in der Community </Hilfe-in-der-Community/index>
    Glossar
    Sicherheitshinweise
+
+.. toctree::
+   :glob:
+
+   AndroidAPS-einrichten/*
