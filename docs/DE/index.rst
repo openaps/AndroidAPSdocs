@@ -27,9 +27,10 @@ Die Ziele, die zur Entstehung führten:
 .. toctree::
    :maxdepth: 5
       
-   Home </Home/index>
    Voraussetzungen </Voraussetzungen/voraussetzungen>
    AndroidAPS installieren </AndroidAPS-installieren/index>
    AndroidAPS einrichten </AndroidAPS-einrichten/index>
    Tipps und Tricks </Tipps-und-Tricks/index>
    Hilfe in der Community </Hilfe-in-der-Community/index>
+   Glossar
+   Sicherheitshinweise
