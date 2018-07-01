@@ -30,8 +30,7 @@ Die Ziele, die zur Entstehung führten:
    
    Home </DE/Home/index>
    Voraussetzungen </DE/Voraussetzungen/index>
-   AndroidAPS installieren </DE/AndroidAPS installieren/index>
-   AndroidAPS einrichten </DE/AndroidAPS einrichten/index>
-   Tipps und Tricks </DE/Tipps und Tricks/index>
-   Hilfe in der Community </DE/Hilfe in der Community/index>
- 
+   AndroidAPS installieren </DE/AndroidAPS-installieren/index>
+   AndroidAPS einrichten </DE/AndroidAPS-einrichten/index>
+   Tipps und Tricks </DE/Tipps-und-Tricks/index>
+   Hilfe in der Community </DE/Hilfe-in-der-Community/index>
