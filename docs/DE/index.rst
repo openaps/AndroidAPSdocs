@@ -25,10 +25,8 @@ Die Ziele, die zur Entstehung führten:
 - Ein CGM (Dexcom G4/G5/G6, Freestyle Libre, Eversense oder Medtronic Guardian)
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :titlesonly:
-
-   
    
    Home </DE/Home/index>
    Voraussetzungen </DE/Voraussetzungen/index>
