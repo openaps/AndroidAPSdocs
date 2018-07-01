@@ -1,7 +1,16 @@
 Herzlichen willkommen zur AndroidAPS Dokumentation
 ==============================================
 
-**Was ist AndroidAPS?**
+Ebene 2
+~~~~~~~~~~~~~~~
+lorem ipsum
+
+Ebene 3
++++++++++++++++
+lorem ipsum
+
+Was ist AndroidAPS?
+----------
 
 Die Ziele, die zur Entstehung führten:
 
@@ -15,7 +24,8 @@ Die Ziele, die zur Entstehung führten:
 - Die Möglichkeit zum Hinzufügen/Entfernen von Beschränkungen
 - Eine App, die alles enthält, um mit dem Diabetes klar zu kommen (APS+Nightscout)
 
-**Was man benötigt**
+Was man benötigt
+----------
 
 - Android Smartphone (5.0 oder neuer)
 - xDrip/xDrip+, oder Glimp, oder 600SeriesAndroidUploader
@@ -27,15 +37,6 @@ Die Ziele, die zur Entstehung führten:
 .. toctree::
    :maxdepth: 5
       
-   Voraussetzungen </Voraussetzungen/voraussetzungen>
-   AndroidAPS installieren </AndroidAPS-installieren/index>
-   AndroidAPS einrichten </AndroidAPS-einrichten/index>
-   Tipps und Tricks </Tipps-und-Tricks/index>
-   Hilfe in der Community </Hilfe-in-der-Community/index>
+   /Voraussetzungen/voraussetzungen
    Glossar
    Sicherheitshinweise
-
-.. toctree::
-   :glob:
-
-   AndroidAPS-einrichten/*

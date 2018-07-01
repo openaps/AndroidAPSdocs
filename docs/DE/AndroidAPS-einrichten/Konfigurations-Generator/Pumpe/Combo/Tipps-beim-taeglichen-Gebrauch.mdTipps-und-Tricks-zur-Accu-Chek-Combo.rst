@@ -1,5 +1,5 @@
-# Tipps und Tricks zur Combo
-
+Tipps und Tricks zur Combo
+===============
 Diesen Seiten sammeln Tipps und Tricks für das Loopen mit AndroidAPS und der Accu Chek Combo Pumpe.
 
 ## Probleme bei der Ersteinrichtung|Accu-Chek-Combo-Probleme-bei-der-Ersteinrichtung
