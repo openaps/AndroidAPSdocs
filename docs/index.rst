@@ -18,4 +18,4 @@ Welcome to AndroidAPS documentation!
    :glob:
    :caption: How to edit these docs
 
-   Instructions to make a PR </make-a-PR>
+   Instructions to edit the wiki </make-a-PR>

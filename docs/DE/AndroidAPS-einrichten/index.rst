@@ -15,10 +15,8 @@
 * Wenn du für drei aufeinanderfolgende Nächte geloopt hast, fülle bitte diese [Umfrage](http://bit.ly/nowlooping) aus, und gib AndroidAPS als deine DIY Loop Software an. Deine Daten werden nicht weitergegeben, ebenfalls kannst du deinen "Level an Privatsphäre" in der Umfrage angeben.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 5
    :titlesonly:
 
-
-
-   Einstellungen </DE/AndroidAPS einrichten/Einstellungen/index>
-   Konfigurations-Generator </DE/AndroidAPS einrichten/Konfigurations-Generator/index>
+   Einstellungen </Einstellungen/index>
+   Konfigurations-Generator </Konfigurations-Generator/index>
