@@ -28,7 +28,7 @@ Section F: enables you to administer a bolus (normally you would use the Calcula
 
 You will see a variety of purple prediction lines if you choose to show them on your homescreen. These require some explanation.
 
-Normally you will see only one line, this is when there are no carbs in your system and the line is simple an estimate of where your blood suger is likely to go assuming that nothing changes.
+Normally you will see only one line, this is when there are no carbs in your system and the line is simply an estimate of where your blood suger is likely to go assuming that nothing changes.
 
 However, if you have carbs in your system that AndroidAPS knows about then there will be two, or possibly three lines. The top line is the estimate of how your blood sugar will behave, given the existing carbs and insulin and assuming that your insulin pump delivery remains unchanged.
 
@@ -36,7 +36,7 @@ The lower of the two lines is what would be likely to happen without the carbs, 
 
 ![Prediction lines](../images/Screenshot_prediction_lines.png)
 
-In this example some fake carbs were entered at round 13:15. That is, a bolus was issued via the Calculator for some carbs which were never eaten. The top line predicts what would have happened if those carbs had actually been consumed. But in fact the blood glucose followed the lower line because the carbs didn't actually exist.
+In this example some fake carbs were entered at round 13:15. That is, a bolus was issued via the Calculator for some carbs which were never eaten. The top line predicts what would have happened if those carbs had actually been consumed. But in fact the blood glucose followed the lower line because the carbs didn't actually exist. AndroidAPS suspended insulin delivery by issuing a Temporary Basal Rate (TBR) of zero because it recognised that blood sugar was dropping below target, but that in itself wasn't enough to recover the situation.
 
 
 ## The Calculator
