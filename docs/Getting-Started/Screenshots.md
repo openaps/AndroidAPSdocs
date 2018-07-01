@@ -30,7 +30,7 @@ You will see a variety of purple prediction lines if you choose to show them on 
 
 Normally you will see only one line, this is when there are no carbs in your system and the line is simple an estimate of where your blood suger is likely to go assuming that nothing changes.
 
-However, if you have carbs in your system that AndroidAPS knows about then ther will be two, or possibly three lines. The top line is the estimate of how your blood sugar will behave, given the existing carbs and insulin and assuming that your insulin pump delivery remains unchanged.
+However, if you have carbs in your system that AndroidAPS knows about then there will be two, or possibly three lines. The top line is the estimate of how your blood sugar will behave, given the existing carbs and insulin and assuming that your insulin pump delivery remains unchanged.
 
 The lower of the two lines is what would be likely to happen without the carbs, given the insulin thaty ou now have on board. And the third line is a slight variation on that which shows how things would change if the pump were to suspend and deliver no more insulin.
 
