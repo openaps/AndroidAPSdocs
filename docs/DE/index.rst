@@ -28,7 +28,7 @@ Die Ziele, die zur Entstehung führten:
    :maxdepth: 5
    
    Home </Home/index>
-   Voraussetzungen </Voraussetzungen/index>
+   Voraussetzungen </Voraussetzungen/voraussetzungen>
    AndroidAPS installieren </AndroidAPS-installieren/index>
    AndroidAPS einrichten </AndroidAPS-einrichten/index>
    Tipps und Tricks </Tipps-und-Tricks/index>
