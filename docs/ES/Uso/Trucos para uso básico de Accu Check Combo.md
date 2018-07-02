@@ -18,13 +18,13 @@
 Restablecer la accesibilidad de la bomba
 
 ### Restaurar la accesibilidad a la bomba
-Cuando AndroidAPS informa una alarma de bomba inalcanzable, primero suelte el candado y presione cualquier tecla en la bomba (por ejemplo, el botón "hacia abajo"). Tan pronto como la pantalla de la bomba se haya apagado, presione ACTUALIZAR en la pestaña Combo en AndroidAPS. En general, la comunicación funciona nuevamente.
+Cuando AndroidAPS informa una alarma de **bomba inalcanzable**, primero suelte el candado y **presione cualquier tecla en la bomba** (por ejemplo, el botón "hacia abajo"). Tan pronto como la pantalla de la bomba se haya apagado, presione **ACTUALIZAR** en la pestaña Combo en AndroidAPS. En general, la comunicación funciona nuevamente.
 Si eso no ayuda, reinicie su teléfono inteligente. Después del reinicio, AndroidAPS y ruffy se reactivarán y se establecerá una nueva conexión con la bomba.
 Las pruebas con diferentes teléfonos inteligentes han demostrado que ciertos teléfonos inteligentes disparan el error de "bomba inalcanzable" más a menudo que otros. AAPS Phones enumera teléfonos inteligentes probados con éxito.
 
 ## Causas y consecuencias de frecuentes errores de comunicación
 
-* En teléfonos con **poca memoria** (o configuraciones agresivas de ahorro de energía), AndroidAPS a menudo se apaga. Usted puede saber por el hecho de que los botones Bolus y Calculator en la pantalla de inicio no se muestran al abrir AAPS porque el sistema se está inicializando. Esto puede disparar "alarmas de bomba inalcanzable" al inicio. En el campo Última conexión de la pestaña Combo, puede verificar cuándo AndroidAPS se comunicó por última vez con la bomba.
+* En teléfonos con **poca memoria** (o configuraciones agresivas de ahorro de energía), AndroidAPS a menudo se apaga. Usted puede saber por el hecho de que los botones Bolus y Calculator en la pantalla de inicio no se muestran al abrir AAPS porque el sistema se está inicializando. Esto puede disparar "alarmas de bomba inalcanzable" al inicio. En el campo **Última conexión** de la pestaña Combo, puede verificar cuándo AndroidAPS se comunicó por última vez con la bomba.
 
 ![Bomba inalcanzable](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Pump_Unreachable.png)
 ![No hay conexión con la bomba](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/No_connection_to_pump.png)
@@ -60,9 +60,9 @@ Los rangos para el tiempo de vida típico de los diferentes tipos de batería so
 ![Energizer](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/energizer-l91aa---image.jpg?raw=true)
 ![onepower](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/PowerOne.png?raw=true)
 
-**Energizer Ultimate Lithium**: de 4 a 7 semanas
-**Power One Alkaline (Varta)** del paquete de servicio: 2 a 4 semanas
-**Pilas recargables Eneloop (BK-3MCCE)**: de 1 a 3 semanas
+* **Energizer Ultimate Lithium**: de 4 a 7 semanas
+* **Power One Alkaline (Varta)** del paquete de servicio: 2 a 4 semanas
+* **Pilas recargables Eneloop (BK-3MCCE)**: de 1 a 3 semanas
 
 Si la duración de la batería es significativamente más corta que los rangos indicados anteriormente, verifique las siguientes causas posibles:
 
