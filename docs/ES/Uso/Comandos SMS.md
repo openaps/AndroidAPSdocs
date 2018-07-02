@@ -34,15 +34,15 @@ Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usa
 
 ## TREATMENTS REFRESH
 
--Refresca tratamiento
+- Refresca tratamiento
 
 ## NSCLIENT RESTART
 
--Reinicia NSclient
+- Reinicia NSclient
 
 ## DANAR/PUMP (since 1.60)
 
--Última conexión: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Última conexión: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL *Para cancelar un basal temporal responder con código EmF
 
