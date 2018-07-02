@@ -1,19 +1,24 @@
 # Objetivos
 
-AndroidAPS tiene una serie de Objetivos que deben completarse para guiarlo a través de las características y configuraciones de lazo cerrado seguro. Estos aseguran que ha configurado correctamente todo lo detallado en las secciones anteriores, y que comprende lo que está haciendo su sistema y por qué de modo que pueda confiar en él. Si está actualizando teléfonos, puede exportar su configuración para mantener su progreso con los objetivos; en los tres puntos en la esquina superior derecha, seleccione Exportar configuración, le dirá a qué carpeta ha exportado el archivo. En su nuevo teléfono copie el archivo a esa ubicación y luego seleccione Importar configuración. No solo se guardará su progreso a través de los objetivos, sino también su configuración de seguridad, como el máximo bolo, etc. Si no exporta e importa su configuración, deberá volver a comenzar los objetivos desde el principio. Es una buena idea hacer una copia de seguridad de su configuración con frecuencia, por si acaso.
+AndroidAPS tiene una serie de Objetivos que deben completarse para guiarlo a través de las características y configuraciones de lazo cerrado de manera segura. Estos, aseguran que ha configurado correctamente todo lo detallado en las secciones anteriores, y que comprende lo que está haciendo su sistema y por qué, de modo que pueda confiar en él. 
+Si está actualizando teléfonos, puede exportar su configuración para mantener su progreso con los objetivos; 
+* en los tres puntos en la esquina superior derecha, seleccione Exportar configuración, le dirá a qué carpeta ha exportado el archivo.
+* En su nuevo teléfono copie el archivo a esa ubicación y luego seleccione Importar configuración. No solo se guardará su progreso a través de los objetivos, sino también su configuración de seguridad, como el máximo bolo, etc. 
+* Si no exporta e importa su configuración, deberá volver a comenzar los objetivos desde el principio. 
+* Es una buena idea hacer una copia de seguridad de su configuración con frecuencia, para guardar su progreso.
 
 ## Objetivo 1
 
-Configurar la visualización y la monitorización, y analizar los valores basales y las ratios
+Configurar la visualización y la monitorización, analizar los valores basales y las ratios.
 
 * Seleccione la fuente correcta de glucosa en sangre para su configuración. Ver [Fuente de datos de glucemia] (https://github.com/Lillycgm/AndroidAPSdocs/blob/master/docs/ES/Configuracion/Fuente%20de%20datos%20Glucemia.md) para más información.
-* Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si está utilizando un modelo de bomba sin controlador AndroidAPS para lazo abierto) para garantizar que el estado de su bomba pueda comunicarse con AndroidAPS. Si usa la bomba DanaR, asegúrese de haber seguido las instrucciones de la bomba de insulina [DanaR](https://github.com/MilosKozak/AndroidAPS/wiki/DanaR-Insulin-Pump) para garantizar el vínculo entre la bomba y el sistema AndroidAPS.DanaR Insulin Pump
+* Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si está utilizando un modelo de bomba sin controlador AndroidAPS para lazo abierto) para garantizar que el estado de su bomba pueda comunicarse con AndroidAPS. Si usa la bomba DanaR, asegúrese de haber seguido las instrucciones de la bomba de insulina [DanaR](https://github.com/MilosKozak/AndroidAPS/wiki/DanaR-Insulin-Pump) para garantizar el vínculo entre la bomba y el sistema AndroidAPS.
 * Siga las instrucciones en la página de [Nightscout](https://github.com/Lillycgm/AndroidAPSdocs/blob/master/docs/ES/Instalando%20AndroidAPS/Nightscout.md) para asegurarse de que Nightscout pueda recibir y mostrar esta información.
  <br><br>_Es posible que deba esperar a que llegue la próxima lectura de glucosa antes que AndroidAPS la reconozca._
 
 ## Objetivo 2
 
-Comenzar en un lazo abierto
+Comenzar en un lazo abierto.
 
 * Seleccione lazo abierto en Preferencias, o presionando y manteniendo presionado el botón Loop en la esquina superior izquierda de la pantalla de inicio.
 * Navegue a través de las Preferencias para configurarlo para ti.
@@ -33,7 +38,7 @@ _ Deténgase aquí si tiene lazo abierto con una bomba virtual: no haga clic en 
 
 ## Objetivo 4
 
-Comenzar a cerrar el lazo con baja suspensión de glucosa
+Comenzar a cerrar el lazo con baja suspensión de glucosa.
 
 Seleccione Closed Loop desde Preferencias, o presionando y manteniendo presionado el botón Abrir lazo en la parte superior izquierda de la pantalla de inicio.
 Establezca su rango objetivo un poco más alto de lo que normalmente busca, solo por seguridad.
@@ -43,14 +48,14 @@ Asegúrese de que su configuración haya sido compatible con AndroidAPS para evi
 
 ## Objetivo 5
 
-Ajustar el lazo cerrado, elevar la IOB máxima por encima de 0 y disminuir gradualmente los objetivos de BG
+Ajustar el lazo cerrado, elevar la IOB máxima por encima de 0 y disminuir gradualmente los objetivos de BG.
 
 * Aumente su maxIOB por encima de 0 durante un 1 día, se recomienda por defecto que sea 2 días, pero debe trabajar lentamente hasta que sepa que su configuración funciona para usted.
 * Una vez haya afinado cuánta IOB se adapta a sus patrones de lazo, reduzca sus objetivos al nivel deseado.
 
 ## Objetivo 6
 
-Ajustar los valores basales y ratios si es necesario, y luego habilitar el autosens
+Ajustar los valores basales y ratios si es necesario, y luego habilitar el autosens.
 
 * Puede usar [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) como única para verificar que sus basales sigan siendo precisos, o hacer una prueba basal tradicional.
 * Habilite [auto-sens](https://github.com/MilosKozak/AndroidAPS/wiki/Open-APS-features) durante un período de 7 días y observe cómo la línea blanca en el gráfico de la pantalla de inicio muestra cómo puede aumentar o disminuir su sensibilidad a la insulina como resultado del ejercicio u hormonas, etc., Observe la pestaña del informe de OpenAPS cómo AndroidAPS está ajustando los basales y / o objetivos en consecuencia.
@@ -58,6 +63,6 @@ Ajustar los valores basales y ratios si es necesario, y luego habilitar el autos
 
 ## Objetivo 7
 
-Habilitar funciones adicionales para el uso diurno, como asistencia avanzada para la comida
+Habilitar funciones adicionales para el uso diurno, como asistencia avanzada para la comida.
 
 * Ahora que ya se siente seguro con funcionamiento de AndroidAPS y los ajustes que mejor reflejan su diabetes, puede, durante un período de 14 días, probar funciones adicionales que automaticen aún más el trabajo para usted.
