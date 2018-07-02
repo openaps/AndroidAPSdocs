@@ -6,9 +6,9 @@ AndroidAPS tiene una serie de Objetivos que deben completarse para guiarlo a tra
 
 Configurar la visualización y la monitorización, y analizar los valores basales y las ratios
 
-* Seleccione la fuente correcta de glucosa en sangre para su configuración. Ver [BG Source] (https://github.com/MilosKozak/AndroidAPS/wiki/BG-Source) para más información.
-* Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si está utilizando un modelo de bomba sin controlador AndroidAPS para lazo abierto) para garantizar que el estado de su bomba pueda comunicarse con AndroidAPS. Si usa la bomba DanaR, asegúrese de haber seguido las instrucciones de la bomba de insulina DanaR para garantizar el vínculo entre la bomba y el sistema AndroidAPS.DanaR Insulin Pump
-* Siga las instrucciones en la página de Nightscout para asegurarse de que Nightscout pueda recibir y mostrar esta información.
+* Seleccione la fuente correcta de glucosa en sangre para su configuración. Ver [Fuente de datos de glucemia] (https://github.com/Lillycgm/AndroidAPSdocs/blob/master/docs/ES/Configuracion/Fuente%20de%20datos%20Glucemia.md) para más información.
+* Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si está utilizando un modelo de bomba sin controlador AndroidAPS para lazo abierto) para garantizar que el estado de su bomba pueda comunicarse con AndroidAPS. Si usa la bomba DanaR, asegúrese de haber seguido las instrucciones de la bomba de insulina [DanaR](https://github.com/MilosKozak/AndroidAPS/wiki/DanaR-Insulin-Pump) para garantizar el vínculo entre la bomba y el sistema AndroidAPS.DanaR Insulin Pump
+* Siga las instrucciones en la página de [Nightscout](https://github.com/Lillycgm/AndroidAPSdocs/blob/master/docs/ES/Instalando%20AndroidAPS/Nightscout.md) para asegurarse de que Nightscout pueda recibir y mostrar esta información.
  <br><br>_Es posible que deba esperar a que llegue la próxima lectura de glucosa antes que AndroidAPS la reconozca._
 
 ## Objetivo 2
@@ -23,7 +23,7 @@ Comenzar en un lazo abierto
 
 Comprender su ciclo abierto, incluidas sus recomendaciones basales temp.
 
-Comience a comprender el pensamiento detrás de las recomendaciones basales temporales al observar la lógica basal de determinación y la línea de pronóstico en la pantalla de inicio de AndroidAPS / Nightscout y el resumen de resultados de los cálculos en su pestaña de OpenAPS.
+Comience a comprender el pensamiento detrás de las recomendaciones basales temporales al observar la [lógica basal de determinación](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) y la línea de pronóstico en la pantalla de inicio de AndroidAPS / Nightscout y el resumen de resultados de los cálculos en su pestaña de OpenAPS.
 
 
  <br><br>_Deberá establecer su objetivo más alto de lo normal hasta que tenga confianza en los cálculos y la configuración. El sistema permite que un objetivo bajo sea como mínimo 4 o máximo de 10, y un objetivo alto como mínimo de 5 y máximo de 15. Un objetivo temporal como valor único puede ser cualquierar dentro del rango de 4 a 15. El objetivo es el valor en el que se basan los cálculos, y no el mismo en el que intenta mantener sus valores de glucosa en sangre. Si su objetivo es muy amplio (por ejemplo, 3 o más mmol de ancho), con frecuencia encontrará que debido a que se predice que la glucosa en sangre estará en algún lugar dentro de ese amplio rango, no se sugieren muchas tasas basales temporales fluctuantes. Es posible que desee experimentar ajustando sus objetivos para que estén más cerca (por ejemplo, 1 o menos mmol de ancho) y observe cómo el comportamiento de su sistema cambia como resultado. Puede ver un rango más amplio (líneas verdes) en el gráfico de los valores que desea mantener dentro de su glucosa sanguínea al poner diferentes valores en Preferencias> Rango para visualización._
@@ -52,8 +52,8 @@ Ajustar el lazo cerrado, elevar la IOB máxima por encima de 0 y disminuir gradu
 
 Ajustar los valores basales y ratios si es necesario, y luego habilitar el autosens
 
-* Puede usar Autotune como única para verificar que sus basales sigan siendo precisos, o hacer una prueba basal tradicional.
-* Habilite la autosens durante un período de 7 días y observe cómo la línea blanca en el gráfico de la pantalla de inicio muestra cómo puede aumentar o disminuir su sensibilidad a la insulina como resultado del ejercicio u hormonas, etc., Observe la pestaña del informe de OpenAPS cómo AndroidAPS está ajustando los basales y / o objetivos en consecuencia.
+* Puede usar [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) como única para verificar que sus basales sigan siendo precisos, o hacer una prueba basal tradicional.
+* Habilite [auto-sens](https://github.com/MilosKozak/AndroidAPS/wiki/Open-APS-features) durante un período de 7 días y observe cómo la línea blanca en el gráfico de la pantalla de inicio muestra cómo puede aumentar o disminuir su sensibilidad a la insulina como resultado del ejercicio u hormonas, etc., Observe la pestaña del informe de OpenAPS cómo AndroidAPS está ajustando los basales y / o objetivos en consecuencia.
  <br><br>_No olvide registrar su lazo en [este formulario](http://bit.ly/nowlooping), registrando AndroidAPS como su tipo de software de lazo cerrado DIY, si aún no lo ha hecho._
 
 ## Objetivo 7
