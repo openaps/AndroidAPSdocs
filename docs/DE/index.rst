@@ -34,9 +34,10 @@ Was man benötigt
 - DanaR / DanaRS / Akku Chek Combo Insulinpumpe (in Zukunft auch die Insight)
 - Ein CGM (Dexcom G4/G5/G6, Freestyle Libre, Eversense oder Medtronic Guardian)
 
+
 .. toctree::
    :maxdepth: 5
       
-   /Voraussetzungen/voraussetzungen
+   Voraussetzungen/voraussetzungen
    Glossar
    Sicherheitshinweise
