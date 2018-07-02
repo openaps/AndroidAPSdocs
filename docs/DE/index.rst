@@ -1,15 +1,6 @@
 Was ist AndroidAPS?
 ==============================================
 
-
-.. toctree::
-   :maxdepth: 5
-      
-   Voraussetzungen/voraussetzungen
-   Glossar
-   Sicherheitshinweise
-
-
 Ziele
 ~~~~~~~~~~~~~~
 Die Ziele, die zur Entstehung führten:
