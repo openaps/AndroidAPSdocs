@@ -11,7 +11,7 @@ Si está actualizando teléfonos, puede exportar su configuración para mantener
 
 Configurar la visualización y la monitorización, analizar los valores basales y las ratios.
 
-* Seleccione la fuente correcta de glucosa en sangre para su configuración. Ver [Fuente de datos de glucemia] (https://github.com/Lillycgm/AndroidAPSdocs/blob/master/docs/ES/Configuracion/Fuente%20de%20datos%20Glucemia.md) para más información.
+* Seleccione la fuente correcta de glucosa en sangre para su configuración. Ver [Fuente de datos de glucemia](https://github.com/Lillycgm/AndroidAPSdocs/blob/master/docs/ES/Configuracion/Fuente%20de%20datos%20Glucemia.md) para más información.
 * Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si está utilizando un modelo de bomba sin controlador AndroidAPS para lazo abierto) para garantizar que el estado de su bomba pueda comunicarse con AndroidAPS. Si usa la bomba DanaR, asegúrese de haber seguido las instrucciones de la bomba de insulina [DanaR](https://github.com/MilosKozak/AndroidAPS/wiki/DanaR-Insulin-Pump) para garantizar el vínculo entre la bomba y el sistema AndroidAPS.
 * Siga las instrucciones en la página de [Nightscout](https://github.com/Lillycgm/AndroidAPSdocs/blob/master/docs/ES/Instalando%20AndroidAPS/Nightscout.md) para asegurarse de que Nightscout pueda recibir y mostrar esta información.
  <br><br>_Es posible que deba esperar a que llegue la próxima lectura de glucosa antes que AndroidAPS la reconozca._
