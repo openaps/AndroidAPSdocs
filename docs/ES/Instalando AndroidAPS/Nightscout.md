@@ -16,7 +16,8 @@ Tu sitio debe ser versión 10 o superior, por lo que comprueba que tengas la [ú
      * `DEVICESTATUS_ADVANCED` = `true`
      * `PUMP_FIELDS` = `reservoir battery clock`
      * Multitud de alarmas pueden ser configuradas para [monitorizar la bomba](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring) El % de batería es recomendable:
-             *	`PUMP_WARN_BATT_P` = `51`
+     
+             *	`PUMP_WARN_BATT_P` = `51`      
              *	`PUMP_URGENT_BATT_P` = `26`
 
 ![](https://github.com/MilosKozak/AndroidAPS/wiki/images/nightscout1.png)
