@@ -1,8 +1,8 @@
-#Trucos y consejos
+# Trucos y consejos
 
-El principio fundamental del lazo cerrado es que la tasa basal y los ratios insuliana-carbohidratos es precisa. Todas las recomendaciones asumen que se satisfacen sus necesidades basales y que cualquier picos o valles que esté viendo son el resultado de otros factores que, por lo tanto, requieren ajustes inesperados (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede hacer por motivos de seguridad, han sido limitados (ver la tasa basal temporal máxima permitida en el Diseño en los doc de referencia de OpenAPS), lo que significa que no quiere desperdiciar la dosis permitida al corregir un basal subyacente incorrecto. Si, por ejemplo, con frecuencia tiene poca experiencia al acercarse una comida, es probable que sus necesidades basales se ajusten. Puede usar Autotune para ajustar los valores basales y / o ISF, y también si es necesario cambiar la ratio insulina-carbohidratos. O puede probar y establecer su basal a la antigua usanza.
+El principio fundamental del lazo cerrado es que la tasa basal y los ratios insuliana-carbohidratos es precisa. Todas las recomendaciones asumen que se satisfacen sus necesidades basales y que cualquier picos o valles que esté viendo son el resultado de otros factores que, por lo tanto, requieren ajustes inesperados (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede hacer por motivos de seguridad, han sido limitados (ver la tasa basal temporal máxima permitida en el Diseño en los [doc de referencia de OpenAPS](https://openaps.org/reference-design/)), lo que significa que no quiere desperdiciar la dosis permitida al corregir un basal subyacente incorrecto. Si, por ejemplo, con frecuencia tiene poca experiencia al acercarse una comida, es probable que sus necesidades basales se ajusten. Puede usar [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para ajustar los valores basales y / o ISF, y también si es necesario cambiar la ratio insulina-carbohidratos. O puede probar y establecer su basal a la [antigua usanza](http://integrateddiabetes.com/basal-testing/).
 
-##Prácticas de lazo cerrado
+## Prácticas de lazo cerrado
 
 *	Si no desea que sus preferencias se cambien fácilmente, puede proteger con contraseña el menú de preferencias seleccionando en el menú de preferencias "contraseña para configuración" escribiendo la contraseña que elija. La próxima vez que vaya al menú de preferencias, le pedirá esa contraseña antes de seguir adelante. Si luego desea eliminar la opción de contraseña, vaya a "contraseña de configuración" y elimine el texto.
 
@@ -17,7 +17,7 @@ El principio fundamental del lazo cerrado es que la tasa basal y los ratios insu
      * [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
      * [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
      * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-     *	[Hormones and autosens See myCGM](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+     * [Hormones and autosens See myCGM](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## Baterías
 
@@ -29,7 +29,7 @@ El lazo cerrado puede reducir la batería de la bomba más rápido que el uso no
 *	La aplicación AndroidAPS a menudo se puede cerrar para ahorrar energía o liberar RAM en algunos teléfonos. Cuando AndroidAPS se reinicia en cada inicio, establece una conexión Bluetooth con la bomba y vuelve a leer la tasa basal actual y el historial de bolos lo que consume batería. Para ver si esto está sucediendo, vaya a Preferencias> NSClient y habilite 'Iniciar aplicación de inicio de sesión en NS'. Nightscout recibirá un evento en cada reinicio de AndroidAPS, lo que facilita el seguimiento del problema. Para evitar que esto suceda, incluya en la lista la aplicación AndroidAPS en la configuración de la batería del teléfono para evitar que el monitor de alimentación de la aplicación la cierre.
 *	Limpie los terminales de la batería con una toallita con alcohol para asegurar que no quede cera / grasa de fabricación.
 *	para las bombas DanaR / RS, el procedimiento de arranque genera una gran corriente en la batería para romper la película de pasivación (evita la pérdida de energía durante el almacenamiento), pero no siempre funciona para romperla al 100%. Retire o reinserte la batería 2-3 veces hasta que muestre el 100% en la pantalla, o use la llave de la batería para cortocircuitar brevemente la batería antes de la inserción aplicándola a ambos terminales por una fracción de segundo.
-*	vea también más consejos para tipos particulares de batería para usar con la bomba Combo
+*	vea también más consejos para tipos particulares de batería para usar con la bomba Combo [aquí (enlace en inglés)](https://github.com/MilosKozak/AndroidAPS/wiki/Accu-Chek-Combo:-Tipps-for-Basic-usage#battery-type-and-causes-of-short-battery-life) 
 
 ## Cambio de reservorios y cánulas
 
