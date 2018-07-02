@@ -30,11 +30,10 @@ Comprender su ciclo abierto, incluidas sus recomendaciones basales temp.
 
 Comience a comprender el pensamiento detrás de las recomendaciones basales temporales al observar la [lógica basal de determinación](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) y la línea de pronóstico en la pantalla de inicio de AndroidAPS / Nightscout y el resumen de resultados de los cálculos en su pestaña de OpenAPS.
 
-
  <br><br>_Deberá establecer su objetivo más alto de lo normal hasta que tenga confianza en los cálculos y la configuración. El sistema permite que un objetivo bajo sea como mínimo 4 o máximo de 10, y un objetivo alto como mínimo de 5 y máximo de 15. Un objetivo temporal como valor único puede ser cualquierar dentro del rango de 4 a 15. El objetivo es el valor en el que se basan los cálculos, y no el mismo en el que intenta mantener sus valores de glucosa en sangre. Si su objetivo es muy amplio (por ejemplo, 3 o más mmol de ancho), con frecuencia encontrará que debido a que se predice que la glucosa en sangre estará en algún lugar dentro de ese amplio rango, no se sugieren muchas tasas basales temporales fluctuantes. Es posible que desee experimentar ajustando sus objetivos para que estén más cerca (por ejemplo, 1 o menos mmol de ancho) y observe cómo el comportamiento de su sistema cambia como resultado. Puede ver un rango más amplio (líneas verdes) en el gráfico de los valores que desea mantener dentro de su glucosa sanguínea al poner diferentes valores en Preferencias> Rango para visualización._
 
 
-_ Deténgase aquí si tiene lazo abierto con una bomba virtual: no haga clic en Verificar al final de este objetivo._
+<br><br>_Deténgase aquí si tiene lazo abierto con una bomba virtual: no haga clic en Verificar al final de este objetivo._
 
 ## Objetivo 4
 
