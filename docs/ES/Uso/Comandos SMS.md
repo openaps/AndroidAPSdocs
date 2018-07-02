@@ -44,12 +44,13 @@ Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usa
 
 - Última conexión: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
-## BASAL STOP/CANCEL *Para cancelar un basal temporal responder con código EmF
+## BASAL STOP/CANCEL
+
+- Para cancelar un basal temporal responder con código EmF
 
 ## BASAL 0.3
 
 - Para poner basal 0.3u/h responder con código Swe.
-
 - No está permitido comandar basales remotamente (si comandos remotos no están permitidos)
 
 ## BOLUS 1.2
