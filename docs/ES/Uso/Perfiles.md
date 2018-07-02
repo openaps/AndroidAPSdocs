@@ -20,6 +20,7 @@ En el modo de lazo cerrado, se recomienda activar la actualización automática 
 
 * Aparecerá el mensaje de error "Perfil no válido" o "Perfil basal no alineado con las horas" si tiene tasas basales o tasas I: C no en horas. Las bombas DanaR y DanaRS no admiten cambios en la media hora.
 *	'Cambio de perfil recibido de NS pero el perfil no existe localmente' o Vaya a la pestaña Tratamientos en AndoridAPS y seleccione Cambio de perfil, 'eliminar' la fecha y la hora que se mencionaron en el mensaje de error. O vaya a su colección de mlab, busque los tratamientos para el cambio de perfil y elimine la fecha y la hora que es mencionada en el mensaje de error. 
-*	Aparecerá el mensaje de error "DIA 3 h demasiado corto" si la duración de la acción de la insulina en su perfil es un valor que AndroidAPS no considera exacto. Lea acerca de cómo seleccionar el DIA correcto y edítelo en su perfil, luego haga un Cambio de perfil para continuar. 
+![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
+*	Aparecerá el mensaje de error "DIA 3 h demasiado corto" si la duración de la acción de la insulina en su perfil es un valor que AndroidAPS no considera exacto. Lea acerca de cómo seleccionar el [DIA correcto](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) y edítelo en su perfil, luego haga un Cambio de perfil para continuar. 
 
 
