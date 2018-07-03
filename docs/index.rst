@@ -1,9 +1,11 @@
-Welcome to AndroidAPS documentation!
+====================================
+AndroidAPS documentation
 ====================================
 
 .. toctree::
    :maxdepth: 6
    :caption: AndroidAPS documentation
+   :glob:
    
    Българска </BG/index>
    český </CZ/index>
