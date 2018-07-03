@@ -1,5 +1,5 @@
 
-
+# Detección de sensibilidad y COB
 
 * Actualmente hay 3 modelos de detección de sensbilidad:
      * Sensibilidad Oref0
@@ -21,11 +21,11 @@ La sensibilidad se calcula como promedio ponderado de las desviaciones. Las nuev
 
 Oref0- los carbohidratos no absorbidos son cortados después de tiempo específico.
 
-![COB de oref0](../images/cob_oref0.png)
+![COB de oref0](https://github.com/openaps/AndroidAPSdocs/blob/master/docs/images/cob_oref0.png)
 
 AAPS, peso ponderado – absorción es calculada para tener COB =0 despues de tiempo específico. 
 
-![COB de AAPS](../images/cob_aaps.png)
+![COB de AAPS](https://github.com/openaps/AndroidAPSdocs/blob/master/docs/images/cob_aaps.png)
 
 Si absorción mínima de Carbs es usada en lugar del valor calculado de las desviaciones, un punto verde aparece en la gráfica COB.
 
