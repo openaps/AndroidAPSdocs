@@ -1,8 +1,9 @@
 Was ist AndroidAPS?
-==============================================
+-----------
 
-Ziele
-~~~~~~~~~~~~~~
+
+**Ziele**
+
 Die Ziele, die zur Entstehung führten:
 
 - App mit „modularer Basis“, es soll leicht sein, neue Module hinzuzufügen
@@ -15,8 +16,8 @@ Die Ziele, die zur Entstehung führten:
 - Die Möglichkeit zum Hinzufügen/Entfernen von Beschränkungen
 - Eine App, die alles enthält, um mit dem Diabetes klar zu kommen (APS+Nightscout)
 
-Was man benötigt
-~~~~~~~~~~~~~~
+**Was man benötigt**
+
 - Android Smartphone (5.0 oder neuer)
 - xDrip/xDrip+, oder Glimp, oder 600SeriesAndroidUploader
 - AndroidAPS
@@ -25,7 +26,7 @@ Was man benötigt
 - Ein CGM (Dexcom G4/G5/G6, Freestyle Libre, Eversense oder Medtronic Guardian)
 
 Sicherheitshinweise
-~~~~~~~~~~~~
+~~~~~~~~~~
 AndroidAPS ist nur ein Programm zur Unterstützung deiner Diabetestherapie, nicht um den Diabetes zu vergessen!
 Vertraue niemals blind auf ein Gerät bei der Anpassung der Dosierung. Kontrolliere die Ergebnisse und verstehe, wie der Algorithmus auf diese kommt.
 
@@ -34,11 +35,11 @@ Dein Smartphone, welches die Pumpe kontrolliert, sollte ausschließlich für die
 Installiere regelmäßig alle Sicherheitsupdates, damit du vor Angriffen bestmöglich geschützt bist!
 
 Screenshots
-~~~~~~~~~~~~
+~~~~~~~~~~
 
 
 Glossar
-~~~~~~~~~~~~
+~~~~~~~~~~
 Für das meiste "Looper Vokabular" gehe zu: https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html
 
 Einige AndroidAPS spezifische Bezeichnungen:
@@ -48,22 +49,22 @@ Einige AndroidAPS spezifische Bezeichnungen:
 
 
 Voraussetzungen
-===============
+-----------
 
 Insulinpumpe
-++++++++++++
+~~~~~~~~~~~
 
 Insulinarten
-++++++++++++
+~~~~~~~~~~~
 
 BZ-Quelle (CGM/FGM)
-++++++++++++
+~~~~~~~~~~~
 
 Android Smartphone
-++++++++++++
+~~~~~~~~~~~
 
 Android Smartwatch (optional)
-++++++++++++
+~~~~~~~~~~~
 In AndroidAPS ist es möglich, dass man die Pumpe über Android Wear Uhren kontrolliert. Um diese Möglichkeit zu nutzen, musst du beim [kompilieren der App](https://github.com/MilosKozak/AndroidAPS/wiki/APK-erstellen_de) die Build Variante "fullWearcontrolRelease" wählen. In AndroidAPS, im Config Builder, musst du dann noch enable Wear aktivieren. Es gibt verschiedene Watchfaces zum auswählen, enthalten sind durchschnittliches Delta, IOB, zur Zeit aktive Temp.Basalrate, das Basalprofil, und deine BZ Werte. Du kannst die AndroidAPS Watch App, auch verwenden, um ein Temp Target zu setzen, Bolus ab zu geben, den Bolus Wizard verwenden, Infusionset füllen, und den Status vom Loop und der Pumpe kontrollieren. Stelle sicher, dass AndroidAPS die Erlaubnis hat, um Benachrichtigungen auf der Uhr anzuzeigen (sonst kann man die Eingaben nicht bestätigen). Die Eingaben werden bestätigt in dem man die Benachrichtigung auf der Uhr öffnet, einmal wischt und bestätigt. Um schneller zu AAPS zu kommen, kannst du den angezeigten BZ doppelt anklicken. Wenn man zwei mal auf die BZ-Kurve tippt, ändert sich der angezeigte Zeitraum.
 
 In Android Wear 2.0 installiert sich das Watchface nicht von alleine. Du musst in den Playstore der Uhr gehen, und unter der Kategorie "installierte Apps auf dem Handy" AAPS aktivieren. Aktiviere ebenalls Auto Update.
@@ -73,7 +74,7 @@ Falls du ein anderes System zum loopen verwendest und deine Daten, oder die dein
 Pebble Nutzer können das [Urchin watchface](https://github.com/mddub/urchin-cgm) benutzen um ihre Loop Daten (vorausgesetzt sie sind auf Nightscout) zu sehen, aber mit dieser Methode ist es nicht möglich die Pumpe und AndroidAPS zu steuern. Du kannst Felder wählen um, z.B. IOB, aktiver temp. Basalrate und Vorhersage, anzeigen zu lassen. Falls du open loopst kannst du [IFTTT](https://ifttt.com/) benutzen um ein kleines Programm erstellen, welches bestimmt, wenn eine Benachrichtigungen von AndroidAPS kommt, eine SMS oder Benachrichtigung anzeigt.
 
 Nightscout-Website
-++++++++++++
+~~~~~~~~~~~
 Es wird vorausgesetzt, dass du bereits eine eigene Nightscout Seite eingerichtet hast, falls nicht folge [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku), um eine ausführliche Anleitung zur Einrichtung zu erhalten. Bei der unteren Anleitung findest du die Einstellungen die du zusätzlich noch ändern musst.
 * Gehe zu https://portal.azure.com/ oder https://herokuapp.com/
 
@@ -94,13 +95,13 @@ Es wird vorausgesetzt, dass du bereits eine eigene Nightscout Seite eingerichtet
 * Drücke Speichern.
 
 PC-Software
-++++++++++++
+~~~~~~~~~~~
         
 Diabetes-Therapiedaten
-++++++++++++
+~~~~~~~~~~~
 
 AndroidAPS installieren
-==============
+-----------
 
 Android Studio installieren
 ~~~~~~~~~~~~
@@ -190,7 +191,7 @@ Auf dem Reiter siehst du eine grüne Nachricht "updated project"
 
 
 AndroidAPS einrichten
-==============
+-------------
 
 Konfigurations-Generator
 ~~~~~~~~~~~~~~
@@ -318,7 +319,7 @@ Wear-Einstellungen
 --------
 
 Tipps und Tricks
-===========
+---------
 
 Logfiles erhalten
 ~~~~~~~~~
@@ -330,4 +331,4 @@ Beispiel-Setups
 ~~~~~~~~~
 
 Hilfe in der Community
-=============
+------------
