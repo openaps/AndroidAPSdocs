@@ -1,3 +1,7 @@
+/*
+Title: A Web Page Title
+*/
+
 # Understanding the AndroidAPS screens
 
 ## The Homescreen
