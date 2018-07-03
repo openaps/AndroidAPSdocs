@@ -6,7 +6,7 @@
 
    Safety First </Getting-Started/Safety-first>
    Screenshots </Getting-Started/Screenshots>
-   Architcture, security implementation </Getting-Started/Architecture-security-implementation>
+   Architecture, security implementation </Getting-Started/Architecture-security-implementation>
    Phone </Getting-Started/Phones>
    Pump choices </Getting-Started/Pump-Choices>
    Future possible pump drivers  </Getting-Started/Future-possible-Pump-Drivers>
