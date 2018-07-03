@@ -1,8 +1,9 @@
 Was ist AndroidAPS?
------------
+==========
 
 
-**Ziele**
+Ziele
+---------------
 
 Die Ziele, die zur Entstehung führten:
 
@@ -16,7 +17,8 @@ Die Ziele, die zur Entstehung führten:
 - Die Möglichkeit zum Hinzufügen/Entfernen von Beschränkungen
 - Eine App, die alles enthält, um mit dem Diabetes klar zu kommen (APS+Nightscout)
 
-**Was man benötigt**
+Was man benötigt
+------------
 
 - Android Smartphone (5.0 oder neuer)
 - xDrip/xDrip+, oder Glimp, oder 600SeriesAndroidUploader
