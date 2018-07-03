@@ -38,9 +38,9 @@ lorem ipsum
 
 .. toctree::
    :maxdepth: 3
-
-voraussetzungen
-installieren
-einrichten
-tipps
-community
+   
+   voraussetzungen
+   installieren
+   einrichten
+   tipps
+   community
