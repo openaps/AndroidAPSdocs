@@ -18,6 +18,7 @@
   * Combo (LineageOS, Ruffy)
    * Configuring the Combo/Ruffy
   * Dana R/RS
+ * Choosing a CGM
 
 # Nightscout
 * Why you need Nightscout
