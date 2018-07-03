@@ -1,3 +1,6 @@
+Glossar
+================
+
 Für das meiste "Looper Vokabular" gehe zu: https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html
 
 Einige AndroidAPS spezifische Bezeichnungen:
