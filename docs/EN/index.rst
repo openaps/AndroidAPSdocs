@@ -39,12 +39,12 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
 
 	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
 
-
+Getting Started with AndroidAPS
+----------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Getting Started with AndroidAPS
-
+   
    Safety First </EN/Getting-Started/Safety-first>
    Screenshots </EN/Getting-Started/Screenshots.md>
    Architcture, security implementation </EN/Getting-Started/Architecture-security-implementation.md>
@@ -54,20 +54,23 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
    Glossary </EN/Getting-Started/Glossary.md>
    How to help </EN/Getting-Started/How-can-I-help.md>
    
+  
+How to Install AndroidAPS
+------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to Install AndroidAPS
 
    Building the APK </EN/Installing-AndroidAPS/Building-APK.md>
    How to update to a new version </EN/Installing-AndroidAPS/Update-to-new-version.md>
    Nightscout </EN/Installing-AndroidAPS/Nightscout.md>
  
    
+Configuration 
+---------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuration 
    
    Config Builder </EN/Configuration/Config-Builder.md>
    BG Source</EN/Configuration/BG-Source.md>
@@ -78,10 +81,11 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
    Preferences </EN/Configuration/Preferences.md>
    Sensitivity Detection and COB </EN/Configuration/Sensitivity-detection-and-COB.md>
    
+Usage
+------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Usage
     
    Objectives </EN/Usage/Objectives.md>
    OpenAPS Features </EN/Usage/Open-APS-features.md>
@@ -92,10 +96,11 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
    Accessing log files </EN/Usage/Accessing-logfiles.md>
    Dev branch </EN/Usage/Dev-branch.md>
 
+Where to go for help 
+------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Where to go for help 
 
    Background reading & interesting articles </EN/Where-To-Go-For-Help/Background-reading.md>
    Where to go for help </EN/Where-To-Go-For-Help/Connect-with-other-users.md>
