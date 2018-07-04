@@ -46,3 +46,8 @@ Sicherheitshinweise
 SMS Steuerung:
 *Wenn du diese Option verwendest, behalte im Hinterkopf, was passieren könnte, falls das Handy, welches zur Fernsteuerung verwendet wird, gestohlen wird. Schütze dieses mit einem sicheren Code.
 *Seit AndroidAPS 1.1 wirst du über wichtige ferngesteuerte Aktionen (z.B. Bolus, Profiländerung) eine SMS erhalten. Deswegen solltest du mindestens 2 Telefonnummern hinzufügen (für den Fall, dass ein Handy gestohlen wird).
+
+Screenshots
+-------------
+
+Bitte übersetzen von https://androidaps.readthedocs.io/en/latest/Getting-Started/Screenshots.html
