@@ -28,9 +28,10 @@ Was man benötigt
 - Ein CGM (Dexcom G4/G5/G6, Freestyle Libre, Eversense oder Medtronic Guardian)
 
 Glossar
----------------
-lorem ipsum
+------------
+Für das meiste "Looper Vokabular" gehe zu: https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html
 
-Sicherheitshinweise
----------------
-lorem ipsum
+Einige AndroidAPS-spezifische Bezeichnungen:
+
+* Circadian Percentage Profil: ändert dein Basisprofil anhand der eingestellten Zeit oder prozentual.
+* Dev (im Homescreen): Deviation (= Abweichung), zeigt an um wie viele Einheiten sich der tatsächliche Anstieg/Senkung des BZ, gegenüber des vorhergesagten Wertes (durch OpenAPS und eingegebener Daten) unterscheidet.
