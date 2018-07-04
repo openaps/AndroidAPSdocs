@@ -10,7 +10,7 @@ Herzlich willkommen zur deutschsprachigen AndroidAPS-Dokumentation
    voraussetzungen
    installieren
    einrichten
-   tipps
+   tippstricks
    community
 
 .. note:: 
