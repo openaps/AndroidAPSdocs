@@ -137,7 +137,7 @@ Es wird vorausgesetzt, dass du bereits eine eigene Nightscout Seite eingerichtet
 PC-Software
 -----------
 
-Um die AndroidAPS-App aus dem Quellcode zu erstellen, benötigst du auf dem Computer zunächst die Software Android Studio:#
+Um die AndroidAPS-App aus dem Quellcode zu erstellen, benötigst du auf dem Computer zunächst die Software Android Studio:
 
 https://developer.android.com/studio/install
 
