@@ -13,7 +13,6 @@ Herzlich willkommen zur deutschsprachigen AndroidAPS-Dokumentation
    tippstricks
    community
 
-.. note:: 
 **Disclaimer und Warnung**
 
 * Sämtliche Informationen, Gedanken und der Quellcode sind nur für informatorische und wissenschaftliche Zwecke. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Verwenden Sie Nightscout und AndroidAPS auf eigenes Risiko und setzen Sie es nicht ein, um Behandlungsentscheidungen zu treffen.
