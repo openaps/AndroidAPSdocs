@@ -122,32 +122,45 @@ Pebble Nutzer können das `Urchin Watchface <https://github.com/mddub/urchin-cgm
 
 Nightscout-Website
 -----------
+Es wird vorausgesetzt, dass du bereits eine eigene Nightscout-Seite eingerichtet hast. Es gibt folgende Möglichkeiten, solch eine Seite zu erstellen:
 
-Es wird vorausgesetzt, dass du bereits eine eigene Nightscout Seite eingerichtet hast, falls nicht folge `Nightscout <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, um eine ausführliche Anleitung zur Einrichtung zu erhalten. Bei der unteren Anleitung findest du die Einstellungen die du zusätzlich noch ändern musst.
-* Gehe zu https://portal.azure.com/ oder https://herokuapp.com/
+* http://ns.10be.de/de/index.html (einfach und komfortabel, deutscher Server)
+* `Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, (manuelle Einrichtung). Du musst folgende Variablen konfigiurieren:
 
-* Wähle deinen App Namen.
+  * Gehe zu https://portal.azure.com/ oder https://herokuapp.com/
 
-* Drücke settings (azure), oder Settings > "Reveal Config Variables (heroku)
+  * Wähle deinen App Namen.
 
-* Füge die Variablen hinzu oder ändere sie wie folgt:
-  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
-  * `DEVICESTATUS_ADVANCED` = `true` (HEROKU: 'on')
-  * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for `monitoring the pump <https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring>`_, battery % in particular is encouraged:
-    * `PUMP_WARN_BATT_P` = `51`
-    * `PUMP_URGENT_BATT_P` = `26`
+  * Drücke settings (azure), oder Settings > "Reveal Config Variables (heroku)
 
-.. image: /images/nightscout1.png
+  * Füge die Variablen hinzu oder ändere sie wie folgt:
+    * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
+    * `DEVICESTATUS_ADVANCED` = `true` (HEROKU: 'on')
+    * `PUMP_FIELDS` = `reservoir battery clock`
+    * Various alarms can be set for `monitoring the pump <https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring>`_, battery % in particular is encouraged:
+      * `PUMP_WARN_BATT_P` = `51`
+      * `PUMP_URGENT_BATT_P` = `26`
 
-* Drücke Speichern.
+.. image: images/nightscout1.png
+  :width: 400
+
+  * Drücke Speichern.
 
 PC-Software
 -----------
-
-Um die AndroidAPS-App aus dem Quellcode zu erstellen, benötigst du auf dem Computer zunächst die Software Android Studio:
+Der Quellcode von AndroidAPS, der in Github verfügbar ist, muss selbst in eine lauffähige Smartphone-App umgewandelt werden. Das ist do-it-yourself! Um die AndroidAPS-App aus dem Quellcode zu erstellen (kompilieren), benötigst du auf dem Computer die Software Android Studio:
 
 https://developer.android.com/studio/install
 
 Diabetes-Therapiedaten
 -----------
+AndroidAPS kann nur dann gut laufen, wenn deine Diabetes-Therapiedaten optimal eingstellt sind. Du musst drei Variablen ermitteln (ggf. stündlich anders, so dass du 3x24 Faktoren pro Tag hast):
+
+Basalraten
+++++++++
+
+ISF
+++++++++
+
+IC
+++++++++
