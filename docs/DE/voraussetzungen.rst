@@ -38,7 +38,7 @@ Insulinarten
 BZ-Quelle (CGM/FGM)
 -----------
 
-Für Dexcom Benutzer
+Dexcom
 ++++++++++++
 
 Mit xdrip+:
@@ -61,7 +61,7 @@ Mit OTG cable ('traditional' Nightscout):
 * Gib in den AndroidAPS Einstellungen > NSClient deine Nightscout URL und dein Nightscout API-Key ein.
 * Wähle im CONFIG BUILDER > PROFIL > NS Profil (AndroidAPS).
 
-Für FreeStyle Libre Nutzer
+FreeStyle Libre mit Bluetooth-Aufsatz
 +++++++++++++
 
 Mit xdrip:
@@ -77,14 +77,14 @@ Mit Glimp:
 * Downloade Glimp und folge der Anleitung auf `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre/>`_. 
 * Wähle in AndroidAPS > CONFIG BUILDER > Glimp.
 
-Für Benutzer von MM640g oder MM630g
+MM640g oder MM630g
 +++++++++++
 
 * Downloade `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_ und folge der Anleitung auf  `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g/>`_.
 * Im 600 Series Uploader gehe zu Settings > Send to xdrip+ und wähle ON (Ankreuzen).
 * Wähle MM640g im ConfigBuilder (in AndroidAPS).
 
-Für Nutzer von anderen CGM Systemen mit Upload zu Nightscout
+Andere CGM-Systeme
 +++++++++++
 
 Falls du ein anderes CGM System verwendest, das die Werte zu `Nightscout <http://www.nightscout.info/>`_ sendet, dann
