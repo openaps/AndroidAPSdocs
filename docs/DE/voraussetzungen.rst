@@ -158,9 +158,12 @@ AndroidAPS kann nur dann gut laufen, wenn deine Diabetes-Therapiedaten optimal e
 
 Basalraten
 ++++++++
+Die Basalraten müssen so fein abgestimmt sein, dass sie über den ganzen Tag verteilt den BZ-Wert konstant im unteren Zielbereich halten. Sowohl Hypos, als auf hohe Werte dürfen nicht vorkommen, sonst läuft der Loop nicht richtig. Am besten ist es, mehrere Basalratentests durchzuführen und das Schema mit dem Diabetologen oder der Diafee zu besprechen.
 
 ISF
 ++++++++
+Der Insulinsensitivitätsfaktor (ISF) gibt an, um wie viele mg/dl oder mmol/l der BZ-Wert durch 1 IE Insulin gesenkt wird.  
 
 IC
 ++++++++
+Der IC (Insulin-Carb-Ratio - Insulin-Kohlenhydrat-Faktor) bestimmt, wieviel Gramm Kohlenhydrate durch 1 IE Insulin abgedeckt werden.
