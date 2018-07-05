@@ -7,11 +7,11 @@ AndroidAPS documentation
    :caption: AndroidAPS documentation
    :glob:
    
-   Българска </BG/index>
-   český </CZ/index>
-   Deutsch </DE/index>
    English </EN/index>
+   Българска </BG/index>
+   Deutsch </DE/index>
    Español </ES/index>
+   český </CZ/index>
    
 .. toctree::
    :maxdepth: 1
