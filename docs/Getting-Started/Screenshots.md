@@ -18,7 +18,7 @@ Section D: Is where you can select which information is displayed on the charts 
 
 Section E: Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries. The predictions lines if you have them selected are: ORANGE predicts where your BG will go based on the current pump settings and known carbs on board (CoB) assuming that nothing changes. This line only appears if there are known CoB. The LIGHT BLUE line shows what would happen if those carbs didn't exist, for example if you dialled in some carbs and then didn't eat them. ANd the DARK BLUE line shows how that trajectory would change if the pump stopped all insulin delivery (0% TBR)
 
-The blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there wre no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+The blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
 
 Section F: is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
 
