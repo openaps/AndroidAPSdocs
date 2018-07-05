@@ -1,14 +1,27 @@
-# Watchfaces
+# Watchfaces 
 
-AndroidAPS is designed to be _controlled_ by Android Wear watches.  To achieve this you needed to select the build variant "fullRelease" when [building the APK](/docs/Installing-AndroidAPS/Building-APK) (or "pumpRelease" will allow you to just remote control the pump without looping).  Within AndroidAPS, in the ConfigBuilder you need to enable Wear.  You can access the setting by clicking on the cog.  If you want to bolus etc from the watch then within Wear Setting you need to enable "Controls from Watch".
+AndroidAPS está diseñado para ser controlado por los relojes Android Wear. Para lograr esto, necesitas seleccionar la variante de compilación "fullRelease" cuando [construyes the APK](/docs/Installing-AndroidAPS/Building-APK) (o "pumpRelease" te permitirá simplemente controlar la bomba a distancia sin hacer lazos cerrados). Dentro de AndroidAPS, en ConfigBuilder debe habilitar Wear. Puede acceder a la configuración haciendo clic en el icono
+de rueda dentada. Si deseas bolo, etc. desde el reloj, entonces dentro de la configuración de Wear debe habilitar "Controles desde reloj".
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.  You can also use the AAPS app on the watch to set a temporary target, administer a bolus, use the bolus wizard, prime/fill, and check the status of loop and pump.  Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick. To get faster to the AAPS menu, do a double tap on your BG. When doing a double tap onto the BG curve, it will show older/ just newer BG's.
 
-Troubleshooting the wear app: 
-*  On Android Wear 2.0 the watch screen does not install by itself anymore.  You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it.  Also enable auto update.  
-*  Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do it itself: Android Wear > Cog icon > Watch name > Resync apps.
-*  Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+Hay varias esferas watchfaces para elegir que incluyen delta promedio, IOB, tasa basal de temporal activa y perfiles basales además del gráfico de lecturas de MCG. También puede usar la aplicación AAPS en el reloj para establecer un objetivo temporal, administrar un bolo, usar el asistente de bolo, cebar/rellenar y verificar el estado del lazo y la bomba. Asegúrate de que las notificaciones de AndroidAPS no estén bloqueadas en el reloj. La confirmación de la acción (por ejemplo, bolo, objetivo temporal) viene a través de una notificación que deberá deslizar y marcar. Para ir más rápido al menú de AAPS, haz doble toque en tu BG. Al hacer doble toque en la curva BG, se mostrarán BG más antiguas/más reciente BG.
 
-If you are using another looping system and want to _view_ your looping detail on an AndroidWear watch, or want to watch your child's looping, then you can build/download just the NSClient APK.  To do this follow the [build APK instructions](/docs/Installing-AndroidAPS/Building-APK) selecting the build variant "NSClientRelease".  There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to _view_ looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch.  You can choose fields to display such as IOB and currently active temp basal rate and predictions.  If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Solución de problemas de la aplicación Wear:
+
+
+* En Android Wear 2.0, la pantalla del reloj ya no se instala sola. Tienes que ir a la playstore en el reloj (no es lo mismo que la playstore del teléfono) y encontrarlo en la categoría de aplicaciones instaladas en tu teléfono, desde allí puedes activarlo. También habilite la actualización automática.
+
+* A veces, ayuda a volver a sincronizar las aplicaciones con el reloj, ya que puede ser un poco lento hacerlo por sí mismo: Android Wear> Cog icon>Watch name> Resync apps.
+
+* Habilite la depuración de ADB en Opciones de desarrollador (en teléfono), conecte el reloj a través de USB e inicie la aplicación Wear una vez en Android
+Studio.
+
+
+Si está utilizando otro sistema de lazo cerrado y desea ver sus detalles del mismo  en un reloj AndroidWear, o quiere ver el lazo
+cerrado de su hijo, entonces puede compilar / descargar solo la APK de NSClient. Para ello, siga las instrucciones de creación de APK seleccionando la variante de compilación "NSClientRelease". Hay varias esferas watchfaces para elegir que incluyen delta promedio, IOB, tasa basal temporal  activa actual y perfiles basales + gráfico de lecturas de MCG.
+
+
+Los usuarios de Pebble pueden usar la esfera de reloj de [Urchin watchface](https://github.com/mddub/urchin-cgm) para ver los datos de los lazos (si se cargan en Nightscout), pero no podrás interactuar con AndroidAPS a través del reloj. Puede elegir campos para visualizar tales como IOB y la tasa basal de temp en activo y las predicciones. Si es un lazo abierto, puede usar [IFTTT](https://ifttt.com/) para crear un applet que diga si la notificación recibida de AndroidAPS ha sido enviada o bien por notificación SMS o por notificación pushover.
+
+
