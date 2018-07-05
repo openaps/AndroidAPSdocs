@@ -10,7 +10,6 @@ AndroidAPS documentation
    Българска </BG/index>
    Deutsch </DE/index>
    Español </ES/index>
-   český </CZ/index>
    
 .. toctree::
    :maxdepth: 1
