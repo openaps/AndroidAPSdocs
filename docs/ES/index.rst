@@ -62,18 +62,18 @@ Instalando AndroidAPS
    Nightscout </ES/instalando/nightscout.md>
    Actualizar a una nueva versión </ES/instalando/compilando.md>
 
-Configuration
+Configuración
 ------------
 .. toctree::
    :maxdepth: 2
    :glob:
    
-   Bomba Accu Check Combo </ES/configuration/combo.md>
-   Conf Builder </ES/configuration/configbuilder.md>
-   Fuente de datos Glucemia </ES/configuration/fuentes-glucemia.md>
-   Detección de sensibilidad y COB </ES/configuration/sens.md>
-   Preferencias </ES/configuration/preferencias.md>
-   Watchfaces </ES/configuration/watchfaces.md>
+   Bomba Accu Check Combo </ES/configuracion/combo.md>
+   Conf Builder </ES/configuracion/configbuilder.md>
+   Fuente de datos Glucemia </ES/configuracion/fuentes-glucemia.md>
+   Detección de sensibilidad y COB </ES/configuracion/sens.md>
+   Preferencias </ES/configuracion/preferencias.md>
+   Watchfaces </ES/configuracion/watchfaces.md>
    
 Uso
 ------------
