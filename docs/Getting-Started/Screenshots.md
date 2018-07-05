@@ -41,6 +41,12 @@ Section B: shows the calculated bolus. If the amount of insulin on boead already
 
 Section C: shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to. TT stands for Temporary Target, ISF is Insulin Sensitivity Factor, COB is Carbs on Board, IOB is Insulin on Board.
 
+## Actions
+
+![Actions](../images/Screenshot_actions.png) 
+
+This screen shows a number of commonly used actions. Most are self explanatory. TDD is Total Daily Dose and it takes you to an analysis of your insulin usage over the last few days. The HISTORY BROWSER enables you to scroll back over your history and examine your BG records, basals, and so on.
+
 ## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
@@ -60,7 +66,7 @@ And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21
 
 ![Pump Status](../images/Screenshot_pump_Combo.png)
 
-Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
+Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the REFRESH button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
 
 ## Care Portal
 
