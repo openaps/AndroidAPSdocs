@@ -1,30 +1,26 @@
-# Sensitivity Detection and COB options
+# Detección de sensibilidad y COB
+Actualmente hay 3 modelos de detección de sensbilidad:
+     * Sensibilidad Oref0
+     * Sensiblidad AAPS
+     * Sensibilidad PesoPromedio
 
-* Currently we have 3 sensitivity detection models
-  * Sensitivity Oref0
-  * Sensitivity AAPS
-  * Sensitivity WeightedAverage
+## Sensibilidad Oref0 
+Similar al descrito en documentación [Oref0](https://openaps.readthedocs.io/en/2017-05-21/index.html). Básicamente la sensibilidad es calculada a partir de 24h pasadas y carbohidratos (si no están absorbidos) se cortan a partir del tiempo especificado en las preferencias. 
 
-### Sensitivity Oref0
+## Sensibilidad AAPS
+La sensibilidad es calculada de misma manera que Ore0 pero puedes especificar el tiempo desde el cual se calcula. La absorción mínima de
+carbohidratos se calcula a partir del tiempo máximo de aborsción de carbohidratos de las preferencias. 
 
-Similiar to Oref0 described in [Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/index.html). Basicaly sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cutted after time specified in preferences
+## Sensibilidad PesoPromedio
+La sensibilidad se calcula como promedio ponderado de las desviaciones. Las nuevas desviaciones tienen un mayor peso. La absorción mínima de carbohidratos se calcula a partir del tiempo máximo de la absorción de carbohidratos de las preferencias. Este algotimo es más rápido en los siguientes cambios de sensbilidad. 
 
-### Sensitivity AAPS
+## Ejemplos COB 
+Oref0- los carbohidratos no absorbidos son cortados después de tiempo específico.
 
-Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+![COB de oref0](../images/cob_oref0.png)
 
-### Sensitivity WeightedAverage
+AAPS, peso ponderado – absorción es calculada para tener COB =0 despues de tiempo específico. 
 
-Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+![COB de AAPS](../images/cob_aaps.png)
 
-### COB Examples
-
-Oref0 - unabsorbed carbs are cutted after specified time
-
-![COB from oref0](../images/cob_oref0.png)
-
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
-
-![COB from AAPS](../images/cob_aaps.png)
-
-If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
+Si absorción mínima de Carbs es usada en lugar del valor calculado de las desviaciones, un punto verde aparece en la gráfica COB.
