@@ -11,7 +11,7 @@ https://developer.android.com/studio/install
 AndroidAPS-App erstellen
 -----------
 
-Voll getestete Version (master branch)
+Getestete Version (master branch)
 +++++++++++
 
 * Downloade das [AndroidAPS repository](https://github.com/MilosKozak/AndroidAPS) und extrahiere den Ordner.
@@ -80,15 +80,13 @@ Wenn du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wur
 Update auf neue Version
 ------------
 
-Installiere git
-+++++++++
+**Installiere git**
 
 * jede git Version sollte funktionieren. Zum Beispiel https://git-scm.com/download/win
 * Wähle den Ordner wo git.exe ist: File - Settings - Version Control - Git
 ![](images/git.png)
 
-Wähle "branch"
-+++++++++
+**Wähle "branch"**
 
 * Falls du "branch" wechseln willst, wähle eine andere "branch" vom Reiter: master (aktuellste, getestete Version), oder dev (Entwicklungsversion)
 
@@ -98,8 +96,7 @@ dann checke aus
 
 ![](images/checkout.png)
 
-Branchupdate von Github
-+++++++++++
+**Branchupdate von Github**
 
 * Drücke Ctrl+T, wähle Merge method und drücke OK
 
@@ -107,8 +104,7 @@ Branchupdate von Github
 
 Auf dem Reiter siehst du eine grüne Nachricht "updated project"
 
-Upload auf das Handy
-+++++++++++
+**Upload auf das Handy**
 
 * Verbinde das Handy
 * Drücke den "Play" Knop oben in der Leiste
