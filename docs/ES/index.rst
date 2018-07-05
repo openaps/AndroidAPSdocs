@@ -31,7 +31,66 @@ Qué necesitas para empezar:
 * Bomba de insulina compatible: Dana-R, Dana-RS o Accu-Check Combo
 * Un monitor continuo de glucosa (MCG): Dexcom G4/G5, Freestyle Libre, Eversense o Medtronic Guardian
 
+Initio
+------------
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   
+   Teléfonos </ES/initio/telefonos.md>
+   Pantallazos </ES/initio/pantallazos.md>
+   Opciones de Bombas de insulina </ES/initio/bombas.md>
+   Futuros controladores de bombas </ES/initio/futurosbombas.md>
+   La seguridad primero </ES/initio/seguridad.md>
+   Glosario </ES/initio/glosario.md>
+   Cómo puedo ayudar </ES/initio/ayudar.md>
 
+Instalando AndroidAPS
+------------
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   
+   Compilando la APK </ES/instalando/install.md>
+   Nightscout </ES/instalando/nightscout.md>
+   Actualizar a una nueva versión </ES/instalando/compilando.md>
+
+Configuration
+------------
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   
+   Bomba Accu Check Combo </ES/configuration/combo.md>
+   Conf Builder </ES/configuration/configbuilder.md>
+   Fuente de datos Glucemia </ES/configuration/fuentes-glucemia.md>
+   Detección de sensibilidad y COB </ES/configuration/sens.md>
+   Preferencias </ES/configuration/preferencias.md>
+   Watchfaces </ES/configuration/watchfaces.md>
+   
+Uso
+------------
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   Acceder a los logs </ES/uso/logs.md>
+   Carbohidratos extendidos </ES/uso/extcarbs.md>
+   Comandos SMS </ES/uso/sms.md>
+   Funcionalidades OpenAPS </ES/uso/openaps.md>
+   Objetivos </ES/uso/objetivos.md>
+   Perfiles </ES/uso/perfiles.md>
+   Rama Dev </ES/uso/desarrollo.md>
+   Trucos para uso básico de Accu Check Combo </ES/uso/combo.md>
+   Trucos y consejos </ES/uso/truncos.md>
+   
+Donde buscar ayuda
+-----------
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   
+   ayuda
+   
 .. nota:: 
 	**Advertencia**
 
