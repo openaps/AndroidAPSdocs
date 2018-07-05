@@ -1,4 +1,4 @@
-Welcome to the Android APS documentation
+AndroidAPS 2.0 draft documentation
 ==============================================
 
 **What is AndroidAPS?**
