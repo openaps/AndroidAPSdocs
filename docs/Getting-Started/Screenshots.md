@@ -1,12 +1,12 @@
 # Understanding the AndroidAPS screens
 
-## The Homescreen
+## The Overview screen
 
-![Homescreen](../images/Screenshot_Home_screen.png)
+![Overview](../images/Screenshot_Home_screen.png)
 
 This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
 
-Section A: allows you to navigate between the various AndroidAPS modules by swiping left or right.
+Section A: allows you to navigate between the various AndroidAPS modules by swiping left or right. The "Hamburger" menu on the left allows you to access any modules that have been hidden from the main navigation and the three dots on the right give you access to the preferences and settings.
 
 Section B: Allows you to change the loop status (open loop, closed loop, suspend loop etc), see your current profile, to see your current target blood glucose level and to set a temporary target. Long press on any of the buttons to alter the setting.
 
@@ -14,15 +14,17 @@ Section C: The latest blood glucose reading from your CGM, how long ago it was r
 
 The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
 
-Section D: Is where you can select which information is displayed on the charts below.
+Section D: Is where you can select which information is displayed on the charts below. Press on the ddown arrow to see your options.
 
-Section E: Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries. The purple line shows the predicted BG trend - if you have it selected.
+Section E: Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries. The predictions lines if you have them selected are: ORANGE predicts where your BG will go based on the current pump settings and known carbs on board (CoB) assuming that nothing changes. This line only appears if there are known CoB. The LIGHT BLUE line shows what would happen if those carbs didn't exist, for example if you dialled in some carbs and then didn't eat them. ANd the DARK BLUE line shows how that trajectory would change if the pump stopped all insulin delivery (0% TBR).
 
-The blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there wre no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+The thin GREEN line is your BG target, in this illustration you can also see a temporary target lasting for around 25 minutes.
+
+The blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
 
 Section F: is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
 
-Section F: enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
+Section G: enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration. The buttons in this section are configurable using the settings for the Overview screen and you can choose to display those which are most useful to you.
 
 ## The Calculator
 
@@ -37,7 +39,13 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 
 Section B: shows the calculated bolus. If the amount of insulin on boead already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
-Section C: shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
+Section C: shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to. TT stands for Temporary Target, ISF is Insulin Sensitivity Factor, COB is Carbs on Board, IOB is Insulin on Board.
+
+## Actions
+
+![Actions](../images/Screenshot_actions.png) 
+
+This screen shows a number of commonly used actions. Most are self explanatory. TDD is Total Daily Dose and it takes you to an analysis of your insulin usage over the last few days. The HISTORY BROWSER enables you to scroll back over your history and examine your BG records, basals, and so on.
 
 ## Insulin Profile
 
@@ -58,7 +66,7 @@ And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21
 
 ![Pump Status](../images/Screenshot_pump_Combo.png)
 
-Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
+Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the REFRESH button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
 
 ## Care Portal
 
@@ -95,7 +103,7 @@ These are simply logs of treatments (boluses and carbs), xDrip messages and mess
 
 This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar and the small gear wheel symbol allows access to the setting for that module, if there are any.
+The tick box on the right determines if that particular module will be displayed in the top menu bar and the small gear wheel symbol allows access to the setting for that module, if there are any. If the module is not displayed in the top menu bar then you can still access it using the "hamburger" menu on the top left.
 
 ## Settings and Preferences
 
