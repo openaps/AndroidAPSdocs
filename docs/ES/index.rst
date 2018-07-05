@@ -38,19 +38,19 @@ AndroidAPS es una app que puede comunicar las bombas de insulina con bluetooth y
 
 NOTA- este proyecto no tiene asociación o contraprestación alguna por parte de: [SOOIL](http://www.sooil.com/eng/), [Dexcom](http://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care]( http://www.accu-chek.com/).
 
-Initio
+Inicio
 ------------
 .. toctree::
    :maxdepth: 2
    :glob:
    
-   Teléfonos </ES/initio/telefonos.md>
-   Pantallazos </ES/initio/pantallazos.md>
-   Opciones de Bombas de insulina </ES/initio/bombas.md>
-   Futuros controladores de bombas </ES/initio/futurosbombas.md>
-   La seguridad primero </ES/initio/seguridad.md>
-   Glosario </ES/initio/glosario.md>
-   Cómo puedo ayudar </ES/initio/ayudar.md>
+   Teléfonos </ES/inicio/telefonos.md>
+   Pantallazos </ES/inicio/pantallazos.md>
+   Opciones de Bombas de insulina </ES/inicio/bombas.md>
+   Futuros controladores de bombas </ES/inicio/futurosbombas.md>
+   La seguridad primero </ES/inicio/seguridad.md>
+   Glosario </ES/inicio/glosario.md>
+   Cómo puedo ayudar </ES/inicio/ayudar.md>
 
 Instalando AndroidAPS
 ------------
