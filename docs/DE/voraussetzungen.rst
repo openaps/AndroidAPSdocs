@@ -12,31 +12,39 @@ AndroidAPS kann derzeit mit folgenden Insulinpumpen genutzt werden:
 
 In Deutschland sind alle genannten "loopbaren" Insulinpumpen auf dem Markt erhältlich. Unter https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0 finden sich Bezugsquellen. Die Liste darf jederzeit ergänzt werden.
 
-Informationen über weitere in Zukunft ggf. loopbare Insulinpumpen: http://androidaps.readthedocs.io/en/latest/Getting-Started/Future-possible-Pump-Drivers.html 
+Informationen über weitere in Zukunft ggf. loopbare Insulinpumpen: http://androidaps.readthedocs.io/en/latest/Getting-Started/Future-possible-Pump-Drivers.html (englisch)
 
-*Auswahl*
+**Auswahl**
 
 Die Akku-Chek Combo ist zwar eine solide Pumpe. Die DanaR und die DanaRS haben beim Loopen jedoch einige Vorteile:
 
 * Der Hersteller Sooil hat geäußert, dass die Steuerung der Pumpe mit einem Smartphone (ohne explizit das Loopen zu erwähnen) nicht die gegen die Garantiebedingungen verstößt. 
-* IME-DC stated they would just hand out a replacement send the pump to Sooil - so they wouldn’t even know if you were looping or not. This makes the Dana* R/RS pumps the only pumps that are under warranty while looping. (Roche excludes any use that is not in their manual.)
-* The DanaR/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the DanaR/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
-* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn’t so easy if you walk away from your phone whilst bolusing & cooking.
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also “waterproof by warranty” due to the sealed battery compartment and reservoir filling system.
+* IME-DC äußerte, sie würden im Garantiefall eine Ersatzpumpe zur Verfügung stellen und die defekte Pumpe direkt zu Sooil schicken. So würden sie gar nicht wissen, ob du Looper bist oder nicht. Roche schließt dagegen jegliche Nutzung der Pumpen aus, die nicht in der Bedienungsanleitung beschrieben ist.
+* Die DanaR/RS kann sich mit fast jedem Smartphone verbinden, auf dem das Betriebssystem Google Android >= 5.1 installiert ist. Ein Austausch der werksseitigen Smartphone-Software (z.B. durch das Lineage Betriebssystem) ist nicht nötig. Wenn dein Smartphone kaputt geht oder gestohlen wird, kannst du auf einem anderen / neuen Smartphone sehr schnell die Pumpe wieder steuern. Mit der Combo ist das nicht so einfach, jedenfalls nicht solange Android 8.1 nur auf wenigen Smartphones installiert ist.
+* Das erste Einrichten der Verbindung zwischen der DanaR/RS und dem Smartphone ist einfacher. Allerdings ist dieser Schritt normalerweise nur bei der Ersteinrichtung erforderlich.
+* Bislang arbeitet die Combo mit screen parsing. Grundsätzlich funktioniert das gut, aber es ist leider langsam. Beim Loopen ist das nicht so schlimm, denn das läuft alles im Hintergrund ab. Das führt aber dazu, dass eine bestehende Bluetooth-Verbindung leichter abgebrochen wird. Das kann unpraktisch sein, wenn du dich während eines Bolus-Prozesses zu weit vom Smartphone entfernst (z.B. beim Kochen).
+* Die Combo virbiert am Ende jeder TBR, die DanaR vibriert (oder piept) bei Abgabe eines SMB. In der Nacht wird der Loop meistens eher TBR setzen statt SMB. Die DanaRS kann so eingestellt werden, dass sie weder bei TBR, noch bei SMB vibriert oder piept.
+* Die History kann auf der DanaRS in wenigen Sekunden mit COB ausgelesen werden-. Deshalb können die Smartphones offline leicht ausgewechselt werden. Sobald einige CGM-Daten verfügbar sind, kann das Loopen fortgesetzt werden.
+* Alle Pumpen, die AndroidAPS unterstützt, sind (jedenfalls bei Auslieferung) wasserdicht. Nur die DanaR/RS garantiert auch während der Nutzung Wasserdichtigkeit durch das abgedichtete Batteriefach und das Reservoir-System.
 
-The Combo of course is a very good pump. And loopable. It also has the advantage of many more infusion set types to chose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+Die Combo ist ohne Zweifel eine sehr gute Pumpe. Und loopbar. Sie hat auch den Vorteil, dass die Auswahl an Kathetern wegen des Standard Luer-Lock-Anschlusses groß ist. Und sie verwendet Standard-Batterien, die rund um die Uhr an jeder Tankstelle erhältlich sind. Im Notfall kannst du sie sogar aus der Fernbedienung in deinem Hotelzimmer "ausleihen" ;-)
 
-Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the Future (possible) Pumps page.
+Informationen dazu, welche weiteren Insulinpumpen in Zukunft möglicherweise loopbar sein werden, findest du im englischen Wiki hier: https://androidaps.readthedocs.io/en/latest/Getting-Started/Future-possible-Pump-Drivers.html
 
 Insulinarten
 -----------
+In AndroidAPS sind die Wirkprofile folgender Insulinarten hinterlegt:
 
+* Humalog 
+* Novorapid
+* Novolog
+* FIASP
+
+Außerdem kann manuell das Wirkmaximum des verwendeten Insulins angegeben werden (siehe free-peak Oref).
 
 BZ-Quelle (CGM/FGM)
 -----------
+AndroidAPS benötigt alle 5 Minuten einen aktuellen BZ-Wert. Dieser kann direkt ans Handy geliefert werden (Offline-Loop) oder von der Nightscout-Website geladen werden (Online-Loop). Es empfiehlt sich wegen der Instabilität mobiler Internetverbindungen grundsätzlich, eine Offline-Loop zu bevorzugen.
 
 Dexcom
 ++++++++++++
@@ -114,32 +122,48 @@ Pebble Nutzer können das `Urchin Watchface <https://github.com/mddub/urchin-cgm
 
 Nightscout-Website
 -----------
+Es wird vorausgesetzt, dass du bereits eine eigene Nightscout-Seite eingerichtet hast. Es gibt folgende Möglichkeiten, solch eine Seite zu erstellen:
 
-Es wird vorausgesetzt, dass du bereits eine eigene Nightscout Seite eingerichtet hast, falls nicht folge [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku), um eine ausführliche Anleitung zur Einrichtung zu erhalten. Bei der unteren Anleitung findest du die Einstellungen die du zusätzlich noch ändern musst.
-* Gehe zu https://portal.azure.com/ oder https://herokuapp.com/
+* http://ns.10be.de/de/index.html (einfach und komfortabel, deutscher Server)
+* `Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, (manuelle Einrichtung). Du musst folgende Variablen konfigiurieren:
 
-* Wähle deinen App Namen.
+  * Gehe zu https://portal.azure.com/ oder https://herokuapp.com/
 
-* Drücke settings (azure), oder Settings > "Reveal Config Variables (heroku)
+  * Wähle deinen App Namen.
 
-* Füge die Variablen hinzu oder ändere sie wie folgt:
-  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
-  * `DEVICESTATUS_ADVANCED` = `true` (HEROKU: 'on')
-  * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged:
-    * `PUMP_WARN_BATT_P` = `51`
-    * `PUMP_URGENT_BATT_P` = `26`
+  * Drücke settings (azure), oder Settings > "Reveal Config Variables (heroku)
 
-[[https://github.com/MilosKozak/AndroidAPS/wiki/images/nightscout1.png]]
+  * Füge die Variablen hinzu oder ändere sie wie folgt:
+    * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
+    * `DEVICESTATUS_ADVANCED` = `true` (HEROKU: 'on')
+    * `PUMP_FIELDS` = `reservoir battery clock`
+    * Various alarms can be set for `monitoring the pump <https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring>`_, battery % in particular is encouraged:
+      * `PUMP_WARN_BATT_P` = `51`
+      * `PUMP_URGENT_BATT_P` = `26`
 
-* Drücke Speichern.
+.. image: images/nightscout1.png
+  :width: 400
+
+  * Drücke Speichern.
 
 PC-Software
 -----------
-
-Um die AndroidAPS-App aus dem Quellcode zu erstellen, benötigst du auf dem Computer zunächst die Software Android Studio:
+Der Quellcode von AndroidAPS, der in Github verfügbar ist, muss selbst in eine lauffähige Smartphone-App umgewandelt werden. Das ist do-it-yourself! Um die AndroidAPS-App aus dem Quellcode zu erstellen (kompilieren), benötigst du auf dem Computer die Software Android Studio:
 
 https://developer.android.com/studio/install
 
 Diabetes-Therapiedaten
 -----------
+AndroidAPS kann nur dann gut laufen, wenn deine Diabetes-Therapiedaten optimal eingstellt sind. Du musst drei Variablen ermitteln (ggf. stündlich anders, so dass du 3x24 Faktoren pro Tag hast):
+
+Basalraten
+++++++++
+Die Basalraten müssen so fein abgestimmt sein, dass sie über den ganzen Tag verteilt den BZ-Wert konstant im unteren Zielbereich halten. Sowohl Hypos, als auf hohe Werte dürfen nicht vorkommen, sonst läuft der Loop nicht richtig. Am besten ist es, mehrere Basalratentests durchzuführen und das Schema mit dem Diabetologen oder der Diafee zu besprechen.
+
+ISF
+++++++++
+Der Insulinsensitivitätsfaktor (ISF) gibt an, um wie viele mg/dl oder mmol/l der BZ-Wert durch 1 IE Insulin gesenkt wird.  
+
+IC
+++++++++
+Der IC (Insulin-Carb-Ratio - Insulin-Kohlenhydrat-Faktor) bestimmt, wieviel Gramm Kohlenhydrate durch 1 IE Insulin abgedeckt werden.

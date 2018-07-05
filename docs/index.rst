@@ -1,4 +1,3 @@
-====================================
 AndroidAPS documentation
 ====================================
 
@@ -7,10 +6,9 @@ AndroidAPS documentation
    :caption: AndroidAPS documentation
    :glob:
    
-   Българска </BG/index>
-   český </CZ/index>
-   Deutsch </DE/index>
    English </EN/index>
+   Българска </BG/index>
+   Deutsch </DE/index>
    Español </ES/index>
    
 .. toctree::
