@@ -33,10 +33,18 @@ Informationen dazu, welche weiteren Insulinpumpen in Zukunft möglicherweise loo
 
 Insulinarten
 -----------
+In AndroidAPS sind die Wirkprofile folgender Insulinarten hinterlegt:
 
+* Humalog 
+* Novorapid
+* Novolog
+* FIASP
+
+Außerdem kann manuell das Wirkmaximum des verwendeten Insulins angegeben werden (siehe free-peak Oref).
 
 BZ-Quelle (CGM/FGM)
 -----------
+AndroidAPS benötigt alle 5 Minuten einen aktuellen BZ-Wert. Dieser kann direkt ans Handy geliefert werden (Offline-Loop) oder von der Nightscout-Website geladen werden (Online-Loop). Es empfiehlt sich wegen der Instabilität mobiler Internetverbindungen grundsätzlich, eine Offline-Loop zu bevorzugen.
 
 Dexcom
 ++++++++++++
