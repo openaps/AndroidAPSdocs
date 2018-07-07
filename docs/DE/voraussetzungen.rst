@@ -5,6 +5,7 @@ Um AndroidAPS nutzen zu können, werden folgende Komponenten benötigt:
 Insulinpumpe
 -----------
 AndroidAPS kann derzeit mit folgenden Insulinpumpen genutzt werden:
+
 * DanaR
 * DanaRS
 * Akku-Chek Combo
