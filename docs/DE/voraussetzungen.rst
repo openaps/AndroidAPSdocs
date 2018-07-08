@@ -1,6 +1,6 @@
 Voraussetzungen
 =================
-Um AndroidAPS nutzen zu können, werden folgende Komponenten benötigt:
+Um AndroidAPS nutzen zu können, solltest du insulinpflichtiger Diabetiker sein ;-) und brauchst außerdem folgende Komponenten: loopfähige Insulinpumpe, Analog-Insulin, ein kontinuierliches Blutzuckermess-System (CGM/FGM), ein Smartphone mit Android >= 5.0, eine Nightscout-Website zum Auswerten der Daten und Erstellen von Profilen, die PC-Software "Android Studio" zum Erstellen der App aus dem Quellcode und (sehr wichtig) ach gut getestete Diabetes-Therapieeinstellungen.
 
 Insulinpumpe
 -----------
@@ -48,7 +48,7 @@ BZ-Quelle (CGM/FGM)
 AndroidAPS benötigt alle 5 Minuten einen aktuellen BZ-Wert. Dieser kann direkt ans Handy geliefert werden (Offline-Loop) oder von der Nightscout-Website geladen werden (Online-Loop). Es empfiehlt sich wegen der Instabilität mobiler Internetverbindungen grundsätzlich, eine Offline-Loop zu bevorzugen.
 
 Dexcom
-++++++++++++
+^^^^^^^^^^
 
 Mit xdrip+:
 
@@ -71,7 +71,7 @@ Mit OTG cable ('traditional' Nightscout):
 * Wähle im CONFIG BUILDER > PROFIL > NS Profil (AndroidAPS).
 
 FreeStyle Libre mit Bluetooth-Aufsatz
-+++++++++++++
+^^^^^^^^^^
 
 Mit xdrip:
 
@@ -87,14 +87,14 @@ Mit Glimp:
 * Wähle in AndroidAPS > CONFIG BUILDER > Glimp.
 
 MM640g oder MM630g
-+++++++++++
+^^^^^^^^^^
 
 * Downloade `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_ und folge der Anleitung auf  `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g/>`_.
 * Im 600 Series Uploader gehe zu Settings > Send to xdrip+ und wähle ON (Ankreuzen).
 * Wähle MM640g im ConfigBuilder (in AndroidAPS).
 
 Andere CGM-Systeme
-+++++++++++
+^^^^^^^^^^
 
 Falls du ein anderes CGM System verwendest, das die Werte zu `Nightscout <http://www.nightscout.info/>`_ sendet, dann
 
