@@ -1,6 +1,6 @@
 Was ist AndroidAPS?
 ============
-AndroidAPS ist eine Smartphone-App, die mit bluetooth-fähigen Insulinpumpen kommunizieren kann. Sie kann den Blutzucker mithilfe des OpenAPS-Algorithmus "Oref0" (demnächst auch "Oref1") automatisch regeln (sog. "Closed loop").
+AndroidAPS ist eine Smartphone-App, die mit bestimmten bluetooth-fähigen Insulinpumpen kommunizieren kann. Sie kann den Blutzucker mit Hilfe des OpenAPS-Algorithmus "Oref0" (demnächst auch "Oref1") automatisch regeln, soweit alle gegessenen Kohlenhydrate eingegeben werden (sog. Hybrid closed loop).
 
 Ziele
 ---------------
