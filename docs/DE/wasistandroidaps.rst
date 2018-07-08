@@ -1,10 +1,11 @@
 Was ist AndroidAPS?
 ============
-AndroidAPS ist eine Smartphone-App, die mit bestimmten bluetooth-fähigen Insulinpumpen kommunizieren kann. Sie kann den Blutzucker mit Hilfe des OpenAPS-Algorithmus "Oref0" (demnächst auch "Oref1") automatisch regeln, soweit alle gegessenen Kohlenhydrate eingegeben werden (sog. Hybrid closed loop).
+AndroidAPS steht für "Automatic Pancreas System", ist also gewissermaßen eine automatische Bauchspeicheldrüse für Android. Es handelt sich um eine Smartphone-App, die mit bestimmten bluetoothfähigen Insulinpumpen und Blutzucker-Mess-Systemen kommunizieren kann. Mit Hilfe der OpenAPS-Algorithmen "Oref0"/"Oref1" ist die App in der Lage, den Blutzuckerspiegel bei Typ I - Diabetes automatisch zu regeln, sofern alle gegessenen Kohlenhydrate eingegeben werden (sog. Hybrid closed loop).
+
+Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur Verfügung. Es gibt auch keinen Support. Der Quellcode ist jedoch kostenlos und frei verfügbar. Daraus können Interessierte sich im "Eigenbau" selbst und auf eigene Verantworung die App erstellen (strictly do it yourself - DIY). 
 
 Ziele
 ---------------
-
 Die Ziele, die zur Entstehung führten:
 
 - App mit „modularer Basis“, es soll leicht sein, neue Module hinzuzufügen
@@ -41,17 +42,7 @@ Was man benötigt
 
 Glossar
 ------------
-Für das meiste "Looper Vokabular" gehe zu: https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html
-
-Einige AndroidAPS-spezifische Bezeichnungen:
-
-* Circadian Percentage Profil: ändert dein Basisprofil anhand der eingestellten Zeit oder prozentual.
-* Dev (im Homescreen): Deviation (= Abweichung), zeigt an um wie viele Einheiten sich der tatsächliche Anstieg/Senkung des BZ, gegenüber des vorhergesagten Wertes (durch OpenAPS und eingegebener Daten) unterscheidet.
-
-Screenshots
--------------
-Bitte übersetzen von https://androidaps.readthedocs.io/en/latest/Getting-Started/Screenshots.html
-
+Für das meiste "Looper Vokabular" gehe zu: https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html (auf englisch)
 
 Sicherheitshinweise
 -------------
@@ -60,7 +51,7 @@ Sicherheitshinweise
 * Dein Smartphone, welches die Pumpe kontrolliert, sollte ausschließlich für diese Aufgabe verwendet werden, installiere keine Apps, um die Gefahr von Trojanern zu minimieren.
 * Installiere regelmäßig alle Sicherheitsupdates, damit du vor Angriffen bestmöglich geschützt bist!
 
-SMS-Steuerung:
+**SMS-Steuerung:**
 
 * Wenn du diese Option verwendest, behalte im Hinterkopf, was passieren könnte, falls das Handy, welches zur Fernsteuerung verwendet wird, gestohlen wird. Schütze dieses mit einem sicheren Code.
 * Seit AndroidAPS 1.1 wirst du über wichtige ferngesteuerte Aktionen (z.B. Bolus, Profiländerung) eine SMS erhalten. Deswegen solltest du mindestens 2 Telefonnummern hinzufügen (für den Fall, dass ein Handy gestohlen wird).
