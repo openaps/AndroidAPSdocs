@@ -31,7 +31,7 @@ Upper and lower limits to the sensitivityRatio can also be set - (default 0.7 - 
 
 #### Example - Oref0
 
-Oref0 - unabsorbed carbs are cut off after the specified maximum time
+Oref0 - the assumed effect of unabsorbed carbs is cut off after the specified maximum time
 
 ![COB from oref0](../images/cob_oref0.png)
 
@@ -44,7 +44,7 @@ Sensitivity is calculated the same way like Oref0 but you can specify time to th
   
 #### Example - Sensitivity AAPS
 
-Here the COB is tapered down over time such that `COB == 0` after the specified Meal max absorbtion time
+Here the effect of COB is tapered down over time such that `COB == 0` after the specified Meal max absorbtion time
 
 ![COB from AAPS](../images/cob_aaps.png)
 
