@@ -2,11 +2,11 @@
 
 Sensitivity is an advanced feature of OpenAPS which enables the loop to respond more or less aggressively depending on how blood glucose is responding to the insulin inputs. Generally it looks at the response over a period of time (hours) and responds accordingly.
 
-Each time the loop runs (every 5 minutes) it calculates a deviation - that is the difference between the measure blood glucose and what the loop expected it to be. Each deviation is then classified as follows:
+Each time the loop runs (every 5 minutes) it calculates a deviation - that is the difference between the measured blood glucose and what the loop expected it to be. Each deviation is then classified as follows:
 
 “x” : deviation is excluded because it is unexpectedly high - normally because of carb absorbtion. All deviations when there is COB are excluded until such time as the COB drops to zero (carbs are fully absorbed) and deviations go negative once again. This is appropriate to eliminate the impact of rising BG due to carb absorption from sensitivity calculations and not falsely attribute it to insulin resistance. Deviations may also be excluded because of an unexplained high deviation (site failure, etc).
 
-“+” : deviation was above what was expected
+“+” : deviation was above what was expected (i.e. actual BG > estimated BG)
 
 “-” : deviation was below what was expected. In addition, if a high temp target is running (i.e. activity mode), a negative deviation is added every 5 minutes, to nudge the sensitivityRatio downward to reflect the sensitivity likely to result from activity.
 
@@ -22,7 +22,7 @@ There are three sensitivity detection modes which can be selected:
 
 ### Sensitivity Oref0
 
-This woorks as per the Oref0 model as described in [Oref0 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#auto-sensitivity-mode-autosens). Basically sensitivity is calculated from the previous 24 hours worth of data. A maximum duration for carbs is set in the preferences and after that time all carbs are assumed to have been absorbed. The two setting here are:
+This works as per the Oref0 model as described in [Oref0 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#auto-sensitivity-mode-autosens). Basically sensitivity is calculated from the previous 24 hours worth of data. A maximum duration for carbs is set in the preferences and after that time all carbs are assumed to have been absorbed. The two setting here are:
 
   * min_5min_carbimpact
   * Meal max absorbtion time (h)
