@@ -29,7 +29,7 @@ This works as per the Oref0 model as described in [Oref0 documentation](https://
 
 Upper and lower limits to the sensitivityRatio can also be set - (default 0.7 - 1.2)
 
-### Example - Oref0
+#### Example - Oref0
 
 Oref0 - unabsorbed carbs are cut off after the specified maximum time
 
@@ -42,7 +42,7 @@ Sensitivity is calculated the same way like Oref0 but you can specify time to th
   * Meal max absorbtion time (h)
   * Interval for autosense (h)
   
-### COB Example - Sensitivity AAPS
+#### Example - Sensitivity AAPS
 
 Here the COB is tapered down over time such that `COB == 0` after the specified Meal max absorbtion time
 
