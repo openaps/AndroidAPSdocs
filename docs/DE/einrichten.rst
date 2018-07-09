@@ -4,6 +4,6 @@ AndroidAPS einrichten & nutzen
 .. toctree::
    :maxdepth: 6
 
-   Home-Screen
+   homescreen
    konfigurations-generator
    einstellungen
