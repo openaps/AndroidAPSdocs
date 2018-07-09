@@ -9,9 +9,8 @@ OpenAPS documention - http://openaps.readthedocs.io/en/latest/
 Loop Docs -  https://loopkit.github.io/loopdocs/
 
 Fine-Tuning settings - http://seemycgm.com/2017/10/29/fine-tuning-settings/
+
 Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/
-
-
 
 DIYPS - https://diyps.org/
 
