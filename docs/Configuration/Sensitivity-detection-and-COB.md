@@ -27,9 +27,9 @@ This works as per the Oref0 model as described in [Oref0 documentation](https://
   * min_5min_carbimpact
   * Meal max absorbtion time (h)
 
-Upper and lower limits to the sensitivityRatio can also be set - (default 0.7 - 12)
+Upper and lower limits to the sensitivityRatio can also be set - (default 0.7 - 1.2)
 
-### Examples
+### Example - Oref0
 
 Oref0 - unabsorbed carbs are cut off after the specified maximum time
 
@@ -42,9 +42,9 @@ Sensitivity is calculated the same way like Oref0 but you can specify time to th
   * Meal max absorbtion time (h)
   * Interval for autosense (h)
   
-### COB Example
+### COB Example - Sensitivity AAPS
 
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
+Here the COB is tapered down over time such that `COB == 0` after the specified Meal max absorbtion time
 
 ![COB from AAPS](../images/cob_aaps.png)
 
