@@ -1,5 +1,7 @@
 # Useful resources to read before you start
 
+Before you build your rig you're going to do a lot of reading up to understand how it all works and get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
+
 ## Further reading
 
 OpenAPS.org #wearenotwaiting - https://openaps.org/
