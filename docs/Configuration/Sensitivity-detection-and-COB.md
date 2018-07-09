@@ -24,8 +24,8 @@ There are three sensitivity detection modes which can be selected:
 
 This works as per the Oref0 model as described in [Oref0 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#auto-sensitivity-mode-autosens). Basically sensitivity is calculated from the previous 24 hours worth of data. A maximum duration for carbs is set in the preferences and after that time all carbs are assumed to have been absorbed. The two setting here are:
 
-  * min_5min_carbimpact
-  * Meal max absorbtion time (h)
+  * min_5min_carbimpact - this is the assumed impact that carb absorbtion has on BG in 5 minutes. Used for predicting future BG.
+  * Meal max absorbtion time (h) - this is the time by which all carbs are assumed to have been absorbed.
 
 Upper and lower limits to the sensitivityRatio can also be set - (default 0.7 - 1.2)
 
