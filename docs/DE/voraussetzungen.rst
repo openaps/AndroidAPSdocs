@@ -50,7 +50,7 @@ Dexcom
 
 **G5 mit xdrip+:**
 
-* Downloade `xDrip+ für das G5<https://jamorham.github.io/#xdrip-plus>`_ und installiere es auf dem Smartphone
+* Downloade `xDrip+ für das G5 <https://jamorham.github.io/#xdrip-plus>`_ und installiere es auf dem Smartphone
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
@@ -82,7 +82,7 @@ Auf dem Smartphone muss eine der folgenden Apps installiert werden, die mit dem 
 
 **Mit xdrip:**
 
-* Downloade `xDrip+ für das G5<https://jamorham.github.io/#xdrip-plus>`_ und installiere es auf dem Smartphone
+* Downloade `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_ und installiere es auf dem Smartphone
 * In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 * In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xDrip+ zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
@@ -113,8 +113,7 @@ Android Smartphone
 
 Du benötigst ein Smartphone, auf dem das Google-Betriebssystem Android 5.1 oder neuer installiert ist. Manche Smartphones können schon im Lieferzustand loopen, auf andere muss man erst von Hand eine neue Android-Version (LineageOS) aufspielen, z.B. fast immer, wenn man mit der Akku-Chek Combo loopen will.
 
-Eine Liste mit geeigneten Android-Smartphones befindet sich hier: 
-[https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)
+Eine Liste mit geeigneten Android-Smartphones befindet sich hier: https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435 
 
 Du kannst Filter verwenden, um in der Datei einzelne Pumpen oder Smartphones anzuzeigen. Bitte setze dies aber am Ende wieder zurück, damit der nächste Leser wieder alle Angaben findet.
 
@@ -174,7 +173,7 @@ Tipp: Alle Zugangsdaten auf einem Zettel oder in einer Textdatei notieren!
 Heroku-Variablen einrichten
 """""""""
 
-* Auf [https://herokuapp.com/](https://herokuapp.com/) einloggen
+* Auf https://herokuapp.com/ einloggen
 * App-Namen auswählen
 * Settings > Schaltfläche "Reveal Config Vars" anklicken
 * Variablen hinzufügen oder wie folgt ändern:
