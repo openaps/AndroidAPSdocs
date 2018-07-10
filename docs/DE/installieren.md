@@ -48,34 +48,21 @@ Wenn du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wur
 
 **Installiere git**
 
-* jede git Version sollte funktionieren. Zum Beispiel https://git-scm.com/download/win
+* jede git Version sollte funktionieren. Zum Beispiel [https://git-scm.com/download/win](https://git-scm.com/download/win )
 * Wähle den Ordner wo git.exe ist: File - Settings - Version Control - Git
-![](images/git.png)
 
 **Wähle "branch"**
 
 * Falls du "branch" wechseln willst, wähle eine andere "branch" vom Reiter: master (aktuellste, getestete Version), oder dev (Entwicklungsversion)
-
-![](images/branchintray.png)
-
-dann checke aus
-
-![](images/checkout.png)
+* dann checke aus
 
 **Branchupdate von Github**
 
 * Drücke Ctrl+T, wähle Merge method und drücke OK
-
-![](images/merge.png)
-
-Auf dem Reiter siehst du eine grüne Nachricht "updated project"
+* Auf dem Reiter siehst du eine grüne Nachricht "updated project"
 
 **Upload auf das Handy**
 
 * Verbinde das Handy
 * Drücke den "Play" Knopf oben in der Leiste
-![](images/play.png)
-
 * Wähle das verbundene Handy und drücke OK
-
-![](images/connectedphone.png)
