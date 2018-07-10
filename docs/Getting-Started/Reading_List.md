@@ -20,6 +20,8 @@ Diabetes and Technology - Where Diabetes meets Tech - http://www.diabettech.com/
 
 OpenAPS Reference Design - https://openaps.org/reference-design/
 
+What conclusions can we draw when investigating Insulin Sensitivity using the Autosense function within #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
+
 ## Stuff on YouTube
 
 Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI
