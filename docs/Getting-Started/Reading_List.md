@@ -20,6 +20,8 @@ Diabetes and Technology - Where Diabetes meets Tech - http://www.diabettech.com/
 
 OpenAPS Reference Design - https://openaps.org/reference-design/
 
+Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters - http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/
+
 What conclusions can we draw when investigating Insulin Sensitivity using the Autosense function within #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
 
 ## Stuff on YouTube
