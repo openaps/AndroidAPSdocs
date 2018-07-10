@@ -40,8 +40,9 @@ Die Liste der potentiellen Orte für Loopertreffen ist zusätzlich als Anregung 
 
 Berlin
 ^^^^^^
-**LooperInBerlin** Treffen am Freitag, 27. Juli 2018, um 18 Uhr  
-https://xoyondo.com/dp/8McjS6odNdnUzHK/E8LHDdooYf   
+**LooperInBerlin** 
+Treffen am Freitag, 27. Juli 2018, um 18 Uhr 
+https://xoyondo.com/dp/8McjS6odNdnUzHK/E8LHDdooYf
 Ort noch offen
 
 Bayern
@@ -51,7 +52,7 @@ Nürnberg
 **Wann?** Das letzte Treffen war am 17.03.2018  
 **Wo?**   Das nächste Treffen steht noch nicht fest.  
 **Uhrzeit?**  
-**Event-Details: (vom 17.3.) https://www.facebook.com/events/1620410464691771/**  
+Event-Details (vom 17.3.): https://www.facebook.com/events/1620410464691771/   
 
 München
 """"""
