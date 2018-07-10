@@ -1,5 +1,6 @@
 Was ist AndroidAPS?
-============
+===========
+
 AndroidAPS steht für "Android Automatic Pancreas System", ist also eine App für Android Smartphones, die als automatische Bauchspeicheldrüse fungiert. Sie kann mit bestimmten bluetoothfähigen Insulinpumpen und Blutzucker-Mess-Systemen kommunizieren. Mit Hilfe der OpenAPS-Algorithmen "Oref0"/"Oref1" ist die App in der Lage, den Blutzuckerspiegel bei insulinpflichtigem Diabetes automatisch zu regeln, sofern alle gegessenen Kohlenhydrate eingegeben werden (sog. Hybrid closed loop).
 
 Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur Verfügung. Es gibt auch keinen Support. Der Quellcode ist jedoch kostenlos und frei verfügbar. Daraus können Interessierte sich im "Eigenbau" selbst und auf eigene Verantworung die App erstellen (strictly do it yourself - DIY). 
@@ -7,7 +8,7 @@ Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur
 Ein konkretes Beispiel, wie du dir ein Closed loop System selbst bauen kannst, findest du unter http://androidaps.readthedocs.io/en/latest/DE/Galaxy-S7-DanaR-Dexcom-G5-und-SWR50.html
 
 Ziele
----------------
+--------
 Die Ziele, die zur Entstehung führten:
 
 - App mit „modularer Basis“, es soll leicht sein, neue Module hinzuzufügen
@@ -21,27 +22,33 @@ Die Ziele, die zur Entstehung führten:
 - Eine App, die alles enthält, um mit dem Diabetes klar zu kommen (APS+Nightscout)
 
 Was man benötigt
-------------
+---------
 
-- Android Smartphone (5.0 oder neuer). Informationen dazu, welche Smartphones gut laufen gibt es hier: https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing 
-- xDrip/xDrip+, oder Glimp, oder 600SeriesAndroidUploader
+- Android Smartphone (5.1 oder neuer). Informationen dazu, welche Smartphones gut laufen gibt es hier: https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing 
+- DanaR / DanaRS / Akku Chek Combo Insulinpumpe (in Zukunft auch die Insight)
+- Ein CGM (Dexcom G4/G5/G6, Freestyle Libre mit Bluetooth-Aufsatz, Eversense oder Medtronic Guardian)
+- xDrip/xDrip+ oder Glimp oder 600SeriesAndroidUploader
 - AndroidAPS
 - Nightscout 0.10.2 oder aktueller
-- DanaR / DanaRS / Akku Chek Combo Insulinpumpe (in Zukunft auch die Insight)
-- Ein CGM (Dexcom G4/G5/G6, Freestyle Libre, Eversense oder Medtronic Guardian)
 
 Glossar
-------------
-Für das meiste "Looper Vokabular" gehe zu: https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html (auf englisch)
+-------------
+Für das meiste "Looper Vokabular": https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html (auf englisch)
+
+Screenshot
+-----------
+
+.. image:: https://img1.picload.org/image/dgdgcorw/aaps-overview-small.jpg.png
 
 Sicherheitshinweise
--------------
+-------
+
 * AndroidAPS ist nur ein Programm zur Unterstützung deiner Diabetestherapie, nicht um den Diabetes zu vergessen!
 * Vertraue niemals blind auf ein Gerät bei der Anpassung der Dosierung. Kontrolliere die Ergebnisse und verstehe, wie der Algorithmus auf diese kommt.
 * Dein Smartphone, welches die Pumpe kontrolliert, sollte ausschließlich für diese Aufgabe verwendet werden, installiere keine Apps, um die Gefahr von Trojanern zu minimieren.
 * Installiere regelmäßig alle Sicherheitsupdates, damit du vor Angriffen bestmöglich geschützt bist!
 
-**SMS-Steuerung:**
+SMS-Steuerung:
 
 * Wenn du diese Option verwendest, behalte im Hinterkopf, was passieren könnte, falls das Handy, welches zur Fernsteuerung verwendet wird, gestohlen wird. Schütze dieses mit einem sicheren Code.
 * Seit AndroidAPS 1.1 wirst du über wichtige ferngesteuerte Aktionen (z.B. Bolus, Profiländerung) eine SMS erhalten. Deswegen solltest du mindestens 2 Telefonnummern hinzufügen (für den Fall, dass ein Handy gestohlen wird).
@@ -55,4 +62,4 @@ Sicherheitshinweise
 
       * Sämtliche Produkt- und Herstellernamen, Handelsmarken, Servicemarken, geschützte Handelsmarken und geschützte Servicemarken werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing.
 
-      * Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit: SOOIL <http://www.sooil.com/eng/>, Dexcom <http://www.dexcom.com/>, Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>.
+      * Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit: SOOIL (http://www.sooil.com/eng/), Dexcom (http://www.dexcom.com/), Accu-Chek Roche Diabetes Care (http://www.accu-chek.com/).
