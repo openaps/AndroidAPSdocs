@@ -1,10 +1,11 @@
 Voraussetzungen
 =================
-Um AndroidAPS nutzen zu können, werden folgende Komponenten benötigt:
+Um AndroidAPS nutzen zu können, solltest du insulinpflichtiger Diabetiker sein ;-) und brauchst außerdem folgende Komponenten: loopfähige Insulinpumpe, Analog-Insulin, ein kontinuierliches Blutzuckermess-System (CGM/FGM), ein Smartphone mit Android >= 5.0, eine Nightscout-Website zum Auswerten der Daten und Erstellen von Profilen, die PC-Software "Android Studio" zum Erstellen der App aus dem Quellcode und (sehr wichtig) ach gut getestete Diabetes-Therapieeinstellungen.
 
 Insulinpumpe
 -----------
 AndroidAPS kann derzeit mit folgenden Insulinpumpen genutzt werden:
+
 * DanaR
 * DanaRS
 * Akku-Chek Combo
@@ -33,46 +34,47 @@ Informationen dazu, welche weiteren Insulinpumpen in Zukunft möglicherweise loo
 
 Insulinarten
 -----------
-In AndroidAPS sind die Wirkprofile folgender Insulinarten hinterlegt:
+Du solltest ein Analog-Insulin verwenden. Die Wirkprofile folgender Insulinarten sind hinterlegt:
 
 * Humalog 
 * Novorapid
 * Novolog
 * FIASP
 
-Außerdem kann manuell das Wirkmaximum des verwendeten Insulins angegeben werden (siehe free-peak Oref).
+Für andere Insuline oder Mischungen verschiedener Insuline kannst du in AndroidAPS auch manuell das Wirkmaximum angeben (Wirkprofil "free-peak Oref").
 
 BZ-Quelle (CGM/FGM)
 -----------
-AndroidAPS benötigt alle 5 Minuten einen aktuellen BZ-Wert. Dieser kann direkt ans Handy geliefert werden (Offline-Loop) oder von der Nightscout-Website geladen werden (Online-Loop). Es empfiehlt sich wegen der Instabilität mobiler Internetverbindungen grundsätzlich, eine Offline-Loop zu bevorzugen.
+AndroidAPS benötigt alle 5 Minuten einen aktuellen BZ-Wert. Dieser kann vom Mess-System (ggf. über zusätzliche Apps wie xDrip+ oder LibreReader) entweder direkt an AndroidAPS geliefert werden (Offline-Loop) oder zunächst zur Nightscout-Website hochgeladen werden, damit AndroidAPS sich die Werte von dort wieder zieht (Online-Loop). Es empfiehlt sich wegen der Instabilität mobiler Internetverbindungen grundsätzlich, eine Offline-Loop zu bevorzugen.
 
 Dexcom
-++++++++++++
+^^^^^^^^^^
 
-Mit xdrip+:
+**G5 mit xdrip+:**
 
 * Downloade `xDrip+ <https://github.com/NightscoutFoundation/xDrip/>`_ und folge den Anleitungen auf Nightscout (G4 without share `xDrip+ <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge/>`_ , `G4 share <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/>`_, `G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support/>`_).
-* In xdrip gehe zu Settings > Interapp Compatibility > Broadcast Data Locally und wähle ON.
-* In xdrip gehe zu Settings > Interapp Compatibility > Accept Treatments und wähle OFF.
-* Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Settings > Interapp Compatibility > Accept Calibrations und wähle ON. Du solltest auch die Optionen in Settings > Less Common Settings > Advanced Calibration Settings kontrollieren.
-* Wähle in AndroidAPS > CONFIG BUILDER > xdrip.
+* In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
+* In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
+* Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
+* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 
-Mit der Dexcom G5 App:
+**G5 mit der modifizierten Dexcom G5-App:**
 
-* Downloade die apk von `hier <https://github.com/dexcomapp/dexcomapp/>`_, es geht nur mit dieser.
 * Deinstalliere die originale Dexcom App, falls du sie noch hast.
-* Wähle im Config Builder Dexcom G5 App.
+* Downloade die modifizierte Dexcom App von `hier <https://github.com/dexcomapp/dexcomapp/>`_ (Es geht nur mit dieser Datei und NICHT mit der Original-App von Dexcom!).
+* Installiere die modifizierte Dexcom App auf Deinem Smartphone
+* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > DexcomG5 app (patched).
 
-Mit OTG cable ('traditional' Nightscout):
+**G4 mit OTG cable ('traditional' Nightscout):**
 
 * Downloade die Nightscout Uploader app vom Play Store und folge den Einstellungen auf Nightscout `hier <http://www.nightscout.info/wiki/welcome/basic-requirements/>`_.
-* Gib in den AndroidAPS Einstellungen > NSClient deine Nightscout URL und dein Nightscout API-Key ein.
-* Wähle im CONFIG BUILDER > PROFIL > NS Profil (AndroidAPS).
+* Gib in den AndroidAPS Einstellungen > Nightscout-Client deine Nightscout URL und dein Nightscout API-Key ein.
+* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Nightscout-Client BZ.
 
 FreeStyle Libre mit Bluetooth-Aufsatz
-+++++++++++++
+^^^^^^^^^^
 
-Mit xdrip:
+**Mit xdrip:**
 
 * Downloade xdrip und folge der Anleitung auf `LimiTTer <https://github.com/JoernL/LimiTTer/>`_, `Libre Alarm <https://github.com/pimpimmi/LibreAlarm/wiki/>`_, `BlueReader <https://unendlichkeit.net/wordpress/?p=680&lang=en>`_ (`Hardware <https://bluetoolz.de/wordpress/>`_), `Blukon Nightrider <https://www.ambrosiasys.com/howit>`_, `MiaoMiao-Reader <https://www.miaomiao.cool/>`_
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
@@ -80,29 +82,30 @@ Mit xdrip:
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 * Wähle in AndroidAPS > CONFIG BUILDER > xdrip.
 
-Mit Glimp:
+**Mit Glimp:**
 
-* Downloade Glimp und folge der Anleitung auf `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre/>`_. 
-* Wähle in AndroidAPS > CONFIG BUILDER > Glimp.
+* Downloade über das Google Play Store die App Glimp und folge der Anleitung auf `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre/>`_. 
+* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Glimp.
 
 MM640g oder MM630g
-+++++++++++
+^^^^^^^^^^
 
 * Downloade `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_ und folge der Anleitung auf  `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g/>`_.
-* Im 600 Series Uploader gehe zu Settings > Send to xdrip+ und wähle ON (Ankreuzen).
-* Wähle MM640g im ConfigBuilder (in AndroidAPS).
+* Im 600 Series Uploader gehe zu Settings > Send to xdrip+ und wähle ON (ankreuzen).
+* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > MM640g.
 
 Andere CGM-Systeme
-+++++++++++
+^^^^^^^^^^
 
 Falls du ein anderes CGM System verwendest, das die Werte zu `Nightscout <http://www.nightscout.info/>`_ sendet, dann
 
-* Gib in AndroidAPS Preferences deine Nightscout Website und API secret ein.
-* Wähle den NSClient im ConfigBuilder (in AndroidAPS).
-
+* Gib in den AndroidAPS Einstellungen > Nightscout-Client deine Nightscout Website und API key ein.
+* Wähle den AndroidAPS > Konfigurations-Generator > BZ-Quelle > Nightscout-Client BZ.
 
 Android Smartphone
 -----------
+
+Du benötigst ein Smartphone, auf dem das Google-Betriebssystem Android 5.0 oder neuer installiert ist. Manche Smartphones können schon im Lieferzustand loopen, auf andere muss man erst von Hand eine neue Android-Version (LineageOS) aufspielen, z.B. fast immer, wenn man mit der Akku-Chek Combo loopen will.
 
 Eine Liste mit geeigneten Android-Smartphones befindet sich hier: 
 [https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)
@@ -112,49 +115,87 @@ Du kannst Filter verwenden, um in der Datei einzelne Pumpen oder Smartphones anz
 Android Smartwatch (optional)
 -----------
 
-In AndroidAPS ist es möglich, dass man die Pumpe über Android Wear Uhren kontrolliert. Um diese Möglichkeit zu nutzen, musst du beim Kompilieren der App in Android Studio die Build Variante "fullWearcontrolRelease" wählen. In AndroidAPS musst du dann im Konfigurations-Generator noch "Wear" aktivieren. Es gibt verschiedene Ziffernblätter zum auswählen. Enthalten sind durchschnittliches Delta, IOB, zur Zeit aktive Temp.Basalrate, das Basalprofil, und deine BZ Werte. Du kannst die AndroidAPS Watch App auch verwenden, um ein Temp Target zu setzen, Ext. Carbs oder Bolus ab zu geben, den Bolus Wizard verwenden, Infusionset füllen, und den Status vom Loop und der Pumpe kontrollieren. Stelle sicher, dass AndroidAPS die Erlaubnis hat, um Benachrichtigungen auf der Uhr anzuzeigen (sonst kann man die Eingaben nicht bestätigen). Die Eingaben werden bestätigt in dem man die Benachrichtigung auf der Uhr öffnet, einmal wischt und bestätigt. Um schneller zu AAPS zu kommen, kannst du den angezeigten BZ doppelt anklicken. Wenn man zwei mal auf die BZ-Kurve tippt, ändert sich der angezeigte Zeitraum.
+Nicht zwingend nötig, aber für den Alltag sehr hilfreich ist eine Smartwatch. Mit Uhren, die **Android WearOS** als Betriebssystem haben, ist es nämlich möglich, den Status des Loop zu überwachen und auch Bolus abzugeben. Für die Smartwatch gibt es verschiedene Ziffernblätter, die folgende Informationen anzeigen können:
 
-In Android Wear 2.0 installiert sich das Watchface nicht von alleine. Du musst in den Playstore der Uhr gehen, und unter der Kategorie "installierte Apps auf dem Handy" AAPS aktivieren. Aktiviere ebenalls Auto Update.
+* aktueller BZ-Wert mit Trend und Delta
+* IOB
+* zur Zeit aktive Temp. Basalrate
+* Basalprofil 
+* Status von Loop und Pumpe
 
-Falls du ein anderes System zum loopen verwendest und deine Daten, oder die deines Kindes/Verwandten, auf der Uhr sehen möchtest, kannst du, auch einfach nur die Watch APK kompilieren. Um nur die Watch APK zu kompilieren wähle in Android Studio die Build Variante "nsclientWearRelease".
+Außedem kannst Du über die Uhr folgende Aktionen auslösen:
 
-Pebble Nutzer können das `Urchin Watchface <https://github.com/mddub/urchin-cgm/>`_ benutzen, um ihre Loop Daten (vorausgesetzt sie sind auf Nightscout) zu sehen, aber mit dieser Methode ist es nicht möglich die Pumpe und AndroidAPS zu steuern. Du kannst Felder wählen um z.B. IOB, aktiver temp. Basalrate und Vorhersage, anzeigen zu lassen. Falls du open loopst kannst du `IFTTT  <https://ifttt.com/>`_ benutzen um ein kleines Programm erstellen, welches bestimmt, wenn eine Benachrichtigungen von AndroidAPS kommt, eine SMS oder Benachrichtigung anzeigt.
+* Temp. Target setzen
+* Extended Carbs eingeben
+* Bolus abgeben
+* Bolus-Rechner verwenden
+* Infusionset füllen 
+
+Um diese Möglichkeit zu nutzen, musst du beim Kompilieren des Quellcodes in der PC-Software "Android Studio" die Build Variante "fullWearcontrolRelease" wählen. In AndroidAPS musst du dann im Konfigurations-Generator > Generell noch "Wear" aktivieren. Stelle sicher, dass AndroidAPS die Erlaubnis hat, um Benachrichtigungen auf der Uhr anzuzeigen (sonst kann man die Eingaben nicht bestätigen). Die Eingaben werden bestätigt, indem man die Benachrichtigung auf der Uhr öffnet, einmal wischt und bestätigt. Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten BZ doppelt anklicken. Wenn man zwei mal auf die BZ-Kurve tippt, ändert sich der angezeigte Zeitraum.
+
+In Android Wear 2.0 installiert sich das Watchface nicht von alleine. Du musst in den Playstore der Uhr gehen und unter der Kategorie "installierte Apps auf dem Handy" AAPS aktivieren. Aktiviere ebenalls Auto Update.
+
+Falls du ein anderes System zum loopen verwendest und deine Daten oder die deines Kindes/Verwandten auf der Uhr sehen möchtest, kannst du auch einfach nur die Watch APK kompilieren. Um nur die Watch APK zu kompilieren, wähle in Android Studio die Build Variante "nsclientWearRelease".
+
+**Pebble** Nutzer können das `Urchin Watchface <https://github.com/mddub/urchin-cgm/>`_ benutzen, um ihre Loop Daten (vorausgesetzt sie sind auf Nightscout) zu sehen, aber mit dieser Methode ist es nicht möglich die Pumpe und AndroidAPS zu steuern. Du kannst Felder wählen um z.B. IOB, aktiver temp. Basalrate und Vorhersage anzeigen zu lassen. Falls du open loopst, kannst du `IFTTT  <https://ifttt.com/>`_ benutzen um ein kleines Programm zu erstellen, welches (wenn eine Benachrichtigung von AndroidAPS kommt) eine SMS oder Benachrichtigung anzeigt.
 
 Nightscout-Website
 -----------
-Es wird vorausgesetzt, dass du bereits eine eigene Nightscout-Seite eingerichtet hast. Es gibt folgende Möglichkeiten, solch eine Seite zu erstellen:
+Du musst eine Nightscout-Webiste haben. Dies ist eine Datenbank im Internet, auf die sämtliche BZ- und Behandlungsdaten hochgeladen werden. Dort kannst du auch verschiedene Profile (Basalschemen, Korrekturfaktoren etc.) anlegen und ändern, die dann automatisch in AndroidAPS erscheinen. Die Website dieser Datenbank erlaubt dir zahlreiche statistische Auswertungen zur Optimierung deiner Diabetestherapie, Freigabe der Daten für Freunde oder Familienmitglieder (Follower) und Vorlage beim Diabetologen.
 
-* http://ns.10be.de/de/index.html (einfach und komfortabel, deutscher Server)
-* `Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, (manuelle Einrichtung). Du musst folgende Variablen konfigiurieren:
+Es gibt folgende Möglichkeiten, solch eine Seite zu erstellen und zu betreiben:
 
-  * Gehe zu https://portal.azure.com/ oder https://herokuapp.com/
+ns.10be.de
+^^^^^^^^^^
+Dieser Server steht in Deutschland und wird von Looper Martin Schiftan derzeit kostenlos angeboten. Sämtliche Einstellungen lassen sich auf der Administrations-Website komfortabel vornehmen. Die Basalraten werden dort automatisch mit Autotune ausgewertet.
 
-  * Wähle deinen App Namen.
+  http://ns.10be.de/de/index.html 
 
-  * Drücke settings (azure), oder Settings > "Reveal Config Variables (heroku)
+Heroku
+^^^^^^^^^^
+Über Heroku kannst du von Hand selbst eine Nightscout-Website mit Datenbank hosten. Die kostenlosen Server stehen im Ausland und müssen von Hand konfiguriert werden.
 
-  * Füge die Variablen hinzu oder ändere sie wie folgt:
-    * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
-    * `DEVICESTATUS_ADVANCED` = `true` (HEROKU: 'on')
-    * `PUMP_FIELDS` = `reservoir battery clock`
-    * Various alarms can be set for `monitoring the pump <https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring>`_, battery % in particular is encouraged:
-      * `PUMP_WARN_BATT_P` = `51`
-      * `PUMP_URGENT_BATT_P` = `26`
+Heroku-Seite einrichten
+"""""""""
+  http://www.heroku.com
+  http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku
+  
+Tipp: Alle Zugangsdaten auf einem Zettel oder in einer Textdatei notieren!
 
-.. image: images/nightscout1.png
-  :width: 400
+Heroku-Variablen einrichten
+"""""""""
 
-  * Drücke Speichern.
+* Auf [https://herokuapp.com/](https://herokuapp.com/) einloggen
+* App-Namen auswählen
+* Settings > Schaltfläche "Reveal Config Vars" anklicken
+* Variablen hinzufügen oder wie folgt ändern:
+   ** ENABLE = `careportal food cage sage iage iob cob basal rawbg pushover bgi pump openaps openapsbasal loop`
+   ** DEVICESTATUS_ADVANCED = `true`
+   ** PUMP_FIELDS = `reservoir battery clock`
+
+Ein Alarm bei niedrigem Pumpen-Batteriestand in % kann wie folgt aktiviert werden:
+PUMP_WARN_BATT_P = `51`
+PUMP_URGENT_BATT_P = `26`
+
+Nightscout-Website Version checken
+"""""""""""""
+
+* https://DEINAPPNAME.herokuapp.com/
+* Menü über die drei waagerechten Striche rechts oben am Bildschirm anklicken
+* Am Ende des Menüs muss "Nightscout Version 0.10.2-..." stehen
+
+Tipp: Falls eine ältere Version angezeigt wird, z.B. "0.10.1-...", dann muss Nightscout aktualisiert werden. Dazu nach der Anleitung unter http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie vorgehen. Sollte sich trotz erfolgreichem Update die Versionsanzeige nicht aktualisieren, dann ist noch ein "Redeploy" von Hand erforderlich, siehe die Anleitung http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie/update-my-fork-troubleshooting-part-2
+
 
 PC-Software
 -----------
-Der Quellcode von AndroidAPS, der in Github verfügbar ist, muss selbst in eine lauffähige Smartphone-App umgewandelt werden. Das ist do-it-yourself! Um die AndroidAPS-App aus dem Quellcode zu erstellen (kompilieren), benötigst du auf dem Computer die Software Android Studio:
+Der Quellcode von AndroidAPS, der in Github verfügbar ist, muss selbst in eine lauffähige Smartphone-App umgewandelt werden (do-it-yourself). Um die AndroidAPS-App aus dem Quellcode zu erstellen (kompilieren), benötigst du auf dem Computer die Software Android Studio:
 
 https://developer.android.com/studio/install
 
 Diabetes-Therapiedaten
 -----------
-AndroidAPS kann nur dann gut laufen, wenn deine Diabetes-Therapiedaten optimal eingstellt sind. Du musst drei Variablen ermitteln (ggf. stündlich anders, so dass du 3x24 Faktoren pro Tag hast):
+AndroidAPS kann nur dann gut laufen, wenn deine Diabetes-Therapiedaten optimal eingstellt sind. Du musst folgende Variablen ermitteln (ggf. stündlich anders, so dass du ggf. 3x24 Faktoren pro Tag hast):
 
 Basalraten
 ++++++++

@@ -1,3 +1,6 @@
+AndroidAPS
+=======================
+
 .. toctree::
    :maxdepth: 8
    :caption: AndroidAPS documentation
