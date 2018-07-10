@@ -2,7 +2,9 @@
 
 Sensitivity is an advanced feature of OpenAPS which enables the loop to respond more or less aggressively depending on how blood glucose is responding to the insulin inputs. Generally it looks at the response over a period of time (hours) and responds accordingly.
 
-Each time the loop runs (every 5 minutes) it calculates a deviation - that is the difference between the measured blood glucose and what the loop expected it to be. Each deviation is then classified as follows:
+It looks at each BG data point for the last 24 hours and calculates the delta (actual observed change) over the last 5 minutes. It then compares it to “BGI” (blood glucose impact, which is how much BG *should* be dropping from insulin alone), and assesses the “deviations” (differences between the delta and BGI)
+
+Each deviation is then classified as follows:
 
 “x” : deviation is excluded because it is unexpectedly high - normally because of carb absorbtion. All deviations when there is COB are excluded until such time as the COB drops to zero (carbs are fully absorbed) and deviations go negative once again. This is appropriate to eliminate the impact of rising BG due to carb absorption from sensitivity calculations and not falsely attribute it to insulin resistance. Deviations may also be excluded because of an unexplained high deviation (site failure, etc).
 
