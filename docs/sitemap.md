@@ -5,7 +5,7 @@ Introducing the Artificial Panchreas
  *	Oref(1)
 	
 Android APS
- *	AAPS screenshots explaind
+ *	AAPS screenshots explained
  *	AAPS settings and how they work
  *	Tuning your rig
 	
@@ -20,6 +20,9 @@ Nightscout options
  *	ns.10be.de
 		
 Building the software
+
+Configuring
+ *	AAPS settings and how they work
 
 Troubleshooting
 
