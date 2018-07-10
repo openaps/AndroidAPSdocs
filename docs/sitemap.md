@@ -3,6 +3,7 @@ Introducing the Artificial Panchreas
  *	Understanding the algorithm
  *	Oref(0) 
  *	Oref(1)
+ *	Further reading
 	
 Android APS
  *	AAPS screenshots explained
