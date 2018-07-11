@@ -5,13 +5,13 @@ Facebook-Gruppen
 -----------
 Die Looper-Community tauscht sich intensiv über (geschlossene) Facebook-Gruppen aus, in denen dir bei Problemen meist auch sehr schnell durch andere Nutzer geholfen wird:
 
-* AndroidAPSusers (englisch, zu AndroidAPS): https://www.facebook.com/groups/AndroidAPSUsers/
-* Looped-DE (deutsch, zum Loopen an sich): https://www.facebook.com/groups/loopedDE/
-* Freestyle Libre Freaks (deutsch, zum Thema Libre als CGM/FGM): https://www.facebook.com/groups/FreestyleLibreFreaks/
-* xDrip G5 (englisch, zum Thema G5 mit xDrip+): https://www.facebook.com/groups/xDripG5/
-* Nightscout (deutsch, zu Nightscout): https://www.facebook.com/groups/nightscoutDE/
-* CGM in the cloud (englisch, zu CGM allgemein): https://www.facebook.com/groups/cgminthecloud/
-* Diabetes Typ 1 (deutsch, zu T1D allgemein): https://www.facebook.com/groups/195335457152446/
+* **AndroidAPSusers** (englisch, zu AndroidAPS): https://www.facebook.com/groups/AndroidAPSUsers/
+* **Looped-DE** (deutsch, zum Loopen an sich): https://www.facebook.com/groups/loopedDE/
+* **Freestyle Libre Freaks** (deutsch, zum Thema Libre als CGM/FGM): https://www.facebook.com/groups/FreestyleLibreFreaks/
+* **xDrip** (englisch, zu xDrip+): https://www.facebook.com/groups/xDripG5/
+* **NightscoutDE** (deutsch, zu Nightscout): https://www.facebook.com/groups/nightscoutDE/
+* **CGM in the cloud** (englisch, zu CGM allgemein): https://www.facebook.com/groups/cgminthecloud/
+* **Diabetes Typ 1** (deutsch, zu T1D allgemein): https://www.facebook.com/groups/195335457152446/
 
 Github-Channels
 -----------
@@ -26,15 +26,13 @@ Gitter-Chats
 ------------
 In folgenden Chats kannst du Fragen an andere Nutzer richten, beispielsweise wenn du nicht bei Facebook bist (grundsätzlich in Englisch):
 
-* Thema AndroidAOS: https://gitter.im/MilosKozak/AndroidAPS
+* Thema AndroidAPS: https://gitter.im/MilosKozak/AndroidAPS
 * Thema AndroidAPS Dokumentation: https://gitter.im/AndroidAPSwiki/Lobby
 
 Looper-Treffen vor Ort
 ---------
-Einige Mitglieder der Community organisieren regelmäßig oder unregelmäßig Treffen in ganz Deutschland. Eine Übersicht mit den jeweiligen Terminen findest du unter 
-
-    http://www.loopertreffen.androidaps.de
+Einige Mitglieder der Community organisieren regelmäßig oder unregelmäßig Treffen in ganz Deutschland. Eine Übersicht mit den jeweiligen Terminen findest du unter http://loopertreffen.androidaps.de
 
 Kontakt zu Loopern in deiner Nähe
 ----------
-Unter https://www.zeemaps.com/map?group=2617973 kannst du eine interaktive Landkarte anschauen, auf der einige Looper in deiner Nähe eingezeichnet sind. Du kannst dich selbst auch dort eintragen, damit andere Looper dich auch finden.
+Unter https://www.zeemaps.com/map?group=2617973 [derzeit ist die Karte leider nicht verfügbar] kannst du eine interaktive Landkarte anschauen, auf der einige Looper aus deiner Nähe eingezeichnet sind. Du kannst dich selbst auch dort eintragen, damit andere Looper dich auch finden.

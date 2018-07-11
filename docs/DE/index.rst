@@ -1,9 +1,8 @@
 Herzlich willkommen zur AndroidAPS-Dokumentation
 ===================
 
-
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 8
    :glob:
    
    wasistandroidaps
@@ -23,4 +22,4 @@ Herzlich willkommen zur AndroidAPS-Dokumentation
 
          * Sämtliche Produkt- und Herstellernamen, Handelsmarken, Servicemarken, geschützte Handelsmarken und geschützte Servicemarken werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing.
 
-         * Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit: SOOIL <http://www.sooil.com/eng/>, Dexcom <http://www.dexcom.com/>, Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>.
+         * Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit: SOOIL (http://www.sooil.com/eng/), Dexcom (http://www.dexcom.com/), Accu-Chek Roche Diabetes Care (http://www.accu-chek.com/).
