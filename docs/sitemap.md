@@ -1,11 +1,12 @@
 Introducing the Artificial Panchreas
  *	How it works
  *	Understanding the algorithm
- *	Oref(0) 
- *	Oref(1)
+  *	Oref(0) 
+  *	Oref(1)
  *	Further reading
 	
 Android APS
+ *	General description
  *	AAPS screenshots explained
  *	AAPS settings and how they work
  *	Tuning your rig
