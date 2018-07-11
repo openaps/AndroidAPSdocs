@@ -5,11 +5,11 @@ Introducing the Artificial Panchreas
   *	Oref(1)
  *	Further reading
 	
-Android APS
+AndroidAPS
  *	General description
  *	AAPS screenshots explained
  *	AAPS settings and how they work
- *	Tuning your rig
+ *	Advanced Features
 	
 Building your rig
  *	A typical rig (G5, xDrip, AAPS, Ruffy, Combo (diagram)
@@ -22,10 +22,17 @@ Nightscout options
  *	ns.10be.de
 		
 Building the software
+ * What you will need
+ * Building the APK
+ * Linking to your pump and CGM
 
 Configuring
  *	AAPS settings and how they work
-
+ *	The AndroidAPS Config Builder
+ *	Preferences
+ *	Sensitivity detection
+ *	Tuning your rig
+ 	
 Troubleshooting
 
 About the project
