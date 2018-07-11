@@ -39,7 +39,23 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
 
 	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
 
-Getting Started with AndroidAPS
+	Before you start
+----------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Safety First </EN/Before-you-start/Safety-first>
+   Screenshots </EN/Before-you-start/Screenshots.md>
+   Architcture, security implementation </EN/Before-you-start/Architecture-security-implementation.md>
+   Phone </EN/Before-you-start/Phones.md>
+   Pump choices </EN/Before-you-start/Pump-Choices.md>
+   Future possible pump drivers  </EN/Before-you-start/Future-possible-Pump-Drivers.md>
+   Glossary </EN/Before-you-start/Glossary.md>
+   How to help </EN/Before-you-start/Reading_List.md>
+	
+	
+	Getting Started with AndroidAPS
 ----------------
 .. toctree::
    :maxdepth: 1
