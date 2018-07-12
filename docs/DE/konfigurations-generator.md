@@ -78,29 +78,33 @@ Hier kannst du auswählen, welche Pumpe du verwendest. Folgende Modelle werden d
 Beim erstmaligen Einrichten der Pumpe musst du einige Einstellungen vornehmen. Siehe [Einstellungen > Pumpen-Einstellungen](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#pumpen-einstellungen)
 
 ## Empfindlichkeitserkennung
-Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Das ist das Herzstück des Closed Loop. Die Algorythmen analysieren laufend alle verfügbaren Daten (BZ, IOB, COB) und korrigieren im Closed Loop bei Bedarf, wenn du besser oder schlechter auf Insulin reagierst als eingestellt. Autosens wertet aber nur Daten aus, wenn eine Kohlenhydrate an Bord (COB) sind. Zeiten mit COB werden ausgespart.
+Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Die automatische Sensibilitätserkennung (Autosens) ist das Herzstück des Closed Loop. Verschiedene Algorythmen analysieren laufend alle verfügbaren Daten (BZ, IOB, COB) und korrigieren im Closed Loop bei Bedarf, wenn du besser oder schlechter auf Insulin reagierst als eingestellt. Autosens wertet aber nur Daten aus, wenn eine Kohlenhydrate an Bord (COB) sind. Zeiten mit COB werden ausgespart.
 
 Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf dem Home-Screen im Auswahlmenü der angezeigten Kurven "Sensitivität" auswählst. Die weiße Linie zeigt dir das graphisch an. 
-**Diese Funktion ist erst freigeschaltet, wenn du Objective 6 erreicht hast.**
+
+**Die Empfindlichkeitserkennung ist erst freigeschaltet, wenn du Objective 6 erreicht hast.**
 
 ### Autosens verstehen
 
-Um zu verstehen, wie Autosens zu dem Ergebnis gekommen ist, kannst du zum Reiter "OpenAPS" wechseln. Dort gibt es den Abschnitt "Autosens-Daten", der dir folgende Informationen liefert:
+Um zu verstehen, wie Autosens zu den Ergebnissen kommt, kannst du zum Reiter "OpenAPS" wechseln. Dort gibt es den Abschnitt "Autosens-Daten", der dir folgende Informationen liefert:
 
 * **ratio**: Ergebnis der aktuell berechneten Empfindlichkeit im Vergleich zum eingestellten Profil. "ratio 1.2" bedeutet beispielsweise, dass du Faktor 1,2, also 20% mehr Insulin benötigst, "ratio 0.9", dass du Faktor 0,9, also 10% weniger Insulin benötigst als eingestellt. Autosens geht dabei immer vom 100%-Profil aus. Wenn du dein Profil schon mit 110% betreibst und Autosens zeigt "ratio 1.1" an, dann läuft der Loop gerade genau richtig und du musst nicht noch einmal 10% draufpacken.
 * **ratioLimit**: Steht dort "Ratio limited from 1.5323325324 to 1.2", dann begrenzt AAPS die Korrekturen aus Sicherheitsgründen auf den (manuell eingestellten) Faktor von 1.2. Begrenzt Autosens nach oben (z.B. 1.5 zu 1.2), dann solltest du zuerst überlegen, ob du dich bei den eingegebenen Kohlenhydraten verschätzt hast und diese nachträglich eintragen. Andernfalls wäre ein Profilwechsel von Hand auf 150% erforderlich. Dazu auf dem Home-Screen lange auf das aktuelle Profil drücken und unter Profilwechsel 150% auswählen.
 * **past Sensitivity** Hier wird dir angezeigt, wie Autosens zu dem angezeigten Ergebnis gekommen ist. Die Historie geht stündlich so weit zurück, wie du zur Berechnung der Daten eingestellt hast.
 
-    * **(1)** Uhrzeit (im Beispiel 1 Uhr)
-    * **=** Die erkannte Sensitivität stimmt mit der eingestellten überein
-    * **+** Du warst resistenter auf Insulin als eingestellt (brauchtest also mehr Insulin als gedacht)
-    * **-** Du warst sensibler auf Insulin als eingestellt (brauchtest also weniger Insulin als gedacht)
-    * **C** Du hattest Kohlenhydrate an Bord (COB), diese Zeit wird ausgespart
-    * **u** Du hattest nicht eingegebene Kohlenhydrate an Bord (unattended meal - UAM), diese Zeit wird ausgespart
+    * `(1)` Uhrzeit (im Beispiel 1 Uhr)
+    * `=` Die erkannte Sensitivität stimmt mit der eingestellten überein
+    * `+` Du warst resistenter auf Insulin als eingestellt (brauchtest also mehr Insulin als gedacht)
+    * `-` Du warst sensibler auf Insulin als eingestellt (brauchtest also weniger Insulin als gedacht)
+    * `C` Du hattest Kohlenhydrate an Bord (COB), diese Zeit wird ausgespart
+    * `u` Du hattest nicht eingegebene Kohlenhydrate an Bord (unattended meal - UAM), diese Zeit wird ausgespart
     
-Daraus folgt: Wenn du fast ausschließlich === siehst, dann sind deine Faktoren im Profil perfekt eingestellt. Sind dagegen viele ++++ oder ---- Abschnitte dabei, solltest du (gemeinsam mit dem Diabetologen oder der Diafee) an einer Verbesserung deiner Einstellung arbeiten. Ansonsten kann der Closed Loop auch nicht korrekt arbeiten.
+Daraus folgt: Wenn du fast ausschließlich `===` siehst, dann sind deine Faktoren im Profil perfekt eingestellt. Sind dagegen viele `++++` oder `----` Abschnitte dabei, solltest du (gemeinsam mit dem Diabetologen oder der Diafee) an einer Verbesserung deiner Einstellung arbeiten. Ansonsten kann der Closed Loop auch nicht korrekt arbeiten.
 
-Siehe auch [Tipps und Tricks > Diabetes-Therapie fürs Loopen tunen](http://androidaps.readthedocs.io/en/latest/DE/tippstricks.html#diabetes-therapie-furs-loopen-tunen)
+Siehe auch 
+
+* [Tipps und Tricks > Diabetes-Therapie fürs Loopen tunen](http://androidaps.readthedocs.io/en/latest/DE/tippstricks.html#diabetes-therapie-furs-loopen-tunen)
+* [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)
 
 ### Sensitivität Oref0
 Der Oref0-Algorythmus berechnet die Insulinempflindlichkeit auf Basis der vorangegangenen 24 Stunden. Kohlenhydrate (falls noch nicht absorbiert) werden nach einer bestimmten Zeit, die man einstellen kann, einfach abgeschnitten.
@@ -116,16 +120,15 @@ Der AAPS-Algorythmus basiert auf Oref0. Du kannst jedoch selbst festlegen, auf B
 
 ![COB from AAPS](../images/cob_aaps.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
+Die grünen Punkte in der COB-Graphik bedeuten: Die minimale Kohlenhydrat-Resorption wurde verwendet anstatt der Berechnung anhand der Abweichungen (diviations) zwischen berechneten und erkannten Werten
 
 ### Durchschnittliche Sensitivität
+Der Algorythmus "Durchschnittliche Sensitivität" berechnet die Insulinempfindlichkeit aus einem gewichteten Durchschnitt der Abweichungen (deviations). Aktuellere Abweichungen haben ein höheres Gewicht. Die minimale Kohlenhydrat-Resporptionszeit wird ausgehend von der eingestellten maximalen Kohlenhydrat-Resorptionszeit (max carbs absorption) berechnet. Dieser Algorythmus kann am schnellsten auf Veränderungen in der Insulinempfindlichkeit reagieren.
 
-Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
-
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
+Der Algorythmus rechnet so, dass nach der eingestellten Zeit `COB == 0` gesetzt wird.
 
 ### Sensitivität Oref1
-
+Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserkennung.
 
 ## OpenAPS
 
