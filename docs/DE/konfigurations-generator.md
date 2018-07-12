@@ -90,7 +90,7 @@ Um zu verstehen, wie Autosens zu den Ergebnissen kommt, kannst du zum Reiter "Op
 
 * **ratio**: Ergebnis der aktuell berechneten Empfindlichkeit im Vergleich zum eingestellten Profil. "ratio 1.2" bedeutet beispielsweise, dass du Faktor 1,2, also 20% mehr Insulin benötigst, "ratio 0.9", dass du Faktor 0,9, also 10% weniger Insulin benötigst als eingestellt. Autosens geht dabei immer vom 100%-Profil aus. Wenn du dein Profil schon mit 110% betreibst und Autosens zeigt "ratio 1.1" an, dann läuft der Loop gerade genau richtig und du musst nicht noch einmal 10% draufpacken.
 * **ratioLimit**: Steht dort "Ratio limited from 1.5323325324 to 1.2", dann begrenzt AAPS die Korrekturen aus Sicherheitsgründen auf den (manuell eingestellten) Faktor von 1.2. Begrenzt Autosens nach oben (z.B. 1.5 zu 1.2), dann solltest du zuerst überlegen, ob du dich bei den eingegebenen Kohlenhydraten verschätzt hast und diese nachträglich eintragen. Andernfalls wäre ein Profilwechsel von Hand auf 150% erforderlich. Dazu auf dem Home-Screen lange auf das aktuelle Profil drücken und unter Profilwechsel 150% auswählen.
-* **past Sensitivity** Hier wird dir angezeigt, wie Autosens zu dem angezeigten Ergebnis gekommen ist. Die Historie geht stündlich so weit zurück, wie du zur Berechnung der Daten eingestellt hast.
+* **past Sensitivity**: Hier wird dir angezeigt, wie Autosens zu dem angezeigten Ergebnis gekommen ist. Die Historie geht stündlich so weit zurück, wie du zur Berechnung der Daten eingestellt hast.
 
     * `(1)` Uhrzeit (im Beispiel 1 Uhr)
     * `=` Die erkannte Sensitivität stimmt mit der eingestellten überein
@@ -99,7 +99,12 @@ Um zu verstehen, wie Autosens zu den Ergebnissen kommt, kannst du zum Reiter "Op
     * `C` Du hattest Kohlenhydrate an Bord (COB), diese Zeit wird ausgespart
     * `u` Du hattest nicht eingegebene Kohlenhydrate an Bord (unattended meal - UAM), diese Zeit wird ausgespart
     
-Daraus folgt: Wenn du fast ausschließlich `===` siehst, dann sind deine Faktoren im Profil perfekt eingestellt. Sind dagegen viele `++++` oder `----` Abschnitte dabei, solltest du (gemeinsam mit dem Diabetologen oder der Diafee) an einer Verbesserung deiner Einstellung arbeiten. Ansonsten kann der Closed Loop auch nicht korrekt arbeiten.
+* **sensResult**:
+
+    * `sensitivity normal`bedeutet, dass keine Änderungen nötig sind
+    * `Excess insulin resistance detected`beudetet, dass die Empfindlichkeitserkennung eine Anpassung vornimmt.
+    
+Daraus folgt: Wenn du fast ausschließlich `===` siehst, dann sind deine Faktoren im Profil perfekt eingestellt. Sind dagegen   viele `++++` oder `----` Abschnitte dabei, solltest du (gemeinsam mit dem Diabetologen oder der Diafee) an einer Verbesserung deiner Einstellung arbeiten. Ansonsten kann der Closed Loop auch nicht korrekt arbeiten.
 
 Siehe auch 
 
