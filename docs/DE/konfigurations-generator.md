@@ -24,7 +24,8 @@ Hier wird zunächst das in der Pumpe hinterlegte Profil 1 ausgelesen (weitere Pu
 Hier musst du auswählen, welchen Insulintyp du verwendest. AAPS muss für die Berechnungen des Algorythmus wissen, wie es in deinem Körper wirkt. Dabei spielt es eine große Rolle, zu welchem Zeitpunkt das Wirkmaximum (= max peak) erreicht wird und wie lange das Insulin im Körper aktiv ist (= DIA - duration of insulin action). Für die gängigen Analog-Insuline sind die Wirkprofile zum Wirkmaximum hinterlegt. Die Dauer der Insulinwirkung (DIA) kannst du in deinen Profileinstellungen manuell ändern, allerdings muss sie mindestens 5h betragen.
 
 ![DIA Erklärung von diabettech.com](https://i1.wp.com/www.diabettech.com/wp-content/uploads/2017/07/DIA-Clamp.jpg?w=300)
-<small>(Quelle: diabettech.com)</small>
+
+(Quelle: diabettech.com)
 
 Näheres ist auch in der englischen [OpenAPS-Dokumentation](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) nachzulesen.
 
@@ -63,8 +64,40 @@ Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. 
 Näheres zur Einrichtung der BZ-Quellen findest du unter [http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm)
     
 ## Pumpe
-    
+Hier kannst du auswählen, welche Pumpe du verwendest. Folgende Modelle werden derzeit unterstützt:
+
+* DanaR (empfohlen)
+* DanaR Korean (koreanische Version der DanaR)
+* DanaRv2 (nur für Entwickler, da die Firmware-Version 2 an Endkunden nie ausgeliefert wurde)
+* DanaRS
+* Insight Pump (in der Entwicklung)
+* Accu-Chek Combo
+* ICT (für OpenLoop mit ICT, AAPS macht nur Behandlungsvorschläge, die du dann selbst mit dem Pen umsetzen musst)
+* Virtuelle Pumpe (für OpenLoop mit nicht unterstützten Pumpen, AAPS macht nur Behandlungsvorschläge, die du dann selbst in deiner Pumpe umsetzen musst)
+
+Beim erstmaligen Einrichten der Pumpe musst du einige Einstellungen vornehmen. Siehe [Einstellungen > Pumpen-Einstellungen](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#pumpen-einstellungen)
+
 ## Empfindlichkeitserkennung
+Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Das ist das Herzstück des Closed Loop. Die Algorythmen analysieren laufend alle verfügbaren Daten (BZ, IOB, COB) und korrigieren im Closed Loop bei Bedarf, wenn du besser oder schlechter auf Insulin reagierst als eingestellt. Autosens wertet aber nur Daten aus, wenn eine Kohlenhydrate an Bord (COB) sind. Zeiten mit COB werden ausgespart.
+
+Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf dem Home-Screen im Auswahlmenü der angezeigten Kurven "Sensitivität" auswählst. Die weiße Linie zeigt dir das graphisch an. 
+
+### Autosens verstehen
+
+Um zu verstehen, wie Autosens zu dem Ergebnis gekommen ist, kannst du zum Reiter "OpenAPS" wechseln. Dort gibt es den Abschnitt "Autosens-Daten", der dir folgende Informationen liefert:
+
+* **ratio**: Ergebnis der aktuell berechneten Empfindlichkeit im Vergleich zum eingestellten Profil. "ratio 1.2" bedeutet beispielsweise, dass du Faktor 1,2, also 20% mehr Insulin benötigst, "ratio 0.9", dass du Faktor 0,9, also 10% weniger Insulin benötigst als eingestellt. Autosens geht dabei immer vom 100%-Profil aus. Wenn du dein Profil schon mit 110% betreibst und Autosens zeigt "ratio 1.1" an, dann läuft der Loop gerade genau richtig und du musst nicht noch einmal 10% draufpacken.
+* **ratioLimit**: Steht dort "Ratio limited from 1.5323325324 to 1.2", dann begrenzt AAPS die Korrekturen aus Sicherheitsgründen auf den (manuell eingestellten) Faktor von 1.2. Begrenzt Autosens nach oben (z.B. 1.5 zu 1.2), dann solltest du zuerst überlegen, ob du dich bei den eingegebenen Kohlenhydraten verschätzt hast und diese nachträglich eintragen. Andernfalls wäre ein Profilwechsel von Hand auf 150% erforderlich. Dazu auf dem Home-Screen lange auf das aktuelle Profil drücken und unter Profilwechsel 150% auswählen.
+* **past Sensitivity** Hier wird dir angezeigt, wie Autosens zu dem angezeigten Ergebnis gekommen ist. Die Historie geht stündlich so weit zurück, wie du zur Berechnung der Daten eingestellt hast.
+
+    ** **(1)** Uhrzeit (im Beispiel 1 Uhr)
+    ** **=** Die erkannte Sensitivität stimmt mit der eingestellten überein
+    ** **+** Du warst resistenter auf Insulin als eingestellt (brauchtest also mehr Insulin als gedacht)
+    ** **-** Du warst sensibler auf Insulin als eingestellt (brauchtest also weniger Insulin als gedacht)
+    ** **C** Du hattest Kohlenhydrate an Bord (COB), diese Zeit wird ausgespart
+    ** **u** Du hattest ein nicht eingegebene Kohlenhydrate an Bord (unattended meal - UAM), diese Zeit wird ausgespart
+
+Diese Funktion ist erst freigeschaltet, wenn du Objective 6 erreicht hast.
 
 ### Sensitivität Oref0
 
