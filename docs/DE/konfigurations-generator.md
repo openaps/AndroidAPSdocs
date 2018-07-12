@@ -23,7 +23,7 @@ Hier wird zunächst das in der Pumpe hinterlegte Profil 1 ausgelesen (weitere Pu
 ## Insulin
 Hier musst du auswählen, welchen Insulintyp du verwendest. AAPS muss für die Berechnungen des Algorythmus wissen, wie es in deinem Körper wirkt. Dabei spielt es eine große Rolle, zu welchem Zeitpunkt das Wirkmaximum (= max peak) erreicht wird und wie lange das Insulin im Körper aktiv ist (= DIA - duration of insulin action). Für die gängigen Analog-Insuline sind die Wirkprofile zum Wirkmaximum hinterlegt. Die Dauer der Insulinwirkung (DIA) kannst du in deinen Profileinstellungen manuell ändern, allerdings muss sie mindestens 5h betragen.
 
-![DIA Erklärung von diabettech.com](https://i1.wp.com/www.diabettech.com/wp-content/uploads/2017/07/DIA-Clamp.jpg?w=300)
+![DIA Erklärung von diabettech.com](https://i1.wp.com/www.diabettech.com/wp-content/uploads/2017/07/DIA-Clamp.jpg?w=400)
 
 (Quelle: diabettech.com)
 
@@ -81,6 +81,7 @@ Beim erstmaligen Einrichten der Pumpe musst du einige Einstellungen vornehmen. S
 Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Das ist das Herzstück des Closed Loop. Die Algorythmen analysieren laufend alle verfügbaren Daten (BZ, IOB, COB) und korrigieren im Closed Loop bei Bedarf, wenn du besser oder schlechter auf Insulin reagierst als eingestellt. Autosens wertet aber nur Daten aus, wenn eine Kohlenhydrate an Bord (COB) sind. Zeiten mit COB werden ausgespart.
 
 Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf dem Home-Screen im Auswahlmenü der angezeigten Kurven "Sensitivität" auswählst. Die weiße Linie zeigt dir das graphisch an. 
+**Diese Funktion ist erst freigeschaltet, wenn du Objective 6 erreicht hast.**
 
 ### Autosens verstehen
 
@@ -90,20 +91,41 @@ Um zu verstehen, wie Autosens zu dem Ergebnis gekommen ist, kannst du zum Reiter
 * **ratioLimit**: Steht dort "Ratio limited from 1.5323325324 to 1.2", dann begrenzt AAPS die Korrekturen aus Sicherheitsgründen auf den (manuell eingestellten) Faktor von 1.2. Begrenzt Autosens nach oben (z.B. 1.5 zu 1.2), dann solltest du zuerst überlegen, ob du dich bei den eingegebenen Kohlenhydraten verschätzt hast und diese nachträglich eintragen. Andernfalls wäre ein Profilwechsel von Hand auf 150% erforderlich. Dazu auf dem Home-Screen lange auf das aktuelle Profil drücken und unter Profilwechsel 150% auswählen.
 * **past Sensitivity** Hier wird dir angezeigt, wie Autosens zu dem angezeigten Ergebnis gekommen ist. Die Historie geht stündlich so weit zurück, wie du zur Berechnung der Daten eingestellt hast.
 
-    ** **(1)** Uhrzeit (im Beispiel 1 Uhr)
-    ** **=** Die erkannte Sensitivität stimmt mit der eingestellten überein
-    ** **+** Du warst resistenter auf Insulin als eingestellt (brauchtest also mehr Insulin als gedacht)
-    ** **-** Du warst sensibler auf Insulin als eingestellt (brauchtest also weniger Insulin als gedacht)
-    ** **C** Du hattest Kohlenhydrate an Bord (COB), diese Zeit wird ausgespart
-    ** **u** Du hattest ein nicht eingegebene Kohlenhydrate an Bord (unattended meal - UAM), diese Zeit wird ausgespart
+    * **(1)** Uhrzeit (im Beispiel 1 Uhr)
+    * **=** Die erkannte Sensitivität stimmt mit der eingestellten überein
+    * **+** Du warst resistenter auf Insulin als eingestellt (brauchtest also mehr Insulin als gedacht)
+    * **-** Du warst sensibler auf Insulin als eingestellt (brauchtest also weniger Insulin als gedacht)
+    * **C** Du hattest Kohlenhydrate an Bord (COB), diese Zeit wird ausgespart
+    * **u** Du hattest nicht eingegebene Kohlenhydrate an Bord (unattended meal - UAM), diese Zeit wird ausgespart
+    
+Daraus folgt: Wenn du fast ausschließlich === siehst, dann sind deine Faktoren im Profil perfekt eingestellt. Sind dagegen viele ++++ oder ---- Abschnitte dabei, solltest du (gemeinsam mit dem Diabetologen oder der Diafee) an einer Verbesserung deiner Einstellung arbeiten. Ansonsten kann der Closed Loop auch nicht korrekt arbeiten.
 
-Diese Funktion ist erst freigeschaltet, wenn du Objective 6 erreicht hast.
+Siehe auch [Tipps und Tricks > Diabetes-Therapie fürs Loopen tunen](http://androidaps.readthedocs.io/en/latest/DE/tippstricks.html#diabetes-therapie-furs-loopen-tunen)
 
 ### Sensitivität Oref0
+Der Oref0-Algorythmus berechnet die Insulinempflindlichkeit auf Basis der vorangegangenen 24 Stunden. Kohlenhydrate (falls noch nicht absorbiert) werden nach einer bestimmten Zeit, die man einstellen kann, einfach abgeschnitten.
+
+Details in der [OpenAPS-Dokumentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html)
+
+Oref0 - nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit abgeschnitten
+
+![COB from oref0](../images/cob_oref0.png)
 
 ### Sensitivität AAPS
+Der AAPS-Algorythmus basiert auf Oref0. Du kannst jedoch selbst festlegen, auf Basis wie vieler Stunden in der Vergangenheit die Insulinempfindlichkeit berechnet werden soll. Die minimale Kohlenhydrat-Resporptionszeit wird ausgehend von der eingestellten maximalen Kohlenhydrat-Resorptionszeit (max carbs absorption) berechnet.
+
+![COB from AAPS](../images/cob_aaps.png)
+
+If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
 
 ### Durchschnittliche Sensitivität
+
+Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+
+AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
+
+### Sensitivität Oref1
+
 
 ## OpenAPS
 
