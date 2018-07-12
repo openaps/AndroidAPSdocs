@@ -1,54 +1,64 @@
 # Konfigurations-Generator
-
 Im Reiter "Konfigurations-Generator" kannst du fast alle AAPS-Funktionen konfigurieren.
 
 ## Profil
-
 Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den Basalraten, ISF und IC abrufen soll.
 
-**DanaR**
-
+### DanaR
 Das in der **DanaR/DanaRS hinterlegte Profil** wird verwendet. Diese Auswahl dürfte selten sinnvoll sein, weil das Eingeben der Daten direkt in der Pumpe ein "Gefummel" ist. 
 
-**Nightscout-Profil (empfohlen)**
-
+### Nightscout-Profil (empfohlen)
 Die auf deiner **Nightscout-Website unter https://[deine-nightscout-adresse]/profile hinterlegten Profile** werden synchronisiert. So kannst du komfortabel in Nightscout Profile (z.B. Arbeit, Daheim, Sport, Urlaub usw.) **anlegen**. Kurz nach dem Klick auf "Speichern" erscheinen sie bei bestehender Internetverbindung des Smartphones in AAPS. 
 
 Um ein Profil aus Nightscout zu **aktivieren**, musst du einen **Profilwechsel** durchführen. Dazu im Homescreen von AAPS oben lange auf das derzeitige Profil drücken (graues Feld zwischen dem hellblauen "Open/Closed Loop"-Feld und dem dunkelblauen Zielbereich-Feld) > Profilwechsel > Profil auswählen > OK. AAPS schreibt nach dem Profilwechsel das gewählte Profil auch in die Pumpe, so dass es im Notfall ohne AAPS verfügbar ist und weiterläuft.
 
 Auch ohne Internetverbindung bzw. ohne Verbindung zu Nightscout sind die Nightscout-Profile in AAPS verfügbar, wenn sie einmalig synchronisiert worden sind.
 
-**Einfaches Profil**
-
+### Einfaches Profil
 Dieses Profil ermöglicht nur ein ganz simples Behandlungsschema mit **ganztägig jeweils nur einem Wert** für DIA, IC, ISF, Basalrate und Zielbereich. Eher zu Testzwecken zu verwenden, außer du hast über 24 Stunden dieselben Faktoren. Sobald "Einfaches Profil" ausgewählt ist, erscheint in AAPS ein neuer Reiter, wo du dann die Profildaten eingeben kannst.
 
-**Lokales Profil**
-
+### Lokales Profil
 Hier wird zunächst das in der Pumpe hinterlegte Profil 1 ausgelesen (weitere Pumpen-Profile werden ignoriert). Sobald "Lokales Profil" ausgewählt ist, erscheint in AAPS ein neuer Reiter, wo du dann die aus der Pumpe ausgelesenen Profildaten ggf. verändern kannst. Mit dem nächsten Profilwechsel werden sie dann auf die Pumpe ins Profil 1 geschrieben.
 
 ## Insulin
+Hier musst du auswählen, welchen Insulintyp du verwendest. AAPS muss für die Berechnungen des Algorythmus wissen, wie es in deinem Körper wirkt. Dabei spielt es eine große Rolle, zu welchem Zeitpunkt das Wirkmaximum (= max peak) erreicht wird und wie lange das Insulin im Körper aktiv ist (= DIA - duration of insulin action). Für die gängigen Analog-Insuline sind die Wirkprofile zum Wirkmaximum hinterlegt. Die Dauer der Insulinwirkung (DIA) kannst du in deinen Profileinstellungen manuell ändern, allerdings muss sie mindestens 5h betragen.
 
-### Rapid-Acting Oref
-
-### Ultra-Rapid Oref
-
-### Free Peak Oref
-Bei dem Profil "Free Peak 0ref" für Fiasp, kann eingegeben werden, wann die höchste Wirkdauer erreicht wird.
-
-Der DIA wird dabei automatisch auf 5 Stunden gestellt, wenn er selbst nicht höher angegeben wurde im Profil.
-
-Die folgende Erklärung ist leider auf Englisch, aber bei den Grafiken wird es noch mal deutlich.
-
-http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/
+[http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters)
 
 ![DIA Erklärung von diabettech.com](https://i1.wp.com/www.diabettech.com/wp-content/uploads/2017/07/DIA-Clamp.jpg?w=892)
 <small>(Quelle: diabettech.com)</small>
 
-Bei vielen ist nach 3-4 Stunden praktisch keine merkbare Wirkung vom Fiasp mehr da, aber immer noch 0,0xx Einheiten vorhanden. Diese können dann z.B. bei Sport sich doch noch bemerkbar machen.
+Näheres ist auch in der englischen [OpenAPS-Dokumentation](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) nachzulesen.
 
-Daher verwendet AndroidAPS Minimum 5h als DIA.
+### Rapid-Acting Oref
+* Humalog
+* Novolog
+* Novorapid
+
+DIA = mindestens 5.0h
+Max. peak = 75 Minuten nach Injektion
+
+### Ultra-Rapid Oref
+* FIASP
+
+DIA = mindestens 5.0h
+Max. peak = 55 Minuten nach Injektion
+
+Bei vielen ist nach 3-4 Stunden praktisch keine merkbare Wirkung von Fiasp mehr da, auch wenn in der Regel dann noch 0,0xx Einheiten vorhanden sind. Diese Restmenge kann sich dann z.B. beim Sport doch noch bemerkbar machen. Daher verwendet AndroidAPS minimum 5h als DIA.
+
+### Free-Peak Oref
+Bei dem Profil "Free Peak 0ref" kann individuell eingegeben werden, wann die höchste Wirkdauer erreicht wird. Der DIA wird dabei automatisch auf 5 Stunden gestellt, wenn er selbst nicht höher angegeben wurde im Profil.
 
 ## BZ-Quelle
+Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. Es stehen folgende Quellen zur Verfügung:
+
+* xDrip+
+* Nightscout-Client BZ
+* MM640g
+* Glimp
+* DexcomG5 app (patched)
+
+Näheres zur Einrichtung der BZ-Quellen findest du unter [http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm)
     
 ## Pumpe
     
