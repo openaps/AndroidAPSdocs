@@ -109,6 +109,7 @@ Daraus folgt: Wenn du fast ausschließlich `===` siehst, dann sind deine Faktore
 Siehe auch 
 
 * [Tipps und Tricks > Diabetes-Therapie fürs Loopen tunen](http://androidaps.readthedocs.io/en/latest/DE/tippstricks.html#diabetes-therapie-furs-loopen-tunen)
+* [Autosens](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode)
 * [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)
 
 ### Sensitivität Oref0
@@ -138,19 +139,23 @@ Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserke
 ## OpenAPS
 
 ### MA
+Meal Assist
 
 ### AMA
-Manche Funktionen in AndroidAPS sind vom OpenAPS oref0 Code, deswegen lies dir die OpenAPS Anleitung ebenso durch:
-* [Advanced Meal Assist (AMA)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama) nachdem du dir einen Bolus gegeben hast, kann das System schneller eine höhere temp. Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein. Aktiviere die Option im Config Builder Reiter, jedoch musst du das siebte Ziel abgeschlossen haben, um AMA verwenden zu können.
-* [Autosens](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode) analysiert historische Daten und macht Anpassungen, wenn es bemerkt, dass die Sensitivität gestiegen/gesunken ist. Aktiviere es im Preferences Menü, dafür musst du das sechste Ziel abgeschlossen haben.
-* [Temporary Targets/temporäre Ziele (Eating Soon and Activity Mode)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#eating-soon-and-activity-mode-temporary-targets) temporäre Ziele (Temp Targets) sind ideal wenn du möchtest, dass der Loop auf einen anderen BZ Wert korrigiert, z.B. beim Sport (höheres Ziel), oder wenn du essen willst (niedrigeres Ziel -> BZ steigt nach dem Essen nicht so stark). Man kann die Temp Targets entweder über die Uhr, im Actions Reiter, oder indem man im Overview Reiter auf das aktuelle Ziel länger drückt. Im Overview Reiter wird das Standard Ziel blau dargestellt, und das temporäre grün.
+AMA steht für "advanced meal assist" und ist der OpenAPS-Algorythmus aus 2017. Nachdem du dir einen Bolus gegeben hast, kann das System eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein. 
+
+**Du musst das Objective 7 abgeschlossen haben, um AMA verwenden zu können.**
+
+Siehe auch: [OpenAPS-Dokumentation zu AMA (englisch)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama)
 
 ### SMB
-Genauere Infos gibt es hier [Super Micro Boluses (SMB) on OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+SMB steht für "super micro bolus" und ist der neueste OpenAPS-Algorythmus (2018). 
 
-Um SMB verwenden zu können, musst du zuerst 28 Tage den Closed Loop verwendet haben, und darauf achten, dass dein APS ausfallen könnte.
+**Um SMB verwenden zu können, musst du zuerst 28 Tage den Closed Loop verwendet haben, und darauf achten, dass dein APS ausfallen könnte.**
 
 Um SMB effektiv arbeiten zu lasssen, musst du deine Einstellungen anpassen. Da mit SMB der maxIOB nicht mehr durch die vom APS gegebenen Dosen berechnet wird, sondern alles IOB (auch deinen selbst gegebenen Essensbolus), ist der Wert für maxIOB höher, als das, was du von MA und AMA gewohnt bist. Ein guter Wert für den Anfang ist: 1 normaler Essensbolus + 3x höchste tägl. Basalrate. Jedoch sei dabei vorsichtig und adjustiere deine Einstellungen in kleinen Schritten.
+
+Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
 ## Loop
     
