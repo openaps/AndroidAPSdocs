@@ -37,9 +37,19 @@ Section A: contains is where you input the information about the bolus that you 
 
 SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
 
-Section B: shows the calculated bolus. If the amount of insulin on boead already exceeds the calculated bolus then it will just display the amount of carbs still required.
+Section B: shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
 Section C: shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to. TT stands for Temporary Target, ISF is Insulin Sensitivity Factor, COB is Carbs on Board, IOB is Insulin on Board.
+
+## Carbs
+
+![Carbs](../images/Screenshot_ecarbs.png)
+
+If you need to tell AndroidAPS about some extra carbs (or equivalent) you can do this here, without necessarily bolusing. A nice thing about this feature is that it allows you to tell the app about long lasting carbs that you might normally need an extended bolus for. These appear in your timeline in orange while they are still in the future and then change to the normal colour as time moves on. 
+
+In section A you enter any temporary target you think is appropriate, then in section B you can tell it (TIME) about how long you want the start of the carb action to be delayed  (this can be a negative if you want the start to be in the past ) the DURATION you expect the carbs to last in hours, and finally the amount of carbs (or equivalent) in grams, 
+
+This tells the AndroidAPS algorithm that it needs to use the calculation for carbs on board rather than the one for controlling basal levels in the absence of carbs. If you have SMB (Super Micro Bolus) enabled then they will be issued if the algorithm calculates that they are necessary.
 
 ## Actions
 
