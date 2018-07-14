@@ -1,8 +1,8 @@
 Introducing the Artificial Panchreas
  *	How it works
  *	Understanding the algorithm
-  *	Oref(0) 
-  *	Oref(1)
+    *	Oref(0) 
+    *	Oref(1)
  *	Further reading
 	
 Understanding AndroidAPS
@@ -21,8 +21,8 @@ Designing your rig
     * Dana R, Dana RS
 
 Nightscout options
- *	Build your own
- *	ns.10be.de
+ *	Build your own server
+ *	Using ns.10be.de
 		
 Building the software
  * What you will need
