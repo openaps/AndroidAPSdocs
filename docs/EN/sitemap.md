@@ -10,15 +10,15 @@ Understanding AndroidAPS
  *	AndroidAPS screenshots explained
  *	AndroidAPS settings explained
  *	Advanced Features
-   * Super Micro Bolus
-   * Unannounced Meals
+    * Super Micro Bolus
+    * Unannounced Meals
 	
 Designing your rig
  *	A typical rig (G5, xDrip, AAPS, Ruffy, Combo (diagram)
  *	Choosing your pump
-  *		Combo (LineageOS, Ruffy)
-   *			Configuring the Combo and Ruffy
-  *		Dana R, Dana RS
+    * Combo (LineageOS, Ruffy)
+      * Configuring the Combo and Ruffy
+    * Dana R, Dana RS
 
 Nightscout options
  *	Build your own
@@ -32,6 +32,7 @@ Building the software
 Configuring
  *	The AndroidAPS Config Builder
  *  Setting up Nightscout and xDrip
+ *  Your profile
  *	Preferences
  *	Sensitivity detection
  *	Tuning your rig
