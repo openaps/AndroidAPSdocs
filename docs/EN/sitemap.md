@@ -17,7 +17,7 @@ Understanding AndroidAPS
 	
 Designing your rig
  *	A typical rig (G5, xDrip, AAPS, Ruffy, Combo (diagram)
- *	Choosing your pump
+ *	[Choosing your pump](/Designing_Your_Rig/Pump-Choices.md)
     * Combo (LineageOS, Ruffy)
       * Configuring the Combo and Ruffy
     * Dana R, Dana RS
