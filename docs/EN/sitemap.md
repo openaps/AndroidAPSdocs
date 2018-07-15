@@ -1,9 +1,9 @@
 Introducing the Artificial Panchreas
  *	How it works
- *	Understanding the algorithm
+ *	Understanding the OpenAPS algorithm
     *	Oref(0) 
     *	Oref(1)
- *	Further reading
+ *	[Further reading](./Before-you-start/Reading_List.md)
 	
 Understanding AndroidAPS
  *	General description
@@ -13,6 +13,7 @@ Understanding AndroidAPS
     * Super Micro Bolus
     * Unannounced Meals
     * [Sensitivity detection](./Understanding_AndroidAPS/Sensitivity-detection-and-COB.md)
+    * [Extended Carbs](./Understanding_AndroidAPS/Extended-Carbs.md)
 	
 Designing your rig
  *	A typical rig (G5, xDrip, AAPS, Ruffy, Combo (diagram)
