@@ -12,7 +12,7 @@ Understanding AndroidAPS
  *	Advanced Features
     * Super Micro Bolus
     * Unannounced Meals
-    * [Sensitivity and extended carbs](./Understanding_AndroidAPS/Sensitivity-detection-and-COB.md)
+    * [Sensitivity detection](./Understanding_AndroidAPS/Sensitivity-detection-and-COB.md)
 	
 Designing your rig
  *	A typical rig (G5, xDrip, AAPS, Ruffy, Combo (diagram)
