@@ -7,7 +7,7 @@ Introducing the Artificial Panchreas
 	
 Understanding AndroidAPS
  *	General description
- *	[AndroidAPS screenshots explained](/Understanding_AndroidAPS/Screenshots.md)
+ *	[AndroidAPS screenshots explained](./Understanding_AndroidAPS/Screenshots.md)
  *	AndroidAPS settings explained
  *	Advanced Features
     * Super Micro Bolus
