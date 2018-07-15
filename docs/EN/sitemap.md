@@ -17,16 +17,16 @@ Understanding AndroidAPS
 	
 Designing your rig
  *	A typical rig (G5, xDrip, AAPS, Ruffy, Combo (diagram)
- *	[Choosing your pump](/Designing_Your_Rig/Pump-Choices.md)
+ *	[Choosing your pump](./Designing_Your_Rig/Pump-Choices.md)
     * Combo (LineageOS, Ruffy)
-      * [Configuring the Combo and Ruffy](/Designing_Your_Rig/Accu-Chek-Combo-Pump.md)
-    * [Dana R](/Designing_Your_Rig/DanaR-Insulin-Pump.md)
-    * [Dana RS](/Designing_Your_Rig/DanaRS-Insulin-Pump.md)
+      * [Configuring the Combo and Ruffy](./Designing_Your_Rig/Accu-Chek-Combo-Pump.md)
+    * [Dana R](./Designing_Your_Rig/DanaR-Insulin-Pump.md)
+    * [Dana RS](./Designing_Your_Rig/DanaRS-Insulin-Pump.md)
 
-* [Blood Glucose source](/Designing_Your_Rig/BG-Source.md)
-* [Phones](/Designing_Your_Rig/phones.md)
-* [Watchfaces](/Designing_Your_Rig/watchfaces.md)
-* [Possible future pumps](/Designing_Your_Rig/Future-possible-Pump-Drivers.md)
+* [Blood Glucose source](./Designing_Your_Rig/BG-Source.md)
+* [Phones](./Designing_Your_Rig/phones.md)
+* [Watchfaces](./Designing_Your_Rig/watchfaces.md)
+* [Possible future pumps](./Designing_Your_Rig/Future-possible-Pump-Drivers.md)
 
 Nightscout options
  *	Build your own server
@@ -47,6 +47,6 @@ Configuring
  *	Tuning your rig
  	
 Troubleshooting
- * [Accessing the log files](Troubleshooting/Accessing-logfiles.md)
+ * [Accessing the log files](./Troubleshooting/Accessing-logfiles.md)
 
 About the project
