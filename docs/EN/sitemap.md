@@ -8,10 +8,11 @@ Introducing the Artificial Panchreas
 Understanding AndroidAPS
  *	General description
  *	[AndroidAPS screenshots explained](./Understanding_AndroidAPS/Screenshots.md)
- *	AndroidAPS settings explained
+ *	[AndroidAPS settings explained](./Understanding_AndroidAPS/Preferences.md)
  *	Advanced Features
     * Super Micro Bolus
     * Unannounced Meals
+    * [Sensitivity and extended carbs](./Understanding_AndroidAPS/Sensitivity-detection-and-COB.md)
 	
 Designing your rig
  *	A typical rig (G5, xDrip, AAPS, Ruffy, Combo (diagram)
@@ -38,6 +39,6 @@ Configuring
  *	Tuning your rig
  	
 Troubleshooting
- * Accessing the log files
+ * [Accessing the log files](Troubleshooting/Accessing-logfiles.md)
 
 About the project
