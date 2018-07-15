@@ -38,5 +38,6 @@ Configuring
  *	Tuning your rig
  	
 Troubleshooting
+ * Accessing the log files
 
 About the project
