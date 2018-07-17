@@ -1,0 +1,11 @@
+# Formats in addition to HTML
+
+formats:
+   - none
+
+# Pip requirements
+requirements_file: etc/requirements.txt
+
+# Build Container
+build:
+   image: latest
