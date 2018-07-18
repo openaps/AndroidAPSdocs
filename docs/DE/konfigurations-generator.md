@@ -192,7 +192,7 @@ Wenn du auf ein anderes Handy umsteigst, kannst du deine Einstellungen und den F
 **3. Objective:** Den Open Loop, mit seinen temp. Basal Empfehlungen, verstehen.
   * Versuche die Logik hinter den Empfehlungen zu verstehen indem du dir diese [Seite] (https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), die Vorhersagelinie in AAPS/Nightscout und die Ergebnisse im OpenAPS Tab ansiehst.
   
- _Stoppe hier, wenn du den Open Loop mit der virtuellen Pumpe verwendest._
+    _Stoppe hier, wenn du den Open Loop mit der virtuellen Pumpe verwendest._
 
 **4. Objective:** Mit dem closed Loop mit Hypoabschaltung starten
   * Wähle Closed Loop von den Preferences, oder indem du den Open Loop Button links oben im Homescreen drückst und hältst.
