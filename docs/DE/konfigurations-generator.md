@@ -179,23 +179,24 @@ AndroidAPS hat eine Reihe an Zielsetzungen (objectives), die **nach und nach erf
 
 Wenn du auf ein anderes Handy umsteigst, kannst du deine Einstellungen und den Fortschritt **exportieren**. Bei den drei Punkten, oben rechts, wähle _Export Settings_, es wird eine Benachrichtigung erscheinen wo die Preferences Datei gespeichert wird (normalerweise im Hauptordner des internen Speichers). Beim neuen Handy musst du diese Datei, dann in den gleichen Pfad kopieren, und anschließend _Import Settings_ wählen. Es werden alle mögliche Einstellungen, auch die Sicherheitseinstellungen, und der Fortschritt in den Objectives gespeichert. Falls du das nicht machst gehen alle deine Einstellungen (bei Benutzung des Local Profiles, auch das Profil), und Fortschritte nicht verfügbar sein. Deshalb solltest du immer wieder mal eine Sicherheitskopie machen, dass du im Falle eines Verlustes, Beschädigung, etc. deine Daten nicht verlierst.
  
-**1. Objective:** Visualisierung und Konstrolle einrichten, und die Basalrate und Faktoren überprüfen
-  * Wähle die richtige BZ-Quelle. Siehe [BZ-Quelle](https://github.com/MilosKozak/AndroidAPS/wiki/Blutzucker-Quelle_de) für Informationen.
-  * Wähle deine Pumpe im ConfigBuilder (wähle Virtual Pump, wenn du eine Pumpe ohne Treiber für AAPS verwendest). Wenn du die Dana verwendest, versichere dich, dass du die [Dana R](https://github.com/MilosKozak/AndroidAPS/wiki/DanaR-Insulinpumpe_de) und [AAPS](https://github.com/MilosKozak/AndroidAPS/wiki/AndroidAPS_de) Anleitung gelesen, und richtig eingestellt hast.
-  * Folge den Einstellungen zu [Nightscout](https://github.com/MilosKozak/AndroidAPS/wiki/Nightscout_de) um sicher zu stellen, dass du deine Daten erhältst und anzeigen lassen kannst.
-<br><br>_Es könnte sein, dass du für den nächsten BZ warten musst, damit ihn AAPS erhält und akzeptiert._
+**1. Objective: Visualisierung und Konstrolle einrichten und die Basalrate und Faktoren überprüfen**
+  * Wähle die richtige BZ-Quelle. Siehe [BZ-Quelle](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm)
+  * Wähle deine Pumpe im Konfigurations-Generator (wähle "Virtuelle Pume", wenn du eine Pumpe ohne Treiber für AAPS verwendest). Wenn du eine loopbare Pumpe verwendest, dann versichere dich, dass du [die Pumpe richtig eingestellt](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#pumpen-einstellungen) und die [AAPS-Dokumentation](http://wiki.androidaps.org) gelesen hast.
+  * [Richte Nightscout ein](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#nightscout-client)
+  
+  _Es könnte sein, dass du für den nächsten BZ warten musst, damit ihn AAPS erhält und akzeptiert._
  
-**2. Objective:** Start mit Open Loop
-  * Wähle Open Loop, entweder in den Preferences, oder indem du den Loop Button drückst und hältst, dieser befindet sich links oben im Homescreen.
+**2. Objective: Start mit Open Loop**
+  * Wähle [Open Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#open-loop), entweder in den Einstellungen oder indem du den Loop Button drückst und hältst, dieser befindet sich links oben im Homescreen.
   * Aktiviere mindesten 20 vorgeschlagene temp. Basalraten manuell über einen Zeitraum von 7 Tagen (Falls du eine andere Pumpe verwendest, gebe die Vorschläge in der Pumpe ein und bestätige es in AAPS). Versichere dich, dass die Daten in AAPS und Nightscout angezeigt werden.
  
-**3. Objective:** Den Open Loop, mit seinen temp. Basal Empfehlungen, verstehen.
-  * Versuche die Logik hinter den Empfehlungen zu verstehen indem du dir diese [Seite] (https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), die Vorhersagelinie in AAPS/Nightscout und die Ergebnisse im OpenAPS Tab ansiehst.
+**3. Objective: Den Open Loop mit seinen temporären Basal-Empfehlungen verstehen**
+  * Versuche die Logik hinter den Empfehlungen zu verstehen, indem du dir [die OpenAPS-Dokumentation dazu](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), die Vorhersagelinie in AAPS/Nightscout und die Ergebnisse im OpenAPS-Reiter ansiehst.
   
     _Stoppe hier, wenn du den Open Loop mit der virtuellen Pumpe verwendest._
 
-**4. Objective:** Mit dem closed Loop mit Hypoabschaltung starten
-  * Wähle Closed Loop von den Preferences, oder indem du den Open Loop Button links oben im Homescreen drückst und hältst.
+**4. Objective: Mit dem closed Loop mit Hypoabschaltung starten**
+  * Wähle [Closed Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#closed-loop) in den Preferences, oder indem du den Open Loop Button links oben im Homescreen drückst und hältst.
   * Setze deinen Zielbereich, um sicher zu gehen, ein wenig höher als üblich.
   * Sehe dir an wie die temp. Basalraten aktiv sind, indem du die blaue Linie auf der Homescreen Grafik, oder in Zahlen darüber kontrollierst.
   * Gehe sicher, dass deine Einstellungen korrekt sind, wenn du über 5 Tage keinen Unterzucker mehr behandeln musstest, sollten die Einstellungen in Ordnung sein. Im anderen Falle solltest du deine Faktoren noch einmal kontrollieren.
