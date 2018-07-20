@@ -90,7 +90,7 @@ Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf dem Home
 
 Um zu verstehen, wie Autosens zu den Ergebnissen kommt, kannst du zum Reiter "OpenAPS" wechseln. Dort gibt es den Abschnitt "Autosens-Daten", der dir folgende Informationen liefert:
 
-* **ratio**: Ergebnis der aktuell berechneten Empfindlichkeit im Vergleich zum eingestellten Profil. "ratio 1.2" bedeutet beispielsweise, dass du Faktor 1,2, also 20% mehr Insulin benötigst, "ratio 0.9", dass du Faktor 0,9, also 10% weniger Insulin benötigst als eingestellt. Autosens geht dabei immer vom 100%-Profil aus. Wenn du dein Profil schon mit 110% betreibst und Autosens zeigt "ratio 1.1" an, dann läuft der Loop gerade genau richtig und du musst nicht noch einmal 10% draufpacken.
+* **ratio**: Ergebnis der aktuell berechneten Empfindlichkeit im Vergleich zum aktuell eingestellten Profil. "ratio 1.2" bedeutet beispielsweise, dass du Faktor 1,2, also 20% mehr Insulin benötigst, "ratio 0.9", dass du Faktor 0,9, also 10% weniger Insulin benötigst als eingestellt. Wenn du dein Profil schon mit 110% betreibst und Autosens zeigt "ratio 1.1" an, dann solltest du mit einem weiteren Profilwechsel noch einmal 10% draufpacken und das Profil mit 120% fahren.
 * **ratioLimit**: Steht dort "Ratio limited from 1.5323325324 to 1.2", dann begrenzt AAPS die Korrekturen aus Sicherheitsgründen auf den (manuell eingestellten) Faktor von 1.2. Begrenzt Autosens nach oben (z.B. 1.5 zu 1.2), dann solltest du zuerst überlegen, ob du dich bei den eingegebenen Kohlenhydraten verschätzt hast und diese nachträglich eintragen. Andernfalls wäre ein Profilwechsel von Hand auf 150% erforderlich. Dazu auf dem Home-Screen lange auf das aktuelle Profil drücken und unter Profilwechsel 150% auswählen.
 * **past Sensitivity**: Hier wird dir angezeigt, wie Autosens zu dem angezeigten Ergebnis gekommen ist. Die Historie geht stündlich so weit zurück, wie du zur Berechnung der Daten eingestellt hast.
 
@@ -223,6 +223,16 @@ Wenn du Behandlungen als sichtbar markiert hast, kannst du im "Behandlungen"-Rei
 Du kannst einzelne Einträge durch Antippen von "Löschen" **entfernen**. Sie werden dann in AAPS nicht mehr berücksichtigt und bei Nightscout gelöscht (**Bitte vorsichtig verwenden!**).
 
 ## Generell
+
+### Buttons
+Hier kannst du auswählen, welche Buttons auf deinem Home-Screen erscheinen sollen.
+
+### QuickWizard-Einstellungen
+Hier kannst du einen Button für eine bestimmte Standardmahlzeit erstellen (KH und Berechnungsmethode für den Bolus), der dir dann auf dem Home-Screen angezeigt wird. Dies ist sehr hilfreich, wenn du z.B. morgens häufig dasselbe isst (Button "1 Vollkornbrot"). Wenn du mehrere Standardmahlzeiten anlegst und für sie verschiedene Uhrzeiten angibst, dann hast du je nach Tageszeit auf dem Home-Screen immer den passenden Standardmahlzeit-Button.
+
+### Erweiterte Einstellungen
+
+#### Aktiviere den SuperBolus im Wizard
 
 ### Übersicht
 
