@@ -175,45 +175,47 @@ AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und passt di
 **Closed Loop ist nur möglich, wenn du Objective 4 erreicht hast und eine unterstützte Pumpe verwendest.**
     
 ## Beschränkungen
-AndroidAPS hat eine Reihe an Zielsetzungen (objectives), die **nach und nach erfüllt werden müssen**, um Funktionen freizuschalten. Dies soll dich sicher durch die Einrichtung des Loops führen. Es garantiert, dass du alles korrekt eingestellt hast und verstehst, was das System genau macht. Nur so kannst du ihm vertrauen.
+AndroidAPS hat eine Reihe an Aufgaben (objectives), die du **nach und nach erfüllen musst**. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Es garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du ihm vertrauen.
 
-Wenn du auf ein anderes Handy umsteigst, kannst du deine Einstellungen und den Fortschritt **exportieren**. Bei den drei Punkten, oben rechts, wähle _Export Settings_, es wird eine Benachrichtigung erscheinen wo die Preferences Datei gespeichert wird (normalerweise im Hauptordner des internen Speichers). Beim neuen Handy musst du diese Datei, dann in den gleichen Pfad kopieren, und anschließend _Import Settings_ wählen. Es werden alle mögliche Einstellungen, auch die Sicherheitseinstellungen, und der Fortschritt in den Objectives gespeichert. Falls du das nicht machst gehen alle deine Einstellungen (bei Benutzung des Local Profiles, auch das Profil), und Fortschritte nicht verfügbar sein. Deshalb solltest du immer wieder mal eine Sicherheitskopie machen, dass du im Falle eines Verlustes, Beschädigung, etc. deine Daten nicht verlierst.
+Für den Fall, dass du später dein Smartphone austauschen musst (Neuanschaffung, Displayschaden etc.) solltest du unbedingt von Zeit zu Zeit deine Einstellungen und den Fortschritt der Objectives [exportieren](http://androidaps.readthedocs.io/en/latest/docs/DE/einstellungen.md#einstellungen-exportieren).
  
-**1. Objective: Visualisierung und Konstrolle einrichten und die Basalrate und Faktoren überprüfen**
-  * Wähle die richtige BZ-Quelle. Siehe [BZ-Quelle](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm)
-  * Wähle deine Pumpe im Konfigurations-Generator (wähle "Virtuelle Pume", wenn du eine Pumpe ohne Treiber für AAPS verwendest). Wenn du eine loopbare Pumpe verwendest, dann versichere dich, dass du [die Pumpe richtig eingestellt](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#pumpen-einstellungen) und die [AAPS-Dokumentation](http://wiki.androidaps.org) gelesen hast.
+**1. Objective: Nimm die Grundeinstellungen vor**
+  * Wähle im Konfigurations-Generator > BZ-Quelle die richtige Blutzuckerquelle. Siehe dazu [BZ-Quelle](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm)
+  * Wähle im Konfigurations-Generator > Pumpe deine Pumpe (oder wähle "Virtuelle Pume", wenn du eine nicht loopbare Pumpe hast und Handeingaben machst). Wenn du eine loopbare Pumpe verwendest, dann versichere dich, dass du [die Pumpe richtig eingestellt](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#pumpen-einstellungen) und die [AAPS-Dokumentation](http://wiki.androidaps.org) gelesen hast.
   * [Richte Nightscout ein](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#nightscout-client)
   
-  _Es könnte sein, dass du für den nächsten BZ warten musst, damit ihn AAPS erhält und akzeptiert._
+  _Es könnte sein, dass du für den nächsten BZ ca. 5 Minuten warten musst, damit ihn AAPS erhält und akzeptiert._
  
-**2. Objective: Start mit Open Loop**
-  * Wähle [Open Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#open-loop), entweder in den Einstellungen oder indem du den Loop Button drückst und hältst, dieser befindet sich links oben im Homescreen.
+**2. Objective: Beginne im Open Loop Modus**
+  * Wähle [Open Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#open-loop)
   * Aktiviere mindesten 20 vorgeschlagene temp. Basalraten manuell über einen Zeitraum von 7 Tagen (Falls du eine andere Pumpe verwendest, gebe die Vorschläge in der Pumpe ein und bestätige es in AAPS). Versichere dich, dass die Daten in AAPS und Nightscout angezeigt werden.
  
-**3. Objective: Den Open Loop mit seinen temporären Basal-Empfehlungen verstehen**
+**3. Objective: Verstehe den Open Loop Modus mit seinen temporären Basal-Empfehlungen**
   * Versuche die Logik hinter den Empfehlungen zu verstehen, indem du dir [die OpenAPS-Dokumentation dazu](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), die Vorhersagelinie in AAPS/Nightscout und die Ergebnisse im OpenAPS-Reiter ansiehst.
   
     _Stoppe hier, wenn du den Open Loop mit der virtuellen Pumpe verwendest._
 
-**4. Objective: Mit dem closed Loop mit Hypoabschaltung starten**
-  * Wähle [Closed Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#closed-loop) in den Preferences, oder indem du den Open Loop Button links oben im Homescreen drückst und hältst.
+**4. Objective: Starte den Closed Loop Modus mit Hypoabschaltung**
+  * Wähle [Closed Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#closed-loop)
   * Setze deinen Zielbereich, um sicher zu gehen, ein wenig höher als üblich.
   * Sehe dir an wie die temp. Basalraten aktiv sind, indem du die blaue Linie auf der Homescreen Grafik, oder in Zahlen darüber kontrollierst.
   * Gehe sicher, dass deine Einstellungen korrekt sind, wenn du über 5 Tage keinen Unterzucker mehr behandeln musstest, sollten die Einstellungen in Ordnung sein. Im anderen Falle solltest du deine Faktoren noch einmal kontrollieren.
 <br><br>_Das System ist auf einen maxIOB von 0 begrenzt, d.h. dass der Loop eine Hypo abfangen kann, aber keine Steigungen, das System kann die BR nur erhöhen wenn der IOB unter 0 liegt und dadurch auf 0 bringen.._
  
-**5. Objective:** Feineinstellung des closed Loops, max IOB über 0 erhöhen und schrittweise den Zielbereich verringern
-  * Erhöhe dein maxIOB über 0 über einen Zeitraum von einem Tag, standardmäßig wird eine Einstellung auf 2 vorgeschlagen, aber du solltest dich langsam rauf arbeiten bis du weißt welche Einstellung für dich in Ordnung ist.
-  * Wenn du dir mit deiner Einstellung sicher bist, verringere deinen Zielwert schrittweise auf deinen gewünschten Wert.
-<br><br>Das System erlaubt dir den Zielbereich im Bereich von 60-180 zu setzen._
+**5. Objective: Starte den Closed Loop Modus mit automatischer Korrektur bei Werten außerhalb des Zielbereichs**
+  * Erhöhe die Sicherheitseinstellung: Konfigurations-Generator > APS > AMA oder SMB > "MaximalesBasal-IOB, das OpenAPS abgeben darf" (in OpenAPS "maxIOB" genannt) auf über 0 über einen Zeitraum von einem Tag. Dieser Wert bestimmt, bis zu welchem IOB-Wert AAPS im Closed Loop Modus regeln darf. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann macht der Loop zunächst nichts, bis die IOB-Grenze wieder unterschritten ist. Standardmäßig wird zu Beginn eine Einstellung auf 2 vorgeschlagen, aber du solltest dich langsam rauf arbeiten bis du weißt, welcher Wert für dich in Ordnung ist. Das ist sehr individuell und hängt stark vom durchschnittlichen Insulinbedarf ab. Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
+  * Wenn du dir mit deiner Einstellung sicher bist, verringere deinen Ziel-BZ-Wert schrittweise auf deinen gewünschten Zeilbereich/Zielwert.
+  * Das System erlaubt dir den Zielbereich im Bereich von 60-180 zu setzen.
  
-**6. Objective:** Basalrate und Faktoren nachjustieren, falls erforderlich, und Auto-Sens Aktivierung
-  * Du kannst [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) verwenden, um deine BR und Faktoren zu kontrollieren, oder einen altmodischen BR-Test machen.
-  * Aktiviere [Auto-Sens](https://github.com/MilosKozak/AndroidAPS/wiki/Open-APS-features) über einen Zeitraum von 7 Tagen und kontrolliere die weiße Linie im Homescreen (Sen-Kästchen aktiviert), um zu sehen wie sich deine Sensitivität ändert, und kontrolliere regelmäßig im OpenAPS Tab wie AAPS deine BR und Faktoren ändert. Autosense beginnt erst 24 Stunden nach der Aktivierung zu wirken, damit genügend Daten vorhanden sind.
-<br><br>_Vergiss nicht, dich in diese [Liste](http://bit.ly/nowlooping) einzutragen, wähle AAPS als deine DIY Software aus, falls du es noch nicht gemacht hast._
+**6. Objective: Justiere die Basalraten und Faktoren nach und aktiviere die Empfindlichkeitserkennung**
+  * Du kannst [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) verwenden, um deine Basalrate und Faktoren zu kontrollieren oder einen altmodischen Basalratentest machen. Siehe auch [Diabetes-Therapie fürs Loopen tunen](http://androidaps.readthedocs.io/en/latest/DE/tippstricks.html#diabetes-therapie-furs-loopen-tunen)
+  * Aktiviere die Empfindlichkeitserkennung [Autosens](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#empfindlichkeitserkennung) über einen Zeitraum von 7 Tagen und kontrolliere die weiße Linie im Homescreen (Sen-Kästchen aktiviert), um zu sehen wie sich deine Sensitivität ändert, und kontrolliere regelmäßig im OpenAPS Tab wie AAPS deine Basalraten und Faktoren ändert. Autosens beginnt erst einige Stunden nach der Aktivierung zu wirken (je nachdem, welchen Zeitraum du ausgewählt hast), damit genügend Daten vorhanden sind. Wundere dich also nicht, wenn nach der Aktivierung im OpenAPS-Reiter erstmal "Autosens deactivated" erscheint.
+
+    _Trage dich bitte in diese [Liste](http://bit.ly/nowlooping) ein und wähle AAPS als deine DIY Software aus._
  
-**7. Objective:** Zusätzliche Funktionen für den alltäglichen Gebrauch aktivieren, wie Advanced Meal Assist (AMA)
-  * Nun solltest du dich mit AAPS sicher fühlen und wissen, welche Einstellungen für deinen Diabetes am besten passen. Über einen Zeitraum von 14 Tagen kannst du zusätzliche Funktionen ausprobieren, welche dich noch mehr unterstützen.
+**7. Objective: Aktiviere zusätzliche Funktionen für den alltäglichen Gebrauch wie AMA oder SMB**
+  * Nun solltest du dich mit AAPS sicher fühlen und wissen, welche Einstellungen für deinen Diabetes am besten passen. 
+  * Über einen Zeitraum von 14 Tagen kannst du zusätzliche Funktionen ausprobieren, welche dich noch mehr unterstützen (AMA, SMB).
   
 ## Behandlungen
 Wenn du Behandlungen als sichtbar markiert hast, kannst du im "Behandlungen"-Reiter in AAPS alle einzelnen **Behandlungsdaten sehen** (Bolus, verlängerter Bolus, temporäre Basalraten, temporäres Ziel, Profilwechsel, Careportal-Einträge). All diese Daten werden grundsätzlich zu deiner Nightscout-Website hochgeladen. 
