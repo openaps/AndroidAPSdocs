@@ -142,7 +142,7 @@ Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserke
 **Der neue Algorythmus Oref1 ist nur für erfahrene Nutzer geeignet!** Zu Beginn des Loopens sollten mit Oref0 / AMA Erfahrungen gesammelt werden.
 
 #### min_5m_carbimpact
-3 > 8 bei SMB
+Diese Einstellung legt fest, wie schnell die eingegebenen Kohlenhydrate standardmäßig in 5 Minuten absorbiert werden.  Der Standardwert ist 8mg/dL/5min (nur beim SMB; AMA = 3). Dies beeinflusst auch, wie schnell der errechnete COB-Wert vfällt, wenn sich eine Kohlenhydrat-Absporption nicht an den BZ-Abweichungen zeigt. Der Standardwert von 8 mg/dL/5min korrespondiert mit einer minimalen Kohlenhydrat-Absorptionsrate von 24g/Std bei einem CSF von 4 mg/dL/g.
 
 #### Meal max absorption time [h]
 6
