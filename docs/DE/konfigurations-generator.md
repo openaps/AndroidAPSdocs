@@ -317,11 +317,24 @@ Wenn du diese Option aktivierst, dann kann sich AndroidAPS mit einer geeigneten 
 * Vorhersagen des BZ-Verlaufs
 * Benachrichtigung bei SMB-Abgabe
 
+Wenn du diese Option sichtbar machst (rechtes Feld), dann erscheint ein neuer Reiter in AAPS namens "Wear". Dort hast du folgende Möglichkeiten:
+
+**Alle Daten erneut senden**
+AAPS sendet alle aktuellen Daten erneut an die Smartwatch. Dies kann hilfreich sein, wenn die Uhr längere Zeit außer Reichweite war und dadurch dein BZ-Verlauf Lücken aufweist. Oder wenn du nach dem Einschalten der Uhr nicht ein paar Minuten warten willst, bis AAPS die ersten Informationen übertragen hat.
+
+**Öffne Einstellungen auf der Uhr**
+Dies öffnet über das Smartphone die Einstellungen auf der Uhr.
+
 ### xDrip+ Statuszeile (Uhr)
+Falls du auf deiner Smartwatch nicht das AAPS/AAPSv2-Ziffernblatt verwendest, sondern das Ziffernblatt von xDrip+, dann kannst du hier auswählen, dass auf den xDrip+ Ziffernblatt Informationen von AAPS erscheinen sollen.
+
+Über Einstellungen (Zahnrädchen) kannst du regeln, welche Infos angezeigt werden sollen.
 
 ### Laufende Benachrichtigungen
+Wenn du diese Option aktivierst, dann ist zeigt AndroidAPS dauerhaft eine Systemmeldung im Android-Smartphone. Dort kannst du sehen, was der BZ und der Loop gerade machen.
 
 ### Nightscout-Client
+
 
 ### Konfigurations-Generator
 
