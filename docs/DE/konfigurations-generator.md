@@ -253,7 +253,7 @@ Weiterführende Informationen findest du im Netz:
 * [https://thisiscaleb.com/2010/04/21/super-bolus/ (englisch)](https://thisiscaleb.com/2010/04/21/super-bolus/)
 
 ### Aktionen
-Wenn du diese Option aktivierst (linker Haken) bzw. sichtbar machst (rechter Haken), dann erscheint in AAPS ein Reiter, der folgende häufig genutzte Aktionen ermöglicht:
+Wenn du diese Option aktivierst (linker Haken) und sichtbar machst (rechter Haken), dann erscheint in AAPS ein Reiter, der folgende häufig genutzte Aktionen ermöglicht:
 
 * Profilwechsel
 * Temporäres Ziel setzen
@@ -263,37 +263,59 @@ Wenn du diese Option aktivierst (linker Haken) bzw. sichtbar machst (rechter Hak
 * Statistik über die tägliche Gesamtdosis an Insulin (TDD)
 
 ### Careportal
+Wenn du diese Option aktivierst (linker Haken) und sichtbar machst (rechter Haken), dann erscheint in AAPS ein **Reiter zum Careportal**. Dort kannst du zu verschiedensten Ereignissen deiner Diabetestherapie ein Tagebuch führen, z.B. sehen, wie viele Stunden der letzte Katheterwechsel her ist und wie alt CGM-Sensor, Insulinreservoir und Pumpenbatterie sind.
 
+Die Einträge werden automatisch zu deiner **Nightscout-Website hochgeladen** und dort angezeigt, wenn du die Variable 'careportal' eingestellt hast (siehe [http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#nightscout-website](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#nightscout-website) ).
+
+Wenn du an dieser Stelle **Kohlenhydrate** eingibst (z.B. zur Korrektur), dann werden diese von AAPS seit Version 1.58 offline (also ohne Umweg über Nightscout) erkannt und beim Loop berücksichtigt.
 
 ### SMS-Kommunikator
-Gehe in deinen Einstellungen im  Android-Telefon zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
+Wenn du diese Option aktivierst (linker Haken), dann kann AAPS bestimmte Befehle per SMS erhalten. Dies ist sinnvoll z.B. bei Kindern, die von ihren Eltern überwacht und behandelt werden.
 
-In AndroidAPS gehe zu Preferences > SMS Communicator und trage die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS senden zu dürfen. ‚Allow remote commands via SMS' muss außerdem aktiviert warden.
+Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 
-Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf de AndroidAPS installiert ist. Sende dazu einen der folgenden **fettgedruckten** Kommandos und das Handy wird mit einer Erfolgsmittelung oder dem angeforderten Status antworten. 
+In AndroidAPS gehe zu Konfigurations-Generator > Generell > SMS-Kommunikator  und trage unter Einstellungen (Zahnrädchen) die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden. 'Erlaube externe Befehle per SMS' muss außerdem aktiviert werden.
 
-* BG: Letzter Blutzucker 125 vor 4min, Delta: -12mg/dl, IOB: 0.20E (Bolus: 0.10E Basal: 0.10E)
-* LOOP STOP/DISABLE: Das „Loopen“ wurde deaktiviert
-* LOOP START/ENABLE: Das „Loopen“ wurde aktiviert.
-* LOOP STATUS: Das „Loopen“ ist deaktiviert / Das „Loopen“ ist aktiviert / Pausiert (10 min)
-* LOOP SUSPEND 20: Das „Loopen“ wird für 20 Minuten unterbrochen. 
-* LOOP RESUME: Das „Loopen“ fortsetzen
-* TREATMENTS REFRESH: Geräte aktualisieren 1 Empfänger
-* NSCLIENT RESTART: NSCLIENT restarten 1 Empfänger
-* DANAR: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
-* BASAL STOP/CANCEL: Um die temporäre Basalrate zu stoppen, antworte mit dem Code EmF
-* BASAL 0.3: Um eine Basalrate von 0.3E/h zu starten, antworte mit Code Swe, Ferngesteuerte Basalraten-Einstellungen sind nicht erlaubt (wenn ferngesteuerte Kommandos nicht erlaubt sind)
-* BOLUS 1.2: Um einen Bolus vo 1.2E abzugeben, antworte mit Code Rrt, Ferngesteuerte Boli sind nicht erlaubt (wenn ferngesteuerte Kommandos nicht erlaubt sind)
-* CAL 126: Um Kalibrierungswert von 126 zu senden, antworte mit Code Rrt, Kalibrierung gesendet (wenn xSrip installiert ist. Kallibrierungen zu akzeptieren, muss in xDrip+ aktiviert sein)
+Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem AndroidAPS installiert ist. Sende dazu eines der folgenden **fettgedruckten** Kommandos und das Handy wird mit einer Erfolgsmitteilung oder dem angeforderten Status antworten. 
+
+* **BG**: Letzter Blutzucker 125 vor 4min, Delta: -12mg/dl, IOB: 0.20E (Bolus: 0.10E Basal: 0.10E)
+* **LOOP STOP/DISABLE**: Das „Loopen“ wurde deaktiviert
+* **LOOP START/ENABLE**: Das „Loopen“ wurde aktiviert.
+* **LOOP STATUS**: Das „Loopen“ ist deaktiviert / Das „Loopen“ ist aktiviert / Pausiert (10 min)
+* **LOOP SUSPEND 20**: Das „Loopen“ wird für 20 Minuten unterbrochen. 
+* **LOOP RESUME**: Das „Loopen“ fortsetzen
+* **TREATMENTS REFRESH**: Geräte aktualisieren 1 Empfänger
+* **NSCLIENT RESTART**: NSCLIENT restarten 1 Empfänger
+* **DANAR**: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
+* **BASAL STOP/CANCEL**: Um die temporäre Basalrate zu stoppen, antworte mit dem Code EmF
+* **BASAL 0.3**: Um eine Basalrate von 0.3E/h zu starten, antworte mit Code Swe, Ferngesteuerte Basalraten-Einstellungen sind nicht erlaubt (wenn ferngesteuerte Kommandos nicht erlaubt sind)
+* **BOLUS 1.2**: Um einen Bolus vo 1.2E abzugeben, antworte mit Code Rrt, Ferngesteuerte Boli sind nicht erlaubt (wenn ferngesteuerte Kommandos nicht erlaubt sind)
+* **CAL 126**: Um Kalibrierungswert von 126 zu senden, antworte mit Code Rrt, Kalibrierung gesendet (wenn xSrip installiert ist. Kallibrierungen zu akzeptieren, muss in xDrip+ aktiviert sein)
 
 **Sicherheitshinweise zur SMS-Steuerung**
         
-* Wenn du diese Option verwendest, behalte im Hinterkopf, was passieren könnte, falls das Handy, welches zur Fernsteuerung verwendet wird, gestohlen wird. Schütze dieses mit einem sicheren Code.
+* Wenn du diese Option verwendest, dann behalte im Hinterkopf was passieren könnte, falls das Handy, welches zur Fernsteuerung verwendet wird, gestohlen wird. Schütze es deshalb mit einem sicheren Bildschirm-Code.
 * Seit AndroidAPS 1.1 wirst du über wichtige ferngesteuerte Aktionen (z.B. Bolus, Profiländerung) eine SMS erhalten. Deswegen solltest du mindestens 2 Telefonnummern hinzufügen (für den Fall, dass ein Handy gestohlen wird).
 
 ### Essen
+Wenn du diese Option aktivierst (linker Haken) und sichtbar machst (rechter Haken), dann erscheint in AAPS ein neuer Reiter "Essen". Dort werden alle Mahlzeiten angezeigt, die du in deiner Nightscout-Website unter "Nahrungsmittel Editor" angelegt hast. Ein Anlegen von Mahlzeiten in AAPS ist derzeit nicht möglich.
+
+Diese Funktion ist praktisch, um die KH-Menge von häufig gegessenen Standardmahlzeiten festzuhalten ("Pizza Diavolo von Luigi um die Ecke", "Himbeer-Sorbet vom Kramerwirt" etc.).
 
 ### Wear
+Wenn du diese Option aktivierst, dann kann sich AndroidAPS mit einer geeigneten Android Wear Smartwatch verbinden. Unter Einstellungen (Zahnrädchen) kannst du festlegen, ob du AndroidAPS auch von der Uhr aus steuern willst ("Nasenbolus") und welche Daten du auf der Smartwatch sehen willst:
+
+* BZ
+* TZ
+* 15'-Trend
+* COB
+* Bolus-IOB
+* Basal-IOB
+* detailliertes IOB
+* detailliertes Delta
+* BGl
+* Vorhersagen des BZ-Verlaufs
+* Benachrichtigung bei SMB-Abgabe
 
 ### xDrip+ Statuszeile (Uhr)
 
