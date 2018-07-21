@@ -303,7 +303,7 @@ Wenn du diese Option aktivierst (linker Haken) und sichtbar machst (rechter Hake
 Diese Funktion ist praktisch, um die KH-Menge von häufig gegessenen Standardmahlzeiten festzuhalten ("Pizza Diavolo von Luigi um die Ecke", "Himbeer-Sorbet vom Kramerwirt" etc.).
 
 ### Wear
-Wenn du diese Option aktivierst, dann kann sich AndroidAPS mit einer geeigneten Android Wear Smartwatch verbinden. Unter Einstellungen (Zahnrädchen) kannst du festlegen, ob du AndroidAPS auch von der Uhr aus steuern willst ("Nasenbolus") und welche Daten du auf der Smartwatch sehen willst:
+Wenn du diese Option aktivierst (linker Haken), dann kann sich AndroidAPS mit einer geeigneten Android Wear Smartwatch verbinden. Unter Einstellungen (Zahnrädchen) kannst du festlegen, ob du AndroidAPS auch von der Uhr aus steuern willst ("Nasenbolus") und welche Daten du auf der Smartwatch sehen willst:
 
 * BZ
 * TZ
@@ -317,12 +317,14 @@ Wenn du diese Option aktivierst, dann kann sich AndroidAPS mit einer geeigneten 
 * Vorhersagen des BZ-Verlaufs
 * Benachrichtigung bei SMB-Abgabe
 
-Wenn du diese Option sichtbar machst (rechtes Feld), dann erscheint ein neuer Reiter in AAPS namens "Wear". Dort hast du folgende Möglichkeiten:
+Wenn du diese Option sichtbar machst (rechter Haken), dann erscheint ein neuer Reiter in AAPS namens "Wear". Dort hast du folgende Möglichkeiten:
 
 **Alle Daten erneut senden**
+
 AAPS sendet alle aktuellen Daten erneut an die Smartwatch. Dies kann hilfreich sein, wenn die Uhr längere Zeit außer Reichweite war und dadurch dein BZ-Verlauf Lücken aufweist. Oder wenn du nach dem Einschalten der Uhr nicht ein paar Minuten warten willst, bis AAPS die ersten Informationen übertragen hat.
 
 **Öffne Einstellungen auf der Uhr**
+
 Dies öffnet über das Smartphone die Einstellungen auf der Uhr.
 
 ### xDrip+ Statuszeile (Uhr)
@@ -334,7 +336,15 @@ Falls du auf deiner Smartwatch nicht das AAPS/AAPSv2-Ziffernblatt verwendest, so
 Wenn du diese Option aktivierst, dann ist zeigt AndroidAPS dauerhaft eine Systemmeldung im Android-Smartphone. Dort kannst du sehen, was der BZ und der Loop gerade machen.
 
 ### Nightscout-Client
+Hier kannst du die Synchronisation mit deiner Nightscout-Website aktivieren. Über die Einstellungen (Zahnrädchen) kannst du deine Nightscout-URL und deinen API-Key eingeben.
 
+Wenn **Logge App-Start in Nightscout** aktiviert ist, dann wird jeder Start von AndroidAPS in Nightscout angezeigt.
+
+Unter **Alarm-Optionen** kannst du verschiedene Alarme einstellen, die auch in Nightscout als Alarme auftauchen sollen.
+
+Unter **Verbindungs-Einstellungen** hast du verschiedene Optionen, über welche Netzwerkverbindung AndroidAPS Daten zu Nightscout hochladen soll (nur WLAN, nur in bestimmtem WLAN, nur bei angeschlossenem Ladekabel etc.). Willst du, dass nur über eine bestimmte SSID Daten an Nightscout hochgeladen werden, dann musst du die SSID in Anführungszeichen setzen (z.B. "MY-WLAN"). Mehrere SSIDs werden durch Komme getrennt (z.B. "MY-WLAN", "NEIGHBOURS-WLAN").
+
+**Um eine bereits gespeicherte SSID wieder zu löschen, musst du ein Leerzeichen als SSID eintragen und abspeichern!** Es handelt sich dabei um einen bekannten [Bug](https://github.com/MilosKozak/AndroidAPS/issues/1187)
 
 ### Konfigurations-Generator
-
+Hier kannst du auswählen, ob der Konfigurations-Generator als Reiter angezeigt werden soll oder nicht.
