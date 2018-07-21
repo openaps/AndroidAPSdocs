@@ -224,21 +224,46 @@ Du kannst einzelne Einträge durch Antippen von "Löschen" **entfernen**. Sie we
 
 ## Generell
 
-### Buttons
-Hier kannst du auswählen, welche Buttons auf deinem Home-Screen erscheinen sollen.
-
-### QuickWizard-Einstellungen
-Hier kannst du einen Button für eine bestimmte Standardmahlzeit erstellen (KH und Berechnungsmethode für den Bolus), der dir dann auf dem Home-Screen angezeigt wird. Dies ist sehr hilfreich, wenn du z.B. morgens häufig dasselbe isst (Button "1 Vollkornbrot"). Wenn du mehrere Standardmahlzeiten anlegst und für sie verschiedene Uhrzeiten angibst, dann hast du je nach Tageszeit auf dem Home-Screen immer den passenden Standardmahlzeit-Button.
-
-### Erweiterte Einstellungen
-
-#### Aktiviere den SuperBolus im Wizard
-
 ### Übersicht
 
+#### Keep screen on (derzeit nur dev-Branch)
+Wenn du diese Option aktivierst, dann wird Android gezwungen, den Bildschirm immer an zu lassen. Dies ist z.B. zu Präsentationszwecken hilfreich, es verbraucht aber sehr viel Batterie. Deshalb wird empfohlen, das Smartphone an ein Ladekabel anzuschließen.
+
+#### Buttons
+Hier kannst du auswählen, welche Buttons auf deinem Home-Screen erscheinen sollen.
+
+* Behandlungen
+* Rechner
+* Insulin
+* Kohlenhydrate
+
+#### QuickWizard-Einstellungen
+Hier kannst du einen Button für eine bestimmte Standardmahlzeit erstellen (KH und Berechnungsmethode für den Bolus), der dir dann auf dem Home-Screen angezeigt wird. Dies ist sehr hilfreich, wenn du z.B. morgens häufig dasselbe isst (Button "1 Vollkornbrot"). Wenn du mehrere Standardmahlzeiten anlegst und für sie verschiedene Uhrzeiten angibst, dann hast du je nach Tageszeit auf dem Home-Screen immer den passenden Standardmahlzeit-Button.
+
+#### Erweiterte Einstellungen
+
+**Aktiviere den SuperBolus im Wizard**
+Wenn du diese Option auswählst, dann wird im Rechner die Superbolus-Option freigeschaltet. 
+
+Ein Superbolus hat erstmal nichts mit dem Loopen an sich zu tun. Er ist eine Behandlungsmethode, bei der dem errechneten Mahlzeiten-Bolus zusätzlich noch die Basalrate der nächsten zwei Stunden als Bolus hinzugefügt wird. Gleichzeitig wird die Basalrate für zwei Stunden auf 0 gesetzt. So erreicht der Körper gerade bei schnellen Kohlenhydraten unter Umständen in kürzerer Zeit einen höheren Insulinspiegel. Dadurch kann der postprandiale Peak ggf. niedriger sein.
+
+Weiterführende Informationen findest du im Netz:
+
+* [https://alfa-woman.com/super-bolus-method-for-combating-blood-glucose-spikes-420 (deutsch)](https://alfa-woman.com/super-bolus-method-for-combating-blood-glucose-spikes-420)
+* [https://thisiscaleb.com/2010/04/21/super-bolus/ (englisch)](https://thisiscaleb.com/2010/04/21/super-bolus/)
+
 ### Aktionen
+Wenn du diese Option aktivierst (linker Haken) bzw. sichtbar machst (rechter Haken), dann erscheint in AAPS ein Reiter, der folgende häufig genutzte Aktionen ermöglicht:
+
+* Profilwechsel
+* Temporäres Ziel setzen
+* Temporäre Basalrate abbrechen
+* Vorfüllen/füllen des Schlauches
+* History
+* Statistik über die tägliche Gesamtdosis an Insulin (TDD)
 
 ### Careportal
+
 
 ### SMS-Kommunikator
 Gehe in deinen Einstellungen im  Android-Telefon zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
