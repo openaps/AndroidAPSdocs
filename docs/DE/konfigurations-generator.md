@@ -124,6 +124,30 @@ Oref0 - nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit abges
 
 ![COB from oref0](../images/cob_oref0.png)
 
+#### min_5m_carbimpact
+Diese Einstellung legt fest, wie schnell die eingegebenen Kohlenhydrate standardmäßig in 5 Minuten absorbiert werden. Dies beeinflusst auch, wie schnell der errechnete COB-Wert vfällt, wenn sich eine Kohlenhydrat-Absporption nicht an den BZ-Abweichungen zeigt.
+
+Standardwert: 3mg/dL/5min (nur beim AMA! SMB-Standardwert: 8). 
+
+#### Maximale Essens-Resorptionszeit [h]
+Die Einstellung legt fest, nach wie vielen Stunden die Kohlenhydrate spätestens absorbiert sein müssen. Ggf. verbliebene Kohlenhydrate werden abgeschnitten.
+
+Standardwert: 6 Std.
+
+#### Erweiterte Einstellungen
+
+**Max autosens ratio**
+
+Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil erhöhen darf. Faktor 1.2 bedeutet 20% höher. Stellt Autosens eine noch niedrigere Insulinempfindlichkeit fest, werden die Anpassungen bei +20% gedeckelt. 
+
+Standardwert: 1.2
+
+**Min autosens ratio**
+
+Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenken darf. Faktor 0.7 bedeutet 30% weniger. Stellt Autosens eine noch höhere Insulinempfindlichkeit fest, werden die Anpassungen bei -30% gedeckelt.
+
+Standardwert: 0.7
+
 ### Sensitivität AAPS
 Der AAPS-Algorythmus basiert auf Oref0. Du kannst jedoch **selbst festlegen, auf Basis wie vieler Stunden** in der Vergangenheit die Insulinempfindlichkeit berechnet werden soll. Die minimale Kohlenhydrat-Resporptionszeit wird ausgehend von der eingestellten maximalen Kohlenhydrat-Resorptionszeit (max carbs absorption) berechnet.
 
@@ -136,30 +160,97 @@ Der Algorythmus "Durchschnittliche Sensitivität" berechnet die Insulinempfindli
 
 Der Algorythmus rechnet so, dass nach der eingestellten Zeit `COB == 0` gesetzt wird.
 
+#### Maximale Essens-Resorptionszeit [h]
+Die Einstellung legt fest, nach wie vielen Stunden die Kohlenhydrate spätestens absorbiert sein müssen. Ggf. verbliebene Kohlenhydrate werden abgeschnitten.
+
+Standardwert: 6 Std.
+
+#### Intervall für Autosens [h]
+Hier kannst du angeben, wie viele vergangene Stunden für die Autosens-Berechnungen einbezogen werden sollen. Je kürzer der Zeitraum (z.B. 4 Std.), desto schneller passt AAPS die Insulinempfindlichkeit an. 
+
+#### Erweiterte Einstellungen
+
+**Max autosens ratio**
+
+Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil erhöhen darf. Faktor 1.2 bedeutet 20% höher. Stellt Autosens eine noch niedrigere Insulinempfindlichkeit fest, werden die Anpassungen bei +20% gedeckelt. 
+
+Standardwert: 1.2
+
+**Min autosens ratio**
+
+Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenken darf. Faktor 0.7 bedeutet 30% weniger. Stellt Autosens eine noch höhere Insulinempfindlichkeit fest, werden die Anpassungen bei -30% gedeckelt.
+
+Standardwert: 0.7
+
+#### Maximale Essens-Resorptionszeit [h]
+Die Einstellung legt fest, nach wie vielen Stunden die Kohlenhydrate spätestens absorbiert sein müssen. Ggf. verbliebene Kohlenhydrate werden abgeschnitten.
+
+Standardwert: 6 Std.
+
+#### Intervall für Autosens [h]
+Hier kannst du angeben, wie viele vergangene Stunden für die Autosens-Berechnungen einbezogen werden sollen. Je kürzer der Zeitraum (z.B. 4 Std.), desto schneller passt AAPS die Insulinempfindlichkeit an. 
+
+#### Erweiterte Einstellungen
+
+**Max autosens ratio**
+
+Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil erhöhen darf. Faktor 1.2 bedeutet 20% höher. Stellt Autosens eine noch niedrigere Insulinempfindlichkeit fest, werden die Anpassungen bei +20% gedeckelt. 
+
+Standardwert: 1.2
+
+**Min autosens ratio**
+
+Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenken darf. Faktor 0.7 bedeutet 30% weniger. Stellt Autosens eine noch höhere Insulinempfindlichkeit fest, werden die Anpassungen bei -30% gedeckelt.
+
+Standardwert: 0.7
+
 ### Sensitivität Oref1
 Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserkennung. Außerdem erkennt dieser Algorythmus nicht eingegebene Kohlenhydrate ("unattended meals" = UAM) und fängt sie ab. Grundsätzlich reicht es dank SMB oft aus, dem System die geplante Kohlenhydratmenge mitzuteilen und den Rest AAPS zu überlassen. Oder du gibst einen Anfangsbolus, der nur zum Teil die Kohlenhydrate abdeckt und lässt den Rest vom SMB auffüllen. 
+
+Eine Einführung zu Oref1 findest du hier: https://diyps.org/2017/04/30/introducing-oref1-and-super-microboluses-smb-and-what-it-means-compared-to-oref0-the-original-openaps-algorithm/ (englisch)
 
 **Der neue Algorythmus Oref1 ist nur für erfahrene Nutzer geeignet!** Zu Beginn des Loopens sollten mit Oref0 / AMA Erfahrungen gesammelt werden.
 
 #### min_5m_carbimpact
-Diese Einstellung legt fest, wie schnell die eingegebenen Kohlenhydrate standardmäßig in 5 Minuten absorbiert werden.  Der Standardwert ist 8mg/dL/5min (nur beim SMB; AMA = 3). Dies beeinflusst auch, wie schnell der errechnete COB-Wert vfällt, wenn sich eine Kohlenhydrat-Absporption nicht an den BZ-Abweichungen zeigt. Der Standardwert von 8 mg/dL/5min korrespondiert mit einer minimalen Kohlenhydrat-Absorptionsrate von 24g/Std bei einem CSF von 4 mg/dL/g.
+Diese Einstellung legt fest, wie schnell die eingegebenen Kohlenhydrate standardmäßig in 5 Minuten absorbiert werden. Dies beeinflusst auch, wie schnell der errechnete COB-Wert vfällt, wenn sich eine Kohlenhydrat-Absporption nicht an den BZ-Abweichungen zeigt. Der Standardwert von 8 mg/dL/5min korrespondiert mit einer minimalen Kohlenhydrat-Absorptionsrate von 24g/Std bei einem CSF von 4 mg/dL/g.
 
-#### Meal max absorption time [h]
+Standardwert: 8mg/dL/5min (nur beim SMB! AMA-Standardwert: 3). 
+
+#### Maximale Essens-Resorptionszeit [h]
 Die Einstellung legt fest, nach wie vielen Stunden die Kohlenhydrate spätestens absorbiert sein müssen. Ggf. verbliebene Kohlenhydrate werden abgeschnitten.
 
 Standardwert: 6 Std.
 
 #### Erweiterte Einstellungen
+
 **Max autosens ratio**
+
+Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil erhöhen darf. Faktor 1.2 bedeutet 20% höher. Stellt Autosens eine noch niedrigere Insulinempfindlichkeit fest, werden die Anpassungen bei +20% gedeckelt. 
+
+Standardwert: 1.2
 
 **Min autosens ratio**
 
-Eine Einführung zu Oref1 findest du hier: https://diyps.org/2017/04/30/introducing-oref1-and-super-microboluses-smb-and-what-it-means-compared-to-oref0-the-original-openaps-algorithm/ (englisch)
+Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenken darf. Faktor 0.7 bedeutet 30% weniger. Stellt Autosens eine noch höhere Insulinempfindlichkeit fest, werden die Anpassungen bei -30% gedeckelt.
+
+Standardwert: 0.7
 
 ## OpenAPS
 
 ### MA
-MA steht für "Meal Assist" und ist eine der ältesten OpenAPS-Funktionen (aus 2016) im Rahmen des Oref0-Algorythmus.
+MA steht für "Meal Assist" und ist eine der ältesten OpenAPS-Funktionen (aus 2016) im Rahmen des Oref0-Algorythmus. In die Berechnungen können die Vorzüge der Insulin-Empfindlichkeitserkennung (autosens) nicht einbezogen werden.
+
+#### Max IE/h, die als TBR gesetzt werden können (OpenAPS "max-basal")
+
+#### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS "max-iob")
+
+#### Erweiterte Einstellungen
+
+**Verwende immer das kurze durchschnittliche Delta**
+
+**Bolus snooze dia divisor**
+
+Standardwert: 2
 
 ### AMA
 AMA steht für "advanced meal assist" und ist eine Funktion OpenAPS-Funktion aus 2017 (Oref0). Nachdem du dir einen Bolus gegeben hast, kann das System eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein. 
@@ -168,10 +259,34 @@ AMA steht für "advanced meal assist" und ist eine Funktion OpenAPS-Funktion aus
 
 Siehe auch: [OpenAPS-Dokumentation zu AMA (englisch)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama)
 
+#### Max IE/h, die als TBR gesetzt werden können (OpenAPS "max-basal")
+
+#### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS "max-iob")
+
+#### Verwende AMA Autosense
+
+#### Autosense passt Zielwerte an
+
+#### Erweiterte Einstellungen
+
+**Verwende immer das kurze durchschnittliche Delta**
+
+**Max daily safety multiplier**
+
+Standardwert: 3
+
+**Current Basal safety multiplier**
+
+Standardwert: 4
+
+**Bolus snooze dia divisor**
+
+Standardwert: 2
+
 ### SMB
 SMB steht für "super micro bolus" und ist die neueste OpenAPS-Funktion (aus 2018) im Rahmen des Oref1-Algorythmus. Im Gegensatz zu AMA arbeitet SMB nicht so stark mit temporären Basalraten, sondern hauptsächlich mit **kleinen Supermicroboluses**. In Situationen, in denen AMA 1.0 IE Insulin über eine temporäre Basalrate zugeben würde, gibt SMB im **5-Minutentakt** mehrere Supermicroboluses in kleinen Schritten ab, z.B. 0.4 IE, 0.3 IE, 0.2 IE und 0.1 IE. Gleichzeitig wird die laufende Basalrate aus Sicherheitsgründen für eine bestimmte Dauer auf 0 IE/h gesetzt, damit keine Überdosierung erfolgt (**"zero-temping"**). So kann das System, vor allem mit FIASP, den BZ schneller abfangen als mit der temporären Basalratenerhöhung bei AMA.
 
-**Um SMB verwenden zu können, musst du zuerst 28 Tage den Closed Loop verwendet haben, und darauf achten, dass dein APS ausfallen könnte.**
+**Um SMB verwenden zu können, musst du Objective 8 erreicht haben.**
 
 Um SMB effektiv arbeiten zu lassen, musst du deine Einstellungen anpassen. Da mit SMB der **maxIOB** nicht mehr durch die vom APS gegebenen Dosen berechnet wird, sondern alles IOB (auch deinen selbst gegebenen Essensbolus), ist der Wert für maxIOB höher, als das, was du von MA und AMA gewohnt bist. Ein guter Wert für den Anfang ist: 1 normaler Essensbolus + 3x höchste tägl. Basalrate. Jedoch sei dabei vorsichtig und adjustiere deine Einstellungen in kleinen Schritten.
 
@@ -194,6 +309,7 @@ AndroidAPS hat eine Reihe an Aufgaben (objectives), die du **nach und nach erfü
 Für den Fall, dass du später dein Smartphone austauschen musst (Neuanschaffung, Displayschaden etc.) solltest du unbedingt von Zeit zu Zeit deine Einstellungen und den Fortschritt der Objectives [exportieren](http://androidaps.readthedocs.io/en/latest/docs/DE/einstellungen.md#einstellungen-exportieren).
  
 **1. Objective: Nimm die Grundeinstellungen vor**
+
   * Wähle im Konfigurations-Generator > BZ-Quelle die richtige Blutzuckerquelle. Siehe dazu [BZ-Quelle](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm)
   * Wähle im Konfigurations-Generator > Pumpe deine Pumpe (oder wähle "Virtuelle Pume", wenn du eine nicht loopbare Pumpe hast und Handeingaben machst). Wenn du eine loopbare Pumpe verwendest, dann versichere dich, dass du [die Pumpe richtig eingestellt](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#pumpen-einstellungen) und die [AAPS-Dokumentation](http://wiki.androidaps.org) gelesen hast.
   * [Richte Nightscout ein](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#nightscout-client)
@@ -201,6 +317,7 @@ Für den Fall, dass du später dein Smartphone austauschen musst (Neuanschaffung
     _Es könnte sein, dass du für den nächsten BZ ca. 5 Minuten warten musst, damit ihn AAPS erhält und akzeptiert._
  
 **2. Objective: Beginne im Open Loop Modus**
+
   * Wähle [Open Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#open-loop)
   * Aktiviere mindesten 20 vorgeschlagene temp. Basalraten manuell über einen Zeitraum von 7 Tagen (Falls du eine andere Pumpe verwendest, gebe die Vorschläge in der Pumpe ein und bestätige es in AAPS). Versichere dich, dass die Daten in AAPS und Nightscout angezeigt werden.
  
@@ -210,6 +327,7 @@ Für den Fall, dass du später dein Smartphone austauschen musst (Neuanschaffung
     _Stoppe hier, wenn du den Open Loop mit der virtuellen Pumpe verwendest._
 
 **4. Objective: Starte den Closed Loop Modus mit Hypoabschaltung**
+
   * Wähle [Closed Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#closed-loop)
   * Setze deinen Zielbereich, um sicher zu gehen, ein wenig höher als üblich.
   * Sehe dir an wie die temp. Basalraten aktiv sind, indem du die blaue Linie auf der Homescreen Grafik, oder in Zahlen darüber kontrollierst.
@@ -217,20 +335,28 @@ Für den Fall, dass du später dein Smartphone austauschen musst (Neuanschaffung
 <br><br>_Das System ist auf einen maxIOB von 0 begrenzt, d.h. dass der Loop eine Hypo abfangen kann, aber keine Steigungen, das System kann die BR nur erhöhen wenn der IOB unter 0 liegt und dadurch auf 0 bringen.._
  
 **5. Objective: Starte den Closed Loop Modus mit automatischer Korrektur bei Werten außerhalb des Zielbereichs**
+
   * Erhöhe die Sicherheitseinstellung: Konfigurations-Generator > APS > AMA oder SMB > "MaximalesBasal-IOB, das OpenAPS abgeben darf" (in OpenAPS "maxIOB" genannt) auf über 0 über einen Zeitraum von einem Tag. Dieser Wert bestimmt, bis zu welchem IOB-Wert AAPS im Closed Loop Modus regeln darf. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann macht der Loop zunächst nichts, bis die IOB-Grenze wieder unterschritten ist. Standardmäßig wird zu Beginn eine Einstellung auf 2 vorgeschlagen, aber du solltest dich langsam rauf arbeiten bis du weißt, welcher Wert für dich in Ordnung ist. Das ist sehr individuell und hängt stark vom durchschnittlichen Insulinbedarf ab. Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
   * Wenn du dir mit deiner Einstellung sicher bist, verringere deinen Ziel-BZ-Wert schrittweise auf deinen gewünschten Zeilbereich/Zielwert.
   * Das System erlaubt dir den Zielbereich im Bereich von 60-180 zu setzen.
  
 **6. Objective: Justiere die Basalraten und Faktoren nach und aktiviere die Empfindlichkeitserkennung**
+
   * Du kannst [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) verwenden, um deine Basalrate und Faktoren zu kontrollieren oder einen altmodischen Basalratentest machen. Siehe auch [Diabetes-Therapie fürs Loopen tunen](http://androidaps.readthedocs.io/en/latest/DE/tippstricks.html#diabetes-therapie-furs-loopen-tunen)
   * Aktiviere die Empfindlichkeitserkennung [Autosens](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#empfindlichkeitserkennung) über einen Zeitraum von 7 Tagen und kontrolliere die weiße Linie im Homescreen (Sen-Kästchen aktiviert), um zu sehen wie sich deine Sensitivität ändert, und kontrolliere regelmäßig im OpenAPS Tab wie AAPS deine Basalraten und Faktoren ändert. Autosens beginnt erst einige Stunden nach der Aktivierung zu wirken (je nachdem, welchen Zeitraum du ausgewählt hast), damit genügend Daten vorhanden sind. Wundere dich also nicht, wenn nach der Aktivierung im OpenAPS-Reiter erstmal "Autosens deactivated" erscheint.
 
     _Trage dich bitte in diese [Liste](http://bit.ly/nowlooping) ein und wähle AAPS als deine DIY Software aus._
  
-**7. Objective: Aktiviere zusätzliche Funktionen für den alltäglichen Gebrauch wie AMA oder SMB**
+**7. Objective: Aktiviere AMA**
+
   * Nun solltest du dich mit AAPS sicher fühlen und wissen, welche Einstellungen für deinen Diabetes am besten passen. 
-  * Über einen Zeitraum von 14 Tagen kannst du zusätzliche Funktionen ausprobieren, welche dich noch mehr unterstützen (AMA, SMB).
-  
+  * Über einen Zeitraum von 14 Tagen kannst du den Advanced Meal Assist - AMA ausprobieren. Gehe dazu in den Konfigurations-Generator > APS und aktiviere OpenAPS AMA.
+
+**8. Objective: Probiere den SMB aus**
+
+  * Nun sollte AMA stabil laufen. Deine Blutzuckerwerte sollten auf Grund der feingetunten Faktoren und Sicherheitsvariablen gut eingestellt sein. 
+  * Über einen Zeitraum von 14 Tagen kannst du den Advanced Meal Assist - AMA ausprobieren. Gehe dazu in den Konfigurations-Generator > APS und aktiviere OpenAPS SMB.
+
 ## Behandlungen
 Wenn du Behandlungen als sichtbar markiert hast, kannst du im "Behandlungen"-Reiter in AAPS alle einzelnen **Behandlungsdaten sehen** (Bolus, verlängerter Bolus, temporäre Basalraten, temporäres Ziel, Profilwechsel, Careportal-Einträge). All diese Daten werden grundsätzlich zu deiner Nightscout-Website hochgeladen. 
 
@@ -240,7 +366,7 @@ Du kannst einzelne Einträge durch Antippen von "Löschen" **entfernen**. Sie we
 
 ### Übersicht
 
-#### Keep screen on (derzeit nur dev-Branch)
+#### Keep screen on 
 Wenn du diese Option aktivierst, dann wird Android gezwungen, den Bildschirm immer an zu lassen. Dies ist z.B. zu Präsentationszwecken hilfreich, es verbraucht aber sehr viel Batterie. Deshalb wird empfohlen, das Smartphone an ein Ladekabel anzuschließen.
 
 #### Buttons
@@ -257,9 +383,8 @@ Hier kannst du einen Button für eine bestimmte Standardmahlzeit erstellen (KH u
 #### Erweiterte Einstellungen
 
 **Aktiviere den SuperBolus im Wizard**
-Wenn du diese Option auswählst, dann wird im Rechner die Superbolus-Option freigeschaltet. 
 
-Ein Superbolus hat erstmal nichts mit dem Loopen an sich zu tun. Er ist eine Behandlungsmethode, bei der dem errechneten Mahlzeiten-Bolus zusätzlich noch die Basalrate der nächsten zwei Stunden als Bolus hinzugefügt wird. Gleichzeitig wird die Basalrate für zwei Stunden auf 0 gesetzt. So erreicht der Körper gerade bei schnellen Kohlenhydraten unter Umständen in kürzerer Zeit einen höheren Insulinspiegel. Dadurch kann der postprandiale Peak ggf. niedriger sein.
+Wenn du diese Option auswählst, dann wird im Rechner die Superbolus-Option freigeschaltet. Ein Superbolus hat erstmal nichts mit dem Loopen an sich zu tun. Er ist eine Behandlungsmethode, bei der dem errechneten Mahlzeiten-Bolus zusätzlich noch die Basalrate der nächsten zwei Stunden als Bolus hinzugefügt wird. Gleichzeitig wird die Basalrate für zwei Stunden auf 0 gesetzt. So erreicht der Körper gerade bei schnellen Kohlenhydraten unter Umständen in kürzerer Zeit einen höheren Insulinspiegel. Dadurch kann der postprandiale Peak ggf. niedriger sein.
 
 Weiterführende Informationen findest du im Netz:
 
@@ -307,7 +432,7 @@ Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem
 * **CAL 126**: Um Kalibrierungswert von 126 zu senden, antworte mit Code Rrt, Kalibrierung gesendet (wenn xSrip installiert ist. Kallibrierungen zu akzeptieren, muss in xDrip+ aktiviert sein)
 
 **Sicherheitshinweise zur SMS-Steuerung**
-        
+
 * Wenn du diese Option verwendest, dann behalte im Hinterkopf was passieren könnte, falls das Handy, welches zur Fernsteuerung verwendet wird, gestohlen wird. Schütze es deshalb mit einem sicheren Bildschirm-Code.
 * Seit AndroidAPS 1.1 wirst du über wichtige ferngesteuerte Aktionen (z.B. Bolus, Profiländerung) eine SMS erhalten. Deswegen solltest du mindestens 2 Telefonnummern hinzufügen (für den Fall, dass ein Handy gestohlen wird).
 
