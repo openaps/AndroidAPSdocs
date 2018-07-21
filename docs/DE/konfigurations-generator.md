@@ -145,7 +145,9 @@ Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserke
 Diese Einstellung legt fest, wie schnell die eingegebenen Kohlenhydrate standardmäßig in 5 Minuten absorbiert werden.  Der Standardwert ist 8mg/dL/5min (nur beim SMB; AMA = 3). Dies beeinflusst auch, wie schnell der errechnete COB-Wert vfällt, wenn sich eine Kohlenhydrat-Absporption nicht an den BZ-Abweichungen zeigt. Der Standardwert von 8 mg/dL/5min korrespondiert mit einer minimalen Kohlenhydrat-Absorptionsrate von 24g/Std bei einem CSF von 4 mg/dL/g.
 
 #### Meal max absorption time [h]
-6
+Die Einstellung legt fest, nach wie vielen Stunden die Kohlenhydrate spätestens absorbiert sein müssen. Ggf. verbliebene Kohlenhydrate werden abgeschnitten.
+
+Standardwert: 6 Std.
 
 #### Erweiterte Einstellungen
 **Max autosens ratio**
