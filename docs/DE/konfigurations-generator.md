@@ -9,10 +9,10 @@ Erscheint bei einzelnen Optionen ein **Zahnrädchen**, kannst du weitere Einstel
 Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den Basalraten, ISF und IC abrufen soll.
 
 ### DanaR
-Das in der **DanaR/DanaRS hinterlegte Profil** wird verwendet. Diese Auswahl dürfte selten sinnvoll sein, weil das Eingeben der Daten direkt in der Pumpe ein "Gefummel" ist. 
+Das aktuelle Profil wird in die **DanaR/DanaRS** geschrieben. **Achtung: Die in der Pumpe hinterlegten Basalraten etc. werden überschrieben!** 
 
 ### Nightscout-Profil (empfohlen)
-Die auf deiner **Nightscout-Website unter https://[deine-nightscout-adresse]/profile hinterlegten Profile** werden synchronisiert. So kannst du komfortabel in Nightscout Profile (z.B. Arbeit, Daheim, Sport, Urlaub usw.) **anlegen**. Kurz nach dem Klick auf "Speichern" werden sie bei bestehender Internetverbindung des Smartphones zu AAPS übertragen. Nach der Erstübertragung Auch ohne Internetverbindung bzw. ohne Verbindung zu Nightscout sind die Nightscout-Profile in AAPS verfügbar, wenn sie einmalig synchronisiert worden sind. 
+Die auf deiner **Nightscout-Website** unter https://[deine-nightscout-adresse]/profile hinterlegten Profile werden synchronisiert. So kannst du komfortabel in Nightscout mehrere Profile (z.B. Arbeit, Daheim, Sport, Urlaub usw.) **anlegen**. Kurz nach dem Klick auf "Speichern" werden sie bei bestehender Internetverbindung des Smartphones zu AAPS übertragen. Nach der Erstübertragung Auch ohne Internetverbindung bzw. ohne Verbindung zu Nightscout sind die Nightscout-Profile in AAPS verfügbar, wenn sie einmalig synchronisiert worden sind. 
 
 Um ein Profil aus Nightscout zu **aktivieren**, musst du einen **Profilwechsel** durchführen. Dazu im Homescreen von AAPS oben lange auf das derzeitige Profil drücken (graues Feld zwischen dem hellblauen "Open/Closed Loop"-Feld und dem dunkelblauen Zielbereich-Feld) > Profilwechsel > Profil auswählen > OK. AAPS schreibt nach dem Profilwechsel das gewählte Profil auch in die Pumpe, so dass es im Notfall ohne AAPS verfügbar ist und weiterläuft.
 
@@ -57,12 +57,12 @@ Dieses Wirkprofil empfiehlt sich, wenn ein nicht hinterlegtes Insulin oder die M
 ## BZ-Quelle
 Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. Es stehen folgende Quellen zur Verfügung:
 
-* xDrip+
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * Nightscout-Client BZ
-* MM640g
-* Glimp
-* DexcomG5 app (patched)
-* Poctech
+* [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [DexcomG5 app (patched)](https://github.com/dexcomapp/dexcomapp/)
+* [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 Näheres zur Einrichtung der BZ-Quellen findest du unter [http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm)
     
@@ -140,6 +140,17 @@ Der Algorythmus rechnet so, dass nach der eingestellten Zeit `COB == 0` gesetzt 
 Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserkennung. Außerdem erkennt dieser Algorythmus nicht eingegebene Kohlenhydrate ("unattended meals" = UAM) und fängt sie ab. Grundsätzlich reicht es dank SMB oft aus, dem System die geplante Kohlenhydratmenge mitzuteilen und den Rest AAPS zu überlassen. Oder du gibst einen Anfangsbolus, der nur zum Teil die Kohlenhydrate abdeckt und lässt den Rest vom SMB auffüllen. 
 
 **Der neue Algorythmus Oref1 ist nur für erfahrene Nutzer geeignet!** Zu Beginn des Loopens sollten mit Oref0 / AMA Erfahrungen gesammelt werden.
+
+#### min_5m_carbimpact
+3 > 8 bei SMB
+
+#### Meal max absorption time [h]
+6
+
+#### Erweiterte Einstellungen
+**Max autosens ratio**
+
+**Min autosens ratio**
 
 Eine Einführung zu Oref1 findest du hier: https://diyps.org/2017/04/30/introducing-oref1-and-super-microboluses-smb-and-what-it-means-compared-to-oref0-the-original-openaps-algorithm/ (englisch)
 
