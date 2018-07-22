@@ -218,3 +218,9 @@ Der Insulinsensitivitätsfaktor (ISF) gibt an, um wie viele mg/dl oder mmol/l de
 IC
 ^^^^^^
 Der IC (Insulin-Carb-Ratio - Insulin-Kohlenhydrat-Faktor) bestimmt, wieviel Gramm Kohlenhydrate durch 1 IE Insulin abgedeckt werden.
+
+DIA
+^^^^^^
+DIA steht für "duration of insulin action", gibt also an,  wie lange das Insulin im Körper aktiv ist. Bei vielen ist zwar nach 3-4 Stunden praktisch keine merkbare Insulinwirkung mehr da, auch wenn in der Regel dann noch 0,0xx Einheiten vorhanden sind. Diese Restmenge kann sich dann z.B. beim Sport doch noch bemerkbar machen. Daher verwendet AndroidAPS minimum 5 Stunden als DIA.
+
+Standardwert: 5 Stunden
