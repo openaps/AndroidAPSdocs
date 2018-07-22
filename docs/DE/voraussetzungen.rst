@@ -179,9 +179,9 @@ Heroku-Variablen einrichten
 * Settings > Schaltfläche "Reveal Config Vars" anklicken
 * Variablen hinzufügen oder wie folgt ändern:
 
-   ** ENABLE = `careportal food cage sage iage iob cob basal rawbg pushover bgi pump openaps openapsbasal loop`
-   ** DEVICESTATUS_ADVANCED = `true`
-   ** PUMP_FIELDS = `reservoir battery clock`
+  * ENABLE = `careportal food cage sage iage iob cob basal rawbg pushover bgi pump openaps openapsbasal loop`
+  * DEVICESTATUS_ADVANCED = `true`
+  * PUMP_FIELDS = `reservoir battery clock`
 
 Ein Alarm bei niedrigem Pumpen-Batteriestand in % kann wie folgt aktiviert werden:
 
