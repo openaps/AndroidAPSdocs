@@ -220,8 +220,9 @@ IC
 ^^^^^^
 Der IC (Insulin-Carb-Ratio - Insulin-Kohlenhydrat-Faktor) bestimmt, wieviel Gramm Kohlenhydrate durch 1 IE Insulin abgedeckt werden.
 
-DIA
+DIA (oder auch "Insulin-End-Time")
 ^^^^^^
-DIA steht für "duration of insulin action", gibt also an,  wie lange das Insulin im Körper aktiv ist. Bei vielen ist zwar nach 3-4 Stunden praktisch keine merkbare Insulinwirkung mehr da, auch wenn in der Regel dann noch 0,0xx Einheiten vorhanden sind. Diese Restmenge kann sich dann z.B. beim Sport doch noch bemerkbar machen. Daher verwendet AndroidAPS minimum 5 Stunden als DIA.
+DIA steht für "duration of insulin action", gibt also an,  wie lange das Insulin im Körper aktiv ist. Bei vielen ist zwar nach 3-4 Stunden die Hauptwirkung vorbei und die Restemenge eher gering. Deswegen wird in der Praxis oder bei Bolusrechnern mit linearer Insulinwirkkurve häufig ein solcher Wert verwendet. Diese Restmenge kann sich dann z.B. beim Sport doch noch bemerkbar machen. AndroidAPS verwendet physiologischere Kurven und kann auch diese Restmengen gut berechnen. Besonders bei der Überlagerung vieler einzelner Aktionen ist dies wichtig. Daher verwendet AndroidAPS minimum 5 Stunden als DIA.
+Wichtiger als die exakte Länge des DIA ist das Wirkmaximum das durch Auswahl des korrekten Wirk-Profils festgelegt wird, solange der DIA genügend groß ist.
 
 Standardwert: 5 Stunden
