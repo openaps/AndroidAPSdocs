@@ -205,7 +205,7 @@ Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenk
 Standardwert: 0.7
 
 ### Sensitivität Oref1
-Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserkennung. Außerdem erkennt dieser Algorythmus nicht eingegebene Kohlenhydrate ("unattended meals" = UAM) und fängt sie ab. Grundsätzlich reicht es dank SMB oft aus, dem System die geplante Kohlenhydratmenge mitzuteilen und den Rest AAPS zu überlassen. Oder du gibst einen Anfangsbolus, der nur zum Teil die Kohlenhydrate abdeckt und lässt den Rest vom SMB auffüllen. 
+Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserkennung. Sie rechnet immer anhand der Daten der vergangenen 8 Stunden. Dieser Algorythmus erkennt nicht eingegebene Kohlenhydrate ("unattended meals" = UAM) und fängt sie ab. 
 
 Eine Einführung zu Oref1 findest du hier: https://diyps.org/2017/04/30/introducing-oref1-and-super-microboluses-smb-and-what-it-means-compared-to-oref0-the-original-openaps-algorithm/ (englisch)
 
@@ -337,7 +337,23 @@ Standardwert: 2
 ### SMB
 SMB steht für "super micro bolus" und ist die neueste OpenAPS-Funktion (aus 2018) im Rahmen des Oref1-Algorythmus. Im Gegensatz zu AMA arbeitet SMB nicht so stark mit temporären Basalraten, sondern hauptsächlich mit **kleinen Supermicroboluses**. In Situationen, in denen AMA 1.0 IE Insulin über eine temporäre Basalrate zugeben würde, gibt SMB im **5-Minutentakt** mehrere Supermicroboluses in kleinen Schritten ab, z.B. 0.4 IE, 0.3 IE, 0.2 IE und 0.1 IE. Gleichzeitig wird die laufende Basalrate aus Sicherheitsgründen für eine bestimmte Dauer auf 0 IE/h gesetzt, damit keine Überdosierung erfolgt (**"zero-temping"**). So kann das System, vor allem mit FIASP, den BZ schneller abfangen als mit der temporären Basalratenerhöhung bei AMA.
 
+Grundsätzlich kann es dank SMB bei kohlenhydratarmen Mahlzeiten ausreichen, dem System die geplante Kohlenhydratmenge mitzuteilen und den Rest AAPS zu überlassen. Dies führt aber womöglich zu höheren postprandialen Peaks, weil kein Spritz-Ess-Abstand (SEA) eingehalten werden kann. Oder du gibst, ggf. mit SEA, einen **Anfangsbolus**, der **nur zum Teil** die Kohlenhydrate abdeckt (z.B. 2/3 der geschätzten Menge) und lässt den Rest vom SMB auffüllen. 
+
 **Um SMB verwenden zu können, musst du Objective 8 erreicht haben.**
+
+#### Max IE/h, die als TBR gesetzt werden können (OpenAPS "max-basal")
+Diese Sicherheitseinstellung legt fest, welche maximale temporäre Basalrate die Insulinpumpe abgeben darf. Der Wert sollte in der Pumpe und in AAPS übereinstimmen und mindestens beim 3-fachen der höchsten eingestellten einzelnen Basalrate liegen. 
+
+Beispiel: Im Basalprofil ist im Laufe des Tages die Basalrate 1.00 U/h die höchste. Dann empfiehlt sich ein max-basal Wert von mindestens 3 U/h.
+
+Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
+
+AndroidAPS beschränkt den Wert wie folgt:
+
+* Kind: 2
+* Jugendliche: 5
+* Erwachsene: 10
+* Insulinresistente Erwachsene: 12
 
 #### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS "max-iob")
 Dieser Wert bestimmt, bis zu welchem IOB-Wert AAPS im Closed Loop Modus regeln darf. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann macht der Loop zunächst nichts, bis die IOB-Grenze wieder unterschritten ist. 
@@ -348,7 +364,7 @@ Da mit SMB der max-iob nicht mehr durch die vom APS gegebenen Dosen berechnet wi
 
 Sei jedoch dabei vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das ist sehr individuell und hängt stark vom durchschnittlichen Insulinbedarf ab. Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
 
-AndroidAPS beschränkt bei SMB den Wert wie folgt:
+AndroidAPS beschränkt beim SMB (höher als bei AMA) den Wert wie folgt:
 
 * Kind: 3
 * Jugendliche: 7
@@ -356,6 +372,45 @@ AndroidAPS beschränkt bei SMB den Wert wie folgt:
 * Insulinresistente Erwachsene: 25
 
 Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+
+#### Verwende AMA Autosense
+Hier kannst du aswählen, ob die [Empfindlichkeitserkennung](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#empfindlichkeitserkennung) Autosens verwendet werden soll oder nicht.
+
+#### Aktiviere SMB
+Hier kannst du den SMB aktivieren oder deaktivieren.
+
+#### Aktiviere SMB während COB
+
+#### Aktiviere SMB während temporären Zielen
+
+#### Aktiviere SMB während hohen temporären Zielen
+
+#### Aktiviere SMB immer
+
+#### Aktiviere SMB nach Mahlzeiten
+
+#### Max minutes of basal to limit SMB to
+
+#### Aktiviere UAM
+
+#### High temptarget raises sensitivity
+
+#### Low temptarget lowers sensitivity
+
+#### Erweriterte Einstellungen
+
+**Verwende immer das kurze durchschnittliche Delta**
+Wenn du dies aktivierst, dann verwendet AndroidAPS für die Berechnungen statt des aktuellen BZ-Wertes den durchschnittlichen BZ-Wert der letzten 15 Minuten (= kurzes durchschnittliches Delta). Dieser Durchschnittswert lässt den Loop bei ungefilterten Quellen mit Signalrauschen (also wenn vom CGM/FGM keine glatte Kurve ausgegeben wird) ruhiger laufen.
+
+**Max daily safety multiplier**
+Dies ist eine wichtige Sicherheitseinstellung. Sie begrenzt das maximale Basal-IOB auf die x-fache Menge deiner höchsten Basalrate. Beispiel: höchste Basalrate = 1.0 U/h, max daily safety multiplier = 3 > AndroidAPS kann höchstens bis zu einem Basal-IOB von 3.0 IE regeln. 
+
+Standardwert: 3 (sollte nur in Ausnahmefällen verändert werden)
+
+**Current Basal safety multiplier**
+Dies ist eine wichtige Sicherheitseinstellung. Sie begrenzt das Basal-IOB auf die x-fache Menge der aktuell laufenden Basalrate. Dies ist wichtig, um Nutzer davor zu bewahren, zu viel Basal-Insulin zu verabreichen.   
+
+Standardwert: 4 (sollte nur in Ausnahmefällen verändert werden)
 
 ## Loop
 Hier kannst du einstellen, ob du AAPS automatische Regelungen erlauben willst oder nicht.
