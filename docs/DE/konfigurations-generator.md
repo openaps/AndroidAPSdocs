@@ -339,7 +339,7 @@ SMB steht für "super micro bolus" und ist die neueste OpenAPS-Funktion (aus 201
 
 Grundsätzlich kann es dank SMB bei kohlenhydratarmen Mahlzeiten ausreichen, dem System die geplante Kohlenhydratmenge mitzuteilen und den Rest AAPS zu überlassen. Dies führt aber womöglich zu höheren postprandialen Peaks, weil kein Spritz-Ess-Abstand (SEA) eingehalten werden kann. Oder du gibst, ggf. mit SEA, einen **Anfangsbolus**, der **nur zum Teil** die Kohlenhydrate abdeckt (z.B. 2/3 der geschätzten Menge) und lässt den Rest vom SMB auffüllen. 
 
-**Um SMB verwenden zu können, musst du Objective 8 erreicht haben.**
+Um SMB verwenden zu können, musst du Objective 8 erreicht haben.
 
 #### Max IE/h, die als TBR gesetzt werden können (OpenAPS "max-basal")
 Diese Sicherheitseinstellung legt fest, welche maximale temporäre Basalrate die Insulinpumpe abgeben darf. Der Wert sollte in der Pumpe und in AAPS übereinstimmen und mindestens beim 3-fachen der höchsten eingestellten einzelnen Basalrate liegen. 
@@ -377,25 +377,42 @@ Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/late
 Hier kannst du aswählen, ob die [Empfindlichkeitserkennung](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#empfindlichkeitserkennung) Autosens verwendet werden soll oder nicht.
 
 #### Aktiviere SMB
-Hier kannst du den SMB aktivieren oder deaktivieren.
+Hier kannst du die SMB-Funktion komplett aktivieren oder deaktivieren.
 
 #### Aktiviere SMB während COB
+Der SMB arbeitet, wenn COB aktiv sind (COB > 0)
 
 #### Aktiviere SMB während temporären Zielen
+Der SMB arbeitet sowohl wenn ein niedriges, als auch wenn ein hohes temporäres Ziel gesetzt ist (bald essen, Aktivität)
 
 #### Aktiviere SMB während hohen temporären Zielen
+Der SMB arbeitet, wenn ein hohes temporäres Ziel gesetzt ist (Aktivität)
 
 #### Aktiviere SMB immer
+Der SMB arbeitet immer (unabhängig von COB oder temporären Zielen). Diese Option besteht nur, wenn die BZ-Quelle gut gefilterte (nicht rauschende) Werte ausgibt. Derzeit ist das nur möglich mit dem Dexcom G5, wenn es mit der gepatchten Dexcom App oder mit xDrip+ im "native Modus" ausgelesen wird. Falls ein gemessener Wert zu weit abweicht, gibt der G5 einfach gar keinen Wert ab und wartet die nächste Messung in 5 Minuten ab.
+
+Andere CGM/FGM wie das Freestyle Libre sind momentan für die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert.
 
 #### Aktiviere SMB nach Mahlzeiten
+Der SMB arbeitet bis 6 Stunden nach Mahleiten, auch wenn COB vorher bei 0 ist.  
+
+Diese Option besteht nur, wenn die BZ-Quelle gut gefilterte (nicht rauschende) Werte ausgibt. Derzeit ist das nur möglich mit dem Dexcom G5, wenn es mit der gepatchten Dexcom App oder mit xDrip+ im "native Modus" ausgelesen wird. Falls ein gemessener Wert zu weit abweicht, gibt der G5 einfach gar keinen Wert ab und wartet die nächste Messung in 5 Minuten ab.
+
+Andere CGM/FGM wie das Freestyle Libre sind momentan für die SMB-nach-Mahlzeiten-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert.
 
 #### Max minutes of basal to limit SMB to
+Dies ist eine wichtige Sicherheitseinstellung. Der Wert legt fest, für wie viele Minuten benötigtes Basal-Insulin der SMB zugeben darf, obwohl es nicht von COB gedeckt ist. Dadurch kann der SMB aggressiver sein. Zu Beginn solltest du den Standardwert von 30 Minuten wählen. Mit etwas SMB-Erfahrung kannst du den Wert dann in 15-Minuten-Schritten erhöhen. Dabei solltest du immer genau beobachten, wie sich diese Veränderung auswirkt. Es wird davon abgeraten, den Wert auf über 90 Minuten zu stellen. Denn das würde dazu führen , dass der Algorythmus mit einer temporären 0 IE/h-Basalrate ("zero-temp") einen BZ-Abfall nicht mehr sicher abfangen könnte. Außerdem solltest du (gerade beim Testen) unbedingt Alarme verwenden, um vor BZ-Entgleisungen gewarnt zu werden.
+
+Standardwert zu Beginn: 30 Min.
 
 #### Aktiviere UAM
+Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Beispielsweise, wenn du vergisst sie in  AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweißlastige Mahlzeit länger wirkt als gedacht.
 
 #### High temptarget raises sensitivity
+Wenn du diese Option aktivierst, dann wird die Insulinempfindlichkeit erhöht, wenn du ein temporäres Ziel über 100 mg/dl bzw. 5,6 mmol/l setzt
 
 #### Low temptarget lowers sensitivity
+Wenn du diese Option aktivierst, dann wird die Insulinempfindlichkeit verringert, wenn du ein temporäres Ziel unter 100 mg/dl bzw. 5,6 mmol/l setzt
 
 #### Erweriterte Einstellungen
 
