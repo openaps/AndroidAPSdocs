@@ -1,19 +1,20 @@
 Voraussetzungen
 =================
-Um AndroidAPS nutzen zu können, solltest du insulinpflichtiger Diabetiker sein ;-) und brauchst außerdem folgende Komponenten: loopfähige Insulinpumpe, Analog-Insulin, ein kontinuierliches Blutzuckermess-System (CGM/FGM), ein Smartphone mit Android >= 5.0, eine Nightscout-Website zum Auswerten der Daten und Erstellen von Profilen, die PC-Software "Android Studio" zum Erstellen der App aus dem Quellcode und (sehr wichtig) ach gut getestete Diabetes-Therapieeinstellungen.
+Um AndroidAPS nutzen zu können, solltest du insulinpflichtiger Diabetiker sein ;-) und brauchst außerdem folgende Komponenten: loopfähige Insulinpumpe (für Closed Loop) oder andere Insulinpumpe/ICT (für Open Loop mit virtueller Pumpe), Analog-Insulin, ein kontinuierliches Blutzuckermess-System (CGM/FGM), ein Smartphone mit Android >= 5.1, eine Nightscout-Website zum Auswerten der Daten und Erstellen von Profilen, die PC-Software "Android Studio" zum Erstellen der App aus dem Quellcode und (sehr wichtig) ach gut getestete Diabetes-Therapieeinstellungen.
 
 Insulinpumpe
 -----------
-AndroidAPS kann derzeit mit folgenden Insulinpumpen genutzt werden:
+AndroidAPS kann derzeit mit folgenden Insulinpumpen im Closed Loop Modus genutzt werden:
 
 * DanaR
 * DanaRS
 * Akku-Chek Combo
 * Akku-Chek Insight (demnächst)
+* Omnipod (`in der Entwicklung <http://www.openomni.org/>`_)
 
-In Deutschland sind alle genannten "loopbaren" Insulinpumpen auf dem Markt erhältlich. Unter https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0 finden sich Bezugsquellen. Die Liste darf jederzeit ergänzt werden.
+In Deutschland sind alle genannten "loopbaren" Insulinpumpen auf dem Markt erhältlich. Unter https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0 finden sich Bezugsquellen. Die Liste darf jederzeit ergänzt werden. Informationen über weitere in Zukunft ggf. loopbare Insulinpumpen: http://androidaps.readthedocs.io/en/latest/Getting-Started/Future-possible-Pump-Drivers.html (englisch)
 
-Informationen über weitere in Zukunft ggf. loopbare Insulinpumpen: http://androidaps.readthedocs.io/en/latest/Getting-Started/Future-possible-Pump-Drivers.html (englisch)
+Wenn du eine **nicht unterstützte Pumpe** hast oder mit **Intensivierter konventioneller Therape (ICT)** eingestellt bist, dann kannst du AndoridAPS (in Verbindung mit einem CGM/FGM) zumindest im  `Open Loop <http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#open-loop>`_ Modus verwenden. In diesem Fall musst du aber alle Therapievorschläge der App von Hand umsetzen.
 
 **Dana oder Combo?**
 
@@ -59,7 +60,7 @@ Dexcom
 **G5 mit der modifizierten Dexcom G5-App:**
 
 * Deinstalliere die originale Dexcom App, falls du sie noch hast.
-* Downloade die modifizierte Dexcom App von `hier <https://github.com/dexcomapp/dexcomapp/>`_ (Es geht nur mit dieser Datei und NICHT mit der Original-App von Dexcom!).
+* Downloade die modifizierte Dexcom App von `hier <https://github.com/dexcomapp/dexcomapp/>`_ (Es geht NUR mit dieser Datei und NICHT mit der Original-App von Dexcom oder anderen modifizierten Versionen!).
 * Installiere die modifizierte Dexcom App auf Deinem Smartphone
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > DexcomG5 app (patched).
 
@@ -178,9 +179,9 @@ Heroku-Variablen einrichten
 * Settings > Schaltfläche "Reveal Config Vars" anklicken
 * Variablen hinzufügen oder wie folgt ändern:
 
-   ** ENABLE = `careportal food cage sage iage iob cob basal rawbg pushover bgi pump openaps openapsbasal loop`
-   ** DEVICESTATUS_ADVANCED = `true`
-   ** PUMP_FIELDS = `reservoir battery clock`
+  * ENABLE = `careportal food cage sage iage iob cob basal rawbg pushover bgi pump openaps openapsbasal loop`
+  * DEVICESTATUS_ADVANCED = `true`
+  * PUMP_FIELDS = `reservoir battery clock`
 
 Ein Alarm bei niedrigem Pumpen-Batteriestand in % kann wie folgt aktiviert werden:
 
@@ -218,3 +219,10 @@ Der Insulinsensitivitätsfaktor (ISF) gibt an, um wie viele mg/dl oder mmol/l de
 IC
 ^^^^^^
 Der IC (Insulin-Carb-Ratio - Insulin-Kohlenhydrat-Faktor) bestimmt, wieviel Gramm Kohlenhydrate durch 1 IE Insulin abgedeckt werden.
+
+DIA (oder auch "Insulin-End-Time")
+^^^^^^
+DIA steht für "duration of insulin action", gibt also an,  wie lange das Insulin im Körper aktiv ist. Bei vielen ist zwar nach 3-4 Stunden die Hauptwirkung vorbei und die Restemenge eher gering. Deswegen wird in der Praxis oder bei Bolusrechnern mit linearer Insulinwirkkurve häufig ein solcher Wert verwendet. Diese Restmenge kann sich dann z.B. beim Sport doch noch bemerkbar machen. AndroidAPS verwendet physiologischere Kurven und kann auch diese Restmengen gut berechnen. Besonders bei der Überlagerung vieler einzelner Aktionen ist dies wichtig. Daher verwendet AndroidAPS minimum 5 Stunden als DIA.
+Wichtiger als die exakte Länge des DIA ist das Wirkmaximum das durch Auswahl des korrekten Wirk-Profils festgelegt wird, solange der DIA genügend groß ist.
+
+Standardwert: 5 Stunden
