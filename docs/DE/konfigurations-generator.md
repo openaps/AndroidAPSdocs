@@ -273,6 +273,8 @@ AndroidAPS beschränkt bei AMA den Wert wie folgt:
 **Bolus snooze dia divisor**
 Die Funktion "Bolus snooze" wird dann aktiviert, wenn du einen Essensbolus gegeben hast. Der Loop reagiert dadurch nach dem Essen nicht gleich mit niedrigen temporären Basalraten. Der Standardwert ist 2. Dies bedeutet: Bei einem DIA (Dauer der Insulinaktivität) von 5 wird der "Bolus snooze" über 5 : 2 = 2,5 Stunden geradlinig auslaufen.
 
+Standardwert: 2
+
 ### AMA
 AMA steht für "advanced meal assist" und ist eine Funktion OpenAPS-Funktion aus 2017 (Oref0). Nachdem du dir einen Bolus gegeben hast, kann das System eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein. 
 
@@ -281,26 +283,54 @@ AMA steht für "advanced meal assist" und ist eine Funktion OpenAPS-Funktion aus
 Siehe auch: [OpenAPS-Dokumentation zu AMA (englisch)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama)
 
 #### Max IE/h, die als TBR gesetzt werden können (OpenAPS "max-basal")
+Diese Sicherheitseinstellung legt fest, welche maximale temporäre Basalrate die Insulinpumpe abgeben darf. Der Wert sollte in der Pumpe und in AAPS übereinstimmen und mindestens beim 3-fachen der höchsten eingestellten einzelnen Basalrate liegen. 
+
+Beispiel: Im Basalprofil ist im Laufe des Tages die Basalrate 1.00 U/h die höchste. Dann empfiehlt sich ein max-basal Wert von mindestens 3 U/h.
+
+Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
+
+AndroidAPS beschränkt den Wert wie folgt:
+
+* Kind: 2
+* Jugendliche: 5
+* Erwachsene: 10
+* Insulinresistente Erwachsene: 12
 
 #### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS "max-iob")
+Dieser Wert bestimmt, bis zu welchem IOB-Wert AAPS im Closed Loop Modus regeln darf. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann macht der Loop zunächst nichts, bis die IOB-Grenze wieder unterschritten ist. 
+
+Standardmäßig wird zu Beginn eine Einstellung auf 2 vorgeschlagen, aber du solltest dich langsam rauf arbeiten bis du weißt, welcher Wert für dich in Ordnung ist. Das ist sehr individuell und hängt stark vom durchschnittlichen Insulinbedarf ab. Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
+
+AndroidAPS beschränkt bei AMA den Wert wie folgt:
+
+* Kind: 3
+* Jugendliche: 5
+* Erwachsene: 7
+* Insulinresistente Erwachsene: 12
 
 #### Verwende AMA Autosense
+Hier kannst du aswählen, ob die [Empfindlichkeitserkennung](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#empfindlichkeitserkennung) Autosens verwendet werden soll oder nicht.
 
 #### Autosense passt Zielwerte an
+Wenn du diese Option aktivierst, dann kann Autosens bei Bedarf (neben ISF und IC) auch den Zielbereich anpassen, damit der Loop aggressiver oder weniger aggressiv läuft. Dadurch kann der eigentliche Zielbereich ggf. schneller wieder erreicht werden.
 
 #### Erweiterte Einstellungen
 
 **Verwende immer das kurze durchschnittliche Delta**
+Wenn du dies aktivierst, dann verwendet AndroidAPS für die Berechnungen statt des aktuellen BZ-Wertes den durchschnittlichen BZ-Wert der letzten 15 Minuten (= kurzes durchschnittliches Delta). Dieser Durchschnittswert lässt den Loop bei ungefilterten Quellen mit Signalrauschen (also wenn vom CGM/FGM keine glatte Kurve ausgegeben wird) ruhiger laufen.
 
 **Max daily safety multiplier**
+Dies ist eine wichtige Sicherheitseinstellung. Sie begrenzt das maximale Basal-IOB auf die x-fache Menge deiner höchsten Basalrate. Beispiel: höchste Basalrate = 1.0 U/h, max daily safety multiplier = 3 > AndroidAPS kann höchstens bis zu einem Basal-IOB von 3.0 IE regeln. 
 
-Standardwert: 3
+Standardwert: 3 (sollte nur in Ausnahmefällen verändert werden)
 
 **Current Basal safety multiplier**
+Dies ist eine wichtige Sicherheitseinstellung. Sie begrenzt das Basal-IOB auf die x-fache Menge der aktuell laufenden Basalrate. Dies ist wichtig, um Nutzer davor zu bewahren, zu viel Basal-Insulin zu verabreichen.   
 
-Standardwert: 4
+Standardwert: 4 (sollte nur in Ausnahmefällen verändert werden)
 
 **Bolus snooze dia divisor**
+Die Funktion "Bolus snooze" wird dann aktiviert, wenn du einen Essensbolus gegeben hast. Der Loop reagiert dadurch nach dem Essen nicht gleich mit niedrigen temporären Basalraten. Der Standardwert ist 2. Dies bedeutet: Bei einem DIA (Dauer der Insulinaktivität) von 5 wird der "Bolus snooze" über 5 : 2 = 2,5 Stunden geradlinig auslaufen.
 
 Standardwert: 2
 
@@ -318,7 +348,7 @@ Da mit SMB der max-iob nicht mehr durch die vom APS gegebenen Dosen berechnet wi
 
 Sei jedoch dabei vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das ist sehr individuell und hängt stark vom durchschnittlichen Insulinbedarf ab. Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
 
-AndroidAPS beschränkt bei AMA den Wert wie folgt:
+AndroidAPS beschränkt bei SMB den Wert wie folgt:
 
 * Kind: 3
 * Jugendliche: 7
