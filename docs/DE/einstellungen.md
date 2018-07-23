@@ -1,16 +1,18 @@
-# Einstellungen
+# Drei-Punkte Menü
 
-## Passwort für die Einstellungen
+## Einstellungen
 
-## Generell
+### Passwort für die Einstellungen
 
-## Übersicht
+### Generell
 
-## Sicherheitseinstellungen
+### Übersicht
 
-## Pumpen-Einstellungen
+### Sicherheitseinstellungen
 
-### DanaR
+### Pumpen-Einstellungen
+
+#### DanaR
 * Gehe in der Pumpe zum Hauptmenü -> Einstellen -> **Anwendermenü** und Aktiviere "8. V Bolus"
 
 [[https://github.com/MilosKozak/AndroidAPS/wiki/images/danar1.png]]
@@ -29,17 +31,17 @@
 
 * Gehe in der Pumpe zum **Arztmenü** (+, - und > gleichzeitig drücken, PIN 3022 eingeben) und setze folgende Einstellungen: Bolus Block = 0 (sonst funktioniert SMB später nicht richtig), Bolus = 0.1, Basal = 0.01, Max Basal = ca. dreifache Menge der höchsten einzelnen Basalrate/h, Max Bolus / Max Tag = individuell, aber nicht zu gering. Hier solltest du mind. die doppelte tägliche Insulingesamtmenge angeben (oder das 2,5fache).
 
-### DanaRS
+#### DanaRS
 ...
 
-### Akku-Chek Combo
+#### Akku-Chek Combo
 Die Software ist Teil einer DIY-Lösung(Do It Yourself = Eigenbau) und kein Produkt. Daher bist **DU** gefordert. **DU** musst lesen, lernen und verstehen, was das System macht und wie du es bedienst.
 Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Dir sollte klar sein, dass das System umso besser arbeitet je besser Deine Therapiegrundeinstellung ist.
 Hetz Dich nicht auch wenn andere Dir erzählen wie toll das alles ist. Nimm Dir Zeit zu lernen!
 Du bist ganz alleine dafür verantwortlich was Du mit dem System machst.
 
 
-#### Benötigte Hardware
+##### Benötigte Hardware
 
 * Eine Roche Accu-Chek Combo Pumpe (egal welche Firmware, es funktionieren alle)
 * Einen Smartpix oder Realtyme Adapter und die Accu-Chek 360°-Konfigurationssoftware um die Pumpe zu konfigurieren. Kunden von Roche können die Software beim Kundendienst erfragen.
@@ -48,7 +50,7 @@ Du bist ganz alleine dafür verantwortlich was Du mit dem System machst.
 Dieses Vorgehen erlaubt die Verwendung eines Android < 8.1; es ist aber nicht großartig getestet und auch kein sehr verbreitetes Verfahren. https://github.com/gregorybel/combo-pairing/blob/master/README.md
 Wenn Dir rooten/pairen usw. nichts sagen, dann ist die letzte Variante vermutlich nichts für Dich.
 
-#### Beschränkungen
+##### Beschränkungen
 
 * Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt.
 * Es wird nur ein Basalprofil unterstützt.
@@ -66,7 +68,7 @@ Derzeit ist nicht absehbar, dass dieses Verhalten verhindert werden kann. Wenn d
 * Ein direkt auf der Pumpe programmierter Bolus wird nicht immer rechtzeitig erkannt und die Erkennung kann im schlimmsten Fall bis zu 20 Minuten dauern. Der Bolus an der Pumpe wird immer überprüft, bevor eine hohe TBR oder ein Bolus von AAPS programmiert wird, aber aufgrund der Einschränkungen verweigert AAPS das Setzen des TBR / Bolus, da sie unter falschen Voraussetzungen berechnet wurden. (-> Bolus nicht direkt von der Pumpe abgebe! Siehe Kapitel *Benutzung*)
 * Das Setzen einer TBR direkt auf der Pumpe ist im Closed Loop Betrieb nicht nötig und sollte möglichst nicht vorgenommen werden. Das Erkennen einer manuell gesetzten Basalrate kann bis zu 20 Minuten dauern und wird bei der Berechnung auch erst ab dem Zeitpunkt berücksichtigt, zu dem die TBR von AAPS eingelesen wird. Das führt dazu, dass die im Körper befindliche Insulinmenge (IOB) falsch berechnet wird.
 
-#### Setup
+##### Setup
 - Konfiguriere die Pumpe mit der 360° Konfigurations-Software.
   - Zwingend erforderliche Einstellungen (grün markiert in den Screenshots):
   - Setze/Lasse das Benutzermenü auf "Standard". Dadurch werden nur die benötigten Menüs/Aktionen auf der pumpe angezeigt und solche versteckt, die nicht unterstützt werden (verzögerter Bolus, Multiwave Bolus, mehrere Basalprofile), die die Loop-Funktionalität einschränken würden, da der Loop nicht sicher laufen würde, wenn diese Aktionen Verwendung fänden.
@@ -103,7 +105,7 @@ Ist ein Pairing weiterhin nicht möglich probiere bis zu 10s zu warten bevor du 
 - Bevor das Combo-Plugin in AndroidAPS aktiviert wird, muss sichergestellt sein, dass das Basalratenprofil korrekt in AndroidAPS eingestellt ist und aktiviert wurde(!), da AndroidAPS das in der Pumpe programmierte Profil mit den eigenen Einstellungen überschreibt. Wenn das Basalratenprofil also korrekt in AAPS eingestellt ist, kann das Combo-Plugin aktiviert werden. Drücke nun den _Aktualisieren_ Button im Combo Tab um die Pumpe zu initialisieren.
 - Um die Konfiguration zu prüfen, setze mit AAPS eine TBR von 500% für 15 Min. und gib einen Bolus ab. Die Pumpe sollte nun die TBR anzeigen und einen Bolus-Eintrag in der Historik haben. AAPS sollte ebenfalls die TBR und den Bolus anzeigen.
 
-#### Benutzung
+##### Benutzung
 
 - Denk daran, dass es sich hierbei nicht um ein fertiges Produkt handelt. Besonders zu Anfang muss der Nutzer selbst das System ständig überwachen, um zu verstehen, wo die Grenzen des Systems liegen und in welchen Situationen es nicht funktioniert. Von einer Benutzung des Systems sollte daher dringend abgesehen werden, wenn der Nutzer dieses nicht komplett versteht.
 - Lies die OpenAPS Dokumentation unter https://openaps.org, um den Closed-Loop Algorithmus zu verstehen, auf dem AndroidAPS aufbaut.
@@ -121,7 +123,7 @@ Ist ein Pairing weiterhin nicht möglich probiere bis zu 10s zu warten bevor du 
 - Falls AAPS beendet wird, während das Programm mit der Pumpe kommuniziert (mittels Ruffy), kann es notwendig sein, Ruffy zu beenden (z. B. über Android-Einstellungen > Apps > Ruffy). Ein Neustart von AAPS startet Ruffy dann selbständig. Ebenfalls kann ein Neustart des Smartphones Kommunikationsprobleme beheben.
 - Drücke keinerlei Pumpentaste, während AAPS mit der Pumpe kommuniziert (Bluetoothsymbol ist im Display der Pumpe sichtbar).
 
-#### Pairing-Probleme
+##### Pairing-Probleme
 Es gibt mehrere Möglich warum das Pairing schief gehen kann. Probiere folgende Schritte:
 
 1.  Verwende eine frische Batterie. Informiere dich in dem Abschnitt Batterie welche geeignet sind. Stelle sicher das die Pumpe in der nähe des Handys ist.
@@ -149,8 +151,8 @@ Es gibt mehrere Möglich warum das Pairing schief gehen kann. Probiere folgende 
 9.  Bei Erfolg -> Handy Neustart. 
 10. AAPS kann nun wieder gestartet werden.
 
-#### Tipps beim täglichen Gebrauch
-##### Sicherstellung eines reibungslosen Betriebs
+##### Tipps beim täglichen Gebrauch
+###### Sicherstellung eines reibungslosen Betriebs
 * Trage das Smartphone immer bei Dir und lass es in der Nacht neben dir liegen.
 * Stelle sicher, dass die Batterie in der Pumpe möglichst voll ist. 
 Zu Tipps rund um die Batterie siehe auch das Kapitel-Batterie.
@@ -158,7 +160,7 @@ Zu Tipps rund um die Batterie siehe auch das Kapitel-Batterie.
 * Wenn Du ruffy, während des Looping-Betriebs versehentlich öffnest, schliesse ruffy und starte dein Smartphone neu.
 * Bediene die Pumpe soweit möglich nur noch über AndroidAPS. Um dies zu erleichtern, aktiviere am besten die Tastensperre auf der Pumpe unter **PUMPEN-EINSTELLUNGEN / TASTENSPERRE / EIN**. Einzig zum Wechseln der Batterie oder der Ampulle ist dann noch die Bedienung direkt an der Pumpe nötig. ![Keylock](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/keylock.png?raw=true)
 
-#### Pumpe nicht erreichbar - was kann ich tun?
+##### Pumpe nicht erreichbar - was kann ich tun?
 **Erreichbarkeit der Pumpe wieder herstellen**
 * Wenn AndroidAPS einen “**Pumpe ist nicht erreichbar**” Alarm meldet, hebe zunächst die Tastensperre auf und **drücke irgendeine Taste auf der Pumpe** (z.B. "Nach unten" Knopf). Sobald dann das Display der Pumpe wieder leer ist, drücke **AKTUALISIEREN** auf dem Combo Tab in AndroidAPS. Meistens klappt dann die Kommunikation wieder.
 * Wenn das nichts hilft, starte Dein Smartphone neu. Nach dem Neustart wird AndroidAPS erneut eine Verbindung, über ruffy mit der Pumpe aufbauen.
@@ -173,10 +175,10 @@ Zu Tipps rund um die Batterie siehe auch das Kapitel-Batterie.
 * Außerdem kann durch diesen Fehler die **Batterie der Pumpe schneller entleert werden**, da das Basalprofil beim Neustart der App von der Pumpe ausgelesen wird. 
 * Zudem erhöht es die Wahrscheinlichkeit, den Fehler hervorzurufen, der dazu führt, dass die Pumpe alle eingehenden Verbindungen zurückweist, bis eine Taste an der Pumpe gedrückt wird.
 
-#### Abbruch einer temporären Basalrate (TBR) scheitert
+##### Abbruch einer temporären Basalrate (TBR) scheitert
 Gelegentlich kann AndroidAPS eine TBR CANCELED-Warnung nicht automatisch abbrechen. Dann muss entweder im AndroidAPS-Combo-Reiter auf Aktualisieren gedrückt werden oder der Alarm auf der Pumpe bestätigt werden.
 
-#### Rund um die Pumpen-Batterie
+##### Rund um die Pumpen-Batterie
 
 **Batterie wechseln**
 * Nach einem “**Batterie fast leer**” Alarm sollte möglichst schnell die **Batterie gewechselt** werden, um immer genügend Energie für eine zuverlässige Bluetooth-Kommunikation mit dem Smartphone zu haben.
@@ -207,12 +209,12 @@ Sollte die Lebenszeit der Batterie deutlich kürzer, als die oben angegebenen Ze
 * Auf manchen Smartphones wird die AndroidAPS App häufig geschlossen, um Energie oder RAM zu sparen. Dann wird AndroidAPS bei jedem Aufruf neu initialisiert, baut eine Bluetooth-Verbindung zur Pumpe auf und liest die aktuelle Basalrate und die Bolus-Historie aus. Dies verbraucht sehr viel Strom und sorgt für eine kürzere Batterie-Lebensdauer. Um diesem Fehler auf die Sur zu kommen, aktiviere unter **Einstellungen** die Option **Logge App-Start in NS**. Dann wird in der Nightscout-Webseite jeder Neustart von AndroidAPS protokoliert.
 * Die Hardware und das Betriebssystem oder der Bluetooth-Stack des Mobiltelefons scheinen auch großen Einfluss auf die Batterie-Lebenszeit der Pumpe zu haben. Falls Du die Möglichkeit hats, probiere eventuell ein anderes Mobiltelefon aus. 
 
-#### Zeitumstellung Sommer-/Winterzeit
+##### Zeitumstellung Sommer-/Winterzeit
 * Aktuell unterstützt der Accu-Chek Combo-Treiber noch keine automatische Anpassung der Uhrzeit in der Pumpe.
 * Während der Sommer-/Winterzeit-Umstellung wird die Uhrzeit im Smartphone aktualisiert, die Uhrzeit der Pumpe bleibt jedoch unverändert! Dadurch kommt es zur Umstellungszeit um 03:00 Uhr zu einem Alarm in AndroidAPS, wegen abweichenden Uhrzeiten zwischen Smartphone und Accu-Chek Combo.
 * Möchtest Du in der Nacht nicht geweckt werden, deaktiviere am Abend zuvor die automatische Sommer-/Winterzeit-Umstellung auf dem Smartphone und gleiche diese dann am nächsten Morgen manuell ab.
 
-#### Verzögerter Bolus, MultiwaveBolus – wie mache ich das?
+##### Verzögerter Bolus, MultiwaveBolus – wie mache ich das?
 Der OpenAPS-Algorithmus unterstützt keinen parallel laufenden verzögerten Bolus oder Multiwave-Bolus. Über folgende Varianten kannst Du aber Dein Ziel erreichen:
 * Stelle auf dem **Aktionen-Tab** in AndroidAPS vor dem Essen als **temporäres Ziel** “Bald essen” mit **Ziel 80** für mehrere Stunden ein. Die Dauer sollte sich an der Dauer orientieren, die auch ein verzögerter Bolus haben würde. 
 Dann die **vollständigen Kohlenhydrate der Mahlzeit eingeben**, allerdings nicht die vom Bolusrechner vorgeschlagenen Werte direkt übernehmen. Sofern ein Multiwave-ähnlicher Bolus abgegeben werden soll, mit der Kohlenhydrat-Eingabe den sofort wirkenden Anteil als Bolus abgeben. Je nach Mahlzeit muss der Algorithmus nun eine **sehr hohe temporäre Basalrate** abgeben, um dem Blutzucker-Anstieg entgegen zu wirken. Hier sollte sehr vorsichtig mit den Sicherheits-Beschränkung der Basalrate (Max IE/h, Maximale Basal-IOB) experimentiert und diese ggf. temporär verändert werden.
@@ -224,7 +226,7 @@ Den richtigen Prozentsatz kann man über die durchschnittliche Basalrate im gew�
 
 ![Temporäre Basalrate](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/300_prozent_Basalrate.png?raw=true)
 
-#### Alarme bei der Bolus-Abgabe
+##### Alarme bei der Bolus-Abgabe
 
 * Stellt AndroidAPS fest, dass in derselben Minute ein gleich hoher Bolus bereits erfolgreich abgegeben wurde, wird die **Bolusabgabe mit identischen Werten verhindert**. Daher einfach kurz warten und die Bolusabgabe **nach zwei Minuten nochmals ausführen**. Seit AAPS 2.0 kann man einen abgebrochenen oder aus anderen Gründen nicht abgegebenen Bous direkt wiederholen.
 * Hintergrund ist ein **Sicherheitsmechanismus**, der vor jedem Bolus die Bolushistorie der Pumpe ausliest, um das Insulin on Board (IOB) korrekt berechnen zu können, selbst wenn ein Bolus direkt über die Pumpe abgegeben wurde. Hier müssen nicht unterscheidbare Einträge verhindert werden.
@@ -236,10 +238,32 @@ Den richtigen Prozentsatz kann man über die durchschnittliche Basalrate im gew�
 ![Abgebrochener Bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/History_changed.png)
 
 
-## Nightscout-Client
+### Nightscout-Client
 
-## Andere
+### Andere
 
-## Daten Auswahl
+### Daten Auswahl
 
-## Wear-Einstellungen
+### Wear-Einstellungen
+
+## Plugin-Preferences
+
+## History Browser
+
+## Setup Wizard
+
+## Datenbanken zurücksetzen
+
+## Einstellungen exportieren
+Für den Fall, dass du später dein Smartphone austauschen musst (Neuanschaffung, Displayschaden etc.) solltest du unbedingt von Zeit zu Zeit deine Einstellungen und den Fortschritt der Objectives **exportieren**. Bei den drei Punkten oben rechts, wähle _Einstellungen exportieren._ Es wird eine Benachrichtigung erscheinen wo die Datei im aktuellen Handy gespeichert wird (normalerweise im Hauptordner des internen Speichers). Es ist zu empfehlen, diese Datei dann auf ein Cloud-Laufwerk hochzuladen, damit du später jederzeit und von überall darauf zugreifen kannst. 
+
+Falls du das nicht machst gehen alle deine Einstellungen (bei Benutzung des Lokalen Profils auch das Profil) und Fortschritte in den Objectives beim Handywechsel verloren. Deshalb solltest du immer wieder mal eine Sicherheitskopie machen, dass du im Falle eines Verlustes, Beschädigung, etc. deine Daten nicht verlierst.
+
+## Einstellungen importieren
+Beim neuen Handy musst du die Sicherungs-Datei dann in den gleichen Pfad kopieren und anschließend _Einstellungen importieren_ wählen. Es werden alle mögliche Einstellungen, auch die Sicherheitseinstellungen, und der Fortschritt in den Objectives gespeichert. 
+ 
+## Logs anzeigen
+
+## Über
+
+## Exit

@@ -63,6 +63,7 @@ How to Install AndroidAPS
 
    Building the APK </EN/Installing-AndroidAPS/Building-APK.md>
    How to update to a new version </EN/Installing-AndroidAPS/Update-to-new-version.md>
+   Release notes </EN/Installing-AndroidAPS/Releasenotes.md>
    Nightscout </EN/Installing-AndroidAPS/Nightscout.md>
  
    

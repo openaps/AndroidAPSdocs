@@ -25,13 +25,13 @@ Alternativen: siehe Android-Smartphones in der [Dexcom Kompatibilitätsliste](ht
 
 Bezugsquelle: In Deutschland auf Rezept oder privat über die Firma [IME-DC GmbH](http://www.ime-dc.de) 
 
-Alternativen:  [Accu-Chek Combo](https://github.com/MilosKozak/AndroidAPS/wiki/Accu-Chek-Combo-Pumpe), [DanaRS](http://www.sooil.com/eng/product/) (bereits von AAPS unterstützt, aber in Deutschland noch nicht erhältlich), [Accu-Chek Insight (in der Entwicklung)](http://www.accu-chek.de/produkte/de/insulinpumpentherapie/insight/index.jsp)
+Alternativen:  [Accu-Chek Combo](https://github.com/MilosKozak/AndroidAPS/wiki/Accu-Chek-Combo-Pumpe), [DanaRS](https://www.ime-dc.de/de/insulintherapie/insulinpumpen/insulinpumpe-dana-rs), [Accu-Chek Insight (in der Entwicklung)](http://www.accu-chek.de/produkte/de/insulinpumpentherapie/insight/index.jsp)
 
 3. [Dexcom G5](https://www.nintamed.eu/p/products/dexcomg5)
 
 Bezugsquelle: In Deutschland auf Rezept oder privat über die Firma [Nintamed](https://www.nintamed.eu/)
 
-Alternativen: MM640g-CGM (Auslesen direkt über AAPS möglich), Dexcom G4 mit Eigenbau-ShareReceiver (über xDrip+), Eversense (über xDrip+), Freestyle Libre-DIY-CGM mit [Bluecon Nightrider](https://www.ambrosiasys.com/how-it-works), [blueReader](https://unendlichkeit.net/wordpress/), [manipulierte Sony SmartWatch 3 (SWR50) direkt auf dem Sensor](https://drive.google.com/file/d/0B-zDwCDqX5mKQUdvUEF6Qzl3aDQ/view)
+Alternativen: MM640g-CGM (Auslesen direkt über AAPS möglich), Dexcom G4 mit Eigenbau-ShareReceiver (über xDrip+), Eversense (über xDrip+), Freestyle Libre-DIY-CGM mit [MiaoMiao Reader](https://www.miaomiao.cool/), [Bluecon Nightrider](https://www.ambrosiasys.com/how-it-works), [blueReader](https://unendlichkeit.net/wordpress/), [manipulierte Sony SmartWatch 3 (SWR50) direkt auf dem Sensor](https://drive.google.com/file/d/0B-zDwCDqX5mKQUdvUEF6Qzl3aDQ/view)
 
 4. Optional: [Sony Smartwatch 3 (SWR50)](https://www.sonymobile.com/de/products/smart-products/smartwatch-3-swr50/)
 
@@ -80,7 +80,7 @@ Android Studio auf dem Computer oder Notebook (Windows, Mac, Linux) benötigt > 
 <img src="https://user-images.githubusercontent.com/32912987/34470734-6ee34ade-ef38-11e7-9214-337a9c607243.png" width="250">
 
 ### Firmware des Samsung Galaxy S7 überprüfen
-* Menü > Einstellungen > Telefoninfo > Softwareinfo: Hier sollte die getestete Firmware-Version stehen: "Android-Version 7.0 
+* Menü > Einstellungen > Telefoninfo > Softwareinfo: Hier sollte mindestens die Firmware-Version stehen: "Android-Version 7.0" (erfolgreich getestet bis Android-Version 8.0.0 Oreo - Samsung Experiernce Versoin 9.0)  
 * Falls nicht: Menü > Einstellungen > Software-Update durchführen
 
 ### Installation von unbekannten Quellen erlauben

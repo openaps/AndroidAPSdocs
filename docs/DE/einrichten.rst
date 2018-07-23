@@ -1,10 +1,9 @@
-AndroidAPS einrichten
+AndroidAPS einrichten & nutzen
 ==============
 
-lorem ipsum
-
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 6
 
+   homescreen
    konfigurations-generator
    einstellungen
