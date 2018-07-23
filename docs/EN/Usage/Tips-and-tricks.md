@@ -37,3 +37,10 @@ The change of cartridge can not be done via AndroidAPS, but must be carried out 
 The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate.  On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling.  You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts.  See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
 
 Other tips and tricks can be found in the [Facebook group](https://www.facebook.com/groups/1900195340201874/)
+
+## Changing of mobile phone
+If there are two mobile phones operational (AndroidAPS installed) and both are used in parallel. Here both mobile phones have the possibility to communicate towards the insulin pump. To surpress one mobile phones communication and to keep both phones fully operational there are several options:
+* Option A: Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAAPS and select 'Suspend Loop' of the mobile phone
+  not in use for AndroidAPS.
+* Option B: Enter a new password setting in the insulin pump and change correspondingly the password of the mobile phone in use for
+  AndroidAPS.
