@@ -36,4 +36,7 @@ The change of cartridge can not be done via AndroidAPS, but must be carried out 
 
 The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate.  On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling.  You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts.  See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
 
+## Menue cross boxes are not selectable although they are framed in solid white colour
+This indicates a display fault of the mobile phone. To scan the display there are (system) apps available.
+
 Other tips and tricks can be found in the [Facebook group](https://www.facebook.com/groups/1900195340201874/)
