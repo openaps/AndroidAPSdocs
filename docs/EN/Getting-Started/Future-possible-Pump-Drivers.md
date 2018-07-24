@@ -8,11 +8,12 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Other implementations:** OpenAPS, Loop
 
-**Java implementations:**  Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2)
+**Java implementations:**  Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) - extensions of RT2 is almost complete 
 
-**AAPS implementation status:** Starting. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch riley_link_medtronic (default branch). Status: Base integration done (Medtronic Tab), we have now Medtronic virtual pump. At the moment most of work is being done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby
+**AAPS implementation status:** Starting. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch riley_link_medtronic (default branch). Status: Base integration done (Medtronic Tab), we have now Medtronic virtual pump. At the moment most of work is being done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby.
+Test integration to AAPS is already happening, but its not ready yet for testing.
 
-**Hardware requirement for AAPS:** RileyLink with Medtronic firmware (RileyLink 1.0 - 900 Mhz)
+**Hardware requirement for AAPS:** RileyLink
 
 **Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
 
@@ -24,16 +25,16 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Not supported at the moment, but there is a lot of work going on on decoding the Omnipod protocol - [OpenOmni](http://www.openomni.org/).
 
-**Other implementations:** None available yet. See [Openomni on github](https://github.com/openaps/openomni)
+**Other implementations:** Loop (implementation is at beggining, as far as I know, they managed to Init the pod, and send the first TBR). See [Openomni on github](https://github.com/openaps/openomni)
 
 **Java implementations:**  None. 
 
-**AAPS implementation status:** We are waiting for:
-- Medtronic AAPS driver to implement RileyLink layer
-- Hacking the protocol is done for Minimal requirements commands (see down in document)
+**AAPS implementation status:** 
+Work has started on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) for Omnipod (dev_omnipod branch), but it is far from working prototype (developer started working on changes needed for RL firmware 2.0). You can follow progress on https://omniaps.slack.com/ channel android-driver. Developer is posting progress there.
 
-**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (400 Mhz) - Not available yet
+**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.0)
 
+**Comments:** Omnipod DASH is currently not in the plan. Once we have java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have implementation few months later, if protocol has changed then it might take some time.
 
 ***
 
