@@ -1,14 +1,11 @@
-Was ist AndroidAPS?
-===========
-
+# Was ist AndroidAPS?
 AndroidAPS steht für "Android Artificial Pancreas System", ist also eine App für Android Smartphones, die als künstliche  Bauchspeicheldrüse fungiert. Sie kann mit bestimmten bluetoothfähigen Insulinpumpen und Blutzucker-Mess-Systemen kommunizieren. Mit Hilfe der OpenAPS-Algorithmen "Oref0"/"Oref1" ist die App in der Lage, den Blutzuckerspiegel bei insulinpflichtigem Diabetes automatisch zu regeln, sofern alle gegessenen Kohlenhydrate eingegeben werden (sog. Hybrid closed loop).
 
-Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur Verfügung. Es gibt auch keinen kommerziellen Support. Dafür gibt es aber eine sehr rege Community, die Dir helfen kann. Informationen wie Du sie kontaktieren kannst, findest Du `hier <http://androidaps.readthedocs.io/en/latest/DE/community.html>`_. Der Quellcode ist jedoch kostenlos und frei verfügbar. Daraus können Interessierte sich im "Eigenbau" selbst und auf eigene Verantwortung die App erstellen (strictly do it yourself - DIY). 
+Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur Verfügung. Es gibt auch keinen kommerziellen Support. Dafür gibt es aber eine sehr rege Community, die Dir helfen kann. Informationen wie Du sie kontaktieren kannst, findest Du [hier](http://androidaps.readthedocs.io/en/latest/DE/community.html). Der Quellcode ist jedoch kostenlos und frei verfügbar. Daraus können Interessierte sich im "Eigenbau" selbst und auf eigene Verantwortung die App erstellen (strictly do it yourself - DIY). 
 
-Ein konkretes Beispiel, wie du dir ein Closed loop System selbst bauen kannst, findest du unter http://androidaps.readthedocs.io/en/latest/DE/Galaxy-S7-DanaR-Dexcom-G5-und-SWR50.html
+Ein konkretes Beispiel, wie du dir ein Closed loop System selbst bauen kannst, findest du unter [http://androidaps.readthedocs.io/en/latest/DE/Galaxy-S7-DanaR-Dexcom-G5-und-SWR50.html](http://androidaps.readthedocs.io/en/latest/DE/Galaxy-S7-DanaR-Dexcom-G5-und-SWR50.html)
 
-Ziele
---------
+## Ziele
 Die Ziele, die zur Entstehung führten:
 
 - App mit „modularer Basis“, es soll leicht sein, neue Module hinzuzufügen
@@ -21,8 +18,7 @@ Die Ziele, die zur Entstehung führten:
 - Die Möglichkeit zum Hinzufügen/Entfernen von Beschränkungen
 - Eine App, die alles enthält, um mit dem Diabetes klar zu kommen (APS+Nightscout)
 
-Was man benötigt
----------
+## Was man benötigt
 
 - Android Smartphone (5.1 oder neuer). Informationen dazu, welche Smartphones gut laufen gibt es hier: https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing 
 - DanaR / DanaRS / Akku Chek Combo Insulinpumpe (in Zukunft auch die Insight)
@@ -31,18 +27,14 @@ Was man benötigt
 - AndroidAPS
 - Nightscout 0.10.2 oder aktueller
 
-Glossar
--------------
+## Glossar
 Für das meiste "Looper Vokabular": https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html (auf englisch)
 
-Screenshot
------------
+## Screenshot
 
-.. image:: https://img1.picload.org/image/dgdgcorw/aaps-overview-small.jpg.png
+![AndroidAPS Home-Screen Screenshot](https://img1.picload.org/image/dgdgcorw/aaps-overview-small.jpg.png)
 
-Sicherheitshinweise
--------
-
+## Sicherheitshinweise
 * AndroidAPS ist nur ein Programm zur Unterstützung deiner Diabetestherapie, nicht um den Diabetes zu vergessen!
 * Vertraue niemals blind auf ein Gerät bei der Anpassung der Dosierung. Kontrolliere die Ergebnisse und verstehe, wie der Algorithmus auf diese kommt.
 * Dein Smartphone, welches die Pumpe kontrolliert, sollte ausschließlich für diese Aufgabe verwendet werden, installiere keine Apps, um die Gefahr von Trojanern zu minimieren.
