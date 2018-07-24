@@ -7,7 +7,8 @@ You can use filters to display particular pumps or phones but please set back to
 
 ## Phone Background
 
-![phone background](../../images/bg_phone_thump.jpg)
+![phone background](../../images/bg_phone_thump.jpg) 
+</br>
 Design: Thiago :) 
-
+</br>
 If you want to decorate your phone with more AndroidAPS, you can download your background image here: [Background in high resolution.](https://raw.githubusercontent.com/openaps/AndroidAPSdocs/master/docs/images/bg_phone.jpg)
