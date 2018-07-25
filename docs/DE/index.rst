@@ -22,10 +22,10 @@ AndroidAPS installieren
    :maxdepth: 6
    :glob:
 
-   Building the APK </EN/Installing-AndroidAPS/Building-APK.md>
-   How to update to a new version </EN/Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes </EN/Installing-AndroidAPS/Releasenotes.md>
-   Nightscout </EN/Installing-AndroidAPS/Nightscout.md>
+   Aus Quellcode App machen </DE/installieren/apk-erstellen.md>
+   Update </DE/installieren/update.md>
+   Release Notes </DE/installieren/releasenotes.md>
+   Nightscout </DE/installieren/nightscout.md>
  
    
 AndroidAPS einrichten 
