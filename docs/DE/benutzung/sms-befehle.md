@@ -1,4 +1,4 @@
-# SMS-Kommunikator
+# SMS-Befehle
 Wenn du diese Option aktivierst (linker Haken), dann kann AAPS bestimmte Befehle per SMS erhalten. Dies ist sinnvoll z.B. bei Kindern, die von ihren Eltern überwacht und behandelt werden.
 
 Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
