@@ -4,7 +4,7 @@ Herzlich willkommen zur AndroidAPS-Dokumentation
 Was ist AndroidAPS?
 ----------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
    
    Safety First </EN/Getting-Started/Safety-first>
@@ -20,7 +20,7 @@ Was ist AndroidAPS?
 AndroidAPS installieren
 ------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
 
    Building the APK </EN/Installing-AndroidAPS/Building-APK.md>
@@ -32,7 +32,7 @@ AndroidAPS installieren
 AndroidAPS einrichten 
 ---------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
    
    Konfigurations-Generator </DE/konfiguration/konfigurations-generator.md>
@@ -47,7 +47,7 @@ AndroidAPS einrichten
 AndroidAPS nutzen
 ------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
     
    Objectives </EN/Usage/Objectives.md>
@@ -62,7 +62,7 @@ AndroidAPS nutzen
 Hilfe durch die Community
 ------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
 
    Background reading & interesting articles </EN/Where-To-Go-For-Help/Background-reading.md>
