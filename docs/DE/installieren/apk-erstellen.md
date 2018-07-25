@@ -1,4 +1,4 @@
-# Quellcode zu einer App kompilieren
+# Aus Quellcode App machen
 
 ## Android Studio auf dem Computer installieren
 
