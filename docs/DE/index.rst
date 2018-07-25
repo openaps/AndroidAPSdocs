@@ -7,14 +7,13 @@ Was ist AndroidAPS?
    :maxdepth: 6
    :glob:
    
-   Safety First </EN/Getting-Started/Safety-first>
-   Screenshots </EN/Getting-Started/Screenshots.md>
-   Architcture, security implementation </EN/Getting-Started/Architecture-security-implementation.md>
-   Phone </EN/Getting-Started/Phones.md>
-   Pump choices </EN/Getting-Started/Pump-Choices.md>
-   Future possible pump drivers  </EN/Getting-Started/Future-possible-Pump-Drivers.md>
-   Glossary </EN/Getting-Started/Glossary.md>
-   How to help </EN/Getting-Started/How-can-I-help.md>
+   Sicherheitshinweise </DE/wasist/sicherheitshinweise.md>
+   Screenshots </DE/wasist/screenshots.md>
+   Smartphones </DE/wasist/smartphones.md>
+   Insulinpumpen </DE/wasist/pumpen.md>
+   Zukünftig ggf. loopbare Pumpen  </DE/wasist/pumpenzukunft.md>
+   Glossar </DE/wasist/glossar.md>
+   Wie kann ich helfen? </DE/wasist/wie-helfen.md>
    
   
 AndroidAPS installieren
