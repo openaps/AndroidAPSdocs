@@ -10,4 +10,5 @@
 
 * Translate sentences on left side by adding new translated text or use & edit suggestion ![](../images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode ![](../images/translations-proofreading-mode.png) and approve translated texts ![](../images/translations-proofreading.png)
+* Proofreaders have to switch to Proofreading mode ![](../images/translations-proofreading-mode.png) 
+* and approve translated texts ![](../images/translations-proofreading.png)
