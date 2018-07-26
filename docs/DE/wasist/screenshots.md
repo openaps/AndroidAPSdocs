@@ -1,0 +1,3 @@
+# Screenshots
+
+[translate from EN]
