@@ -106,3 +106,15 @@ Where to go for help
    Background reading & interesting articles </EN/Where-To-Go-For-Help/Background-reading.md>
    Where to go for help </EN/Where-To-Go-For-Help/Connect-with-other-users.md>
 
+How to help
+------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   How to help </EN/Getting-Started/How-can-I-help.md>
+   How to translate the App </EN/translations.md>
+   How to edit the wiki </make-a-PR>>
+
+
+
