@@ -114,7 +114,7 @@ How to help
 
    How to help </EN/Getting-Started/How-can-I-help.md>
    How to translate the App </EN/translations.md>
-   How to edit the wiki </make-a-PR>>
+   How to edit the wiki </make-a-PR>
 
 
 
