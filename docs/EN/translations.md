@@ -12,3 +12,5 @@
 
 * Proofreaders have to switch to Proofreading mode ![](../images/translations-proofreading-mode.png) 
 * and approve translated texts ![](../images/translations-proofreading.png)
+
+When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
