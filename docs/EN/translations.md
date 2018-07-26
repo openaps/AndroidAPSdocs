@@ -1,4 +1,4 @@
 # How to translate AndroidAPS
 
-![Homescreen](../images/translation-flags.png)
+![Translation-Flags](../images/translation-flags.png)
 
