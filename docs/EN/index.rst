@@ -52,7 +52,6 @@ Getting Started with AndroidAPS
    Pump choices </EN/Getting-Started/Pump-Choices.md>
    Future possible pump drivers  </EN/Getting-Started/Future-possible-Pump-Drivers.md>
    Glossary </EN/Getting-Started/Glossary.md>
-   How to help </EN/Getting-Started/How-can-I-help.md>
    
   
 How to Install AndroidAPS
