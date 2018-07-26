@@ -4,35 +4,34 @@ Herzlich willkommen zur AndroidAPS-Dokumentation
 Was ist AndroidAPS?
 ----------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
    
-   Safety First </EN/Getting-Started/Safety-first>
-   Screenshots </EN/Getting-Started/Screenshots.md>
-   Architcture, security implementation </EN/Getting-Started/Architecture-security-implementation.md>
-   Phone </EN/Getting-Started/Phones.md>
-   Pump choices </EN/Getting-Started/Pump-Choices.md>
-   Future possible pump drivers  </EN/Getting-Started/Future-possible-Pump-Drivers.md>
-   Glossary </EN/Getting-Started/Glossary.md>
-   How to help </EN/Getting-Started/How-can-I-help.md>
+   Sicherheitshinweise </DE/wasist/sicherheitshinweise.md>
+   Screenshots </DE/wasist/screenshots.md>
+   Smartphones </DE/wasist/smartphones.md>
+   Insulinpumpen </DE/wasist/pumpen.md>
+   Zukünftig ggf. loopbare Pumpen  </DE/wasist/pumpenzukunft.md>
+   Glossar </DE/wasist/glossar.md>
+   Wie kann ich helfen? </DE/wasist/wie-helfen.md>
    
   
 AndroidAPS installieren
 ------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
 
-   Building the APK </EN/Installing-AndroidAPS/Building-APK.md>
-   How to update to a new version </EN/Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes </EN/Installing-AndroidAPS/Releasenotes.md>
-   Nightscout </EN/Installing-AndroidAPS/Nightscout.md>
+   App aus Quellcode erstellen </DE/installieren/apk-erstellen.md>
+   Update </DE/installieren/update.md>
+   Release Notes </DE/installieren/releasenotes.md>
+   Nightscout </DE/installieren/nightscout.md>
  
    
 AndroidAPS einrichten 
 ---------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
    
    Konfigurations-Generator </DE/konfiguration/konfigurations-generator.md>
@@ -47,26 +46,25 @@ AndroidAPS einrichten
 AndroidAPS nutzen
 ------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
     
-   Objectives </EN/Usage/Objectives.md>
-   OpenAPS Features </EN/Usage/Open-APS-features.md>
-   Profiles </EN/Usage/Profiles.md>
-   SMS Commands </EN/Usage/SMS-Commands.md>
-   Extended Carbs </EN/Usage/Extended-Carbs.md>
-   Tips and Tricks </EN/Usage/Tips-and-tricks.md>
-   Accessing log files </EN/Usage/Accessing-logfiles.md>
-   Dev branch </EN/Usage/Dev-branch.md>
-
+   Beschränkungen (objectives) </DE/benutzung/beschraenkungen.md>
+   OpenAPS-Funktionen </DE/benutzung/openaps.md>
+   Profile </DE/benutzung/profile.md>
+   SMS-Befehle </DE/benutzung/sms-befehle.md>
+   Verzögerte Kohlenhydrate (eCarbs) </DE/benutzung/ecarbs.md>
+   Tipps und Tricks </DE/benutzung/tipps.md>
+   Logfiles erhalten </DE/benutzung/logfiles.md>
+   
 Hilfe durch die Community
 ------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 6
    :glob:
 
-   Background reading & interesting articles </EN/Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help </EN/Where-To-Go-For-Help/Connect-with-other-users.md>
+   Hintergrundinformationen und Links </DE/hilfe/hintergrundinfos.md>
+   Community </DE/benutzung/community.md>
 
 
 .. note::

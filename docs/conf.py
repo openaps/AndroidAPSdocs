@@ -164,7 +164,7 @@ html_theme_path = []
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #html_logo = None
-html_logo = None
+html_logo = /images/drawing.png
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -184,7 +184,7 @@ html_static_path = ['_static']
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
 #html_last_updated_fmt = '%b %d, %Y'
-html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = %b %d, %Y
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
