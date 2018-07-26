@@ -63,8 +63,11 @@ Hilfe durch die Community
    :maxdepth: 6
    :glob:
 
-   Hintergrundinformationen und Links </DE/hilfe/hintergrundinfos.md>
-   Community </DE/benutzung/community.md>
+   Community </DE/hilfe/community.md>
+   Hintergrundinformationen </DE/hilfe/hintergrundinfos.md>
+
+Mithelfen in der Community
+------------
 
 
 .. note::
