@@ -6,7 +6,25 @@ Die **Auswahlfelder links** aktivieren die gewählte Funktion, die **Auswahlfeld
 Erscheint bei einzelnen Optionen ein **Zahnrädchen**, kannst du weitere Einstellungen vornehmen.
 
 ## Profil
-Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den Basalraten, ISF und IC abrufen soll.
+Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den Basalraten, ISF und IC abrufen soll. 
+
+### Therapie-Variablen für das Profil
+AndroidAPS kann nur dann gut laufen, wenn deine Diabetes-Therapievariablen im Profil optimal eingstellt sind. Du musst folgende Variablen ermitteln (ggf. stündlich anders, so dass du ggf. 3x24 Faktoren pro Tag hast):
+
+**Basalraten**
+Die Basalraten müssen so fein abgestimmt sein, dass sie über den ganzen Tag verteilt den BZ-Wert konstant im unteren Zielbereich halten. Sowohl Hypos, als auf hohe Werte dürfen nicht vorkommen, sonst läuft der Loop nicht richtig. Am besten ist es, mehrere Basalratentests durchzuführen und das Schema mit dem Diabetologen oder der Diafee zu besprechen.
+
+**ISF**
+Der Insulinsensitivitätsfaktor (ISF) gibt an, um wie viele mg/dl oder mmol/l der BZ-Wert durch 1 IE Insulin gesenkt wird.  
+
+**IC**
+Der IC (Insulin-Carb-Ratio - Insulin-Kohlenhydrat-Faktor) bestimmt, wieviel Gramm Kohlenhydrate durch 1 IE Insulin abgedeckt werden.
+
+**DIA (oder auch "Insulin-End-Time")**
+DIA steht für "duration of insulin action", gibt also an,  wie lange das Insulin im Körper aktiv ist. Bei vielen ist zwar nach 3-4 Stunden die Hauptwirkung vorbei und die Restemenge eher gering. Deswegen wird in der Praxis oder bei Bolusrechnern mit linearer Insulinwirkkurve häufig ein solcher Wert verwendet. Diese Restmenge kann sich dann z.B. beim Sport doch noch bemerkbar machen. AndroidAPS verwendet physiologischere Kurven und kann auch diese Restmengen gut berechnen. Besonders bei der Überlagerung vieler einzelner Aktionen ist dies wichtig. Daher verwendet AndroidAPS minimum 5 Stunden als DIA.
+Wichtiger als die exakte Länge des DIA ist das Wirkmaximum das durch Auswahl des korrekten Wirk-Profils festgelegt wird, solange der DIA genügend groß ist.
+
+Standardwert: 5 Stunden
 
 ### DanaR
 Das aktuelle Profil wird in die **DanaR/DanaRS** geschrieben. **Achtung: Die in der Pumpe hinterlegten Basalraten etc. werden überschrieben!** 
