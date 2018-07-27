@@ -1,4 +1,5 @@
-# AndroidAPS
+AndroidAPS
+================
 
 .. image:: androidaps.jpg
    :width: 200px
