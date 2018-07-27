@@ -8,6 +8,7 @@ Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur
 Ein konkretes **Beispiel**, wie du dir ein Closed loop System selbst bauen kannst, findest du unter [http://androidaps.readthedocs.io/en/latest/DE/Galaxy-S7-DanaR-Dexcom-G5-und-SWR50.html](http://androidaps.readthedocs.io/en/latest/DE/Galaxy-S7-DanaR-Dexcom-G5-und-SWR50.html)
 
 **Ziele**
+
 Die Ziele, die zur Entstehung führten:
 
 - App mit „modularer Basis“, es soll leicht sein, neue Module hinzuzufügen
@@ -21,6 +22,7 @@ Die Ziele, die zur Entstehung führten:
 - Eine App, die alles enthält, um mit dem Diabetes klar zu kommen (APS+Nightscout)
 
 **Was man benötigt**
+
 Um AndroidAPS nutzen zu können, solltest du insulinpflichtiger Diabetiker sein ;-) und brauchst außerdem folgende Komponenten:
 
 - **Android Smartphone** (5.1 oder neuer). 
