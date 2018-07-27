@@ -6,7 +6,25 @@ Die **Auswahlfelder links** aktivieren die gewählte Funktion, die **Auswahlfeld
 Erscheint bei einzelnen Optionen ein **Zahnrädchen**, kannst du weitere Einstellungen vornehmen.
 
 ## Profil
-Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den Basalraten, ISF und IC abrufen soll.
+Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den Basalraten, ISF und IC abrufen soll. 
+
+### Therapie-Variablen für das Profil
+AndroidAPS kann nur dann gut laufen, wenn deine Diabetes-Therapievariablen im Profil optimal eingstellt sind. Du musst folgende Variablen ermitteln (ggf. stündlich anders, so dass du ggf. 3x24 Faktoren pro Tag hast):
+
+**Basalraten**
+Die Basalraten müssen so fein abgestimmt sein, dass sie über den ganzen Tag verteilt den BZ-Wert konstant im unteren Zielbereich halten. Sowohl Hypos, als auf hohe Werte dürfen nicht vorkommen, sonst läuft der Loop nicht richtig. Am besten ist es, mehrere Basalratentests durchzuführen und das Schema mit dem Diabetologen oder der Diafee zu besprechen.
+
+**ISF**
+Der Insulinsensitivitätsfaktor (ISF) gibt an, um wie viele mg/dl oder mmol/l der BZ-Wert durch 1 IE Insulin gesenkt wird.  
+
+**IC**
+Der IC (Insulin-Carb-Ratio - Insulin-Kohlenhydrat-Faktor) bestimmt, wieviel Gramm Kohlenhydrate durch 1 IE Insulin abgedeckt werden.
+
+**DIA (oder auch "Insulin-End-Time")**
+DIA steht für "duration of insulin action", gibt also an,  wie lange das Insulin im Körper aktiv ist. Bei vielen ist zwar nach 3-4 Stunden die Hauptwirkung vorbei und die Restemenge eher gering. Deswegen wird in der Praxis oder bei Bolusrechnern mit linearer Insulinwirkkurve häufig ein solcher Wert verwendet. Diese Restmenge kann sich dann z.B. beim Sport doch noch bemerkbar machen. AndroidAPS verwendet physiologischere Kurven und kann auch diese Restmengen gut berechnen. Besonders bei der Überlagerung vieler einzelner Aktionen ist dies wichtig. Daher verwendet AndroidAPS minimum 5 Stunden als DIA.
+Wichtiger als die exakte Länge des DIA ist das Wirkmaximum das durch Auswahl des korrekten Wirk-Profils festgelegt wird, solange der DIA genügend groß ist.
+
+Standardwert: 5 Stunden
 
 ### DanaR
 Das aktuelle Profil wird in die **DanaR/DanaRS** geschrieben. **Achtung: Die in der Pumpe hinterlegten Basalraten etc. werden überschrieben!** 
@@ -23,7 +41,16 @@ Dieses Profil ermöglicht nur ein ganz simples Behandlungsschema mit **ganztägi
 Hier wird zunächst das in der **Pumpe hinterlegte Profil 1** ausgelesen (weitere Pumpen-Profile werden ignoriert). Sobald "Lokales Profil" ausgewählt ist, erscheint in AAPS ein neuer Reiter, wo du dann die aus der Pumpe ausgelesenen Profildaten ggf. verändern kannst. Mit dem nächsten Profilwechsel werden sie dann auf die Pumpe ins Profil 1 geschrieben.
 
 ## Insulin
-Hier musst du auswählen, welchen **Insulintyp** du verwendest. AAPS muss für die Berechnungen des Algorythmus wissen, wie es in deinem Körper wirkt. Dabei spielt es eine große Rolle, zu welchem Zeitpunkt das Wirkmaximum (= max peak) erreicht wird und wie lange das Insulin im Körper aktiv ist (= DIA - duration of insulin action). Für die gängigen Analog-Insuline sind die Wirkprofile zum Wirkmaximum hinterlegt. Die Dauer der Insulinwirkung (DIA) kannst du in deinen Profileinstellungen manuell ändern, allerdings muss sie mindestens 5h betragen.
+Hier musst du auswählen, welchen **Insulintyp** du verwendest. AAPS muss für die Berechnungen des Algorythmus wissen, wie es in deinem Körper wirkt. Dabei spielt es eine große Rolle, zu welchem Zeitpunkt das Wirkmaximum (= max peak) erreicht wird und wie lange das Insulin im Körper aktiv ist (= DIA - duration of insulin action). Für die gängigen Analog-Insuline sind die Wirkprofile zum Wirkmaximum hinterlegt. 
+
+* Humalog 
+* Novorapid
+* Novolog
+* FIASP
+
+Für andere Insuline oder Mischungen verschiedener Insuline kannst du in AndroidAPS auch manuell das Wirkmaximum angeben (Wirkprofil "free-peak Oref").
+
+Die **Dauer der Insulinwirkung (DIA)** kannst du in deinen Profileinstellungen manuell ändern, allerdings muss sie mindestens 5h betragen.
 
 ![DIA Erklärung von diabettech.com](https://i1.wp.com/www.diabettech.com/wp-content/uploads/2017/07/DIA-Clamp.jpg?w=400)
 
@@ -86,154 +113,6 @@ Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichk
 Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf dem Home-Screen im Auswahlmenü der angezeigten Kurven "Sensitivität" auswählst. Die weiße Linie zeigt dir das graphisch an. 
 
 **Die Empfindlichkeitserkennung ist erst freigeschaltet, wenn du Objective 6 erreicht hast.**
-
-### Autosens verstehen
-
-Um zu verstehen, wie Autosens zu den Ergebnissen kommt, kannst du zum Reiter "OpenAPS" wechseln. Dort gibt es den Abschnitt "Autosens-Daten", der dir folgende Informationen liefert:
-
-* **ratio**: Ergebnis der aktuell berechneten Empfindlichkeit im Vergleich zum aktuell eingestellten Profil. "ratio 1.2" bedeutet beispielsweise, dass du Faktor 1,2, also 20% mehr Insulin benötigst, "ratio 0.9", dass du Faktor 0,9, also 10% weniger Insulin benötigst als eingestellt. Wenn du dein Profil schon mit 110% betreibst und Autosens zeigt "ratio 1.1" an, dann solltest du mit einem weiteren Profilwechsel noch einmal 10% draufpacken und das Profil mit 120% fahren.
-* **ratioLimit**: Steht dort "Ratio limited from 1.5323325324 to 1.2", dann begrenzt AAPS die Korrekturen aus Sicherheitsgründen auf den (manuell eingestellten) Faktor von 1.2. Begrenzt Autosens nach oben (z.B. 1.5 zu 1.2), dann solltest du zuerst überlegen, ob du dich bei den eingegebenen Kohlenhydraten verschätzt hast und diese nachträglich eintragen. Andernfalls wäre ein Profilwechsel von Hand auf 150% erforderlich. Dazu auf dem Home-Screen lange auf das aktuelle Profil drücken und unter Profilwechsel 150% auswählen.
-* **past Sensitivity**: Hier wird dir angezeigt, wie Autosens zu dem angezeigten Ergebnis gekommen ist. Die Historie geht stündlich so weit zurück, wie du zur Berechnung der Daten eingestellt hast.
-
-    * `(1)` Uhrzeit (im Beispiel 1 Uhr)
-    * `=` Die erkannte Sensitivität stimmt mit der eingestellten überein
-    * `+` Du warst resistenter auf Insulin als eingestellt (brauchtest also mehr Insulin als gedacht)
-    * `-` Du warst sensibler auf Insulin als eingestellt (brauchtest also weniger Insulin als gedacht)
-    * `C` Du hattest Kohlenhydrate an Bord (COB), diese Zeit wird ausgespart
-    * `u` Du hattest nicht eingegebene Kohlenhydrate an Bord (unattended meal - UAM), diese Zeit wird ausgespart
-    
-* **sensResult**:
-
-    * `sensitivity normal`bedeutet, dass keine Änderungen nötig sind
-    * `Excess insulin resistance detected`bedeutet, dass Autosens eine Anpassung am aktiven Profil vornimmt.
-    
-Daraus folgt: Wenn du fast ausschließlich `===` siehst, dann sind deine Faktoren im Profil perfekt eingestellt. Sind dagegen   viele `++++` oder `----` Abschnitte dabei, solltest du (gemeinsam mit dem Diabetologen oder der Diafee) an einer Verbesserung deiner Einstellung arbeiten. Ansonsten kann der Closed Loop auch nicht korrekt arbeiten.
-
-Siehe auch 
-
-* [Tipps und Tricks > Diabetes-Therapie fürs Loopen tunen](http://androidaps.readthedocs.io/en/latest/DE/tippstricks.html#diabetes-therapie-furs-loopen-tunen)
-* [Autosens](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode)
-* [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)
-
-### Sensitivität Oref0
-Der Oref0-Algorythmus berechnet die Insulinempflindlichkeit **auf Basis der vorangegangenen 24 Stunden**. Kohlenhydrate (falls noch nicht absorbiert) werden nach einer bestimmten Zeit, die man einstellen kann, einfach abgeschnitten.
-
-Details in der [OpenAPS-Dokumentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html)
-
-Oref0 - nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit abgeschnitten
-
-![COB from oref0](../images/cob_oref0.png)
-
-#### min_5m_carbimpact
-Diese Einstellung legt fest, wie schnell die eingegebenen Kohlenhydrate standardmäßig in 5 Minuten absorbiert werden. Dies beeinflusst auch, wie schnell der errechnete COB-Wert vfällt, wenn sich eine Kohlenhydrat-Absporption nicht an den BZ-Abweichungen zeigt.
-
-Standardwert: 3mg/dL/5min (nur beim AMA! SMB-Standardwert: 8). 
-
-#### Maximale Essens-Resorptionszeit [h]
-Die Einstellung legt fest, nach wie vielen Stunden die Kohlenhydrate spätestens absorbiert sein müssen. Ggf. verbliebene Kohlenhydrate werden abgeschnitten.
-
-Standardwert: 6 Std.
-
-#### Erweiterte Einstellungen
-
-**Max autosens ratio**
-
-Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil erhöhen darf. Faktor 1.2 bedeutet 20% höher. Stellt Autosens eine noch niedrigere Insulinempfindlichkeit fest, werden die Anpassungen bei +20% gedeckelt. 
-
-Standardwert: 1.2
-
-**Min autosens ratio**
-
-Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenken darf. Faktor 0.7 bedeutet 30% weniger. Stellt Autosens eine noch höhere Insulinempfindlichkeit fest, werden die Anpassungen bei -30% gedeckelt.
-
-Standardwert: 0.7
-
-### Sensitivität AAPS
-Der AAPS-Algorythmus basiert auf Oref0. Du kannst jedoch **selbst festlegen, auf Basis wie vieler Stunden** in der Vergangenheit die Insulinempfindlichkeit berechnet werden soll. Die minimale Kohlenhydrat-Resporptionszeit wird ausgehend von der eingestellten maximalen Kohlenhydrat-Resorptionszeit (max carbs absorption) berechnet.
-
-![COB from AAPS](../images/cob_aaps.png)
-
-Die grünen Punkte in der COB-Graphik bedeuten: Die minimale Kohlenhydrat-Resorption wurde verwendet anstatt der Berechnung anhand der Abweichungen (diviations) zwischen berechneten und erkannten Werten
-
-#### Maximale Essens-Resorptionszeit [h]
-Die Einstellung legt fest, nach wie vielen Stunden die Kohlenhydrate spätestens absorbiert sein müssen. Ggf. verbliebene Kohlenhydrate werden abgeschnitten.
-
-Standardwert: 6 Std.
-
-#### Intervall für Autosens [h]
-Hier kannst du angeben, wie viele vergangene Stunden für die Autosens-Berechnungen einbezogen werden sollen. Je kürzer der Zeitraum (z.B. 4 Std.), desto schneller passt AAPS die Insulinempfindlichkeit an. 
-
-#### Erweiterte Einstellungen
-
-**Max autosens ratio**
-
-Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil erhöhen darf. Faktor 1.2 bedeutet 20% höher. Stellt Autosens eine noch niedrigere Insulinempfindlichkeit fest, werden die Anpassungen bei +20% gedeckelt. 
-
-Standardwert: 1.2
-
-**Min autosens ratio**
-
-Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenken darf. Faktor 0.7 bedeutet 30% weniger. Stellt Autosens eine noch höhere Insulinempfindlichkeit fest, werden die Anpassungen bei -30% gedeckelt.
-
-Standardwert: 0.7
-
-### Durchschnittliche Sensitivität
-Der Algorythmus "Durchschnittliche Sensitivität" berechnet die Insulinempfindlichkeit aus einem **gewichteten Durchschnitt der Abweichungen (deviations)**. Aktuellere Abweichungen haben ein höheres Gewicht. Die minimale Kohlenhydrat-Resporptionszeit wird ausgehend von der eingestellten maximalen Kohlenhydrat-Resorptionszeit (max carbs absorption) berechnet. Dieser Algorythmus kann am schnellsten auf Veränderungen in der Insulinempfindlichkeit reagieren.
-
-Der Algorythmus rechnet so, dass nach der eingestellten Zeit `COB == 0` gesetzt wird.
-
-#### Maximale Essens-Resorptionszeit [h]
-Die Einstellung legt fest, nach wie vielen Stunden die Kohlenhydrate spätestens absorbiert sein müssen. Ggf. verbliebene Kohlenhydrate werden abgeschnitten.
-
-Standardwert: 6 Std.
-
-#### Intervall für Autosens [h]
-Hier kannst du angeben, wie viele vergangene Stunden für die Autosens-Berechnungen einbezogen werden sollen. Je kürzer der Zeitraum (z.B. 4 Std.), desto schneller passt AAPS die Insulinempfindlichkeit an. 
-
-#### Erweiterte Einstellungen
-
-**Max autosens ratio**
-
-Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil erhöhen darf. Faktor 1.2 bedeutet 20% höher. Stellt Autosens eine noch niedrigere Insulinempfindlichkeit fest, werden die Anpassungen bei +20% gedeckelt. 
-
-Standardwert: 1.2
-
-**Min autosens ratio**
-
-Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenken darf. Faktor 0.7 bedeutet 30% weniger. Stellt Autosens eine noch höhere Insulinempfindlichkeit fest, werden die Anpassungen bei -30% gedeckelt.
-
-Standardwert: 0.7
-
-### Sensitivität Oref1
-Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserkennung. Sie rechnet immer anhand der Daten der vergangenen 8 Stunden. Dieser Algorythmus erkennt nicht eingegebene Kohlenhydrate ("unattended meals" = UAM) und fängt sie ab. 
-
-Eine Einführung zu Oref1 findest du hier: https://diyps.org/2017/04/30/introducing-oref1-and-super-microboluses-smb-and-what-it-means-compared-to-oref0-the-original-openaps-algorithm/ (englisch)
-
-**Der neue Algorythmus Oref1 ist nur für erfahrene Nutzer geeignet!** Zu Beginn des Loopens sollten mit Oref0 / AMA Erfahrungen gesammelt werden.
-
-#### min_5m_carbimpact
-Diese Einstellung legt fest, wie schnell die eingegebenen Kohlenhydrate standardmäßig in 5 Minuten absorbiert werden. Dies beeinflusst auch, wie schnell der errechnete COB-Wert vfällt, wenn sich eine Kohlenhydrat-Absporption nicht an den BZ-Abweichungen zeigt. Der Standardwert von 8 mg/dL/5min korrespondiert mit einer minimalen Kohlenhydrat-Absorptionsrate von 24g/Std bei einem CSF von 4 mg/dL/g.
-
-Standardwert: 8mg/dL/5min (nur beim SMB! AMA-Standardwert: 3). 
-
-#### Maximale Essens-Resorptionszeit [h]
-Die Einstellung legt fest, nach wie vielen Stunden die Kohlenhydrate spätestens absorbiert sein müssen. Ggf. verbliebene Kohlenhydrate werden abgeschnitten.
-
-Standardwert: 6 Std.
-
-#### Erweiterte Einstellungen
-
-**Max autosens ratio**
-
-Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil erhöhen darf. Faktor 1.2 bedeutet 20% höher. Stellt Autosens eine noch niedrigere Insulinempfindlichkeit fest, werden die Anpassungen bei +20% gedeckelt. 
-
-Standardwert: 1.2
-
-**Min autosens ratio**
-
-Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenken darf. Faktor 0.7 bedeutet 30% weniger. Stellt Autosens eine noch höhere Insulinempfindlichkeit fest, werden die Anpassungen bei -30% gedeckelt.
-
-Standardwert: 0.7
 
 ## OpenAPS
 

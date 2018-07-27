@@ -11,7 +11,7 @@ Du kannst Filter verwenden, um in der Datei einzelne Pumpen oder Smartphones anz
 
 ## Hintergrundbild
 
-![Smartphone-Hintergrundbild](../../images/bg_phone_thump.jpg) 
+[Smartphone-Hintergrundbild](../../images/bg_phone_thump.jpg) 
 
 Design: Thiago :) 
 

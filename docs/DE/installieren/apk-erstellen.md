@@ -1,8 +1,7 @@
 # App aus Quellcode erstellen
 
 ## Android Studio auf dem Computer installieren
-
-Um die AndroidAPS-App aus dem Quellcode zu erstellen, benötigst du auf dem Computer zunächst die Software Android Studio:
+Der Quellcode von AndroidAPS, der in Github verfügbar ist, muss selbst in eine lauffähige Smartphone-App umgewandelt werden (do-it-yourself). Um die AndroidAPS-App aus dem Quellcode zu erstellen (kompilieren), benötigst du auf dem Computer die Software Android Studio:
 
 [https://developer.android.com/studio/install](https://developer.android.com/studio/install)
 
