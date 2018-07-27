@@ -1,5 +1,11 @@
-AndroidAPS
-=======================
+# AndroidAPS
+
+.. image:: androidaps.jpg
+   :width: 200px
+   :height: 100px
+   :scale: 50 %
+   :alt: AndroidAPS
+   :align: left
 
 .. toctree::
    :maxdepth: 1
