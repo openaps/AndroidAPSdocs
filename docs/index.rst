@@ -1,9 +1,9 @@
 AndroidAPS
-=======================
+================
 
 .. toctree::
-   :maxdepth: 8
-   :caption: AndroidAPS documentation
+   :maxdepth: 1
+   :caption: Documentation
    :glob:
    
    English </EN/index>
@@ -11,9 +11,9 @@ AndroidAPS
    Deutsch </DE/index>
    Español </ES/index>
    
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: How to edit these docs
 
-   Instructions to edit the wiki </make-a-PR>
+   
+
+
+
+

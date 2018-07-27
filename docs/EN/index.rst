@@ -63,6 +63,7 @@ How to Install AndroidAPS
    Building the APK </EN/Installing-AndroidAPS/Building-APK.md>
    How to update to a new version </EN/Installing-AndroidAPS/Update-to-new-version.md>
    Release notes </EN/Installing-AndroidAPS/Releasenotes.md>
+   Dev branch </EN/Installing-AndroidAPS/Dev-branch.md>
    Nightscout </EN/Installing-AndroidAPS/Nightscout.md>
  
    
@@ -94,7 +95,6 @@ Usage
    Extended Carbs </EN/Usage/Extended-Carbs.md>
    Tips and Tricks </EN/Usage/Tips-and-tricks.md>
    Accessing log files </EN/Usage/Accessing-logfiles.md>
-   Dev branch </EN/Usage/Dev-branch.md>
 
 Where to go for help 
 ------------
