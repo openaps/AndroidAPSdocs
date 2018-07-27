@@ -1,6 +1,6 @@
 # Beispiel-Setups
 
-##Samsung S7, DanaR, Dexcom G5 und Sony Smartwatch
+## Samsung S7, DanaR, Dexcom G5 und Sony Smartwatch
 
 
 ![](https://user-images.githubusercontent.com/32912987/34470732-6a3b4b62-ef38-11e7-8428-03e1aec39ee7.png)
@@ -94,7 +94,7 @@ Diese Einstellung sollte aus Sicherheitsgründen wieder auf inaktiv gestellt wer
 #### Bluetooth aktivieren
 Menü > Einstellungen > Verbindungen > Bluetooth > Schieber nach rechts (= aktiv)
 
-#### Dexcom App (modifizierte Version) installieren
+### Dexcom App (modifizierte Version) installieren
 <img src="https://user-images.githubusercontent.com/32912987/34470739-77d835e6-ef38-11e7-9c47-37a71f74e6cc.png" width="250"> <br>
 
 Die Original-App von Dexcom aus dem Google Play Store wird nicht funktionieren, weil sie die Werte nicht an andere Apps weitergibt. Darum ist eine von der Community leicht modifizierte Version erforderlich. Nur sie kann später mit AAPS kommunizieren. Unter [https://github.com/dexcomapp/dexcomapp?files=1](https://github.com/dexcomapp/dexcomapp?files=1) ist eine mmol/l-Version und eine mg/dl-Version der modifizierten Dexcom-App hinterlegt. Vorteil gegenüber frei entwickelten Auslese-Apps wie xDrip+ ist, dass es sich um die vom Hersteller zertifizierte Auslese-/Glukoseberechnungsmethode handelt und "verpasste Werte" nach dem erneuten Verbinden noch aufgefüllt werden (das kann xDrip+ derzeit noch nicht).
