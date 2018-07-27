@@ -88,6 +88,7 @@ AndroidAPS nutzen
    SMS-Befehle </DE/benutzung/sms-befehle.md>
    Verzögerte Kohlenhydrate (eCarbs) </DE/benutzung/ecarbs.md>
    Tipps und Tricks </DE/benutzung/tipps.md>
+   Beispiel-Setups  </DE/benutzung/setups.md>
    Logfiles erhalten </DE/benutzung/logfiles.md>
    
 Hilfe durch die Community
