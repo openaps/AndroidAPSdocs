@@ -1,16 +1,9 @@
 AndroidAPS
 ================
 
-.. image:: androidaps.jpg
-   :width: 640px
-   :alt: AndroidAPS
-   :align: left
-
-<br>
-
 .. toctree::
    :maxdepth: 1
-   :caption: AndroidAPS documentation
+   :caption: Documentation
    :glob:
    
    English </EN/index>
