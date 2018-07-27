@@ -91,7 +91,7 @@ Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. 
 * [DexcomG5 app (patched)](https://github.com/dexcomapp/dexcomapp/)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-Näheres zur Einrichtung der BZ-Quellen findest du unter [http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm)
+Näheres zur Einrichtung der BZ-Quellen findest du unter [AndroidAPS einrichten > BZ-Quelle](https://androidaps.readthedocs.io/en/latest/DE/konfiguration/bz-quelle.html)
     
 ## Pumpe
 Hier kannst du auswählen, welche Pumpe du verwendest. Folgende Modelle werden derzeit unterstützt:
@@ -114,199 +114,12 @@ Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf dem Home
 
 **Die Empfindlichkeitserkennung ist erst freigeschaltet, wenn du Objective 6 erreicht hast.**
 
+Nähere Informationen findest du unter [AndroidAPS einrichten > Empfindlichkeitserkennung und COB](https://androidaps.readthedocs.io/en/latest/DE/konfiguration/empfindlichkeitserkennung-und-cob.html)
+
 ## OpenAPS
+Hier kannst du einstellen, mit welchem Algorythmus deine künstliche Bauchspeicheldrüse rechnen soll. 
 
-### MA
-MA steht für "Meal Assist" und ist eine der ältesten OpenAPS-Funktionen (aus 2016) im Rahmen des Oref0-Algorythmus. In die Berechnungen können die Vorzüge der Insulin-Empfindlichkeitserkennung (autosens) nicht einbezogen werden.
-
-#### Max IE/h, die als TBR gesetzt werden können (OpenAPS "max-basal")
-Diese Sicherheitseinstellung legt fest, welche maximale temporäre Basalrate die Insulinpumpe abgeben darf. Der Wert sollte in der Pumpe und in AAPS übereinstimmen und mindestens beim 3-fachen der höchsten eingestellten einzelnen Basalrate liegen. 
-
-Beispiel: Im Basalprofil ist im Laufe des Tages die Basalrate 1.00 U/h die höchste. Dann empfiehlt sich ein max-basal Wert von mindestens 3 U/h.
-
-Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
-
-AndroidAPS beschränkt den Wert wie folgt:
-
-* Kind: 2
-* Jugendliche: 5
-* Erwachsene: 10
-* Insulinresistente Erwachsene: 12
-
-#### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS "max-iob")
-Dieser Wert bestimmt, bis zu welchem IOB-Wert AAPS im Closed Loop Modus regeln darf. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann macht der Loop zunächst nichts, bis die IOB-Grenze wieder unterschritten ist. 
-
-Standardmäßig wird zu Beginn eine Einstellung auf 2 vorgeschlagen, aber du solltest dich langsam rauf arbeiten bis du weißt, welcher Wert für dich in Ordnung ist. Das ist sehr individuell und hängt stark vom durchschnittlichen Insulinbedarf ab. Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
-
-AndroidAPS beschränkt bei MA den Wert wie folgt:
-
-* Kind: 3
-* Jugendliche: 5
-* Erwachsene: 7
-* Insulinresistente Erwachsene: 12
-
-#### Erweiterte Einstellungen
-
-**Verwende immer das kurze durchschnittliche Delta**
-
-**Bolus snooze dia divisor**
-Die Funktion "Bolus snooze" wird dann aktiviert, wenn du einen Essensbolus gegeben hast. Der Loop reagiert dadurch nach dem Essen nicht gleich mit niedrigen temporären Basalraten. Der Standardwert ist 2. Dies bedeutet: Bei einem DIA (Dauer der Insulinaktivität) von 5 wird der "Bolus snooze" über 5 : 2 = 2,5 Stunden geradlinig auslaufen.
-
-Standardwert: 2
-
-### AMA
-AMA steht für "advanced meal assist" und ist eine Funktion OpenAPS-Funktion aus 2017 (Oref0). Nachdem du dir einen Bolus gegeben hast, kann das System eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein. 
-
-**Du musst das Objective 7 abgeschlossen haben, um AMA verwenden zu können.**
-
-Siehe auch: [OpenAPS-Dokumentation zu AMA (englisch)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama)
-
-#### Max IE/h, die als TBR gesetzt werden können (OpenAPS "max-basal")
-Diese Sicherheitseinstellung legt fest, welche maximale temporäre Basalrate die Insulinpumpe abgeben darf. Der Wert sollte in der Pumpe und in AAPS übereinstimmen und mindestens beim 3-fachen der höchsten eingestellten einzelnen Basalrate liegen. 
-
-Beispiel: Im Basalprofil ist im Laufe des Tages die Basalrate 1.00 U/h die höchste. Dann empfiehlt sich ein max-basal Wert von mindestens 3 U/h.
-
-Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
-
-AndroidAPS beschränkt den Wert wie folgt:
-
-* Kind: 2
-* Jugendliche: 5
-* Erwachsene: 10
-* Insulinresistente Erwachsene: 12
-
-#### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS "max-iob")
-Dieser Wert bestimmt, bis zu welchem IOB-Wert AAPS im Closed Loop Modus regeln darf. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann macht der Loop zunächst nichts, bis die IOB-Grenze wieder unterschritten ist. 
-
-Standardmäßig wird zu Beginn eine Einstellung auf 2 vorgeschlagen, aber du solltest dich langsam rauf arbeiten bis du weißt, welcher Wert für dich in Ordnung ist. Das ist sehr individuell und hängt stark vom durchschnittlichen Insulinbedarf ab. Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
-
-AndroidAPS beschränkt bei AMA den Wert wie folgt:
-
-* Kind: 3
-* Jugendliche: 5
-* Erwachsene: 7
-* Insulinresistente Erwachsene: 12
-
-#### Verwende AMA Autosense
-Hier kannst du aswählen, ob die [Empfindlichkeitserkennung](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#empfindlichkeitserkennung) Autosens verwendet werden soll oder nicht.
-
-#### Autosense passt Zielwerte an
-Wenn du diese Option aktivierst, dann kann Autosens bei Bedarf (neben ISF und IC) auch den Zielbereich anpassen, damit der Loop aggressiver oder weniger aggressiv läuft. Dadurch kann der eigentliche Zielbereich ggf. schneller wieder erreicht werden.
-
-#### Erweiterte Einstellungen
-
-**Verwende immer das kurze durchschnittliche Delta**
-Wenn du dies aktivierst, dann verwendet AndroidAPS für die Berechnungen statt des aktuellen BZ-Wertes den durchschnittlichen BZ-Wert der letzten 15 Minuten (= kurzes durchschnittliches Delta). Dieser Durchschnittswert lässt den Loop bei ungefilterten Quellen mit Signalrauschen (also wenn vom CGM/FGM keine glatte Kurve ausgegeben wird) ruhiger laufen.
-
-**Max daily safety multiplier**
-Dies ist eine wichtige Sicherheitseinstellung. Sie begrenzt das maximale Basal-IOB auf die x-fache Menge deiner höchsten Basalrate. Beispiel: höchste Basalrate = 1.0 U/h, max daily safety multiplier = 3 > AndroidAPS kann höchstens bis zu einem Basal-IOB von 3.0 IE regeln. 
-
-Standardwert: 3 (sollte nur in Ausnahmefällen verändert werden)
-
-**Current Basal safety multiplier**
-Dies ist eine wichtige Sicherheitseinstellung. Sie begrenzt das Basal-IOB auf die x-fache Menge der aktuell laufenden Basalrate. Dies ist wichtig, um Nutzer davor zu bewahren, zu viel Basal-Insulin zu verabreichen.   
-
-Standardwert: 4 (sollte nur in Ausnahmefällen verändert werden)
-
-**Bolus snooze dia divisor**
-Die Funktion "Bolus snooze" wird dann aktiviert, wenn du einen Essensbolus gegeben hast. Der Loop reagiert dadurch nach dem Essen nicht gleich mit niedrigen temporären Basalraten. Der Standardwert ist 2. Dies bedeutet: Bei einem DIA (Dauer der Insulinaktivität) von 5 wird der "Bolus snooze" über 5 : 2 = 2,5 Stunden geradlinig auslaufen.
-
-Standardwert: 2
-
-### SMB
-SMB steht für "super micro bolus" und ist die neueste OpenAPS-Funktion (aus 2018) im Rahmen des Oref1-Algorythmus. Im Gegensatz zu AMA arbeitet SMB nicht so stark mit temporären Basalraten, sondern hauptsächlich mit **kleinen Supermicroboluses**. In Situationen, in denen AMA 1.0 IE Insulin über eine temporäre Basalrate zugeben würde, gibt SMB im **5-Minutentakt** mehrere Supermicroboluses in kleinen Schritten ab, z.B. 0.4 IE, 0.3 IE, 0.2 IE und 0.1 IE. Gleichzeitig wird die laufende Basalrate aus Sicherheitsgründen für eine bestimmte Dauer auf 0 IE/h gesetzt, damit keine Überdosierung erfolgt (**"zero-temping"**). So kann das System, vor allem mit FIASP, den BZ schneller abfangen als mit der temporären Basalratenerhöhung bei AMA.
-
-Grundsätzlich kann es dank SMB bei kohlenhydratarmen Mahlzeiten ausreichen, dem System die geplante Kohlenhydratmenge mitzuteilen und den Rest AAPS zu überlassen. Dies führt aber womöglich zu höheren postprandialen Peaks, weil kein Spritz-Ess-Abstand (SEA) eingehalten werden kann. Oder du gibst, ggf. mit SEA, einen **Anfangsbolus**, der **nur zum Teil** die Kohlenhydrate abdeckt (z.B. 2/3 der geschätzten Menge) und lässt den Rest vom SMB auffüllen. 
-
-Um SMB verwenden zu können, musst du Objective 8 erreicht haben.
-
-#### Max IE/h, die als TBR gesetzt werden können (OpenAPS "max-basal")
-Diese Sicherheitseinstellung legt fest, welche maximale temporäre Basalrate die Insulinpumpe abgeben darf. Der Wert sollte in der Pumpe und in AAPS übereinstimmen und mindestens beim 3-fachen der höchsten eingestellten einzelnen Basalrate liegen. 
-
-Beispiel: Im Basalprofil ist im Laufe des Tages die Basalrate 1.00 U/h die höchste. Dann empfiehlt sich ein max-basal Wert von mindestens 3 U/h.
-
-Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
-
-AndroidAPS beschränkt den Wert wie folgt:
-
-* Kind: 2
-* Jugendliche: 5
-* Erwachsene: 10
-* Insulinresistente Erwachsene: 12
-
-#### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS "max-iob")
-Dieser Wert bestimmt, bis zu welchem IOB-Wert AAPS im Closed Loop Modus regeln darf. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann macht der Loop zunächst nichts, bis die IOB-Grenze wieder unterschritten ist. 
-
-Da mit SMB der max-iob nicht mehr durch die vom APS gegebenen Dosen berechnet wird, sondern alles IOB (auch deinen selbst gegebenen Essensbolus), ist der Wert für max-iob höher, als du das von MA und AMA gewohnt bist. Ein guter Wert für den Anfang ist: 
-
-    max-iob = mindestens 1 normaler Essensbolus + 3x höchste tägl. Basalrate 
-
-Sei jedoch dabei vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das ist sehr individuell und hängt stark vom durchschnittlichen Insulinbedarf ab. Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höcyhsten.
-
-AndroidAPS beschränkt beim SMB (höher als bei AMA) den Wert wie folgt:
-
-* Kind: 3
-* Jugendliche: 7
-* Erwachsene: 12
-* Insulinresistente Erwachsene: 25
-
-Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
-
-#### Verwende AMA Autosense
-Hier kannst du aswählen, ob die [Empfindlichkeitserkennung](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#empfindlichkeitserkennung) Autosens verwendet werden soll oder nicht.
-
-#### Aktiviere SMB
-Hier kannst du die SMB-Funktion komplett aktivieren oder deaktivieren.
-
-#### Aktiviere SMB während COB
-Der SMB arbeitet, wenn COB aktiv sind (COB > 0)
-
-#### Aktiviere SMB während temporären Zielen
-Der SMB arbeitet sowohl wenn ein niedriges, als auch wenn ein hohes temporäres Ziel gesetzt ist (bald essen, Aktivität)
-
-#### Aktiviere SMB während hohen temporären Zielen
-Der SMB arbeitet, wenn ein hohes temporäres Ziel gesetzt ist (Aktivität)
-
-#### Aktiviere SMB immer
-Der SMB arbeitet immer (unabhängig von COB oder temporären Zielen). Diese Option besteht nur, wenn die BZ-Quelle gut gefilterte (nicht rauschende) Werte ausgibt. Derzeit ist das nur möglich mit dem Dexcom G5, wenn es mit der gepatchten Dexcom App oder mit xDrip+ im "native Modus" ausgelesen wird. Falls ein gemessener Wert zu weit abweicht, gibt der G5 einfach gar keinen Wert ab und wartet die nächste Messung in 5 Minuten ab.
-
-Andere CGM/FGM wie das Freestyle Libre sind momentan für die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert.
-
-#### Aktiviere SMB nach Mahlzeiten
-Der SMB arbeitet bis 6 Stunden nach Mahleiten, auch wenn COB vorher bei 0 ist.  
-
-Diese Option besteht nur, wenn die BZ-Quelle gut gefilterte (nicht rauschende) Werte ausgibt. Derzeit ist das nur möglich mit dem Dexcom G5, wenn es mit der gepatchten Dexcom App oder mit xDrip+ im "native Modus" ausgelesen wird. Falls ein gemessener Wert zu weit abweicht, gibt der G5 einfach gar keinen Wert ab und wartet die nächste Messung in 5 Minuten ab.
-
-Andere CGM/FGM wie das Freestyle Libre sind momentan für die SMB-nach-Mahlzeiten-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert.
-
-#### Max minutes of basal to limit SMB to
-Dies ist eine wichtige Sicherheitseinstellung. Der Wert legt fest, für wie viele Minuten benötigtes Basal-Insulin der SMB zugeben darf, obwohl es nicht von COB gedeckt ist. Dadurch kann der SMB aggressiver sein. Zu Beginn solltest du den Standardwert von 30 Minuten wählen. Mit etwas SMB-Erfahrung kannst du den Wert dann in 15-Minuten-Schritten erhöhen. Dabei solltest du immer genau beobachten, wie sich diese Veränderung auswirkt. Es wird davon abgeraten, den Wert auf über 90 Minuten zu stellen. Denn das würde dazu führen , dass der Algorythmus mit einer temporären 0 IE/h-Basalrate ("zero-temp") einen BZ-Abfall nicht mehr sicher abfangen könnte. Außerdem solltest du (gerade beim Testen) unbedingt Alarme verwenden, um vor BZ-Entgleisungen gewarnt zu werden.
-
-Standardwert zu Beginn: 30 Min.
-
-#### Aktiviere UAM
-Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Beispielsweise, wenn du vergisst sie in  AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweißlastige Mahlzeit länger wirkt als gedacht.
-
-#### High temptarget raises sensitivity
-Wenn du diese Option aktivierst, dann wird die Insulinempfindlichkeit erhöht, wenn du ein temporäres Ziel über 100 mg/dl bzw. 5,6 mmol/l setzt
-
-#### Low temptarget lowers sensitivity
-Wenn du diese Option aktivierst, dann wird die Insulinempfindlichkeit verringert, wenn du ein temporäres Ziel unter 100 mg/dl bzw. 5,6 mmol/l setzt
-
-#### Erweriterte Einstellungen
-
-**Verwende immer das kurze durchschnittliche Delta**
-Wenn du dies aktivierst, dann verwendet AndroidAPS für die Berechnungen statt des aktuellen BZ-Wertes den durchschnittlichen BZ-Wert der letzten 15 Minuten (= kurzes durchschnittliches Delta). Dieser Durchschnittswert lässt den Loop bei ungefilterten Quellen mit Signalrauschen (also wenn vom CGM/FGM keine glatte Kurve ausgegeben wird) ruhiger laufen.
-
-**Max daily safety multiplier**
-Dies ist eine wichtige Sicherheitseinstellung. Sie begrenzt das maximale Basal-IOB auf die x-fache Menge deiner höchsten Basalrate. Beispiel: höchste Basalrate = 1.0 U/h, max daily safety multiplier = 3 > AndroidAPS kann höchstens bis zu einem Basal-IOB von 3.0 IE regeln. 
-
-Standardwert: 3 (sollte nur in Ausnahmefällen verändert werden)
-
-**Current Basal safety multiplier**
-Dies ist eine wichtige Sicherheitseinstellung. Sie begrenzt das Basal-IOB auf die x-fache Menge der aktuell laufenden Basalrate. Dies ist wichtig, um Nutzer davor zu bewahren, zu viel Basal-Insulin zu verabreichen.   
-
-Standardwert: 4 (sollte nur in Ausnahmefällen verändert werden)
+Weitere Informationen findest du unter [AndroidAPS nutzen > OpenAPS-Funktionen](https://androidaps.readthedocs.io/en/latest/DE/benutzung/openaps.html)
 
 ## Loop
 Hier kannst du einstellen, ob du AAPS automatische Regelungen erlauben willst oder nicht.
@@ -323,55 +136,8 @@ AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und passt di
 AndroidAPS hat eine Reihe an Aufgaben (objectives), die du **nach und nach erfüllen musst**. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Es garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du ihm vertrauen.
 
 Für den Fall, dass du später dein Smartphone austauschen musst (Neuanschaffung, Displayschaden etc.) solltest du unbedingt von Zeit zu Zeit deine Einstellungen und den Fortschritt der Objectives [exportieren](http://androidaps.readthedocs.io/en/latest/docs/DE/einstellungen.md#einstellungen-exportieren).
- 
-**1. Objective: Nimm die Grundeinstellungen vor**
 
-  * Wähle im Konfigurations-Generator > BZ-Quelle die richtige Blutzuckerquelle. Siehe dazu [BZ-Quelle](http://androidaps.readthedocs.io/en/latest/DE/voraussetzungen.html#bz-quelle-cgm-fgm)
-  * Wähle im Konfigurations-Generator > Pumpe deine Pumpe (oder wähle "Virtuelle Pume", wenn du eine nicht loopbare Pumpe hast und Handeingaben machst). Wenn du eine loopbare Pumpe verwendest, dann versichere dich, dass du [die Pumpe richtig eingestellt](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#pumpen-einstellungen) und die [AAPS-Dokumentation](http://wiki.androidaps.org) gelesen hast.
-  * [Richte Nightscout ein](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#nightscout-client)
-  
-    _Es könnte sein, dass du für den nächsten BZ ca. 5 Minuten warten musst, damit ihn AAPS erhält und akzeptiert._
- 
-**2. Objective: Beginne im Open Loop Modus**
-
-  * Wähle [Open Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#open-loop)
-  * Aktiviere mindesten 20 vorgeschlagene temp. Basalraten manuell über einen Zeitraum von 7 Tagen (Falls du eine andere Pumpe verwendest, gebe die Vorschläge in der Pumpe ein und bestätige es in AAPS). Versichere dich, dass die Daten in AAPS und Nightscout angezeigt werden.
- 
-**3. Objective: Verstehe den Open Loop Modus mit seinen temporären Basal-Empfehlungen**
-  * Versuche die Logik hinter den Empfehlungen zu verstehen, indem du dir [die OpenAPS-Dokumentation dazu](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), die Vorhersagelinie in AAPS/Nightscout und die Ergebnisse im OpenAPS-Reiter ansiehst.
-  
-    _Stoppe hier, wenn du den Open Loop mit der virtuellen Pumpe verwendest._
-
-**4. Objective: Starte den Closed Loop Modus mit Hypoabschaltung**
-
-  * Wähle [Closed Loop](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#closed-loop)
-  * Setze deinen Zielbereich, um sicher zu gehen, ein wenig höher als üblich.
-  * Sehe dir an wie die temp. Basalraten aktiv sind, indem du die blaue Linie auf der Homescreen Grafik, oder in Zahlen darüber kontrollierst.
-  * Gehe sicher, dass deine Einstellungen korrekt sind, wenn du über 5 Tage keinen Unterzucker mehr behandeln musstest, sollten die Einstellungen in Ordnung sein. Im anderen Falle solltest du deine Faktoren noch einmal kontrollieren.
-<br><br>_Das System ist auf einen maxIOB von 0 begrenzt, d.h. dass der Loop eine Hypo abfangen kann, aber keine Steigungen, das System kann die BR nur erhöhen wenn der IOB unter 0 liegt und dadurch auf 0 bringen.._
- 
-**5. Objective: Starte den Closed Loop Modus mit automatischer Korrektur bei Werten außerhalb des Zielbereichs**
-
-  * Erhöhe die Sicherheitseinstellung: Konfigurations-Generator > APS > AMA oder SMB > "MaximalesBasal-IOB, das OpenAPS abgeben darf" (in OpenAPS "maxIOB" genannt) auf über 0 über einen Zeitraum von einem Tag. Dieser Wert bestimmt, bis zu welchem IOB-Wert AAPS im Closed Loop Modus regeln darf. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann macht der Loop zunächst nichts, bis die IOB-Grenze wieder unterschritten ist. Standardmäßig wird zu Beginn eine Einstellung auf 2 vorgeschlagen, aber du solltest dich langsam rauf arbeiten bis du weißt, welcher Wert für dich in Ordnung ist. Das ist sehr individuell und hängt stark vom durchschnittlichen Insulinbedarf ab. Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als "hard limit" den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
-  * Wenn du dir mit deiner Einstellung sicher bist, verringere deinen Ziel-BZ-Wert schrittweise auf deinen gewünschten Zeilbereich/Zielwert.
-  * Das System erlaubt dir den Zielbereich im Bereich von 60-180 zu setzen.
- 
-**6. Objective: Justiere die Basalraten und Faktoren nach und aktiviere die Empfindlichkeitserkennung**
-
-  * Du kannst [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) verwenden, um deine Basalrate und Faktoren zu kontrollieren oder einen altmodischen Basalratentest machen. Siehe auch [Diabetes-Therapie fürs Loopen tunen](http://androidaps.readthedocs.io/en/latest/DE/tippstricks.html#diabetes-therapie-furs-loopen-tunen)
-  * Aktiviere die Empfindlichkeitserkennung [Autosens](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#empfindlichkeitserkennung) über einen Zeitraum von 7 Tagen und kontrolliere die weiße Linie im Homescreen (Sen-Kästchen aktiviert), um zu sehen wie sich deine Sensitivität ändert, und kontrolliere regelmäßig im OpenAPS Tab wie AAPS deine Basalraten und Faktoren ändert. Autosens beginnt erst einige Stunden nach der Aktivierung zu wirken (je nachdem, welchen Zeitraum du ausgewählt hast), damit genügend Daten vorhanden sind. Wundere dich also nicht, wenn nach der Aktivierung im OpenAPS-Reiter erstmal "Autosens deactivated" erscheint.
-
-    _Trage dich bitte in diese [Liste](http://bit.ly/nowlooping) ein und wähle AAPS als deine DIY Software aus._
- 
-**7. Objective: Aktiviere AMA**
-
-  * Nun solltest du dich mit AAPS sicher fühlen und wissen, welche Einstellungen für deinen Diabetes am besten passen. 
-  * Über einen Zeitraum von 14 Tagen kannst du den Advanced Meal Assist - AMA ausprobieren. Gehe dazu in den Konfigurations-Generator > APS und aktiviere OpenAPS AMA.
-
-**8. Objective: Probiere den SMB aus**
-
-  * Nun sollte AMA stabil laufen. Deine Blutzuckerwerte sollten auf Grund der feingetunten Faktoren und Sicherheitsvariablen gut eingestellt sein. 
-  * Über einen Zeitraum von 14 Tagen kannst du den Advanced Meal Assist - AMA ausprobieren. Gehe dazu in den Konfigurations-Generator > APS und aktiviere OpenAPS SMB.
+Weitere Informationen findest du unter [AndroidAPS nutzen > Beschränkungen (objectives)](https://androidaps.readthedocs.io/en/latest/DE/benutzung/beschraenkungen.html)
 
 ## Behandlungen
 Wenn du Behandlungen als sichtbar markiert hast, kannst du im "Behandlungen"-Reiter in AAPS alle einzelnen **Behandlungsdaten sehen** (Bolus, verlängerter Bolus, temporäre Basalraten, temporäres Ziel, Profilwechsel, Careportal-Einträge). All diese Daten werden grundsätzlich zu deiner Nightscout-Website hochgeladen. 
@@ -427,25 +193,7 @@ Wenn du an dieser Stelle **Kohlenhydrate** eingibst (z.B. zur Korrektur), dann w
 ### SMS-Kommunikator
 Wenn du diese Option aktivierst (linker Haken), dann kann AAPS bestimmte Befehle per SMS erhalten. Dies ist sinnvoll z.B. bei Kindern, die von ihren Eltern überwacht und behandelt werden.
 
-Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
-
-In AndroidAPS gehe zu Konfigurations-Generator > Generell > SMS-Kommunikator  und trage unter Einstellungen (Zahnrädchen) die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden. 'Erlaube externe Befehle per SMS' muss außerdem aktiviert werden.
-
-Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem AndroidAPS installiert ist. Sende dazu eines der folgenden **fettgedruckten** Kommandos und das Handy wird mit einer Erfolgsmitteilung oder dem angeforderten Status antworten. 
-
-* **BG**: Letzter Blutzucker 125 vor 4min, Delta: -12mg/dl, IOB: 0.20E (Bolus: 0.10E Basal: 0.10E)
-* **LOOP STOP/DISABLE**: Das „Loopen“ wurde deaktiviert
-* **LOOP START/ENABLE**: Das „Loopen“ wurde aktiviert.
-* **LOOP STATUS**: Das „Loopen“ ist deaktiviert / Das „Loopen“ ist aktiviert / Pausiert (10 min)
-* **LOOP SUSPEND 20**: Das „Loopen“ wird für 20 Minuten unterbrochen. 
-* **LOOP RESUME**: Das „Loopen“ fortsetzen
-* **TREATMENTS REFRESH**: Geräte aktualisieren 1 Empfänger
-* **NSCLIENT RESTART**: NSCLIENT restarten 1 Empfänger
-* **DANAR**: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
-* **BASAL STOP/CANCEL**: Um die temporäre Basalrate zu stoppen, antworte mit dem Code EmF
-* **BASAL 0.3**: Um eine Basalrate von 0.3E/h zu starten, antworte mit Code Swe, Ferngesteuerte Basalraten-Einstellungen sind nicht erlaubt (wenn ferngesteuerte Kommandos nicht erlaubt sind)
-* **BOLUS 1.2**: Um einen Bolus vo 1.2E abzugeben, antworte mit Code Rrt, Ferngesteuerte Boli sind nicht erlaubt (wenn ferngesteuerte Kommandos nicht erlaubt sind)
-* **CAL 126**: Um Kalibrierungswert von 126 zu senden, antworte mit Code Rrt, Kalibrierung gesendet (wenn xSrip installiert ist. Kallibrierungen zu akzeptieren, muss in xDrip+ aktiviert sein)
+Weitere Informationen findest du unter [AndroidAPS nutzen > SMS-Befehle](https://androidaps.readthedocs.io/en/latest/DE/benutzung/sms-befehle.html)
 
 **Sicherheitshinweise zur SMS-Steuerung**
 
@@ -481,6 +229,8 @@ AAPS sendet alle aktuellen Daten erneut an die Smartwatch. Dies kann hilfreich s
 **Öffne Einstellungen auf der Uhr**
 
 Dies öffnet über das Smartphone die Einstellungen auf der Uhr.
+
+Weitere Informationen findest du unter [AndroidAPS einrichten > Smartwatch-Integration](https://androidaps.readthedocs.io/en/latest/DE/konfiguration/smartwatch.html)
 
 ### xDrip+ Statuszeile (Uhr)
 Falls du auf deiner Smartwatch nicht das AAPS/AAPSv2-Ziffernblatt verwendest, sondern das Ziffernblatt von xDrip+, dann kannst du hier auswählen, dass auf den xDrip+ Ziffernblatt Informationen von AAPS erscheinen sollen.
