@@ -41,7 +41,16 @@ Dieses Profil ermöglicht nur ein ganz simples Behandlungsschema mit **ganztägi
 Hier wird zunächst das in der **Pumpe hinterlegte Profil 1** ausgelesen (weitere Pumpen-Profile werden ignoriert). Sobald "Lokales Profil" ausgewählt ist, erscheint in AAPS ein neuer Reiter, wo du dann die aus der Pumpe ausgelesenen Profildaten ggf. verändern kannst. Mit dem nächsten Profilwechsel werden sie dann auf die Pumpe ins Profil 1 geschrieben.
 
 ## Insulin
-Hier musst du auswählen, welchen **Insulintyp** du verwendest. AAPS muss für die Berechnungen des Algorythmus wissen, wie es in deinem Körper wirkt. Dabei spielt es eine große Rolle, zu welchem Zeitpunkt das Wirkmaximum (= max peak) erreicht wird und wie lange das Insulin im Körper aktiv ist (= DIA - duration of insulin action). Für die gängigen Analog-Insuline sind die Wirkprofile zum Wirkmaximum hinterlegt. Die Dauer der Insulinwirkung (DIA) kannst du in deinen Profileinstellungen manuell ändern, allerdings muss sie mindestens 5h betragen.
+Hier musst du auswählen, welchen **Insulintyp** du verwendest. AAPS muss für die Berechnungen des Algorythmus wissen, wie es in deinem Körper wirkt. Dabei spielt es eine große Rolle, zu welchem Zeitpunkt das Wirkmaximum (= max peak) erreicht wird und wie lange das Insulin im Körper aktiv ist (= DIA - duration of insulin action). Für die gängigen Analog-Insuline sind die Wirkprofile zum Wirkmaximum hinterlegt. 
+
+* Humalog 
+* Novorapid
+* Novolog
+* FIASP
+
+Für andere Insuline oder Mischungen verschiedener Insuline kannst du in AndroidAPS auch manuell das Wirkmaximum angeben (Wirkprofil "free-peak Oref").
+
+Die **Dauer der Insulinwirkung (DIA)** kannst du in deinen Profileinstellungen manuell ändern, allerdings muss sie mindestens 5h betragen.
 
 ![DIA Erklärung von diabettech.com](https://i1.wp.com/www.diabettech.com/wp-content/uploads/2017/07/DIA-Clamp.jpg?w=400)
 
