@@ -25,13 +25,4 @@ and then checkout
 On the tray you'll see green message about updated project
 
 ## Upload to phone
-* Connect phone now
-* Press "Play" button on top toolbar
-
-![](images/play.png)
-
-* Select connected phone and press OK
-
-![](images/connectedphone.png)
-
-
+Generate signed apk as described in <Building-APK.md>
