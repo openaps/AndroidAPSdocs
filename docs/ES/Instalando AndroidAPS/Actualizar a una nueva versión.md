@@ -27,7 +27,7 @@ a continuación salga
 Verás un aviso de proyecto actualizado
 
 ## Súbela a tu móvil 
- * vea: [Compilando la APK](Compilando la APK.md)
+ * vea: [Compilando la APK](Compilando%20la%20APK.md)
 
 
 
