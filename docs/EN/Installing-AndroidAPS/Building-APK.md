@@ -18,7 +18,7 @@
 
 * Set a keystore and password, if this is your first time then Create new, or fill in the details of your existing one.  For more information about using the keystore see [https://developer.android.com/studio/publish/app-signing.html#generate-key](https://developer.android.com/studio/publish/app-signing.html#generate-key)
 
-!()[https://github.com/gempickfordwaugh/AndroidAPS/raw/b09d7dc444f59b799888bcd596e36e1d562a9674/generate%20signed%20APK.png]
+![](https://github.com/gempickfordwaugh/AndroidAPS/raw/b09d7dc444f59b799888bcd596e36e1d562a9674/generate%20signed%20APK.png)
 
 * 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
 * Select the build type you want to build. 
@@ -33,7 +33,7 @@
 
 * Please wait for some time until the APK is created. You will get the pop-up below when the process is done.
 
-[[https://github.com/MilosKozak/AndroidAPS/wiki/images/androidstudio3.png]]
+![](https://github.com/MilosKozak/AndroidAPS/wiki/images/androidstudio3.png)
 
 * Click on 'Show in Explorer'. You'll find the APK is generated, sometimes it may take time to display.
 
