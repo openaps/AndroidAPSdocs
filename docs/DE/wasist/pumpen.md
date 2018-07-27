@@ -10,9 +10,9 @@ AndroidAPS kann derzeit mit folgenden Insulinpumpen im Closed Loop Modus genutzt
 * Omnipod (`in der Entwicklung <http://www.openomni.org/>`_)
 
 ## Open Loop
-In Deutschland sind alle genannten "loopbaren" Insulinpumpen auf dem Markt erhältlich. Unter https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0 finden sich Bezugsquellen. Die Liste darf jederzeit ergänzt werden. Informationen über weitere in Zukunft ggf. loopbare Insulinpumpen: http://androidaps.readthedocs.io/en/latest/Getting-Started/Future-possible-Pump-Drivers.html (englisch)
+In Deutschland sind alle genannten "loopbaren" Insulinpumpen auf dem Markt erhältlich. Unter [https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0) finden sich Bezugsquellen. Die Liste darf jederzeit ergänzt werden. Informationen über weitere in Zukunft ggf. loopbare Insulinpumpen: [http://androidaps.readthedocs.io/en/latest/Getting-Started/Future-possible-Pump-Drivers.html (englisch)](http://androidaps.readthedocs.io/en/latest/Getting-Started/Future-possible-Pump-Drivers.html)
 
-Wenn du eine **nicht unterstützte Pumpe** hast oder mit **Intensivierter konventioneller Therape (ICT)** eingestellt bist, dann kannst du AndoridAPS (in Verbindung mit einem CGM/FGM) zumindest im  `Open Loop <http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#open-loop>`_ Modus verwenden. In diesem Fall musst du aber alle Therapievorschläge der App von Hand umsetzen.
+Wenn du eine **nicht unterstützte Pumpe** hast oder mit **Intensivierter konventioneller Therape (ICT)** eingestellt bist, dann kannst du AndoridAPS (in Verbindung mit einem CGM/FGM) zumindest im  Open Loop <https://androidaps.readthedocs.io/en/latest/DE/konfiguration/konfigurations-generator.html#loop> Modus verwenden. In diesem Fall musst du aber alle Therapievorschläge der App von Hand umsetzen.
 
 ## Dana oder Combo?
 

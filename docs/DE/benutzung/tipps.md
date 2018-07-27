@@ -46,11 +46,3 @@ Andere Tipps und Tricks kann man in der [Facebook Gruppe](https://www.facebook.c
 
 ## Diabetes-Therapie fürs loopen tunen
 [...]
-
-## Beispiel-Setups
-
-.. toctree::
-   :maxdepth: 4
-   :glob:
-
-   Galaxy-S7-DanaR-Dexcom-G5-und-SWR50

@@ -117,7 +117,7 @@ Hier stellst du ein, bis zu welchem Faktor Autosens dein aktuelles Profil absenk
 
 Standardwert: 0.7
 
-### Sensitivität Oref1
+## Sensitivität Oref1
 Der Algorythmus "Oref1" ist die neueste Version der OpenAPS-Empfindlichkeitserkennung. Sie rechnet immer anhand der Daten der vergangenen 8 Stunden. Dieser Algorythmus erkennt nicht eingegebene Kohlenhydrate ("unattended meals" = UAM) und fängt sie ab. 
 
 Eine Einführung zu Oref1 findest du hier: https://diyps.org/2017/04/30/introducing-oref1-and-super-microboluses-smb-and-what-it-means-compared-to-oref0-the-original-openaps-algorithm/ (englisch)

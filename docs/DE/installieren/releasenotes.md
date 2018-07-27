@@ -6,8 +6,8 @@ Erscheinungsdatum: xx.xx.2018
 
 ### Neue Funktionen
 
-* oref1/SMB wird unterstützt ([Oref1-Dokumentation](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#sensitivitat-oref1), [SMB-Dokumentation](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#smb)). Bitte lies zuerst die Dokumentation, damit du weißt was du davon erwarten kannst, wie es funktioniert, was der SMB erreichen kann und wie er zu benutzen ist, damit er gut arbeitet.
-* Accu-Chek Combo Insulinpumpe wird unterstützt ([Einrichtungs-Anleitung](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#akku-chek-combo))
+* oref1/SMB wird unterstützt ([Oref1-Dokumentation](https://androidaps.readthedocs.io/en/latest/DE/konfiguration/empfindlichkeitserkennung-und-cob.html#sensitivitat-oref1), [SMB-Dokumentation](https://androidaps.readthedocs.io/en/latest/DE/benutzung/openaps.html#smb)). Bitte lies zuerst die Dokumentation, damit du weißt was du davon erwarten kannst, wie es funktioniert, was der SMB erreichen kann und wie er zu benutzen ist, damit er gut arbeitet.
+* Accu-Chek Combo Insulinpumpe wird unterstützt ([Einrichtungs-Anleitung](https://androidaps.readthedocs.io/en/latest/DE/konfiguration/akku-chek-combo.html))
 * Setup Wizard: der neue Assistent führt dich durch die Einrichtung von AndroidAPS 
 
 ### Einstellungen, die bei Umstellung von AMA zu SMB erforderlich sind
@@ -19,7 +19,7 @@ Erscheinungsdatum: xx.xx.2018
 ### Übersicht / Home-Screen
 
 * Im oberen Menüband kannst du durch langen Fingerdruck den Loop pausieren oder deaktivieren, die Pumpe trennen, das aktuelle Profil anzeigen und einen Profilwechsel machen, temporäre Ziele (temp targets - TT) einstellen. Die temporären Ziele verwenden Standardwerte, die du in den Einstellungen festlegen kannst. Das neue Standard-Ziel "HypoTT" löst ein temporäres Ziel im höheren BZ-Bereich aus, damit der Loop nicht überreagiert nachdem du Korrektur-Kohlenhydrate gegessen hast.
-* Neue Behandlungs-Schaltfläche: die alte Behandlungs-Schaltfläche ist weiterhin verfügbar, aber standardmäßig deaktiviert. Du kannst jetzt selbst einstellen, welche Schaltflächen du auf dem Home-Screen haben willst. Es gibt neue Schaltflächen für: Insulin, Kohlenhydrate (einschließlich [eCarbs/extended carbs](http://androidaps.readthedocs.io/en/latest/EN/Usage/Extended-Carbs.html))
+* Neue Behandlungs-Schaltfläche: die alte Behandlungs-Schaltfläche ist weiterhin verfügbar, aber standardmäßig deaktiviert. Du kannst jetzt selbst einstellen, welche Schaltflächen du auf dem Home-Screen haben willst. Es gibt neue Schaltflächen für: Insulin, Kohlenhydrate (einschließlich [eCarbs/extended carbs](https://androidaps.readthedocs.io/en/latest/DE/benutzung/ecarbs.html))
 * Farbige Vorhersage-Linien:
   * Orange: COB
   * Dunkelblau: IOB
