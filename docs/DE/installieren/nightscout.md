@@ -6,20 +6,20 @@ Es gibt folgende Möglichkeiten, solch eine Seite zu erstellen und zu betreiben:
 ## ns.10be.de
 Dieser Server steht in Deutschland und wird von Looper Martin Schiftan derzeit kostenlos angeboten. Sämtliche Einstellungen lassen sich auf der Administrations-Website komfortabel vornehmen. Die Basalraten werden dort automatisch mit Autotune ausgewertet.
 
-http://ns.10be.de/de/index.html 
+[http://ns.10be.de/de/index.html ](http://ns.10be.de/de/index.html)
 
 ## Heroku
 Über Heroku kannst du von Hand selbst eine Nightscout-Website mit Datenbank hosten. Die kostenlosen Server stehen im Ausland und müssen von Hand konfiguriert werden.
 
 ### Heroku-Seite einrichten
-http://www.heroku.com
-http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku
+[http://www.heroku.com](http://www.heroku.com)
+[http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku)
   
 Tipp: Alle Zugangsdaten auf einem Zettel oder in einer Textdatei notieren!
 
 ### Heroku-Variablen einrichten
 
-* Auf https://herokuapp.com/ einloggen
+* Auf [https://herokuapp.com/](https://herokuapp.com/) einloggen
 * App-Namen auswählen
 * Settings > Schaltfläche "Reveal Config Vars" anklicken
 * Variablen hinzufügen oder wie folgt ändern:
