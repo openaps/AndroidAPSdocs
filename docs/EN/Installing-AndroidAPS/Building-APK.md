@@ -8,7 +8,8 @@ This article is divided into two parts.
 
 In general description of the steps necessary to build the APK file.
 
-* Install and setup Android Studo.
+* Install git
+* Install and setup Android Studio.
 * Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
 * Open the cloned project in Android Studio as active project.
 * Build the signed APK.
@@ -18,6 +19,10 @@ In general description of the steps necessary to build the APK file.
 
 Detailed description of the steps necessary to build the APK file.
 
+* Install git
+  * [Windows](https://gitforwindows.org/)
+  * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
+  * Linux - just install a package git via package manager of your distribution
 * Install [Android Studio](https://developer.android.com/studio/install.html).
 * Setup  Android Studio during first start
 
@@ -179,7 +184,7 @@ A file manager window opens. It might look a bit different at your system as I a
 Please change to the directoy AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the selfsigned app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 ![Screenshot 48](../../images/Installation_Screenshot_48.png)
 
-Sorry for the german screenshots here. We will replace them asap when we get englisch ones. For the explanation in Settings of your smartphone their is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+In Settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
 ![Screenshot 49](../../images/Installation_Screenshot_49.png)
 
 Select "Allow from this source".
