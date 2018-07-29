@@ -57,13 +57,9 @@ After the downloads are completed click the "Finish" button.
 
 
 * Use git clone in Android Studio as shown in screenshots below.
-Select "Check out project from Version Control" with "Github" as concrete version control system.
+Select "Check out project from Version Control" with "Git" as concrete version control system.
 ![Screenshot 10](../../images/Installation_Screenshot_10.png)
-![Screenshot 11](../../images/Installation_Screenshot_11.png)
-
-Login to Github with your account information of user-id and password.
-To make login next time easier you can select "save credentials" though he remembers your login information.
-![Screenshot 12](../../images/Installation_Screenshot_12.png)
+![Version_Control_Git](../../images/Version_Control_Git.png)
 
 Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 ![Screenshot 13](../../images/Installation_Screenshot_13.png)
@@ -181,7 +177,7 @@ Click the "locate" link in the event log.
 A file manager window opens. It might look a bit different at your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. Anyway there you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching.
 ![Screenshot 47](../../images/Installation_Screenshot_47.png)
 
-Please change to the directoy AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the selfsigned app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Please change to the directoy AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. bluetooth, cloud upload or email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the selfsigned app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 ![Screenshot 48](../../images/Installation_Screenshot_48.png)
 
 In Settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
