@@ -11,7 +11,6 @@ In general description of the steps necessary to build the APK file.
 * Install and setup Android Studo.
 * Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
 * Open the cloned project in Android Studio as active project.
-* Configure the build variants.
 * Build the signed APK.
 * Transfer the signed APK to your smartphone.
 
@@ -131,20 +130,7 @@ The build is running again.
 ![Screenshot 33](../../images/Installation_Screenshot_33.png)
 
 Yeah, the first build is successful but we are not finished.
-As you can see a debug version was created. We will change this in the next step.
 ![Screenshot 34](../../images/Installation_Screenshot_34.png)
-
-Select "Build Variants" to change the variants Android Studio builds.
-![Screenshot 35](../../images/Installation_Screenshot_35.png)
-
-You see that at the moment the debug variants are selected.
-![Screenshot 36](../../images/Installation_Screenshot_36.png)
-
-Change these dropdown fields to "fullRelease" and "release".
-![Screenshot 37](../../images/Installation_Screenshot_37.png)
-
-Yes, the corrected variants have been build. We only have to sign them now.
-![Screenshot 38](../../images/Installation_Screenshot_38.png)
 
 Select in the menu "Build" and then "Generate signed APK...".
 Signing means as in real life the you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That's necessary because Android has a rule that it only ecepts to run signed code for security reasons. If you are more interested in this topic you can read [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) but security is a deep and complex topic and you don't need this now.
