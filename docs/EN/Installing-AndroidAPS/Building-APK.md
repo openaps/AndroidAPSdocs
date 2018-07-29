@@ -59,7 +59,7 @@ After the downloads are completed click the "Finish" button.
 * Use git clone in Android Studio as shown in screenshots below.
 Select "Check out project from Version Control" with "Git" as concrete version control system.
 ![Screenshot 10](../../images/Installation_Screenshot_10.png)
-![Version_Control_Git](https://github.com/MarieT1D/AndroidAPSdocs/blob/master/docs/images/Version_Control_Git.png)
+![Version_Control_Git](../../images/Version_Control_Git.png)
 
 Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 ![Screenshot 13](../../images/Installation_Screenshot_13.png)
