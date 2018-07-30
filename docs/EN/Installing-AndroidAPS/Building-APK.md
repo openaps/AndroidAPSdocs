@@ -2,7 +2,7 @@
 
 This article is divided into two parts.
 * In the overview part you will get the explanation on what steps are necessary in general to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Another reason is that Android Studio is runing on Windows, Mac OS X and Linux and their might be smaller differences in some apsects. If you find something important wrong or missing please inform the facebook group "AndroidAPS users" so that we can have a look on this.
+* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Another reason is that Android Studio is running on Windows, Mac OS X and Linux and their might be smaller differences in some aspects. If you find something important wrong or missing please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look on this.
 
 ## Overview
 
@@ -165,7 +165,7 @@ Yeah, the first build is successful but we are not finished.
 
 ![Screenshot 34](../../images/Installation_Screenshot_34.png)
 
-Select in the menu "Build" and then "Generate signed APK...".
+Select in the menu "Build" and then "Generate Signed APK...".
 Signing means as in real life the you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That's necessary because Android has a rule that it only ecepts to run signed code for security reasons. If you are more interested in this topic you can read [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) but security is a deep and complex topic and you don't need this now.
 
 ![Screenshot 39](../../images/Installation_Screenshot_39.png)
@@ -225,10 +225,10 @@ In Settings of your smartphone there is an area "unknown apps install" where I h
 
 ![Screenshot 49](../../images/Installation_Screenshot_49.png)
 
-Select "Allow from this source".
+Select "Allow from this source". After the installation, you can disable it again.
 
 ![Screenshot 50](../../images/Installation_Screenshot_50.png)
 
 The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
 
-Yeah, you got it and can now start with configuring AndroidAPS for our use (CGMS, insulin pump) etc.
+Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
