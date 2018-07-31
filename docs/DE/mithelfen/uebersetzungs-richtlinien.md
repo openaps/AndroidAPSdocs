@@ -68,10 +68,10 @@ wenn es durch `dieses`, `welches` oder `jenes` ersetzt werden kann.
 * Falsche Bildung des Imperatives. Imperative werden immer mit einem **`i`** gebildet!
 
 ## Begrifflichkeiten
+**[Betrachte diese Seite auf GitHub für eine korrekte Darstellung der Tabelle](https://github.com/openaps/AndroidAPSdocs/blob/master/docs/DE/mithelfen/uebersetzungs-richtlinien.md)**
+
 Diese Tabelle listet eine Reihe von Begriffen und deren bevorzugten Schreibweisen **fett markiert** auf.
-
 Desweiteren sind alle Schreibweisen, falls überhaupt nötig, mit dem jeweiligen Artikel gekennzeichnet.
-
 Für `das temporäre Ziel` lautet diese `das Temp Target`, was bedeutet, dass die Letztere stattdessen genutzt werden sollte.
 
 | Begriff                                    	| Abkürzung           	|
