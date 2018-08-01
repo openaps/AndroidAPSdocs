@@ -12,7 +12,7 @@ Um zu verstehen, wie Autosens zu den Ergebnissen kommt, kannst du zum Reiter "Op
     * `=` Die erkannte Sensitivität stimmt mit der eingestellten überein
     * `+` Du warst resistenter auf Insulin als eingestellt (brauchtest also mehr Insulin als gedacht)
     * `-` Du warst sensibler auf Insulin als eingestellt (brauchtest also weniger Insulin als gedacht)
-    * `C` Du hattest Kohlenhydrate an Bord (COB), diese Zeit wird ausgespart
+    * `x` / `C` Du hattest Kohlenhydrate an Bord (COB), diese Zeit wird ausgespart
     * `u` Du hattest nicht eingegebene Kohlenhydrate an Bord (unattended meal - UAM), diese Zeit wird ausgespart
     
 * **sensResult**:

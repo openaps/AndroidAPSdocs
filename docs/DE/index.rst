@@ -3,7 +3,12 @@ Herzlich willkommen zur AndroidAPS-Dokumentation
 
 AndroidAPS steht für "Android Artificial Pancreas System", es handelt sich um eine **App für Android Smartphones**, die als **künstliche  Bauchspeicheldrüse** fungiert. Sie kann mit bestimmten bluetoothfähigen Insulinpumpen und Glukose-Messsystemen kommunizieren. Mit Hilfe der OpenAPS-Algorithmen "Oref0"/"Oref1" ist die App in der Lage, den Blutzuckerspiegel bei insulinpflichtigem Diabetes automatisch zu regeln, sofern alle verzehrten Kohlenhydrate eingepflegt werden (sog. Hybrid Closed Loop).
 
+
+
+
+
 Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur Verfügung. Es gibt auch keinen kommerziellen Support. Dafür gibt es aber eine sehr rege Community, die Dir helfen kann. Informationen wie Du sie kontaktieren kannst, findest Du unter http://androidaps.readthedocs.io/en/latest/DE/community.html . Der Quellcode ist jedoch kostenlos und frei verfügbar. Daraus können Interessierte sich im "Eigenbau" selbst auf eigene Verantwortung die App erstellen (strictly **do it yourself** - DIY). 
+
 
 Ein konkretes **Beispiel**, wie du dir ein Closed loop System selbst bauen kannst, findest du unter https://androidaps.readthedocs.io/en/latest/DE/benutzung/setups.html
 
@@ -43,7 +48,7 @@ Was ist AndroidAPS?
    :glob:
    
    Sicherheitshinweise </DE/wasist/sicherheitshinweise.md>
-   Screenshots </DE/wasist/screenshots.md>
+   AndroidAPS-Bildschirme </DE/wasist/screenshots.md>
    Smartphones </DE/wasist/smartphones.md>
    Insulinpumpen </DE/wasist/pumpen.md>
    Zukünftig ggf. loopbare Pumpen  </DE/wasist/pumpenzukunft.md>
