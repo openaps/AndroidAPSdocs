@@ -35,7 +35,7 @@ eine **weniger wortwörtliche Übersetzung zu finden**, die aber dennnoch **dens
 
 Aus `Max daily safety multiplier` ist beispielsweise `Sicherheitsmultiplikator des Basalhöchstwertes` geworden.
 
-Schreibe in einem solchen aber noch einmal die **englische Version in Klammern dahinter**, um den Support nicht zu behindern.
+Schreibe dann aber noch einmal die **englische Version in Klammern dahinter**, um den Support nicht zu behindern.
 
 ## Anglizismen
 Anglizismen sind Wörter, die eigentlich **aus dem Englischen stammen**, aber zunehmends auch **im deutschen Sprachgebrauch auftreten**.
@@ -68,7 +68,7 @@ wenn es durch `dieses`, `welches` oder `jenes` ersetzt werden kann.
 * Falsche Bildung des Imperatives. Imperative werden immer mit einem **`i`** gebildet!
 
 ## Begrifflichkeiten
-**[Betrachte diese Seite auf GitHub für eine korrekte Darstellung der Tabelle](https://github.com/openaps/AndroidAPSdocs/blob/master/docs/DE/mithelfen/uebersetzungs-richtlinien.md)**
+**[Betrachte diese Seite auf GitHub für eine korrekte Darstellung der Tabelle.](https://github.com/openaps/AndroidAPSdocs/blob/master/docs/DE/mithelfen/uebersetzungs-richtlinien.md)**
 
 Diese Tabelle listet eine Reihe von Begriffen und deren bevorzugten Schreibweisen **fett markiert** auf.
 Desweiteren sind alle Schreibweisen, falls überhaupt nötig, mit dem jeweiligen Artikel gekennzeichnet.

@@ -1,11 +1,14 @@
 Herzlich willkommen zur AndroidAPS-Dokumentation
 ===================
 
-AndroidAPS steht für "Android Artificial Pancreas System", ist also eine **App für Android Smartphones**, die als **künstliche  Bauchspeicheldrüse** fungiert. Sie kann mit bestimmten bluetoothfähigen Insulinpumpen und Blutzucker-Mess-Systemen kommunizieren. Mit Hilfe der OpenAPS-Algorithmen "Oref0"/"Oref1" ist die App in der Lage, den Blutzuckerspiegel bei insulinpflichtigem Diabetes automatisch zu regeln, sofern alle gegessenen Kohlenhydrate eingegeben werden (sog. Hybrid closed loop).
+AndroidAPS steht für "Android Artificial Pancreas System", es handelt sich um eine **App für Android Smartphones**, die als **künstliche  Bauchspeicheldrüse** fungiert. Sie kann mit bestimmten bluetoothfähigen Insulinpumpen und Glukose-Messsystemen kommunizieren. Mit Hilfe der OpenAPS-Algorithmen "Oref0"/"Oref1" ist die App in der Lage, den Blutzuckerspiegel bei insulinpflichtigem Diabetes automatisch zu regeln, sofern alle verzehrten Kohlenhydrate eingepflegt werden (sog. Hybrid Closed Loop).
 
-Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur Verfügung. Der Quellcode ist jedoch kostenlos und frei verfügbar. Daraus können Interessierte sich im "Eigenbau" selbst und auf eigene Verantwortung die App erstellen (strictly **do it yourself** - DIY). 
 
-Es gibt auch **keinen kommerziellen Support**. Dafür gibt es aber eine sehr rege Community, die Dir helfen kann. Informationen wie Du sie kontaktieren kannst, findest Du unter http://androidaps.readthedocs.io/en/latest/DE/hilfe/community.html . 
+
+
+
+Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur Verfügung. Es gibt auch keinen kommerziellen Support. Dafür gibt es aber eine sehr rege Community, die Dir helfen kann. Informationen wie Du sie kontaktieren kannst, findest Du unter http://androidaps.readthedocs.io/en/latest/DE/community.html . Der Quellcode ist jedoch kostenlos und frei verfügbar. Daraus können Interessierte sich im "Eigenbau" selbst auf eigene Verantwortung die App erstellen (strictly **do it yourself** - DIY). 
+
 
 Ein konkretes **Beispiel**, wie du dir ein Closed loop System selbst bauen kannst, findest du unter https://androidaps.readthedocs.io/en/latest/DE/benutzung/setups.html
 
@@ -14,29 +17,29 @@ Ein konkretes **Beispiel**, wie du dir ein Closed loop System selbst bauen kanns
 Die Ziele, die zur Entstehung führten:
 
 - App mit „modularer Basis“, es soll leicht sein, neue Module hinzuzufügen
-- Eine App, bei der es bei der Erstellung möglich ist zu entscheiden, welche Funktionen die App später hat (Wear Control, NsClient)
+- Eine App, bei der es bei der Erstellung möglich ist zu entscheiden, welche Funktionen die App später haben soll (Wear Control, NSClient)
 - Eine App, die es ermöglicht, einen Open- oder Closed-Loop-Modus zu wählen
 - Eine App, die die Funktionen eines APS (Automatic Pancreas System) visualisiert (Parameter, Ergebnis und Umsetzung)
 - Die Möglichkeit, andere Algorithmen zu verwenden
-- Eine „Virtuelle Pumpe“, mit der man „herumspielen“ kann, bevor man startet
+- Eine „Virtuelle Pumpe“, mit der man alles ausprobieren kann, bevor man startet
 - Eine App mit enger Nightscout-Integration
 - Die Möglichkeit zum Hinzufügen/Entfernen von Beschränkungen
-- Eine App, die alles enthält, um mit dem Diabetes klar zu kommen (APS+Nightscout)
+- Eine App, die alles enthält, um mit dem Diabetes zurechtzukommen (APS+Nightscout)
 
 **Was man benötigt**
 
-Um AndroidAPS nutzen zu können, solltest du insulinpflichtiger Diabetiker sein ;-) und brauchst außerdem folgende Komponenten:
+Um AndroidAPS nutzen zu können, solltest du insulinpflichtiger Diabetiker sein ;-) und du brauchst außerdem folgende Komponenten:
 
 - **Android Smartphone** (5.1 oder neuer). 
-- **loopfähige Insulinpumpe** (für Closed Loop), z.B. DanaR, DanaRS, Akku-Chek Combo, Akku-Chek Inside (in der Entwicklung) oder - **andere Insulinpumpe/ICT** (für Open Loop mit virtueller Pumpe)
+- **loopfähige Insulinpumpe** (für Closed Loop), z.B. DanaR, DanaRS, Accu-Chek Combo, Accu-Chek Insight (in der Entwicklung) oder - **andere Insulinpumpe/ICT** (für Open Loop mit virtueller Pumpe)
 - **Analog-Insulin**
-- **kontinuierliches Blutzuckermess-System** (CGM/FGM), z.B. Dexcom G4/G5/G6, Freestyle Libre mit Bluetooth-Aufsatz, Eversense oder Medtronic Guardian
+- **kontinuierliches Glukose-Messsystem** (CGM/FGM), z.B. Dexcom G4/G5/G6, Freestyle Libre mit Bluetooth-Aufsatz, Eversense oder Medtronic Guardian
 - **AndroidAPS** zur Auswertung aller Daten und Steuerung deines Diabetesmanagements
-- **App zur Weitergabe der BZ-Daten an AndroidAPS**, z.B. xDrip/xDrip+, Dexcom G5 App (patched), Glimp, PoctechApp, 600SeriesAndroidUploader
+- **App zur Weitergabe der Glukosewerte an AndroidAPS**, z.B. xDrip/xDrip+, Dexcom G5 App (patched), Glimp, PoctechApp, 600SeriesAndroidUploader
 - **Smartwatch (optional)** zur Überwachung und Steuerung von AndroidAPS
-- **Nightscout-Website** zum Auswerten der Daten und Erstellen von Profilen (Nightscout 0.10.2 oder aktueller)
+- **Nightscout Website** zum Auswerten der Daten und Erstellen von Profilen (Nightscout 0.10.2 oder aktueller)
 - **PC-Software "Android Studio"** zum Erstellen von AndroidAPS aus dem Quellcode
-- **Gute Diabetes-Therapieeinstellungen**
+- **Gute Diabetestherapie Einstellungen**
 
 Was ist AndroidAPS?
 ----------------
