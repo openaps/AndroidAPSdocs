@@ -48,7 +48,7 @@ Was ist AndroidAPS?
    :glob:
    
    Sicherheitshinweise </DE/wasist/sicherheitshinweise.md>
-   Screenshots </DE/wasist/screenshots.md>
+   AndroidAPS-Bildschirme </DE/wasist/screenshots.md>
    Smartphones </DE/wasist/smartphones.md>
    Insulinpumpen </DE/wasist/pumpen.md>
    Zukünftig ggf. loopbare Pumpen  </DE/wasist/pumpenzukunft.md>
