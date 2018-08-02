@@ -12,7 +12,7 @@ Für die Bearbeitung ist lediglich Internet und ein Github-Account notwendig. Du
 ![edit doc](../../images/PR1.png)
 Alternativ kannst du auch rechts oben auf "Edit in Github" klicken. Daraufhin öffnet sich eine Seite. Klicke dort auf das 'Stift-Symbol'. 
 ![RTD io](../../images/PR2.png)
-3. In beiden Fällen wirst du einen "Branch" in deinem eigenen Verzeichnis in deinem Github-Account erstellen. Dort kannst du die Datei bearbeiten und sichern.
+3. In beiden Fällen wirst du damit einen eigenen "Branch" in deinem eigenen Verzeichnis in deinem Github-Account erstellen. Dort kannst du die Datei bearbeiten und sichern.
 ![Edit branch](../../images/PR3.png)
 4. Um zu überprüfen, wie später deine Änderungen im Wiki aussehen, kannst du auf "Preview changes" gehen. Wenn du noch weitere Änderungen vornehmen willst, du z.B. Rechtschreibfehler entdeckt hast, gehe zu "<>Edit file".
 ![preview mode](../../images/PR5.png)
