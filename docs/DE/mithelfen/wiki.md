@@ -26,7 +26,8 @@ Alternativ kannst du auch rechts oben auf "Edit in Github" klicken. Daraufhin ö
 Glückwunsch, damit hast du deinen ersten Beitrag zum Wiki geleistet!
 
 P.S. Deine Kopie ("fork") und dein "Branch" sind immer noch in deinem GitHub-Account vorhanden. Nachdem du die Benachrichtigung erhalten hast, dass dein PR ge"merged", also angenommen, wurde, kannst du den Branch wieder löschen ("delete"), falls du damit fertig bist.
-For future edits, if you follow this procedure the edits will always start with an updated version of the openaps repositories.  If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork.  Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+
+For future edits, if you follow this procedure the edits will always start with an updated version of the openaps repositories.If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork.  Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
 ### Tipps zum Einfügen von Bildern in die Dokumentation
 
@@ -36,7 +37,7 @@ Für den Fall, dass du einige Änderungen in dem Wiki vornimmst, das Einfügen v
 
 * Du kannst die Bilder auf folgende Art und Weise hochladen:
  
- 1. Gehe zu dem Ordner, in dem die Bilder enthalten sind (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/images) - ersetze "openaps" mit deinem Benutzername von Github und "master" mit deinem Branch (z.B. patch-1). Für den Fall, dass du noch keinen eigenen Branch hast, in dem du die Änderungen vornimmst, solltest du erst einen mithilfe der Schritte von oben erstellen.
+ 1. Gehe zu dem Ordner, in dem die Bilder enthalten sind (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/images) - ersetze "openaps" mit deinem Benutzername von Github und "master" mit deinem Branch (z.B. https://github.com/MarieT1D/AndroidAPSdocs/tree/patch-1/docs/images). Für den Fall, dass du noch keinen eigenen Branch hast, in dem du die Änderungen vornimmst, solltest du erst einen mithilfe der Schritte von oben erstellen.
  
  2. Klicke rechts in die Ecke auf "Upload files".
   ![upload file](../../images/PR-uploadfile.png)
