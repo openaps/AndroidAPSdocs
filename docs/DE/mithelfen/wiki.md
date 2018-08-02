@@ -8,7 +8,7 @@ Für die Bearbeitung ist lediglich Internet und ein Github-Account notwendig. Du
 
 1. Gehe zu  https://github.com/openaps/AndroidAPSdocs und klicke auf 'Fork' um dir deine eigene Kopie des Wikis in deinem Github-Account zu erstellen.
 ![Fork repo](../../images/PR0.png)
-2. Gehe zu http://androidaps.readthedocs.io/en/latest/DE/index.html, bzw. zu der Seite, die du bearbeiten willst. Klicke in das schwarze Feld links unten auf der Seite mit dem grünen Wort "v: latest" oder ähnlich. Dann wird sich ein Fenster öffnen. Klicke auf "edit".
+2. Gehe zu http://androidaps.readthedocs.io/en/latest/DE/index.html, bzw. zu der Seite, die du bearbeiten willst. Klicke in das schwarze Feld links unten auf der Seite mit dem grünen Wort "v: latest". Dann wird sich ein Fenster öffnen. Klicke auf "edit".
 ![edit doc](../../images/PR1.png)
 Alternativ kannst du auch rechts oben auf "Edit in Github" klicken. Daraufhin öffnet sich eine Seite. Klicke dort auf das 'Stift-Symbol'. 
 ![RTD io](../../images/PR2.png)
@@ -20,7 +20,7 @@ Alternativ kannst du auch rechts oben auf "Edit in Github" klicken. Daraufhin ö
 ![commit comments](../../images/PR4.png)
 6. Klicke auf den grünen "Propose file changes" oder "Commit changes" Button. In der Seite, die sich öffnet, klicke auf "Create Pull Request" und wiederhole den Schritt auf der nächsten Seite.
 ![create pull request](../../images/PR6.png)
-7. Damit hast du einen PR geöffnet. Du solltest deinen Pull Request nachverfolgen, um zu sehen, ob es Feedback gibt und/oder ob dein Vorschlag angenommen wurde. Falls bei dir Github-Benachrichtungen eingeschalten sind, wirst du auch per Email über Feedback informiert. Um den Fortschritt deines PR zu verfolgen, kannst du auch, sofern aktiviert, auf das Glocken-Symbol in deinem Github-Account klicken. Dort sind dann auch alle deine PRs gelistet.
+7. Damit hast du einen PR geöffnet. Du solltest deinen Pull Request nachverfolgen, um zu sehen, ob es Feedback gibt und/oder ob dein Vorschlag angenommen wurde. Falls bei dir Github-Benachrichtungen eingeschalten sind, wirst du auch per Email oder über das 'Glocken-Symbol' in deinem Github-Account über Feedback und Fortschritt informiert. 
 ![PR tracking](../../images/PR7.png)
 
 Glückwunsch, damit hast du deinen ersten Beitrag zum Wiki geleistet!
