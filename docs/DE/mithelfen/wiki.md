@@ -2,7 +2,7 @@
 
 Um das Wiki zu bearbeiten, Beiträge zu ändern oder zu ergänzen, ist ein sogenannter Pull Request, kurz PR, notwendig. Dies ist soviel wie ein Änderungsvorschlag, der von den Entwicklern übernommen (oder auch abgelehnt werden kann).
 
-(Notiz: [hier] (https://youtu.be/4b6tsL0_kzg) gibt es bereits ein YouTube-Video auf Englisch, bei dem Schritt für Schritt erklärt wird, wie ein PR funktioniert.
+(Notiz: [hier](https://youtu.be/4b6tsL0_kzg) gibt es bereits ein YouTube-Video auf Englisch, bei dem Schritt für Schritt erklärt wird, wie ein PR funktioniert.
 
 Für die Bearbeitung ist lediglich Internet, ein Github-Account notwendig. Du kannst nach folgenden Schritten vorgehen: 
 
@@ -16,11 +16,11 @@ Alternativ kannst du auch rechts oben auf "Edit in Github" klicken. Daraufhin ö
 ![Edit branch](./images/PR3.png)
 4. Um zu überprüfen, wie später deine Änderungen im Wiki aussehen, kannst du auf "Preview changes" gehen. Wenn du noch weitere Änderungen vornehmen willst, du z.B. Rechtschreibfehler entdeckt hast, gehe zu "<>Edit file".
 ![preview mode](./images/PR5.png)
-5. Nachdem du fertig bist mit den Änderungen im Wiki, scrolle ganz nach unten. In dem Feld "update make-a-PR.md", kannst du deinen Änderungen einen Titel geben, ansonsten werden die Änderungen nach dem Dateinamem benannt. In das Feld darunter kannst du noch Kommentare, Begründungen, etc. hineinschreiben. Das ist sehr hilfreich, damit auch die Entwickler und andere, die an diesem Wiki arbeiten, die Bewegsgründe deiner Änderung verstehen können.
+5. Nachdem du fertig bist mit den Änderungen im Wiki, scrolle ganz nach unten. In dem Feld "update make-a-PR.md", kannst du deinen Änderungen einen Titel geben, ansonsten werden die Änderungen nach dem Dateinamem benannt. In das Feld darunter kannst du noch Kommentare, Begründungen, etc. hineinschreiben. Das ist sehr hilfreich, damit auch die Entwickler und andere, die an diesem Wiki arbeiten, die Beweggründe deiner Änderung verstehen können.
 ![commit comments](./images/PR4.png)
 6. Klicke auf den grünen "Propose file changes" oder "Commit changes" Button. In der Seite, die sich öffnet, klicke auf "Create Pull Request" und wiederhole den Schritt auf der nächsten Seite.
 ![create pull request](./images/PR6.png)
-7. Damit hast du einen PR geöffnet. Du solltest deinen Pull Request nachverfolgen, um zu sehen, ob es Feedback gibt und/oder ob dein Vorschlag angenommen wurde, falls bei dir Github-Benachrichtungen eingeschalten sind, wirst du auch per Email über Feedback informiert. Um den Fortschritt deines PR zu verfolgen, kannst du auch, sofern aktiviert, auf das Glocken-Symbol in deinem Github-Account klicken. Dort sind dann auch alle deine PRs gelistet.
+7. Damit hast du einen PR geöffnet. Du solltest deinen Pull Request nachverfolgen, um zu sehen, ob es Feedback gibt und/oder ob dein Vorschlag angenommen wurde. Falls bei dir Github-Benachrichtungen eingeschalten sind, wirst du auch per Email über Feedback informiert. Um den Fortschritt deines PR zu verfolgen, kannst du auch, sofern aktiviert, auf das Glocken-Symbol in deinem Github-Account klicken. Dort sind dann auch alle deine PRs gelistet.
 ![PR tracking](./images/PR7.png)
 
 Glückwunsch, damit hast du deinen ersten Beitrag zum Wiki geleistet!
@@ -36,9 +36,9 @@ Für den Fall, dass du einige Änderungen in dem Wiki vornimmst, das Einfügen v
 
 * Du kannst die Bilder auf folgende Art und Weise hochladen:
  
- 1. Gehe zu dem Ordner, in dem die Bilder enthalten sind (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/images) - ersetzt "openaps" mit deinem Benutzername von Github und "master" mit deinem Branch (z.B. patch1)
+ 1. Gehe zu dem Ordner, in dem die Bilder enthalten sind (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/images) - ersetze "openaps" mit deinem Benutzername von Github und "master" mit deinem Branch (z.B. patch-1)
  
- 2. Klicke rechts in die Ecke bei "Upload files"
+ 2. Klicke rechts in die Ecke auf "Upload files"
  ![upload file](.../.../images/PR-uploadfile.png)
  
  3. Ziehe dein Bild in das Feld und lasse es dort los
@@ -47,9 +47,7 @@ Für den Fall, dass du einige Änderungen in dem Wiki vornimmst, das Einfügen v
  
  5. Nun siehst du die URL/relativen Pfad deiner Datei, z.B. [this individual image has its own URL and path](https://github.com/openaps/docs/blob/master/docs/images/Example_batch_images_upload.png). Benutze diese, um das Bild auf der Seite einzufügen 
  
- 6. Um zu sehen, wie Bilder genau eingefügt werden, kannst du auch einfach den Code von anderen Seiten der Dokumentation ansehen, die bereits Bilder haben. Wichtig dabei ist es, eine kurze Textbeschreibung, gefolgt von einem **relativen** Pfad. Den Dateipfad machst du relativ, in dem du z.B. "https://github.com/MarieT1D/AndroidAPSdocs/blob/patch-4/docs/images/PR-uploadfile.png" zu ".../.../images/PR-uploadfile.png" ändert
-
- The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: `![Example of uploading images in batches](./images/Example_batch_images_upload.png)`
+ 6. Um zu sehen, wie Bilder genau eingefügt werden, kannst du auch einfach den Code von anderen Seiten der Dokumentation ansehen, die bereits Bilder haben. Wichtig dabei ist es, eine kurze Textbeschreibung, gefolgt von einem **relativen** Pfad. Den Dateipfad machst du relativ, in dem du z.B. "https://github.com/MarieT1D/AndroidAPSdocs/blob/patch-4/docs/images/PR-uploadfile.png" zu ".../.../images/PR-uploadfile.png" änderst. So könnte das dann auch aussehen `![Example of uploading images in batches](./images/Example_batch_images_upload.png)`
  
  So wird das Bild dann im Wiki aussehen:
  
