@@ -54,5 +54,5 @@ Für den Fall, dass du einige Änderungen in dem Wiki vornimmst, das Einfügen v
  
 ![Example of uploading images in batches](../../images/Example_batch_images_upload.png)
 
- 7. Nachdem du die Bilder in deinem Branch eingefügt hast, kannst du einen PR zurück zum 'Master-Branch' des AndroidAPS Wikis.
+ 7. Nachdem du die Bilder in deinem Branch eingefügt hast, kannst du einen PR zurück zum 'Master-Branch' des AndroidAPS Wikis machen.
 
