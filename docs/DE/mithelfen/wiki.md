@@ -45,7 +45,7 @@ Für den Fall, dass du einige Änderungen in dem Wiki vornimmst, das Einfügen v
  
  4. Klicke auf "Commit".
  
- 5. Nun siehst du die URL/relativen Pfad deiner Datei.. Benutze diese, um das Bild auf der Seite einzufügen. 
+ 5. Nun siehst du die URL/relativen Pfad deiner Datei. Benutze diese, um das Bild auf der Seite einzufügen. 
  
  6. Um zu sehen, wie Bilder genau eingefügt werden, kannst du auch einfach den Code von anderen Seiten der Dokumentation ansehen, die bereits Bilder haben. Wichtig dabei ist es, eine kurze Textbeschreibung, gefolgt von einem **relativen** Pfad. Den Dateipfad machst du relativ, in dem du z.B. "https://github.com/MarieT1D/AndroidAPSdocs/blob/patch-4/docs/images/PR-uploadfile.png" zu "../../images/PR-uploadfile.png" änderst. So könnte das dann auch aussehen `![Example of uploading images in batches](../../images/Example_batch_images_upload.png)`
  
