@@ -36,14 +36,14 @@ Für den Fall, dass du einige Änderungen in dem Wiki vornimmst, das Einfügen v
 
 * Du kannst die Bilder auf folgende Art und Weise hochladen:
  
- 1. Gehe zu dem Ordner, in dem die Bilder enthalten sind (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/images) - ersetze "openaps" mit deinem Benutzername von Github und "master" mit deinem Branch (z.B. patch-1)
+ 1. Gehe zu dem Ordner, in dem die Bilder enthalten sind (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/images) - ersetze "openaps" mit deinem Benutzername von Github und "master" mit deinem Branch (z.B. patch-1). Für den Fall, dass du noch keinen eigenen Branch hast, in dem du die Änderungen vornimmst, solltest du erst einen mithilfe der Schritte von oben erstellen.
  
- 2. Klicke rechts in die Ecke auf "Upload files"
+ 2. Klicke rechts in die Ecke auf "Upload files".
   ![upload file](../../images/PR-uploadfile.png)
  
- 3. Ziehe dein Bild in das Feld und lasse es dort los
+ 3. Ziehe dein Bild in das Feld und lasse es dort los.
  
- 4. Klicke auf "Commit"
+ 4. Klicke auf "Commit".
  
  5. Nun siehst du die URL/relativen Pfad deiner Datei, z.B. [this individual image has its own URL and path](https://github.com/openaps/docs/blob/master/docs/images/Example_batch_images_upload.png). Benutze diese, um das Bild auf der Seite einzufügen 
  
