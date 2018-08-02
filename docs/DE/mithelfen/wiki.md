@@ -14,7 +14,7 @@ Alternativ kannst du auch rechts oben auf "Edit in Github" klicken. Daraufhin ö
 ![RTD io](../../images/PR2.png)
 3. In beiden Fällen wirst du damit einen eigenen "Branch" in deinem eigenen Verzeichnis in deinem Github-Account erstellen. Dort kannst du die Datei bearbeiten und sichern.
 ![Edit branch](../../images/PR3.png)
-4. Um zu überprüfen, wie später deine Änderungen im Wiki aussehen, kannst du auf "Preview changes" gehen. Wenn du noch weitere Änderungen vornehmen willst, du z.B. Rechtschreibfehler entdeckt hast, gehe zu "<>Edit file".
+4. Um zu überprüfen, wie später deine Änderungen im Wiki aussehen, kannst du auf "Preview changes" gehen. Wenn du noch weitere Änderungen vornehmen willst, da du z.B. Rechtschreibfehler entdeckt hast, gehe zu "<>Edit file".
 ![preview mode](../../images/PR5.png)
 5. Nachdem du fertig bist mit den Änderungen im Wiki, scrolle ganz nach unten. In dem Feld "update make-a-PR.md", kannst du deinen Änderungen einen Titel geben, ansonsten werden die Änderungen nach dem Dateinamem benannt. In das Feld darunter kannst du noch Kommentare, Begründungen, etc. hineinschreiben. Das ist sehr hilfreich, damit die Entwickler und andere, die an diesem Wiki arbeiten, deine Beweggründe für die Änderungen verstehen können.
 ![commit comments](../../images/PR4.png)
