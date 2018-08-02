@@ -39,6 +39,7 @@ Für den Fall, dass du einige Änderungen in dem Wiki vornimmst, das Einfügen v
  1. Gehe zu dem Ordner, in dem die Bilder enthalten sind (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/images) - ersetzt "openaps" mit deinem Benutzername von Github und "master" mit deinem Branch (z.B. patch1)
  
  2. Klicke rechts in die Ecke bei "Upload files"
+ ![upload file](.../.../images/PR-uploadfile.png)
  
  3. Ziehe dein Bild in das Feld und lasse es dort los
  
@@ -46,7 +47,7 @@ Für den Fall, dass du einige Änderungen in dem Wiki vornimmst, das Einfügen v
  
  5. Nun siehst du die URL/relativen Pfad deiner Datei, z.B. [this individual image has its own URL and path](https://github.com/openaps/docs/blob/master/docs/images/Example_batch_images_upload.png). Benutze diese, um das Bild auf der Seite einzufügen 
  
- 6. Um zu sehen, wie Bilder genau eingefügt werden, kannst du auch einfach den Code von anderen Seiten der Dokumentation ansehen, die bereits Bilder haben. Wichtig dabei ist es, eine kurze Textbeschreibung, gefolgt von einem **relativen** Pfad (.../.../images/ und so weiter)
+ 6. Um zu sehen, wie Bilder genau eingefügt werden, kannst du auch einfach den Code von anderen Seiten der Dokumentation ansehen, die bereits Bilder haben. Wichtig dabei ist es, eine kurze Textbeschreibung, gefolgt von einem **relativen** Pfad. Den Dateipfad machst du relativ, in dem du z.B. "https://github.com/MarieT1D/AndroidAPSdocs/blob/patch-4/docs/images/PR-uploadfile.png" zu ".../.../images/PR-uploadfile.png" ändert
 
  The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: `![Example of uploading images in batches](./images/Example_batch_images_upload.png)`
  
