@@ -4,7 +4,7 @@ Um das Wiki zu bearbeiten, Beiträge zu ändern oder zu ergänzen, ist ein sogen
 
 (Notiz: [hier](https://youtu.be/4b6tsL0_kzg) gibt es bereits ein YouTube-Video auf Englisch, bei dem Schritt für Schritt erklärt wird, wie ein PR funktioniert.
 
-Für die Bearbeitung ist lediglich Internet, ein Github-Account notwendig. Du kannst nach folgenden Schritten vorgehen: 
+Für die Bearbeitung ist lediglich Internet und ein Github-Account notwendig. Du kannst nach folgenden Schritten vorgehen: 
 
 1. Gehe zu  https://github.com/openaps/AndroidAPSdocs und klicke auf 'Fork' um die deine eigene Kopie des Wikis in deinem Github-Account zu erstellen.
 ![Fork repo](../../images/PR0.png)
