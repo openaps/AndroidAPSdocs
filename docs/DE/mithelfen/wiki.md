@@ -6,7 +6,7 @@ Um das Wiki zu bearbeiten, Beiträge zu ändern oder zu ergänzen, ist ein sogen
 
 Für die Bearbeitung ist lediglich Internet und ein Github-Account notwendig. Du kannst nach folgenden Schritten vorgehen: 
 
-1. Gehe zu  https://github.com/openaps/AndroidAPSdocs und klicke auf 'Fork' um die deine eigene Kopie des Wikis in deinem Github-Account zu erstellen.
+1. Gehe zu  https://github.com/openaps/AndroidAPSdocs und klicke auf 'Fork' um dir deine eigene Kopie des Wikis in deinem Github-Account zu erstellen.
 ![Fork repo](../../images/PR0.png)
 2. Gehe zu http://androidaps.readthedocs.io/en/latest/DE/index.html, bzw. zu der Seite, die du bearbeiten willst. Klicke in das schwarze Feld links unten auf der Seite mit dem grünen Wort "v: latest" oder ähnlich. Dann wird sich ein Fenster öffnen. Klicke auf "edit".
 ![edit doc](../../images/PR1.png)
