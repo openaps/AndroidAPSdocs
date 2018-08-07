@@ -51,3 +51,5 @@ You can remove the pump while taking a shower or bath. For this short period of 
 ## Travelling
 
 ## Hospitalization
+
+## Medical appointment with your endocrinologist
