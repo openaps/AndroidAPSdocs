@@ -90,7 +90,6 @@ AndroidAPS nutzen
    Profile </DE/benutzung/profile.md>
    SMS-Befehle </DE/benutzung/sms-befehle.md>
    Verzögerte Kohlenhydrate (eCarbs) </DE/benutzung/ecarbs.md>
-   Tipps und Tricks </DE/benutzung/tipps.md>
    Beispiel-Setups  </DE/benutzung/setups.md>
    Logfiles erhalten </DE/benutzung/logfiles.md>
    
