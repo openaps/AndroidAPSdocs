@@ -1,4 +1,4 @@
-# Beschränungen (objectives)
+# Beschränkungen (objectives)
 
 **1. Objective: Nimm die Grundeinstellungen vor**
 
