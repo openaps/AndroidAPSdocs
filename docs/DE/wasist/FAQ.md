@@ -1,6 +1,7 @@
 # FAQ für Looper
 
 So kannst du die FAQ ergänzen: [Anleitung](https://androidaps.readthedocs.io/en/latest/DE/mithelfen/wiki.html)
+Wenn du deine Frage nicht gefunden hast, findest du sie vielleicht in den [Englischen FAQ](http://androidaps.readthedocs.io/en/latest/EN/Getting-Started/FAQ.html)
 
 ## Allgemeines
 
