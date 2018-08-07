@@ -3,12 +3,9 @@ Herzlich willkommen zur AndroidAPS-Dokumentation
 
 AndroidAPS steht für "Android Artificial Pancreas System", es handelt sich um eine **App für Android Smartphones**, die als **künstliche  Bauchspeicheldrüse** fungiert. Sie kann mit bestimmten bluetoothfähigen Insulinpumpen und Glukose-Messsystemen kommunizieren. Mit Hilfe der OpenAPS-Algorithmen "Oref0"/"Oref1" ist die App in der Lage, den Blutzuckerspiegel bei insulinpflichtigem Diabetes automatisch zu regeln, sofern alle verzehrten Kohlenhydrate eingepflegt werden (sog. Hybrid Closed Loop).
 
+Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur Verfügung. Der Quellcode ist jedoch kostenlos und frei verfügbar. Daraus können Interessierte sich im "Eigenbau" selbst auf eigene Verantwortung die App erstellen (strictly **do it yourself** - DIY). 
 
-
-
-
-Das Programm steht nicht als fertige App und auch nicht im Google Play Store zur Verfügung. Es gibt auch keinen kommerziellen Support. Dafür gibt es aber eine sehr rege Community, die Dir helfen kann. Informationen wie Du sie kontaktieren kannst, findest Du unter http://androidaps.readthedocs.io/en/latest/DE/community.html . Der Quellcode ist jedoch kostenlos und frei verfügbar. Daraus können Interessierte sich im "Eigenbau" selbst auf eigene Verantwortung die App erstellen (strictly **do it yourself** - DIY). 
-
+Es gibt auch **keinen kommerziellen Support**. Dafür gibt es aber eine sehr rege Community, die Dir helfen kann. Informationen wie Du sie kontaktieren kannst, findest Du unter http://androidaps.readthedocs.io/en/latest/DE/hilfe/community.html .
 
 Ein konkretes **Beispiel**, wie du dir ein Closed loop System selbst bauen kannst, findest du unter https://androidaps.readthedocs.io/en/latest/DE/benutzung/setups.html
 
@@ -16,15 +13,15 @@ Ein konkretes **Beispiel**, wie du dir ein Closed loop System selbst bauen kanns
 
 Die Ziele, die zur Entstehung führten:
 
-- App mit „modularer Basis“, es soll leicht sein, neue Module hinzuzufügen
-- Eine App, bei der es bei der Erstellung möglich ist zu entscheiden, welche Funktionen die App später haben soll (Wear Control, NSClient)
-- Eine App, die es ermöglicht, einen Open- oder Closed-Loop-Modus zu wählen
-- Eine App, die die Funktionen eines APS (Automatic Pancreas System) visualisiert (Parameter, Ergebnis und Umsetzung)
-- Die Möglichkeit, andere Algorithmen zu verwenden
-- Eine „Virtuelle Pumpe“, mit der man alles ausprobieren kann, bevor man startet
-- Eine App mit enger Nightscout-Integration
-- Die Möglichkeit zum Hinzufügen/Entfernen von Beschränkungen
-- Eine App, die alles enthält, um mit dem Diabetes zurechtzukommen (APS+Nightscout)
+- App mit **„modularer Basis“**, es soll leicht sein, neue Module hinzuzufügen
+- Eine App, bei der es bei der Erstellung möglich ist zu entscheiden, welche **Funktionen** die App später haben soll (Wear Control, NSClient)
+- Eine App, die es ermöglicht, einen **Open- oder Closed-Loop-Modus** zu wählen
+- Eine App, die die Funktionen eines **APS (Artificial Pancreas System) visualisiert** (Parameter, Ergebnis und Umsetzung)
+- Die Möglichkeit, andere **Algorithmen** zu verwenden
+- Eine **„Virtuelle Pumpe“**, mit der man alles ausprobieren kann, bevor man startet
+- Eine App mit enger **Nightscout-Integration**
+- Die Möglichkeit zum Hinzufügen/Entfernen von **Beschränkungen**
+- Eine App, die alles enthält, um mit dem **Diabetes zurechtzukommen** (APS+Nightscout)
 
 **Was man benötigt**
 
@@ -53,6 +50,7 @@ Was ist AndroidAPS?
    Insulinpumpen </DE/wasist/pumpen.md>
    Zukünftig ggf. loopbare Pumpen  </DE/wasist/pumpenzukunft.md>
    Glossar </DE/wasist/glossar.md>
+   FAQ für Looper </DE/wasist/FAQ.md>
    Wie kann ich helfen? </DE/wasist/wie-helfen.md>
   
 AndroidAPS installieren
@@ -126,4 +124,4 @@ Mithelfen in der Community
 
          * Sämtliche Produkt- und Herstellernamen, Handelsmarken, Servicemarken, geschützte Handelsmarken und geschützte Servicemarken werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing.
 
-         * Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit: SOOIL (http://www.sooil.com/eng/), Dexcom (http://www.dexcom.com/), Accu-Chek Roche Diabetes Care (http://www.accu-chek.com/).
+         * Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit SOOIL (http://www.sooil.com/eng/), Dexcom (http://www.dexcom.com/) oder Accu-Chek Roche Diabetes Care (http://www.accu-chek.com/).
