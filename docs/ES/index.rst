@@ -50,6 +50,7 @@ Inicio
    Futuros controladores de bombas </ES/inicio/futurosbombas.md>
    La seguridad primero </ES/inicio/seguridad.md>
    Glosario </ES/inicio/glosario.md>
+   FAQ para loopers </ES/inicio/FAQ.md>
    Cómo puedo ayudar </ES/inicio/ayudar.md>
 
 Instalando AndroidAPS
