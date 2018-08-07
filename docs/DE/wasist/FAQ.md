@@ -1,6 +1,6 @@
 # FAQ für Looper
 
-So kannst du die FAQ ergänzen: [Anleitung](http://androidaps.readthedocs.io/en/latest/make-a-PR.html)
+So kannst du die FAQ ergänzen: [Anleitung](https://androidaps.readthedocs.io/en/latest/DE/mithelfen/wiki.html)
 
 ## Allgemeines
 
