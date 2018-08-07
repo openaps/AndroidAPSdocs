@@ -26,19 +26,21 @@ The founding principle of closed looping is that your basal rate and carb ratio 
 
 ### How to savely attach the CGM/FGM?
 
-## Settings
 
-### AndroidAPS settings
 
-#### APS algorithm
-##### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+## AndroidAPS settings
+
+### APS algorithm
+#### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 ![AMA 3h](.../.../images/Screenshot_AMA3h.png) 
 In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore. 
 
-#### Profile
+### Profile
    
-##### Why using min. 5h DIA (insulin end time) instead of 2-3h?
+#### Why using min. 5h DIA (insulin end time) instead of 2-3h?
 Well explained in this [article](/www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing  your DIA.
+
+## other settings
 
 ### Nightscout settings
 
