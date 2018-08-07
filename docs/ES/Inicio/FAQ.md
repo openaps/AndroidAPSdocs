@@ -68,10 +68,6 @@ El cambio de cánula no usa la función "cebar el sistema de infusión" de la bo
 ### ¿Qué hacer al tomar una ducha o un baño?
 Puede quitar la bomba mientras toma una ducha o baño. Durante este corto período de tiempo, por lo general, no lo necesitará. Pero debe decirle AAPS para que los cálculos de IOB sean correctos. Presione sobre el campo azul claro "Abrir bucle / Ciclo cerrado" en la parte superior de la pantalla de inicio. Seleccione "Desconectar bomba por 1 h". Una vez que haya vuelto a conectar su bomba, debe seleccionar "Continuar" en el mismo campo.
 
-## Comiendo
-
-## Bebida
-
 ## Trabajando
 
 ## Actividades de ocio
