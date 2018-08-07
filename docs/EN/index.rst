@@ -51,8 +51,8 @@ Getting Started with AndroidAPS
    Phone </EN/Getting-Started/Phones.md>
    Pump choices </EN/Getting-Started/Pump-Choices.md>
    Future possible pump drivers  </EN/Getting-Started/Future-possible-Pump-Drivers.md>
+   FAQ for loopers </EN/Getting-Started/FAQ.md>
    Glossary </EN/Getting-Started/Glossary.md>
-   
   
 How to Install AndroidAPS
 ------------
@@ -65,7 +65,6 @@ How to Install AndroidAPS
    Release notes </EN/Installing-AndroidAPS/Releasenotes.md>
    Dev branch </EN/Installing-AndroidAPS/Dev-branch.md>
    Nightscout </EN/Installing-AndroidAPS/Nightscout.md>
- 
    
 Configuration 
 ---------------
@@ -114,6 +113,3 @@ How to help
    How to help </EN/Getting-Started/How-can-I-help.md>
    How to translate the App </EN/translations.md>
    How to edit the wiki </make-a-PR>
-
-
-
