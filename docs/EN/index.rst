@@ -92,7 +92,6 @@ Usage
    Profiles </EN/Usage/Profiles.md>
    SMS Commands </EN/Usage/SMS-Commands.md>
    Extended Carbs </EN/Usage/Extended-Carbs.md>
-   Tips and Tricks </EN/Usage/Tips-and-tricks.md>
    Accessing log files </EN/Usage/Accessing-logfiles.md>
 
 Where to go for help 
