@@ -1,4 +1,4 @@
-# Bearbeitung des Wikis mit einem Pull Request
+# Am Wiki mitschreiben
 
 Um das Wiki zu bearbeiten, Beiträge zu ändern oder zu ergänzen, ist ein sogenannter Pull Request, kurz PR, notwendig. Dies ist soviel wie ein Änderungsvorschlag, der von den Entwicklern übernommen (oder auch abgelehnt) werden kann.
 

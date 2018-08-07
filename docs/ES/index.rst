@@ -50,6 +50,7 @@ Inicio
    Futuros controladores de bombas </ES/inicio/futurosbombas.md>
    La seguridad primero </ES/inicio/seguridad.md>
    Glosario </ES/inicio/glosario.md>
+   FAQ para loopers </ES/Inicio/FAQ.md>
    Cómo puedo ayudar </ES/inicio/ayudar.md>
 
 Instalando AndroidAPS
@@ -89,7 +90,6 @@ Uso
    Perfiles </ES/uso/perfiles.md>
    Rama Dev </ES/uso/desarrollo.md>
    Trucos para uso básico de Accu Check Combo </ES/uso/combo.md>
-   Trucos y consejos </ES/uso/truncos.md>
    
 Donde buscar ayuda
 -----------
