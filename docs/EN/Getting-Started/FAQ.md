@@ -14,7 +14,7 @@ The founding principle of closed looping is that your basal rate and carb ratio 
 
 * If you take your pump off for showering/bathing/swimming/sport etc then press and hold on the "Open Loop"/"Closed Loop" text on the main homepage and select "disconnect for..." however many hours you plan to disconnect for.  This will set your basal to zero for that time period.  The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump so if you wish to disconnect for a shorter period of time, or you connect your pump sooner than expected then press and hold "Suspended (X mins)" and select "Resume".  Your IOB will then be accurate for calculations on your return to the pump.
 
-* For safety, recommendations made are based on not one CGM reading but the average delta.  Therefore if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+* For safety, recommendations made are based on not one CGM reading but the average delta.  Therefore if you miss some readings it may take a while after getting data back before Android/images/Screenshot_AMA3h.png APS kicks in looping again.
 
 * There are several blogs with good tips to help you understand the practicalities of looping:
   * [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
@@ -32,7 +32,8 @@ The founding principle of closed looping is that your basal rate and carb ratio 
 
 #### APS algorithm
 ##### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
-In AMA, it actually isn't the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore. 
+![AMA 3h](.../.../images/Screenshot_AMA3h.png) 
+In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore. 
 
 #### Profile
    
