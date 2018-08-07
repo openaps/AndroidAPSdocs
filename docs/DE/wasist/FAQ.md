@@ -69,10 +69,6 @@ Im Gegensatz zum "klassischen" Vorgehen nutzt AndroidAAPS nicht die "Katheter f�
 ### Was ist beim Duschen oder Baden zu beachten?
 Du kannst die Pumpe zum Duschen oder Baden abstöpseln. Für diese kurze Zeit kommst du normalerweise problemlos ohne sie aus. AAPS solltest du aber Bescheid geben, damit die IOB-Berechnungen stimmen. Dazu drückst du im Home-Screen links oben auf das hellblaue "Open Loop / Closed Loop"- Feld und wählst "Trenne Pumpe für 1 h". Sobald du die Pumpe wieder anschließt, gehst du im selben Feld auf "Fortsetzen".
 
-## Essen
-
-## Trinken
-
 ## Arbeiten
 
 ## Sport
