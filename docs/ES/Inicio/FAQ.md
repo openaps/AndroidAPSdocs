@@ -1,6 +1,6 @@
 # FAQ para loopers
 
-Cómo agregar preguntas a las preguntas frecuentes: siga estas instrucciones
+Cómo agregar preguntas a las preguntas frecuentes: siga estas [instrucciones](http://androidaps.readthedocs.io/en/latest/make-a-PR.html)
 
 ## General
 
