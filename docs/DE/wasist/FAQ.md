@@ -1,6 +1,8 @@
 # FAQ für Looper
 
-So kannst du die FAQ ergänzen: [Anleitung](https://androidaps.readthedocs.io/en/latest/DE/mithelfen/wiki.html)
+So kannst du die FAQ ergänzen: [Anleitung](https://androidaps.readthedocs.io/en/latest/DE/mithelfen/wiki.html).
+
+Wenn du deine Frage nicht gefunden hast, findest du sie vielleicht in den [Englischen FAQ](http://androidaps.readthedocs.io/en/latest/EN/Getting-Started/FAQ.html).
 
 ## Allgemeines
 
@@ -23,14 +25,21 @@ Die wichtigste Voraussetzung für den closed Loop ist, dass deine Basalrate und 
 
 ### Wie befestige ich das CGM/FGM?
 
-## Einstellungen
+## AndroidAPS Einstellungen
 
-### AndroidAPS Einstellungen
+### APS Algorithmus
 
-#### Profil
+#### Warum wird "dia:3" in dem "OPENAPS AMA"-Tab angezeigt, obwohl ich in meinem Profil einen anderen angegeben habe?
+![AMA 3h](.../.../images/Screenshot_AMA3h.png) 
+In OpenAPS AMA ist das nicht der DIA aus dem Profil, der für das Insulin verwendet wird. Das ist ein anderer Parameter, der fälschlicherweise auf dem DIA aufgebaut wurde. Er bedeutet eher "wann soll die Korrektur abgeschlossen sein" und ist auf 3h begrenzt. Der IOB wird auch nicht mit diesem, sondern dem DIA aus dem Profil berechnet. In  OpenAPS SMB fällt der Parameter dann ganz weg.
+
+
+### Profil
    
-##### Warum wird ein Minimum-DIA (Insulin-end-time) von 5h verwendet anstatt 2-3h?
+#### Warum wird ein Minimum-DIA (Insulin-end-time) von 5h verwendet anstatt 2-3h?
 Das ist gut erklärt in diesem [Artikel (englisch)](/www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing  your DIA.
+
+## weitere Einstellungen 
 
 ### Nightscout Einstellungen
 
