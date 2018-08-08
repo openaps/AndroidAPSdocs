@@ -30,7 +30,7 @@ Die wichtigste Voraussetzung für den closed Loop ist, dass deine Basalrate und 
 ### APS Algorithmus
 
 #### Warum wird "dia:3" in dem "OPENAPS AMA"-Tab angezeigt, obwohl ich in meinem Profil einen anderen angegeben habe?
-![AMA 3h](.../.../images/Screenshot_AMA3h.png) 
+![AMA 3h](../../images/Screenshot_AMA3h.png) 
 In OpenAPS AMA ist das nicht der DIA aus dem Profil, der für das Insulin verwendet wird. Das ist ein anderer Parameter, der fälschlicherweise auf dem DIA aufgebaut wurde. Er bedeutet eher "wann soll die Korrektur abgeschlossen sein" und ist auf 3h begrenzt. Der IOB wird auch nicht mit diesem, sondern dem DIA aus dem Profil berechnet. In  OpenAPS SMB fällt der Parameter dann ganz weg.
 
 
