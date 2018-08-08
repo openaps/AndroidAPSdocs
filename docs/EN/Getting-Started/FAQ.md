@@ -32,7 +32,7 @@ The founding principle of closed looping is that your basal rate and carb ratio 
 
 ### APS algorithm
 #### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
-![AMA 3h](.../.../images/Screenshot_AMA3h.png) 
+![AMA 3h](../../images/Screenshot_AMA3h.png) 
 In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore. 
 
 ### Profile
