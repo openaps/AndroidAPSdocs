@@ -5,12 +5,16 @@ AndroidAPS
    :maxdepth: 1
    :caption: Documentation
    :glob:
-   
+
    English </EN/index>
-   Българска </BG/index>
-   Deutsch </DE/index>
-   Español </ES/index>
-   
+   Българска </CROWDIN/bg/index>
+   Česky </CROWDIN/cs/index>
+   Deutsch </CROWDIN/de/index>
+   Español </CRODIN/es/index>
+
+   Българска (Specific) </BG/index>
+   Deutsch (Specific) </DE/index>
+   Español (Specific) </ES/index>
 
    
 
