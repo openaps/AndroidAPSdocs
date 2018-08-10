@@ -10,10 +10,9 @@ AndroidAPS
    Czech </CROWDIN/cs/index>
    Deutsch </CROWDIN/DE/index>
    
-   Language specific pages
-   Българска </BG/index>
-   Deutsch </DE/index>
-   Español </ES/index>
+   Българска (Specific) </BG/index>
+   Deutsch (Specific) </DE/index>
+   Español (Specific) </ES/index>
    
 
    
