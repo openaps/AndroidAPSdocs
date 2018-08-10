@@ -60,9 +60,9 @@ How to Install AndroidAPS
    :maxdepth: 1
    :glob:
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   How to update to a new version <./Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.md>
+   Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
+   Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
+   Poznámky k verzi <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev-branch.md>
    Nightscout <./Installing-AndroidAPS/Nightscout.md>
    
