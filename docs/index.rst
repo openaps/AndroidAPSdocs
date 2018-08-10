@@ -8,7 +8,7 @@ AndroidAPS
    
    English </EN/index>
    Czech </CROWDIN/cs/index>
-   Deutsch </CROWDIN/DE/index>
+   Deutsch </CROWDIN/de/index>
    
    Българска (Specific) </BG/index>
    Deutsch (Specific) </DE/index>
