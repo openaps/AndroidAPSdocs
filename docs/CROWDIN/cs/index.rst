@@ -61,10 +61,10 @@ How to Install AndroidAPS
    :glob:
 
    Vytvoření APK</EN/Installing-AndroidAPS/Building-APK.md>
-   How to update to a new version </EN/Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes </EN/Installing-AndroidAPS/Releasenotes.md>
+   Jak aktualizovat na nové verze </CROWDIN/cs/Installing-AndroidAPS/Update-to-new-version.md>
+   Poznámky k verzi </CROWDIN/cs/Installing-AndroidAPS/Releasenotes.md>
    Dev branch </EN/Installing-AndroidAPS/Dev-branch.md>
-   Nightscout </EN/Installing-AndroidAPS/Nightscout.md>
+   Nightscout </CROWDIN/cs/Installing-AndroidAPS/Nightscout.md>
  
    
 Configuration 
