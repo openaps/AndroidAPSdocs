@@ -7,7 +7,7 @@ AndroidAPS
    :glob:
    
    English </EN/index>
-   Czech </CROWDIN/cs/index>
+   Česky </CROWDIN/cs/index>
    Deutsch </CROWDIN/de/index>
    
    Българска (Specific) </BG/index>
