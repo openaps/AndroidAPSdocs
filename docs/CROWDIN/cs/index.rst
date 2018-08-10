@@ -64,7 +64,7 @@ How to Install AndroidAPS
    Jak aktualizovat na nové verze </CROWDIN/cs/Installing-AndroidAPS/Update-to-new-version.md>
    Poznámky k verzi </CROWDIN/cs/Installing-AndroidAPS/Releasenotes.md>
    Dev branch </EN/Installing-AndroidAPS/Dev-branch.md>
-   Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Nightscout </EN/Installing-AndroidAPS/Nightscout.md>
  
    
 Configuration 
