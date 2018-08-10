@@ -45,14 +45,14 @@ Getting Started with AndroidAPS
    :maxdepth: 1
    :glob:
    
-   Safety First </EN/Getting-Started/Safety-first>
-   Screenshots </EN/Getting-Started/Screenshots.md>
+   Safety First <./Getting-Started/Safety-first>
+   Screenshots <./Getting-Started/Screenshots.md>
    Architcture, security implementation </EN/Getting-Started/Architecture-security-implementation.md>
-   Phone </EN/Getting-Started/Phones.md>
-   Pump choices </EN/Getting-Started/Pump-Choices.md>
-   Future possible pump drivers  </EN/Getting-Started/Future-possible-Pump-Drivers.md>
-   FAQ for loopers </EN/Getting-Started/FAQ.md>
-   Glossary </EN/Getting-Started/Glossary.md>
+   Phone <./Getting-Started/Phones.md>
+   Pump choices <./Getting-Started/Pump-Choices.md>
+   Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
+   FAQ for loopers <./Getting-Started/FAQ.md>
+   Glossary <./Getting-Started/Glossary.md>
   
 How to Install AndroidAPS
 ------------
@@ -60,11 +60,11 @@ How to Install AndroidAPS
    :maxdepth: 1
    :glob:
 
-   Building the APK </EN/Installing-AndroidAPS/Building-APK.md>
+   Building the APK <./Installing-AndroidAPS/Building-APK.md>
    How to update to a new version </EN/Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes </EN/Installing-AndroidAPS/Releasenotes.md>
-   Dev branch </EN/Installing-AndroidAPS/Dev-branch.md>
-   Nightscout </EN/Installing-AndroidAPS/Nightscout.md>
+   Release notes <./Installing-AndroidAPS/Releasenotes.md>
+   Dev branch <./Installing-AndroidAPS/Dev-branch.md>
+   Nightscout <./Installing-AndroidAPS/Nightscout.md>
    
 Configuration 
 ---------------
@@ -72,14 +72,14 @@ Configuration
    :maxdepth: 1
    :glob:
    
-   Config Builder </EN/Configuration/Config-Builder.md>
-   BG Source</EN/Configuration/BG-Source.md>
-   DanaR </EN/Configuration/DanaR-Insulin-Pump.md>
-   DanaRS </EN/Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo </EN/Configuration/Accu-Chek-Combo-Pump.md>
-   Watchfaces </EN/Configuration/Watchfaces.md>
-   Preferences </EN/Configuration/Preferences.md>
-   Sensitivity Detection and COB </EN/Configuration/Sensitivity-detection-and-COB.md>
+   Config Builder <./Configuration/Config-Builder.md>
+   BG Source<./Configuration/BG-Source.md>
+   DanaR <./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
+   Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
+   Watchfaces <./Configuration/Watchfaces.md>
+   Preferences <./Configuration/Preferences.md>
+   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    
 Usage
 ------------
@@ -87,12 +87,12 @@ Usage
    :maxdepth: 1
    :glob:
     
-   Objectives </EN/Usage/Objectives.md>
-   OpenAPS Features </EN/Usage/Open-APS-features.md>
-   Profiles </EN/Usage/Profiles.md>
+   Objectives <./Usage/Objectives.md>
+   OpenAPS Features <./Usage/Open-APS-features.md>
+   Profiles <./Usage/Profiles.md>
    SMS Commands </EN/Usage/SMS-Commands.md>
-   Extended Carbs </EN/Usage/Extended-Carbs.md>
-   Accessing log files </EN/Usage/Accessing-logfiles.md>
+   Extended Carbs <./Usage/Extended-Carbs.md>
+   Accessing log files <./Usage/Accessing-logfiles.md>
 
 Where to go for help 
 ------------
@@ -100,8 +100,8 @@ Where to go for help
    :maxdepth: 1
    :glob:
 
-   Background reading & interesting articles </EN/Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help </EN/Where-To-Go-For-Help/Connect-with-other-users.md>
+   Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
+   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 How to help
 ------------
@@ -109,6 +109,6 @@ How to help
    :maxdepth: 1
    :glob:
 
-   How to help </EN/Getting-Started/How-can-I-help.md>
-   How to translate the App </EN/translations.md>
+   How to help <./Getting-Started/How-can-I-help.md>
+   How to translate the App <./translations.md>
    How to edit the wiki </make-a-PR>
