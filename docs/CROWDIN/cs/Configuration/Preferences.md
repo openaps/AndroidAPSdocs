@@ -10,7 +10,7 @@ Algorithms are different based on patient age so select Child, Teenage or Adult 
 
 ## General
 
-* Select your language here. If your language is not available, or not all of the words translated then feel free to make some suggestions. The translation files are found here: [App > Src > Main > Res > Values > Strings](https://github.com/MilosKozak/AndroidAPS/blob/dev/app/src/main/res/values/strings.xml) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
+* Select your language here. If your language is not available, or not all of the words translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
 * Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (not taking into account blood glucose value or insulin on board though).
 
 ## Careportal
@@ -65,7 +65,7 @@ If you have selected to use AMA Autosens then you will be able to enter your max
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the [DanaR Insulin Pump](/docs/Usage/DanaR-Insulin-Pump) or [DanaRS Insulin Pump](/docs/Usage/DanaRS-Insulin-Pump) or [Accu Chek Combo Pump](/docs/Usage/Accu-Chek-Combo-Pump) instructions where relevant. If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the [DanaR Insulin Pump](../Usage/DanaR-Insulin-Pump) or [DanaRS Insulin Pump](../Usage/DanaRS-Insulin-Pump) or [Accu Chek Combo Pump](../Usage/Accu-Chek-Combo-Pump) instructions where relevant. If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 ## NS Client
 
@@ -76,7 +76,7 @@ The options here will vary depending on which pump driver you have selected in '
 
 ## SMS Communicator
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](/docs/Usage/SMS-Commands) but it will only display in Preferences if you have selected this option in the Config Builder.
+This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Usage/SMS-Commands) but it will only display in Preferences if you have selected this option in the Config Builder.
 
 ## Other
 
@@ -91,7 +91,7 @@ This setting allows remote control of the app by texting instructions to the pat
 * OpenAPS MA 
   * Always use short average delta instead of... Enabling this setting is useful when you are using data from unfiltered sources such as xDrip+, as opposed to filtered sources such as an official Dexcom Receiver. Filtered data appears to be smooth, whereas unfiltered data can appear to be jumpy. This unfiltered data could cause AndroidAPS to apply Temporary Basal Rate changes more frequently than are really needed, as the OpenAPS algorithm reacts to the jumpy data. With this setting enabled, the OpenAPS algorithm will use the Short Average Delta (the average change in blood glucose over the past 15 minutes) instead of the last blood glucose reading received. This effectively has a "smoothing" effect on the data and attempts to compensate for any jumpy readings. Users of Abbot Freestyle Libre sensors collecting their glucose data via devices such as LimiTTers may find this setting provides better results with AAPS.
 
-For further tips regarding data smoothing when using xDrip+ as the data source, see [Smoothing Blood Glucose Data in xDrip+](https://github.com/MilosKozak/AndroidAPS/wiki/Smoothing-blood-glucose-data-in-xDrip).
+For further tips regarding data smoothing when using xDrip+ as the data source, see [Smoothing Blood Glucose Data in xDrip+](../Usage/Smoothing-blood-glucose-data-in-xDrip).
 
 * OpenAPS preferences.json - before changing any of these settings, please view the descriptions of the safety values used and why in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 * 'Ignore profile switch events' will not send your current AndroidAPS profile to the pump. It is encouraged not to select this unless you are testing code, as for safety sending profile switch events to the pump's basal profile 1 means than should AndroidAPS stop working or loose connection with the pump then your pump will revert to the same profile as default rather than you having to manually enter it into the pump. For more information on profiles see [Profiles](/docs/Usage/Profiles).
@@ -99,4 +99,4 @@ For further tips regarding data smoothing when using xDrip+ as the data source, 
 
 ## Wear Settings
 
-For more information on the wear watchface settings see [Watchfaces](/docs/Configuration/Watchfaces).
+For more information on the wear watchface settings see [Watchfaces](./Watchfaces).
