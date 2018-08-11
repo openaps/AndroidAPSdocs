@@ -1,24 +1,24 @@
-Welcome to the Android APS documentation
+Vítejte v dokumentaci k AndroidAPS
 ==============================================
 
-**What is AndroidAPS?**
+** Co je AndroidAPS? **
 
-AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of OpenAPS "oref0" algorithm.
+AndroidAPS je aplikace, která může komunikovat s bluetooth inzulinovými pumpami a spouští verzi "oref0" OpenAPS algoritmu.
 
-**Primary goals behind AndroidAPS:**
+** Primární cíle AndroidAPS: **
 
-* modular app where is possible to easy add new modules without touching the rest of code
-* app that allow localization
+* modulární aplikace, do které je možné snadno přidávat nové moduly bez modifikace zbytku kódu
+* aplikace, která umožňuje lokalizace
 * app where we can easy select what will be included in final apk just by easy change and compilation
-* app which support open and closed APS mode
-* app where you can see how APS works: input params, result and final decision
-* allow to add more APS algorithms and let user decide what to use
-* app independent to pump driver and containing "Virtual pump" to allow users safely play with APS
-* app with tight Nightscout integration
-* app where is possible easy to add/remove constraints for user safety
-* all-in-one app you need for managing T1D with APS and Nightscout
+* aplikace, která podporuje režim APS v otevřené i uzavřené smyčce
+* aplikace, kde si můžete prohlédnout, jak funguje APS: vstupní parametry, výsledek a konečné rozhodnutí
+* umožní přidat další APS algoritmy a umožní uživateli rozhodnout, co používat
+* aplikace nezávislá na ovladači pumpy a obsahující "virtuální pumpu", která umožní uživatelům bezpečně si hrát s APS
+* aplikace s těsnou integraci s Nightscoutem
+* aplikace, kde je možné snadno přidat nebo odebrat omezení pro bezpečnost uživatelů
+* All-in-one aplikace, kterou potřebujete pro správu diabetu s APS a Nightscoutem
 
-**What you need to get started:**
+** Co potřebuji, abych mohl začít:**
 
 * An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
 * An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
