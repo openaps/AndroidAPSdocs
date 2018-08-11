@@ -94,6 +94,7 @@ Usage
    Extended Carbs <./Usage/Extended-Carbs.md>
    Accessing log files <./Usage/Accessing-logfiles.md>
    Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 
 Where to go for help 
 ------------
