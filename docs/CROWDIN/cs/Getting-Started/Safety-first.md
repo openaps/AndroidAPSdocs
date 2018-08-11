@@ -1,15 +1,15 @@
-# Safety first
+# Bezpečnost především
 
-**When you decide to build your own closed loop always think about security and impact of all your actions**
+**Pokud se rozhodnete vytvořit vlastní uzavřenou smyčku, vždy myslete na bezpečnost a dopad všech Vašich rozhodnutí**
 
-## General
+## Obecné
 
-* AndroidAPS is a just a tool to help you manage diabetes. Not something you can install and forget!
-* Don't absolutely trust any device taking control of insulin delivery. Watch it all the time, learn how it works and learn how to predict it's actions.
-* Remember the phone paired with pump can do anything with the pump. Dedicate this phone for APS and communication with your child. Do not allow to install other apps and games (!!!) to prevent installing together some unwanted code like trojans, viruses or bots.
-* Install all security updates provided by phone manufacter and Google.
+* AndroidAPS je pouze nástroj, který Vám může pomoci s léčbou cukrovky. Ale není to program, který nainstaluji a už se nemusím o nic starat!
+* Nikdy nevěřte žádnému zařízení, které má kontrolu nad dávkováním inzulínu. Neustále ho sledujte, naučte se jak funguje a jak předvídat jeho reakce.
+* Nezapomeňte, že telefon spojený s pumpou může s pumpou dělat cokoliv. Vyhraďte tento telefon pro APS a komunikaci s vaším dítětem. Nedovolte instalovat ostatní aplikace a hry!!! Předejdete tím instalaci nevyžádaného programu (kódu) jako jsou trojské koně, viry nebo boti.
+* Nainstalujte všechny aktualizace zabezpečení poskytované výrobcem telefonu a společností Google.
 
-## SMS Communicator
+## SMS komunikátor
 
-* If you enable SMS Communicator, consider what could happen when the phone enabled for remote commands is stolen! So always protect it at least by PIN code
+* Pokud povolíte SMS komunikátor, zvažte, co se může stát, když bude telefon povolený pro vzdálené příkazy ukraden! Proto ho vždy chraňte alespoň PIN kódem
 * Since AndoridAPS 1.1 you will receive SMS notification of important remote actions like bolus or profile change. Setup at least 2 numbers for SMS communication to be notified about actions of second phone (for case it's stolen)
