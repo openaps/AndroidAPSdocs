@@ -20,12 +20,12 @@ AndroidAPS je aplikace, která může komunikovat s bluetooth inzulinovými pump
 
 ** Co potřebuji, abych mohl začít:**
 
-* An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* Android Smartphone s Android 5.0 nebo novější. Viz ' Tato tabulka <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>' _ pro zprávy o tom, jak dobře telefon pracuje s AndroidAPS.
+*Aplikaci pro příjem glykémií: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 modifikovaná aplikace <https://github.com/dexcomapp/dexcomapp>`_ nebo `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
 * ' AndroidAPS <https://github.com/MilosKozak/AndroidAPS>' _, samu o sobě
 * ' Nightscout <https://github.com/nightscout/cgm-remote-monitor>' _ 0.10.2 nebo novější
-* A supported pump: Dana-R or Dana-RS Insulin Pump (unless you build your own driver for other insulin pump) or Accu-Chek Combo (currently in wider testing)
-* A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5, Freestyle Libre, Eversense or Medtronic Guardian
+* Podporovanou pumpu: Dana-R nebo Dana-RS nebo Accu-Chek Combo (nebo si vytvořit své vlastní ovladače pro jiné inzulínové pumpy)
+* Zdroj dat CGM: Dexcom G4/G5, Freestyle Libre, Eversense nebo Medtronic Guardian
 
 
 .. poznámka:: 
@@ -47,12 +47,12 @@ Začínáme s AndroidAPS
    
    Bezpečnost především <./Getting-Started/Safety-first>
    Snímky obrazovky <./Getting-Started/Screenshots.md>
-   Architcture, security implementation </EN/Getting-Started/Architecture-security-implementation.md>
-   Phone <./Getting-Started/Phones.md>
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   FAQ for loopers <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
+   Architektura, bezpečnostní provedení </EN/Getting-Started/Architecture-security-implementation.md>
+   Telefony <./Getting-Started/Phones.md>
+   Možné pumpy <./Getting-Started/Pump-Choices.md>
+   Pumpy potenciálně použitelné v budoucnu  <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Otázky a odpovědi <./Getting-Started/FAQ.md>
+   Glosář <./Getting-Started/Glossary.md>
   
 Jak nainstalovat AndroidAPS
 ------------
