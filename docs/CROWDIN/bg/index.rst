@@ -89,7 +89,7 @@ Usage
    Objectives <./Usage/Objectives.md>
    OpenAPS Features <./Usage/Open-APS-features.md>
    Profiles <./Usage/Profiles.md>
-   SMS Commands </EN/Usage/SMS-Commands.md>
+   SMS Commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
    Accessing log files <./Usage/Accessing-logfiles.md>
    Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
