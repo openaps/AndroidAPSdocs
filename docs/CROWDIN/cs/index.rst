@@ -1,11 +1,11 @@
 Vítejte v dokumentaci k AndroidAPS
 ==============================================
 
-** Co je AndroidAPS? **
+**Co je AndroidAPS?**
 
 AndroidAPS je aplikace, která může komunikovat s bluetooth inzulinovými pumpami a spouští verzi "oref0" OpenAPS algoritmu.
 
-** Primární cíle AndroidAPS: **
+**Primární cíle AndroidAPS:**
 
 * modulární aplikace, do které je možné snadno přidávat nové moduly bez modifikace zbytku kódu
 * aplikace, která umožňuje lokalizace
@@ -18,10 +18,10 @@ AndroidAPS je aplikace, která může komunikovat s bluetooth inzulinovými pump
 * aplikace, kde je možné snadno přidat nebo odebrat omezení pro bezpečnost uživatelů
 * All-in-one aplikace, kterou potřebujete pro správu diabetu s APS a Nightscoutem
 
-** Co potřebuji, abych mohl začít:**
+**Co potřebuji, abych mohl začít:**
 
 * Android Smartphone s Android 5.0 nebo novější. Viz ' Tato tabulka <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>' _ pro zprávy o tom, jak dobře telefon pracuje s AndroidAPS.
-*Aplikaci pro příjem glykémií: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 modifikovaná aplikace <https://github.com/dexcomapp/dexcomapp>`_ nebo `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* Aplikaci pro příjem glykémií: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 modifikovaná aplikace <https://github.com/dexcomapp/dexcomapp>`_ nebo `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
 * ' AndroidAPS <https://github.com/MilosKozak/AndroidAPS>' _, samu o sobě
 * ' Nightscout <https://github.com/nightscout/cgm-remote-monitor>' _ 0.10.2 nebo novější
 * Podporovanou pumpu: Dana-R nebo Dana-RS nebo Accu-Chek Combo (nebo si vytvořit své vlastní ovladače pro jiné inzulínové pumpy)
