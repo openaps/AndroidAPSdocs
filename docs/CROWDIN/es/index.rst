@@ -21,7 +21,7 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
 **What you need to get started:**
 
 * An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
 * `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 or later
 * A supported pump: Dana-R or Dana-RS Insulin Pump (unless you build your own driver for other insulin pump) or Accu-Chek Combo (currently in wider testing)
@@ -47,7 +47,6 @@ Getting Started with AndroidAPS
    
    Safety First <./Getting-Started/Safety-first>
    Screenshots <./Getting-Started/Screenshots.md>
-   Architcture, security implementation </EN/Getting-Started/Architecture-security-implementation.md>
    Phone <./Getting-Started/Phones.md>
    Pump choices <./Getting-Started/Pump-Choices.md>
    Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
@@ -90,7 +89,7 @@ Usage
    Objectives <./Usage/Objectives.md>
    OpenAPS Features <./Usage/Open-APS-features.md>
    Profiles <./Usage/Profiles.md>
-   SMS Commands </EN/Usage/SMS-Commands.md>
+   SMS Commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
    Accessing log files <./Usage/Accessing-logfiles.md>
    Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>

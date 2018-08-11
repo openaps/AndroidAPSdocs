@@ -9,7 +9,7 @@ AndroidAPS je aplikace, která může komunikovat s bluetooth inzulinovými pump
 
 * modulární aplikace, do které je možné snadno přidávat nové moduly bez modifikace zbytku kódu
 * aplikace, která umožňuje lokalizace
-* app where we can easy select what will be included in final apk just by easy change and compilation
+* aplikace kde můžeme snadno vybrat, co bude součástí konečného apk, jen jednoduchou změnou a kompilací
 * aplikace, která podporuje režim APS v otevřené i uzavřené smyčce
 * aplikace, kde si můžete prohlédnout, jak funguje APS: vstupní parametry, výsledek a konečné rozhodnutí
 * umožní přidat další APS algoritmy a umožní uživateli rozhodnout, co používat
@@ -20,41 +20,40 @@ AndroidAPS je aplikace, která může komunikovat s bluetooth inzulinovými pump
 
 ** Co potřebuji, abych mohl začít:**
 
-* An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
-* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 or later
-* A supported pump: Dana-R or Dana-RS Insulin Pump (unless you build your own driver for other insulin pump) or Accu-Chek Combo (currently in wider testing)
-* A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5, Freestyle Libre, Eversense or Medtronic Guardian
+* Android Smartphone s Android 5.0 nebo novější. Viz ' Tato tabulka <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>' _ pro zprávy o tom, jak dobře telefon pracuje s AndroidAPS.
+*Aplikaci pro příjem glykémií: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 modifikovaná aplikace <https://github.com/dexcomapp/dexcomapp>`_ nebo `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* ' AndroidAPS <https://github.com/MilosKozak/AndroidAPS>' _, samu o sobě
+* ' Nightscout <https://github.com/nightscout/cgm-remote-monitor>' _ 0.10.2 nebo novější
+* Podporovanou pumpu: Dana-R nebo Dana-RS nebo Accu-Chek Combo (nebo si vytvořit své vlastní ovladače pro jiné inzulínové pumpy)
+* Zdroj dat CGM: Dexcom G4/G5, Freestyle Libre, Eversense nebo Medtronic Guardian
 
 
-.. note:: 
-	**Disclaimer And Warning**
+.. poznámka:: 
+	** Upozornění a varování **
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+	* Použití kódu z github.com je bez záruky nebo formální podpory jakéhokoliv druhu. Přečtěte licenci z této repozitoře pro další podrobnosti.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+	* Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
+	Vezměte prosím na vědomí - tento projekt nemá žádnou spojitost s a není žádným způsobem schválený: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>'`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _.
 
-Getting Started with AndroidAPS
+Začínáme s AndroidAPS
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first>
-   Screenshots <./Getting-Started/Screenshots.md>
-   Architcture, security implementation </EN/Getting-Started/Architecture-security-implementation.md>
-   Phone <./Getting-Started/Phones.md>
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   FAQ for loopers <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
+   Bezpečnost především <./Getting-Started/Safety-first>
+   Snímky obrazovky <./Getting-Started/Screenshots.md>
+   Telefony <./Getting-Started/Phones.md>
+   Možné pumpy <./Getting-Started/Pump-Choices.md>
+   Pumpy potenciálně použitelné v budoucnu  <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Otázky a odpovědi <./Getting-Started/FAQ.md>
+   Glosář <./Getting-Started/Glossary.md>
   
-How to Install AndroidAPS
+Jak nainstalovat AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
@@ -72,45 +71,45 @@ Konfigurace
    :maxdepth: 1
    :glob:
    
-   Config Builder <./Configuration/Config-Builder.md>
-   BG Source<./Configuration/BG-Source.md>
+   Konfigurace <./Configuration/Config-Builder.md>
+   Zdroj glykémií<./Configuration/BG-Source.md>
    DanaR <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
-   Watchfaces <./Configuration/Watchfaces.md>
-   Preferences <./Configuration/Preferences.md>
-   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   Hodinky<./Configuration/Watchfaces.md>
+   Nastavení <./Configuration/Preferences.md>
+   Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
    
-Usage
+Použití
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   Objectives <./Usage/Objectives.md>
-   OpenAPS Features <./Usage/Open-APS-features.md>
-   Profiles <./Usage/Profiles.md>
-   SMS Commands </EN/Usage/SMS-Commands.md>
-   Extended Carbs <./Usage/Extended-Carbs.md>
-   Accessing log files <./Usage/Accessing-logfiles.md>
-   Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+   Cíle <./Usage/Objectives.md>
+   Možnosti OpenAPS <./Usage/Open-APS-features.md>
+   Profily <./Usage/Profiles.md>
+   SMS příkazy <./Usage/SMS-Commands.md>
+   Prodloužené sacharidy (eCarbs) <./Usage/Extended-Carbs.md>
+   Přístup k log souborům <./Usage/Accessing-logfiles.md>
+   Vyhlazování glykémií v xDripu <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 
-Where to go for help 
+Kam pro pomoc 
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Další čtení & zajímavé články <./Where-To-Go-For-Help/Background-reading.md>
+   Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-How to help
+Jak pomoci
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the App <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   Jak mohu pomoci <./Getting-Started/How-can-I-help.md>
+   Jak pomoci s překladem <./translations.md>
+   Jak editovat wiki <./make-a-PR>
