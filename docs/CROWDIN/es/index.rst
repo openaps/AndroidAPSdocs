@@ -93,6 +93,8 @@ Usage
    SMS Commands </EN/Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
    Accessing log files <./Usage/Accessing-logfiles.md>
+   Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 
 Where to go for help 
 ------------
@@ -111,4 +113,4 @@ How to help
 
    How to help <./Getting-Started/How-can-I-help.md>
    How to translate the App <./translations.md>
-   How to edit the wiki </make-a-PR>
+   How to edit the wiki <./make-a-PR>
