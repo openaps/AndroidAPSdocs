@@ -47,7 +47,6 @@ Začínáme s AndroidAPS
    
    Bezpečnost především <./Getting-Started/Safety-first>
    Snímky obrazovky <./Getting-Started/Screenshots.md>
-   Architektura, bezpečnostní provedení </EN/Getting-Started/Architecture-security-implementation.md>
    Telefony <./Getting-Started/Phones.md>
    Možné pumpy <./Getting-Started/Pump-Choices.md>
    Pumpy potenciálně použitelné v budoucnu  <./Getting-Started/Future-possible-Pump-Drivers.md>
