@@ -9,7 +9,7 @@ AndroidAPS je aplikace, která může komunikovat s bluetooth inzulinovými pump
 
 * modulární aplikace, do které je možné snadno přidávat nové moduly bez modifikace zbytku kódu
 * aplikace, která umožňuje lokalizace
-* app where we can easy select what will be included in final apk just by easy change and compilation
+* aplikace kde můžeme snadno vybrat, co bude součástí konečného apk, jen jednoduchou změnou a kompilací
 * aplikace, která podporuje režim APS v otevřené i uzavřené smyčce
 * aplikace, kde si můžete prohlédnout, jak funguje APS: vstupní parametry, výsledek a konečné rozhodnutí
 * umožní přidat další APS algoritmy a umožní uživateli rozhodnout, co používat
@@ -22,31 +22,31 @@ AndroidAPS je aplikace, která může komunikovat s bluetooth inzulinovými pump
 
 * An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
 * An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
-* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 or later
+* ' AndroidAPS <https://github.com/MilosKozak/AndroidAPS>' _, samu o sobě
+* ' Nightscout <https://github.com/nightscout/cgm-remote-monitor>' _ 0.10.2 nebo novější
 * A supported pump: Dana-R or Dana-RS Insulin Pump (unless you build your own driver for other insulin pump) or Accu-Chek Combo (currently in wider testing)
 * A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5, Freestyle Libre, Eversense or Medtronic Guardian
 
 
-.. note:: 
-	**Disclaimer And Warning**
+.. poznámka:: 
+	** Upozornění a varování **
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+	* Použití kódu z github.com je bez záruky nebo formální podpory jakéhokoliv druhu. Přečtěte licenci z této repozitoře pro další podrobnosti.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+	* Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
+	Vezměte prosím na vědomí - tento projekt nemá žádnou spojitost s a není žádným způsobem schválený: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>'`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _.
 
-Getting Started with AndroidAPS
+Začínáme s AndroidAPS
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first>
-   Screenshots <./Getting-Started/Screenshots.md>
+   Bezpečnost především <./Getting-Started/Safety-first>
+   Snímky obrazovky <./Getting-Started/Screenshots.md>
    Architcture, security implementation </EN/Getting-Started/Architecture-security-implementation.md>
    Phone <./Getting-Started/Phones.md>
    Pump choices <./Getting-Started/Pump-Choices.md>
@@ -54,7 +54,7 @@ Getting Started with AndroidAPS
    FAQ for loopers <./Getting-Started/FAQ.md>
    Glossary <./Getting-Started/Glossary.md>
   
-How to Install AndroidAPS
+Jak nainstalovat AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
