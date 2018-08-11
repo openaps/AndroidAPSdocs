@@ -12,4 +12,4 @@
 ## SMS komunikátor
 
 * Pokud povolíte SMS komunikátor, zvažte, co se může stát, když bude telefon povolený pro vzdálené příkazy ukraden! Proto ho vždy chraňte alespoň PIN kódem
-* Since AndoridAPS 1.1 you will receive SMS notification of important remote actions like bolus or profile change. Setup at least 2 numbers for SMS communication to be notified about actions of second phone (for case it's stolen)
+* Od AndoridAPS 1.1 obdržíte SMS oznámení o důležitých vzdálených akcích, jako je bolus nebo změna profilu. Nastavte alespoň 2 čísla pro SMS komunikaci, která budou informována o konání druhého telefonu (pro případ, kdy je ukradený)
