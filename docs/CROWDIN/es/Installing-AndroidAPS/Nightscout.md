@@ -17,6 +17,6 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26`
 
-[[https://github.com/MilosKozak/AndroidAPS/wiki/images/nightscout1.png]]
+![Azure](../../images/nightscout1.png)
 
 * Click "Save" at the top of the panel.
