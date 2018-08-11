@@ -15,3 +15,5 @@ _These instructions are for configuring the app and your pump if you have a Dana
 *  Restart your phone.
 
 *  Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+
+* Enable extended boluses on pump
