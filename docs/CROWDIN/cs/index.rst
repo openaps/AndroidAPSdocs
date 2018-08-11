@@ -71,45 +71,45 @@ Konfigurace
    :maxdepth: 1
    :glob:
    
-   Config Builder <./Configuration/Config-Builder.md>
-   BG Source<./Configuration/BG-Source.md>
+   Konfigurace <./Configuration/Config-Builder.md>
+   Zdroj glykémií<./Configuration/BG-Source.md>
    DanaR <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
-   Watchfaces <./Configuration/Watchfaces.md>
-   Preferences <./Configuration/Preferences.md>
-   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   Hodinky<./Configuration/Watchfaces.md>
+   Nastavení <./Configuration/Preferences.md>
+   Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
    
-Usage
+Použití
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   Objectives <./Usage/Objectives.md>
-   OpenAPS Features <./Usage/Open-APS-features.md>
-   Profiles <./Usage/Profiles.md>
-   SMS Commands <./Usage/SMS-Commands.md>
-   Extended Carbs <./Usage/Extended-Carbs.md>
-   Accessing log files <./Usage/Accessing-logfiles.md>
-   Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+   Cíle <./Usage/Objectives.md>
+   Možnosti OpenAPS <./Usage/Open-APS-features.md>
+   Profily <./Usage/Profiles.md>
+   SMS příkazy <./Usage/SMS-Commands.md>
+   Prodloužené sacharidy (eCarbs) <./Usage/Extended-Carbs.md>
+   Přístup k log souborům <./Usage/Accessing-logfiles.md>
+   Vyhlazování glykémií v xDripu <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 
-Where to go for help 
+Kam pro pomoc 
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Další čtení & zajímavé články <./Where-To-Go-For-Help/Background-reading.md>
+   Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-How to help
+Jak pomoci
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the App <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   Jak mohu pomoci <./Getting-Started/How-can-I-help.md>
+   Jak pomoci s překladem <./translations.md>
+   Jak editovat wiki <./make-a-PR>
