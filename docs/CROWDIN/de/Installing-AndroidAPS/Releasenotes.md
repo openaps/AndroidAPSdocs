@@ -7,7 +7,7 @@ Release date: xx-xx-xxxx
 ### Major new features
 
 * oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
-* Accu-check Combo pump support ([setup instructions](http://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Combo-Pump.html))
+* Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.html))
 * Setup wizard: guides you through the process of setting up AndroidAPS
 
 ### Settings to adjust when switching from AMA to SMB
@@ -19,7 +19,7 @@ Release date: xx-xx-xxxx
 ### Overview tab
 
 * Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
-* Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including [eCarbs/extended carbs](http://androidaps.readthedocs.io/en/latest/EN/Usage/Extended-Carbs.html))
+* Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including [eCarbs/extended carbs](../Usage/Extended-Carbs.html))
 * Colored prediction lines: 
   * Orange: COB (colour is used generally to represent COB and carbs)
   * Dark blue: IOB (colour is used generally to represent IOB and insulin)
