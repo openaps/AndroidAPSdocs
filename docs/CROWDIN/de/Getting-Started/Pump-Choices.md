@@ -22,4 +22,4 @@ The advantages of the Dana* RS as the pump of choice however are:
 
 The Combo of course is a very good pump. And loopable. It also has the advantage of many more infusion set types to chose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
 
-Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](./Future-possible-Pump-Drivers.html) page.
