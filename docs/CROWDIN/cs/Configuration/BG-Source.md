@@ -10,11 +10,11 @@ _Pokud používáte xDrip..._
 * Pokud chcete aby AndroidAPS bylo schopné kalibrovat, tak v xdrip vyberte nastavení -> Inter-app settings -> Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v Xdrip nastavení položku -> méně časté nastavení -> Advanced Calibration.
 * Vyberte xdrip v ConfigBuilder (nastavení v AndroidAPS).
 
-_If using Dexcom G5 App..._  
+_Pokud používáte Dexcom G5 aplikaci..._  
 
 
-* Just dev.
-* Download the apk from [here](https://github.com/dexcomapp/dexcomapp), just this versions works whether mg/dl or mmol/l.
+* Jen dev.
+* Stáhněte si apk z [zde](https://github.com/dexcomapp/dexcomapp), právě tato verze funguje buď v mg/dl nebo v mmol/l.
 * Deinstall original Dexcom app, if not allready done.
 * Select Dexcom G5 App in ConfigBuilder
 
