@@ -47,7 +47,6 @@ Getting Started with AndroidAPS
    
    Safety First <./Getting-Started/Safety-first>
    Screenshots <./Getting-Started/Screenshots.md>
-   Architcture, security implementation </EN/Getting-Started/Architecture-security-implementation.md>
    Phone <./Getting-Started/Phones.md>
    Pump choices <./Getting-Started/Pump-Choices.md>
    Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
