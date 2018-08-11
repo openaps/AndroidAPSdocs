@@ -54,6 +54,6 @@ You may need to adjust your settings to allow SMB to work effectively.  A good p
 <br><br><br>
 As with all updates, previous code has been cleaned, improved and bugs fixed.
 <br><br>
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not.  The more information you can share here the better (don't forget you may need to share your [log files](../Usage/Accessing-logfiles)).  The new features can also be discussed in the [gitter room](https://gitter.im/MilosKozak/AndroidAPS).
+If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not.  The more information you can share here the better (don't forget you may need to share your [log files](../Usage/Accessing-logfiles.html)).  The new features can also be discussed in the [gitter room](https://gitter.im/MilosKozak/AndroidAPS).
 <br><br>
 If you would like to be up-to-date on the Dev Branch you can use the same steps as already outlined above. You just need to change to the corresponding "dev"-Branch in Android Studio.
