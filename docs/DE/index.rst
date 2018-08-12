@@ -46,7 +46,6 @@ Was ist AndroidAPS?
    
    AndroidAPS-Bildschirme </DE/wasist/screenshots.md>
    Smartphones </DE/wasist/smartphones.md>
-   Insulinpumpen </DE/wasist/pumpen.md>
    Zukünftig ggf. loopbare Pumpen  </DE/wasist/pumpenzukunft.md>
    FAQ für Looper </DE/wasist/FAQ.md>
    Wie kann ich helfen? </DE/wasist/wie-helfen.md>
