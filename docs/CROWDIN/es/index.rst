@@ -1,108 +1,108 @@
-Welcome to the Android APS documentation
+Bienvenido a la documentación AndroidAPS
 ==============================================
 
-**What is AndroidAPS?**
+**Qué es AndroidAPS?**
 
-AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of OpenAPS "oref0" algorithm.
+AndroidAPS es una app que puede comunicar las bombas de insulina con bluetooth y ejecuta una versión del algoritmo “oref0” de OpenAPS.
 
-**Primary goals behind AndroidAPS:**
+**Objetivos principales**
 
-* modular app where is possible to easy add new modules without touching the rest of code
-* app that allow localization
-* app where we can easy select what will be included in final apk just by easy change and compilation
-* app which support open and closed APS mode
-* app where you can see how APS works: input params, result and final decision
-* allow to add more APS algorithms and let user decide what to use
-* app independent to pump driver and containing "Virtual pump" to allow users safely play with APS
-* app with tight Nightscout integration
-* app where is possible easy to add/remove constraints for user safety
-* all-in-one app you need for managing T1D with APS and Nightscout
+* App modular que sea usable para añadir más módulos sin tocar el resto de código
+* App que permita la localización
+* App que permita la fácil selección de lo que queremos que la apk final
+* App que permita lazo abierto y cerrado de APS
+* App donde puedas ver cómo funciona APS: los parámetros de entrada, los resultados y las decisiones que toma
+* Que permita añadir más algoritmos y permita usuario decidir cuál usar
+* App independiente del driver de la bomba y que contenga una bomba virtual que permita al usuario testear con seguridad APS
+* App con integración con Nightscout
+* App en la que sea posible añadir o eliminar limitaciones para seguridad del usuario
+* Todo en uno-app que necesitas para manejar la diabetes tipo 1 con APS y Nightscout
 
-**What you need to get started:**
+**Qué necesitas para empezar**
 
-* An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
-* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 or later
-* A supported pump: Dana-R or Dana-RS Insulin Pump (unless you build your own driver for other insulin pump) or Accu-Chek Combo (currently in wider testing)
-* A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5, Freestyle Libre, Eversense or Medtronic Guardian
+* Teléfono Android 5.0 o superior. Revisar `esta lista <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+* Una app que reciba datos de tu MCG: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ app
+* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 o posterior
+* Bomba de insulina compatible: Dana-R, Dana-RS o Accu-Check Combo
+* Un monitor continuo de glucosa (MCG): Dexcom G4/G5, Freestyle Libre, Eversense o Medtronic Guardian
 
 
 .. note:: 
-	**Disclaimer And Warning**
+	**Advertencia**
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* Toda la información y el código descrito aquí solo es de carácter informativo y de educación. Actualmente Nightscout no dispone de HIPAA privacy compliance. Use Nightscout y AndroidAPS bajo su responsabilidad, no use esta información para o código para tomar decisiones médicas.
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+	* El uso del código de github.com no tiene garantía o soporte formal de ningún tipo. Por favor revise el repositorio de Licencia para más detalles.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+	* Todos los productos y nombres de compañias, marcas, servicios, marcas registradas y servicios registrados son propiedad de sus respectivos tenedores. Su uso aquí es informativo y no implica afiliación o pago por ello.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
+	NOTA- este proyecto no tiene asociación o contraprestación alguna por parte de: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
 
-Getting Started with AndroidAPS
+Inicio
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first>
-   Screenshots <./Getting-Started/Screenshots.md>
-   Phone <./Getting-Started/Phones.md>
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   FAQ for loopers <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
+   La seguridad primero <./Getting-Started/Safety-first>
+   Pantallazos <./Getting-Started/Screenshots.md>
+   Teléfonos <./Getting-Started/Phones.md>
+   Opciones de Bombas de insulina <./Getting-Started/Pump-Choices.md>
+   Futuros controladores de bombas <./Getting-Started/Future-possible-Pump-Drivers.md>
+   FAQ para loopers <./Getting-Started/FAQ.md>
+   Glosario <./Getting-Started/Glossary.md>
   
-How to Install AndroidAPS
+Instalando AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   How to update to a new version <./Installing-AndroidAPS/Update-to-new-version.md>
+   Compilando la APK <./Installing-AndroidAPS/Building-APK.md>
+   Actualizar a una nueva versión <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev-branch.md>
+   Rama Dev <./Installing-AndroidAPS/Dev-branch.md>
    Nightscout <./Installing-AndroidAPS/Nightscout.md>
    
-Configuration 
+Configuración 
 ---------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    Config Builder <./Configuration/Config-Builder.md>
-   BG Source<./Configuration/BG-Source.md>
+   Fuente de datos Glucemia <./Configuration/BG-Source.md>
    DanaR <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
    Watchfaces <./Configuration/Watchfaces.md>
-   Preferences <./Configuration/Preferences.md>
-   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   Preferencias <./Configuration/Preferences.md>
+   Detección de sensibilidad y COB <./Configuration/Sensitivity-detection-and-COB.md>
    
-Usage
+Uso
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   Objectives <./Usage/Objectives.md>
-   OpenAPS Features <./Usage/Open-APS-features.md>
-   Profiles <./Usage/Profiles.md>
-   SMS Commands <./Usage/SMS-Commands.md>
-   Extended Carbs <./Usage/Extended-Carbs.md>
-   Accessing log files <./Usage/Accessing-logfiles.md>
+   Objetivos <./Usage/Objectives.md>
+   Funcionalidades OpenAPS <./Usage/Open-APS-features.md>
+   Perfiles <./Usage/Profiles.md>
+   Comandos SMS <./Usage/SMS-Commands.md>
+   Carbohidratos extendidos <./Usage/Extended-Carbs.md>
+   Acceder a los logs <./Usage/Accessing-logfiles.md>
    Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+   Trucos para uso básico de Accu Check Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 
-Where to go for help 
+Donde buscar ayuda 
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
    Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Cómo puedo ayudar <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 How to help
 ------------

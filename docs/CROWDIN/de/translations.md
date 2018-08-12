@@ -1,17 +1,17 @@
-# How to translate AndroidAPS
+# AndroidAPS übersetzen
 
-* Go to <https://translations.androidaps.org> and login using your Github account
+* Gehe auf die Seite <https://translations.androidaps.org> und melde dich mit deinem Github Account an
 
-* Contact [Milos](https://gitter.im/MilosKozak) or [Adrian](https://gitter.im/AdrianLxM) and specify language and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users)
+* Kontaktiere [Milos](https://gitter.im/MilosKozak) oder [Adrian](https://gitter.im/AdrianLxM) und teile ihnen mit, in welche Sprache du übersetzen möchtest und ob du Übersetzer oder Lektor (nur erfahrene AndroidAPS Anwender mit guten Sprachkenntnissen) sein willst
 
-* When we approve you, click the flag ![](../images/translation-flags.png)
+* Wenn wir dich freigeschalten haben, klicke auf die entsprechende Landesflagge ![](../images/translation-flags.png)
 
-* Click strings.xml ![](../images/translations-click-strings.png)
+* Klicke auf strings.xml ![](../images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion ![](../images/translations-translate.png)
+* Übersetze Sätze auf der linken Seite, indem du übersetzten Text hinzufügst oder verwende & edit suggestion ![](../images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode ![](../images/translations-proofreading-mode.png)
+* Lektoren müssen zum Proofreading-Modus wechseln ![](../images/translations-proofreading-mode.png)
 
-* and approve translated texts ![](../images/translations-proofreading.png)
+* und übersetzte Texte genehmigen ![](../images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
+Wenn ein Lektor eine Übersetzung genehmigt, wird sie in der nächsten Version von AndroidAPS hinzugefügt. Am Anfang wäre es gut, auch die vorhandenen Übersetzungen, die noch nicht genehmigt sind, durchzuschauen und zu korrigieren oder zu genehmigen, wenn sie korrekt sind.

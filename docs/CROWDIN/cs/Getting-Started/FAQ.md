@@ -1,8 +1,8 @@
-# FAQ for loopers
+# Nejčastější otázky smyčkařů
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.html)
+Jak sem přidat další otázky: Postupujte podle těchto [pokynů](../make-a-PR.html)
 
-## General
+## Obecné
 
 ### How to begin?
 
