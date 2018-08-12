@@ -44,12 +44,10 @@ Was ist AndroidAPS?
    :maxdepth: 1
    :glob:
    
-   Sicherheitshinweise </DE/wasist/sicherheitshinweise.md>
    AndroidAPS-Bildschirme </DE/wasist/screenshots.md>
    Smartphones </DE/wasist/smartphones.md>
    Insulinpumpen </DE/wasist/pumpen.md>
    Zukünftig ggf. loopbare Pumpen  </DE/wasist/pumpenzukunft.md>
-   Glossar </DE/wasist/glossar.md>
    FAQ für Looper </DE/wasist/FAQ.md>
    Wie kann ich helfen? </DE/wasist/wie-helfen.md>
   
