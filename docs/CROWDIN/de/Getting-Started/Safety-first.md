@@ -1,15 +1,15 @@
-# Safety first
+# Sicherheitshinweise
 
-**When you decide to build your own closed loop always think about security and impact of all your actions**
+**Wenn du dich entscheidest, deinen eigenen Closed Loop zu bauen, denke immer an deine Sicherheit und die Auswirkungen all deiner Maßnahmen**
 
-## General
+## Allgemein
 
-* AndroidAPS is a just a tool to help you manage diabetes. Not something you can install and forget!
-* Don't absolutely trust any device taking control of insulin delivery. Watch it all the time, learn how it works and learn how to predict it's actions.
-* Remember the phone paired with pump can do anything with the pump. Dedicate this phone for APS and communication with your child. Do not allow to install other apps and games (!!!) to prevent installing together some unwanted code like trojans, viruses or bots.
-* Install all security updates provided by phone manufacter and Google.
+* AndroidAPS ist nur ein Programm zur Unterstützung deiner Diabetestherapie. Nichts, womit du nach der Installation den Diabetes vergessen kannst!
+* Vertraue niemals blind auf ein Gerät bei der Anpassung der Insulindosierung. Behalte es stets im Auge, kontrolliere die Ergebnisse und lerne, die Aktionen des Algorithmus nachzuvollziehen und vorherzusagen.
+* Denke daran, dass das Smartphone mit der Pumpe alles machen kann. Dedicate this phone for APS and communication with your child. Installiere keine Apps oder Spiele (!!!), um die Gefahr von Trojanern, Viren oder sonstiger Schadsoftware zu minimieren.
+* Installiere alle Sicherheits-Updates, die der Smartphone-Hersteller und Google zur Verfügung stellen.
 
-## SMS Communicator
+## SMS-Kommunikator
 
-* If you enable SMS Communicator, consider what could happen when the phone enabled for remote commands is stolen! So always protect it at least by PIN code
-* Since AndoridAPS 1.1 you will receive SMS notification of important remote actions like bolus or profile change. Setup at least 2 numbers for SMS communication to be notified about actions of second phone (for case it's stolen)
+* Wenn du die SMS-Steuerung verwendest, behalte im Hinterkopf, was passieren könnte, falls das Smartphone, welches zur Fernsteuerung verwendet wird, gestohlen wird! Schütze dieses mit einem sicheren Code (mindestens PIN)
+* Seit AndroidAPS 1.1 wirst du über wichtige per Fernbedienung durchgeführte Aktionen (z. B. Bolus, Profilwechsel) eine SMS erhalten. Deswegen solltest du mindestens 2 Telefonnummern hinzufügen (für den Fall, dass ein Handy gestohlen wird)
