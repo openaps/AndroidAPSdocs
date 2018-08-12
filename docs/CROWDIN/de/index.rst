@@ -110,6 +110,6 @@ How to help
    :maxdepth: 1
    :glob:
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the App <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
+   App übersetzen <./translations.md>
+   Am Wiki mitschreiben <./make-a-PR>
