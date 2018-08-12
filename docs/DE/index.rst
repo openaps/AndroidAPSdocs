@@ -109,7 +109,6 @@ Mithelfen in der Community
    :glob:
 
    Wie kann ich helfen </DE/mithelfen/wie.md>
-   Übersetzen </DE/mithelfen/uebersetzen.md>
    Am Wiki mitschreiben </DE/mithelfen/wiki.md>
    Übersetzungs-Richtlinien </DE/mithelfen/uebersetzungs-richtlinien.md>
 
