@@ -37,18 +37,6 @@ Um AndroidAPS nutzen zu können, solltest du insulinpflichtiger Diabetiker sein 
 - **Nightscout Website** zum Auswerten der Daten und Erstellen von Profilen (Nightscout 0.10.2 oder aktueller)
 - **PC-Software "Android Studio"** zum Erstellen von AndroidAPS aus dem Quellcode
 - **Gute Diabetestherapie Einstellungen**
-
-Was ist AndroidAPS?
-----------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   AndroidAPS-Bildschirme </DE/wasist/screenshots.md>
-   Smartphones </DE/wasist/smartphones.md>
-   Zukünftig ggf. loopbare Pumpen  </DE/wasist/pumpenzukunft.md>
-   FAQ für Looper </DE/wasist/FAQ.md>
-   Wie kann ich helfen? </DE/wasist/wie-helfen.md>
   
 AndroidAPS installieren
 ------------
