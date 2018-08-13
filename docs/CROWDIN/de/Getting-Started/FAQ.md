@@ -14,11 +14,11 @@ Grundvoraussetzung des Loop ist, dass die Basalraten und Kohlenhydratfaktoren st
 
 * If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
 
-* If you take your pump off for showering/bathing/swimming/sport etc then press and hold on the "Open Loop"/"Closed Loop" text on the main homepage and select "disconnect for..." however many hours you plan to disconnect for. Damit wird die aktuelle Basalrate für diesen Zeitraum auf 0 gesetzt. The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump so if you wish to disconnect for a shorter period of time, or you connect your pump sooner than expected then press and hold "Suspended (X mins)" and select "Resume". Your IOB will then be accurate for calculations on your return to the pump.
+* If you take your pump off for showering/bathing/swimming/sport etc then press and hold on the "Open Loop"/"Closed Loop" text on the main homepage and select "disconnect for..." however many hours you plan to disconnect for. Damit wird die aktuelle Basalrate für diesen Zeitraum auf 0 gesetzt. The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump so if you wish to disconnect for a shorter period of time, or you connect your pump sooner than expected then press and hold "Suspended (X mins)" and select "Resume". Auf diese Weise wird dein IOB korrekt berechnet.
 
 * For safety, recommendations made are based on not one CGM reading but the average delta. Therefore if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
-* There are several blogs with good tips to help you understand the practicalities of looping:
+* Hier sind einige Blogs mit guten Tipps, um den Alltag mit deinem Loop zu meistern (in Englisch):
   
   * [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
   * [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
@@ -35,7 +35,7 @@ Grundvoraussetzung des Loop ist, dass die Basalraten und Kohlenhydratfaktoren st
 
 #### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 
-![AMA 3h](../../images/Screenshot_AMA3h.png) In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+![AMA 3h](../../images/Screenshot_AMA3h.png) Im AMA bedeutet "dia" nicht "Insulinwirkungsdauer". It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
 
 ### Profile
 
