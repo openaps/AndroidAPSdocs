@@ -1,13 +1,13 @@
-# Phones
+# Smartphones
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Benutzer haben eine [Liste von getesteten Handys und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) erstellt.
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Man kann Filter benutzen, um nach bestimmten Pumpen oder Handys zu sortieren, aber bitte denke daran, die Filter zurückzusetzen wenn du fertig bist, damit die nächste Person die ganze Liste sehen kann.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das [Formular](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) ausfüllen.
 
-Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email [donations@androidaps.org](mailto:hardware@androidaps.org).
+Probleme mit der Tabelle bitte per E-Mail an <hardware@androidaps.org> melden. Wenn du Handys oder Smartwatches zum Testen zur Verfügung stellen möchtest, bitte eine E-Mail an [donations@androidaps.org](mailto:hardware@androidaps.org) schreiben.
 
-## Phone Background
+## Handy Hintergrundbild
 
-![phone background](../../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: [Background in high resolution.](../../images/bg_phone.jpg)
+![Handy Hintergrundbild](../../images/bg_phone_thump.jpg) </br> Design: Thiago :) Wenn du dein Handy mit AndroidAPS dekorieren möchtest, kann du das Hintergrundbild hier herunterladen: [Hintergrundbild in hoher Auflösung.](../../images/bg_phone.jpg)
