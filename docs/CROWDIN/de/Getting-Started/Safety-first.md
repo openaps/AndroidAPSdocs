@@ -6,7 +6,7 @@
 
 * AndroidAPS ist nur ein Programm zur Unterstützung deiner Diabetestherapie. Nichts, womit du nach der Installation den Diabetes vergessen kannst!
 * Vertraue niemals blind auf ein Gerät bei der Anpassung der Insulindosierung. Behalte es stets im Auge, kontrolliere die Ergebnisse und lerne, die Aktionen des Algorithmus nachzuvollziehen und vorherzusagen.
-* Denke daran, dass das Smartphone mit der Pumpe alles machen kann. Dedicate this phone for APS and communication with your child. Installiere keine Apps oder Spiele (!!!), um die Gefahr von Trojanern, Viren oder sonstiger Schadsoftware zu minimieren.
+* Denke daran, dass das Smartphone mit der Pumpe alles machen kann. Verwende dieses Smartphone ausschließlich für APS, sowie die Kommunikation mit deinem Kind. Installiere keine Apps oder Spiele (!!!), um die Gefahr von Trojanern, Viren oder sonstiger Schadsoftware zu minimieren.
 * Installiere alle Sicherheits-Updates, die der Smartphone-Hersteller und Google zur Verfügung stellen.
 
 ## SMS-Kommunikator
