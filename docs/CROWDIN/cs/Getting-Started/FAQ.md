@@ -14,90 +14,90 @@ Základní princip uzavřené smyčky je, že vaše dávkování bazálního inz
 
 * Pokud máte v úmyslu používat aplikaci v android wear na bolusy nebo změnu nastavení, pak je třeba zajistit, aby v systému Android nebyla blokovaná oznámení od AndroidAPS. Potvrzení akce přichází prostřednictvím oznámení.
 
-* Pokud si sundáte svou pumpu před sprchováním/koupáním/plaváním/sportem atd., stiskněte a podržte prst na textu "Otevřená smyčka" / "Uzavřená smyčka" na hlavní domovské stránce a vyberte možnost "Odpojit pumpu na ..." pro tolik hodin, na kolik plánujete mít pumpu odpojenou. Tím se nastaví váš bazál na nulu na dané časové období. Minimální délka doby odpojení je odvozena z minimální délky dočasného bazálu, kterou lze nastavit na pumpě, takže pokud si ji přejete odpojit na kratší časové období, nebo připojíte svou pumpu dříve, než se očekávalo, poté stiskněte a podržte "Pozastaveno (X min)" a vyberte "Uvolnit". Your IOB will then be accurate for calculations on your return to the pump.
+* Pokud si sundáte svou pumpu před sprchováním/koupáním/plaváním/sportem atd., stiskněte a podržte prst na textu "Otevřená smyčka" / "Uzavřená smyčka" na hlavní domovské stránce a vyberte možnost "Odpojit pumpu na ..." pro tolik hodin, na kolik plánujete mít pumpu odpojenou. Tím se nastaví váš bazál na nulu na dané časové období. Minimální délka doby odpojení je odvozena z minimální délky dočasného bazálu, kterou lze nastavit na pumpě, takže pokud si ji přejete odpojit na kratší časové období, nebo připojíte svou pumpu dříve, než se očekávalo, poté stiskněte a podržte "Pozastaveno (X min)" a vyberte "Uvolnit". Vaše IOB pak bude přesněji vypočtené po vašem návratu k pumpě.
 
-* For safety, recommendations made are based on not one CGM reading but the average delta. Therefore if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+* Z důvodu bezpečnosti nejsou doporučení založena na jediné hodnotě ze senzoru CGM, ale opírají se o průměrnou změnu glykémie. Proto pokud jste nějaká měření ze senzoru nezachytili, může trvat nějakou dobu, než AndroidAPS nasbírá potřebná nová data a pak znovu smyčku nahodí.
 
-* There are several blogs with good tips to help you understand the practicalities of looping:
+* Existuje několik blogů s dobrými tipy, které vám nabídnou další zásady a praktická doporučení pro provoz smyčky:
   
   * [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
   * [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
   * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
   * [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
-### What emergency equipment is recommended to take with me?
+### Jaké záchranné vybavení se doporučuje brát s sebou?
 
-### How to savely attach the CGM/FGM?
+### Jak bezpečně připojit CGM/FGM?
 
-## AndroidAPS settings
+## AndroidAPS nastavení
 
-### APS algorithm
+### APS algoritmus (princip výpočtu)
 
-#### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+#### Proč se zobrazuje "dia:3" na kartě "OPENAPS AMA", i když mám jiné DIA nastavené ve svém profilu?
 
-![AMA 3h](../../images/Screenshot_AMA3h.png) In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+![AMA 3h](../../images/Screenshot_AMA3h.png) V AMA režimu DIA ve skutečnosti neznamená "doba působnosti inzulínu". Je to parameter, který dříve souvisel s DIA. Parametr nyní znamená, "dokdy by měla být korekce dokončená". Nemá to žádnou souvislost s výpočtem IOB. V OpenAPS SMB režimu už tento parametr není potřebný vůbec.
 
-### Profile
+### Profil
 
-#### Why using min. 5h DIA (insulin end time) instead of 2-3h?
+#### Proč se nyní používá 5h jako dolní limit DIA (doba působnosti inzulínu) namísto 2-3h?
 
-Well explained in this [article](/www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Je to dobře vysvětleno v tomto [článku](/www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nezapomeňte `AKTIVOVAT PROFIL` po úpravě vašeho DIA.
 
-## other settings
+## Další nastavení
 
-### Nightscout settings
+### Nastavení Nightscoutu
 
-### CGM settings
+### Nastavení CGM
 
-## Pump
+## Pumpa
 
-### Where to place the pump?
+### Kam pumpu umístit?
 
-### Batteries
+### Baterie
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site. Tricks to increase battery life include:
+Smyčka může vybíjet baterii rychleji než v normálním režimu, a to protože systém s pumpou komunikuje přes bluetooth mnohem víc, než by uživatel dělal ručně. Nejlepší je vyměnit batterii už při 25%, jinak už může být komunikace s pumpou nespolehlivá. Můžete si k tomu nastavit varující alarm pro vybití baterie pumpy tak, že nastavíte proměnnou PUMP_WARN_BATT_P vaší Nightscout stránky. Mezi triky, jak zvýšit životnost baterie, patří:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
-* reduce the length of time the backlight stays on (within pump settings menu)
-* select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
-* for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html#battery-type-and-causes-of-short-battery-life) to use for Combo pump
+* zkraťte časový interval, po jaký zůstává svítit LCD displej (v menu nastavení pumpy)
+* zkraťte časový interval, po jaký zůstává svítit podsvícení (v menu nastavení pumpy)
+* nastavte upozorňování tak, aby se namísto vibrace ozývalo pípnutí (v menu nastavení pumpy)
+* na pumpě používejte tlačítka jenom pro výměnu inzulínu, jinak používejte raději AndroidAPS na prohlížení historie, stavu baterie a stavu zásobníku.
+* AndroidAPS aplikace může být často zavíraná systémem, což šetří energii nebo paměť RAM na některých telefonech. Ale pokud se AndroidAPS pokaždé znovu inicializuje při každém startu, tak zřizuje Bluetooth spojení s pumpou a znovu načítá aktuální bazální dávky a historii bolusů. To vybíjí baterii. Abyste zjistili, jestli k tomu dochází, běžte do Nastavení > NSClient a zapněte 'Logovat spuštění aplikace do NS'. Nightscout pak obdrží událost při každém restartu AndroidAPS, čímž tento problém snadno odhalíte. Abyste tomuto chování zabránili, udělte aplikaci AndroidAPS výjimku, aby ji systém nevypínal v době nečinnosti (v menu úspory baterie na vašem telefonu).
+* očistěte póly baterie alkoholem, aby na nich nezůstala případná mastnota/nečistota z výroby.
+* pro pumpy DanaR/RS při spouštěcí sekvenci teče přes baterie velký proud, aby záměrně přerušil ochranný potah (který zabraňuje ztrátě kapacity baterie při skladování), ale přerušení potahu se nedaří vždy ve 100% případů. Buďto baterie vyndejte a znovu vložte 2 až 3 krát (než se na obrazovce ukáže 100%), anebo před vložením baterií použijte bateriový klíč ke chvilkovému zkratu (přidržením k oběma pólům baterie na zlomek vteřiny).
+* podívejte se také na další tipy pro [konkrétní typy baterií](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html#battery-type-and-causes-of-short-battery-life) při použití pumpy Combo
 
-### Changing reservoirs and canulas
+### Výměna zásobníků a kanyl
 
-The change of cartridge can not be done via AndroidAPS, but must be carried out as before directly via the pump.
+Výměnu zásobníku nelze provést přes AndroidAPS, výměna musí být provedena přímo na pumpě jako dřív.
 
-* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAAPS and select 'Suspend Loop for 1h'
-* Now disconnect the pump, and change the reservoir as per pump instructions.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+* Dlouze stiskněte "Otevřená smyčka"/"Uzavřená smyčka" na hlavní kartě AndroidAPS a vyberte 'Pozastavit smyčku na 1 h'
+* Nyní odpojte pumpu a vyměňte zásobník podle instrukcí pumpy.
+* Jak budete mít pumpu znovu připojenou, obnovte smyčku dlouhým stiskem na 'Pozastaveno (X min)'.
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+Naproti tomu pro výměnu kanyly se nepoužívá funkce "naplnit infúzní set" na pumpě, ale set a/nebo kanyla se plní bolusem, který se nezobrazuje v historii bolusů. To znamená, že se nepřeruší běžící dočasná bazální dávka. Na záložce Akce, použijte tlačítko Plnění/doplňování, abyste nastavili množství inzulínu k naplnění infúzního setu a plnění spustili. Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. Podívejte se do příbalového letáku kanyl, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
 
-## Hygiene
+## Hygiena
 
-### What to do when taking a shower or bath?
+### Co dělat při sprchování a koupání?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS so that the IOB calculations are right. Push on the light blue field "Open loop / Closed loop" on top of the homescreen. Select "Disconnect pump for 1 h". Once you have been reconnected your pump you have to select "Continue" in the same field.
+Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji obvykle nebudete potřebovat. Ale zároveň byste o tom měli AAPS říct, aby byly výpočty IOB správné. Zmáčkněte světle modré pole "Otevřená smyčka / Uzavřená smyčka" na vrchu hlavní stránky. Zvolte "Odpojit pumpu na 1 h". Jakmile jste znovu připojení k pumpě musíte vybrat "Uvolnit" na stejném políčku.
 
-## Working
+## Práce
 
-## Leasure activities
+## Volnočasové aktivity
 
-## Sports
+## Sporty
 
 ## Sex
 
-## Go out
+## Vyjít si
 
-## Drinking alcohol
+## Pití alkoholu
 
-## Sleeping
+## Spánek
 
-## Travelling
+## Cestování
 
-## Hospitalization
+## Pobyt v nemocnici
 
-## Medical appointment with your endocrinologist
+## Schůzka s vaším diabetickým lékařem
