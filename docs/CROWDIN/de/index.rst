@@ -102,7 +102,7 @@ Hilfe durch die Community
    :glob:
 
    Hintergrundinfos & interessante Artikel <./Where-To-Go-For-Help/Background-reading.md>
-   Wohin wenden? </DE/hilfe/community.md>
+   Wohin wenden? <DE/hilfe/community.md>
 
 Mithelfen in der Community
 ------------
@@ -113,5 +113,4 @@ Mithelfen in der Community
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
    App übersetzen <./translations.md>
    Am Wiki mitschreiben <./make-a-PR>
-Übersetzungs-Richtlinien <../../DE/mithelfen/uebersetzungs-richtlinien.md>
-`this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+* `Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>`_
