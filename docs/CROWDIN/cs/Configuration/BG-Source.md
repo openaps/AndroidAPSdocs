@@ -50,9 +50,9 @@ _pokud používáte Glimp..._
 * V 600 Series Uploader přejděte na Nastavení > Send to xdrip+ and select ON (zaškrtněte).
 * Vyberte MM640g v nastavení AndroidAPS.
 
-**For users of other CGM uploaded to nightscout:**  
-If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
+**Pro ostatní uživatele CGM s daty v Nighscoutu**  
+Pokud máte jiný zdroj CGM nastavený tak, aby nahrával data do [Nightscout](http://www.nightscout.info)  
 
 
-* In AndroidAPS Preferences enter your nightscout website and API secret.
+* V nastavení AndroidAPS zadejte svojí Nightscout adresu a API secret.
 * Vyberte NSClient v Konfiguraci AndroidAPS.
