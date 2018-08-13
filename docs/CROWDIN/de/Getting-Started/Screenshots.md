@@ -1,10 +1,10 @@
-# Understanding the AndroidAPS screens
+# Die AndroidAPS Bildschirme
 
-## The Homescreen
+## Die Startseite
 
-![Homescreen](../images/Screenshot_Home_screen.png)
+![Startseite](../images/Screenshot_Home_screen.png)
 
-This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
+Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meisten der Informationen, die du tagtäglich benötigst.
 
 Section A: allows you to navigate between the various AndroidAPS modules by swiping left or right.
 
