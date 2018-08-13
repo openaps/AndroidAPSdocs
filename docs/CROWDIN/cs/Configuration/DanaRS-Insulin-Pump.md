@@ -1,8 +1,8 @@
-# DanaRS Pump
+# Pumpa DanaRS
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Tyto pokyny jsou pro konfiguraci aplikace a Vaší pumpy, pokud máte pumpu DanaRS od roku 2017 a dále. Pokud máte původní DanaR, navštivte [Pumpa DanaR](./DanaR-Insulin-Pump).*
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* V pumpě DANARS je aplikací používán "BAZÁL A". Existující data budou přepsána.
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
