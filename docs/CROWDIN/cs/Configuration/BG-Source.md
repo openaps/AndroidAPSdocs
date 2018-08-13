@@ -31,24 +31,24 @@ _pokud používáte OTG kabel ("tradiční" Nightscout) _
 _pokud používáte xDrip..._  
 
 
-* If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
+* Pokud jste ještě nenastavili, tak stáhněte xDrip a postupujte podle pokynů na [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) nebo [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en) ([Hardware](https://bluetoolz.de/wordpress/)).
 * V Xdripu vyberte nastavení -> Inter-app settings - > Lokální odesílání dat a vyberte zapnout.
 * V Xdripu vyberte nastavení -> Inter-app settings - > Accept Treatments a vyberte vypnout.
 * Pokud chcete aby AndroidAPS bylo schopné kalibrovat, tak v xdrip vyberte nastavení -> Inter-app settings -> Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v Xdrip nastavení položku -> méně časté nastavení -> Advanced Calibration.
 * Vyberte xdrip v ConfigBuilder (nastavení v AndroidAPS).
 
-_If using Glimp..._  
+_pokud používáte Glimp..._  
 
 
-* If not already set up then download Glimp and follow instructions on [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
-* Select Glimp in ConfigBuilder (setting in AndroidAPS).
+* Pokud jste ještě nenastavili tak stáhněte Glimp a postupujte podle instrukcí na [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
+* Vyberte Glimp v Konfiguraci AndroidAPS.
 
-**For users of MM640g or MM630g:**  
+**Pro uživatele MM640g nebo MM630g:**  
 
 
-* If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
-* In 600 Series Uploader go to Settings > Send to xdrip+ and select ON (tick).
-* Select MM640g in ConfigBuilder (setting in AndroidAPS).
+* Pokud jste ještě nenastavili, tak stáhněte [600SeriesAndroidUploader](http://pazaan.github.io/600SeriesAndroidUploader/) a postupujte podle instrukcí na [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
+* V 600 Series Uploader přejděte na Nastavení > Send to xdrip+ and select ON (zaškrtněte).
+* Vyberte MM640g v nastavení AndroidAPS.
 
 **For users of other CGM uploaded to nightscout:**  
 If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
