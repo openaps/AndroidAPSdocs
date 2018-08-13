@@ -1,24 +1,24 @@
-# Understanding the AndroidAPS screens
+# Die AndroidAPS Bildschirme
 
-## The Homescreen
+## Die Startseite
 
-![Homescreen](../images/Screenshot_Home_screen.png)
+![Startseite](../images/Screenshot_Home_screen.png)
 
-This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
+Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meisten der Informationen, die du tagtäglich benötigst.
 
 Section A: allows you to navigate between the various AndroidAPS modules by swiping left or right.
 
-Section B: Allows you to change the loop status (open loop, closed loop, suspend loop etc), see your current profile, to see your current target blood glucose level and to set a temporary target. Long press on any of the buttons to alter the setting.
+Section B: Allows you to change the loop status (open loop, closed loop, suspend loop etc), see your current profile, to see your current target blood glucose level and to set a temporary target. Um eines davon zu verändern, drücke länger auf das entsprechende Feld.
 
-Section C: The latest blood glucose reading from your CGM, how long ago it was read, changes in the last 15 and 40 minutes, your current basal rate - including any temporary basal rate (TBR) programmed by the system, your insulin on board and carbs on board.
+Abschnitt C: Hier wird die letzte Glukosemessung deines CGMs angezeigt und wie lange diese her ist, außerdem die Veränderung der Werte in den vergangenen 15 und 40 Minuten, deine aktuelle Basalrate - einschließlich der vom System gesetzten temporären Basalrate (TBR), das noch wirkende Insulin (IOB, Insulin on board) und noch wirkende Kohlenhydrate (COB, carbs on board).
 
-The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
+The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. Die Zahlen in Klammern zeigen, wie viel Insulin aus einem früheren Bolus (oder mehreren) noch wirkt bzw. wie viel Insulin noch vorhanden ist oder fehlt aus von AndroidAPS programmierten TBR. This second component may be negative if there have recently been periods of reduced basal.
 
-Section D: Is where you can select which information is displayed on the charts below.
+Abschnitt D: Hier kannst du auswählen, welche Informationen in den folgenden Diagrammen angezeigt werden. Bei manchen Smartphones fehlt diese Zeile, man kann die auszuwählenden Diagrammpunkte aber mit einem kleinen Pfeil an der rechten Seite aufrufen.
 
-Section E: Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries. The purple line shows the predicted BG trend - if you have it selected.
+Abschnitt E: Dies ist die Grafik, die den Glukosewert (BG) anzeigt, wie er von deinem Messsystem (CGM) ausgelesen wird. Sie zeigt auch Nightscout-Benachrichtigungen wie Kalibrierungen mit einem Blutzuckermessgerät (Finger) und Kohlenhydrateingaben an. Die violette Linie zeigt den vorhergesagten Glukosetrend - wenn du das entsprechend ausgewählt hast.
 
-The blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there wre no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+Die blaue Linie zeigt das von der Pumpe abgegebene Basalinsulin an. The dotted blue line is what the basal rate would be if there wre no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
 
 Section F: is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
 

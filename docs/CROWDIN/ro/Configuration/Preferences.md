@@ -6,7 +6,7 @@ This allows you to set a password in order to prevent accidental or unauthorised
 
 ## Patient age
 
-Algorithms are different based on patient age so select Child, Teenage or Adult here.
+There are security limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real agre because it can lead to overdosing by entering wrong value in insulin dialog (for example by skipping decimal dot)
 
 ## General
 

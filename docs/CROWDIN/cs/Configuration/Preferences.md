@@ -1,12 +1,12 @@
-# Preferences
+# Nastavení
 
-## Password for settings
+## Heslo do nastavení
 
-This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
+Tato volba Vám umožňuje nastavit heslo, abyste předešli náhodným nebo neoprávněným změnám v nastavení. Pokud zde zadáte heslo, budete požádáni, abyste ho zadali pro vstup do Nastavení. Chcete-li odstranit heslo, tak vymažte text v nastavení u této volby.
 
-## Patient age
+## Stáří pacienta
 
-Algorithms are different based on patient age so select Child, Teenage or Adult here.
+There are security limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real agre because it can lead to overdosing by entering wrong value in insulin dialog (for example by skipping decimal dot)
 
 ## General
 

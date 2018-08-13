@@ -1,21 +1,21 @@
-# DanaRS Pump
+# Pumpa DanaRS
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Tyto pokyny jsou pro konfiguraci aplikace a Vaší pumpy, pokud máte pumpu DanaRS od roku 2017 a dále. Pokud máte původní DanaR, navštivte [Pumpa DanaR](./DanaR-Insulin-Pump).*
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* V pumpě DANARS je aplikací používán "BAZÁL A". Existující data budou přepsána.
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* V AndroidAPS vyberte Konfiguraci a "DanaRS"
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Zvolte Menu ťuknutím na 3 tečky v pravém horním rohu. Zvolte položku Předvolby.
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* Vyberte DanaRS připojení nové pumpy a zadejte sériové číslo pumpy DanaRS.
 
-* Select Pump password, and input your password. (Default password is 1234)
+* Vyberte heslo pumpy a zadejte své heslo. (Výchozí heslo je 1234)
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Vyberte rychlost bolusu, abyste změnili výchozí rychlost bolusu (12sec na 1U, 30sec na 1U nebo 60sec na 1U).
 
-* Restart your phone.
+* Restartujte telefon.
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Nastavte bazální dávkování na 0,01 U/h pomocí lékařského menu (viz uživatelská příručka pumpy)
 
-* Enable extended boluses on pump
+* Povolte rozšířené bolusy na pumpě
