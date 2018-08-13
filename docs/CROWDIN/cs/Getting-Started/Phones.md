@@ -4,10 +4,10 @@ Uživatelé vytvořili [seznam otestovaných telefonů a hodinek](https://docs.g
 
 Můžete použít filtr pro zobrazení konkrétní pumpy nebo telefonu, ale prosím ve chvíli, kdy máte vše shlédnuto, nastavte přehled zpět, aby byl připraven pro další osobu.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Pro zápis telefonu nebo hodinek, který ještě není uveden v tabulce, vyplňte prosím [formulář](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email [donations@androidaps.org](mailto:hardware@androidaps.org).
+V případě problémů s tabulkou, napište prosím na email <hardware@androidaps.org>, pokud chcete darovat telefon/hodinky potřebné na testování, napište na email [donations@androidaps.org](mailto:hardware@androidaps.org).
 
-## Phone Background
+## Pozadí na telefon
 
-![phone background](../../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: [Background in high resolution.](../../images/bg_phone.jpg)
+![pozadí telefonu](../../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Pokud si chcete vyzdobit telefon pozadím s AndroidAPS, můžete si pozadí stáhnout zde:[Pozadí ve vysokém rozlišení.](../../images/bg_phone.jpg)
