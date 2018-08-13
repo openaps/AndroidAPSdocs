@@ -1,6 +1,6 @@
 # FAQ für Looper
 
-Gewusst wie: Um FAQ zu ergänzen, folge diesen [Anweisungen](../make-a-PR.html)
+Gewusst wie: Um die FAQ zu ergänzen, folge diesen [Anweisungen](../make-a-PR.html)
 
 ## Allgemein
 
