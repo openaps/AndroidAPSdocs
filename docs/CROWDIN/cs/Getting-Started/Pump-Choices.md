@@ -12,14 +12,14 @@ Výhody pumpy Dany* RS jako volby nicméně jsou:
 
 * Počáteční spárování je s Dana* RS jednodušší. Ale to obvykle děláte pouze jednou, takže to ovlivňuje pouze situace, pokud chcete testovat nové funkce s různými pumpami.
 
-* Combo zatím pracuje s převodem obrazu do strojově čitelné podoby. Obecně to funguje skvěle, ale je to pomalé. Pro smyčku to tolik nevadí, vše pracuje na pozadí. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+* Combo zatím pracuje s převodem obrazu do strojově čitelné podoby. Obecně to funguje skvěle, ale je to pomalé. Pro smyčku to tolik nevadí, vše pracuje na pozadí. Stále strávíte ale mnohem více času, kdy musíte být spojeni, takže může dojít k přerušení spojení, což se může snadno stát, pokud odejde od telefonu mezitím, co posíláte bolus.
 
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Combo vibruje na konci TBRs, Dana* R vibruje (nebo pípne) při SMB. V noci pravděpodobně používate TBRs více než SMB. U Dany* RS je možné nastavit aby ani nepípala, ani nevibrovala.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* Čtení historie na RS proběhne v několika sekundách, se sacharidy umožňuje přepnout telefony jednoduše offline a pokračovat ve smyčce jakmile jsou nějaké hodnoty z CGM.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* Všechny pumpy, se kterými AndroidAPS komunikuje jsou vodotěsné. Pouze pumpy Dana mají také "záruku na vodotěsnost" v důsledku uzavřeného prostoru pro baterii a prostoru pro plnicí zásobník.
 
-The Combo of course is a very good pump. A podporující APS. It also has the advantage of many more infusion set types to chose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+Combo je samozřejmě velmi dobrá pumpa. A podporující APS. Má také výhodu v mnohem více typů infuzních setů se standardním závitem luer lock. A baterie je obyčejná, kterou můžete koupit na každé benzínce, v obchodě který má otevřeno 24 hodin denně a pokud opravdu jednu potřebujete, můžete ji ukrást/půjčit si ji z ovládání v hotelovém pokoji :-P
 
-Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](./Future-possible-Pump-Drivers.html) page.
+Podrobnosti o stavu dalších pump s potenciálem pracovat s AndroidAPS jsou zjistitelné na odkazu [Budoucí (možné) pumpy](./Future-possible-Pump-Drivers.html).
