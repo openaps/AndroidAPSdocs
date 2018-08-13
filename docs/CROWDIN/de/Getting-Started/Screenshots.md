@@ -8,7 +8,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 Abschnitt A: Ermöglicht dir die Navigation zwischen den verschiedenen AndroidAPS Modulen, indem du nach links oder rechts blätterst (wischst).
 
-Abschnitt B: Hier siehst du den Status des Loops (Open Loop, Closed Loop, Unterbrechung des Loops usw.), dein aktuelles Profil und deinen Zielbereich. Um eines davon zu verändern, drücke länger auf das entsprechende Feld.
+Abschnitt B: Hier siehst du den Status des Loops (Open Loop, Closed Loop, Unterbrechung des Loops usw.), dein aktuelles Profil und deinen Zielbereich. Um eines davon zu verändern, drücke länger auf das entsprechende Feld. I.e long press the dark blue target bar in the upper right ("5.5" in the screenshot) to set a temp target.
 
 Abschnitt C: Hier wird die letzte Glukosemessung deines CGMs angezeigt und wie lange diese her ist, außerdem die Veränderung der Werte in den vergangenen 15 und 40 Minuten, deine aktuelle Basalrate - einschließlich der vom System gesetzten temporären Basalrate (TBR), das noch wirkende Insulin (IOB, Insulin on board) und noch wirkende Kohlenhydrate (COB, carbs on board).
 
@@ -94,8 +94,8 @@ Diese sind einfach Aufzeichnungen der Behandlungen (Bolus und Kohlenhydrate), xD
 
 An dieser Stelle wird dein AndroidAPS System eingerichtet. Das Bild zeigt ein typisches System, das mit einer Accu-Chek Combo Insulinpumpe und einem Dexcom G5 CGM betrieben wird. Der Dexcom Sensor wird über xDrip+ gesteuert. Als Insulin wird NovoRapid mit einem Oref Profil verwendet und die Daten auf einen Nightscout Cloudserver hochgeladen.
 
-Wenn die Box rechts angekreuzt ist, wird das entsprechende Modul in der oberen Menüliste angezeigt. Über das kleine Zahnradsymbol können weitere Einstellungen für dieses Modul vorgenommen werden - sofern verfügbar.
+The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
 ## Einstellungen und Vorgaben
 
-Oben rechts in der Navigationsleiste findest du drei übereinander angeodnete kleine Punkte. Der Klick darauf führt zu den Einstellungen und Vorgaben der App. Dort können auch die Einstellungen exportiert werden, z. B. um sie auf ein anderen Smartphone zu übernehmen. Einstellungen und Vorgaben werden an anderer Stelle des Wikis erläutert.
+Oben rechts in der Navigationsleiste findest du drei übereinander angeodnete kleine Punkte. Der Klick darauf führt zu den Einstellungen und Vorgaben der App. Dort können auch die Einstellungen exportiert werden, z. B. um sie auf ein anderen Smartphone zu übernehmen. These are discussed elsewhere in the wiki.
