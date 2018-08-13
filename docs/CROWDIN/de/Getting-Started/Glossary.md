@@ -1,7 +1,7 @@
-# Glossary
+# Glossar
 
-For most looping terms see here: https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html
+Für das meiste "Looper Vokabular": \[https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html (auf englisch)\](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
 
-Some AndroidAPS specific terms include:
+Einige AndroidAPS spezifische Begriffe einschließlich:
 
-[[Circadian Percentage Profile]] - changes your base profile based on either a timeshift or a percentage.
+[[Circadian Percentage Profile]] - macht einen Profilwechsel entweder mit Zeitverzögerung oder durch eine prozentuale Änderung.
