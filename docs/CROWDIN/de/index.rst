@@ -114,3 +114,4 @@ Mithelfen in der Community
    App übersetzen <./translations.md>
    Am Wiki mitschreiben <./make-a-PR>
 Übersetzungs-Richtlinien <../../DE/mithelfen/uebersetzungs-richtlinien.md>
+`this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
