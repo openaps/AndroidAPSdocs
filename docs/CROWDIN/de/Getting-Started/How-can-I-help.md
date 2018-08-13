@@ -1,23 +1,27 @@
 # Das AndroidAPS Projekt unterstützen
 
-***AndroidAPS operates entirely on volunteer efforts and has no paid staff.** Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.*
+*AndroidAPS arbeitet ausschließlich ehrenamtlich und hat keine bezahlten Mitarbeiter. Entwickler sind Eltern, Betreuer, Angehörige und Menschen mit Diabetes, die gemeinsam an der Entwicklung und Verbesserung einer Lösung arbeiten, die dem Wunsch vieler entspricht. </br>Die Entwickler arbeiten kostenlos in ihrer Freizeit. Aber es wäre etwas unfair von ihnen zu erwarten, zusätzliche Ausgaben auf sich zu nehmen, um ein solch fantastisches Projekt kostenfrei für alle als Open Source zur Verfügung zu stellen.*
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Um ein neues Gerät vollständig zu testen, benötigen die Entwickler ein Ersatzgerät und eine Ersatzpumpe, denn diese Tests können nicht an Menschen durchgeführt werden, bevor AndroidAPS stabil läuft. Neuere Pumpenmodelle und CGM-Geräte müssen getestet werden, sobald sie verfügbar sind. Ein Teil des gespendeten Geldes wird auch für den weltweiten Versand dieser Testgeräte an die Entwickler benötigt.   
+Außerdem ist es einfach auch eine gute Idee, etwas zu den Reisekosten der Entwickler beizutragen, damit diese ihre dunklen Kellerräume verlassen und ihre Köpfe auf Konferenzen und anderen Veranstaltungen zusammen stecken können.*
 
-**I can write code! How do I participate?** Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+**Ich kann programmieren! <0>Wie kann ich mich einbringen? Yeah! Schau dir die Issues an, frag im Gitter Channel. Es gibt immer viel zu tun! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten pull request! :)</p> 
 
-**I know the system and can write documentation!** or **I do speak multiple languages and whant to translate the documentation** < br/> Great, this is a highly appreciated thing and a good way to pay it foreward! < br/> The gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby)  
-< br/> A guide how to do commits can be found here: [Openaps/my-first-pr](https://openaps.readthedocs.io/en/latest/docs/Resources/my-first-pr.html#making-your-first-pr-pull-request) (OpenAPS documentation but same applies for AndroidAPS).
+**Ich kenne das AndroidAPS System und kann an der Dokumentation mitschreiben!** oder ** Ich spreche mehrere Sprachen und möchte die Dokumentation übersetzen**  
+Großartig! Auch das ist ein wertvoller Beitrag um das Projekt voran zu bringen, der sehr geschätzt wird!   
+Den Gitter Channel zum Wiki findest Du hier: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby)  
+  
+Eine Anleitung, wie du Änderungen vornimmst, findest du hier: [Openaps/my-first-pr](https://openaps.readthedocs.io/en/latest/docs/Resources/my-first-pr.html#making-your-first-pr-pull-request) (OpenAPS-Dokumentation, aber das selbe gilt für AndroidAPS).
 
-**I've got cash I'd like to donate, how do I do that?** PayPal: donations@androidaps.org  
-**What is the money used for?** The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. This is what is currently planned:
+**Ich möchte gerne Geld spenden. Wie kann ich dies tun?** Nutze die PayPal-Empfängeradresse donations@androidaps.org  
+**Wie wird das Geld verwendet?** Mit dem Geld wird NIEMAND für seine Arbeit bezahlt! Es wird verwendet, um die Kosten der Entwickler gering zu halten, wenn wir persönliche Treffen und Meetings organisieren. Wir versuchen so transparent wie möglich zu sein. Hier ein Beispiel:
 
-- European Dev Meetup in Prague end of May 2018: 
-    - hiring a room plus internet
-    - equipment
-    - food / coffee
-    - in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
+- Europäisches Entwicklertreffen in Prag Ende Mai 2018 
+    - Raummiete und Internet
+    - Ausrüstung
+    - Verpflegung / Kaffee
+    - Für den unwahrscheinlichen Fall, dass die oben genannten Kosten vollständig gedeckt sind und etwas Geld übrig bleibt: Reisekosten für die Teilnehmer mit langer und kostspieliger Anreise. (Einige Entwickler von anderen Kontinenten haben teilgenommen. Sie waren zu der Zeit aber bereits in Europa so dass die Reisekosten gering gehalten werden konnten.)
 
-**I've got spare equipment, where do I send it?** We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+**Ich habe ein Ersatzgerät. Wohin soll ich es senden?** Wir sammeln aktuell die Angebote, um die Geräte für die Tests verteilen zu können. Sollten am Ende Geräte übrig bleiben, so werden wir diese einer der Pay-it-Forward Facebook Gruppen spenden, die bereits existieren und die T1 Community unterstützen. Sende eine E-Mail an developers@androidaps.org wenn du dein Ersatzgerät spenden möchtest. Wir senden dir dann die Empfängeradresse.
 
-**I've not got cash or equipment, how can I help?** Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forwards by answering the simple questions in gitter & Facebook to allow the developers the time and space to focus on the harder stuff.
+**Ich kann weder spenden noch habe ich Ersatzgeräte. Wie kann ich trotzdem helfen?** Wir benötigen auch Grafikdesigner, Experten für User Experience, Übersetzer und Autoren für das Wiki. Oder bringe das Projekt einfach dadurch voran, dass du die Fragen auf Gitter und Facebook beantwortest. Dann können sich die Entwickler darauf konzentrieren, die harten Nüsse zu knacken.
