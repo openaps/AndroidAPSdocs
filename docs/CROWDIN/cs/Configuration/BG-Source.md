@@ -15,20 +15,20 @@ _Pokud používáte Dexcom G5 aplikaci..._
 
 * Jen dev.
 * Stáhněte si apk z [zde](https://github.com/dexcomapp/dexcomapp), právě tato verze funguje buď v mg/dl nebo v mmol/l.
-* Deinstall original Dexcom app, if not allready done.
-* Select Dexcom G5 App in ConfigBuilder
+* Odinstalujte původní verzi Dexcom aplikace, pokud jste to ještě neudělali.
+* Vyberte Dexcom G5 aplikace v Konfiguraci
 
-_If using OTG cable ('traditional' Nightscout)…_  
-
-
-* If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* In AndroidAPS Preferences enter your nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
-
-**For users of Libre:**  
+_pokud používáte OTG kabel ("tradiční" Nightscout) _  
 
 
-_If using xdrip..._  
+* Pokud jste ještě nenastavili, tak stáhněte Nightscout Uploader aplikaci z obchodu Play a postupujte podle pokynů na [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
+* V nastavení AndroidAPS zadejte svojí Nightscout adresu a API secret.
+* Vyberte NSClient v Konfiguraci AndroidAPS.
+
+**Pro uživatele Libre:**  
+
+
+_pokud používáte xDrip..._  
 
 
 * If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
@@ -55,4 +55,4 @@ If you have any other CGM set up that sends your data to [Nightscout](http://www
 
 
 * In AndroidAPS Preferences enter your nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* Vyberte NSClient v Konfiguraci AndroidAPS.
