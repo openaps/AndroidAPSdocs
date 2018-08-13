@@ -10,11 +10,11 @@ Grundvoraussetzung des Loop ist, dass die Basalraten und Kohlenhydratfaktoren st
 
 ### What practicalities of looping do I have?
 
-* If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+* Wenn du willst, dass deine Einstellungen nicht einfach verändert werden können, dann kannst du das Einstellungsmenü mit einem Passwort schützen. Dazu im Einstellungesmenü die Option "Passwort für Einstellungen" aktivieren und das gewünschte Passwort eingeben, Wenn du das nächste Mal zu den Einstellungen gehst, musst du das Passwort eingeben um Änderungen vorzunehmen. Wenn du später das Passwort wieder deaktivieren möchstest, gehe zu "Passwort für Einstellungen" und lösche den Text aus dem Feld.
 
 * If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
 
-* If you take your pump off for showering/bathing/swimming/sport etc then press and hold on the "Open Loop"/"Closed Loop" text on the main homepage and select "disconnect for..." however many hours you plan to disconnect for. This will set your basal to zero for that time period. The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump so if you wish to disconnect for a shorter period of time, or you connect your pump sooner than expected then press and hold "Suspended (X mins)" and select "Resume". Your IOB will then be accurate for calculations on your return to the pump.
+* If you take your pump off for showering/bathing/swimming/sport etc then press and hold on the "Open Loop"/"Closed Loop" text on the main homepage and select "disconnect for..." however many hours you plan to disconnect for. Damit wird die aktuelle Basalrate für diesen Zeitraum auf 0 gesetzt. The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump so if you wish to disconnect for a shorter period of time, or you connect your pump sooner than expected then press and hold "Suspended (X mins)" and select "Resume". Your IOB will then be accurate for calculations on your return to the pump.
 
 * For safety, recommendations made are based on not one CGM reading but the average delta. Therefore if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
