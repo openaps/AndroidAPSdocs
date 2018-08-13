@@ -1,4 +1,4 @@
-# How to help with AndroidAPS
+# Das AndroidAPS Projekt unterstützen
 
 ***AndroidAPS operates entirely on volunteer efforts and has no paid staff.** Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.*
 
