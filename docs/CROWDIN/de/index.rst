@@ -102,7 +102,7 @@ Hilfe durch die Community
    :glob:
 
    Hintergrundinfos & interessante Artikel <./Where-To-Go-For-Help/Background-reading.md>
-   Wohin wenden?
+   Wohin wenden? </DE/hilfe/community.md>
 
 Mithelfen in der Community
 ------------
@@ -113,3 +113,4 @@ Mithelfen in der Community
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
    App übersetzen <./translations.md>
    Am Wiki mitschreiben <./make-a-PR>
+Übersetzungs-Richtlinien <../../DE/mithelfen/uebersetzungs-richtlinien.md>
