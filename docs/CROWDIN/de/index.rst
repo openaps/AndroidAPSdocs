@@ -99,18 +99,18 @@ Hilfe durch die Community
 ------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+    
 
    Hintergrundinfos & interessante Artikel <./Where-To-Go-For-Help/Background-reading.md>
-   Wohin wenden? <DE/hilfe/community.md>
+   Wohin wenden? <http://androidaps.readthedocs.io/en/latest/DE/hilfe/community.html>
 
 Mithelfen in der Community
 ------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
 
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
    App übersetzen <./translations.md>
    Am Wiki mitschreiben <./make-a-PR>
-* `Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>`_ (nur deutsch)
+Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>
