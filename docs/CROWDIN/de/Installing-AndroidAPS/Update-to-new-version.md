@@ -1,60 +1,60 @@
-# Update to a new version or branch
+# Update auf eine neue Version oder branch
 
 ## Master branch
 
-**Install git (if you don't have it)**
+**Installiere git (falls du es noch nicht hast)**
 
-* Any git version should work. For example https://git-scm.com/download/win
-* Let Studio know where is git.exe located: File - Settings - Version Control - Git ![](images/git.png)
+* Jede git Version sollte funktionieren. Zum Beispiel https://git-scm.com/download/win.
+* Wähle den Ordner, in dem sich git.exe befinde: File - Settings - Version Control - Git ![](images/git.png)
 
-**Update your local copy**
+**Führe ein Update deiner lokalen Version durch**
 
-* Click: VCS->Git->Fetch
+* Klicke: VCS->Git->Fetch
 
-**Selecting branch**
+**Wähle branch**
 
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+* Falls du “branch” wechseln willst, wähle eine andere “branch” vom Reiter: master (aktuellste, getestete Version), oder andere (siehe weiter unten).
 
 ![](../images/branchintray.png)
 
-and then checkout
+Dann checke aus.
 
 ![](../images/checkout.png)
 
-**Updating branch from Github**
+**Branch-Update von Github**
 
-* Press Ctrl+T, select Merge method and press OK
+* Drücke Strg+T, wähle Merge method und drücke OK
 
 ![](../images/merge.png)
 
-On the tray you'll see green message about updated project
+Auf dem Reiter siehst du eine grüne Nachricht “updated project”.
 
-**Upload to phone**
+**Upload auf das Smartphone**
 
-Generate signed apk as described in [Building APK](./Building-APK.html)
+Erstelle die APK wie unter [AndroidAPS installieren - App erstellen](./Building-APK.html) beschrieben.
 
-## Development branch
+## Entwickler-Version (dev branch)
 
-**Attention:** The dev version of AndroidAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the same directory where you would find the log files. Enabling the engineering mode might break the loop entirely.
+**Achtung:** Die Entwicklungsversion (Dev Branch) von AndroidAPS ist für Entwickler sowie Tester bestimmt, die mit Stacktraces, Log-Dateien und dem Debugger umgehen können, um Fehlerberichte erstellen zu können, die Entwicklern beim Beheben der Fehler helfen (kurzum: Personen, die wissen, was sie tun und selbstständig arbeiten können). Aus diesem Grunde sind unfertige Features deaktiviert. Diese Features sind nur im **Engineering Mode** aktiviert. Dieser kann eingeschaltet werden, wenn eine Datei mit dem Namen `engineering_mode` im gleichen Verzeichnis, in dem sich die Log-Dateien befinden, angelegt wird. Das Aktivieren dieser Features kann dazu führen, dass der Loop überhaupt nicht mehr funktioniert.
 
-The most stable version of AndroidAPS to use is that in the [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). It is advised to stay on the Master branch while you complete the Objectives and get practiced at looping.
+Die stabilste AndroidAPS Version ist im [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). Es wird empfohlen diese, vor allem anfangs, zu verwenden.
 
-However, the [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk.
+Im [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) sieht man, welche Funktionen gerade getestet werden. Damit können Fehler ausgebügelt und Feedback darüber gegeben werden, wie die neuen Funktionen in der Praxis funktionieren. Meist wird die Entwickler-Version auf einem alten Telefon mit einer separaten Pumpe getestet bis es stabil läuft. Jede Benutzung des dev branch erfolgt auf eigene Gefahr!
 
-A short summary of some of the changes to old features or development of new features currently in the Dev branch is listed below, and links to any key issues known will be shared (if applicable).
+Eine kurze Zusammenfassung einiger der Änderungen an alten Features oder der Entwicklung neuer Features, die sich derzeit im dev branch befinden, ist unten aufgeführt. Falls verfügbar werden zusätzlich Links zu den Schlüsselthemen angegeben.
 
 **Super Micro Bolus (SMB)**
 
-More can be read on [Super Micro Boluses (SMB) on OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).  
+Details finden sich hier: [Super Micro Boluses (SMB) on OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).  
   
-Remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.  
+Bedenke, dass du dich für das Testen einer Funktion entscheidest, die sich noch in Entwicklung befindet. Tue dies auf eigene Gefahr und mit der gebotenen Sorgfalt, um dich selbst zu schützen.  
   
-You should have run basic closed looping for more than four weeks (having completed Objective 7), and be very aware of all the types of situations in which your APS might fail.  
-  
-You may need to adjust your settings to allow SMB to work effectively. A good place to start is increasing your max IOB to normal meal bolus + 3x max daily basal. But remain vigilant and adjust settings with care.
+> Du solltest mehr als vier Wochen lang (nach Abschluss von Ziel 7) gelooped haben (closed loop nicht open loop) und dir der Situationen bewusst sein, in denen dein APS versagen könnte.  
+>  
+Ggf. musst du deine Einstellungen anpassen, damit SMB effektiv arbeiten kann. Ein guter Ausgangspunkt ist, dein max IOB in Höhe des normalen Mahlzeitenbolus + die dreifache maximale tägliche Baslarate einzustellen. Aber bleibe wachsam und passe Einstellungen mit Sorgfalt an.
 
 <br />  
   
-As with all updates, previous code has been cleaned, improved and bugs fixed. <br />  
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../Usage/Accessing-logfiles.html)). The new features can also be discussed in the [gitter room](https://gitter.im/MilosKozak/AndroidAPS). <br />  
-If you would like to be up-to-date on the Dev Branch you can use the same steps as already outlined above. You just need to change to the corresponding "dev"-Branch in Android Studio.
+Wie bei allen Updates wurde der vorherigen Code bereinigt, verbessert und die Fehler behoben. <br />  
+Wenn du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wurde, dann sehe im [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler bemerkt hat, falls nicht, kannst du einen neuen Issue öffnen. Umso mehr Informationen du dabei bereitstellst, desto besser/schneller kann der Fehler reproduziert und behoben werden, vergesse nicht die [log files](../Usage/Accessing-logfiles.html) anzufügen. Neue Funktion können auch im [gitter room](https://gitter.im/MilosKozak/AndroidAPS) besprochen werden. <br />  
+Wenn du mit dem dev branch up to date bleiben willst, kannst du Updates wie oben beschrieben durchführen. Du musst nur in Android Studio auf den entsprechenden dev branch wechseln.
