@@ -6,7 +6,7 @@ This allows you to set a password in order to prevent accidental or unauthorised
 There are security limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real agre because it can lead to overdosing by entering wrong value in insulin dialog (for example by skipping decimal dot) 
 ## General
 * Select your language here.  If your language is not available, or not all of the words translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
-* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (not taking into account blood glucose value or insulin on board though).
+* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if you setup it).
 ## Careportal
 'Entered by' is the text displayed in your nightscout careportal 'entered by' field.  Set this to something meaningful to you, whether it is the app name, the persons name or the phone name (for example if you are using AndroidAPS as NS Client on a phone that is not the patients phone you may wish to distinguish between phone owners here).
 ## Treatments safety
