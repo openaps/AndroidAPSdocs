@@ -1,6 +1,6 @@
-# DanaRS Pump
+# DanaRS Insulinpumpe
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Diese Anleitung beschreibt die Einrichtung der App und deiner Pumpe wenn du eine Dana RS (ab 2017) verwendest. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
 
 * In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
 
