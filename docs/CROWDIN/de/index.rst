@@ -112,5 +112,5 @@ Mithelfen in der Community
 
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
    App übersetzen <./translations.md>
-   Am Wiki mitschreiben <./make-a-PR>
-Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>
+   Am Wiki mitschreiben <./make-a-PR></br>
+   Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>
