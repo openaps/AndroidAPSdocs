@@ -23,7 +23,7 @@ Release date: xx-xx-xxxx
 * Colored prediction lines: 
   * Orange: COB (colour is used generally to represent COB and carbs)
   * Dark blue: IOB (colour is used generally to represent IOB and insulin)
-  * Light blue: zero-temp
+  * Light blue: zero-temp (actual CGM reading + IOB - What would happen if no more insulin would be given from now on?)
   * Dark yellow: UAM
 * Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
 * Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
