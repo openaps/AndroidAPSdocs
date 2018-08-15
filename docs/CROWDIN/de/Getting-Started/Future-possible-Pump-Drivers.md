@@ -24,11 +24,11 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Andere Umsetzungen** Loop (Umsetzung ist erst am Anfang, so weit bekannt war es möglich den Pod zu starten und die erste temporäre Basalrate zu senden). Siehe [Openomni bei github](https://github.com/openaps/openomni)
 
-**JAva Umsetzung** Nicht verfügbar.
+**Java Umsetzung** Nicht verfügbar.
 
 **AAPS Umsetzung Status:** Es wurde damit begonnen [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) für Omnipod umzusetzen (dev_omnipod branch), aber von einem funktionierenden Prototyp ist man noch weit entfernt (der Entwickler hat begonnen notwendige Änderungen in RL Firmware 2.0 zu implementieren). Auf https://omniaps.slack.com/ um Kanal android-driver kann man die Entwicklung verfolgen. Dort postet der Entwickler seinen Fortschritt.
 
-**Hardware Vorraussetzungen fürAAPS:** RileyLink mit Omnipod Software (2.0)
+**Hardware-Anforderungen fürAAPS:** RileyLink mit Omnipod Software (2.0)
 
 **Anmerkungen:** Unterstützung für Omnipod DASH ist derzeit nicht vorgesehen. Sobald wir eine Java Umsetzung für den aktuellen Omnipod haben, werden wir davon ausgehend weiterentwickeln. Wenn das Omnipod Protokoll sich nicht verändert hat, dürften die Anpassungen nicht lange dauern, wenn sich das Protokoll ändert könnte sich die Arbeit länger hinausziehen.
 
@@ -38,7 +38,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertragen sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Die könnte sich in späteren Versionen ändern.
 
-**Hardware Voraussetzungen für AAPS: ** Vermutlich keine. Die Pumpe kommuniziert über Bluetooth.
+**Hardware-Anforderungen für AAPS:** Vermutlich keine. Die Pumpe kommuniziert über Bluetooth.
 
 * * *
 
@@ -46,7 +46,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber, da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
-**Hardware Voraussetzungen für AAPS: ** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe kommuniziert über Bluetooth.
+**Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe kommuniziert über Bluetooth.
 
 * * *
 
