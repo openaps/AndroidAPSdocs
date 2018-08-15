@@ -9,11 +9,11 @@ Select the basal profile you wish to use:
 * **NS Profile** uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
 * **Simple Profile** *needs detail*
 * **Local Profile** uses the basal profile manually entered on the pump. For both DanaR/RS and Combo pumps this only works with the pump Profile 1.
-* **Circadian Percentage Profile** this feature is now included within Profile Switch and has been superceeded, you do not need to select this one. See [[Profiles]] page for more setup information.
+* **Circadian Percentage Profile** this feature is now included within Profile Switch and has been superceeded, you do not need to select this one. Mehr dazu findest du in diesem Wiki unter Profile.
 
 ## Insulin
 
-Select the type of insulin curve you are using. Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. You will need to enter additional settings for these. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
+Select the type of insulin curve you are using. AndroidAPS unterstützt bilinear "schnell wirkende Insuline" mit DIA (Insulinwirkdauer) von weniger als 5 Stunden und "schnell wirkende Insuline verlängert" mit DIA von mehr als 5 Stunden. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. Du musst für diese Profile weitere Informationen eingeben. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
 
 ## BG Source
 
