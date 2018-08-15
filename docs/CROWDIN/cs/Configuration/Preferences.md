@@ -69,7 +69,7 @@ Možnosti zde se budou lišit v závislosti na tom, který ovladač pumpy jste z
 
 ## NS Client
 
-* Zde si nastavte svou ‘Nightscout URL’ (https://jmenovasiwebovky.herokuapp.com nebo https://jmenovasiwebovky.azurewebsites.net) a heslo ‘API secret’ (dvanácti znakové heslo z Vašeho heroku nebo azure). Toto umožní, aby data byla načítána zapisována mezi Nightscoutem a AndroidAPS. Double check for typos here if you are stuck in Objective 1.
+* Zde si nastavte svou ‘Nightscout URL’ (https://jmenovasiwebovky.herokuapp.com nebo https://jmenovasiwebovky.azurewebsites.net) a heslo ‘API secret’ (dvanácti znakové heslo z Vašeho heroku nebo azure). Toto umožní, aby data byla načítána zapisována mezi Nightscoutem a AndroidAPS. Pokud jste uvízli v Cíli 1, tak zde překontrolujte případné chyby nebo překlepy.
 * 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day, more frequently than this suggests a problem. 
 * 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip. 
 * 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+)
