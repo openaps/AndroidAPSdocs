@@ -6,9 +6,9 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop status:** Einige der älteren Pumpen sind zum Loopen geeignet, die neuen Modelle leider nicht.
 
-** Andere Anwendungen** OpenAPS, Loop
+**Andere Anwendungen** OpenAPS, Loop
 
-** Java Umsetzungen: ** Teilweise Umsetzung verfügbar [Rountrip2](https://github.com/TC2013/Roundtrip2), und [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) - Erweiterungen von RT2 sind fast vollständig.
+**Java Umsetzungen:** Teilweise Umsetzung verfügbar [Rountrip2](https://github.com/TC2013/Roundtrip2), und [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) - Erweiterungen von RT2 sind fast vollständig.
 
 **AAPS Umsetzung** Am Beginn. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch riley_link_medtronic (default branch). Status: Grundlegende Umsetzung ist erledigt (Medtronic Tab), es gibt jetzt die Virtuelle Medtronic Pumpe. Zur Zeit wird hauptsächlich am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) gearbeitet um das Grundgerüst und die Befehle zum Laufen zu kriegen. Es gibt ein offenes Projekt (Medtronic) und Tickets für die zukünftige Entwicklung auf diesem Repository. Die Entwicklung geschieht auf dem Branch Dev_medtronic (was dort der Standard Branch ist). Es gibt auch schon den gitter room: RileyLinkAAPS/Lobby. Die testweise Integration in AAPS passiert gerade, ist aber noch nicht für öffentliche Tests verfügbar.
 
