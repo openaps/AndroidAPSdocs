@@ -1,30 +1,30 @@
-# Sensitivity Detection and COB options
+# Empfindlichkeitserkennung und COB
 
-* Currently we have 3 sensitivity detection models 
+* Aktuell gibt es drei Modelle zur Empfindlichkeitserkennung: 
   * Sensitivity Oref0
   * Sensitivity AAPS
-  * Sensitivity WeightedAverage
+  * Durchschnittliche Sensitivität
 
 ### Sensitivity Oref0
 
-Similiar to Oref0 described in [Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html). Basically sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cutted after time specified in preferences
+Ähnlich dem in der [Oref0 Dokumentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html) beschriebenen Oref0. Der Oref0-Algorythmus berechnet die Insulinempflindlichkeit auf Basis der vorangegangenen 24 Stunden. Kohlenhydrate (falls noch nicht absorbiert) werden nach einer bestimmten Zeit, die man einstellen kann, einfach abgeschnitten.
 
 ### Sensitivity AAPS
 
-Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+Die Empfindlichkeit wird wie bei Oref0 berechnet, aber du kannst einstellen wie weit der Algorithmus in die Vergangenheit "schaut". Die minimale Kohlenhydrat-Absorption wird ausgehend von der maximalen Kohlenhydrat-Absorption, die in den Vorgaben festgelegt werden kann, berechnet.
 
-### Sensitivity WeightedAverage
+### Durchschnittliche Sensitivität
 
-Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+Die Empfindlichkeit wird als gewichtetes Mittel der Schwankungen berechnet. Neuere Schwankungen haben ein größeres Gewicht. Die minimale Kohlenhydrat-Absorption wird ausgehend von der maximalen Kohlenhydrat-Absorption, die in den Vorgaben festgelegt werden kann, berechnet. Dieser Algorithmus folgt Änderungen der Empfindlichkeit am schnellsten.
 
-### COB Examples
+### COB Beispiele
 
-Oref0 - unabsorbed carbs are cutted after specified time
+Oref0 - nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit abgeschnitten
 
-![COB from oref0](../../images/cob_oref0.png)
+![COB nach oref0](../../images/cob_oref0.png)
 
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
+AAPS, Durchschnittliche Sensitivität - Absorption wird so berechnet, dass nach der vorgegeben Zeit `COB == 0` gilt.
 
-![COB from AAPS](../../images/cob_aaps.png)
+![COB nach AAPS](../../images/cob_aaps.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
+Falls die minimale Kohlenhydrat-Absorption statt einem aus den Schwankungen berechneten Wert genutzt wird, wird in der COB-Kurve ein grüner Punkt angezeigt.
