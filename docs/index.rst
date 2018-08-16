@@ -13,6 +13,7 @@ AndroidAPS
    Español </CROWDIN/es/index>
    Românesc </CROWDIN/ro/index>
    Русский </CROWDIN/ru/index>
+   Svenska </CROWDIN/se/index>
    
    Българска (Specific) </BG/index>
    Deutsch (Specific) </DE/index>
