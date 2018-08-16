@@ -5,8 +5,8 @@ Config Builder (Conf) is the tab where you turn the modular features on and off.
 ## Profile
 Select the basal profile you wish to use:
 *  <b>NS Profile</b> uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile).  You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-*  <b>Simple Profile</b> _needs detail_
-*  <b>Local Profile</b> uses the basal profile manually entered on the pump.  For both DanaR/RS and Combo pumps this only works with the pump Profile 1.
+*  <b>Simple Profile</b> profile with just one time block (i.e. no basal rate changes during the day)
+*  <b>Local Profile</b> uses the basal profile manually entered on the pump.  For both DanaR/RS and Combo pumps this only works with the pump Profile A respectively 1.
 *  <b>Circadian Percentage Profile</b> this feature is now included within Profile Switch and has been superceeded, you do not need to select this one.
 See [[Profiles]] page for more setup information.
 
@@ -41,6 +41,6 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 *  <b>SMS Communicator</b> allows remote caregivers to control some AndroidAPS features via SMS, see [[SMS Commands]] for more setup information.
 *  <b>Food</b> allows you to view and use the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information or http://[yournightscoutsiteaddress]/food to access your database.
 *  <b>Wear</b> allows you to view and control AndroidAPS from the Android Wear watch, see [[watchfaces]] for more setup information.
-*  <b>xDrip Statusline (watch)</b>
+*  <b>xDrip Statusline (watch)</b> Display loop information on your xDrip+ watchface
 *  <b>Ongoing Notification</b> displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
-*  <b>NS Client</b>
+*  <b>NS Client</b> Setup sync of your AndroidAPS data with Nightscout
