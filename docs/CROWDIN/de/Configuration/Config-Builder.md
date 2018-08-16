@@ -1,55 +1,55 @@
-# Config Builder
+# Konfigurations-Generator
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side allow you to select which one to use, the boxes on the right hand side allow you to view these as a tab in AndroidAPS. Where there are additional settings available within the module, you can click on the cog graphic which will take you to the specific settings within Preferences.
+Im Reiter “Konfigurations-Generator” (KONF) kannst du fast alle AAPS-Funktionen konfigurieren. Die Auswahlfelder links aktivieren die gewählte Funktion, die Auswahlfelder rechts (Augen-Symbol) machen den dazugehörigen Reiter im AAPS-Menü sichtbar oder unsichtbar. Erscheint bei einzelnen Optionen ein Zahnrädchen, kannst du weitere Einstellungen vornehmen.
 
-## Profile
+## Profil
 
-Select the basal profile you wish to use:
+Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den Basalraten, ISF und IC abrufen soll.
 
-* **NS Profile** uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-* **Simple Profile** *needs detail*
-* **Local Profile** uses the basal profile manually entered on the pump. For both DanaR/RS and Combo pumps this only works with the pump Profile 1.
-* **Circadian Percentage Profile** this feature is now included within Profile Switch and has been superceeded, you do not need to select this one. See [[Profiles]] page for more setup information.
+* **Nightscout-Profil** Verwendet das von dir auf deiner Nightscout Seite gespeicherte Profil (https://[yournightscoutsiteaddress]/profile). Benutze den Profil Switch (im Reiter PROFIL das gewünschte Profil auswählen und Button "Aktiviere Profil" klicken) um das aktive Profil zu wechseln, falls du in Nightscout mehrere Profile angelegt hast. Das Profil wird dann an die Pumpe übertragen, damit die Basalzufuhr bei einem AAPS-Problem sicher gestellt ist.
+* **Einfaches Profil** Profil mit nur einem Zeitblock (z.B. keine Basalratenänderungen im Laufe des Tages)
+* **Lokales Profil** Nutzt das Profil, das in der Pumpe manuell erfasst wurde. Für DanaR/RS und Combo Pumpen funktioniert nur mit dem Pumpen-Profil A bzw. 1.
+* **Circadian Prozentsatz Profil** Dieses Feature ist nun im Profile Switch enthalten und wurde ersetzt. D musst dieses nicht mehr auswählen. Mehr dazu findest du in diesem Wiki unter Profile.
 
 ## Insulin
 
-Select the type of insulin curve you are using. Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. You will need to enter additional settings for these. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
+Hier musst du auswählen, welchen Insulintyp du verwendest. AndroidAPS unterstützt bilinear "schnell wirkende Insuline" mit DIA (Insulinwirkdauer) von weniger als 5 Stunden und "schnell wirkende Insuline verlängert" mit DIA von mehr als 5 Stunden. Diese Kurven unterscheiden sich nur in der Dauer des DIA. Die Oref Optionen 'Rapid-Acting Oref', Ultra-Rapid Oref' und 'Free-Peak Oref' sind exponentiell. Mehr Informationen dazu finden sich in den [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Diese Kurven variieren basierend auf der DIA und dem zeitlichen Abstand zum Wirkmaximum. Du musst für diese Profile weitere Informationen eingeben. Schaue dir die Graphen der Insulinkurven auf dem Reiter Insulin (INS) an um besser zu verstehen, welche zu dir passt.
 
-## BG Source
+## BZ-Quelle
 
-Select the blood glucose source you are using - see [[BG Source]] page for more setup information.
+Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. Weitere Infroamtionen findest du auf der Seite [[BZ-Quelle]].
 
-## Pump
+## Pumpe
 
-Select the pump you are using. For people wanting to open loop this needs to be 'Virtual Pump'. See [[DanaR Insulin Pump]], [[DanaRS Insulin Pump]] or [[Accu Chek Combo Pump]] pages for more setup information.
+Wähle die von dir genutzte Pumpe. Wenn du im Open Loop arbeiten willst, wähle "Virtuelle Pumpe." Auf den pumpenspezifischen Seiten [[DanaR]], [[DanaRS]] und [[Accu Chek Combo]] findest du weitere Informationen zur Einrichtung.
 
-## Sensitivity Detection
+## Empfindlichkeitserkennung
 
-Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). You can view your sensistivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
+Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Bei der Empfindlichkeitserkennung werden historische Daten "on the go" analysiert und Anpassungen vorgenommen, falls der Algorithmus feststellt, dass du sensibler oder weniger empfindlich auf das Insulin reagierst als üblich. Details zum Sensitivity Oref0 Algorithmus findest du in den [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf der Startseite im Auswahlmenü der angezeigten Kurven “Sensitivität” auswählst. Die weiße Linie zeigt dir das graphisch an. Die Empfindlichkeitserkennung ist erst freigeschaltet, wenn du [Ziel (objective) 6](../Usage/Objectives) erreicht hast.
 
 ## APS
 
-Select either OpenAPS MA (meal assist) or OpenAPS AMA (advanced meal assist). More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); in simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab. Note you need to be in [Objective 7](../Usage/Objectives) in order to use OpenAPS AMA.
+Wähle entweder OpenAPS MA (meal assist - Mahlzeiten-Assistent) oder OpenAPS AMA (advanced meal assist - erweiterter Mahlzeiten Assistent). Weitere Details zu OpenAPS AMA findest du in den [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Einfach ausgedrückt profitierst du davon, dass das System nach einem Mahlzeiten-Bolus schneller reagieren kann wenn du die Kohlenhydrate zuverlässig eingibst. Die Details zum ausgewählten Algorithmus findest du im Reiter OpenAPS (OPAS). Du musst im [Ziel (objective) 7](../Usage/Objectives) sein um OpenAPS AMA nutzen zu können.
 
 ## Loop
 
-If you wish to use open or closed looping you will need to enable this here. You can see the active request and success of enactment in the Loop tab.
+Hier kannst du einstellen, ob du AAPS automatische Regelungen erlauben willst oder nicht. Im Reiter LOOP werden die Aktivitäten und Erfolge des Loops angezeigt.
 
-## Constraints
+## Beschränkungen
 
-If you view the Objectives (Obj) tab, you can see more information about how far you have progressed and what actions you still need to complete. See [[Objectives]] page for more information.
+Auf dem Reiter Ziele (ZIEL) kannst du deinen Fortschritt verfolgen und sehen, welche Meilensteine noch vor dir liegen. Weitere Informationen findest Du auf der Seite [[Beschränkungen (objectives)]].
 
-## Treatments
+## Behandlungen
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+Der Reiter Behandlungen (BEH) zeigt dir die zu Nightscout hochgeladenen Behandlungen. Falls du einen Eintrag editieren oder löschen willst - z.B. weil du weniger Kohlenhydrate gegessen hast als erwartet) - wähle 'Löschen' und trage den neuen Wert über das Careportal (CP) ein. Denke daran, ggf. die Zeit anzupassen.
 
-## General
+## Allgemein
 
-* **Actions** allows you to make Profiles Switches (see [[Profiles]] for more setup information), Temporary Targets, and for those using DanaR/RS or Combo pump to set a manual TBR or prime the canula.
-* **Careportal** allows you to record any specific care entries and view the current sensor, insulin, canula and pump batter ages in the Careportal (CP) tab.
-* **SMS Communicator** allows remote caregivers to control some AndroidAPS features via SMS, see [[SMS Commands]] for more setup information.
-* **Food** allows you to view and use the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information or http://[yournightscoutsiteaddress]/food to access your database.
-* **Wear** allows you to view and control AndroidAPS from the Android Wear watch, see [[watchfaces]] for more setup information.
-* **xDrip Statusline (watch)**
-* **Ongoing Notification** displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
-* **NS Client**
+* **Actions** Reiter: Ermöglicht den Profil Switch (siehe [[Profiles]] für weitere Setup Infos) und die Einrichtung von Temp Targets. Nutzer der DanaR/RS oder Combo können außerdem eine manuelle temporären Basalrate (TBR) setzen oder die Kanüle füllen.
+* **Careportal** Erfassung spezifischer Behandlungseinträge einschließlich Notizen und Anzeige des aktuellen Alters von CGM-Sensor, Insulinreservoir, Kanüle und Pumpenbatterie.
+* **SMS-Kommunikator** Erlaubt Betreuern die Fernsteuerung einiger AndroidAPS Funktionen via SMS. Weitere Informationen zum Setup findest Du auf der Seite [[SMS-Befehle]].
+* **Essen** Anzeige und Nutzung der Nightscout Nahrungsmittel-Datenbank. Siehe [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) für weitere Setup Informationen oder rufe deine Datenbank über http://[yournightscoutsiteaddress]/food auf.
+* **Wear** Anzeige der AndroidAPS Informationen auf und Steuerung von AAPS über eine Android Wear Smartwatch. Weitere Informationen zum Setup findest Du unter [[Smartwatch-Integration]].
+* **xDrip+ Statuszeile (Uhr) Zeige Loop-Informationen auf deinem xdrip+ Watchface.**
+* **Laufende Benachrichtigungen** Zeigt im Dropdown- und Sperrbildschirm deines Smartphones eine Dauer-Benachrichtigung an mit einer kurzen Übersicht darüber, was der Loop derzeit tut.
+* **NS Client Einstellungen für die Synchronisation deiner AndroidAPS Daten mit Nightscout**
