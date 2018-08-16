@@ -7,8 +7,8 @@ Config Builder (Conf) is the tab where you turn the modular features on and off.
 Select the basal profile you wish to use:
 
 * **NS Profile** uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-* **Simple Profile** *needs detail*
-* **Local Profile** uses the basal profile manually entered on the pump. For both DanaR/RS and Combo pumps this only works with the pump Profile 1.
+* **Simple Profile** profile with just one time block (i.e. no basal rate changes during the day)
+* **Local Profile** uses the basal profile manually entered on the pump. For both DanaR/RS and Combo pumps this only works with the pump Profile A respectively 1.
 * **Circadian Percentage Profile** this feature is now included within Profile Switch and has been superceeded, you do not need to select this one. See [[Profiles]] page for more setup information.
 
 ## Insulin
@@ -50,6 +50,6 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 * **SMS Communicator** allows remote caregivers to control some AndroidAPS features via SMS, see [[SMS Commands]] for more setup information.
 * **Food** allows you to view and use the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information or http://[yournightscoutsiteaddress]/food to access your database.
 * **Wear** allows you to view and control AndroidAPS from the Android Wear watch, see [[watchfaces]] for more setup information.
-* **xDrip Statusline (watch)**
+* **xDrip Statusline (watch)** Display loop information on your xDrip+ watchface
 * **Ongoing Notification** displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
-* **NS Client**
+* **NS Client** Setup sync of your AndroidAPS data with Nightscout
