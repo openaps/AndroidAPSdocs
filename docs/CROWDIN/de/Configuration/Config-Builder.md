@@ -7,8 +7,8 @@ Im Reiter “Konfigurations-Generator” (KONF) kannst du fast alle AAPS-Funktio
 Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den Basalraten, ISF und IC abrufen soll.
 
 * **Nightscout-Profil** Verwendet das von dir auf deiner Nightscout Seite gespeicherte Profil (https://[yournightscoutsiteaddress]/profile). Benutze den Profil Switch (im Reiter PROFIL das gewünschte Profil auswählen und Button "Aktiviere Profil" klicken) um das aktive Profil zu wechseln, falls du in Nightscout mehrere Profile angelegt hast. Das Profil wird dann an die Pumpe übertragen, damit die Basalzufuhr bei einem AAPS-Problem sicher gestellt ist.
-* **Einfaches Profil** Profil mit nur einem Zeitblock (z.B. keine Basalratenänderungen im Laufe des Tages)
-* **Lokales Profil** Nutzt das Profil, das in der Pumpe manuell erfasst wurde. Für DanaR/RS und Combo Pumpen funktioniert nur mit dem Pumpen-Profil A bzw. 1.
+* **Simple Profile** profile with just one time block (i.e. no basal rate changes during the day)
+* **Lokales Profil** Nutzt das Profil, das in der Pumpe manuell erfasst wurde. For both DanaR/RS and Combo pumps this only works with the pump Profile A respectively 1.
 * **Circadian Prozentsatz Profil** Dieses Feature ist nun im Profile Switch enthalten und wurde ersetzt. D musst dieses nicht mehr auswählen. Mehr dazu findest du in diesem Wiki unter Profile.
 
 ## Insulin
@@ -50,6 +50,6 @@ Der Reiter Behandlungen (BEH) zeigt dir die zu Nightscout hochgeladenen Behandlu
 * **SMS-Kommunikator** Erlaubt Betreuern die Fernsteuerung einiger AndroidAPS Funktionen via SMS. Weitere Informationen zum Setup findest Du auf der Seite [[SMS-Befehle]].
 * **Essen** Anzeige und Nutzung der Nightscout Nahrungsmittel-Datenbank. Siehe [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) für weitere Setup Informationen oder rufe deine Datenbank über http://[yournightscoutsiteaddress]/food auf.
 * **Wear** Anzeige der AndroidAPS Informationen auf und Steuerung von AAPS über eine Android Wear Smartwatch. Weitere Informationen zum Setup findest Du unter [[Smartwatch-Integration]].
-* **xDrip+ Statuszeile (Uhr) Zeige Loop-Informationen auf deinem xdrip+ Watchface.**
+* **xDrip Statusline (watch)** Display loop information on your xDrip+ watchface
 * **Laufende Benachrichtigungen** Zeigt im Dropdown- und Sperrbildschirm deines Smartphones eine Dauer-Benachrichtigung an mit einer kurzen Übersicht darüber, was der Loop derzeit tut.
-* **NS Client Einstellungen für die Synchronisation deiner AndroidAPS Daten mit Nightscout**
+* **NS Client** Setup sync of your AndroidAPS data with Nightscout
