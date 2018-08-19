@@ -5,16 +5,16 @@ AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, 
 Für den Fall, dass du dir ein neues Smartphone zulegst, kannst du die Einstellungen exportieren, um deinen Fortschritt bei den Beschränkungen zu übernehmen; wähle im Drei-Punkte-Menü in der oberen rechten Ecke *Einstellungen exportieren*. Es wird dir dann angezeigt, in welches Verzeichnis die Datei gespeichert wurde. Kopiere auf deinem neuen Smartphone die Datei in das gleiche Verzeichnis und wähle *Einstellungen importieren*. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du die Ziele von Anfang an neu erreichen. Es ist ratsam, die Einstellungen zur Sicherheit häufiger zu speichern.  
 
 * **Ziel 1:** Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren 
-  * Wähle die richtige Quelle für den Blutzuckerwert für deine Einstellungen aus. See [BG Source](../Configration/BG-Source.html) for more information.
-  * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for open looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Confguration/DanaR-Insulin-Pump.html) instructions to ensure the link between pump and AndroidAPS.
-  * Follow instructions in [Nightscout](../Installin-AndroidAPS/Nightscout.html) page to ensure Nightscout can receive and display this data. <br />  
-    _You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it._  
-* **Objective 2:** Starting on an open loop 
-  * Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-  * Work through the [[Preferences]] to set up for you.
-  * Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them. Ensure this data shows in AndroidAPS and Nightscout.  
+  * Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert. Weitere Informationen findest du unter [BZ-Quelle](../Configration/BG-Source.html).
+  * Wähle die richtige Pumpe im Konfigurations-Generator (wähle virtuelle Pumpe wenn du ein Pumpenmodell benutzt, für das es keinen AndroidAPS-Treiber gibt oder für Offenes Looping) um sicherzustellen, dass die Pumpe ihren Status mit AndroidAPS teilen kann. Wenn du eine DanaR Pumpe verwendest, dann stelle sicher, dass Du die [DanaR Insulin Pumpen Anleitung](../Confguration/DanaR-Insulin-Pump.html) befolgt hast, damit eine gute Verbindung zwischen der Pumpe und AndroidAPS gewährleistet ist.
+  * Befolge [Nightscout-Anleitung](../Installin-AndroidAPS/Nightscout.html), um zu gewährleisten, dass Nightscout diese Daten empfangen und anzeigen kann. <br />  
+    _Es kann sein, dass du auf das Auslesen des nächsten Zuckerwertes warten musst, bevor AndroidAPS es erkennt._
+* **Ziel 2:** Den Open Loop Modus starten 
+  * Wähle Open Loop entweder in den Einstellungen oder indem du lange auf den Loop Button in der linken oberen Ecke des Hauptbildschirms drückst.
+  * Arbeite dich durch die [[Einstellungen]], um es einzurichten.
+  * Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der temporären Basalratenanpassungen; gib sie jeweils von Hand in der Pumpe ein und bestätige in AndroidAPS, dass du sie akzeptiert hast. Ensure this data shows in AndroidAPS and Nightscout.  
 
-* **Objective 3:** Understanding your open loop, including its temp basal recommendations
+* **Ziel 3:** Open Loop inklusive der temporären Basalratenvorschläge verstehen
   
   * Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the forecast line in AndroidAPS homescreen/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.   
       
