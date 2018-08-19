@@ -1,11 +1,11 @@
-# Understanding the Objectives
+# Beschränkungen (objectives) verstehen
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, damit du an die Funktionen und Einstellungen von sicherem Looping herangeführt wirst. Sie stellen sicher, dass du alles, was in den Abschnitten weiter oben beschrieben wurde, korrekt installiert hast und dass du verstehst, was das System tut und warum du ihm vertrauen kannst.
 
-If you are upgrading phones then you can export your settings to keep your progress through the objectives; in the three dots in the top right corner select *Export settings*, it will tell you which folder it has saved the file to. On your new phone copy the file over to that location and then select *Import settings*. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case.  
+Für den Fall, dass du dir ein neues Smartphone zulegst, kannst du die Einstellungen exportieren, um deinen Fortschritt bei den Beschränkungen zu übernehmen; wähle im Drei-Punkte-Menü in der oberen rechten Ecke *Einstellungen exportieren*. Es wird dir dann angezeigt, in welches Verzeichnis die Datei gespeichert wurde. Kopiere auf deinem neuen Smartphone die Datei in das gleiche Verzeichnis und wähle *Einstellungen importieren*. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du die Ziele von Anfang an neu erreichen. Es ist ratsam, die Einstellungen zur Sicherheit häufiger zu speichern.  
 
-* **Objective 1:** Setting up visualization and monitoring, and analysing basals and ratios 
-  * Select the right blood glucose source for your setup. See [BG Source](../Configration/BG-Source.html) for more information.
+* **Ziel 1:** Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren 
+  * Wähle die richtige Quelle für den Blutzuckerwert für deine Einstellungen aus. See [BG Source](../Configration/BG-Source.html) for more information.
   * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for open looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Confguration/DanaR-Insulin-Pump.html) instructions to ensure the link between pump and AndroidAPS.
   * Follow instructions in [Nightscout](../Installin-AndroidAPS/Nightscout.html) page to ensure Nightscout can receive and display this data. <br />  
     _You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it._  
