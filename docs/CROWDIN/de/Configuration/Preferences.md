@@ -76,11 +76,11 @@ Die Optionen hier hängen davon ab, welchen Pumpentreiber du im Config-Generator
 
 ## SMS Communicator
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Usage/SMS-Commands) but it will only display in Preferences if you have selected this option in the Config Builder.
+This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Weitere Informationen werden in [SMS-Befehle](../Usage/SMS-Commands) beschrieben. SMS-Kommandos werden aber nur in den Einstellungen angezeigt, wenn diese Option im Konfigurations-Generator ausgewählt wurde.
 
 ## Other
 
-* You can set defaults for your temp targets here, for the different types of temp target (eating soon and activity). When you select a temp target then if you choose for example "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [[Open APS features]]. 
+* You can set defaults for your temp targets here, for the different types of temp target (eating soon and activity). Wenn du bei "Temporäres Ziel" im Careportal zum Beispiel "Bald essen" auswählst, werden die hier eingegebenen Werte automatisch in die entsprechenden Eingabefelder eingetragen. Weitere Informationen zur Verwendung der temporären Ziele findest du unter [[OpenAPS Funktionen]]. 
 * You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 * You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
 * 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
