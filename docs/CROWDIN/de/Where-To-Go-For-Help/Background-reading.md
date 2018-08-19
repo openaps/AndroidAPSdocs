@@ -1,22 +1,22 @@
-# Useful resources to read before you start
+# Nützliche Artikel, die am Anfang gelesen werden sollten
 
-Before you build your rig you're going to do a lot of reading up to understand how it all works and get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
+Bevor du dein rig erstellst, musst du sehr viel lesen, um die ganze Funktionsweise zu verstehen und die beste Lösung für dich zu finden. Wir haben eine Liste zusammengestellt, wo du dich zu Beginn informieren kannst und hoffentlich Antworten auf viele Fragen findest.
 
-## Further reading
+## Weiterführende Literatur
 
 OpenAPS.org #wearenotwaiting - https://openaps.org/
 
-OpenAPS documention - http://openaps.readthedocs.io/en/latest/
+OpenAPS Dokumention - http://openaps.readthedocs.io/en/latest/
 
 Loop Docs - https://loopkit.github.io/loopdocs/
 
-Fine-Tuning your settings - http://seemycgm.com/2017/10/29/fine-tuning-settings/
+Fein-Tuning deiner Einstellungen - http://seemycgm.com/2017/10/29/fine-tuning-settings/
 
 Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/
 
 DIYPS - https://diyps.org/
 
-Diabetes and Technology - Where Diabetes meets Tech - http://www.diabettech.com/
+Diabetes and Technology - Where Diabetes meets Tech - http://www.diabettech.com
 
 OpenAPS Reference Design - https://openaps.org/reference-design/
 
@@ -24,7 +24,7 @@ Why we are regularly wrong in the duration of insulin action (DIA) times we use,
 
 What conclusions can we draw when investigating Insulin Sensitivity using the Autosense function within #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
 
-## Background reading and articles about DIY closed looping
+## Hintergrundwissen und Artikel über DIY Closed Looping
 
 <http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
 
@@ -36,7 +36,7 @@ What conclusions can we draw when investigating Insulin Sensitivity using the Au
 
 <https://www.ndr.de/fernsehen/sendungen/visite/Diabetes-Blutzucker-automatisch-einstellen,visite13788.html>
 
-## Stuff on YouTube
+## YouTube
 
 Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI
 
