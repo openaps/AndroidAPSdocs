@@ -55,49 +55,49 @@
 
 ![Energizer](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/energizer-l91aa---image.jpg?raw=true) ![OnePower](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/PowerOne.png?raw=true)
 
-Ranges for typical life time of the different battery types are as follows:
+Die typische Lebensdauer für verschiedene Batterien ist wie folgt:
 
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the servcie pack: 2 to 4 weeks
-* **Eneloop rechargable** batteries (BK-3MCCE): 1 to 3 weeks
+* **Energizer Ultimate Lithium**: 4 bis 7 Wochen
+* **Power One Alkaline** (Varta) aus dem Service-Pack: 2 bis 4 Wochen
+* **Eneloop wiederaufladbare** Batterien (BK-3MCCE): 1-3 Wochen
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegebenen Bereiche, überprüfe bitte folgende mögliche Ursachen:
 
-* Die latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Make sure you are on that version if you have issues with a short battery lifetime.
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, only a replacement of the pump by Roche will help, which is not a problem during the warranty period. 
-* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+* Die neueste Version (März 2018) der [ruffy App](https://github.com/MilosKozak/ruffy) hat die Lebensdauer der Batterien deutlich erhöht. Versichere dich, dass du diese Version verwendest, wenn du Probleme mit kürzerer Lebensdauer der Batterien hast.
+* Es gibt verschiedene Varianten der Batterie Abdeckung bei der Combo Pumpe, die teilweise einen Kurzschluss bei der Batterie verursachen und sie schnell entladen. Die Abdeckungen ohne dieses Problem kann man an den goldenen Metallkontakten erkennen.
+* Wenn die Uhr in der Pumpe einen kurzen Batteriewechsel nicht "überlebt", kann es sein, dass der Kondensator kaputt ist, der die Uhr nach einem kurzen Energieverlust weiter laufen lässt. In diesem Fall hilft nur ein Austausch der Pumpe durch Roche, was während der Garantiezeit kein Problem ist. 
+* Die Hardware des Smartphones und die Software (Android Betriebssystem und Bluetooth Protokoll) beeinflussen ebenfalls die Lebensdauer der Batterie in der Pumpe, wobei die genauen Faktoren bisher noch nicht bekannt sind. Wenn du die Möglichkeit hast, versuche es mit einem anderen Smartphone und vergleiche die Lebensdauer der Batterie.
 
-## Daylight saving time changes
+## Zeitumstellung (Sommer- / Winterzeit)
 
-* Currently the combo driver does not support automatic adjustment of the pump's time.
-* During the night of a daylight saving time change, the time of the smartphone is updated, but the time of the pump remains unchanged. This leads to an alarm due to deviating times between the systems at 3 am.
-* If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning.
+* Zum aktuellen Zeitpunkt unterstützt der Combo-Treiber keine automatische Anpassung der Zeit in der Pumpe.
+* Während der Nacht der Zeitumstellung wird die Zeit des Smartphones aktualisiert, aber die Zeit in der Pumpe bleibt unverändert. Das löst gegen 3 Uhr morgens einen Alarm aus, weil die Zeiten der Systeme ab dann voneinander abweichen.
+* Wenn du in der Nacht nicht geweckt werden willst, **deaktiviere die automatische Zeitanpassung auf dem Smartphone** am Abend bevor die Zeitumstellung erfolgt und passe die Zeit am nächsten Morgen manuell an.
 
-## Extended bolus, multiwave bolus
+## Erweiterter Bolus, Multiwave Bolus
 
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
+Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-Algorithmus unterstützt. Aber ein ähnlicher Effekt kann durch folgende Alternativen erreicht werden:
 
-* Before eating, on the **Actions tab** in AndroidAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would chosse for an extended bolus. 
-* Then use the **CALCULATOR** to enter the full carbs of the meal, but do not directly apply the values ​​suggested by the bolus calculator. If a multiwave-like bolus is to be delivered, input the carbohydrate share as a bolus. Depending on the meal, the algorithm now has to deliver a very high temporary basal rate to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max IE / h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed. 
+* Setze vor dem Essen auf der **Registerkarte Aktionen** in AndroidAPS unter Temporäres Ziel ein **Bald essen** Ziel mit einem Zielwert von 80 für ein paar Stunden. Die Dauer sollte dem Intervall entsprechen, das du für einen erweiterten Bolus verwenden würdest. 
+* Verwende dann **RECHNER** auf dem Hauptbildschirm, um die Kohlenhydrate der Mahlzeit einzugeben, aber wende den Wert nicht direkt an, der dir vom Bolusrechner vorgeschlagen wird. Wenn ein multiwave-ähnlicher Bolus abgegeben werden soll, gib die Kohlenhydrate Teilung als Bolus ein. Der Algorithmus muss nun abhängig von der Mahlzeit eine sehr hohe temporäre Basalrate setzen, um der Steigerung des Blutzuckers entgegen zu wirken. An dieser Stelle sollte mit der Sicherheitsgrenze für die Basalrate (Max IE / h, Maximum basal IOB) sehr vorsichtig experimentiert und falls notwendig temporär geändert werden. 
 
-![Temporary goal](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Temporary_Target.png)
+![Temporäres Ziel](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Temporary_Target.png)
 
-* Alternatively, on the Actions tab in AndoidAPS a **profile change** can be made with the duration of the delayed bolus and an increased percentage. There is no need for another profile (eg in Nightscout). The correct percentage can be calculated from the average basal rate over the selected period and the amount of insulin needed. Thus, a desired extended bolus of 4 IU for 4 hours at a basal rate of 0.5 IU / h would require a temporary basal rate of 300% . 
+* Alternativ dazu kann auf der Registerkarte Aktionen in AndroidAPS ein **Profilwechsel** für die Dauer des verzögerten Bolus mit einem erhöhten Prozentsatz ausgeführt werden. Es besteht keine Notwendigkeit für ein anderes Profil (z.B. in Nightscout). Der richtige Prozentsatz kann aus der durchschnittlichen Basalrate und dem benötigten Insulin über die gewählte Dauer berechnet werden. Das heißt, ein angestrebter erweiterter Bolus von 4 IE über 4 Stunden bei einer Basalrate von 0,5 IE / h würde eine temporäre Basalrate von 300% erfordern. 
 
 ![Temporäre Basalrate](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Profile_Switch.png)
 
-* IF you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you wth disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Wenn du unbedingt den erweiterten oder Multiwave Bols direkt an der Pumpe eingeben wills, wird AndroidAPS dich damit bestrafen, dass es den Closed Loop für die nächsten 6 Stunden aussetzt um zu gewährleisten, dass nicht zu viel Insulin berechnet und abgegeben wird.
 
-![Disabled loop after multiwave bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
+![Loop nach Multiwave Bolus deaktiviert](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
-## Alarms at bolus delivery
+## Alarme bei Bolusabgabe
 
-* If AndroidAPS detects that an identical has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If your really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interruped ot was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
-* Background is a safety mechanism that reads the pump's bolus history before subm,itting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Here indistinguishable entries must be prevented.
+* Wenn AndroidAPS bemerkt, dass ein identischer Bolus erfolgreich in der gleichen Minute abgegeben wurde, wird die Bolusabgabe mit der gleichen Menge Insulin verhindert. Wenn du dieselbe Bolusmenge unbedingt innerhalb kurzer Zeit erneut abgeben möchtest, warte zwei Minuten und gib ihn dann ab. Wenn die erste Bolusabgabe unterbrochen wurde oder aus anderen Gründen nicht abgegeben wurde, kannst du den Bolus seit AAPS 2.0 direkt wieder abgeben.
+* Hintergrund für dieses Verhalten ist ein Sicherheitsmechanismus, der die Bolus-Historie der Pumpe liest, bevor ein neuer Bolus abgegeben wird, um das Insulin On Board (IOB) auch dann korrekt zu berechnen, wenn direkt an der Pumpe ein Bolus abgegeben wurde. An dieser Stelle müssen nicht zu unterscheidende Einträge verhindert werden.
 
-![Double bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
+![Doppelter Bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
 
-* This mechanism is also responsible for a second cause of the error: If during the use of the bolus calculator another bolus is delivered via the pump and thereby the bolus history changes, the basis of the bolus calculation is wrong and the bolus is aborted. 
+* Dieser Mechanismus verhindert ebenfalls einen zweiten Fehler: wenn während der Benutzung des Bolus-Rechners ein weitere Bolus direkt an der Pumpe abgegeben wird und sich dadurch die Bolus-Historie ändert, ist die Basis der Bolusberechnung falsch und die Bolusabgabe wird abgebrochen. 
 
-![Canceled bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/History_changed.png)
+![Abgebrochener Bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/History_changed.png)
