@@ -1,64 +1,64 @@
-# SMS Commands
+# SMS-Befehle
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from and also enable 'Allow remote commands via SMS'
+In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden. ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem AndroidAPS installiert ist. Sende dazu eines der folgenden **fettgedruckten** Kommandos und das Handy wird mit einer Erfolgsmitteilung oder dem angeforderten Status antworten.
 
 ## BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Letzter Blutzucker 125 vor 4min, Delta: -12mg/dl, IOB: 0.20E (Bolus: 0.10E Basal: 0.10E)
 
 ## LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Das Loopen wurde deaktiviert
 
 ## LOOP START/ENABLE
 
-- Loop has been enabled
+- Das Loopen wurde aktiviert
 
 ## LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Das Loopen ist deaktiviert
+- Das Loopen ist aktiviert
+- Pausiert (10 Min)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Das Loopen wird für 20 Minuten unterbrochen
 
 ## LOOP RESUME
 
-- Loop resumed
+- Das Loopen fortsetzen
 
 ## TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers
+- Geräte aktualisieren 1 Empfänger
 
 ## NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 receivers
+- NSCLIENT neu starten 1 Empfänger
 
 ## DANAR / PUMP (since 1.60)
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Um die temporäre Basalrate zu stoppen, antworte mit dem Code EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h reply with code Swe
-- Remote basal setting is not allowed (if remote commands not allowed)
+- Um eine Basalrate von 0.3E/h zu starten, antworte mit Code Swe
+- Ferngesteuerte Basalraten-Einstellungen sind nicht erlaubt (wenn ferngesteuerte Kommandos nicht erlaubt sind)
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Um einen Bolus vo 1.2E abzugeben, antworte mit Code Rrt
+- Ferngesteuerte Boli sind nicht erlaubt (*falls innerhalb von 15 Minuten nach dem letzten Bolusbefehl oder wenn ferngesteuerte Kommandos nicht erlaubt sind*)
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Um Kalibrierungswert von 126 zu senden, antworte mit Code Rrt
+- Kalibrierung gesendet (*wenn xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein*)
