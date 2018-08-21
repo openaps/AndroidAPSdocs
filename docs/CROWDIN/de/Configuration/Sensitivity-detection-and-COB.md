@@ -21,10 +21,10 @@ Die Empfindlichkeit wird als gewichtetes Mittel der Schwankungen berechnet. Neue
 
 Oref0 - nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit abgeschnitten
 
-![COB nach oref0](../../images/cob_oref0.png)
+![COB nach oref0](../images/cob_oref0.png)
 
 AAPS, Durchschnittliche Sensitivität - Absorption wird so berechnet, dass nach der vorgegeben Zeit `COB == 0` gilt.
 
-![COB nach AAPS](../../images/cob_aaps.png)
+![COB nach AAPS](../images/cob_aaps.png)
 
 Falls die minimale Kohlenhydrat-Absorption statt einem aus den Schwankungen berechneten Wert genutzt wird, wird in der COB-Kurve ein grüner Punkt angezeigt.
