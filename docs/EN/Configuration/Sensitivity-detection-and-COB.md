@@ -21,10 +21,10 @@ Sensitivity is calculated as a weighted average from deviations. Newer deviation
 
 Oref0 - unabsorbed carbs are cutted after specified time
 
-![COB from oref0](../../images/cob_oref0.png)
+![COB from oref0](../images/cob_oref0.png)
 
 AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
 
-![COB from AAPS](../../images/cob_aaps.png)
+![COB from AAPS](../images/cob_aaps.png)
 
 If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
