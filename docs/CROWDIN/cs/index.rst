@@ -91,6 +91,7 @@ Použití
    Profily <./Usage/Profiles.md>
    SMS příkazy <./Usage/SMS-Commands.md>
    Prodloužené sacharidy (eCarbs) <./Usage/Extended-Carbs.md>
+   Timezone traveling <./Usage/Timezone-traveling.md>
    Přístup k log souborům <./Usage/Accessing-logfiles.md>
    Vyhlazování glykémií v xDripu <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
