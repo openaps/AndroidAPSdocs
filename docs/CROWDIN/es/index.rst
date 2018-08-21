@@ -91,6 +91,7 @@ Uso
    Perfiles <./Usage/Profiles.md>
    Comandos SMS <./Usage/SMS-Commands.md>
    Carbohidratos extendidos <./Usage/Extended-Carbs.md>
+   Timezone traveling <./Usage/Timezone-traveling.md>
    Acceder a los logs <./Usage/Accessing-logfiles.md>
    Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Trucos para uso básico de Accu Check Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
