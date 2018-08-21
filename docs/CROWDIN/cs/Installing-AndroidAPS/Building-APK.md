@@ -1,73 +1,73 @@
-# Building the APK
+# Sestavení APK
 
-This article is divided into two parts.
+Tento článek je rozdělený do dvou částí.
 
-* In the overview part you will get the explanation on what steps are necessary in general to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Another reason is that Android Studio is running on Windows, Mac OS X and Linux and their might be smaller differences in some aspects. If you find something important wrong or missing please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look on this.
+* V části přehled se vám dostane vysvětlení, které kroky obecně jsou nutné, abyste sestavili soubor APK.
+* V části průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Dalším důvodem je fakt, že Android Studio běží na Windows, Mac OS X i na Linuxu a konkrétní varianty mohou být trochu odlišné. Jestliže najdete něco zásadního, co je špatně nebo vám chybí, prosím informujte o tom facebookovou skupinu "AndroidAPS users" nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
 
-## Overview
+## Přehled
 
-In general description of the steps necessary to build the APK file.
+Následují obecné kroky k sestavení souboru APK.
 
-* Install git
-* Install and setup Android Studio.
-* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
-* Open the cloned project in Android Studio as active project.
-* Build the signed APK.
-* Transfer the signed APK to your smartphone.
+* Instalujte git
+* Instalujte a nastavte Android Studio.
+* Použijte git, abyste si naklonovali zdrojové kódy z centrálního úložiště na Githubu, kam vývojáři umístili poslední zdrojové kódy aplikace.
+* Otevřete naklonovaný projekt v Android Studiu jako aktivní projekt.
+* Sestavete podepsané APK.
+* Doručte podepsané APK na váš telefon.
 
-## Step by step walkthrough
+## Průvodce krok za krokem
 
-Detailed description of the steps necessary to build the APK file.
+Následuje detailní popis kroků nutných k sestavení souboru APK.
 
-* Install git 
+* Instalujte git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - just install a package git via package manager of your distribution
-* Install [Android Studio](https://developer.android.com/studio/install.html).
-* Setup Android Studio during first start
+  * Linux - prostě instalujte balíček git správcem balíčků z vaší distribuce
+* Instalujte [Android Studio](https://developer.android.com/studio/install.html).
+* Nastavte Android Studio při prvním spuštění
 
-Select "Do not import settings" as you have not used it before.
+Zvolte "Do not import settings", protože jste tento software zatím nevyužívali.
 
 ![Screenshot 1](../images/Installation_Screenshot_01.png)
 
-Click "Next".
+Klikněte na "Next".
 
 ![Screenshot 2](../images/Installation_Screenshot_02.png)
 
-Select "Standard" installation and click "Next".
+Vyberte "Standard" instalaci a klikněte na "Next".
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Select "Intellij" as UI (user interface) theme and click "Next".
+Vyberte "Intellij" jako schéma uživatelského prostředí a klikněte na "Next".
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Klikněte na "Next" v dialogovém okně "Verify Settings".
 
 ![Screenshot 5](../images/Installation_Screenshot_05.png)
 
-The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
+Emulátor Androidu (pro simulaci telefonu na vašem PC nebo Macu) se pro sestavení APK nepoužívá. Můžete kliknout na "Finish", abyste dokončili instalaci a odložili četbu dokumentace později na vyžádání.
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
-Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
+Android Studio stahuje velké množství softwarových komponent, které používá. Můžete kliknout na tlačítko "Show Details" pro zobrazení detailů, které ale vůbec nejsou důležité.
 
 ![Screenshot 7](../images/Installation_Screenshot_07.png)
 
 ![Screenshot 8](../images/Installation_Screenshot_08.png)
 
-After the downloads are completed click the "Finish" button.
+Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. May be it's time for a short break?
+* Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Možná je teď vhodná doba pro krátkou přestávku?
 
-* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
+* Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte "Check out project from Version Control" s "Git" jako konkrétní verzí správce zdrojových kódů.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
+Zadejte URL adresu do hlavního úložiště AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") a klepněte na "Clone".
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
