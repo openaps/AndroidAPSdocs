@@ -1,8 +1,8 @@
-# Config Builder
+# Konfigurace
 
 Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side allow you to select which one to use, the boxes on the right hand side allow you to view these as a tab in AndroidAPS. Where there are additional settings available within the module, you can click on the cog graphic which will take you to the specific settings within Preferences.
 
-## Profile
+## Profil
 
 Select the basal profile you wish to use:
 
