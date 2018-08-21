@@ -94,7 +94,7 @@ Použití
    Přístup k log souborům <./Usage/Accessing-logfiles.md>
    Vyhlazování glykémií v xDripu <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-   Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
+   Odstraňování potíží s NSClientem <./Usage/Troubleshooting-NSClient.md>
 
 Kam pro pomoc 
 ------------
