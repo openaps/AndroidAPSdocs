@@ -1,3 +1,3 @@
-Enabling Engineering Mode in xDrip+ activates extended and experimental features within the app.
+Povolením vývojářského režimu v xDrip+ aktivujete rozšířené a experimentální funkce v rámci aplikace.
 
-To enable Engineering Mode, on the xDrip+ home screen tap the Treatment icon on the right side of the screen (this resembles a syringe). Then tap and hold the microphone icon on the bottom-right of the Treatment interface. In the text field that opens, type "enable engineering mode" and click Done. Engineering Mode is now enabled.
+Abyste vývojářský režim povolili, na hlavní stránce xDrip+ ťukněte na ikonu ošetření v pravé části obrazovky (připomíná stříkačku). Pak ťukněte na ikonu mikrofonu v pravé dolní části panelu ošetření. Do textového pole, které se otevře, napište "enable engineering mode" a klikněte na Hotovo. Vývojářský režim je nyní zapnutý.
