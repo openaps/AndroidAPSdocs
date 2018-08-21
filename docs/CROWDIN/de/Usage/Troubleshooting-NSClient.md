@@ -1,4 +1,4 @@
-# NSClient Problembehandlung
+# NSClient-Problembehebung
 
 Der NSClient benötigt eine stabile Verbindung mit Nightscout. Instabile Verbindungen führen zu Synchronisationsfehlern und hoher Datennutzung.
 
