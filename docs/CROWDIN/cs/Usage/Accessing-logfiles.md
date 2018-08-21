@@ -1,6 +1,6 @@
-# Accessing logfiles
+# Zpřístupnění log souborů
 
-* Connect phone to a computer in file transfer mode
+* Připojte telefon k počítači v režimu přenosu souborů
 * Locate log files in this directory or similiar (may little bit vary on different phones)
 
 ![logs](../../images/aapslog.png)
