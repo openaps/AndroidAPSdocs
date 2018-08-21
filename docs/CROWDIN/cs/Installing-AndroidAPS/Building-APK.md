@@ -132,43 +132,43 @@ Nyní je dokončené. Prosím, klikněte na "Finish".
 
 Klikněte na "Install Build Tools and sync project", protože Android Studio potřebuje stáhnout chybějící pomůcky.
 
-![Screenshot 28](../images/Installation_Screenshot_28.png)
+![Snímek 28](../images/Installation_Screenshot_28.png)
 
 Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
 
-![Screenshot 29](../images/Installation_Screenshot_29.png)
+![Snímek 29](../images/Installation_Screenshot_29.png)
 
 Nyní je dokončené. Prosím, klikněte na "Finish".
 
-![Screenshot 30](../images/Installation_Screenshot_30.png)
+![Snímek 30](../images/Installation_Screenshot_30.png)
 
 Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Možná je čas dát si trochu vody?
 
-![Screenshot 31](../images/Installation_Screenshot_31.png)
+![Snímek 31](../images/Installation_Screenshot_31.png)
 
 Android Studio nám doporučuje, abychom aktualizovali systém gradle na verzi 4.4. Jestliže děláte sestavení pro AndroidAPS verzi, která předchází alespoň release kandidátovi (RC) verze 2.0, neřiďte se tímto doporučením. Jinak sestavení selže. Systém gradle je pomůcka Android Studia, která řídí proces sestavení. Pro AndroidAPS není žádná nevýhoda, když použijete starou verzi gradle. Soubor APK se ve výsledku nebude lišit. Pokud sestavujete APK pro verzi AndroidAPS 2, klidně můžete aktualizovat gradle systém na verzi 4.4. Prosím klikněte na "Remind me tomorrow".
 
-![Screenshot 32](../images/Installation_Screenshot_32.png)
+![Snímek 32](../images/Installation_Screenshot_32.png)
 
 Sestavení zase běží.
 
-![Screenshot 33](../images/Installation_Screenshot_33.png)
+![Snímek 33](../images/Installation_Screenshot_33.png)
 
 Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
 
-![Screenshot 34](../images/Installation_Screenshot_34.png)
+![Snímek 34](../images/Installation_Screenshot_34.png)
 
 V menu "Build" zvolte "Generate Signed APK...". Podepsání (jako v běžném životě) znamená, že podepíšete vygenerovanou aplikaci, ale digitálním způsobem, jakoby nějakým digitálním otiskem prstu uvnitř samotné aplikace. Je to nutné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [tady](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
 
-![Screenshot 39](../images/Installation_Screenshot_39.png)
+![Snímek 39](../images/Installation_Screenshot_39.png)
 
 Zvolte "app" a klikněte na "Next".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Snímek 40](../images/Installation_Screenshot_40.png)
 
 Klikněte na "Create new...", abyste začali připravovat úložiště vašich klíčů. Úložiště klíčů v tomto případě není nic jiného, než soubor, ve kterém jsou uložené podepisovací informace. Je zašifrované a údaje jsou zabezpečené hesly. Doporučujeme vám uložit ho do vaší domovské složky a zapamatovat si hesla, ale kdybyste tyto informace ztratili, nebyl by to tak velký problém, protože potom byste prostě museli vytvořit nové úložiště klíčů. Ale lepší je tyto údaje pečlivě uložit.
 
-![Screenshot 41](../images/Installation_Screenshot_41.png)
+![Snímek 41](../images/Installation_Screenshot_41.png)
 
 * Vyplňte údaje pro další dialogové okno. 
   * Key store path: je cesta k vašemu úložišti klíčů
@@ -178,11 +178,11 @@ Klikněte na "Create new...", abyste začali připravovat úložiště vašich k
   * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
   * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje, pokud chcete. Pak klikněte na "OK".
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
+![Snímek 42](../images/Installation_Screenshot_42.png)
 
 Vyplňte údaje posledního dialogového okna a klikněte na "Next".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+![Snímek 43](../images/Installation_Screenshot_43.png)
 
 Zvolte "full" jako flavour generované aplikace. Zvolte V1 "Jar Signature" (V2 je volitelné) a klikněte na "Finish". Následující údaje mohou být důležité pro pozdější použití.
 
@@ -193,31 +193,31 @@ Zvolte "full" jako flavour generované aplikace. Zvolte V1 "Jar Signature" (V2 j
   * pumpcontrol (tj. vzdálené ovládání pumpy bez smyčky)
   * nsclient (tj. zobrazují se data jiného uživatele se smyčkou a lze vkládat vstupy ošetření)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Snímek 44](../images/Installation_Screenshot_44.png)
 
 V podokně "Event Log" vidíme, že podepsaný soubor APK byl úspěšně vygenerován.
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
+![Snímek 45](../images/Installation_Screenshot_45.png)
 
 Klikněte na odkaz "locate" v podokně "Event Log".
 
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![Snímek 46](../images/Installation_Screenshot_46.png)
 
 Objeví se správce souborů. Na vašem počítači může vypadat trochu odlišně, já např. používám Linux. Na Windows systémech to bude Průzkumník souborů a na Mac OS X to bude Finder. Každopádně byste měli vidět složku s vygenerovaným souborem APK. Bohužel je toto nesprávné místo, protože "wear-release.apk" není podepsané "app" APK, které hledáme.
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+![Snímek 47](../images/Installation_Screenshot_47.png)
 
 Běžte prosím do složky AndroidAPS/app/full/release, abyste našli "app-full-release.apk" file. Dopravte tento soubor na váš Android telefon. Můžete to udělat vaším oblíbeným způsobem, např. přes bluetooth, cloud uploadem nebo mailem. Já zde na ukázku používám Gmail, jelikož je to pro mě dost jednoduché. Zmiňuji to proto, že instalaci samo-podepsané aplikace potřebujeme v systému Android výslovně povolit, i když byl soubor přijatý přes Gmail. Standardně je to totiž zakázané. Pokud používáte něco jiného, prosím, postupujte adekvátně.
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
+![Snímek 48](../images/Installation_Screenshot_48.png)
 
 V nastavení Vašeho telefonu je místo, kde mohu povolit instalaci APK souborů, které jsem si poslal přes Gmail.
 
-![Screenshot 49](../images/Installation_Screenshot_49.png)
+![Snímek 49](../images/Installation_Screenshot_49.png)
 
 Vyberte "Povolit z tohoto zdroje". Po instalaci tuto volbu zase můžete zakázat.
 
-![Screenshot 50](../images/Installation_Screenshot_50.png)
+![Snímek 50](../images/Installation_Screenshot_50.png)
 
 Posledním krokem je kliknout na soubor APK, který jsem přijal Gmailem a instalovat aplikaci. Pokud se APK nechce nainstalovat a máte v telefonu již starší verzi AndroidAPS, pravděpodobně byla podepsaná jiným klíčem - pak musíte starou verzi nejdřív odinstalovat, nezapomeňte ale před tím exportovat svá nastavení!
 
