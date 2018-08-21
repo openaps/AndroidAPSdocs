@@ -91,6 +91,7 @@ AndroidAPS nutzen
    Profile <./Usage/Profiles.md>
    SMS-Befehle <./Usage/SMS-Commands.md
    Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.md>
+   Timezone traveling <./Usage/Timezone-traveling.md>
    Logfiles erhalten <./Usage/Accessing-logfiles.md>
    Glukosedaten in xDrip glätten <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
