@@ -1,24 +1,24 @@
-# Timezone traveling with pumps
+# Mit der Pumpe über Zeitzonen hinweg reisen
 
-## DanaR, Korean DanaR
+## DanaR, koreanische DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Es gibt keine Probleme beim Zeitzonenwechsel im Smartphone, da die Pumpe keine Historie verwendet
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndoridAPS is using history from the pump but the records in pump don't have timezone stamp. That means if you simple change timezone in phone, records will be read with different timezone and will be doubled. To avoid this do the following steps on every timezone change:
+Diese Pumpen benötigen besondere Aufmerksamkeit, weil AndroidAPS die Historie der Pumpe verwendet, die Einträge in der Pumpe aber keine Zeitangaben beinhalten. Das bedeutet, dass ein einfacher Zeitzonenwechsel im Smartphone dazu führt, dass Einträge mit verschiedenen Zeitzonen ausgelesen und doppelt angezeigt werden. Um dies zu vermeiden, führe folgende Schritte bei jedem Zeitzonenwechsel aus:
 
-* switch phone for manual time zone change before travel
+* setze das Smartphone vor der Reise auf manuellen Zeitzonenwechsel
 
-When get out of plane:
+Wenn du aus dem Flugzeug steigst:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* schalte die Pumpe aus
+* ändere die Zeitzone auf dem Smartphone
+* schalte das Smartphone aus, schalte die Pumpe an
+* lösche die Historie der Pumpe
+* ändere die Zeit in der Pumpe
+* schalte das Smartphone an
+* lasse das Smartphone mit der Pumpe verbinden und verfeinere die Zeiteinstellung
 
 ## Combo
 
