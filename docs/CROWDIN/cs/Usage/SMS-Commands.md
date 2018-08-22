@@ -1,22 +1,22 @@
-# SMS Commands
+# SMS příkazy
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+Ve vašem Android telefonu běžte do jeho systémového nastavení, pak do Aplikace > AndroidAPS > Oprávnění a povolte SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from and also enable 'Allow remote commands via SMS'
+V AndroidPAS běžte do Nastavení > SMS komunikátor a zadejte telefonní číslo/čísla, ze kterých chcete povolit příchozí SMS příkazy a také povolte "Povolit posílání příkazů přes SMS"
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Z některého z povolených čísel odešlete SMS zprávu na telefon s běžícím AndroidAPS a do zprávy zadejte některý z níže **tučně** zapsaných příkazů. Telefon vám odpoví, aby potvrdil úspěšné provedení daného příkazu anebo vrátí požadované stavové informace.
 
 ## BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Poslední glykémie: 5.6 před 4 min, Rozdíl: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
 
 ## LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Smyčka byla zakázána
 
 ## LOOP START/ENABLE
 
-- Loop has been enabled
+- Smyčka byla povolena
 
 ## LOOP STATUS
 
