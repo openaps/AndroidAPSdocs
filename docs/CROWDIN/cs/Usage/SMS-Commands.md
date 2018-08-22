@@ -20,45 +20,45 @@ Z některého z povolených čísel odešlete SMS zprávu na telefon s běžíc�
 
 ## LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Smyčka je zakázána
+- Smyčka je povolena
+- Pozastavena (10 minut)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Smyčka pozastavena na 20 minut
 
 ## LOOP RESUME
 
-- Loop resumed
+- Smyčka obnovena
 
 ## TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers
+- TERATMENTS REFRESH 1 příjemce
 
 ## NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 receivers
+- NSCLIENT RESTART 1 příjemce
 
-## DANAR / PUMP (since 1.60)
+## DANAR / PUMP (od verze 1.60)
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Na ukončení bazálu odpověz SMS s kódem EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h reply with code Swe
-- Remote basal setting is not allowed (if remote commands not allowed)
+- Na spuštění bazálu 0.3U/h odpověz SMS s kódem Swe
+- Vzdálené posílání příkazů není povoleno (pokud nejsou vzdálené příkazy povolené)
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- K potvzení bolusu 1.2U odpověz SMS s kódem Rrt
+- Vzdálený bolus není momentálně povolen (*pokud ještě neuplynulo 15 minut od posledního bolus příkazu anebo pokud nejsou vzdálené příkazy povoleny*)
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Odeslání kalibrace 5.6 potvrďte kódem Rrt
+- Kalibrace odeslána(*jestliže je xDrip nainstalovaný</0>). Příjem musí být v xDripu povolený.</li> </ul>
