@@ -6,7 +6,7 @@
 
 * Any git version should work. For example https://git-scm.com/download/win
 * Let Studio know where is git.exe located: File - Settings - Version Control - Git
-![](images/git.png)
+![](../images/git.png)
 
 **Update your local copy**
 
