@@ -97,6 +97,6 @@ For further tips regarding data smoothing when using xDrip+ as the data source, 
 * 'Ignore profile switch events' will not send your current AndroidAPS profile to the pump. It is encouraged not to select this unless you are testing code, as for safety sending profile switch events to the pump's basal profile 1 means than should AndroidAPS stop working or loose connection with the pump then your pump will revert to the same profile as default rather than you having to manually enter it into the pump. For more information on profiles see [Profiles](/docs/Usage/Profiles).
 * 'BT Watchdog' select this option if you keep loosing connection with your pump. When the pump looses connection it will toggle bluetooth off and on for you to improve the connection.
 
-## Wear Settings
+## Nastavení hodinek
 
-For more information on the wear watchface settings see [Watchfaces](./Watchfaces).
+Pro více informací o hodinkách najdete v [Watchfaces](./Watchfaces).
