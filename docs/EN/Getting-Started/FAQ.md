@@ -99,6 +99,9 @@ You are not receiving calls now, nor are you connected to the Internet. But the 
 
 ## Travelling
 
+### How to deal with timezone changes?
+With DanaR and DanaR Korean you don't have to do anything. For other pumps see [../Usage/Timezone-traveling.html#timezone-traveling-with-pumps](../Usage/Timezone-traveling.html#timezone-traveling-with-pumps) for more details.
+
 ## Hospitalization
 
 ## Medical appointment with your endocrinologist
