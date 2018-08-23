@@ -1,25 +1,25 @@
-# Profile switch
+# Profilwechsel
 
-On starting your AndroidAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately but you need to switch the same profile again (in NS or AAPS) to start using these changes.
+Wenn du dein AndroidAPS startest und dein Profil auswählst, wirst du einen "Profilwechsel" mit einer Dauer von 0 duchführen müssen (wird später erklärt). Wenn du das machst, beginnt AAPS damit, die Historie der Profile zu verfolgen und jede Änderung am Profil erfordert einen erneuten Profilwechsel, auch dann, wenn du den Inhalt eines Profils in NS änderst. Ein geändertes Profil wird sofort auf AAPS übertragen, aber du musst zu dem gleichen Profil wechseln (in NS oder AAPS), damit diese Änderungen aktiv werden.
 
-Internaly AAPS creates snapshot of profile with start date and duration and is using it within selected period. Duration of zero means infinite. Such profile is valid until new "Profile switch".
+AAPS erzeugt intern eine Momentaufnahme des Profils mit dem Startdatum und der Dauer und verwendet es für den angegebenen Zeitraum. Eine Dauer von 0 bedeutet unendlich. Dadurch ist dieses Profil bis zu einem erneuten Profilwechsel aktiv.
 
-If you use "Profile switch" with duration profile is switched back to previous valid "Profile switch"
+Wenn du einen Profilwechsel mit einer bestimmten Dauer verwendest, dann wird das Profil nach Zeitablauf auf den letzten gültigen Profilwechsel zurückgesetzt
 
-If you use local AAPS profiles (Simple, Local, CPP) you have to press button there to apply these changes (it creates proper "Profile switch" event).
+Wenn du lokale AAPS Profile verwendest (Einfach, Lokal, CPP), musst du den Button dort drücken, um diese Änderungen zu aktivieren (das erzeugt ein korrektes Profilwechsel-Ereignis).
 
-Within the "profile switch" you can choose two changes which used to be part of the Circadian Percentage Profile:
+Bei einem Profilwechsel kannst du zwei Optionen wählen, die früher Teil des Zirkadianen Prozent-Profils waren:
 
-* Percentage - this applies the same percentage to all parameters. If you set it to 130% (meaning you are 30% more insulin resistant), it will up the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example). It will be sent to the pump and then be the default basal rate. The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So for example separate percentage profiles can be set up for different stages of the hormone cycle.
-* Timeshift - this moves everything round the clock by the number of hours entered. So for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
+* Prozentsatz - dies wendet den gleichen Prozentsatz auf alle Parameter an. Wenn du ihn auf 130% setzt (was bedeutet, dass du eine 30% höhere Insulinresistenz hast), wird es die Basalrate um 30% erhöhen. Es senkt auch ISF und IC entsprechend (in diesem Beispiel werden sie durch 1,3 geteilt). Das wird an die Pumpe gesendet und ist dann die standardmässig verwendete Basalrate. Der Loop Algorithmus (Open Loop oder Closed Loop) wird von da an mit dem ausgewählten prozentualen Profil arbeiten. So können zum Beispiel unterschiedliche prozentuale Profile für die verschiedene Phasen des hormonellen Zyklus eingerichtet werden.
+* Zeitverschiebung - dies verschiebt alles um die Anzahl an den eingegebenen Stunden. So kannst du zum Beispiel bei Nachtschichten angeben, wie viele Stunden später / früher du zu Bett gehst oder aufstehst.
 
-This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine sehr viel präzisere Berechnung der Vergangenheit und die Möglichkeit, Änderungen am Profil nachzuverfolgen.
 
-In closed loop mode is recommended to turn on automatic update of profile in pump (in settings), this will mean any updated you make to your profile will be copied locally to the pump in case of future failure of AndroidAPS like when the phone runs out of battery or the communication gets disrupted.
+Bei einem Closed Loop ist es empfehlenswert, das automatische Updaten des Profils in der Pumpe zu aktivieren (in den Einstellungen). Das bedeutet, dass alle Updates, die du in deinem Profil machst, direkt auf die Pumpe übertragen werden. Das geschieht für den Fall eines Fehlers in AndroidAPS, beispielsweise wenn der Smartphone-Akku leer ist oder die Verbindung unterbrochen wird.
 
-<b>Troubleshooting Profile Errors</b>  
+<b>Fehlerbehebung bei Profil Fehlern</b>  
 
 
-* 'Invalid profile' or 'Basal Profile not aligned to hours' error message will appear if you have any basal rates or I:C rates not on the hour. The DanaR and DanaRS pumps do not support changes on the half hour.
-* 'Received profile switch from NS but profile does not exist locally' or Go either to Treatments tab in AndoridAPS and select Profile Switch, 'remove' the date and time that was mentioned in the error message. Or go to your mlab collection, search in the treatments for profile switch and delete the date and time that was mentioned in the error message. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
-* 'DIA 3hr too short' error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a Profile Switch to continue.
+* Die Fehlermeldung "Ungültiges Profil" oder "Basal Profil nicht ausgerichtet auf Stunden" wird angezeigt, wenn du eine Basalrate oder I:K Faktoren abseits der vollen Stunden hast. Die Pumpen DanaR und DanaRS lassen Änderungen zur halben Stunde nicht zu.
+* Bei dem Fehler "Profilwechsel von NS empfangen aber Profil existiert lokal nicht" öffne die Registerkarte "Behandlungen" in AndroidAPS, wähle dort "Profilwechsel" aus und klicke "Löschen" bei dem Eintrag, der dem Datum und der Zeit der Fehlermeldung entspricht. Oder öffne die mlab Sammlung und suche in den Behandlungen nach "Profilwechsel". Lösche dann dort den Eintrag, der dem Datum und der Zeit der Fehlermeldung entspricht. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
+* Die Fehlermeldung "DIA 3 h zu kurz" erscheint, wenn die Wirkdauer des Insulins in deinem Profil mit einem Wert angegeben wird, von dem AndroidAPS annimmt, dass er nicht korrekt ist. Lies den Abschnitt [Auswahl des richtigen DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), überarbeite dein Profil und führe einen Profilwechsel aus, um es zu aktivieren.

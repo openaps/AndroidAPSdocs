@@ -70,7 +70,7 @@ Možnosti zde se budou lišit v závislosti na tom, který ovladač pumpy jste z
 ## NS Client
 
 * Zde si nastavte svou ‘Nightscout URL’ (https://jmenovasiwebovky.herokuapp.com nebo https://jmenovasiwebovky.azurewebsites.net) a heslo ‘API secret’ (dvanácti znakové heslo z Vašeho heroku nebo azure). Toto umožní, aby data byla načítána zapisována mezi Nightscoutem a AndroidAPS. Pokud jste uvízli v Cíli 1, tak zde překontrolujte případné chyby nebo překlepy.
-* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day, more frequently than this suggests a problem. 
+* 'Logovat start aplikace' zaznamenává do poznámky v péči každé spuštění aplikace. Aplikace by se neměla spouštět vícekrát než jednou denně. Pokud je to vícekrát, znamená to obvykle problém. 
 * 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip. 
 * 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+)
 
@@ -97,6 +97,6 @@ For further tips regarding data smoothing when using xDrip+ as the data source, 
 * 'Ignore profile switch events' will not send your current AndroidAPS profile to the pump. It is encouraged not to select this unless you are testing code, as for safety sending profile switch events to the pump's basal profile 1 means than should AndroidAPS stop working or loose connection with the pump then your pump will revert to the same profile as default rather than you having to manually enter it into the pump. For more information on profiles see [Profiles](/docs/Usage/Profiles).
 * 'BT Watchdog' select this option if you keep loosing connection with your pump. When the pump looses connection it will toggle bluetooth off and on for you to improve the connection.
 
-## Wear Settings
+## Nastavení hodinek
 
-For more information on the wear watchface settings see [Watchfaces](./Watchfaces).
+Pro více informací o hodinkách najdete v [Watchfaces](./Watchfaces).

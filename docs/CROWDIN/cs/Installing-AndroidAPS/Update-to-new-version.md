@@ -1,60 +1,58 @@
-# Update to a new version or branch
+# Aktualizace na novou verzi nebo větev (branch)
 
-## Master branch
+## Větev Master
 
-**Install git (if you don't have it)**
+**Instalace gitu (pokud ho ještě nemáte)**
 
-* Any git version should work. For example https://git-scm.com/download/win
-* Let Studio know where is git.exe located: File - Settings - Version Control - Git ![](images/git.png)
+* Měly by fungovat všechny verze gitu. Například https://git-scm.com/download/win
+* Řekněte Android Studiu, kde je git.exe umístěný: File > Settings > Version Control > Git![](../images/git.png)
 
-**Update your local copy**
+**Aktualizace lokální kopie**
 
-* Click: VCS->Git->Fetch
+* Klikněte na: VCS > Git > Fetch
 
-**Selecting branch**
+**Výběr větve**
 
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+* Pokud chcete změnit větev, vyberte jinou z dolní lišty: master (poslední vydání) nebo jiná verze (viz níže)
 
 ![](../images/branchintray.png)
 
-and then checkout
+a potom zvolte Checkout
 
 ![](../images/checkout.png)
 
-**Updating branch from Github**
+**Aktualizace větve z Githubu**
 
-* Press Ctrl+T, select Merge method and press OK
+* Stiskněte Ctrl+T, zvolte metodu Merge a stiskněte OK
 
 ![](../images/merge.png)
 
-On the tray you'll see green message about updated project
+Na dolní liště uvidíte zelenou zprávu o aktualizovaném projektu
 
-**Upload to phone**
+**Nahrání do telefonu**
 
-Generate signed apk as described in [Building APK](./Building-APK.html)
+Vygenerujte podepsaný APK soubor, jak je popsané ve [Vytvoření APK](./Building-APK.html)
 
-## Development branch
+## Vývojové větve
 
-**Attention:** The dev version of AndroidAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the same directory where you would find the log files. Enabling the engineering mode might break the loop entirely.
+**Pozor:** Dev verze AndroidAPS je pouze pro vývojáře a testery, kteří bez problémů pracují s ladicími výpisy, procházejí logy a eventuálně spustí debugger, aby k chybě připravili zprávu, která je užitečná pro vývojáře (ve zkratce: dev je pro lidi, kteří vědí, co dělají, aniž by potřebovali něčí asistenci!). Proto je mnoho nedokončených funkcí zakázaných. K povolení těchto funkcí vstupte do **Vývojářského režimu** založením souboru s názvem `engineering_mode` ve stejné složce, kde se nacházejí log soubory. Povolením vývojářského režimu můžete smyčku zcela narušit.
 
-The most stable version of AndroidAPS to use is that in the [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). It is advised to stay on the Master branch while you complete the Objectives and get practiced at looping.
+Nejstabilnější verze AndroidAPS k použití je ta v [Master větvi](https://github.com/MilosKozak/AndroidAPS/tree/master). Doporučuje se zůstat v Master větvi, než dokončíte cíle a procvičíte se ve smyčce.
 
-However, the [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk.
+Nicméně [Dev větev](https://github.com/MilosKozak/AndroidAPS/tree/dev) je dobré místo, kde se ukazují testované funkce a můžete zde pomoci vyžehlit nějaké chyby a poskytnout zpětnou vazbu, jak nové funkce pracují v praxi. Uživatelé často testují Dev větev na starém telefonu a pumpě, než jsou si jistí stabilitou - jakékoliv použití je na vaše vlastní riziko.
 
-A short summary of some of the changes to old features or development of new features currently in the Dev branch is listed below, and links to any key issues known will be shared (if applicable).
+Následuje krátké shrnutí některých změn oproti předchozím verzím a nové funkce aktuálně v Dev větvi. Odkazy na všechny známé klíčové problémy budou sdílené (pokud existují).
 
 **Super Micro Bolus (SMB)**
 
-More can be read on [Super Micro Boluses (SMB) on OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).  
+O Super Micro Bolusech (SMB) si můžete více přečíst v [OpenAPS dokumentaci](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb). Nezapomeňte, že se chystáte testovat funkci, která se stále ještě vyvíjí. Činíte tak na vlastní riziko a na vlastní zodpovědnost za své bezpečí.   
   
-Remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.  
+Předtím byste měli běžet v uzavřené smyčce více než čtyři týdny (se splněným cílem 7) a měli byste znát všechny typy situací, ve kterých může APS selhávat.   
   
-You should have run basic closed looping for more than four weeks (having completed Objective 7), and be very aware of all the types of situations in which your APS might fail.  
-  
-You may need to adjust your settings to allow SMB to work effectively. A good place to start is increasing your max IOB to normal meal bolus + 3x max daily basal. But remain vigilant and adjust settings with care.
+Zřejmě budete potřebovat doladit své nastavení, aby mohlo SMB pracovat efektivně. Pro začátek je dobré zvýšit maximální IOB na běžný bolus k jídlu + trojnásobek maximálního denního bazálu. Ale zůstaňte bdělí a upravujte nastavení s opatrností.
 
 <br />  
   
-As with all updates, previous code has been cleaned, improved and bugs fixed. <br />  
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../Usage/Accessing-logfiles.html)). The new features can also be discussed in the [gitter room](https://gitter.im/MilosKozak/AndroidAPS). <br />  
-If you would like to be up-to-date on the Dev Branch you can use the same steps as already outlined above. You just need to change to the corresponding "dev"-Branch in Android Studio.
+Jako u jiných aktualizací, původní kód byl vyčištěný, vylepšený a byly v něm opraveny chyby. <br />  
+Pokud najdete chybu, nebo si myslíte, že se stalo něco špatného při používání Dev větve, pak se podívejte na [záložku Issues](https://github.com/MilosKozak/AndroidAPS/issues), abyste prověřili, jestli to už nenahlásil někdo jiný, pokud ne, tak problém rovnou nahlašte. Čím více informací sdělíte, tím lépe (nezapomeňte sdílet své [log soubory](../Usage/Accessing-logfiles.html)). Nové funkce mohou být také diskutovány v [Gitter místnosti](https://gitter.im/MilosKozak/AndroidAPS). <br />  
+Pokud chcete zůstat se svou Dev větví aktuální, můžete postupovat stejným způsobem, jak bylo popsáno výše. Stačí jen namísto "master" větve použít "dev" větev v Android Studiu.
