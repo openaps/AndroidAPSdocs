@@ -5,7 +5,7 @@
 **Installiere git (falls du es noch nicht hast)**
 
 * Jede git Version sollte funktionieren. Zum Beispiel https://git-scm.com/download/win.
-* Wähle den Ordner, in dem sich git.exe befinde: File - Settings - Version Control - Git ![](images/git.png)
+* Wähle den Ordner, in dem sich git.exe befinde: File - Settings - Version Control - Git ![](../images/git.png)
 
 **Führe ein Update deiner lokalen Version durch**
 
