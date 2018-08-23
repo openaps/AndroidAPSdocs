@@ -19,34 +19,34 @@ In unserem Beispiel nehmen wir nun eine Änderung an der OpenAPS-Dokumentation v
 4. Du arbeitest im "<>Edit file" Reiter. Wechsle zum "Preview changes" Reiter, um auf die Vorschau einen Blick zu werfen, damit alles was du geändert hast so aussieht wie du es wolltest (Rechtschreibfehler prüfen). Wenn du etwas entdeckst, das ausgebessert werden muss, wechsle wieder zum edit Reiter, um die Ausbesserungen vorzunehmen. ![preview mode](./images/PR5.png)
 5. Wenn du mit deinen Änderungen fertig bis, scrolle zum Seitenende. In der Box am Seitende solltest du deine Kommentare im Textfeld namens "Add an optional extended description..." einfügen. Der Standardtitel beinhaltet den Dateinamen. Versuche einen Satz dazu zu schreiben, **warum** du etwas geändert hast. Die Angabe des Grundes hilft den Admins zu verstehen, was du mit deinem PR bezweckst. ![commit comments](./images/PR4.png)
 6. Klicke auf den grünen "Propose file changes" oder "Commit changes" Button. Auf der Seite, die dann erscheint, klicke auf "Create Pull Request" und auf der dann erscheinenden Seite klicke auf "Create Pull Request". ![create pull request](./images/PR6.png)
-7. Das war der letzte Schritt zur Erstellung eines pull requests, PR. GitHub ordnet dem PR eine Nummer, die du nach dem Titel findest, zu und einen Hashtag. Return to this page to check for feedback (or, if you have Github notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for openaps! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs. ![PR tracking](./images/PR7.png)
+7. Das war der letzte Schritt zur Erstellung eines pull requests, PR. GitHub ordnet dem PR eine Nummer, die du nach dem Titel findest, zu und einen Hashtag. Rufe diese Seite wieder auf, um Feedback zu erhalten (oder du erhältst automatisch E-Mail Benachrichtigungen über Aktivitäten bei deinem PR, wenn du Github entsprechend konfiguriert hast). Die Änderung wird nun in einer Liste von PR's aufgeführt, die das Team überprüfen wird; es wird gegebenenfalls Rückmeldungen dazu geben, bevor die Änderung in die Hauptdokumentation für OpenAPS einfliesst! Wenn du den Fortschritt des PR überprüfen willst, kannst du auf das Logo mit der Glocke in der oberen rechten Ecke deines GitHub-Kontos klicken, wo du dann alle deine PRs siehst. ![PR tracking](./images/PR7.png)
 
-Congrats, you made your first contribution!
+Gratulation, du hast deinen ersten Beitrag geleistet!
 
-PS, your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the openaps repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen GitHub Konto. Nachdem du die Benachrichtigung erhalten hast, dass dein PR integriert wurde, kannst du deinen Branch löschen, wenn du damit fertig bist (der Benachrichtigungsbereich in Schritt 8 stellt dir einen Link zur Verfügung, um den Branch zu löschen, wenn er geschlossen oder integriert wurde). Künftige Änderungen werden immer mit einer aktuellen Version des OpenAPS Repositories beginnen, wenn du diese Vorgehensweise verwendest. Wenn du eine andere Methode verwendest, um einen PR zu starten (z.B. du fängst mit einer lokalen Fork des Master Branches an), musst du sicherstellen, dass dein Repository aktuell ist, indem du erst ein "compare" ausführst und jedes Update integrierst, das seit dem letzten Update deines Forks stattgefunden hat. Da häufig vergessen wird, die eigenen Repositories auf dem aktuellen Stand zu halten, empfehlen wir, den PR Prozess wie oben beschrieben zu verwenden, bis du dich mit der Ausführung von "compares" vertraut gemacht hast.
 
-### Advanced tips for adding multiple images to documentation
+### Tipps für das Hinzufügen mehrerer Bilder zur Dokumentation für Fortgeschrittene
 
-If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
+Wenn du vor hast viele Änderungen zu machen, die auch das Hinzufügen von Bildern beinhalten, um Teile der Dokumentation illustrieren (Danke!), könnte dir folgende Möglichkeit helfen:
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png".
+* Wenn du Screenshots speicherst, benenne diese mit einem beschreibenden Namen - aber versuche möglichst, Leerzeichen zu vermeiden, da das GitHub verwirrt. Verwende stattdessen Unterstriche. Z.B. Example_batch_images_upload.png statt "Example batch images upload.png".
 
-* You can upload images in batches easily by:
+* Mehrere Bilder kannst du auf diese Art leicht hochladen:
     
-    1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
+    1. Navigiere zu dem Bilder Verzeichnis (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - aber stelle sich, dass du dich in deinem Fork / deiner Kopie des Bilderverzeichnisses befindest (ersetze "openaps" in der URL mit deinem GitHub Benutzernamen)).
     
-    2. Click in the upper right corner where it says "Upload files"
+    2. Klicke in die rechte obere Ecke wo "Upload files" steht
     
-    3. Drag and drop your images into the screen
+    3. Ziehe deine Bilder auf den Bildschirm
     
-    4. Commit these to your branch
+    4. Führe einen "Commit" auf deinen Branch aus
     
-    5. Now, you can look for the URL/relative path of each file (example, you can see [this individual image has its own URL and path](https://github.com/openaps/docs/blob/master/docs/EN/images/Example_batch_images_upload.png) and use that to refer to when adding images into a page in the documentation.
+    5. Jetzt kannst du nach der URL / dem relativen Pfad für jede Datei schauen (du kannst zum Beispiel sehen, dass [dieses individuelle Bild seine eigene URL und seinen eigenen Pfad hat](https://github.com/openaps/docs/blob/master/docs/EN/images/Example_batch_images_upload.png)) und nutze das, um dich darauf zu beziehen, wenn du Bilder in eine Seite der Dokumentation einfügst.
     
-    6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
+    6. Beispiele, wie man Bilder hinzufügt, kannst du dir im "rohen" Code von Seiten anschauen, in denen schon erfolgreich Bilder eingefügt wurden. Es ist wichtig, eine reine Textbeschreibung zu haben, der ein Link mit einem relativen Pfad zu dem Bild folgt. Etwa so: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
     
-    (That code is exactly how the image below is embedded to be displayed.)
+    (Dieser Code zeigt exakt, wie das Bild weiter unten eingefügt wurde, um angezeigt zu werden.)
 
 ![Beispiel, um mehrere Bilder gleichzeitig hochzuladen](./images/Example_batch_images_upload.png)
 
-7. Now, once done adding images/making adjustments, you can submit a PR back to the master copy of the OpenAPS docs.
+7. Nachdem du Bilder hinzugefügt oder Änderungen vorgenommen hast, kannst du einen "submit" auf den PR für die Master Kopie der OpenAPS Docs ausführen.
