@@ -88,6 +88,15 @@ You can remove the pump while taking a shower or bath. For this short period of 
 
 ## Sleeping
 
+### How can I loop during the night without mobile and WLAN radiation?
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip + or patched Dexcom app, it will NOT work if you get the BG-readings via nightscout):
+
+1. Turn on airplane mode in your mobile.
+2. Wait until the airplane mode is active.
+3. Turn on Bluetooth.
+
+You are not receiving calls now, nor are you connected to the Internet. But the loop is still running.
+
 ## Travelling
 
 ## Hospitalization
