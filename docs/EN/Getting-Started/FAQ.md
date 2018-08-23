@@ -72,7 +72,7 @@ The change of a canula however does not use the "prime infusion set" function of
 ## Hygiene
 
 ### What to do when taking a shower or bath?
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS  so that the IOB calculations are right. Push on the light blue field "Open loop / Closed loop" on top of the homescreen. Select "Disconnect pump for 1 h". Once you have been reconnected your pump you have to select "Continue" in the same field. 
+You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS  so that the IOB calculations are right. Push on the light blue field "Open loop / Closed loop" on top of the homescreen. Select **"Disconnect pump for 1 h"**. Once you have been reconnected your pump you have to select "Continue" in the same field. 
 
 ## Working
 
