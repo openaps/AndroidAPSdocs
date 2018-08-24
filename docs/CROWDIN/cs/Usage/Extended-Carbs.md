@@ -26,6 +26,6 @@ Způsob zpracování tuků a bílkovin s touto funkcí je popsaný zde: https://
 
 Doporučené nastavení je použít OpenAPS SMB APS plugin a také s povoleným SMB - aktivní volba *Povolit SMB s COB* v nastavení.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above).
+Řešení např. pro pizzu může být (částečný) bolus předem přes *kalkulátor* a potom použití tlačítka *Sacharidy* k zadání zbývajících sacharidů, a to v trvání po 4-6 hodin se začátkem za 1 nebo 2 hodiny. Budete to muset samozřejmě vyzkoušet, jaké hodnoty sedí právě vám. Možná také opatrně upravit nastavení *Maximální počet minut bazálu, ke kterým se limituje SMB*, aby byl algoritmus více či méně agresivní. Pro jídla s nízkým obsahem sacharidů a s vysokým obsahem tuků/bílkovin může být dostačující použít jenom eSacharidy bez ručních bolusů (viz blogový příspěvek výše).
 
-When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+Když jsou eSacharidy generovány, je také založena poznámka do ošetření, aby byly všechny uživatelské zásahy zdokumentované, aby bylo snazší opakovat a vylepšovat své postupy.
