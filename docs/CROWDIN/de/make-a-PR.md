@@ -13,7 +13,7 @@ Es kann sein, dass dir irgendwann vorgeschlagen wird, einen PR zu machen. PR, di
 In unserem Beispiel nehmen wir nun eine Änderung an der OpenAPS-Dokumentation vor. Dies muss nicht in einer Linux-Umgebung durchgeführt werden. Es kann auf jedem Windows-PC, Mac, etc. erfolgen. (jedem Computer mit Internet-Zugang).
 
 1. Gehe zu https://github.com/openaps/AndroidAPSdocs und klicke auf "Fork" oben rechts, um deine eigene Kopie des Repositories (=Quell-Code) zu machen. ![Fork repo](./images/PR0.png)
-2. Gehe zu http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html oder ähnliches und navigiere zu der Seite, die du bearbeiten möchtest. Klicke auf die Black-Box unten links in der Seite mit den grünen Wort "v: newest" oder ähnliches. In dem Fenster das nun erscheint klicke auf das Wort "edit", um es in Github zu editieren.   
+2. Gehe zu http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html oder ähnliches und navigiere zu der Seite, die du bearbeiten möchtest. Klicke auf die Black-Box unten links in der Seite mit dem grünen Wort "v: newest" oder ähnliches. In dem Fenster das nun erscheint klicke auf das Wort "edit", um es in Github zu editieren.   
     ![edit doc](./images/PR1.png) Oder du klickst auf den "Edit in Github"-Link in der oberen rechten Ecke und klickst dann auf das Bleistift-Symbol das in der oberen Leiste der Seite erscheint, um diese zu editieren. ![RTD io](./images/PR2.png)
 3. Beide Optionen in Schritt 2 führen dazu, dass ein neuer Branch in DEINEM kopierten Repository erstellt wird, wo die Änderungen gespeichert werden sollen. Editiere die Datei. ![Edit branch](./images/PR3.png)
 4. Du arbeitest im "<>Edit file" Reiter. Wechsle zum "Preview changes" Reiter, um auf die Vorschau einen Blick zu werfen, damit alles was du geändert hast so aussieht wie du es wolltest (Rechtschreibfehler prüfen). Wenn du etwas entdeckst, das ausgebessert werden muss, wechsle wieder zum edit Reiter, um die Ausbesserungen vorzunehmen. ![preview mode](./images/PR5.png)
@@ -33,7 +33,7 @@ Wenn du vor hast viele Änderungen zu machen, die auch das Hinzufügen von Bilde
 
 * Mehrere Bilder kannst du auf diese Art leicht hochladen:
     
-    1. Navigiere zu dem Bilder Verzeichnis (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - aber stelle sich, dass du dich in deinem Fork / deiner Kopie des Bilderverzeichnisses befindest (ersetze "openaps" in der URL mit deinem GitHub Benutzernamen)).
+    1. Navigiere zu dem Bilder Verzeichnis (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images) - aber vergewissere dich, dass du dich in deinem Fork / deiner Kopie des Bilderverzeichnisses befindest (ersetze "openaps" in der URL mit deinem GitHub Benutzernamen).
     
     2. Klicke in die rechte obere Ecke wo "Upload files" steht
     
