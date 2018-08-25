@@ -25,7 +25,7 @@ Test integration to AAPS is already happening, but its not ready yet for testing
 
 **Loop status:** Not supported at the moment, but there is a lot of work going on on decoding the Omnipod protocol - [OpenOmni](http://www.openomni.org/).
 
-**Other implementations:** Loop (implementation is at beggining, as far as I know, they managed to Init the pod, and send the first TBR). See [Openomni on github](https://github.com/openaps/openomni)
+**Other implementations:** Loop (implementation is in the beginning stages; as far as I know, they managed to Init the pod and send the first TBR). See [Openomni on github](https://github.com/openaps/openomni)
 
 **Java implementations:**  None. 
 
@@ -34,14 +34,14 @@ Work has started on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
 **Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.0)
 
-**Comments:** Omnipod DASH is currently not in the plan. Once we have java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have implementation few months later, if protocol has changed then it might take some time.
+**Comments:** Omnipod DASH is currently not in the plan. Once we have a java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have an implementation a few months later, but if the protocol has changed then it might take some time.
 
 ***
 
 
 ## Ypsomed Pump
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in next versions.
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions.
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
@@ -50,7 +50,7 @@ Work has started on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
 ## Cellnovo Pump
 
-**Loop status:** Currently not supported by any of loop system. Pump is Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon. 
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon. 
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
