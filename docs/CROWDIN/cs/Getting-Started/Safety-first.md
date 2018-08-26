@@ -1,15 +1,15 @@
 # Bezpečnost především
 
-**Pokud se rozhodnete vytvořit vlastní uzavřenou smyčku, vždy myslete na bezpečnost a dopad všech Vašich rozhodnutí**
+**When you decide to build your own closed loop, always think about security and impact of all your actions**
 
 ## Obecné
 
-* AndroidAPS je pouze nástroj, který Vám může pomoci s léčbou cukrovky. Ale není to program, který nainstaluji a už se nemusím o nic starat!
+* AndroidAPS is a just a tool to help you manage diabetes, not something you can install and forget!
 * Nikdy nevěřte žádnému zařízení, které má kontrolu nad dávkováním inzulínu. Neustále ho sledujte, naučte se jak funguje a jak předvídat jeho reakce.
-* Nezapomeňte, že telefon spojený s pumpou může s pumpou dělat cokoliv. Vyhraďte tento telefon pro APS a komunikaci s vaším dítětem. Nedovolte instalovat ostatní aplikace a hry!!! Předejdete tím instalaci nevyžádaného programu (kódu) jako jsou trojské koně, viry nebo boti.
-* Nainstalujte všechny aktualizace zabezpečení poskytované výrobcem telefonu a společností Google.
+* Remember that the phone paired with pump can do anything with the pump. Vyhraďte tento telefon pro APS a komunikaci s vaším dítětem. Do not install other apps and games (!!!) to prevent installing together some unwanted code like trojans, viruses or bots.
+* Install all security updates provided by your phone manufacter and Google.
 
 ## SMS komunikátor
 
-* Pokud povolíte SMS komunikátor, zvažte, co se může stát, když bude telefon povolený pro vzdálené příkazy ukraden! Proto ho vždy chraňte alespoň PIN kódem
-* Od AndoridAPS 1.1 obdržíte SMS oznámení o důležitých vzdálených akcích, jako je bolus nebo změna profilu. Nastavte alespoň 2 čísla pro SMS komunikaci, která budou informována o konání druhého telefonu (pro případ, kdy je ukradený)
+* Pokud povolíte SMS komunikátor, zvažte, co se může stát, když bude telefon povolený pro vzdálené příkazy ukraden! So always protect it at least by a PIN code.
+* Since AndroidAPS 1.1 you will receive SMS notification of important remote actions like boluses or profile changes. Set up at least 2 numbers for SMS communication to be notified about actions of the second phone (in case it's stolen).
