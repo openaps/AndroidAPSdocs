@@ -2,12 +2,12 @@
 
 Tento článek je rozdělený do dvou částí.
 
-* V části přehled se vám dostane vysvětlení, které kroky obecně jsou nutné, abyste sestavili soubor APK.
-* V části průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Dalším důvodem je fakt, že Android Studio běží na Windows, Mac OS X i na Linuxu a konkrétní varianty mohou být trochu odlišné. Jestliže najdete něco zásadního, co je špatně nebo vám chybí, prosím informujte o tom facebookovou skupinu "AndroidAPS users" nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
+* In the overview part there is an explanation on what steps are necessary in general to build the APK file.
+* V části průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android Studio also runs on Windows, Mac OS X and Linux and there might be smaller differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look on this.
 
 ## Přehled
 
-Následují obecné kroky k sestavení souboru APK.
+In general, the steps necessary to build the APK file:
 
 * Instalujte git
 * Instalujte a nastavte Android Studio.
