@@ -2,12 +2,12 @@
 
 This article is divided into two parts.
 
-* In the overview part you will get the explanation on what steps are necessary in general to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Another reason is that Android Studio is running on Windows, Mac OS X and Linux and their might be smaller differences in some aspects. If you find something important wrong or missing please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look on this.
+* In the overview part there is an explanation on what steps are necessary in general to build the APK file.
+* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be smaller differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look on this.
 
 ## Overview
 
-In general description of the steps necessary to build the APK file.
+In general, the steps necessary to build the APK file:
 
 * Install git
 * Install and setup Android Studio.
