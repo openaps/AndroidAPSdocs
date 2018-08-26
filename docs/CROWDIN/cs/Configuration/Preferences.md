@@ -6,16 +6,16 @@ Tato volba Vám umožňuje nastavit heslo, abyste předešli náhodným nebo neo
 
 ## Stáří pacienta
 
-V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na Vámi zvoleném věku. Pokud začnete narážet na limit (jako maximální bolus), je čas posunout se o stupeň výš. Není správné zvolit vyšší věk než je skutečný, jelikož to může vést k předávkování zadáním nesprávné hodnoty v dialogovém okně pro inzulín (např. vynecháním desetinné čárky).
+V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na Vámi zvoleném věku. Pokud začnete narážet na limit (jako maximální bolus), je čas posunout se o stupeň výš. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
 
 ## Obecné
 
-* Vyberte svůj jazyk. Pokud není Váš jazyk dostupný, nebo nejsou všechna slova přeložena, je možnost tyto slova přeložit nebo dát návrh na [Crowdin](https://crowdin.com/project/androidaps) nebo se zeptat na [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
-* Průvodce rychlým nastavením Vám dovoluje přidat rychlé tlačítko pro často používaná jídla na hlavní obrazovku. Zadejte v nastavení počet sacharidů a on Vám spočítá bolus pro tyto sacharidy na základě aktuálních poměrů (dle aktuální hodnoty glykémie a aktivního inzulínu atd.).
+* Vyberte svůj jazyk. If your language is not available, or not all of the words are translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
+* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
 
 ## Portál nastavení péče
 
-‘Vloženo kým’ je text, který se ukazuje v poli/okně ‘vloženo kým’ ve Vašem Nightscoutovém portálu péče. Nastavte si tohle tak, aby Vám to dávalo smysl. Je na Vás, zda to bude název apky, jméno člověka či název telefonu (např. pokud používáte AndroidAPS jako klient NS na telefonu, který nepatří pacientovi, pak si zde tímto můžete odlišit vlastníky telefonu). 
+‘Vloženo kým’ je text, který se ukazuje v poli/okně ‘vloženo kým’ ve Vašem Nightscoutovém portálu péče. Set this to something meaningful to you, whether it is the app name, the person's name or the phone name (for example if you are using AndroidAPS as NS Client on a phone that is not the patient's phone you may wish to distinguish between phone owners here).
 
 ## Bezpečnost zadání ošetřeni
 
@@ -29,7 +29,7 @@ To je maximální množství sacharidů, které AAPS kalkulačka bolusu dovolí 
 
 ## Smyčka
 
-Zde můžete přepínat mezi otevřenou a uzavřenou smyčkou. Otevřené smyčka znamená, že návrhy dočasného bazálu jsou provedeny na základě skutečných dat a zobrazí se jako upozornění, ale musíte je ručně přijmout a ručně zadat do své pumpy. Uzavřená smyčka znamená, že návrhy dočasného bazálu budou automaticky odeslány do pumpy bez Vašeho potvrzení nebo Vašeho zadání. Na úvodní obrazovce se zobrazí v levém horním rohu, zda používáte otevřenou smyčku nebo uzavřenou. Stisknutím a podržením tohoto tlačítka je možno přepínat mezi smyčkami.
+Zde můžete přepínat mezi otevřenou a uzavřenou smyčkou. Open looping means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump. Uzavřená smyčka znamená, že návrhy dočasného bazálu budou automaticky odeslány do pumpy bez Vašeho potvrzení nebo Vašeho zadání. Na úvodní obrazovce se zobrazí v levém horním rohu, zda používáte otevřenou smyčku nebo uzavřenou. Stisknutím a podržením tohoto tlačítka je možno přepínat mezi smyčkami.
 
 ## Pokročilý asistent jídla v OpenAPS (AMA)
 
@@ -70,7 +70,7 @@ Možnosti zde se budou lišit v závislosti na tom, který ovladač pumpy jste z
 ## NS Client
 
 * Zde si nastavte svou ‘Nightscout URL’ (https://jmenovasiwebovky.herokuapp.com nebo https://jmenovasiwebovky.azurewebsites.net) a heslo ‘API secret’ (dvanácti znakové heslo z Vašeho heroku nebo azure). Toto umožní, aby data byla načítána zapisována mezi Nightscoutem a AndroidAPS. Pokud jste uvízli v Cíli 1, tak zde překontrolujte případné chyby nebo překlepy.
-* 'Logovat start aplikace' zaznamenává do poznámky v péči každé spuštění aplikace. Aplikace by se neměla spouštět vícekrát než jednou denně. Pokud je to vícekrát, znamená to obvykle problém. 
+* 'Logovat start aplikace' zaznamenává do poznámky v péči každé spuštění aplikace. The app should not be needing to start more than once a day; more frequently than this suggests a problem. 
 * 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip. 
 * 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+)
 
@@ -80,7 +80,7 @@ This setting allows remote control of the app by texting instructions to the pat
 
 ## Other
 
-* You can set defaults for your temp targets here, for the different types of temp target (eating soon and activity). When you select a temp target then if you choose for example "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [[Open APS features]]. 
+* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [[Open APS features]]. 
 * You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 * You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
 * 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
