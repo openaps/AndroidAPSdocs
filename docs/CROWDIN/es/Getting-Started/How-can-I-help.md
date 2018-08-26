@@ -20,4 +20,4 @@
 
 **I've got spare equipment, where do I send it?** We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
 
-**I've not got cash or equipment, how can I help?** Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forwards by answering the simple questions in gitter & Facebook to allow the developers the time and space to focus on the harder stuff.
+**I don't have cash or equipment, how can I help?** Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
