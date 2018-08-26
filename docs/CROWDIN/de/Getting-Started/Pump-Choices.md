@@ -2,7 +2,7 @@
 
 AndroidAPS kann derzeit mit folgenden Insulinpumpen im Closed Loop Modus genutzt werden: DanaR, DanaRS, Akku-Chek Combo. Die DanaR und die Accu Chek Combo sind schon eine Weile auf dem Markt, so dass viele Leute bereits Zugriff darauf haben. Die DanaRS, ein Upgrade der DanaR, wird nun auch immer häufiger gewählt. Leute, die sich für eine neue Pumpe entscheiden müssen, fragen oft, für welche sie sich entscheiden sollen. Details zu den verschiedenen Distributoren findest du [in dieser Tabelle](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Ergänze bitte deine eigenen Erfahrungen, wenn sie nicht bereits aufgeführt sind.
 
-Die **Akku-Chek Combo** ist zwar eine solide Pumpe. Und loopbar.
+The Combo is a solid pump, and loopable.
 
 Die Vorteile der DanaRS sind jedoch:
 
@@ -20,6 +20,6 @@ Die Vorteile der DanaRS sind jedoch:
 
 * Alle Pumpen, die AndroidAPS unterstützt, sind (jedenfalls bei Auslieferung) wasserdicht. Nur die DanaR/Rs garantiert auch während der Nutzung Wasserdichtigkeit durch das abgedichtete Batteriefach und das Reservoir-System.
 
-Die Combo ist natürlich eine sehr gute Pumpe. Und loopbar. Sie hat auch den Vorteil, dass die Auswahl an Kathetern wegen des Standard Luer-Lock-Anschlusses groß ist. Und sie verwendet Standard-Batterien, die rund um die Uhr an jeder Tankstelle erhältlich sind. Im Notfall kannst du sie sogar aus der Fernbedienung in deinem Hotelzimmer "ausleihen" ;-)
+The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
 
 Informationen über weitere in Zukunft ggf. loopbare Insulinpumpen findest du [hier](./Future-possible-Pump-Drivers.html).
