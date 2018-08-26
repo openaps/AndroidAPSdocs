@@ -82,7 +82,7 @@ Im Gegensatz zum “klassischen” Vorgehen nutzt AndroidAAPS nicht die “Kathe
 
 ### Was mache ich, wenn ich duschen oder ein Bad nehmen möchte?
 
-Du kannst die Pumpe zum Duschen oder Baden ablegen. Für so kurze Zeiträume brauchst du die Pumpe meistens nicht. Aber du solltest es in AAPS eingeben, damit die IOB-Berechnung korrekt bleibt. Drücke auf das hellblaue "Open Loop / Closed Loop" Feld oben links auf dem Startbildschirm von AAPS. Wähle "Trenne Pumpe für 1h". Wenn du die Pumpe nach der Dusche wieder anschließt musst du in dem selben Feld "Fortsetzen" auswählen.
+Du kannst die Pumpe zum Duschen oder Baden ablegen. Für so kurze Zeiträume brauchst du die Pumpe meistens nicht. Aber du solltest es in AAPS eingeben, damit die IOB-Berechnung korrekt bleibt. Drücke auf das hellblaue "Open Loop / Closed Loop" Feld oben links auf dem Startbildschirm von AAPS. Select **"Disconnect pump for 1 h"**. Wenn du die Pumpe nach der Dusche wieder anschließt musst du in dem selben Feld "Fortsetzen" auswählen.
 
 ## Arbeit
 
@@ -98,7 +98,21 @@ Du kannst die Pumpe zum Duschen oder Baden ablegen. Für so kurze Zeiträume bra
 
 ## Schlafen
 
+### How can I loop during the night without mobile and WIFI radiation?
+
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via nightscout):
+
+1. Turn on airplane mode in your mobile.
+2. Wait until the airplane mode is active.
+3. Turn on Bluetooth.
+
+You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+
 ## Reisen
+
+### How to deal with timezone changes?
+
+With DanaR and DanaR Korean you don't have to do anything. For other pumps see <../Usage/Timezone-traveling.html#timezone-traveling-with-pumps> for more details.
 
 ## Krankenhausaufenthalt
 
