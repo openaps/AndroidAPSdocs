@@ -1,11 +1,11 @@
-# Understanding the Objectives
+# Rozumíme cílům
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+AndroidAPS má sadu Cílů, které musíte dokončit a které vás provedou jeho funkcemi a nastaveními tak, aby pro vás smyčka nebyla nebezpečná. Zajistí vám, že jste nastavili všechny detaily z dříve uvedených sekcí správně, že rozumíte tomu, co váš systém dělá a proč, a že mu můžete důvěřovat.
 
-If you are upgrading phones then you can export your settings to keep your progress through the objectives; in the three dots in the top right corner select *Export settings*, it will tell you which folder it has saved the file to. On your new phone copy the file over to that location and then select *Import settings*. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case.  
+Pokud se chystáte inovovat telefon, pak si můžete exportovat svá nastavení tak, aby se vám zachoval postup v plnění cílů. Ve třech tečkách v pravém horním rohu zvolte *Exportovat nastavení*, aplikace vám sdělí složku, do které soubor uložila. Zkopírujte soubor do vašeho nového telefonu na stejné umístění a pak zvolte *Importovat nastavení*. Kromě vašeho postupu se exportem/importem uloží řada jiných nastavení, například vaše bezpečnostní nastavení jako maximální bolus apod. Pokud neabsolvujete export/import svých nastavení, pak budete muset začít plnit cíle znovu od začátku. Je vhodné často si zálohovat svá nastavení, jen pro případ.  
 
-* **Objective 1:** Setting up visualization and monitoring, and analysing basals and ratios 
-  * Select the right blood glucose source for your setup. See [BG Source](../Configration/BG-Source.html) for more information.
+* **Cíl 1:** Nastavení vizualizace a hlídání, příprava bazálů a poměrů 
+  * Zvolte správný zdroj glykémie ve vaší situaci. Viz [Zdroj glykémií](../Configration/BG-Source.html) pro další informace.
   * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for open looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Confguration/DanaR-Insulin-Pump.html) instructions to ensure the link between pump and AndroidAPS.
   * Follow instructions in [Nightscout](../Installin-AndroidAPS/Nightscout.html) page to ensure Nightscout can receive and display this data. <br />  
     _You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it._  
