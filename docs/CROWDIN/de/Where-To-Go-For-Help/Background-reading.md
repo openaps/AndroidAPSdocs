@@ -1,6 +1,6 @@
 # Nützliche Artikel, die am Anfang gelesen werden sollten
 
-Before you build your rig, you're going to have to do a lot of reading in order to understand how everything works and to get the best out of it. Wir haben eine Liste zusammengestellt, wo du dich zu Beginn informieren kannst und hoffentlich Antworten auf viele Fragen findest.
+Bevor du dein rig erstellst, musst du sehr viel lesen, um die ganze Funktionsweise zu verstehen und die beste Lösung für dich zu finden. Wir haben eine Liste zusammengestellt, wo du dich zu Beginn informieren kannst und hoffentlich Antworten auf viele Fragen findest.
 
 ## Weiterführende Literatur
 
