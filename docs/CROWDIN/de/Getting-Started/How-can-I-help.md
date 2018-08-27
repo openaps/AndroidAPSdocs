@@ -24,4 +24,4 @@ Eine Anleitung, wie du Änderungen vornimmst, findest du hier: [Openaps/my-first
 
 **Ich habe ein Ersatzgerät. Wohin soll ich es senden?** Wir sammeln aktuell die Angebote, um die Geräte für die Tests verteilen zu können. Sollten am Ende Geräte übrig bleiben, so werden wir diese einer der Pay-it-Forward Facebook Gruppen spenden, die bereits existieren und die T1 Community unterstützen. Sende eine E-Mail an developers@androidaps.org wenn du dein Ersatzgerät spenden möchtest. Wir senden dir dann die Empfängeradresse.
 
-**I don't have cash or equipment, how can I help?** Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+**Ich kann weder spenden noch habe ich Ersatzgeräte. Wie kann ich trotzdem helfen?** Wir benötigen auch Grafikdesigner, Experten für User Experience, Übersetzer und Autoren für das Wiki. Oder bringe das Projekt einfach dadurch voran, dass du die Fragen auf Gitter und Facebook beantwortest. Dann können sich die Entwickler darauf konzentrieren, die harten Nüsse zu knacken.
