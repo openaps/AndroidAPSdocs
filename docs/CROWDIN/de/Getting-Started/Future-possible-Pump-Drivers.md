@@ -22,7 +22,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop status:** wird zurzeit nicht unterstütze, aber bei [OpenOmi ](http://www.openomni.org/) wird intensiv daran gearbeitet, das Omnipod Protokoll zu entschlüsseln.
 
-**Other implementations:** Loop (implementation is in the beginning stages; as far as I know, they managed to Init the pod and send the first TBR). Siehe [Openomni bei github](https://github.com/openaps/openomni)
+**Andere Umsetzungen** Loop (Umsetzung ist erst am Anfang, so weit bekannt war es möglich den Pod zu starten und die erste temporäre Basalrate zu senden). Siehe [Openomni bei github](https://github.com/openaps/openomni)
 
 **Java Umsetzung** Nicht verfügbar.
 
@@ -30,13 +30,13 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Hardware-Anforderungen fürAAPS:** RileyLink mit Omnipod Software (2.0)
 
-**Anmerkungen:** Unterstützung für Omnipod DASH ist derzeit nicht vorgesehen. Once we have a java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have an implementation a few months later, but if the protocol has changed then it might take some time.
+**Anmerkungen:** Unterstützung für Omnipod DASH ist derzeit nicht vorgesehen. Sobald wir eine Java Umsetzung für den aktuellen Omnipod haben, werden wir davon ausgehend weiterentwickeln. Wenn das Omnipod Protokoll sich nicht verändert hat, dürften die Anpassungen nicht lange dauern, wenn sich das Protokoll ändert könnte sich die Arbeit länger hinausziehen.
 
 * * *
 
 ## Ypsomed Pumpe
 
-**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertragen sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Maybe this will change in the next versions.
+**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertragen sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Dies könnte sich in späteren Versionen ändern.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine. Die Pumpe kommuniziert über Bluetooth.
 
@@ -44,7 +44,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ## Cellnovo Pumpe
 
-**Loop Status:** Zur Zeit nicht umgesetzt. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe kommuniziert über Bluetooth.
 
