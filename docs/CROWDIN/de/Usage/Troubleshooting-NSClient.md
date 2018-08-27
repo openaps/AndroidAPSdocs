@@ -20,6 +20,6 @@ Android kann dein Smartphone in den Ruhezustand versetzen. Prüfe, ob du in der 
 
 Falls du Azure nutzt: Vielen hat ein Wechsel zu Heroku geholfen. Als Workaround für Azure wurde kürzlich empfohlen, in den Application settings das HTTP Protokoll auf 2.0 und Websockets auf ON zu setzen
 
-* If you still get an error...
+* Wenn du immernoch eine Fehlermeldung bekommst...
 
-Check the size of your database in mLab. 496MB means it is full and needs to be compacted. [Follow these OpenAPS instructions for checking the size of your database](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). If compacting does not work, you should consider donating your AndroidAPS data to the Data Commons (for research) before deleting any data collections. There are [instructions in the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) for how to accomplish this.
+Prüfe die Größe deiner mLab Datenbank. 496MB bedeutet, dass sie voll ist und komprimiert werden muss. [Lies diese OpenAPS Anleitung, um die Größe deiner Datenbank zu prüfen](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). Wenn die Komprimierung nicht klappt, solltest du überlegen deine AndroidAPS Daten an die Data Commons (zur Auswertung) zu spenden, bevor du irgendeine Datensammlung löschst. Es gibt [in der OpenAPS Dokumentation eine Anleitung](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html), wie du das machen kannst.
