@@ -14,8 +14,8 @@ _G5 mit der modifizierten Dexcom G5-App:_
 
 
 * Funktioniert aktuell nur mit der Entwickler-Version (Dev).
-* Download the apk from [here](https://github.com/dexcomapp/dexcomapp), and choose either the mg/dl or mmol/l version.
-* Uninstall the original Dexcom app, if not already done.
+* Lade die apk von [hier](https://github.com/dexcomapp/dexcomapp), und wähle entweder die mg/dl- oder mmol/l-Version aus.
+* Deinstalliere die originale Dexcom App, falls du sie noch hast.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > DexcomG5 app (patched).
 
 _G4 mit OTG cable (‘traditionelles’ Nightscout):_  
