@@ -36,7 +36,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ## Ypsomed Pumpe
 
-**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertragen sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Die könnte sich in späteren Versionen ändern.
+**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertragen sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Dies könnte sich in späteren Versionen ändern.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine. Die Pumpe kommuniziert über Bluetooth.
 
@@ -44,7 +44,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ## Cellnovo Pumpe
 
-**Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber, da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
+**Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe kommuniziert über Bluetooth.
 

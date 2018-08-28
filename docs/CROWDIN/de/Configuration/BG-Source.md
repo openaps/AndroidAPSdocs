@@ -14,7 +14,7 @@ _G5 mit der modifizierten Dexcom G5-App:_
 
 
 * Funktioniert aktuell nur mit der Entwickler-Version (Dev).
-* Lade die apk von [hier](https://github.com/dexcomapp/dexcomapp). (Es geht NUR mit dieser Datei und NICHT mit der Original-App von Dexcom oder anderen modifizierten Versionen!).
+* Lade die apk von [hier](https://github.com/dexcomapp/dexcomapp), und wähle entweder die mg/dl- oder mmol/l-Version aus.
 * Deinstalliere die originale Dexcom App, falls du sie noch hast.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > DexcomG5 app (patched).
 

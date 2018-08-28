@@ -1,16 +1,16 @@
-# Useful resources to read before you start
+# Užitečné informace k prostudování, než začnete
 
-Before you build your rig you're going to do a lot of reading up to understand how it all works and get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
+Než si začnete připravovat svou vlastní soustavu smyčky, budete si k tomu muset hodně přečíst, abyste rozuměli všem principům - jak smyčka pracuje a jak z ní získat co nejlepší výsledky. Seskupili jsme pro vás řadu odkazů, na kterých můžete začít čerpat informace a které vám snad zodpoví řadu otázek.
 
-## Further reading
+## Další čtení
 
 OpenAPS.org #wearenotwaiting - https://openaps.org/
 
-OpenAPS documention - http://openaps.readthedocs.io/en/latest/
+OpenAPS dokumentace - http://openaps.readthedocs.io/en/latest/
 
 Loop Docs - https://loopkit.github.io/loopdocs/
 
-Fine-Tuning your settings - http://seemycgm.com/2017/10/29/fine-tuning-settings/
+Vylaďování vašich nastavení - http://seemycgm.com/2017/10/29/fine-tuning-settings/
 
 Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/
 
@@ -20,11 +20,11 @@ Diabetes and Technology - Where Diabetes meets Tech - http://www.diabettech.com/
 
 OpenAPS Reference Design - https://openaps.org/reference-design/
 
-Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters - http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/
+Proč se často pleteme v délce trvání působnosti inzulínu (DIA) a proč na tom záleží - http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/
 
-What conclusions can we draw when investigating Insulin Sensitivity using the Autosense function within #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
+K jakým závěrům můžeme dojít při zkoumání citlivosti inzulínu pomocí funkce Automatická detekce citlivosti v rámci #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
 
-## Background reading and articles about DIY closed looping
+## Základní informace a články o DIY ("udělej si sám") uzavřené smyčce
 
 <http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
 
@@ -36,8 +36,8 @@ What conclusions can we draw when investigating Insulin Sensitivity using the Au
 
 <https://www.ndr.de/fernsehen/sendungen/visite/Diabetes-Blutzucker-automatisch-einstellen,visite13788.html>
 
-## Stuff on YouTube
+## Materiály na YouTube
 
 Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI
 
-Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw
+Živý rozhovor s Danou Lewis, autorkou systému "Udělej si sám slinivku" - https://www.youtube.com/watch?v=uvjrPrH0Hrw

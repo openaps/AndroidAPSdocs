@@ -80,7 +80,7 @@ Naproti tomu pro výměnu kanyly se nepoužívá funkce "naplnit infúzní set" 
 
 ### Co dělat při sprchování a koupání?
 
-Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji obvykle nebudete potřebovat. Ale zároveň byste o tom měli AAPS říct, aby byly výpočty IOB správné. Zmáčkněte světle modré pole "Otevřená smyčka / Uzavřená smyčka" na vrchu hlavní stránky. Zvolte "Odpojit pumpu na 1 h". Jakmile jste znovu připojení k pumpě musíte vybrat "Uvolnit" na stejném políčku.
+Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji obvykle nebudete potřebovat. Ale zároveň byste o tom měli AAPS říct, aby byly výpočty IOB správné. Zmáčkněte světle modré pole "Otevřená smyčka / Uzavřená smyčka" na vrchu hlavní stránky. Select **"Disconnect pump for 1 h"**. Jakmile jste znovu připojení k pumpě musíte vybrat "Uvolnit" na stejném políčku.
 
 ## Práce
 
@@ -96,7 +96,21 @@ Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji 
 
 ## Spánek
 
+### How can I loop during the night without mobile and WIFI radiation?
+
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via nightscout):
+
+1. Turn on airplane mode in your mobile.
+2. Wait until the airplane mode is active.
+3. Turn on Bluetooth.
+
+You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+
 ## Cestování
+
+### How to deal with timezone changes?
+
+With DanaR and DanaR Korean you don't have to do anything. For other pumps see <../Usage/Timezone-traveling.html#timezone-traveling-with-pumps> for more details.
 
 ## Pobyt v nemocnici
 

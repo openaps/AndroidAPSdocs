@@ -14,8 +14,8 @@ _If using Dexcom G5 App..._
 
 
 * Just dev.
-* Download the apk from [here](https://github.com/dexcomapp/dexcomapp), just this versions works whether mg/dl or mmol/l.
-* Deinstall original Dexcom app, if not allready done.
+* Download the apk from [here](https://github.com/dexcomapp/dexcomapp), and choose either the mg/dl or mmol/l version.
+* Uninstall the original Dexcom app, if not already done.
 * Select Dexcom G5 App in ConfigBuilder
 
 _If using OTG cable ('traditional' Nightscout)…_  
