@@ -14,8 +14,8 @@ _Pokud používáte Dexcom G5 aplikaci..._
 
 
 * Jen dev.
-* Download the apk from [here](https://github.com/dexcomapp/dexcomapp), and choose either the mg/dl or mmol/l version.
-* Uninstall the original Dexcom app, if not already done.
+* Stáhněte si apk [zde](https://github.com/dexcomapp/dexcomapp), vyberte si verzi mmol/l.
+* Odinstalujte původní verzi Dexcom aplikace, pokud jste to ještě neudělali.
 * Vyberte Dexcom G5 aplikace v Konfiguraci
 
 _pokud používáte OTG kabel ("tradiční" Nightscout) _  
