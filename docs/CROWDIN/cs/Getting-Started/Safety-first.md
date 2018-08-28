@@ -1,6 +1,6 @@
 # Bezpečnost především
 
-**When you decide to build your own closed loop, always think about security and impact of all your actions**
+**Pokud se rozhodnete vytvořit vlastní uzavřenou smyčku, vždy myslete na bezpečnost a dopad všech Vašich rozhodnutí**
 
 ## Obecné
 
