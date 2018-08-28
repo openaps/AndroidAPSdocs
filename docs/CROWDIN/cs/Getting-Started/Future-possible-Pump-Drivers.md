@@ -22,7 +22,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Stav smyčky:** Aktuálně nepodporováno, ale na dekódování Omnipod protokolu se usilovně pracuje - [OpenOmni](http://www.openomni.org/).
 
-**Other implementations:** Loop (implementation is in the beginning stages; as far as I know, they managed to Init the pod and send the first TBR). Více viz [Openomni on github](https://github.com/openaps/openomni)
+**Jiné implementace:** Loop (implementace je na začátku, pokud vím, podařilo se jim inicializovat pod a poslat mu první dočasný bazál). Více viz [Openomni on github](https://github.com/openaps/openomni)
 
 **Java implementace:** Žádné.
 
@@ -30,13 +30,13 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Hardwarové požadavky pro AAPS:** RileyLink s Omnipod firmware (2.0)
 
-**Poznámka:** Omnipod DASH se zatím neplánuje. Once we have a java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have an implementation a few months later, but if the protocol has changed then it might take some time.
+**Poznámka:** Omnipod DASH se zatím neplánuje. Jakmile bude připravená java implementace pro standardní Omnipod, bude se na ní navazovat. Pokud se (omnipod) protokol neliší, můžeme implementaci očekávat o několik měsíců později, pokud se protokol změnil, tak to bude trvat o něco déle.
 
 * * *
 
 ## Pumpa Ypsomed
 
-**Stav smyčky:** Verze 1 - 1.5 (2. kvartál/2018) nejsou kandidáti pro smyčku. Přestože mají bluetooth komunikaci, zdá se, že je rozsah komunikace velmi limitovaný (jednosměrný: pumpa -> aplikace). Maybe this will change in the next versions.
+**Stav smyčky:** Verze 1 - 1.5 (2. kvartál/2018) nejsou kandidáti pro smyčku. Přestože mají bluetooth komunikaci, zdá se, že je rozsah komunikace velmi limitovaný (jednosměrný: pumpa -> aplikace). Možná se to v budoucích verzích změní.
 
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. Podporuje bluetooth.
 
@@ -44,7 +44,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 ## Pumpa Cellnovo
 
-**Stav smyčky:** Aktuálně nepodporovaná žádným systémem smyčky. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Stav smyčky:** Aktuálně nepodporovaná žádným systémem smyčky. Pumpa je kandidátem na smyčku, ale jelikož je zatím neznámý její komunikační protokol, nezdá se, že by tato pumpa byla brzy podporovaná.
 
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. Podporuje bluetooth.
 
