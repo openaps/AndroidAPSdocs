@@ -1,4 +1,4 @@
-# Release notes
+# Poznámky k vydání
 
 ## Verze 2.0
 
