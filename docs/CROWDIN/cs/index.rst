@@ -103,7 +103,7 @@ Kam pro pomoc
    :maxdepth: 1
    :glob:
 
-   How to get support <./Where-To-Go-For-Help/How-to-get-support.md>
+   Jak získat podporu <./Where-To-Go-For-Help/How-to-get-support.md>
    Další čtení & zajímavé články <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
