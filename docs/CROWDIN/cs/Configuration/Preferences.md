@@ -6,12 +6,12 @@ Tato volba Vám umožňuje nastavit heslo, abyste předešli náhodným nebo neo
 
 ## Stáří pacienta
 
-V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na Vámi zvoleném věku. Pokud začnete narážet na limit (jako maximální bolus), je čas posunout se o stupeň výš. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
+V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na Vámi zvoleném věku. Pokud začnete narážet na limit (jako maximální bolus), je čas posunout se o stupeň výš. Není správné zvolit vyšší věk než je skutečný, jelikož to může vést k předávkování zadáním nesprávné hodnoty v dialogovém okně pro inzulín (např. vynecháním desetinné čárky).
 
 ## Obecné
 
-* Vyberte svůj jazyk. If your language is not available, or not all of the words are translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
-* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
+* Vyberte svůj jazyk. Pokud není Váš jazyk dostupný, nebo nejsou všechna slova přeložena, je možnost tyto slova přeložit nebo dát návrh na [Crowdin](https://crowdin.com/project/androidaps) nebo se zeptat na [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
+* Průvodce rychlým nastavením Vám dovoluje přidat rychlé tlačítko pro často používaná jídla na hlavní obrazovku. Zadejte v nastavení počet sacharidů a on Vám spočítá bolus pro tyto sacharidy na základě aktuálních poměrů (dle aktuální hodnoty glykémie a aktivního inzulínu atd.).
 
 ## Portál nastavení péče
 
