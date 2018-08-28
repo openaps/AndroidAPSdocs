@@ -80,7 +80,7 @@ Naproti tomu pro výměnu kanyly se nepoužívá funkce "naplnit infúzní set" 
 
 ### Co dělat při sprchování a koupání?
 
-Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji obvykle nebudete potřebovat. Ale zároveň byste o tom měli AAPS říct, aby byly výpočty IOB správné. Zmáčkněte světle modré pole "Otevřená smyčka / Uzavřená smyčka" na vrchu hlavní stránky. Select **"Disconnect pump for 1 h"**. Jakmile jste znovu připojení k pumpě musíte vybrat "Uvolnit" na stejném políčku.
+Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji obvykle nebudete potřebovat. Ale zároveň byste o tom měli AAPS říct, aby byly výpočty IOB správné. Zmáčkněte světle modré pole "Otevřená smyčka / Uzavřená smyčka" na vrchu hlavní stránky. Vyberte možnost **"Odpojit pumpu na 1h"**. Jakmile jste znovu připojení k pumpě musíte vybrat "Uvolnit" na stejném políčku.
 
 ## Práce
 
@@ -96,21 +96,21 @@ Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji 
 
 ## Spánek
 
-### How can I loop during the night without mobile and WIFI radiation?
+### Jak mohu provozovat smyčku během noci bez mobilního a WIFI záření?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via nightscout):
+Mnoho uživatelů zapíná v noci telefon v režimu letadlo. Pokud chcete provozovat smyčku když spíte, postupujte následovně (toto bude fungovat pouze se zdrojem glykémií xDrip + nebo upravená Dexcom aplikace. Nebude to fungovat pokud získáváte glykémie přes Nightscout):
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. Zapněte na mobilu režim letadlo.
+2. Počkejte dokud není režim aktivní.
+3. Zapněte Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Nebudete schopni přijímat telefonní hovory ani nebudete mít přístup na internet. Ale smyčka poběží.
 
 ## Cestování
 
-### How to deal with timezone changes?
+### Jak se vypořádat s cestováním přes časové zóny?
 
-With DanaR and DanaR Korean you don't have to do anything. For other pumps see <../Usage/Timezone-traveling.html#timezone-traveling-with-pumps> for more details.
+S DanouR a korejskou verzí nemusíte dělat nic. Pro ostatní pumpy se podívejte na <../Usage/Timezone-traveling.html#timezone-traveling-with-pumps>.
 
 ## Pobyt v nemocnici
 
