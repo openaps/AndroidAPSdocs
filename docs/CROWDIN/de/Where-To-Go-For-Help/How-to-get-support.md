@@ -1,11 +1,11 @@
-# How to get support
+# Wie erhalte ich Support?
 
-**Level 1:** Wiki - we now have a search function!
+** Stufe 1:** Wiki - jetzt mit Suchfunktion!
 
-**Level 2:** [Facebook](https://www.facebook.com/groups/AndroidAPSUsers/) OR [gitter](https://gitter.im/MilosKozak/AndroidAPS)
+** Stufe 2:** [Facebook](https://www.facebook.com/groups/AndroidAPSUsers/) ODER [gitter](https://gitter.im/MilosKozak/AndroidAPS)
 
-**Level 3:** Gitter (if FB did not get results, wait at least a couple of hours (plural)!!! Direct crossposts will be ignored/deleted on both channels!!!)
+**Stufe 3:** Gitter (wenn Facebook keine Ergebnisse liefert, warte zumindest ein paar Stunden (Plural)!!! Identische Posts werden auf beiden Kanälen ignoriert/gelöscht!!!)
 
-**Level 4:** Create an issue with logs and time of the issue
+**Stufe 4:** Erstelle ein Issue mit Logdateien und Uhrzeit, wann das Problem aufgetreten ist
 
-**Level 5:** PM (only if personal data is involved that should not go in a public channel)
+**Stufe 5:** Private Nachricht (nur wenn persönliche Daten betroffen sind, die nicht auf einem öffentlichen Kanal verbreitet werden sollen)
