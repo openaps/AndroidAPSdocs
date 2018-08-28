@@ -103,6 +103,7 @@ Donde buscar ayuda
    :maxdepth: 1
    :glob:
 
+   How to get support <./Where-To-Go-For-Help/How-to-get-support.md>
    Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
    Cómo puedo ayudar <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
