@@ -3,20 +3,20 @@ Welcome to the Android APS documentation
 
 **What is AndroidAPS?**
 
-AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of OpenAPS "oref0" algorithm.
+AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of the OpenAPS "oref0" algorithm.
 
 **Primary goals behind AndroidAPS:**
 
-* modular app where is possible to easy add new modules without touching the rest of code
-* app that allow localization
-* app where we can easy select what will be included in final apk just by easy change and compilation
-* app which support open and closed APS mode
+* modular app where it is possible and easy to add new modules without touching the rest of the code
+* app that allows localization
+* app where it is easy to select what will be included in final apk with an easy change and compilation
+* app which supports open and closed APS mode
 * app where you can see how APS works: input params, result and final decision
-* allow to add more APS algorithms and let user decide what to use
-* app independent to pump driver and containing "Virtual pump" to allow users safely play with APS
+* ability to add more APS algorithms and let the user decide what to use
+* app which is independent from a pump driver and contains a "Virtual pump" to allow users to safely play with APS
 * app with tight Nightscout integration
-* app where is possible easy to add/remove constraints for user safety
-* all-in-one app you need for managing T1D with APS and Nightscout
+* app where is easy to add/remove constraints for user safety
+* all-in-one app for managing T1D with APS and Nightscout
 
 **What you need to get started:**
 
@@ -24,7 +24,7 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
 * An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
 * `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 or later
-* A supported pump: Dana-R or Dana-RS Insulin Pump (unless you build your own driver for other insulin pump) or Accu-Chek Combo (currently in wider testing)
+* A supported pump: Dana-R or Dana-RS Insulin Pump (unless you build your own driver for another insulin pump) or Accu-Chek Combo (currently in wider testing)
 * A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5, Freestyle Libre, Eversense or Medtronic Guardian
 
 
@@ -91,9 +91,11 @@ Usage
    Profiles <./Usage/Profiles.md>
    SMS Commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
+   Timezone traveling <./Usage/Timezone-traveling.md>
    Accessing log files <./Usage/Accessing-logfiles.md>
    Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+   Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
 
 Where to go for help 
 ------------

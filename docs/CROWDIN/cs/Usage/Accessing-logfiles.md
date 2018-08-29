@@ -1,8 +1,8 @@
-# Accessing logfiles
+# Zpřístupnění log souborů
 
-* Connect phone to a computer in file transfer mode
-* Locate log files in this directory or similiar (may little bit vary on different phones)
+* Připojte telefon k počítači v režimu přenosu souborů
+* Lokalizujte log soubory v této nebo podobné složce (umístění se může trochu lišit na různých telefonech)
 
-![logs](../../images/aapslog.png)
+![logy](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in Android Studio, Log Viewer android app, or simply plain text. Previous log files are zipped and stored in folders in date/time order. If sharing your log in [gitter](https://gitter.im/MilosKozak/AndroidAPS) when talking about a potential bug then unzip and upload the folder dated before the error occurred.
+* Aktuální log je .log soubor, který může být zobrazený několika způsoby, např. v [LogCat podokně](https://developer.android.com/studio/debug/am-logcat.html) v Android Studiu, v Log Viewer aplikaci na Androidu nebo prostě jako textový soubor v libovolném editoru. Předcházející log soubory jsou automaticky zazipované a uložené do složek v pořadí podle datumu/času. Pokud chcete sdílet log na [Gitteru](https://gitter.im/MilosKozak/AndroidAPS) při popisování nějaké potenciální chyby, pak rozbalte a nahrajte zip složku datovanou těsně předtím, než se problém objevil.

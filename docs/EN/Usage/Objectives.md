@@ -37,4 +37,4 @@ If you are upgrading phones then you can export your settings to keep your progr
 <br><br>_Don’t forget to record your looping in [this form](http://bit.ly/nowlooping) logging AndroidAPS as your type of DIY loop software, if you have not already done so._
  
 * **Objective 7:** Enabling additional features for daytime use, such as advanced meal assist
-  * Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best, then over a period of 14 days you can try additional features that automate even more of the work for you.
+  * Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best, then over a period of 28 days you can try additional features that automate even more of the work for you.

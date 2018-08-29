@@ -6,16 +6,16 @@ This allows you to set a password in order to prevent accidental or unauthorised
 
 ## Patient age
 
-There are security limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real agre because it can lead to overdosing by entering wrong value in insulin dialog (for example by skipping decimal dot)
+There are security limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
 
 ## General
 
-* Select your language here. If your language is not available, or not all of the words translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
-* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (not taking into account blood glucose value or insulin on board though).
+* Select your language here. If your language is not available, or not all of the words are translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
+* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
 
 ## Careportal
 
-'Entered by' is the text displayed in your nightscout careportal 'entered by' field. Set this to something meaningful to you, whether it is the app name, the persons name or the phone name (for example if you are using AndroidAPS as NS Client on a phone that is not the patients phone you may wish to distinguish between phone owners here).
+'Entered by' is the text displayed in your nightscout careportal 'entered by' field. Set this to something meaningful to you, whether it is the app name, the person's name or the phone name (for example if you are using AndroidAPS as NS Client on a phone that is not the patient's phone you may wish to distinguish between phone owners here).
 
 ## Treatments safety
 
@@ -29,7 +29,7 @@ This is the maximum amount of carbs that AAPS bolus calculator is allowed to dos
 
 ## Loop
 
-You can toggle between open and closed looping here. Open looping means TBR suggestions are made based on your data and appear as a notification but you must manually choose to accept them and manually enter them into your pump. Closed looping means TBR suggestions are automatically sent to your pump without confirmation or input from you. The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+You can toggle between open and closed looping here. Open looping means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump. Closed looping means TBR suggestions are automatically sent to your pump without confirmation or input from you. The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
 
 ## OpenAPS AMA
 
@@ -70,7 +70,7 @@ The options here will vary depending on which pump driver you have selected in '
 ## NS Client
 
 * Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
-* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day, more frequently than this suggests a problem. 
+* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem. 
 * 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip. 
 * 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+)
 
@@ -80,7 +80,7 @@ This setting allows remote control of the app by texting instructions to the pat
 
 ## Other
 
-* You can set defaults for your temp targets here, for the different types of temp target (eating soon and activity). When you select a temp target then if you choose for example "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [[Open APS features]]. 
+* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [[Open APS features]]. 
 * You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 * You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
 * 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.

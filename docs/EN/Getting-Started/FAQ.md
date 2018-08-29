@@ -72,7 +72,7 @@ The change of a canula however does not use the "prime infusion set" function of
 ## Hygiene
 
 ### What to do when taking a shower or bath?
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS  so that the IOB calculations are right. Push on the light blue field "Open loop / Closed loop" on top of the homescreen. Select "Disconnect pump for 1 h". Once you have been reconnected your pump you have to select "Continue" in the same field. 
+You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS  so that the IOB calculations are right. Push on the light blue field "Open loop / Closed loop" on top of the homescreen. Select **"Disconnect pump for 1 h"**. Once you have been reconnected your pump you have to select "Continue" in the same field. 
 
 ## Working
 
@@ -88,7 +88,19 @@ You can remove the pump while taking a shower or bath. For this short period of 
 
 ## Sleeping
 
+### How can I loop during the night without mobile and WIFI radiation?
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via nightscout):
+
+1. Turn on airplane mode in your mobile.
+2. Wait until the airplane mode is active.
+3. Turn on Bluetooth.
+
+You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+
 ## Travelling
+
+### How to deal with timezone changes?
+With DanaR and DanaR Korean you don't have to do anything. For other pumps see [../Usage/Timezone-traveling.html#timezone-traveling-with-pumps](../Usage/Timezone-traveling.html#timezone-traveling-with-pumps) for more details.
 
 ## Hospitalization
 

@@ -1,21 +1,21 @@
-# DanaRS Pump
+# DanaRS Insulinpumpe
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Diese Anleitung beschreibt die Einrichtung der App und deiner Pumpe wenn du eine Dana RS (ab 2017) verwendest. Gehe zu [DanaR Insulinpumpe](./DanaR-Insulin-Pump) wenn du die Original DanaR benutzt.*
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* Bei der DanaRS wird das Basalprofil "BASAL A" von AAPS verwendet. Eventuell in der Pumpe vorhandene Einträge in diesem Profil werden überschrieben.
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* Gehe in AndroidAPS zu "KONFIGURATION".
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Klicke auf die drei Punkte rechts oben, um das Menü zu öffnen. Klicke auf Einstellungen.
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und gib die Seriennummer (Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel) deiner DanaRS ein.
 
-* Select Pump password, and input your password. (Default password is 1234)
+* Klicke auf "Pumpen-Passwort" und gib dein Passwort ein. (Das Standard Passwort lautet 1234.)
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
 
-* Restart your phone.
+* Starte dein Smartphone neu.
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die Basalschritte auf 0,01 IE/h.
 
-* Enable extended boluses on pump
+* Erlaube verzögerte Boli auf der Pumpe (Bolus Einstellungen -> V Bolus: EIN).

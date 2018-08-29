@@ -7,16 +7,16 @@ AndroidAPS ist eine App, die mit Bluetooth-fähigen Insulinpumpen kommunizieren 
 
 **Die primären Ziele von AndroidAPS:**
 
-* App mit „modularer Basis“. Es soll leicht sein, neue Module hinzuzufügen
+* App auf „modularer Basis“. Es soll leicht sein, neue Module hinzuzufügen ohne den Rest des Quellcodes anzutasten
 * App, die in viele Sprachen übersetzt werden kann
 * App, bei der vor dem Kompilieren leicht ausgewählt werden kann, was in der Programm-Datei (apk) enthalten sein soll
 * Eine App, die es ermöglicht, einen Open- oder Closed-Loop-Modus zu wählen
 * Eine App, die die Funktionen eines APS (Artificial Pancreas System) visualisiert (Parameter, Ergebnis und Umsetzung)
-* Die Möglichkeit, andere Algorithmen zu verwenden
+* Die Möglichkeit, andere Algorithmen hinzuzufügen und den Nutzer entscheiden zu lassen, welchen davon er verwenden will
 * Eine „Virtuelle Pumpe“, mit der man alles ausprobieren kann, bevor man startet
 * Eine App mit enger Nightscout-Integration
-* Die Möglichkeit zum Hinzufügen/Entfernen von Beschränkungen
-* Eine App, die alles enthält, um mit dem Diabetes zurechtzukommen (APS+Nightscout)
+* Die Möglichkeit zum Hinzufügen/Entfernen von Beschränkungen zur Sicherheit der Nutzer
+* Eine App, die alles enthält, um mit einer künstlichen Bauchspeicheldrüse (APS) und Nightscout den Typ 1 Diabetes zu managen
 
 **Was man benötigt:**
 
@@ -91,26 +91,28 @@ AndroidAPS nutzen
    Profile <./Usage/Profiles.md>
    SMS-Befehle <./Usage/SMS-Commands.md
    Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.md>
+   Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
    Logfiles erhalten <./Usage/Accessing-logfiles.md>
    Glukosedaten in xDrip glätten <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+   NSClient-Problembehebung <./Usage/Troubleshooting-NSClient.md>
 
 Hilfe durch die Community 
 ------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+    
 
    Hintergrundinfos & interessante Artikel <./Where-To-Go-For-Help/Background-reading.md>
-   Wohin wenden? <DE/hilfe/community.md>
+   Wohin wenden? <http://androidaps.readthedocs.io/en/latest/DE/hilfe/community.html>
 
 Mithelfen in der Community
 ------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
 
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
    App übersetzen <./translations.md>
    Am Wiki mitschreiben <./make-a-PR>
-* `Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>`_ (nur deutsch)
+   Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>
