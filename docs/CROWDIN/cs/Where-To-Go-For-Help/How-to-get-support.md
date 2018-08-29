@@ -1,11 +1,11 @@
-# How to get support
+# Jak získat podporu
 
-**Level 1:** Wiki - we now have a search function!
+**Úroveň 1:** Wiki - nyní máme i vyhledávání!
 
-**Level 2:** [Facebook](https://www.facebook.com/groups/AndroidAPSUsers/) OR [gitter](https://gitter.im/MilosKozak/AndroidAPS)
+**Úroveň 2:** [Facebook](https://www.facebook.com/groups/AndroidAPSUsers/) nebo [gitter](https://gitter.im/MilosKozak/AndroidAPS)
 
-**Level 3:** Gitter (if FB did not get results, wait at least a couple of hours (plural)!!! Direct crossposts will be ignored/deleted on both channels!!!)
+**Úroveň 3:** Gitter (pokud nezískáte odpověď na FB. Vyčkejte alespoň pár hodin !!! Vícenásobné příspěvky budou ignorovány nebo vymazány v obou kanálech)
 
-**Level 4:** Create an issue with logs and time of the issue
+**Úroveň 4:** Vytvořte Issue (nahlášení problému), přiložte log a čas problému
 
-**Level 5:** PM (only if personal data is involved that should not go in a public channel)
+**Úroveň 5:** Osobní zpráva (pouze pokud je třeba sdílet osobní data, která by neměla být zveřejněna)
