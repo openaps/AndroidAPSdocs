@@ -103,7 +103,6 @@ Hilfe durch die Community
    :maxdepth: 1
     
 
-   Wie man Support erhält <./Where-To-Go-For-Help/How-to-get-support.md>
    Hintergrundinfos & interessante Artikel <./Where-To-Go-For-Help/Background-reading.md>
    Wohin wenden? <http://androidaps.readthedocs.io/en/latest/DE/hilfe/community.html>
 
