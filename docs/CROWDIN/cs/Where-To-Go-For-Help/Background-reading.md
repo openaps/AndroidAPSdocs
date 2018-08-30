@@ -24,6 +24,8 @@ Proč se často pleteme v délce trvání působnosti inzulínu (DIA) a proč na
 
 K jakým závěrům můžeme dojít při zkoumání citlivosti inzulínu pomocí funkce Automatická detekce citlivosti v rámci #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
 
+<http://seemycgm.com/2017/10/29/fine-tuning-settings/>
+
 ## Základní informace a články o DIY ("udělej si sám") uzavřené smyčce
 
 <http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
@@ -40,4 +42,4 @@ K jakým závěrům můžeme dojít při zkoumání citlivosti inzulínu pomocí
 
 Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI
 
-Živý rozhovor s Danou Lewis, autorkou systému "Udělej si sám slinivku" - https://www.youtube.com/watch?v=uvjrPrH0Hrw
+Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw
