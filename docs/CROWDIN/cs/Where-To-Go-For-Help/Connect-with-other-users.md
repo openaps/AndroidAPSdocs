@@ -1,26 +1,26 @@
-# I'm getting stuck; What do I do? Who can I ask?
+# Zasekl jsem se, co mám dělat? Koho se mám zeptat?
 
-This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
+Tento projekt je založený na dobrovolnické práci, takže platí určitá pravidla, jak zabránit přebytečné práci těch, kteří tak nezištně darují svůj čas a schopnosti.
 
-* level 1: Read the Wiki - we now have a search function to help you!
-* level 2: Search the Facebook group, if there is not already an answer then ask your question in the [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
-* level 3: If facebook did not get results then ask in [gitter](https://gitter.im/MilosKozak/AndroidAPS). Direct crossposts will be ignored/deleted on both channels to save duplicate answers. Don't forget that the majority of developers are in Europe so the response may not be 24/7; you may have to wait for several hours especially over weekends and holidays.
-* level 4: Create an [issue](https://github.com/MilosKozak/AndroidAPS/issues) and attach your [log files](../Usage/Accessing-logfiles.html)
-* level 5: email <developers@androidaps.org> (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
+* 1. úroveň: Přečtěte si dokumentaci - máme nyní vyhledávací funkce, které vám pomohou!
+* 2. úroveň: Hledejte ve facebookové skupině, pokud tam už není existující odpověď, pak se zeptejte na [facebookové skupině AndroidAPS Users](https://www.facebook.com/groups/1900195340201874/)
+* 3. úroveň: Pokud jste z Facebooku nedostali výsledek, pak se zkuste zeptat v [Gitteru](https://gitter.im/MilosKozak/AndroidAPS). Položení znovu stejné otázky bude ignorované/smazané na obou kanálech, aby se předešlo duplicitnímu odpovídání. Nezapomeňte, že většina vývojářů žije v Evropě, proto odpovědi nemusí být 24/7; můžete čekat několik hodin obzvlášť přes víkendy a svátky.
+* 4. úroveň: Založte [problém - issue](https://github.com/MilosKozak/AndroidAPS/issues) a přiložte své [log soubory](../Usage/Accessing-logfiles.html)
+* 5. úroveň: zašlete email na <developers@androidaps.org> (jedině pokud se jedná o záležitost s osobními údaji, které by neměly jít na veřejný kanál, a vaše problémy ještě nebyly vyřešeny v předchozích úrovních)
 
-For support on CGM sources please use the Facebook groups or gitter channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+Pro podporu k senzorům CGM použijte prosím facebookovou skupinu nebo gitterový kanál ke specifickému systému (např. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)). Pro podporu k Nightscoutu použijte [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/), protože jsou tam uživatelé s vyšší odborností než lidé, kteří používají jiné systémy.
 
-# Connect with others Using AndroidAPS
+# Spojte se s ostatními uživateli AndroidAPS
 
-Who is using AndroidAPS? Add yourself to [the map here](https://www.zeemaps.com/map?group=2617973) by going to Additions > Add Marker - Simple. Choose a green pin for "I've got it!" or an orange pin for "I want it". List your name as your facebook name and in the description record extra info such as your pump, CGM and your endo/clinic name if they're supportive. The address does not have to be your actual house, you can just add town name or even your clinic address if you prefer.
+Kdo používá AndroidAPS? Přidejte se na [mapu zde](https://www.zeemaps.com/map?group=2617973) tím, že zvolíte Additions > Add Marker - Simple. Vyberte zelený špendlík pro "Mám ho!" nebo oranžový špendlík pro "Chci ho". Zadejte své jméno jako facebookové jméno a do popisu zadejte další údaje, jako např. vaši pumpu, senzor CGM a jméno vašeho lékaře/kliniky, pokud vás podporují. Adresa nemusí být dům, kde bydlíte, stačí zadat jenom jméno města nebo i jenom adresu kliniky, pokud to tak chcete.
 
-## Make sure to join the AndroidAPS users group on Facebook!
+## Určitě se připojte do facebookové skupiny AndroidAPS users!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) if you want to contact anyone on the map to ask country specific questions, you can also post here any questions about the algorithum, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+Připojte se k hlavní [AndroidAPS facebookové skupině](https://www.facebook.com/groups/1900195340201874/), pokud chcete někoho kontaktovat z mapy pro místní dotaz. Můžete zde také zadat jakoukoliv otázku ohledně výpočtu, jakékoliv problémy s Android Studiem a sestavováním APK, jakékoliv dotazy na používání aplikace a vložit tipy, jak z ní dostat maximum užitečného. Existuje také skupina zvlášť pro uživatele Combo pump [AAPSCombo](https://www.facebook.com/groups/127507891261169/), které mají trochu odlišné nastavení.
 
-For general chat about looping in general there are several facebook groups;
+Pro všeobecné povídání o smyčce existují další facebookové skupiny:
 
-* [Looped](https://www.facebook.com/groups/TheLoopedGroup) (worldwide; users of OpenAPS, Loop and AndroidAPS)
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/) (german speaking users of OpenAPS, Loop and AndroidAPS)
-* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/) (Australian users of OpenAPS, Loop and AndroidAPS)
+* [Looped](https://www.facebook.com/groups/TheLoopedGroup) (celosvětově, uživatelé OpenAPS, Loop a AndroidAPS)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (Uživatelé OpenAPS, Loop a AndroidAPS z Británie)
+* [Looped-DE](https://www.facebook.com/groups/loopedDE/) (německy mluvící uživatelé OpenAPS, Loop a AndroidAPS)
+* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/) (australští uživatelé OpenAPS, Loop a AndroidAPS)
