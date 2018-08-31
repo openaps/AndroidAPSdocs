@@ -8,8 +8,7 @@ Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den 
 
 * **Nightscout-Profil** Verwendet das von dir auf deiner Nightscout Seite gespeicherte Profil (https://[yournightscoutsiteaddress]/profile). Benutze den Profil Switch (im Reiter PROFIL das gewünschte Profil auswählen und Button "Aktiviere Profil" klicken) um das aktive Profil zu wechseln, falls du in Nightscout mehrere Profile angelegt hast. Das Profil wird dann an die Pumpe übertragen, damit die Basalzufuhr bei einem AAPS-Problem sicher gestellt ist.
 * **Einfaches Profil** Profil mit nur einem Zeitblock (d. h. keine Basalratenänderung innerhalb eines Tages)
-* **Lokales Profil** Nutzt das Profil, das in der Pumpe manuell erfasst wurde. Bei den DanaR/RS- und Combo-Pumpen funktioniert das nur mit dem Pumpen-Profil A bzw. 1.
-* **Circadian Prozentsatz Profil** Dieses Feature ist nun im Profile Switch enthalten und wurde ersetzt. D musst dieses nicht mehr auswählen. Mehr dazu findest du in diesem Wiki unter Profile.
+* **Local Profile** uses the basal profile manually entered in phone. See [[Profiles]] page for more setup information.
 
 ## Insulin
 
