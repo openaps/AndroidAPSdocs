@@ -1,13 +1,13 @@
 # Konfigurace
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side allow you to select which one to use, the boxes on the right hand side allow you to view these as a tab in AndroidAPS. Where there are additional settings available within the module, you can click on the cog graphic which will take you to the specific settings within Preferences.
+Konfigurace (Conf) je záložka, kde si zapínáte, nebo vypínáte jednotlivé moduly. Boxy (čtverečky) po levé straně vybíráte, které chcete použít, boxy po pravé straně vybírate, které z nich budou v záložkách v AndroidAPS. Tam kde je dostupné podrobnější nastavení modulu, můžete ťuknout na ozubené kolečko abyste se dostali do podrobnějšího nastavení bez vstupu do Nastavení.
 
 ## Profil
 
-Select the basal profile you wish to use:
+Vyberte variantu bazálního profilu, který chcete použít:
 
-* **NS Profile** uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-* **Simple Profile** profile with just one time block (i.e. no basal rate changes during the day)
+* **NS profil** používá profily, které jste uložili na webu nightscout (https://[adresavašehoprofilu]/profile). Můžete použít Přepnout profil pro změnu profilu, který je aktivní. Ten bude zapsán do pumpy v případě výpadku AndroidAPS.
+* **Jednoduchý profil** profil s jedním časovým blokem (to znamená žádné změny bazálu během dne)
 * **Local Profile** uses the basal profile manually entered on the pump. For both DanaR/RS and Combo pumps this only works with the pump Profile A respectively 1.
 * **Circadian Percentage Profile** this feature is now included within Profile Switch and has been superceeded, you do not need to select this one. See [[Profiles]] page for more setup information.
 
