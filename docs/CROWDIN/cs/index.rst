@@ -3,20 +3,20 @@ Vítejte v dokumentaci k AndroidAPS
 
 **Co je AndroidAPS?**
 
-AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of the OpenAPS "oref0" algorithm.
+AndroidAPS je aplikace, která může komunikovat s bluetooth inzulinovými pumpami a spouští verzi "oref0" OpenAPS algoritmu.
 
 **Primární cíle AndroidAPS:**
 
-* modular app where it is possible and easy to add new modules without touching the rest of the code
-* app that allows localization
-* app where it is easy to select what will be included in final apk with an easy change and compilation
-* app which supports open and closed APS mode
+* modulární aplikace, do které je možné snadno přidávat nové moduly bez modifikace zbytku kódu
+* aplikace, která umožňuje lokalizace
+* aplikace, kde můžeme snadno vybrat, co bude součástí konečného apk, jen jednoduchou změnou a kompilací
+* aplikace, která podporuje režim APS v otevřené i uzavřené smyčce
 * aplikace, kde si můžete prohlédnout, jak funguje APS: vstupní parametry, výsledek a konečné rozhodnutí
-* ability to add more APS algorithms and let the user decide what to use
-* app which is independent from a pump driver and contains a "Virtual pump" to allow users to safely play with APS
+* umožní přidat další APS algoritmy a umožní uživateli rozhodnout, co používat
+* aplikace nezávislá na ovladači pumpy a obsahující "virtuální pumpu", která umožní uživatelům bezpečně si hrát s APS
 * aplikace s těsnou integraci s Nightscoutem
-* app where is easy to add/remove constraints for user safety
-* all-in-one app for managing T1D with APS and Nightscout
+* aplikace, kde je možné snadno přidat nebo odebrat omezení pro bezpečnost uživatelů
+* All-in-one aplikace, kterou potřebujete pro správu diabetu s APS a Nightscoutem
 
 **Co potřebuji, abych mohl začít:**
 
@@ -24,7 +24,7 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
 * Aplikaci pro příjem glykémií: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 modifikovaná aplikace <https://github.com/dexcomapp/dexcomapp>`_ nebo `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
 * ' AndroidAPS <https://github.com/MilosKozak/AndroidAPS>' _, samu o sobě
 * ' Nightscout <https://github.com/nightscout/cgm-remote-monitor>' _ 0.10.2 nebo novější
-* A supported pump: Dana-R or Dana-RS Insulin Pump (unless you build your own driver for another insulin pump) or Accu-Chek Combo (currently in wider testing)
+* Podporovanou pumpu: Dana-R nebo Dana-RS nebo Accu-Chek Combo (nebo si vytvořte své vlastní ovladače pro jiné inzulínové pumpy)
 * Zdroj dat CGM: Dexcom G4/G5, Freestyle Libre, Eversense nebo Medtronic Guardian
 
 

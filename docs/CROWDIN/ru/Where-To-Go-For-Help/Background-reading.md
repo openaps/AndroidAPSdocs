@@ -24,6 +24,8 @@ Why we are regularly wrong in the duration of insulin action (DIA) times we use,
 
 What conclusions can we draw when investigating Insulin Sensitivity using the Autosense function within #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
 
+<http://seemycgm.com/2017/10/29/fine-tuning-settings/>
+
 ## Background reading and articles about DIY closed looping
 
 <http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>

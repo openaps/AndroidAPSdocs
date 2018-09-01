@@ -1,7 +1,7 @@
-AAPS works best when the blood glucose data it receives is smooth and consistent. When using xDrip+ as your data source there are a couple of things you can do to help reduce noise in the data.
+AAPS funguje nejlépe, pokud údaje glykémií, které dostává, jsou čisté a konzistentní. Pokud používáte xDrip+ jako zdroj dat, existuje pár tipů, které vám mohou pomoci snížit šum v datech.
 
-Users of Abbot Freestyle Libre sensors collecting their blood glucose data via devices such as LimiTTers may find these settings help provide better results with AAPS.
+Uživatelům Abbot Freestyle Libre senzorů, kteří sbírají své glykémie přes zařízení jako např. LimiTTers, mohou tato nastavení pomoci dosáhnout lepších výsledků s AAPS.
 
-**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+**Smooth Sensor Noise.** v nastavení xDrip+ > xDrip+ Nastavení zobrazení se ujistěte, že je Smooth Sensor Noise volba zapnutá. Tímto se xDrip+ pokusí vyhladit data s velkým šumem.
 
-**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first [enable engineering mode in xDrip+](./Enabling-Engineering-Mode-in-xDrip.html). Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
+**Smooth Sensor Nois (Ultrasensitive).** Jestliže pořád vidíte data s velkým šumem v xDrip+, můžete použít agresivnější vyhlazování použitím nastavení Smooth Sensor Noise (Ultrasensitive). To se pokusí použít vyhlazování i pro velmi nízké hodnoty detekovaného šumu. Abyste to provedli, nejprve [povolte vývojářský režim v xDrip+](./Enabling-Engineering-Mode-in-xDrip.html). Pak běžte do Nastavení > xDrip+ Nastavení zobrazení a zapněte Smooth Sensor Noise (Ultrasensitive).

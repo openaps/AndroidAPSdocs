@@ -1,54 +1,53 @@
 # Konfigurace
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side allow you to select which one to use, the boxes on the right hand side allow you to view these as a tab in AndroidAPS. Where there are additional settings available within the module, you can click on the cog graphic which will take you to the specific settings within Preferences.
+Konfigurace (Conf) je záložka, kde si zapínáte, nebo vypínáte jednotlivé moduly. Boxy (čtverečky) po levé straně vybíráte, které chcete použít, boxy po pravé straně vybírate, které z nich budou v záložkách v AndroidAPS. Tam kde je dostupné podrobnější nastavení modulu, můžete ťuknout na ozubené kolečko abyste se dostali do podrobnějšího nastavení bez vstupu do Nastavení.
 
 ## Profil
 
-Select the basal profile you wish to use:
+Vyberte variantu bazálního profilu, který chcete použít:
 
-* **NS Profile** uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-* **Simple Profile** profile with just one time block (i.e. no basal rate changes during the day)
-* **Local Profile** uses the basal profile manually entered on the pump. For both DanaR/RS and Combo pumps this only works with the pump Profile A respectively 1.
-* **Circadian Percentage Profile** this feature is now included within Profile Switch and has been superceeded, you do not need to select this one. See [[Profiles]] page for more setup information.
+* **NS profil** používá profily, které jste uložili na webu nightscout (https://[adresavašehoprofilu]/profile). Můžete použít Přepnout profil pro změnu profilu, který je aktivní. Ten bude zapsán do pumpy v případě výpadku AndroidAPS.
+* **Jednoduchý profil** profil s jedním časovým blokem (to znamená žádné změny bazálu během dne)
+* **Local Profile** uses the basal profile manually entered in phone. See [[Profiles]] page for more setup information.
 
-## Insulin
+## Inzulín
 
-Select the type of insulin curve you are using. Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. You will need to enter additional settings for these. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
+Vyberte typ inzulínové křivky, kterou používáte. Základní možnosti AndroidAPS jsou bilineární "rychle působící inzulin" pro inzulín s DIA méně než 5 hodin, nebo "Rychle působící inzulín s prodlouženým účinkem" pro inzulín s DIA větší než 5 hodin. Tyto křivky se budou lišit pouze na základě trvání DIA. Oref možnosti "Rapid-Acting Oref', Ultra-Rapid Oref" a 'Free-Peak Oref' jsou exponenciální a další informace jsou uvedeny v [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), křivky se budou lišit na základě DIA a času k dosažení špičky. Budete pro ně muset zadat další nastavení. Křivky grafů inzulínu můžete zobrazit na kartě inzulin (Ins) a pomohou vám porozumět, která křivka vám bude vyhovovat.
 
-## BG Source
+## Zdroj glykémií
 
-Select the blood glucose source you are using - see [[BG Source]] page for more setup information.
+Vyberte jaký zdroj glykémií používáte. Viz stránka [[BG Source]] pro další informace o nastavení.
 
-## Pump
+## Pumpy
 
-Select the pump you are using. For people wanting to open loop this needs to be 'Virtual Pump'. See [[DanaR Insulin Pump]], [[DanaRS Insulin Pump]] or [[Accu Chek Combo Pump]] pages for more setup information.
+Vyberte kterou pumpu používáte. Ti, kteří chtějí používat otevřenou smyčku musí vybrat "Virtuální pumpa". Viz stránka [[DanaR Insulin Pump]], [[DanaRS Insulin Pump]] nebo [[Accu Chek Combo Pump]] pro další informace o nastavení.
 
-## Sensitivity Detection
+## Detekce citlivosti
 
-Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). You can view your sensistivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
+Vyberte variantu detekce citlivosti. Budou analyzována starší data a provedeny úpravy, pokud se zjistí že reagujete s vyšší citlivostí (nebo naopak, s nižší citlivostí) na inzulín než je obvyklé. Podrobnosti o algoritmu citlivosti Oref0 jsou k přečtení v [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). Svou citlivost můžete vidět na hlavní obrazovce po vybrání SEN jakožto bílou linku. Mějte na vědomí, že pokud chcete používat detekci citlivosti/autocitlivosti, musíte mít [cíl 6](../Usage/Objectives).
 
 ## APS
 
-Select either OpenAPS MA (meal assist) or OpenAPS AMA (advanced meal assist). More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); in simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab. Note you need to be in [Objective 7](../Usage/Objectives) in order to use OpenAPS AMA.
+Vyberte buď možnost OpenAPS MA (meal assist - pomoc při jídle) nebo OpenAPS AMA (advanced meal assist - pokročilá pomoc při jídle). Více podrobností o OpenAPS AMA naleznete v [ OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); jednoduše řečeno, pokud si dávate k jídlu bolus, systém může rychleji kompenzovat rychle rostoucí glykemii POKUD správně zadáte sacharidy. Detaily vybraného algoritmu můžete zobrazit na kartě OpenAPS (OAPS). Mějte na vědomí, že pokud chcete používat OpenAPS AMA, musíte mít [cíl 7](../Usage/Objectives).
 
-## Loop
+## Smyčka
 
-If you wish to use open or closed looping you will need to enable this here. You can see the active request and success of enactment in the Loop tab.
+Tuto položku musíte povolit, pokud chcete používat otevřenou nebo uzavřenou smyčku. V záložce Smyčka můžete vidět požadavky a jejich zpracování.
 
-## Constraints
+## Omezení
 
-If you view the Objectives (Obj) tab, you can see more information about how far you have progressed and what actions you still need to complete. See [[Objectives]] page for more information.
+Pokud se podíváte na záložku Cíle, můžete vidět informace o tom, jak jste daleko a co ještě musíte splnit. Viz stránka [[Objectives]] pro další informace.
 
-## Treatments
+## Ošetření
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+Pokud se podíváte na záložku Ošetření, můžete vidět ošetření které byly nahrány na Nightscout. Chcete-li upravit nebo odstranit záznam (například jste jedli méně sacharidů než jste očekávali), vyberte "Odstranit" a zadejte novou hodnotu (případně změňte čas) prostřednictvím karty Péče.
 
-## General
+## Obecné
 
-* **Actions** allows you to make Profiles Switches (see [[Profiles]] for more setup information), Temporary Targets, and for those using DanaR/RS or Combo pump to set a manual TBR or prime the canula.
-* **Careportal** allows you to record any specific care entries and view the current sensor, insulin, canula and pump batter ages in the Careportal (CP) tab.
-* **SMS Communicator** allows remote caregivers to control some AndroidAPS features via SMS, see [[SMS Commands]] for more setup information.
-* **Food** allows you to view and use the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information or http://[yournightscoutsiteaddress]/food to access your database.
+* **Akce** umožňuje přepnutí profilu (Viz stránka [[Profiles]] pro další informace o nastavení), změnu dočasného cíle, a pro ty kteří využívají pumpu DanaR/RS nebo Combo nastavení TBR nebo plnění kanyly.
+* **Péče** umožňuje zaznamenávat všechny konkrétní položky týkající se péče a zobrazit stáří senzoru, zásobníku inzulínu, kanyly a baterie v pumpě v záložce Péče.
+* **SMS komunikátor** umožňuje vzdálené ovládání některých funkcí AndroidAPS prostřednictvím SMS, viz [[SMS Commands]] pro další informace o nastavení.
+* **Jídlo** umožňuje prohlížet a používat databázi potravin uloženou na Nightscoutu, viz [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pro další informace o nastavení nebo http://[adresavašehoprofilu]/food pro přístup k databázi.
 * **Wear** allows you to view and control AndroidAPS from the Android Wear watch, see [[watchfaces]] for more setup information.
 * **xDrip Statusline (watch)** Display loop information on your xDrip+ watchface
 * **Ongoing Notification** displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.

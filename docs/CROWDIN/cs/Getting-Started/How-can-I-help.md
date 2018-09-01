@@ -23,4 +23,4 @@ Návod jak to provést lze najít zde: [Openaps/my-first-pr](https://openaps.rea
 
 **Mám náhradní vybavení, kam ho mohu poslat?** V současné době sbíráme "budou poskytnuty později" a začneme je distribuovat pro testování. Na konci procesu bude veškeré zbylé vybavení poskytnuto jedné z Facebookových skupin Pay-to-Forward, existujících pro podporu komunity T1. Pokud chcete darovat náhradní zařízení, kontaktujte e-mail developers@androidaps.org a my vám zašleme adresu.
 
-**I don't have cash or equipment, how can I help?** Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+**Nemám ani peníze, ani zařízení, jak mohu pomoci?** Potřebujeme lidi ovládající grafický design, návrh uživatelského rozhraní, překladatele, wiki editory nebo jen osoby odpovídající na jednoduché otázky na gitteru. Facebook umožňuje vývojáři šetřit čas a prostor a zaměřit na složitější věci.
