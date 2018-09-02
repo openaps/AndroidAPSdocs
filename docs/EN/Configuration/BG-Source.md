@@ -1,26 +1,33 @@
 # BG sources
 
 **For users of Dexcom:**<Br>
-_If using xdrip…_<br>
+_If using G5 with xdrip+_<br>
 * If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 * In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
 * If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
 * Select xdrip in ConfigBuilder (setting in AndroidAPS).
 
-_If using patched Dexcom G5 app_<Br>
+_If using G5 with patched Dexcom G5 app_<Br>
 * Download the apk from [https://github.com/dexcomapp/dexcomapp](https://github.com/dexcomapp/dexcomapp), and choose either the mg/dl or mmol/l version.
 * Stop sensor and uninstall the original Dexcom app, if not already done.
 * Install downloaded apk
 * Start sensor
 * Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
 
-_If using OTG cable ('traditional' Nightscout)…_<br>
+_If using G4 with OTG cable ('traditional' Nightscout)…_<br>
 * If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
 * In AndroidAPS Preferences enter your nightscout website and API secret.
 * Select NSClient in ConfigBuilder (setting in AndroidAPS).
 
-**For users of Libre:**<br>
+**For users of Libre with Bluetooth cap:**<br>
+To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
+
+* MiaoMiao-Reader [https://www.miaomiao.cool/](https://www.miaomiao.cool/)
+* Blukon Nightrider [https://www.ambrosiasys.com/howit](https://www.ambrosiasys.com/howit)
+* BlueReader [https://bluetoolz.de/blueorder/#home](https://bluetoolz.de/blueorder/#home)
+* Sony Smartwatch 3 (SWR50) als Auslesetool [https://github.com/pimpimmi/LibreAlarm/wiki/](https://github.com/pimpimmi/LibreAlarm/wiki/)
+
 _If using xdrip..._<br>
 * If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer),  [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
 * In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
