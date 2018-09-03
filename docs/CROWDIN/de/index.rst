@@ -3,7 +3,7 @@ Herzlich willkommen zur AndroidAPS-Dokumentation
 
 **Was ist AndroidAPS?**
 
-AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of the OpenAPS "oref0" and "oref1" algorithms.
+AndroidAPS ist eine App, die mit Bluetooth-fähigen Insulinpumpen kommunizieren kann und die OpenAPS "oref0" und "oref1" Algorithmen ausführt.
 
 **Die primären Ziele von AndroidAPS:**
 
@@ -21,11 +21,11 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
 **Was man benötigt:**
 
 * Ein Android-Smartphone mit Android 5.0 oder höher. Siehe `diese Tabelle <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ über Erfahrungen, wie gut bestimmte Smartphones mit AndroidAPS funktionieren.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* App zum Empfang von CGM Daten, z.B. `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ selbst
 * `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 oder neuere Version
-* A supported pump: Dana-R or Dana-RS Insulin Pump or Accu-Chek Combo (unless you build your own driver for another insulin pump)
-* A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, PocTech
+* Eine unterstützte Insulinpumpe: Dana-R oder Dana-RS oder Accu-Chek Combo (es sei denn, du programmierst deine eigenen Treiber für andere Insulinpumpe)
+* kontinuierliches Glukose-Messsystem (CGM) als Datenquelle, z. B. Dexcom G4/G5/G6, Freestyle Libre mit Bluetooth-Aufsatz, Eversense, Medtronic Guardian, PocTech
 
 
 .. note:: 
