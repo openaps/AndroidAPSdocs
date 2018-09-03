@@ -2,9 +2,11 @@
 
 Konfigurace (Conf) je záložka, kde si zapínáte, nebo vypínáte jednotlivé moduly. Boxy (čtverečky) po levé straně vybíráte, které chcete použít, boxy po pravé straně vybírate, které z nich budou v záložkách v AndroidAPS. Tam kde je dostupné podrobnější nastavení modulu, můžete ťuknout na ozubené kolečko abyste se dostali do podrobnějšího nastavení bez vstupu do Nastavení.
 
+**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen and select 'Setup Wizard' to use it.
+
 ## Profil
 
-Vyberte variantu bazálního profilu, který chcete použít:
+Select the basal profile you wish to use:
 
 * **NS profil** používá profily, které jste uložili na webu nightscout (https://[adresavašehoprofilu]/profile). Můžete použít Přepnout profil pro změnu profilu, který je aktivní. Ten bude zapsán do pumpy v případě výpadku AndroidAPS.
 * **Jednoduchý profil** profil s jedním časovým blokem (to znamená žádné změny bazálu během dne)
@@ -12,35 +14,35 @@ Vyberte variantu bazálního profilu, který chcete použít:
 
 ## Inzulín
 
-Vyberte typ inzulínové křivky, kterou používáte. Základní možnosti AndroidAPS jsou bilineární "rychle působící inzulin" pro inzulín s DIA méně než 5 hodin, nebo "Rychle působící inzulín s prodlouženým účinkem" pro inzulín s DIA větší než 5 hodin. Tyto křivky se budou lišit pouze na základě trvání DIA. Oref možnosti "Rapid-Acting Oref', Ultra-Rapid Oref" a 'Free-Peak Oref' jsou exponenciální a další informace jsou uvedeny v [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), křivky se budou lišit na základě DIA a času k dosažení špičky. Budete pro ně muset zadat další nastavení. Křivky grafů inzulínu můžete zobrazit na kartě inzulin (Ins) a pomohou vám porozumět, která křivka vám bude vyhovovat.
+Select the type of insulin curve you are using. Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. You will need to enter additional settings for these. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
 
 ## Zdroj glykémií
 
-Vyberte jaký zdroj glykémií používáte. Viz stránka [[BG Source]] pro další informace o nastavení.
+Select the blood glucose source you are using - see [[BG Source]] page for more setup information.
 
 ## Pumpy
 
-Vyberte kterou pumpu používáte. Ti, kteří chtějí používat otevřenou smyčku musí vybrat "Virtuální pumpa". Viz stránka [[DanaR Insulin Pump]], [[DanaRS Insulin Pump]] nebo [[Accu Chek Combo Pump]] pro další informace o nastavení.
+Select the pump you are using. For people wanting to open loop this needs to be 'Virtual Pump'. See [[DanaR Insulin Pump]], [[DanaRS Insulin Pump]] or [[Accu Chek Combo Pump]] pages for more setup information.
 
 ## Detekce citlivosti
 
-Vyberte variantu detekce citlivosti. Budou analyzována starší data a provedeny úpravy, pokud se zjistí že reagujete s vyšší citlivostí (nebo naopak, s nižší citlivostí) na inzulín než je obvyklé. Podrobnosti o algoritmu citlivosti Oref0 jsou k přečtení v [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). Svou citlivost můžete vidět na hlavní obrazovce po vybrání SEN jakožto bílou linku. Mějte na vědomí, že pokud chcete používat detekci citlivosti/autocitlivosti, musíte mít [cíl 6](../Usage/Objectives).
+Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). You can view your sensistivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
 
 ## APS
 
-Vyberte buď možnost OpenAPS MA (meal assist - pomoc při jídle) nebo OpenAPS AMA (advanced meal assist - pokročilá pomoc při jídle). Více podrobností o OpenAPS AMA naleznete v [ OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); jednoduše řečeno, pokud si dávate k jídlu bolus, systém může rychleji kompenzovat rychle rostoucí glykemii POKUD správně zadáte sacharidy. Detaily vybraného algoritmu můžete zobrazit na kartě OpenAPS (OAPS). Mějte na vědomí, že pokud chcete používat OpenAPS AMA, musíte mít [cíl 7](../Usage/Objectives).
+Select either OpenAPS MA (meal assist) or OpenAPS AMA (advanced meal assist). More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); in simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab. Note you need to be in [Objective 7](../Usage/Objectives) in order to use OpenAPS AMA.
 
 ## Smyčka
 
-Tuto položku musíte povolit, pokud chcete používat otevřenou nebo uzavřenou smyčku. V záložce Smyčka můžete vidět požadavky a jejich zpracování.
+If you wish to use open or closed looping you will need to enable this here. You can see the active request and success of enactment in the Loop tab.
 
 ## Omezení
 
-Pokud se podíváte na záložku Cíle, můžete vidět informace o tom, jak jste daleko a co ještě musíte splnit. Viz stránka [[Objectives]] pro další informace.
+If you view the Objectives (Obj) tab, you can see more information about how far you have progressed and what actions you still need to complete. See [[Objectives]] page for more information.
 
 ## Ošetření
 
-Pokud se podíváte na záložku Ošetření, můžete vidět ošetření které byly nahrány na Nightscout. Chcete-li upravit nebo odstranit záznam (například jste jedli méně sacharidů než jste očekávali), vyberte "Odstranit" a zadejte novou hodnotu (případně změňte čas) prostřednictvím karty Péče.
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
 
 ## Obecné
 
