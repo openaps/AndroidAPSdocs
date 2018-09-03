@@ -12,7 +12,7 @@ Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen.
 * die Hälfte der aktuell benötigten Insulinmenge oder
 * der verbleibende Anteil deines maxIOB-Wertes in den Einstellungen.
 
-2. Wahrscheinlich wirst du häufig niedrige temporäre Basalraten (sog. 'low temps') oder temporäre Basalraten mit 0 U/h (sog. 'zero-temps') feststellen. Dies ist aus Sicherheitsgründen so gewollt und hat bei einem korrekt eingestellten Profil auch keine negativen Auswirkungen.
+2. Wahrscheinlich wirst du häufig niedrige temporäre Basalraten (sog. 'low temps') oder temporäre Basalraten mit 0 U/h (sog. 'zero-temps') feststellen. Dies ist aus Sicherheitsgründen so gewollt und hat bei einem korrekt eingestellten Profil auch keine negativen Auswirkungen. Aussagekräftiger als der Verlauf der temporären Basalraten ist die IOB-Kurve.
 
 3. Zusätzliche Berechnungen zur Vorhersage des Glukoseverlaufs, z.B. durch UAM (un-announced meals). UAM kann auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen siginifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber zur Sicherheit auch andersherum und kann bei unvorhergesehen schnellem Glukoseabfall den SMB früher stoppen. Deshalb sollte UAM bei SMB auch immer aktiv sein.
 
