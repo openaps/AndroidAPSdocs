@@ -33,10 +33,10 @@ If you are upgrading phones then you can export your settings to keep your progr
  
 * **Objective 6:** Adjust basals and ratios if needed, and then enable autosens
   * You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate, or do a traditional basal test.
-  * Enable [auto-sens](../Usage/Open-APS-features.html) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+  * Enable [autosens](../Usage/Open-APS-features.html) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
 <br><br>_Don’t forget to record your looping in [this form](http://bit.ly/nowlooping) logging AndroidAPS as your type of DIY loop software, if you have not already done so._
  
-* **Objective 7:** Enabling additional oef0 features for daytime use, such as advanced meal assist (AMA)
+* **Objective 7:** Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
   * Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best, then over a period of 28 days you can try additional features that automate even more of the work for you.
 
 * **Objective 8:** Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
