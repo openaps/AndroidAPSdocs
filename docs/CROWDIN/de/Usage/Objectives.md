@@ -32,9 +32,17 @@ Für den Fall, dass du dir ein neues Smartphone zulegst, kannst du die Einstellu
 * **Ziel 5:** Die Closed Loop anpassen, max IOB über 0 setzen und BG Zielbereiche allmählich einengen 
   * Setze dein maxIOB für einen Tag auf einen Wert grösser als 0. Der empfohlene Standardwert ist 2, aber du solltest dich diesem Wert langsam annähern, bis du weißt, dass diese Einstellung für dich funktioniert.
   * Wenn du zuverlässig weißt, welcher IOB deinem Looping Muster entspricht, dann senke deinen Zielbereich auf den gewünschten Wert.  
-* **Ziel 6:** Passe Basalraten und Faktoren bei Bedarf an und schalte anschließend Autosense ein 
+* **Ziel 6:** Adjust basals and ratios if needed, and then enable autosens 
   * Du kannst [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) verwenden, um dafür zu sorgen, dass deine Basalraten korrekt bleiben oder einen traditionellen Basalratentest durchführen.
-  * Schalte [Autosense](../Usage/Open-APS-features.html) für einen Zeitraum von 7 Tagen ein und beobachte wie die weiße Linie auf der Grafik auf dem Hauptbildschirm anzeigt, dass deine Sensibilität gegenüber Insulin auf Grund von Aktivitäten oder Hormonen steigt oder fällt und schaue auf dem OpenAPS-Tab nach, wie AndroidAPS die Basalraten und/oder Zielwerte entsprechend anpasst. <br />  
+  * Enable [autosens](../Usage/Open-APS-features.html) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly. <br />  
     _Vergiss nicht, dich als Looper in [diesem Formular](http://bit.ly/nowlooping) zu registrieren, wenn du das bisher noch nicht getan hast. Gib AndroidAPS als Art deiner DIY Loop-Software an._
-* **Ziel 7:** Zusätzliche Funktionen aktivieren, wie z. B. den Mahlzeitenassistenten (AMA) 
+
+* **Objective 7:** Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
+  
   * Nun solltest du auf die Funktionsweise von AndroidAPS vertrauen und wissen, welche Einstellungen deine Diabetesbehandlung am besten wiedergeben. Ab jetzt kannst du über einen Zeitraum von 28 Tagen zusätzliche Funktionen ausprobieren, die noch mehr automatisieren.
+
+* **Objective 8:** Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+  
+  * You must read this wiki and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
+  * Then you ought to rise maxIOB to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
+  * Der Standardwert von min_5m_carbimpact erhöht sich von 3 bei AMA auf 8 beim SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
