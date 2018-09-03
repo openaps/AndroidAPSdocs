@@ -32,9 +32,17 @@ Pokud se chystáte inovovat telefon, pak si můžete exportovat svá nastavení 
 * **Cíl 5:** Vylaďování uzavřené smyčky, zvýšení max IOB nad 0 a postupné snižování cílů glykémie 
   * Zvyšte své maxIOB nad 0 po dobu jednoho dne, výchozí doporučení jsou dva dny, ale měli byste se k tomu propracovat pomalu, až si budete jistí, které nastavení pro vás funguje.
   * Až si budete jistí množstvím IOB, které sedí vašemu vzoru smyčky, pak snižte své cílové glykémie na požadovanou úroveň.  
-* **Cíl 6:** Dolaďte bazály a poměry, pokud je to potřeba, a pak zapněte automatickou detekci citlivosti 
+* **Cíl 6:** Adjust basals and ratios if needed, and then enable autosens 
   * Můžete použít [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) jako kontrolní nástroj, že vaše bazály zůstávají přesné, anebo si udělejte tradiční bazální test.
-  * Povolte [automatickou detekci citlivosti](../Usage/Open-APS-features.html) po dobu 7 dní a sledujte bílou křivku na grafu hlavní stránky, jak vaše citlivost na inzulín může růst a klesat jako výsledek cvičení nebo hormonů apod., a při tom sledujte na kartě OpenAPS výslednou zprávu, jak podle toho smyčka upravila vaše bazály a/nebo cíle. <br />  
+  * Enable [autosens](../Usage/Open-APS-features.html) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly. <br />  
     _Nezapomeňte zaznamenat vaše zkušenosti se smyčkou do [tohoto formuláře](http://bit.ly/nowlooping) a poznačte tam AndroidAPS jako váš typ DIY smyčkového software, pokud jste tak ještě neučinili._
-* **Cíl 7:** Povolení doplňkový funkcí pro každodenní použití, jako např. pokročilý jídelní asistent (AMA) 
+
+* **Objective 7:** Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
+  
   * Nyní byste měli cítit jistotu, že znáte, jak AndroidAPS pracuje, a která nastavení nejlépe kompenzují váš diabetes, pak můžete po dobu 28 dní vyzkoušet doplňkové funkce, které za vás práci automatizují ještě víc.
+
+* **Objective 8:** Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+  
+  * You must read this wiki and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
+  * Then you ought to rise maxIOB to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
+  * výchozí hodnota min_5m_carbimpact se změnila z 3 na 8 při přechodu od AMA k SMB. Pokud přecházíte z AMA k SMB, musíte to změnit ručně
