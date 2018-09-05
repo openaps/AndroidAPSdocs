@@ -6,7 +6,7 @@ Config Builder (Conf) is the tab where you turn the modular features on and off.
 Select the basal profile you wish to use:
 *  <b>NS Profile</b> uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile).  You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
 *  <b>Simple Profile</b> _needs detail_
-*  <b>Local Profile</b> uses the basal profile manually entered on the pump.  For both DanaR/RS and Combo pumps this only works with the pump Profile 1.
+*  <b>Local Profile</b> uses the basal profile manually entered on the phone. For both DanaR/RS and Combo pumps this only works with the pump Profile 1.
 *  <b>Circadian Percentage Profile</b> this feature is now included within Profile Switch and has been superceeded, you do not need to select this one.
 See [[Profiles]] page for more setup information.
 
