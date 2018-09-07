@@ -1,7 +1,7 @@
-Welcome to the Android APS documentation
+AndroidAPS 가이드에 오신 것을 환영합니다.
 ==============================================
 
-**What is AndroidAPS?**
+**AndroidAPS가 무엇입니까?**
 
 AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of the OpenAPS "oref0" and "oref1" algorithms.
 
