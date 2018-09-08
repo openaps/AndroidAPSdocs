@@ -103,7 +103,7 @@ AndroidAPS 설치하기
    :maxdepth: 1
    :glob:
 
-   배경 지식 및 도움이 될 만한 자료들
+   배경 지식 및 도움이 될 만한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
    도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 도움주기
