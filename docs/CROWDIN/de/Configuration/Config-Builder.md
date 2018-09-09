@@ -14,23 +14,23 @@ Select the basal profile you wish to use:
 
 ## Insulin
 
-Select the type of insulin curve you are using. Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. You will need to enter additional settings for these. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
+Select the type of insulin curve you are using. Grundlegende Optionen von AndroidAPS sind bilinear: "Schnell wirkendes Insulin" für ein Insulin mit einer DIA (Duration of Insulin Action) von weniger als 5 Stunden und "Schnell wirkendes verlängertes Insulin" mit einer DIA von mehr als 5 Stunden. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. Du musst für diese Optionen zusätzliche Einstellungen vornehmen. Du kannst die Darstellung der Insulinkurve im Reiter Insulin (INS) anschauen, um zu verstehen, welche Kurve zu dir passt.
 
 ## BZ-Quelle
 
-Select the blood glucose source you are using - see [[BG Source]] page for more setup information.
+Wähle die Quelle für den Zuckerwert, die du verwendest - weitere Informationen zu den Einstellungen findest du unter [[BZ Quelle]].
 
 ## Pumpe
 
-Select the pump you are using. For people wanting to open loop this needs to be 'Virtual Pump'. See [[DanaR Insulin Pump]], [[DanaRS Insulin Pump]] or [[Accu Chek Combo Pump]] pages for more setup information.
+Select the pump you are using. Wenn den Open Loop verwenden willst, musst du hier "Virtuelle Pumpe" wählen. See [[DanaR Insulin Pump]], [[DanaRS Insulin Pump]] or [[Accu Chek Combo Pump]] pages for more setup information.
 
 ## Empfindlichkeitserkennung
 
-Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). You can view your sensistivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
+Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details über den Empfindlichkeitsalgorithmus von Oref0 findest Du in der [OpenAPS Dokumentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). Du kannst die berechnete Insulinempfindlichkeit sehen, wenn du auf dem Homescreen “Sensitivität” auswählst und dann die weiße Linie anschaust. Du musst [Ziel 6](../Usage/Objectives) erreicht haben, um die Empfindlichkeitserkennung und Autosens verwenden zu können.
 
 ## APS
 
-Select either OpenAPS MA (meal assist) or OpenAPS AMA (advanced meal assist). More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); in simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab. Note you need to be in [Objective 7](../Usage/Objectives) in order to use OpenAPS AMA.
+Select either OpenAPS MA (meal assist) or OpenAPS AMA (advanced meal assist). Weitere Details zu OpenAPS AMA findest du in der [OpenAPS Dokumentation](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Einfach ausgedrückt profitierst du davon, dass das System nach einem Mahlzeiten-Bolus schneller mit hohen temporären Basalraten reagieren kann, wenn du die Kohlenhydrate zuverlässig eingibst. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab. Note you need to be in [Objective 7](../Usage/Objectives) in order to use OpenAPS AMA.
 
 ## Loop
 
