@@ -1,6 +1,6 @@
 # Nejčastější otázky uživatelů APS
 
-Jak sem přidat další otázky: Postupujte podle těchto [pokynů](../make-a-PR.html)
+How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
 
 ## Obecné
 
@@ -64,7 +64,7 @@ Smyčka může vybíjet baterii rychleji než v normálním režimu, a to proto�
 * AndroidAPS aplikace může být často zavíraná systémem, což šetří energii nebo paměť RAM na některých telefonech. Ale pokud se AndroidAPS pokaždé znovu inicializuje při každém startu, tak zřizuje Bluetooth spojení s pumpou a znovu načítá aktuální bazální dávky a historii bolusů. To vybíjí baterii. Abyste zjistili, jestli k tomu dochází, běžte do Nastavení > NSClient a zapněte 'Logovat spuštění aplikace do NS'. Nightscout pak obdrží událost při každém restartu AndroidAPS, čímž tento problém snadno odhalíte. Abyste tomuto chování zabránili, udělte aplikaci AndroidAPS výjimku, aby ji systém nevypínal v době nečinnosti (v menu úspory baterie na vašem telefonu).
 * očistěte póly baterie alkoholem, aby na nich nezůstala případná mastnota/nečistota z výroby.
 * pro pumpy DanaR/RS při spouštěcí sekvenci teče přes baterie velký proud, aby záměrně přerušil ochranný potah (který zabraňuje ztrátě kapacity baterie při skladování), ale přerušení potahu se nedaří vždy ve 100% případů. Buďto baterie vyndejte a znovu vložte 2 až 3 krát (než se na obrazovce ukáže 100%), anebo před vložením baterií použijte bateriový klíč ke chvilkovému zkratu (přidržením k oběma pólům baterie na zlomek vteřiny).
-* podívejte se také na další tipy pro [konkrétní typy baterií](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html#battery-type-and-causes-of-short-battery-life) při použití pumpy Combo
+* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life) to use for Combo pump
 
 ### Výměna zásobníků a kanyl
 
@@ -110,7 +110,7 @@ Nebudete schopni přijímat telefonní hovory ani nebudete mít přístup na int
 
 ### Jak se vypořádat s cestováním přes časové zóny?
 
-S DanouR a korejskou verzí nemusíte dělat nic. Pro ostatní pumpy se podívejte na <../Usage/Timezone-traveling.html#timezone-traveling-with-pumps>.
+S DanouR a korejskou verzí nemusíte dělat nic. For other pumps see [../Usage/Timezone-traveling.html#timezone-traveling-with-pumps](../Usage/Timezone-traveling.md#timezone-traveling-with-pumps) for more details.
 
 ## Pobyt v nemocnici
 
