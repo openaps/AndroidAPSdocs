@@ -9,9 +9,9 @@ The SMB function contains some security mechanisms.
  
 1. the largest single SMB dose can only be the smallest value off:
 
-  * value corresponding to the current basal rate (as adjusted by autotune/autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
-  * half the amount of insulin currently required, or
-  * the remaining portion of your maxIOB value in the settings.
+      * value corresponding to the current basal rate (as adjusted by autotune/autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
+      * half the amount of insulin currently required, or
+      * the remaining portion of your maxIOB value in the settings.
  
 2. Probably you will often notice low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps'). This is by design for security reasons and has no negative effects if the profile is set correctly. The IOB curve is more meaningful than the course of the temporary basal rates.
  
