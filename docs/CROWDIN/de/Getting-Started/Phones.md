@@ -10,4 +10,4 @@ Probleme mit der Tabelle bitte per E-Mail an <hardware@androidaps.org> melden. W
 
 ## Handy Hintergrundbild
 
-![Handy Hintergrundbild](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Wenn du dein Handy mit AndroidAPS schmücken möchtest, kannst du das Hintergrundbild hier herunterladen: [Hintergrundbild in hoher Auflösung.](../images/bg_phone.jpg)
+![Handy Hintergrundbild](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
