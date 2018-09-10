@@ -131,5 +131,7 @@ The hardcoded parameters in AndroidAPS are:
 * Adult: 10
 * Insulin resistant adult: 12
 
+
+
 ## Meal Assist (MA)
 ...
