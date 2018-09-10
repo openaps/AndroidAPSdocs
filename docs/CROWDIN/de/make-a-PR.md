@@ -25,28 +25,42 @@ Gratulation, du hast deinen ersten Beitrag geleistet!
 
 PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen GitHub Konto. Nachdem du die Benachrichtigung erhalten hast, dass dein PR integriert wurde, kannst du deinen Branch löschen, wenn du damit fertig bist (der Benachrichtigungsbereich in Schritt 8 stellt dir einen Link zur Verfügung, um den Branch zu löschen, wenn er geschlossen oder integriert wurde). Künftige Änderungen werden immer mit einer aktuellen Version des AndroidAPS Repositories beginnen, wenn du diese Vorgehensweise verwendest. Wenn du eine andere Methode verwendest, um einen PR zu starten (z.B. du fängst mit einem lokalen Fork des Master Branches an), musst du sicherstellen, dass dein Repository aktuell ist, indem du erst ein "compare" ausführst und damit alle Updates integrierst, die seit dem letzten Update deines Forks stattgefunden haben. Da häufig vergessen wird, die eigenen Repositories auf dem aktuellen Stand zu halten, empfehlen wir, den PR Prozess wie oben beschrieben zu verwenden, bis du dich mit der Ausführung von "compares" vertraut gemacht hast.
 
-### Tipps für das Hinzufügen mehrerer Bilder zur Dokumentation für Fortgeschrittene
+### Advanced tips for adding internal links
 
-Wenn du vor hast viele Änderungen zu machen, die auch das Hinzufügen von Bildern beinhalten, um Teile der Dokumentation zu illustrieren (Danke!), könnte dir folgende Möglichkeit helfen:
+If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages as well.
 
-* Wenn du Screenshots speicherst, benenne diese mit einem beschreibenden Namen - aber vermeide Leerzeichen, da dies GitHubs Syntax verwirrt. Verwende stattdessen Unterstriche. Z.B. Example_batch_images_upload.png statt "Example batch images upload.png".
+In files with .md ending:
 
-* Mehrere Bilder kannst du auf diese Art leicht hochladen:
-    
-    1. Navigiere zu dem Bilder Verzeichnis (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images) - aber vergewissere dich, dass du dich in deinem Fork / deiner Kopie des Bilderverzeichnisses befindest (ersetze "openaps" in der URL mit deinem GitHub Benutzernamen).
-    
-    2. Klicke in die rechte obere Ecke wo "Upload files" steht
-    
-    3. Ziehe deine Bilder auf den Bildschirm
-    
-    4. Führe einen "Commit" auf deinen Branch aus
-    
-    5. Jetzt kannst du nach der relativen URL für jede Datei schauen (du kannst zum Beispiel sehen, dass [dieses individuelle Bild seine eigene URL und seinen eigenen Pfad hat](https://github.com/openaps/docs/blob/master/docs/EN/images/Example_batch_images_upload.png)) und nutze das, um dich darauf zu beziehen, wenn du Bilder in eine Seite der Dokumentation einfügst.
-    
-    6. Beispiele, wie man Bilder hinzufügt, kannst du dir im "rohen" Code von Seiten anschauen, in denen schon erfolgreich Bilder eingefügt wurden. Es ist wichtig, eine reine Textbeschreibung zu haben, der ein Link mit einem relativen Pfad zu dem Bild folgt. Etwa so: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
-    
-    (Dieser Code zeigt exakt, wie das Bild weiter unten eingefügt wurde, um angezeigt zu werden.)
+* [\[text\](../Usage/Test.md)](../Usage/Test.md) will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
+* [\[text\](/Usage/Test.md)](/Usage/Test.md) will set a hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
 
-![Beispiel, um mehrere Bilder gleichzeitig hochzuladen](./images/Example_batch_images_upload.png)
+In files with .rst ending:
+
+* `Text <../Usage/Test.md>`_ will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
+* `Text <./Usage/Test.md>`_ will set a hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+
+### Advanced tips for adding multiple images to documentation
+
+If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
+
+* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png".
+
+* You can upload images in batches easily by:
+    
+    1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
+    
+    2. Click in the upper right corner where it says "Upload files"
+    
+    3. Drag and drop your images into the screen
+    
+    4. Commit these to your branch
+    
+    5. Now, you can look for the URL/relative path of each file (example, you can see [this individual image has its own URL and path](https://github.com/openaps/docs/blob/master/docs/EN/images/Example_batch_images_upload.png) and use that to refer to when adding images into a page in the documentation.
+    
+    6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
+    
+    (That code is exactly how the image below is embedded to be displayed.)
+
+![Example of uploading images in batches](./images/Example_batch_images_upload.png)
 
 7. Nachdem du Bilder hinzugefügt oder Veränderungen vorgenommen hast, kannst du einen PR auf das master branch von AndroidAPSdocs machen.
