@@ -7,7 +7,7 @@ Thanks to SMB, it can basically be sufficient for low-carb meals to inform the s
  
 The SMB function contains some security mechanisms.
  
-1. the largest single SMB dose can only be the smallest value off:
+1. The largest single SMB dose can only be the smallest value off:
 
       * value corresponding to the current basal rate (as adjusted by autotune/autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
       * half the amount of insulin currently required, or
