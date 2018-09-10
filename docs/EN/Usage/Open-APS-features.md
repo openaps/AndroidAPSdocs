@@ -1,13 +1,14 @@
 # OpenAPS Features
 
-## SMB
-SMB the shortform of "super micro bolus", is the latest OpenAPS function (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super microboluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**"zero-temping "**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
+## Super Micro Bolus (SMB)
+SMB, the shortform of "super micro bolus", is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super microboluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
  
 Thanks to SMB, it can basically be sufficient for low-carb meals to inform the system of the planned amount of carbohydrate and leave the rest to AAPS. However, this may lead to higher postprandial peaks because pre-bolusing isn’t possible. Or you give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let SMB fill up the rest.
  
 The SMB function contains some security mechanisms.
  
 1. the largest single SMB dose can only be the smallest value off:
+
 * value corresponding to the current basal rate (as adjusted by autotune/autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
 * half the amount of insulin currently required, or
 * the remaining portion of your maxIOB value in the settings.
@@ -33,27 +34,25 @@ AndroidAPS limits the value as follows:
 * Teenagers: 5
 * Adults: 10
 * Insulin-resistant adults: 12
-:
-### Maximum total IOB OpenAPS can’t go over [U] (OpenAPS "max-iob")
+
+### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
 This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
  
 Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
  
-            maxIOB=average mealbolus + 3x max daily basal
+    maxIOB=average mealbolus + 3x max daily basal
  
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The “hard limit” for maxIOB is higher than in AMA. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten:
+Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
  
 * Child: 3
 * Teenage: 7
 * Adult: 12
 * Insulin resistant adult: 25
-            
- 
-            
+
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
  
 ### Enable AMA Autosense
-Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) “autosense” or not.
+Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
  
 ### Enable SMB
 Here you can enable or completely disable SMB feature.
@@ -79,6 +78,7 @@ For other CGM/FGM like Freestyle Libre, SMB always is deactivated until xDrip+ h
  
 ### Max minutes of basal to limit SMB to
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
+
 This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
 
 It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to adjust a decreasing BG with 0 IE/h basal (“zero-temp”). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.   
@@ -95,8 +95,7 @@ If you have this option enabled, the insulin sensitivity will be increased while
  
 ### Low temp-target lowers sensitivity
 If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5,6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
- 
- 
+
 ### Advanced Settings
  
 **Always use short average delta instead of simple data**
