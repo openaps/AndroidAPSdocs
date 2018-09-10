@@ -40,7 +40,7 @@ This value determines which maxIOB has to be considered by AAPS running in close
  
 Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
  
-    maxIOB=average mealbolus + 3x max daily basal
+    maxIOB = average mealbolus + 3x max daily basal
  
 Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
  
@@ -118,7 +118,7 @@ OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly a
  
 ** You will need to have completed Objective 7 to use this feature**
  
-You can also find informations in the [OpenAPS documentation](englisch)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama)
+You can also find informations in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
  
 ### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
 This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 2 U/h and set the “2” as your safety parameter. Der Wert sollte in der Pumpe und in AAPS übereinstimmen.
