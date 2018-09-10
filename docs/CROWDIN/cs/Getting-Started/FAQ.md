@@ -41,7 +41,7 @@ Základní princip uzavřené smyčky je, že vaše dávkování bazálního inz
 
 #### Proč se nyní používá 5h jako dolní limit DIA (doba působnosti inzulínu) namísto 2-3h?
 
-Je to dobře vysvětleno v tomto [článku](/www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nezapomeňte `AKTIVOVAT PROFIL` po úpravě vašeho DIA.
+Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nezapomeňte `AKTIVOVAT PROFIL` po úpravě vašeho DIA.
 
 ## Další nastavení
 
@@ -110,7 +110,7 @@ Nebudete schopni přijímat telefonní hovory ani nebudete mít přístup na int
 
 ### Jak se vypořádat s cestováním přes časové zóny?
 
-S DanouR a korejskou verzí nemusíte dělat nic. For other pumps see [../Usage/Timezone-traveling.html#timezone-traveling-with-pumps](../Usage/Timezone-traveling.md#timezone-traveling-with-pumps) for more details.
+S DanouR a korejskou verzí nemusíte dělat nic. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
 
 ## Pobyt v nemocnici
 
