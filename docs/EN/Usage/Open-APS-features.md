@@ -1,11 +1,11 @@
 # OpenAPS Features
 
 ## Super Micro Bolus (SMB)
-SMB, the shortform of "super micro bolus", is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super microboluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
+SMB, the shortform of 'super micro bolus', is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super microboluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
  
 Thanks to SMB, it can basically be sufficient for low-carb meals to inform the system of the planned amount of carbohydrate and leave the rest to AAPS. However, this may lead to higher postprandial peaks because pre-bolusing isn’t possible. Or you give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let SMB fill up the rest.
  
-The SMB function contains some security mechanisms.
+The SMB feature contains some security mechanisms:
  
 1. The largest single SMB dose can only be the smallest value off:
 
@@ -17,16 +17,17 @@ The SMB function contains some security mechanisms.
  
 3. Additional calculations to predict the course of glucose, e.g. by UAM (un-announced meals). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
  
-**You must have completed objective 8 to use SMB.**
+**You must have completed [objective 8](../Usage/Objectives.md) to use SMB.**
  
 See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)
  
-### Max U/h a Temp Basal can be set to (OpenAPS “max-basal”)
+### Max U/h a temp basal can be set to (OpenAPS “max-basal”)
 This security setting determines the maximum temporary basal rate the insulin pump may deliver. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.
  
-Example: Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
+    Example: 
+    Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
  
-But you cannot choose any value. AAPS limits the value as a "hard limit" according to the patient age you have selected under settings. The lowest permitted value is for children and the highest for insulin-resistant adults.
+But you cannot choose any value. AAPS limits the value as a 'hard limit' according to the patients age you have selected under settings. The lowest permitted value is for children and the highest for insulin-resistant adults.
  
 AndroidAPS limits the value as follows:
  
@@ -64,7 +65,7 @@ SMB is working when there is COB active.
 SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
 
 ### Enable SMB with high temp targets
-SMB is working when there is a high temporary target active (activity, hypo). This option can limit „enable SMB with temp targets“: if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets.
+SMB is working when there is a high temporary target active (activity, hypo). This option can limit 'enable SMB with temp targets': if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets.
  
 ### Enable SMB always
 SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
@@ -74,14 +75,14 @@ For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xD
 ### Enable SMB after carbs
 SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
  
-For other CGM/FGM like Freestyle Libre, SMB always is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
  
 ### Max minutes of basal to limit SMB to
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
 
 This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to adjust a decreasing BG with 0 IE/h basal (“zero-temp”). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.   
+It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to adjust a decreasing BG with 0 IE/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.   
  
 Default value: 30 min.
  
@@ -91,10 +92,10 @@ With this option enabled, the SMB algorithm can recognize unannounced meals. Thi
 **Therefore, UAM should always be activated when using SMB.**  
  
 ### High temp-target raises sensitivity
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target over 100 mg/dl or 5,6 mmol/l. This means, the ISF will rise while IC and basal will decrease.
+If you have this option enabled, the insulin sensitivity will be increased while having a temporary target over 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease.
  
 ### Low temp-target lowers sensitivity
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5,6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
+If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
 
 ### Advanced Settings
  
@@ -107,12 +108,14 @@ Default value: 3 (shouldn’t be changed unless you really need to and know, wha
 **Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.
  
 Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing) 
+
+
  
 ## Advanced Meal Assist (AMA)
 AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0).
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably.
+OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
  
-**You will need to have completed Objective 7 to use this feature**
+**You will need to have completed [objective 7](../Usage/Objectives.md) to use this feature**
  
 You can also find informations in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
  
