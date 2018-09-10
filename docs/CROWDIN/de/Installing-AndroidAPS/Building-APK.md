@@ -2,12 +2,12 @@
 
 Dieser Artikel ist in zwei Teile geteilt.
 
-* Im “Überblick” werden die wichtigsten Schritte kurz zusammengefasst.
-* In der “Schritt für Schritt Anleitung” wird detailliert auf die einzelnen Punkte mithilfe von Screenshots eingegangen. Da die Versionen von Android Studio - der Software, die wir zum Bau der APK verwenden werden - sich schnell weiterentwickeln werden diese nicht mit deiner Installation übereinstimmen, aber sie geben einen guten ersten Eindruck. Aufgrund der Weiterentwicklung von Android Studio oder Nutzung von eines anderen Betriebssystem (Windows, Linux, Mac OS), kann es sein, dass die Screenshots nicht identisch mit dem sind, was du siehst. Bei großeren Veränderungen oder fehlenden, bzw. falschen Informationen wäre es hilfreich, dies den Entwicklern in der Facebookgruppe ‘Android APS’ oder in den Gitter Chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) oder [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) mitzuteilen, so dass das Wiki stets aktuell ist.
+* Im “Überblick” werden die wichtigsten Schritte kurz zusammengefasst die allgemein nötig sind, um die APK Datei zu erstellen.
+* In der “Schritt für Schritt Anleitung” wird detailliert auf die einzelnen Punkte mithilfe von Screenshots eingegangen. Da die Versionen von Android Studio - der Software, die wir zum Bau der APK verwenden werden - sich schnell weiterentwickeln werden diese nicht mit deiner Installation übereinstimmen, aber sie geben einen guten ersten Eindruck. Android Studio läuft sowohl auf Windows, als auch auf Max OS X und Linux. Es kann sein, dass es bei jedem Betriebssystem einige kleinere Unterschiede gibt. Bei großeren Veränderungen oder fehlenden bzw. falschen Informationen wäre es hilfreich, dies den Entwicklern in der Facebookgruppe ‘Android APS’ oder in den Gitter Chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) oder [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) mitzuteilen, so dass das Wiki stets aktuell ist.
 
 ## Überblick
 
-Kurzfassung der wichtigsten Schritte.
+Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 * Git installieren
 * Installiere und konfiguriere Android Studio.

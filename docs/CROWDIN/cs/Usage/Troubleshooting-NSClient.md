@@ -1,21 +1,25 @@
-# Troubleshooting NSClient
+# Řešení problémů s NSClientem
 
-NSClient rely on stable communication with Nightscout. Unstable connection leads to synchronization errors and high data usage.
+NSClient spoléhá na stabilní komunikaci s Nightscoutem. Nestabilní připojení vede k chybám synchronizace a velké spotřebě dat.
 
-If nobody is following you on Nightscout you can pause NSClient to save (a lot) battery life or setup connection only on wifi and during charging.
+Pokud vás nikdo nesleduje na Nightscoutu, můžete pozastavit NSClienta, abyste o hodně snížili spotřebu baterie, anebo nastavte spojení jenom na wifi a během nabíjení.
 
-* How to detect unstable connection?
+* Jak detekovat nestabilní spojení?
 
-Go to NSClient tab in AAPS and watch the log. Common beavior is to receive PING every ~30s and almost none reconnection messages. If you see many reconnections there is a problem. Since AndoridAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
+Běžte do záložky NSClient v AAPS a pozorujte výpisy protokolu (log). Běžné chování je obdržet PING každých zhruba 30 sekund a téměř žádné zprávy o restartu spojení. Pokud vidíte mnoho restartů spojení, pak máte nějaký problém. Od AndroidAPS verze 2.0, pokud je takové chování samo detekováno, tak je NSClient pozastavený na 15 minut a v přehledové obrazovce se zobrazí zpráva "Chyba NSClienta".
 
 * Restart
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+Co byste měli zkusit jako první krok je restart obojího: Nightscoutu i telefonu, abyste zjistili, jestli je problém trvalý
 
-* Phone issues
+* Problémy s telefonem
 
-Android may put your phone into a sleep. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Check it again on strong network signal. Try another phone.
+Android může váš telefon uspávat. Ověřte, že máte výjimku pro AndroidAPS ve volbách napájení tak, aby aplikace mohla trvale běžet i na pozadí. Zkuste to znovu na silném síťovém spojení. Zkuste jiný telefon.
 
 * Nightscout
 
-If you are on Azure for many people helped to move to Heroku. Recently was reported Azure workaround to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Pokud jste na Azure, řadě lidí pomohlo přestěhovat se na Heroku. Nedávno bylo nahlášeno, že pro Azure pomůže nastavit v sekci nastavení aplikace HTTP protocol na 2.0 a přepnout Websockets na ON
+
+* Pokud se vám stále zobrazuje chyba...
+
+Ověřte velikost své mLab databáze. 496MB znamená, že je plná a potřebuje zkomprimovat. [Postupujte podle těchto OpenAPS pokynů pro kontrolu velikosti vaší databáze](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). Pokud komprimace nepomůže, měli byste zvážit darování AndroidAPS dat institutu Data Commons (pro výzkum), než jakákoliv data z kolekcí smažete. Zde jsou [instrukce v OpenAPS dokumentaci](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html), jak to provést.

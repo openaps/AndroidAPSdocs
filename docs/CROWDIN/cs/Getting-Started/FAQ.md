@@ -80,7 +80,7 @@ Naproti tomu pro výměnu kanyly se nepoužívá funkce "naplnit infúzní set" 
 
 ### Co dělat při sprchování a koupání?
 
-Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji obvykle nebudete potřebovat. Ale zároveň byste o tom měli AAPS říct, aby byly výpočty IOB správné. Zmáčkněte světle modré pole "Otevřená smyčka / Uzavřená smyčka" na vrchu hlavní stránky. Zvolte "Odpojit pumpu na 1 h". Jakmile jste znovu připojení k pumpě musíte vybrat "Uvolnit" na stejném políčku.
+Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji obvykle nebudete potřebovat. Ale zároveň byste o tom měli AAPS říct, aby byly výpočty IOB správné. Zmáčkněte světle modré pole "Otevřená smyčka / Uzavřená smyčka" na vrchu hlavní stránky. Vyberte možnost **"Odpojit pumpu na 1h"**. Jakmile jste znovu připojení k pumpě musíte vybrat "Uvolnit" na stejném políčku.
 
 ## Práce
 
@@ -96,7 +96,21 @@ Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji 
 
 ## Spánek
 
+### Jak mohu provozovat smyčku během noci bez mobilního a WIFI záření?
+
+Mnoho uživatelů zapíná v noci telefon v režimu letadlo. Pokud chcete provozovat smyčku když spíte, postupujte následovně (toto bude fungovat pouze se zdrojem glykémií xDrip + nebo upravená Dexcom aplikace. Nebude to fungovat pokud získáváte glykémie přes Nightscout):
+
+1. Zapněte na mobilu režim letadlo.
+2. Počkejte dokud není režim aktivní.
+3. Zapněte Bluetooth.
+
+Nebudete schopni přijímat telefonní hovory ani nebudete mít přístup na internet. Ale smyčka poběží.
+
 ## Cestování
+
+### Jak se vypořádat s cestováním přes časové zóny?
+
+S DanouR a korejskou verzí nemusíte dělat nic. Pro ostatní pumpy se podívejte na <../Usage/Timezone-traveling.html#timezone-traveling-with-pumps>.
 
 ## Pobyt v nemocnici
 

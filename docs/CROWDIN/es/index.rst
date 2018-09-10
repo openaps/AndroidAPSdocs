@@ -3,29 +3,29 @@ Bienvenido a la documentación AndroidAPS
 
 **Qué es AndroidAPS?**
 
-AndroidAPS es una app que puede comunicar las bombas de insulina con bluetooth y ejecuta una versión del algoritmo “oref0” de OpenAPS.
+AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of the OpenAPS "oref0" and "oref1" algorithms.
 
 **Objetivos principales**
 
-* App modular que sea usable para añadir más módulos sin tocar el resto de código
-* App que permita la localización
-* App que permita la fácil selección de lo que queremos que la apk final
-* App que permita lazo abierto y cerrado de APS
+* modular app where it is possible and easy to add new modules without touching the rest of the code
+* app that allows localization
+* app where it is easy to select what will be included in final apk with an easy change and compilation
+* app which supports open and closed APS mode
 * App donde puedas ver cómo funciona APS: los parámetros de entrada, los resultados y las decisiones que toma
-* Que permita añadir más algoritmos y permita usuario decidir cuál usar
-* App independiente del driver de la bomba y que contenga una bomba virtual que permita al usuario testear con seguridad APS
+* ability to add more APS algorithms and let the user decide what to use
+* app which is independent from a pump driver and contains a "Virtual pump" to allow users to safely play with APS
 * App con integración con Nightscout
-* App en la que sea posible añadir o eliminar limitaciones para seguridad del usuario
-* Todo en uno-app que necesitas para manejar la diabetes tipo 1 con APS y Nightscout
+* app where is easy to add/remove constraints for user safety
+* all-in-one app for managing T1D with APS and Nightscout
 
 **Qué necesitas para empezar**
 
 * Teléfono Android 5.0 o superior. Revisar `esta lista <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
-* Una app que reciba datos de tu MCG: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ app
 * `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 o posterior
-* Bomba de insulina compatible: Dana-R, Dana-RS o Accu-Check Combo
-* Un monitor continuo de glucosa (MCG): Dexcom G4/G5, Freestyle Libre, Eversense o Medtronic Guardian
+* A supported pump: Dana-R or Dana-RS Insulin Pump or Accu-Chek Combo (unless you build your own driver for another insulin pump)
+* A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, PocTech
 
 
 .. note:: 

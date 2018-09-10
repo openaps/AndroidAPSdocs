@@ -2,46 +2,47 @@
 
 Im Reiter “Konfigurations-Generator” (KONF) kannst du fast alle AAPS-Funktionen konfigurieren. Die Auswahlfelder links aktivieren die gewählte Funktion, die Auswahlfelder rechts (Augen-Symbol) machen den dazugehörigen Reiter im AAPS-Menü sichtbar oder unsichtbar. Erscheint bei einzelnen Optionen ein Zahnrädchen, kannst du weitere Einstellungen vornehmen.
 
+**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen and select 'Setup Wizard' to use it.
+
 ## Profil
 
-Hier kannst du auswählen, von welcher Quelle AAPS dein Therapie-Profil mit den Basalraten, ISF und IC abrufen soll.
+Select the basal profile you wish to use:
 
 * **Nightscout-Profil** Verwendet das von dir auf deiner Nightscout Seite gespeicherte Profil (https://[yournightscoutsiteaddress]/profile). Benutze den Profil Switch (im Reiter PROFIL das gewünschte Profil auswählen und Button "Aktiviere Profil" klicken) um das aktive Profil zu wechseln, falls du in Nightscout mehrere Profile angelegt hast. Das Profil wird dann an die Pumpe übertragen, damit die Basalzufuhr bei einem AAPS-Problem sicher gestellt ist.
 * **Einfaches Profil** Profil mit nur einem Zeitblock (d. h. keine Basalratenänderung innerhalb eines Tages)
-* **Lokales Profil** Nutzt das Profil, das in der Pumpe manuell erfasst wurde. Bei den DanaR/RS- und Combo-Pumpen funktioniert das nur mit dem Pumpen-Profil A bzw. 1.
-* **Circadian Prozentsatz Profil** Dieses Feature ist nun im Profile Switch enthalten und wurde ersetzt. D musst dieses nicht mehr auswählen. Mehr dazu findest du in diesem Wiki unter Profile.
+* **Lokales Profil** nutzt das Profil, das in der Pumpe manuell eingegeben wurde. Mehr dazu findest du in diesem Wiki unter [[Profile]].
 
 ## Insulin
 
-Hier musst du auswählen, welchen Insulintyp du verwendest. AndroidAPS unterstützt bilinear "schnell wirkende Insuline" mit DIA (Insulinwirkdauer) von weniger als 5 Stunden und "schnell wirkende Insuline verlängert" mit DIA von mehr als 5 Stunden. Diese Kurven unterscheiden sich nur in der Dauer des DIA. Die Oref Optionen 'Rapid-Acting Oref', Ultra-Rapid Oref' und 'Free-Peak Oref' sind exponentiell. Mehr Informationen dazu finden sich in den [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Diese Kurven variieren basierend auf der DIA und dem zeitlichen Abstand zum Wirkmaximum. Du musst für diese Profile weitere Informationen eingeben. Schaue dir die Graphen der Insulinkurven auf dem Reiter Insulin (INS) an um besser zu verstehen, welche zu dir passt.
+Select the type of insulin curve you are using. Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. You will need to enter additional settings for these. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
 
 ## BZ-Quelle
 
-Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. Weitere Infroamtionen findest du auf der Seite [[BZ-Quelle]].
+Select the blood glucose source you are using - see [[BG Source]] page for more setup information.
 
 ## Pumpe
 
-Wähle die von dir genutzte Pumpe. Wenn du im Open Loop arbeiten willst, wähle "Virtuelle Pumpe." Auf den pumpenspezifischen Seiten [[DanaR]], [[DanaRS]] und [[Accu Chek Combo]] findest du weitere Informationen zur Einrichtung.
+Select the pump you are using. For people wanting to open loop this needs to be 'Virtual Pump'. See [[DanaR Insulin Pump]], [[DanaRS Insulin Pump]] or [[Accu Chek Combo Pump]] pages for more setup information.
 
 ## Empfindlichkeitserkennung
 
-Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Bei der Empfindlichkeitserkennung werden historische Daten "on the go" analysiert und Anpassungen vorgenommen, falls der Algorithmus feststellt, dass du sensibler oder weniger empfindlich auf das Insulin reagierst als üblich. Details zum Sensitivity Oref0 Algorithmus findest du in den [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf der Startseite im Auswahlmenü der angezeigten Kurven “Sensitivität” auswählst. Die weiße Linie zeigt dir das graphisch an. Die Empfindlichkeitserkennung ist erst freigeschaltet, wenn du [Ziel (objective) 6](../Usage/Objectives) erreicht hast.
+Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode). You can view your sensistivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
 
 ## APS
 
-Wähle entweder OpenAPS MA (meal assist - Mahlzeiten-Assistent) oder OpenAPS AMA (advanced meal assist - erweiterter Mahlzeiten Assistent). Weitere Details zu OpenAPS AMA findest du in den [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Einfach ausgedrückt profitierst du davon, dass das System nach einem Mahlzeiten-Bolus schneller reagieren kann wenn du die Kohlenhydrate zuverlässig eingibst. Die Details zum ausgewählten Algorithmus findest du im Reiter OpenAPS (OPAS). Du musst im [Ziel (objective) 7](../Usage/Objectives) sein um OpenAPS AMA nutzen zu können.
+Select either OpenAPS MA (meal assist) or OpenAPS AMA (advanced meal assist). More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); in simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab. Note you need to be in [Objective 7](../Usage/Objectives) in order to use OpenAPS AMA.
 
 ## Loop
 
-Hier kannst du einstellen, ob du AAPS automatische Regelungen erlauben willst oder nicht. Im Reiter LOOP werden die Aktivitäten und Erfolge des Loops angezeigt.
+If you wish to use open or closed looping you will need to enable this here. You can see the active request and success of enactment in the Loop tab.
 
 ## Beschränkungen
 
-Auf dem Reiter Ziele (ZIEL) kannst du deinen Fortschritt verfolgen und sehen, welche Meilensteine noch vor dir liegen. Weitere Informationen findest Du auf der Seite [[Beschränkungen (objectives)]].
+If you view the Objectives (Obj) tab, you can see more information about how far you have progressed and what actions you still need to complete. See [[Objectives]] page for more information.
 
 ## Behandlungen
 
-Der Reiter Behandlungen (BEH) zeigt dir die zu Nightscout hochgeladenen Behandlungen. Falls du einen Eintrag editieren oder löschen willst - z.B. weil du weniger Kohlenhydrate gegessen hast als erwartet) - wähle 'Löschen' und trage den neuen Wert über das Careportal (CP) ein. Denke daran, ggf. die Zeit anzupassen.
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
 
 ## Allgemein
 

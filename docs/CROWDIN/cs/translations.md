@@ -1,17 +1,17 @@
-# How to translate AndroidAPS
+# Jak překládat AndroidAPS
 
-* Go to <https://translations.androidaps.org> and login using your Github account
+* Běžte na <https://translations.androidaps.org> a přihlašte se pomocí svého Github účtu
 
-* Contact [Milos](https://gitter.im/MilosKozak) or [Adrian](https://gitter.im/AdrianLxM) and specify language and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users)
+* Kontaktujte [Miloše](https://gitter.im/MilosKozak) nebo [Adriana](https://gitter.im/AdrianLxM) a udejte jazyk + jestli chcete být překladatel nebo korektor (jenom lidé zdatní v překládání nebo pokročilí AndroidAPS uživatelé)
 
-* When we approve you, click the flag ![](../images/translation-flags.png)
+* Pokud vás schválíme, klikněte na vlajku ![](../images/translation-flags.png)
 
-* Click strings.xml ![](../images/translations-click-strings.png)
+* Klikněte na strings.xml ![](../images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion ![](../images/translations-translate.png)
+* Překládejte věty v levé části přidáváním nového přeloženého textu nebo vyjděte z navrhovaného překladu a upravte ho ![](../images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode ![](../images/translations-proofreading-mode.png)
+* Korektoři se musí přenout do režimu Korektury ![](../images/translations-proofreading-mode.png)
 
-* and approve translated texts ![](../images/translations-proofreading.png)
+* a schválit překládané texty ![](../images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
+Když korektor schválí překlad, tak bude přidaný do příští verze AndroidAPS. Na úvod by také bylo dobré projít existující překlady, které ještě nebyly schválené, a ověřit v nich chyby nebo je schválit, pokud byly správné.

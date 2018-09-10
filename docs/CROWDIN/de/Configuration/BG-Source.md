@@ -10,23 +10,29 @@ _G5 mit xdrip+:_
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 
-_G5 mit der modifizierten Dexcom G5-App:_  
+_G5 mit der gepatchten Dexcom App_  
 
 
-* Funktioniert aktuell nur mit der Entwickler-Version (Dev).
-* Lade die apk von [hier](https://github.com/dexcomapp/dexcomapp). (Es geht NUR mit dieser Datei und NICHT mit der Original-App von Dexcom oder anderen modifizierten Versionen!).
-* Deinstalliere die originale Dexcom App, falls du sie noch hast.
-* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > DexcomG5 app (patched).
+* Lade die apk von [hier](https://github.com/dexcomapp/dexcomapp) herunter und wähle entweder die mg/dl- oder mmol/l-Version aus.
+* Stoppe den Sensor und deinstalliere die originale Dexcom App, falls du das noch nicht gemacht hast.
+* Installiere die heruntergeladene apk
+* Starte den Sensor
+* Wähle Dexcom G5 (patched) im Konfigurations-Generator (Einstellung in AndroidAPS).
 
-_G4 mit OTG cable (‘traditionelles’ Nightscout):_  
+_G4 mit OTG Kabel ("traditionelles Nightscout")..._  
 
 
 * Downloade die Nightscout Uploader app vom Play Store und folge den Einstellungen auf Nightscout [hier](http://www.nightscout.info/wiki/welcome/basic-requirements).
 * Gib in den AndroidAPS Einstellungen > Nightscout-Client deine Nightscout URL und dein Nightscout API-Key ein.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Nightscout-Client BZ.
 
-**FreeStyle Libre mit Bluetooth-Aufsatz**  
+**Libre mit Bluetooth-Aufsatz:**  
+Um dein Libre als CGM zu verwenden, das alle 5 Minuten Glukosewerte empfängt, musst du zuerst einen NFC-zu-Bluetooth Adapter kaufen, z.B.:
 
+* MiaoMiao-Reader <https://www.miaomiao.cool/>
+* Blukon Nightrider <https://www.ambrosiasys.com/howit>
+* BlueReader <https://bluetoolz.de/blueorder/#home>
+* Sony Smartwatch 3 (SWR50) als Auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
 _Mit xdrip+_  
 
@@ -41,18 +47,24 @@ _Mit Glimp:_
 
 
 * Downloade über das Google Play Store die App Glimp und folge der Anleitung auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
-* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Glimp.
+* Wähle Glimp im Konfigurations-Generator (Einstellung in AndroidAPS).
 
 **Minimed 640G oder Minimed 630G**  
 
 
-* Lade [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) herunter und folge den Anleitungen auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
+* Lade [600SeriesAndroidUploader](http://pazaan.github.io/600SeriesAndroidUploader/) herunter und folge den Anleitungen auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
 * Im 600 Series Uploader gehe zu Settings > Send to xdrip+ und wähle ON (ankreuzen).
-* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > MM640g.
+* Wähle MM640g im Konfigurations-Generator (Einstellung in AndroidAPS).
+
+**PocTech CT-100:**  
+
+
+* Installiere die PocTech App
+* Wähle PocTech App im Konfigurations-Generator (Einstellung in AndroidAPS).
 
 **Für die Nutzer anderer CGM-Systeme mit Upload zu Nightscout:**  
-Wenn du ein anderes CGM-System nutzt mit dem du Daten zu [Nightscout](http://www.nightscout.info) hochladen kannst, dann...  
+Wenn du ein anderes CGM-System nutzt mit dem du Daten zu [Nightscout](http://www.nightscout.info) hochladen kannst, dann  
 
 
 * Gib in den AndroidAPS Einstellungen > Nightscout-Client deine Nightscout URL und dein Nightscout API-Key ein.
-* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Nightscout-Client BZ.
+* Wähle NSClient im Konfigurations-Generator (Einstellung in AndroidAPS).

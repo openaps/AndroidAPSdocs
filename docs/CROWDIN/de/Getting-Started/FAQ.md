@@ -82,7 +82,7 @@ Im Gegensatz zum “klassischen” Vorgehen nutzt AndroidAAPS nicht die “Kathe
 
 ### Was mache ich, wenn ich duschen oder ein Bad nehmen möchte?
 
-Du kannst die Pumpe zum Duschen oder Baden ablegen. Für so kurze Zeiträume brauchst du die Pumpe meistens nicht. Aber du solltest es in AAPS eingeben, damit die IOB-Berechnung korrekt bleibt. Drücke auf das hellblaue "Open Loop / Closed Loop" Feld oben links auf dem Startbildschirm von AAPS. Wähle "Trenne Pumpe für 1h". Wenn du die Pumpe nach der Dusche wieder anschließt musst du in dem selben Feld "Fortsetzen" auswählen.
+Du kannst die Pumpe zum Duschen oder Baden ablegen. Für so kurze Zeiträume brauchst du die Pumpe meistens nicht. Aber du solltest es in AAPS eingeben, damit die IOB-Berechnung korrekt bleibt. Drücke auf das hellblaue "Open Loop / Closed Loop" Feld oben links auf dem Startbildschirm von AAPS. Wähle **"Trenne Pumpe für 1 h"**. Wenn du die Pumpe nach der Dusche wieder anschließt musst du in dem selben Feld "Fortsetzen" auswählen.
 
 ## Arbeit
 
@@ -98,7 +98,21 @@ Du kannst die Pumpe zum Duschen oder Baden ablegen. Für so kurze Zeiträume bra
 
 ## Schlafen
 
+### Wie kann ich nachts loopen, ohne Handy- und WLAN-Strahlung ausgesetzt zu sein?
+
+Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. Wenn du willst, dass der Loop dich auch im Schlaf unterstützt, dann gehe wie folgt vor (dies wird aber nur funktionieren, wenn du eine lokale BZ-Quelle wie xDrip+ oder die modifizierte Dexcom App verwendest, es geht NICHT wenn du die Glukose-Werte über Nightscout erhältst):
+
+1. Aktiviere im Handy den Flugzeugmodus.
+2. Warte, bis der Flugzeugmodus aktiv ist.
+3. Schalte Bluetooth ein.
+
+Du empfängst jetzt weder Anrufe, noch bist du mit dem Internet verbunden. Aber der Loop funktioniert.
+
 ## Reisen
+
+### Wie gehe ich mit einem Zeitzonenwechsel um?
+
+Mit der DanaR und der DanaR Korean musst du nichts tun. Bei der Verwendung einer anderen Pumpe lies [... /Usage/TimeZone-Traveling.html#TimeZone-Traveling-with-Pumps](../Usage/Timezone-traveling.html#timezone-traveling-with-pumps).
 
 ## Krankenhausaufenthalt
 
