@@ -87,7 +87,7 @@ AndroidAPS 설치하기
    :glob:
     
    목적 <./Usage/Objectives.md>
-   OpenAPS 특성<./Usage/Open-APS-features.md>
+   OpenAPS 특징<./Usage/Open-APS-features.md>
    프로파일 <./Usage/Profiles.md>
    문자(SMS) 명령 <./Usage/SMS-Commands.md>
    확장 탄수화물
