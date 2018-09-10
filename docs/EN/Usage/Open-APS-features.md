@@ -98,17 +98,13 @@ If you have this option enabled, the insulin sensitivity will be decreased while
 
 ### Advanced Settings
  
-**Always use short average delta instead of simple data**
-
-If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
   
-**Max daily safety multiplier**
-This is important safety setting. It limits your max basal IOB by multiplying x times your biggest basal rate. Example: if your biggest basal rate is 1.0 U/h, max daily multiplier = 3, than AndroidAPS won’t give any additional basal insulin if there is already a basal IOB of 3.0 I.E.
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
  
 Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
   
-**Current Basal safety multiplier**
-This is important safety setting. It limits your max basal IOB by multiplying x times your current basal rate. It helps to avoid too much basal IOB, especially when you don’t know the algorithm well in the beginning and AndroidAPS can still adjust too much basal IOB with “zero-temp”.
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.
  
 Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing) 
  
@@ -116,12 +112,12 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0).
 OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably.
  
-** You will need to have completed Objective 7 to use this feature**
+**You will need to have completed Objective 7 to use this feature**
  
 You can also find informations in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
  
 ### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 2 U/h and set the “2” as your safety parameter. Der Wert sollte in der Pumpe und in AAPS übereinstimmen.
+This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 2 U/h and set the “2” as your safety parameter. 
  
 You cannot chose any value: For safety reason, there is a “hard limit”, which depends on the patient age. The “hard limit” for maxIOB is higher than in AMA. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
  
