@@ -22,4 +22,4 @@ Die Vorteile der DanaRS sind jedoch:
 
 Die Combo ist natürlich eine sehr gute Pumpe. Sie hat auch den Vorteil, dass die Auswahl an Kathetern wegen des Standard Luer-Lock-Anschlusses groß ist. Und sie verwendet Standard-Batterien, die rund um die Uhr an jeder Tankstelle erhältlich sind. Im Notfall kannst du sie sogar aus der Fernbedienung in deinem Hotelzimmer "ausleihen" ;-)
 
-Informationen über weitere in Zukunft ggf. loopbare Insulinpumpen findest du [hier](./Future-possible-Pump-Drivers.html).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
