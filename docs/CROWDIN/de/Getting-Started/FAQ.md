@@ -41,7 +41,7 @@ Grundvoraussetzung des Loop ist, dass die Basalraten und Kohlenhydratfaktoren st
 
 #### Warum verwendet man eine minimale DIA (Insulinwirkdauer) von 5 Stunden statt 2 oder 3 Stunden?
 
-Dies wird in [diesem Artikel](/www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) gut erklärt. Vergiss nicht, dein ` PROFIL ZU AKTIVIEREN`, nachdem du deinen DIA verändert hast.
+Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Vergiss nicht, dein ` PROFIL ZU AKTIVIEREN`, nachdem du deinen DIA verändert hast.
 
 ## Andere Einstellungen
 
@@ -112,7 +112,7 @@ Du empfängst jetzt weder Anrufe, noch bist du mit dem Internet verbunden. Aber 
 
 ### Wie gehe ich mit einem Zeitzonenwechsel um?
 
-Mit der DanaR und der DanaR Korean musst du nichts tun. For other pumps see [../Usage/Timezone-traveling.html#timezone-traveling-with-pumps](../Usage/Timezone-traveling.md#timezone-traveling-with-pumps) for more details.
+Mit der DanaR und der DanaR Korean musst du nichts tun. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
 
 ## Krankenhausaufenthalt
 
