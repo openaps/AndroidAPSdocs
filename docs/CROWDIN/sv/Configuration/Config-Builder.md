@@ -10,7 +10,7 @@ Select the basal profile you wish to use:
 
 * **NS Profile** uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
 * **Simple Profile** profile with just one time block (i.e. no basal rate changes during the day)
-* **Local Profile** uses the basal profile manually entered in phone. See [[Profiles]] page for more setup information.
+* **Local Profile** uses the basal profile manually entered in phone. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
 ## Insulin
 
@@ -18,11 +18,11 @@ Select the type of insulin curve you are using. Basic AndroidAPS options are bil
 
 ## BG Source
 
-Select the blood glucose source you are using - see [[BG Source]] page for more setup information.
+Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
 
 ## Pump
 
-Select the pump you are using. For people wanting to open loop this needs to be 'Virtual Pump'. See [[DanaR Insulin Pump]], [[DanaRS Insulin Pump]] or [[Accu Chek Combo Pump]] pages for more setup information.
+Select the pump you are using. For people wanting to open loop this needs to be 'Virtual Pump'. See [DanaR Insulin Pump](DanaR-Insulin-Pump.md), [DanaRS Insulin Pump](DanaRS-Insulin-Pump.md) or [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) pages for more setup information.
 
 ## Sensitivity Detection
 
@@ -30,7 +30,7 @@ Select the type of sensitivity detection. This will analyse historical data on t
 
 ## APS
 
-Select either OpenAPS MA (meal assist) or OpenAPS AMA (advanced meal assist). More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); in simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab. Note you need to be in [Objective 7](../Usage/Objectives) in order to use OpenAPS AMA.
+Select either OpenAPS MA (meal assist) or OpenAPS AMA (advanced meal assist). More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); in simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab. Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
 
 ## Loop
 
@@ -38,7 +38,7 @@ If you wish to use open or closed looping you will need to enable this here. You
 
 ## Constraints
 
-If you view the Objectives (Obj) tab, you can see more information about how far you have progressed and what actions you still need to complete. See [[Objectives]] page for more information.
+If you view the Objectives (Obj) tab, you can see more information about how far you have progressed and what actions you still need to complete. See [Objectives](../Usage/Objectives.md) page for more information.
 
 ## Treatments
 
@@ -46,11 +46,11 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 
 ## General
 
-* **Actions** allows you to make Profiles Switches (see [[Profiles]] for more setup information), Temporary Targets, and for those using DanaR/RS or Combo pump to set a manual TBR or prime the canula.
+* **Actions** allows you to make Profiles Switches (see [Profiles page](../Usage/Profiles.md) for more setup information), Temporary Targets, and for those using DanaR/RS or Combo pump to set a manual TBR or prime the canula.
 * **Careportal** allows you to record any specific care entries and view the current sensor, insulin, canula and pump batter ages in the Careportal (CP) tab.
-* **SMS Communicator** allows remote caregivers to control some AndroidAPS features via SMS, see [[SMS Commands]] for more setup information.
+* **SMS Communicator** allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
 * **Food** allows you to view and use the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information or http://[yournightscoutsiteaddress]/food to access your database.
-* **Wear** allows you to view and control AndroidAPS from the Android Wear watch, see [[watchfaces]] for more setup information.
+* **Wear** allows you to view and control AndroidAPS from the Android Wear watch, see [watchfaces](Watchfaces.md) for more setup information.
 * **xDrip Statusline (watch)** Display loop information on your xDrip+ watchface
 * **Ongoing Notification** displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
 * **NS Client** Setup sync of your AndroidAPS data with Nightscout
