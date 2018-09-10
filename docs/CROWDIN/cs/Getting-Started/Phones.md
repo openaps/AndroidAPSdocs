@@ -10,4 +10,4 @@ V případě problémů s tabulkou, napište prosím na email <hardware@androida
 
 ## Pozadí na telefon
 
-![pozadí telefonu](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Pokud si chcete vyzdobit telefon pozadím s AndroidAPS, můžete si pozadí stáhnout zde:[Pozadí ve vysokém rozlišení.](../images/bg_phone.jpg)
+![pozadí telefonu](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
