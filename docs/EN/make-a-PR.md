@@ -33,6 +33,18 @@ Congrats, you made your first contribution!
 
 PS, your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories.  If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork.  Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
+### Advanced tips for adding internal links
+
+If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages as well.
+
+In files with .md ending:
+   * [[text](../Usage/Test.md)](../Usage/Test.md) will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
+   * [[text](/Usage/Test.md)](/Usage/Test.md) will set a hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+   
+In files with .rst ending:
+   * `Text <../Usage/Test.md>`_ will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
+   * `Text <./Usage/Test.md>`_ will set a hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+
 ### Advanced tips for adding multiple images to documentation
 
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
