@@ -1,6 +1,6 @@
 # FAQ für Looper
 
-Gewusst wie: Um die FAQ zu ergänzen, folge diesen [Anweisungen](../make-a-PR.html)
+How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
 
 ## Allgemein
 
@@ -66,7 +66,7 @@ Tipps um die Batteriedauer zu erhöhen:
 * Die App AndroidAPS kann öfter vom Android-Betriebssystem des Smartphones “abgeschossen” werden, um Energie zu sparen oder Speicher freizugeben. Wenn AndroidAPS bei jedem Aufruf neu gestartet wird, dann baut es jedes Mal eine Bluetooth-Verbindung zur Pumpe auf, dabei wird die aktuelle Basalrate und das Bolus-Protokoll erneut eingelesen. Das verbraucht viel Energie. Um zu prüfen, ob dies häufiger auftritt, kann man im AndroudAPS Menü “Logge App-Start in NS” aktivieren. Dann erscheinen Neustarts in der Blutzucker-Kurve auf dem Hauptbildschirm und in Nigthscout. Sollte die App häufig neu gestartet werden, versuche sie auf der Whiteliste der Prozesse zu setzen, die nicht automatisch beendet werden und im Hintergrund weiterlaufen dürfen.
 * reinige die Batteriepole mit Alkohol um sicherzustellen, dass keine herstellungsbedingten Wachs- oder Fettreste mehr vorhanden sind.
 * bei der DanaR/RS Pumpe wird während der Startprozedur kurzzeitig mit Hilfe einer hohen Stromstärke versucht, die Schutzfilme auf den Batterie-Kontakten zu entfernen (die einen Energieverlust bei Lagerung verhindern sollen), aber das funktioniert nicht immer zu 100%. Dann kannst du entweder versuchen, die Batterie 2-3 Mal herauszunehmen und wieder einzusetzen, bis die Pumpe einen Batteriestand von 100 % anzeigt oder du schließt die Batterie schon vor dem Einsetzen dadurch kurz, dass du beide Batteriepole für den Bruchteil einer Sekunde mit einem metallischen Gegenstand überbrückst.
-* einige weitere spezifische Batterie-Tipps zur Accu-Chek Combo findest Du [hier](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html#battery-type-and-causes-of-short-battery-life)
+* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life) to use for Combo pump
 
 ### Insulin-Reservoir und Katheter wechseln
 
@@ -112,7 +112,7 @@ Du empfängst jetzt weder Anrufe, noch bist du mit dem Internet verbunden. Aber 
 
 ### Wie gehe ich mit einem Zeitzonenwechsel um?
 
-Mit der DanaR und der DanaR Korean musst du nichts tun. Bei der Verwendung einer anderen Pumpe lies [... /Usage/TimeZone-Traveling.html#TimeZone-Traveling-with-Pumps](../Usage/Timezone-traveling.html#timezone-traveling-with-pumps).
+Mit der DanaR und der DanaR Korean musst du nichts tun. For other pumps see [../Usage/Timezone-traveling.html#timezone-traveling-with-pumps](../Usage/Timezone-traveling.md#timezone-traveling-with-pumps) for more details.
 
 ## Krankenhausaufenthalt
 
