@@ -1,117 +1,117 @@
-Welcome to the Android APS documentation
+AndroidAPS 가이드에 오신 것을 환영합니다.
 ==============================================
 
-**What is AndroidAPS?**
+**AndroidAPS가 무엇입니까?**
 
-AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of the OpenAPS "oref0" and "oref1" algorithms.
+AndroidAPS는 블루투스 통신기능이 있는 인슐린 펌프를 이용하여 OpenAPS의 "oref0"와 "oref1" 알고리즘을 작동할 수 있는 안드로이드 스마트폰용 앱입니다.
 
-**Primary goals behind AndroidAPS:**
+**AndroidAPS의 주요 개발 목표:**
 
-* modular app where it is possible and easy to add new modules without touching the rest of the code
-* app that allows localization
-* app where it is easy to select what will be included in final apk with an easy change and compilation
-* app which supports open and closed APS mode
-* app where you can see how APS works: input params, result and final decision
-* ability to add more APS algorithms and let the user decide what to use
-* app which is independent from a pump driver and contains a "Virtual pump" to allow users to safely play with APS
-* app with tight Nightscout integration
-* app where is easy to add/remove constraints for user safety
-* all-in-one app for managing T1D with APS and Nightscout
+* 다른 코드를 수정하지 않고도 손쉽게 새로운 모듈추가가 가능한 모듈 방식의 앱
+* 여러 언어로 번역 될 수 있는 앱
+* 컴파일 전 최종 apk 파일에 포함될 기능을 손쉽게 선택가능하게 한 앱
+* Open Loop와 Closed Loop 모드를 지원하는 앱
+* APS가 어떻게 작동하는지 확인할 수 있는 앱: 입력변수, 결과 및 최종결정
+* APS 알고리즘을 추가할 수 있는 기능과 사용자들이 어떤 알고리즘을 사용할 지 결정할 수 있게 한다.
+* 실제 펌프사용 유무와 별개로 "가상펌프"를 통해 사용자가 APS를 안전하게 작동해볼 수 있도록 한 앱
+* Nightscout와 원활하게 연동하는 앱
+* 사용자의 안전 제약을 쉽게 추가/해제할 수 있도록 한 앱
+* APS와 Nightscout를 통해 1형당뇨를 관리할 수 있도록 하는 일체형 통합 앱
 
-**What you need to get started:**
+**시작하기 위해 필요한 것들:**
 
-* An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
-* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 or later
-* A supported pump: Dana-R or Dana-RS Insulin Pump or Accu-Chek Combo (unless you build your own driver for another insulin pump)
-* A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, PocTech
+* 5.0 혹은 이후 버전의 안드로이드 스마트폰. AndroidAPS와 잘 작동하는 폰에 대한 리포트를 확인하시려면 이`이 스프레드시트 <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ 를 확인해보세요.
+* CGM 데이터 수신용 앱: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `Dexcom G5 앱(패치버전) <https://github.com/dexcomapp/dexcomapp>`_, `PochTech 앱 <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ 또는 `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ 그 자체
+* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 혹은 그 이후 버전
+* 호환되는 펌프: 다나R, 다나RS 또는 아큐-첵 콤보 인슐린 펌프(본인이 직접 다른 인슐린 펌프와 연동되도록 빌드 할 수도 있습니다.)
+* 연속혈당측정기 (CGM) 데이터 소스: 덱스컴 G4/G5/G6, 프리스타일 리브레, 에버센스, 메드트로닉 가디언, 포텍
 
 
-.. note:: 
-	**Disclaimer And Warning**
+.. 참고:: 
+	**고지사항 및 경고문**
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	이곳에 설명된 모든 정보, 생각, 코드는 오직 정보제공 및 교육적 목적으로만 제공된 것입니다. Nightscout은 현재 HIPAA 개인 정보 보호 준수 규약을 따르지 않습니다. Nightscout와 AndroidAPS를 본인의 책임하에 사용하세요. 의학적 결정을 위해 이 정보와 코드를 사용하지 마세요.
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+	github.com의 코드를 사용함에 있어 어떤 보증이나 공식적인 지원은 없습니다. 자세한 것은 이 곳의 라이센스에 대한 자세한 내용을 참고하세요.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+	* 모든 제품명, 회사명, 상표, 서비스표, 등록상표, 등록 서비스표는 해당 소유자의 고유 재산입니다. 그것들을 사용한 것은 정보를 제공하기 위한 목적이며, 그들과의 제휴 또는 보증을 의미하지는 않습니다.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
+	참고 - 이 프로젝트는 `수일개발 <http://www.sooil.com/main.php>`_, `Dexcom <http://www.dexcom.com/>`_, `아큐-첵, Roche Diabetes Care <http://www.accu-chek.com/>`_ 과 관련이 없으며 이들이 어떠한 보증도 해주지 않습니다.
 
-Getting Started with AndroidAPS
+AndroidAPS 시작하기
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first>
-   Screenshots <./Getting-Started/Screenshots.md>
-   Phone <./Getting-Started/Phones.md>
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   FAQ for loopers <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
+   안전제일 <./Getting-Started/Safety-first>
+   스크린샷 <./Getting-Started/Screenshots.md>
+   스마트폰 <./Getting-Started/Phones.md>
+   펌프 선택 <./Getting-Started/Pump-Choices.md>
+   향후 가능한 펌프 <./Getting-Started/Future-possible-Pump-Drivers.md>
+   APS사용자를 위한 FAQ
+   용어 <./Getting-Started/Glossary.md>
   
-How to Install AndroidAPS
+AndroidAPS 설치하기
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   How to update to a new version <./Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.md>
+   APK 파일 빌드하기 <./Installing-AndroidAPS/Building-APK.md>
+   새 버전으로 업그레이드하기 <./Installing-AndroidAPS/Update-to-new-version.md>
+   릴리즈 노트 <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev-branch.md>
    Nightscout <./Installing-AndroidAPS/Nightscout.md>
    
-Configuration 
+환경설정 
 ---------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Config Builder <./Configuration/Config-Builder.md>
-   BG Source<./Configuration/BG-Source.md>
-   DanaR <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
-   Watchfaces <./Configuration/Watchfaces.md>
-   Preferences <./Configuration/Preferences.md>
-   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   구성관리자 <./Configuration/Config-Builder.md>
+   혈당 소스
+   다나R <./Configuration/DanaR-Insulin-Pump.md>
+   다나RS <./Configuration/DanaRS-Insulin-Pump.md>
+   아큐-첵 콤보 <./Configuration/Accu-Chek-Combo-Pump.md>
+   워치화면 <./Configuration/Watchfaces.md>
+   설정 <./Configuration/Preferences.md>
+   민감도 감지와 COB <./Configuration/Sensitivity-detection-and-COB.md>
    
-Usage
+사용
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   Objectives <./Usage/Objectives.md>
-   OpenAPS Features <./Usage/Open-APS-features.md>
-   Profiles <./Usage/Profiles.md>
-   SMS Commands <./Usage/SMS-Commands.md>
-   Extended Carbs <./Usage/Extended-Carbs.md>
-   Timezone traveling <./Usage/Timezone-traveling.md>
-   Accessing log files <./Usage/Accessing-logfiles.md>
-   Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-   Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
+   목적 <./Usage/Objectives.md>
+   OpenAPS 특징<./Usage/Open-APS-features.md>
+   프로파일 <./Usage/Profiles.md>
+   문자(SMS) 명령 <./Usage/SMS-Commands.md>
+   확장 탄수화물
+   시간대 이동 <./Usage/Timezone-traveling.md>
+   로그파일 다루기<./Usage/Accessing-logfiles.md>
+   xDrip에서 혈당데이터 평활화하기 <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   아큐-첵 콤보 기초 사용법 <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+   NSClient 문제해결 <./Usage/Troubleshooting-NSClient.md>
 
-Where to go for help 
+도움을 구할 곳들 
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   배경 지식 및 도움이 될 만한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
+   도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-How to help
+도움주기
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the App <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   도움주기
+   앱 번역하는 방법
+   wiki 수정하는 방법
