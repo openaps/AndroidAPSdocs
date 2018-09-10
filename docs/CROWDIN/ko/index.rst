@@ -93,7 +93,7 @@ AndroidAPS 설치하기
    확장 탄수화물
    시간대 이동 <./Usage/Timezone-traveling.md>
    로그파일 다루기<./Usage/Accessing-logfiles.md>
-   xDrip에서 혈당데이터 평활화하기 <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   Smoothing Blood Glucose Data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    아큐-첵 콤보 기초 사용법 <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient 문제해결 <./Usage/Troubleshooting-NSClient.md>
 
