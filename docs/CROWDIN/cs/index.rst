@@ -93,7 +93,7 @@ Použití
    Prodloužené sacharidy (eCarbs) <./Usage/Extended-Carbs.md>
    Cestování časovými zónami
    Přístup k log souborům <./Usage/Accessing-logfiles.md>
-   Vyhlazování glykémií v xDripu <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   Smoothing Blood Glucose Data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Odstraňování potíží s NSClientem <./Usage/Troubleshooting-NSClient.md>
 
