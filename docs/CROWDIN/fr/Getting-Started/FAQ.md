@@ -41,7 +41,7 @@ The founding principle of closed looping is that your basal rate and carb ratio 
 
 #### Why using min. 5h DIA (insulin end time) instead of 2-3h?
 
-Well explained in this [article](/www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
 
 ## other settings
 
@@ -110,7 +110,7 @@ You are not receiving calls now, nor are you connected to the internet. But the 
 
 ### How to deal with timezone changes?
 
-With DanaR and DanaR Korean you don't have to do anything. For other pumps see [../Usage/Timezone-traveling.html#timezone-traveling-with-pumps](../Usage/Timezone-traveling.md#timezone-traveling-with-pumps) for more details.
+With DanaR and DanaR Korean you don't have to do anything. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
 
 ## Hospitalization
 
