@@ -22,9 +22,9 @@ _Dexcom G5 앱(패치버전)을 사용하는 경우_
 _만약 OTG 케이블(전통적인 Nightscout)과 함께 G4를 선택한다면…_   
 
 
-* If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* In AndroidAPS Preferences enter your nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* 만약 미리 셋업하지 않았다면 플레이스토어에서 Nightscout 업로더 앱을 다운로드하고 [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements)에 있는 지시사항을 따르세요. 
+* AndroidAPS 설정에서 당신의 Nightscout 웹사이트와 API 비밀번호를 입력하세요.
+* 구성관리자(안드로이드 APS 셋팅)에서 NS클라이언트를 선택하세요.
 
 **For users of Libre with Bluetooth cap:**  
 To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
