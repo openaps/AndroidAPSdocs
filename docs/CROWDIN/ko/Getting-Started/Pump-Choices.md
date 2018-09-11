@@ -10,7 +10,7 @@ Combo 펌프는 연동하기 쉽지는 않지만 loop는 가능합니다.
 
 * 다나*R/RS 펌프는 Android 5.1 이상의 대부분에 폰에서 연결이 됩니다. 만약 당신의 폰이 고장났다면 다나*R/RS와 연동되는 교체 폰은 쉽게 찾을 수 있습니다. Combo와 연동되는 폰을 찾기는 쉽지 않습니다. (Android 8.1 이상의 폰이 좀 더 대중화되면 바뀔 수도 있습니다)
 
-* Initial pairing is simpler with the Dana* RS. 그러나 일반적으로 이 작업은 한 번만 수행되므로 다른 펌프로 새 기능을 테스트하려는 경우에만 영향을줍니다.
+* 초기 페어링은 다나RS가 더 쉽습니다. 그러나 일반적으로 이 작업은 한 번만 수행되므로 다른 펌프로 새 기능을 테스트하려는 경우에만 영향을줍니다.
 
 * 지금까지 Combo는 screen parsing으로 동작합니다. 일반적으로 잘 동작하지만 아주 느립니다. Loop를 실행하기 위해서는 백그라운드에서 작업이 수행되는 것이 훨씬 많으므로 이것은 문제가 되지 않습니다. 그렇지만 여전히 블루투스 연결이 끊기거나 했을 때 좀더 많은 시간이 필요하고 bolusing & cooking 등을 할 때 당신이 폰으로 부터 떨어져 있는 경우 쉽지 않은 일입니다.
 
@@ -20,6 +20,6 @@ Combo 펌프는 연동하기 쉽지는 않지만 loop는 가능합니다.
 
 * AndroidAPS의 모든 펌프들은 주입 중 방수가 된다고 말하고 있습니다. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
 
-The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+물론 Combo도 아주 좋은 펌프이고 loop도 가능합니다. 그것은 표준 루어 락 장치를 가지고 있는 다양한 인퓨전 세트를 가지고 있다는 장점이 있습니다. 그리고 배터리는 24시간 편의점 등에서 쉽게 살 수 있고 만약 당신이 필요한 경우 호텔 방에 있는 리모컨에서 그것을 빼서 사용할 수도 있습니다. ;-)
 
-Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+AndroidAPS와 잠재적으로 연동 가능한 다른 펌프들의 세부정보 상태는 [미래에 연동 가능성이 있는 펌프](Future-possible-Pump-Drivers.md) 에 정리되어 있습니다.
