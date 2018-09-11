@@ -1,16 +1,16 @@
 # Das AndroidAPS Projekt unterstützen
 
-**AndroidAPS operates entirely on volunteer efforts and has no paid staff.**
+**AndroidAPS lebt ausschließlich von ehrenamtlichem Einsatz und hat keine bezahlten Mitarbeiter.**
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Eltern, Betreuer, geliebte Personen und Menschen mit Diabetes arbeiten zusammen, um die Entwicklung einer Lösung für ein sehr verbreitetes Problem voranzutreiben. Die Entwickler arbeiten kostenlos in ihrer Freizeit. Aber es wäre etwas unfair von ihnen zu erwarten, Ausgaben auf sich zu nehmen, um ein solch fantastisches Projekt kostenlos für alle als Open Source zur Verfügung stellen zu können.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Um ein neues Gerät vollständig zu testen, benötigen die Entwickler ein Ersatzgerät und eine Ersatzpumpe, denn solche Tests können nicht an Menschen durchgeführt werden, bevor AndroidAPS stabil läuft. Neuere Pumpenmodelle und CGM-Geräte müssen getestet werden, sobald sie verfügbar sind. Ein Teil des gespendeten Geldes wird auch für den weltweiten Versand dieser Testgeräte an die Entwickler benötigt. Außerdem ist es gut, etwas zu den Reisekosten der Entwickler beizutragen, damit sie die dunklen Kellerräume verlassen und ihre Köpfe auf Konferenzen und anderen Veranstaltungen zusammenstecken können.*
 
-**I can write code! How do I participate?**
+**Ich kann programmieren! Wie kann ich mich beteiligen?**
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Juhuu! Schau dir die Probleme an, frag im Gitter-Channel. Es gibt immer viel zu tun! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten Pull Request! :)
 
-**I know the system and can write documentation!** or **I do speak multiple languages and whant to translate the documentation**
+**Ich kenne das System und kann Dokumente schreiben!** oder **Ich spreche mehrere Sprachen und möchte die Dokumentation übersetzen**
 
 Great, this is a highly appreciated thing and a good way to pay it foreward!
 
