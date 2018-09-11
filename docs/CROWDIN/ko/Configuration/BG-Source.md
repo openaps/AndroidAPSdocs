@@ -26,45 +26,45 @@ _만약 OTG 케이블(전통적인 Nightscout)과 함께 G4를 선택한다면�
 * AndroidAPS 설정에서 당신의 Nightscout 웹사이트와 API 비밀번호를 입력하세요.
 * 구성관리자(안드로이드 APS 셋팅)에서 NS클라이언트를 선택하세요.
 
-**For users of Libre with Bluetooth cap:**  
-To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
+**블루투스 장치와 함께 리브레를 사용하는 경우:**  
+리브레를 매 5분마다 새로운 혈당값을 받는 CGM으로 사용하기 위해서는 다음과 같은 [NFC to 블루투스] 어댑터를 구입해야합니다.
 
-* MiaoMiao-Reader <https://www.miaomiao.cool/>
+* MiaoMiao 리더 <https://www.miaomiao.cool/>
 * Blukon Nightrider <https://www.ambrosiasys.com/howit>
-* BlueReader <https://bluetoolz.de/blueorder/#home>
-* Sony Smartwatch 3 (SWR50) als Auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
+* Bluereader <https://bluetoolz.de/blueorder/#home>
+* Sony Smartwatch 3(SWR50) als auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-_If using xdrip..._  
-
-
-* If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
-* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
-
-_If using Glimp..._  
+_xDrip을 사용하는 경우..._  
 
 
-* If not already set up then download Glimp and follow instructions on [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
-* Select Glimp in ConfigBuilder (setting in AndroidAPS).
+* 만약 미리 셋업하지 않았다면 xdrip 다운로드하고 [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)) 에 있는 지시사항을 따르세요.
+* xDrip 에서 세팅>앱간 호환성 설정>Broadcast Locally 선택
+* xDrip 에서 세팅>앱간 호환성 설정>Accept Treament를 OFF 하세요
+* AndroidAPS에서 보정하여 사용할수 있기를 원한다면 xDrip세팅>앱간 호환성 설정>Accept Calibrations을 ON 하세요. 세팅>추가 세팅>Advanced Calibration 설정에서 옵션사항들을 검토할 수 있습니다.
+* 구성관리자(AndroidAPS 셋팅)에서 xDrip을 선택하세요.
 
-**For users of MM640g or MM630g:**  
-
-
-* If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
-* In 600 Series Uploader go to Settings > Send to xdrip+ and select ON (tick).
-* Select MM640g in ConfigBuilder (setting in AndroidAPS).
-
-**For users of PocTech CT-100:**  
+_Glimp를 사용하는 경우..._  
 
 
-* Install PocTech App
-* Select PocTech App in ConfigBuilder (setting in AndroidAPS).
+* 만약 미리 셋업하지 않았다면 Glimp 다운로드하고 [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre)에 있는 지시사항을 따르세요.
+* 구성관리자(AndroidAPS 세팅)에서 Glimp 선택하세요.
 
-**For users of other CGM uploaded to nightscout:**  
-If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
+**미니메드640g 나 630g를 사용하는 경우...**  
 
 
-* In AndroidAPS Preferences enter your nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* 만약 미리 셋업하지 않았다면 [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/)를 다운로드하고 [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g)에 있는 지시사항을 따르세요.
+* 600시리즈 업로더에서 세팅으로가서 >xdrip+보내기 를 선택하세요.
+* 구성관리자(AndroidAPS 세팅)에서 미니메드640g를 선택하세요.
+
+**Poctech CT-100를 사용하는 경우...**  
+
+
+* PocTech 앱을 설치하세요.
+* 구성관리자(AndroidAPS 셋팅)에서 PocTech 앱을 선택하세요.
+
+**Nightscout에 업로드된 다른 CGM을 사용하는 경우:**  
+만약 당신의 데이타를 [Nightscout](http://www.nightscout.info)에 보내는 다른 CGM 셋업을 가지고 있다면  
+
+
+* AndroidAPS 설정에서 당신의 Nightscout 웹사이트와 API 비밀번호를 입력하세요.
+* 구성관리자(AndroidAPS 셋팅)에서 NSClient를 선택하세요.
