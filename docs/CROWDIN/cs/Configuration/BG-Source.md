@@ -42,6 +42,7 @@ _pokud používáte xDrip..._
 * V Xdripu vyberte nastavení -> Inter-app settings - > Accept Treatments a vyberte vypnout.
 * Pokud chcete aby AndroidAPS bylo schopné kalibrovat, tak v xdrip vyberte nastavení -> Inter-app settings -> Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v Xdrip nastavení položku -> méně časté nastavení -> Advanced Calibration.
 * Vyberte xdrip v ConfigBuilder (nastavení v AndroidAPS).
+* For G5 native mode in xdrip go to Settings > Cloud upload > REST API > Extra options > Append source info to device and select ON.
 
 _pokud používáte Glimp..._  
 
