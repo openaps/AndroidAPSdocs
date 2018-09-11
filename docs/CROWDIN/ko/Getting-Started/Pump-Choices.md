@@ -18,7 +18,7 @@ Combo 펌프는 연동하기 쉽지는 않지만 loop는 가능합니다.
 
 * RS는 오프라인 상태에서도 몇초 이내에 탄수화물을 비롯한 펌프 이력을 읽은 내용이 폰으로 스위치 가능하고 CGM 값이 들어오자 마자 loop는 진행됩니다.
 
-* AndroidAPS의 모든 펌프들은 주입 중 방수가 된다고 말하고 있습니다. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* AndroidAPS와 연동되는 모든 펌프들은 주입 중 방수가 됩니다. 다나 펌프는 봉인된 배터리함과 인슐린 저장소(reservoir) 덕분에 방수 보증이 됩니다.
 
 물론 Combo도 아주 좋은 펌프이고 loop도 가능합니다. 그것은 표준 루어 락 장치를 가지고 있는 다양한 인퓨전 세트를 가지고 있다는 장점이 있습니다. 그리고 배터리는 24시간 편의점 등에서 쉽게 살 수 있고 만약 당신이 필요한 경우 호텔 방에 있는 리모컨에서 그것을 빼서 사용할 수도 있습니다. ;-)
 
