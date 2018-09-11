@@ -176,7 +176,7 @@ Klicke auf “Create new...” um einen Key zu erstellen. Dieser ist nichts ande
   * “Alias”: ist der Name für die Verschlüsselung. Du kannst ihn unverändert lassen wie vorgegeben oder jeden beliebigen anderen Namen eingeben.
   * Die Passwort-Felder unter dem Key sind für den Key selbst. Wie immer, um auf die Eingabe auf Tippfehler zu prüfen.
   * “Validity”: Übersetzt bedeutet das “Gültigkeit”. Du kannst die “25 years” so stehen lassen.
-  * You only have to fill out firstname and lastname but feel free to complete the rest of information. Klicke danach auf “OK”.
+  * Du musst nur “First and Last Name” (“übersetzt: Vor- und Nachname”) ausfüllen, kannst aber auch den Rest ergänzen. Klicke danach auf “OK”.
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
@@ -203,15 +203,15 @@ Klicke auf “locate” im “event log”.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
-Es sollte sich ein Datei Manager öffnen. It might look a bit different on your system as I am using Linux. In Windows wird sich der “Explorer” öffnen, in Mac OS X der “Finder”. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+Es sollte sich ein Datei Manager öffnen. Das könnte bei dir anders aussehen (dieser Screenshot wurde auf einem Linux PC erstellt). In Windows wird sich der “Explorer” öffnen, in Mac OS X der “Finder”. Dort solltest du jetzt das Verzeichnis mit der APK-Datei sehen. Es ist aber unglücklicherweise nicht die, die wir suchen, sondern nur die “wear-release.apk”.
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Übertrage die Datei auf dein Smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload or email. In diesem Beispiel verwende ich Gmail, da dies für mich ziemlich einfach ist. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Wenn Du einen anderen Übertragungsweg nutzt, setze die entsprechenden Rechte analog zum Vorgehen bei Gmail.
+Um zu der gesuchten APK zu gelangen, musst du zu dem Ordner AndroidAPS/app/full/release gehen und nach der “app-full-release.apk” Datei Ausschau halten. Übertrage die Datei auf dein Smartphone. Du kannst es machen wie du willst, z.B. Bluetooth, Cloud Upload oder E-Mail. In diesem Beispiel verwende ich Gmail, da dies für mich ziemlich einfach ist. Ich erwähne das deshalb, weil wir Android erlauben müssen, auf unserem Smartphone diese Installation auszuführen, auch wenn diese Datei via Google Mail empfangen wurde, was normalerweise verboten ist. Wenn Du einen anderen Übertragungsweg nutzt, setze die entsprechenden Rechte analog zum Vorgehen bei Gmail.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+In den Einstellungen deines Smartphones gibt es den Bereich "Unbekannte Quellen". Dort musst du Gmail das Recht geben, APK Dateien zu installieren, die du per Gmail erhalten hast.
 
 ![Screenshot 49](../images/Installation_Screenshot_49.png)
 
