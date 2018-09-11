@@ -8,7 +8,7 @@ Combo 펌프는 연동하기 쉽지는 않지만 loop는 가능합니다.
 
 * 수일개발에서 (특정적으로 Loop 사용을 명시하진 않았지만) 스마트폰으로 펌프를 제어해도 보증이 무효화되지는 않는다고 언급했습니다. IME-DC은 보증이 필요할 경우 대체품으로 단지 교환해줄 뿐이고, 문제가 발생한 펌프는 수일개발로 바로 보낸다고 언급했습니다. 따라서 그들은 당신의 Loop 사용여부를 알지도 못합니다. 따라서 현재 다나R과 다나RS는 DIY Loop를 사용하면서도 보증을 받을 수 있는 유일한 펌프입니다. (Roche는 매뉴얼에 언급되지 않은 내용에 대해서는 사용을 제한하고 있습니다.)
 
-* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
+* 다나*R/RS 펌프는 Android 5.1 이상의 대부분에 폰에서 연결이 됩니다. 만약 당신의 폰이 고장났다면 다나*R/RS와 연동되는 교체 폰은 쉽게 찾을 수 있습니다. Combo와 연동되는 폰을 찾기는 쉽지 않습니다. (Android 8.1 이상의 폰이 좀 더 대중화되면 바뀔 수도 있습니다)
 
 * Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
 
