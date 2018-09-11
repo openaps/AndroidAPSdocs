@@ -10,11 +10,11 @@ Combo 펌프는 연동하기 쉽지는 않지만 loop는 가능합니다.
 
 * 다나*R/RS 펌프는 Android 5.1 이상의 대부분에 폰에서 연결이 됩니다. 만약 당신의 폰이 고장났다면 다나*R/RS와 연동되는 교체 폰은 쉽게 찾을 수 있습니다. Combo와 연동되는 폰을 찾기는 쉽지 않습니다. (Android 8.1 이상의 폰이 좀 더 대중화되면 바뀔 수도 있습니다)
 
-* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
+* Initial pairing is simpler with the Dana* RS. 그러나 일반적으로 이 작업은 한 번만 수행되므로 다른 펌프로 새 기능을 테스트하려는 경우에만 영향을줍니다.
 
-* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+* 지금까지 Combo는 screen parsing으로 동작합니다. 일반적으로 잘 동작하지만 아주 느립니다. Loop를 실행하기 위해서는 백그라운드에서 작업이 수행되는 것이 훨씬 많으므로 이것은 문제가 되지 않습니다. 그렇지만 여전히 블루투스 연결이 끊기거나 했을 때 좀더 많은 시간이 필요하고 bolusing & cooking 등을 할 때 당신이 폰으로 부터 떨어져 있는 경우 쉽지 않은 일입니다.
 
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Combo는 TBRs의 마지막에 진동이 울리고 다나R은 SMB 상태에서 진동 또는 경고음이 울립니다. 야간에는 SMB보다는 TBRs를 더 많이 사용할 것입니다. 다나RS는 경고음이나 진동 모두 울리지 않게 구성할 수 있습니다.
 
 * Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 
