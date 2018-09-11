@@ -142,7 +142,7 @@ Ist diese abgeschlossen, dann klicke wieder auf “Finish”.
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Sieht so aus, als ob wir die Fehlermeldungen hinter uns haben :). Maybe it's time to drink some water?
+Sieht so aus, als ob wir die Fehlermeldungen hinter uns haben :). Zeit für eine Trinkpause?
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
