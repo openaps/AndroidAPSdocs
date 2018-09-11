@@ -1,12 +1,12 @@
-# Pumps compatible with AndroidAPS
+# AndroidAPS와 호환되는 펌프
 
-AndroidAPS currently works with the Dana* R, Dana* RS and Combo pumps. The Dana* R and Combo have been available on the market for a while so many people already have access to these, and Dana* RS as an upgrade to the Dana* R is becoming a more common choice. If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+AndroidAPS는 현재 다나R, 다나RS 그리고 Combo 펌프에서 동작합니다. 다나R과 Combo 펌프는 출시된 국가에서 구할 수 있고 이미 많은 사람들이 이것들을 사용하고 있으며 다나RS 펌프는 다나R이 업그레이드된 펌프로써 APS를 연동을 위해 좀더 일반적으로 선택되어지고 있습니다. 만약 당신이 업그레이드된 펌프를 선택할 생각이거나 많은 사람들이 선택하는 펌프를 선택하고 싶다면 다나RS 펌프를 선택하면 됩니다. 다양한 판매자의 세부정보는 [이 스프레드시트](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0)에 있고 만약 리스트에 없는 정보를 당신이 알고 있다면 공유해 주시기 바랍니다.
 
-The Combo is a solid pump, and loopable.
+Combo 펌프는 연동하기 쉽지는 않지만 loop는 가능합니다.
 
-The advantages of the Dana* RS as the pump of choice however are:
+다나RS 펌프를 선택하면 아래와 같은 장점이 있습니다.
 
-* Sooil did state that controlling the pump from a phone (didn't not-specifically state looping) would NOT void the warranty. IME-DC stated they would just hand out a replacement send the pump to Sooil - so they wouldn't even know if you were looping or not. This makes the Dana* R/RS pumps the only pumps that are under warranty while looping. (Roche excludes any use that is not in their manual.)
+* 수일개발에서 (특정적으로 Loop 사용을 명시하진 않았지만) 스마트폰으로 펌프를 제어해도 보증이 무효화되지는 않는다고 언급했습니다. IME-DC은 보증이 필요할 경우 대체품으로 단지 교환해줄 뿐이고, 문제가 발생한 펌프는 수일개발로 바로 보낸다고 언급했습니다. 따라서 그들은 당신의 Loop 사용여부를 알지도 못합니다. 따라서 현재 다나R과 다나RS는 DIY Loop를 사용하면서도 보증을 받을 수 있는 유일한 펌프입니다. (Roche는 매뉴얼에 언급되지 않은 내용에 대해서는 사용을 제한하고 있습니다.)
 
 * The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
 
