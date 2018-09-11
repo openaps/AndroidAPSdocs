@@ -16,9 +16,9 @@ Combo 펌프는 연동하기 쉽지는 않지만 loop는 가능합니다.
 
 * Combo는 TBRs의 마지막에 진동이 울리고 다나R은 SMB 상태에서 진동 또는 경고음이 울립니다. 야간에는 SMB보다는 TBRs를 더 많이 사용할 것입니다. 다나RS는 경고음이나 진동 모두 울리지 않게 구성할 수 있습니다.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* RS는 오프라인 상태에서도 몇초 이내에 탄수화물을 비롯한 펌프 이력을 읽은 내용이 폰으로 스위치 가능하고 CGM 값이 들어오자 마자 loop는 진행됩니다.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* AndroidAPS의 모든 펌프들은 주입 중 방수가 된다고 말하고 있습니다. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
 
 The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
 
