@@ -1,6 +1,6 @@
-# DanaR Pump
+# 다나R 펌프
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump) if you have the DanaRS launched in 2017 instead.*
+*다음 지침은 다나R에서 앱과 펌프를 구성하기 위한 것입니다. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump) if you have the DanaRS launched in 2017 instead.*
 
 * In the pump go to Main Menu > Setting > User Option
 * Turn on "8. Extended Bolus"
