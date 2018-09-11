@@ -1,4 +1,4 @@
-# Sensitivity Detection and COB options
+# 민감도 감지 및 COB 옵션
 
 * Currently we have 3 sensitivity detection models 
   * Sensitivity Oref0
