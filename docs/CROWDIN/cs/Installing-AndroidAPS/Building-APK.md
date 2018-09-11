@@ -2,8 +2,8 @@
 
 Tento článek je rozdělený do dvou částí.
 
-* V části přehled se vám dostane vysvětlení, které kroky obecně jsou nutné, abyste sestavili soubor APK.
-* V části průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android studio běží na Windows, Linuxu a Mac OS X a proto tam mohou být malé rozdíly na různých platformách. Jestliže najdete něco zásadního, co je špatně nebo vám chybí, prosím informujte o tom facebookovou skupinu "AndroidAPS users" nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
+* In the overview part there is an explanation on what steps are necessary to build the APK file.
+* V části průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
 ## Přehled
 
@@ -61,7 +61,7 @@ Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
 ![Snímek 9](../images/Installation_Screenshot_09.png)
 
-* Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Možná je teď vhodná doba pro krátkou přestávku?
+* Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Maybe it's time for a short break?
 
 * Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte "Check out project from Version Control" s "Git" jako konkrétní verzí správce zdrojových kódů.
 
@@ -71,7 +71,7 @@ Zadejte URL adresu do hlavního úložiště AndroidAPS ("https://github.com/Mil
 
 ![Snímek 13](../images/Installation_Screenshot_13.png)
 
-Android Studio začne s klonováním. Neklikejte na "Background", což by věci nyní pouze zkomplikovalo.
+Android Studio začne s klonováním. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
 ![Snímek 14](../images/Installation_Screenshot_14.png)
 
@@ -83,12 +83,12 @@ Použijte standardní "default gradle wrapper" a klikněte na "OK".
 
 ![Snímek 16](../images/Installation_Screenshot_16.png)
 
-Přečtěte si a zavřete okno "Tip of Day" kliknutím na "Close".
+Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
 ![Snímek 17](../images/Installation_Screenshot_17.png)
 
-* Výborně, teď máte vlastní kopii zdrojových kódů a jste připravení na začátek sestavování.
-* Nyní se blížíme k naší první chybové zprávě. Naštěstí nám Android Studio k tomu nabídne řešení.
+* Excellent, you have your own copy of the source code and are ready to start the build.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Klikněte na "Install missing platform(s) and sync project", protože Android Studio potřebuje doinstalovat chybějící platformu.
 
@@ -142,11 +142,11 @@ Nyní je dokončené. Prosím, klikněte na "Finish".
 
 ![Snímek 30](../images/Installation_Screenshot_30.png)
 
-Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Možná je čas dát si trochu vody?
+Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Maybe it's time to drink some water?
 
 ![Snímek 31](../images/Installation_Screenshot_31.png)
 
-Android Studio nám doporučuje, abychom aktualizovali systém gradle na verzi 4.4. Jestliže děláte sestavení pro AndroidAPS verzi, která předchází alespoň release kandidátovi (RC) verze 2.0, neřiďte se tímto doporučením. Jinak sestavení selže. Systém gradle je pomůcka Android Studia, která řídí proces sestavení. Pro AndroidAPS není žádná nevýhoda, když použijete starou verzi gradle. Soubor APK se ve výsledku nebude lišit. Pokud sestavujete APK pro verzi AndroidAPS 2, klidně můžete aktualizovat gradle systém na verzi 4.4. Prosím klikněte na "Remind me tomorrow".
+Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. Systém gradle je pomůcka Android Studia, která řídí proces sestavení. For AndroidAPS there is no disadvantage to using the old gradle version. Soubor APK se ve výsledku nebude lišit. Pokud sestavujete APK pro verzi AndroidAPS 2, klidně můžete aktualizovat gradle systém na verzi 4.4. Prosím klikněte na "Remind me tomorrow".
 
 ![Snímek 32](../images/Installation_Screenshot_32.png)
 
@@ -158,7 +158,7 @@ Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
 
 ![Snímek 34](../images/Installation_Screenshot_34.png)
 
-V menu "Build" zvolte "Generate Signed APK...". Podepsání (jako v běžném životě) znamená, že podepíšete vygenerovanou aplikaci, ale digitálním způsobem, jakoby nějakým digitálním otiskem prstu uvnitř samotné aplikace. Je to nutné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [tady](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
+V menu "Build" zvolte "Generate Signed APK...". Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
 ![Snímek 39](../images/Installation_Screenshot_39.png)
 
@@ -166,17 +166,17 @@ Zvolte "app" a klikněte na "Next".
 
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
-Klikněte na "Create new...", abyste začali připravovat úložiště vašich klíčů. Úložiště klíčů v tomto případě není nic jiného, než soubor, ve kterém jsou uložené podepisovací informace. Je zašifrované a údaje jsou zabezpečené hesly. Doporučujeme vám uložit ho do vaší domovské složky a zapamatovat si hesla, ale kdybyste tyto informace ztratili, nebyl by to tak velký problém, protože potom byste prostě museli vytvořit nové úložiště klíčů. Ale lepší je tyto údaje pečlivě uložit.
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Snímek 41](../images/Installation_Screenshot_41.png)
 
 * Vyplňte údaje pro další dialogové okno. 
   * Key store path: je cesta k vašemu úložišti klíčů
-  * Políčka s hesly níže jsou pro úložiště klíčů a jsou jako vždy zdvojená, aby se zabránilo překlepům.
-  * Alias je název pro klíč, který potřebujete. Můžete ponechat výchozí, anebo si vybrat jakékoliv hezké jméno.
-  * Políčka s hesly pod tím jsou pro samotný klíč. Jako vždy zdvojená, aby se zabránilo překlepům.
+  * The password fields below are for the keystore to double check for typing errors.
+  * Alias je název pro klíč, který potřebujete. You can leave the default or give it a fancy name you want.
+  * The password fields below the key are for the key itself. As always to double check for typing errors.
   * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
-  * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje, pokud chcete. Pak klikněte na "OK".
+  * You only have to fill out firstname and lastname but feel free to complete the rest of information. Pak klikněte na "OK".
 
 ![Snímek 42](../images/Installation_Screenshot_42.png)
 
@@ -203,15 +203,15 @@ Klikněte na odkaz "locate" v podokně "Event Log".
 
 ![Snímek 46](../images/Installation_Screenshot_46.png)
 
-Objeví se správce souborů. Na vašem počítači může vypadat trochu odlišně, já např. používám Linux. Na Windows systémech to bude Průzkumník souborů a na Mac OS X to bude Finder. Každopádně byste měli vidět složku s vygenerovaným souborem APK. Bohužel je toto nesprávné místo, protože "wear-release.apk" není podepsané "app" APK, které hledáme.
+Objeví se správce souborů. It might look a bit different on your system as I am using Linux. Na Windows systémech to bude Průzkumník souborů a na Mac OS X to bude Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
 ![Snímek 47](../images/Installation_Screenshot_47.png)
 
-Běžte prosím do složky AndroidAPS/app/full/release, abyste našli "app-full-release.apk" file. Dopravte tento soubor na váš Android telefon. Můžete to udělat vaším oblíbeným způsobem, např. přes bluetooth, cloud uploadem nebo mailem. Já zde na ukázku používám Gmail, jelikož je to pro mě dost jednoduché. Zmiňuji to proto, že instalaci samo-podepsané aplikace potřebujeme v systému Android výslovně povolit, i když byl soubor přijatý přes Gmail. Standardně je to totiž zakázané. Pokud používáte něco jiného, prosím, postupujte adekvátně.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Dopravte tento soubor na váš Android telefon. You can do it on your preferred way, i.e. Bluetooth, cloud upload or email. Já zde na ukázku používám Gmail, jelikož je to pro mě dost jednoduché. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Pokud používáte něco jiného, prosím, postupujte adekvátně.
 
 ![Snímek 48](../images/Installation_Screenshot_48.png)
 
-V nastavení Vašeho telefonu je místo, kde mohu povolit instalaci APK souborů, které jsem si poslal přes Gmail.
+In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
 
 ![Snímek 49](../images/Installation_Screenshot_49.png)
 
