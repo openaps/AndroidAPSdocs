@@ -45,7 +45,7 @@ Getting Started with AndroidAPS
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first>
+   Safety First <./Getting-Started/Safety-first.md>
    Screenshots <./Getting-Started/Screenshots.md>
    Phone <./Getting-Started/Phones.md>
    Pump choices <./Getting-Started/Pump-Choices.md>
