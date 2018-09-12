@@ -45,7 +45,7 @@ AndroidAPS 시작하기
    :maxdepth: 1
    :glob:
    
-   안전제일 <./Getting-Started/Safety-first>
+   안전유의사항 <./Getting-Started/Safety-first>
    스크린샷 <./Getting-Started/Screenshots.md>
    스마트폰 <./Getting-Started/Phones.md>
    펌프 선택 <./Getting-Started/Pump-Choices.md>
