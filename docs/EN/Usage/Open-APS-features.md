@@ -131,7 +131,71 @@ The hardcoded parameters in AndroidAPS are:
 * Adult: 10
 * Insulin resistant adult: 12
 
+### Maximum basal IOB OpenAPS can deliver [U] (OpenAPS "max-iob")
+This parameter limits the maximum of basal IOB where  AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
+ 
+* Child: 3
+* Teenage: 5
+* Adult: 7
+* Insulin resistant adult: 12
+
+### Enable AMA Autosense
+Here, you can chose, if you want to use the [sensitivity detection](http://androidaps.readthedocs.io/en/latest/DE/konfigurations-generator.html#empfindlichkeitserkennung) “autosense” or not.
+ 
+### Autosense adjust temp targets too
+If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more „aggressive“ or not. The actual target might be reached faster with this.
+
+### Advanced Settings
+ 
+**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+  
+**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+ 
+Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+  
+**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.
+ 
+Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing) 
+
+**Bolus snooze dia divisor**
+The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+
+Default value: 2
 
 
 ## Meal Assist (MA)
-...
+
+### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
+This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 2 U/h and set the “2” as your safety parameter. 
+ 
+You cannot chose any value: For safety reason, there is a “hard limit”, which depends on the patient age. The “hard limit” for maxIOB is higher than in AMA. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+ 
+The hardcoded parameters in AndroidAPS are:
+ 
+* Child: 2
+* Teenage: 5
+* Adult: 10
+* Insulin resistant adult: 12
+
+### Maximum basal IOB OpenAPS can deliver [U] (OpenAPS "max-iob")
+This parameter limits the maximum of basal IOB where  AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
+ 
+* Child: 3
+* Teenage: 5
+* Adult: 7
+* Insulin resistant adult: 12
+
+### Advanced Settings
+ 
+**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+
+**Bolus snooze dia divisor**
+The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+
+Default value: 2
+
+
