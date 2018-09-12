@@ -96,16 +96,16 @@ Target - das ist der Zielbereich, den AndroidAPS immer anstreben soll. Du kannst
 
 ## Behandlungen, xDrip, NSClient
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+Dies sind einfach Protokolle der Behandlungen (Bolus und Kohlenhydrate), xDrip Nachrichten und Notizen, die über den integrierten Client an Nightscout gesandt wurden. Du musst dich normalerweise nicht darum kümmern, es sei denn, es liegt ein Problem vor.
 
 ## Konfiguration
 
 ![Konfigurations-Generator](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+An dieser Stelle wird dein AndroidAPS System eingerichtet. Dieses Bild zeigt ein typisches System, das mit einer Accu-Chek Combo Insulinpumpe und einem Dexcom G5 CGM betrieben wird. Der Dexcom Sensor wird über xDrip+ gesteuert. Als Insulin wird NovoRapid mit einem Oref Profil verwendet und die Daten auf einen Nightscout Cloudserver hochgeladen.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+Wenn die Box rechts markiert ist, wird das entsprechende Modul in der oberen Menüliste angezeigt (siehe Abschnitt A beim Hauptbildschirm). Über das kleine Zahnradsymbol können weitere Einstellungen für dieses Modul vorgenommen werden sofern verfügbar.
 
 ## Einstellungen und Vorgaben
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences and settings, and emables you to export your settings if ever you need to transfer to a different rig. These are discussed elsewhere in the wiki.
+Oben rechts in der Navigationsleiste findest du drei übereinander angeodnete Punkte. Der Klick darauf führt zu den Einstellungen und Vorgaben der App. Dort können auch die Einstellungen exportiert werden, z. B. um sie auf ein anderes Handy zu übernehmen. Diese werden an anderer Stelle im Wiki beschrieben.
