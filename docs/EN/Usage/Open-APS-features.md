@@ -109,7 +109,7 @@ Default value: 3 (shouldn’t be changed unless you really need to and know, wha
  
 Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing) 
 
-
+***
  
 ## Advanced Meal Assist (AMA)
 AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
@@ -163,7 +163,7 @@ The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low 
 
 Default value: 2
 
-
+***
 
 ## Meal Assist (MA)
 
