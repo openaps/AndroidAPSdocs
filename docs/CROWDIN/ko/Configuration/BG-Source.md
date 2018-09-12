@@ -42,7 +42,7 @@ _xDrip을 사용하는 경우..._
 * xDrip 에서 세팅>앱간 호환성 설정>Accept Treament를 OFF 하세요
 * AndroidAPS에서 보정하여 사용할수 있기를 원한다면 xDrip세팅>앱간 호환성 설정>Accept Calibrations을 ON 하세요. 세팅>추가 세팅>Advanced Calibration 설정에서 옵션사항들을 검토할 수 있습니다.
 * 구성관리자(AndroidAPS 셋팅)에서 xDrip을 선택하세요.
-* For G5 native mode in xdrip go to Settings > Cloud upload > REST API > Extra options > Append source info to device and select ON.
+* G5 기본 모드의 경우 xDrip에서 세팅> Cloud upload > REST API > Extra options > Append source info to device 을 ON 하세요.
 
 _Glimp를 사용하는 경우..._  
 
