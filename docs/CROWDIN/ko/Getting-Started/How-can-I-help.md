@@ -24,18 +24,18 @@
 
 **돈은 어떻게 사용되나요?**
 
-그돈은 그들이 일한 댓가로는 지불되지 않는다. It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. This is what is currently planned:
+그돈은 그들이 일한 댓가로는 지불되지 않는다. 그것은 회의가 있을 때 개발자들을 위해 사용되어진다. 우리는 매우 투명하려고 노력한다. 이것은 현재 계획되어 있는 것입니다.
 
-* European Dev Meetup in Prague end of May 2018:
-* hiring a room plus internet
-* equipment
-* food / coffee
-* in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
+* 2018년 5월말 European Dev Meetup in Prague:
+* 공간에 추가적인 인터넷을 설치하는 것
+* 장치(기기)
+* 음식/커피
+* 경우에 따라 위의 내용은 완전히 지원되며 약간의 돈이 남아 있습니다: 더 먼 거리를 여행해야하는 사람들을 위한 여행 경비. (다른 대륙 출신의 일부 개발자는 참석할 예정이지만 그 당시 유럽에 이미 있으므로 여행 경비는 낮게 유지될 것입니다.)
 
-**I've got spare equipment, where do I send it?**
+**나는 여분이 기기를 가지고 있습니다. 어디로 보내면 될까요?**
 
-We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+우리는 "나중에 제공되어질" 것들을 수집하고 있고 테스트를 위한 배포를 시작했습니다. 이 과정이 끝나면 남은 기기는 1형 당뇨 커뮤니티를 지원하기 위해 존재하는 "Pay-it-Forward" 페이스 북 그룹 중 하나에 기부될 것입니다. 여분의 기기를 기부하길 원하시면 developers@androidaps.org 로 이메일을 보내주면 주소를 알려드릴것입니다.
 
-**I don't have cash or equipment, how can I help?**
+**나는 돈이나 기기가 없습니다. 어떻게 도울 수 있을까요?**
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+그래픽 디자인, UX 디자인, 번역가, wiki 편집 기술이 필요합니다. 혹은 gitter & 페이스북에서 간단한 질문에 대해서 대답하는 것만으로도 개발자들이 더 힘든일에 집중할 수 있는 시간과 여유를 줄 수 있습니다.
