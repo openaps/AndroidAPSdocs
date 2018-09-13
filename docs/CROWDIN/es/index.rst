@@ -45,7 +45,7 @@ Inicio
    :maxdepth: 1
    :glob:
    
-   La seguridad primero <./Getting-Started/Safety-first>
+   Safety First <./Getting-Started/Safety-first.md>
    Pantallazos <./Getting-Started/Screenshots.md>
    Teléfonos <./Getting-Started/Phones.md>
    Opciones de Bombas de insulina <./Getting-Started/Pump-Choices.md>
