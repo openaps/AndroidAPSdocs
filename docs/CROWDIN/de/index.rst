@@ -45,7 +45,7 @@ Erste Schritte mit AndroidAPS
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first.md>
+   Sicherheitshinweise <./Getting-Started/Safety-first>
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
    Smartphones <./Getting-Started/Phones.md>
    Insulinpumpen <./Getting-Started/Pump-Choices.md>
