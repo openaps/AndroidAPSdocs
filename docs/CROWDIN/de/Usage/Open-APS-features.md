@@ -6,7 +6,7 @@ SMB steht für “super micro bolus” und ist die neueste OpenAPS-Funktion (aus
 
 Grundsätzlich kann es dank SMB bei kohlenhydratarmen Mahlzeiten ausreichen, dem System die geplante Kohlenhydratmenge mitzuteilen und den Rest AAPS zu überlassen. Dies führt aber womöglich zu höheren postprandialen Peaks, weil kein Spritz-Ess-Abstand (SEA) eingehalten werden kann. Oder du gibst, ggf. mit SEA, einen **Anfangsbolus**, der **nur zum Teil** die Kohlenhydrate abdeckt (z.B. 2/3 der geschätzten Menge) und lässt den Rest vom SMB auffüllen.
 
-Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen:
+The SMB feature contains some safety mechanisms:
 
 1. Die größte einzelne SMB-Dosis kann nur der kleinste Wert sein aus:
     
@@ -24,7 +24,7 @@ Siehe auch: [OpenAPS-Dokumentation zu oref1 SMB (englisch)](https://openaps.read
 
 ### Max IE/h, die als TBR gesetzt werden können (OpenAPS “max-basal”)
 
-Diese Sicherheitseinstellung legt fest, welche maximale temporäre Basalrate die Insulinpumpe abgeben darf. Der Wert sollte in der Pumpe und in AAPS übereinstimmen und mindestens beim 3-fachen der höchsten eingestellten einzelnen Basalrate liegen.
+This safety setting determines the maximum temporary basal rate the insulin pump may deliver. Der Wert sollte in der Pumpe und in AAPS übereinstimmen und mindestens beim 3-fachen der höchsten eingestellten einzelnen Basalrate liegen.
 
     Beispiel: Im Basalprofil ist im Laufe des Tages die Basalrate 1.00 U/h die höchste. Dann empfiehlt sich ein max-basal Wert von mindestens 3 U/h.
     
@@ -34,9 +34,9 @@ Du kannst aber keinen beliebigen Wert wählen. AAPS begrenzt als “hard limit�
 AndroidAPS beschränkt den Wert wie folgt:
 
 * Kind: 2
-* Jugendlich: 5
+* Teenager: 5
 * Erwachsener: 10
-* Insulinresistenter Erwachsener: 12
+* Insulin-resistant adult: 12
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS “max-iob”)
 
@@ -74,13 +74,13 @@ Der SMB arbeitet sowohl wenn ein niedriges, als auch wenn ein hohes temporäres 
 
 ### Aktiviere SMB während hohen temporären Zielen
 
-Der SMB arbeitet, wenn ein hohes temporäres Ziel gesetzt ist (Aktivität, Hypo). Diese Option kann "Aktiviere SMB während temporären Zielen" begrenzen: Wenn "SMB mit temporären Zielen" aktiviert ist und "SMB mit hohen temporären Zielen" deaktiviert ist, arbeitet SMB nur mit niedrigen aber nicht mit hohen temporären Zielen.
+Der SMB arbeitet, wenn ein hohes temporäres Ziel gesetzt ist (Aktivität, Hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
 
 ### Aktiviere SMB immer
 
 Der SMB arbeitet immer (unabhängig von COB oder temporären Zielen oder Boli). Zur Sicherheit ist diese Option nur möglich, wenn die BZ-Quelle gut gefilterte (nicht rauschende) Werte ausgibt. Derzeit ist das nur möglich mit dem Dexcom G5, wenn es mit der gepatchten Dexcom App oder mit xDrip+ im “native Modus” ausgelesen wird. Falls ein gemessener Wert zu weit abweicht, gibt der G5 einfach gar keinen Wert ab und wartet die nächste Messung in 5 Minuten ab.
 
-Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert. Weitere Informationen dazu findest du [hier](../../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Aktiviere SMB nach Mahlzeiten
 
@@ -124,19 +124,21 @@ Standardwert: 3 (sollte nur in Ausnahmefällen geändert werden und wenn du weis
 
 Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du weisst, was das bedeutet)
 
+* * *
+
 ## Erweiterter Mahlzeit-Assistent (AMA)
 
 AMA steht für “advanced meal assist” und ist eine OpenAPS-Funktion aus 2017 (Oref0). Nachdem du dir einen Bolus gegeben hast, darf AMA schneller eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein.
 
 **Du musst [Ziel 7](../Usage/Objectives.md) abgeschlossen haben, um diese Funktion verwenden zu können**
 
-Siehe auch: [OpenAPS-Dokumentation zu AMA (englisch)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max IE/h, die als temporäre Basalrate gesetzt werden können (OpenAPS “max-basal”)
 
-Diese Sicherheitseinstellung hindert AndroidAPS daran, jemals eine gefährlich hohe Basalrate zu setzen und begrenzt die temporäre Basalrate auf x IE/h. Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, den höchsten stündlichen Basalratenwert in deinem Profil zu verwenden und diesen mit 4 oder mindestens mit 3 zu multiplizieren. Beispiel: wenn der höchste stündliche Basalratenwert in deinem Profil 1.0 IE/h ist, kannst du diesen mit 4 multiplizieren, wodurch du einen Wert von 4 IE/h erhältst, so dass du "4" als Sicherheitseinstellung setzen kannst.
+Diese Sicherheitseinstellung hindert AndroidAPS daran, jemals eine gefährlich hohe Basalrate zu setzen und begrenzt die temporäre Basalrate auf x IE/h. Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, den höchsten stündlichen Basalratenwert in deinem Profil zu verwenden und diesen mit 4 oder mindestens mit 3 zu multiplizieren. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
-Du kannst aber keinen beliebigen Wert wählen: AAPS begrenzt als “hard limit” den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Das "hard limit" für maxIOB ist höher als in AMA. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
+You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. Das "hard limit" für maxIOB ist höher als in AMA. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
 
 AndroidAPS hat folgende "hard limits":
 
@@ -145,6 +147,73 @@ AndroidAPS hat folgende "hard limits":
 * Erwachsener: 10
 * Insulinresistenter Erwachsener: 12
 
+### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+
+This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist höher als in AMA.
+
+* Kind: 3
+* Teenager: 5
+* Adult: 7
+* Insulinresistenter Erwachsener: 12
+
+### Verwende AMA Autosense
+
+Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
+
+### Autosense adjust temp targets too
+
+If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+
+### Erweiterte Einstellungen
+
+**Verwende immer das kurze durchschnittliche Delta statt einfacher Werte.** Wenn du dies aktivierst, dann verwendet AndroidAPS für die Berechnungen statt des aktuellen Glukosewertes den durchschnittlichen Glukosewert der letzten 15 Minuten (= kurzes durchschnittliches Delta), was normalerweise dem Durchschnittswert der letzten drei Werte entspricht. Dies hilft AndroidAPS dabei, mit Werten aus verrauschten Quellen wie xDrip+ und Libre stabiler zu arbeiten.
+
+**Max daily safety multiplier** Dies ist eine wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 3. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem dreifachen Wert der höchsten stündlichen Rate entspricht, die in der Pumpe gesetzt ist. Wenn es aktiviert ist, wird der Wert von Autotune ermittelt. Beispiel: Wenn die höchste stündliche Basalrate 1.0 U/h ist und der Sicherheitsmultiplikator des Basalhöchstwertes auf 3 gesetzt ist, dann kann AndroidAPS die temporäre Basalrate höchstens auf einen Wert von 3.0 IE setzen.
+
+Standardwert: 3 (sollte nur in Ausnahmefällen geändert werden und wenn du weisst, was das bedeutet)
+
+**Current Basal safety multiplier** Dies ist eine weitere wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 4. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem vierfachen Wert der aktuellen stündlichen Rate entspricht, die in der Pumpe gesetzt ist. Wenn es aktiviert ist, wird der Wert von Autotune ermittelt.
+
+Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du weisst, was das bedeutet)
+
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+
+Default value: 2
+
+* * *
+
 ## Mahlzeit-Assistent (MA)
 
-...
+### Max IE/h, die als temporäre Basalrate gesetzt werden können (OpenAPS “max-basal”)
+
+Diese Sicherheitseinstellung hindert AndroidAPS daran, jemals eine gefährlich hohe Basalrate zu setzen und begrenzt die temporäre Basalrate auf x IE/h. Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, den höchsten stündlichen Basalratenwert in deinem Profil zu verwenden und diesen mit 4 oder mindestens mit 3 zu multiplizieren. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+
+You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. Das "hard limit" für maxIOB ist höher als in AMA. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
+
+AndroidAPS hat folgende "hard limits":
+
+* Kind: 2
+* Teenager: 5
+* Erwachsener: 10
+* Insulinresistenter Erwachsener: 12
+
+### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+
+This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist höher als in AMA.
+
+* Kind: 3
+* Teenager: 5
+* Adult: 7
+* Insulinresistenter Erwachsener: 12
+
+### Erweiterte Einstellungen
+
+**Verwende immer das kurze durchschnittliche Delta statt einfacher Werte.** Wenn du dies aktivierst, dann verwendet AndroidAPS für die Berechnungen statt des aktuellen Glukosewertes den durchschnittlichen Glukosewert der letzten 15 Minuten (= kurzes durchschnittliches Delta), was normalerweise dem Durchschnittswert der letzten drei Werte entspricht. Dies hilft AndroidAPS dabei, mit Werten aus verrauschten Quellen wie xDrip+ und Libre stabiler zu arbeiten.
+
+**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+
+Default value: 2
