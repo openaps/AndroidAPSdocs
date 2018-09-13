@@ -45,7 +45,7 @@ Začínáme s AndroidAPS
    :maxdepth: 1
    :glob:
    
-   Bezpečnost především <./Getting-Started/Safety-first>
+   Safety First <./Getting-Started/Safety-first.md>
    Snímky obrazovky <./Getting-Started/Screenshots.md>
    Telefony <./Getting-Started/Phones.md>
    Možné pumpy <./Getting-Started/Pump-Choices.md>
