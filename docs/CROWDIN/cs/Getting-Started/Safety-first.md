@@ -1,6 +1,6 @@
 # Bezpečnost především
 
-**Pokud se rozhodnete vytvořit vlastní uzavřenou smyčku, vždy myslete na bezpečnost a dopad všech Vašich rozhodnutí**
+**Pokud se rozhodnete vytvořit vlastní uzavřenou smyčku, vždy myslete na bezpečnost a dopad všech Vašich rozhodnutí.**
 
 ## Obecné
 
