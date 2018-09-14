@@ -4,7 +4,7 @@
 
 **Instalace gitu (pokud ho ještě nemáte)**
 
-* Měly by fungovat všechny verze gitu. For example <https://git-scm.com/download/win>
+* Měly by fungovat všechny verze gitu. Například <https://git-scm.com/download/win>
 * Řekněte Android Studiu, kde je git.exe umístěný: File > Settings > Version Control > Git![](../images/git.png)
 
 **Aktualizace lokální kopie**
@@ -31,7 +31,7 @@ Na dolní liště uvidíte zelenou zprávu o aktualizovaném projektu
 
 **Nahrání do telefonu**
 
-Generate signed apk as described in [Building APK](Building-APK.md)
+Vygenerujte podepsaný APK soubor, jak je popsáno v části [Vytvoření APK](Building-APK.md)
 
 ## Vývojové větve
 
@@ -54,5 +54,5 @@ Zřejmě budete potřebovat doladit své nastavení, aby mohlo SMB pracovat efek
 <br />  
   
 Jako u jiných aktualizací, původní kód byl vyčištěný, vylepšený a byly v něm opraveny chyby. <br />  
-Pokud najdete chybu, nebo si myslíte, že se stalo něco špatného při používání Dev větve, pak se podívejte na [záložku Issues](https://github.com/MilosKozak/AndroidAPS/issues), abyste prověřili, jestli to už nenahlásil někdo jiný, pokud ne, tak problém rovnou nahlašte. The more information you can share here the better (don't forget you may need to share your [log files](../Usage/Accessing-logfiles.md). Nové funkce mohou být také diskutovány v [Gitter místnosti](https://gitter.im/MilosKozak/AndroidAPS). <br />  
+Pokud najdete chybu, nebo si myslíte, že se stalo něco špatného při používání Dev větve, pak se podívejte na [záložku Issues](https://github.com/MilosKozak/AndroidAPS/issues), abyste prověřili, jestli to už nenahlásil někdo jiný, pokud ne, tak problém rovnou nahlašte. Čím více informací sdělíte, tím lépe (nezapomeňte sdílet své [log soubory](../Usage/Accessing-logfiles.md). Nové funkce mohou být také diskutovány v [Gitter místnosti](https://gitter.im/MilosKozak/AndroidAPS). <br />  
 Pokud chcete zůstat se svou Dev větví aktuální, můžete postupovat stejným způsobem, jak bylo popsáno výše. Stačí jen namísto "master" větve použít "dev" větev v Android Studiu.
