@@ -4,11 +4,11 @@
 
 * V pumpě DANARS je aplikací používán "BAZÁL A". Existující data budou přepsána.
 
-* V AndroidAPS vyberte Konfiguraci a "DanaRS"
+* V AndroidAPS vyberte "Konfigurace" a "DanaRS"
 
-* Zvolte Menu ťuknutím na 3 tečky v pravém horním rohu. Zvolte položku Předvolby.
+* Zvolte "Menu" ťuknutím na tři tečky v pravém horním rohu. Zvolte položku "Předvolby".
 
-* Vyberte DanaRS připojení nové pumpy a zadejte sériové číslo pumpy DanaRS.
+* Vyberte "DanaRS připojení nové pumpy" a zadejte sériové číslo pumpy DanaRS.
 
 * Vyberte heslo pumpy a zadejte své heslo. (Výchozí heslo je 1234)
 
