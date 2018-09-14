@@ -61,7 +61,7 @@ Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
 ![Snímek 9](../images/Installation_Screenshot_09.png)
 
-* Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Maybe it's time for a short break?
+* Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Možná je teď vhodná doba pro krátkou přestávku?
 
 * Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte "Check out project from Version Control" s "Git" jako konkrétní verzí správce zdrojových kódů.
 
@@ -88,7 +88,7 @@ Přečtěte si okno "Tip of Day" a kliknutím na "Close" je zavřete.
 ![Snímek 17](../images/Installation_Screenshot_17.png)
 
 * Výborně, teď máte vlastní kopii zdrojových kódů a jste připravení začít se sestavováním.
-* Nyní se blížíme k naší první chybové zprávě. Fortunately, Android Studio will directly give us the solution for this.
+* Nyní se blížíme k naší první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
 
 Klikněte na "Install missing platform(s) and sync project", protože Android Studio potřebuje doinstalovat chybějící platformu.
 
@@ -162,7 +162,7 @@ V menu "Build" zvolte "Generate Signed APK...". Podepsání znamená, že podep�
 
 ![Snímek 39](../images/Installation_Screenshot_39.png)
 
-Select "app" and click "Next".
+Zvolte "app" a klikněte na "Next".
 
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
@@ -176,7 +176,7 @@ Klikněte na "Create new...", abyste začali připravovat úložiště svých kl
   * Alias je název pro klíč, který potřebujete. Můžete ponechat výchozí, anebo si vybrat jakékoliv hezké jméno.
   * Políčka s hesly pod tím jsou pro samotný klíč. Jako vždy zdvojená, aby se zabránilo překlepům.
   * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
-  * You only have to fill out firstname and lastname but feel free to complete the rest of information. Pak klikněte na "OK".
+  * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje. Pak klikněte na "OK".
 
 ![Snímek 42](../images/Installation_Screenshot_42.png)
 
@@ -203,15 +203,15 @@ Klikněte na odkaz "locate" v podokně "Event Log".
 
 ![Snímek 46](../images/Installation_Screenshot_46.png)
 
-Objeví se správce souborů. It might look a bit different on your system as I am using Linux. Na Windows systémech to bude Průzkumník souborů a na Mac OS X to bude Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+Objeví se správce souborů. Na vašem počítači může vypadat trochu odlišně, já např. používám Linux. Na Windows systémech to bude Průzkumník souborů a na Mac OS X to bude Finder. V něm byste měli vidět složku s vygenerovaným souborem APK. Bohužel je toto nesprávné místo, protože "wear-release.apk" není podepsané "app" APK, které hledáme.
 
 ![Snímek 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Dopravte tento soubor na váš Android telefon. You can do it on your preferred way, i.e. Bluetooth, cloud upload or email. Já zde na ukázku používám Gmail, jelikož je to pro mě dost jednoduché. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Pokud používáte něco jiného, prosím, postupujte adekvátně.
+Běžte prosím do složky AndroidAPS/app/full/release, abyste našli soubor "app-full-release.apk". Přeneste tento soubor do telefonu s Androidem. Můžete to udělat svým oblíbeným způsobem, např. přes bluetooth, cloud uploadem nebo e-mailem. Já zde na ukázku používám Gmail, jelikož je to pro mě dost jednoduché. Zmiňuji to proto, protože instalaci samo-podepsané aplikace potřebujeme v systému Android výslovně povolit, i když byl soubor přijatý přes Gmail. Standardně je to totiž zakázané. Pokud používáte něco jiného, prosím, postupujte adekvátně.
 
 ![Snímek 48](../images/Installation_Screenshot_48.png)
 
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+V nastavení svého telefonu je místo, kde mohu povolit instalaci APK souborů, které jsem si poslal přes Gmail.
 
 ![Snímek 49](../images/Installation_Screenshot_49.png)
 
