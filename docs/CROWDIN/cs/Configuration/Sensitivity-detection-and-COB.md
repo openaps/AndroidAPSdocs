@@ -27,4 +27,4 @@ AAPS, vážený průměr - absorpce se počítá tak, aby bylo `COB == 0` po ur�
 
 ![COB z AAPS](../images/cob_aaps.png)
 
-Jestliže je použitá minimální absorpce sachardiů namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví zelená tečka
+Jestliže je použitá minimální absorpce sachardiů namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví zelená tečka.
