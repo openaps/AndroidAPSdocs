@@ -80,7 +80,7 @@ Configuration
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    
-Usage
+Utilização
 ------------
 .. toctree::
    :maxdepth: 1
