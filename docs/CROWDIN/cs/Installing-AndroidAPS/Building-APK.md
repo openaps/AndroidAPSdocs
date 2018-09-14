@@ -2,8 +2,8 @@
 
 Tento článek je rozdělený do dvou částí.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* V části průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
+* V části přehled najdete vysvětlení, které kroky jsou obecně nutné, abyste sestavili soubor APK.
+* V části průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android studio běží na Windows, Linuxu a Mac OS X, a proto mohou být na různých platformách malé rozdíly. Jestliže najdete něco zásadního, co je špatně, nebo vám něco chybí, prosím informujte o tom facebookovou skupinu „AndroidAPS users“ nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
 
 ## Přehled
 
@@ -71,7 +71,7 @@ Zadejte URL adresu do hlavního úložiště AndroidAPS ("https://github.com/Mil
 
 ![Snímek 13](../images/Installation_Screenshot_13.png)
 
-Android Studio začne s klonováním. Don't click "Background" as it goes fast and makes things more complicated at the moment.
+Android Studio začne s klonováním. Neklikejte na "Background", což by věci nyní pouze zkomplikovalo.
 
 ![Snímek 14](../images/Installation_Screenshot_14.png)
 
@@ -83,12 +83,12 @@ Použijte standardní "default gradle wrapper" a klikněte na "OK".
 
 ![Snímek 16](../images/Installation_Screenshot_16.png)
 
-Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
+Přečtěte si okno "Tip of Day" a kliknutím na "Close" je zavřete.
 
 ![Snímek 17](../images/Installation_Screenshot_17.png)
 
-* Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Výborně, teď máte vlastní kopii zdrojových kódů a jste připravení začít se sestavováním.
+* Nyní se blížíme k naší první chybové zprávě. Fortunately, Android Studio will directly give us the solution for this.
 
 Klikněte na "Install missing platform(s) and sync project", protože Android Studio potřebuje doinstalovat chybějící platformu.
 
@@ -142,11 +142,11 @@ Nyní je dokončené. Prosím, klikněte na "Finish".
 
 ![Snímek 30](../images/Installation_Screenshot_30.png)
 
-Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Maybe it's time to drink some water?
+Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Možná je čas dát si trochu vody?
 
 ![Snímek 31](../images/Installation_Screenshot_31.png)
 
-Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. Systém gradle je pomůcka Android Studia, která řídí proces sestavení. For AndroidAPS there is no disadvantage to using the old gradle version. Soubor APK se ve výsledku nebude lišit. Pokud sestavujete APK pro verzi AndroidAPS 2, klidně můžete aktualizovat gradle systém na verzi 4.4. Prosím klikněte na "Remind me tomorrow".
+Android Studio nám doporučuje, abychom nyní aktualizovali systém gradle na verzi 4.4. Jestliže děláte sestavení pro verzi AndroidAPS, která předchází alespoň release kandidátovi (RC) verze 2.0, neřiďte se tímto doporučením. Jinak sestavení selže. Systém gradle je pomůcka Android Studia, která řídí proces sestavení. Pro AndroidAPS není žádná nevýhoda, když použijete starou verzi gradle. Soubor APK se ve výsledku nebude lišit. Pokud sestavujete APK pro verzi AndroidAPS 2, klidně můžete aktualizovat gradle systém na verzi 4.4. Prosím klikněte na "Remind me tomorrow".
 
 ![Snímek 32](../images/Installation_Screenshot_32.png)
 
@@ -158,23 +158,23 @@ Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
 
 ![Snímek 34](../images/Installation_Screenshot_34.png)
 
-V menu "Build" zvolte "Generate Signed APK...". Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
+V menu "Build" zvolte "Generate Signed APK...". Podepsání znamená, že podepíšete vygenerovanou aplikaci, ale digitálním způsobem, jakoby nějakým digitálním otiskem prstu uvnitř samotné aplikace. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu přečíst více informací [tady](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
 
 ![Snímek 39](../images/Installation_Screenshot_39.png)
 
-Zvolte "app" a klikněte na "Next".
+Select "app" and click "Next".
 
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Klikněte na "Create new...", abyste začali připravovat úložiště svých klíčů. Úložiště klíčů v tomto případě není nic jiného než soubor, ve kterém jsou uložené podepisovací informace. Je zašifrované a údaje jsou zabezpečené hesly. Doporučujeme, abyste si ho uložili do své domovské složky a zapamatovali si hesla. Kdybyste však tyto informace ztratili, nebyl by to tak velký problém, protože potom byste prostě museli vytvořit nové úložiště klíčů. Ale lepší je tyto údaje pečlivě uložit.
 
 ![Snímek 41](../images/Installation_Screenshot_41.png)
 
 * Vyplňte údaje pro další dialogové okno. 
   * Key store path: je cesta k vašemu úložišti klíčů
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias je název pro klíč, který potřebujete. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
+  * Políčka s hesly níže jsou pro úložiště klíčů a jsou zdvojená, aby se zabránilo překlepům.
+  * Alias je název pro klíč, který potřebujete. Můžete ponechat výchozí, anebo si vybrat jakékoliv hezké jméno.
+  * Políčka s hesly pod tím jsou pro samotný klíč. Jako vždy zdvojená, aby se zabránilo překlepům.
   * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
   * You only have to fill out firstname and lastname but feel free to complete the rest of information. Pak klikněte na "OK".
 
