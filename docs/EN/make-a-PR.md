@@ -1,3 +1,5 @@
+This description is just for editing the English documentation. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).
+
 # Making your first PR (pull request)
 
 At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub.  It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs.  Don't worry about making a mistake or somehow editing the wrong documents.  There is always a review process before changes are merged into the "formal" AndroidAPS documentation repository.  You can't mess up the originals through any accidents in the PR process.  The general process is:
