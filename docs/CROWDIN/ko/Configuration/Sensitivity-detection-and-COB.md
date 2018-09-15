@@ -1,30 +1,30 @@
-# Sensitivity Detection and COB options
+# 민감도 감지 및 COB 옵션
 
-* Currently we have 3 sensitivity detection models 
-  * Sensitivity Oref0
-  * Sensitivity AAPS
-  * Sensitivity WeightedAverage
+* 현재 3가지의 민감도 감지 모델이 있습니다. 
+  * 민감도 Oref0
+  * 민감도 AAPS
+  * 민감도 가중평균
 
-### Sensitivity Oref0
+### 민감도 Oref0
 
-Similiar to Oref0 described in [Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html). Basically sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cutted after time specified in preferences
+[Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html)에 설명된 Oref0와 유사합니다. 기본적으로 민감도가 과거 24시간의 데이터로 부터 계산됩니다. (흡수되지 않은 경우) 탄수화물은 설정에서 설정된 시간이 지나면 없어집니다
 
-### Sensitivity AAPS
+### 민감도 AAPS
 
-Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+Oref0처럼 민감도는 동일한 방법으로 계산되어지나, 과거의 시간을 설정할 수는 있습니다. 최소 탄수화물 흡수는 설정의 최대 탄수화물 흡수시간으로부터 계산이 되어집니다.
 
-### Sensitivity WeightedAverage
+### 민감도 가중평균
 
-Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+민감도는 편차에서 가중평균되어 계산됩니다. 최신의 편차가 더 높은 비중을 가지게 됩니다. 최소 탄수화물 흡수는 설정의 최대 탄수화물 흡수시간으로부터 계산이 되어집니다. 이 알고리즘이 민감도 변화에 있어서 가장 빠릅니다.
 
-### COB Examples
+### COB 예시
 
-Oref0 - unabsorbed carbs are cutted after specified time
+Oref0 - 지정된 시간 이후에는 미 흡수된 탄수화물은 없어집니다.
 
-![COB from oref0](../images/cob_oref0.png)
+![Oref0에서의 COB](../images/cob_oref0.png)
 
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
+AAPS, 가중평균 - 탄수화물 흡수가 지정된 시간 후 `COB == 0`가 되도록 계산되어집니다.
 
-![COB from AAPS](../images/cob_aaps.png)
+![AAPS에서의 COB](../images/cob_aaps.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
+편차로부터 계산되어진 수치 대신 최소 탄수화물 흡수가 사용된다면, COB그래프에 초록색 점이 표시됩니다.

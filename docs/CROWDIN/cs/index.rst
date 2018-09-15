@@ -21,9 +21,9 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
 **Co potřebuji, abych mohl začít:**
 
 * Android Smartphone s Android 5.0 nebo novější. Viz ' Tato tabulka <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>' _ pro zprávy o tom, jak dobře telefon pracuje s AndroidAPS.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * ' AndroidAPS <https://github.com/MilosKozak/AndroidAPS>' _, samu o sobě
-* ' Nightscout <https://github.com/nightscout/cgm-remote-monitor>' _ 0.10.2 nebo novější
+* `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 or later
 * A supported pump: Dana-R or Dana-RS Insulin Pump or Accu-Chek Combo (unless you build your own driver for another insulin pump)
 * A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, PocTech
 
@@ -45,7 +45,7 @@ Začínáme s AndroidAPS
    :maxdepth: 1
    :glob:
    
-   Bezpečnost především <./Getting-Started/Safety-first>
+   Safety First <./Getting-Started/Safety-first.md>
    Snímky obrazovky <./Getting-Started/Screenshots.md>
    Telefony <./Getting-Started/Phones.md>
    Možné pumpy <./Getting-Started/Pump-Choices.md>
@@ -93,7 +93,7 @@ Použití
    Prodloužené sacharidy (eCarbs) <./Usage/Extended-Carbs.md>
    Cestování časovými zónami
    Přístup k log souborům <./Usage/Accessing-logfiles.md>
-   Vyhlazování glykémií v xDripu <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   Smoothing Blood Glucose Data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Odstraňování potíží s NSClientem <./Usage/Troubleshooting-NSClient.md>
 

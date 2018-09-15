@@ -10,7 +10,7 @@ Wähle das Basal-Profil aus, das du benutzen möchtest:
 
 * **Nightscout-Profil** Verwendet das von dir auf deiner Nightscout Seite gespeicherte Profil (https://[yournightscoutsiteaddress]/profile). Benutze den Profil Switch (im Reiter PROFIL das gewünschte Profil auswählen und Button "Aktiviere Profil" klicken) um das aktive Profil zu wechseln, falls du in Nightscout mehrere Profile angelegt hast. Das Profil wird dann an die Pumpe übertragen, damit die Basalzufuhr bei einem AAPS-Problem sicher gestellt ist.
 * **Einfaches Profil** Profil mit nur einem Zeitblock (d. h. keine Basalratenänderung innerhalb eines Tages)
-* **Lokales Profil** nutzt das Profil, das in der Pumpe manuell eingegeben wurde. Mehr dazu findest du in diesem Wiki unter [[Profile]].
+* **Lokales Profil** nutzt das Profil, das in der Pumpe manuell eingegeben wurde. Siehe Seite [Profile](../Usage/Profiles.md) für weitere Informationen zu den Einstellungen.
 
 ## Insulin
 
@@ -18,11 +18,11 @@ Wähle die Art der Insulinkurve, die du verwendest. Grundlegende Optionen von An
 
 ## BZ-Quelle
 
-Wähle die Quelle für den Zuckerwert, die du verwendest - weitere Informationen zu den Einstellungen findest du unter [[BZ Quelle]].
+Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. Weitere Informationen findest du auf der Seite [BZ-Quelle](BG-Source.md).
 
 ## Pumpe
 
-Wähle die Pumpe, die du verwendest. Wenn den Open Loop verwenden willst, musst du hier "Virtuelle Pumpe" wählen. Auf den pumpenspezifischen Seiten [[DanaR Insulinpumpe]], [[DanaRS Insulinpumpe]] und [[Accu Chek Combo Pumpe]] findest du weitere Informationen zur Einrichtung.
+Wähle die Pumpe, die du verwendest. Wenn den Open Loop verwenden willst, musst du hier "Virtuelle Pumpe" wählen. Richte deine Pumpe entsprechend den Anweisungen für [DanaR Insulin Pumpe](DanaR-Insulin-Pump.md), [DanaRS Insulin Pumpe](DanaRS-Insulin-Pump.md) oder [Accu Chek Combo Pumpe](Accu-Chek-Combo-Pump.md) ein.
 
 ## Empfindlichkeitserkennung
 
@@ -30,7 +30,7 @@ Wähle die Art der Empfindlichkeitserkennung. Bei der Empfindlichkeitserkennung 
 
 ## APS
 
-Wähle entweder OpenAPS MA (Mahlzeiten-Assistent) oder OpenAPS AMA (advanced meal assist - erweiterter Mahlzeiten-Assistent). Weitere Details zu OpenAPS AMA findest du in der [OpenAPS Dokumentation](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Einfach ausgedrückt profitierst du davon, dass das System nach einem Mahlzeiten-Bolus schneller mit hohen temporären Basalraten reagieren kann, wenn du die Kohlenhydrate zuverlässig eingibst. Die Details zum ausgewählten Algorithmus findest du im Reiter OpenAPS (OAPS). Du musst [Ziel 7](../Usage/Objectives) erreicht haben, um OpenAPS AMA verwenden zu können.
+Wähle entweder OpenAPS MA (Mahlzeiten-Assistent) oder OpenAPS AMA (advanced meal assist - erweiterter Mahlzeiten-Assistent). Weitere Details zu OpenAPS AMA findest du in der [OpenAPS Dokumentation](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Einfach ausgedrückt profitierst du davon, dass das System nach einem Mahlzeiten-Bolus schneller mit hohen temporären Basalraten reagieren kann, wenn du die Kohlenhydrate zuverlässig eingibst. Die Details zum ausgewählten Algorithmus findest du im Reiter OpenAPS (OAPS). Du musst [Ziel 7](../Usage/Objectives.md) erreicht haben, um OpenAPS AMA verwenden zu können.
 
 ## Loop
 
@@ -38,7 +38,7 @@ Wenn du Open oder Closed Loop verwenden willst, musst du dies hier einstellen. I
 
 ## Beschränkungen
 
-Auf dem Reiter Ziele (ZIEL) kannst du deinen Fortschritt mitverfolgen und sehen, welche Meilensteine noch vor dir liegen. Weitere Informationen findest du auf der Seite [[Objectives]].
+Auf dem Reiter Ziele (ZIEL) kannst du deinen Fortschritt mitverfolgen und sehen, welche Meilensteine noch vor dir liegen. Siehe Seite [Ziele](../Usage/Objectives.md) für weitere Informationen zu den Einstellungen.
 
 ## Behandlungen
 
@@ -46,11 +46,11 @@ Der Reiter Behandlungen (BEH) zeigt dir die Behandlungen an, die zu Nightscout h
 
 ## Allgemein
 
-* **Actions** Reiter: Ermöglicht den Profil Switch (siehe [[Profiles]] für weitere Setup Infos) und die Einrichtung von Temp Targets. Nutzer der DanaR/RS oder Combo können außerdem eine manuelle temporären Basalrate (TBR) setzen oder die Kanüle füllen.
+* **Actions** erlaubt dir einen Profil Wechsel auszuführen (siehe [Profil Seiten](../Usage/Profiles.md) für weitere Setup Informationen) und die Einrichtung von Temporären Zielen. Nutzer der DanaR/RS oder Combo können außerdem eine manuelle temporäre Basalrate setzen oder die Kanüle füllen.
 * **Careportal** Erfassung spezifischer Behandlungseinträge einschließlich Notizen und Anzeige des aktuellen Alters von CGM-Sensor, Insulinreservoir, Kanüle und Pumpenbatterie.
-* **SMS-Kommunikator** Erlaubt Betreuern die Fernsteuerung einiger AndroidAPS Funktionen via SMS. Weitere Informationen zum Setup findest Du auf der Seite [[SMS-Befehle]].
+* **SMS-Kommunikator** erlaubt die Fernsteuerung einiger AndroidAPS Funktionen via SMS. Weitere Informationen zum Setup findest du auf der Seite [SMS-Befehle](../Usage/SMS-Commands.md).
 * **Essen** Anzeige und Nutzung der Nightscout Nahrungsmittel-Datenbank. Siehe [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) für weitere Setup Informationen oder rufe deine Datenbank über http://[yournightscoutsiteaddress]/food auf.
-* **Wear** Anzeige der AndroidAPS Informationen auf und Steuerung von AAPS über eine Android Wear Smartwatch. Weitere Informationen zum Setup findest Du unter [[Smartwatch-Integration]].
+* **Wear** Anzeige der AndroidAPS Informationen und Steuerung von AAPS über eine Android Wear Smartwatch. Weitere Informationen zum Setup findest du unter [Smartwatch-Integration](Watchfaces.md).
 * **xDrip Statusline (Smartwatch)** Loop-Informationen im xDrip+ Ziffernblatt anzeigen
 * **Laufende Benachrichtigungen** Zeigt im Dropdown- und Sperrbildschirm deines Smartphones eine Dauer-Benachrichtigung an mit einer kurzen Übersicht darüber, was der Loop derzeit tut.
 * **NS-Client** Synchronisierung Ihrer AndroidAPS-Daten mit Nightscout einrichten

@@ -7,7 +7,7 @@ Erscheinungsdatum: xx.xx.xxxx (noch nicht veröffentlicht)
 ### Wichtige neue Funktionen
 
 * Oref1/SMB wird unterstützt ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)). Bitte lies zuerst die Dokumentation, damit du weißt was du davon erwarten kannst, wie es funktioniert, was der SMB erreichen kann und wie er zu benutzen ist, damit er gut arbeitet.
-* Accu-Chek Combo Insulinpumpe wird unterstützt ([Anleitung zur Einrichtung](../Configuration/Accu-Chek-Combo-Pump.html)).
+* Accu-Chek Combo Insulinpumpe wird unterstützt ([Anleitung zur Einrichtung](../Configuration/Accu-Chek-Combo-Pump.md))
 * Setup Wizard: Der neue Assistent führt dich durch die Einrichtung von AndroidAPS.
 
 ### Einstellungen, die bei Umstellung von AMA zu SMB erforderlich sind
@@ -19,7 +19,7 @@ Erscheinungsdatum: xx.xx.xxxx (noch nicht veröffentlicht)
 ### Startseite
 
 * Im oberen Menüband (Abschnitt A) kannst du durch langen Fingerdruck den Loop pausieren oder deaktivieren, die Pumpe trennen, das aktuelle Profil anzeigen und einen Profilwechsel machen, sowie temporäre Ziele (temp targets - TT) einstellen. Die temporären Ziele verwenden Standardwerte, die du in den Einstellungen festlegen kannst. Das neue Standard-Ziel “HypoTT” löst ein temporäres Ziel im höheren BZ-Bereich aus, damit der Loop nicht überreagiert nachdem du Korrektur-Kohlenhydrate gegessen hast.
-* Neue Behandlungs-Schaltfläche: die alte Behandlungs-Schaltfläche ist weiterhin verfügbar, aber standardmäßig deaktiviert. Du kannst jetzt selbst einstellen, welche Schaltflächen du auf dem Home-Screen haben willst. Es gibt neue Schaltflächen für: Insulin, Kohlenhydrate (einschließlich [eCarbs/extended carbs](../Usage/Extended-Carbs.html)).
+* Neue Behandlungs-Schaltfläche: die alte Behandlungs-Schaltfläche ist weiterhin verfügbar, aber standardmäßig deaktiviert. Du kannst jetzt selbst einstellen, welche Schaltflächen du auf dem Home-Screen haben willst. Es gibt neue Schaltflächen für Insulin und Kohlenhydrate (einschließlich [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
 * Farbige Vorhersage-Linien: 
   * Orange: COB (Die Farbe Orange wird generell genutzt, um COB und Kohlenhydrate darzustellen.)
   * Dunkelblau: IOB (Die Farbe Dunkelblau wird generell genutzt, um IOB und Insulin darzustellen.)

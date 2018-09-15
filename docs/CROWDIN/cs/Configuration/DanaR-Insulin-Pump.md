@@ -2,7 +2,7 @@
 
 *Tyto pokyny pro nastavení aplikace a Vaší pumpy platí, pokud máte pumpu DanaR. Navštivte stránku [Pumpa DanaRS](./DanaRS-Insulin-Pump), pokud máte pumpu DanaRS z roku 2017 a novější.*
 
-* Jděta na pumpě do HLAVNÍ NABÍDKY > NASTAVENÍ > UŽIV. FUNKCE
+* Jděte na pumpě do HLAVNÍ NABÍDKY > NASTAVENÍ > UŽIV. FUNKCE
 * Přejděte na "8. PRODL. BOLUS:"
 
 ![Pumpa DanaR](../images/danar1.png)
@@ -12,7 +12,7 @@
 
 * V AndroidAPS jděte do KONFIGURACE a vyberte typ DanaR kterou máte (DanaR, korejská DanaR, DanaRv2)
 
-* Vyvolejte Menu ťuknutím na 3 tečky v pravém horním rohu. Zvolte Nastavení.
+* Vyvolejte Menu ťuknutím na tři tečky v pravém horním rohu. Zvolte Nastavení.
 * Vyberte DanaR Bluetooth zařízení a ťukněte na sériové číslo Vaší DanaR.
 * Zvolte Heslo k pumpě a vložte Vaše heslo. (Výchozí heslo je 1234)
 * Pokud chcete AndroidAPS povolit bazální hodnotu vyšší než 200%, zvolte Použít prodloužené bolusy pro >200% Mějte na paměti, že nemůžete používat smyčku s tímto nastavením, pokud chcete používat rozšířený bolus pro jídlo.

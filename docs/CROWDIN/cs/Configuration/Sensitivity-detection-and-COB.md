@@ -1,13 +1,13 @@
 # Detekce citlivosti a volby COB
 
-* V současné době máme 3 modely pro detekci citlivosti 
+* V současné době máme tři modely pro detekci citlivosti: 
   * Citlivost Oref0
   * Citlivost AAPS
   * Citlivost váženým průměrem
 
 ### Citlivost Oref0
 
-Tento model pracuje obdobně jako Oref0 popsaný v [Oref0 dokumentaci](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html). Citlivost je počítaná za posledních 24 hodin a trávení sacharidů (pokud nejsou absorbované) se v simulaci zařezává na mezní dobu, která je uvedená v nastavení.
+Tento model pracuje obdobně jako Oref0 popsaný v [Oref0 dokumentaci](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html). Citlivost je počítaná za posledních 24 hodin. Trávení sacharidů (pokud nejsou absorbované) se v simulaci zařezává na mezní dobu, která je uvedená v nastavení.
 
 ### Citlivost AAPS
 
@@ -27,4 +27,4 @@ AAPS, vážený průměr - absorpce se počítá tak, aby bylo `COB == 0` po ur�
 
 ![COB z AAPS](../images/cob_aaps.png)
 
-Jestliže je použitá minimální absorpce sachardiů namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví zelená tečka
+Jestliže je použitá minimální absorpce sachardiů namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví zelená tečka.

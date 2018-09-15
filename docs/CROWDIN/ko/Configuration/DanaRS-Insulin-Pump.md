@@ -6,11 +6,11 @@
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* 오른쪽 상단에 있는 점 3개를 눌러 메뉴를 선택하세요. 설정을 선택하세요.
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
 
-* Select Pump password, and input your password. (Default password is 1234)
+* 펌프 비밀번호를 선택하고 비밀번호를 입력하세요. (기본 비밀번호는 1234)
 
 * Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
@@ -18,4 +18,4 @@
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
-* Enable extended boluses on pump
+* 펌프에서 확장Bolus를 활성화하세요.

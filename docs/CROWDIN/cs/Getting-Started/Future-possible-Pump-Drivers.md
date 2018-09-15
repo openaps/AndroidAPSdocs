@@ -4,7 +4,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 ## Medtronic
 
-**Stav smyčky:** Některé starší verze pump jsou použitelné k uzavřené smyčce, ale nikoliv jejich novější modely (viz níže)
+**Stav smyčky:** Některé starší verze pump jsou použitelné k uzavřené smyčce, ale nikoliv jejich novější modely (viz níže).
 
 **Jiné implementace:** OpenAPS, Loop
 

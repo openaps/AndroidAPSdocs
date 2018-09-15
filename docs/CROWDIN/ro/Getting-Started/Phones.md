@@ -10,4 +10,4 @@ Any problems with the spreadsheet please email <hardware@androidaps.org>, any do
 
 ## Phone Background
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: [Background in high resolution.](../images/bg_phone.jpg)
+![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)

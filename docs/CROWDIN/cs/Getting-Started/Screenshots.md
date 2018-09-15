@@ -32,7 +32,7 @@ The solid blue line shows the basal delivery of your pump. The dotted blue line 
 
 **Section F:** is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
 
-**Section F:** enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
+**Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
 
 ## Kalkulátor
 
@@ -44,7 +44,7 @@ Section A: contains is where you input the information about the bolus that you 
 
 SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
 
-Section B: shows the calculated bolus. If the amount of insulin on boead already exceeds the calculated bolus then it will just display the amount of carbs still required.
+Section B: shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
 Section C: shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
@@ -108,4 +108,4 @@ The tick box on the right determines if that particular module will be displayed
 
 ## Nastavení a předvolby
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences and settings, and emables you to export your settings if ever you need to transfer to a different rig. These are discussed elsewhere in the wiki.
+At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences and settings, and enables you to export your settings if ever you need to transfer to a different rig. These are discussed elsewhere in the wiki.

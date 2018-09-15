@@ -4,7 +4,7 @@
 
 **Installiere git (falls du es noch nicht hast)**
 
-* Jede git Version sollte funktionieren. Zum Beispiel https://git-scm.com/download/win.
+* Jede git Version sollte funktionieren. Beispiel: <https://git-scm.com/download/win>
 * Wähle den Ordner, in dem sich git.exe befinde: File - Settings - Version Control - Git ![](../images/git.png)
 
 **Führe ein Update deiner lokalen Version durch**
@@ -31,7 +31,7 @@ Auf dem Reiter siehst du eine grüne Nachricht “updated project”.
 
 **Upload auf das Smartphone**
 
-Erstelle die APK wie unter [AndroidAPS installieren - App erstellen](./Building-APK.html) beschrieben.
+Erstelle die APK wie unter [Building APK](Building-APK.md) beschrieben
 
 ## Entwickler-Version (dev branch)
 
@@ -56,5 +56,5 @@ Ggf. musst du deine Einstellungen anpassen, damit SMB effektiv arbeiten kann. Ei
 <br />  
   
 Wie bei allen Updates wurde der vorherigen Code bereinigt, verbessert und die Fehler behoben. <br />  
-Wenn du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wurde, dann sehe im [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler bemerkt hat, falls nicht, kannst du einen neuen Issue öffnen. Umso mehr Informationen du dabei bereitstellst, desto besser/schneller kann der Fehler reproduziert und behoben werden, vergesse nicht die [log files](../Usage/Accessing-logfiles.html) anzufügen. Neue Funktion können auch im [gitter room](https://gitter.im/MilosKozak/AndroidAPS) besprochen werden. <br />  
+Wenn du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wurde, dann sehe im [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler bemerkt hat, falls nicht, kannst du einen neuen Issue öffnen. Je mehr Informationen du dabei bereitstellst, desto besser/schneller kann der Fehler reproduziert und behoben werden. Vergiss nicht, die [Log Dateien](../Usage/Accessing-logfiles.md) anzufügen. Neue Funktion können auch im [gitter room](https://gitter.im/MilosKozak/AndroidAPS) besprochen werden. <br />  
 Wenn du mit dem dev branch up to date bleiben willst, kannst du Updates wie oben beschrieben durchführen. Du musst nur in Android Studio auf den entsprechenden dev branch wechseln.

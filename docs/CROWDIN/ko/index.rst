@@ -21,9 +21,9 @@ AndroidAPS는 블루투스 통신기능이 있는 인슐린 펌프를 이용하�
 **시작하기 위해 필요한 것들:**
 
 * 5.0 혹은 이후 버전의 안드로이드 스마트폰. AndroidAPS와 잘 작동하는 폰에 대한 리포트를 확인하시려면 이`이 스프레드시트 <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ 를 확인해보세요.
-* CGM 데이터 수신용 앱: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `Dexcom G5 앱(패치버전) <https://github.com/dexcomapp/dexcomapp>`_, `PochTech 앱 <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ 또는 `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* CGM 데이터 수신 앱: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `Dexcom G5 앱(패치버전) <https://github.com/dexcomapp/dexcomapp>`_, `PochTech 앱 <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ 그 자체
-* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 혹은 그 이후 버전
+* `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 버전 혹은 이후버전
 * 호환되는 펌프: 다나R, 다나RS 또는 아큐-첵 콤보 인슐린 펌프(본인이 직접 다른 인슐린 펌프와 연동되도록 빌드 할 수도 있습니다.)
 * 연속혈당측정기 (CGM) 데이터 소스: 덱스컴 G4/G5/G6, 프리스타일 리브레, 에버센스, 메드트로닉 가디언, 포텍
 
@@ -45,7 +45,7 @@ AndroidAPS 시작하기
    :maxdepth: 1
    :glob:
    
-   안전제일 <./Getting-Started/Safety-first>
+   Safety First <./Getting-Started/Safety-first.md>
    스크린샷 <./Getting-Started/Screenshots.md>
    스마트폰 <./Getting-Started/Phones.md>
    펌프 선택 <./Getting-Started/Pump-Choices.md>
@@ -93,7 +93,7 @@ AndroidAPS 설치하기
    확장 탄수화물
    시간대 이동 <./Usage/Timezone-traveling.md>
    로그파일 다루기<./Usage/Accessing-logfiles.md>
-   xDrip에서 혈당데이터 평활화하기 <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   혈당데이터 평활화하기 <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    아큐-첵 콤보 기초 사용법 <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient 문제해결 <./Usage/Troubleshooting-NSClient.md>
 

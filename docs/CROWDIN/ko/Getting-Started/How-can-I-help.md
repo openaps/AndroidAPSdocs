@@ -1,23 +1,41 @@
-# How to help with AndroidAPS
+# AndroidAPS 지원 방법
 
-***AndroidAPS operates entirely on volunteer efforts and has no paid staff.** Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.*
+**AndroidAPS는 전적으로 자발적인 사람들의 노력으로 운영되고 보수를 받지 않습니다.**
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+개발자들은 부모, 보호자, 그들을 사랑하는 사람들 그리고 당뇨인들이 함께 개발하고 매우 일반적으로 원하는 것에 대한 솔루션을 만들어 갑니다. 개발자들은 그들의 여가시간을 기부하지만, 오픈 소스와 모든것이 무료라는 놀라운 것들을 만들기 위해 추가적인 비용이 드는 것은 그들에게 다소 불공평하다고 느끼게 합니다.
 
-**I can write code! How do I participate?** Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+*새로운 장비를 충분히 테스트하려면 개발자들은 여분의 스마트폰과 인슐린 펌프가 필요합니다. 그것은 안정적인 상태가 될 때까지 사람에게 사용될 수 없기 때문입니다. 새로운 모델은 그것을 사용 가능할 때 테스트 해야합니다. 기부된 돈 중 일부는 이 기기들을 다른 나라에 있는 개발자에게 배송하기 위한 배송비로도 사용됩니다. 가끔은 어두운 방을 벗어나 창의적이고 분석적인 사고를 하기 위해 회의 및 행사를 하는데도 비용을 제공하는 것이 좋습니다.*
 
-**I know the system and can write documentation!** or **I do speak multiple languages and whant to translate the documentation** < br/> Great, this is a highly appreciated thing and a good way to pay it foreward! < br/> The gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby)  
-< br/> A guide how to do commits can be found here: [Openaps/my-first-pr](https://openaps.readthedocs.io/en/latest/docs/Resources/my-first-pr.html#making-your-first-pr-pull-request) (OpenAPS documentation but same applies for AndroidAPS).
+**나는 코드를 작성할 수 있습니다! 내가 어떻게 참여할 수 있을까요?**
 
-**I've got cash I'd like to donate, how do I do that?** PayPal: donations@androidaps.org  
-**What is the money used for?** The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. This is what is currently planned:
+예! 이슈를 보고, gitter 채널에 문의하세요. 항상 해야할 일들이 많이 있습니다. 처음에는 작은일을 선택하고 당신의 첫번째 pull request를 하세요! :)
 
-- European Dev Meetup in Prague end of May 2018: 
-    - hiring a room plus internet
-    - equipment
-    - food / coffee
-    - in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
+**나는 시스템을 알고 문서를 작성할 수 있습니다!** 또는 **다양한 언어를 말하고 문서를 번역할 수 있습니다.**
 
-**I've got spare equipment, where do I send it?** We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+좋다, 이것은 아주 감사할 일이고 재능 기부하기 좋은 방법이다.
 
-**I don't have cash or equipment, how can I help?** Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+* Wiki와 관련된 gitter 채널은 여기서 찾을 수 있다: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby) 
+* Commit하는 방법에 대한 가이드는 여기에서 찾을 수 있다: [How to make a PR](../make-a-PR.md).
+
+**나는 기부할 돈이 있습니다, 어떻게 하면 될까요?**
+
+    PayPal: [donations@androidaps.org](donations@androidaps.org)  
+    
+
+**돈은 어떻게 사용되나요?**
+
+그돈은 그들이 일한 댓가로는 지불되지 않는다. 그것은 회의가 있을 때 개발자들을 위해 사용되어진다. 우리는 매우 투명하려고 노력한다. 이것은 현재 계획되어 있는 것입니다.
+
+* 2018년 5월말 European Dev Meetup in Prague:
+* 공간에 추가적인 인터넷을 설치하는 것
+* 장치(기기)
+* 음식/커피
+* 경우에 따라 위의 내용은 완전히 지원되며 약간의 돈이 남아 있습니다: 더 먼 거리를 여행해야하는 사람들을 위한 여행 경비. (다른 대륙 출신의 일부 개발자는 참석할 예정이지만 그 당시 유럽에 이미 있으므로 여행 경비는 낮게 유지될 것입니다.)
+
+**나는 여분이 기기를 가지고 있습니다. 어디로 보내면 될까요?**
+
+우리는 "나중에 제공되어질" 것들을 수집하고 있고 테스트를 위한 배포를 시작했습니다. 이 과정이 끝나면 남은 기기는 1형 당뇨 커뮤니티를 지원하기 위해 존재하는 "Pay-it-Forward" 페이스 북 그룹 중 하나에 기부될 것입니다. 여분의 기기를 기부하길 원하시면 developers@androidaps.org 로 이메일을 보내주면 주소를 알려드릴것입니다.
+
+**나는 돈이나 기기가 없습니다. 어떻게 도울 수 있을까요?**
+
+그래픽 디자인, UX 디자인, 번역가, wiki 편집 기술이 필요합니다. 혹은 gitter & 페이스북에서 간단한 질문에 대해서 대답하는 것만으로도 개발자들이 더 힘든일에 집중할 수 있는 시간과 여유를 줄 수 있습니다.
