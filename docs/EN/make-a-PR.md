@@ -1,4 +1,4 @@
-This description is just for editing the English documentation. If you want to translate to other languages (thank you), you have to use [crowdin](https://crowdin.com/project/androidapsdocs).
+This description is just for editing the English documentation. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).
 
 # Making your first PR (pull request)
 
