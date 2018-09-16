@@ -31,7 +31,7 @@ Na dolní liště uvidíte zelenou zprávu o aktualizovaném projektu
 
 **Nahrání do telefonu**
 
-Vygenerujte podepsaný APK soubor, jak je popsáno v části [Vytvoření APK](Building-APK.md)
+Vygenerujte podepsaný APK soubor, jak je popsáno v části Vytvoření APK ([odkaz](Building-APK.md))
 
 ## Vývojové větve
 
