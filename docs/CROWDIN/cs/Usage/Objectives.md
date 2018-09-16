@@ -35,7 +35,7 @@ Pokud se chystáte inovovat telefon, pak si můžete exportovat svá nastavení 
 * **Cíl 6:** Adjust basals and ratios if needed, and then enable autosens 
   * Můžete použít [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) jako kontrolní nástroj, že vaše bazály zůstávají přesné, anebo si udělejte tradiční bazální test.
   * Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly. <br />  
-    _Nezapomeňte zaznamenat vaše zkušenosti se smyčkou do [tohoto formuláře](http://bit.ly/nowlooping) a poznačte tam AndroidAPS jako váš typ DIY smyčkového software, pokud jste tak ještě neučinili._
+    _Nezapomeňte zaznamenat vaše zkušenosti se smyčkou do [tohoto](http://bit.ly/nowlooping) formuláře a poznačte tam AndroidAPS jako váš typ DIY smyčkového software, pokud jste tak ještě neučinili._
 
 * **Objective 7:** Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
   
