@@ -102,4 +102,4 @@ Weitere Hinweise zum Thema Datenglättung bei Verwendung von xdrip+ als Datenque
 
 ## Wear-Einstellungen
 
-Weitere Informationen zu den Einstellungen der Wear-Zifferblätter sind unter [Zifferblätter](../Configuration/Watchfaces.md) zu finden.
+Weitere Informationen zu den Einstellungen der Wear-Zifferblätter sind unter [Zifferblaetter](../Configuration/Watchfaces.md) zu finden.
