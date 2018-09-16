@@ -42,4 +42,4 @@ K jakým závěrům můžeme dojít při zkoumání citlivosti inzulínu pomocí
 
 Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI
 
-Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw
+Živý rozhovor s Danou Lewis, autorkou systému "Udělej si sám slinivku" - https://www.youtube.com/watch?v=uvjrPrH0Hrw
