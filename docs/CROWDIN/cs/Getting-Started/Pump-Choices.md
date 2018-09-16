@@ -22,4 +22,4 @@ Výhody pumpy Dany* RS jako volby nicméně jsou:
 
 Combo je samozřejmě velmi dobrá pumpa. Má také výhodu v mnohem více typů infuzních setů se standardním závitem luer lock. A baterie je obyčejná, kterou můžete koupit na každé benzínce, v obchodě který má otevřeno 24 hodin denně a pokud opravdu jednu potřebujete, můžete ji ukrást/půjčit si ji z ovládání v hotelovém pokoji :-P
 
-Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+Podrobnosti o stavu dalších pump s potenciálem pracovat s AndroidAPS jsou zjistitelné na odkazu [Budoucí (možné) pumpy](Future-possible-Pump-Drivers.md).
