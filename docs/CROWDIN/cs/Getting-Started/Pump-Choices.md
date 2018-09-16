@@ -1,6 +1,6 @@
 # Pumpy kompatibilní s AndroidAPS
 
-AndroidAPS aktuálně funguje s Dana* R, Dana* RS a Combo. Dana * R a Combo jsou nějakou dobu na trhu dostupné, takže k nim mělo mnoho lidí přístup, Dana * RS jakožto upgrade Dana * R se stává častější volbou. Pokud potřebujete vybrat na kterou pumpu přejít a koupit, často se ptáte kterou vybrat. Podrobnosti různých distributorů jsou v [této tabulce](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), prosím podělte se o vaše detaily, pokud nejsou v seznamu uvedeny.
+AndroidAPS aktuálně funguje s Dana* R, Dana* RS a Combo. Dana * R a Combo jsou nějakou dobu na trhu dostupné, takže k nim mělo mnoho lidí přístup, Dana * RS jakožto upgrade Dana * R se stává častější volbou. Pokud potřebujete vybrat na kterou pumpu přejít a koupit, často se ptáte kterou vybrat. Podrobnosti různých distributorů jsou v této [tabulce](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), prosím podělte se o vaše detaily, pokud nejsou v seznamu uvedeny.
 
 Combo je solidní pumpa a dá se použít pro smyčku.
 
@@ -22,4 +22,4 @@ Výhody pumpy Dany* RS jako volby nicméně jsou:
 
 Combo je samozřejmě velmi dobrá pumpa. Má také výhodu v mnohem více typů infuzních setů se standardním závitem luer lock. A baterie je obyčejná, kterou můžete koupit na každé benzínce, v obchodě který má otevřeno 24 hodin denně a pokud opravdu jednu potřebujete, můžete ji ukrást/půjčit si ji z ovládání v hotelovém pokoji :-P
 
-Podrobnosti o stavu dalších pump s potenciálem pracovat s AndroidAPS jsou zjistitelné na odkazu [Budoucí (možné) pumpy](Future-possible-Pump-Drivers.md).
+Podrobnosti o stavu dalších pump s potenciálem pracovat s AndroidAPS jsou zjistitelné na odkazu Budoucí (možné) [pumpy](Future-possible-Pump-Drivers.md).
