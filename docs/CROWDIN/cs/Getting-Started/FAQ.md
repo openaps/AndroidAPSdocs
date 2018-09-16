@@ -41,7 +41,7 @@ Základní princip uzavřené smyčky je, že vaše dávkování bazálního inz
 
 #### Proč se nyní používá 5h jako dolní limit DIA (doba působnosti inzulínu) namísto 2-3h?
 
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nezapomeňte `AKTIVOVAT PROFIL` po úpravě vašeho DIA.
+Je to dobře vysvětleno [zde](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nezapomeňte `AKTIVOVAT PROFIL` po úpravě vašeho DIA.
 
 ## Další nastavení
 
