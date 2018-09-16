@@ -40,13 +40,13 @@ Die blaue Linie zeigt die Basalrate an, die von der Pumpe abgegeben wird. Die ge
 
 Dies ist die Stelle, an der du normalerweise einen Mahlzeitenbolus abgibst.
 
-Abschnitt A: Hier gibst du die benötigten Informationen für den Bolus ein, den du abgeben möchtest. Das Feld Zuckerwert ist normalerweise bereits mit dem letzten ausgelesenen Wert von deinem CGM befüllt. Wenn Du kein funktionierendes CGM hast, ist das Feld leer. In das Feld CARBS trägst du ein, wieviele Gramm Kohlehydrate - oder deren Äquivalent - du vermutlich zu dir nehmen wirst, die in die Berechnung des Bolus einfliessen sollen. Im CORR Feld können Änderungen eingetragen werden, wenn du die Enddosis aus irgendeinem Grund anpassen willst. Über das Feld CARB Time kannst du einen SEA ("Spritz-Ess-Abstand") einstellen, d. h. das Insulin wird sofort abgegeben, die Kohlenhydrate werden aber erst später erwartet. Du kannst einen negativen Wert in dieses Feld eingeben, wenn du den Bolus nach dem Essen abgibst.
+**Section A:** contains is where you input the information about the bolus that you want. Das Feld Zuckerwert ist normalerweise bereits mit dem letzten ausgelesenen Wert von deinem CGM befüllt. Wenn Du kein funktionierendes CGM hast, ist das Feld leer. In das Feld CARBS trägst du ein, wieviele Gramm Kohlehydrate - oder deren Äquivalent - du vermutlich zu dir nehmen wirst, die in die Berechnung des Bolus einfliessen sollen. Im CORR Feld können Änderungen eingetragen werden, wenn du die Enddosis aus irgendeinem Grund anpassen willst. Über das Feld CARB Time kannst du einen SEA ("Spritz-Ess-Abstand") einstellen, d. h. das Insulin wird sofort abgegeben, die Kohlenhydrate werden aber erst später erwartet. Du kannst einen negativen Wert in dieses Feld eingeben, wenn du den Bolus nach dem Essen abgibst.
 
 Beim SUPER BOLUS wird das Basalinsulin der kommenden zwei Stunden zum sofort abgegebenen Bolus addiert und die Basalrate für die kommenden zwei Stunden auf Null gesetzt, um das extra Insulin zu kompensieren. Damit soll kurzfristig mehr Insulin abgegeben werden und dadurch im günstigsten Fall hohe Werte vermieden werden.
 
-Abschnitt B: zeigt den berechneten Bolus. Falls IOB (Insulin on bord) den berechneten Bolus bereits übersteigt, wird nur die Menge der fehlenden Kohlenhydrate angezeigt.
+**Section B:** shows the calculated bolus. Falls IOB (Insulin on bord) den berechneten Bolus bereits übersteigt, wird nur die Menge der fehlenden Kohlenhydrate angezeigt.
 
-Abschnitt C: zeigt die verschiedenen Faktoren an, die verwendet wurden, um den Bolus zu berechnen. Du kannst diejenigen abwählen, von denen du nicht möchtest, dass sie in die Berechnung einfliessen. Das wird aber die Ausnahme sein.
+**Section C:** shows the various elements that have been used to calculate the bolus. Du kannst diejenigen abwählen, von denen du nicht möchtest, dass sie in die Berechnung einfliessen. Das wird aber die Ausnahme sein.
 
 ## Insulin Profil
 
@@ -84,15 +84,15 @@ Normalerweise musst du dich um diese Punkte nicht kümmern. Sie zeigen die Ergeb
 
 AndroidAPS kann mit verschiedenen Profileinstellungen betrieben werden. In der Regel wird - wie abgebildet - das Nightscout-Profil über den eingebauten Nighscout Client heruntergeladen und hier in nicht veränderlicher Form dargestellt. Änderungen musst du im Nightscout User Interface durchführen und anschliessend in AndroidAPS ein "Switch Profile" ausführen, damit die geänderten Daten heruntergeladen werden. Daten wie z. B. das Basalprofil werden dann automatisch zur Pumpe übertragen.
 
-DIA (Duration of Insulin Action) steht für die Wirkdauer des Insulins und wird oben bei den Insulinprofilen erläutert.
+**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
 
-IC (Insulin to Carb ratio) - das ist der Kohlenhydrate Faktor. In diesem Beispielprofil sind unterschiedliche Werte für verschiedene Tageszeiten hinterlegt.
+**IC:** is Insulin to Carb ratio. In diesem Beispielprofil sind unterschiedliche Werte für verschiedene Tageszeiten hinterlegt.
 
-ISF (Insulin Sensitivity Factor) - der Korrekturfaktor beschreibt wie stark eine Einheit Insulin deinen Blutzucker senkt, wenn sich nichts anderes ändert.
+**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
 
-Basal - das ist das in deiner Pumpe hinterlegte Basalprofil.
+**Basal:** is the basal profile programmed into your pump.
 
-Target - das ist der Zielbereich, den AndroidAPS immer anstreben soll. Du kannst verschiedene Zielbereiche für unterschiedliche Tageszeiten setzen, wenn du willst. Du kannst sogar einen oberen und unteren Zielwert definieren, so dass AndroidAPS nur Änderungen vornimmt, wenn der Blutzucker den Zielbereich verlässt. Wenn Du das tust wird das System aber langsamerer reagieren und es wird unwahrscheinlicher, dass du stabile Zuckerwerte erreichst.
+**Target:** is the blood glucose level that you want the rig to be aiming for all the time. Du kannst verschiedene Zielbereiche für unterschiedliche Tageszeiten setzen, wenn du willst. Du kannst sogar einen oberen und unteren Zielwert definieren, so dass AndroidAPS nur Änderungen vornimmt, wenn der Blutzucker den Zielbereich verlässt. Wenn Du das tust wird das System aber langsamerer reagieren und es wird unwahrscheinlicher, dass du stabile Zuckerwerte erreichst.
 
 ## Behandlungen, xDrip, NSClient
 

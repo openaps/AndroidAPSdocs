@@ -31,15 +31,15 @@ Na dolní liště uvidíte zelenou zprávu o aktualizovaném projektu
 
 **Nahrání do telefonu**
 
-Vygenerujte podepsaný APK soubor, jak je popsáno v části [Vytvoření APK](Building-APK.md)
+Vygenerujte podepsaný APK soubor, jak je popsáno v části Vytvoření APK ([odkaz](Building-APK.md))
 
 ## Vývojové větve
 
 **Pozor:** Dev verze AndroidAPS je pouze pro vývojáře a testery, kteří bez problémů pracují s ladicími výpisy, procházejí logy a eventuálně spustí debugger, aby k chybě připravili zprávu, která je užitečná pro vývojáře (ve zkratce: dev je pro lidi, kteří vědí, co dělají, aniž by potřebovali něčí asistenci!). Proto je mnoho nedokončených funkcí zakázaných. K povolení těchto funkcí vstupte do **Vývojářského režimu** založením souboru s názvem `engineering_mode` ve stejné složce, kde se nacházejí log soubory. Povolením vývojářského režimu můžete smyčku zcela narušit.
 
-Nejstabilnější verze AndroidAPS k použití je ta v [Master větvi](https://github.com/MilosKozak/AndroidAPS/tree/master). Doporučuje se zůstat v Master větvi, než dokončíte cíle a procvičíte se ve smyčce.
+Nejstabilnější verze AndroidAPS k použití je ta v [Master](https://github.com/MilosKozak/AndroidAPS/tree/master) větvi. Doporučuje se zůstat v Master větvi, než dokončíte cíle a procvičíte se ve smyčce.
 
-Nicméně [Dev větev](https://github.com/MilosKozak/AndroidAPS/tree/dev) je dobré místo, kde se ukazují testované funkce a můžete zde pomoci vyžehlit nějaké chyby a poskytnout zpětnou vazbu, jak nové funkce pracují v praxi. Uživatelé často testují Dev větev na starém telefonu a pumpě, než jsou si jistí stabilitou - jakékoliv použití je na vaše vlastní riziko.
+Nicméně [Dev](https://github.com/MilosKozak/AndroidAPS/tree/dev) větev je dobré místo, kde se ukazují testované funkce a můžete zde pomoci vyžehlit nějaké chyby a poskytnout zpětnou vazbu, jak nové funkce pracují v praxi. Uživatelé často testují Dev větev na starém telefonu a pumpě, než jsou si jistí stabilitou - jakékoliv použití je na vaše vlastní riziko.
 
 Následuje krátké shrnutí některých změn oproti předchozím verzím a nové funkce aktuálně v Dev větvi. Odkazy na všechny známé klíčové problémy budou sdílené (pokud existují).
 
@@ -54,5 +54,5 @@ Zřejmě budete potřebovat doladit své nastavení, aby mohlo SMB pracovat efek
 <br />  
   
 Jako u jiných aktualizací, původní kód byl vyčištěný, vylepšený a byly v něm opraveny chyby. <br />  
-Pokud najdete chybu, nebo si myslíte, že se stalo něco špatného při používání Dev větve, pak se podívejte na [záložku Issues](https://github.com/MilosKozak/AndroidAPS/issues), abyste prověřili, jestli to už nenahlásil někdo jiný, pokud ne, tak problém rovnou nahlašte. Čím více informací sdělíte, tím lépe (nezapomeňte sdílet své [log soubory](../Usage/Accessing-logfiles.md). Nové funkce mohou být také diskutovány v [Gitter místnosti](https://gitter.im/MilosKozak/AndroidAPS). <br />  
+Pokud najdete chybu, nebo si myslíte, že se stalo něco špatného při používání Dev větve, pak se podívejte na záložku [Issues](https://github.com/MilosKozak/AndroidAPS/issues), abyste prověřili, jestli to už nenahlásil někdo jiný, pokud ne, tak problém rovnou nahlašte. Čím více informací sdělíte, tím lépe (nezapomeňte sdílet své [log soubory](../Usage/Accessing-logfiles.md). Nové funkce mohou být také diskutovány v [Gitter](https://gitter.im/MilosKozak/AndroidAPS) místnosti. <br />  
 Pokud chcete zůstat se svou Dev větví aktuální, můžete postupovat stejným způsobem, jak bylo popsáno výše. Stačí jen namísto "master" větve použít "dev" větev v Android Studiu.

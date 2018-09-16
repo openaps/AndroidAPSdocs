@@ -1,6 +1,6 @@
 # Nejčastější otázky uživatelů APS
 
-Jak sem přidat další otázky: Postupujte podle těchto [pokynů](../make-a-PR.md)
+Jak sem přidat další otázky: Postupujte podle těchto pokynů: [odkaz](../make-a-PR.md)
 
 ## Obecné
 
@@ -110,7 +110,7 @@ Nebudete schopni přijímat telefonní hovory ani nebudete mít přístup na int
 
 ### Jak se vypořádat s cestováním přes časové zóny?
 
-S DanouR a korejskou verzí nemusíte dělat nic. Ostatní čerpadla viz stránka [cestování](../Usage/Timezone-traveling.md) pro další podrobnosti.
+S DanouR a korejskou verzí nemusíte dělat nic. Ostatní čerpadla viz stránka cestování ([odkaz](../Usage/Timezone-traveling.md)) pro další podrobnosti.
 
 ## Pobyt v nemocnici
 
