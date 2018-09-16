@@ -1,6 +1,6 @@
 # Nejčastější otázky uživatelů APS
 
-Jak sem přidat další otázky: Postupujte podle těchto [pokynů](../make-a-PR.md)
+Jak sem přidat další otázky: Postupujte podle těchto pokynů: [odkaz](../make-a-PR.md)
 
 ## Obecné
 
