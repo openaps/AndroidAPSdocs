@@ -2,7 +2,7 @@
 
 * Běžte na <https://translations.androidaps.org> a přihlašte se pomocí svého Github účtu
 
-* Kontaktujte [Miloše](https://gitter.im/MilosKozak) nebo [Adriana](https://gitter.im/AdrianLxM) a udejte jazyk + jestli chcete být překladatel nebo korektor (jenom lidé zdatní v překládání nebo pokročilí AndroidAPS uživatelé)
+* Contact [Milos](https://gitter.im/MilosKozak) or [Adrian](https://gitter.im/AdrianLxM) and specify language and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users)
 
 * Pokud vás schválíme, klikněte na vlajku ![](../images/translation-flags.png)
 
