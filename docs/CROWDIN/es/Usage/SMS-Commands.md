@@ -20,45 +20,45 @@ Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usa
 
 ## LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Lazo deshabilitado
+- Lazo habilitado
+- Suspendido (10 min)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Lazo suspendido durante 20 minutos
 
 ## LOOP RESUME
 
-- Loop resumed
+- Lazo reiniciado
 
 ## TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers
+- Refresca tratamiento
 
 ## NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 receivers
+- Reinicia NSclient
 
-## DANAR / PUMP (since 1.60)
+## DANAR/PUMP (since 1.60)
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Última conexión: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Para cancelar un basal temporal responder con código EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h reply with code Swe
-- Remote basal setting is not allowed (if remote commands not allowed)
+- Para poner basal 0.3u/h responder con código Swe
+- No está permitido comandar basales remotamente (si comandos remotos no están permitidos)
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Para poner bolo 1.2 responder con código Rrt
+- Los bolos remotos no están permitidos (si ha habido otro bolo en últimos 15 minutos o si remoto no habilitado)
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Para enviar calibración 5.6 enviar código Rrt
+- Calibración enviada (si Xdrip instalado. Debe estar habilitado aceptar calibración en Xdrip+)
