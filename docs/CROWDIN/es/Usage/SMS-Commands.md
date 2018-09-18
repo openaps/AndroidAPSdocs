@@ -1,22 +1,22 @@
-# SMS Commands
+# Comandos SMS
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+En los ajustes de tu móvil Android ve a aplicaciones- AndroidAPS- permisos y habilitar SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from and also enable 'Allow remote commands via SMS'
+En AndroidAPD ve a preferencias- Comunicaciones SMS (SMS comunicator) e introduce el número de teléfono con el que permitirás las comunicaciones SMS y habilita también “allow remote commands via SMS”
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usar comandos SMS usando algún comando en negrita abajo, el teléfono responderá para confirmar el comando pedido.
 
 ## BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Último valor de glucemia: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 
 ## LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Lazo se ha deshabilitado
 
 ## LOOP START/ENABLE
 
-- Loop has been enabled
+- Lazo se ha habilitado
 
 ## LOOP STATUS
 
