@@ -1,17 +1,17 @@
-# Update to a new version or branch
+# Actualizar a una nueva versión o rama
 
-## Master branch
+## Rama Master
 
-**Install git (if you don't have it)**
+**Instalar git (si no lo tienes ya)**
 
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Let Studio know where is git.exe located: File - Settings - Version Control - Git ![](../images/git.png)
+* Cualquier versión de git sirve. For example <https://git-scm.com/download/win>
+* Dígale a Studio donde está localizado el archivo git.exe: File-Settings-Versión control -Git ![](../images/git.png)
 
-**Update your local copy**
+**Actualice su copia local**
 
-* Click: VCS->Git->Fetch
+* Click en: VCS-> Git -> Fetch
 
-**Selecting branch**
+**Selecciona la rama**
 
 * If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
 
