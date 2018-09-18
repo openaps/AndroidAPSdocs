@@ -1,12 +1,12 @@
-# Phones
+# Teléfonos
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Los usuarios están creando un listado de teléfonos y relojes testados con Aaps
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Puedes usar filtros en el archivos pero por favor cuando termines vuelve a dejarlo como estaba para la próxima persona.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Para incluir un teléfono y reloj que no está en la lista rellene el formulario
 
-Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email [donations@androidaps.org](mailto:hardware@androidaps.org).
+Cualquier problema envíe email: hardware@androidaps.org, cualquier donació de teléfonos/relojes para testar donations@androidaps.org.
 
 ## Phone Background
 
