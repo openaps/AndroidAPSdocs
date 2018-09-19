@@ -73,9 +73,9 @@ Configuration
    
    Config Builder <./Configuration/Config-Builder.md>
    BG Source<./Configuration/BG-Source.md>
-   DanaR <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
+   DanaR pump<./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS pump<./Configuration/DanaRS-Insulin-Pump.md>
+   Accu Chek Combo pump<./Configuration/Accu-Chek-Combo-Pump.md>
    Watchfaces <./Configuration/Watchfaces.md>
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
