@@ -87,7 +87,7 @@ Usage
    :glob:
     
    Objectives <./Usage/Objectives.md>
-   OpenAPS Features <./Usage/Open-APS-features.md>
+   OpenAPS features <./Usage/Open-APS-features.md>
    Profiles <./Usage/Profiles.md>
    SMS Commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
