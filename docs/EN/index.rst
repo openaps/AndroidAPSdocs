@@ -72,10 +72,10 @@ Configuration
    :glob:
    
    Config Builder <./Configuration/Config-Builder.md>
-   BG Source<./Configuration/BG-Source.md>
-   DanaR pump<./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS pump<./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo pump<./Configuration/Accu-Chek-Combo-Pump.md>
+   BG Source <./Configuration/BG-Source.md>
+   DanaR pump <./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS pump <./Configuration/DanaRS-Insulin-Pump.md>
+   Accu Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
    Watchfaces <./Configuration/Watchfaces.md>
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -88,7 +88,7 @@ Usage
     
    Objectives <./Usage/Objectives.md>
    OpenAPS features <./Usage/Open-APS-features.md>
-   Profiles <./Usage/Profiles.md>
+   Profile switch <./Usage/Profiles.md>
    SMS Commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
    Timezone traveling <./Usage/Timezone-traveling.md>
