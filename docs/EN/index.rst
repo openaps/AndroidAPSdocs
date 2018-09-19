@@ -92,7 +92,7 @@ Usage
    SMS Commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
    Timezone traveling with pumps <./Usage/Timezone-traveling.md>
-   Accessing log files <./Usage/Accessing-logfiles.md>
+   Accessing logfiles <./Usage/Accessing-logfiles.md>
    Smoothing Blood Glucose Data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
