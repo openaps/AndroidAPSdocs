@@ -63,7 +63,7 @@ How to Install AndroidAPS
    Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev-branch.md>
-   Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
    
 Configuration 
 ---------------
