@@ -1,4 +1,4 @@
-# Understanding the AndroidAPS screens
+# Screenshots
 
 ## The Homescreen
 
