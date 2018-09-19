@@ -47,7 +47,7 @@ Getting Started with AndroidAPS
    
    Safety First <./Getting-Started/Safety-first.md>
    Screenshots <./Getting-Started/Screenshots.md>
-   Phone <./Getting-Started/Phones.md>
+   Phones <./Getting-Started/Phones.md>
    Pump choices <./Getting-Started/Pump-Choices.md>
    Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
    FAQ for loopers <./Getting-Started/FAQ.md>
