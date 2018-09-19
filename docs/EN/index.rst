@@ -103,7 +103,7 @@ Where to go for help
    :maxdepth: 1
    :glob:
 
-   Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
+   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 How to help
