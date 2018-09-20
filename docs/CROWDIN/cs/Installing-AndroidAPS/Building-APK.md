@@ -2,21 +2,21 @@
 
 * * *
 
-***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
+***Mějte prosím na paměti** při vytváření AndroidAPS 2.0 apk: **Konfigurace na vyžádání** není podporována v aktuální verzi Android Gradle pluginu! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:*
 
-     * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
-     * *In the left pane, click Build, Execution, Deployment > Compiler.*
-     * *Uncheck the Configure on demand checkbox.*
+     * * Otevřete okno Preferences klepnutím na File > Settings (v systému Mac, Android Studio > Preferences). *
+     * * V levém podokně klepněte na Build, Execution, Deployment > Compiler.*
+     * * Zrušte zaškrtnutí políčka Configure on demand.*
     
 
-## * *Click Apply or OK.*
+## * *Klepněte na tlačítko použít nebo OK.*
 
-### This article is divided into two parts.
+### Tento článek je rozdělený do dvou částí.
 
 * V části přehled najdete vysvětlení, které kroky jsou obecně nutné, abyste sestavili soubor APK.
 * V části průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android studio běží na Windows, Linuxu a Mac OS X, a proto mohou být na různých platformách malé rozdíly. Jestliže najdete něco zásadního, co je špatně, nebo vám něco chybí, prosím informujte o tom facebookovou skupinu „AndroidAPS users“ nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
 
-## Overview
+## Přehled
 
 Následují obecné kroky k sestavení souboru APK:
 
@@ -27,7 +27,7 @@ Následují obecné kroky k sestavení souboru APK:
 * Sestavete podepsané APK.
 * Doručte podepsané APK na váš telefon.
 
-## Step by step walkthrough
+## Průvodce krok za krokem
 
 Následuje detailní popis kroků nutných k sestavení souboru APK.
 
