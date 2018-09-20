@@ -1,4 +1,4 @@
-# Fuentes de datos de glucemia
+# BG source
 
 Para los usuarios de Dexcom Si usa xdrip+  
 
