@@ -15,12 +15,12 @@ Datum vydání: xx.xx.xxxx
 * Cíl 8 musí být zahájeny, aby bylo SMB povolené (SMB záložka obecně ukazuje, která omezení jsou aktivní)
 * maxIOB nyní zahrnuje *všechny* IOB, ne jenom zvýšený bazál. To znamená, že pokud je k jídlu poslaný bolus 8U a maxIOB je 7U, tak SMB nic nepošle, dokud IOB neklesne pod 7U.
 * výchozí hodnota min_5m_carbimpact se změnila z 3 na 8 při přechodu od AMA k SMB. Pokud přecházíte z AMA k SMB, musíte to změnit ručně
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+* Mějte prosím na paměti při vytváření AndroidAPS 2.0 apk: Konfigurace na vyžádání není podporována v aktuální verzi Android Gradle pluginu! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
   
-  * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-  * In the left pane, click Build, Execution, Deployment > Compiler.
-  * Uncheck the Configure on demand checkbox.
-  * Click Apply or OK.
+  * Otevřete okno Preferences kliknutím na File > Settings (na počítači Mac, Android Studio > Preferences).
+  * V levé části pak na Build, Execution, Deployment > Compiler.
+  * Odtrhněte Configure on demand.
+  * Klepněte na tlačítko použít nebo OK.
 
 ### Hlavní stránka
 
@@ -53,7 +53,7 @@ Datum vydání: xx.xx.xxxx
 * Přepracovaná Konfigurace a Cíle, přídány popisky
 * Nová ikona aplikace
 * Spousty vylepšení a oprav chyb
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* Na Nightscoutu nezávislé výstrahy při dlouhodobé nedostupnosti pumpy (např. při vybité baterii v pumpě) a výstrahy při výpadku hodnot ze senzoru (více viz *Místní výstrahy* v nastavení)
 * Možnost ponechat obrazovku trvale zapnutou
 * Možnost zobrazovat upozornění jako Android notifikace
 * Rozšířené filtrování (dovolující mít povolené SMB i více než 6h po jídle) je podporováno Dexcom upravenou aplikací a xDripem v nativním módu.
