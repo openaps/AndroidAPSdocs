@@ -1,4 +1,4 @@
-# Bombas de insulina compatibles con AndroidAPS
+# Pump choices
 
 AndroidAPS actualmente funciona con bombas de insulina DanaR, DanaRS y Roche Combo. DanaR y Combo llevan un tiempo en el mercado y disponibles para usuarios de bomba de insulina, la DanaRS es versión superior a DanaR que se espera estará disponible. Si necesita cambiar de bomba de insulina puede encontrar información en grupos de usuarios. Detalles sobre distribuidores puede encontrarlos aquí, por favor comparte los detalles de la tuya si no están en las opciones mencionadas.
 
