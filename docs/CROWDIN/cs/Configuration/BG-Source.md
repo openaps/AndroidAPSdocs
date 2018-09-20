@@ -38,10 +38,10 @@ _pokud používáte xDrip..._
 
 
 * If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
-* V Xdripu vyberte nastavení -> Inter-app settings - > Lokální odesílání dat a vyberte zapnout.
-* V Xdripu vyberte nastavení -> Inter-app settings - > Accept Treatments a vyberte vypnout.
-* Pokud chcete aby AndroidAPS bylo schopné kalibrovat, tak v xdrip vyberte nastavení -> Inter-app settings -> Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v Xdrip nastavení položku -> méně časté nastavení -> Advanced Calibration.
-* Vyberte xdrip v ConfigBuilder (nastavení v AndroidAPS).
+* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
+* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
+* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+* Select xdrip in ConfigBuilder (setting in AndroidAPS).
 * For G5 native mode in xdrip go to Settings > Cloud upload > REST API > Extra options > Append source info to device and select ON.
 
 _pokud používáte Glimp..._  
