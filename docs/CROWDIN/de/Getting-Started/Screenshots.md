@@ -1,4 +1,4 @@
-# Die AndroidAPS Bildschirme
+# Screenshots
 
 ## Die Startseite
 
