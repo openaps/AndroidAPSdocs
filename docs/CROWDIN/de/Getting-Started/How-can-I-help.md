@@ -10,32 +10,39 @@ Eltern, Betreuer, geliebte Personen und Menschen mit Diabetes arbeiten zusammen,
 
 Juhuu! Schau dir die Probleme an, frag im Gitter-Channel. Es gibt immer viel zu tun! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten Pull Request! :)
 
-**Ich kenne das System und kann Dokumente schreiben!** oder **Ich spreche mehrere Sprachen und möchte die Dokumentation übersetzen**
+**I know the system and can write documentation!**
 
 Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
 
 * Den Gitter-Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby) 
-* Eine Anleitung wie man Commits ausführt, findest du hier: [How to make a PR](../make-a-PR.md).
+* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
 
-**Ich habe Geld, das ich spenden möchte - wie tue ich das?**
+**I do speak multiple languages and whant to translate the app or the documentation**
+
+* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://translations.androidaps.org).
+* If you want to translate **the wiki** to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org). 
+
+Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+
+**I've got cash I'd like to donate, how do I do that?**
 
     PayPal: [donations@androidaps.org] (donations@androidaps.org)  
     
 
-**Wofür wird das Geld verwendet?**
+**What is the money used for?**
 
-Das Geld wird NICHT für die Bezahlung der Arbeit von irgendjemandem verwendet! Es wird verwendet, um die Kosten der Entwickler gering zu halten, wenn wir persönliche Treffen und Meetings organisieren. Wir versuchen so transparent wie möglich zu sein. Hier ein Beispiel:
+The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. This is what is currently planned:
 
-* Europäisches Entwicklertreffen in Prag Ende Mai 2018:
-* Raummiete und Internet
-* Ausrüstung
-* Verpflegung / Kaffee
-* Für den unwahrscheinlichen Fall, dass die oben genannten Kosten vollständig gedeckt sind und etwas Geld übrig bleibt: Reisekosten für die Teilnehmer mit langer und kostspieliger Anreise. (Einige Entwickler von anderen Kontinenten haben teilgenommen. Sie waren zu der Zeit aber bereits in Europa so dass die Reisekosten gering gehalten werden konnten.)
+* European Dev Meetup in Prague end of May 2018:
+* hiring a room plus internet
+* equipment
+* food / coffee
+* in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
 
-**Ich habe Ersatzgeräte - wohin kann ich sie schicken?**
+**I've got spare equipment, where do I send it?**
 
-Derzeit sammeln wir "wird später zur Verfügung gestellt", um sie zum Testen zu verteilen. Sollten am Ende Geräte übrig bleiben, so werden wir sie einer der Pay-it-Forward Facebook Gruppen spenden, die bereits existieren und die T1 Community unterstützen. Sende eine E-Mail an developers@androidaps.org, wenn du dein Ersatzgerät spenden möchtest. Wir senden dir dann die Empfängeradresse.
+We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
 
-**Ich habe weder Geld noch Geräte - wie kann ich helfen?**
+**I don't have cash or equipment, how can I help?**
 
-Wir brauchen auch Grafikdesigner, Experten für User Experience, Übersetzer und Autoren für das Wiki. Oder bringe das Projekt dadurch voran, dass du die einfachen Fragen auf Gitter und Facebook beantwortest, damit sich die Entwickler darauf konzentrieren, die harten Nüsse zu knacken.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
