@@ -1,19 +1,19 @@
-# Smoothing blood glucose data
+# Vyhlazování zarušených dat glykémií
 
-AAPS funguje nejlépe, pokud údaje glykémií, které dostává, jsou čisté a konzistentní. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+AAPS funguje nejlépe, pokud údaje glykémií, které dostává, jsou nepřerušované a konzistentní. Některé funkce, jako je "Vždy povolit SMB" a "Povolit SMB po jídle" lze použít pouze s filtrovaným zdrojem glykémií.
 
-## Dexcom G5 App (patched)
+## Dexcom G5 aplikace (upravená)
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+Používáte-li aplikaci upravenou aplikaci Dexcom G5 data jsou vyrovnaná a konsistentní. V tom případě nejsou žádná omezení v použití SMB.
 
-## xDrip+ with Dexcom G5
+## xDrip+ s Dexcom G5
 
-Smooth enough data is only delivered if you use xDrip G5 'OB1 collector in native mode'.
+Dostatečně plynulá data jsou doručena jedině v případě, že používáte xDrip G5 OB1 kolektor v nativním módu (OB1 collector in native mode).
 
-## xDrip+ with Freestyle Libre
+## xDrip+ s Freestyle Libre
 
-When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
+Při použití xDrip+ zdroje dat z Freestyle Libre nelze aktivovat funkce "Vždy povolit SMB" a "Povolit SMB po jídle" do SMB, protože hodnoty BG nejsou dostatečně vyrovnané. Existuje několik způsobů, jak snížit šum v BG datech.
 
-**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+**Smooth Sensor Noise.** v xDrip+ Nastavení > xDrip+ Nastavení zobrazení se ujistěte, že je Smooth Sensor Noise volba zapnutá. Tímto se xDrip+ pokusí vyhladit data s velkým šumem.
 
-**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first [enable engineering mode in xDrip+](./Enabling-Engineering-Mode-in-xDrip.html). Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
+**Smooth Sensor Noise (Ultrasensitive).** Jestliže v xDrip+ stále vidíte data s velkým šumem, můžete použít agresivnější vyhlazování použitím nastavení Smooth Sensor Noise (Ultrasensitive). Tímto se xDrip+ pokusí použít vyhlazování i pro velmi nízké hodnoty detekovaného šumu. To provedete tak, že nejprve [povolíte Engineering mode v xDrip+](./Enabling-Engineering-Mode-in-xDrip.html). Pak jděte v xDrip+ do Nastavení > Nastavení zobrazení a zapněte Smooth Sensor Noise (Ultrasensitive).
