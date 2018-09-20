@@ -47,7 +47,7 @@ Erste Schritte mit AndroidAPS
    
    Sicherheitshinweise <./Getting-Started/Safety-first>
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
-   Smartphones <./Getting-Started/Phones.md>
+   Phones <./Getting-Started/Phones.md>
    Insulinpumpen <./Getting-Started/Pump-Choices.md>
    Zukünftig ggf. loopbare Pumpen <./Getting-Started/Future-possible-Pump-Drivers.md>
    FAQ für Looper <./Getting-Started/FAQ.md>
@@ -60,10 +60,10 @@ AndroidAPS installieren
    :glob:
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
-   Update <./Installing-AndroidAPS/Update-to-new-version.md>
+   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release Notes <./Installing-AndroidAPS/Releasenotes.md>
    Dev Branch <./Installing-AndroidAPS/Dev-branch.md>
-   Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
    
 AndroidAPS einrichten 
 ---------------
@@ -72,10 +72,10 @@ AndroidAPS einrichten
    :glob:
    
    Konfigurations-Generator <./Configuration/Config-Builder.md>
-   BZ-Quelle <./Configuration/BG-Source.md>
-   DanaR <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
+   BG Source <./Configuration/BG-Source.md>
+   DanaR pump <./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS pump <./Configuration/DanaRS-Insulin-Pump.md>
+   Accu Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
    Smartwatch-Integration <./Configuration/Watchfaces.md>
    Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.md>
    Empfindlichkeitserkennung und COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -87,12 +87,12 @@ AndroidAPS nutzen
    :glob:
     
    Beschränkungen (objectives) <./Usage/Objectives.md>
-   OpenAPS-Funktionen <./Usage/Open-APS-features.md>
-   Profile <./Usage/Profiles.md>
+   OpenAPS features <./Usage/Open-APS-features.md>
+   Profile switch <./Usage/Profiles.md>
    SMS-Befehle <./Usage/SMS-Commands.md
    Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.md>
-   Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
-   Logfiles erhalten <./Usage/Accessing-logfiles.md>
+   Timezone traveling with pumps <./Usage/Timezone-traveling.md>
+   Accessing logfiles <./Usage/Accessing-logfiles.md>
    Glättung der Blut-Glukose-Daten <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient-Problembehebung <./Usage/Troubleshooting-NSClient.md>
@@ -103,7 +103,7 @@ Hilfe durch die Community
    :maxdepth: 1
     
 
-   Hintergrundinfos & interessante Artikel <./Where-To-Go-For-Help/Background-reading.md>
+   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Wohin wenden? <http://androidaps.readthedocs.io/en/latest/DE/hilfe/community.html>
 
 Mithelfen in der Community
