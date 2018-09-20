@@ -47,7 +47,7 @@ AndroidAPS 시작하기
    
    안전유의사항 <./Getting-Started/Safety-first>
    스크린샷 <./Getting-Started/Screenshots.md>
-   스마트폰 <./Getting-Started/Phones.md>
+   Phones <./Getting-Started/Phones.md>
    펌프 선택 <./Getting-Started/Pump-Choices.md>
    향후 가능한 펌프 <./Getting-Started/Future-possible-Pump-Drivers.md>
    APS사용자를 위한 FAQ
@@ -60,10 +60,10 @@ AndroidAPS 설치하기
    :glob:
 
    APK 파일 빌드하기 <./Installing-AndroidAPS/Building-APK.md>
-   새 버전으로 업그레이드하기 <./Installing-AndroidAPS/Update-to-new-version.md>
+   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
    릴리즈 노트 <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev-branch.md>
-   Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
    
 환경설정 
 ---------------
@@ -72,10 +72,10 @@ AndroidAPS 설치하기
    :glob:
    
    구성관리자 <./Configuration/Config-Builder.md>
-   혈당 소스
-   다나R <./Configuration/DanaR-Insulin-Pump.md>
-   다나RS <./Configuration/DanaRS-Insulin-Pump.md>
-   아큐-첵 콤보 <./Configuration/Accu-Chek-Combo-Pump.md>
+   BG Source <./Configuration/BG-Source.md>
+   DanaR pump <./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS pump <./Configuration/DanaRS-Insulin-Pump.md>
+   Accu Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
    워치화면 <./Configuration/Watchfaces.md>
    설정 <./Configuration/Preferences.md>
    민감도 감지와 COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -87,12 +87,12 @@ AndroidAPS 설치하기
    :glob:
     
    목적 <./Usage/Objectives.md>
-   OpenAPS 특징<./Usage/Open-APS-features.md>
-   프로파일 <./Usage/Profiles.md>
+   OpenAPS features <./Usage/Open-APS-features.md>
+   Profile switch <./Usage/Profiles.md>
    문자(SMS) 명령 <./Usage/SMS-Commands.md>
    확장 탄수화물
-   시간대 이동 <./Usage/Timezone-traveling.md>
-   로그파일 다루기<./Usage/Accessing-logfiles.md>
+   Timezone traveling with pumps <./Usage/Timezone-traveling.md>
+   Accessing logfiles <./Usage/Accessing-logfiles.md>
    혈당데이터 평활화하기 <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    아큐-첵 콤보 기초 사용법 <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient 문제해결 <./Usage/Troubleshooting-NSClient.md>
@@ -103,7 +103,7 @@ AndroidAPS 설치하기
    :maxdepth: 1
    :glob:
 
-   배경 지식 및 도움이 될 만한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
+   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 도움주기
