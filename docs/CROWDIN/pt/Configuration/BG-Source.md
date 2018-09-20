@@ -1,4 +1,4 @@
-# BG sources
+# BG source
 
 **For users of Dexcom:**  
 _If using G5 with xdrip+_  
