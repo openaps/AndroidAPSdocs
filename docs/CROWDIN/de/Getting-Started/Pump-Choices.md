@@ -1,4 +1,4 @@
-# Insulinpumpen
+# Pump choices
 
 AndroidAPS kann derzeit mit folgenden Insulinpumpen im Closed Loop Modus genutzt werden: DanaR, DanaRS, Akku-Chek Combo. Die DanaR und die Accu Chek Combo sind schon eine Weile auf dem Markt, so dass viele Leute bereits Zugriff darauf haben. Die DanaRS, ein Upgrade der DanaR, wird nun auch immer häufiger gewählt. Leute, die sich für eine neue Pumpe entscheiden müssen, fragen oft, für welche sie sich entscheiden sollen. Details zu den verschiedenen Distributoren findest du [in dieser Tabelle](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Ergänze bitte deine eigenen Erfahrungen, wenn sie nicht bereits aufgeführt sind.
 
