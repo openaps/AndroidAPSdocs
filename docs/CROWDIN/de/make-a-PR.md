@@ -1,6 +1,6 @@
-An dieser Stelle wird nur die Bearbeitung der englischen Dokumentation erläutert. Falls du diese in eine andere Sprache übersetzen willst (Danke dafür!), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs).
-
 # Wie man den ersten PR (Pull Request) macht
+
+`This description is just for editing the English documentation. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).`
 
 Es kann sein, dass dir irgendwann vorgeschlagen wird, einen PR zu machen. PR, die Abkürzung für Pull-Request, ist eine Möglichkeit wie man Quellcode oder - wie in diesem Fall - Dokumentationen auf GitHub ergänzen oder ändern kann. Es ist eigentlich nicht allzu schwer und eine gute Möglichkeit, einen Beitrag zu leisten. Diese Dokumentation gibt es, weil Leute wie du PRs gemacht haben. Mach dir keine Sorgen, einen Fehler zu machen oder irgendwie die falschen Dokumente zu bearbeiten. Es wird immer Korrektur gelesen, bevor Änderungen in die "finale" AndroidAPS Dokumentation integriert werden. Du kannst das Original nicht zerstören, wenn du beim PR etwas falsch machst. Die Vorgehensweise ist grundsätzlich:
 
@@ -31,15 +31,15 @@ PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen Git
 
 Wenn du einen internen Link in die AndroidAPS Dokumentation einfügen willst, benutze bitte nur **relative Links**. Nur auf diese Art wird dieser Link auch in anderen Sprachen funktionieren.
 
-In Dateien mit der Erweiterung .md:
+In files with **.md** ending:
 
-* [\[text\](../Usage/Test.md)](../Usage/Test.md) legt einen Hyperlink fest, der auf ein Verzeichnis unterhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
-* [\[text\](/Usage/Test.md)](/Usage/Test.md) legt einen Hyperlink fest, der aus dem aktuellen Verzeichnis auf das Unterverzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
+* `[text](../Usage/Test.md)` will set an internal hyperlink one directory down from where you are and then into the subdirectory /Usage. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
+* `[text](/Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
 
-In Dateien mit der Erweiterung .rst:
+In files with **.rst** ending:
 
-* `Text <../Usage/Test.md>` legt einen Hyperlink fest, der auf ein Verzeichnis unterhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
-* `Text <./Usage/Test.md>_` legt einen Hyperlink fest, der aus dem aktuellen Verzeichnis auf das Unterverzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
+* `Text <../Usage/Test.md>` will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
+* `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
 
 ### Tipps für das Hinzufügen mehrerer Bilder zur Dokumentation für Fortgeschrittene
 
