@@ -47,7 +47,7 @@ Začínáme s AndroidAPS
    
    Bezpečnost především <./Getting-Started/Safety-first>
    Snímky obrazovky <./Getting-Started/Screenshots.md>
-   Phones <./Getting-Started/Phones.md>
+   Telefony <./Getting-Started/Phones.md>
    Možné pumpy <./Getting-Started/Pump-Choices.md>
    Pumpy potenciálně použitelné v budoucnu  <./Getting-Started/Future-possible-Pump-Drivers.md>
    Otázky a odpovědi <./Getting-Started/FAQ.md>
@@ -60,10 +60,10 @@ Jak nainstalovat AndroidAPS
    :glob:
 
    Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
    Poznámky k verzi <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev-branch.md>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+   Nightscout <./Installing-AndroidAPS/Nightscout.md>
    
 Konfigurace 
 ---------------
@@ -72,11 +72,11 @@ Konfigurace
    :glob:
    
    Konfigurace <./Configuration/Config-Builder.md>
-   BG Source <./Configuration/BG-Source.md>
-   DanaR pump <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS pump <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
-   Hodinky<./Configuration/Watchfaces.md>
+   Zdroj glykémií <./Configuration/BG-Source.md>
+   DanaR <./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
+   Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
+   Hodinky <./Configuration/Watchfaces.md>
    Nastavení <./Configuration/Preferences.md>
    Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
    
@@ -87,12 +87,12 @@ Použití
    :glob:
     
    Cíle <./Usage/Objectives.md>
-   OpenAPS features <./Usage/Open-APS-features.md>
-   Profile switch <./Usage/Profiles.md>
+   Možnosti OpenAPS <./Usage/Open-APS-features.md>
+   Profily <./Usage/Profiles.md>
    SMS příkazy <./Usage/SMS-Commands.md>
    Prodloužené sacharidy (eCarbs) <./Usage/Extended-Carbs.md>
-   Timezone traveling with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
+   Cestování časovými zónami <./Usage/Timezone-traveling.md>
+   Přístup k log souborům <./Usage/Accessing-logfiles.md>
    Vyhlazování glykémií v xDripu <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Odstraňování potíží s NSClientem <./Usage/Troubleshooting-NSClient.md>
@@ -103,7 +103,7 @@ Kam pro pomoc
    :maxdepth: 1
    :glob:
 
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
+   Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 Jak pomoci
