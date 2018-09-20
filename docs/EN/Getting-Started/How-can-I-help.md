@@ -20,10 +20,10 @@ Great, this is a highly appreciated thing and a good way to pay it foreward!
 
 **I do speak multiple languages and whant to translate the app or the documentation** 
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the wiki** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://translations.androidaps.org).
+* If you want to translate **the wiki** to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org). 
 
-Just sign up to CROWDIN, wait for admin authorization and go ahead!
+Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
 
 **I've got cash I'd like to donate, how do I do that?**  
 
