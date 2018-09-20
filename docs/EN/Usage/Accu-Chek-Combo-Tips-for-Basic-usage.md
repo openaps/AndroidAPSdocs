@@ -1,4 +1,4 @@
-# Tips and Tricks - Combo 
+# AkkuChek Combo Tips for basic usage
 
 ## How to ensure smooth operations
 
