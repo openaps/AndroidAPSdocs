@@ -1,11 +1,22 @@
 # Sestavení APK
 
-Tento článek je rozdělený do dvou částí.
+* * *
+
+***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
+
+     * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
+     * *In the left pane, click Build, Execution, Deployment > Compiler.*
+     * *Uncheck the Configure on demand checkbox.*
+    
+
+## * *Click Apply or OK.*
+
+### This article is divided into two parts.
 
 * V části přehled najdete vysvětlení, které kroky jsou obecně nutné, abyste sestavili soubor APK.
 * V části průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android studio běží na Windows, Linuxu a Mac OS X, a proto mohou být na různých platformách malé rozdíly. Jestliže najdete něco zásadního, co je špatně, nebo vám něco chybí, prosím informujte o tom facebookovou skupinu „AndroidAPS users“ nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
 
-## Přehled
+## Overview
 
 Následují obecné kroky k sestavení souboru APK:
 
@@ -16,7 +27,7 @@ Následují obecné kroky k sestavení souboru APK:
 * Sestavete podepsané APK.
 * Doručte podepsané APK na váš telefon.
 
-## Průvodce krok za krokem
+## Step by step walkthrough
 
 Následuje detailní popis kroků nutných k sestavení souboru APK.
 
