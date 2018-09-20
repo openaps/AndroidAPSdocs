@@ -1,4 +1,4 @@
-# BZ-Quelle (CGM/FGM)
+# BG source
 
 **Für Dexcom Nutzer:**  
 _G5 mit xdrip+:_  
