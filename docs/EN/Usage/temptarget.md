@@ -15,7 +15,7 @@ This can be considered as the most important Temp-Target. There are several reas
 Note: if you enter carbs with the carb button and you blood glucose is less then 72mg/dl or 4mmol/l, Hypo TT is automatically enabled.
 
 
-## Activity
+## Activity Temp-Target
 
 There is not much to say about setting a high Temp-Target during activity as you probably know about this even before looping. 
 
@@ -24,12 +24,12 @@ The advantages about “Activity Temp-Target”, is that you can enable “High 
 If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, even with COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active.
 
 
-## Eating soon
+## Eating soon Temp-Target
 
 If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially, for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. 
 Advanced, objective 8:
 If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Requirement is a temptarget less than 100mg/dl or 5.5mmol/l for this option.
 
-##Custom
+## Custom Temp-Target
 
 Sometimes, you just want to have other temp target other than the default ones. You can set one by long pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
