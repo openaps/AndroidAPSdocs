@@ -26,9 +26,10 @@ If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, ev
 
 ## Eating soon Temp-Target
 
-If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially, for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. 
+If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially, for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target.
+
 Advanced, objective 8:
-If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Requirement is a temptarget less than 100mg/dl or 5.5mmol/l for this option.
+If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Requirement is a Temp-Target less than 100mg/dl or 5.5mmol/l for this option.
 
 ## Custom Temp-Target
 
