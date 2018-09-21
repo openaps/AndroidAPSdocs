@@ -17,7 +17,7 @@ Note: if you enter carbs with the carb button and you blood glucose is less then
 
 ## Activity Temp-Target
 
-There is not much to say about setting a high Temp-Target during activity as you probably know about this even before looping. 
+Before and during activity, you might want to have a higher target to prevent getting low. To simplify setting the Temp-Target, you can configure a default "Activity Temp-Target".
 
 Advanced, objective 8:
 The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Then AndroidAPS is more sensitive. Some people do instead a profile switch while activity TT, but everbody is different.
@@ -26,7 +26,7 @@ If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, ev
 
 ## Eating soon Temp-Target
 
-If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially, for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target.
+If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially, for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. You can read more about the "Eating soon mode" in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
 
 Advanced, objective 8:
 If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Requirement is a Temp-Target less than 100mg/dl or 5.5mmol/l for this option.
