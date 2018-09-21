@@ -2,21 +2,21 @@
 
 * * *
 
-***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
+***Bitte beachte** beim Erstellen einer AndroidAPS 2.0 apk: **Configuration on demand** wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:*
 
-     * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
-     * *In the left pane, click Build, Execution, Deployment > Compiler.*
-     * *Uncheck the Configure on demand checkbox.*
+     *  *Das Einstellungen-Fenster zu öffnen, indem Datei > Einstellungen (auf Mac, Android Studio > Präferenzen).*
+    *  *Im linken Fensterbereich, klicke auf Build, Execution, Deployment > Compiler.*
+    *  *Deaktiviere die "Configure on demand" checkbox.*
     
 
-## * *Click Apply or OK.*
+## * *Klicke Apply oder OK.*
 
-### This article is divided into two parts.
+### Dieser Artikel ist in zwei Teile geteilt.
 
 * Im Überblick werden die wichtigsten Schritte kurz zusammengefasst die allgemein nötig sind, um die APK Datei zu erstellen.
 * In der “Schritt für Schritt Anleitung” wird detailliert auf die einzelnen Punkte mithilfe von Screenshots eingegangen. Da die Versionen von Android Studio - der Software, die wir zum Bau der APK verwenden werden - sich schnell weiterentwickeln werden diese nicht mit deiner Installation übereinstimmen, aber sie geben einen guten ersten Eindruck. Android Studio läuft sowohl auf Windows, als auch auf Mac OS X und Linux. Es kann sein, dass es bei jedem Betriebssystem einige kleinere Unterschiede gibt. Bei grösseren Veränderungen oder fehlenden bzw. falschen Informationen wäre es hilfreich, dies den Entwicklern in der Facebookgruppe "Android APS" oder in den Gitter Chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) oder [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) mitzuteilen, so dass wir einen Blick darauf werfen können.
 
-## Overview
+## Übersicht
 
 Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
@@ -27,7 +27,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 * Erstelle die signierte APK.
 * Übertrage die erstellte APK auf dein Smartphone.
 
-## Step by step walkthrough
+## Schritt für Schritt Anleitung
 
 Detaillierte Beschreibung der notwendigen Schritte.
 
