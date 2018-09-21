@@ -88,7 +88,7 @@ AndroidAPS nutzen
     
    Beschränkungen (objectives) <./Usage/Objectives.md>
    OpenAPS-Funktionen <./Usage/Open-APS-features.md>
-   Profile switch <./Usage/Profiles.md>
+   Profil Wechsel <./Usage/Profiles.md>
    SMS-Befehle <./Usage/SMS-Commands.md
    Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.md>
    Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
