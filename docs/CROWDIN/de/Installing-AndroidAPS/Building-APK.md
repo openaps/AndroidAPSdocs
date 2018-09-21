@@ -4,7 +4,7 @@
 
 ***Bitte beachte** beim Erstellen einer AndroidAPS 2.0 apk: **Configuration on demand** wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:*
 
-     *  *Das Einstellungen-Fenster zu öffnen, indem Datei > Einstellungen (auf Mac, Android Studio > Präferenzen).*
+     *  *Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Präferenzen) klickst.*
     *  *Im linken Fensterbereich, klicke auf Build, Execution, Deployment > Compiler.*
     *  *Deaktiviere die "Configure on demand" checkbox.*
     
