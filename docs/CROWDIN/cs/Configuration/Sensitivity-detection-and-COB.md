@@ -1,30 +1,38 @@
-# Detekce citlivosti a volby COB
+# Detekce citlivosti
 
-* V současné době máme tři modely pro detekci citlivosti: 
-  * Citlivost Oref0
-  * Citlivost AAPS
-  * Citlivost váženým průměrem
+## Algoritmy detekce
+
+V současné době máme 4 modely pro detekci citlivosti:
+
+* Citlivost Oref0
+* Citlivost AAPS
+* Citlivost váženým průměrem
+* Citlivost Oref1
 
 ### Citlivost Oref0
 
-Tento model pracuje obdobně jako Oref0 popsaný v [Oref0 dokumentaci](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html). Citlivost je počítaná za posledních 24 hodin. Trávení sacharidů (pokud nejsou absorbované) se v simulaci zařezává na mezní dobu, která je uvedená v nastavení.
+Basically sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cut off after time specified in preferences. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html).
 
 ### Citlivost AAPS
 
-Citlivost se počítá stejným způsobem jako v Oref0 variantě, ale můžete určit čas do minulosti. Minimální absorpce sacharidů se počítá z maximální doby trávení sacharidů z nastavení.
+Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
 
 ### Citlivost váženým průměrem
 
-Citlivost je vypočítaná jako vážený průměr z odchylek. Novější odchylky mají větší váhu. Minimální absorpce sacharidů se počítá z maximální doby trávení sacharidů z nastavení. Tento algoritmus je nejrychlejší při následujících změnách citlivosti.
+Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
-### COB příklady
+### Citlivost Oref1
 
-Oref0 - nestrávené sacharidy jsou odříznuty po určené době
+Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-attended meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-![COB z Oref0](../images/cob_oref0.png)
+## COB Examples
 
-AAPS, vážený průměr - absorpce se počítá tak, aby bylo `COB == 0` po určité době
+Oref0 / Oref1 - unabsorbed carbs are cut off after specified time
 
-![COB z AAPS](../images/cob_aaps.png)
+![COB from oref0](../images/cob_oref0.png)
 
-Jestliže je použitá minimální absorpce sachardiů namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví zelená tečka.
+AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
+
+![COB from AAPS](../images/cob_aaps.png)
+
+If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph

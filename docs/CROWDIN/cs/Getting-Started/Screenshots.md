@@ -1,4 +1,4 @@
-# Rozumíme obrazovkám AndroidAPS
+# Screenshots
 
 ## Hlavní stránka
 

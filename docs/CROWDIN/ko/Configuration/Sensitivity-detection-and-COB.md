@@ -1,30 +1,38 @@
-# 민감도 감지 및 COB 옵션
+# Sensitivity detection
 
-* 현재 3가지의 민감도 감지 모델이 있습니다. 
-  * 민감도 Oref0
-  * 민감도 AAPS
-  * 민감도 가중평균
+## Sensitvity algorithm
+
+Currently we have 4 sensitivity detection models:
+
+* 민감도 Oref0
+* 민감도 AAPS
+* 민감도 가중평균
+* Sensitivity Oref1
 
 ### 민감도 Oref0
 
-[Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html)에 설명된 Oref0와 유사합니다. 기본적으로 민감도가 과거 24시간의 데이터로 부터 계산됩니다. (흡수되지 않은 경우) 탄수화물은 설정에서 설정된 시간이 지나면 없어집니다
+Basically sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cut off after time specified in preferences. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html).
 
 ### 민감도 AAPS
 
-Oref0처럼 민감도는 동일한 방법으로 계산되어지나, 과거의 시간을 설정할 수는 있습니다. 최소 탄수화물 흡수는 설정의 최대 탄수화물 흡수시간으로부터 계산이 되어집니다.
+Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
 
 ### 민감도 가중평균
 
-민감도는 편차에서 가중평균되어 계산됩니다. 최신의 편차가 더 높은 비중을 가지게 됩니다. 최소 탄수화물 흡수는 설정의 최대 탄수화물 흡수시간으로부터 계산이 되어집니다. 이 알고리즘이 민감도 변화에 있어서 가장 빠릅니다.
+Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
-### COB 예시
+### Sensitivity Oref1
 
-Oref0 - 지정된 시간 이후에는 미 흡수된 탄수화물은 없어집니다.
+Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-attended meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-![Oref0에서의 COB](../images/cob_oref0.png)
+## COB Examples
 
-AAPS, 가중평균 - 탄수화물 흡수가 지정된 시간 후 `COB == 0`가 되도록 계산되어집니다.
+Oref0 / Oref1 - unabsorbed carbs are cut off after specified time
 
-![AAPS에서의 COB](../images/cob_aaps.png)
+![COB from oref0](../images/cob_oref0.png)
 
-편차로부터 계산되어진 수치 대신 최소 탄수화물 흡수가 사용된다면, COB그래프에 초록색 점이 표시됩니다.
+AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
+
+![COB from AAPS](../images/cob_aaps.png)
+
+If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph

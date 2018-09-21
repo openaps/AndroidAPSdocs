@@ -15,6 +15,12 @@ Erscheinungsdatum: xx.xx.xxxx (noch nicht veröffentlicht)
 * Objective 8 muss gestartet sein, damit die SMB-Funktion zur Verfügung steht (der SMB-Reiter zeigt dir, welche Beschräkungen bestehen).
 * Der Wert maxIOB enthält jetzt *das gesamte* IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet: Wenn du einen Bolus von 8 IE gegeben hast und maxIOB ist 7, dann wird kein SMB ausgelöst, solange das Gesamt-IOB nicht wieder auf unter 7 IE abgefallen ist.
 * Der Standardwert von min_5m_carbimpact erhöht sich von 3 bei AMA auf 8 beim SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
+* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+  
+  * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+  * In the left pane, click Build, Execution, Deployment > Compiler.
+  * Uncheck the Configure on demand checkbox.
+  * Click Apply or OK.
 
 ### Startseite
 
@@ -47,7 +53,7 @@ Erscheinungsdatum: xx.xx.xxxx (noch nicht veröffentlicht)
 * Überarbeitung des Konfigurations-Generators und des Objectives-Reiters. Beschreibungen hinzugefügt.
 * Neues App-Icon
 * Viele weitere Verbesserungen und Fehlerbehebungen.
-* Nightscout-unabhängige Alarme, falls die Pumpe für längere Zeit nicht erreichbar ist (z.B. leere Pumpenbatterie) und veraltete BZ-Werte (siehe *Lokale Alarme* in den Einstellungen).
+* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Option, den Bildschrim immer an zu lassen.
 * Option, die Hinweise als Systemmeldungen anzuzeigen.
 * Advanced filtering (das erlaubt die Nutzung von “SMB immer an” und “6 Stunden nach dem Essen”) wird unterstützt mit der gepatchten Dexcom App (nicht mit der originalen Dexcom App!) oder xDrip mit dem G5 native mode als BZ-Quelle.

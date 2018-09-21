@@ -47,7 +47,7 @@ Inicio
    
    Safety First <./Getting-Started/Safety-first.md>
    Pantallazos <./Getting-Started/Screenshots.md>
-   Teléfonos <./Getting-Started/Phones.md>
+   Phones <./Getting-Started/Phones.md>
    Opciones de Bombas de insulina <./Getting-Started/Pump-Choices.md>
    Futuros controladores de bombas <./Getting-Started/Future-possible-Pump-Drivers.md>
    FAQ para loopers <./Getting-Started/FAQ.md>
@@ -60,10 +60,10 @@ Instalando AndroidAPS
    :glob:
 
    Compilando la APK <./Installing-AndroidAPS/Building-APK.md>
-   Actualizar a una nueva versión <./Installing-AndroidAPS/Update-to-new-version.md>
+   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
    Rama Dev <./Installing-AndroidAPS/Dev-branch.md>
-   Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
    
 Configuración 
 ---------------
@@ -72,10 +72,10 @@ Configuración
    :glob:
    
    Config Builder <./Configuration/Config-Builder.md>
-   Fuente de datos Glucemia <./Configuration/BG-Source.md>
-   DanaR <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
+   BG Source <./Configuration/BG-Source.md>
+   DanaR pump <./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS pump <./Configuration/DanaRS-Insulin-Pump.md>
+   Accu Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
    Watchfaces <./Configuration/Watchfaces.md>
    Preferencias <./Configuration/Preferences.md>
    Detección de sensibilidad y COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -87,12 +87,12 @@ Uso
    :glob:
     
    Objetivos <./Usage/Objectives.md>
-   Funcionalidades OpenAPS <./Usage/Open-APS-features.md>
-   Perfiles <./Usage/Profiles.md>
+   OpenAPS features <./Usage/Open-APS-features.md>
+   Profile switch <./Usage/Profiles.md>
    Comandos SMS <./Usage/SMS-Commands.md>
    Carbohidratos extendidos <./Usage/Extended-Carbs.md>
-   Timezone traveling <./Usage/Timezone-traveling.md>
-   Acceder a los logs <./Usage/Accessing-logfiles.md>
+   Timezone traveling with pumps <./Usage/Timezone-traveling.md>
+   Accessing logfiles <./Usage/Accessing-logfiles.md>
    Smoothing Blood Glucose Data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Trucos para uso básico de Accu Check Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
@@ -103,7 +103,7 @@ Donde buscar ayuda
    :maxdepth: 1
    :glob:
 
-   Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
+   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Cómo puedo ayudar <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 How to help

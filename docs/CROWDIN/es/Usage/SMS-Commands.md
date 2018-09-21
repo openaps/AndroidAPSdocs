@@ -1,64 +1,64 @@
-# SMS Commands
+# Comandos SMS
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+En los ajustes de tu móvil Android ve a aplicaciones- AndroidAPS- permisos y habilitar SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from and also enable 'Allow remote commands via SMS'
+En AndroidAPD ve a preferencias- Comunicaciones SMS (SMS comunicator) e introduce el número de teléfono con el que permitirás las comunicaciones SMS y habilita también “allow remote commands via SMS”
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usar comandos SMS usando algún comando en negrita abajo, el teléfono responderá para confirmar el comando pedido.
 
 ## BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Último valor de glucemia: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 
 ## LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Lazo se ha deshabilitado
 
 ## LOOP START/ENABLE
 
-- Loop has been enabled
+- Lazo se ha habilitado
 
 ## LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Lazo deshabilitado
+- Lazo habilitado
+- Suspendido (10 min)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Lazo suspendido durante 20 minutos
 
 ## LOOP RESUME
 
-- Loop resumed
+- Lazo reiniciado
 
 ## TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers
+- Refresca tratamiento
 
 ## NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 receivers
+- Reinicia NSclient
 
-## DANAR / PUMP (since 1.60)
+## DANAR/PUMP (since 1.60)
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Última conexión: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Para cancelar un basal temporal responder con código EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h reply with code Swe
-- Remote basal setting is not allowed (if remote commands not allowed)
+- Para poner basal 0.3u/h responder con código Swe
+- No está permitido comandar basales remotamente (si comandos remotos no están permitidos)
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Para poner bolo 1.2 responder con código Rrt
+- Los bolos remotos no están permitidos (si ha habido otro bolo en últimos 15 minutos o si remoto no habilitado)
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Para enviar calibración 5.6 enviar código Rrt
+- Calibración enviada (si Xdrip instalado. Debe estar habilitado aceptar calibración en Xdrip+)

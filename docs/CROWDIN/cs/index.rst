@@ -72,11 +72,11 @@ Konfigurace
    :glob:
    
    Konfigurace <./Configuration/Config-Builder.md>
-   Zdroj glykémií<./Configuration/BG-Source.md>
+   Zdroj glykémií <./Configuration/BG-Source.md>
    DanaR <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
-   Hodinky<./Configuration/Watchfaces.md>
+   Hodinky <./Configuration/Watchfaces.md>
    Nastavení <./Configuration/Preferences.md>
    Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
    
@@ -91,7 +91,7 @@ Použití
    Profily <./Usage/Profiles.md>
    SMS příkazy <./Usage/SMS-Commands.md>
    Prodloužené sacharidy (eCarbs) <./Usage/Extended-Carbs.md>
-   Cestování časovými zónami
+   Cestování časovými zónami <./Usage/Timezone-traveling.md>
    Přístup k log souborům <./Usage/Accessing-logfiles.md>
    Vyhlazování glykémií v xDripu <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
@@ -103,7 +103,7 @@ Kam pro pomoc
    :maxdepth: 1
    :glob:
 
-   Další čtení & zajímavé články <./Where-To-Go-For-Help/Background-reading.md>
+   Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 Jak pomoci

@@ -86,7 +86,7 @@ This is list of some Pumps floating around there, and status of support for them
 - Set Basal Profile
 - Read History 
 
-**Other**
+**Otros**
 
 - Set Extended Bolus
 - Cancel Extended Bolus
