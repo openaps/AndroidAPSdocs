@@ -6,7 +6,7 @@ Currently we have 4 sensitivity detection models:
 
 * Sensitivity Oref0
 * Sensitivity AAPS
-* Durchschnittliche Sensitivität
+* Sensitivity WeightedAverage
 * Sensitivity Oref1
 
 ### Sensitivity Oref0
