@@ -1,48 +1,48 @@
 # Jak pomoci s AndroidAPS
 
-**AndroidAPS operates entirely on volunteer efforts and has no paid staff.**
+**AndroidAPS funguje díky úsilí dobrovolníků a nemá žádné placené zaměstnance.**
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Vývojáři jsou rodiče, pečovatelé, blízcí a lidé s cukrovkou, kteří společně pracují na vývoji a vylepšení řešení. Vývojáři investují zdarma svůj volný čas a tak je nespravedlivé očekávat po nich, že budou sami čelit dodatečným nákladům, když tvoří tak úžasné řešení, které je open source a zadarmo pro všechny.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Pro otestování nových zařízení vývojáři potřebují testovací telefon a testovací pumpu - zařízení nelze testovat na člověku, dokud není stabilní. Novější modely se musí testovat, jakmile budou k dispozici. Část peněz je potřeba pro uhrazení cestovních a přepravních nákladů těchto dodávek mezi zeměmi vývojářů. Někdy je fajn obdržet příspěvek na pokrytí cestovních nákladů pro vývojáře - aby mohli opustit svoje tmavé pokoje, aby mohli uspořádat vzájemná setkání na konferencích a srazech - a aby mohli dát od všeho odpočinout jejich tvůrčím a analytickým mozkům.*
 
-**I can write code! How do I participate?**
+**Můžu napsat kód! Jak mohu přispět?**
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Yay! Podívejte se na problémy, zeptejte se na gitteru - tam je toho vždy mnoho, co je možné udělat! Najděte nejprve malý úkol a proveďte první pull request! :)
 
-**I know the system and can write documentation!**
+**Znám systém a můžu psát dokumentaci!**
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+Skvělé, to se cení - dobrý způsob, jak podpořit!
 
-* The gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby) 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+* Gitter týkající se wiki lze nalézt zde: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby) 
+* Návod, jak se to dělá na anglické wiki, lze nalézt zde: [How to make a PR](../make-a-PR.md). Jiné jazyky jsou pouze překladem z angličtiny a nelze je upravovat z důvodů konzistence.
 
-**I do speak multiple languages and whant to translate the app or the documentation**
+**Mluvím několika jazyky a chci překládat aplikaci nebo dokumentaci**
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://translations.androidaps.org).
-* If you want to translate **the wiki** to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org). 
+* Pokud chcete přeložit **aplikaci** do jiných jazyků (děkuji), použijte prosím [crowdin](https://translations.androidaps.org).
+* Pokud chcete přeložit **wiki** do jiných jazyků (děkuji), použijte prosím [crowdin](https://wikitranslations.androidaps.org). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Prostě se přihlaště na CROWDIN, vyberte Váš jazyk, počkejte na schálení adminem a hurá do toho!
 
-**I've got cash I'd like to donate, how do I do that?**
+**Mám peníze a chtěl bych je darovat, jak to mám udělat?**
 
     PayPal: [donations@androidaps.org](donations@androidaps.org)  
     
 
-**What is the money used for?**
+**Na co budou peníze použity?**
 
-The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. This is what is currently planned:
+Peníze NEBUDOU použity na platbu za něčí práci! Použijí se pro snížení nákladů při plánování setkání vývojářů. Snažíme se být velmi transparentní. V současnosti plánujeme:
 
-* European Dev Meetup in Prague end of May 2018:
-* hiring a room plus internet
-* equipment
-* food / coffee
-* in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
+* European Dev Meetup v Praze koncem května 2018:
+* pronájem pokoje plus internet
+* vybavení
+* jídlo / káva
+* je to nepravděpodobné, ale v případě, že všechny náklady budou pokryty a nějaké peníze zbudou: pokrytí cestovních nákladů pro ty, kteří budou cestovat z větších vzdáleností. (Zúčastní se někteří vývojáři z jiných kontinentů, ale zrovna v té době jsou v Evropě, takže cestovní výdaje budou považovány za nízké.)
 
-**I've got spare equipment, where do I send it?**
+**Mám náhradní vybavení, kam jej mohu poslat?**
 
-We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+V současné době sbíráme "budou poskytnuty později" a začneme je distribuovat pro testování. Na konci procesu bude veškeré zbylé vybavení poskytnuto jedné z Facebookových skupin Pay-to-Forward, existujících pro podporu komunity T1. Pokud chcete darovat náhradní vybavení, kontaktujte e-mail developers@androidaps.org a my vám zašleme adresu.
 
-**I don't have cash or equipment, how can I help?**
+**Nemám peníze ani zařízení, jak mohu pomoci?**
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Potřebujeme lidi ovládající grafický design, UX design, překladatele, wiki editory nebo jen osoby odpovídající na jednoduché otázky na gitteru. Facebook umožňuje vývojáři šetřit čas a prostor a zaměřit na složitější věci.

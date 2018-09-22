@@ -1,4 +1,4 @@
-# Pump choices
+# Volba pumpy
 
 AndroidAPS aktuálně funguje s Dana* R, Dana* RS a Combo. Dana * R a Combo jsou nějakou dobu na trhu dostupné, takže k nim mělo mnoho lidí přístup, Dana * RS jakožto upgrade Dana * R se stává častější volbou. Pokud potřebujete vybrat na kterou pumpu přejít a koupit, často se ptáte kterou vybrat. Podrobnosti různých distributorů jsou v této [tabulce](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), prosím podělte se o vaše detaily, pokud nejsou v seznamu uvedeny.
 
