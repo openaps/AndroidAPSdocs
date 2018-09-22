@@ -72,10 +72,10 @@ Možnosti zde se budou lišit v závislosti na tom, který ovladač pumpy jste z
 
 ## NS Client
 
-* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
-* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem. 
-* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip. 
-* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+)
+* Zde si nastavte svou internetovou adresu k Nightscoutu (https://vasnazev.herokuapp.com nebo https://vasnazev.azurewebsites.net) a API secret (alespoň 12ti znakové heslo uložené v proměnných vašeho Heroku nebo Azure). To umožní, aby si mohly stránky Nightscoutu a AndroidAPS vyměňovat a zapisovat všechny potřebné údaje. Ještě jednou nastavení ověřte znak po znaku, pokud jste se zasekli v cíli 1 (jedná se pravděpodobně o nějaký překlep).
+* "Logovat spuštění aplikace do NS" vloží do vašich záznamů péče poznámku pokaždé, kdy je aplikace spuštěna. Aplikace by se na mobilu neměla spouštět vícekrát než jednou denně. Pokud je to vícekrát, obvykle to signalizuje nějaký problém. 
+* "Povolení odesílaní" bude sdílet vaše záznamy péče také jiným aplikacím na mobilu, např. xDrip+. 
+* "Nastavení alarmů" vám umožní vybrat, které výchozí Nightscout alarmy se mají napříč aplikací používat. Aby mohly alarmy vydávat zvuk, potřebujete mít nastavené Urgent High, High, Low a Urgent Low alarm proměnné ve vašich [Heroku nebo Azure proměnných](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Alarmy budou fungovat pouze za podmínky, že máte stálé síťové spojení k Nightscoutu, a jsou určené pro rodiče/asistenty. Pokud máte zdroj glykémie přímo na svém telefonu, pak místo toho raději použijte alarmy místní aplikace (např. v xDrip+).
 
 ## SMS komunikátor
 
