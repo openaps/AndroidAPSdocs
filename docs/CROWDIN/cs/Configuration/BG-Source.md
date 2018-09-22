@@ -1,7 +1,7 @@
 # BG source
 
-**For users of Dexcom:**  
-_If using G5 with xdrip+_  
+**Pro uživatele Dexcom:**   
+_pokud používáte G5 s aplikací xDrip+_  
 
 
 * Není-li xDrip již nastaven, pak stáhněte [xdrip](https://github.com/NightscoutFoundation/xDrip) a postupujte podle pokynů na Nightscoutu ([G4 bez share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 s share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -10,24 +10,24 @@ _If using G5 with xdrip+_
 * Pokud chcete aby AndroidAPS bylo schopné kalibrovat, tak v xdrip vyberte nastavení -> Inter-app settings -> Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v Xdrip nastavení položku -> méně časté nastavení -> Advanced Calibration.
 * Vyberte xdrip v ConfigBuilder (nastavení v AndroidAPS).
 
-_If using G5 with patched Dexcom G5 app_  
+Pokud pužíváte G5 s upravenou Dexcom aplikací  
 
 
-* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose either the mg/dl or mmol/l version.
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
-* Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Stáhňete apk z <https://github.com/dexcomapp/dexcomapp> a zvolte verzi mg/dl nebo mmol/l.
+* Zastavte senzor a odinstalujte původní aplikaci Dexcom, pokud jste tak ještě neučinili.
+* Nainstalujte stažený apk
+* Spusťte senzor
+* Vyberte aplikaci DexcomG5 (upravenou) v Konfiguraci.
 
-_If using G4 with OTG cable ('traditional' Nightscout)…_  
+_pokud používáte G4 s OTG kabelem ("tradiční" Nightscout) _  
 
 
 * Pokud jste ještě nenastavili, tak stáhněte Nightscout Uploader aplikaci z obchodu Play a postupujte podle pokynů na [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
 * V nastavení AndroidAPS zadejte svojí Nightscout adresu a API secret.
 * Vyberte NSClient v Konfiguraci AndroidAPS.
 
-**For users of Libre with Bluetooth cap:**  
-To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
+**Pro uživatele Libre s Bluetooth čtečkou**   
+Abyste mohli používat Libre jako CGM monitor, který získává nové hodnoty BG každých 5 minut, je potřeba koupit NFC Bluetooth adaptér jako:
 
 * MiaoMiao-Reader <https://www.miaomiao.cool/>
 * Blukon Nightrider <https://www.ambrosiasys.com/howit>
