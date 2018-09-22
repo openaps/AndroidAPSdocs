@@ -79,27 +79,27 @@ Možnosti zde se budou lišit v závislosti na tom, který ovladač pumpy jste z
 
 ## SMS komunikátor
 
-Toto nastavení dovoluje vzdálené ovládání telefonu s Aaps posláním sms s textem, jako je zastavení smyčky, nebo poslání bolusu. Further information is described in [SMS Commands](../Usage/SMS-Commands.md) but it will only display in Preferences if you have selected this option in the Config Builder.
+Toto nastavení dovoluje vzdálené ovládání telefonu s Aaps posláním sms s textem, jako je zastavení smyčky, nebo poslání bolusu. Další informace jsou uvedeny v [SMS příkazy](../Usage/SMS-Commands.md), ale zobrazí se v nastavení jen pokud jste vybrali tuto možnost v konfigurátoru.
 
 ## Jiné
 
-* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
-* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
-* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
-* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
-* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* Zde můžete nastavit výchozí vlastnosti pro dočasné cíle, Typy dočasných cílů mohou být různé ("Před jídlem" či aktivita). Pokud zvolíte dočasný cíl a pak vyberete např. "Před jídlem" z rozbalovací nabídky, pak se trvání a hodnota automaticky předvyplní údaji, které jste uvedli právě v dříve zmiňovaném nastavení. Další informace o použití Dočasných cílů naleznete v [OpenAPS features](../Usage/Open-APS-features.md). 
+* Můžete nastavit výchozí množství pro plnění kanyly - toto množství pak bude pumpa do kanyly/setu plnit a tento inzulin se bude odečítat ze zásobníku, ale přitom se nebude započítávat do IOB výpočtů. Podívejte se do příbalového letáku kanyly, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
+* Můžete změnit nastavení zobrazení hlavní stránky a vzhled hodnot glykémie podle toho, jestli jsou v cílovém rozsahu. Ale pozor, toto nastavení ovlivňuje pouze vzhled grafu a nemá žádný vliv ani na váš cíl glykémie, ani na výpočty.
+* "Krátké názvy modulů" vám umožní, abyste viděli více záložek na jedné obrazovce, např. štítek záložky "Open APS" se stane jen "OAPS", "Ošetření" se změní na "OŠET" atd.
+* "Místní upozornění" vám umožňují rozhodnout, zda se výstraha zobrazí a po jak dlouhé době nedostupnosti dat - výstraha dlouho nedostupné glykémie nebo výstraha dlouho nedostupné pumpy. Pokud často dostáváte výstrahu, že je pumpa nedostupná, tak zapněte Hlídač BT v rozšířeném nastavení v sekci pumpa.
 
-## Advanced Settings ``requires more work
+## Rozšířené nastavení ``zbývá dodělat
 
 * OpenAPS MA
-* Always use short average delta instead of... Enabling this setting is useful when you are using data from unfiltered sources such as xDrip+, as opposed to filtered sources such as an official Dexcom Receiver. Filtered data appears to be smooth, whereas unfiltered data can appear to be jumpy. This unfiltered data could cause AndroidAPS to apply Temporary Basal Rate changes more frequently than are really needed, as the OpenAPS algorithm reacts to the jumpy data. With this setting enabled, the OpenAPS algorithm will use the Short Average Delta (the average change in blood glucose over the past 15 minutes) instead of the last blood glucose reading received. This effectively has a "smoothing" effect on the data and attempts to compensate for any jumpy readings. Users of Abbot Freestyle Libre sensors collecting their glucose data via devices such as LimiTTers may find this setting provides better results with AAPS.
+* "Vždy používat krátkodobý průměrný rozdíl glykémií místo ..." Povolení tohoto nastavení je užitečné, pokud používáte data z nefiltrované zdrojů, například xDrip+, oproti filtrovaným zdrojům jako je např. oficiální Dexcom Receiver. Filtrovaná data se zdají být hladká, zatímco nefiltrované údaje se mohou jevit rozkmitané. Tato nefiltrovaná data by mohla způsobit, že AndroidAPS bude nastavovat dočasné bazální dávky častěji, než je ve skutečnosti zapotřebí, protože OpenAPS algoritmus bude neustále reagovat na rozkmitané hodnoty. Pokud je toto nastavení aktivované, OpenAPS algoritmus použije krátkodobé průměrné Delta (průměrná změna hladiny glukózy v krvi za posledních 15 minut) namísto poslední obdržené glykémie. To má v důsledku "vyhlazující" vliv na obdržené hodnoty a pokouší se tak kompenzovat rozkmitané údaje. Uživatelům Abbot Freestyle Libre senzorů, kteří sbírají své glykémie přes zařízení jako např. LimiTTers, mohou tato nastavení pomoci dosáhnout lepších výsledků s AAPS.
 
-For further tips regarding data smoothing when using xDrip+ as the data source, see [Smoothing Blood Glucose Data in xDrip+](../Usage/Smoothing-blood-glucose-data-in-xDrip.md).
+Pro další tipy ohledně vyhlazení dat při používání xDrip+ jako zdroje dat si projděte [Vyhlazení dat glykémií v xDrip +](../Usage/Smoothing-blood-glucose-data-in-xDrip.md).
 
-* OpenAPS preferences.json - before changing any of these settings, please view the descriptions of the safety values used and why in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
-* 'Ignore profile switch events' will not send your current AndroidAPS profile to the pump. It is encouraged not to select this unless you are testing code, as for safety sending profile switch events to the pump's basal profile 1 means than should AndroidAPS stop working or loose connection with the pump then your pump will revert to the same profile as default rather than you having to manually enter it into the pump. For more information on profiles see [Profiles](/docs/Usage/Profiles).
-* 'BT Watchdog' select this option if you keep loosing connection with your pump. When the pump looses connection it will toggle bluetooth off and on for you to improve the connection.
+* OpenAPS preferences.json - před změnou kteréhokoliv z těchto nastavení si prosím přečtěte, jaké hodnoty jsou bezpečné a proč v [OpenAPS dokumentaci](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
+* "Ignorovat přepnutí profilu" nebude posílat aktuální profil AndroidAPS do pumpy. Nedoporučuje se tuto možnost vybrat, pokud nechcete testovat verzi AndroidAPS, jde o bezpečnostní opatření - před posláním bazálního profilu 1 do pumpy, pokud by AndroidAPS přestat pracovat nebo ztratil spojení s pumpou, tak by se pumpa přepnula do stejného profilu, který je výchozí, namísto abyste museli výchozí profil do pumpy zadávat ručně. Další informace o profilech naleznete v části [Profily](/docs/Usage/Profiles).
+* "Hlídač BT" tuto možnost aktivujte, pokud se vám neustále ztrácí spojení s pumpou. Pokud se ztratí spojení s pumpu, hlídač vypne a zapne bluetooth, aby se spojení pokusilo znovu obnovit.
 
 ## Nastavení hodinek
 
-For more information on the wear watchface settings see [Watchfaces](../Configuration/Watchfaces.md).
+Více informací o hodinkách najdete v sekci [Hodinky](../Configuration/Watchfaces.md).
