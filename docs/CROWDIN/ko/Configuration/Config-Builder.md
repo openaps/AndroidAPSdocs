@@ -8,7 +8,7 @@
 
 사용하고자 사는 Basal 프로파일을 선택하세요:
 
-* **NS Profile** uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
+* **NS 프로파일** 은 Nightscout에 저장된 프로파일을 사용합니다.(https://[당신의Nightscoutsite주소]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
 * **Simple Profile** profile with just one time block (i.e. no basal rate changes during the day)
 * **Local Profile** uses the basal profile manually entered in phone. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
