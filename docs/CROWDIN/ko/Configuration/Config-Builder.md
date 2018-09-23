@@ -10,9 +10,9 @@
 
 * **NS 프로파일** 은 Nightscout에 저장된 프로파일을 사용합니다.(https://[당신의Nightscoutsite주소]/profile). 다수의 프로파일이 있다면 '프로파일 변경'에서 프로파일을 변경할 수 있습니다. 변경된 프로파일은 펌프로 전송됩니다.
 * **Simple 프로파일** 하나의 값만 설정 가능한 프로파일(일중 Basal 양 변경 없음)
-* **로컬 프로파일** 스마트폰에서 직접 Basal 양 설정 가능한 프로파일. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* **로컬 프로파일** 스마트폰에서 직접 Basal 양 설정 가능한 프로파일. 더 많은 설정 정보를 확인하려면 [프로파일](../Usage/Profiles.md) 페이지를 방문하세요.
 
-## Insulin
+## 인슐린
 
 Select the type of insulin curve you are using. Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. You will need to enter additional settings for these. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
 
