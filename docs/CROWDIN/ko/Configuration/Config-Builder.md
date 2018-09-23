@@ -8,9 +8,9 @@
 
 사용하고자 사는 Basal 프로파일을 선택하세요:
 
-* **NS 프로파일** 은 Nightscout에 저장된 프로파일을 사용합니다.(https://[당신의Nightscoutsite주소]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-* **Simple Profile** profile with just one time block (i.e. no basal rate changes during the day)
-* **Local Profile** uses the basal profile manually entered in phone. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* **NS 프로파일** 은 Nightscout에 저장된 프로파일을 사용합니다.(https://[당신의Nightscoutsite주소]/profile). 다수의 프로파일이 있다면 '프로파일 변경'에서 프로파일을 변경할 수 있습니다. 변경된 프로파일은 펌프로 전송됩니다.
+* **Simple 프로파일** 하나의 값만 설정 가능한 프로파일(일중 Basal 양 변경 없음)
+* **로컬 프로파일** 스마트폰에서 직접 Basal 양 설정 가능한 프로파일. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
 ## Insulin
 
