@@ -1,12 +1,12 @@
-# Config Builder
+# 구성 관리자
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side allow you to select which one to use, the boxes on the right hand side allow you to view these as a tab in AndroidAPS. Where there are additional settings available within the module, you can click on the cog graphic which will take you to the specific settings within Preferences.
+구성관리자(Conf) 탭에서 AndroidAPS의 여러기능들을 구성할 수 있습니다. 좌측의 박스를 선택하면 사용하고자 하는 기능을 활성화 할수 있습니다. 우측의 박스는 이 기능을 탭으로 볼 수 있도록 합니다. 추가로 설정 가능한 부분이 있는 기능이 있을 경우엔, 바퀴아이콘을 클릭하여 상세 설정을 할 수 있습니다.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen and select 'Setup Wizard' to use it.
+**초기 설정:** AAPS 2.0버전 부터는 설정마법사가 AndroidAPS 설정과정을 도와줍니다. 화면의 우측상단의 3개의 점 아이콘을 클릭하여 '설정 마법사'를 이용하세요.
 
-## Profile
+## 프로파일
 
-Select the basal profile you wish to use:
+사용하고자 사는 Basal 프로파일을 선택하세요:
 
 * **NS Profile** uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
 * **Simple Profile** profile with just one time block (i.e. no basal rate changes during the day)
