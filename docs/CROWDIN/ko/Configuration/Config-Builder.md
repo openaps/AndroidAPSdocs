@@ -1,18 +1,18 @@
-# Config Builder
+# 구성 관리자
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side allow you to select which one to use, the boxes on the right hand side allow you to view these as a tab in AndroidAPS. Where there are additional settings available within the module, you can click on the cog graphic which will take you to the specific settings within Preferences.
+구성관리자(Conf) 탭에서 AndroidAPS의 여러기능들을 구성할 수 있습니다. 좌측의 박스를 선택하면 사용하고자 하는 기능을 활성화 할수 있습니다. 우측의 박스는 이 기능을 탭으로 볼 수 있도록 합니다. 추가로 설정 가능한 부분이 있는 기능이 있을 경우엔, 바퀴아이콘을 클릭하여 상세 설정을 할 수 있습니다.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen and select 'Setup Wizard' to use it.
+**초기 설정:** AAPS 2.0버전 부터는 설정마법사가 AndroidAPS 설정과정을 도와줍니다. 화면의 우측상단의 3개의 점 아이콘을 클릭하여 '설정 마법사'를 이용하세요.
 
-## Profile
+## 프로파일
 
-Select the basal profile you wish to use:
+사용하고자 사는 Basal 프로파일을 선택하세요:
 
-* **NS Profile** uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-* **Simple Profile** profile with just one time block (i.e. no basal rate changes during the day)
-* **Local Profile** uses the basal profile manually entered in phone. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* **NS 프로파일** 은 Nightscout에 저장된 프로파일을 사용합니다.(https://[당신의Nightscoutsite주소]/profile). 다수의 프로파일이 있다면 '프로파일 변경'에서 프로파일을 변경할 수 있습니다. 변경된 프로파일은 펌프로 전송됩니다.
+* **Simple 프로파일** 하나의 값만 설정 가능한 프로파일(일중 Basal 양 변경 없음)
+* **로컬 프로파일** 스마트폰에서 직접 Basal 양 설정 가능한 프로파일. 더 많은 설정 정보를 확인하려면 [프로파일](../Usage/Profiles.md) 페이지를 방문하세요.
 
-## Insulin
+## 인슐린
 
 Select the type of insulin curve you are using. Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. You will need to enter additional settings for these. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
 
