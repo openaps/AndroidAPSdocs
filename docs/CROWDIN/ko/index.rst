@@ -89,6 +89,7 @@ AndroidAPS 설치하기
    목적 <./Usage/Objectives.md>
    OpenAPS features <./Usage/Open-APS-features.md>
    Profile switch <./Usage/Profiles.md>
+   Temp-Targets <./Usage/temptargets.md>
    문자(SMS) 명령 <./Usage/SMS-Commands.md>
    확장 탄수화물
    Timezone traveling with pumps <./Usage/Timezone-traveling.md>
