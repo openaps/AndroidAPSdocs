@@ -89,6 +89,7 @@ Usage
    Objectives <./Usage/Objectives.md>
    OpenAPS features <./Usage/Open-APS-features.md>
    Profile switch <./Usage/Profiles.md>
+   Temp-Targets <./Usage/temptargets.md>
    SMS Commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
    Timezone traveling with pumps <./Usage/Timezone-traveling.md>
