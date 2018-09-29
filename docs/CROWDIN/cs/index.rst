@@ -89,7 +89,7 @@ Použití
    Cíle <./Usage/Objectives.md>
    Možnosti OpenAPS <./Usage/Open-APS-features.md>
    Profily <./Usage/Profiles.md>
-   Temp-Targets <./Usage/temptargets.md>
+   Temp-Targets <./Usage/temptarget.md>
    SMS příkazy <./Usage/SMS-Commands.md>
    Prodloužené sacharidy (eCarbs) <./Usage/Extended-Carbs.md>
    Cestování časovými zónami <./Usage/Timezone-traveling.md>
