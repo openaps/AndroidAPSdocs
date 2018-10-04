@@ -31,7 +31,7 @@ Just sign up to CROWDIN, click your language, wait for admin authorization and g
 
 **What is the money used for?**
 
-The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. This is what is currently planned:
+The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. Here's an example from 2018:
 
 * European Dev Meetup in Prague end of May 2018:
 * hiring a room plus internet
