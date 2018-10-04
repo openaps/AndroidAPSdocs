@@ -26,7 +26,8 @@ E - average change CGM reading last 15 minutes
 F - phone battery
 
 G - BGI (blood glucose interaction)
-    -> What loop would expect to happen to bloods based on IOB and COB etc.
+    -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+    
 H - actual basal rate
 
 I - carbs (carbs on board | e-carbs in the future)
