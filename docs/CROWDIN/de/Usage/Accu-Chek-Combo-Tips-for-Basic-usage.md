@@ -1,4 +1,4 @@
-# AkkuChek Combo Tips for basic usage
+# AkkuChek Combo Tipps zum Einstieg
 
 ## Wie man einen reibungslosen Betrieb gewährleistet
 

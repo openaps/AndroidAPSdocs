@@ -8,9 +8,9 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Andere Anwendungen** OpenAPS, Loop
 
-**Java Umsetzungen:** Teilweise Umsetzung verfügbar [Rountrip2](https://github.com/TC2013/Roundtrip2), und [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) - Erweiterungen von RT2 sind fast vollständig.
+**Java implementations:** Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS Umsetzung** Am Beginn. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch riley_link_medtronic (default branch). Status: Grundlegende Umsetzung ist erledigt (Medtronic Tab), es gibt jetzt die Virtuelle Medtronic Pumpe. Zur Zeit wird hauptsächlich am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) gearbeitet um das Grundgerüst und die Befehle zum Laufen zu kriegen. Es gibt ein offenes Projekt (Medtronic) und Tickets für die zukünftige Entwicklung auf diesem Repository. Die Entwicklung geschieht auf dem Branch Dev_medtronic (was dort der Standard Branch ist). Es gibt auch schon den gitter room: RileyLinkAAPS/Lobby. Die testweise Integration in AAPS passiert gerade, ist aber noch nicht für öffentliche Tests verfügbar.
+**AAPS Umsetzung** Am Beginn. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch riley_link_medtronic (default branch). At the moment most of work is being done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. 2nd test "release" is out, with about 60% of all functionality. Work is progressing according to plan, end of development estimated to end of November.
 
 **Hardware Voraussetzungen für AAPS:** RileyLink
 
@@ -18,81 +18,97 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-## Insulet Omnipod
+## Insulet Omnipod ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-**Loop status:** wird zurzeit nicht unterstütze, aber bei [OpenOmi ](http://www.openomni.org/) wird intensiv daran gearbeitet, das Omnipod Protokoll zu entschlüsseln.
+**Loop status:** Not supported at the moment, but decoding of the Omnipod protocol is mostly finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
 
 **Andere Umsetzungen** Loop (Umsetzung ist erst am Anfang, so weit bekannt war es möglich den Pod zu starten und die erste temporäre Basalrate zu senden). Siehe [Openomni bei github](https://github.com/openaps/openomni)
 
 **Java Umsetzung** Nicht verfügbar.
 
-**AAPS Umsetzung Status:** Es wurde damit begonnen [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) für Omnipod umzusetzen (dev_omnipod branch), aber von einem funktionierenden Prototyp ist man noch weit entfernt (der Entwickler hat begonnen notwendige Änderungen in RL Firmware 2.0 zu implementieren). Auf https://omniaps.slack.com/ um Kanal android-driver kann man die Entwicklung verfolgen. Dort postet der Entwickler seinen Fortschritt.
+**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch), but it is far from working prototype (developer started working on changes needed for RL firmware 2.0). Auf https://omniaps.slack.com/ um Kanal android-driver kann man die Entwicklung verfolgen. Dort postet der Entwickler seinen Fortschritt.
 
-**Hardware-Anforderungen fürAAPS:** RileyLink mit Omnipod Software (2.0)
-
-**Anmerkungen:** Unterstützung für Omnipod DASH ist derzeit nicht vorgesehen. Sobald wir eine Java Umsetzung für den aktuellen Omnipod haben, werden wir davon ausgehend weiterentwickeln. Wenn das Omnipod Protokoll sich nicht verändert hat, dürften die Anpassungen nicht lange dauern, wenn sich das Protokoll ändert könnte sich die Arbeit länger hinausziehen.
+**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x)
 
 * * *
 
-## Ypsomed Pumpe
+## Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH_FAQs))
 
-**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertragen sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Dies könnte sich in späteren Versionen ändern.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump will start in January 2019 (they are doing pre-sales now in USA).
 
-**Hardware-Anforderungen für AAPS:** Vermutlich keine. Die Pumpe kommuniziert über Bluetooth.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+
+**Comments:** Omnipod DASH is currently not in the plan. Once we have a java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have an implementation a few months later, but if the protocol has changed then it might take some time.
 
 * * *
 
-## Cellnovo Pumpe
+## Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe kommuniziert über Bluetooth.
 
 * * *
 
+## Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+
+**Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe kommuniziert über Bluetooth.
+
+* * *
+
+## Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
+
+**Loop status** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
+
+**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+
+* * *
+
 ## Animas Vibe
 
-**Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich.
+**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
 * * *
 
 ## Animas Ping
 
-**Loop-Status:** Derzeit von keinem der Loop-Systeme unterstützt. Aber es könnte möglich sein, da sie eine Art von Fernsteuerung hat. Da sie eine ältere Pumpe ist, könnte es sein, dass sie niemals irgendwo unterstützt wird.
+**Loop status:** Currently not supported by any of Loop systems, but it might be a candidate, since it does have some kind of remote possibility. Since its much older pump, it might never get supported anywhere.
 
 * * *
 
-## Anforderungen an Pumpen, um loopbar zu sein
+## Requirements for pump being loopable
 
-**Voraussetzungen**
+**Prerequisite**
 
 - Pumpe muss irgendeine Art von Fernbedienung unterstützen. (BT, Radiofrequenz, etc.)
 - Protokoll ist gehackt/dokumentiert/etc.
 
-**Mindestanforderungen**
+**Minimal requirement**
 
 - Temporäre Basalraten setzen
 - Status abrufen
 - Temporäre Basalraten abbrechen
 
-**Für oref1(SMB) oder Bolusing:**
+**For oref1(SMB) or Bolusing:**
 
 - Mahlzeiten Bolus abgeben
 
-**Sinnvoll außerdem**
+**Good to have**
 
 - Bolus abbrechen
-- Basalprofil abrufen
+- Get Basal Profile (almost requirement)
 - Basalprofil setzen
 - History auslesen 
 
-**Sonstiges**
+**Andere**
 
 - Verlängerten Bolus setzen
 - Verlängerten Bolus abbrechen
 
 * * *
 
-## Unterstützung weiterer Pumpen
+## Other pumps support
 
-Wenn du irgendwelche anderen Pumpen hast, zu denen dich der Status interessiert, kontaktiere mich einfach (@andyrozman on gitter). In zukünftigen Releases werden einige Pumpen-Konfigurationen hinzugefügt, die dann im Open Loop laufen können (du wirst dann die Möglichkeit haben, einen bestimmten Typ als virtuelle Pumpe auszuwählen, so dass deine Einstellungen geladen werden - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
