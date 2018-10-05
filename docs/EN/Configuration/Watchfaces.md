@@ -28,7 +28,7 @@ F - phone battery
 G - BGI (blood glucose interaction)
     -> the degree to which BG “should” be rising or falling based on insulin activity alone.
     
-H - actual basal rate
+H - basal rate (0% = zero tep / 100% = standard basal rate)
 
 I - carbs (carbs on board | e-carbs in the future)
 
