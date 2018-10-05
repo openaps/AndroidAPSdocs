@@ -5,16 +5,49 @@ Config Builder (Conf) is the tab where you turn the modular features on and off.
 **First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen and select 'Setup Wizard' to use it.
 
 ## Profile
-Select the basal profile you wish to use:
-*  <b>NS Profile</b> uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile).  You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-*  <b>Simple Profile</b> profile with just one time block (i.e. no basal rate changes during the day)
-*  <b>Local Profile</b> uses the basal profile manually entered in phone. See [Profiles](../Usage/Profiles.md) page for more setup information.
+Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+
+### NS Profile (recommended)
+NS Profile uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
+This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+
+Do a <b>profile switch</b> to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+
+### Simple profile
+Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
+
+### Local profile
+First AndroidAPS will load the profile 1 stored in your pump (additional pump profiles are ignored). As soon as "Local profile" is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1.
+
 
 ## Insulin
 Select the type of insulin curve you are using.  Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours.  These curves will only vary based on the duration of the DIA.  The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak.  You will need to enter additional settings for these.  You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
 
+### Rapid-Acting Oref
+- recommended for Humalog, Novolog and Novorapid
+- DIA = at least 5.0h
+- Max. peak = 75 minutes after injection
+
+### Ultra-Rapid Oref
+- recommended for FIASP
+- DIA = at least 5.0h
+- Max. peak = 55 minutes after injection
+
+For a lot of people there is practically no noticeable effect of fiasp after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
+
+### Free Peak Oref
+With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+
+This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+
 ## BG Source
 Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
+- [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
+- NSClient BG
+- [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
+- [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+- [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/)
+- [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pump
 Select the pump you are using.  For people wanting to open loop this needs to be 'Virtual Pump'.  See [DanaR Insulin Pump](DanaR-Insulin-Pump.md), [DanaRS Insulin Pump](DanaRS-Insulin-Pump.md) or [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) pages for more setup information.
