@@ -50,20 +50,45 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 - [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pump
-Select the pump you are using.  For people wanting to open loop this needs to be 'Virtual Pump'.  See [DanaR Insulin Pump](DanaR-Insulin-Pump.md), [DanaRS Insulin Pump](DanaRS-Insulin-Pump.md) or [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) pages for more setup information.
+Select the pump you are using.  
+- [DanaR](DanaR-Insulin-Pump.md)
+- DanaR Korean (for domestic DanaR pump)
+- DanaRv2 (DanaR pump with firmware upgrade)
+- [DanaRS](DanaRS-Insulin-Pump.md)
+- [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+- MDI (receive AAPS suggestions for your multiple daily injections thereapy)
+- Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
 ## Sensitivity Detection
-Select the type of sensitivity detection.  This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).  You can view your sensistivity on the homescreen by selecting SEN and watching the white line.  Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
+Select the type of sensitivity detection.  This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).  
+
+You can view your sensistivity on the homescreen by selecting SEN and watching the white line.  Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
 
 ## APS
-Select either OpenAPS MA (meal assist) or OpenAPS AMA (advanced meal assist).  More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama); in simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+- OpenAPS MA (meal assist, state of the algorithm in 2016)
+- OpenAPS AMA (advanced meal assist, state of the algorithm in 2016)  
+More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
 Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
+- [OpenAPS SMB](../Usage/Open-APS-features.html) (super micro bolus, most recent algorithm for advanced users)  
+Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB.
 
 ## Loop
-If you wish to use open or closed looping you will need to enable this here.  You can see the active request and success of enactment in the Loop tab.
+Define whether you want to allow AAPS automatic controls or not.
 
-## Constraints
-If you view the Objectives (Obj) tab, you can see more information about how far you have progressed and what actions you still need to complete.  See [Objectives](../Usage/Objectives.md) page for more information.
+### Open Loop
+AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+
+### Closed Loop
+AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypoversion, etc.). The Closed Loop works within numerous safety limits, which you can be set individually.
+Closed Loop is only possible if you are in [Objective 4](../Usage/Objectives.md) or higher and use a supported pump.
+
+## Objectives (learning program)
+AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+
+You should export your settings (including progress of the objectives) on a regulary basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+
+See [Objectives](../Usage/Objectives.md) page for more information.
 
 ## Treatments
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
