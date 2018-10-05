@@ -17,7 +17,7 @@ Do a <b>profile switch</b> to activate a profile from Nightscout. Press and hold
 Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
 
 ### Local profile
-First AndroidAPS will load the profile 1 stored in your pump (additional pump profiles are ignored). As soon as "Local profile" is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1.
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1.
 
 
 ## Insulin
