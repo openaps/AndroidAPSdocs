@@ -10,15 +10,15 @@ Dieses Projekt basiert auf ehrenamtlicher Arbeit, weshalb einige Regeln existier
 
 Um Unterstützung für CGM-Quellen zu erhalten, verwende bitte die Facebook-Gruppen oder gitter Kanäle für das spezielle System (z.B. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)), für Unterstützung bei Nightscout benutze [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/), da die Benutzer dort mehr über die speziellen Systeme wissen, als die Leute hier, die alle unterschiedliche Systeme verwenden.
 
-# Connect with others using AndroidAPS
+# Kontaktiere andere, die AndroidAPS benutzen
 
-Who is using AndroidAPS? Add yourself to [the map here](https://www.zeemaps.com/map?group=2617973) by going to Additions > Add Marker - Simple. Choose a green pin for "I've got it!" or an orange pin for "I want it". List your name as your facebook name and in the description record extra info such as your pump, CGM and your endo/clinic name if they're supportive. The address does not have to be your actual house, you can just add town name or even your clinic address if you prefer.
+Wer verwendet AndroidAPS? Füge dich einfach selbst [dieser Karte hier](https://www.zeemaps.com/map?group=2617973) hinzu: Additions > Add Marker. Wähle einen grünen Pin für "Ich benutze es!" oder einen orangenen für "Ich möchte es". Füge deinen Facebook Namen in die Liste ein und gib zusätzliche Informationen wie deine verwendete Pumpe, CGM oder deine Krankengeschichte in der Beschreibung ein, wenn sie hilfreich sind. Die Adresse muss nicht deine echte Heimatadresse sein, es reicht, wenn du den Namen der Stadt oder deines Krankenhauses einfügst, je nachdem, was du lieber angibst.
 
 ## Schließe dich der AndroidAPS users Gruppe auf Facebook an!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) if you want to contact anyone on the map to ask country specific questions, you can also post here any questions about the algorithum, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+Wenn du Kontakt zu jemandem auf der Karte herstellen möchtest, um länderspezifische Fragen zu stellen, dann schließe dich der [AndroidAPS users Facebook Gruppe](https://www.facebook.com/groups/1900195340201874/) an. Du kannst hier auch Fragen stellen zum Algorithmus, jeglichen Setup Problemen, die du mit AndroidStudio und dem Erstellen der APK hast, alle Fragen über die Benutzung der App und Tipps dazu, wie man den größten Nutzen aus ihr ziehen kann. Es gibt auch eine Gruppe für Benutzer der Combo Pumpe [AAPSCombo](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup haben.
 
-For general chat about looping in general there are several facebook groups;
+Für allgemeine Diskussionen über das Loopen an sich gibt es verschiedene Facebook Gruppen:
 
 * [Looped](https://www.facebook.com/groups/TheLoopedGroup) (weltweit, Benutzer von OpenAPS, Loop und AndroidAPS)
 * [Looped UK](https://www.facebook.com/groups/LoopedUK/) (in England beheimatete Benutzer von OpenAPS, Loop und AndroidAPS)
