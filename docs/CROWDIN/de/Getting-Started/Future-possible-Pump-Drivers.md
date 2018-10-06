@@ -10,7 +10,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Java implementations:** Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS Umsetzung** Am Beginn. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch riley_link_medtronic (default branch). At the moment most of work is being done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. 2nd test "release" is out, with about 60% of all functionality. Work is progressing according to plan, end of development estimated to end of November.
+**AAPS Umsetzung** Am Beginn. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch riley_link_medtronic (default branch). Zur Zeit wird hauptsächlich am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) gearbeitet, um das Framework und die Befehle zum Laufen zu bekommen. In diesem Repository wurden ein Projekt (Medtronic) und Tickets für die weitere Entwicklung angelegt. Die Entwicklung erfolgt im Branch dev_medtronic (dem dortigen default branch). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. Die zweite Test-Release mit etwa 60% aller Funktionalitäten wurde veröffentlicht. Work is progressing according to plan, end of development estimated to end of November.
 
 **Hardware Voraussetzungen für AAPS:** RileyLink
 
@@ -20,13 +20,13 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ## Insulet Omnipod ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-**Loop status:** Not supported at the moment, but decoding of the Omnipod protocol is mostly finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
+**Loop status:** Aktuell nicht unterstützt, aber die Entschlüsselung des Omnipod Protokolls ist nahezu abgeschlossen. [OpenOmni](http://www.openomni.org/) und [OmniAPS Slack](https://omniaps.slack.com/)
 
 **Andere Umsetzungen** Loop (Umsetzung ist erst am Anfang, so weit bekannt war es möglich den Pod zu starten und die erste temporäre Basalrate zu senden). Siehe [Openomni bei github](https://github.com/openaps/openomni)
 
 **Java Umsetzung** Nicht verfügbar.
 
-**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch), but it is far from working prototype (developer started working on changes needed for RL firmware 2.0). Auf https://omniaps.slack.com/ um Kanal android-driver kann man die Entwicklung verfolgen. Dort postet der Entwickler seinen Fortschritt.
+**AAPS Umsetzungsstatus:** Die Arbeiten an [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch) haben begonnen, sind aber noch weit von einem ersten Prototypen entfernt (der Entwickler hat mit der Änderungen, die für RL Firmware 2.0 erforderlich sind, begonnen). Auf https://omniaps.slack.com/ um Kanal android-driver kann man die Entwicklung verfolgen. Dort postet der Entwickler seinen Fortschritt.
 
 **Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x)
 
@@ -34,17 +34,17 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ## Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH_FAQs))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump will start in January 2019 (they are doing pre-sales now in USA).
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Vertrieb der Pumpe startet im Januar 2019 (aktuell nur Vorverkauf in den USA).
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
-**Comments:** Omnipod DASH is currently not in the plan. Once we have a java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have an implementation a few months later, but if the protocol has changed then it might take some time.
+**Comments:** Omnipod DASH is currently not in the plan. Sobald wir eine Java Implementierung für den Omnipod haben, werden wir davon ausgehend weiterentwickeln. Falls das Protokoll beim Omnipod Dash unverändert bleibt, könnten wir ein paar Monate später eine Implementierung haben. Falls es jedoch verändert wurde, wird es länger dauern.
 
 * * *
 
 ## Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions.
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertrag sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Maybe this will change in the next versions.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe kommuniziert über Bluetooth.
 
@@ -62,7 +62,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop status** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**Hardware-Anforderungen für AAPS:** Vermutlich keine. It seems to be BT enabled.
 
 * * *
 
