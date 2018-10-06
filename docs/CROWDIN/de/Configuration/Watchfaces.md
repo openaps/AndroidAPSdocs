@@ -10,34 +10,34 @@ Es gibt mehrere Ziffernblätter zur Auswahl, die das durchschnittliche Delta, IO
 * Manchmal hilft es, Apps erneut mit der Uhr zu synchronisieren, da es manchmal ein bisschen langsam sein kann, bis der Sync automatisch erfolgt: Wear Os > Zahnrad-Symbol (ganz unten) > Name deiner Uhr > Apps erneut synchronisieren.
 * Schalte ADB Debuggen in den Entwickleroptionen der Uhr ein, verbinde die Uhr via USB mit dem PC und starte die Wear App einmal in Android Studio.
 
-## Legend AndroidAPSv2 watchface
+## Legende AndroidAPSv2 watchface
 
-![Legend AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
+![Legende AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
 
 A - Zeit seit der letzten Loop-Aktion
 
-B - CGM reading
+B - CGM Wert
 
 C - Minuten seit dem letzten CGM-Wert
 
 D - Veränderung zwischen letztem und vorletztem CGM-Wert (in mmol oder mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - Durchschnittliche Änderung der CGM-Werte in den letzten 15 Minuten
 
-F - phone battery
+F - Batteriestatus des Smartphones
 
 G - BGI (blood glucose interaction) -> erwartete BZ-Änderung allein auf Basis des aktiven Insulins.
 
 H - Basalrate (Anzeige in IE/Std. bei Standard-BR und in % während einer TBR)
 
-I - carbs (carbs on board | e-carbs in the future)
+I - Kohlenhydrate (carbs on board | e-carbs in der Zukunft)
 
-J - insulin on board (from bolus | from basal)
+J - Insulin on board (aus Boli | aus Basal)
 
-## View Nightscout data
+## Nightscout Daten anzeigen
 
-Falls du ein anderes System zum Loopen verwendest und deine Daten oder die deines Kindes/Verwandten auf der Uhr *sehen* möchtest, kannst du auch einfach nur die NSClient APK kompilieren. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Es gibt mehrere Ziffernblätter zur Auswahl, die das durchschnittliche Delta, IOB, die derzeit aktive TBR und Basalraten sowie die Kurve der CGM-Werte anzeigen können.
+Falls du ein anderes System zum Loopen verwendest und deine Daten oder die deines Kindes/Verwandten auf der Uhr *sehen* möchtest, kannst du auch einfach nur die NSClient APK kompilieren. Gehe wie unter [AndroidAPS installieren - App erstellen](../Installing-AndroidAPS/Building-APK.md) beschrieben vor und wähle die Build Variante "NSClientRelease". Es gibt mehrere Ziffernblätter zur Auswahl, die das durchschnittliche Delta, IOB, die derzeit aktive TBR und Basalraten sowie die Kurve der CGM-Werte anzeigen können.
 
 ## Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Pebble Nutzer können das [Urchin watchface](https://github.com/mddub/urchin-cgm) nutzen, um ihre Loop-Daten *anzuzeigen* (falls sie zu Nightscout hochgeladen werden). Es ist aber nicht möglich, die Pumpe und AndroidAPS über die Smartwatch zu steuern. Du kannst Felder wählen, um z. B. IOB, aktive temp. Basalrate und Vorhersagekurven anzeigen zu lassen. Falls du open loopst, kannst du [IFTTT](https://ifttt.com/) benutzen, um ein kleines Programm zu erstellen, welches (wenn eine Benachrichtigung von AndroidAPS kommt) eine SMS oder Benachrichtigung anzeigt.
