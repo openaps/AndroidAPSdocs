@@ -10,39 +10,39 @@ Eltern, Betreuer, geliebte Personen und Menschen mit Diabetes arbeiten zusammen,
 
 Juhuu! Schau dir die Probleme an, frag im Gitter-Channel. Es gibt immer viel zu tun! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten Pull Request! :)
 
-**I know the system and can write documentation!**
+**Ich kenne mich aus mit dem System und möchte beim Wiki mitschreiben!**
 
 Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
 
 * Den Gitter-Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby) 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+* Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Am Wiki mitschreiben](../make-a-PR.md). Andere Sprachen können nur übersetzt, aber nicht bearbeitet werden. Dadurch wird die Einheitlichkeit des Wikis in allen Sprachen gewährleistet.
 
-**I do speak multiple languages and whant to translate the app or the documentation**
+**Ich spreche mehrere Sprachen und würde gerne bei der Übersetzung der App bzw. des Wikis helfen**
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://translations.androidaps.org).
-* If you want to translate **the wiki** to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org). 
+* Falls du die **die App** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://translations.androidaps.org).
+* Falls du **das Wiki** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://wikitranslations.androidaps.org). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Registriere dich einfach bei CROWDIN, wähle deine Sprache aus, warte bis der Admin deine Anfrage bestätigt und schon kannst du loslegen!
 
-**I've got cash I'd like to donate, how do I do that?**
+**Ich habe Geld, das ich gerne spenden würde, wie gehe ich vor?**
 
     PayPal: [donations@androidaps.org] (donations@androidaps.org)  
     
 
-**What is the money used for?**
+**Für was wird das Geld ausgegeben?**
 
-The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. Here's an example from 2018:
+Das Geld wird NICHT dafür benutzt, um jemanden für seine Arbeit zu bezahlen! Es wird aufbewahrt, um die Kosten für die Entwickler bei der Organisation von Treffen niedrig zu halten. Dabei wird versucht, transparent damit umzugehen. Hier ein Beispiel aus dem Jahr 2018:
 
-* European Dev Meetup in Prague end of May 2018:
-* hiring a room plus internet
-* equipment
-* food / coffee
-* in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
+* Europäisches Entwicklertreffen in Prag Ende Mai 2018:
+* Raummiete und Internet
+* Ausrüstung
+* Verpflegung / Kaffee
+* Im unwahrscheinlichen Fall, dass die o.g. Kosten durch Spenden voll abgedeckt sind und etwas Geld übrig bleibt: Reisekosten für die Entwickler mit weiterer Anreise. (Einige Entwickler von anderen Kontinenten werden teilnehmen, sind zu der Zeit aber bereits in Europa, so dass die Reisekosten niedrig bleiben.)
 
-**I've got spare equipment, where do I send it?**
+**Ich habe Ersatzgeräte, die ich gerne spenden würde, wohin kann ich sie senden?**
 
-We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+Derzeit sammeln wir "wird später zur Verfügung gestellt", um sie zum Testen zu verteilen. Sollten am Ende Geräte übrig bleiben, so werden wir diese an einer der Pay-it-Forward Facebook Gruppen spenden, die bereits existieren und die T1 Community unterstützen. Falls du Ersatzgeräte spenden möchtest, schicke bitte eine E-Mail an developers@androidaps.org, sodass wir dir eine Lieferungsanschrift geben können.
 
-**I don't have cash or equipment, how can I help?**
+**Ich kann weder spenden noch habe ich Ersatzgeräte. Wie kann ich trotzdem helfen?**
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Wir benötigen auch Grafikdesigner, Experten für User Experience, Übersetzer und Autoren für das Wiki. Oder bringe das Projekt einfach dadurch voran, dass du die Fragen auf Gitter und Facebook beantwortest. Dann können sich die Entwickler darauf konzentrieren, die harten Nüsse zu knacken.
