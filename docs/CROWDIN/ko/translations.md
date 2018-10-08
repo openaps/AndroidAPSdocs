@@ -1,17 +1,17 @@
-# How to translate AndroidAPS
+# AndroidAPS를 어떻게 번역하는지?
 
-* Go to <https://translations.androidaps.org> and login using your Github account
+* <https://translations.androidaps.org>로 가서 Github 계정에 로그인하세요.
 
-* Contact [Milos](https://gitter.im/MilosKozak) or [Adrian](https://gitter.im/AdrianLxM) and specify language and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users)
+* [Milos](https://gitter.im/MilosKozak) 또는 [Adrian](https://gitter.im/AdrianLxM)에 연락해서 번역하고자 하는 언어와 translator(번역자) 또는 번역검증자(proofreader/번역+AndroidAPS에 대한 사전지식이 있는 사용자)중 원하는 역할을 알려주세요.
 
-* When we approve you, click the flag ![](../images/translation-flags.png)
+* 승인이 되면 깃발을 클릭하세요.![](../images/translation-flags.png)
 
-* Click strings.xml ![](../images/translations-click-strings.png)
+* strings.xml을 클릭하세요.![](../images/translations-click-strings.png)
 
 * Translate sentences on left side by adding new translated text or use & edit suggestion ![](../images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode ![](../images/translations-proofreading-mode.png)
+* Proofreader(번역검증자)들은 Proofreading mode(번역검증 모드)로 변환하여야 합니다. ![](../images/translations-proofreading-mode.png)
 
-* and approve translated texts ![](../images/translations-proofreading.png)
+* 그리고 번역된 내용을 승인하세요. ![](../images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
+Proofreader(번역검증자) 가 번역된 내용을 승인하면, AndroidAPS 다음 버전에 추가됩니다. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
