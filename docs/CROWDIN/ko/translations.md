@@ -8,10 +8,10 @@
 
 * strings.xml을 클릭하세요.![](../images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion ![](../images/translations-translate.png)
+* 새로운 번역을 추가하거나, 수정제안을 통하여 좌측에 있는 문장을 번역하세요. ![](../images/translations-translate.png)
 
 * Proofreader(번역검증자)들은 Proofreading mode(번역검증 모드)로 변환하여야 합니다. ![](../images/translations-proofreading-mode.png)
 
 * 그리고 번역된 내용을 승인하세요. ![](../images/translations-proofreading.png)
 
-Proofreader(번역검증자) 가 번역된 내용을 승인하면, AndroidAPS 다음 버전에 추가됩니다. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
+Proofreader(번역검증자) 가 번역된 내용을 승인하면, AndroidAPS 다음 버전에 추가됩니다. 초기에는 기존에 번역된 내용을 검토하거나, 승인되지 않은 내용에서 오류가 없는지 확인하는 것이 좋으며, 이 후 문제가 없다면, 승인하면 됩니다.
