@@ -87,13 +87,13 @@ AndroidAPS 설치하기
    :glob:
     
    목적 <./Usage/Objectives.md>
-   OpenAPS features <./Usage/Open-APS-features.md>
+   OpenAPS 기능들 <./Usage/Open-APS-features.md>
    Profile switch <./Usage/Profiles.md>
-   Temp-Targets <./Usage/temptarget.md>
+   임시목표 <./Usage/temptarget.md>
    문자(SMS) 명령 <./Usage/SMS-Commands.md>
    확장 탄수화물
-   Timezone traveling with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
+   펌프의 시간대 이동 <./Usage/Timezone-traveling.md>
+   로그 파일에 접근하기 <./Usage/Accessing-logfiles.md>
    혈당데이터 평활화하기 <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    아큐-첵 콤보 기초 사용법 <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient 문제해결 <./Usage/Troubleshooting-NSClient.md>
@@ -104,7 +104,7 @@ AndroidAPS 설치하기
    :maxdepth: 1
    :glob:
 
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
+   시작하기 전에 보면 좋은 유용한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
    도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 도움주기
