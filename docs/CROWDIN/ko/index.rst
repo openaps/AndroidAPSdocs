@@ -47,7 +47,7 @@ AndroidAPS 시작하기
    
    안전유의사항 <./Getting-Started/Safety-first>
    스크린샷 <./Getting-Started/Screenshots.md>
-   Phones <./Getting-Started/Phones.md>
+   스마트폰 <./Getting-Started/Phones.md>
    펌프 선택 <./Getting-Started/Pump-Choices.md>
    향후 가능한 펌프 <./Getting-Started/Future-possible-Pump-Drivers.md>
    APS사용자를 위한 FAQ
@@ -60,10 +60,10 @@ AndroidAPS 설치하기
    :glob:
 
    APK 파일 빌드하기 <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   새 버전 혹은 다른 branch로 업데이트 하기 <./Installing-AndroidAPS/Update-to-new-version.md>
    릴리즈 노트 <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev-branch.md>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+   Nightscout 설정 <./Installing-AndroidAPS/Nightscout.md>
    
 환경설정 
 ---------------
@@ -72,10 +72,10 @@ AndroidAPS 설치하기
    :glob:
    
    구성관리자 <./Configuration/Config-Builder.md>
-   BG Source <./Configuration/BG-Source.md>
-   DanaR pump <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS pump <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
+   BG 소스<./Configuration/BG-Source.md>
+   다나R 펌프<./Configuration/DanaR-Insulin-Pump.md>
+   다나RS 펌프<./Configuration/DanaRS-Insulin-Pump.md>
+   아큐-첵 콤보 펌프 <./Configuration/Accu-Chek-Combo-Pump.md>
    워치화면 <./Configuration/Watchfaces.md>
    설정 <./Configuration/Preferences.md>
    민감도 감지와 COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -88,7 +88,7 @@ AndroidAPS 설치하기
     
    목적 <./Usage/Objectives.md>
    OpenAPS 기능들 <./Usage/Open-APS-features.md>
-   Profile switch <./Usage/Profiles.md>
+   프로파일 변경 <./Usage/Profiles.md>
    임시목표 <./Usage/temptarget.md>
    문자(SMS) 명령 <./Usage/SMS-Commands.md>
    확장 탄수화물
