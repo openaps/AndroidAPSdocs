@@ -1,8 +1,10 @@
 # Config Builder
 
-Config Builder (Conf) is the tab where you turn the modular features on and off.  The boxes on the left hand side allow you to select which one to use, the boxes on the right hand side allow you to view these as a tab in AndroidAPS.  In case the right box is not activated you can reach the function by using the hamburger menu on the top left of the screen.
+Config Builder (Conf) is the tab where you turn the modular features on and off.  The boxes on the left hand side (A) allow you to select which one to use, the boxes on the right hand side (C) allow you to view these as a tab in AndroidAPS.  In case the right box is not activated you can reach the function by using the hamburger menu on the top left of the screen.
 
-Where there are additional settings available within the module, you can click on the cog graphic which will take you to the specific settings within preferences.
+Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+
+![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
 **First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen and select 'Setup Wizard' to use it.
 
@@ -37,6 +39,8 @@ Select the type of insulin curve you are using.  Basic AndroidAPS options are bi
 
 For a lot of people there is practically no noticeable effect of fiasp after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
 
+![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+
 ### Free Peak Oref
 With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 
@@ -48,7 +52,8 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 - NSClient BG
 - [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 - [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-- [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/)
+- [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms.
+![Config Builder BG source](../images/ConfBuild_BGSource.png)
 - [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pump
@@ -123,6 +128,8 @@ Create a button for a certain standard meal (carbs and calculation method for th
 
 Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
+![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+
 #### Advanced settings
 Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically the basal for the next two hours is added to the bolus and a two hour zero-temp activated. Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
@@ -138,12 +145,16 @@ Some buttons to quickly access common features:
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
+![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
+
 ### Careportal
 Allows you to record any specific care entries and view the current sensor, insulin, canula and pump batter ages in the Careportal (CP) tab.
 
 Note: <b>No insulin</b> will be given if entered via careportal (i.e. meal bolus, correction bolus...)
 
 Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+
+![Careportal tab](../images/ConfBuild_CarePortal.png)
 
 ### SMS Communicator
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
@@ -156,6 +167,8 @@ Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 ### Wear
 Monitor and control AAPS using your WearOS watch. Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...)
 
+![Wear settings](../images/ConfBuild_Wear.png)
+
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 * Resend all data.
 Might be helpful if watch was not connected for some time and you want to push the information to the watch.
@@ -167,6 +180,8 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 ### Ongoing Notification
 Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
 
+![AAPS widget](../images/ConfBuild_Widget.png)
+
 ### NS Client
 Setup sync of your AndroidAPS data with Nightscout
 If <b>Log app start to NS</b> is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
@@ -174,10 +189,14 @@ If <b>Log app start to NS</b> is activated each AndroidAPS will be visible in Ni
 #### Alarm options
 Activate/deactivate AndroidAPS alarms
 
+![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+
 #### Connection settings
 Offline looping, disable roaming...
 
 If you want to use only a specific WiFi network you can enter its <b>WiFi SSID </b>. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+
+![Nightscout connection settings](../images/ConfBuild_Connection Settings.png)
 
 #### Advanced settings
 * Auto backfill missing BGs from Nightscout
@@ -188,6 +207,8 @@ Create Nightscout announcement fro error dialogs and local alerts (also viewable
 * No upload to NS
 * Always use basal absolute values
 Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+
+![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Maintenance
 Email and number of logs to be send. Normally no change neccessary.
