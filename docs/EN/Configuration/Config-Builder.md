@@ -61,10 +61,15 @@ Select the pump you are using.
 - MDI (receive AAPS suggestions for your multiple daily injections thereapy)
 - Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
+Use <b>Advanced settings</b> to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is pobbile. This may help on some phones where the bluetooth stack freezes.
+
 ## Sensitivity Detection
 Select the type of sensitivity detection.  This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).  
 
 You can view your sensistivity on the homescreen by selecting SEN and watching the white line.  Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
+
+### Absorption settings
+If you use Oref1 with SMB you must change <b>min_5m_carbimpact</b> to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically it is a failsafe.
 
 ## APS
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
@@ -73,7 +78,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
 Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
 - [OpenAPS SMB](../Usage/Open-APS-features.html) (super micro bolus, most recent algorithm for advanced users)  
-Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB.
+Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 Define whether you want to allow AAPS automatic controls or not.
@@ -130,7 +135,8 @@ Some buttons to quickly access common features:
 * Prime / fill (DanaR/RS or Combo pump only)
 * History browser
 * TDD (Total daily dose - bolus + basal per day)
-Many basal rates (total basal insulin per day) are in the range of 32% to 37% of TDD.
+
+Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
 ### Careportal
 Allows you to record any specific care entries and view the current sensor, insulin, canula and pump batter ages in the Careportal (CP) tab.
@@ -156,7 +162,7 @@ Might be helpful if watch was not connected for some time and you want to push t
 * Open settings on your watch directly from your phone.
 
 ### xDrip Statusline (watch)
-Display loop information on your xDrip+ watchface (if you are not using AAPS/AAPSv2 watchface)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Watchfaces.html))
 
 ### Ongoing Notification
 Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
@@ -166,7 +172,7 @@ Setup sync of your AndroidAPS data with Nightscout
 If <b>Log app start to NS</b> is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
 
 #### Alarm options
-Activate/deactive AndroidAPS alarms
+Activate/deactivate AndroidAPS alarms
 
 #### Connection settings
 Offline looping, disable roaming...
@@ -174,7 +180,7 @@ Offline looping, disable roaming...
 If you want to use only a specific WiFi network you can enter its <b>WiFi SSID </b>. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
 
 #### Advanced settings
-* Autobackfill missing BGs from Nightscout
+* Auto backfill missing BGs from Nightscout
 * Create announcement from errors
 Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
 * Enable local broadcast to other apps like xDrip+
