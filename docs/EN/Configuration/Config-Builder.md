@@ -1,18 +1,18 @@
 # Config Builder
 
-Config Builder (Conf) is the tab where you turn the modular features on and off.  The boxes on the left hand side (A) allow you to select which one to use, the boxes on the right hand side (C) allow you to view these as a tab in AndroidAPS.  In case the right box is not activated you can reach the function by using the hamburger menu on the top left of the screen.
+Config Builder (Conf) is the tab where you turn the modular features on and off.  The boxes on the left hand side (A) allow you to select which one to use, the boxes on the right hand side (C) allow you to view these as a tab (E) in AndroidAPS.  In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
 
 Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
-
 **First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen and select 'Setup Wizard' to use it.
+
+![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
 ## Profile
 Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
 ### NS Profile
-NS Profile uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the Profile Switch to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
+NS Profile uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.html) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
 This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
 Do a <b>profile switch</b> to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
