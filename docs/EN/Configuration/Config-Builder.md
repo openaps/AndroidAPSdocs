@@ -162,7 +162,7 @@ Might be helpful if watch was not connected for some time and you want to push t
 * Open settings on your watch directly from your phone.
 
 ### xDrip Statusline (watch)
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Watchfaces.html))
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](/Watchfaces.html))
 
 ### Ongoing Notification
 Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
