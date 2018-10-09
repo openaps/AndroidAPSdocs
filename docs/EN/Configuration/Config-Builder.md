@@ -1,6 +1,8 @@
 # Config Builder
 
-Config Builder (Conf) is the tab where you turn the modular features on and off.  The boxes on the left hand side allow you to select which one to use, the boxes on the right hand side allow you to view these as a tab in AndroidAPS.  Where there are additional settings available within the module, you can click on the cog graphic which will take you to the specific settings within Preferences.
+Config Builder (Conf) is the tab where you turn the modular features on and off.  The boxes on the left hand side allow you to select which one to use, the boxes on the right hand side allow you to view these as a tab in AndroidAPS.  In case the right box is not activated you can reach the function by using the hamburger menu on the top left of the screen.
+
+Where there are additional settings available within the module, you can click on the cog graphic which will take you to the specific settings within preferences.
 
 **First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen and select 'Setup Wizard' to use it.
 
@@ -95,7 +97,7 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 
 ## General
 ### Overview
-Display the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details).  Settings can be accessed by clicking the cog graphic.
+Display the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details).  Settings can be accessed by clicking the cog wheel.
 
 #### Keep screen on
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore it is recommended to connect the smartphone to a charger cable.
@@ -114,15 +116,75 @@ Furthermore you can set shortcuts for insulin and carb increments and decide wet
 #### QuickWizard settings
 Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
+Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+
 #### Advanced settings
 Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically the basal for the next two hours is added to the bolus and a two hour zero-temp activated. Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Actions
-allows you to make Profiles Switches (see [Profiles page](../Usage/Profiles.md) for more setup information), Temporary Targets, and for those using DanaR/RS or Combo pump to set a manual TBR or prime the canula.
-*  <b>Careportal</b> allows you to record any specific care entries and view the current sensor, insulin, canula and pump batter ages in the Careportal (CP) tab.
-*  <b>SMS Communicator</b> allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
-*  <b>Food</b> allows you to view and use the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information or http://[yournightscoutsiteaddress]/food to access your database.
-*  <b>Wear</b> allows you to view and control AndroidAPS from the Android Wear watch, see [watchfaces](Watchfaces.md) for more setup information.
-*  <b>xDrip Statusline (watch)</b> Display loop information on your xDrip+ watchface
-*  <b>Ongoing Notification</b> displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
-*  <b>NS Client</b> Setup sync of your AndroidAPS data with Nightscout
+Some buttons to quickly access common features:
+* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
+* Temporary targets
+* Set / cancel temp. basal rate
+* Extended bolus (DanaR/RS or Combo pump only)
+* Prime / fill (DanaR/RS or Combo pump only)
+* History browser
+* TDD (Total daily dose - bolus + basal per day)
+Many basal rates (total basal insulin per day) are in the range of 32% to 37% of TDD.
+
+### Careportal
+Allows you to record any specific care entries and view the current sensor, insulin, canula and pump batter ages in the Careportal (CP) tab.
+
+Note: <b>No insulin</b> will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+
+Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+
+### SMS Communicator
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
+
+### Food
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+
+### Wear
+Monitor and control AAPS using your WearOS watch. Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...)
+
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+* Resend all data.
+Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
+
+### xDrip Statusline (watch)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/AAPSv2 watchface)
+
+### Ongoing Notification
+Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
+
+### NS Client
+Setup sync of your AndroidAPS data with Nightscout
+If <b>Log app start to NS</b> is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
+
+#### Alarm options
+Activate/deactive AndroidAPS alarms
+
+#### Connection settings
+Offline looping, disable roaming...
+
+If you want to use only a specific WiFi network you can enter its <b>WiFi SSID </b>. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+
+#### Advanced settings
+* Autobackfill missing BGs from Nightscout
+* Create announcement from errors
+Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
+* Enable local broadcast to other apps like xDrip+
+* NS upload only (sync disabled)
+* No upload to NS
+* Always use basal absolute values
+Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+
+### Maintenance
+Email and number of logs to be send. Normally no change neccessary.
+
+### Config Builder
+Use tab for config builder instead of hambuger menu.
