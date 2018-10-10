@@ -89,7 +89,7 @@ Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use Ope
 Define whether you want to allow AAPS automatic controls or not.
 
 ### Open Loop
-AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions have to be entered manually into the pump. This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
 ### Closed Loop
 AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypoversion, etc.). The Closed Loop works within numerous safety limits, which you can be set individually.
