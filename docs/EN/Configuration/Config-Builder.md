@@ -37,7 +37,7 @@ Select the type of insulin curve you are using.  Basic AndroidAPS options are bi
 - DIA = at least 5.0h
 - Max. peak = 55 minutes after injection
 
-For a lot of people there is practically no noticeable effect of fiasp after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
+For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
