@@ -89,7 +89,7 @@ Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use Ope
 Define whether you want to allow AAPS automatic controls or not.
 
 ### Open Loop
-AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions have to be entered manually into the pump. This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
 ### Closed Loop
 AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypoversion, etc.). The Closed Loop works within numerous safety limits, which you can be set individually.
@@ -107,7 +107,7 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 
 ## General
 ### Overview
-Display the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details).  Settings can be accessed by clicking the cog wheel.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details).  Settings can be accessed by clicking the cog wheel.
 
 #### Keep screen on
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore it is recommended to connect the smartphone to a charger cable.
@@ -141,14 +141,14 @@ Some buttons to quickly access common features:
 * Extended bolus (DanaR/RS or Combo pump only)
 * Prime / fill (DanaR/RS or Combo pump only)
 * History browser
-* TDD (Total daily dose - bolus + basal per day)
+* TDD (Total daily dose = bolus + basal per day)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Careportal
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump batter ages in the Careportal (CP) tab.
+Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
 
 Note: <b>No insulin</b> will be given if entered via careportal (i.e. meal bolus, correction bolus...)
 
@@ -175,7 +175,7 @@ Might be helpful if watch was not connected for some time and you want to push t
 * Open settings on your watch directly from your phone.
 
 ### xDrip Statusline (watch)
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](/Watchfaces.html))
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### Ongoing Notification
 Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
@@ -183,7 +183,8 @@ Displays a summary of current BG, delta, active TBR%, active basal u/hr and prof
 ![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### NS Client
-Setup sync of your AndroidAPS data with Nightscout
+Setup sync of your AndroidAPS data with Nightscout.
+
 If <b>Log app start to NS</b> is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
 
 #### Alarm options
@@ -196,7 +197,7 @@ Offline looping, disable roaming...
 
 If you want to use only a specific WiFi network you can enter its <b>WiFi SSID </b>. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
 
-![Nightscout connection settings](../images/ConfBuild_Connection Settings.png)
+![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 #### Advanced settings
 * Auto backfill missing BGs from Nightscout
@@ -205,8 +206,7 @@ Create Nightscout announcement fro error dialogs and local alerts (also viewable
 * Enable local broadcast to other apps like xDrip+
 * NS upload only (sync disabled)
 * No upload to NS
-* Always use basal absolute values
-Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
 
 ![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
 
