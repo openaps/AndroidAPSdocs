@@ -20,3 +20,9 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
 ![Azure](../../images/nightscout1.png)
 
 * Klicke auf "Speichern" am oberen Rand des Fensters.
+
+## ns.10be.de
+
+This service is offered by fellow looper Martin Schiftan free of charge at the moment. You can install Nightscout with a few clicks and use it directly. He tries to automate the administration to such an extent that you don't have to do much manual work anymore. All settings can be made via a user-friendly web interface. The service includes an automated basal rate check using Autotune. The server is located in Germany.
+
+<http://ns.10be.de/en/index.html>
