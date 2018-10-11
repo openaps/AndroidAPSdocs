@@ -4,7 +4,7 @@ Config Builder (Conf) is the tab where you turn the modular features on and off.
 
 Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen and select 'Setup Wizard' to use it.
+**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen (F) and select 'Setup Wizard' to use it.
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
