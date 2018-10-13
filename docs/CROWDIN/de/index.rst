@@ -86,7 +86,7 @@ AndroidAPS nutzen
    :maxdepth: 1
    :glob:
     
-   Beschränkungen (objectives) <./Usage/Objectives.md>
+   Objectives (Ziele) <./Usage/Objectives.md>
    OpenAPS-Funktionen <./Usage/Open-APS-features.md>
    Profil Wechsel <./Usage/Profiles.md>
    Temporäre Ziele <./Usage/temptarget.md>
