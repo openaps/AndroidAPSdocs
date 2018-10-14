@@ -1,19 +1,19 @@
-# Smoothing blood glucose data
+# 혈당 데이터 평활화
 
-AAPS works best when the blood glucose data it receives is smooth and consistent. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+수신된 혈당데이터가 부드럽고 평활할 때 AndroidAPS가 가장 잘 작동합니다. '항상 SMB를 사용합니다'나 '탄수화물 이후 SMB를 사용합니다'와 같은 기능은 잘 필터링된 혈당데이터로만 사용할 수 있습니다.
 
-## Dexcom G5 App (patched)
+## DexcomG5 앱(패치버전)
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+DexcomG5 앱(패치버전)을 사용할 경우, 혈당데이터는 부드럽고 평활하게 수신됩니다. SMB를 사용함에 있어서 제약은 없습니다.
 
-## xDrip+ with Dexcom G5
+## xDrip+와 덱스콤 G5 사용시
 
-Smooth enough data is only delivered if you use xDrip G5 'OB1 collector in native mode'.
+xDrip G5 'OB1 collector in native mode' 사용시에만 충분히 평활화된 데이터가 전송됩니다.
 
-## xDrip+ with Freestyle Libre
+## xDrip+와 프리스타일 리브레 사용시
 
-When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
+xDrip+를 프리스타일 리브레의 데이터 소스로 사용한다면 혈당 데이터가 충분히 평활화되지 않기때문에 SMB의 '항상 SMB를 사용합니다'나 '탄수화물 이후 SMB를 사용합니다' 기능을 활성화 하면 안됩니다. 이를 제외하고는, 데이터의 노이즈를 줄이기 위해 취할 수 있는 몇가지 방법이 있습니다.
 
-**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+**Smooth Sensor Noise.** xDrip+에서 세팅 > xDrip+ 디스플레이 세팅에 가서 'Smooth Sensor Noise'를 활성화 하세요. 이것은 노이즈가 있는 데이터를 평활하게 해줍니다.
 
-**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first [enable engineering mode in xDrip+](./Enabling-Engineering-Mode-in-xDrip.html). Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
+**Smooth Sensor Noise (Ultrasensitive).** xDrip+에서 여전히 노이즈가 있는 데이터가 보여진다면, Smooth Sensor Noise (Ultrasensitive) setting에서 보다 적극적으로 평활하게 할 수 있습니다. 이것은 매우 낮은 노이즈 레벨을 감지하더라도 평활화 시킵니다. 이를 하기 위해서는, 첫째로 xDrip+에서 engineering mode를 활성화 하세요. 이 후, 세팅 > xDrip+ 디스플레이 세팅에서 Smooth Sensor Noise (Ultrasensitive) 를 활성화 시키세요.
