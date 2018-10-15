@@ -25,18 +25,18 @@ Die Empfindlichkeit wird als gewichtetes Mittel der Schwankungen berechnet. Neue
 
 Die Sensitivität wird auf Basis der Daten der vergangenen 8 Stunden oder seit dem letzten Katheterwechsel berechnet, falls er weniger als 8 Stunden her ist Kohlenhydrate (falls noch nicht absorbiert) werden nach der in den Einstellungen festgelegten Zeit abgeschnitten. Nur der Oref1 Algorithmus unterstützt un-announced Meals (UAM). Das heißt, Zeiten mit erkannten UAM werden bei der Sensitivitätsberechnung nicht berücksichtigt. Wenn du also SMB mit UAM verwendest, dann musst du den Oref1 Algorithmus auswählen, damit es gut läuft. Für weitere Informationen lies die [OpenAPS Oref1 Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-## Simultaneous carbs
+## Mehrere Mahlzeiten gleichzeitig
 
-There is significant difference while using AAPS, WeightedAverage vs Oref0, Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparation to Oref plugins.
+Es macht einen großen Unterschied, ob du AAPS/Durchschnittliche Sensititvität oder Oref0/Oref1 verwendest. Die Oref Plugins gehen davon aus, dass nur die Kohlenhydrate einer einzigen Mahlzeit abgebaut werden. Das bedeutet, dass der Abbau einer zweiten Mahlzeit erst dann beginnt, wenn die erste Mahlzeit vollständig abgebaut ist. AAPS mit durchschnittlicher Sensitivität beginnt direkt nach Eingabe der Kohlenhydrate mit deren Abbau. Falls mehr als eine Mahlzeit zu berücksichtigen ist, wird der minimale KH-Abbau entsprechend der Größe der Mahlzeit und der maximalen Absorption angepasst. Die minimale Absorption wird entsprechend höher im Vergleich zu den Oref Plugins.
 
-## COB Examples
+## COB Beispiele
 
-Oref0 / Oref1 - unabsorbed carbs are cut off after specified time
+Oref0 / Oref1 - nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, werden also bei Berechnungen nicht mehr berücksichtigt
 
-![COB from oref0](../images/cob_oref0.png)
+![COB nach oref0](../images/cob_oref0.png)
 
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
+AAPS, Durchschnittliche Sensitivität - Absorption wird so berechnet, dass nach der vorgegeben Zeit `COB == 0` gilt.
 
-![COB from AAPS](../images/cob_aaps.png)
+![COB nach AAPS](../images/cob_aaps.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
+Falls die minimale Kohlenhydrat-Absorption statt einem aus den Entwicklungen des BZ berechneten Wert genutzt wird, wird in der COB-Kurve ein grüner Punkt angezeigt.
