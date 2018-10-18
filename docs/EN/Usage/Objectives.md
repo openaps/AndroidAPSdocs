@@ -2,7 +2,7 @@
 
 AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
 
-If you are <b>upgrading phones</b> then you can export your settings to keep your progress through the objectives. See below for details.
+If you are <b>upgrading phones</b> then you can export your settings to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to back up your settings frequently just in case. See below for details.
  
 * **Objective 1:** Setting up visualization and monitoring, and analysing basals and ratios
   * Select the right blood glucose source for your setup.  See [BG Source](../Configration/BG-Source.md) for more information.
@@ -46,7 +46,6 @@ If you are <b>upgrading phones</b> then you can export your settings to keep you
   * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
 
 ## Export & import settings
-in the three dots in the top right corner select _Export settings_, it will tell you which folder it has saved the file to.  On your new phone copy the file over to that location and then select _Import settings_.  Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to back up your settings frequently just in case.
 
 * **Export settings** on your old phone
   * Hamburger menu (top left corner of screen)
