@@ -31,13 +31,21 @@ The solid blue line shows the basal delivery of your pump. The dotted blue line 
 
 **Section F:** is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
 
-**Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
+**Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this, two buttons on the right!), administer a carbs intake, use the bolus calculator to calculate the bolus you need for taken meal and the needed correction bolus if necessary or add a fingerstick CGM calibration.
+
+## Insulin
+![Insulin Dialog](../images/Screenshot_Insulin_Dialog.png)
+
+## Carbs
+![Carbs Dialog](../images/Screenshot_Carbs_Dialog.png)
 
 ## The Calculator
 
 ![Calculator](../images/Screenshot_Bolus_calculator.png)
 
 When you want to make a meal bolus this is where you will normally make it from. 
+
+## CGM calibration
 
 **Section A:** contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected and the bolus will be delayed. You can put a negative number in this field if you are bolusing for past carbs.
 
