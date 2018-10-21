@@ -34,9 +34,16 @@ The solid blue line shows the basal delivery of your pump. The dotted blue line 
 **Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this, two buttons on the right!), administer a carbs intake, use the bolus calculator to calculate the bolus you need for taken meal and the needed correction bolus if necessary or add a fingerstick CGM calibration.
 
 ## Insulin
+The Insulin dialog gives you the possibility to set a temp target because you plan to eat and want to decrease your blood sugar level below your normal blood sugar target. This can help to decrease the spike after meal. You can give bolus insulin too if you fill the insulin field below.
+Furthermore you can inform AAPS about insulin which you gave outside of AAPS e.g. with a pen. This is necessary because otherwise the IOB calculation would be inacurate and this is an important information for calculating a bolus or a basal adjustment.
+For further information about temp targets please look at [Temp Targets](../Usage/temptarget.html#temp-targets).
+
 ![Insulin Dialog](../images/Screenshot_Insulin_Dialog.png)
 
 ## Carbs
+You can use the Carbs dialog to start an activity with increasing your temp target (TT) and eating some carbs or handle a hypo with etaing some cabrs and increasing the TT for some time afterwards. You can set your defautl targets and times via Preferences->Other->Default Temp-Targets. The last thing you can do is for handling of eCarbs. The concept is described at [Extended carbs / “eCarbs”](../Usage/Extended-Carbs.html#extended-carbs-ecarbs).
+For further information about temp targets please look at [Temp Targets](../Usage/temptarget.html#temp-targets).
+
 ![Carbs Dialog](../images/Screenshot_Carbs_Dialog.png)
 
 ## The Calculator
@@ -45,8 +52,6 @@ The solid blue line shows the basal delivery of your pump. The dotted blue line 
 
 When you want to make a meal bolus this is where you will normally make it from. 
 
-## CGM calibration
-
 **Section A:** contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected and the bolus will be delayed. You can put a negative number in this field if you are bolusing for past carbs.
 
 SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
@@ -54,6 +59,11 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 **Section B:** shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
 **Section C:** shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
+
+## CGM calibration
+The CGM calibration dialog is for input of a blood sugar which you need to calibrate your CGM or FGM.
+
+![VGM calibration Dialog](../images/Screenshot_Calibration_Dialog.png)
 
 ## Insulin Profile
 
