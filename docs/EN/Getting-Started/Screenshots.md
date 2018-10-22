@@ -34,14 +34,13 @@ The solid blue line shows the basal delivery of your pump. The dotted blue line 
 **Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this, two buttons on the right!), administer a carbs intake, use the bolus calculator to calculate the bolus you need for taken meal and the needed correction bolus if necessary or add a fingerstick CGM calibration.
 
 ## Insulin
-The Insulin dialog gives you the possibility to set a temp target because you plan to eat and want to decrease your blood sugar level below your normal blood sugar target or just push more aggressive down. This can help to decrease the spike after meal. You can give bolus insulin too if you fill the insulin field below.
-Furthermore you can inform AAPS about insulin which you gave outside of AAPS e.g. with a pen. This is necessary because otherwise the IOB calculation would be inacurate and this is an important information for calculating a bolus or a basal adjustment.
+The Insulin dialog gives you the possibility to give insulin. In addition you can set a temp target e.g. because you plan to eat and want to decrease your blood sugar level below your normal blood sugar target or just push more aggressive down. This can help to decrease the spike after meal. Furthermore you can inform AAPS about insulin which you gave outside of AAPS e.g. with a pen. This is necessary because otherwise the IOB calculation would be inaccurate.
 For further information about temp targets please look at [Temp Targets (TT)](../Usage/temptarget.html#temp-targets).
 
 ![Insulin Dialog](../images/Screenshot_Insulin_Dialog.png)
 
 ## Carbs
-You can use the Carbs dialog to start an activity with increasing your temp target and eating some carbs or handle a hypo with etaing some cabrs and increasing the TT for some time afterwards. You can set your defautl targets and times via Preferences->Other->Default Temp-Targets. The last thing you can do is for handling of eCarbs. The concept is described at [Extended carbs / “eCarbs”](../Usage/Extended-Carbs.html#extended-carbs-ecarbs).
+The Carbs dialog gives you the possibility to inform AAPS about Carbs you eat. In addition you can use the Carbs dialog to increase your temp target for a activty or to handle a hypo. This option is pre-selected if your blood sugar is below 4 4 mmol/l (72 mg/dl). You can set your defautl targets and times via Preferences->Other->Default Temp-Targets. The last thing you can do is for handling of eCarbs. The concept is described at [Extended carbs / “eCarbs”](../Usage/Extended-Carbs.html#extended-carbs-ecarbs).
 For further information about temp targets please look at [Temp Targets (TT)](../Usage/temptarget.html#temp-targets).
 
 ![Carbs Dialog](../images/Screenshot_Carbs_Dialog.png)
