@@ -20,6 +20,18 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Enable extended boluses on pump
 
 
+## Dana RS specific errors
+
+### Error during insulin delivery
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+
+* In most cases this is just a communication issue and the correct amount of insulin is delivered.
+* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
+* Delete error entry in CP tab if you wish.
+* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+
 ## Special note when switching phone
 
 When switching to a new phone the following steps are neccessary:
