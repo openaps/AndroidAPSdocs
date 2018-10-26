@@ -20,32 +20,32 @@
 
 * Erlaube verzögerte Boli auf der Pumpe (Bolus Einstellungen -> V Bolus: EIN).
 
-## Dana RS specific errors
+## Dana RS spezifische Fehler
 
-### Error during insulin delivery
+### Fehler bei der Insulinabgabe
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe abbricht (z.B. weil du dich vom Smartphone entfernst, während die Dana RS Insulin abgibt) wird die folgende Meldung angezeigt und ein Alarmton abgegeben.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarm Abgabefehler](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in CP tab if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
+* Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
+* Den Fehler kannst Du, falls gewünscht, im CP (Careportal) Tab löschen.
+* Die tatsächlich abgegebene Insulinmenge wird bei der nächsten Verbindung zwischen AAPS und Dana RS ausgelesen. Um eine Verbindung manuell herzustellen, drücke das Bluetooth Icon auf dem Dana Tab oder warte einfach auf die nächste Verbindung.
 
-## Special note when switching phone
+## Wichtiger Hinweis beim Wechsel des Smartphones
 
-When switching to a new phone the following steps are neccessary:
+Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
-* **Export settings** on your old phone 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
-* **Transfer** settings from old to new phone
-* **Manually pair** Dana RS with the new phone 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+* **Exportiere die Einstellungen** auf deinem alten Smartphone 
+  * Hamburger Menü (drei Striche oben links am Bildschirm)
+  * Wartung
+  * Einstellungen exportieren
+* **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
+* **Verbinde** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
+  * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
+* **Installiere AndroidAPS** auf dem neuen Smartphone.
+* **Importiere die Einstellungen** auf Deinem neuen Smartphone 
+  * Hamburger Menü (drei Striche oben links am Bildschirm)
+  * Wartung
+  * Einstellungen importieren
