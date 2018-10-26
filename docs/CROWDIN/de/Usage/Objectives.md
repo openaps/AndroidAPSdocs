@@ -52,14 +52,14 @@ If you are **upgrading phones** then you can export your settings to keep your p
 
 * **Export settings** on your old phone 
   * Hamburger menu (top left corner of screen)
-  * Wartung
+  * Maintenance
   * Export settings
   * File location will be shown
 * **Transfer** settings from old to new phone using the file location shown during export
 * **Install AndroidAPS** on the new phone.
 * **Import settings** on your new phone 
   * Hamburger menu (top left corner of screen)
-  * Wartung
+  * Maintenance
   * Import settings
 * **Note for Dana RS users:** 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
