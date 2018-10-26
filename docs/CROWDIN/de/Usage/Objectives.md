@@ -2,7 +2,7 @@
 
 AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, damit du an die Funktionen und Einstellungen von sicherem Looping herangeführt wirst. Sie stellen sicher, dass du alles, was in den Abschnitten weiter oben beschrieben wurde, korrekt installiert hast und dass du verstehst, was das System tut und warum du ihm vertrauen kannst.
 
-Für den Fall, dass du dir ein neues Smartphone zulegst, kannst du die Einstellungen exportieren, um deinen Fortschritt bei den Beschränkungen zu übernehmen; wähle im Drei-Punkte-Menü in der oberen rechten Ecke *Einstellungen exportieren*. Es wird dir dann angezeigt, in welches Verzeichnis die Datei gespeichert wurde. Kopiere auf deinem neuen Smartphone die Datei in das gleiche Verzeichnis und wähle *Einstellungen importieren*. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du die Ziele von Anfang an neu erreichen. Es ist ratsam, die Einstellungen zur Sicherheit häufiger zu speichern.  
+If you are **upgrading phones** then you can export your settings to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
 
 * **Ziel 1:** Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren 
   * Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert. Weitere Informationen findest du unter [BZ-Quelle](../Configration/BG-Source.md).
@@ -47,3 +47,19 @@ Für den Fall, dass du dir ein neues Smartphone zulegst, kannst du die Einstellu
   * Du musst das [SMB-Kapitel in diesem Wiki](../Usage/Open-APS-features.md#super-micro-bolus-smb) und das [Kapitel oref1 in der openAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) lesen, um zu verstehen wie der SMB arbeitet, insbesondere was Sinn und Zweck des "zero-temping" ist.
   * Danach solltest du [maxIOB erhöhen](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob), damit SMB korrekt funktioniert. maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet, wenn ein Mahlzeiten-Bolus von 8 IE gegeben wird und maxIB ist 7 IE, dann werden keine SMB abgegeben, bis IOB wieder unter 7 IE gefallen ist. Ein guter Startwert für maxIOB = durchschnittliche Bolusmenge für eine Mahlzeit + 3x höchste tägliche Basalrate
   * Der Standardwert von min_5m_carbimpact in den Apsorptions-Einstellungen muss von 3 auf 8 erhöht werden, wenn du von AMA zum SMB wechselst. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
+
+## Export & import settings
+
+* **Export settings** on your old phone 
+  * Hamburger menu (top left corner of screen)
+  * Wartung
+  * Export settings
+  * File location will be shown
+* **Transfer** settings from old to new phone using the file location shown during export
+* **Install AndroidAPS** on the new phone.
+* **Import settings** on your new phone 
+  * Hamburger menu (top left corner of screen)
+  * Wartung
+  * Import settings
+* **Note for Dana RS users:** 
+  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
