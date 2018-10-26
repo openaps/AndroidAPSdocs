@@ -47,7 +47,6 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 
 **Section C:** shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
-Note: You have to select the TT box if you want AndroidAPS to consider active temp targets. If box is not selected AAPS will use only your standard target no matter if a TT is defined or not.
 
 ## Insulin Profile
 
