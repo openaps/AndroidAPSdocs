@@ -47,7 +47,6 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 
 **Section C:** shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
-
 ## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
