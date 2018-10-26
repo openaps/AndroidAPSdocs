@@ -39,7 +39,7 @@ When switching to a new phone the following steps are neccessary:
 
 * **Export settings** on your old phone 
   * Hamburger menu (top left corner of screen)
-  * Wartung
+  * Maintenance
   * Export settings
 * **Transfer** settings from old to new phone
 * **Manually pair** Dana RS with the new phone 
@@ -47,5 +47,5 @@ When switching to a new phone the following steps are neccessary:
 * **Install AndroidAPS** on the new phone.
 * **Import settings** on your new phone 
   * Hamburger menu (top left corner of screen)
-  * Wartung
+  * Maintenance
   * Import settings
