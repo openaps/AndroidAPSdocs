@@ -8,7 +8,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 **Section A:** allows you to navigate between the various AndroidAPS modules by swiping left or right.
 
-**Section B:** Allows you to change the loop status (open loop, closed loop, suspend loop etc), see your current profile, to see your current target blood glucose level and to set a temporary target. Long press on any of the buttons to alter the setting. I.e long press the dark blue target bar in the upper right ("5.5" in the screenshot) to set a temp target.
+**Section B:** Allows you to change the status (open loop, closed loop, suspend loop etc), see your current profile, to see your current target blood glucose level and to set a temporary target. Long press on any of the buttons to alter the setting. I.e long press the dark blue target bar in the upper right ("5.5" in the screenshot) to set a temp target.
 
 **Section C:** The latest blood glucose reading from your CGM, how long ago it was read, changes in the last 15 and 40 minutes, your current basal rate - including any temporary basal rate (TBR) programmed by the system, your insulin on board and carbs on board.
 
@@ -47,7 +47,7 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 
 **Section C:** shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
-Note: You have to select the TT box if you want loop to consider active temp targets. If box is not selected loop will use only your standard target no matter if a TT is defined or not.
+Note: You have to select the TT box if you want AndroidAPS to consider active temp targets. If box is not selected AAPS will use only your standard target no matter if a TT is defined or not.
 
 ## Insulin Profile
 
