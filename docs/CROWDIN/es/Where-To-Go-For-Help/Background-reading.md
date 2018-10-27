@@ -1,32 +1,32 @@
-# Useful resources to read before you start
+# Lecturas recomendadas antes de empezar
 
-Before you build your rig, you're going to have to do a lot of reading in order to understand how everything works and to get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
+Antes de comenzar tu rig, necesitarás muchas horas de lectura para comprender cómo funciona tu lazo cerrado y sacarle el máximo partido. Hemos hecho un listado de las lecturas recomendadas que resolverán muchas de tus dudas.
 
-## Further reading
+## Listado de lecturas
 
-OpenAPS.org #wearenotwaiting - https://openaps.org/
+OpenAPS.org #noestamosesperando -https://openaps.org/
 
-OpenAPS documention - http://openaps.readthedocs.io/en/latest/
+Documentación OpenAPS - hoot://openaps.readthedocs.io/en/latest/
 
-Loop Docs - https://loopkit.github.io/loopdocs/
+Documentación de Loop -https://loopkit.github.io/loopdocs/
 
-Fine-Tuning your settings - http://seemycgm.com/2017/10/29/fine-tuning-settings/
+Ajuste su configuración - http://seemycgm.com/2017/10/29/fine-tuning-settings/
 
 Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/
 
 DIYPS - https://diyps.org/
 
-Diabetes and Technology - Where Diabetes meets Tech - http://www.diabettech.com/
+Diabetes y tecnología - donde Diabetes encuentra a la Tech - http://www.diabettech.com/
 
-OpenAPS Reference Design - https://openaps.org/reference-design/
+Diseño de referencia de OpenAPS - https://openaps.org/reference-design/
 
-Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters - http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/
+Por qué tenemos incorrectamente configurada la duración de insulina (DIA), y por qué es importante - http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/
 
-What conclusions can we draw when investigating Insulin Sensitivity using the Autosense function within #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
+¿Qué conclusiones podemos sacar al investigar la sensibilidad a la insulina mediante la función de detección automática en #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
 
 <http://seemycgm.com/2017/10/29/fine-tuning-settings/>
 
-## Background reading and articles about DIY closed looping
+## Lecturas y artículos sobre los lazos cerrados "hazlo tú mismo"
 
 <http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
 
@@ -38,8 +38,8 @@ What conclusions can we draw when investigating Insulin Sensitivity using the Au
 
 <https://www.ndr.de/fernsehen/sendungen/visite/Diabetes-Blutzucker-automatisch-einstellen,visite13788.html>
 
-## Stuff on YouTube
+## En YouTube
 
-Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI
+Tim Omer: empoderando usuarios "Hackers de salud"- No estamos esperando¡ - https://www.youtube.com/watch?v=RjhkRmL1wOI
 
-Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw
+Entrevista en directo con Dana Lewis, creador de hágalo usted mismo sistema de páncreas - https://www.youtube.com/watch?v=uvjrPrH0Hrw

@@ -20,3 +20,9 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
 ![Azure](../../images/nightscout1.png)
 
 * Klicke auf "Speichern" am oberen Rand des Fensters.
+
+## ns.10be.de
+
+Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. Du kannst Nightscout mit ein paar Klicks einrichten und direkt verwenden. Er versucht die Administration weitestmöglich zu automatisieren, so dass nicht mehr viel Handarbeit notwendig ist. Alle Einstellungen können über eine benutzerfreundliche Web-Oberfläche vorgenommen werden. Eine automatisierte Basalratenüberprüfung mit Autotune ist ebenfalls enthalten. Der Server steht in Deutschland.
+
+<http://ns.10be.de/en/index.html>

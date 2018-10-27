@@ -19,3 +19,33 @@
 * Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die Basalschritte auf 0,01 IE/h.
 
 * Erlaube verzögerte Boli auf der Pumpe (Bolus Einstellungen -> V Bolus: EIN).
+
+## Dana RS spezifische Fehler
+
+### Fehler bei der Insulinabgabe
+
+Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe abbricht (z.B. weil du dich vom Smartphone entfernst, während die Dana RS Insulin abgibt) wird die folgende Meldung angezeigt und ein Alarmton abgegeben.
+
+![Alarm Abgabefehler](../images/DanaRS_Error_bolus.png)
+
+* In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
+* Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
+* Den Fehler kannst Du, falls gewünscht, im CP (Careportal) Tab löschen.
+* Die tatsächlich abgegebene Insulinmenge wird bei der nächsten Verbindung zwischen AAPS und Dana RS ausgelesen. Um eine Verbindung manuell herzustellen, drücke das Bluetooth Icon auf dem Dana Tab oder warte einfach auf die nächste Verbindung.
+
+## Wichtiger Hinweis beim Wechsel des Smartphones
+
+Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
+
+* **Exportiere die Einstellungen** auf deinem alten Smartphone 
+  * Hamburger Menü (drei Striche oben links am Bildschirm)
+  * Wartung
+  * Einstellungen exportieren
+* **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
+* **Verbinde** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
+  * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
+* **Installiere AndroidAPS** auf dem neuen Smartphone.
+* **Importiere die Einstellungen** auf Deinem neuen Smartphone 
+  * Hamburger Menü (drei Striche oben links am Bildschirm)
+  * Wartung
+  * Einstellungen importieren

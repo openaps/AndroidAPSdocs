@@ -66,9 +66,23 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
+## EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
+
+**Loop-status** Ist ein Loop-Kandidat. Die verwendete Fernbedienung ist ein modifiziertes Android Gerät. (Pumpe ist aktuell nur in Korea verfügbar.)
+
+**Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe scheint über Bluetooth zu kommunizieren.
+
+* * *
+
+## Tandem:X2 ([Homepage](https://www.tandemdiabetes.com/))
+
+**Loop status:** Nicht loopfähig (Aussage nicht 100% sicher), sie planen aber eine andere Pumpe auf den Markt zu bringen, die Fernsteuerung (zumindest für den Bolus) ermöglicht.
+
+* * *
+
 ## Animas Vibe
 
-**Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich. **Hinweis:** Pumpe wird nicht mehr verkauft. Das Unternehmen (Johnson&Johnson) hat sich aus dem Pumpengeschäft zurückgezogen.
+**Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich. **Hinweis:** Pumpe wird nicht mehr verkauft. Das Unternehmen hat sich aus dem Pumpengeschäft zurückgezogen.
 
 * * *
 
@@ -85,7 +99,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 - Pumpe muss irgendeine Art von Fernbedienung unterstützen. (BT, Radiofrequenz, etc.)
 - Protokoll ist gehackt/dokumentiert/etc.
 
-**Minimale Anforderungen**
+**Mindestanforderungen**
 
 - Temporäre Basalraten setzen
 - Status abrufen
@@ -109,6 +123,6 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-## Weitere Pumpenunterstützung
+## Unterstützung weiterer Pumpen
 
-Falls du noch andere Pumpen hast und du über deren Status Bescheid wissen willst, kontaktiere mich (@andyrozman auf Gitter). In zukünftigen Releases werden einige Pumpen-Konfigurationen hinzugefügt, die dann im Open Loop laufen können (du wirst dann die Möglichkeit haben, einen bestimmten Typ als virtuelle Pumpe auszuwählen, so dass deine Einstellungen geladen werden - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Wenn du irgendwelche anderen Pumpen hast, zu denen dich der Status interessiert, kontaktiere mich einfach (@andyrozman on gitter). In zukünftigen Releases werden einige Pumpen-Konfigurationen hinzugefügt, die dann im Open Loop laufen können (du wirst dann die Möglichkeit haben, einen bestimmten Typ als virtuelle Pumpe auszuwählen, so dass deine Einstellungen geladen werden - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).

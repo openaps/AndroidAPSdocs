@@ -60,9 +60,23 @@ This is list of some Pumps floating around there, and status of support for them
 
 ## Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
 
-**Loop status** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
+**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+
+* * *
+
+## EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
+
+**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
+
+**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+
+* * *
+
+## Tandem:X2 ([Homepage](https://www.tandemdiabetes.com/))
+
+**Loop status:** Not loopable (I am not 100% sure about this info), but they are planning to release different pump that will have remote control (at least bolus).
 
 * * *
 
