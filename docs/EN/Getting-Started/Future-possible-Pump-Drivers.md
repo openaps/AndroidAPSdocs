@@ -2,6 +2,8 @@
 
 This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
 
+# Pumps that support is in development
+
 ## Medtronic
 
 **Loop status:** Some of older versions of pumps are loopable, but not the newer models (see down)
@@ -10,10 +12,10 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Java implementations:**  Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS implementation status:** Starting. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch riley_link_medtronic (default branch). At the moment most of work is being done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby.
-AAPS. 2nd test "release" is out, with about 60% of all functionality. Work is progressing according to plan, end of development estimated to end of November. 
+**AAPS implementation status:** Starting. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby.
+AAPS. 0.4 test "release" is out, with about 80% of all functionality, missing is only History reading and parsing. Work is progressing according to plan, end of development estimated by middle of December. 
 
-**Hardware requirement for AAPS:** RileyLink
+**Hardware requirement for AAPS:** RileyLink (any)
 
 **Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
 
@@ -27,16 +29,16 @@ AAPS. 2nd test "release" is out, with about 60% of all functionality. Work is pr
 
 **Other implementations:** Loop (implementation is in the beginning stages; as far as I know, they managed to Init the pod and send the first TBR). See [Openomni on github](https://github.com/openaps/openomni)
 
-**Java implementations:**  None. 
+**Java implementations:**  None till now.
 
 **AAPS implementation status:** 
-Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch), but it is far from working prototype (developer started working on changes needed for RL firmware 2.0). You can follow progress on https://omniaps.slack.com/ channel android-driver. Developer is posting progress there.
+Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch), but it is far from working prototype (developer has finished changes for RL firmware 2.0, and started with sending packets to pump). You can follow progress on https://omniaps.slack.com/ channel android-driver. Developer is posting progress there.
 
 **Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x)
 
 
 
-***
+# Pumps that are Loopable
 
 
 ## Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH_FAQs))
@@ -83,7 +85,19 @@ Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for 
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
+
 ***
+
+## Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+
+**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
+
+**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+
+
+
+# Pumps that aren't Loopable
+
 
 ## Tandem:X2 ([Homepage](https://www.tandemdiabetes.com/))
 
@@ -105,13 +119,14 @@ Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for 
 
 ## Animas Ping
 
-**Loop status:** Currently not supported by any of Loop systems, but it might be a candidate, since it does have some kind of remote possibility. Since its much older pump, it might never get supported anywhere.
+**Loop status:** Not loopable. It has bolus possibility, but no TBR one. 
+**Note** Stopped beeing sold when Vibe came out.
 
 
-***
 
 
-## Requirements for pump being loopable
+
+# Requirements for pump being loopable
 
 **Prerequisite** 
 - Pump has to support some kind of remote control. (BT, Radio frequency, etc)
@@ -128,12 +143,14 @@ Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for 
 **Good to have**
 - Cancel Bolus
 - Get Basal Profile (almost requirement)
-- Set Basal Profile
+- Set Basal Profile (nice to have)
 - Read History 
 
-**Other**
+**Other (not required but good to have)**
 - Set Extended Bolus
 - Cancel Extended Bolus
+- Read History
+- Read TDD
 
 
 ***
