@@ -49,15 +49,15 @@ Množství dodatečného bazálního inzulínu (v jednotkách), který je povole
 
 Když začínáte se smyčkou, ** je doporučováno nastavit si na nějaký čas maximální bazální IOB na 0**, než si na systém zvyknete. Toto zabrání AndroidAPS v tom, aby přidal jakýkoliv bazální inzulín. Během této doby bude AndoidAPS pořád schopná omezit či vypnout Váš bazální inzulín, aby se pomohlo předejít hypoglykémii.
 
-Toto je důležitý krok, kvůli:
+Toto je důležitý krok kvůli:
 
 * Dejte si čas na to, abyste si bezpečně zvykli na AndroidAPS a vysledovali, jak to funguje.
 * Využijte této příležitosti k perfektnímu vyladění nastavení Vašeho bazálního profilu a faktoru citlivosti na inzulín (ISF).
 * Všimněte si, jak AndroidAPS omezuje Váš bazální inzulín, aby se předešlo hypoglykémii.
 
-Když se na to už budete cítit, můžete dovolit systému, aby Vám začal posílat další bazální inzulín, a to navýšením hodnoty maximálního množství bazálního inzulínu v těle. Doporučuje se vzít **nejvyšší hodnotu bazálu **ve Vašem profilu a ** vynásobit ji třema**. Například, když je nejvyšší nastavení bazálu ve Vašem profilu 0,5 jednotky za hodinu, můžete to vynásobit 3 a dostanete hodnotu 1.5 jednotky za hodinu.
+Když se na to už budete cítit, můžete dovolit systému, aby Vám začal posílat další bazální inzulín, a to navýšením hodnoty maximálního množství bazálního inzulínu v těle. Doporučuje se vzít **nejvyšší hodnotu bazálu **ve Vašem profilu a ** vynásobit ji třemi**. Například, když je nejvyšší nastavení bazálu ve Vašem profilu 0,5 jednotky za hodinu, můžete to vynásobit 3 a dostanete hodnotu 1.5 jednotky za hodinu.
 
-* Můžete začít s touto hodnotou opatrně a s postupem času ji pomalu navyšovat. 
+* Můžete začít s touto hodnotou opatrně a postupem času ji pomalu navyšovat. 
 * Toto jsou pouze návrhy; tělo každého člověka je jiné. Možná zjistíte, že potřebujete více nebo naopak méně, než se doporučuje, ale vždy začněte opatrně a pomalu přizpůsobujte.
 
 *Poznámka: Jako bezpečnostní prvek je maximální bazální IOB natvrdo nastaveno na maximálně 7 jednotek.*
@@ -74,16 +74,16 @@ Možnosti zde se budou lišit v závislosti na tom, který ovladač pumpy jste z
 
 * Zde si nastavte svou internetovou adresu k Nightscoutu (https://vasnazev.herokuapp.com nebo https://vasnazev.azurewebsites.net) a API secret (alespoň 12ti znakové heslo uložené v proměnných vašeho Heroku nebo Azure). To umožní, aby si mohly stránky Nightscoutu a AndroidAPS vyměňovat a zapisovat všechny potřebné údaje. Ještě jednou nastavení ověřte znak po znaku, pokud jste se zasekli v cíli 1 (jedná se pravděpodobně o nějaký překlep).
 * "Logovat spuštění aplikace do NS" vloží do vašich záznamů péče poznámku pokaždé, kdy je aplikace spuštěna. Aplikace by se na mobilu neměla spouštět vícekrát než jednou denně. Pokud je to vícekrát, obvykle to signalizuje nějaký problém. 
-* "Povolení odesílaní" bude sdílet vaše záznamy péče také jiným aplikacím na mobilu, např. xDrip+. 
+* "Povolení odesílání" bude sdílet vaše záznamy péče také jiným aplikacím na mobilu, např. xDrip+. 
 * "Nastavení alarmů" vám umožní vybrat, které výchozí Nightscout alarmy se mají napříč aplikací používat. Aby mohly alarmy vydávat zvuk, potřebujete mít nastavené Urgent High, High, Low a Urgent Low alarm proměnné ve vašich [Heroku nebo Azure proměnných](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Alarmy budou fungovat pouze za podmínky, že máte stálé síťové spojení k Nightscoutu, a jsou určené pro rodiče/asistenty. Pokud máte zdroj glykémie přímo na svém telefonu, pak místo toho raději použijte alarmy místní aplikace (např. v xDrip+).
 
 ## SMS komunikátor
 
-Toto nastavení dovoluje vzdálené ovládání telefonu s Aaps posláním sms s textem, jako je zastavení smyčky, nebo poslání bolusu. Další informace jsou uvedeny v [SMS příkazy](../Usage/SMS-Commands.md), ale zobrazí se v nastavení jen pokud jste vybrali tuto možnost v konfigurátoru.
+Toto nastavení dovoluje vzdálené ovládání telefonu s Aaps posláním sms s textem, jako je zastavení smyčky, nebo poslání bolusu. Další informace jsou uvedeny v [SMS příkazy](../Usage/SMS-Commands.md), ale zobrazí se v nastavení pouze v případě, že jste vybrali tuto možnost v konfigurátoru.
 
 ## Jiné
 
-* Zde můžete nastavit výchozí vlastnosti pro dočasné cíle, Typy dočasných cílů mohou být různé ("Před jídlem" či aktivita). Pokud zvolíte dočasný cíl a pak vyberete např. "Před jídlem" z rozbalovací nabídky, pak se trvání a hodnota automaticky předvyplní údaji, které jste uvedli právě v dříve zmiňovaném nastavení. Další informace o použití Dočasných cílů naleznete v [OpenAPS features](../Usage/Open-APS-features.md). 
+* Zde můžete nastavit výchozí vlastnosti pro dočasné cíle. Typy dočasných cílů mohou být různé ("Před jídlem" či aktivita). Pokud zvolíte dočasný cíl a pak vyberete např. "Před jídlem" z rozbalovací nabídky, pak se trvání a hodnota automaticky předvyplní údaji, které jste uvedli právě v dříve zmiňovaném nastavení. Další informace o použití Dočasných cílů naleznete v [OpenAPS features](../Usage/Open-APS-features.md). 
 * Můžete nastavit výchozí množství pro plnění kanyly - toto množství pak bude pumpa do kanyly/setu plnit a tento inzulin se bude odečítat ze zásobníku, ale přitom se nebude započítávat do IOB výpočtů. Podívejte se do příbalového letáku kanyly, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
 * Můžete změnit nastavení zobrazení hlavní stránky a vzhled hodnot glykémie podle toho, jestli jsou v cílovém rozsahu. Ale pozor, toto nastavení ovlivňuje pouze vzhled grafu a nemá žádný vliv ani na váš cíl glykémie, ani na výpočty.
 * "Krátké názvy modulů" vám umožní, abyste viděli více záložek na jedné obrazovce, např. štítek záložky "Open APS" se stane jen "OAPS", "Ošetření" se změní na "OŠET" atd.
