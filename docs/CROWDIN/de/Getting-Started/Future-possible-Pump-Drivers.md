@@ -128,7 +128,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 - Verlängerten Bolus setzen
 - Verlängerten Bolus abbrechen
-- History auslesen
+- Read History
 - Read TDD
 
 * * *
