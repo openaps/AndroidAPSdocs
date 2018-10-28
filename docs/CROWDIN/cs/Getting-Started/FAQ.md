@@ -35,7 +35,7 @@ Základní princip uzavřené smyčky je, že vaše dávkování bazálního inz
 
 #### Proč se zobrazuje "dia:3" na kartě "OPENAPS AMA", i když mám jiné DIA nastavené ve svém profilu?
 
-![AMA 3h](../../images/Screenshot_AMA3h.png) V AMA režimu DIA ve skutečnosti neznamená "doba působnosti inzulínu". Je to parameter, který dříve souvisel s DIA. Parametr nyní znamená, "dokdy by měla být korekce dokončená". Nemá to žádnou souvislost s výpočtem IOB. V OpenAPS SMB režimu už tento parametr není potřebný vůbec.
+![AMA 3h](../../images/Screenshot_AMA3h.png) V AMA režimu DIA ve skutečnosti neznamená "doba působnosti inzulínu". Je to parametr, který dříve souvisel s DIA. Parametr nyní znamená, "dokdy by měla být korekce dokončená". Nemá to žádnou souvislost s výpočtem IOB. V OpenAPS SMB režimu už tento parametr není potřebný vůbec.
 
 ### Profil
 
@@ -55,7 +55,7 @@ Je to dobře vysvětleno [zde](http://www.diabettech.com/insulin/why-we-are-regu
 
 ### Baterie
 
-Smyčka může vybíjet baterii rychleji než v normálním režimu, a to protože systém s pumpou komunikuje přes bluetooth mnohem víc, než by uživatel dělal ručně. Nejlepší je vyměnit batterii už při 25%, jinak už může být komunikace s pumpou nespolehlivá. Můžete si k tomu nastavit varující alarm pro vybití baterie pumpy tak, že nastavíte proměnnou PUMP_WARN_BATT_P vaší Nightscout stránky. Mezi triky, jak zvýšit životnost baterie, patří:
+Smyčka může vybíjet baterii rychleji než v normálním režimu. Je to proto, že systém s pumpou komunikuje přes bluetooth mnohem víc, než by toto uživatel dělal ručně. Nejlepší je vyměnit baterii už při 25%, jinak už může být komunikace s pumpou nespolehlivá. Můžete si k tomu nastavit varující alarm pro vybití baterie pumpy tak, že nastavíte proměnnou PUMP_WARN_BATT_P vaší Nightscout stránky. Mezi triky, jak zvýšit životnost baterie, patří:
 
 * zkraťte časový interval, po jaký zůstává svítit LCD displej (v menu nastavení pumpy)
 * zkraťte časový interval, po jaký zůstává svítit podsvícení (v menu nastavení pumpy)
