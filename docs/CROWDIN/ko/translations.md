@@ -1,6 +1,6 @@
 # AndroidAPS를 어떻게 번역하는지?
 
-* <https://translations.androidaps.org>로 가서 Github 계정에 로그인하세요.
+* Go to <https://translations.androidaps.org> or <https://wikitranslations.androidaps.org> and login using your Github account
 
 * [Milos](https://gitter.im/MilosKozak) 또는 [Adrian](https://gitter.im/AdrianLxM)에 연락해서 번역하고자 하는 언어와 translator(번역자) 또는 번역검증자(proofreader/번역+AndroidAPS에 대한 사전지식이 있는 사용자)중 원하는 역할을 알려주세요.
 
