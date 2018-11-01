@@ -50,7 +50,7 @@ Getting Started with AndroidAPS
    Phones <./Getting-Started/Phones.md>
    Pump choices <./Getting-Started/Pump-Choices.md>
    Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   Sample Setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch <./Getting-Started/SampleSetup.md>
+   Sample Setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
    FAQ for loopers <./Getting-Started/FAQ.md>
    Glossary <./Getting-Started/Glossary.md>
   
