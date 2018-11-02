@@ -126,7 +126,7 @@ Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for 
 
 
 
-## Requirements for pump being loopable
+## Requirements for pumps being loopable
 
 **Prerequisite** 
 - Pump has to support some kind of remote control. (BT, Radio frequency, etc)
