@@ -74,11 +74,11 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+* Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Maybe it's time for a short break?
 
 ### Generate signed APK
 
-* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
+* Use git clone in Android Studio as shown in screenshots below. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
 
@@ -189,8 +189,8 @@ Klicke auf “Create new...” um einen Key zu erstellen. Dieser ist nichts ande
   * Key store path: is the path to the keystore file
   * The password fields below are for the keystore to double check for typing errors.
   * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
-  * You can let the validity at the default of 25 years.
+  * The password fields below the key are for the key itself. Wie immer, um die Eingabe auf Tippfehler zu prüfen.
+  * Die Gültigkeit kannst du bei den vorgeschlagenen 25 Jahren belassen.
   * You only have to fill out firstname and lastname but feel free to complete the rest of information. Then click "OK".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
@@ -203,8 +203,8 @@ Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAP
 
 * 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
 * Select the build type you want to build. 
-  * full (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
+  * full (d.h. automatische Pumpensteuerung im Closed Loop)
+  * openloop (d.h. gibt temporäre Basalraten-Vorschläge, die manuell auszuführen sind)
   * pumpcontrol (i.e. remote control for pump, no looping)
   * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
 
