@@ -73,7 +73,7 @@ After the downloads are completed click the "Finish" button.
 
 * Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
-### Building the APK
+### Generate signed APK
 
 * Use git clone in Android Studio as shown in screenshots below.
 Select "Check out project from Version Control" with "Git" as concrete version control system.
