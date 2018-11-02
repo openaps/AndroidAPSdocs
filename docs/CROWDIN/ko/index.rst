@@ -50,6 +50,7 @@ AndroidAPS 시작하기
    스마트폰 <./Getting-Started/Phones.md>
    펌프 선택 <./Getting-Started/Pump-Choices.md>
    향후 가능한 펌프 <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Sample Setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
    APS사용자를 위한 FAQ
    용어 <./Getting-Started/Glossary.md>
   
