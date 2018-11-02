@@ -70,18 +70,12 @@ To do this perform the following steps on your smartphone:
 3. Install modified Dexcom app on your smartphone(= select the downloaded APK file)
 4. Start modified Dexcom app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
 5. Once the first two calibrations have been entered successfully and the modified Dexcom app shows actual glucose value setup the warnings (hamburger menu on top left side of the screen) as follows:
-
-          Urgent low `55mg/dl` (cannot be disabled)
-     
-          Low `OFF`
-     
-          High `OFF`
-     
-          Rise rate `OFF`
-     
-          Fall rate `OFF`
-     
-          Signal loss `OFF`
+   - Urgent low `55mg/dl` / `3.1mmol` (cannot be disabled)
+   - Low `OFF`
+   - High `OFF`
+   - Rise rate `OFF`
+   - Fall rate `OFF`
+   - Signal loss `OFF`
 
 ## Install AndroidAPS
 1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
@@ -90,7 +84,9 @@ To do this perform the following steps on your smartphone:
 4. In this sample setup we used (among others)
 * BG source: `Dexcom G5 App (patched)`
   -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/Config-Builder.md#bg-source))
+
 <img src="../images/SampleSetupG5Settings.png" width="250"> <br>  
+
 * NS Client activated (see [NS Client](../Configuration/Config-Builder.md#ns-client) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Install xDrip+
@@ -107,31 +103,28 @@ xDrip+ is another mature open source app that offers countless possibilities. Co
    - Menu > Start sensor (is only "pro forma" and has nothing to do with the running G5 sensor. This is necessary, otherwise an error message will appear regularly).       
           
 ### Example of an alarm setup
-<img src="../images/SampleSetupxDripWarning.png" width="250"> <br>
 The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
+
+<img src="../images/SampleSetupxDripWarning.png" width="250"> <br>
 
 Tip for meetings / church visits / cinema etc..: 
 
 If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (accoustic sound played) or not.
 
 ## Disable power saving option
-On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > Add +Apps: Select the apps AndroidAPS, Dexcom G5 Mobile, xDrip+ and AndroidWear (if Smartwatch is used) one after the other here
+On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G5 Mobile, xDrip+ and AndroidWear (if smartwatch is used) one after the other
 
-Im Samsung Galaxy S7 auf Menü > Einstellungen > Gerätewartung > Akku > Nicht überwachte Apps > +Apps hinzufügen: Hier nacheinander die Apps AndroidAPS, Dexcom G5 Mobile, xDrip+ und ggf. AndroidWear auswählen (falls die Smartwatch verwendet wird)
+## Optional: Setup Sony Smartwatch 3 (SWR50)
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist.  The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
-## Optional: Sony Smartwatch 3 (SWR50) einrichten
-<img src="https://user-images.githubusercontent.com/32912987/34470733-6d9df16a-ef38-11e7-8a4f-bd77697e7655.png" width="150">
-<br>
-Mit der Smartwatch lässt sich das Leben mit Diabetes noch viel unauffälliger gestalten. Über sie kann am Handgelenk jederzeit der aktuelle Glukosezucker, der Status der Loop etc. angezeigt werden und es können Bolusgaben vorgenommen werden. Dazu mit dem Finger auf dem AAPSv2-Ziffernblatt die linke obere Ecke doppelt antippen. Die SWR50 läuft in der Regel einen ganzen Tag, bis der Akku wieder aufgeladen werden muss (selbes Ladegerät wie das Samsung Galaxy S7: microUSB). 
+<img src="../images/SampleSetupSmartwatch.png" width="150">
+Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
+* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
+* In AAPS choose hamburger menu (top left corner) > Config Builder > General (at the bottom of the list) > Wear > activate on left side, click cock wheel > Wear settings and activate `Controls from Watch`
+* On your smartwatch: Longpress display to change watchface and select `AAPSv2`
+* If necessary restart both devices once.
 
-Die Uhr wird wie folgt eingerichtet:
+## Pump setup
 
-* Im Smartphone über das GooglePlay-Store die App "Android Wear" installieren und die SWR50 nach dortigen Anweisungen koppeln
-* In AAPS im Smartphone: Config Builder > Generell > Wear > aktivieren und im Zahnrädchen daneben: Steuerung von der Uhr = aktiv
-* In der Smartwatch: Einstellungen > Ziffernblatt ändern > AAPSv2
-* Ggf. beide Geräte einmal neu starten
-
-## Pumpe einrichten
-
-siehe [Einrichtung DanaR für AAPS](https://github.com/MilosKozak/AndroidAPS/wiki/DanaR-Insulinpumpe_de)
+see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)
