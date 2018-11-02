@@ -223,6 +223,9 @@ Click the "locate" link in the event log.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
+
+### Transfer APK to smartphone
+
 A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
