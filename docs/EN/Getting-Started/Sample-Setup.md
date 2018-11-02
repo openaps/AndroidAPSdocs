@@ -1,116 +1,81 @@
-# Samsung S7, DanaR, Dexcom G5 und Sony Smartwatch
+# Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
 
 
-![](https://user-images.githubusercontent.com/32912987/34470732-6a3b4b62-ef38-11e7-8428-03e1aec39ee7.png)
-## Beschreibung
+![Sample Setup](../images/SampleSetup.png)
 
-In dieser Variante ist das Smartphone **Samsung Galaxy S7** das "Herzstück" und die Schaltzentrale der Loop. Es liest mit der originalen, aber von der Community leicht modifizierten Dexcom-App das kontinuierliche Glukosemesssystem **Dexcom G5** aus und steuert auf Basis dieser Daten über die App "AndroidAPS" (AAPS) die Insulinpumpe **DanaR** von SOOIL (per Handeingabe auf Vorschlag der App oder vollautomatisch nach Eingabe der Mahlzeit-KH). Weitere Geräte werden nicht benötigt.
+## Description
 
-Die **Alarme** für zu niedrige oder zu hohe Glukosewerte werden nicht über die sehr eingeschränkte Dexcom-App (bietet nur wenige vorgegebene Sounds), sondern über die App "xDrip+" im Smartphone ganz nach individuellem Bedarf eingestellt. So können je nach Tages- oder Nachtzeit unterschiedliche Alarmtöne oder Vibrationen eingerichtet werden. 
+In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G5 CGM. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
-Falls gewünscht, können alle aktuellen Glukose- und Behandlungsdaten auf einer **"Sony Smartwatch 3"** (SWR50) am Handgelenk angezeigt werden. Über diese Smartwatch kann dann auch z.B. diskret das Mahlzeiten-Bolus gesetzt werden.
+As the Dexcom App offers only limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
 
-Das System funktioniert **offline**, also ohne dass zum Betrieb eine Datenverbindung des Smartphones zum Internet erforderlich ist. 
+Optional an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values at your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
 
-Dennoch werden die Daten bei bestehender Datenverbindung automatisch zu **Nightscout** "in die Cloud" hochgeladen werden, um umfangreiche Auswertungen für den Arztbesuch zu erhalten oder jederzeit die aktuellen Werte mit Familienmitgliedern zu teilen.
+The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
 
-## Benötigte Komponenten
-1. [Samsung Galaxy S7](http://www.samsung.com/de/smartphones/galaxy-s7/overview/)
+Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" when a data connection is established. By doing so you can provide comprehensive reports for the doctor's visit or share the current values with family members at any time. It is also possible to send data to Nightscout only when using a (predefined) wifi connection in order to profit from the different Nightscout reports.
 
-Bezugsquelle: Elektrofachhandel, Internetshops
+## Required components
 
-Alternativen: siehe Android-Smartphones in der [Dexcom Kompatibilitätsliste](https://www.dexcom.com/ous-compatibility-page) (Punkt "Dexcom G5 Mobile App", NICHT die unter "Dexcom Follower App" Genannten)
+1. Samsung Galaxy S7
+ * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS
 
-2. [DanaR](https://www.ime-dc.de/de/insulintherapie/insulinpumpen/dana-r)
+2. [DanaR](http://www.sooil.com/eng/product/) or Dana RS insulin pump
+ * Alternatives:  
+   - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+   - Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
 
-Bezugsquelle: In Deutschland auf Rezept oder privat über die Firma [IME-DC GmbH](http://www.ime-dc.de) 
+3. [Dexcom G5](https://dexcom.com)
+ * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
+   
+4. Optional: Sony Smartwatch 3 (SWR50)
+ * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Anroid Wear)
 
-Alternativen:  [Accu-Chek Combo](https://github.com/MilosKozak/AndroidAPS/wiki/Accu-Chek-Combo-Pumpe), [DanaRS](https://www.ime-dc.de/de/insulintherapie/insulinpumpen/insulinpumpe-dana-rs), [Accu-Chek Insight (in der Entwicklung)](http://www.accu-chek.de/produkte/de/insulinpumpentherapie/insight/index.jsp)
+## Nightscout setup
+See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
 
-3. [Dexcom G5](https://www.nintamed.eu/p/products/dexcomg5)
+## Computer setup
+To be able to create an Android app from the freely available AAPS open source code you need Android Studio on your computer or notebook (Windows, Mac, Linux). A detailed instruction can be found at [building the APK](../Installing-AndroidAPS/Building-APK.md).
 
-Bezugsquelle: In Deutschland auf Rezept oder privat über die Firma [Nintamed](https://www.nintamed.eu/)
+Please be patient when installing AndroidStudio as the software downloads a lot of additional data once installed on your computer.
 
-Alternativen: MM640g-CGM (Auslesen direkt über AAPS möglich), Dexcom G4 mit Eigenbau-ShareReceiver (über xDrip+), Eversense (über xDrip+), Freestyle Libre-DIY-CGM mit [MiaoMiao Reader](https://www.miaomiao.cool/), [Bluecon Nightrider](https://www.ambrosiasys.com/how-it-works), [blueReader](https://unendlichkeit.net/wordpress/), [manipulierte Sony SmartWatch 3 (SWR50) direkt auf dem Sensor](https://drive.google.com/file/d/0B-zDwCDqX5mKQUdvUEF6Qzl3aDQ/view)
+## Smartphone setup
+<img src="../images/SampleSetupSmartphone.png" width="250">
 
-4. Optional: [Sony Smartwatch 3 (SWR50)](https://www.sonymobile.com/de/products/smart-products/smartwatch-3-swr50/)
+### Check smartphone firmware
+* Menu > Preferences > Phone info > Software info: At least "Android-Version 7.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Versoin 9.0)  
+* For firmware update: menu > Preferences > software update
 
-Bezugsquelle: Da die Uhr ein Auslaufmodell ist, muss man im Fachhandel oder im Internet ggf. etwas suchen. Falls sie zu einem akzeptablen Preis nur in grellen Neonfarben erhältlich ist, dann kann man sie trotzdem bestellen und das Band tauschen. Hierfür gibt es bei eBay unter dem Suchbegriff "SWR50 adapter" Adapter, in die die Uhr exakt reinpasst und an die man jedes beliebige Uhrenband (in der passenden Größe) machen kann.
+### Allow installation from unknown sources
+Menu > Preferences > Device security > Unknown sources > slider to right side (= active)
 
-Alternativen: [Android Wear Smartwatches](https://github.com/MilosKozak/AndroidAPS/wiki/Smartwatch-Visualisierung_de)
+For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
 
-## Nightscout online einrichten
-[Nightscout.info](http://www.nightscout.info/) ist eine Website, über die die meisten Daten der eingerichteten Loop "in der Cloud" gesammelt werden können. Das ermöglicht umfangreiche Statistiken und Auswertungen, aber auch die Synchronisation der Werte mit weiteren Geräten oder das Teilen der Behandlungsdaten mit Familienmitgliedern, Freunden oder Ärzten.
+### Enable Bluetooth
+Menu > Preferences > Connections > Bluetooth > slider to right side (= active)
 
-1. Nightscout über Heroku installieren
+### Install Dexcom App (modified version)
+<img src=../images/SampleSetupDexApp.png" width="250"> <br>
 
-Hierzu nach folgender Anleitung vorgehen: [http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku)
+The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS.
+Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility).
+A mmol/l version and a mg/dl version of the modified Dexcom app are available at https://github.com/dexcomapp/dexcomapp?files=1. 
 
-> Tipp: Alle Zugangsdaten auf einem Zettel oder in einer Textdatei notieren!
-***
-2. Heroku-Variablen einrichten
+To do this perform the following steps on your smartphone:
 
-* Auf [https://herokuapp.com/](https://herokuapp.com/) einloggen
-* App-Namen auswählen
-* Settings > Schaltfläche "Reveal Config Vars" anklicken
-* Variablen hinzufügen oder wie folgt ändern:<br>
-   ENABLE = `careportal food cage sage iage iob cob basal rawbg pushover bgi pump openaps openapsbasal loop`<br>
-   DEVICESTATUS_ADVANCED = `true`<br>
-   PUMP_FIELDS = `reservoir battery clock`
-<br><br>
-Ein Alarm bei niedrigem Pumpen-Batteriestand in % kann wie folgt aktiviert werden:<br>
-PUMP_WARN_BATT_P = `51`<br>
-PUMP_URGENT_BATT_P = `26`
-
-***
-3. Nightscout-Website Version checken
-
-* https://DEINAPPNAME.herokuapp.com/
-* Menü über die drei waagerechten Striche rechts oben am Bildschirm anklicken
-* Am Ende des Menüs muss "Nightscout Version 0.10.2-..." stehen
-
-> Tipp: Falls eine ältere Version angezeigt wird, z.B. "0.10.1-...", dann muss Nightscout aktualisiert werden. Dazu nach der Anleitung unter [http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) vorgehen. Sollte sich trotz erfolgreichem Update die Versionsanzeige nicht aktualisieren, dann ist noch ein "Redeploy" von Hand erforderlich, siehe die Anleitung [unter http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie/update-my-fork-troubleshooting-part-2](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie/update-my-fork-troubleshooting-part-2).
-
-## Computer/Notebook vorbereiten
-Um aus dem frei verfügbaren OpenSource-Quellcode von AAPS eine Android-App selbst erstellen zu können, wird 
-Android Studio auf dem Computer oder Notebook (Windows, Mac, Linux) benötigt > Installieren wie unter
-[https://developer.android.com/studio/install.html](https://developer.android.com/studio/install.html) beschrieben.
-
-## Smartphone einrichten
-<img src="https://user-images.githubusercontent.com/32912987/34470734-6ee34ade-ef38-11e7-9214-337a9c607243.png" width="250">
-
-### Firmware des Samsung Galaxy S7 überprüfen
-* Menü > Einstellungen > Telefoninfo > Softwareinfo: Hier sollte mindestens die Firmware-Version stehen: "Android-Version 7.0" (erfolgreich getestet bis Android-Version 8.0.0 Oreo - Samsung Experiernce Versoin 9.0)  
-* Falls nicht: Menü > Einstellungen > Software-Update durchführen
-
-### Installation von unbekannten Quellen erlauben
-Menü > Einstellungen > Gerätesicherheit > Unbekannte Quellen > Schieber nach rechts (= aktiv)
-
-Diese Einstellung sollte aus Sicherheitsgründen wieder auf inaktiv gestellt werden, wenn die Installation aller hier beschriebenen Apps abgeschlossen ist.
-
-### Bluetooth aktivieren
-Menü > Einstellungen > Verbindungen > Bluetooth > Schieber nach rechts (= aktiv)
-
-### Dexcom App (modifizierte Version) installieren
-<img src="https://user-images.githubusercontent.com/32912987/34470739-77d835e6-ef38-11e7-9c47-37a71f74e6cc.png" width="250"> <br>
-
-Die Original-App von Dexcom aus dem Google Play Store wird nicht funktionieren, weil sie die Werte nicht an andere Apps weitergibt. Darum ist eine von der Community leicht modifizierte Version erforderlich. Nur sie kann später mit AAPS kommunizieren. Unter [https://github.com/dexcomapp/dexcomapp?files=1](https://github.com/dexcomapp/dexcomapp?files=1) ist eine mmol/l-Version und eine mg/dl-Version der modifizierten Dexcom-App hinterlegt. Vorteil gegenüber frei entwickelten Auslese-Apps wie xDrip+ ist, dass es sich um die vom Hersteller zertifizierte Auslese-/Glukoseberechnungsmethode handelt und "verpasste Werte" nach dem erneuten Verbinden noch aufgefüllt werden (das kann xDrip+ derzeit noch nicht).
-
-
-Dazu im Smartphone folgende Schritte ausführen:
-
-1. Falls die Original-Dexcom-App bereits installiert ist: Sensor stoppen, App deinstallieren über Menü > Einstellungen > Apps > Dexcom G5 Mobile > Deinstallieren
-2. Modifizierte Dexcom-App mit in der richtigen Einheit (mg/dl oder mmol/l) von [https://github.com/dexcomapp/dexcomapp?files=1](https://github.com/dexcomapp/dexcomapp?files=1) herunterladen.
-3. Modifizierte Dexcom-App auf dem Smartphone installieren (= die heruntergeladene *.apk-Datei auswählen)
-4. Modifizierte Dexcom-App starten, den Sensor nach Anweisung aktivieren / kalibrieren und die Aufwärmphase abwarten
-5. Wenn die ersten beiden Kalibrierungen erfolgreich waren und die modifizierte Dexcom-App den aktuellen Wert anzeigt, dann im Menü (= drei waagerechte Striche links oben in der App) auf "Warnungen" und folgende Konfiguration einstellen<br>
-* Akut niedrig `55mg/dl` (kann nicht deaktiviert werden)
-* Niedrig `AUS`
-* Hoher `AUS`
-* Anstiegsrate `AUS`
-* Abfallrate `AUS`
-* Signalverlust `AUS`
-* Kurzer Blick `EIN` (kann auch deaktiviert werden, aber die Anzeige des aktuellen Glukosewerts in der Statuszeile des Smartphones ist praktisch)
+1. If the original Dexcom app is already installed: 
+ - Stop sensor
+ - uninstall app via Menu > Preferences > Apps > Dexcom G5 Mobile > Uninstall
+2. Download modified Dexcom app (check unit mg/dl or mmol/l according to your needs): [https://github.com/dexcomapp/dexcomapp?files=1](https://github.com/dexcomapp/dexcomapp?files=1)
+3. Install modified Dexcom app on your smartphone(= select the downloaded APK file)
+4. Start modified Dexcom app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
+5. Once the first two calibrations have been entered successfully and the modified Dexcom app shows actual glucose value setup the warnings (hamburger menu on top left side of the screen) as follows:
+* Urgent low `55mg/dl` (cannot be disabled)
+* Low `OFF`
+* High `OFF`
+* Rise rate `OFF`
+* Fall rate `OFF`
+* Signal loss `OFF`
 
 ## AAPS installieren
 
