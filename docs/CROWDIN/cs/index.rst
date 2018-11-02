@@ -50,6 +50,7 @@ Začínáme s AndroidAPS
    Telefony <./Getting-Started/Phones.md>
    Možné pumpy <./Getting-Started/Pump-Choices.md>
    Pumpy potenciálně použitelné v budoucnu  <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Sample Setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
    Otázky a odpovědi <./Getting-Started/FAQ.md>
    Glosář <./Getting-Started/Glossary.md>
   
