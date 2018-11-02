@@ -26,6 +26,8 @@ In general, the steps necessary to build the APK file:
 
 Detailed description of the steps necessary to build the APK file.
 
+### Install Android Studio
+
 * Install git
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
@@ -71,6 +73,7 @@ After the downloads are completed click the "Finish" button.
 
 * Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
+### Building the APK
 
 * Use git clone in Android Studio as shown in screenshots below.
 Select "Check out project from Version Control" with "Git" as concrete version control system.
