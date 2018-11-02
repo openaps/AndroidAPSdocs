@@ -7,9 +7,9 @@
 
 In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G5 CGM. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
-As the Dexcom App offers only limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
+As the Dexcom App only offers limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
 
-Optional an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values at your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+Optionally an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values on your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
 
 The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
 
@@ -90,7 +90,7 @@ To do this perform the following steps on your smartphone:
 * NS Client activated (see [NS Client](../Configuration/Config-Builder.md#ns-client) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Install xDrip+
-xDrip+ is another mature open source app that offers countless possibilities. Contrary to what the developers actually thought, xDrip+ is not also used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+ is another mature open source app that offers countless possibilities. In this setup, ontrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
 
 1. Download the latest stable APK version of xDrip+ with your smartphone [https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - not the version from the Google Play Store!
 2. Install xDrip+ by selecting the downloaded APK file.
