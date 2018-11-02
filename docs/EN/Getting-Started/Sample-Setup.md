@@ -43,19 +43,19 @@ Please be patient when installing AndroidStudio as the software downloads a lot 
 <img src="../images/SampleSetupSmartphone.png" width="250">
 
 ### Check smartphone firmware
-* Menu > Preferences > Phone info > Software info: At least "Android-Version 7.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Versoin 9.0)  
+* Menu > Settings > Phone info > Software info: At least "Android-Version 7.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Versoin 9.0)  
 * For firmware update: menu > Preferences > software update
 
 ### Allow installation from unknown sources
-Menu > Preferences > Device security > Unknown sources > slider to right side (= active)
+Menu > Settings > Device security > Unknown sources > slider to right side (= active)
 
 For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
 
 ### Enable Bluetooth
-Menu > Preferences > Connections > Bluetooth > slider to right side (= active)
+Menu > Settings > Connections > Bluetooth > slider to right side (= active)
 
 ### Install Dexcom App (modified version)
-<img src=../images/SampleSetupDexApp.png" width="250"> <br>
+<img src="../images/SampleSetupDexApp.png" width="250"> <br>
 
 The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS.
 Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility).
@@ -65,67 +65,58 @@ To do this perform the following steps on your smartphone:
 
 1. If the original Dexcom app is already installed: 
  - Stop sensor
- - uninstall app via Menu > Preferences > Apps > Dexcom G5 Mobile > Uninstall
+ - uninstall app via Menu > Settings > Apps > Dexcom G5 Mobile > Uninstall
 2. Download modified Dexcom app (check unit mg/dl or mmol/l according to your needs): [https://github.com/dexcomapp/dexcomapp?files=1](https://github.com/dexcomapp/dexcomapp?files=1)
 3. Install modified Dexcom app on your smartphone(= select the downloaded APK file)
 4. Start modified Dexcom app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
 5. Once the first two calibrations have been entered successfully and the modified Dexcom app shows actual glucose value setup the warnings (hamburger menu on top left side of the screen) as follows:
-* Urgent low `55mg/dl` (cannot be disabled)
-* Low `OFF`
-* High `OFF`
-* Rise rate `OFF`
-* Fall rate `OFF`
-* Signal loss `OFF`
 
-## AAPS installieren
+          Urgent low `55mg/dl` (cannot be disabled)
+     
+          Low `OFF`
+     
+          High `OFF`
+     
+          Rise rate `OFF`
+     
+          Fall rate `OFF`
+     
+          Signal loss `OFF`
 
-1. Auf dem wie oben beschrieben vorbereiteten Computer/Notebook [https://github.com/MilosKozak/AndroidAPS](https://github.com/MilosKozak/AndroidAPS) aufrufen
-2. Branch "master" Version 1.58 auswählen (mit älteren Versionen geht es nicht)
-3. Schaltfläche "Clone or download" > Download ZIP auswählen
-4. Heruntergeladene ZIP-Datei in einem neuen Ordner entpacken
-5. Android Studio auf dem Computer/Laptop starten
-6. Der Anleitung unter [https://github.com/MilosKozak/AndroidAPS/wiki/APK-erstellen_de](https://github.com/MilosKozak/AndroidAPS/wiki/APK-erstellen_de) folgen
-> Wichtig: Die Variante "fullRelease" verwenden!
-7. Die erstellte *.apk-Datei auf das Smartphone laden / per E-Mail schicken und dort installieren
-8. AAPS im Smartphone starten und folgende Einstellungen unter dem Menüpunkt **Konfigurations-Generator** (ehemals "Config Builder") vornehmen:
-* Profil: je nach Wunsch
-* Insulin: das verwendete Insulin auswählen
-* BZ Quelle: `Dexcom G5 App (patched)`, dann auf das Zahnrädchen daneben, Upload BG data to NS `aktivieren`, Send BG data to xDrip+ `aktivieren`
-* Pumpe: DanaR
-* Empfindlichkeitserkennung: je nach Wunsch
-* APS: je nach Wunsch
-* Loop: aktivieren
-* Beschränkungen: Zielsetzungen aktivieren
-* Treatments: Behandlungen aktivieren
-* Generell: Aktionen, Careportal, Laufende Benachrichtigungen jeweils aktivieren
-* "Integrierter NSClient" aktivieren und im Zahnrädchen daneben: Nightscout URL = `https://DEINAPPNAME.herokuapp.com`, Nightscout API-Key = `DEINAPIKEY`, Aktiviere lokalen Broadcast = `aktivieren`, Alarm-Optionen > `alles deaktivieren` <br>
-<img src="https://user-images.githubusercontent.com/32912987/34470736-741c728c-ef38-11e7-9152-f48b501f333b.png" width="250">
+## Install AndroidAPS
+1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
+2. Transfer the generated APK to your phone (../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
+3. [Configurate AndroidAPS](../Configuration/Config-Builder.md) according to your needs using the setup assitant or manually
+4. In this sample setup we used (among others)
+* BG source: `Dexcom G5 App (patched)`
+  -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/Config-Builder.md#bg-source))
+<img src="../images/SampleSetupG5Settings.png" width="250"> <br>  
+* NS Client activated (see [NS Client](../Configuration/Config-Builder.md#ns-client) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
-## xDrip+ installieren
-xDrip+ ist eine weitere ausgereifte App, die unzählige Möglichkeiten bietet. Anders als von den Entwicklern eigentlich gedacht, wird xDrip+ aber bei dieser Methode nicht auch zum Sammeln der Glukosedaten vom Dexcom G5 verwendet, sondern nur, um Alarme auszugeben und auf dem Android-Homescreen im Widget den aktuellen Gluosewert samt Kurve anzuzeigen. Mit xDrip+ können die Alarme nämlich viel individueller eingestellt werden als mit der Dexcom-Software, AAPS oder Nightscout (keine Einschränkung bei der Auswahl der Sounds, verschiedene Alarme je nach Tages-/Nachtzeit etc.).
+## Install xDrip+
+xDrip+ is another mature open source app that offers countless possibilities. Contrary to what the developers actually thought, xDrip+ is not also used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
 
-1. Letzte stabile apk-Version von xDrip+ mit dem Smartphone herunterladen unter [https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - nicht die Version aus dem GooglePlay-Store!
+1. Download the latest stable apk version of xDrip+ with your smartphone [https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - not the version from the GooglePlay store!
+2. Install xDrip+ by selecting the downloaded APK file.
+3. Start xDrip+ and make the following settings (hamburger menu at top left)
+   - Settings > Alarms and Alerts > Glucose Level Alert List > Creat Alerts (high and low) according to your needs. 
+   - The existing alarms can be changed with a long press on the alarm.
+   - Settings > Alarms and Alerts > Calibration Alerts: disabled (reminded via the modified Dexcom app)
+   - Settings > Hardware Data Source > 640G/EverSense
+   - Settings > Inter-app settings > Accept Calibrations > `ON`
+   - Menu > Start sensor (is only "pro forma" and has nothing to do with the running G5 sensor. This is necessary, otherwise an error message will appear regularly).       
+          
+### Example of an alarm setup
+<img src="../images/SampleSetupxDripWarning.png" width="250"> <br>
+The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
-2. xDrip+ installieren, indem die heruntergeladene *.apk-Datei ausgewählt wird
+Tip for meetings / church visits / cinema etc..: 
 
-3. xDrip+ starten und im Menü (drei waagerechte Striche links oben) folgende Einstellungen vornehmen:
+If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (accoustic sound played) or not.
 
-* Einstellungen > Warnungen > Glukose-Alarm-Liste > Warnungen (niedrig) und (hoch) je nach Bedarf erstellen. Die bestehenden Alarme können mit einem langen Fingerdruck geändert werden
-* Einstellungen > Kalibrierungs-Erinnerungen: deaktiviert (wird über die Dexcom-App erinnert)
-* Einstellungen > Datenquelle > 640G/EverSense
-* Einstellungen > Inter-App-Einstellungen > Accept Calibrations > AN
-* Menü > Sensor starten (ist nur "pro forma" und hat nichts mit dem laufenden G5-Sensor zu tun. Dies ist nötig, da sonst regelmäßig eine Fehlermeldung kommt)
+## Disable power saving option
+On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > Add +Apps: Select the apps AndroidAPS, Dexcom G5 Mobile, xDrip+ and AndroidWear (if Smartwatch is used) one after the other here
 
-Beispiel für ein Alarm-Setup:
-<br>
-<img src="https://user-images.githubusercontent.com/32912987/34470740-7934de30-ef38-11e7-8e33-74bb22015406.png" width="250">
-
-Der "< 55 mg/dl-Alarm" wird über die Dexcom-App ausgegeben, dies kann auch nicht abgeschaltet werden. 
-> Tipp für Besprechungen / Kirchenbesuche / Kino etc.: Wenn im Samsung Galaxy S7 der "Nicht stören-Modus" aktiviert ist (Menü > Einstellungen > Töne und Vibration > Nicht stören: nach rechts schieben), dann vibriert das Smartphone bei dem nicht abschaltbaren Dexcom-Niedrigalarm nur und gibt keine akustische Warnung aus. Bei den übrigen, über xDrip+ eingerichteten Alarmen kann jeweils ausgewählt werden, ob der Lautlosmodus ignoriert werden soll oder nicht.
-
-4. Auf dem Android Homescreen an eine freie Stelle lange drücken > Widgets > "xDrip+" auswählen, halten und an die gewünschte Stelle ziehen > loslassen
-
-## Energiesparoptionen deaktivieren
 Im Samsung Galaxy S7 auf Menü > Einstellungen > Gerätewartung > Akku > Nicht überwachte Apps > +Apps hinzufügen: Hier nacheinander die Apps AndroidAPS, Dexcom G5 Mobile, xDrip+ und ggf. AndroidWear auswählen (falls die Smartwatch verwendet wird)
 
 ## Optional: Sony Smartwatch 3 (SWR50) einrichten
