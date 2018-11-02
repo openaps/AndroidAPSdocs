@@ -34,7 +34,7 @@ Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" wh
     
     * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
 
-## Nightscout Setup
+## Nightscout setup
 
 See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
 
@@ -59,7 +59,7 @@ Menu > Settings > Device security > Unknown sources > slider to right side (= ac
 
 For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
 
-### Aktiviere Bluetooth.
+### Enable Bluetooth
 
 1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
 2. Menu > Settings > Connections > Location > slider to right side (= active)
