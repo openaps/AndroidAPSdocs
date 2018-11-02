@@ -31,7 +31,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 Detaillierte Beschreibung der notwendigen Schritte.
 
-### Install Android Studio
+### Android Studio installieren
 
 * Installiere git 
   * [Windows](https://gitforwindows.org/)
@@ -74,11 +74,11 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Maybe it's time for a short break?
+* Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Hier ist allerdings auch ein guter Zeitpunkt, um eine Pause einzulegen.
 
 ### Generate signed APK
 
-* Use git clone in Android Studio as shown in screenshots below. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
+* Nutze “git clone” in Android Studio wie in dem folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
 
@@ -102,8 +102,8 @@ Lies und schließe den “Tip of the Day” von Android Studio, indem du auf “
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
-* Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Perfekt, du hast jetzt deine eigene Kopie des Quellcodes erstellt und kannst mit dem Kompilieren beginnen.
+* Als nächstes erwartet uns die erste Fehlermeldung. Glücklicherweise schlägt Android Studio gleich die Lösung vor.
 
 Klicke auf “Install missing platform(s) and sync project”, da Android Studios noch einige Komponenten installieren muss.
 
@@ -185,13 +185,13 @@ Klicke auf “Create new...” um einen Key zu erstellen. Dieser ist nichts ande
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
-* Fill in the information for the next dialog. 
-  * Key store path: is the path to the keystore file
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. Wie immer, um die Eingabe auf Tippfehler zu prüfen.
+* Fülle die Informationen in den nächsten Textfeldern aus. 
+  * “Key store path”: Der Ort, an dem der Keystore gespeichert wird.
+  * Die Passwortfelder sind dazu da, um den Key auf Tippfehler zu überprüfen.
+  * “Alias”: ist der Name des Schlüssels. Du kannst ihn unverändert lassen wie vorgegeben oder jeden beliebigen anderen Namen eingeben.
+  * Die Passwort-Felder unter dem Key sind für den Key selbst. Wie immer, um die Eingabe auf Tippfehler zu prüfen.
   * Die Gültigkeit kannst du bei den vorgeschlagenen 25 Jahren belassen.
-  * You only have to fill out firstname and lastname but feel free to complete the rest of information. Then click "OK".
+  * Du musst nur Vor- und Nachname ausfüllen, kannst aber auch den Rest ergänzen. Klicke danach auf “OK”.
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
@@ -201,12 +201,12 @@ Fülle die Informationen von dem Keystore, den du gerade erstellt hast, aus und 
 
 Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
+* “Release” solltest du immer lassen, “Debug” ist nur für Programmierer, um Fehler zu finden.
+* Wähle den “build type”, den du kompilieren möchtest: 
   * full (d.h. automatische Pumpensteuerung im Closed Loop)
   * openloop (d.h. gibt temporäre Basalraten-Vorschläge, die manuell auszuführen sind)
-  * pumpcontrol (i.e. remote control for pump, no looping)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+  * pumpcontrol (d.h. nur Fernbedienung für die Pumpe, kein Loopen)
+  * nsclient (d.h. es werden z.B. die Daten eines anderen Nutzers dargestellt und Careportal-Einträge können hinzugefügt werden)
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
@@ -218,7 +218,7 @@ Klicke auf “locate” im “event log”.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
-### Transfer APK to smartphone
+### Übertrage die APK-Datei auf das Smartphone
 
 Es sollte sich ein Datei Manager öffnen. Das könnte bei dir anders aussehen (dieser Screenshot wurde auf einem Linux PC erstellt). In Windows wird sich der “Explorer” öffnen, in Mac OS X der “Finder”. Dort solltest du jetzt das Verzeichnis mit der APK-Datei sehen. Es ist aber unglücklicherweise nicht die, die wir suchen, sondern nur die “wear-release.apk”.
 
