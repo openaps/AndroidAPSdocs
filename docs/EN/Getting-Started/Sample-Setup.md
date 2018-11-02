@@ -90,7 +90,7 @@ To do this perform the following steps on your smartphone:
 * NS Client activated (see [NS Client](../Configuration/Config-Builder.md#ns-client) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Install xDrip+
-xDrip+ is another mature open source app that offers countless possibilities. In this setup, ontrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
 
 1. Download the latest stable APK version of xDrip+ with your smartphone [https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - not the version from the Google Play Store!
 2. Install xDrip+ by selecting the downloaded APK file.
