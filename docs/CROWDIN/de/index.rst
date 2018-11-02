@@ -50,6 +50,7 @@ Erste Schritte mit AndroidAPS
    Smartphones <./Getting-Started/Phones.md>
    Insulinpumpen <./Getting-Started/Pump-Choices.md>
    Zukünftig ggf. loopbare Pumpen <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Sample Setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
    FAQ für Looper <./Getting-Started/FAQ.md>
    Glossar <./Getting-Started/Glossary.md>
   
