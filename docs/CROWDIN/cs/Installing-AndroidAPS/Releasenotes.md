@@ -2,7 +2,7 @@
 
 ## Verze 2.0
 
-Datum vydání: xx.xx.xxxx
+Release date: 03-11-2018
 
 ### Hlavní nové funkce
 
