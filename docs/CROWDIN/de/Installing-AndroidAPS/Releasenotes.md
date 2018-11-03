@@ -2,7 +2,7 @@
 
 ## Version 2.0
 
-Erscheinungsdatum: xx.xx.xxxx (noch nicht veröffentlicht)
+Release date: 03-11-2018
 
 ### Wichtige neue Funktionen
 
