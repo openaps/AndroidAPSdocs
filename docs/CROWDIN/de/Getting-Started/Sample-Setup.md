@@ -46,7 +46,7 @@ Bei der Erstinstallation von Android Studio ist einige Geduld erforderlich, da d
 
 ## Smartphone Einrichtung
 
-<img src="../images/SampleSetupSmartphone.png" width="250" />
+<img src="../images/SampleSetupSmartphone.png" />
 
 ### Firware des Smartphones prüfen
 
@@ -68,7 +68,7 @@ Standortdienste ("GPS") müssen aktiviert sein, damit Bluetooth ordnungsgemäß 
 
 ### Dexcom App (modifizierte Version) installieren
 
-<img src="../images/SampleSetupDexApp.png" width="250" />   
+<img src="../images/SampleSetupDexApp.png" />   
 
 
 Die Original-App von Dexcom aus dem Google Play Store wird nicht funktionieren, weil sie die Werte nicht an andere Apps weitergibt. Darum ist eine von der Community leicht modifizierte Version erforderlich. Nur sie kann später mit AAPS kommunizieren. Außerdem kann die modifizierte Dexcom App mit allen Android Smartphones verwendet werden, nicht nur mit den in der [Dexcom Kompatibilitätsliste](https://www.dexcom.com/dexcom-international-compatibility) aufgeführten. Eine mmol/l-Version und eine mg/dl-Version der modifizierten Dexcom App sind unter https://github.com/dexcomapp/dexcomapp?files=1 verfügbar.
@@ -121,7 +121,7 @@ xDrip + ist eine weitere ausgereifte Open-Source-App, die unzählige Möglichkei
 
 Der "Akut niedrig Alarm" (unter 55 mg/dl bzw. 3,1 mmol/l) ist ein Standardalarm der modifizierten Dexcom App, der nicht abgeschaltet werden kann.
 
-<img src="../images/SampleSetupxDripWarning.png" width="250" />   
+<img src="../images/SampleSetupxDripWarning.png" />   
 
 
 Tipp für Tagungen, Kirchenbesuche, Kino etc...:
@@ -136,7 +136,7 @@ Im Samsung Galaxy S7 auf Menü > Einstellungen > Gerätewartung > Akku > Nicht �
 
 Mit einer Android Wear Smartwatch lässt sich das Leben mit Diabetes noch viel unauffälliger gestalten. Über sie kann am Handgelenk jederzeit der aktuelle Glukosezucker, der Status der Loop etc. angezeigt und es können Bolusgaben vorgenommen werden. Dazu den CGM-Wert im AAPSv2 Watchface doppelklicken. Die SWR50 läuft in der Regel einen ganzen Tag, bis der Akku wieder aufgeladen werden muss (selbes Ladegerät wie das Samsung Galaxy S7: microUSB).
 
-<img src="../images/SampleSetupSmartwatch.png" width="150" /> Details zu dem auf dem Watchface angezeigten Informationen finden sich [hier](../Configuration/Watchfaces.md).
+<img src="../images/SampleSetupSmartwatch.png" /> Details zu dem auf dem Watchface angezeigten Informationen finden sich [hier](../Configuration/Watchfaces.md).
 
 * Auf dem Smartphone über den Google-Play-Store die App "Android Wear" installieren und die SWR50 nach dortigen Anweisungen koppeln.
 * In AAPS Hamburger Menü (oben links) > Konfiguration > Allgemein (ganz unten in der Liste) > Wear > links aktivieren, Zahnrad klicken > Wear-Einstellungen > `Steuerung durch die Uhr`
