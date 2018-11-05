@@ -40,7 +40,7 @@ For further information about temp targets please look at [Temp Targets (TT)](..
 ![Insulin Dialog](../images/Screenshot_Insulin_Dialog.png)
 
 ## Carbs
-The Carbs dialog gives you the possibility to inform AAPS about Carbs you eat. In addition you can use the Carbs dialog to increase your temp target for an activty or to handle a hypo. This option is pre-selected if your blood sugar is below 4 mmol/l (72 mg/dl). You can set your defautl targets and times via Preferences->Other->Default Temp-Targets. The last thing you can do is for handling of eCarbs. The concept is described at [Extended carbs / “eCarbs”](../Usage/Extended-Carbs.html#extended-carbs-ecarbs).
+The Carbs dialog gives you the possibility to inform AAPS about Carbs you eat. In addition you can use the Carbs dialog to increase your temp target for an activty or to handle a hypo. This option is pre-selected if your blood sugar is below 4 mmol/l (72 mg/dl). You can set your default targets and times via Preferences->Other->Default Temp-Targets. The last thing you can do is for handling of eCarbs. The concept is described at [Extended carbs / “eCarbs”](../Usage/Extended-Carbs.html#extended-carbs-ecarbs).
 For further information about temp targets please look at [Temp Targets (TT)](../Usage/temptarget.html#temp-targets).
 
 ![Carbs Dialog](../images/Screenshot_Carbs_Dialog.png)
