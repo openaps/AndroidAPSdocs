@@ -62,7 +62,7 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 ## CGM calibration
 The CGM calibration dialog is for input of a blood sugar which you need to calibrate your CGM or FGM.
 
-![VGM calibration Dialog](../images/Screenshot_Calibration_Dialog.png)
+![CGM calibration Dialog](../images/Screenshot_Calibration_Dialog.png)
 
 ## Insulin Profile
 
