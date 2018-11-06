@@ -1,6 +1,5 @@
 # Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
 
-
 ![Sample Setup](../images/SampleSetup.png)
 
 ## Description
@@ -18,18 +17,15 @@ Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" wh
 ## Required components
 
 1. Samsung Galaxy S7
- * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS
-
+Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS
 2. [DanaR](http://www.sooil.com/eng/product/) or Dana RS insulin pump
- * Alternatives:  
+Alternatives:  
    - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
    - Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
-
 3. [Dexcom G5](https://dexcom.com)
- * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
-   
+Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
 4. Optional: Sony Smartwatch 3 (SWR50)
- * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
 
 ## Nightscout setup
 See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
@@ -40,7 +36,7 @@ To be able to create an Android app from the freely available AAPS open source c
 Please be patient when installing Android Studio as the software downloads a lot of additional data once installed on your computer.
 
 ## Smartphone setup
-<img src="../images/SampleSetupSmartphone.png">
+![Smartphone Setup](../images/SampleSetupSmartphone.png)
 
 ### Check smartphone firmware
 * Menu > Settings > Phone info > Software info: At least "Android-Version 7.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0)  
@@ -58,10 +54,11 @@ For security reasons this setting should be set back to inactive once the instal
 Location services ("GPS") must be activated in order for Bluetooth to work properly.
 
 ### Install Dexcom App (modified version)
-<img src="../images/SampleSetupDexApp.png"> <br>
+![Dexcom App patched](../images/SampleSetupDexApp.png)
 
 The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS.
 Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility).
+
 A mmol/l version and a mg/dl version of the modified Dexcom app are available at https://github.com/dexcomapp/dexcomapp?files=1. 
 
 To do this perform the following steps on your smartphone:
@@ -88,7 +85,7 @@ To do this perform the following steps on your smartphone:
 * BG source: `Dexcom G5 App (patched)`
   -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/Config-Builder.md#bg-source))
 
-<img src="../images/SampleSetupG5Settings.png" width="250"> <br>  
+![Dexcom App patched](../images/SampleSetupG5Settings.png)
 
 * NS Client activated (see [NS Client](../Configuration/Config-Builder.md#ns-client) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
@@ -108,7 +105,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
 ### Example of an alarm setup
 The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
-<img src="../images/SampleSetupxDripWarning.png"> <br>
+![xDrip](../images/SampleSetupxDripWarning.png)
 
 Tip for meetings / church visits / cinema etc..: 
 
@@ -120,7 +117,8 @@ On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery >
 ## Optional: Setup Sony Smartwatch 3 (SWR50)
 With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist.  The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
-<img src="../images/SampleSetupSmartwatch.png">
+![Smartwatch](../images/SampleSetupSmartwatch.png)
+
 Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
 * Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
