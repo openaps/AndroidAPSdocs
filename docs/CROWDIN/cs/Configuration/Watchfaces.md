@@ -1,14 +1,30 @@
 # Hodinky
 
-AndroidAPS je navržený, aby ho bylo možné *ovládat* hodinkami Android Wear. Abyste toho dosáhli, potřebujete nejdříve zvolit variantu sestavení "fullRelease" při sestavování APK [odkaz](../Installing-AndroidAPS/Building-APK.md) (nebo "pumpRelease", což vám umožní jenom vzdáleně ovládat pumpu bez smyčky). V rámci aplikace AndroidAPS v záložce "Konfigurace" pak povolte plugin "Wear". Nastavení si můžete zpřístupnit kliknutím na ozubené kolo. Pokud chcete z hodinek posílat bolusy apod., pak v rámci Wear nastavení potřebujete povolit "Řízení z hodinek Wear".
+AndroidAPS je navržený, aby ho bylo možné *ovládat* hodinkami Android Wear. If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-Na výběr je několik watchface, které zahrnují průměrnou změnu glykémie, IOB, právě aktivní dočasnou bazální dávku a bazální profil + graf glykémií přečtených ze senzoru. AAPS aplikaci na hodinkách můžete použít také pro nastavení dočasného cíle, odeslání bolusu, využití bolusového kalkulátoru, plnění kanyly/setu a také pro kontrolu stavu smyčky a pumpy. Ujistěte se, že notifikace od AndroidAPS nejsou na hodinkách blokované. Potvrzování akcí (např. bolusu, dočasného cíle) přichází skrze notifikace, které je nutné odsunout (swipe) a potvrdit klepnutím (tick). Abyste se rychleji dostali do menu AAPS, dvakrát klepněte na hodnotu vaši glykémie. Když budete dvakrát klepat na glykemickou křivku, budou se ukazovat staré/nové hodnoty glykémií.
+The following functions can be triggered from the watch:
+
+* set a temporary target
+* administer a bolus
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md?highlight=tdd#wear) on the phone)
+* check the status of loop and pump
+* show TDD (Total daily dose = bolus + basal per day)
+
+To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping). Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder.md?highlight=tdd#wear).
+
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+
+![AndroidAPSv2 watchface](../images/AAPSv2_Watchface.png)
+
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## Troubleshooting the wear app:
 
-* Na Android Wear 2.0 se watchface už neinstaluje automaticky. Nyní je nutné přejít do playstore na hodinkách (odlišný playstore od toho na telefonu) a najít kategorii aplikací nainstalovaných na telefonu, ze které pak můžete watchface aktivovat. Také povolte automatické aktualizace. 
-* Někdy pomůže znovu sesynchronizovat aplikace do hodinek, i když to ručně může být poněkud zdlouhavé: Android wear > Ikona ozubeného kola > Název hodinek > Synchronizovat aplikace.
-* Povolte ADB ladění ve vývojářských možnostech (na hodinkách), připojte hodinky k počítači přes USB a spusťte Wear aplikaci, až budete mít na počítači otevřené Android Studio.
+* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
+* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 
 ## Legend AndroidAPSv2 watchface
 
@@ -36,7 +52,7 @@ J - insulin on board (from bolus | from basal)
 
 ## View Nightscout data
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Na výběr je několik watchface, které zahrnují průměrnou změnu glykémie, IOB, právě aktivní dočasnou bazální dávku a bazální profil + graf glykémií přečtených ze senzoru.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 ## Pebble
 
