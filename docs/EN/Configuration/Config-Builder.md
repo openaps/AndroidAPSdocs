@@ -165,7 +165,9 @@ Displays the food presets defined in the Nightscout food database, see [Nightsco
 Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 ### Wear
-Monitor and control AAPS using your WearOS watch. Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...)
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+
+If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
 ![Wear settings](../images/ConfBuild_Wear.png)
 
