@@ -1,6 +1,8 @@
 # Watchfaces
 
-AndroidAPS is designed to be _controlled_ by Android Wear watches. The following functions can be triggered from the watch:
+AndroidAPS is designed to be _controlled_ by Android Wear watches. If you want to bolus etc from the watch then within Wear setting you need to enable "Controls from Watch".
+
+The following functions can be triggered from the watch:
 * set a temporary target
 * administer a bolus
 * use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md?highlight=tdd#wear) on the phone)
