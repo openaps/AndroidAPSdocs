@@ -98,7 +98,7 @@ Zur Einrichtung im Smartphone folgende Schritte ausführen:
 
 * BZ-Quelle: `Dexcom G5 App (patched)` -- Klicke auf das Zahnrad und aktiviere `Speichere BZ-Werte in Nightscout` und `Sende BZ-Werte zu xDrip+` (siehe [BZ-Quellen](../Configuration/Config-Builder.md#bg-source))
 
-<img src="../images/SampleSetupG5Settings.png" width="250" />   
+<img src="../images/SampleSetupG5Settings.png" />   
 
 
 * Nightscout Client aktivieren (siehe [Nightscout-Client](../Configuration/Config-Builder.md#ns-client) und [Nightscout Setup](../Installing-AndroidAPS/Nightscout.md))
