@@ -1,8 +1,24 @@
 # Watchfaces
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping). Within AndroidAPS, in the ConfigBuilder you need to enable Wear. You can access the setting by clicking on the cog. If you want to bolus etc from the watch then within Wear Setting you need to enable "Controls from Watch".
+AndroidAPS is designed to be *controlled* by Android Wear watches. If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph. You can also use the AAPS app on the watch to set a temporary target, administer a bolus, use the bolus wizard, prime/fill, and check the status of loop and pump. Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick. To get faster to the AAPS menu, do a double tap on your BG. When doing a double tap onto the BG curve, it will show older/ just newer BG's.
+The following functions can be triggered from the watch:
+
+* set a temporary target
+* administer a bolus
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md?highlight=tdd#wear) on the phone)
+* check the status of loop and pump
+* show TDD (Total daily dose = bolus + basal per day)
+
+To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping). Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder.md?highlight=tdd#wear).
+
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+
+![AndroidAPSv2 watchface](../images/AAPSv2_Watchface.png)
+
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## Troubleshooting the wear app:
 
