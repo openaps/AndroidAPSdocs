@@ -1,43 +1,59 @@
 # Smartwatch-Integration
 
-AndroidAPS kann mit einer Android Wear Smartwatch *gesteuert* werden. Dafür musst du beim [Erstellen der APK](../Installing-AndroidAPS/Building-APK.md) die Build Variante "fullRelease" auswählen (alternativ erlaubt "pumpRelease" die Fernsteuerung der Pumpe ohne loopen). Im Konfigurations-Generator von AndroidAPS musst du dazu 'Wear' aktivieren. Klicke auf das Zahnrad, um die Einstellungen des Watch-Features aufzurufen. Wenn du Boli etc. von der Smartwatch aus abgeben willst, aktiviere "Steuerung durch die Uhr".
+AndroidAPS kann mit einer Android Wear Smartwatch *gesteuert* werden. If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-Es gibt mehrere Ziffernblätter zur Auswahl, die das durchschnittliche Delta, IOB, die derzeit aktive TBR und Basalraten sowie die Kurve der CGM-Werte anzeigen können. Mit der AAPS App auf der Uhr kannst du auch Temporäre Ziele setzen, einen Bolus mit oder ohne Bolusrechner abgeben, die Kanüle füllen und den Status der Pumpe und des Loop prüfen. Stelle sicher, dass AndroidAPS die Erlaubnis hat, Benachrichtigungen auf der Uhr anzuzeigen. Die Eingaben werden aktiviert, indem man die Benachrichtigung auf der Uhr öffnet, einmal wischt und bestätigt. Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten CGM-Wert auf der Uhr doppelt anklicken. Wenn man zwei mal auf die CGM-Kurve tippt, ändert sich der angezeigte Zeitraum.
+The following functions can be triggered from the watch:
+
+* set a temporary target
+* administer a bolus
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md?highlight=tdd#wear) on the phone)
+* check the status of loop and pump
+* show TDD (Total daily dose = bolus + basal per day)
+
+To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping). Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder.md?highlight=tdd#wear).
+
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+
+![AndroidAPSv2 watchface](../images/AAPSv2_Watchface.png)
+
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## Fehlerbehebung der Smartwatch App:
 
-* In Android Wear 2.0 installiert sich das Watchface nicht von alleine. Du musst in den Playstore der Uhr (unterscheidet sich vom Playstore des Smartphones!) gehen und unter der Kategorie “installierte Apps auf dem Handy” AAPS aktivieren. Aktiviere ebenalls Auto Update. 
-* Manchmal hilft es, Apps erneut mit der Uhr zu synchronisieren, da es manchmal ein bisschen langsam sein kann, bis der Sync automatisch erfolgt: Wear Os > Zahnrad-Symbol (ganz unten) > Name deiner Uhr > Apps erneut synchronisieren.
-* Schalte ADB Debuggen in den Entwickleroptionen der Uhr ein, verbinde die Uhr via USB mit dem PC und starte die Wear App einmal in Android Studio.
+* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
+* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 
 ## Legende AndroidAPSv2 watchface
 
 ![Legende AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
 
-A - Zeit seit der letzten Loop-Aktion
+A - time since last loop run
 
-B - CGM Wert
+B - CGM reading
 
-C - Minuten seit dem letzten CGM-Wert
+C - minutes since last CGM reading
 
-D - Veränderung zwischen letztem und vorletztem CGM-Wert (in mmol oder mg/dl)
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-E - Durchschnittliche Änderung der CGM-Werte in den letzten 15 Minuten
+E - average change CGM reading last 15 minutes
 
-F - Batteriestatus des Smartphones
+F - phone battery
 
-G - BGI (blood glucose interaction) -> erwartete BZ-Änderung allein auf Basis des aktiven Insulins.
+G - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-H - Basalrate (Anzeige in IE/Std. bei Standard-BR und in % während einer TBR)
+H - basal rate (shown in U/h during standard rate and in % during TBR)
 
-I - Kohlenhydrate (carbs on board | e-carbs in der Zukunft)
+I - carbs (carbs on board | e-carbs in the future)
 
-J - Insulin on board (aus Boli | aus Basal)
+J - insulin on board (from bolus | from basal)
 
 ## Nightscout Daten anzeigen
 
-Falls du ein anderes System zum Loopen verwendest und deine Daten oder die deines Kindes/Verwandten auf der Uhr *sehen* möchtest, kannst du auch einfach nur die NSClient APK kompilieren. Gehe wie unter [AndroidAPS installieren - App erstellen](../Installing-AndroidAPS/Building-APK.md) beschrieben vor und wähle die Build Variante "NSClientRelease". Es gibt mehrere Ziffernblätter zur Auswahl, die das durchschnittliche Delta, IOB, die derzeit aktive TBR und Basalraten sowie die Kurve der CGM-Werte anzeigen können.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 ## Pebble
 
-Pebble Nutzer können das [Urchin watchface](https://github.com/mddub/urchin-cgm) nutzen, um ihre Loop-Daten *anzuzeigen* (falls sie zu Nightscout hochgeladen werden). Es ist aber nicht möglich, die Pumpe und AndroidAPS über die Smartwatch zu steuern. Du kannst Felder wählen, um z. B. IOB, aktive temp. Basalrate und Vorhersagekurven anzeigen zu lassen. Falls du open loopst, kannst du [IFTTT](https://ifttt.com/) benutzen, um ein kleines Programm zu erstellen, welches (wenn eine Benachrichtigung von AndroidAPS kommt) eine SMS oder Benachrichtigung anzeigt.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
