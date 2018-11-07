@@ -98,7 +98,7 @@ To do this perform the following steps on your smartphone:
 
 * BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/Config-Builder.md#bg-source))
 
-<img src="../images/SampleSetupG5Settings.png" width="250" />   
+<img src="../images/SampleSetupG5Settings.png" />   
 
 
 * NS Client activated (see [NS Client](../Configuration/Config-Builder.md#ns-client) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
