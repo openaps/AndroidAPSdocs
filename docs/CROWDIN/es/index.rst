@@ -50,6 +50,7 @@ Inicio
    Phones <./Getting-Started/Phones.md>
    Opciones de Bombas de insulina <./Getting-Started/Pump-Choices.md>
    Futuros controladores de bombas <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Sample Setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
    FAQ para loopers <./Getting-Started/FAQ.md>
    Glosario <./Getting-Started/Glossary.md>
   

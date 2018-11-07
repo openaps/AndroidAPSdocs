@@ -31,6 +31,8 @@ In general, the steps necessary to build the APK file:
 
 Detailed description of the steps necessary to build the APK file.
 
+### Install Android Studio
+
 * Install git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
@@ -73,6 +75,8 @@ After the downloads are completed click the "Finish" button.
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
 * Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+
+### Generate signed APK
 
 * Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
@@ -213,6 +217,8 @@ In the event log you see that the Signed APK was generated successfully.
 Click the "locate" link in the event log.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
+
+### Transfer APK to smartphone
 
 A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 

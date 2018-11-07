@@ -31,6 +31,8 @@ Následují obecné kroky k sestavení souboru APK:
 
 Následuje detailní popis kroků nutných k sestavení souboru APK.
 
+### Install Android Studio
+
 * Instalujte git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
@@ -72,9 +74,11 @@ Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
 ![Snímek 9](../images/Installation_Screenshot_09.png)
 
-* Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Možná je teď vhodná doba pro krátkou přestávku?
+* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
-* Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte "Check out project from Version Control" s "Git" jako konkrétní verzí správce zdrojových kódů.
+### Generate signed APK
+
+* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
 ![Snímek 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
 
@@ -98,8 +102,8 @@ Přečtěte si okno "Tip of Day" a kliknutím na "Close" je zavřete.
 
 ![Snímek 17](../images/Installation_Screenshot_17.png)
 
-* Výborně, teď máte vlastní kopii zdrojových kódů a jste připravení začít se sestavováním.
-* Nyní se blížíme k naší první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
+* Excellent, you have your own copy of the source code and are ready to start the build.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Klikněte na "Install missing platform(s) and sync project", protože Android Studio potřebuje doinstalovat chybějící platformu.
 
@@ -181,13 +185,13 @@ Klikněte na "Create new...", abyste začali připravovat úložiště svých kl
 
 ![Snímek 41](../images/Installation_Screenshot_41.png)
 
-* Vyplňte údaje pro další dialogové okno. 
-  * Key store path: je cesta k vašemu úložišti klíčů
-  * Políčka s hesly níže jsou pro úložiště klíčů a jsou zdvojená, aby se zabránilo překlepům.
-  * Alias je název pro klíč, který potřebujete. Můžete ponechat výchozí, anebo si vybrat jakékoliv hezké jméno.
-  * Políčka s hesly pod tím jsou pro samotný klíč. Jako vždy zdvojená, aby se zabránilo překlepům.
-  * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
-  * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje. Pak klikněte na "OK".
+* Fill in the information for the next dialog. 
+  * Key store path: is the path to the keystore file
+  * The password fields below are for the keystore to double check for typing errors.
+  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
+  * The password fields below the key are for the key itself. As always to double check for typing errors.
+  * You can let the validity at the default of 25 years.
+  * You only have to fill out firstname and lastname but feel free to complete the rest of information. Then click "OK".
 
 ![Snímek 42](../images/Installation_Screenshot_42.png)
 
@@ -197,12 +201,12 @@ Vyplňte údaje posledního dialogového okna a klikněte na "Next".
 
 Zvolte "full" jako flavour generované aplikace. Zvolte V1 "Jar Signature" (V2 je volitelné) a klikněte na "Finish". Následující údaje mohou být důležité pro pozdější použití.
 
-* "Release" by měla být výchozí volba pro "Build Type", "Debug" je pouze pro vývojáře.
-* Vyberte typ sestavení, jaký budete chtít. 
-  * full (tj. automatické doporučení pro uzavřenou smyčku)
-  * openloop (tj. doporučení pro uživatele s otevřenou smyčkou)
-  * pumpcontrol (tj. vzdálené ovládání pumpy bez smyčky)
-  * nsclient (tj. zobrazují se data jiného uživatele se smyčkou a lze vkládat vstupy ošetření)
+* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
+* Select the build type you want to build. 
+  * full (i.e. recommendations automatically enacted in closed looping)
+  * openloop (i.e. recommendations given to user to manually enact)
+  * pumpcontrol (i.e. remote control for pump, no looping)
+  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
 
 ![Snímek 44](../images/Installation_Screenshot_44.png)
 
@@ -213,6 +217,8 @@ V podokně "Event Log" vidíme, že podepsaný soubor APK byl úspěšně vygene
 Klikněte na odkaz "locate" v podokně "Event Log".
 
 ![Snímek 46](../images/Installation_Screenshot_46.png)
+
+### Transfer APK to smartphone
 
 Objeví se správce souborů. Na vašem počítači může vypadat trochu odlišně, já např. používám Linux. Na Windows systémech to bude Průzkumník souborů a na Mac OS X to bude Finder. V něm byste měli vidět složku s vygenerovaným souborem APK. Bohužel je toto nesprávné místo, protože "wear-release.apk" není podepsané "app" APK, které hledáme.
 

@@ -2,9 +2,9 @@
 
 Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie zum Loopen bzw. für AAPS geeignet sind. Am Schluss findest du Informationen, welche Eigenschaften eine Insulinpumpe haben müsste um damit loopen zu können.
 
-# Pumpen, an deren Unterstützung die Entwickler arbeiten
+## Pumps that support is in development
 
-## Medtronic
+### Medtronic
 
 **Loop status:** Einige der älteren Pumpen sind zum Loopen geeignet, die neuen Modelle leider nicht.
 
@@ -20,7 +20,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-## Insulet Omnipod ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Aktuell nicht unterstützt, aber die Entschlüsselung des Omnipod Protokolls ist nahezu abgeschlossen. [OpenOmni](http://www.openomni.org/) und [OmniAPS Slack](https://omniaps.slack.com/)
 
@@ -32,9 +32,9 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Hardware Anforderungen für AAPS:** RileyLink mit Omnipod Firmware (2.x)
 
-# Pumpen, die für den Loop geeignet sind
+## Pumps that are Loopable
 
-## Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH_FAQs))
+### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH_FAQs))
 
 **Loop status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist ein Kandidat für den Loop, das Protokoll aber bisher unbekannt. Vertrieb der Pumpe startet im Januar 2019 (aktuell nur Vorverkauf in den USA).
 
@@ -44,7 +44,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-## Ypsomed Pumpe ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop status:** Version 1 - 1.5 (2. Quartal 2018) sind keine Kandiadaten für den Loop. Obwohl sie über Bluetooth kommuniziert, scheint die Datenübertrag sehr limitiert zu sein (nur in eine Richtung: Pumpe zu App). Vielleicht wird sich dies in einem der Folgemodelle ändern.
 
@@ -52,7 +52,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-## Cellnovo Pumpe ([Homepage](https://www.cellnovo.com/en/homepage))
+### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
 **Loop Status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
@@ -60,7 +60,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-## Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
+### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
 
 **Loop-status** Ist ein Loop-Kandidat. Das Unternehmen bietet sein eigenes, limitiertes "Halb-Loop-System" (A6) an. Steuerbar per iPhone App. Aktuell keine Android App verfügbar.
 
@@ -68,7 +68,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-## EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
+### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
 
 **Loop-status** Ist ein Loop-Kandidat. Die verwendete Fernbedienung ist ein modifiziertes Android Gerät. (Pumpe ist aktuell nur in Korea verfügbar.)
 
@@ -76,31 +76,31 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-## Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Loop Status:** Ist ein Loop-Kandidat. Die Pumpe kommt Ende 2018 in ausgewählten europäischen Ländern auf den Markt. Gerüchteweise erfolgt die Steuerung über eine Android App.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
-# Pumpen, die nicht für den Loop geeignet sind
+## Pumps that aren't Loopable
 
-## Tandem:X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem:X2 ([Homepage](https://www.tandemdiabetes.com/))
 
 **Loop Status:** Nicht loopfähig (Aussage nicht 100% sicher), sie planen aber eine andere Pumpe auf den Markt zu bringen, die Fernsteuerung (zumindest für den Bolus) ermöglicht.
 
 * * *
 
-## Animas Vibe
+### Animas Vibe
 
 **Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich. **Hinweis:** Pumpe wird nicht mehr verkauft. Das Unternehmen (Johnson&Johnson) hat sich aus dem Pumpengeschäft zurückgezogen.
 
 * * *
 
-## Animas Ping
+### Animas Ping
 
 **Loop Status:** Nicht zum Loopen geeignet. Bolus-Steuerung möglich, aber keine Steuerung von temporären Basalraten (TBR). **Note** Vertrieb nach Erscheinen der Vibe eingestellt.
 
-# Anforderungen an Pumpen, um loopbar zu sein
+## Requirements for pumps being loopable
 
 **Grundvoraussetzung**
 
@@ -133,6 +133,6 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-## Unterstützung weiterer Pumpen
+### Other pumps support
 
 Wenn du irgendwelche anderen Pumpen hast, zu denen dich der Status interessiert, kontaktiere mich einfach (@andyrozman on gitter). In zukünftigen Releases werden einige Pumpen-Konfigurationen hinzugefügt, die dann im Open Loop laufen können (du wirst dann die Möglichkeit haben, einen bestimmten Typ als virtuelle Pumpe auszuwählen, so dass deine Einstellungen geladen werden - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).

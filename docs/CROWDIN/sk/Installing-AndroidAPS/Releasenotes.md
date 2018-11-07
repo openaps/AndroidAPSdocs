@@ -2,7 +2,7 @@
 
 ## Version 2.0
 
-Release date: xx-xx-xxxx
+Release date: 03-11-2018
 
 ### Major new features
 

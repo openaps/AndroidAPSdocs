@@ -31,6 +31,8 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 Detaillierte Beschreibung der notwendigen Schritte.
 
+### Android Studio installieren
+
 * Installiere git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
@@ -72,9 +74,11 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Herzlichen Glückwunsch, jetzt hast du die Android Studio soweit fertig installiert und kannst mit dem “Cloning” des Quellcodes beginnen. Hier ist allerdings auch ein guter Zeitpunkt, um eine Pause einzulegen.
+* Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Hier ist allerdings auch ein guter Zeitpunkt, um eine Pause einzulegen.
 
-* Nutze “git clone” in Android Studio wie in dem folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” aus.
+### Generate signed APK
+
+* Nutze “git clone” in Android Studio wie in dem folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
 
@@ -184,10 +188,10 @@ Klicke auf “Create new...” um einen Key zu erstellen. Dieser ist nichts ande
 * Fülle die Informationen in den nächsten Textfeldern aus. 
   * “Key store path”: Der Ort, an dem der Keystore gespeichert wird.
   * Die Passwortfelder sind dazu da, um den Key auf Tippfehler zu überprüfen.
-  * “Alias”: ist der Name für die Verschlüsselung. Du kannst ihn unverändert lassen wie vorgegeben oder jeden beliebigen anderen Namen eingeben.
-  * Die Passwort-Felder unter dem Key sind für den Key selbst. Wie immer, um auf die Eingabe auf Tippfehler zu prüfen.
-  * “Validity”: Übersetzt bedeutet das “Gültigkeit”. Du kannst die “25 years” so stehen lassen.
-  * Du musst nur “First and Last Name” (“übersetzt: Vor- und Nachname”) ausfüllen, kannst aber auch den Rest ergänzen. Klicke danach auf “OK”.
+  * “Alias”: ist der Name des Schlüssels. Du kannst ihn unverändert lassen wie vorgegeben oder jeden beliebigen anderen Namen eingeben.
+  * Die Passwort-Felder unter dem Key sind für den Key selbst. Wie immer, um die Eingabe auf Tippfehler zu prüfen.
+  * Die Gültigkeit kannst du bei den vorgeschlagenen 25 Jahren belassen.
+  * Du musst nur Vor- und Nachname ausfüllen, kannst aber auch den Rest ergänzen. Klicke danach auf “OK”.
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
@@ -198,11 +202,11 @@ Fülle die Informationen von dem Keystore, den du gerade erstellt hast, aus und 
 Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
 
 * “Release” solltest du immer lassen, “Debug” ist nur für Programmierer, um Fehler zu finden.
-* Wähle den “Flavour”, den du kompilieren möchtest: 
-  * full: Gesamte App (inkl. open loop, closed loop, Smartwatch-Steuerung)
-  * openloop (dieser gibt nur temporäre Basalraten-Vorschläge, die nur manuell auszuführen sind)
-  * pumpcontrol (kein Loop, mit dieser kann man die Pumpe über die App bedienen)
-  * nsclient (hier werden z.B. die Daten eines anderen Nutzers dargestellt und Careportal-Einträge können hinzugefügt werden)
+* Wähle den “build type”, den du kompilieren möchtest: 
+  * full (d.h. automatische Pumpensteuerung im Closed Loop)
+  * openloop (d.h. gibt temporäre Basalraten-Vorschläge, die manuell auszuführen sind)
+  * pumpcontrol (d.h. nur Fernbedienung für die Pumpe, kein Loopen)
+  * nsclient (d.h. es werden z.B. die Daten eines anderen Nutzers dargestellt und Careportal-Einträge können hinzugefügt werden)
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
@@ -213,6 +217,8 @@ Im event log sollte jetzt angezeigt werden, dass die signierte APK erfolgreich g
 Klicke auf “locate” im “event log”.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
+
+### Übertrage die APK-Datei auf das Smartphone
 
 Es sollte sich ein Datei Manager öffnen. Das könnte bei dir anders aussehen (dieser Screenshot wurde auf einem Linux PC erstellt). In Windows wird sich der “Explorer” öffnen, in Mac OS X der “Finder”. Dort solltest du jetzt das Verzeichnis mit der APK-Datei sehen. Es ist aber unglücklicherweise nicht die, die wir suchen, sondern nur die “wear-release.apk”.
 
