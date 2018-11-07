@@ -18,7 +18,7 @@ There are several watchfaces to choose from that include average delta, IOB, cur
 Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick. 
 
 To get faster to the AAPS menu, do a double tap on your BG. 
-With a double tap onto the BG curve you can change the time scale..
+With a double tap onto the BG curve you can change the time scale.
 
 ## Troubleshooting the wear app: 
 *  On Android Wear 2.0 the watch screen does not install by itself anymore.  You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it.  Also enable auto update.  
