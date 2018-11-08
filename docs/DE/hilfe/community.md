@@ -15,7 +15,7 @@ Die Looper-Community tauscht sich intensiv über (geschlossene) Facebook-Gruppen
 In Github gibt es die Möglichkeit, direkten Kontakt zu Entwicklern aufzunehmen, Bugs/Issues zu melden und sich mit anderen aus der Community auszutauschen (grundsätzlich in Englisch):
 
 * **AndroidAPS (Milos Kozak)**: [https://github.com/MilosKozak/AndroidAPS](https://github.com/MilosKozak/AndroidAPS)
-* **AndroidAPS Dokumentation**: [https://github.com/openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs)
+* **AndroidAPS Dokumentation**: [https://androidaps.readthedocs.io/en/latest/CROWDIN/de/index.html](https://androidaps.readthedocs.io/en/latest/CROWDIN/de/index.html)
 * **xDrip+**: [https://github.com/NightscoutFoundation/xDrip](https://github.com/NightscoutFoundation/xDrip)
 * **Nightscout-Website**: [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor)
 
@@ -27,6 +27,3 @@ In folgenden Chats kannst du Fragen an andere Nutzer richten, beispielsweise wen
 
 ## Looper-Treffen vor Ort
 Einige Mitglieder der Community organisieren regelmäßig oder unregelmäßig **Treffen in ganz Deutschland**. Eine Übersicht mit den jeweiligen Terminen findest du unter [http://loopertreffen.androidaps.de](http://loopertreffen.androidaps.de)
-
-## Kontakt zu Loopern in deiner Nähe
-Unter [https://www.zeemaps.com/map?group=2617973](https://www.zeemaps.com/map?group=2617973) [derzeit ist die Karte leider nicht verfügbar] kannst du eine **interaktive Landkarte** anschauen, auf der einige Looper aus deiner Nähe eingezeichnet sind. Du kannst dich selbst auch dort eintragen, damit andere Looper dich auch finden.
