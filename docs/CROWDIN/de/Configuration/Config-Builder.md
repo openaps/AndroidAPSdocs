@@ -195,46 +195,46 @@ Hinweis: Die Einträge können nicht im AndroidAPS-Rechner verwendet werden. (re
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Auf einer Android Wear Smartwatch können die Daten von AAPS angezeigt und einige Funktionen gesteuert werden (siehe [Seite Watchfaces](../Configuration/Watchfaces.md)). In den Einstellungen (Zahnradsymbol) kannst du die Variablen festlegen, die bei der Berechnung eines über die Uhr gegebenen Bolus berücksichtigt werden sollen (z.B. 15'-Trend, COB...).
 
-If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Wenn du Boli etc. von der Smartwatch aus abgeben willst, aktiviere "Steuerung durch die Uhr".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Wear-Einstellungen](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Über den Wear Tab oder das Hamburger Menü (oben links, falls der Wear Tab nicht angezeigt wird) kannst du
 
 * Alle Daten erneut senden. Dies kann hilfreich sein, wenn die Uhr längere Zeit außer Reichweite war und du die Informationen an die Uhr pushen willst.
 * Über das Smartphone die Einstellungen auf der Uhr öffnen.
 
 ### xDrip+ Statuszeile (Uhr)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Zeigt Loop Information in deinem xDrip+ Watchface (falls du nicht das AAPS/[AAPSv2 Watchface](../Configuration/Watchfaces.md) nutzt.)
 
 ### Dauer-Benachrichtigung
 
-Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
+Zeigt im Dropdown- und Sperrbildschirm deines Smartphones eine kurze Übersicht über den aktuellen BZ, eine aktive temporäre Basalrate (%), die Basalrate (I. E./Std.) sowie IOB und COB.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![AAPS Widget](../images/ConfBuild_Widget.png)
 
 ### Nightscout-Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
+Falls **Logge App-Start in Nightscout** aktiviert ist, ist jeder AndroidAPS Neustart in Nightscout sichtbar. Dies kann dabei helfen, Probleme mit der App zu erkennen (z.B. Batteriesparmodus für AAPS nicht deaktiviert), aber auch die Kurven in Nightscout mit Einträgen überfrachten.
 
 #### Alarm-Optionen
 
-Activate/deactivate AndroidAPS alarms
+AndroidAPS Alarme aktivieren/deaktivieren
 
 ![Alarm-Optionen](../images/ConfBuild_NSClient_Alarms.png)
 
 #### Verbindungseinstellungen
 
-Offline looping, disable roaming...
+Offline loopen, Roaming deaktivieren...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Wenn Du nur ein bestimmtes WLAN-Netzwerk verwenden möchtest, kannst du dessen **WiFi SSID** eingeben. Mehrere SSIDs können durch Semikolon (Strichpunkt) getrennt werden. Gib zum Löschen aller SSIDs ein Leerzeichen in das Feld ein.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Nightscout Verbindungseinstellungen](../images/ConfBuild_ConnectionSettings.png)
 
 #### Erweiterte Einstellungen
 
@@ -245,12 +245,12 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 * Kein Upload zu Nightscout
 * Verwende absolute statt prozentuale Basalraten -> Muss aktiviert sein, wenn du [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) nutzen willst.
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Nightscout erweiterte Einstellungen](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Wartung
 
-Email and number of logs to be send. Normally no change neccessary.
+E-Mail-Adresse und Anzahl der zu sendenden Protokolle. Normalerweise keine Änderung notwendig.
 
 ### Konfigurations-Generator
 
-Use tab for config builder instead of hambuger menu.
+Verwende einen Tab für den Konfigurations-Generator statt des Zugangs über das Hamburger-Menü.
