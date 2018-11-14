@@ -1,4 +1,4 @@
-# I'm getting stuck; What do I do?  Who can I ask?
+# I'm getting stuck; What do I do? Who can I ask?
 This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
 
 * level 1: Read the Wiki - we now have a search function to help you!
@@ -9,7 +9,7 @@ This project is based on volunteer work so some rules apply to avoid extra work 
 
 For support on CGM sources please use the Facebook groups or gitter channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
  
- # Connect with others Using AndroidAPS
+# Connect with others using AndroidAPS
 
 Who is using AndroidAPS? Add yourself to [the map here](https://www.zeemaps.com/map?group=2617973) by going to Additions > Add Marker - Simple. Choose a green pin for "I've got it!" or an orange pin for "I want it". List your name as your facebook name and in the description record extra info such as your pump, CGM and your endo/clinic name if they're supportive. The address does not have to be your actual house, you can just add town name or even your clinic address if you prefer. 
 

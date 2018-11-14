@@ -21,9 +21,9 @@ AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, 
 **What you need to get started:**
 
 * An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://github.com/jamorham/xDrip-plus>`_, `Glimp <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <https://github.com/pazaan/600SeriesAndroidUploader>`_
+* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
-* `Nightscout <https://github.com/nightscout/cgm-remote-monitor>`_ 0.10.2 or later
+* `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 or later
 * A supported pump: Dana-R or Dana-RS Insulin Pump or Accu-Chek Combo (unless you build your own driver for another insulin pump)
 * A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, PocTech
 
@@ -45,11 +45,12 @@ Getting Started with AndroidAPS
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first>
+   Safety First <./Getting-Started/Safety-first.md>
    Screenshots <./Getting-Started/Screenshots.md>
-   Phone <./Getting-Started/Phones.md>
+   Phones <./Getting-Started/Phones.md>
    Pump choices <./Getting-Started/Pump-Choices.md>
    Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Sample Setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
    FAQ for loopers <./Getting-Started/FAQ.md>
    Glossary <./Getting-Started/Glossary.md>
   
@@ -60,10 +61,10 @@ How to Install AndroidAPS
    :glob:
 
    Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   How to update to a new version <./Installing-AndroidAPS/Update-to-new-version.md>
+   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev-branch.md>
-   Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
    
 Configuration 
 ---------------
@@ -72,10 +73,10 @@ Configuration
    :glob:
    
    Config Builder <./Configuration/Config-Builder.md>
-   BG Source<./Configuration/BG-Source.md>
-   DanaR <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
+   BG Source <./Configuration/BG-Source.md>
+   DanaR pump <./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS pump <./Configuration/DanaRS-Insulin-Pump.md>
+   Accu Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
    Watchfaces <./Configuration/Watchfaces.md>
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -87,13 +88,14 @@ Usage
    :glob:
     
    Objectives <./Usage/Objectives.md>
-   OpenAPS Features <./Usage/Open-APS-features.md>
-   Profiles <./Usage/Profiles.md>
+   OpenAPS features <./Usage/Open-APS-features.md>
+   Profile switch <./Usage/Profiles.md>
+   Temp-Targets <./Usage/temptarget.md>
    SMS Commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
-   Timezone traveling <./Usage/Timezone-traveling.md>
-   Accessing log files <./Usage/Accessing-logfiles.md>
-   Smoothing Blood Glucose Data in xDrip <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   Timezone traveling with pumps <./Usage/Timezone-traveling.md>
+   Accessing logfiles <./Usage/Accessing-logfiles.md>
+   Smoothing Blood Glucose Data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
 
@@ -103,7 +105,7 @@ Where to go for help
    :maxdepth: 1
    :glob:
 
-   Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
+   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 How to help

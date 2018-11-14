@@ -1,6 +1,6 @@
 # FAQ for loopers
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.html)
+How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
 
 ## General
 
@@ -38,7 +38,7 @@ In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a para
 ### Profile
    
 #### Why using min. 5h DIA (insulin end time) instead of 2-3h?
-Well explained in this [article](/www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing  your DIA.
+Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing  your DIA.
 
 ## other settings
 
@@ -59,7 +59,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 * AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue.  To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
 * clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 * for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%.  Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html#battery-type-and-causes-of-short-battery-life) to use for Combo pump
+* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life) to use for Combo pump
 
 ### Changing reservoirs and canulas
 The change of cartridge can not be done via AndroidAPS, but must be carried out as before directly via the pump.
@@ -100,7 +100,7 @@ You are not receiving calls now, nor are you connected to the internet. But the 
 ## Travelling
 
 ### How to deal with timezone changes?
-With DanaR and DanaR Korean you don't have to do anything. For other pumps see [../Usage/Timezone-traveling.html#timezone-traveling-with-pumps](../Usage/Timezone-traveling.html#timezone-traveling-with-pumps) for more details.
+With DanaR and DanaR Korean you don't have to do anything. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
 
 ## Hospitalization
 

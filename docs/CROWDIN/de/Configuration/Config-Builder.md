@@ -199,42 +199,44 @@ Auf einer Android Wear Smartwatch können die Daten von AAPS angezeigt und einig
 
 Wenn du Boli etc. von der Smartwatch aus abgeben willst, aktiviere "Steuerung durch die Uhr".
 
-![Wear-Einstellungen](../images/ConfBuild_Wear.png)
+If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-Über den Wear Tab oder das Hamburger Menü (oben links, falls der Wear Tab nicht angezeigt wird) kannst du
+![Wear settings](../images/ConfBuild_Wear.png)
+
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
 * Alle Daten erneut senden. Dies kann hilfreich sein, wenn die Uhr längere Zeit außer Reichweite war und du die Informationen an die Uhr pushen willst.
 * Über das Smartphone die Einstellungen auf der Uhr öffnen.
 
 ### xDrip+ Statuszeile (Uhr)
 
-Zeigt Loop Information in deinem xDrip+ Watchface (falls du nicht das AAPS/[AAPSv2 Watchface](../Configuration/Watchfaces.md) nutzt.)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### Dauer-Benachrichtigung
 
-Zeigt im Dropdown- und Sperrbildschirm deines Smartphones eine kurze Übersicht über den aktuellen BZ, eine aktive temporäre Basalrate (%), die Basalrate (I. E./Std.) sowie IOB und COB.
+Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
 
-![AAPS Widget](../images/ConfBuild_Widget.png)
+![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### Nightscout-Client
 
 Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
 
-Falls **Logge App-Start in Nightscout** aktiviert ist, ist jeder AndroidAPS Neustart in Nightscout sichtbar. Dies kann dabei helfen, Probleme mit der App zu erkennen (z.B. Batteriesparmodus für AAPS nicht deaktiviert), aber auch die Kurven in Nightscout mit Einträgen überfrachten.
+If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
 
 #### Alarm-Optionen
 
-AndroidAPS Alarme aktivieren/deaktivieren
+Activate/deactivate AndroidAPS alarms
 
 ![Alarm-Optionen](../images/ConfBuild_NSClient_Alarms.png)
 
 #### Verbindungseinstellungen
 
-Offline loopen, Roaming deaktivieren...
+Offline looping, disable roaming...
 
-Wenn Du nur ein bestimmtes WLAN-Netzwerk verwenden möchtest, kannst du dessen **WiFi SSID** eingeben. Mehrere SSIDs können durch Semikolon (Strichpunkt) getrennt werden. Gib zum Löschen aller SSIDs ein Leerzeichen in das Feld ein.
+If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
 
-![Nightscout Verbindungseinstellungen](../images/ConfBuild_ConnectionSettings.png)
+![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 #### Erweiterte Einstellungen
 
@@ -245,12 +247,12 @@ Wenn Du nur ein bestimmtes WLAN-Netzwerk verwenden möchtest, kannst du dessen *
 * Kein Upload zu Nightscout
 * Verwende absolute statt prozentuale Basalraten -> Muss aktiviert sein, wenn du [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) nutzen willst.
 
-![Nightscout erweiterte Einstellungen](../images/ConfBuild_NSClient_Advanced.png)
+![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Wartung
 
-E-Mail-Adresse und Anzahl der zu sendenden Protokolle. Normalerweise keine Änderung notwendig.
+Email and number of logs to be send. Normally no change neccessary.
 
 ### Konfigurations-Generator
 
-Verwende einen Tab für den Konfigurations-Generator statt des Zugangs über das Hamburger-Menü.
+Use tab for config builder instead of hambuger menu.

@@ -1,8 +1,15 @@
 # Building the APK
 
-This article is divided into two parts.
-* In the overview part there is an explanation on what steps are necessary in general to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be smaller differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look on this.
+---
+***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
+   * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
+   * *In the left pane, click Build, Execution, Deployment > Compiler.*
+   * *Uncheck the Configure on demand checkbox.*
+   * *Click Apply or OK.*
+---
+### This article is divided into two parts.
+* In the overview part there is an explanation on what steps are necessary to build the APK file.
+* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
 ## Overview
 
@@ -18,6 +25,8 @@ In general, the steps necessary to build the APK file:
 ## Step by step walkthrough
 
 Detailed description of the steps necessary to build the APK file.
+
+### Install Android Studio
 
 * Install git
   * [Windows](https://gitforwindows.org/)
@@ -62,8 +71,9 @@ After the downloads are completed click the "Finish" button.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. May be it's time for a short break?
+* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
+### Generate signed APK
 
 * Use git clone in Android Studio as shown in screenshots below.
 Select "Check out project from Version Control" with "Git" as concrete version control system.
@@ -75,7 +85,7 @@ Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKoza
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicate at the moment.
+Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
 ![Screenshot 14](../images/Installation_Screenshot_14.png)
 
@@ -87,12 +97,12 @@ Use the standard "default gradle wrapper" and click "OK".
 
 ![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-Read and the close the "Tip of Day" screen of Android Studio by pressing "Close".
+Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
-* Excellent, you have your own copy of the source code and ready to start the build.
-* Now we are approaching our first error messsage. Fortunately Android Studio will directly give us the solution for this.
+* Excellent, you have your own copy of the source code and are ready to start the build.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
@@ -148,11 +158,11 @@ Now it's finished. Please click "Finish".
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Yeah, the error messages are gone and the first gradle build is runing. May be it's time to trink some water?
+Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-Android Studio recommends us now to update the gradle system to version 4.4. If you make this build for an AndroidAPS version before the release of at least a release condidat (RC) of version 2.0 do not follow this recommendation. Otherwise the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage by using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4.
+Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4.
 Please click "Remind me tomorrow".
 
 ![Screenshot 32](../images/Installation_Screenshot_32.png)
@@ -166,7 +176,7 @@ Yeah, the first build is successful but we are not finished.
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 Select in the menu "Build" and then "Generate Signed APK...".
-Signing means as in real life the you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That's necessary because Android has a rule that it only ecepts to run signed code for security reasons. If you are more interested in this topic you can read [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) but security is a deep and complex topic and you don't need this now.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
 ![Screenshot 39](../images/Installation_Screenshot_39.png)
 
@@ -174,17 +184,17 @@ Select "app" and click "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating you keystore. A keystore in this case is nothing more than a file in which the informations for signing are stored. It's is encrypted and the information is secured with passwords. We suggest to store it in your home folder and remeber the passwords but if you loose this information it's not a big issue because then you just have to create a new one. But it's better to store this information carefully.
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
 * Fill in the information for the next dialog.
   * Key store path: is the path to the keystore file
-  * The password fields below are for the keystore as allways in double to catch typing errors.
-  * Alias is a name for the key you need. You can let the default or gave it a fancy name you want.
-  * The password fields below the key are fopr the key itself. As allways in double to catch typing errors.
+  * The password fields below are for the keystore to double check for typing errors.
+  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
+  * The password fields below the key are for the key itself. As always to double check for typing errors.
   * You can let the validity at the default of 25 years.
-  * You only have to fill out firstname and lastname but feely free to complement the rest of information on your own choice.
+  * You only have to fill out firstname and lastname but feel free to complete the rest of information.
 Then click "OK".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
@@ -213,15 +223,18 @@ Click the "locate" link in the event log.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
-A file manager window opens. It might look a bit different at your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. Anyway there you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching.
+
+### Transfer APK to smartphone
+
+A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directoy AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. bluetooth, cloud upload or email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the selfsigned app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload or email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
-In Settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
 
 ![Screenshot 49](../images/Installation_Screenshot_49.png)
 
