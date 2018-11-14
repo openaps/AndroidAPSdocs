@@ -195,7 +195,9 @@ Hinweis: Die Einträge können nicht im AndroidAPS-Rechner verwendet werden. (re
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Auf einer Android Wear Smartwatch können die Daten von AAPS angezeigt und einige Funktionen gesteuert werden (siehe [Seite Watchfaces](../Configuration/Watchfaces.md)). In den Einstellungen (Zahnradsymbol) kannst du die Variablen festlegen, die bei der Berechnung eines über die Uhr gegebenen Bolus berücksichtigt werden sollen (z.B. 15'-Trend, COB...).
+
+Wenn du Boli etc. von der Smartwatch aus abgeben willst, aktiviere "Steuerung durch die Uhr".
 
 If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
@@ -218,7 +220,7 @@ Displays a summary of current BG, delta, active TBR%, active basal u/hr and prof
 
 ### Nightscout-Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
 
 If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
 

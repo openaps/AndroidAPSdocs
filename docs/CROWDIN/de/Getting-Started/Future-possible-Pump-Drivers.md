@@ -2,7 +2,7 @@
 
 Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie zum Loopen bzw. für AAPS geeignet sind. Am Schluss findest du Informationen, welche Eigenschaften eine Insulinpumpe haben müsste um damit loopen zu können.
 
-## Pumps that support is in development
+## Pumpen, an deren Unterstützung die Entwickler arbeiten
 
 ### Medtronic
 
@@ -32,7 +32,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Hardware Anforderungen für AAPS:** RileyLink mit Omnipod Firmware (2.x)
 
-## Pumps that are Loopable
+## Pumpen, die für den Loop geeignet sind
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH_FAQs))
 
@@ -82,7 +82,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
-## Pumps that aren't Loopable
+## Pumpen, die nicht für den Loop geeignet sind
 
 ### Tandem:X2 ([Homepage](https://www.tandemdiabetes.com/))
 
@@ -100,7 +100,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop Status:** Nicht zum Loopen geeignet. Bolus-Steuerung möglich, aber keine Steuerung von temporären Basalraten (TBR). **Note** Vertrieb nach Erscheinen der Vibe eingestellt.
 
-## Requirements for pumps being loopable
+## Anforderungen an Pumpen, um loopbar zu sein
 
 **Grundvoraussetzung**
 
@@ -133,6 +133,6 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-### Other pumps support
+### Unterstützung weiterer Pumpen
 
 Wenn du irgendwelche anderen Pumpen hast, zu denen dich der Status interessiert, kontaktiere mich einfach (@andyrozman on gitter). In zukünftigen Releases werden einige Pumpen-Konfigurationen hinzugefügt, die dann im Open Loop laufen können (du wirst dann die Möglichkeit haben, einen bestimmten Typ als virtuelle Pumpe auszuwählen, so dass deine Einstellungen geladen werden - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
