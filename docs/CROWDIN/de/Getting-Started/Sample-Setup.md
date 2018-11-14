@@ -68,7 +68,7 @@ Standortdienste ("GPS") müssen aktiviert sein, damit Bluetooth ordnungsgemäß 
 
 ### Dexcom App (modifizierte Version) installieren
 
-![Dexcom App patched](../images/SampleSetupDexApp.png)
+![gepatchte Dexcom App](../images/SampleSetupDexApp.png)
 
 Die Original-App von Dexcom aus dem Google Play Store wird nicht funktionieren, weil sie die Werte nicht an andere Apps weitergibt. Darum ist eine von der Community leicht modifizierte Version erforderlich. Nur sie kann später mit AAPS kommunizieren. Außerdem kann die modifizierte Dexcom App mit allen Android Smartphones verwendet werden, nicht nur mit den in der [Dexcom Kompatibilitätsliste](https://www.dexcom.com/dexcom-international-compatibility) aufgeführten. Eine mmol/l-Version und eine mg/dl-Version der modifizierten Dexcom App sind unter https://github.com/dexcomapp/dexcomapp?files=1 verfügbar.
 
@@ -97,7 +97,7 @@ Zur Einrichtung im Smartphone folgende Schritte ausführen:
 
 * BZ-Quelle: `Dexcom G5 App (patched)` -- Klicke auf das Zahnrad und aktiviere `Speichere BZ-Werte in Nightscout` und `Sende BZ-Werte zu xDrip+` (siehe [BZ-Quellen](../Configuration/Config-Builder.md#bg-source))
 
-![G5 Settings](../images/SampleSetupG5Settings.png)
+![G5 Einstellungen](../images/SampleSetupG5Settings.png)
 
 * Nightscout Client aktivieren (siehe [Nightscout-Client](../Configuration/Config-Builder.md#ns-client) und [Nightscout Setup](../Installing-AndroidAPS/Nightscout.md))
 
@@ -119,7 +119,7 @@ xDrip + ist eine weitere ausgereifte Open-Source-App, die unzählige Möglichkei
 
 Der "Akut niedrig Alarm" (unter 55 mg/dl bzw. 3,1 mmol/l) ist ein Standardalarm der modifizierten Dexcom App, der nicht abgeschaltet werden kann.
 
-![xDrip alarms](../images/SampleSetupxDripWarning.png)
+![xDrip Alarme](../images/SampleSetupxDripWarning.png)
 
 Tipp für Tagungen, Kirchenbesuche, Kino etc...:
 
@@ -135,7 +135,7 @@ Mit einer Android Wear Smartwatch lässt sich das Leben mit Diabetes noch viel u
 
 ![Smartwatch](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Details zu dem auf dem Watchface angezeigten Informationen finden sich [hier](../Configuration/Watchfaces.md).
 
 * Auf dem Smartphone über den Google-Play-Store die App "Android Wear" installieren und die SWR50 nach dortigen Anweisungen koppeln.
 * In AAPS Hamburger Menü (oben links) > Konfiguration > Allgemein (ganz unten in der Liste) > Wear > links aktivieren, Zahnrad klicken > Wear-Einstellungen > `Steuerung durch die Uhr`
@@ -144,4 +144,4 @@ Details about the information displayed on the watchface can be found [here](../
 
 ## Pumpe einrichten
 
-see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)
+siehe [DanaR](../Configuration/DanaR-Insulin-Pump.md)
