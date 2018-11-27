@@ -38,7 +38,21 @@ Nightscout | open source project to access and report CGM data | | <a href="http
 NS Client | part of AAPS to connect to your Nightscout site | | <a href="https://androidaps.readthedocs.io/en/latest/EN/Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a>
 Objectives | learning program within AAPS guiding you step by step from open to closed loop | | <a href="https://androidaps.readthedocs.io/en/latest/EN/Usage/Objectives.html">Wiki - objectives</a>
 OpenAPS | open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features | | <a href="https://openaps.readthedocs.io">OpenAPS docs</a>
-
+Open Loop | system will suggest recommended adjustments which have to be performed manually on the pump || <a href="https://androidaps.readthedocs.io/en/latest/EN/Configuration/Config-Builder.html#open-loop">Wiki - config builder</a>
+Oref0 / Oref1 | sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS || <a href="https://androidaps.readthedocs.io/en/latest/EN/Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a>
+Peak time | time of maximum effect of insulin given|| <a href="https://androidaps.readthedocs.io/en/latest/EN/Configuration/Config-Builder.html#insulin">Wiki - config builder</a>
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
 
 
 See also https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html
