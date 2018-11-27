@@ -56,7 +56,7 @@ TDD|total daily dose (bolus + basal per day)||
 TT|temporary target<br>temporary increase/decrease of BG target (range)||<a href="https://androidaps.readthedocs.io/en/latest/EN/Usage/temptarget.html#temp-targets">Wiki - temp targets</a>
 UAM|unanounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB|SMB|<a href="https://androidaps.readthedocs.io/en/latest/EN/Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a>
 Virtual pump|option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping||
-xDrip / xDrip+|open source software to read CGM systems||<a href="https://jamorham.github.io/#xdrip-plus"<xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a>
+xDrip / xDrip+|open source software to read CGM systems||<a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a>
 Zero-temp|temporary basal rate with 0% (no basal insulin delivery)||
 
 
