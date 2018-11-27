@@ -41,18 +41,23 @@ OpenAPS | open artificial pancreas system<br>APS run on small computers (i.e. Ra
 Open Loop | system will suggest recommended adjustments which have to be performed manually on the pump || <a href="https://androidaps.readthedocs.io/en/latest/EN/Configuration/Config-Builder.html#open-loop">Wiki - config builder</a>
 Oref0 / Oref1 | sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS || <a href="https://androidaps.readthedocs.io/en/latest/EN/Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a>
 Peak time | time of maximum effect of insulin given|| <a href="https://androidaps.readthedocs.io/en/latest/EN/Configuration/Config-Builder.html#insulin">Wiki - config builder</a>
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
+Predictions | preditions for BG in the future based on different calculations || <a href="https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a>
+Profile | basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout || <a href="https://androidaps.readthedocs.io/en/latest/EN/Configuration/Config-Builder.html#profile">Wiki - profile</a>
+Profile switch | (temporary) change of profile used or percentual increase/decrease|| <a href="https://androidaps.readthedocs.io/en/latest/EN/Usage/Profiles.html">Wiki - profile switch</a>
+RileyLink | open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)||
+SAGE | sensor age - displayed in Nightscout if information was entered in the AAPS careportal tab| Nightscout |
+Sensivity detection|calculation of sensitivity to insulin as a result of exercise, hormones etc. | | <a href="www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a>
+Sensor noise | unstable CGM readings leading to "jumping" values || <a href="https://androidaps.readthedocs.io/en/latest/EN/Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a>
+SMB|super micro bolus<br>advanced feature for faster BG adjustment|UAM|<a href="https://androidaps.readthedocs.io/en/latest/EN/Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a>
+Super bolus|shift of basal to bolus insulin for faster BG adjustment||<a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a>
+TBB|total base basal (sum of basal rate within 24 hours)||
+TBR|temporary basal rate||
+TDD|total daily dose (bolus + basal per day)||
+TT|temporary target<br>temporary increase/decrease of BG target (range)||<a href="https://androidaps.readthedocs.io/en/latest/EN/Usage/temptarget.html#temp-targets">Wiki - temp targets</a>
+UAM|unanounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB|SMB|<a href="https://androidaps.readthedocs.io/en/latest/EN/Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a>
+Virtual pump|option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping||
+xDrip / xDrip+|open source software to read CGM systems||<a href="https://jamorham.github.io/#xdrip-plus"<xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a>
+Zero-temp|temporary basal rate with 0% (no basal insulin delivery)||
 
 
 See also https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html
