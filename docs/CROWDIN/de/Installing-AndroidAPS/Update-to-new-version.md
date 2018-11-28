@@ -17,7 +17,7 @@
 
 ![](../images/branchintray.png)
 
-Dann checke aus.
+and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
 ![](../images/checkout.png)
 
