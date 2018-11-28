@@ -41,10 +41,10 @@ E - average change CGM reading last 15 minutes
 
 F - phone battery
 
-G - BGI (blood glucose interaction)
-    -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+G - basal rate (shown in U/h during standard rate and in % during TBR)
     
-H - basal rate (shown in U/h during standard rate and in % during TBR)
+H - BGI (blood glucose interaction)
+    -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
 I - carbs (carbs on board | e-carbs in the future)
 
