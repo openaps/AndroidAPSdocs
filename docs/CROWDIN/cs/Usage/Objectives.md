@@ -6,7 +6,7 @@ If you are **upgrading phones** then you can export your settings to keep your p
 
 * **Cíl 1:** Nastavení vizualizace a hlídání, příprava bazálů a poměrů 
   * Zvolte správný zdroj glykémie ve vaší situaci. See [BG Source](../Configration/BG-Source.md) for more information.
-  * Vyberte správnou pumpu na kartě Konfigurace (zvolte Virtuální pumpu, pokud používáte model pumpy bez ovladače v AndroidAPS - pouze pro otevřenou smyčku) a ujistěte se na kartě Pumpa, že váš model pumpy dokáže komunikovat a svůj stav přenášet do AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Confguration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
+  * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Confguration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
   * Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data. <br />  
     _Možná budete muset čekat na další čtení glykémie, než to AndroidAPS pozná._
 * **Cíl 2:** Začínáme na otevřené smyčce 
