@@ -20,12 +20,11 @@ Stelle sicher, dass AndroidAPS die Erlaubnis hat, Benachrichtigungen auf der Uhr
 
 Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten CGM-Wert auf der Uhr doppelt anklicken. Klicke doppelt auf die BZ-Kurve um den Zeitraum zu ändern.
 
-
 ## Fehlerbehebung der Smartwatch App:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* In Android Wear 2.0 installiert sich das Watchface nicht von alleine. Du musst in den Playstore der Uhr (unterscheidet sich vom Playstore des Smartphones!) gehen und unter der Kategorie “installierte Apps auf dem Handy” AAPS aktivieren. Aktiviere ebenalls Auto Update. 
+* Manchmal hilft es, Apps erneut mit der Uhr zu synchronisieren, da es manchmal ein bisschen langsam sein kann, bis der Sync automatisch erfolgt: Wear Os > Zahnrad-Symbol (ganz unten) > Name deiner Uhr > Apps erneut synchronisieren.
+* Schalte ADB Debuggen in den Entwickleroptionen der Uhr ein, verbinde die Uhr via USB mit dem PC und starte die Wear App einmal in Android Studio.
 
 ## Legende AndroidAPSv2 watchface
 
@@ -33,23 +32,23 @@ Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten CGM-Wert auf der
 
 A - Zeit seit der letzten Loop-Aktivität
 
-B - CGM reading
+B - CGM Wert
 
-C - minutes since last CGM reading
+C - Minuten seit dem letzten CGM-Wert
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - Veränderung zwischen letztem und vorletztem CGM-Wert (in mmol oder mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - Durchschnittliche Änderung der CGM-Werte in den letzten 15 Minuten
 
-F - phone battery
+F - Batteriestatus des Smartphones
 
-G - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - basal rate (shown in U/h during standard rate and in % during TBR)
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - Kohlenhydrate (carbs on board | e-carbs in der Zukunft)
 
-J - insulin on board (from bolus | from basal)
+J - Insulin on board (aus Boli | aus Basal)
 
 ## Nightscout Daten anzeigen
 
