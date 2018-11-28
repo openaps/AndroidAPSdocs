@@ -46,7 +46,7 @@ Please be patient when installing Android Studio as the software downloads a lot
 
 ## Smartphone setup
 
-<img src="../images/SampleSetupSmartphone.png" />
+![Smartphone](../images/SampleSetupSmartphone.png)
 
 ### Check smartphone firmware
 
@@ -68,8 +68,7 @@ Location services ("GPS") must be activated in order for Bluetooth to work prope
 
 ### Install Dexcom App (modified version)
 
-<img src="../images/SampleSetupDexApp.png" />   
-
+![Dexcom App patched](../images/SampleSetupDexApp.png)
 
 The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility). A mmol/l version and a mg/dl version of the modified Dexcom app are available at https://github.com/dexcomapp/dexcomapp?files=1.
 
@@ -98,8 +97,7 @@ To do this perform the following steps on your smartphone:
 
 * BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/Config-Builder.md#bg-source))
 
-<img src="../images/SampleSetupG5Settings.png" />   
-
+![G5 Settings](../images/SampleSetupG5Settings.png)
 
 * NS Client activated (see [NS Client](../Configuration/Config-Builder.md#ns-client) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
@@ -121,8 +119,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
 
 The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
-<img src="../images/SampleSetupxDripWarning.png" />   
-
+![xDrip alarms](../images/SampleSetupxDripWarning.png)
 
 Tip for meetings / church visits / cinema etc..:
 
@@ -136,7 +133,9 @@ On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery >
 
 With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
-<img src="../images/SampleSetupSmartwatch.png" /> Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+![Smartwatch](../images/SampleSetupSmartwatch.png)
+
+Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
 * Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
 * In AAPS choose hamburger menu (top left corner) > Config Builder > General (at the bottom of the list) > Wear > activate on left side, click cock wheel > Wear settings and activate `Controls from Watch`
