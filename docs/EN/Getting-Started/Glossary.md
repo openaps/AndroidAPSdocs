@@ -29,7 +29,7 @@
  <td>Autosens</td>
  <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
  <td>&nbsp;</td>
- <td><a href="www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td>Azure</td>
@@ -142,7 +142,7 @@
  <td>Heroku</td>
  <td>cloud computing platform to host Nightscout data</td>
  <td>Azure / Nightscout</td>
- <td><a href="www.heroku.com">Heroku</a></td>
+ <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
  <td>IC (or I:C)</td>
@@ -164,7 +164,7 @@
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)</td>
+ <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
@@ -280,7 +280,7 @@
  <td>Sensivity detection</td>
  <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
  <td>&nbsp;</td>
- <td><a href="www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td>Sensor noise</td>
