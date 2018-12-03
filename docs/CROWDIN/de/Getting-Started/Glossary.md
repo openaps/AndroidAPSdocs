@@ -1,7 +1,7 @@
 # Glossar<table style="width:100%" border=1>
 <tr>
  <th>Term</th>
- <th>Beschreibung</th>
+ <th>Description</th>
  <th>see also</th>
  <th>more details @</th>
 </tr>
