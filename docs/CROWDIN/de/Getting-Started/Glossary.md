@@ -70,7 +70,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>abbrechen</td>
+ <td>basal rate</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
