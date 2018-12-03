@@ -1,10 +1,10 @@
 # Glossary
 
-<table style="width:100%">
+<table style="width:100%" border=1>
 <tr>
  <th>Term</th>
- <th>Description/th>
- <th>see also/th>
+ <th>Description</th>
+ <th>see also</th>
  <th>more details @</th>
 </tr>
 <tr>
