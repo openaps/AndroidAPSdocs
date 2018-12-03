@@ -206,7 +206,7 @@
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
- <td>Nightscout-Client</td>
+ <td>NS Client</td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
@@ -218,7 +218,7 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td>Objectives (Ziele)</td>
+ <td>Objectives</td>
  <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
