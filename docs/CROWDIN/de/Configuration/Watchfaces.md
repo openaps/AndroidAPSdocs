@@ -42,9 +42,9 @@ E - Durchschnittliche Änderung der CGM-Werte in den letzten 15 Minuten
 
 F - Batteriestatus des Smartphones
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - Basalrate (Anzeige in IE/Std. bei Standard-BR und in % während einer TBR)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (blood glucose interaction) -> erwartete BZ-Änderung allein auf Basis des aktiven Insulins.
 
 I - Kohlenhydrate (carbs on board | e-carbs in der Zukunft)
 
