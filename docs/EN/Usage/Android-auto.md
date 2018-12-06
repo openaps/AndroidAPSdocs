@@ -13,3 +13,6 @@ How to use it:
 * Now you can access developer mode by selecting the overflow menu dots on the top right of the handheld screen and go into developpers settings
 * select unknown sources
 * now you can quit developper mode if you want
+
+Troubleshooting:
+* if you don't see the notification, check if you allowed Aaps to show notifications in Android
