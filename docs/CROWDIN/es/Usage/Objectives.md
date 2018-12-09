@@ -5,8 +5,8 @@ AndroidAPS tiene una serie de Objetivos que deben completarse para guiarlo a tra
 If you are **upgrading phones** then you can export your settings to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
 
 * **Objetivo 1:** Configurar la visualización y la monitorización, analizar los valores basales y las ratios 
-  * Seleccione la fuente correcta de glucosa en sangre para su configuración. Ver Fuente de datos de glucemia para más información.
-  * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Confguration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
+  * Seleccione la fuente correcta de glucosa en sangre para su configuración. See [BG Source](../Configuration/BG-Source.md) for more information.
+  * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
   * Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data. <br />  
     _You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it._  
 * **Objective 2:** Starting on an open loop 
