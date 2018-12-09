@@ -98,6 +98,7 @@ Utilização
    Smoothing Blood Glucose Data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
+   Android auto <./Usage/Android-auto.md>
 
 Where to go for help 
 ------------
