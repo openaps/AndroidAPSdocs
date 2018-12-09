@@ -12,7 +12,8 @@ If you are **upgrading phones** then you can export your settings to keep your p
 * **Objective 2:** Starting on an open loop 
   * Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
   * Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-  * Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them. Ensure this data shows in AndroidAPS and Nightscout.  
+  * Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them. Ensure this data shows in AndroidAPS and Nightscout.
+  * Enable [temp targets](../Usage/temptarget.html) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo.  
 
 * **Objective 3:** Understanding your open loop, including its temp basal recommendations
   
@@ -40,26 +41,10 @@ If you are **upgrading phones** then you can export your settings to keep your p
 * **Objective 7:** Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
   
   * Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
-  * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the [advanced meal assist](../Usage/Open-APS-features.md#advanced-meal-assist-ama)
+  * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the [SMB chapter in this wiki](../Usage/Open-APS-features.html#advanced-meal-assist-ama>advanced meal assist</a></li>
+</ul></li>
+<li><p><strong>Objective 8:</strong> Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)</p>
 
-* **Objective 8:** Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
-  
-  * You must read the [SMB chapter in this wiki](../Usage/Open-APS-features.md#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-  * Then you ought to [rise maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
-  * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
-
-## Export & import settings
-
-* **Export settings** on your old phone 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
-  * File location will be shown
-* **Transfer** settings from old to new phone using the file location shown during export
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
-* **Note for Dana RS users:** 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
+<ul>
+<li>You must read the <a href=) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
+  * Then you ought to  </ul></li> </ul>
