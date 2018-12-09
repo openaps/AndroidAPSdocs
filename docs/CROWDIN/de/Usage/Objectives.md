@@ -5,14 +5,15 @@ AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, 
 Wenn du das **Smartphone wechselst** kannst du die Einstellungen exportieren, um deinen Fortschritt bei den Objectives beibehalten zu können. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen. Es ist ratsam, die Einstellungen zur Sicherheit regelmäßig zu speichern. Details zum Export findest du weiter unten auf dieser Seite.  
 
 * **Ziel 1:** Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren 
-  * Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert. Weitere Informationen findest du unter [BZ-Quelle](../Configration/BG-Source.md).
-  * Wähle die richtige Pumpe im Konfigurations-Generator (wähle virtuelle Pumpe wenn du ein Pumpenmodell benutzt, für das es keinen AndroidAPS-Treiber gibt) um sicherzustellen, dass die Pumpe ihren Status mit AndroidAPS teilen kann. Wenn du eine DanaR Pumpe verwendest, dann stelle sicher, dass du die [DanaR Insulin Pumpen Anleitung](../Confguration/DanaR-Insulin-Pump.md) befolgt hast, damit eine gute Verbindung zwischen der Pumpe und AndroidAPS gewährleistet ist.
+  * Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert. See [BG Source](../Configuration/BG-Source.md) for more information.
+  * Wähle die richtige Pumpe im Konfigurations-Generator (wähle virtuelle Pumpe wenn du ein Pumpenmodell benutzt, für das es keinen AndroidAPS-Treiber gibt) um sicherzustellen, dass die Pumpe ihren Status mit AndroidAPS teilen kann. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
   * Befolge die [Nightscout-Anleitung](../Installing-AndroidAPS/Nightscout.md), um zu gewährleisten, dass Nightscout diese Daten empfangen und anzeigen kann. <br />  
     _Es kann sein, dass du auf das Auslesen des nächsten Zuckerwertes warten musst, bevor AndroidAPS es erkennt._
 * **Ziel 2:** Den Open Loop Modus starten 
   * Wähle Open Loop entweder in den Einstellungen oder indem du lange auf den Loop Button in der linken oberen Ecke des Hauptbildschirms drückst.
   * Arbeite dich zur Einrichtung durch die [Voreinstellungen](../Configuration/Preferences.md).
-  * Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der temporären Basalratenanpassungen; gib sie jeweils von Hand in der Pumpe ein und bestätige in AndroidAPS, dass du sie akzeptiert hast. Überprüfe, ob diese Daten in AndroidAPS und Nightscout angezeigt werden.  
+  * Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der temporären Basalratenanpassungen; gib sie jeweils von Hand in der Pumpe ein und bestätige in AndroidAPS, dass du sie akzeptiert hast. Überprüfe, ob diese Daten in AndroidAPS und Nightscout angezeigt werden.
+  * Enable [temp targets](../Usage/temptarget.html) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo.  
 
 * **Ziel 3:** Open Loop inklusive der temporären Basalratenvorschläge verstehen
   
@@ -40,26 +41,27 @@ Wenn du das **Smartphone wechselst** kannst du die Einstellungen exportieren, um
 * **Objective 7:** Aktiviere zusätzliche oref0 Funktionen zum täglichen Gebrauch, wie z. B. den advanced meal assist (AMA)
   
   * Jetzt solltest du damit vertraut sein, wie AndroidAPS arbeitet und welche Einstellungen dich bei deiner Diabetesbehandlung am besten unterstützen
-  * Für einen Zeitraum von 28 Tagen kannst du zusätzliche Funktionen ausprobieren, die dir noch mehr Arbeit abnehmen, so wie der [erweiterte Mahlzeitenassistent](../Usage/Open-APS-features.md#advanced-meal-assist-ama)
+  * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the [SMB chapter in this wiki](../Usage/Open-APS-features.html#advanced-meal-assist-ama>advanced meal assist</a></li>
+</ul></li>
+<li><p><strong>Objective 8:</strong> Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)</p>
 
-* **Objective 8:** Aktiviere zusätzliche oref1 Funktionen zum täglichen Gebrauch, wie z. B. den super micro bolus (SMB)
-  
-  * Du musst das [SMB-Kapitel in diesem Wiki](../Usage/Open-APS-features.md#super-micro-bolus-smb) und das [Kapitel oref1 in der openAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) lesen, um zu verstehen wie der SMB arbeitet, insbesondere was Sinn und Zweck des "zero-temping" ist.
-  * Danach solltest du [maxIOB erhöhen](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob), damit SMB korrekt funktioniert. maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet, wenn ein Mahlzeiten-Bolus von 8 IE gegeben wird und maxIB ist 7 IE, dann werden keine SMB abgegeben, bis IOB wieder unter 7 IE gefallen ist. Ein guter Startwert für maxIOB = durchschnittliche Bolusmenge für eine Mahlzeit + 3x höchste tägliche Basalrate
-  * Der Standardwert von min_5m_carbimpact in den Apsorptions-Einstellungen muss von 3 auf 8 erhöht werden, wenn du von AMA zum SMB wechselst. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
+<ul>
+<li>You must read the <a href=) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html") to understand how SMB works, especially what's the idea behind zero-temping.
+  * Then you ought to [rise maxIOB](../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
+  * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
 
-## Einstellungen exportieren & importieren
+## Export & import settings
 
 * **Exportiere die Einstellungen** auf deinem alten Smartphone 
   * Hamburger Menü (drei Striche oben links am Bildschirm)
   * Wartung
-  * Einstellungen exportieren
-  * Der Speicherort der Datei wird angezeigt.
-* **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
+  * Exportiere die Einstellungen
+  * File location will be shown
+* **Transfer** settings from old to new phone using the file location shown during export
 * **Installiere AndroidAPS** auf dem neuen Smartphone.
-* **Importiere die Einstellungen** auf deinem neuen Smartphone 
+* **Importiere die Einstellungen** auf Deinem neuen Smartphone 
   * Hamburger Menü (drei Striche oben links am Bildschirm)
   * Wartung
-  * Einstellungen importieren
-* **Hinweis für Dana RS Nutzer:** 
-  * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Bitte stelle die Bluetooth-Verbindung zwischen Smartphone und Pumpe manuell her.
+  * Importiere die Einstellungen
+* **Note for Dana RS users:** 
+  * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Please pair new phone and pump manually.

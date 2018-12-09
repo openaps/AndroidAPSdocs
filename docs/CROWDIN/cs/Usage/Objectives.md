@@ -5,14 +5,15 @@ AndroidAPS má sadu Cílů, které musíte dokončit a které vás provedou jeho
 If you are **upgrading phones** then you can export your settings to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
 
 * **Cíl 1:** Nastavení vizualizace a hlídání, příprava bazálů a poměrů 
-  * Zvolte správný zdroj glykémie ve vaší situaci. See [BG Source](../Configration/BG-Source.md) for more information.
-  * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Confguration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
+  * Zvolte správný zdroj glykémie ve vaší situaci. See [BG Source](../Configuration/BG-Source.md) for more information.
+  * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
   * Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data. <br />  
     _Možná budete muset čekat na další čtení glykémie, než to AndroidAPS pozná._
 * **Cíl 2:** Začínáme na otevřené smyčce 
   * Vyberte Otevřenou smyčku z nastavení, nebo stisknutím a držením tlačítka Smyčka v levém horním rohu hlavní stránky.
   * Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-  * Ručně nařiďte alespoň 20 dočasných bazálních dávek, které vám systém navrhuje, a to během 7 dní; zadejte je do své pumpy a potvrďte v AndroidAPS, že jste návrhy přijali. Ujistěte se, že se tyto údaje zobrazí v AndroidAPS a Nightscoutu.  
+  * Ručně nařiďte alespoň 20 dočasných bazálních dávek, které vám systém navrhuje, a to během 7 dní; zadejte je do své pumpy a potvrďte v AndroidAPS, že jste návrhy přijali. Ujistěte se, že se tyto údaje zobrazí v AndroidAPS a Nightscoutu.
+  * Enable [temp targets](../Usage/temptarget.html) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo.  
 
 * **Cíl 3:** Porozumění otevřené smyčce, včetně doporučení pro dočasné bazály
   
@@ -40,12 +41,13 @@ If you are **upgrading phones** then you can export your settings to keep your p
 * **Objective 7:** Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
   
   * Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
-  * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the [advanced meal assist](../Usage/Open-APS-features.md#advanced-meal-assist-ama)
+  * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the [SMB chapter in this wiki](../Usage/Open-APS-features.html#advanced-meal-assist-ama>advanced meal assist</a></li>
+</ul></li>
+<li><p><strong>Objective 8:</strong> Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)</p>
 
-* **Objective 8:** Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
-  
-  * You must read the [SMB chapter in this wiki](../Usage/Open-APS-features.md#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-  * Then you ought to [rise maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
+<ul>
+<li>You must read the <a href=) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html") to understand how SMB works, especially what's the idea behind zero-temping.
+  * Then you ought to [rise maxIOB](../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
   * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Pokud přecházíte z AMA k SMB, musíte to změnit ručně
 
 ## Export & import settings
