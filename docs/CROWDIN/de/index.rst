@@ -98,6 +98,7 @@ AndroidAPS nutzen
    Glättung der Blut-Glukose-Daten <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient-Problembehebung <./Usage/Troubleshooting-NSClient.md>
+   Android auto <./Usage/Android-auto.md>
 
 Hilfe durch die Community 
 ------------
