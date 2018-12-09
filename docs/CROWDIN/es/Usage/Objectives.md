@@ -46,5 +46,22 @@ If you are **upgrading phones** then you can export your settings to keep your p
 <li><p><strong>Objective 8:</strong> Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)</p>
 
 <ul>
-<li>You must read the <a href=) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-  * Then you ought to  </ul></li> </ul>
+<li>You must read the <a href=) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html") to understand how SMB works, especially what's the idea behind zero-temping.
+  * Then you ought to [rise maxIOB](../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
+  * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
+
+## Export & import settings
+
+* **Export settings** on your old phone 
+  * Hamburger menu (top left corner of screen)
+  * Maintenance
+  * Export settings
+  * File location will be shown
+* **Transfer** settings from old to new phone using the file location shown during export
+* **Install AndroidAPS** on the new phone.
+* **Import settings** on your new phone 
+  * Hamburger menu (top left corner of screen)
+  * Maintenance
+  * Import settings
+* **Note for Dana RS users:** 
+  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
