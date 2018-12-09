@@ -98,6 +98,7 @@ AndroidAPS 설치하기
    혈당데이터 평활화하기 <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    아큐-첵 콤보 기초 사용법 <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient 문제해결 <./Usage/Troubleshooting-NSClient.md>
+   Android auto <./Usage/Android-auto.md>
 
 도움을 구할 곳들 
 ------------
