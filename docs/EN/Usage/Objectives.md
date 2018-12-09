@@ -41,8 +41,8 @@ If you are <b>upgrading phones</b> then you can export your settings to keep you
   * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama>advanced meal assist</a>
 
 * **Objective 8:** Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
-  * You must read the <a href="../Usage/Open-APS-features.html#super-micro-bolus-smb>SMB chapter in this wiki</a> and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-  * Then you ought to <a href="../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>rise maxIOB</a> to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
+  * You must read the <a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">SMB chapter in this wiki</a> and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html") to understand how SMB works, especially what's the idea behind zero-temping.
+  * Then you ought to <a href="../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob">rise maxIOB</a> to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
   * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
 
 ## Export & import settings
