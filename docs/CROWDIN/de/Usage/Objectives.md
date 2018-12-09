@@ -46,5 +46,22 @@ Wenn du das **Smartphone wechselst** kannst du die Einstellungen exportieren, um
 <li><p><strong>Objective 8:</strong> Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)</p>
 
 <ul>
-<li>You must read the <a href=) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-  * Then you ought to  </ul></li> </ul>
+<li>You must read the <a href=) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html") to understand how SMB works, especially what's the idea behind zero-temping.
+  * Then you ought to [rise maxIOB](../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal
+  * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
+
+## Export & import settings
+
+* **Exportiere die Einstellungen** auf deinem alten Smartphone 
+  * Hamburger Menü (drei Striche oben links am Bildschirm)
+  * Wartung
+  * Exportiere die Einstellungen
+  * File location will be shown
+* **Transfer** settings from old to new phone using the file location shown during export
+* **Installiere AndroidAPS** auf dem neuen Smartphone.
+* **Importiere die Einstellungen** auf Deinem neuen Smartphone 
+  * Hamburger Menü (drei Striche oben links am Bildschirm)
+  * Wartung
+  * Importiere die Einstellungen
+* **Note for Dana RS users:** 
+  * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Please pair new phone and pump manually.
