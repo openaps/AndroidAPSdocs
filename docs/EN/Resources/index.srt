@@ -5,5 +5,4 @@ Resources
    :maxdepth: 4
    :glob:
 
-   clinician-guide-to-OpenAPS
-
+   clinician-guide-to-AndroidAPS
