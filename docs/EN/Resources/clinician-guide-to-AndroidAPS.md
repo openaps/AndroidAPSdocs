@@ -2,7 +2,7 @@
 
 This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians. 
 
-This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](http://androidaps.readthedocs.io/en/latest/index.html). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/OpenAPS) or Facebook), feel free to email Dana@OpenAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](http://androidaps.readthedocs.io/en/latest/index.html). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email Dana@OpenAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
 
 ### The steps for building a DIY Closed Loop:
 
