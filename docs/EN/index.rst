@@ -106,6 +106,14 @@ Where to go for help
    Background reading & interesting articles <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Resources/Reference
+            
+   Resources <./Resources/index>
+   For Clinicians <./Resources/clinician-guide-to-OpenAPS>
+
 How to help
 ------------
 .. toctree::
