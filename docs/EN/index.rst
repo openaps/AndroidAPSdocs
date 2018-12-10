@@ -112,7 +112,7 @@ Where to go for help
    :caption: Resources/Reference
             
    Resources <./Resources/index>
-   For Clinicians <./Resources/clinician-guide-to-OpenAPS>
+   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
 
 How to help
 ------------
