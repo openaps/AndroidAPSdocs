@@ -21,7 +21,7 @@ If the device running AndroidAPS breaks or goes out of range of the pump, once t
 
 ### How data is gathered:
 
-With AndroidAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AndroidAPS can communicate with other devices and to the cloud via wifi to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+With AndroidAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AndroidAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
 
 The Android device needs to:
 * communicate with the pump and read history - how much insulin has been delivered
