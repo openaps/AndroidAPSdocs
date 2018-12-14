@@ -18,6 +18,12 @@
  <td>advanced meal assist - advanced algorithm to handle carbs</td>
  <td>MA / SMB</td>
  <td><a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a></td>
+<tr>
+ <td>Android auto</td>
+ <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
+ <td>&nbsp;</td>
+ <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
+</tr>
 </tr>
 <tr>
  <td>APK</td>
