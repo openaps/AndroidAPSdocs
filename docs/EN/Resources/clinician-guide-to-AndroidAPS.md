@@ -2,7 +2,7 @@
 
 This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians. 
 
-This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](http://androidaps.readthedocs.io/en/latest/index.html). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email Dana@OpenAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](http://androidaps.readthedocs.io/en/latest/index.html). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
 
 ### The steps for building a DIY Closed Loop:
 
@@ -15,25 +15,29 @@ To start using AndroidAPS, the following steps should be taken:
 
 Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the math and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
 
-If the device running AndroidAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the usual basals runnning. 
+If the device running AndroidAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates runnning. 
 
 ### How data is gathered:
 
 With AndroidAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AndroidAPS can communicate with other devices and to the cloud via wifi to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
 
 The Android device needs to:
-* communicate with the pump and read history - what insulin has been delivered
+* communicate with the pump and read history - how much insulin has been delivered
 * communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
 
-When the device has collected this data, the algorithm runs and does the decision-making math based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin distribution.
+When the device has collected this data, the algorithm runs and does the decision-making 
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout.
+based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+
+It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
 
 ### How does it know what to do? 
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BGs will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it attempts to communicate and send any necessary adjustments to the pump. Then it reads the data back, and does it over and over again. 
+The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again. 
+
+As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
 
 AndroidAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
 
@@ -49,7 +53,7 @@ AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorith
 
 #### Scenario 1 - Zero Temp for safety
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AndroidAPS will issue a zero temp, until the eventualBG (in any time frame) is above threshold.
+In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AndroidAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
 
 ![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
 
@@ -61,7 +65,7 @@ In this example, BG is predicted to go low in the near-term, but is predicted to
 
 #### Scenario 3 - More insulin needed
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AndroidAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's).*
+In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AndroidAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
 
 ![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
 
