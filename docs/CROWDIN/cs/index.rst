@@ -109,6 +109,14 @@ Kam pro pomoc
    Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Resources/Reference
+            
+   Resources <./Resources/index>
+   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+
 Jak pomoci
 ------------
 .. toctree::
