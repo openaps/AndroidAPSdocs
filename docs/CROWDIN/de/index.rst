@@ -109,11 +109,19 @@ Hilfe durch die Community
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <http://androidaps.readthedocs.io/en/latest/DE/hilfe/community.html>
 
+.. toctree::
+   :maxdepth: 1
+       
+   :caption: Resources/Reference
+            
+   Resources <./Resources/index>
+   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+
 Mithelfen in der Community
 ------------
 .. toctree::
    :maxdepth: 1
-       
+   :glob:
 
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
    App übersetzen <./translations.md>
