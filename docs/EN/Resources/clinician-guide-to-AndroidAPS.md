@@ -27,9 +27,7 @@ The Android device needs to:
 * communicate with the pump and read history - how much insulin has been delivered
 * communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
 
-When the device has collected this data, the algorithm runs and does the decision-making 
-
-based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
 
 It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
 
