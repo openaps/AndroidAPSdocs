@@ -1,6 +1,6 @@
-# For Clinicians – A General Introduction and Guide to AndroidAPS
+# Für Klinikpersonal - Eine allgemeine Einführung und Anleitung zu AndroidAPS
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians.
+Diese Seite richtet sich an Klinikpersonal, das Interesse an der Open-Source-Technologie der künstlichen Bauchspeicheldrüse wie AndroidAPS haben und an Patienten, die diese Informationen mit ihren Ärzten und Diabetesberatern teilen möchten.
 
 This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](http://androidaps.readthedocs.io/en/latest/index.html). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
 
@@ -8,15 +8,15 @@ This guide has some high-level information about DIY closed looping and specific
 
 To start using AndroidAPS, the following steps should be taken:
 
-* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
-* [Download the AndroidAPS source code and build the software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Organisieren Sie sich eine [kompatible Insulinpumpe](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), ein [kompatibles Android-Gerät](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) und eine [kompatible CGM Quelle](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
+* [AndroidAPS Quellcode herunterladen und die Software "erstellen"](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
+* [Konfigurieren Sie die Software so, dass sie mit Ihren Diabetes-Geräten kommuniziert, richten Sie sie ein und nehmen Sie Sicherheitseinstellungen vor](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
 ### How A DIY Closed Loop Works
 
 Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+Bei der automatisierten Insulinverabreichung macht das System das Gleiche: Es sammelt Daten von der Pumpe, dem CGM und andere Informationen, die protokolliert werden (z.B. über Nightscout). Diese Informationen verwendet es als Basis seiner Berechnungen und entscheidet, wie viel mehr oder weniger Insulin benötigt wird (über oder unter der zugrunde liegenden Basalrate). Mittels temporärer Basalraten werden die notwendigen Anpassungen vorgenommen, um den BZ stabil zu halten oder in den Zielbereich zu bringen.
 
 If the device running AndroidAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates runnning.
 
