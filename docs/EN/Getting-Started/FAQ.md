@@ -23,6 +23,11 @@ The founding principle of closed looping is that your basal rate and carb ratio 
   * [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ### What emergency equipment is recommended to take with me?
+First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
+
+* Accu pack for the energy of your smartphone, wear and (maybe) BT reader
+* Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
+* Pump batteries
 
 ### How to savely attach the CGM/FGM?
 
@@ -49,6 +54,7 @@ Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-re
 ## Pump
 
 ### Where to place the pump?
+There are innumerable possibilities to place the pump. It does not matter if yo are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
 
 ### Batteries
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does.  It is best to change battery at 25% as communication becomes challenging then.  You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site.  Tricks to increase battery life include:
@@ -72,9 +78,10 @@ The change of a canula however does not use the "prime infusion set" function of
 ## Hygiene
 
 ### What to do when taking a shower or bath?
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS  so that the IOB calculations are right. Push on the light blue field "Open loop / Closed loop" on top of the homescreen. Select **"Disconnect pump for 1 h"**. Once you have been reconnected your pump you have to select "Continue" in the same field. 
+You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS  so that the IOB calculations are right. Push on the light blue field "Open loop / Closed loop" on top of the homescreen. Select **"Disconnect pump for XY min"** depending on the estimated time. Once you have been reconnected your pump you can select "Continue" in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically. 
 
 ## Working
+Depending on the kind of your job  maybe you deal different with your diabetes. As a looper you should think of a profile switch for your estimated working day (e.g. 110% for 8h when sitting around or 80% when you are active), a high or low temporary target or a time shift of your profile when standing up earlier or later than regular. If you are using Nightscout profiles, you can also create a second profile (e.g. home and workday) and do a daily profile switch to the profile you need.
 
 ## Leasure activities
 
@@ -103,5 +110,9 @@ You are not receiving calls now, nor are you connected to the internet. But the 
 With DanaR and DanaR Korean you don't have to do anything. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
 
 ## Hospitalization
+If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ## Medical appointment with your endocrinologist
+
+### Reporting
+You can either show your nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter from community member Andi Perlitz](https://nightscout-reporter.zreptil.de/) 
