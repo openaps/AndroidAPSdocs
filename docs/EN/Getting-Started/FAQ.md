@@ -58,7 +58,8 @@ In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a para
 Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing  your DIA.
 
 #### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
-First of all, check you basal rate and make a no-carb basal rate test. If it is correct, this behaviour is typically caused by a too low ISF.
+First of all, check you basal rate and make a no-carb basal rate test. If it is correct, this behaviour is typically caused by a too low ISF. A too low ISF looks typically like this:
+![ISF too low](../images/faq-isf-too-low.jpg) 
 
 #### What causes high postprandial preaks in closed loop?
 First of all, check you basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndrpidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist.  If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
