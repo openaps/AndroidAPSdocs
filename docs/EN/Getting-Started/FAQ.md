@@ -40,8 +40,9 @@ First of all, you have to take the same emergency equipment with you like every 
 * Pump batteries
 
 ### How to savely attach the CGM/FGM?
+You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask google or ebay). Some loopers use the cheaper standard kinesiotape or rocktape.
 
-
+You can fix it: There are getting sold upper arm braclets that fix the CGM/FGM with a rubber band (ask google or ebay).
 
 ## AndroidAPS settings
 
