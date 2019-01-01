@@ -64,9 +64,12 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 #### What causes high postprandial preaks in closed loop?
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist.  If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
-## other settings
+## Other settings
 
 ### Nightscout settings
+
+#### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
+In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached. 
 
 ### CGM settings
 
@@ -100,7 +103,7 @@ The change of a canula however does not use the "prime infusion set" function of
 ## Hygiene
 
 ### What to do when taking a shower or bath?
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS  so that the IOB calculations are right. Push on the light blue field "Open loop / Closed loop" on top of the homescreen. Select **"Disconnect pump for XY min"** depending on the estimated time. Once you have been reconnected your pump you can select "Continue" in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically. 
+You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS  so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically. 
 
 ## Working
 Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a profile switch for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a time shift of your profile when standing up much earlier or later than regular. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
@@ -110,15 +113,14 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 ## Sports
 
 ## Sex
-
-## Go out
+You can remove the pump to be 'free', but you should tell it AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically. 
 
 ## Drinking alcohol
 Drinking alcohol is risky in closed loop mode as the algorythm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
 
 * Deactivating closed loop mode and treating the diabetes manually or
 * setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to less than 100% 
+* do a profile switch to noticeably less than 100% 
 
 When drinking alcohol you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
@@ -144,4 +146,4 @@ If you want to share some information about AndroidAPS and DIY looping with your
 ## Medical appointment with your endocrinologist
 
 ### Reporting
-You can either show your nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter from community member Andi Perlitz](https://nightscout-reporter.zreptil.de/) 
+You can either show your nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/) 
