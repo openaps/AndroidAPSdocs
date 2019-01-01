@@ -57,6 +57,7 @@ Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-re
 
 #### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
 First of all, check you basal rate and make a no-carb basal rate test. If it is correct, this behaviour is typically caused by a too low ISF. A too low ISF looks typically like this:
+
 ![ISF too low](../images/isf.jpg) 
 
 #### What causes high postprandial preaks in closed loop?
