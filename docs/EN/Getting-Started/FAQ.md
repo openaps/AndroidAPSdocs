@@ -117,7 +117,7 @@ Drinking alcohol is risky in closed loop mode as the algorythm cannot predict th
 
 * Deactivating closed loop mode and treating the diabetes manually or
 * setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to more than 100% 
+* do a profile switch to less than 100% 
 
 When drinking alcohol you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
