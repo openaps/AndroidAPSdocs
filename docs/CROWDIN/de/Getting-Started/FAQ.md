@@ -43,7 +43,7 @@ First of all, you have to take the same emergency equipment with you like every 
 * Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
 * Pump batteries
 
-### Wie das CGM/FGM gesetzt werden sollte:
+### Wie kann das CGM/FGM sicher befestigt werden?
 
 You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask google or ebay). Some loopers use the cheaper standard kinesiotape or rocktape.
 
