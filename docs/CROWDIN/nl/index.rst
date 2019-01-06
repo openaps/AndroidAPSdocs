@@ -95,7 +95,7 @@ Gebruik
    Vertraagde koolhydraten (eCarbs) <./Usage/Extended-Carbs.md>
    Wisselen van tijdzone <./Usage/Timezone-traveling.md>
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
-   Vloeiende bloedglucose grafieken <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   Filteren van glucosewaardes <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Accu Chek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Problemen met NSClient oplossen <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
