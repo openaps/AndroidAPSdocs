@@ -137,7 +137,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 Define which Buttons are shown on the home screen.
 
 * Treatments
-* Calculator
+* Boluscalculator
 * Insulin
 * Carbs
 * CGM (opens xDrip+)

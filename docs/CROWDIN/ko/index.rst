@@ -109,6 +109,14 @@ AndroidAPS 설치하기
    시작하기 전에 보면 좋은 유용한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
    도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Resources/Reference
+            
+   Resources <./Resources/index>
+   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+
 도움주기
 ------------
 .. toctree::

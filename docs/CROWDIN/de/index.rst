@@ -98,7 +98,7 @@ AndroidAPS nutzen
    Glättung der Blut-Glukose-Daten <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient-Problembehebung <./Usage/Troubleshooting-NSClient.md>
-   Android auto <./Usage/Android-auto.md>
+   Android Auto <./Usage/Android-auto.md>
 
 Hilfe durch die Community 
 ------------
@@ -107,13 +107,21 @@ Hilfe durch die Community
     
 
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
-   Hilfe <http://androidaps.readthedocs.io/en/latest/DE/hilfe/community.html>
+   Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
+
+.. toctree::
+   :maxdepth: 1
+       
+   :caption: Resourcen
+            
+   Ressourcen <./Resources/index>
+   Für Klinikpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
 Mithelfen in der Community
 ------------
 .. toctree::
    :maxdepth: 1
-       
+   :glob:
 
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
    App übersetzen <./translations.md>

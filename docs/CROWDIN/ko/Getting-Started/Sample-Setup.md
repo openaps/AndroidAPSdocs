@@ -34,7 +34,7 @@ Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" wh
     
     * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
 
-## Nightscout 설정
+## Nightscout setup
 
 See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
 

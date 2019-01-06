@@ -12,10 +12,27 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>AMA</td>
- <td>erweiterter Mahlzeiten-Assistent (advanced meal assist) - erweiterte Algorithmus zum Umgang mit Kohlenhydraten</td>
- <td>MA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a></td>
+  <td>
+    AMA
+  </td>
+  
+  <td>
+    erweiterter Mahlzeiten-Assistent (advanced meal assist) - erweiterte Algorithmus zum Umgang mit Kohlenhydraten
+  </td>
+  
+  <td>
+    MA / SMB
+  </td>
+  
+  <td>
+    <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a>
+  </td>
+<tr>
+ <td>Android auto</td>
+ <td>Anzeige von AAPS Benachrichtigungen auf kompatiblen Kfz-Multimedia-Systemen</td>
+ <td>&nbsp;</td>
+ <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
+</tr>
 </tr>
 <tr>
  <td>APK</td>
@@ -36,7 +53,7 @@
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
- <td>BG / BZ</td>
+ <td>BZ</td>
  <td>Blutzucker</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -162,12 +179,12 @@
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>freies OpenSource Betriebssystem für Smartphones und andere Geräte<br>alternatives Betriebssystem für Smartphones, auf denen Android 8.1 (Oreo) nicht betrieben werden kann (bei Benutzung der Accu-Chek Combo)</td>
+ <td>freies OpenSource Betriebssystem für Smartphones und andere Geräte<br>alternatives Betriebssystem für Smartphones, auf denen Android 8.1 (Oreo) nicht betrieben werden kann<br>(bei Benutzung der Accu-Chek Combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Akku-Chek Combo Pumpe</a></td>
 </tr>
 <tr>
- <td>Log files</td>
+ <td>Logdateien</td>
  <td>Aufzeichnung aller AAPS Aktionen (nützlich für Fehlersuche und -beseitigung)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - Logfiles erhalten</a></td>
@@ -203,7 +220,7 @@
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
- <td>NS Client</td>
+ <td>Nightscout-Client</td>
  <td>Teil von AAPS zur Verbindung mit Deiner Nightscout-Seite</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
@@ -215,7 +232,7 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter bei Facebook</a></td>
 </tr>
 <tr>
- <td>Objectives</td>
+ <td>Objectives (Ziele)</td>
  <td>Ziele - Lenrprogramm innerhalb von AAPS um Dich Schritt für Schritt vom Open Loop zum Closed Loop zu führen.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - Objectives (Ziele)</a></td>
@@ -239,13 +256,13 @@
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Empfindlichkeitserkennung...</a></td>
 </tr>
 <tr>
- <td>Peak time</td>
+ <td>Peak time (Wirkungshoch)</td>
  <td>Zeitpunkt des Wirkungshochs des gespritzen Insulins</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Konfigurations-Generator</a></td>
 </tr>
 <tr>
- <td>Predictions</td>
+ <td>Predictions (Vorhersagen)</td>
  <td>Vorhersage der BZ-Werte basierend auf verschiedenen Berechnungsannahmen</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Vorhersagelinien</a></td>
@@ -257,8 +274,8 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - Profil</a></td>
 </tr>
 <tr>
- <td>Profile switch</td>
- <td>Profilwechsel - (vorübergehende) Änderung des verwendeten Profils oder dessen prozentuale Absenkung/Anhebung</td>
+ <td>Profilwechsel</td>
+ <td>(vorübergehende) Änderung des verwendeten Profils oder dessen prozentuale Absenkung/Anhebung</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - Profil Wechsel</a></td>
 </tr>
@@ -275,7 +292,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Sensivity detection</td>
+ <td>Sensitivitätserkennung</td>
  <td>Ermittlung der Änderung der Insulinempfindlichkeit durch Bewegung, Hormone etc.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens (englisch)</a></td>
@@ -329,8 +346,8 @@
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Virtual pump</td>
- <td>Virtuelle Pump - Möglichkeit, AAPS Funktionen auszuprobieren oder für um mit Pumpen, für die noch kein Treiber zur Verfügung steht, manuell loopen zu können</td>
+ <td>Virtuelle Pumpe</td>
+ <td>Möglichkeit, AAPS Funktionen auszuprobieren oder für um mit Pumpen, für die noch kein Treiber zur Verfügung steht, manuell loopen zu können</td>
  <td>Open Loop</td>
  <td>&nbsp;</td>
 </tr>

@@ -109,6 +109,14 @@ Where to go for help
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Resources/Reference
+            
+   Resources <./Resources/index>
+   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+
 How to help
 ------------
 .. toctree::

@@ -2,17 +2,33 @@
 
 This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
 
-## Pumps that support is in development
+## Pumps whose support is in development
+
+### Accu-Chek Insight ([Homepage](https://www.accu-chek.co.uk/insulin-pumps/insight))
+
+**Loop status:** Possibly loopable, but in the process of reverse engineering the protocol
+
+**Other implementations:** None
+
+**Java implementations:** Under development
+
+**AAPS implementation status:** Under development
+
+**Hardware requirement for AAPS:** Bluetooth capable Android device
+
+**Loopable versions:** all
+
+* * *
 
 ### Medtronic
 
-**Loop status:** Some of older versions of pumps are loopable, but not the newer models (see down)
+**Loop status:** Some of older versions of pumps are loopable, but not the newer models (see below)
 
 **Other implementations:** OpenAPS, Loop
 
 **Java implementations:** Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS implementation status:** Starting. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. 0.4 test "release" is out, with about 80% of all functionality, missing is only History reading and parsing. Work is progressing according to plan, end of development estimated by middle of December.
+**AAPS implementation status:** Starting. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. 0.4 test "release" is out, with about 80% of all functionality, missing is only History reading and parsing. Work is progressing according to plan, end of development estimated by end of March.
 
 **Hardware requirement for AAPS:** RileyLink (any)
 
