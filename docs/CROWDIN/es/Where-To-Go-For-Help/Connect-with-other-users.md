@@ -10,17 +10,30 @@ Este proyecto se basa en trabajo voluntario por lo que algunas reglas se aplican
 
 For support on CGM sources please use the Facebook groups or gitter channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
-# Conectarse con otras personas usando AndroidAPS
-
-Who is using AndroidAPS? Add yourself to [the map here](https://www.zeemaps.com/map?group=2617973) by going to Additions > Add Marker - Simple. Choose a green pin for "I've got it!" or an orange pin for "I want it". List your name as your facebook name and in the description record extra info such as your pump, CGM and your endo/clinic name if they're supportive. The address does not have to be your actual house, you can just add town name or even your clinic address if you prefer.
-
 ## ¡Asegúrese de unirse al grupo de usuarios de AndroidAPS en Facebook!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) if you want to contact anyone on the map to ask country specific questions, you can also post here any questions about the algorithum, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithum, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
-For general chat about looping in general there are several facebook groups;
+## Other ressources in English
 
-* [Looped](https://www.facebook.com/groups/TheLoopedGroup) (worldwide; users of OpenAPS, Loop and AndroidAPS)
+* [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): covers all DIY closed loop systems (OpenAPS, Loop and AndroidAPS)
+* [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
+* [AndroidAPS on Gitter](https://gitter.im/MilosKozak/AndroidAPS)
+
+## Country / language specific ressources
+
+### Australia
+
+* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australian users of OpenAPS, Loop and AndroidAPS
+
+### Germany
+
+* [Looped-DE](https://www.facebook.com/groups/loopedDE/): German speaking users of OpenAPS, Loop and AndroidAPS
+* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
+* [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
+* [Looper Meetings Germany & Austria](http://loopertreffen.androidaps.de)
+
+### UK
+
 * [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/) (german speaking users of OpenAPS, Loop and AndroidAPS)
-* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/) (Australian users of OpenAPS, Loop and AndroidAPS)
