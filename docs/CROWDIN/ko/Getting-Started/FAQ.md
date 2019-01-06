@@ -6,7 +6,17 @@ How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md
 
 ### How to begin?
 
-The founding principle of closed looping is that your basal rate and carb ratio is accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one off adjustments (exercise, stress etc). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
+First of all, you have to **get loopable hardware components**:
+
+* A [supported insulin pump](Pump-Choices.md), 
+* an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
+* a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
+
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one off adjustments (exercise, stress etc). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
 
 ### What practicalities of looping do I have?
 
@@ -27,7 +37,17 @@ The founding principle of closed looping is that your basal rate and carb ratio 
 
 ### What emergency equipment is recommended to take with me?
 
+First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
+
+* Accu pack for the energy of your smartphone, wear and (maybe) BT reader
+* Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
+* Pump batteries
+
 ### How to savely attach the CGM/FGM?
+
+You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask google or ebay). Some loopers use the cheaper standard kinesiotape or rocktape.
+
+You can fix it: There are getting sold upper arm braclets that fix the CGM/FGM with a rubber band (ask google or ebay).
 
 ## AndroidAPS settings
 
@@ -43,15 +63,35 @@ The founding principle of closed looping is that your basal rate and carb ratio 
 
 Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
 
-## other settings
+#### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
+
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behaviour is typically caused by a too low ISF. A too low ISF looks typically like this:
+
+![ISF too low](../images/isf.jpg)
+
+#### What causes high postprandial preaks in closed loop?
+
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+
+## Other settings
 
 ### Nightscout settings
 
+#### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
+
+In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+
 ### CGM settings
+
+#### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
+
+If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS openAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 ## Pump
 
 ### Where to place the pump?
+
+There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
 
 ### Batteries
 
@@ -80,9 +120,11 @@ The change of a canula however does not use the "prime infusion set" function of
 
 ### What to do when taking a shower or bath?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it AAPS so that the IOB calculations are right. Push on the light blue field "Open loop / Closed loop" on top of the homescreen. Select **"Disconnect pump for 1 h"**. Once you have been reconnected your pump you have to select "Continue" in the same field.
+You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
 
 ## Working
+
+Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a profile switch for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a time shift of your profile when standing up much earlier or later than regular. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leasure activities
 
@@ -90,9 +132,17 @@ You can remove the pump while taking a shower or bath. For this short period of 
 
 ## Sex
 
-## Go out
+You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
 
 ## Drinking alcohol
+
+Drinking alcohol is risky in closed loop mode as the algorythm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+
+* Deactivating closed loop mode and treating the diabetes manually or
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
+* do a profile switch to noticeably less than 100% 
+
+When drinking alcohol you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
 ## Sleeping
 
@@ -114,4 +164,10 @@ With DanaR and DanaR Korean you don't have to do anything. For other pumps see [
 
 ## Hospitalization
 
+If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+
 ## Medical appointment with your endocrinologist
+
+### Reporting
+
+You can either show your nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/)
