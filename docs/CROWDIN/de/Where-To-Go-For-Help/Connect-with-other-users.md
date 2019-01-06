@@ -18,22 +18,22 @@ Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/group
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): deckt alle DIY Closed Loop Systeme ab (OpenAPS, Loop und AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
-* [AndroidAPS on Gitter](https://gitter.im/MilosKozak/AndroidAPS)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM im Allgemeinen
+* [AndroidAPS bei Gitter](https://gitter.im/MilosKozak/AndroidAPS)
 
-## Country / language specific ressources
+## Länder- bzw. sprachspezifische Informationsquellen
 
-### Australia
+### Australien
 
-* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australian users of OpenAPS, Loop and AndroidAPS
+* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australische Nutzer von OpenAPS, Loop und AndroidAPS
 
-### Germany
+### Deutschland
 
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/): German speaking users of OpenAPS, Loop and AndroidAPS
-* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
+* [Looped-DE](https://www.facebook.com/groups/loopedDE/): Deutschsprachige Nutzer von OpenAPS, Loop und AndroidAPS
+* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre als CGM/FGM
 * [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
-* [Looper Meetings Germany & Austria](http://loopertreffen.androidaps.de)
+* [Loopertreffen Deutschland & Österreich](http://loopertreffen.androidaps.de)
 
-### UK
+### Großbritannien
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/): Nutzer von OpenAPS, Loop und AndroidAPS in Großbritannien
