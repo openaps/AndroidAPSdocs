@@ -10,4 +10,4 @@ Bij problemen met deze lijst, stuur een email naar <hardware@androidaps.org>. Wa
 
 ## Telefoon achtergrond
 
-![telefoon achtergrond](.. /images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> wanneer je je telefoon wilt verfraaiien met het AndroidAPS logo, kunt je hier een achtergrondafbeelding downloaden: ![Achtergrond in hoge resolutie.](.. /images/bg_phone.jpg)
+![telefoon achtergrond](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> wanneer je je telefoon wilt verfraaiien met het AndroidAPS logo, kun je hier een achtergrondafbeelding downloaden: ![Achtergrond in hoge resolutie.](../images/bg_phone.jpg)
