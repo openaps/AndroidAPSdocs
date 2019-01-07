@@ -1,12 +1,20 @@
 # BG source
 
 **For users of Dexcom:**<Br>
-_If using G5 with xdrip+_<br>
-* If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
+_If using G5 or G6 with xdrip+_<br>
+* If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout and xdrip FB group ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support), [G6](https://www.facebook.com/groups/xDripG5/permalink/2380684062005075/)).
 * In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
+* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select ON.
+* In xdrip go to Settings > Cloud Upload > Nightscout Sync (REST API) and select ON.
+* In xdrip go to Settings > Cloud Upload > Nightscout Sync (REST API) > Base URL and enter your Nightscout address in following format https://Your_API_Secret@Your_Nightcout_URL_Adress.
+* In xdrip go to Settings > Cloud Upload > Nightscout Sync (REST API) > Send Display Glucose and select ON
+* In xdrip go to Settings > Cloud Upload > Nightscout Sync (REST API) >  Extra Options > Upload treatments and untick the checkbox .
+* In xdrip go to Settings > Less common settings > Extra Status Line > External Status and tick the checkbox.
+* In xdrip go to Settings > xdrip+ Display Settings > Graph Settings > Show Basal TBR and tick the checkbox.
+* In xdrip go to Settings > xdrip+ Display Settings > Graph Settings > Show micro bolus icons and untick the checkbox.
 * If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
 * Select xdrip in ConfigBuilder (setting in AndroidAPS).
+* Select xDrip Statusline (watch) in ConfigBuilder, next click on the gear wheel and make sure that Show detailed IOB and Show BGI are ON.
 
 _If using G5 with patched Dexcom G5 app_<Br>
 * Download the apk from [https://github.com/dexcomapp/dexcomapp](https://github.com/dexcomapp/dexcomapp), and choose either the mg/dl or mmol/l version.
