@@ -6,7 +6,7 @@ _If using G5 or G6 with xdrip+_<br>
 * In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 * In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select ON.
 * In xdrip go to Settings > Cloud Upload > Nightscout Sync (REST API) and select ON.
-* In xdrip go to Settings > Cloud Upload > Nightscout Sync (REST API) > Base URL and enter your Nightscout address in following format https://Your_API_Secret@Your_Nightcout_URL_Adress.
+* In xdrip go to Settings > Cloud Upload > Nightscout Sync (REST API) > Base URL and enter your Nightscout address in following format https://Your_API_Secret@Your_Nightscout_URL_Adress.
 * In xdrip go to Settings > Cloud Upload > Nightscout Sync (REST API) > Send Display Glucose and select ON
 * In xdrip go to Settings > Cloud Upload > Nightscout Sync (REST API) >  Extra Options > Upload treatments and untick the checkbox .
 * In xdrip go to Settings > Less common settings > Extra Status Line > External Status and tick the checkbox.
