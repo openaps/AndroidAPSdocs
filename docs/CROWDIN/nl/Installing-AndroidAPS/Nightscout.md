@@ -1,28 +1,28 @@
-# Nightscout setup
+# Nightscout instellen
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+We gaan er vanuit dat je al een Nightscout site hebt, zo niet bezoek de pagina [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) voor volledige instructies voor het instellen vraag hulp in de facebook groep "CGM in the cloud Nederlands". Of scroll naar onderen op deze pagina naar het kopje ns.10be. de. De onderstaande instructies zijn instellingen die je ook moet toevoegen aan je Nightscout site. Jouw Nightscout-site moet ten minste versie 10 (weergegeven als 0.10...) zijn, dus controleer of je werkt met de [nieuwste versie](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) anders krijg je een foutmelding op je AAPS app. Voor sommige mensen verbruikt Azure meer data dan hun gratis versie toelaat, dus raden we aan om Heroku te gebruiken.
 
-* Go to https://herokuapp.com/
+* Ga naar https://herokuapp.com/
 
-* Click your App Service name.
+* Klik op jouw App Service naam
 
-* Click Application settings (azure) or Settings > "Reveal Config Variables (heroku)
+* Klik op "Application settings" (Azure) of op "Settings" > "Reveal Config Variables" (Heroku)
 
-* Add or edit the variables as follows:
+* Voeg onderstaande variabelen toe of verander ze naar:
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Je kunt verschillende alarmen instellen voor [monitoring the pump ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery% raden we sowieso aan om te activeren: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26`
 
 ![Azure](../../images/nightscout1.png)
 
-* Click "Save" at the top of the panel.
+* Klik op "Save" aan de bovenkant van het scherm.
 
 ## ns.10be.de
 
-This service is offered by fellow looper Martin Schiftan free of charge at the moment. You can install Nightscout with a few clicks and use it directly. He tries to automate the administration to such an extent that you don't have to do much manual work anymore. All settings can be made via a user-friendly web interface. The service includes an automated basal rate check using Autotune. The server is located in Germany.
+Deze service wordt aangeboden door een Duitse collega looper Martin Schiftan en is op dit moment gratis. Je kunt hiermee Nightscout met een paar klikken installeren en meteen gebruiken. Hij heeft het aanmaken van een Nightscout site zoveel mogelijk geauomatiseerd zodat je zelf nog heel weinig handmatig hoeft in te stellen. Alle instellingen kunnen via een gebruiksvriendelijke website worden gemaakt. Ook kun je hiermee je basaalstanden automatisch laten checken dmv Autotune. De server staat in Duitsland.
 
 <http://ns.10be.de/en/index.html>
