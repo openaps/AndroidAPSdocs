@@ -24,3 +24,4 @@ For general chat about looping in general there are several facebook groups;
 * [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
 * [Looped-DE](https://www.facebook.com/groups/loopedDE/) (german speaking users of OpenAPS, Loop and AndroidAPS)
 * [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/) (Australian users of OpenAPS, Loop and AndroidAPS)
+* [Looped-NL](https://www.facebook.com/groups/117102135652893/) (dutch speaking users of OpenAPS, Loop and AndroidAPS)
