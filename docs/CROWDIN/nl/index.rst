@@ -115,7 +115,7 @@ Waar je hulp kunt vinden
    :caption: Resources/Reference
             
    Resources <./Resources/index>
-   Voor behandelaars/zorgverleners
+   Voor behandelaars/zorgverleners <./Resources/clinician-guide-to-AndroidAPS>
 
 Hoe je zelf kunt helpen
 ------------
