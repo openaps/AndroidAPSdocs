@@ -10,7 +10,8 @@
 
 * Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und gib die Seriennummer (Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel) deiner DanaRS ein.
 
-* Klicke auf "Pumpen-Passwort" und gib dein Passwort ein. (Das Standard Passwort lautet 1234.)
+* Select Pump password and input your password. (Default password is 1234)   
+  **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
 
 * Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
 
