@@ -10,7 +10,8 @@
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
 
-* 펌프 비밀번호를 선택하고 비밀번호를 입력하세요. (기본 비밀번호는 1234)
+* Select Pump password and input your password. (Default password is 1234)   
+  **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
 
 * Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
