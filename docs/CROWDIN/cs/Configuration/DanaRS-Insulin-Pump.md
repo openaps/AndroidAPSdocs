@@ -10,7 +10,8 @@
 
 * Vyberte "DanaRS připojení nové pumpy" a zadejte sériové číslo pumpy DanaRS.
 
-* Vyberte heslo pumpy a zadejte své heslo. (Výchozí heslo je 1234)
+* Select Pump password and input your password. (Default password is 1234)   
+  **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
 
 * Vyberte rychlost bolusu, abyste změnili výchozí rychlost bolusu (12sec na 1U, 30sec na 1U nebo 60sec na 1U).
 
