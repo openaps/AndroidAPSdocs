@@ -75,7 +75,7 @@ AndroidAPS einrichten
    Konfigurations-Generator <./Configuration/Config-Builder.md>
    BZ-Quelle <./Configuration/BG-Source.md>
    DanaR Pumpe <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS Pumpe <./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS Pumpe <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo Pumpe <./Configuration/Accu-Chek-Combo-Pump.md>
    Smartwatch-Integration <./Configuration/Watchfaces.md>
    Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.md>
