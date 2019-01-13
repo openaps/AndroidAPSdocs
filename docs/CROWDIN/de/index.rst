@@ -114,7 +114,7 @@ Hilfe durch die Community
        
    :caption: Resourcen
             
-   Ressourcen <./Resources/index>
+   Informationsquellen <./Resources/index>
    Für Klinikpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
 Mithelfen in der Community

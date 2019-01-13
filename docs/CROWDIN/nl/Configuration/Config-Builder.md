@@ -124,7 +124,7 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 
 ## General
 
-### Overview
+### Overzicht
 
 Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 

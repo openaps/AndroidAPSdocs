@@ -65,7 +65,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td>BG source</td>
+<td>BG bron</td>
  <td>Where do your glucose values come from?</td>
  <td>CGM / FGM</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
@@ -232,7 +232,7 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td>Objectives</td>
+ <td>Doelen</td>
  <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>

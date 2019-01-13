@@ -20,7 +20,7 @@ AndroidAPS is een app die kan communiceren met bluetooth-aangestuurde insuline p
 
 **Wat heb je nodig om te starten:**
 
-* Een Android smartphone met Android 5.0 of hoger. Zie ' dit werkblad <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>' _ voor ervaringen van anderen hoe goed een telefoon met AndroidAPS werkt.
+* Een Android smartphone met Android 5.0 of hoger. Zie `dit werkblad <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ voor ervaringen van anderen hoe goed een telefoon met AndroidAPS werkt.
 * App die de gegevens van jouw glucosesensor doorgeeft, bijvoorbeeld `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ of `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ zelf
 * `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 of nieuwer
@@ -95,7 +95,7 @@ Gebruik
    Vertraagde koolhydraten (eCarbs) <./Usage/Extended-Carbs.md>
    Wisselen van tijdzone <./Usage/Timezone-traveling.md>
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
-   Vloeiende bloedglucose grafieken <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   Filteren van glucosewaardes <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Accu Chek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Problemen met NSClient oplossen <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
@@ -115,7 +115,7 @@ Waar je hulp kunt vinden
    :caption: Resources/Reference
             
    Resources <./Resources/index>
-   Voor behandelaars/zorgverleners
+   Voor behandelaars/zorgverleners <./Resources/clinician-guide-to-AndroidAPS>
 
 Hoe je zelf kunt helpen
 ------------
