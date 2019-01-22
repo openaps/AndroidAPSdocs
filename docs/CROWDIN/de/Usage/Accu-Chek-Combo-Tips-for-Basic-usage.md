@@ -78,16 +78,9 @@ Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegeben
 
 Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-Algorithmus unterstützt. Aber ein ähnlicher Effekt kann durch folgende Alternativen erreicht werden:
 
-* Setze vor dem Essen auf der **Registerkarte Aktionen** in AndroidAPS unter Temporäres Ziel ein **Bald essen** Ziel mit einem Zielwert von 80 für ein paar Stunden. Die Dauer sollte dem Intervall entsprechen, das du für einen erweiterten Bolus verwenden würdest. 
-* Verwende dann **RECHNER** auf dem Hauptbildschirm, um die Kohlenhydrate der Mahlzeit einzugeben, aber wende den Wert nicht direkt an, der dir vom Bolusrechner vorgeschlagen wird. Wenn ein multiwave-ähnlicher Bolus abgegeben werden soll, gib die Kohlenhydrate Teilung als Bolus ein. Der Algorithmus muss nun abhängig von der Mahlzeit eine sehr hohe temporäre Basalrate setzen, um der Steigerung des Blutzuckers entgegen zu wirken. An dieser Stelle sollte mit der Sicherheitsgrenze für die Basalrate (Max IE / h, Maximum basal IOB) sehr vorsichtig experimentiert und falls notwendig temporär geändert werden. 
+* Gib die Kohlenhydrate ein ohne dafür einen Bolus abzugeben. Der Loop-Algorithmus wird "aggressiver" reagieren. Verwende **eCarbs** (extended carbs) falls erforderlich.
 
-![Temporäres Ziel](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Temporary_Target.png)
-
-* Alternativ dazu kann auf der Registerkarte Aktionen in AndroidAPS ein **Profilwechsel** für die Dauer des verzögerten Bolus mit einem erhöhten Prozentsatz ausgeführt werden. Es besteht keine Notwendigkeit für ein anderes Profil (z.B. in Nightscout). Der richtige Prozentsatz kann aus der durchschnittlichen Basalrate und dem benötigten Insulin über die gewählte Dauer berechnet werden. Das heißt, ein angestrebter erweiterter Bolus von 4 IE über 4 Stunden bei einer Basalrate von 0,5 IE / h würde eine temporäre Basalrate von 300% erfordern. 
-
-![Temporäre Basalrate](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Profile_Switch.png)
-
-* Wenn du unbedingt den erweiterten oder Multiwave Bols direkt an der Pumpe eingeben wills, wird AndroidAPS dich damit bestrafen, dass es den Closed Loop für die nächsten 6 Stunden aussetzt um zu gewährleisten, dass nicht zu viel Insulin berechnet und abgegeben wird.
+* Wenn du unbedingt den erweiterten oder Multiwave Bolus direkt an der Pumpe eingeben willst, wird AndroidAPS dich damit bestrafen, dass es den Closed Loop für die nächsten 6 Stunden aussetzt um zu gewährleisten, dass nicht zu viel Insulin berechnet und abgegeben wird.
 
 ![Loop nach Multiwave Bolus deaktiviert](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
