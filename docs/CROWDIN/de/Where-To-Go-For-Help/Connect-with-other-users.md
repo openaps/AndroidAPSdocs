@@ -37,3 +37,8 @@ Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/group
 ### Großbritannien
 
 * [Looped UK](https://www.facebook.com/groups/LoopedUK/): Nutzer von OpenAPS, Loop und AndroidAPS in Großbritannien
+
+### Netherlands
+
+* [Looped-NL](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
+* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
