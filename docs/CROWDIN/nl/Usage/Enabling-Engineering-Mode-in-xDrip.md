@@ -1,3 +1,3 @@
 Het activeren van Engineering Mode in xDrip+ maakt uitgebreidere en experimentele functies beschikbaar.
 
-Om de Engineering Mode te activeren, klik je in de xDrip+ thuisscherm op de Treatment icon aan de rechterkant van het scherm (een popup schermpje komt naar voren). Druk op het microfoon icoontje aan de onderkant rechts in het pop-up scherm. In het tekstveld type in 'enable engineering mode' en klik Gereed. Engineering Mode is nu geactiveerd.
+Om de Engineering Mode te activeren, klik je in de xDrip+ thuisscherm op de Treatment icon aan de rechterkant van het scherm (een popup schermpje komt naar voren). Druk op het microfoon icoontje aan de onderkant rechts in het pop-up scherm. In het tekstveld type in 'enable engineering mode' en klik Gereed. Or, when Google Speak engine is active, speak the command "enable engineering mode". Engineering Mode is now enabled.
