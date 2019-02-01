@@ -1,7 +1,7 @@
 # BG source
 
 **For users of Dexcom:**<Br>
-_If using G5 with xdrip+_<br>
+_If using G5 or G6 with xdrip+_<br>
 * If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 * In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
@@ -14,6 +14,7 @@ _If using G5 with patched Dexcom G5 app_<Br>
 * Install downloaded apk
 * Start sensor
 * Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Note: There is no patched Dexcom G6 app with local broadcast.
 
 _If using G4 with OTG cable ('traditional' Nightscout)…_<br>
 * If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
