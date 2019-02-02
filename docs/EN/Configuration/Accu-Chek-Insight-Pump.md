@@ -17,7 +17,6 @@ you do with it.**
 
 ## Setup
 
-- [Build the App](../Installing-AndroidAPS/Building-APK) using the "Insight branch".
 - In [Config builder](../Configuration/Config-Builder) select Accu-Chek Insight in the pump section
 
    ![Screenshot of Config Builder Insight](../../images/Insight_ConfigBuilder.png)
