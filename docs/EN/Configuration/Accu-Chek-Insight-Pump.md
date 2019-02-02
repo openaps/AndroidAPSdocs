@@ -8,14 +8,12 @@ if you're willing to put in the time required. Don't rush into it,
 but allow yourself time to learn. You alone are responsible for what
 you do with it.**
 
+
 ## Hardware requirements
 
 - A Roche Accu-Chek Insight (any firmware, they all work)
 - An Android phone
 
-## Limitations
-
-- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs) instead)
 
 ## Setup
 
