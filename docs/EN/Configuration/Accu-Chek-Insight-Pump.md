@@ -47,7 +47,7 @@ you do with it.**
 ## Settings in AAPS
 
 You can enable the following options in the Insight settings on AAPS:
-- "Log site changes": Automatic entry of insulin cartridge change when pump program "fill canula" is started on the pump.<br><font color="red">Note: Canula change resets Autosens!</b></font>
+- "Log site changes": Automatic entry of insulin cartridge change when pump program "fill cannula" is started on the pump.<br><font color="red">Note: Cannula change resets Autosens!</b></font>
 - "Log tube changes": Note in AAPS database when "tube filling" program is started on the pump.
 - "Log battery changes": Automatic entry of pump battery change when new battery is inserted in the pump.
 - "Log operating mode changes": Note in AAPS database when pump is started, stopped or paused on the pump.
