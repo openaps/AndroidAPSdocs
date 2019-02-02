@@ -19,7 +19,7 @@ you do with it.**
 
 ## Setup
 
-- Configure the pump using 360 config software. If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
+- Configure the pum using 360 config software. If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
   - Required (marked green in screenshots):
     - Set/leave the menu configuration as "Standard", this will show only the supported
       menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus,
