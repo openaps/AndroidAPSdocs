@@ -61,10 +61,9 @@ You can enable the following options in the Insight settings on AAPS:
    
 In status tab the following buttons are available:
 - "Refresh": refresh pump status
-- "Start/Stop pump"
 - "Enable/Disable TBR over notification": As a standard Insight pump starts an alarm once a TBR is finished. This alarm can be activated / deactivated through this button without use of configuration software.
 
-   ![Screenshot of Insight Status](../../images/Insight_Status.png)
+   ![Screenshot of Insight Status](../../images/Insight_Status2.png)
 
 ## Pump settings
 
