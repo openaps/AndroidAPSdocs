@@ -21,7 +21,7 @@ you do with it.**
 
    ![Screenshot of Config Builder Insight](../../images/Insight_ConfigBuilder.png)
 
-- Click the cock-wheel to open Insight settings.
+- Click the cog-wheel to open Insight settings.
 - In settings click button 'Insight pairing' on top of the screen. All bluetooth devices that are found will be displayed.
  - On the Insight pump go to Menu > Settings > Communication > Add Device. The following screen should be displayed on your pump.
  
