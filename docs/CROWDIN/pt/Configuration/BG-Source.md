@@ -1,71 +1,71 @@
 # BG source
 
-**For users of Dexcom:**  
-_If using G5 with xdrip+_  
+**Para os utilizadores de Dexcom:**   
+_se usar G5 com xdrip + _  
 
 
-* If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
-* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+* Se não estiver já instalado faça download [xdrip](https://github.com/NightscoutFoundation/xDrip) e siga as instruções do nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
+* No xdrip ir a configurações > Interapp Compatibility > Broadcast Data Locally and select ON.
+* No xdrip ir a configurações> Interapp Compatibility > Accept Treatments e seleccionar OFF.
+* Se você quiser utilizar AndoidAPS para calibrar no xdrip seleccionar Settings > Interapp Compatibility > Accept Calibrations e seleccione ON. Também poderá querer rever as opções em Settings > Less Common Settings > Advanced Calibration Settings.
+* Seleccione xdrip no ConfigBuilder (configuração em AndroidAPS).
 
-_If using G5 with patched Dexcom G5 app_  
-
-
-* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose either the mg/dl or mmol/l version.
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
-* Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
-
-_If using G4 with OTG cable ('traditional' Nightscout)…_  
+_ se usar G5 com a app Dexcom G5 corrigida_  
 
 
-* If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* In AndroidAPS Preferences enter your nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* Descarregue o apk em <https://github.com/dexcomapp/dexcomapp>, e escolha ou a versão mg/dl ou mmol/l.
+* Pare o sensor e desinstale a app original Dexcom, se ainda não o fez.
+* Instale a apk que descarregou
+* Inicie sensor
+* Seleccione app DexcomG5 em ConfigBuilder ( configuração no AndroidAPS).
 
-**For users of Libre with Bluetooth cap:**  
-To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
+_Se usar G4 com cabo OTG ('tradicional' Nightscout)…_  
 
-* MiaoMiao-Reader <https://www.miaomiao.cool/>
-* Blukon Nightrider <https://www.ambrosiasys.com/howit>
+
+* Se ainda não tiver configurado, descarregue app uploader do Nightscout desde a playstore e siga as instruções em [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
+* Nas preferências de AndroiAps introduza o website nightscout e a API secreta.
+* Selccione NSClient em Configbuilder ( configuração em AndroidAPS).
+
+**Para utilizadores do Libre com Bluetooth:**  
+Para usar o seu Libre como CGM que recebe valores de glicémia cada 5 minutos tem primeiro de adquirir um adaptador de NFC a Bluetooth tais como:
+
+* MiaoMiao-leitor <https://www.miaomiao.cool/>
+* Blucon Nightrider <https://www.ambrosiasys.com/howit>
 * BlueReader <https://bluetoolz.de/blueorder/#home>
 * Sony Smartwatch 3 (SWR50) als Auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-_If using xdrip..._  
+_Se usar xdrip..._  
 
 
-* If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
-* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
-* For G5 native mode in xdrip go to Settings > Cloud upload > REST API > Extra options > Append source info to device and select ON.
+* Se ainda nao configurou descarregue app xdrip e siga as instruções em[LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
+* No xdrip ir a configurações > Interapp Compatibility > Broadcast Data Locally and select ON.
+* No xdrip ir a configurações> Interapp Compatibility > Accept Treatments e seleccionar OFF.
+* Se você quiser utilizar AndoidAPS para calibrar no xdrip seleccionar Settings > Interapp Compatibility > Accept Calibrations e seleccione ON. Também poderá querer rever as opções em Settings > Less Common Settings > Advanced Calibration Settings.
+* Seleccione xdrip no ConfigBuilder (configuração em AndroidAPS).
+* Para o modo nativo G5 no xdrip ir a configurações > Cloud upload > REST API > opções extra > informação de fonte para o dispositivo e seleccione ON.
 
-_If using Glimp..._  
-
-
-* If not already set up then download Glimp and follow instructions on [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
-* Select Glimp in ConfigBuilder (setting in AndroidAPS).
-
-**For users of MM640g or MM630g:**  
+_Se usa Glimp..._  
 
 
-* If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
-* In 600 Series Uploader go to Settings > Send to xdrip+ and select ON (tick).
-* Select MM640g in ConfigBuilder (setting in AndroidAPS).
+* Se ainda não o fez, descarregue app Glimp e siga as instruções em [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
+* Seleccione Glimp no ConfigBuilder (configuração em AndroidAPS).
 
-**For users of PocTech CT-100:**  
-
-
-* Install PocTech App
-* Select PocTech App in ConfigBuilder (setting in AndroidAPS).
-
-**For users of other CGM uploaded to nightscout:**  
-If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
+**Para utilizadores de MM640g or MM630g:**  
 
 
-* In AndroidAPS Preferences enter your nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* Se não configurou ainda, descarregue [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) e siga as instruções em [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
+* Na série 600 Uploader, vá a Configurações > Enviar para xdrip + e seleccione ON.
+* Seleccione MM640g no ConfigBuilder (configuração em AndroidAPS).
+
+**Para utilizadores de PocTech CT-100:**  
+
+
+* Instale app PocTech
+* Seleccione app PocTech no ConfigBuilder (configuração em AndroidAPS).
+
+**Para usuários de outro CGM com dados enviados para nightscout:**   
+se tiver qualquer outro CGM configurar para que envie os seus dados para [Nightscout](http://www.nightscout.info), depois  
+
+
+* Nas preferências de AndroiAps introduza o website nightscout e a API secreta.
+* Selccione NSClient em Configbuilder ( configuração em AndroidAPS).
