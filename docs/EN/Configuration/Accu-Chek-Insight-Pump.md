@@ -9,10 +9,11 @@ but allow yourself time to learn. You alone are responsible for what
 you do with it.**
 
 
-## Hardware requirements
+## Hardware & software requirements
 
 - A Roche Accu-Chek Insight (any firmware, they all work)
 - An Android phone
+- AndroidAPS (at least V 2.1)
 
 
 ## Setup
@@ -47,11 +48,11 @@ you do with it.**
 ## Settings in AAPS
 
 You can enable the following options in the Insight settings on AAPS:
-- "Log site changes": Automatic entry of insulin cartridge change when pump program "fill cannula" is started on the pump.<br><font color="red">Note: Cannula change resets Autosens!</b></font>
+- "Log site changes": Automatic entry of insulin cartridge change when pump program "fill cannula" is started on the pump.<br><font color="red">Note: Cannula change resets Autosens</b></font>
 - "Log tube changes": Note in AAPS database when "tube filling" program is started on the pump.
 - "Log battery changes": Automatic entry of pump battery change when new battery is inserted in the pump.
 - "Log operating mode changes": Note in AAPS database when pump is started, stopped or paused on the pump.
-- "Log alerts": Note in AAPS database when issues an alert.
+- "Log alerts": Note in AAPS database when is issueing an alert.
 - "Enable TBR emulation": As Insight can only issue TBR up to 250% this is important. With this setting a delayed bolus is issued instead of TBR in case more than 250% are needed.
 - "Recovery duration": Waiting period after failed connection attempts. Can be increased if connection problems occur. Select value between 0 and 20 seconds.
 - "Disconnect delay": Duration in seconds until the driver disconnects from pump after connection is no longer needed.
@@ -71,9 +72,9 @@ Configure pump alarms as follows:
 - Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 - Menu > Modes > Signal mode > Quiet
 
-As standards all alarms will be silent allowing AAPS to confirm if alarm is not relevant for the user. If alarms are not confirmed by AAPS volume will rise (first beep, then vibration).
+By default all alarms will be silent allowing AAPS to confirm if alarm is not relevant for the user. If alarms are not confirmed by AAPS volume will rise (first beep, then vibration).
 
-Insight pumps with newer firmware vibrate once bolus is delivered via a bluetooth device (i.e. AAPS issuing SMB or delayed bolus for TBR emulation). Vibration cannot be deactivated. Older pumps are not vibrating in this cases.
+Insight pumps with newer firmware vibrate once bolus is delivered via a bluetooth device (i.e. AAPS issuing SMB or delayed bolus for TBR emulation). Vibration cannot be deactivated. Older pumps are not vibrating in these cases.
 
 
 
