@@ -26,6 +26,15 @@ When get out of plane:
 
 ## Insight
 
+The driver automatically adjusts the time of the pump to the time of the phone.
+
+The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change. 
+
+It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+
+So the Insight user doesn't have to worry about timezone changes and time changes.
+
+
 # Time adjustment daylight savings time (DST)
 
 Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
