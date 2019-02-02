@@ -13,7 +13,7 @@ you do with it.**
 
 - A Roche Accu-Chek Insight (any firmware, they all work)
 - An Android phone
-- AndroidAPS (at least V 2.1)
+- AndroidAPS (at least v2.1)
 
 
 ## Setup
