@@ -1,7 +1,7 @@
 # BG bron
 
-**Voor gebruikers van de Dexcom**  
-  
+**For users of Dexcom:**  
+_If using G5 or G6 with xdrip+_  
 
 
 * Als het nog niet ingesteld is, download dan [xdrip](https://github.com/NightscoutFoundation/xDrip) en volg de instructies voor nightscout ([G4 zonder 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 met 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -10,7 +10,7 @@
 * Als je AndroidAPS wilt gebruiken om te kalibreren ga dan in xdrip naar Instellingen > Interapp settings > Accept Calibrations en selecteer OP. Je kunt ook de opties bekijken in Instellingen > Minder vaak voorkomende instellingen > Advanced Calibration Settings.
 * Selecteer xdrip in ConfigBuilder (instellingen in AndroidAPS).
 
-_Als G5 gebruikt wordt met patched Dexcom G5 app_  
+_If using G5 or G6 with patched Dexcom app_  
 
 
 * Download de apk van <https://github.com/dexcomapp/dexcomapp>, en kies de mg/dl of mmol/l versie.
@@ -18,6 +18,7 @@ _Als G5 gebruikt wordt met patched Dexcom G5 app_
 * Installeer de gedownloade apk
 * Start sensor
 * Selecteer Dexcom G5 App (patched) in ConfigBuilder (instelling in AndroidAPS).
+* Note: Some people are discovery problems with the patched Dexcom G6 app (app crashes directly after restart on the phone). You can use xdrip+ until this problem is solved for all users.
 
 _Als G4 met OTG kabel gebruikt wordt ('traditionele' Nightscout)... _  
 
