@@ -1,7 +1,7 @@
 # 혈당 소스
 
-**덱스콤 사용자:**  
-_xDrip+를 사용하는 경우_  
+**For users of Dexcom:**  
+_If using G5 or G6 with xdrip+_  
 
 
 * 만약 xDrip이 설치되지 않았다면 [xDrip](https://github.com/NightscoutFoundation/xDrip) 을 다운로드하고 나이트스카웃에서 해당 기기에 대한 지시를 따르세요([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -10,7 +10,7 @@ _xDrip+를 사용하는 경우_
 * AndroidAPS에서 보정하여 사용할수 있기를 원한다면 xDrip세팅>앱간 호환성 설정>Accept Calibrations을 ON 하세요. 세팅>추가 세팅>Advanced Calibration 설정에서 옵션사항들을 검토할 수 있습니다.
 * 구성관리자(AndroidAPS 셋팅)에서 xDrip을 선택하세요.
 
-_Dexcom G5 앱(패치버전)을 사용하는 경우_  
+_If using G5 or G6 with patched Dexcom app_  
 
 
 * <https://github.com/dexcomapp/dexcomapp>에서 apk를 다운로드하고, mg/dl이나 mmol/l 중 하나를 선택한다.
@@ -18,6 +18,7 @@ _Dexcom G5 앱(패치버전)을 사용하는 경우_
 * 다운로드된 apk를 설치한다.
 * 센서를 시작한다.
 * 구성관리자(AndroidAPS 세팅)에서 Dexcom G5 앱(패치버전)을 선택한다. 
+* Note: Some people are discovery problems with the patched Dexcom G6 app (app crashes directly after restart on the phone). You can use xdrip+ until this problem is solved for all users.
 
 _만약 OTG 케이블(전통적인 Nightscout)과 함께 G4를 선택한다면…_   
 
