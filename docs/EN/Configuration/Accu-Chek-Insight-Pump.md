@@ -1,79 +1,79 @@
-# Accu Chek Insight Pump
+# Accu-Chek Insight Pump
 
-**This software is part of a DIY solution and is not a product, but
+**This software is part of a DIY artificial pancreas solution and is not a product, but
 requires YOU to read, learn and understand the system including how to use it.
-It is not something that does all your diabetes management for you, but
-allows you to improve your diabetes and your quality of life 
+It is not something that does all your diabetes management for you but
+allows you to improve your diabetes and your quality of life, 
 if you're willing to put in the time required. Don't rush into it,
 but allow yourself time to learn. You alone are responsible for what
 you do with it.**
 
 
-## Hardware & software requirements
+## Hardware and software requirements
 
-- A Roche Accu-Chek Insight (any firmware, they all work)
+- A Roche Accu-Chek Insight pump (any firmware, they all work)
 - An Android phone
-- AndroidAPS (at least v2.1)
+- The AndroidAPS app (at least v2.1) installed on your phone
 
 
 ## Setup
 
-- In [Config builder](../Configuration/Config-Builder) select Accu-Chek Insight in the pump section
+- In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
 
    ![Screenshot of Config Builder Insight](../../images/Insight_ConfigBuilder.png)
 
-- Click the cog-wheel to open Insight settings.
-- In settings click button 'Insight pairing' on top of the screen. All bluetooth devices that are found will be displayed.
- - On the Insight pump go to Menu > Settings > Communication > Add Device. The following screen should be displayed on your pump.
+- Tap the cog-wheel to open Insight settings.
+- In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+ - On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
  
    ![Screenshot of Insight Pairing 1](../../images/Insight_Pairing1.png)
 
-- On your phone click on the correpsonding bluetooth device with the name shown on the pump display. After that confirm pairing on the phone.
+- Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm. 
 
    ![Screenshot of Insight Pairing 2](../../images/Insight_Pairing2.png)
 
-- Pump and phone should display a code. If this code is identical on both devices confirm on pump and phone.
+- Both the pump and and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
 
    ![Screenshot of Insight Pairing 3](../../images/Insight_Pairing3.png)
 
-- Successful pairing will be prompted on phone and pump.
+- Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
 
    ![Screenshot of Insight Pairing 4](../../images/Insight_Pairing4.png)
 
-- If you click "Insight pairing" in settings of the Insight pump on AAPS after pairing was successful some information about the pump will be displayed:
+- To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
 
    ![Screenshot of Insight Pairing Information](../../images/Insight_PairingInformation.png)
 
 
 ## Settings in AAPS
 
-You can enable the following options in the Insight settings on AAPS:
-- "Log site changes": Automatic entry of insulin cartridge change when pump program "fill cannula" is started on the pump.<br><font color="red">Note: Cannula change resets Autosens</b></font>
-- "Log tube changes": Note in AAPS database when "tube filling" program is started on the pump.
-- "Log battery changes": Automatic entry of pump battery change when new battery is inserted in the pump.
-- "Log operating mode changes": Note in AAPS database when pump is started, stopped or paused on the pump.
-- "Log alerts": Note in AAPS database when is issueing an alert.
-- "Enable TBR emulation": As Insight can only issue TBR up to 250% this is important. With this setting a delayed bolus is issued instead of TBR in case more than 250% are needed.
-- "Recovery duration": Waiting period after failed connection attempts. Can be increased if connection problems occur. Select value between 0 and 20 seconds.
-- "Disconnect delay": Duration in seconds until the driver disconnects from pump after connection is no longer needed.
+In the Insight settings in AndroidAPS you can enable the following options:
+- "Log site changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.<br><font color="red">Note: A cannula change also resets Autosens</b></font>
+- "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+- "Log battery changes": This records a battery change when you put a new battery in the pump.
+- "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+- "Log alerts": This records a note in the AndroidAPS database whenever the pump {yes?} issues an alert.
+- "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver a delayed bolus for the extra insulin if you request a TBR of more than 250%.
+- "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time. 
+- "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. {can you suggest appropriate duration?}
 
    ![Screenshot of Insight Settings](../../images/Insight_Settings.png)
    
-In status tab the following buttons are available:
-- "Refresh": refresh pump status
-- "Enable/Disable TBR over notification": As a standard Insight pump starts an alarm once a TBR is finished. This alarm can be activated / deactivated through this button without use of configuration software.
+In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+- "Refresh": Refreshes pump status
+- "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
 
    ![Screenshot of Insight Status](../../images/Insight_Status2.png)
 
-## Pump settings
+## Settings in the pump
 
-Configure pump alarms as follows:
+Configure alarms in the pump as follows:
 - Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 - Menu > Modes > Signal mode > Quiet
 
-By default all alarms will be silent allowing AAPS to confirm if alarm is not relevant for the user. If alarms are not confirmed by AAPS volume will rise (first beep, then vibration).
+This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-Insight pumps with newer firmware vibrate once bolus is delivered via a bluetooth device (i.e. AAPS issuing SMB or delayed bolus for TBR emulation). Vibration cannot be deactivated. Older pumps are not vibrating in these cases.
+Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers a delayed bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
 
 
 
