@@ -1,6 +1,6 @@
 # Screenshots
 
-## Home-scherm
+## Overzicht-scherm
 
 ![Overzicht-scherm](../images/Screenshot_Home_screen.png)
 
@@ -114,7 +114,7 @@ Hier kun je de geschiedenis terugkijken van behandelingen (bolussen en koolhydra
 
 Op deze plek kun je jouw systeem instellen. In dit screenshot bestaat het systeem uit een Combo pomp, een Dexcom G5 CGM die zijn waardes doorgeeft via xDrip+, de insuline is NovoRapid met een Oref profiel en alle gegevens worden geupload naar Nightscout.
 
-Als er in de kolom aan de rechterkant een vinkje staat, dan betekent dit dat die module wordt weergegeven als een tabje in de bovenste regel (zie sectie A in het screenshot met het Home-scherm). Tikken op het tandwiel-symbooltje aan de rechterkant brengt je naar een scherm met verdere instellingen voor die module, als die er zijn.
+Als er in de kolom aan de rechterkant een vinkje staat, dan betekent dit dat die module wordt weergegeven als een tabje in de bovenste regel (zie sectie A in het screenshot met het Overzicht-scherm). Tikken op het tandwiel-symbooltje aan de rechterkant brengt je naar een scherm met verdere instellingen voor die module, als die er zijn.
 
 ## Instellingen en voorkeuren
 
