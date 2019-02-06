@@ -52,10 +52,10 @@ In the Insight settings in AndroidAPS you can enable the following options:
 - "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
 - "Log battery changes": This records a battery change when you put a new battery in the pump.
 - "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
-- "Log alerts": This records a note in the AndroidAPS database whenever the pump {yes?} issues an alert.
+- "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert.
 - "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver a delayed bolus for the extra insulin if you request a TBR of more than 250%.
 - "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time. 
-- "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. {can you suggest appropriate duration?}
+- "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished.
 
    ![Screenshot of Insight Settings](../../images/Insight_Settings.png)
    
