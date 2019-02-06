@@ -1,7 +1,7 @@
 # BG source
 
-**Pro uživatele Dexcom:**   
-_pokud používáte G5 s aplikací xDrip+_  
+**For users of Dexcom:**  
+_If using G5 or G6 with xdrip+_  
 
 
 * Není-li xDrip již nastaven, pak stáhněte [xdrip](https://github.com/NightscoutFoundation/xDrip) a postupujte podle pokynů na Nightscoutu ([G4 bez share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 s share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -10,7 +10,7 @@ _pokud používáte G5 s aplikací xDrip+_
 * Pokud chcete aby AndroidAPS bylo schopné kalibrovat, tak v xdrip vyberte nastavení -> Inter-app settings -> Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v Xdrip nastavení položku -> méně časté nastavení -> Advanced Calibration.
 * Vyberte xdrip v ConfigBuilder (nastavení v AndroidAPS).
 
-Pokud pužíváte G5 s upravenou Dexcom aplikací  
+_If using G5 or G6 with patched Dexcom app_  
 
 
 * Stáhňete apk z <https://github.com/dexcomapp/dexcomapp> a zvolte verzi mg/dl nebo mmol/l.
@@ -18,6 +18,7 @@ Pokud pužíváte G5 s upravenou Dexcom aplikací
 * Nainstalujte stažený apk
 * Spusťte senzor
 * Vyberte aplikaci DexcomG5 (upravenou) v Konfiguraci.
+* Note: Some people are discovery problems with the patched Dexcom G6 app (app crashes directly after restart on the phone). You can use xdrip+ until this problem is solved for all users.
 
 _pokud používáte G4 s OTG kabelem ("tradiční" Nightscout) _  
 

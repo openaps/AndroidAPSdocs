@@ -1,6 +1,7 @@
 # BG source
 
-Para los usuarios de Dexcom Si usa xdrip+  
+**For users of Dexcom:**  
+_If using G5 or G6 with xdrip+_  
 
 
 * If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -9,7 +10,7 @@ Para los usuarios de Dexcom Si usa xdrip+
 * If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
 * Select xdrip in ConfigBuilder (setting in AndroidAPS).
 
-_If using G5 with patched Dexcom G5 app_  
+_If using G5 or G6 with patched Dexcom app_  
 
 
 * Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose either the mg/dl or mmol/l version.
@@ -17,6 +18,7 @@ _If using G5 with patched Dexcom G5 app_
 * Install downloaded apk
 * Start sensor
 * Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Note: Some people are discovery problems with the patched Dexcom G6 app (app crashes directly after restart on the phone). You can use xdrip+ until this problem is solved for all users.
 
 _If using G4 with OTG cable ('traditional' Nightscout)…_  
 

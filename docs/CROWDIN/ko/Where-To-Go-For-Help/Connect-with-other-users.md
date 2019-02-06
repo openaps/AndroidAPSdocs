@@ -37,3 +37,8 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 ### UK
 
 * [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+
+### Netherlands
+
+* [Looped-NL](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
+* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
