@@ -9,7 +9,7 @@ _If using G5 or G6 with xdrip+_<br>
 * Select xdrip in ConfigBuilder (setting in AndroidAPS).
 
 _If using G5 or G6 with patched Dexcom app_<Br>
-* Download the apk from [https://github.com/dexcomapp/dexcomapp](https://github.com/dexcomapp/dexcomapp), and choose either the mg/dl or mmol/l version.
+* Download the apk from [https://github.com/dexcomapp/dexcomapp](https://github.com/dexcomapp/dexcomapp), and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
 * Stop sensor and uninstall the original Dexcom app, if not already done.
 * Install downloaded apk
 * Start sensor
