@@ -13,12 +13,11 @@ _If using G5 or G6 with xdrip+_
 _If using G5 or G6 with patched Dexcom app_  
 
 
-* Descarregue o apk em <https://github.com/dexcomapp/dexcomapp>, e escolha ou a versão mg/dl ou mmol/l.
+* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
 * Pare o sensor e desinstale a app original Dexcom, se ainda não o fez.
 * Instale a apk que descarregou
 * Inicie sensor
 * Seleccione app DexcomG5 em ConfigBuilder ( configuração no AndroidAPS).
-* Note: Some people are discovery problems with the patched Dexcom G6 app (app crashes directly after restart on the phone). You can use xdrip+ until this problem is solved for all users.
 
 _Se usar G4 com cabo OTG ('tradicional' Nightscout)…_  
 
