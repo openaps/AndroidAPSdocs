@@ -14,7 +14,6 @@ _If using G5 or G6 with patched Dexcom app_<Br>
 * Install downloaded apk
 * Start sensor
 * Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
-* Note: Some people are discovery problems with the patched Dexcom G6 app (app crashes directly after restart on the phone). You can use xdrip+ until this problem is solved for all users.
 
 _If using G4 with OTG cable ('traditional' Nightscout)…_<br>
 * If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
