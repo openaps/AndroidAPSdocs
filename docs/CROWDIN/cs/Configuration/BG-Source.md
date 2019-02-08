@@ -13,12 +13,11 @@ _If using G5 or G6 with xdrip+_
 _If using G5 or G6 with patched Dexcom app_  
 
 
-* Stáhňete apk z <https://github.com/dexcomapp/dexcomapp> a zvolte verzi mg/dl nebo mmol/l.
+* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
 * Zastavte senzor a odinstalujte původní aplikaci Dexcom, pokud jste tak ještě neučinili.
 * Nainstalujte stažený apk
 * Spusťte senzor
 * Vyberte aplikaci DexcomG5 (upravenou) v Konfiguraci.
-* Note: Some people are discovery problems with the patched Dexcom G6 app (app crashes directly after restart on the phone). You can use xdrip+ until this problem is solved for all users.
 
 _pokud používáte G4 s OTG kabelem ("tradiční" Nightscout) _  
 
