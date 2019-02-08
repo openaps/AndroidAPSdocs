@@ -13,7 +13,7 @@ _G5 oder G6 mit xdrip+:_
 _G5 oder G6 mit der gepatchten Dexcom App_  
 
 
-* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
+* Lade die APK von [hier](https://github.com/dexcomapp/dexcomapp) herunter und wähle die Version, die Du benötigst (entweder mg/dl oder mmol/l, G5 oder G6).
 * Stoppe den Sensor und deinstalliere die originale Dexcom App, falls du das noch nicht gemacht hast.
 * Installiere die heruntergeladene apk
 * Starte den Sensor
