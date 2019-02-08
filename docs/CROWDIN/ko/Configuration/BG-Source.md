@@ -13,12 +13,11 @@ _If using G5 or G6 with xdrip+_
 _If using G5 or G6 with patched Dexcom app_  
 
 
-* <https://github.com/dexcomapp/dexcomapp>에서 apk를 다운로드하고, mg/dl이나 mmol/l 중 하나를 선택한다.
+* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
 * 센서를 스탑하고 이전에 하지 않았다면 오리지날 dexcom 앱을 삭제한다.
 * 다운로드된 apk를 설치한다.
 * 센서를 시작한다.
 * 구성관리자(AndroidAPS 세팅)에서 Dexcom G5 앱(패치버전)을 선택한다. 
-* Note: Some people are discovery problems with the patched Dexcom G6 app (app crashes directly after restart on the phone). You can use xdrip+ until this problem is solved for all users.
 
 _만약 OTG 케이블(전통적인 Nightscout)과 함께 G4를 선택한다면…_   
 
