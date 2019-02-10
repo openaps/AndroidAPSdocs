@@ -182,7 +182,7 @@ Signing means that you sign your generated app but in a digital way as a kind of
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
-In the following dialogue box select "APK" instead of "Bundle" and click button "Next".
+In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
 
 ![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
 
