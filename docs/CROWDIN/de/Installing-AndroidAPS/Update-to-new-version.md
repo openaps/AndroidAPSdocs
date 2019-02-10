@@ -31,7 +31,7 @@ Auf dem Reiter siehst du eine grüne Nachricht “updated project”.
 
 **Upload auf das Smartphone**
 
-Erstelle die APK wie unter [Building APK](Building-APK.md) beschrieben
+Generate signed apk as described in [Building APK (Generate signed APK)](Building-APK.html#generate-signed-apk)
 
 ## Entwickler-Version (dev branch)
 
