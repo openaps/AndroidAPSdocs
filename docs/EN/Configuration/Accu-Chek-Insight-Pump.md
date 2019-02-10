@@ -75,5 +75,11 @@ This will silence all alarms from the pump, allowing AndroidAPS to decide if an 
 
 Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers a delayed bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
 
+## Battery replacement
 
+The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skiped in calculation in AAPS as the correct time cannot be identified properly.
+
+## Timezone traveling with Insight pump
+
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
 
