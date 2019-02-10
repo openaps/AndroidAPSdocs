@@ -31,7 +31,7 @@ Auf dem Reiter siehst du eine grüne Nachricht “updated project”.
 
 **Upload auf das Smartphone**
 
-Generate signed apk as described in [Building APK (Generate signed APK)](Building-APK.html#generate-signed-apk)
+Erstelle die signierte APK wie unter [AndroidAPS installieren - App erstellen (Generate signed APK)](Building-APK.html#generate-signed-apk) beschrieben.
 
 ## Entwickler-Version (dev branch)
 
