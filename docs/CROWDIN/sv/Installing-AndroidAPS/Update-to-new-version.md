@@ -31,7 +31,7 @@ On the tray you'll see green message about updated project
 
 **Upload to phone**
 
-Generate signed apk as described in [Building APK](Building-APK.md)
+Generate signed apk as described in [Building APK (Generate signed APK)](Building-APK.html#generate-signed-apk)
 
 ## Development branch
 
