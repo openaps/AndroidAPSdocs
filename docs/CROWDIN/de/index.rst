@@ -99,7 +99,7 @@ AndroidAPS nutzen
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient-Problembehebung <./Usage/Troubleshooting-NSClient.md>
    Android Auto <./Usage/Android-auto.md>
-   Huawei Phones special configurations <./Usage/huawei.md>
+   Huawei Smartphones - spezielle Konfigurationseinstellungen<./Usage/huawei.md>
 
 Hilfe durch die Community 
 ------------
