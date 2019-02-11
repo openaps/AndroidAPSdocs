@@ -99,6 +99,7 @@ Použití
    AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Odstraňování potíží s NSClientem <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
+   Huawei Phones special configurations <./Usage/huawei.md>
 
 Kam pro pomoc 
 ------------
