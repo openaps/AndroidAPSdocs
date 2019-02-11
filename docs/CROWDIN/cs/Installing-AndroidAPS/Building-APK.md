@@ -175,7 +175,7 @@ Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
 
 ## Generate signed APK
 
-In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Adnroid Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
+In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
@@ -198,7 +198,7 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
   * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
   * The password fields below the key are for the key itself. As always to double check for typing errors.
   * You can let the validity at the default of 25 years.
-  * You only have to fill out firstname and lastname but feel free to complete the rest of information. Then click "OK".
+  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
