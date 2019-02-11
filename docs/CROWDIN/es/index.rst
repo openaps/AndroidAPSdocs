@@ -99,7 +99,7 @@ Uso
    Trucos para uso básico de Accu Check Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
-   Huawei Phones special configurations <./Usage/huawei.md>
+   Huawei phones special configuration <./Usage/huawei.md>
 
 Donde buscar ayuda 
 ------------
