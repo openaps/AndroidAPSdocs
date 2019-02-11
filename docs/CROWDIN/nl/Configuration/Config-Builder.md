@@ -124,7 +124,7 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 
 ## General
 
-### Overzicht
+### Overview
 
 Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 
@@ -137,7 +137,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 Define which Buttons are shown on the home screen.
 
 * Treatments
-* Boluscalculator
+* Calculator
 * Insulin
 * Carbs
 * CGM (opens xDrip+)

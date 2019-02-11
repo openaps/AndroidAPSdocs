@@ -24,7 +24,7 @@ Ten vierde moet je leren en **begrijpen hoe het algoritme is ontworpen om jouw b
 
 * Wanneer je in de toekomst de Android Wear app wilt gebruiken om vanaf een smartwatch te kunnen bolussen of instellingen te wijzigen, dan moet je instellen dat notificaties van AndroidAPS niet geblokkeerd worden. Bevestiging van opdrachten die je op je smartwatch invoert, komen namelijk via een notificatie binnen op je telefoon.
 
-* Als je de pomp wilt afkoppelen voor douchen/sporten etc, houd dan "Open-Loop" / "Closed Loop" tekst op het home-scherm ingedrukt en selecteer "verbreek verbinding ..min/u met pomp" voor hoelang je de pomp wilt afkoppelen. Hiermee zet je de basaal op nul voor de tijdsduur die je hebt gekozen. De minimale tijdsduur die je kunt kiezen komt door de minimale tijdsduur van TBRs die jouw pomp toestaat. Wanneer je een kortere tijd wilt kiezen, of je koppelt je pomp sneller aan dan je had gedacht, dan kun je "Verbinding verbroken (..m)" ingedrukt houden en "Hervatten" kiezen. Op deze manier zal jouw IOB correct berekend worden nadat je je pomp weer hebt aangekoppeld.
+* Als je de pomp wilt afkoppelen voor douchen/sporten etc, houd dan "Open-Loop" / "Closed Loop" tekst op het Overzicht-scherm ingedrukt en selecteer "verbreek verbinding ..min/u met pomp" voor hoelang je de pomp wilt afkoppelen. Hiermee zet je de basaal op nul voor de tijdsduur die je hebt gekozen. De minimale tijdsduur die je kunt kiezen komt door de minimale tijdsduur van TBRs die jouw pomp toestaat. Wanneer je een kortere tijd wilt kiezen, of je koppelt je pomp sneller aan dan je had gedacht, dan kun je "Verbinding verbroken (..m)" ingedrukt houden en "Hervatten" kiezen. Op deze manier zal jouw IOB correct berekend worden nadat je je pomp weer hebt aangekoppeld.
 
 * Uit veiligheidsoogpunt zal AAPS aanpassingen doen op basis van een gemiddelde glucosewaarde ('gemiddeld verschil'), nooit op basis van één enkele waarde. Daarom zal het even duren voordat de loop weer iets doet nadat je even geen glucosewaardes hebt ontvangen.
 
@@ -110,7 +110,7 @@ Bij loopen kan de pompbatterij sneller leegraken dan bij normaal gebruik, omdat 
 
 Wisselen van het reservoir kan niet worden gedaan via AndroidAPS maar rechtstreeks via de pomp, zoals beschreven in de handleiding van de pompfabrikant.
 
-* Houd "Open Loop" / "Closed Loop" op het home-scherm van AndroidAPS lang ingedrukt en selecteer 'Verbreek verbinding 1u met pomp'
+* Houd "Open Loop" / "Closed Loop" op het Overzicht-scherm van AndroidAPS lang ingedrukt en selecteer 'Verbreek verbinding 1u met pomp'
 * Koppel nu de pomp af en verwissel het reservoir volgens de instructies van de pompfabrikant.
 * Wanneer je daarmee klaar bent, koppel je de pomp weer aan en houd 'Verbinding verbroken (.. m)' lang ingedrukt. Selecteer 'Hervatten'.
 
@@ -120,7 +120,7 @@ Het 'Ontlucht/vul' scherm van AAPS gebruikt niet de functie van "prime infusie s
 
 ### Wat te doen tijdens het douchen?
 
-Je kunt de pomp afkoppelen bij het douchen. Voor deze korte tijd kun je meestal wel zonder je pomp. Maar je moet AAPS wel laten weten dat je de pomp loskoppelt, zodat de IOB berekeningen blijven kloppen. Op het home-scherm van AAPS houd "Open loop / Closed loop" lang ingedrukt. Selecteer **'Verbreek verbinding ...min/u met pomp'** afhankelijk van jouw behoefte. Nadat je je pomp weer hebt aangesloten, dan kun je in datzelfde menu op 'Hervatten' drukken. Of wachten totdat de door jou gekozen tijd is verstreken, de loop zal dan automatisch weer worden hervat.
+Je kunt de pomp afkoppelen bij het douchen. Voor deze korte tijd kun je meestal wel zonder je pomp. Maar je moet AAPS wel laten weten dat je de pomp loskoppelt, zodat de IOB berekeningen blijven kloppen. Op het Overzicht-scherm van AAPS houd "Open loop / Closed loop" lang ingedrukt. Selecteer **'Verbreek verbinding ...min/u met pomp'** afhankelijk van jouw behoefte. Nadat je je pomp weer hebt aangesloten, dan kun je in datzelfde menu op 'Hervatten' drukken. Of wachten totdat de door jou gekozen tijd is verstreken, de loop zal dan automatisch weer worden hervat.
 
 ## Werken
 
@@ -132,7 +132,7 @@ Afhankelijk van het soort werk dat je doet, kun je verschillende instellingen ki
 
 ## Sex
 
-Je kunt de pomp loskoppelen voor wat 'vrijheid', maar je moet AAPS wel vertellen dat je dat doet. Zodat jouw IOB juist wordt berekend. Op het home-scherm van AAPS houd "Open loop / Closed loop" lang ingedrukt. Selecteer **'Verbreek verbinding ...min/u met pomp'** afhankelijk van jouw behoefte. Nadat je je pomp weer hebt aangesloten, dan kun je in datzelfde menu op 'Hervatten' drukken. Of wachten totdat de door jou gekozen tijd is verstreken, de loop zal dan automatisch weer worden hervat.
+Je kunt de pomp loskoppelen voor wat 'vrijheid', maar je moet AAPS wel vertellen dat je dat doet. Zodat jouw IOB juist wordt berekend. Op het Overzicht-scherm van AAPS houd "Open loop / Closed loop" lang ingedrukt. Selecteer **'Verbreek verbinding ...min/u met pomp'** afhankelijk van jouw behoefte. Nadat je je pomp weer hebt aangesloten, dan kun je in datzelfde menu op 'Hervatten' drukken. Of wachten totdat de door jou gekozen tijd is verstreken, de loop zal dan automatisch weer worden hervat.
 
 ## Alcohol
 

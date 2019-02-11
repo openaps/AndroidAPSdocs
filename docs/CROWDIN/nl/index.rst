@@ -107,7 +107,7 @@ Waar je hulp kunt vinden
    :glob:
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
-   Help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
 .. toctree::
    :maxdepth: 1
