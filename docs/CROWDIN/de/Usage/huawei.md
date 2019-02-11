@@ -1,21 +1,21 @@
-How-to configure a Huawei phone
+Konfigurations-Einstellungen für Huawei Smartphones
 
-There are different options, some Android specific, some Huawei specific:
+Einige der nachfolgenden Optionen sind Android-spezisich, einige Huawei-spezifisch:
 
-* Add AAPS and XDRIP to apps list which ignore battery optimisations: 
-  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
-* Set battery option settings: 
-  * Settings / App / Select APPS/Xdrip / Under Battery / App launch 
-    * Make sure to remove "automatic management"
-    * Allow: 
-      * Automatic launch
-      * Launch from App
-      * Background run
+* Füge AndroidAPS und xdrip+ der Liste der Apps hinzu, die von der Akkuoptimierungen ausgenommen sind: 
+  * Einstellungen / App / Einstellungen / Spezielle Berechtigungen/ Akkuoptimierung ignorieren / Wählen Sie "Alle Anwendungen" / App auf erlaubt setzen
+* Batterieoptionen einstellen: 
+  * Einstellungen / App / Select AndroidAPS bzw. xdrip+ / Batterie / App starten 
+    * Stelle sicher, dass "Automatisches Management" deaktiviert ist.
+    * Zulassen: 
+      * Automatischer Start
+      * Start aus der App
+      * Hintergrundaktivität
 * Lock App 
-  * Go into App recent list and select the lock icon
+  * Rufe die Liste der letzten Apps auf und wähle das Schloss-Symbol
 
-For Xdrip, you can also enable persitent notifications:
+Für xdrip+ kannst Du außerdem noch laufende Benachrichtigungen (persisten notifications) auswählen. Wähle dazu die Einstellungen von xdrip, nicht des Smartphones:
 
-* Setttings / less common settings / other misc options / Run Collector in foreground
+* Einstellungen / Erweiterte Einstellungen / Andere verschiedene Einstellungen / Collector im Vordergrund ausführen
 
-Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
+Je nach genutzter Android-Version können die Einstellungen sich an anderer Stelle befinden. Diese Hinweise sind für Android 8.1.
