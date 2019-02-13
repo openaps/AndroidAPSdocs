@@ -15,9 +15,7 @@ Bei einem Profilwechsel kannst du zwei Optionen wählen, die früher Teil des Zi
 
 Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine sehr viel präzisere Berechnung der Vergangenheit und die Möglichkeit, Änderungen am Profil nachzuverfolgen.
 
-Bei einem Closed Loop ist es empfehlenswert, das automatische Updaten des Profils in der Pumpe zu aktivieren (in den Einstellungen). Das bedeutet, dass alle Updates, die du in deinem Profil machst, direkt auf die Pumpe übertragen werden. Das geschieht für den Fall eines Fehlers in AndroidAPS, beispielsweise wenn der Smartphone-Akku leer ist oder die Verbindung unterbrochen wird.
-
-<b>Fehlerbehebung bei Profil Fehlern</b>  
+<b>Troubleshooting Profile Errors</b>  
 
 
 * Die Fehlermeldung "Ungültiges Profil" oder "Basal Profil nicht ausgerichtet auf Stunden" wird angezeigt, wenn du eine Basalrate oder I:K Faktoren abseits der vollen Stunden hast. Die Pumpen DanaR und DanaRS lassen Änderungen zur halben Stunde nicht zu.
