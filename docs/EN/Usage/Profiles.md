@@ -14,7 +14,6 @@ Within the "profile switch" you can choose two changes which used to be part of 
 
 This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
 
-In closed loop mode is recommended to turn on automatic update of profile in pump (in settings), this will mean any updated you make to your profile will be copied locally to the pump in case of future failure of AndroidAPS like when the phone runs out of battery or the communication gets disrupted.
 
 <b>Troubleshooting Profile Errors</b><br>
 *  'Invalid profile' or 'Basal Profile not aligned to hours' error message will appear if you have any basal rates or I:C rates not on the hour.  The DanaR and DanaRS pumps do not support changes on the half hour.
