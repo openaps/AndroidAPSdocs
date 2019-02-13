@@ -78,7 +78,7 @@ AndroidAPS instellingen
    DanaRS pomp <./Configuration/DanaR-Insulin-Pump.md>
    Accu Chek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
    Smartwatch instellingen <./Configuration/Watchfaces.md>
-   Voorkeuren <./Configuration/Preferences.md>
+   Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>
    
 Gebruik
