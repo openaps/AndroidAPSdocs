@@ -88,7 +88,7 @@ Gebruik
    :glob:
     
    Doelen <./Usage/Objectives.md>
-   OpenAPS eigenschappen <./Usage/Open-APS-features.md>
+   OpenAPS functies <./Usage/Open-APS-features.md>
    Profiel wissel <./Usage/Profiles.md>
    Tijdelijk streefdoel <./Usage/temptarget.md>
    SMS Comando's <./Usage/SMS-Commands.md>
