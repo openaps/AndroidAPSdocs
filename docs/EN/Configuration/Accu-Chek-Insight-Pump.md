@@ -12,7 +12,7 @@ you do with it.**
 ## Hardware and software requirements
 
 - A Roche Accu-Chek Insight pump (any firmware, they all work)
-<br>   Note: AAPS will write data always in first basal rate profile in the pump
+<br>   Note: AAPS will write data always in <b>first basal rate profile in the pump</b>
 - An Android phone
 - The AndroidAPS app (at least v2.1) installed on your phone
 
@@ -48,6 +48,8 @@ you do with it.**
 
 ## Settings in AAPS
 
+   ![Screenshot of Insight Settings](../images/Insight_pairing.png)
+  
 In the Insight settings in AndroidAPS you can enable the following options:
 - "Log site changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.<br><font color="red">Note: A cannula change also resets Autosens</b></font>
 - "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
@@ -67,9 +69,7 @@ In the Insight settings in AndroidAPS you can enable the following options:
       <br>...
       
 - "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
-
-   ![Screenshot of Insight Settings](../../images/Insight_Settings.png)
-   
+ 
 In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 - "Refresh": Refreshes pump status
 - "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
