@@ -51,8 +51,8 @@ Aan de slag met AndroidAPS
    Insulinepompen <./Getting-Started/Pump-Choices.md>
    Mogelijk toekomstige insulinepompen <./Getting-Started/Future-possible-Pump-Drivers.md>
    Gebruiksvoorbeeld: Samsung S7, DanaR, Dexcom G5 en Sony Smartwatch <./Getting-Started/Sample-Setup.md>
-   Veelgestelde vragen
-   Veelgebruikte woordenlijst
+   Veelgestelde vragen <./Getting-Started/FAQ.md>
+   Veelgebruikte woordenlijst <./Getting-Started/Glossary.md>
   
 AndroidAPS installeren
 ------------
