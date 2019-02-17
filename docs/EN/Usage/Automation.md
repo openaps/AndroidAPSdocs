@@ -32,7 +32,7 @@ In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Adva
 
 ### Workflow examples
 
-#### If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
+#### Example 1: If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
 
 ![Automate HTTP request](../images/automate-app1.png)
 
@@ -40,14 +40,35 @@ In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Adva
 [http://www.sha1-online.com/](http://www.sha1-online.com/)
 
 #### If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes. 
-This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified high BG alert, then Automate will set a user specified low temprorary target for the user specified time. After time, another possibly alert will extend the duration of the low TT. 
+This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temprorary target for the user specified time. After time, another possibly alert will extend the duration of the low TT. 
+
+##### xDrip+
+First, you must add a BG high alert in xDrip+ as follows:
 
 ![xDrip+ alert settings](../images/automate-xdrip1.png)
 
+**Alert name:** (Pay attention on it!) This name is essential for fireing the trigger. It should be unmistakeable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
+
+**Threshold:** BG value that should fire the high alert.
+
+**Default Snooze:** Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
+
 ![xDrip+ alert settings](../images/automate-xdrip2.png)
 
+##### Automate
+Secondly, download the Automate script [https://llamalab.com/automate/community/flows/27809](https://llamalab.com/automate/community/flows/27809).
+
+Customize it according to your wishes as follows:
+
+![Automate sling](../images/automate-app1.png)
+
+**Request URL:** Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+
+**Request content:** targetTop = 
 
 [http://www.sha1-online.com/](http://www.sha1-online.com/)
+
+
 
 ## If this, then that (IFTTT)
 ...
