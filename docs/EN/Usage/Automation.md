@@ -15,6 +15,7 @@ You can download Android Automate at [https://llamalab.com/automate/](https://ll
 Until now it is necessary to loop via Nightscout Profile, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AndroidAPS app. **Offline looping (direct communication between Automate and AnroidAPS app) is not supported yet**, but technologically possible. Maybe there will be a solution in future.
 
 #### AndroidAPS
+![Nightscout connection preferences](../images/automate-aaps1.jpg)
 
 
 #### xDrip+
