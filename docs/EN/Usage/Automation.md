@@ -33,13 +33,31 @@ In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Adva
 ### Workflow examples
 
 #### Example 1: If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
+This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bycicle present, then Automate will set a user specified high temprorary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value. 
 
-![Automate HTTP request](../images/automate-app1.png)
+Download the Automate script [https://llamalab.com/automate/community/flows/27808](https://llamalab.com/automate/community/flows/27808).
+
+Edit the sling by tapping on the edit pencil > Flowchart
+
+![Automate sling](../images/automate-app3.png)
+
+Customize the workflow according to your wishes as follows:
+
+![Automate sling](../images/automate-app5.png)
+
+**Request URL:** Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+
+**Request content:** 
+* targetTop / targetBottom: The high TT value (top and bottom should be the same value)
+* duration: The duration of the high TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
+* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at [http://www.sha1-online.com/](http://www.sha1-online.com/)
+
+**Save:** Tap on 'Done' and on the hook
+
+**Start sling**: Tap on Play button
 
 
-[http://www.sha1-online.com/](http://www.sha1-online.com/)
-
-#### If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes. 
+#### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes. 
 This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temprorary target for the user specified time. After time, another possibly alert will extend the duration of the low TT. 
 
 ##### xDrip+
@@ -58,15 +76,24 @@ First, you must add a BG high alert in xDrip+ as follows:
 ##### Automate
 Secondly, download the Automate script [https://llamalab.com/automate/community/flows/27809](https://llamalab.com/automate/community/flows/27809).
 
-Customize it according to your wishes as follows:
+Edit the sling by tapping on the edit pencil > Flowchart
 
-![Automate sling](../images/automate-app1.png)
+![Automate sling](../images/automate-app3.png)
+
+Customize the workflow according to your wishes as follows:
+
+![Automate sling](../images/automate-app4.png)
 
 **Request URL:** Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-**Request content:** targetTop = 
+**Request content:** 
+* targetTop / targetBottom: The low TT value (top and bottom should be the same value)
+* duration: The duration of the low TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
+* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at [http://www.sha1-online.com/](http://www.sha1-online.com/)
 
-[http://www.sha1-online.com/](http://www.sha1-online.com/)
+**Save:** Tap on 'Done' and on the hook
+
+**Start sling**: Tap on Play button
 
 
 
