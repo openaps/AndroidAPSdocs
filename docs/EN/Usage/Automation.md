@@ -45,16 +45,20 @@ Customize the workflow according to your wishes as follows:
 
 ![Automate sling](../images/automate-app6.png)
 
-1. = HighTT
-2. = Back to normal target 20 minutes after the end of acitivity
+1. = Set high TT
+2. = Go back to normal target 20 minutes after the end of acitivity
 
+1.
+![Automate sling](../images/automate-app1.png)
+
+2.
 ![Automate sling](../images/automate-app5.png)
 
 Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
 Request content:
 * targetTop / targetBottom: The high TT value (top and bottom should be the same value)
-* duration: The duration of the high TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
+* duration: The duration of the high TT (after time it will fallback to regular profile target unless activity goes on). 
 * secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at [http://www.sha1-online.com/](http://www.sha1-online.com/)
 
 Save: Tap on 'Done' and on the hook
