@@ -24,7 +24,9 @@ Until now it is necessary to loop via Nightscout Profile, as Automate executes t
 
 ### Workflow examples
 
-#### If activity is detected, then set a high TT
+#### If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
+
+#### If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes. 
 
 
 ## If this, then that (IFTTT)
