@@ -90,6 +90,12 @@ Insight pumps with newer firmware will vibrate briefly every time a bolus is del
 
 The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
+## Insight specific errors
+
+Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+
+In this case turn off bluetooth on pump AND smartphone for a few seconds and then turn it back on.
+
 ## Crossing time zones with Insight pump
 
 For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
