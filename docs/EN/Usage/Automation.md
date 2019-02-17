@@ -18,16 +18,28 @@ Until now it is necessary to loop via Nightscout Profile, as Automate executes t
 
 ![Nightscout connection preferences](../images/automate-aaps1.jpg)
 
+![Nightscout download preferences](../images/automate-aaps2.jpg)
 
 #### xDrip+
+
+![xDrip+ alert settings](../images/automate-xdrip1.png)
+
+![xDrip+ alert settings](../images/automate-xdrip2.png)
 
 
 ### Workflow examples
 
 #### If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
 
+![Automate HTTP request](../images/automate-app1.üng)
+
+![Automate HTTP request](../images/automate-app1.png)
+
+[http://www.sha1-online.com/](http://www.sha1-online.com/)
+
 #### If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes. 
 
+[http://www.sha1-online.com/](http://www.sha1-online.com/)
 
 ## If this, then that (IFTTT)
 ...
