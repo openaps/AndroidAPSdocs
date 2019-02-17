@@ -43,18 +43,24 @@ Edit the sling by tapping on the edit pencil > Flowchart
 
 Customize the workflow according to your wishes as follows:
 
+![Automate sling](../images/automate-app6.png)
+
+1. = HighTT
+2. = Back to normal target 20 minutes after the end of acitivity
+
 ![Automate sling](../images/automate-app5.png)
 
-**Request URL:** Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-**Request content:** 
+Request content:
 * targetTop / targetBottom: The high TT value (top and bottom should be the same value)
 * duration: The duration of the high TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
 * secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at [http://www.sha1-online.com/](http://www.sha1-online.com/)
 
-**Save:** Tap on 'Done' and on the hook
+Save: Tap on 'Done' and on the hook
 
-**Start sling**: Tap on Play button
+Start sling: Tap on Play button
+
 
 
 #### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes. 
@@ -65,11 +71,11 @@ First, you must add a BG high alert in xDrip+ as follows:
 
 ![xDrip+ alert settings](../images/automate-xdrip1.png)
 
-**Alert name:** (Pay attention on it!) This name is essential for fireing the trigger. It should be unmistakeable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
+Alert name: (Pay attention on it!) This name is essential for fireing the trigger. It should be unmistakeable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
 
-**Threshold:** BG value that should fire the high alert.
+Threshold: BG value that should fire the high alert.
 
-**Default Snooze:** Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
+Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
 
 ![xDrip+ alert settings](../images/automate-xdrip2.png)
 
@@ -84,16 +90,22 @@ Customize the workflow according to your wishes as follows:
 
 ![Automate sling](../images/automate-app4.png)
 
-**Request URL:** Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-**Request content:** 
+Request content: 
 * targetTop / targetBottom: The low TT value (top and bottom should be the same value)
 * duration: The duration of the low TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
 * secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at [http://www.sha1-online.com/](http://www.sha1-online.com/)
 
-**Save:** Tap on 'Done' and on the hook
+Save: Tap on 'Done' and on the hook
 
-**Start sling**: Tap on Play button
+Start sling: Tap on Play button
+
+
+
+
+#### Example 3: To be added by you!!!
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSdocs repository](../make-a-PR.md).
 
 
 
