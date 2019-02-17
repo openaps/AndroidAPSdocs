@@ -94,7 +94,7 @@ The Insight pump has a small internal battery to keep essential functions like t
 
 Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
 
-In this case turn off bluetooth on pump AND smartphone for a few seconds and then turn it back on.
+In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
 
 ## Crossing time zones with Insight pump
 
