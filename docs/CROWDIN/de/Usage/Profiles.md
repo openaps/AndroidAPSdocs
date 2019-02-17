@@ -15,7 +15,7 @@ Bei einem Profilwechsel kannst du zwei Optionen wählen, die früher Teil des Zi
 
 Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine sehr viel präzisere Berechnung der Vergangenheit und die Möglichkeit, Änderungen am Profil nachzuverfolgen.
 
-<b>Troubleshooting Profile Errors</b>  
+<b>Fehlerbehebung bei Profil Fehlern</b>  
 
 
 * Die Fehlermeldung "Ungültiges Profil" oder "Basal Profil nicht ausgerichtet auf Stunden" wird angezeigt, wenn du eine Basalrate oder I:K Faktoren abseits der vollen Stunden hast. Die Pumpen DanaR und DanaRS lassen Änderungen zur halben Stunde nicht zu.
