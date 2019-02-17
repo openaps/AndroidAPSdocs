@@ -48,10 +48,10 @@ Customize the workflow according to your wishes as follows:
 1. = Set high TT
 2. = Go back to normal target 20 minutes after the end of acitivity
 
-**1**
+1
 ![Automate sling](../images/automate-app1.png)
 
-**2**
+2
 ![Automate sling](../images/automate-app5.png)
 
 Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
