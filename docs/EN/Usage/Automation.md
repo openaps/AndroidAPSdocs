@@ -92,6 +92,11 @@ Edit the sling by tapping on the edit pencil > Flowchart
 
 Customize the workflow according to your wishes as follows:
 
+Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name. 
+
+![Automate sling](../images/automate-app7.png)
+
+
 ![Automate sling](../images/automate-app4.png)
 
 Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
