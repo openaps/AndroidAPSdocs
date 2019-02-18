@@ -203,11 +203,11 @@ Klik op "Create new..." (maak nieuwe...) om jouw eigen key store (digitale handt
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Vul de informatie in van jouw handtekening die je zojuist hebt aangemaakt in het volgende venster en klik op "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
 
 * 'Release' is wat je hoort te kiezen als "Build Type", 'Debug' is alleen voor programmeurs, om fouten op te sporen.
 * Kies de "Flavour" die je wilt bouwen: 
@@ -218,7 +218,7 @@ Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
-In the event log you see that the Signed APK was generated successfully.
+In het Event Log kun je zien dat de Signed APK (ondertekende APK) succesvol is gebouwd.
 
 ![Screenshot 45](../images/Installation_Screenshot_45.png)
 
