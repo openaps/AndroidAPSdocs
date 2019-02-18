@@ -69,7 +69,9 @@ In the Insight settings in AndroidAPS you can enable the following options:
       <br>...
       
 - "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
- 
+
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+
 In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 - "Refresh": Refreshes pump status
 - "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
@@ -93,6 +95,8 @@ The Insight pump has a small internal battery to keep essential functions like t
 ## Insight specific errors
 
 Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+
+![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
 In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
 
