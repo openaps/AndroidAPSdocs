@@ -32,7 +32,7 @@ De belangrijkste stappen voor het bouwen van het APK bestand zijn:
 
 Gedetailleerde beschrijving van de verschillende stappen.
 
-## Install Android Studio
+## Installeer Git + Android Studio
 
 * Git installeren 
   * [Windows](https://gitforwindows.org/)
@@ -77,7 +77,7 @@ Wanneer hij klaar is met downloaden, klik op "Finish" (afronden).
 
 * Gefeliciteerd! Je hebt nu Android Studio succesvol geïnstalleerd en je kunt beginnen met het klonen van de broncode. Misschien is het even tijd voor pauze?
 
-## Download code and additional components
+## Code en extra componenten downloaden
 
 * Gebruik Git clone in Android Studio zoals in onderstaande screenshots te zien is. Selecteer “Check out project from Version Control” en kies “Git” als versie controle systeem.
 
@@ -174,22 +174,22 @@ Mooi, je hebt nu jouw eerste app "Build finished" (bouw afgerond). Maar we zijn 
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
-## Generate signed APK
+## Bouwen van de ondertekende APK
 
-In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
+Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In oudere versies selecteert je in het menu "Build" en vervolgens "Generate Signed APK...”.)  
+Ondertekenen betekent dat je de door jou gemaakte app ondertekent. Dit is een soort digitale vingerafdruk in de app zelf. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
-In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
+In het volgende dialoogvenster selecteer je "APK" in plaats van "Android App Bundle" en klik op "Volgende".
 
 ![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
 
-Select "app" and click "Next".
+Selecteer "App" en klik op "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Klik op "Create new..." (maak nieuwe...) om jouw eigen key store (digitale handtekening) te maken. Een key store is een bestandje waarin de informatie van jouw handtekening is opgeslagen. Het bestandje is versleuteld en beveiligd met een wachtwoord. We raden aan om het op te slaan in jouw eigen map op je computer en om het wachtwoord goed te onthouden. Maar mocht je het bestandje of jouw wachtwoord kwijtraken dan is dat geen groot probleem, je moet dan gewoon een nieuwe maken. Het is goed om deze informatie zorgvuldig te bewaren.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -199,7 +199,7 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
   * Alias is de naam voor jouw handtekening. Je kunt de vooraf ingevulde tekst laten staan, of zelf een naam kiezen die je leuk vindt.
   * Ook hier moet je weer tweemaal een door jou gekozen wachtwoord invullen. Ook weer tweemaal, om op typfouten te controleren.
   * Je kunt de Validity (geldigheidsduur) op de standaardwaarde van 25 jaar laten staan.
-  * You only have to fill out first name and last name but feel free to complete the rest of information. Klik daarna op "OK".
+  * Je hoeft alleen je First and Last Name (voor- en achternaam) in te vullen, de rest is optioneel. Klik daarna op "OK".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
@@ -246,4 +246,4 @@ Select "Allow from this source". After the installation, you can disable it agai
 
 The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
 
-Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met het instellen van AndroidAPS.
