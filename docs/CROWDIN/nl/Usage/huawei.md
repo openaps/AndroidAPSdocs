@@ -1,28 +1,28 @@
-# How-to configure a Huawei phone
+# Een Huawei telefoon instellen
 
-There are different options, some Android specific, some Huawei specific:
+Er zijn verschillende opties, sommige Android specifiek, sommige Huawei specifiek:
 
-* Add AndroidAPS and xdrip+ to apps list which ignore battery optimisations:
+* Voeg AndroidAPS en xdrip+ toe aan de lijst van apps die accuoptimalisatie negeren:
   
-  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+  * Instellingen / App / Instellingen / Speciale toestemmingen / Batterij optimalisering negeren / Selecteer "Alle toepassingen" / Stel app in op toestaan
 
-* Set battery option settings:
+* Pas de batterij-instellingen aan:
   
-  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch 
-    * Make sure to remove "automatic management"
-    * Allow: 
-      * Automatic launch
-      * Launch from App
-      * Background run
+  * Instellingen / App / Selecteer AndroidAPS/xDrip+ / onder Batterij / App launch 
+    * Zorg ervoor dat "automatisch beheer" verwijderd is
+    * Toestaan: 
+      * Automatisch starten
+      * Start vanuit app
+      * Op achtergrond uitvoeren
 
-* Lock App
+* App vergrendelen
   
-  * Go into App recent list and select the lock icon
+  * Ga naar lijst van recente apps en selecteer het vergrendelingspictogram
 
-For xdrip+, you can also enable persitent notifications (within xdrip+ app):
+Voor xDrip+, kun je ook de 'hardnekkige melding' optie inschakelen (in xDrip+ app):
 
-* Setttings / less common settings / other misc options / Run Collector in foreground
+* Instellingen / minder vaak voorkomende instellingen / other misc options / Run Collector op voorgrond
 
-![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
+![xdrip+ instellingen - collector in voorgrond](../images/xdrip_collector_foreground.png)
 
-Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
+Afhankelijk van jouw Android versie, staan deze instellingen ergens anders. Deze instellingen gelden voor Android 8.1.
