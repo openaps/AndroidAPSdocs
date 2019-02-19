@@ -99,7 +99,7 @@ Gebruik
    Accu Chek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Problemen met NSClient oplossen <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
-   Huawei phones special configuration <./Usage/huawei.md>
+   Huawei telefoons specifieke instellingen <./Usage/huawei.md>
 
 Waar je hulp kunt vinden 
 ------------
