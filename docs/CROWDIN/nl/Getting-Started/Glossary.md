@@ -84,7 +84,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>basaalstand</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -100,7 +100,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Closed Loop</td>
+ <td>Closed loop</td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
@@ -244,9 +244,9 @@
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
- <td>Open Loop</td>
+ <td>Open loop</td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>Closed loop</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
@@ -268,13 +268,13 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
- <td>Profile</td>
+ <td>Profiel</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
- <td>Profile switch</td>
+ <td>Profiel wissel</td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
@@ -348,7 +348,7 @@
 <tr>
  <td>Virtual pump</td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Open loop</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
