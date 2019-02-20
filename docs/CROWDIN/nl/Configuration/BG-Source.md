@@ -1,7 +1,7 @@
 # BG bron
 
-**For users of Dexcom:**  
-_If using G5 or G6 with xdrip+_  
+**Voor gebruikers van Dexcom:**  
+_Als je G5 of G6 gebruikt met xdrip+_  
 
 
 * Als het nog niet ingesteld is, download dan [xdrip](https://github.com/NightscoutFoundation/xDrip) en volg de instructies voor nightscout ([G4 zonder 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 met 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -10,10 +10,10 @@ _If using G5 or G6 with xdrip+_
 * Als je AndroidAPS wilt gebruiken om te kalibreren ga dan in xdrip naar Instellingen > Interapp settings > Accept Calibrations en selecteer OP. Je kunt ook de opties bekijken in Instellingen > Minder vaak voorkomende instellingen > Advanced Calibration Settings.
 * Selecteer xdrip in ConfigBuilder (instellingen in AndroidAPS).
 
-_If using G5 or G6 with patched Dexcom app_  
+_Als je G5 of G6 gebruikt met de aangepaste Dexcom app_  
 
 
-* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
+* Download de apk van <https://github.com/dexcomapp/dexcomapp>, en kies de versie die je nodig hebt (mg/dl of mmol/l versie, voor G5 of G6).
 * Stop sensor en verwijder de originele Dexcom app, als dat nog niet gedaan is.
 * Installeer de gedownloade apk
 * Start sensor
