@@ -232,7 +232,7 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td>Doelen</td>
+ <td>Objectives</td>
  <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
@@ -246,7 +246,7 @@
 <tr>
  <td>Open loop</td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed loop</td>
+ <td>Closed Loop</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
