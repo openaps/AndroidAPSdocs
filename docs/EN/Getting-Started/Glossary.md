@@ -40,7 +40,7 @@
 <tr>
  <td>Azure</td>
  <td>cloud computing platform to host Nightscout data</td>
- <td>Heroko / Nightscout</td>
+ <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
@@ -71,7 +71,7 @@
  <td>Blukon Nightreader</td>
  <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
  <td>BlueReader / MiaoMiao</td>
- <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Bluon Nightreader</a></td>
+ <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
 <tr>
  <td>BR</td>
