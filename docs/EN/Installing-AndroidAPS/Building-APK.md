@@ -102,7 +102,8 @@ Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Now is a good time to restart Android Studio.
+* We are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
