@@ -1,7 +1,7 @@
-# BG source
+# Origem da Glicemia
 
-**For users of Dexcom:**  
-_If using G5 or G6 with xdrip+_  
+**Para utilizadores de Dexcom:**   
+_se usar G5 ou G6 com xdrip + _  
 
 
 * Se não estiver já instalado faça download [xdrip](https://github.com/NightscoutFoundation/xDrip) e siga as instruções do nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -10,10 +10,10 @@ _If using G5 or G6 with xdrip+_
 * Se você quiser utilizar AndoidAPS para calibrar no xdrip seleccionar Settings > Interapp Compatibility > Accept Calibrations e seleccione ON. Também poderá querer rever as opções em Settings > Less Common Settings > Advanced Calibration Settings.
 * Seleccione xdrip no ConfigBuilder (configuração em AndroidAPS).
 
-_If using G5 or G6 with patched Dexcom app_  
+_ se usar G5 ou G6 com a app Dexcom corrigida_  
 
 
-* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
+* Descarregar o apk em <https://github.com/dexcomapp/dexcomapp>, e escolher a versão que serve as suas necessidades ( a versão mg/dl ou mmol/l, G5 ou G6).
 * Pare o sensor e desinstale a app original Dexcom, se ainda não o fez.
 * Instale a apk que descarregou
 * Inicie sensor
