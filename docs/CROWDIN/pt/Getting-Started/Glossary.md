@@ -65,7 +65,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td>BG source</td>
+<td>Origem da Glicemia</td>
  <td>Where do your glucose values come from?</td>
  <td>CGM / FGM</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
@@ -268,7 +268,7 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
- <td>Profile</td>
+ <td>Perfil</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
