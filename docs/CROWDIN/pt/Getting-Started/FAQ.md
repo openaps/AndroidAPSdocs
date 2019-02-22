@@ -1,16 +1,16 @@
 # FAQ for loopers
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+Como adicionar perguntas para o FAQ: Siga essas [instruções](../make-a-PR.md)
 
-## General
+## Geral
 
-### How to begin?
+### Como começar?
 
 First of all, you have to **get loopable hardware components**:
 
-* A [supported insulin pump](Pump-Choices.md), 
-* an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
+* Uma [bomba de insulina suportada](Pump-Choices.md), 
+* um [smartphone Android](Phones.md) (O Apple iOS não é suportado pelo AndroidAPS - pode verificar [iOS Loop](https://loopkit.github.io/loopdocs/)) e 
+* um [sistema contínuo de monitorização de glucose ](../Configuration/BG-Source.md). 
 
 Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
@@ -57,7 +57,7 @@ You can fix it: There are getting sold upper arm braclets that fix the CGM/FGM w
 
 ![AMA 3h](../../images/Screenshot_AMA3h.png) In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
 
-### Profile
+### Perfil
 
 #### Why using min. 5h DIA (insulin end time) instead of 2-3h?
 
