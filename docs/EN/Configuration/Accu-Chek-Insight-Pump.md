@@ -45,6 +45,7 @@ you do with it.**
 
    ![Screenshot of Insight Pairing Information](../../images/Insight_PairingInformation.png)
 
+Note: There will be no permanent connection between pump and phone. A connection will only be established if neccessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## Settings in AAPS
 
