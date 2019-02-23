@@ -87,7 +87,7 @@ In NSClient check 'Connection settings'. Maybe you actually are not in an allowe
 
 If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS openAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
-## Pump
+## Bomba
 
 ### Where to place the pump?
 
