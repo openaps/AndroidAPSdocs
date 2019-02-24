@@ -4,25 +4,33 @@ Er zijn verschillende opties, sommige Android specifiek, sommige Huawei specifie
 
 * Voeg AndroidAPS en xdrip+ toe aan de lijst van apps die accuoptimalisatie negeren:
   
-  * Instellingen / App / Instellingen / Speciale toestemmingen / Batterij optimalisering negeren / Selecteer "Alle toepassingen" / Stel app in op toestaan
+  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+    
+    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
 
 * Pas de batterij-instellingen aan:
   
-  * Instellingen / App / Selecteer AndroidAPS/xDrip+ / onder Batterij / App launch 
+  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
+    
     * Zorg ervoor dat "automatisch beheer" verwijderd is
-    * Toestaan: 
+    * Allow:
+      
       * Automatisch starten
-      * Start vanuit app
-      * Op achtergrond uitvoeren
+      * Secondary launch (can be launched from other apps)
+      * Background run
+        
+        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
 
 * App vergrendelen
   
-  * Ga naar lijst van recente apps en selecteer het vergrendelingspictogram
+  * Go into App recent list and select the lock icon
+    
+    ![Huawei - lock app](../images/Huawei_LockApp.png)
 
 Voor xDrip+, kun je ook de 'hardnekkige melding' optie inschakelen (in xDrip+ app):
 
-* Instellingen / minder vaak voorkomende instellingen / other misc options / Run Collector op voorgrond
+* Setttings / less common settings / other misc options / Run Collector in foreground
+  
+  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
 
-![xdrip+ instellingen - collector in voorgrond](../images/xdrip_collector_foreground.png)
-
-Afhankelijk van jouw Android versie, staan deze instellingen ergens anders. Deze instellingen gelden voor Android 8.1.
+Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
