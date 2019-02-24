@@ -49,7 +49,7 @@
 <tr>
  <td>Azure</td>
  <td>Cloud Computing-Plattform zum Hosten der Nightscout-Daten</td>
- <td>Heroku / Nightscout</td>
+ <td>Heroko / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
