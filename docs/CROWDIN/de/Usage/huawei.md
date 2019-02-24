@@ -4,25 +4,33 @@ Einige der nachfolgenden Optionen sind Android-spezifisch, einige Huawei-spezifi
 
 * Füge AndroidAPS und xdrip+ der Liste der Apps hinzu, die von der Akkuoptimierungen ausgenommen sind:
   
-  * Einstellungen / App / Einstellungen / Spezielle Berechtigungen/ Akkuoptimierung ignorieren / Wählen Sie "Alle Anwendungen" / App auf erlaubt setzen
+  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+    
+    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
 
 * Batterieoptionen einstellen:
   
-  * Einstellungen / App / Select AndroidAPS bzw. xdrip+ / Batterie / App starten 
+  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
+    
     * Stelle sicher, dass "Automatisches Management" deaktiviert ist.
-    * Zulassen: 
+    * Allow:
+      
       * Automatischer Start
-      * Start aus der App
-      * Hintergrundaktivität
+      * Secondary launch (can be launched from other apps)
+      * Background run
+        
+        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
 
 * App sperren
   
-  * Rufe die Liste der letzten Apps auf und wähle das Schloss-Symbol
+  * Go into App recent list and select the lock icon
+    
+    ![Huawei - lock app](../images/Huawei_LockApp.png)
 
 Für xdrip+ kannst Du außerdem noch laufende Benachrichtigungen (persistent notifications) in den xdrip-Einstellungen auswählen. 
 
-* Einstellungen / Erweiterte Einstellungen / Andere verschiedene Einstellungen / Collector im Vordergrund ausführen
+* Setttings / less common settings / other misc options / Run Collector in foreground
+  
+  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
 
-![xdrip+ Einstellungen - Collector im Vordergrund](../images/xdrip_collector_foreground.png)
-
-Je nach genutzter Android-Version können die Einstellungen sich an anderer Stelle befinden. Diese Hinweise sind für Android 8.1.
+Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
