@@ -50,21 +50,24 @@ _Als xdrip gebruikt wordt..._
 * Als nog niet is ingesteld dan download Glimp en volg de instructies voor [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
 * Selecteer Glimp in ConfigBuilder (instellingen in AndroidAPS).
 
-**Voor gebruikers van de MM640g of MM630g:**  
+**For users of Eversense:**  
+The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (and unistall the original one first). Warning: by uninstalling the old app, your local historical data older than one week will be lost! To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the Configuration Builder in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple data". You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
+
+**For users of MM640g or MM630g:**  
 
 
 * Als nog niet is ingesteld dan download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) en volg de instructies voor [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
 * In 600 Series Uploader ga naar Instellingen > Send to xdrip+ en selecteer ON (vinkje).
 * Selecteer MM640g in ConfigBuilder (Instelling AndroidAPS).
 
-**Voor de gebruikers van PocTech CT-100:**  
+**For users of PocTech CT-100:**  
 
 
 * Installeer PocTech App
 * Selecteer PocTech App in ConfigBuilder (instelling in AndroidAPS).
 
-**Voor gebruikers van andere CGM, die naar Nightscout wordt opgeladen:**  
-Als je een andere CGM hebt die de data naar [Nightscout](http://www.nightscout.info) stuurt;  
+**For users of other CGM uploaded to nightscout:**  
+If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
 
 
 * In AndroidAPS Preferences geef je Nighscout website en API code.
