@@ -2,7 +2,7 @@
 
 AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
 
-If you are **upgrading phones** then you can export your settings to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
+If you are **upgrading phones** then you can [export your settings](../Usage/Objectives.md#export-import-settings) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
 
 * **Objective 1:** Setting up visualization and monitoring, and analysing basals and ratios 
   * Select the right blood glucose source for your setup. See [BG Source](../Configuration/BG-Source.md) for more information.
@@ -50,12 +50,17 @@ If you are **upgrading phones** then you can export your settings to keep your p
 
 ## Export & import settings
 
-* **Export settings** on your old phone 
+* **Export settings** on your old phone
+  
   * Hamburger menu (top left corner of screen)
   * Maintenance
   * Export settings
   * File location will be shown
+    
+    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+
 * **Transfer** settings from old to new phone using the file location shown during export
+
 * **Install AndroidAPS** on the new phone.
 * **Import settings** on your new phone 
   * Hamburger menu (top left corner of screen)
