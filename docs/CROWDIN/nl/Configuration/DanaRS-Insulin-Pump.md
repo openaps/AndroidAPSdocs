@@ -44,15 +44,15 @@ In het geval dat de verbinding tussen AAPS en DanaRS wordt verbroken tijdens het
 
 Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende stappen:
 
-* **Export settings** on your old phone
+* **Exporteer instellingen** op je oude telefoon
   
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
   * Exporteer instellingen
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![Exporteer AAPS instellingen](../images/AAPS_ExportSettings.png)
 
-* **Transfer** settings from old to new phone
+* Instellingen **overzetten** van oude naar nieuwe telefoon
 
 * **Handmatig koppelen** van de DanaRS met je nieuwe telefoon 
   * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Daarom moeten nieuwe telefoon en pomp handmatig gekoppeld worden.
