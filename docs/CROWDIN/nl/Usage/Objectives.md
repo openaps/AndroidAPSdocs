@@ -14,7 +14,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
   * Selecteer Open-Loop vanuit het Instellingen-menu of door de Loop-knop linksbovenin het Overzicht-scherm ingedrukt te houden.
   * Stel alle [Instellingen](../Configuration/Preferences.md) in.
   * Voer minstens 20 tijdelijke basaalstanden in over een periode van 7 dagen; voer ze handmatig in op jouw pomp en bevestig in AndroidAPS dat je ze hebt geaccepteerd. Controleer dat deze gegevens zichtbaar zijn in AndroidAPS en Nightscout.
-  * Stel een [Tijdelijk Streefdoel](../Usage/temptarget.html) in indien nodig. Gebruik bijvoorbeeld een tijdelijk hypo streefdoel om te voorkomen dat het systeem te sterk corrigeert voor een stijgende bloedsuiker na een hypo. <br />&nbsp;  
+  * Enable [temp targets](../Usage/temptarget.md) if necessary. Gebruik bijvoorbeeld een tijdelijk hypo streefdoel om te voorkomen dat het systeem te sterk corrigeert voor een stijgende bloedsuiker na een hypo. <br />&nbsp;  
      
 * **Doel 3:** De Open Loop begrijpen, inclusief de voorgestelde tijdelijke basaalstanden 
   * Leer de reden achter een suggestie voor tijdelijke basaalstand kennen. Kijk naar de [Basaalstanden begrijpen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) en naar de voorspelling in de glucosegrafiek van het AndroidAPS Overzichts-scherm of Nightscout, en naar de berekening in je OpenAPS tab.   
