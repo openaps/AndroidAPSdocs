@@ -2,7 +2,7 @@
 
 AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, damit du an die Funktionen und Einstellungen von sicherem Looping herangeführt wirst. Sie stellen sicher, dass du alles, was in den Abschnitten weiter oben beschrieben wurde, korrekt installiert hast und dass du verstehst, was das System tut und warum du ihm vertrauen kannst.
 
-Wenn du das **Smartphone wechselst** kannst du die Einstellungen exportieren, um deinen Fortschritt bei den Objectives beibehalten zu können. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen. Es ist ratsam, die Einstellungen zur Sicherheit regelmäßig zu speichern. Details zum Export findest du weiter unten auf dieser Seite.  
+If you are **upgrading phones** then you can [export your settings](../Usage/Objectives.md#export-import-settings) to keep your progress through the objectives. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen. Es ist ratsam, die Einstellungen zur Sicherheit regelmäßig zu speichern. Details zum Export findest du weiter unten auf dieser Seite.  
 
 * **Ziel 1:** Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren 
   * Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert. Weitere Informationen findest du unter [BZ-Quelle](../Configuration/BG-Source.md).
@@ -50,12 +50,17 @@ Wenn du das **Smartphone wechselst** kannst du die Einstellungen exportieren, um
 
 ## Einstellungen exportieren & importieren
 
-* **Exportiere die Einstellungen** auf deinem alten Smartphone 
+* **Export settings** on your old phone
+  
   * Hamburger Menü (drei Striche oben links am Bildschirm)
   * Wartung
   * Exportiere die Einstellungen
-  * Der Speicherort der Datei wird angezeigt.
-* **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
+  * File location will be shown
+    
+    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+
+* **Transfer** settings from old to new phone using the file location shown during export
+
 * **Installiere AndroidAPS** auf dem neuen Smartphone.
 * **Importiere die Einstellungen** auf Deinem neuen Smartphone 
   * Hamburger Menü (drei Striche oben links am Bildschirm)
