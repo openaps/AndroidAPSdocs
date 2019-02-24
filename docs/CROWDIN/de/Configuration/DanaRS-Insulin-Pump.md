@@ -44,15 +44,15 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
-* **Export settings** on your old phone
+* **Exportiere die Einstellungen** auf Deinem alten Smartphone
   
   * Hamburger Menü (drei Striche oben links am Bildschirm)
   * Wartung
   * Exportiere die Einstellungen
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![AAPS Einstellungen exportieren](../images/AAPS_ExportSettings.png)
 
-* **Transfer** settings from old to new phone
+* **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
 
 * **Verbinde** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
   * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
