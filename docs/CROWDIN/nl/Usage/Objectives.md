@@ -2,7 +2,7 @@
 
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen. De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 
-Wanneer je **een andere telefoon gaat gebruiken** dan kun je je instellingen exporteren. Daarmee wordt ook jouw voortgang van je leerdoelen geëxporteerd. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
+If you are **upgrading phones** then you can [export your settings](../Usage/Objectives.md#export-import-settings) to keep your progress through the objectives. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
 
 * **Doel 1:** Instellen van visualisatie en monitoring en analyseren van basaal en ratio's 
   * Selecteer de bloedglucose bron die jij gebruikt. Zie [BG bron](../Configuration/BG-Source.md) voor meer informatie.
@@ -50,12 +50,17 @@ Wanneer je **een andere telefoon gaat gebruiken** dan kun je je instellingen exp
 
 ## Instellingen exporteren & importeren
 
-* **Instellingen exporteren** van je oude telefoon 
+* **Export settings** on your old phone
+  
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
   * Exporteer instellingen
-  * Je ziet nu de locatie waar jouw instellingenbestand zal worden opgeslagen
-* **Instellingen overdragen** van je oude naar je nieuwe telefoon doe je door de bestandslocatie op je oude telefoon op te zoeken, en het instellingenbestand te kopiëren naar jouw nieuwe telefoon. Bijvoorbeeld via Bluetooth, email, of met een usb-kabeltje via je computer.
+  * File location will be shown
+    
+    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+
+* **Transfer** settings from old to new phone using the file location shown during export
+
 * **Installeer AndroidAPS** op je nieuwe telefoon.
 * **Instellingen importeren** op je nieuwe telefoon 
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
