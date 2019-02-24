@@ -9,9 +9,15 @@
 * Klik op het wieltje achter DanaRS. Je komt nu in de instellingen.
 
 * Selecteer 'Koppel nieuwe pomp' en klik op het serienummer van jouw DanaRS.
+  
+      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      
 
 * Selecteer 'Pomp wachtwoord' en voer jouw wachtwoord in. (Standaardwachtwoord is 1234)   
   **Je moet de koppeling op de pomp bevestigen!** Net zoals bij andere bluetooth-apparaten (bijv. smartphone en autoradio).
+  
+      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      
 
 * Selecteer 'Bolus snelheid' om de standaardsnelheid te wijzigen die de pomp gebruikt bij een bolus (12sec per Eenheid, 30sec per Eenheid of 60sec per Eenheid).
 
@@ -38,11 +44,16 @@ In het geval dat de verbinding tussen AAPS en DanaRS wordt verbroken tijdens het
 
 Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende stappen:
 
-* **Exporteer instellingen** op je oude telefoon 
+* **Export settings** on your old phone
+  
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
   * Exporteer instellingen
-* Instellingen **overzetten** van oude naar nieuwe telefoon
+    
+    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+
+* **Transfer** settings from old to new phone
+
 * **Handmatig koppelen** van de DanaRS met je nieuwe telefoon 
   * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Daarom moeten nieuwe telefoon en pomp handmatig gekoppeld worden.
 * **Installeer AndroidAPS** op je nieuwe telefoon.
