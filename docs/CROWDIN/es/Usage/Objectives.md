@@ -14,7 +14,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
   * Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
   * Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
   * Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them. Ensure this data shows in AndroidAPS and Nightscout.
-  * Enable [temp targets](../Usage/temptarget.html) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. <br />&nbsp;  
+  * Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. <br />&nbsp;  
      
 * **Objective 3:** Understanding your open loop, including its temp basal recommendations 
   * Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the forecast line in AndroidAPS homescreen/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.   
