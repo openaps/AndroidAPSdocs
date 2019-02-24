@@ -2,7 +2,7 @@
 
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen. De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 
-If you are **upgrading phones** then you can [export your settings](../Usage/Objectives.md#export-import-settings) to keep your progress through the objectives. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
+Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exporteren](../Usage/Objectives.md#export-import-settings) om je voortgang door de doelstellingen te behouden. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
 
 * **Doel 1:** Instellen van visualisatie en monitoring en analyseren van basaal en ratio's 
   * Selecteer de bloedglucose bron die jij gebruikt. Zie [BG bron](../Configuration/BG-Source.md) voor meer informatie.
@@ -50,14 +50,14 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 
 ## Instellingen exporteren & importeren
 
-* **Export settings** on your old phone
+* **Exporteer instellingen** op je oude telefoon
   
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
   * Exporteer instellingen
   * File location will be shown
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![Exporteer AAPS instellingen](../images/AAPS_ExportSettings.png)
 
 * **Transfer** settings from old to new phone using the file location shown during export
 
