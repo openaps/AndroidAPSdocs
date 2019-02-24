@@ -14,7 +14,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
   * Wähle Open Loop entweder in den Einstellungen oder indem du lange auf den Loop Button in der linken oberen Ecke des Hauptbildschirms drückst.
   * Arbeite dich zur Einrichtung durch die [Voreinstellungen](../Configuration/Preferences.md).
   * Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der temporären Basalratenanpassungen; gib sie jeweils von Hand in der Pumpe ein und bestätige in AndroidAPS, dass du sie akzeptiert hast. Überprüfe, ob diese Daten in AndroidAPS und Nightscout angezeigt werden.
-  * Aktiviere falls notwendig[temp targets](../Usage/temptarget.html) (temporäre Ziele). Nutze das Hypo Temp Target um zu verhindern, dass AAPS aufgrund des Blutzuckeranstiegs nach einer Hypo zu stark korrigiert. <br />&nbsp;  
+  * Enable [temp targets](../Usage/temptarget.md) if necessary. Nutze das Hypo Temp Target um zu verhindern, dass AAPS aufgrund des Blutzuckeranstiegs nach einer Hypo zu stark korrigiert. <br />&nbsp;  
      
 * **Ziel 3:** Verstehe den Open Loop und die TBR-Empfehlungen 
   * Lerne das Konzept hinter den Basalratenvorschlägen kennen, indem du dir [Basalraten verstehen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) durchliest sowie die Vorhersagelinie auf dem AndroidAPS Hauptbildschirm und die Zusammenfassung der Ausgaben von den Berechnungen in deinem OpenAPS Tab anschaust.   
