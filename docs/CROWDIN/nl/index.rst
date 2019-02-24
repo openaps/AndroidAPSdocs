@@ -100,6 +100,7 @@ Gebruik
    Problemen met NSClient oplossen <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
    Huawei telefoons specifieke instellingen <./Usage/huawei.md>
+   Automation <./Usage/Automation.md>
 
 Waar je hulp kunt vinden 
 ------------
