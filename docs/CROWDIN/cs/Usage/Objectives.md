@@ -14,7 +14,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
   * Vyberte Otevřenou smyčku z nastavení, nebo stisknutím a držením tlačítka Smyčka v levém horním rohu hlavní stránky.
   * Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
   * Ručně nařiďte alespoň 20 dočasných bazálních dávek, které vám systém navrhuje, a to během 7 dní; zadejte je do své pumpy a potvrďte v AndroidAPS, že jste návrhy přijali. Ujistěte se, že se tyto údaje zobrazí v AndroidAPS a Nightscoutu.
-  * Enable [temp targets](../Usage/temptarget.html) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. <br />&nbsp;  
+  * Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. <br />&nbsp;  
      
 * **Objective 3:** Understanding your open loop, including its temp basal recommendations 
   * Začněte chápat úvahy, které se skrývají za doporučeními bazálních dávek, tím, že si projdete [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) a budete sledovat graf předpovědí na AndroidAPS základní stránce/v Nightscoutu. Také si v aplikaci procházejte výstupy z výpočtů na záložce OpenAPS.   
