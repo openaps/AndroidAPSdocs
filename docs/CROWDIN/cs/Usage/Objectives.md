@@ -10,8 +10,8 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
   * Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data. <br />&nbsp;  
     _You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it._ <br />&nbsp;  
      
-* **Cíl 2:** Začínáme na otevřené smyčce 
-  * Vyberte Otevřenou smyčku z nastavení, nebo stisknutím a držením tlačítka Smyčka v levém horním rohu hlavní stránky.
+* **Cíl 2:** Spuštění otevřené smyčky 
+  * Vyberte možnost Otevřená smyčka buď v Nastavení, nebo stisknutím a podržením tlačítka Smyčka v levém horním rohu hlavní obrazovky.
   * Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
   * Ručně nařiďte alespoň 20 dočasných bazálních dávek, které vám systém navrhuje, a to během 7 dní; zadejte je do své pumpy a potvrďte v AndroidAPS, že jste návrhy přijali. Ujistěte se, že se tyto údaje zobrazí v AndroidAPS a Nightscoutu.
   * Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. <br />&nbsp;  
