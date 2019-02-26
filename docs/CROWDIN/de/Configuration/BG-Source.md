@@ -1,7 +1,9 @@
 # BZ-Quelle
 
-**Für Dexcom Nutzer**  
-_G5 oder G6 mit xdrip+:_  
+## For users of Dexcom  
+
+
+### If using G5 or G6 with xdrip+  
 
 
 * Lade [xdrip](https://github.com/NightscoutFoundation/xDrip) herunter und folge der Anleitung auf Nightscout ([G4 ohne share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -10,7 +12,7 @@ _G5 oder G6 mit xdrip+:_
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 
-_G5 oder G6 mit der gepatchten Dexcom App_  
+### If using G5 or G6 with patched Dexcom app  
 
 
 * Lade die APK von [hier](https://github.com/dexcomapp/dexcomapp) herunter und wähle die Version, die Du benötigst (entweder mg/dl oder mmol/l, G5 oder G6).
@@ -19,22 +21,24 @@ _G5 oder G6 mit der gepatchten Dexcom App_
 * Starte den Sensor
 * Wähle Dexcom G5 (patched) im Konfigurations-Generator (Einstellung in AndroidAPS).
 
-_G4 mit OTG Kabel ("traditionelles Nightscout")..._  
+### If using G4 with OTG cable ('traditional' Nightscout)…  
 
 
 * Downloade die Nightscout Uploader app vom Play Store und folge den Einstellungen auf Nightscout [hier](http://www.nightscout.info/wiki/welcome/basic-requirements).
 * Gib in den AndroidAPS Einstellungen > Nightscout-Client deine Nightscout URL und dein Nightscout API-Key ein.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Nightscout-Client BZ.
 
-**Libre mit Bluetooth-Aufsatz**  
-Um dein Libre als CGM zu verwenden, das alle 5 Minuten Glukosewerte empfängt, musst du zuerst einen NFC-zu-Bluetooth Adapter kaufen, z.B.:
+## For users of Libre with Bluetooth cap  
+
+
+To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
 
 * MiaoMiao-Reader <https://www.miaomiao.cool/>
 * Blukon Nightrider <https://www.ambrosiasys.com/howit>
 * BlueReader <https://bluetoolz.de/blueorder/#home>
 * Sony Smartwatch 3 (SWR50) als Auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-_Mit xdrip+_  
+### If using xdrip...  
 
 
 * Lade xDrip+ herunter und folge den Anleitungen von [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) oder [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
@@ -44,30 +48,38 @@ _Mit xdrip+_
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 * Beim G5 native mode in xdrip gehe zu Einstellungen > Cloud-Upload > API Upload (REST) > Extra Options und hake "Append source info to device" an.
 
-_Mit Glimp:_  
+### If using Glimp...  
 
 
 * Downloade über das Google Play Store die App Glimp und folge der Anleitung auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
 * Wähle Glimp im Konfigurations-Generator (Einstellung in AndroidAPS).
 
-**Für Eversense Nutzer**  
-Der einfachste Weg, um Eversense mit AndroidAPS zu nutzen, ist die modifizierte [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) zu installieren (und zuvor die Original-Eversense-App zu deinstallieren). Warnung: Durch die Deinstallation der alten App, werden Deine lokalen historischen Daten (älter als eine Woche) verloren gehen! Um die Eversense-Daten in AndroidAPS nutzen zu können, musst Du die App [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) installieren und dort "Send to AAPS and xDrip" aktivieren. Im Konfigurations-Generator in AndroidAPS wählst Du "MM640g" als BZ-Quelle. Da die Glukose-Daten von Eversense manchmal schwankend ("noisy") sein können, sollte in ESEL "Smooth Data" aktiviert werden. Das ist besser als die Option "Always use short average delta instead of simple data" zu wählen. Weitere Hinweise zur Nutzung von xDrip mit Eversense findest Du [hier](https://github.com/BernhardRo/Esel/tree/master/apk).
+## For users of Eversense  
 
-**Für Nutzer von MM640g oder MM630g**  
+
+The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (and unistall the original one first).
+
+**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+
+To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple data".
+
+You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
+
+## For users of MM640g or MM630g  
 
 
 * Lade [600SeriesAndroidUploader](http://pazaan.github.io/600SeriesAndroidUploader/) herunter und folge den Anleitungen auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
 * Im 600 Series Uploader gehe zu Settings > Send to xdrip+ und wähle ON (ankreuzen).
 * Wähle MM640g im Konfigurations-Generator (Einstellung in AndroidAPS).
 
-**Für PocTech CT-100 Nutzer**  
+## For users of PocTech CT-100  
 
 
 * Installiere die PocTech App
 * Wähle PocTech App im Konfigurations-Generator (Einstellung in AndroidAPS).
 
-**Für Nutzer anderer CGM Systeme, deren Daten zu Nightscout hochgeladen werden**  
-Wenn Du ein anderes CGM-System nutzt und Deine Daten zu [Nightscout](http://www.nightscout.info) hochlädst, dann  
+**For users of other CGM uploaded to nightscout:**  
+If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
 
 
 * Gib in den AndroidAPS Einstellungen > Nightscout-Client deine Nightscout URL und dein Nightscout API-Key ein.
