@@ -14,7 +14,7 @@
       
 
 * Selecteer 'Pomp wachtwoord' en voer jouw wachtwoord in. (Standaardwachtwoord is 1234)   
-  **Je moet de koppeling op de pomp bevestigen!** Net zoals bij andere bluetooth-apparaten (bijv. smartphone en autoradio).
+  **Je moet de koppeling bevestigen dmv de OK knop op de pomp** Net zoals bij andere bluetooth-apparaten (bijv. smartphone en autoradio).
   
       ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
       
