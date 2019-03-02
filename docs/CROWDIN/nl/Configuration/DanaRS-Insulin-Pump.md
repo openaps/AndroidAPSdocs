@@ -33,7 +33,7 @@
 
 In het geval dat de verbinding tussen AAPS en DanaRS wordt verbroken tijdens het toedienen van een bolus (d.w.z. als je wegloop van je telefoon terwijl DanaRS bezig is insuline te geven) dan zul je het volgende bericht zien en een alarmgeluid horen.
 
-![Alarm insuline levering](../images/DanaRS_Error_bolus.png)
+![Alarm insuline toediening](../images/DanaRS_Error_bolus.png)
 
 * In de meeste gevallen krijg je deze foutmelding omdat de communicatie werd verbroken, en is gewoon de juiste hoeveelheid insuline gegeven.
 * Controleer in de geschiedenis van je pomp (op de pomp zelf, of in de app op het Dana tabblad > Historiek > Bolussen > VERNIEUW) of de juiste bolus werd gegeven.
@@ -62,6 +62,6 @@ Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende 
   * Onderhoud
   * Importeer instellingen
 
-## Timezone traveling with Dana RS pump
+## Wisselen van tijdzone met de DanaRS
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+Voor informatie over het wisselen van tijdzone zie sectie [Wisselen van tijdzone](../Usage/Timezone-traveling.md#insight).
