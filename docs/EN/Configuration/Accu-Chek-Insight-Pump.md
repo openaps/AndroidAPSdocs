@@ -8,6 +8,12 @@ if you're willing to put in the time required. Don't rush into it,
 but allow yourself time to learn. You alone are responsible for what
 you do with it.**
 
+---
+***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to version 2.1** and **uninstall SightRemote**.*
+---
+
+
+
 
 ## Hardware and software requirements
 
