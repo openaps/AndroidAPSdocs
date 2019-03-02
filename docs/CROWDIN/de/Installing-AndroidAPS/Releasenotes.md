@@ -6,14 +6,14 @@ Release date: 03-03-2019
 
 ### Wichtige neue Funktionen
 
-* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support
-* Status lights on main screen
-* Daylight saving time helper
-* Fix processing profile names comming from NS
-* Fix UI blocking
-* Support for updated G5 app
-* G6, Poctech, Tomato, Eversense BG source support
-* Fixed disabling SMB from preferences
+* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
+* Status lights on main screen (Nico Schmitz)
+* Daylight saving time helper (Roumen Georgiev)
+* Fix processing profile names comming from NS (Johannes Mockenhaupt)
+* Fix UI blocking (Johannes Mockenhaupt)
+* Support for updated G5 app (Tebbe Ubben and Milos Kozak)
+* G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
+* Fixed disabling SMB from preferences (Johannes Mockenhaupt)
 
 ### Misc
 
