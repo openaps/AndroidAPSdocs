@@ -19,3 +19,7 @@
 * In Instellingen onder DanaR pomp instellingen kun je de standaard bolus snelheid wijzigen (12sec per 1E, 30sec per 1E of 60sec per 1E).
 * Zet de stapgrootte voor basaal op 0,01 E/uur
 * Activeer vertraagde bolussen op de pomp
+
+## Timezone traveling with Dana R pump
+
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
