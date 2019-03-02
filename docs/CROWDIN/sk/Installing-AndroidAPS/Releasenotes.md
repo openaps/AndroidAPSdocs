@@ -1,5 +1,18 @@
 # Release notes
 
+## Version 2.1
+
+Release date: coming soon
+
+### Major new features
+
+* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support
+* ...
+
+### Misc
+
+* ...
+
 ## Version 2.0
 
 Release date: 03-11-2018
