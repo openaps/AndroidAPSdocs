@@ -20,7 +20,7 @@ De SMB-functie heeft een aantal veiligheidsmaatregelen:
 
 **Je moet [Doel 8](../Usage/Objectives.md) hebben afgerond om SMB te kunnen gebruiken.**
 
-Zie ook [OpenAPS documentatie over oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)
+Zie ook: [OpenAPS documentatie voor oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) en [Tim's info over SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Maximale E/uur dat OpenAPS kan toedienen (OpenAPS "max-basal")
 

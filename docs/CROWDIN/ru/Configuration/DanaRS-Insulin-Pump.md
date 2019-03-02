@@ -9,9 +9,15 @@
 * Select Menu by tapping the 3 dots in the top right. Select Preferences.
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
+  
+      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      
 
 * Select Pump password and input your password. (Default password is 1234)   
   **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+  
+      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      
 
 * Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
@@ -38,11 +44,16 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 When switching to a new phone the following steps are neccessary:
 
-* **Export settings** on your old phone 
+* **Export settings** on your old phone
+  
   * Hamburger menu (top left corner of screen)
   * Maintenance
   * Export settings
+    
+    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+
 * **Transfer** settings from old to new phone
+
 * **Manually pair** Dana RS with the new phone 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * **Install AndroidAPS** on the new phone.

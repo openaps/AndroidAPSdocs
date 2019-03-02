@@ -1,7 +1,9 @@
 # BG bron
 
-**For users of Dexcom:**  
-_If using G5 or G6 with xdrip+_  
+## Voor Dexcom gebruikers  
+
+
+### Dexcom G5 of G6 met xDrip+  
 
 
 * Als het nog niet ingesteld is, download dan [xdrip](https://github.com/NightscoutFoundation/xDrip) en volg de instructies voor nightscout ([G4 zonder 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 met 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -10,31 +12,33 @@ _If using G5 or G6 with xdrip+_
 * Als je AndroidAPS wilt gebruiken om te kalibreren ga dan in xdrip naar Instellingen > Interapp settings > Accept Calibrations en selecteer OP. Je kunt ook de opties bekijken in Instellingen > Minder vaak voorkomende instellingen > Advanced Calibration Settings.
 * Selecteer xdrip in ConfigBuilder (instellingen in AndroidAPS).
 
-_If using G5 or G6 with patched Dexcom app_  
+### Dexcom G5 of G6 met de aangepaste Dexcom app  
 
 
-* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
+* Download de apk van <https://github.com/dexcomapp/dexcomapp>, en kies de versie die je nodig hebt (mg/dl of mmol/l versie, voor G5 of G6).
 * Stop sensor en verwijder de originele Dexcom app, als dat nog niet gedaan is.
 * Installeer de gedownloade apk
 * Start sensor
 * Selecteer Dexcom G5 App (patched) in ConfigBuilder (instelling in AndroidAPS).
 
-_Als G4 met OTG kabel gebruikt wordt ('traditionele' Nightscout)... _  
+### Dexcom G4 met OTG kabel ('traditionele' Nightscout)  
 
 
 * Als dit nog niet is ingesteld download dan Nightscout Uploader app vanuit de Play Store en volg de instructies op [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
 * In AndroidAPS Preferences geef je Nighscout website en API code.
 * Selecteer NSClient in ConfigBuilder (setting in AndroidAPS).
 
-**Voor het gebruik van de Libre met Bluetooth cap:**  
-Voor het gebruik van de Libre als CGM dan zijn nieuwe BG waardes van elke 5 minuten noodzakelijk. Je zult eerst een NFC Bluetooth adapter moeten kopen zoals:
+## Voor Libre gebruikers met Bluetooth-adapter  
+
+
+Om je Libre te gebruiken als een CGM die elke 5 minuten nieuwe BG waarden krijgt, moet je eerst een NFC naar Bluetooth adapter kopen, zoals:
 
 * MiaoMiao-Reader <https://www.miaomiao.cool/>
 * Blukon Nightrider <https://www.ambrosiasys.com/howit>
 * BlueReader <https://bluetoolz.de/blueorder/#home>
 * Sony Smartwatch 3 (SWR50) als Auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-_Als xdrip gebruikt wordt..._  
+### Libre met xDrip+  
 
 
 * Als nog niet is ingesteld dan download xdrip en volg de instructies op: [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
@@ -44,27 +48,38 @@ _Als xdrip gebruikt wordt..._
 * Selecteer xdrip in ConfigBuilder (instellingen in AndroidAPS).
 * Voor G5 native-mode in xDrip, ga naar Instellingen > Cloud Upload >> REST API > Extra options > Append source info to device en selecteer ON.
 
-_Als xdrip gebruikt wordt..._  
+### Libre met Glimp  
 
 
 * Als nog niet is ingesteld dan download Glimp en volg de instructies voor [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
 * Selecteer Glimp in ConfigBuilder (instellingen in AndroidAPS).
 
-**Voor gebruikers van de MM640g of MM630g:**  
+## Voor Eversense gebruikers  
+
+
+De makkelijkste manier om de Eversense te gebruiken met AndroidAPS is om de aangepaste [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) te installeren (en de originele app eerst te verwijderen).
+
+**Waarschuwing: door de oude app te verwijderen zullen jouw lokaal opgeslagen (glucose)gegevens ouder dan een week, ook worden verwijderd!**
+
+Om jouw gegevens vervolgens in AndroidAPS te krijgen, moet je [ESEL installeren](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) en "Send to AAPS and xDrip" (Stuur naar AAPS en xDrip) in ESEL aanzetten. Ook moet je "MM640g" kiezen als BG bron in de [Configuratie Builder](../Configuration/Config-Builder.md) in AndroidAPS. Aangezien de BG-gegevens van Eversense soms veel 'ruis' kunnen hebben, is het goed om "Smooth Data" (gegevens vloeiend maken) in ESEL in te schakelen. Dit heeft de voorkeur boven "Gebruik altijd korte gemiddeld verschil ipv gewone verschil" inschakelen in AAPS.
+
+Een andere instructie voor het gebruik van xDrip+ met Eversense vind je [hier](https://github.com/BernhardRo/Esel/tree/master/apk).
+
+## Voor MM640g of MM630g gebruikers  
 
 
 * Als nog niet is ingesteld dan download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) en volg de instructies voor [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
 * In 600 Series Uploader ga naar Instellingen > Send to xdrip+ en selecteer ON (vinkje).
 * Selecteer MM640g in ConfigBuilder (Instelling AndroidAPS).
 
-**Voor de gebruikers van PocTech CT-100:**  
+## Voor PocTech CT-100 gebruikers  
 
 
 * Installeer PocTech App
 * Selecteer PocTech App in ConfigBuilder (instelling in AndroidAPS).
 
-**Voor gebruikers van andere CGM, die naar Nightscout wordt opgeladen:**  
-Als je een andere CGM hebt die de data naar [Nightscout](http://www.nightscout.info) stuurt;  
+**Voor gebruikers van een andere CGM die uploadt naar Nightscout:**   
+Wanneer je een CGM gebruikt die hierboven niet is genoemd, en jouw CGM je glucosegegevens naar [Nightscout](http://www.nightscout.info) uploadt  
 
 
 * In AndroidAPS Preferences geef je Nighscout website en API code.

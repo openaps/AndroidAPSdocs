@@ -80,7 +80,7 @@
  <td>Blukon Nightreader</td>
  <td>Bluetooth-Sender, um das Freestyle Libre als CGM zu verwenden</td>
  <td>BlueReader / MiaoMiao</td>
- <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Bluon Nightreader</a></td>
+ <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
 <tr>
  <td>BR</td>

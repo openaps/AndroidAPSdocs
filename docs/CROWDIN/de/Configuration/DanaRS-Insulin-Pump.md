@@ -9,9 +9,15 @@
 * Klicke auf die drei Punkte rechts oben, um das Menü zu öffnen. Klicke auf Einstellungen.
 
 * Klicke im Abschnitt "DanaRS" auf "Verbinde neue Pumpe" und gib die Seriennummer (Unterseite der Pumpe gegenüber dem Reservoir- und Batteriedeckel) deiner DanaRS ein.
+  
+      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      
 
 * Wähle "Pumpen-Passwort" und gib das Passwort ein. (Das Standardpasswort ist 1234.)   
   ** Du musst das Pairing auf der Pumpe bestätigen!** Genau so wie Du es von anderen Bluetooth Verbindungen (z.B. Smartphone und Auto-Multimediasystem) kennst.
+  
+      ![Dana RS Pairing Bestätigung](../images/DanaRS_Pairing.png)
+      
 
 * Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
 
@@ -38,11 +44,16 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
-* **Exportiere die Einstellungen** auf deinem alten Smartphone 
+* **Exportiere die Einstellungen** auf Deinem alten Smartphone
+  
   * Hamburger Menü (drei Striche oben links am Bildschirm)
   * Wartung
-  * Einstellungen exportieren
+  * Exportiere die Einstellungen
+    
+    ![AAPS Einstellungen exportieren](../images/AAPS_ExportSettings.png)
+
 * **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
+
 * **Verbinde** die Dana RS und das neue Smartphone manuell (Bluetooth-Verbindung) 
   * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
 * **Installiere AndroidAPS** auf dem neuen Smartphone.

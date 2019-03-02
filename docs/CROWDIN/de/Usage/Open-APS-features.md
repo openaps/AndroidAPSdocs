@@ -20,7 +20,7 @@ Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen:
 
 **Du musst das [Ziel 8](../Usage/Objectives.md) abgeschlossen haben, um SMB verwenden zu können.**
 
-Siehe auch: [OpenAPS-Dokumentation zu oref1 SMB (englisch)](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)
+Siehe dazu auch (beides in Englisch): [OpenAPS Dokumentation zu oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) und [Tim's Info zu SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Max IE/h, die als TBR gesetzt werden können (OpenAPS “max-basal”)
 

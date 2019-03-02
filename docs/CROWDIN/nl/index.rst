@@ -51,8 +51,8 @@ Aan de slag met AndroidAPS
    Insulinepompen <./Getting-Started/Pump-Choices.md>
    Mogelijk toekomstige insulinepompen <./Getting-Started/Future-possible-Pump-Drivers.md>
    Gebruiksvoorbeeld: Samsung S7, DanaR, Dexcom G5 en Sony Smartwatch <./Getting-Started/Sample-Setup.md>
-   Veelgestelde vragen
-   Veelgebruikte woordenlijst
+   Veelgestelde vragen <./Getting-Started/FAQ.md>
+   Veelgebruikte woordenlijst <./Getting-Started/Glossary.md>
   
 AndroidAPS installeren
 ------------
@@ -78,7 +78,7 @@ AndroidAPS instellingen
    DanaRS pomp <./Configuration/DanaR-Insulin-Pump.md>
    Accu Chek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
    Smartwatch instellingen <./Configuration/Watchfaces.md>
-   Voorkeuren <./Configuration/Preferences.md>
+   Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>
    
 Gebruik
@@ -88,7 +88,7 @@ Gebruik
    :glob:
     
    Doelen <./Usage/Objectives.md>
-   OpenAPS eigenschappen <./Usage/Open-APS-features.md>
+   OpenAPS functies <./Usage/Open-APS-features.md>
    Profiel wissel <./Usage/Profiles.md>
    Tijdelijk streefdoel <./Usage/temptarget.md>
    SMS Comando's <./Usage/SMS-Commands.md>
@@ -99,6 +99,8 @@ Gebruik
    Accu Chek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Problemen met NSClient oplossen <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
+   Huawei telefoons specifieke instellingen <./Usage/huawei.md>
+   Automatisering <./Usage/Automation.md>
 
 Waar je hulp kunt vinden 
 ------------

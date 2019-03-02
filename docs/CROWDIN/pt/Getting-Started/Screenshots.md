@@ -88,9 +88,9 @@ This replicates the functions you will find on your Nightscout screen under the 
 
 You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
 
-## Profile
+## Perfil
 
-![Profile](../images/Screenshot_profile.png)
+![Perfil](../images/Screenshot_profile.png)
 
 AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a "Switch Profile" on your AndroidAPS rig to refresh the download. Data such as the basal profile would then be automatically copied over to your pump.
 
@@ -108,9 +108,9 @@ AndroidAPS can run using a number of different profile configuratons. Typically 
 
 These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 
-## Config Builder
+## Construtor de Configuração
 
-![Config Builder](../images/Screenshot_config_builder.png)
+![Construtor de Configuração](../images/Screenshot_config_builder.png)
 
 This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 

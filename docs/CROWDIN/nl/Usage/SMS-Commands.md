@@ -1,64 +1,64 @@
-# SMS Commands
+# SMS-commando's
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+Ga in je telefoon instellingen naar Apps > AndroidAPS > Machtigingen en schakel SMS in.
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+In AndroidAPS ga naar Configurator, scroll naar kopje Algemeen en schakel SMS Commando's in. Ga via het tandwiel-icoontje naar de instellingen en voer het(de) telefoonnummer(s) in waar de SMS-commando's vandaan mogen komen. Meerdere nummers kun je scheiden door puntkomma's, gebruik nergens spaties of andere tekens (bijvoorbeeld +31612345678;+31612345679). Schakel ook 'Sta SMS commando's toe' in.
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vetgedrukte** SMS commando's naar de telefoon waar AndroidAPS opstaat. De telefoon zal bevestigen dat het commando of de statusverandering succesvol is doorgevoerd.
 
 ## BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Laatste BG: 5,6, Verschil:-0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)
 
 ## LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Loop was uitgeschakeld
 
 ## LOOP START/ENABLE
 
-- Loop has been enabled
+- Loop was ingeschakeld
 
 ## LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Loop is uitgeschakeld
+- Loop is ingeschakeld
+- Gepauzeerd (10 min)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Loop wordt onderbroken gedurende 20 minuten
 
 ## LOOP RESUME
 
-- Loop resumed
+- Loop hervat
 
 ## TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers
+- TERATMENTS REFRESH 1 receivers *****LET OP: hiermee haal je behandelingen op uit Nightscout. Zorg dat je de instelling "Alleen NS upload" in de Configurator bij NSClient instellingen UIT hebt staan, anders worden al je behandelingen vervangen door 'niks' en ben je ze dus kwijt! Dat is wel weer op te lossen, maar voorkomen is beter.
 
 ## NSCLIENT RESTART
 
 - NSCLIENT RESTART 1 receivers
 
-## DANAR / PUMP (since 1.60)
+## DANAR / PUMP (sinds AAPS v1.60)
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Laatste Verbinding: 1 min geleden Temp: 0,00E/uur @11:38 5/30min IOB: 0,5E Reservoir: 34E Batterij: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Om het tijdelijke basaal te stoppen antwoord met de code EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h reply with code Swe
-- Remote basal setting is not allowed (if remote commands not allowed)
+- Om het basaal 0,3 E/uur te starten antwoord met de code Swe
+- Externe basaal instelling is niet toegestaan (als externe commando's niet zijn toegestaan)
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Om een bolus van 1,2 E toe te dienen antwoord met de code Rrt
+- Externe bolus niet toegestaan (*niet toegestaan als je dit binnen 15 min na je laatste bolus commando stuurt, of als externe commando's niet zijn toegestaan*)
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Om calibratie te verzenden antwoord met de code Rrt
+- Kalibratie verzonden (*als xDrip is geïnstalleerd. In de xDrip+ instellingen moet je aangevinkt hebben dat kalibraties van volgers geaccepteerd worden*)
