@@ -1,5 +1,18 @@
 # Release notes
 
+## Version 2.1
+
+Release date: coming soon
+
+### Major new features
+
+* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support
+* ...
+
+### Misc
+
+* ...
+
 ## Version 2.0
 
 Release date: 03-11-2018
@@ -14,8 +27,8 @@ Release date: 03-11-2018
 
 * Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes *all* IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
-* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
+* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
   
   * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
   * In the left pane, click Build, Execution, Deployment > Compiler.
