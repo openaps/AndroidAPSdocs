@@ -61,3 +61,7 @@ Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
   * Hamburger Menü (drei Striche oben links am Bildschirm)
   * Wartung
   * Einstellungen importieren
+
+## Timezone traveling with Dana RS pump
+
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

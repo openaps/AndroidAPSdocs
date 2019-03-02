@@ -25,7 +25,7 @@
 
 
 * Als dit nog niet is ingesteld download dan Nightscout Uploader app vanuit de Play Store en volg de instructies op [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* In AndroidAPS Preferences geef je Nighscout website en API code.
+* In AndroidAPS Preferences enter your Nightscout website and API secret.
 * Selecteer NSClient in ConfigBuilder (setting in AndroidAPS).
 
 ## Voor Libre gebruikers met Bluetooth-adapter  
@@ -51,7 +51,7 @@ Om je Libre te gebruiken als een CGM die elke 5 minuten nieuwe BG waarden krijgt
 ### Libre met Glimp  
 
 
-* Als nog niet is ingesteld dan download Glimp en volg de instructies voor [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
+* If not already set up then download Glimp and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
 * Selecteer Glimp in ConfigBuilder (instellingen in AndroidAPS).
 
 ## Voor Eversense gebruikers  
@@ -61,14 +61,14 @@ De makkelijkste manier om de Eversense te gebruiken met AndroidAPS is om de aang
 
 **Waarschuwing: door de oude app te verwijderen zullen jouw lokaal opgeslagen (glucose)gegevens ouder dan een week, ook worden verwijderd!**
 
-Om jouw gegevens vervolgens in AndroidAPS te krijgen, moet je [ESEL installeren](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) en "Send to AAPS and xDrip" (Stuur naar AAPS en xDrip) in ESEL aanzetten. Ook moet je "MM640g" kiezen als BG bron in de [Configuratie Builder](../Configuration/Config-Builder.md) in AndroidAPS. Aangezien de BG-gegevens van Eversense soms veel 'ruis' kunnen hebben, is het goed om "Smooth Data" (gegevens vloeiend maken) in ESEL in te schakelen. Dit heeft de voorkeur boven "Gebruik altijd korte gemiddeld verschil ipv gewone verschil" inschakelen in AAPS.
+Om jouw gegevens vervolgens in AndroidAPS te krijgen, moet je [ESEL installeren](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) en "Send to AAPS and xDrip" (Stuur naar AAPS en xDrip) in ESEL aanzetten. Ook moet je "MM640g" kiezen als BG bron in de [Configuratie Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
 
 Een andere instructie voor het gebruik van xDrip+ met Eversense vind je [hier](https://github.com/BernhardRo/Esel/tree/master/apk).
 
 ## Voor MM640g of MM630g gebruikers  
 
 
-* Als nog niet is ingesteld dan download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) en volg de instructies voor [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
+* If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
 * In 600 Series Uploader ga naar Instellingen > Send to xdrip+ en selecteer ON (vinkje).
 * Selecteer MM640g in ConfigBuilder (Instelling AndroidAPS).
 
@@ -78,9 +78,11 @@ Een andere instructie voor het gebruik van xDrip+ met Eversense vind je [hier](h
 * Installeer PocTech App
 * Selecteer PocTech App in ConfigBuilder (instelling in AndroidAPS).
 
-**Voor gebruikers van een andere CGM die uploadt naar Nightscout:**   
-Wanneer je een CGM gebruikt die hierboven niet is genoemd, en jouw CGM je glucosegegevens naar [Nightscout](http://www.nightscout.info) uploadt  
+## For users of other CGM uploaded to Nightscout  
 
 
-* In AndroidAPS Preferences geef je Nighscout website en API code.
+If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
+
+
+* In AndroidAPS Preferences enter your Nightscout website and API secret.
 * Selecteer NSClient in ConfigBuilder (setting in AndroidAPS).

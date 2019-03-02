@@ -25,7 +25,7 @@
 
 
 * Se ainda não tiver configurado, descarregue app uploader do Nightscout desde a playstore e siga as instruções em [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* Nas preferências de AndroiAps introduza o website nightscout e a API secreta.
+* In AndroidAPS Preferences enter your Nightscout website and API secret.
 * Selccione NSClient em Configbuilder ( configuração em AndroidAPS).
 
 ## For users of Libre with Bluetooth cap  
@@ -51,7 +51,7 @@ To use your Libre as a CGM that is getting new BG values every 5 minutes you fir
 ### If using Glimp...  
 
 
-* Se ainda não o fez, descarregue app Glimp e siga as instruções em [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
+* If not already set up then download Glimp and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
 * Seleccione Glimp no ConfigBuilder (configuração em AndroidAPS).
 
 ## For users of Eversense  
@@ -61,14 +61,14 @@ The easiest way to use Eversense with AndroidAPS is to install the modified [Eve
 
 **Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
 
-To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple data".
+To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
 
 You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
 
 ## For users of MM640g or MM630g  
 
 
-* Se não configurou ainda, descarregue [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) e siga as instruções em [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
+* If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
 * Na série 600 Uploader, vá a Configurações > Enviar para xdrip + e seleccione ON.
 * Seleccione MM640g no ConfigBuilder (configuração em AndroidAPS).
 
@@ -78,9 +78,11 @@ You can find another instruction for using xDrip with an Eversense [here](https:
 * Instale app PocTech
 * Seleccione app PocTech no ConfigBuilder (configuração em AndroidAPS).
 
-**For users of other CGM uploaded to nightscout:**  
+## For users of other CGM uploaded to Nightscout  
+
+
 If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
 
 
-* Nas preferências de AndroiAps introduza o website nightscout e a API secreta.
+* In AndroidAPS Preferences enter your Nightscout website and API secret.
 * Selccione NSClient em Configbuilder ( configuração em AndroidAPS).

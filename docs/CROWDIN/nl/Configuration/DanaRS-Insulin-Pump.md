@@ -61,3 +61,7 @@ Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende 
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
   * Importeer instellingen
+
+## Timezone traveling with Dana RS pump
+
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
