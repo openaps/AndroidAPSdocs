@@ -20,6 +20,6 @@
 * Zet de stapgrootte voor basaal op 0,01 E/uur
 * Activeer vertraagde bolussen op de pomp
 
-## Timezone traveling with Dana R pump
+## Wisselen van tijdzone met de DanaR
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+Voor informatie over het wisselen van tijdzone zie sectie [Wisselen van tijdzone](../Usage/Timezone-traveling.md#insight).
