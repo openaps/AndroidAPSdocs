@@ -12,7 +12,7 @@
 - An Android phone
 - The AndroidAPS app (at least v2.1) installed on your phone
 
-## Einrichtung
+## Setup
 
 -     In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
      
