@@ -30,8 +30,8 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Java implementations:**  Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS implementation status:** Starting. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby.
-AAPS. 0.4 test "release" is out, with about 80% of all functionality, missing is only History reading and parsing. For details and timing see [Andy's roadmap](https://github.com/andyrozman/RileyLinkAAPS/wiki/Roadmap-for-Medtronic-development).
+**AAPS implementation status:** Work in progress. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby.
+AAPS. 0.7 test "release" is out, with about 80% of all functionality, missing is only History analysis to determine state of the pump and to confirm that Treatments were or to import new treatments. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
 **Hardware requirement for AAPS:** RileyLink (any)
 
@@ -112,6 +112,15 @@ Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for 
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
+***
+
+### Tandem t:AP 
+
+**Loop status:** Is a Loop candidate. 
+
+**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+
+**NOTE:** This pump was mentioned in following [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), but I am not sure, if this is just t:slim with modified Firmware, or is this a new pump. So far I go no confirmation either way from writer of article, or from Tandem itself.
 
 
 ## Pumps that aren't Loopable
