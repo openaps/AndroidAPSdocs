@@ -77,6 +77,7 @@ Configuration
    DanaR pump <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS pump <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
+   Accu Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
    Watchfaces <./Configuration/Watchfaces.md>
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
