@@ -61,3 +61,7 @@ When switching to a new phone the following steps are neccessary:
   * Hamburger menu (top left corner of screen)
   * Maintenance
   * Import settings
+
+## Timezone traveling with Dana RS pump
+
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
