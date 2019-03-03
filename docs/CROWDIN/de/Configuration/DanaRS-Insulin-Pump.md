@@ -62,6 +62,6 @@ Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
   * Wartung
   * Einstellungen importieren
 
-## Timezone traveling with Dana RS pump
+## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
 
 For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
