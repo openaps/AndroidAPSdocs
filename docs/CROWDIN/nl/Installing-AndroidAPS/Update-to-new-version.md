@@ -39,22 +39,7 @@ Bouw de ondertekende apk zoals beschreven in [Bouwen van de app (kopje 'Bouwen v
 
 De meest stabiele versie van AndroidAPS is die in de [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). Het wordt dringend aangeraden om op de Master branch te blijven terwijl je de leerdoelen afwerkt en praktijkervaring krijgt.
 
-De [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) is echter een goede plek om te zien welke functies worden getest en om te helpen met bugs ontdekken en feedback geven over hoe nieuwe functies in de praktijk werken. Vaak zullen mensen de Dev-branch testen met een oude telefoon en pomp totdat ze er vertrouwen in hebben dat die versie stabiel is - gebruik ervan is op jouw eigen risico.
+De [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) is echter een goede plek om te zien welke functies worden getest en om te helpen met bugs ontdekken en feedback geven over hoe nieuwe functies in de praktijk werken. Vaak zullen mensen de Dev-branch testen met een oude telefoon en pomp totdat ze er vertrouwen in hebben dat die versie stabiel is - gebruik ervan is op jouw eigen risico. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
 
-A short summary of some of the changes to old features or development of new features currently in the Dev branch is listed below, and links to any key issues known will be shared (if applicable).
-
-**Super Micro Bolus (SMB)**
-
-More can be read on [Super Micro Boluses (SMB) on OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).  
-  
-Remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.  
-  
-You should have run basic closed looping for more than four weeks (having completed Objective 7), and be very aware of all the types of situations in which your APS might fail.  
-  
-You may need to adjust your settings to allow SMB to work effectively. A good place to start is increasing your max IOB to normal meal bolus + 3x max daily basal. But remain vigilant and adjust settings with care.
-
-<br />  
-  
-As with all updates, previous code has been cleaned, improved and bugs fixed. <br />  
-Als je een bug vindt of denkt dat er iets mis is gegaan bij het gebruik van de Dev branch, ga dan naar het [issues](https://github.com/MilosKozak/AndroidAPS/issues) tabblad om te zien of iemand anders het al eerder gevonden heeft, of voeg het zelf toe als dat nog niet het geval is. Hoe meer informatie je hier kunt delen, hoe beter (vergeet niet dat je jouw [log bestanden moet delen](../Usage/Accessing-logfiles.md). De nieuwe functies kunnen ook worden besproken op [gitter](https://gitter.im/MilosKozak/AndroidAPS). <br />  
-Als je wilt bijwerken naar de Dev branch, kun je dezelfde stappen gebruiken als hierboven beschreven. Je hoeft alleen te zorgen dat je de bijbehorende "dev"-branch selecteert in Android Studio.
+If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../Usage/Accessing-logfiles.md). The new features can also be discussed in the [gitter room](https://gitter.im/MilosKozak/AndroidAPS). <br />  
+If you would like to be up-to-date on the Dev Branch you can use the same steps as already outlined above. You just need to change to the corresponding "dev"-Branch in Android Studio.

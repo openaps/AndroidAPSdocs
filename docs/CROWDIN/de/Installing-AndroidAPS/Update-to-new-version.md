@@ -39,22 +39,7 @@ Erstelle die signierte APK wie unter [AndroidAPS installieren - App erstellen (G
 
 Die stabilste AndroidAPS Version ist im [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). Es wird empfohlen diese, vor allem anfangs, zu verwenden.
 
-Im [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) sieht man, welche Funktionen gerade getestet werden. Damit können Fehler ausgebügelt und Feedback darüber gegeben werden, wie die neuen Funktionen in der Praxis funktionieren. Meist wird die Entwickler-Version auf einem alten Telefon mit einer separaten Pumpe getestet bis es stabil läuft. Jede Benutzung des dev branch erfolgt auf eigene Gefahr!
+Im [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) sieht man, welche Funktionen gerade getestet werden. Damit können Fehler ausgebügelt und Feedback darüber gegeben werden, wie die neuen Funktionen in der Praxis funktionieren. Meist wird die Entwickler-Version auf einem alten Telefon mit einer separaten Pumpe getestet bis es stabil läuft. Jede Benutzung des dev branch erfolgt auf eigene Gefahr! When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
 
-Eine kurze Zusammenfassung einiger der Änderungen an alten Features oder der Entwicklung neuer Features, die sich derzeit im dev branch befinden, ist unten aufgeführt. Falls verfügbar werden zusätzlich Links zu den Schlüsselthemen angegeben.
-
-**Super Micro Bolus (SMB)**
-
-Details finden sich hier: [Super Micro Boluses (SMB) on OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).  
-  
-Bedenke, dass du dich für das Testen einer Funktion entscheidest, die sich noch in Entwicklung befindet. Tue dies auf eigene Gefahr und mit der gebotenen Sorgfalt, um dich selbst zu schützen.  
-  
-> Du solltest mehr als vier Wochen lang (nach Abschluss von Ziel 7) gelooped haben (closed loop nicht open loop) und dir der Situationen bewusst sein, in denen dein APS versagen könnte.  
->  
-Ggf. musst du deine Einstellungen anpassen, damit SMB effektiv arbeiten kann. Ein guter Ausgangspunkt ist, dein max IOB in Höhe des normalen Mahlzeitenbolus + die dreifache maximale tägliche Baslarate einzustellen. Aber bleibe wachsam und passe Einstellungen mit Sorgfalt an.
-
-<br />  
-  
-Wie bei allen Updates wurde der vorherigen Code bereinigt, verbessert und die Fehler behoben. <br />  
-Wenn du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wurde, dann sehe im [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler bemerkt hat, falls nicht, kannst du einen neuen Issue öffnen. Je mehr Informationen du dabei bereitstellst, desto besser/schneller kann der Fehler reproduziert und behoben werden. Vergiss nicht, die [Log Dateien](../Usage/Accessing-logfiles.md) anzufügen. Neue Funktion können auch im [gitter room](https://gitter.im/MilosKozak/AndroidAPS) besprochen werden. <br />  
-Wenn du mit dem dev branch up to date bleiben willst, kannst du Updates wie oben beschrieben durchführen. Du musst nur in Android Studio auf den entsprechenden dev branch wechseln.
+If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../Usage/Accessing-logfiles.md). The new features can also be discussed in the [gitter room](https://gitter.im/MilosKozak/AndroidAPS). <br />  
+If you would like to be up-to-date on the Dev Branch you can use the same steps as already outlined above. You just need to change to the corresponding "dev"-Branch in Android Studio.
