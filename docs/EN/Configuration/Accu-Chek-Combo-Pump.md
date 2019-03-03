@@ -86,7 +86,7 @@ Please be aware that this is not complete list and reflects personal user experi
 
 ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org) and use the `combo` branch.
+- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
 - Make sure to read the wiki to understand how to setup AndroidAPS.
 - Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo
   plugin from interfering with ruffy during the pairing process.
