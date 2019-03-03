@@ -35,7 +35,7 @@
       ![Screenshot of Insight Pairing 2](../../images/Insight_Pairing2.png)
      
 
--     Both the pump and and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
+-     Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
      
       ![Screenshot of Insight Pairing 3](../../images/Insight_Pairing3.png)
      
@@ -116,4 +116,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Crossing time zones with Insight pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).

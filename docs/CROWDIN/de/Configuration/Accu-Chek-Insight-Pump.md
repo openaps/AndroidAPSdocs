@@ -1,6 +1,6 @@
 # Accu-Chek Insight Pump
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
+**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
 
 * * *
 
@@ -12,7 +12,7 @@
 - An Android phone
 - The AndroidAPS app (at least v2.1) installed on your phone
 
-## Einrichtung
+## Setup
 
 -     In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
      
@@ -35,7 +35,7 @@
       ![Screenshot of Insight Pairing 2](../../images/Insight_Pairing2.png)
      
 
--     Both the pump and and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
+-     Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
      
       ![Screenshot of Insight Pairing 3](../../images/Insight_Pairing3.png)
      
@@ -116,4 +116,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Crossing time zones with Insight pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).

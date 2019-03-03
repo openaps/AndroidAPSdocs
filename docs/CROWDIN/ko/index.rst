@@ -77,6 +77,7 @@ AndroidAPS 설치하기
    다나R 펌프<./Configuration/DanaR-Insulin-Pump.md>
    다나RS 펌프<./Configuration/DanaRS-Insulin-Pump.md>
    아큐-첵 콤보 펌프 <./Configuration/Accu-Chek-Combo-Pump.md>
+   Accu Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
    워치화면 <./Configuration/Watchfaces.md>
    설정 <./Configuration/Preferences.md>
    민감도 감지와 COB <./Configuration/Sensitivity-detection-and-COB.md>
