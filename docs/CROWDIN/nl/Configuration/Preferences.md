@@ -11,14 +11,23 @@ AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier heb
 ## Algemeen
 
 * Kies welke taal je wilt gebruiken. Als je taal niet beschikbaar is, of niet alle woorden worden vertaald, voel je dan vrij om suggesties te doen op [Crowdin](https://crowdin.com/project/androidaps) of vraag in de [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
-* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
-* Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
+* 
+* 
     
     ![Status lights](../images/StatusLights.jpg)
 
-## Careportal
+## Overzicht
 
-'Entered by' is the text displayed in your nightscout careportal 'entered by' field. Set this to something meaningful to you, whether it is the app name, the person's name or the phone name (for example if you are using AndroidAPS as NS Client on a phone that is not the patient's phone you may wish to distinguish between phone owners here).
+'Laat scherm aan' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+  
+'Knoppen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+  
+'Vaste maaltijd instellingen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+  
+'Geavanceerde instellingen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+  
+Link:   
+https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/Configuration/Config-Builder.html
 
 ## Behandelingen veiligheid
 
@@ -104,4 +113,6 @@ Deze instelling maakt externe controle van de app mogelijk door SMS instructies 
 * 
 * 
 
-##
+## 
+
+For more information on the wear watchface settings see [Watchfaces](../Configuration/Watchfaces.md).
