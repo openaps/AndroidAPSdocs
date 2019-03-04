@@ -17,7 +17,7 @@
 
 ![](../images/branchintray.png)
 
-Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' gebruiken als je hier geen 'Checkout' kunt kiezen).
+Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' of 'Checkout As...' gebruiken als je hier geen 'Checkout' kunt kiezen).
 
 ![](../images/checkout.png)
 
@@ -27,7 +27,7 @@ Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' gebruiken als je hi
 
 ![](../images/merge.png)
 
-Onderin beeld zie je een groen bericht verschijnen over 'updated project' (bijgewerkt projekt).
+Onderin beeld zie je een bericht verschijnen over 'updated project' (bijgewerkt projekt) of 'all files are up-to-date' (alle bestanden zijn bijgewerkt).
 
 **App maken en op je telefoon zetten**
 
