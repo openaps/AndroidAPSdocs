@@ -102,7 +102,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Tandem t:AP
 
-**Status:** Is een Loop kandidaat.
+**Loop status:** Is a Loop candidate.
 
 **Hardware eisen voor AAPS:** Waarschijnlijk geen. Het lijkt erop dat hij Bluetooth gebruikt.
 
