@@ -8,7 +8,7 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 
 **Sectie A:** Hiermee kun je navigeren tussen de verschillende AndroidAPS modules, door naar links of rechts te vegen.
 
-**Sectie B:** Hier zie je de status van de loop, die je hier ook kunt veranderen (de closed loop deactiveren, onderbreken etc). Je huidige profiel is zichtbaar en jouw streefdoel. Je kunt hier ook een (tijdelijke) profielswitch en tijdelijk streefdoel instellen. Aanpassingen maak je door een veld lang ingedrukt te houden. Houd bijvoorbeeld de donkerblauwe knop rechtsboven met streefdoel ("5.5" in screenshot) lang ingedrukt om een tijdelijk streefdoel in te stellen.
+**Sectie B:** Hier zie je de status van de loop, die je hier ook kunt veranderen (de closed loop deactiveren, onderbreken etc). Je huidige profiel is zichtbaar en jouw streefdoel. Je kunt hier ook een (tijdelijke) profielswitch en tijdelijk streefdoel instellen. Aanpassingen maak je door een veld lang ingedrukt te houden. Houd bijvoorbeeld de grijze knop rechtsboven met streefdoel ("110" in screenshot) lang ingedrukt om een tijdelijk streefdoel in te stellen.
 
 **Sectie C:** Hier zie je de laatste glucosewaarde van jouw CGM, en hoe lang geleden deze gemeten was. Ook de verandering in de afgelopen 15 en 40 minuten, jouw actuele basaalstand - inclusief eventuele tijdelijke basaalstand (TBR, temporary basal rate), de nog werkzame insuline (IOB, insulin on board) en hoeveelheid koolhydraten (COB, carbs on board).
 
