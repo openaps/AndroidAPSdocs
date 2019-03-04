@@ -24,7 +24,7 @@ AndroidAPS is een app die kan communiceren met bluetooth-aangestuurde insuline p
 * App die de gegevens van jouw glucosesensor doorgeeft, bijvoorbeeld `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ of `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ zelf
 * `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 of nieuwer
-* Een geschikte insulinepomp: Dana-R, Dana-RS of Accu-Chek Combo (tenzij je je eigen stuurprogramma schrijft voor een andere insulinepomp)
+* Een geschikte insulinepomp: Dana-R, Dana-RS of Accu-Chek Combo, Accu-Check Insight (tenzij je je eigen stuurprogramma schrijft voor een andere insulinepomp)
 * een Continue Glucose Monitor (CGM): Dexcom G4/G5/G6, Eversense, Medtronic Guardian, PocTech of een Freestyle Libre met bluetooth-zender,
 
 
@@ -72,12 +72,12 @@ AndroidAPS instellingen
    :maxdepth: 1
    :glob:
    
-   Configuratiescherm <./Configuration/Config-Builder.md>
+   Configurator <./Configuration/Config-Builder.md>
    BG bron <./Configuration/BG-Source.md>
    DanaR pomp <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS pomp <./Configuration/DanaR-Insulin-Pump.md>
+   DanaRS pomp <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
+   Accu Chek Combo pomp <./Configuration/Accu-Chek-Insight-Pump.md>
    Smartwatch instellingen <./Configuration/Watchfaces.md>
    Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -100,7 +100,7 @@ Gebruik
    Accu Chek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Problemen met NSClient oplossen <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
-   Huawei telefoons specifieke instellingen <./Usage/huawei.md>
+   Huawei telefooninstellingen <./Usage/huawei.md>
    Automatisering <./Usage/Automation.md>
 
 Waar je hulp kunt vinden 
