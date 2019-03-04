@@ -14,7 +14,7 @@ AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier heb
 * 
 * 
     
-    ![Status lights](../images/StatusLights.jpg)
+    ![Statusindicatoren](../images/StatusLights.jpg)
 
 ## Overzicht
 
@@ -113,6 +113,4 @@ Deze instelling maakt externe controle van de app mogelijk door SMS instructies 
 * 
 * 
 
-## 
-
-For more information on the wear watchface settings see [Watchfaces](../Configuration/Watchfaces.md).
+##
