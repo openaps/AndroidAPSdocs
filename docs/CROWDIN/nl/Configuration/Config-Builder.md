@@ -155,9 +155,7 @@ Opmerking: De knop voor een standaardmaaltijd zal niet zichbaar zijn wanneer je 
 
 #### Geavanceerde instellingen
 
-Activeer superbolus in de boluscalculator. Activeer deze niet tot je begrijpt wat dit doet. Kort gezegd wordt hiermee jouw basale insuline voor de komende twee uur toegevoegd aan de bolus, waarna jouw basaal voor twee uur op nul wordt gezet (zero-temp). Meer details over superbolus kun je [hier](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus) lezen (in het Engels).   
-  
-Toon statusindicatoren op startscherm. Statusindicatoren geven met een kleurtje aan op het Overzicht-scherm wanneer je reservoir bijna leeg is, je batterij bijna leeg is. Of wanneer het tijd is om je infuusset te vervangen. Deze functie is nieuw in versie 2.1.1.
+Activeer superbolus in de boluscalculator. Activeer deze niet tot je begrijpt wat dit doet. Kort gezegd wordt hiermee jouw basale insuline voor de komende twee uur toegevoegd aan de bolus, waarna jouw basaal voor twee uur op nul wordt gezet (zero-temp). Meer details over superbolus kun je [hier](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus) lezen (in het Engels).
 
 ### Acties
 
