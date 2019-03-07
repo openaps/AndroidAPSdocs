@@ -16,7 +16,7 @@ If you're ready for the challenge, please read on.
 * An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
 * An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
 * An app to which users can easily add or remove modules as needed
-* An app that allows localization {I don't know what this means. Do you mean it can be used offline?}
+* An app with different versions for specific locations and languages.
 * An app which can be used in open- and closed-loop mode
 * An app that is totally transparent: users can input parameters, see results, and make the final decision
 * An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
