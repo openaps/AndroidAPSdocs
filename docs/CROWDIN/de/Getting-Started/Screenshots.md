@@ -2,7 +2,7 @@
 
 ## Die Startseite
 
-![Startseite](../images/Screenshot_Home_screen_V2_1.png)
+![Startseite](../../images/Screenshot_Home_screen_V2_1.png)
 
 Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meisten der Informationen, die du tagtäglich benötigst.
 
