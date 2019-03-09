@@ -107,18 +107,18 @@ Die Innenpumpe hat eine kleine interne Batterie, um wichtige Funktionen wie die 
 
 ## Insight spezifische Fehler
 
-### Extended bolus
+### Verzögerter Bolus
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Bitte verwende nicht mehrere verzögerte Boli gleichzeitig, da dies zu Fehlern führen kann.
 
-### Time out
+### Timeout
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Manchmal kann es passieren, dass die Insight Pumpe während des Verbindungsaufbaus nicht antwortet. In diesem Fall wird AAPS die folgende Nachricht anzeigen: "Zeitüberschreitung während des Handshakes - Bluetooth zurücksetzen".
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Bluetooth zurücksetzen](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+Schalte dann Bluetooth auf Pumpe und Smartphone für etwa 10 Sekunden aus und schalte es dann wieder ein.
 
 ## Mit der Insight Pumpe über Zeitzonen hinweg reisen
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg reisen](../Usage/Timezone-traveling#insight).
