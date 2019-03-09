@@ -63,7 +63,7 @@ In the Insight settings in AndroidAPS you can enable the following options:
 - "Log battery changes": This records a battery change when you put a new battery in the pump.
 - "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
 - "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
-- "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver a delayed bolus for the extra insulin if you request a TBR of more than 250%.
+- "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver a delayed bolus for the extra insulin if you request a TBR of more than 250%.<br><font color="red">Note: Just use one delayed bolus at a time as multiple delayed boluses at the same time might cause errors.</font>
 - "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time. 
     <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
     <br><br>no connection -> wait <b>5</b> sec.
@@ -100,6 +100,12 @@ Insight pumps with newer firmware will vibrate briefly every time a bolus is del
 The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 ## Insight specific errors
+
+### Delayed bolus
+
+Just use one delayed bolus at a time as multiple delayed boluses at the same time might cause errors.
+
+### Time out
 
 Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
 
