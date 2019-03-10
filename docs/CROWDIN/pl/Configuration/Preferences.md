@@ -14,7 +14,7 @@ There are security limits in place based on age you selected in this setting. If
 * Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
 * Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
     
-    ![Status lights](../images/StatusLights.jpg)
+    ![Status lights - screen detail](../../images/StatusLights.jpg)
 
 ## Careportal
 
