@@ -2,7 +2,7 @@
 
 ## Hlavní stránka
 
-![Homescreen v2.1](../../images/Screenshot_Home_screen_V2_1.png)
+![Homescreen V2.1](../images/Screenshot_Home_screen_V2_1.png)
 
 Toto je první obrazovka, na kterou narazíte, když spustíte aplikaci AndroidAPS. Obsahuje většinu informací, které budete potřebovat každý den.
 
