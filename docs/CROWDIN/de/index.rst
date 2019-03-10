@@ -77,7 +77,7 @@ AndroidAPS einrichten
    DanaR Pumpe <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS Pumpe <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo Pumpe <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
+   Accu Chek Insight Pumpe <./Configuration/Accu-Chek-Insight-Pump.md>
    Smartwatch-Integration <./Configuration/Watchfaces.md>
    Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.md>
    Empfindlichkeitserkennung und COB <./Configuration/Sensitivity-detection-and-COB.md>

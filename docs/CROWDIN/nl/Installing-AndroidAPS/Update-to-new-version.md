@@ -17,7 +17,7 @@
 
 ![](../images/branchintray.png)
 
-Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' gebruiken als je hier geen 'Checkout' kunt kiezen).
+Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' of 'Checkout As...' gebruiken als je hier geen 'Checkout' kunt kiezen).
 
 ![](../images/checkout.png)
 
@@ -27,7 +27,7 @@ Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' gebruiken als je hi
 
 ![](../images/merge.png)
 
-Onderin beeld zie je een groen bericht verschijnen over 'updated project' (bijgewerkt projekt).
+Onderin beeld zie je een bericht verschijnen over 'updated project' (bijgewerkt projekt) of 'all files are up-to-date' (alle bestanden zijn bijgewerkt).
 
 **App maken en op je telefoon zetten**
 
@@ -39,7 +39,7 @@ Bouw de ondertekende apk zoals beschreven in [Bouwen van de app (kopje 'Bouwen v
 
 De meest stabiele versie van AndroidAPS is die in de [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). Het wordt dringend aangeraden om op de Master branch te blijven terwijl je de leerdoelen afwerkt en praktijkervaring krijgt.
 
-De [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) is echter een goede plek om te zien welke functies worden getest en om te helpen met bugs ontdekken en feedback geven over hoe nieuwe functies in de praktijk werken. Vaak zullen mensen de Dev-branch testen met een oude telefoon en pomp totdat ze er vertrouwen in hebben dat die versie stabiel is - gebruik ervan is op jouw eigen risico. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+De [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) is echter een goede plek om te zien welke functies worden getest en om te helpen met bugs ontdekken en feedback geven over hoe nieuwe functies in de praktijk werken. Vaak zullen mensen de Dev-branch testen met een oude telefoon en pomp totdat ze er vertrouwen in hebben dat die versie stabiel is - gebruik ervan is op jouw eigen risico. Bij het testen van nieuwe functies, vergeet niet dat je iets aan het testen bent dat nog middenin het ontwikkelingsproces is. Doe dit op je eigen risico & met de nodige voorzichtigheid om jezelf veilig te houden.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../Usage/Accessing-logfiles.md). The new features can also be discussed in the [gitter room](https://gitter.im/MilosKozak/AndroidAPS). <br />  
-If you would like to be up-to-date on the Dev Branch you can use the same steps as already outlined above. You just need to change to the corresponding "dev"-Branch in Android Studio.
+Als je een bug vindt of denkt dat er iets mis is gegaan terwijl je de Dev branch gebruikt, kijk dan op het tabblad [issues](https://github.com/MilosKozak/AndroidAPS/issues) om te zien of iemand anders al hetzelfde heeft gehad, of voeg het zelf toe als dat niet het geval is. Hoe meer informatie je hier kunt delen, hoe beter (vergeet niet om jouw [log bestanden](../Usage/Accessing-logfiles.md)) aan te leveren. Jouw ervaringen met de nieuwe functies kun je ook bespreken op [gitter](https://gitter.im/MilosKozak/AndroidAPS). <br />  
+Als je jouw app wilt bijwerken naar de Dev branch, kun je dezelfde stappen gebruiken als hierboven beschreven. Je hoeft alleen te zorgen dat je de bijbehorende "dev"-branch selecteert in Android Studio.

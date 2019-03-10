@@ -28,7 +28,11 @@ Welke conclusies kunnen we trekken bij het onderzoeken van de insulinegevoelighe
 
 ## Achtergrondinformatie en artikelen over doe-het-zelf closed loopen
 
-<http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
+[ https://www.diabetestype1.nl/bibliotheek/behandeling/577-loopen-zelf-je-eigen-hybrid-closed-loop-bouwen-met-een-pomp-cgm-en-app   
+  
+https://www.diabetestype1.nl/blogs/behandeling/146-closed-loop-doe-het-zelf-maar-niet-alleen   
+  
+http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/](http://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/)
 
 <http://www.diabettech.com/artificial-pancreas/looping-do-i-choose-openaps-or-loop-either-way-wearenotwaiting/>
 

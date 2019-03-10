@@ -20,6 +20,6 @@
 * Stelle auf der Pumpe die Basalschritte auf 0,01 IE/h.
 * Erlaube die Vewendung von verlängerten Boli auf der Pumpe
 
-## Timezone traveling with Dana R pump
+## Mit der Dana R Pumpe über Zeitzonen hinweg reisen
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg reisen](../Usage/Timezone-traveling.md#insight).

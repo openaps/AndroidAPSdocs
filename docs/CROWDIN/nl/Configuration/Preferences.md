@@ -8,17 +8,33 @@ Hiermee kunt je een wachtwoord instellen om onbedoelde of ongeoorloofde wijzigin
 
 AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier hebt geselecteerd. Als je tegen de beperkingen van zo'n zogenaamde 'harde limiet' (zoals max bolus) aanloopt, dan is het tijd om te kiezen voor de daaropvolgende categorie. Het is een slecht idee om hogere categorie te kiezen dan past bij jouw echte leeftijd/resistentie, omdat het kan leiden tot een overdosis als je de verkeerde waarde in het insulin-dialoogvenster intypt (bijv. als je de komma verkeerd zet).
 
-## Algemeen
+## Algemeen / Overzicht
 
 * Kies welke taal je wilt gebruiken. Als je taal niet beschikbaar is, of niet alle woorden worden vertaald, voel je dan vrij om suggesties te doen op [Crowdin](https://crowdin.com/project/androidaps) of vraag in de [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
-* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
-* Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
+* 'Laat scherm aan' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+      
+    'Knoppen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+      
+    'Vaste maaltijd instellingen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+      
+    Link:   
+    https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/Configuration/Config-Builder.html
+* 'Geavanceerde instellingen' - Statusindicatoren geven met een kleurtje aan op het Overzicht-scherm wanneer je reservoir of batterij bijna leeg is. Of wanneer het tijd is om je infuusset te vervangen. Deze functie is nieuw in versie 2.1.1.
     
-    ![Status lights](../images/StatusLights.jpg)
+    ![Statusindicatoren](../images/StatusLights.jpg)
 
-## Careportal
+## Overzicht
 
-'Entered by' is the text displayed in your nightscout careportal 'entered by' field. Set this to something meaningful to you, whether it is the app name, the person's name or the phone name (for example if you are using AndroidAPS as NS Client on a phone that is not the patient's phone you may wish to distinguish between phone owners here).
+'Laat scherm aan' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+  
+'Knoppen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+  
+'Vaste maaltijd instellingen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+  
+'Geavanceerde instellingen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
+  
+Link:   
+https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/Configuration/Config-Builder.html
 
 ## Behandelingen veiligheid
 
@@ -84,25 +100,24 @@ De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd 
 
 Deze instelling maakt externe controle van de app mogelijk door SMS instructies te sturen naar de telefoon die de patiënt bij zich heeft. Bijvoorbeeld het uitschakelen van de loop of het geven van een bolus. Hoe dit werkt, wordt beschreven in [SMS commando's](../Usage/SMS-Commands.md) maar het zal alleen worden weergegeven in de Instellingen als je deze optie hebt aangevinkt in de Configurator.
 
-## Overig
+## Andere
 
 * Je kunt hier standaardwaarden instellen voor jouw tijdelijke streefdoelen (Eet binnenkort en Activiteit). Als je bijvoorbeeld "Eet binnenkort" kiest uit de drop-down box op het Overzicht-scherm, dan zal automatisch de duur en streef-BG worden ingevuld die je hier hebt aangegeven. Voor meer informatie over het gebruik van tijdelijke streefdoelen (Temp Targets) zie de [OpenAPS functies](../Usage/Open-APS-features.md). 
 * Je kunt standaardhoeveelheden instellen voor het vullen (van de canule, en van de slang). De hoeveelheden die je hier instelt zal de pomp wel afgeven, maar deze hoeveelheden worden niet meegeteld bij IOB berekeningen. Hoeveel eenheden nodig zijn staat in het instructieboekje in de doos met infuussets, dit verschilt per type infuusset en is afhankelijk van de lengte van de canule en de lengte van de slang.
 * Je kunt de visualisatie van jouw hoge en lage BG waardes op het Overzicht-scherm en op je smartwatch instellen. Let op: dit bepaalt alleen hoe jouw grafieken eruit zien, en heeft geen enkele link met de streefdoelen of andere berekeningen van het algoritme.
 * 'Afgekorte tab titels' zorgt dat er meer tab titels op je scherm passen, bijvoorbeeld het 'Open APS'-tabblad wordt 'OAPS', 'Doelen' wordt 'Doel' etc.
-* 'Lokaal gegenereerde waarschuwingen' laat je kiezen of je een waarschuwing ontvangt en na hoe lang voor als je geen bloedglucose waarden binnenkrijgt of de pomp onbereikbaar is. Als je vaak waarschuwingen over een onbereikbare pomp krijgt, schakel dan de BT Watchdog in in de geavanceerde pompinstellingen.
+* 'Lokaal gegenereerde waarschuwingen' laat je kiezen of je een waarschuwing ontvangt en na hoe lang voor als je geen bloedglucose waarden binnenkrijgt of de pomp onbereikbaar is. Als je vaak waarschuwingen over een onbereikbare pomp krijgt, schakel dan de BT Watchdog in in de geavanceerde pompinstellingen.   
+    'Gebruik systeem notificaties voor waarschuwingen en notificaties': hiermee zullen ze als meldingen bovenin jouw Android-menubalk verschijnen.
 
-## Advanced Settings ``requires more work
+## Data keuzes
 
-* OpenAPS MA
-* Always use short average delta instead of... Enabling this setting is useful when you are using data from unfiltered sources such as xDrip+, as opposed to filtered sources such as an official Dexcom Receiver. Filtered data appears to be smooth, whereas unfiltered data can appear to be jumpy. This unfiltered data could cause AndroidAPS to apply Temporary Basal Rate changes more frequently than are really needed, as the OpenAPS algorithm reacts to the jumpy data. With this setting enabled, the OpenAPS algorithm will use the Short Average Delta (the average change in blood glucose over the past 15 minutes) instead of the last blood glucose reading received. This effectively has a "smoothing" effect on the data and attempts to compensate for any jumpy readings. Users of Abbot Freestyle Libre sensors collecting their glucose data via devices such as LimiTTers may find this setting provides better results with AAPS.
+* Geavanceerde instellingen: je kunt hier kiezen of je jouw foutmeldingen wilt rapporteren aan de ontwikkelaars van de app. Dit staat standaard ingeschakeld, de ontwikkelaars kunnen met deze informatie de app verder verbeteren.
+* 
 
-For further tips regarding data smoothing when using xDrip+ as the data source, see [Smoothing Blood Glucose Data in xDrip+](../Usage/Smoothing-blood-glucose-data-in-xDrip.md).
 
-* OpenAPS preferences.json - before changing any of these settings, please view the descriptions of the safety values used and why in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
-* 'Ignore profile switch events' will not send your current AndroidAPS profile to the pump. It is encouraged not to select this unless you are testing code, as for safety sending profile switch events to the pump's basal profile 1 means than should AndroidAPS stop working or loose connection with the pump then your pump will revert to the same profile as default rather than you having to manually enter it into the pump. For more information on profiles see [Profiles](/docs/Usage/Profiles).
-* 'BT Watchdog' select this option if you keep loosing connection with your pump. When the pump looses connection it will toggle bluetooth off and on for you to improve the connection.
 
-## Wear Settings
+* 
+* 
+* 
 
-For more information on the wear watchface settings see [Watchfaces](../Configuration/Watchfaces.md).
+##
