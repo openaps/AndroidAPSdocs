@@ -14,7 +14,7 @@ Es gibt Sicherheitsgrenzen aufgrund des Alters, die hier eingestellt werden kön
 * QuickWizard-Einstellungen erlauben es dir, einen Schnellzugriffsbutton für übliche Snacks oder Mahlzeiten hinzuzufügen. Gib die Details der Kohlenhydrate ein und wenn du diesen QuickWizard-Button auf dem Homescreen drückst, wird der Bolus für diese Kohlenhydrate auf Basis der aktuellen Werte berechnet (wobei der Zuckerwert und das Insulin On Board verwendet werden, wenn Du es bei er Einstellung des Buttons eingibst).
 * Erweiterte Einstellungen, um Superbolus im Assistenten zu aktivieren und für die Statusanzeige auf dem Startbildschirm. Die Statusanzeige gibt eine visuelle Warnung bei niedrigem Reservoir- und Akkustand sowie überfälligem Katheterwechsel.
     
-    ![Status lights - detail](../images/StatusLights.jpg)
+    ![Statusanzeige - Bildschirmdetails](../images/StatusLights.jpg)
 
 ## Careportal
 
