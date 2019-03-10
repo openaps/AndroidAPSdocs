@@ -2,7 +2,7 @@
 
 ## The Homescreen
 
-![Homescreen v2.1](../../images/Screenshot_Home_screen_V2_1.png)
+![Homescreen V2.1](../images/Screenshot_Home_screen_V2_1.png)
 
 This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
 
