@@ -77,7 +77,7 @@ AndroidAPS instellingen
    DanaR pomp <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS pomp <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu Chek Combo pomp <./Configuration/Accu-Chek-Insight-Pump.md>
+   Accu Chek Insight pomp <./Configuration/Accu-Chek-Insight-Pump.md>
    Smartwatch instellingen <./Configuration/Watchfaces.md>
    Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -118,7 +118,7 @@ Waar je hulp kunt vinden
    :caption: Resources/Reference
             
    Resources <./Resources/index>
-   Voor behandelaars/zorgverleners <./Resources/clinician-guide-to-AndroidAPS>
+   Voor behandelaars/zorgprofessionals <./Resources/clinician-guide-to-AndroidAPS>
 
 Hoe je zelf kunt helpen
 ------------
