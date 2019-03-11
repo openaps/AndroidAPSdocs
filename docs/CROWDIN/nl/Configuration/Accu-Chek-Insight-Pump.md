@@ -35,7 +35,7 @@
       ![Screenshot of Insight Pairing 2](../../images/Insight_Pairing2.png)
      
 
--     Both the pump and phone will then display a code. Controleer of de codes op beide apparaten hetzelfde zijn en bevestig zowel de pomp als de telefoon.
+-     Both the pump and phone will then display a code. Controleer of de codes op beide apparaten hetzelfde zijn en bevestig op zowel pomp als telefoon.
      
       ![Screenshot of Insight Pairing 3](../../images/Insight_Pairing3.png)
      
