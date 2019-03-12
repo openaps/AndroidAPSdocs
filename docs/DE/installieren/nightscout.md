@@ -33,6 +33,18 @@ Ein Alarm bei niedrigem Pumpen-Batteriestand in % kann wie folgt aktiviert werde
 * PUMP_WARN_BATT_P = `51`
 * PUMP_URGENT_BATT_P = `26`
 
+Optional: Die nachfolgenden Variablen können gesetzt werden damit die Zeiten im Careportal in AndroidAPS farblich angezeigt werden:
+* `BAGE_WARN` = `480` (Gelbe Warnung nach x Stunden seit dem letzten Pumpenbatterie Wechsel im Careportal)
+* `BAGE_URGENT` = `504` (Rote Warnung nach x Stunden seit dem letzten Pumpenbatterie Wechsel im Careportal)
+* `CAGE_WARN` = `40` (Gelbe Warnung nach x Stunden seit dem letzten Pumpenkatheter Wechsel im Careportal)
+* `CAGE_URGENT` = `48` (Rote Warnung nach x Stunden seit dem letzten Pumpenkatheter Wechsel im Careportal)
+* `IAGE_WARN` = `144` (Gelbe Warnung nach x Stunden seit dem letzten Insulinreservoir Wechsel im Careportal)
+* `IAGE_URGENT` = `192` (Rote Warnung nach x Stunden seit dem letzten Insulinreservoir Wechsel im Careportal)
+* `SAGE_WARN` = `160` (Gelbe Warnung nach x Stunden seit dem letzten CGM Sensor Gesetzt im Careportal)
+* `SAGE_URGENT` = `168` (Rote Warnung nach x Stunden seit dem letzten CGM Sensor Gesetzt im Careportal)
+ 
+
+
 ### Nightscout-Website Version checken
 
 * https://DEINAPPNAME.herokuapp.com/
