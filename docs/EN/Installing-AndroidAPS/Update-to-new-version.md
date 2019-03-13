@@ -1,37 +1,47 @@
-# Installing AndroidAPS
+# Update to a new version or branch
 
-## Install git (if you don't have it)
-* Any git version should work. For example https://git-scm.com/download/win
+## Master branch
+
+**Install git (if you don't have it)**
+
+* Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win)
 * Let Studio know where is git.exe located: File - Settings - Version Control - Git
-![](images/git.png)
+![](../images/git.png)
 
-## Update your local copy
+**Update your local copy**
+
 * Click: VCS->Git->Fetch
 
-## Selecting branch
-* If you want to change branch select another branch from tray: master (latest release) or dev (developement version)
+**Selecting branch**
 
-![](images/branchintray.png)
+* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
 
-and then checkout
+![](../images/branchintray.png)
 
-![](images/checkout.png)
+and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
-## Updating branch from Github
+![](../images/checkout.png)
+
+**Updating branch from Github**
+
 * Press Ctrl+T, select Merge method and press OK
 
-![](images/merge.png)
+![](../images/merge.png)
 
 On the tray you'll see green message about updated project
 
-## Upload to phone
-* Connect phone now
-* Press "Play" button on top toolbar
+**Upload to phone**
 
-![](images/play.png)
+Generate signed apk as described in [Building APK (Generate signed APK)](Building-APK.html#generate-signed-apk)
 
-* Select connected phone and press OK
+## Development branch 
 
-![](images/connectedphone.png)
+**Attention:** The dev version of AndroidAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the same directory where you would find the log files. Enabling the engineering mode might break the loop entirely.
 
+The most stable version of AndroidAPS to use is that in the [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master).  It is advised to stay on the Master branch while you complete the Objectives and get practiced at looping.
 
+However, the [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice.  Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk.  When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+
+If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not.  The more information you can share here the better (don't forget you may need to share your [log files](../Usage/Accessing-logfiles.md).  The new features can also be discussed in the [gitter room](https://gitter.im/MilosKozak/AndroidAPS).
+<br><br>
+If you would like to be up-to-date on the Dev Branch you can use the same steps as already outlined above. You just need to change to the corresponding "dev"-Branch in Android Studio.

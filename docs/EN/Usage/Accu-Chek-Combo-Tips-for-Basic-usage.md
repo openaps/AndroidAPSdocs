@@ -1,4 +1,4 @@
-# Tips and Tricks - Combo 
+# AkkuChek Combo Tips for basic usage
 
 ## How to ensure smooth operations
 
@@ -69,17 +69,10 @@ If your battery life is signifcantly shorter than the ranges given above, please
 * If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning.
 
 ## Extended bolus, multiwave bolus
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
-* Before eating, on the **Actions tab** in AndroidAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would chosse for an extended bolus. 
-* Then use the **CALCULATOR** to enter the full carbs of the meal, but do not directly apply the values ​​suggested by the bolus calculator. If a multiwave-like bolus is to be delivered, input the carbohydrate share as a bolus. Depending on the meal, the algorithm now has to deliver a very high temporary basal rate to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max IE / h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed. 
+The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternative:
+* Input the carbs but do not bolus for it. The loop algorithm will react more agressively. If needed, use **eCarbs** (extended carbs).
 
-![Temporary goal](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Temporary_Target.png)
-
-* Alternatively, on the Actions tab in AndoidAPS a **profile change** can be made with the duration of the delayed bolus and an increased percentage. There is no need for another profile (eg in Nightscout). The correct percentage can be calculated from the average basal rate over the selected period and the amount of insulin needed. Thus, a desired extended bolus of 4 IU for 4 hours at a basal rate of 0.5 IU / h would require a temporary basal rate of 300% . 
-
-![Temporäre Basalrate](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Profile_Switch.png)
-
-* IF you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you wth disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you wth disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
 ![Disabled loop after multiwave bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 

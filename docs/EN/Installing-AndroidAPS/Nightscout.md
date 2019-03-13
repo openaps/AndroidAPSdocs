@@ -1,6 +1,6 @@
 # Nightscout setup
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site.  Your Nightscout site needs to be at least version 10, so please check you are running the [latest version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) otherwise you will get an error message on your AAPS app.  Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site.  Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) otherwise you will get an error message on your AAPS app.  Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Go to https://herokuapp.com/
 
@@ -27,6 +27,12 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
   
 
-[[https://github.com/MilosKozak/AndroidAPS/wiki/images/nightscout1.png]]
+![Azure](../../images/nightscout1.png)
 
 * Click "Save" at the top of the panel.
+
+## ns.10be.de
+
+This service is offered by fellow looper Martin Schiftan free of charge at the moment. You can install Nightscout with a few clicks and use it directly. He tries to automate the administration to such an extent that you don't have to do much manual work anymore. All settings can be made via a user-friendly web interface. The service includes an automated basal rate check using Autotune. The server is located in Germany.
+
+[http://ns.10be.de/en/index.html](http://ns.10be.de/en/index.html)

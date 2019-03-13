@@ -1,8 +1,8 @@
-# Pumps compatible with AndroidAPS
+# Pump choices
 
 AndroidAPS currently works with the Dana* R, Dana* RS and Combo pumps. The Dana* R and Combo have been available on the market for a while so many people already have access to these, and Dana* RS as an upgrade to the Dana* R is becoming a more common choice.  If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
 
-The Combo is a solid pump. And loopable.
+The Combo is a solid pump, and loopable.
 
 The advantages of the Dana* RS as the pump of choice however are:
 
@@ -20,6 +20,6 @@ The advantages of the Dana* RS as the pump of choice however are:
 
 * All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system. 
 
-The Combo of course is a very good pump. And loopable. It also has the advantage of many more infusion set types to chose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
 
 Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.

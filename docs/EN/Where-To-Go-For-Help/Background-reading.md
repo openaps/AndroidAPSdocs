@@ -1,6 +1,6 @@
 # Useful resources to read before you start
 
-Before you build your rig you're going to do a lot of reading up to understand how it all works and get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
+Before you build your rig, you're going to have to do a lot of reading in order to understand how everything works and to get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
 
 ## Further reading
 
@@ -24,6 +24,7 @@ Why we are regularly wrong in the duration of insulin action (DIA) times we use,
 
 What conclusions can we draw when investigating Insulin Sensitivity using the Autosense function within #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/
 
+[http://seemycgm.com/2017/10/29/fine-tuning-settings/](http://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 ## Background reading and articles about DIY closed looping
 
