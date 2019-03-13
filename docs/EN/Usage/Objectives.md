@@ -2,7 +2,7 @@
 
 AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
 
-If you are <b>upgrading phones</b> then you can export your settings to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to back up your settings frequently just in case. See below for details.
+If you are <b>upgrading phones</b> then you can [export your settings](../Usage/Objectives.md#export-import-settings) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to back up your settings frequently just in case. See below for details.
  
 * **Objective 1:** Setting up visualization and monitoring, and analysing basals and ratios
   * Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
@@ -14,7 +14,7 @@ If you are <b>upgrading phones</b> then you can export your settings to keep you
   * Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
   * Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
   * Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
-  * Enable [temp targets](../Usage/temptarget.html) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
+  * Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
 <br>&nbsp;<br> 
 * **Objective 3:** Understanding your open loop, including its temp basal recommendations
   * Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the forecast line in AndroidAPS homescreen/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
@@ -53,6 +53,9 @@ If you are <b>upgrading phones</b> then you can export your settings to keep you
   * Maintenance
   * Export settings
   * File location will be shown
+  
+    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+   
 * **Transfer** settings from old to new phone using the file location shown during export
 * **Install AndroidAPS** on the new phone.
 * **Import settings** on your new phone

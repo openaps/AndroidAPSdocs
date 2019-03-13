@@ -28,7 +28,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Java Implementierung:** Teil-Implementierung verfügbar [Rountrip2](https://github.com/TC2013/Roundtrip2) und [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS Umsetzung** Am Beginn. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Der Großteil der Arbeit am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) ist getan, um das Framework und die Befehle zum Laufen zu bekommen. In diesem Repository wurden ein Projekt (Medtronic) und Tickets für die weitere Entwicklung angelegt. Die Entwicklung erfolgt im Branch dev_medtronic (dem dortigen default branch). Es gibt auch einen Gitter chat: RileyLinkAAPS/Lobby. AAPS. Die 0.4 Test "release" ist veröffentlicht. Sie enthält etwa 80% der Funktionalitäten, Auslesen der Historie und Parsing fehlen noch. Weitere Details und der Zeitplan finden sich in der [Roadmap von Andy](https://github.com/andyrozman/RileyLinkAAPS/wiki/Roadmap-for-Medtronic-development).
+**AAPS Implementierungsstatus:** Arbeit im Gange. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Der Großteil der Arbeit am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) ist getan, um das Framework und die Befehle zum Laufen zu bekommen. In diesem Repository wurden ein Projekt (Medtronic) und Tickets für die weitere Entwicklung angelegt. Die Entwicklung erfolgt im Branch dev_medtronic (dem dortigen default branch). Es gibt auch einen Gitter chat: RileyLinkAAPS/Lobby. AAPS. 0.7 Test "Release" ist veröffentlicht. Diese enthält etwa 80% aller Funktionalitäten. Es fehlen nur die Analyse der Pumpenhistorie, um den Zustand der Pumpe festzustellen, sicherzustellen, dass Behandlungen erfolgreich abgeschlossen wurden oder neue Behandlungen aus der Pumpe zu importieren. Weitere Details und den Zeitplan findest Du im [Projektboard](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
 **Hardware Voraussetzungen für AAPS:** RileyLink (alle Typen)
 
@@ -97,6 +97,16 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 **Loop Status:** Ist ein Loop-Kandidat. Die Pumpe kommt Ende 2018 in ausgewählten europäischen Ländern auf den Markt. Gerüchteweise erfolgt die Steuerung über eine Android App.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
+
+* * *
+
+### Tandem t:AP
+
+**Loop-status** Ist ein Loop-Kandidat.
+
+**Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert. Die Pumpe scheint über Bluetooth zu kommunizieren.
+
+**Hinweis:** Diese Pumpe wurde in folgendem [Artikel](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&) erwähnt, aber es ist nicht sicher, ob es sich um eine t:slim mit überarbeiteter Firmware oder eine ganz neue Pumpe handelt. Bisher gibt es keine Bestätigung, weder vom Autor des Artikels noch von Tandem selbst.
 
 ## Pumpen, die nicht für den Loop geeignet sind
 

@@ -2,7 +2,7 @@
 
 AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, damit du an die Funktionen und Einstellungen von sicherem Looping herangeführt wirst. Sie stellen sicher, dass du alles, was in den Abschnitten weiter oben beschrieben wurde, korrekt installiert hast und dass du verstehst, was das System tut und warum du ihm vertrauen kannst.
 
-Wenn du das **Smartphone wechselst** kannst du die Einstellungen exportieren, um deinen Fortschritt bei den Objectives beibehalten zu können. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen. Es ist ratsam, die Einstellungen zur Sicherheit regelmäßig zu speichern. Details zum Export findest du weiter unten auf dieser Seite.  
+Wenn Du Dein **Smartphone wechselst** kannst Du Deine [Einstellungen exportieren](../Usage/Objectives.md#export-import-settings) um die Objectives nicht von vorn beginnen zu müssen. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen. Es ist ratsam, die Einstellungen zur Sicherheit regelmäßig zu speichern. Details zum Export findest du weiter unten auf dieser Seite.  
 
 * **Ziel 1:** Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren 
   * Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert. Weitere Informationen findest du unter [BZ-Quelle](../Configuration/BG-Source.md).
@@ -14,7 +14,7 @@ Wenn du das **Smartphone wechselst** kannst du die Einstellungen exportieren, um
   * Wähle Open Loop entweder in den Einstellungen oder indem du lange auf den Loop Button in der linken oberen Ecke des Hauptbildschirms drückst.
   * Arbeite dich zur Einrichtung durch die [Voreinstellungen](../Configuration/Preferences.md).
   * Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der temporären Basalratenanpassungen; gib sie jeweils von Hand in der Pumpe ein und bestätige in AndroidAPS, dass du sie akzeptiert hast. Überprüfe, ob diese Daten in AndroidAPS und Nightscout angezeigt werden.
-  * Aktiviere falls notwendig[temp targets](../Usage/temptarget.html) (temporäre Ziele). Nutze das Hypo Temp Target um zu verhindern, dass AAPS aufgrund des Blutzuckeranstiegs nach einer Hypo zu stark korrigiert. <br />&nbsp;  
+  * Aktiviere falls notwendig[temp targets](../Usage/temptarget.md) (temporäre Ziele). Nutze das Hypo Temp Target um zu verhindern, dass AAPS aufgrund des Blutzuckeranstiegs nach einer Hypo zu stark korrigiert. <br />&nbsp;  
      
 * **Ziel 3:** Verstehe den Open Loop und die TBR-Empfehlungen 
   * Lerne das Konzept hinter den Basalratenvorschlägen kennen, indem du dir [Basalraten verstehen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) durchliest sowie die Vorhersagelinie auf dem AndroidAPS Hauptbildschirm und die Zusammenfassung der Ausgaben von den Berechnungen in deinem OpenAPS Tab anschaust.   
@@ -50,12 +50,17 @@ Wenn du das **Smartphone wechselst** kannst du die Einstellungen exportieren, um
 
 ## Einstellungen exportieren & importieren
 
-* **Exportiere die Einstellungen** auf deinem alten Smartphone 
+* **Exportiere die Einstellungen** auf Deinem alten Smartphone
+  
   * Hamburger Menü (drei Striche oben links am Bildschirm)
   * Wartung
   * Exportiere die Einstellungen
   * Der Speicherort der Datei wird angezeigt.
+    
+    ![AAPS Einstellungen exportieren](../images/AAPS_ExportSettings.png)
+
 * **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
+
 * **Installiere AndroidAPS** auf dem neuen Smartphone.
 * **Importiere die Einstellungen** auf Deinem neuen Smartphone 
   * Hamburger Menü (drei Striche oben links am Bildschirm)

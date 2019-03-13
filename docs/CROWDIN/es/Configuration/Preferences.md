@@ -12,6 +12,9 @@ Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa 
 
 * Selecciona la lengua aquí. Si no está disponible, o no todas las palabras han sido traducidas entonces puedes hacer sugerencias. Los archivos de traducciones están disponibles aquí: App>Src>Main>Res>Values>String o pregunta en la sala de gitter.
 * Ajuste rápido de wizard permite añadir un botón rápido para los snack o comidas, introduce los carbohidratos en la pantalla principal y selecciona el botón wizard para calcular el bolo para esos carbohidratos basado en tus ratios (no teniendo en cuenta glucosa o insulina a bordo).
+* Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
+    
+    ![Status lights - detail](../images/StatusLights.jpg)
 
 ## Careportal
 

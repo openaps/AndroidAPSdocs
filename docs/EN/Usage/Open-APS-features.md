@@ -19,7 +19,7 @@ The SMB feature contains some safety mechanisms:
  
 **You must have completed [objective 8](../Usage/Objectives.md) to use SMB.**
  
-See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)
+See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
  
 ### Max U/h a temp basal can be set to (OpenAPS “max-basal”)
 This safety setting determines the maximum temporary basal rate the insulin pump may deliver. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.

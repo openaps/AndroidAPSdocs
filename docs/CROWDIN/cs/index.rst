@@ -77,6 +77,7 @@ Konfigurace
    DanaR <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS <./Configuration/DanaRS-Insulin-Pump.md>
    Accu Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
+   Accu Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
    Hodinky <./Configuration/Watchfaces.md>
    Nastavení <./Configuration/Preferences.md>
    Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -99,6 +100,8 @@ Použití
    AccuChek Combo tipy pro základní použití <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Odstraňování potíží s NSClientem <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
+   Huawei phones special configuration <./Usage/huawei.md>
+   Automation <./Usage/Automation.md>
 
 Kam pro pomoc 
 ------------

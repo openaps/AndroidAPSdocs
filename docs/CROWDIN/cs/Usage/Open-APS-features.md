@@ -8,10 +8,10 @@ Thanks to SMB, it can basically be sufficient for low-carb meals to inform the s
 
 The SMB feature contains some safety mechanisms:
 
-1. The largest single SMB dose can only be the smallest value off:
+1. Největší jednotlivý mikrobolus může být pouze nejmenší hodnota z:
     
     * value corresponding to the current basal rate (as adjusted by autotune/autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
-    * half the amount of insulin currently required, or
+    * polovina aktuálně požadované dávky inzulínu, nebo
     * the remaining portion of your maxIOB value in the settings.
 
 2. Probably you will often notice low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps'). This is by design for security reasons and has no negative effects if the profile is set correctly. The IOB curve is more meaningful than the course of the temporary basal rates.
@@ -20,7 +20,7 @@ The SMB feature contains some safety mechanisms:
 
 **You must have completed [objective 8](../Usage/Objectives.md) to use SMB.**
 
-See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)
+See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Max U/h a temp basal can be set to (OpenAPS “max-basal”)
 

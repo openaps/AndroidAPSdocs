@@ -2,7 +2,7 @@
 
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen. De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 
-Wanneer je **een andere telefoon gaat gebruiken** dan kun je je instellingen exporteren. Daarmee wordt ook jouw voortgang van je leerdoelen geëxporteerd. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
+Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exporteren](../Usage/Objectives.md#export-import-settings) om je voortgang door de doelstellingen te behouden. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
 
 * **Doel 1:** Instellen van visualisatie en monitoring en analyseren van basaal en ratio's 
   * Selecteer de bloedglucose bron die jij gebruikt. Zie [BG bron](../Configuration/BG-Source.md) voor meer informatie.
@@ -14,7 +14,7 @@ Wanneer je **een andere telefoon gaat gebruiken** dan kun je je instellingen exp
   * Selecteer Open-Loop vanuit het Instellingen-menu of door de Loop-knop linksbovenin het Overzicht-scherm ingedrukt te houden.
   * Stel alle [Instellingen](../Configuration/Preferences.md) in.
   * Voer minstens 20 tijdelijke basaalstanden in over een periode van 7 dagen; voer ze handmatig in op jouw pomp en bevestig in AndroidAPS dat je ze hebt geaccepteerd. Controleer dat deze gegevens zichtbaar zijn in AndroidAPS en Nightscout.
-  * Stel een [Tijdelijk Streefdoel](../Usage/temptarget.html) in indien nodig. Gebruik bijvoorbeeld een tijdelijk hypo streefdoel om te voorkomen dat het systeem te sterk corrigeert voor een stijgende bloedsuiker na een hypo. <br />&nbsp;  
+  * Enable [temp targets](../Usage/temptarget.md) if necessary. Gebruik bijvoorbeeld een tijdelijk hypo streefdoel om te voorkomen dat het systeem te sterk corrigeert voor een stijgende bloedsuiker na een hypo. <br />&nbsp;  
      
 * **Doel 3:** De Open Loop begrijpen, inclusief de voorgestelde tijdelijke basaalstanden 
   * Leer de reden achter een suggestie voor tijdelijke basaalstand kennen. Kijk naar de [Basaalstanden begrijpen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) en naar de voorspelling in de glucosegrafiek van het AndroidAPS Overzichts-scherm of Nightscout, en naar de berekening in je OpenAPS tab.   
@@ -50,12 +50,17 @@ Wanneer je **een andere telefoon gaat gebruiken** dan kun je je instellingen exp
 
 ## Instellingen exporteren & importeren
 
-* **Instellingen exporteren** van je oude telefoon 
+* **Exporteer instellingen** op je oude telefoon
+  
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
   * Exporteer instellingen
   * Je ziet nu de locatie waar jouw instellingenbestand zal worden opgeslagen
+    
+    ![Exporteer AAPS instellingen](../images/AAPS_ExportSettings.png)
+
 * **Instellingen overdragen** van je oude naar je nieuwe telefoon doe je door de bestandslocatie op je oude telefoon op te zoeken, en het instellingenbestand te kopiëren naar jouw nieuwe telefoon. Bijvoorbeeld via Bluetooth, email, of met een usb-kabeltje via je computer.
+
 * **Installeer AndroidAPS** op je nieuwe telefoon.
 * **Instellingen importeren** op je nieuwe telefoon 
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)

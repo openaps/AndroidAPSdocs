@@ -82,6 +82,7 @@ Configuration
    Dana-R pump <./Configuration/DanaR-Insulin-Pump.md>
    Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
    Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
+   Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
    Watchfaces <./Configuration/Watchfaces.md>
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -104,6 +105,8 @@ Usage
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
+   Huawei phones special configuration <./Usage/huawei.md>
+   Automation <./Usage/Automation.md>
 
 Where to go for help 
 ------------
