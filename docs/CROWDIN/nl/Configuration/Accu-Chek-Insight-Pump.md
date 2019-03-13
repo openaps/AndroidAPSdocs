@@ -35,7 +35,7 @@
       ![Screenshot of Insight Pairing 2](../../images/Insight_Pairing2.png)
      
 
--     Both the pump and phone will then display a code. Controleer of de codes op beide apparaten hetzelfde zijn en bevestig zowel de pomp als de telefoon.
+-     Zowel op je pomp als op je telefoon zal vervolgens een code verschijnen. Controleer of de codes op beide apparaten hetzelfde zijn en bevestig op zowel pomp als telefoon.
      
       ![Screenshot of Insight Pairing 3](../../images/Insight_Pairing3.png)
      
@@ -65,8 +65,8 @@ In de Insight-instellingen in AndroidAPS kun je de volgende opties inschakelen:
 - "Batterijwissel noteren": Dit voegt een notitie toe aan AndroidAPS wanneer je een nieuwe batterij in de pomp plaatst.
 - "Werkingsmodus-wissel noteren": Hiermee voegt je een notitie toe in de AndroidAPS database wanneer je de pomp start, stopt of pauzeert.
 - "Alarm noteren": Dit maakt een notitie in AndroidAPS wanneer de pomp een alarm geeft (behalve herinneringen, bolus en tijdelijke basaalstand annulering - deze worden niet geregistreerd).
-- "TBR-emulatie inschakelen": De Insight pump kan alleen tijdelijke basaalstanden (TBRs) instellen tot maximaal 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.  
- <font color="red">Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.</font>
+- "TBR-emulatie inschakelen": De Insight pump kan alleen tijdelijke basaalstanden (TBRs) instellen tot maximaal 250%. Om deze beperking te omzeilen, zal TBR-emulatie ervoor zorgen dat de pomp een vertraagde bolus gebruikt als je een TBR van meer dan 250% nodig hebt.  
+ <font color="red">Opmerking: gebruik slechts één vertraagde bolus tegelijkertijd omdat meerdere vertraagde bolussen tegelijkertijd, fouten kunnen veroorzaken.</font>
 -     "Herstel duur": Dit definieert hoe lang AndroidAPS zal wachten na een mislukte verbindingspoging voordat hij het opnieuw probeert. Je kunt kiezen van 0 tot 20 seconden. Als je verbindingsproblemen ondervindt, kies je een langere wachttijd. 
        <br><br>Voorbeeld voor min. herstel duur = 5 en max. herstel duur = 20
        <br><br>geen verbinding -> wacht <b>5</b> sec.
@@ -101,7 +101,7 @@ Configureer alarmen in de pomp als volgt:
 
 Met deze instellingen gaan alle alarmen vanuit de pomp af in stilte. AndroidAPS krijgt de alarmen wel binnen, en beslist vervolgens of een alarm relevant voor jou is. Niet-relevante alarmen worden bevestigd in de pomp door AndroidAPS, hiervan zul jij dus niks merken. Wel-relevante alarmen worden door AndroidAPS niet bevestigd, waarna het volume van het alarm zal toenemen (eerst piepen, dan trillen) en jij als gebruiker het alarm moet bevestigen.
 
-Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Dit trilalarm kan niet worden uitgeschakeld. Oudere pompen trillen in deze omstandigheden niet.
+Insight pompen met nieuwere firmware zullen kort trillen wanneer een bolus wordt afgeleverd (bijvoorbeeld wanneer AndroidAPS een SMB afgeeft of wanneer AndroidAPS een vertraagde bolus afgeeft om een hoge tijdelijke basaalstand te simuleren). Dit trilalarm kan niet worden uitgeschakeld. Oudere pompen trillen in deze omstandigheden niet.
 
 ## Batterij vervangen
 
@@ -109,18 +109,18 @@ De Insight pomp heeft een kleine interne batterij om essentiële functies zoals 
 
 ## Insight specifieke foutmeldingen
 
-### Extended bolus
+### Vertraagde bolus
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Gebruik slechts één vertraagde bolus tegelijk, omdat meerdere uitgebreide bolussen tegelijkertijd fouten kunnen veroorzaken.
 
-### Time out
+### Time-out
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Soms kan het gebeuren dat de Insight niet antwoordt wanneer AndroidAPS probeert te verbinden met je pomp. In dat geval zal AAPS het volgende bericht weergeven: "Time-out tijdens verbinden - reset bluetooth".
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+Om dit op te lossen, schakel je bluetooth uit op je pomp EN op je telefoon gedurende ongeveer 10 seconden. Zet bluetooth daarna weer aan op je pomp en telefoon.
 
 ## Wisselen van tijdzone met de Insight
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Lees alles over reizen in verschillende tijdzones op de pagina [Wisselen van tijdzone](../Usage/Timezone-traveling#insight).

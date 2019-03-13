@@ -21,7 +21,7 @@ AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier heb
     https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/Configuration/Config-Builder.html
 * 'Geavanceerde instellingen' - Statusindicatoren geven met een kleurtje aan op het Overzicht-scherm wanneer je reservoir of batterij bijna leeg is. Of wanneer het tijd is om je infuusset te vervangen. Deze functie is nieuw in versie 2.1.1.
     
-    ![Statusindicatoren](../images/StatusLights.jpg)
+    ![Statusindicatoren - details](../images/StatusLights.jpg)
 
 ## Overzicht
 

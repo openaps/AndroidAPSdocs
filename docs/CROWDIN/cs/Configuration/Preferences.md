@@ -14,7 +14,7 @@ V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na Vámi z
 * Průvodce rychlým nastavením Vám dovoluje přidat rychlé tlačítko pro často používaná jídla na hlavní obrazovku. Zadejte v nastavení počet sacharidů, a on Vám spočítá bolus pro tyto sacharidy na základě aktuálních poměrů (dle aktuální hodnoty glykémie a aktivního inzulínu atd.).
 * Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
     
-    ![Status lights](../images/StatusLights.jpg)
+    ![Status lights - detail](../images/StatusLights.jpg)
 
 ## Portál nastavení péče
 
