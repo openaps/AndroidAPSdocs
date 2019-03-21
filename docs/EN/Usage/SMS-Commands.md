@@ -49,11 +49,11 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 ## PROFILE STATUS
 - Profile1
 ## PROFILE LIST
-- 1. Profile1 2. Profiles
+- 1.`Profile1` 2.`Profile2`
 ## PROFILE 1
-- 1. To switch profile to Profile1 100% reply with code Any
+- To switch profile to Profile1 100% reply with code Any
 ## PROFILE 2 30
-- 1. To switch profile to Profile2 30% reply with code Any
+- To switch profile to Profile2 30% reply with code Any
 
 
 
