@@ -19,3 +19,7 @@
 * Unter "DanaR Pumpen-Einstellungen" kannst du auch die Bolus-Geschwindigkeit (12s/1IE, 30s/1IE oder 60s/1IE) einstellen.
 * Stelle auf der Pumpe die Basalschritte auf 0,01 IE/h.
 * Erlaube die Vewendung von verlängerten Boli auf der Pumpe
+
+## Mit der Dana R Pumpe über Zeitzonen hinweg reisen
+
+Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg reisen](../Usage/Timezone-traveling.md#insight).

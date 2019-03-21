@@ -1,7 +1,9 @@
 # BZ-Quelle
 
-**Für Dexcom Nutzer:**  
-_G5 mit xdrip+:_  
+## Für Dexcom Nutzer  
+
+
+### Dexcom G5 / G6 mit xdrip+  
 
 
 * Lade [xdrip](https://github.com/NightscoutFoundation/xDrip) herunter und folge der Anleitung auf Nightscout ([G4 ohne share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -10,23 +12,25 @@ _G5 mit xdrip+:_
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 
-_G5 mit der gepatchten Dexcom App_  
+### Dexcom G5 / G6 mit gepatchter Dexcom App  
 
 
-* Lade die apk von [hier](https://github.com/dexcomapp/dexcomapp) herunter und wähle entweder die mg/dl- oder mmol/l-Version aus.
+* Lade die APK von [hier](https://github.com/dexcomapp/dexcomapp) herunter und wähle die Version, die Du benötigst (entweder mg/dl oder mmol/l, G5 oder G6).
 * Stoppe den Sensor und deinstalliere die originale Dexcom App, falls du das noch nicht gemacht hast.
 * Installiere die heruntergeladene apk
 * Starte den Sensor
 * Wähle Dexcom G5 (patched) im Konfigurations-Generator (Einstellung in AndroidAPS).
 
-_G4 mit OTG Kabel ("traditionelles Nightscout")..._  
+### Dexcom G4 mit OTG Kabel ("traditionelles Nightscout")  
 
 
 * Downloade die Nightscout Uploader app vom Play Store und folge den Einstellungen auf Nightscout [hier](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* Gib in den AndroidAPS Einstellungen > Nightscout-Client deine Nightscout URL und dein Nightscout API-Key ein.
+* Gib in den AndroidAPS Einstellungen deine Nightscout URL und dein Nightscout API-Key ein.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Nightscout-Client BZ.
 
-**Libre mit Bluetooth-Aufsatz:**  
+## Für Libre Nutzer mit Bluetooth-Aufsatz  
+
+
 Um dein Libre als CGM zu verwenden, das alle 5 Minuten Glukosewerte empfängt, musst du zuerst einen NFC-zu-Bluetooth Adapter kaufen, z.B.:
 
 * MiaoMiao-Reader <https://www.miaomiao.cool/>
@@ -34,7 +38,7 @@ Um dein Libre als CGM zu verwenden, das alle 5 Minuten Glukosewerte empfängt, m
 * BlueReader <https://bluetoolz.de/blueorder/#home>
 * Sony Smartwatch 3 (SWR50) als Auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-_Mit xdrip+_  
+### Libre mit xdrip+  
 
 
 * Lade xDrip+ herunter und folge den Anleitungen von [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) oder [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
@@ -44,28 +48,41 @@ _Mit xdrip+_
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 * Beim G5 native mode in xdrip gehe zu Einstellungen > Cloud-Upload > API Upload (REST) > Extra Options und hake "Append source info to device" an.
 
-_Mit Glimp:_  
+### Libre mit Glimp  
 
 
-* Downloade über das Google Play Store die App Glimp und folge der Anleitung auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
+* Lade über den Google Play Store die App Glimp herunter und folge der Anleitung auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
 * Wähle Glimp im Konfigurations-Generator (Einstellung in AndroidAPS).
 
-**Minimed 640G oder Minimed 630G**  
+## Für Eversense Nutzer  
 
 
-* Lade [600SeriesAndroidUploader](http://pazaan.github.io/600SeriesAndroidUploader/) herunter und folge den Anleitungen auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
+Der einfachste Weg, um Eversense mit AndroidAPS zu nutzen, ist die modifizierte [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) zu installieren (und zuvor die Original-Eversense-App zu deinstallieren).
+
+**Warnung: Durch die Deinstallation der alten App, werden Deine lokalen historischen Daten (älter als eine Woche) verloren gehen!**
+
+Um die Eversense-Daten in AndroidAPS nutzen zu können, musst Du die App [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) installieren und dort "Send to AAPS and xDrip" aktivieren. Im [Konfigurations-Generator](../Configuration/Config-Builder.md) in AndroidAPS wählst Du "MM640g" als BZ-Quelle. Da die Glukose-Daten von Eversense manchmal schwankend ("noisy") sein können, sollte in ESEL "Smooth Data" aktiviert werden. Das ist besser als die Option "Always use short average delta instead of simple delta" zu wählen.
+
+Weitere Hinweise zur Nutzung von xDrip mit Eversense findest Du [hier](https://github.com/BernhardRo/Esel/tree/master/apk).
+
+## Für Minimed 640G / 630G Nutzer  
+
+
+* Lade [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) herunter und folge den Anleitungen auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
 * Im 600 Series Uploader gehe zu Settings > Send to xdrip+ und wähle ON (ankreuzen).
 * Wähle MM640g im Konfigurations-Generator (Einstellung in AndroidAPS).
 
-**PocTech CT-100:**  
+## Für PocTech CT-100 Nutzer  
 
 
 * Installiere die PocTech App
 * Wähle PocTech App im Konfigurations-Generator (Einstellung in AndroidAPS).
 
-**Für die Nutzer anderer CGM-Systeme mit Upload zu Nightscout:**  
-Wenn du ein anderes CGM-System nutzt mit dem du Daten zu [Nightscout](http://www.nightscout.info) hochladen kannst, dann  
+## Für Benutzer anderer CGM-Systeme, deren Daten zu Nightscout hochgeladen werden  
 
 
-* Gib in den AndroidAPS Einstellungen > Nightscout-Client deine Nightscout URL und dein Nightscout API-Key ein.
+Wenn Du ein anderes CGM-System nutzt und dessen Daten an [Nightscout](http://www.nightscout.info) sendest  
+
+
+* Gib in den AndroidAPS Einstellungen deine Nightscout URL und dein Nightscout API-Key ein.
 * Wähle NSClient im Konfigurations-Generator (Einstellung in AndroidAPS).

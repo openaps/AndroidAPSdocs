@@ -3,29 +3,34 @@ AndroidAPS 가이드에 오신 것을 환영합니다.
 
 **AndroidAPS가 무엇입니까?**
 
-AndroidAPS는 블루투스 통신기능이 있는 인슐린 펌프를 이용하여 OpenAPS의 "oref0"와 "oref1" 알고리즘을 작동할 수 있는 안드로이드 스마트폰용 앱입니다.
+AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. An APS can't do the job as well as a biological pancreas does, but it can make type 1 diabetes easier to manage using devices that are commercially available and software that is simple and safe. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
+
+A note of caution: AndroidAPS is not regulated by any medical authority in any country. Using AndroidAPS is essentially carrying out a medical experiment on yourself. Setting up the system requires determination and technical knowledge. If you don't have the technical know-how at the beginning, you will by the end. All the information you need can be found in these documents, elsewhere online, or from others who have already done it -- you can ask them in Facebook groups or other forums. Many people have successfully built AndroidAPS and are now using it entirely safely, but it is essential that every user:
+* Builds the system themselves so that they thoroughly understand how it works
+* Adjusts the settings to suit their own diabetes
+* Maintains and monitors the system to ensure it is working properly
+If you're ready for the challenge, please read on. 
 
 **AndroidAPS의 주요 개발 목표:**
 
-* 다른 코드를 수정하지 않고도 손쉽게 새로운 모듈추가가 가능한 모듈 방식의 앱
-* 여러 언어로 번역 될 수 있는 앱
-* 컴파일 전 최종 apk 파일에 포함될 기능을 손쉽게 선택가능하게 한 앱
-* Open Loop와 Closed Loop 모드를 지원하는 앱
-* APS가 어떻게 작동하는지 확인할 수 있는 앱: 입력변수, 결과 및 최종결정
-* APS 알고리즘을 추가할 수 있는 기능과 사용자들이 어떤 알고리즘을 사용할 지 결정할 수 있게 한다.
-* 실제 펌프사용 유무와 별개로 "가상펌프"를 통해 사용자가 APS를 안전하게 작동해볼 수 있도록 한 앱
-* Nightscout와 원활하게 연동하는 앱
-* 사용자의 안전 제약을 쉽게 추가/해제할 수 있도록 한 앱
-* APS와 Nightscout를 통해 1형당뇨를 관리할 수 있도록 하는 일체형 통합 앱
+* An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
+* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
+* An app to which users can easily add or remove modules as needed
+* An app with different versions for specific locations and languages.
+* An app which can be used in open- and closed-loop mode
+* An app that is totally transparent: users can input parameters, see results, and make the final decision
+* An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
+* An app closely integrated with Nightscout
+* An app in which the user is in control of safety constraints 
 
 **시작하기 위해 필요한 것들:**
 
-* 5.0 혹은 이후 버전의 안드로이드 스마트폰. AndroidAPS와 잘 작동하는 폰에 대한 리포트를 확인하시려면 이`이 스프레드시트 <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ 를 확인해보세요.
-* CGM 데이터 수신 앱: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `Dexcom G5 앱(패치버전) <https://github.com/dexcomapp/dexcomapp>`_, `PochTech 앱 <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ 그 자체
+* An Android smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ to learn which phones work best with AndroidAPS.
+* A continuous clucose monitor (CGM): Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, or PocTech
+* An app on the phone to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
+* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself installed on the phone
 * `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 버전 혹은 이후버전
-* 호환되는 펌프: 다나R, 다나RS 또는 아큐-첵 콤보 인슐린 펌프(본인이 직접 다른 인슐린 펌프와 연동되도록 빌드 할 수도 있습니다.)
-* 연속혈당측정기 (CGM) 데이터 소스: 덱스컴 G4/G5/G6, 프리스타일 리브레, 에버센스, 메드트로닉 가디언, 포텍
+* A supported pump: Dana-R or Dana-RS from Sooil, or Accu-Chek Combo or Insight from Roche (unless you are able to build your own driver for another insulin pump)
 
 
 .. 참고:: 
@@ -49,8 +54,8 @@ AndroidAPS 시작하기
    스크린샷 <./Getting-Started/Screenshots.md>
    스마트폰 <./Getting-Started/Phones.md>
    펌프 선택 <./Getting-Started/Pump-Choices.md>
-   향후 가능한 펌프 <./Getting-Started/Future-possible-Pump-Drivers.md>
-   Sample Setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
+   Possible future pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
    APS사용자를 위한 FAQ
    용어 <./Getting-Started/Glossary.md>
   
@@ -74,9 +79,10 @@ AndroidAPS 설치하기
    
    구성관리자 <./Configuration/Config-Builder.md>
    BG 소스<./Configuration/BG-Source.md>
-   다나R 펌프<./Configuration/DanaR-Insulin-Pump.md>
-   다나RS 펌프<./Configuration/DanaRS-Insulin-Pump.md>
-   아큐-첵 콤보 펌프 <./Configuration/Accu-Chek-Combo-Pump.md>
+   Dana-R pump <./Configuration/DanaR-Insulin-Pump.md>
+   Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
+   Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
+   Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
    워치화면 <./Configuration/Watchfaces.md>
    설정 <./Configuration/Preferences.md>
    민감도 감지와 COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -90,15 +96,17 @@ AndroidAPS 설치하기
    목적 <./Usage/Objectives.md>
    OpenAPS 기능들 <./Usage/Open-APS-features.md>
    프로파일 변경 <./Usage/Profiles.md>
-   임시목표 <./Usage/temptarget.md>
-   문자(SMS) 명령 <./Usage/SMS-Commands.md>
+   Temp-targets <./Usage/temptarget.md>
+   SMS commands <./Usage/SMS-Commands.md>
    확장 탄수화물
-   펌프의 시간대 이동 <./Usage/Timezone-traveling.md>
+   Crossing timezones with pumps <./Usage/Timezone-traveling.md>
    로그 파일에 접근하기 <./Usage/Accessing-logfiles.md>
-   혈당데이터 평활화하기 <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   아큐-첵 콤보 기초 사용법 <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+   Smoothing blood glucose data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    NSClient 문제해결 <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
+   Huawei phones special configuration <./Usage/huawei.md>
+   Automation <./Usage/Automation.md>
 
 도움을 구할 곳들 
 ------------
@@ -109,6 +117,14 @@ AndroidAPS 설치하기
    시작하기 전에 보면 좋은 유용한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
    도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Resources/Reference
+            
+   Resources <./Resources/index>
+   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+
 도움주기
 ------------
 .. toctree::
@@ -116,5 +132,5 @@ AndroidAPS 설치하기
    :glob:
 
    도움주기
-   앱 번역하는 방법
+   How to translate the app <./translations.md>
    wiki 수정하는 방법

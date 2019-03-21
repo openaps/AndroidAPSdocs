@@ -31,7 +31,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 Detaillierte Beschreibung der notwendigen Schritte.
 
-### Android Studio installieren
+## Android Studio installieren
 
 * Installiere git 
   * [Windows](https://gitforwindows.org/)
@@ -76,7 +76,7 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 * Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Hier ist allerdings auch ein guter Zeitpunkt, um eine Pause einzulegen.
 
-### Generate signed APK
+## Code und weitere Komponenten herunterladen
 
 * Nutze “git clone” in Android Studio wie in dem folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
 
@@ -173,9 +173,16 @@ Perfekt, der erste “Build Prozess” ist erfolgreich abgeschlossen, aber wir s
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
-Als nächstes, gehe zum “Build” Menü und “Generate Signed APK”. Signieren bedeutet, dass du deine generierte Anwendung unterschreibst, aber digital als eine Art digitaler Fingerabdruck in der Anwendung selbst. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
+## Siginierte APK erstellen (Generate signed APK)
 
-![Screenshot 39](../images/Installation_Screenshot_39.png)
+Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. Falls Du eine ältere Version benutzt, wähle im Menü “Build” und dann “Generate Signed APK...”.)  
+Signieren bedeutet, dass du deine generierte Anwendung unterschreibst, aber digital als eine Art digitaler Fingerabdruck in der Anwendung selbst. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
+
+![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+
+Wähle in der folgenden Dialogbox "APK" statt "Android App Bundle" und klicke auf den Button "Next".
+
+![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
 
 Wähle “App” aus und klicke auf “Next”.
 
@@ -218,7 +225,7 @@ Klicke auf “locate” im “event log”.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
-### Übertrage die APK-Datei auf das Smartphone
+## Übertrage die APK-Datei auf das Smartphone
 
 Es sollte sich ein Datei Manager öffnen. Das könnte bei dir anders aussehen (dieser Screenshot wurde auf einem Linux PC erstellt). In Windows wird sich der “Explorer” öffnen, in Mac OS X der “Finder”. Dort solltest du jetzt das Verzeichnis mit der APK-Datei sehen. Es ist aber unglücklicherweise nicht die, die wir suchen, sondern nur die “wear-release.apk”.
 

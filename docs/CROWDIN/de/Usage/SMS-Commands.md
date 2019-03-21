@@ -2,11 +2,17 @@
 
 Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS
 
-In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolons getrennt. ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden
+In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolons ohne weitere Leerzeichen getrennt (z.B. +4912345678;+4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden
 
 Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem AndroidAPS installiert ist. Sende dazu eines der folgenden **fettgedruckten** Kommandos und das Handy wird mit einer Erfolgsmitteilung oder dem angeforderten Status antworten.
 
-## BG
+Any message not starting with a letter is ignored
+
+## @How are you?
+
+## #Are you ok?
+
+## BZ
 
 - Letzter Blutzucker 125 vor 4min, Delta: -12mg/dl, IOB: 0.20E (Bolus: 0.10E Basal: 0.10E)
 
@@ -40,7 +46,7 @@ Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem
 
 - NSCLIENT neu starten 1 Empfänger
 
-## DANAR / PUMP (since 1.60)
+## PUMP
 
 - Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 
@@ -50,15 +56,50 @@ Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem
 
 ## BASAL 0.3
 
-- Um eine Basalrate von 0.3E/h zu starten, antworte mit Code Swe
-- Ferngesteuerte Basalraten-Einstellungen sind nicht erlaubt (wenn ferngesteuerte Kommandos nicht erlaubt sind)
+- To start basal 0.3U/h for 30 min reply with code Swe
+
+## BASAL 0.3 20
+
+- To start basal 0.3U/h for 20 min reply with code Swe
+
+## BASAL 30%
+
+- To start basal 30% for 30 min reply with code Swe
+
+## BASAL 30% 50
+
+- To start basal 30% for 50 min reply with code Swe
 
 ## BOLUS 1.2
 
-- Um einen Bolus vo 1.2E abzugeben, antworte mit Code Rrt
-- Ferngesteuerte Boli sind nicht erlaubt (*falls innerhalb von 15 Minuten nach dem letzten Bolusbefehl oder wenn ferngesteuerte Kommandos nicht erlaubt sind*)
+- To deliver bolus 1.2U reply with code Rrt
+- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+
+## EXTENDED STOP/CANCEL
+
+- To stop extended bolus reply with code EmF
+
+## EXTENDED 2 120
+
+- To start extended bolus 2U for 120 min reply with code EmF
 
 ## CAL 5.6
 
-- Um Kalibrierungswert von 126 zu senden, antworte mit Code Rrt
-- Kalibrierung gesendet (*wenn xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein*)
+- To send calibration 5.6 reply with code Rrt
+- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+
+## PROFILE STATUS
+
+- Profile1
+
+## PROFILE LIST
+
+- 1.`Profile1` 2.`Profile2`
+
+## PROFILE 1
+
+- To switch profile to Profile1 100% reply with code Any
+
+## PROFILE 2 30
+
+- To switch profile to Profile2 30% reply with code Any

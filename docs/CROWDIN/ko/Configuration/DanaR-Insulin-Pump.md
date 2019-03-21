@@ -19,3 +19,7 @@
 * 다나R 펌프 세팅의 설정에서 기본 Bolus주입 속도를 변경할 수 있습니다(1u당 12초, 1u당 30초 및 1u당 60초).
 * 펌프의 Basal 단위를 0.01U/h로 하세요.
 * 펌프에서 확장Bolus를 활성화하세요.
+
+## Timezone traveling with Dana R pump
+
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

@@ -18,3 +18,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 * Set basal step on pump to 0.01 U/h
 * Enable extended boluses on pump
+
+## Timezone traveling with Dana R pump
+
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

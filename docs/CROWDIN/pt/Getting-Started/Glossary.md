@@ -12,10 +12,27 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>AMA</td>
- <td>advanced meal assist - advanced algorithm to handle carbs</td>
- <td>MA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a></td>
+  <td>
+    AMA
+  </td>
+  
+  <td>
+    advanced meal assist - advanced algorithm to handle carbs
+  </td>
+  
+  <td>
+    MA / SMB
+  </td>
+  
+  <td>
+    <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a>
+  </td>
+<tr>
+ <td>Android auto</td>
+ <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
+ <td>&nbsp;</td>
+ <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
+</tr>
 </tr>
 <tr>
  <td>APK</td>
@@ -32,7 +49,7 @@
 <tr>
  <td>Azure</td>
  <td>cloud computing platform to host Nightscout data</td>
- <td>Heroko / Nightscout</td>
+ <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
@@ -48,7 +65,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td>BG source</td>
+<td>Origem da Glicemia</td>
  <td>Where do your glucose values come from?</td>
  <td>CGM / FGM</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
@@ -63,7 +80,7 @@
  <td>Blukon Nightreader</td>
  <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
  <td>BlueReader / MiaoMiao</td>
- <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Bluon Nightreader</a></td>
+ <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
 <tr>
  <td>BR</td>
@@ -251,7 +268,7 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
- <td>Profile</td>
+ <td>Perfil</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>

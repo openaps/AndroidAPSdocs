@@ -1,21 +1,25 @@
-# DanaR Pump
+# DanaR pomp
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump) if you have the DanaRS launched in 2017 instead.*
+*Deze instructies zijn voor het instellen van de app en pomp, en gelden voor een DanaR. Ga naar [DanaRS Insuline pomp](./DanaRS-Insulin-Pump) als je in plaats daarvan de DanaRS hebt (verkrijgbaar na 2017).*
 
-* In the pump go to Main Menu > Setting > User Option
-* Turn on "8. Extended Bolus"
+* In de pomp ga naar Main Menu > Setting > User Option
+* Zet "8. Extended Bolus" aan.
 
-![DanaR pump](../images/danar1.png)
+![DanaR pomp](../images/danar1.png)
 
-* Go to Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
+* Ga naar Main Menu > Setting > Discovery
+* In je telefoon instellingen ga naar Bluetooth, scan voor nabijgelegen apparaten, selecteer het serienummer van jouw DanaR en voer jouw wachtwoord in (Standaard wachtwoord is 0000 of 1234). Als jouw telefoon de DanaR niet laat zien bij het scannen, herstart dan je telefoon en haal de DanaR batterij eruit, stop hem er weer in en herhaal deze twee stappen.
 
-* In AndroidAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
+* Ga naar Config Builder in AndroidAPS en selecteer het type DanaR dat jij hebt (DanaR, DanaR Koreaans, DanaRv2)
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
-* Select DanaR Bluetooth device, and click your DanaR serial number.
-* Select Pump password, and input your password. (Default password is 1234)
-* If you want AndroidAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Note this means you cannot loop with high TBRs whilst using extended boluses for food.
-* In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
-* Set basal step on pump to 0.01 U/h
-* Enable extended boluses on pump
+* Tik op de 3 stipjes in de rechter bovenhoek van het AAPS Overzicht-scherm. Kies Instellingen.
+* Selecteer DanaR Bluetooth apparaat en tik op jouw DanaR serienummer.
+* Selecteer Pomp wachtwoord en voer jouw wachtwoord in. (Standaardwachtwoord is 1234)
+* Als je wilt dat AndroidAPS de basaalstand hoger boven de 200% kan instellen, schakel dan "Gebruik vertraagde bolussen voor > 200%" in. Dat betekent wel, dat je niet kunt loopen met hoge tijdelijke basaalstanden als je vertraagde maaltijdbolussen gebruikt.
+* In Instellingen onder DanaR pomp instellingen kun je de standaard bolus snelheid wijzigen (12sec per 1E, 30sec per 1E of 60sec per 1E).
+* Zet de stapgrootte voor basaal op 0,01 E/uur
+* Activeer vertraagde bolussen op de pomp
+
+## Wisselen van tijdzone met de DanaR
+
+Voor informatie over het wisselen van tijdzone zie sectie [Wisselen van tijdzone](../Usage/Timezone-traveling.md#insight).

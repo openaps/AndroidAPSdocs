@@ -1,13 +1,13 @@
-# Phones
+# Telefoons
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Gebruikers houden een [lijst van geteste telefoons en horloges](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) bij
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Je kunt de lijst filteren op bepaalde pompen of telefoons maar zet de filters weer terug op 'alles weergeven' als je klaar bent, zodat de persoon na jou alles weer in beeld krijgt.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Om een telefoon of horloge toe te voegen aan de lijst kun je dit [formulier](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) invullen
 
-Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email [donations@androidaps.org](mailto:hardware@androidaps.org).
+Bij problemen met deze lijst, stuur een email naar <hardware@androidaps.org>. Wanneer je een telefoon/horloge beschikbaar wilt stellen om te testen, stuur een email naar [donations@androidaps.org](mailto:hardware@androidaps.org).
 
-## Phone Background
+## Telefoon achtergrond
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![telefoon achtergrond](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> wanneer je je telefoon wilt verfraaiien met het AndroidAPS logo, kun je hier een achtergrondafbeelding downloaden: ![Achtergrond in hoge resolutie.](../images/bg_phone.jpg)

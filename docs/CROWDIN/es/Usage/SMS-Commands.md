@@ -2,9 +2,15 @@
 
 En los ajustes de tu móvil Android ve a aplicaciones- AndroidAPS- permisos y habilitar SMS
 
-En AndroidAPS ve a preferencias- Comunicaciones SMS e introduce el número de teléfono con el que permitirás las comunicaciones SMS y habilita también “allow remote commands via SMS”
+In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 
 Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usar comandos SMS usando algún comando en negrita abajo, el teléfono responderá para confirmar el comando pedido.
+
+Any message not starting with a letter is ignored
+
+## @How are you?
+
+## #Are you ok?
 
 ## BG
 
@@ -40,7 +46,7 @@ Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usa
 
 - Reinicia NSclient
 
-## DANAR/PUMP (since 1.60)
+## PUMP
 
 - Última conexión: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
@@ -50,15 +56,50 @@ Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usa
 
 ## BASAL 0.3
 
-- Para poner basal 0.3u/h responder con código Swe
-- No está permitido comandar basales remotamente (si comandos remotos no están permitidos)
+- To start basal 0.3U/h for 30 min reply with code Swe
+
+## BASAL 0.3 20
+
+- To start basal 0.3U/h for 20 min reply with code Swe
+
+## BASAL 30%
+
+- To start basal 30% for 30 min reply with code Swe
+
+## BASAL 30% 50
+
+- To start basal 30% for 50 min reply with code Swe
 
 ## BOLUS 1.2
 
-- Para poner bolo 1.2 responder con código Rrt
-- Los bolos remotos no están permitidos (si ha habido otro bolo en últimos 15 minutos o si remoto no habilitado)
+- To deliver bolus 1.2U reply with code Rrt
+- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+
+## EXTENDED STOP/CANCEL
+
+- To stop extended bolus reply with code EmF
+
+## EXTENDED 2 120
+
+- To start extended bolus 2U for 120 min reply with code EmF
 
 ## CAL 5.6
 
-- Para enviar calibración 5.6 enviar código Rrt
-- Calibración enviada (si Xdrip instalado. Debe estar habilitado aceptar calibración en Xdrip+)
+- To send calibration 5.6 reply with code Rrt
+- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+
+## PROFILE STATUS
+
+- Profile1
+
+## PROFILE LIST
+
+- 1.`Profile1` 2.`Profile2`
+
+## PROFILE 1
+
+- To switch profile to Profile1 100% reply with code Any
+
+## PROFILE 2 30
+
+- To switch profile to Profile2 30% reply with code Any
