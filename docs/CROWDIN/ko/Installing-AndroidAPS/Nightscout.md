@@ -15,7 +15,16 @@
   * `PUMP_FIELDS` = `reservoir battery clock` 
   * 펌프 상태를 모니터링([LINK](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring))하기 위해 다양한 알람 설정이 가능합니다. 특히 펌프배터리량(%) 설정이 권장됩니다. 
     * `PUMP_WARN_BATT_P` = `51`
-    * `PUMP_URGENT_BATT_P` = `26`
+    * `PUMP_URGENT_BATT_P` = `26` 
+  * Optional: The following 'timers' can be set for the coloring in the AAPS careportal: 
+    * `BAGE_WARN` = `480` (Warning after x hours since last Battery Changed Event in Careportal)
+  * `BAGE_URGENT` = `504` (Urgent warning after x hours since last Battery Changed Event in Careportal)
+  * `CAGE_WARN` = `40` (Warning after x hours since last Cannula Changed Event in Careportal)
+  * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
+  * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
+  * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
+  * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
 
 ![Azure](../../images/nightscout1.png)
 
