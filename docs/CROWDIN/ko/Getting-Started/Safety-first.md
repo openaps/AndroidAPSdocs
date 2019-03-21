@@ -1,15 +1,15 @@
 # 안전유의사항
 
-**본인의 Closed Loop를 구축하기로 결정하였다면, 보안과 당신의 행동이 미칠 영향에 대해서 항상 고려하시기 바랍니다.**
+**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
 
 ## 일반적인 정보
 
-* AndroidAPS은 당뇨를 관리함에 있어서 도움을 주는 도구일 뿐입니다. 설치 후 잊어버려도 되는 것이 아님을 유의하셔야합니다.
-* 인슐린요구에 관련하여 본 프로그램이 절대적으로 신뢰할 수 있는 것이 아님을 숙지 하시기 바랍니다. 항상 지속적인 확인과 주의가 필요합니다. 어떻게 작동되어지고, 어떻게 예상되어지는지에 대해 숙지하시고, 항상 모니터링 하시기 바랍니다.
-* 펌프와 동기화된 스마트폰은 펌프와 관련된 어떤 것이라도 통제할 수 있음을 숙지하시기 바랍니다. 이 스마트폰을 APS와 아이들과 연락하는 용도로만 사용하십시오. 트로이 목마, 바이러스 또는 봇같은 원치않는 코드와 함께 설치되는 것을 방지하기 위해 다른 앱과 게임은 설치하지 마시기 바랍니다.
-* 구글이나 휴대기기 제조사에서 제공하는 모든보안패치를 업데이트 하시기 바랍니다.
+* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
+* Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
+* Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
+* Install all security updates provided by your phone manufacturer and Google.
 
 ## SMS 통신기
 
-* SMS통신기를 활성화 했다면, 원격 명령이 가능한 폰이 분실되었을시 어떤 일이 일어날 수 있을 것인지에 대해 반드시 생각해보세요. 따라서 최소한 PIN 코드이상의 보안으로 본인의 폰을 보호하세요.
-* AndroidAPS 버전1.1 이후부터는, Bolus주입 및 프로파일 변경과 같은 중요한 원격 명령과 관련한 정보는 사용자에게 SMS통보를 하게 됩니다. 휴대기기가 분실될 경우를 대비하여, SMS통신을 위한 최소한 두개의 휴대기기 번호를 설정하시기 바랍니다.
+* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
+* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
