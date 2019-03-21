@@ -6,6 +6,12 @@ In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s)
 
 Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
 
+Any message not starting with a letter is ignored
+
+## @How are you?
+
+## #Are you ok?
+
 ## BG
 
 - Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
@@ -40,7 +46,7 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 - NSCLIENT RESTART 1 receivers
 
-## DANAR / PUMP (since 1.60)
+## PUMP
 
 - Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
@@ -50,15 +56,50 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h reply with code Swe
-- Remote basal setting is not allowed (if remote commands not allowed)
+- To start basal 0.3U/h for 30 min reply with code Swe
+
+## BASAL 0.3 20
+
+- To start basal 0.3U/h for 20 min reply with code Swe
+
+## BASAL 30%
+
+- To start basal 30% for 30 min reply with code Swe
+
+## BASAL 30% 50
+
+- To start basal 30% for 50 min reply with code Swe
 
 ## BOLUS 1.2
 
 - To deliver bolus 1.2U reply with code Rrt
 - Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
 
+## EXTENDED STOP/CANCEL
+
+- To stop extended bolus reply with code EmF
+
+## EXTENDED 2 120
+
+- To start extended bolus 2U for 120 min reply with code EmF
+
 ## CAL 5.6
 
 - To send calibration 5.6 reply with code Rrt
 - Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+
+## PROFILE STATUS
+
+- Profile1
+
+## PROFILE LIST
+
+- 1.`Profile1` 2.`Profile2`
+
+## PROFILE 1
+
+- To switch profile to Profile1 100% reply with code Any
+
+## PROFILE 2 30
+
+- To switch profile to Profile2 30% reply with code Any
