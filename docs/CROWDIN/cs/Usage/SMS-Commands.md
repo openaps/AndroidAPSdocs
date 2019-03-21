@@ -6,6 +6,12 @@ In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s)
 
 Z některého z povolených čísel odešlete SMS zprávu na telefon s běžícím AndroidAPS a do zprávy zadejte některý z níže **tučně** zapsaných příkazů. Telefon vám odpoví, aby potvrdil úspěšné provedení daného příkazu anebo vrátí požadované stavové informace.
 
+Any message not starting with a letter is ignored
+
+## @How are you?
+
+## #Are you ok?
+
 ## BG
 
 - Poslední glykémie: 5.6 před 4 min, Rozdíl: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
@@ -40,7 +46,7 @@ Z některého z povolených čísel odešlete SMS zprávu na telefon s běžíc�
 
 - NSCLIENT RESTART 1 příjemce
 
-## DANAR / PUMP (od verze 1.60)
+## PUMP
 
 - Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
 
@@ -50,15 +56,50 @@ Z některého z povolených čísel odešlete SMS zprávu na telefon s běžíc�
 
 ## BASAL 0.3
 
-- Na spuštění bazálu 0.3U/h odpověz SMS s kódem Swe
-- Vzdálené posílání příkazů není povoleno (pokud nejsou vzdálené příkazy povolené)
+- To start basal 0.3U/h for 30 min reply with code Swe
+
+## BASAL 0.3 20
+
+- To start basal 0.3U/h for 20 min reply with code Swe
+
+## BASAL 30%
+
+- To start basal 30% for 30 min reply with code Swe
+
+## BASAL 30% 50
+
+- To start basal 30% for 50 min reply with code Swe
 
 ## BOLUS 1.2
 
-- K potvzení bolusu 1.2U odpověz SMS s kódem Rrt
-- Vzdálený bolus není momentálně povolen (*pokud ještě neuplynulo 15 minut od posledního bolus příkazu anebo pokud nejsou vzdálené příkazy povoleny*)
+- To deliver bolus 1.2U reply with code Rrt
+- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+
+## EXTENDED STOP/CANCEL
+
+- To stop extended bolus reply with code EmF
+
+## EXTENDED 2 120
+
+- To start extended bolus 2U for 120 min reply with code EmF
 
 ## CAL 5.6
 
-- Odeslání kalibrace 5.6 potvrďte kódem Rrt
-- Kalibrace odeslána(*jestliže je xDrip nainstalovaný</0>). Příjem musí být v xDripu povolený.</li> </ul>
+- To send calibration 5.6 reply with code Rrt
+- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+
+## PROFILE STATUS
+
+- Profile1
+
+## PROFILE LIST
+
+- 1.`Profile1` 2.`Profile2`
+
+## PROFILE 1
+
+- To switch profile to Profile1 100% reply with code Any
+
+## PROFILE 2 30
+
+- To switch profile to Profile2 30% reply with code Any
