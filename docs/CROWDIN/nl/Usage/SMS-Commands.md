@@ -6,6 +6,12 @@ In AndroidAPS ga naar Configurator, scroll naar kopje Algemeen en schakel SMS Co
 
 Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vetgedrukte** SMS commando's naar de telefoon waar AndroidAPS opstaat. De telefoon zal bevestigen dat het commando of de statusverandering succesvol is doorgevoerd.
 
+Any message not starting with a letter is ignored
+
+## @How are you?
+
+## #Are you ok?
+
 ## BG
 
 - Laatste BG: 5,6, Verschil:-0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)
@@ -40,7 +46,7 @@ Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vet
 
 - NSCLIENT RESTART 1 receivers
 
-## DANAR / PUMP (sinds AAPS v1.60)
+## PUMP
 
 - Laatste Verbinding: 1 min geleden Temp: 0,00E/uur @11:38 5/30min IOB: 0,5E Reservoir: 34E Batterij: 100
 
@@ -50,15 +56,50 @@ Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vet
 
 ## BASAL 0.3
 
-- Om het basaal 0,3 E/uur te starten antwoord met de code Swe
-- Externe basaal instelling is niet toegestaan (als externe commando's niet zijn toegestaan)
+- To start basal 0.3U/h for 30 min reply with code Swe
+
+## BASAL 0.3 20
+
+- To start basal 0.3U/h for 20 min reply with code Swe
+
+## BASAL 30%
+
+- To start basal 30% for 30 min reply with code Swe
+
+## BASAL 30% 50
+
+- To start basal 30% for 50 min reply with code Swe
 
 ## BOLUS 1.2
 
-- Om een bolus van 1,2 E toe te dienen antwoord met de code Rrt
-- Externe bolus niet toegestaan (*niet toegestaan als je dit binnen 15 min na je laatste bolus commando stuurt, of als externe commando's niet zijn toegestaan*)
+- To deliver bolus 1.2U reply with code Rrt
+- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+
+## EXTENDED STOP/CANCEL
+
+- To stop extended bolus reply with code EmF
+
+## EXTENDED 2 120
+
+- To start extended bolus 2U for 120 min reply with code EmF
 
 ## CAL 5.6
 
-- Om calibratie te verzenden antwoord met de code Rrt
-- Kalibratie verzonden (*als xDrip is geïnstalleerd. In de xDrip+ instellingen moet je aangevinkt hebben dat kalibraties van volgers geaccepteerd worden*)
+- To send calibration 5.6 reply with code Rrt
+- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+
+## PROFILE STATUS
+
+- Profile1
+
+## PROFILE LIST
+
+- 1.`Profile1` 2.`Profile2`
+
+## PROFILE 1
+
+- To switch profile to Profile1 100% reply with code Any
+
+## PROFILE 2 30
+
+- To switch profile to Profile2 30% reply with code Any
