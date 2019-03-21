@@ -6,6 +6,10 @@ In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s)
 
 Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
 
+Any message not starting with a letter is ignored
+## @How are you?
+## #Are you ok?
+
 ## BG
 - Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 ## LOOP STOP/DISABLE
