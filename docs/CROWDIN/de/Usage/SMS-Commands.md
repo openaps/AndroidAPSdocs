@@ -6,11 +6,11 @@ In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telef
 
 Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem AndroidAPS installiert ist. Sende dazu eines der folgenden **fettgedruckten** Kommandos und das Handy wird mit einer Erfolgsmitteilung oder dem angeforderten Status antworten.
 
-Any message not starting with a letter is ignored
+Jede Nachricht, die nicht mit einem Buchstaben beginnt, wird ignoriert.
 
-## @How are you?
+## @Wie geht es Dir?
 
-## #Are you ok?
+## #Bist du ok?
 
 ## BZ
 
@@ -56,37 +56,37 @@ Any message not starting with a letter is ignored
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Um eine Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
 
 ## BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Um für 20 Minuten eine temporäre Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
 
 ## BASAL 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Um für 30 Minuten eine temporäre Basalrate mit 30% zu starten, antworte mit dem Code Swe
 
 ## BASAL 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Um für 50 Minuten eine temporäre Basalrate mit 50% zu starten, antworte mit dem Code Swe
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code Rrt
+- Remote-Bolus wird nicht zugelassen *wenn innerhalb von 15 Minuten nach dem letzten Bolus-Befehl oder wenn Remote-Befehle grundsätzlich nicht erlaubt sind*.
 
 ## EXTENDED STOP/CANCEL
 
-- To stop extended bolus reply with code EmF
+- Um den verzögerten Bolus zu stoppen, antworte mit dem Code EmF
 
 ## EXTENDED 2 120
 
-- To start extended bolus 2U for 120 min reply with code EmF
+- Um einen verzögertenen Bolus von 2 IE über 120 Minuten zu starten, antworte mit dem Code EmF
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Um einen Kalibrierungswert von 5,6 zu senden, antworte mit Code Rrt
+- Kalibrierung gesendet (*wenn xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein*.)
 
 ## PROFILE STATUS
 
@@ -98,8 +98,8 @@ Any message not starting with a letter is ignored
 
 ## PROFILE 1
 
-- To switch profile to Profile1 100% reply with code Any
+- Um zum Profil 1 mit 100% zu wechseln, antworte mit Code Any
 
 ## PROFILE 2 30
 
-- To switch profile to Profile2 30% reply with code Any
+- Um zum Profil 2 mit 30% zu wechseln, antworte mit Code Any
