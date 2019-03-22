@@ -26,7 +26,7 @@ In general, the steps necessary to build the APK file:
 
 Detailed description of the steps necessary to build the APK file.
 
-## Install Android Studio
+### Install Android Studio
 
 * Install git
   * [Windows](https://gitforwindows.org/)
@@ -73,7 +73,7 @@ After the downloads are completed click the "Finish" button.
 
 * Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
-## Download code and additional components
+### Generate signed APK
 
 * Use git clone in Android Studio as shown in screenshots below.
 Select "Check out project from Version Control" with "Git" as concrete version control system.
@@ -175,16 +175,10 @@ Yeah, the first build is successful but we are not finished.
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
-## Generate signed APK
-
-In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)<br>
+Select in the menu "Build" and then "Generate Signed APK...".
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
-
-In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
-
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![Screenshot 39](../images/Installation_Screenshot_39.png)
 
 Select "app" and click "Next".
 
@@ -200,7 +194,7 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
   * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
   * The password fields below the key are for the key itself. As always to double check for typing errors.
   * You can let the validity at the default of 25 years.
-  * You only have to fill out first name and last name but feel free to complete the rest of information.
+  * You only have to fill out firstname and lastname but feel free to complete the rest of information.
 Then click "OK".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
@@ -230,7 +224,7 @@ Click the "locate" link in the event log.
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
 
-## Transfer APK to smartphone
+### Transfer APK to smartphone
 
 A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 

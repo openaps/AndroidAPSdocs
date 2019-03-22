@@ -19,7 +19,3 @@
 * V Nastavení pro pumpu DanaR můžete změnit výchozí rychlost podávání bolusu (12sec na 1U, 30sec na 1U nebo 60sec na 1U).
 * Nastavte bazální krok na pumpě na 0.01 U/h
 * Na pumpě povolte rozšířené bolusy
-
-## Timezone traveling with Dana R pump
-
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

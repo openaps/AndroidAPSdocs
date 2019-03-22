@@ -2,7 +2,7 @@
 
 ## The Homescreen
 
-![Homescreen V2.1](../images/Screenshot_Home_screen_V2_1.png)
+![Homescreen](../images/Screenshot_Home_screen.png)
 
 This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
 
@@ -12,11 +12,9 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 **Section C:** The latest blood glucose reading from your CGM, how long ago it was read, changes in the last 15 and 40 minutes, your current basal rate - including any temporary basal rate (TBR) programmed by the system, your insulin on board and carbs on board.
 
-The optional [status lights](../Configuration/Preferences.md) (CAN | INS | RES | SEN | BAT) give a visual warning for low reservoir and battery level as well as overdue site change.
-
 The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
 
-**Section D:** Click the arrow on the right side of the screen in section D to select which information is displayed on the charts below.
+**Section D:** Is where you can select which information is displayed on the charts below.
 
 **Section E:** Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
 

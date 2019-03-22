@@ -1,25 +1,25 @@
-# Pomp keuzes
+# Pump choices
 
-Op dit moment werkt AndroidAPS in closed loop modus met de volgende insulinepompen: DanaR, DanaRS en AccuCheck Combo. De DanaRS is de opvolger van de DanaR. De Combo is al langer verkrijgbaar en veel mensen gebruiken deze pomp al. De Dana pompen horen in Nederland niet tot het standaard aanbod, maar zijn na toestemming van jouw arts en verzekeraar wel vanuit Duitsland te leveren. Bij het kiezen van een nieuwe pomp vragen veel mensen zich af voor welke ze zouden moeten kiezen. De verschillende leveranciers staan in [dit werkblad](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), graag de gegevens van jouw leverancier toevoegen als deze nog niet vermeld zijn.
+AndroidAPS currently works with the Dana* R, Dana* RS and Combo pumps. The Dana* R and Combo have been available on the market for a while so many people already have access to these, and Dana* RS as an upgrade to the Dana* R is becoming a more common choice. If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
 
-De Combo is een solide pomp, en loopbaar.
+The Combo is a solid pump, and loopable.
 
-De voordelen van de DanaRS zijn echter:
+The advantages of the Dana* RS as the pump of choice however are:
 
-* Sooil (de fabrikant) heeft verklaard de garantie van de pomp niet vervalt wanneer de pomp wordt aangestuurd met een telefoon (ze hebben niet specifiek aangeven met een closed loop). IME-DC (Duitse leverancier van de Dana pompen) heeft aangegeven dat ze hun klanten een vervangende pomp leveren, en de defecte pomp naar Sooil zenden - zodat ze niet eens weten of je de pomp hebt gebruikt om mee te loopen. Dit maakt de DanaR/RS de enige insulinepomp die onder de garantie valt wanneer je hem in een closed loop gebruikt. (Roche sluit elk gebruik uit, dat niet in hun handleiding vermeld staat.)
+* Sooil did state that controlling the pump from a phone (didn't not-specifically state looping) would NOT void the warranty. IME-DC stated they would just hand out a replacement send the pump to Sooil - so they wouldn't even know if you were looping or not. This makes the Dana* R/RS pumps the only pumps that are under warranty while looping. (Roche excludes any use that is not in their manual.)
 
-* De DanaR/RS is te gebruiken met vrijwel elke telefoon met Android versie 5.1 of hoger. Er hoeft dus geen Lineage besturingssysteem te worden geïnstalleerd. Mocht je telefoon stuk gaan of kwijtraken, dan is een vervangende telefoon die werkt met de DanaR/RS, snel gevonden. Met de Combo is dat minder makkelijk. (Dit kan veranderen in de toekomst, als Android 8.1 populairder wordt)
+* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
 
-* Initiële koppeling tussen telefoon en pomp is makkelijker met de DanaR/RS. Maar dit doe je meestal eenmalig.
+* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
 
-* Tot nu toe werkt de Combo door 'screen parsing': doorsturen wat er op het scherm staat. In het algemeen werkt dit prima, maar het is traag. Bij het loopen merk je dit vaak niet eens omdat alles op de achtergrond werkt. Wel kost het meer tijd, dus je moet langer een Bluetooth verbinding houden tussen telefoon en pomp. Dat kan lastig zijn, bijvoorbeeld wanneer je alvast bolust tijdens het koken, en je al wegloopt terwijl de bolus nog wordt gegeven.
+* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
 
-* De Combo trilt aan het einde van TBRs, de DanaR trilt (of piept) bij een SMB. Waarschijnlijk gebruikt de loop 's nachts vaker een TBR dan SMB. De DanaRS kun je zo instellen dat de pomp niet piept of trilt wanneer een TBR of SMB wordt gegeven.
+* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
 
-* Bij de DanaRS wordt de pompgeschiedenis in een paar seconden uitgelezen met COB. Daardoor is het makkelijk om even offline te wisselen van telefoon. Zodra er een paar CGM waardes binnenkomen, werkt de loop weer.
+* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 
-* Alle pompen waar AndroidAPS op werkt, zijn waterdicht wanneer ze nieuw zijn. Alleen de Dana pompen zijn ook gegarandeerd waterdicht tijdens gebruik, doordat de ruimtes voor batterij en reservoir volledig afgesealed zijn.
+* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
 
-De Combo is natuurlijk een zeer goede pomp, en loopbaar. De Combo heeft ook als voordeel dat er veel meer keuze is in infuussets, aangezien hij een standaard luer-lock aansluiting heeft. Er gaat een normale batterij in, die je bij een tankstation of supermarkt kunt kopen en mocht het echt nodig zijn, kunt je hem altijd nog stelen/lenen van de afstandsbediening in een hotelkamer ;-)
+The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
 
-Details over de status van andere pompen die mogelijk in de toekomst met AndroidAPS zullen werken, staan op de pagina met [mogelijk toekomstige insulinepompen](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.

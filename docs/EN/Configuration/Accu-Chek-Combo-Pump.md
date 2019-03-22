@@ -86,12 +86,14 @@ Please be aware that this is not complete list and reflects personal user experi
 
 ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
+- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org) and use the `combo` branch.
 - Make sure to read the wiki to understand how to setup AndroidAPS.
 - Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo
   plugin from interfering with ruffy during the pairing process.
-- Follow the link http://ruffy.AndroidAPS.org and clone ruffy via git.
+- Follow the link http://ruffy.AndroidAPS.org and clone ruffy via git. Use the same branch as you use for
+  AndroidAPS, right now that's the `combo` branch, later on there will be the regular `master` and `dev` branches.
 - Install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch.
+  If the pump is already paired and can be controlled via ruffy, installing the `combo` branch is sufficient.
   Note that the pairing processing is somewhat fragile (but only has to be done once)
   and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device
   from the Bluetooth settings beforehand. Another option to try is to go to the Bluetooth menu after

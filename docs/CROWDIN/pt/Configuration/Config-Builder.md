@@ -1,91 +1,91 @@
-# Construtor de Configuração
+# Config Builder
 
-O Construtor de Configuração (Conf) é o separador onde ativa e desativa as configurações modulares. As caixas do lado esquerdo (A) permitem selecionar qual usar, as caixas do lado direito (C) permitem que as veja como um separador (E) no AndroidAPS. Caso a caixa direita não esteja ativada, pode chegar à função utilizando o menu hamburger (D) no topo esquerdo do ecrã.
+Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side (A) allow you to select which one to use, the boxes on the right hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
 
-Onde existem configurações adicionais disponíveis dentro do módulo, pode clicar na roda dentada (B) que o levará para as configurações específicas dentro das preferências.
+Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
-**Primeira configuração:** Desde AAPS 2.0 um assistente de instalação guia através do processo de configuração do AndroidAPS. Carregue no menu de 3 pontos no lado superior direito do ecrã (F) e selecione 'Assistente de instalação' para usá-lo.
+**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen (F) and select 'Setup Wizard' to use it.
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
-## Perfil
+## Profile
 
-Selecione o perfil basal que prefere usar. Ver a página [Perfis](../Usage/Profiles.md) para mais informações de configuração.
+Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
-### Perfil NS (NightScout)
+### NS Profile
 
-Perfil NS usa os perfis que guardou na sua página NightScout (https://[yournightscoutsiteaddress]/profile). Pode usar o [Profile Switch](../Usage/Profiles.html) para mudar qual desses perfis está ativo, este grava o perfil para a bomba em caso de falha de AndroidAPS. Isso permite facilmente criar vários perfis no Nightscout (i.e.. trabalho, casa, desportos, férias, etc.). Logo após clicar em "Save" serão transferidos para AAPS se seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação de Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez que tenham sido sincronizados.
+NS Profile uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.html) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
-Fazer um **interruptor de perfil** para ativar um perfil de Nightscout. Pressione e segure o perfil atual na ecrã principal AAPS no topo (campo cinzento entre o campo de "Open/Closed Loop" azul claro e o campo da área alvo azul escuro) > Alterar perfil > Selecionar perfil > OK. AAPS também escreve o perfil selecionado a bomba após a mudança de perfil, para que ele esteja disponível sem AAPS numa emergência e continue a ser executado.
+Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-### Perfil simples
+### Simple profile
 
-Perfil simples apenas com um bloco de tempo para DIA, IC, ISF, taxa basal e intervalo alvo (ou seja, sem mudanças na taxa basal durante o dia). Provavelmente mais usado para eveitos de teste a menos que tenha os mesmos fatores ao longo de 24 horas. Uma vez selecionado "Perfil Simples", aparecerá um novo separador em AAPS onde é possível inserir os dados do perfil.
+Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
 
-### Perfil local (recomendado)
+### Local profile (recommended)
 
-O perfil local usa o perfil basal inserido manualmente no telefone. Assim que é selecionado, aparece um novo separador em AAPS, onde é possivel alterar os dados do perfil lidos da bomba se necessário. Com o próximo interruptor de perfil eles são então escritos na bomba em perfil 1. Este perfil é recomendado pois não depende de ligação à internet.
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
-## Insulina
+## Insulin
 
-Selecione o tipo de curva de insulina que está a utilizar. As opções 'Oref Ação-Rápida','Oref Ultra-Rápida' e 'Oref Pico-Livre' têm todas uma forma exponencial. É listada mais informação no [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), as curvas irão variar com base no DIA e a hora de pico. O DIA deve sempre ter pelo menos 5 horas, pode ler mais sobre isso na seção de Perfil de Insulina [desta página](../Getting-Started/Screenshots.md). Para ação rápida e ultra-rápida, o DIA é a única variável que pode ajustar por si mesmo, a hora de pico é fixa. O Pico Livre permite que ajustar tanto o DIA como o tempo para pico, e deve ser usado apenas por utilizadores avançados que conhecem os efeitos destas configurações. O gráfico da curva de insulina ajuda a entender as diferentes curvas. Pode vê-lo ativando a caixa de seleção para mostrá-la como um separador, caso contrário estará no menu hamburger.
+Select the type of insulin curve you are using. Basic AndroidAPS options are bilinear 'Fast Acting Insulin' for an insulin with DIA of less than 5 hours, or 'Fast Acting Insulin Prolonged' for an insulin with DIA of greater than 5 hours. These curves will only vary based on the duration of the DIA. The Oref options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' are exponential and more information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. You will need to enter additional settings for these. You can view the insulin curve graph on the Insulin (Ins) tab to help you understand which curve fits you.
 
-### Oref Acção Rápida
+### Rapid-Acting Oref
 
-* recomendado para Humalog, Novolog e Novorapid
-* DIA = pelo menos 5.0h
-* Máx. pico = 75 minutos após injeção
+* recommended for Humalog, Novolog and Novorapid
+* DIA = at least 5.0h
+* Max. peak = 75 minutes after injection
 
-### Oref Ultra-Rápida
+### Ultra-Rapid Oref
 
-* recomendado para FIASP
-* DIA = pelo menos 5.0h
-* Máx. pico = 55 minutos após injeção
+* recommended for FIASP
+* DIA = at least 5.0h
+* Max. peak = 55 minutes after injection
 
-Para muitas pessoas não há já praticamente nenhum efeito visível do FIASP após 3-4 horas, mesmo que estejam disponíveis 0.0xx unidades como regra então. Este valor residual ainda pode ser visível durante o desporto, por exemplo. Portanto, AndroidAPS usa no mínimo 5h como DIA.
+For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
-### Oref Pico-Livre
+### Free Peak Oref
 
-Com o perfil "Pico Livre 0ref" pode digitar-se individualmente o tempo do pico. O DIA é definido automaticamente para 5 horas se estiver especificado mais alto no perfil.
+With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 
-Este perfil de efeito é recomendado se é utilizada uma insulina não instalada ou uma mistura de diferentes insulinas.
+This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
-## Fonte de BG
+## BG Source
 
-Selecione a fonte de glicose de sangue que utiliza - ver [Fonte de BG](BG-Source.md) para mais informações de configuração.
+Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 (atualizado)](https://github.com/dexcomapp/dexcomapp/) - Selecione 'Enviar dados BG para xDrip+' se quiser usar alarmes xDrip+. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-## Bomba
+## Pump
 
-Selecione a bomba que está a utilizar.
+Select the pump you are using.
 
 * [DanaR](DanaR-Insulin-Pump.md)
-* DanaR Coreana (para bombas domésticas DanaR)
-* DanaRv2 (Bomba DanaR com atualização de firmware)
+* DanaR Korean (for domestic DanaR pump)
+* DanaRv2 (DanaR pump with firmware upgrade)
 * [DanaRS](DanaRS-Insulin-Pump.md)
-* [Bomba Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requer instalação de ruffy)
-* MDI (recebe sugestões AAPS para a terapia de múltiplas injecções diárias)
-* Bomba Virtual (loop aberto para uma bomba que nao tenha ainda nenhum driver - apenas sugestões AAPS)
+* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* MDI (receive AAPS suggestions for your multiple daily injections thereapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
-Usar **Configurações avançadas** para ativar o watchdog BT se necessário. Desliga o bluetooth por um segundo, se nenhuma não for possível nenhuma ligação com a bomba. Isto pode ajudar em alguns telefones onde a pilha bluetooth congela.
+Use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is pobbile. This may help on some phones where the bluetooth stack freezes.
 
-## Detecção de Sensibilidade
+## Sensitivity Detection
 
-Selecione o tipo de deteção de sensibilidade. Isto irá analisar os dados históricos em movimento e fazer ajustes se reconhecer que está a reagir de forma mais sensível (ou inversamente, mais resistente) à insulina do que o habitual. Detalhes sobre o algoritmo de Oref0 de sensibilidade podem ser lido em [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Pode ver sua sensibilidade no ecrã inicial selecionando SEN e observando a linha branca. Nota, você precisa estar em [Objectivo 6](../Usage/Objectives) para usar Detecção de Sensibilidade/Autosens.
+You can view your sensistivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
 
-### Configurações de absorção
+### Absorption settings
 
-Se utilizar o Oref1 com SMB, deverá alterar **min_5m_carbimpact** para 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically it is a failsafe.
+If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically it is a failsafe.
 
 ## APS
 
@@ -138,7 +138,7 @@ Define which Buttons are shown on the home screen.
 
 * Treatments
 * Calculator
-* Insulina
+* Insulin
 * Carbs
 * CGM (opens xDrip+)
 * Calibration
@@ -251,6 +251,6 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 Email and number of logs to be send. Normally no change neccessary.
 
-### Construtor de Configuração
+### Config Builder
 
 Use tab for config builder instead of hambuger menu.

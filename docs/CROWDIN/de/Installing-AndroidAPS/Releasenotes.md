@@ -1,24 +1,5 @@
 # Release notes
 
-## Version 2.1
-
-Erscheinungsdatum: 03.03.2019
-
-### Wichtige neue Funktionen
-
-* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) Unterstützung (von Tebbe Übben und JamOrHam)
-* Statusanzeige auf dem Hauptbildschirm (Nico Schmitz)
-* Assistent für die Zeitumstellung (Sommer-/Winterzeit - Roumen Georgiev)
-* Korrektur der Verarbeitung von Profilnamen, die von Nightscout übertragen werden (Johannes Mockenhaupt)
-* Sperre des User Interface behoben (Johannes Mockenhaupt)
-* Unterstützung für die aktualisierte G5-App (Tebbe Ubben und Milos Kozak)
-* G6, Poctech, Tomato, Eversense als BZ-Quelle (Tebbe Ubben und Milos Kozak)
-* Korrektur deaktivieren SMB Präferenzen (Johannes Mockenhaupt)
-
-### Verschiedenes
-
-* Falls Du ein vom Standard abweichenden `smbmaxminutes` Wert nutzt, musst Du diesen erneut eingeben.
-
 ## Version 2.0
 
 Erscheinungsdatum: 03.11.2018
@@ -41,7 +22,7 @@ Erscheinungsdatum: 03.11.2018
   * Deaktiviere die "Configure on demand" Checkbox.
   * Klicke Apply oder OK.
 
-### Übersichtsseite
+### Startseite
 
 * Im oberen Menüband (Abschnitt A) kannst du durch langen Fingerdruck den Loop pausieren oder deaktivieren, die Pumpe trennen, das aktuelle Profil anzeigen und einen Profilwechsel machen, sowie temporäre Ziele (temp targets - TT) einstellen. Die temporären Ziele verwenden Standardwerte, die du in den Einstellungen festlegen kannst. Das neue Standard-Ziel “HypoTT” löst ein temporäres Ziel im höheren BZ-Bereich aus, damit der Loop nicht überreagiert nachdem du Korrektur-Kohlenhydrate gegessen hast.
 * Neue Behandlungs-Schaltfläche: die alte Behandlungs-Schaltfläche ist weiterhin verfügbar, aber standardmäßig deaktiviert. Du kannst jetzt selbst einstellen, welche Schaltflächen du auf dem Home-Screen haben willst. Es gibt neue Schaltflächen für Insulin und Kohlenhydrate (einschließlich [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
@@ -53,7 +34,7 @@ Erscheinungsdatum: 03.11.2018
 * Option in den Dialogen für Insulin, Kohlenhydrate, Rechner und Füllen/Vorfüllen ein Feld für Bemerkungen, die zu Nightscout hochgeladen werden, anzuzeigen.
 * Überarbeiteter Füllen/Vorfüllen-Dialog. Möglichkeit, gleichzeitig Careportal-Einträge für Katheter- und Reservoirwechsel zu erstellen.
 
-### Watch
+### Smartwatch
 
 * Auf die separate Build Variante “wearcontrol” wird verzichtet, die Smartwatch-Steuerung ist jetzt in der full build Variante enthalten. Um die Bolus-Steuerung auf der Smartwatch zu verwenden, musst du dies in AAPS auf dem Smartphone aktivieren.
 * Der Rechner wird nur noch nach Kohlenhydraten (und - falls aktiviert - nach einem Prozentsatz) fragen. Du kannst in den Einstellungen auf dem Smartphone festlegen, welche Parameter bei einem Bolus, der von der Smartwatch aus gegeben wird, in die Berechnung einbezogen werden sollen.

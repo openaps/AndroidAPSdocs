@@ -24,23 +24,15 @@ When get out of plane:
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+# Time adjustment daylight savings time (DST)
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. (hit BT symbol for Dana pumps; "refresh" for the Combo). 4) Check the Treatments tab... If you see duplicate treatments:
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skiped in calculation in AAPS as the correct time cannot be identified properly.
+* DON'T press "delete future treatments"
+* Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore. 5) If the state is unclear - please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.
 
-# Wisselen tussen zomer- en wintertijd
+A good time to make this switch would be with low IOB. E.g. an hour before a meal.
 
-Afhankelijk van pomp en CGM setup, kunnen tijdsverschuivingen problemen geven. Met de Combo bijv. wordt de pompgeschiedenis opnieuw uitgelezen en dat kan leiden tot dubbele invoer. Zorg dus dat je deze wissel uitvoert wanneer je wakker bent, laat het niet automatisch gebeuren gedurende de nacht. Hiermee voorkom je probemen.
-
-1) Schakel automatische tijdzone uit in jouw telefooninstellingen. 2) Vind een tijdzone die de doeltijd heeft maar die geen zomer/wintertijd wissel heeft. Voor Midden-Europese tijd (CET) zou dit "Brazzaville" (Kongo) kunnen zijn. Verander de tijdzone van jouw telefoon naar Kongo. 3) In AndroidAPS ga je naar het pomp-tabblad en vernieuw de status. (tik op het bluetooth symbool voor Dana pompen; "vernieuw" voor de Combo). 4) Ga naar het tabblad Behandelingen... Als je dubbele behandelingen ziet:
-
-* Druk NIET (!) op "verwijder behandelingen in de toekomst"
-* Klik één voor één op "verwijder" voor alle dubbele en toekomstige behandelingen. Dit zou de behandelingen ongeldig moeten maken in plaats van ze te verwijderen, zodat ze niet meer voor IOB / COB worden meegenomen. 5) Als de status onduidelijk is - schakel de loop voor ten minste één DIA en Max-Carb-time uit - welk van de twee het grootste is.
-
-Een goed moment om deze omschakeling te maken zou zijn wanneer jouw IOB laag is. Bijvoorbeeld een uur voor een maaltijd.
-
-Dit is zeker van invloed op de Combo, misschien de Dana Rv2 en RS - en waarschijnlijk niet de Dana R en Insight. Maar aangezien het niet getest is, wees voorzichtig. Het is doe-het-zelf!
+This definitely affects the Combo, maybe the Dana Rv2 and RS - and most likely not the Dana R and Insight. But as it is not tested, please be cautions. This is DIY!

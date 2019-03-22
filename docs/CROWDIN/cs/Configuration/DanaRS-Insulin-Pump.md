@@ -9,15 +9,8 @@
 * Zvolte "Menu" ťuknutím na tři tečky v pravém horním rohu. Zvolte položku "Předvolby".
 
 * Vyberte "DanaRS připojení nové pumpy" a zadejte sériové číslo pumpy DanaRS.
-  
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
-      
 
-* Select Pump password and input your password. (Default password is 1234)   
-  **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
-  
-      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
-      
+* Vyberte heslo pumpy a zadejte své heslo. (Výchozí heslo je 1234)
 
 * Vyberte rychlost bolusu, abyste změnili výchozí rychlost bolusu (12sec na 1U, 30sec na 1U nebo 60sec na 1U).
 
@@ -44,16 +37,11 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 When switching to a new phone the following steps are neccessary:
 
-* **Export settings** on your old phone
-  
+* **Export settings** on your old phone 
   * Hamburger menu (top left corner of screen)
   * Maintenance
   * Export settings
-    
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
-
 * **Transfer** settings from old to new phone
-
 * **Manually pair** Dana RS with the new phone 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * **Install AndroidAPS** on the new phone.
@@ -61,7 +49,3 @@ When switching to a new phone the following steps are neccessary:
   * Hamburger menu (top left corner of screen)
   * Maintenance
   * Import settings
-
-## Timezone traveling with Dana RS pump
-
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
