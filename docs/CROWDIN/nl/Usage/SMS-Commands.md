@@ -6,11 +6,11 @@ In AndroidAPS ga naar Configurator, scroll naar kopje Algemeen en schakel SMS Co
 
 Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vetgedrukte** SMS commando's naar de telefoon waar AndroidAPS opstaat. De telefoon zal bevestigen dat het commando of de statusverandering succesvol is doorgevoerd.
 
-Any message not starting with a letter is ignored
+Elk bericht dat niet met een letter begint wordt genegeerd, zodat je elkaar ook nog kunt SMS'en over andere onderwerpen zonder dat AndroidAPS het als commando interpreteert. Bijvoorbeeld:
 
-## @How are you?
+## @hoe is het?
 
-## #Are you ok?
+## #Gaat het goed?
 
 ## BG
 
@@ -56,41 +56,41 @@ Any message not starting with a letter is ignored
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Om een tijdelijk basaal van 0,3 E/uur voor 30 min te starten antwoord met de code Swe
 
 ## BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Om een tijdelijk basaal van 0,3 E/uur voor 20 min te starten antwoord met de code Swe
 
 ## BASAL 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Om een tijdelijk basaal van 30% voor 30 min te starten antwoord met code Swe
 
 ## BASAL 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Om een tijdelijk basaal van 30% voor 50 min te starten antwoord met code Swe
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Om een bolus van 1,2 E toe te dienen antwoord met de code Rrt
+- Externe bolus niet toegestaan (*niet toegestaan als je dit binnen 15 min na je laatste bolus commando stuurt, of als externe commando's niet zijn toegestaan*)
 
 ## EXTENDED STOP/CANCEL
 
-- To stop extended bolus reply with code EmF
+- Om een vertraagde bolus te stoppen antwoord met de code EmF
 
 ## EXTENDED 2 120
 
-- To start extended bolus 2U for 120 min reply with code EmF
+- Om een vertraagde bolus van 2E voor 120 min te starten antwoord met code EmF
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Om een kalibratie van 5,6 mmol/L te verzenden antwoord met de code Rrt
+- Kalibratie verzonden (*als xDrip is geïnstalleerd. In de xDrip+ instellingen moet je aangevinkt hebben dat kalibraties van volgers geaccepteerd worden*)
 
 ## PROFILE STATUS
 
-- Profile1
+- Profiel 1
 
 ## PROFILE LIST
 
@@ -98,8 +98,8 @@ Any message not starting with a letter is ignored
 
 ## PROFILE 1
 
-- To switch profile to Profile1 100% reply with code Any
+- Om van profiel te wisselen naar Profile1 100% antwoord met code Any
 
 ## PROFILE 2 30
 
-- To switch profile to Profile2 30% reply with code Any
+- Om van profiel te wisselen naar Profile2 30% antwoord met code Any
