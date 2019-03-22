@@ -6,12 +6,6 @@ In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s)
 
 Z některého z povolených čísel odešlete SMS zprávu na telefon s běžícím AndroidAPS a do zprávy zadejte některý z níže **tučně** zapsaných příkazů. Telefon vám odpoví, aby potvrdil úspěšné provedení daného příkazu anebo vrátí požadované stavové informace.
 
-Any message not starting with a letter is ignored
-
-## @How are you?
-
-## #Are you ok?
-
 ## BG
 
 - Poslední glykémie: 5.6 před 4 min, Rozdíl: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
