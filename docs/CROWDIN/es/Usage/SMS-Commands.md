@@ -6,12 +6,6 @@ In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s)
 
 Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usar comandos SMS usando algún comando en negrita abajo, el teléfono responderá para confirmar el comando pedido.
 
-Any message not starting with a letter is ignored
-
-## @How are you?
-
-## #Are you ok?
-
 ## BG
 
 - Último valor de glucemia: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
