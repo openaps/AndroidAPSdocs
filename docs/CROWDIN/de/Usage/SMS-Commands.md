@@ -6,12 +6,6 @@ In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telef
 
 Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem AndroidAPS installiert ist. Sende dazu eines der folgenden **fettgedruckten** Kommandos und das Handy wird mit einer Erfolgsmitteilung oder dem angeforderten Status antworten.
 
-Jede Nachricht, die nicht mit einem Buchstaben beginnt, wird ignoriert.
-
-## @Wie geht es Dir?
-
-## #Bist du ok?
-
 ## BZ
 
 - Letzter Blutzucker 125 vor 4min, Delta: -12mg/dl, IOB: 0.20E (Bolus: 0.10E Basal: 0.10E)
