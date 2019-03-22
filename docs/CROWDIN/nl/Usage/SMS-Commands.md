@@ -6,12 +6,6 @@ In AndroidAPS ga naar Configurator, scroll naar kopje Algemeen en schakel SMS Co
 
 Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vetgedrukte** SMS commando's naar de telefoon waar AndroidAPS opstaat. De telefoon zal bevestigen dat het commando of de statusverandering succesvol is doorgevoerd.
 
-Elk bericht dat niet met een letter begint wordt genegeerd, zodat je elkaar ook nog kunt SMS'en over andere onderwerpen zonder dat AndroidAPS het als commando interpreteert. Bijvoorbeeld:
-
-## @hoe is het?
-
-## #Gaat het goed?
-
 ## BG
 
 - Laatste BG: 5,6, Verschil:-0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)
