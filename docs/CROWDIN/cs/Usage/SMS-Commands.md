@@ -2,15 +2,9 @@
 
 Ve vašem Android telefonu běžte do jeho systémového nastavení, pak do Aplikace > AndroidAPS > Oprávnění a povolte SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons) and also enable 'Allow remote commands via SMS'
 
 Z některého z povolených čísel odešlete SMS zprávu na telefon s běžícím AndroidAPS a do zprávy zadejte některý z níže **tučně** zapsaných příkazů. Telefon vám odpoví, aby potvrdil úspěšné provedení daného příkazu anebo vrátí požadované stavové informace.
-
-Any message not starting with a letter is ignored
-
-## @How are you?
-
-## #Are you ok?
 
 ## BG
 
@@ -46,7 +40,7 @@ Any message not starting with a letter is ignored
 
 - NSCLIENT RESTART 1 příjemce
 
-## PUMP
+## DANAR / PUMP (od verze 1.60)
 
 - Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
 
@@ -56,50 +50,15 @@ Any message not starting with a letter is ignored
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
-
-## BASAL 0.3 20
-
-- To start basal 0.3U/h for 20 min reply with code Swe
-
-## BASAL 30%
-
-- To start basal 30% for 30 min reply with code Swe
-
-## BASAL 30% 50
-
-- To start basal 30% for 50 min reply with code Swe
+- Na spuštění bazálu 0.3U/h odpověz SMS s kódem Swe
+- Vzdálené posílání příkazů není povoleno (pokud nejsou vzdálené příkazy povolené)
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
-
-## EXTENDED STOP/CANCEL
-
-- To stop extended bolus reply with code EmF
-
-## EXTENDED 2 120
-
-- To start extended bolus 2U for 120 min reply with code EmF
+- K potvzení bolusu 1.2U odpověz SMS s kódem Rrt
+- Vzdálený bolus není momentálně povolen (*pokud ještě neuplynulo 15 minut od posledního bolus příkazu anebo pokud nejsou vzdálené příkazy povoleny*)
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
-
-## PROFILE STATUS
-
-- Profile1
-
-## PROFILE LIST
-
-- 1.`Profile1` 2.`Profile2`
-
-## PROFILE 1
-
-- To switch profile to Profile1 100% reply with code Any
-
-## PROFILE 2 30
-
-- To switch profile to Profile2 30% reply with code Any
+- Odeslání kalibrace 5.6 potvrďte kódem Rrt
+- Kalibrace odeslána(*jestliže je xDrip nainstalovaný</0>). Příjem musí být v xDripu povolený.</li> </ul>

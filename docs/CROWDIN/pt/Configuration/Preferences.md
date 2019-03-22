@@ -1,20 +1,17 @@
-# Preferências
+# Preferences
 
-## Password para definições
+## Password for settings
 
-Isso permite que você defina uma paswword para evitar alterações acidentais ou não autorizadas de preferências. Depois de definir uma password aqui, será solicitado que a introduza para aceder às Preferências. Para remover a opção de password, quando estiver dentro das Preferências, apague o texto nesse campo.
+This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
 
-## Idade do Paciente
+## Patient age
 
-Existem limites de segurança em vigor com base na idade que selecionou nessa configuração. Se começar a atingir esses limites rígidos (como o bolus máximo), é hora de dar um passo em frente. É uma má ideia selecionar uma idade superior à real, pois pode levar a uma sobre-dosagem inserindo o valor errado de insulina (ignorando a casa decimal, por exemplo).
+There are security limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
 
 ## General
 
 * Select your language here. If your language is not available, or not all of the words are translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
 * Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
-* Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
-    
-    ![Status lights - detail](../images/StatusLights.jpg)
 
 ## Careportal
 

@@ -15,7 +15,9 @@ V rámci "Přepnutí profilu" můžete ještě upravit následující údaje (co
 
 Tento mechanismus snímkování profilu umožňuje mnohem přesnější výpočty z minulosti a také umožňuje sledovat změny profilu.
 
-<b>Troubleshooting Profile Errors</b>  
+V uzavřené smyčce se doporučuje zapnout automatické aktualizace profilu v pumpě (v nastavení), což znamená, že každá úprava, kterou do profilu zavedete, bude zkopírovaná do vaší pumpy pro případ selhání AndroidAPS, například pokud se vašemu telefonu vybije baterie nebo bude komunikace s pumpou přerušená.
+
+<b>Řešení chyb profilů</b>  
 
 
 * Chyby typu "Chybný profil" nebo "Bazální hodnoty nejsou zarovnané na celé hodiny" se zobrazí, pokud nemáte bazální dávky nebo inzulíno-sacharidové poměry zarovnané na celé hodiny. Pumpy DanaR a DanaRS nepodporují změny po půlhodinách.

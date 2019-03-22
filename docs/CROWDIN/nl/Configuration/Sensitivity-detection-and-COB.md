@@ -1,42 +1,42 @@
-# Gevoeligheids detectie
+# Sensitivity detection
 
-## Gevoeligheids-algoritme
+## Sensitvity algorithm
 
-Op dit moment zijn er 4 algoritmes voor gevoeligheidsdetectie:
+Currently we have 4 sensitivity detection models:
 
-* Gevoeligheid Oref0
-* Gevoeligheid AAPS
-* Gemiddelde gevoeligheid
-* Gevoeligheid Oref1
+* Sensitivity Oref0
+* Sensitivity AAPS
+* Sensitivity WeightedAverage
+* Sensitivity Oref1
 
-### Gevoeligheid Oref0
+### Sensitivity Oref0
 
-De gevoeligheid wordt berekend op basis van gegevens van de afgelopen 24 uur en koolhydraten (indien niet geabsorbeerd) worden hiervan afgehaald, na de duur die is opgegeven in je Instellingen. Het algoritme is vergelijkbaar met OpenAPS Oref0, zoals beschreven in [de OpenAPS Oref0 documentatie](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html).
+Basically sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cut off after time specified in preferences. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html).
 
-### Gevoeligheid AAPS
+### Sensitivity AAPS
 
-De gevoeligheid wordt op dezelfde manier berekend als Oref0, maar hier kun je zelf kiezen hoeveel uren het algoritme terugkijkt. De minimale koolhydraten absorptie wordt berekend op basis van jouw max koolhydraten absorptie tijd uit je Instellingen.
+Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
 
-### Gemiddelde gevoeligheid
+### Sensitivity WeightedAverage
 
-De gevoeligheid wordt berekend als een gewogen gemiddelde van alle afwijkingen. Nieuwere afwijkingen tellen zwaarder mee. De minimale koolhydraten absorptie wordt berekend op basis van jouw max koolhydraten absorptie tijd uit je Instellingen. Dit algoritme is snelste in het volgen van wijzigingen aan jouw gevoeligheid.
+Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
-### Gevoeligheid Oref1
+### Sensitivity Oref1
 
-Deze moet je kiezen wanneer je SMB met UAM gebruikt. De gevoeligheid wordt berekend op basis van gegevens van de afgelopen 8 uur, of van de laatste infuuswissel als die minder dan 8 uur geleden is. Koolhydraten (indien niet geabsorbeerd) worden afgekapt (dwz, op nul gezet) na de tijd die je hebt opgegeven in je Instellingen. Het Oref1 algoritme ondersteunt als enige UAM (onaangekondigde maaltijden, unannounced meals). Dit betekent dat alle periodes waarbij UAM zijn gedetecteerd, niet worden meegenomen in de berekening. Vandaar dat je voor dit gevoeligheids-algoritme moet kiezen als je SMB met UAM gebruikt! Voor meer informatie lees de [OpenAPS Oref1 documentatie](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-## Gelijktijdige koolhydraten
+## Simultaneous carbs
 
-Er zit een aanzienlijk verschil tussen AAPS en Gewogen gemiddelde versus Oref0 en Oref1. De Oref gevoeligheids-algoritmes werken met de aanname dat er slechts één maaltijd tegelijkertijd wordt opgenomen in je lichaam. Dit betekent dat een tweede maaltijd pas opgenomen begint te worden nadat de eerste maaltijd volledig is opgenomen. Bij AAPS en Gewogen gemiddelde begint de opname meteen wanneer je een maaltijd invoert. Dit betekent dat, als er meer dan één maaltijd aan boord is dat de minimale koolhydraten absorptie wordt aangepast aan de grootte van de maaltijd en de max absorptie tijd. De minimale absorptie zal daarom hoger zijn in vergelijking met de Oref gevoeligheids-algoritmes.
+There is significant difference while using AAPS, WeightedAverage vs Oref0, Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparation to Oref plugins.
 
-## COB (koolhydraten aan boord) voorbeelden
+## COB Examples
 
-Oref0 / Oref1 - niet-opgenomen koolhydraten worden afgekapt (naar nul) na bepaalde tijd. NB: nieuwere versies van AndroidAPS gebruiken oranje (ipv groen) als kleur voor koolhydraten.
+Oref0 / Oref1 - unabsorbed carbs are cut off after specified time
 
-![COB van oref0](../images/cob_oref0.png)
+![COB from oref0](../images/cob_oref0.png)
 
-AAPS, Gewogen gemiddelde - opname wordt berekend op `COB == 0` na opgegeven tijd
+AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
 
-![COB van AAPS](../images/cob_aaps.png)
+![COB from AAPS](../images/cob_aaps.png)
 
-Als de door jou ingestelde minimale koolhydraten absorptie wordt gebruikt in plaats van de waarde berekend op basis van afwijkingen, verschijnt een oranje stip op jouw COB grafiek
+If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph

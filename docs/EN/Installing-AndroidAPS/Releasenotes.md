@@ -1,26 +1,5 @@
 # Release notes
 
-## Version 2.1
-
-Release date: 03-03-2019
-
-### Major new features
-
-* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
-* Status lights on main screen (Nico Schmitz)
-* Daylight saving time helper (Roumen Georgiev)
-* Fix processing profile names comming from NS (Johannes Mockenhaupt)
-* Fix UI blocking (Johannes Mockenhaupt)
-* Support for updated G5 app (Tebbe Ubben and Milos Kozak)
-* G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
-* Fixed disabling SMB from preferences (Johannes Mockenhaupt)
-
-
-###  Misc
-
-* If you are using non default `smbmaxminutes` value you have to setup this value again
-
-
 ## Version 2.0
 
 Release date: 03-11-2018
