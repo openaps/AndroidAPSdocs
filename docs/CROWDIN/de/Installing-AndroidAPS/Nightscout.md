@@ -16,15 +16,15 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
   * Ein Alarm bei [niedrigem Pumpen-Batteriestand](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring) in % kann wie folgt aktiviert werden: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Optional: The following 'timers' can be set for the coloring in the AAPS careportal: 
-    * `BAGE_WARN` = `480` (Warning after x hours since last Battery Changed Event in Careportal)
-  * `BAGE_URGENT` = `504` (Urgent warning after x hours since last Battery Changed Event in Careportal)
-  * `CAGE_WARN` = `40` (Warning after x hours since last Cannula Changed Event in Careportal)
-  * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
-  * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
-  * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * Optional: Die folgenden 'Timer' können für Farbhinweise im AAPS-Careportal eingestellt werden: 
+    * `BAGE_WARN` = `480` (Warnung nach x Stunden seit dem letzten Batteriewechsel-Event im Careportal)
+  * `BAGE_URGENT` = `504` (Dringende Warnung nach x Stunden seit dem letzten Batteriewechsel-Event im Careportal)
+  * `CAGE_WARN` = `40` (Warnung nach x Stunden seit dem letzten Kanülenwechsel-Event im Careportal)
+  * `CAGE_URGENT` = `48` (Dringende Warnung nach x Stunden seit dem letzten Kanülenwechsel-Event im Careportal)
+  * `IAGE_WARN` = `144` (Warnung nach x Stunden seit dem letzten Reservoirwechsel-Event im Careportal)
+  * `IAGE_URGENT` = `192` (Dringende Warnung nach x Stunden seit dem letzten Reservoirwechsel-Event im Careportal)
+  * `SAGE_WARN` = `160` (Warnung nach x Stunden seit dem letzten CGM-Sensor-Setzen-Event im Careportal)
+  * `SAGE_URGENT` = `168` (Dringende Warnung nach x Stunden seit dem letzten CGM-Sensor-Setzen-Event im Careportal)
 
 ![Azure](../../images/nightscout1.png)
 
