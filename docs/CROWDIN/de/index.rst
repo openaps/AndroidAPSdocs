@@ -106,6 +106,7 @@ AndroidAPS nutzen
    NSClient-Problembehebung <./Usage/Troubleshooting-NSClient.md>
    Android Auto <./Usage/Android-auto.md>
    Huawei Smartphones - spezielle Konfigurationseinstellungen<./Usage/huawei.md>
+   Jelly Pro - battery life optimization <./Usage/jelly.md>
    Automation <./Usage/Automation.md>
 
 Hilfe durch die Community 
