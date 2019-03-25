@@ -107,7 +107,7 @@ Gebruik
    Android auto <./Usage/Android-auto.md>
    Huawei telefooninstellingen <./Usage/huawei.md>
    Jelly Pro - battery life optimization <./Usage/jelly.md>
-   Automatisering <./Usage/Automation.md>
+   Automation <./Usage/automation.md>
 
 Waar je hulp kunt vinden 
 ------------
