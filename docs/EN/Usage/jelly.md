@@ -2,7 +2,7 @@
 
 The following settings and handling advice (use watch for daily operations instead of Jelly smartphone) lead to approx. 35 hours of battery life. An additional battery saving mode is not necessary, rather counterproductive, therefore turn off.
 
-![Jelly smartphone](../../images/jelly_01.jpg)
+![Jelly smartphone](../images/jelly_01.jpg)
 
 ## First setup
 <b><font color="#FF0000">Very important:</b></font> If you don't need Android 8.1 (i.e. to loop with an Accu-Check Combo) stay with android 7.0!
@@ -15,7 +15,7 @@ Follow these rules to stay with Andorid 7.0:
 * Every time you activate the wifi or mobile network you will be notified that a system update is available. Do not update! It is best to delete the notification so that you do not accidentally update. This would not be so easy to undo. 
 * Installed apps can and should be upgraded.
 
-![Jelly settings](../../images/jelly_02.jpg)
+![Jelly settings](../images/jelly_02.jpg)
 
 ## Settings
 
@@ -23,6 +23,7 @@ Follow these rules to stay with Andorid 7.0:
 * Set up wifi to install xDrip, AAPS and WearOS, otherwise wifi off. 
 * Wifi can be enabled for a short time if you want to upload the data to Nightscout.
 * Jelly does not need a SIM card, but if you use one make sure to turn off the mobile data. The easiest way is to activate flight mode.
+* Also if you do not use a SIM card turn of mobile data.
 * Bluetooth must be turned on of course. If the pump is not within range for a longer period of time, the "search" will consume a lot of battery power.
 * DURASPEED ON (Settings > Device > Duraspeed on). Whitelist AAPS, WearOS and xDrip+ to run in background. All other apps should not run in background.
 * End all other tasks in the background. Settings > Intelligent assistant > Exit tasks in background > Disable all other apps (despite AAPS, WearOS and xDrip+).
@@ -34,11 +35,15 @@ Follow these rules to stay with Andorid 7.0:
 ## Tips
 
 * The Jelly is a not always intuitive to use and sometimes acts like a baby diva. A restart (button on the right) every now and then might be a good idea.
+* In portrait view not all buttons might be displayed. So it is worth turning Jelly by 90 degrees.
+
+![Jelly portrait + landscape view](../images/jelly_04.jpg)
+
 * The headline on the startscreen of the phone can hold up to 6 icons on the right. The clock needs 2 of them. So if 5 are already occupied (i.e. bluetooth, do not disturb, no SIM card, flight mode and the battery indicator), no clock will be displayed. Briefly increase the volume with the button in the upper left corner, then the clock appears in the header. ;-)
 * The "alarm clock", which is initially (with factory settings) displayed on the Home screen below the time, is probably a second time zone. Switch this off as AAPS might access wrong timezone (Settings > System > Date&Time > Automatic Time Zone > OFF). Use the time provided by the network instead.
 * A screenshot can be taken by pressing the quiet button (bottom left) + the an button (right) simultaneously. 
 
-![Jelly headline](../../images/jelly_03.png)
+![Jelly headline](../images/jelly_03.png)
 
 ## Advantages Jelly
 
