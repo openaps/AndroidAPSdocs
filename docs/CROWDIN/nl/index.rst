@@ -3,29 +3,34 @@ Welkom bij de Android APS documentatie
 
 ** Wat is AndroidAPS? **
 
-AndroidAPS is een app die kan communiceren met bluetooth-aangestuurde insuline pompen, en gebruikt een eigen versie van de OpenAPS "oref0" en "oref1" algoritmes.
+AndroidAPS is een app die wordt gebruikt als 'kunstmatige alvleesklier' systeem (Artificial Pancreas System of kortweg APS in het Engels). Deze app draait op een Android smartphone   en heeft hetzelfde doel als een menselijke alvleesklier: de bloedglucosewaardes automatisch binnen gezonde grenzen houden. AndroidAPS kan dit nooit zo perfect als een echte alvleesklier, maar kan het leven met type 1 diabetes wel makkelijker maken. Door apparaten die commercieel beschikbaar zijn, te koppelen aan software die simpel en veilig is. Deze apparaten zijn een glucosesensor (Continue Glucose Monitor, CGM) en een insulinepomp. De app communiceert met de glucosesensor en insulinepomp via bluetooth. AndroidAPS gebruikt een algoritme (een set rekenregels) dat al eerder is ontwikkeld voor een ander 'kunstmatige alvleesklier' systeem: OpenAPS. Wereldwijd heeft OpenAPS duizenden gebruikers en al die mensen samen hebben inmiddels miljoenen uren ervaring met dat systeem. 
+
+Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hulpmiddelen gereguleerd. Wie AndroidAPS gebruikt, voert eigenlijk een medisch experiment uit op zichzelf. Het bouwen en instellen van het systeem vereist doorzettingsvermogen en technische kennis. Je hoeft deze technische kennis aan het begin nog niet te hebben, je zult die gaandeweg krijgen. Alle informatie die je nodig hebt kun je online vinden: hier in de wiki, op andere websites of van mensen de jou zijn voorgegaan -- je kunt ze vinden in Facebook groepen en andere online platforms. Veel mensen hebben AndroidAPS succesvol gebouwd en gebruiken het nu volledig veilig, maar het is essentieel dat elke gebruiker:
+* Het systeem zelf bouwt zodat ze goed begrijpen hoe het werkt
+* De instellingen aanpast om het systeem op hun eigen diabetes af te stemmen
+* Controleert wat het systeem doet en het zo nodig updatet om ervoor te zorgen dat het goed blijft werken
+Als je klaar bent voor deze uitdaging, lees dan verder. 
 
 **Belangrijkste doelen van AndroidAPS: **
 
-* modulaire app waaraan nieuwe modules eenvoudig kunnen worden toegevoegd, zonder de rest van de code te hoeven aanpassen
-* app die in verschillende talen beschikbaar is
-* in de app kan gemakkelijk worden gekozen welke onderdelen er in de uiteindelijke apk terechtkomen
-* je kunt kiezen om de app te gebruiken in open loop of in closed loop
-* in de app kun je zien hoe APS (Artificieel Pancreas System) werkt: input parameters, resultaten en eindbeslissing zijn zichtbaar
-* mogelijkheid om meer APS algoritmes toe te voegen, en de gebruiker kan kiezen welke hij wil gebruiken
-* app die een "Virtuele pomp" modus heeft zodat gebruikers alles eerst veilig kunnen uitproberen
-* app die naadloos samenwerkt met Nightscout
-* app waar je gemakkelijk beperkingen kunt toevoegen/weghalen voor de veiligheid van de gebruiker
-* alles-in-één app voor het onder controle houden van type 1 diabetes met APS en Nightscout
+* Een app waarbij de veiligheid ingebouwd zit. Om meer te lezen over de veiligheids-functies van de oref0 en oref1 algoritmen, klik hier (https://openaps.org/referece-design/)
+* Een alles-in-één app voor het beheer van type 1 diabetes
+* Een app waaraan gebruikers gemakkelijk modules kunnen toevoegen of verwijderen indien nodig
+* Een app met verschillende versies voor specifieke locaties en talen.
+* Een app die gebruikt kan worden in open- en closed-loop modus
+* Een app die volledig transparant is: gebruikers kunnen parameters invoeren, resultaten zien en de eindbeslissing nemen
+* Een app die onafhankelijk is van bepaalde pomp-stuurprogramma software. De app bevat een "virtuele pomp" optie, zodat gebruikers veilig kunnen experimenteren voordat ze het zelf gebruiken 
+* Een app die geïntegreerd is met Nightscout
+* Een app waarvan de gebruiker de veiligheidsbeperkingen zelf instelt 
 
 **Wat heb je nodig om te starten:**
 
 * Een Android smartphone met Android 5.0 of hoger. Zie `dit werkblad <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ voor ervaringen van anderen hoe goed een telefoon met AndroidAPS werkt.
+* een Continue Glucose Monitor (CGM): Dexcom G4/G5/G6, Eversense, Medtronic Guardian, PocTech of een Freestyle Libre met bluetooth-zender
 * App die de gegevens van jouw glucosesensor doorgeeft, bijvoorbeeld `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ of `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ zelf
+* `AndroidAPS zelf <https://github.com/MilosKozak/AndroidAPS>`
 * `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 of nieuwer
 * Een geschikte insulinepomp: Dana-R, Dana-RS of Accu-Chek Combo, Accu-Check Insight (tenzij je je eigen stuurprogramma schrijft voor een andere insulinepomp)
-* een Continue Glucose Monitor (CGM): Dexcom G4/G5/G6, Eversense, Medtronic Guardian, PocTech of een Freestyle Libre met bluetooth-zender,
 
 
 .. opmerking:: 
@@ -76,8 +81,8 @@ AndroidAPS instellingen
    BG bron <./Configuration/BG-Source.md>
    DanaR pomp <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS pomp <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu Chek Insight pomp <./Configuration/Accu-Chek-Insight-Pump.md>
+   AccuChek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
+   AccuChek Insight pomp <./Configuration/Accu-Chek-Insight-Pump.md>
    Smartwatch instellingen <./Configuration/Watchfaces.md>
    Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -97,10 +102,11 @@ Gebruik
    Wisselen van tijdzone <./Usage/Timezone-traveling.md>
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
    Filteren van glucosewaardes <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   Accu Chek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+   AccuChek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
    Problemen met NSClient oplossen <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
    Huawei telefooninstellingen <./Usage/huawei.md>
+   Jelly Pro - battery life optimization <./Usage/jelly.md>
    Automatisering <./Usage/Automation.md>
 
 Waar je hulp kunt vinden 
@@ -127,5 +133,5 @@ Hoe je zelf kunt helpen
    :glob:
 
    Hoe kan je helpen <./Getting-Started/How-can-I-help.md>
-   De app vertalen <./translations.md>
+   De app of wiki vertalen <./translations.md>
    De wiki verbeteren <./make-a-PR>

@@ -3,29 +3,34 @@ Herzlich willkommen zur AndroidAPS-Dokumentation
 
 **Was ist AndroidAPS?**
 
-AndroidAPS ist eine App, die mit Bluetooth-fähigen Insulinpumpen kommunizieren kann und die OpenAPS "oref0" und "oref1" Algorithmen ausführt.
+AndroidAPS ist eine App, die als künstliche Bauchspeicheldrüse (artificial pancreas system - APS) auf einem Android-Smartphone arbeitet. Was ist eine künstliche Bauchspeicheldrüse? Es ist eine App, die darauf abzielt, das zu tun, was eine funktionierende Bauchspeicheldrüse tut: den Blutzuckerspiegel automatisch in gesunden Grenzen zu halten. Ein APS kann die Aufgabe nicht so gut erfüllen wie eine biologische Bauchspeicheldrüse, aber es kann die Behandlung von Typ-1-Diabetes mit handelsüblichen Geräten und einer einfachen und sicheren Software erleichtern.  Diese Geräte beinhalten einen kontinuierlichen Glukosemonitor (CGM), um AndroidAPS über Deinen Blutzuckerspiegel zu informieren, und eine Insulinpumpe, die von AndroidAPS gesteuert wird, um die passenden Insulindosen zu liefern.  Die App kommuniziert mit diesen Geräten über Bluetooth. Es führt seine Dosisberechnungen unter Verwendung eines Algorithmus oder eines Regelsatzes durch, der für eine andere künstliches Bauchspeicheldrüse, OpenAPS genannt, entwickelt wurde. OpenAPS hat Tausende von Nutzern, die Millionen von Nutzungsstunden gesammelt haben. 
+
+Ein Hinweis zur Vorsicht: AndroidAPS wird nicht von einer medizinischen Aufsichtsbehörde reguliert. Die Verwendung von AndroidAPS ist im Wesentlichen die Durchführung eines medizinischen Experiments an sich selbst. Die Einrichtung des Systems erfordert Entschlossenheit und technisches Wissen. Wenn Dir zu Beginn das technische Know-how noch fehlt, wirst Du es am Ende haben. Alle Informationen, die Du benötigst, findest Du auf dieser und anderen Seiten im Internet. Oder Du kannst Deine Fragen in Facebook-Gruppen oder anderen Foren an erfahrene Nutzer stellen. Viele unterschiedliche Menschen mit Diabetes haben AndroidAPS erfolgreich erstellt und nutzen es nun ganz sicher. Es ist aber wichtig, dass jeder Benutzer
+* das System selbst erstellt, damit er/sie vollständig versteht, wie es funktioniert.
+* die Einstellungen an seine indiviudellen Bedürfnisse anpasst.
+* das System pflegt, auf dem aktuellen Stand hält und es überwacht, um sicherzustellen, dass es ordnungsgemäß funktioniert.
+Wenn Du bereit bist, diese Herausforderung anzunehmen, lies bitte weiter. 
 
 **Die primären Ziele von AndroidAPS:**
 
-* App auf „modularer Basis“. Es soll leicht sein, neue Module hinzuzufügen ohne den Rest des Quellcodes anzutasten
-* App, die in viele Sprachen übersetzt werden kann
-* App, bei der vor dem Kompilieren leicht ausgewählt werden kann, was in der Programm-Datei (apk) enthalten sein soll
-* Eine App, die es ermöglicht, einen Open- oder Closed-Loop-Modus zu wählen
-* Eine App, die die Funktionen eines APS (Artificial Pancreas System) visualisiert (Parameter, Ergebnis und Umsetzung)
-* Die Möglichkeit, andere Algorithmen hinzuzufügen und den Nutzer entscheiden zu lassen, welchen davon er verwenden will
-* Eine „Virtuelle Pumpe“, mit der man alles ausprobieren kann, bevor man startet
-* Eine App mit enger Nightscout-Integration
-* Die Möglichkeit zum Hinzufügen/Entfernen von Beschränkungen zur Sicherheit der Nutzer
-* Eine App, die alles enthält, um mit einer künstlichen Bauchspeicheldrüse (APS) und Nightscout den Typ 1 Diabetes zu managen
+* Eine App mit eingebauter Sicherheit. Um mehr über die Sicherheitsfunktionen der Algorithmen, die als oref0 und oref1 bekannt sind, zu lesen, klicke hier (https://openaps.org/reference-design/)
+* Eine All-in-one-App für das Management Deines Typ1-Diabetes mit einer künstlichen Bauchspeicheldrüse und Nightscout.
+* Eine App, zu der Benutzer bei Bedarf Module einfach hinzufügen oder entfernen können.
+* Eine App mit Versionen für verschiedenen Standorte und Sprachen.
+* Eine App, die im Open- und Closed-Loop-Modus verwendet werden kann.
+* Eine App, die vollkommen transparent ist: Benutzer können Parameter eingeben, Ergebnisse sehen und die endgültige Entscheidung treffen.
+* Eine App, die unabhängig von bestimmten Pumpen-Treibern ist und eine "virtuelle Pumpe" enthält, damit Benutzer sicher experimentieren können, bevor sie diese zusammen mit ihrer Insulinpumpe verwenden. 
+* Eine App, die eng mit Nightscout verbunden ist.
+* Eine App, in der der Benutzer die Kontrolle über die Sicherheitseinschränkungen hat. 
 
 **Was man benötigt:**
 
-* Ein Android-Smartphone mit Android 5.0 oder höher. Siehe `diese Tabelle <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ über Erfahrungen, wie gut bestimmte Smartphones mit AndroidAPS funktionieren.
+* Ein Android-Smartphone mit Android 5.0 oder höher. In `dieser Tabelle <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ findest Du Informationen, welche Smartphones am Besten mit AndroidAPS funktionieren.
+* Ein kontinuierliches Glukose-Messsystem (CGM/FGM), z. B. Dexcom G4/G5/G6, Freestyle Libre mit Bluetooth-Aufsatz, Eversense, Medtronic Guardian oder PocTech
 * App zum Empfang von CGM Daten, z.B. `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ selbst
+* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ selbst (auf Deinem Smartphone installiert)
 * `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 oder neuer
-* Eine unterstützte Insulinpumpe: Dana-R oder Dana-RS oder Accu-Chek Combo (es sei denn, du programmierst deine eigenen Treiber für andere Insulinpumpe)
-* kontinuierliches Glukose-Messsystem (CGM) als Datenquelle, z. B. Dexcom G4/G5/G6, Freestyle Libre mit Bluetooth-Aufsatz, Eversense, Medtronic Guardian, PocTech
+* Eine unterstützte Insulinpumpe: Dana-R oder Dana-RS von Sooil oder Accu-Chek Combo oder Insight vn Roche (es sei denn, Du programmierst Deinen eigenen Treiber für eine andere Insulinpumpe).
 
 
 .. note:: 
@@ -74,10 +79,10 @@ AndroidAPS einrichten
    
    Konfigurations-Generator <./Configuration/Config-Builder.md>
    BZ-Quelle <./Configuration/BG-Source.md>
-   DanaR Pumpe <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS Pumpe <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo Pumpe <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu Chek Insight Pumpe <./Configuration/Accu-Chek-Insight-Pump.md>
+   Dana-R Pumpe <./Configuration/DanaR-Insulin-Pump.md>
+   Dana-RS Pumpe <./Configuration/DanaRS-Insulin-Pump.md>
+   Accu-Chek Combo Pumpe <./Configuration/Accu-Chek-Combo-Pump.md>
+   Accu-Chek Insight Pumpe <./Configuration/Accu-Chek-Insight-Pump.md>
    Smartwatch-Integration <./Configuration/Watchfaces.md>
    Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.md>
    Empfindlichkeitserkennung und COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -101,6 +106,7 @@ AndroidAPS nutzen
    NSClient-Problembehebung <./Usage/Troubleshooting-NSClient.md>
    Android Auto <./Usage/Android-auto.md>
    Huawei Smartphones - spezielle Konfigurationseinstellungen<./Usage/huawei.md>
+   Jelly Pro - Optimierung der Batterielaufzeit <./Usage/jelly.md>
    Automation <./Usage/Automation.md>
 
 Hilfe durch die Community 

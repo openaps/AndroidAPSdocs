@@ -6,7 +6,7 @@ In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telef
 
 Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem AndroidAPS installiert ist. Sende dazu eines der folgenden **fettgedruckten** Kommandos und das Handy wird mit einer Erfolgsmitteilung oder dem angeforderten Status antworten.
 
-## BG
+## BZ
 
 - Letzter Blutzucker 125 vor 4min, Delta: -12mg/dl, IOB: 0.20E (Bolus: 0.10E Basal: 0.10E)
 
@@ -40,7 +40,7 @@ Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem
 
 - NSCLIENT neu starten 1 Empfänger
 
-## DANAR / PUMP (since 1.60)
+## PUMP
 
 - Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 
@@ -50,15 +50,50 @@ Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem
 
 ## BASAL 0.3
 
-- Um eine Basalrate von 0.3E/h zu starten, antworte mit Code Swe
-- Ferngesteuerte Basalraten-Einstellungen sind nicht erlaubt (wenn ferngesteuerte Kommandos nicht erlaubt sind)
+- Um eine Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
+
+## BASAL 0.3 20
+
+- Um für 20 Minuten eine temporäre Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
+
+## BASAL 30%
+
+- Um für 30 Minuten eine temporäre Basalrate mit 30% zu starten, antworte mit dem Code Swe
+
+## BASAL 30% 50
+
+- Um für 50 Minuten eine temporäre Basalrate mit 50% zu starten, antworte mit dem Code Swe
 
 ## BOLUS 1.2
 
-- Um einen Bolus vo 1.2E abzugeben, antworte mit Code Rrt
-- Ferngesteuerte Boli sind nicht erlaubt (*falls innerhalb von 15 Minuten nach dem letzten Bolusbefehl oder wenn ferngesteuerte Kommandos nicht erlaubt sind*)
+- Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code Rrt
+- Remote-Bolus wird nicht zugelassen *wenn innerhalb von 15 Minuten nach dem letzten Bolus-Befehl oder wenn Remote-Befehle grundsätzlich nicht erlaubt sind*.
+
+## EXTENDED STOP/CANCEL
+
+- Um den verzögerten Bolus zu stoppen, antworte mit dem Code EmF
+
+## EXTENDED 2 120
+
+- Um einen verzögertenen Bolus von 2 IE über 120 Minuten zu starten, antworte mit dem Code EmF
 
 ## CAL 5.6
 
-- Um Kalibrierungswert von 126 zu senden, antworte mit Code Rrt
-- Kalibrierung gesendet (*wenn xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein*)
+- Um einen Kalibrierungswert von 5,6 zu senden, antworte mit Code Rrt
+- Kalibrierung gesendet (*wenn xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein*.)
+
+## PROFILE STATUS
+
+- Profile1
+
+## PROFILE LIST
+
+- 1.`Profile1` 2.`Profile2`
+
+## PROFILE 1
+
+- Um zum Profil 1 mit 100% zu wechseln, antworte mit Code Any
+
+## PROFILE 2 30
+
+- Um zum Profil 2 mit 30% zu wechseln, antworte mit Code Any

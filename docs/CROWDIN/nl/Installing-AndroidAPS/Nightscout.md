@@ -15,7 +15,16 @@ We gaan er vanuit dat je al een Nightscout site hebt, zo niet bezoek de pagina [
   * `PUMP_FIELDS` = `reservoir battery clock`
   * Je kunt verschillende alarmen instellen voor [monitoring the pump ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery% raden we sowieso aan om te activeren: 
     * `PUMP_WARN_BATT_P` = `51`
-    * `PUMP_URGENT_BATT_P` = `26`
+    * `PUMP_URGENT_BATT_P` = `26` 
+  * Optioneel: De volgende 'timers' kunnen worden ingesteld voor de kleuren in de AAPS Careportal: 
+    * `BAGE_WARN` = `480` (Waarschuwing na x uren sinds laatste batterij wissel in careportal)
+  * `BAGE_URGENT` = `504` (Urgente waarschuwing na x uren sinds laatste batterij wissel in careportal)
+  * `CAGE_WARN` = `40` (Waarschuwing na x uren sinds laatste infuus wissel in careportal)
+  * `CAGE_URGENT` = `48` (Urgente waarschuwing na x uren sinds laatste infuus wissel in careportal)
+  * `IAGE_WARN` = `144` (Waarschuwing na x uren sinds laatste insuline ampul wissel in careportal)
+  * `IAGE_URGENT` = `192` (Waarschuwing na x uren sinds laatste insuline ampul wissel in careportal)
+  * `SAGE_WARN` = `160` (Waarschuwing na x uren sinds laatste CGM sensor ingebracht in careportal)
+  * `SAGE_URGENT` = `168` (Urgente Waarschuwing na x uren sinds laatste CGM sensor ingebracht in careportal)
 
 ![Azure](../../images/nightscout1.png)
 

@@ -15,7 +15,16 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
   * `PUMP_FIELDS` = `reservoir battery clock`
   * Ein Alarm bei [niedrigem Pumpen-Batteriestand](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring) in % kann wie folgt aktiviert werden: 
     * `PUMP_WARN_BATT_P` = `51`
-    * `PUMP_URGENT_BATT_P` = `26`
+    * `PUMP_URGENT_BATT_P` = `26` 
+  * Optional: Die folgenden 'Timer' können für Farbhinweise im AAPS-Careportal eingestellt werden: 
+    * `BAGE_WARN` = `480` (Warnung nach x Stunden seit dem letzten Batteriewechsel-Event im Careportal)
+  * `BAGE_URGENT` = `504` (Dringende Warnung nach x Stunden seit dem letzten Batteriewechsel-Event im Careportal)
+  * `CAGE_WARN` = `40` (Warnung nach x Stunden seit dem letzten Kanülenwechsel-Event im Careportal)
+  * `CAGE_URGENT` = `48` (Dringende Warnung nach x Stunden seit dem letzten Kanülenwechsel-Event im Careportal)
+  * `IAGE_WARN` = `144` (Warnung nach x Stunden seit dem letzten Reservoirwechsel-Event im Careportal)
+  * `IAGE_URGENT` = `192` (Dringende Warnung nach x Stunden seit dem letzten Reservoirwechsel-Event im Careportal)
+  * `SAGE_WARN` = `160` (Warnung nach x Stunden seit dem letzten CGM-Sensor-Setzen-Event im Careportal)
+  * `SAGE_URGENT` = `168` (Dringende Warnung nach x Stunden seit dem letzten CGM-Sensor-Setzen-Event im Careportal)
 
 ![Azure](../../images/nightscout1.png)
 

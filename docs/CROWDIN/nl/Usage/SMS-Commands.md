@@ -40,7 +40,7 @@ Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vet
 
 - NSCLIENT RESTART 1 receivers
 
-## DANAR / PUMP (sinds AAPS v1.60)
+## PUMP
 
 - Laatste Verbinding: 1 min geleden Temp: 0,00E/uur @11:38 5/30min IOB: 0,5E Reservoir: 34E Batterij: 100
 
@@ -50,15 +50,50 @@ Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vet
 
 ## BASAL 0.3
 
-- Om het basaal 0,3 E/uur te starten antwoord met de code Swe
-- Externe basaal instelling is niet toegestaan (als externe commando's niet zijn toegestaan)
+- Om een tijdelijk basaal van 0,3 E/uur voor 30 min te starten antwoord met de code Swe
+
+## BASAL 0.3 20
+
+- Om een tijdelijk basaal van 0,3 E/uur voor 20 min te starten antwoord met de code Swe
+
+## BASAL 30%
+
+- Om een tijdelijk basaal van 30% voor 30 min te starten antwoord met code Swe
+
+## BASAL 30% 50
+
+- Om een tijdelijk basaal van 30% voor 50 min te starten antwoord met code Swe
 
 ## BOLUS 1.2
 
 - Om een bolus van 1,2 E toe te dienen antwoord met de code Rrt
 - Externe bolus niet toegestaan (*niet toegestaan als je dit binnen 15 min na je laatste bolus commando stuurt, of als externe commando's niet zijn toegestaan*)
 
+## EXTENDED STOP/CANCEL
+
+- Om een vertraagde bolus te stoppen antwoord met de code EmF
+
+## EXTENDED 2 120
+
+- Om een vertraagde bolus van 2E voor 120 min te starten antwoord met code EmF
+
 ## CAL 5.6
 
-- Om calibratie te verzenden antwoord met de code Rrt
+- Om een kalibratie van 5,6 mmol/L te verzenden antwoord met de code Rrt
 - Kalibratie verzonden (*als xDrip is geïnstalleerd. In de xDrip+ instellingen moet je aangevinkt hebben dat kalibraties van volgers geaccepteerd worden*)
+
+## PROFILE STATUS
+
+- Profiel 1
+
+## PROFILE LIST
+
+- 1.`Profile1` 2.`Profile2`
+
+## PROFILE 1
+
+- Om van profiel te wisselen naar Profile1 100% antwoord met code Any
+
+## PROFILE 2 30
+
+- Om van profiel te wisselen naar Profile2 30% antwoord met code Any
