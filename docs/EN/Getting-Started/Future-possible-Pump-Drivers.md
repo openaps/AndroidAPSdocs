@@ -4,24 +4,6 @@ This is list of some Pumps floating around there, and status of support for them
 
 ## Pumps whose support is in development
 
-### Accu-Chek Insight ([Homepage](https://www.accu-chek.co.uk/insulin-pumps/insight))
-
-**Loop status:** Possibly loopable, but in the process of reverse engineering the protocol
-
-**Other implementations:** None
-
-**Java implementations:** Under development
-
-**AAPS implementation status:** Under development 
-
-**Hardware requirement for AAPS:** Bluetooth capable Android device
-
-**Loopable versions:** all
-
-
-***
-
-
 ### Medtronic
 
 **Loop status:** Some of older versions of pumps are loopable, but not the newer models (see below)
