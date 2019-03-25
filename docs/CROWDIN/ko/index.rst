@@ -106,6 +106,7 @@ AndroidAPS 설치하기
    NSClient 문제해결 <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
    Huawei phones special configuration <./Usage/huawei.md>
+   Jelly Pro - battery life optimization <./Usage/jelly.md>
    Automation <./Usage/Automation.md>
 
 도움을 구할 곳들 
