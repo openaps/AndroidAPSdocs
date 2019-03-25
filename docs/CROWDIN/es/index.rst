@@ -106,6 +106,7 @@ Uso
    Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
    Huawei phones special configuration <./Usage/huawei.md>
+   Jelly Pro - battery life optimization <./Usage/jelly.md>
    Automation <./Usage/Automation.md>
 
 Donde buscar ayuda 
