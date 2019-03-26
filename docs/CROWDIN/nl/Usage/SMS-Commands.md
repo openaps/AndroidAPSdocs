@@ -40,7 +40,7 @@ Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vet
 
 - NSCLIENT RESTART 1 receivers
 
-## PUMP
+## POMP
 
 - Laatste Verbinding: 1 min geleden Temp: 0,00E/uur @11:38 5/30min IOB: 0,5E Reservoir: 34E Batterij: 100
 
