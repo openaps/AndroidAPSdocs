@@ -1,6 +1,6 @@
 # Handig om te lezen voordat je begint
 
-Voordat je begint met bouwen, heb je nog wat leeswerk te doen om te begrijpen hoe alles werkt zodat je het maximale eruit kunt halen. We hebben een overzicht gemaakt van sites waar je over closed loopen kunt lezen en hopelijk antwoorden te vinden op veel van je vragen. De meeste sites zijn wel in het Engels.
+Voordat je begint met bouwen, heb je nog wat leeswerk te doen om te begrijpen hoe alles werkt zodat je het maximale eruit kunt halen. We hebben een overzicht gemaakt van sites waar je over closed loopen kunt lezen en hopelijk antwoorden te vinden op veel van je vragen. De meeste sites zijn wel in het Engels, onder "Achtergrondinformatie en artikelen (...)" vind je enkele Nederlandstalige artikelen.
 
 ## Leestips
 
