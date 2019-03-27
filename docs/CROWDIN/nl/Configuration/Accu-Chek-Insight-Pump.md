@@ -16,30 +16,30 @@
 
 * In de [Configurator](../Configuration/Config-Builder) van AndroidAPS: selecteer Accu-Chek Insight in de pomp sectie
     
-    ![Screenshot van Config Builder Insight](../../images/Insight_ConfigBuilder.png)
+    ![Screenshot van Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
 * Tik op het tandwiel-icoon naast Insight om de instellingen te openen.
 
 * In de instellingen: tik op de knop 'Insight koppelen' bovenaan het scherm. Als het goed is zie je nu een lijst van alle nabijgelegen bluetooth apparaten (links onder).
 * Op de Insight pomp, ga naar Menu > Instellingen > Communicatie > Apparaat toevoegen. De pomp zal het volgende scherm (rechts onder) weergeven met het serienummer van de pomp.
     
-    ![Screenshot van Insight Pairing 1](../../images/Insight_Pairing1.png)
+    ![Screenshot van Insight Pairing 1](../images/Insight_Pairing1.png)
 
 * Ga terug naar je telefoon, tik op het pomp serienummer in de lijst van bluetooth apparaten. Tik vervolgens op Koppelen om te bevestigen.
     
-    ![Screenshot van Insight Pairing 2](../../images/Insight_Pairing2.png)
+    ![Screenshot van Insight Pairing 2](../images/Insight_Pairing2.png)
 
 * Zowel op je pomp als op je telefoon zal vervolgens een code verschijnen. Controleer of de codes op beide apparaten hetzelfde zijn en bevestig op zowel pomp als telefoon.
     
-    ![Screenshot van Insight Pairing 3](../../images/Insight_Pairing3.png)
+    ![Screenshot van Insight Pairing 3](../images/Insight_Pairing3.png)
 
 * Gelukt! Geef jezelf een schouderklopje voor het succesvol koppelen van je pomp met AndroidAPS.
     
-    ![Screenshot van Insight Pairing 4](../../images/Insight_Pairing4.png)
+    ![Screenshot van Insight Pairing 4](../images/Insight_Pairing4.png)
 
 * Om te controleren of alles goed is, ga je terug naar de Configurator in AndroidAPS en tik op het tandwiel-icoontje bij de Insight pomp om in de Insight-instellingen te komen. Tik vervolgens op Insight Pairing en je zult wat informatie te zien krijgen over de pomp:
     
-    ![Screenshot van Insight Pairing Informatie](../../images/Insight_PairingInformation.png)
+    ![Screenshot van Insight Pairing Informatie](../images/Insight_PairingInformation.png)
 
 Opmerking: Er zal geen permanente verbinding zijn tussen pomp en telefoon. Een verbinding zal alleen tot stand worden gebracht als dat nodig is (d.w.z. instellen van tijdelijke basaalstand, bolus geven, pomp geschiedenis uitlezen...). Anders zouden de batterij van telefoon en pomp te snel leeglopen.
 
@@ -79,7 +79,7 @@ In AndroidAPS toont het Accu-Chek Insight tabblad de huidige status van de pomp.
 * "Vernieuw": Vernieuwt de pomp status
 * "Activeer/deactiveer melding van TBR einde": Een Insight pomp is standaard ingesteld om een alarm af te geven wanneer een TBR (tijdelijke basaalstand) eindigt. Met deze knop kun je dit alarm activeren of deactiveren zonder dat je hiervoor speciale Accucheck configuratie-software nodig hebt.
     
-    ![Screenshot van Insight Status](../../images/Insight_Status2.png)
+    ![Screenshot van Insight Status](../images/Insight_Status2.png)
 
 ## Instellingen in de pomp
 
