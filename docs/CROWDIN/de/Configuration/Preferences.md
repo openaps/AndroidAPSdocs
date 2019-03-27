@@ -6,103 +6,94 @@ Dies erlaubt dir, ein Passwort zu vergeben, um zu vermeiden, aus Versehen oder o
 
 ## Alter des Patienten
 
-Es gibt Sicherheitsgrenzen aufgrund des Alters, die hier eingestellt werden können. Wenn Du diese Grenzen erreichst (wie maximaler Bolus), wird es Zeit eine Stufe aufzusteigen. Es ist eine schlechte Idee, ein höheres Alter anzugeben als das tatsächliche Alter, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin Dialog eingegeben wird (z. B. beim Auslassen des Dezimalpunktes).
+Es gibt Sicherheitsgrenzen aufgrund des Alters, die hier eingestellt werden können. Wenn Du diese Grenzen erreichst (wie maximaler Bolus), wird es Zeit eine Stufe aufzusteigen. Es ist eine schlechte Idee, ein höheres Alter anzugeben als das tatsächliche Alter, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin Dialog eingegeben wird (z. B. beim Auslassen des Dezimalpunktes). If you want to know the actual numbers for these hard coded security limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
 
 ## Allgemein
 
 * Wähle hier deine Sprache aus. Wenn deine Sprache nicht verfügbar ist oder nicht alle Worte übersetzt sind, dann mach gerne einige Vorschläge auf [Crowdin](https://crowdin.com/project/androidaps) oder frage im [Gitter Chatroom](https://gitter.im/MilosKozak/AndroidAPS).
-* QuickWizard-Einstellungen erlauben es dir, einen Schnellzugriffsbutton für übliche Snacks oder Mahlzeiten hinzuzufügen. Gib die Details der Kohlenhydrate ein und wenn du diesen QuickWizard-Button auf dem Homescreen drückst, wird der Bolus für diese Kohlenhydrate auf Basis der aktuellen Werte berechnet (wobei der Zuckerwert und das Insulin On Board verwendet werden, wenn Du es bei er Einstellung des Buttons eingibst).
-* Erweiterte Einstellungen, um Superbolus im Assistenten zu aktivieren und für die Statusanzeige auf dem Startbildschirm. Die Statusanzeige gibt eine visuelle Warnung bei niedrigem Reservoir- und Akkustand sowie überfälligem Katheterwechsel.
+
+## Übersicht
+
+* Keep screen on is useful while you are giving a presentation. It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
+* Buttons let you choose which buttons are visible on your home screen. Also gives you a few options for the popup screen you will see after pressing a button.
+* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
+* Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
     
-    ![Statusanzeige - Bildschirmdetails](../images/StatusLights.jpg)
-
-## Careportal
-
-"Entered by" ist der Text, der in Deinem Nightscout Careportal im Feld "entered by" angezeigt wird. Nimm einen Text, der für dich etwas bedeutet. Das kann der Name der App sein, der Name der Person oder der Name des Smartphones (z. B. wenn du AndroidAPS als NS Client auf einem Smartphone verwendest, das nicht dem Patienten gehört oder wenn du zwischen den Smartphone Eigentümern unterscheiden willst).
+    ![Status lights - detail](../images/StatusLights.jpg)
 
 ## Sicherheitseinstellungen für die Behandlung
 
 ### Maximal erlaubert Bolus [U]
 
-Das ist die maximale Menge an Bolus Insulin, die AAPS abgeben darf. Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Abgabemenge von Bolus Insulin entspricht, das Du für eine Mahlzeitenkorrektur brauchst. Diese Einschränkung gilt ebenfalls für die Ergebnisse des Bolus-Rechners.
+This is the maximum amount of bolus insulin that AAPS is allowed to deliver. Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
 
 ### Maximal erlaubte Kohlenhydrate [g]
 
-Dies ist die maximale Menge an Kohlenhydraten, für die der AAPS Bolus-Rechner eine Dosis berechnen darf. Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Menge an Kohlenhydraten entspricht, die du vermutlich jemals für eine Mahlzeit brauchen wirst.
+This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
 ## Loop
 
-Du kannst hier zwischen Open Loop und Closed Loop wechseln. Open Loop bedeutet, dass TBR Vorschläge gemacht werden, die auf deinen Daten basieren und die als Benachrichtigung erscheinen. Du musst manuell bestätigen, dass du sie akzeptierst und dass sie an die Pumpe gesendet werden dürfen. Closed Loop bedeutet, dass die TBR Vorschläge automatisch zur Pumpe gesendet werden, ohne dass du benachrichtigt wirst oder sie bestätigen musst. Auf dem Hauptbildschirm wird links oben angezeigt, ob du Open oder Closed Loop laufen hast. Wenn du diesen Button lange drückst, kannst du zwischen den beiden umschalten.
+You can toggle between open and closed looping here. Open looping means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump. Closed looping means TBR suggestions are automatically sent to your pump without confirmation or input from you. The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
 
 ## OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) erlaubt es dem System schneller zu reagieren, nachdem ein Mahlzeitenbolus eingegeben wurde, falls du die Kohlenhydrate korrekt eingibst. Schalte das in den Einstellungen ein, um die Sicherheitseinstellungen hier zu sehen. Du musst Objective 7 erreicht haben, um dieses Feature zu nutzen. Du kannst mehr über diese Einstellung lesen bei [Autosens in den OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed Objective 7 to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Maximale IE/h, die als TBR gesetzt werden können
 
-Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS jemals eine gefährlich hohe Basalrate setzt. Der Wert wird in IE pro Stunde angegeben (IE/h). Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, die **höchste Basal Rate** in deinem Profil zu verwenden und **diese mit 4 zu multiplizieren**. Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 4 multiplizieren, um einen Wert von 2IE/h zu erhalten.
+This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). Es wird empfohlen, hier etwas vernünftiges einzugeben. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf [U]
 
-Menge an zusätzlichem Basalinsulin (in Einheiten), das deinem Körper zusätzlich zu deiner normalen Basalrate zugeführt werden darf. Wenn dieser Wert erreicht wird, wird AAPS aufhören, zusätzliches Basalinsulin abzugeben, bis dein Basalinsulin On Board (IOB) wieder unterhalb dieses Wertes liegt.
+Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
 
-* Dieser Wert berücksichtigt kein Bolus-IOB, nur Basal.
-* Dieser Wert wird unabhängig von deiner normalen Basalrate berechnet und überwacht. Es wird lediglich das zusätzliche Basalinsulin zu der normalen Basalrate berücksichtigt.
-* Dieser Wert wird in Insulineinheiten gemessen (IE).
+* This value does not consider bolus IOB, only basal.
+* This value is calculated and monitored indepentandlty of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* This value is measured in insulin units (u).
 
-Wenn Du anfängst den Loop zu benutzen, **wird empfohlen das Maximale Basal-IOB für eine bestimmte Zeit auf 0 zu setzen**, während du dich mit dem System vertraut machst. Das verhindert, dass AAPS dir generell zusätzliches Basal-Insulin verabreicht. Während dieser Zeit wird AAPS trotzdem in der Lage sein, dein Basalinsulin abzuschalten, um Hypoglykämien zu verhinden.
+When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
 
-Das ist ein wichtiger Schritt, um:
+This is an important step in order to:
 
-* Zeit zu haben, sich auf sichere Art mit der Verwendung von AAPS vertraut zu machen und zu überwachen, wie es funktioniert.
-* die Gelegenheit zu nutzen, dein Basalratenprofil und die Insulinsensibilitäts-Faktoren (ISF) zu perfektionieren.
-* zu sehen, wie AAPS die Basalrate einschränkt, um Hypoglykämien zu verhindern.
+* Have a period of time to safely get used to the AAPS system and monitor how it works.
+* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
+* See how AAPS limits your basal insulin to prevent hypoglycaemia.
 
-Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches Basalinsulin zu geben, indem du den Wert Max-Basal IOB erhöhst. Die empfohlene Richtlinie für diesen Wert ist, die **höchste Basalrate** in deinem Profil zu verwenden und diese **mit 3 zu multiplizieren**. Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, könntest du das mit 3 multiplizieren, um einen Wert von 1,5IE/h zu erhalten.
+When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
 
-* Du kannst konservativ mit diesem Wert starten und ihn im Laufe der Zeit langsam erhöhen. 
-* Das sind aber nur Richtlinien; jeder Körper ist anders. Es kann durchaus sein, dass du mehr oder weniger benötigst als hier empfohlen wurde, aber beginne dennoch konservativ und passe es langsam an.
+* You can start conservatively with this value and increase it slowly over time. 
+* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
 
-*Bemerkung: zur Sicherheit ist es nicht möglich, den Wert Max-Basal IOB bei höher als 7 IE festzulegen.*
+*Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
 
 ## Resorptions-Einstellungen
 
-Wenn du AMA Autosense eingestellt hast, dann wird dir hier ermöglicht, die maximale Zeit für die Resorption des Essens einzustellen und wie oft du eine Aktualisierung von Autosense möchtest. Wenn du oft Mahlzeiten mit viel Fett oder Eiweiss zu dir nimmst, wirst du die Resorptionszeit für das Essen erhöhen müssen.
+If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
 ## Pumpen-Einstellungen
 
-Die Optionen hier hängen davon ab, welchen Pumpentreiber du im Config-Generator ausgewählt hast. Kopple deine Pumpe und richte sie gegebenenfalls entsprechend den Anweisungen für [DanaR Insulin Pumpe](../Configuration/DanaR-Insulin-Pump.md), [DanaRS Insulin Pumpe](../Configuration/DanaRS-Insulin-Pump.md) oder [Accu Chek Combo Pumpe](../Configuration/Accu-Chek-Combo-Pump.md) ein. Stelle sicher, dass du die virtuelle Pumpe im Config-Generator ausgewählt hast, wenn du AndroidAPS als Open Loop betreibst.
+The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) or [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) or [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) instructions where relevant. If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 ## Nightscout-Client
 
-* Gib hier deine 'nightscout URL' ein (https://deinewebseite.herokuapp.com oder https://deinewebseite.azurewebsites.net), und das 'API secret' (ein Passwort mit 12 Zeichen, das in den heroku oder azure Variablen festgelegt wurde). Das versetzt AndroidAPS in die Lage, Daten von Nightscout zu lesen und zu schreiben. Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
-* ''Logge App-Start in Nightscout" fügt den Einträgen des Careportals jedesmal einen Eintrag hinzu, wenn die App gestartet wird. Die App sollte maximal einmal am Tag neu gestartet werden; mehrere Einträge am Tag könnten auf ein Problem hinweisen. 
-* "Aktiviere lokale Broadcasts" teilt deine Daten aus dem Careportal mit anderen Apps auf dem Smartphone (z. B. xdrip+). 
-* "Alarm-Optionen" ermöglicht es dir festzulegen, welche Nightscout Alarme in der App verwendet werden sollen. Damit die Alarme ausgelöst werden, müssen die Variablen für die Alarme "Urgent High", "High", "Low" und "Urgent Low" in deinen [heroku oder azure Variablen](http://www.nightscout.info/wiki/welcome/website-features#customalarms) festgelegt werden. Sie werden nur dann funktionieren, wenn du über eine aktive Internetverbindung zu Nightscout verfügst und sind für Eltern/Betreuer gedacht. Wenn du die CGM-Quelle hingegen direkt auf dem Smartphone hast, dann solltest du lieber deren Alarme verwenden (z.B. xdrip+)
+* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
+* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem. 
+* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
+* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
+* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
 
 ## SMS-Kommunikator
 
-Diese Einstellung erlaubt eine Fernsteuerung der App, indem Anweisungen an das Smartphone des Patienten gesendet werden, die die App ausführt (z.B. Loop oder Bolus anhalten). Weitere Informationen werden in [SMS-Befehle](../Usage/SMS-Commands.md) beschrieben. SMS-Befehle werden in den Einstellungen aber nur angezeigt, wenn diese Option im Konfigurations-Generator aktiviert wurde.
+This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Usage/SMS-Commands.md) but it will only display in Preferences if you have selected this option in the Config Builder.
 
 ## Andere
 
-* Hier kannst du Voreinstellungen für die verschiedenen temporären Ziele angeben ("bald Essen" und "Aktivitäten"). Wenn du bei "Temporäres Ziel" im Careportal zum Beispiel "Bald essen" auswählst, werden die hier eingegebenen Werte automatisch in die entsprechenden Eingabefelder eingetragen. Weitere Informationen zur Benutzung der temporären Ziele findest du in [OpenAPS Features](../Usage/Open-APS-features.md). 
-* Du kannst Werte für die Befüllung setzen - diese werden an die Pumpe weitergegeben und das zur Befüllung verwendete Insulin wird vom Füllstand des Reservoir abgezogen, ohne in IOB Berechnungen berücksichtigt zu werden. Schaue bitte im Beipackzettel deines Katheters nach, wie viele Einheiten du je nach Nadel- und Schlauchlänge zur Befüllung verwenden sollst.
-* Du kannst die Werte zur Anzeige der Zielbereiche auf dem Hauptbildschirm und der Smartwatch eingeben. Beachte bitte, dass dies nur die Anzeige in der Grafik betrifft und nicht die Ziel- oder Berechnungswerte beeinflusst.
-* "Kurze Tab-Überschriften" ermöglicht es dir, mehr Tab-Reiter auf dem Bildschirm zu sehen. Zum Beispiel wird aus 'Open APS' der Titel 'OAPS' und 'Careportal' wird zu 'CP'.
-* Bei "Lokale Alarme" kannst du entscheiden, ob du eine Warnung erhalten möchtest, wenn einige Zeit keine Glukose-Daten empfangen wurden (Veraltete Daten) oder wenn die Pumpe nicht erreichbar ist. Wenn du häufig Alarme erhältst, dass die Pumpe nicht erreichbar ist, dann aktiviere BT-Watchdog in den erweiterten Einstellungen.
+* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
+* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
+* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
+* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
 
-## Erweiterte Einstellungen ``muss noch erweitert werden
+## Data Choices
 
-* OpenAPS MA
-* Verwende immer das kurze durchschnittliche Delta statt... Es ist sinnvoll, diese Einstellung zu aktivieren, wenn du ungefilterte Daten aus Quellen wie xDrip+ verwendest, im Gegensatz zu vorverarbeiteten Daten wie vom offiziellen Dexcom Empfänger. Gefilterte Daten scheinen gleichmässiger zu sein, wohingegen ungefilterte Daten sprunghaft sein können. Diese ungefilterten Daten können AndroidAPS dazu bringen, häufiger Änderungen in der Temporären Basalrate vorzuschlagen, als eigentlich erforderlich sind, da der OpenAPS Algorithmus auf die sprunghaften Daten reagiert. Wenn diese Option aktiviert ist, verwendet der OpenAPS Algorithmus das kurze durchschnittliche Delta (also den Mittelwert der letzten 15 Minuten), anstatt des letzten Glukose-Wertes, der empfangen wurde. Das bewirkt einen "Glättungseffekt" auf die Daten und ist ein Versuch, empfangene sprunghafte Werte zu kompensieren. Benutzer der Freestyle Libre Sensoren von Abbot, die ihre Daten mit Geräten wie LimiTTern empfangen, erzielen mit dieser Einstellung möglicherweise bessere Ergebnisse mit AAPS.
-
-Weitere Hinweise zum Thema Datenglättung bei Verwendung von xdrip+ als Datenquelle sind hier zu finden: [Zuckerwerte glätten in xDrip+](../Usage/Smoothing-blood-glucose-data-in-xDrip.md).
-
-* OpenAPS preferences.json - bevor du diese Einstellungen änderst, lies dir bitte die Beschreibung der verwendeten Sicherheitsvariablen und wieso sie verwendet werden unter [OpenAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html) durch.
-* "Ignoriere Profilwechsel" sorgt dafür, dass das aktuelle AndroidAPS Profil nicht an die Pumpe gesendet wird. Es wird empfohlen, diese Option nicht zu aktivieren, außer du testest Code. Aus Sicherheitsgründen werden die Profil-Änderungen auf das Basal Profil 1 der Pumpe übertragen, was bedeutet, dass bei einem Ausfall von AndroidAPS oder dem Verlust einer Verbindung zwischen AndroidAPS und der Pumpe die Pumpe das aktuelle Profil weiter verwendet. Ansonsten müsstest du das Profil manuell in der Pumpe eingeben. Weitere Informationen zu Profilen findest du unter [Pofile](/docs/Usage/Profiles).
-* "BT Watchdog" - Diese Option sollte aktiviert werden, wenn du immer wieder die Verbindung zur Pumpe verlierst. Wenn die Verbindung zur Pumpe verloren geht, wird Bluetooth automatisch aus und wieder an geschaltet, um die Verbindung neu aufzubauen.
-
-## Wear-Einstellungen
-
-Weitere Informationen zu den Einstellungen der Wear-Zifferblätter sind unter [Zifferblaetter](../Configuration/Watchfaces.md) zu finden.
+* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
