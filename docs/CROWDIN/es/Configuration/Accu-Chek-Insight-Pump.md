@@ -16,30 +16,30 @@
 
 * In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
-    ![Screenshot of Config Builder Insight](../../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
 * Tap the cog-wheel to open Insight settings.
 
 * In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
 * On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
     
-    ![Screenshot of Insight Pairing 1](../../images/Insight_Pairing1.png)
+    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
 * Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
     
-    ![Screenshot of Insight Pairing 2](../../images/Insight_Pairing2.png)
+    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
 * Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
     
-    ![Screenshot of Insight Pairing 3](../../images/Insight_Pairing3.png)
+    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
 * Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
     
-    ![Screenshot of Insight Pairing 4](../../images/Insight_Pairing4.png)
+    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
 * To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
     
-    ![Screenshot of Insight Pairing Information](../../images/Insight_PairingInformation.png)
+    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
 Note: There will be no permanent connection between pump and phone. A connection will only be established if neccessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
@@ -79,7 +79,7 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 * "Refresh": Refreshes pump status
 * "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
     
-    ![Screenshot of Insight Status](../../images/Insight_Status2.png)
+    ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
 ## Settings in the pump
 
