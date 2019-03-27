@@ -40,5 +40,5 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 
 ### Nederland
 
-* [Looped-NL](https://www.facebook.com/groups/117102135652893): Nederlandstalige gebruikers van OpenAPS, Loop en AndroidAPS
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
