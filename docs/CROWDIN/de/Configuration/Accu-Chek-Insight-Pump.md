@@ -16,30 +16,30 @@
 
 * Wähle im [Konfigurations-Generator](../Configuration/Config-Builder) in AndroidAPS die Accu-Chek Insight im Bereich Pumpe.
     
-    ![Screenshot of Config Builder Insight](../../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
 * Tippe auf das Zahnrad, um die Insight-Einstellungen zu öffnen.
 
 * Klicke den Button 'Insight Pairing' am oberen Bildschirmrand in den erscheinenden Einstellungen. Du solltest eine Liste aller Bluetooth-Geräte in der Nähe sehen (Bild unten links).
 * Wähle auf der Insight Pumpe Menü Einstellungen Kommunikation Gerät hinzufügen (Menu > Settings > Communication > Add Device). Auf dem Display der Pumpe wird in folgender Anzeige die Seriennummer der Pumpe angezeigt (Bild unten rechts).
     
-    ![Screenshot of Insight Pairing 1](../../images/Insight_Pairing1.png)
+    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
 * Klicke im Smartphone auf die Seriennummer der Pumpe in der Liste der gefundenen Bluetooth-Geräte. Klicke dann zum Bestätigen auf 'Pair'.
     
-    ![Screenshot of Insight Pairing 2](../../images/Insight_Pairing2.png)
+    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
 * Sowohl die Pumpe als auch das Telefon zeigen dann einen Code. Stelle sicher, dass der Code auf beiden Geräten übereinstimmt und bestätige das sowohl auf der Pumpe als auch auf dem Smartphone.
     
-    ![Screenshot of Insight Pairing 3](../../images/Insight_Pairing3.png)
+    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
 * Fertig! Klopfe Dir selbst auf die Schulter, denn Du hast Pumpe und AndroidAPS erfolgreich verbunden.
     
-    ![Screenshot of Insight Pairing 4](../../images/Insight_Pairing4.png)
+    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
 * Klicke im Konfigurations-Generator in AndroidAPS auf das Zahnrad beim Eintrag 'Insight Pumpe', um die Insight-Einstellungen aufzurufen. Klicke dann auf "Insight Pairing' und Dir werden einige Informationen zur Pumpe angezeigt
     
-    ![Screenshot of Insight Pairing Information](../../images/Insight_PairingInformation.png)
+    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
 Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. Eine Verbindung wird nur dann hergestellt, wenn es erforderlich ist (z.B. Setzen einer temporären Basalrate, Bolusabgabe, Auslesen der Pumpenhistorie...). Sonst würden die Akkus des Smartphones und die Batterien der Pumpe zu schnell leer.
 
@@ -79,7 +79,7 @@ In AndroidAPS zeigt der Accu-Chek Insight Tab den aktuellen Pumpenstatus. Der Ta
 * "Aktualisieren": Pumpenstatus aktualisieren
 * "TBR-beendet-Benachrichtigung aktivieren/deaktivieren": Im Standard gibt die Insight Pumpe einen Alarm ab, wenn eine temporäre Basalrate beendet wurde. Mit diesem Button kannst Du diesen Alarm aktivieren und deaktivieren ohne auf die Konfigurationssoftware zurückgreifen zu müssen.
     
-    ![Screenshot of Insight Status](../../images/Insight_Status2.png)
+    ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
 ## Einstellungen in der Pumpe
 
