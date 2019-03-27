@@ -50,3 +50,8 @@ Depending on pump and CGM setup, jumps in time can lead to problems. With the Co
 A good time to make this switch would be with low IOB. E.g. an hour before a meal.
 
 This definitely affects the Combo, maybe the Dana Rv2 and RS - and most likely not the Dana R and Insight. But as it is not tested, please be cautions. This is DIY!
+
+### New as of AAPS version 2.1.2
+
+* To prevent difficulties loop will be disabled 90 minutes prior to DST change. This is done for security reasons (IOB too high due to duplicated bolus prior to DST change).
+* You will receive a noticfication on the main screen 3 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
