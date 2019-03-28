@@ -66,7 +66,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 *Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
 
-## Absorptie instellingen
+## Opname instellingen
 
 If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
