@@ -10,7 +10,7 @@ Om AndroidAPS te kunnen gebruiken, moet iemand de volgende dingen doen:
 
 * Vind een [geschikte insulinepomp](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), een [Android telefoon](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) en een [geschikte bloedglucose bron (CGM)](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
 * [Download de AndroidAPS broncode en bouw de app](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Koppel de app aan pomp en CGM en geef alle instellingen en veiligheidsgrenzen in](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* [Koppel de app aan CGM en pomp en geef alle instellingen en veiligheidsgrenzen in](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
 ### Hoe een doe-het-zelf closed loop werkt
 
@@ -29,7 +29,7 @@ De Android telefoon moet zowel met de pomp als de CGM verbonden zijn:
 * om commando's naar de pomp te sturen, en ook om de pompgeschiedenis uit te lezen - om te weten hoeveel insuline is toegediend
 * om gegevens te ontvangen van de CGM (rechtstreeks of via de cloud) - om te zien wat de bloedglucosewaardes doen
 
-Wanneer deze gegevens zijn binnengekomen in de AndroidAPS app, zal het algoritme zijn berekeningen doen. De beslissingen die het algoritme neemt zijn gebaseerd op de instellingen van de gebruiker (insuline gevoeligheidsfactor, koolhydraat ratio, duur van insuline actie, bloedglucose streefdoel, etc.). 
+Wanneer deze gegevens zijn binnengekomen in de AndroidAPS app, zal het algoritme zijn berekeningen doen. De beslissingen die het algoritme neemt zijn gebaseerd op de instellingen van de gebruiker (insuline gevoeligheidsfactor, koolhydraat ratio, werkingsduur van insuline, bloedglucose streefdoel, etc.). 
 
 De app krijgt ook informatie binnen vanaf de pomp, vanuit Nightscout en invoer van de gebruiker: over bolussen, gegeten koolhydraten en tijdelijke basaal aanpassingen. Die informatie wordt ook gebruikt om de benodigde hoeveelheid insuline te berekenen.
 
@@ -53,7 +53,7 @@ Het algoritme dat oorspronkelijk is gemaakt voor OpenAPS (een doe-het-zef systee
 
 #### Scenario 1 - Zero Temp (tijdelijke basaalstand van nul) voor de veiligheid
 
-In dit voorbeeld stijgt de bloedglucose op de korte termijn, maar er wordt een lage bloedglucose voorspeld voor de lange termijn. Er wordt voorspeld dat de glucosewaarde onder het streefdoel ('BG target') zal uitkomen * en* onder de veiligheidsdrempel ('threshold'). Om de lage glucosewaarde te voorkomen zal AndroidAPS een tijdelijke basaalstand van nul instellen totdat de voorspelde bloedglucose (zowel op korte als lange termijn) boven de veiligheidsdrempel ligt.
+In dit voorbeeld stijgt de bloedglucose op de korte termijn, maar er wordt een lage bloedglucose voorspeld voor de lange termijn. Er wordt voorspeld dat de glucosewaarde onder het streefdoel ('BG target') zal uitkomen *en* onder de veiligheidsdrempel ('threshold'). Om de lage glucosewaarde te voorkomen zal AndroidAPS een tijdelijke basaalstand van nul instellen totdat de voorspelde bloedglucose (zowel op korte als lange termijn) boven de veiligheidsdrempel ligt.
 
 ![Doserings scenario 1](../images/Dosing_scenario_1.jpg)
 
