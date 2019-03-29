@@ -53,7 +53,7 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 * Change to DST is done automatically. No action required.
 
-### Other pumps - new as of AAPS version 2.2
+## Other pumps - new as of AAPS version 2.2
 
 <b><font color="#FF0000">You have to update AAPS to use this feature!</font></b>
 
