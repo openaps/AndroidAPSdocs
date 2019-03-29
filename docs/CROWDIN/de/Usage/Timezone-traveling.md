@@ -36,24 +36,24 @@ Der Insight-Nutzer muss sich also nicht um Zeitumstellung oder den Wechsel von Z
 
 Je nach Pumpe und CGM können Zeitsprünge zu Problemen führen. Bei der Combo wird z.B. die Pumpenhistorie neu gelesen und doppelte Einträge werden erstellt. Nimm daher bitte die folgenden Anpassungen tagsüber vor.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+Nutze den Bolus-Kalkulator erst dann wieder, wenn Du sicher bist, dass COB und IOB absolut korrekt sind. Wahrscheinlich ist es besser, diese für ein paar Stunden nach der Zeitumstellung nicht zu nutzen.
 
 ## Accu-Chek Combo
 
-1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. (hit BT symbol for Dana pumps; "refresh" for the Combo). 4) Check the Treatments tab... If you see duplicate treatments:
+1. Schalte den automatischen Wechsel der Zeitzone in deinem Smartphone aus. 2) Wähle eine Zeitzone mit der gewünschten Zeit aber ohne Zeitumstellung. Für die Mitteleuropäische Zeit (MEZ) könnte dies z.B. "Brazzaville" (Kongo) sein. Stelle die Zeitzone deines Smartphones manuell auf Kongo. 3. Aktuallisiere die Pumpe via AndroidAPS. (drücke "aktualisieren" im Combo Tab). 4. Prüfe den Behandlungs Tab (BEH)... Falls Du doppelte Einträge entdeckst:
 
 * KEINESFALLS auf "Lösche Behandlungen in der Zukunft" klicken!
 * Drücke "Löschen" bei allen künftigen und doppelten Behandlungen. Dadurch werden die Behandlungen außer Kraft gesetzt statt nur gelöscht und somit nicht mehr beim IOB berücksichtigt. 5. Falls der Status unklar sein sollte: Pausiere den Loop für mindestens eine DIA (Insulin-Wirkdauer) oder Max-Carb-Time - je nach dem welche Zeitdauer größer ist.
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal.
+Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem IOB (z.B. eine Stunde vor dem Essen).
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action needed.
+* Zeitumstellung erfolgt automatisch. Keine Maßnahme erforderlich.
 
-### Other pumps - new as of AAPS version 2.2
+### Andere Pumpen - neu ab AAPS Version 2.2
 
-<b><font color="#FF0000">You have to update AAPS to use this feature!</font></b>
+<b><font color="#FF0000">Du musst AAPS auf Version 2.2 (oder höher) updaten, um diese Funktion nutzen zu können!</font></b>
 
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a noticfication on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Um Schwierigkeiten zu vermeiden, wird der Loop für 3 Stunden nach der Zeitumstellung deaktiviert. Dies geschieht aus Sicherheitsgründen (IOB zu hoch aufgrund von doppeltem Boluseinträgen vor der Zeitumstellung).
+* Du erhälst 24 Stunden vor der Zeitumstellung einen Hinweis auf dem Startbildschirm, dass der Loop vorübergehend pausiert wird. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.
