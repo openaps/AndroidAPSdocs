@@ -53,7 +53,7 @@ Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem IOB (z.B. eine Stund
 
 * Zeitumstellung erfolgt automatisch. Keine Maßnahme erforderlich.
 
-### Andere Pumpen - neu ab AAPS Version 2.2
+## Other pumps - new as of AAPS version 2.2
 
 <b><font color="#FF0000">Du musst AAPS auf Version 2.2 (oder höher) updaten, um diese Funktion nutzen zu können!</font></b>
 
