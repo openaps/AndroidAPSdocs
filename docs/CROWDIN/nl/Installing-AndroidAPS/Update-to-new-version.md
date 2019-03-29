@@ -31,7 +31,7 @@ On the tray you'll see green message about updated project
 
 ### Generate APK & upload to phone
 
-Generate signed apk as described in [Building APK (Generate signed APK)](../Installing-AndroidAPS/Building-APK.html#generate-signed-apk)
+Generate signed apk as described in [Building APK (Generate signed APK)](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
 
 ## Development branch (voor ontwikkelaars)
 
