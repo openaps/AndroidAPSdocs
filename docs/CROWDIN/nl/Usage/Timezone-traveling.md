@@ -40,7 +40,9 @@ If you bolus with the calculator please don't use COB and IOB unless you made su
 
 ## Accu-Chek Combo
 
-1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. (hit BT symbol for Dana pumps; "refresh" for the Combo). 4) Check the Treatments tab... If you see duplicate treatments:
+AndroidAPS will issue an alarm if time between pump and phone differs to much. In case of DST time adjustment this would be in the middle of the night. To prevent this and enjoy your sleep instead follow these steps:
+
+1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. 4) Check the Treatments tab... If you see duplicate treatments:
 
 * Druk NIET (!) op "verwijder behandelingen in de toekomst"
 * Klik één voor één op "verwijder" voor alle dubbele en toekomstige behandelingen. Dit zou de behandelingen ongeldig moeten maken in plaats van ze te verwijderen, zodat ze niet meer voor IOB / COB worden meegenomen. 5) Als de status onduidelijk is - schakel de loop voor ten minste één DIA en Max-Carb-time uit - welk van de twee het grootste is.
@@ -49,7 +51,7 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action needed.
+* Change to DST is done automatically. No action required.
 
 ### Other pumps - new as of AAPS version 2.2
 
