@@ -56,11 +56,10 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 ## Accu-Chek Insight
 
 * Change to DST is done automatically. No action needed.
-* But be careful using the calculator as described above.
 
-### Other pumps - new as of AAPS version 2.1.2 
+### Other pumps - new as of AAPS version 2.2 
 
 <b><font color="#FF0000">You have to update AAPS to use this feature!</font></b>
 
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for security reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a noticfication on the main screen 3 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
+* You will receive a noticfication on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
