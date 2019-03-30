@@ -16,11 +16,11 @@
 
 * If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
 
-![](../images/branchintray.png)
+![](../images/UpdateAAPS1.png)
 
 and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
-![](../images/checkout.png)
+![](../images/UpdateAAPS2.png)
 
 ### Updating branch from Github
 
