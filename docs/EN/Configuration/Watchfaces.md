@@ -9,7 +9,7 @@ The following functions can be triggered from the watch:
 * check the status of loop and pump
 * show TDD (Total daily dose = bolus + basal per day)
 
-To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping).  Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder.md?highlight=tdd#wear). 
+To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping).  Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder#wear). 
 
 There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.  
 
