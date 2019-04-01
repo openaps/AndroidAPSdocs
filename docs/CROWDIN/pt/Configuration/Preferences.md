@@ -8,7 +8,7 @@ Isso permite que você defina uma paswword para evitar alterações acidentais o
 
 Existem limites de segurança em vigor com base na idade que selecionou nessa configuração. Se começar a atingir esses limites rígidos (como o bolus máximo), é hora de dar um passo em frente. É uma má ideia selecionar uma idade superior à real, pois pode levar a uma sobre-dosagem inserindo o valor errado de insulina (ignorando a casa decimal, por exemplo). If you want to know the actual numbers for these hard coded security limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
 
-## General
+## Geral
 
 * Select your language here. If your language is not available, or not all of the words are translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
 
