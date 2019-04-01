@@ -107,7 +107,7 @@ AndroidAPS nutzen
    Android Auto <./Usage/Android-auto.md>
    Huawei Smartphones - spezielle Konfigurationseinstellungen<./Usage/huawei.md>
    Jelly Pro - Optimierung der Batterielaufzeit <./Usage/jelly.md>
-   Automation <./Usage/Automation.md>
+   Automatisierung <./Usage/automation.md>
 
 Hilfe durch die Community 
 ------------

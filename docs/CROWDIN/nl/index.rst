@@ -106,8 +106,8 @@ Gebruik
    Problemen met NSClient oplossen <./Usage/Troubleshooting-NSClient.md>
    Android auto <./Usage/Android-auto.md>
    Huawei telefooninstellingen <./Usage/huawei.md>
-   Jelly Pro - battery life optimization <./Usage/jelly.md>
-   Automatisering <./Usage/Automation.md>
+   Jelly Pro - batterijduur <./Usage/jelly.md>
+   Automatisering <./Usage/automation.md>
 
 Waar je hulp kunt vinden 
 ------------

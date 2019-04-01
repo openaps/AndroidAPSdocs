@@ -6,19 +6,20 @@ Dies erlaubt dir, ein Passwort zu vergeben, um zu vermeiden, aus Versehen oder o
 
 ## Alter des Patienten
 
-Es gibt Sicherheitsgrenzen aufgrund des Alters, die hier eingestellt werden können. Wenn Du diese Grenzen erreichst (wie maximaler Bolus), wird es Zeit eine Stufe aufzusteigen. Es ist eine schlechte Idee, ein höheres Alter anzugeben als das tatsächliche Alter, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin Dialog eingegeben wird (z. B. beim Auslassen des Dezimalpunktes).
+Es gibt Sicherheitsgrenzen aufgrund des Alters, die hier eingestellt werden können. Wenn Du diese Grenzen erreichst (wie maximaler Bolus), wird es Zeit eine Stufe aufzusteigen. Es ist eine schlechte Idee, ein höheres Alter anzugeben als das tatsächliche Alter, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin Dialog eingegeben wird (z. B. beim Auslassen des Dezimalpunktes). Wenn Du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle zu der Algorithmenfunktion, die Du auf [dieser Seite ](../Usage/Open-APS-features.md) verwendest.
 
 ## Allgemein
 
 * Wähle hier deine Sprache aus. Wenn deine Sprache nicht verfügbar ist oder nicht alle Worte übersetzt sind, dann mach gerne einige Vorschläge auf [Crowdin](https://crowdin.com/project/androidaps) oder frage im [Gitter Chatroom](https://gitter.im/MilosKozak/AndroidAPS).
+
+## Übersicht
+
+* Bildschirm aktiv lassen ist hilfreich, wenn Du AAPS präsentieren willst. Dies wird ziemlich viel Energie verbrauchen, daher ist es ratsam, Dein Telefon an ein Ladekabel anzuschließen.
+* Unter Schaltflächen kannst Du festlegen, welche Buttons auf dem Startbildschirm verfügbar sind. Außerdem kannst Du einige Einstellungen für die Dialogfelder, die zu den Buttons gehören, festlegen.
 * QuickWizard-Einstellungen erlauben es dir, einen Schnellzugriffsbutton für übliche Snacks oder Mahlzeiten hinzuzufügen. Gib die Details der Kohlenhydrate ein und wenn du diesen QuickWizard-Button auf dem Homescreen drückst, wird der Bolus für diese Kohlenhydrate auf Basis der aktuellen Werte berechnet (wobei der Zuckerwert und das Insulin On Board verwendet werden, wenn Du es bei er Einstellung des Buttons eingibst).
 * Erweiterte Einstellungen, um Superbolus im Assistenten zu aktivieren und für die Statusanzeige auf dem Startbildschirm. Die Statusanzeige gibt eine visuelle Warnung bei niedrigem Reservoir- und Akkustand sowie überfälligem Katheterwechsel.
     
     ![Statusanzeige - Bildschirmdetails](../images/StatusLights.jpg)
-
-## Careportal
-
-"Entered by" ist der Text, der in Deinem Nightscout Careportal im Feld "entered by" angezeigt wird. Nimm einen Text, der für dich etwas bedeutet. Das kann der Name der App sein, der Name der Person oder der Name des Smartphones (z. B. wenn du AndroidAPS als NS Client auf einem Smartphone verwendest, das nicht dem Patienten gehört oder wenn du zwischen den Smartphone Eigentümern unterscheiden willst).
 
 ## Sicherheitseinstellungen für die Behandlung
 
@@ -54,8 +55,8 @@ Wenn Du anfängst den Loop zu benutzen, **wird empfohlen das Maximale Basal-IOB 
 
 Das ist ein wichtiger Schritt, um:
 
-* Zeit zu haben, sich auf sichere Art mit der Verwendung von AAPS vertraut zu machen und zu überwachen, wie es funktioniert.
-* die Gelegenheit zu nutzen, dein Basalratenprofil und die Insulinsensibilitäts-Faktoren (ISF) zu perfektionieren.
+* Zeit zu haben, sich auf sichere Art mit der Verwendung des AAPS systems vertraut zu machen und zu überwachen, wie es funktioniert.
+* Die Gelegenheit zu nutzen, dein Basalratenprofil und die Insulinsensibilitäts-Faktoren (ISF) anzupassen.
 * zu sehen, wie AAPS die Basalrate einschränkt, um Hypoglykämien zu verhindern.
 
 Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches Basalinsulin zu geben, indem du den Wert Max-Basal IOB erhöhst. Die empfohlene Richtlinie für diesen Wert ist, die **höchste Basalrate** in deinem Profil zu verwenden und diese **mit 3 zu multiplizieren**. Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, könntest du das mit 3 multiplizieren, um einen Wert von 1,5IE/h zu erhalten.
@@ -63,7 +64,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 * Du kannst konservativ mit diesem Wert starten und ihn im Laufe der Zeit langsam erhöhen. 
 * Das sind aber nur Richtlinien; jeder Körper ist anders. Es kann durchaus sein, dass du mehr oder weniger benötigst als hier empfohlen wurde, aber beginne dennoch konservativ und passe es langsam an.
 
-*Bemerkung: zur Sicherheit ist es nicht möglich, den Wert Max-Basal IOB bei höher als 7 IE festzulegen.*
+*Hinweis: Aus Sicherheitsgründen ist es nicht möglich, den Wert Max-Basal IOB bei höher als 7 IE festzulegen.*
 
 ## Resorptions-Einstellungen
 
@@ -75,10 +76,11 @@ Die Optionen hier hängen davon ab, welchen Pumpentreiber du im Config-Generator
 
 ## Nightscout-Client
 
-* Gib hier deine 'nightscout URL' ein (https://deinewebseite.herokuapp.com oder https://deinewebseite.azurewebsites.net), und das 'API secret' (ein Passwort mit 12 Zeichen, das in den heroku oder azure Variablen festgelegt wurde). Das versetzt AndroidAPS in die Lage, Daten von Nightscout zu lesen und zu schreiben. Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
-* ''Logge App-Start in Nightscout" fügt den Einträgen des Careportals jedesmal einen Eintrag hinzu, wenn die App gestartet wird. Die App sollte maximal einmal am Tag neu gestartet werden; mehrere Einträge am Tag könnten auf ein Problem hinweisen. 
-* "Aktiviere lokale Broadcasts" teilt deine Daten aus dem Careportal mit anderen Apps auf dem Smartphone (z. B. xdrip+). 
-* "Alarm-Optionen" ermöglicht es dir festzulegen, welche Nightscout Alarme in der App verwendet werden sollen. Damit die Alarme ausgelöst werden, müssen die Variablen für die Alarme "Urgent High", "High", "Low" und "Urgent Low" in deinen [heroku oder azure Variablen](http://www.nightscout.info/wiki/welcome/website-features#customalarms) festgelegt werden. Sie werden nur dann funktionieren, wenn du über eine aktive Internetverbindung zu Nightscout verfügst und sind für Eltern/Betreuer gedacht. Wenn du die CGM-Quelle hingegen direkt auf dem Smartphone hast, dann solltest du lieber deren Alarme verwenden (z.B. xdrip+)
+* Gib hier Deine 'nightscout URL' ein (https://deinewebseite.herokuapp.com oder https://deinewebseite.azurewebsites.net), und das 'API secret' (ein Passwort mit 12 Zeichen, das in den heroku oder azure Variablen festgelegt wurde). Das versetzt AndroidAPS in die Lage, Daten von Nightscout zu lesen und zu schreiben. Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
+* ''Logge App-Start in Nightscout" fügt den Einträgen des Careportals jedesmal einen Eintrag hinzu, wenn die App gestartet wird. Die App sollte maximal einmal am Tag neu gestartet werden. Mehrere Einträge am Tag könnten ein Hinweis auf ein Problem sein. 
+* "Alarm-Optionen" ermöglicht es dir festzulegen, welche Nightscout Alarme in der App verwendet werden sollen. Damit die Alarme ausgelöst werden, müssen die Variablen für die Alarme "Urgent High", "High", "Low" und "Urgent Low" in deinen [heroku oder azure Variablen](http://www.nightscout.info/wiki/welcome/website-features#customalarms) festgelegt werden. Sie werden nur dann funktionieren, wenn du über eine aktive Internetverbindung zu Nightscout verfügst und sind für Eltern/Betreuer gedacht. Wenn du die CGM-Quelle hingegen direkt auf dem Smartphone hast, dann solltest du lieber deren Alarme verwenden (z.B. xdrip+).
+* "Aktiviere lokale Broadcasts" teilt deine Daten aus dem Careportal mit anderen Apps auf dem Smartphone (z. B. xdrip+).
+* 'Verwende absolute statt prozentuale Basalwerte beim Upload zu NightScout.' muss aktiviert werden, wenn Du Autotune einsetzen willst.
 
 ## SMS-Kommunikator
 
@@ -92,17 +94,6 @@ Diese Einstellung erlaubt eine Fernsteuerung der App, indem Anweisungen an das S
 * "Kurze Tab-Überschriften" ermöglicht es dir, mehr Tab-Reiter auf dem Bildschirm zu sehen. Zum Beispiel wird aus 'Open APS' der Titel 'OAPS' und 'Careportal' wird zu 'CP'.
 * Bei "Lokale Alarme" kannst du entscheiden, ob du eine Warnung erhalten möchtest, wenn einige Zeit keine Glukose-Daten empfangen wurden (Veraltete Daten) oder wenn die Pumpe nicht erreichbar ist. Wenn du häufig Alarme erhältst, dass die Pumpe nicht erreichbar ist, dann aktiviere BT-Watchdog in den erweiterten Einstellungen.
 
-## Erweiterte Einstellungen ``muss noch erweitert werden
+## Datenübermittlung
 
-* OpenAPS MA
-* Verwende immer das kurze durchschnittliche Delta statt... Es ist sinnvoll, diese Einstellung zu aktivieren, wenn du ungefilterte Daten aus Quellen wie xDrip+ verwendest, im Gegensatz zu vorverarbeiteten Daten wie vom offiziellen Dexcom Empfänger. Gefilterte Daten scheinen gleichmässiger zu sein, wohingegen ungefilterte Daten sprunghaft sein können. Diese ungefilterten Daten können AndroidAPS dazu bringen, häufiger Änderungen in der Temporären Basalrate vorzuschlagen, als eigentlich erforderlich sind, da der OpenAPS Algorithmus auf die sprunghaften Daten reagiert. Wenn diese Option aktiviert ist, verwendet der OpenAPS Algorithmus das kurze durchschnittliche Delta (also den Mittelwert der letzten 15 Minuten), anstatt des letzten Glukose-Wertes, der empfangen wurde. Das bewirkt einen "Glättungseffekt" auf die Daten und ist ein Versuch, empfangene sprunghafte Werte zu kompensieren. Benutzer der Freestyle Libre Sensoren von Abbot, die ihre Daten mit Geräten wie LimiTTern empfangen, erzielen mit dieser Einstellung möglicherweise bessere Ergebnisse mit AAPS.
-
-Weitere Hinweise zum Thema Datenglättung bei Verwendung von xdrip+ als Datenquelle sind hier zu finden: [Zuckerwerte glätten in xDrip+](../Usage/Smoothing-blood-glucose-data-in-xDrip.md).
-
-* OpenAPS preferences.json - bevor du diese Einstellungen änderst, lies dir bitte die Beschreibung der verwendeten Sicherheitsvariablen und wieso sie verwendet werden unter [OpenAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html) durch.
-* "Ignoriere Profilwechsel" sorgt dafür, dass das aktuelle AndroidAPS Profil nicht an die Pumpe gesendet wird. Es wird empfohlen, diese Option nicht zu aktivieren, außer du testest Code. Aus Sicherheitsgründen werden die Profil-Änderungen auf das Basal Profil 1 der Pumpe übertragen, was bedeutet, dass bei einem Ausfall von AndroidAPS oder dem Verlust einer Verbindung zwischen AndroidAPS und der Pumpe die Pumpe das aktuelle Profil weiter verwendet. Ansonsten müsstest du das Profil manuell in der Pumpe eingeben. Weitere Informationen zu Profilen findest du unter [Pofile](/docs/Usage/Profiles).
-* "BT Watchdog" - Diese Option sollte aktiviert werden, wenn du immer wieder die Verbindung zur Pumpe verlierst. Wenn die Verbindung zur Pumpe verloren geht, wird Bluetooth automatisch aus und wieder an geschaltet, um die Verbindung neu aufzubauen.
-
-## Wear-Einstellungen
-
-Weitere Informationen zu den Einstellungen der Wear-Zifferblätter sind unter [Zifferblaetter](../Configuration/Watchfaces.md) zu finden.
+* 'Fabric Upload' sendet Fehlermeldungen und Funktionen-Nutzungsdaten an die Entwickler.

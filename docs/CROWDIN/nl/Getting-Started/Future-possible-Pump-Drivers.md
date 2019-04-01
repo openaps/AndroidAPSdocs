@@ -145,4 +145,4 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Ondersteuning overige pompen
 
-Als je andere pompen hebt waarvan je wilt weten wat de status is, neem dan contact met mij op (@andyrozman op gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Als je andere pompen hebt waarvan je wilt weten wat de status is, neem dan contact met mij op (@andyrozman op gitter). In de toekomst zullen er veel Pomp configuraties worden toegevoegd om open loopbaar te zijn (wanneer je het Virtuele Pomp type in de configurator selecteert dan worden jouw instellingen worden geladen - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).

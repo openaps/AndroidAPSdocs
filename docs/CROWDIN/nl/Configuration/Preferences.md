@@ -6,49 +6,34 @@ Hiermee kunt je een wachtwoord instellen om onbedoelde of ongeoorloofde wijzigin
 
 ## Leeftijd Patiënt
 
-AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier hebt geselecteerd. Als je tegen de beperkingen van zo'n zogenaamde 'harde limiet' (zoals max bolus) aanloopt, dan is het tijd om te kiezen voor de daaropvolgende categorie. Het is een slecht idee om hogere categorie te kiezen dan past bij jouw echte leeftijd/resistentie, omdat het kan leiden tot een overdosis als je de verkeerde waarde in het insulin-dialoogvenster intypt (bijv. als je de komma verkeerd zet).
+AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier hebt geselecteerd. Als je tegen de beperkingen van zo'n zogenaamde 'harde limiet' (zoals max bolus) aanloopt, dan is het tijd om te kiezen voor de daaropvolgende categorie. Het is een slecht idee om hogere categorie te kiezen dan past bij jouw echte leeftijd/resistentie, omdat het kan leiden tot een overdosis als je de verkeerde waarde in het insulin-dialoogvenster intypt (bijv. als je de komma verkeerd zet). Als je wilt weten wat de precieze getallen zijn voor deze veiligheidslimieten, ga dan naar [deze pagina](../Usage/Open-APS-features.md) en scroll naar het algoritme dat jij gebruikt.
 
-## Algemeen / Overzicht
+## Algemeen
 
 * Kies welke taal je wilt gebruiken. Als je taal niet beschikbaar is, of niet alle woorden worden vertaald, voel je dan vrij om suggesties te doen op [Crowdin](https://crowdin.com/project/androidaps) of vraag in de [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
-* 'Laat scherm aan' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
-      
-    'Knoppen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
-      
-    'Vaste maaltijd instellingen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
-      
-    Link:   
-    https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/Configuration/Config-Builder.html
-* 'Geavanceerde instellingen' - Statusindicatoren geven met een kleurtje aan op het Overzicht-scherm wanneer je reservoir of batterij bijna leeg is. Of wanneer het tijd is om je infuusset te vervangen. Deze functie is nieuw in versie 2.1.1.
-    
-    ![Statusindicatoren - details](../images/StatusLights.jpg)
 
 ## Overzicht
 
-'Laat scherm aan' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
-  
-'Knoppen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
-  
-'Vaste maaltijd instellingen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
-  
-'Geavanceerde instellingen' - Wordt uitgelegd op de Configurator pagina, onder Algemeen > Overzicht   
-  
-Link:   
-https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/Configuration/Config-Builder.html
+* Laat scherm aan is handig wanneer je een presentatie geeft. Het verbruikt wel veel energie, dus het is verstandig om je telefoon hierbij aan een lader te hebben.
+* Bij Knoppen kun je kiezen welke knoppen zichtbaar zijn op jouw Overzicht-scherm. Je vind hier ook enkele keuzeopties voor het popup-scherm dat je ziet na het indrukken van zo'n knop.
+* Via Vaste maaltijd instellingen kun je een knop toevoegen aan het Overzicht-scherm voor een snack of maaltijd die je vaker eet. Zie meer uitleg op de Configurator pagina, onder Algemeen > Vaste maaltijd instellingen.
+* Onder Geavanceerde instellingen kun je de Superbolus in de boluscalculator activeren en je kunt de Statusindicatoren op het Overzicht-scherm activeren. Statusindicatoren geven met een kleurtje aan op het Overzicht-scherm wanneer je reservoir of batterij bijna leeg is. Of wanneer het tijd is om je infuusset te vervangen.
+    
+    ![Statusindicatoren - detail](../images/StatusLights.jpg)
 
 ## Behandelingen veiligheid
 
 ### Max toegestane bolus [E]
 
-Dit is de maximale hoeveelheid bolus insuline die AAPS mag leveren. Deze instelling is een veiligheidslimiet om te voorkomen dat er per ongeluk een enorme bolus wordt afgegeven door een misrekening of typfout van de gebruiker. Het wordt aangeraden om deze in te stellen op de maximale hoeveelheid bolus insuline die je ooit voor een maaltijd of correctie nodig zult hebben. Deze beperking wordt ook toegepast op de resultaten van de Bolus Calculator.
+Dit is de maximale hoeveelheid bolus insuline die AAPS mag leveren. Deze instelling is een veiligheidslimiet om te voorkomen dat er per ongeluk een enorme bolus wordt afgegeven door een misrekening of typfout van de gebruiker. Het wordt aangeraden om deze in te stellen op de maximale hoeveelheid bolus insuline die je ooit voor een maaltijd of correctie nodig zult hebben. Deze beperking wordt ook toegepast op de resultaten van de Boluscalculator.
 
 ### Max toegestane koolhydraten [g]
 
-Dit is de maximale hoeveelheid koolhydraten waarvoor de Bolus Calculator insuline mag geven. Deze instelling is een veiligheidslimiet om te voorkomen dat er per ongeluk een enorme bolus wordt afgegeven door een misrekening of typfout van de gebruiker. Het wordt aangeraden om deze in te stellen op de maximale hoeveelheid koolhydraten die je ooit zult eten bij een maaltijd.
+Dit is de maximale hoeveelheid koolhydraten waarvoor de Boluscalculator insuline mag geven. Deze instelling is een veiligheidslimiet om te voorkomen dat er per ongeluk een enorme bolus wordt afgegeven door een misrekening of typfout van de gebruiker. Het wordt aangeraden om deze in te stellen op de maximale hoeveelheid koolhydraten die je ooit zult eten bij een maaltijd.
 
 ## Loop
 
-Je kunt hier schakelen tussen open loop en closed loop. Open loop betekent dat er suggesties worden gedaan voor tijdelijke basaalstanden (Temporary Basal Rates, TBR) op basis van jouw gegevens. Deze suggesties laat je telefoon zien in de vorm van een melding, je moet vervolgens handmatig kiezen om ze te accepteren en handmatig in je pomp invoeren. Closed loop (gesloten loop) betekent dat TBR-suggesties automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou. In het Overzicht-scherm kun je in de linker bovenhoek zien of je in de open of closed loop zit. Wanneer je deze knop ingedrukt houd, dan kun je ook schakelen tussen open en closed loop.
+Je kunt hier schakelen tussen open loop en closed loop. Open loop betekent dat er suggesties worden gedaan voor tijdelijke basaalstanden (Temporary Basal Rates, TBR) op basis van jouw gegevens. Deze suggesties laat je telefoon zien in de vorm van een melding, je moet vervolgens handmatig kiezen om ze te accepteren en handmatig in je pomp invoeren. Closed loop (gesloten loop) betekent dat TBR-suggesties automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou. In het Overzicht-scherm kun je in de linker bovenhoek zien of je in de open of closed loop zit. Wanneer je deze knop ingedrukt houdt, dan kun je ook schakelen tussen open en closed loop.
 
 ## OpenAPS AMA
 
@@ -81,20 +66,21 @@ Pas na een tijd mag je het systeem toestaan om extra basale insuline te geven do
 
 *Opmerking: om veiligheidsredenen geldt er voor Max Basal IOB een 'harde limiet' (voor volwassenen is die 7E). Zie ook de pagina over "OpenAPS functies" elders in deze wiki.*
 
-## Absorptie instellingen
+## Opname instellingen
 
 Wanneer je AMA Autosens aan hebt staan, kun je jouw maximale maaltijd absorptie tijd invoeren. Als je vaak maaltijden met een hoog vet- of eiwitgehalte eet, moet je de opnametijd verhogen.
 
 ## Pomp instellingen
 
-De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd in de 'Configurator'. Koppel en stel je pomp in zoals beschreven staat in de [DanaR Insuline Pomp](../Configuration/DanaR-Insulin-Pump.md) of [DanaRS Insuline Pomp](../Configuration/DanaRS-Insulin-Pump.md) of [Accu Chek Combo Pomp](../Configuration/Accu-Chek-Combo-Pump.md) instructies. Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuele Pomp hebt geselecteerd in de Configurator.
+De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd in de 'Configurator'. Koppel en stel je pomp in zoals beschreven staat in de [DanaR Insuline Pomp](../Configuration/DanaR-Insulin-Pump.md) of [DanaRS Insuline Pomp](../Configuration/DanaRS-Insulin-Pump.md) of [Accu Chek Combo Pomp](../Configuration/Accu-Chek-Combo-Pump.md) of Accu Check Insight instructies. Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuele Pomp hebt geselecteerd in de Configurator.
 
 ## NS Client
 
-* Stel hier jouw 'nightscout URL' in (https://yourwebsitename.herokuapp.com of https://yourwebsitename.azurewebsites.net), en jouw 'API secret' (een wachtwoord van 12 tekens lang uit jouw heroku of azure variabelen). Hierdoor kunnen gegevens zowel worden gelezen als geschreven tussen de Nightscout website en AndroidAPS. Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
-* 'Log app start naar Nightscout' zal elke keer dat de app is gestart, een notitie maken. De app zou niet vaker dan één keer per dag opnieuw moeten starten; gebeurt dit vaker dan wijst dat op een probleem. Vaak wordt dit veroorzaakt doordat de accubesparings-functie van jouw telefoon steeds de app afsluit. Los dit op door de accubesparings-instellingen van jouw telefoon aan te passen. 
-* 'Activeer lokaal delen' onder de Geavanceerde Instellingen zal jouw careportal gegevens doorsturen naar andere apps op je telefoon, zoals xDrip+. 
+* Stel hier jouw 'nightscout URL' in (https://yourwebsitename.herokuapp.com of https://yourwebsitename.azurewebsites.net), en jouw 'API secret' (een wachtwoord van 12 tekens lang uit jouw heroku of azure variabelen). Hierdoor kunnen gegevens zowel worden uitgelezen als weggeschreven tussen de Nightscout website en AndroidAPS. Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
+* 'Log app start naar Nightscout' zal elke keer dat de app is gestart, een notitie maken. De app zou niet vaker dan één keer per dag opnieuw moeten starten; gebeurt dit vaker dan wijst dat op een probleem. Vaak wordt dit veroorzaakt doordat de accubesparings-functie van jouw telefoon steeds de app afsluit. Los dit op door de accubesparings-instellingen van jouw telefoon aan te passen. Het kan ook zijn dat jouw telefoon te weinig (werk)geheugen beschikbaar heeft. Zorg dan dat je niet teveel zware apps draait of maak geheugenruimte vrij. 
 * 'Alarm opties' kun je selecteren om de standaard Nightscout alarmen te gebruiken. Om de alarmen voor Urgent High (urgent hoog), High (hoog), Low (laag) en Urgent Low (urgent laag) in te schakelen, zul je deze moeten toevoegen aan jouw [heroku of azure variabelen](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Deze alarmen werken alleen zolang de telefoon verbinding heeft met Nightscout (internet moet dus aanstaan op de telefoon). Alarmen via Nightscout zijn bedoeld voor bijv. ouder/verzorgers die hun kind vanaf afstand volgen. Als de BG-bron op de telefoon van de patiënt zelf staat, gebruik dan liever die alarmen (bijv. xDrip+) want dan ben je niet afhankelijk van een internetverbinding.
+* 'Activeer lokaal delen' onder de Geavanceerde Instellingen zal jouw careportal gegevens doorsturen naar andere apps op je telefoon, zoals xDrip+.
+* 'Gebruik altijd absolute basale waarden' moet geactiveerd worden als je Autotune correct wilt gebruiken.
 
 ## SMS Communicator
 
@@ -102,22 +88,14 @@ Deze instelling maakt externe controle van de app mogelijk door SMS instructies 
 
 ## Andere
 
-* Je kunt hier standaardwaarden instellen voor jouw tijdelijke streefdoelen (Eet binnenkort en Activiteit). Als je bijvoorbeeld "Eet binnenkort" kiest uit de drop-down box op het Overzicht-scherm, dan zal automatisch de duur en streef-BG worden ingevuld die je hier hebt aangegeven. Voor meer informatie over het gebruik van tijdelijke streefdoelen (Temp Targets) zie de [OpenAPS functies](../Usage/Open-APS-features.md). 
+* Je kunt bij Standaard tijdelijk basaal standaardwaarden instellen voor jouw tijdelijke streefdoelen (Eet binnenkort, Hypo en Activiteit). Als je bijvoorbeeld "Eet binnenkort" kiest uit de drop-down box op het Overzicht-scherm, dan zal automatisch de duur en streef-BG worden ingevuld die je hier hebt aangegeven. Voor meer informatie over het gebruik van tijdelijke streefdoelen (Temp Targets) zie de [OpenAPS functies](../Usage/Open-APS-features.md). 
 * Je kunt standaardhoeveelheden instellen voor het vullen (van de canule, en van de slang). De hoeveelheden die je hier instelt zal de pomp wel afgeven, maar deze hoeveelheden worden niet meegeteld bij IOB berekeningen. Hoeveel eenheden nodig zijn staat in het instructieboekje in de doos met infuussets, dit verschilt per type infuusset en is afhankelijk van de lengte van de canule en de lengte van de slang.
-* Je kunt de visualisatie van jouw hoge en lage BG waardes op het Overzicht-scherm en op je smartwatch instellen. Let op: dit bepaalt alleen hoe jouw grafieken eruit zien, en heeft geen enkele link met de streefdoelen of andere berekeningen van het algoritme.
+* Je kunt het grafiekgebied voor weergave van jouw hoge en lage BG waardes (groen gekleurde gebied) op het Overzicht-scherm en op je smartwatch instellen. Let op: dit bepaalt alleen hoe jouw grafieken eruit zien, en heeft geen enkele link met de streefdoelen of andere berekeningen van het algoritme.
 * 'Afgekorte tab titels' zorgt dat er meer tab titels op je scherm passen, bijvoorbeeld het 'Open APS'-tabblad wordt 'OAPS', 'Doelen' wordt 'Doel' etc.
 * 'Lokaal gegenereerde waarschuwingen' laat je kiezen of je een waarschuwing ontvangt en na hoe lang voor als je geen bloedglucose waarden binnenkrijgt of de pomp onbereikbaar is. Als je vaak waarschuwingen over een onbereikbare pomp krijgt, schakel dan de BT Watchdog in in de geavanceerde pompinstellingen.   
+      
     'Gebruik systeem notificaties voor waarschuwingen en notificaties': hiermee zullen ze als meldingen bovenin jouw Android-menubalk verschijnen.
 
-## Data keuzes
+## Data Keuzes
 
-* Geavanceerde instellingen: je kunt hier kiezen of je jouw foutmeldingen wilt rapporteren aan de ontwikkelaars van de app. Dit staat standaard ingeschakeld, de ontwikkelaars kunnen met deze informatie de app verder verbeteren.
-* 
-
-
-
-* 
-* 
-* 
-
-##
+* 'Fabric Upload' zal crashrapporten en gebruiksgegevens naar de ontwikkelaars sturen.

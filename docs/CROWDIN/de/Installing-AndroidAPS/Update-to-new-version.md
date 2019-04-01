@@ -2,16 +2,16 @@
 
 ## Master branch
 
-**Installiere git (falls du es noch nicht hast)**
+### Installiere git (falls du es noch nicht hast)
 
 * Jede git Version sollte funktionieren. Beispiel: <https://git-scm.com/download/win>
 * Wähle den Ordner, in dem sich git.exe befinde: File - Settings - Version Control - Git ![](../images/git.png)
 
-**Führe ein Update deiner lokalen Version durch**
+### Führe ein Update deiner lokalen Version durch
 
 * Klicke: VCS->Git->Fetch
 
-**Wähle branch**
+### Wähle branch
 
 * Falls du “branch” wechseln willst, wähle eine andere “branch” vom Reiter: master (aktuellste, getestete Version), oder andere (siehe weiter unten).
 
@@ -21,7 +21,7 @@ und anschließend "checkout". Verwende 'Checkout as New Branch' falls 'Checkout'
 
 ![](../images/checkout.png)
 
-**Branch-Update von Github**
+### Branch-Update von Github
 
 * Drücke Strg+T, wähle Merge method und drücke OK
 
@@ -29,9 +29,11 @@ und anschließend "checkout". Verwende 'Checkout as New Branch' falls 'Checkout'
 
 Auf dem Reiter siehst du eine grüne Nachricht “updated project”.
 
-**Upload auf das Smartphone**
+### APK erstellen & auf das Smartphone laden
 
-Erstelle die signierte APK wie unter [AndroidAPS installieren - App erstellen (Generate signed APK)](Building-APK.html#generate-signed-apk) beschrieben.
+Erstelle die signierte APK wie unter [AndroidAPS installieren - App erstellen (Generate signed APK)](../Installing-AndroidAPS/Building-APK.md) beschrieben.
+
+![Navigation signierte APK erstellen](../images/GenerateSignedAPK.PNG)
 
 ## Entwickler-Version (dev branch)
 

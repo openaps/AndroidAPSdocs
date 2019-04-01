@@ -1,5 +1,17 @@
 # Poznámky k vydání
 
+## Version 2.2
+
+Release date: 29-03-2019
+
+### Hlavní nové funkce
+
+* [DST](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst) fix
+* Wear Update
+* [SMS plugin](../Usage/SMS-Commands.md) update
+* Go back in objectives.
+* Stop loop if phone disk is full
+
 ## Version 2.1
 
 Release date: 03-03-2019

@@ -107,7 +107,7 @@ Usage
    Android auto <./Usage/Android-auto.md>
    Huawei phones special configuration <./Usage/huawei.md>
    Jelly Pro - battery life optimization <./Usage/jelly.md>
-   Automation <./Usage/Automation.md>
+   Automation <./Usage/automation.md>
 
 Where to go for help 
 ------------

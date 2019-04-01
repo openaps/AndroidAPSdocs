@@ -40,5 +40,5 @@ Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/group
 
 ### Niederlande
 
-* [Looped-NL](https://www.facebook.com/groups/117102135652893): Niederlänischsprachige Nutzer von OpenAPS, Loop und AndroidAPS
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Niederlänischsprachige Nutzer von OpenAPS, Loop und AndroidAPS
 * [CGM in the cloud Niederlande](https://www.facebook.com/groups/1764754560436596)

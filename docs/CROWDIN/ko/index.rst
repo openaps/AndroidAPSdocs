@@ -107,7 +107,7 @@ AndroidAPS 설치하기
    Android auto <./Usage/Android-auto.md>
    Huawei phones special configuration <./Usage/huawei.md>
    Jelly Pro - battery life optimization <./Usage/jelly.md>
-   Automation <./Usage/Automation.md>
+   Automation <./Usage/automation.md>
 
 도움을 구할 곳들 
 ------------
