@@ -10,11 +10,11 @@
 
 * Pumpa Roche Accu-Chek Insight (jákýkoliv firmware, fungují všechny) <br /> Poznámka: AAPS bude vždy zapisovat data do **prvního bazálního profilu v pumpě**
 * Telefon s Androidem
-* The AndroidAPS app (at least v2.1) installed on your phone
+* Aplikace AndroidAPS (minimálně v2.1) nainstalovaná ve vašem telefonu
 
-## Setup
+## Nastavení
 
-* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
+* V [Konfigurace](../Configuration/Config-Builder) aplikace AndroidAPS vyberte v sekci Pumpa Accu-Chek Insight
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
