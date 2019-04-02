@@ -16,67 +16,66 @@
 
 * V [Konfigurace](../Configuration/Config-Builder) aplikace AndroidAPS vyberte v sekci Pumpa Accu-Chek Insight
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot nastavení pumpy Insight](../images/Insight_ConfigBuilder.png)
 
-* Tap the cog-wheel to open Insight settings.
+* Chcete-li otevřít nabídku nastavení, klikněte na ozubené kolečko.
 
-* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
-* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
+* V nastavení klikněte na tlačítko „Insight párování“ v horní části obrazovky. Měli byste vidět seznam bluetooth zařízení v dosahu (níže vlevo).
+* V pumpě Insight jděte do Menu > Nastavení > Komunikace > Přidat zařízení. Pumpa zobrazí následující obrazovku (vpravo níže) zobrazující seriové číslo pumpy.
     
-    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+    ![Screenshot párování Insight 1](../images/Insight_Pairing1.png)
 
-* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
+* Vezměte zpět telefon, klikněte na sériové číslo pumpy v seznamu bluetooth zařízení. Potvrďte kliknutím na Párování.
     
-    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+    ![Screenshot párování Insight 2](../images/Insight_Pairing2.png)
 
-* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
+* Pumpa i telefon poté zobrazí na displeji kód. Zkontrolujte, jestli jsou na obou zařízení kódy stejné a potvrďte je jak v pumpě, tak v telefonu.
     
-    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+    ![Screenshot párování Insight 3](../images/Insight_Pairing3.png)
 
-* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+* Úspěch! Můžete si poblahopřát, úspěšně jste spárovali pumpu s AndroidAPS.
     
-    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+    ![Screenshot párování Insight 4](../images/Insight_Pairing4.png)
 
-* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+* Pro kontrolu, jestli je vše správně, jděte zpět do nabídky Konfigurace v AndroidAPS a klikněte na ozubené kolečko v nabídce Pumpa - Accu Chek Insight pro vstup do nastavení. Klikněte na Insight párování, kde uvidíte informace o pumpě:
     
-    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+    ![Screenshot informací o spárování Insight](../images/Insight_PairingInformation.png)
 
-Note: There will be no permanent connection between pump and phone. A connection will only be established if neccessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
+Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude navázáno pouze tehdy, je-li to nezbytné (např. při nastavování dočasného bazálu, posílání bolusu, čtení historie z pumpy apod.). V opačném případě by se baterie v pumpě i mobilu velmi rychle vybila.
 
-## Settings in AAPS
+## Nastavení v AAPS
 
-![Screenshot of Insight Settings](../images/Insight_pairing.png)
+![Screenshot nastavení Insight](../images/Insight_pairing.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+V Insight nastavení v AndroidAPS můžete upravit následující možnosti:
 
-* "Log site changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.  
-    <font color="red">Note: A cannula change also resets Autosens</b></font>
-* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
-* "Log battery changes": This records a battery change when you put a new battery in the pump.
-* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
-* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
-* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.  
-    <font color="red">Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.</font>
-* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
+* „Zaznamenat výměnu kanyly“: To automaticky provede záznam výměny kanyly, když v pumpě provedete „Naplnit kanylu“   
+    <font color="red">Poznámka: Výměna kanyly také způsobí reset automatické citlivosti</b></font>
+* „Zaznamenat výměnu hadičky“: To automaticky provede záznam v databázi AndroidAPS, když v pumpě provedete „Naplnit hadičku“.
+* „Zaznamenat výměnu baterie“: To automaticky provede záznam výměny baterie, pokud vložíte do pumpy novou baterii.
+* „Zaznamenat změnu režimu provozu“: To automaticky provede záznam v databázi AndroidAPS, kdykoliv spustíte/zastavíte pumpu.
+* „Zaznamenat výstrahy“: To automaticky provede záznam v databázi AndroidAPS, kdykoliv pumpa zahlásí alarm (s výjimkou upomínek, bolusů a konce dočasných bazálů (TBR) – ty zaznamenány nejsou).
+* „Povolit emulaci dočasných bazálů“: pumpa Insight umožňuje hodnotu maximálního dočasného bazálu (TBR) do výše 250 %. Aby bylo možné toto omezení obejít, pumpa obdrží příkaz provést prodloužený bolus, aby bylo možné zvýšit TBR nad 250 %. <font color="red">Pozn.: Současné používání prodlouženého bolusu ve stejný čas jako další prodloužený bolus může způsobit chybu.</font>
+* „Doba čekání na obnovení spojení“: To definuje, jak dlouho bude AndroidAPS čekat před opětovným pokusem po neúspěšném pokusu o připojení. Můžete vybrat 0 až 20 sekund. Pokud máte problémy s připojením, vyberte delší dobu čekání.   
       
-    Example for min. recovery duration = 5 and max. recovery duration = 20   
+    Příklad pro min. dobu trvání zotavení = 5 a max. dobu zotavení = 20   
       
-    no connection -> wait **5** sec.   
-    retry -> no connection -> wait **6** sec.   
-    retry -> no connection -> wait **7** sec.   
-    retry -> no connection -> wait **8** sec.   
+    žádné spojení -> čekej **5** sec.   
+    znovu -> žádné spojení -> čekej **6** sec.   
+    znovu -> žádné spojení -> čekej **7** sec.   
+    znovu -> žádné spojení -> čekej **8** sec.   
     ...   
-    retry -> no connection -> wait **20** sec.   
-    retry -> no connection -> wait **20** sec.   
+    znovu -> žádné spojení -> čekej **20** sec.   
+    znovu -> žádné spojení -> čekej **20** sec.   
     ...
 
-* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
+* „Limit pro odpojení“: Definuje, jak dlouho (v sekundách) bude AndroidAPS čekat s odpojením od pumpy po dokončení úlohy. Výchozí hodnota je 5 sekund.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+Po dobu, kdy byla pumpa zastavena, AAPS zobrazí záznam s dočasnou bazální hodnotou 0 %.
 
-In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+V AndroidAPS v záložce Accu-Chek Insight se zobrazuje aktuální stav pumpy a dvě tlačítka:
 
-* "Refresh": Refreshes pump status
+* „Obnovit“: Opětovné načtení statusu z pumpy
 * "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
