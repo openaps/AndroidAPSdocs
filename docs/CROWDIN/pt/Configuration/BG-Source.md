@@ -1,9 +1,9 @@
 # Origem da Glicemia
 
-## For users of Dexcom  
+## Para utilizadores de Dexcom  
 
 
-### If using G5 or G6 with xdrip+  
+### Se usar G5 ou G6 com xdrip+  
 
 
 * Se não estiver já instalado faça download [xdrip](https://github.com/NightscoutFoundation/xDrip) e siga as instruções do nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
@@ -38,7 +38,7 @@ To use your Libre as a CGM that is getting new BG values every 5 minutes you fir
 * BlueReader <https://bluetoolz.de/blueorder/#home>
 * Sony Smartwatch 3 (SWR50) als Auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-### If using xdrip...  
+### Se usa xdrip...  
 
 
 * Se ainda nao configurou descarregue app xdrip e siga as instruções em[LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
@@ -48,13 +48,13 @@ To use your Libre as a CGM that is getting new BG values every 5 minutes you fir
 * Seleccione xdrip no ConfigBuilder (configuração em AndroidAPS).
 * Para o modo nativo G5 no xdrip ir a configurações > Cloud upload > REST API > opções extra > informação de fonte para o dispositivo e seleccione ON.
 
-### If using Glimp...  
+### Se usa Glimp...  
 
 
 * If not already set up then download Glimp and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
 * Seleccione Glimp no ConfigBuilder (configuração em AndroidAPS).
 
-## For users of Eversense  
+## Para utilizadores de Eversense  
 
 
 The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (and unistall the original one first).
@@ -65,14 +65,14 @@ To finally get your data to AndroidAPS, you need to install [ESEL](https://githu
 
 You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
 
-## For users of MM640g or MM630g  
+## Para utilizadores de MM640g ou MM630g  
 
 
 * If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
 * Na série 600 Uploader, vá a Configurações > Enviar para xdrip + e seleccione ON.
 * Seleccione MM640g no ConfigBuilder (configuração em AndroidAPS).
 
-## For users of PocTech CT-100  
+## Para utilizadores de PocTech CT-100  
 
 
 * Instale app PocTech

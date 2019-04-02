@@ -38,7 +38,7 @@ The solid blue line shows the basal delivery of your pump. The dotted blue line 
 
 ## The Calculator
 
-![Calculator](../images/Screenshot_Bolus_calculator.png)
+![Calculadora](../images/Screenshot_Bolus_calculator.png)
 
 When you want to make a meal bolus this is where you will normally make it from.
 

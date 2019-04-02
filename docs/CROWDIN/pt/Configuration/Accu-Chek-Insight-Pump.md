@@ -1,16 +1,16 @@
-# Accu-Chek Insight Pump
+# Bomba Accu-Check Insight
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Não tenha demasiada pressa, permita-se ter tempo para aprender. Você é o responsável como utiliza e configura o sistema.**
+**Este software é parte de uma solução DIY (faça você mesmo) e não é um produto, no entanto é necessário que VOCÊ leia, aprenda e compreenda o sistema, incluindo a forma de o usar. Não é algo que faz a gestão total da sua diabetes, mas permite melhorá-la, bem como a sua qualidade de vida se estiver disposto a dar-lhe o tempo necessário para isso. Não tenha demasiada pressa, permita-se ter tempo para aprender. Você é o responsável como utiliza e configura o sistema.**
 
 * * *
 
-## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to version 2.1** and **uninstall SightRemote**.*
+## ***AVISO:** Se você tem usado o Insight com **SightRemote** anterior, por favor **atualize para a versão 2.1** e **desinstale o SightRemote**.*
 
-## Hardware and software requirements
+## Requisitos de hardware e software
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work) <br /> Note: AAPS will write data always in **first basal rate profile in the pump**
-* An Android phone
-* The AndroidAPS app (at least v2.1) installed on your phone
+* Uma bomba Insight Roche Accu-Chek (qualquer firmware, todos funcionam) <br /> Nota: AAPS irá escrever os dados sempre no **primeiro perfil de taxa basal na bomba **
+* Um telefone Android
+* O AndroidAPS (pelo menos a v2.1) instalado no seu telefone
 
 ## Instalação
 

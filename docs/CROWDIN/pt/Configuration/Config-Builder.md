@@ -122,26 +122,26 @@ See [Objectives](../Usage/Objectives.md) page for more information.
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
 
-## General
+## Geral
 
-### Overview
+### Visão Geral
 
 Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 
-#### Keep screen on
+#### Manter ecrã ligado
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore it is recommended to connect the smartphone to a charger cable.
 
-#### Buttons
+#### Botões
 
 Define which Buttons are shown on the home screen.
 
-* Treatments
-* Calculator
+* Tratamentos
+* Calculadora
 * Insulina
-* Carbs
-* CGM (opens xDrip+)
-* Calibration
+* Hidratos
+* CGM (abre xDrip+)
+* Calibração
 
 Furthermore you can set shortcuts for insulin and carb increments and decide wether the notes field should be shown in treatment dialogues.
 
@@ -153,25 +153,25 @@ Note: Button will not be visible if outside the specified time range or if you h
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Advanced settings
+#### Configurações Avançadas
 
 Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically the basal for the next two hours is added to the bolus and a two hour zero-temp activated. Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-### Actions
+### Acções
 
 Some buttons to quickly access common features:
 
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. basal rate
+* Alvos temporário
+* Definir / cancelar temp. basal rate
 * Extended bolus (DanaR/RS or Combo pump only)
 * Prime / fill (DanaR/RS or Combo pump only)
-* History browser
+* Navegador do histórico
 * TDD (Total daily dose = bolus + basal per day)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
+![Aba Accões](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Careportal
 
@@ -181,7 +181,7 @@ Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, c
 
 Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
 
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Aba Careportal](../images/ConfBuild_CarePortal.png)
 
 ### SMS Communicator
 
@@ -236,7 +236,7 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
-#### Advanced settings
+#### Configurações Avançadas
 
 * Auto backfill missing BGs from Nightscout
 * Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)

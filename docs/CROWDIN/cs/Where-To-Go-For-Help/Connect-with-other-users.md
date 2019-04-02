@@ -12,33 +12,33 @@ Pro podporu k senzorům CGM použijte prosím facebookovou skupinu nebo gitterov
 
 ## Určitě se připojte do facebookové skupiny AndroidAPS users!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithum, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+Připojte se k hlavní skupině [AndroidAPS na Facebooku](https://www.facebook.com/groups/1900195340201874/). Můžete zde pokládat jakékoliv otázky týkající se algoritmu, Android Studia a sestavení APK, a také jakékoliv dotazy týkající se používání aplikace. Najdete zde rovněž tipy, jak aplikaci využít na maximum. Existuje také zvláštní skupina [AAPSCombo](https://www.facebook.com/groups/127507891261169/) pro uživatele pumpy Combo, kteří mají trochu odlišné nastavení.
 
-## Other ressources in English
+## Ostatní zdroje v angličtině
 
-* [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): covers all DIY closed loop systems (OpenAPS, Loop and AndroidAPS)
+* [Facebooková skupina Looped](https://www.facebook.com/groups/TheLoopedGroup): najdete zde vše, co se týká DIY systémů uzavřené smyčky (OpenAPS, Loop a AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
-* [AndroidAPS on Gitter](https://gitter.im/MilosKozak/AndroidAPS)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): obecné informace o CGM
+* [AndroidAPS na Gitteru](https://gitter.im/MilosKozak/AndroidAPS)
 
-## Country / language specific ressources
+## Zdroje pro konkrétní země nebo jazyky
 
-### Australia
+### Austrálie
 
-* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australian users of OpenAPS, Loop and AndroidAPS
+* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australští uživatelé OpenAPS, Loop a AndroidAPS
 
-### Germany
+### Německo
 
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/): German speaking users of OpenAPS, Loop and AndroidAPS
-* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
+* [Looped-DE](https://www.facebook.com/groups/loopedDE/): Německy mluvící uživatelé OpenAPS, Loop a AndroidAPS
+* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre jako CGM/FGM
 * [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
-* [Looper Meetings Germany & Austria](http://loopertreffen.androidaps.de)
+* [Setkání looperů v Německu a Rakousku](http://loopertreffen.androidaps.de)
 
-### UK
+### Velká Británie
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (Uživatelé OpenAPS, Loop a AndroidAPS z Británie)
 
-### Netherlands
+### Nizozemsko
 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
