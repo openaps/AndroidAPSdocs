@@ -58,4 +58,4 @@ Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem IOB (z.B. eine Stund
 <b><font color="#FF0000">Du musst AAPS auf Version 2.2 (oder höher) updaten, um diese Funktion nutzen zu können!</font></b>
 
 * Um Schwierigkeiten zu vermeiden, wird der Loop für 3 Stunden nach der Zeitumstellung deaktiviert. Dies geschieht aus Sicherheitsgründen (IOB zu hoch aufgrund von doppeltem Boluseinträgen vor der Zeitumstellung).
-* Du erhälst 24 Stunden vor der Zeitumstellung einen Hinweis auf dem Startbildschirm, dass der Loop vorübergehend pausiert wird. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.
+* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.
