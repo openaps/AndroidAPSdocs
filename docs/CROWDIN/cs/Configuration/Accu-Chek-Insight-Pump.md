@@ -49,14 +49,14 @@ Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude na
 
 V Insight nastavení v AndroidAPS můžete upravit následující možnosti:
 
-* „Zaznamenat výměnu kanyly“: To automaticky provede záznam výměny kanyly, když v pumpě provedete „Naplnit kanylu“   
+* „Zaznamenat výměnu kanyly“: Automaticky provede záznam výměny kanyly, když v pumpě provedete „Naplnit kanylu“   
     <font color="red">Poznámka: Výměna kanyly také způsobí reset automatické citlivosti</b></font>
-* „Zaznamenat výměnu hadičky“: To automaticky provede záznam v databázi AndroidAPS, když v pumpě provedete „Naplnit hadičku“.
-* „Zaznamenat výměnu baterie“: To automaticky provede záznam výměny baterie, pokud vložíte do pumpy novou baterii.
-* „Zaznamenat změnu režimu provozu“: To automaticky provede záznam v databázi AndroidAPS, kdykoliv spustíte/zastavíte pumpu.
-* „Zaznamenat výstrahy“: To automaticky provede záznam v databázi AndroidAPS, kdykoliv pumpa zahlásí alarm (s výjimkou upomínek, bolusů a konce dočasných bazálů (TBR) – ty zaznamenány nejsou).
+* „Zaznamenat výměnu hadičky“: Automaticky provede záznam v databázi AndroidAPS, když v pumpě provedete „Naplnit hadičku“.
+* „Zaznamenat výměnu baterie“: Automaticky provede záznam výměny baterie, pokud vložíte do pumpy novou baterii.
+* „Zaznamenat změnu režimu provozu“: Automaticky provede záznam v databázi AndroidAPS, kdykoliv spustíte/zastavíte pumpu.
+* „Zaznamenat výstrahy“: Automaticky provede záznam v databázi AndroidAPS, kdykoliv pumpa zahlásí alarm (s výjimkou upomínek, bolusů a konce dočasných bazálů (TBR) – ty zaznamenány nejsou).
 * „Povolit emulaci dočasných bazálů“: pumpa Insight umožňuje hodnotu maximálního dočasného bazálu (TBR) do výše 250 %. Aby bylo možné toto omezení obejít, pumpa obdrží příkaz provést prodloužený bolus, aby bylo možné zvýšit TBR nad 250 %. <font color="red">Pozn.: Současné používání prodlouženého bolusu ve stejný čas jako další prodloužený bolus může způsobit chybu.</font>
-* „Doba čekání na obnovení spojení“: To definuje, jak dlouho bude AndroidAPS čekat před opětovným pokusem po neúspěšném pokusu o připojení. Můžete vybrat 0 až 20 sekund. Pokud máte problémy s připojením, vyberte delší dobu čekání.   
+* „Doba čekání na obnovení spojení“: Definuje, jak dlouho bude AndroidAPS čekat před opětovným pokusem po neúspěšném pokusu o připojení. Můžete vybrat 0 až 20 sekund. Pokud máte problémy s připojením, vyberte delší dobu čekání.   
       
     Příklad pro min. dobu trvání zotavení = 5 a max. dobu zotavení = 20   
       
@@ -76,7 +76,7 @@ Po dobu, kdy byla pumpa zastavena, AAPS zobrazí záznam s dočasnou bazální h
 V AndroidAPS v záložce Accu-Chek Insight se zobrazuje aktuální stav pumpy a dvě tlačítka:
 
 * „Obnovit“: Opětovné načtení statusu z pumpy
-* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
+* „Povolit oznamování konce dočasného bazálu“: Standardně pumpa Insight spouští zvukový signál, když je TBR dokončen. This button lets you enable or disable this alarm without the need for configuration software.
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
