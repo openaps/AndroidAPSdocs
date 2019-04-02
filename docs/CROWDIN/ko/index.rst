@@ -68,7 +68,7 @@ AndroidAPS 설치하기
    APK 파일 빌드하기 <./Installing-AndroidAPS/Building-APK.md>
    새 버전 혹은 다른 branch로 업데이트 하기 <./Installing-AndroidAPS/Update-to-new-version.md>
    릴리즈 노트 <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev-branch.md>
+   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    Nightscout 설정 <./Installing-AndroidAPS/Nightscout.md>
    
 환경설정 
