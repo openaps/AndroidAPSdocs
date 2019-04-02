@@ -14,7 +14,7 @@ Selecione o perfil basal que prefere usar. Ver a página [Perfis](../Usage/Profi
 
 ### Perfil NS (NightScout)
 
-Perfil NS usa os perfis que guardou na sua página NightScout (https://[yournightscoutsiteaddress]/profile). Pode usar o [Profile Switch](../Usage/Profiles.html) para mudar qual desses perfis está ativo, este grava o perfil para a bomba em caso de falha de AndroidAPS. Isso permite facilmente criar vários perfis no Nightscout (i.e.. trabalho, casa, desportos, férias, etc.). Logo após clicar em "Save" serão transferidos para AAPS se seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação de Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez que tenham sido sincronizados.
+Perfil NS usa os perfis que guardou na sua página NightScout (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. Isso permite facilmente criar vários perfis no Nightscout (i.e.. trabalho, casa, desportos, férias, etc.). Logo após clicar em "Save" serão transferidos para AAPS se seu smartphone estiver online. Mesmo sem uma ligação à Internet ou sem uma ligação de Nightscout, os perfis de Nightscout estão disponíveis na AAPS uma vez que tenham sido sincronizados.
 
 Fazer um **interruptor de perfil** para ativar um perfil de Nightscout. Pressione e segure o perfil atual na ecrã principal AAPS no topo (campo cinzento entre o campo de "Open/Closed Loop" azul claro e o campo da área alvo azul escuro) > Alterar perfil > Selecionar perfil > OK. AAPS também escreve o perfil selecionado a bomba após a mudança de perfil, para que ele esteja disponível sem AAPS numa emergência e continue a ser executado.
 
@@ -95,7 +95,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * OpenAPS AMA (advanced meal assist, state of the algorithm in 2016)  
     More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
     Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.html) (super micro bolus, most recent algorithm for advanced users)  
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
     Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
