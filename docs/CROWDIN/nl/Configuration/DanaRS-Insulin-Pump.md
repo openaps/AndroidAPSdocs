@@ -64,4 +64,4 @@ Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende 
 
 ## Wisselen van tijdzone met de DanaRS
 
-Voor informatie over het wisselen van tijdzone zie sectie [Wisselen van tijdzone](../Usage/Timezone-traveling.md#insight).
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
