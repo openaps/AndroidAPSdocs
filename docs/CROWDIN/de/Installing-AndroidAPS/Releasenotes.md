@@ -6,7 +6,7 @@ Erscheinungsdatum: 29.03.2019
 
 ### Wichtige neue Funktionen
 
-* [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
+* [Korrektur Umstellung Sommer-/Winterzeit](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
 * Wear Update für die Smartwatch
 * [SMS plugin](../Usage/SMS-Commands.md) Update
 * Möglichkeit, bei den Objectives (Zielen) zurück zu gehen
