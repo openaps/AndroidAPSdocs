@@ -14,30 +14,34 @@
 
 ## Einrichtung
 
-* Wähle im [Konfigurations-Generator](../Configuration/Config-Builder) in AndroidAPS die Accu-Chek Insight im Bereich Pumpe.
+* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
+    
+    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+
+* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Tippe auf das Zahnrad, um die Insight-Einstellungen zu öffnen.
+* Tap the cog-wheel to open Insight settings.
 
-* Klicke den Button 'Insight Pairing' am oberen Bildschirmrand in den erscheinenden Einstellungen. Du solltest eine Liste aller Bluetooth-Geräte in der Nähe sehen (Bild unten links).
-* Wähle auf der Insight Pumpe Menü Einstellungen Kommunikation Gerät hinzufügen (Menu > Settings > Communication > Add Device). Auf dem Display der Pumpe wird in folgender Anzeige die Seriennummer der Pumpe angezeigt (Bild unten rechts).
+* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
     
     ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Klicke im Smartphone auf die Seriennummer der Pumpe in der Liste der gefundenen Bluetooth-Geräte. Klicke dann zum Bestätigen auf 'Pair'.
+* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
     
     ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* Sowohl die Pumpe als auch das Telefon zeigen dann einen Code. Stelle sicher, dass der Code auf beiden Geräten übereinstimmt und bestätige das sowohl auf der Pumpe als auch auf dem Smartphone.
+* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
     
     ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Fertig! Klopfe Dir selbst auf die Schulter, denn Du hast Pumpe und AndroidAPS erfolgreich verbunden.
+* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* Klicke im Konfigurations-Generator in AndroidAPS auf das Zahnrad beim Eintrag 'Insight Pumpe', um die Insight-Einstellungen aufzurufen. Klicke dann auf "Insight Pairing' und Dir werden einige Informationen zur Pumpe angezeigt
+* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
