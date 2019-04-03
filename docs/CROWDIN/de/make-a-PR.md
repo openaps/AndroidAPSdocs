@@ -36,6 +36,10 @@ Dateien mit der Endung **.md**:
 * `[text](../Usage/Test.md)` legt einen Hyperlink fest, der auf ein Verzeichnis oberhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
 * `[text](/Usage/Test.md)` legt einen Hyperlink fest, der aus dem aktuellen Verzeichnis auf das Unterverzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
 
+Um den Link auf einen **Anker** (d.h. eine Überschrift) zu setzen, muss die Dateierweiterung weggelassen werden.
+
+* `[text](../Usage/Test#anchor)` statt `[text](../Usage/Test.md#anchor)`
+
 Dateien mit der Endung **.rst**:
 
 * `Text <../Usage/Test.md>` legt einen Hyperlink fest, der auf ein Verzeichnis oberhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
@@ -43,7 +47,7 @@ Dateien mit der Endung **.rst**:
 
 ### Tipps für das Hinzufügen mehrerer Bilder zur Dokumentation für Fortgeschrittene
 
-Wenn du vor hast, viele Änderungen zu machen, die auch das Hinzufügen von Bildern beinhalten, um Teile der Dokumentation zu illustrieren (Danke!), könnte dir folgende Herangehensweise helfen:
+Wenn du vor hast, viele Änderungen zu machen, die auch das Hinzufügen von Bildern beinhalten, um Teile der Dokumentation zu illustrieren (Danke!), könnte dir folgende Vorgehensweise helfen:
 
 * Wenn du Screenshots speicherst, benenne diese mit einem beschreibenden Namen - aber vermeide Leerzeichen, da dies GitHubs Syntax verwirrt. Verwende stattdessen Unterstriche. Z.B. Example_batch_images_upload.png statt "Example batch images upload.png".
 
