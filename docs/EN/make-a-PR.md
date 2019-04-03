@@ -42,7 +42,10 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 In files with **.md** ending:
    * `[text](../Usage/Test.md)` will set an internal hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
    * `[text](/Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
-   
+
+To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
+* `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+
 In files with **.rst** ending:
    * `Text <../Usage/Test.md>` will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
    * `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
