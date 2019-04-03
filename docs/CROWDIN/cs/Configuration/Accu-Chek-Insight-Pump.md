@@ -14,32 +14,36 @@
 
 ## Nastavení
 
-* V [Konfigurace](../Configuration/Config-Builder) aplikace AndroidAPS vyberte v sekci Pumpa Accu-Chek Insight
+* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
     
-    ![Screenshot nastavení pumpy Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* Chcete-li otevřít nabídku nastavení, klikněte na ozubené kolečko.
-
-* V nastavení klikněte na tlačítko „Insight párování“ v horní části obrazovky. Měli byste vidět seznam bluetooth zařízení v dosahu (níže vlevo).
-* V pumpě Insight jděte do Menu > Nastavení > Komunikace > Přidat zařízení. Pumpa zobrazí následující obrazovku (vpravo níže) zobrazující seriové číslo pumpy.
+* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
-    ![Screenshot párování Insight 1](../images/Insight_Pairing1.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Vezměte zpět telefon, klikněte na sériové číslo pumpy v seznamu bluetooth zařízení. Potvrďte kliknutím na Párování.
-    
-    ![Screenshot párování Insight 2](../images/Insight_Pairing2.png)
+* Tap the cog-wheel to open Insight settings.
 
-* Pumpa i telefon poté zobrazí na displeji kód. Zkontrolujte, jestli jsou na obou zařízení kódy stejné a potvrďte je jak v pumpě, tak v telefonu.
+* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
     
-    ![Screenshot párování Insight 3](../images/Insight_Pairing3.png)
+    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Úspěch! Můžete si poblahopřát, úspěšně jste spárovali pumpu s AndroidAPS.
+* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
     
-    ![Screenshot párování Insight 4](../images/Insight_Pairing4.png)
+    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* Pro kontrolu, jestli je vše správně, jděte zpět do nabídky Konfigurace v AndroidAPS a klikněte na ozubené kolečko v nabídce Pumpa - Accu Chek Insight pro vstup do nastavení. Klikněte na Insight párování, kde uvidíte informace o pumpě:
+* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
     
-    ![Screenshot informací o spárování Insight](../images/Insight_PairingInformation.png)
+    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+
+* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+    
+    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+
+* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+    
+    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
 Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude navázáno pouze tehdy, je-li to nezbytné (např. při nastavování dočasného bazálu, posílání bolusu, čtení historie z pumpy apod.). V opačném případě by se baterie v pumpě i mobilu velmi rychle vybila.
 
