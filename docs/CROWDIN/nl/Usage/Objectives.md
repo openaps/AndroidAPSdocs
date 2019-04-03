@@ -2,7 +2,7 @@
 
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen. De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 
-Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exporteren](../Usage/Objectives.md#export-import-settings) om je voortgang door de doelstellingen te behouden. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
+If you are **upgrading phones** then you can [export your settings](../Usage/Objectives#export-import-settings) to keep your progress through the objectives. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
 
 * **Doel 1:** Instellen van visualisatie en monitoring en analyseren van basaal en ratio's 
   * Selecteer de bloedglucose bron die jij gebruikt. Zie [BG bron](../Configuration/BG-Source.md) voor meer informatie.
@@ -44,7 +44,7 @@ Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exp
   * Gedurende een periode van 28 dagen kun je extra functies uitproberen die nog meer rekenwerk voor jou uit handen nemen, zoals de [geavanceerde maaltijdhulp (AMA)](../Usage/Open-APS-features.html#advanced-meal-assist-ama) <br />&nbsp;  
     
 * **Doel 8:** Extra oref1 functies inschakelen voor gebruik overdag, zoals super micro bolus (SMB) 
-  * Je moet het [SMB hoofdstuk in deze wiki](../Usage/Open-APS-features.html#super-micro-bolus-smb) en het [hoofdstuk oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html&quot;) lezen om te begrijpen hoe SMB werkt, met name het idee achter de tijdelijke basaalstanden van nul (zero-temp).
+  * You must read the [SMB chapter in this wiki](../Usage/Open-APS-features.html#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
   * Daarna kun je [maxIOB verhogen](../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) zodat SMB goed kan functioneren. maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. Dat betekent, wanneer je een bolus van 8 E voor een maaltijd hebt gegeven en jouw maxIOB is 7 E, dat er dan geen SMBs worden afgegeven totdat jouw IOB is gedaald tot onder de 7 E. Een goed beginpunt is maxIOB = gemiddelde maaltijdbolus + 3x jouw hoogste basaalstand.
   * Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_carbimpact in de Opname instellingen veranderen van 3 naar 8. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
 

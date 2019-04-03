@@ -68,7 +68,7 @@ AndroidAPS installieren
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release Notes <./Installing-AndroidAPS/Releasenotes.md>
-   Dev Branch <./Installing-AndroidAPS/Dev-branch.md>
+   Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
    Nightscout Installation <./Installing-AndroidAPS/Nightscout.md>
    
 AndroidAPS einrichten 

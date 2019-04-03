@@ -90,16 +90,16 @@ Volg onderstaande stappen om de aangepaste app op je telefoon te krijgen:
 
 ## AndroidAPS installeren
 
-1. Volg de instructies voor het [bouwen van de app](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
-2. [Overzetten](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) van de app naar telefoon
+1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
+2. [Transfer](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) the generated APK to your phone
 3. [AndroidAPS instellen](../Configuration/Config-Builder.md) met de setup wizard of handmatig
 4. In dit voorbeeld gebruikten we (o.a.)
 
-* BG Bron: `Dexcom G5 App (aangepast)` --Klik op het wieltje en activeer `upload BG gegevens naar NS` en `stuur BG data naar xDrip+` (Zie [BG bron](../Configuration/Config-Builder.md#bg-source))
+* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md)
 
 ![G5 instellingen](../images/SampleSetupG5Settings.png)
 
-* NS Client geactiveerd (Zie [NS Client](../Configuration/Config-Builder.md#ns-client) en [Nightscout](../Installing-AndroidAPS/Nightscout.md))
+* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## xDrip+ installeren
 

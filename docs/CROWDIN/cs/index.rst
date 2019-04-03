@@ -68,7 +68,7 @@ Jak nainstalovat AndroidAPS
    Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
    Poznámky k verzi <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev-branch.md>
+   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    Nightscout <./Installing-AndroidAPS/Nightscout.md>
    
 Konfigurace 

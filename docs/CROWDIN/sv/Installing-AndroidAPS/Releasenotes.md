@@ -6,7 +6,7 @@ Release date: 29-03-2019
 
 ### Major new features
 
-* [DST](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst) fix
+* [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
 * Wear Update
 * [SMS plugin](../Usage/SMS-Commands.md) update
 * Go back in objectives.

@@ -64,4 +64,4 @@ Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
 
-Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg reisen](../Usage/Timezone-traveling.md#insight).
+Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg reisen](../Usage/Timezone-traveling#danarv2-danars).

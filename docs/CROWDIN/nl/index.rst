@@ -68,7 +68,7 @@ AndroidAPS installeren
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie of branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev-branch.md>
+   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
    
 AndroidAPS instellingen 

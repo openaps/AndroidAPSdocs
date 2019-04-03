@@ -90,16 +90,16 @@ Zur Einrichtung im Smartphone folgende Schritte ausführen:
 
 ## AndroidAPS installieren
 
-1. AndroidAPS APK-Datei wie [hier](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk) ausführlich und mit Screenshots beschrieben erstellen.
-2. Die erstelle APK-Datei auf das Smartphone [übertragen](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone).
+1. AndroidAPS APK-Datei wie [hier](../Installing-AndroidAPS/Building-APK#generate-signed-apk) ausführlich und mit Screenshots beschrieben erstellen.
+2. Die erstelle APK-Datei auf das Smartphone [übertragen](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone).
 3. AnroidAPS entsprechend den eigenen Anforderungen mit Hilfe des Einrichtungsassistenten oder manuell [konfigurieren](../Configuration/Config-Builder.md).
 4. In diesem Beispiel haben wir (unter anderem) folgende Einstellungen verwendet:
 
-* BZ-Quelle: `Dexcom G5 App (patched)` -- Klicke auf das Zahnrad und aktiviere `Speichere BZ-Werte in Nightscout` und `Sende BZ-Werte zu xDrip+` (siehe [BZ-Quellen](../Configuration/Config-Builder.md#bg-source))
+* BZ-Quelle: `Dexcom G5 App (patched)` -- Klicke auf das Zahnrad und aktiviere `Speichere BZ-Werte in Nightscout` und `Sende BZ-Werte zu xDrip+` (siehe [BZ-Quellen](../Configuration/BG-Source.md)
 
 ![G5 Einstellungen](../images/SampleSetupG5Settings.png)
 
-* Nightscout Client aktivieren (siehe [Nightscout-Client](../Configuration/Config-Builder.md#ns-client) und [Nightscout Setup](../Installing-AndroidAPS/Nightscout.md))
+* Nightscout Client aktivieren (siehe [Nightscout-Client](../Configuration/Config-Builder#ns-profile) und [Nightscout Setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## xDrip+ installieren
 

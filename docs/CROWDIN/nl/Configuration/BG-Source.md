@@ -86,3 +86,27 @@ Als je een andere CGM gebruikt die jouw gegevens doorstuurt naar [Nightscout](ht
 
 * Ga naar de AndroidAPS Instellingen en vul jouw Nightscout website en API geheim in als BG bron.
 * Selecteer NSClient in ConfigBuilder (setting in AndroidAPS).
+
+# General CGM recommendations
+
+## CGM hygiene
+
+Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+
+* Make sure hands and kit are clean.
+* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
+* Avoid calibrating when glucose levels are moving up or down. 
+* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
+* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+
+## Dexcom G6 & DIY systems
+
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+
+* If you are using the native data with the calibration code in xDrip or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
+* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
+* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
+* Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+
+To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
