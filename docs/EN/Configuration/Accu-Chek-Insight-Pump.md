@@ -25,6 +25,8 @@ you do with it.**
 
 ## Setup
 
+Note: <font color="#FF0000">AndroidAPS and the Insght Remot Control that was delivered together with the pump **must not** be used with one pump at the same time!</font> More than one connection leads to problems with the Insight pump.
+
 - In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
 
    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
