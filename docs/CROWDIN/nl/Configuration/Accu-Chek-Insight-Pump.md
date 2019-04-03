@@ -9,37 +9,41 @@
 ## Benodigde hardware en software
 
 * Een Roche Accu-Chek Insight pomp (firmware maakt niet uit, ze werken allemaal) <br />Opmerking: AAPS zal alleen het **eerste basaal-profiel van de pomp** gebruiken.
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Een Android-telefoon (in principe werkt elke Android-versie, maar AndroidAPS zelf vereist minstens Android 5 (Lollipop).)
 * De AndroidAPS-app (versie 2.1.1 of hoger) geïnstalleerd op jouw telefoon
 
 ## Pomp koppelen
 
-* In de [Configurator](../Configuration/Config-Builder) van AndroidAPS: selecteer Accu-Chek Insight in de pomp sectie
+* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
     
-    ![Screenshot van Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* Tik op het tandwiel-icoon naast Insight om de instellingen te openen.
-
-* In de instellingen: tik op de knop 'Insight koppelen' bovenaan het scherm. Als het goed is zie je nu een lijst van alle nabijgelegen bluetooth apparaten (links onder).
-* Op de Insight pomp, ga naar Menu > Instellingen > Communicatie > Apparaat toevoegen. De pomp zal het volgende scherm (rechts onder) weergeven met het serienummer van de pomp.
+* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
-    ![Screenshot van Insight Pairing 1](../images/Insight_Pairing1.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Ga terug naar je telefoon, tik op het pomp serienummer in de lijst van bluetooth apparaten. Tik vervolgens op Koppelen om te bevestigen.
-    
-    ![Screenshot van Insight Pairing 2](../images/Insight_Pairing2.png)
+* Tap the cog-wheel to open Insight settings.
 
-* Zowel op je pomp als op je telefoon zal vervolgens een code verschijnen. Controleer of de codes op beide apparaten hetzelfde zijn en bevestig op zowel pomp als telefoon.
+* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
     
-    ![Screenshot van Insight Pairing 3](../images/Insight_Pairing3.png)
+    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Gelukt! Geef jezelf een schouderklopje voor het succesvol koppelen van je pomp met AndroidAPS.
+* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
     
-    ![Screenshot van Insight Pairing 4](../images/Insight_Pairing4.png)
+    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* Om te controleren of alles goed is, ga je terug naar de Configurator in AndroidAPS en tik op het tandwiel-icoontje bij de Insight pomp om in de Insight-instellingen te komen. Tik vervolgens op Insight Pairing en je zult wat informatie te zien krijgen over de pomp:
+* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
     
-    ![Screenshot van Insight Pairing Informatie](../images/Insight_PairingInformation.png)
+    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+
+* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+    
+    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+
+* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+    
+    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
 Opmerking: Er zal geen permanente verbinding zijn tussen pomp en telefoon. Een verbinding zal alleen tot stand worden gebracht als dat nodig is (d.w.z. instellen van tijdelijke basaalstand, bolus geven, pomp geschiedenis uitlezen...). Anders zouden de batterij van telefoon en pomp te snel leeglopen.
 
