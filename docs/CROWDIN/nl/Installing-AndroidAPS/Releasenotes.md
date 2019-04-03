@@ -1,57 +1,57 @@
-# Release notes
+# Release opmerkingen
 
-## Version 2.2
+## Versie 2.2
 
-Release date: 29-03-2019
+Release datum: 29-03-2019
 
-### Major new features
+### Belangrijkste nieuwe functies
 
-* [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
-* Wear Update
-* [SMS plugin](../Usage/SMS-Commands.md) update
-* Go back in objectives.
-* Stop loop if phone disk is full
+* [Zomer/wintertijd correctie](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
+* Wear Update voor smartwatches
+* [SMS Commando's](../Usage/SMS-Commands.md) update
+* Optie om terug te gaan in leerdoelen.
+* Onderbreek loop als telefoon-opslagruimte vol is
 
-## Version 2.1
+## Versie 2.1
 
-Release date: 03-03-2019
+Release datum: 03-03-2019
 
-### Major new features
+### Belangrijkste nieuwe functies
 
-* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
-* Status lights on main screen (Nico Schmitz)
-* Daylight saving time helper (Roumen Georgiev)
-* Fix processing profile names comming from NS (Johannes Mockenhaupt)
-* Fix UI blocking (Johannes Mockenhaupt)
-* Support for updated G5 app (Tebbe Ubben and Milos Kozak)
-* G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
-* Fixed disabling SMB from preferences (Johannes Mockenhaupt)
+* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) ondersteuning (door Tebbe Ubben en JamOrHam)
+* Statusindicatoren op het Overzicht-scherm (Nico Schmitz)
+* Zomer/wintertijd omschakeling (Roumen Georgiev)
+* Correctie voor namen van Nightscout-profielen (Johannes Mockenhaupt)
+* Correctie voor User Interface blokkering (Johannes Mockenhaupt)
+* Ondersteuning voor bijgewerkte G5 app (Tebbe Ubben en Milos Kozak)
+* G6, Poctech, Tomato, Eversense BG-bron ondersteuning (Tebbe Ubben en Milos Kozak)
+* Correctie voor uitschakelen SMB Instellingen (Johannes Mockenhaupt)
 
-### Misc
+### Opmerkingen
 
-* If you are using non default `smbmaxminutes` value you have to setup this value again
+* Als je een niet-standaard `smbmaxminuten` gebruikt, moet je deze waarde opnieuw instellen
 
-## Version 2.0
+## Versie 2.0
 
-Release date: 03-11-2018
+Release datum: 03-11-2018
 
-### Major new features
+### Belangrijkste nieuwe functies
 
-* oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
-* Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
-* Setup wizard: guides you through the process of setting up AndroidAPS
+* oref1/SMB ondersteuning ([oref1 documentatie](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)). Lees de documentatie om te weten wat je van SMB moet verwachten, hoe het werkt, wat je ermee kunt bereiken en hoe je het kunt gebruiken, zodat het zal functioneren zoals het bedoeld is.
+* Ondersteuning voor Accu-check Combo pomp ([installatie instructies](../Configuration/Accu-Chek-Combo-Pump.md))
+* Setup wizard: gidst je door het proces heen om AndroidAPS in te stellen
 
-### Settings to adjust when switching from AMA to SMB
+### Instellingen die je moet aanpassen bij het overschakelen van AMA naar SMB
 
-* Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
-* maxIOB now includes *all* IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
-* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
+* Doel 8 moet zijn gestart om SMBs aan te kunnen zetten (SMB tab toont in het algemeen welke beperkingen gelden)
+* maxIOB bevat nu *alle* IOB, niet alleen de toegevoegde basale insuline. Dat betekent dus, wanneer je jezelf een maaltijdbolus van 8E hebt gegeven en maxIOB is 7E, dat er geen SMBs worden afgegeven totdat IOB onder de 7E is gezakt.
+* Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_carbimpact in de Opname instellingen veranderen van 3 naar 8. Je moet deze instelling handmatig veranderen.
+* Let op bij het bouwen van de AndroidAPS 2.0 apk: Configuration on demand wordt niet ondersteund door de huidige versie van de Android Gradle plugin! Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
   
-  * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-  * In the left pane, click Build, Execution, Deployment > Compiler.
-  * Uncheck the Configure on demand checkbox.
-  * Click Apply or OK.
+  * Open het Preferences (Voorkeuren) venster door op File > Settings (Bestand > Instellingen) te klikken (op Mac, Android Studio > Voorkeuren).
+  * In het linkerscherm, klik op Build, Execution, Deployment > Compiler.
+  * Vink de Configure on demand checkbox uit.
+  * Klik op Apply (Toepassen) of OK.
 
 ### Overview tab
 
@@ -78,7 +78,7 @@ Release date: 03-11-2018
 * Dexcom patched app as BG source
 * oref1 sensitivity plugin
 
-### Misc
+### Opmerkingen
 
 * App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
 * Overhaul for config builder and objectives tabs, adding descriptions
