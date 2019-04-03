@@ -6,17 +6,17 @@ Bevor du dein rig erstellst, musst du sehr viel lesen, um die ganze Funktionswei
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documention - http://openaps.readthedocs.io/en/latest/](http://openaps.readthedocs.io/en/latest/)
+[OpenAPS Dokumention - http://openaps.readthedocs.io/en/latest/](http://openaps.readthedocs.io/en/latest/)
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - http://seemycgm.com/2017/10/29/fine-tuning-settings/](http://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Fein-Tuning deiner Einstellungen - http://seemycgm.com/2017/10/29/fine-tuning-settings/](http://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
 [DIYPS - https://diyps.org/](https://diyps.org/)
 
-[Diabetes and Technology - Where Diabetes meets Tech - http://www.diabettech.com/](http://www.diabettech.com/)
+[Diabetes and Technology - Where Diabetes meets Tech - http://www.diabettech.com](http://www.diabettech.com/)
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
