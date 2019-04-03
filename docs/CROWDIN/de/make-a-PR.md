@@ -57,7 +57,7 @@ Wenn du vor hast, viele Änderungen zu machen, die auch das Hinzufügen von Bild
     
     4. Führe einen "Commit" auf deinen Branch aus
     
-    5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
+    5. Nun kannst Du die URL / den relativen Pfad jedes Bildes ermitteln, um darauf zu referenzieren, wenn Du das Bild in der Dokumentation verwenden willst.
     
     6. Beispiele, wie man Bilder hinzufügt, kannst du dir im "rohen" Code von Seiten anschauen, in denen schon erfolgreich Bilder eingefügt wurden. Es ist wichtig, eine reine Textbeschreibung zu haben, der ein Link mit einem relativen Pfad zu dem Bild folgt. Etwa so: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
     
