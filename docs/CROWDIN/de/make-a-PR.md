@@ -36,33 +36,37 @@ Dateien mit der Endung **.md**:
 * `[text](../Usage/Test.md)` legt einen Hyperlink fest, der auf ein Verzeichnis oberhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
 * `[text](/Usage/Test.md)` legt einen Hyperlink fest, der aus dem aktuellen Verzeichnis auf das Unterverzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
 
-Dateien mit der Endung **.rst**:
+To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
 
-* `Text <../Usage/Test.md>` legt einen Hyperlink fest, der auf ein Verzeichnis oberhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
-* `Text <./Usage/Test.md>` legt einen Hyperlink fest, der aus dem aktuellen Verzeichnis auf das Unterverzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
+* `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+
+In files with **.rst** ending:
+
+* `Text <../Usage/Test.md>` will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
+* `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
 
 ### Tipps für das Hinzufügen mehrerer Bilder zur Dokumentation für Fortgeschrittene
 
-Wenn du vor hast, viele Änderungen zu machen, die auch das Hinzufügen von Bildern beinhalten, um Teile der Dokumentation zu illustrieren (Danke!), könnte dir folgende Herangehensweise helfen:
+If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
-* Wenn du Screenshots speicherst, benenne diese mit einem beschreibenden Namen - aber vermeide Leerzeichen, da dies GitHubs Syntax verwirrt. Verwende stattdessen Unterstriche. Z.B. Example_batch_images_upload.png statt "Example batch images upload.png".
+* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png".
 
-* Mehrere Bilder kannst du auf diese Art leicht hochladen:
+* You can upload images in batches easily by:
     
-    1. Navigiere zu dem Bilder Verzeichnis (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images) - aber vergewissere dich, dass du dich in deinem Fork / deiner Kopie des Bilderverzeichnisses befindest (ersetze "openaps" in der URL mit deinem GitHub Benutzernamen).
+    1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
     
-    2. Klicke in die rechte obere Ecke wo "Upload files" steht
+    2. Click in the upper right corner where it says "Upload files"
     
-    3. Ziehe deine Bilder auf den Bildschirm
+    3. Drag and drop your images into the screen
     
-    4. Führe einen "Commit" auf deinen Branch aus
+    4. Commit these to your branch
     
-    5. Nun kannst Du die URL / den relativen Pfad jedes Bildes ermitteln, um darauf zu referenzieren, wenn Du das Bild in der Dokumentation verwenden willst.
+    5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
     
-    6. Beispiele, wie man Bilder hinzufügt, kannst du dir im "rohen" Code von Seiten anschauen, in denen schon erfolgreich Bilder eingefügt wurden. Es ist wichtig, eine reine Textbeschreibung zu haben, der ein Link mit einem relativen Pfad zu dem Bild folgt. Etwa so: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
+    6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
     
-    (Dieser Code zeigt exakt, wie das Bild weiter unten eingefügt wurde, um angezeigt zu werden.)
+    (That code is exactly how the image below is embedded to be displayed.)
 
-![Beispiel, um mehrere Bilder gleichzeitig hochzuladen](./images/Example_batch_images_upload.png)
+![Example of uploading images in batches](./images/Example_batch_images_upload.png)
 
 7. Nachdem du Bilder hinzugefügt oder Veränderungen vorgenommen hast, kannst du einen PR auf das master branch von AndroidAPSdocs machen.
