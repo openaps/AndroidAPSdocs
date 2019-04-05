@@ -52,7 +52,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 * * *
 
-### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
@@ -91,6 +91,16 @@ This is list of some Pumps floating around there, and status of support for them
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
 **NOTE:** This pump was mentioned in following [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), but I am not sure, if this is just t:slim with modified Firmware, or is this a new pump. So far I go no confirmation either way from writer of article, or from Tandem itself.
+
+## Pumps no longer sold (companies no longer operating)
+
+### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Pumps that aren't Loopable
 
