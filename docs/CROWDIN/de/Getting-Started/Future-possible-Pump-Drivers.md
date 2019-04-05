@@ -52,7 +52,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
 **Loop status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
@@ -92,7 +92,17 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Hinweis:** Diese Pumpe wurde in folgendem [Artikel](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&) erwähnt, aber es ist nicht sicher, ob es sich um eine t:slim mit überarbeiteter Firmware oder eine ganz neue Pumpe handelt. Bisher gibt es keine Bestätigung, weder vom Autor des Artikels noch von Tandem selbst.
 
-## Pumpen, die nicht für den Loop geeignet sind
+## Pumps no longer sold (companies no longer operating)
+
+### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+
+**Loop status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
+
+**Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
+
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+
+## Pumps that aren't Loopable
 
 ### Tandem:X2 ([Homepage](https://www.tandemdiabetes.com/))
 
