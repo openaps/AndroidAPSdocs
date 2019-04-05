@@ -1,36 +1,61 @@
 # Update auf eine neue Version oder branch
 
-## Master branch
-
-### Installiere git (falls du es noch nicht hast)
+## Install git (if you don't have it)
 
 * Jede git Version sollte funktionieren. Beispiel: <https://git-scm.com/download/win>
-* Wähle den Ordner, in dem sich git.exe befinde: File - Settings - Version Control - Git ![](../images/git.png)
+* Make sure to note down the installation path. You will need it in the next step.
+    
+    ![Git installation path](../images/Update_GitPath.png)
 
-### Führe ein Update deiner lokalen Version durch
+* Let Studio know where is git.exe located: File - Settings
+    
+    ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
-* Klicke: VCS->Git->Fetch
+* In the next window: Version Control - Git
 
-### Wähle branch
+* Make sure update method "Merge" is selected.
+    
+    ![Android Studio - GIT path](../images/Update_GitSettings2.png)
 
-* Falls du “branch” wechseln willst, wähle eine andere “branch” vom Reiter: master (aktuellste, getestete Version), oder andere (siehe weiter unten).
+## Update your local copy
 
-![](../images/UpdateAAPS1.png)
+* Click: VCS->Git->Fetch
+    
+    ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
 
-und anschließend "checkout". Verwende 'Checkout as New Branch' falls 'Checkout' nicht angezeigt wird.
+## Selecting branch
+
+* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+    
+    ![](../images/UpdateAAPS1.png)
+
+and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
 ![](../images/UpdateAAPS2.png)
 
-### Branch-Update von Github
+## Updating branch from Github
 
-* Drücke Strg+T, wähle Merge method und drücke OK
+* Press Ctrl+T, select Merge method and press OK
+    
+    ![](../images/merge.png)
 
-![](../images/merge.png)
+On the tray you'll see green message about updated project
 
-Auf dem Reiter siehst du eine grüne Nachricht “updated project”.
+## Generate APK & upload to phone
 
-### APK erstellen & auf das Smartphone laden
+Generate signed apk as described in [Building APK (Generate signed APK)](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
 
-Erstelle die signierte APK wie unter [AndroidAPS installieren - App erstellen (Generate signed APK)](../Installing-AndroidAPS/Building-APK.md) beschrieben.
+![Navigation Generate signed APK](../images/GenerateSignedAPK.PNG)
 
-![Navigation signierte APK erstellen](../images/GenerateSignedAPK.PNG)
+## Troubleshooting
+
+![phone app note installed](../images/Update_AppNotInstalled.png)
+
+* Make sure you have transferred the “app-full-release.apk” file to your phone.
+* If "App not installed" is displayed on your phone follow these steps: 
+    1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
+    2. Uninstall AAPS on your phone.
+    3. Enable airplane mode & turn off bluetooth.
+    4. Install new version (“app-full-release.apk”)
+    5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
+    6. Turn bluetooth back on and disable airplane mode
