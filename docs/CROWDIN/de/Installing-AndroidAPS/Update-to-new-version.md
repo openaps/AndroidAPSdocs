@@ -1,61 +1,61 @@
 # Update auf eine neue Version oder branch
 
-## Install git (if you don't have it)
+## Installiere git (falls du es noch nicht hast)
 
 * Jede git Version sollte funktionieren. Beispiel: <https://git-scm.com/download/win>
-* Make sure to note down the installation path. You will need it in the next step.
+* Notiere Dir den Installationspfad. Du brauchst diesen im nächsten Schritt.
     
-    ![Git installation path](../images/Update_GitPath.png)
+    ![Git Installationspfad](../images/Update_GitPath.png)
 
-* Let Studio know where is git.exe located: File - Settings
+* In Android Studio musst Du den Pfad zu git.exe hinterlegen: File - Settings
     
-    ![Android Studio - open settings](../images/Update_GitSettings1.png)
+    ![Android Studio - Einstellungen öffnen](../images/Update_GitSettings1.png)
 
-* In the next window: Version Control - Git
+* Im nächsten Fenster: Version Control - Git
 
-* Make sure update method "Merge" is selected.
+* Stelle sicher, dass die update method "Merge" ausgewählt ist.
     
-    ![Android Studio - GIT path](../images/Update_GitSettings2.png)
+    ![Android Studio - GIT Pfad](../images/Update_GitSettings2.png)
 
-## Update your local copy
+## Führe ein Update deiner lokalen Version durch
 
-* Click: VCS->Git->Fetch
+* Klicke: VCS->Git->Fetch
     
     ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
 
-## Selecting branch
+## Branch auswählen
 
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+* Falls du “branch” wechseln willst, wähle eine andere “branch” vom Reiter: master (aktuellste, getestete Version), oder andere (siehe weiter unten).
     
     ![](../images/UpdateAAPS1.png)
 
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
+und anschließend "checkout". Verwende 'Checkout as New Branch' falls 'Checkout' nicht angezeigt wird.
 
 ![](../images/UpdateAAPS2.png)
 
-## Updating branch from Github
+## Branch-Update von Github
 
-* Press Ctrl+T, select Merge method and press OK
+* Drücke Strg+T, wähle Merge method und drücke OK
     
     ![](../images/merge.png)
 
-On the tray you'll see green message about updated project
+Auf dem Reiter siehst du eine grüne Nachricht “updated project”.
 
-## Generate APK & upload to phone
+## APK erstellen & auf das Smartphone laden
 
-Generate signed apk as described in [Building APK (Generate signed APK)](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
+Erstelle die signierte APK wie unter [AndroidAPS installieren - App erstellen (Generate signed APK)](../Installing-AndroidAPS/Building-APK#generate-signed-apk) beschrieben.
 
-![Navigation Generate signed APK](../images/GenerateSignedAPK.PNG)
+![Navigation signierte APK erstellen](../images/GenerateSignedAPK.PNG)
 
-## Troubleshooting
+## Problemlösungen
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps: 
-    1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-    2. Uninstall AAPS on your phone.
-    3. Enable airplane mode & turn off bluetooth.
-    4. Install new version (“app-full-release.apk”)
+* Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
+* Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor: 
+    1. [Exportiere die Einstellungen](../Usage/Objectives#export-import-settings) (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
+    2. Deintalliere AAPS auf Deinem Smartphone.
+    3. Aktiviere den Flugmodus & schalte Bluetooth aus.
+    4. Installiere die neue Version ("app-full-release.apk").
     5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
-    6. Turn bluetooth back on and disable airplane mode
+    6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
