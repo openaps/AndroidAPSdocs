@@ -5,8 +5,8 @@ Dit project is vrijwilligerswerk. Om extra werk te voorkomen voor de mensen die 
 * niveau 1: Lees de Wiki - we hebben nu een zoekfunctie!
 * niveau 2: Zoek in de Facebook-groep, als er al niet een antwoord te vinden is, stel dan jouw vraag in de algemene [AndroidAPS gebruikers Facebook groep](https://www.facebook.com/groups/1900195340201874/). Of in de Nederlandstalige Looped-NL groep (zie onderaan deze pagina).
 * niveau 3: als je op Facebook geen antwoord vindt, stel je vraag dan in [gitter](https://gitter.im/MilosKozak/AndroidAPS). Het gelijktijdig stellen van dezelfde vraag op beide platforms zal worden genegeerd of verwijderd om te voorkomen dat mensen dubbel werk hebben met beantwoorden. Vergeet niet dat de meeste ontwikkelaars in Europa wonen, dus het kan goed zijn dat vragen niet 24/7 beantwoord worden; reken erop om enkele uren te moeten wachten, vooral in het weekend en op feestdagen.
-* level 4: Create an [issue](https://github.com/MilosKozak/AndroidAPS/issues) and attach your [log files](../Usage/Accessing-logfiles.md)
-* level 5: email *developers@androidaps.org* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
+* niveau 4: Maak een [issue](https://github.com/MilosKozak/AndroidAPS/issues) op gitter en voeg [log-bestanden](../Usage/Accessing-logfiles.md) toe
+* niveau 5: e-mail naar *developers@androidaps.org* (alleen als het om persoonlijke gegevens gaat die je niet wilt delen op een openbare plek en jouw problemen niet via andere wegen opgelost konden worden)
 
 Voor hulp bij BG bronnen, vragen we je om die specifieke Facebook groepen te gebruiken (bijv. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)), of gebruik voor Nightscout [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/). Dit omdat de gebruikers in die groepen meer weten van die specifieke systemen. Er is ook een Nederlandstalige Facebook groep: CGM in the cloud Nederlands.
 
@@ -40,5 +40,5 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 
 ### Nederland
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Nederlandstalige gebruikers van OpenAPS, Loop en AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)

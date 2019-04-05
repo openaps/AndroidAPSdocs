@@ -14,6 +14,10 @@
 
 ## Einrichtung
 
+* Die Insight-Pumpe darf nur mit einem Gerät gleichzeitig verbunden werden. Wenn Du bisher die Fernbedienung mit Messgerät, die zusammen mit der Pumpe geliefert wurde, verwendet hast, musst Du diese aus der Liste der verbundenen Geräte in der Pumpe entfernen: Menü > Settings > Communication > Remove device.
+    
+    ![Screenshot Insight-Fernbedienung entfernen](../images/Insight_RemoveMeter.png)
+
 * Wähle im [Konfigurations-Generator](../Configuration/Config-Builder) in AndroidAPS die Accu-Chek Insight im Bereich Pumpe.
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)

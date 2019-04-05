@@ -9,14 +9,18 @@
 ## Benodigde hardware en software
 
 * Een Roche Accu-Chek Insight pomp (firmware maakt niet uit, ze werken allemaal) <br />Opmerking: AAPS zal alleen het **eerste basaal-profiel van de pomp** gebruiken.
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Een Android-telefoon (in principe werkt elke Android-versie, maar AndroidAPS zelf vereist minstens Android 5 (Lollipop).)
 * De AndroidAPS-app (versie 2.1.1 of hoger) geïnstalleerd op jouw telefoon
 
 ## Pomp koppelen
 
+* De Insight pomp mag aan één apparaat tegelijk gekoppeld zijn. Wanneer je de afstandsbediening (meter) eerder hebt gebruikt, moet je de meter verwijderen uit de lijst van gekoppelde apparaten in jouw pomp: Menu > Instellingen > Communicatie> Apparaat verwijderen > Meter
+    
+    ![Screenshot van Insight Verwijderen Meter](../images/Insight_RemoveMeter.png)
+
 * In de [Configurator](../Configuration/Config-Builder) van AndroidAPS: selecteer Accu-Chek Insight in de pomp sectie
     
-    ![Screenshot van Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot van Insight Config Builder](../images/Insight_ConfigBuilder.png)
 
 * Tik op het tandwiel-icoon naast Insight om de instellingen te openen.
 
@@ -33,11 +37,11 @@
     
     ![Screenshot van Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Gelukt! Geef jezelf een schouderklopje voor het succesvol koppelen van je pomp met AndroidAPS.
+* Succes! Geef jezelf een schouderklopje voor het succesvol koppelen van je pomp met AndroidAPS.
     
     ![Screenshot van Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* Om te controleren of alles goed is, ga je terug naar de Configurator in AndroidAPS en tik op het tandwiel-icoontje bij de Insight pomp om in de Insight-instellingen te komen. Tik vervolgens op Insight Pairing en je zult wat informatie te zien krijgen over de pomp:
+* Om te controleren of alles goed is gegaan, ga je terug naar de Configurator in AndroidAPS en tik op het tandwiel-icoontje bij de Insight pomp om in de Insight-instellingen te komen. Tik vervolgens op Insight Pairing en je zult wat informatie te zien krijgen over de pomp:
     
     ![Screenshot van Insight Pairing Informatie](../images/Insight_PairingInformation.png)
 

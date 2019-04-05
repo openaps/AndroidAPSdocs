@@ -87,26 +87,26 @@ Als je een andere CGM gebruikt die jouw gegevens doorstuurt naar [Nightscout](ht
 * Ga naar de AndroidAPS Instellingen en vul jouw Nightscout website en API geheim in als BG bron.
 * Selecteer NSClient in ConfigBuilder (setting in AndroidAPS).
 
-# General CGM recommendations
+# Algemene CGM aanbevelingen
 
-## CGM hygiene
+## Kalibraties
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Los van het CGM systeem dat je gebruikt, gelden een aantal hele heldere regels voor het gebruiken van een vingerprik om mee te kalibreren. Die regels gelden zowel bij het gebruik van officiële CGM software van de fabrikant, als bij software uit de doe-het-zelf community.
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* Zorg dat je handen (wassen met water en zeep) en je meetbenodigdheden schoon en droog zijn.
+* Kalibreer alleen wanneer jouw CGM een reeks metingen met een platte pijl geeft (15-30 minuten is meestal genoeg)
+* Doe geen kalibraties wanneer je glucosewaardes stijgen of dalen. 
+* Kalibreer ‘voldoende’– de officiële apps vragen één of twee kalibraties per dag. Apps uit de doe-het-zelf community vragen misschien niet (altijd) naar kalibraties, wees terughoudend in het door laten lopen van CGM metingen zonder kalibraties.
+* Kalibreer als het enigszins kan zowel met glucosewaardes in een lager bereik (4-5mmol/l of 72-90mg/dl) als met waardes in een hoger bereik (7-9mmol/l of 126-160mg/dl) omdat dit een betrouwbaardere ijklijn geeft.
 
-## Dexcom G6 & DIY systems
+## Specifiek voor Dexcom G6
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+Het is duidelijk dat het gebruik van de G6 misschien wat complexer is dan het op het eerste gezicht lijkt. Om de G6 veilig te gebruiken, moet je rekening houden met het volgende:
 
-* If you are using the native data with the calibration code in xDrip or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
-* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
-* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
-* Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
-* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+* Wanneer je het "Native" algoritme gebruikt in combinatie met de kalibratiecode in xDrip of Spike, is het veiligste om de optie "Pre-emptive restart" (voortijdige herstart) niet te gebruiken.
+* Als je er wel voor kiest om Pre-emptive restarts te gebruiken, zorg dan dat je de sensor start op een moment van de dag dat je tijd kunt vrijmaken om te zien wat er gebeurt tijdens de herstart. Zodat je kunt kalibreren als je ziet dat dat nodig is (je ziet een 'sprong' in je glucosegrafiek). 
+* Als je jouw sensoren herstart, dan zul je dat moeten doen A) zonder gebruik te maken van de kalibratiecode voor de veiligste resultaten op dagen 11 en 12, of B) ervoor te zorgen dat je jouw sensorgrafiek in de gaten kunt houden en bereid bent om te kalibreren.
+* Het zogenaamde "Pre-soaking" (de sensor alvast inbrengen, waarna je nog wacht met starten) van de G6 met kalibratiecode zal hoogstwaarschijnlijk leiden tot onnauwkeurigheden in je glucosewaardes na starten. Omdat het algoritme van de G6 rekent op weefselbeschadiging na inbrengen, terwijl je met Pre-soaken niet dezelfde mate van weefselbeschadiging zult hebben op het moment dat je de sensor start. Wanneer je Pre-soakt is het waarschijnlijk het beste om de sensor te kalibreren.
+* Als je om welke reden ook niet in staat bent om op te letten wat er gebeurt tijdens een herstart / na een Pre-soak, dan kun je beter de kalibratiecode niet gebruiken, en jouw sensor gebruiken met kalibraties, net als bij de G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
+Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) (Engelstalig) van Tim Street voor meer achtergrondinformatie en de redenen achter deze aanbevelingen.

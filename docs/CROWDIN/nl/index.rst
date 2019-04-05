@@ -68,7 +68,7 @@ AndroidAPS installeren
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie of branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+   Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
    
 AndroidAPS instellingen 
@@ -123,8 +123,8 @@ Waar je hulp kunt vinden
    :glob:
    :caption: Resources/Reference
             
-   Resources <./Resources/index>
-   Voor behandelaars/zorgprofessionals <./Resources/clinician-guide-to-AndroidAPS>
+   Achtergrondinformatie <./Resources/index>
+   Voor zorgprofessionals <./Resources/clinician-guide-to-AndroidAPS>
 
 Hoe je zelf kunt helpen
 ------------

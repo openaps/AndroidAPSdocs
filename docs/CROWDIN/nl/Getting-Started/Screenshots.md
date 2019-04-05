@@ -2,7 +2,7 @@
 
 ## Overzicht-scherm
 
-![Homescreen V2.1](../images/Screenshot_Home_screen_V2_1.png)
+![Overzicht-scherm V2.1](../images/Screenshot_Home_screen_V2_1.png)
 
 Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er de meeste dingen die je dagelijks nodig hebt.
 

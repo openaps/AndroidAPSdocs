@@ -36,26 +36,26 @@ Gebruikers van de Insight hebben het dus makkelijk bij tijdzone aanpassingen, om
 
 Afhankelijk van pomp en CGM setup, kunnen tijdsverschuivingen problemen geven. Met de Combo bijv. wordt de pompgeschiedenis opnieuw uitgelezen en dat kan leiden tot dubbele invoer. Zorg dus dat je deze wissel uitvoert wanneer je wakker bent, laat het niet automatisch gebeuren gedurende de nacht. Hiermee voorkom je probemen.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+Als je de boluscalculator gebruikt, haal dan de vinkjes weg bij COB en IOB tenzij je ervoor zorgt dat ze absoluut correct zijn - gebruik ze beter niet gedurende de eerste paar uur na een tijdswissel.
 
 ## Accu-Chek Combo
 
-AndroidAPS will issue an alarm if time between pump and phone differs to much. In case of DST time adjustment this would be in the middle of the night. To prevent this and enjoy your sleep instead follow these steps:
+AndroidAPS zal een alarm afgeven als de tijd tussen pomp en telefoon sterk verschilt. In het geval van zomer/wintertijd wisselingen zou dit midden in de nacht zijn. Om dit te voorkomen en te genieten van een ongestoorde nachtrust volg je deze stappen:
 
-1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. 4) Check the Treatments tab... If you see duplicate treatments:
+1) Schakel automatische tijdzone uit in jouw telefooninstellingen. 2) Vind een tijdzone die de gewenste tijd heeft maar die geen zomer/wintertijd wissel heeft. Voor Midden-Europese tijd (CET) zou dit "Brazzaville" (Congo) kunnen zijn voor de omschakeling naar wintertijd, en "Caïro" (Egypte) voor de omschakeling naar zomertijd. Verander de tijdzone van jouw telefoon naar Congo/Egypte. 3) In AndroidAPS ga je naar het pomp-tabblad en vernieuw de status. 4) Ga naar het tabblad Behandelingen... Als je dubbele behandelingen ziet:
 
 * Druk NIET (!) op "verwijder behandelingen in de toekomst"
 * Klik één voor één op "verwijder" voor alle dubbele en toekomstige behandelingen. Dit zou de behandelingen ongeldig moeten maken in plaats van ze te verwijderen, zodat ze niet meer voor IOB / COB worden meegenomen. 5) Als de status onduidelijk is - schakel de loop voor ten minste één DIA en Max-Carb-time uit - welk van de twee het grootste is.
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal.
+Een goed moment om deze omschakeling te maken zou zijn wanneer jouw IOB laag is. Bijvoorbeeld een uur voor een maaltijd.
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* Wisselingen tussen zomer/wintertijd worden automatisch gedaan. Geen actie vereist.
 
-## Other pumps - new as of AAPS version 2.2
+## Andere pompen - voor AAPS versie 2.2 en hoger
 
-<b><font color="#FF0000">You have to update AAPS to use this feature!</font></b>
+<b><font color="#FF0000">Je moet AAPS bijgewerkt hebben naar versie 2.2 om deze functie te gebruiken.</font></b>
 
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Gedurende de nacht wordt er automatisch omgeschakeld. Om problemen te voorkomen zal de loop worden gedeactiveerd gedurende 3 uur NA de zomer/wintertijd wissel. Dit gebeurt om veiligheidsredenen (te hoge IOB als gevolg van dubbele bolus-invoer vóór tijdswisseling).
+* Je ontvangt een melding op het hoofdscherm 24 uur voordat de tijdswissel plaatsvindt, dat de loop tijdelijk zal worden uitgeschakeld. Dit bericht zal verschijnen zonder geluid, trilling of zoiets.

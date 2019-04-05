@@ -14,6 +14,10 @@
 
 ## Configuración
 
+* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
+    
+    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+
 * In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
