@@ -1,32 +1,32 @@
 # Источник данных гликемии
 
-## For users of Dexcom  
+## Для пользователей Dexcom  
 
 
-### If using G5 or G6 with xdrip+  
+### При использовании G5 или G6 с xdrip+  
 
 
-* If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
-* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+* Если еще не настроили, скачайте [xdrip](https://github.com/NightscoutFoundation/xDrip) и следуйте инструкциям на nightscout ([G4 без share ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [с share G4](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
+* В xdrip, перейдите в настройки > совместимости программ > трансляция данных локально и выберите Включить (ON).
+* В xdrip+ перейдите в настройки > совместимости программ > принимать назначения и выберите ВЫКЛ (OFF).
+* Если вы хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принять калибровки и выберите ВКЛ (ON). Возможно вы также захотите рассмотреть варианты в настройках > менее распространенные параметры > дополнительные параметры калибровки.
+* В конфигуратоге (настройки AndroidAPS) выберите xdrip.
 
-### If using G5 or G6 with patched Dexcom app  
-
-
-* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
-* Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
-
-### If using G4 with OTG cable ('traditional' Nightscout)…  
+### При использовании G5 или G6 с помощью патч-приложения Dexcom  
 
 
-* If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* Скачайте приложение из <https://github.com/dexcomapp/dexcomapp>, и выберите версию по вашим потребностям (mg/dl или mmol/l, G5 или G6).
+* Если это еще не сделано, остановите сенсор и удалите оригинальное приложение Dexcom.
+* Установите загруженное приложение
+* Запустите сенсор
+* В конфигуратоге (настройки AndroidAPS) выберите Dexcom G5 App (patched).
+
+### При использовании G4 с кабелем OTG («традиционный» Nightscout)…  
+
+
+* Если это еще не сделано, скачайте загрузчик Nightscout из Play Store и следуйте инструкциям на [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
+* В настройках AndroidAPS введите адрес вашего веб-сайта Nightscout и пароль API secret.
+* В конфигураторе (настройки AndroidAPS) выберите NSClient.
 
 ## For users of Libre with Bluetooth cap  
 
@@ -42,10 +42,10 @@ To use your Libre as a CGM that is getting new BG values every 5 minutes you fir
 
 
 * If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
-* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
+* В xdrip, перейдите в настройки > совместимости программ > трансляция данных локально и выберите Включить (ON).
 * In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+* Если вы хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принять калибровки и выберите ВКЛ (ON). Возможно вы также захотите рассмотреть варианты в настройках > менее распространенные параметры > дополнительные параметры калибровки.
+* В конфигуратоге (настройки AndroidAPS) выберите xdrip.
 * For G5 native mode in xdrip go to Settings > Cloud upload > REST API > Extra options > Append source info to device and select ON.
 
 ### If using Glimp...  
@@ -84,7 +84,7 @@ You can find another instruction for using xDrip with an Eversense [here](https:
 If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
 
 
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
+* В настройках AndroidAPS введите адрес вашего веб-сайта Nightscout и пароль API secret.
 * Select NSClient in ConfigBuilder (setting in AndroidAPS).
 
 # General CGM recommendations
