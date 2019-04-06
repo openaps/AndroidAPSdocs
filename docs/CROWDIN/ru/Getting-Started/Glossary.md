@@ -84,7 +84,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>скорость базала</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
