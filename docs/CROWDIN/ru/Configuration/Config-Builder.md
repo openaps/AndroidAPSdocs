@@ -1,16 +1,16 @@
-# Config Builder
+# Конфигуратор
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side (A) allow you to select which one to use, the boxes on the right hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+Config Builder (Conf) is the tab where you turn the modular features on and off. Ячейки с левой стороны (A) позволяют выбрать, какими модулями программы вы будете пользоваться, ячейки справа (C) позволяют представить эти модули в виде вкладок (E) в AndroidAPS. Если правая ячейка не активирована, вы можете получить доступ к функции из выпадающего меню (D) в левом верхнем углу экрана.
 
-Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Там, где в пределах модуля доступны дополнительные параметры, можно нажать на шестеренку (B), которая направит вас на параметры настройки.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen (F) and select 'Setup Wizard' to use it.
+**Первая конфигурация:** Начиная с версии 2.0 AAPS процесс создания AndroidAPS контролируется Мастером установки. Для его запуска нажмите на меню под тремя точками в правом верхнем углу экрана меню (F) и выберите «Мастер установки».
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
-## Profile
+## Профиль
 
-Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+Выберите базальной профиль, который хотите использовать. См. страницу [Профили](../Usage/Profiles.md) для дополнительной информации по установке.
 
 ### NS Profile
 
@@ -251,6 +251,6 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 Email and number of logs to be send. Normally no change neccessary.
 
-### Config Builder
+### Конфигуратор
 
 Use tab for config builder instead of hambuger menu.
