@@ -1,51 +1,51 @@
-# Accu-Chek Insight Pump
+# Помпа Accu-Chek Insight
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Это программное обеспечение - часть алгоритма самостоятельно настраиваемой ИПЖ; она не является коммерческим продуктом, но требует, чтобы вы прочитали, узнали и поняли, как ей пользоваться. Она не будет за вас контролировать диабет, но позволит улучшить компенсацию и качество жизни, при условии, что вы готовы уделить ей достаточно внимания и времени. Не бросайтесь в систему сломя голову, дайте себе время на изучение. Только вы несете ответственность за то, что делаете.**
 
 * * *
 
-## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to version 2.1** and **uninstall SightRemote**.*
+## ***ВНИМАНИЕ:** Если вы до настоящего момента пользовались помпой Insight с пультом **SightRemote**, пожалуйста **обновите прошивку помпы до версии 2.1** и ** деинсталлируйте SightRemote**.*
 
-## Hardware and software requirements
+## Требования к аппаратному и программному обеспечению
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work) <br /> Note: AAPS will write data always in **first basal rate profile in the pump**
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
-* The AndroidAPS app (at least v2.1) installed on your phone
+* Помпа Accu-Chek Insight Roche (любой прошивки, все они работают) <br />, Примечание: AAPS всегда будет записывать данные в **первый базальный профиль помпы**
+* Телефон на Android (будет работать любая версия, но сам AndroidAPS требует как минимум Android 5 (Lollipop).)
+* Приложение AndroidAPS (не ниже v2.1) установленное на вашем телефоне
 
-## Setup
+## Настройки
 
-* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
+* Помпа Insight должна быть единовременно подключена только к одному устройству. Если вы ранее уже подсоединяли дистанционное управление (глюкометр) Insight, то его необходимо удалить из списка сопряженных устройств помпы: Меню > Настройки > Связь > Удалить устройство
     
     ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
+* В [Конфигураторе](../Configuration/Config-Builder) приложения AndroidAPS выберите Accu-Chek Insight в разделе помпа
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Tap the cog-wheel to open Insight settings.
+* Нажмите на значок шестеренки, чтобы открыть настройки Insight.
 
-* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
-* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
+* В настройках помпы нажмите кнопку "Сопряжение Insight" в верхней части экрана. Вы увидете список устройств bluetooth поблизости (ниже слева).
+* На помпе Insight перейдите в меню > Настройки > Связь > Добавить устройство. На помпе появится экран (внизу справа) с указанием серийного номера помпы.
     
     ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
+* Вернувшись к телефону, нажмите на серийный номер помпы в списке устройств Bluetooth. Затем нажмите на Сопряжение, чтобы подтвердить действие.
     
     ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
+* Как помпа, так и телефон отобразят код. Убедитесь, что коды одинаковы на обоих устройствах и подтвердите сопряжение на помпе и на телефоне.
     
     ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+* Успешно! Похлопайте себя по спине за успешно выполненную задачу по сопряжению с AndroidAPS.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+* Чтобы убедиться, что все в порядке, вернитесь к конфигуратору в AndroidAPS и нажмите на значок настройки рядом с надписью Помпа Insight, войдите в настройки Insight, затем нажмите на Сопряжение Insight и вы увидите информацию о помпе:
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-Note: There will be no permanent connection between pump and phone. A connection will only be established if neccessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
+Примечание: Постоянного соединения между помпой и телефоном не будет. A connection will only be established if neccessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## Settings in AAPS
 
