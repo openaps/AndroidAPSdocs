@@ -246,7 +246,7 @@
 <tr>
  <td>Open Loop</td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>Замкнутый цикл</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
@@ -348,7 +348,7 @@
 <tr>
  <td>Virtual pump</td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Открытый цикл</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
