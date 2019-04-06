@@ -268,7 +268,7 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
- <td>Profile</td>
+ <td>Профиль</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
