@@ -56,23 +56,23 @@
         - На этом этапе выберите расширение MDI а не Комбо чтобы избежать вмешательства в работу алгоритма во время установки соединения.
         - По ссылке http://ruffy.AndroidAPS.org клонируйте ruffy через git.
         - Установите утилиту и используйте его для сопряжения с помпой. Если она не работает после нескольких попыток, переключитесь на ветку `сопряжение`, установите связь с помпой и затем переключитесь обратно на исходную ветку. Обратите внимание, что сопряжение - процесс плохо контролируемый (но выполняется всего один раз) и, возможно, потребуется несколько попыток; своевременно реагируйте на запросы и, при необходимости повторить попытку, заранее удаляйте помпу из настроек Bluetooth. Можно попробовать другой вариант, который заключается в том, чтобы после начала процесса сопряжения войти в меню Bluetooth (это делает Bluetooth телефона видимым на время отображения в меню) и после подтверждения сопряжения, когда помпа показывает код авторизации, переключиться обратно на ruffy. Если вам не удалось настроить соединение с помпой (скажем, после 10 попыток) попробуйте подождать до 10 секунд, прежде чем подтвердить соединение на помпе (после появления наименования телефона на дисплее помпы). Если вы настроили тайм-аут меню меньше 5 сек., потребуется снова увеличить его. Некоторые пользователи сообщают, что им приходилось так делать. Наконец, попробуйте переместиться из одной комнаты в другую, чтобы избежать помех связи. Один из пользователей сообщил нам об устранении проблем соединения после простой перемены комнат.
-        - Когда AAPS пользуется алгоритмом ruffy, приложение ruffy недоступно. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
-        - If the pump is completely new, you need to do one bolus on the pump, so the pump creates a first history entry.
-        - Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
-        - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+        - Когда AAPS пользуется алгоритмом ruffy, утилита ruffy недоступна. Самым простым выходом в этом случае является перезагрузить телефон после сопряжения и дать возможность алгоритму ruffy запуститься в фоновом режиме.
+        - Если помпа совершенно новая, требуется подать болюс на помпе, чтобы помпа произвела первую запись в логе.
+        - Прежде чем активировать расширение Combo в AAPS, убедитесь в правильной настройке профиля и в его активации (!) и что профиль базала актуален т. к. AAPS будет синхронизировать профиль с помпой. После этого активируйте расширение Combo. Нажмите кнопку *Обновить* на вкладке Combo для запуска помпы.
+        - Для проверки настроек, при отключенной помпе в режиме **отключено**, задайте TBR 500% на 15 мин и подайте болюс. После этого в логах помпы появится работающий TBR и болюс. AAPS должен также показать активный TBR и поданный болюс.
         
-        ## Why does pairing with the pump does not work with the app "ruffy"?
+        ## Почему сопряжение с помпой не работает с утилитой "ruffy"?
         
-        There are serveral possible reasons. Try the following steps:
+        Существует несколько возможных причин. Попробуйте следующие действия:
         
-        1. Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
+        1. Вставьте в помпу **свежие или полностью заряженные батареи**. Подробнее см. в разделе "батарея". Убедитесь, что помпа находится вблизи смартфона.
         
         ![Combo should be next to phone](../images/Combo_next_to_Phone.png)
         
-        2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
+        2. Отключите или удалите любые другие устройства bluetooth, чтобы они не смогли установить подключение к телефону во время сопряжения. Любая параллельная связь по bluetooth или запрос на соединение могут нарушить процесс сопряжения.
         
-        3.     Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until 
-              **NO DEVICE** is shown.
+        3.     Удалите уже подключенные устройства в меню Bluetooth помпы: ** настройки BLUETOOTH / подключение / удалить ** до появления сообщения 
+              ** NO DEVICE ** (нет устройств).
               
         
         4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
