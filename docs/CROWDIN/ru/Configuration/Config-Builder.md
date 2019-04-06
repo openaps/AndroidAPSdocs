@@ -1,6 +1,6 @@
-# Конфигуратор
+# Config Builder
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. Ячейки с левой стороны (A) позволяют выбрать, какими модулями программы вы будете пользоваться, ячейки справа (C) позволяют представить эти модули в виде вкладок (E) в AndroidAPS. Если правая ячейка не активирована, вы можете получить доступ к функции из выпадающего меню (D) в левом верхнем углу экрана.
+Конфигуратор (Конф) - это вкладка, на которой можно подключать и отключать модули программы. Ячейки с левой стороны (A) позволяют выбрать, какими модулями программы вы будете пользоваться, ячейки справа (C) позволяют представить эти модули в виде вкладок (E) в AndroidAPS. Если правая ячейка не активирована, вы можете получить доступ к функции из выпадающего меню (D) в левом верхнем углу экрана.
 
 Там, где в пределах модуля доступны дополнительные параметры, можно нажать на шестеренку (B), которая направит вас на параметры настройки.
 
@@ -12,47 +12,47 @@ Config Builder (Conf) is the tab where you turn the modular features on and off.
 
 Выберите базальной профиль, который хотите использовать. См. страницу [Профили](../Usage/Profiles.md) для дополнительной информации по установке.
 
-### NS Profile
+### Профиль Nightscout (NS)
 
-NS Profile uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+Профиль NS использует профили, которые вы сохранили на вашем сайте Nightscout (https://[yournightscoutsiteaddress]/profile). Вы можете пользоваться [Переключателем профиля](../Usage/Profiles.md) для изменения активного профиля, это действие перепишет профиль помпы в случае отказа AndroidAPS. Это позволяет вам легко создавать несколько профилей в Nightscout (то есть.. работа, дом, спорт, отдых и т. п.). Вскоре после нажатия кнопки «Сохранить» они будут переданы в AAPS если ваш смартфон подключен к интернету. Даже без подключения к Интернету или без подключения к Nightscout профили Nightscout доступны в AAPS после синхронизации.
 
-Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Проделайте ** переключение профиля** для активации профиля из Nightscout. Нажмите и удерживайте поле текущего профиля в верхнем углу (серое поле между светло синим полем «Открытый/замкнутый цикл» и темно синим полем области целевых значений) > переключатель профиля > выберите профиль > ОК. AAPS также прописывает выбранный профиль в помпу после изменения профиля, так что он доступен и продолжает выполняться без AAPS в чрезвычайных ситуациях.
 
-### Simple profile
+### Простой профиль
 
-Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
+Простой профиль в одном блоке времени с длительностью действия инсулина DIA, соотношением инсулин/углеводы IC, чувствительностью к инсулину ISF, скоростью подачи базала и целевым диапазоном (напр. никаких изменений базала в течение суток). Скорее всего будет использоваться для тестирования если только ваши коэффициенты не одни и те же в течение суток. После выбора «Простого профиля», в AAPS появится новая вкладка, куда можно ввести данные профиля.
 
-### Local profile (recommended)
+### Локальный профиль (рекомендуется)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Локальный профиль использует базальной профиль, введенный вручную в телефоне. Как только он выбран, появляется новая вкладка, можно при необходимости изменить данные профиля, считываемые с помпы. Во время следующего подключения к профилю они будут записаны в профиль 1 на помпе. Этот профиль рекомендуется поскольку он не зависит от интернет-соединения.
 
 ## Insulin
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. The DIA should always be at least 5 hours, you can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md) page. For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. The insulin curve graph helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+Выберите кривую, соответствующую типу вашего инсулина. Варианты 'Быстродействующий Oref', Сверхбыстрый Oref' и 'Безпиковый Oref' имеют вид экспоненты. Более подробно см. в [Документах OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), кривые различаются на основе длительности действия инсулина DIA и времени пика. Длительность действия инсулина DIA всегда должна быть не менее 5 часов, подробнее в разделе Профиль инсулина [на этой странице](../Getting-Started/Screenshots.md). Для быстродействующих и сверхбыстрых инсулинов, длительность действия инсулина DIA является единственной переменной, которую можно настроить самостоятельно, время пика фиксированное. Безпиковый позволяет настроить как DIA, так и время пика, эта опция для опытных пользователей, которые знают последствия таких параметров. График инсулина позволяет понять поведение других кривых. Его можно увидеть на вкладке, если отметить галочкой в конфигураторе или выбрать из выпадающего меню слева.
 
-### Rapid-Acting Oref
+### Быстродействующий Oref
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection
+* рекомендуется для Humalog, Novolog и Novorapid
+* DIA (длительность действия инсулина) = по крайней мере 5.0 часов
+* Макс. пик = 75 минут после инъекции
 
-### Ultra-Rapid Oref
+### Сверхбыстрый Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection
+* рекомендуется для FIASP
+* DIA (длительность действия инсулина) = по крайней мере 5.0 часов
+* Макс. пик = 55 минут после инъекции
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
+Для многих людей действие FIASP практически незаметно спустя 3-4 часа, даже если тогда, как правило, остается 0.0xx ед. Это остаточное количество может быть ощутимо во время занятий спортом, например. Поэтому AndroidAPS использует как минимум 5 часов в качестве DIA.
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
-### Free Peak Oref
+### Безпиковый Oref
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+На профиле «Безпиковый 0ref» можно самостоятельно ввести пиковое время. Если в профиле не определено более высокое значение, DIA автоматически устанавливается на 5 часов.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+Этот инсулиновый профиль рекомендуется если используется неподдерживаемый тип инсулина или смесь различных инсулинов.
 
-## BG Source
+## Источник данных гликемии
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
 
@@ -251,6 +251,6 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 Email and number of logs to be send. Normally no change neccessary.
 
-### Конфигуратор
+### Config Builder
 
 Use tab for config builder instead of hambuger menu.
