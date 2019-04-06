@@ -1,4 +1,4 @@
-# BG source
+# Источник данных гликемии
 
 ## For users of Dexcom  
 
