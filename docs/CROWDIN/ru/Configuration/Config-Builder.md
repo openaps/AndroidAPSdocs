@@ -145,51 +145,51 @@ Cледует регулярно экспортировать настройки
 
 #### Мастер быстрого болюса
 
-Создайте кнопки для некоторых стандартных блюд (углеводы и метод вычисления болюса) которые будут отображаться на главном экране. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Создайте кнопки для некоторых стандартных блюд (углеводы и метод вычисления болюса) которые будут отображаться на главном экране. Применяйте для стандартных часто употребляемых блюд. Если для различных блюд указано разное время, у вас всегда будет оответствующая кнопка приема пищи на домашнем экране, в зависимости от времени суток.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Примечание: Кнопка не будет видна вне диапазона времени, для нее созданного или если у вас есть достаточно активного инсулина IOB на углеводы, заданные кнопкой.
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Advanced settings
+#### Расширенные настройки
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically the basal for the next two hours is added to the bolus and a two hour zero-temp activated. Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Включает функцию супер болюс в мастере. Применяйтес осторожностью и не активируйте пока не узнаете, как она работает. В общем виде для следующих двух часов к базе добавляется болюс и активируется нулевой временный базал. Подробности о супер болюсе можно найти [здесь](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-### Actions
+### Действия
 
-Some buttons to quickly access common features:
+Кнопки быстрого доступа к распространенным настройкам:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. basal rate
-* Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
-* History browser
-* TDD (Total daily dose = bolus + basal per day)
+* Переключатель профилей (см. [страницу профилей](../Usage/Profiles.md) для дополнительной информации по настройке)
+* Временные целевые значения
+* Задать / отменить врем. скорость базала
+* Пролонгированный болюс (только для DanaR/RS или Combo)
+* Первичное заполнение / заправка (только для DanaR/RS или Combo)
+* История
+* TDD (Общая суточная доза = болюс + базал за день)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50. Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). Другие предпочитают диапазон от 32% до 37% от величины базала TBB. Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
-### Careportal
+### Портал назначений/терапии
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+Позволяет вносить любые записи связанные с компенсацией диабета и просматривать информацию о сенсоре, инсулине, катетере и батарее помпы на закладке Портал назначений/терапии.
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Примечание: **Инсулин не подается**, если вводится через Портал назначений/терапии (болюс на еду, коррекцию...)
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Углеводы, введенные через Портал назначений/терапии (т.е. углеводы на коррекцию) учитываются при подсчете активных углеводов COB.
 
 ![Careportal tab](../images/ConfBuild_CarePortal.png)
 
-### SMS Communicator
+### SMS коммуникатор
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
+Позволяет удалено управлять некоторыми функциями AndroidAPS при помощи SMS, см. [SMS команды](../Usage/SMS-Commands.md) для получения дополнительной информации по настройке.
 
-### Food
+### Еда
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Отображает предустановленные характеристики еды, определенные в базе данных Nightscout, см [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) для получения дополнительной информации по параметрам.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Примечание: Записи не могут использоваться в калькуляторе AndroidAPS. (Только просмотр)
 
 ### Wear
 
