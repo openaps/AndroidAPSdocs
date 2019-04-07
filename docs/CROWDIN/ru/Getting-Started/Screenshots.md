@@ -90,9 +90,9 @@ This replicates the functions you will find on your Nightscout screen under the 
 
 You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
 
-## Profile
+## Профиль
 
-![Profile](../images/Screenshot_profile.png)
+![Профиль](../images/Screenshot_profile.png)
 
 AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a "Switch Profile" on your AndroidAPS rig to refresh the download. Data such as the basal profile would then be automatically copied over to your pump.
 

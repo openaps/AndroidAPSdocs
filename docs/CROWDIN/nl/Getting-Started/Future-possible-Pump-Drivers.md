@@ -52,7 +52,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 * * *
 
-### Cellnovo Pomp ([Homepage](https://www.cellnovo.com/en/homepage))
+### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
 **Status:** (Opmerking: Omnipod DASH is een nieuwe versie van de Omnipod, hij is in sommige landen al verkrijgbaar.) Wordt momenteel niet ondersteund. De pomp is een Loop-kandidaat, maar aangezien het communicatie-protocol op dit moment onbekend is, zie ik het niet snel gebeuren dat deze pomp wordt ondersteund.
 
@@ -92,49 +92,59 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 **NOTE:** Deze pomp werd genoemd in het volgende [artikel](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), maar ik weet niet zeker of dit de normale t:slim is met aangepaste Firmware, of dat dit een nieuwe pomp is. Tot nu toe heb ik hierover geen uitsluitsel gekregen van de schrijver van het artikel of van Tandem zelf.
 
-## Pompen die niet loopbaar zijn
+## Pumps no longer sold (companies no longer operating)
+
+### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+
+**Status:** (Opmerking: Omnipod DASH is een nieuwe versie van de Omnipod, hij is in sommige landen al verkrijgbaar.) Wordt momenteel niet ondersteund. De pomp is een Loop-kandidaat, maar aangezien het communicatie-protocol op dit moment onbekend is, zie ik het niet snel gebeuren dat deze pomp wordt ondersteund.
+
+**Hardware eisen voor AAPS:** Waarschijnlijk geen. Want gebruikt Bluetooth.
+
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+
+## Pumps that aren't Loopable
 
 ### Tandem:X2 ([Homepage](https://www.tandemdiabetes.com/))
 
-**Status:** Niet-loopbaar voor doe-het-zelf systemen. Over de volgende info ben ik niet 100% zeker, maar ze zijn van plan om een andere pomp te maken die van afstand bestuurbaar zal zijn (ten minste om te bolussen).
+**Loop status:** Not loopable (I am not 100% sure about this info), but they are planning to release different pump that will have remote control (at least bolus).
 
 * * *
 
 ### Animas Vibe
 
-**Status:** Niet loopbaar. Is niet op afstand bedienbaar. **Opmerking:** Deze pomp wordt niet meer verkocht. Bedrijf is gestopt met alle insulinepomp activiteiten (J&J).
+**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Status:** Niet loopbaar. Heeft bolus mogelijkheid, maar geen TBR mogelijkheid. **Opmerking** Werd sinds komst van de Vibe niet meer verkocht. En bedrijf is gestopt met alle insulinepomp activiteiten (J&J).
+**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped beeing sold when Vibe came out.
 
-## Eisen aan pompen die loopbaar zijn
+## Requirements for pumps being loopable
 
-**Voorwaarden**
+**Prerequisite**
 
 - Pump moet op Ã©Ã©n of andere manier op afstand bedienbaar zijn. (Bluetooth, radiofrequentie, etc)
 - Communicatie-protocol is gehackt/gedocumenteerd/etc.
 
-**Minimale vereisten**
+**Minimal requirement**
 
 - Heeft een mogelijkheid voor het instellen van Tijdelijke Basaalstanden
 - De Pompstatus kan worden uitgelezen
 - Heeft een mogelijkheid voor het annuleren van Tijdelijke Basaalstanden
 
-**Voor oref1(SMB) of Bolussen:**
+**For oref1(SMB) or Bolusing:**
 
 - Bolus kunnen instellen
 
-**Fijn om te hebben**
+**Good to have**
 
 - Annuleer Bolus
 - Lees Basaalprofiel uit (is haast een vereiste)
 - Stel Basaalprofiel in (leuk om te hebben)
 - Lees geschiedenis uit 
 
-**Overige (niet verplicht maar goed om te hebben)**
+**Other (not required but good to have)**
 
 - Vertraagde bolus instellen
 - Vertraagde bolus annuleren
@@ -143,6 +153,6 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 * * *
 
-### Ondersteuning overige pompen
+### Other pumps support
 
-Als je andere pompen hebt waarvan je wilt weten wat de status is, neem dan contact met mij op (@andyrozman op gitter). In de toekomst zullen er veel Pomp configuraties worden toegevoegd om open loopbaar te zijn (wanneer je het Virtuele Pomp type in de configurator selecteert dan worden jouw instellingen worden geladen - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).

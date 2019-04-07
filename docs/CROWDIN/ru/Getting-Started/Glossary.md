@@ -65,7 +65,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td>BG source</td>
+<td>Источник данных гликемии</td>
  <td>Where do your glucose values come from?</td>
  <td>CGM / FGM</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
@@ -84,7 +84,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>скорость базала</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -246,7 +246,7 @@
 <tr>
  <td>Open Loop</td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>Замкнутый цикл</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
@@ -268,7 +268,7 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
- <td>Profile</td>
+ <td>Профиль</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
@@ -348,7 +348,7 @@
 <tr>
  <td>Virtual pump</td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Открытый цикл</td>
  <td>&nbsp;</td>
 </tr>
 <tr>

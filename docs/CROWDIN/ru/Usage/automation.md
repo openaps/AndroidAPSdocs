@@ -71,7 +71,7 @@ Start sling: Tap on Play button
 
 This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temprorary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
 
-##### xDrip+
+##### xDrip +
 
 First, you must add a BG high alert in xDrip+ as follows:
 
