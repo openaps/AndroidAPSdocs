@@ -1,5 +1,17 @@
 # Release notes
 
+## Version 2.2.2
+
+Release date: 07-04-2019
+
+### Major new features
+
+* Autosens fix: deactivate TT raises/lowers target
+* New translations
+* Insight driver fixes
+* SMS plugin fix
+
+
 ## Version 2.2
 
 Release date: 29-03-2019
