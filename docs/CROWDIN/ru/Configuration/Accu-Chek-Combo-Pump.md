@@ -38,71 +38,77 @@
     - Configure a max bolus suited for your therapy to protect against bugs in the software
     - Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
     - Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-    - Задайте время ожидания выключения экрана и меню минимум на 5,5 и 5 соответственно. Это позволяет AAPS быстрее восстановиться после ошибок и уменьшает количество вибраций во время таких ошибок
+    - Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
-![Снимок экрана меню параметров пользователя](../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Снимок экрана параметров TBR](../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Снимок экрана настроек болюса](../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Снимок экрана настроек для картриджей инсулина](../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
-- Установите AndroidAPS по инструкции [AndroidAPS](http://wiki.AndroidAPS.org).
-- Для правильной работы с программой внимательно прочитайте инструкции в вики.
-- На этом этапе выберите расширение MDI а не Комбо чтобы избежать вмешательства в работу алгоритма во время установки соединения.
-- По ссылке http://ruffy.AndroidAPS.org клонируйте ruffy через git.
-- Установите утилиту и используйте его для сопряжения с помпой. Если она не работает после нескольких попыток, переключитесь на ветку `сопряжение`, установите связь с помпой и затем переключитесь обратно на исходную ветку. Обратите внимание, что сопряжение - процесс плохо контролируемый (но выполняется всего один раз) и, возможно, потребуется несколько попыток; своевременно реагируйте на запросы и, при необходимости повторить попытку, заранее удаляйте помпу из настроек Bluetooth. Можно попробовать другой вариант, который заключается в том, чтобы после начала процесса сопряжения войти в меню Bluetooth (это делает Bluetooth телефона видимым на время отображения в меню) и после подтверждения сопряжения, когда помпа показывает код авторизации, переключиться обратно на ruffy. Если вам не удалось настроить соединение с помпой (скажем, после 10 попыток) попробуйте подождать до 10 секунд, прежде чем подтвердить соединение на помпе (после появления наименования телефона на дисплее помпы). Если вы настроили тайм-аут меню меньше 5 сек., потребуется снова увеличить его. Некоторые пользователи сообщают, что им приходилось так делать. Наконец, попробуйте переместиться из одной комнаты в другую, чтобы избежать помех связи. Один из пользователей сообщил нам об устранении проблем соединения после простой перемены комнат.
-- Когда AAPS пользуется алгоритмом ruffy, утилита ruffy недоступна. Самым простым выходом в этом случае является перезагрузить телефон после сопряжения и дать возможность алгоритму ruffy запуститься в фоновом режиме.
-- Если помпа совершенно новая, требуется подать болюс на помпе, чтобы помпа произвела первую запись в логе.
-- Прежде чем активировать расширение Combo в AAPS, убедитесь в правильной настройке профиля и в его активации (!) и что профиль базала актуален т. к. AAPS будет синхронизировать профиль с помпой. После этого активируйте расширение Combo. Нажмите кнопку *Обновить* на вкладке Combo для запуска помпы.
-- Для проверки настроек, при отключенной помпе в режиме **отключено**, задайте TBR 500% на 15 мин и подайте болюс. После этого в логах помпы появится работающий TBR и болюс. AAPS должен также показать активный TBR и поданный болюс.
+- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
+- Make sure to read the wiki to understand how to setup AndroidAPS.
+- Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
+- Follow the link http://ruffy.AndroidAPS.org and clone ruffy via git.
+- Install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch. Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code. If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
+- When AAPS is using ruffy, the ruffy app can't be used. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
+- If the pump is completely new, you need to do one bolus on the pump, so the pump creates a first history entry.
+- Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
+- To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
-## Почему сопряжение с помпой не работает с утилитой "ruffy"?
+## Why does pairing with the pump does not work with the app "ruffy"?
 
-Существует несколько возможных причин. Попробуйте следующие действия:
+There are serveral possible reasons. Try the following steps:
 
-1. Вставьте в помпу **свежие или полностью заряженные батареи**. Подробнее см. в разделе "батарея". Убедитесь, что помпа находится вблизи смартфона.
+1. Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
 
-![Помпа должна находиться рядом с телефоном](../images/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
-2. Отключите или удалите любые другие устройства bluetooth, чтобы они не смогли установить подключение к телефону во время сопряжения. Любая параллельная связь по bluetooth или запрос на соединение могут нарушить процесс сопряжения.
+2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
 
-3.     Удалите уже подключенные устройства в меню Bluetooth помпы: ** настройки BLUETOOTH / подключение / удалить ** до появления сообщения 
-      ** NO DEVICE ** (нет устройств).
+3.     Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until 
+      **NO DEVICE** is shown.
       
 
-4. Удалите помпу, уже подключенную к телефону через Bluetooth: Параметры / Bluetooth, Удалить сопряженное устройство «**SpiritCombo**»
-5. Убедитесь, что AAPS не работает в фоновом режиме цикла. Деактивируйте цикл в AAPS.
-6. Запустите утилиту ruffy на телефоне. Можно нажать Reset! (Перезапустить) и удалить старое сопряжение. Затем нажать Connect! (Подключиться).
-7. В меню Bluetooth помпы, перейдите к **Добавить устройство / добавить подключение**. Нажмите * CONNECT! ** (подключиться) * шаги 5 и 6 должны быть сделаны в короткий промежуток времени.
-8.     Теперь на помпе должно появиться название Bluetooth телефона, которое следует выбрать для сопряжения. Здесь важно подождать по крайней мере 5 секунд прежде чем нажать кнопку выбора на помпе. В ином случае помпа не отправит правильный запрос на сопряжение с телефоном.
+4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
+5. Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
+6. Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
+7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** * Step 5 and 6 have to be in a short timing.
+8.     Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
+      bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
       
-      * Если помпа Combo настроена на 5 сек ожидания с включенным экраном, ее можно протестировать за 40сек (исходный параметр). Опытным путем установлено, что оптимальный промежуток времени между появлением помпы в телефоне и выбором телефона на помпе составляет 5-10 секунд. Во многих других случаях сопряжение не происходит из-за истечения времени. В дальнейшем следует вернуть эту настройку на исходные 5 сек чтобы соответствовать настройкам AAPS для Combo.
-      * Если помпа совсем не показывает телефон как устройство для сопряжения, возможно модуль Bluetooth вашего телефона не совместим с помпой. Убедитесь, что вы используете новый ** LineageOS ≥ 14.1* * или ** Android ≥ 8.1 (Oreo) **. Если есть возможность, попробуйте другой смартфон. Вы можете найти список успешно используемых смартфонов для AAPS по этой ссылке (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+      * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
+        between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
+        without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings.
+      * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
+        compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
+        possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
+        (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
       
 
-9.     На следующем этапе в помпе должен появиться 10-значный код безопасности. И экран Ruffy для его ввода. Так что введите его в Ruffy и 
-      вы готовы к работе.
+9.     At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you 
+      should be ready to go.
       
 
-10. Перезагрузите телефон.
-11. Теперь вы можете перезапустить цикл AAPS.
+10. Reboot the phone.
+11. Now you can restart AAPS loop.
 
-## Применение
+## Usage
 
-- Имейте в виду, что это не конечный продукт, особенно на начальном этапе пользователь должен научиться контролировать и понимать систему, ее ограничения и возможные сбои в работе. Настоятельно рекомендуем не пользоваться системой, если нет полного понимания принципов ее работы.
-- Изучите документацию по OpenAPS, чтобы понять алгоритм работы AndroidAPS, на ней основанный.
-- Читайте базу знаний wiki, чтобы ознакомиться и понять AndroidAPS http://wiki.AndroidAPS.org
-- Данная интеграция обладает той же функциональностью что и пульт - глюкометр, поставляемый в комплекте с помпой. Глюкометр позволяет дублировать экран помпы и перенаправляет на помпу все команды (эквивалентные нажатию кнопок на помпе). Связь с помпой, равно как и это перенаправление команд является главным функционалом алгоритма приложения. Компоненты `скриптера` считывают информацию с экрана и автоматизируют подачу болюсов, временного базала TBR; проверяют корректность обработки введенных данных. Алгоритм ИПЖ затем обменивается данными со скриптером, применяет команды цикла и подает болюсы. Этот режим имеет некоторые ограничения: он действует медленно (но достаточно быстро для своих задач), и изменение временного базала TBR или подача болюса приводит к вибрации помпы.
-- Интеграция Combo с AndroidAPS исходит из того, что все входные данные проводятся через AndroidAPS. Болюсы, подаваемые непосредственно с помпы, будут обнаружены алгоритмом AAPS, но на это может уйти до 20 минут. Считывание болюсов, поданных непосредственно с помпы - мера предосторожности, которая не предназначена для регулярной работы (алгоритм ИПЖ требует информации о потребленных углеводах, которая не может поступать с помпы, и это еще одна причина, по которой ввод данных должен происходить через интерфейс приложения). 
-- Не устанавливайте и не отменяйте временный базал TBR на помпе. Алгоритм ИПЖ предполагает контроль над временным базалом, он не будет работать надежно, поскольку невозможно определить начало подачи временного базала, заданного пользователем на помпе.
-- Первый базальный профиль помпы считывается при запуске приложения и обновляется алгоритмом AAPS. Скорость подачи базала не должна меняться вручную на помпе, но будет обнаружена и скорректирована как мера безопасности (не полагайтесь на меры безопасности, задаваемые по умолчанию, они предназначены для обнаружения непреднамеренных изменений на помпе).
-- Рекомендуется включить кодовую блокировку на помпе для предотвращения случайной подачи болюса с помпы, особенно если вы уже пользовались помпой раньше и подача "быстрого болюса" вошла в привычку. Помимо этого, при активной блокировке, случайное нажатие на кнопку помпы НЕ прерывает коммуникацию между AAPS и помпой.
-- Когда на помпе срабатывает оповещение БОЛЮС / врем. базал TBR ОТМЕНЕН во время подачи болюса или установки врем. базала TBR, то это вызывается потерей соединения между помпой и телефоном, что случается время от времени. AAPS будет пытаться восстановить соединение, подтвердить сигнал и повторно выполнить последнее действие (болюсы не повторяются из соображений безопасности). Таким образом, это оповещение можно проигнорировать т. к. AAPS подтверждает его автоматически, обычно в течение 30 секунд (отменить его не составляет труда, но приведет к тому, что исполняемое в данный момент действие будет приостановлено до того, как экран помпы погаснет и ваше устройство вновь не подключится к помпе). Если оповещение помпы продолжает работать и автоматическое подтверждение не состоялось, пользователь должен подтвердить получение сигнала вручную.
-- Когда оповещение о заканчивающемся инсулине или низком заряде батареи срабатывает во время болюса, они подтверждаются автоматически и появляются в AAPS в виде уведомления. Если они срабатывают в момент отсутствия связи с помпой, нажатие кнопки "обновить" (refresh) на вкладке Combo подтвердит получение сигнала и подаст уведомление в AAPS.
-- Когда подтверждение получения сигнала об отмене скорости временного базала (TBR CANCELLED) не срабатывает в AAPS или когда срабатывает другое оповещение, нажатие кнопки "обновить" (refresh) на вкладке Combo восстановит соединение, подтвердит получение сигнала и подаст уведомление в AAPS. Такие манипуляции безопасны ввиду безопасности самих оповещений - соответствующая скорость временного базала будет снова задана во время следующего цикла работы алгоритма.
-- Для всех других оповещений, инициируемых помпой: подключение к помпе покажет оповещение во вкладке Combo, например «состояние: Е4: закупорка», которое дублируется на главном экране. Любая ошибка системы генерирует срочное уведомление. AAPS никогда самостоятельно не подтверждает получения оповещений о серьезных ошибках и дает возможность помпе сигналить и вибрировать, чтобы пользователь имел возможность самостоятельно удостовериться в наличии критической ситуации, требующей его действий.
-- После установки соединения с помпой, алгоритм AAPS не должен использоваться напрямую (AAPS будет работать в фоновом режиме); самостоятельная работа алгоритма не предусмотрена.
-- Если AAPS прекращает работу (в результате серьезной ошибки или останавливается из отладчика) в то время как ваше устройство и помпа соединены, возможно потребуется принудительная остановка алгоритма. Перезапуск приложения AAPS перезапустит и работу алгоритма. Перезапуск телефона - простой способ устранить проблему, если вы не знаете, как принудительно убить все процессы приложения.
-- Не нажимайте никаких кнопок на помпе во время связи AAPS с помпой (на экране помпы в это время высвечивается логотип блутуса).
+- Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
+- Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS is based upon.
+- Read the wiki to learn about and understand AndroidAPS http://wiki.AndroidAPS.org
+- This integration uses the same functionality which the meter provides that comes with the Combo. The meter allows to mirror the pump screen and forwards button presses to the pump. The connection to the pump and this forwarding is what the ruffy app does. A `scripter` components reads the screen and automates entering boluses, TBRs etc and making sure inputs are processed correctly. AAPS then interacts with the scripter to apply loop commands and to administer boluses. This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for), and setting a TBR or giving a bolus causes the pump to vibrate.
+- The integration of the Combo with AndroidAPS is designed with the assumption that all inputs are made via AndroidAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take up to 20 min before AndroidAPS becomes aware of such a bolus. Reading boluses delivered directly on the pump is a safety feature and not meant to be regularly used (the loop requires knowledge of carbs consumed, which can't be entered on the pump, which is another reason why all inputs should be done in AndroidAPS). 
+- Don't set or cancel a TBR on the pump. The loop assumes control of TBR and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
+- The pump's first basal rate profile is read on application start and is updated by AAPS. The basal rate should not be manually changed on the pump, but will be detected and corrected as a safety measure (don't rely on safety measures by default, this is meant to detect an unintended change on the pump).
+- It's recommended to enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit. Also, with keylock enabled, accidentally pressing a key will NOT interrupt active communication between AAPS and pump.
+- When a BOLUS/TBR CANCELLED alert starts on the pump during bolusing or setting a TBR, this is caused by a disconnect between pump and phone, which happens from time to time. AAPS will try to reconnect and confirm the alert and then retry the last action (boluses are NOT retried for safety reasons). Therefore, such an alarm can be ignored as AAPS will confirm it automatically, usually within 30s (cancelling it is not problem, but will lead to the currently active action to have to wait till the pump's display turns off before it can reconnect to the pump). If the pump's alarm continues, automatic corfirmation failed, in which case the user needs to confirm the alarm manually.
+- When a low cartridge or low battery alarm is raised during a bolus, they are confirmed and shown as a notification in AAPS. If they occur while no connection is open to the pump, going to the Combo tab and hitting the Refresh button will take over those alerts by confirming them and show a notification in AAPS.
+- When AAPS fails to confirm a TBR CANCELLED alert, or one is raised for a different reason, hitting Refresh in the Combo tab establishes a connection, confirms the alert and shows a notification for it in AAPS. This can safely be done, since those alerts are benign - an appropriate TBR will be set again during the next loop iteration.
+- For all other alerts raised by the pump: connecting to the pump will show the alert message in the Combo tab, e.g. "State: E4: Occlusion" as well as showing a notification on the main screen. An error will raise an urgent notification. AAPS never confirms serious errors on the pump, but let's the pump vibrate and ring to make sure the user is informed of a critical situation that needs action.
+- After pairing, ruffy should not be used directly (AAPS will start in the background as needed), since using ruffy at AAPS at the same time is not supported.
+- If AAPS crashes (or is stopped from the debugger) while AAPS and the pump were communicating (using ruffy), it might be necessary to force close ruffy. Restarting AAPS will start ruffy again. Restarting the phone is also an easy way to resolve this if you don't know how to force kill an app.
+- Don't press any buttons on the pump while AAPS communicates with the pump (Bluetooth logo is shown on the pump).
