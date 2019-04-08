@@ -1,4 +1,4 @@
-# Config Builder
+# Конфигуратор
 
 Конфигуратор (Конф) - это вкладка, на которой можно подключать и отключать модули программы. Ячейки с левой стороны (A) позволяют выбрать, какими модулями программы вы будете пользоваться, ячейки справа (C) позволяют представить эти модули в виде вкладок (E) в AndroidAPS. Если правая ячейка не активирована, вы можете получить доступ к функции из выпадающего меню (D) в левом верхнем углу экрана.
 
@@ -6,7 +6,7 @@
 
 **Первая конфигурация:** Начиная с версии 2.0 AAPS процесс создания AndroidAPS контролируется Мастером установки. Для его запуска нажмите на меню под тремя точками в правом верхнем углу экрана меню (F) и выберите «Мастер установки».
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
+![Опции конфигуратора и шестеренка настроек](../images/ConfBuild_ConfigBuilder.png)
 
 ## Профиль
 
@@ -44,7 +44,7 @@
 
 Для многих людей действие FIASP практически незаметно спустя 3-4 часа, даже если тогда, как правило, остается 0.0xx ед. Это остаточное количество может быть ощутимо во время занятий спортом, например. Поэтому AndroidAPS использует как минимум 5 часов в качестве DIA.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Ультра-быстрый Oref в конфигураторе](../images/ConfBuild_UltraRapidOref.png)
 
 ### Безпиковый Oref
 
@@ -60,7 +60,7 @@
 * СК с клиента Nightscout
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* Модифицированное приложение [Dexcom G5](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправить данные ГК на xDrip +», если хотите получать оповещения от xDrip +. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* Модифицированное приложение [Dexcom G5](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправить данные ГК на xDrip +», если хотите получать оповещения от xDrip +. ![Источник ГК в конфигураторе](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Помпа
@@ -149,7 +149,7 @@ Cледует регулярно экспортировать настройки
 
 Примечание: Кнопка не будет видна вне диапазона времени, для нее созданного или если у вас есть достаточно активного инсулина IOB на углеводы, заданные кнопкой.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Кнопка мастера быстрой настройки](../images/ConfBuild_QuickWizard.png)
 
 #### Расширенные настройки
 
@@ -169,7 +169,7 @@ Cледует регулярно экспортировать настройки
 
 Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50. Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). Другие предпочитают диапазон от 32% до 37% от величины базала TBB. Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
+![Вкладка "Действия"](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Портал назначений/терапии
 
@@ -179,7 +179,7 @@ Cледует регулярно экспортировать настройки
 
 Углеводы, введенные через Портал назначений/терапии (т.е. углеводы на коррекцию) учитываются при подсчете активных углеводов COB.
 
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Портал лечения / назначений](../images/ConfBuild_CarePortal.png)
 
 ### SMS коммуникатор
 
@@ -197,7 +197,7 @@ Cледует регулярно экспортировать настройки
 
 Если вы хотите давать болюс с часов, тогда в настройках часов Wear следует включить «Управление с часов».
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Настройки смарт-часов Wear](../images/ConfBuild_Wear.png)
 
 При помощи вкладки Wear или многослойного сэндвич-меню (в левой верхней части экрана, если вкладка не отображается) вы можете
 
@@ -212,43 +212,43 @@ Cледует регулярно экспортировать настройки
 
 Показывает текущий СК, изменение СК, актуальный % временного базала TBR, активный базал ед/ч и профиль, активный инсулин с разбивкой на болюсный IOB и базальный IOB на экране вкладки и на экране блокировки телефона.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![Виджет AAPS](../images/ConfBuild_Widget.png)
 
 ### Клиент Nightscout
 
 Синхронизация данных AndroidAPS с Nightscout.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
+Если активировать **записывать старт приложения в NS**, каждый запуск AndroidAPS будет виден в Nightscout. Может быть полезным для обнаружения проблем с приложением (напр. если для AAPS не отключена оптимизация аккумулятора) но может переполнить записями график Nightscout.
 
-#### Alarm options
+#### Опции оповещения
 
-Activate/deactivate AndroidAPS alarms
+Активирует / деактивирует сигналы AndroidAPS
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![Опции оповещения](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### Настройки подключения
 
-Offline looping, disable roaming...
+Автономный цикл, отключить роуминг...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Если вы хотите использовать только конкретные сети WiFi, вы можете ввести здесь **WiFi SSID**. Несколько идентификаторов SSID разделяются точкой с запятой. Чтобы удалить все SSID введите в поле пустое пространство.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Параметры подключения Nightscout](../images/ConfBuild_ConnectionSettings.png)
 
-#### Advanced settings
+#### Расширенные настройки
 
-* Auto backfill missing BGs from Nightscout
-* Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Заполнять пропущенные данные данными из NS
+* Создать оповещение из сообщения об ошибке Создать оповещение Nightscout из диалогов об ошибках и местных оповещений (также отображаются в careportal в разделе лечение/назначения)
+* Активировать передачу на другие приложения (напр. xDrip+)
+* Только отправлять на NS (Синхронизация отключена)
+* Не отправлять в NS
+* Всегда использовать абсолютные значения базала -> должно быть активировано, если вы хотите правильно применять [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Расширенные настройки Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
-### Maintenance
+### Тех. обслуживание
 
-Email and number of logs to be send. Normally no change neccessary.
+Адрес электронной почты и количество журналов/логов для отправки. Обычно не требует изменений.
 
-### Config Builder
+### Конфигуратор
 
-Use tab for config builder instead of hambuger menu.
+Используйте вкладку для конфигуратора вместо выпадающего сэндвич-меню слева.
