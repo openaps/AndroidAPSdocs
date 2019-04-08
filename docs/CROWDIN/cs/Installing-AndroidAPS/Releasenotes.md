@@ -1,5 +1,16 @@
 # Poznámky k vydání
 
+## Version 2.2.2
+
+Release date: 07-04-2019
+
+### Hlavní nové funkce
+
+* Autosens fix: deactivate TT raises/lowers target
+* New translations
+* Insight driver fixes
+* SMS plugin fix
+
 ## Version 2.2
 
 Release date: 29-03-2019

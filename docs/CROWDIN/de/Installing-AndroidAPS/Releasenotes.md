@@ -1,5 +1,16 @@
 # Release notes
 
+## Version 2.2.2
+
+Erscheinungsdatum: 07.04.2019
+
+### Wichtige neue Funktionen
+
+* Korrektur Autosens: deaktiviert TT Anstiege / senkt Zielwert
+* Neue Übersetzungen
+* Korrekturen Insight Treiber
+* Korrektur SMS-Plugin
+
 ## Version 2.2
 
 Erscheinungsdatum: 29.03.2019
