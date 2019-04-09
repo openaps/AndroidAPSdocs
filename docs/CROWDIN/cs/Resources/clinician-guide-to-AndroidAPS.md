@@ -6,44 +6,44 @@ Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejmén
 
 ### Kroky nutné pro sestavení DIY uzavřené smyčky:
 
-To start using AndroidAPS, the following steps should be taken:
+Chcete-li začít používat systém AndroidAPS, je třeba provést následující kroky:
 
-* Find a [compatible pump](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
-* [Download the AndroidAPS source code and build the software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Opatřete si [kompatibilní pumpu](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), [kompatibilní zařízení se systémem Android](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) a [kompatibilní senzor](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
+* [Stáhněte si zdrojový kód AndroidAPS a sestavte si software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
+* [Nakonfigurujte software tak, aby komunikoval s ostatními zařízeními a upravte nastavení a bezpečnostní opatření](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
 
-### How A DIY Closed Loop Works
+### Jak DIY uzavřená smyčka funguje
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+Pacient bez systému uzavřené smyčky získává data ze své pumpy a CGM a podle toho se rozhoduje, co udělá a jaká opatření přijme.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+S automatickým podáváním inzulínu systém provede totéž: shromažďuje data z pumpy, CGM a veškerých dalších zdrojů, kde mohou být informace zaznamenány (například Nightscout), na základě těchto informací provede výpočty a rozhodne, o kolik více či méně inzulinu je zapotřebí (vzhledem k aktuálně nastavenému bazálu) a použije dočasný bazál nezbytný k tomu, aby udržel glykémii v cílovém rozmezí nebo ji do tohoto rozmezí případně vrátil.
 
-If the device running AndroidAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates runnning.
+Je-li zařízení se systémem AndroidAPS poškozeno nebo mimo dosah pumpy, pumpa přejde zpět k naprogramované bazální dávce (jako standardní běžná pumpa), jakmile skončí poslední dočasný bazál.
 
-### How data is gathered:
+### Jak se získávají data:
 
-With AndroidAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AndroidAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+Systém AndroidAPS vyžaduje zařízení se systémem Android, na kterém je spuštěna speciální aplikace, která provádí potřebné výpočty, toto zařízení pak prostřednictvím technologie bluetooth komunikuje s podporovanou pumpou. AndroidAPS může prostřednictvím Wi-Fi nebo mobilních dat komunikovat také s dalšími zařízeními nebo s cloudem, odkud může získávat další data nebo jejichž prostřednictvím může informovat pacienta, pečující osoby a rodinné příslušníky o tom, co právě provádí a proč tak činí.
 
-The Android device needs to:
+Zařízení se systémem Android musí:
 
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+* komunikovat s pumpou a číst historii – kolik inzulínu bylo doručeno
+* komunikovat s CGM (buď přímo, nebo prostřednictvím cloudu) – aby byl vidět průběh glykémie
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+Když zařízení získá tato data, spustí se algoritmus a provádí rozhodování založené na nastavení (inzulino-sacharidový poměr, citlivost na inzulin, doba aktivního inzulinu, cílová glykémie atd.). Podle potřeby pak vysílá příkazy pumpě a upravuje dávkování inzulínu.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+Systém také bude shromažďovat veškeré informace o bolusech, zkonzumovaných sacharidech a nastavení dočasných cílů z pumpy nebo z Nightscoutu, aby je použil pro výpočet potřebného množství inzulinu.
 
-### How does it know what to do?
+### Jak aplikace ví, co má dělat?
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
+Tento open source software je navržen tak, aby zařízení dokázalo dělat to, co pacienti musejí dělat ručně (v manuálním režimu), aby si spočítali potřebné množství inzulinu. V prvé řadě shromažďuje údaje ze všech pomocných zařízení a z cloudu, připravuje údaje a provádí výpočty, provádí predikce různých scénářů, jak se bude glykémie vyvíjet v následujících hodinách, a vypočte potřebné úpravy, aby se glykémie udržela v cílovém rozmezí nebo se do něho po určité době vrátila. Následně odešle nezbytná nastavení do pumpy. Poté znovu přečte a zpracuje veškerá dostupná data a celý proces se opakuje znovu a znovu.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+Vzhledem k tomu, že nejdůležitějším vstupním parametrem je hodnota glykémie z CGM, je zásadní mít kvalitní a spolehlivá CGM data.
 
-AndroidAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+Systém AndroidAPS je navržen tak, aby transparentně sledoval všechny vstupní údaje, které shromažďuje, a zobrazoval výsledná doporučení i přijatá opatření. Kdykoli se proto lze podívat do protokolů a snadno odpovědět na otázku „proč to právě teď dělá to a to?“
 
-### Examples of AndroidAPS algorithm decision making:
+### Příklady rozhodování algoritmu AndroidAPS:
 
-AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these \[prediction lines\] (../Installing-AndroidAPS/Releasenotes.md?highlight=Colored prediction lines#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AndroidAPS používá stejný základní algoritmus a funkce jako OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AndroidAPS používá pro rozlišení těchto [křivek predikce] různé barvy (../Installing-AndroidAPS/Releasenotes.md?highlight=Colored prediction lines#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
 
 #### Here are examples of the purple prediction lines, and how they might differ:
 
