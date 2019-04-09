@@ -1,61 +1,65 @@
 # Bijwerken naar een nieuwe versie of branch
 
-## Install git (if you don't have it)
+## Installeer Git (als je dat nog niet hebt)
 
 * Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/win>. Volg de instructies op die site om Git te installeren.
-* Make sure to note down the installation path. You will need it in the next step.
+* Onthoud of noteer in welke map Git op jouw computer geïnstalleerd wordt. Dat heb je nodig in de volgende stap.
     
-    ![Git installation path](../images/Update_GitPath.png)
+    ![Git installatie pad](../images/Update_GitPath.png)
 
-* Let Studio know where is git.exe located: File - Settings
+* Laat Studio weten waar git.exe zich bevindt: File - Settings (Bestand - Instellingen)
     
-    ![Android Studio - open settings](../images/Update_GitSettings1.png)
+    ![Android Studio - open instellingen](../images/Update_GitSettings1.png)
 
-* In the next window: Version Control - Git
+* In het volgende venster: Versie Control - Git
 
-* Make sure update method "Merge" is selected.
+* Zorg ervoor dat de update methode "Merge" ("Samenvoegen") is geselecteerd.
     
-    ![Android Studio - GIT path](../images/Update_GitSettings2.png)
+    ![Android Studio - GIT pad](../images/Update_GitSettings2.png)
 
-## Update your local copy
+## Bijwerken van jouw lokale kopie
 
-* Click: VCS->Git->Fetch
+* Zorg dat je in het hoofdscherm van Android Studio bent. Klik op VCS > Git > Fetch
     
-    ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
+    ![Android Studio - GIT - Ophalen](../images/Update_Fetch.png)
 
-## Selecting branch
+## Selecteer branch
 
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+* Als je de branch wilt wijzigen, selecteer dan een andere branch uit het menu rechtsonder: "master" (de meest actuele, stabiele versie) of een andere versie (zie verderop).
     
     ![](../images/UpdateAAPS1.png)
 
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
+Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' of 'Checkout As...' gebruiken als je hier geen 'Checkout' kunt kiezen).
 
 ![](../images/UpdateAAPS2.png)
 
-## Updating branch from Github
+## Bijwerken vd branch vanuit Github
 
-* Press Ctrl+T, select Merge method and press OK
+* Druk op Ctrl+T, selecteer Merge method en druk op OK
     
     ![](../images/merge.png)
 
-On the tray you'll see green message about updated project
+Onderin beeld zie je een bericht verschijnen over 'updated project' (bijgewerkt projekt) of 'all files are up-to-date' (alle bestanden zijn bijgewerkt).
 
-## Generate APK & upload to phone
+## Genereer APK & upload naar telefoon
 
-Generate signed apk as described in [Building APK (Generate signed APK)](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
+Bouw de ondertekende apk zoals beschreven in [Bouwen van de app (kopje 'Bouwen van de ondertekende APK')](../Installing-AndroidAPS/Building-APK#generate-signed-apk). Volg de verdere instructies daar om de app op je telefoon te zetten.
 
-![Navigation Generate signed APK](../images/GenerateSignedAPK.PNG)
+![Navigatie Genereren ondertekende APK](../images/GenerateSignedAPK.PNG)
 
-## Troubleshooting
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+
+![AAPS version installed](../images/Update_VersionCheck.png)
+
+## Problemen oplossen
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps: 
-    1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-    2. Uninstall AAPS on your phone.
-    3. Enable airplane mode & turn off bluetooth.
-    4. Install new version (“app-full-release.apk”)
+* Zorg ervoor dat je het bestand "app-full-release.apk" naar jouw telefoon hebt overgebracht.
+* Als "App niet geïnstalleerd" wordt weergegeven op jouw telefoon volg dan deze stappen: 
+    1. Ga naar de huidige AndroidAPS app op jouw telefoon en [Exporteer instellingen](../Usage/Objectives#export-import-settings)
+    2. Verwijder de AndroidAPS app van jouw telefoon.
+    3. Schakel vliegtuigmodus in & schakel bluetooth uit.
+    4. Installeer nieuwe versie ("app-full-release.apk”)
     5. [Importeer instellingen](../Usage/Objectives#export-import-settings)
-    6. Turn bluetooth back on and disable airplane mode
+    6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
