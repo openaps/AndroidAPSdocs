@@ -50,6 +50,9 @@ Generate signed apk as described in [Building APK (Generate signed APK)](../Inst
 
 ![Navigation Generate signed APK](../images/GenerateSignedAPK.PNG)
 
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 ## Troubleshooting
 
