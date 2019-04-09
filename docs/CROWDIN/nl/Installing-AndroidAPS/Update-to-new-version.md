@@ -2,7 +2,7 @@
 
 ## Install git (if you don't have it)
 
-* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/win>. Volg de instructies op die site om Git te installeren. Onthoud of noteer in welke map Git op jouw computer geïnstalleerd wordt.
+* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/win>. Volg de instructies op die site om Git te installeren.
 * Make sure to note down the installation path. You will need it in the next step.
     
     ![Git installation path](../images/Update_GitPath.png)
