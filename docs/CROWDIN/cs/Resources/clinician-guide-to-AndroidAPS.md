@@ -43,59 +43,59 @@ Systém AndroidAPS je navržen tak, aby transparentně sledoval všechny vstupn�
 
 ### Příklady rozhodování algoritmu AndroidAPS:
 
-AndroidAPS používá stejný základní algoritmus a funkce jako OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AndroidAPS používá pro rozlišení těchto [křivek predikce] různé barvy (../Installing-AndroidAPS/Releasenotes.md?highlight=Colored prediction lines#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AndroidAPS používá stejný základní algoritmus a funkce jako OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AndroidAPS používá pro rozlišení těchto [křivek predikce] různé barvy (../Installing-AndroidAPS/Releasenotes.md?highlight=Colored prediction lines#overview-tab). V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
 
-#### Here are examples of the purple prediction lines, and how they might differ:
+#### Zde jsou příklady fialových křivek predikce a toho, jak se mohou lišit:
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Příklady fialové křivky predikce](../images/Prediction_lines.jpg)
 
-#### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+#### Zde jsou příklady různých časových úseků, které mají vliv na potřebné úpravy dávkování inzulinu:
 
-#### Scenario 1 - Zero Temp for safety
+#### Scénář 1 – Nulový dočasný bazál kvůli bezpečnosti
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AndroidAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+V tomto příkladu glykémie v krátkodobém horizontu stoupá, avšak předpověď říká, že po delší době bude glykémie nízká. Ve skutečnosti je předpovídáno, že se dostane pod cílovou hodnotu *i* pod nastavený bezpečnostní limit. Aby se předešlo hypoglykémii, AndroidAPS nastaví nulový bazál (dočasný bazál na 0 %), dokud hodnota eventualBG (v kterémkoli okamžiku) nebude nad bezpečnostním limitem.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![Příklad dávkování 1](../images/Dosing_scenario_1.jpg)
 
-#### Scenario 2 - Zero temp for safety
+#### Scénář 2 – Nulový dočasný bazál kvůli bezpečnosti
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AndroidAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+V tomto příkladu je předpovídáno, že v krátkodobém horizontu bude glykemie nízká, ale nakonec se může dostat nad cílovou hodnotu. Vzhledem k tomu, že krátkodobá předpověď je pod bezpečnostním limitem, AndroidAPS spustí nulový bazál, dokud se všechny body na křivce predikce nedostanou nad bezpečnostní limit.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Příklad dávkování 2](../images/Dosing_scenario_2.jpg)
 
-#### Scenario 3 - More insulin needed
+#### Scénář 3 – Je třeba zvýšit množství inzulinu
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AndroidAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
+V tomto případě ukazuje krátkodobá předpověď pokles pod cílovou hodnotu. Předpokládá se však, že nebude pod bezpečnostním limitem. Hodnota konečné glykémie je nad cílovou hodnotou. Proto AndroidAPS nebude přidávat inzulin, který by přispěl k poklesu glykémie v krátkodobém horizontu (nepřidá inzulin tak, aby šla predikce pod bezpečnostní limit). Následně – až to bude bezpečné – podle nejnižší předpovídané hodnoty výsledné glykémie posoudí, zda bude nutné přidat inzulin, aby se výsledná předpovídaná glykémie dostala zpět na cílovou hodnotu. *(V závislosti na nastavení, potřebném množství inzulinu a jeho časování může být tento přídavek inzulinu dodán v podobě dočasných bazálů nebo SMB (super mikro bolusů)).*
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Příklad dávkování 3](../images/Dosing_scenario_3.jpg)
 
-#### Scenario 4 - Low temping for safety
+#### Scénář 4 – Nulový dočasný bazál kvůli bezpečnosti
 
-In this example, AndroidAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AndroidAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+V tomto příkladu AndroidAPS vidí, že glykémie výrazně převyšuje cílovou hodnotu. Avšak vzhledem k době působnosti inzulínu je již v těle dost inzulínu, aby se glykémie nakonec dostala do cílového rozsahu. Předpověď ve skutečnosti říká, že výsledná glykémie se nakonec může dostat pod cílovou hodnotu. Proto systém AndroidAPS nevydá další inzulin, aby nepřispíval k nízké glykémii v delším časovém horizontu. Přestože je glykémie vysoká/stoupá, bude v tomto případě dočasný bazál snížen.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Příklad dávkování 4](../images/Dosing_scenario_4.jpg)
 
-### Optimizing settings and making changes
+### Optimalizace nastavení a provádění změn
 
-As a clinician who may not have experience with AndroidAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+Jakožto pro lékaře, kteří nemají zkušenosti s AndroidAPS nebo DIY uzavřenými smyčkami, pro vás může obtížné pomoci pacientovi optimalizovat jeho nastavení nebo provádět změny, které by zlepšily jeho výsledky. V komunitě máme řadu nástrojů a [příruček](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html), které pomohou vašim pacientům provádět drobné, vyzkoušené změny, jež pomohou zlepšit jejich nastavení.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+Pacienti musejí dbát na to, aby neprováděli více změn najednou, ale aby provedli pouze jednu změnu a po dobu 2–3 dní pozorovali, jaký bude mít efekt, Teprve potom by měli změnit nebo upravit jiné nastavení (pokud není zjevné, že změna byla špatná a situaci zhoršuje, v takovém případě by se měli okamžitě vrátit k předchozímu nastavení). Lidé mají tendenci použít všechny ovládací prvky a měnit všechno najednou; pokud to však někdo udělá, může to skončit ještě horším nastavením, které značně zkomplikuje návrat zpět k funkčnímu stavu.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. It is designed to be run independently/manually, and allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. With AndroidAPS, Autotune will be run as a "one-off", although there are ongoing efforts to incorporate it directly into AndroidAPS as well. As these parameters are a prerequesite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
+Jedním z nejmocnějších nástrojů pro provádění změn nastavení je nástroj pro automatizovaný výpočet bazálních dávek, citlivosti a inzulino-sacharidového poměru. Jmenuje se „[Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)“. Je navržen tak, aby se spouštěl nezávisle/ručně a umožňuje, abyste vy nebo pacient sám prováděli drobné postupné změny v nastavení. Komunita obvykle postupuje tak, že nejdříve spustí (nebo zkontroluje) výsledky nástroje Autotune předtím, než přistoupí k manuálním zásahům do nastavení. V rámci AndroidAPS je nástroj Autotune spouštěn „jednorázově“, avšak pracuje se na tom, aby byl přímo součástí AndroidAPS. Vzhledem k tomu, že tyto parametry jsou nezbytné jak pro provoz standardní pumpy, tak pro uzavřenou smyčku, je přirozené, že byste výsledky nástroje Autotune měli konzultovat se svým lékařem a případné úpravy těchto parametrů provádět ve spolupráci s ním.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AndroidAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Navíc návyky pacientů (získané při ruční kompenzaci diabetu) mají často vliv na výsledky, dokonce i s DIY uzavřenou smyčkou. Například pokud existuje předpověď, že glykémie bude klesat a AndroidAPS včas sníží dávku inzulinu, pak stačí pouze velmi malé množství sacharidů (např. 3–4 g), aby se glykémie vrátila z 3,9 mmol do normálu. V mnoha případech se však pacient rozhodne řešit nízkou glykémii větším množstvím sacharidů (např. dodržuje pravidlo 15), což v důsledku povede k výraznějšímu vzestupu glykémie jednak kvůli většímu množství přijaté glukózy, jednak kvůli již snížené dávce inzulinu s ohledem na předpovídaný pokles glykémie.
 
 ### OpenAPS
 
-**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AndroidAPS, with the main difference being the hardware platform where each peace of software is run.
+**Tato příručka byla převzata z [Příručky k OpenAPS pro lékaře](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS je systém vyvinutý tak, aby běžel na malém přenosném počítači (který se obecně označuje jako „rig“). AndroidAPS používá mnoho funkcí implementovaných v systému OpenAPS a sdílí s ním velkou část logiky a algoritmů, což je důvod, proč je tato příručka velmi podobná původní příručce. Mnoho informací o OpenAPS lze snadno přizpůsobit AndroidAPS, přičemž hlavním rozdílem je hardwarová platforma, na které jsou jednotlivé části softwaru spuštěny.
 
-### Summary
+### Shrnutí
 
-This is meant to be a high-level overview of how AndroidAPS works. For more details, ask your patient, reach out to the community, or read the full AndroidAPS documentation available online.
+Tento text je stručným přehledem toho, jak funguje AndroidAPS. Chcete-li se dozvědět více informací, zeptejte se svého pacienta, obraťte se na komunitu nebo si přečtěte kompletní dokumentaci k AndroidAPS, která je k dispozici online.
 
-Additional recommended reading:
+Další doporučená literatura:
 
-* The [full AndroidAPS documentation](http://androidaps.readthedocs.io/en/latest/EN/index.html)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](http://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* [Kompletní dokumentace k AndroidAPS](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* Dokument [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), který vysvětluje, jak je systém OpenAPS navržen z hlediska bezpečnosti: https://openaps.org/reference-design/
+* [Kompletní dokumentace k OpenAPS](http://openaps.readthedocs.io/en/latest/index.html) 
+  * Další [podrobnosti o výpočtech OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
