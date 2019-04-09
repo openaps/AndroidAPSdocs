@@ -1,6 +1,6 @@
-# For Clinicians – A General Introduction and Guide to AndroidAPS
+# Pro lékaře – Obecný úvod a příručka k AndroidAPS
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians.
+Tato stránka je určena lékařům, kteří projevili zájem o open source technologie umělé slinivky, jako je AndroidAPS, nebo pro pacienty, kteří chtějí sdílet tyto informace se svým lékařem.
 
 This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](http://androidaps.readthedocs.io/en/latest/index.html). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
 
