@@ -47,13 +47,13 @@ Erstelle die signierte APK wie unter [AndroidAPS installieren - App erstellen (G
 
 ![Navigation signierte APK erstellen](../images/GenerateSignedAPK.PNG)
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um auf Deinem Smartphone die installierte AAPS-Version anzuzeigen.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Installierte AAPS version](../images/Update_VersionCheck.png)
 
 ## Problemlösungen
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
 
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
 * Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor: 
