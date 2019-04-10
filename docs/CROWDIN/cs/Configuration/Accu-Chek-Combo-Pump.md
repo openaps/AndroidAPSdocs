@@ -20,25 +20,25 @@
 - Pokud smyčka požaduje zrušení spuštěného dočasného bazálu, Combo nastaví dočasný bazál na 90 % nebo 110 % na dobu 15 minut. Důvodem je, že zrušení dočasného bazálu vyvolá alarm na pumpě, což způsobuje četné vibrace.
 - Občas (jednou za pár dní) se může stát, že AAPS automaticky zruší alarm TBR CANCELLED. Funkci obnovíte stisknutím tlačítka pro obnovení v AAPS pro přenesení varování do AAPS nebo potvrzením alarmu na pumpě.
 - Stabilita připojení Bluetooth se u různých telefonů liší a může způsobovat výstrahu „pumpa nedostupná“, pokud spojení není opětovně obnoveno. Pokud se tato chyba objeví, ujistěte se, že Bluetooth je aktivní a stiskněte tlačítko pro obnovení na kartě Combo, abyste zjistili, jestli to bylo příčinou problému. Pokud chyba přetrvává, restartujte telefon, což většinou pomůže. Jestliže restart nepomůže, existuje ještě další možnost. Stiskněte tlačítko na pumpě (což resetuje Bluetooth na pumpě), pumpa by měla znovu navázat spojení. Pro odstranění některého z těchto problémů se toho v tomto okamžiku příliš mnoho udělat nedá. Pokud se tyto chyby budou často opakovat, jedinou možností je vybrat jiný doporučený telefon, který bude správně fungovat s AndroidAPS a Combem (viz výše).
-- Vydání bolusu z pumpy nebude vždy detekováno okamžitě (zaznamenává se při každém spojení s pumpou), v nejhorším případě to může trvat 20 minut. Boluses on the pump are always checked before a high TBR or a bolus issued by AAPS but due to the limitations AAPS will then refuse to issue the TBR/Bolus as it was calculated under false premises. (-> Don't bolus from the Pump! See chapter *Usage*)
-- Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB. 
+- Vydání bolusu z pumpy nebude vždy detekováno okamžitě (zaznamenává se při každém spojení s pumpou), v nejhorším případě to může trvat 20 minut. Bolusy na pumpě jsou kontrolovány před každým nastavením vyššího dočasného bazálu nebo bolusu pomocí AAPS, ale z důvodu omezení AAPS odmítne zapsat dočasný bazál / bolus, protože byl vypočítán podle falešných předpokladů. (-> nepodávejte bolus z pumpy! Viz kapitola *Používání*)
+- Vyhněte se tomu, abyste nastavovali dočasný bazál na pumpě, smyčka předpokládá, že dočasné bazály řídí ona. Zaznamenání nového dočasného bazálu na pumpě může trvat až 20 minut a délka dočasného bazálu bude vypočítána pouze od momentu, kdy je načtena. Což v nejhorším případě může být 20 minut, které nebudou započítány do IOB. 
 
 ## Nastavení
 
-- Configure the pump using 360 config software. If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that). 
-  - Required (marked green in screenshots): 
+- Nastavte pumpu pomocí 360 Config Software. Pokud tento software nemáte, kontaktujte svého obchodního zástupce Roche nebo zákaznickou linku. Registrovaným uživatelům poskytují software a také hardwarovou čtečku SmartPix pro komunikaci s pumpou. 
+  - Požadované nastavení: 
     - Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
     - Verify the *Quick Info Text* is set to "QUICK INFO" (without the quotes, found under *Insulin Pump Options*).
     - Set TBR *Maximum Adjustment* to 500%
     - Disable *Signal End of Temporary Basal Rate*
     - Set TBR *Duration increment* to 15 min
     - Enable Bluetooth
-  - Recommended (marked blue in screenshots) 
-    - Set low cartridge alarm to your liking
-    - Configure a max bolus suited for your therapy to protect against bugs in the software
-    - Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-    - Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-    - Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+  - Doporučené (označeno modře na snímcích obrazovky): 
+    - Nastavte si upozornění na nízký stav zásobníku.
+    - Nastavte si maximální bolus s ohledem na svou léčbu jako ochranu před chybami softwaru.
+    - Podobně si nastavte maximální hodnotu dočasného bazálu jako pojistku. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
+    - Aktivujte zámek tlačítek na pumpě, abyste předešli nechtěnému vydání bolusů z pumpy, zvláště pokud jste byli zvyklí používat rychlé bolusy.
+    - Nastavte čas zhasnutí displeje na 5,5 s a čas opuštění menu na 5 s. Toto pomůže AAPS k rychlejšímu obnovení v případě chyb a předejde četným vibracím, které se mohou objevit během těchto chyb.
 
 ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
@@ -49,7 +49,7 @@
 ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
-- Make sure to read the wiki to understand how to setup AndroidAPS.
+- Přečtěte si dokumentaci, abyste pochopili, jak nastavit AndroidAPS.
 - Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
 - Follow the link http://ruffy.AndroidAPS.org and clone ruffy via git.
 - Install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch. Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code. If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
