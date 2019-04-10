@@ -1,9 +1,9 @@
-# BG source
+# Zdroj glykémie
 
-## For users of Dexcom  
+## Pro uživatele Dexcom  
 
 
-### If using G5 or G6 with xdrip+  
+### Pokud používáte G5 nebo G6 s aplikací xdrip+  
 
 
 * Není-li xDrip již nastaven, pak stáhněte [xdrip](https://github.com/NightscoutFoundation/xDrip) a postupujte podle pokynů na Nightscoutu ([G4 bez share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 s share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
