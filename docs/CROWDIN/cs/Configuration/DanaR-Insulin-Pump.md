@@ -20,6 +20,6 @@
 * Nastavte bazální krok na pumpě na 0.01 U/h
 * Na pumpě povolte rozšířené bolusy
 
-## Timezone traveling with Dana R pump
+## Cestování mezi časovými pásmy s pumpou Dana R
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Chcete-li se dozvědět více informací o cestování mezi časovými pásmy, přejděte na část [Cestování s pumpou mezi časovými pásmy](../Usage/Timezone-traveling#danarv2-danars).
