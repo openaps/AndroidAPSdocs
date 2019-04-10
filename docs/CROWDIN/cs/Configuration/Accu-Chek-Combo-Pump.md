@@ -60,24 +60,23 @@
 
 ## Why does pairing with the pump does not work with the app "ruffy"?
 
-There are serveral possible reasons. Try the following steps:
+Má to několik možných důvodů. Vyzkoušejte tyto kroky:
 
-1. Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
+1. Vložte ** novou nebo nabitou baterii ** do pumpy. Podívejte se na podrobnosti do návodu do části Baterie. Ujistěte se, že pumpa je velmi blízko telefonu.
 
 ![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
-2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
+2. Vypněte nebo odstraňte jakékoliv jiné Bluetooth zařízení, abyste eliminovali možné rušení při párování. Jakákoliv paralelní komunikace s rozhraním Bluetooth nebo výzva k vytvoření připojení může narušit proces párování.
 
-3.     Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until 
-      **NO DEVICE** is shown.
+3.     Odstraňte všechna současná připojená zařízení v Bluetooth menu pumpy. 
+      ** Bluetooth nastavení / připojení / odebrat **, dokud nebude zobrazeno **No Device**.
       
 
-4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
-5. Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
-6. Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
-7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** * Step 5 and 6 have to be in a short timing.
-8.     Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
-      bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
+4. Vymažte již spárovaný telefon z pumpy. Settings / Bluetooth, remove the paired device
+5. Ujistěte se, že na pozadí není spuštěna smyčka aplikace AAPS. Deaktivuje smyčku v AAPS.
+6. Nyní spusťte aplikaci Ruffy v telefonu. Stiskněte tlačítko Reset a vymažte staré párování. Poté stiskněte tlačítko Connect.
+7. V Bluetooth menu pumpy přejděte na ** ADD DEVICE / ADD CONNECTION**. Stiskněte *CONNECT!* Kroky 5 a 6 musí následovat za sebou v krátkém časovém intervalu.
+8.     Nyní se na pumpě ukáže BT název telefonu a nabídne možnost párování. S potvrzením a stisknutím na pumpě je nutné počkat aspoň 5 s. Jinak pumpa neodešle požadavek pro párování korektně.
       
       * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
         between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
@@ -88,18 +87,17 @@ There are serveral possible reasons. Try the following steps:
         (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
       
 
-9.     At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you 
-      should be ready to go.
+9.     Na pumpě se zobrazí desetimístný bezpečnostní kód. Ruffy zobrazí obrazovku pro zadání. Po zadání kódu do aplikace Ruffy byste měli být připraveni.
       
 
-10. Reboot the phone.
-11. Now you can restart AAPS loop.
+10. Restartujte telefon.
+11. Nyní můžete restartovat AAPS smyčku.
 
-## Usage
+## Používání
 
-- Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-- Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS is based upon.
-- Read the wiki to learn about and understand AndroidAPS http://wiki.AndroidAPS.org
+- Mějte na pamětí, že toto není produkt, zvláště na začátku potřebuje uživatel pochopit a monitorovat systém, jeho limity a jak může dojít k chybě. Je důrazně doporučováno nepoužívat tento systém, pokud ho uživatel není schopen plně pochopit.
+- Přečtěte si dokumentaci k OpenAPS na https://openaps.org, abyste pochopili algoritmus smyčky, na které je systém AndroidAPS založen.
+- Přečtěte si Wiki, abyste se seznámili se systémem AndroidAPS a pochopili, jak funguje: http://wiki.AndroidAPS.org
 - This integration uses the same functionality which the meter provides that comes with the Combo. The meter allows to mirror the pump screen and forwards button presses to the pump. The connection to the pump and this forwarding is what the ruffy app does. A `scripter` components reads the screen and automates entering boluses, TBRs etc and making sure inputs are processed correctly. AAPS then interacts with the scripter to apply loop commands and to administer boluses. This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for), and setting a TBR or giving a bolus causes the pump to vibrate.
 - The integration of the Combo with AndroidAPS is designed with the assumption that all inputs are made via AndroidAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take up to 20 min before AndroidAPS becomes aware of such a bolus. Reading boluses delivered directly on the pump is a safety feature and not meant to be regularly used (the loop requires knowledge of carbs consumed, which can't be entered on the pump, which is another reason why all inputs should be done in AndroidAPS). 
 - Don't set or cancel a TBR on the pump. The loop assumes control of TBR and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
@@ -110,5 +108,5 @@ There are serveral possible reasons. Try the following steps:
 - When AAPS fails to confirm a TBR CANCELLED alert, or one is raised for a different reason, hitting Refresh in the Combo tab establishes a connection, confirms the alert and shows a notification for it in AAPS. This can safely be done, since those alerts are benign - an appropriate TBR will be set again during the next loop iteration.
 - For all other alerts raised by the pump: connecting to the pump will show the alert message in the Combo tab, e.g. "State: E4: Occlusion" as well as showing a notification on the main screen. An error will raise an urgent notification. AAPS never confirms serious errors on the pump, but let's the pump vibrate and ring to make sure the user is informed of a critical situation that needs action.
 - After pairing, ruffy should not be used directly (AAPS will start in the background as needed), since using ruffy at AAPS at the same time is not supported.
-- If AAPS crashes (or is stopped from the debugger) while AAPS and the pump were communicating (using ruffy), it might be necessary to force close ruffy. Restarting AAPS will start ruffy again. Restarting the phone is also an easy way to resolve this if you don't know how to force kill an app.
-- Don't press any buttons on the pump while AAPS communicates with the pump (Bluetooth logo is shown on the pump).
+- Pokud dojde k chybě AAPS (nebo zastavení z debugger) při vzájemné komunikaci AAPS a pumpy, je nutné ukončit RUFFY v systémových prostředcích. Po restartování AAPS se RUFFY znovu spustí. Restartování telefonu je většinou nejjednodušší cesta, pokud nejde aplikace ukončit prostřednictvím systému.
+- Jestliže probíhá komunikace AAPS s pumpou (na pumpě je zobrazeno logo Bluetooth), nemačkejte žádná tlačítka na pumpě.
