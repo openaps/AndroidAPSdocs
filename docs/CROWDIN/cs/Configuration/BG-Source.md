@@ -12,20 +12,20 @@
 * Pokud chcete aby AndroidAPS bylo schopné kalibrovat, tak v xdrip vyberte nastavení -> Inter-app settings -> Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v Xdrip nastavení položku -> méně časté nastavení -> Advanced Calibration.
 * Vyberte xdrip v ConfigBuilder (nastavení v AndroidAPS).
 
-### If using G5 or G6 with patched Dexcom app  
+### Pokud používáte G5 nebo G6 s upravenou aplikací Dexcom  
 
 
-* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
+* Stáhněte si apk z <https://github.com/dexcomapp/dexcomapp>, kde si vyberete verzi dle potřeby (mg/dl nebo mmol/l, G5 nebo G6).
 * Zastavte senzor a odinstalujte původní aplikaci Dexcom, pokud jste tak ještě neučinili.
 * Nainstalujte stažený apk
 * Spusťte senzor
 * Vyberte aplikaci DexcomG5 (upravenou) v Konfiguraci.
 
-### If using G4 with OTG cable ('traditional' Nightscout)…  
+### Pokud používáte G4 pomocí OTG kabelu ('tradiční' Nightscout)  
 
 
 * Pokud jste ještě nenastavili, tak stáhněte Nightscout Uploader aplikaci z obchodu Play a postupujte podle pokynů na [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
+* V nastavení AndroidAPS zadejte Nightscout adresu a API secret.
 * Vyberte NSClient v Konfiguraci AndroidAPS.
 
 ## For users of Libre with Bluetooth cap  
@@ -41,18 +41,18 @@ To use your Libre as a CGM that is getting new BG values every 5 minutes you fir
 ### If using xdrip...  
 
 
-* If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
-* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
-* For G5 native mode in xdrip go to Settings > Cloud upload > REST API > Extra options > Append source info to device and select ON.
+* Pokud jste jej dosud nenastavili, stáhněte si aplikaci xDrip a postupujte podle pokynů na [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) nebo [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en) ([Hardware](https://bluetoolz.de/wordpress/)).
+* V xDripu vyberte nastavení -> Komunikace mezi aplikacemi - > Lokální odesílání dat a vyberte zapnout.
+* V xDripu vyberte nastavení -> Komunikace mezi aplikacemi - > Přijímat ošetření a vyberte vypnout.
+* Pokud chcete, aby bylo možné přes AndroidAPS kalibrovat senzor, tak v xDripu vyberte nastavení -> Komunikace mezi aplikacemi -> Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v xDripu nastavení v částí Nastavení -> Méně častá nastavení -> Rozšířené kalibrace.
+* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte xdrip.
+* Pro nativní režim G5 v xDripu vyberte Nastavení > Nahrávání do cloudu > Nahrávání před API (REST) > Extra options > Append source info to device a vyberte zapnout.
 
 ### If using Glimp...  
 
 
 * If not already set up then download Glimp and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
-* Select Glimp in ConfigBuilder (setting in AndroidAPS).
+* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte Glimp.
 
 ## For users of Eversense  
 
@@ -65,26 +65,26 @@ To finally get your data to AndroidAPS, you need to install [ESEL](https://githu
 
 You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
 
-## For users of MM640g or MM630g  
+## Pro uživatele MM640g nebo MM630g  
 
 
 * If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
-* In 600 Series Uploader go to Settings > Send to xdrip+ and select ON (tick).
-* Select MM640g in ConfigBuilder (setting in AndroidAPS).
+* V aplikaci 600 Series Uploader přejděte na Nastavení > Odesílat do xdrip+ a zvolte ON (zaškrtněte).
+* Na kartě Konfigurace (nastavení AndroidAPS) vyberte MM640g.
 
-## For users of PocTech CT-100  
-
-
-* Install PocTech App
-* Select PocTech App in ConfigBuilder (setting in AndroidAPS).
-
-## For users of other CGM uploaded to Nightscout  
+## Pro uživatele PocTech CT-100  
 
 
-If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
+* Nainstalujte aplikaci PocTech
+* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte aplikaci PocTech.
+
+## Pro uživatele ostatních CGM nahrávaných do Nightscoutu  
 
 
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
+Pokud máte nějaké jiné CGM, které odesílá data do [Nightscoutu](http://www.nightscout.info), pak  
+
+
+* V nastavení AndroidAPS zadejte Nightscout adresu a API secret.
 * Vyberte NSClient v Konfiguraci AndroidAPS.
 
 # General CGM recommendations
