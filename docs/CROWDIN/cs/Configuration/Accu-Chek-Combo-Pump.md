@@ -1,12 +1,12 @@
 # Accu Chek Combo Pump
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Zbytečně nespěchejte, a vytvořte si čas pro učení. You alone are responsible for what you do with it.**
+**Tento software je součástí DIY řešení a není to produkt, vyžaduje, abyste si přečetli dokumentaci, pochopili celý systém a naučili se ho používat. Není to něco, co za Vás udělá veškerý management diabetu, ale pomůže Vám k lepším výsledkům a kvalitě života, pokud investujete čas k tomu potřebný. Zbytečně nespěchejte, a vytvořte si čas pro učení. Pouze Vy jste zodpovědní za to, jak ze systémem zacházíte.**
 
-## Hardware requirements
+## Hardwarové požadavky
 
-- A Roche Accu-Chek Combo (any firmware, they all work)
-- A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.
-- A compatible phone: An Android phone with a phone running LineageOS 14.1 (formerly CyanogenMod) or Android 8.1 (Oreo). The LineageOS 14.1 has to be a recent version from at least June 2017 since the change needed to pair the Combo pump was only introduced at that time. A list of phones can be found in the [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) document. Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
+- Roche Accu-Chek Combo (jakýkoliv firmware, funguje se všemi)
+- Čtečka Smartpix, nebo jiné zařízení pro komunikaci. 360 Configuration Software pro úpravu parametrů pumpy. Roche posílá Smartpix zařízení a konfigurační software zdarma svým zákazníkům na vyžádání.
+- Kompatibilní telefon: Android telefon s ROM LineageOS 14.1 (dříve CyanogenMod) nebo Android 8.1 (Oreo). LineageOS 14.1 musí být nejnovější verze od června 2017, protože potřebné změny pro párování s Combo pumpou jsou až od této doby. Seznam telefonů lze nalézt v dokumentu [AAPS telefony](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Prosím uvědomte si, že to není úplný seznam a odráží osobní uživatelské zkušenosti. Máte možnost doplnit své vlastní zkušenosti a tím pomoci dalším uživatelům.
 
 - Be aware that while Android 8.1 allows communicating with the Combo, there are still issues with AAPS on 8.1. For advanced users, it is possible to perform the pairing on a rooted phone and transfer it to another rooted phone to use with ruffy/AAPS, which must also be rooted. This allows using phones with Android < 8.1 but has not been widely tested: https://github.com/gregorybel/combo-pairing/blob/master/README.md
 
