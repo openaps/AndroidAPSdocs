@@ -10,7 +10,7 @@ Z hodinek lze ovládat následující funkce:
 * kontrolovat stav smyčky a pumpy
 * zobrazit TDD (celková denní dávka = bolus + bazál za den)
 
-Aby bylo možné tyto funkce ovládat z hodinek, musíte při [sestavování APK](../Installing-AndroidAPS/Building-APK.md) zvolit možnost „fullRelease“ (nebo „pumpRelease“, která vám umožní vzdálené ovládání pumpy bez smyčky). Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder#wear).
+Aby bylo možné tyto funkce ovládat z hodinek, musíte při [sestavování APK](../Installing-AndroidAPS/Building-APK.md) zvolit možnost „fullRelease“ (nebo „pumpRelease“, která vám umožní vzdálené ovládání pumpy bez smyčky). V aplikaci AndroidAPS musíte na kartě „Konfigurace“ [povolit plugin Wear](../Configuration/Config-Builder#wear).
 
 Lze si vybrat z několika ciferníků (watchfaces), které zobrazují průměrnou hodnotu delta, IOB, aktuálně aktivní bazál a bazální profil + graf hodnot glykémie z CGM.
 
