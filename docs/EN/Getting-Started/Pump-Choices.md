@@ -1,10 +1,17 @@
 # Pump choices
 
-AndroidAPS currently works with the Accu-Chek Combo, Accu-Chek Insight, Dana* R and Dana* RS  pumps. If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+AndroidAPS currently works with 
+
+- Accu-Chek Combo
+- Accu-Chek Insight
+- DanaR
+- DanaRS  
+
+pumps. If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
 
 The Combo is a solid pump, and loopable.
 
-The advantages of the Dana* RS as the pump of choice however are:
+The advantages of the DanaR/RS as the pump of choice however are:
 
 * The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
 
