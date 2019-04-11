@@ -7,7 +7,7 @@ AndroidAPS funktioniert derzeit mit
 * DanaR
 * DanaRS 
 
-Pumpen. Leute, die sich für eine neue Pumpe entscheiden müssen, fragen oft, für welche sie sich entscheiden sollen. Details zu den verschiedenen Distributoren findest du [in dieser Tabelle](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Ergänze bitte deine eigenen Erfahrungen, wenn sie nicht bereits aufgeführt sind.
+Pumpen. Leute, die sich für eine neue Pumpe entscheiden müssen, fragen oft, für welche sie sich entscheiden sollen.
 
 Die Combo ist eine solide Pumpe - und loopbar.
 
