@@ -1,25 +1,30 @@
 # Volba pumpy
 
-AndroidAPS aktuálně funguje s Dana* R, Dana* RS a Combo. Dana * R a Combo jsou nějakou dobu na trhu dostupné, takže k nim mělo mnoho lidí přístup, Dana * RS jakožto upgrade Dana * R se stává častější volbou. Pokud potřebujete vybrat na kterou pumpu přejít a koupit, často se ptáte kterou vybrat. Podrobnosti různých distributorů jsou v této [tabulce](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), prosím podělte se o vaše detaily, pokud nejsou v seznamu uvedeny.
+AndroidAPS currently works with
 
-Combo je solidní pumpa a dá se použít pro smyčku.
+* Accu-Chek Combo
+* Accu-Chek Insight
+* DanaR
+* DanaRS 
 
-Výhody pumpy Dany* RS jako volby nicméně jsou:
+pumps. If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
 
-* Společnost Sooil rozhodla, že ovládání pumpy telefonem (výslovně neuváděla smyčku) NENÍ důvod ke ztrátě záruky. IME-DC uvedl, že pouze odešle pumpu do Sooil - takže nebudou vědět, jestli jela na smyčce nebo ne. Díky tomu je Dana* R/RS jediná pumpa, která je pod zárukou i když jede na smyčce. (Roche zakazuje jakékoli použití, které není v jejich návodu.)
+The Combo is a solid pump, and loopable.
 
-* Dana *R/RS se připojí k téměř každému telefonu s operačním systémem Android >= 5.1 bez nutnosti flashovat lineage. Pokud se váš telefon rozbije, obvykle můžete jednoduše najít náhradní telefon spolupracující s Dana*R/RS jako rychlou náhradu... ne tak lehce pro Combo. (To se může v budoucnu změnit, až Android 8.1 bude více oblíbený)
+The advantages of the DanaR/RS as the pump of choice however are:
 
-* Počáteční spárování je s Dana* RS jednodušší. Ale to obvykle děláte pouze jednou, takže to ovlivňuje pouze situace, pokud chcete testovat nové funkce s různými pumpami.
+* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
 
-* Combo zatím pracuje s převodem obrazu do strojově čitelné podoby. Obecně to funguje skvěle, ale je to pomalé. Pro smyčku to tolik nevadí, vše pracuje na pozadí. Stále strávíte ale mnohem více času, kdy musíte být spojeni, takže může dojít k přerušení spojení, což se může snadno stát, pokud odejde od telefonu mezitím, co posíláte bolus.
+* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
 
-* Combo vibruje na konci TBRs, Dana* R vibruje (nebo pípne) při SMB. V noci pravděpodobně používate TBRs více než SMB. U Dany* RS je možné nastavit aby ani nepípala, ani nevibrovala.
+* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
 
-* Čtení historie na RS proběhne v několika sekundách, se sacharidy umožňuje přepnout telefony jednoduše offline a pokračovat ve smyčce jakmile jsou nějaké hodnoty z CGM.
+* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
 
-* Všechny pumpy, se kterými AndroidAPS komunikuje jsou vodotěsné. Pouze pumpy Dana mají také "záruku na vodotěsnost" v důsledku uzavřeného prostoru pro baterii a prostoru pro plnicí zásobník.
+* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 
-Combo je samozřejmě velmi dobrá pumpa. Má také výhodu v mnohem více typů infuzních setů se standardním závitem luer lock. A baterie je obyčejná, kterou můžete koupit na každé benzínce, v obchodě který má otevřeno 24 hodin denně a pokud opravdu jednu potřebujete, můžete ji ukrást/půjčit si ji z ovládání v hotelovém pokoji :-P
+* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
 
-Podrobnosti o stavu dalších pump s potenciálem pracovat s AndroidAPS jsou zjistitelné na odkazu Budoucí (možné) [pumpy](Future-possible-Pump-Drivers.md).
+The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
