@@ -47,6 +47,10 @@ Erstelle die signierte APK wie unter [AndroidAPS installieren - App erstellen (G
 
 ![Navigation signierte APK erstellen](../images/GenerateSignedAPK.PNG)
 
+Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um auf Deinem Smartphone die installierte AAPS-Version anzuzeigen.
+
+![Installierte AAPS version](../images/Update_VersionCheck.png)
+
 ## Problemlösungen
 
 ![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)

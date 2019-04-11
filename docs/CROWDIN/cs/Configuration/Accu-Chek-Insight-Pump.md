@@ -9,41 +9,41 @@
 ## Hardwarové a softwarové požadavky
 
 * Pumpa Roche Accu-Chek Insight (jákýkoliv firmware, fungují všechny) <br /> Poznámka: AAPS bude vždy zapisovat data do **prvního bazálního profilu v pumpě**
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Telefon s Androidem (v podstatě všechny verze Android budou fungovat, ale AndroidAPS sám o sobě vyžaduje alespoň Android 5 (Lollipop)).
 * Aplikace AndroidAPS (minimálně v2.1) nainstalovaná ve vašem telefonu
 
 ## Nastavení
 
-* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
+* Pumpa Insight by měla být připojena současně pouze k jednomu zařízení. Pokud jsme v minulosti používali dálkové ovládání pro Insight (glukometr), musíte zařízení odstranit ze seznamu spárovaných zařízení ve své pumpě: Menu > Nastavení > Komunikace > Odebrat zařízení
     
-    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+    ![Screenshot odebrání glukometru z Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
+* V nabídce [Konfigurace](../Configuration/Config-Builder) aplikace AndroidAPS vyberte v sekci Pumpa možnost Accu-Chek Insight
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot nastavení pumpy Insight](../images/Insight_ConfigBuilder.png)
 
-* Tap the cog-wheel to open Insight settings.
+* Chcete-li otevřít nabídku nastavení, klikněte na ozubené kolečko.
 
-* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
-* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
+* V nastavení klikněte na tlačítko „Insight párování“ v horní části obrazovky. Měli byste vidět seznam bluetooth zařízení v dosahu (níže vlevo).
+* V pumpě Insight jděte do Menu > Nastavení > Komunikace > Přidat zařízení. Pumpa zobrazí následující obrazovku (vpravo níže) zobrazující seriové číslo pumpy.
     
-    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+    ![Screenshot párování Insight 1](../images/Insight_Pairing1.png)
 
-* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
+* Vezměte telefon a klikněte na sériové číslo pumpy v seznamu bluetooth zařízení v telefonu. Potvrďte kliknutím na Párování.
     
-    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+    ![Screenshot párování Insight 2](../images/Insight_Pairing2.png)
 
-* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
+* Pumpa i telefon poté zobrazí na displeji kód. Zkontrolujte, jestli je na obou zařízeních shodný kód a potvrďte jej jak v pumpě, tak v telefonu.
     
-    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+    ![Screenshot párování Insight 3](../images/Insight_Pairing3.png)
 
-* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+* Úspěch! Můžete si poblahopřát, úspěšně jste spárovali pumpu s AndroidAPS.
     
-    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+    ![Screenshot párování Insight 4](../images/Insight_Pairing4.png)
 
-* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+* Chcete-li zkontrolovat, jestli je vše správně, jděte zpět do nabídky Konfigurace v AndroidAPS a klikněte na ozubené kolečko v nabídce Pumpa - Accu Chek Insight. Klikněte na Insight párování, kde uvidíte informace o pumpě:
     
-    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+    ![Screenshot informací o spárování Insight](../images/Insight_PairingInformation.png)
 
 Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude navázáno pouze tehdy, je-li to nezbytné (např. při nastavování dočasného bazálu, posílání bolusu, čtení historie z pumpy apod.). V opačném případě by se baterie v pumpě i mobilu velmi rychle vybila.
 
@@ -80,39 +80,39 @@ Po dobu, kdy byla pumpa zastavena, AAPS zobrazí záznam s dočasnou bazální h
 V AndroidAPS v záložce Accu-Chek Insight se zobrazuje aktuální stav pumpy a dvě tlačítka:
 
 * „Obnovit“: Opětovné načtení statusu z pumpy
-* „Povolit oznamování konce dočasného bazálu“: Standardně pumpa Insight spouští zvukový signál, když je TBR dokončen. This button lets you enable or disable this alarm without the need for configuration software.
+* „Povolit oznamování konce dočasného bazálu“: Standardně pumpa Insight spouští zvukový signál, když je TBR dokončen. Toto tlačítko vám umožňuje povolit nebo zakázat tento alarm, aniž byste museli použít software pro konfiguraci pumpy.
     
-    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    ![Screenshot stavu Insight](../images/Insight_Status2.png)
 
-## Settings in the pump
+## Nastavení v pumpě
 
-Configure alarms in the pump as follows:
+Nastavení alarmů v pumpě:
 
-* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
-* Menu > Modes > Signal mode > Quiet
+* Menu > Nastavení > Nastavení zařízení > Nastavení režimu > Tichý > Hlasitost > 0 (odeberte všechny sloupečky) > Nastavení > Nastavení zařízení > Nastavení režimu > Tichý > Signál > Vibrace
+* Menu > Režimy > Režim signalizace > Tichý
 
-This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+To ztlumí všechny alarmy z pumpy, což umožní systému AndroidAPS rozhodnout, zda je pro vás alarm relevantní. Pokud alarm AndroidAPS nebude potvrzen, hlasitost alarmu se bude zvyšovat (nejprvé pípnutí, potom vibrace).
 
-Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
+Pumpy Insight s novějším firmwarem budou vibrovat vždy při podání bolusu (například když AndroidAPS pošle SMB nebo emulace TBR vydá prodloužený bolus). Vibrace není možné vypnout. Starší pumpy za těchto okolností nevibrují.
 
-## Battery replacement
+## Výměna baterie
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Pumpa Insight má malou interní baterii udržující základní funkce, jako jsou vnitřní hodiny, zatímco vyměňujete hlavní baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. Pokud se tak stane, všechny položky v AndroidAPS provedené před výměnou baterie nebudou zahrnuty do kalkulací, jelikož nelze určit správný čas.
 
-## Insight specific errors
+## Specifické chyba Insight
 
-### Extended bolus
+### Prodloužený bolus
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Používejte vždy pouze jeden prodloužený bolus, protože používání více prodloužených bolusů současně může způsobit chyby.
 
-### Time out
+### Časový limit
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Někdy se může stát, že pumpa Insight neodpoví během navazování spojení. V takovém případě AAPS zobrazí následující zprávu "Timeout during handshake - reset bluetooth".
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+V tom případě na 10 sekund vypněte bluetooth v pumpě i telefonu a potom jej opět zapněte.
 
-## Crossing time zones with Insight pump
+## Změna časových pásem s pumpou Insight
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Více informací o cestování přes více časových pásem najdete v části [Jak se vypořádat s cestováním přes časová pásma?](../Usage/Timezone-traveling#insight).

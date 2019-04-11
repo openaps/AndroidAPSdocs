@@ -1,59 +1,59 @@
 # Hodinky
 
-AndroidAPS je navržený, aby ho bylo možné *ovládat* hodinkami Android Wear. If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
+AndroidAPS je navržený, aby ho bylo možné *ovládat* hodinkami Android Wear. Pokud chcete poslat například bolus z hodinek, potřebujete v „Nastavení hodinek“ aktivovat volbu „Ovládání z hodinek“.
 
-The following functions can be triggered from the watch:
+Z hodinek lze ovládat následující funkce:
 
-* set a temporary target
-* administer a bolus
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md?highlight=tdd#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* nastavovat dočasné cíle
+* podávat bolusy
+* používat kalkulátor (nastavení kalkulátoru můžete definovat v [nastaveni](../Configuration/Config-Builder.md?highlight=tdd#wear) v telefonu)
+* kontrolovat stav smyčky a pumpy
+* zobrazit TDD (celková denní dávka = bolus + bazál za den)
 
-To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping). Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder#wear).
+Aby bylo možné tyto funkce ovládat z hodinek, musíte při [sestavování APK](../Installing-AndroidAPS/Building-APK.md) zvolit možnost „fullRelease“ (nebo „pumpRelease“, která vám umožní vzdálené ovládání pumpy bez smyčky). V aplikaci AndroidAPS musíte na kartě „Konfigurace“ [povolit plugin Wear](../Configuration/Config-Builder#wear).
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Lze si vybrat z několika ciferníků (watchfaces), které zobrazují průměrnou hodnotu delta, IOB, aktuálně aktivní bazál a bazální profil + graf hodnot glykémie z CGM.
 
-![AndroidAPSv2 watchface](../images/AAPSv2_Watchface.png)
+![Ciferník AndroidAPSv2](../images/AAPSv2_Watchface.png)
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Ujistěte se, že nemáte zakázané oznámení AndroidAPS na hodinkách. Potvrzování akcí (např. bolusu, dočasného cíle) se objeví jako notifikace, které je nutné odsunout a potvrdit klepnutím.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Chcete-li se rychleji dostat do nabídky AAPS, dvakrát klepněte na hodnotu glykémie. Dvojitým klepnutím na graf glykémie změníte časový rozsah grafu.
 
-## Troubleshooting the wear app:
+## Řešení problémů s aplikací na hodinkách:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* Na Android Wear 2.0 (hodinky) se ciferník (watchface) neinstaluje automaticky. Nyní je nutné přejít do Google Play na hodinkách (jedná se o jiný Google Play než na telefonu) a najít kategorii aplikací nainstalovaných v telefonu, ze které pak můžete ciferník aktivovat. Také povolte automatické aktualizace. 
+* Někdy pomůže znovu synchronizovat aplikace do hodinek, i když to ručně může být poněkud zdlouhavé: Wear OS > Rozšířená nastavení (Ikona ozubeného kola) > Znovu synchronizovat aplikace.
+* Povolte ADB ladění ve vývojářských možnostech (na hodinkách), připojte hodinky k počítači přes USB a spusťte Wear aplikaci, až budete mít na počítači otevřené Android Studio.
 
-## Legend AndroidAPSv2 watchface
+## Popis ciferníku AndroidAPSv2
 
-![Legend AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
+![Popis ciferníku AndroidAPSv2](../images/AAPSv2_Watchface_legend.png)
 
-A - time since last loop run
+A - čas od posledního spuštění smyčky
 
-B - CGM reading
+B - hodnota glykémie
 
-C - minutes since last CGM reading
+C - minuty od posledního čtení hodnoty glykémie
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - porovnání změny od posledního čtení (v mmol nebo mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - průměrná změna hodnoty glykémie za posledních 15 minut
 
-F - phone battery
+F - stav baterie telefonu
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - hodnota bazální dávky (zobrazená v U/h, pokud je zvolena standardní hodnota, nebo v %, pokud je aktivní dočasný bazál)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+G - ukazatel BGI (blood glucose interaction), neboli jak moc „by měla“ glykémie růst nebo klesat pouze na základě aktivity inzulínu.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - sacharidy (zbývající sacharidy I rozložené sacharidy v budoucnosti)
 
-J - insulin on board (from bolus | from basal)
+J - zbývající inzulín (z bolusu I bazálu)
 
-## View Nightscout data
+## Zobrazení dat z Nightscoutu
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Pokud používáte jiný systém smyčky a chtěli byste si *prohlédnout* detailní informace o své smyčce na hodinkách s Wear OS nebo byste chtěli sledovat smyčku svého dítěte, pak vám bude stačit stáhnout pouze aplikaci NSClient. V tom případě se řiďte [pokyny, jak sestavit APK](../Installing-AndroidAPS/Building-APK.md) a vyberte variantu sestavení „NSClientRelease“. Lze si vybrat z několika ciferníků (watchfaces), které zobrazují průměrnou hodnotu delta, IOB, aktuálně aktivní bazál a bazální profil + graf hodnot glykémie z CGM.
 
 ## Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Uživatelé hodinek Pebble mohou také použít [Watchface Urchin](https://github.com/mddub/urchin-cgm), aby si *prohlédli* informace o smyčce (pokud jsou nahrávané do Nightscoutu), ale nebudete přes hodinky schopní komunikovat s AndroidAPS. Můžete si zvolit údaje, které se mají zobrazovat, např. IOB, aktuální dočasný bazál a predikce. Jestliže používáte otevřenou smyčku, můžete využít [IFTTT](https://ifttt.com/), abyste vytvořili applet, který říká: „Pokud je od AndroidAPS přijatá notifikace, tak buď odešli SMS, nebo push notifikaci“.

@@ -48,7 +48,7 @@ When switching to a new phone the following steps are neccessary:
   
   * Hamburger menu (top left corner of screen)
   * Maintenance
-  * Export settings
+  * Exportovat nastavení
     
     ![AAPS export settings](../images/AAPS_ExportSettings.png)
 
@@ -64,4 +64,4 @@ When switching to a new phone the following steps are neccessary:
 
 ## Timezone traveling with Dana RS pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Chcete-li se dozvědět více informací o cestování mezi časovými pásmy, přejděte na část [Cestování s pumpou mezi časovými pásmy](../Usage/Timezone-traveling#danarv2-danars).
