@@ -1,12 +1,17 @@
 # Pumenwahl
 
-AndroidAPS kann derzeit mit folgenden Insulinpumpen im Closed Loop Modus genutzt werden: DanaR, DanaRS, Akku-Chek Combo. Die DanaR und die Accu Chek Combo sind schon eine Weile auf dem Markt, so dass viele Leute bereits Zugriff darauf haben. Die DanaRS, ein Upgrade der DanaR, wird nun auch immer häufiger gewählt. Leute, die sich für eine neue Pumpe entscheiden müssen, fragen oft, für welche sie sich entscheiden sollen. Details zu den verschiedenen Distributoren findest du [in dieser Tabelle](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Ergänze bitte deine eigenen Erfahrungen, wenn sie nicht bereits aufgeführt sind.
+AndroidAPS funktioniert derzeit mit
+
+* Accu-Chek Combo
+* Accu-Chek Insight
+* DanaR
+* DanaRS 
+
+Pumpen. Leute, die sich für eine neue Pumpe entscheiden müssen, fragen oft, für welche sie sich entscheiden sollen. Details zu den verschiedenen Distributoren findest du [in dieser Tabelle](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Ergänze bitte deine eigenen Erfahrungen, wenn sie nicht bereits aufgeführt sind.
 
 Die Combo ist eine solide Pumpe - und loopbar.
 
 Die Vorteile der DanaRS sind jedoch:
-
-* Der Hersteller Sooil hat geäußert, dass die Steuerung der Pumpe mit einem Smartphone (ohne explizit das Loopen zu erwähnen) nicht die gegen die Garantiebedingungen verstößt. IME-DC äußerte, sie würden im Garantiefall eine Ersatzpumpe zur Verfügung stellen und die defekte Pumpe direkt zu Sooil schicken. So würden sie gar nicht wissen, ob du Looper bist oder nicht. Damit sind die DanaR/RS-Pumpen die einzigen Pumpen, mit denen du unter Garantie loopen kannst. (Roche schließt dagegen jegliche Nutzung der Pumpen aus, die nicht in der Bedienungsanleitung beschrieben ist.)
 
 * Die DanaR/RS kann sich mit fast jedem Smartphone verbinden, auf dem das Betriebssystem Google Android >= 5.1 installiert ist. Ein Austausch der werksseitigen Smartphone-Software (z. B. durch das Lineage Betriebssystem) ist nicht nötig. Wenn dein Smartphone kaputt geht oder gestohlen wird, kannst du auf einem anderen / neuen Smartphone sehr schnell die Pumpe wieder steuern... Mit der Combo ist das nicht so einfach, jedenfalls nicht solange Android 8.1 nur auf wenigen Smartphones installiert ist.
 
