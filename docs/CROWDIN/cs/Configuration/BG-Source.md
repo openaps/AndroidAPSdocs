@@ -41,7 +41,7 @@ To use your Libre as a CGM that is getting new BG values every 5 minutes you fir
 ### If using xdrip...  
 
 
-* Pokud jste jej dosud nenastavili, stáhněte si aplikaci xDrip a postupujte podle pokynů na [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) nebo [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en) ([Hardware](https://bluetoolz.de/wordpress/)).
+* Pokud jste tak dosud neučinili, stáhněte si aplikaci xDrip a postupujte podle pokynů v části [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) nebo [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en) ([Hardware](https://bluetoolz.de/wordpress/)).
 * V xDripu vyberte nastavení -> Komunikace mezi aplikacemi - > Lokální odesílání dat a vyberte zapnout.
 * V xDripu vyberte nastavení -> Komunikace mezi aplikacemi - > Přijímat ošetření a vyberte vypnout.
 * Pokud chcete, aby bylo možné přes AndroidAPS kalibrovat senzor, tak v xDripu vyberte nastavení -> Komunikace mezi aplikacemi -> Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v xDripu nastavení v částí Nastavení -> Méně častá nastavení -> Rozšířené kalibrace.
