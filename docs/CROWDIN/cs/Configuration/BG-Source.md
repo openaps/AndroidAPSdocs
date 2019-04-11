@@ -24,7 +24,7 @@
 ### Pokud používáte G4 pomocí OTG kabelu ('tradiční' Nightscout)  
 
 
-* Pokud jste ještě nenastavili, tak stáhněte Nightscout Uploader aplikaci z obchodu Play a postupujte podle pokynů na [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
+* Pokud jste tak ještě neučinili, stáhněte si Nightscout Uploader aplikaci z obchodu Play a postupujte podle pokynů na [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
 * V nastavení AndroidAPS zadejte Nightscout adresu a API secret.
 * Vyberte NSClient v Konfiguraci AndroidAPS.
 
