@@ -251,6 +251,6 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 Email and number of logs to be send. Normally no change neccessary.
 
-### Konfigurace
+### Config Builder
 
 Use tab for config builder instead of hambuger menu.
