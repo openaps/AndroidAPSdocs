@@ -41,7 +41,7 @@ First of all, you have to take the same emergency equipment with you like every 
 
 * Accu pack for the energy of your smartphone, wear and (maybe) BT reader
 * Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
-* Pump batteries
+* Bateria da Bomba
 
 ### How to savely attach the CGM/FGM?
 
@@ -51,7 +51,7 @@ You can fix it: There are getting sold upper arm braclets that fix the CGM/FGM w
 
 ## AndroidAPS settings
 
-### APS algorithm
+### Algoritmo APS
 
 #### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 
@@ -81,7 +81,7 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
-### CGM settings
+### Configurações CGM
 
 #### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
 
@@ -93,7 +93,7 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 
 There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
 
-### Batteries
+### Batterias
 
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site. Tricks to increase battery life include:
 
@@ -152,7 +152,7 @@ Many users turn the phone into airplane mode at night. If you want the loop to s
 
 1. Turn on airplane mode in your mobile.
 2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+3. Ligar o Bluetooth.
 
 You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
@@ -168,6 +168,6 @@ If you want to share some information about AndroidAPS and DIY looping with your
 
 ## Medical appointment with your endocrinologist
 
-### Reporting
+### A reportar
 
 You can either show your nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/)
