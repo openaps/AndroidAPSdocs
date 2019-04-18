@@ -1,4 +1,4 @@
-# Objectives
+# Objectivos
 
 AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
 
@@ -53,7 +53,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 * **Export settings** on your old phone
   
   * Hamburger menu (top left corner of screen)
-  * Maintenance
+  * Manutenção
   * Export settings
   * File location will be shown
     
@@ -62,9 +62,9 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 * **Transfer** settings from old to new phone using the file location shown during export
 
 * **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
+* **Importar configurações** no seu novo telefone 
   * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+  * Manutenção
+  * Importar configurações
 * **Note for Dana RS users:** 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
