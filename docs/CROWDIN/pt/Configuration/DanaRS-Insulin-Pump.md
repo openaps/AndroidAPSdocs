@@ -6,7 +6,7 @@
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Select Menu by tapping the 3 dots in the top right. Seleccione Preferências.
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
@@ -33,7 +33,7 @@
 
 In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarme de entrega de insulina](../images/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
@@ -48,7 +48,7 @@ When switching to a new phone the following steps are neccessary:
   
   * Hamburger menu (top left corner of screen)
   * Manutenção
-  * Export settings
+  * Exportar definições
     
     ![AAPS export settings](../images/AAPS_ExportSettings.png)
 
