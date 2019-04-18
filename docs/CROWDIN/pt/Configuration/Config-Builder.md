@@ -187,11 +187,11 @@ Carbs entered in the careportal (i.e. correction carbs) will be used for COB cal
 
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
 
-### Food
+### Alimentos
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Note: Entries cannot be used in the AndroidAPS calculator. (Ver somente)
 
 ### Wear
 
@@ -199,7 +199,7 @@ Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](..
 
 If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Definições Wear](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
@@ -216,19 +216,19 @@ Displays a summary of current BG, delta, active TBR%, active basal u/hr and prof
 
 ![AAPS widget](../images/ConfBuild_Widget.png)
 
-### NS Client
+### Cliente NS
 
 Setup sync of your AndroidAPS data with Nightscout.
 
 If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
 
-#### Alarm options
+#### Opções Alarme
 
 Activate/deactivate AndroidAPS alarms
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![Opções Alarme](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### Definições de ligação
 
 Offline looping, disable roaming...
 
@@ -247,7 +247,7 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 ![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
 
-### Maintenance
+### Manutenção
 
 Email and number of logs to be send. Normally no change neccessary.
 
