@@ -2,7 +2,7 @@
 
 How it looks like:
 
-![Screenshot 1](../images/Android-auto1.png)
+![Captura de ecrã 1](../images/Android-auto1.png)
 
 How to use it:
 
