@@ -1,4 +1,4 @@
-# Safety first
+# Segurança primeiro
 
 **When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
 
