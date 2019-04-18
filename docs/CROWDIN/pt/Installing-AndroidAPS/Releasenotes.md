@@ -1,8 +1,8 @@
 # Release notes
 
-## Version 2.2.2
+## Versão 2.2.2
 
-Release date: 07-04-2019
+Data de lançamento: 07-04-2019
 
 ### Major new features
 
@@ -11,9 +11,9 @@ Release date: 07-04-2019
 * Insight driver fixes
 * SMS plugin fix
 
-## Version 2.2
+## Versão 2.2
 
-Release date: 29-03-2019
+Data de lançamento: 29-03-2019
 
 ### Major new features
 
@@ -23,9 +23,9 @@ Release date: 29-03-2019
 * Go back in objectives.
 * Stop loop if phone disk is full
 
-## Version 2.1
+## Versão 2.1
 
-Release date: 03-03-2019
+Data de lançamento: 03-03-2019
 
 ### Major new features
 
@@ -42,9 +42,9 @@ Release date: 03-03-2019
 
 * If you are using non default `smbmaxminutes` value you have to setup this value again
 
-## Version 2.0
+## Versão 2.0
 
-Release date: 03-11-2018
+Data de lançamento: 03-11-2018
 
 ### Major new features
 
@@ -76,7 +76,7 @@ Release date: 03-11-2018
 * Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
 * Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
-### Watch
+### Relógio
 
 * Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
 * Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
