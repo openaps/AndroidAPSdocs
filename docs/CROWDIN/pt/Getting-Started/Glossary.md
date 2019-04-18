@@ -1,4 +1,4 @@
-# Glossary<table style="width:100%" border=1>
+# Glossário<table style="width:100%" border=1>
 <tr>
  <th>Term</th>
  <th>Description</th>
@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td>AAPS</td>
- <td>AndroidAPS - artifical pancreas system</td>
+ <td>AndroidAPS - sistema pâncreas artificial</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -38,7 +38,7 @@
  <td>APK</td>
  <td>software installation file (Android application package)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Building APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Criando APK</a></td>
 </tr>
 <tr>
  <td>Autosens</td>
@@ -84,7 +84,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>taxa basal</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -220,10 +220,10 @@
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
- <td>NS Client</td>
+ <td>Cliente NS</td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - Cliente NS</a></td>
 </tr>
 <tr>
  <td>Nightscout Reporter</td>
@@ -241,7 +241,7 @@
  <td>OpenAPS</td>
  <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">Documentos OpenAPS</a></td>
 </tr>
 <tr>
  <td>Open Loop</td>
@@ -271,13 +271,13 @@
  <td>Perfil</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - perfil</a></td>
 </tr>
 <tr>
- <td>Profile switch</td>
+ <td>Troca de Perfil</td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
+ <td><a href="../Usage/Profiles.html">Wiki - mudança de perfil</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
