@@ -1,4 +1,4 @@
-# DanaRS Pump
+# Bomba DanaRS
 
 *These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
 
@@ -21,7 +21,7 @@
 
 * Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
-* Restart your phone.
+* Reinicie o seu telefone.
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
@@ -47,7 +47,7 @@ When switching to a new phone the following steps are neccessary:
 * **Export settings** on your old phone
   
   * Hamburger menu (top left corner of screen)
-  * Maintenance
+  * Manutenção
   * Export settings
     
     ![AAPS export settings](../images/AAPS_ExportSettings.png)
@@ -57,10 +57,10 @@ When switching to a new phone the following steps are neccessary:
 * **Manually pair** Dana RS with the new phone 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
+* **Importar configurações** no seu novo telefone 
   * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+  * Manutenção
+  * Importar configurações
 
 ## Timezone traveling with Dana RS pump
 
