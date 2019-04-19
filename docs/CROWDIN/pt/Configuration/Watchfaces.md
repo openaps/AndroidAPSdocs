@@ -32,7 +32,7 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 A - time since last loop run
 
-B - CGM reading
+B - Leitura CGM
 
 C - minutes since last CGM reading
 
@@ -40,7 +40,7 @@ D - change compared to last CGM reading (in mmol or mg/dl)
 
 E - average change CGM reading last 15 minutes
 
-F - phone battery
+F - bateria do telefone
 
 G - basal rate (shown in U/h during standard rate and in % during TBR)
 
@@ -50,7 +50,7 @@ I - carbs (carbs on board | e-carbs in the future)
 
 J - insulin on board (from bolus | from basal)
 
-## View Nightscout data
+## Ver dados do Nightscout
 
 If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 

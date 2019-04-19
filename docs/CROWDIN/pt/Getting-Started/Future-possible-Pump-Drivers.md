@@ -16,7 +16,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Hardware requirement for AAPS:** RileyLink (any)
 
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
+**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Mesmo para versões 7xx. All other devices are not supported, and probably won't be.
 
 * * *
 
@@ -110,7 +110,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 * * *
 
-### Animas Vibe
+### Animais Vibe
 
 **Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
@@ -127,15 +127,15 @@ This is list of some Pumps floating around there, and status of support for them
 - Pump has to support some kind of remote control. (BT, Radio frequency, etc)
 - Protocol is hacked/documented/etc.
 
-**Minimal requirement**
+**Requisição mínima**
 
 - Set Temporary Basal Rate
-- Get Status
+- Obter Estado
 - Cancel Temporary Basal Rate
 
 **For oref1(SMB) or Bolusing:**
 
-- Set Bolus
+- Definir Bólus
 
 **Good to have**
 

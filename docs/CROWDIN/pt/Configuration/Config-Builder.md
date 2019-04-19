@@ -110,15 +110,15 @@ AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treat
 
 AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypoversion, etc.). The Closed Loop works within numerous safety limits, which you can be set individually. Closed Loop is only possible if you are in [Objective 4](../Usage/Objectives.md) or higher and use a supported pump.
 
-## Objectives (learning program)
+## Objectivos (programa de aprendizagem)
 
-AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AndroidAPS tem um conjunto de objectivos que você tem que cumprir passo a passo. Isto deve guiá-lo com segurança, criando um sistema de loop fechado. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
 You should export your settings (including progress of the objectives) on a regulary basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
 See [Objectives](../Usage/Objectives.md) page for more information.
 
-## Treatments
+## Tratamentos
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
 
@@ -145,13 +145,13 @@ Define which Buttons are shown on the home screen.
 
 Furthermore you can set shortcuts for insulin and carb increments and decide wether the notes field should be shown in treatment dialogues.
 
-#### QuickWizard settings
+#### Definições do Assistente Rápido
 
 Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
 Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Botão do Assistente Rápido](../images/ConfBuild_QuickWizard.png)
 
 #### Configurações Avançadas
 
@@ -163,13 +163,13 @@ Some buttons to quickly access common features:
 
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
 * Alvos temporário
-* Definir / cancelar temp. basal rate
+* Definir / cancelar temp. taxa basal
 * Extended bolus (DanaR/RS or Combo pump only)
 * Prime / fill (DanaR/RS or Combo pump only)
 * Navegador do histórico
 * TDD (Total daily dose = bolus + basal per day)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Nota: Sua diabetes pode variar!
 
 ![Aba Accões](../images/ConfBuild_ConfBuild_Actions.png)
 
@@ -187,11 +187,11 @@ Carbs entered in the careportal (i.e. correction carbs) will be used for COB cal
 
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
 
-### Food
+### Alimentos
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Note: Entries cannot be used in the AndroidAPS calculator. (Ver somente)
 
 ### Wear
 
@@ -199,11 +199,11 @@ Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](..
 
 If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Definições Wear](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Reenviar Todos os Dados. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 
 ### xDrip Statusline (watch)
@@ -214,21 +214,21 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![Widget AAPS](../images/ConfBuild_Widget.png)
 
-### NS Client
+### Cliente NS
 
 Setup sync of your AndroidAPS data with Nightscout.
 
 If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
 
-#### Alarm options
+#### Opções Alarme
 
 Activate/deactivate AndroidAPS alarms
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![Opções Alarme](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### Definições de ligação
 
 Offline looping, disable roaming...
 
@@ -242,12 +242,12 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 * Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
 * Enable local broadcast to other apps like xDrip+
 * NS upload only (sync disabled)
-* No upload to NS
+* Sem envio para NS
 * Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
 
 ![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
 
-### Maintenance
+### Manutenção
 
 Email and number of logs to be send. Normally no change neccessary.
 

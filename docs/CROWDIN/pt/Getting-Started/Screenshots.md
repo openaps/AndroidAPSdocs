@@ -1,8 +1,8 @@
-# Screenshots
+# Capturas de ecrã
 
-## The Homescreen
+## Ecrã inicial
 
-![Homescreen V2.1](../images/Screenshot_Home_screen_V2_1.png)
+![Ecrã inicial V2.1](../images/Screenshot_Home_screen_V2_1.png)
 
 This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
 
@@ -36,7 +36,7 @@ The solid blue line shows the basal delivery of your pump. The dotted blue line 
 
 **Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
 
-## The Calculator
+## Calculadora
 
 ![Calculadora](../images/Screenshot_Bolus_calculator.png)
 
@@ -60,9 +60,9 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 
 If you bolus for additional food shortly after a meal bolus (i.e. additional desert) it can be helpful to untick all boxes. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
-## Insulin Profile
+## Perfil Insulina
 
-![Insulin Profile](../images/Screenshot_insulin_profile.png)
+![Perfil Insulina](../images/Screenshot_insulin_profile.png)
 
 This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
 
@@ -74,9 +74,9 @@ And you can read an excellent blog article about it here: [Why we are regularly 
 
 And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Pump Status
+## Estado da Bomba
 
-![Pump Status](../images/Screenshot_pump_Combo.png)
+![Estado da Bomba](../images/Screenshot_pump_Combo.png)
 
 Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
 
@@ -106,7 +106,7 @@ AndroidAPS can run using a number of different profile configuratons. Typically 
 
 **Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
-## Treatment, xDrip, NSClient
+## Tratamento, xDrip, NSClient
 
 These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 

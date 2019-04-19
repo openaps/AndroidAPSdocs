@@ -6,7 +6,7 @@ Developers are parents, caregivers, loved ones and people with diabetes working 
 
 *To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
 
-**I can write code! How do I participate?**
+**I can write code! Como eu participo?**
 
 Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
 
@@ -35,8 +35,8 @@ The money is NOT paid to anyone for their work! It is used to keep the costs for
 
 * European Dev Meetup in Prague end of May 2018:
 * hiring a room plus internet
-* equipment
-* food / coffee
+* equipamento
+* comida / café
 * in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
 
 **I've got spare equipment, where do I send it?**

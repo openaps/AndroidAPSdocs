@@ -34,10 +34,10 @@ But you cannot choose any value. AAPS limits the value as a 'hard limit' accordi
 
 AndroidAPS limits the value as follows:
 
-* Child: 2
-* Teenage: 5
-* Adult: 10
-* Insulin-resistant adult: 12
+* Criança: 2
+* Adolescente: 5
+* Adulto: 10
+* Adulto insulino-resistente: 12
 
 ### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
 
@@ -50,10 +50,10 @@ Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In
 
 Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
 
-* Child: 3
-* Teenage: 7
-* Adult: 12
-* Insulin resistant adult: 25
+* Criança: 3
+* Adolescente: 7
+* Adulto: 12
+* Adulto insulino-resistente: 25
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
@@ -143,7 +143,7 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Child: 2
+* Criança: 2
 * Teenage: 5
 * Adult: 10
 * Insulin resistant adult: 12
@@ -154,7 +154,7 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
-* Child: 3
+* Criança: 3
 * Teenage: 5
 * Adult: 7
 * Insulin resistant adult: 12
@@ -195,10 +195,10 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Child: 2
-* Teenage: 5
-* Adult: 10
-* Insulin resistant adult: 12
+* Criança: 2
+* Adolescente: 5
+* Adulto: 10
+* Adulto insulino-resistente: 12
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
@@ -206,15 +206,15 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in MA than in SMB.
 
-* Child: 3
-* Teenage: 5
-* Adult: 7
-* Insulin resistant adult: 12
+* Criança: 3
+* Adolescente: 5
+* Adulto: 7
+* Adulto insulino-resistente: 12
 
-### Advanced Settings
+### Configurações Avançadas
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
 **Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-Default value: 2
+Valor padrão: 2
