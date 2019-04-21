@@ -25,7 +25,7 @@
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
-* Enable extended boluses on pump
+* Habilitar bolus estendido na bomba
 
 ## Dana RS specific errors
 
@@ -54,7 +54,7 @@ When switching to a new phone the following steps are neccessary:
 
 * **Transfer** settings from old to new phone
 
-* **Manually pair** Dana RS with the new phone 
+* **Emparelhamento manual** Dana RS with the new phone 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * **Install AndroidAPS** on the new phone.
 * **Importar configurações** no seu novo telefone 
