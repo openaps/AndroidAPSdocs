@@ -1,12 +1,12 @@
-# DanaRS Pump
+# Инсулиновая помпа DanaRS
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Эти инструкции подойдут для настройки приложения AAPS и помпы DanaRS, выпускаемой с 2017 года. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
 
 * In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Выберите меню, нажав на 3 точки в правом верхнем углу. Выберите Настройки.
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
@@ -64,4 +64,4 @@ When switching to a new phone the following steps are neccessary:
 
 ## Timezone traveling with Dana RS pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#danarv2-danars).
