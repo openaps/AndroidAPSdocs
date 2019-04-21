@@ -29,7 +29,7 @@ Data de lançamento: 03-03-2019
 
 ### Major new features
 
-* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
+* Suporte para Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) (por Tebbe Ubben e JamOrHam)
 * Status lights on main screen (Nico Schmitz)
 * Daylight saving time helper (Roumen Georgiev)
 * Fix processing profile names comming from NS (Johannes Mockenhaupt)
@@ -49,7 +49,7 @@ Data de lançamento: 03-11-2018
 ### Major new features
 
 * oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
-* Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
+* Suporte para bomba Accu-Check Combo ([instruções de configuração](../Configuration/Accu-Chek-Combo-Pump.md))
 * Setup wizard: guides you through the process of setting up AndroidAPS
 
 ### Settings to adjust when switching from AMA to SMB
