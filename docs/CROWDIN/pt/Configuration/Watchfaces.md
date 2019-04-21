@@ -4,7 +4,7 @@ AndroidAPS is designed to be *controlled* by Android Wear watches. If you want t
 
 The following functions can be triggered from the watch:
 
-* set a temporary target
+* definir um alvo temporário
 * administer a bolus
 * use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md?highlight=tdd#wear) on the phone)
 * check the status of loop and pump
@@ -26,9 +26,9 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 
-## Legend AndroidAPSv2 watchface
+## Legenda AndroidAPSv2 watchface
 
-![Legend AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
+![Legenda AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
 
 A - time since last loop run
 
