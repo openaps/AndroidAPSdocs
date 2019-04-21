@@ -22,4 +22,4 @@
 
 ## Пересечение часовых поясов с помпой Dana R
 
-Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
