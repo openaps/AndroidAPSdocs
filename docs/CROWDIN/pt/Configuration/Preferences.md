@@ -19,15 +19,15 @@ Existem limites de segurança em vigor com base na idade que selecionou nessa co
 * Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
 * Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
     
-    ![Status lights - detail](../images/StatusLights.jpg)
+    ![Luzes de estado - detalhe](../images/StatusLights.jpg)
 
-## Treatments safety
+## Segurança de tratamentos
 
-### Max allowed bolus [U]
+### Max bolus permitido [U]
 
 This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
 
-### Max allowed carbs [g]
+### Max hidratos permitidos [g]
 
 This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
@@ -66,7 +66,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 *Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
 
-## Absorption Settings
+## Configurações de Absorção
 
 If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
