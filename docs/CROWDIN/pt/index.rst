@@ -44,22 +44,22 @@ If you're ready for the challenge, please read on.
 
 	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
 
-Getting Started with AndroidAPS
+A começar com o AndroidAPS
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
-   Screenshots <./Getting-Started/Screenshots.md>
-   Phones <./Getting-Started/Phones.md>
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Possible future pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
+   Capturas de ecrã <./Getting-Started/Screenshots.md>
+   Telefones <./Getting-Started/Phones.md>
+   Escolhas de Bomba <./Getting-Started/Pump-Choices.md>
+   Possíveis futuros controladores para bombas  <./Getting-Started/Future-Pump-Drivers.md>
    Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
    FAQ for loopers <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
+   Glossário <./Getting-Started/Glossary.md>
   
-How to Install AndroidAPS
+Como Instalar AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
@@ -71,7 +71,7 @@ How to Install AndroidAPS
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
    
-Configuration 
+Configuração 
 ---------------
 .. toctree::
    :maxdepth: 1
@@ -79,10 +79,10 @@ Configuration
    
    Config Builder <./Configuration/Config-Builder.md>
    BG Source <./Configuration/BG-Source.md>
-   Dana-R pump <./Configuration/DanaR-Insulin-Pump.md>
-   Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
+   Bomba Dana-R <./Configuration/DanaR-Insulin-Pump.md>
+   Bomba Dana-RS <./Configuration/DanaRS-Insulin-Pump.md>
+   Bomba Accu-Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
+   Bomba Accu-Chek Insight <./Configuration/Accu-Chek-Insight-Pump.md>
    Watchfaces <./Configuration/Watchfaces.md>
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
@@ -109,7 +109,7 @@ Utilização
    Jelly Pro - battery life optimization <./Usage/jelly.md>
    Automation <./Usage/automation.md>
 
-Where to go for help 
+Onde ir para ajuda 
 ------------
 .. toctree::
    :maxdepth: 1
@@ -126,12 +126,12 @@ Where to go for help
    Resources <./Resources/index>
    For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
 
-How to help
+Como ajudar
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   How to help <./Getting-Started/How-can-I-help.md>
+   Como ajudar <./Getting-Started/How-can-help.md>
    How to translate the app <./translations.md>
    How to edit the wiki <./make-a-PR>
