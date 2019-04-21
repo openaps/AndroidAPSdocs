@@ -93,9 +93,9 @@ Utilização
    :maxdepth: 1
    :glob:
     
-   Objectives <./Usage/Objectives.md>
+   Objectivos <./Usage/Objectives.md>
    OpenAPS features <./Usage/Open-APS-features.md>
-   Profile switch <./Usage/Profiles.md>
+   Trocal de Perfil <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>
    SMS commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
