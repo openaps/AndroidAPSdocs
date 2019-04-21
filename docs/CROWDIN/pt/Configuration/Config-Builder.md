@@ -210,7 +210,7 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### Ongoing Notification
+### Notificação em curso
 
 Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
 
@@ -241,11 +241,11 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 * Auto backfill missing BGs from Nightscout
 * Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
 * Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
+* Envio apenas para NS (sincronização desactivada)
 * Sem envio para NS
 * Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Configurações avançadas do Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Manutenção
 
