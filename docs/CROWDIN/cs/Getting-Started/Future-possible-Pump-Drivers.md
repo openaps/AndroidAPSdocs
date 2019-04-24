@@ -2,17 +2,17 @@
 
 Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jejich podpory vůči jakémukoliv systému uzavřené smyčky a stav podpory vůči AAPS. Na konci stránky jsou informace, co je po pumpě vyžadováno, aby byla použitelná pro uzavřenou smyčku.
 
-## Pumps whose support is in development
+## Pumpy, na jejichž podpoře se pracuje
 
 ### Medtronic
 
-**Loop status:** Some of older versions of pumps are loopable, but not the newer models (see below)
+**Stav smyčky:** Některé starší verze pump jsou pro uzavřenou smyčku použitelné, ale nikoliv jejich novější modely (viz níže).
 
-**Other implementations:** OpenAPS, Loop
+**Jiné implementace:** OpenAPS, Loop
 
-**Java implementations:** Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
+**Java implementace:** Částečná implementace dostupná [Roundrtrip2](https://github.com/TC2013/Roundtrip2) a [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS implementation status:** Work in progress. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. 0.7 test "release" is out, with about 80% of all functionality, missing is only History analysis to determine state of the pump and to confirm that Treatments were or to import new treatments. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+**Stav implementace AAPS:** Probíhající práce. Více viz [Andyho fork AndroidAPS](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Většina práce byla provedena v souvislosti s [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS), aby fungoval framework a příkazy. V daném úložišti je projekt (Medtronic) a otevřené tikety pro budoucí vývoj, vývoj probíhá na branchi dev_medtronic (což je zde výchozí branch). K dispozici je také místnost na gitteru: RileyLinkAAPS/Lobby. AAPS. 0.7 test "release" is out, with about 80% of all functionality, missing is only History analysis to determine state of the pump and to confirm that Treatments were or to import new treatments. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
 **Hardware requirement for AAPS:** RileyLink (any)
 
