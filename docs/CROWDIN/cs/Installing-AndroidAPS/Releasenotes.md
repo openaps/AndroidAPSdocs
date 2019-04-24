@@ -1,101 +1,101 @@
 # Poznámky k vydání
 
-## Version 2.2.2
+## Verze 2.2.2
 
-Release date: 07-04-2019
-
-### Hlavní nové funkce
-
-* Autosens fix: deactivate TT raises/lowers target
-* New translations
-* Insight driver fixes
-* SMS plugin fix
-
-## Version 2.2
-
-Release date: 29-03-2019
+Datum vydání: 07. 04. 2019
 
 ### Hlavní nové funkce
 
-* [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
-* Wear Update
-* [SMS plugin](../Usage/SMS-Commands.md) update
-* Go back in objectives.
-* Stop loop if phone disk is full
+* Oprava Autosens: deaktivace dočasného cíle zvýší/sníží cíl
+* Nové překlady
+* Opravy ovladače pro Insight
+* Oprava SMS pluginu
 
-## Version 2.1
+## Verze 2.2
 
-Release date: 03-03-2019
-
-### Hlavní nové funkce
-
-* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
-* Status lights on main screen (Nico Schmitz)
-* Daylight saving time helper (Roumen Georgiev)
-* Fix processing profile names comming from NS (Johannes Mockenhaupt)
-* Fix UI blocking (Johannes Mockenhaupt)
-* Support for updated G5 app (Tebbe Ubben and Milos Kozak)
-* G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
-* Fixed disabling SMB from preferences (Johannes Mockenhaupt)
-
-### Misc
-
-* If you are using non default `smbmaxminutes` value you have to setup this value again
-
-## Version 2.0
-
-Release date: 03-11-2018
+Datum vydání: 29. 03. 2019
 
 ### Hlavní nové funkce
 
-* oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
-* Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
-* Setup wizard: guides you through the process of setting up AndroidAPS
+* [Oprava letního času](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
+* Aktualizace Wear
+* Aktualizace [SMS pluginu](../Usage/SMS-Commands.md)
+* Možnost vrátit se k cílům
+* Zastavení smyčky, je-li úložiště telefonu plné
 
-### Settings to adjust when switching from AMA to SMB
+## Verze 2.1
 
-* Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
-* maxIOB now includes *all* IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
-* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
+Podpora Accu-Chek <0>Insight</0> (od Tebbe Ubben a JamOrHam)
+
+### Hlavní nové funkce
+
+* Podpora Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) (od Tebbe Ubben a JamOrHam)
+* Stavové indikátory na obrazovce přehledu (Nico Schmitz)
+* Pomoc při přechodu na letní čas (Roumen Georgiev)
+* Oprava zpracování názvů profilů z NS (Johannes Mockenhaupt)
+* Oprava blokování UI (Johannes Mockenhaupt)
+* Podpora aktualizované upravené aplikace pro G5 (Tebbe Ubben a Milos Kozak)
+* Podpora zdrojů glykémie G6, Poctech, Tomato, Eversense (Tebbe Ubben a Milos Kozak)
+* Oprava zakázání SMB z nastavení (Johannes Mockenhaupt)
+
+### Různé
+
+* Pokud nepoužíváte výchozí hodnotu `smbmaxminutes`, musíte ji nastavit znovu
+
+## Verze 2.0
+
+Datum vydání: 03. 11. 2018
+
+### Hlavní nové funkce
+
+* Podpora Oref1/SMB ([Dokumentace k Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)). Nezapomeňte si přečíst dokumentaci, abyste věděli, co můžete od SMB očekávat, jak se bude chovat, čeho může dosáhnout a jak funkci používat, aby fungovala bez problémů.
+* Podpora pumpy Accu-check Combo ([pokyny k instalaci](../Configuration/Accu-Chek-Combo-Pump.md))
+* Průvodce nastavením: provede vás úvodním nastavením AndroidAPS
+
+### Nutná úprava nastavení při přechodu z AMA na SMB
+
+* Aby bylo možné povolit SMB (karta SMB obecně zobrazuje, že jsou uplatněna omezení), je třeba zahájit plnění 8. cíle
+* maxIOB nyní zahrnuje *veškerý* IOB, nejen ten z bazálů. To znamená, že pokud je k jídlu poslaný bolus 8 U a maxIOB je 7 U, tak nebudou vydány žádné SMB, dokud IOB neklesne pod 7 U.
+* výchozí hodnota min_5m_carbimpact se při přechodu z AMA na SMB změnila z 3 na 8. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
+* Při vytváření AndroidAPS 2.0 apk mějte na paměti: Konfigurace na vyžádání není aktuální verzí pluginu Android Gradle podporována! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
   
-  * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-  * In the left pane, click Build, Execution, Deployment > Compiler.
-  * Uncheck the Configure on demand checkbox.
-  * Click Apply or OK.
+  * Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
+  * V levém panelu klepněte na Build, Execution, Deployment > Compiler.
+  * Zrušte označení možnosti Configure on demand.
+  * Klepněte na Apply nebo OK.
 
-### Overview tab
+### Hlavní obrazovka
 
-* Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
-* Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
-* Colored prediction lines: 
-  * Orange: COB (colour is used generally to represent COB and carbs)
-  * Dark blue: IOB (colour is used generally to represent IOB and insulin)
-  * Light blue: zero-temp
-  * Dark yellow: UAM
-* Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
-* Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
+* Horní pruh umožňuje pozastavit/zakázat smyčku, zobrazit/upravit profile a spustit/ukončit dočasné cíle (DC). DC používají výchozí nastavení nastavené v předvolbách. Nový DC Hypoglykémie je vysoký dočasný cíl, který má smyčce zabránit v příliš agresivních korekcích dokrmových sacharidů.
+* Tlačítka ošetření: staré tlačítko ošetření je stále dostupné, ale ve výchozím nastavení je skryté. Viditelnost tlačítek lze nově nastavit. Nové tlačítko inzulín, nové tlačítko sacharidy (včetně [rozložených sacharidů](../Usage/Extended-Carbs.md))
+* Barevné křivky predikcí: 
+  * Oranžová: COB (oranžová se používá obecně k vizualizaci COB a sacharidů)
+  * Tmavě modrá: IOB (tmavě modrá se používá obecně k vizualizaci IOB a inzulínu)
+  * Světle modrá: nulový dočasný bazál
+  * Tmavě žlutá: UAM
+* Možnost zobrazit pole poznámky v dialogových oknech inzulínu/sacharidů/kalkulátoru/plnění, poznámka se pak nahrává do NS
+* Aktualizované dialogové okno plnění/doplňování a vložení záznamů ošetření pro výměnu kanyly a výměnu zásobníku
 
-### Watch
+### Hodinky
 
-* Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
-* Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
-* confirmations and info dialogs now work on wear 2.0 as well
-* Added eCarbs menu entry
+* Oddělená varianta sestavení byla zrušena, nyní se používá pouze varianta full, která obsahuje vše. Abyste mohli používat ovládání bolusů z hodinek, povolte nejdřív toto nastavení na telefonu
+* Wizard se nyní ptá jenom na sacharidy (a procenta, pokud je to povoleno v nastavení hodinek). V nastavení na telefonu lze nyní konfigurovat, které parametry jsou zahrnuty do výpočtu
+* potvrzení a informační zprávy nyní fungují také na wear 2.0
+* Přidána volba eCarbs v nabídce
 
-### New plugins
+### Nové pluginy
 
-* PocTech app as BG source
-* Dexcom patched app as BG source
-* oref1 sensitivity plugin
+* Aplikace PocTech jako zdroj glykémie
+* Upravená Dexcom aplikace jako zdroj glykémie
+* Plugin citlivosti Oref1
 
-### Misc
+### Různé
 
-* App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
-* Overhaul for config builder and objectives tabs, adding descriptions
-* New app icon
-* Lots of improvements and bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
-* Option to keep screen on
-* Option to show notification as Android notification
-* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+* Nové výsuvné okno k zobrazení všech pluginů. Pluginy označené jako viditelné jsou nadále ve vrchním pruhu (oblíbené)
+* Přepracovaná Konfigurace a Cíle, přidány popisky
+* Nová ikona aplikace
+* Spousty vylepšení a oprav chyb
+* Na Nightscoutu nezávislé výstrahy při dlouhodobé nedostupnosti pumpy (např. při vybité baterii v pumpě) a výstrahy při výpadku hodnot ze senzoru (více informací viz *Místní výstrahy* v nastavení)
+* Možnost ponechat obrazovku trvale zapnutou
+* Možnost zobrazovat upozornění jako Android notifikace
+* Pokročilé filtrování (dovolující mít povolené SMB i více než 6h po jídle) je podporováno Dexcom upravenou aplikací a xDripem s nativním režimem G5.
