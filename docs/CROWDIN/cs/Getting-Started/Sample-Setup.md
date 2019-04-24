@@ -12,65 +12,65 @@ Hodinky s WearOS lze použít (v tomto příkladu Sony Smartwatch 3 (SWR50)), vo
 
 Systém pracuje offline. To znamená, že pro ovládání není třeba datové připojení telefonu k internetu.
 
-Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno datové připojení. Nahráním dat do Nightscoutu získáte kompletní výkazy, které využijete například při návštěvě lékaře nebo můžete sdílet aktuální hodnoty s členy rodiny. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
+Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno datové připojení. Nahráním dat do Nightscoutu získáte kompletní výkazy, které využijete například při návštěvě lékaře nebo můžete sdílet aktuální hodnoty s členy rodiny. Data do Nightscoutu (abyste mohli využívat různé Výkazy) lze také pouze prostřednictvím (předdefinovaného) Wi-Fi připojení.
 
-## Required components
+## Požadované součásti
 
 1. Samsung Galaxy S7
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS
+    * Alternativy: viz [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) pro AndroidAPS
 
-2. [DanaR](http://www.sooil.com/eng/product/) or Dana RS insulin pump
+2. inzulinová pumpa [DanaR](http://www.sooil.com/eng/product/) nebo Dana RS
     
-    * Alternatives: 
+    * Alternativy: 
     * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * Další pumpy mohou být k dispozici v budoucnu, podrobnosti viz [budoucí možné ovladače pumpy ](Future-possible-Pump-Drivers.md).
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
+    * Alternativy: viz seznam možných [zdrojů glykémie](../Configuration/BG-Source.md)
 
-4. Optional: Sony Smartwatch 3 (SWR50)
+4. Volitelné: Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * Alternativy: viz [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) pro AndroidAPS (OS musí být Wear OS)
 
 ## Příprava Nightscoutu
 
-See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
+Podrobné [Nastavení Nightscoutu](../Installing-AndroidAPS/Nightscout.md)
 
-## Computer setup
+## Nastavení počítače
 
-To be able to create an Android app from the freely available AAPS open source code you need Android Studio on your computer or notebook (Windows, Mac, Linux). A detailed instruction can be found at [building the APK](../Installing-AndroidAPS/Building-APK.md).
+Abyste byli schopni vytvořit aplikaci pro Android z volně dostupných otevřených zdrojových kódu AAPS, potřebujete Android Studio nainstalované na svém počítači nebo notebooku (Windows, Mac, Linux). Podrobné instrukce naleznete v části [Vytvoření APK](../Installing-AndroidAPS/Building-APK.md).
 
-Please be patient when installing Android Studio as the software downloads a lot of additional data once installed on your computer.
+Při instalaci Android Studia buďte trpěliví, software potřebuje stáhnout spoustu dodatečných dat (balíčků) po nainstalovaní do počítače.
 
-## Smartphone setup
+## Nastavení telefonu
 
-![Smartphone](../images/SampleSetupSmartphone.png)
+![Chytrý telefon](../images/SampleSetupSmartphone.png)
 
-### Check smartphone firmware
+### Zkontrolujte firmware telefonu
 
-* Menu > Settings > Phone info > Software info: At least "Android-Version 7.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
-* For firmware update: menu > Preferences > software update
+* Nabídka > Nastavení> Info o telefonu > Info o softwaru: Je potřeba alespoň „Android-verze 7.0“ (úspěšně testované do Android verze 8.0.0 Oreo - Samsung Experience verze 9.0) 
+* Chcete-li aktualizovat firmware: Nabídka > Nastavení > Aktualizace softwaru
 
-### Allow installation from unknown sources
+### Povolit instalaci aplikací z neznámých zdrojů
 
-Menu > Settings > Device security > Unknown sources > slider to right side (= active)
+Nabídka > Nastavení> Zabezpečení > Neznámé zdroje > přepněte doprava (= aktivní)
 
-For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
+Z bezpečnostních důvodů by toto nastavení mělo být nastaveno zpět na neaktivní po dokončení instalace všech aplikací, které jsou popsané zde.
 
-### Enable Bluetooth
+### Zapněte Bluetooth
 
-1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
-2. Menu > Settings > Connections > Location > slider to right side (= active)
+1. Nabídka > Nastavení > Připojení > Bluetooth > přepnout doprava (= aktivní)
+2. Nabídka > Nastavení > Připojení > Umístění > přepnout doprava (= aktivní)
 
-Location services ("GPS") must be activated in order for Bluetooth to work properly.
+Služby určování polohy (dále jen „GPS“) musí být aktivovány, aby Bluetooth správně fungovalo.
 
-### Install Dexcom App (modified version)
+### Nainstalujte aplikaci Dexcom (upravená verze)
 
-![Dexcom App patched](../images/SampleSetupDexApp.png)
+![Upravená aplikace Dexcom](../images/SampleSetupDexApp.png)
 
-The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility). A mmol/l version and a mg/dl version of the modified Dexcom app are available at https://github.com/dexcomapp/dexcomapp?files=1.
+Původní aplikace Dexcom z obchodu Google Play nebude fungovat, protože nevysílá hodnoty do jiné aplikace. Proto je vyžadována verze mírně upravená komunitou. Pouze tato upravená Dexcom aplikace může komunikovat s AAPS. Navíc lze použít upravenou Dexcom aplikaci se všemi Android telefony a ne jen s těmi v [seznamu kompatibilních zařízení s Dexcom](https://www.dexcom.com/dexcom-international-compatibility). Verze upravené aplikace Dexcom v mmol/l a mg/dl jsou k dispozici na https://github.com/dexcomapp/dexcomapp?files=1.
 
 To do this perform the following steps on your smartphone:
 
