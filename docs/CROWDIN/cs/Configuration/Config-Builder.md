@@ -114,13 +114,13 @@ AAPS continuously evaluates all available data (IOB, COB, BG...) and automatical
 
 AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
-Doporučujeme pravidelně exportovat veškeré své nastavení (včetně pokroku při plnění cílů). In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Doporučujeme pravidelně exportovat veškeré své nastavení (včetně pokroku při plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
-See [Objectives](../Usage/Objectives.md) page for more information.
+Více informací naleznete na stránce [Cíle](../Usage/Objectives.md).
 
 ## Ošetření
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+Na záložce Ošetření můžete vidět ošetření, která byla nahrána do Nightscoutu. Chcete-li upravit nebo odstranit záznam (například když jste snědli méně sacharidů, než jste očekávali), vyberte „Odstranit“ a zadejte novou hodnotu (případně změňte čas) prostřednictvím karty Péče.
 
 ## Obecné
 
