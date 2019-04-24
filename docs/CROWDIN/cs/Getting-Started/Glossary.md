@@ -84,7 +84,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>bazál</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
