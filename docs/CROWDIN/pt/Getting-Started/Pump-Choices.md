@@ -1,4 +1,4 @@
-# Pump choices
+# Escolhas de bomba
 
 AndroidAPS currently works with
 

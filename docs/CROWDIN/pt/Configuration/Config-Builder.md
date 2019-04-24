@@ -206,11 +206,11 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 * Reenviar Todos os Dados. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 
-### xDrip Statusline (watch)
+### Linha estado xDrip (relógio)
 
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### Ongoing Notification
+### Notificação em curso
 
 Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
 
@@ -224,7 +224,7 @@ If **Log app start to NS** is activated each AndroidAPS will be visible in Night
 
 #### Opções Alarme
 
-Activate/deactivate AndroidAPS alarms
+Activar/desactivar alarmes AndroidAPS
 
 ![Opções Alarme](../images/ConfBuild_NSClient_Alarms.png)
 
@@ -234,18 +234,18 @@ Offline looping, disable roaming...
 
 If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Configurações ligação do Nightscout](../images/ConfBuild_ConnectionSettings.png)
 
 #### Configurações Avançadas
 
 * Auto backfill missing BGs from Nightscout
 * Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
 * Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
+* Envio apenas para NS (sincronização desactivada)
 * Sem envio para NS
 * Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Configurações avançadas do Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Manutenção
 

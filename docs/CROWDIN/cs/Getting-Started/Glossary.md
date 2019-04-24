@@ -1,7 +1,7 @@
 # Slovníček<table style="width:100%" border=1>
 <tr>
  <th>Term</th>
- <th>Description</th>
+ <th>Popis</th>
  <th>see also</th>
  <th>more details @</th>
 </tr>
@@ -84,7 +84,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>bazál</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -100,7 +100,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Closed Loop</td>
+ <td>Uzavřená smyčka</td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
@@ -244,9 +244,9 @@
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
- <td>Open Loop</td>
+ <td>Otevřená smyčka</td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>Uzavřená smyčka</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
@@ -348,7 +348,7 @@
 <tr>
  <td>Virtual pump</td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Otevřená smyčka</td>
  <td>&nbsp;</td>
 </tr>
 <tr>

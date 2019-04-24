@@ -64,7 +64,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**Hardware requirement for AAPS:** Probably none. Parece BT estar habilitado.
 
 * * *
 
@@ -72,7 +72,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**Hardware requirement for AAPS:** Probably none. Parece BT estar habilitado.
 
 * * *
 
@@ -80,7 +80,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**Hardware requirement for AAPS:** Probably none. Parece BT estar habilitado.
 
 * * *
 
@@ -88,7 +88,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Is a Loop candidate.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**Hardware requirement for AAPS:** Probably none. Parece BT estar habilitado.
 
 **NOTE:** This pump was mentioned in following [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), but I am not sure, if this is just t:slim with modified Firmware, or is this a new pump. So far I go no confirmation either way from writer of article, or from Tandem itself.
 
