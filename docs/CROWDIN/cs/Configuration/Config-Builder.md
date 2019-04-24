@@ -126,48 +126,48 @@ Na záložce Ošetření můžete vidět ošetření, která byla nahrána do Ni
 
 ### Přehled
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Zobrazí aktuální stav smyčky a tlačítko pro přístup k běžným akcím (další podrobnosti viz část [Domácí obrazovka](../Getting-Started/Screenshots.md)). Kliknutím na ozubené kolo se dostanete do nastavení.
 
-#### Keep screen on
+#### Nechat obrazovku zapnutou
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore it is recommended to connect the smartphone to a charger cable.
+Tato volba zabrání Androidu vypnout obrazovku. To je velmi vhodné například pro prezentace. Při tomto nastavení ale dochází k velmi rychlému vybíjení baterie. Proto je doporučeno připojit smartphone k napájecímu kabelu.
 
-#### Buttons
+#### Tlačítka
 
-Define which Buttons are shown on the home screen.
+Určuje, jaká tlačítka budou viditelná na domácí obrazovce.
 
 * Ošetření
-* Calculator
+* Bolus kalkukátor
 * Inzulín
-* Carbs
-* CGM (opens xDrip+)
-* Calibration
+* Sacharidy
+* CGM (otevře xDrip+)
+* Kalibrace
 
-Furthermore you can set shortcuts for insulin and carb increments and decide wether the notes field should be shown in treatment dialogues.
+Kromě toho můžete nastavit zkratky pro inzulín a sacharidy a rozhodnout se, zda bude v dialogu pro přidání ošetření i poznámka.
 
-#### QuickWizard settings
+#### Nastavení Rychlého bolusu
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Vytvořte si tlačítko pro určité standardní jídlo (sacharidy a parametry pro výpočet bolusu), které se zobrazí na domácí obrazovce. Můžete ho použít pro standardní jídlo, které konzumujete pravidelně. U každého jídla (tlačítka) lze definovat i čas, a tak budete mít na domácí obrazovce k dispozici vhodné tlačítko pro dané jídlo odpovídající denní době.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Poznámka: tlačítko nebude viditelné, pokud je aktuální čas mimo interval definovaný v nastavení, nebo máte-li dostatek IOB k pokrytí sacharidů definovaných kalkulačkou.
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Advanced settings
+#### Pokročilá nastavení
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically the basal for the next two hours is added to the bolus and a two hour zero-temp activated. Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Povolit v kalkulačce funkci superbolus. Používejte se zvýšenou opatrností a nenastavujte, dokud jste si nenastudovali, co to vlastně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu, a je aktivován nulový dočasný bazál po dobu 2 h. Další informace o superbolusu můžete najít [zde](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-### Actions
+### Akce
 
-Some buttons to quickly access common features:
+Tlačítka k běžně používaným úkonům:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. basal rate
-* Extended bolus (DanaR/RS or Combo pump only)
+* Přepnutí profilu (více informací viz [Stránka profily](../Usage/Profiles.md))
+* Dočasné cíle
+* Nastavit / zrušit dočasný bazál
+* Prodloužený bolus (pouze DanaR/RS nebo Combo)
 * Prime / fill (DanaR/RS or Combo pump only)
-* History browser
-* TDD (Total daily dose = bolus + basal per day)
+* Prohlížeč historie
+* TDD (celková denní dávka = bolus + bazál za den)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
@@ -185,9 +185,9 @@ Carbs entered in the careportal (i.e. correction carbs) will be used for COB cal
 
 ### SMS komunikátor
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
+**SMS komunikátor** umožňuje vzdálené ovládání některých funkcí AndroidAPS prostřednictvím SMS, viz [SMS příkazy](../Usage/SMS-Commands.md), kde najdete další informace o nastavení.
 
-### Food
+### Jídlo
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
@@ -218,7 +218,7 @@ Displays a summary of current BG, delta, active TBR%, active basal u/hr and prof
 
 ### NS Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+Nastavení synchronizace dat AndroidAPS s Nightscoutem.
 
 If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
 
@@ -236,20 +236,20 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
-#### Advanced settings
+#### Pokročilá nastavení
 
-* Auto backfill missing BGs from Nightscout
-* Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Automaticky doplňovat chybějící glykémie z NS
+* Vytvářet oznámení z chyb Nightscout vytváří oznámení pro zobrazení chybových dialogů a místní varování (jsou dostupná v Ošetření v sekci Péče)
+* Povolit odesílání do ostatních lokálních aplikací (jako xDrip+)
+* Pouze nahrávání do NS (zakázaná synchronizace)
+* Zakázat nahrávání do NS
+* Vždy pracovat s absolutními hodnotami bazálu -> pokud chcete používat [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html), musíte mít tuto volbu aktivovanou.
 
 ![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
 
-### Maintenance
+### Údržba
 
-Email and number of logs to be send. Normally no change neccessary.
+E-mail a počet logů, které budou odeslány. Obyčejně není třeba tyto hodnoty měnit.
 
 ### Config Builder
 
