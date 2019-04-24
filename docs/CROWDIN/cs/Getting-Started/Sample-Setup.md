@@ -6,13 +6,13 @@
 
 In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G5 CGM. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
-As the Dexcom App only offers limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
+Protože Dexcom aplikace nabízí pouze omezené možnosti alarmů, použijeme open source aplikaci xDrip+, která umí nastavit kromě alarmů vysoké a nízké glykémie také další alarmy přizpůsobené individuálním požadavkům.
 
-Optionally an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values on your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+Hodinky s WearOS lze použít (v tomto příkladu Sony Smartwatch 3 (SWR50)), volitelně k zobrazení glykémie a hodnot AndroidAPS na vašem zápěstí. Hodinky lze dokonce použít k ovládání AndroidAPS (např. diskrétní poslání bolusu k jídlu).
 
-The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
+Systém pracuje offline. To znamená, že pro ovládání není třeba datové připojení telefonu k internetu.
 
-Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" when a data connection is established. By doing so you can provide comprehensive reports for the doctor's visit or share the current values with family members at any time. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
+Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno datové připojení. Nahráním dat do Nightscoutu získáte kompletní výkazy, které využijete například při návštěvě lékaře nebo můžete sdílet aktuální hodnoty s členy rodiny. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
 
 ## Required components
 
