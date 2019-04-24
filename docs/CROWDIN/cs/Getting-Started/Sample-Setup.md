@@ -1,10 +1,10 @@
-# Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
+# Ukázka instalace: Samsung S7, DanaR, Dexcom G5 a Sony Smartwatch
 
-![Sample Setup](../images/SampleSetup.png)
+![Ukázková instalace](../images/SampleSetup.png)
 
-## Description
+## Popis
 
-In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G5 CGM. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
+V tomto případě je k ovládání smyčky použit telefon Samsung Galaxy S7. Upravená aplikace Dexcom přijímá data ze senzoru Dexcom G5. AndroidAPS slouží k řízení inzulínové pumpy Dana R od korejského výrobce SOOIL přes bluetooth. Další zařízení nejsou vyžadována.
 
 Protože Dexcom aplikace nabízí pouze omezené možnosti alarmů, použijeme open source aplikaci xDrip+, která umí nastavit kromě alarmů vysoké a nízké glykémie také další alarmy přizpůsobené individuálním požadavkům.
 
@@ -72,14 +72,14 @@ Služby určování polohy (dále jen „GPS“) musí být aktivovány, aby Blu
 
 Původní aplikace Dexcom z obchodu Google Play nebude fungovat, protože nevysílá hodnoty do jiné aplikace. Proto je vyžadována verze mírně upravená komunitou. Pouze tato upravená Dexcom aplikace může komunikovat s AAPS. Navíc lze použít upravenou Dexcom aplikaci se všemi Android telefony a ne jen s těmi v [seznamu kompatibilních zařízení s Dexcom](https://www.dexcom.com/dexcom-international-compatibility). Verze upravené aplikace Dexcom v mmol/l a mg/dl jsou k dispozici na https://github.com/dexcomapp/dexcomapp?files=1.
 
-To do this perform the following steps on your smartphone:
+Chcete-li to provést, proveďte na svém smartphonu následující kroky:
 
-1. If the original Dexcom app is already installed: 
-    * Stop sensor
-    * Uninstall app via Menu > Settings > Apps > Dexcom G5 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l according to your needs): <https://github.com/dexcomapp/dexcomapp?files=1>
-3. Install modified Dexcom app on your smartphone (= select the downloaded APK file)
-4. Start modified Dexcom app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
+1. Je-li původní Dexcom aplikace již nainstalována: 
+    * Zastavte senzor
+    * Odinstalujte aplikaci přes Nabídka > Nastavení > Aplikace > Dexcom G5 Mobile > odinstalovat
+2. Stáhněte upravenou aplikaci Dexcom (zvolte si mg/dl nebo mmol/l dle svých potřeb) na: <https://github.com/dexcomapp/dexcomapp?files=1>
+3. Nainstalujte upravenou aplikaci Dexcom do telefonu (= Vyberte stažený APK soubor)
+4. Spusťte upravenou aplikaci Dexcom, aktivujte/kalibrujte senzor podle zobrazených pokynů a počkejte na dokončení fáze „zahřívání“.
 5. Once the first two calibrations have been entered successfully and the modified Dexcom app shows actual glucose value setup the warnings (hamburger menu on top left side of the screen) as follows: 
     * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
     * Low `OFF`
