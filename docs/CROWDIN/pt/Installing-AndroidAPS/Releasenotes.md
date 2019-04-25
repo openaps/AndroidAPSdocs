@@ -1,8 +1,24 @@
 # Release notes
 
-## Versão 2.2.2
+## Version 2.3
 
-Data de lançamento: 07-04-2019
+Release date: 25-04-2019
+
+### Major new features
+
+* Important safety fix for Insight (really important if you use Insight!)
+* Fix History-Browser
+* Fix delta calculations
+* Language updates
+* Check for GIT and warn on gradle upgrade
+* More automatic testing
+* Fixing potential crash in AlarmSound Service (thanks @lee-b !)
+* Fix broadcast of BG data (works independently of SMS permission now!)
+* New Version-Checker
+
+## Version 2.2.2
+
+Release date: 07-04-2019
 
 ### Major new features
 
@@ -11,9 +27,9 @@ Data de lançamento: 07-04-2019
 * Insight driver fixes
 * SMS plugin fix
 
-## Versão 2.2
+## Version 2.2
 
-Data de lançamento: 29-03-2019
+Release date: 29-03-2019
 
 ### Major new features
 
@@ -23,13 +39,13 @@ Data de lançamento: 29-03-2019
 * Go back in objectives.
 * Stop loop if phone disk is full
 
-## Versão 2.1
+## Version 2.1
 
-Data de lançamento: 03-03-2019
+Release date: 03-03-2019
 
 ### Major new features
 
-* Suporte para Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) (por Tebbe Ubben e JamOrHam)
+* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 * Status lights on main screen (Nico Schmitz)
 * Daylight saving time helper (Roumen Georgiev)
 * Fix processing profile names comming from NS (Johannes Mockenhaupt)
@@ -42,14 +58,14 @@ Data de lançamento: 03-03-2019
 
 * If you are using non default `smbmaxminutes` value you have to setup this value again
 
-## Versão 2.0
+## Version 2.0
 
-Data de lançamento: 03-11-2018
+Release date: 03-11-2018
 
 ### Major new features
 
 * oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
-* Suporte para bomba Accu-Check Combo ([instruções de configuração](../Configuration/Accu-Chek-Combo-Pump.md))
+* Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
 * Setup wizard: guides you through the process of setting up AndroidAPS
 
 ### Settings to adjust when switching from AMA to SMB
@@ -76,7 +92,7 @@ Data de lançamento: 03-11-2018
 * Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
 * Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
-### Relógio
+### Watch
 
 * Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
 * Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone

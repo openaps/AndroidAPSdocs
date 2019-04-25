@@ -1,5 +1,21 @@
 # Release notes
 
+## Version 2.3
+
+Erscheinungsdatum: 25.04.2019
+
+### Wichtige neue Funktionen
+
+* Wichtiger Sicherheitsfix für Insight (wirklich wichtig, wenn Du die Insight nutzt!)
+* Bugfix History-Browser
+* Bugfix Delta-Berechnungen
+* Sprach-Updates
+* Überprüfung git und Warnung bei gradle Upgrade
+* Zusätzliche automatische Tests
+* Bugfix eines potentieller Absturzes des Alarm Sound Dienstes (Danke @lee-b!)
+* Bugfix BG-Broadcast (funktioniert nun unabhängig von den SMS-Berechtigungen!)
+* Neuer Versionscheck
+
 ## Version 2.2.2
 
 Erscheinungsdatum: 07.04.2019

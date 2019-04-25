@@ -1,5 +1,7 @@
 # Bijwerken naar een nieuwe versie of branch
 
+<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>
+
 ## Installeer Git (als je dat nog niet hebt)
 
 * Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/win>. Volg de instructies op die site om Git te installeren.
@@ -29,7 +31,7 @@
     
     ![](../images/UpdateAAPS1.png)
 
-Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' of 'Checkout As...' gebruiken als je hier geen 'Checkout' kunt kiezen).
+and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
 ![](../images/UpdateAAPS2.png)
 
@@ -39,13 +41,13 @@ Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' of 'Checkout As...'
     
     ![](../images/merge.png)
 
-Onderin beeld zie je een bericht verschijnen over 'updated project' (bijgewerkt projekt) of 'all files are up-to-date' (alle bestanden zijn bijgewerkt).
+On the tray you'll see green message about updated project
 
 ## Genereer APK & upload naar telefoon
 
-Bouw de ondertekende apk zoals beschreven in [Bouwen van de app (kopje 'Bouwen van de ondertekende APK')](../Installing-AndroidAPS/Building-APK#generate-signed-apk). Volg de verdere instructies daar om de app op je telefoon te zetten.
+Generate signed apk as described in [Building APK (Generate signed APK)](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
 
-![Navigatie Genereren ondertekende APK](../images/GenerateSignedAPK.PNG)
+![Navigation Generate signed APK](../images/GenerateSignedAPK.PNG)
 
 You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
