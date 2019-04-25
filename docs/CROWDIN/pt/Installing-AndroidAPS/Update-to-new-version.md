@@ -1,5 +1,7 @@
 # Update to a new version or branch
 
+<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>
+
 ## Install git (if you don't have it)
 
 * Any git version should work. For example <https://git-scm.com/download/win>
