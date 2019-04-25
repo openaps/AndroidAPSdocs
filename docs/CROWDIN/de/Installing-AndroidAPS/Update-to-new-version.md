@@ -1,5 +1,7 @@
 # Update auf eine neue Version oder branch
 
+<font color="#FF0000"><b>Wichtiger Hinweis: Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.</font></b>
+
 ## Installiere git (falls du es noch nicht hast)
 
 * Jede git Version sollte funktionieren. Beispiel: <https://git-scm.com/download/win>
