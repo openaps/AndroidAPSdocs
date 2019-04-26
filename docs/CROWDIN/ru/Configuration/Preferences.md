@@ -23,9 +23,9 @@
 
 ## Безопасность назначений
 
-### Max allowed bolus [U]
+### Макс разрешенный болюс [U] ед
 
-This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
+Это максимальное количество болюсного инсулина, разрешаемое к подаче в AAPS. Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя. Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству болюсного инсулина, который вы когда-либо можете подать на еду или на коррекцию. Это ограничение также налагается на результаты калькулятора болюса.
 
 ### Max allowed carbs [g]
 
