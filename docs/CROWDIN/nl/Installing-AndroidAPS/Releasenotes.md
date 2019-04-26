@@ -1,5 +1,7 @@
 # Release opmerkingen
 
+Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md).
+
 ## Version 2.3
 
 Release date: 25-04-2019
