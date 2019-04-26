@@ -1,8 +1,10 @@
 # Release notes
 
+Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md).
+
 ## Version 2.3
 
-Erscheinungsdatum: 25.04.2019
+Release date: 25-04-2019
 
 ### Wichtige neue Funktionen
 
@@ -18,7 +20,7 @@ Erscheinungsdatum: 25.04.2019
 
 ## Version 2.2.2
 
-Erscheinungsdatum: 07.04.2019
+Release date: 07-04-2019
 
 ### Wichtige neue Funktionen
 
@@ -29,7 +31,7 @@ Erscheinungsdatum: 07.04.2019
 
 ## Version 2.2
 
-Erscheinungsdatum: 29.03.2019
+Release date: 29-03-2019
 
 ### Wichtige neue Funktionen
 
@@ -41,7 +43,7 @@ Erscheinungsdatum: 29.03.2019
 
 ## Version 2.1
 
-Erscheinungsdatum: 03.03.2019
+Release date: 03-03-2019
 
 ### Wichtige neue Funktionen
 
@@ -60,7 +62,7 @@ Erscheinungsdatum: 03.03.2019
 
 ## Version 2.0
 
-Erscheinungsdatum: 03.11.2018
+Release date: 03-11-2018
 
 ### Wichtige neue Funktionen
 
