@@ -109,7 +109,7 @@ Utilização
    Jelly Pro - battery life optimization <./Usage/jelly.md>
    Automation <./Usage/automation.md>
 
-Onde ir para ajuda 
+Onde ir para obter ajuda 
 ------------
 .. toctree::
    :maxdepth: 1
