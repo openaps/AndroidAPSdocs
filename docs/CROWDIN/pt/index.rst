@@ -134,4 +134,4 @@ Como ajudar
 
    Como ajudar <./Getting-Started/How-can-help.md>
    How to translate the app <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   Como editar a wiki <./make-a-PR>
