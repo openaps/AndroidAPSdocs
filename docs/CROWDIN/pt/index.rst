@@ -95,7 +95,7 @@ Utilização
     
    Objectivos <./Usage/Objectives.md>
    OpenAPS features <./Usage/Open-APS-features.md>
-   Trocal de Perfil <./Usage/Profiles.md>
+   Troca de Perfil <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>
    SMS commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
