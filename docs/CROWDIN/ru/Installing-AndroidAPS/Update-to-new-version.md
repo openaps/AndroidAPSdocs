@@ -88,7 +88,7 @@ If you receive failure message like
 ### Option 2
 
 * Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in AndroidAPS (lower left side of AndroidAPS window) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
+* Switch to Terminal in Android Studio (lower left side of Android Studio window) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
 
 * Paste copied text and press return ![GIT checkout success](../images/GIT_TerminalCheckOut2.jpg)
 
@@ -117,7 +117,7 @@ If non of the above tips helped you might consider building the app from scratch
 2. Have your key password and key store password ready In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
 3. Note down the path to your key store In Android Studio Build -> Generate Signed APK ![Key store path](../images/KeystorePath.PNG)
     
-    4. Build app from scratch as described [here](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Use existing key and keystore.
+    4. Build app from scratch as described [here](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Use existing key and key store.
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
 
@@ -126,3 +126,5 @@ If non of the above tips helped you might consider building the app from scratch
 In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
 Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+
+Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio).
