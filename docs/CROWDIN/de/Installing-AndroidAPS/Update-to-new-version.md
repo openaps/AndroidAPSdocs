@@ -88,7 +88,7 @@ Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
 ### Option 2
 
 * Kopiere 'git checkout --' in die Zwischenablage (ohne die Anführungszeichen)
-* Wechsle zum Terminal in Android Studio (linke untere Seite des Android Studio-Fensters) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
+* Switch to Terminal in Android Studio (lower left side of Android Studio window) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
 
 * Fügen den Text aus der Zwischenablage ein und drücke Return![GIT checkout erfolgreich](../images/GIT_TerminalCheckOut2.jpg)
 
@@ -117,7 +117,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 2. Halte Dein key password und key store password bereit. Falls Du diese vergessen haben solltest, kannst Du sie evtl. wie [hier](https://youtu.be/nS3wxnLgZOo) beschrieben herausfinden.
 3. Notiere Dir den key store path. In Android Studio Build -> Generate Signed APK ![Key store path](../images/KeystorePath.PNG)
     
-    4. Erstelle die App von Grund auf neu wie [hier](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components) beschrieben. Verwende dabei den bestehenden key und key store.
+    4. Erstelle die App von Grund auf neu wie [hier](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components) beschrieben. Use existing key and key store.
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
 
@@ -126,3 +126,5 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, könntest Du versuchen, Android Studio komplett neu zu installieren. Einige Benutzer berichteten, dass dies ihr Problem gelöst hat.
 
 Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. Anleitungen dazu findest Du online z.B. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+
+Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio).
