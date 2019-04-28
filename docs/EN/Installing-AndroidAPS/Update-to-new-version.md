@@ -9,7 +9,9 @@
 
    ![Git installation path](../images/Update_GitPath.png)
 
-  <i>On a Mac use homebrew to install git: $ brew install git</i>.
+  On a Mac use homebrew to install git: ```$ brew install git```.
+  
+  For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 * Let Studio know where is git.exe located: File - Settings <i>(Mac: File - Preferences)</i>
 
