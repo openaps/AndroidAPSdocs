@@ -236,17 +236,15 @@ A file manager window opens. It might look a bit different on your system as I a
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload or email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
 In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
 
-![Screenshot 49](../images/Installation_Screenshot_49.png)
-
 Select "Allow from this source". After the installation, you can disable it again.
 
-![Screenshot 50](../images/Installation_Screenshot_50.png)
+![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
 
 The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
 
