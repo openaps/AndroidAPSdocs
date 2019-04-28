@@ -14,9 +14,12 @@
    ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
 * In the next window: Version Control - Git
+
+* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
+
 * Make sure update method "Merge" is selected.
 
-   ![Android Studio - GIT path](../images/Update_GitSettings2.png)
+   ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
 
 
 ## Update your local copy
@@ -45,16 +48,88 @@ and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not ava
 
 On the tray you'll see green message about updated project
 
+## Generate signed APK
+<!--- Text is maintained in page building-apk.md --->
+In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)<br>
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
-## Generate APK & upload to phone
+![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
-Generate signed apk as described in [Building APK (Generate signed APK)](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
+In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
 
-![Navigation Generate signed APK](../images/GenerateSignedAPK.PNG)
+![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+
+Select "app" and click "Next".
+
+![Screenshot 40](../images/Installation_Screenshot_40.png)
+
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+
+![Screenshot 41](../images/Installation_Screenshot_41.png)
+
+* Fill in the information for the next dialog.
+  * Key store path: is the path to the keystore file
+  * The password fields below are for the keystore to double check for typing errors.
+  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
+  * The password fields below the key are for the key itself. As always to double check for typing errors.
+  * You can let the validity at the default of 25 years.
+  * You only have to fill out first name and last name but feel free to complete the rest of information.
+Then click "OK".
+
+![Screenshot 42](../images/Installation_Screenshot_42.png)
+
+Fill in the information of the last dialog in this dialog and click "Next".
+
+![Screenshot 43](../images/Installation_Screenshot_43.png)
+
+Select "full" as flavour for the generated app.
+Select V1 "Jar Signature" (V2 is optional) and click "Finish".
+The following information might be important for later use.
+* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
+* Select the build type you want to build. 
+  * full (i.e. recommendations automatically enacted in closed looping)
+  * openloop (i.e. recommendations given to user to manually enact)
+  * pumpcontrol (i.e. remote control for pump, no looping)
+  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+
+![Screenshot 44](../images/Installation_Screenshot_44.png)
+
+In the event log you see that the Signed APK was generated successfully.
+
+![Screenshot 45](../images/Installation_Screenshot_45.png)
+
+Click the "locate" link in the event log.
+
+![Screenshot 46](../images/Installation_Screenshot_46.png)
+
+
+## Transfer APK to smartphone
+<!--- Text is maintained in page building-apk.md --->
+A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+
+![Screenshot 47](../images/Installation_Screenshot_47.png)
+
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+
+![Screenshot 48](../images/Installation_Screenshot_48.png)
+
+In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+
+Select "Allow from this source". After the installation, you can disable it again.
+
+![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
+
+The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
+
+Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+
+
+## Check AAPS version on phone
 
 You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
 ![AAPS version installed](../images/Update_VersionCheck.png)
+
 
 # Troubleshooting
 
