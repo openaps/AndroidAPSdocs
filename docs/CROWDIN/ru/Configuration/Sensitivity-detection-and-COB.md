@@ -33,10 +33,10 @@
 
 Oref0 / Oref1 - неусвоенные углеводы отбрасываются после установленного времени
 
-![COB from oref0](../images/cob_oref0.png)
+![Активные углеводы COB из oref0](../images/cob_oref0.png)
 
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
+Средневзвешенное усвоение AAPS рассчитывается исходя из `COB == 0` после установленного времени
 
-![COB from AAPS](../images/cob_aaps.png)
+![Активные углеводы COB из AAPS](../images/cob_aaps.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
+Если используется минимальное усвоение вместо значения, рассчитанного на основе отклонений, на графике активных углеводов COB появится зеленая точка
