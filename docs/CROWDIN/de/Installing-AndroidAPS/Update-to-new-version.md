@@ -53,76 +53,76 @@ Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um a
 
 ![Installierte AAPS version](../images/Update_VersionCheck.png)
 
-# Troubleshooting
+# Problembehandlung
 
-## Kotlin compiler warning
+## Kotlin Compiler Warnung
 
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
+Wenn der Build erfolgreich abgeschlossen wurde, Du aber eine Warnung des 'Kotlin Compilers' erhälst, so kannst Du diese ignorieren.
 
-App was build successfully and can be transferred to phone.
+Die App wurde erfolgreich erstellt und kann auf das Smartphone übertragen werden.
 
-![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
+![ignoriere Kotline Compiler Warnung](../images/GIT_WarningIgnore.PNG)
 
 ## Could not download… / Offline Work
 
-If you get a failure message like this
+Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
 
 ![Warning could not download](../images/GIT_Offline1.jpg)
 
-make sure that ‘Offline work’ is disabled.
+stelle sicher, dass 'offline work' deaktiviert ist.
 
 File -> Settings
 
-![Settings offline work](../images/GIT_Offline2.jpg)
+![Einstellungen offline work](../images/GIT_Offline2.jpg)
 
 ## Uncommitted changes
 
-If you receive failure message like
+Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
 
-![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+![Fehler uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Option 1
 
-* In Android APS select VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
+* Wähle in Android APS den Menüeintrag VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
 
 ### Option 2
 
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in AndroidAPS (lower left side of AndroidAPS window) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
+* Kopiere 'git checkout --' in die Zwischenablage (ohne die Anführungszeichen)
+* Wechsle zum Terminal in Android Studio (linke untere Seite des Android Studio-Fensters) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
 
-* Paste copied text and press return ![GIT checkout success](../images/GIT_TerminalCheckOut2.jpg)
+* Fügen den Text aus der Zwischenablage ein und drücke Return![GIT checkout erfolgreich](../images/GIT_TerminalCheckOut2.jpg)
 
 ## App not installed
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps: 
-    1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-    2. Uninstall AAPS on your phone.
-    3. Enable airplane mode & turn off bluetooth.
-    4. Install new version (“app-full-release.apk”)
-    5. [Import settings](../Usage/Objectives#export-import-settings)
-    6. Turn bluetooth back on and disable airplane mode
+* Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
+* Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor: 
+    1. [Exportiere die Einstellungen](../Usage/Objectives#export-import-settings) (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
+    2. Deintalliere AAPS auf Deinem Smartphone.
+    3. Aktiviere den Flugmodus & schalte Bluetooth aus.
+    4. Installiere die neue Version ("app-full-release.apk").
+    5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
+    6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
 
-## App installed but old version
+## App installiert, aber weiter die alte Version auf dem Smartphone
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
+Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich den Schritt 'Merge' in der [Update Anleitung](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github) übersprungen.
 
-## None of the above worked
+## Keiner der oben genannten Löungsvorschläge funktioniert
 
-If non of the above tips helped you might consider building the app from scratch:
+Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
 
-1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
-3. Note down the path to your key store In Android Studio Build -> Generate Signed APK ![Key store path](../images/KeystorePath.PNG)
+1. [Exportiere die Einstellungen](../Usage/Objectives#export-import-settings) (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
+2. Halte Dein key password und key store password bereit. Falls Du diese vergessen haben solltest, kannst Du sie evtl. wie [hier](https://youtu.be/nS3wxnLgZOo) beschrieben herausfinden.
+3. Notiere Dir den key store path. In Android Studio Build -> Generate Signed APK ![Key store path](../images/KeystorePath.PNG)
     
-    4. Build app from scratch as described [here](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Use existing key and keystore.
-4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
+    4. Erstelle die App von Grund auf neu wie [hier](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components) beschrieben. Verwende dabei den bestehenden key und key store.
+4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
 
 ## Worst case scenario
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, könntest Du versuchen, Android Studio komplett neu zu installieren. Einige Benutzer berichteten, dass dies ihr Problem gelöst hat.
 
-Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. Anleitungen dazu findest Du online z.B. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
