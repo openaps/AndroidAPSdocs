@@ -178,6 +178,12 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
+ <td>LGS</td>
+ <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td><a href="../Usage/Objectives.html">objective 4</a></td>
+ <td>&nbsp;</td>
+</tr>
+<tr>
  <td>LineageOS</td>
  <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
  <td>&nbsp;</td>
@@ -220,7 +226,7 @@
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
- <td>NS Client</td>
+ <td>Клиент Nightscout</td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
@@ -244,7 +250,7 @@
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
- <td>Open Loop</td>
+ <td>Открытый цикл</td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
  <td>Замкнутый цикл</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
