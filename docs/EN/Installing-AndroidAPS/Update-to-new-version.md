@@ -9,7 +9,9 @@
 
    ![Git installation path](../images/Update_GitPath.png)
 
-* Let Studio know where is git.exe located: File - Settings 
+  <i>On a Mac use homebrew to install git: $ brew install git</i>.
+
+* Let Studio know where is git.exe located: File - Settings <i>(Mac: File - Preferences)</i>
 
    ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
@@ -63,24 +65,13 @@ Select "app" and click "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Enter your key store path, enter key store password, select key alias and enter key password. 
 
-![Screenshot 41](../images/Installation_Screenshot_41.png)
+Select 'Remember passwords'.
 
-* Fill in the information for the next dialog.
-  * Key store path: is the path to the keystore file
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
-  * You can let the validity at the default of 25 years.
-  * You only have to fill out first name and last name but feel free to complete the rest of information.
-Then click "OK".
+Then click next.
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
-
-Fill in the information of the last dialog in this dialog and click "Next".
-
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+![Key store path](../images/KeystorePathUpdate.PNG)
 
 Select "full" as flavour for the generated app.
 Select V1 "Jar Signature" (V2 is optional) and click "Finish".
