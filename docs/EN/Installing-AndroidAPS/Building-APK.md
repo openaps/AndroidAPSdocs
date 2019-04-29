@@ -163,7 +163,7 @@ Yeah, the error messages are gone and the first gradle build is runing. Maybe it
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
 <!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. --->
-Android Studio recommends we now update the gradle system. It is not recommended to upgrade. Some users have had difficulties after performing the gradle update. This also applies to AAPS versions 2.0 and above.
+Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
 Please click "Remind me tomorrow".
 
