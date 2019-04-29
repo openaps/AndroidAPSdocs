@@ -1,20 +1,20 @@
 # Release notes
 
-Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
+Eine Schritt-für-Schritt-Anleitung des Updates findest Du [hier](../Installing-AndroidAPS/Update-to-new-version.md). Auf dieser Seite gibt es auch einen Abschnitt mit möglichen Schwierigkeiten und Lösungsansätzen.
 
-Starting with version 2.3 a new update procedure is established. You will receive the following information as soon as a new update is available:
+Mit Version 2.3 wurde ein neues Update-Verfahren eingeführt. Folgende Information wird angezeigt, so bald ein neues Update zur Verfügung steht:
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+![Update-Info](../images/AAPS_LoopDisable90days.png)
 
-Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 4](../Usage/Objectives.md).
+Dann hast Du 60 Tage Zeit, das Update durchzuführen. Wenn Du nicht innerhalb dieser 60 Tage updatest, wird AndroidAPS in den LGS-Modus (Reduzierung der Baslarate bei niedrigen Glukosewerten, keine korrektur zu hoher BZ-Werte - siehe [Glossar](../Getting-Started/Glossary.md)) wie im [Objective 4](../Usage/Objectives.md) zurückgesetzt.
 
-If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
+Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualisierst, wird AAPS auf Open Loop wechseln.
 
-Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
+Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
 ## Version 2.3
 
-Release date: 25-04-2019
+Erscheinungsdatum: 25.04.2019
 
 ### Wichtige neue Funktionen
 
@@ -30,7 +30,7 @@ Release date: 25-04-2019
 
 ## Version 2.2.2
 
-Release date: 07-04-2019
+Erscheinungsdatum: 07.04.2019
 
 ### Wichtige neue Funktionen
 
@@ -41,7 +41,7 @@ Release date: 07-04-2019
 
 ## Version 2.2
 
-Release date: 29-03-2019
+Erscheinungsdatum: 29.03.2019
 
 ### Wichtige neue Funktionen
 
@@ -53,7 +53,7 @@ Release date: 29-03-2019
 
 ## Version 2.1
 
-Release date: 03-03-2019
+Erscheinungsdatum: 03.03.2019
 
 ### Wichtige neue Funktionen
 
@@ -72,7 +72,7 @@ Release date: 03-03-2019
 
 ## Version 2.0
 
-Release date: 03-11-2018
+Erscheinungsdatum: 03.11.2018
 
 ### Wichtige neue Funktionen
 
