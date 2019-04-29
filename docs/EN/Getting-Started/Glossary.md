@@ -91,14 +91,12 @@
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
-
 <tr>
  <td>CAN</td>
  <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
 </tr>
-
 <tr>
  <td>CGM</td>
  <td>continuous glucose monitor</td>
@@ -272,6 +270,12 @@
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+</tr>
+<tr>
+ <td>PH</td>
+ <td>pump history (entry in treatments tab)</td>
+ <td>&nbsp;</td>
+ <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
 </tr>
 <tr>
  <td>Predictions</td>
