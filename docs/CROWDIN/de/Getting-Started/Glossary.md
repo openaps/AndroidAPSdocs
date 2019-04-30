@@ -90,7 +90,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>abbrechen</td>
+ <td>basal rate</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -168,7 +168,7 @@
 </tr>
 <tr>
  <td>Heroku</td>
- <td>Cloud Computing-Plattform zum Hosten der Nightscout-Daten</td>
+ <td>cloud computing platform to host Nightscout data</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
