@@ -96,13 +96,6 @@ Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for 
 
 ***
 
-### Tandem t:AP 
-
-**Loop status:** Is a Loop candidate. 
-
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
-
-**NOTE:** This pump was mentioned in following [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), but I am not sure, if this is just t:slim with modified Firmware, or is this a new pump. So far I go no confirmation either way from writer of article, or from Tandem itself.
 
 ## Pumps no longer sold (companies no longer operating)
 
@@ -118,9 +111,11 @@ Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for 
 ## Pumps that aren't Loopable
 
 
-### Tandem:X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
 
-**Loop status:** Not loopable (I am not 100% sure about this info), but they are planning to release different pump that will have remote control (at least bolus). 
+**Loop status:** Not loopable. 
+
+While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu). 
 
 
 ***
