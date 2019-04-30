@@ -161,36 +161,42 @@ Yeah, the error messages are gone and the first gradle build is runing. Maybe it
 
 ![Captura de ecrã 31](../images/Installation_Screenshot_31.png)
 
-Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. Please click "Remind me tomorrow".
+<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. ---> Android Studio recommends to update the gradle system. 
 
-![Captura de ecrã 32](../images/Installation_Screenshot_32.png)
+**Never update gradle!** This might lead to difficulties!
+
+Please click "Don't remind me again for this project".
+
+![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
 The build is running again.
 
-![Captura de ecrã 33](../images/Installation_Screenshot_33.png)
+![Screenshot 33](../images/Installation_Screenshot_33.png)
 
 Yeah, the first build is successful but we are not finished.
 
-![Captura de ecrã 34](../images/Installation_Screenshot_34.png)
+![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 ## Generate signed APK
+
+<!--- Do not forget to copy to update-to-new-version.md --->
 
 In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
-![Captura de ecrã 39a](../images/Installation_Screenshot_39a.PNG)
+![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
 In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
 
-![Captura de ecrã 39b](../images/Installation_Screenshot_39b.PNG)
+![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
 
 Select "app" and click "Next".
 
-![Captura de ecrã 40](../images/Installation_Screenshot_40.png)
+![Screenshot 40](../images/Installation_Screenshot_40.png)
 
 Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
-![Captura de ecrã 41](../images/Installation_Screenshot_41.png)
+![Screenshot 41](../images/Installation_Screenshot_41.png)
 
 * Fill in the information for the next dialog. 
   * Key store path: is the path to the keystore file
@@ -200,11 +206,11 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
   * You can let the validity at the default of 25 years.
   * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
 
-![Captura de ecrã 42](../images/Installation_Screenshot_42.png)
+![Screenshot 42](../images/Installation_Screenshot_42.png)
 
 Fill in the information of the last dialog in this dialog and click "Next".
 
-![Captura de ecrã 43](../images/Installation_Screenshot_43.png)
+![Screenshot 43](../images/Installation_Screenshot_43.png)
 
 Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
 
@@ -215,33 +221,33 @@ Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is
   * pumpcontrol (i.e. remote control for pump, no looping)
   * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
 
-![Captura de ecrã 44](../images/Installation_Screenshot_44.png)
+![Screenshot 44](../images/Installation_Screenshot_44.png)
 
 In the event log you see that the Signed APK was generated successfully.
 
-![Captura de ecrã 45](../images/Installation_Screenshot_45.png)
+![Screenshot 45](../images/Installation_Screenshot_45.png)
 
 Click the "locate" link in the event log.
 
-![Captura de ecrã 46](../images/Installation_Screenshot_46.png)
+![Screenshot 46](../images/Installation_Screenshot_46.png)
 
 ## Transfer APK to smartphone
 
+<!--- Do not forget to copy to update-to-new-version.md --->
+
 A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
-![Captura de ecrã 47](../images/Installation_Screenshot_47.png)
+![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload or email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 
-![Captura de ecrã 48](../images/Installation_Screenshot_48.png)
+![Screenshot 48](../images/Installation_Screenshot_48.png)
 
 In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
 
-![Captura de ecrã 49](../images/Installation_Screenshot_49.png)
-
 Select "Allow from this source". After the installation, you can disable it again.
 
-![Captura de ecrã 50](../images/Installation_Screenshot_50.png)
+![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
 
 The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
 
