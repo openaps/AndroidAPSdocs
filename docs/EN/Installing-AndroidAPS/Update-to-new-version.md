@@ -4,16 +4,14 @@
 
 ## Install git (if you don't have it)
 
+### Windows
+
 * Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win)
 * Make sure to note down the installation path. You will need it in the next step.
 
    ![Git installation path](../images/Update_GitPath.png)
 
-  On a Mac use homebrew to install git: ```$ brew install git```.
-  
-  For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-
-* Let Studio know where is git.exe located: File - Settings <i>(Mac: File - Preferences)</i>
+* Let Studio know where is git.exe located: File - Settings 
 
    ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
@@ -24,6 +22,13 @@
 * Make sure update method "Merge" is selected.
 
    ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win)
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
 
 ## Update your local copy
