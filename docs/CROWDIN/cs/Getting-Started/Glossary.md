@@ -53,6 +53,12 @@
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
+ <td>BAT</td>
+ <td>status light low battery on homescreen</td>
+ <td>CAN / RES / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+</tr>
+<tr>
  <td>BG</td>
  <td>blood glucose</td>
  <td>&nbsp;</td>
@@ -92,6 +98,13 @@
  <td>CAGE</td>
  <td>canula age - displayed in Nightscout if information was entered in the AAPS careportal tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>CAN</td>
+ <td>status light overdue canula change on homescreen</td>
+ <td>BAT / RES / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -268,6 +281,12 @@
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
 </tr>
 <tr>
+ <td>PH</td>
+ <td>pump history (entry in treatments tab)</td>
+ <td>&nbsp;</td>
+ <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Snímky obrazovky</a></td>
+</tr>
+<tr>
  <td>Predictions</td>
  <td>preditions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
@@ -286,6 +305,12 @@
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
 </tr>
 <tr>
+ <td>RES</td>
+ <td>status light overdue reservoir change on homescreen</td>
+ <td>BAT / CAN / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+</tr>
+<tr>
  <td>RileyLink</td>
  <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
  <td>OpenAPS</td>
@@ -296,6 +321,12 @@
  <td>sensor age - displayed in Nightscout if information was entered in the AAPS careportal tab</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>SEN</td>
+ <td>status light sensor change on homescreen</td>
+ <td>BAT / CAN / RES</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
 </tr>
 <tr>
  <td>Sensivity detection</td>
