@@ -53,22 +53,28 @@
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
+ <td>BAT</td>
+ <td>status light low battery on homescreen</td>
+ <td>CAN / RES / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+</tr>
+<tr>
  <td>BG</td>
- <td>bloed glucose</td>
+ <td>blood glucose</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
 <td>BGI</td>
- <td>Bloed Glucose Interactie -te verwachten BG stijging of daling, alleen op basis van de insuline activiteit</td>
+ <td>blood glucose interaction -degree to which BG 'should' be rising or falling based on insulin activity alone</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
 <td>BG bron</td>
- <td>Waar komen je glucosewaardes vandaan?</td>
- <td>CGM / FSL</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG bron</a></td>
+ <td>Where do your glucose values come from?</td>
+ <td>CGM / FGM</td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
 </tr>
 <tr>
  <td>BlueReader</td>
@@ -84,74 +90,81 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>basaalstand (Basal Rate)</td>
+ <td>basaalstand</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>CAGE</td>
- <td>infuus ouderdom (Canula age) - als je jouw infuuswissel hebt ingevoerd op het tabblad AAPS Careportal of via AAPS Acties tabblad 'prime', dan zal die info in Nightscout worden weergegeven als 'CAGE'</td>
+ <td>canula age - displayed in Nightscout if information was entered in the AAPS careportal tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>CAN</td>
+ <td>status light overdue canula change on homescreen</td>
+ <td>BAT / RES / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
- <td>Continue Glucose Monitor</td>
+ <td>continuous glucose monitor</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>Closed loop</td>
- <td>Closed loop (gesloten lus) systemen maken automatische aanpassingen aan de hoeveelheid toegediende insuline gebaseerd op een algoritme, zonder dat de gebruiker deze aanpassingen telkens hoeft te bevestigen</td>
+ <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
 </tr>
 <tr>
  <td>COB</td>
- <td>koolhydraten aan boord (Carbs On Board), oftewel koolhydraten die zijn opgenomen in het lichaam</td>
+ <td>carbs on board</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>DIA</td>
- <td>duur van insuline activiteit (Duration of Insulin Action)</td>
+ <td>duration of insulin action</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insuline soorten</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA (Engelstalig)</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>DST</td>
- <td>zomertijd (Daylight Savings Time)</td>
+ <td>daylight savings time</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>Vertraagde koolhydraten (extended Carbs) - koolhydraten die maar langzaam worden opgenomen (maaltijden met veel vet/eiwit).<br>Omdat de vertraagde bolus functie die je zou gebruiken bij reguliere pomptherapie weinig nut heeft bij het loopen, worden hier eCarbs gebruikt.</td>
+ <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki -vertraagde koolhydraten (eCarbs)</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs gebruiksvoorbeeld (Engelstalig)</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
- <td>FSL</td>
- <td>Freestyle Libre</td>
+ <td>FGM</td>
+ <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG bron</a></td>
+ <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG source</a></td>
 </tr>
 <tr>
  <td>git</td>
- <td>Versiebeheer systeem voor het bijhouden van veranderingen in computerbestanden. Zodat meerdere mensen tegelijk aan de broncode kunnen werken. <br>-> nodig voor APK updates</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - APK bijwerken</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - update APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>web-based hosting service voor versiebeheer met Git<br>-> opslag van broncode</td>
+ <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
- <td>app die glucosewaarden van Freestyle Libre ontvangt</td>
+ <td>app to collect values from Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout met Glimp</a> </td>
+ <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout with Glimp</a> </td>
 </tr>
 <tr>
  <td>Heroku</td>
@@ -160,20 +173,20 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td>KH ratio (IC of I:C in het Engels)</td>
- <td>koolhydraat ratio (Insulin to Carb ratio) -hoeveel koolhydraten kun je eten na het geven van één eenheid insuline?</td>
+ <td>IC (or I:C)</td>
+ <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>IOB</td>
- <td>insuline aan boord (Insulin On Board) - hoeveelheid actieve insuline in je lichaam</td>
+ <td>insulin on board -  insulin active in your body</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>ISF</td>
- <td>insuline gevoeligheidsfactor (Insulin Sensitivity Factor) - de verwachte daling in BG als gevolg van één eenheid van insuline</td>
+ <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -268,6 +281,12 @@
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
 </tr>
 <tr>
+ <td>PH</td>
+ <td>pump history (entry in treatments tab)</td>
+ <td>&nbsp;</td>
+ <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+</tr>
+<tr>
  <td>Predictions</td>
  <td>preditions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
@@ -286,6 +305,12 @@
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
 </tr>
 <tr>
+ <td>RES</td>
+ <td>status light overdue reservoir change on homescreen</td>
+ <td>BAT / CAN / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+</tr>
+<tr>
  <td>RileyLink</td>
  <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
  <td>OpenAPS</td>
@@ -296,6 +321,12 @@
  <td>sensor age - displayed in Nightscout if information was entered in the AAPS careportal tab</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>SEN</td>
+ <td>status light sensor change on homescreen</td>
+ <td>BAT / CAN / RES</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
 </tr>
 <tr>
  <td>Sensivity detection</td>
