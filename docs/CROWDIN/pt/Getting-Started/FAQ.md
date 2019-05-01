@@ -4,7 +4,17 @@ Como adicionar perguntas para o FAQ: Siga essas [instruções](../make-a-PR.md)
 
 ## Geral
 
-### Como começar?
+### Can I just download the AndroidAPS installation file?
+
+No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+
+AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+
+This regulation is not restricted to sales (in the meaning of getting money for somthing) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+
+That’s why apks aren’t available.
+
+### How to begin?
 
 First of all, you have to **get loopable hardware components**:
 
@@ -12,9 +22,9 @@ First of all, you have to **get loopable hardware components**:
 * um [smartphone Android](Phones.md) (O Apple iOS não é suportado pelo AndroidAPS - pode verificar [iOS Loop](https://loopkit.github.io/loopdocs/)) e 
 * um [sistema contínuo de monitorização de glucose ](../Configuration/BG-Source.md). 
 
-Em segundo lugar, você tem que **configurar o seu hardware**. Veja [o exemplo de configuração com tutorial passo a passo](Sample-Setup.md).
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
-Em terceiro lugar, tem que **configurar os seus componentes de software**: AndroidAPS e fonte CGM/FGM.
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
 Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one off adjustments (exercise, stress etc). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
 
@@ -51,7 +61,7 @@ You can fix it: There are getting sold upper arm braclets that fix the CGM/FGM w
 
 ## AndroidAPS settings
 
-### Algoritmo APS
+### APS algorithm
 
 #### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 
@@ -75,13 +85,13 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 ## Outras configurações
 
-### Configurações do Nightscout
+### Nightscout settings
 
 #### AndroidAPS NSClient says 'not allowed' and does not upload data. O que posso fazer?
 
 In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
-### Configurações CGM
+### CGM settings
 
 #### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
 
@@ -89,11 +99,11 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 
 ## Bomba
 
-### Onde colocar a bomba?
+### Where to place the pump?
 
 There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
 
-### Batterias
+### Batteries
 
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site. Tricks to increase battery life include:
 
@@ -106,7 +116,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 * for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
 * see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
-### Mudando de reservatórios e cânulas
+### Changing reservoirs and canulas
 
 The change of cartridge can not be done via AndroidAPS, but must be carried out as before directly via the pump.
 
@@ -132,7 +142,7 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 
 ## Sexo
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. O loop continuará automaticamente.
+You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
 
 ## Beber álcool
 
@@ -154,7 +164,7 @@ Many users turn the phone into airplane mode at night. If you want the loop to s
 2. Wait until the airplane mode is active.
 3. Ligar o Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. Mas o loop ainda está em execução.
+You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
 ## Viagem
 
@@ -168,6 +178,6 @@ If you want to share some information about AndroidAPS and DIY looping with your
 
 ## Medical appointment with your endocrinologist
 
-### A reportar
+### Reporting
 
 You can either show your nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/)
