@@ -50,7 +50,7 @@
   * Тех. обслуживание
   * Экспорт настроек
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![Экспорт настроек AAPS](../images/AAPS_ExportSettings.png)
 
 * **Перенос настроек** со старого на новый телефон
 

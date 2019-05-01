@@ -53,7 +53,46 @@ Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um a
 
 ![Installierte AAPS version](../images/Update_VersionCheck.png)
 
-## Problemlösungen
+# Problembehandlung
+
+## Kotlin Compiler Warnung
+
+Wenn der Build erfolgreich abgeschlossen wurde, Du aber eine Warnung des 'Kotlin Compilers' erhälst, so kannst Du diese ignorieren.
+
+Die App wurde erfolgreich erstellt und kann auf das Smartphone übertragen werden.
+
+![ignoriere Kotline Compiler Warnung](../images/GIT_WarningIgnore.PNG)
+
+## Could not download… / Offline Work
+
+Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
+
+![Warning could not download](../images/GIT_Offline1.jpg)
+
+stelle sicher, dass 'offline work' deaktiviert ist.
+
+File -> Settings
+
+![Einstellungen offline work](../images/GIT_Offline2.jpg)
+
+## Uncommitted changes
+
+Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
+
+![Fehler uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+
+### Option 1
+
+* Wähle in Android APS den Menüeintrag VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
+
+### Option 2
+
+* Kopiere 'git checkout --' in die Zwischenablage (ohne die Anführungszeichen)
+* Wechsle zum Terminal in Android Studio (linke untere Seite des Android Studio-Fensters) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
+
+* Fügen den Text aus der Zwischenablage ein und drücke Return![GIT checkout erfolgreich](../images/GIT_TerminalCheckOut2.jpg)
+
+## App not installed
 
 ![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
 
@@ -65,3 +104,27 @@ Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um a
     4. Installiere die neue Version ("app-full-release.apk").
     5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
     6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
+
+## App installiert, aber weiter die alte Version auf dem Smartphone
+
+Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich den Schritt 'Merge' in der [Update Anleitung](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github) übersprungen.
+
+## Keiner der oben genannten Löungsvorschläge funktioniert
+
+Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
+
+1. [Exportiere die Einstellungen](../Usage/Objectives#export-import-settings) (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
+2. Halte Dein key password und key store password bereit. Falls Du diese vergessen haben solltest, kannst Du sie evtl. wie [hier](https://youtu.be/nS3wxnLgZOo) beschrieben herausfinden.
+3. Notiere Dir den key store path. In Android Studio Build -> Generate Signed APK ![Key store path](../images/KeystorePath.PNG)
+    
+    4. Erstelle die App von Grund auf neu wie [hier](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components) beschrieben. Verwende dabei den bestehenden key und key store.
+4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
+5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
+
+## Worst case scenario
+
+Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, könntest Du versuchen, Android Studio komplett neu zu installieren. Einige Benutzer berichteten, dass dies ihr Problem gelöst hat.
+
+Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. Anleitungen dazu findest Du online z.B. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+
+Installiere Android Studio von Grund auf, wie [hier](/Installing-AndroidAPS/Building-APK#install-android-studio) beschrieben.

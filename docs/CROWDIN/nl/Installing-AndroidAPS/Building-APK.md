@@ -162,34 +162,40 @@ Jippie! De foutmeldingen zijn voorbij en je bent begonnen. Misschien tijd om wat
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-Android Studio raad nu aan dat je de "Gradle Plugin" zult updaten naar versie 4.4. Wanneer je een oudere versie van AndroidAPS wilt bouwen (ouder dan een release candidate (RC) voor versie 2.0) dan sla je deze update over, door op "Remind me tomorrow" te klikken. Anders kun je de app niet succesvol bouwen. "Gradle" is een onderdeel van Android Studio dat het bouwen controleert. Voor AndroidAPS is het geen probleem om de oude versie van Gradle te gebruiken. De uiteindelijke APK zal niet anders zijn. Wanneer je AndroidAPS versie 2.0 of hoger wilt bouwen, dan kun je wel naar 4.4 updaten, klik op "Update".
+<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. ---> Android Studio recommends to update the gradle system. 
 
-![Screenshot 32](../images/Installation_Screenshot_32.png)
+**Never update gradle!** This might lead to difficulties!
 
-Hij gaat verder met bouwen...
+Please click "Don't remind me again for this project".
+
+![Screenshot 32](../images/AS_NoGradleUpdate.png)
+
+The build is running again.
 
 ![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-Mooi, je hebt nu jouw eerste app "Build finished" (bouw afgerond). Maar we zijn nog niet klaar.
+Yeah, the first build is successful but we are not finished.
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 ## Bouwen van de ondertekende APK
 
-Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In oudere versies selecteerde je in het menu "Build" en vervolgens "Generate Signed APK...”.)  
-Ondertekenen betekent dat je de door jou gemaakte app ondertekent. Dit is een soort digitale vingerafdruk in de app zelf. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
+<!--- Do not forget to copy to update-to-new-version.md --->
+
+In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
-In het volgende dialoogvenster selecteer je "APK" in plaats van "Android App Bundle" en klik op "Volgende".
+In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
 
 ![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
 
-Selecteer "App" en klik op "Next".
+Select "app" and click "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Klik op "Create new..." (maak nieuwe...) om jouw eigen key store (digitale handtekening) te maken. Een key store is een bestandje waarin de informatie van jouw handtekening is opgeslagen. Het bestandje is versleuteld en beveiligd met een wachtwoord. We raden aan om het op te slaan in jouw eigen map op je computer en om het wachtwoord goed te onthouden. Maar mocht je het bestandje of jouw wachtwoord kwijtraken dan is dat geen groot probleem, je moet dan gewoon een nieuwe maken. Het is goed om deze informatie zorgvuldig te bewaren.
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -203,11 +209,11 @@ Klik op "Create new..." (maak nieuwe...) om jouw eigen key store (digitale handt
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Vul de informatie in van jouw handtekening die je zojuist hebt aangemaakt in het volgende venster en klik op "Next".
+Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
+Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
 
 * 'Release' is wat je hoort te kiezen als "Build Type", 'Debug' is alleen voor programmeurs, om fouten op te sporen.
 * Kies de "Flavour" die je wilt bouwen: 
@@ -218,31 +224,31 @@ Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
-In het Event Log kun je zien dat de Signed APK (ondertekende APK) succesvol is gebouwd.
+In the event log you see that the Signed APK was generated successfully.
 
 ![Screenshot 45](../images/Installation_Screenshot_45.png)
 
-Klik op de "locate" link in het Event Log om hem de map te laten weergeven waar de APK file staat.
+Click the "locate" link in the event log.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
 ## Overzetten van de APK naar je telefoon
 
-Een Verkenner venster zal openen. Het kan dat het er iets anders uitziet, dit screenshot is met een Linux computer gemaakt. In Windows zal de "Verkenner" openen, op een Mac OS X de "Finder" Hier zul je de locatie zien waar de APK te vinden is. Helaas is dit de verkeerde locatie, omdat "wear-release.apk" niet de ondertekende app die we zoeken.
+<!--- Do not forget to copy to update-to-new-version.md --->
+
+A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Om de juiste locatie te openen, ga naar de map met AndroidAPS/app/full/release om het bestand "app-full-release.apk" te vinden. Zet dit bestand op jouw Android telefoon. Dit kan op verschillende manieren, kies wat jij wilt (Bluetooth, cloud upload, email). Of gewoon met een USB kabeltje. In dit voorbeeld wordt Gmail gebruikt. Om de zelf-ondertekende app te kunnen installeren, moet je Android hiervoor toestemming geven ookal is dit bestand via Gmail ontvangen, wat normaal gesproken niet toegestaan is. Als je een andere manier gebruikt om de APK over te zetten op je telefoon, geef dan de toestemmingen waar hij naar vraagt zodat je verder kunt.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
-In de instellingen van je telefoon is een optie om "Apps uit onbekende bronnen" toestemming te geven om te kunnen installeren. Daar moet je Gmail (in dit voorbeeld) toestemming geven om de APK te installeren.
-
-![Screenshot 49](../images/Installation_Screenshot_49.png)
+In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
 
 Selecteer "Toestaan van deze bron". Nadat je klaar bent met installeren, wordt het aanbevolen om de instellingen weer terug te zetten op "niet toestaan".
 
-![Screenshot 50](../images/Installation_Screenshot_50.png)
+![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
 
 De laatste stap is om op het APK bestand te tikken en de app te installeren. Als hij niet uit zichzelf installeert en je hebt een vorige versie van AndroidAPS op je telefoon staan die met een andere handtekening is ondertekend, dan moet je die versie van de app eerst verwijderen. Vergeet niet om eerst je instellingen van die versie te exporteren vóórdat je de app verwijdert!
 

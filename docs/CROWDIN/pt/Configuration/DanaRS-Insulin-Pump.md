@@ -29,7 +29,7 @@
 
 ## Dana RS specific errors
 
-### Error during insulin delivery
+### Erro durante a entrega de insulina
 
 In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 

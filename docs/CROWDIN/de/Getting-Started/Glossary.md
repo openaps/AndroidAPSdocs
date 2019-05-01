@@ -53,6 +53,12 @@
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
+ <td>BAT</td>
+ <td>Statusanzeige niedriger Batteriestand auf dem Startbildschirm</td>
+ <td>CAN / RES / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+</tr>
+<tr>
  <td>BZ</td>
  <td>Blutzucker</td>
  <td>&nbsp;</td>
@@ -92,6 +98,13 @@
  <td>CAGE</td>
  <td>Kanülenalter (canula age) - Wird in Nightscout angezeigt, wenn die Information in AAPS im Careportal Tab oder durch AAPS Tab Aktionen -> Vorfüllen/Füllen eingetragen wurde.</td>
  <td>Nightscout</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>CAN</td>
+ <td>Statusanzeige Kanülenwechsel auf dem Startbildschirm</td>
+ <td>BAT / RES / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -178,6 +191,12 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
+ <td>LGS</td>
+ <td>Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)<br>AAPS wird die Basalrate reduzieren, wenn die BZ-Werte zu stark sinken. Wenn die BZ-Werte aber steigen, wird AAPS die Basalrate nur dann erhöhen, wenn negatives Insulin on board (von einer vorangegangenen Basalratenreduzierung) ist. Sonst bleibt die Basalrate wie in Deinem Profil eingestellt. Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.</td>
+ <td><a href="../Usage/Objectives.html">Ziel 4</a></td>
+ <td>&nbsp;</td>
+</tr>
+<tr>
  <td>LineageOS</td>
  <td>freies OpenSource Betriebssystem für Smartphones und andere Geräte<br>alternatives Betriebssystem für Smartphones, auf denen Android 8.1 (Oreo) nicht betrieben werden kann<br>(bei Benutzung der Accu-Chek Combo)</td>
  <td>&nbsp;</td>
@@ -197,7 +216,7 @@
 </tr>
 <tr>
  <td>maxIOB</td>
- <td>Sicherheitsfunktion - Wert für maximales aktives Insulin im Körper, der von AAPS nicht überschritten werden kann</td>
+ <td>safety feature - maximum total IOB AAPS can't go over</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
@@ -262,6 +281,12 @@
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Konfigurations-Generator</a></td>
 </tr>
 <tr>
+ <td>PH</td>
+ <td>Pumpenhistorie (Eintrag im Behandlungs-Tab)</td>
+ <td>&nbsp;</td>
+ <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+</tr>
+<tr>
  <td>Predictions (Vorhersagen)</td>
  <td>Vorhersage der BZ-Werte basierend auf verschiedenen Berechnungsannahmen</td>
  <td>&nbsp;</td>
@@ -280,6 +305,12 @@
  <td><a href="../Usage/Profiles.html">Wiki - Profil Wechsel</a></td>
 </tr>
 <tr>
+ <td>RES</td>
+ <td>Statusanzeige Reservoirwechsel auf dem Startbildschirm</td>
+ <td>BAT / CAN / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+</tr>
+<tr>
  <td>RileyLink</td>
  <td>Open Source Hardware zur Umwandlung von Bluetooth Low Energy (BLE) in 916 MHz Funksignale (wird für ältere Medtronic-Pumpen verwendet)</td>
  <td>OpenAPS</td>
@@ -290,6 +321,12 @@
  <td>Sensoralter (sensor age) - Wird in Nightscout angezeigt, wenn die Information in AAPS im Careportal Tab eingetragen wurde.</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>SEN</td>
+ <td>Statusanzeige Sensorwechsel auf dem Startbildschirm</td>
+ <td>BAT / CAN / RES</td>
+ <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>Sensitivitätserkennung</td>

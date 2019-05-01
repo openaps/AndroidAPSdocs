@@ -1,59 +1,59 @@
-# Watchfaces
+# Циферблаты смарт-часов
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
+AndroidAPS предусматривает возможность *управления* часами Android Wear. Если вы хотите иметь возможность давать болюс с часов, тогда в настройках часов Wear следует включить «Управление с часов».
 
-The following functions can be triggered from the watch:
+Следующие функции могут быть запущены с часов:
 
-* set a temporary target
-* administer a bolus
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md?highlight=tdd#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* установить временные целевые значения СК
+* подать болюс
+* использовать калькулятор болюса (переменные расчета могут быть определены в [настройках](../Configuration/Config-Builder.md?highlight=tdd#wear) на телефоне)
+* проверить работу алгоритма цикла и помпы
+* показать TDD (Общая суточная доза = болюс + базал в день)
 
-To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping). Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder#wear).
+Для этого необходимо выбрать вариант сборки "fullRelease" при [построении приложения APK](../Installing-AndroidAPS/Building-APK.md) (или "pumpRelease", который позволяет просто дистанционно управлять помпой без активации цикла). В конфигураторе AndroidAPS при этом нужно [активировать Wear](../Configuration/Config-Builder#wear).
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
 
-![AndroidAPSv2 watchface](../images/AAPSv2_Watchface.png)
+![Циферблат AndroidAPSv2](../images/AAPSv2_Watchface.png)
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Убедитесь, что уведомления от AndroidAPS не заблокированы на часах. Подтверждение действия (например, болюс, временные цели) происходит через уведомления, которые нужно сдвинуть в сторону и нажать на галочку.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Чтобы быстрее попасть в меню AAPS, сделайте двойное нажатие на ГК. При двойном нажатии на кривую ГК можно изменить масштаб времени..
 
-## Troubleshooting the wear app:
+## Устранение неполадок в приложении Wear:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* На Android Wear 2.0 экран часов больше не устанавливается сам собой. Вам нужно зайти в playstore - циферблаты для часов (не путать с Play Market для телефона), и найти его в категории приложений установленных на вашем телефоне, откуда вы можете его активировать. Также включите автообновление. 
+* Иногда помогает повторная синхронизация приложений с часами, поскольку этот процесс иногда затягивается: Android Wear > значок шестеренки > наименование часов > повторная синхронизация часов.
+* Включите отладку ADB в настройках разработчика (на часах), подключите часы через USB к компьютеру и запустите приложение Wear в Android Studio.
 
 ## Legend AndroidAPSv2 watchface
 
-![Legend AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
+![Циферблат Легенда AndroidAPSv2](../images/AAPSv2_Watchface_legend.png)
 
-A - time since last loop run
+О - время с запуска последнего цикла
 
-B - CGM reading
+B - данные ГК мониторинга
 
-C - minutes since last CGM reading
+C - минуты с последнего получения данных ГК
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - изменение по сравнению с последним полученным значением ГК (в mmol или mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - среднее изменение данных ГК за последние 15 минут
 
-F - phone battery
+F - состояние аккумулятора телефона
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - скорость подачи базала (в ед/ч во время стандартной подачи и в % при временном базале TBR)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (взаимодействие с глюкозой крови) -> Степень, с которой ГК “должна” расти или падать, основываясь только на активности инсулина (без учета других факторов).
 
-I - carbs (carbs on board | e-carbs in the future)
+I - углеводы (активные углеводы | e-carb в будущем)
 
-J - insulin on board (from bolus | from basal)
+J - активный инсулин (от болюсов | от базала)
 
-## View Nightscout data
+## Просмотр данных Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Если вы используете другую систему цикла (не AAPS) и хотите *просмотреть* детали работы контура на часах Android Wear, или хотите посмотреть работу контура вашего ребенка, то можете построить/загрузить только NSClient APK. Для этого перейдите по ссылке [инструкции по созданию APK ](../Installing-AndroidAPS/Building-APK.md) выбрав вариант сборки "NSClientRelease". Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
 
-## Pebble
+## Смарт-часы Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Пользователи Pebble могут пользоваться [циферблатом Urchin](https://github.com/mddub/urchin-cgm) для *просмотра* данных цикла (если они загружаются на сайт Nightscout), но не смогут взаимодействовать с AndroidAPS через часы. Вы можете выбрать поля для отображения, такие как активный инсулин IOB, активный врем. базал и прогнозы. Если вы работаете с открытым циклом, вы можете пользоваться алгоритмом [IFTTT](https://ifttt.com/) для создания апплета, который, получив уведомление от AndroidAPS, отправляет SMS или создает push-уведомление.

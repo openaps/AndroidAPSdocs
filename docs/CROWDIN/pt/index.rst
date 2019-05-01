@@ -95,7 +95,7 @@ Utilização
     
    Objectivos <./Usage/Objectives.md>
    OpenAPS features <./Usage/Open-APS-features.md>
-   Trocal de Perfil <./Usage/Profiles.md>
+   Troca de Perfil <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>
    SMS commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
@@ -109,7 +109,7 @@ Utilização
    Jelly Pro - battery life optimization <./Usage/jelly.md>
    Automation <./Usage/automation.md>
 
-Onde ir para ajuda 
+Onde ir para obter ajuda 
 ------------
 .. toctree::
    :maxdepth: 1
@@ -134,4 +134,4 @@ Como ajudar
 
    Como ajudar <./Getting-Started/How-can-help.md>
    How to translate the app <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   Como editar a wiki <./make-a-PR>

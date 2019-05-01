@@ -53,7 +53,46 @@ You can check the AAPS version on your phone by clicking the three dots menu on 
 
 ![AAPS version installed](../images/Update_VersionCheck.png)
 
-## Troubleshooting
+# Troubleshooting
+
+## Kotlin compiler warning
+
+If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
+
+App was build successfully and can be transferred to phone.
+
+![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
+
+## Could not download… / Offline Work
+
+If you get a failure message like this
+
+![Warning could not download](../images/GIT_Offline1.jpg)
+
+make sure that ‘Offline work’ is disabled.
+
+File -> Settings
+
+![Settings offline work](../images/GIT_Offline2.jpg)
+
+## Uncommitted changes
+
+If you receive failure message like
+
+![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+
+### Option 1
+
+* In Android APS select VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
+
+### Option 2
+
+* Copy ‘git checkout --’ to clipboard (without quote signs)
+* Switch to Terminal in Android Studio (lower left side of Android Studio window) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
+
+* Paste copied text and press return ![GIT checkout success](../images/GIT_TerminalCheckOut2.jpg)
+
+## App not installed
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
@@ -65,3 +104,27 @@ You can check the AAPS version on your phone by clicking the three dots menu on 
     4. Install new version (“app-full-release.apk”)
     5. [Importar configurações](../Usage/Objectives#export-import-settings)
     6. Turn bluetooth back on and disable airplane mode
+
+## App installed but old version
+
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
+
+## None of the above worked
+
+If non of the above tips helped you might consider building the app from scratch:
+
+1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
+2. Have your key password and key store password ready In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
+3. Note down the path to your key store In Android Studio Build -> Generate Signed APK ![Key store path](../images/KeystorePath.PNG)
+    
+    4. Build app from scratch as described [here](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Use existing key and key store.
+4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
+5. [Importar configurações](../Usage/Objectives#export-import-settings)
+
+## Worst case scenario
+
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+
+Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+
+Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio).

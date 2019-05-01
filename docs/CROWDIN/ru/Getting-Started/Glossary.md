@@ -53,6 +53,12 @@
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
+ <td>BAT</td>
+ <td>status light low battery on homescreen</td>
+ <td>CAN / RES / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+</tr>
+<tr>
  <td>BG</td>
  <td>blood glucose</td>
  <td>&nbsp;</td>
@@ -92,6 +98,13 @@
  <td>CAGE</td>
  <td>canula age - displayed in Nightscout if information was entered in the AAPS careportal tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>CAN</td>
+ <td>status light overdue canula change on homescreen</td>
+ <td>BAT / RES / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -100,7 +113,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Closed Loop</td>
+ <td>Замкнутый цикл</td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
@@ -178,6 +191,12 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
+ <td>LGS</td>
+ <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td><a href="../Usage/Objectives.html">objective 4</a></td>
+ <td>&nbsp;</td>
+</tr>
+<tr>
  <td>LineageOS</td>
  <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
  <td>&nbsp;</td>
@@ -220,7 +239,7 @@
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
- <td>NS Client</td>
+ <td>Клиент Nightscout</td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
@@ -244,7 +263,7 @@
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
- <td>Open Loop</td>
+ <td>Открытый цикл</td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
  <td>Замкнутый цикл</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
@@ -260,6 +279,12 @@
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+</tr>
+<tr>
+ <td>PH</td>
+ <td>pump history (entry in treatments tab)</td>
+ <td>&nbsp;</td>
+ <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
 </tr>
 <tr>
  <td>Predictions</td>
@@ -280,6 +305,12 @@
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
 </tr>
 <tr>
+ <td>RES</td>
+ <td>status light overdue reservoir change on homescreen</td>
+ <td>BAT / CAN / SEN</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+</tr>
+<tr>
  <td>RileyLink</td>
  <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
  <td>OpenAPS</td>
@@ -290,6 +321,12 @@
  <td>sensor age - displayed in Nightscout if information was entered in the AAPS careportal tab</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>SEN</td>
+ <td>status light sensor change on homescreen</td>
+ <td>BAT / CAN / RES</td>
+ <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
 </tr>
 <tr>
  <td>Sensivity detection</td>
