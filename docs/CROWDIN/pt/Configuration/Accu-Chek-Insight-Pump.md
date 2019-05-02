@@ -9,7 +9,7 @@
 ## Requisitos de hardware e software
 
 * Uma bomba Insight Roche Accu-Chek (qualquer firmware, todos funcionam) <br /> Nota: AAPS irá escrever os dados sempre no **primeiro perfil de taxa basal na bomba **
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Um telefone Android (basicamente todas as versões Android funcionariam, mas o próprio AndroidAPS requer pelo menos o Android 5 (Lollipop).)
 * O AndroidAPS (pelo menos a v2.1) instalado no seu telefone
 
 ## Instalação
@@ -22,7 +22,7 @@
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Tap the cog-wheel to open Insight settings.
+* Toque no ícone de configuração (catraca) para abrir as configurações Insigth.
 
 * In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
 * On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
