@@ -6,7 +6,7 @@ Isso permite que você defina uma paswword para evitar alterações acidentais o
 
 ## Idade do Paciente
 
-Existem limites de segurança em vigor com base na idade que selecionou nessa configuração. Se começar a atingir esses limites rígidos (como o bolus máximo), é hora de dar um passo em frente. É uma má ideia selecionar uma idade superior à real, pois pode levar a uma sobre-dosagem inserindo o valor errado de insulina (ignorando a casa decimal, por exemplo). If you want to know the actual numbers for these hard coded security limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+Existem limites de segurança em vigor com base na idade que selecionou nessa configuração. Se começar a atingir esses limites rígidos (como o bolus máximo), é hora de dar um passo em frente. É uma má ideia selecionar uma idade superior à real, pois pode levar a uma sobre-dosagem inserindo o valor errado de insulina (ignorando a casa decimal, por exemplo). Se você quer saber os números reais para estes limites de código de segurança, vá para o recurso de algoritmo que você está usando em [esta página](../Usage/Open-APS-features.md).
 
 ## Geral
 
