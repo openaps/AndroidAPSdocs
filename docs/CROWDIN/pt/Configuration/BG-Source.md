@@ -12,7 +12,7 @@
 * Se você quiser utilizar AndoidAPS para calibrar no xdrip seleccionar Settings > Interapp Compatibility > Accept Calibrations e seleccione ON. Também poderá querer rever as opções em Settings > Less Common Settings > Advanced Calibration Settings.
 * Seleccione xdrip no ConfigBuilder (configuração em AndroidAPS).
 
-### If using G5 or G6 with patched Dexcom app  
+### _ se usar G5 ou G6 com patch Dexcom app_  
 
 
 * Descarregar o apk em <https://github.com/dexcomapp/dexcomapp>, e escolher a versão que serve as suas necessidades ( a versão mg/dl ou mmol/l, G5 ou G6).
@@ -25,10 +25,10 @@
 
 
 * Se ainda não tiver configurado, descarregue app uploader do Nightscout desde a playstore e siga as instruções em [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
+* Nas preferências de AndroidAps introduza o website nightscout e a API secreta.
 * Selccione NSClient em Configbuilder ( configuração em AndroidAPS).
 
-## For users of Libre with Bluetooth cap  
+## Para usuários do Libre com cap Bluetooth  
 
 
 To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
@@ -84,7 +84,7 @@ You can find another instruction for using xDrip with an Eversense [here](https:
 If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
 
 
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
+* Nas preferências de AndroidAps introduza o website nightscout e a API secreta.
 * Selccione NSClient em Configbuilder ( configuração em AndroidAPS).
 
 # Recomendações Gerais de CGM
@@ -101,7 +101,7 @@ Whichever CGM system you are using, if you are going to use blood based calibrat
 
 ## Dexcom G6 & sistemas DIY
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+O que é claro, é que usar o G6 é talvez seja um pouco mais complexo do que o que sugere inicialmente. Para usá-lo com segurança, há alguns pontos que têm de ser conhecidos:
 
 * If you are using the native data with the calibration code in xDrip or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
@@ -109,4 +109,4 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 * Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
 * If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
+Para saber mais sobre os detalhes e razões destas recomendações leia o [todo o artigo](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) publicado pelo Tim Street em [www.diabettech.com](http://www.diabettech.com).
