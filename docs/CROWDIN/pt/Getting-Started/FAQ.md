@@ -14,7 +14,7 @@ This regulation is not restricted to sales (in the meaning of getting money for 
 
 That’s why apks aren’t available.
 
-### How to begin?
+### Como começar?
 
 First of all, you have to **get loopable hardware components**:
 
@@ -61,7 +61,7 @@ You can fix it: There are getting sold upper arm braclets that fix the CGM/FGM w
 
 ## AndroidAPS settings
 
-### APS algorithm
+### Algoritmo APS
 
 #### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 
@@ -85,13 +85,13 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 ## Outras configurações
 
-### Nightscout settings
+### Configurações do Nightscout
 
 #### AndroidAPS NSClient says 'not allowed' and does not upload data. O que posso fazer?
 
 In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
-### CGM settings
+### Configurações CGM
 
 #### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
 
@@ -99,11 +99,11 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 
 ## Bomba
 
-### Where to place the pump?
+### Onde colocar a bomba?
 
 There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
 
-### Batteries
+### Baterias
 
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site. Tricks to increase battery life include:
 
@@ -116,7 +116,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 * for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
 * see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
-### Changing reservoirs and canulas
+### Mudando reservatórios e cânulas
 
 The change of cartridge can not be done via AndroidAPS, but must be carried out as before directly via the pump.
 
