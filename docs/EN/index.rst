@@ -86,6 +86,7 @@ Configuration
    Watchfaces <./Configuration/Watchfaces.md>
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   xDrip+ settings <./Configuration/xdrip.md>
    
 Usage
 ------------
