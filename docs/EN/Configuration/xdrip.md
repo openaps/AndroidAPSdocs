@@ -7,7 +7,10 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 ## Basic settings for all CGM & FGM systems
 
 * Make sure to set Base URL correctly including <font color="#FF0000"><b>S</font></b> at the end of http<b><font color="#FF0000">s</font></b>:// (not http://)
+
    i.e. https://API_SECRET@your-app-name.herokuapp.com/api/v1/
+
+   -> Hamburger Menu (top left of homescreen) -> Settings-> Cloud Upload-> Nightscout Sync (REST-API) -> Base URL
 * Deactivate “Automatic Calibration”
    If the checkbox for "Automatic Calibration" is checked, activate "Download data" once, then remove the checkbox for "automatic calibration" and deactivate "Download data" again, otherwise the treatments (insulin & carbs) will be added twice to Nightscout.
 * Tap "Extra Options"
@@ -18,7 +21,7 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 
    ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
 
-* InterApp-Settings (Broadcast)
+* **InterApp-Settings** (Broadcast)
    If you are going to use a DIY closed loop system and the data should be forwarded to i.e. AndroidAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
 * In order for the values to be equal, you should activate "Send the displayed glucose value".
 * If you have also activated "Accept treatments" and broadcasting in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from your DIY closed loop system and can estimate the hypo prediction etc. more accurately.
@@ -73,13 +76,17 @@ To learn more about the details and reasons for these recommendations read the [
 * Use the Source Wizard Button which ensures default settings including OB1 & Native Mode
    - This guides you through the initial set up.
    - you will need your Transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter
+* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter
+
+   ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
+
 * Insert new sensor (only if replacing)
 * Put transmitter into sensor
 * Start sensor (only if replacing)
    -> Near the bottom of the screen “Warm Up x,x hours left” must be displayed after a few minutes.
    -> If there is no time specification stop and restart the sensor.
 * Restart collector (system status - if not replacing sensor}
+* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
 * Long press the red xDrip+ blood drop icon on the main screen to disable the "Source Wizard Button".
 
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
@@ -147,6 +154,7 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 * Put transmitter into sensor
 * Start sensor (only if replacing)
 * Restart collector (system status - if not replacing sensor}
+* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
 * Long press the red xDrip+ blood drop icon on the main screen to disable the "Source Wizard Button".
 
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
@@ -172,7 +180,7 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 * Clean contacts (transmitter backside) with alcohol and let air-dry.
 * In case you use this function disable “Restart Sensor” and “Preemptive restarts” (Hamburger Menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
 
-   ![xDrip+ Preemtpive Restart](../images/xDrip_Dexcom_Restart.png)
+   ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
 
 * Start Sensor 
    <b><font color="#FF0000">-> It is recommended to wait approx. 15 minutes between stopping and starting the new sensor.</b></font>
@@ -182,11 +190,12 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 * Enter Sensor code (on the peel-off foil of the sensor)
    - Keep code for further reference (i.e. new start after transmitter had to be removed)
    - Code can also be found in xDrip+ logs: Click 3-dots-menu on xDrip+ homescreen and choose "show logs".
-* If you are using G6 "Native Mode" then you should not need a calibration & readings will start automatically.
+* No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
+* Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
+   
+   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
 
-   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_StartSensor01.png)
-
-   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_StartSensor02.png)
+   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
 
 ### Retrieve sensor code
