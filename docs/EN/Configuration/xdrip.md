@@ -50,7 +50,7 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 
 The automatic extension of Dexcom sensors (“preemtive restarts”) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+   ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of: 
 
@@ -82,13 +82,13 @@ To learn more about the details and reasons for these recommendations read the [
 * Restart collector (system status - if not replacing sensor}
 * Long press the red xDrip+ blood drop icon on the main screen to disable the "Source Wizard Button".
 
-![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
+   ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
 
-![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
+   ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
 
-![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
+   ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
 
-![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+   ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
 
 ### Transmitter battery status
@@ -128,9 +128,11 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
    It may say something like "(1) Stop Sensor"
    Wait until this goes - a few minutes in my experience.
    -> To remove transmitter without stopping sensor see this video [https://youtu.be/AAhBVsc6NZo](https://youtu.be/AAhBVsc6NZo).
+
    ![xDrip+ Stop Sensor](../images/xDrip_Dexcom_StopSensor.png)
 
 * Forget device (in system status)
+
    ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
 
 * Forget device in smartphone’s BT settings (Will be shown as DexcomXX whereas XX are the last two 
@@ -146,6 +148,7 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 * Start sensor (only if replacing)
 * Restart collector (system status - if not replacing sensor}
 * Long press the red xDrip+ blood drop icon on the main screen to disable the "Source Wizard Button".
+
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
 
    ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
@@ -163,10 +166,12 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
    On the second "G5/G6 Status" screen look at "Queue Items" about half way down -
    It may say something like "(1) Stop Sensor"
    Wait until this goes - usually a few minutes
+
    ![xDrip+ Stop Dexcom Sensor](../images/xDrip_Dexcom_StopSensor.png)   
 
 * Clean contacts (transmitter backside) with alcohol and let air-dry.
 * In case you use this function disable “Restart Sensor” and “Preemptive restarts” (Hamburger Menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
+
    ![xDrip+ Preemtpive Restart](../images/xDrip_Dexcom_Restart.png)
 
 * Start Sensor 
@@ -179,9 +184,9 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
    - Code can also be found in xDrip+ logs: Click 3-dots-menu on xDrip+ homescreen and choose "show logs".
 * If you are using G6 "Native Mode" then you should not need a calibration & readings will start automatically.
 
-![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_StartSensor01.png)
+   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_StartSensor01.png)
 
-![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_StartSensor02.png)
+   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_StartSensor02.png)
 
 
 ### Retrieve sensor code
@@ -190,7 +195,7 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 * Tap 3 dot menu (top right side on homescreen)
 * Select ‘View Event Logs’ and search for ‘code’
 
-![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
 
 ## xDrip+ & Freestyle Libre
@@ -203,6 +208,7 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
    -> scroll down
    -> Less common settings
    -> Bluetooth Settings
+ 
    ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Enable the following settings
@@ -210,13 +216,14 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
    - Use scanning
    - Always discover services
 * All other options should be disabled
+
    ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
 
 ### Connect Libre Transmitter & start sensor
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+   ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+   ![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+   ![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
