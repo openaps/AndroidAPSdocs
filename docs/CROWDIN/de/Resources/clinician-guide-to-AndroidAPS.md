@@ -43,7 +43,7 @@ AndroidAPS dokumentiert transparent alle erfassten Eingabedaten, die daraus resu
 
 ### Beispiele für die Entscheidungsfindung des AndroidAPS-Algorithmus
 
-AndroidAPS verwendet den gleichen Kern-Algorithmus und Funktionsumfang wie OpenAPS. Der Algorithmus macht, basierend auf den Einstellungen und der aktuellen Situation, mehrere Vorhersagen, die verschiedene Szenarien berechnen, was in der Zukunft passieren könnte. In Nightscout werden diese als "violette Linien" angezeigt. AndroidAPS verwendet verschiedene Farben um diese \[Vorhersagelinien\] (../Installing-AndroidAPS/Releasenotes.md?highlight=Colored prediction lines#overview-tab) zu unterscheiden. In den Log-Dateien kann nachvollzogen werden, welche dieser verschiedenen Vorhersagen in welchem Zeitraum für die Berechnung der notwendigen Maßnahmen verwendet wurde.
+AndroidAPS verwendet den gleichen Kern-Algorithmus und Funktionsumfang wie OpenAPS. Der Algorithmus macht, basierend auf den Einstellungen und der aktuellen Situation, mehrere Vorhersagen, die verschiedene Szenarien berechnen, was in der Zukunft passieren könnte. In Nightscout werden diese als "violette Linien" angezeigt. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In den Log-Dateien kann nachvollzogen werden, welche dieser verschiedenen Vorhersagen in welchem Zeitraum für die Berechnung der notwendigen Maßnahmen verwendet wurde.
 
 #### Hier einige Beispiele für die Vorhersagelinien und wie sie sich unterscheiden können:
 
