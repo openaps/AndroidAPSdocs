@@ -70,7 +70,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 <b>For second and following transmitters see 'Extend transmitter life' below.</b>
 
-* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
 * Turn original Dexcom receiver off (if used).
 * Long press the red xDrip+ blood drop icon on the main screen to enable the "Source Wizard Button".
 * Use the Source Wizard Button which ensures default settings including OB1 & Native Mode
