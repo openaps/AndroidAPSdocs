@@ -400,7 +400,7 @@ Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine d
          Starte Sensor <b><font color="#FF0000">-> Es wird empfohlen, ca. 15 Minuten zwischen dem Stoppen und dem Starten des neuen Sensors zu warten.</b></font></p></li> 
          
          <li>
-           Gib die Zeit an, zu der der Sensor gesetzt wurde. <ul>
+           Gib die Zeit an, zu der der Sensor gesetzt wurde <ul>
              <li>
                Um den G6 im "native mode" zu nutzen, musst Du die 2-Stunden-Aufwärmzeit abwarten.
              </li>
