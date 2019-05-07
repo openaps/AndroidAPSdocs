@@ -2,7 +2,7 @@
 
 If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip)
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
 
 ## Basic settings for all CGM & FGM systems
 
@@ -22,7 +22,7 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
    ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
 
 * **InterApp-Settings** (Broadcast)
-   If you are going to use a DIY closed loop system and the data should be forwarded to i.e. AndroidAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+   If you are going to use AndroidAPS and the data should be forwarded to i.e. AndroidAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
 * In order for the values to be equal, you should activate "Send the displayed glucose value".
 * If you have also activated "Accept treatments" and broadcasting in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from your DIY closed loop system and can estimate the hypo prediction etc. more accurately.
 
@@ -126,7 +126,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Replace transmitter
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
 
 * Turn original Dexcom receiver off (if used).
 * Stop sensor (only if replacing sensor)
