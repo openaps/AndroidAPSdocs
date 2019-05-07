@@ -14,7 +14,7 @@ Whichever CGM system you are using, if you are going to use blood based calibrat
 
 ## For users of Dexcom
 
-### Dexcom G6 & DIY systems
+### Dexcom G6: General hints for looping
 
 See [Dexcom G6 page](../Configuration/Dexcom.md) for details on setting Dexcom G6 sensor and solutions for common difficulties with Dexcom G6.
 
@@ -33,7 +33,7 @@ To learn more about the details and reasons for these recommendations read the [
 * Select xdrip in ConfigBuilder (setting in AndroidAPS).
 * Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 
-### If using G5 G6 with xdrip+
+### If using G5 with xdrip+
 * If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 * In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
