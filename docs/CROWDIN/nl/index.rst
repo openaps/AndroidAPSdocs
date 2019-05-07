@@ -79,6 +79,7 @@ AndroidAPS instellingen
    
    Configurator <./Configuration/Config-Builder.md>
    BG bron <./Configuration/BG-Source.md>
+   Dexcom G6 hints <./Configuration/Dexcom.md>
    DanaR pomp <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS pomp <./Configuration/DanaRS-Insulin-Pump.md>
    AccuChek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
@@ -86,6 +87,7 @@ AndroidAPS instellingen
    Smartwatch instellingen <./Configuration/Watchfaces.md>
    Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>
+   xDrip+ settings <./Configuration/xdrip.md>
    
 Gebruik
 ------------
