@@ -79,6 +79,7 @@ Configuração
    
    Config Builder <./Configuration/Config-Builder.md>
    BG Source <./Configuration/BG-Source.md>
+   Dexcom G6 hints <./Configuration/Dexcom.md>
    Bomba Dana-R <./Configuration/DanaR-Insulin-Pump.md>
    Bomba Dana-RS <./Configuration/DanaRS-Insulin-Pump.md>
    Bomba Accu-Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
@@ -86,6 +87,7 @@ Configuração
    Watchfaces <./Configuration/Watchfaces.md>
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   xDrip+ settings <./Configuration/xdrip.md>
    
 Utilização
 ------------

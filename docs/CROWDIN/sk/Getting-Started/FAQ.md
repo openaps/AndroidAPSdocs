@@ -4,6 +4,16 @@ How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md
 
 ## General
 
+### Can I just download the AndroidAPS installation file?
+
+No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+
+AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+
+This regulation is not restricted to sales (in the meaning of getting money for somthing) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+
+That’s why apks aren’t available.
+
 ### How to begin?
 
 First of all, you have to **get loopable hardware components**:

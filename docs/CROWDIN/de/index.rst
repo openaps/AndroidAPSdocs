@@ -79,6 +79,7 @@ AndroidAPS einrichten
    
    Konfigurations-Generator <./Configuration/Config-Builder.md>
    BZ-Quelle <./Configuration/BG-Source.md>
+   Dexcom G6 Tipps <./Configuration/Dexcom.md>
    Dana-R Pumpe <./Configuration/DanaR-Insulin-Pump.md>
    Dana-RS Pumpe <./Configuration/DanaRS-Insulin-Pump.md>
    Accu-Chek Combo Pumpe <./Configuration/Accu-Chek-Combo-Pump.md>
@@ -86,6 +87,7 @@ AndroidAPS einrichten
    Smartwatch-Integration <./Configuration/Watchfaces.md>
    Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.md>
    Empfindlichkeitserkennung und COB <./Configuration/Sensitivity-detection-and-COB.md>
+   xDrip+ Einstellungen <./Configuration/xdrip.md>
    
 AndroidAPS nutzen
 ------------

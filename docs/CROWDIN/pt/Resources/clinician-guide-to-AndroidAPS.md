@@ -43,7 +43,7 @@ AndroidAPS is designed to transparently track all input data it gathers, the res
 
 ### Examples of AndroidAPS algorithm decision making:
 
-AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these \[prediction lines\] (../Installing-AndroidAPS/Releasenotes.md?highlight=Colored prediction lines#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
 
 #### Here are examples of the purple prediction lines, and how they might differ:
 
@@ -89,7 +89,7 @@ Additionally, human behavior (learned from manual diabetes mode) often influence
 
 **This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AndroidAPS, with the main difference being the hardware platform where each peace of software is run.
 
-### Summary
+### Resumo
 
 This is meant to be a high-level overview of how AndroidAPS works. For more details, ask your patient, reach out to the community, or read the full AndroidAPS documentation available online.
 

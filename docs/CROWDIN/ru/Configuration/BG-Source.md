@@ -1,112 +1,118 @@
+# General CGM recommendations
+
+## CGM hygiene
+
+Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+
+* Make sure hands and kit are clean.
+* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
+* Avoid calibrating when glucose levels are moving up or down. 
+* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
+* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+
 # Источник данных гликемии
 
-## Для пользователей Dexcom  
+## For users of Dexcom
+
+### Dexcom G6: General hints for looping
+
+See [Dexcom G6 page](../Configuration/Dexcom.md) for details on setting Dexcom G6 sensor and solutions for common difficulties with Dexcom G6.
+
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+
+* If you are using the native data with the calibration code in xDrip or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
+* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
+* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
+* Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+
+To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
+
+### If using G6 with xdrip+
+
+* If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
+* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+* Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
+
+### If using G5 with xdrip+
+
+* If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
+* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
+* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
+* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+
+### If using G5 or G6 with patched Dexcom app  
 
 
-### При использовании G5 или G6 с xdrip+  
+* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
+* Stop sensor and uninstall the original Dexcom app, if not already done.
+* Install downloaded apk
+* Start sensor
+* Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
+
+### If using G4 with OTG cable ('traditional' Nightscout)…  
 
 
-* Если еще не настроили, скачайте [xdrip](https://github.com/NightscoutFoundation/xDrip) и следуйте инструкциям на nightscout ([G4 без share ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [с share G4](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
-* В xdrip, перейдите в настройки > совместимости программ > трансляция данных локально и выберите Включить (ON).
-* В xdrip+ перейдите в настройки > совместимости программ > принимать назначения и выберите ВЫКЛ (OFF).
-* Если вы хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принять калибровки и выберите ВКЛ (ON). Возможно вы также захотите рассмотреть варианты в настройках > менее распространенные параметры > дополнительные параметры калибровки.
-* В конфигуратоге (настройки AndroidAPS) выберите xdrip.
+* If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
+* In AndroidAPS Preferences enter your Nightscout website and API secret.
+* Select NSClient in ConfigBuilder (setting in AndroidAPS).
 
-### При использовании G5 или G6 с помощью патч-приложения Dexcom  
+## For users of Libre with Bluetooth cap  
 
 
-* Скачайте приложение из <https://github.com/dexcomapp/dexcomapp>, и выберите версию по вашим потребностям (mg/dl или mmol/l, G5 или G6).
-* Если это еще не сделано, остановите сенсор и удалите оригинальное приложение Dexcom.
-* Установите загруженное приложение
-* Запустите сенсор
-* В конфигуратоге (настройки AndroidAPS) выберите Dexcom G5 App (patched).
-
-### При использовании G4 с кабелем OTG («традиционный» Nightscout)…  
-
-
-* Если это еще не сделано, скачайте загрузчик Nightscout из Play Store и следуйте инструкциям на [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* В настройках AndroidAPS введите адрес вашего веб-сайта Nightscout и пароль API secret.
-* В конфигураторе (настройки AndroidAPS) выберите NSClient.
-
-## Для пользователей Libre с адаптером Bluetooth  
-
-
-Чтобы использовать Libre как CGM, которая получает новые значения гликемии каждые 5 минут, нужно сначала приобрести один из адаптеров NFC - Bluetooth:
+To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
 
 * MiaoMiao-Reader <https://www.miaomiao.cool/>
 * Blukon Nightrider <https://www.ambrosiasys.com/howit>
 * BlueReader <https://bluetoolz.de/blueorder/#home>
-* Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
+* Sony Smartwatch 3 (SWR50) als Auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-### При использовании xdrip...  
-
-
-* Если это еще не сделано, скачайте xdrip+ и следуйте инструкциям на [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) или [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en) ([Оборудование](https://bluetoolz.de/wordpress/)).
-* В xdrip, перейдите в настройки > совместимости программ > трансляция данных локально и выберите Включить (ON).
-* В xdrip, перейдите в настройки > совместимость программ > принимать назначения и выберите ВЫКЛЮЧИТЬ (OFF).
-* Если вы хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принять калибровки и выберите ВКЛ (ON). Возможно вы также захотите рассмотреть варианты в настройках > менее распространенные параметры > дополнительные параметры калибровки.
-* В конфигуратоге (настройки AndroidAPS) выберите xdrip.
-* Для основного режима G5 в xdrip+ перейдите в настройки > загрузка из облака > REST API > дополнительные настройки > Добавить источник информации в устройство и выберите ВКЛ (ON).
-
-### При использовании Glimp...  
+### If using xdrip...  
 
 
-* Если это еще не сделано, скачайте Glimp и следуйте инструкциям на [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
-* В конфигураторе (настройки AndroidAPS) выберите Glimp.
+* If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
+* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
+* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
+* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+* For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md)
 
-## Для пользователей Eversense  
-
-
-Самым простым способом использования Eversense с AndroidAPS является установка модифицированного приложения [Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (с предварительным удалением оригинального приложения).
-
-**Предупреждение: после удаления старого приложения, ваши локальные данные старше одной недели будут утрачены!**
-
-Чтобы получить данные в AndroidAPS, необходимо установить [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) и включить "Отправить в AAPS и xDrip" в ESEL и выбрать "MM640g" как источник СК в [Конфигураторе](../Configuration/Config-Builder.md) AndroidAPS. Поскольку данные СК от Eversense могут быть зашумленными, предпочтительнее включить "Smooth Data" (выправить данные) в ESEL, а не "Всегда использовать усредненную короткую дельту вместо простых данных".
-
-Вы можете найти другую инструкцию для использования xDrip с Eversense [здесь](https://github.com/BernhardRo/Esel/tree/master/apk).
-
-## Для пользователей MM640g или MM630g  
+### If using Glimp...  
 
 
-* Если это еще не сделано, скачайте [600SeriesAndroidUploader](http://pazaan.github.io/600SeriesAndroidUploader/) и следуйте инструкциям на [Тightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
-* В Загрузчике Серии 600, перейдите в настройки > отправить на xdrip + и выберите ВКЛ (ON).
-* В конфигуратоге (настройки AndroidAPS) выберите MM640g.
+* If not already set up then download Glimp and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
+* Select Glimp in ConfigBuilder (setting in AndroidAPS).
 
-## Для пользователей PocTech CT-100  
-
-
-* Установите приложение PocTech
-* В конфигуратоге (настройки AndroidAPS) выберите PocTech.
-
-## Для пользователей других систем мониторинга, передающих данные в Nightscout  
+## For users of Eversense  
 
 
-Если у вас есть другая система мониторинга отправляющая даннные в [Nightscout](http://www.nightscout.info) тогда  
+The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (and unistall the original one first).
+
+**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+
+To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
+
+You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
+
+## For users of MM640g or MM630g  
 
 
-* В настройках AndroidAPS введите адрес вашего веб-сайта Nightscout и пароль API secret.
-* В конфигуратоге (настройки AndroidAPS) выберите NSClient.
+* If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
+* In 600 Series Uploader go to Settings > Send to xdrip+ and select ON (tick).
+* Select MM640g in ConfigBuilder (setting in AndroidAPS).
 
-# Общие рекомендации по мониторингу
+## For users of PocTech CT-100  
 
-## Гигиена мониторинга
 
-Вне зависимости от того, какой у вас мониторинг - официальная система или самодельная, следует соблюдать определенные правила.
+* Install PocTech App
+* Select PocTech App in ConfigBuilder (setting in AndroidAPS).
 
-* Убедитесь, что руки и комплект чисты.
-* Старайтесь калибровать на ровных значениях ГК (обычно достаточно 15-30 минут с плоской шкалой)
-* Избегайте калибровки при повышении или понижении уровня глюкозы. 
-* По возможности проводите «достаточно» калибровок – на официальных приложениях раз или два раза за сутки появляется предложение откалибровать систему. В самодельных системах таких напоминаний не бывает, поэтому будьте осторожны если давно не делали калибровки.
-* По возможности калибруйте, имея показания в нижнем диапазоне (4-5 ммоль/л или 72-90мг/дл. и в среднем 7-9 ммоль/л или 126-160мг/дл.), поскольку это обеспечивает более широкий охват диапазона.
+## For users of other CGM uploaded to Nightscout  
 
-## Dexcom G6 & самодельные системы
 
-Очевидно, что использовантие G6 немного сложнее, чем казалось раньше. Для правильного применения необходимо помнить следующие моменты:
+If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
 
-* Если вы используете собственные данные трансмиттера ("нативные данные") с кодом калибровки в xDrip или Spike, то для безопасности не следует разрешать профилактический перезапуск сенсора.
-* Если все же упреждающие перезапуски необходимы, то убедитесь, что вы делаете это в то время, когда можете следить за изменениями и калибровать при потребности. 
-* Если вы перезапускаете сенсор, делайте это без заводской калибровки для более безопасных результатов в дни 11 и 12, либо убедитесь, что вы готовы калибровать и следить за вариациями.
-* "Предварительное замачивание" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к вариациям в данных. Если вы все же делаете "предварительное замачивание", то для получения лучших результатов вам, вероятно, понадобится калибровать сенсор.
-* Если вы не планируете отслеживать все возможные изменения, то лучше вернуться к традиционному режиму калибровки и использовать систему, как G5.
 
-Подробнее о деталях и причинах этих рекомендаций читайте [полную статью](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) опубликованную в Tim Street на [www.diabettech.com](http://www.diabettech.com).
+* In AndroidAPS Preferences enter your Nightscout website and API secret.
+* Select NSClient in ConfigBuilder (setting in AndroidAPS).

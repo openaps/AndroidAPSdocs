@@ -1,10 +1,40 @@
+# Allgemeine CGM-Empfehlungen
+
+## CGM "Hygiene"
+
+Unabhängig davon, welches CGM-System Du nutzt und egal, ob Du die offizielle App oder eine DIY-App verwendest, solltest Du die folgenden Regeln beachten:
+
+* Hände und Geräte müssen sauber sein.
+* Kalibriere immer dann, wenn Du stabile Werte hast (Messwerte auf einem Niveau und waagerechter Pfeil). In der Regel reicht ein Zeitraum von 15 - 30 Minuten aus.
+* Vermeide die Kalibrierung, wenn der Glukoselevel steigt oder fällt. 
+* Kalibriere "ausreichend" oft. Die offiziellen Apps fordern Dich ein oder zwei Mal pro Tag zum blutigen Test auf. Bei DIY Systemen ist das evtl. nicht der Fall und Du solltest vorsichtig sein, ohne die empfohlenen Kalibrierungen zu arbeiten.
+* Falls möglich, kalibriere mal mit Werten im niedrigen Bereich (72 - 90 mg/dl bzw. 4 - 5 mmol) und mal im erhöhten Bereich (126 - 160 mg/dl bzw. 7 - 9 mmol). Dies führt zu besseren Ergebnissen, da sich die Kalibrierungsgerade leichter durch zwei entferntere Punkte legen lässt.
+
 # BZ-Quelle
 
-## Für Dexcom Nutzer  
+## Für Dexcom Nutzer
 
+### Dexcom G6: Allgemeine Hinweise zum Loopen
 
-### Dexcom G5 / G6 mit xdrip+  
+Auf der [Dexcom G6 Seite](../Configuration/Dexcom.md) findest Du detaillierte Hinweise zum Setzen des Dexcom G6 Sensors und Löungsmöglichkeiten für häufige Schwierigkeiten beim Umgang mit dem Dexcom G6.
 
+Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet. Mache Dir die folgenden Punkte bewusst, um das System sicher zu nutzen:
+
+* Wenn Du mit nativen Daten und dem Kalibrierungscode in xDrip+ oder Spike arbeitest, ist es am sichersten, auf den "preemptive" Neustart des Sensors zu verzichten.
+* Falls Du den "preemptive restart" verwendest, stelle sicher, dass dieser zu einer Tageszeit erfolgt, zu der Du die Änderungen verfolgen und ggf. durch eine Kalibrierung eingreifen kannst. 
+* Falls Du Sensoren verlängerst, verzichte aus Sicherheitsgründen entweder auf die Werkskalibrierung an Tag 11 und 12 oder stelle sicher, dass Du die Abweichungen im Auge hast und evtl. durch Kalibrierung korrigieren kannst.
+* Das sogenannte "Pre-soaking" (Sensor früher ohne Transmitter setzen, damit er sich an die Gewebsflüssigkeit "gewöhnt") mit Werkskalibrierung führt wahrscheinlich zu Abweichungen in den Glukosewerten. Falls Du mit "pre-soaking" arbeitest, wirst Du wahrscheinlich besser Ergebnisse erzielen, wenn Du den Sensor kalibrierst.
+* Wenn Du nicht auf die Abweichungen, die stattfinden können, achten willst, wäre es evtl. besser bei der Verlängerung auf die Werkskalibrierung zu verzichten und das System wie den G5 (mit "Pflichtkalibrierung") zu nutzen.
+
+Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [kompletten Artikel](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) (englisch) von Tim Street auf seiner Seite [www.diabettech.com](http://www.diabettech.com).
+
+### Dexcom G6 mit xdrip+
+
+* Lade [xdrip](https://github.com/NightscoutFoundation/xDrip) herunter und folge der Anleitung auf Nightscout ([G4 ohne share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
+* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
+* Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) an.
+
+### Dexcom G5 mit xdrip+
 
 * Lade [xdrip](https://github.com/NightscoutFoundation/xDrip) herunter und folge der Anleitung auf Nightscout ([G4 ohne share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
@@ -46,13 +76,13 @@ Um dein Libre als CGM zu verwenden, das alle 5 Minuten Glukosewerte empfängt, m
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
-* Beim G5 native mode in xdrip gehe zu Einstellungen > Cloud-Upload > API Upload (REST) > Extra Options und hake "Append source info to device" an.
+* Eine bebilderte Anleitung zu den Einstellungen findest Du auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md).
 
 ### Libre mit Glimp  
 
 
 * Lade über den Google Play Store die App Glimp herunter und folge der Anleitung auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
-* Wähle Glimp im Konfigurations-Generator (Einstellung in AndroidAPS).
+* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Glimp.
 
 ## Für Eversense Nutzer  
 
@@ -70,7 +100,7 @@ Weitere Hinweise zur Nutzung von xDrip mit Eversense findest Du [hier](https://g
 
 * Lade [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) herunter und folge den Anleitungen auf [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
 * Im 600 Series Uploader gehe zu Settings > Send to xdrip+ und wähle ON (ankreuzen).
-* Wähle MM640g im Konfigurations-Generator (Einstellung in AndroidAPS).
+* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > MM640g.
 
 ## Für PocTech CT-100 Nutzer  
 
@@ -85,28 +115,4 @@ Wenn Du ein anderes CGM-System nutzt und dessen Daten an [Nightscout](http://www
 
 
 * Gib in den AndroidAPS Einstellungen deine Nightscout URL und dein Nightscout API-Key ein.
-* Wähle NSClient im Konfigurations-Generator (Einstellung in AndroidAPS).
-
-# Allgemeine CGM-Empfehlungen
-
-## CGM "Hygiene"
-
-Unabhängig davon, welches CGM-System Du nutzt und egal, ob Du die offizielle App oder eine DIY-App verwendest, solltest Du die folgenden Regeln beachten:
-
-* Hände und Geräte müssen sauber sein.
-* Kalibriere immer dann, wenn Du stabile Werte hast (Messwerte auf einem Niveau und waagerechter Pfeil). In der Regel reicht ein Zeitraum von 15 - 30 Minuten aus.
-* Vermeide die Kalibrierung, wenn der Glukoselevel setigt oder fällt. 
-* Kalibriere "ausreichend" oft. Die offiziellen Apps fordern Dich ein oder zwei Mal pro Tag zum blutigen Test auf. Bei DIY Systemen ist das evtl. nicht der Fall und Du solltest vorsichtig sein, ohne die empfohlenen Kalibrierungen zu arbeiten.
-* Falls möglich, kalibriere mal mit Werten im niedrigen Bereich (72 - 90 mg/dl bzw. 4 - 5 mmol) und mal im erhöhten Bereich (126 - 160 mg/dl bzw. 7 - 9 mmol). Dies führt zu besseren Ergebnissen, da sich die Kalibrierungsgerade leichter durch zwei entferntere Punkte legen lässt.
-
-## Dexcom G6 & DIY Systeme
-
-Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet. Mache Dir die folgenden Punkte bewusst, um das System sicher zu nutzen:
-
-* Wenn Du mit nativen Daten und dem Kalibrierungscode in xDrip+ oder Spike arbeitest, ist es am sichersten, auf den "preemptive" Neustart des Sensors zu verzichten.
-* Falls Du den "preemptive restart" verwendest, stelle sicher, dass dieser zu einer Tageszeit erfolgt, zu der Du die Änderungen verfolgen und ggf. durch eine Kalibrierung eingreifen kannst. 
-* Falls Du Sensoren verlängerst, verzichte aus Sicherheitsgründen entweder auf die Werkskalibrierung an Tag 11 und 12 oder stelle sicher, dass Du die Abweichungen im Auge hast und evtl. durch Kalibrierung korrigieren kannst.
-* Das sogenannte "Pre-soaking" (Sensor früher ohne Transmitter setzen, damit er sich an die Gewebsflüssigkeit "gewöhnt") mit Werkskalibrierung führt wahrscheinlich zu Abweichungen in den Glukosewerten. Falls Du mit "pre-soaking" arbeitest, wirst Du wahrscheinlich besser Ergebnisse erzielen, wenn Du den Sensor kalibrierst.
-* Wenn Du nicht auf die Abweichungen, die stattfinden können, achten willst, wäre es evtl. besser bei der Verlängerung auf die Werkskalibrierung zu verzichten und das System wie den G5 (mit "Pflichtkalibrierung") zu nutzen.
-
-Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [kompletten Artikel](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) (englisch) von Tim Street auf seiner Seite [www.diabettech.com](http://www.diabettech.com).
+* Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Nightscout-Client BZ.

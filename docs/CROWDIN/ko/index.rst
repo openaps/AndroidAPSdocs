@@ -79,6 +79,7 @@ AndroidAPS 설치하기
    
    구성관리자 <./Configuration/Config-Builder.md>
    BG 소스<./Configuration/BG-Source.md>
+   Dexcom G6 hints <./Configuration/Dexcom.md>
    Dana-R pump <./Configuration/DanaR-Insulin-Pump.md>
    Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
    Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
@@ -86,6 +87,7 @@ AndroidAPS 설치하기
    워치화면 <./Configuration/Watchfaces.md>
    설정 <./Configuration/Preferences.md>
    민감도 감지와 COB <./Configuration/Sensitivity-detection-and-COB.md>
+   xDrip+ settings <./Configuration/xdrip.md>
    
 사용
 ------------

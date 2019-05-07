@@ -1,6 +1,6 @@
 # Escolhas de bomba
 
-AndroidAPS currently works with
+AndroidAPS actualmente funciona com
 
 * Accu-Chek Combo
 * Accu-Chek Insight
