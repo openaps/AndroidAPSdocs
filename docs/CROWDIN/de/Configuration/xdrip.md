@@ -122,29 +122,29 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 </code></pre>
    
    <p>
-     What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+     Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet. Mache Dir die folgenden Punkte bewusst, um das System sicher zu nutzen:
    </p>
    
    <ul>
      <li>
-       If you are using the native data with the calibration code in xDrip or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
+       Wenn Du mit nativen Daten und dem Kalibrierungscode in xDrip+ oder Spike arbeitest, ist es am sichersten, auf den "preemptive" Neustart des Sensors zu verzichten.
      </li>
      <li>
-       If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary.
+       Falls Du den "preemptive restart" verwendest, stelle sicher, dass dieser zu einer Tageszeit erfolgt, zu der Du die Änderungen verfolgen und ggf. durch eine Kalibrierung eingreifen kannst.
      </li>
      <li>
-       If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
+       Falls Du Sensoren verlängerst, verzichte aus Sicherheitsgründen entweder auf die Werkskalibrierung an Tag 11 und 12 oder stelle sicher, dass Du die Abweichungen im Auge hast und evtl. durch Kalibrierung korrigieren kannst.
      </li>
      <li>
-       Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+       Das sogenannte "Pre-soaking" (Sensor früher ohne Transmitter setzen, damit er sich an die Gewebsflüssigkeit "gewöhnt") mit Werkskalibrierung führt wahrscheinlich zu Abweichungen in den Glukosewerten. Falls Du mit "pre-soaking" arbeitest, wirst Du wahrscheinlich besser Ergebnisse erzielen, wenn Du den Sensor kalibrierst.
      </li>
      <li>
-       If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+       Wenn Du nicht auf die Abweichungen, die stattfinden können, achten willst, wäre es evtl. besser bei der Verlängerung auf die Werkskalibrierung zu verzichten und das System wie den G5 (mit "Pflichtkalibrierung") zu nutzen.
      </li>
    </ul>
    
    <p>
-     To learn more about the details and reasons for these recommendations read the <a href="http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/">complete article</a> published by Tim Street at <a href="http://www.diabettech.com">www.diabettech.com</a>.
+     Mehr zu den Details und Gründen für diese Empfehlungen findest Du im <a href="http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/">kompletten Artikel</a> (englisch) von Tim Street auf seiner Seite <a href="http://www.diabettech.com">www.diabettech.com</a>.
    </p>
    
    <h3>
