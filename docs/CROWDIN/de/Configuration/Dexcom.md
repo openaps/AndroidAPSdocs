@@ -1,32 +1,32 @@
 # Dexcom G6
 
-## Basics first
+## Grundsätzliches vorab
 
-* Follow [general CGM hygiene recommendations](../Configuration/BG-Source#cgm-hygiene)
-* [Special recommendations for Dexcom G6 and DIY systems](../Configuration/BG-Source#dexcom-g6-diy-systems) *For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly built xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* Folge den allgemeinen Empfehlungen zur ["CGM Hygiene"](../Configuration/BG-Source#cgm-hygiene).
+* [Spzifische Hinweise zum Dexcom G6 und DIY Systemen](../Configuration/BG-Source#dexcom-g6-diy-systems) *Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine der aktuellen [nightly build xDrip+ Versionen](https://github.com/NightscoutFoundation/xDrip/releases). Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 
-## Setting sensor
+## Sensor setzen
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+Beim Setzen des Sensors darf die Setzhilfe nicht zu stark auf die Haut gedrückt werden, um Blutungen zu vermeiden. Der Sensorfaden sollte nicht mit Blut in Kontakt kommen.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Nach dem Setzen des Sensors wird der Transmitter in den Halter auf dem Sensorpflaster eingeklickt. Achtung! Zuerst auf der rechteckigen Seite einführen und danach auf der runden Seite nach unten Drücken bis der Transmitter mit einem Klick einrastet.
 
 ## Problembehandlung
 
-### Connection problems
+### Verbindungsprobleme
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is reestablished the data is backfilled.
+Die Bluetooth-Verbindung kann durch andere Bluetooth-Geräte, die sich in der Nähe befinden, gestört werden, Solche Geräte können Blutzuckermessgeräte, Headsets, Tablets (iPad...) aber auch Küchengeräte wie Mikrowellen oder Cerankochfelder sein. In diesem Fall zeigt xdrip keine BZ-Werte an. Die Daten werden nachgetragen, so bald die Bluetooth-Verbindung wieder hergestellt wurde.
 
-### Sensor Errors
+### Sensorfehler
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
+Wenn Sensorfehler wiederholt auftreten, probiere den Sensor an einer anderen Körperstelle zu setzen. Der Sensorfaden sollte nicht mit Blut in Kontakt kommen.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Oftmals kann ein Sensorfehler durch sofortiges Trinken und "Massage" an der Sensorsetzstelle beseitigt werden.
 
-### Jumpy values
+### Springende Werte
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Versuche, die Einstellungen zum "noise blocking" in xDrip (Einstellungen -> Inter-App Einstellungen -> Verrauschungsunterdrückung) zu ändern, z.B. "Block Very High noise and worse". Siehe auch die Informationen zur [Glättung von BZ-Daten](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### New transmitter with running sensor
+### Neuer Transmitter bei laufendem Sensor
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/AAhBVsc6NZo>.
+Falls Du einen Transmitter bei einer laufenden Sensorsitzung wechseln musst, kannst Du versuchen, den Transmitter zu tauschen, ohne die Transmitterhalterung zu beschädigen. Eine Videoanleitung findest Du unter <https://youtu.be/AAhBVsc6NZo>.
