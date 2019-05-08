@@ -51,8 +51,7 @@ Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine d
 
 Die automatische Verlängerung von Dexcom G6 Sensoren (`preemtive restarts`) werden nicht empfohlen, da dies zu Sprüngen in den BZ-Werten nach dem eustart am 9. Tag führen kann.
 
-    ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
-    
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet. Mache Dir die folgenden Punkte bewusst, um das System sicher zu nutzen:
 
@@ -66,7 +65,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 ### G6 Transmitter das erste Mal verbinden
 
-**Für den zweiten und alle weiteren Transmitter siehe [Transmitterlaufzeit verlängern](../Configuration/xdrip#extend-transmitter-life) weiter unten.**
+**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
 * Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine der aktuellen <1>nightly build xDrip+ Versionen</1>. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 * Schalten Sie den Original Dexcom Empfänger aus (falls Du diesen verwendet).
@@ -232,8 +231,8 @@ Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine d
 
 ### Libre Transmitter verbinden und Sensor starten
 
-    ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
-    
-    ![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
-    
-    ![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+
+![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
