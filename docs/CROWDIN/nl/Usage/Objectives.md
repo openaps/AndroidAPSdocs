@@ -74,16 +74,16 @@ Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exp
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
   * Exporteer instellingen
-  * File location will be shown
+  * Je ziet nu de locatie waar jouw instellingenbestand zal worden opgeslagen
     
     ![Exporteer AAPS instellingen](../images/AAPS_ExportSettings.png)
 
-* **Transfer** settings from old to new phone using the file location shown during export
+* **Instellingen overdragen** van je oude naar je nieuwe telefoon doe je door de bestandslocatie op je oude telefoon op te zoeken, en het instellingenbestand te kopiëren naar jouw nieuwe telefoon. Bijvoorbeeld via Bluetooth, email, of met een usb-kabeltje via je computer.
 
 * **Installeer AndroidAPS** op je nieuwe telefoon.
 * **Importeer instellingen** op je nieuwe telefoon 
   * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Onderhoud
   * Importeer instellingen
-* **Note for Dana RS users:** 
-  * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Please pair new phone and pump manually.
+* **Tip voor Dana RS gebruikers:** 
+  * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Daarom moet je handmatig een Bluetooth verbinding maken tussen jouw nieuwe telefoon en je pomp. Dit doe je via het Bluetooth-menu van jouw telefooninstellingen.
