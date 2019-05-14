@@ -23,31 +23,33 @@ AAPS. 0.7 test "release" is out, with about 80% of all functionality, missing is
 ***
 
 
-### Insulet Omnipod ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (Eros pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-**Loop status:** Not supported at the moment, but decoding of the Omnipod protocol is mostly finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
+**Loop status:** Using the [Omnipy system](https://github.com/winemug/omnipy/wiki), Omnipod is currently loopable with AndroidAPS but this requires a Raspberry Pi in addition to a RileyLink (433mhz, firmware 2.x). This system is considered 'in testing' but is stable.
 
-**Other implementations:** Loop (implementation is in the beginning stages; as far as I know, they managed to Init the pod and send the first TBR). See [Openomni on github](https://github.com/openaps/openomni)
+**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch) which will not require a Raspberry Pi, but this is not finished. You can follow progress on https://omniaps.slack.com/ channel android-driver.
+
+In addition, work has also started on [Omnicore](https://github.com/winemug/OmniCore/wiki) which is an alternative implementation on android which does not require the Raspberry Pi. This is not finished. You can follow progress on https://omnicore-pdm.slack.com/ channel omnicore.
+
+**Other implementations:** [Loop with Omnipod](
+https://loopkit.github.io/loopdocs/setup/requirements/omnipod-pump/) is available but also considered 'in-testing' / an experimental feature branch.
 
 **Java implementations:**  None till now.
 
-**AAPS implementation status:** 
-Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch), but it is far from working prototype (developer has finished changes for RL firmware 2.0, and started with sending packets to pump). You can follow progress on https://omniaps.slack.com/ channel android-driver. Developer is posting progress there.
-
-**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x)
+**Hardware requirement for AAPS:** RileyLink 433mhz with Omnipod firmware (2.x)
 
 
 
 ## Pumps that are Loopable
 
 
-### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH_FAQs))
+### Omnipod (DASH pods) ([Homepage](https://www.myomnipod.com/DASH_FAQs))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump will start in January 2019 (they are doing pre-sales now in USA).
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate. Pump available in USA but not yet Europe. 
 
 **Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
-**Comments:** Omnipod DASH is currently not in the plan. Once we have a java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have an implementation a few months later, but if the protocol has changed then it might take some time.
+**Comments:** Initial decoding underway but developement may be some time. You can follow progress on https://omnicore-pdm.slack.com/ channel dash-dev.
 
 ***
 
