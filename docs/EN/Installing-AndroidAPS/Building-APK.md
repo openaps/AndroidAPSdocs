@@ -178,7 +178,7 @@ Yeah, the first build is successful but we are not finished.
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 ## Generate signed APK
-<!--- Do not forget to copy to update-to-new-version.md --->
+<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
 
 In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)<br>
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
@@ -192,7 +192,7 @@ In the following dialogue box select "APK" instead of "Android App Bundle" and c
 Select "app" and click "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
-
+<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
 Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
@@ -211,7 +211,7 @@ Then click "OK".
 Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
-
+<!--- End modification here --->
 Select "full" as flavour for the generated app.
 Select V1 "Jar Signature" (V2 is optional) and click "Finish".
 The following information might be important for later use.

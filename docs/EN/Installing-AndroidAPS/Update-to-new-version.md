@@ -4,6 +4,8 @@
 
 ## Install git (if you don't have it)
 
+### Windows
+
 * Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win)
 * Make sure to note down the installation path. You will need it in the next step.
 
@@ -20,6 +22,13 @@
 * Make sure update method "Merge" is selected.
 
    ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* Any git version should work. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
 
 ## Update your local copy
@@ -63,24 +72,13 @@ Select "app" and click "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Enter your key store path, enter key store password, select key alias and enter key password. 
 
-![Screenshot 41](../images/Installation_Screenshot_41.png)
+Select 'Remember passwords'.
 
-* Fill in the information for the next dialog.
-  * Key store path: is the path to the keystore file
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
-  * You can let the validity at the default of 25 years.
-  * You only have to fill out first name and last name but feel free to complete the rest of information.
-Then click "OK".
+Then click next.
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
-
-Fill in the information of the last dialog in this dialog and click "Next".
-
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+![Key store path](../images/KeystorePathUpdate.PNG)
 
 Select "full" as flavour for the generated app.
 Select V1 "Jar Signature" (V2 is optional) and click "Finish".
