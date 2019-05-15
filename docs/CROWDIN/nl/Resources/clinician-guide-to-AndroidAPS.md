@@ -1,4 +1,4 @@
-# Voor zorgprofessionals – Een algemene Introductie en handleiding voor AndroidAPS
+# Voor zorgprofessionals – Een algemene introductie en handleiding voor AndroidAPS
 
 Deze pagina is bedoeld voor zorgprofessionals (zoals artsen en diabetesverpleegkundigen) die meer willen weten over 'open source' kunstmatige alvleesklier-technologie zoals AndroidAPS, of voor patiënten die informatie zoeken om te delen met hun arts/diabetesverpleegkundige.
 
