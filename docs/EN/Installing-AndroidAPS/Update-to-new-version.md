@@ -25,7 +25,7 @@
 
 ### Mac
 
-* Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win)
+* Any git version should work. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
 * Use homebrew to install git: ```$ brew install git```.
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
