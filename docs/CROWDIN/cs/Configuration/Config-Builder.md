@@ -212,7 +212,7 @@ Zobrazit na displeji hodinek (xDrip+ watchface) stav smyčky (pokud nepoužívá
 
 ### Oznámení v notifikační liště
 
-Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
+V telefonu přidá do notifikační lišty nebo na zamykací obrazovku informace o aktuální glykémii, trendu, aktivním dočasném bazálu v %, bazálu v U/h, bazálním profilu, IOB a rozdělení bolusu a bazálu v IOB.
 
 ![AAPS widget](../images/ConfBuild_Widget.png)
 
@@ -220,19 +220,19 @@ Displays a summary of current BG, delta, active TBR%, active basal u/hr and prof
 
 Nastavení synchronizace dat AndroidAPS s Nightscoutem.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
+Je-li aktivována možnost **Zaznamenat start aplikace do NS**, bude každý restart AndroidAPS v Nightscoutu zobrazen. Může to být praktické v případě problémů s aplikací (např. když není aplikace vyjmuta z optimalizace baterie telefonu). Na druhou stranu to může zahltit graf Nightscoutu spoustou položek.
 
-#### Alarm options
+#### Nastavení alarmů
 
-Activate/deactivate AndroidAPS alarms
+Aktivovat nebo deaktivovat alarmy v AndroidAPS
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![Nastavení alarmů](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### Nastavení připojení
 
-Offline looping, disable roaming...
+Offline smyčka, zakázat roaming…
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Chcete-li používat pouze konkrétní síť Wi-Fi, můžete zadat její **WiFi SSID**. Můžete vložit více SSID oddělených středníkem. Chcete-li smazat všechny SSID, nechte políčko prázdné.
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
