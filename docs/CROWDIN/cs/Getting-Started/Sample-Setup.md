@@ -80,68 +80,68 @@ Chcete-li to provést, proveďte na svém smartphonu následující kroky:
 2. Stáhněte upravenou aplikaci Dexcom (zvolte si mg/dl nebo mmol/l dle svých potřeb) na: <https://github.com/dexcomapp/dexcomapp?files=1>
 3. Nainstalujte upravenou aplikaci Dexcom do telefonu (= Vyberte stažený APK soubor)
 4. Spusťte upravenou aplikaci Dexcom, aktivujte/kalibrujte senzor podle zobrazených pokynů a počkejte na dokončení fáze „zahřívání“.
-5. Once the first two calibrations have been entered successfully and the modified Dexcom app shows actual glucose value setup the warnings (hamburger menu on top left side of the screen) as follows: 
-    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
-    * Low `OFF`
-    * High `OFF`
-    * Rise rate `OFF`
-    * Fall rate `OFF`
-    * Signal loss `OFF`
+5. Jakmile byly úspěšně vloženy první dvě kalibrace a upravená aplikace Dexcom ukazuje skutečné hodnoty glykémie, nastavte výstrahy (hamburger menu v horní levém rohu obrazovky) na následující: 
+    * Urgentně nízká `55 mg/dl` / `3,1 mmol / l` (nelze vypnout)
+    * Nízká `VYP`
+    * Vysoká `VYP`
+    * Tempo stoupání `VYP`
+    * Tempo klesání `VYP`
+    * Ztráta signálu `VYP`
 
-## Install AndroidAPS
+## Nainstalujte AndroidAPS
 
 1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
 2. [Transfer](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) the generated APK to your phone
-3. [Configure AndroidAPS](../Configuration/Config-Builder.md) according to your needs using the setup assistant or manually
-4. In this sample setup we used (among others)
+3. [Nakonfigurujte AndroidAPS ](../Configuration/Config-Builder.md) podle svých potřeb pomocí průvodce nastavením nebo ručně
+4. V tomto vzorovém nastavení jsme (mimo jiné) použili
 
 * BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md)
 
-![G5 Settings](../images/SampleSetupG5Settings.png)
+![Nastavení G5](../images/SampleSetupG5Settings.png)
 
 * NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
-## Install xDrip+
+## Nainstalujte xDrip+
 
-xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+ je další vyspělá open source aplikace, která nabízí bezpočet možností. V tomto nastavení se Xdrip+ nepoužívá jako zdroj glykémie z Dexcom G5 (což je v rozporu s tím, proč vývojáři vytvořili Xdrip+), ale pouze kvůli výstrahám a zobrazovaní aktuální hodnoty glykémie včetně její křivky ve widgetu na domovské obrazovce zařízení s Androidem. V aplikaci xDrip + lze výstrahy nastavit mnohem podrobněji než v aplikaci Dexcom, AAPS nebo Nightscout (žádné omezení ve výběru zvuků, různé alarmy podle denní doby atd.).
 
-1. Download the latest stable APK version of xDrip+ with your smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - not the version from the Google Play Store!
-2. Install xDrip+ by selecting the downloaded APK file.
-3. Start xDrip+ and make the following settings (hamburger menu at top left) 
-    * Settings > Alarms and Alerts > Glucose Level Alert List > Create Alerts (high and low) according to your needs. 
-    * The existing alarms can be changed with a long press on the alarm.
-    * Settings > Alarms and Alerts > Calibration Alerts: disabled (reminded via the modified Dexcom app)
-    * Settings > Hardware Data Source > 640G/EverSense
-    * Settings > Inter-app settings > Accept Calibrations > `ON`
-    * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G5 sensor. This is necessary otherwise an error message will appear regularly.) 
+1. Stáhněte si nejnovější stabilní verzi aplikace xDrip+ (APK) do svého telefonu <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - ne verze z Google Play!
+2. Nainstalujte xDrip+ ze staženého souboru APK.
+3. Spusťte xDrip + a proveďte následující nastavení (hamburger menu vlevo nahoře) 
+    * Nastavení > Výstrahy a Upozornění > Seznam výstrah glykémií > Vytvořte výstrahy (vysoké a nízké) podle svých potřeb. 
+    * Vytvořenou výstrahu lze změnit tak, že ji stisknete a dlouze přidržíte.
+    * Nastavení > Výstrahy a Upozornění > Výstrahy kalibrace: vypnout (Připomínáno prostřednictvím upravené Dexcom aplikace)
+    * Nastavení > Zdroj dat > 640G/EverSense
+    * Nastavení > Komunikace mezi aplikacemi > Přijímat kalibrace > `ZAP`
+    * Menu > Spustit senzor (je pouze „pro forma“ a nemá nic společného s běžícím senzorem G5. (To je nezbytné, jinak se bude pravidelně objevovat chybová zpráva.) 
 
-### Example of an alarm setup
+### Příklad nastavení výstrahy
 
-The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
+„Urgentní nízká výstraha“ (pod 55 mg/dl resp. 3,1 mmol) je standardní výstraha z upravené aplikace Dexcom, kterou nelze zakázat.
 
-![xDrip alarms](../images/SampleSetupxDripWarning.png)
+![xDrip výstrahy](../images/SampleSetupxDripWarning.png)
 
-Tip for meetings / church visits / cinema etc..:
+Tip pro schůzky / návštěvy kostela / kino atd.:
 
-If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
+Je-li na Samsungu Galaxy S7 (Nastavení > Zvuky a vibrace > Nerušit: posuvník na pravé straně (= aktivní)) aktivován režim „Nerušit“, telefon jen vibruje při urgentní nízké výstraze a nevydává zvukové upozornění. Pro ostatní výstrahy vytvořené přes xDrip+ můžete vybrat, zda má výstraha ignorovat tichý režim telefonu (aby zazněl zvuk) nebo ne.
 
-## Disable power saving option
+## Zakažte možnost pro úsporu energie
 
-On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G5 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
+Na Samsungu Galaxy S7 přejděte do Menu > Nastavení > Údržba zařízení > Baterie > Nemonitorované aplikace > + Přidat aplikace: Vyberte postupně aplikace AndroidAPS, Dexcom G5 Mobile, xDrip + a Android Wear (pokud používáte hodinky)
 
-## Optional: Setup Sony Smartwatch 3 (SWR50)
+## Volitelné: Sony Smartwatch 3 (SWR50)
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+S hodinkami s Wear OS může být život s diabetem ještě nenápadnější. Hodinky lze použít k zobrazení aktuální glykémie, stavu smyčky atd. na zápěstí. Hodinky lze dokonce použít k ovládání AndroidAPS (např. spustit bolus k jídlu). Chcete-li vydat bolus, dvakrát klepněte na hodnotu glykémie na ciferníku AAPSv2. Hodinky SWR50 obvykle vydrží na jedno nabití fungovat celý den (používají stejnou nabíječku jako Samsung Galaxy S7: microUSB).
 
-![Smartwatch](../images/SampleSetupSmartwatch.png)
+![Chytré hodinky](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Podrobnosti o informacích zobrazených na ciferníku hodinek najdete [zde](../Configuration/Watchfaces.md).
 
-* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
-* In AAPS choose hamburger menu (top left corner) > Config Builder > General (at the bottom of the list) > Wear > activate on left side, click cock wheel > Wear settings and activate `Controls from Watch`
-* On your smartwatch: Long press display to change watchface and select `AAPSv2`
-* If necessary restart both devices once.
+* Nainstalujte si aplikaci „Wear OS" do svého smartphonu přes Google Play a připojte hodinky podle uvedených pokynů.
+* V AAPS zvolte hamburger menu (levý horní roh) > Konfigurace > Obecné (v dolní části seznamu) > Wear > Aktivovat na levé straně, klepněte na ozubené kolečko > Nastavení hodinek a aktivujte možnost `Řízení z hodinek Wear`
+* Na hodinkách: chcete-li změnit ciferník, dlouze podržte displej hodinek a vyberte `AAPSv2`
+* V případě potřeby restartujte obě zařízení.
 
-## Pump setup
+## Nastavení pumpy
 
-see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)
+viz [Pumpa DanaR](../Configuration/DanaR-Insulin-Pump.md)

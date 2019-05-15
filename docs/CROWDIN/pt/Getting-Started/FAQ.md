@@ -61,7 +61,83 @@ You can fix it: There are getting sold upper arm braclets that fix the CGM/FGM w
 
 ## AndroidAPS settings
 
-### Algoritmo APS
+### Impact of settings
+
+This table aims to help you optimise settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (eg if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+
+<table>
+  <tr>
+    <th align="center">
+      Setting
+    </th>
+    
+    <th align="center">
+      Description & testing
+    </th>
+    
+    <th align="center">
+      Impact
+    </th>
+  </tr>
+  
+  <tr>
+    <td align="center">
+      Duration of insulin activity (DIA)
+    </td>
+    
+    <td align="center">
+      The length of time that insulin decays to zero.<br /><br />This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+    </td>
+    
+    <td align="center">
+      Too short DIA can lead to low BGs. And vice-versa.<br /><br />If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.<br /><br />Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center">
+      Basal rate schedule (U/hr)
+    </td>
+    
+    <td align="center">
+      The amount of insulin in a given hour time block to maintain BG at a stable level.<br /><br />Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.<br /><br />If BG is dropping, basal rate is too high. And vice-versa.
+    </td>
+    
+    <td align="center">
+      Too high basal rate can lead to low BGs. And vice-versa.<br /><br />AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.<br /><br />So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.<br /><br />Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center">
+      Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+    </td>
+    
+    <td align="center">
+      The drop in BG expected from dosing 1U of insulin.<br /><br />Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.<br /><br />Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.<br /><br />This is quite often set too low.
+    </td>
+    
+    <td align="center">
+      Lower ISF = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.<br /><br />Higher ISF = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.<br /><br />An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.<br /><br />Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center">
+      Carbohydrate to insulin ratio (CR) (g/U)
+    </td>
+    
+    <td align="center">
+      The grams of carbohydrate for each unit of insulin.<br /><br />Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR.
+    </td>
+    
+    <td align="center">
+      Lower CR = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.<br /><br />Higher CR = more food per unit, ie you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.<br /><br />If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are CR is too large. Conversely if your BG is lower than before food, CR is too small.
+    </td>
+  </tr>
+</table>
+
+### APS algorithm
 
 #### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 
@@ -85,13 +161,13 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 ## Outras configurações
 
-### Configurações do Nightscout
+### Nightscout settings
 
 #### AndroidAPS NSClient says 'not allowed' and does not upload data. O que posso fazer?
 
 In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
-### Configurações CGM
+### CGM settings
 
 #### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
 
@@ -99,11 +175,11 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 
 ## Bomba
 
-### Onde colocar a bomba?
+### Where to place the pump?
 
 There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
 
-### Baterias
+### Batteries
 
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site. Tricks to increase battery life include:
 
@@ -116,7 +192,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 * for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
 * see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
-### Mudando reservatórios e cânulas
+### Changing reservoirs and canulas
 
 The change of cartridge can not be done via AndroidAPS, but must be carried out as before directly via the pump.
 

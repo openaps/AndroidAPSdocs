@@ -165,21 +165,21 @@ Tlačítka k běžně používaným úkonům:
 * Dočasné cíle
 * Nastavit / zrušit dočasný bazál
 * Prodloužený bolus (pouze DanaR/RS nebo Combo)
-* Prime / fill (DanaR/RS or Combo pump only)
+* Kanyla / plnění (Pouze DanaR/RS nebo Combo)
 * Prohlížeč historie
 * TDD (celková denní dávka = bolus + bazál za den)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Někteří lékaři doporučují – hlavně pro nové uživatele pumpy – poměr bazál-bolus 50:50. Poměr se proto vypočítá jako TDD / 2 * TBB (celková bazální dávka = součet hodnot bazálních dávek za 24 hodin). Jiní dávají přednost hodnotám, kdy TBB tvoří 32 % až 37 % z TDD. Stejně jako podobná pravidla má i toto v reálném životě omezenou platnost. Poznámka: Váš diabetes může být jiný!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Portál nastavení péče
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+V části Péče je možné přidávat položky ošetření a zobrazit podrobnosti týkající se senzoru, inzulínu, kanyly nebo baterie pumpy.
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Poznámka: při přidání položky do části Péče (např. jídlo, bolus, korekční bolus apod.) nebude podán **žádný inzulín**
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Sacharidy zadané v části Péče (např. přídavek sacharidů) budou započítány do COB.
 
 ![Careportal tab](../images/ConfBuild_CarePortal.png)
 
@@ -189,30 +189,30 @@ Carbs entered in the careportal (i.e. correction carbs) will be used for COB cal
 
 ### Jídlo
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Zobrazuje jídla přidaná do databáze Nightscoutu. Více informací viz [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Poznámka: Tyto záznamy nelze použít v Kalkulačce v AndroidAPS. (Pouze je zobrazit)
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Sledování a ovládání AAPS prostřednictvím hodinek s Wear OS (viz [stránka Watchfaces](../Configuration/Watchfaces.md)). Chcete-li nastavit parametry pro výpočet bolusu na hodinkách (tj. 15min trend, COB…), klikněte na nastavení (ozubené kolo).
 
-If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Chcete-li z hodinek poslat např. bolus, musíte v „Nastavení wear“ aktivovat volbu „Ovládání z hodinek“.
 
 ![Wear settings](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Prostřednictvím záložky Wear nebo hamburger menu (levý horní roh obrazovky, když není záložka zobrazena) můžete
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* znovu poslat všechna data. To může pomoci v případech, kdy byly hodinky nějakou dobu nedostupné a potřebujete do nich poslat data.
+* Otevřít nastavení hodinek přímo z telefonu.
 
-### xDrip Statusline (watch)
+### Stavová řádka xDrip (hodinky)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Zobrazit na displeji hodinek (xDrip+ watchface) stav smyčky (pokud nepoužíváte AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md))
 
-### Ongoing Notification
+### Oznámení v notifikační liště
 
-Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
+V telefonu přidá do notifikační lišty nebo na zamykací obrazovku informace o aktuální glykémii, trendu, aktivním dočasném bazálu v %, bazálu v U/h, bazálním profilu, IOB a rozdělení bolusu a bazálu v IOB.
 
 ![AAPS widget](../images/ConfBuild_Widget.png)
 
@@ -220,19 +220,19 @@ Displays a summary of current BG, delta, active TBR%, active basal u/hr and prof
 
 Nastavení synchronizace dat AndroidAPS s Nightscoutem.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
+Je-li aktivována možnost **Zaznamenat start aplikace do NS**, bude každý restart AndroidAPS v Nightscoutu zobrazen. Může to být praktické v případě problémů s aplikací (např. když není aplikace vyjmuta z optimalizace baterie telefonu). Na druhou stranu to může zahltit graf Nightscoutu spoustou položek.
 
-#### Alarm options
+#### Nastavení alarmů
 
-Activate/deactivate AndroidAPS alarms
+Aktivovat nebo deaktivovat alarmy v AndroidAPS
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![Nastavení alarmů](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### Nastavení připojení
 
-Offline looping, disable roaming...
+Offline smyčka, zakázat roaming…
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Chcete-li používat pouze konkrétní síť Wi-Fi, můžete zadat její **WiFi SSID**. Můžete vložit více SSID oddělených středníkem. Chcete-li smazat všechny SSID, nechte políčko prázdné.
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 

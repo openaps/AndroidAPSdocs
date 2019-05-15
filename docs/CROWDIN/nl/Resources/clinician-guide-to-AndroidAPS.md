@@ -43,7 +43,7 @@ AndroidAPS is zo ontworpen dat alle ingevoerde gegevens, en de daaruit volgende 
 
 ### Voorbeelden van beslissingen die het AndroidAPS algoritme maakt
 
-Het algoritme dat oorspronkelijk is gemaakt voor OpenAPS (een doe-het-zef systeem dat draait op een minicomputer), wordt ook gebruikt door AndroidAPS. De functies die AndroidAPS heeft, komen grotendeels overeen met OpenAPS. Onderstaande voorbeelden zijn dan ook overgenomen uit de OpenAPS documentatie. Het algoritme maakt voorspellingen voor meerdere scenario's (zoals hierboven beschreven). Deze worden in Nightscout weergegeven als paarse lijnen in de toekomst. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In de logs is terug te vinden welke voorspelling en welk tijdsbestek heeft geleid tot een actie van het algoritme.
+Het algoritme dat oorspronkelijk is gemaakt voor OpenAPS (een doe-het-zef systeem dat draait op een minicomputer), wordt ook gebruikt door AndroidAPS. De functies die AndroidAPS heeft, komen grotendeels overeen met OpenAPS. Onderstaande voorbeelden zijn dan ook overgenomen uit de OpenAPS documentatie. Het algoritme maakt voorspellingen voor meerdere scenario's (zoals hierboven beschreven). Deze worden in Nightscout weergegeven als paarse lijnen in de toekomst. AndroidAPS gebruikt verschillende kleuren om deze [voorspellingslijnen](../Installing-AndroidAPS/Releasenotes#overview-tab) te onderscheiden. In de logs is terug te vinden welke voorspelling en welk tijdsbestek heeft geleid tot een actie van het algoritme.
 
 #### Hier enkele voorbeelden van de voorspellingslijnen en hoe ze kunnen verschillen:
 

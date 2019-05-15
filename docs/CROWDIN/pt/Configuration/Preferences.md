@@ -10,12 +10,12 @@ Existem limites de segurança em vigor com base na idade que selecionou nessa co
 
 ## Geral
 
-* Seleccione o seu Idioma. If your language is not available, or not all of the words are translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
+* Seleccione o seu Idioma. Se seu idioma não está disponível, ou nem todas as palavras são traduzidas, então sinta-se à vontade para fazer algumas sugestões em [Crowdin](https://crowdin.com/project/androidaps) ou pergunte na [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
 
 ## Visão Geral
 
-* Keep screen on is useful while you are giving a presentation. It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
-* Buttons let you choose which buttons are visible on your home screen. Also gives you a few options for the popup screen you will see after pressing a button.
+* Manter o ecrã ligado é útil enquanto você está fazendo uma apresentação. Vai consumir muita energia, portanto é sensato ter seu telefone conectado a um carregador.
+* Botões permitem que você escolha quais botões são visíveis no ecrã inicial. Também lhe dá algumas opções para a ecrã popup que você verá depois de pressionar um botão.
 * Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
 * Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
     
