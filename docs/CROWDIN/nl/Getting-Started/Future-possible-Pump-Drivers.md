@@ -22,13 +22,13 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Omnipod Eros ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-**Status:** (Opmerking: de Omnipod Eros is de huidige versie) Deze wordt beperkt ondersteund op dit moment, zie [OpenOmni](http://www.openomni.org/) en [OmniAPS Slack](https://omniaps.slack.com/)
+**Status:** (Opmerking: de Omnipod Eros is de huidige versie) Deze wordt beperkt ondersteund op dit moment.
 
 **OpenAPS, Loop:** In Loop is de Omnipod beschikbaar voor testen door een breed publiek. Dat is de allerlaatste fase in het ontwikkelproces, er is ook al documentatie beschikbaar zodat beginners er ook mee aan de slag kunnen. Je hebt een Rileylink nodig (versie 2.x en 433MHz antenne) voor de communicatie tussen iPhone en pod. Een PDM heb je niet nodig. Zie loopdocs.org voor alle verdere informatie.
 
 **Java implementaties:** Wordt aan gewerkt...
 
-**AAPS implementatie status:** Wordt aan gewerkt, op twee manieren. Voor de eerste, waarbij alleen een Rileylink nodig is voor de communicatie tussen Android telefoon en pod: zie [RileyLinkAAPS voor Omnipod](https://github.com/ktomy/RileyLinkAAPS) (dev_omnipod branch). Er is hiervan nog geen volledig werkend prototype beschikbaar (de ontwikkelaar heeft de nodige wijzigingen voltooid voor Rileylink firmware 2.0, en is begonnen met het verzenden van opdrachten naar de pomp). Je kunt de voortgang volgen op https://omniaps.slack.com/ in kanaal 'android-driver'. De ontwikkelaar houdt daar de vooruitgang bij. De tweede manier is gedaan door een andere gebruiker die wel al een werkend prototype heeft gemaakt. Dit prototype heeft naast een Rileylink ook nog een Raspberry Pi nodig. Hij wordt nu op kleine schaal door een aantal mensen gebruikt, maar is niet helemaal uitontwikkeld. Daarom is er in de rest van deze wiki ook nog niets over beschreven. Op https://github.com/winemug kun je alle informatie vinden.
+**AAPS implementatie status:** Wordt aan gewerkt, op twee manieren. Voor de eerste, waarbij alleen een Rileylink nodig is voor de communicatie tussen Android telefoon en pod: zie [RileyLinkAAPS voor Omnipod](https://github.com/ktomy/RileyLinkAAPS) (dev_omnipod branch). Er is hiervan nog geen volledig werkend prototype beschikbaar (de ontwikkelaar heeft de nodige wijzigingen voltooid voor Rileylink firmware 2.0, en is begonnen met het verzenden van opdrachten naar de pomp). Je kunt de voortgang volgen op https://omniaps.slack.com/ in kanaal 'android-driver'. De tweede manier is gedaan door een andere gebruiker die wel al een werkend prototype heeft gemaakt. Dit prototype heeft naast een Rileylink ook nog een Raspberry Pi nodig. Hij wordt nu op kleine schaal door een aantal mensen gebruikt, maar is niet helemaal uitontwikkeld. Daarom is er in de rest van deze wiki ook nog niets over beschreven. Op https://github.com/winemug kun je alle informatie vinden.
 
 **Hardware eisen voor AAPS:** Wanneer het helemaal uitontwikkeld gaat zijn, heb je een RileyLink (versie 2.x en 433 MHz antenne) + Android telefoon met Bluetooth nodig.
 
