@@ -54,9 +54,9 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Status:** (Opmerking: Omnipod DASH is een nieuwe versie van de Omnipod, hij is in sommige landen al verkrijgbaar.) Wordt momenteel niet ondersteund. De pomp is een Loop-kandidaat, maar aangezien het communicatie-protocol op dit moment onbekend is, zie ik het niet snel gebeuren dat deze pomp wordt ondersteund.
+**Loop status:** Currently not supported by any of loop system. De pomp is een Loop-kandidaat, maar aangezien het communicatie-protocol op dit moment onbekend is, zie ik het niet snel gebeuren dat deze pomp wordt ondersteund.
 
-**Hardware eisen voor AAPS:** Waarschijnlijk geen. Want gebruikt Bluetooth.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
 * * *
 
@@ -88,7 +88,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
-**Status:** (Opmerking: Omnipod DASH is een nieuwe versie van de Omnipod, hij is in sommige landen al verkrijgbaar.) Wordt momenteel niet ondersteund. De pomp is een Loop-kandidaat, maar aangezien het communicatie-protocol op dit moment onbekend is, zie ik het niet snel gebeuren dat deze pomp wordt ondersteund.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Hardware eisen voor AAPS:** Waarschijnlijk geen. Want gebruikt Bluetooth.
 
