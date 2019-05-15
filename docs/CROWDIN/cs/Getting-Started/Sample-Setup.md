@@ -103,25 +103,25 @@ Chcete-li to provést, proveďte na svém smartphonu následující kroky:
 
 ## Nainstalujte xDrip+
 
-xDrip+ je další vyspělá open source aplikace, která nabízí bezpočet možností. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+ je další vyspělá open source aplikace, která nabízí bezpočet možností. V tomto nastavení se Xdrip+ nepoužívá jako zdroj glykémie z Dexcom G5 (což je v rozporu s tím, proč vývojáři vytvořili Xdrip+), ale pouze kvůli výstrahám a zobrazovaní aktuální hodnoty glykémie včetně její křivky ve widgetu na domovské obrazovce zařízení s Androidem. V aplikaci xDrip + lze výstrahy nastavit mnohem podrobněji než v aplikaci Dexcom, AAPS nebo Nightscout (žádné omezení ve výběru zvuků, různé alarmy podle denní doby atd.).
 
-1. Download the latest stable APK version of xDrip+ with your smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - not the version from the Google Play Store!
-2. Install xDrip+ by selecting the downloaded APK file.
-3. Start xDrip+ and make the following settings (hamburger menu at top left) 
-    * Settings > Alarms and Alerts > Glucose Level Alert List > Create Alerts (high and low) according to your needs. 
-    * The existing alarms can be changed with a long press on the alarm.
-    * Settings > Alarms and Alerts > Calibration Alerts: disabled (reminded via the modified Dexcom app)
-    * Settings > Hardware Data Source > 640G/EverSense
-    * Settings > Inter-app settings > Accept Calibrations > `ON`
-    * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G5 sensor. This is necessary otherwise an error message will appear regularly.) 
+1. Stáhněte si nejnovější stabilní verzi aplikace xDrip+ (APK) do svého telefonu <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - ne verze z Google Play!
+2. Nainstalujte xDrip+ ze staženého souboru APK.
+3. Spusťte xDrip + a proveďte následující nastavení (hamburger menu vlevo nahoře) 
+    * Nastavení > Výstrahy a Upozornění > Seznam výstrah glykémií > Vytvořte výstrahy (vysoké a nízké) podle svých potřeb. 
+    * Vytvořenou výstrahu lze změnit tak, že ji stisknete a dlouze přidržíte.
+    * Nastavení > Výstrahy a Upozornění > Výstrahy kalibrace: vypnout (Připomínáno prostřednictvím upravené Dexcom aplikace)
+    * Nastavení > Zdroj dat > 640G/EverSense
+    * Nastavení > Komunikace mezi aplikacemi > Přijímat kalibrace > `ZAP`
+    * Menu > Spustit senzor (je pouze „pro forma“ a nemá nic společného s běžícím senzorem G5. (To je nezbytné, jinak se bude pravidelně objevovat chybová zpráva.) 
 
-### Example of an alarm setup
+### Příklad nastavení výstrahy
 
-The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
+„Urgentní nízká výstraha“ (pod 55 mg/dl resp. 3,1 mmol) je standardní výstraha z upravené aplikace Dexcom, kterou nelze zakázat.
 
-![xDrip alarms](../images/SampleSetupxDripWarning.png)
+![xDrip výstrahy](../images/SampleSetupxDripWarning.png)
 
-Tip for meetings / church visits / cinema etc..:
+Tip pro schůzky / návštěvy kostela / kino atd.:
 
 If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
 
