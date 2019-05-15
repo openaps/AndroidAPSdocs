@@ -165,21 +165,21 @@ Tlačítka k běžně používaným úkonům:
 * Dočasné cíle
 * Nastavit / zrušit dočasný bazál
 * Prodloužený bolus (pouze DanaR/RS nebo Combo)
-* Prime / fill (DanaR/RS or Combo pump only)
+* Kanyla / plnění (Pouze DanaR/RS nebo Combo)
 * Prohlížeč historie
 * TDD (celková denní dávka = bolus + bazál za den)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Někteří lékaři doporučují – hlavně pro nové uživatele pumpy – poměr bazál-bolus 50:50. Poměr se proto vypočítá jako TDD / 2 * TBB (celková bazální dávka = součet hodnot bazálních dávek za 24 hodin). Jiní dávají přednost hodnotám, kdy TBB tvoří 32 % až 37 % z TDD. Stejně jako podobná pravidla má i toto v reálném životě omezenou platnost. Poznámka: Váš diabetes může být jiný!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Portál nastavení péče
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+V části Péče je možné přidávat položky ošetření a zobrazit podrobnosti týkající se senzoru, inzulínu, kanyly nebo baterie pumpy.
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Poznámka: při přidání položky do části Péče (např. jídlo, bolus, korekční bolus apod.) nebude podán **žádný inzulín**
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Sacharidy zadané v části Péče (např. přídavek sacharidů) budou započítány do COB.
 
 ![Careportal tab](../images/ConfBuild_CarePortal.png)
 
@@ -189,7 +189,7 @@ Carbs entered in the careportal (i.e. correction carbs) will be used for COB cal
 
 ### Jídlo
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Zobrazuje jídla přidaná do databáze Nightscoutu. Více informací viz [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
 Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
