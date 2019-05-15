@@ -1,28 +1,28 @@
 # Pomp keuzes
 
-AndroidAPS currently works with
+AndroidAPS werkt momenteel met
 
 * Accu-Chek Combo
 * Accu-Chek Insight
 * DanaR
 * DanaRS 
 
-pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+pomp. Details over de status van andere pompen die mogelijk in de toekomst met AndroidAPS zullen werken, staan op de pagina met [mogelijk toekomstige insulinepompen](Future-possible-Pump-Drivers.md).
 
-If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+Bij het kiezen van een nieuwe pomp vragen veel mensen zich af voor welke ze zouden moeten kiezen. De verschillende leveranciers staan in [dit werkblad](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), graag de gegevens van jouw leverancier toevoegen als deze nog niet vermeld zijn.
 
-The Combo and the Insight are solid pumps, and loopable. The advantages of the DanaR/RS as the pump of choice however are:
+De Combo en de Insight zijn solide pompen en je kunt ermee loopen. De voordelen van de DanaR/RS zijn echter:
 
-* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
+* De DanaR/RS is te gebruiken met vrijwel elke telefoon met Android versie 5.1 of hoger. Er hoeft dus geen Lineage besturingssysteem te worden geïnstalleerd. Mocht je telefoon stuk gaan of kwijtraken, dan is een vervangende telefoon die werkt met de DanaR/RS, snel gevonden. Met de Combo is dat minder makkelijk. (Dit kan veranderen in de toekomst, als Android 8.1 populairder wordt)
 
-* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
+* Initiële koppeling tussen telefoon en pomp is makkelijker met de DanaR/RS. Maar dit doe je meestal eenmalig.
 
-* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+* Tot nu toe werkt de Combo door 'screen parsing': doorsturen wat er op het scherm staat. In het algemeen werkt dit prima, maar het is traag. Bij het loopen merk je dit vaak niet eens omdat alles op de achtergrond werkt. Wel kost het meer tijd, dus je moet langer een Bluetooth verbinding houden tussen telefoon en pomp. Dat kan lastig zijn, bijvoorbeeld wanneer je alvast bolust tijdens het koken, en je al wegloopt terwijl de bolus nog wordt gegeven.
 
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* De Combo trilt aan het einde van TBRs, de DanaR trilt (of piept) bij een SMB. Waarschijnlijk gebruikt de loop 's nachts vaker een TBR dan SMB. De DanaRS kun je zo instellen dat de pomp niet piept of trilt wanneer een TBR of SMB wordt gegeven.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* Bij de DanaRS wordt de pompgeschiedenis in een paar seconden uitgelezen met COB. Daardoor is het makkelijk om even offline te wisselen van telefoon. Zodra er een paar CGM waardes binnenkomen, werkt de loop weer.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* Alle pompen waar AndroidAPS op werkt, zijn waterdicht wanneer ze nieuw zijn. Alleen de Dana pompen zijn ook gegarandeerd waterdicht tijdens gebruik, doordat de ruimtes voor batterij en reservoir volledig afgesealed zijn.
 
-The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+De Combo is natuurlijk een zeer goede pomp, en loopbaar. De Combo heeft ook als voordeel dat er veel meer keuze is in infuussets, aangezien hij een standaard luer-lock aansluiting heeft. Er gaat een normale batterij in, die je bij een tankstation of supermarkt kunt kopen en mocht het echt nodig zijn, kunt je hem altijd nog stelen/lenen van de afstandsbediening in een hotelkamer ;-)
