@@ -102,7 +102,7 @@ If you receive failure message like
     2. Uninstall AAPS on your phone.
     3. Enable airplane mode & turn off bluetooth.
     4. Install new version (“app-full-release.apk”)
-    5. [Importeer instellingen](../Usage/Objectives#export-import-settings)
+    5. [Import settings](../Usage/Objectives#export-import-settings)
     6. Turn bluetooth back on and disable airplane mode
 
 ## App installed but old version
