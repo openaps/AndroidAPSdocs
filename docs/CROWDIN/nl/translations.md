@@ -1,6 +1,6 @@
-# How to translate AndroidAPS
+# Vertalen van de app of wiki
 
-* Go to <https://translations.androidaps.org> or <https://wikitranslations.androidaps.org> and login using your Github account
+* Wanneer je wilt meehelpen vertalen vanuit het Engels, dan gaan we ervan uit dat je er wel uitkomt met de Engelstalige instructies;) -> Go to <https://translations.androidaps.org> or <https://wikitranslations.androidaps.org> and login using your Github account
 
 * Contact [Milos](https://gitter.im/MilosKozak) or [Adrian](https://gitter.im/AdrianLxM) and specify language and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users)
 
