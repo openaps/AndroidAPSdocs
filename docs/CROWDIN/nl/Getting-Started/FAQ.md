@@ -65,75 +65,31 @@ Er bestaan ook speciale bandjes voor om je bovenarm die de CGM/FGM op zijn plek 
 
 Deze tabel is bedoeld om te helpen met het optimaliseren van jouw instellingen. De beste volgorde is deze van boven naar beneden te doorlopen. Focus je eerst op één instelling en zorg dat die correct is, voordat je de volgende gaat optimaliseren. Werk in kleine stapjes in plaats van meteen grote veranderingen te maken. En bekijk een verandering gedurende meerdere dagen; geen dag is hetzelfde met diabetes! Je kunt [Autotune gebruiken](https://autotuneweb.azurewebsites.net/) om aanwijzingen voor verbeteringen te krijgen, hoewel je het niet blindelings moet volgen: het werkt misschien niet goed voor jou of in alle omstandigheden. Merk op dat alle instellingen met elkaar samenhangen - je kunt 'verkeerde' instellingen hebben die in sommige omstandigheden goed samenwerken (bijvoorbeeld als een te hoge basaal toevallig samenvalt met een te hoge CR) maar niet in andere omstandigheden. Dit betekent dat je met alle instellingen rekening moet houden bij veranderingen, en ze zo afstemmen dat ze voor jou goed werken in verschillende omstandigheden.
 
-<table>
+<table class="tg">
   <tr>
-    <th align="center">
-      Instelling
-    </th>
-    
-    <th align="center">
-      Beschrijving & testen
-    </th>
-    
-    <th align="center">
-      Invloed
-    </th>
+    <th class="tg-0pky">Setting</th>
+    <th class="tg-0pky">Description &amp; testing</th>
+    <th class="tg-0pky">Impact</th>
   </tr>
-  
   <tr>
-    <td align="center">
-      Duur van insuline activiteit (DIA)
-    </td>
-    
-    <td align="center">
-      De tijd die het duurt om de hoeveelheid insuline te laten afnemen naar nul. <br /><br />Dit hebben veel mensen te kort ingesteld. Dit zou je op ten minste 5 uur moeten zetten, mogelijk 6 of 7.
-    </td>
-    
-    <td align="center">
-      Te korte DIA kan leiden tot lage BGs. En omgekeerd.<br /><br />Als DIA te kort is, denkt AAPS te vroeg dat je eerdere bolus helemaal is verbruikt, en, bij hoog blijvende glucosewaardes, je meer insuline zal geven. (Eigenlijk wacht AAPS niet zo lang, maar voorspelt wat er zou gebeuren en blijft hij insuline toevoegen). Dit zorgt voor “insuline stapeling” waar AAPS zich niet bewust van is.<br /><br />Voorbeeld van een te korte DIA is een hoge BG gevolgd door een overcorrectie en daarmee een te lage BG.
-    </td>
+    <td class="tg-0pky">Duration of insulin activity (DIA)</td>
+    <td class="tg-0pky">The length of time that insulin decays to zero.<br><br>This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.</td>
+    <td class="tg-0pky">Too short DIA can lead to low BGs. And vice-versa.<br><br>If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.<br><br>Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.</td>
   </tr>
-  
   <tr>
-    <td align="center">
-      Basaalstanden (E/uur)
-    </td>
-    
-    <td align="center">
-      De hoeveelheid insuline per uur in een bepaald tijdsblok, om BG stabiel te houden.<br /><br />Test jouw basaalstanden door te 'open loopen', vasten, 5 uur na voedsel te wachten en daarna te zien hoe jouw BG verandert. Herhaal een paar keer.<br /><br />Als BG daalt, is je basaal te hoog. En omgekeerd.
-    </td>
-    
-    <td align="center">
-      Te hoge basaal kan leiden tot lage BGs. En omgekeerd.<br /><br />AAPS houdt jouw ingestelde basaalstanden aan als 'nullijn'. Als je basaal te hoog is, zal hij een 'zero temp' (basaalstand van 0) als een te sterke negatieve IOB meetellen. Dit zal zorgen dat AAPS vervolgens meer correcties geeft dan hij zou moeten doen om IOB uiteindelijk naar nul te brengen.<br /><br />Dus een te hoge basaal zal lage BGs creëren, zowel met de standaard basaal, maar ook na enkele uren als AAPS correcties maakt om het streefdoel te bereiken.<br /><br />Omgekeerd kan een te lage basaal leiden tot hoge BGs en zal het AAPS niet lukken om je omlaag te brengen naar het streefdoel.
-    </td>
+    <td class="tg-0pky">Basal rate schedule (U/hr)</td>
+    <td class="tg-0pky">The amount of insulin in a given hour time block to maintain BG at a stable level.<br><br>Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.<br><br>If BG is dropping, basal rate is too high. And vice-versa.</td>
+    <td class="tg-0pky">Too high basal rate can lead to low BGs. And vice-versa.<br><br>AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.<br><br>So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.<br><br>Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.</td>
   </tr>
-  
   <tr>
-    <td align="center">
-      Insuline gevoeligheids factor (Insulin Sensitivity Factor, ISF) (mmol/l/E of mg/dl/E)
-    </td>
-    
-    <td align="center">
-      Hoeveel jouw BG zou moeten dalen na het nemen van 1E insuline.<br /><br />Zorg dat je eerst jouw basaal goed hebt ingesteld, daarna kun je ISF testen door AAPS op 'open loop' te zetten, op een moment dat IOB nul is en je geen voedsel in je maag hebt. Neem dan een paar glucose tabletten zodat je BG op een plateau van een hogere waarde komt.<br /><br />Neem vervolgens een hoeveelheid insuline (op basis van jouw huidige ISF) om naar jouw streefBG te komen. Wanneer de BG enkele uren later gestabiliseerd is, weet je of jouw ISF klopt.<br /><br />NB: De ISF is bij veel mensen te laag ingesteld.
-    </td>
-    
-    <td align="center">
-      Lagere ISF = een kleinere daling van BGs voor elke eenheid insuline (wordt ook wel ‘heftiger / agressiever’ of ‘sterker’ genoemd). Een te lage ISF zal leiden tot lage BGs.<br /><br />Hogere ISF = een grotere daling in BGs voor elke eenheid insuline (wordt ook wel ‘minder sterk / minder agressief’ of ‘zwakker’ genoemd). Een te hoge ISF kan leiden tot hoge BGs.<br /><br />Een ISF die te laag is (niet ongebruikelijk) kan leiden tot ‘overcorrecties’, omdat AAPS denkt dat meer insuline nodig is om een hoge BG te corrigeren dan dat hij feitelijk nodig heeft. Dit kan leiden tot een "golfbeweging / achtbaan" in je glucosegrafiek (vooral tijdens vasten). In deze omstandigheden moet je je ISF verhogen. Dit betekent dat AAPS kleinere correctie doses zal geven, en dit voorkomt dat een hoge BG wordt overgecorrigeerd met daarna een lage BG. <br /><br />Omgekeerd kan een ISF die te hoog is, leiden tot ondercorrectie, wat betekent dat jouw BG boven het streefdoel blijft – met name zichtbaar gedurende de nacht.
-    </td>
+    <td class="tg-0pky">Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)</td>
+    <td class="tg-0pky">The drop in BG expected from dosing 1U of insulin.<br><br>Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.<br><br>Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.<br><br>This is quite often set too low.</td>
+    <td class="tg-0pky">Lower ISF = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.<br><br>Higher ISF = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.<br><br>An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.<br><br>Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.</td>
   </tr>
-  
   <tr>
-    <td align="center">
-      Koolhydraat ratio (KH ratio) (g/E)
-    </td>
-    
-    <td align="center">
-      Hoeveel gram koolhydraten jij kunt eten voor 1E insuline.<br /><br />Zorg dat je eerst jouw basaal + ISF goed hebt ingesteld, daarna kun je CR testen door AAPS op 'open loop' te zetten, op een moment dat IOB nul is en je geen voedsel in je maag hebt. Neem dan een maaltijd waarvan je de koolhydraten precies weet, en injecteer een hoeveelheid insuline op basis van je huidige KH ratio. Wanneer de BG enkele uren later gestabiliseerd is, weet je of jouw KH ratio klopt.
-    </td>
-    
-    <td align="center">
-      Lagere KH ratio = minder voedsel per eenheid, en dus krijg je meer insuline voor een vaste hoeveelheid koolhydraten. Kan ook ‘agressiever’ worden genoemd.<br /><br />Hogere KH ratio = meer voedsel per eenheid, oftewel je krijgt minder insuline voor een vaste hoeveelheid koolhydraten. Kan ook ‘minder agressief’ worden genoemd.<br /><br />Als jouw BG hoger uitkomt nadat een maaltijd is verteerd en IOB weer is teruggekomen naar nul, dan is jouw KH ratio te groot. En omgekeerd: als je BG lager uitkomt, dan is KH ratio te klein.
-    </td>
+    <td class="tg-0pky">Carbohydrate to insulin ratio (CR) (g/U)</td>
+    <td class="tg-0pky">The grams of carbohydrate for each unit of insulin.<br><br>Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR.</td>
+    <td class="tg-0pky">Lower CR = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.<br><br>Higher CR = more food per unit, ie you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.<br><br>If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are CR is too large. Conversely if your BG is lower than before food, CR is too small.</td>
   </tr>
 </table>
 
