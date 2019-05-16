@@ -193,7 +193,7 @@ In het volgende dialoogvenster selecteer je "APK" in plaats van "Android App Bun
 
 Selecteer "App" en klik op "Next".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png) <!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used ---> Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+![Screenshot 40](../images/Installation_Screenshot_40.png) <!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used ---> Klik op "Create new..." (maak nieuwe...) om jouw eigen key store (digitale handtekening) te maken. Een key store is een bestandje waarin de informatie van jouw handtekening is opgeslagen. Het bestandje is versleuteld en beveiligd met een wachtwoord. We raden aan om het op te slaan in jouw eigen map op je computer en om het wachtwoord goed te onthouden. Maar mocht je het bestandje of jouw wachtwoord kwijtraken dan is dat geen groot probleem, je moet dan gewoon een nieuwe maken. Het is goed om deze informatie zorgvuldig te bewaren.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -207,9 +207,9 @@ Selecteer "App" en klik op "Next".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Vul de informatie in van jouw handtekening die je zojuist hebt aangemaakt in het volgende venster en klik op "Next".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png) <!--- End modification here ---> Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". The following information might be important for later use.
+![Screenshot 43](../images/Installation_Screenshot_43.png) <!--- End modification here ---> Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
 
 * 'Release' is wat je hoort te kiezen als "Build Type", 'Debug' is alleen voor programmeurs.
 * Kies de "Flavour" die je wilt bouwen: 
