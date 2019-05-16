@@ -17,28 +17,28 @@
 
 * In het volgende venster: Versie Control - Git
 
-* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
+* Kies het juiste pad: .../Git<font color="#FF0000"><b>/bin</b></font>
 
-* Make sure update method "Merge" is selected.
+* Zorg ervoor dat de update methode "Merge" ("Samenvoegen") is geselecteerd.
   
-  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+  ![Android Studio - GIT pad](../images/Update_GitSettings2a.png)
 
 ### Mac
 
-* Elke versie van Git zou moeten werken. For example <https://git-scm.com/download/mac>
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/mac>. Volg de instructies op die site om Git te installeren.
+* Gebruik homebrew om git te installeren: ```$ brew install git```.
+* Voor meer informatie over het installeren van git zie de [officiële git documentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
 
 ## Bijwerken van jouw lokale kopie
 
-* Click: VCS->Git->Fetch
+* Zorg dat je in het hoofdscherm van Android Studio bent. Klik op VCS > Git > Fetch
   
-  ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
+  ![Android Studio - GIT - Ophalen](../images/Update_Fetch.png)
 
 ## Selecteer branch
 
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+* Als je de branch wilt wijzigen, selecteer dan een andere branch uit het menu rechtsonder: "master" (de meest actuele, stabiele versie) of een andere versie (zie verderop).
   
   ![](../images/UpdateAAPS1.png)
 
@@ -49,11 +49,11 @@ Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' of 'Checkout As...'
 
 ## Bijwerken vd branch vanuit Github
 
-* Press Ctrl+T, select Merge method and press OK
+* Druk op Ctrl+T, selecteer Merge method en druk op OK
   
   ![](../images/merge.png)
 
-On the tray you'll see green message about updated project
+Onderin beeld zie je een bericht verschijnen over 'updated project' (bijgewerkt projekt) of 'all files are up-to-date' (alle bestanden zijn bijgewerkt).
 
 ## Bouwen van de ondertekende APK
 
@@ -72,15 +72,15 @@ Selecteer "App" en klik op "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+Vul de locatie in waar jouw key store bestand (digitale handtekening) te vinden is, en het wachtwoord van jouw key store. Vul ook jouw key alias (naam van jouw 'handtekening') en het bijbehorende wachtwoord in.
 
-Select 'Remember passwords'.
+Selecteer 'Wachtwoorden onthouden'.
 
-Then click next.
+Klik daarna op "Next" (Volgende).
 
-![Key store path](../images/KeystorePathUpdate.PNG)
+![Key store bestandslocatie](../images/KeystorePathUpdate.PNG)
 
-Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". The following information might be important for later use.
+Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
 
 * 'Release' is wat je hoort te kiezen als "Build Type", 'Debug' is alleen voor programmeurs.
 * Kies de "Flavour" die je wilt bouwen: 
@@ -119,87 +119,87 @@ De laatste stap is om op het APK bestand te tikken en de app te installeren. Als
 
 Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met het instellen van AndroidAPS.
 
-## Check AAPS version on phone
+## Controleer AAPS versie op telefoon
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Je kunt nakijken welke AAPS-versie er op jouw telefoon staat door op de drie stipjes in de rechterbovenhoek van het Overzicht scherm te tikken, en te kiezen voor 'Over'.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![AAPS versie geïnstalleerd](../images/Update_VersionCheck.png)
 
 # Problemen oplossen
 
 ## Kotlin compiler warning
 
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
+Als je de app succesvol hebt gebouwd, maar je krijgt een Kotlin compiler waarschuwing dan kun je deze negeren.
 
-App was build successfully and can be transferred to phone.
+Je kunt verdergaan met het overzetten van de app (*.apk bestand) naar je telefoon.
 
-![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
+![negeer Kotlin compiler waarschuwing](../images/GIT_WarningIgnore.PNG)
 
 ## Could not download… / Offline Work
 
-If you get a failure message like this
+Als je een foutmelding krijgt over 'Kon niet downloaden/offline werken' zoals dit
 
-![Warning could not download](../images/GIT_Offline1.jpg)
+![Waarschuwing kon niet worden gedownload](../images/GIT_Offline1.jpg)
 
-make sure that ‘Offline work’ is disabled.
+zorg ervoor dat “Offline work” uitgeschakeld is.
 
-File -> Settings
+File -> Settings (Bestand -> Instellingen)
 
-![Settings offline work](../images/GIT_Offline2.jpg)
+![Instellingen offline werk](../images/GIT_Offline2.jpg)
 
 ## Uncommitted changes
 
-If you receive failure message like
+Als je een foutmelding ontvangt over 'Uncommitted changes' (Niet-opgenomen veranderingen) zoals
 
-![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+![Niet-opgenomen wijzigingen foutmelding](../images/GIT_TerminalCheckOut0.PNG)
 
-### Option 1
+### Optie 1
 
-* In Android APS select VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
+* In Android APS selecteer VCS -> GIT -> Reset HEAD ![HEAD resetten](../images/GIT_TerminalCheckOut3.PNG)
 
-### Option 2
+### Optie 2
 
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in Android Studio (lower left side of Android Studio window) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
+* Kopieer 'git checkout --' naar klembord (zonder aanhalingstekens)
+* Schakel over naar Terminal in Android Studio (linkerbenedenhoek van Android Studio venster) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
 
-* Paste copied text and press return ![GIT checkout success](../images/GIT_TerminalCheckOut2.jpg)
+* Plak gekopieerde tekst en druk op return ![GIT checkout succes](../images/GIT_TerminalCheckOut2.jpg)
 
-## App not installed
+## App niet geïnstalleerd
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![telefoonapp niet geïnstalleerd](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps: 
+* Controleer of je inderdaad het bestand "app-full-release.apk" naar jouw telefoon hebt overgebracht.
+* Als "App niet geïnstalleerd" wordt weergegeven op jouw telefoon volg dan deze stappen: 
   1. Ga naar de huidige AndroidAPS app op jouw telefoon en [Exporteer instellingen](../Usage/Objectives#export-import-settings)
-  2. Uninstall AAPS on your phone.
-  3. Enable airplane mode & turn off bluetooth.
-  4. Install new version (“app-full-release.apk”)
+  2. Verwijder de AndroidAPS app van jouw telefoon.
+  3. Schakel vliegtuigmodus in & schakel bluetooth uit.
+  4. Installeer nieuwe versie ("app-full-release.apk”)
   5. [Importeer instellingen](../Usage/Objectives#export-import-settings)
-  6. Turn bluetooth back on and disable airplane mode
+  6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
 
-## App installed but old version
+## App geïnstalleerd maar oude versie
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
+Wanneer je de app succesvol hebt gebouwd, hem naar jouw telefoon hebt overgebracht en geïnstalleerd, maar het versienummer blijft hetzelfde, dan heb je waarschijnlijk de 'Merge' stap gemist in de handleiding voor het [bijwerken van de app](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
 
-## None of the above worked
+## Geen van de bovengenoemde
 
-If non of the above tips helped you might consider building the app from scratch:
+Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
 1. Ga naar de huidige AndroidAPS app op jouw telefoon en [Exporteer instellingen](../Usage/Objectives#export-import-settings)
-2. Have your key password and key store password ready In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
-3.     Note down the path to your key store
-      In Android Studio Build -> Generate Signed APK
-      ![Key store path](../images/KeystorePath.PNG)
+2. Zorg dat je het eerder door jouzelf gemaakte key bestandje en wachtwoord bij de hand hebt. Mocht je de wachtwoorden vergeten zijn, kunt je proberen deze te vinden in de 'project files' zoals [hier](https://youtu.be/nS3wxnLgZOo) beschreven.
+3.     Noteer de locatie van jouw key store bestand
+      In Android Studio Build -> Generate signed APK 
+      ![Key store pad](../images/KeystorePath.PNG)
       
   
   4. Bouw app vanaf nul zoals [hier](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components) beschreven. Gebruik bestaande keystore en wachtwoord.
 4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
 5. [Importeer instellingen](../Usage/Objectives#export-import-settings)
 
-## Worst case scenario
+## In het ergste geval
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+In het geval dat zelfs het bouwen van de app vanaf nul niet jouw probleem oplost, zou je kunnen proberen om Android Studio volledig te verwijderen. Sommige gebruikers hebben gemeld dat dit hun probleem heeft opgelost.
 
-Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Zorg ervoor dat alle bestanden die gekoppeld zijn aan Android Studio worden verwijderd. Handleidingen kun je online vinden, bijvoorbeeld [https://stackoverflow.com/questions/39953495/hoe-to-volledig-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio).
+Installeer Android Studio vanaf nul zoals [hier](/Installing-AndroidAPS/Building-APK#install-android-studio) beschreven.
