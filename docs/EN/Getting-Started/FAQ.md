@@ -61,7 +61,7 @@ You can fix it: There are getting sold upper arm braclets that fix the CGM/FGM w
 ### Impact of settings
 This table aims to help you optimise settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (eg if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
-<table class="tg">
+<table class="tg" border=1>
   <tr>
     <th class="tg-0pky">Setting</th>
     <th class="tg-0pky">Description &amp; testing</th>
@@ -79,12 +79,12 @@ This table aims to help you optimise settings. It may be best to start at the to
   </tr>
   <tr>
     <td class="tg-0pky">Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)</td>
-    <td class="tg-0pky">The drop in BG expected from dosing 1U of insulin.<br><br>Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.<br><br>Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.<br><br>This is quite often set too low.</td>
+    <td class="tg-0pky">The drop in BG expected from dosing 1U of insulin.<br><br>Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.<br><br>Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.<br><br>Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.</td>
     <td class="tg-0pky">Lower ISF = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.<br><br>Higher ISF = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.<br><br>An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.<br><br>Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.</td>
   </tr>
   <tr>
     <td class="tg-0pky">Carbohydrate to insulin ratio (CR) (g/U)</td>
-    <td class="tg-0pky">The grams of carbohydrate for each unit of insulin.<br><br>Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR.</td>
+    <td class="tg-0pky">The grams of carbohydrate for each unit of insulin.<br><br>Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR. Best is to eat food your normally eat at that time of day and count its carbs precicely.</td>
     <td class="tg-0pky">Lower CR = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.<br><br>Higher CR = more food per unit, ie you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.<br><br>If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are CR is too large. Conversely if your BG is lower than before food, CR is too small.</td>
   </tr>
 </table>
