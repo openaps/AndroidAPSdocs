@@ -155,7 +155,7 @@ Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
 
 ### Option 1
 
-* Wähle in Android Studio den Menüeintrag VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
+* In Android Studio select VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
 
 ### Option 2
 
@@ -202,4 +202,4 @@ Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, kö
 
 Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. Anleitungen dazu findest Du online z.B. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Installiere Android Studio von Grund auf, wie [hier](/Installing-AndroidAPS/Building-APK#install-android-studio) beschrieben.
+Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
