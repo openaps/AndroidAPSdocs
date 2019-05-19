@@ -226,7 +226,7 @@ Je-li aktivována možnost **Zaznamenat start aplikace do NS**, bude každý res
 
 Aktivovat nebo deaktivovat alarmy v AndroidAPS
 
-![Nastavení alarmů](../images/ConfBuild_NSClient_Alarms.png)
+![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
 
 #### Nastavení připojení
 
