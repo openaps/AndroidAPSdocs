@@ -155,7 +155,7 @@ Als je een foutmelding ontvangt over 'Uncommitted changes' (Niet-opgenomen veran
 
 ### Optie 1
 
-* In Android Studio select VCS -> GIT -> Reset HEAD ![HEAD resetten](../images/GIT_TerminalCheckOut3.PNG)
+* In Android Studio selecteer VCS -> GIT -> Reset HEAD ![HEAD resetten](../images/GIT_TerminalCheckOut3.PNG)
 
 ### Optie 2
 
@@ -202,4 +202,4 @@ In het geval dat zelfs het bouwen van de app vanaf nul niet jouw probleem oplost
 
 Zorg ervoor dat alle bestanden die gekoppeld zijn aan Android Studio worden verwijderd. Handleidingen kun je online vinden, bijvoorbeeld [https://stackoverflow.com/questions/39953495/hoe-to-volledig-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+Installeer Android Studio vanaf nul zoals [hier](/Installing-AndroidAPS/Building-APK#install-android-studio) beschreven en **update gradle NIET**.
