@@ -6,9 +6,11 @@ Vítejte v dokumentaci k AndroidAPS
 AndroidAPS je aplikace pro telefony se systémem Android a funguje jako systém umělé slinivky (APS; artificial pancreas system). Co je systém umělé slinivky? Jedná se o softwarový program, jehož účelem je simulovat chování zdravé slinivky: automaticky udržovat hladinu krevního cukru v optimálním rozmezí. APS to sice nedokáže dělat tak dobře, jako skutečná slinivka, avšak dokáže lidem s diabetem 1 typu usnadnit zvládání nemoci, a to za použití zařízení, která jsou běžně dostupná a softwaru, který je jednoduchý a bezpečný. Mezi tato zařízení patří systém pro kontinuální monitoring glykémie (CGM), který systému AndroidAPS předává informace o aktuální glykémii, a inzulinová pumpa, která je řízena pomocí AndroidAPS tak, aby vydávala správné množství inzulínu. Aplikace komunikuje s těmito zařízeními prostřednictvím technologie bluetooth. K výpočtu správného množství inzulínu využívá speciální algoritmus, neboli sadu pravidel, vyvinutý pro jiný systém umělé slinivky zvaný OpenAPS, který na celém světě používají tisíce lidí a eviduje miliony hodin používání. 
 
 Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdravotnickým orgánem. Používání AndroidAPS na vlastní osobě je čistě experimentální. Vytvoření tohoto systému vyžaduje odhodlání a technické znalosti. Pokud na začátku nemáte technické znalosti, na konci je mít budete. Veškeré potřebné informace naleznete v této dokumentaci, jinde na internetu nebo je získáte od ostatních uživatelů -- můžete se jich zeptat prostřednictvím skupin na Facebooku nebo v jiných diskuzních fórech. Spousta lidí si úspěšně sestavila aplikaci AndroidAPS a nyní ji zcela bezpečně používá, nicméně je zcela nezbytné, aby každý uživatel:
+
 * Sestavil aplikaci sám, aby skutečně pochopil, jak funguje
 * Upravil potřebná nastavení dle svých konkrétních potřeb
 * Správně obsluhoval systém a dohlížel na to, zda správně funguje
+
 Jste-li připraveni přijmout tuto výzvu, čtěte dál. 
 
 **Primární cíle AndroidAPS:**
@@ -44,8 +46,8 @@ Jste-li připraveni přijmout tuto výzvu, čtěte dál.
 
 	Vezměte prosím na vědomí - tento projekt nemá žádnou spojitost s a není žádným způsobem schválený: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>'`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _.
 
-. DANGER:: 
-   **IMPORTANT SAFETY NOTICE**
+.. poznámka:: 
+   **DANGER! IMPORTANT SAFETY NOTICE**
 
    The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
