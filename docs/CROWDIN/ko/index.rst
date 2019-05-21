@@ -44,6 +44,13 @@ If you're ready for the challenge, please read on.
 
 	참고 - 이 프로젝트는 `수일개발 <http://www.sooil.com/main.php>`_, `Dexcom <http://www.dexcom.com/>`_, `아큐-첵, Roche Diabetes Care <http://www.accu-chek.com/>`_ 과 관련이 없으며 이들이 어떠한 보증도 해주지 않습니다.
 
+. DANGER:: 
+   **IMPORTANT SAFETY NOTICE**
+
+   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+
+   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+
 AndroidAPS 시작하기
 ----------------
 .. toctree::
