@@ -6,9 +6,11 @@ Welkom bij de Android APS documentatie
 AndroidAPS is een app die wordt gebruikt als 'kunstmatige alvleesklier' systeem (Artificial Pancreas System of kortweg APS in het Engels). Deze app draait op een Android smartphone   en heeft hetzelfde doel als een menselijke alvleesklier: de bloedglucosewaardes automatisch binnen gezonde grenzen houden. AndroidAPS kan dit nooit zo perfect als een echte alvleesklier, maar kan het leven met type 1 diabetes wel makkelijker maken. Door apparaten die commercieel beschikbaar zijn, te koppelen aan software die simpel en veilig is. Deze apparaten zijn een glucosesensor (Continue Glucose Monitor, CGM) en een insulinepomp. De app communiceert met de glucosesensor en insulinepomp via bluetooth. AndroidAPS gebruikt een algoritme (een set rekenregels) dat al eerder is ontwikkeld voor een ander 'kunstmatige alvleesklier' systeem: OpenAPS. Wereldwijd heeft OpenAPS duizenden gebruikers en al die mensen samen hebben inmiddels miljoenen uren ervaring met dat systeem. 
 
 Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hulpmiddelen gereguleerd. Wie AndroidAPS gebruikt, voert eigenlijk een medisch experiment uit op zichzelf. Het bouwen en instellen van het systeem vereist doorzettingsvermogen en technische kennis. Je hoeft deze technische kennis aan het begin nog niet te hebben, je zult die gaandeweg krijgen. Alle informatie die je nodig hebt kun je online vinden: hier in de wiki, op andere websites of van mensen de jou zijn voorgegaan -- je kunt ze vinden in Facebook groepen en andere online platforms. Veel mensen hebben AndroidAPS succesvol gebouwd en gebruiken het nu volledig veilig, maar het is essentieel dat elke gebruiker:
+
 * Het systeem zelf bouwt zodat ze goed begrijpen hoe het werkt
 * De instellingen aanpast om het systeem op hun eigen diabetes af te stemmen
 * Controleert wat het systeem doet en het zo nodig updatet om ervoor te zorgen dat het goed blijft werken
+
 Als je klaar bent voor deze uitdaging, lees dan verder. 
 
 **Belangrijkste doelen van AndroidAPS: **
@@ -44,8 +46,8 @@ Als je klaar bent voor deze uitdaging, lees dan verder.
 
 	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: ' SOOIL <http://www.sooil.com/eng/>' _ ' Dexcom <http://www.dexcom.com/>' _, ' Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>' _.
 
-. DANGER:: 
-   **IMPORTANT SAFETY NOTICE**
+.. opmerking:: 
+   **DANGER! IMPORTANT SAFETY NOTICE**
 
    The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
