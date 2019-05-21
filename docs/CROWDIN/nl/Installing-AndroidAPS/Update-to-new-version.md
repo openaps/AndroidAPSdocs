@@ -1,4 +1,4 @@
-# Bijwerken naar een nieuwe versie of branch
+# Bijwerken naar een nieuwe versie
 
 <font color="#FF0000"><b>Belangrijk: Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.</font></b>
 
