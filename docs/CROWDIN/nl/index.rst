@@ -13,7 +13,7 @@ Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hu
 
 Als je klaar bent voor deze uitdaging, lees dan verder. 
 
-**Belangrijkste doelen van AndroidAPS: **
+** Belangrijkste doelen van AndroidAPS: **
 
 * Een app waarbij de veiligheid ingebouwd zit. Om meer te lezen over de veiligheids-functies van de oref0 en oref1 algoritmen, klik hier (https://openaps.org/referece-design/)
 * Een alles-in-één app voor het beheer van type 1 diabetes
@@ -47,11 +47,11 @@ Als je klaar bent voor deze uitdaging, lees dan verder.
 	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: ' SOOIL <http://www.sooil.com/eng/>' _ ' Dexcom <http://www.dexcom.com/>' _, ' Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>' _.
 
 .. opmerking:: 
-   **DANGER! IMPORTANT SAFETY NOTICE**
+   **WAARSCHUWING! VOOR JE EIGEN VEILIGHEID**
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+   De veiligheidsfuncties die in AndroidAPS zitten, maken gebruik van ingebouwde veiligheidsmaatregelen van de hardware componenten waaruit jouw systeem bestaat. Het is daarom van cruciaal belang dat je alleen een volledig functionerende FDA of CE goedgekeurde insulinepomp en CGM gebruikt voor het bouwen van jouw eigen closed loop. Gebruik alleen insulinepompen en CGMs die in deze handleiding beschreven staan, waarvoor de AndroidAPS software is geschreven en getest. Hardware of software wijzigingen aan deze componenten kunnen voor onverwachte uitkomsten zorgen (denk aan het ongewenst afgeven van insuline), waardoor de gebruiker een aanzienlijk risico loopt. Als je een insulinepomp of CGM-ontvanger vindt/koopt/krijgt die een defect heeft, zelfgemaakt is, of op welke manier dan ook veranderd is, GEBRUIK DEZE NIET voor het maken van een AndroidAPS-systeem.
 
-   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+   Daarnaast is het belangrijk om alleen originele verbruiksartikelen te gebruiken, zoals infuussets, inschiethulpen en reservoirs die door de fabrikant zijn goedgekeurd voor gebruik met jouw pomp of CGM. Door het gebruik van niet-originele, niet-geteste verbruiksmaterialen kunnen CGM metingen onnauwkeurig worden en/of fouten optreden in de insulinedosering. Insuline is zeer gevaarlijk wanneer het verkeerd wordt gedoseerd - speel alstublieft niet met je leven door jouw hulpmiddelen aan te passen.
 
 Aan de slag met AndroidAPS
 ----------------
@@ -75,7 +75,7 @@ AndroidAPS installeren
    :glob:
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
-   Bijwerken naar een nieuwe versie of branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
@@ -88,7 +88,7 @@ AndroidAPS instellingen
    
    Configurator <./Configuration/Config-Builder.md>
    BG bron <./Configuration/BG-Source.md>
-   Dexcom G6 hints <./Configuration/Dexcom.md>
+   Dexcom G6 tips<./Configuratie/Dexcom.md>
    DanaR pomp <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS pomp <./Configuration/DanaRS-Insulin-Pump.md>
    AccuChek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
@@ -96,7 +96,7 @@ AndroidAPS instellingen
    Smartwatch instellingen <./Configuration/Watchfaces.md>
    Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>
-   xDrip+ settings <./Configuration/xdrip.md>
+   xDrip+ instellingen <./Configuratie/xdrip.md>
    
 Gebruik
 ------------
