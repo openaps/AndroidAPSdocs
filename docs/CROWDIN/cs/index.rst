@@ -2,11 +2,11 @@ Vítejte v dokumentaci k AndroidAPS
 ==============================================
 
 .. poznámka:: 
-   **IMPORTANT SAFETY NOTICE**
+   **DŮLEŽITÉ BEZPEČNOSTNÍ UPOZORNĚNÍ**
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+   Základy bezpečnosti AndroidAPS diskutované v této dokumentaci jsou postaveny na bezpečnostních vlastnostech hardwaru používaného k vybudování Vašeho systému. Je zásadně důležité, abyste pouze používali testované, plně funkční a pro uzavřenou smyčku schválené insulinové pumpy a CGM. Hardware nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. Pokud najdete nebo získáte rozbité, upravené nebo doma vyrobené inzulínové pumpy nebo CGM, *nepoužívejte* je pro vytvoření systému AndroidAPS.
 
-   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+   Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaším pumpou nebo CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně - prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
 
 .. poznámka:: 
 	** Upozornění a varování **
