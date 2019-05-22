@@ -90,7 +90,7 @@ Konfigurace
    
    Konfigurace <./Configuration/Config-Builder.md>
    Zdroj glykémií <./Configuration/BG-Source.md>
-   Dexcom G6 hints <./Configuration/Dexcom.md>
+   Tipy pro Dexcom G6 <./Configuration/Dexcom.md>
    Pumpa Dana-R <./Configuration/DanaR-Insulin-Pump.md>
    Pumpa Dana-RS <./Configuration/DanaRS-Insulin-Pump.md>
    Pumpa Accu-Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
@@ -98,7 +98,7 @@ Konfigurace
    Hodinky <./Configuration/Watchfaces.md>
    Nastavení <./Configuration/Preferences.md>
    Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
-   xDrip+ settings <./Configuration/xdrip.md>
+   Nastavení xDrip+ <./Configuration/xdrip.md>
    
 Použití
 ------------
