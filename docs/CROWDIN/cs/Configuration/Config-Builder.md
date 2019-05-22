@@ -6,7 +6,7 @@ Pokud má modul další dodatečná nastavení, dostanete se k nim kliknutím na
 
 **První nastavení**: od AAPS v 2.0 Vám s úvodním nastavením aplikace pomůže Průvodce nastavením. Stiskněte 3 tečky v pravé horní části obrazovky (F), a vyberte „Průvodce nastavením“.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
+![Tlačítko konfigurace a ozubené kolo](../images/ConfBuild_ConfigBuilder.png)
 
 ## Profil
 
@@ -44,7 +44,7 @@ Vyberte typ inzulínové křivky, kterou používáte. Všechny varianty „Rych
 
 Pro velké množství lidí nemá po 3–4 hodinách FIASP prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotek. Nicméně i toto zbytkové množství může mít vliv například při sportu. Proto AndroidAPS používá jako minimální hodnotu DIA 5 h.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Konfigurace Ultra-rychlý Oref](../images/ConfBuild_UltraRapidOref.png)
 
 ### Volitelný vrchol Oref
 
@@ -59,8 +59,8 @@ Vyberte, který zdroj glykémií používáte – další informace k nastavení
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Aplikace Dexcom G5 (upravená)](https://github.com/dexcomapp/dexcomapp/) – chcete-li používat alarmy xDrip+, vyberte v nastavení „Odesílat glykémie do xDrip+“. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=cz)
+* [Aplikace Dexcom G5 (upravená)](https://github.com/dexcomapp/dexcomapp/) – chcete-li používat alarmy xDrip+, vyberte v nastavení „Odesílat glykémie do xDrip+“. ![Konfigurace zdroje BG](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pumpy
@@ -151,7 +151,7 @@ Vytvořte si tlačítko pro určité standardní jídlo (sacharidy a parametry p
 
 Poznámka: tlačítko nebude viditelné, pokud je aktuální čas mimo interval definovaný v nastavení, nebo máte-li dostatek IOB k pokrytí sacharidů definovaných kalkulačkou.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Tlačítko průvodce nastavení](../images/ConfBuild_QuickWizard.png)
 
 #### Pokročilá nastavení
 
@@ -171,7 +171,7 @@ Tlačítka k běžně používaným úkonům:
 
 Někteří lékaři doporučují – hlavně pro nové uživatele pumpy – poměr bazál-bolus 50:50. Poměr se proto vypočítá jako TDD / 2 * TBB (celková bazální dávka = součet hodnot bazálních dávek za 24 hodin). Jiní dávají přednost hodnotám, kdy TBB tvoří 32 % až 37 % z TDD. Stejně jako podobná pravidla má i toto v reálném životě omezenou platnost. Poznámka: Váš diabetes může být jiný!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
+![Záložka akce](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Portál nastavení péče
 
@@ -181,7 +181,7 @@ Poznámka: při přidání položky do části Péče (např. jídlo, bolus, kor
 
 Sacharidy zadané v části Péče (např. přídavek sacharidů) budou započítány do COB.
 
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Záložka ošetření](../images/ConfBuild_CarePortal.png)
 
 ### SMS komunikátor
 
@@ -199,7 +199,7 @@ Sledování a ovládání AAPS prostřednictvím hodinek s Wear OS (viz [stránk
 
 Chcete-li z hodinek poslat např. bolus, musíte v „Nastavení wear“ aktivovat volbu „Ovládání z hodinek“.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Záložka Wear](../images/ConfBuild_Wear.png)
 
 Prostřednictvím záložky Wear nebo hamburger menu (levý horní roh obrazovky, když není záložka zobrazena) můžete
 
@@ -214,7 +214,7 @@ Zobrazit na displeji hodinek (xDrip+ watchface) stav smyčky (pokud nepoužívá
 
 V telefonu přidá do notifikační lišty nebo na zamykací obrazovku informace o aktuální glykémii, trendu, aktivním dočasném bazálu v %, bazálu v U/h, bazálním profilu, IOB a rozdělení bolusu a bazálu v IOB.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![Widget AAPS](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
@@ -226,7 +226,7 @@ Je-li aktivována možnost **Zaznamenat start aplikace do NS**, bude každý res
 
 Aktivovat nebo deaktivovat alarmy v AndroidAPS
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![Nastavení alarmů](../images/ConfBuild_NSClient_Alarms.png)
 
 #### Nastavení připojení
 
@@ -234,7 +234,7 @@ Offline smyčka, zakázat roaming…
 
 Chcete-li používat pouze konkrétní síť Wi-Fi, můžete zadat její **WiFi SSID**. Můžete vložit více SSID oddělených středníkem. Chcete-li smazat všechny SSID, nechte políčko prázdné.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Nastavení připojení k Nightscoutu](../images/ConfBuild_ConnectionSettings.png)
 
 #### Pokročilá nastavení
 
@@ -245,7 +245,7 @@ Chcete-li používat pouze konkrétní síť Wi-Fi, můžete zadat její **WiFi 
 * Zakázat nahrávání do NS
 * Vždy pracovat s absolutními hodnotami bazálu -> pokud chcete používat [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html), musíte mít tuto volbu aktivovanou.
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Rozšířená nastavení Nightscoutu](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Údržba
 
@@ -253,4 +253,4 @@ E-mail a počet logů, které budou odeslány. Obyčejně není třeba tyto hodn
 
 ### Konfigurátor
 
-Use tab for config builder instead of hambuger menu.
+Místo hamburger menu použijte záložku konfigurace.
