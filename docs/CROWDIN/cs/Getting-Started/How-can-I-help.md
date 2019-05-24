@@ -31,7 +31,7 @@ Prostě se přihlaště na CROWDIN, vyberte Váš jazyk, počkejte na schálení
 
 **Na co budou peníze použity?**
 
-Peníze NEBUDOU použity na platbu za něčí práci! Použijí se pro snížení nákladů při plánování setkání vývojářů. Snažíme se být velmi transparentní. Here's an example from 2018:
+Peníze NEBUDOU použity na platbu za něčí práci! Použijí se pro snížení nákladů při plánování setkání vývojářů. Snažíme se být velmi transparentní. Zde je příklad z roku 2018:
 
 * European Dev Meetup v Praze koncem května 2018:
 * pronájem pokoje plus internet
