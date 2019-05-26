@@ -30,8 +30,16 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
 
 * Klicke auf "Speichern" am oberen Rand des Fensters.
 
-## ns.10be.de
+## Semi-automated Nightscout setup
 
-Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. Du kannst Nightscout mit ein paar Klicks einrichten und direkt verwenden. Er versucht die Administration weitestmöglich zu automatisieren, so dass nicht mehr viel Handarbeit notwendig ist. Alle Einstellungen können über eine benutzerfreundliche Web-Oberfläche vorgenommen werden. Eine automatisierte Basalratenüberprüfung mit Autotune ist ebenfalls enthalten. Der Server steht in Deutschland.
+Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+
+**Benefits**
+
+* You can install Nightscout with a few clicks and use it directly. 
+* Reduction of manual work as Martin tries to automate the administration.
+* All settings can be made via a user-friendly web interface. 
+* The service includes an automated basal rate check using Autotune. 
+* The server is located in Germany.
 
 <http://ns.10be.de/en/index.html>
