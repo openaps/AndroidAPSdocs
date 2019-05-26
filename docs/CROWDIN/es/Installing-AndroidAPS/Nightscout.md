@@ -30,8 +30,16 @@ Se presume que ya usas Nightscout, sino visita la página Nightscout para seguir
 
 * Pinchar en guardar arriba en el panel.
 
-## ns.10be.de
+## Semi-automated Nightscout setup
 
-This service is offered by fellow looper Martin Schiftan free of charge at the moment. You can install Nightscout with a few clicks and use it directly. He tries to automate the administration to such an extent that you don't have to do much manual work anymore. All settings can be made via a user-friendly web interface. The service includes an automated basal rate check using Autotune. The server is located in Germany.
+This service is offered by fellow looper Martin Schiftan free of charge at the moment. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+
+**Benefits**
+
+* You can install Nightscout with a few clicks and use it directly. 
+* Reduction of manual work as Martin tries to automate the administration.
+* All settings can be made via a user-friendly web interface. 
+* The service includes an automated basal rate check using Autotune. 
+* The server is located in Germany.
 
 <http://ns.10be.de/en/index.html>
