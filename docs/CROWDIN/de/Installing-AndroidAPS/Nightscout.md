@@ -30,16 +30,16 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
 
 * Klicke auf "Speichern" am oberen Rand des Fensters.
 
-## Semi-automated Nightscout setup
+## Halb-automatische Nightscout Einrichtung
 
-Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. Wenn Dir das Angebot gefällt, kannst Du ihm eine kleine Spende zukommen lassen. Den Link findest Du links in der Navigation auf seiner Seite.
 
-**Benefits**
+**Vorteile**
 
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The server is located in Germany.
+* Du kannst Nightscout mit ein paar Klicks einrichten und direkt verwenden. 
+* Deutlich weniger manuelelr Aufwand, da Martin versucht, die Administration so weit als möglich zu automatisieren.
+* Alle Einstellungen können über eine benutzerfreundliche Weboberfläche vorgenommen werden. 
+* Eine automatisierte Basalratenüberprüfung mit Autotune ist ebenfalls enthalten. 
+* Der Server steht in Deutschland.
 
 <http://ns.10be.de/en/index.html>
