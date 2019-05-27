@@ -1,14 +1,14 @@
-# FAQ for loopers
+# Часто задаваемые вопросы по работе ИПЖ
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+Хотите добавить вопросы в ЧаВо? Читайте [инструкции](../make-a-PR.md)
 
 ## Общее
 
-### Можно ли просто скачать установочный файл AndroidAPS?
+### Можно ли скачать установочный файл AndroidAPS?
 
-Нет. Для AndroidAPS не предоставляется загружаемый файл apk. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+Нет. Для AndroidAPS не предоставляется загружаемый файл apk. Его надо [скомпилировать](../Installing-AndroidAPS/Building-APK.md) самостоятельно. Причина вот в чем:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AndroidAPS создан для управления помпой и подачи инсулина. В соответствии с действующим Европейским законодательством, все системы, классифицируемые как IIa или IIb, являются медицинскими устройствами, подлежащими обязательной сертификации (получение знака CE), что в свою очередь требует соответствующих исследований и одобрений. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
 
 This regulation is not restricted to sales (in the meaning of getting money for somthing) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
 
