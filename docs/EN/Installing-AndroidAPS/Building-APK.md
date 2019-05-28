@@ -1,5 +1,14 @@
 # Building the APK
 
+## New Build System
+
+A new automated build system is now available which generating the latest APK easier.
+The new automated build system can be used by new and old users. See the documentation link below for more details.
+The original build instructions using Android Studio are still avaiable below and suited to users who want to make modifications to code or who want to build specific versions and branches.
+
+* [Automated Build System](https://docs.google.com/document/d/1VJNcnSZoWIe_9yK0dfx3j6ywk2C1ffREny138ce6I30/edit?usp=sharing) - (Google Docs)
+* Manual Builds - see below
+
 ---
 ***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
    * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
@@ -8,10 +17,10 @@
    * *Click Apply or OK.*
 ---
 ### This article is divided into two parts.
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
+* In the overview part there is an explanation of what steps are necessary to build the APK file.
 * In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
-## Overview
+## Manual Build Overview
 
 In general, the steps necessary to build the APK file:
 

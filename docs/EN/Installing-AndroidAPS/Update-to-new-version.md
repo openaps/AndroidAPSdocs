@@ -1,5 +1,14 @@
 # Update to a new version or branch
 
+## New Build System
+
+There is new automated build system which is designed to make generating the latest APK easier.
+The new automated build system can be used by new and old users. See the documentation link below for more details.
+The original build instructions using Android Studio are still avaiable below and suited to users who want to make modifications to code or who want to build specific versions and branches.
+
+* [Automated Build System](https://docs.google.com/document/d/1VJNcnSZoWIe_9yK0dfx3j6ywk2C1ffREny138ce6I30/edit?usp=sharing) - (Google Docs)
+* Manual Builds - see below
+
 <font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>
 
 ## Install git (if you don't have it)
