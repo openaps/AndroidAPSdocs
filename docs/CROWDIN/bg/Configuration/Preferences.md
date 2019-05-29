@@ -2,7 +2,7 @@
 
 ## Password for settings
 
-This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
+Това ви позволява да сложите парола, за да предотвратите случайни или неоторизирани промени в Опции. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
 
 ## Patient age
 
