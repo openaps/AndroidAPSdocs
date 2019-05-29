@@ -12,13 +12,13 @@ AndroidAPS создан для управления помпой и подачи
 
 Это положение не ограничивается торговлей, но относится к любому виду распространения (даже безвозмездному). Создание медицинского устройства для себя является единственным вариантом, не затрагиваемым этими правилами.
 
-That’s why apks aren’t available.
+Именно поэтому распространение в виде готовых приложений (apk) недоступно.
 
-### How to begin?
+### С чего начать?
 
-First of all, you have to **get loopable hardware components**:
+Прежде всего, нужно **подготовить компоненты, которые работают с ипж**:
 
-* A [supported insulin pump](Pump-Choices.md), 
+* Совместимую с AAPS(ИПЖ) инсулиновую помпу 
 * an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
 * a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
