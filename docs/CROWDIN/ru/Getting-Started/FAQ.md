@@ -19,8 +19,8 @@ AndroidAPS создан для управления помпой и подачи
 Прежде всего, нужно **подготовить компоненты, которые работают с ипж**:
 
 * Совместимую с AAPS(ИПЖ) инсулиновую помпу 
-* an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
+* Смартфон с Андроидом (Apple iOS не поддерживается AndroidAPS - вместо этого изучите вариант [iOS Loop](https://loopkit.github.io/loopdocs/)) 
+* [Система непрерывного мониторинга глюкозы крови (ГК)](../Configuration/BG-Source.md). 
 
 Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
