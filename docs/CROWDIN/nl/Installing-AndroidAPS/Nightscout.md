@@ -30,16 +30,16 @@ We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat ee
 
 * Klik op "Save" aan de bovenkant van het scherm.
 
-## Semi-automated Nightscout setup
+## Nightscout aanmaken via ns.10be.de
 
-Deze service wordt aangeboden door een Duitse collega looper Martin Schiftan en is op dit moment gratis. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+Deze service wordt aangeboden door een Duitse collega looper Martin Schiftan en is op dit moment gratis. Als je wilt dan zou je kunnen overwegen om hem een kleine donatie te sturen (via de link op zijn site, in de navigatiebalk aan de linkerkant).
 
-**Benefits**
+**Voordelen van deze methode**
 
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The server is located in Germany.
+* Je kunt in een paar muisklikken een Nightscout site aanmaken. 
+* Je hoeft minder dingen zelf in te stellen omdat Martin dat al voor jou gedaan heeft.
+* Een overzichtelijke web-interface om jouw instellingen te bekijken en evt. aan te passen. 
+* Ook kun je hiermee je basaalstanden automatisch laten checken dmv Autotune. 
+* De server staat in Duitsland.
 
 <http://ns.10be.de/en/index.html>
