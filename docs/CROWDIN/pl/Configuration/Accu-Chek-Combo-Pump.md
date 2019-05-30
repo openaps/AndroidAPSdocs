@@ -1,8 +1,8 @@
-# Accu Chek Combo Pump
+# Pompa Accu-Chek Spirit Combo
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**To oprogramowanie jest częścią rozwiązania DIY (ang. do it yourself, zrób to sam) i nie jest produktem komercyjnym, lecz wymaga od Ciebie, abyś przeczytał dokumentację, uczył się i zrozumiał system - łącznie z tym, jak go używać. To nie jest coś, co będzie za Ciebie zarządzać leczeniem cukrzycy, lecz pozwala poprawić wyrównanie cukrzycy i jakość życia pod warunkiem, że chcesz poświęcić temu wymagany czas. Nie śpiesz się, daj sobie czas na naukę. Tylko Ty jesteś odpowiedzialny za to co robisz.**
 
-## Hardware requirements
+## Wymagania sprzętowe
 
 - A Roche Accu-Chek Combo (any firmware, they all work)
 - A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.
