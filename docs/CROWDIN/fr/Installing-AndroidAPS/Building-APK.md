@@ -52,7 +52,7 @@ Select "Standard" installation and click "Next".
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Select "Intellij" as UI (user interface) theme and click "Next".
+Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
