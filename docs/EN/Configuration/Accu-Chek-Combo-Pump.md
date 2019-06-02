@@ -25,7 +25,7 @@ Please be aware that this is not complete list and reflects personal user experi
 
 ## Limitations
 
-- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](https://androidaps.readthedocs.io/en/latest/Usage/Extended-Carbs.html) instead)
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs) instead)
 - Only one basal profile is supported.
 - Setting a basal profile other than 1 on the pump, or delivering extended boluses or multiwave
   boluses from the pump interferes with TBRs and forces the loop into low-suspend only mode for 6 hours
@@ -78,22 +78,20 @@ Please be aware that this is not complete list and reflects personal user experi
       recover more quickly from error situations and reduces the amount of vibrations that can occur during
       such errors
 
-![Screenshot of user menu settings](../../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org) and use the `combo` branch.
+- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
 - Make sure to read the wiki to understand how to setup AndroidAPS.
 - Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo
   plugin from interfering with ruffy during the pairing process.
-- Follow the link http://ruffy.AndroidAPS.org and clone ruffy via git. Use the same branch as you use for
-  AndroidAPS, right now that's the `combo` branch, later on there will be the regular `master` and `dev` branches.
+- Follow the link [http://ruffy.AndroidAPS.org](http://ruffy.AndroidAPS.org) and clone ruffy via git.
 - Install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch.
-  If the pump is already paired and can be controlled via ruffy, installing the `combo` branch is sufficient.
   Note that the pairing processing is somewhat fragile (but only has to be done once)
   and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device
   from the Bluetooth settings beforehand. Another option to try is to go to the Bluetooth menu after
@@ -113,7 +111,7 @@ Please be aware that this is not complete list and reflects personal user experi
 There are serveral possible reasons. Try the following steps:
 1.  Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
 
-![Combo should be next to phone](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
 2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
 

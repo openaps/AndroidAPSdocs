@@ -1,0 +1,27 @@
+# Dočasné cíle
+
+## Dočasné cíle a jejich nastavení
+
+Použitím dočasných cílů (DC) lze na přechodnou dobu změnit cílovou hodnotu glykémie. Funkcionalita je využívána nejčastěji ve spojitosti s vyšší tělesnou aktivitou, hypoglykémií nebo s blížícím se jídlem a v systému lze provést nastavení hodnot pro jejich opakované použití. Toto nastavení lze provést v menu v části Nastavení -> Jiné -> Výchozí nastavení dočasných cílů. Samotnou změnu dočasného cíle lze provést stisknutím a přidržením políčka zobrazujícím aktuální cíl v pravém horním rohu hlavní obrazovky AAPS nebo pomocí tlačítka Sacharidy v dolní části téže obrazovky a nebo na záložce Akce tlačítkem Dočasný cíl. Vzhledem k tomu, že dočasné cíle jsou většinou potřebné pro aktivitu, hypoglykémii (dokrmové sacharidy) nebo blížící se jídlo, můžete pro ně nastavit výchozí hodnoty. Chcete-li je nakonfigurovat, přejděte pomocí nabídky v horním pravém rohu do Nastavení -> Jiné -> Výchozí nastavení dočasných cílů. Chcete-li nastavit „Výchozí dočasný cíl“, můžete tak učinit přidržením cíle v pravém horním rohu hlavní obrazovky nebo pomocí oranžového tlačítka „Sacharidy“. Chcete-li nastavit „Volitelný dočasný cíl“, můžete to udělat rovněž dlouhým podržením cíle na hlavní obrazovce nebo na kartě „Akce“.
+
+## Dočasný cíl při hypoglykémii
+
+Jde o nejdůležitější dočasný cíl. A to hned z několika důvodů: 1. Uvědomíte si, že vaše glykémie bude klesat: Obvykle by si s tím měla smyčka poradit, ovšem někdy to budete vědět dříve než smyčka, takže smyčka bude moci reagovat rychleji, když se bude opírat o vyšší cílovou hodnotu glykémie. 2. Když sníte dokrmové sacharidy, vaše glykémie bude rychle stoupat. Smyčka se bude snažit tento vzestup korigovat nebo vám dokonce vydá SMB, jsou-li povoleny. „Dočasný cíl při hypoglykémii“ takovému chování dokáže zabránit. 3. (pokročilé, cíl 8): Pro dočasné cíle vyšší než 5,5 mmol/l můžete v nastavení OpenAPS SMB povolit možnost „Vysoký dočasný cíl zvýší citlivost“, takže AndroidAPS bude citlivější. 4. (pokročilé, cíl 8): Můžete deaktivovat možnost „Povolit SMB s vysokými dočasnými cíli“, takže i když máte COB > 0, možnost „Povolit SMB s dočasnými cíli“ nebo „Vždy povolit SMB“ je povolena a OpenAPS SMB aktivní, AndroidAPS nebude spouštět SMB, je-li aktivní vysoký dočasný cíl.
+
+Jde o nejdůležitější dočasný cíl, a to z těchto důvodů: 1. Očekávání poklesu glykémie: smyčka obvykle situaci zvládne, ale někdy můžete blížící se pokles glykémie předvídat dříve než smyčka a nastavením vyššího dočasného cíle lze smyčce pomoci, aby reagovala rychleji. 2. Následkem přídavku sacharidů při hypoglykémii poroste glykémie velmi rychle a smyčka bude tento vzestup korigovat navýšením inzulínu. Použití dočasného cíle při hypoglykémii tomu zabrání. 3. (pokročilé nastavení, po splnění 8. cíle): Pro dočasný cíl 5,5 mmol/l (nebo 100 mg/dl) lze povolit, aby vyšší dočasný cíl současně zvýšil senzitivitu a aby systém AAPS pracoval s touto vyšší hodnotou senzitivity. 4. (pokročilé nastavení, po splnění 8. cíle): SMB lze zakázat při vyšším dočasném cíli, což zajistí, že i v situaci, kdy je COB > 0 nebo jsou povoleny SMB s dočasnými cíli a nebo jsou povoleny vždy, AAPS při vyšším dočasném cíli SMB nepovolí. Poznámka: při přídavku sacharidů pomocí tlačítka Sacharidy na hlavní obrazovce AAPS a současně glykémii pod 4 mmol/l (72 mg/dl) je dočasný cíl při hypoglykémii aktivován automaticky.
+
+## Dočasný cíl při pohybové aktivitě
+
+Před pohybovou aktivitou a během ní můžete předcházet poklesu glykémie nastavením vyššího dočasného cíle. Pro zjednodušení spuštění dočasného cíle lze hodnotu cíle v systému předdefinovat v Nastavení -> Výchozí nastavení dočasných cílů -> Cíl při aktivitě spolu s trváním aktivity. Chcete-li si zjednodušit nastavení dočasného cíle, můžete nastavit výchozí „Dočasný cíl při aktivitě“.
+
+Pokročilé nastavení, po splnění 8. cíle: Výhodou dočasného cíle při pohybové aktivitě je možnost současného nastavení vyšší senzitivity pro dočasné cíle 5,5 mmol/l (100 mg/dl) a vyšší. Nastavení lze provést v záložce Konfigurace -> OpenAPS SMB. Někteří uživatelé namísto nastavení dočasného cíle před pohybovou aktivitou nebo během ní přepnou profil. AndroidAPS pak bude citlivější. Někdo místo dočasného cíle před aktivitou nebo během ní přepíná profil, ale každý jsme jiný. Pokud jsou SMB s vyšším dočasným cílem deaktivovány, AAPS nepoužije SMB, přestože bude COB > 0, budou povoleny SMB s dočasnými cíli, povoleny SMB obecně a funkce OpenAPS SMB budou aktivovány.
+
+## Dočasný cíl pro blížící se jídlo
+
+Pokud víte, že budete brzy jíst, můžete zvolit tento dočasný cíl, abyste měli již před jídlem vyšší IOB. Zejména pro ty, kdo neaplikují bolus s předstihem, může být dobrou alternativou snížit glykémii před jídlem pomocí dočasného cíle. Více informací o „Blížícím se jídle“ najdete v článku ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) nebo [zde](https://diyps.org/tag/eating-soon-mode/).
+
+Pokročilé nastavení, po splnění 8. cíle: Pokud v OpenAPS SMB povolíte volbu „Nízký dočasný cíl sníží senzitivitu“, AAPS bude více agresivní. Chcete-li tuto možnost využít, dočasný cíl musí být nižší než 5,5 mmol/l.
+
+## Vlastní dočasný cíl
+
+Někdy je vhodné si nastavit vlastní dočasné cíle. To lze provést stisknutím a přidržením políčka zobrazujícím aktuální cíl v pravém horním rohu hlavní obrazovky AAPS, možnost Volitelný, nebo v záložce Akce -> tlačítko Dočasný cíl. Tento cíl můžete nastavit přidržením cíle (rozsah) v pravém horním rohu obrazovky Přehled nebo na kartě „Akce“.

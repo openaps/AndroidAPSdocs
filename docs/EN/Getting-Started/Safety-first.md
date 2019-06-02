@@ -1,15 +1,15 @@
 # Safety first
 
-**When you decide to build your own closed loop always think about security and impact of all your actions**
+**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
 
 ## General
 
-* AndroidAPS is a just a tool to help you manage diabetes. Not something you can install and forget!
-* Don't absolutely trust any device taking control of insulin delivery. Watch it all the time, learn how it works and learn how to predict it's actions.
-* Remember the phone paired with pump can do anything with the pump. Dedicate this phone for APS and communication with your child. Do not allow to install other apps and games (!!!) to prevent installing together some unwanted code like trojans, viruses or bots.
-* Install all security updates provided by phone manufacter and Google.
+* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
+* Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
+* Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
+* Install all security updates provided by your phone manufacturer and Google.
 
 ## SMS Communicator
 
-* If you enable SMS Communicator, consider what could happen when the phone enabled for remote commands is stolen! So always protect it at least by PIN code
-* Since AndoridAPS 1.1 you will receive SMS notification of important remote actions like bolus or profile change. Setup at least 2 numbers for SMS communication to be notified about actions of second phone (for case it's stolen)
+* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
+* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.

@@ -27,15 +27,7 @@ a continuación salga
 Verás un aviso de proyecto actualizado
 
 ## Súbela a tu móvil 
- * Conecte el teléfono ahora
-
- * pulse "Play" en la barra
- 
- ![](https://github.com/Lillycgm/AndroidAPSdocs/blob/master/docs/images/play.png)
- 
- * Seleccionar el teléfono conectado y pulsar OK
-
-![](https://github.com/Lillycgm/AndroidAPSdocs/blob/master/docs/images/connectedphone.png)
+ * vea: [Compilando la APK](Compilando%20la%20APK.md)
 
 
 

@@ -1,3 +1,4 @@
+
 # Watchfaces 
 
 AndroidAPS está diseñado para ser controlado por los relojes Android Wear. Para lograr esto, necesitas seleccionar la variante de compilación "fullRelease" cuando [construyes the APK](/docs/Installing-AndroidAPS/Building-APK) (o "pumpRelease" te permitirá simplemente controlar la bomba a distancia sin hacer lazos cerrados). Dentro de AndroidAPS, en ConfigBuilder debe habilitar Wear. Puede acceder a la configuración haciendo clic en el icono

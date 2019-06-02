@@ -108,7 +108,7 @@ Hier kannst du auswählen, welche Pumpe du verwendest. Folgende Modelle werden d
 Beim erstmaligen Einrichten der Pumpe musst du einige Einstellungen vornehmen. Siehe [Einstellungen > Pumpen-Einstellungen](http://androidaps.readthedocs.io/en/latest/DE/einstellungen.html#pumpen-einstellungen)
 
 ## Empfindlichkeitserkennung
-Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Die automatische Sensibilitätserkennung (Autosens) ist das Herzstück des Closed Loop. Verschiedene Algorythmen analysieren laufend alle verfügbaren Daten (BZ, IOB, COB) und korrigieren im Closed Loop bei Bedarf, wenn du besser oder schlechter auf Insulin reagierst als eingestellt. Autosens wertet aber nur Daten aus, wenn eine Kohlenhydrate an Bord (COB) sind. Zeiten mit COB werden ausgespart.
+Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Die automatische Sensibilitätserkennung (Autosens) ist das Herzstück des Closed Loop. Verschiedene Algorythmen analysieren laufend alle verfügbaren Daten (BZ, IOB, COB) und korrigieren im Closed Loop bei Bedarf, wenn du besser oder schlechter auf Insulin reagierst als eingestellt. Autosens wertet aber nur Daten aus, wenn keine Kohlenhydrate an Bord (COB) sind. Zeiten mit COB werden ausgespart.
 
 Die berechnete Insulinempfindlichkeit kannst du verfolgen, indem du auf dem Home-Screen im Auswahlmenü der angezeigten Kurven "Sensitivität" auswählst. Die weiße Linie zeigt dir das graphisch an. 
 

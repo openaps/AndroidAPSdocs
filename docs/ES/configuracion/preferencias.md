@@ -12,7 +12,7 @@ Los algoritmos son diferentes dependiendo de la edad del usuario, por tanto, sel
 
 ## General
 
-* Selecciona la lengua aquí. Si no está disponible, o no todas las palabras han sido traducidas entonces puedes hacer sugerencias. Los archivos de traducciones están disponibles aquí: App>Src>Main>Res>Values>String o pregunta en la sala de gitter.
+* Selecciona la lengua aquí. Si no está disponible, o no todas las palabras han sido traducidas entonces puedes hacer sugerencias. Los archivos de traducciones están disponibles aquí: [App >Src > Main > Res > Values > Strings](https://github.com/MilosKozak/AndroidAPS/blob/dev/app/src/main/res/values/strings.xml) o pregunta en la [sala de chat de gitter](https://gitter.im/MilosKozak/AndroidAPS).
 
 * Ajuste rápido de wizard permite añadir un botón rápido para los snack o comidas, introduce los carbohidratos en la pantalla principal y selecciona el botón wizard para calcular el bolo para esos carbohidratos basado en tus ratios (no teniendo en cuenta glucosa o insulina a bordo)
 
@@ -48,15 +48,14 @@ lazo cerrado significa que las sugerencias de TBR se envían automáticamente a 
 ## OpenaAPS AMA
 
 ### OpenAPS Advanced Meal Assist (AMA)
-Permite que el sistema funcione más agresivamente de manera temporal después de un bolo de comida SI se ingresa carbohidratos. Enciéndalo en la pestaña de Configuración para ver la configuración de seguridad aquí, deberá completar el Objetivo 7 para usar esta función. Puede leer más sobre la configuración y Autosens en los documentos de OpenAPS.
+Permite que el sistema funcione más agresivamente de manera temporal después de un bolo de comida SI se ingresa carbohidratos. Enciéndalo en la pestaña de Configuración para ver la configuración de seguridad aquí, deberá completar el Objetivo 7 para usar esta función. Puede leer más sobre la configuración y [Autosens en los documentos de OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 
 ### Max U/hr de Temp Basal 
 
-Esta configuración existe como un límite de seguridad para evitar que AAPS sea capaz de dar una tasa basal peligrosamente alta. El valor se mide en unidades por hora (u / h). Se aconseja establecer esto en algo sensato. Una buena recomendación es tomar la tasa basal más alta en su perfil y multiplicarla por 4. Por ejemplo, si la tasa basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 4 para obtener un valor de 2u / hr.
+Esta configuración existe como un límite de seguridad para evitar que AAPS sea capaz de dar una tasa basal peligrosamente alta. El valor se mide en unidades por hora (u / h). Se aconseja establecer esto en algo sensato. Una buena recomendación es tomar la **tasa basal más alta** en su perfil y **multiplicarla por 4**. Por ejemplo, si la tasa basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 4 para obtener un valor de 2u / hr.
 
 ### Max IOB que OpenAPS puede proporcionar [U]
-
 
 Cantidad de insulina basal adicional (en unidades) que se acumula en el cuerpo, además de su perfil basal normal. Una vez que se alcanza este valor, AAPS dejará de administrar insulina basal adicional hasta que la Insulina a Bordo (IOB) basal vuelva a estar dentro de este rango.
 
@@ -82,7 +81,7 @@ Cuando se sienta cómodo, puede permitir que el sistema comience a administrarle
 > Estas son solo pautas; el cuerpo de todos somos diferentes Puede encontrar que necesita más o menos de lo que se recomienda aquí, pero siempre comience de manera conservadora y ajuste lentamente.
 
 
-Nota: Como medida de seguridad, Max Basal IOB está limitada a 7
+_Nota: Como medida de seguridad, Max Basal IOB está limitada a 7_
 
 
 ## Ajustes de absorción
@@ -103,7 +102,7 @@ Las opciones aquí variarán según el controlador de la bomba que haya seleccio
 
 * 'Habilitar transmisiones locales' compartirá los datos de su careportal con otras aplicaciones del teléfono, como xdrip.
 
-* 'Opciones de alarma' le permite seleccionar qué alarmas nightscout predeterminadas usar a través de la aplicación. Para que suenen las alarmas, debe establecer los valores de alarma Urgente alto, Alto, Bajo y Urgente bajo en sus variables heroku o azure.
+* 'Opciones de alarma' le permite seleccionar qué alarmas nightscout predeterminadas usar a través de la aplicación. Para que suenen las alarmas, debe establecer los valores de alarma Urgente alto, Alto, Bajo y Urgente bajo en sus [variables heroku o azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms).
 Solo funcionarán mientras tenga una conexión a Nightscout y están destinados a padres / cuidadores, si tiene la fuente CGM en su teléfono y luego usan esas alarmas (por ejemplo, xdrip +)
 
 
@@ -115,7 +114,7 @@ Esta configuración permite el control remoto de la aplicación enviando instruc
 
 ## Otros
 
-* Puede establecer los valores predeterminados para sus objetivos temporales aquí, para los diferentes tipos de objetivos temporales (eating soon y actividad). Cuando selecciona un objetivo temporal, si elige, por ejemplo, "eating soon" en el cuadro desplegable, automáticamente rellenará la duración y el valor en función de las cifras que proporcionó aquí. Para obtener más información sobre el uso de Objetivos temporales, vea Abrir las características de APS.
+* Puede establecer los valores predeterminados para sus objetivos temporales aquí, para los diferentes tipos de objetivos temporales (eating soon y actividad). Cuando selecciona un objetivo temporal, si elige, por ejemplo, "eating soon" en el cuadro desplegable, automáticamente rellenará la duración y el valor en función de las cifras que proporcionó aquí. Para obtener más información sobre el uso de Objetivos temporales, vaya a Funcionalidades OpenAPS.
 
 * Puede establecer cantidades de purgado predeterminadas: esto hará que la bomba cuente con el valor especificado y esta insulina se cuenta como utilizada desde el depósito, pero no se cuenta en los cálculos IOB. Consulte el folleto de instrucciones en su caja de cánulas para saber cuántas unidades debe llenar las cánulas según la longitud de la aguja y la longitud del tubo.
 
@@ -132,16 +131,16 @@ Esta configuración permite el control remoto de la aplicación enviando instruc
 
     * Siempre utiliza el delta promedio corto en lugar de ... Habilitar esta configuración es útil cuando utiliza datos de orígenes no filtrados como xDrip +, a diferencia de fuentes filtradas como un Dexcom Receiver oficial. Los datos filtrados parecen ser uniformes, mientras que los datos no filtrados pueden parecer oscilantes. Estos datos no filtrados podrían hacer que el AndroidAPS aplique cambios de basal temporal con mayor frecuencia de la que realmente se necesita, ya que el algoritmo de OpenAPS reacciona ante los datos de alto nivel. Con esta configuración habilitada, el algoritmo OpenAPS utilizará el promedio corto delta (el cambio promedio en la glucosa en sangre durante los últimos 15 minutos) en lugar de la última lectura de glucosa en sangre recibida. Esto efectivamente tiene un efecto de "suavizado" en los datos e intenta compensar las lecturas con saltos. Los usuarios de los sensores Abbott Freestyle Libre que recopilan sus datos de glucosa a través de dispositivos como LimiTTers pueden encontrar que esta configuración proporciona mejores resultados con AAPS.
 
-Para obtener más consejos sobre el suavizado de datos al utilizar xDrip + como origen de datos, consulte Suavizado de datos de glucosa en sangre en xDrip +.
+Para obtener más consejos sobre el suavizado de datos al utilizar xDrip + como origen de datos, consulte [cómo suavizar datos de glucosa en xDrip+](https://github.com/MilosKozak/AndroidAPS/wiki/Smoothing-blood-glucose-data-in-xDrip)
 
-* Preferencias de OpenAPS.json: antes de cambiar cualquiera de estas configuraciones, vea las descripciones de los valores de seguridad utilizados y por qué en los documentos de OpenAPS.
+* Preferencias de OpenAPS.json: antes de cambiar cualquiera de estas configuraciones, vea las descripciones de los valores de seguridad utilizados y por qué en [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html)
 
-* 'Ignorar eventos de cambio de perfil' no enviará su perfil actual de AndroidAPS a la bomba. Se recomienda no seleccionar esto a menos que esté probando el código, ya que por seguridad enviar los eventos de cambio de perfil de envío al perfil basal 1 de la bomba significa que AndroidAPS dejará de funcionar o perderá la conexión con la bomba y su bomba volverá al mismo perfil predeterminado. que tienes que ingresarlo manualmente en la bomba. Para obtener más información sobre los perfiles, consulte Perfiles.
+* 'Ignorar eventos de cambio de perfil' no enviará su perfil actual de AndroidAPS a la bomba. Se recomienda no seleccionar esto a menos que esté probando el código, ya que por seguridad enviar los eventos de cambio de perfil de envío al perfil basal 1 de la bomba significa que AndroidAPS dejará de funcionar o perderá la conexión con la bomba y su bomba volverá al mismo perfil predeterminado. que tienes que ingresarlo manualmente en la bomba. Para obtener más información sobre los perfiles, consulte sección [perfiles](/docs/ES/Uso/Perfiles) 
 
 * 'BT Watchdog' seleccione esta opción si sigue perdiendo la conexión con su bomba. Cuando la bomba pierda la conexión, activará y desactivará el bluetooth para que pueda mej orar la conexión.
 
 
 ## Ajustes Wear
 
-Para más info ver ajustes en Wear watchfaces 
+Para más info ver ajustes en Wear [watchfaces](/docs/ES/Configuracion/Watchfaces) 
 
