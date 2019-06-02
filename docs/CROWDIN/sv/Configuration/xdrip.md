@@ -4,6 +4,8 @@ If not already set up then download [xDrip+](https://github.com/NightscoutFounda
 
 For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
 
+**At the moment there are some problems with nightly builds after 2019/05/21 asking for G6 calibration.**
+
 ## Basic settings for all CGM & FGM systems
 
 * Make sure to set Base URL correctly including **S** at the end of http**s**:// (not http://)
@@ -205,7 +207,13 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 
 ### Retrieve sensor code
 
-* Dexcom sensor code can be found in xDrip+ logs.
+* In latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
+* Swipe left once to see second screen.
+   
+   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+
+* Dexcom sensor code can also be found in xDrip+ logs.
+
 * Tap 3 dot menu (top right side on homescreen)
 * Select `View Event Logs` and search for "code"
    
