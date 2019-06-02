@@ -4,6 +4,8 @@ Wenn Du es nicht bereits eingerichtet hast, lade [xDrip+](https://github.com/Nig
 
 Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine der aktuellen <1>nightly build xDrip+ Versionen</1>. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 
+**At the moment there are some problems with nightly builds after 2019/05/21 asking for G6 calibration.**
+
 ## Grundsätzliche Einstellungen für alle CGM & FGM-Systeme
 
 * Stelle sicher, dass Du die Base URL korrekt eingibst - inkl. **S** am Ende von http**s**:// (nicht http://).
@@ -49,9 +51,9 @@ Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine d
 
 ### Preemptive restarts werden nicht empfohlen
 
-Die automatische Verlängerung von Dexcom G6 Sensoren (`preemtive restarts`) werden nicht empfohlen, da dies zu Sprüngen in den BZ-Werten nach dem eustart am 9. Tag führen kann.
+The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ Sprünge nach Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet. Mache Dir die folgenden Punkte bewusst, um das System sicher zu nutzen:
 
@@ -65,7 +67,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 ### G6 Transmitter das erste Mal verbinden
 
-**Für den zweiten und alle weiteren Transmitter siehe [Transmitterlaufzeit verlängern](../Configuration/xdrip#extend-transmitter-life) weiter unten.**
+**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
 * Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine der aktuellen <1>nightly build xDrip+ Versionen</1>. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 * Schalten Sie den Original Dexcom Empfänger aus (falls Du diesen verwendet).
@@ -205,11 +207,17 @@ Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine d
 
 ### Sensorcode in den Logs finden
 
-* Der Dexcom Sensorcode findet sich in den xDrip+ Logs.
-* Tippe auf das 3-Punkte-Menü (oben rechts auf dem Homescreen).
-* Wähle `Log anzeigen` und suche nach "code".
+* In latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
+* Swipe left once to see second screen.
    
-   ![xDrip+ Dexcom Sensorcode ermitteln](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+
+* Dexcom sensor code can also be found in xDrip+ logs.
+
+* Tap 3 dot menu (top right side on homescreen)
+* Select `View Event Logs` and search for "code"
+   
+   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
 ## xDrip+ mit Freestyle Libre
 
