@@ -52,7 +52,7 @@ Vyberte "Standard" instalaci a klikněte na "Next".
 
 ![Snímek 3](../images/Installation_Screenshot_03.png)
 
-Vyberte "Intellij" jako schéma uživatelského prostředí a klikněte na "Next".
+Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
 ![Snímek 4](../images/Installation_Screenshot_04.png)
 
