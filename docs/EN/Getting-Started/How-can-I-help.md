@@ -13,9 +13,8 @@ Pick a small task at first and do your first pull request! :)
 
 **I know the system and can write documentation!** 
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
-
-* The gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby)  
+Great, this is a highly appreciated thing and a good way to pay it foreward!a
+* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby) or contact the documentation team via the new email address: wiki@androidaps.org.
 * A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
 
 **I do speak multiple languages and whant to translate the app or the documentation** 
