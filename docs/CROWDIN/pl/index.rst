@@ -1,4 +1,4 @@
-Welcome to the Android APS documentation
+Witamy w dokumentacji systemu Android APS
 ==============================================
 
 .. note:: 
