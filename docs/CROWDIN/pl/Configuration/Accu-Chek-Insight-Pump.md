@@ -29,25 +29,25 @@
     
     ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
+* Wróć do telefonu, stuknij numer seryjny pompy na liście urządzeń Bluetooth. Następnie dotknij Paruj, aby potwierdzić.
     
     ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
-* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
+* Zarówno pompa jak i telefon będą wyświetlać kod. Sprawdź, czy kody są takie same na obu urządzeniach, zarówno na pompie jak i na telefonie.
     
     ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+* Sukces! Pomyślnie sparowano pompę z AndroidAPS.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+* Aby sprawdzić, czy wszystko jest w porządku, wróć do panelu Konfiguracja w AndroidAPS i dotknij koła zębatego przy Insight Pump, aby przejść do ustawień Insight, następnie dotknij Insight Pairing, zobaczysz informacje o pompie:
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-Note: There will be no permanent connection between pump and phone. A connection will only be established if neccessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
+Uwaga: Nie będzie stałego połączenia między pompą a telefonem. Połączenie zostanie ustanowione tylko w razie potrzeby (tj. Ustawienie tymczasowej dawki podstawowej, podanie bolusa, odczyt historii pompy ...). W przeciwnym razie bateria telefonu i pompy zbyt szybko by się rozładowały.
 
-## Settings in AAPS
+## Ustawienia w AAPS
 
 ![Screenshot of Insight Settings](../images/Insight_pairing.png)
 
