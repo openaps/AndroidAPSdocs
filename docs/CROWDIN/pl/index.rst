@@ -100,7 +100,7 @@ Configuration
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    xDrip+ settings <./Configuration/xdrip.md>
    
-Usage
+Użytkowanie
 ------------
 .. toctree::
    :maxdepth: 1
