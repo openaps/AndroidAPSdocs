@@ -40,13 +40,13 @@
     - Włącz blokadę przycisków na pompie, aby zapobiec podaniu bolusa z pompy, szczególnie kiedy pompa była używana wcześniej i masz nawyk podawania szybkiego bolusa.
     - Ustaw <o>Czas trwania wyświetlania</o> i <o>Limit czasu menu</o> na minimum (odpowiednio 5,5 s i 5 s). Dzięki temu AndroidAPS może wznowić działanie szybciej w warunkach błędu i zmniejszyć liczbę wibracji, które mogą wystąpić podczas takiego błędu.
 
-![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+![Zrzut ekranu z ustawieniami menu użytkownika](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+![Zrzut ekranu ustawień TBR](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+![Zrzut ekranu z ustawieniami bolusa](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+![Zrzut ekranu ustawień zbiorniczka insuliny](../images/combo/combo-insulin-settings.png)
 
 - Zainstaluj AndroidAPS zgodnie z opisem w [AndroidAPS wiki](http://wiki.AndroidAPS.org).
 - Przeczytaj wiki, aby dowiedzieć się, jak skonfigurować AndroidAPS.
@@ -64,7 +64,7 @@ Istnieje kilka możliwych przyczyn wystąpienia tego problemu. W pierwszej kolej
 
 1. Wymień baterię w pompie na **świeżą**. Zalecane jest wykorzystanie baterii litowych lub alkalicznych na czas parowania - akumulatorki nie są wskazane ze względu na zaniżone napięcie 1.2V. Przejrzyj rozdział o zasilaniu w celu uzyskania dalszych wskazówek. Upewnij się, że pompa znajduje się możliwie blisko smartfona.
 
-![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+![Combo powinno znajdować się obok telefonu](../images/Combo_next_to_Phone.png)
 
 2. Wyłącz wszelkie urządzenia Bluetooth znajdujące się w pobliżu aby nie nastąpiła z ich strony próba połączenia ze smartfonem w trakcie parowania z pompą. Każda równoległa komunikacja Bluetooth lub chociażby próba nawiązania połączenia mogą zakłócić proces parowania pompy ze smartfonem.
 
@@ -97,11 +97,11 @@ Istnieje kilka możliwych przyczyn wystąpienia tego problemu. W pierwszej kolej
 - Integracja pompy Combo i systemu AndroidAPS zakłada, że wszystkie zmiany i ustawienia są dokonywane z wykorzystaniem aplikacji AndroidAPS. Bolusy podane bezpośrednio z pompy zostaną wykryte przez system, lecz może to potrwać nawet do 20 minut. Sczytywanie historii bolusów na pompie to jedna z funkcji zabezpieczających i nie powinna być stosowana regularnie do obsługi pompy. Pętla wymaga dodatkowo informacji na temat spożytych węglowodanów, której to informacji nie ma w historii bolusów - jest to zatem kolejny powód dla którego sterowanie systemem powinno odbywać się wyłącznie z aplikacji AAPS. 
 - Nie należy ustawiać ani wyłącząć TBR bezpośrednio na pompie. Algorytm pętli zakłada przejęcie pełnej kontroli nad TBR i może działać nieprawidłowo w innym wypadku, ponieważ nie jest możliwe określenie czasu rozpoczęcia TBR ustawionej ręcznie przez użytkownika na pompie.
 - Schemat bazy nr 1 na pompie jest sczytywany przy każdym starcie aplikacji a następnie aktualizowany przez AAPS. Schemat bazy nie powinien być zmieniamy ręcznie na pompie, gdyż zostanie to wykryte i poprawione zgodnie ze schematem bazy zapisanym w profilu AAPS. Ma to na celu wykrycie niezamierzonych zmian wprowadzonych na pompie przez użytkownika.
-- Zalecane jest włączenie opcji blokady klawiszy na pompie, głównie w celu zapobieżenia podania przypadkowego bolusa, zwłaszcza gdy pompa była już wcześniej używana a użytkownik jest przyzwyczajony np. do wykorzystania funkcji "szybkiego bolusa". Also, with keylock enabled, accidentally pressing a key will NOT interrupt active communication between AAPS and pump.
-- When a BOLUS/TBR CANCELLED alert starts on the pump during bolusing or setting a TBR, this is caused by a disconnect between pump and phone, which happens from time to time. AAPS will try to reconnect and confirm the alert and then retry the last action (boluses are NOT retried for safety reasons). Therefore, such an alarm can be ignored as AAPS will confirm it automatically, usually within 30s (cancelling it is not problem, but will lead to the currently active action to have to wait till the pump's display turns off before it can reconnect to the pump). If the pump's alarm continues, automatic corfirmation failed, in which case the user needs to confirm the alarm manually.
-- When a low cartridge or low battery alarm is raised during a bolus, they are confirmed and shown as a notification in AAPS. If they occur while no connection is open to the pump, going to the Combo tab and hitting the Refresh button will take over those alerts by confirming them and show a notification in AAPS.
-- When AAPS fails to confirm a TBR CANCELLED alert, or one is raised for a different reason, hitting Refresh in the Combo tab establishes a connection, confirms the alert and shows a notification for it in AAPS. This can safely be done, since those alerts are benign - an appropriate TBR will be set again during the next loop iteration.
-- For all other alerts raised by the pump: connecting to the pump will show the alert message in the Combo tab, e.g. "State: E4: Occlusion" as well as showing a notification on the main screen. An error will raise an urgent notification. AAPS never confirms serious errors on the pump, but let's the pump vibrate and ring to make sure the user is informed of a critical situation that needs action.
-- After pairing, ruffy should not be used directly (AAPS will start in the background as needed), since using ruffy at AAPS at the same time is not supported.
-- If AAPS crashes (or is stopped from the debugger) while AAPS and the pump were communicating (using ruffy), it might be necessary to force close ruffy. Restarting AAPS will start ruffy again. Restarting the phone is also an easy way to resolve this if you don't know how to force kill an app.
-- Don't press any buttons on the pump while AAPS communicates with the pump (Bluetooth logo is shown on the pump).
+- Zalecane jest włączenie opcji blokady klawiszy na pompie, głównie w celu zapobieżenia podania przypadkowego bolusa, zwłaszcza gdy pompa była już wcześniej używana a użytkownik jest przyzwyczajony np. do wykorzystania funkcji "szybkiego bolusa". Ponadto, gdy włączona jest blokada klawiatury, przypadkowe naciśnięcie klawisza NIE przerwie aktywnej komunikacji między AAPS a pompą.
+- Kiedy alarm BOLUS/TBR CANCELED jest inicjowany na pompie podczas bolusa lub konfiguracji TBR, jest to spowodowane rozłączeniem między pompą a telefonem, co zdarza się od czasu do czasu. AAPS podejmie próbę ponownego połączenia, potwierdzenia alarmu, a następnie powtórzenia ostatniej akcji (bolus NIE zostanie powtórzony ze względów bezpieczeństwa). Dlatego alarm ten można zignorować, ponieważ AAPS potwierdzi go automatycznie, zwykle w ciągu 30 sekund (anulowanie nie stanowi problemu, ale spowoduje, że aktywna akcja będzie czekać, aż ekran pompy się wyłączy, zanim będzie mógł wrócić podłączyć do pompy). Jeśli alarm pompy jest kontynuowany, automatyczne potwierdzenie nie powiodło się, w takim przypadku użytkownik musi ręcznie potwierdzić alarm.
+- Alarm niskiego poziomu insuliny w zbiorniku lub alarm niskiego poziomu baterii podczas bolusa jest potwierdzany i wyświetlany jako powiadomienie w systemie AAPS. Jeśli alarmy te wystąpią, gdy nie ma połączenia z pompą, przejście do karty Combo i naciśnięcie przycisku Odśwież spowoduje przejęcie tych alarmów poprzez potwierdzenie ich i wyświetlenie powiadomienia w AAPS.
+- Jeśli AAPS nie może potwierdzić alarmu TBR CANCEL lub alarm zostanie wywołany z jakiegokolwiek innego powodu, naciśnięcie przycisku Odśwież na zakładce Combo ustanowi połączenie, potwierdzi alarm i wyświetli powiadomienie dla niego w AAPS. Można to bezpiecznie zrobić, ponieważ te ostrzeżenia są łagodne - odpowiedni TBR zostanie ponownie ustawiony podczas kolejnej iteracji pętli.
+- W przypadku wszystkich innych alertów generowanych przez pompę: połączenie z pompą wyświetli komunikat alertu w zakładce Combo, np. "Status: E4: Occlusion", oprócz wyświetlenia powiadomienia na ekranie głównym. Błąd powoduje pilne powiadomienie. AAPS nigdy nie potwierdza poważnych usterek pompy, ale powoduje wibracje pompy i sygnał dźwiękowy, aby zapewnić, że użytkownik zostanie poinformowany o krytycznej sytuacji wymagającej działania.
+- Po sparowaniu, ruffy nie powinien być używany (AAPS uruchamia ruffy w tle w razie potrzeby), ponieważ używanie ruffy z AAPS w tym samym czasie nie jest obsługiwane.
+- Jeśli AAPS ulegnie awarii (lub zostanie zatrzymany przez debuggera), podczas gdy AAPS i pompa komunikują się (używając ruffy), może być konieczne wymuszenie zamknięcia ruffy. Ponowne uruchomienie systemu AAPS znów zacznie działać. Ponowne uruchomienie telefonu jest również łatwym sposobem rozwiązania tego problemu, jeśli nie wiesz, jak wymusić zabicie aplikacji.
+- Nie naciskaj żadnych przycisków pompy, gdy AAPS komunikuje się z pompą (logo Bluetooth jest widoczne na pompie).
