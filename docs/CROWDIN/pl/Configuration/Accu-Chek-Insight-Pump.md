@@ -22,10 +22,10 @@
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
-* Tap the cog-wheel to open Insight settings.
+* Dotknij koła zębatego, aby otworzyć ustawienia Insight.
 
-* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
-* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
+* W ustawieniach dotknij przycisku „Insight pairing” u góry ekranu. Powinieneś zobaczyć listę wszystkich pobliskich urządzeń Bluetooth (poniżej po lewej).
+* W pompie Insight przejdź do Menu> Ustawienia> Komunikacja> Dodaj urządzenie. Pompa wyświetli następujący ekran (poniżej po prawej) pokazujący numer seryjny pompy.
     
     ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
