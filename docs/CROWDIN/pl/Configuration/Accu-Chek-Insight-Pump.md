@@ -51,15 +51,15 @@ Uwaga: Nie będzie stałego połączenia między pompą a telefonem. Połączeni
 
 ![Screenshot of Insight Settings](../images/Insight_pairing.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+W ustawieniach Insight w AndroidAPS możesz włączyć następujące opcje:
 
-* "Log site changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.  
-    <font color="red">Note: A cannula change also resets Autosens</b></font>
-* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
-* "Log battery changes": This records a battery change when you put a new battery in the pump.
-* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
-* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
-* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.  
+* „Rejestruj zmiany w witrynie”: spowoduje to automatyczne zarejestrowanie zmiany wkładu insuliny po uruchomieniu programu „napełnij kaniulę” na pompie.   
+    <font color="red"> Uwaga: Zmiana kaniuli powoduje również reset ustawień autosens </b> </font>
+* „Rejestrowanie zmian drenu”: Dodaje to uwagę do bazy danych AndroidAPS po uruchomieniu programu „wypełnienie drenu” w pompie.
+* „Rejestrowanie zmian baterii”: Zapisuje zmianę baterii po włożeniu nowej baterii do pompy.
+* „Zmiany trybu logowania”: wstawia notatkę w bazie danych AndroidAPS przy każdym uruchomieniu, zatrzymaniu lub wstrzymaniu pompy.
+* „Log alerts”: rejestruje notatkę w bazie danych AndroidAPS za każdym razem, gdy pompa wydaje alert (z wyjątkiem przypomnień, anulowania bolusa i TBR - te nie są rejestrowane).
+* „Włącz emulację TBR”: pompa Insight może wydawać tymczasowe stawki podstawowe (TBR) tylko do 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.  
     <font color="red">Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.</font>
 * "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
