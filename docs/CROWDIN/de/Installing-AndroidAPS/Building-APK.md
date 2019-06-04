@@ -52,7 +52,7 @@ Wähle “Standard” Installation und klicke auf “Next”.
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Wähle das Design für die Benutzeroberfläche, das Dir am besten gefällt. (In diesem Handbuch verwenden wir "Intellij".) Klicke danach auf “Next”. Das ist nur das Farbschema. Du kannst auswählen, was Du möchtest (z.B. "Darcula" für den dunklen Modus). Diese Auswahl hat keinen Einfluss auf die Erstellung der APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
