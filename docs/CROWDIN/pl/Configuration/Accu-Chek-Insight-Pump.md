@@ -12,7 +12,7 @@
 * An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
 * The AndroidAPS app (at least v2.1) installed on your phone
 
-## Setup
+## Ustawienia
 
 * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
     
