@@ -14,7 +14,7 @@ Ja! Bekijk de problemen, vraag in het Gitter kanaal, er is altijd genoeg te doen
 
 Mooi, dit wordt zeer gewaardeerd en is een prima manier om je steentje bij te dragen #payitforward.
 
-* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Instead, you can now also contact the documentation team via the new email address: wiki@androidaps.org.
+* Het oude gitter kanaal voor de wiki kan je hier vinden: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). In plaats daarvan kun je nu ook contact opnemen met de schrijvers van de wiki via het nieuwe e-mailadres: wiki@androidaps.org.
 * Een instructie hoe je Commits op de Engelse wiki kunt doen: [How to make a PR](../make-a-PR.md). Andere talen worden alleen vertaald uit het Engels en worden verder niet bewerkt, om de wiki consistent te houden.
 
 **Ik spreek meedere talen en wil de AAPS applicatie of documentatie vertalen.**
