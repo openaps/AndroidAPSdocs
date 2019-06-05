@@ -53,7 +53,7 @@ Selecteer “Standard” Installation en klik op “Next”.
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Selecteer het thema voor de gebruikersinterface. (In deze handleiding hebben we "Intellij" gebruikt). Klik daarna op "Next" (Volgende). Dit is alleen het uiterlijk van Android Studio, het kleurenschema. Je kunt hier ook iets anders kiezen als je dat mooier vind, wat je hier kiest maakt geen enkel verschil voor het bouwen van de app.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
