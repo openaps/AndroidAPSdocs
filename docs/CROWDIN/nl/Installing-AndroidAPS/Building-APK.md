@@ -81,106 +81,104 @@ Wanneer hij klaar is met downloaden, klik op "Finish" (afronden).
 
 * Gebruik Git clone in Android Studio zoals in onderstaande screenshots te zien is. Selecteer “Check out project from Version Control” en kies “Git” als versie controle systeem.
 
-![Screenshot 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
+![Screenshot 10](../images/Installation_Screenshot_10.png)
 
-Vul de URL in van de hoofdpagina van de AndroidAPS Repository (“https://github.com/MilosKozak/AndroidAPS”) en klik op “Clone”.
+![Version_Control_Git](../images/Version_Control_Git.png)
+
+Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio zal nu het project gaan klonen (kopiëren). Klik niet op "Background" (achtergrond). Dit gaat snel en wanneer je het naar de achtergrond verplaatst, maak je het onnodig ingewikkeld voor nu.
+Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
 ![Screenshot 14](../images/Installation_Screenshot_14.png)
 
-Je krijgt de melding dat de "checkout from version control" (het klonen) is afgerond. Open het project door op "Yes" te klikken.
+Finish the checkout from version control with opening the project by clicking "Yes".
 
 ![Screenshot 15](../images/Installation_Screenshot_15.png)
 
-Gebruik de standaard "default gradle wrapper" en klik "OK".
+Use the standard "default gradle wrapper" and click "OK".
 
 ![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-Lees en sluit het scherm van de "Tip of the Day" (tip van de dag) van Android Studio door te drukken op "Close" (sluiten).
+Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Top! Je hebt jouw eigen kopie van de broncode en je bent klaar om de app te gaan bouwen.
 * Nu krijg je je eerste foutmelding. Gelukkig geeft Android Studio je direct de oplossing hiervoor.
 
-Klik op "Install missing platform(s) and sync project" (ontbrekende platforms installeren en project synchroniseren). Android Studio zal nu een ontbrekend stuk software gaan installeren.
+Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
 ![Screenshot 18](../images/Installation_Screenshot_18.png)
 
-Accepteer de gebruiksrechtovereenkomst door op "Accept" en op "Next" te klikken.
+Accept the license agreement by selecting "Accept" and clicking "Next".
 
 ![Screenshot 19](../images/Installation_Screenshot_19.png)
 
-Het dialoogvenster geeft aan "Please wait until the installation finishes" (wacht aub tot de installatie is afgerond) en dus wacht je even.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden). 
+Now it's finished. Please click "Finish".
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-En dan... een volgende foutmelding. Maar ook hier geeft Android Studio je weer een vergelijkbare oplossing. Klik op “Install Build Tools and sync project” om de ontbrekende “Tools” te installeren.
+Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
 ![Screenshot 22](../images/Installation_Screenshot_22.png)
 
-Het dialoogvenster geeft aan "Please wait until the installation finishes" (wacht aub tot de installatie is afgerond) en dus wacht je even.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden). 
+Now it's finished. Please click "Finish".
 
 ![Screenshot 24](../images/Installation_Screenshot_24.png)
 
-En een andere foutmelding omdat Android Studio weer een ontbrekend platform moet installeren. Klik weer op "Install missing platform(s) and sync project".
+And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
 
 ![Screenshot 25](../images/Installation_Screenshot_25.png)
 
-Het dialoogvenster geeft aan "Please wait until the installation finishes" (wacht aub tot de installatie is afgerond) en dus wacht je even.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden). 
+Now it's finished. Please click "Finish".
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
-Klik op “Install Build Tools and sync project” om de ontbrekende “Tools” te installeren.
+Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
 ![Screenshot 28](../images/Installation_Screenshot_28.png)
 
-Het dialoogvenster geeft aan "Please wait until the installation finishes" (wacht aub tot de installatie is afgerond) en dus wacht je even.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden). 
+Now it's finished. Please click "Finish".
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Jippie! De foutmeldingen zijn voorbij en je bent begonnen. Misschien tijd om wat water te drinken?
+Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. ---> Android Studio komt met een "update Gradle" melding (Gradle bijwerken). 
+Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
-**Update Gradle nooit!** Dit kan tot problemen leiden!
-
-Klik op "Don't remind me again for this project" (Nooit meer vragen voor dit project).
+Please click "Don't remind me again for this project".
 
 ![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
-Hij gaat verder met bouwen...
+The build is running again.
 
 ![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-Mooi, je hebt nu jouw eerste app "Build finished" (bouw afgerond). Maar we zijn nog niet klaar.
+Yeah, the first build is successful but we are not finished.
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 ## Bouwen van de ondertekende APK
-
-<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
 
 Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In oudere versies selecteerde je in het menu "Build" en vervolgens "Generate Signed APK...”.)  
 Ondertekenen betekent dat je de door jou gemaakte app ondertekent. Dit is een soort digitale vingerafdruk in de app zelf. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
@@ -192,8 +190,6 @@ In het volgende dialoogvenster selecteer je "APK" in plaats van "Android App Bun
 ![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
 
 Selecteer "App" en klik op "Next".
-
-<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
@@ -215,7 +211,7 @@ Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-<!--- End modification here ---> Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
+Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
 
 * 'Release' is wat je hoort te kiezen als "Build Type", 'Debug' is alleen voor programmeurs.
 * Kies de "Flavour" die je wilt bouwen: 
@@ -235,8 +231,6 @@ Klik op de "locate" link in het Event Log.
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
 ## Overzetten van de APK naar je telefoon
-
-<!--- Do not forget to copy to update-to-new-version.md --->
 
 Een Verkenner venster zal openen. Het kan dat het er iets anders uitziet, dit screenshot is met een Linux computer gemaakt. In Windows zal de "Verkenner" openen, op een Mac OS X de "Finder" Hier zul je een map zien met daarin een APK bestand. Helaas is dit de VERKEERDE locatie, omdat "wear-release.apk" NIET de ondertekende app die we zoeken.
 
