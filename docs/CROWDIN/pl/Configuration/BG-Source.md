@@ -1,10 +1,10 @@
-# General CGM recommendations
+# Ogólne zasady używania systemów CGM
 
-## CGM hygiene
+## Higiena CGM
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Niezależnie od tego, jakiego systemu CGM używasz, jeśli zamierzasz korzystać z kalibracji opartej na krwi, istnieją pewne bardzo jasne zasady, które powinieneś zastosować, niezależnie od tego, czy używasz oprogramowania DIY CGM, czy oficjalnych aplikacji.
 
-* Make sure hands and kit are clean.
+* Upewnij się, że ręce i akcesoria do glukometru są czyste.
 * Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
 * Avoid calibrating when glucose levels are moving up or down. 
 * Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
