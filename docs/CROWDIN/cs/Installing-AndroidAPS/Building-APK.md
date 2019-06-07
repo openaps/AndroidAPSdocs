@@ -80,106 +80,104 @@ Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
 * Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte "Check out project from Version Control" s "Git" jako konkrétní verzí správce zdrojových kódů.
 
-![Snímek 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
+![Snímek 10](../images/Installation_Screenshot_10.png)
 
-Zadejte URL adresu do hlavního úložiště AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") a klepněte na "Clone".
+![Version_Control_Git](../images/Version_Control_Git.png)
 
-![Snímek 13](../images/Installation_Screenshot_13.png)
+Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 
-Android Studio začne s klonováním. Neklikejte na "Background", což by věci nyní pouze zkomplikovalo.
+![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-![Snímek 14](../images/Installation_Screenshot_14.png)
+Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
-Dokončete načtení projektu od správce zdrojových kódů kliknutím na "Yes", což projekt otevře.
+![Screenshot 14](../images/Installation_Screenshot_14.png)
 
-![Snímek 15](../images/Installation_Screenshot_15.png)
+Finish the checkout from version control with opening the project by clicking "Yes".
 
-Použijte standardní "default gradle wrapper" a klikněte na "OK".
+![Screenshot 15](../images/Installation_Screenshot_15.png)
 
-![Snímek 16](../images/Installation_Screenshot_16.png)
+Use the standard "default gradle wrapper" and click "OK".
 
-Přečtěte si okno "Tip of Day" a kliknutím na "Close" je zavřete.
+![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-![Snímek 17](../images/Installation_Screenshot_17.png)
+Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
+
+![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Super, máte vlastní kopii zdrojového kódu a jste připraveni na vytvoření Apk.
 * Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
 
-Klikněte na "Install missing platform(s) and sync project", protože Android Studio potřebuje doinstalovat chybějící platformu.
+Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
-![Snímek 18](../images/Installation_Screenshot_18.png)
+![Screenshot 18](../images/Installation_Screenshot_18.png)
 
-Přijměte licenční ujednání zvolením "Accept" a kliknutím na "Next".
+Accept the license agreement by selecting "Accept" and clicking "Next".
 
-![Snímek 19](../images/Installation_Screenshot_19.png)
+![Screenshot 19](../images/Installation_Screenshot_19.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+As it is said in the dialog please wait until the download is finished.
 
-![Snímek 20](../images/Installation_Screenshot_20.png)
+![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+Now it's finished. Please click "Finish".
 
-![Snímek 21](../images/Installation_Screenshot_21.png)
+![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-Aaaach, další chyba. Ale Android Studio navrhuje podobné řešení. Klikněte na "Install Build Tools and sync project", protože Android Studio potřebuje stáhnout chybějící pomůcky.
+Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
-![Snímek 22](../images/Installation_Screenshot_22.png)
+![Screenshot 22](../images/Installation_Screenshot_22.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+As it is said in the dialog please wait until the download is finished.
 
-![Snímek 23](../images/Installation_Screenshot_23.png)
+![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+Now it's finished. Please click "Finish".
 
-![Snímek 24](../images/Installation_Screenshot_24.png)
+![Screenshot 24](../images/Installation_Screenshot_24.png)
 
-A další chyba k řešení, protože Android Studio potřebuje zase stáhnout chybějící platformu. Klikněte na "Install missing platform(s) and sync project".
+And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
 
-![Snímek 25](../images/Installation_Screenshot_25.png)
+![Screenshot 25](../images/Installation_Screenshot_25.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+As it is said in the dialog please wait until the download is finished.
 
-![Snímek 26](../images/Installation_Screenshot_26.png)
+![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+Now it's finished. Please click "Finish".
 
-![Snímek 27](../images/Installation_Screenshot_27.png)
+![Screenshot 27](../images/Installation_Screenshot_27.png)
 
-Klikněte na "Install Build Tools and sync project", protože Android Studio potřebuje stáhnout chybějící pomůcky.
+Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
-![Snímek 28](../images/Installation_Screenshot_28.png)
+![Screenshot 28](../images/Installation_Screenshot_28.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+As it is said in the dialog please wait until the download is finished.
 
-![Snímek 29](../images/Installation_Screenshot_29.png)
+![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+Now it's finished. Please click "Finish".
 
-![Snímek 30](../images/Installation_Screenshot_30.png)
+![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Možná je čas dát si trochu vody?
+Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
 
-![Snímek 31](../images/Installation_Screenshot_31.png)
+![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. ---> Android Studio doporučuje aktualizaci systému gradle. 
+Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
-**Nikdy neaktualizujte gradle!** Mohlo by to vše zkomplikovat!
+Please click "Don't remind me again for this project".
 
-Klikněte prosím na „Znovu nepřipomínat pro tento projekt“.
+![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
-![Snímek 32](../images/AS_NoGradleUpdate.png)
+The build is running again.
 
-Sestavení zase běží.
+![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-![Snímek 33](../images/Installation_Screenshot_33.png)
+Yeah, the first build is successful but we are not finished.
 
-Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
-
-![Snímek 34](../images/Installation_Screenshot_34.png)
+![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 ## Vytvořte podepsaný soubor APK
-
-<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
 
 V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. Ve starších verzích vyberte nabídku „Build“ a pak „Generate Signed APK...“.)  
 Podepsání znamená, že podepíšete svou generovanou aplikaci, ale digitálním způsobem, něco jako digitálním otiskem prstu v samotné aplikaci. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
@@ -191,8 +189,6 @@ V následujícím dialogovém okně vyberte „APK“ místo „Android App Bund
 ![Snímek 39b](../images/Installation_Screenshot_39b.PNG)
 
 Zvolte „app“ a klepněte na tlačítko „Next“.
-
-<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
 
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
@@ -214,7 +210,7 @@ Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-<!--- End modification here ---> Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
+Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
 
 * Možnost „Release“ by měla být výchozí volbou pro „Build Type“, možnost „Debug“ je pouze pro vývojáře.
 * Vyberte typ sestavení, jaký budete chtít. 
@@ -234,8 +230,6 @@ Klikněte na odkaz „locate“ v podokně „Event Log“.
 ![Snímek 46](../images/Installation_Screenshot_46.png)
 
 ## Přeneste soubor APK do telefonu
-
-<!--- Do not forget to copy to update-to-new-version.md --->
 
 Objeví se okno správce souborů. Na vašem počítači může vypadat trochu jinak, protože já používám systém Linux. Pokud používáte sytém Windows, otevře se Průzkumník souborů, na platformě Mac OS X to bude Finder. V něm byste měli vidět složku s vygenerovaným souborem APK. Toto bohužel není správné umístění, protože „wear-release.apk“ není podepsaný soubor „app“ APK, který hledáme.
 
