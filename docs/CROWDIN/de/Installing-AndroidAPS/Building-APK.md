@@ -52,7 +52,7 @@ Wähle “Standard” Installation und klicke auf “Next”.
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Wähle “Intellij” als “UI theme” (Benutzeroberfläche) und klicke auf “Next”.
+Wähle das Design für die Benutzeroberfläche, das Dir am besten gefällt. (In diesem Handbuch verwenden wir "Intellij".) Klicke danach auf “Next”. Das ist nur das Farbschema. Du kannst auswählen, was Du möchtest (z.B. "Darcula" für den dunklen Modus). Diese Auswahl hat keinen Einfluss auf die Erstellung der APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
@@ -179,7 +179,7 @@ Perfekt, der erste “Build Prozess” ist erfolgreich abgeschlossen, aber wir s
 
 ## Siginierte APK erstellen (Generate signed APK)
 
-<!--- Do not forget to copy to update-to-new-version.md --->
+<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
 
 Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. Falls Du eine ältere Version benutzt, wähle im Menü “Build” und dann “Generate Signed APK...”.)  
 Signieren bedeutet, dass du deine generierte Anwendung unterschreibst, aber digital als eine Art digitaler Fingerabdruck in der Anwendung selbst. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
@@ -192,9 +192,11 @@ Wähle in der folgenden Dialogbox "APK" statt "Android App Bundle" und klicke au
 
 Wähle “App” aus und klicke auf “Next”.
 
+<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
+
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Klicke auf “Create new...” um einen key store zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Sie ist verschlüsselt und passwortgeschützt. Wir empfehlen, diese Datei in deinem Benutzerordner (C.\Benutzer\[Dein Name]) zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -208,11 +210,11 @@ Klicke auf “Create new...” um einen key store zu erstellen. Dieser ist nicht
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Fülle die Informationen von dem Keystore, den du gerade erstellt hast, aus und klicke auf “Next”.
+Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
+<!--- End modification here ---> Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
 
 * “Release” solltest du immer lassen, “Debug” ist nur für Programmierer, um Fehler zu finden.
 * Wähle den “build type”, den du kompilieren möchtest: 

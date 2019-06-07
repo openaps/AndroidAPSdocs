@@ -4,6 +4,8 @@ Wenn Du es nicht bereits eingerichtet hast, lade [xDrip+](https://github.com/Nig
 
 Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine der aktuellen <1>nightly build xDrip+ Versionen</1>. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 
+**Derzeit gibt es teilweise Schwierigkeiten mit den Nightly Builds nach dem 21.05.2019, bei denen beim G6 Kalibrierung verlangt werden.**
+
 ## Grundsätzliche Einstellungen für alle CGM & FGM-Systeme
 
 * Stelle sicher, dass Du die Base URL korrekt eingibst - inkl. **S** am Ende von http**s**:// (nicht http://).
@@ -205,11 +207,17 @@ Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine d
 
 ### Sensorcode in den Logs finden
 
-* Der Dexcom Sensorcode findet sich in den xDrip+ Logs.
+* Wenn Du einen der letzten Nightly Builds verwendest, wird der Sensorcode im Systemstatus angezeigt (Hamburger Menü links oben auf dem Startbildschirm).
+* Wische nach links, um den zweiten Status-Bildschirm zu sehen.
+   
+   ![xDrip+ Dexcom Sensorcode ermitteln (Status Bildschirm)](../images/xDrip_Dexcom_SensorCode2.png)
+
+* Der Dexcom Sensorcode findet sich auch in den xDrip+ Logs.
+
 * Tippe auf das 3-Punkte-Menü (oben rechts auf dem Homescreen).
 * Wähle `Log anzeigen` und suche nach "code".
    
-   ![xDrip+ Dexcom Sensorcode ermitteln](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Dexcom Sensorcode ermitteln (Log Files)](../images/xDrip_Dexcom_SensorCode.png)
 
 ## xDrip+ mit Freestyle Libre
 

@@ -30,8 +30,16 @@ Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte s
 
 * Klikněte na "Save" ve vrchní části panelu.
 
-## ns.10be.de
+## Semi-automated Nightscout setup
 
-Tuto službu nabízí kolega looper Martin Schiftan a v současnosti je zdarma. Nightscout si pomocí této služby můžete nainstalovat pomocí několika málo kliknutí a ihned jej začít používat. Snaží se, aby byla správa co možná nejvíce automatizovaná, takže založení Nightscoutu přes jeho službu nevyžaduje žádnou ruční práci. Všechna nastavení lze provádět prostřednictvím uživatelsky přívětivého webového rozhraní. Tato služba obsahuje rovněž automatické kontroly bazálů prostřednictvím nástroje Autotune. Server se nachází v Německu.
+Tuto službu nabízí kolega looper Martin Schiftan a v současnosti je zdarma. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+
+**Benefits**
+
+* You can install Nightscout with a few clicks and use it directly. 
+* Reduction of manual work as Martin tries to automate the administration.
+* All settings can be made via a user-friendly web interface. 
+* The service includes an automated basal rate check using Autotune. 
+* The server is located in Germany.
 
 <http://ns.10be.de/en/index.html>

@@ -1,32 +1,32 @@
 # Dexcom G6
 
-## Basics first
+## Algemeen
 
-* Follow [general CGM hygiene recommendations](../Configuration/BG-Source#cgm-hygiene)
-* [Special recommendations for Dexcom G6 and DIY systems](../Configuration/BG-Source#dexcom-g6-diy-systems) *For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly built xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
+* Volg de [Algemene CGM aanbevelingen](../Configuration/BG-Source#cgm-hygiene)
+* [Speciale aanbevelingen voor Dexcom G6 en doe-het-zelf systemen](../Configuration/BG-Source#dexcom-g6-diy-systems) *Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van de nieuwste [ ‘nightly build’ xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) versies hebt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
 
-## Setting sensor
+## Sensor inbrengen
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+Bij het inbrengen van de sensor wordt aanbevolen om niet te hard op de inserter te duwen om bloeden te voorkomen. De sensordraad zou niet in contact moeten komen met bloed.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Na het inbrengen van de sensor moet de zender erop worden geklikt. Let op dat je eerst het rechte uiteinde erin klikt, en druk vervolgens op het ronde uiteinde.
 
-## Troubleshooting
+## Problemen oplossen
 
-### Connection problems
+### Verbindingsproblemen
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is reestablished the data is backfilled.
+De Bluetooth-verbinding kan worden verstoord door andere Bluetooth-apparaten zoals bloedglucose meters, koptelefoons, tablets of keukenapparatuur zoals magnetrons (microgolven) of keramische kookplaten. In dat geval toont xDrip+ geen BG-waarden. Wanneer de Bluetooth-verbinding opnieuw is hersteld, worden de ontbrekende glucosegegevens aangevuld (met een maximum van 3 uur).
 
-### Sensor Errors
+### Sensor Fout
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
+Als je last hebt van terugkerende sensor fouten, kies dan een andere plaats op je lichaam om de sensor in te brengen. De sensordraad zou niet in contact moeten komen met bloed.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Vaak kan een "Sensor fout" worden gecorrigeerd door te wachten en te zorgen dat er geen druk is op de sensor (bijvoorbeeld 's nachts er niet op gaan liggen).
 
-### Jumpy values
+### 'Springende' waardes
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Wanneer jouw waardes alle kanten op springen, zou je kunnen proberen om de instellingen voor Noise Blocking in xDrip+ te wijzigen (Settings - Inter-App Settings - Noise Blocking) d.w.z. "Block Very High noise and worse". Zie ook [Filteren van glucosewaardes](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### New transmitter with running sensor
+### Nieuwe zender met lopende sensor
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/AAhBVsc6NZo>.
+Als je toevallig de zender wilt veranderen tijdens een lopende sensor sessie, dan kun je proberen de zender te verwijderen terwijl je de sensor gewoon laat zitten. Zie deze video <https://youtu.be/AAhBVsc6NZo>.

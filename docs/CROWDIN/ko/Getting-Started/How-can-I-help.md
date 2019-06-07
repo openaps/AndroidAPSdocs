@@ -14,7 +14,7 @@
 
 좋다, 이것은 아주 감사할 일이고 재능 기부하기 좋은 방법이다.
 
-* Wiki와 관련된 gitter 채널은 여기서 찾을 수 있다: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby) 
+* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Instead, you can now also contact the documentation team via the new email address: wiki@androidaps.org.
 * A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
 
 **I do speak multiple languages and whant to translate the app or the documentation**

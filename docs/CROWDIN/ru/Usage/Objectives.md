@@ -72,7 +72,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 * Выполнить **Экспорт настроек** на вашем старом телефоне
   
   * Сэндвич-меню (в верхнем левом углу экрана)
-  * Maintenance
+  * Тех. обслуживание
   * Экспорт настроек
   * File location will be shown
     
@@ -83,7 +83,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 * **Установите AndroidAPS** на новом телефоне.
 * **Выполните импорт настроек** на вашем новом телефоне 
   * Сэндвич-меню (в верхнем левом углу экрана)
-  * Maintenance
+  * Тех. обслуживание
   * Выполните импорт настроек
 * **Note for Dana RS users:** 
   * Поскольку настройки подключения помпы также переносятся новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth. Please pair new phone and pump manually.

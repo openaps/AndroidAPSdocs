@@ -4,6 +4,8 @@ Als je het nog niet had, download dan [xDrip+](https://github.com/NightscoutFoun
 
 Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van de nieuwste ['nightly build' xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) versies hebt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
 
+**Op dit moment zijn er problemen met de zogenaamde 'nightly builds' versies die na 2019/05/21 die steeds om G6 kalibratie vragen. Mocht je hier last van hebben, probeer dan een versie van voor die datum.**
+
 ## Basisinstellingen voor alle CGM-systemen & FGM
 
 * Zorg ervoor dat je de Basis URL correct instelt, inclusief **S** aan het einde van http**s**:/// (niet http:/)
@@ -49,7 +51,7 @@ Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van d
 
 ### Pre-emptive restarts niet aanbevolen
 
-Het wordt aangeraden om de automatische herstart optie van Dexcom sensoren (`pre-emptive restarts`) niet in te schakelen, omdat dit kan leiden tot een "sprong” in de BG waarden op dag 9, wanneer hij de herstart uitvoert.
+Het wordt aangeraden om de automatische herstart optie van Dexcom sensoren (`pre-emptive restarts`) niet te gebruiken, omdat dit kan leiden tot een "sprong” in de BG waarden op dag 9, wanneer hij de herstart uitvoert.
 
 ![xDrip+ sprong na automatische herstart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
@@ -65,7 +67,7 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 
 ### G6-zender voor de eerste keer verbinden
 
-**Voor het resetten van een zender zie [Zender resetten](../Configuration/xdrip#extend-transmitter-life) verderop. Daarna vind je ook hoe je een zender moet vervangen.**
+**Voor het resetten van een zender zie [Zender resetten](../Configuration/xdrip#extend-transmitter-life) verderop. Verderop staat ook beschreven hoe je een zender moet vervangen.**
 
 * Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van de nieuwste ['nightly build' xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) versies hebt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
 * Zet originele Dexcom ontvanger uit (indien je die gebruikt).
@@ -205,7 +207,13 @@ Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van d
 
 ### Sensorcode terugvinden
 
-* Wanneer je het papiertje niet meer hebt, dan kun je de code die je hebt ingevoerd ook terugvinden in de xDrip+ logs.
+* In de laatste 'nightly builds' versie wordt de sensor code weergegeven in de Systeemstatus (via Hamburger menu linksboven op het homescreen).
+* Veeg (swipe) één keer naar links om het juiste scherm te zien.
+   
+   ![xDrip+ Haal Dexcom Sensor Code op2](../images/xDrip_Dexcom_SensorCode2.png)
+
+* De Dexcom sensor code kun je ook terugvinden in xDrip+ logs (geld ook voor oudere versies van xDrip+).
+
 * Tik op de 3 stipjes in rechterbovenhoek van het beginscherm
 * Selecteer `View Events Log` en zoek naar "code". Gebruik eventueel de zoekfunctie (via het vergrootglas-icoontje).
    

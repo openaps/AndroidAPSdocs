@@ -43,7 +43,7 @@ Systém AndroidAPS je navržen tak, aby transparentně sledoval všechny vstupn�
 
 ### Příklady rozhodování algoritmu AndroidAPS:
 
-AndroidAPS používá stejný základní algoritmus a funkce jako OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
+AndroidAPS používá stejný základní algoritmus a funkce jako OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AndroidAPS používá k rozlišení těchto [křivek predikce](../Installing-AndroidAPS/Releasenotes#overview-tab) různé barvy. V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
 
 #### Zde jsou příklady fialových křivek predikce a toho, jak se mohou lišit:
 

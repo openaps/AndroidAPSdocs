@@ -52,7 +52,7 @@ Select "Standard" installation and click "Next".
 
 ![Captura de ecrã 3](../images/Installation_Screenshot_03.png)
 
-Select "Intellij" as UI (user interface) theme and click "Next".
+Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
 ![Captura de ecrã 4](../images/Installation_Screenshot_04.png)
 
@@ -179,7 +179,7 @@ Yeah, the first build is successful but we are not finished.
 
 ## Generate signed APK
 
-<!--- Do not forget to copy to update-to-new-version.md --->
+<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
 
 In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
@@ -191,6 +191,8 @@ In the following dialogue box select "APK" instead of "Android App Bundle" and c
 ![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
 
 Select "app" and click "Next".
+
+<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
@@ -212,7 +214,7 @@ Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+<!--- End modification here ---> Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
 
 * 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
 * Select the build type you want to build. 

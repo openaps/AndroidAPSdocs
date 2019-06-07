@@ -1,17 +1,38 @@
 Welkom bij de Android APS documentatie
 ==============================================
 
+.. note:: 
+   **VOOR JE EIGEN VEILIGHEID**
+
+   De veiligheidsfuncties die in AndroidAPS zitten, maken gebruik van ingebouwde veiligheidsmaatregelen van de hardware componenten waaruit jouw systeem bestaat. Het is daarom van cruciaal belang dat je alleen een volledig functionerende FDA of CE goedgekeurde insulinepomp en CGM gebruikt voor het bouwen van jouw eigen closed loop. Gebruik alleen insulinepompen en CGMs die in deze handleiding beschreven staan, waarvoor de AndroidAPS software is geschreven en getest. Hardware of software wijzigingen aan deze componenten kunnen voor onverwachte uitkomsten zorgen (denk aan het ongewenst afgeven van insuline), waardoor de gebruiker een aanzienlijk risico loopt. Als je een insulinepomp of CGM-ontvanger vindt/koopt/krijgt die een defect heeft, zelfgemaakt is, of op welke manier dan ook veranderd is, GEBRUIK DEZE NIET voor het maken van een AndroidAPS-systeem.
+
+   Daarnaast is het belangrijk om alleen originele verbruiksartikelen te gebruiken, zoals infuussets, inschiethulpen en reservoirs die door de fabrikant zijn goedgekeurd voor gebruik met jouw pomp of CGM. Door het gebruik van niet-originele, niet-geteste verbruiksmaterialen kunnen CGM metingen onnauwkeurig worden en/of fouten optreden in de insulinedosering. Insuline is zeer gevaarlijk wanneer het verkeerd wordt gedoseerd - speel alstublieft niet met je leven door jouw hulpmiddelen aan te passen.
+
+.. note:: 
+	**Disclaimer en waarschuwing**
+
+	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
+
+	* Het gebruik van code van github.com is zonder enige garantie of formele ondersteuning. Verdere details zijn te vinden in de licentie, die te vinden is in de Repository op github.
+
+	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
+
+	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: ' SOOIL <http://www.sooil.com/eng/>' _ ' Dexcom <http://www.dexcom.com/>' _, ' Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>' _.
+
+
 ** Wat is AndroidAPS? **
 
 AndroidAPS is een app die wordt gebruikt als 'kunstmatige alvleesklier' systeem (Artificial Pancreas System of kortweg APS in het Engels). Deze app draait op een Android smartphone   en heeft hetzelfde doel als een menselijke alvleesklier: de bloedglucosewaardes automatisch binnen gezonde grenzen houden. AndroidAPS kan dit nooit zo perfect als een echte alvleesklier, maar kan het leven met type 1 diabetes wel makkelijker maken. Door apparaten die commercieel beschikbaar zijn, te koppelen aan software die simpel en veilig is. Deze apparaten zijn een glucosesensor (Continue Glucose Monitor, CGM) en een insulinepomp. De app communiceert met de glucosesensor en insulinepomp via bluetooth. AndroidAPS gebruikt een algoritme (een set rekenregels) dat al eerder is ontwikkeld voor een ander 'kunstmatige alvleesklier' systeem: OpenAPS. Wereldwijd heeft OpenAPS duizenden gebruikers en al die mensen samen hebben inmiddels miljoenen uren ervaring met dat systeem. 
 
 Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hulpmiddelen gereguleerd. Wie AndroidAPS gebruikt, voert eigenlijk een medisch experiment uit op zichzelf. Het bouwen en instellen van het systeem vereist doorzettingsvermogen en technische kennis. Je hoeft deze technische kennis aan het begin nog niet te hebben, je zult die gaandeweg krijgen. Alle informatie die je nodig hebt kun je online vinden: hier in de wiki, op andere websites of van mensen de jou zijn voorgegaan -- je kunt ze vinden in Facebook groepen en andere online platforms. Veel mensen hebben AndroidAPS succesvol gebouwd en gebruiken het nu volledig veilig, maar het is essentieel dat elke gebruiker:
+
 * Het systeem zelf bouwt zodat ze goed begrijpen hoe het werkt
 * De instellingen aanpast om het systeem op hun eigen diabetes af te stemmen
 * Controleert wat het systeem doet en het zo nodig updatet om ervoor te zorgen dat het goed blijft werken
+
 Als je klaar bent voor deze uitdaging, lees dan verder. 
 
-**Belangrijkste doelen van AndroidAPS: **
+** Belangrijkste doelen van AndroidAPS: **
 
 * Een app waarbij de veiligheid ingebouwd zit. Om meer te lezen over de veiligheids-functies van de oref0 en oref1 algoritmen, klik hier (https://openaps.org/referece-design/)
 * Een alles-in-één app voor het beheer van type 1 diabetes
@@ -33,16 +54,6 @@ Als je klaar bent voor deze uitdaging, lees dan verder.
 * Een geschikte insulinepomp: Dana-R, Dana-RS of Accu-Chek Combo, Accu-Check Insight (tenzij je je eigen stuurprogramma schrijft voor een andere insulinepomp)
 
 
-.. opmerking:: 
-	**Disclaimer en waarschuwing**
-
-	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
-
-	* Het gebruik van code van github.com is zonder enige garantie of formele ondersteuning. Verdere details zijn te vinden in de licentie, die te vinden is in de Repository op github.
-
-	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
-
-	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: ' SOOIL <http://www.sooil.com/eng/>' _ ' Dexcom <http://www.dexcom.com/>' _, ' Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>' _.
 
 Aan de slag met AndroidAPS
 ----------------
@@ -66,7 +77,7 @@ AndroidAPS installeren
    :glob:
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
-   Bijwerken naar een nieuwe versie of branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
@@ -79,7 +90,7 @@ AndroidAPS instellingen
    
    Configurator <./Configuration/Config-Builder.md>
    BG bron <./Configuration/BG-Source.md>
-   Dexcom G6 hints <./Configuration/Dexcom.md>
+   Dexcom G6 tips<./Configuratie/Dexcom.md>
    DanaR pomp <./Configuration/DanaR-Insulin-Pump.md>
    DanaRS pomp <./Configuration/DanaRS-Insulin-Pump.md>
    AccuChek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
@@ -87,7 +98,7 @@ AndroidAPS instellingen
    Smartwatch instellingen <./Configuration/Watchfaces.md>
    Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>
-   xDrip+ settings <./Configuration/xdrip.md>
+   xDrip+ instellingen <./Configuratie/xdrip.md>
    
 Gebruik
 ------------

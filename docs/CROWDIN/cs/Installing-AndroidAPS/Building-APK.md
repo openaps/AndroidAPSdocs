@@ -52,7 +52,7 @@ Vyberte "Standard" instalaci a klikněte na "Next".
 
 ![Snímek 3](../images/Installation_Screenshot_03.png)
 
-Vyberte "Intellij" jako schéma uživatelského prostředí a klikněte na "Next".
+Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
 ![Snímek 4](../images/Installation_Screenshot_04.png)
 
@@ -179,7 +179,7 @@ Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
 
 ## Vytvořte podepsaný soubor APK
 
-<!--- Do not forget to copy to update-to-new-version.md --->
+<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
 
 V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. Ve starších verzích vyberte nabídku „Build“ a pak „Generate Signed APK...“.)  
 Podepsání znamená, že podepíšete svou generovanou aplikaci, ale digitálním způsobem, něco jako digitálním otiskem prstu v samotné aplikaci. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
@@ -192,11 +192,13 @@ V následujícím dialogovém okně vyberte „APK“ místo „Android App Bund
 
 Zvolte „app“ a klepněte na tlačítko „Next“.
 
+<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
+
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
-Klepněte na „Create new...“ a vytvořte úložiště svých klíčů. Úložiště klíčů v tomto případě není nic jiného než soubor, ve kterém jsou uložené podepisovací informace. Je zašifrované a údaje jsou zabezpečené hesly. Doporučujeme, abyste si ho uložili do své domovské složky a zapamatovali si hesla. Kdybyste však tyto informace ztratili, nebyl by to tak velký problém, protože potom byste prostě museli vytvořit nové úložiště klíčů. Ale lepší je tyto údaje pečlivě uložit.
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
-![Snímek 41](../images/Installation_Screenshot_41.png)
+![Screenshot 41](../images/Installation_Screenshot_41.png)
 
 * Vyplňte údaje pro další dialogové okno. 
   * Key store path: je cesta k vašemu úložišti klíčů
@@ -206,13 +208,13 @@ Klepněte na „Create new...“ a vytvořte úložiště svých klíčů. Úlo�
   * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
   * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje. Pak klikněte na tlačítko „OK“.
 
-![Snímek 42](../images/Installation_Screenshot_42.png)
+![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Vyplňte údaje posledního dialogového okna a klikněte na tlačítko „Next“.
+Fill in the information of the last dialog in this dialog and click "Next".
 
-![Snímek 43](../images/Installation_Screenshot_43.png)
+![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
+<!--- End modification here ---> Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
 
 * Možnost „Release“ by měla být výchozí volbou pro „Build Type“, možnost „Debug“ je pouze pro vývojáře.
 * Vyberte typ sestavení, jaký budete chtít. 

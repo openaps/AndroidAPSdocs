@@ -1,9 +1,11 @@
 # Maak je eerste PR (pull request)
 
-`  Als je iets wilt vertalen naar een andere taal (waarvoor dank!) of je hebt een verbetering voor de vertaling, gebruik dan [crowdin](https://wikitranslations.androidaps.org).`
+`  
+Als je iets wilt vertalen naar een andere taal (waarvoor dank!) gebruik dan [crowdin](https://wikitranslations.androidaps.org).`
 
-Deze beschrijving is alleen bedoeld om de Engelstalige versie van de wiki te verbeteren. Wijzigingen moeten altijd eerst in de Engelse versie worden gedaan omdat dit de 'brontekst' is van waaruit de andere talen worden vertaald. De instructie voor het maken van wijzigingen is in het Engels omdat we ervan uitgaan dat je die taal machtig bent als je een wijziging eraan wilt doorvoeren;)   
-  
+`Deze beschrijving is alleen bedoeld om de Engelstalige versie van de wiki te verbeteren. Wijzigingen moeten altijd eerst in de Engelse versie worden gedaan omdat dit de 'brontekst' is van waaruit de andere talen worden vertaald. De instructie voor het maken van wijzigingen is in het Engels omdat we ervan uitgaan dat je die taal machtig bent als je een wijziging eraan wilt doorvoeren;) Mocht dat een probleem zijn, vraag dan in de Looped-NL-BE Facebook groep om hulp. <br><br>For any questions, feedback or new ideas you can contact the documentation team via e-mail (wiki@androidaps.org). 
+Doing a PR isn't difficult, but we can help you editing the documentation.`
+
 At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub. It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. There is always a review process before changes are merged into the "formal" AndroidAPS documentation repository. You can't mess up the originals through any accidents in the PR process. The general process is:
 
 * Make edits and improvements to code or documentation by editing the existing content.

@@ -14,23 +14,23 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **AAPS Implementierungsstatus:** Arbeit im Gange. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Der Großteil der Arbeit am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) ist getan, um das Framework und die Befehle zum Laufen zu bekommen. Es gibt ein offenes Projekt (Medtronic) und Tickets für die zukünftige Entwicklung auf diesem Repository. Die Entwicklung geschieht auf dem Branch Dev_medtronic (was dort der Standard Branch ist). Es gibt auch schon den gitter room: RileyLinkAAPS/Lobby. AAPS. 0.7 Test "Release" ist veröffentlicht. Diese enthält etwa 80% aller Funktionalitäten. Es fehlen nur die Analyse der Pumpenhistorie, um den Zustand der Pumpe festzustellen, sicherzustellen, dass Behandlungen erfolgreich abgeschlossen wurden oder neue Behandlungen aus der Pumpe zu importieren. Weitere Details und den Zeitplan findest Du im [Projektboard](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
-**Hardware Voraussetzungen für AAPS:** RileyLink (alle Typen)
+**Hardware Voraussetzungen für AAPS:** RileyLink (mit 916 MHz Antenne).
 
 **Loopbare Modelle:**512-522, 523(Firmware 2.4A oder niedriger), 554 (EU firmware 2.6A oder niedriger, CA Firmware 2.7A oder weniger). Das Selbe gilt für 7xx Modelle. Alle anderen Modelle sind aktuell nicht loopbar und werden es wahrscheinlich auch nie.
 
 * * *
 
-### Insulet Omnipod ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod, eros pods ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-**Loop status:** Aktuell nicht unterstützt, aber die Entschlüsselung des Omnipod Protokolls ist nahezu abgeschlossen. [OpenOmni](http://www.openomni.org/) und [OmniAPS Slack](https://omniaps.slack.com/)
+**Loop-Status:** Momentan nicht nativ von AAPS unterstützt. Die Dekodierung des Omnipod-Protokolls ist abgeschlossen- [OpenOmni](http://www.openomni.org/) und [OmniAPS Slack](https://omniaps.slack.com/).
 
-**Andere Umsetzungen** Loop (Umsetzung ist erst am Anfang, so weit bekannt war es möglich den Pod zu starten und die erste temporäre Basalrate zu senden). Siehe [Openomni bei github](https://github.com/openaps/openomni)
+**Andere Implementierungen:** Omnipy für AndroidAPS (stabil in Test, erfordert Raspberry Pi sowie RileyLink); Loop für iOS (stabil in Tests, erfrodert RileyLink).
 
 **Java-Implementierungen:** Bisher keine.
 
-**AAPS Umsetzungsstatus:** Die Arbeiten an [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch) haben begonnen, sind aber noch weit von einem ersten Prototypen entfernt (der Entwickler hat mit der Änderungen, die für RL Firmware 2.0 erforderlich sind, begonnen und sendet erste Datenpakete an die Pumpe). Auf https://omniaps.slack.com/ um Kanal android-driver kann man die Entwicklung verfolgen. Dort postet der Entwickler seinen Fortschritt.
+**AAPS Umsetzungsstatus:** Die Arbeiten an [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) für Omnipod (dev_omnipod branch) haben begonnen, sind aber noch nicht abgeschlossen. RileyLinkAAPS soll den zusätzlichen Raspberry Pi überflüssig machen. Auf https://omniaps.slack.com/ um Kanal android-driver kann man die Entwicklung verfolgen.
 
-**Hardware Anforderungen für AAPS:** RileyLink mit Omnipod Firmware (2.x)
+**Hardware Anforderungen für AAPS:** RileyLink mit Omnipod Firmware (2.x) und 433 MHz Antenne.
 
 ## Pumpen, die für den Loop geeignet sind
 

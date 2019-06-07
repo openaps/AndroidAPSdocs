@@ -1,8 +1,8 @@
-# Accessing logfiles
+# Logbestanden uitlezen
 
-* Connect phone to a computer in file transfer mode
-* Locate log files in this directory or similiar (may little bit vary on different phones)
+* Verbind je telefoon met een computer in bestandsoverdrachtsmodus
+* In deze map (of iets vergelijkbaars) kun je de logbestanden vinden, kan iets verschillen per telefoon.
 
 ![logs](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in Android Studio, Log Viewer android app, or simply plain text. Previous log files are zipped and stored in folders in date/time order. If sharing your log in [gitter](https://gitter.im/MilosKozak/AndroidAPS) when talking about a potential bug then unzip and upload the folder dated before the error occurred.
+* Het huidige logbestand is een .log bestand dat kan worden bekeken op een aantal manieren zoals [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in Android Studio, via de android app Log Viewer, of gewoon als platte tekst. Oudere logbestanden worden gezipt en in mappen opgeslagen op volgorde van datum/tijd. Als je je logs deelt in [gitter](https://gitter.im/MilosKozak/AndroidAPS) wanneer je een mogelijke bug meldt, zoek dan de map op voordat die fout optrad, pak hem uit en upload de bestanden.
