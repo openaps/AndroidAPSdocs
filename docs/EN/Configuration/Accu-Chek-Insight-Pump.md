@@ -9,7 +9,7 @@ but allow yourself time to learn. You alone are responsible for what
 you do with it.**
 
 ---
-***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to version 2.1** and **uninstall SightRemote**.*
+***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
 ---
 
 
@@ -20,7 +20,7 @@ you do with it.**
 * A Roche Accu-Chek Insight pump (any firmware, they all work)
 <br>   Note: AAPS will write data always in <b>first basal rate profile in the pump</b>
 * An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
-* The AndroidAPS app (at least v2.1) installed on your phone
+* The AndroidAPS app installed on your phone
 
 
 ## Setup
