@@ -192,7 +192,11 @@ Wähle in der folgenden Dialogbox "APK" statt "Android App Bundle" und klicke au
 
 Wähle “App” aus und klicke auf “Next”.
 
-![Screenshot 40](../images/Installation_Screenshot_40.png) <!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used ---> Klicke auf “Create new...” um einen Keystore zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Diese ist verschlüsselt und mit Passwörtern geschützt. Wir empfehlen, diese Datei in deinem Heimatverzeichnis zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
+<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
+
+![Screenshot 40](../images/Installation_Screenshot_40.png)
+
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -206,9 +210,11 @@ Wähle “App” aus und klicke auf “Next”.
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Fülle die Informationen von dem Keystore, den du gerade erstellt hast, aus und klicke auf “Next”.
+Fill in the information of the last dialog in this dialog and click "Next".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png) <!--- End modification here ---> Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
+![Screenshot 43](../images/Installation_Screenshot_43.png)
+
+<!--- End modification here ---> Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
 
 * “Release” solltest du immer lassen, “Debug” ist nur für Programmierer, um Fehler zu finden.
 * Wähle den “build type”, den du kompilieren möchtest: 
