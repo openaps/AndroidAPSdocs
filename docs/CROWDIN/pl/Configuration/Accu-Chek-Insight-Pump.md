@@ -20,7 +20,7 @@
 
 * W [ ustawieniach konfiguracji ](../Configuration/Config-Builder) aplikacji AndroidAPS wybierz Accu-Chek Insight w sekcji pompy
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Zrzut ekranu Panelu konfiguracji AndroidAPS dla ustawień Insight](../images/Insight_ConfigBuilder.png)
 
 * Dotknij koła zębatego, aby otworzyć ustawienia Insight.
 
