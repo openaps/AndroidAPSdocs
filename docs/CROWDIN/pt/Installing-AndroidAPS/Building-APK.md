@@ -80,90 +80,90 @@ After the downloads are completed click the "Finish" button.
 
 * Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
-![Captura de ecrã 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
+![Captura de ecrã 10](../images/Installation_Screenshot_10.png)
+
+![Version_Control_Git](../images/Version_Control_Git.png)
 
 Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 
-![Captura de ecrã 13](../images/Installation_Screenshot_13.png)
+![Screenshot 13](../images/Installation_Screenshot_13.png)
 
 Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
-![Captura de ecrã 14](../images/Installation_Screenshot_14.png)
+![Screenshot 14](../images/Installation_Screenshot_14.png)
 
 Finish the checkout from version control with opening the project by clicking "Yes".
 
-![Captura de ecrã 15](../images/Installation_Screenshot_15.png)
+![Screenshot 15](../images/Installation_Screenshot_15.png)
 
 Use the standard "default gradle wrapper" and click "OK".
 
-![Captura de ecrã 16](../images/Installation_Screenshot_16.png)
+![Screenshot 16](../images/Installation_Screenshot_16.png)
 
 Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
-![Captura de ecrã 17](../images/Installation_Screenshot_17.png)
+![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Excellent, you have your own copy of the source code and are ready to start the build.
 * Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
-![Captura de ecrã 18](../images/Installation_Screenshot_18.png)
+![Screenshot 18](../images/Installation_Screenshot_18.png)
 
 Accept the license agreement by selecting "Accept" and clicking "Next".
 
-![Captura de ecrã 19](../images/Installation_Screenshot_19.png)
+![Screenshot 19](../images/Installation_Screenshot_19.png)
 
 As it is said in the dialog please wait until the download is finished.
 
-![Captura de ecrã 20](../images/Installation_Screenshot_20.png)
+![Screenshot 20](../images/Installation_Screenshot_20.png)
 
 Now it's finished. Please click "Finish".
 
-![Captura de ecrã 21](../images/Installation_Screenshot_21.png)
+![Screenshot 21](../images/Installation_Screenshot_21.png)
 
 Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
-![Captura de ecrã 22](../images/Installation_Screenshot_22.png)
+![Screenshot 22](../images/Installation_Screenshot_22.png)
 
 As it is said in the dialog please wait until the download is finished.
 
-![Captura de ecrã 23](../images/Installation_Screenshot_23.png)
+![Screenshot 23](../images/Installation_Screenshot_23.png)
 
 Now it's finished. Please click "Finish".
 
-![Captura de ecrã 24](../images/Installation_Screenshot_24.png)
+![Screenshot 24](../images/Installation_Screenshot_24.png)
 
 And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
 
-![Captura de ecrã 25](../images/Installation_Screenshot_25.png)
+![Screenshot 25](../images/Installation_Screenshot_25.png)
 
 As it is said in the dialog please wait until the download is finished.
 
-![Captura de ecrã 26](../images/Installation_Screenshot_26.png)
+![Screenshot 26](../images/Installation_Screenshot_26.png)
 
 Now it's finished. Please click "Finish".
 
-![Captura de ecrã 27](../images/Installation_Screenshot_27.png)
+![Screenshot 27](../images/Installation_Screenshot_27.png)
 
 Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
-![Captura de ecrã 28](../images/Installation_Screenshot_28.png)
+![Screenshot 28](../images/Installation_Screenshot_28.png)
 
 As it is said in the dialog please wait until the download is finished.
 
-![Captura de ecrã 29](../images/Installation_Screenshot_29.png)
+![Screenshot 29](../images/Installation_Screenshot_29.png)
 
 Now it's finished. Please click "Finish".
 
-![Captura de ecrã 30](../images/Installation_Screenshot_30.png)
+![Screenshot 30](../images/Installation_Screenshot_30.png)
 
 Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
 
-![Captura de ecrã 31](../images/Installation_Screenshot_31.png)
+![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. ---> Android Studio recommends to update the gradle system. 
-
-**Never update gradle!** This might lead to difficulties!
+Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
 Please click "Don't remind me again for this project".
 
@@ -179,8 +179,6 @@ Yeah, the first build is successful but we are not finished.
 
 ## Generate signed APK
 
-<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
-
 In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
@@ -191,8 +189,6 @@ In the following dialogue box select "APK" instead of "Android App Bundle" and c
 ![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
 
 Select "app" and click "Next".
-
-<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
@@ -214,7 +210,7 @@ Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-<!--- End modification here ---> Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
 
 * 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
 * Select the build type you want to build. 
@@ -234,8 +230,6 @@ Click the "locate" link in the event log.
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
 ## Transfer APK to smartphone
-
-<!--- Do not forget to copy to update-to-new-version.md --->
 
 A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
