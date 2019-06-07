@@ -192,7 +192,11 @@ In the following dialogue box select "APK" instead of "Android App Bundle" and c
 
 Select "app" and click "Next".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png) <!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used ---> Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
+
+![Screenshot 40](../images/Installation_Screenshot_40.png)
+
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -208,7 +212,9 @@ Select "app" and click "Next".
 
 Fill in the information of the last dialog in this dialog and click "Next".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png) <!--- End modification here ---> Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+![Screenshot 43](../images/Installation_Screenshot_43.png)
+
+<!--- End modification here ---> Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
 
 * 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
 * Select the build type you want to build. 
