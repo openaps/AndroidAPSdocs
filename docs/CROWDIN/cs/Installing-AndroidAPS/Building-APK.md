@@ -192,7 +192,11 @@ V následujícím dialogovém okně vyberte „APK“ místo „Android App Bund
 
 Zvolte „app“ a klepněte na tlačítko „Next“.
 
-![Snímek 40](../images/Installation_Screenshot_40.png) <!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used ---> Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
+
+![Snímek 40](../images/Installation_Screenshot_40.png)
+
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -208,7 +212,9 @@ Zvolte „app“ a klepněte na tlačítko „Next“.
 
 Fill in the information of the last dialog in this dialog and click "Next".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png) <!--- End modification here ---> Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
+![Screenshot 43](../images/Installation_Screenshot_43.png)
+
+<!--- End modification here ---> Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
 
 * Možnost „Release“ by měla být výchozí volbou pro „Build Type“, možnost „Debug“ je pouze pro vývojáře.
 * Vyberte typ sestavení, jaký budete chtít. 
