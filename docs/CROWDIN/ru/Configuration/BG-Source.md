@@ -1,18 +1,18 @@
-# General CGM recommendations
+# Общие рекомендации по мониторингу
 
-## CGM hygiene
+## Гигиена мониторинга
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Вне зависимости от того, какой у вас мониторинг ГК - официальная система или самодельная, при калибровках следует соблюдать определенные правила.
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* Убедитесь, что руки и комплект чисты.
+* Старайтесь калибровать на ровных значениях ГК (обычно достаточно 15-30 минут с плоской шкалой)
+* Избегайте калибровки при повышении или понижении уровня глюкозы. 
+* По возможности проводите «достаточно» калибровок – на официальных приложениях раз или два раза за сутки появляется предложение откалибровать систему. В самодельных системах таких напоминаний не бывает, поэтому будьте осторожны если давно не делали калибровки.
+* По возможности калибруйте, имея показания в нижнем диапазоне (4-5 ммоль/л или 72-90мг/дл.) а также в среднем (7-9 ммоль/л или 126-160мг/дл.), поскольку это обеспечивает более широкий охват диапазона калибровок.
 
-# Источник данных гликемии
+# Источник данных ГК
 
-## For users of Dexcom
+## Для пользователей Dexcom
 
 ### Dexcom G6: General hints for looping
 
