@@ -71,7 +71,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td>Источник данных гликемии</td>
+<td>BG source</td>
  <td>Where do your glucose values come from?</td>
  <td>CGM / FGM</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
