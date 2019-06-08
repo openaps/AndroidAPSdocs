@@ -14,7 +14,7 @@
 
 ## Для пользователей Dexcom
 
-### Dexcom G6: General hints for looping
+### Dexcom G6: Общие рекомендации по работе в замкнутом цикле
 
 See [Dexcom G6 page](../Configuration/Dexcom.md) for details on setting Dexcom G6 sensor and solutions for common difficulties with Dexcom G6.
 
