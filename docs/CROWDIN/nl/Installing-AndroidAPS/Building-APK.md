@@ -81,7 +81,9 @@ Wanneer hij klaar is met downloaden, klik op "Finish" (afronden).
 
 * Gebruik Git clone in Android Studio zoals in onderstaande screenshots te zien is. Selecteer “Check out project from Version Control” en kies “Git” als versie controle systeem.
 
-![Screenshot 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
+![Screenshot 10](../images/Installation_Screenshot_10.png)
+
+![Version_Control_Git](../images/Version_Control_Git.png)
 
 Vul de URL in van de hoofdpagina van de AndroidAPS Repository (“https://github.com/MilosKozak/AndroidAPS”) en klik op “Clone”.
 
@@ -118,7 +120,7 @@ Het dialoogvenster geeft aan "Please wait until the installation finishes" (wach
 
 ![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden). 
+Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden).
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
@@ -130,7 +132,7 @@ Het dialoogvenster geeft aan "Please wait until the installation finishes" (wach
 
 ![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden). 
+Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden).
 
 ![Screenshot 24](../images/Installation_Screenshot_24.png)
 
@@ -142,7 +144,7 @@ Het dialoogvenster geeft aan "Please wait until the installation finishes" (wach
 
 ![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden). 
+Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden).
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
@@ -154,7 +156,7 @@ Het dialoogvenster geeft aan "Please wait until the installation finishes" (wach
 
 ![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden). 
+Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden).
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
@@ -162,9 +164,7 @@ Jippie! De foutmeldingen zijn voorbij en je bent begonnen. Misschien tijd om wat
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. ---> Android Studio komt met een "update Gradle" melding (Gradle bijwerken). 
-
-**Update Gradle nooit!** Dit kan tot problemen leiden!
+Android Studio komt met een "update Gradle" melding (Gradle bijwerken). **Update Gradle nooit!** Dit kan tot problemen leiden!
 
 Klik op "Don't remind me again for this project" (Nooit meer vragen voor dit project).
 
@@ -180,8 +180,6 @@ Mooi, je hebt nu jouw eerste app "Build finished" (bouw afgerond). Maar we zijn 
 
 ## Bouwen van de ondertekende APK
 
-<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
-
 Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In oudere versies selecteerde je in het menu "Build" en vervolgens "Generate Signed APK...”.)  
 Ondertekenen betekent dat je de door jou gemaakte app ondertekent. Dit is een soort digitale vingerafdruk in de app zelf. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
 
@@ -193,11 +191,9 @@ In het volgende dialoogvenster selecteer je "APK" in plaats van "Android App Bun
 
 Selecteer "App" en klik op "Next".
 
-<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
-
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Klik op "Create new..." (maak nieuwe...) om jouw eigen key store (digitale handtekening) te maken. Een key store is een bestandje waarin de informatie van jouw handtekening is opgeslagen. Het bestandje is versleuteld en beveiligd met een wachtwoord. We raden aan om het op te slaan in jouw eigen map op je computer en om het wachtwoord goed te onthouden. Maar mocht je het bestandje of jouw wachtwoord kwijtraken dan is dat geen groot probleem, je moet dan gewoon een nieuwe maken. Het is goed om deze informatie zorgvuldig te bewaren.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -211,11 +207,11 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Vul de informatie van jouw handtekening die je zojuist hebt aangemaakt in in het volgende venster en klik op "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-<!--- End modification here ---> Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
+Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
 
 * 'Release' is wat je hoort te kiezen als "Build Type", 'Debug' is alleen voor programmeurs.
 * Kies de "Flavour" die je wilt bouwen: 
@@ -235,8 +231,6 @@ Klik op de "locate" link in het Event Log.
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
 ## Overzetten van de APK naar je telefoon
-
-<!--- Do not forget to copy to update-to-new-version.md --->
 
 Een Verkenner venster zal openen. Het kan dat het er iets anders uitziet, dit screenshot is met een Linux computer gemaakt. In Windows zal de "Verkenner" openen, op een Mac OS X de "Finder" Hier zul je een map zien met daarin een APK bestand. Helaas is dit de VERKEERDE locatie, omdat "wear-release.apk" NIET de ondertekende app die we zoeken.
 

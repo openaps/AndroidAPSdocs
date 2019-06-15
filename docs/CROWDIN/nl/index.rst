@@ -34,7 +34,7 @@ Als je klaar bent voor deze uitdaging, lees dan verder.
 
 ** Belangrijkste doelen van AndroidAPS: **
 
-* Een app waarbij de veiligheid ingebouwd zit. Om meer te lezen over de veiligheids-functies van de oref0 en oref1 algoritmen, klik hier (https://openaps.org/referece-design/)
+* Een app waarbij de veiligheid ingebouwd zit. Om meer te lezen over de veiligheids-functies van de oref0 en oref1 algoritmen, klik hier (https://openaps.org/reference-design/)
 * Een alles-in-één app voor het beheer van type 1 diabetes
 * Een app waaraan gebruikers gemakkelijk modules kunnen toevoegen of verwijderen indien nodig
 * Een app met verschillende versies voor specifieke locaties en talen.
