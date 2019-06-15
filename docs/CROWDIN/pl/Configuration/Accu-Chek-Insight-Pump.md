@@ -4,13 +4,13 @@
 
 * * *
 
-## *** OSTRZEŻENIE: ** Jeśli wcześniej korzystałeś z Insight z ** SightRemote **, ** zaktualizuj do wersji 2.1 ** i ** odinstaluj SightRemote </0 >.</em></h2> 
+## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
 
 ## Wymagania sprzętowe i programowe
 
 * Pompa Roche Accu-Chek Insight (wszelkie oprogramowanie układowe, wszystkie współpracują z AAPS) <br /> Uwaga: AAPS będzie zapisywać dane zawsze w ** pierwszym profilu dawek podstawowych w pompie **
 * Telefon z Androidem (zasadniczo każda wersja Androida będzie dobra, ale sam AndroidAPS wymaga co najmniej Androida 5 (Lollipop)).
-* Aplikacja AndroidAPS (przynajmniej v2.1) zainstalowana w telefonie
+* The AndroidAPS app installed on your phone
 
 ## Ustawienia
 
