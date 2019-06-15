@@ -4,13 +4,13 @@
 
 * * *
 
-## ***WAARSCHUWING:** Als je de Insight in het verleden al gebruikte met **SightRemote,** werk AndroidAPS dan bij naar **versie 2.1.1** en **verwijder SightRemote**!*
+## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
 
 ## Benodigde hardware en software
 
 * Een Roche Accu-Chek Insight pomp (firmware maakt niet uit, ze werken allemaal) <br />Opmerking: AAPS zal alleen het **eerste basaal-profiel van de pomp** gebruiken.
 * Een Android-telefoon (in principe werkt elke Android-versie, maar AndroidAPS zelf vereist minstens Android 5 (Lollipop).)
-* De AndroidAPS-app (versie 2.1.1 of hoger) geïnstalleerd op jouw telefoon
+* The AndroidAPS app installed on your phone
 
 ## Pomp koppelen
 
