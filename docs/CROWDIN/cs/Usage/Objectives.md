@@ -42,7 +42,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 
 ### Objective 5: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
 
-    * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default is recommended to be 2 but you should slowly work up to this until you know your settings work for you.
+    * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you.
     * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
     
 
