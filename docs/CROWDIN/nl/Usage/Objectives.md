@@ -42,7 +42,7 @@ Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exp
 
 ### Doel 5: Inregelen van de closed loop, verhoog de max IOB boven 0 en laat geleidelijk de streef BG dalen
 
-    * Verhoog nu jouw instelling voor 'Maximum totaal IOB dat OpenAPS niet kan overschrijden' boven de 0, gedurende 1 dag. De aanbevolen waarde is 2, maar je moet geleidelijk aan verhogen totdat je weet welke instelling voor jou goed werkt.
+    * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you.
     * Nadat je weet welke IOB instelling goed bij jou past, kun je ook je BG streefdoel instellingen gaan verlagen.
     
 
