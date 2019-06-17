@@ -12,7 +12,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Java Implementierung:** Teil-Implementierung verfügbar [Rountrip2](https://github.com/TC2013/Roundtrip2) und [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS Implementierungsstatus:** Arbeit im Gange. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Der Großteil der Arbeit am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) ist getan, um das Framework und die Befehle zum Laufen zu bekommen. Es gibt ein offenes Projekt (Medtronic) und Tickets für die zukünftige Entwicklung auf diesem Repository. Die Entwicklung geschieht auf dem Branch Dev_medtronic (was dort der Standard Branch ist). Es gibt auch schon den gitter room: RileyLinkAAPS/Lobby. AAPS. Die Version 0.10 "Test-Release" ist erschienen. Sie verfügt bereits über ca. 95% der notwendigen Funktionen. Momentan fehlt noch die Synchronisation von temporären Basalraten und des Ereignisses "Bolusabgabe gestoppt" der Pumpe. Die Übernahme in die AAPS-Anwendung erfolgt voraussichtlich Ende Juli 2019. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+**AAPS Implementierungsstatus:** Arbeit im Gange. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Der Großteil der Arbeit am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) ist getan, um das Framework und die Befehle zum Laufen zu bekommen. Es gibt ein offenes Projekt (Medtronic) und Tickets für die zukünftige Entwicklung auf diesem Repository. Die Entwicklung geschieht auf dem Branch Dev_medtronic (was dort der Standard Branch ist). Es gibt auch schon den gitter room: RileyLinkAAPS/Lobby. AAPS. Die Version 0.10 "Test-Release" ist erschienen. Sie verfügt bereits über ca. 95% der notwendigen Funktionen. Momentan fehlt noch die Synchronisation von temporären Basalraten und des Ereignisses "Bolusabgabe gestoppt" der Pumpe. Die Übernahme in die AAPS-Anwendung erfolgt voraussichtlich Ende Juli 2019. Details und Zeitplan findest Du im [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
 **Hardware Voraussetzungen für AAPS:** RileyLink (mit 916 MHz Antenne).
 
@@ -150,11 +150,11 @@ Bis vor einiger Zeit wurde eine Firmware namens T:AP genutzt (Hinweise dazu in [
 
 - Verlängerten Bolus setzen
 - Verlängerten Bolus abbrechen
-- Read History
-- Read TDD
+- Historie auslesen
+- TDD (Total daily dose = Bolus + Basal pro Tag) auslesen
 
 * * *
 
-### Other pumps support
+### Unterstützung weiterer Pumpen
 
-If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Falls du noch andere Pumpen hast und du über deren Status Bescheid wissen willst, kontaktiere mich (@andyrozman auf Gitter). In zukünftigen Releases werden einige Pumpen-Konfigurationen hinzugefügt, die dann im Open Loop laufen können (du wirst dann die Möglichkeit haben, einen bestimmten Typ als virtuelle Pumpe auszuwählen, so dass deine Einstellungen geladen werden - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
