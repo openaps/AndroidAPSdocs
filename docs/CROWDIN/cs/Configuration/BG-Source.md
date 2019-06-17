@@ -75,44 +75,44 @@ Abyste mohli používat Libre jako CGM senzor, který získává nové hodnoty g
 * V xDripu vyberte Nastavení > Komunikace mezi aplikacemi > Lokální odesílání dat a vyberte zapnout.
 * V xDripu vyberte Nastavení > Komunikace mezi aplikacemi > Přijímat ošetření a vyberte vypnout.
 * Pokud chcete, aby bylo možné přes AndroidAPS kalibrovat senzor, tak v xDripu vyberte Nastavení > Komunikace mezi aplikacemi > Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v xDripu nastavení v částí Nastavení > Méně častá nastavení > Rozšířené kalibrace.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
-* For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md)
+* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte xdrip.
+* Nastavení aplikace xDrip+ včetně snímků obrazovky viz [stránka s nastavením xDrip+](../Configuration/xdrip.md)
 
-### If using Glimp...  
-
-
-* If not already set up then download Glimp and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
-* Select Glimp in ConfigBuilder (setting in AndroidAPS).
-
-## For users of Eversense  
+### Pokud používáte Glimp…  
 
 
-The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (and unistall the original one first).
+* Pokud jste tak dosud neučinili, stáhněte si aplikaci Glimp a postupujte podle instrukcí v části [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
+* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte Glimp.
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
-
-To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
-
-You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
-
-## For users of MM640g or MM630g  
+## Pro uživatele Eversense  
 
 
-* If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
-* In 600 Series Uploader go to Settings > Send to xdrip+ and select ON (tick).
-* Select MM640g in ConfigBuilder (setting in AndroidAPS).
+Nejjednodušší způsob, jak používat Eversense s AndroidAPS, je nainstalovat upravenou [aplikaci Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (nejdříve musíte odinstalovat tu originální).
 
-## For users of PocTech CT-100  
+**Varování: odinstalováním staré aplikace přijdete o své místní historické údaje starší než jeden týden!**
 
+Chcete-li dostat svá data do AndroidAPS, musíte nainstalovat aplikaci [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) a povolit „Odesílání do AAPS a xDrip“ v aplikaci ESEL a na kartě [Konfigurace](../Configuration/Config-Builder.md) v AndroidAPS vybrat jako zdroj glykémií možnost „MM640g“. Vzhledem k tomu, že data glykémií z Eversense někdy mohou obsahovat velký šum, je dobré povolit „Vyhlazování dat“ v aplikaci ESEL, což je lepším řešením než povolení možnosti „Vždy používat krátkodobý průměrný rozdíl glykémií místo rozdílu posledních 2 hodnot“ v AAPS.
 
-* Install PocTech App
-* Select PocTech App in ConfigBuilder (setting in AndroidAPS).
+Další pokyny k používání aplikace xDrip se systémem Eversense najdete [zde](https://github.com/BernhardRo/Esel/tree/master/apk).
 
-## For users of other CGM uploaded to Nightscout  
+## Pro uživatele MM640g nebo MM630g  
 
 
-If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
+* Pokud jste tak dosud neučinili, stáhněte si aplikaci [600SeriesAndroidUploader](http://pazaan.github.io/600SeriesAndroidUploader/) a postupujte podle pokynů uvedených v části [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
+* V aplikaci 600 Series Uploader přejděte na Nastavení > Odesílat do xdrip+ a zvolte ON (zaškrtněte).
+* Na kartě Konfigurace (nastavení AndroidAPS) vyberte MM640g.
+
+## Pro uživatele PocTech CT-100  
 
 
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* Nainstalujte aplikaci PocTech
+* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte aplikaci PocTech.
+
+## Pro uživatele ostatních CGM nahrávaných do Nightscoutu  
+
+
+Pokud máte nějaký jiný systém CGM, který odesílá data do [Nightscoutu](http://www.nightscout.info), pak  
+
+
+* V nastavení AndroidAPS zadejte svojí Nightscout adresu a API secret.
+* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte NSClient.
