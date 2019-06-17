@@ -90,7 +90,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>bazál</td>
+ <td>basal rate</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -113,7 +113,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Uzavřená smyčka</td>
+ <td>Closed Loop</td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
