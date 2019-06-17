@@ -12,7 +12,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Java Implementierung:** Teil-Implementierung verfügbar [Rountrip2](https://github.com/TC2013/Roundtrip2) und [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS Implementierungsstatus:** Arbeit im Gange. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Der Großteil der Arbeit am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) ist getan, um das Framework und die Befehle zum Laufen zu bekommen. Es gibt ein offenes Projekt (Medtronic) und Tickets für die zukünftige Entwicklung auf diesem Repository. Die Entwicklung geschieht auf dem Branch Dev_medtronic (was dort der Standard Branch ist). Es gibt auch schon den gitter room: RileyLinkAAPS/Lobby. AAPS. 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. Project will probably be merged to main repository by end of July 2019. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+**AAPS Implementierungsstatus:** Arbeit im Gange. Siehe [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Der Großteil der Arbeit am [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) ist getan, um das Framework und die Befehle zum Laufen zu bekommen. Es gibt ein offenes Projekt (Medtronic) und Tickets für die zukünftige Entwicklung auf diesem Repository. Die Entwicklung geschieht auf dem Branch Dev_medtronic (was dort der Standard Branch ist). Es gibt auch schon den gitter room: RileyLinkAAPS/Lobby. AAPS. Die Version 0.10 "Test-Release" ist erschienen. Sie verfügt bereits über ca. 95% der notwendigen Funktionen. Momentan fehlt noch die Synchronisation von temporären Basalraten und des Ereignisses "Bolusabgabe gestoppt" der Pumpe. Die Übernahme in die AAPS-Anwendung erfolgt voraussichtlich Ende Juli 2019. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
 **Hardware Voraussetzungen für AAPS:** RileyLink (mit 916 MHz Antenne).
 
@@ -20,19 +20,19 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 * * *
 
-### Insulet Omnipod (with old Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (mit alten Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop-Status:** Momentan nicht nativ von AAPS unterstützt. Die Dekodierung des Omnipod-Protokolls ist abgeschlossen- [OpenOmni](http://www.openomni.org/) und [OmniAPS Slack](https://omniaps.slack.com/).
 
-**Other implementations:**
+**Weitere Projekte:**
 
-- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) [Omnipy](https://github.com/winemug/omnipy)
-- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project). [OmniCore](https://github.com/winemug/OmniCore)
-- Loop (stable, released, requires RileyLink). [Loop](https://loopkit.github.io/loopdocs/)
+- Omnipy for AndroidAPS (stabil in Tests, erfordert Raspberry Pi und RileyLink sowie ein speziell angepasstes AndroidAPS) [Omnipy](https://github.com/winemug/omnipy)
+- OmniCore für AndroidAPS (bisher unveröffentlicht, C# Code läuft "nativ" auf Android, benötigt nur den RileyLink und ein speziell modifiziertes AndroidAPS - Nachfolger des Omnipy Projects). [OmniCore](https://github.com/winemug/OmniCore)
+- Loop für iOS (stabil, veröffentlicht, benötigt RileyLink). [Loop](https://loopkit.github.io/loopdocs/)
 
 **Java-Implementierungen:** Bisher keine.
 
-**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) for Omnipod (dev_omnipod branch) which will not require a Raspberry Pi, but this is not finished. Auf https://omniaps.slack.com/ um Kanal android-driver kann man die Entwicklung verfolgen.
+**AAPS Umsetzungsstatus:** Die Arbeiten an [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) für Omnipod (dev_omnipod branch) haben begonnen. RileyLinkAAPS soll zukünftig den zusätzlichen Raspberry Pi überflüssig machen, die Entwicklung ist aber noch nicht abgeschlossen. Auf https://omniaps.slack.com/ um Kanal android-driver kann man die Entwicklung verfolgen.
 
 **Hardware Anforderungen für AAPS:** RileyLink mit Omnipod Firmware (2.x) und 433 MHz Antenne.
 
@@ -40,11 +40,11 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Loop status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist ein Kandidat für den Loop, das Protokoll aber bisher unbekannt. Selling of pump officially started in January 2019.
+**Loop status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist ein Kandidat für den Loop, das Protokoll aber bisher unbekannt. Pumpe wird seit Januar 2019 verkauft.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
 
-**Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
+**Kommentare:** Wir beobachten die Entwicklung von Omnipod DASH. Das Problem ist aber, dass Dash bisher in Europa, wo die meisten AAPS Entwickler leben, noch nicht verfügbar ist und dass das Kommunikationsprotokoll unbekannt ist. Wir mittels "reverse engeneering" versuchen, aus der offiziellen Dash APK herauszulesen, wie die Kommunikation funktioniert und dann auf Basis dieser Erkenntnisse mit der Umsetzung beginnen. Die aktuellen Entwicklungen findest du unter [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), es wird aber in näherer Zukunft leider nicht verfügbar sein. Aktuell gibt es nur von ein "Proof of concept" (bis Meilenstein 2 abgeschlossen ist).
 
 * * *
 
@@ -88,19 +88,19 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ### Medtronic Bluetooth
 
-**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Kommentare:** Diese Pumpe soll in den kommenden Jahren auf den Markt kommen und von der Tidepool Loop Software unterstützt werden ([siehe dieser Artikel [englisch]](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
 
 * * *
 
 ## Pumps no longer sold (companies no longer operating)
 
-### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+### Cellnovo Pumpe ([Homepage](https://www.cellnovo.com/en/homepage))
 
 **Loop status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Hinweis zur Pumpe:** Es ist der Eindruck entstanden, dass sich das Unternehmen aus dem Pumpenmarkt zurückzieht. Mehr dazu findest Du in [diesem Arikel (englisch)](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU).
 
 ## Pumps that aren't Loopable
 
@@ -108,7 +108,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop Status:** Nicht zum Loopen geeignet.
 
-While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
+Bis vor einiger Zeit wurde eine Firmware namens T:AP genutzt (Hinweise dazu in [diesem Artikel](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&) [englisch]), die in Loop verwendet werden konnte. Allerdings ist diese Firmware nicht mehr verfügbar, da ein Upgrade auf x2 durchgeführt wurde. Die ursprüngliche Firmware war nie für den kommerziellen Einsatz konzipiert und diente nur experimentellen Zwecken im Rahmen eines Forschungsprojekts. Laut einem der Geschäftsführer des Unternehmens wird es nie eine offene Schnittstelle zur Tandem-Pumpe geben. Sie haben aber ein eigenes Closed Loop System namens Control-IQ entwickelt. Dies ist in den USA bereits verfügbar und soll 2020 auch nach Europa kommen.
 
 * * *
 
