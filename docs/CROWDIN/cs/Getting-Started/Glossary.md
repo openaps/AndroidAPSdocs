@@ -1,7 +1,7 @@
 # Slovníček<table style="width:100%" border=1>
 <tr>
  <th>Term</th>
- <th>Popis</th>
+ <th>Description</th>
  <th>see also</th>
  <th>more details @</th>
 </tr>
