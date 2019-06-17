@@ -114,42 +114,42 @@ Bis vor einiger Zeit wurde eine Firmware namens T:AP genutzt (Hinweise dazu in [
 
 ### Animas Vibe
 
-**Loop Status:** Nicht zum Loopen geeignet. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
+**Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich. **Hinweis:** Pumpe wird nicht mehr verkauft. Das Unternehmen (Johnson&Johnson) hat sich aus dem Pumpengeschäft zurückgezogen.
 
 * * *
 
 ### Animas Ping
 
-**Loop Status:** Nicht zum Loopen geeignet. It has bolus possibility, but no TBR one. **Note** Stopped beeing sold when Vibe came out.
+**Loop Status:** Nicht zum Loopen geeignet. Bolus-Steuerung möglich, aber keine Steuerung von temporären Basalraten (TBR). **Note** Vertrieb nach Erscheinen der Vibe eingestellt.
 
 ## Anforderungen an Pumpen, um loopbar zu sein
 
-**Prerequisite**
+**Grundvoraussetzungen**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Pumpe muss irgendeine Art von Fernbedienung unterstützen. (BT, Radiofrequenz, etc.)
+- Protokoll ist entschlüsselt/dokumentiert/etc.
 
-**Minimal requirement**
+**Mindestanforderungen**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Temporäre Basalraten setzen
+- Status abrufen
+- Temporäre Basalraten abbrechen
 
-**For oref1(SMB) or Bolusing:**
+**Für oref1(SMB) oder zur Bolusabgabe:**
 
-- Set Bolus
+- Mahlzeiten Bolus abgeben
 
-**Good to have**
+**Von Vorteil**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Bolus abbrechen
+- Basalprofil abrufen (fast eine Anforderung)
+- Basal Profil einstellen (nice to have)
+- Historie auslesen 
 
-**Other (not required but good to have)**
+**Weitere Anforderungen (nicht notwendig, aber Verfügbarkeit wäre gut)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
+- Verlängerten Bolus setzen
+- Verlängerten Bolus abbrechen
 - Read History
 - Read TDD
 
