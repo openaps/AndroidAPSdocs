@@ -385,7 +385,7 @@
 <tr>
  <td>Virtual pump</td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Otevřená smyčka</td>
+ <td>Open Loop</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
