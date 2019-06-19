@@ -46,7 +46,8 @@ Jste-li připraveni přijmout tuto výzvu, čtěte dál.
 
 **Co potřebuji, abych mohl začít:**
 
-* Smartphone se systémem Android 5.0 nebo novějším. Viz seznam <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>, kde najdete informace o tom, které telefony fungují s AndroidAPS nejlépe.
+* Smartphone se systémem Android 5.0 nebo novějším. **Please update to Android 6 or higher as it is planned to drop support for Android 5.x soon.**
+  Viz seznam <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>, kde najdete informace o tom, které telefony fungují s AndroidAPS nejlépe.
 * Senzor pro kontinuální monitoring glykémie (CGM): Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian nebo PocTech
 * Aplikaci pro příjem glykémií z CGM: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `upravená aplikace G5 <https://github.com/dexcomapp/dexcomapp>`_, `aplikace PochTech <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ nebo `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * Samotnou aplikaci `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ nainstalovanou v telefonu

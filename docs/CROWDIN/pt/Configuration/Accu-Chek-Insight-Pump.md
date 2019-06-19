@@ -4,13 +4,13 @@
 
 * * *
 
-## ***AVISO:** Se você tem usado o Insight com **SightRemote** anterior, por favor **atualize para a versão 2.1** e **desinstale o SightRemote**.*
+## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
 
 ## Requisitos de hardware e software
 
 * Uma bomba Insight Roche Accu-Chek (qualquer firmware, todos funcionam) <br /> Nota: AAPS irá escrever os dados sempre no **primeiro perfil de taxa basal na bomba **
 * Um telefone Android (basicamente todas as versões Android funcionariam, mas o próprio AndroidAPS requer pelo menos o Android 5 (Lollipop).)
-* O AndroidAPS (pelo menos a v2.1) instalado no seu telefone
+* The AndroidAPS app installed on your phone
 
 ## Instalação
 

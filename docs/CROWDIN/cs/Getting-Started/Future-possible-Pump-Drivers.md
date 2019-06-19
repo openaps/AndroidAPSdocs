@@ -12,7 +12,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Java implementace:** Částečná implementace dostupná [Roundrtrip2](https://github.com/TC2013/Roundtrip2) a [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**Stav implementace AAPS:** Probíhající práce. Více viz [Andyho fork AndroidAPS](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Většina práce byla provedena v souvislosti s [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS), aby fungoval framework a příkazy. V daném úložišti je projekt (Medtronic) a otevřené tikety pro budoucí vývoj, vývoj probíhá na branchi dev_medtronic (což je zde výchozí branch). K dispozici je také místnost na gitteru: RileyLinkAAPS/Lobby. AAPS. 0.7 test "release" is out, with about 80% of all functionality, missing is only History analysis to determine state of the pump and to confirm that Treatments were or to import new treatments. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+**Stav implementace AAPS:** Probíhající práce. Více viz [Andyho fork AndroidAPS](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Většina práce byla provedena v souvislosti s [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS), aby fungoval framework a příkazy. V daném úložišti je projekt (Medtronic) a otevřené tikety pro budoucí vývoj, vývoj probíhá na branchi dev_medtronic (což je zde výchozí branch). K dispozici je také místnost na gitteru: RileyLinkAAPS/Lobby. AAPS. 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. Project will probably be merged to main repository by end of July 2019. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
 **Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
 
@@ -20,27 +20,31 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 * * *
 
-### Insulet Omnipod, eros pods ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (with old Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
 
-**Other implementations:** Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink); Loop (stable in testing, requires RileyLink).
+**Other implementations:**
+
+- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) [Omnipy](https://github.com/winemug/omnipy)
+- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project). [OmniCore](https://github.com/winemug/OmniCore)
+- Loop (stable, released, requires RileyLink). [Loop](https://loopkit.github.io/loopdocs/)
 
 **Java implementations:** None till now.
 
-**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/ktomy/RileyLinkAAPS) for Omnipod (dev_omnipod branch) which will not require a Raspberry Pi, but this is not finished. You can follow progress on https://omniaps.slack.com/ channel android-driver.
+**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) for Omnipod (dev_omnipod branch) which will not require a Raspberry Pi, but this is not finished. You can follow progress on https://omniaps.slack.com/ channel android-driver.
 
 **Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
 
 ## Pumps that are Loopable
 
-### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH_FAQs))
+### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump will start in January 2019 (they are doing pre-sales now in USA).
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. It's BT enabled.
 
-**Comments:** Omnipod DASH is currently not in the plan. Once we have a java implementation for standard Omnipod, we will work from that implementation. If (omnipod) protocol hasn't changed, we might have an implementation a few months later, but if the protocol has changed then it might take some time.
+**Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
 
 * * *
 
@@ -82,6 +86,10 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. It seems to be BT enabled.
 
+### Medtronic Bluetooth
+
+**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+
 * * *
 
 ## Pumps no longer sold (companies no longer operating)
@@ -118,31 +126,31 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 **Prerequisite**
 
-- Pumpa musí podporovat vzdálené ovládání (nějakou formou) (BT, Rádiovou frekvencí, atd.)
-- Protokol komunikace je hacknutý/dokumentovaný/atd.
+- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
+- Protocol is hacked/documented/etc.
 
 **Minimal requirement**
 
-- Nastavení dočasné bazální dávky
-- Zjištění stavu
-- Zrušení dočasné bazální dávky
+- Set Temporary Basal Rate
+- Get Status
+- Cancel Temporary Basal Rate
 
 **For oref1(SMB) or Bolusing:**
 
-- Poslat bolus
+- Set Bolus
 
 **Good to have**
 
-- Zrušit bolus
+- Cancel Bolus
 - Get Basal Profile (almost requirement)
 - Set Basal Profile (nice to have)
-- Číst historii 
+- Read History 
 
 **Other (not required but good to have)**
 
-- Nastavit rozšířený bolus
-- Zrušit rozšířený bolus
-- Číst historii
+- Set Extended Bolus
+- Cancel Extended Bolus
+- Read History
 - Read TDD
 
 * * *
