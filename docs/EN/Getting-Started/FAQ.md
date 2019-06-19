@@ -51,7 +51,7 @@ First of all, you have to take the same emergency equipment with you like every 
 * Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
 * Pump batteries
 
-### How to savely attach the CGM/FGM?
+### How to safely attach the CGM/FGM?
 You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask google or ebay). Some loopers use the cheaper standard kinesiotape or rocktape.
 
 You can fix it: There are getting sold upper arm braclets that fix the CGM/FGM with a rubber band (ask google or ebay).
@@ -92,12 +92,12 @@ This table aims to help you optimise settings. It may be best to start at the to
 ### APS algorithm
 #### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 ![AMA 3h](../../images/Screenshot_AMA3h.png) 
-In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore. 
+In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore. 
 
 ### Profile
    
 #### Why using min. 5h DIA (insulin end time) instead of 2-3h?
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing  your DIA.
+Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
 
 #### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behaviour is typically caused by a too low ISF. A too low ISF looks typically like this:
@@ -146,7 +146,7 @@ The change of a canula however does not use the "prime infusion set" function of
 ## Hygiene
 
 ### What to do when taking a shower or bath?
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS  so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically. 
+You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically. 
 
 ## Working
 Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a profile switch for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a time shift of your profile when standing up much earlier or later than regular. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
