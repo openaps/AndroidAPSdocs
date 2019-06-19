@@ -1,6 +1,10 @@
 # Making your first PR (pull request)
 
-`This description is just for editing the English documentation. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).`
+`This description is just for editing the English documentation. 
+If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).`
+
+`For any questions, feedback or new ideas you can contact the documentation team via email (wiki@androidaps.org). 
+Doing a PR isn't difficult, but we can help you editing the documentation.`
 
 At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub.  It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs.  Don't worry about making a mistake or somehow editing the wrong documents.  There is always a review process before changes are merged into the "formal" AndroidAPS documentation repository.  You can't mess up the originals through any accidents in the PR process.  The general process is:
 
@@ -42,7 +46,10 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 In files with **.md** ending:
    * `[text](../Usage/Test.md)` will set an internal hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
    * `[text](/Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
-   
+
+To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
+* `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+
 In files with **.rst** ending:
    * `Text <../Usage/Test.md>` will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
    * `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
@@ -63,7 +70,7 @@ If you are planning to make a lot of edits, including adding images to help illu
  
  4. Commit these to your branch
  
- 5. Now, you can look for the URL/relative path of each file (example, you can see [this individual image has its own URL and path](https://github.com/openaps/docs/blob/master/docs/EN/images/Example_batch_images_upload.png) and use that to refer to when adding images into a page in the documentation.
+ 5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
  
  6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
  

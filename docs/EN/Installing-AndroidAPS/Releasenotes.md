@@ -1,5 +1,59 @@
 # Release notes
 
+Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
+
+Starting with version 2.3 a new update procedure is established. You will receive the following information as soon as a new update is available:
+
+![Update info](../images/AAPS_LoopDisable90days.png)
+
+Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 4](../Usage/Objectives.md).
+
+If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
+
+Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
+
+## Version 2.3
+
+Release date: 25-04-2019
+
+### Major new features
+
+* Important safety fix for Insight (really important if you use Insight!)
+* Fix History-Browser
+* Fix delta calculations
+* Language updates
+* Check for GIT and warn on gradle upgrade
+* More automatic testing
+* Fixing potential crash in AlarmSound Service (thanks @lee-b !)
+* Fix broadcast of BG data (works independently of SMS permission now!)
+* New Version-Checker
+
+
+## Version 2.2.2
+
+Release date: 07-04-2019
+
+### Major new features
+
+* Autosens fix: deactivate TT raises/lowers target
+* New translations
+* Insight driver fixes
+* SMS plugin fix
+
+
+## Version 2.2
+
+Release date: 29-03-2019
+
+### Major new features
+
+* [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
+* Wear Update
+* [SMS plugin](../Usage/SMS-Commands.md) update
+* Go back in objectives.
+* Stop loop if phone disk is full
+
+
 ## Version 2.1
 
 Release date: 03-03-2019

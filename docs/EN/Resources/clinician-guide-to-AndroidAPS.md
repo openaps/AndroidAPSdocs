@@ -41,7 +41,7 @@ AndroidAPS is designed to transparently track all input data it gathers, the res
 
 ### Examples of AndroidAPS algorithm decision making:
 
-AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these [prediction lines] (../Installing-AndroidAPS/Releasenotes.md?highlight=Colored prediction lines#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
 
 #### Here are examples of the purple prediction lines, and how they might differ:
 
