@@ -46,8 +46,7 @@ Wenn Du bereit bist, diese Herausforderung anzunehmen, lies bitte weiter.
 
 **Was man benötigt:**
 
-* Ein Android-Smartphone mit Android 5.0 oder höher. **Please update to Android 6 or higher as it is planned to drop support for Android 5.x soon.**
-  In `dieser Tabelle <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ findest Du Informationen, welche Smartphones am Besten mit AndroidAPS funktionieren.
+* Ein Android-Smartphone mit Android 5.0 oder höher. **Please update to Android 6 or higher as it is planned to drop support for Android 5.x soon.** See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ to learn which phones work best with AndroidAPS.
 * Ein kontinuierliches Glukose-Messsystem (CGM/FGM), z. B. Dexcom G4/G5/G6, Freestyle Libre mit Bluetooth-Aufsatz, Eversense, Medtronic Guardian oder PocTech
 * App zum Empfang von CGM Daten, z.B. `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ selbst (auf Deinem Smartphone installiert)
