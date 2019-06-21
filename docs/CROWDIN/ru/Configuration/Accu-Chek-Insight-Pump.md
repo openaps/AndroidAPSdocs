@@ -4,13 +4,13 @@
 
 * * *
 
-## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
+## ***ВНИМАНИЕ:** Если вы до настоящего момента пользовались помпой Insight с пультом **SightRemote**, пожалуйста **обновите прошивку помпы до новейшей версии ** и ** деинсталлируйте SightRemote**.*
 
 ## Требования к аппаратному и программному обеспечению
 
 * Помпа Accu-Chek Insight Roche (любой прошивки, все они работают) <br />, Примечание: AAPS всегда будет записывать данные в **первый базальный профиль помпы**
 * Телефон на Android (будет работать любая версия, но сам AndroidAPS требует как минимум Android 5 (Lollipop).)
-* The AndroidAPS app installed on your phone
+* Приложение AndroidAPS установлено на вашем телефоне
 
 ## Настройки
 
