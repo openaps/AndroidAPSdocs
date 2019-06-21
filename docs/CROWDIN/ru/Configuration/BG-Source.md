@@ -16,9 +16,9 @@
 
 ### Dexcom G6: Общие рекомендации по работе в замкнутом цикле
 
-See [Dexcom G6 page](../Configuration/Dexcom.md) for details on setting Dexcom G6 sensor and solutions for common difficulties with Dexcom G6.
+Подробности о настройке датчика Dexcom G6 и решении общих проблем с Dexcom G6 см. на стр. [Dexcom G6](../Configuration/Dexcom.md).
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+Применение G6 немного сложнее, чем казалось раньше. Для правильного применения необходимо иметь в виду следующие моменты:
 
 * If you are using the native data with the calibration code in xDrip or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
