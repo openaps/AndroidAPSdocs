@@ -1,10 +1,10 @@
-# Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
+# Пример настройки: Samsung S7, DanaR, Dexcom G5 и Sony Smartwatch
 
-![Sample Setup](../images/SampleSetup.png)
+![Пример настройки](../images/SampleSetup.png)
 
-## Description
+## Описание
 
-In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G5 CGM. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
+В этой комбинации смартфон Samsung Galaxy S7 используется в качестве центра управления циклом. Слегка модифицированное приложение Dexcom считывает значения ГК из CGM Dexcom G5. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
 As the Dexcom App only offers limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
 
