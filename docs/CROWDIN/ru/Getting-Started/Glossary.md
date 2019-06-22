@@ -284,7 +284,7 @@
  <td>PH</td>
  <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Снимки экрана</a></td>
 </tr>
 <tr>
  <td>Predictions</td>
