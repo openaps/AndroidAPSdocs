@@ -15,17 +15,17 @@
 
 ### Проблемы с подключением
 
-Соединение Bluetooth может быть нарушено другими близлежащими устройствами Bluetooth, такими как глюкометры, гарнитуры, планшеты, кухонные устройства, микроволновые печи или керамические плиты. В этом случае xdrip не отображает данные ГК. When bluetooth connection is reestablished the data is backfilled.
+Соединение Bluetooth может быть нарушено другими близлежащими устройствами Bluetooth, такими как глюкометры, гарнитуры, планшеты, кухонные устройства, микроволновые печи или керамические плиты. В этом случае xdrip не отображает данные ГК. Когда соединение Bluetooth восстанавливается, пропущенные данные заполняются.
 
-### Sensor Errors
+### Ошибки сенсора
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. Нить сенсора не должна вступать в контакт с кровью.
+Если возникают повторяющиеся ошибки сенсора, попробуйте выбрать другое место на теле для его установки. Нить сенсора не должна вступать в контакт с кровью.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Часто "Ошибка сенсора" может быть исправлена обильным питьем и массажем вокруг сенсора!
 
-### Jumpy values
+### Скачки данных
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Можно попробовать изменить настройки блокировки шума в xdrip (Настройки - Настройки между приложениями - Блокировка шумов), т.е. "Блокировать очень высокие шумы". См. также [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### New transmitter with running sensor
 
