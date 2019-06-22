@@ -9,13 +9,13 @@
 
 При установке сенсора не рекомендуется слишком сильно давить на манипулятор, чтобы избежать кровотечения. Нить сенсора не должна вступать в контакт с кровью.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+После установки сенсора трансмиттер может быть защелкнут на его платформе. Осторожно! Сначала защелкните квадратную сторону, затем надавите на круглую.
 
-## Troubleshooting
+## Устранение неполадок
 
-### Connection problems
+### Проблемы с подключением
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is reestablished the data is backfilled.
+Соединение Bluetooth может быть нарушено другими близлежащими устройствами Bluetooth, такими как глюкометры, гарнитуры, планшеты, кухонные устройства, микроволновые печи или керамические плиты. В этом случае xdrip не отображает данные ГК. When bluetooth connection is reestablished the data is backfilled.
 
 ### Sensor Errors
 
