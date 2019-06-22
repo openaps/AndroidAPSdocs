@@ -42,23 +42,23 @@
 * Если вы хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON). Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 * В конфигуратоге (настройки AndroidAPS) выберите xdrip.
 
-### If using G5 or G6 with patched Dexcom app  
+### При использовании G5 или G6 с помощью модифицированного приложения Dexcom  
 
 
-* Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
-* Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Скачайте apk с <https://github.com/dexcomapp/dexcomapp>, и выберите версию, которая соответствует вашим потребностям (mg/dl или mmol/l, G5 или G6).
+* Если это еще не сделано, остановите сенсор и удалите оригинальное приложение Dexcom.
+* Установите загруженное приложение
+* Запустите сенсор
+* В конфигуратоге (настройки AndroidAPS) выберите приложение Dexcom G5 (пропатченное).
 
-### If using G4 with OTG cable ('traditional' Nightscout)…  
+### При использовании G4 с кабелем OTG («традиционный» Nightscout)…  
 
 
-* If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* Если это еще не сделано, скачайте загрузчик Nightscout из Play Store и следуйте инструкциям на [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
+* В настройках AndroidAPS введите адрес вашего веб-сайта Nightscout и пароль API secret.
+* В конфигураторе (настройки AndroidAPS) выберите NSClient.
 
-## For users of Libre with Bluetooth cap  
+## Для пользователей Libre с адаптером Bluetooth  
 
 
 To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
@@ -114,5 +114,5 @@ You can find another instruction for using xDrip with an Eversense [here](https:
 If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
 
 
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* В настройках AndroidAPS введите адрес вашего веб-сайта Nightscout и пароль API secret.
+* В конфигураторе (настройки AndroidAPS) выберите NSClient.
