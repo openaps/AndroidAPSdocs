@@ -2,9 +2,9 @@
 
 Если это еще не сделано, скачайте [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
-**At the moment there are some problems with nightly builds after 2019/05/21 asking for G6 calibration.**
+**На данный момент возникают проблемы с ночными сборками после 2019/05/21, требующими калибровки G6.**
 
 ## Basic settings for all CGM & FGM systems
 
@@ -69,7 +69,7 @@ The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommen
 
 **For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
-* Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 * Turn original Dexcom receiver off (if used).
 * Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
 * Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
@@ -118,7 +118,7 @@ The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommen
 
 ### Replace transmitter
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
 * Turn original Dexcom receiver off (if used).
 * Stop sensor (only if replacing sensor)
