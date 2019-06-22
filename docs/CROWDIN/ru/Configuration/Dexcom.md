@@ -3,7 +3,7 @@
 ## Basics first
 
 * Follow [general CGM hygiene recommendations](../Configuration/BG-Source#cgm-hygiene)
-* [Special recommendations for Dexcom G6 and DIY systems](../Configuration/BG-Source#dexcom-g6-diy-systems) *For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly built xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* [Special recommendations for Dexcom G6 and DIY systems](../Configuration/BG-Source#dexcom-g6-diy-systems) *For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly built xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
 ## Setting sensor
 
