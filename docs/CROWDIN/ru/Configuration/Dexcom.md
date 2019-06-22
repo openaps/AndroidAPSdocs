@@ -1,13 +1,13 @@
 # Dexcom G6
 
-## Basics first
+## Сначала основное
 
-* Follow [general CGM hygiene recommendations](../Configuration/BG-Source#cgm-hygiene)
-* [Special recommendations for Dexcom G6 and DIY systems](../Configuration/BG-Source#dexcom-g6-diy-systems) *For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly built xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
+* Следуйте общим рекомендациям по [гигиене мониторинга](../Configuration/BG-Source#cgm-hygiene)
+* [Специальные рекомендации для систем Dexcom G6 и самодельных систем](../Configuration/BG-Source#dexcom-g6-diy-systems) *Для трансмиттеров G6, изготовленных после осени 2018 года, пользуйтесь одной из [последних ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и новая стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
-## Setting sensor
+## Установка сенсора
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+При установке сенсора не рекомендуется слишком сильно давить на манипулятор, чтобы избежать кровотечения. Нить сенсора не должна вступать в контакт с кровью.
 
 After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
 
@@ -19,7 +19,7 @@ Bluetooth connection may be disturbed by other nearby Bluetooth devices such as 
 
 ### Sensor Errors
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
+If recurring sensor errors occur try selecting a different body site to set your sensor. Нить сенсора не должна вступать в контакт с кровью.
 
 Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 
