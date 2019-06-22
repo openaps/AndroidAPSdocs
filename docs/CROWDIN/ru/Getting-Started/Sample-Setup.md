@@ -46,7 +46,7 @@
 
 ## Настройка смартфона
 
-![Smartphone](../images/SampleSetupSmartphone.png)
+![Смартфон](../images/SampleSetupSmartphone.png)
 
 ### Проверьте прошивку смартфона
 
@@ -68,7 +68,7 @@
 
 ### Установить приложение Dexcom (модифицированная версия)
 
-![Dexcom App patched](../images/SampleSetupDexApp.png)
+![Приложение Dexcom G (модифицированное)](../images/SampleSetupDexApp.png)
 
 Оригинальное приложение Dexcom из Google Play Store не будет работать, так как оно не передает данные другим приложениям. Поэтому требуется немного модифицированная версия от нашего сообщества. Только это измененное приложение Dexcom может общаться с AAPS. Кроме того, модифицированное приложение Dexcom может работать со всеми смартфонами Android, а не только находящимися в списке совместимости [Dexcom](https://www.dexcom.com/dexcom-international-compatibility). Версия mmol/l и версия mg/dl измененного приложения Dexcom доступны на https://github.com/dexcomapp/dexcomapp?files=1.
 
@@ -97,7 +97,7 @@
 
 * Источник BG: `Dexcom G5 App (patched)` -- нажмите на значок шестеренки и активируйте `Загружать данные ГК на NS` и `Отправлять данные ГК на xDrip+` (см. [источник ГК](../Configuration/BG-Source.md))
 
-![G5 Settings](../images/SampleSetupG5Settings.png)
+![Настройки G5](../images/SampleSetupG5Settings.png)
 
 * NS клиент активирован (см. [Клиент NS](../Configuration/Config-Builder#ns-profile) и [Настройки Nightscout](../Installing-AndroidAPS/Nightscout.md))
 
@@ -119,7 +119,7 @@ xDrip+ это великолепное приложение с открытым 
 
 "Чрезвычайно низкая ГК" (ниже 55 мг/дл. 3,1 ммол) является стандартным оповещением модифицированного приложения Dexcom, которое не может быть отключено.
 
-![xDrip alarms](../images/SampleSetupxDripWarning.png)
+![Оповещения xDrip](../images/SampleSetupxDripWarning.png)
 
 Совет на случай переговоров / посещений церкви / кино и т. д..:
 
@@ -133,15 +133,15 @@ xDrip+ это великолепное приложение с открытым 
 
 С Android Wear жизнь с диабетом можно сделать еще более незаметной для окружающих. Часы могут использоваться для отображения текущего уровня глюкозы, состояния цикла и т. д. на запястье. Часы могут даже применяться для контроля AndroidAPS (напр. для дискретной подачи болюса на еду). Для этого дважды нажмите на значение ГК на циферблате AAPSv2. SWR50 обычно работает весь день до подзарядки (то же зарядное устройство, что и для Samsung Galaxy S7: microUSB).
 
-![Smartwatch](../images/SampleSetupSmartwatch.png)
+![Смарт часы](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Подробности о информации, отображаемой на экране просмотра, можно найти [здесь](../Configuration/Watchfaces.md).
 
-* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
-* In AAPS choose hamburger menu (top left corner) > Config Builder > General (at the bottom of the list) > Wear > activate on left side, click cock wheel > Wear settings and activate `Controls from Watch`
-* On your smartwatch: Long press display to change watchface and select `AAPSv2`
-* If necessary restart both devices once.
+* Установите приложение "Android Wear" на вашем смартфоне через Google Play Store и подключите смартфон в соответствии с инструкциями.
+* В AAPS выберите сэндвич-меню (в верхнем левом углу) > Конфигуратор > Общее (в нижней части списка) > Wear > активировать, на левой стороне нажмите на шестеренку > Настройки Wear и активируйте `Управление c часов`
+* На вашем смартфоне: Удерживайте дисплей для изменения циферблата и выберите `AAPSv2`
+* При необходимости однократно перезапустите оба устройства.
 
-## Pump setup
+## Настройки помпы
 
-see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)
+см [помпа DanaR ](../Configuration/DanaR-Insulin-Pump.md)
