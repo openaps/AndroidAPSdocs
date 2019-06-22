@@ -61,57 +61,57 @@
 ## Для пользователей Libre с адаптером Bluetooth  
 
 
-To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
+Чтобы использовать Libre в качестве мониторинга, который получает новые данные каждые 5 минут, нужно сначала приобрести один из адаптеров NFC - Bluetooth:
 
-* MiaoMiao-Reader <https://www.miaomiao.cool/>
+* МяоМяо <https://www.miaomiao.cool/>
 * Blukon Nightrider <https://www.ambrosiasys.com/howit>
 * BlueReader <https://bluetoolz.de/blueorder/#home>
-* Sony Smartwatch 3 (SWR50) als Auslesetool <https://github.com/pimpimmi/LibreAlarm/wiki/>
+* Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-### If using xdrip...  
+### При использовании xdrip...  
 
 
-* If not already set up then download xdrip and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) or [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
+* Если это еще не сделано, скачайте xdrip+ и следуйте инструкциям на [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) или [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en) ([Оборудование](https://bluetoolz.de/wordpress/)).
 * В xdrip перейдите в настройки > совместимость программ >локальная трансляция данных и выберите Включить (ON).
 * В xdrip+ перейдите в настройки > совместимость программ > принимать назначения (Accept treatments) и выберите ВЫКЛ (OFF).
 * Если вы хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON). Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 * В конфигуратоге (настройки AndroidAPS) выберите xdrip.
-* For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md)
+* Для настройки xDrip+ со снимками экрана перейдите на [страницу настроек xDrip+](../Configuration/xdrip.md)
 
-### If using Glimp...  
-
-
-* If not already set up then download Glimp and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
-* Select Glimp in ConfigBuilder (setting in AndroidAPS).
-
-## For users of Eversense  
+### При использовании Glimp...  
 
 
-The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (and unistall the original one first).
+* Если это еще не сделано, скачайте Glimp и следуйте инструкциям на [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
+* В конфигураторе (настройки AndroidAPS) выберите Glimp.
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
-
-To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
-
-You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
-
-## For users of MM640g or MM630g  
+## Для пользователей Eversense  
 
 
-* If not already set up then download [600SeriesAndroidUploaer](http://pazaan.github.io/600SeriesAndroidUploader/) and follow instructions on [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
-* In 600 Series Uploader go to Settings > Send to xdrip+ and select ON (tick).
-* Select MM640g in ConfigBuilder (setting in AndroidAPS).
+Самым простым способом использования Eversense с AndroidAPS является установка модифицированного приложения [Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (с предварительным удалением оригинального приложения).
 
-## For users of PocTech CT-100  
+**Предупреждение: после удаления старого приложения, ваши локальные данные старше одной недели будут утрачены!**
 
+Чтобы получить данные в AndroidAPS, необходимо установить [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk), там включить"Отправлятьть на AAPS и xDrip" и выбрать "MM640g" в качестве источника ГК в [Конфигураторе](../Configuration/Config-Builder.md) AndroidAPS. Поскольку данные СК от Eversense могут быть зашумленными, предпочтительнее включить "Smooth Data" (выправить данные) в ESEL, а не "Всегда использовать усредненную короткую дельту вместо простых данных".
 
-* Install PocTech App
-* Select PocTech App in ConfigBuilder (setting in AndroidAPS).
+Вы можете найти другую инструкцию для использования xDrip с Eversense [здесь](https://github.com/BernhardRo/Esel/tree/master/apk).
 
-## For users of other CGM uploaded to Nightscout  
+## Для пользователей MM640g или MM630g  
 
 
-If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
+* Если это еще не сделано, скачайте [600SeriesAndroidUploader](http://pazaan.github.io/600SeriesAndroidUploader/) и следуйте инструкциям на [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g).
+* В Загрузчике Серии 600, перейдите в настройки > отправить на xdrip + и выберите ВКЛ (ON).
+* В конфигуратоге (настройки AndroidAPS) выберите MM640g.
+
+## Для пользователей PocTech CT-100  
+
+
+* Установите приложение PocTech
+* В конфигуратоге (настройки AndroidAPS) выберите PocTech.
+
+## Для пользователей других систем мониторинга, передающих данные в Nightscout  
+
+
+Если у вас есть другая система мониторинга отправляющая даннные в [Nightscout](http://www.nightscout.info) тогда  
 
 
 * В настройках AndroidAPS введите адрес вашего веб-сайта Nightscout и пароль API secret.
