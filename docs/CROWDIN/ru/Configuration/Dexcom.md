@@ -3,7 +3,7 @@
 ## Сначала основное
 
 * Следуйте общим рекомендациям по [гигиене мониторинга](../Configuration/BG-Source#cgm-hygiene)
-* [Специальные рекомендации для систем Dexcom G6 и самодельных систем](../Configuration/BG-Source#dexcom-g6-diy-systems) *Для трансмиттеров G6, изготовленных после осени 2018 года, пользуйтесь одной из [последних ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и новая стабильная версия xDrip+ (2019/01/10) с ней не работает.
+* [Специальные рекомендации для систем Dexcom G6 и самодельных систем](../Configuration/BG-Source#dexcom-g6-diy-systems) *С трансмиттерами G6, изготовленными после осени 2018 года, пользуйтесь одной из [последних ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и новая стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
 ## Установка сенсора
 
@@ -27,6 +27,6 @@
 
 Можно попробовать изменить настройки блокировки шума в xdrip (Настройки - Настройки между приложениями - Блокировка шумов), т.е. "Блокировать очень высокие шумы". См. также [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### New transmitter with running sensor
+### Установка нового трансмиттера на работающий сенсор
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/AAhBVsc6NZo>.
+Если вы меняете трансмиттер во время работы сенсора, вы можете попробовать снять его, не повредив платформу сенсора. Видео как это сделать <https://youtu.be/AAhBVsc6NZo>.
