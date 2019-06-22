@@ -38,7 +38,7 @@ Depending on pump and CGM setup, jumps in time can lead to problems. With the Co
 
 If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
 
-## Accu-Chek Combo
+## Помпа Accu Chek Combo
 
 AndroidAPS will issue an alarm if time between pump and phone differs to much. In case of DST time adjustment this would be in the middle of the night. To prevent this and enjoy your sleep instead follow these steps:
 
