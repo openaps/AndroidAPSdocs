@@ -4,80 +4,80 @@
 
 ## Описание
 
-В этой комбинации смартфон Samsung Galaxy S7 используется в качестве центра управления циклом. Слегка модифицированное приложение Dexcom считывает значения ГК из CGM Dexcom G5. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
+В этой комбинации смартфон Samsung Galaxy S7 используется в качестве центра управления циклом. Слегка модифицированное приложение Dexcom считывает значения ГК из CGM Dexcom G5. AndroidAPS управляет помпой Dana R корейского производителя SOOIL через Bluetooth. Дополнительные устройства не требуются.
 
-As the Dexcom App only offers limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
+Поскольку приложение Dexcom предлагает ограниченные параметры оповещений, приложение с открытым исходным кодом xDrip+ настраивается не только на высокие и низкие значения но и на другие оповещения под индивидуальные потребности.
 
-Optionally an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values on your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+По желанию можно использовать смарт-часы Android (в этой выборке применяется Sony Smartwatch 3 (SWR50)) для отображения значений глюкозы и параметров AndroidAPS на вашей руке. Часы могут даже применяться для контроля AndroidAPS (напр. для дискретной подачи болюса на еду).
 
-The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
+Система работает в автономном режиме. Это означает, что для работы нет необходимости подключения смартфона к Интернету.
 
-Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" when a data connection is established. By doing so you can provide comprehensive reports for the doctor's visit or share the current values with family members at any time. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
+Тем не менее, данные автоматически загружаются в Nightscout "в облаке", когда соединение с интернетом присутствует. Эта опция позволяет предоставить полную картину ГК для врача или для членов семьи практически в любое время. Также можно отправлять данные в Nightscout только с (вами определенным) Wi-Fi соединением для создания различных отчетов.
 
-## Required components
+## Обязательные компоненты
 
 1. Samsung Galaxy S7
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS
+    * Альтернативы: см. [список проверенных телефонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) для AndroidAPS
 
-2. [DanaR](http://www.sooil.com/eng/product/) or Dana RS insulin pump
+2. Инсулиновая помпа [DanaR](http://www.sooil.com/eng/product/) или Dana RS
     
-    * Alternatives: 
-    * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * Альтернативы: 
+    * [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+    * Другие помпы могут быть доступны в будущем, см. [возможные будущие драйверы помп](Future-possible-Pump-Drivers.md) для подробной информации.
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
+    * Альтернативы: см. список возможных [ источников ГК](../Configuration/BG-Source.md)
 
-4. Optional: Sony Smartwatch 3 (SWR50)
+4. Дополнительно: Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * Альтернативы: см. [список проверенных телефонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) для AndroidAPS (ОС должна быть Android Wear)
 
-## Nightscout setup
+## Настройки Nightscout
 
-See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
+Подробнее см. [Настройка Nightscout](../Installing-AndroidAPS/Nightscout.md)
 
-## Computer setup
+## Настройка компьютера
 
-To be able to create an Android app from the freely available AAPS open source code you need Android Studio on your computer or notebook (Windows, Mac, Linux). A detailed instruction can be found at [building the APK](../Installing-AndroidAPS/Building-APK.md).
+Чтобы создать приложение на Android из свободно распространяемого кода AAPS, вам нужно установить Android Studio на компьютере или ноутбуке (Windows, Mac, Linux). Подробная инструкция находится на [создание APK](../Installing-AndroidAPS/Building-APK.md).
 
-Please be patient when installing Android Studio as the software downloads a lot of additional data once installed on your computer.
+Пожалуйста, будьте терпеливы при установке Android Studio так как программа загружает много дополнительных компонентов на вашем компьютере.
 
-## Smartphone setup
+## Настройка смартфона
 
 ![Smartphone](../images/SampleSetupSmartphone.png)
 
-### Check smartphone firmware
+### Проверьте прошивку смартфона
 
-* Menu > Settings > Phone info > Software info: At least "Android-Version 7.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
-* For firmware update: menu > Preferences > software update
+* Меню > Настройки > Настройки > Информация о телефоне > Информация о Программном обеспечении: не ниже "Android-Version 7.0" (успешно протестирована до версии 8.0.0 Oreo - Samsung Experience Version 9.0) 
+* Для обновления прошивки: меню > Настройки > Обновление программы
 
-### Allow installation from unknown sources
+### Разрешите установку приложений из неизвестных источников
 
-Menu > Settings > Device security > Unknown sources > slider to right side (= active)
+Меню > Настройки > Безопасность устройства > Неизвестные источники > ползунок справа (= active)
 
-For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
+По соображениям безопасности эта настройка должна быть возвращена в неактивный режим по завершении установки всех описанных здесь приложений.
 
-### Enable Bluetooth
+### Включите Bluetooth
 
-1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
-2. Menu > Settings > Connections > Location > slider to right side (= active)
+1. Меню > Настройки > Подключения > Bluetooth > ползунок справа (= active)
+2. Меню > Настройки > Подключения > Местоположение > ползунок справа (= active)
 
-Location services ("GPS") must be activated in order for Bluetooth to work properly.
+Службы местоположения ("GPS") должны быть активированы для корректной работы Bluetooth.
 
-### Install Dexcom App (modified version)
+### Установить приложение Dexcom (модифицированная версия)
 
 ![Dexcom App patched](../images/SampleSetupDexApp.png)
 
-The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility). A mmol/l version and a mg/dl version of the modified Dexcom app are available at https://github.com/dexcomapp/dexcomapp?files=1.
+Оригинальное приложение Dexcom из Google Play Store не будет работать, так как оно не передает данные другим приложениям. Поэтому требуется немного модифицированная версия от нашего сообщества. Только это измененное приложение Dexcom может общаться с AAPS. Кроме того, модифицированное приложение Dexcom может работать со всеми смартфонами Android, а не только находящимися в списке совместимости [Dexcom](https://www.dexcom.com/dexcom-international-compatibility). Версия mmol/l и версия mg/dl измененного приложения Dexcom доступны на https://github.com/dexcomapp/dexcomapp?files=1.
 
-To do this perform the following steps on your smartphone:
+Для этого выполните следующие шаги на вашем смартфоне:
 
-1. If the original Dexcom app is already installed: 
-    * Stop sensor
-    * Uninstall app via Menu > Settings > Apps > Dexcom G5 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l according to your needs): <https://github.com/dexcomapp/dexcomapp?files=1>
+1. Если оригинальное приложение Dexcom уже установлено: 
+    * Остановить сенсор
+    * Удалить приложения через меню > Настройки > Приложения > Dexcom G5 Mobile > Удалить
+2. Загрузить модифицированное приложение Dexcom (проверьте единицы измерения mg/dl или mmol/l в соответствии с потребностями): <https://github.com/dexcomapp/dexcomapp?files=1>
 3. Install modified Dexcom app on your smartphone (= select the downloaded APK file)
 4. Start modified Dexcom app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
 5. Once the first two calibrations have been entered successfully and the modified Dexcom app shows actual glucose value setup the warnings (hamburger menu on top left side of the screen) as follows: 
