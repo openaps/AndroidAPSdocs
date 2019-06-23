@@ -101,13 +101,13 @@
 * Статус батареи может быть виден в окне состояния системы (сэндвич-меню вверху слева на главном экране)
 * Сделайте свайп влево, чтобы увидеть второй экран. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”: Transmitter days: 151 Voltage A: 297 Voltage B: 260 Resistance: 2391
+* Точные величины, когда наступает "смерть" трансмиттера из-за низкого заряда батареи, неизвестны. Следующая информация была размещена в сети после "смерти" трансмиттера: дней передачи: 151 напряжение A: 297 напряжение B: 260 Сопротивление: 2391
 
-### Extend transmitter life
+### Увеличение срока работы трансмиттера
 
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
+* Переключитесь в `инженерный режим`: 
+   * нажмите на пиктограмму шприца на главном экране xDrip+ справа
+   * затем нажмите на значок микрофона в нижнем правом углу
    * In the text box that opens type "enable engineering mode" 
    * click "Done"
    * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
