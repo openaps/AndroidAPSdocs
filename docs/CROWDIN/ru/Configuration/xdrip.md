@@ -12,11 +12,11 @@
    
    напр. https://API_SECRET@imyavashegosaita.herokuapp.com/api/v1/
    
-   -> Сэндвич-меню (левый верхний угол домашнего экрана) -> Настройки-> Загрузка из облака-> Синхронизация с Nightscout (REST-API) -> Базовый URL
+   -> Сэндвич-меню (левый верхний угол домашнего экрана) -> Настройки-> Загрузка в облако-> Синхронизация с Nightscout (REST-API) -> Базовый URL
 
-* Deactivate `Automatic Calibration` If the checkbox for `Automatic Calibration` is checked, activate `Download data` once, then remove the checkbox for `Automatic Calibration` and deactivate `Download data` again, otherwise the treatments (insulin & carbs) will be added twice to Nightscout.
+* Отключите `Автоматическую Калибровку` Если отмечено поле `Автоматическая Калибровка`, одноразово активируйте `Данные загрузки`, а затем удалите флажок для `Автоматической Калибровки` и снова отключите `Скачать данные`, иначе ваши назначения (инсулин & углеводы) будут дважды добавлены в Nightscout.
 
-* Tap `Extra Options`
+* Нажмите на `Дополнительные опции`
 * Deactivate `Upload treatments` and `Back-fill data`
 * Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
    
