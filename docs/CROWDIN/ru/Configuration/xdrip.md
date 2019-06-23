@@ -72,17 +72,17 @@
 * Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 * Выключите оригинальный ресивер Dexcom (если используете).
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
-* Использование Мастера выбора источника ГК гарантирует настройки по умолчанию, включая OB1 & нативный режим 
-   * This guides you through the initial set up.
-   * you will need your transmitter serial number if this is the first time you've used it.
+* Использование Мастера выбора источника ГК обеспечивает настройки по умолчанию, включая OB1 & нативный режим 
+   * Мастер позволит провести начальную настройку.
+   * Вам понадобится серийный номер трансмиттера, если вы пользуетесь им впервые.
 
-* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter
+* Введите серийный номер нового трансмиттера (на упаковке трансмиттера или на его обратной стороне)
    
    ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
 
-* Insert new sensor (only if replacing)
+* Вставьте новый сенсор (только при замене)
 
-* Put transmitter into sensor
+* Поместите трансмиттер в платформу сенсора
 * Start sensor (only if replacing) -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes. -> If there is no time specification after a few minutes stop and restart the sensor.
 * Restart collector (system status - if not replacing sensor}
 * Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
@@ -143,12 +143,12 @@
 
 * Remove transmitter (and sensor if replacing sensor)
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
-* Использование Мастера выбора источника ГК гарантирует настройки по умолчанию, включая OB1 & нативный режим 
-   * This guides you through the initial set up.
+* Использование Мастера выбора источника ГК обеспечивает настройки по умолчанию, включая OB1 & нативный режим 
+   * Мастер позволит провести начальную настройку.
    * You will need your transmitter serial number if this is the first time you've used it.
 * Put in serial number of new transmitter.
 * Insert new sensor (only if replacing).
-* Put transmitter into sensor
+* Поместите трансмиттер в платформу сенсора
 * Start sensor (only if replacing)
    
    **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
