@@ -108,8 +108,8 @@
 * Переключитесь в `инженерный режим`: 
    * нажмите на пиктограмму шприца на главном экране xDrip+ справа
    * затем нажмите на значок микрофона в нижнем правом углу
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
+   * В открывшемся текстовом окне впечатайте "включить инженерный режим" 
+   * нажмите "Готово"
    * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
 * Go to the G5 debug settings and check `OB1 collector`.
 * Use the voice command: “hard reset transmitter”
