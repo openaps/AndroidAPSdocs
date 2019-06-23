@@ -17,8 +17,8 @@
 * Отключите `Автоматическую Калибровку` Если отмечено поле `Автоматическая Калибровка`, одноразово активируйте `Данные загрузки`, а затем удалите флажок для `Автоматической Калибровки` и снова отключите `Скачать данные`, иначе ваши назначения (инсулин & углеводы) будут дважды добавлены в Nightscout.
 
 * Нажмите на `Дополнительные опции`
-* Deactivate `Upload treatments` and `Back-fill data`
-* Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
+* Отключите `Загружать назначения` и `Восполнять пропущенные данные`
+* Опция `Оповещение о сбоях` также должна быть отключена. Иначе вы будете получать сигнал каждые 5 минут если wifi/мобильная сеть слабые или сервер недоступен.
    
    ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
    
