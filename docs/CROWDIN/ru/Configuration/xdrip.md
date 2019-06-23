@@ -37,19 +37,19 @@
 
 * Откройте настройки отладки G5/G6 -> Сэндвич-Меню (сверху слева на домашнем экране) -> Настройки -> Настройки отладки G5/G6 ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
 
-* Enable the following settings
+* Активируйте следующие параметры
    
-   * `Use the OB1 Collector`
+   * `Использовать коллектор OB1`
    * `Native Algorithm` (important if you want to use SMB)
-   * `G6 support`
-   * `Allow OB1 unbonding`
-   * `Allow OB1 initiate bonding`
-* All other options should be disabled
-* Adjust battery warning level to 280 (bottom of G5/G6 Debug Settings)
+   * `Поддержка G6`
+   * `Разрешить разъединение OB1`
+   * `Разрешить OB1 инициировать сопряжение`
+* Все другие опции должны быть отключены
+* Настройте уровень предупреждения о низком заряде батареи на 280 (внизу настроек отладки G5/G6)
    
    ![xDrip+ G5/G6 Debug Settings](../images/xDrip_Dexcom_DebugSettings.png)
 
-### Preemptive restarts not recommended
+### Профилактические перезапуски не рекомендуются
 
 The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
@@ -227,13 +227,13 @@ The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommen
    
    ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
-* Enable the following settings
+* Активируйте следующие параметры
    
    * `Turn Bluetooth on` 
    * `Use scanning`
    * `Always discover services`
 
-* All other options should be disabled
+* Все другие опции должны быть отключены
    
    ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
