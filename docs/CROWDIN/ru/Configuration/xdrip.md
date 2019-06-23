@@ -67,12 +67,12 @@
 
 ### Первое подключение трансмиттера G6
 
-**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
+**Для второго и следующего трансмиттера смотрите [Продление срока работы трансмиттера](../Configuration/xdrip#extend-transmitter-life) ниже.**
 
 * Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
-* Turn original Dexcom receiver off (if used).
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
+* Выключите оригинальный ресивер Dexcom (если используете).
+* Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
+* Использование Мастера выбора источника ГК гарантирует настройки по умолчанию, включая OB1 & нативный режим 
    * This guides you through the initial set up.
    * you will need your transmitter serial number if this is the first time you've used it.
 
@@ -120,7 +120,7 @@
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
-* Turn original Dexcom receiver off (if used).
+* Выключите оригинальный ресивер Dexcom (если используете).
 * Stop sensor (only if replacing sensor)
    
    Ensure it really is stopped:
@@ -142,8 +142,8 @@
 * Forget device in smartphone’s BT settings (Will be shown as DexcomXX whereas XX are the last two digits of the transmitter serial no.)
 
 * Remove transmitter (and sensor if replacing sensor)
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
+* Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
+* Использование Мастера выбора источника ГК гарантирует настройки по умолчанию, включая OB1 & нативный режим 
    * This guides you through the initial set up.
    * You will need your transmitter serial number if this is the first time you've used it.
 * Put in serial number of new transmitter.
@@ -168,7 +168,7 @@
 
 ### New Sensor
 
-* Turn original Dexcom receiver off (if used).
+* Выключите оригинальный ресивер Dexcom (если используете).
 * Stop sensor if necessary
    
    Ensure it really is stopped:
