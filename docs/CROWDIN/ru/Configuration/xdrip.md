@@ -6,13 +6,13 @@
 
 **На данный момент возникают проблемы с ночными сборками после 2019/05/21, требующими калибровки G6.**
 
-## Basic settings for all CGM & FGM systems
+## Основные настройки для всех систем мониторинга
 
-* Make sure to set Base URL correctly including **S** at the end of http**s**:// (not http://)
+* Правильно вводите адрес локатора вашего сайта (URL) включая **S** в конце http**s**:// (не http://)
    
-   i.e. https://API_SECRET@your-app-name.herokuapp.com/api/v1/
+   напр. https://API_SECRET@imyavashegosaita.herokuapp.com/api/v1/
    
-   -> Hamburger Menu (top left of homescreen) -> Settings-> Cloud Upload-> Nightscout Sync (REST-API) -> Base URL
+   -> Сэндвич-меню (левый верхний угол домашнего экрана) -> Настройки-> Загрузка из облака-> Синхронизация с Nightscout (REST-API) -> Базовый URL
 
 * Deactivate `Automatic Calibration` If the checkbox for `Automatic Calibration` is checked, activate `Download data` once, then remove the checkbox for `Automatic Calibration` and deactivate `Download data` again, otherwise the treatments (insulin & carbs) will be added twice to Nightscout.
 
