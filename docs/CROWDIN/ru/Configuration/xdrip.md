@@ -183,18 +183,18 @@
 
 * Протрите контакты (обратная сторона трансмиттера) спиртом и просушите.
 
-* Если вы пользуетесь этой функцией, отключите `Restart Sensor` и `Preemptive restarts` (Сэндвич-меню -> Настройки -> Отладка G5/G6). If you miss this step and have these functions enabled the new sensor will not start properly.
+* Если вы пользуетесь этой функцией, отключите `Restart Sensor` и `Preemptive restarts` (Сэндвич-меню -> Настройки -> Отладка G5/G6). Если вы пропустите этот шаг и оставите эти функции включенными, новый датчик не будет корректно запущен.
    
    ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
 
-* Start Sensor
+* Запустите сенсор
    
-   **Рекомендуется подождать около 15 минут между остановкой и запуском нового сенсора(до `Состояние сенсора: Остановлен` на втором экране состояния системы).**
+   **Рекомендуется подождать около 15 минут между остановкой и запуском нового сенсора (до `Состояние сенсора: Остановлен` на втором экране состояния системы).**
 
-* Set time inserted
+* Введите время установки
    
-   * To use G6 Native mode you must wait for the 2 hour warm up (i.e insertion time is now).
-   * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore this is not recommended.
+   * Для использования нативного режима G6 необходимо подождать 2 часа для прогрева (т.е. время установки -- сейчас).
+   * Если вы используете алгоритм xDrip+, то можно установить время более 2 часов назад, чтобы избежать прогрева. Readings may be very erratic. Therefore this is not recommended.
 * Enter Sensor code (on the peel-off foil of the sensor) 
    * Keep code for further reference (i.e. new start after transmitter had to be removed)
    * Code can also be found in [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
