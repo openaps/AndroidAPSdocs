@@ -111,19 +111,19 @@
    * В открывшемся текстовом окне впечатайте "включить инженерный режим" 
    * нажмите "Готово"
    * Если включен Google Speak, вы можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
-* Go to the G5 debug settings and check `OB1 collector`.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
+* Перейдите в настройки отладки G5 и проверьте `OB1 коллектор`.
+* Дайте голосовую команду: “hard reset transmitter”(«жесткий сброс трансмиттера»)
+* Голосовая команда будет выполнена при следующем получении данных трансмиттера
+* Посмотрите на статус системы (сэндвич-меню -> системный статус) и убедитесь в результате
 
-### Replace transmitter
+### Замена трансмиттера
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
 * Выключите оригинальный ресивер Dexcom (если используете).
-* Stop sensor (only if replacing sensor)
+* Остановить сенсор (только при смене сенсора)
    
-   Ensure it really is stopped:
+   Убедитесь, что он действительно остановлен:
    
    On the second "G5/G6 Status" screen look at `Queue Items` about half way down - It may say something like `(1) Stop Sensor`
    
@@ -171,7 +171,7 @@
 * Выключите оригинальный ресивер Dexcom (если используете).
 * Stop sensor if necessary
    
-   Ensure it really is stopped:
+   Убедитесь, что он действительно остановлен:
    
    On the second "G5/G6 Status" screen look at `Queue Items` about half way down - It may say something like `(1) Stop Sensor`
    
