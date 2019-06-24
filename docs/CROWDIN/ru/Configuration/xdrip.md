@@ -110,7 +110,7 @@
    * затем нажмите на значок микрофона в нижнем правом углу
    * В открывшемся текстовом окне впечатайте "включить инженерный режим" 
    * нажмите "Готово"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+   * Если включен Google Speak, вы можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
 * Go to the G5 debug settings and check `OB1 collector`.
 * Use the voice command: “hard reset transmitter”
 * The voice command will be executed with the next data receipt of the transmitter
