@@ -70,7 +70,7 @@
 **Для второго и следующего трансмиттера смотрите [Продление срока работы трансмиттера](../Configuration/xdrip#extend-transmitter-life) ниже.**
 
 * Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
-* Выключите оригинальный ресивер Dexcom (если используете).
+* Turn original Dexcom receiver off (if used).
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
 * Использование Мастера выбора источника ГК обеспечивает настройки по умолчанию, включая OB1 & нативный режим 
    * Мастер позволит провести начальную настройку.
@@ -120,38 +120,38 @@
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
-* Выключите оригинальный ресивер Dexcom (если используете).
+* Turn original Dexcom receiver off (if used).
 * Остановить сенсор (только при смене сенсора)
    
    Убедитесь, что он действительно остановлен:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about half way down - It may say something like `(1) Stop Sensor`
+   На следующем экране "G5/G6 Status" найдите `Queue Items` (`Элементы в очереди`) на полпути вниз - там появится что-то вроде "Остановить Сенсор"
    
-   Wait until this goes - usually within a few minutes.
+   Подождите, пока это происходит - обычно в течение нескольких минут.
    
-   -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
+   -> Как удалить трансмиттер без остановки сенсора, см. видео <https://youtu.be/AAhBVsc6NZo>.
    
    ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device (in system status)
+* Забыть устройство (в статусе системы)
    
    ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Forget device in smartphone’s BT settings (Will be shown as DexcomXX whereas XX are the last two digits of the transmitter serial no.)
+* Забыть устройство в настройках BT смартфона (трансмиттер будет изображаться там как DexcomXX; XX - последние две цифры номера серии трансмиттера)
 
-* Remove transmitter (and sensor if replacing sensor)
+* Удалите трансмиттер (и сенсор при замене)
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
 * Использование Мастера выбора источника ГК обеспечивает настройки по умолчанию, включая OB1 & нативный режим 
    * Мастер позволит провести начальную настройку.
-   * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter.
-* Insert new sensor (only if replacing).
+   * Вам понадобится серийный номер трансмиттера, если вы пользуетесь им впервые.
+* Введите серийный номер нового трансмиттера.
+* Вставьте новый сенсор (только при замене).
 * Поместите трансмиттер в платформу сенсора
-* Start sensor (only if replacing)
+* Нажмите старт сенсора (только при смене сенсора)
    
-   **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
+   **Рекомендуется подождать около 15 минут между остановкой и запуском нового сенсора(до `Состояние сенсора: Остановлен` на втором экране состояния системы).**
 
 * Перезапустите коллектор (состояние системы - если не заменяете сенсор}
 
@@ -166,30 +166,30 @@
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### New Sensor
+### Новый сенсор
 
 * Выключите оригинальный ресивер Dexcom (если используете).
-* Stop sensor if necessary
+* При необходимости остановите сенсор
    
    Убедитесь, что он действительно остановлен:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about half way down - It may say something like `(1) Stop Sensor`
+   На следующем экране "G5/G6 Status" найдите `Queue Items` (`Элементы в очереди`) на полпути вниз - там появится что-то вроде "Остановить Сенсор"
    
-   Wait until this goes - usually within a few minutes.
+   Подождите, пока это происходит - обычно в течение нескольких минут.
    
    ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Clean contacts (transmitter backside) with alcohol and let air-dry.
+* Протрите контакты (обратная сторона трансмиттера) спиртом и просушите.
 
-* In case you use this function disable `Restart Sensor` and `Preemptive restarts` (Hamburger menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
+* Если вы пользуетесь этой функцией, отключите `Restart Sensor` и `Preemptive restarts` (Сэндвич-меню -> Настройки -> Отладка G5/G6). If you miss this step and have these functions enabled the new sensor will not start properly.
    
    ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
 
 * Start Sensor
    
-   **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
+   **Рекомендуется подождать около 15 минут между остановкой и запуском нового сенсора(до `Состояние сенсора: Остановлен` на втором экране состояния системы).**
 
 * Set time inserted
    
