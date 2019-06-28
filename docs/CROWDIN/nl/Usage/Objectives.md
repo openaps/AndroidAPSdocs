@@ -42,7 +42,7 @@ Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exp
 
 ### Doel 5: Inregelen van de closed loop, verhoog de max IOB boven 0 en laat geleidelijk de streef BG dalen
 
-    * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you.
+    * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal=the maximum hourly value in any time segment of the day).
     * Nadat je weet welke IOB instelling goed bij jou past, kun je ook je BG streefdoel instellingen gaan verlagen.
     
 
@@ -63,8 +63,8 @@ Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exp
 ### Doel 8: Activeren van extra functies overdag zoals SMB (Super Micro Bolus)
 
     Je moet het <a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">SMB hoofdstuk in deze wiki</a> en het [hoofdstuk oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) lezen om te begrijpen hoe SMB werkt, met name het idee achter de tijdelijke basaalstanden van nul (zero-temp).
-    * Daarna kun je <a href="../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob">maxIOB verhogen</a> zodat SMB goed kan functioneren. Opmerking: maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. Dat betekent dat na een bolus van 8E voor een maaltijd en maxIOB van 7E, er geen SMBs zullen worden afgegeven totdat IOB onder de 7E komt. Een goede start is maxIOB = gemiddelde maaltijdbolus + 3x max dagelijkse basaal
-    * De instelling voor min_5m_carbimpact moet veranderen van de standaardwaarde 3 (zoals bij AMA) naar 8 (zoals bij SMB). Je moet dit zelf handmatig doen in de instellingen. Vergeet dit niet te doen!
+    * Daarna kun je <a href="../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob">maxIOB verhogen</a> zodat SMB goed kan functioneren. Opmerking: maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal=the maximum hourly value in any time segment of the day)
+    * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Je moet dit zelf handmatig doen in de instellingen. Vergeet dit niet te doen!
     
 
 ## Instellingen exporteren & importeren
