@@ -42,7 +42,7 @@ Wenn Du Dein **Smartphone wechselst** kannst Du Deine [Einstellungen exportieren
 
 ### Ziel 5: Stelle den Closed Loop fein ein, erhöhe max IOB über 0 und setze den Zielbereich langsam herunter.
 
-    * Setze dein "Maximales Gesamt-IOB, das nicht überschritten werden darf [IE]" (in OpenAPS als "max-iob" bekannt) für einen Tag auf einen Wert größer als 0. Der empfohlene Standardwert ist "ein durchschnittlicher Mahlzeitenbolus + das Dreifache Deiner höchsten täglichen Basalrate (Basalwert für eine Stunde)" (für den SMB Algoyrithmus), oder das Dreifache Deiner höchsten täglichen Basalrate (für den älteren AMA Algorithmus), aber du solltest dich diesem Wert langsam annähern, bis du weißt, dass die Einstellung für Dich funktioniert.
+    * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal=the maximum hourly value in any time segment of the day).
     * Wenn du zuverlässig weißt, welcher IOB deinem Looping Muster entspricht, dann senke deinen Zielbereich auf den gewünschten Wert.
     
 
@@ -63,8 +63,8 @@ Wenn Du Dein **Smartphone wechselst** kannst Du Deine [Einstellungen exportieren
 ### Ziel 8: Aktiviere zusätzliche oref1 Funktionen zum täglichen Gebrauch, wie z. B. den super micro bolus (SMB)
 
     * Du musst das <a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">SMB-Kapitel in diesem Wiki</a> und das [Kapitel oref1 in der openAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)lesen, um zu verstehen wie der SMB arbeitet, insbesondere was Sinn und Zweck des "zero-temping" ist.
-    * Danach solltest du <a href="../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob">maxIOB erhöhen</a>, damit SMB korrekt funktioniert. maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet, wenn Du einen Mahlzeiten-Bolus von 8 IE abgegeben und in den Einstellungen ein maxIOB von 7 IE hinterlegt hast, wird kein SMB abgegeben, bis das IOB unter 7 IE liegt. Starte am Anfang mit maxIOB = durchschnittlicher Mahlzeiten-Bolus + 3x die größe stündliche Basalrate.
-    * min_5_carbimpact, die Standardeinstellung für den Abbau der Kohlenhydrate im Köper, muss in den Einstellungen von 3 (AMA) auf 8 (SMB) geändert werden. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
+    * Danach solltest du <a href="../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob">maxIOB erhöhen</a>, damit SMB korrekt funktioniert. maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal=the maximum hourly value in any time segment of the day)
+    * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
     
 
 ## Einstellungen exportieren & importieren
