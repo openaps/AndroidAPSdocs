@@ -43,6 +43,9 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 ### Objective 5: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
 
     * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+    
+      ![max daily basal in 24 h basal rate](../images/MaxDailyBasal.jpg)
+    
     * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
     
 
@@ -57,13 +60,13 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 ### Objective 7: Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
 
     * Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
-    * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">advanced meal assist</a>
+    * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the [advanced meal assist](../Usage/Open-APS-features#advanced-meal-assist-ama)
     
 
 ### Objective 8: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
 
-    * You must read the <a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">SMB chapter in this wiki</a> and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-    * Then you ought to <a href="../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob">rise maxIOB</a> to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day)
+    * You must read the [SMB chapter in this wiki](../Usage/Open-APS-features#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
+    * Then you ought to [rise maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 5](.../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
     * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
     
 
