@@ -2,7 +2,7 @@
 
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen. De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 
-Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exporteren](../Usage/Objectives#export-import-settings) om je voortgang door de doelstellingen te behouden. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
+If you are **upgrading phones** then you can [export your settings](../Usage/Objectives#export-import-settings) to keep your progress through the objectives. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
 
 ### Doel 1: Instellen van visualisatie en monitoring en analyseren van basaal en ratio's
 
@@ -43,7 +43,10 @@ Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exp
 ### Doel 5: Inregelen van de closed loop, verhoog de max IOB boven 0 en laat geleidelijk de streef BG dalen
 
     * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
-    * Nadat je weet welke IOB instelling goed bij jou past, kun je ook je BG streefdoel instellingen gaan verlagen.
+    
+      ![max daily basal in 24 h basal rate](../images/MaxDailyBasal.jpg)
+    
+    * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
     
 
 ### Doel 6: Pas basaalstanden en de ratio's aan indien nodig, activeer hierna de Autosens optie
@@ -56,14 +59,14 @@ Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exp
 
 ### Doel 7: Activeren van extra functies overdag zoals AMA (geavanceerde maaltijdhulp, Advanced Meal Assist)
 
-    * Nu zou je je inmiddels vertrouwd moeten voelen met hoe AndroidAPS werkt, en welke instellingen het beste bij jou passen
-    * Daarna kun je gedurende een periode van 28 dagen extra functies gaan gebruiken die alles nog meer automatiseren, zoals de <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">geavanceerde maaltijd hulp</a>
+    * Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
+    * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the [advanced meal assist](../Usage/Open-APS-features#advanced-meal-assist-ama)
     
 
 ### Doel 8: Activeren van extra functies overdag zoals SMB (Super Micro Bolus)
 
-    Je moet het <a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">SMB hoofdstuk in deze wiki</a> en het [hoofdstuk oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) lezen om te begrijpen hoe SMB werkt, met name het idee achter de tijdelijke basaalstanden van nul (zero-temp).
-    * Daarna kun je <a href="../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob">maxIOB verhogen</a> zodat SMB goed kan functioneren. Opmerking: maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day)
+    * You must read the [SMB chapter in this wiki](../Usage/Open-APS-features#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
+    * Then you ought to [rise maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. Opmerking: maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 5](.../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
     * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Je moet dit zelf handmatig doen in de instellingen. Vergeet dit niet te doen!
     
 
