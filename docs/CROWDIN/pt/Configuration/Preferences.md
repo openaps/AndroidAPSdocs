@@ -47,9 +47,9 @@ This setting exists as a safety limit to prevent AAPS from ever being capable of
 
 Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
 
-* This value does not consider bolus IOB, only basal.
-* This value is calculated and monitored indepentandlty of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
-* This value is measured in insulin units (u).
+* Este valor não considera o IOB bolus, apenas basal.
+* Este valor é calculado e monitorado independente de sua taxa normal de basal. It is only the additional basal insulin on top of that normal rate that is considered.
+* Este valor é medido em unidades de insulina (u).
 
 When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
 
