@@ -105,6 +105,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Extend transmitter life
 
+* Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Switch to the `engineering mode`: 
    * tap on the character on the right of the xDrip+ start screen that represents a syringe
    * then tap on the microphone icon in the lower right corner
@@ -115,6 +116,8 @@ To learn more about the details and reasons for these recommendations read the [
 * Use the voice command: “hard reset transmitter”
 * The voice command will be executed with the next data receipt of the transmitter
 * Look at the system status (Hamburger menu -> system status) and see what happens
+* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away. 
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Replace transmitter
 
