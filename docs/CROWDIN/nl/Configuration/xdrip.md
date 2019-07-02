@@ -116,7 +116,10 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 * Use the voice command: “hard reset transmitter”
 * The voice command will be executed with the next data receipt of the transmitter
 * Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away. 
+* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+   
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+
 * Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Zender vervangen
