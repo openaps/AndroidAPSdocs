@@ -105,16 +105,19 @@
 
 ### Увеличение срока работы трансмиттера
 
-* Переключитесь в `инженерный режим`: 
-   * нажмите на пиктограмму шприца на главном экране xDrip+ справа
-   * затем нажмите на значок микрофона в нижнем правом углу
-   * В открывшемся текстовом окне впечатайте "включить инженерный режим" 
-   * нажмите "Готово"
-   * Если включен Google Speak, вы можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
-* Перейдите в настройки отладки G5 и проверьте `OB1 коллектор`.
-* Дайте голосовую команду: “hard reset transmitter”(«жесткий сброс трансмиттера»)
-* Голосовая команда будет выполнена при следующем получении данных трансмиттера
-* Посмотрите на статус системы (сэндвич-меню -> системный статус) и убедитесь в результате
+* Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and check `OB1 collector`.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away. 
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Замена трансмиттера
 
