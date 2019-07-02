@@ -105,16 +105,19 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 
 ### Zender resetten
 
-* Schakel de `engineering mode` in: 
-   * tik op het injectiespuit-icoontje aan de rechterkant van het xDrip+ startscherm
-   * houdt het microfoon-icoontje rechtsonder lang ingedrukt
-   * In het tekstveld typ je in "enable engineering mode" (zonder de aanhalingstekens) 
-   * klik op "OK"
-   * Als je Google Speak engine hebt ingeschakeld, dan kun je ook kort op het microfoon-icoontje tikken en daarna de opdracht inspreken: "enable engineering mode". Het liefst in accentloos Engels;) 
-* Ga naar de G5 debug instellingen en zorg dat `OB1 collector` ingeschakeld is.
-* Geef via het microfoon-icoontje weer de spraakopdracht (op dezelfde manier als hierboven): “hard reset transmitter”
-* De opdracht om de zender te resetten zal worden verstuurd bij de eerstvolgende keer dat jouw telefoon contact heeft met de zender
-* Kijk vervolgens naar de systeemstatus (Hamburger menu > system status) en zie wat er gebeurt. Het kan even duren voordat de zender heeft terug gecommuniceerd naar je telefoon dat hij succesvol is gereset.
+* Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and check `OB1 collector`.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away. 
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Zender vervangen
 
