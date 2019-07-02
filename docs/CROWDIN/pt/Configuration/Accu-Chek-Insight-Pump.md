@@ -47,7 +47,7 @@
 
 Note: There will be no permanent connection between pump and phone. A connection will only be established if neccessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
-## Settings in AAPS
+## Configurações no AAPS
 
 ![Screenshot of Insight Settings](../images/Insight_pairing.png)
 
@@ -63,15 +63,15 @@ In the Insight settings in AndroidAPS you can enable the following options:
     <font color="red">Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.</font>
 * "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Example for min. recovery duration = 5 and max. recovery duration = 20   
+    Exemplo por min. duração da recuperação = 5 e max. duração da recuperação = 20   
       
-    no connection -> wait **5** sec.   
-    retry -> no connection -> wait **6** sec.   
-    retry -> no connection -> wait **7** sec.   
-    retry -> no connection -> wait **8** sec.   
+    sem conexão -> aguarde **5** seg.   
+    tente novamente -> sem conexão -> aguarde **6** seg.   
+    tente novamente -> sem conexão -> aguarde **7** seg.   
+    tente novamente -> sem conexão -> aguarde **8** seg.   
     ...   
-    retry -> no connection -> wait **20** sec.   
-    retry -> no connection -> wait **20** sec.   
+    tente novamente -> sem conexão -> aguarde **20** seg.   
+    tente novamente -> sem conexão -> aguarde **20** seg.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
@@ -85,9 +85,9 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
-## Settings in the pump
+## Configurações na bomba
 
-Configure alarms in the pump as follows:
+Configurar alarmes na bomba da seguinte forma:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 * Menu > Modes > Signal mode > Quiet

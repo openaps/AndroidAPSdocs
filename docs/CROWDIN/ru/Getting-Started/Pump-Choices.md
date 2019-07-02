@@ -2,7 +2,7 @@
 
 AndroidAPS currently works with
 
-* Accu-Chek Combo
+* Помпа Accu Chek Combo
 * Accu-Chek Insight
 * DanaR
 * DanaRS 
