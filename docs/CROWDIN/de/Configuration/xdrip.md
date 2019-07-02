@@ -105,19 +105,19 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 ### Transmitterlaufzeit verlängern
 
-* Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and check `OB1 collector`.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away. 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Eine laufende Sensorsitzung wird gestoppt, wenn Du die Transmitterlaufzeit verlängerst. Verlängere daher bei einem Sensorwechsel oder sei Dir bewusst, dass nach der Verlängerung eine neue zweistündige Warm-Up-Phase des Sensors beginnt.
+* Wechsle in den `engineering mode`: 
+   * Klicke auf das Spritzen-Symbol rechts auf dem xDrip+ Startbildschirm.
+   * Klicke dann auf das Mikrophon-Symbol in der unteren rechten Ecke.
+   * Gib in das Textfeld, das geöffnet wird, "enable engineering mode" ein und klicken auf OK. 
+   * Klicke auf "Done".
+   * Falls Du die Google Speak engine nutzt, kannst Du auch das Sprachkommando "enable engineering mode" nutzen. 
+* Wechsle zu den G5 Debugeinstellungen und prüfe den `OB1 collector`.
+* Benutze den Sprachbefehl: “hard reset transmitter”
+* Beim nächsten Dateneingang vom Transmitter wird der Reset durchgeführt.
+* Beobachte im Systemstatus (Hamburgermenü links oben -> Systemstatus) was passiert.
+* Wenn aud dem zweiten Statusbildschirm der Hinweis "Phone Service State: Hard Reset maybe failed" angezeigt wird, kannst Du trotzdem einfach den Sensor starten. Danach sollte diese Meldung verschwinden. 
+* Die "Transmitter days" werden nach erfolgreicher Verlängerung und Start des Sensors auf 0 zurückgesetzt.
 
 ### Transmitter ersetzen
 
