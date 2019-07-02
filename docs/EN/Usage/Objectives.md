@@ -43,8 +43,8 @@ _The system will override your maxIOB settings to zero, which means if blood glu
 ### Objective 5: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
 
 * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
-  
-    ![max daily basal in 24 h basal rate](../images/MaxDailyBasal.jpg)
+
+    ![max daily basal in your 24h basal rate curve](../images/MaxDailyBasal.jpg)
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
