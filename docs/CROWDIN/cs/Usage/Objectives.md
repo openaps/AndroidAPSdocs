@@ -64,7 +64,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 
 ## Export a import nastavení
 
-* **Exportujte nastavení** na svém starém telefonu
+* **Export settings** on your old phone
   
   * Hamburger menu (v levém horním rohu obrazovky)
   * Údržba
@@ -75,10 +75,10 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 
 * **Transfer** settings from old to new phone using the file location shown during export
 
-* **Nainstalujte AndroidAPS** na nový telefon.
+* **Install AndroidAPS** on the new phone.
 * **Importujte nastavení** do nového telefonu 
   * Hamburger menu (v levém horním rohu obrazovky)
   * Údržba
   * Importujte nastavení
 * **Note for Dana RS users:** 
-  * Vzhledem k tomu, že nastavení týkající se připojení pumpy jsou také importována, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth. Please pair new phone and pump manually.
+  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
