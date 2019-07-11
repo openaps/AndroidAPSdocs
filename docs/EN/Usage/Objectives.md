@@ -32,6 +32,10 @@ _You will want to set your target higher than usual until you are confident in t
 
 ### Objective 4: Starting to close the loop with Low Glucose Suspend
 
+**Closed loop will not correct high bg values in objective 4 as it is limited to low glucose suspend.**
+
+**High bg values have to be corrected manually by you!**
+
 * Select Closed Loop either from Preferences, or by pressing and holding the Open Loop button in the top left of the home screen.
 * Set your target range slightly higher than you usually aim for, just to be safe.
 * Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
