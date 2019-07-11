@@ -29,7 +29,7 @@ Wenn Du Dein **Smartphone wechselst** kannst Du Deine [Einstellungen exportieren
 
 ### Ziel 4: Closed Loop mit Abschaltung bei niedrigen Glukose-Werten
 
-**Der Closed Loop korrigiert im Objective (Ziel) 4 keine hohen BZ-Werte, da nur low glucose suspend zum Einsatz kommt.**
+**Der Closed Loop korrigiert im Objective 4 keine hohen BZ-Werte, da nur low glucose suspend zum Einsatz kommt.**
 
 **Hohe BZ-Werte müssen daher von Dir manuell korrigiert werden!**
 
