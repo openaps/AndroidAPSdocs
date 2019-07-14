@@ -165,4 +165,4 @@ Auf der Rückseite findest Du in der ersten Zeile rechts einen speziellen Drei-Z
 
 - NA - Nordamerika (in der Frequenzauswahl musst Du "US & Kanada (916 MHz)" auswählen)
 - CA - Kanada (in Frequenzauswahl musst Du "US & Kanada (916 MHz)" auswählen)
-- WW - Weltweit (in der Frequenzauswahl musst Du "Weltweit (868 MHz)")
+- WW - Weltweit (in der Frequenzauswahl musst Du "Weltweit (868 MHz)" auswählen)
