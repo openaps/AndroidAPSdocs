@@ -48,14 +48,14 @@ If you do new install you will be thrown directly into wizard. Sometimes if your
 You need to set following items: (see picture above)
 
 - **Pump Serial Number**: You can find that on back side, entry SN. You need to get only number, your serial is 6 numbers.
-- **Pump Type**: Which pump type you have. 
-- **Pump Frequency**: According to pump frequency there were two versions of Medtronic pump made (if you are not sure what frequency your pump uses, look at FAQ): 
+- **Pump Type**: Which pump type you have (i.e. 522). 
+- **Pump Frequency**: According to pump frequency there were two versions of Medtronic pump made (if you are not sure what frequency your pump uses, look at [FAQ](../Configuration/MedtronicPump#faq)): 
     - for US & Canada, frequency used is 916 Mhz
     - for Worldwide, frequency used is 868 Mhz
 - **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. It limits how much insulin you can Bolus. If you go over this, Bolus won't be set and error will be returned. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
 - **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
 - **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
-- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have 2.x firmware, default value will be to use Hardware encoding, if you have 0.x firmware this setting will be ignored.
+- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
 - **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
 - **RileyLink Configuration**: This will find your RileyLink/GNARL device.
 
@@ -67,16 +67,19 @@ On pump tab you can see several lines that are showing pumps (and connections) c
 
 - **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
 - **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your conguration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
+- **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
 - **Last connection**: Time when last connection to pump was successful.
 - **Last Bolus**: When last bolus was given.
 - **Base Basal Rate**: When last bolus was given or empty.
 - **Temp basal**: Temp basal that is running or empty.
 - **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration). On lower end we have 3 buttons:
-- Refresh is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
-- Pump History: Shows pump history (see bellow)
-- RL Stats: Show RL Stats (see bellow)
+- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+
+On lower end we have 3 buttons:
+
+- **Refresh** is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
+- **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
+- **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
 ## Pump History
 
@@ -90,8 +93,8 @@ Pump history is retrieved every 5 minutes and stored localy. We keep history onl
 
 Dialog has two tabs:
 
-- Settings: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- History: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
+- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
 
 ## Akce
 
@@ -135,7 +138,7 @@ No. At the moment none of this devices support this and it probably won't even i
 
 ### Is GNARL full replacement for RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication). Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
@@ -143,10 +146,10 @@ Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic
 
 Like mentioned before you can get devices here:
 
-- RileyLink - You can get device here - [getrileylink.org](https://getrileylink.org/))
-- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl))
+- RileyLink - You can get device here - [getrileylink.org](https://getrileylink.org/).
+- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
 
-### What to do if I loose connection to RileyLink and/or Pump
+### What to do if I loose connection to RileyLink and/or pump?
 
 1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
 2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink.
@@ -156,7 +159,9 @@ Like mentioned before you can get devices here:
 
 ### How to determine what Frequency my pump uses
 
-![Pump Model](../images/Medtronic06.png) If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+![Pump Model](../images/Medtronic06.png)
+
+If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
 
 - NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
 - CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
