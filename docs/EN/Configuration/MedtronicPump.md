@@ -1,6 +1,10 @@
 # Medtronic Pumps
 
-This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you’re willing to put in the time required. Don’t rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.
+**Medtronic pump driver is not part of AndroidAPS master yet. It will be available in next master version.**
+
+***
+
+Works only with older Medtronic pumps (details see below). Does not work with Medtronic 640G or 670G.
 
 ***
 
@@ -20,10 +24,10 @@ While Medtronic driver was tested with good test group, it is still considered a
     - 554/754 Canada release (firmware 2.7A or lower)
 
 ## Configuration of the pump
-- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication
+- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication.
 - **Set Max Basal** on your Pump to your "max basal entry in your STD profile" * 4 (if you want to have 400% TBR as max). This number must be under 35 (as you can see in pump).
 - **Set Max Bolus** on your Pump (max is 25)
-- **Set profile to STD**. This will be the only profile we will use. You can also disable 
+- **Set profile to STD**. This will be the only profile we will use. You can also disable.
 - **Set TBR type** to Absolute (not Percent)
  
 
@@ -32,9 +36,9 @@ While Medtronic driver was tested with good test group, it is still considered a
 - Disable Auto-rotate on your phone (on some devices Auto-rotate restarts BT sessions, which is not something we would want).
 - You can configure pump in AndroidAPS two ways: 
 1. Use of Wizard (on new install)
-2. Directly In Config tab (Cog icon on Medtronic driver)
+2. Directly in Config tab (Cog icon on Medtronic driver)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select Virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
 
 ![MDT Settings](../images/Medtronic01.png)
 
@@ -46,32 +50,33 @@ You need to set following items: (see picture above)
     - for Worldwide, frequency used is 868 Mhz
 - **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. It limits how much insulin you can Bolus. If you go over this, Bolus won't be set and error will be returned. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
 - **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
-- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by Pump (if you want to stop bolus when running, you have to suspend pump and then resume).
+- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
 - **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have 2.x firmware, default value will be to use Hardware encoding, if you have 0.x firmware this setting will be ignored.
-- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and Volts.
+- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
 - **RileyLink Configuration**: This will find your RileyLink/GNARL device.
 
 ## MEDTRONIC (MDT) Tab
 ![MDT Tab](../images/Medtronic02.png)
 
 On pump tab you can see several lines that are showing pumps (and connections) current status.
-- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see Sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.)
-- **Battery**: Shows battery status depening on your conguration. This can be simple Icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage
-- **Last connection**: Time when last connection to pump was successful
-- **Last Bolus**: When last bolus was given
-- **Base Basal Rate**: When last bolus was given or empty
-- **Temp basal**: Temp basal that is running or empty
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour)
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration)
+- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
+- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
+- **Battery**: Shows battery status depening on your conguration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
+- **Last connection**: Time when last connection to pump was successful.
+- **Last Bolus**: When last bolus was given.
+- **Base Basal Rate**: When last bolus was given or empty.
+- **Temp basal**: Temp basal that is running or empty.
+- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
+- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
 On lower end we have 3 buttons:
-- Refresh is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc)
+- Refresh is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
 - Pump History: Shows pump history (see bellow)
 - RL Stats: Show RL Stats (see bellow)
 
 ## Pump History
 ![Pump History Dialog](../images/Medtronic03.png)
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS)
+
+Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
 
 
 ## RL Status (RileyLink Status)
@@ -87,7 +92,7 @@ Dialog has two tabs:
 When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
 - **Wake and Tune Up** - If you see that your AndroidAPS hasn't contacted your pump in a while (it should contact it every 5 minutes), you can force Tune Up. This will try to contact your pump, by searching all sub frequencies on which Pump can be contacted. If it finds one it will set it as your default frequency. 
 - **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-- **Clear Bolus Block** - When you start Bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you Suspend your pump and resume (to cancel Bolus), you can then remove that block. Option is only there when Bolus is running...  
+- **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running...  
 
 ## Important notes
 
@@ -100,8 +105,8 @@ When you restart RileyLink or GNARL, you need to either do new TuneUp (action "W
 ### CGMS
 Medtronic CGMS is currently NOT supported.
 
-### Manual use of Pump
-You should avoid manually doing treatments things on your pump. All commands (Bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one.
+### Manual use of pump
+You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
 
 ## Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
 
@@ -129,11 +134,11 @@ Like mentioned before you can get devices here:
 - GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl))
 
 ### What to do if I loose connection to RileyLink and/or Pump
-1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump
-2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink
-3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action
-4. Try 3 and 2 together
-5. Reset RileyLink and reset phone
+1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
+2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink.
+3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action.
+4. Try 3 and 2 together.
+5. Reset RileyLink and reset phone.
 
 ### How to determine what Frequency my pump uses
 ![Pump Model](../images/Medtronic06.png)
