@@ -95,6 +95,7 @@ AndroidAPS 설치하기
    Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
    Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
    Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
+   Medtronic pump <./Configuration/MedtronicPump.md>
    워치화면 <./Configuration/Watchfaces.md>
    설정 <./Configuration/Preferences.md>
    민감도 감지와 COB <./Configuration/Sensitivity-detection-and-COB.md>
