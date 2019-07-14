@@ -1,6 +1,6 @@
 # Medtronic Pumps
 
-**Medtronic pump driver is not part of AndroidAPS master yet. It will be available in next master version.**
+**>>>> Medtronic pump driver is not part of AndroidAPS master yet. It will be available in next master version. <<<<**
 
 ***
 
