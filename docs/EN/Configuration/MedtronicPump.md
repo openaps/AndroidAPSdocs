@@ -64,7 +64,7 @@ On pump tab you can see several lines that are showing pumps (and connections) c
 - **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
 - **Last connection**: Time when last connection to pump was successful.
 - **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: When last bolus was given or empty.
+- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
 - **Temp basal**: Temp basal that is running or empty.
 - **Reservoir**: How much insulin is in reservoir (updated at least every hour).
 - **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
