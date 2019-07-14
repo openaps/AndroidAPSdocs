@@ -95,6 +95,7 @@ Configuración
    Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
    Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
    Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
+   Medtronic pump <./Configuration/MedtronicPump.md>
    Watchfaces <./Configuration/Watchfaces.md>
    Preferencias <./Configuration/Preferences.md>
    Detección de sensibilidad y COB <./Configuration/Sensitivity-detection-and-COB.md>

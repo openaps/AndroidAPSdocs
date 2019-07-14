@@ -95,6 +95,7 @@ AndroidAPS instellingen
    DanaRS pomp <./Configuration/DanaRS-Insulin-Pump.md>
    AccuChek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
    AccuChek Insight pomp <./Configuration/Accu-Chek-Insight-Pump.md>
+   Medtronic pump <./Configuration/MedtronicPump.md>
    Smartwatch instellingen <./Configuration/Watchfaces.md>
    Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>
