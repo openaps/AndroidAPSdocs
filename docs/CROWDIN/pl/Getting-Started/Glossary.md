@@ -1,13 +1,13 @@
 # Słowniczek pojęć<table style="width:100%" border=1>
 <tr>
  <th>Termin</th>
- <th>Description</th>
- <th>see also</th>
- <th>more details @</th>
+ <th>Opis</th>
+ <th>zobacz też</th>
+ <th>więcej szczegółów na</th>
 </tr>
 <tr>
  <td>AAPS</td>
- <td>AndroidAPS - artifical pancreas system</td>
+ <td>AndroidAPS - system hybrydowej sztucznej trzustki</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -17,11 +17,11 @@
   </td>
   
   <td>
-    advanced meal assist - advanced algorithm to handle carbs
+    advance meal assist - zaawansowany algorytm obsługi węglowodanów
   </td>
   
   <td>
-    MA / SMB
+    MA/SMB
   </td>
   
   <td>
@@ -29,44 +29,44 @@
   </td>
 <tr>
  <td>Android auto</td>
- <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
+ <td>notyfikacje AAPS wyświetlana jest w samochodzie na kompatybilnych deskach rozdzielczych oraz systemach informacyjno-rozrywkowch</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
 </tr>
 </tr>
 <tr>
  <td>APK</td>
- <td>software installation file (Android application package)</td>
+ <td>plik instalacyjny oprogramowania (pakiet systemu Android)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Building APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - budowanie APK</a></td>
 </tr>
 <tr>
  <td>Autosens</td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>określenie wrażliwości na insuline jako efekt ćwiczeń, hormonów itp.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td>Azure</td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>platforma do hostowania Nightscouta w chmurze</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
  <td>BAT</td>
- <td>status light low battery on homescreen</td>
+ <td>lampka stanu niski poziom baterii na ekranie głównym</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>BG</td>
- <td>blood glucose</td>
+ <td>stężenie glukozy we krwi</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
 <td>BGI</td>
- <td>blood glucose interaction -degree to which BG 'should' be rising or falling based on insulin activity alone</td>
+ <td>oddziaływanie insuliny we krwi - stopień, do którego BG powinno rosnąć lub spadać w oparciu o działanie samej insuliny</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -168,7 +168,7 @@
 </tr>
 <tr>
  <td>Heroku</td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>platforma do hostowania Nightscouta w chmurze</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,11 +326,11 @@
  <td>SEN</td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>Sensivity detection</td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>określenie wrażliwości na insuline jako efekt ćwiczeń, hormonów itp.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
