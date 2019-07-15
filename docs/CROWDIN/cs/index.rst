@@ -46,7 +46,7 @@ Jste-li připraveni přijmout tuto výzvu, čtěte dál.
 
 **Co potřebuji, abych mohl začít:**
 
-* Smartphone se systémem Android 5.0 nebo novějším. **Please update to Android 6 or higher as it is planned to drop support for Android 5.x soon.** See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ to learn which phones work best with AndroidAPS.
+* Smartphone se systémem Android 5.0 nebo novějším. **Prosím aktualizujte na Android 6 nebo vyšší, protože je brzy plánováno ukončit podporu pro Android 5.x.** `Zde <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ uvidíte, které telefony fungují nejlépe s AndroidAPS.
 * Senzor pro kontinuální monitoring glykémie (CGM): Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian nebo PocTech
 * Aplikaci pro příjem glykémií z CGM: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `upravená aplikace G5 <https://github.com/dexcomapp/dexcomapp>`_, `aplikace PochTech <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ nebo `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * Samotnou aplikaci `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ nainstalovanou v telefonu
@@ -95,7 +95,7 @@ Konfigurace
    Pumpa Dana-RS <./Configuration/DanaRS-Insulin-Pump.md>
    Pumpa Accu-Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
    Pumpa Accu-Chek Insight <./Configuration/Accu-Chek-Insight-Pump.md>
-   Medtronic pump <./Configuration/MedtronicPump.md>
+   Pumpa Medtronic <./Configuration/MedtronicPump.md>
    Hodinky <./Configuration/Watchfaces.md>
    Nastavení <./Configuration/Preferences.md>
    Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
