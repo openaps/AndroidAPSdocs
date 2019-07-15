@@ -1,12 +1,12 @@
-# Future (possible) Pump Drivers
+# Sterowniki do pomp (prawdopodobne) w przyszłości
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, status ich wsparcia w dowolnym systemie pętlowym, oraz status dla systemu AAPS. Na końcu jest trochę informacji, jakie są wymagania, aby pompa nadawała się do pracy w pętli.
 
-## Pumps whose support is in development
+## Pompy, których wsparcie jest w fazie rozwoju
 
 ### Medtronic
 
-**Loop status:** Some of older versions of pumps are loopable, but not the newer models (see below)
+** Status pętli: ** Niektóre starsze wersje pomp nadają się do zastosowania w pętli, nowsze modele jeszcze nie nadają się na użycie w pętli (patrz poniżej)
 
 **Other implementations:** OpenAPS, Loop
 
