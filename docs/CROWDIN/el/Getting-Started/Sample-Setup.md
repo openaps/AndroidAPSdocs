@@ -59,7 +59,7 @@ Menu > Settings > Device security > Unknown sources > slider to right side (= ac
 
 For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
 
-### Enable Bluetooth
+### Ενεργοποιήστε το Bluetooth
 
 1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
 2. Menu > Settings > Connections > Location > slider to right side (= active)
