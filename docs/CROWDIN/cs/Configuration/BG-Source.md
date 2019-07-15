@@ -10,7 +10,7 @@ Ať už používáte kterýkoli systém CGM, pokud chcete používat kalibraci z
 * Kalibrujte dostatečně často – pokud používáte oficiální aplikace, budete na to v pravidelných intervalech upozorněni. Pro DIY systémy to nemusí platit a měli byste být opatrní, pokud byste pokračovali v používání CGM bez kalibrací.
 * Je-li to možné, kalibrujte jak pomocí nižších hodnot (4–5 mmol/l), tak také pomocí vyšších (7–9 mmol/l). CGM tak bude mít lepší rozsah referenčních hodnot.
 
-# Zdroj glykémie
+# Zdroj glykémie (BG source)
 
 ## Pro uživatele Dexcom
 
