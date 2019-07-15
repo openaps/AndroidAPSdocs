@@ -140,47 +140,47 @@
  <td>eCarbs</td>
  <td>„rozložené sacharidy“ (extended carbs) - sacharidy rozložené na několik hodin (např. jídla s vysokým obsahem tuků/proteinů)<br>rozložený bolus, který můžete znát z léčby pomocí běžné inzulinové pumpy, nedává při používání smyčky nedává příliš velký smysl</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">Příklad použití funkce eCarbs</a></td>
 </tr>
 <tr>
  <td>FGM</td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - Zdroj glykémie</a></td>
 </tr>
 <tr>
  <td>git</td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
+ <td>Systém pro správu verzí a sledování změn v počítačových souborech a pro koordinaci prací na těchto souborech<br>-> nezbytný pro aktualizace APK</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - aktualizace APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>Webová hostovací služba pro správu verzí pomocí Gitu<br>-> úložiště zdrojových kódů</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
- <td>app to collect values from Freestyle Libre</td>
+ <td>Aplikace pro sběr hodnot z Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout with Glimp</a> </td>
+ <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout s aplikací Glimp</a> </td>
 </tr>
 <tr>
  <td>Heroku</td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>Platforma pro cloud computing umožňující hostování dat z Nightscoutu</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td>IC (or I:C)</td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td>IC (nebo I:C)</td>
+ <td>Inzulino-sacharidový poměr (Kolik sacharidů pokryje jedna jednotka inzulinu)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>IOB</td>
- <td>insulin on board -  insulin active in your body</td>
+ <td>Aktivní inzulin (insulin on board) - aktivní inzulin, který máte v těle</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
