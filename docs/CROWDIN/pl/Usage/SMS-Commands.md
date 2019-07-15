@@ -1,44 +1,44 @@
-# SMS Commands
+# Komunikator SMS
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+W ustawieniach swojego telefonu z systemem Android wybierz Aplikacje > AndroidAPS > Uprawnienia i włącz SMS-y
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+W AndroidAPS przejdź do Preferencje > Komunikator SMS i wprowadź numer(y) telefonu, z którego będziesz mógł korzystać do wydawania poleceń SMS (oddzielone średnikami), a także włącz "Zezwalaj na zdalne polecenia przez SMS"
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Wyślij SMS-a na telefon z uruchomionym AndroidAPS z któregokolwiek zatwierdzonego numeru telefonu używając dowolnego z poniższych **pogrubionych** poleceń, telefon odpowie, potwierdzając powodzenie żądanego polecenia lub jego status.
 
 ## BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Ostatnia wartość glikemii np.: 120 4min ago, Delta: -2 mg/dl, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 
 ## LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Pętla została wyłączona
 
 ## LOOP START/ENABLE
 
-- Loop has been enabled
+- Pętla została włączona
 
 ## LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Pętla jest wyłączona
+- Pętla jest włączona
+- Wstrzymana (10 min)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Pętla wstrzymana na 20 minut
 
 ## LOOP RESUME
 
-- Loop resumed
+- Pętla wznowiona
 
 ## TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers
+- Odśwież zabiegi 1 odbiorca
 
 ## NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 receivers
+- NSCLIENT RESTART 1 odbiorca
 
 ## PUMP
 
