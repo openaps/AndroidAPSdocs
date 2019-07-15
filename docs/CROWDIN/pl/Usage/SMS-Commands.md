@@ -42,21 +42,21 @@ Wyślij SMS-a na telefon z uruchomionym AndroidAPS z któregokolwiek zatwierdzon
 
 ## PUMP
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Ostatnie połączenie: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Aby zatrzymać dawkę bazową lub anulować bazę tymczasową, odpowiedz za pomocą kodu EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Aby rozpocząć dawkę bazową 0.3U/h odpowiedz kodem Swe
 
 ## BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Aby rozpocząć dawkę bazową 0.3U/h przez 20 min odpowiedz kodem Swe
 
-## BASAL 30%
+## Basal 30%
 
 - To start basal 30% for 30 min reply with code Swe
 
