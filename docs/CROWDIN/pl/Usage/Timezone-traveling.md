@@ -1,12 +1,12 @@
-# Timezone traveling with pumps
+# Strefy czasowe podróżowanie z pompami
 
 ## DanaR, Korean DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Nie ma problemu ze zmianą strefy czasowej w telefonie, ponieważ te pompy nie używają historii
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndoridAPS is using history from the pump but the records in pump don't have timezone stamp. That means if you simple change timezone in phone, records will be read with different timezone and will be doubled. To avoid this do the following steps on every timezone change:
+Te pompy wymagają specjalnej uwagi, ponieważ AndroidAPS używa historii z pompy, ale rekordy w pompie nie mają stempla strefy czasowej. Oznacza to, że jeśli zmienisz strefę czasową w telefonie, zapisy będą czytane z inną strefą czasową i zostaną podwojone. Aby tego uniknąć, wykonaj następujące czynności przy każdej zmianie strefy czasowej:
 
 * switch phone for manual time zone change before travel
 
