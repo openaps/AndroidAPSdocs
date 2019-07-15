@@ -1,6 +1,6 @@
-# Glossary<table style="width:100%" border=1>
+# Słowniczek pojęć<table style="width:100%" border=1>
 <tr>
- <th>Term</th>
+ <th>Termin</th>
  <th>Description</th>
  <th>see also</th>
  <th>more details @</th>
@@ -293,7 +293,7 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
- <td>Profile</td>
+ <td>Profil</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
