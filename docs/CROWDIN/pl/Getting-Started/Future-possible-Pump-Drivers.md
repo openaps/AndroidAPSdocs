@@ -8,9 +8,9 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ** Status pętli: ** Niektóre starsze wersje pomp nadają się do zastosowania w pętli, nowsze modele jeszcze nie nadają się na użycie w pętli (patrz poniżej)
 
-**Other implementations:** OpenAPS, Loop
+**Inne implementacje:** OpenAPS, Loop
 
-**Java implementations:** Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
+** Implementacje Java: ** Dostępne częściowe implementacje [ Rountrip2 ](https://github.com/TC2013/Roundtrip2) i [ RileyLinkAAPS ](https://github.com/andyrozman/RileyLinkAAPS)
 
 **AAPS implementation status:** Work in progress. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. Project will probably be merged to main repository by end of July 2019. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
