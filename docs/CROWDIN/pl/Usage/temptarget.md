@@ -1,8 +1,8 @@
-# Temp-Targets
+# Cele tymczasowe
 
-## What are Temp-Targets and where can I set and configure them?
+## Czym są Cele tymczasowe, gdzie mogę je ustawić i skonfigurować?
 
-With “Temp-Targets” (or short TT), you can change your blood glucose target for a certain time period. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets. To set “Default-Temp-Targets”, you can press long on your target in the right corner on the top in the overview-tab or in the orange “Carbs” button. To set a “Custom Temp-Target”, you can also do it by long pressing you target or in the “Actions”-tab.
+Za pomocą celów tymczasowych "Temp-Targets" (lub krótko TT) możesz zmienić docelowy poziom glukozy we krwi na określony czas. Ponieważ są one najczęściej potrzebne do aktywności, hipo (niedoboru węglowodanów) lub jedzenia wkrótce, możesz skonfigurować wartości domyślne. Aby skonfigurować cele tymczasowe, możesz wejść do menu w prawym górnym rogu i przejść do Ustawienia -> Inne-> Domyślne tymczasowe wartości docelowe. Aby wybrać "Domyślną tymczasową wartości docelowe", na zakładce Przegląd naciśnij i przytrzymaj przycisk celu w prawym górnym rogu lub nacisnąć pomarańczowy przycisk "WĘGLOWOD". Aby ustawić niestandardowy cele tymczasowy, możesz również zrobić to przez długie naciśnięcie przycisku "Cel Tymczasowy" w zakładce "AKCJE".
 
 ## Hypo Temp-Target
 
