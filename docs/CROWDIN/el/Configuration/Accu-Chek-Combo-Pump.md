@@ -31,9 +31,9 @@
       - Επαληθεύστε το *Γρήγορες πληροφορίες κειμένου* έχει οριστεί σε «Γρήγορες INFO» (χωρίς τα εισαγωγικά, βρέθηκαν στο *Επιλογές αντλίας ινσουλίνης*).
       - Ορίστε TBR *Μέγιστη ρύθμιση* σε 500%
       - Απενεργοποίηση *σήμα τέλους του προσωρινού βασικού ρυθμού*
-      - Set TBR *Duration increment* to 15 min
-      - Enable Bluetooth
-    - Recommended (marked blue in screenshots) 
+      - Ορίστε TBR *Διάρκεια αύξησης* έως 15 λεπτά
+      - Ενεργοποιήστε το Bluetooth
+    - Προτεινόμενες (με μπλε χρώμα στα στιγμιότυπα οθόνης) 
       - Set low cartridge alarm to your liking
       - Configure a max bolus suited for your therapy to protect against bugs in the software
       - Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
