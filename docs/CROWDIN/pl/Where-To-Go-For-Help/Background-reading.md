@@ -6,11 +6,11 @@ Zanim zbudujesz swoją pętlę, będziesz musiał dużo czytać, aby zrozumieć,
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documention - http://openaps.readthedocs.io/en/latest/](http://openaps.readthedocs.io/en/latest/)
+[OpenAPS dokumentacja - http://openaps.readthedocs.io/en/latest/](http://openaps.readthedocs.io/en/latest/)
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - http://seemycgm.com/2017/10/29/fine-tuning-settings/](http://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Dokładne dostrajanie ustawień - http://seemycgm.com/2017/10/29/fine-tuning-settings/](http://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
@@ -20,9 +20,9 @@ Zanim zbudujesz swoją pętlę, będziesz musiał dużo czytać, aby zrozumieć,
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters - http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[Dlaczego regularnie mylimy się przy wyznaczaniu czasu działania insuliny (DIA) i dlaczego ma to znaczenie - http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-[What conclusions can we draw when investigating Insulin Sensitivity using the Autosense function within #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+[Jakie wnioski można wyciągnąć, badając wrażliwość na insulinę za pomocą funkcji Autosense w #OpenAPS? http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
 <http://seemycgm.com/2017/10/29/fine-tuning-settings/>
 
