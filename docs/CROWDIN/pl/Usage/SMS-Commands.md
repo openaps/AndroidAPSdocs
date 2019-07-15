@@ -80,7 +80,7 @@ Wyślij SMS-a na telefon z uruchomionym AndroidAPS z któregokolwiek zatwierdzon
     ## CAL 5.6
     
     - Aby wysłać kalibrację 5.6 odpowiedz kodem Rrt (przykład kodu)
-    - Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+    - Kalibracja wysłana (jeśli xDrip jest zainstalowany. Akceptowanie kalibracji musi być włączone w xDrip +)
     
     ## PROFILE STATUS
     
@@ -92,8 +92,8 @@ Wyślij SMS-a na telefon z uruchomionym AndroidAPS z któregokolwiek zatwierdzon
     
     ## PROFILE 1
     
-    - To switch profile to Profile1 100% reply with code Any
+    - Aby zmienić profil na Profile1 100% odpowiedz kodem Any
     
     ## PROFILE 2 30
     
-    - To switch profile to Profile2 30% reply with code Any
+    - Aby zmienić profil na Profile2 30% odpowiedz kodem Any
