@@ -58,42 +58,42 @@ Wyślij SMS-a na telefon z uruchomionym AndroidAPS z któregokolwiek zatwierdzon
 
 ## Basal 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Aby rozpocząć dawkę bazową 30% odpowiedz kodem Swe (przykład kodu)
 
-## BASAL 30% 50
+## Basal 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Aby rozpocząć dawkę bazową 30% przez 50 min odpowiedz kodem Swe (przykład kodu)
 
-## BOLUS 1.2
+## Bolus 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
-
-## EXTENDED STOP/CANCEL
-
-- To stop extended bolus reply with code EmF
-
-## EXTENDED 2 120
-
-- To start extended bolus 2U for 120 min reply with code EmF
-
-## CAL 5.6
-
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
-
-## PROFILE STATUS
-
-- Profile1
-
-## PROFILE LIST
-
-- 1.`Profile1` 2.`Profile2`
-
-## PROFILE 1
-
-- To switch profile to Profile1 100% reply with code Any
-
-## PROFILE 2 30
-
-- To switch profile to Profile2 30% reply with code Any
+- Aby dostarczyć bolusa 1,2U odpowiedz z kodem Rrt (przykład kodu)
+- Bolus zdalny jest niedozwolony (* w ciągu 15 minut po ostatnim bolusie lub jeśli zdalne poleceniach nie są dozwolone </ 0>)</li> </ul> 
+    
+    ## EXTENDED STOP/CANCEL
+    
+    - Aby zatrzymać bolus przedłużony wprowadź kod EmF (przykład kodu)
+    
+    ## EXTENDED 2 120
+    
+    - Aby rozpocząć przedłużony bolus 2U na 120 min, odpowiedz kodem EmF
+    
+    ## CAL 5.6
+    
+    - Aby wysłać kalibrację 5.6 odpowiedz kodem Rrt (przykład kodu)
+    - Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+    
+    ## PROFILE STATUS
+    
+    - Profile1
+    
+    ## PROFILE LIST
+    
+    - 1.`Profile1` 2.`Profile2`
+    
+    ## PROFILE 1
+    
+    - To switch profile to Profile1 100% reply with code Any
+    
+    ## PROFILE 2 30
+    
+    - To switch profile to Profile2 30% reply with code Any
