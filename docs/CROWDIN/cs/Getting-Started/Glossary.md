@@ -72,7 +72,7 @@
 </tr>
 <tr>
 <td>Zdroj glykémie (BG source)</td>
- <td>Where do your glucose values come from?</td>
+ <td>Odkud pocházejí hodnoty vaší glykémie?</td>
  <td>CGM / FGM</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - Zdroj glykémie</a></td>
 </tr>
@@ -186,221 +186,221 @@
 </tr>
 <tr>
  <td>ISF</td>
- <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
+ <td>citlivost na inzulin (někdy též korekční faktor) - o kolik mmol sníží glykémii jedna jednotka inzulinu</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LGS</td>
- <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
- <td><a href="../Usage/Objectives.html">objective 4</a></td>
+ <td>Vypnutí při nízké glykémii (Low Glucose Suspend)<br>Systém AAPS sníží nebo zastaví bazál, pokud glykémie klesá. Pokud však glykémie stoupá, pak zvýší bazál pouze v případě záporného IOB (v důsledku předchozího LGS), v opačném případě zůstávají bazální dávky stejné jako ve vašem zvoleném profilu. Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.</td>
+ <td><a href="../Usage/Objectives.html">Cíl 4</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
+ <td>Bezplatný open-source operační systém pro smartphony atd.<br>alternativní OS pro smartphony, které nevyužívají systém Android 8.1 (Oreo)<br>(pokud používáte pumpu Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Pumpa Combo</a></td>
 </tr>
 <tr>
- <td>Log files</td>
- <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
+ <td>Soubory protokolů</td>
+ <td>Záznam veškerých akcí systému AAPS (užitečné při řešení potíží a ladění)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - Soubory protokolů</a></td>
 </tr>
 <tr>
  <td>MA</td>
- <td>meal assist - standard algorithm to handle carbs</td>
+ <td>Meal Assist - standardní algoritmus pro práci se sacharidy</td>
  <td>AMA / SMB</td>
  <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
 </tr>
 <tr>
  <td>maxIOB</td>
- <td>safety feature - maximum total IOB AAPS can't go over</td>
+ <td>Bezpečnostní funkce - maximální celkový IOB, který systém AAPS nemůže překročit</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>Vysílač s technologií bluetooth určený k tomu, aby senzor Freestyle Libre fungoval jako CGM</td>
  <td>BlueReader / Blukon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
 <tr>
  <td>min_5m_carbimpact</td>
- <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
+ <td>Bezpečnostní funkce - výchozí hodnota vstřebávání sacharidů používaná v případě, kdy nelze absorpci vypočítat dynamicky na základě reakcí glykémie</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - Konfigurace</a></td>
 </tr>
 <tr>
  <td>Nightscout</td>
- <td>open source project to access and report CGM data</td>
+ <td>Open source projekt umožňující přístup k datům z CGM a tvorbu výkazů</td>
  <td>Nightscout Reporter</td>
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
  <td>NS Client</td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td>Součást systému AAPS sloužící k připojení k vašemu Nightscoutu</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td>Nightscout Reporter</td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
+ <td>Nástroj vytvořený spřízněným looperem, který slouží k vytváření PDF výkazů z dat Nightscoutu</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter na Facebooku</a></td>
 </tr>
 <tr>
- <td>Objectives</td>
- <td>learning program within AAPS guiding you step by step from open to closed loop</td>
+ <td>Cíle</td>
+ <td>Výukový program v systému AAPS, který vás krok za krokem povede od otevřené smyčky až k uzavřené smyčce</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
+ <td><a href="../Usage/Objectives.html">Wiki - Cíle</a></td>
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
+ <td>Otevřený systém umělé slinivky (Open Artificial Pancreas System)<br>APS běží na malých počítačích (např. Raspberry Pi)<br>Systém AAPS využívá některé funkce OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">Dokumentace k OpenAPS</a></td>
 </tr>
 <tr>
- <td>Open Loop</td>
- <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td>Otevřená smyčka</td>
+ <td>Systém navrhne doporučené úpravy, které je následně třeba manuálně provést na pumpě</td>
+ <td>Uzavřená smyčka</td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - Konfigurace</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
- <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
+ <td>Detekce citlivosti<br>„implementace referenčního návrhu verze 0/1“ - klíčový algoritmus na pozadí OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Detekce citlivosti</a></td>
 </tr>
 <tr>
- <td>Peak time</td>
- <td>time of maximum effect of insulin given</td>
+ <td>Vrchol křivky</td>
+ <td>Doba maximálního účinku podaného inzulinu</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Konfigurace</a></td>
 </tr>
 <tr>
  <td>PH</td>
- <td>pump history (entry in treatments tab)</td>
+ <td>Historie pumpy (záznam na kartě Ošetření)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Snímky obrazovky</a></td>
 </tr>
 <tr>
- <td>Predictions</td>
- <td>preditions for BG in the future based on different calculations</td>
+ <td>Predikce</td>
+ <td>Predikce budoucího vývoje glykémie založená na různých výpočtech</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Křivky predikce</a></td>
 </tr>
 <tr>
- <td>Profile</td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
+ <td>Profil</td>
+ <td>Základní parametry pro léčbu (bazální dávky, DIA, IC, ISF, cílová glykémie)<br>lze definovat místně nebo prostřednictvím Nightscoutu</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - Profil</a></td>
 </tr>
 <tr>
- <td>Profile switch</td>
- <td>(temporary) change of profile used or percentual increase/decrease</td>
+ <td>Přepnutí profilu</td>
+ <td>(dočasná) Změna používaného profilu nebo procentuální zvýšení/snížení</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
+ <td><a href="../Usage/Profiles.html">Wiki - Přepnutí profilu</a></td>
 </tr>
 <tr>
  <td>RES</td>
- <td>status light overdue reservoir change on homescreen</td>
+ <td>Stavový indikátor na domovské obrazovce upozorňující na starý zásobník</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots">Snímky obrazovky</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
+ <td>Open source hardwarové zařízení sloužící jako adaptér z Bluetooth Low Energy (BLE) na 916MHz bezdrátovou komunikaci (používá se se starými pumpami Medtronic)</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>SAGE</td>
- <td>sensor age - displayed in Nightscout if information was entered in the AAPS careportal tab</td>
+ <td>Stáří senzoru (sensor age) - zobrazené v Nightscoutu, pokud byla tato informace zadána do AAPS v části Péče</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>SEN</td>
- <td>status light sensor change on homescreen</td>
+ <td>Stavový indikátor na domovské obrazovce upozorňující na výměnu senzoru</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots">Snímky obrazovky</a></td>
 </tr>
 <tr>
- <td>Sensivity detection</td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>Detekce citlivosti</td>
+ <td>Výpočet změn citlivosti na inzulin v důsledku cvičení, hormonů atd.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
- <td>Sensor noise</td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td>Šum senzoru</td>
+ <td>Nestabilní CGM data vedoucí ke „skokům" v hodnotách glykémie</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - Šum senzoru</a></td>
 </tr>
 <tr>
  <td>SMB</td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
+ <td>Super Micro Bolus<br>pokročilá funkce pro rychlejší úpravu glykémie</td>
  <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>Super bolus</td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td>Přesun části bazálu z budoucnosti do bolusu pro rychlejší úpravu glykémie</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
  <td>TBB</td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td>Total Base Basal (celkový bazální inzulin za 24 hodin)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>TBR</td>
- <td>temporary basal rate</td>
+ <td>Temporary Basal Rate - Dočasná bazální dávka</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>TDD</td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td>Total Daily Dose - Celková denní dávka (bolusy + bazály za celý den)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>TT</td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td>DC (TT)</td>
+ <td>Dočasný cíl<br>dočasné zvýšení nebo snížení cílové glykémie (rozsahu)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Dočasné cíle</a></td>
 </tr>
 <tr>
  <td>UAM</td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td>Neoznámené jídlo (Unannounced Meals) - detekce výraznějšího vzestupu glykémie v důsledku jídla, adrenalinu nebo dalších faktorů a snaha o jeho pokrytí pomocí funkce SMB</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Virtual pump</td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Virtuální pumpa</td>
+ <td>Možnost vyzkoušet si funkce systému AAPS nebo pro diabetiky s pumpou, která není systémem AndroidAPS podporována</td>
+ <td>Otevřená smyčka</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>
- <td>open source software to read CGM systems</td>
+ <td>Open source software pro čtení dat z CGM</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
- <td>Zero-temp</td>
- <td>temporary basal rate with 0% (no basal insulin delivery)</td>
+ <td>Nulový bazál</td>
+ <td>Dočasná bazální dávka 0 % (vypnutý bazál)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+ <td colspan=4>Viz také <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
 </tr>
 </table>
