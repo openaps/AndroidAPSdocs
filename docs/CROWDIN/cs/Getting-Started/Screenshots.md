@@ -36,7 +36,7 @@ The solid blue line shows the basal delivery of your pump. The dotted blue line 
 
 **Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
 
-## Kalkulátor
+## Kalkulačka
 
 ![Bolus kalkukátor](../images/Screenshot_Bolus_calculator.png)
 
