@@ -27,22 +27,22 @@ Připojte se k hlavní skupině [AndroidAPS na Facebooku](https://www.facebook.c
 
 * [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australští uživatelé OpenAPS, Loop a AndroidAPS
 
-### Czech and Slovak
+### Česko a Slovensko
 
-* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech speaking users of AndroidAPS
+* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Česky mluvící uživatelé AndroidAPS
 
-### Germany
+### Německo
 
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/): German speaking users of OpenAPS, Loop and AndroidAPS
-* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
+* [Looped-DE](https://www.facebook.com/groups/loopedDE/): Německy mluvící uživatelé OpenAPS, Loop a AndroidAPS
+* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre jako CGM/FGM
 * [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
-* [Looper Meetings Germany & Austria](http://loopertreffen.androidaps.de)
+* [Setkání uživatelů v Německu a Rakousku](http://loopertreffen.androidaps.de)
 
-### UK
+### Velká Británie
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (Uživatelé OpenAPS, Loop a AndroidAPS z Británie)
 
-### Netherlands
+### Nizozemsko
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
+* [Looped-NL](https://www.facebook.com/groups/117102135652893): Holandsky mluvící uživatelé OpenAPS, Loop a AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
