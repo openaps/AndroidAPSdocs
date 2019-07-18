@@ -41,7 +41,7 @@ OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly a
 
 ### Maximální povolený bazál [U/h]
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). Doporučuje se nastavit toto na rozumnou hodnotu. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
 
 ### Maximální bazální IOB [U]
 
