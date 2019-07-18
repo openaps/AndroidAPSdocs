@@ -29,7 +29,7 @@ This is the maximum amount of bolus insulin that AAPS is allowed to deliver. Thi
 
 ### Maximální povolené sacharidy [g]
 
-This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. Toto nastavení slouží jako bezpečnostní limit, aby nemohlo dojít k poslaní enormní dávky, nebo jako chyba uživatele. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. Nastavení slouží jako bezpečnostní limit pro zabránění odeslání příliš velkého bolusu vzhledem k množství zadaných sacharidů, nebo k ohlídání chyby uživatele. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
 ## Smyčka
 
