@@ -36,7 +36,7 @@ Jednoduchý profil s jediným časovým blokem pro DIA, IC, ISF, základní baz�
 
 ## Inzulín
 
-Vyberte typ inzulínové křivky, kterou používáte. Všechny varianty „Rychle působící Oref“, „Ultra rychlý Oref“ a „Volitelný vrchol Oref“ mají exponenciální tvar. Více informací najdete v [dokumentaci k OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Křivky se liší podle DIA a času max. účinnosti inzulínu. Hodnota DIA by vždy měla být nejméně 5. Další informace se můžete dočíst v části Výběr inzulínového profilu na [této](../Getting-Started/Screenshots.md) stránce. Pro „Rychle působící“ a „Ultra rychlý“ inzulín je DIA jediná proměnná, kterou si můžete upravovat. Čas maximální účinnosti je fixní. „Volitelný vrchol“ umožňuje nastavit obě proměnné – DIA i čas maximální účinnosti inzulínu. Tato volba je určena pouze pro pokročilé uživatele, kteří znají důsledky nastavených hodnot. The insulin curve graph helps you to understand the different curves. Zaškrtnutím políčka vedle názvu si je můžete prohlédnout v záložce. Další možnost jejich zobrazení je přes hamburgerové menu.
+Vyberte typ inzulínové křivky, kterou používáte. Všechny varianty „Rychle působící Oref“, „Ultra rychlý Oref“ a „Volitelný vrchol Oref“ mají exponenciální tvar. Více informací najdete v [dokumentaci k OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Křivky se liší podle DIA a času max. účinnosti inzulínu. Hodnota DIA by vždy měla být nejméně 5. Další informace se můžete dočíst v části Výběr inzulínového profilu na [této](../Getting-Started/Screenshots.md) stránce. Pro „Rychle působící“ a „Ultra rychlý“ inzulín je DIA jediná proměnná, kterou si můžete upravovat. Čas maximální účinnosti je fixní. „Volitelný vrchol“ umožňuje nastavit obě proměnné – DIA i čas maximální účinnosti inzulínu. Tato volba je určena pouze pro pokročilé uživatele, kteří znají důsledky nastavených hodnot. Graf inzulínových křivek vám pomůže porozumět různým křivkám. Zaškrtnutím políčka vedle názvu si je můžete prohlédnout v záložce. Další možnost jejich zobrazení je přes hamburgerové menu.
 
 ### Rychle působící Oref
 
@@ -52,7 +52,7 @@ Vyberte typ inzulínové křivky, kterou používáte. Všechny varianty „Rych
 
 Pro velké množství lidí nemá po 3–4 hodinách FIASP prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Proto AndroidAPS používá jako minimální hodnotu DIA 5 h.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Konfigurace Ultra-rychlý Oref](../images/ConfBuild_UltraRapidOref.png)
 
 ### Volitelný vrchol Oref
 
@@ -73,7 +73,7 @@ Vyberte, který zdroj glykémií používáte – další informace k nastavení
 
 ## Pumpy
 
-Select the pump you are using.
+Vyberte pumpu, kterou používáte.
 
 * [DanaR](DanaR-Insulin-Pump.md)
 * DanaR Korea (pro korejskou verzi pumpy DanaR)
@@ -159,7 +159,7 @@ Vytvořte si tlačítko pro určité standardní jídlo (sacharidy a parametry p
 
 Poznámka: Tlačítko nebude viditelné, pokud je aktuální čas mimo časový interval definovaný v nastavení nebo máte-li dostatek IOB k pokrytí sacharidů definovaných kalkulačkou.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Tlačítko průvodce nastavením](../images/ConfBuild_QuickWizard.png)
 
 #### Pokročilá nastavení
 
@@ -179,70 +179,70 @@ Tlačítka pro rychlý přístup k běžně používaným funkcím:
 
 Někteří lékaři doporučují – hlavně pro nové uživatele pumpy – poměr bazál-bolus 50:50. Poměr se proto vypočítá jako TDD / 2 * TBB (celková denní dávka = součet hodnot bazálních dávek za 24 hodin). Jiní dávají přednost hodnotám, kdy TBB tvoří 32 % až 37 % z TDD. Stejně jako podobná pravidla má i toto v reálném životě omezenou platnost. Poznámka: Váš diabetes může být jiný!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
+![Záložka Akce](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Portál nastavení péče
 
 V části Péče je možné přidávat položky ošetření a zobrazit podrobnosti týkající se senzoru, inzulínu, kanyly nebo baterie pumpy.
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Poznámka: Při přidání položky do části Péče (např. jídlo, bolus, korekční bolus apod.) nebude podán **žádný inzulín**
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Sacharidy zadané v části Péče (např. přídavek sacharidů) budou započítány do COB.
 
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Záložka Ošetření](../images/ConfBuild_CarePortal.png)
 
 ### SMS komunikátor
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
+Umožňuje vzdálené ovládání některých funkcí AndroidAPS prostřednictvím SMS, viz [SMS příkazy](../Usage/SMS-Commands.md), kde najdete další informace o nastavení.
 
 ### Jídlo
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Zobrazuje jídla přidaná do databáze Nightscoutu. Více informací viz [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Poznámka: Tyto záznamy nelze použít v Kalkulačce v AndroidAPS. (Pouze je zobrazit)
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Sledování a ovládání AAPS prostřednictvím hodinek s Wear OS (viz [stránka Watchfaces](../Configuration/Watchfaces.md)). Chcete-li nastavit parametry pro výpočet bolusu na hodinkách (tj. 15min trend, COB…), klikněte na nastavení (ozubené kolo).
 
 Pokud chcete poslat například bolus z hodinek, potřebujete v „Nastavení hodinek“ aktivovat volbu „Ovládání z hodinek“.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Nastavení hodinek](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Prostřednictvím záložky Wear nebo hamburger menu (levý horní roh obrazovky, když není záložka zobrazena) můžete
 
 * znovu poslat všechna data. To může pomoci v případech, kdy byly hodinky nějakou dobu nedostupné a potřebujete do nich poslat data.
 * Otevřít nastavení hodinek přímo z telefonu.
 
 ### Stavová řádka xDrip (hodinky)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Zobrazí na displeji hodinek (xDrip+ watchface) stav smyčky (pokud nepoužíváte AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md))
 
 ### Oznámení v notifikační liště
 
-Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
+V telefonu přidá do notifikační lišty nebo na zamykací obrazovku informace o aktuální glykémii, trendu, aktivním dočasném bazálu v %, bazálu v U/h, bazálním profilu, IOB a rozdělení bolusu a bazálu v IOB.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![Widget AAPS](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+Nastavení synchronizace dat AndroidAPS s Nightscoutem.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
+Je-li aktivována možnost **Zaznamenat spuštění aplikace do NS**, bude každý restart AndroidAPS zobrazen v Nightscoutu. Může to být praktické v případě problémů s aplikací (např. když není aplikace vyjmuta z optimalizace baterie telefonu). Na druhou stranu to může zahltit graf Nightscoutu spoustou položek.
 
 #### Nastavení alarmů
 
-Activate/deactivate AndroidAPS alarms
+Aktivace/deaktivace alarmů v AndroidAPS
 
 ![Nastavení alarmů](../images/ConfBuild_NSClient_Alarms.png)
 
 #### Nastavení připojení
 
-Offline looping, disable roaming...
+Offline smyčka, zakázat roaming…
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Chcete-li používat pouze konkrétní síť Wi-Fi, můžete zadat její **WiFi SSID**. Můžete vložit více SSID oddělených středníkem. Chcete-li smazat všechna SSID, nechejte pole prázdné.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Nastavení připojení k Nightscoutu](../images/ConfBuild_ConnectionSettings.png)
 
 #### Pokročilá nastavení
 
@@ -253,12 +253,12 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 * Zakázat nahrávání do NS
 * Vždy pracovat s absolutními hodnotami bazálu -> pokud chcete používat [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html), musíte mít tuto volbu aktivovanou.
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Rozšířená nastavení Nightscoutu](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Údržba
 
-Email and number of logs to be send. Normally no change neccessary.
+E-mail a počet logů, které budou odeslány. Obvykle není třeba tyto hodnoty měnit.
 
 ### Konfigurátor
 
-Use tab for config builder instead of hambuger menu.
+Místo hamburger menu použijte záložku Konfigurace.
