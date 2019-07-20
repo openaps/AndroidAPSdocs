@@ -33,10 +33,10 @@ Es macht einen großen Unterschied, ob du AAPS/Durchschnittliche Sensititvität 
 
 Oref0 / Oref1 - nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, werden also bei Berechnungen nicht mehr berücksichtigt
 
-![COB nach oref0](../images/cob_oref0.png)
+![COB nach oref0](../images/cob_oref0_orange.png)
 
 AAPS, Durchschnittliche Sensitivität - Absorption wird so berechnet, dass nach der vorgegeben Zeit `COB == 0` gilt.
 
-![COB nach AAPS](../images/cob_aaps.png)
+![COB nach AAPS](../images/cob_aaps2_orange.png)
 
-Falls die minimale Kohlenhydrat-Absorption statt einem aus den Entwicklungen des BZ berechneten Wert genutzt wird, wird in der COB-Kurve ein grüner Punkt angezeigt.
+If minimal carbs absorption is used instead of value calculated from deviations, an orange dot appears on COB graph
