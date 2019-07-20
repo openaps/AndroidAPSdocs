@@ -39,4 +39,4 @@ AAPS, Durchschnittliche Sensitivität - Absorption wird so berechnet, dass nach 
 
 ![COB nach AAPS](../images/cob_aaps2_orange.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, an orange dot appears on COB graph
+Falls die minimale Kohlenhydrat-Absorption statt einem aus den Entwicklungen des BZ berechneten Wert genutzt wird, wird in der COB-Kurve ein orangener Punkt angezeigt.
