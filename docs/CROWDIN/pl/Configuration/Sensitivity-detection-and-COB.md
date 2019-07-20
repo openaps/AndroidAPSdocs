@@ -33,10 +33,10 @@ Należy podkreślić, iż pomiędzy modelami wykrywania wrażliwości - AAPS, Ś
 
 Oref0 / Oref1 - węglowodany niewchłonięte są "odcinane"/ignorowane po określonym czasie
 
-![Aktywne węglowodany (COB) z oref0](../images/cob_oref0.png)
+![Aktywne węglowodany (COB) z oref0](../images/cob_oref0_orange.png)
 
 AAPS, Średnia ważona - absorpcja jest obliczana w taki sposób, aby po określonym czasie liczba aktywnych węglowodanów zeszła do zera (`COB == 0`)
 
-![Aktywne węglowodany (COB) z AAPS](../images/cob_aaps.png)
+![Aktywne węglowodany (COB) z AAPS](../images/cob_aaps2_orange.png)
 
-Jeśli zamiast wartości obliczonej na podstawie odchyleń zastosowana zostanie minimalna absorpcja węglowodorów, na wykresie COB pojawia się zielona kropka
+If minimal carbs absorption is used instead of value calculated from deviations, an orange dot appears on COB graph
