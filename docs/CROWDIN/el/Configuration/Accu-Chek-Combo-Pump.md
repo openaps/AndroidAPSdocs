@@ -34,7 +34,7 @@
       - Ορίστε TBR *Διάρκεια αύξησης* έως 15 λεπτά
       - Ενεργοποιήστε το Bluetooth
     - Προτεινόμενες (με μπλε χρώμα στα στιγμιότυπα οθόνης) 
-      - Set low cartridge alarm to your liking
+      - Ορίστε συναγερμό χαμηλή αμπούλα σύμφωνα με τις προτιμήσεις σας
       - Configure a max bolus suited for your therapy to protect against bugs in the software
       - Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
       - Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
