@@ -66,24 +66,20 @@
   
   ![Combo should be next to phone](../images/Combo_next_to_Phone.png)
   
-  2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
+  2. Απενεργοποιήστε ή αφαιρέστε οποιαδήποτε άλλη συσκευή bluetooth, ώστε να μην είναι δυνατή η σύνδεση με το τηλέφωνο κατά τη διάρκεια της σύζευξης. Οποιαδήποτε παράλληλη επικοινωνία bluetooth ή προτροπή για τη δημιουργία συνδέσεων μπορεί να διαταράξει τη διαδικασία σύζευξης.
   
-  3.     Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until 
-        **NO DEVICE** is shown.
+  3.     Διαγράψτε τις ήδη συνδεδεμένες συσκευές στο μενού Bluetooth της αντλίας: **BLUETOOTH ΡΥΘΜΙΣΕΙΣ / ΣΥΝΔΕΣΗ / ΑΦΑΙΡΕΣΗ** μέχρι να εμφανίζεται **ΚΑΜΙΑ ΣΥΣΚΕΥΗ**.
         
   
-  4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
-  5. Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
-  6. Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
-  7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** * Step 5 and 6 have to be in a short timing.
-  8.     Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
-        bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
+  4. Διαγράψτε την αντλία που είναι ήδη συνδεδεμένη στο τηλέφωνο μέσω Bluetooth: Στην περιοχή Ρυθμίσεις / Bluetooth, αφαιρέστε τη συζευγμένη συσκευή "**SpiritCombo**"
+  5. Βεβαιωθείτε ότι το AAPS δεν λειτουργεί στο παρασκήνιο σε κύκλωμα. Απενεργοποιήστε το κύκλωμα στο AAPS.
+  6. Τώρα ξεκινήστε το ruffy στο τηλέφωνο. Μπορείτε να πατήσετε Reset! και αφαιρέστε τη παλιά σύνδεση. Μετά πατήστε Σύνδεση!.
+  7. Στο μενού Bluetooth της αντλίας, μεταβείτε στο **ΠΡΟΣΘΗΚΗ ΣΥΣΚΕΥΗΣ / ΠΡΟΣΘΉΚΗ ΣΥΝΔΕΣΗΣ**. Πατήστε *ΣΎΝΔΕΣΗ!** * Τα βήματα 5 και 6 πρέπει να γίνουν σε σύντομο χρονικό διάστημα.
+  8.     Τώρα η αντλία θα πρέπει να εμφανίσει το όνομα BT του τηλεφώνου για να επιλέξετε για σύζευξη. Εδώ είναι σημαντικό να περιμένετε τουλάχιστον 5s
+        πριν πατήσετε το κουμπί επιλογής στην αντλία. Διαφορετικά, η αντλία δεν θα στείλει το αίτημα σύζευξης στο τηλέφωνο.
         
-        * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
-          between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
-          without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings.
-        * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
-          compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
+        * Εάν η Αντλία Combo έχει ρυθμιστεί σε 5 δευτερόλεπτα διάρκεια φωτισμού οθόνης, μπορείτε να την δοκιμάσετε με 40 δευτερόλεπτα (αρχική ρύθμιση). Από εμπειρία, το διάστημα μεταξύ της αντλία να εμφανιστεί στο τηλέφωνο και να μπορείς να το επιλέξεις είναι 5 με 10 δευτερόλεπτα. Σε πολλές άλλες περιπτώσεις, το χρονικό περιθώριο περνάει, χωρίς επιτυχημένη σύζευξη. Αργότερα θα πρέπει να το επαναφέρετε στα 5 δευτερόλεπτα, για να ικανοποιήσετε τις ρυθμίσεις του AAPS Combo.
+        * Εάν η αντλία δεν εμφανίζει το τηλέφωνο ως συσκευή σύζευξης καθόλου, το Bluetooth του τηλεφώνου σας πιθανώς δεν είναι συμβατό με την αντλία. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
           possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
           (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
         
