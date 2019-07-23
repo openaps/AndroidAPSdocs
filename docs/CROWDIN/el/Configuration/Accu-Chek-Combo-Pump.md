@@ -35,10 +35,10 @@
       - Ενεργοποιήστε το Bluetooth
     - Προτεινόμενες (με μπλε χρώμα στα στιγμιότυπα οθόνης) 
       - Ορίστε συναγερμό χαμηλή αμπούλα σύμφωνα με τις προτιμήσεις σας
-      - Configure a max bolus suited for your therapy to protect against bugs in the software
-      - Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-      - Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-      - Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+      - Ρυθμίστε μέγιστο bolus κατάλληλο για τη θεραπεία σας για την προστασία από σφάλματα του λογισμικού
+      - Ομοίως, ρυθμίστε μέγιστη διάρκεια TBR για ασφάλεια. Αφήστε τουλάχιστον 3 ώρες, αφού η επιλογή αποσύνδεσης της αντλίας για 3 ώρες ρυθμίζει το 0% για 3 ώρες.
+      - Ενεργοποιήστε το κλείδωμα πλήκτρων στην αντλία για να αποφύγετε το bolus από την αντλία, ιδιαίτ. όταν η αντλία χρησιμοποιήθηκε πριν και το γρήγορο bolus ήταν μια συνήθεια.
+      - Ορίστε χρονικό όριο οθόνης και χρονικό όριο μενού στο ελάχιστο των 5,5 και 5 αντίστοιχα. Αυτό επιτρέπει στο AAPS να επανέλθει πιο γρήγορα από καταστάσεις σφάλματος και να μειώσει τις δονήσεις που μπορεί να προκύψουν κατά τη διάρκεια τέτοιων σφαλμάτων
   
   ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
   
@@ -48,11 +48,11 @@
   
   ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
   
-  - Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
-  - Make sure to read the wiki to understand how to setup AndroidAPS.
-  - Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
-  - Follow the link <http://ruffy.AndroidAPS.org> and clone ruffy via git.
-  - Install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch. Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code. If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
+  - Εγκαταστήστε το AndroidAPS όπως περιγράφεται στον [οδηγό AndroidAPS](http://wiki.AndroidAPS.org).
+  - Σιγουρευτείτε ότι διαβάσατε τον οδηγό και καταλάβατε πως να φτιάξετε το AndroidAPS.
+  - Επιλέξτε την προσθήκη MDI στο AndroidAPS, όχι την προσθήκη Combo σε αυτό το σημείο για να αποφύγουμε την παρέμβαση με το ruffy κατά τη διαδικασία της ζεύξης.
+  - Ακολουθήστε το σύνδεσμο <http://ruffy.AndroidAPS.org> και αντιγράψτε το ruffy μέσω του git.
+  - Εγκαταστήστε το ruffy και χρησιμοποιήστετο για σύζευξη με την αντλία. Εάν δεν δουλεύει μετά από μερικές προσπάθειες, γυρίστε το στην επιλογή `σύζευξη`, συνδέστε με την αντλία και μετά γυρίστε το πίσω στην αρχική επιλογή. Να ξέρετε ότι διαδικασία της σύζευξης μπορεί να αποτύχει αρχικά (αλλά γίνετε μόνο μια φορά) και ίσως χρειαστεί μερικές προσπάθειες, αναγνωρίστε γρήγορα τα σημάδια ότι κάτι δεν πάει καλά, και όταν ξαναπροσπαθήσετε αφαιρέστε την αντλία από τις ρυθμίσεις του bluetooth εξαρχής. Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code. If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
   - When AAPS is using ruffy, the ruffy app can't be used. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
   - If the pump is completely new, you need to do one bolus on the pump, so the pump creates a first history entry.
   - Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
