@@ -1,17 +1,17 @@
-# How to translate AndroidAPS
+# Jak przetłumaczyć AndroidAPS
 
-* Go to <https://translations.androidaps.org> or <https://wikitranslations.androidaps.org> and login using your Github account
+* Przejdź do <https://translations.androidaps.org> lub <https://wikitranslations.androidaps.org> i zaloguj się przy użyciu konta Github
 
-* Contact [Milos](https://gitter.im/MilosKozak) or [Adrian](https://gitter.im/AdrianLxM) and specify language and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users)
+* Skontaktuj się z [Milos](https://gitter.im/MilosKozak) lub [Adrian](https://gitter.im/AdrianLxM) i określ język oraz czy chcesz być tłumaczem czy korektorem (tylko osoby doświadczone w tłumaczeniu + zaawansowani użytkownicy AndroidAPS)
 
-* When we approve you, click the flag ![](../images/translation-flags.png)
+* Kiedy Cię zaakceptujemy, kliknij flagę ![](../images/translation-flags.png)
 
-* Click strings.xml ![](../images/translations-click-strings.png)
+* Kliknij strings.xml ![](../images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion ![](../images/translations-translate.png)
+* Przetłumacz zdania po lewej stronie przez dodanie nowego tekstu tłumaczenia lub kliknij automatyczne tłumaczenie, które stanie się bazą do Twoich zmian.![](../images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode ![](../images/translations-proofreading-mode.png)
+* Korektorzy tekstu muszą przejść do trybu korekty ![](../images/translations-proofreading-mode.png)
 
-* and approve translated texts ![](../images/translations-proofreading.png)
+* i zatwierdzić przetłumaczone teksty ![](../images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
+Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji AndroidAPS. Na początku dobrze byłoby przejrzeć istniejące tłumaczenia, które nie zostały jeszcze zatwierdzone i sprawdzić błędy lub zatwierdzić je, jeśli są poprawne.

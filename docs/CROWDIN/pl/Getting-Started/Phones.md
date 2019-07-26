@@ -1,13 +1,13 @@
-# Phones
+# Telefony
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Użytkownicy opracowują [listę sprawdzonych telefonów i zegarków](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Możesz używać filtrów do wyświetlania poszczególnych pomp lub telefonów, ale cofnij je, aby zobaczyć wszystkie, gdy skończysz szukać, tak aby następna osoba mogła je zobaczyć.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Aby wprowadzić telefon lub zegarek, który nie jest jeszcze wymieniony w arkuszu kalkulacyjnym wypełnij [formularz](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email [donations@androidaps.org](mailto:hardware@androidaps.org).
+W razie problemów z arkuszem kalkulacyjnym prosimy o e-mail <hardware@androidaps.org>, w przypadku chęci podarowania modelu telefonu/zegarka, które nadal wymagają testów prosimy o e-mail [donations@androidaps.org](mailto:hardware@androidaps.org).
 
-## Phone Background
+## Tapeta telefonu
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![Tapeta na telefon](../images/bg_phone_thump.jpg) </br> Projekt: Thiago :) </br> Jeśli chcesz ozdobić swój telefon AndroidAPS, tutaj możesz pobrać tapetę: ![Tapeta w wysokiej rozdzielczości.](../images/bg_phone.jpg)

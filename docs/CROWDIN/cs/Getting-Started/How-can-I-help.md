@@ -14,7 +14,7 @@ Yay! Podívejte se na problémy, zeptejte se na gitteru - tam je toho vždy mnoh
 
 Skvělé, to se cení - dobrý způsob, jak podpořit!
 
-* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Instead, you can now also contact the documentation team via the new email address: wiki@androidaps.org.
+* Starý gitter kanál týkající se wiki lze najít zde: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Místo toho můžete nyní kontaktovat také dokumentační tým prostřednictvím nové e-mailové adresy wiki@androidaps.org.
 * Návod, jak se to dělá na anglické wiki, lze nalézt zde: [How to make a PR](../make-a-PR.md). Jiné jazyky jsou pouze překladem z angličtiny a nelze je upravovat z důvodů konzistence.
 
 **Mluvím několika jazyky a chci překládat aplikaci nebo dokumentaci**

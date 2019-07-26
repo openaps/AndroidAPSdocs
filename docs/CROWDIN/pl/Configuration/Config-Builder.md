@@ -8,7 +8,7 @@ Where there are additional settings available within the module, you can click o
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
-## Profile
+## Profil
 
 Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
@@ -145,7 +145,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 Define which Buttons are shown on the home screen.
 
 * Treatments
-* Calculator
+* Kalkulator
 * Insulin
 * Carbs
 * CGM (opens xDrip+)

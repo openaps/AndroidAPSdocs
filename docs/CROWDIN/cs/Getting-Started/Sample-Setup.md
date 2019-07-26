@@ -90,16 +90,16 @@ Chcete-li to provést, proveďte na svém smartphonu následující kroky:
 
 ## Nainstalujte AndroidAPS
 
-1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Transfer](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) the generated APK to your phone
+1. Postupujte podle pokynů k [Vytvoření APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
+2. [Nahrajte](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) vygenerované APK do telefonu
 3. [Nakonfigurujte AndroidAPS ](../Configuration/Config-Builder.md) podle svých potřeb pomocí průvodce nastavením nebo ručně
 4. V tomto vzorovém nastavení jsme (mimo jiné) použili
 
-* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md)
+* Zdroj glykémie: `Dexcom G5 App (upravená)` -- zapněte `Nahrávat glykémie do NS` a `Posílat glykémie do xDrip+` (Více [Zdroj glykémií ](../Configuration/BG-Source.md)
 
 ![Nastavení G5](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS Client aktivován (viz [NS Client](../Configuration/Config-Builder#ns-profile) a [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Nainstalujte xDrip+
 

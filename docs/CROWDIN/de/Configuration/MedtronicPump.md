@@ -70,7 +70,7 @@ Anzeige verschiedener Informationen zum aktuellen Pumpenstatus:
 - **Batterie**: Anzeige des Ladestands der Pumpenbatterie (abhängig von Deinen Einstellungen). Dies wird entweder als einfaches Symbol (rot, wenn der Ladestand unter 20% sinkt und damit kritisch wird) oder in Zahlen als Prozentwert und Spannungswert angezeigt.
 - **Letzte Verbindung**: Zeitpunkt der letzten erfolgreichen Verbindung mit der Pumpe.
 - **Letzte Bolus**: Letzter Abgabezeitpunkt eines Bolus.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
+- **Base Basal Rate**: Basalrate, die aktuell in der Pumpe läuft.
 - **Temp basal**: Laufende temporäre Basalrate (kann auch leer sein)
 - **Reservoir**: Insulinstand im Reservoir (Update erfolgt mindestens stündlich).
 - **Errors**: Fehlercode, falls ein Problem erkannt wurde - meistens, wenn es fehlerhafte Einstellungen in der Konfiguration gibt.

@@ -134,7 +134,7 @@ We are aware of this problem, and we are already looking into possible solution 
 
 ### Can I see the power of RileyLink/GNARL?
 
-No. At the moment none of this devices support this and it probably won't even in the future.
+Ne. At the moment none of this devices support this and it probably won't even in the future.
 
 ### Is GNARL full replacement for RileyLink?
 

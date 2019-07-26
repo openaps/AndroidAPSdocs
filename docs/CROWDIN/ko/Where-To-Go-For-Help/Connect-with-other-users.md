@@ -27,6 +27,10 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 
 * [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australian users of OpenAPS, Loop and AndroidAPS
 
+### Czech and Slovak
+
+* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech speaking users of AndroidAPS
+
 ### Germany
 
 * [Looped-DE](https://www.facebook.com/groups/loopedDE/): German speaking users of OpenAPS, Loop and AndroidAPS
