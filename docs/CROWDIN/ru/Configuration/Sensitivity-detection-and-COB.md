@@ -39,4 +39,4 @@ Oref0 / Oref1 - неусвоенные углеводы отбрасываютс
 
 ![Активные углеводы COB из AAPS](../images/cob_aaps2_orange.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, an orange dot appears on COB graph
+Если используется минимальное усвоение углеводов вместо значения, рассчитанного на основе отклонений, на графике активных углеводов COB появится оранжевая точка
