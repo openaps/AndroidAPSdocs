@@ -175,17 +175,17 @@ Cледует регулярно экспортировать настройки
 * История
 * TDD (Общая суточная доза = болюс + базал за день)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Некоторые врачи рекомендуют - особенно для новичков - соотношение базал-болюс 50:50. Поэтому соотношение рассчитывается как общая суточная доза TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). Другие предпочитают расчет суточного болюса TBB как 32% - 37% от суточного инсулина TDD. Как и большинство подобных поравил они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Портал назначений/терапии
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+Позволяет вносить любые записи связанные с компенсацией диабета и просматривать информацию о сенсоре, инсулине, катетере и батарее помпы на закладке Портал назначений/терапии.
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Примечание: **Инсулин не подается**, если вводится через Портал назначений/терапии (болюс на еду, коррекцию...)
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Углеводы, введенные через Портал назначений/терапии (т.е. углеводы на коррекцию) учитываются при подсчете активных углеводов COB.
 
 ![Careportal tab](../images/ConfBuild_CarePortal.png)
 
