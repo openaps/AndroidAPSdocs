@@ -22,17 +22,17 @@
 
 ### Профиль Nightscout (NS)
 
-NS Profile использует профили, которые вы сохранили на вашем сайте nightscout (https://[адресвашегосайта]/profile). Можно использовать [Переключатель профиля](../Usage/Profiles.md) для изменения активного профиля, это записывает профиль в помпу на случай неполадок с AndroidAPS. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS Profile использует профили, которые вы сохранили на вашем сайте nightscout (https://[адресвашегосайта]/profile). Можно использовать [Переключатель профиля](../Usage/Profiles.md) для изменения активного профиля, это записывает профиль в помпу на случай неполадок с AndroidAPS. Это позволяет легко создавать несколько профилей в Nightscout (т.е.. - работа, дом, спорт, праздниrb и т. д.). Вскоре после нажатия кнопки «Сохранить» они будут переданы в AAPS если ваш смартфон подключен к интернету. Даже без подключения к Интернету или без подключения к Nightscout, профили NS доступны в AAPS после синхронизации.
 
-Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Чтобы активировать профиль Nightscout, выберите **переключение профиля**. Нажмите и удерживайте наименование текущего профиля на главном экране AAPS в верхней части (серое поле между светлым синим полем "Незамкнутый/Замкнутый цикл" и темно-синим полем целевой ГК) > Переключение профиля > Выберите профиль > OK. После изменения профиля, AAPS также записывает выбранный профиль в помпу, чтобы он был доступен в случае неполадок с AAPS, и продолжает работать.
 
-Advantage: multiple profiles & easy to edit via PC or tablet
+Преимущества: несколько профилей & легко редактировать с помощью ПК или планшета
 
-Disadvantage: no local changes to profile settings
+Недостаток: невозможность локальных изменений в настройках профиля
 
-### Simple profile
+### Простой профиль
 
-Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
+Простой профиль с одним блоком времени для продолжительности действия инсулина DIA, углеводного коэффициента IC, чувствительности к инсулину ISF, скорости базала и целевым диапазоном (т.е. напр. скорость базала не изменяется в течение дня). Вероятнее всего, будет использоваться для тестирования, если у вас только не одни и те же коэффициенты 24 часа в сутки. После выбора «Простого профиля», в AAPS появится новая вкладка, куда можно ввести данные профиля.
 
 ## Инсулин
 
