@@ -36,7 +36,7 @@ NS Profile использует профили, которые вы сохран
 
 ## Инсулин
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. The DIA should always be at least 5 hours, you can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md) page. For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. The insulin curve graph helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+Выберите тип кривой действия вашего инсулина. Опции 'Быстродействующий Oref', ' Сверхбыстрый Oref' и 'Безпиковый Oref' все имеют экспоненциальный вид. Более подробно см. в [Документах OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), кривые различаются на основе длительности действия инсулина DIA и времени пика. Длительность действия инсулина DIA всегда должна быть не менее 5 часов, подробнее в разделе Профиль инсулина [на этой странице](../Getting-Started/Screenshots.md). Для быстродействующих и сверхбыстрых инсулинов, длительность действия инсулина DIA является единственной переменной, которую можно настроить самостоятельно, время пика фиксированное. Безпиковый позволяет настроить как DIA, так и время пика, эта опция для опытных пользователей, которые знают последствия этих настроек. График инсулина позволяет понять поведение других кривых. Его можно увидеть на вкладке, если отметить галочкой в конфигураторе или выбрать из выпадающего меню слева.
 
 ### Быстродействующий Oref
 
@@ -50,19 +50,19 @@ Select the type of insulin curve you are using. The options 'Rapid-Acting Oref',
 * DIA (длительность действия инсулина) = по крайней мере 5.0 часов
 * Макс. пик = 55 минут после инъекции
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
+Для многих людей действие FIASP практически незаметно спустя 3-4 часа, даже если, как правило, остается 0.0xx ед. Это остаточное количество может быть ощутимо во время занятий спортом, например. Поэтому AndroidAPS использует как минимум 5 часов в качестве продолжительности действия инсулина DIA.
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
 ### Безпиковый Oref
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+На профиле «Безпиковый 0ref» можно самостоятельно ввести время пика. DIA автоматически устанавливается на 5 часов, если более высокое значение не выставлено выше в профиле.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+Этот инсулиновый профиль рекомендуется если используется неподдерживаемый тип инсулина или смесь различных инсулинов.
 
 ## Источник данных гликемии
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
+Выберите источник данных ГК - см. страничку [Источник ГК](BG-Source.md) для получения дополнительной информации по настройкам.
 
 * [xDrip +](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * СК с клиента Nightscout
@@ -73,7 +73,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 ## Помпа
 
-Select the pump you are using.
+Выберите помпу, которой пользуетесь.
 
 * [DanaR](DanaR-Insulin-Pump.md)
 * DanaR Корея (DanaR для корейского рынка)
