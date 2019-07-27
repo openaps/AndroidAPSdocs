@@ -130,7 +130,7 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 
 ## Общее
 
-### Обзор
+### Главный экран
 
 Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 
@@ -151,7 +151,7 @@ Define which Buttons are shown on the home screen.
 
 Furthermore you can set shortcuts for insulin and carb increments and decide wether the notes field should be shown in treatment dialogues.
 
-#### Мастер быстрого болюса
+#### Быстрый болюс
 
 Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
