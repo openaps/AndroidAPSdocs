@@ -19,7 +19,7 @@ V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na Vámi z
 * Nastavení rychlých bolusů Vám dovoluje přidat na hlavní obrazovku tlačítko pro často používaná jídla. Když pak toho tlačítko vyberete, bude na základě aktuálního stavu (dle aktuální hodnoty glykémie, aktivního inzulínu atd. - pokud to nastavíte) vypočítán odpovídající bolus.
 * Pokročilé nastavení pro povolení superbolusu a zobrazení statusu baterie a zásobníku na domovské obrazovce. Status baterie a zásobníku vizuálně upozorňuje na nízkou hladinu inzulínu a baterie, a tak zajišťuje jejich včasnou výměnu.
     
-    ![Status lights - detail](../images/StatusLights.jpg)
+    ![Stavová světla - detail](../images/StatusLights.jpg)
 
 ## Bezpečnost zadání ošetření
 
@@ -80,20 +80,20 @@ V závislosti na ovladači pumpy vybraném v konfiguraci se zde mohou vyskytovat
 * "Logovat spuštění aplikace do NS" vloží do vašich záznamů péče poznámku pokaždé, kdy je aplikace spuštěna. Aplikace by se neměla spouštět vícekrát než jednou denně. Pokud k tomu odchází častěji, jde obvykle o problém. 
 * "Nastavení alarmů" vám umožní vybrat, jaké výchozí Nightscout alarmy se budou v aplikaci používat. Pro fungování alarmů je nutné mít v [Azure, Heroku nebo ns.10be. de](http://www.nightscout.info/wiki/welcome/website-features#customalarms) nastavené proměnné pro alarmy Urgent High, High, Low a Urgent Low. Alarmy budou fungovat pouze za podmínky, že jste stále připojeni k Nightscoutu, a jsou určené pro rodiče/asistenty. Pokud máte zdroj glykémie přímo na svém telefonu, pak místo nich raději použijte alarmy místní aplikace (např. v xDrip+).
 * "Povolení lokálního odesílání" zpřístupní odesílání dat i jiným aplikacím na mobilu, např. xDrip+.
-* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+* Chcete-li používat autotune, musíte mít vybráno "Vždy používat absolutní hodnoty bazálu".
 
 ## SMS komunikátor
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Usage/SMS-Commands.md) but it will only display in Preferences if you have selected this option in the Config Builder.
+Toto nastavení dovoluje vzdálené ovládání telefonu s AAPS posláním SMS s textem jako je zastavení smyčky, nebo poslání bolusu. Další informace jsou uvedeny v [SMS příkazy](../Usage/SMS-Commands.md), ale položka se zobrazí pouze v případě, že jste tuto volbu vybrali v konfigurátoru.
 
 ## Jiné
 
-* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
-* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
-* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
-* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
-* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* Zde můžete nastavit výchozí hodnoty pro dočasné cíle. Dočasné cíle mohou být různé ("Před jídlem" či "Aktivita"). Zvolíte-li dočasný cíl a z rozbalovací nabídky vyberete např. "Před jídlem", předvyplní se formulář právě těmi údaji, které jste uvedli v dříve zmiňovaném nastavení. Další informace o použití Dočasných cílů naleznete v [vlastnosti OpenAPS](../Usage/Open-APS-features.md). 
+* Můžete nastavit výchozí množství inzulínu pro plnění kanyly. Při plnění kanyly se inzulín bude odečítat ze zásobníku, ale nebude se počítat do výpočtů IOB. Podívejte se do příbalového letáku kanyly a hadičky, kolik jednotek potřebujete pro úplné naplnění. Množství se liší podle konkrétního typu.
+* Můžete změnit nastavení zobrazení hlavní stránky a vzhled hodnot glykémie podle toho, zda jsou v cílovém rozsahu. Berte na zřetel, že toto nastavení ovlivňuje pouze vzhled grafu, a nemá žádný vliv ani na váš cíl glykémie, ani na výpočty.
+* "Krátké názvy modulů" vám umožní, abyste viděli více záložek na jedné obrazovce, např. štítek záložky "Open APS" se stane jen "OAPS", "Ošetření" se změní na "OŠET" atd.
+* "Místní upozornění" vám umožňují rozhodnout, po jaké době nedostupnosti dat nebo pumpy se zobrazí výstraha. Pokud se často objevuje výstraha, že je pumpa nedostupná, zapněte BT Watchdog v Rozšířeném Nastavení v sekci pumpa.
 
-## Data Choices
+## Možnosti dat
 
-* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
+* "Fabric Upload" odešle vývojářům reporty o pádech aplikace, a data o používání.
