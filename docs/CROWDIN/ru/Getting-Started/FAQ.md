@@ -94,11 +94,11 @@ AndroidAPS создан для управления помпой и подачи
 </td>
 
 <td class="tg-0pky">
-  The amount of insulin in a given hour time block to maintain BG at a stable level.<br /><br />Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.<br /><br />If BG is dropping, basal rate is too high. And vice-versa.
+  Количество инсулина в заданном часовом блоке для поддержания ГК на стабильном уровне.<br /><br />Проверьте настройки, приостановив цикл и не питаясь, скажем, 5 часов после еды, и проследите, как меняется ГК. Повторите тест несколько раз.<br /><br />Если ГК падает, то скорость базы слишком высока. И наоборот.
 </td>
 
 <td class="tg-0pky">
-  Too high basal rate can lead to low BGs. And vice-versa.<br /><br />AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.<br /><br />So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.<br /><br />Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+  Повышенная скорость подачи базала может привести к низкому уровню ГК. И наоборот.<br /><br />AAPS по умолчанию строит свой алгоритм отталкиваясь от скорости базала. Если базал слишком высокий, то «нулевая временная скорость» будет определяться при большем отрицательном значении активного инсулина IOB, чем нужно. Это приведет к тому, что AAPS будет делать больше корректировок, чем нужно чтобы привести активный инсулин IOB к нулю.<br /><br />Поэтому, слишком высокая база приведет к слишком низкой ГК как из-за высокой базы, так и вследствие корректировок AAPS к цели.<br /><br /> И наоборот, слишком низкая база приведет к высокой гликемии и не поможет снизить уровень ГК до целевого.
 </td>
 
 <td class="tg-0pky">
