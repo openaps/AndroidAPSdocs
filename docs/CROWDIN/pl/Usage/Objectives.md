@@ -68,7 +68,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 
 ## Export & import settings
 
-* **Export settings** on your old phone
+* ** Eksportuj ustawienia ** na starym telefonie
   
   * Hamburger menu (top left corner of screen)
   * Maintenance
@@ -80,7 +80,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 * **Transfer** settings from old to new phone using the file location shown during export
 
 * **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
+* **Import settings** na nowym telefonie 
   * Hamburger menu (top left corner of screen)
   * Maintenance
   * Import settings
