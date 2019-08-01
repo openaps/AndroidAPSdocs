@@ -66,31 +66,31 @@ AndroidAPS создан для управления помпой и подачи
 Эта таблица должна помочь вам оптимизировать настройки. Начните сверху и двигайтесь вниз. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Можно использовать автонастройку [Autotune](https://autotuneweb.azurewebsites.net/) которая даст общее направление, но принимайте рекомендации не вслепую и не во всех ситуациях. Обратите внимание, что настройки дополняют друг друга - вы можете иметь "неправильные" настройки, которые в некоторых обстоятельствах работают хорошо (например, если слишком высокий базал установлен одновременно со слишком высоким углеводным коэффициентом CR), но в других не работают. Это означает, что нужно учитывать все настройки и убедиться, что они совместно работают в различных обстоятельствах.<table class="tg" border=1> 
 
 <th class="tg-0pky">
-  Setting
+  Настройка
 </th>
 
 <th class="tg-0pky">
-  Description & testing
+  Описание & тестирование
 </th>
 
 <th class="tg-0pky">
-  Impact
+  Результат
 </th>
 
 <td class="tg-0pky">
-  Duration of insulin activity (DIA)
+  Продолжительность активности инсулина DIA
 </td>
 
 <td class="tg-0pky">
-  The length of time that insulin decays to zero.<br /><br />This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+  Время, за которое инсулин снижается до нуля.<br /><br />Многими устанавливается слишком непродолжительным. Правильная настройка для большинства - не менее 5 часов, иногда 6 или 7.
 </td>
 
 <td class="tg-0pky">
-  Too short DIA can lead to low BGs. And vice-versa.<br /><br />If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.<br /><br />Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+  Слишком малое значение продолжительности действия инсулина DIA может привести к низкой ГК. И наоборот.<br /><br />Если время действия инсулина DIA короткое, AAPS слишком рано посчитает, что предыдущий болюс отработал, и даст больше инсулина при все еще высоком сахаре. (Фактически, алгоритм не выжидает, а продолжает добавлять инсулин, предсказывая, что произойдет). Это, по сути, создает «затоваривание инсулина», о котором ААПС не знает.<br /><br /> Итак, если время DIA слишком короткое, то за высокой ГК последует слишком жесткая коррекция и в результате AAPS приведет к низкой ГК.
 </td>
 
 <td class="tg-0pky">
-  Basal rate schedule (U/hr)
+  График базала (ед/ч)
 </td>
 
 <td class="tg-0pky">
