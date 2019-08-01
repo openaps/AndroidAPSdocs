@@ -12,7 +12,7 @@ While Medtronic driver was tested with good test group, it is still considered a
 
 * * *
 
-## Hardware and software requirements
+## Requisiti hardware e software
 
 - **Phone:** Medtronic driver should work with any phone supporting BLE
 - **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. Device that does is called RileyLink (you can get it here [getrileylink.org](https://getrileylink.org/)). You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). If you are feeling adventurous you can also try Gnarl ([here](https://github.com/ecc1/gnarl)), which is sort-of RileyLink-clone. 
