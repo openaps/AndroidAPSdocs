@@ -4,7 +4,7 @@ If not already set up then download [xDrip+](https://github.com/NightscoutFounda
 
 For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Tyto vysílače mají nový firmware, a poslední stabilní verze xDrip+ (2019/01/10) si s ním neporadí.
 
-**At the moment there are some problems with nightly builds after 2019/05/21 asking for G6 calibration.**
+**If your Dexcom transmitter's serial no. is starting with 8G... try nightly build 2019/07/28 or later.**
 
 ## Basic settings for all CGM & FGM systems
 

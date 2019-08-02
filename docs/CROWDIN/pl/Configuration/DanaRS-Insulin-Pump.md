@@ -1,4 +1,4 @@
-# DanaRS Pump
+# Pompa Dana RS
 
 *These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
 
@@ -6,7 +6,7 @@
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Wybierz Menu, dotykając 3 kropki w prawym górnym rogu. Wybierz Ustawienia
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
@@ -40,11 +40,11 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 * Delete error entry in CP tab if you wish.
 * Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
 
-## Special note when switching phone
+## Dodatkowe informacje związane z wymianą telefonu
 
 When switching to a new phone the following steps are neccessary:
 
-* **Export settings** on your old phone
+* ** Eksportuj ustawienia ** na starym telefonie
   
   * Hamburger menu (top left corner of screen)
   * Maintenance
@@ -57,10 +57,10 @@ When switching to a new phone the following steps are neccessary:
 * **Manually pair** Dana RS with the new phone 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
+* **Import settings** na nowym telefonie 
   * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+  * Konserwacja
+  * Zaimportuj ustawienia
 
 ## Timezone traveling with Dana RS pump
 

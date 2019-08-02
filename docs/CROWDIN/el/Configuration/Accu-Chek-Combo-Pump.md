@@ -1,6 +1,6 @@
-# Accu Chek Combo Pump
+# Αντλία Accu Chek Combo
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Αυτό το λογισμικό αποτελεί μέρος μιας λύσης DIY (Do It Yourself) και δεν είναι προϊόν, αλλά απαιτεί από ΕΣΑΣ να διαβάσετε, να μάθετε και να κατανοήσετε το σύστημα, συμπεριλαμβανομένου του τρόπου χρήσης του. Αυτό δεν είναι κάτι που κάνει όλη τη διαχείριση του διαβήτη για σας, αλλά σας επιτρέπει να βελτιώσετε τον διαβήτη σας και την ποιότητα ζωής σας εάν είστε πρόθυμοι να ξοδέψετε τον απαιτούμενο χρόνο. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
 
 ## Hardware requirements
 

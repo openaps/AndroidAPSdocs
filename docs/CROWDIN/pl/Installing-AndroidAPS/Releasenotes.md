@@ -1,4 +1,4 @@
-# Release notes
+# Uwagi do wydania
 
 Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
 
@@ -16,7 +16,7 @@ Please understand that this change is not intended to bug you but is due to safe
 
 Release date: 25-04-2019
 
-### Major new features
+### Najważniejsze nowe funkcjonalności:
 
 * Important safety fix for Insight (really important if you use Insight!)
 * Fix History-Browser
@@ -43,7 +43,7 @@ Release date: 07-04-2019
 
 Release date: 29-03-2019
 
-### Major new features
+### Najważniejsze nowe funkcjonalności:
 
 * [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
 * Wear Update
@@ -55,7 +55,7 @@ Release date: 29-03-2019
 
 Release date: 03-03-2019
 
-### Major new features
+### Najważniejsze nowe funkcjonalności:
 
 * Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 * Status lights on main screen (Nico Schmitz)
@@ -74,7 +74,7 @@ Release date: 03-03-2019
 
 Release date: 03-11-2018
 
-### Major new features
+### Najważniejsze nowe funkcjonalności:
 
 * oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
 * Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))

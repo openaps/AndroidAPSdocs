@@ -63,42 +63,42 @@ AndroidAPS создан для управления помпой и подачи
 
 ### Влияние настроек
 
-Эта таблица должна помочь вам оптимизировать настройки. Начните сверху и двигайтесь вниз. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (eg if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.<table class="tg" border=1> 
+Эта таблица должна помочь вам оптимизировать настройки. Начните сверху и двигайтесь вниз. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Можно использовать автонастройку [Autotune](https://autotuneweb.azurewebsites.net/) которая даст общее направление, но принимайте рекомендации не вслепую и не во всех ситуациях. Обратите внимание, что настройки дополняют друг друга - вы можете иметь "неправильные" настройки, которые в некоторых обстоятельствах работают хорошо (например, если слишком высокий базал установлен одновременно со слишком высоким углеводным коэффициентом CR), но в других не работают. Это означает, что нужно учитывать все настройки и убедиться, что они совместно работают в различных обстоятельствах.<table class="tg" border=1> 
 
 <th class="tg-0pky">
-  Setting
+  Настройка
 </th>
 
 <th class="tg-0pky">
-  Description & testing
+  Описание & тестирование
 </th>
 
 <th class="tg-0pky">
-  Impact
+  Результат
 </th>
 
 <td class="tg-0pky">
-  Duration of insulin activity (DIA)
+  Продолжительность активности инсулина DIA
 </td>
 
 <td class="tg-0pky">
-  The length of time that insulin decays to zero.<br /><br />This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+  Время, за которое инсулин снижается до нуля.<br /><br />Многими устанавливается слишком непродолжительным. Правильная настройка для большинства - не менее 5 часов, иногда 6 или 7.
 </td>
 
 <td class="tg-0pky">
-  Too short DIA can lead to low BGs. And vice-versa.<br /><br />If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.<br /><br />Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+  Слишком малое значение продолжительности действия инсулина DIA может привести к низкой ГК. И наоборот.<br /><br />Если время действия инсулина DIA короткое, AAPS слишком рано посчитает, что предыдущий болюс отработал, и даст больше инсулина при все еще высоком сахаре. (Фактически, алгоритм не выжидает, а продолжает добавлять инсулин, предсказывая, что произойдет). Это, по сути, создает «затоваривание инсулина», о котором ААПС не знает.<br /><br /> Итак, если время DIA слишком короткое, то за высокой ГК последует слишком жесткая коррекция и в результате AAPS приведет к низкой ГК.
 </td>
 
 <td class="tg-0pky">
-  Basal rate schedule (U/hr)
+  График базала (ед/ч)
 </td>
 
 <td class="tg-0pky">
-  The amount of insulin in a given hour time block to maintain BG at a stable level.<br /><br />Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.<br /><br />If BG is dropping, basal rate is too high. And vice-versa.
+  Количество инсулина в заданном часовом блоке для поддержания ГК на стабильном уровне.<br /><br />Проверьте настройки, приостановив цикл и не питаясь, скажем, 5 часов после еды, и проследите, как меняется ГК. Повторите тест несколько раз.<br /><br />Если ГК падает, то скорость базы слишком высока. И наоборот.
 </td>
 
 <td class="tg-0pky">
-  Too high basal rate can lead to low BGs. And vice-versa.<br /><br />AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.<br /><br />So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.<br /><br />Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+  Повышенная скорость подачи базала может привести к низкому уровню ГК. И наоборот.<br /><br />AAPS по умолчанию строит свой алгоритм отталкиваясь от скорости базала. Если базал слишком высокий, то «нулевая временная скорость» будет определяться при большем отрицательном значении активного инсулина IOB, чем нужно. Это приведет к тому, что AAPS будет делать больше корректировок, чем нужно чтобы привести активный инсулин IOB к нулю.<br /><br />Поэтому, слишком высокая база приведет к слишком низкой ГК как из-за высокой базы, так и вследствие корректировок AAPS к цели.<br /><br /> И наоборот, слишком низкая база приведет к высокой гликемии и не поможет снизить уровень ГК до целевого.
 </td>
 
 <td class="tg-0pky">
