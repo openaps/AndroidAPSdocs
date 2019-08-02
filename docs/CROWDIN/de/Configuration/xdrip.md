@@ -4,7 +4,7 @@ Wenn Du es nicht bereits eingerichtet hast, lade [xDrip+](https://github.com/Nig
 
 Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine der aktuellen <1>nightly build xDrip+ Versionen</1>. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 
-**Derzeit gibt es teilweise Schwierigkeiten mit den Nightly Builds nach dem 21.05.2019, bei denen beim G6 Kalibrierung verlangt werden.**
+**Falls die Seriennummer Deines Dexcom G6 transmitters mit 8G... beginnt versuche die Nightly Build vom 28.07.2019 oder später.**
 
 ## Grundsätzliche Einstellungen für alle CGM & FGM-Systeme
 
