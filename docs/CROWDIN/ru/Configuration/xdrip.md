@@ -2,9 +2,7 @@
 
 Если это еще не сделано, скачайте [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
-
-**If your Dexcom transmitter's serial no. is starting with 8G... try nightly build 2019/07/28 or later.**
+Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает. If your Dexcom G6 transmitter's serial no. is starting with 8G... try nightly build 2019/07/28 or later.
 
 ## Основные настройки для всех систем мониторинга
 
@@ -51,9 +49,9 @@
 
 ### Профилактические перезапуски не рекомендуются
 
-Автоматическое продление работы сенсоров Dexcom (`упреждающие перезапуски, preemtive restarts`) не рекомендуется, так как может привести к скачкам значений ГК на 9 день после перезапуска.
+The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ после превентивного перезапуска](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Применение G6 немного сложнее, чем казалось раньше. Для правильного применения необходимо иметь в виду следующие моменты:
 
@@ -67,7 +65,7 @@
 
 ### Первое подключение трансмиттера G6
 
-**Для второго и следующего трансмиттера смотрите [Продление срока работы трансмиттера](../Configuration/xdrip#extend-transmitter-life) ниже.**
+**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
 * Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 * Выключите оригинальный ресивер Dexcom (если используете).
@@ -245,8 +243,8 @@
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
-![xDrip+ запуск трансмиттера Libre & Сенсор 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ запуск трансмиттера Libre & Сенсор 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ запуск трансмиттера Libre & Сенсор 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
