@@ -198,45 +198,45 @@ AndroidAPS создан для управления помпой и подачи
 
 ## На работе
 
-В зависимости от вида работы, возможно, вы используете другие методы лечения в рабочие дни. Следует подумать о переключении профиля на ваш планируемый рабочий день (например, более 100% на 8 ч при сидячей работе или менее 100% при активном режиме), высокой или низкой временной цели или сдвиге времени вашего профиля, когда вы встаете гораздо раньше или позже, чем обычно. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+В зависимости от вида работы, возможно, вы используете другие методы лечения в рабочие дни. Следует подумать о переключении профиля на ваш планируемый рабочий день (например, более 100% на 8 ч при сидячей работе или менее 100% при активном режиме), высокой или низкой временной цели или сдвиге времени вашего профиля, когда вы встаете гораздо раньше или позже, чем обычно. Если вы используете профили Nightscout, вы можете создать второй профиль (например, дом' и 'работа') и при необходимости переключаться с профиля на профиль.
 
-## Leasure activities
+## Отдых
 
-## Sports
+## Спорт
 
-## Sex
+## Секс
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Нажмите на поле 'Открытый цикл / Замкнутый цикл' вверху главного экрана. Выберите **'Отсоединить помпу на XY мин'** в зависимости от предполагаемого времени. После переподключения помпы вы можете выбрать 'Продолжить' в том же поле или просто подождите, пока не закончится выбранное вами время отключения. Цикл продолжит работу автоматически.
+Можете снять помпу для "свободы" но следует сообщить об этом AAPS, чтобы расчеты активного инсулина IOB были правильными. Нажмите на поле 'Открытый цикл / Замкнутый цикл' вверху главного экрана. Выберите **'Отсоединить помпу на XY мин'** в зависимости от предполагаемого времени. После переподключения помпы вы можете выбрать 'Продолжить' в том же поле или просто подождите, пока не закончится выбранное вами время отключения. Цикл продолжит работу автоматически.
 
-## Drinking alcohol
+## Употребление алкоголя
 
-Drinking alcohol is risky in closed loop mode as the algorythm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Употребление алкоголя является рискованным в режиме замкнутого цикла, так как алгоритм ИПЖ не может правильно предсказать влияние алкоголя на ГК. Следует выработать свой собственный метод для подхода к этому вопросу с помощью следующих функций в AndroidAPS:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* Деактивировать режим замкнутого цикла и разбираться с диабетом вручную или
+* устанавливать высокие временные цели и отключать незапланированный прием пищи UAM, чтобы избежать увеличения активного инсулина IOB из-за непредусмотренной еды или
+* переключить профиль на величину, заметно менее 100% 
 
-When drinking alcohol you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+При употреблении алкоголя всегда нужно следить за мониторингом, чтобы вручную избежать гипокликемии, потребляя углеводы.
 
-## Sleeping
+## Сон
 
-### How can I loop during the night without mobile and WIFI radiation?
+### Как обеспечить работу цикла ночью без мобильного и WIFI излучения?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via nightscout):
+Многие пользователи ночью переводят телефон в режим авиаперелета. Если вы хотите, чтобы AAPS поддерживал вас во время сна, действуйте следующим образом (это будет работать только с локальным источником ГК, таким как xDrip+ или с модифицированным приложением Dexcom, но НЕ будет работать, если вы получаете данные ГК с сайта Nightscout):
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. Включите режим авиаперелета на вашем мобильном устройстве.
+2. Подождите, пока режим авиаперелета не будет активирован.
+3. Включите Блутус.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Теперь вы не принимаете звонки и не подключены к Интернету. Но цикл продолжает работу.
 
-## Travelling
+## Путешествия
 
-### How to deal with timezone changes?
+### Как справляться с изменениями часового пояса?
 
-With DanaR and DanaR Korean you don't have to do anything. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
+Если у вас DanaR или DanaR для корейского рынка делать ничего не надо. Для других помп смотрите страницу [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling.md) для более подробной информации.
 
-## Hospitalization
+## Госпитализация
 
 If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
 
