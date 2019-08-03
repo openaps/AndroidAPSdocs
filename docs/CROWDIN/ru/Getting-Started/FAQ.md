@@ -194,7 +194,7 @@ AndroidAPS создан для управления помпой и подачи
 
 ### Что делать при приеме душа или ванной?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
+Вы можете снять помпу при приеме душа или ванной. На этот короткий период времени она вам, как правило, не понадобится. Но вы должны сообщить об этом AAPS чтобы расчеты активного инсулина IOB были правильными. Нажмите на поле 'Открытый цикл / Замкнутый цикл' вверху главного экрана. Выберите **'Отсоединить помпу на XY мин'** в зависимости от предполагаемого времени. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
 
 ## Working
 
@@ -206,7 +206,7 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 
 ## Sex
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
+You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Нажмите на поле 'Открытый цикл / Замкнутый цикл' вверху главного экрана. Выберите **'Отсоединить помпу на XY мин'** в зависимости от предполагаемого времени. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
 
 ## Drinking alcohol
 
