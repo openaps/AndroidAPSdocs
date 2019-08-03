@@ -102,23 +102,23 @@ AndroidAPS создан для управления помпой и подачи
 </td>
 
 <td class="tg-0pky">
-  Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+  Чувствительность к инсулину (ISF) (ммоль/л/ед или мг/дл/ед)
 </td>
 
 <td class="tg-0pky">
-  The drop in BG expected from dosing 1U of insulin.<br /><br />Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.<br /><br />Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.<br /><br />Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+  Снижение ГК, ожидаемое от подачи 1ед инсулина.<br /><br /> Полагая, что база верна, можно проверить ISF, приостановив алгоритм цикла при нулевом активном инсулине IOB и приняв несколько таблеток глюкозы до получения стабильно «высокого» уровня ГК.<br /><br />Затем ввести инсулин (из текущего расчета 1/ISF), чтобы прийти к целевому значению ГК.<br /><br />Будьте осторожны, так довольно часто величина задается слишком низкой. Слишком низкая чувствительность означает, что 1 ед опустит ГК быстрее, чем ожидалось.
 </td>
 
 <td class="tg-0pky">
-  Lower ISF = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.<br /><br />Higher ISF = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.<br /><br />An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.<br /><br />Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+  Более низкая чувствительность ISF = меньшее падение ГК на каждую единицу инсулина (также может называться "более жесткой/агрессивной" или "более сильной"). Если она задана слишком низкой, это может привести к более низким значениям ГК.<br /><br />Более высокая чувствительность ISF = большее падение гликемии на каждую единицу инсулина (может также называться менее жесткой/агрессивной" или "более слабой"). Если она задана слишком высокой, это может привести к более высоким значениям ГК. <br /><br /> Слишком низкая чувствительность ISF (нередкое явление) может приводить к "чрезмерным коррекциям", поскольку AAPS считает, что ему нужно больше инсулина для корректировки высокой гликемии, чем на самом деле. Это может привести к «американским горкам» (особенно если вы поститесь). В этом случае вам нужно увеличить ISF. Это будет означать, что AAPS дает меньшие корректирующие дозы, позволяя избежать чрезмерной коррекции высокой гликемии, приводящей к низким сахарам.<br /><br />И наоборот, слишком высокий ISF может привести к недокорректировкам; ГК останется выше цели – это будет особенно заметно под утро.
 </td>
 
 <td class="tg-0pky">
-  Carbohydrate to insulin ratio (CR) (g/U)
+  Углеводный коэффициент - соотношение углеводов и инсулина (CR) (г/ед)
 </td>
 
 <td class="tg-0pky">
-  The grams of carbohydrate for each unit of insulin.<br /><br />Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR. Best is to eat food your normally eat at that time of day and count its carbs precicely.
+  Углеводы в граммах на каждую единицу инсулина. <br /><br /> Полагая, что база задана верно, можно проверить этот коэффициент, убедившись в отсутствии активного инсулина IOB при нормальной гликемии. Для этого надо съесть известную пищу с известным количеством углеводов и подав на нее расчетное количество инсулина, основываясь на текущем соотношении 1/CR. Лучше всего есть пищу, которую вы обычно едите в это время дня и точно посчитать ее углеводы.
 </td>
 
 <td class="tg-0pky">
