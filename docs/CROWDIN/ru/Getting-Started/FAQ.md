@@ -122,7 +122,7 @@ AndroidAPS создан для управления помпой и подачи
 </td>
 
 <td class="tg-0pky">
-  Lower CR = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.<br /><br />Higher CR = more food per unit, ie you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.<br /><br />If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are CR is too large. Conversely if your BG is lower than before food, CR is too small.
+  Более низкий углеводный коэффициент CR = меньше еды на единицу инсулина, что означает больше инсулина на фиксированное количество углеводов. Может также называться "более агрессивным".<br /><br /> Более высокий CR = больше еды на единицу инсулина, то есть меньше инсулина на фиксированное количество улеводов. Может также называться "менее агрессивным".<br /><br />Если после усваивания пищи и возвращения активного инсулина IOB к нулю, ГК остается выше прежнего, высока вероятность того, что CR слишком велик. И наоборот, если ГК ниже, чем перед едой, CR слишком мал.
 </td></table> 
 
 ### APS algorithm
