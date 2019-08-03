@@ -53,7 +53,7 @@ Allereerst, je moet dezelfde spullen bij je hebben als iedere andere persoon die
 * Digitale backup (Dropbox, Google Drive, ...) van de apps die je gebruikt, zoals jouw meest recente AndroidAPS apk-bestand en jouw key store (digitale handtekening), AndroidAPS instellingenbestand, xDrip instellingenbestand, aangepaste Dexcom app, ...
 * Batterijen voor je insulinepomp
 
-### How to safely attach the CGM/FGM?
+### Hoe zorg ik dat de CGM/FSL goed blijft vastzitten?
 
 Je kunt hem vastplakken: door je huid van te voren in te smeren met speciale lijm (zoals Skintac). Ook zijn er op maat gemaakte 'fixeerpleisters' voor veelgebruikte CGM-systemen verkrijgbaar. Die plak je over de originele sensor/pleister heen. Vraag jouw diabetesverpleegkundige, hulpmiddelenleverancier of op een online forum/facebook. Of gebruik google. Je kunt ze ook zelf op maat knippen van kinesiotape of een eilandpleister.
 
@@ -194,7 +194,7 @@ Het 'Ontlucht/vul' scherm van AAPS gebruikt niet de functie van "prime infusie s
 
 ### Wat te doen tijdens het douchen?
 
-Je kunt de pomp afkoppelen bij het douchen. Voor deze korte tijd kun je meestal wel zonder je pomp. But you should tell it to AAPS so that the IOB calculations are right. Op het Overzicht-scherm van AAPS houd "Open loop / Closed loop" lang ingedrukt. Selecteer **'Verbreek verbinding ...min/u met pomp'** afhankelijk van jouw behoefte. Nadat je je pomp weer hebt aangesloten, dan kun je in datzelfde menu op 'Hervatten' drukken. Of wachten totdat de door jou gekozen tijd is verstreken, de loop zal dan automatisch weer worden hervat.
+Je kunt de pomp afkoppelen bij het douchen. Voor deze korte tijd kun je meestal wel zonder je pomp. Maar je moet AAPS wel laten weten dat je de pomp loskoppelt, zodat de IOB berekeningen blijven kloppen. Op het Overzicht-scherm van AAPS houd "Open loop / Closed loop" lang ingedrukt. Selecteer **'Verbreek verbinding ...min/u met pomp'** afhankelijk van jouw behoefte. Nadat je je pomp weer hebt aangesloten, dan kun je in datzelfde menu op 'Hervatten' drukken. Of wachten totdat de door jou gekozen tijd is verstreken, de loop zal dan automatisch weer worden hervat.
 
 ## Werken
 
