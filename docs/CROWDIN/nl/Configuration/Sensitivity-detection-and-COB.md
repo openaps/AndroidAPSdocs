@@ -1,4 +1,4 @@
-# Gevoeligheids detectie
+# Gevoeligheids detectie (Autosens)
 
 ## Gevoeligheids-algoritme
 
@@ -39,4 +39,4 @@ AAPS, Gewogen gemiddelde - opname wordt berekend op `COB == 0` na opgegeven tijd
 
 ![COB van AAPS](../images/cob_aaps2_orange.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, an orange dot appears on COB graph
+Als de door jou ingestelde minimale koolhydraten absorptie wordt gebruikt in plaats van de waarde berekend op basis van afwijkingen, verschijnt een oranje stip op jouw COB grafiek
