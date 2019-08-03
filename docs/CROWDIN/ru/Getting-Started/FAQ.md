@@ -139,17 +139,17 @@ AndroidAPS создан для управления помпой и подачи
 
 #### Что заставляет алгоритм цикла часто понижать мои СК до гипогликемических значений в отсутствии углеводов COB в организме?
 
-В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. If it is correct, this behaviour is typically caused by a too low ISF. A too low ISF looks typically like this:
+В первую очередь, проверьте значения скорости подачи базала и проверьте работу базы безуглеводным test'ом. Если все верно, то такое поведение обычно вызвано слишком низким значением чувствительности к инсулину ISF. Слишком низкая чувствительность ISF обычно выглядит так.
 
 ![ISF too low](../images/isf.jpg)
 
-#### What causes high postprandial preaks in closed loop?
+#### Что вызывает постпрандиальные пики в замкнутом цикле?
 
-В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+В первую очередь, проверьте значения скорости подачи базала и проверьте работу базы безуглеводным test'ом. Если все правильно, и гликемия падает до целевого значения после полного усвоения углеводов, попробуйте за некоторое время до еды установить временную цель "близкий прием пищи" в AAPS или продумайте подходящее время преболюса с вашим эндокринологом. Если гликемия слишком высока после еды и после полного усваивания углеводов, подумайте о снижении соотношения инсулин/углеводы IC с вашим эндокринологом. Если гликемия слишком высока во время усвоении углеводов COB и слишком низка после их полного усвоения, подумайте об увеличении соотношения инсулин/углеводы IC и о надлежащем времени преболюса с эндокринологом.
 
-## Other settings
+## Другие настройки
 
-### Nightscout settings
+### Настройки Nightscout
 
 #### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
 
