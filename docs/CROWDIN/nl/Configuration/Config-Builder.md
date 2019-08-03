@@ -52,7 +52,7 @@ Kies het werkingsprofiel van de insuline die jij gebruikt. De werkingsprofielen 
 
 Voor veel mensen is er praktisch geen merkbaar effect van Fiasp na 3-4 uur, zelfs als er dan nog maar 0,0xx eenheden zijn overgebleven. Dit kleine restje kan nog wel steeds een merkbaar effect hebben, bijvoorbeeld tijdens het sporten. Daarom gebruikt AndroidAPS een minimum van 5u als DIA.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Configurator Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
 ### Free-Peak Oref
 
@@ -159,7 +159,7 @@ Maak een knop voor een bepaalde standaardmaaltijd (koolhydraten en berekeningsme
 
 Opmerking: De knop voor een standaardmaaltijd zal niet zichbaar zijn wanneer je buiten het opgegeven tijdsbereik bent, of wanneer je genoeg IOB hebt voor de koolhydraten in jouw standaardmaaltijd.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Vaste maaltijd instellingen](../images/ConfBuild_QuickWizard.png)
 
 #### Geavanceerde instellingen
 
@@ -177,72 +177,72 @@ Een aantal knoppen voor snelle toegang tot algemene functies:
 * Historiek venster
 * TDD (Totale Dagelijkse Dosis = bolus + basale insuline per dag)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Sommige artsen gebruiken - met name voor nieuwe pompgebruikers- een basaal:bolus ratio van 50:50. Daarom wordt de ratio berekend als TDD / 2 * TBB (Totale Basis Basaal = som van alle basale insuline binnen 24 uur). Anderen geven de voorkeur aan 32% tot 37% van de TDD voor TBB. Zoals de meeste van deze vuistregels hoeft ook deze in het echte leven niet persé te kloppen. Ieder mens is anders!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
+![Acties tabblad](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Careportal
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+Hier kun je allerlei behandelingen / acties noteren. Ook kun je de status van je huidige sensor, insuline, infuus en pompbatterij weergeven in het tabblad Careportal (CP).
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Opmerking: er wordt **Geen insuline** afgegeven indien je die hebt ingevoerd via de careportal (dat wil zeggen maaltijd, correctie bolus...). Wel wordt deze insuline meegenomen in de IOB berekening. Je kunt op deze manier dus aan AndroidAPS laten weten dat je hebt bijgespoten met een insulinepen.
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Koolhydraten die worden ingevoerd via de careportal (d.w.z. correctie koolhydraten) zullen worden meegenomen in de COB berekening.
 
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Careportal tabblad](../images/ConfBuild_CarePortal.png)
 
 ### SMS Communicator
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
+Hiermee kunt je toestaan dat zorgverleners vanaf afstand (bijv. ouders van schoolgaande kinderen) sommige functies van AndroidAPS kunnen laten uitvoeren via SMS. Op de pagina over [SMS-commando's](../Usage/SMS-Commands.md) kun je lezen hoe je dit instelt.
 
 ### Voeding
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Toont de instellingen voor voeding die zijn gemaakt in de Nightscout food database, zie de [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) voor meer informatie.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Opmerking: Invoer uit Nightscout kan niet worden gebruikt in de AndroidAPS calculator. Het kan alleen worden bekeken (view only).
 
 ### Wear (voor smartwatches)
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Gebruik je Android Wear smartwatch om AndroidAPS te bekijken en te besturen (zie [pagina Smartwatch instellingen](../Configuration/Watchfaces.md)). Via de instellingen (tandwiel-icoontje) kun je aanvinken welke variabelen moeten worden meegenomen bij het berekenen van een bolus via je horloge (bijv. 15min-trend, COB...).
 
 Om te kunnen bolussen enz vanaf je horloge moet je bij "Wear instellingen" de optie "Bedieningen via horloge" geactiveerd hebben.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Wear instellingen](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Via het Wear tabblad of via het hamburger menu (3 streepjes linksboven in het Overzicht-scherm als het Wear tabblad niet wordt weergegeven) kun je:
 
 * "Update Wear gegevens" kiezen. Kan handig zijn als je horloge enige tijd niet verbonden is geweest, en je wilt de informatie naar je horloge sturen.
 * "Open instellingen op Wear" kiezen. Dit opent de instellingen van je horloge direct vanaf je telefoon.
 
 ### xDrip Statuslijn (Horloge)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Toont informatie over jouw loop op je xDrip+ watchface (als je de AAPS/[AAPv2 watchface niet gebruikt](../Configuration/Watchfaces.md)).
 
 ### Permanent bericht
 
-Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
+Toont een samenvatting van jouw huidige BG, delta, actieve TBR, actieve basaal eenheden/uur en profiel, IOB (gesplitst in bolus IOB en basale IOB) in de menubalk en in het vergrendelscherm van je telefoon.
 
 ![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+Synchronisatie van jouw AndroidAPS-gegevens instellen met Nightscout.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
+Als **Log app start naar NS** is geactiveerd, zal elke keer als AndroidAPS herstart wordt, een melding zichtbaar zijn in Nightscout. Als je vaak deze melding ziet verschijnen, dan wijst dit op een probleem met de app (dat wil zeggen accuoptimalisatie niet uitgeschakeld voor AAPS) maar het kan je Nightscout grafiek volzetten met meldingen. Je kunt er dus voor kiezen om dit uit te schakelen, maar het is beter om de oorzaak van het probleem (accuoptimalisatie) op te lossen!
 
 #### Alarm opties
 
-Activate/deactivate AndroidAPS alarms
+AndroidAPS alarmen activeren/deactiveren
 
 ![Alarm opties](../images/ConfBuild_NSClient_Alarms.png)
 
 #### Verbindings instellingen
 
-Offline looping, disable roaming...
+Offline looping, roaming uitschakelen...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Als je alleen een specifiek WiFi-netwerk wil gebruiken, kun je de **WiFi SSID **invoeren. Meerdere SSID's kunnen worden gescheiden door puntkomma's. Om alle SSIDs te verwijderen vul je een spatie in in dit veld.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Nightscout verbindingsinstellingen](../images/ConfBuild_ConnectionSettings.png)
 
 #### Geavanceerde instellingen
 
@@ -253,12 +253,12 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 * Geen upload naar NS
 * Gebruik altijd absolute basale waarden-> moet worden geactiveerd als je gebruik wilt maken van [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) (zorgt dat de Autotune berekeningen correct worden uitgevoerd).
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Nightscout geavanceerde instellingen](../images/ConfBuild_NSClient_Advanced.png)
 
 ### Onderhoud
 
-Email and number of logs to be send. Normally no change neccessary.
+Kies het aantal te verzenden logbestanden, en het e-mailadres waarheen ze verstuurd worden. Normaal gesproken geen verandering nodig.
 
 ### Configurator
 
-Use tab for config builder instead of hambuger menu.
+Gebruik tabblad voor Configurator in plaats van het hambuger menu.
