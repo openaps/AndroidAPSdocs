@@ -194,11 +194,11 @@ AndroidAPS создан для управления помпой и подачи
 
 ### Что делать при приеме душа или ванной?
 
-Вы можете снять помпу при приеме душа или ванной. На этот короткий период времени она вам, как правило, не понадобится. Но вы должны сообщить об этом AAPS чтобы расчеты активного инсулина IOB были правильными. Нажмите на поле 'Открытый цикл / Замкнутый цикл' вверху главного экрана. Выберите **'Отсоединить помпу на XY мин'** в зависимости от предполагаемого времени. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
+Вы можете снять помпу при приеме душа или ванной. На этот короткий период времени она вам, как правило, не понадобится. Но вы должны сообщить об этом AAPS чтобы расчеты активного инсулина IOB были правильными. Нажмите на поле 'Открытый цикл / Замкнутый цикл' вверху главного экрана. Выберите **'Отсоединить помпу на XY мин'** в зависимости от предполагаемого времени. После переподключения помпы вы можете выбрать 'Продолжить' в том же поле или просто подождите, пока не закончится выбранное вами время отключения. Цикл продолжит работу автоматически.
 
-## Working
+## На работе
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a profile switch for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a time shift of your profile when standing up much earlier or later than regular. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+В зависимости от вида работы, возможно, вы используете другие методы лечения в рабочие дни. Следует подумать о переключении профиля на ваш планируемый рабочий день (например, более 100% на 8 ч при сидячей работе или менее 100% при активном режиме), высокой или низкой временной цели или сдвиге времени вашего профиля, когда вы встаете гораздо раньше или позже, чем обычно. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leasure activities
 
@@ -206,7 +206,7 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 
 ## Sex
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Нажмите на поле 'Открытый цикл / Замкнутый цикл' вверху главного экрана. Выберите **'Отсоединить помпу на XY мин'** в зависимости от предполагаемого времени. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
+You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Нажмите на поле 'Открытый цикл / Замкнутый цикл' вверху главного экрана. Выберите **'Отсоединить помпу на XY мин'** в зависимости от предполагаемого времени. После переподключения помпы вы можете выбрать 'Продолжить' в том же поле или просто подождите, пока не закончится выбранное вами время отключения. Цикл продолжит работу автоматически.
 
 ## Drinking alcohol
 
