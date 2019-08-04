@@ -66,7 +66,7 @@
 </tr>
 <tr>
 <td>BGI</td>
- <td>blood glucose interaction -degree to which BG 'should' be rising or falling based on insulin activity alone</td>
+ <td>взаимодействие с глюкозой крови - коэффициент, влиющий на рост или падение уровня сахара, основанный лишь на активности инсулина, без учета факторов физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
