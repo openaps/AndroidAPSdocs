@@ -100,15 +100,15 @@
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Примечание о товаре:** Похоже, компания решила выйти из бизнеса. Подробнее в этой [статье](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
-## Pumps that aren't Loopable
+## Помпы, неспособные к работе в качестве компонента ИПЖ
 
-### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
+### Тандем:(любой) ([Домашняя страница](https://www.tandemdiabetes.com/))
 
-**Loop status:** Not loopable.
+**Статус пригодности:** Не пригодна.
 
-While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
+Некоторое время назад у них имелась микропрограмма (прошивка) под названием T:AP (упоминается в этой статье [](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), которая могла бы использоваться в цикле ИПЖ). Прошивка больше не доступна, поскольку помпа была обновлена до x2). Прошивка не была предназначена для коммерческого использования, только для экспериментов (исследовательские проекты). Я разговаривал с одним из директоров компании и он заверил меня, что ПО помпы Tandem никогда не будет открыто, но что они создали свою собственную замкнутую систему, которую они называют Control-IQ (я думаю, что она уже доступна в США, и должна быть доступна в 2020 году в Европе).
 
 * * *
 
