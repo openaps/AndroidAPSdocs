@@ -22,15 +22,15 @@
 
 ### Insulet Omnipod (со старыми pod-блоками Eros) ([Домашняя страница](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-**Статус взаимодействия с ИПЖ:** В настоящее время нативно не поддерживается в среде AAPS. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
+**Статус взаимодействия с ИПЖ:** В настоящее время нативно не поддерживается в среде AAPS. Завершено декодирование протокола Omnipod- [OpenOmni](http://www.openomni.org/) и [OmniAPS Slack](https://omniaps.slack.com/)
 
-**Other implementations:**
+**Другие решения:**
 
-- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) [Omnipy](https://github.com/winemug/omnipy)
-- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project). [OmniCore](https://github.com/winemug/OmniCore)
-- Loop (stable, released, requires RileyLink). [Loop](https://loopkit.github.io/loopdocs/)
+- Omnipy для AndroidAPS (стабильно в тестировании, требует Raspberry Pi, а также RileyLink, и специально модифицированного AndroidAPS) [Omnipy](https://github.com/winemug/omnipy)
+- OmniCore для AndroidAPS (еще не выпущен, C# "нативный" код на Android нуждается только в RileyLink и специально модифицированном AndroidAPS - следующая версия проекта Omnipy). [OmniCore](https://github.com/winemug/OmniCore)
+- Loop (стабильная версия, требует RileyLink). [Loop](https://loopkit.github.io/loopdocs/)
 
-**Java implementations:** None till now.
+**Реализации на Java:** Пока нет.
 
 **AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) for Omnipod (dev_omnipod branch) which will not require a Raspberry Pi, but this is not finished. You can follow progress on https://omniaps.slack.com/ channel android-driver.
 
