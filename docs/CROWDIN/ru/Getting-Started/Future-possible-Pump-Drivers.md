@@ -114,15 +114,15 @@
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
+**Статус пригодности:** Не пригодна. Нет возможности дистанционного управления. **Примечание:** помпа снята с продажи. Компания вышла из бизнеса (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped beeing sold when Vibe came out.
+**Статус пригодности:** Не пригодна. Она имеет возможность подачи болюса, но не временного базала TBR. **Примечание** Была снята с продажи после выхода Animas Vibe.
 
-## Requirements for pumps being loopable
+## Требования к пригодности помп для ИПЖ
 
 **Prerequisite**
 
