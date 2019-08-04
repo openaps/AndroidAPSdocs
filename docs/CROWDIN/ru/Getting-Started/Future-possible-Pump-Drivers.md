@@ -1,22 +1,22 @@
-# Future (possible) Pump Drivers
+# Вероятные будущие драйверы для помп
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+Это список некоторых помп и состояние их поддержки в системах ИПЖ, а затем статус в AAPS. В конце есть перечень того, что требуется, чтобы помпа стала совместимой с системами ИПЖ
 
-## Pumps whose support is in development
+## Пoмпы, поддержка которых в разработке
 
-### Medtronic
+### Медтроник
 
-**Loop status:** Some of older versions of pumps are loopable, but not the newer models (see below)
+**Статус взаимодействия с ИПЖ:** Некоторые старые версии помп можно использовать, но не новые модели (см. ниже)
 
-**Other implementations:** OpenAPS, Loop
+**Другие возможности реализации:** OpenAPS, Loop
 
-**Java implementations:** Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
+**Реализации Java:** Доступна частичная реализация c [Rountrip2](https://github.com/TC2013/Roundtrip2), и [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS implementation status:** Work in progress. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. Project will probably be merged to main repository by end of July 2019. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+**Актуальный статус реализации с AAPS:** Выполняется. См. [AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Большая часть работы сделана для [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) по отладке фрейма и команд. Существует проект (Медтроник) и открыт прием заявок для участия в развитии этого репозитория, разработка осуществляется на ветке dev_medtronic (которая там по умолчанию). Также есть чат на gitter: RileyLinkAAPS/Lobby. AAPS. Вышла пробная версия 0.10, имеет 95% всей функциональности, на настоящий момент отсутствует синхронизация временных базалов TBR и события "подача остановлена". Проект, вероятно, будет включен в основной репозиторий к концу июля 2019 года. Подробности и сроки см. на [Доске Проекта](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
+**Требование к оборудованию для AAPS:** RileyLink (с антенной 916 Mhz).
 
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
+**Версии, работающие с проектами ИПЖ:** 512-522, 523 (Fw 2.4A или ниже), 554 (европейская прошивка 2.6A или ниже, прошивка CA 2.7A или ниже). То же для 7xx версий. Все другие устройства не поддерживаются, и, вероятно, не будут.
 
 * * *
 
