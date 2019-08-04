@@ -1,14 +1,14 @@
-# Medtronic Pumps
+# Medtronic Pompen
 
-**>>>> Medtronic pump driver is not part of AndroidAPS master yet. It will be available in next master version. <<<<**
-
-* * *
-
-Works only with older Medtronic pumps (details see below). Does not work with Medtronic 640G or 670G.
+**>>>> Medtronic pompen bevinden zich in een testfase, ze zijn nog niet te gebruiken met de normale versie van de AndroidAPS app (de zgn 'master' versie). Als de volgende 'master' versie van de app uitkomt, zul je die kunnen gebruiken met Medtronic pompen. <<<<**
 
 * * *
 
-While Medtronic driver was tested with good test group, it is still considered a beta software, which means that until bigger audience tests it for a longer period of time, you will need to enable Engineering mode, to be able to see driver in AndroidAPS.
+Werkt alleen met oudere Medtronic pompen (zie hieronder welke). Werkt niet met Medtronic 640G of 670G.
+
+* * *
+
+De Medtronic aanstuursoftware is al getest door een goede groep testers, op dit moment is het nog wel een 'beta versie'. Dit betekent dat totdat het grote publiek het gedurende een langere periode heeft getest, jij als gebruiker moet weten hoe je de Engineering mode inschakelt, zodat de Medtronic aanstuursoftware wordt weergegeven in AndroidAPS. Als deze alinea adacadabra voor jou is, laat dan het testen van de beta versie over aan anderen (voor je eigen veiligheid).
 
 * * *
 
