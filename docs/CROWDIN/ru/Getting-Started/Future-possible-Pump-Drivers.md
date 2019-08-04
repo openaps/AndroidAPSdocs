@@ -44,47 +44,47 @@
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
-**Комментарии:** Мы рассматриваем разработку Omnipod DASH, но на данный момент Dash еще не доступна в Европе (где находится большинство разработчиков AAPS) и что протокол коммуникации неизвестен. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
+**Комментарии:** Мы рассматриваем разработку Omnipod DASH, но на данный момент Dash еще не доступна в Европе (где находится большинство разработчиков AAPS) и что протокол коммуникации неизвестен. Мы попробуем разкомпилировать официальное приложение Dash APK, чтобы определить, как работает коммуникация и на этой основе выполним реализацию проекта. За тем, что происходит, следите здесь: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), но не ожидайте, что решение будет найдено быстро. Это только Подтверждение Концепции (до тех пор, пока не завершится Этап 2).
 
 * * *
 
-### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Помпа Ypsomed ([Домашняя страница](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions.
+**Статус пригодности к реализации:** Версии 1 - 1.5 (2Q/2018) не являются кандидатами для ИПЖ. Хотя они имеют BT-коммуникации, похоже что связь ограничена (только в одном направлении: помпа-приложение). Возможно, это изменится в следующих версиях.
 
-**Hardware requirement for AAPS:** Probably none. В помпе есть блутус-связь.
-
-* * *
-
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
-
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
-
-**Hardware requirement for AAPS:** Probably none. В помпе есть блутус-связь.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](http://www.medtrum.com/P6.html))
+### Kaleido ([Домашняя страница](https://www.hellokaleido.com/))
 
-**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
 * * *
 
-### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
+### Medtrum A6/P6/C6 ([Домашняя страница](http://www.medtrum.com/P6.html))
 
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
+**Статус пригодности:** Является кандидатом для ИПЖ. Компания имеет собственную ограниченную систему полуцикла (A6). Контролируется через приложение iPhone. Приложения для Android пока нет.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. Похоже, что блутус-связь имеется.
+
+* * *
+
+### EOFLOW ([Домашняя страница](http://www.eoflow.com/eng/main/main.html))
+
+**Статус пригодности:** Является кандидатом для ИПЖ. Пульт управления фактически является модифицированным Android-устройством. (В настоящее время помпа доступна только в Корее).
+
+**Требования к оборудованию для AAPS:** По-видимому, никаких. Похоже, что блутус-связь имеется.
 
 * * *
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
+**Статус пригодности:** Является кандидатом для ИПЖ. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. It seems to be BT enabled.
 
 ### Medtronic Bluetooth
 
@@ -96,9 +96,9 @@
 
 ### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
-**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 
-**Hardware requirement for AAPS:** Probably none. В помпе есть блутус-связь.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
