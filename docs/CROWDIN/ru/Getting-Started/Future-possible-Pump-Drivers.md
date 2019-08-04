@@ -124,37 +124,37 @@
 
 ## Требования к пригодности помп для ИПЖ
 
-**Prerequisite**
+**Предварительные условия**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Помпа должна поддерживать дистанционное управление. (BT, Радио частота и т. д.)
+- Протокол взломан/документирован/и т. д.
 
-**Minimal requirement**
+**Минимальные требования**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Устанавливать временную скорость базала
+- Получать сведения о состоянии
+- Отменять временную базальную скорость
 
-**For oref1(SMB) or Bolusing:**
+**Для oref1(SMB) или болюсов:**
 
-- Set Bolus
+- Настраивать подачу болюса
 
-**Good to have**
+**Хорошо иметь**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Отмену болюса
+- Получать профиль базала (почти обязательно)
+- Устанавливать профиль базала (хорошо иметь)
+- Способность читать журнал 
 
-**Other (not required but good to have)**
+**Другое (не обязательно, но желательно)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Настраивать пролонгированный болюс
+- Отменять пролонгированный болюс
+- Способность читать журнал
+- Читать суммарную суточную дозу инсулина TDD
 
 * * *
 
-### Other pumps support
+### Поддержка других помп
 
-If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Если у вас есть какие-либо другие помпы, статус которых вы хотите увидеть, пожалуйста, свяжитесь со мной (@andyrozman на gitter). В будущем в релизе будет добавлено много конфигураций помп для открытого цикла (вы сможете выбрать в конфигурации виртуальную помпу Virtual Pump и ваши настройки будут загружены - [Запрос на функциональность #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
