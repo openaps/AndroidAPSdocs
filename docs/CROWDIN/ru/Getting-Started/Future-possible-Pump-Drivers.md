@@ -14,7 +14,7 @@
 
 **Актуальный статус реализации с AAPS:** Выполняется. См. [AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Большая часть работы сделана для [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) по отладке фрейма и команд. Существует проект (Медтроник) и открыт прием заявок для участия в развитии этого репозитория, разработка осуществляется на ветке dev_medtronic (которая там по умолчанию). Также есть чат на gitter: RileyLinkAAPS/Lobby. AAPS. Вышла пробная версия 0.10, имеет 95% всей функциональности, на настоящий момент отсутствует синхронизация временных базалов TBR и события "подача остановлена". Проект, вероятно, будет включен в основной репозиторий к концу июля 2019 года. Подробности и сроки см. на [Доске Проекта](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
-**Требование к оборудованию для AAPS:** RileyLink (с антенной 916 Mhz).
+**Требование к оборудованию для AAPS:** RileyLink (с антенной 916 МГц).
 
 **Версии, работающие с проектами ИПЖ:** 512-522, 523 (Fw 2.4A или ниже), 554 (европейская прошивка 2.6A или ниже, прошивка CA 2.7A или ниже). То же для 7xx версий. Все другие устройства не поддерживаются, и, вероятно, не будут.
 
@@ -32,19 +32,19 @@
 
 **Реализации на Java:** Пока нет.
 
-**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) for Omnipod (dev_omnipod branch) which will not require a Raspberry Pi, but this is not finished. You can follow progress on https://omniaps.slack.com/ channel android-driver.
+**Cтатус реализации на AAPS:** Работа началась на [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) для Omnipod (dev_omnipod branch), который не потребует Raspberry Pi, не завершена. За развитием можно следить на на https://omniaps.slack.com/, канал android-driver.
 
-**Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
+**Требование к оборудованию для AAPS:** RileyLink с прошивкой Omnipod (2.x) и антенной 433 МГц.
 
-## Pumps that are Loopable
+## Помпы, способные к работе в качестве компонента ИПЖ
 
-### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
+### Omnipod DASH ([Домашняя страница](https://www.myomnipod.com/DASH))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа - кандидат на использование с системами ИПЖ, но протокол на данный момент неизвестен. Продажа помпы официально началась в январе 2019 года.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
-**Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
+**Комментарии:** Мы рассматриваем разработку Omnipod DASH, но на данный момент Dash еще не доступна в Европе (где находится большинство разработчиков AAPS) и что протокол коммуникации неизвестен. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
 
 * * *
 
@@ -52,7 +52,7 @@
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. В помпе есть блутус-связь.
 
 * * *
 
@@ -60,7 +60,7 @@
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. В помпе есть блутус-связь.
 
 * * *
 
@@ -96,9 +96,9 @@
 
 ### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. В помпе есть блутус-связь.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
