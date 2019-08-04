@@ -24,25 +24,25 @@
 
 Просто зарегистрируйтесь в CROWDIN, выберите ваш язык, подождите авторизации администратора и двигайтесь дальше!
 
-**I've got cash I'd like to donate, how do I do that?**
+**У меня есть деньги, я бы хотел сделать взнос, как это осуществить?**
 
     PayPal: [donations@androidaps.org](donations@androidaps.org)  
     
 
-**What is the money used for?**
+**На что идут деньги?**
 
-The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. Here's an example from 2018:
+Деньги за работу не выплачиваются никому! При организации конференций деньги идут на снижение затрат разработчиков. Мы стараемся быть максимально открытыми. Вот пример из 2018:
 
-* European Dev Meetup in Prague end of May 2018:
-* hiring a room plus internet
-* equipment
-* food / coffee
-* in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
+* Европейская встреча разработчиков в Праге в конце мая 2018 года:
+* наем жилья плюс Интернет
+* экипировка
+* еда / кофе
+* в маловероятном случае, что вышеперечисленное будет полностью покрыто и остается немного денег: путевые расходы тех, кто должен путешествовать на большие расстояния. (Некоторые разработчики с других континентов будут присутствовать, но уже находятся в Европе в это время, поэтому расходы на поездки будут низкими.)
 
-**I've got spare equipment, where do I send it?**
+**У меня есть лишнее оборудование, куда его отправить?**
 
-We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+В настоящее время мы собираем фонд "будет предоставлено позднее", чтобы начать распространять оборудование для тестирования. В конце процесса оставшееся оборудование будет передано одной из групп «Pay-it-Forward» для поддержки сообщества T1. Если вы хотите пожертвовать лишнее оборудование, сообщите по электронной почте developers@androidaps.org и мы отправим вам адрес для отправки.
 
-**I don't have cash or equipment, how can I help?**
+**У меня нет наличных или оборудования, как я могу помочь?**
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Навыки, необходимые нам: графический дизайн, дизайн UX, переводы, вики-редакторование или просто люди, готовые отвечать на простые вопросы в gitter & Facebook, чтобы дать разработчикам сосредоточиться на более сложных вещах.
