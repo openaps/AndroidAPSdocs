@@ -80,21 +80,21 @@
 
 * * *
 
-### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### ACCU-Chek Solo ([Домашняя страница](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Статус пригодности:** Является кандидатом для ИПЖ. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
+**Статус пригодности:** Является кандидатом для ИПЖ. Помпа начинает продаваться в конце 2018 года в отдельных странах ЕС. По слухам, имеет Android-приложение для управления.
 
-**Требования к оборудованию для AAPS:** По-видимому, никаких. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. Похоже, что блутус-связь имеется.
 
 ### Medtronic Bluetooth
 
-**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Комментарии:** Это помпа, которая выйдет в ближайшие несколько лет и, как планируется, будет иметь поддержку в ПО Tidepool Loop ([см. эту статью](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
 
 * * *
 
-## Pumps no longer sold (companies no longer operating)
+## Помпы, снятые с производства (компании больше не работают)
 
-### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+### Помпа Cellnovo ([Домашняя страница](https://www.cellnovo.com/en/homepage))
 
 **Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 
