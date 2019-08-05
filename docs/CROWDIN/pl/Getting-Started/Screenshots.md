@@ -120,4 +120,4 @@ Pole wyboru po prawej stronie określa, czy dany moduł będzie wyświetlany na 
 
 ## Ustawienia i preferencje
 
-W prawym górnym rogu paska nawigacyjnego znajdują się trzy małe pionowe kropki. Naciśnięcie tego przycisku przenosi użytkownika do preferencji i ustawień aplikacji, a także umożliwia wyeksportowanie ustawień, jeśli zajdzie potrzeba przeniesienia na inne urządzenie. Są one omówione w innych miejscach.
+W prawym górnym rogu paska nawigacyjnego znajdują się trzy małe pionowe kropki. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
