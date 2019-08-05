@@ -120,4 +120,4 @@ Als er in de kolom aan de rechterkant een vinkje staat, dan betekent dit dat die
 
 ## Instellingen en voorkeuren
 
-In de rechterbovenhoek zie je drie stipjes onder elkaar staan. Als je daarop tikt, kun je verder klikken naar verschillende opties, en ook Instellingen. Zo kun je met het Historiek venster jouw grafieken van vorige dagen terugkijken. Of de app handmatig Afsluiten als hij is vastgelopen. De instellingen worden ergens anders in de wiki verder beschreven.
+In de rechterbovenhoek zie je drie stipjes onder elkaar staan. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
