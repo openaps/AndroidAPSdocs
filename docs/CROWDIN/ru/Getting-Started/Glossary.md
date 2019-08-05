@@ -1,23 +1,23 @@
 # Glossary<table style="width:100%" border=1>
 <tr>
- <th>Term</th>
- <th>Description</th>
- <th>see also</th>
- <th>more details @</th>
+ <th>Термин англ./Термин рус.</th>
+ <th>Описание</th>
+ <th>смотри также</th>
+ <th>подробнее по ссылке @</th>
 </tr>
 <tr>
- <td>AAPS</td>
- <td>AndroidAPS - artifical pancreas system</td>
+ <td>AAPS/ИПЖ</td>
+ <td>AndroidAPS - искусственная поджелудочная железа.</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
   <td>
-    AMA
+    AMA/УАР
   </td>
   
   <td>
-    advanced meal assist - advanced algorithm to handle carbs
+    улучшенный алгоритм расчета болюсного инсулина
   </td>
   
   <td>
@@ -28,63 +28,63 @@
     <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a>
   </td>
 <tr>
- <td>Android auto</td>
- <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
+ <td>Android Auto</td>
+ <td>подсистема Google для создания приложений, отображающих уведомления на дисплее вашего автомобиля</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
 </tr>
 </tr>
 <tr>
  <td>APK</td>
- <td>software installation file (Android application package)</td>
+ <td>дистрибутив с программным обеспечением (установочный файл)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Building APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Создание APK</a></td>
 </tr>
 <tr>
  <td>Autosens</td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>расчет чувствительности к инсулину с учетом физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td>Azure</td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>облачный сервис для размещения данных системы Nightscout</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
- <td>BAT</td>
- <td>status light low battery on homescreen</td>
+ <td>BAT/БАТ</td>
+ <td>низкий уровень заряда батареи на главном экране</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots">Снимки экрана</a></td>
 </tr>
 <tr>
- <td>BG</td>
- <td>blood glucose</td>
+ <td>BG/ГК</td>
+ <td>уровень глюкозы в крови (ГК)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
 <td>BGI</td>
- <td>blood glucose interaction -degree to which BG 'should' be rising or falling based on insulin activity alone</td>
+ <td>взаимодействие с глюкозой крови - коэффициент, влиющий на рост или падение уровня сахара, основанный лишь на активности инсулина, без учета факторов физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td>BG source</td>
- <td>Where do your glucose values come from?</td>
+<td>BG source / Источник данных ГК</td>
+ <td>источник данных уровня глюкозы в крови.</td>
  <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td>BlueReader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
  <td>Blukon Nightreader / MiaoMiao</td>
  <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
 </tr>
 <tr>
  <td>Blukon Nightreader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots">Снимки экрана</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -146,7 +146,7 @@
  <td>FGM</td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td>git</td>
@@ -168,7 +168,7 @@
 </tr>
 <tr>
  <td>Heroku</td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>облачный сервис для размещения данных системы Nightscout</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
@@ -222,7 +222,7 @@
 </tr>
 <tr>
  <td>MiaoMiao</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
  <td>BlueReader / Blukon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots">Снимки экрана</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,11 +326,11 @@
  <td>SEN</td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots">Снимки экрана</a></td>
 </tr>
 <tr>
  <td>Sensivity detection</td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>расчет чувствительности к инсулину с учетом физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>

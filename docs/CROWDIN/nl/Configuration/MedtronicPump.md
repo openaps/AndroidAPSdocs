@@ -1,20 +1,20 @@
-# Medtronic Pumps
+# Medtronic Pompen
 
-**>>>> Medtronic pump driver is not part of AndroidAPS master yet. It will be available in next master version. <<<<**
-
-* * *
-
-Works only with older Medtronic pumps (details see below). Does not work with Medtronic 640G or 670G.
+**>>>> Medtronic pompen bevinden zich in een testfase, ze zijn nog niet te gebruiken met de normale versie van de AndroidAPS app (de zgn 'master' versie). Als de volgende 'master' versie van de app uitkomt, zul je die kunnen gebruiken met Medtronic pompen. <<<<**
 
 * * *
 
-While Medtronic driver was tested with good test group, it is still considered a beta software, which means that until bigger audience tests it for a longer period of time, you will need to enable Engineering mode, to be able to see driver in AndroidAPS.
+Werkt alleen met oudere Medtronic pompen (zie hieronder welke). Werkt niet met Medtronic 640G of 670G.
+
+* * *
+
+De Medtronic aanstuursoftware is al getest door een goede groep testers, op dit moment is het nog wel een 'beta versie'. Dit betekent dat totdat het grote publiek het gedurende een langere periode heeft getest, jij als gebruiker moet weten hoe je de Engineering mode inschakelt, zodat de Medtronic aanstuursoftware wordt weergegeven in AndroidAPS. Als deze alinea adacadabra voor jou is, laat dan het testen van de beta versie over aan anderen (voor je eigen veiligheid).
 
 * * *
 
 ## Benodigde hardware en software
 
-- **Phone:** Medtronic driver should work with any phone supporting BLE
+- **Phone:** Medtronic driver should work with any phone supporting BLE. **IMPORTANT: While driver works correctly on all phones, enabling/disabling Bluetooth doesn't (this is required when you loose connection to RileyLink and system can't recover automatically - happens from time to time). So you need to get device with Android 6.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. We are looking into problem with Android 9, but so far we haven't found resolution (it seems to work on some models and not on others, and on also works sometimes on some models).**
 - **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. Device that does is called RileyLink (you can get it here [getrileylink.org](https://getrileylink.org/)). You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). If you are feeling adventurous you can also try Gnarl ([here](https://github.com/ecc1/gnarl)), which is sort-of RileyLink-clone. 
 - **Pump:** Driver works only with following models and firmware versions: 
     - 512/712
