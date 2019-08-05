@@ -71,20 +71,20 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td>BG source</td>
- <td>Where do your glucose values come from?</td>
+<td>BG source / Источник данных ГК</td>
+ <td>источник данных уровня глюкозы в крови.</td>
  <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td>BlueReader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
  <td>Blukon Nightreader / MiaoMiao</td>
  <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
 </tr>
 <tr>
  <td>Blukon Nightreader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
@@ -146,7 +146,7 @@
  <td>FGM</td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td>git</td>
@@ -222,7 +222,7 @@
 </tr>
 <tr>
  <td>MiaoMiao</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
  <td>BlueReader / Blukon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
