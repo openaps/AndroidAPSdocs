@@ -120,4 +120,4 @@ Wenn die Box rechts angehakt ist, wird das entsprechende Modul in der oberen Men
 
 ## Einstellungen und Vorgaben
 
-Oben rechts in der Navigationsleiste findest du drei übereinander angeodnete kleine Punkte. Der Klick darauf führt zu den Einstellungen der App. Dort können auch die Einstellungen exportiert werden, z. B. um sie auf ein anderes Smartphone zu übernehmen. Diese werden an anderer Stelle im Wiki beschrieben.
+Oben rechts in der Navigationsleiste findest du drei übereinander angeodnete kleine Punkte. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
