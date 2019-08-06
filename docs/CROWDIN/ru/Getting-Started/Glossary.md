@@ -245,7 +245,7 @@
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - клиент NS</a></td>
 </tr>
 <tr>
- <td>Nightscout Reporter</td>
+ <td>Nightscout Reporter / Репортер Nightscout</td>
  <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
  <td>Nightscout</td>
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
