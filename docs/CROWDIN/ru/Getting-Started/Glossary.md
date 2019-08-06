@@ -132,31 +132,31 @@
 </tr>
 <tr>
  <td>DST</td>
- <td>daylight savings time</td>
+ <td>летнее/зимнее время (при переводе часов)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki - DST</a></td>
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
- <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td>"долгие углеводы" появляются в организме через несколько часов из избытков жиров/протеинов пищи. Необходимо учитывать при обычной помповой терапии, несущественны при использовании замкнутого цикла.</td>
+ <td>Супер микро болюс SMB</td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Вики - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs</a></td>
 </tr>
 <tr>
  <td>FGM</td>
- <td>flash glucose monitor (Freestyle Libre)</td>
+ <td>флеш-мониторинг глюкозы (Libre Freestyle)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td>git</td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
+ <td>система контроля версий для отслеживания изменений в компьютерных файлах и координации работы над этими файлами<br>-> требуется для обновления APK</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - обновление APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>веб-хостинг сервис для управления версиями с помощью Git<br>-> хранения исходного кода</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
@@ -341,7 +341,7 @@
  <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
- <td>SMB</td>
+ <td>Супер микро болюс SMB</td>
  <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
  <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
@@ -379,7 +379,7 @@
 <tr>
  <td>UAM</td>
  <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
- <td>SMB</td>
+ <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
