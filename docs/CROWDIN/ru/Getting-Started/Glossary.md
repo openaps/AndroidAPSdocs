@@ -162,9 +162,9 @@
 </tr>
 <tr>
  <td>Glimp</td>
- <td>app to collect values from Freestyle Libre</td>
+ <td>приложение для сбора данных от сенсора Libre Freestyle</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout with Glimp</a> </td>
+ <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout c Glimp</a> </td>
 </tr>
 <tr>
  <td>Heroku</td>
@@ -173,20 +173,20 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td>IC (or I:C)</td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td>IC (или I:C)</td>
+ <td>Insulin:Carb - коэффициент пересчета инсулин-углеводы (сколько углеводов покрывается одной единицей инсулина).</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>IOB</td>
- <td>insulin on board -  insulin active in your body</td>
+ <td>Акт инс IOB</td>
+ <td>активный инсулин в крови</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>ISF</td>
- <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
+ <td>ISF (чувствительность к инсулину)</td>
+ <td>фактор чувствительности к инсулину, ожидаемое снижение уровня глюкозы крови при введении одной единицы инсулина.</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
