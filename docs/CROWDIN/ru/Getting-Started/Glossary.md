@@ -116,19 +116,19 @@
  <td>Closed Loop/Замкнутый цикл (петля, контур)</td>
  <td>система замкнутого управления уровнем сахара крови. Система автоматически, без вмешательства пользователя подстраивает количество базального инсулина, основываясь на специальном алгоритме</td>
  <td>Открытый цикл (петля, контур)</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki - замкнутый цикл</a></td>
 </tr>
 <tr>
- <td>COB</td>
- <td>carbs on board</td>
+ <td>COB/ Активные углеводы</td>
+ <td>активные углеводы COB - углеводы в процессе компенсации </td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>DIA</td>
- <td>duration of insulin action</td>
+ <td>Время действия инсулина DIA</td>
+ <td>продолжительность активности инсулина</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - </a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">разновидности инсулина по времени действия</a></td>
 </tr>
 <tr>
  <td>DST</td>
