@@ -4,30 +4,30 @@ AndroidAPS má sadu Cílů, které musíte dokončit a které vás provedou jeho
 
 Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/Objectives#export-import-settings) a váš postup (již splněné cíle) bude zachován. Kromě vašeho postupu se uloží také řada jiných nastavení, například vaše bezpečnostní nastavení jako maximální bolus apod. Pokud neprovedete export a následný import svých nastavení, pak budete muset začít plnit cíle znovu od začátku. Z preventivních důvodů je vhodné si často zálohovat svá nastavení. Podrobnosti naleznete níže.  
 
-### Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+### Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry
 
-* Select the right blood glucose source for your setup. See [BG Source](../Configuration/BG-Source.md) for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
+* Zvolte správný zdroj glykémie pro svou kombinaci zařízení. Další informace viz [Zdroj glykémií](../Configuration/BG-Source.md).
+* Vyberte správnou pumpu na kartě Konfigurace (zvolte Virtuální pumpu, pokud používáte model pumpy bez ovladače v AndroidAPS – pouze pro otevřenou smyčku) a na kartě pumpy ověřte, že váš model pumpy dokáže komunikovat s aplikací AndroidAPS a přenášet do ní svůj stav. Pokud používáte pumpu DanaR, ujistěte se, že jste postupovali podle pokynů v části [Inzulínová pumpa DanaR](../Configuration/DanaR-Insulin-Pump.md) a že je správně propojená s AndroidAPS.
+* Postupujte podle pokynů na stránce [Nightscout](../Installing-AndroidAPS/Nightscout.md) a ujistěte se, že Nightscout může přijímat a zobrazovat tato data.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*Možná bude nutné počkat na další odečet glykémie, než AndroidAPS změnu zaregistruje.*
 
-### Objective 2: Starting on an open loop
+### Cíl 2: Začít s otevřenou smyčkou
 
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them. Ensure this data shows in AndroidAPS and Nightscout.
-* Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
+* Vyberte možnost Otevřená smyčka buď v Nastavení, nebo stisknutím a podržením tlačítka Smyčka v levém horním rohu hlavní obrazovky.
+* Projděte [Předvolby](../Configuration/Preferences.md) a upravte svá nastavení.
+* Ručně nastavte alespoň 20 dočasných bazálních dávek, které vám systém navrhuje, a to během 7 dní; zadejte je do své pumpy a potvrďte v AndroidAPS, že jste návrhy přijali. Ujistěte se, že se tyto údaje zobrazí v AndroidAPS a Nightscoutu.
+* Je-li to nutné, povolte [dočasné cíle](../Usage/temptarget.md). Použijte dočasný cíl Hypoglykémie, abyste systému zabránili v příliš agresivních korekcích, pokud by glykémie po vyřešení hypoglykémie stoupala. 
 
-### Objective 3: Understanding your open loop, including its temp basal recommendations
+### Cíl 3: Porozumět otevřené smyčce, včetně doporučení pro dočasné bazály
 
-* Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the forecast line in AndroidAPS homescreen/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Začněte chápat úvahy, které se skrývají za doporučeními dočasných bazálních dávek, tím, že si projdete část [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) a budete sledovat křivky predikce na domovské obrazovce AndroidAPS / v Nightscoutu. Také si v aplikaci procházejte výstupy z výpočtů na kartě OpenAPS.
 
-*You will want to set your target higher than usual until you are confident in the calculations and settings. The system allows a low target to be a minimum of 4 or maximum of 10, and a high target to be a minimum of 5 and maximum of 15. A temporary target as a single value can be anywhere in the range of 4 to 15. The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within. If your target is very wide (say, 3 or more mmol wide), you will often find because blood glucose is eventually predicted to be somewhere in that wide range not many fluctuating temporary basal rates are suggested. You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol wide), and observe how the behavior of your system changes as a result. You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in Preference > Range for Visualisation.*
+*Cíl nastavte o něco výše než obvykle, dokud si nebudete jisti správností výpočtů a nastavení. Systém umožňuje nastavit dolní cíl mezi 4 až 10 a horní cíl musí být v rozpětí 5 až 15. Dočasný cíl jako jediná hodnota může být kdekoliv mezi 4 až 15. Cíl je hodnota, o kterou se opírá kalkulace, nikoliv hodnota, na které byste chtěli svou glykémii držet. Jestliže má váš cíl velmi široký rozsah (řekněme rozdíl 3 mmol nebo více), často se vám stane, že systém nebude navrhovat příliš mnoho úprav dočasných bazálů, protože předpověď glykémie bude často spadat do daného velmi širokého rozsahu. Snažte se tedy experimentováním upravit svůj cíl tak, aby nebyl rozptyl hodnot příliš velký (řekněme 1 mmol nebo méně) a přitom sledujte, jak se mění chování systému. Cílový rozsah hodnot v grafu na hlavní obrazovce (zelené linky), ve kterých chcete udržovat svou glykémii, můžete změnit změnou hodnot v části Nastavení > Rozsah pro zobrazení.*
 
-**Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.**
+**Zastavte se zde, pokud používáte otevřenou smyčku s virtuální pumpou – neklikejte na tlačítko Zkontrolovat na konci tohoto cíle.**
 
-### Objective 4: Starting to close the loop with Low Glucose Suspend
+### Cíl 4: Začít s uzavřenou smyčkou s hlídáním nízké glykémie
 
 **Closed loop will not correct high bg values in objective 4 as it is limited to low glucose suspend.**
 
