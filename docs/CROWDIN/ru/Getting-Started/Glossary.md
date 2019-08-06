@@ -102,20 +102,20 @@
 </tr>
 <tr>
  <td>CAN</td>
- <td>status light overdue canula change on homescreen</td>
+ <td>меняющая цвет надпись состояния просроченной/непросроченной канюли на главном экране</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots">Снимки экрана</a></td>
 </tr>
 <tr>
- <td>CGM</td>
- <td>continuous glucose monitor</td>
+ <td>CGM/НМГ</td>
+ <td>непрерывный мониторинг глюкозы</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Замкнутый цикл</td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
- <td>Open loop</td>
+ <td>Closed Loop/Замкнутый цикл (петля, контур)</td>
+ <td>система замкнутого управления уровнем сахара крови. Система автоматически, без вмешательства пользователя подстраивает количество базального инсулина, основываясь на специальном алгоритме</td>
+ <td>Открытый цикл (петля, контур)</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
 </tr>
 <tr>
