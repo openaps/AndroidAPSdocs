@@ -275,14 +275,14 @@
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Определение чувствительности</a></td>
 </tr>
 <tr>
- <td>Peak time</td>
- <td>time of maximum effect of insulin given</td>
+ <td>Peak time/Пик</td>
+ <td>Время максимальной активности - время, через которое эффект от введения инсулина становится максимальным.</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
- <td>PH</td>
- <td>pump history (entry in treatments tab)</td>
+ <td>PH/История записей помпы</td>
+ <td>история помпы (запись во вкладке назначений/лечения)</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Снимки экрана</a></td>
 </tr>
