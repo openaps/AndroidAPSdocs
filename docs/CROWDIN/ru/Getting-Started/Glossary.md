@@ -258,27 +258,27 @@
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
+ <td>Искусственная поджелудочная железа с открытым кодом.<br> Работает на мини-компьютерах (например, RaspBerry PI)<br>проект AAPS использует наработки проекта OpenAPS.</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">Документация OpenAPS</a></td>
 </tr>
 <tr>
  <td>Открытый цикл</td>
- <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
+ <td>Состояние ИПЖ, в котором система рекомендует настройки, выполняемые вручную на помпе.</td>
  <td>Замкнутый цикл</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
- <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
+ <td>Определение чувствительности (к инсулину). Ключевой алгоритм версии 0/1, используемый OpenAPS.</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Определение чувствительности</a></td>
 </tr>
 <tr>
  <td>Peak time</td>
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td>PH</td>
