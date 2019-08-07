@@ -39,4 +39,4 @@ AAPS, vážený průměr – absorpce se počítá tak, aby bylo `COB == 0` po u
 
 ![COB z AAPS](../images/cob_aaps2_orange.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, an orange dot appears on COB graph
+Jestliže je použitá minimální absorpce sacharidů namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví oranžová tečka
