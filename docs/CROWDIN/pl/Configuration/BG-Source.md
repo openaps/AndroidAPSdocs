@@ -87,7 +87,7 @@ Aby używać sensora Libre w charakterze pełnoprawnego systemu CGM przekazując
 ## Dla użytkowników Eversense  
 
 
-Najprostszym sposobem użycia Eversense z AndroidAPS jest zainstalowanie zmodyfikowanej aplikacji Eversense (i odinstalowanie oryginalnej aplikacji Eversense).
+The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) (and unistall the original one first).
 
 **Ostrzeżenie: Odinstalowanie starej aplikacji spowoduje utratę lokalnych danych historycznych (starszych niż tydzień)!**
 
