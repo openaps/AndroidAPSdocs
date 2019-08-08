@@ -312,13 +312,13 @@
 </tr>
 <tr>
  <td>RileyLink</td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
+ <td>Аппаратное устройство для сопряжения устройств Bluetooth Low Energy (BLE) с устройствами на частоте 916 МГц (для старых помп Medtronic)</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>SAGE</td>
- <td>sensor age - displayed in Nightscout if information was entered in the AAPS careportal tab</td>
+ <td>SAGE/Возраст сенсора</td>
+ <td>возраст сенсора - отображается на сайте Nightscout, если информация введена на вкладке портала лечения/назначений AAPS</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
