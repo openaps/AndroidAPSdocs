@@ -335,10 +335,10 @@
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
- <td>Sensor noise</td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td>Sensor noise/шум сенсора</td>
+ <td>нестабильные данные мониторинга, проявляющиеся в больших колебаниях значений ГК.</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - шум сенсора</a></td>
 </tr>
 <tr>
  <td>Супер микро болюс SMB</td>
