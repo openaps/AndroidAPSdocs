@@ -87,7 +87,7 @@ Abyste mohli používat Libre jako CGM senzor, který získává nové hodnoty g
 ## Pro uživatele Eversense  
 
 
-Nejjednodušší způsob, jak používat Eversense s AndroidAPS, je nainstalovat upravenou [aplikaci Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (nejdříve musíte odinstalovat tu originální).
+The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) (and unistall the original one first).
 
 **Varování: odinstalováním staré aplikace přijdete o své místní historické údaje starší než jeden týden!**
 
