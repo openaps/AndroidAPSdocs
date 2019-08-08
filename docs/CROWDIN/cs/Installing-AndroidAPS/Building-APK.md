@@ -2,7 +2,7 @@
 
 * * *
 
-***Mějte prosím na paměti** při vytváření AndroidAPS 2.0 apk: **Konfigurace na vyžádání** není podporována v aktuální verzi Android Gradle pluginu! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:*
+***Mějte prosím na paměti** při vytváření AndroidAPS 2.0 apk: **Konfigurace na vyžádání** není podporována v aktuální verzi Android Gradle pluginu! If your build fails with an error regarding "on demand configuration" you can do the following:*
 
      * * Otevřete okno Preferences klepnutím na File > Settings (v systému Mac, Android Studio > Preferences). *
      * * V levém podokně klepněte na Build, Execution, Deployment > Compiler.*
