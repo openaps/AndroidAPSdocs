@@ -287,20 +287,20 @@
  <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Снимки экрана</a></td>
 </tr>
 <tr>
- <td>Predictions</td>
- <td>preditions for BG in the future based on different calculations</td>
+ <td>Прогнозирование</td>
+ <td>Прогнозы уровня ГК в будущем, основанные на разных алгоритмах расчета.</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - линии прогноза ГК</a></td>
 </tr>
 <tr>
  <td>Профиль</td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
+ <td>Базовые настройки компенсации (базальный уровень, длительность действия инсулина DIA, соотношение инсулин-углеводы IC, чувствительность к инсулину ISF, целевые значения ГК). Могут задаваться через AAPS или через Nightscout.</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - профиль</a></td>
 </tr>
 <tr>
- <td>Profile switch</td>
- <td>(temporary) change of profile used or percentual increase/decrease</td>
+ <td>Profile switch/смена профиля</td>
+ <td>(частичное) изменение профиля или процентное увеличение/уменьшение.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
 </tr>
