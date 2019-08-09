@@ -1,13 +1,13 @@
-# Pump choices
+# Выбор помпы
 
-AndroidAPS currently works with
+AndroidAPS на этот момент работает с
 
-* Помпа Accu Chek Combo
+* Accu Chek Combo
 * Accu-Chek Insight
 * DanaR
 * DanaRS 
 
-pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+помпами Подробности о других помпах, которые возможно смогут работать с AndroidAPS, перечислены на странице [ Помпы будущего ](Future-possible-Pump-Drivers.md).
 
 If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
 
