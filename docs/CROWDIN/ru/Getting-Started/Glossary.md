@@ -342,31 +342,31 @@
 </tr>
 <tr>
  <td>Супер микро болюс SMB</td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
- <td>UAM</td>
+ <td>сверхмалый болюс, новая технология быстрой подстройки уровня ГК.</td>
+ <td>незапланированный прием пищи UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Super bolus</td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td>Super bolus/Суперболюс</td>
+ <td>переход от базальной к болюсной компенсации для быстрой коррекции ГК.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
- <td>TBB</td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td>Сумма базала/TBB</td>
+ <td>суммарный обьем базального инсулина в течении 24 часов</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>TBR</td>
- <td>temporary basal rate</td>
+ <td>Временный базал/TBR</td>
+ <td>временная базальная скорость</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>TDD</td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td>TDD/общая суточная доза</td>
+ <td>Общая суточная доза = болюс + базал за сутки </td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -377,7 +377,7 @@
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
 </tr>
 <tr>
- <td>UAM</td>
+ <td>незапланированный прием пищи UAM</td>
  <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
  <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
