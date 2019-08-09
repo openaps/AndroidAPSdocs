@@ -7,6 +7,7 @@ Necessary Modules
 .. toctree::
    :maxdepth: 1
    :glob:
+   
    Phone <./Getting-Started/Phones.md>
    Insulin pump choices <./Getting-Started/Pump-Choices.md>
    Possible future pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
