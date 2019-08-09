@@ -11,7 +11,7 @@ Necessary Modules
    Phone <./Getting-Started/Phones.md>
    Insulin pump choices <./Getting-Started/Pump-Choices.md>
    Possible future pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   BG Source <./Modules/bgoverview>
+   BG Source <./Modules/bgoverview.rst>
    Nightscout <./Installing-AndroidAPS/Nightscout.md>
    AAPS - the .apk file <./Installing-AndroidAPS/Building-APK.md> 
    
