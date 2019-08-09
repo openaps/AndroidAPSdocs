@@ -58,7 +58,7 @@ If you're ready for the challenge, please read on.
 Getting Started with AndroidAPS
 ----------------
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
