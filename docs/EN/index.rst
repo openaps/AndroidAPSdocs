@@ -76,7 +76,7 @@ How to Install AndroidAPS
    Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+
    
 Configuration 
 ---------------
@@ -85,14 +85,8 @@ Configuration
    :glob:
    
    Config Builder <./Configuration/Config-Builder.md>
-   BG Source <./Configuration/BG-Source.md>
-   Dexcom G6 hints <./Configuration/Dexcom.md>
-   Dana-R pump <./Configuration/DanaR-Insulin-Pump.md>
-   Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
-   Medtronic pump <./Configuration/MedtronicPump.md>
-   Watchfaces <./Configuration/Watchfaces.md>
+   Hardware setup <./Configuration/Hardware/index.rst>
+   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>   
    Preferences <./Configuration/Preferences.md>
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    xDrip+ settings <./Configuration/xdrip.md>
