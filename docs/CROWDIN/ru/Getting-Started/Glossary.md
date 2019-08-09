@@ -371,14 +371,14 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>TT</td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td>ТТ/Временная цель </td>
+ <td>временная цель<br>временное увеличение/уменьшение целевой ГК (диапазон)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - временные цели</a></td>
 </tr>
 <tr>
  <td>незапланированный прием пищи UAM</td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td>Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других воздействий и попытка компенсации через механизм супер микроболюса SMB</td>
  <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
