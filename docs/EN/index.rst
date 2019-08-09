@@ -62,13 +62,9 @@ Getting Started with AndroidAPS
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
+   Modules overview <Modules/index.rst>
    Screenshots <./Getting-Started/Screenshots.md>
-   Phones <./Getting-Started/Phones.md>
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Possible future pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
-   FAQ for loopers <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
+
   
 How to Install AndroidAPS
 ------------
@@ -149,3 +145,12 @@ How to help
    How to help <./Getting-Started/How-can-I-help.md>
    How to translate the app <./translations.md>
    How to edit the wiki <./make-a-PR>
+   
+FAQ and Glossary 
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   FAQ <./Getting-Started/FAQ.md>
+   Glossary <./Getting-Started/Glossary.md>
