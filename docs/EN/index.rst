@@ -62,7 +62,7 @@ Getting Started with AndroidAPS
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
-   Modules overview <Modules/index.rst>
+   Modules overview <./Getting-Started/Modules/index.rst>
    Screenshots <./Getting-Started/Screenshots.md>
 
   
