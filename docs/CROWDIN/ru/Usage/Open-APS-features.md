@@ -8,7 +8,7 @@ SMB, сокращение от 'супер микро болюс', являет�
 
 Функция СМБ содержит некоторые механизмы безопасности:
 
-1. The largest single SMB dose can only be the smallest value off:
+1. Самой большой однократной дозой SMB может быть только наименьшее значение от:
     
     * value corresponding to the current basal rate (as adjusted by autotune/autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
     * half the amount of insulin currently required, or
