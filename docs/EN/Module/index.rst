@@ -63,7 +63,7 @@ Nightscout
 ------------
 One senctence: what is `Nightscout <http://www.nightscout.info/>`_
 Nightscout is independent of the other modules.
-More information on how to configure Nightscout for use with AndroidAPS `here <../../Installing-AndroidAPS/Nightscout.html>`_
+More information on how to configure Nightscout for use with AndroidAPS `here <../Installing-AndroidAPS/Nightscout.html>`_
 
 AAPS-.apk file
 ------
@@ -89,6 +89,6 @@ It would be wonderful if anyone could add here a image with an overview of all d
 
 It sometimes takes a while until all module are together. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and where approporiate adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factores (ISF), etc. And if already possible, open loop is a good way to test the system.
 
-If you have your AAPS components all together (congrats!) or at least enough to start with an open loop, you should first read through the `Objectiv description <../../Usage/Objectives.html>`_ (Overview Part 2 )before each new Objectiv.
+If you have your AAPS components all together (congrats!) or at least enough to start with an open loop, you should first read through the `Objectiv description <../Usage/Objectives.html>`_ (Overview Part 2 )before each new Objectiv.
 
 
