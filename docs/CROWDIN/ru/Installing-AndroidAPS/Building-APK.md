@@ -1,8 +1,8 @@
-# Building the APK
+# Создание андроид-приложения (APK)
 
 * * *
 
-***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
+***Пожалуйста, обратите внимание** при создании приложения AndroidAPS 2.0: **Выборочная Конфигурация ** не поддерживается текущей версией плагина Android Gradle! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:*
 
      * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
      * *In the left pane, click Build, Execution, Deployment > Compiler.*
