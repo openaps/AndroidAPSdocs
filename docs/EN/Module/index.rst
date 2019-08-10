@@ -6,7 +6,6 @@ Necessary Modules
 =====================
 Phones
 -------
-`Phone <../Phones.html>`_
 Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
 You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
@@ -17,7 +16,7 @@ Any problems with the spreadsheet please email [hardware@androidaps.org](mailto:
 
 ## Phone Background
 
-![phone background](../images/bg_phone_thump.jpg) 
+`[phone background <../images/bg_phone_thump.jpg>`_ 
 </br>
 Design: Thiago :) 
 </br>
