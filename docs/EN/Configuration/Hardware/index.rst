@@ -4,9 +4,12 @@ Hardware-Configuration
 Configuration
 --------------
    
+BG Source
+-----------
 * `BG Source <../BG-Source.html>`_
 * `xDrip+ Settings <../xDrip.html>`_
 * `Dexcom G6 hints <../Dexcom.html>`_
+* `Smoothing blood glucose data <../../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_
 
 Pumps
 ------
