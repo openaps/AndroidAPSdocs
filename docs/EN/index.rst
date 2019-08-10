@@ -175,10 +175,4 @@ FAQ and Glossary and Troubleshooting
    Glossary <./Getting-Started/Glossary.md>
    Troubleshooting <./FGT/troubleshooting.rst>
    
-Test
-------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-  
-   test <./Test/testx.rst>
+
