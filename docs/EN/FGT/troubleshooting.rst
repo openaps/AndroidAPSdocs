@@ -1,6 +1,6 @@
 Troubleshooting
 ================
-There are errors missing? Tell us at wiki@androidaps.org
+There are errors missing? Tell us at wiki@androidaps.org.
 
 NS-Client
 ----------
@@ -8,7 +8,7 @@ NS-Client
 
 Updates
 ---------
-All Update Troubleshooting is `here <../Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>`_
+All Update Troubleshooting is `here <../Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>`_.
 
 Pumps
 ------
