@@ -146,4 +146,11 @@ FAQ and Glossary and Troubleshooting
    Glossary <./Getting-Started/Glossary.md>
    Troubleshooting <./FGT/troubleshooting.rst>
 
-Advanced </Advanced/index>
+Advanced 
+----------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Android auto <./Usage/Android-auto.md>
+   Automation <./Usage/automation.md>
