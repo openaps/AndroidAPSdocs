@@ -1,5 +1,5 @@
-Module Overview (Overview Part 1 - Modules)
-****************************************************
+**Module Overview (Overview Part 1 - Modules)**
+
 AAPS is not just a (self-built) application, the application is a just one of serveral modules.
 
 Necessary Modules
