@@ -5,6 +5,7 @@ Configuration
 --------------
    
 * `BG Source <../BG-Source.html>`_
+* `xDrip+ Settings <../xDrip.html>`_
 * `Dexcom G6 hints <../Dexcom.html>`_
 
 Pumps
