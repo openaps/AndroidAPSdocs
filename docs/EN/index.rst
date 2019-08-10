@@ -63,17 +63,17 @@ Getting Started
    
    Safety First <./Getting-Started/Safety-first.md>
 
-Module Overview  
+Module Overview1  
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Necessary Modules <./Module/index.rst#Necessary Modules>`_
-   Optional Modules <./Module/index.rst#Optional Modules>`_
-   Sample Setup <./Module/index#Sample Setup>`_
+   Necessary Modules <./Module/index.html#Necessary Modules>`_
+   Optional Modules <./Module/index.html#Optional Modules>`_
+   Sample Setup <./Module/index.html#Sample Setup>`_
 
-How to Install AndroidAPS2
+How to Install AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
