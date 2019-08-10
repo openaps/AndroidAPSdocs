@@ -102,8 +102,7 @@ Usage (software)
    Profile switch <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>
    SMS commands <./Usage/SMS-Commands.md>
-   Extended Carbs <./Usage/Extended-Carbs.md>
-  
+   Extended Carbs <./Usage/Extended-Carbs.md>  
    Screenshots <./Getting-Started/Screenshots.md>
  
 Usage (non-specific) 
