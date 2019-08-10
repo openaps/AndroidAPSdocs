@@ -93,9 +93,9 @@ Hardware Setup
    :glob:
    
    BG Source <./Configuration/BG-Source.md>
-   Pumps <./Pumps.md>
-   Phones <./Phone.rst>
-   Smartwatch  <./Smartwatch.rst>
+   Pumps <./Hardware/Pumps.rst>
+   Phones <./Hardware/Phone.rst>
+   Smartwatch  <./Hardware/Smartwatch.rst>
    
 Configuration 
 ---------------
