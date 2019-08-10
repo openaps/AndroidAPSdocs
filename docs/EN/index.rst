@@ -84,7 +84,18 @@ How to Install AndroidAPS
    Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-
+   
+   
+Hardware Setup
+---------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   BG Source
+   Pumps
+   Phones
+   Smartwatch
    
 Configuration 
 ---------------
