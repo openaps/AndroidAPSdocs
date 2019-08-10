@@ -161,4 +161,11 @@ FAQ and Glossary and Troubleshooting
    FAQ <./Getting-Started/FAQ.md>
    Glossary <./Getting-Started/Glossary.md>
    Troubleshooting <./FGT/troubleshooting.rst>
-
+   
+Test
+------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   test <./Test/testx.rst>
