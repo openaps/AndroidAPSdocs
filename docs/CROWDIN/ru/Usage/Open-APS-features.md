@@ -10,9 +10,9 @@ SMB, сокращение от 'супер микро болюс', являет�
 
 1. Самой большой однократной дозой SMB может быть только наименьшее значение от:
     
-    * value corresponding to the current basal rate (as adjusted by autotune/autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
-    * half the amount of insulin currently required, or
-    * the remaining portion of your maxIOB value in the settings.
+    * значения, соответствующего текущей базальной скорости (с поправками autotune/autosens) на длительность, установленную в "Максимуме минут базала, которыми ограничивается SMB", например, количество базального инсулина за следующие 30 минут, или
+    * половина требуемого в данный момент количества инсулина, или
+    * оставшаяся часть maxIOB в настройках.
 
 2. Probably you will often notice low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps'). This is by design for security reasons and has no negative effects if the profile is set correctly. The IOB curve is more meaningful than the course of the temporary basal rates.
 
