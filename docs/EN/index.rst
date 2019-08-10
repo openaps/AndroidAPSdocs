@@ -90,7 +90,7 @@ Configuration
    Preferences <./Configuration/Preferences.md>
    
    
-Usage
+Usage (software)
 ------------
 .. toctree::
    :maxdepth: 1
@@ -103,11 +103,28 @@ Usage
    Temp-targets <./Usage/temptarget.md>
    SMS commands <./Usage/SMS-Commands.md>
    Extended Carbs <./Usage/Extended-Carbs.md>
+  
+   Screenshots <./Getting-Started/Screenshots.md>
+ 
+Usage (non-specific) 
+---------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
    Crossing timezones with pumps <./Usage/Timezone-traveling.md>
    Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Smoothing blood glucose data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Screenshots <./Getting-Started/Screenshots.md>
+   
+Advanced 
+----------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Android auto <./Usage/Android-auto.md>
+   Automation <./Usage/automation.md>
+
 
 Where to go for help 
 ------------
@@ -146,11 +163,3 @@ FAQ and Glossary and Troubleshooting
    Glossary <./Getting-Started/Glossary.md>
    Troubleshooting <./FGT/troubleshooting.rst>
 
-Advanced 
-----------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android auto <./Usage/Android-auto.md>
-   Automation <./Usage/automation.md>
