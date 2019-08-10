@@ -63,7 +63,7 @@ Getting Started
    
    Safety First <./Getting-Started/Safety-first.md>
 
-Module Overview  <.Module/index.rst> 
+Module Overview  </Module/index> 
 ----------------
 
 How to Install AndroidAPS
