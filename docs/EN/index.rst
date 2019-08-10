@@ -65,6 +65,12 @@ Getting Started
 
 `Module Overview  <./Module/index.html>`_ 
 -----------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   Necessary Modules <./Module/index#Necessary Modules>`_
+   Optional Modules <./Module/index#Optional Modules>`_
+   Sample Setup <./Module/index#Sample Setup>`_
 
 How to Install AndroidAPS
 ------------
