@@ -88,7 +88,6 @@ Configuration
    Hardware setup <./Configuration/Hardware/index.rst>
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>   
    Preferences <./Configuration/Preferences.md>
-   xDrip+ settings <./Configuration/xdrip.md>
    
    
 Usage
