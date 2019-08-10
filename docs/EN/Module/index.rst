@@ -42,6 +42,7 @@ Enlite: quite complicated with a lot of extra stuff
 Nightscout
 ------------
 One senctence: what is `Nightscout <http://www.nightscout.info/>`_
+Nightscout is independent of the other module.
 More information on how to configure Nightscout for use with AndroidAPS `here <../../Installing-AndroidAPS/Nightscout.html>`_
 
 AAPS-.apk file
@@ -55,7 +56,8 @@ Optional Modules
 ==================
 Smartwatch
 ---------------
-`Smartwatch <../Phones.html>`_
+Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find `here <>`_
+
  
 Sample Setup
 ============
