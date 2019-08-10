@@ -92,10 +92,10 @@ Hardware Setup
    :maxdepth: 1
    :glob:
    
-   BG Source
-   Pumps
-   Phones
-   Smartwatch
+   BG Source <./Configuration/BG-Source.md>
+   Pumps <./Configuration/Pumps.md>
+   Phones <./Configuration/Phone.rst>
+   Smartwatch  <./Configuration/Smartwatch.rst>
    
 Configuration 
 ---------------
