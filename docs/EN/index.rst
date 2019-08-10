@@ -44,15 +44,9 @@ If you're ready for the challenge, please read on.
 * An app closely integrated with Nightscout
 * An app in which the user is in control of safety constraints 
 
-**What you need to get started:**
-
-* An Android smartphone with Android 5.0 or later. **Please update to Android 6 or higher as it is planned to drop support for Android 5.x soon.** See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ to learn which phones work best with AndroidAPS.
-* A continuous clucose monitor (CGM): Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, or PocTech
-* An app on the phone to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself installed on the phone
-* `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 or later
-* A supported pump: Dana-R or Dana-RS from Sooil, or Accu-Chek Combo or Insight from Roche (unless you are able to build your own driver for another insulin pump)
-
+**How to start:**
+Of course, all of this content here is very important, but can be in the beginning quite confusing.
+A good orientation is given by the `Module Overview <./Module/index.rst>`_ and the `Objectives <./Usage/Objectives.md>`_.
 
 
 Getting Started (delete)
