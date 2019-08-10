@@ -64,15 +64,15 @@ Getting Started (delete)
    Safety First <./Getting-Started/Safety-first.md>
    Module Overview <./Getting-Started/Modules/index.rst>
 
-Module Overview2  
+Module Overview  
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Necessary Modules <./Modules/index.rst>`_
-   Optional Modules <./Modules/index.rst>`_
-   Sample Setup <./Modules/index.rst>`_
+   Necessary Modules <./Module/index.rst>`_
+   Optional Modules <./Module/index.rst>`_
+   Sample Setup <./Module/index.rst>`_
 
 How to Install AndroidAPS
 ------------
