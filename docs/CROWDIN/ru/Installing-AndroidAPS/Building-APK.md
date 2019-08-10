@@ -4,17 +4,17 @@
 
 ***Пожалуйста, обратите внимание** при создании приложения AndroidAPS 2.0: **Выборочная Конфигурация ** не поддерживается текущей версией плагина Android Gradle! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:*
 
-     * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
-     * *In the left pane, click Build, Execution, Deployment > Compiler.*
-     * *Uncheck the Configure on demand checkbox.*
+     * *Открыть окно настроек, нажав на Файл > Установки (на Mac, Android Studio > Настройки).*
+     * *В левой панели нажать кнопку Build, Execution, Deployment > Compiler.* (сборка, выполнение, развертывание)
+     * *Снять флажок с ячейки "выборочная конфигурация.*
     
 
-## * *Click Apply or OK.*
+## * *Нажмите Применить или OK.*
 
-### This article is divided into two parts.
+### Эта статья разделена на две части.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
+* В обзорной части есть объяснение того, какие шаги необходимы для создания файла APK.
+* В пошаговой инструкции вы найдете снимки экранов установки. Поскольку версии Android Studio - среды разработки программного обеспечения, в которой мы будем создавать APK - меняются очень быстро, точного соответствия вашей сборке вы не увидите, но общее представление о том, как это делается, получите. Android Studio работает на Windows, Mac OS X и Linux, и между каждой платформой возможны незначительные различия. Если вы обнаружите, что что-то важное выполняется неправильно или отсутствует, пожалуйста, сообщите в группе facebook "AndroidAPS users" или в чате Gitter [Android APS](https://gitter.im/MilosKozak/AndroidAPS) или [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) чтобы мы могли устранить проблему.
 
 ## Overview
 
