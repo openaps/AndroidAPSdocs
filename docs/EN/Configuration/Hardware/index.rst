@@ -17,7 +17,7 @@ Pumps
 * `Dana-RS pump <../DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo pump <../Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight pump <../Accu-Chek-Insight-Pump.html>`_
-* `Medtronic pump <../MedtronicPump.md>`_
+* `Medtronic pump <../MedtronicPump.html>`_
 
 Phones
 -------
@@ -26,4 +26,4 @@ Phones
 
 Smartwatch
 ------------
-* `Watchfaces <../Watchfaces.md>`_
+* `Watchfaces <../Watchfaces.html>`_
