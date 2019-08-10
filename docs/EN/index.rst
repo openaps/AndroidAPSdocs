@@ -70,9 +70,9 @@ Module Overview2
    :maxdepth: 1
    :glob:
    
-   Necessary Modules <./Module/index.rst>`_
-   Optional Modules <./Module/index.rst>`_
-   Sample Setup <./Module/index.rst>`_
+   Necessary Modules <./Modules/index.rst>`_
+   Optional Modules <./Modules/index.rst>`_
+   Sample Setup <./Modules/index.rst>`_
 
 How to Install AndroidAPS
 ------------
