@@ -62,8 +62,9 @@ Getting Started
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
+   Module Overview <./Getting-Started/Module/index.rst>
 
-Module Overview1  
+Module Overview2  
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
