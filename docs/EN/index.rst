@@ -62,7 +62,7 @@ Getting Started
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
-   Module Overview <./Getting-Started/Module/index.rst>
+   Module Overview <./Getting-Started/Modules/index.rst>
 
 Module Overview2  
 -----------------------------------------
