@@ -145,3 +145,5 @@ FAQ and Glossary and Troubleshooting
    FAQ <./Getting-Started/FAQ.md>
    Glossary <./Getting-Started/Glossary.md>
    Troubleshooting <./FGT/troubleshooting.rst>
+
+Advanced </Advanced/index>
