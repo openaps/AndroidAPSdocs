@@ -55,17 +55,17 @@ If you're ready for the challenge, please read on.
 
 
 
-Getting Started with AndroidAPS
+Getting Started
 ----------------
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
-   Modules overview <./Getting-Started/Modules/index.rst>
-   
 
-  
+Module Overview  <.Module/index.rst> 
+----------------
+
 How to Install AndroidAPS
 ------------
 .. toctree::
