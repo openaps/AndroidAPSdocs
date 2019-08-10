@@ -137,6 +137,7 @@ html_theme_options = {
   'github_user': theme_github_user,
   'github_repo': theme_github_repo,
   'prev_next_buttons_location': None
+  'navigation_depth': -1,
 }
 
 """
