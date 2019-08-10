@@ -55,7 +55,7 @@ If you're ready for the challenge, please read on.
 
 
 
-Getting Started
+Getting Started (delete)
 ----------------
 .. toctree::
    :maxdepth: 1
@@ -104,7 +104,7 @@ Configuration
    :glob:
    
    Config Builder <./Configuration/Config-Builder.md>
-   Hardware setup <./Configuration/Hardware/index.rst>
+   Hardware setup (delete) <./Configuration/Hardware/index.rst> 
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>   
    Preferences <./Configuration/Preferences.md>
    
