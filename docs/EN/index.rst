@@ -64,8 +64,8 @@ Module Overview
    :maxdepth: 1
    :glob:
    
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Module <./Module/index.rst>
+   
    
    
 How to Install AndroidAPS
