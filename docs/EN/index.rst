@@ -88,10 +88,8 @@ Configuration
    Hardware setup <./Configuration/Hardware/index.rst>
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>   
    Preferences <./Configuration/Preferences.md>
-   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    xDrip+ settings <./Configuration/xdrip.md>
-   Huawei phones special configuration <./Usage/huawei.md>
-   Jelly Pro - battery life optimization <./Usage/jelly.md>
+   
    
 Usage
 ------------
@@ -100,7 +98,8 @@ Usage
    :glob:
     
    Objectives <./Usage/Objectives.md>
-   OpenAPS features <./Usage/Open-APS-features.md>
+   OpenAPS features <./Usage/Open-APS-features.md>   
+   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profile switch <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>
    SMS commands <./Usage/SMS-Commands.md>
@@ -109,7 +108,7 @@ Usage
    Accessing logfiles <./Usage/Accessing-logfiles.md>
    Smoothing blood glucose data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-   Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
+   
    Android auto <./Usage/Android-auto.md>
    Automation <./Usage/automation.md>
    Screenshots <./Getting-Started/Screenshots.md>
