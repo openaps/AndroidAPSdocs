@@ -49,7 +49,7 @@ Of course, all of this content here is very important, but can be in the beginni
 A good orientation is given by the `Module Overview <./Module/index.html>`_ and the `Objectives <./Usage/Objectives.html>`_.
 
 
-Getting Started (delete)
+Getting Started (delete or just change)
 ----------------
 .. toctree::
    :maxdepth: 1
