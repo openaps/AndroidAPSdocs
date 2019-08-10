@@ -64,10 +64,10 @@ Module Overview
    :maxdepth: 1
    :glob:
    
-   Necessary Modules <./Module/index.rst>`_
-   Optional Modules <./Module/index.rst>`_
-   Sample Setup <./Module/index.rst>`_
-
+   Building the APK <./Installing-AndroidAPS/Building-APK.md>
+   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   
+   
 How to Install AndroidAPS
 ------------
 .. toctree::
