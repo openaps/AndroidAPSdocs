@@ -3,15 +3,16 @@ Hardware-Configuration
 
 Configuration
 --------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
+
    
-   BG Source <./Configuration/BG-Source.md>
-   Dexcom G6 hints <./Configuration/Dexcom.md>
-   Dana-R pump <./Configuration/DanaR-Insulin-Pump.md>
-   Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
-   Medtronic pump <./Configuration/MedtronicPump.md>
-   Watchfaces <./Configuration/Watchfaces.md>
+* `BG Source <../BG-Source.html>`_
+* `Dexcom G6 hints <../Dexcom.html>`_
+* `Dana-R pump <../DanaR-Insulin-Pump.html>`_
+* `Dana-RS pump <../DanaRS-Insulin-Pump.html>`_
+* `Accu-Chek Combo pump <../Accu-Chek-Combo-Pump.html>`_
+* `Accu-Chek Insight pump <../Accu-Chek-Insight-Pump.html>`_
+* `Medtronic pump <../MedtronicPump.md>`_
+* `Watchfaces <../Watchfaces.md>`_
+
+* `Jelly Pro Settings <../../Usage/jelly.html>`_
+* `Huawei Settings <../../Usage/huawei.html>`_
