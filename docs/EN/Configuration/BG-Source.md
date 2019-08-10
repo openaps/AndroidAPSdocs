@@ -1,6 +1,6 @@
-# General CGM recommendations
+## General CGM recommendations
 
-## CGM hygiene
+### CGM hygiene
 
 Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps. 
 
