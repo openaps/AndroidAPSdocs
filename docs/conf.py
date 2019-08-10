@@ -137,7 +137,7 @@ html_theme_options = {
   'github_user': theme_github_user,
   'github_repo': theme_github_repo,
   'prev_next_buttons_location': None,
-  'navigation_depth': -1,
+  'navigation_depth': 6,
 }
 
 """
@@ -146,6 +146,7 @@ html_theme_options = {
   'display_github': True,
   'github_user': 'openaps',
   'github_repo': 'AndroidAPSdocs',
+  'navigation_depth': 6,
 }
 import sphinx_rtd_theme
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path( )]
