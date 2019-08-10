@@ -1,27 +1,48 @@
 Module Overview (Overview Part 1 - Modules)
-=================================================
+****************************************************
 AAPS is not just a (self-built) application, the application is a just one of serveral modules.
 
 Necessary Modules
-------------------
-.. toctree::
-   :maxdepth: 2
-   :glob:
+=====================
+Phones
+-------
+`Phone <../Phones.html>`_
+
+Insulin Pump
+------------
+* `Insulin pump choices <../Pump-Choices.html>`_
+* `Possible future pump drivers  <../Future-possible-Pump-Drivers.html>`_
+
+BG Source
+------------
+* `BG Source <./bgoverview.html>`_
+
+
+Nightscout
+------------
+* `Nightscout <../../Installing-AndroidAPS/Nightscout.html>`_
+
+AAPS-.apk file
+------
+* `AAPS - the .apk file <../../Installing-AndroidAPS/Building-APK.html>`_ 
    
-   Insulin pump choices <../Getting-Started/Pump-Choices.md>
-   Possible future pump drivers  <../Getting-Started/Future-possible-Pump-Drivers.md>
-   BG Source <../Getting-Startebgoverview.rst>
-   Nightscout <../../Installing-AndroidAPS/Nightscout.html>
-   AAPS - the .apk file <../../Installing-AndroidAPS/Building-APK.html> 
    
+ 
 
 Optional Modules
------------------
-* `Smartwatch <../Phones.html>`_
-   
+==================
+Smartwatch
+---------------
+`Smartwatch <../Phones.html>`_
+ 
 Sample Setup
---------------  
-* `Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <../Sample-Setup.html>`_
+============
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   `Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <../Getting-Started/Sample-Setup.md`_
+
 
    
 It would be wonderful if anyone could add here a image with an overview of all different modules.
