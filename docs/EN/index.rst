@@ -106,10 +106,7 @@ Usage
    Crossing timezones with pumps <./Usage/Timezone-traveling.md>
    Accessing logfiles <./Usage/Accessing-logfiles.md>
    Smoothing blood glucose data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-   
-   Android auto <./Usage/Android-auto.md>
-   Automation <./Usage/automation.md>
+   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Screenshots <./Getting-Started/Screenshots.md>
 
 Where to go for help 
