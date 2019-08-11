@@ -139,8 +139,35 @@ Advanced
    Android auto <./Usage/Android-auto.md>
    Automation <./Usage/automation.md>
    
-   
+Troubleshooting
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
   
+   Troubleshooting <./FGT/troubleshooting.rst>
+   
+   
+FAQ 
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   FAQ <./Getting-Started/FAQ.md>
+
+   
+Glossary
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   FAQ <./Getting-Started/FAQ.md>
+   Glossary <./Getting-Started/Glossary.md>
+   Troubleshooting <./FGT/troubleshooting.rst>
+   
+
 
 
 Where to go for help 
@@ -170,14 +197,6 @@ How to help
    How to translate the app <./translations.md>
    How to edit the wiki <./make-a-PR>
    
-FAQ and Glossary and Troubleshooting
-------------------------------------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-  
-   FAQ <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
-   Troubleshooting <./FGT/troubleshooting.rst>
+
    
 
