@@ -49,14 +49,16 @@ Of course, all of this content here is very important, but can be in the beginni
 A good orientation is given by the `Module Overview <./Module/index.html>`_ and the `Objectives <./Usage/Objectives.html>`_.
 
 
-Getting Started (delete or just change)
+Getting Started 
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
-   Module Overview <./Getting-Started/Modules/index.rst>
+   What is a closed loop system <./Getting-Started/Safety-first.md>
+   What is closed Loop System with AndroidAPS <./Getting-Started/Safety-first.md>  
+   Module Overview delete because of level size <./Getting-Started/Modules/index.rst>
 
 Module Overview  
 -----------------------------------------
@@ -136,6 +138,9 @@ Advanced
    
    Android auto <./Usage/Android-auto.md>
    Automation <./Usage/automation.md>
+   
+   
+  
 
 
 Where to go for help 
