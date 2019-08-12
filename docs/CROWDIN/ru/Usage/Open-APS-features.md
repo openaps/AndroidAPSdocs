@@ -50,10 +50,10 @@ AndroidAPS ограничивает эту величину следующим �
 
 Будьте осторожны и терпеливы и меняйте настройки шаг за шагом. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . "жесткий предел" для maxIOB выше, чем в алгоритме помощника болюса AMA.
 
-* Child: 3
-* Teenage: 7
-* Adult: 12
-* Insulin resistant adult: 25
+* Ребенок: 3
+* Подросток: 7
+* Взрослый: 12
+* Инсулинорезистентный взрослый: 25
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
@@ -154,7 +154,7 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
-* Child: 3
+* Ребенок: 3
 * Teenage: 5
 * Adult: 7
 * Insulin resistant adult: 12
@@ -206,7 +206,7 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . The 'hard limit' for maxIOB is lower in MA than in SMB.
 
-* Child: 3
+* Ребенок: 3
 * Teenage: 5
 * Adult: 7
 * Insulin resistant adult: 12
