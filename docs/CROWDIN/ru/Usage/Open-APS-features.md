@@ -73,11 +73,11 @@ SMB работает, когда присутствуют активные уг�
 
 SMB работает, когда есть низкая или высокая временная цель (скорый прием пищи, нагрузка, гипо, настраиваемая)
 
-### Enable SMB with high temp targets
+### Включить супер микро болюс SMB с высокими значениями временных целей
 
-SMB is working when there is a high temporary target active (activity, hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
+SMB работает, когда есть высокая временная цель (скорый прием пищи, нагрузка, гипо). Эта опция может ограничить другие параметры SMB, например, если включен «SMB с временными целями», а «SMB с высокими временными целями» отключен, SMB работает с низкими а не с высокими временными целями. То же самое для включенного SMB с COB: если отключен 'SMB с высокой временной целью' то SMB с высокой временной целью неактивен даже при наличии активных углеводов COB.
 
-### Enable SMB always
+### Всегда включать супер микро болюс SMB
 
 SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
 
