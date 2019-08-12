@@ -5,9 +5,6 @@ Smartwatches are optional, but very useful for some users.
 You can find the list of tested phones and smartwatches `here <../Getting-Started/Phones.html>`_.
 There are different watchfaces possible for smartwatches, further details are `here <../Configuration/Watchfaces.html>`_.
 
-
-Getting Started
-----------------
 .. toctree::
    :maxdepth: 1
    :glob:
