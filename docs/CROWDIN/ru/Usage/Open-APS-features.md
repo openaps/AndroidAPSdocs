@@ -55,21 +55,21 @@ AndroidAPS ограничивает эту величину следующим �
 * Взрослый: 12
 * Инсулинорезистентный взрослый: 25
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+См. также [документацию OpenAPS по SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
-### Enable AMA Autosense
+### Включить autosense AMA
 
-Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
+Здесь можно выбрать, использовать [детектор чувствительности](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' или нет.
 
-### Enable SMB
+### Включить супер микро болюс SMB
 
-Here you can enable or completely disable SMB feature.
+Здесь можно включить или полностью отключить функцию SMB.
 
-### Enable SMB with COB
+### Включить супер микро болюс при активных углеводах COB
 
-SMB is working when there is COB active.
+SMB работает, когда присутствуют активные углеводы COB.
 
-### Enable SMB with temp targets
+### Включить супер микро болюс SMB с временными целями
 
 SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
 
@@ -159,7 +159,7 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Adult: 7
 * Insulin resistant adult: 12
 
-### Enable AMA Autosense
+### Включить autosense AMA
 
 Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
 
