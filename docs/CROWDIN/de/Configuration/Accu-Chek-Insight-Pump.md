@@ -9,12 +9,12 @@
 ## Hard- und Softwareanforderungen
 
 * Eine Roche Accu-Chek Insight Insulinpumpe (alle Firmware-Version können genutzt werden) <br /> Hinweis: AAPS schreibt die Daten immer in das **erste Basalraten-Profil in der Pumpe**.
-* Ein Android-Telefon (im Grunde funktionieren Android-Versionen, aber AndroidAPS selbst benötigt mindestens Android 5 (Lollipop)
-* Die AndroidAPS App muss auf Deinem Smartphone installiert sein
+* Ein Android-Telefon (im Grunde funktionieren alle Android-Versionen, aber AndroidAPS selbst benötigt mindestens Android 5 (Lollipop).
+* AndroidAPS muss auf Deinem Smartphone installiert sein.
 
 ## Einrichtung
 
-* Die Insight-Pumpe darf nur mit einem Gerät gleichzeitig verbunden werden. Wenn Du bisher die Fernbedienung mit Messgerät, die zusammen mit der Pumpe geliefert wurde, verwendet hast, musst Du diese aus der Liste der verbundenen Geräte in der Pumpe entfernen: Menü > Settings > Communication > Remove device.
+* Die Insight-Pumpe darf nur mit einem Gerät gleichzeitig verbunden sein. Wenn Du bisher die Fernbedienung mit Messgerät, die zusammen mit der Pumpe geliefert wurde, verwendet hast, musst Du diese aus der Liste der verbundenen Geräte in der Pumpe entfernen: Menü > Einstellungen > Verbindung > Gerät entfernen
     
     ![Screenshot Insight-Fernbedienung entfernen](../images/Insight_RemoveMeter.png)
 
