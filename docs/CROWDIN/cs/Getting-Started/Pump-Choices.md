@@ -7,7 +7,7 @@ AndroidAPS v současné době funguje s těmito pumpami:
 * DanaR
 * DanaRS 
 
-pumps. Podrobnosti o stavu dalších pump s potenciálem fungovat s AndroidAPS naleznete pod odkazem [Budoucí (možné) pumpy](Future-possible-Pump-Drivers.md).
+pumpy. Podrobnosti o stavu dalších pump s potenciálem fungovat s AndroidAPS naleznete pod odkazem [Budoucí (možné) pumpy](Future-possible-Pump-Drivers.md).
 
 Potřebujete-li vybrat, na kterou pumpu přejít nebo kterou koupit, často se ptáte, kterou zvolit. Podrobnosti různých distributorů jsou v této [tabulce](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), prosím podělte se o své detaily, pokud nejsou v seznamu uvedeny.
 
@@ -25,4 +25,4 @@ Combo a Insight jsou odolné pumpy, které lze používat se smyčkou. DanaR/RS 
 
 * Všechny pumpy, se kterými AndroidAPS komunikuje, jsou vodotěsné. Pouze pumpy Dana mají také „záruku na vodotěsnost“ díky uzavřenému prostoru pro baterii a prostoru pro plnicí zásobník.
 
-Combo je samozřejmě velmi dobrá pumpa a lze ji používat ve smyčce. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+Combo je samozřejmě velmi dobrá pumpa a lze ji používat ve smyčce. Má také výhodu v podobě mnohem většího počtu typů infuzních setů se standardním závitem luer lock. A používá obyčejnou baterii, kterou můžete koupit na každé benzínce nebo večerce. A pokud opravdu jednu potřebujete, můžete ji ukrást / půjčit si ji z dálkového ovladače v hotelovém pokoji ;)
