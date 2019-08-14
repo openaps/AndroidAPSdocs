@@ -145,10 +145,9 @@ Troubleshooting
    :maxdepth: 1
    :glob:
   
-   Troubleshooting <./FGT/troubleshooting.rst>
    NS-Client <./Usage/Troubleshooting-NSClient.md>
    Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pumps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+   Pumps <./FGT/Troubleshootingpumps.rst>
 
    
    
