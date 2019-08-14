@@ -86,96 +86,96 @@ Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
 Zadejte URL adresu do hlavního úložiště AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") a klikněte na „Clone“.
 
-![Screenshot 13](../images/Installation_Screenshot_13.png)
+![Snímek 13](../images/Installation_Screenshot_13.png)
 
 Android Studio začne s klonováním. Neklikejte na "Background", což by věci nyní pouze zkomplikovalo.
 
-![Screenshot 14](../images/Installation_Screenshot_14.png)
+![Snímek 14](../images/Installation_Screenshot_14.png)
 
 Dokončete načtení projektu od správce zdrojových kódů kliknutím na „Yes“, čímž projekt otevřete.
 
-![Screenshot 15](../images/Installation_Screenshot_15.png)
+![Snímek 15](../images/Installation_Screenshot_15.png)
 
 Použijte standardní „default gradle wrapper“ a klikněte na „OK“.
 
-![Screenshot 16](../images/Installation_Screenshot_16.png)
+![Snímek 16](../images/Installation_Screenshot_16.png)
 
 Přečtěte si okno „Tip of Day“ a kliknutím na tlačítko „Close“ je zavřete.
 
-![Screenshot 17](../images/Installation_Screenshot_17.png)
+![Snímek 17](../images/Installation_Screenshot_17.png)
 
 * Super, máte vlastní kopii zdrojového kódu a jste připraveni na vytvoření Apk.
 * Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
 
 Klikněte na „Install missing platform(s) and sync project“, protože Android Studio potřebuje doinstalovat chybějící platformu.
 
-![Screenshot 18](../images/Installation_Screenshot_18.png)
+![Snímek 18](../images/Installation_Screenshot_18.png)
 
 Přijměte licenční ujednání zvolením „Accept“ a kliknutím na tlačítko „Next“.
 
-![Screenshot 19](../images/Installation_Screenshot_19.png)
+![Snímek 19](../images/Installation_Screenshot_19.png)
 
 Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
 
-![Screenshot 20](../images/Installation_Screenshot_20.png)
+![Snímek 20](../images/Installation_Screenshot_20.png)
 
 Nyní je dokončené. Prosím, klikněte na tlačítko „Finish“.
 
-![Screenshot 21](../images/Installation_Screenshot_21.png)
+![Snímek 21](../images/Installation_Screenshot_21.png)
 
 Aaaach, další chyba. Ale Android Studio navrhuje podobné řešení. Klikněte na „Install Build Tools and sync project“, protože Android Studio potřebuje stáhnout chybějící pomůcky.
 
-![Screenshot 22](../images/Installation_Screenshot_22.png)
+![Snímek 22](../images/Installation_Screenshot_22.png)
 
 Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
 
-![Screenshot 23](../images/Installation_Screenshot_23.png)
+![Snímek 23](../images/Installation_Screenshot_23.png)
 
 Nyní je dokončené. Prosím, klikněte na tlačítko „Finish“.
 
-![Screenshot 24](../images/Installation_Screenshot_24.png)
+![Snímek 24](../images/Installation_Screenshot_24.png)
 
 A další chyba k řešení, protože Android Studio potřebuje zase stáhnout chybějící platformu. Klikněte na „Install missing platform(s) and sync project“.
 
-![Screenshot 25](../images/Installation_Screenshot_25.png)
+![Snímek 25](../images/Installation_Screenshot_25.png)
 
 Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
 
-![Screenshot 26](../images/Installation_Screenshot_26.png)
+![Snímek 26](../images/Installation_Screenshot_26.png)
 
 Nyní je dokončené. Prosím, klikněte na tlačítko „Finish“.
 
-![Screenshot 27](../images/Installation_Screenshot_27.png)
+![Snímek 27](../images/Installation_Screenshot_27.png)
 
 Klikněte na „Install Build Tools and sync project“, protože Android Studio potřebuje stáhnout chybějící pomůcky.
 
-![Screenshot 28](../images/Installation_Screenshot_28.png)
+![Snímek 28](../images/Installation_Screenshot_28.png)
 
 Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
 
-![Screenshot 29](../images/Installation_Screenshot_29.png)
+![Snímek 29](../images/Installation_Screenshot_29.png)
 
 Nyní je dokončené. Prosím, klikněte na tlačítko „Finish“.
 
-![Screenshot 30](../images/Installation_Screenshot_30.png)
+![Snímek 30](../images/Installation_Screenshot_30.png)
 
 Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Možná je čas dát si trochu vody?
 
-![Screenshot 31](../images/Installation_Screenshot_31.png)
+![Snímek 31](../images/Installation_Screenshot_31.png)
 
 Android Studio doporučuje aktualizaci systému gradle. **Nikdy neaktualizujte gradle!** Mohlo by to vše zkomplikovat!
 
 Klikněte prosím na „Znovu nepřipomínat pro tento projekt“.
 
-![Screenshot 32](../images/AS_NoGradleUpdate.png)
+![Snímek 32](../images/AS_NoGradleUpdate.png)
 
 Sestavení zase běží.
 
-![Screenshot 33](../images/Installation_Screenshot_33.png)
+![Snímek 33](../images/Installation_Screenshot_33.png)
 
 Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
 
-![Screenshot 34](../images/Installation_Screenshot_34.png)
+![Snímek 34](../images/Installation_Screenshot_34.png)
 
 ## Vytvořte podepsaný soubor APK
 
@@ -192,9 +192,9 @@ Zvolte „app“ a klepněte na tlačítko „Next“.
 
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Klikněte na „Create new...“ a vytvořte úložiště svých klíčů. Úložiště klíčů v tomto případě není nic jiného než soubor, ve kterém jsou uložené podepisovací informace. Je zašifrované a údaje jsou zabezpečené hesly. Doporučujeme, abyste si ho uložili do své domovské složky a zapamatovali si hesla. Kdybyste však tyto informace ztratili, nebyl by to tak velký problém, protože potom byste prostě museli vytvořit nové úložiště klíčů. Ale lepší je tyto údaje pečlivě uložit.
 
-![Screenshot 41](../images/Installation_Screenshot_41.png)
+![Snímek 41](../images/Installation_Screenshot_41.png)
 
 * Vyplňte údaje pro další dialogové okno. 
   * Key store path: je cesta k vašemu úložišti klíčů
@@ -204,11 +204,11 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
   * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
   * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje. Pak klikněte na tlačítko „OK“.
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
+![Snímek 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Vyplňte údaje posledního dialogového okna a klikněte na tlačítko „Next“.
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+![Snímek 43](../images/Installation_Screenshot_43.png)
 
 Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
 
