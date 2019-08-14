@@ -1,36 +1,36 @@
-# How-to configure a Huawei phone
+# Jak nastavit telefon Huawei
 
-There are different options, some Android specific, some Huawei specific:
+Existují různé možnosti, některé jsou specifické pro Android, jiné pro Huawei:
 
-* Add AndroidAPS and xdrip+ to apps list which ignore battery optimisations:
+* Přidejte aplikace AndroidAPS a xdrip+ k aplikacím, u kterých je ignorována optimalizace baterie:
   
-  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+  * Nastavení / Aplikace / Nastavení / Speciální přístup / Ignorovat optimalizaci baterie / Vyberte "Všechny aplikace" / Nastavte aplikaci na povoleno
     
-    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+    ![Huawei - ignorovat optimalizaci baterie](../images/Huawei_BatteryOptimization.png)
 
-* Set battery option settings:
+* Nastavte optimalizaci baterie:
   
-  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
+  * Nastavení / Aplikace / Vyberte AndroidAPS/xdrip+ / V části Baterie / Spouštění aplikací
     
-    * Make sure to remove "automatic management"
-    * Allow:
+    * Ujistěte že, že jste deaktivovali možnost „automatická správa“
+    * Povolte:
       
-      * Automatic launch
-      * Secondary launch (can be launched from other apps)
-      * Background run
+      * Automatické spuštění
+      * Sekundární spuštění (lze spustit z jiných aplikací)
+      * Spustit na pozadí
         
-        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+        ![Huawei - možnosti baterie](../images/Huawei_BatteryOptions.png)
 
-* Lock App
+* Uzamkněte aplikaci
   
-  * Go into App recent list and select the lock icon
+  * Přejděte do seznamu nedávných aplikací a a klepněte na ikonu zámku
     
-    ![Huawei - lock app](../images/Huawei_LockApp.png)
+    ![Huawei - uzamknout aplikaci](../images/Huawei_LockApp.png)
 
-For xdrip+, you can also enable persitent notifications (within xdrip+ app):
+U aplikace xdrip+ můžete také povolit trvalé notifikace (prostřednictvím aplikace xdrip+):
 
-* Setttings / less common settings / other misc options / Run Collector in foreground
+* Nastavení / méně častá nastavení / other misc options / Spustit kolektor v popředí
   
-  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
+  ![Nastavení xdripu+ - spustit kolektor v popředí](../images/xdrip_collector_foreground.png)
 
-Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
+V závislosti na verzi Androidu mohou být tato nastavení v jiných nabídkách. Tento návod se týká Androidu 8.1.
