@@ -1,4 +1,4 @@
-# Objectives
+# Cíle
 
 AndroidAPS má sadu Cílů, které musíte dokončit a které vás provedou jeho funkcemi a nastaveními tak, aby pro vás smyčka nebyla nebezpečná. Zajistí vám, že jste nastavili všechny detaily z dříve uvedených sekcí správně, že rozumíte tomu, co váš systém dělá a proč, a že mu můžete důvěřovat.
 
@@ -29,60 +29,60 @@ Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/Ob
 
 ### Cíl 4: Začít s uzavřenou smyčkou s hlídáním nízké glykémie
 
-**Closed loop will not correct high bg values in objective 4 as it is limited to low glucose suspend.**
+**U 4. cíle nebude uzavřená smyčka korigovat vysokou glykémii, bude pouze zastavovat před nízkou.**
 
-**High bg values have to be corrected manually by you!**
+**Na vysoké glykémie musíte ručně dopíchnout vy sami!**
 
-* Select Closed Loop either from Preferences, or by pressing and holding the Open Loop button in the top left of the home screen.
-* Set your target range slightly higher than you usually aim for, just to be safe.
-* Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days. If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
+* Vyberte možnost Uzavřená smyčka buď z Nastavení, nebo stisknutím a držením tlačítka Otevřená smyčka v levém horním rohu hlavní stránky.
+* Nastavte cílový rozsah mírně vyšší, než jaký je pro vás běžný, jen pro jistotu.
+* Sledujte, jak jsou aktivní dočasné bazální dávky – buď kontrolujte modrý text bazálu na hlavní stránce, nebo modré vykreslení bazálů ve spodní části grafu.
+* Ujistěte se, že systém AndroidAPS je nastavený tak, aby po dobu 5 dní nemusel řešit nízké glykémie. Pokud stále řešíte časté nebo vážné výskyty nízkých glykémií, zvažte úpravu svého DIA, bazálů, citlivosti a sacharidových poměrů.
 
-*The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile. Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.*
+*Systém přepíše vaše nastavení maxIOB na nulu, což znamená, že pokud glykémie klesá, může snížit bazál, ale pokud glykémie stoupá, pak zvýší bazál pouze v případě, že IOB je záporný (z předchozího sníženého bazálu nebo zastavené pumpy). Pokud IOB není záporný, vaše bazální dávky zůstanou stejné jako ve vámi zvoleném aktivním profilu. Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.*
 
-### Objective 5: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
+### Cíl 5: Vyladit uzavřenou smyčku, zvyšovat max IOB nad 0 a postupně snižovat cílovou glykémii
 
-* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+* Zvyšte hodnotu 'Maximální celkový IOB, který OpenAPS nemůže překročit' (v OpenAPS se tento parametr označuje jako 'max-iob') nad 0 po dobu 1 dne. Výchozím doporučením je použít "průměrnou hodnotu bolusu k jídlu + 3× maximální denní bazální dávku" (pro algoritmus SMB) nebo "3× maximální denní bazální dávku" (pro starší algoritmus AMA). Tyto hodnoty byste však měli zvyšovat postupně, dokud neověříte, že jsou nastaveny správně (maximální denní bazální dávka = maximální bazální dávka za hodinu během dne).
   
-  ![max daily basal](../images/MaxDailyBasal.png)
+  ![maximální denní bazální dávka](../images/MaxDailyBasal.png)
 
-* Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
+* Až si budete jistí hodnotou IOB, která vyhovuje vašemu způsobu používání smyčky, pak snižte své cílové glykémie na požadovanou úroveň.
 
-### Objective 6: Adjust basals and ratios if needed, and then enable autosens
+### Cíl 6: Upravit bazály a poměry, když bude potřeba, a povolit automatickou detekci citlivosti na inzulín
 
-* You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate, or do a traditional basal test.
-* Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+* Funkci [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) můžete použít jako jednorázový kontrolní nástroj, zda vaše bazály zůstávají přesné, anebo si udělejte klasický test bazálu.
+* Povolte [automatickou detekci citlivosti](../Usage/Open-APS-features.md) po dobu 7 dní a sledujte bílou křivku na grafu na hlavní stránce, jak se vaše citlivost na inzulín může snižovat a zvyšovat v důsledku cvičení nebo hormonů apod., zároveň na kartě OpenAPS sledujte, jak podle toho systém AndroidAPS upravil vaše bazály a/nebo cíle.
 
-*Don’t forget to record your looping in [this form](http://bit.ly/nowlooping) logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Pokud jste tak dosud neučinili, nezapomeňte zaznamenat své zkušenosti se smyčkou do [tohoto formuláře](http://bit.ly/nowlooping) a označte AndroidAPS jako typ své DIY smyčky.*
 
-### Objective 7: Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
+### Cíl 7: Povolit další funkce oref0 pro běžné používání, jako je AMA (advanced meal assist)
 
-* Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
-* Then over a period of 28 days you can try additional features that automate even more of the work for you such as the [advanced meal assist](../Usage/Open-APS-features#advanced-meal-assist-ama)
+* Nyní byste si již měli být jisti tím, jak AndroidAPS funguje a která nastavení jsou pro váš konkrétní diabetes nejlepší
+* Následně můžete po dobu 28 dnů vyzkoušet další funkce, které nabízejí ještě větší úroveň automatizace, jako je například [advanced meal assist](../Usage/Open-APS-features#advanced-meal-assist-ama)
 
-### Objective 8: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+### Cíl 8: Povolit další funkce oref1 pro běžné používání, jako je SMB (super micro bolus)
 
-* You must read the [SMB chapter in this wiki](../Usage/Open-APS-features#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-* Then you ought to [rise maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 5](../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
+* Musíte si přečíst [Kapitolu o SMB zde na wiki](../Usage/Open-APS-features#super-micro-bolus-smb) a [Kapitolu o oref1 v dokumentaci k openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html), abyste porozuměli tomu, jak SMB funguje, zejména na čem je založen princip nulových dočasných bazálů.
+* Následně byste měli [zvýšit maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) tak, aby SMB správně fungovaly. maxIOB nyní zahrnuje veškerý IOB, nejen ten z bazálů. To znamená, že pokud byl vydán bolus 8 U na jídlo a maxIOB je 7 U, nebudou vydány žádné SMB, dokud IOB neklesne pod 7 U. Pro začátek je dobré nastavit hodnotu maxIOB jako „průměrný bolus k jídlu + 3× maximální denní bazální dávka“ (maximální denní bazální dávka = maximální bazální dávka za hodinu během dne – viz [Cíl 5](../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) pro příklad)
+* Výchozí hodnota absorpce „min_5m_carbimpact“ se při přechodu z AMA na SMB mění ze 3 na 8. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
 
 ## Export a import nastavení
 
-* **Export settings** on your old phone
+* **Exportujte nastavení** na svém starém telefonu.
   
   * Hamburger menu (v levém horním rohu obrazovky)
   * Údržba
   * Exportovat nastavení
-  * File location will be shown
+  * Zobrazí se umístění souboru exportu
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![Nastavení exportu AAPS](../images/AAPS_ExportSettings.png)
 
-* **Transfer** settings from old to new phone using the file location shown during export
+* **Přeneste** nastavení ze starého telefonu – použijte stejné umístění souboru, jaké se zobrazilo při exportu.
 
-* **Install AndroidAPS** on the new phone.
+* **Nainstalujte AndroidAPS** na nový telefon.
 * **Importujte nastavení** do nového telefonu 
   * Hamburger menu (v levém horním rohu obrazovky)
   * Údržba
   * Importujte nastavení
-* **Note for Dana RS users:** 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
+* **Poznámka pro uživatele Dana RS:** 
+  * Vzhledem k tomu, že jsou importována také nastavení týkající se připojení pumpy, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth. Nový telefon a pumpu prosím spárujte ručně.
