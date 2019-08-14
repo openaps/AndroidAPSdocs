@@ -82,7 +82,7 @@ How to Install AndroidAPS
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    
    
-Hardware Setup
+Component Setup
 ---------------
 .. toctree::
    :maxdepth: 1
@@ -91,6 +91,7 @@ Hardware Setup
    BG Source <./Configuration/BG-Source.md>
    Pumps <./Hardware/pumps.rst>
    Phones <./Hardware/Phoneconfig.rst>
+   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>   
    Smartwatch  <./Hardware/Smartwatch.rst>
    
 Configuration 
@@ -101,7 +102,7 @@ Configuration
    
    Config Builder <./Configuration/Config-Builder.md>
    Hardware setup (delete) <./Configuration/Hardware/index.rst> 
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>   
+   Nightscout setup (delete) <./Installing-AndroidAPS/Nightscout.md>   
    Preferences <./Configuration/Preferences.md>
    
    
