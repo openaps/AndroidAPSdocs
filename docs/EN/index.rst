@@ -111,14 +111,14 @@ Usage (software)
    :maxdepth: 1
    :glob:
     
+   AndroidAPS screens <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.md>
    OpenAPS features <./Usage/Open-APS-features.md>   
    Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>
+   Temp-targets <./Usage/temptarget.md>   
+   Extended Carbs <./Usage/Extended-Carbs.md>    
    SMS commands <./Usage/SMS-Commands.md>
-   Extended Carbs <./Usage/Extended-Carbs.md>  
-   Screenshots <./Getting-Started/Screenshots.md>
  
 Usage (non-specific) 
 ---------------------
