@@ -12,7 +12,7 @@ Whichever CGM system you are using, if you are going to use blood based calibrat
 
 # BG source
 
-## [Smoothing blood glucose]
+## Smoothing blood glucose
 AAPS works best when the blood glucose data it receives is smooth and consistent. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source. 
 
 ### Dexcom G5 App (patched)
