@@ -95,7 +95,7 @@ SMB работает в течение 6 часов после приема уг
 
 Алгоритм SMB в результате становится более агрессивным. Начать следует со значения по умолчанию в 30 минут. Получив определенный опыт, можно увеличивать значение с шагом 15 минут и следить за изменениями.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to adjust a decreasing BG with 0 IE/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.
+Рекомендуется не устанавливать это значение выше 90 минут, так как возможно достижение точки, при которой алгоритм не сможет контролировать снижающуюся гликемию на базале 0 ед/ч ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.
 
 Default value: 30 min.
 
