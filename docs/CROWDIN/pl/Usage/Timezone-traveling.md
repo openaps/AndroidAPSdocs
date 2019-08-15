@@ -1,61 +1,61 @@
-# Timezone traveling with pumps
+# Strefy czasowe podróżowanie z pompami
 
 ## DanaR, Korean DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Nie ma problemu ze zmianą strefy czasowej w telefonie, ponieważ te pompy nie używają historii
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndoridAPS is using history from the pump but the records in pump don't have timezone stamp. That means if you simple change timezone in phone, records will be read with different timezone and will be doubled. To avoid this do the following steps on every timezone change:
+Te pompy wymagają specjalnej uwagi, ponieważ AndroidAPS używa historii z pompy, ale rekordy w pompie nie mają stempla strefy czasowej. Oznacza to, że jeśli zmienisz strefę czasową w telefonie, zapisy będą czytane z inną strefą czasową i zostaną podwojone. Aby tego uniknąć, wykonaj następujące czynności przy każdej zmianie strefy czasowej:
 
-* switch phone for manual time zone change before travel
+* ustaw w telefonie, ręczną zmianę strefy czasowej przed podróżą
 
-When get out of plane:
+Po wyjściu z samolotu:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* wyłącz pompę
+* zmień strefę czasową w telefonie
+* wyłącz telefon, włącz pompę
+* wyczyść historię w pompie
+* zmień czas w pompie
+* włącz telefon
+* pozwól telefonowi połączyć się z pompą i dostosować czas
 
 ## Combo
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Sterownik automatycznie dostosowuje czas pompy do czasu telefonu.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Insight rejestruje również wpisy historii, w którym momencie zmieniono czas i od którego (starego) czasu, do którego (nowego) czasu. Tak więc poprawny czas można określić w AAPS pomimo zmiany czasu.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+Może to powodować niedokładności w TDD. Ale to nie powinno być problemem.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skiped in calculation in AAPS as the correct time cannot be identified properly.
+Użytkownik Insight nie musi się martwić o zmiany strefy czasowej i zmiany czasu. Jest jeden wyjątek od tej reguły: pompa Insight ma małą wewnętrzną baterię do zasilania, itp. podczas zmiany głównej baterii. Jeśli wymiana baterii trwa zbyt długo, bateria wewnętrzna może się wyczerpać, zegar zostanie zresetowany, a po włożeniu nowej baterii zostaniesz poproszony o wprowadzenie nowej godziny i daty. W takim przypadku wszystkie wpisy przed wymianą baterii są pomijane w obliczeniach w APPS, ponieważ prawidłowy czas nie może być prawidłowo zidentyfikowany.
 
-# Time adjustment daylight savings time (DST)
+# Zmiana czasu z i na czas letni (DST)
 
-Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
+W zależności od konfiguracji pompy i CGM, skokowe zmiany czasu mogą prowadzić do problemów. W Combo np. historia pompy zostanie ponownie odczytana i może prowadzić do duplikowania wpisów. Z tego względu przygotuj się wcześniej do zmiany, w trakcie dnia a nie w nocy.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+Jeśli używasz kalkulatora bolusa, nie używaj COB i IOB, chyba że upewnisz się, że są one całkowicie poprawne - lepiej nie używaj ich przez kilka godzin po przełączeniu DST.
 
 ## Accu-Chek Combo
 
-AndroidAPS will issue an alarm if time between pump and phone differs to much. In case of DST time adjustment this would be in the middle of the night. To prevent this and enjoy your sleep instead follow these steps:
+AndroidAPS wyemituje alarm, jeśli czas między pompą a telefonem różni się znacznie. W przypadku regulacji czasu DST byłoby to w środku nocy. Aby temu zapobiec i cieszyć się snem, wykonaj następujące kroki:
 
-1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. 4) Check the Treatments tab... If you see duplicate treatments:
+1) Wyłącz automatyczną strefę czasową w telefonie. 2) Znajdź strefę czasową, która ma docelowy czas, ale nie używa czasu letniego. Dla czasu środkowoeuropejskiego (CET) może to być „Brazzaville” (Kongo). Zmień strefę czasową telefonu na Kongo. 3) W systemie AndroidAPS odśwież pompę. 4) Sprawdź kartę Leczenie ... Jeśli widzisz zduplikowane zabiegi:
 
-* DON'T press "delete future treatments"
-* Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore. 5) If the state is unclear - please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+* NIE WCISKAJ "Usuń przyszłe zabiegi"
+* Wciśnij "usuń" we wszystkich przyszłych zabiegach i duplikatach. To powinno unieważnić zabiegi, a nie ich usunięcie, aby nie były już brane pod uwagę w IOB. 5) Jeśli stan pracy jest niejasny - wyłącz pętlę dla co najmniej jednego DIA i Max-Carb-Time - którykolwiek jest większy.
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal.
+Dobrym momentem na dokonanie przełączenia jest stan z niskim IOB. Na przykład na godzinę przed posiłkiem.
 
-## Accu-Chek Insight
+## Pompa Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* Zmiana na DST jest wykonywana automatycznie. Żadne działanie nie jest wymagane.
 
-## Other pumps - new as of AAPS version 2.2
+## Inne pompy - nowe od wersji AAPS 2.2
 
-<b><font color="#FF0000">You have to update AAPS to use this feature!</font></b>
+<b><font color="#FF0000">Musisz zaktualizować APPS, aby korzystać z tej funkcji!</font></b>
 
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Aby zapobiec trudnościom, pętla zostanie wyłączona na 3 godziny PO przełączeniu DST. Odbywa się to ze względów bezpieczeństwa (IOB zbyt wysokie z powodu powielonego bolusa przed zmianą DST).
+* Na ekranie głównym otrzymasz powiadomienie 24 godziny przed zmianą czasu letniego, która zostanie tymczasowo wyłączona. Ten komunikat pojawi się bez sygnału dźwiękowego, wibracji lub czegokolwiek.

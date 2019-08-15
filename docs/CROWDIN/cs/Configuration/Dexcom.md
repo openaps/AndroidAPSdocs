@@ -1,32 +1,32 @@
 # Dexcom G6
 
-## Basics first
+## Základní nastavení
 
-* Follow [general CGM hygiene recommendations](../Configuration/BG-Source#cgm-hygiene)
-* [Special recommendations for Dexcom G6 and DIY systems](../Configuration/BG-Source#dexcom-g6-diy-systems) *For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly built xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* Postupujte podle [obecných doporučení pro používání CGM](../Configuration/BG-Source#cgm-hygiene)
+* [Zvláštní doporučení pro Dexcom G6 a DIY systémy](../Configuration/BG-Source#dexcom-g6-diy-systems) *V případě vysílačů G6 vyrobených po podzimu / ke konci roku 2018 se prosím ujistěte, že používáte jednu z [nejnovějších verzí aplikace xDrip+ (tzv. nightly built)](https://github.com/NightscoutFoundation/xDrip/releases). Tyto vysílače mají nový firmware, a poslední stabilní verze xDrip+ (2019/01/10) si s ním neporadí.
 
-## Setting sensor
+## Nastavení senzoru
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+Při nastřelování senzoru je doporučeno nepřikládat aplikátor příliš velkou silou, aby se zabránilo krvácení. Senzor by se neměl dostat do kontaktu s krví.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Po nastřelení senzoru je možno nakliknout vysílač do pouzdra senzoru. Pozor! Vysílač nejprve nasaďte na hranaté straně senzoru, a až poté na kulaté.
 
-## Troubleshooting
+## Poradce při potížích
 
-### Connection problems
+### Problém s připojením
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is reestablished the data is backfilled.
+Bluetooth spojení může být rušeno nedalekými Bluetooth zařízeními, jako například glukomentry, bluetooth sluchátka, tablety nebo kuchyňská zařízení, jako jsou mikrovlnné trouby nebo varné desky. V tomto případě xDrip neukazuje žádné hodnoty glykémií. Jakmile se bluetooth spojení obnoví, jsou data zpětně doplněna.
 
-### Sensor Errors
+### Chyby senzorů
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
+V případě vyskytnutí opakovaných problémů se senzorem zkuste senzor nastřelit na jinou část těla. Senzor by se neměl dostat do kontaktu s krví.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Často je možné vyřešit problémy senzoru okamžitým podáním tekutin a masáží kolem senzoru!
 
-### Jumpy values
+### Skákající hodnoty
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Můžete zkusit změnit nastavení blokování šumu v aplikaci xdrip (Nastavení - Komunikace mezi aplikacemi - Noise Blocking), např.: „Block Very High noise and worse“ (Blokovat velmi vysoký šum a horší). Viz také [Vyhlazování dat glykémií](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### New transmitter with running sensor
+### Nový vysílač se spuštěným senzorem
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/AAhBVsc6NZo>.
+Pokud se stane, že budete měnit vysílač na spuštěném senzoru, pokuste se odejmout vysílač, aniž byste poškodili samotný senzor. Video najdete na <https://youtu.be/AAhBVsc6NZo>.

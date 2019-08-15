@@ -2,7 +2,7 @@
 
 If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it. If your Dexcom G6 transmitter's serial no. is starting with 8G... try nightly build 2019/07/28 or later.
 
 ## Basic settings for all CGM & FGM systems
 
@@ -103,6 +103,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Extend transmitter life
 
+* Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Switch to the `engineering mode`: 
    * tap on the character on the right of the xDrip+ start screen that represents a syringe
    * then tap on the microphone icon in the lower right corner
@@ -113,6 +114,11 @@ To learn more about the details and reasons for these recommendations read the [
 * Use the voice command: “hard reset transmitter”
 * The voice command will be executed with the next data receipt of the transmitter
 * Look at the system status (Hamburger menu -> system status) and see what happens
+* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+   
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Replace transmitter
 
@@ -205,7 +211,13 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 
 ### Retrieve sensor code
 
-* Dexcom sensor code can be found in xDrip+ logs.
+* In latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
+* Swipe left once to see second screen.
+   
+   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+
+* Dexcom sensor code can also be found in xDrip+ logs.
+
 * Tap 3 dot menu (top right side on homescreen)
 * Select `View Event Logs` and search for "code"
    

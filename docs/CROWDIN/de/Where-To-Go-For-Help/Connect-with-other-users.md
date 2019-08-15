@@ -27,6 +27,10 @@ Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/group
 
 * [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australische Nutzer von OpenAPS, Loop und AndroidAPS
 
+### Tschechien und Slowakei
+
+* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Tschechisch sprechende Nutzer von AndroidAPS
+
 ### Deutschland
 
 * [Looped-DE](https://www.facebook.com/groups/loopedDE/): Deutschsprachige Nutzer von OpenAPS, Loop und AndroidAPS

@@ -14,7 +14,7 @@ Yay! Podívejte se na problémy, zeptejte se na gitteru - tam je toho vždy mnoh
 
 Skvělé, to se cení - dobrý způsob, jak podpořit!
 
-* Gitter týkající se wiki lze nalézt zde: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby) 
+* Starý gitter kanál týkající se wiki lze najít zde: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Místo toho můžete nyní kontaktovat také dokumentační tým prostřednictvím nové e-mailové adresy wiki@androidaps.org.
 * Návod, jak se to dělá na anglické wiki, lze nalézt zde: [How to make a PR](../make-a-PR.md). Jiné jazyky jsou pouze překladem z angličtiny a nelze je upravovat z důvodů konzistence.
 
 **Mluvím několika jazyky a chci překládat aplikaci nebo dokumentaci**
@@ -31,7 +31,7 @@ Prostě se přihlaště na CROWDIN, vyberte Váš jazyk, počkejte na schálení
 
 **Na co budou peníze použity?**
 
-Peníze NEBUDOU použity na platbu za něčí práci! Použijí se pro snížení nákladů při plánování setkání vývojářů. Snažíme se být velmi transparentní. Here's an example from 2018:
+Peníze NEBUDOU použity na platbu za něčí práci! Použijí se pro snížení nákladů při plánování setkání vývojářů. Snažíme se být velmi transparentní. Zde je příklad z roku 2018:
 
 * European Dev Meetup v Praze koncem května 2018:
 * pronájem pokoje plus internet

@@ -2,7 +2,7 @@
 
 Wenn Du es nicht bereits eingerichtet hast, lade [xDrip+](https://github.com/NightscoutFoundation/xDrip) herunter.
 
-Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine der aktuellen <1>nightly build xDrip+ Versionen</1>. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
+Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine der aktuellen <1>nightly build xDrip+ Versionen</1>. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen. Falls die Seriennummer Deines Dexcom G6 transmitters mit 8G... beginnt versuche die Nightly Build vom 28.07.2019 oder später.
 
 ## Grundsätzliche Einstellungen für alle CGM & FGM-Systeme
 
@@ -103,6 +103,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 ### Transmitterlaufzeit verlängern
 
+* Eine laufende Sensorsitzung wird gestoppt, wenn Du die Transmitterlaufzeit verlängerst. Verlängere daher bei einem Sensorwechsel oder sei Dir bewusst, dass nach der Verlängerung eine neue zweistündige Warm-Up-Phase des Sensors beginnt.
 * Wechsle in den `engineering mode`: 
    * Klicke auf das Spritzen-Symbol rechts auf dem xDrip+ Startbildschirm.
    * Klicke dann auf das Mikrophon-Symbol in der unteren rechten Ecke.
@@ -113,6 +114,11 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 * Benutze den Sprachbefehl: “hard reset transmitter”
 * Beim nächsten Dateneingang vom Transmitter wird der Reset durchgeführt.
 * Beobachte im Systemstatus (Hamburgermenü links oben -> Systemstatus) was passiert.
+* Wenn aud dem zweiten Statusbildschirm der Hinweis "Phone Service State: Hard Reset maybe failed" angezeigt wird, kannst Du trotzdem einfach den Sensor starten. Danach sollte diese Meldung verschwinden.
+   
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+
+* Die "Transmitter days" werden nach erfolgreicher Verlängerung und Start des Sensors auf 0 zurückgesetzt.
 
 ### Transmitter ersetzen
 
@@ -205,11 +211,17 @@ Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine d
 
 ### Sensorcode in den Logs finden
 
-* Der Dexcom Sensorcode findet sich in den xDrip+ Logs.
+* Wenn Du einen der letzten Nightly Builds verwendest, wird der Sensorcode im Systemstatus angezeigt (Hamburger Menü links oben auf dem Startbildschirm).
+* Wische nach links, um den zweiten Status-Bildschirm zu sehen.
+   
+   ![xDrip+ Dexcom Sensorcode ermitteln (Status Bildschirm)](../images/xDrip_Dexcom_SensorCode2.png)
+
+* Der Dexcom Sensorcode findet sich auch in den xDrip+ Logs.
+
 * Tippe auf das 3-Punkte-Menü (oben rechts auf dem Homescreen).
 * Wähle `Log anzeigen` und suche nach "code".
    
-   ![xDrip+ Dexcom Sensorcode ermitteln](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Dexcom Sensorcode ermitteln (Log Files)](../images/xDrip_Dexcom_SensorCode.png)
 
 ## xDrip+ mit Freestyle Libre
 

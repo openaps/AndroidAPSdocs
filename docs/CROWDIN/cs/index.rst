@@ -1,14 +1,35 @@
 Vítejte v dokumentaci k AndroidAPS
 ==============================================
 
+.. poznámka:: 
+   **DŮLEŽITÉ BEZPEČNOSTNÍ UPOZORNĚNÍ**
+
+   Základy bezpečnosti AndroidAPS diskutované v této dokumentaci jsou postaveny na bezpečnostních vlastnostech hardwaru používaného k vybudování Vašeho systému. Je zásadně důležité, abyste pouze používali testované, plně funkční a pro uzavřenou smyčku schválené insulinové pumpy a CGM. Hardware nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. Pokud najdete nebo získáte rozbité, upravené nebo doma vyrobené inzulínové pumpy nebo CGM, *nepoužívejte* je pro vytvoření systému AndroidAPS.
+
+   Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaším pumpou nebo CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně - prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
+
+.. note:: 
+	** Upozornění a varování **
+
+	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
+
+	* Použití kódu z github.com je bez záruky nebo formální podpory jakéhokoliv druhu. Přečtěte licenci z této repozitoře pro další podrobnosti.
+
+	* Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
+
+	Vezměte prosím na vědomí - tento projekt nemá žádnou spojitost s a není žádným způsobem schválený: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>'`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _.
+
+
 **Co je AndroidAPS?**
 
 AndroidAPS je aplikace pro telefony se systémem Android a funguje jako systém umělé slinivky (APS; artificial pancreas system). Co je systém umělé slinivky? Jedná se o softwarový program, jehož účelem je simulovat chování zdravé slinivky: automaticky udržovat hladinu krevního cukru v optimálním rozmezí. APS to sice nedokáže dělat tak dobře, jako skutečná slinivka, avšak dokáže lidem s diabetem 1 typu usnadnit zvládání nemoci, a to za použití zařízení, která jsou běžně dostupná a softwaru, který je jednoduchý a bezpečný. Mezi tato zařízení patří systém pro kontinuální monitoring glykémie (CGM), který systému AndroidAPS předává informace o aktuální glykémii, a inzulinová pumpa, která je řízena pomocí AndroidAPS tak, aby vydávala správné množství inzulínu. Aplikace komunikuje s těmito zařízeními prostřednictvím technologie bluetooth. K výpočtu správného množství inzulínu využívá speciální algoritmus, neboli sadu pravidel, vyvinutý pro jiný systém umělé slinivky zvaný OpenAPS, který na celém světě používají tisíce lidí a eviduje miliony hodin používání. 
 
 Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdravotnickým orgánem. Používání AndroidAPS na vlastní osobě je čistě experimentální. Vytvoření tohoto systému vyžaduje odhodlání a technické znalosti. Pokud na začátku nemáte technické znalosti, na konci je mít budete. Veškeré potřebné informace naleznete v této dokumentaci, jinde na internetu nebo je získáte od ostatních uživatelů -- můžete se jich zeptat prostřednictvím skupin na Facebooku nebo v jiných diskuzních fórech. Spousta lidí si úspěšně sestavila aplikaci AndroidAPS a nyní ji zcela bezpečně používá, nicméně je zcela nezbytné, aby každý uživatel:
+
 * Sestavil aplikaci sám, aby skutečně pochopil, jak funguje
 * Upravil potřebná nastavení dle svých konkrétních potřeb
 * Správně obsluhoval systém a dohlížel na to, zda správně funguje
+
 Jste-li připraveni přijmout tuto výzvu, čtěte dál. 
 
 **Primární cíle AndroidAPS:**
@@ -25,7 +46,7 @@ Jste-li připraveni přijmout tuto výzvu, čtěte dál.
 
 **Co potřebuji, abych mohl začít:**
 
-* Smartphone se systémem Android 5.0 nebo novějším. Viz seznam <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>, kde najdete informace o tom, které telefony fungují s AndroidAPS nejlépe.
+* Smartphone se systémem Android 5.0 nebo novějším. **Prosím aktualizujte na Android 6 nebo vyšší, protože je brzy plánováno ukončit podporu pro Android 5.x.** `Zde <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ uvidíte, které telefony fungují nejlépe s AndroidAPS.
 * Senzor pro kontinuální monitoring glykémie (CGM): Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian nebo PocTech
 * Aplikaci pro příjem glykémií z CGM: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `upravená aplikace G5 <https://github.com/dexcomapp/dexcomapp>`_, `aplikace PochTech <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ nebo `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * Samotnou aplikaci `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ nainstalovanou v telefonu
@@ -33,16 +54,6 @@ Jste-li připraveni přijmout tuto výzvu, čtěte dál.
 * Podporovanou pumpu: Dana-R nebo Dana-RS od společnosti Sooil, Accu-Chek Combo nebo Insight od společnosti Roche (pokud si neuděláte vlastní ovladače pro jinou inzulinovou pumpu)
 
 
-.. poznámka:: 
-	** Upozornění a varování **
-
-	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
-
-	* Použití kódu z github.com je bez záruky nebo formální podpory jakéhokoliv druhu. Přečtěte licenci z této repozitoře pro další podrobnosti.
-
-	* Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
-
-	Vezměte prosím na vědomí - tento projekt nemá žádnou spojitost s a není žádným způsobem schválený: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>'`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _.
 
 Začínáme s AndroidAPS
 ----------------
@@ -79,15 +90,16 @@ Konfigurace
    
    Konfigurace <./Configuration/Config-Builder.md>
    Zdroj glykémií <./Configuration/BG-Source.md>
-   Dexcom G6 hints <./Configuration/Dexcom.md>
+   Tipy pro Dexcom G6 <./Configuration/Dexcom.md>
    Pumpa Dana-R <./Configuration/DanaR-Insulin-Pump.md>
    Pumpa Dana-RS <./Configuration/DanaRS-Insulin-Pump.md>
    Pumpa Accu-Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
    Pumpa Accu-Chek Insight <./Configuration/Accu-Chek-Insight-Pump.md>
+   Pumpa Medtronic <./Configuration/MedtronicPump.md>
    Hodinky <./Configuration/Watchfaces.md>
    Nastavení <./Configuration/Preferences.md>
    Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
-   xDrip+ settings <./Configuration/xdrip.md>
+   Nastavení xDrip+ <./Configuration/xdrip.md>
    
 Použití
 ------------

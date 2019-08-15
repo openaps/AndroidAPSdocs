@@ -4,13 +4,13 @@
 
 * * *
 
-## ***WARNUNG:** Wenn Du bisher die Insight mit **SightRemote** genutzt hast, führe bitte ein **Update auf Version 2.1** durch und **deinstalliere SightRemote**.*
+## ***WARNUNG:** Wenn Du bisher die Insight mit **SightRemote** genutzt hast, führe bitte ein **Update auf die neueste AAPS-Version ** durch und **deinstalliere SightRemote**.*
 
 ## Hardware- und Softwareanforderungen
 
 * Eine Roche Accu-Chek Insight Insulinpumpe (alle Firmware-Version können genutzt werden) <br /> Hinweis: AAPS schreibt die Daten immer in das **erste Basalraten-Profil in der Pumpe**.
 * Ein Android-Telefon (im Grunde funktionieren Android-Versionen, aber AndroidAPS selbst benötigt mindestens Android 5 (Lollipop)
-* AndroidAPS App (mindestens Version 2.1) muss auf Deinem Smartphone installiert sein.
+* Die AndroidAPS App muss auf Deinem Smartphone installiert sein
 
 ## Einrichtung
 

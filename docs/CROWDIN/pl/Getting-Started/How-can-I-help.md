@@ -1,48 +1,48 @@
-# How to help with AndroidAPS
+# Jak moge pomóc AndroidAPS
 
-**AndroidAPS operates entirely on volunteer efforts and has no paid staff.**
+**AndroidAPS funkcjonuje wyłącznie dzieki wysiłkom wolontariuszy i nie ma opłacanych pracowników.**
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Twórcy AAPS to rodzicie, opiekunowie i osoby z cukrzycą typu I pracujący razem ku wspólnemu celowi rozwijania i ulepszania tego rozwiązania. Odają oni swój wolny czas za darmo, lecz nie możemy od nich oczekiwać aby ponosily dodatkowe koszty.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*By w pełnie przetestować nowy zestaw muszą mieć zapasowy telefon i pompe, ponieważ te roziwązania nie mogą być wykorzystywane przez ludzi dopóki ich prawidłowe dziłanie nie zostanie potwierdzone. Gdy nowsze modele stają się dostępne wymgają one testowania. Część pieniędzy podarowanych jest potrzebna również na pokrycie kosztów logistycznych wysyłki tych zestawów. Dobrze jest również aby twórcy tego opgrogramowania mogli od czasu do czasu opuścić swoje ciemne pokoje by spotkać się wspólnie na konferencjach i innych wydarzeniach gdzie mogą oddać się burzy muzgów.*
 
-**I can write code! How do I participate?**
+**Potrafie programować! Jak mogę dołączyć?**
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Super! Sprawdź listę zgłoszonych problemów, zapytaj na kanale gitter, zawsze jest coś do robienia! Na początek wybierz małe zadanie i zrób swoją pierwszą "pull request"! :)
 
-**I know the system and can write documentation!**
+**Znam AAPS i potrafie pisać dokumentacje!**
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+Świetnie, jest to rzecz wysoce ceniona i dobry sposób aby się odwdzięczyć!
 
-* The gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby) 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+* Stary kanał gitter dotyczący wiki można znaleźć tutaj: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Zamiast tego możesz teraz skontaktować się z zespołem ds. Dokumentacji za pośrednictwem nowego adresu e-mail: wiki@androidaps.org.
+* Poradnik jak zrobic propozycje do angielskiego wiki można znaleźć tutaj: [jak zrobić PR](../make-a-PR.md). Inne języki są tłumaczone z języka angielskiego i nie można ich edytować dla zachowania spójności.
 
-**I do speak multiple languages and whant to translate the app or the documentation**
+**Znam kilka języków i chcę przetłumaczyć aplikacje lub dokumentacje**
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://translations.androidaps.org).
-* If you want to translate **the wiki** to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org). 
+* Jeśli chcesz przetłumaczyć **aplikacje** na inne języki (dziękuję), proszę użyj [crowdin](https://translations.androidaps.org).
+* Jeśli chcesz przetłumaczyć **dokumentacje** na inne języki (dziękuję), proszę użyj [crowdin](https://wikitranslations.androidaps.org). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Zaloguj się do CROWDIN, wybierz swój język i czekaj na zgode od administratora aby rozpocząć tłumaczenie!
 
-**I've got cash I'd like to donate, how do I do that?**
+**Mam gotówkę, którą chciałbym przekazać, jak to zrobić?**
 
     PayPal: [donations@androidaps.org](donations@androidaps.org)  
     
 
-**What is the money used for?**
+**Na co przeznaczane są pieniądze?**
 
-The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. Here's an example from 2018:
+Pieniądze nie są używane do płacenia komukolwiek za jego prace! Są one używane aby częściowo pokrywać koszty spotkań twórców oprogramowania. Staramy się być przejrzyści. Tu znajdziesz przykład tego z 2018 roku:
 
-* European Dev Meetup in Prague end of May 2018:
-* hiring a room plus internet
-* equipment
-* food / coffee
-* in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
+* Europejski "Dev Meetup" w Pradze w maju 2018:
+* wynajem pokoju i dostępu do Internetu
+* sprzęt
+* jedzenie / kawa
+* w żadkiej sytuacji gyd powyższe koszty zostaną w pełni pokryte i pozostaną pewne środki. (koszty podróży niektórych programistów z innych kontynentów w przypadku gdy w czasie wspólnych spotkań znaidują się oni już na terenie Europy zostaną pokryte przez te pieniądze)
 
-**I've got spare equipment, where do I send it?**
+**Mam zapasowych sprzęt, gdzie mogę go wysłać?**
 
-We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+Obecnie zbieramy taki sprzęt by w przyszłości rozdać go w celu testowania systemu. Na koniec takiego testowania, pozostały sprzęt zostanie przekazany jednej grup Przekaz-Dalej na Faebook która istnieje aby wspierać wspólnote osób z cukrzycą typu I. Jeśli chcesz przekazać swój dodatkowy sprzęt, wyślij maila na adres developers@androidaps.org a my prześlemy dalsze szczegóły.
 
-**I don't have cash or equipment, how can I help?**
+**Nie ma pieniędzy ani zbędnego sprzętu, jak moge pomóc?**
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Poszukujemy osób z nastepującymi umiejętnościami: graficy, projektanci interfejsu użytkownika, tłumaczy, edytorów wiki ale również osób które odpowiedzą na proste pytania na gitter i Facebook aby pozwolić programistą skupić się na ich trudniejszych zadaniach.

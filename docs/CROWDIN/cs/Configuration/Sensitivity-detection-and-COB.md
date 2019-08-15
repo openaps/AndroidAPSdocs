@@ -33,10 +33,10 @@ Zde je oproti použití citlivosti AAPS, váženému průměru a Oref0, Oref1 v�
 
 Oref0 / Oref1 - nestrávené sacharidy jsou odříznuty po určené době
 
-![COB z Oref0](../images/cob_oref0.png)
+![COB z Oref0](../images/cob_oref0_orange.png)
 
 AAPS, vážený průměr – absorpce se počítá tak, aby bylo `COB == 0` po určité době
 
-![COB z AAPS](../images/cob_aaps.png)
+![COB z AAPS](../images/cob_aaps2_orange.png)
 
-Jestliže je namísto hodnoty vypočtené z odchylek použita minimální absorpce sacharidů, tak se v grafu COB objeví zelená tečka
+Jestliže je použitá minimální absorpce sacharidů namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví oranžová tečka

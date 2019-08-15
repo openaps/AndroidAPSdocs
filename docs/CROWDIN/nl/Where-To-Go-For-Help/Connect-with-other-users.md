@@ -27,6 +27,10 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 
 * [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australische gebruikers van OpenAPS, Loop en AndroidAPS
 
+### Tsjechisch en Slowaaks
+
+* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Tsjechisch sprekende gebruikers van AndroidAPS
+
 ### Duitsland
 
 * [Looped-DE](https://www.facebook.com/groups/loopedDE/): Duits sprekende gebruikers van OpenAPS, Loop en AndroidAPS
@@ -38,7 +42,7 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 
 * [Looped UK](https://www.facebook.com/groups/LoopedUK/) (Gebruikers uit Groot-Brittanië en Nood-Ierland van OpenAPS, Loop en AndroidAPS)
 
-### Nederland
+### Nederland, België
 
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Nederlandstalige gebruikers van OpenAPS, Loop en AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)

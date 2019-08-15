@@ -12,19 +12,27 @@ Wanneer er voor een functie nog extra instellingen zijn dan kun je die bereiken 
 
 Selecteer het profiel dat je voor je basaalstanden wilt gebruiken. Hieronder staan de verschillende opties beschreven, zie ook de [Profiel wissel](../Usage/Profiles.md) pagina voor hoe je een profiel kunt activeren (nodig voor je eerste gebruik).
 
+### Lokaal profiel (aanbevolen)
+
+Lokaal profiel gebruikt instellingen voor jouw basaalstanden die je handmatig opgeeft in jouw telefoon. Zodra het is geselecteerd, verschijnt er een nieuw tabblad in AAPS, waar je jouw profielgegevens die uit je pomp zijn uitgelezen kunt veranderen indien nodig. Met de volgende profiel wissel worden ze vervolgens naar jouw pomp verstuurd en opgeslagen onder profiel 1. Omdat je voor dit profiel geen internetverbinding nodig hebt om het te laten werken, wordt deze aanbevolen om te gebruiken.
+
+Voordeel: geen internetverbinding nodig om profielinstellingen te wijzigen
+
+Nadeel: slechts één profiel
+
 ### NS Profiel
 
 NS Profiel maakt gebruik van de profielen die je hebt opgeslagen op jouw Nightscout site (https://[jouwnightscoutpagina]/profile). Je kunt de [Profiel wissel](../Usage/Profiles.md) gebruiken om te kiezen welk van jouw profielen actief wordt, dit profiel zal vervolgens naar jouw pomp worden gestuurd en in het pompgeheugen worden opgeslagen. Zodat je pomp hierop terugvalt wanneer AndroidAPS niet zou werken. Hierdoor kunt je heel makkelijk meerdere profielen gebruiken in Nightscout (dat wil zeggen werk, thuis, sport, vakantie, etc.). Kort nadat je klikt op "Opslaan" zullen deze profielen worden overgedragen naar AAPS als jouw smartphone online is. Zelfs zonder een internetverbinding of zonder een verbinding met Nightscout zijn de Nightscout-profielen beschikbaar in AAPS zodra ze zijn gesynchroniseerd.
 
 Gebruik een **Profiel wissel** om een profiel van Nightscout te activeren. Houd het huidige profiel in het AAPS Overzicht-scherm aan de bovenkant ingedrukt (middelste grijze knop tussen de grijze "Open/Closed Loop"-knop en de grijze streefdoel-knop) > Profiel wissel > Profiel selecteren > OK. AAPS schrijft nu het geselecteerde profiel naar de pomp na de profiel wissel, zodat het beschikbaar blijft zonder AAPS (in noodgevallen) en je pomp dus gewoon blijft doorlopen.
 
+Voordeel: meerdere profielen & eenvoudig te bewerken via PC of tablet
+
+Nadeel: geen lokale wijzigingen in profielinstellingen
+
 ### Eenvoudig profiel
 
 Eenvoudig profiel met slechts één tijdsblok voor DIA, KH ratio, ISF, basaalstand en streefdoel (d.w.z. geen verschillende basaalstanden gedurende de dag). Dit profiel wordt vooral gebruikt voor testdoeleinden, tenzij je echt dezelfde factoren nodig hebt gedurende de dag. Zodra "Eenvoudig profiel" is geselecteerd, verschijnt er een nieuw tabblad in AAPS waar je jouw profielgegevens kunt instellen.
-
-### Lokaal profiel (aanbevolen)
-
-Lokaal profiel gebruikt instellingen voor jouw basaalstanden die je handmatig opgeeft in jouw telefoon. Zodra het is geselecteerd, verschijnt er een nieuw tabblad in AAPS, waar je jouw profielgegevens die uit je pomp zijn uitgelezen kunt veranderen indien nodig. Met de volgende profiel switch worden ze vervolgens naar jouw pomp verstuurd en opgeslagen onder profiel 1. Omdat je voor dit profiel geen internetverbinding nodig hebt om het te laten werken, wordt deze aanbevolen om te gebruiken.
 
 ## Insuline
 
@@ -54,7 +62,7 @@ Dit profiel wordt aanbevolen als de insuline bij jou een werkingsprofiel heeft d
 
 ## BG bron
 
-Selecteer de bloed glucose bron u gebruikt - Zie [BG bron](BG-Source.md) pagina voor meer informatie over setup.
+Selecteer de bloed glucose bron die je gebruikt - Zie [BG bron](BG-Source.md) pagina voor meer uitleg over hoe je dat instelt.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
@@ -81,7 +89,7 @@ Gebruik **Geavanceerde instellingen** om de BT Watchdog te activeren, indien nod
 
 Selecteer het type gevoeligheid detectie (ook wel bekend als Auto-Sensitivity / Autosens in het Engels). Hiermee houdt het algoritme voortdurend jouw gegevens van de afgelopen tijd in de gaten, en past zijn gedrag aan wanneer hij merkt dat je gevoeliger (of, juist ongevoeliger) bent voor insuline dan normaal. Details over het Oref0 Gevoeligheid algoritme kun je lezen in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Je kunt je gevoeligheid op het Overzicht-scherm laten weergeven door Gevoeligheid te selecteren en te kijken naar de witte lijn. Ook wordt het weergegeven als "AS...%", waarbij AS staat voor AutoSens. Let op, je moet minimaal in [Doel 6](../Usage/Objectives) zijn om gevoeligheid detectie/autosens te kunnen gebruiken.
+Je kunt je gevoeligheid op het Overzicht-scherm laten weergeven door Gevoeligheid te selecteren en te kijken naar de witte lijn. Ook wordt het weergegeven als "AS...%", waarbij AS staat voor AutoSens. Let op, je moet minimaal in [Doel 6](../Usage/Objectives) zijn om gevoeligheid detectie/autosens te kunnen gebruiken. Laten weergeven kan al wel eerder, maar AndroidAPS neemt dit getal niet mee bij het doorvoeren van aanpassingen.
 
 ### Opname instellingen
 
@@ -104,11 +112,11 @@ Kies hier of je wilt dat AAPS automatisch ingrijpt (closed loop) of dat je zelf 
 
 ### Open loop
 
-AAPS analyseert continu alle beschikbare gegevens (IOB, COB, BG...) en doet indien nodig suggesties voor hoe je de insulineafgifte op je pomp moet veranderen. De suggesties zullen niet automatisch in je pomp worden doorgevoerd (zoals in closed loop) maar moeten handmatig worden ingevoerd in de pomp. Of, wanneer je een compatibele pomp (Dana R/RS of Accu Chek Combo) gebruikt, dan moet je de suggestie bevestigen met een knop in de app. De open loop modus is bedoeld om te leren hoe AndroidAPS werkt, en om dagelijks gebruik van AndroidAPS mogelijk te maken wanneer je een niet-compatibele pomp hebt.
+AAPS analyseert continu alle beschikbare gegevens (IOB, COB, BG...) en doet indien nodig suggesties voor hoe je de insulineafgifte op je pomp moet veranderen. De suggesties zullen niet automatisch in je pomp worden doorgevoerd (zoals in closed loop) maar moeten handmatig worden ingevoerd in de pomp. Of, wanneer je een compatibele pomp (zie pagina met Insulinepompen) gebruikt, dan moet je de suggestie bevestigen met een knop in de app. De open loop modus is bedoeld om te leren hoe AndroidAPS werkt, en om dagelijks gebruik van AndroidAPS mogelijk te maken wanneer je een niet-compatibele pomp hebt.
 
 ### Closed loop
 
-AAPS analyseert continu alle beschikbare gegevens (IOB, COB, BG...) en past indien nodig automatisch (d.w.z. zonder dat jij iets hoeft te doen) de insulineafgifte van jouw pomp aan (bolus toedienen, tijdelijke basaalstand, tijdelijke onderbreking van insulineafgifte om een hypo te voorkomen etc.). Zodat jouw bloedglucose op (binnen) de door jou ingestelde streefdoel(en) uikomt. De closed loop modus werkt met vele veiligheidslimieten, die door jou individueel moeten worden ingesteld. De closed loop modus kun je alleen gebruiken als je minimaal in [Doel 4](../Usage/Objectives.md) bent, en als je een compatibele pomp hebt.
+AAPS analyseert continu alle beschikbare gegevens (IOB, COB, BG...) en past indien nodig automatisch (d.w.z. zonder dat jij iets hoeft te doen) de insulineafgifte van jouw pomp aan (bolus toedienen, tijdelijke basaalstand, tijdelijke onderbreking van insulineafgifte om een hypo te voorkomen etc.). Zodat jouw bloedglucose op (binnen) de door jou ingestelde streefdoel(en) uikomt. De closed loop modus werkt met meerdere veiligheidslimieten, die door jou stuk voor stuk moeten worden ingesteld. De closed loop modus kun je alleen gebruiken als je minimaal in [Doel 4](../Usage/Objectives.md) bent, en als je een compatibele pomp hebt.
 
 ## Doelen (leerprogramma)
 
@@ -155,7 +163,7 @@ Opmerking: De knop voor een standaardmaaltijd zal niet zichbaar zijn wanneer je 
 
 #### Geavanceerde instellingen
 
-Activeer superbolus in de boluscalculator. Activeer deze niet tot je begrijpt wat dit doet. Kort gezegd wordt hiermee jouw basale insuline voor de komende twee uur toegevoegd aan de bolus, waarna jouw basaal voor twee uur op nul wordt gezet (zero-temp). Meer details over superbolus kun je [hier](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus) lezen (in het Engels).
+Activeer superbolus in de boluscalculator. Activeer deze niet tot je begrijpt wat dit doet. Kort gezegd wordt hiermee jouw basale insuline voor de komende twee uur toegevoegd aan de bolus, waarna jouw basaal voor twee uur op nul wordt gezet (zero-temp). **De AAPS closed loop-functies worden hiermee tijdelijk uitgeschakeld - dus weet wat je doet! Als je SMB gebruikt, dan wordt de loop uitgeschakeld zoals aangegeven in jouw instellingen voor ["Max minuten basaal om SMB tot te limiteren"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to). Als je geen SMB gebruikt, dan zal de loop gedurende twee uur uitgeschakeld worden.** Details over superbolus kun je [hier](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus) vinden.
 
 ### Acties
 
@@ -197,7 +205,7 @@ Opmerking: Invoer uit Nightscout kan niet worden gebruikt in de AndroidAPS calcu
 
 Gebruik je Android Wear smartwatch om AndroidAPS te bekijken en te besturen (zie [pagina Smartwatch instellingen](../Configuration/Watchfaces.md)). Via de instellingen (tandwiel-icoontje) kun je aanvinken welke variabelen moeten worden meegenomen bij het berekenen van een bolus via je horloge (bijv. 15min-trend, COB...).
 
-Wilt je kunnen bolussen enz vanaf je horloge, dan moet je bij "Wear instellingen" de optie "Bedieningen via horloge" geactiveerd hebben.
+Om te kunnen bolussen enz vanaf je horloge moet je bij "Wear instellingen" de optie "Bedieningen via horloge" geactiveerd hebben.
 
 ![Wear instellingen](../images/ConfBuild_Wear.png)
 

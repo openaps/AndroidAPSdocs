@@ -61,127 +61,115 @@ Du kannst es fixieren: Es werden Oberarm-Bänder verkauft, die das CGM/FGM mit e
 
 ## AndroidAPS Einstellungen
 
-### Impact of settings
+### Auswirkungen der verschiedenen Einstellungen
 
-This table aims to help you optimise settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (eg if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+Diese Tabelle kann helfen, die Einstellungen zu optimieren. Am einfachsten ist es, oben in der Tabelle zu beginnen und sich dann nach unten durchzuarbeiten. Stelle sicher, dass die Einstellung wirklich richtig ist, bevor Du die jeweils nächste in Angriff nimmst. Taste dich in kleinen Schritten voran, statt zu viele Änderungen auf einmal vorzunehmen. Du kannst [Autotune](https://autotuneweb.azurewebsites.net/) zwar als Ausgangspunkt für Deine Überlegungen verwenden, solltest ihm aber nicht blind vertrauen: Es funktioniert unter Berücksichtigung aller individuellen Einflüsse möglicherweise bei Dir nicht gut genug. Beachte, dass die einzelnen Einstellungen voneinander abhängen. Sonst kann es passieren, dass Du 'falsche Einstellungen' verwendest, die in bestimmten Situationen gut funktionieren (z. B. wenn eine zu hohe Basalrate mit einem zu hohen Kohlenhydrat-Faktor zusammenfällt), während sie in anderen Situationen nicht funktionieren. Das bedeutet, dass Du alle Einstellungen als Ganzes betrachten und überprüfen musst, ob sie unter verschiedenen Bedingungen gut funktionieren.<table class="tg" border=1> 
 
-<table>
-  <tr>
-    <th align="center">
-      Setting
-    </th>
-    
-    <th align="center">
-      Description & testing
-    </th>
-    
-    <th align="center">
-      Impact
-    </th>
-  </tr>
-  
-  <tr>
-    <td align="center">
-      Duration of insulin activity (DIA)
-    </td>
-    
-    <td align="center">
-      The length of time that insulin decays to zero.<br /><br />This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
-    </td>
-    
-    <td align="center">
-      Too short DIA can lead to low BGs. And vice-versa.<br /><br />If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.<br /><br />Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
-    </td>
-  </tr>
-  
-  <tr>
-    <td align="center">
-      Basal rate schedule (U/hr)
-    </td>
-    
-    <td align="center">
-      The amount of insulin in a given hour time block to maintain BG at a stable level.<br /><br />Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.<br /><br />If BG is dropping, basal rate is too high. And vice-versa.
-    </td>
-    
-    <td align="center">
-      Too high basal rate can lead to low BGs. And vice-versa.<br /><br />AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.<br /><br />So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.<br /><br />Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
-    </td>
-  </tr>
-  
-  <tr>
-    <td align="center">
-      Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
-    </td>
-    
-    <td align="center">
-      The drop in BG expected from dosing 1U of insulin.<br /><br />Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.<br /><br />Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.<br /><br />This is quite often set too low.
-    </td>
-    
-    <td align="center">
-      Lower ISF = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.<br /><br />Higher ISF = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.<br /><br />An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.<br /><br />Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
-    </td>
-  </tr>
-  
-  <tr>
-    <td align="center">
-      Carbohydrate to insulin ratio (CR) (g/U)
-    </td>
-    
-    <td align="center">
-      The grams of carbohydrate for each unit of insulin.<br /><br />Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR.
-    </td>
-    
-    <td align="center">
-      Lower CR = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.<br /><br />Higher CR = more food per unit, ie you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.<br /><br />If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are CR is too large. Conversely if your BG is lower than before food, CR is too small.
-    </td>
-  </tr>
-</table>
+<th class="tg-0pky">
+  Einstellung
+</th>
 
-### APS algorithm
+<th class="tg-0pky">
+  Beschreibung & Test
+</th>
+
+<th class="tg-0pky">
+  Auswirkung
+</th>
+
+<td class="tg-0pky">
+  Insulinwirkdauer (DIA)
+</td>
+
+<td class="tg-0pky">
+  Dauer, bis das Insulin vollständig abgebaut ist.<br /><br />Sie wird oft zu kurz angesezt. Bei den meisten Menschen werden mindestens 5 Stunden benötigt, teilweise auch 6 oder 7 Stunden.
+</td>
+
+<td class="tg-0pky">
+  Ein zu kurzer DIA kann niedrige Glukose-Werte verursachen. Und umgekehrt.<br /><br />Wenn die Insulinwirkdauer zu kurz eingestellt ist, geht AAPS zu früh davon aus, dass der vorangegangene Bolus komplett 'aufgebraucht' ist und wird bei steigenden Glukosewerten zusätzliches Insulin abgeben. (Tatsächlich wartet AAPS nicht die volle Insulinwirkdauer ab, sondern sagt die Entwicklung der Glukosewerte vorher und gibt entsprechend Insulin ab oder nicht). Dies führt im Wesentlichen zu einem 'Insulin-Stau', von dem AAPS nichts weiß.<br /><br />Ein typisches Beispiel für eine zu kurze Insulinwirkdauer ist, wenn nach einem hohen BZ-Wert AAPS zu stark korrigiert und es dadurch zu niedrigen BZ-Werten oder gar einer Hypo kommt.
+</td>
+
+<td class="tg-0pky">
+  Basalraten (IE pro Stunde)
+</td>
+
+<td class="tg-0pky">
+  Die Insulinmenge, die notwendig ist, um die BZ-Werte in einem bestimmten Zeitraum stabil zu halten.<br /><br />Pausiere den Loop beim Basalratentest, faste, warte ca. 5 Stunden nach der letzten Mahlzeit und beobachte, wie sich die BZ-Werte entwickeln. Wiederhole den Test einige Male.<br /><br />Wenn die BZ-Werte zu sehr fallen, dann ist die Basalrate zu hoch. Und umgekehrt.
+</td>
+
+<td class="tg-0pky">
+  Eine zu hohe Basalrate kann zu zu niedrigen BZ-Werten führen. Und umgekehrt.<br /><br />Die Standard-Basalrate ist der Referenzwert für AAPS. Wenn die Basalrate zu hoch ist, führt ein 'zero temp' (temporäres Abschalten der Basalrate durch AAPS) zu einem höheren negativen IOB (insulin on board - im Körper aktives Insulin) als es sollte. Dies führt dazu, dass AAPS in der Folge mehr Korrekturinsulin abgibt als es sollte, um das IOB schlussendlich wieder auf Null zu bringen.<br /><br />Somit führt eine zu hohe Basalrate sowohl durch die zu hohe Basalrate selbst zu zu niedrigen BZ-Werten, aber auch einige Stunden später, wenn AAPS wie oben beschrieben 'zu viel' korrigiert.<br /><br />Umgekehrt kann eine zu niedrige Baslarate nicht nur zu überhöhten BZ-Werten führen, sondern verhindert auch das Erreichen des Zielwertes aufgrund zu geringer Korrekturinsulingaben.
+</td>
+
+<td class="tg-0pky">
+  Korrekturfaktor (ISF - mg/dl / IE oder mmol/l / IE)
+</td>
+
+<td class="tg-0pky">
+  Die erwartete Senkung des BZ-Wertes durch eine Einheit (1 IE) Insulin.<br /><br />Unter der Voraussetzung, dass Deine Basalrate stimmt, kannst Du dies testen indem Du den Loop pausierst, sicherstellst das IOB bei 0 ist und dann etwas Traubenzucker einnimmst, um einen stabilen 'hohen BZ-Wert' zu erreichen.<br /><br />Dann gib Korrekturinsulin ab und orientiere Dich dabei an Deinem bisherigen Korrekturfaktor. <br /><br />Sei aber vorsichtig, denn er ist oftmals zu niedrig. D.h. eine Einheit Insulin senkt den BZ stärker als Du denkst.
+</td>
+
+<td class="tg-0pky">
+  Kleinerer ISF = geringere Absenkung des BZ-Werts pro Insulin-Einheit. (Kann auch als 'aggressiver' oder 'stärker' bezeichnet werden.). Wenn der ISF zu niedrig ist, kann dies zu Unterzuckerungen führen.<br /><br />Größerer ISF = ein größerer Rückgang des BZ-Werts pro Insulin-Einheit. (Kann auch als 'schwächer' bezeichnet werden.). Wenn der ISF zu hoch ist, kann dies zu überhöhten BZ-Werten führen.<br /><br />Ein zu niedriger ISF (dies kommt gar nicht so selten vor) kann zu 'Überkorrekturen' führen, da AAPS annimmt, mehr Insulin zur Korrektur eines hohen BZ-Wertes zu benötigen als dies tatsächlich der Fall ist. Dies kann zu einer Achterbahnfahrt der BZ-Werte führen (gerade wenn man fastet). In diesem Fall musst Du Deinen ISF erhöhen. Das bedeutet, dass AAPS kleinere Korrekturdosen abgibt und dadurch zu niedrige BZ-Werte, die durch eine 'Überkorrektur' eines zu hohen BZ-Werts entstehen, vermeidet.<br /><br />Umgekehrt kann ein zu hoher ISF dazu führen, dass zu wenig Korrekturinsulin abgegeben wird und Dein BZ-Wert dadurch oberhalb Deines Zielwerts verbleibt. Dies ist gerade nachts zu beobachten.
+</td>
+
+<td class="tg-0pky">
+  KH-Faktor [Carbohydrate to insulin ratio (CR)] (g/IE)
+</td>
+
+<td class="tg-0pky">
+  Menge an Kohlenhydraten in Gramm, die durch eine Einheit Insulin abgedeckt wird.<br /><br />Unter der Voraussetzung, dass Deine Basalrate stimmt, kannst Du dies testen wenn Dein IOB = 0 ist und sich Dein BZ-Wert im Zielbereich befindet. Iss eine genau bekannte Menge an Kohlenhydraten und gib die dazu passende Menge an Insulin ab, wie sie sich aus Deinem aktuellen KH-Faktor ergibt. Am besten isst Du Nahrungsmittel, die Du zu dieser Tageszeit üblicherweise isst und bestimmst deren Kohlenhydratmenge präzise.
+</td>
+
+<td class="tg-0pky">
+  Niedrigerer CR = weniger Kohlenhydrate pro Insulin-Einheit. D.h. es wird mehr Insulin für eine feste Menge Kohlenhydrate abgegeben. Kann auch als 'aggressiver' bezeichnet werden.<br /><br />Höhere CR = mehr Kohlenhydrate pro Insulin-Einheit. D.h. es wird weniger Insulin für eine feste Menge Kohlenhydrate abgegeben. Kann auch als'schwächer' bezeichnet werden.<br /><br />Wenn nach einer Mahlzeit die Kohlenhydrate komplett abgebaut sind, das IOB wieder bei Null liegt und Dein BZ-Wert höher als vor der Mahlzeit ist, dann ist Dein CR wahrscheinlich zu groß. Umgekehrt ist die CR zu niedrig, wenn Dein BZ-Wert zu diesem Zeitpunkt niedriger ist als vor dem Essen.
+</td></table> 
+
+### Der APS Algorithmus
 
 #### Warum wird mir "dia:3" im "OPENAPS AMA"- Reiter angezeigt obwohl ich einen anderen DIA in meinem Profil angegeben habe?
 
-![AMA 3h](../../images/Screenshot_AMA3h.png) In AMA, dia actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+![AMA 3h](../../images/Screenshot_AMA3h.png) Im AMA bedeutet "dia" nicht "Insulinwirkungsdauer". Viel mehr ist "dia" ein Parameter welcher mit DIA in Zusammenhang steht Es bedeutet wann die Korrekturdosis aufhören soll zu wirken. Und hat nichts mit mit der Berrechnung vom IOB zu tun. Im OpenAPS SMB wird dieser Parameter nicht mehr verwendet.
 
 ### Profil
 
 #### Warum verwendet man eine minimale DIA (Insulinwirkdauer) von 5 Stunden statt 2 oder 3 Stunden?
 
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Dies wird in [diesem Artikel](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) gut erklärt. Vergiss nicht, dein ` PROFIL ZU AKTIVIEREN`, nachdem du deinen DIA verändert hast.
 
 #### Was führt dazu, dass der Loop ohne COB wiederholt zu niedrige Werte verursacht?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behaviour is typically caused by a too low ISF. A too low ISF looks typically like this:
+Zuerst solltest du deine Basalrate prüfen und einen Basalratentest ohne Kohlenhydrate machen. Wenn sie korrekt ist, dann wird dieses Verhalten typischerweise von einem zu niedrigen ISF verursacht. Ein zu niedriger ISF sieht normalerweise so aus:
 
-![ISF too low](../images/isf.jpg)
+![ISF zu niedrig](../images/isf.jpg)
 
 #### Was sind die Ursachen hoher postprandialen Peaks im Closed Loop?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+Zuerst solltest du deine Basalrate prüfen und einen Basalratentest ohne Kohlenhydrate machen. Wenn sie korrekt ist und dein BZ nach voller KH-Absorption auch wieder bis zu deinem Zielwert fällt, versuche einmal das temoräre Ziel "Bald Essen" einige Zeit vor der Mahlzeit zu setzen oder überlege zusammen mit deinem Diabetologen, welcher Spritz-Ess-Abstand (SEA) geeignet wäre. Wenn deine BZ-Werte nach dem Essen und zusätzlich auch noch nach vollständiger KH-Absorption zu hoch sind, überlege zusammen mit deinem Diabetologen, ob deine IC-Werte verringert werden sollten. Wenn deine BZ-Werte bei akiven KH zu hoch und nach voller KH-Absorption zu niedrig sind, überlege zusammen mit deinem Diabetologen, ob deine IC-Faktoren erhöht und ein geeigneter SEA eingehalten werden sollten.
 
 ## Andere Einstellungen
 
-### Nightscout settings
+### Nightscout Einstellungen
 
 #### AndroidAPS Nightscout Client meldet "not allowed" und lädt keine Daten hoch. Was kann ich tun?
 
-In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+Überprüfe im Nightscout Client die "Verbindungs-Einstellungen". Vielleicht bist du gerade nicht in einem erlaubten WLAN oder du hast "Nur während des Ladens" aktiviert und dein Ladekabel ist nicht angeschlossen.
 
-### CGM settings
+### CGM Einstellungen
 
 #### Warum meldet AndroidAPS "BG source doesn't support advanced filtering / BZ Quelle unterstützt keine erweiterte Filterung"?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS openAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Wenn du ein anderes CGM/FGM als Dexcom G5 oder G6 im xDrip native mode verwendest, dann wirst du diesen Hinweis im AndroidAPS openAPS-Tab bekommen. Näheres hierzu findest du unter [Glättung der Blut-Glukose-Daten](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ## Pumpe
 
-### Where to place the pump?
+### Wo soll ich die Pumpe tragen?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
+Es gibt unzählige Möglichkeiten, die Pumpe zu platzieren. Es spielt keine Rolle, ob du loopst oder nicht. Wenn du lieber eine schlauchlose Pumpe hättest und zum Loopen eine Dana verwendest, probiere einmal den 30cm Katheter in Verbindung mit dem original Bauchgurt aus.
 
-### Batteries
+### Batterien
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site. Tricks to increase battery life include:
+Looping kann die Batterien schneller entladen als gewohnt, weil das System viel öfter mit der Pumpe agiert als ein Benutzer es tun würde. Es wird deshalb empfohlen, die Batterie spätestens bei 25% Ladung zu wechseln, weil dabei die Datenübertragung schon schwieriger werden kann. Du kannst einen Batterieladungsalarm in Nightscout erstellen, indem du die Variable PUMP_WARN_BATT_P verwendest. Tipps um die Batteriedauer zu erhöhen:
 
 * verringere die Zeit, bis der Bildschirm der Pumpe sich abschaltet (im Pumpenmenü)
 * Reduziere die Dauer der Displaybeleuchtung bei der Pumpe.
@@ -192,25 +180,25 @@ Looping can reduce the pump battery faster than normal use because the system in
 * bei der DanaR/RS Pumpe wird während der Startprozedur kurzzeitig mit Hilfe einer hohen Stromstärke versucht, die Schutzfilme auf den Batterie-Kontakten zu entfernen (die einen Energieverlust bei Lagerung verhindern sollen), aber das funktioniert nicht immer zu 100%. Dann kannst du entweder versuchen, die Batterie 2-3 Mal herauszunehmen und wieder einzusetzen, bis die Pumpe einen Batteriestand von 100 % anzeigt oder du schließt die Batterie schon vor dem Einsetzen dadurch kurz, dass du beide Batteriepole für den Bruchteil einer Sekunde mit einem metallischen Gegenstand überbrückst.
 * Beachte auch die [weiteren spezifischen Batterie-Tipps](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life).
 
-### Changing reservoirs and canulas
+### Insulin-Reservoir und Katheter wechseln
 
-The change of cartridge can not be done via AndroidAPS, but must be carried out as before directly via the pump.
+Der Wechsel des Insulin-Reservoirs kann nicht über AndroidAAPS erfolgen, sondern muss ganz normal direkt über die Pumpe durchgeführt werden.
 
 * Dazu durch langes Drucken auf Closed Loop auf dem Home-Bildschirm von AndroidAAPS Pausiere Loop für 1h auswählen
 * Nun Pumpe vom Körper trennen und wie bisher das Insulin-Reservoir gemäß der Pumpen-Bedienungsanleitung wechseln.
 * Anschließend durch langes Drücken auf Pausiert wieder Forsetzen wählen.
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+Im Gegensatz zum “klassischen” Vorgehen nutzt AndroidAAPS nicht die “Katheter füllen” Funktion der Pumpe, sondern befüllt den Katheter mit Hilfe eines normalen Bolus, der nicht in der Historie auftaucht. Das hat den Vorteil, dass dadurch keine aktuell laufende temporäre Basalrate unterbrochen wird. Auf dem Tab AKTIONEN in AndoidAPS über den Knopf Vorfüllen/Füllen die Menge an Insulin einstellen, die zum Befüllen nötig ist und den Füllvorgang starten. Sollte die Menge nicht reichen, den Vorgang ggf. wiederholen. Du kannst im Drei-Punkte-Menü unter "Einstellungen > Andere > Füll-/Vorfüll-Standardmengen" Standardmengen festlegen. Schaue bitte im Beipackzettel deines Katheters nach, wie viele Ie du je nach Schlauch- und Nadellänge zum Befüllen verwenden solltest.
 
 ## Hygiene
 
-### What to do when taking a shower or bath?
+### Was mache ich, wenn ich duschen oder ein Bad nehmen möchte?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
+Du kannst die Pumpe zum Duschen oder Baden ablegen. Für so kurze Zeiträume brauchst du die Pumpe meistens nicht. Aber du solltest es in AAPS eingeben, damit die IOB-Berechnung korrekt bleibt. Drücke auf das hellblaue "Open Loop / Closed Loop" Feld oben links auf dem Startbildschirm von AAPS. Wähle **"Pumpe trennen für XY Minuten"**, je nachdem, wie lange du brauchst. Wenn du die Pumpe nach der Dusche wieder anschließt musst du in dem selben Feld “Pumpe erneut verbinden” auswählen oder du wartest einfach, bis die angegebene Zeitdauer abgelaufen ist. Der Loop wird automatisch fortgesetzt.
 
 ## Arbeit
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a profile switch for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a time shift of your profile when standing up much earlier or later than regular. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Je nachdem, welche Art von Arbeit du hast, kann es sein, dass du an Arbeitstagen unterschiedliche Behandlungs-Faktoren verwendest. Als Looper solltest du über einen Profilwechsel für die Dauer deines Arbeitstages nachdenken (z.B. mehr als 100% für 8 Stunden, wenn du herumsitzt oder weniger als 100%, wenn du aktiv bist), ein hohes oder niedriges temporäres Ziel setzen oder eine Zeitverschiebung deines Profils einstellen, wenn du viel früher oder später aufstehst als sonst. Wenn du Nightscout Profile verwendest, dann kannst du dort auch ein zweites Profil erstellen (z.B. "Daheim" und "Arbeit") und täglich einen Profilwechsel zu dem gerade benötigten Profil machen.
 
 ## Freizeitaktivitäten
 
@@ -218,42 +206,42 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 
 ## Sex
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
+Du kannst die Pumpe entfernen, um "frei" zu sein, aber du solltest es in AAPS eingeben, damit die IOB Berechnungen stimmen. Drücke auf das hellblaue "Open Loop / Closed Loop" Feld oben links auf dem Startbildschirm von AAPS. Wähle **"Pumpe trennen für XY Minuten"**, je nachdem, wie lange du brauchst. Nachdem du die Pumpe wieder angeschlossen hast, musst du in dem selben Feld “Pumpe erneut verbinden” auswählen oder du wartest einfach, bis die angegebene Zeitdauer abgelaufen ist. Der Loop wird automatisch fortgesetzt.
 
 ## Alkoholkonsum
 
-Drinking alcohol is risky in closed loop mode as the algorythm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Alkoholkonsum ist im Closed Loop riskant, weil der Algorythmus einen von Alkohol beeinflussten BZ nicht richtig vorhersagen kann. Du musst deine eigene Methode finden, um das zu behandeln, kannst aber folgende AndroidAPS-Funktionen nutzen:
 
 * Deaktivierung des Closed Loop Modus und manuelle Behandlung des Diabetes oder
 * hohe temporäre Ziele setzen und UAM deaktivieren, um zu vermeiden, dass der Loop das IOB erhöht, weil er eine nicht eingegebene Mahlzeit vermutet
 * einen Profilwechsel auf deutlich weniger als 100% machen 
 
-When drinking alcohol you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Wenn du Alkohol trinkst musst du immer dein CGM im Blick haben, um eine Hypoglykämie im Zweifel durch das Essen von Kohlenhydraten zu verhindern.
 
 ## Schlafen
 
-### How can I loop during the night without mobile and WIFI radiation?
+### Wie kann ich nachts loopen, ohne Handy- und WLAN-Strahlung ausgesetzt zu sein?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via nightscout):
+Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. Wenn du willst, dass der Loop dich auch im Schlaf unterstützt, dann gehe wie folgt vor (dies wird aber nur funktionieren, wenn du eine lokale BZ-Quelle wie xDrip+ oder die modifizierte Dexcom App verwendest, es geht NICHT wenn du die Glukose-Werte über Nightscout erhältst):
 
 1. Aktiviere im Handy den Flugzeugmodus.
 2. Warte, bis der Flugzeugmodus aktiv ist.
 3. Schalte Bluetooth ein.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Du empfängst jetzt weder Anrufe, noch bist du mit dem Internet verbunden. Aber der Loop funktioniert.
 
 ## Reisen
 
-### How to deal with timezone changes?
+### Wie gehe ich mit einem Zeitzonenwechsel um?
 
-With DanaR and DanaR Korean you don't have to do anything. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
+Mit der DanaR und der DanaR Korean musst du nichts tun. Details zu weiteren Pumpen kannst du auf der Seite [Zeitzonenwechsel auf Reisen](../Usage/Timezone-traveling.md) finden.
 
 ## Krankenhausaufenthalt
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Wenn du dem Klinikpersonal einige Informationen über AndroidAPS und DIY Looping geben willst, dann kannst du [eine allgemeine Einführung und Anleitung zu AndroidAPS fpr Klinikpersonal](../Resources/clinician-guide-to-AndroidAPS.md) ausdrucken.
 
 ## Termin mit deinem betreuenden Arzt (Internisten)
 
-### Reporting
+### Auswertung
 
-You can either show your nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/)
+Du kannst entweder deine Nightscout Berichte zeigen (https://DEINE-NS-SITE.com/report) oder den [Nightscout Reporter](https://nightscout-reporter.zreptil.de/) verwenden

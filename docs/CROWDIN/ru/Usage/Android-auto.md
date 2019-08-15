@@ -1,19 +1,19 @@
 # Android Auto
 
-How it looks like:
+Как это выглядит:
 
-![Screenshot 1](../images/Android-auto1.png)
+![Снимок экрана 1](../images/Android-auto1.png)
 
-How to use it:
+Как пользоваться:
 
-* Install Android Auto
-* In the Android Auto app, tap the Hamburger menu (three horizontal lines)
-* Tap About.
-* Tap the About Android Auto header 10 times, until a toast appears that says "Developer mode enabled".
-* Now you can access developer mode by selecting the overflow menu dots on the top right of the handheld screen and go into developpers settings.
-* Select unknown sources (scroll down all the way to the bottom of the list).
-* Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
+* Установите Android Studio
+* В приложении Android Auto нажмите на сендвич-меню (три горизонтальных линии)
+* Выберите О приложении.
+* Нажимайте заголовок Android Аuto 10 раз, до тех пор, пока появится сообщение «Включен режим разработчика».
+* Теперь вы можете получить доступ к режиму разработчика, выбрав точки меню в верхнем правом углу экрана и перейдя в настройки для разработчиков.
+* Выберите неизвестные источники (прокрутка к нижней части списка).
+* Теперь можно выйти из режима разработчика. Чтобы сделать это, нажмите на три точки меню вверху справа.
 
-Troubleshooting:
+Устранение неполадок:
 
-* If you don't see the notification, check if you allowed AAPS to show notifications in Android and if Android Auto has access rights to notifications.
+* Если вы не видите уведомления, проверьте, разрешили ли вы AAPS показывать уведомления в Android и имеет ли Android Auto права доступа к уведомлениям.

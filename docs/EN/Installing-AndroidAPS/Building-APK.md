@@ -47,7 +47,8 @@ Select "Standard" installation and click "Next".
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Select "Intellij" as UI (user interface) theme and click "Next".
+Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next".
+This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
@@ -79,6 +80,7 @@ After the downloads are completed click the "Finish" button.
 Select "Check out project from Version Control" with "Git" as concrete version control system.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png)
+
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
 Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
@@ -162,7 +164,6 @@ Yeah, the error messages are gone and the first gradle build is runing. Maybe it
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. --->
 Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
 Please click "Don't remind me again for this project".
@@ -178,7 +179,6 @@ Yeah, the first build is successful but we are not finished.
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 ## Generate signed APK
-<!--- Do not forget to copy to update-to-new-version.md / But keystore path must be modified --->
 
 In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)<br>
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
@@ -192,7 +192,7 @@ In the following dialogue box select "APK" instead of "Android App Bundle" and c
 Select "app" and click "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
-<!--- Next 20 lines (until Screenshot_43.png) must be modified in update page as existing key store should be used --->
+
 Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
@@ -210,8 +210,8 @@ Then click "OK".
 
 Fill in the information of the last dialog in this dialog and click "Next".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
-<!--- End modification here --->
+![Screenshot 43](../images/Installation_Screenshot_43.png) 
+
 Select "full" as flavour for the generated app.
 Select V1 "Jar Signature" (V2 is optional) and click "Finish".
 The following information might be important for later use.
@@ -234,7 +234,6 @@ Click the "locate" link in the event log.
 
 
 ## Transfer APK to smartphone
-<!--- Do not forget to copy to update-to-new-version.md --->
 
 A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 

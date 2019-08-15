@@ -13,8 +13,8 @@
       ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
-* Select Pump password and input your password. (Default password is 1234)   
-  **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* Zvolte Heslo k pumpě a vložte své heslo. (Výchozí heslo je 1234)   
+  **Párování musíte potvrdit na pumpě!** Jedná se o stejný postup jako při párování jiných bluetooth zařízení (např. smartphonu nebo rádia v autě).
   
       ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
       
@@ -27,41 +27,41 @@
 
 * Povolte rozšířené bolusy na pumpě
 
-## Dana RS specific errors
+## Specifické chyby Dana RS
 
-### Error during insulin delivery
+### Chyba během vydávání inzulinu
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+V případě, že dojde k přerušení spojení mezi AAPS a pumpou Dana RS v průběhu vydávání bolusu (např. odejdete mimo dosah telefonu, zatímco pumpa Dana RS vydává inzulin), zobrazí se následující zpráva a zazní akustická výstraha.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Oznámení chyby podávání inzulínu](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in CP tab if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* Ve většině případů se jedná pouze o problém s komunikací, který se netýká vydaného inzulinu (je vydáno správné množství).
+* Podívejte se do historie pumpy (buď v pumpě, nebo na kartě Dana > Historie pumpy > Bolusy), zda byl vydán správný bolus.
+* Případně odstraňte chybný záznam na kartě Ošetření.
+* Skutečně vydaný bolus se načte a zaznamená při příštím připojení. Chcete-li vynutit připojení okamžitě, klikněte na ikonu BT na kartě Dana, nebo prostě počkejte na příští připojení.
 
-## Special note when switching phone
+## Zvláštní poznámka, pokud měníte telefon
 
-When switching to a new phone the following steps are neccessary:
+Pokud přecházíte na nový telefon, je nezbytné, abyste provedli následující kroky:
 
-* **Export settings** on your old phone
+* **Exportujte nastavení** na svém starém telefonu
   
-  * Hamburger menu (top left corner of screen)
+  * Hamburger menu (v levém horním rohu obrazovky)
   * Údržba
   * Exportovat nastavení
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![Exportovat nastavení](../images/AAPS_ExportSettings.png)
 
-* **Transfer** settings from old to new phone
+* **Přeneste** nastavení ze starého telefonu do nového
 
-* **Manually pair** Dana RS with the new phone 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
-  * Hamburger menu (top left corner of screen)
+* **Ručně spárujte** pumpu Dana RS s novým telefonem 
+  * Vzhledem k tomu, že nastavení týkající se připojení pumpy jsou také importována, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth. Proto je třeba nový telefon a pumpu spárovat ručně.
+* **Nainstalujte AndroidAPS** na nový telefon.
+* **Importujte nastavení** do nového telefonu 
+  * Hamburger menu (v levém horním rohu obrazovky)
   * Údržba
-  * Import settings
+  * Importujte nastavení
 
-## Timezone traveling with Dana RS pump
+## Cestování mezi časovými pásmy s pumpou Dana RS
 
 Chcete-li se dozvědět více informací o cestování mezi časovými pásmy, přejděte na část [Cestování s pumpou mezi časovými pásmy](../Usage/Timezone-traveling#danarv2-danars).

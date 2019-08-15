@@ -8,9 +8,17 @@ Where there are additional settings available within the module, you can click o
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
-## Profile
+## Profil
 
 Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+
+### Local profile (recommended)
+
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+
+Advantage: no internet connection neccessary to change profile settings
+
+Disadvantage: only one profile
 
 ### NS Profile
 
@@ -18,13 +26,13 @@ NS Profile uses the profiles you have saved on your nightscout site (https://[yo
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
+Advantage: multiple profiles & easy to edit via PC or tablet
+
+Disadvantage: no local changes to profile settings
+
 ### Simple profile
 
 Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
-
-### Local profile (recommended)
-
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
 ## Insulin
 
@@ -137,7 +145,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 Define which Buttons are shown on the home screen.
 
 * Treatments
-* Calculator
+* Kalkulator
 * Insulin
 * Carbs
 * CGM (opens xDrip+)
@@ -155,7 +163,7 @@ Note: Button will not be visible if outside the specified time range or if you h
 
 #### Advanced settings
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically the basal for the next two hours is added to the bolus and a two hour zero-temp activated. Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Actions
 

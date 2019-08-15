@@ -2,7 +2,7 @@
 
 Als je het nog niet had, download dan [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van de nieuwste ['nightly build' xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) versies hebt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
+Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van de nieuwste ['nightly build' xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) versies hebt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee. Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G... gebruik dan een 'nightly build' versie van 2019/07/28 of nieuwer.
 
 ## Basisinstellingen voor alle CGM-systemen & FGM
 
@@ -65,7 +65,7 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 
 ### G6-zender voor de eerste keer verbinden
 
-**Voor het resetten van een zender zie [Zender resetten](../Configuration/xdrip#extend-transmitter-life) verderop. Daarna vind je ook hoe je een zender moet vervangen.**
+**Voor de tweede en volgende zender zie [Zender resetten](../Configuration/xdrip#extend-transmitter-life) hieronder.**
 
 * Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van de nieuwste ['nightly build' xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) versies hebt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
 * Zet originele Dexcom ontvanger uit (indien je die gebruikt).
@@ -103,6 +103,7 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 
 ### Zender resetten
 
+* De actieve sensor sessie zal worden gestopt bij het resetten van de zender. Dat betekent dat je daarna weer de 2 uur opwarm-fase zult moeten uitzitten. Plan je zender reset dus gelijktijdig met een sensorwissel, of doe het op een moment dat het geen probleem is om 2 uur geen gegevens te hebben.
 * Schakel de `engineering mode` in: 
    * tik op het injectiespuit-icoontje aan de rechterkant van het xDrip+ startscherm
    * houdt het microfoon-icoontje rechtsonder lang ingedrukt
@@ -113,6 +114,11 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 * Geef via het microfoon-icoontje weer de spraakopdracht (op dezelfde manier als hierboven): “hard reset transmitter”
 * De opdracht om de zender te resetten zal worden verstuurd bij de eerstvolgende keer dat jouw telefoon contact heeft met de zender
 * Kijk vervolgens naar de systeemstatus (Hamburger menu > system status) en zie wat er gebeurt. Het kan even duren voordat de zender heeft terug gecommuniceerd naar je telefoon dat hij succesvol is gereset.
+* Als je een bericht ziet "Phone Service State: Hard Reset maybe failed" op het tweede systeemstatusscherm, start dan gewoon de sensor en dit bericht zou moeten verdwijnen.
+   
+   ![xDrip+ Hard Reset mogelijk mislukt](../images/xDrip_HardResetMaybeFailed.png)
+
+* Transmitter days (ouderdom zender, in dagen) zal worden ingesteld op 0 nadat je succesvol de zender hebt gereset en weer een sensor hebt gestart.
 
 ### Zender vervangen
 
@@ -205,7 +211,13 @@ Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van d
 
 ### Sensorcode terugvinden
 
-* Wanneer je het papiertje niet meer hebt, dan kun je de code die je hebt ingevoerd ook terugvinden in de xDrip+ logs.
+* In de laatste 'nightly builds' versie wordt de sensor code weergegeven in de Systeemstatus (via Hamburger menu linksboven op het homescreen).
+* Veeg (swipe) één keer naar links om het juiste scherm te zien.
+   
+   ![xDrip+ Haal Dexcom Sensor Code op2](../images/xDrip_Dexcom_SensorCode2.png)
+
+* De Dexcom sensor code kun je ook terugvinden in xDrip+ logs (geld ook voor oudere versies van xDrip+).
+
 * Tik op de 3 stipjes in rechterbovenhoek van het beginscherm
 * Selecteer `View Events Log` en zoek naar "code". Gebruik eventueel de zoekfunctie (via het vergrootglas-icoontje).
    

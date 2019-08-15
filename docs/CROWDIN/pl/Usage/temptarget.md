@@ -1,27 +1,27 @@
-# Temp-Targets
+# Cele tymczasowe
 
-## What are Temp-Targets and where can I set and configure them?
+## Czym są Cele tymczasowe, gdzie mogę je ustawić i skonfigurować?
 
-With “Temp-Targets” (or short TT), you can change your blood glucose target for a certain time period. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets. To set “Default-Temp-Targets”, you can press long on your target in the right corner on the top in the overview-tab or in the orange “Carbs” button. To set a “Custom Temp-Target”, you can also do it by long pressing you target or in the “Actions”-tab.
+Za pomocą celów tymczasowych "Temp-Targets" (lub krótko TT) możesz zmienić docelowy poziom glukozy we krwi na określony czas. Ponieważ są one najczęściej potrzebne do aktywności, hipo (niedoboru węglowodanów) lub jedzenia wkrótce, możesz skonfigurować wartości domyślne. Aby skonfigurować cele tymczasowe, możesz wejść do menu w prawym górnym rogu i przejść do Ustawienia -> Inne-> Domyślne tymczasowe wartości docelowe. Aby wybrać "Domyślną tymczasową wartości docelowe", na zakładce Przegląd naciśnij i przytrzymaj przycisk celu w prawym górnym rogu lub nacisnąć pomarańczowy przycisk "WĘGLOWOD". Aby ustawić niestandardowy cele tymczasowy, możesz również zrobić to przez długie naciśnięcie przycisku "Cel Tymczasowy" w zakładce "AKCJE".
 
-## Hypo Temp-Target
+## Hipo Cel tymczasowy
 
-This can be considered as the most important Temp-Target. There are several reasons for it: 1. Realizing you will go low: Usually, the Loop should handle it, but sometimes you can see better in advance than the loop, so the loop can react faster when it targets a higher blood glucose value. 2. When you eat hypo treatments carbs, your blood glucose will rise very fast. The loop will correct against the rising or even give SMBs if enabled. A "Hypo Temp-Target" can prevent that. 3. (advanced, objective 8): You can enable “High Temp-Targets raises sensitivity” for Temp-Targets of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, so AndroidAPS is more sensitive. 4. (advanced, objective 8): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active.
+Ten cel tymczasowy można uznać za najważniejszy. Jest kilka powodów: 1. Zdając sobie sprawę, że poziom cukru może spaść: zwykle pętla powinna sobie z tym poradzić, ale czasami wiesz lepiej i szybciej niż pętla, więc pętla może reagować szybciej, gdy cel tymczasowy ma ustawioną wyższą wartość stężenia glukozy we krwi. 2. Kiedy jesz dodatkowe węglowodany przy hipo, poziom glukozy we krwi wzrośnie bardzo szybko. Pętla będzie przeciwdziałać takiemu wzrostowi a w sytuacji korzystania z SMB poda mikro bolusa. "Hipo cel tymczasowy" może temu zapobiec. 3. (zaawansowane, zadanie 8): Możesz włączyć "Wysoki cel tymczasowy zwiększa wrażliwość" dla celu tymczasowego 100 mg/dl lub 5,5mmol/l lub większego w OpenAPS SMB, w związku z tym AndroidAPS jest bardziej wrażliwy. 4. (zaawansowane, zadanie 8): Możesz dezaktywować "Włącz SMB z wysokim celem tymczasowym", więc nawet jeśli masz COB> 0, aktywne "Włącz SMB z tymczasowym poziomem docelowym" lub "Włącz SMB (Super Mikro Bolus) zawsze" i OpenAPS SMB także włączone, AndroidAPS nie będzie podawać SMB, gdy aktywne są wysokie cele tymczasowe.
 
-Note: if you enter carbs with the carb button and your blood glucose is less then 72mg/dl or 4mmol/l, Hypo TT is automatically enabled.
+Uwaga: jeśli wpiszesz węglowodany z przyciskiem WĘGLOWOD., a poziom glukozy we krwi jest mniejszy niż 72 mg/dl lub 4 mmol/l, funkcja Hipo cel tymczasowy zostanie automatycznie włączona.
 
-## Activity Temp-Target
+## Ćwiczenia Cel tymczasowy
 
-Before and during activity, you might want to have a higher target to prevent getting low. To simplify setting the Temp-Target, you can configure a default "Activity Temp-Target".
+Przed i w trakcie aktywności możesz chcieć mieć wyższy cel, aby uniknąć spadku. Aby uprościć ustawienie celu tymczasowego, możesz skonfigurować domyślną wartość dla "Ćwiczenia cel tymczasowy".
 
-Advanced, objective 8: The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Then AndroidAPS is more sensitive. Some people do instead a profile switch before/while activity TT, but everbody is different. If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, even with COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active.
+Zaawansowane, zadanie 8: Zalety dotyczące "Ćwiczenia cel tymczaoswoy", to to, że możesz włączyć "Wysoki tymczasowy cel zwiększy wrażliwość" dla celi tymczasowych wyższych lub równych 100mg/dl lub 5.5mmol/L w OpenAPS SMB. Z tego względy AndroidAPS jest bardziej wrażliwy. Niektórzy ludzie zamiast tego zmieniają profil przed/podczas aktywności TT, jednak każdy jest inny. Jeśli " Włącz SMB z wysokkim celem tymczaoswym" jest dezaktywowane, AndroidAPS nie będzie używał SMB, nawet z COB > 0, "Włącz SMB z tymczasowym poziomem docelowym" lub "Wlącz SMB (Super Mikro Bolusy) zawsze" aktywne i OpenAPS SMB także aktywne.
 
-## Eating soon Temp-Target
+## Wkrótce posiłek Cel tymczasowy
 
-If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. You can read more about the "Eating soon mode" in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Jeśli wiesz, że chcesz wkrótce zjeść, możesz włączyć ten cel tymczasowy, więc dzięki temu będzie więcej IOB przed jedzeniem. Specjalnie dla tych, którzy nie robią pre-bolusów, może to być dobra alternatywa, aby obniżyć poziom glukozy we krwi. Więcej informacji na temat "Tryb szybkiego jedzenia" można znaleźć w artykule [ ""Jak zrobić" tryb szybkiego jedzenia"](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) lub [ tutaj ](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, objective 8: If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Requirement is a Temp-Target less than 100mg/dl or 5.5mmol/l for this option.
+Zaawansowane, zadanie 8: Jeśli korzystasz z OpenAPS SMB i masz włączone "Niski tymczasowy cel zmniejszy wrażliwość", AndroidAPS działa trochę agresywniej. Wymaganie dla tej opcji to cel tymczasowy mniejszy niż 100 mg/dl lub 5,5 mmol/l.
 
-## Custom Temp-Target
+## Niestandardowy Cel tymczasowy
 
-Sometimes, you just want to have a temp target other than the default ones. You can set one by long pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
+Czasami po prostu chcesz mieć cel tymczasowy inny niż domyślny. Możesz go ustawić przez naciśnięcie i przytrzymanie przycisku cel (zakres) w prawym górnym rogu w zakładce Przegląd lub w zakładce Akcje.

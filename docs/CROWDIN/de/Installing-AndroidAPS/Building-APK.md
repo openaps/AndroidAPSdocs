@@ -52,7 +52,7 @@ Wähle “Standard” Installation und klicke auf “Next”.
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Wähle “Intellij” als “UI theme” (Benutzeroberfläche) und klicke auf “Next”.
+Wähle das Design für die Benutzeroberfläche, das Dir am besten gefällt. (In diesem Handbuch verwenden wir "Intellij".) Klicke danach auf “Next”. Das ist nur das Farbschema. Du kannst auswählen, was Du möchtest (z.B. "Darcula" für den dunklen Modus). Diese Auswahl hat keinen Einfluss auf die Erstellung der APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
@@ -80,7 +80,9 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 * Nutze “git clone” in Android Studio wie in dem folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
 
-![Screenshot 10](../images/Installation_Screenshot_10.png) ![Version_Control_Git](../images/Version_Control_Git.png)
+![Screenshot 10](../images/Installation_Screenshot_10.png)
+
+![Version_Control_Git](../images/Version_Control_Git.png)
 
 Gib die URL der Hauptseite des AndroidAPS Repositorys (“https://github.com/MilosKozak/AndroidAPS”) an und klicke auf “Clone”.
 
@@ -161,9 +163,7 @@ Sieht so aus, als ob wir die Fehlermeldungen hinter uns haben :). Zeit für eine
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-<!--- Android Studio recommends we now update the gradle system to version 4.4. If you made this build for an AndroidAPS version before the release of at least a release candidate(RC) of version 2.0 do not follow this recommendation. Otherwise, the build will fail. The gradle system is a tool which Android Studio uses to control the build process. For AndroidAPS there is no disadvantage to using the old gradle version. The APK file in the end is not different. If you build a APK for version 2 of AndroidAPS feel free to upgrade the gradle system to version 4.4. ---> Android Studio empfiehlt, das Gradle-System zu aktualisieren. 
-
-**Führe niemals ein Gradle-Update durch!** Dies kann zu Problemen führen!
+Android Studio empfiehlt, das Gradle-System zu aktualisieren. **Führe niemals ein Gradle-Update durch!** Dies kann zu Problemen führen!
 
 Klicke auf "Don't remind me again for this project".
 
@@ -179,8 +179,6 @@ Perfekt, der erste “Build Prozess” ist erfolgreich abgeschlossen, aber wir s
 
 ## Siginierte APK erstellen (Generate signed APK)
 
-<!--- Do not forget to copy to update-to-new-version.md --->
-
 Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. Falls Du eine ältere Version benutzt, wähle im Menü “Build” und dann “Generate Signed APK...”.)  
 Signieren bedeutet, dass du deine generierte Anwendung unterschreibst, aber digital als eine Art digitaler Fingerabdruck in der Anwendung selbst. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
 
@@ -194,7 +192,7 @@ Wähle “App” aus und klicke auf “Next”.
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Klicke auf “Create new...” um einen key store zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Sie ist verschlüsselt und passwortgeschützt. Wir empfehlen, diese Datei in deinem Benutzerordner (C.\Benutzer\[Dein Name]) zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
+Klicke auf “Create new...” um einen Keystore zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Diese ist verschlüsselt und mit Passwörtern geschützt. Wir empfehlen, diese Datei in deinem Benutzerverzeichnis zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -232,8 +230,6 @@ Klicke auf “locate” im “event log”.
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
 ## Übertrage die APK-Datei auf das Smartphone
-
-<!--- Do not forget to copy to update-to-new-version.md --->
 
 Es sollte sich ein Datei Manager öffnen. Das könnte bei dir anders aussehen (dieser Screenshot wurde auf einem Linux PC erstellt). In Windows wird sich der “Explorer” öffnen, in Mac OS X der “Finder”. Dort solltest du jetzt das Verzeichnis mit der APK-Datei sehen. Es ist aber unglücklicherweise nicht die, die wir suchen, sondern nur die “wear-release.apk”.
 
