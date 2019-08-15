@@ -89,9 +89,9 @@ SMB работает в течение 6 часов после приема уг
 
 Для других систем мониторинга, таких как Freestyle Libre, функция ‘всегда включать SMB’ (так в оригинале, очевидно должно быть "SMB после углеводов"- перев.) будет оставаться неактивной пока в xDrip+ не появится более адекватное расширение для сглаживания данных. Подробнее [здесь](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### Max minutes of basal to limit SMB to
+### Верхний лимит минут базала при SMB
 
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
+Это важный элемент в настройках безопасности. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
 
 This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
 
