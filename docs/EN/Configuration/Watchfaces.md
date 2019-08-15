@@ -11,6 +11,8 @@ The following functions can be triggered from the watch:
 
 To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping).  Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder#wear). 
 
+Some users who are using Xdrip+ have also reported to get readings on a watch they needed to enter "info.nighscout.androidaps" into Identify receiver within Inter-app settings in Xdrip+
+
 There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.  
 
 ![AndroidAPSv2 watchface](../images/AAPSv2_Watchface.png)
