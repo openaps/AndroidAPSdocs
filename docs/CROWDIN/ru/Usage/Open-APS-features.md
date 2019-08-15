@@ -91,7 +91,7 @@ SMB работает в течение 6 часов после приема уг
 
 ### Верхний лимит минут базала при SMB
 
-Это важный элемент в настройках безопасности. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
+Это важный элемент в настройках безопасности. Это значение на основе скорости базала определяет, сколько микроболюсов SMB может быть подано за то время, которое не покрыто активными углеводами COB.
 
 This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
 
