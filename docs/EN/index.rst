@@ -88,7 +88,7 @@ Component Setup
    :maxdepth: 1
    :glob:
    
-   BG Source <./Configuration/BG-Source.md>
+   CGM/FGM <./Configuration/BG-Source.md>
    Pumps <./Hardware/pumps.rst>
    Phones <./Hardware/Phoneconfig.rst>
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>   
