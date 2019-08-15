@@ -101,8 +101,6 @@ Configuration
    :glob:
    
    Config Builder <./Configuration/Config-Builder.md>
-   Hardware setup (delete) <./Configuration/Hardware/index.rst> 
-   Nightscout setup (delete) <./Installing-AndroidAPS/Nightscout.md>   
    Preferences <./Configuration/Preferences.md>
    
    
