@@ -1,6 +1,8 @@
-Overview Part 1 - Modules
+Component Overview 
 ==============================================
 AAPS is not just a (self-built) application, the application is a just one of serveral modules. Before deciding for one, it would be a good idea to have a look at the Hardware Setup, too.
+
+Here should be a nice overview (image).
 
 Necessary Modules
 =====================
@@ -84,8 +86,7 @@ Sample Setup
 You can find a Sample Setup here: `Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <../Getting-Started/Sample-Setup.html`_
 
 
-   
-It would be wonderful if anyone could add here a image with an overview of all different modules.
+  
 
 It sometimes takes a while until all module are together. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and where approporiate adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factores (ISF), etc. And if already possible, open loop is a good way to test the system.
 
