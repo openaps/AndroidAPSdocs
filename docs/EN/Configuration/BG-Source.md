@@ -33,6 +33,8 @@ To learn more about the details and reasons for these recommendations read the [
 * Select xdrip in ConfigBuilder (setting in AndroidAPS).
 * Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 
+*  Some users who are using Xdrip+ have also reported to get readings on a watch they needed to enter "info.nighscout.androidaps" into Identify receiver within Inter-app settings in Xdrip+
+
 ### If using G5 with xdrip+
 * If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G4 without share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
