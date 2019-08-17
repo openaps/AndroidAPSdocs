@@ -33,6 +33,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 * Lade [xdrip](https://github.com/NightscoutFoundation/xDrip) herunter und folge der Anleitung auf Nightscout ([G4 ohne share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 * Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) an.
+* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
 ### Dexcom G5 mit xdrip+
 
@@ -41,9 +42,9 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
+* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### Dexcom G5 / G6 mit gepatchter Dexcom App  
-
+### Dexcom G5 / G6 mit gepatchter Dexcom App
 
 * Lade die APK von [hier](https://github.com/dexcomapp/dexcomapp) herunter und wähle die Version, die Du benötigst (entweder mg/dl oder mmol/l, G5 oder G6).
 * Stoppe den Sensor und deinstalliere die originale Dexcom App, falls du das noch nicht gemacht hast.
