@@ -99,9 +99,9 @@ SMB работает в течение 6 часов после приема уг
 
 Значение по умолчанию: 30 мин.
 
-### Enable UAM
+### Включить непредвиденный прием пищи UAM
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful, if you forget to tell AndroidAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
+При включении этой опции алгоритм SMB может распознать непредвиденный прием пищи. Это полезно, если вы забыли сообщить алгоритму AndroidAPS о съеденных углеводах или неверно оценили их количество или съеденное богато жирами и белками и действует дольше чем ожидалось. Без ввода углеводов алгоритм UAM может распознать быстрое увеличение глюкозы, вызванное углеводами, адреналином и т. д., и пытается компенсировать его при помощи микроболюсов SMB. И наоборот: если гликемия падает быстро, то настройка поможет остановить SMB раньше времени.
 
 **Therefore, UAM should always be activated when using SMB.**
 
