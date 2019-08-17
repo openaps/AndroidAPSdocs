@@ -29,6 +29,10 @@ Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine d
    
    ![xDrip+ Grundeinstellungen 3](../images/xDrip_Basic3.png)
 
+* Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nighscout.androidaps`.
+   
+   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+
 ## xDrip+ mit Dexcom G6
 
 ### Dexcom-spezifische Einstellungen
