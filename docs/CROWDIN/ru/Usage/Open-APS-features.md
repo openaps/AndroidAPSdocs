@@ -113,7 +113,7 @@ SMB работает в течение 6 часов после приема уг
 
 Если эта опция включена, то параметр чувствительность инсулина будет снижен при временной цели ниже 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF снизится, в то время как IC и базал увеличатся.
 
-### Advanced Settings
+### Дополнительные настройки
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -167,7 +167,7 @@ Here, you can chose, if you want to use the [sensitivity detection](../Configura
 
 If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
 
-### Advanced Settings
+### Дополнительные настройки
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -211,7 +211,7 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Adult: 7
 * Insulin resistant adult: 12
 
-### Advanced Settings
+### Дополнительные настройки
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
