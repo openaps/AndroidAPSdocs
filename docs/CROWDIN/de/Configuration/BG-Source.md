@@ -33,6 +33,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 * Lade [xdrip](https://github.com/NightscoutFoundation/xDrip) herunter und folge der Anleitung auf Nightscout ([G4 ohne share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 * Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) an.
+* Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `Identify receiver` wie auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben.
 
 ### Dexcom G5 mit xdrip+
 
@@ -41,9 +42,9 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
+* Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `Identify receiver` wie auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben.
 
-### Dexcom G5 / G6 mit gepatchter Dexcom App  
-
+### Dexcom G5 / G6 mit gepatchter Dexcom App
 
 * Lade die APK von [hier](https://github.com/dexcomapp/dexcomapp) herunter und wähle die Version, die Du benötigst (entweder mg/dl oder mmol/l, G5 oder G6).
 * Stoppe den Sensor und deinstalliere die originale Dexcom App, falls du das noch nicht gemacht hast.
@@ -87,7 +88,7 @@ Um dein Libre als CGM zu verwenden, das alle 5 Minuten Glukosewerte empfängt, m
 ## Für Eversense Nutzer  
 
 
-Der einfachste Weg, um Eversense mit AndroidAPS zu nutzen, ist die modifizierte [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) zu installieren (und zuvor die Original-Eversense-App zu deinstallieren).
+Am einfachsten kann man Eversense mit AndroidAPS nutzen, indem man die modifizierte [Eversense App](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) installiert (zunächst muss die Original-App deinstalliert werden).
 
 **Warnung: Durch die Deinstallation der alten App, werden Deine lokalen historischen Daten (älter als eine Woche) verloren gehen!**
 

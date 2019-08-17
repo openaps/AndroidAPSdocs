@@ -44,6 +44,8 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 
 * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
   
+  This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
+  
   ![max daily basal](../images/MaxDailyBasal.png)
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.

@@ -1,80 +1,80 @@
-# Building the APK
+# Создание андроид-приложения (APK)
 
 * * *
 
-***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
+***Пожалуйста, обратите внимание** при создании приложения AndroidAPS 2.0: **Выборочная Конфигурация ** не поддерживается текущей версией плагина Android Gradle! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:*
 
-     * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
-     * *In the left pane, click Build, Execution, Deployment > Compiler.*
-     * *Uncheck the Configure on demand checkbox.*
+     * *Открыть окно настроек, нажав на Файл > Установки (на Mac, Android Studio > Настройки).*
+     * *В левой панели нажать кнопку Build, Execution, Deployment > Compiler.* (сборка, выполнение, развертывание)
+     * *Снять флажок с ячейки "выборочная конфигурация.*
     
 
-## * *Click Apply or OK.*
+## * *Нажмите Применить или OK.*
 
-### This article is divided into two parts.
+### Эта статья разделена на две части.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
+* В обзорной части есть объяснение того, какие шаги необходимы для создания файла APK.
+* В пошаговой инструкции вы найдете снимки экранов установки. Поскольку версии Android Studio - среды разработки программного обеспечения, в которой мы будем создавать APK - меняются очень быстро, точного соответствия вашей сборке вы не увидите, но общее представление о том, как это делается, получите. Android Studio работает на Windows, Mac OS X и Linux, и между каждой платформой возможны незначительные различия. Если вы обнаружите, что что-то важное выполняется неправильно или отсутствует, пожалуйста, сообщите в группе facebook "AndroidAPS users" или в чате Gitter [Android APS](https://gitter.im/MilosKozak/AndroidAPS) или [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) чтобы мы могли устранить проблему.
 
-## Overview
+## Общий обзор
 
-In general, the steps necessary to build the APK file:
+В целом, шаги, необходимые для создания файла APK таковы:
 
-* Install git
-* Install and setup Android Studio.
-* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
-* Open the cloned project in Android Studio as active project.
-* Build the signed APK.
-* Transfer the signed APK to your smartphone.
+* Установите Git
+* Установите и настройте Android Studio.
+* Используйте git для клонирования исходного кода из центрального репозитория Github, где разработчики разместили код приложения.
+* В Android Studio откройте клонированный проект в качестве активного проекта.
+* Постройте подписанный APK.
+* Переместите подписанный APK на ваш телефон.
 
-## Step by step walkthrough
+## Пошаговое руководство
 
-Detailed description of the steps necessary to build the APK file.
+Подробное описание шагов, необходимых для создания файла APK.
 
-## Install Android Studio
+## Установите Android Studio
 
-* Install git 
+* Установите Git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - just install a package git via package manager of your distribution
-* Install [Android Studio](https://developer.android.com/studio/install.html).
-* Setup Android Studio during first start
+  * Linux - просто установите пакет Git через менеджер пакетов вашего дистрибутива
+* Установите [Android Studio](https://developer.android.com/studio/install.html).
+* Настройте Android Studio во время первого запуска
 
-Select "Do not import settings" as you have not used it before.
+Выберите "Не импортировать настройки", так как вы не использовали их раньше.
 
 ![Screenshot 1](../images/Installation_Screenshot_01.png)
 
-Click "Next".
+Нажмите "Далее".
 
 ![Screenshot 2](../images/Installation_Screenshot_02.png)
 
-Select "Standard" installation and click "Next".
+Выберите "Стандартная" установка и нажмите "Далее".
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Для интерфейса выберите тему, которая вам нравится. (В этом руководстве мы использовали тему"Intellij". Затем нажмите "Далее". Это всего лишь цветовая схема. Можете выбрать любую (напр. Darcula для темного режима). Этот выбор не влияет на построение APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Нажмите "Далее" в диалоге "Проверить настройки".
 
 ![Screenshot 5](../images/Installation_Screenshot_05.png)
 
-The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
+Эмулятор Android (для эмуляции смартфона на Win или Mac) не используется при построении APK. Нажмите "Готово", чтобы завершить установку и при необходимости прочитать документацию.
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
-Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
+Android Studio загружает много программных компонентов. Можете нажать на кнопку "Показать детали" если хотите увидеть, что происходит, но в принципе это не важно.
 
 ![Screenshot 7](../images/Installation_Screenshot_07.png)
 
 ![Screenshot 8](../images/Installation_Screenshot_08.png)
 
-After the downloads are completed click the "Finish" button.
+После завершения загрузок нажмите кнопку "Готово".
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+* Аплодисменты, аплодисменты. Установка Android Studio завершена и можно приступить к клонированию исходного кода. Можно сделать короткий перерыв.
 
 ## Download code and additional components
 

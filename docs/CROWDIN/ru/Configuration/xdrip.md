@@ -29,6 +29,10 @@
    
    ![основные настройки xDrip+ 3](../images/xDrip_Basic3.png)
 
+* Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nighscout.androidaps`.
+   
+   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+
 ## xDrip+ & Dexcom G6
 
 ### Настройки для работы с Dexcom
