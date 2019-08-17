@@ -111,7 +111,7 @@ SMB работает в течение 6 часов после приема уг
 
 ### Низкая временная цель temptarget снижает чувствительность
 
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
+Если эта опция включена, то параметр чувствительность инсулина будет снижен при временной цели ниже 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF снизится, в то время как IC и базал увеличатся.
 
 ### Advanced Settings
 
