@@ -83,7 +83,7 @@ Users are creating a [list of tested phones and watches](https://docs.google.com
  
 Sample Setup
 ============
-You can find a Sample Setup here: `Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <../Getting-Started/Sample-Setup.html`_
+You can find a Sample Setup here: `Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
 
 
   
