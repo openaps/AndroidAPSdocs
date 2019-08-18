@@ -27,7 +27,7 @@ AndroidAPS currently works with
 - DanaR
 - DanaRS  
 
-pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <Future-possible-Pump-Drivers.html`_ page.
+pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <Future-possible-Pump-Drivers.html>`_ page.
 
 If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in `this spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, please share the details of yours if not already listed.
 
