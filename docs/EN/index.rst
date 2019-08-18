@@ -58,8 +58,8 @@ Getting Started
    Safety First <./Getting-Started/Safety-first.md>
    What is a closed loop system <./Getting-Started/Safety-first.md>
    What is closed Loop System with AndroidAPS <./Getting-Started/Safety-first.md>  
-   Module Overview delete because of level size <./Getting-Started/Modules/index.rst>
-
+   
+   
 What do I need 
 -----------------------------------------
 .. toctree::
