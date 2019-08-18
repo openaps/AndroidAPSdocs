@@ -129,7 +129,7 @@ Usage (non-specific)
    Accessing logfiles <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    
-AAPS for children
+AndroidAPS for children
 ------------------
 .. toctree::
    :maxdepth: 1
