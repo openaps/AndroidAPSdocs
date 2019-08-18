@@ -104,7 +104,7 @@ Configuration
    Preferences <./Configuration/Preferences.md>
    
    
-Usage (software)
+AndroidAPS Usage
 ------------
 .. toctree::
    :maxdepth: 1
@@ -119,7 +119,7 @@ Usage (software)
    Extended Carbs <./Usage/Extended-Carbs.md>    
   
  
-Usage (non-specific) 
+General Hints 
 ---------------------
 .. toctree::
    :maxdepth: 1
