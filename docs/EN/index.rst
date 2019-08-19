@@ -73,6 +73,7 @@ Component Setup
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>   
    Smartwatch  <./Hardware/Smartwatch.rst>
    
+
 Configuration 
 ---------------
 .. toctree::
@@ -108,6 +109,7 @@ General Hints
    Accessing logfiles <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    
+
 AndroidAPS for children
 ------------------
 .. toctree::
@@ -116,6 +118,7 @@ AndroidAPS for children
    
    SMS commands <./Usage/SMS-Commands.md>
    
+
 Advanced 
 ----------
 .. toctree::
@@ -125,6 +128,7 @@ Advanced
    Android auto <./Usage/Android-auto.md>
    Automation <./Usage/automation.md>
    
+
 Troubleshooting
 ------------------------------------------
 .. toctree::
@@ -163,7 +167,8 @@ Where to go for help
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-
+Resources/Reference
+------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -190,6 +195,7 @@ How to help
    The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
    Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+
 
 .. note:: 
 	**Disclaimer And Warning**
