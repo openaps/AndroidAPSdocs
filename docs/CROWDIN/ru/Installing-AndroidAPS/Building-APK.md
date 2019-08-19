@@ -96,16 +96,16 @@ Android Studio начнет клонирование. Не нажимайте н
 
 ![Screenshot 15](../images/Installation_Screenshot_15.png)
 
-Use the standard "default gradle wrapper" and click "OK".
+Выберите стандартный «создатель оболочки gradle по умолчанию» и нажмите «OK».
 
 ![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
+Прочитайте и закройте экран "Совет дня", нажав "Закрыть".
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
-* Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Отлично, теперь у нас есть своя копия исходного кода и мы готовы начать сборку.
+* Теперь мы приближаемся к нашему первому сообщению об ошибке. К счастью, Android Studio будет сразу предлагать нам решения.
 
 Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
