@@ -30,29 +30,31 @@ If you're ready for the challenge, please read on.
 * An app closely integrated with Nightscout
 * An app in which the user is in control of safety constraints 
 
-1.2 List of base components for getting started
-------------------
+**How to start:**
+Of course, all of this content here is very important, but can be in the beginning quite confusing.
+A good orientation is given by the `Module Overview <./Module/index.html>`_ and the `Objectives <./Usage/Objectives.html>`_.
 
-* An Android smartphone with Android 5.0 or later. **Please update to Android 6 or higher as it is planned to drop support for Android 5.x soon.** See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ to learn which phones work best with AndroidAPS.
-* A continuous clucose monitor (CGM): Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, or PocTech
-* An app on the phone to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself installed on the phone
-* `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 or later
-* A supported pump: Dana-R or Dana-RS from Sooil, or Accu-Chek Combo or Insight from Roche (unless you are able to build your own driver for another insulin pump)
-
+Getting started
+----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
-   Screenshots <./Getting-Started/Screenshots.md>
-   Phones <./Getting-Started/Phones.md>
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Possible future pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <./Getting-Started/Sample-Setup.md>
-   FAQ for loopers <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
-  
+   What is a closed loop system <./Getting-Started/Safety-first.md>
+   What is closed Loop System with AndroidAPS <./Getting-Started/Safety-first.md>  
+   
+   
+What do I need 
+-----------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Module <./Module/index.rst>
+   
+   
+   
 How to Install AndroidAPS
 ------------
 .. toctree::
@@ -63,7 +65,19 @@ How to Install AndroidAPS
    Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+   
+   
+Component Setup
+---------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   CGM/FGM <./Configuration/BG-Source.md>
+   Pumps <./Hardware/pumps.rst>
+   Phones <./Hardware/Phoneconfig.rst>
+   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>   
+   Smartwatch  <./Hardware/Smartwatch.rst>
    
 Configuration 
 ---------------
@@ -72,39 +86,83 @@ Configuration
    :glob:
    
    Config Builder <./Configuration/Config-Builder.md>
-   BG Source <./Configuration/BG-Source.md>
-   Dexcom G6 hints <./Configuration/Dexcom.md>
-   Dana-R pump <./Configuration/DanaR-Insulin-Pump.md>
-   Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
-   Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
-   Medtronic pump <./Configuration/MedtronicPump.md>
-   Watchfaces <./Configuration/Watchfaces.md>
    Preferences <./Configuration/Preferences.md>
-   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
-   xDrip+ settings <./Configuration/xdrip.md>
    
-Usage
+   
+AndroidAPS Usage
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
+   AndroidAPS screens <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.md>
-   OpenAPS features <./Usage/Open-APS-features.md>
+   OpenAPS features <./Usage/Open-APS-features.md>   
+   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>
-   SMS commands <./Usage/SMS-Commands.md>
-   Extended Carbs <./Usage/Extended-Carbs.md>
+   Temp-targets <./Usage/temptarget.md>   
+   Extended Carbs <./Usage/Extended-Carbs.md>    
+  
+ 
+General Hints 
+---------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
    Crossing timezones with pumps <./Usage/Timezone-traveling.md>
    Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Smoothing blood glucose data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-   Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
+   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   
+AndroidAPS for children
+------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   SMS commands <./Usage/SMS-Commands.md>
+   
+Advanced 
+----------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
    Android auto <./Usage/Android-auto.md>
-   Huawei phones special configuration <./Usage/huawei.md>
-   Jelly Pro - battery life optimization <./Usage/jelly.md>
    Automation <./Usage/automation.md>
+   
+Troubleshooting
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   NS-Client <./Usage/Troubleshooting-NSClient.md>
+   Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
+   Pumps <./FGT/Troubleshootingpumps.rst>
+
+   
+   
+FAQ 
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   FAQ <./Getting-Started/FAQ.md>
+
+   
+Glossary
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   Glossary <./Getting-Started/Glossary.md>
+  
+   
+
+
 
 Where to go for help 
 ------------
@@ -132,7 +190,7 @@ How to help
    How to help <./Getting-Started/How-can-I-help.md>
    How to translate the app <./translations.md>
    How to edit the wiki <./make-a-PR>
-
+  
 .. note:: 
    **IMPORTANT SAFETY NOTICE**
 
