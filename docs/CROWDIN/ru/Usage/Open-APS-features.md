@@ -127,13 +127,13 @@ SMB работает в течение 6 часов после приема уг
 
 * * *
 
-## Advanced Meal Assist (AMA)
+## Расширенный мастер болюса (AMA)
 
-AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AMA, сокращение от "advanced meal assist" включено в функционал OpenAPS с 2017 года (oref0). Помощник болюса OpenAPS Advanced Meal Assist (AMA) позволяет системе быстрее установить высокое временное целевое значение после болюса на еду, ЕСЛИ вы правильно ввели углеводы.
 
-**You will need to have completed [objective 7](../Usage/Objectives.md) to use this feature**
+**Для применения расширенного мастера болюса AMA необходимо завершить [цель 7](../Usage/Objectives.md)**
 
-You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Подробнее в [Документации OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
 
