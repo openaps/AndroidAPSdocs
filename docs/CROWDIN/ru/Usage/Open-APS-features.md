@@ -150,22 +150,22 @@ AMA, сокращение от "advanced meal assist" включено в фун
 
 ### Максимальное общее количество активного инсулина IOB (ед.), которое не может превысить OpenAPS ("max-iob" в OpenAPS)
 
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Этот параметр ограничивает максимальную величину активного базального инсулина IOB, при которой работает алгоритм AndroidAPS. Если активный инсулин IOB выше, то алгоритм AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока базальный IOB не окажется в заданных пределах.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . "Жесткий предел" максимального активного инсулина maxIOB в алгоритме помощника болюса AMA ниже, чем в алгоритме SMB.
+Значение по умолчанию 2, но можно постепенно поднять этот параметр, чтобы посмотреть, как он влияет на вас и какое значение лучше. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . "Жесткий предел" максимального активного инсулина maxIOB в алгоритме помощника болюса AMA ниже, чем в алгоритме SMB.
 
 * Ребенок: 3
 * Подросток: 5
-* Adult: 7
+* Взрослый: 7
 * Инсулинорезистентный взрослый: 12
 
 ### Включить autosense AMA
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
+Здесь можно выбрать, использовать [детектор чувствительности](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' или нет.
 
-### Autosense adjust temp targets too
+### Autosense также подстраивает цели
 
-If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+Если эта опция включена, autosense может также настроить цели (наряду с базой, ISF и IC). Это позволяет AndroidAPS работать более или менее «агрессивно». При этом фактическая цель может быть достигнута быстрее.
 
 ### Дополнительные настройки
 
@@ -202,13 +202,13 @@ Default value: 2
 
 ### Максимальное общее количество активного инсулина IOB (ед.), которое не может превысить OpenAPS ("max-iob" в OpenAPS)
 
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Этот параметр ограничивает максимальную величину активного базального инсулина IOB, при которой работает алгоритм AndroidAPS. Если активный инсулин IOB выше, то алгоритм AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока базальный IOB не окажется в заданных пределах.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . The 'hard limit' for maxIOB is lower in MA than in SMB.
+Значение по умолчанию 2, но можно постепенно поднять этот параметр, чтобы посмотреть, как он влияет на вас и какое значение лучше. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . The 'hard limit' for maxIOB is lower in MA than in SMB.
 
 * Ребенок: 3
 * Подросток: 5
-* Adult: 7
+* Взрослый: 7
 * Инсулинорезистентный взрослый: 12
 
 ### Дополнительные настройки
