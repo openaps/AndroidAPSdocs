@@ -1,26 +1,11 @@
 Welcome to the Android APS documentation
 ==============================================
 
-.. note:: 
-   **IMPORTANT SAFETY NOTICE**
+1. Short overview on AndroidAPS (AAPS)
+-------------
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
-
-   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
-
-.. note:: 
-	**Disclaimer And Warning**
-
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
-
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
-
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
-
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
-
-
-**What is AndroidAPS?**
+1.1 What is AndroidAPS?
+^^^^^^^^^^^^^^^^^^^^^
 
 AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. An APS can't do the job as well as a biological pancreas does, but it can make type 1 diabetes easier to manage using devices that are commercially available and software that is simple and safe. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
 
@@ -32,7 +17,8 @@ A note of caution: AndroidAPS is not regulated by any medical authority in any c
 
 If you're ready for the challenge, please read on. 
 
-**Primary goals behind AndroidAPS:**
+1.2 Primary goals behind AndroidAPS:
+^^^^^^^^^^^^^^^^^^^^^
 
 * An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
 * An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
@@ -48,8 +34,7 @@ If you're ready for the challenge, please read on.
 Of course, all of this content here is very important, but can be in the beginning quite confusing.
 A good orientation is given by the `Module Overview <./Module/index.html>`_ and the `Objectives <./Usage/Objectives.html>`_.
 
-
-Getting Started 
+Getting started
 ----------------
 .. toctree::
    :maxdepth: 1
@@ -205,7 +190,21 @@ How to help
    How to help <./Getting-Started/How-can-I-help.md>
    How to translate the app <./translations.md>
    How to edit the wiki <./make-a-PR>
-   
+  
+.. note:: 
+   **IMPORTANT SAFETY NOTICE**
 
-   
+   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
+   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+
+.. note:: 
+	**Disclaimer And Warning**
+
+	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+
+	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+
+	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+
+	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
