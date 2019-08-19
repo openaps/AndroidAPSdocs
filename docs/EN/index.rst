@@ -1,8 +1,7 @@
 Welcome to the Android APS documentation
 ==============================================
 
-What is AndroidAPS?
-^^^^^^^^^^^^^^^^^^^^^
+**What is AndroidAPS?**
 
 AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. An APS can't do the job as well as a biological pancreas does, but it can make type 1 diabetes easier to manage using devices that are commercially available and software that is simple and safe. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
 
@@ -14,8 +13,7 @@ A note of caution: AndroidAPS is not regulated by any medical authority in any c
 
 If you're ready for the challenge, please read on. 
 
-Primary goals behind AndroidAPS:
-^^^^^^^^^^^^^^^^^^^^^
+**Primary goals behind AndroidAPS:**
 
 * An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
 * An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
@@ -49,8 +47,7 @@ What do I need
    :glob:
    
    Module <./Module/index.rst>
-   
-   
+
    
 How to Install AndroidAPS
 ------------
@@ -138,8 +135,7 @@ Troubleshooting
    Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
    Pumps <./FGT/Troubleshootingpumps.rst>
 
-   
-   
+
 FAQ 
 ------------------------------------------
 .. toctree::
@@ -157,9 +153,6 @@ Glossary
   
    Glossary <./Getting-Started/Glossary.md>
   
-   
-
-
 
 Where to go for help 
 ------------
@@ -170,6 +163,7 @@ Where to go for help
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -177,6 +171,7 @@ Where to go for help
             
    Resources <./Resources/index>
    For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+
 
 How to help
 ------------
@@ -188,6 +183,7 @@ How to help
    How to translate the app <./translations.md>
    How to edit the wiki <./make-a-PR>
   
+
 .. note:: 
    **IMPORTANT SAFETY NOTICE**
 
