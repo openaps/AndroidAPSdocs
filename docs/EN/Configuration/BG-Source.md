@@ -75,7 +75,7 @@ To use your Libre as a CGM that is getting new BG values every 5 minutes you fir
 * Select Glimp in ConfigBuilder (setting in AndroidAPS).
 
 ## For users of Eversense<br>
-The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (and unistall the original one first). 
+The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) (and unistall the original one first). 
 
 **Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
 

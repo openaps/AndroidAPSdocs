@@ -2,9 +2,7 @@
 
 Если это еще не сделано, скачайте [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
-
-**На данный момент возникают проблемы с ночными сборками после 2019/05/21, требующими калибровки G6.**
+Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает. Если серийный номер трансмиттера Dexcom начинается с 8G... попробуйте версию от 2019/07/28 или позже.
 
 ## Основные настройки для всех систем мониторинга
 
@@ -30,6 +28,10 @@
 * Если вы также активировали `Принимать назначения (Accept treatments)` и трансляцию в AndroidAPS, то xDrip+ получит информацию об инсулине, углеводах и базальной скорости от AndroidAPS и сможет прогнозировать гипогликемию и т. д. более точно.
    
    ![основные настройки xDrip+ 3](../images/xDrip_Basic3.png)
+
+* Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nighscout.androidaps`.
+   
+   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ & Dexcom G6
 
@@ -67,7 +69,7 @@
 
 ### Первое подключение трансмиттера G6
 
-**Для второго и следующего трансмиттера смотрите [Продление срока работы трансмиттера](../Configuration/xdrip#extend-transmitter-life) ниже.**
+**Для второго и следующих трансмиттеров смотрите [Продление срока работы трансмиттера](../Configuration/xdrip#extend-transmitter-life) ниже.**
 
 * Для передатчиков G6, изготовленных после осени/конца 2018 года, используйте одну из [последних версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и последняя стабильная версия xDrip+ (2019/01/10) с ней не работает.
 * Выключите оригинальный ресивер Dexcom (если используете).

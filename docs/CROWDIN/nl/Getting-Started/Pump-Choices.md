@@ -9,7 +9,7 @@ AndroidAPS werkt momenteel met
 
 pomp. Details over de status van andere pompen die mogelijk in de toekomst met AndroidAPS zullen werken, staan op de pagina met [mogelijk toekomstige insulinepompen](Future-possible-Pump-Drivers.md).
 
-Bij het kiezen van een nieuwe pomp vragen veel mensen zich af voor welke ze zouden moeten kiezen. De verschillende leveranciers staan in [dit werkblad](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), graag de gegevens van jouw leverancier toevoegen als deze nog niet vermeld zijn.
+Bij het kiezen van een nieuwe pomp vragen veel mensen zich af voor welke ze zouden moeten kiezen. De DanaRS is de opvolger van de DanaR. De Accuchek Combo en Insight zijn al langer verkrijgbaar in Nederland en België en veel mensen gebruiken deze pomp al. De Dana pompen horen in Nederland niet tot het standaard aanbod, maar zijn na toestemming van jouw arts en verzekeraar wel vanuit Duitsland te leveren. Bij het kiezen van een nieuwe pomp vragen veel mensen zich af voor welke ze zouden moeten kiezen. De verschillende leveranciers staan in [dit werkblad](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0).
 
 De Combo en de Insight zijn solide pompen en je kunt ermee loopen. De voordelen van de DanaR/RS zijn echter:
 

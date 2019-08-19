@@ -21,16 +21,16 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 ## LOOP STATUS
 
 - Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Pętla jest włączona
+- Wstrzymana (10 min)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Pętla wstrzymana na 20 minut
 
 ## LOOP RESUME
 
-- Loop resumed
+- Pętla wznowiona
 
 ## TREATMENTS REFRESH
 
@@ -42,31 +42,31 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 ## PUMP
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Ostatnie połączenie: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Aby zatrzymać dawkę bazową lub anulować bazę tymczasową, odpowiedz za pomocą kodu EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Aby rozpocząć dawkę bazową 0.3U/h odpowiedz kodem Swe
 
 ## BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Aby rozpocząć dawkę bazową 0.3U/h przez 20 min odpowiedz kodem Swe
 
-## BASAL 30%
+## Baza 30%
 
 - To start basal 30% for 30 min reply with code Swe
 
-## BASAL 30% 50
+## Baza 30% 50
 
 - To start basal 30% for 50 min reply with code Swe
 
-## BOLUS 1.2
+## Bolus 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
+- Aby dostarczyć bolusa 1,2U odpowiedz z kodem Rrt (przykład kodu)
 - Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
 
 ## EXTENDED STOP/CANCEL

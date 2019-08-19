@@ -2,9 +2,7 @@
 
 Als je het nog niet had, download dan [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van de nieuwste ['nightly build' xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) versies hebt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
-
-**Op dit moment zijn er problemen met de zogenaamde 'nightly builds' versies die na 2019/05/21 die steeds om G6 kalibratie vragen. Mocht je hier last van hebben, probeer dan een versie van voor die datum.**
+Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van de nieuwste ['nightly build' xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) versies hebt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee. Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G... gebruik dan een 'nightly build' versie van 2019/07/28 of nieuwer.
 
 ## Basisinstellingen voor alle CGM-systemen & FGM
 
@@ -31,6 +29,10 @@ Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van d
    
    ![xDrip+ Basis Instellingen 3](../images/xDrip_Basic3.png)
 
+* Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nighscout.androidaps`.
+   
+   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+
 ## Dexcom G6 met xDrip+
 
 ### Specifieke instellingen voor Dexcom
@@ -51,7 +53,7 @@ Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van d
 
 ### Pre-emptive restarts niet aanbevolen
 
-Het wordt aangeraden om de automatische herstart optie van Dexcom sensoren (`pre-emptive restarts`) niet te gebruiken, omdat dit kan leiden tot een "sprong” in de BG waarden op dag 9, wanneer hij de herstart uitvoert.
+Het wordt aangeraden om de automatische herstart optie van Dexcom sensoren (`pre-emptive restarts`) niet in te schakelen, omdat dit kan leiden tot een "sprong” in de BG waarden op dag 9, wanneer hij de herstart uitvoert.
 
 ![xDrip+ sprong na automatische herstart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
@@ -67,7 +69,7 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 
 ### G6-zender voor de eerste keer verbinden
 
-**Voor het resetten van een zender zie [Zender resetten](../Configuration/xdrip#extend-transmitter-life) verderop. Verderop staat ook beschreven hoe je een zender moet vervangen.**
+**Voor de tweede en volgende zender zie [Zender resetten](../Configuration/xdrip#extend-transmitter-life) hieronder.**
 
 * Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van de nieuwste ['nightly build' xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) versies hebt. Deze zenders hebben een nieuwe firmware en de nieuwste stabiele versie van xDrip+ (2019/01/10) werkt daar niet mee.
 * Zet originele Dexcom ontvanger uit (indien je die gebruikt).

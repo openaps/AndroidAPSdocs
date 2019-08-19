@@ -1,13 +1,13 @@
-# Glossary<table style="width:100%" border=1>
+# Słowniczek pojęć<table style="width:100%" border=1>
 <tr>
- <th>Term</th>
- <th>Description</th>
- <th>see also</th>
- <th>more details @</th>
+ <th>Termin</th>
+ <th>Opis</th>
+ <th>zobacz też</th>
+ <th>więcej szczegółów na</th>
 </tr>
 <tr>
  <td>AAPS</td>
- <td>AndroidAPS - artifical pancreas system</td>
+ <td>AndroidAPS - system hybrydowej sztucznej trzustki</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -17,11 +17,11 @@
   </td>
   
   <td>
-    advanced meal assist - advanced algorithm to handle carbs
+    advance meal assist - zaawansowany algorytm obsługi węglowodanów
   </td>
   
   <td>
-    MA / SMB
+    MA/SMB
   </td>
   
   <td>
@@ -29,378 +29,377 @@
   </td>
 <tr>
  <td>Android auto</td>
- <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
+ <td>notyfikacje AAPS wyświetlana jest w samochodzie na kompatybilnych deskach rozdzielczych oraz systemach informacyjno-rozrywkowch</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
 </tr>
 </tr>
 <tr>
  <td>APK</td>
- <td>software installation file (Android application package)</td>
+ <td>plik instalacyjny oprogramowania (pakiet systemu Android)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Building APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - budowanie APK</a></td>
 </tr>
 <tr>
  <td>Autosens</td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>określenie wrażliwości na insuline jako efekt ćwiczeń, hormonów itp.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td>Azure</td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>platforma do hostowania Nightscouta w chmurze</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
  <td>BAT</td>
- <td>status light low battery on homescreen</td>
+ <td>lampka stanu niski poziom baterii na ekranie głównym</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>BG</td>
- <td>blood glucose</td>
+ <td>stężenie glukozy we krwi</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
 <td>BGI</td>
- <td>blood glucose interaction -degree to which BG 'should' be rising or falling based on insulin activity alone</td>
+ <td>oddziaływanie insuliny we krwi - stopień, do którego BG powinno rosnąć lub spadać w oparciu o działanie samej insuliny</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
 <td>Źródła danych o poziomie cukru we krwi (BG) - CGM/FGM</td>
- <td>Where do your glucose values come from?</td>
+ <td>źródło stężenia glukozy we krwi - miejsce z którego pochodzą dane o stężeniu glukozy we krwi</td>
  <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - źródło BG</a></td>
 </tr>
 <tr>
  <td>BlueReader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>transmiter bluetooth dla Freestyle Libre zmieniający go w CGM</td>
  <td>Blukon Nightreader / MiaoMiao</td>
  <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
 </tr>
 <tr>
  <td>Blukon Nightreader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>transmiter bluetooth dla Freestyle Libre zmieniający go w CGM</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>dawka bazowa</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>CAGE</td>
- <td>canula age - displayed in Nightscout if information was entered in the AAPS careportal tab or through AAPS actions tab 'prime'</td>
+ <td>czas wkłucia - wyświetlany w Nightscout jeśli informacja została wprowadzona przy pomocy AAPS w zakładce careportal lub zakładce actions "rozpocznij/wypełnij"</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td>CAN</td>
- <td>status light overdue canula change on homescreen</td>
+ <td>lampka stanu zaległa zmiana kaniuli na ekranie głównym</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>CGM</td>
- <td>continuous glucose monitor</td>
+ <td>ciągły monitor glukozy</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Closed Loop</td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
- <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td>Zamknięta pętla/Closed Loop</td>
+ <td>zamknięta pętla - system podejmuje automatyczne zmiany w bazie bez potrzeby aprobaty ze strony użytkownika na podstawie zaimplementowanego algorytmu</td>
+ <td>Otwarta pętla</td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki zamknięta pętla</a></td>
 </tr>
 <tr>
  <td>COB</td>
- <td>carbs on board</td>
+ <td>carbs on board - aktywne węglowodany</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>DIA</td>
- <td>duration of insulin action</td>
+ <td>czas aktywności insuliny</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki typy insuliny</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>DST</td>
- <td>daylight savings time</td>
+ <td>Czas letni</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
+ <td>"przedłużone węglowodany" - węglowodany podzielone na kilka godzin (tj. sporo tłuszczy i białek)<br> przedłużone bolusy które znasz z normalnej terapii pompą insulinową nie mają wiele sensu gdy używasz pętli</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs przykład użycia</a></td>
 </tr>
 <tr>
  <td>FGM</td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - źródło BG</a></td>
 </tr>
 <tr>
  <td>git</td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
+ <td>system kontroli wersji dla śledzenia zmian w plikach komputerowych i koordynowania pracy na tych plikach <br>-> niezbędny do aktualizacji APK</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - aktualizacja APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>webowy serwis kontroli wersji wykorzystywany przez Git <br>- składowanie kodu źródłowego</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
- <td>app to collect values from Freestyle Libre</td>
+ <td>aplikacja do odczytywania wartości z Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout with Glimp</a> </td>
+ <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout z Glimp</a> </td>
 </tr>
 <tr>
  <td>Heroku</td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>platforma do hostowania Nightscouta w chmurze</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td>IC (or I:C)</td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td>IC (lub I:C)</td>
+ <td>przeliczniki - stosunek insuliny do węglowodanów (liczba weglowodanów w gramach potrzebna dla jednej jednostki insuliny?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>IOB</td>
- <td>insulin on board -  insulin active in your body</td>
+ <td>insulin on board -  aktywna insulina w twoim organizmie</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>ISF</td>
- <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
+ <td>współczynnik czułości insuliny - oczekiwany spadek BG w wyniku podania jednej jednostki insuliny</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LGS</td>
- <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td>Zawieszenie niskiej glikemii <br> AAPS zmniejszy poziom dawki podstawowej, jeśli poziom glukozy we krwi spadnie. Jeśli jednak poziom glukozy we krwi wzrasta, to wzrośnie on tylko w przypadku, gdy IOB będzie ujemny (z poprzedniego LGS), w przeciwnym razie dawki podstawowe pozostaną takie same jak wybrany profil. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
  <td><a href="../Usage/Objectives.html">objective 4</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
+ <td>darmowy i open-source system operacyjny dla smartfonów itp <br>alternatywny system operacyjny dla smartfonów bez systemu Android 8.1 (Oreo) <br>(wymagany dla pompy Accu-Chek combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - pompa Combo</a></td>
 </tr>
 <tr>
  <td>Log files</td>
- <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
+ <td>rejestr wszystkich działań AAPS (przydatne dla rozwiązywania problemów i debugowania)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
 </tr>
 <tr>
  <td>MA</td>
- <td>meal assist - standard algorithm to handle carbs</td>
+ <td>meal assist - standardowy algorytm obsługi węglowodanów</td>
  <td>AMA / SMB</td>
  <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
 </tr>
 <tr>
  <td>maxIOB</td>
- <td>safety feature - maximum total IOB AAPS can't go over</td>
+ <td>Funkcja zabezpieczeń - maksymalna całkowita IOB która może zostać ustawiona przez AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>transmiter bluetooth dla Freestyle Libre zmieniający go w CGM</td>
  <td>BlueReader / Blukon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
 <tr>
  <td>min_5m_carbimpact</td>
- <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
+ <td>funkcja zabezpieczeń - domyślne wchłanianie węglowodanów w przypadku gdy wchłanianie nie może zostać dynamicznie wyznaczone na podstawie zmieniających się wartości BG</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - konfiguracja</a></td>
 </tr>
 <tr>
  <td>Nightscout</td>
- <td>open source project to access and report CGM data</td>
- <td>Nightscout Reporter</td>
+ <td>projekt open source dający możliwość odczytu oraz raportowania wartości CGM</td>
+ <td>Raporty Nightscout</td>
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
  <td>NS Client</td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td>część AAPS do łączenia się z witryną Nightscout</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
- <td>Nightscout Reporter</td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
+ <td>Raporty Nightscout</td>
+ <td>Narzędzie od osoby korzystającej z pętli do generowanie raportów PDF z danych Nightscout</td>
  <td>Nightscout</td>
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td>Objectives</td>
- <td>learning program within AAPS guiding you step by step from open to closed loop</td>
+ <td>Cele (samouczek)</td>
+ <td>zadania - program nauczania w ramach AAPS prowadzący krok po kroku przez zadania z otwartej do zamkniętej pętli</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
+ <td><a href="../Usage/Objectives.html">Wiki - zadania</a></td>
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
+ <td>open artificial pancreas system<br>APS działający na małych komputerach (tj. Raspberry Pie)<br>AAPS używa pewnych elementów OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">OpenAPS dokumentacja</a></td>
 </tr>
 <tr>
- <td>Open Loop</td>
- <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
+ <td>Otwarta pętla/Open Loop</td>
+ <td>Otwarta pętla - system zaproponuje zalecane korekty, które muszą być wykonywane ręcznie na pompie</td>
  <td>Closed Loop</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - konfiguracja</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
- <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
+ <td>wykrywanie czułości <br>" referencyjny projekt implementujący wersje 0/1"- kluczowy algorytm zaimplementowany w OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
 </tr>
 <tr>
  <td>Peak time</td>
- <td>time of maximum effect of insulin given</td>
+ <td>czas piku - czas po którym dochodzi do maksymalnego działania podanej insuliny</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - konfiguracja</a></td>
 </tr>
 <tr>
  <td>PH</td>
- <td>pump history (entry in treatments tab)</td>
+ <td>historia pompy (wpis w zakładce Leczenie)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Zrzuty ekranów</a></td>
 </tr>
 <tr>
- <td>Predictions</td>
- <td>preditions for BG in the future based on different calculations</td>
+ <td>Prognozy/Predictions</td>
+ <td>przewidywana wartość BG w przyszłości na podstawie różnych obliczeń</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
- <td>Profile</td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
+ <td>Profil</td>
+ <td>ustawienia podstawowe terapii (wartość bazy, DIA, IC, ISF, cel BG) <br>mogą być definiowane lokalnie lub za pośrednictwem Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
- <td>Profile switch</td>
- <td>(temporary) change of profile used or percentual increase/decrease</td>
+ <td>Zmiana profilu</td>
+ <td>(tymczasowa) zmiana profilu używana do zmiany na inny profil lub procentowy wzrost/spadek obecnego profilu</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
 </tr>
 <tr>
  <td>RES</td>
- <td>status light overdue reservoir change on homescreen</td>
+ <td>lampka stanu zaległa zmiana zbiornika na insulinę na ekranie głównym</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
+ <td>sprzęt typu open source dający możliwość łączenia między Bluetooth Low Energy (BLE) a bezprzewodową komunikacją na częstotliwości 916MHz (używane przez stare pompy Medtronic)</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>SAGE</td>
- <td>sensor age - displayed in Nightscout if information was entered in the AAPS careportal tab</td>
+ <td>wiek sensora - wyświetlany w Nightscout jeśli informacja została wprowadzona przez AAPS w zakładce careportal</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>SEN</td>
- <td>status light sensor change on homescreen</td>
+ <td>lampka stanu zaległa zmiana sensora na ekranie głównym</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
- <td>Sensivity detection</td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>Sensivity detection / Wykrywanie czułości</td>
+ <td>określenie wrażliwości na insuline jako efekt ćwiczeń, hormonów itp.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
- <td>Sensor noise</td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td>Szum sensora / Sensor noise</td>
+ <td>hałas sensora - niestabilne odczyty CGM prowadzące do "skoków" w wyświetlanych wartościach BG (choinka)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
  <td>SMB</td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
+ <td>super micro bolus<br> zawansowa funkcja do szybszych zmian w BG</td>
  <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>Super bolus</td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td>przeniesienie insuliny podawanej w bazie do bolusa dla szybszej zmiany wartości BG - wykorzystywany przy posilkach z dużym indeksem glikemicznym</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
  <td>TBB</td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td>całkowita baza (suma wartości bazy dla całego dnia - 24 godziny)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>TBR</td>
- <td>temporary basal rate</td>
+ <td>tymczasowa dawka podstawowa</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>TDD</td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td>total daily dose - całkowita dawka dobowa (bolusy + baza dla całego dnia)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>TT</td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td>temporary target (cel tymczasowy) - <br>tymczasowe zwiększenie lub zmniejszenie wartości żądanej BG (zakres)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
 </tr>
 <tr>
  <td>UAM</td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td>unannounced meals (niezapowiedziane posiłki) - wykrywa znaczny wzrost poziomu glukozy z powodu posiłków, adrenaliny i innych czynników i próbuje dostosować tą wartość wykorzystując SMB</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>Virtual pump</td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
+ <td>witualna pompa - opcja dająca możliwość wypróbowania AAPS lub możliwość korzystania z AAPS w przypadku modeli pomp nie posiadających sterownika w AAPS</td>
  <td>Open Loop</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>
- <td>open source software to read CGM systems</td>
+ <td>oprogramowanie open source do odczytu CGM</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td>Zero-temp</td>
- <td>temporary basal rate with 0% (no basal insulin delivery)</td>
+ <td>tymczasowa dawka podstawowa ustawiona na 0% (baza nie jest dostarczana)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
-</tr>
-</table>
+  <td colspan=4>Zobacz również <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+</tr></table>

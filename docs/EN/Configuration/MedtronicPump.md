@@ -13,7 +13,7 @@ While Medtronic driver was tested with good test group, it is still considered a
 ***
 
 ## Hardware and software requirements
-- **Phone:** Medtronic driver should work with any phone supporting BLE
+- **Phone:** Medtronic driver should work with any phone supporting BLE. **IMPORTANT: While driver works correctly on all phones, enabling/disabling Bluetooth doesn't (this is required when you loose connection to RileyLink and system can't recover automatically - happens from time to time). So you need to get device with Android 6.0 - 8.1, in worst case scenario you can  install LinegaeOS 15.1 (required 15.1 or lower) on your phone. We are looking into problem with Android 9, but so far we haven't found resolution (it seems to work on some models and not on others, and on also works sometimes on some models).**
 - **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. Device that does is called RileyLink (you can get it here [getrileylink.org](https://getrileylink.org/)). You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). If you are feeling adventurous you can also try Gnarl ([here](https://github.com/ecc1/gnarl)), which is sort-of RileyLink-clone.  
 - **Pump:** Driver works only with following models and firmware versions:
     - 512/712
@@ -64,7 +64,7 @@ On pump tab you can see several lines that are showing pumps (and connections) c
 - **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
 - **Last connection**: Time when last connection to pump was successful.
 - **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: When last bolus was given or empty.
+- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
 - **Temp basal**: Temp basal that is running or empty.
 - **Reservoir**: How much insulin is in reservoir (updated at least every hour).
 - **Errors**: Error string if there is problem (mostly shows if there is error in configuration).

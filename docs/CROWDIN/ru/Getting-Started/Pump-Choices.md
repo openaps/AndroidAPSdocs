@@ -1,28 +1,28 @@
-# Pump choices
+# Выбор помпы
 
-AndroidAPS currently works with
+AndroidAPS на этот момент работает с
 
-* Помпа Accu Chek Combo
+* Accu Chek Combo
 * Accu-Chek Insight
 * DanaR
 * DanaRS 
 
-pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+помпами Подробности о других помпах, которые возможно смогут работать с AndroidAPS, перечислены на странице [ Помпы будущего ](Future-possible-Pump-Drivers.md).
 
-If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+Часто спрашивают, какая помпа лучше для AAPS. Детали дистрибьюторов приведены в [этой таблице](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), добавьте вашу помпу, если она не внесена.
 
-The Combo and the Insight are solid pumps, and loopable. The advantages of the DanaR/RS as the pump of choice however are:
+Combo и Insight прекрасные помпы, способные работать в составе ИПЖ Однако преимущества помп Dana R/ RS для AAPS следующие:
 
-* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
+* Dana*R/RS соединяется почти с любым телефоном с Android >= 5.1 без необходимости перепрошивки на Lineage OS. Если ваш телефон сломался, вы легко найдете телефон, который работает с Dana* R/RS в качестве быстрой замены... С Combo не так просто. (Ситуация может измениться, когда Android 8.1 станет более популярным)
 
-* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
+* Первоначальное сопряжение проще с Dana* RS. Но обычно это делается только один раз, так что это свойство важно, если хотите проверить новую функцию на других помпах.
 
-* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+* На данный момент Combo работает с экранным анализом. В целом, это неплохо, но такая работа идет медленно. Для цикла ИПЖ это не имеет значения, так как он работает в фоновом режиме. Тем не менее, требуется больше времени на соединение и, соответственно, больше возможности его разорвать, что плохо, если вы отошли от телефона, например, во время болюса, когда готовите пищу.
 
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Combo вибрирует по завершении временных базалов TBR, Dana* R вибрирует (или пищит) на микроболюсах SMB. В ночное время вы, скорее всего, будете использовать TBR а не SMB. Dana* RS может быть сконфигурирована так, что не будет ни вибрировать ни пищать.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* Чтение истории на RS позволяет легко заменить телефоны в автономном режиме и продолжать работу с появлением новых значений мониторинга CGM.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* Все помпы, с которыми работает AndroidAPS, изначально водонепроницаемы. Но только помпы Dana также "гарантированно водонепроницаемы" благодаря изолированным отсекам батареи и системы наполнения резервуара.
 
-The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+Combo, конечно, очень хорошая помпа, применимая в системах ИПЖ. Также у нее есть преимущество выбора типа инфузионной системы, так как в ней применен стандартный разъем типа luer. Батарею вы можете купить на любой заправочной станции или в круглосуточно работающем магазине, а при необходимости ее можно добыть из пульта дистанционного управления в номере отеля ;-)

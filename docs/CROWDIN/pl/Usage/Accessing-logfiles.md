@@ -1,8 +1,8 @@
-# Accessing logfiles
+# Dostęp do plików logów
 
-* Connect phone to a computer in file transfer mode
-* Locate log files in this directory or similiar (may little bit vary on different phones)
+* Podłącz telefon do komputera w trybie przesyłania plików
+* Zlokalizuj pliki logów w tym katalogu lub podobnym (w zależności od telefonu może się to nieznacznie różnić)
 
-![logs](../images/aapslog.png)
+![logi](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in Android Studio, Log Viewer android app, or simply plain text. Previous log files are zipped and stored in folders in date/time order. If sharing your log in [gitter](https://gitter.im/MilosKozak/AndroidAPS) when talking about a potential bug then unzip and upload the folder dated before the error occurred.
+* Bieżący plik logu to plik .log, który można wyświetlać na wiele sposobów. Np. [LogCat](https://developer.android.com/studio/debug/am-logcat.html) w Android Studio, aplikacji Log Viewer na Androida lub jako zwykły tekst. Poprzednie pliki dziennika są spakowane i przechowywane w folderach w kolejności data/czas. Jeśli udostępniasz swój log w [gitter](https://gitter.im/MilosKozak/AndroidAPS), podczas rozmowy o potencjalnym błędzie, rozpakuj i prześlij folder datowany na czas przed wystąpieniem tego błędu.

@@ -16,30 +16,30 @@ Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte s
   * Pro [hlídání pumpy](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring) lze nastavit různé alarmy, doporučujeme zejména % nabití baterie: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Optional: The following 'timers' can be set for the coloring in the AAPS careportal: 
-    * `BAGE_WARN` = `480` (Warning after x hours since last Battery Changed Event in Careportal)
-  * `BAGE_URGENT` = `504` (Urgent warning after x hours since last Battery Changed Event in Careportal)
-  * `CAGE_WARN` = `40` (Warning after x hours since last Cannula Changed Event in Careportal)
-  * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
-  * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
-  * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * Volitelné: Následující 'časovače' lze nastavit pro barevné odlišení v záložce Péče v AAPS: 
+    * `BAGE_WARN` = `480` (Upozornění po x hodinách od poslední výměny baterie zaznamenané v Ošetření)
+  * `BAGE_URGENT` = `504` (Urgentní varování po x hodinách od poslední výměny baterie zaznamenané v Ošetření)
+  * `CAGE_WARN` = `40` (Upozornění po x hodinách od poslední výměny kanyly zaznamenané v Ošetření)
+  * `CAGE_URGENT` = `48` (Urgentní varování po x hodinách od poslední výměny kanyly zaznamenané v Ošetření)
+  * `IAGE_WARN` = `144` (Varování po x hodinách od poslední výměny zásobníku s inzulinem zaznamenané v Ošetření)
+  * `IAGE_URGENT` = `192` (Urgentní varování po x hodinách od poslední výměny zásobníku s inzulinem zaznamenané v Ošetření)
+  * `SAGE_WARN` = `160` (Upozornění po x hodinách od poslední výměny senzoru zaznamenané v Ošetření)
+  * `SAGE_URGENT` = `168` (Urgentní varování po x hodinách od poslední výměny senzoru zaznamenané v Ošetření)
 
 ![Azure](../../images/nightscout1.png)
 
 * Klikněte na "Save" ve vrchní části panelu.
 
-## Semi-automated Nightscout setup
+## Poloautomatickíé zřízení Nightscoutu
 
-Tuto službu nabízí kolega looper Martin Schiftan a v současnosti je zdarma. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+Tuto službu nabízí kolega looper Martin Schiftan a v současnosti je zdarma. Pokud se vám služba líbí, můžete zvážit odeslání drobného příspěvku (odkaz v navigačním panelu vlevo).
 
-**Benefits**
+**Výhody**
 
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The server is located in Germany.
+* Nightscout si pomocí této služby můžete nainstalovat pomocí několika málo kliknutí a ihned jej začít používat. 
+* Téměř žádná manuální práce, protože Martin se snaží celou administraci zautomatizovat.
+* Všechna nastavení lze provádět prostřednictvím uživatelsky přívětivého webového rozhraní. 
+* Tato služba obsahuje rovněž automatické kontroly bazálů prostřednictvím nástroje Autotune. 
+* Server se nachází v Německu.
 
 <http://ns.10be.de/en/index.html>

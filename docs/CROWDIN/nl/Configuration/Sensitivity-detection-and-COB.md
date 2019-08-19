@@ -1,4 +1,4 @@
-# Gevoeligheids detectie
+# Gevoeligheids detectie (Autosens)
 
 ## Gevoeligheids-algoritme
 
@@ -33,10 +33,10 @@ Er zit een aanzienlijk verschil tussen AAPS en Gewogen gemiddelde versus Oref0 e
 
 Oref0 / Oref1 - niet-opgenomen koolhydraten worden afgekapt (naar nul) na bepaalde tijd. NB: nieuwere versies van AndroidAPS gebruiken oranje (ipv groen) als kleur voor koolhydraten.
 
-![COB van oref0](../images/cob_oref0.png)
+![COB van oref0](../images/cob_oref0_orange.png)
 
 AAPS, Gewogen gemiddelde - opname wordt berekend op `COB == 0` na opgegeven tijd
 
-![COB van AAPS](../images/cob_aaps.png)
+![COB van AAPS](../images/cob_aaps2_orange.png)
 
 Als de door jou ingestelde minimale koolhydraten absorptie wordt gebruikt in plaats van de waarde berekend op basis van afwijkingen, verschijnt een oranje stip op jouw COB grafiek

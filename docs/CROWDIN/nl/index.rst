@@ -46,7 +46,7 @@ Als je klaar bent voor deze uitdaging, lees dan verder.
 
 **Wat heb je nodig om te starten:**
 
-* Een Android smartphone met Android 5.0 of hoger. **Please update to Android 6 or higher as it is planned to drop support for Android 5.x soon.** See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ to learn which phones work best with AndroidAPS.
+* Een Android smartphone met Android 5.0 of hoger. **Let op: binnenkort zal Android 5.x niet meer worden ondersteund door AAPS, zorg dus dat je binnenkort een telefoon hebt met minimaal Android 6.0.**Zie `dit werkblad <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ voor ervaringen van anderen hoe goed een telefoon met AndroidAPS werkt.
 * een Continue Glucose Monitor (CGM): Dexcom G4/G5/G6, Eversense, Medtronic Guardian, PocTech of een Freestyle Libre met bluetooth-zender
 * App die de gegevens van jouw glucosesensor doorgeeft, bijvoorbeeld `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ of `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
 * `AndroidAPS zelf <https://github.com/MilosKozak/AndroidAPS>`
@@ -95,6 +95,7 @@ AndroidAPS instellingen
    DanaRS pomp <./Configuration/DanaRS-Insulin-Pump.md>
    AccuChek Combo pomp <./Configuration/Accu-Chek-Combo-Pump.md>
    AccuChek Insight pomp <./Configuration/Accu-Chek-Insight-Pump.md>
+   Medtronic pomp <./Configuration/MedtronicPump.md>
    Smartwatch instellingen <./Configuration/Watchfaces.md>
    Instellingen <./Configuration/Preferences.md>
    Gevoeligheidsdetectie en COB <./Configuration/Sensitivity-detection-and-COB.md>

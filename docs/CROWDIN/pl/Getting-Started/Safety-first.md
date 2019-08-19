@@ -1,15 +1,15 @@
-# Safety first
+# Najważniejsze jest bezpieczeństwo
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+**Kiedy decydujesz się na budowę własnej sztucznej trzustki, zawsze ważne jest, aby myśleć o bezpieczeństwie oraz rozumieć wpływ wszystkich swoich działań**
 
-## General
+## Ogólne
 
-* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-* Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
-* Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
-* Install all security updates provided by your phone manufacturer and Google.
+* AndroidAPS jest tylko narzędziem, które pomaga zarządzać cukrzycą, nie jest czymś co można zainstalować i zapomnieć!
+* Nie zakładaj, że AndroidAPS nigdy nie popełni błędów. To urządzenie przejmuje kontrolę nad podawaniem insuliny: oglądaj je cały czas, zrozum, jak działa i naucz się interpretować jego działanie.
+* Pamiętaj, że po sparowaniu z pompą telefon może poinstruować pompę, aby zrobiła wszystko. Używaj tego telefonu tylko do obsługi systemu AndroidAPS i, jeśli jest używany przez dziecko, tylko do koniecznej, niezbędnej komunikacji z dzieckiem. Nie instaluj niepotrzebnych aplikacji lub gier (!!!), które mogłyby wprowadzać złośliwe oprogramowanie, takie jak trojany, wirusy lub boty, które mogłyby zakłócać działanie systemu.
+* Zainstaluj wszystkie aktualizacje zabezpieczeń dostarczone przez producenta telefonu i Google.
 
-## SMS Communicator
+## Komunikator SMS
 
-* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+* AndroidAPS umożliwia zdalne sterowanie telefonem dziecka za pomocą wiadomości tekstowej. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN.
+* AndroidAPS poinformuje Cię również SMS-em, jeśli Twoje polecenia zdalne, takie jak zmiana bolusa lub profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.

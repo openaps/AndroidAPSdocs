@@ -33,6 +33,7 @@ Aby dowiedzieć się więcej o szczegółach i powodach tych zaleceń, przeczyta
 * Jeśli jeszcze nie jest zainstalowany, pobierz [ xdrip ](https://github.com/NightscoutFoundation/xDrip) i postępuj zgodnie z instrukcjami dla nightscout ([ G4 bez udostępniania ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [ G4 z udostępnianiem](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [ G5 ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support) ).
 * Wybierz w AndroidAPS> Konfiguracja> Źródło BG> xdrip.
 * Dostosuj ustawienia w xDrip+ zgodnie ze stroną ustawień [ xDrip+ ](../Configuration/xdrip.md)
+* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
 ### Jeśli używasz G5 z xdrip+
 
@@ -41,9 +42,9 @@ Aby dowiedzieć się więcej o szczegółach i powodach tych zaleceń, przeczyta
 * W xdrip przejdź do Ustawienia> Zgodność z aplikacjami interapp> Zatwierdzaj terapię i wybierz WYŁ.
 * Jeśli chcesz używać AndroidAPS do wprowadzania kalibracji, wówczas w xdrip przejdź do Ustawienia> Zgodność z aplikacjami interapp> > Akceptuj Kalibracje i ustaw na WŁ. Możesz również przejrzeć opcje w ustawieniach > mniej typowe ustawienia > Zaawansowane ustawienia kalibracji.
 * Wybierz w AndroidAPS> Konfiguracja> Źródło BG> xdrip.
+* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### Jeśli używasz G5 lub G6 ze zmodyfikowaną aplikacją Dexcom  
-
+### Jeśli używasz G5 lub G6 ze zmodyfikowaną aplikacją Dexcom
 
 * Pobierz apk z [ https://github.com/dexcomapp/dexcomapp ](https://github.com/dexcomapp/dexcomapp) i wybierz wersję, która pasuje do twoich potrzeb (mg/dl lub mmol/l, G5 lub G6).
 * Zatrzymaj działanie sensora i odinstaluj oryginalną aplikacje Dexcom - jeśli jeszcze do tej pory tego nie zrobiłeś.
@@ -87,7 +88,7 @@ Aby używać sensora Libre w charakterze pełnoprawnego systemu CGM przekazując
 ## Dla użytkowników Eversense  
 
 
-Najprostszym sposobem użycia Eversense z AndroidAPS jest zainstalowanie zmodyfikowanej aplikacji Eversense (i odinstalowanie oryginalnej aplikacji Eversense).
+The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) (and unistall the original one first).
 
 **Ostrzeżenie: Odinstalowanie starej aplikacji spowoduje utratę lokalnych danych historycznych (starszych niż tydzień)!**
 

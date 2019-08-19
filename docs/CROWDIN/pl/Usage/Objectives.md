@@ -1,4 +1,4 @@
-# Objectives
+# Cele (samouczek)
 
 AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
 
@@ -44,6 +44,8 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 
 * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
   
+  This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
+  
   ![max daily basal](../images/MaxDailyBasal.png)
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
@@ -68,7 +70,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 
 ## Export & import settings
 
-* **Export settings** on your old phone
+* ** Eksportuj ustawienia ** na starym telefonie
   
   * Hamburger menu (top left corner of screen)
   * Maintenance
@@ -80,7 +82,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 * **Transfer** settings from old to new phone using the file location shown during export
 
 * **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
+* **Import settings** na nowym telefonie 
   * Hamburger menu (top left corner of screen)
   * Maintenance
   * Import settings

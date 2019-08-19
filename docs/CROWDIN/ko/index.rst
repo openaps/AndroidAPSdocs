@@ -22,20 +22,20 @@ AndroidAPS 가이드에 오신 것을 환영합니다.
 
 **AndroidAPS가 무엇입니까?**
 
-AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. An APS can't do the job as well as a biological pancreas does, but it can make type 1 diabetes easier to manage using devices that are commercially available and software that is simple and safe. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
+AndroidAPS는 인공췌장시스템(APS) 안드로이드용 스마트폰 앱입니다. 인공췌장시스템(APS)는 무엇입니까? 혈당을 건강한 범위안에서 유지시켜주는 췌장의 역할을 소프트웨어적으로 하게 만든 프로그램입니다. APS가 실제 췌장과 동일한 역할을 하진 못하지만, 1형당뇨인들이 기기를 이용하여 보다 편하고 안전하게 혈당을 관리할 수 있도록 하게해줍니다. 연속혈당측정기(CGM)이 AndroidAPS에 혈당정보를 전달해주고, AndroidAPS가 인슐린펌프에 적절한 인슐린 양을 조절하게 하여줍니다. 이 앱들은 블루투스로 서로 통신합니다. OpenAPS라고 불리는 또 다른 인공췌장시스템을 위해 개발된 특별한 알고리즘 혹은 규칙을 사용하여 적정 인슐린 양을 계산합니다. 이 OpenAPS는 전 세계 수천명의 사람들이 사용하며 수백만 시간의 누적사용양을 기록하고 있습니다. 
 
-A note of caution: AndroidAPS is not regulated by any medical authority in any country. Using AndroidAPS is essentially carrying out a medical experiment on yourself. Setting up the system requires determination and technical knowledge. If you don't have the technical know-how at the beginning, you will by the end. All the information you need can be found in these documents, elsewhere online, or from others who have already done it -- you can ask them in Facebook groups or other forums. Many people have successfully built AndroidAPS and are now using it entirely safely, but it is essential that every user:
+주의사항 : AndroidAPS는 어느 국가의 어느 의료기관에서도 규제하지 않습니다. AndroidAPS를 사용하는 것은 본인에게 스스로 의료적인 실험을 수행하는 것을 기본으로 합니다. 이 시스템을 구축하기 위해선 의지와 기술적 지식이 필요합니다. 처음에 이러한 기술적인 지식이 없다면, 스스로 노력하여 익혀야 할것입니다. 당신이 필요로 하는 정보를 이 문서, 인터넷, 혹은 이 시스템을 이미 이용하고 있는 사용자 들로부터 얻을 수 있을 것이며, 페이스북, 슈거트리 혹은 다른 커뮤니티를 통해 질문하실 수 있습니다. 많은 사람들이 AndroidAPS를 성공적으로 구축하여 안전하게 이용하게 있습니다. 하지만 모든 사용자들에게 아래 사항은 필수사항입니다.
 
-* Builds the system themselves so that they thoroughly understand how it works
-* Adjusts the settings to suit their own diabetes
-* Maintains and monitors the system to ensure it is working properly
+* 시스템이 어떻게 작동하는지 철저히 이해할 수 있도록 시스템을 스스로 구축합니다.
+* 본인의 당뇨에 맞게 설정을 조정합니다.
+* 시스템이 올바르게 작동하는지 확인하고 관리하세요.
 
-If you're ready for the challenge, please read on. 
+이 도전을 하실 준비가 되었다면 계속 읽어주세요. 
 
-**AndroidAPS의 주요 개발 목표:**
+**Primary goals behind AndroidAPS:**
 
-* An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
-* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
+* 안전 기능이 내장된 앱 Oref0와 oref1라는 이름으로 알려진 알고리즘의 안전 기능에 대해서 알고 싶다면 여기를 눌러주세요 (https://openaps.org/reference-design/)
+1형당뇨 관리를 위해 인공췌장과 Nightscout를 하나로 통합한 앱
 * An app to which users can easily add or remove modules as needed
 * An app with different versions for specific locations and languages.
 * An app which can be used in open- and closed-loop mode
@@ -95,6 +95,7 @@ AndroidAPS 설치하기
    Dana-RS pump <./Configuration/DanaRS-Insulin-Pump.md>
    Accu-Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
    Accu-Chek Insight pump <./Configuration/Accu-Chek-Insight-Pump.md>
+   Medtronic pump <./Configuration/MedtronicPump.md>
    워치화면 <./Configuration/Watchfaces.md>
    설정 <./Configuration/Preferences.md>
    민감도 감지와 COB <./Configuration/Sensitivity-detection-and-COB.md>
