@@ -137,9 +137,9 @@ AMA, сокращение от "advanced meal assist" включено в фун
 
 ### Максимальное значение ед/ч, на которое можно установить временный базал ("max-basal" OpenAPS)
 
-Эта настройка безопасности помогает AndroidAPS никогда не задавать опасно высокую базальную скорость и ограничивает временный базал до x ед./ч. Рекомендуется установить это значение на разумный предел. Хороший совет – умножить наивысшую скорость базала в вашем профиле на 4 или по меньшей мере на 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Эта настройка безопасности помогает AndroidAPS никогда не задавать опасно высокую базальную скорость и ограничивает временный базал до x ед./ч. Рекомендуется установить это значение на разумный предел. Хороший совет – умножить наивысшую скорость базала в вашем профиле на 4 или по меньшей мере на 3. Например, если максимальная скорость базала в вашем профиле установлена на 1 ед./ч, то, умножив ее на 4, вы получите значение 4 ед./ч. и зададите эту величину в качестве параметра безопасности.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Здесь нельзя просто задать любое значение: по причине безопасности есть "жесткий предел", который зависит от возраста пациента. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
 The hardcoded parameters in AndroidAPS are:
 
@@ -189,9 +189,9 @@ Default value: 2
 
 ### Максимальное значение ед/ч, на которое можно установить временный базал ("max-basal" OpenAPS)
 
-Эта настройка безопасности помогает AndroidAPS никогда не задавать опасно высокую базальную скорость и ограничивает временный базал до x ед./ч. Рекомендуется установить это значение на разумный предел. Хороший совет – умножить наивысшую скорость базала в вашем профиле на 4 или по меньшей мере на 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Эта настройка безопасности помогает AndroidAPS никогда не задавать опасно высокую базальную скорость и ограничивает временный базал до x ед./ч. Рекомендуется установить это значение на разумный предел. Хороший совет – умножить наивысшую скорость базала в вашем профиле на 4 или по меньшей мере на 3. Например, если максимальная скорость базала в вашем профиле установлена на 1 ед./ч, то, умножив ее на 4, вы получите значение 4 ед./ч. и зададите эту величину в качестве параметра безопасности.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in MA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Здесь нельзя просто задать любое значение: по причине безопасности есть "жесткий предел", который зависит от возраста пациента. The 'hard limit' for maxIOB is lower in MA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
 
 The hardcoded parameters in AndroidAPS are:
 
