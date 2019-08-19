@@ -76,23 +76,23 @@ Android Studio загружает много программных компон
 
 * Аплодисменты, аплодисменты. Установка Android Studio завершена и можно приступить к клонированию исходного кода. Можно сделать короткий перерыв.
 
-## Download code and additional components
+## Скачиваем код и дополнительные компоненты
 
-* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
+* Используйте клон Git в Android Studio, как показано на снимках экрана ниже. Выберите "Проверить проект из системы управления версиями" при помощи Git в качестве конкретной системы управления версиями.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png)
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
+Заполните URL-адрес главного репозитория AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") и нажмите "clone" (клонировать).
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
+Android Studio начнет клонирование. Не нажимайте на "работа в фоновом режиме" так работа идет быстро и переводом в фоновый режим можно только все усложнить.
 
 ![Screenshot 14](../images/Installation_Screenshot_14.png)
 
-Finish the checkout from version control with opening the project by clicking "Yes".
+Завершите выход из управления версиями открытием проекта, нажав "Да".
 
 ![Screenshot 15](../images/Installation_Screenshot_15.png)
 
