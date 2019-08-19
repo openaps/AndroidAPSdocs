@@ -80,16 +80,22 @@ Smartwatch
 ---------------
 Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find `here <../Configuration/Watchfaces>`_.
 
- 
+  
 Sample Setup
 ============
-You can find a Sample Setup here: `Sample Setup: Samsung S7, Dana-R, Dexcom G5 and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
+If you want to get a better impression, you might want to look at a sample setup.
 
-
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Sample Setup 1 <../Getting-Started/Sample-Setup.md>
+ 
   
 
 It sometimes takes a while until all module are together. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and where approporiate adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factores (ISF), etc. And if already possible, open loop is a good way to test the system.
 
-If you have your AAPS components all together (congrats!) or at least enough to start with an open loop, you should first read through the `Objectiv description <../Usage/Objectives.html>`_ (Overview Part 2 )before each new Objectiv.
+If you have your AAPS components all together (congrats!) or at least enough to start with an open loop, you should first read through the `Objectiv description <../Usage/Objectives.html>`_ (Overview Part 2) before each new Objectiv and setup up your `hardware <../index.html#component-setup>`_.
+.
 
 
