@@ -117,13 +117,13 @@ SMB работает в течение 6 часов после приема уг
 
 **Всегда использовать короткое среднее изменение (delta) вместо простых данных** Если включить эту функцию, AndroidAPS использует короткое среднее изменение ГК последних 15 минут, обычно среднее значение из последних трех. Это помогает AndroidAPS работать более стабильно с такими зашумленными источниками данных, как xDrip+ и Libre.
 
-**Максимальный ежедневный множитель безопасности** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Максимальный ежедневный множитель безопасности** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 3. Это означает, что алгоритму AndroidAPS ни при каких условиях не будет разрешено устанавливать временный базал, который более чем в 3 раза выше самого высокого почасового базала, запрограммированного в помпе. Пример: если ваш самый высокий базал 1,0 ед/ч а максимальный ежедневный множитель безопасности 3, то AndroidAPS может установить максимальную временную скорость базового инсулина на 3,0 ед./ч. (= 3 x 1,0 ед./ч.).
 
-Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+Значение по умолчанию: 3 (не следует изменять, если нет настоящей потребности и вам не известно, что вы делаете)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Текущий множитель безопасности базала** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 4. Это означает, что алгоритму AndroidAPS ни при каких условиях не будет разрешено устанавливать временный базал, который более чем в 4 раза выше самого высокого почасового базала, запрограммированного в помпе.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Значение по умолчанию: 4 (не следует изменять, если нет настоящей потребности и вам не известно, что вы делаете)
 
 * * *
 
@@ -171,13 +171,13 @@ If you have this option enabled, autosense can adjust targets (next to basal, IS
 
 **Всегда использовать короткое среднее изменение (delta) вместо простых данных** Если включить эту функцию, AndroidAPS использует короткое среднее изменение ГК последних 15 минут, обычно среднее значение из последних трех. Это помогает AndroidAPS работать более стабильно с такими зашумленными источниками данных, как xDrip+ и Libre.
 
-**Максимальный ежедневный множитель безопасности** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Максимальный ежедневный множитель безопасности** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune. Пример: если ваш самый высокий базал 1,0 ед/ч а максимальный ежедневный множитель безопасности 3, то AndroidAPS может установить максимальную временную скорость базового инсулина на 3,0 ед./ч. (= 3 x 1,0 ед./ч.).
 
-Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+Значение по умолчанию: 3 (не следует изменять, если нет настоящей потребности и вам не известно, что вы делаете)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.
+**Текущий множитель безопасности базала** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Значение по умолчанию: 4 (не следует изменять, если нет настоящей потребности и вам не известно, что вы делаете)
 
 **Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
