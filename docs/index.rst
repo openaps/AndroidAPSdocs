@@ -7,20 +7,21 @@ AndroidAPS
    :glob:
 
    English </EN/index>
-   Българска </CROWDIN/bg/index>
-   Česky </CROWDIN/cs/index>
-   Deutsch </CROWDIN/de/index>
-   Español </CROWDIN/es/index>
-   Français </CROWDIN/fr/index>
-   Hebrew </CROWDIN/he/index>
+   Българска (Bulgarian) </CROWDIN/bg/index>
+   Česky (Czech) </CROWDIN/cs/index>
+   Deutsch (German) </CROWDIN/de/index>
+   Ελληνικά (Greek) </CROWDIN/el/index>
+   Español (Spanish) </CROWDIN/es/index>
+   Français (French) </CROWDIN/fr/index>
+   עברית (Hebrew) </CROWDIN/he/index>
+   Italiano (Italian) </CROWDIN/it/index>
    한국어 (Korean) </CROWDIN/ko/index>
-   Nederlands </CROWDIN/nl/index>
-   Polski </CROWDIN/pl/index>
-   Português </CROWDIN/pt/index>
-   Românesc </CROWDIN/ro/index>
-   Русский </CROWDIN/ru/index>
-   Slovensky </CROWDIN/sk/index>
+   Lietuvių kalba (Lithuanian) </CROWDIN/lt/index>
+   Nederlands (Dutch) </CROWDIN/nl/index>
+   Polski (Polish) </CROWDIN/pl/index>
+   Português (Portuguese) </CROWDIN/pt/index>
+   Românesc (Romanian) </CROWDIN/ro/index>
+   Русский (Russian) </CROWDIN/ru/index>
+   Slovensky (Slavak) </CROWDIN/sk/index>
    Svenska </CROWDIN/se/index>
-   
-   Българска (Specific) </BG/index>
-   Español (Specific) </ES/index>
+   Türkçe </CROWDIN/tr/index>
