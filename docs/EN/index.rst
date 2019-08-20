@@ -172,7 +172,6 @@ Resources/Reference
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Resources/Reference
             
    Resources <./Resources/index>
    For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
