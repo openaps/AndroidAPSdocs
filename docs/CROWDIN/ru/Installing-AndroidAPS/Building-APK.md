@@ -107,19 +107,19 @@ Android Studio начнет клонирование. Не нажимайте н
 * Отлично, теперь у нас есть своя копия исходного кода и мы готовы начать сборку.
 * Теперь мы приближаемся к нашему первому сообщению об ошибке. К счастью, Android Studio будет сразу предлагать нам решения.
 
-Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
+Нажмите "Установить недостающую платформу(ы) и синхронизировать проект", так как Android Studio нуждается в установке отсутствующей платформы.
 
 ![Screenshot 18](../images/Installation_Screenshot_18.png)
 
-Accept the license agreement by selecting "Accept" and clicking "Next".
+Примите лицензионное соглашение, выбрав "Принять" и нажав "Далее".
 
 ![Screenshot 19](../images/Installation_Screenshot_19.png)
 
-As it is said in the dialog please wait until the download is finished.
+Как сказано в диалоге, подождите, пока завершится загрузка.
 
 ![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Now it's finished. Please click "Finish".
+Теперь она завершена. Please click "Finish".
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
@@ -127,11 +127,11 @@ Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Inst
 
 ![Screenshot 22](../images/Installation_Screenshot_22.png)
 
-As it is said in the dialog please wait until the download is finished.
+Как сказано в диалоге, подождите, пока завершится загрузка.
 
 ![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Now it's finished. Please click "Finish".
+Теперь она завершена. Please click "Finish".
 
 ![Screenshot 24](../images/Installation_Screenshot_24.png)
 
@@ -139,11 +139,11 @@ And another error to handle as Android Studio needs to download again a missing 
 
 ![Screenshot 25](../images/Installation_Screenshot_25.png)
 
-As it is said in the dialog please wait until the download is finished.
+Как сказано в диалоге, подождите, пока завершится загрузка.
 
 ![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Now it's finished. Please click "Finish".
+Теперь она завершена. Please click "Finish".
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
@@ -151,11 +151,11 @@ Click "Install Build Tools and sync project" as Android Studio needs to download
 
 ![Screenshot 28](../images/Installation_Screenshot_28.png)
 
-As it is said in the dialog please wait until the download is finished.
+Как сказано в диалоге, подождите, пока завершится загрузка.
 
 ![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Now it's finished. Please click "Finish".
+Теперь она завершена. Please click "Finish".
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
