@@ -55,7 +55,7 @@ and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not ava
 
 On the tray you'll see green message about updated project
 
-## Generate signed APK
+## Создание подписанного APK
 
 <!--- Text is maintained in page building-apk.md ---> In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
