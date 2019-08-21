@@ -1,4 +1,4 @@
-# Release notes
+# Примечания к изменениям в версиях
 
 Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
 
