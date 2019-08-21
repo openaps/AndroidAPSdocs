@@ -180,24 +180,24 @@ Android Studio рекомендует обновить систему gradle. **
 ## Создание подписанного APK
 
 В меню выберите "Build"(выполнить сборку) и затем "Generate Signed Bundle / APK..."(создать подписанный пакет программ). (Меню в Android Studio изменилось с сентября 2018 года. В более старых версиях выберите в меню «выполнить сборку» и «Сгенерировать подписанный APK...».)  
-Подписание означает, что вы подписываете ваше сгенерированное приложение цифровой подписью. Это необходимо потому, что Android имеет правило, согласно которому по соображениям безопасности к исполнению принимается только подписанный код. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
+Подписание означает, что вы подписываете ваше сгенерированное приложение цифровой подписью. Это необходимо потому, что Android имеет правило, согласно которому по соображениям безопасности к исполнению принимается только подписанный код. Для получения дополнительной информации перейдите по [этой](https://developer.android.com/studio/publish/app-signing.html#generate-key) ссылке. Безопасность - сложная тема, нам она сейчас не нужна.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
-In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
+В следующем диалоговом окне выберите "APK" вместо "Android App Bundle" и нажмите кнопку "Далее".
 
 ![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
 
-Select "app" and click "Next".
+Выберите "app" и нажмите "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Нажмите "Create new" (cоздать новый...) для создания магазина ключей. В этом случае магазин ключей является всего лишь файлом, в котором хранится информация о цифровой подписи. Он зашифрован и информация защищена паролями. Мы предлагаем хранить его в вашей домашней папке и помнить пароли, но если потеряете эту информацию, то просто должны создать новую. Самое лучшее - бережно хранить эту информацию.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
-* Fill in the information for the next dialog. 
-  * Key store path: is the path to the keystore file
+* Заполните информацию для следующего диалога. 
+  * Путь к хранилищу ключа: путь к файлу магазина ключей
   * The password fields below are for the keystore to double check for typing errors.
   * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
   * The password fields below the key are for the key itself. As always to double check for typing errors.
