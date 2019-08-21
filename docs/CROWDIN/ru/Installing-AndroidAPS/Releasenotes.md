@@ -28,15 +28,15 @@
 * Исправлена передача данных ГК (теперь работает независимо от разрешения SMS!)
 * Новый модуль проверки версий
 
-## Version 2.2.2
+## Версия 2.2.2
 
-Release date: 07-04-2019
+Дата выпуска: 07-04-2019
 
-### Major new features
+### Новые возможности
 
-* Autosens fix: deactivate TT raises/lowers target
-* New translations
-* Insight driver fixes
+* Исправление Autosens: деактивировать значение временная цель ТТ повышает/понижает целевое значение
+* Новые переводы
+* Исправления драйверов Insight
 * SMS plugin fix
 
 ## Version 2.2
