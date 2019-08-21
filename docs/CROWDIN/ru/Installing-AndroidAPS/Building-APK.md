@@ -198,38 +198,38 @@ Android Studio рекомендует обновить систему gradle. **
 
 * Заполните информацию для следующего диалога. 
   * Путь к хранилищу ключа: путь к файлу магазина ключей
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
-  * You can let the validity at the default of 25 years.
-  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
+  * Поля пароля для хранения ключей даются, чтобы дважды проверить ввод.
+  * Alias - это имя для нужного вам ключа. Вы можете оставить его по умолчанию или дать ему имя, которое придумаете.
+  * Поля пароля под ключом нужны для самого ключа. Как всегда, дважды проверте ошибки на вводе.
+  * Вы можете оставить срок валидности по умолчанию 25 лет.
+  * Обязательны к заполнению только имя и фамилия, но можно заполнить остальную информацию. Затем нажмите "OK".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Заполните информацию последнего диалога в этой серии и нажмите "Далее".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+Выберите "full" (полный) в качестве атрибута для сгенерированного приложения. Выберите V1 "Jar Signature" (V2 необязательно) и нажмите "Finish" (закончить). В дальнейшем может пригодиться следующая информация.
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
-  * full (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
-  * pumpcontrol (i.e. remote control for pump, no looping)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+* 'Release' должен быть вашим выбором по умолчанию для "Build Type"(типа сборки), 'Debug' только для программистов.
+* Выберите тип сборки, который хотите создать. 
+  * полный (с автоматически принимаемыми рекомендациями в закрытом цикле)
+  * открытый цикл (рекомендации, адресованные пользователю, выполняются вручную)
+  * управление помпой (дистанционное управление помпой, без функционирования цикла)
+  * nsclient (например, отображаются данные другого пользователя, могут добавляться записи портала лечения/назначений)
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
-In the event log you see that the Signed APK was generated successfully.
+В журнале событий вы увидите, что подписанное приложение (APK) создано успешно.
 
 ![Screenshot 45](../images/Installation_Screenshot_45.png)
 
-Click the "locate" link in the event log.
+Нажмите на ссылку "Найти" в журнале событий.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
-## Transfer APK to smartphone
+## Перенос приложения на смартфон
 
 A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
