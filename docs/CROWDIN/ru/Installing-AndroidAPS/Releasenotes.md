@@ -18,15 +18,15 @@
 
 ### Новые возможности
 
-* Important safety fix for Insight (really important if you use Insight!)
-* Fix History-Browser
-* Fix delta calculations
-* Language updates
-* Check for GIT and warn on gradle upgrade
-* More automatic testing
-* Fixing potential crash in AlarmSound Service (thanks @lee-b !)
-* Fix broadcast of BG data (works independently of SMS permission now!)
-* New Version-Checker
+* Важное решение безопасности для Insight (очень важно, если вы используете Insight!)
+* Исправлен браузер истории
+* Исправление расчетов дельты
+* Обновление переводов
+* Проверка GIT и предостережение об обновлении gradle
+* Больше автоматического тестирования
+* Исправление потенциального сбоя в службе AlarmSound (спасибо @lee-b !)
+* Исправлена передача данных ГК (теперь работает независимо от разрешения SMS!)
+* Новый модуль проверки версий
 
 ## Version 2.2.2
 
