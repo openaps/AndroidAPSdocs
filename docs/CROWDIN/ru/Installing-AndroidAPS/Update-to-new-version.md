@@ -111,7 +111,7 @@ Please change to the directory AndroidAPS/app/full/release to find the "app-full
 
 In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
 
-Select "Allow from this source". After the installation, you can disable it again.
+Выберите "Разрешить из этого источника". After the installation, you can disable it again.
 
 ![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
 
