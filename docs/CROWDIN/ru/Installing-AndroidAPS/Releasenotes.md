@@ -1,12 +1,12 @@
 # Примечания к изменениям в версиях
 
-Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
+Следуйте инструкциям [ в руководстве по обновлению](../Installing-AndroidAPS/Update-to-new-version.md). На ее страницах решаются наиболее распространенные проблемы связанные с обновлениями.
 
-Starting with version 2.3 a new update procedure is established. You will receive the following information as soon as a new update is available:
+Начиная с версии 2.3 установлена новая процедура обновления. Как только будет доступно новое обновление вы получите следующую информацию:
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 4](../Usage/Objectives.md).
+У вас есть 60 дней для обновления. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 4](../Usage/Objectives.md).
 
 If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
 
