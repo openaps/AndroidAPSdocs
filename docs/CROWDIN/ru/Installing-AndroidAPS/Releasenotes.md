@@ -6,17 +6,17 @@
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-У вас есть 60 дней для обновления. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 4](../Usage/Objectives.md).
+У вас есть 60 дней для обновления. Если вы не обновитесь в течение 60 дней AAPS войдет в режим LGS (приостановка на низких ГК - см. [глоссарий](../Getting-Started/Glossary.md)), [цель 4](../Usage/Objectives.md).
 
-If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
+Если вы не обновитесь еще 30 дней (90 дней с новой даты выпуска) AAPS переключится в режим открытого цикла.
 
-Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
+Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
-## Version 2.3
+## Версия 2.3
 
-Release date: 25-04-2019
+Дата выпуска: 25-04-2019
 
-### Major new features
+### Новые возможности
 
 * Important safety fix for Insight (really important if you use Insight!)
 * Fix History-Browser
@@ -43,7 +43,7 @@ Release date: 07-04-2019
 
 Release date: 29-03-2019
 
-### Major new features
+### Новые возможности
 
 * [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
 * Wear Update
@@ -55,7 +55,7 @@ Release date: 29-03-2019
 
 Release date: 03-03-2019
 
-### Major new features
+### Новые возможности
 
 * Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 * Status lights on main screen (Nico Schmitz)
@@ -74,7 +74,7 @@ Release date: 03-03-2019
 
 Release date: 03-11-2018
 
-### Major new features
+### Новые возможности
 
 * oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
 * Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
