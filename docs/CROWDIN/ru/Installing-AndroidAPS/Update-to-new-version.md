@@ -82,12 +82,12 @@ Then click next.
 
 Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
-  * full (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
-  * pumpcontrol (i.e. remote control for pump, no looping)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+* 'Release' должен быть вашим выбором по умолчанию для "Build Type"(типа сборки), 'Debug' только для программистов.
+* Выберите тип сборки, который хотите создать. 
+  * полный (с автоматически принимаемыми рекомендациями в закрытом цикле)
+  * открытый цикл (рекомендации, адресованные пользователю, выполняются вручную)
+  * управление помпой (дистанционное управление помпой, без функционирования цикла)
+  * nsclient (например, отображаются данные другого пользователя, могут добавляться записи портала лечения/назначений)
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
@@ -99,7 +99,7 @@ Click the "locate" link in the event log.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
-## Transfer APK to smartphone
+## Перенос приложения на смартфон
 
 <!--- Text is maintained in page building-apk.md ---> A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
