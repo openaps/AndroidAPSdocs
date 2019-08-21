@@ -119,11 +119,11 @@ Android Studio начнет клонирование. Не нажимайте н
 
 ![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Теперь она завершена. Please click "Finish".
+Теперь она завершена. Нажмите "Готово".
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+Таак, следующая ошибка. Но Android Studio предлагает аналогичное решение. Нажмите "Установить инструменты сборки и синхронизировать проект", так как Android Studio нуждается в загрузке недостающих инструментов.
 
 ![Screenshot 22](../images/Installation_Screenshot_22.png)
 
@@ -131,11 +131,11 @@ Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Inst
 
 ![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Теперь она завершена. Please click "Finish".
+Теперь она завершена. Нажмите "Готово".
 
 ![Screenshot 24](../images/Installation_Screenshot_24.png)
 
-And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
+И еще одна ошибка, нуждающаяся в обработке так как Android Studio снова должна скачать отсутствующую платформу. Нажмите "Установить недостающую платформу(ы) и синхронизировать проект".
 
 ![Screenshot 25](../images/Installation_Screenshot_25.png)
 
@@ -143,11 +143,11 @@ And another error to handle as Android Studio needs to download again a missing 
 
 ![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Теперь она завершена. Please click "Finish".
+Теперь она завершена. Нажмите "Готово".
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
-Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+Нажмите "Установить инструменты сборки и синхронизировать проект", так как Android Studio нуждается в загрузке недостающих инструментов.
 
 ![Screenshot 28](../images/Installation_Screenshot_28.png)
 
@@ -155,31 +155,31 @@ Click "Install Build Tools and sync project" as Android Studio needs to download
 
 ![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Теперь она завершена. Please click "Finish".
+Теперь она завершена. Нажмите "Готово".
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
+Да, сообщения об ошибках пропали, и первая сборка gradle запущена. Настало время попить водички?
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
+Android Studio рекомендует обновить систему gradle. **Не обновляйте gradle!** Это может привести к трудностям!
 
-Please click "Don't remind me again for this project".
+Нажмите "Не напоминать снова для этого проекта".
 
 ![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
-The build is running again.
+Построение сборки возобновлено.
 
 ![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-Yeah, the first build is successful but we are not finished.
+Да, первая сборка завершена успешно, но мы еще не закончили.
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
-## Generate signed APK
+## Создание подписанного APK
 
-In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
+В меню выберите "Build"(выполнить сборку) и затем "Generate Signed Bundle / APK..."(создать подписанный пакет программ). (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
