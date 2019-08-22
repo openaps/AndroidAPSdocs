@@ -1,8 +1,8 @@
 # Цели
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+AndroidAPS ставит ряд Целей, которые необходимо выполнить, чтобы подготовиться к свойствам и параметрам настроек для безопасной работы алгоритма ИПЖ. Цели позволяют удостовериться, что все сконфигурировано правильно, что мы понимаем, что, как и почему делает система и что мы можем доверять ей.
 
-If you are **upgrading phones** then you can [export your settings](../Usage/Objectives#export-import-settings) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
+Если вы **обновляете телефон**, то можете [экспортировать настройки](../Usage/Objectives#export-import-settings) чтобы сохранить прогресс в продвижении к целям. Ваш прогресс будет сохранен не только в прохождении целей, но и в настройках безопасности, таких как максимальный болюс и т. д. Если настройки не переносить, то движение к целям придется начинать заново. На всякий случай следует время от времени сохранять свои настройки. Подробности см. ниже.  
 
 ### Objective 1: Setting up visualization and monitoring, analysing basals and ratios
 
