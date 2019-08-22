@@ -151,24 +151,24 @@ Yeah, you got it and can now start with configuring AndroidAPS for your use (CGM
 
 Если вы получите сообщение об ошибке, как это
 
-![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+![Неудачные изменения](../images/GIT_TerminalCheckOut0.PNG)
 
-### Option 1
+### Вариант 1
 
-* In Android Studio select VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
+* В Android Studio выберите VCS -> GIT -> Сбросить HEAD ![Сбросить HEAD](../images/GIT_TerminalCheckOut3.PNG)
 
-### Option 2
+### Вариант 2
 
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in Android Studio (lower left side of Android Studio window) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
+* Скопируйте «git checkout --» в буфер обмена (без кавычек)
+* Переключитесь на терминал в Android Studio (слева с нижней стороны окна Android Studio) ![Терминал Android Studio](../images/GIT_TerminalCheckOut1.PNG)
 
-* Paste copied text and press return ![GIT checkout success](../images/GIT_TerminalCheckOut2.jpg)
+* Вставьте скопированный текст и нажмите ввод ![Проверка GIT успешно завершена](../images/GIT_TerminalCheckOut2.jpg)
 
-## App not installed
+## Приложение не установлено
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![приложение не установлено](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
+* Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
 * If "App not installed" is displayed on your phone follow these steps: 
   1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
   2. Uninstall AAPS on your phone.
