@@ -1,220 +1,220 @@
-# OpenAPS features
+# Функции OpenAPS
 
-## Super Micro Bolus (SMB)
+## Супер микроболюс (SMB)
 
-SMB, the shortform of 'super micro bolus', is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super microboluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
+SMB, сокращение от 'супер микро болюс', является новой функцией OpenAPS (с 2018 года) в рамках алгоритма версии Oref1. В отличие от расширенного мастера болюса AMA, SMB не использует временные базалы для контроля уровнея ГК, вместо них применяются **микроболюсы**. Там, где алгоритм мастера болюса AMA добавит 1,0 ед. инсулина при помощью временной базальной скорости, SMB обеспечивает несколько супер микроболюсов маленькими шажками с **пятиминутным** интервалом, например 0,4 ; 0,3 ; 0,2 ; и 0,1 ед. В то же самое время (по соображениям безопасности) фактический базал устанавливается на 0 ед/ч на определенный период, чтобы предотвратить передозировку (т.н. **"нулевой базал"**). Это позволяет системе регулировать глюкозу крови быстрее, чем с временным повышением скорости базала в AMA.
 
-Thanks to SMB, it can basically be sufficient for low-carb meals to inform the system of the planned amount of carbohydrate and leave the rest to AAPS. However, this may lead to higher postprandial peaks because pre-bolusing isn’t possible. Or you give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let SMB fill up the rest.
+Благодаря SMB, при употреблении низкоуглеводных блюд, достаточно информировать систему о запланированном приеме какого-то количества углеводов и позволить AAPS позаботиться об остальном. Однако такие действия могут привести к более высоким послепрандиальным пикам, потому что преболюсы в таком варианте невозможны. Или если хотите сделать преболюс, **дайте болюс**, который **только частично** покрывает углеводы (например, 2/3 из оцениваемого количества) и позвольте SMB выполнить остальное.
 
-The SMB feature contains some safety mechanisms:
+Функция СМБ содержит некоторые механизмы безопасности:
 
-1. The largest single SMB dose can only be the smallest value off:
+1. Самой большой однократной дозой SMB может быть только наименьшее значение от:
     
-    * value corresponding to the current basal rate (as adjusted by autotune/autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
-    * half the amount of insulin currently required, or
-    * the remaining portion of your maxIOB value in the settings.
+    * значения, соответствующего текущей базальной скорости (с поправками autotune/autosens) на длительность, установленную в "Максимуме минут базала, которыми ограничивается SMB", например, количество базального инсулина за следующие 30 минут, или
+    * половина требуемого в данный момент количества инсулина, или
+    * оставшаяся часть maxIOB в настройках.
 
-2. Probably you will often notice low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps'). This is by design for security reasons and has no negative effects if the profile is set correctly. The IOB curve is more meaningful than the course of the temporary basal rates.
+2. Возможно, вы обратите внимание на частые низкие временные базалы (называемые "low temp") или временные базалы по 0 ед/ч (называемые "zero temp"). Это происходит по соображениям безопасности и не имеет отрицательных последствий, если профиль установлен правильно. Кривая активного инсулина более значима, чем линия временного базала.
 
-3. Additional calculations to predict the course of glucose, e.g. by UAM (un-announced meals). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
+3. Дополнительные расчеты для прогнозирования гликемии, (например, для непредвиденного приема прищи UAM). Даже без ручного ввода количества углеводов, UAM может автоматически определить значительное увеличение уровней ГК вследствие приема пищи, повышения адреналина или других факторов и попытаться компенсировать повышение при помощи SMB. Для безопасности, эта функция работает и в обратном направлении и может остановить подачу супер микроболюса при неожиданном понижении ГК. Поэтому функция UAM всегда должна быть активирована в алгоритме SMB.
 
-**You must have completed [objective 8](../Usage/Objectives.md) to use SMB.**
+**Для применения SMB необходимо завершить [цель 8](../Usage/Objectives.md).**
 
-See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+См. также: [документацию OpenAPS по SMB в oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) и [информацию Tim'а по SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
-### Max U/h a temp basal can be set to (OpenAPS “max-basal”)
+### Максимальное значение ед/ч, на которое можно установить временный базал ("max-basal" OpenAPS)
 
-This safety setting determines the maximum temporary basal rate the insulin pump may deliver. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.
+Эта настройка безопасности определяет максимальную скорость временного базала помпы. Значение должно быть одинаковым и в помпе и AAPS и должно быть не менее чем в 3 раза выше наивысшей базальной скорости.
 
-    Example: 
-    Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
-    
-
-But you cannot choose any value. AAPS limits the value as a 'hard limit' according to the patients age you have selected under settings. The lowest permitted value is for children and the highest for insulin-resistant adults.
-
-AndroidAPS limits the value as follows:
-
-* Child: 2
-* Teenage: 5
-* Adult: 10
-* Insulin-resistant adult: 12
-
-### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
-
-This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
-
-Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
-
-    maxIOB = average mealbolus + 3x max daily basal
+    Пример: 
+    Самый высокий базал вашего профиля в течение дня составляет 1.00 ед/ч. В этом случа рекомендуется установить максимум не менее 3 ед/ч.
     
 
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
+Но любую величину установить не получится. AAPS задает 'жесткий предел' значения в зависимости от возраста пациента, профиль которого выбран в настройках. Самое низкое значение для детей и самое высокое для инсулинорезистентных взрослых.
 
-* Child: 3
-* Teenage: 7
-* Adult: 12
-* Insulin resistant adult: 25
+AndroidAPS ограничивает эту величину следующим образом:
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+* Ребенок: 2
+* Подросток: 5
+* Взрослый: 10
+* Инсулинорезистентный взрослый: 12
 
-### Enable AMA Autosense
+### Максимальное общее количество активного инсулина IOB, которое не может превысить OpenAPS (OpenAPS "max-iob")
 
-Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
+Это значение определяет, какое максимальное количество активного инсулина maxIOB должно учитываться алгоритмом AAPS в закрытом циклическом режиме. Если текущий активный инсулин IOB (например, после болюса на еду) превышает определенную величину, то алгоритм останавливает подачу инсулина до тех пор, пока предел IOB не будет ниже заданного значения.
 
-### Enable SMB
+В алгоритме SMB OpenAPS, max-IOB рассчитывается иначе, чем в мастере болюса AMA. В алгоритме мастера болюса AMA maxIOB был всего лишь параметром безопасности активного базального инсулина IOB, а в SMB-режиме в него также входит активный болюсный инсулин. Рекомендуется для начала установить
 
-Here you can enable or completely disable SMB feature.
+    maxIOB = средний болюс на еду + троекратный макс. базал
+    
 
-### Enable SMB with COB
+Будьте осторожны и терпеливы и меняйте настройки шаг за шагом. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . "жесткий предел" для maxIOB выше, чем в алгоритме помощника болюса AMA.
 
-SMB is working when there is COB active.
+* Ребенок: 3
+* Подросток: 7
+* Взрослый: 12
+* Инсулинорезистентный взрослый: 25
 
-### Enable SMB with temp targets
+См. также [документацию OpenAPS по SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
-SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
+### Включить autosense AMA
 
-### Enable SMB with high temp targets
+Здесь можно выбрать, использовать [детектор чувствительности](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' или нет.
 
-SMB is working when there is a high temporary target active (activity, hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
+### Включить супер микро болюс SMB
 
-### Enable SMB always
+Здесь можно включить или полностью отключить функцию SMB.
 
-SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
+### Включить супер микро болюс при активных углеводах COB
 
-For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+SMB работает, когда присутствуют активные углеводы COB.
 
-### Enable SMB after carbs
+### Включить супер микро болюс SMB с временными целями
 
-SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
+SMB работает, когда есть низкая или высокая временная цель (скорый прием пищи, нагрузка, гипо, настраиваемая)
 
-For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+### Включить супер микро болюс SMB с высокими значениями временных целей
 
-### Max minutes of basal to limit SMB to
+SMB работает, когда есть высокая временная цель (скорый прием пищи, нагрузка, гипо). Эта опция может ограничить другие параметры SMB, например, если включен «SMB с временными целями», а «SMB с высокими временными целями» отключен, SMB работает с низкими а не с высокими временными целями. То же самое для включенного SMB с COB: если отключен 'SMB с высокой временной целью' то SMB с высокой временной целью неактивен даже при наличии активных углеводов COB.
 
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
+### Всегда включать супер микро болюс SMB
 
-This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
+SMB работает всегда (независимо от активных углеводов COB, временных целей или болюсов). По соображениям безопасности, эта опция возможна только для источников ГК с хорошей системой фильтрации зашумленых данных. Сейчас она работает только с Dexcom G5 и модифицированным приложением Dexcom (патч) или с «нативным режимом» в xDrip+. Если значение ГК имеет слишком большое отклонение, G5 не отправляет его и ожидает следующего значения через 5 минут.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to adjust a decreasing BG with 0 IE/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.
+Для других систем мониторинга, таких как Freestyle Libre, функция ‘всегда включать SMB’ будет оставаться неактивной пока в xDrip+ не появится более адекватное расширение для сглаживания данных. Подробнее [здесь](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-Default value: 30 min.
+### Активировать супер микро болюс SMB после углеводов
 
-### Enable UAM
+SMB работает в течение 6 часов после приема углеводов, даже если активные углеводы COB находятся на 0. По соображениям безопасности, эта опция возможна только для источников ГК с хорошей системой фильтрации зашумленых данных. Сейчас она работает только с Dexcom G5 и модифицированным приложением Dexcom (патч) или с «нативным режимом» в xDrip+. Если значение ГК имеет слишком большое отклонение, G5 не отправляет его и ожидает следующего значения через 5 минут.
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful, if you forget to tell AndroidAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
+Для других систем мониторинга, таких как Freestyle Libre, функция ‘всегда включать SMB’ (так в оригинале, очевидно должно быть "SMB после углеводов"- перев.) будет оставаться неактивной пока в xDrip+ не появится более адекватное расширение для сглаживания данных. Подробнее [здесь](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-**Therefore, UAM should always be activated when using SMB.**
+### Верхний лимит минут базала при SMB
 
-### High temp-target raises sensitivity
+Это важный элемент в настройках безопасности. Это значение на основе скорости базала определяет, сколько микроболюсов SMB может быть подано за то время, которое не покрыто активными углеводами COB.
 
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target over 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease.
+Алгоритм SMB в результате становится более агрессивным. Начать следует со значения по умолчанию в 30 минут. Получив определенный опыт, можно увеличивать значение с шагом 15 минут и следить за изменениями.
 
-### Low temp-target lowers sensitivity
+Рекомендуется не устанавливать это значение выше 90 минут, так как существует вероятность достижения точки, после которой алгоритм не сможет контролировать снижающуюся гликемию при базале 0 ед/ч ('zero-temp'). Следует также установить оповещения, особенно если еще отлажены настройки, предупреждающие о низкой ГК.
 
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
+Значение по умолчанию: 30 мин.
 
-### Advanced Settings
+### Включить непредвиденный прием пищи UAM
 
-**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+При включении этой опции алгоритм SMB может распознать непредвиденный прием пищи. Это полезно, если вы забыли сообщить алгоритму AndroidAPS о съеденных углеводах или неверно оценили их количество или съеденное богато жирами и белками и действует дольше чем ожидалось. Без ввода углеводов алгоритм UAM может распознать быстрое увеличение глюкозы, вызванное углеводами, адреналином и т. д., и пытается компенсировать его при помощи микроболюсов SMB. И наоборот: если гликемия падает быстро, то настройка поможет остановить SMB раньше времени.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Поэтому при использовании микроболюсов SMB всегда следует активировать непредвиденный прием пищи UAM.**
 
-Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+### Высокая врем. цель temptarget повышает чувствительность
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+Если эта опция включена, то чувствительность инсулина будет увеличена при временной цели более 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF возрастет, в то время как IC и базал уменьшатся.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+### Низкая временная цель temptarget снижает чувствительность
+
+Если эта опция включена, то параметр чувствительность инсулина будет снижен при временной цели ниже 100 мг/дл или 5.6 ммол/л. Это означает, что чувствительность к инсулину ISF снизится, в то время как IC и базал увеличатся.
+
+### Дополнительные настройки
+
+**Всегда использовать короткое среднее изменение (delta) вместо простых данных** Если включить эту функцию, AndroidAPS использует короткое среднее изменение ГК последних 15 минут, обычно среднее значение из последних трех. Это помогает AndroidAPS работать более стабильно с такими зашумленными источниками данных, как xDrip+ и Libre.
+
+**Максимальный ежедневный множитель безопасности** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 3. Это означает, что алгоритму AndroidAPS ни при каких условиях не будет разрешено устанавливать временный базал, который более чем в 3 раза выше самого высокого почасового базала, запрограммированного в помпе. Пример: если ваш самый высокий базал 1,0 ед/ч а максимальный ежедневный множитель безопасности 3, то AndroidAPS может установить максимальную временную скорость базового инсулина на 3,0 ед./ч. (= 3 x 1,0 ед./ч.).
+
+Значение по умолчанию: 3 (не следует изменять, если нет настоящей потребности и вам не известно, что вы делаете)
+
+**Текущий множитель безопасности базала** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 4. Это означает, что алгоритму AndroidAPS ни при каких условиях не будет разрешено устанавливать временный базал, который более чем в 4 раза выше самого высокого почасового базала, запрограммированного в помпе.
+
+Значение по умолчанию: 4 (не следует изменять, если нет настоящей потребности и вам не известно, что вы делаете)
 
 * * *
 
-## Advanced Meal Assist (AMA)
+## Расширенный мастер болюса (AMA)
 
-AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AMA, сокращение от "advanced meal assist" включено в функционал OpenAPS с 2017 года (oref0). Помощник болюса OpenAPS Advanced Meal Assist (AMA) позволяет системе быстрее установить высокое временное целевое значение после болюса на еду, ЕСЛИ вы правильно ввели углеводы.
 
-**You will need to have completed [objective 7](../Usage/Objectives.md) to use this feature**
+**Для применения расширенного мастера болюса AMA необходимо завершить [цель 7](../Usage/Objectives.md)**
 
-You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Подробнее в [Документации OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
+### Максимальное значение ед/ч, на которое можно установить временный базал ("max-basal" OpenAPS)
 
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. Рекомендуется установить это значение на разумный предел. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Эта настройка безопасности помогает AndroidAPS никогда не задавать опасно высокую базальную скорость и ограничивает временный базал до x ед./ч. Рекомендуется установить это значение на разумный предел. Хороший совет – умножить наивысшую скорость базала в вашем профиле на 4 или по меньшей мере на 3. Например, если максимальная скорость базала в вашем профиле установлена на 1 ед./ч, то, умножив ее на 4, вы получите значение 4 ед./ч. и зададите эту величину в качестве параметра безопасности.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Здесь нельзя просто задать любое значение: по причине безопасности есть "жесткий предел", который зависит от возраста пациента. "Жесткий предел" максимального активного инсулина maxIOB в алгоритме помощника болюса AMA ниже, чем в алгоритме SMB. Для детей эта величина самая низкая, а для инсулинарезистентных взрослых - самая большая.
 
-The hardcoded parameters in AndroidAPS are:
+Жесткие ограничители AndroidAPS:
 
-* Child: 2
-* Teenage: 5
-* Adult: 10
-* Insulin resistant adult: 12
+* Ребенок: 2
+* Подросток: 5
+* Взрослый: 10
+* Инсулинорезистентный взрослый: 12
 
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+### Максимальное общее количество активного инсулина IOB (ед.), которое не может превысить OpenAPS ("max-iob" в OpenAPS)
 
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Этот параметр ограничивает максимальную величину активного базального инсулина IOB, при которой работает алгоритм AndroidAPS. Если активный инсулин IOB выше, то алгоритм AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока базальный IOB не окажется в заданных пределах.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
+Значение по умолчанию 2, но можно постепенно поднять этот параметр, чтобы посмотреть, как он влияет на вас и какое значение лучше. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . "Жесткий предел" максимального активного инсулина maxIOB в алгоритме помощника болюса AMA ниже, чем в алгоритме SMB.
 
-* Child: 3
-* Teenage: 5
-* Adult: 7
-* Insulin resistant adult: 12
+* Ребенок: 3
+* Подросток: 5
+* Взрослый: 7
+* Инсулинорезистентный взрослый: 12
 
-### Enable AMA Autosense
+### Включить autosense AMA
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
+Здесь можно выбрать, использовать [детектор чувствительности](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' или нет.
 
-### Autosense adjust temp targets too
+### Autosense также подстраивает цели
 
-If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+Если эта опция включена, autosense может также настроить цели (наряду с базой, ISF и IC). Это позволяет AndroidAPS работать более или менее «агрессивно». При этом фактическая цель может быть достигнута быстрее.
 
-### Advanced Settings
+### Дополнительные настройки
 
-**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+**Всегда использовать короткое среднее изменение (delta) вместо простых данных** Если включить эту функцию, AndroidAPS использует короткое среднее изменение ГК последних 15 минут, обычно среднее значение из последних трех. Это помогает AndroidAPS работать более стабильно с такими зашумленными источниками данных, как xDrip+ и Libre.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Максимальный ежедневный множитель безопасности** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 3. Это означает, что алгоритму AndroidAPS ни при каких условиях не будет разрешено устанавливать временный базал, который более чем в 3 раза выше самого высокого почасового базала, запрограммированного в помпе или определенного автоподстройкой autotune (если она активирована). Пример: если ваш самый высокий базал 1,0 ед/ч а максимальный ежедневный множитель безопасности 3, то AndroidAPS может установить максимальную временную скорость базового инсулина на 3,0 ед./ч. (= 3 x 1,0 ед./ч.).
 
-Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+Значение по умолчанию: 3 (не следует изменять, если нет настоящей потребности и вам не известно, что вы делаете)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.
+**Текущий множитель безопасности базала** Это важный ограничитель безопасности. Настройка по умолчанию (которая вряд ли потребует корректировки) равна 4. Это означает, что алгоритму AndroidAPS ни при каких условиях не будет разрешено устанавливать временный базал, который более чем в 4 раза выше самого высокого почасового базала, запрограммированного в помпе или определенного автоподстройкой autotune (если она активирована).
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Значение по умолчанию: 4 (не следует изменять, если нет настоящей потребности и вам не известно, что вы делаете)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Приостановка болюса** Функция «приостановка болюса» работает после болюса на еду. ААPS не задает низкий временный базал после еды на время работы инсулина DIA, поделенное на «делитель приостановки болюса». Значение по умолчанию 2. Это означает, что при активности инсулина DIA 5 часов "приостановка болюса" продлится 5ч. : 2 = 2,5 часа.
 
-Default value: 2
+Значение по умолчанию: 2
 
 * * *
 
-## Meal Assist (MA)
+## Помощник болюса (МА)
 
-### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
+### Максимальное значение ед/ч, на которое можно установить временный базал ("max-basal" OpenAPS)
 
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. Рекомендуется установить это значение на разумный предел. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Эта настройка безопасности помогает AndroidAPS никогда не задавать опасно высокую базальную скорость и ограничивает временный базал до x ед./ч. Рекомендуется установить это значение на разумный предел. Хороший совет – умножить наивысшую скорость базала в вашем профиле на 4 или по меньшей мере на 3. Например, если максимальная скорость базала в вашем профиле установлена на 1 ед./ч, то, умножив ее на 4, вы получите значение 4 ед./ч. и зададите эту величину в качестве параметра безопасности.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in MA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Здесь нельзя просто задать любое значение: по причине безопасности есть "жесткий предел", который зависит от возраста пациента. "Жесткий предел" максимального активного инсулина maxIOB в алгоритме помощника болюса MA ниже, чем в алгоритме SMB. Для детей эта величина самая низкая, а для инсулинарезистентных взрослых - самая большая.
 
-The hardcoded parameters in AndroidAPS are:
+Жесткие ограничители AndroidAPS:
 
-* Child: 2
-* Teenage: 5
-* Adult: 10
-* Insulin resistant adult: 12
+* Ребенок: 2
+* Подросток: 5
+* Взрослый: 10
+* Инсулинорезистентный взрослый: 12
 
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+### Максимальное общее количество активного инсулина IOB (ед.), которое не может превысить OpenAPS ("max-iob" в OpenAPS)
 
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Этот параметр ограничивает максимальную величину активного базального инсулина IOB, при которой работает алгоритм AndroidAPS. Если активный инсулин IOB выше, то алгоритм AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока базальный IOB не окажется в заданных пределах.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in MA than in SMB.
+Значение по умолчанию 2, но можно постепенно поднять этот параметр, чтобы посмотреть, как он влияет на вас и какое значение лучше. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). По соображениям безопасности, существует предел, который зависит от возраста пациента . "Жесткий предел" максимального активного инсулина maxIOB в алгоритме помощника болюса MA ниже, чем в алгоритме SMB.
 
-* Child: 3
-* Teenage: 5
-* Adult: 7
-* Insulin resistant adult: 12
+* Ребенок: 3
+* Подросток: 5
+* Взрослый: 7
+* Инсулинорезистентный взрослый: 12
 
-### Advanced Settings
+### Дополнительные настройки
 
-**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+**Всегда использовать короткое среднее изменение (delta) вместо простых данных** Если включить эту функцию, AndroidAPS использует короткое среднее изменение ГК последних 15 минут, обычно среднее значение из последних трех. Это помогает AndroidAPS работать более стабильно с такими зашумленными источниками данных, как xDrip+ и Libre.
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Приостановка болюса** Функция «приостановка болюса» работает после болюса на еду. ААPS не задает низкий временный базал после еды на время работы инсулина DIA, поделенное на «делитель приостановки болюса». Значение по умолчанию 2. Это означает, что при активности инсулина DIA 5 часов "приостановка болюса" продлится 5ч. : 2 = 2,5 часа.
 
-Default value: 2
+Значение по умолчанию: 2

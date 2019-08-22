@@ -33,6 +33,7 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 * Als het nog niet ingesteld is, download dan [xdrip](https://github.com/NightscoutFoundation/xDrip) en volg de instructies voor nightscout ([G4 zonder 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 met 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * Selecteer xdrip in Configurator (instellingen in AndroidAPS).
 * Stel xDrip+ in zoals beschreven op de [xDrip+ instellingen pagina](../Configuration/xdrip.md)
+* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
 ### Dexcom G5 met xDrip+
 
@@ -41,9 +42,9 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 * In xdrip ga naar Instellingen > Interapp Settings > Accept Treatments selecteer OFF.
 * Als je AndroidAPS wilt gebruiken om te kalibreren ga dan in xdrip naar Instellingen > Interapp settings > Accept Calibrations en selecteer ON. Je kunt ook de opties aanpassen aan jouw behoefte in Instellingen > Minder vaak voorkomende instellingen > Advanced Calibration Settings.
 * Selecteer xdrip in Configurator (instellingen in AndroidAPS).
+* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### Dexcom G5 of G6 met de aangepaste Dexcom app  
-
+### Dexcom G5 of G6 met de aangepaste Dexcom app
 
 * Download de apk van <https://github.com/dexcomapp/dexcomapp>, en kies de versie die je nodig hebt (mg/dl of mmol/l versie, voor G5 of G6).
 * Stop sensor en verwijder de originele Dexcom app, als je dat nog niet gedaan had.
@@ -87,7 +88,7 @@ Om je Libre te gebruiken als een CGM die elke 5 minuten nieuwe BG waarden krijgt
 ## Eversense  
 
 
-De makkelijkste manier om de Eversense te gebruiken met AndroidAPS is om de aangepaste [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) te installeren (en de originele app eerst te verwijderen).
+The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) (and unistall the original one first).
 
 **Waarschuwing: door de oude app te verwijderen zullen jouw lokaal opgeslagen (glucose)gegevens ouder dan een week, ook worden verwijderd!**
 

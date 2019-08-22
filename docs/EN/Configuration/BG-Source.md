@@ -58,7 +58,7 @@ To learn more about the details and reasons for these recommendations read the [
 * Select xdrip in ConfigBuilder (setting in AndroidAPS).
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### If using G5 or G6 with patched Dexcom app<Br>
+### If using G5 or G6 with patched Dexcom app
 * Download the apk from [https://github.com/dexcomapp/dexcomapp](https://github.com/dexcomapp/dexcomapp), and choose the version that fits your needs (mg/dl or mmol/l version, G5 or G6).
 * Stop sensor and uninstall the original Dexcom app, if not already done.
 * Install downloaded apk
