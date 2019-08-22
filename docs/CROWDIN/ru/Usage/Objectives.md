@@ -4,10 +4,10 @@ AndroidAPS ставит ряд Целей, которые необходимо �
 
 Если вы **обновляете телефон**, то можете [экспортировать настройки](../Usage/Objectives#export-import-settings) чтобы сохранить прогресс в продвижении к целям. Ваш прогресс будет сохранен не только в прохождении целей, но и в настройках безопасности, таких как максимальный болюс и т. д. Если настройки не переносить, то движение к целям придется начинать заново. На всякий случай следует время от времени сохранять свои настройки. Подробности см. ниже.  
 
-### Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+### Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
 
-* Select the right blood glucose source for your setup. See [BG Source](../Configuration/BG-Source.md) for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
+* Выберите свой источник мониторинга ГК. См. [Источник ГК](../Configuration/BG-Source.md) для дополнительной информации.
+* Выбираем нужную помпу в Конфигураторе (если к помпе нет драйвера, можно пользоваться виртуальной помпой) чтобы пома могла вести коммуникацию с AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
 * Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
 
 *You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
