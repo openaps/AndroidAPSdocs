@@ -29,7 +29,7 @@ Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden, eine d
    
    ![xDrip+ Grundeinstellungen 3](../images/xDrip_Basic3.png)
 
-* Bei einigen Anwendern kam es zu Problemen im Flugmodus. AAPS empfing keine BZ-Werte con xdrip+. Gehe zu Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gebe `info.nighscout.androidaps` ein.
+* Bei einigen Anwendern kam es zu Problemen im Flugmodus. AAPS empfing keine BZ-Werte con xdrip+. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
    
    ![xDrip+ Basic Inter-App Einstellungen Identifiziere Empfänger](../images/xDrip_InterApp_NS.png)
 
