@@ -9,11 +9,11 @@
 * Любая версия git должна работать. Например <https://git-scm.com/download/win>
 * Убедитесь, что знаете путь установки. Он понадобится на следующем шаге.
   
-  ![Git installation path](../images/Update_GitPath.png)
+  ![Путь установки Git](../images/Update_GitPath.png)
 
 * Укажите Studio, где находится git.exe: Файл - Настройки
   
-  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+  ![Android Studio - открыть настройки](../images/Update_GitSettings1.png)
 
 * В следующем окне: Управление версиями - Git
 
@@ -21,7 +21,7 @@
 
 * Убедитесь, что выбран метод обновления "Объединение".
   
-  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+  ![Android Studio - путь GIT](../images/Update_GitSettings2a.png)
 
 ### Mac
 
@@ -34,7 +34,7 @@
 
 * Нажмите: VCS->Git->Fetch
   
-  ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
+  ![Android Studio - получение GIT](../images/Update_Fetch.png)
 
 ## Выберите ветку
 
@@ -62,15 +62,15 @@
   
 Подписание означает, что вы подписываете ваше сгенерированное приложение цифровой подписью. Это необходимо потому, что Android имеет правило, согласно которому принимается только подписанный код для запуска по соображениям безопасности. Для получения дополнительной информации по этой теме перейдите по ссылке [здесь](https://developer.android.com/studio/publish/app-signing.html#generate-key). Безопасность - это глубокая и сложная тема, нам она сейчас не нужна.
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Снимок экрана 39a](../images/Installation_Screenshot_39a.PNG)
 
 В следующем диалоговом окне выберите "APK" вместо "Android App Bundle" и нажмите кнопку "Далее".
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![Снимок экрана 39b](../images/Installation_Screenshot_39b.PNG)
 
 Выберите "app" (приложение) и нажмите "Next" (далее).
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Снимок экрана 40](../images/Installation_Screenshot_40.png)
 
 Введите путь к магазину ключей, введите пароль для магазина ключей, выберите имя ключа и введите пароль на ключ.
 
@@ -78,7 +78,7 @@
 
 Затем нажмите "Далее".
 
-![Key store path](../images/KeystorePathUpdate.PNG)
+![Путь к магазину ключей](../images/KeystorePathUpdate.PNG)
 
 Выберите "full" (полный) в качестве атрибута для сгенерированного приложения. Выберите V1 "Jar Signature" (V2 необязательно) и нажмите "Finish" (закончить). В дальнейшем может пригодиться следующая информация.
 
@@ -89,19 +89,19 @@
   * управление помпой (дистанционное управление помпой, без функционирования цикла)
   * nsclient (например, отображаются данные другого пользователя, могут добавляться записи портала лечения/назначений)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Снимок экрана 44](../images/Installation_Screenshot_44.png)
 
 В журнале событий вы увидите, что подписанное приложение (APK) было создано успешно.
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
+![Снимок экрана 45](../images/Installation_Screenshot_45.png)
 
 Нажмите на ссылку "Найти" в журнале событий.
 
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![Снимок экрана 46](../images/Installation_Screenshot_46.png)
 
 ## Перенос приложения на смартфон
 
-<!--- Text is maintained in page building-apk.md ---> A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+<!--- Text is maintained in page building-apk.md ---> Открывается окно файлового менеджера. Может выглядеть немного иначе в вашей системе, поскольку я использую Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
