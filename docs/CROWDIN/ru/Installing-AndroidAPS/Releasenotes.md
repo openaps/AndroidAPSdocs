@@ -70,22 +70,22 @@
 
 * Если вы задавали собственное значение `smbmaxminutes` нужно заново его настроить
 
-## Version 2.0
+## Версия 2.0
 
-Release date: 03-11-2018
+Дата выпуска: 03-11-2018
 
 ### Новые возможности
 
-* oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
-* Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
-* Setup wizard: guides you through the process of setting up AndroidAPS
+* Поддержка oref1/SMB ([документация oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)). Обязательно прочтите документацию, чтобы знать, чего ожидать от SMB, как он себя поведет, чего может достичь и как добиться его ровной работы.
+* Поддержка помпы Accu-check Combo ([инструкции по установке](../Configuration/Accu-Chek-Combo-Pump.md))
+* Мастер установки: направляет вас через процесс настройки AndroidAPS
 
-### Settings to adjust when switching from AMA to SMB
+### Настройки при переключении с AMA на SMB
 
-* Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
-* maxIOB now includes *all* IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
-* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
+* Для включения SMB необходимо начать выполнение цели 8 (вкладка SMB обычно показывает какие применяются ограничения)
+* maxIOB теперь включает *все* активные инсулины IOB, а не только добавленный basal. То есть, если дан болюс 8 ед. на еду a максимальный IOB ограничен 7 ед., то SMB не будет подан до тех пор, пока активный инсулин IOB не опустится ниже 7 ед.
+* при переходе с AMA на SMB минимальное действие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8. Если вы переходите с AMA на SMB, то вам нужно изменить его вручную
+* Обратите внимание при создании приложения AndroidAPS 2.0: Выборочная Конфигурация не поддерживается текущей версией плагина Android Gradle! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
   
   * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
   * In the left pane, click Build, Execution, Deployment > Compiler.
