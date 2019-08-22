@@ -94,28 +94,28 @@
 
 ### Overview tab
 
-* Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
-* Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
-* Colored prediction lines: 
-  * Orange: COB (colour is used generally to represent COB and carbs)
-  * Dark blue: IOB (colour is used generally to represent IOB and insulin)
-  * Light blue: zero-temp
-  * Dark yellow: UAM
-* Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
-* Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
+* Верхняя полоса дает доступ к приостановке/отключению цикла, просмотру/настройке профиля и запуску/остановке временных целей (TT). Временные цели TT используют настройки по умолчанию. Новая опция Гипо TT является высокой временной целью TT для предотвращения слишком агрессивной реакции на корректирующие углеводы.
+* Кнопки лечения: старая кнопка все еще доступна, но скрыта по умолчанию. Видимость кнопок теперь может быть сконфигурирована. Новая кнопка инсулина, новая кнопка углеводов (включая [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
+* Цветные линии прогноза: 
+  * Оранжевый: активные углеводы COB (цвет обычно используется для активных углеводов COB и углеводов)
+  * Темно-синий: активный инсулин IOB (цвет обычно используется для представления активного инсулина IOB и инсулина)
+  * Голубой: нулевой временный базал
+  * Темно-желтый: незапланированный прием пищи UAM
+* Опция отображения поля заметок об инсулине/углеводах/калькуляторе/первичном заполнении которые передаются в NS
+* Обновленное диалоговое окно «первичное/заполнение» позволяет заполнять инфузионный набор и вносить данные об изменении места установки и замене картриджа
 
-### Watch
+### Часы
 
-* Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
-* Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
-* confirmations and info dialogs now work on wear 2.0 as well
-* Added eCarbs menu entry
+* Отдельный вариант сборки изъят, теперь включен в регулярную полную сборку. Чтобы иметь управления болюсами с часов, включите этот параметр на телефоне
+* Мастер теперь запрашивает только углеводы (и процент, если он включен в настройках часов). То, какие параметры входят в расчет можно задать в настройках телефона
+* диалоги подтверждения и информирования теперь работают и на wear 2.0
+* Добавлена запись меню eCarbs
 
-### New plugins
+### Новые расширения
 
-* PocTech app as BG source
-* Dexcom patched app as BG source
-* oref1 sensitivity plugin
+* Приложение PocTech в качестве источника данных ГК
+* Измененное приложение Dexcom как источник ГК
+* плагин чувствительности oref1
 
 ### Остальное
 
