@@ -101,55 +101,55 @@
 
 ## Перенос приложения на смартфон
 
-<!--- Text is maintained in page building-apk.md ---> Открывается окно файлового менеджера. Может выглядеть немного иначе в вашей системе, поскольку я использую Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+<!--- Text is maintained in page building-apk.md ---> Открывается окно файлового менеджера. Может выглядеть немного иначе в вашей системе, поскольку я использую Linux. В Windows это будет File Explorer (проводник), а на Mac OS X Finder (поисковик). Там вы увидите каталог с созданным APK файлом. К сожалению, это неверное место, так как "wear-release.apk" не является подписанным приложением, которое мы ищем.
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+![Снимок экрана 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Перейдите к папке AndroidAPS/app/full/release, чтобы найти файл "app-full-release.apk". Перенесите этот файл на смартфон Android. Вы можете сделать это по-своему, напр. загрузкой в облако, переносом с компьютера по кабелю или используя электронную почту. В этом примере я использую Gmail, так как для меня такой перенос привычнее. Для установки на нашем смартфоне следует дать системе Android разрешение сделать установку из Gmail, которая обычно запрещена. Если переносите установщик другим способом, поступите соответственно.
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
+![Снимок экрана 48](../images/Installation_Screenshot_48.png)
 
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+В настройках смартфона есть область "установка неизвестных приложений" где я даю Gmail право устанавливать APK файлы, которые я получаю через Gmail.
 
 Выберите "Разрешить из этого источника". After the installation, you can disable it again.
 
-![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
+![Установка приложений из неизвестных источников](../images/Installation_Screenshot_49-50.png)
 
 The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
 
 Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
 
-## Check AAPS version on phone
+## Проверить версию AAPS на телефоне
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Вы можете проверить версию AAPS на вашем телефоне, нажав на меню трех точек сверху справа "о приложении".
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Версия AAPS установлена](../images/Update_VersionCheck.png)
 
-# Troubleshooting
+# Устранение неполадок
 
 ## Kotlin compiler warning
 
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
+Если сборка завершена успешно, но вы получаете предупреждения компилятора Kotlin, просто проигнорируйте эти предупреждения.
 
-App was build successfully and can be transferred to phone.
+Приложение успешно построено и может быть передано на телефон.
 
-![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
+![игнорировать предупреждение компилятора Kotline](../images/GIT_WarningIgnore.PNG)
 
-## Could not download… / Offline Work
+## Не удалось загрузить… / Работа оффлайн
 
-If you get a failure message like this
+Если вы получите сообщение об ошибке, как это
 
-![Warning could not download](../images/GIT_Offline1.jpg)
+![Не удалось загрузить предупреждение](../images/GIT_Offline1.jpg)
 
-make sure that ‘Offline work’ is disabled.
+убедитесь, что «Оффлайн работа» отключена.
 
-File -> Settings
+Файл -> параметры
 
-![Settings offline work](../images/GIT_Offline2.jpg)
+![Настройки автономной работы](../images/GIT_Offline2.jpg)
 
-## Uncommitted changes
+## Неодобренные изменения
 
-If you receive failure message like
+Если вы получите сообщение об ошибке, как это
 
 ![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
