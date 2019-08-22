@@ -72,15 +72,15 @@
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+Введите путь к магазину ключей, введите пароль для магазина ключей, выберите имя ключа и введите пароль на ключ.
 
-Select 'Remember passwords'.
+Выберите «Запомнить пароли».
 
-Then click next.
+Затем нажмите "Далее".
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
-Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+Выберите "full" (полный) в качестве атрибута для сгенерированного приложения. Выберите V1 "Jar Signature" (V2 необязательно) и нажмите "Finish" (закончить). В дальнейшем может пригодиться следующая информация.
 
 * 'Release' должен быть вашим выбором по умолчанию для "Build Type"(типа сборки), 'Debug' только для программистов.
 * Выберите тип сборки, который хотите создать. 
@@ -91,11 +91,11 @@ Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
-In the event log you see that the Signed APK was generated successfully.
+В журнале событий вы увидите, что подписанное приложение (APK) было создано успешно.
 
 ![Screenshot 45](../images/Installation_Screenshot_45.png)
 
-Click the "locate" link in the event log.
+Нажмите на ссылку "Найти" в журнале событий.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
