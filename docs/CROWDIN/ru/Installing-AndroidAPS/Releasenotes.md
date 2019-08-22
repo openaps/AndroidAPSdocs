@@ -45,30 +45,30 @@
 
 ### Новые возможности
 
-* [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
-* Wear Update
-* [SMS plugin](../Usage/SMS-Commands.md) update
-* Go back in objectives.
-* Stop loop if phone disk is full
+* [Исправление перехода на летнее время](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
+* Обновление Wear
+* [Обновление расширения SMS](../Usage/SMS-Commands.md)
+* Возможность возврата к предыдущим целям.
+* Остановка цикла, если память телефона заполнена
 
-## Version 2.1
+## Версия 2.1
 
-Release date: 03-03-2019
+Дата выпуска: 03-03-2019
 
 ### Новые возможности
 
-* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
-* Status lights on main screen (Nico Schmitz)
-* Daylight saving time helper (Roumen Georgiev)
-* Fix processing profile names comming from NS (Johannes Mockenhaupt)
-* Fix UI blocking (Johannes Mockenhaupt)
-* Support for updated G5 app (Tebbe Ubben and Milos Kozak)
-* G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
-* Fixed disabling SMB from preferences (Johannes Mockenhaupt)
+* Поддержка Аccu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) (от Tebbe Ubben и JamOrHam)
+* Индикаторы состояния на главном экране (Nico Schmitz)
+* Помощник перехода на летнее время (Румен Георгиев)
+* Исправлеие обработки имен профилей, поступивших от NS (Johannes Mockenhaupt)
+* Исправление блокировки интерфейса (Johannes Mockenhaupt)
+* Поддержка обновленного приложения G5 (Tebbe Ubben и Milos Kozak)
+* Поддержка G6, Poctech, Tomato, Eversense BG (Tebbe Ubben и Milos Kozak)
+* Исправлено отключение SMB в настройках (Johannes Mockenhaupt)
 
-### Misc
+### Остальное
 
-* If you are using non default `smbmaxminutes` value you have to setup this value again
+* Если вы задавали собственное значение `smbmaxminutes` нужно заново его настроить
 
 ## Version 2.0
 
@@ -117,7 +117,7 @@ Release date: 03-11-2018
 * Dexcom patched app as BG source
 * oref1 sensitivity plugin
 
-### Misc
+### Остальное
 
 * App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
 * Overhaul for config builder and objectives tabs, adding descriptions
