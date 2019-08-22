@@ -111,13 +111,13 @@
 
 В настройках смартфона есть область "установка неизвестных приложений" где я даю Gmail право устанавливать APK файлы, которые я получаю через Gmail.
 
-Выберите "Разрешить из этого источника". After the installation, you can disable it again.
+Выберите "Разрешить из этого источника". После установки вы можете отключить его снова.
 
 ![Установка приложений из неизвестных источников](../images/Installation_Screenshot_49-50.png)
 
-The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
+Последний шаг - нажать на файл APK, который я получил через Gmail и установить приложение. Если APK не установливается и у вас более старая версия AndroidAPS на телефоне, подписанная другим ключом, то нужно сначала удалить более старое приложение; при этом не забудьте экспортировать ваши настройки!
 
-Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+Да, все получилось, теперь можно начать настройку AndroidAPS (CGMS, помпа) и т. д.
 
 ## Проверить версию AAPS на телефоне
 
@@ -127,7 +127,7 @@ Yeah, you got it and can now start with configuring AndroidAPS for your use (CGM
 
 # Устранение неполадок
 
-## Kotlin compiler warning
+## Предупреждение компилятора Kotlin
 
 Если сборка завершена успешно, но вы получаете предупреждения компилятора Kotlin, просто проигнорируйте эти предупреждения.
 
@@ -169,37 +169,37 @@ Yeah, you got it and can now start with configuring AndroidAPS for your use (CGM
 ![приложение не установлено](../images/Update_AppNotInstalled.png)
 
 * Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
-* If "App not installed" is displayed on your phone follow these steps: 
-  1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-  2. Uninstall AAPS on your phone.
-  3. Enable airplane mode & turn off bluetooth.
-  4. Install new version (“app-full-release.apk”)
+* Если на вашем телефоне появилось сообщение "приложение не установлено", то выполните следующее: 
+  1. [Экспорт настроек](../Usage/Objectives#export-import-settings) (уже установленной на телефоне версии AAPS)
+  2. Удалите AAPS с телефона.
+  3. Включите режим самолета & выключить bluetooth.
+  4. Установите новую версию («app-full-release.apk»)
   5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
-  6. Turn bluetooth back on and disable airplane mode
+  6. Снова включите Bluetooth и отключите режим самолета
 
-## App installed but old version
+## Приложение установлено, но старая версия
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
+Если вы успешно построили приложение, передали его на ваш телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг слияния в [инструкции по обновлению](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
 
-## None of the above worked
+## Ничего из вышеперечисленного не сработало
 
-If non of the above tips helped you might consider building the app from scratch:
+Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
 
-1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
-3.     Note down the path to your key store
-      In Android Studio Build -> Generate Signed APK
-      ![Key store path](../images/KeystorePath.PNG)
+1. [Экспорт настроек](../Usage/Objectives#export-import-settings) (уже установленной на телефоне версии AAPS)
+2. Приготовьте пароль ключа и пароль для хранения ключа Если вы забыли пароли, вы можете найти их в файлах проекта, как описано [здесь](https://youtu.be/nS3wxnLgZOo).
+3.     Запомните путь к месту хранения ключа
+      в Android Studio Build -> Генерировать подписанный APK
+      ![Путь к месту хранения ключа](..../images/KeystorePath.PNG)
       
   
-  4. Build app from scratch as described [here](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Use existing key and key store.
-4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
+  4. Постройте приложение с нуля, как описано [здесь](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Используйте существующий ключ и место хранения ключей.
+4. Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
 
-## Worst case scenario
+## Сценарий худшего варианта
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
 
-Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Убедитесь, что удалены все файлы, связанные с Android Studio. Руководство можно найти в сети: <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+Установите Android Studio с нуля, как описано [здесь](/Installing-AndroidAPS/Building-APK#install-android-studio) и **не обновляйте gradle**.
