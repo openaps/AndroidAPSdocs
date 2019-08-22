@@ -1,23 +1,23 @@
 # Цели
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+AndroidAPS ставит ряд Целей, которые необходимо выполнить, чтобы подготовиться к свойствам и параметрам настроек для безопасной работы алгоритма ИПЖ. Цели позволяют удостовериться, что все сконфигурировано правильно, что мы понимаем, что, как и почему делает система и что мы можем доверять ей.
 
-If you are **upgrading phones** then you can [export your settings](../Usage/Objectives#export-import-settings) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
+Если вы **обновляете телефон**, то можете [экспортировать настройки](../Usage/Objectives#export-import-settings) чтобы сохранить прогресс в продвижении к целям. Ваш прогресс будет сохранен не только в прохождении целей, но и в настройках безопасности, таких как максимальный болюс и т. д. Если настройки не переносить, то движение к целям придется начинать заново. На всякий случай следует время от времени сохранять свои настройки. Подробности см. ниже.  
 
-### Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+### Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
 
-* Select the right blood glucose source for your setup. See [BG Source](../Configuration/BG-Source.md) for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
+* Выберите свой источник мониторинга ГК. См. [Источник ГК](../Configuration/BG-Source.md) для дополнительной информации.
+* Выбираем нужную помпу в Конфигураторе (если к помпе нет драйвера, можно пользоваться виртуальной помпой) чтобы пома могла вести коммуникацию с AndroidAPS. При работе с [помпой Dana R ](../Configuration/DanaR-Insulin-Pump.md) следуйте отдельным инструкциям по привязке помпы к AndroidAPS.
+* Следуйте инструкциям по настройке [Nightscout](../Installing-AndroidAPS/Nightscout.md) чтобы Nightscout мог получать и отображать данные ГК.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*Возможно, придется подождать следующего значения глюкозы крови, чтобы AndroidAPS принял его.*
 
-### Objective 2: Starting on an open loop
+### Цель 2: Начало на незамкнутом цикле
 
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them. Ensure this data shows in AndroidAPS and Nightscout.
-* Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
+* Выбрать незамкнутый цикл либо в настройках либо нажав кнопку незамкнутого цикла в левом верхнем углу главного экрана.
+* Задать все необходимые [Настройки](../Configuration/Preferences.md).
+* Вручную активировать по крайней мере 20 предложений временного базала за период в 7 дней, ввести их в помпу и подтвердить в AndroidAPS. Убедитесь, что эти данные представлены в AndroidAPS и Nightscout.
+* Включите [врем. цели](../Usage/temptarget.md) если необходимо. Используйте врем. цели для купирования гипогликемии чтобы предотвратить слишком сильные коррекции после гипо. 
 
 ### Objective 3: Understanding your open loop, including its temp basal recommendations
 
@@ -66,7 +66,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 
 * You must read the [SMB chapter in this wiki](../Usage/Open-APS-features#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to [rise maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 5](../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
+* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Если вы переходите с AMA на SMB, то вам нужно изменить его вручную
 
 ## Export & import settings
 

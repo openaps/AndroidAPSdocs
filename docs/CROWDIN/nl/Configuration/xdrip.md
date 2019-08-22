@@ -29,7 +29,7 @@ Voor G6 zenders die na herfst/eind 2018 zijn geproduceerd, zorg dat je een van d
    
    ![xDrip+ Basis Instellingen 3](../images/xDrip_Basic3.png)
 
-* Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nighscout.androidaps`.
+* Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
    
    ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 

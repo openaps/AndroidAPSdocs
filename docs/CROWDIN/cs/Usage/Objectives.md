@@ -44,9 +44,9 @@ Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/Ob
 
 * Zvyšte hodnotu 'Maximální celkový IOB, který OpenAPS nemůže překročit' (v OpenAPS se tento parametr označuje jako 'max-iob') nad 0 po dobu 1 dne. Výchozím doporučením je použít "průměrnou hodnotu bolusu k jídlu + 3× maximální denní bazální dávku" (pro algoritmus SMB) nebo "3× maximální denní bazální dávku" (pro starší algoritmus AMA). Tyto hodnoty byste však měli zvyšovat postupně, dokud neověříte, že jsou nastaveny správně (maximální denní bazální dávka = maximální bazální dávka za hodinu během dne).
   
-  This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
+  Toto doporučení by mělo být považováno za výchozí bod. Pokud ho nastavíte na 3x a uvidíte kroky, které vás rychle stahují dolů, pak snižte toto číslo. Pokud jste velmi rezistentní na inzulín, pomalu ho zvyšujte.
   
-  ![max daily basal](../images/MaxDailyBasal.png)
+  ![maximální denní bazální dávka](../images/MaxDailyBasal.png)
 
 * Až si budete jistí hodnotou IOB, která vyhovuje vašemu způsobu používání smyčky, pak snižte své cílové glykémie na požadovanou úroveň.
 
