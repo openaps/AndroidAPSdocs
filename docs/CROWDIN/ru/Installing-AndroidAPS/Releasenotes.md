@@ -4,7 +4,7 @@
 
 Начиная с версии 2.3 установлена новая процедура обновления. Как только будет доступно новое обновление вы получите следующую информацию:
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+![Информация об обновлении](../images/AAPS_LoopDisable90days.png)
 
 У вас есть 60 дней для обновления. Если вы не обновитесь в течение 60 дней AAPS войдет в режим LGS (приостановка на низких ГК - см. [глоссарий](../Getting-Started/Glossary.md)), [цель 4](../Usage/Objectives.md).
 
@@ -45,7 +45,7 @@
 
 ### Новые возможности
 
-* [Исправление перехода на летнее время](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
+* [Исправление перехода на летнее время](./Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
 * Обновление Wear
 * [Обновление расширения SMS](../Usage/SMS-Commands.md)
 * Возможность возврата к предыдущим целям.
@@ -119,11 +119,11 @@
 
 ### Остальное
 
-* App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
-* Overhaul for config builder and objectives tabs, adding descriptions
-* New app icon
-* Lots of improvements and bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
-* Option to keep screen on
-* Option to show notification as Android notification
-* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+* Приложение теперь использует меню для отображения расширений; плагины, выбранные как видимые в конфигураторе, показаны как вкладки сверху (избранное)
+* Переработан конфигуратор и вкладки целей, добавлены описания
+* Новый значок приложения
+* Много улучшений и исправлений
+* Независимые от Nightscout оповещения о недоступности помпы, (например, батарея помпы села) и пропущенных данных ГК (см. *Локальные оповещения* в настройках)
+* Возможность держать экран включенным
+* Опция отображения уведомлений как уведомление Android
+* Расширенная фильтрация (позволяющая всегда включать SMB и на 6час. после еды) поддерживаемая модифицированным приложением Dexcom или xDrip в нативном режиме G5 в качестве источника ГК.
