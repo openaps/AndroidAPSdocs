@@ -87,10 +87,10 @@
 * при переходе с AMA на SMB минимальное действие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8. Если вы переходите с AMA на SMB, то вам нужно изменить его вручную
 * Обратите внимание при создании приложения AndroidAPS 2.0: Выборочная Конфигурация не поддерживается текущей версией плагина Android Gradle! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
   
-  * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-  * In the left pane, click Build, Execution, Deployment > Compiler.
-  * Uncheck the Configure on demand checkbox.
-  * Click Apply or OK.
+  * Откройте окно настроек, нажав Файл > Настройки (на Mac, Android Studio > Настройки).
+  * В левой панели нажмите Сборка, Выполнение, Развертывание > Компилятор.
+  * Снимите флажок с ячейки "выборочная конфигурация".
+  * Нажмите Применить или OK.
 
 ### Overview tab
 
