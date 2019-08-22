@@ -1,59 +1,59 @@
-# Update to a new version or branch
+# Обновление до новой версии или ветки
 
-<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>
+<font color="#FF0000"><b>Важное замечание: Начиная с версии 2.3 следует использовать git для обновления. Обновление с zip-файла больше не работает.</font></b>
 
-## Install git (if you don't have it)
+## Установите git (если у вас его нет)
 
 ### Windows
 
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Make sure to note down the installation path. You will need it in the next step.
+* Любая версия git должна работать. Например <https://git-scm.com/download/win>
+* Убедитесь, что знаете путь установки. Он понадобится на следующем шаге.
   
   ![Git installation path](../images/Update_GitPath.png)
 
-* Let Studio know where is git.exe located: File - Settings
+* Укажите Studio, где находится git.exe: Файл - Настройки
   
   ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
-* In the next window: Version Control - Git
+* В следующем окне: Управление версиями - Git
 
-* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
+* Выберите правильный путь: .../Git<font color="#FF0000"><b>/bin</b></font>
 
-* Make sure update method "Merge" is selected.
+* Убедитесь, что выбран метод обновления "Объединение".
   
   ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* Любая версия git должна работать. Например <https://git-scm.com/download/mac>
+* Используйте homebrew для установки git: ```$ brew install git```.
+* Подробности об установке git см. в [официальной git документации](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Если вы устанавливаете git через homebrew, то нет необходимости изменять какие-либо настройки. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
 
-## Update your local copy
+## Обновите свою локальную копию
 
-* Click: VCS->Git->Fetch
+* Нажмите: VCS->Git->Fetch
   
   ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
 
-## Selecting branch
+## Выберите ветку
 
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+* Если вы хотите изменить ветку, выберите другую ветку из выпадающего меню: master (latest release) или другую версию (см. ниже)
   
   ![](../images/UpdateAAPS1.png)
 
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
+и затем выход (Вы можете использовать 'выход новой ветки', если 'выход' недоступен.)
 
      ![](../images/UpdateAAPS2.png)
     
 
-## Updating branch from Github
+## Обновление ветки из Github
 
-* Press Ctrl+T, select Merge method and press OK
+* Нажмите Ctrl+T, выберите способ слияния и нажмите OK
   
   ![](../images/merge.png)
 
-On the tray you'll see green message about updated project
+В трее вы увидите зеленое сообщение о обновленном проекте
 
 ## Создание подписанного APK
 
