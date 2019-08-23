@@ -1,6 +1,9 @@
 Component Overview 
 ==============================================
 AAPS is not just a (do it yourself) application, it is just one of serveral modules of your closed loop system. Before deciding for one, it would be a good idea to have a look at the hardware setup, too.
+   
+.. image:: ../images/modules.png
+  :alt: Compontents overview
 
 .. note:: 
    **IMPORTANT SAFETY NOTICE**
@@ -8,8 +11,6 @@ AAPS is not just a (do it yourself) application, it is just one of serveral modu
    The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
    Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
-
-Here should be a nice overview (image).
 
 Necessary Modules
 =====================
