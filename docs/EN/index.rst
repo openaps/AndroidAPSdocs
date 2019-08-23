@@ -1,13 +1,13 @@
 Welcome to the Android APS documentation
 ==============================================
 
-**What is closed loop system with AndroidAPS**
+**What is a closed loop system with AndroidAPS**
 
-AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. 
+AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone for people suffering from  insulin-dependent diabetes.
 
 **What is an artificial pancreas system** 
 
-It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically.
+It is a software algorithm that aims to do what a living pancreas does: keep blood sugar levels within healthy limits using automated insulin delivery (AID).
 
 For more details, please keep reading here: 
 
@@ -17,9 +17,9 @@ Getting started
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first.md>
-   What is a Closed Loop System <./Getting-Started/ClosedLoop.rst>
-   What is a closed Loop System with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Safety First <./Getting-Started/Safety-first.rst>
+   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
+   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
    
 What do I need 
@@ -168,5 +168,15 @@ How to help
    How to help <./Getting-Started/How-can-I-help.md>
    How to translate the app <./translations.md>
    How to edit the wiki <./make-a-PR>
-  
 
+
+.. note:: 
+	**Disclaimer And Warning**
+
+	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+
+	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+
+	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+
+	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_, `Accu-Chek, Medtronic <http://www.medtronic.com/>`_
