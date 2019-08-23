@@ -1,13 +1,13 @@
 Welcome to the Android APS documentation
 ==============================================
 
-**What is closed loop system with AndroidAPS**
+**What is a closed loop system with AndroidAPS**
 
-AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. 
+AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone for people suffering from  insulin-dependent diabetes.
 
 **What is an artificial pancreas system** 
 
-It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically.
+It is a software algorithm that aims to do what a living pancreas does: keep blood sugar levels within healthy limits using automated insulin delivery (AID).
 
 For more details, please keep reading here: 
 
@@ -18,8 +18,8 @@ Getting started
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
-   What is a Closed Loop System <./Getting-Started/ClosedLoop.rst>
-   What is a closed Loop System with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
+   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
    
 What do I need 
