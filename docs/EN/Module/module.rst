@@ -1,6 +1,6 @@
 Component Overview 
 ==============================================
-AAPS is not just a (self-built) application, the application is a just one of serveral modules. Before deciding for one, it would be a good idea to have a look at the Hardware Setup, too.
+AAPS is not just a (do it yourself) application, it is just one of serveral modules of your closed loop system. Before deciding for one, it would be a good idea to have a look at the hardware setup, too.
 
 .. note:: 
    **IMPORTANT SAFETY NOTICE**
