@@ -27,8 +27,8 @@ Getting started
    :glob:
    
    Safety First <./Getting-Started/Safety-first.md>
-   What is a closed loop system with AndroidAPS <./Getting-Started/ClosedLoop.rst>
-   What is AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a Closed Loop System <./Getting-Started/ClosedLoop.rst>
+   What is a closed Loop System with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
    
 What do I need 
