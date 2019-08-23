@@ -2,9 +2,11 @@ Welcome to the Android APS documentation
 ==============================================
 
 **What is closed loop system with AndroidAPS**
+
 AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. 
 
 **What is an artificial pancreas system** 
+
 It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically.
 
 For more details, please keep reading here: 
