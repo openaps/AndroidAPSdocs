@@ -17,7 +17,7 @@ Getting started
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first.md>
+   Safety First <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
