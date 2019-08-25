@@ -87,6 +87,7 @@ General Hints
    Crossing timezones with pumps <./Usage/Timezone-traveling.md>
    Accessing logfiles <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Export/Import Settings <./Usage/ExportImportSettings.rst>
    
 
 AndroidAPS for children
