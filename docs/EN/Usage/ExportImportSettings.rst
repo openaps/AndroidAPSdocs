@@ -8,7 +8,7 @@ Export & import settings
   * Export settings
   * File location will be shown
   
-  .. image:: images/AAPS_ExportSettings.png
+  .. image:: ../images/AAPS_ExportSettings.png
   :alt: AndroidAPS export settings
   
   
