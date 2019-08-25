@@ -1,12 +1,14 @@
-Welcome to the Android APS documentation
+Welcome to the AndroidAPS documentation
 ==============================================
+
+AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+
+Main components are:
 
 .. image:: images/modules-female.png
   :alt: Components
 
-AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone for people living with insulin-dependent diabetes. Artificial pancreas system is a software algorithm based on openAPS Oref1 that aims to do what a living pancreas does: keep blood sugar levels within healthy limits using automated insulin delivery (AID).
-
-For more details, please keep reading here: 
+For more details, please read on here.
 
 Getting started
 ----------------
@@ -14,7 +16,7 @@ Getting started
    :maxdepth: 1
    :glob:
    
-   Safety First <./Getting-Started/Safety-first.rst>
+   Safety first <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
@@ -59,7 +61,7 @@ Configuration
    :maxdepth: 1
    :glob:
    
-   Config Builder <./Configuration/Config-Builder.md>
+   Config builder <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.md>
    
    
@@ -72,10 +74,10 @@ AndroidAPS Usage
    AndroidAPS screens <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.md>
    OpenAPS features <./Usage/Open-APS-features.md>   
-   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   Sensitivity detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profile switch <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>   
-   Extended Carbs <./Usage/Extended-Carbs.md>    
+   Extended carbs <./Usage/Extended-Carbs.md>    
   
  
 General Hints 
