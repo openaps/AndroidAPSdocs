@@ -37,7 +37,7 @@ Any problems with the spreadsheet please email `hardware@androidaps.org <mailto:
 
 Insulin Pump
 ------------
-Please update this section for medtronic and insight pump and new release 2.4.
+Please update for Medtronic und Insight Pump (more comparison).
 
 AndroidAPS currently works with 
 
@@ -121,7 +121,7 @@ If you want to get a better impression, you might want to look at a sample setup
   
 What to do while waiting for modules
 ============================================
-It sometimes takes a while until all module are together. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and where approporiate adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factores (ISF), etc. And if already possible, open loop is a good way to test the system, you don't have to wait for it i.e. until you have a loopable pump. 
+It sometimes takes a while until all modules are together. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and where approporiate adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factores (ISF), etc. And if already possible, open loop is a good way to test the system, you don't have to wait for it i.e. until you have a loopable pump. 
 
 You can keep on reading through the docs here, get in touch with other loopers online or offline, read what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce.
 
