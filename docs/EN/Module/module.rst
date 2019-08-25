@@ -41,10 +41,11 @@ Please update this section for medtronic and insight pump and new release 2.4.
 
 AndroidAPS currently works with 
 
-- Accu-Chek Combo (additional needed: Ruffy, LineageOS or Android 8.1 on your phone)
-- Accu-Chek Insight
-- DanaR
-- DanaRS  
+- 'Accu-Chek Combo <../Configuration/DanaR-Insulin-Pump.html>`_ (additional needed: Ruffy, LineageOS or Android 8.1 on your phone)
+- 'Accu-Chek Insight <../Configuration/DanaRS-Insulin-Pump.html>`_ 
+- 'DanaR <../Configuration/Accu-Chek-Combo-Pump.html>`_ 
+- 'DanaRS  <../Configuration/Accu-Chek-Insight-Pump.html.html>`_  
+- 'some old Medtronic Pumps <../Configuration/MedtronicPump.html>`_ (additional needed: RileyLink/Gnarl, Android Phone with BLE)
 
 pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <Future-possible-Pump-Drivers.html>`_ page.
 
@@ -126,6 +127,6 @@ You can keep on reading through the docs here, get in touch with other loopers o
 
 **Done?**
 If you have your AAPS components all together (congrats!) or at least enough to start with an open loop, you should first read through the `Objectiv description <../Usage/Objectives.html>`_ (Overview Part 2) before each new Objectiv and setup up your `hardware <../index.html#component-setup>`_.
-.
+
 
 
