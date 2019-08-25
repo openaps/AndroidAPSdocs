@@ -18,11 +18,12 @@ Good Diabetes Settings
 ------------------
 Even though this is not something to create or buy, this is the "module" which is probably underestimated the most but very essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes.
 Even if your are still missing other modules, you can already verify and adapt your "profile". This profile includes
+
 * BR (Basal rates)
 * ISF (insulin sensitivity factor) in your blood glucose unit per one unit insulin
 * CR (carb ratio) in gramm carbohydrate per one unit insulin
 * DIA (Duration of Insulin Acting).
-Your ISF, CR and DIA should be circadian, which means differ at any time of the day.
+Your ISF, CR and DIA should be circadian, which it should be adapted during the day.
 If your CR is to i.e. to low (which means, that you actually need less insulin for your carbs or you need more carbs for the same amount of insulin), you will still have a low glucose, even with 0% temporary basal rate.  
 
 
@@ -112,9 +113,13 @@ If you want to get a better impression, you might want to look at a sample setup
    Sample Setup 1 <../Getting-Started/Sample-Setup.md>
  
   
+What to do while waiting for modules
+============================================
+It sometimes takes a while until all module are together. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and where approporiate adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factores (ISF), etc. And if already possible, open loop is a good way to test the system, you don't have to wait for it i.e. until you have a loopable pump. 
 
-It sometimes takes a while until all module are together. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and where approporiate adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factores (ISF), etc. And if already possible, open loop is a good way to test the system.
+You can keep on reading through the docs here, get in touch with other loopers online or offline, read what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce.
 
+**Done?**
 If you have your AAPS components all together (congrats!) or at least enough to start with an open loop, you should first read through the `Objectiv description <../Usage/Objectives.html>`_ (Overview Part 2) before each new Objectiv and setup up your `hardware <../index.html#component-setup>`_.
 .
 
