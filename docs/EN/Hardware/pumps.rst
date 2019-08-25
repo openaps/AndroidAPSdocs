@@ -1,4 +1,4 @@
-Pumpconfiguration
+Pump Configuration
 ***********************
 
 .. toctree::
