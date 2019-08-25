@@ -1,4 +1,4 @@
-# Phones
+# List of tested Phones
 
 Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
@@ -8,7 +8,7 @@ To record a phone or watch that isn't already listed in the spreadsheet then ple
 
 Any problems with the spreadsheet please email [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please email [donations@androidaps.org](mailto:hardware@androidaps.org).
 
-## Phone Background
+# Phone Background
 
 ![phone background](../images/bg_phone_thump.jpg) 
 </br>
