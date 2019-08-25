@@ -101,6 +101,9 @@ Smartwatch
 ---------------
 Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find `here <../Configuration/Watchfaces>`_.
 
+To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
+
+Any problems with the spreadsheet please email `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please email `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
   
 Sample Setup
 ============
