@@ -1,6 +1,6 @@
 Component Overview 
 ==============================================
-AAPS is not just a (self-build) application, it is just one of serveral modules of your closed loop system. Before deciding for one, it would be a good idea to have a look at the 'component setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, too.
+AndroidAPS is not just a (self-built) application, it is just one of serveral modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, too.
    
 .. image:: ../images/modules.png
   :alt: Compontents overview
@@ -14,17 +14,17 @@ AAPS is not just a (self-build) application, it is just one of serveral modules 
 
 Necessary Modules
 =====================
-Good Diabetes Settings
+Good individual dosage algorithm for your diabetes therapy
 ------------------
-Even though this is not something to create or buy, this is the "module" which is probably underestimated the most but very essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes.
-Even if your are still missing other modules, you can already verify and adapt your "profile". This profile includes
+Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings not to make severe mistakes.
+Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboratoin with your diabetes team. This profile includes
 
 * BR (Basal rates)
-* ISF (insulin sensitivity factor) in your blood glucose unit per one unit insulin
-* CR (carb ratio) in gramm carbohydrate per one unit insulin
-* DIA (Duration of Insulin Acting).
-Your ISF, CR and DIA should be circadian, which it should be adapted during the day.
-If your CR is to i.e. to low (which means, that you actually need less insulin for your carbs or you need more carbs for the same amount of insulin), you will still have a low glucose, even with 0% temporary basal rate.  
+* ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
+* CR (carb ratio) is gramms carbohydrate per one unit insulin
+* DIA (duration of insulin acting).
+
+   Some loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day. I.e., if your CR is too low (which means, that you actually need less insulin for your carbs or you need more carbs for the same amount of insulin), you will still have a low glucose, even with 0% temporary basal rate.  
 
 
 Phones
@@ -35,9 +35,9 @@ To record a phone or watch that isn't already listed in the spreadsheet then ple
 
 Any problems with the spreadsheet please email `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please email `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
-Insulin Pump
+Insulin pump
 ------------
-Please update for Medtronic und Insight Pump (more comparison).
+Please update for Medtronic and Insight Pump (more comparison).
 
 AndroidAPS currently works with 
 
@@ -45,9 +45,9 @@ AndroidAPS currently works with
 - 'Accu-Chek Insight <../Configuration/DanaRS-Insulin-Pump.html>`_ 
 - 'DanaR <../Configuration/Accu-Chek-Combo-Pump.html>`_ 
 - 'DanaRS  <../Configuration/Accu-Chek-Insight-Pump.html.html>`_  
-- 'some old Medtronic Pumps <../Configuration/MedtronicPump.html>`_ (additional needed: RileyLink/Gnarl, Android Phone with BLE)
+- from version 2.4 with 'some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ (additional needed: RileyLink/Gnarl, Android Phone with BLE)
 
-pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <Future-possible-Pump-Drivers.html>`_ page.
+Other pumps that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <Future-possible-Pump-Drivers.html>`_ page.
 
 If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in `this spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, please share the details of yours if not already listed.
 
