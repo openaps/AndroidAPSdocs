@@ -1,5 +1,6 @@
 # SMS Commands
 
+**Note**: SMS Commands is disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
 ## Safety First
 
 * AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
