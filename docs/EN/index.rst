@@ -165,7 +165,7 @@ How to help
    :glob:
 
    How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the app <./translations.md>
+   How to translate the app and documentation <./translations.md>
    How to edit the wiki <./make-a-PR>
 
 
