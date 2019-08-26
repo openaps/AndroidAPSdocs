@@ -2,16 +2,19 @@
 
 * * *
 
-***Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+**Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
 
-***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:*
+**Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
-     * * Otevřete okno Preferences klepnutím na File > Settings (v systému Mac, Android Studio > Preferences). *
-     * * V levém podokně klepněte na Build, Execution, Deployment > Compiler.*
-     * * Zrušte zaškrtnutí políčka Configure on demand.*
+Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
+
+     * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+     * In the left pane, click Build, Execution, Deployment > Compiler.
+     * Uncheck the Configure on demand checkbox.
+     * Click Apply or OK.
     
 
-## * *Klepněte na tlačítko použít nebo OK.*
+* * *
 
 ### Tento článek je rozdělený do dvou částí.
 
@@ -29,11 +32,11 @@ In general, the steps necessary to build the APK file:
 * Sestavete podepsané APK.
 * Doručte podepsané APK na váš telefon.
 
-## Průvodce krok za krokem
+## Step by step walkthrough
 
 Detailed description of the steps necessary to build the APK file.
 
-## Nainstalujte Android Studio
+## Install Android Studio
 
 * Instalujte git 
   * [Windows](https://gitforwindows.org/)
@@ -78,7 +81,7 @@ After the downloads are completed click the "Finish" button.
 
 * Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Možná je teď vhodná doba na krátkou přestávku?
 
-## Stáhněte si kód a další komponenty
+## Download code and additional components
 
 * Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte "Check out project from Version Control" s "Git" jako konkrétní verzí správce zdrojových kódů.
 
