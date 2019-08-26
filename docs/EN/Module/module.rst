@@ -17,15 +17,14 @@ Necessary Modules
 Good individual dosage algorithm for your diabetes therapy
 ------------------
 Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings not to make severe mistakes.
-Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboratoin with your diabetes team. This profile includes
+Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboratoin with your diabetes team. Some loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+
+The profile includes
 
 * BR (Basal rates)
 * ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
 * CR (carb ratio) is gramms carbohydrate per one unit insulin
 * DIA (duration of insulin acting).
-
-   Some loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day. I.e., if your CR is too low (which means, that you actually need less insulin for your carbs or you need more carbs for the same amount of insulin), you will still have a low glucose, even with 0% temporary basal rate.  
-
 
 Phones
 -------
@@ -33,19 +32,17 @@ Users are creating a `list of tested phones and watches <https://docs.google.com
 
 To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
-Any problems with the spreadsheet please email `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please email `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
-Insulin pump
-------------
-Please update for Medtronic and Insight Pump (more comparison).
+ upcomingInsulin pump
+--------
+AndroidAPSly currently works with 
 
-AndroidAPS currently works with 
-
-- 'Accu-Chek Combo <../Configuration/DanaR-Insulin-Pump.html>`_ (additional needed: Ruffy, LineageOS or Android 8.1 on your phone)
-- 'Accu-Chek Insight <../Configuration/DanaRS-Insulin-Pump.html>`_ 
-- 'DanaR <../Configuration/Accu-Chek-Combo-Pump.html>`_ 
-- 'DanaRS  <../Configuration/Accu-Chek-Insight-Pump.html.html>`_  
-- from version 2.4 with 'some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ (additional needed: RileyLink/Gnarl, Android Phone with BLE)
+- `Accu-Chek Combo <../Configuration/DanaR-Insulin-Pump.html>`_ (additional needed: Ruffy, LineageOS or Android 8.1 on your phone)
+- `Accu-Chek Insight <../Configuration/DanaRS-Insulin-Pump.html>`_ 
+- `DanaR <../Configuration/Accu-Chek-Combo-Pump.html>`_ 
+- `DanaRS  <../Configuration/Accu-Chek-Insight-Pump.html.html>`_  
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (additionally needed: RileyLink/Gnarl, Android Phone with BLE)
 
 Other pumps that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <Future-possible-Pump-Drivers.html>`_ page.
 
