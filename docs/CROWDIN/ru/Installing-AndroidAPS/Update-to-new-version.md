@@ -1,6 +1,8 @@
 # Обновление до новой версии или ветки
 
-<font color="#FF0000"><b>Важное замечание: Начиная с версии 2.3 следует использовать git для обновления. Обновление с zip-файла больше не работает.</font></b>
+<font color="#FF0000"><b>Важное замечание: Начиная с версии 2.3 следует использовать git для обновления. Updating via zip file does not work anymore.</font></b>.
+
+***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
 
 ## Установите git (если у вас его нет)
 
@@ -42,7 +44,7 @@
   
   ![](../images/UpdateAAPS1.png)
 
-и затем выход (Вы можете использовать 'выход новой ветки', если 'выход' недоступен.)
+and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
      ![](../images/UpdateAAPS2.png)
     
@@ -53,7 +55,7 @@
   
   ![](../images/merge.png)
 
-В трее вы увидите зеленое сообщение о обновленном проекте
+On the tray you'll see green message about updated project
 
 ## Создание подписанного APK
 
@@ -72,13 +74,13 @@
 
 ![Снимок экрана 40](../images/Installation_Screenshot_40.png)
 
-Введите путь к магазину ключей, введите пароль для магазина ключей, выберите имя ключа и введите пароль на ключ.
+Enter your key store path, enter key store password, select key alias and enter key password.
 
-Выберите «Запомнить пароли».
+Select 'Remember passwords'.
 
-Затем нажмите "Далее".
+Then click next.
 
-![Путь к магазину ключей](../images/KeystorePathUpdate.PNG)
+![Key store path](../images/KeystorePathUpdate.PNG)
 
 Выберите "full" (полный) в качестве атрибута для сгенерированного приложения. Выберите V1 "Jar Signature" (V2 необязательно) и нажмите "Finish" (закончить). В дальнейшем может пригодиться следующая информация.
 
@@ -121,37 +123,37 @@
 
 ## Проверить версию AAPS на телефоне
 
-Вы можете проверить версию AAPS на вашем телефоне, нажав на меню трех точек сверху справа "о приложении".
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![Версия AAPS установлена](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 # Устранение неполадок
 
 ## Предупреждение компилятора Kotlin
 
-Если сборка завершена успешно, но вы получаете предупреждения компилятора Kotlin, просто проигнорируйте эти предупреждения.
+If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
 
-Приложение успешно построено и может быть передано на телефон.
+App was build successfully and can be transferred to phone.
 
-![игнорировать предупреждение компилятора Kotline](../images/GIT_WarningIgnore.PNG)
+![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
 
 ## Не удалось загрузить… / Работа оффлайн
 
-Если вы получите сообщение об ошибке, как это
+If you get a failure message like this
 
-![Не удалось загрузить предупреждение](../images/GIT_Offline1.jpg)
+![Warning could not download](../images/GIT_Offline1.jpg)
 
-убедитесь, что «Оффлайн работа» отключена.
+make sure that ‘Offline work’ is disabled.
 
-Файл -> параметры
+File -> Settings
 
-![Настройки автономной работы](../images/GIT_Offline2.jpg)
+![Settings offline work](../images/GIT_Offline2.jpg)
 
 ## Неодобренные изменения
 
-Если вы получите сообщение об ошибке, как это
+If you receive failure message like
 
-![Неудачные изменения](../images/GIT_TerminalCheckOut0.PNG)
+![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Вариант 1
 
@@ -166,7 +168,7 @@
 
 ## Приложение не установлено
 
-![приложение не установлено](../images/Update_AppNotInstalled.png)
+![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
 * Если на вашем телефоне появилось сообщение "приложение не установлено", то выполните следующее: 
@@ -179,11 +181,11 @@
 
 ## Приложение установлено, но старая версия
 
-Если вы успешно построили приложение, передали его на ваш телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг слияния в [инструкции по обновлению](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
 
 ## Ничего из вышеперечисленного не сработало
 
-Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
+If non of the above tips helped you might consider building the app from scratch:
 
 1. [Экспорт настроек](../Usage/Objectives#export-import-settings) (уже установленной на телефоне версии AAPS)
 2. Приготовьте пароль ключа и пароль для хранения ключа Если вы забыли пароли, вы можете найти их в файлах проекта, как описано [здесь](https://youtu.be/nS3wxnLgZOo).
@@ -198,8 +200,8 @@
 
 ## Сценарий худшего варианта
 
-Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-Убедитесь, что удалены все файлы, связанные с Android Studio. Руководство можно найти в сети: <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Установите Android Studio с нуля, как описано [здесь](/Installing-AndroidAPS/Building-APK#install-android-studio) и **не обновляйте gradle**.
+Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
