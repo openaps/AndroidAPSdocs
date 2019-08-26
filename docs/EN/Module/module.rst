@@ -84,10 +84,7 @@ Additional information on how to configure Nightscout for use with AndroidAPS ca
 
 AAPS-.apk file
 ---------------
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../../Installing-AndroidAPS/Building-APK.html>`_. 
-   
-   `this> documentation <
- 
+The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../../Installing-AndroidAPS/Building-APK.html>`_.  
 
 Optional Modules
 ==================
