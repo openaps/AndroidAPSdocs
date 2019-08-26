@@ -2,6 +2,8 @@
 
 * * *
 
+***Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+
 ***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
 
      * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
@@ -46,33 +48,33 @@ Select "Do not import settings" as you have not used it before.
 
 Click "Next".
 
-![Captura de ecrã 2](../images/Installation_Screenshot_02.png)
+![Screenshot 2](../images/Installation_Screenshot_02.png)
 
 Select "Standard" installation and click "Next".
 
-![Captura de ecrã 3](../images/Installation_Screenshot_03.png)
+![Screenshot 3](../images/Installation_Screenshot_03.png)
 
 Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
-![Captura de ecrã 4](../images/Installation_Screenshot_04.png)
+![Screenshot 4](../images/Installation_Screenshot_04.png)
 
 Click "Next" on the "Verify Settings" dialog.
 
-![Captura de ecrã 5](../images/Installation_Screenshot_05.png)
+![Screenshot 5](../images/Installation_Screenshot_05.png)
 
 The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
 
-![Captura de ecrã 6](../images/Installation_Screenshot_06.png)
+![Screenshot 6](../images/Installation_Screenshot_06.png)
 
 Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
 
-![Captura de ecrã 7](../images/Installation_Screenshot_07.png)
+![Screenshot 7](../images/Installation_Screenshot_07.png)
 
-![Captura de ecrã 8](../images/Installation_Screenshot_08.png)
+![Screenshot 8](../images/Installation_Screenshot_08.png)
 
 After the downloads are completed click the "Finish" button.
 
-![Captura de ecrã 9](../images/Installation_Screenshot_09.png)
+![Screenshot 9](../images/Installation_Screenshot_09.png)
 
 * Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
@@ -80,7 +82,7 @@ After the downloads are completed click the "Finish" button.
 
 * Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
-![Captura de ecrã 10](../images/Installation_Screenshot_10.png)
+![Screenshot 10](../images/Installation_Screenshot_10.png)
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
