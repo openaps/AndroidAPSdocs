@@ -1,6 +1,8 @@
 # Bijwerken naar een nieuwe versie
 
-<font color="#FF0000"><b>Belangrijk: Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.</font></b>
+<font color="#FF0000"><b>Belangrijk: Vanaf versie 2.3 moet je git gebruiken om te updaten. Updating via zip file does not work anymore.</font></b>.
+
+***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
 
 ## Installeer Git (als je dat nog niet hebt)
 
@@ -42,7 +44,7 @@
   
   ![](../images/UpdateAAPS1.png)
 
-Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' of 'Checkout As...' gebruiken als je hier geen 'Checkout' kunt kiezen).
+and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
      ![](../images/UpdateAAPS2.png)
     
@@ -53,7 +55,7 @@ Kies vervolgens 'Checkout' (je kunt 'Checkout as New Branch' of 'Checkout As...'
   
   ![](../images/merge.png)
 
-Onderin beeld zie je een bericht verschijnen over 'updated project' (bijgewerkt projekt) of 'all files are up-to-date' (alle bestanden zijn bijgewerkt).
+On the tray you'll see green message about updated project
 
 ## Bouwen van de ondertekende APK
 
@@ -72,13 +74,13 @@ Selecteer "App" en klik op "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Vul de locatie in waar jouw key store bestand (digitale handtekening) te vinden is, en het wachtwoord van jouw key store. Vul ook jouw key alias (naam van jouw 'handtekening') en het bijbehorende wachtwoord in.
+Enter your key store path, enter key store password, select key alias and enter key password.
 
-Selecteer 'Wachtwoorden onthouden'.
+Select 'Remember passwords'.
 
-Klik daarna op "Next" (Volgende).
+Then click next.
 
-![Key store bestandslocatie](../images/KeystorePathUpdate.PNG)
+![Key store path](../images/KeystorePathUpdate.PNG)
 
 Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
 
@@ -121,37 +123,37 @@ Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met 
 
 ## Controleer AAPS versie op telefoon
 
-Je kunt nakijken welke AAPS-versie er op jouw telefoon staat door op de drie stipjes in de rechterbovenhoek van het Overzicht scherm te tikken, en te kiezen voor 'Over'.
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![AAPS versie geïnstalleerd](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 # Problemen oplossen
 
 ## Kotlin compiler warning
 
-Als je de app succesvol hebt gebouwd, maar je krijgt een Kotlin compiler waarschuwing dan kun je deze negeren.
+If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
 
-Je kunt verdergaan met het overzetten van de app (*.apk bestand) naar je telefoon.
+App was build successfully and can be transferred to phone.
 
-![negeer Kotlin compiler waarschuwing](../images/GIT_WarningIgnore.PNG)
+![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
 
 ## Could not download… / Offline Work
 
-Als je een foutmelding krijgt over 'Kon niet downloaden/offline werken' zoals dit
+If you get a failure message like this
 
-![Waarschuwing kon niet worden gedownload](../images/GIT_Offline1.jpg)
+![Warning could not download](../images/GIT_Offline1.jpg)
 
-zorg ervoor dat “Offline work” uitgeschakeld is.
+make sure that ‘Offline work’ is disabled.
 
-File -> Settings (Bestand -> Instellingen)
+File -> Settings
 
-![Instellingen offline werk](../images/GIT_Offline2.jpg)
+![Settings offline work](../images/GIT_Offline2.jpg)
 
 ## Uncommitted changes
 
-Als je een foutmelding ontvangt over 'Uncommitted changes' (Niet-opgenomen veranderingen) zoals
+If you receive failure message like
 
-![Niet-opgenomen wijzigingen foutmelding](../images/GIT_TerminalCheckOut0.PNG)
+![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Optie 1
 
@@ -166,7 +168,7 @@ Als je een foutmelding ontvangt over 'Uncommitted changes' (Niet-opgenomen veran
 
 ## App niet geïnstalleerd
 
-![telefoonapp niet geïnstalleerd](../images/Update_AppNotInstalled.png)
+![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Controleer of je inderdaad het bestand "app-full-release.apk" naar jouw telefoon hebt overgebracht.
 * Als "App niet geïnstalleerd" wordt weergegeven op jouw telefoon volg dan deze stappen: 
@@ -179,11 +181,11 @@ Als je een foutmelding ontvangt over 'Uncommitted changes' (Niet-opgenomen veran
 
 ## App geïnstalleerd maar oude versie
 
-Wanneer je de app succesvol hebt gebouwd, hem naar jouw telefoon hebt overgebracht en geïnstalleerd, maar het versienummer blijft hetzelfde, dan heb je waarschijnlijk de 'Merge' stap gemist in de handleiding voor het [bijwerken van de app](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
 
 ## Geen van de bovengenoemde
 
-Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
+If non of the above tips helped you might consider building the app from scratch:
 
 1. Ga naar de huidige AndroidAPS app op jouw telefoon en [Exporteer instellingen](../Usage/Objectives#export-import-settings)
 2. Zorg dat je het eerder door jouzelf gemaakte key bestandje en wachtwoord bij de hand hebt. Mocht je de wachtwoorden vergeten zijn, kunt je proberen deze te vinden in de 'project files' zoals [hier](https://youtu.be/nS3wxnLgZOo) beschreven.
@@ -198,8 +200,8 @@ Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helema
 
 ## In het ergste geval
 
-In het geval dat zelfs het bouwen van de app vanaf nul niet jouw probleem oplost, zou je kunnen proberen om Android Studio volledig te verwijderen. Sommige gebruikers hebben gemeld dat dit hun probleem heeft opgelost.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-Zorg ervoor dat alle bestanden die gekoppeld zijn aan Android Studio worden verwijderd. Handleidingen kun je online vinden, bijvoorbeeld [https://stackoverflow.com/questions/39953495/hoe-to-volledig-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
+Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Installeer Android Studio vanaf nul zoals [hier](/Installing-AndroidAPS/Building-APK#install-android-studio) beschreven en **update gradle NIET**.
+Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
