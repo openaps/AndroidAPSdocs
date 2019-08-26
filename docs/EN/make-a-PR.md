@@ -26,7 +26,7 @@ Or you can click on the "Edit in Github" link in the upper right corner, and the
 ![RTD io](./images/PR2.png)
 3.  one or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved.  Make your edits to the file.
 ![Edit branch](./images/PR3.png)
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements.
+4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the both. 
 ![preview mode](./images/PR5.png)
 5. When you have finished your edits, scroll to the bottom of the page.  In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the __reason__ for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
 ![commit comments](./images/PR4.png)
@@ -44,15 +44,15 @@ PS, your fork and branch will still be sitting on your own personal GitHub accou
 If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages as well.
 
 In files with **.md** ending:
-   * `[text](../Usage/Test.md)` will set an internal hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
+   *  `[text](../Usage/Test.md)` will set an internal hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
    * `[text](/Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
 
 To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
 * `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
 
 In files with **.rst** ending:
-   * `Text <../Usage/Test.md>` will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-   * `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+   * `` `Text <../Usage/Test.hmtl>`_``  will set a hyperlink one directory down from where you are and then into the subdirectory /Usage. Ending of the target file must be .html. Except you are in a toctree. Then you have to write it like this:  `Text <../Usage/Test.md>` with .md or .rst (not .html).
+   * `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
 
 ### Advanced tips for adding multiple images to documentation
 
