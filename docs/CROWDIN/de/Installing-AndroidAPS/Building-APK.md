@@ -2,7 +2,9 @@
 
 * * *
 
-***Bitte beachte** beim Erstellen einer AndroidAPS 2.0 apk: **Configuration on demand** wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:*
+***Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+
+***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:*
 
      *  *Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Präferenzen) klickst.*
     *  *Im linken Fensterbereich, klicke auf Build, Execution, Deployment > Compiler.*
@@ -18,7 +20,7 @@
 
 ## Übersicht
 
-Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
+In general, the steps necessary to build the APK file:
 
 * Git installieren
 * Installiere und konfiguriere Android Studio.
@@ -29,7 +31,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 ## Schritt für Schritt Anleitung
 
-Detaillierte Beschreibung der notwendigen Schritte.
+Detailed description of the steps necessary to build the APK file.
 
 ## Android Studio installieren
 
@@ -40,37 +42,37 @@ Detaillierte Beschreibung der notwendigen Schritte.
 * Installiere [Android Studio](https://developer.android.com/studio/install.html).
 * Konfiguriere Android Studio gleich beim ersten Öffnen des Programms.
 
-Wähle “Do not import settings”, da bisher keine Einstellungen vorgenommen wurden.
+Select "Do not import settings" as you have not used it before.
 
 ![Screenshot 1](../images/Installation_Screenshot_01.png)
 
-Klicke auf “Next”.
+Click "Next".
 
 ![Screenshot 2](../images/Installation_Screenshot_02.png)
 
-Wähle “Standard” Installation und klicke auf “Next”.
+Select "Standard" installation and click "Next".
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Wähle das Design für die Benutzeroberfläche, das Dir am besten gefällt. (In diesem Handbuch verwenden wir "Intellij".) Klicke danach auf “Next”. Das ist nur das Farbschema. Du kannst auswählen, was Du möchtest (z.B. "Darcula" für den dunklen Modus). Diese Auswahl hat keinen Einfluss auf die Erstellung der APK.
+Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
-Klicke auf “Next” in dem Fenster “Verify Settings”.
+Click "Next" on the "Verify Settings" dialog.
 
 ![Screenshot 5](../images/Installation_Screenshot_05.png)
 
-Der Android Emulator (um ein Smartphone auf Deinem PC oder Mac zu simulieren) wird zum Bau der APK nicht benutzt. Du kannst auf ‘Finish’ klicken, um die Installation zu beenden und die vorgeschlagene Dokumentation bei Bedarf später lesen.
+The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
-Android Studio lädt viele benötigte Software-Komponenten herunter. Du kannst auf ‘Show Details’ klicken um zu sehen was passiert, aber das ist nicht relevant für den weiteren Verlauf.
+Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
 
 ![Screenshot 7](../images/Installation_Screenshot_07.png)
 
 ![Screenshot 8](../images/Installation_Screenshot_08.png)
 
-Wenn der Download beendet ist, klicke auf “Finish”.
+After the downloads are completed click the "Finish" button.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
@@ -84,96 +86,96 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Gib die URL der Hauptseite des AndroidAPS Repositorys (“https://github.com/MilosKozak/AndroidAPS”) an und klicke auf “Clone”.
+Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio fängt an das Projekt zu ”clonen” (kopieren). Klicke nicht auf “Background”, es geht schnell und macht es derzeit nur komplizierter.
+Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
 ![Screenshot 14](../images/Installation_Screenshot_14.png)
 
-Beende “checkout from version control”, indem du auf “Yes” klickst und das Projekt öffnest.
+Finish the checkout from version control with opening the project by clicking "Yes".
 
 ![Screenshot 15](../images/Installation_Screenshot_15.png)
 
-Nutze den Standard “default gradle wrapper” und klicke auf “OK”.
+Use the standard "default gradle wrapper" and click "OK".
 
 ![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-Lies und schließe den “Tip of the Day” von Android Studio, indem du auf “close” klickst.
+Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Perfekt, du hast jetzt deine eigene Kopie des Quellcodes erstellt und kannst mit dem Kompilieren beginnen.
 * Als nächstes erwartet uns die erste Fehlermeldung. Glücklicherweise schlägt Android Studio gleich die Lösung vor.
 
-Klicke auf “Install missing platform(s) and sync project”, da Android Studios noch einige Komponenten installieren muss.
+Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
 ![Screenshot 18](../images/Installation_Screenshot_18.png)
 
-Akzeptiere die Lizenzvereinbarung, indem du auf “Accept” und “Next” klickst.
+Accept the license agreement by selecting "Accept" and clicking "Next".
 
 ![Screenshot 19](../images/Installation_Screenshot_19.png)
 
-Wie beschrieben, einfach warten, bis die Installation abgeschlossen ist.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Ist diese abgeschlossen, dann klicke wieder auf “Finish”. 
+Now it's finished. Please click "Finish".
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-Und dann wird wohl wieder der nächste Fehler auf dich zukommen... Aber auch hier schlägt Android Studio einen ähnlichen Lösungsweg vor. Klicke auf “Install Build Tools and sync project” um die fehlenden “Tools” zu installieren.
+Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
 ![Screenshot 22](../images/Installation_Screenshot_22.png)
 
-Wie beschrieben, einfach warten, bis die Installation abgeschlossen ist.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Ist diese abgeschlossen, dann klicke wieder auf “Finish”. 
+Now it's finished. Please click "Finish".
 
 ![Screenshot 24](../images/Installation_Screenshot_24.png)
 
-Und der nächste Fehler tritt auf. Klicke einfach wieder auf “Install missing platform(s) and sync project”.
+And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
 
 ![Screenshot 25](../images/Installation_Screenshot_25.png)
 
-Wie beschrieben, einfach warten, bis die Installation abgeschlossen ist.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Ist diese abgeschlossen, dann klicke wieder auf “Finish”. 
+Now it's finished. Please click "Finish".
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
-Klicke auf “Install Build Tools and sync project” um die fehlenden “Tools” zu installieren.
+Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
 ![Screenshot 28](../images/Installation_Screenshot_28.png)
 
-Wie beschrieben, einfach warten, bis die Installation abgeschlossen ist.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Ist diese abgeschlossen, dann klicke wieder auf “Finish”. 
+Now it's finished. Please click "Finish".
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Sieht so aus, als ob wir die Fehlermeldungen hinter uns haben :). Zeit für eine Trinkpause?
+Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-Android Studio empfiehlt, das Gradle-System zu aktualisieren. **Führe niemals ein Gradle-Update durch!** Dies kann zu Problemen führen!
+Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
-Klicke auf "Don't remind me again for this project".
+Please click "Don't remind me again for this project".
 
 ![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
-Der Prozess läuft weiter...
+The build is running again.
 
 ![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-Perfekt, der erste “Build Prozess” ist erfolgreich abgeschlossen, aber wir sind noch nicht fertig.
+Yeah, the first build is successful but we are not finished.
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
@@ -192,7 +194,7 @@ Wähle “App” aus und klicke auf “Next”.
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Klicke auf “Create new...” um einen Keystore zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Diese ist verschlüsselt und mit Passwörtern geschützt. Wir empfehlen, diese Datei in deinem Benutzerverzeichnis zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -206,7 +208,7 @@ Klicke auf “Create new...” um einen Keystore zu erstellen. Dieser ist nichts
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Fülle die Informationen von dem Keystore, den du gerade erstellt hast, aus und klicke auf “Next”.
+Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
