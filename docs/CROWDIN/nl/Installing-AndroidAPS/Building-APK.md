@@ -2,7 +2,9 @@
 
 * * *
 
-***Let op** bij het bouwen van de AndroidAPS 2.0 apk: **Configuration on demand** wordt niet ondersteund door de huidige versie van de Android Gradle plugin! Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:*
+***Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+
+***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:*
 
      *  *Open het instellingen venster, door op File > Settings (voor Mac: Android Studio > Preferences) te klikken.*
     *  *In het linker subvenster, klik op Build, Execution, Deployment > Compiler.*
@@ -19,7 +21,7 @@
 
 ## Overzicht
 
-De belangrijkste stappen voor het bouwen van het APK bestand zijn:
+In general, the steps necessary to build the APK file:
 
 * Git installeren
 * Android Studio installeren en instellen
@@ -30,7 +32,7 @@ De belangrijkste stappen voor het bouwen van het APK bestand zijn:
 
 ## Stap voor stap instructie
 
-Gedetailleerde beschrijving van de verschillende stappen.
+Detailed description of the steps necessary to build the APK file.
 
 ## Installeer Git + Android Studio
 
@@ -41,37 +43,37 @@ Gedetailleerde beschrijving van de verschillende stappen.
 * Installeer [Android Studio](https://developer.android.com/studio/install.html).
 * Instellen van Android Studio als je hem voor het eerst opstart
 
-Selecteer "Do not import settings" (instellingen niet importeren) omdat je het nog niet eerder hebt gebruikt.
+Select "Do not import settings" as you have not used it before.
 
 ![Screenshot 1](../images/Installation_Screenshot_01.png)
 
-Klik "Next" (volgende).
+Click "Next".
 
 ![Screenshot 2](../images/Installation_Screenshot_02.png)
 
-Selecteer “Standard” Installation en klik op “Next”.
+Select "Standard" installation and click "Next".
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Selecteer het thema voor de gebruikersinterface. (In deze handleiding hebben we "Intellij" gebruikt). Klik daarna op "Next" (Volgende). Dit is alleen het uiterlijk van Android Studio, het kleurenschema. Je kunt hier ook iets anders kiezen als je dat mooier vind, wat je hier kiest maakt geen enkel verschil voor het bouwen van de app.
+Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
-Klik op "Next" in het dialoogvenster "Verify Settings" (instellingen controleren).
+Click "Next" on the "Verify Settings" dialog.
 
 ![Screenshot 5](../images/Installation_Screenshot_05.png)
 
-De Android emulator (hiermee boots je een smartphone na op je computer) wordt niet gebruikt bij het bouwen van de APK. Klik op "Finish" om de installatie af te ronden, de documentatie kun je later lezen wanneer je wilt.
+The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
-Android Studio gaat nu allerlei software-onderdelen downloaden. Je kunt klikken op de knop "Show Details" (details weergeven) om te zien wat er precies gebeurt, maar het is niet nodig om dat allemaal te weten.
+Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
 
 ![Screenshot 7](../images/Installation_Screenshot_07.png)
 
 ![Screenshot 8](../images/Installation_Screenshot_08.png)
 
-Wanneer hij klaar is met downloaden, klik op "Finish" (afronden).
+After the downloads are completed click the "Finish" button.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
@@ -85,96 +87,96 @@ Wanneer hij klaar is met downloaden, klik op "Finish" (afronden).
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Vul de URL in van de hoofdpagina van de AndroidAPS Repository (“https://github.com/MilosKozak/AndroidAPS”) en klik op “Clone”.
+Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio zal nu het project gaan klonen (kopiëren). Klik niet op "Background" (achtergrond). Dit gaat snel en wanneer je het naar de achtergrond verplaatst, maak je het onnodig ingewikkeld voor nu.
+Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
 ![Screenshot 14](../images/Installation_Screenshot_14.png)
 
-Je krijgt de melding dat de "checkout from version control" (het klonen) is afgerond. Open het project door op "Yes" te klikken.
+Finish the checkout from version control with opening the project by clicking "Yes".
 
 ![Screenshot 15](../images/Installation_Screenshot_15.png)
 
-Gebruik de standaard "default gradle wrapper" en klik "OK".
+Use the standard "default gradle wrapper" and click "OK".
 
 ![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-Lees en sluit het scherm van de "Tip of the Day" (tip van de dag) van Android Studio door te drukken op "Close" (sluiten).
+Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Top! Je hebt jouw eigen kopie van de broncode en je bent klaar om de app te gaan bouwen.
 * Nu krijg je je eerste foutmelding. Gelukkig geeft Android Studio je direct de oplossing hiervoor.
 
-Klik op "Install missing platform(s) and sync project" (ontbrekende platforms installeren en project synchroniseren). Android Studio zal nu een ontbrekend stuk software gaan installeren.
+Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
 ![Screenshot 18](../images/Installation_Screenshot_18.png)
 
-Accepteer de gebruiksrechtovereenkomst door op "Accept" en op "Next" te klikken.
+Accept the license agreement by selecting "Accept" and clicking "Next".
 
 ![Screenshot 19](../images/Installation_Screenshot_19.png)
 
-Het dialoogvenster geeft aan "Please wait until the installation finishes" (wacht aub tot de installatie is afgerond) en dus wacht je even.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden).
+Now it's finished. Please click "Finish".
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-En dan... een volgende foutmelding. Maar ook hier geeft Android Studio je weer een vergelijkbare oplossing. Klik op “Install Build Tools and sync project” om de ontbrekende “Tools” te installeren.
+Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
 ![Screenshot 22](../images/Installation_Screenshot_22.png)
 
-Het dialoogvenster geeft aan "Please wait until the installation finishes" (wacht aub tot de installatie is afgerond) en dus wacht je even.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden).
+Now it's finished. Please click "Finish".
 
 ![Screenshot 24](../images/Installation_Screenshot_24.png)
 
-En een andere foutmelding omdat Android Studio weer een ontbrekend platform moet installeren. Klik weer op "Install missing platform(s) and sync project".
+And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
 
 ![Screenshot 25](../images/Installation_Screenshot_25.png)
 
-Het dialoogvenster geeft aan "Please wait until the installation finishes" (wacht aub tot de installatie is afgerond) en dus wacht je even.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden).
+Now it's finished. Please click "Finish".
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
-Klik op “Install Build Tools and sync project” om de ontbrekende “Tools” te installeren.
+Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
 ![Screenshot 28](../images/Installation_Screenshot_28.png)
 
-Het dialoogvenster geeft aan "Please wait until the installation finishes" (wacht aub tot de installatie is afgerond) en dus wacht je even.
+As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Wanneer hij een melding geeft dat dit is afgerond, klik je op "Finish" (afronden).
+Now it's finished. Please click "Finish".
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Jippie! De foutmeldingen zijn voorbij en je bent begonnen. Misschien tijd om wat water te drinken?
+Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-Android Studio komt met een "update Gradle" melding (Gradle bijwerken). **Update Gradle nooit!** Dit kan tot problemen leiden!
+Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
-Klik op "Don't remind me again for this project" (Nooit meer vragen voor dit project).
+Please click "Don't remind me again for this project".
 
 ![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
-Hij gaat verder met bouwen...
+The build is running again.
 
 ![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-Mooi, je hebt nu jouw eerste app "Build finished" (bouw afgerond). Maar we zijn nog niet klaar.
+Yeah, the first build is successful but we are not finished.
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
@@ -193,7 +195,7 @@ Selecteer "App" en klik op "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Klik op "Create new..." (maak nieuwe...) om jouw eigen key store (digitale handtekening) te maken. Een key store is een bestandje waarin de informatie van jouw handtekening is opgeslagen. Het bestandje is versleuteld en beveiligd met een wachtwoord. We raden aan om het op te slaan in jouw eigen map op je computer en om het wachtwoord goed te onthouden. Maar mocht je het bestandje of jouw wachtwoord kwijtraken dan is dat geen groot probleem, je moet dan gewoon een nieuwe maken. Het is goed om deze informatie zorgvuldig te bewaren.
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -207,7 +209,7 @@ Klik op "Create new..." (maak nieuwe...) om jouw eigen key store (digitale handt
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Vul de informatie van jouw handtekening die je zojuist hebt aangemaakt in in het volgende venster en klik op "Next".
+Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
