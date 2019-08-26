@@ -2,23 +2,26 @@
 
 * * *
 
-***Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+**Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
 
-***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:*
+**Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
-     * *Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).*
-     * *In the left pane, click Build, Execution, Deployment > Compiler.*
-     * *Uncheck the Configure on demand checkbox.*
+If your build fails with an error regarding "on demand configuration" you can do the following:
+
+     * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+     * In the left pane, click Build, Execution, Deployment > Compiler.
+     * Uncheck the Configure on demand checkbox.
+     * Click Apply or OK.
     
 
-## * *Click Apply or OK.*
+* * *
 
 ### This article is divided into two parts.
 
 * In the overview part there is an explanation on what steps are necessary to build the APK file.
 * In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
-## Vista Geral
+## Visão Geral
 
 In general, the steps necessary to build the APK file:
 
@@ -33,7 +36,7 @@ In general, the steps necessary to build the APK file:
 
 Detailed description of the steps necessary to build the APK file.
 
-## Instalar o Android Studio
+## Install Android Studio
 
 * Instalar Git 
   * [Windows](https://gitforwindows.org/)
