@@ -69,14 +69,14 @@ This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For fu
 * Dexcom G5: It works with xDrip+ app or patched Dexcom app
 * Dexcom G6: It works with xDrip+ app or patched Dexcom app
 * Libre 1: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-* Libre 2: It works with xDrip+ (no transmitter needed), but you have to build your own patched app (see `these instructions <https://github.com/user987654321resu/Libre2-patched-App >`_ for more details)
+* Libre 2: It works with xDrip+ (no transmitter needed), but you have to build your own patched app (see `these instructions <https://github.com/user987654321resu/Libre2-patched-App>`_ for more details)
 * Eversense: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
 * Enlite: quite complicated with a lot of extra stuff
 
 
 Nightscout
 ------------
-Nightscout is a open source web application that can log and display your CGM data and AndroidAPS data and creates reports. You can find more information on the `website of the Nightscout project <http://www.nightscout.info/>`_. You can create your own Nightscout website `using Heroko <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku`_, use the semi-automated Nightscout setup on 'zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout is a open source web application that can log and display your CGM data and AndroidAPS data and creates reports. You can find more information on the `website of the Nightscout project <http://www.nightscout.info/>`_. You can create your own Nightscout website `using Heroko <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
 
 Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
 
