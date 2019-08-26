@@ -2,17 +2,19 @@
 
 * * *
 
-***Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+**Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
 
-***Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:*
+**Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
-     *  *Open het instellingen venster, door op File > Settings (voor Mac: Android Studio > Preferences) te klikken.*
-    *  *In het linker subvenster, klik op Build, Execution, Deployment > Compiler.*
-    *  *Haal het vinkje weg bij "Configure on demand".*
-    *  *Klik op Apply of OK.*
+Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
+
+     * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+     * In the left pane, click Build, Execution, Deployment > Compiler.
+     * Uncheck the Configure on demand checkbox.
+     * Click Apply or OK.
     
 
-## 
+* * *
 
 ### Dit artikel is verdeeld in twee delen.
 
@@ -30,11 +32,11 @@ In general, the steps necessary to build the APK file:
 * Bouw de ondertekende APK.
 * Zet de ondertekende APK op jouw telefoon.
 
-## Stap voor stap instructie
+## Step by step walkthrough
 
 Detailed description of the steps necessary to build the APK file.
 
-## Installeer Git + Android Studio
+## Install Android Studio
 
 * Git installeren 
   * [Windows](https://gitforwindows.org/)
@@ -79,7 +81,7 @@ After the downloads are completed click the "Finish" button.
 
 * Gefeliciteerd! Je hebt nu Android Studio succesvol geïnstalleerd en je kunt beginnen met het klonen van de broncode. Misschien is het even tijd voor pauze?
 
-## Code en extra componenten downloaden
+## Download code and additional components
 
 * Gebruik Git clone in Android Studio zoals in onderstaande screenshots te zien is. Selecteer “Check out project from Version Control” en kies “Git” als versie controle systeem.
 
