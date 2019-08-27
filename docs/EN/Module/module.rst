@@ -111,7 +111,7 @@ If you want to get a step by step example, you might want to look at a sample se
    :maxdepth: 1
    :glob:
    
-   `Sample Setup 1 <../Getting-Started/Sample-Setup.md>`_
+   Sample Setup 1 <../Getting-Started/Sample-Setup.md>
  
   
 What to do while waiting for modules
