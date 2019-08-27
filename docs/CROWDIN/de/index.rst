@@ -1,27 +1,27 @@
-Welcome to the AndroidAPS documentation
+Willkommen zur AndroidAPS-Dokumentation
 ==============================================
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+AndroidAPS ist eine Open Source App für Google Android Smartphones, die bei insulinabhängigem Diabetes als künstliche Bauchspeicheldrüse (sog. artificial pancreas system - APS) dient. Hauptkomponenten sind verschiedene OpenAPS-Softwarealgorithmen, die genau das zu tun sollen, was eine echte Bauchspeicheldrüse auch tut: den Blutzuckerspiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten. Die App hat KEINE selbstlernende künstliche Intelligenz. Stattdessen basieren die Berechnungen von AndroidAPS auf den individuellen Therapiefaktoren und Kohlenhydratmengen, die der Benutzer manuell in sein Behandlungsprofil eingibt. Diese Eingaben werden aber aus Sicherheitsgründen vom System verifiziert. Die App wird nicht in Google Play angeboten - du musst sie aus rechtlichen Gründen selbst aus dem Quellcode erstellen.
 
-Main components are:
+Hauptkomponenten sind:
 
 .. image:: images/modules-female.png
-  :alt: Components
+  :alt: Komponenten
 
-For more details, please read on here.
+Für weitere Details lies bitte hier weiter.
 
-Getting started
+Erste Schritte
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Sicherheitshinweise <./Getting-Started/Safety-first.rst>
+   Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
+   Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
    
-What do I need 
+Was brauche ich 
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
@@ -42,17 +42,17 @@ AndroidAPS installieren
    Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
    
    
-Component Setup
+Komponenten-Setup
 ---------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    CGM/FGM <./Configuration/BG-Source.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
+   Pumpen <./Hardware/pumps.rst>
+   Smartphones <./Hardware/Phoneconfig.rst>
    Nightscout Installation <./Installing-AndroidAPS/Nightscout.md>
-   xDrip+ Settings <./Configuration/xdrip.md>
+   xDrip+ Einstellungen <./Configuration/xdrip.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
    
 
@@ -62,26 +62,26 @@ AndroidAPS einrichten
    :maxdepth: 1
     
    
-   Config builder <./Configuration/Config-Builder.md>
+   Konfigurations-Generator <./Configuration/Config-Builder.md>
    Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.md>
    
    
-AndroidAPS Usage
+AndroidAPS Nutzung
 ------------
 .. toctree::
    :maxdepth: 1
        
     
-   AndroidAPS screens <./Getting-Started/Screenshots.md>
+   AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
    Objectives (Ziele) <./Usage/Objectives.md>
    OpenAPS-Funktionen <./Usage/Open-APS-features.md>   
-   Sensitivity detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   Empfindlichkeitserkennung und COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profil Wechsel <./Usage/Profiles.md>
    Temporäre Ziele <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.md>    
+   Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.md>    
   
  
-General Hints 
+Allgemeine Hinweise 
 ---------------------
 .. toctree::
    :maxdepth: 1
@@ -90,10 +90,10 @@ General Hints
    Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
    Logfiles erhalten <./Usage/Accessing-logfiles.md>
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
+   Export/Import von Einstellungen <./Usage/ExportImportSettings.rst>
    
 
-AndroidAPS for children
+AndroidAPS für Kinder
 ------------------
 .. toctree::
    :maxdepth: 1
@@ -102,7 +102,7 @@ AndroidAPS for children
    SMS-Befehle <./Usage/SMS-Commands.md>
    
 
-Advanced 
+Für Fortgeschrittene 
 ----------
 .. toctree::
    :maxdepth: 1
@@ -118,9 +118,9 @@ Problembehandlung
    :maxdepth: 1
    :glob:
   
-   NS-Client <./Usage/Troubleshooting-NSClient.md>
+   Nightscout Client <./Usage/Troubleshooting-NSClient.md>
    Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pumps <./FGT/Troubleshootingpumps.rst>
+   Pumpen <./FGT/Troubleshootingpumps.rst>
 
 
 FAQ 
@@ -150,7 +150,7 @@ Hilfe durch die Community
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Resources/Reference
+Informationsquellen/Referenzen
 ------------
 .. toctree::
    :maxdepth: 1
@@ -167,7 +167,7 @@ Mithelfen in der Community
    :glob:
 
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
-   How to translate the app and documentation <./translations.md>
+   App oder Dokumentation übersetzen <./translations.md>
    Am Wiki mitschreiben <./make-a-PR>
    Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>
 
@@ -181,4 +181,4 @@ Mithelfen in der Community
 
 	* Sämtliche Produkt- und Herstellernamen, Handelsmarken, Dienstleistungsmarken, Warenzeichen und eingetragene Dienstleistungsmarken sind Eigentum ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_
+	Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ oder `Medtronic <http://www.medtronic.com/>`_
