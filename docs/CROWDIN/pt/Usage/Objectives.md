@@ -2,7 +2,7 @@
 
 AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
 
-If you are **upgrading phones** then you can [export your settings](../Usage/Objectives#export-import-settings) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
+If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
 
 ### Objective 1: Setting up visualization and monitoring, analysing basals and ratios
 
@@ -43,10 +43,10 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 ### Objective 5: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
 
 * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
-  
-  This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
-  
-  ![max daily basal](../images/MaxDailyBasal.png)
+    
+    This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
+    
+    ![max daily basal](../images/MaxDailyBasal.png)
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
@@ -67,24 +67,3 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Obj
 * You must read the [SMB chapter in this wiki](../Usage/Open-APS-features#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to [rise maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 5](../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
 * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
-
-## Export & import settings
-
-* **Export settings** on your old phone
-  
-  * Hamburger menu (top left corner of screen)
-  * Manutenção
-  * Exportar definições
-  * File location will be shown
-    
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
-
-* **Transfer** settings from old to new phone using the file location shown during export
-
-* **Install AndroidAPS** on the new phone.
-* **Importar configurações** no seu novo telefone 
-  * Hamburger menu (top left corner of screen)
-  * Manutenção
-  * Importar configurações
-* **Note for Dana RS users:** 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
