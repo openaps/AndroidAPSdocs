@@ -17,7 +17,8 @@ Necessary Modules
 Good individual dosage algorithm for your diabetes therapy
 ------------------
 Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes.
-Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. Some loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. 
+Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
 
 The profile includes
 
