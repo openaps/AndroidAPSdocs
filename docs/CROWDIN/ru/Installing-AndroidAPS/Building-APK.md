@@ -95,30 +95,30 @@ Android Studio загружает много программных компон
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
+Android Studio начнет клонирование. Не нажимайте на "Background" (фоновое клонирование), так как все происходит быстро и выбор этой опции может лишь усложнить работу.
 
 ![Screenshot 14](../images/Installation_Screenshot_14.png)
 
-Finish the checkout from version control with opening the project by clicking "Yes".
+Завершите установку открытием проекта, нажав "Да".
 
 ![Screenshot 15](../images/Installation_Screenshot_15.png)
 
-Use the standard "default gradle wrapper" and click "OK".
+Выберите стандартный «создатель оболочки gradle по умолчанию» и нажмите «OK».
 
 ![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
+Прочитайте и закройте экран "Совет дня", нажав "Закрыть".
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Отлично, теперь у нас есть своя копия исходного кода и мы готовы начать сборку.
 * Теперь мы приближаемся к нашему первому сообщению об ошибке. К счастью, Android Studio будет сразу предлагать нам решения.
 
-Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
+Нажмите "Установить недостающую платформу(ы) и синхронизировать проект", так как Android Studio нуждается в установке отсутствующей платформы.
 
 ![Screenshot 18](../images/Installation_Screenshot_18.png)
 
-Accept the license agreement by selecting "Accept" and clicking "Next".
+Примите лицензионное соглашение, выбрав "Принять" и нажав "Далее".
 
 ![Screenshot 19](../images/Installation_Screenshot_19.png)
 
@@ -130,7 +130,7 @@ Now it's finished. Please click "Finish".
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+Aaaahhh, next error. But Android Studio suggests a similar solution. Нажмите "Установить инструменты сборки и синхронизировать проект", так как Android Studio нуждается в загрузке недостающих инструментов.
 
 ![Screenshot 22](../images/Installation_Screenshot_22.png)
 
@@ -154,7 +154,7 @@ Now it's finished. Please click "Finish".
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
-Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+Нажмите "Установить инструменты сборки и синхронизировать проект", так как Android Studio нуждается в загрузке недостающих инструментов.
 
 ![Screenshot 28](../images/Installation_Screenshot_28.png)
 
