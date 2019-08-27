@@ -33,6 +33,7 @@
 * Если это еще не сделано, скачайте [xdrip](https://github.com/NightscoutFoundation/xDrip) и следуйте инструкциям на Nightscout ([G4 без share ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 c share ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * В конфигуратоге (настройки AndroidAPS) выберите xdrip.
 * Настройте параметры xDrip+ в соответствии со [ страницей настроек xDrip+](../Configuration/xdrip.md)
+* Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией `Идентифицировать приемник` в соответствии с описанием на странице [настроек xDrip+](../Configuration/xdrip.md).
 
 ### При использовании G5 с xdrip+
 
@@ -41,9 +42,9 @@
 * В xdrip+ перейдите в настройки > совместимость программ > принимать назначения (Accept treatments) и выберите ВЫКЛ (OFF).
 * Если вы хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON). Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 * В конфигуратоге (настройки AndroidAPS) выберите xdrip.
+* Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией `Идентифицировать приемник` в соответствии с описанием на странице [настроек xDrip+](../Configuration/xdrip.md).
 
-### При использовании G5 или G6 с помощью модифицированного приложения Dexcom  
-
+### При использовании G5 или G6 с помощью модифицированного приложения Dexcom
 
 * Скачайте apk с <https://github.com/dexcomapp/dexcomapp>, и выберите версию, которая соответствует вашим потребностям (mg/dl или mmol/l, G5 или G6).
 * Если это еще не сделано, остановите сенсор и удалите оригинальное приложение Dexcom.
@@ -87,7 +88,7 @@
 ## Для пользователей Eversense  
 
 
-Самым простым способом использования Eversense с AndroidAPS является установка модифицированного приложения [Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (с предварительным удалением оригинального приложения).
+Самым простым способом использования Eversense с AndroidAPS является установка модифицированного приложения [Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) (предварительно удалив оригинальное приложения).
 
 **Предупреждение: после удаления старого приложения, ваши локальные данные старше одной недели будут утрачены!**
 

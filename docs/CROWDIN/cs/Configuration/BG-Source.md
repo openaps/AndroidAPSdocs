@@ -33,6 +33,7 @@ Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato d
 * Pokud jste tak dosud neučinili, stáhněte si [xdrip](https://github.com/NightscoutFoundation/xDrip) a postupujte podle pokynů v části Nightscout ([G4 bez share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 s share](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * Na kartě Konfigurace (nastavení v AndroidAPS) vyberte xdrip.
 * Upravte nastavení aplikace xDrip+ podle [Stránka s nastavením xDrip+](../Configuration/xdrip.md)
+* Pokud AAPS nedostává hodnoty glykémií, když telefon je režimu letadlo, použijte funkci `Identify receiver` jak se popisuje na [stánce nastavení xDrip+](../Configuration/xdrip.md).
 
 ### Pokud používáte G5 s aplikací xdrip+
 
@@ -41,9 +42,9 @@ Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato d
 * V xDripu vyberte Nastavení > Komunikace mezi aplikacemi > Přijímat ošetření a vyberte vypnout.
 * Pokud chcete, aby bylo možné přes AndroidAPS kalibrovat senzor, tak v xDripu vyberte Nastavení > Komunikace mezi aplikacemi > Accept Calibrations a vyberte zapnout. Můžete také zkontrolovat v xDripu nastavení v částí Nastavení > Méně častá nastavení > Rozšířené kalibrace.
 * Na kartě Konfigurace (nastavení v AndroidAPS) vyberte xdrip.
+* Pokud AAPS nedostává hodnoty glykémií, když telefon je režimu letadlo, použijte funkci `Identify receiver` jak se popisuje na [stánce nastavení xDrip+](../Configuration/xdrip.md).
 
-### Pokud používáte G5 nebo G6 s upravenou aplikací Dexcom  
-
+### Pokud používáte G5 nebo G6 s upravenou aplikací Dexcom
 
 * Stáhněte si apk z <https://github.com/dexcomapp/dexcomapp>, kde si vyberete verzi dle potřeby (mg/dl nebo mmol/l, G5 nebo G6).
 * Zastavte senzor a odinstalujte původní aplikaci Dexcom, pokud jste tak ještě neučinili.
@@ -87,7 +88,7 @@ Abyste mohli používat Libre jako CGM senzor, který získává nové hodnoty g
 ## Pro uživatele Eversense  
 
 
-Nejjednodušší způsob, jak používat Eversense s AndroidAPS, je nainstalovat upravenou [aplikaci Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/mod_com.senseonics.gen12androidapp-release.apk) (nejdříve musíte odinstalovat tu originální).
+Nejjednodušší způsob, jak používat Eversense s AndroidAPS, je nainstalovat upravenou [aplikaci Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) (nejdříve musíte odinstalovat tu originální).
 
 **Varování: odinstalováním staré aplikace přijdete o své místní historické údaje starší než jeden týden!**
 
