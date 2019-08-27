@@ -115,27 +115,29 @@ xDrip + ist eine weitere ausgereifte Open-Source-App, die unzählige Möglichkei
     * Einstellungen > Inter-App-Einstellungen > Accept Calibrations > `AN`
     * Menü > Sensor starten (Ist nur "pro forma" und hat nichts mit dem laufenden G5-Sensor zu tun. Dies ist nötig, da sonst regelmäßig eine Fehlermeldung kommt.) 
 
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
+
 ### Beispiel für ein Alarm-Setup:
 
-Der "Akut niedrig Alarm" (unter 55 mg/dl bzw. 3,1 mmol/l) ist ein Standardalarm der modifizierten Dexcom App, der nicht abgeschaltet werden kann.
+The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
-![xDrip Alarme](../images/SampleSetupxDripWarning.png)
+![xDrip alarms](../images/SampleSetupxDripWarning.png)
 
-Tipp für Tagungen, Kirchenbesuche, Kino etc...:
+Tip for meetings / church visits / cinema etc..:
 
-Wenn im Samsung Galaxy S7 der "Nicht stören-Modus" aktiviert ist (Menü > Einstellungen > Töne und Vibration > Nicht stören: nach rechts schieben), dann vibriert das Smartphone bei dem nicht abschaltbaren Dexcom-Niedrigalarm nur und gibt keine akustische Warnung aus. Bei den übrigen, über xDrip+ eingerichteten Alarmen kann jeweils ausgewählt werden, ob der Lautlosmodus ignoriert werden soll oder nicht.
+If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
 
 ## Energiesparoptionen deaktivieren
 
-Im Samsung Galaxy S7 auf Menü > Einstellungen > Gerätewartung > Akku > Nicht überwachte Apps > +Apps hinzufügen: Hier nacheinander die Apps AndroidAPS, Dexcom G5 Mobile, xDrip+ und ggf. AndroidWear auswählen (falls die Smartwatch verwendet wird).
+On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G5 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
 
 ## Optional: Sony Smartwatch 3 (SWR50) einrichten
 
-Mit einer Android Wear Smartwatch lässt sich das Leben mit Diabetes noch viel unauffälliger gestalten. Über sie kann am Handgelenk jederzeit der aktuelle Glukosezucker, der Status der Loop etc. angezeigt und es können Bolusgaben vorgenommen werden. Dazu den CGM-Wert im AAPSv2 Watchface doppelklicken. Die SWR50 läuft in der Regel einen ganzen Tag, bis der Akku wieder aufgeladen werden muss (selbes Ladegerät wie das Samsung Galaxy S7: microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. Über die Smartwatch kann AndroidAPS auch bedient werden (z.B. Bolusgabe). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
 ![Smartwatch](../images/SampleSetupSmartwatch.png)
 
-Details zu dem auf dem Watchface angezeigten Informationen finden sich [hier](../Configuration/Watchfaces.md).
+Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
 * Auf dem Smartphone über den Google-Play-Store die App "Android Wear" installieren und die SWR50 nach dortigen Anweisungen koppeln.
 * In AAPS Hamburger Menü (oben links) > Konfiguration > Allgemein (ganz unten in der Liste) > Wear > links aktivieren, Zahnrad klicken > Wear-Einstellungen > `Steuerung durch die Uhr`
@@ -144,4 +146,4 @@ Details zu dem auf dem Watchface angezeigten Informationen finden sich [hier](..
 
 ## Pumpe einrichten
 
-siehe [DanaR](../Configuration/DanaR-Insulin-Pump.md)
+see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)
