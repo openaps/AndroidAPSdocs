@@ -2,7 +2,7 @@
 
 AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, damit du an die Funktionen und Einstellungen von sicherem Looping herangeführt wirst. Sie stellen sicher, dass du alles, was in den Abschnitten weiter oben beschrieben wurde, korrekt installiert hast und dass du verstehst, was das System tut und warum du ihm vertrauen kannst.
 
-Wenn Du Dein **Smartphone wechselst** kannst Du Deine [Einstellungen exportieren](../Usage/Objectives#export-import-settings) um die Objectives nicht von vorn beginnen zu müssen. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen. Es ist ratsam, die Einstellungen zur Sicherheit regelmäßig zu speichern. Details zum Export findest du weiter unten auf dieser Seite.  
+If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings) to keep your progress through the objectives. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen. Es ist ratsam, die Einstellungen zur Sicherheit regelmäßig zu speichern. Details zum Export findest du weiter unten auf dieser Seite.  
 
 ### Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren
 
@@ -43,10 +43,10 @@ Wenn Du Dein **Smartphone wechselst** kannst Du Deine [Einstellungen exportieren
 ### Ziel 5: Stelle den Closed Loop fein ein, erhöhe max IOB über 0 und setze den Zielbereich langsam herunter.
 
 * Setze dein "Maximales Gesamt-IOB, das nicht überschritten werden darf [IE]" (in OpenAPS als "max-iob" bekannt) für einen Tag auf einen Wert größer als 0. Der empfohlene Standardwert ist "ein durchschnittlicher Mahlzeitenbolus + das Dreifache Deiner größten täglichen Basalrate" (größte stündliche Basalrate = maximaler Basalwert pro Stunde innerhalb des 24-Stunden-Rasters eines Tages) (für den SMB Algoyrithmus), oder das Dreifache Deiner höchsten täglichen Basalrate (für den älteren AMA Algorithmus), aber du solltest dich diesem Wert langsam annähern, bis du weißt, dass die Einstellung für Dich funktioniert).
-  
-  Betrachte diese Empfehlung als Ausgangspunkt. Wenn Du den Faktor 3x verwendest und feststellst, dass AAPS Deinen BZ zu stark senkt, reduziere diesen Faktor (z.B. 2,..). Wenn Du Resistenzen feststellst, kannst Du diesen Faktor vorsichtig Schritt für Schritt erhöhen.
-  
-  ![max daily basal](../images/MaxDailyBasal.png)
+    
+    Betrachte diese Empfehlung als Ausgangspunkt. Wenn Du den Faktor 3x verwendest und feststellst, dass AAPS Deinen BZ zu stark senkt, reduziere diesen Faktor (z.B. 2,..). Wenn Du Resistenzen feststellst, kannst Du diesen Faktor vorsichtig Schritt für Schritt erhöhen.
+    
+    ![max daily basal](../images/MaxDailyBasal.png)
 
 * Wenn du zuverlässig weißt, welcher IOB deinem Looping Muster entspricht, dann senke deinen Zielbereich auf den gewünschten Wert.
 
@@ -67,24 +67,3 @@ Wenn Du Dein **Smartphone wechselst** kannst Du Deine [Einstellungen exportieren
 * Du musst das [SMB-Kapitel in diesem Wiki](../Usage/Open-APS-features#super-micro-bolus-smb) und das [Kapitel oref1 in der openAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) lesen, um zu verstehen wie der SMB arbeitet, insbesondere was Sinn und Zweck des "zero-temping" ist.
 * Danach solltest du [maxIOB erhöhen](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob), damit SMB korrekt funktioniert. maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet, wenn Du einen Mahlzeiten-Bolus von 8 IE abgegeben willst und in den Einstellungen ein maxIOB von 7 IE hinterlegt hast, wird kein SMB abgegeben, bis das IOB wieder unter 7 IE gefallen ist. Beginne mit maxIOB = durchschnittlicher Mahlzeiten-Bolus + 3x die größe stündliche Basalrate (größte stündliche Basalrate = maximaler Basalwert pro Stunde innerhalb des 24-Stunden-Rasters eines Tages - bei \[Objective 5\](.../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) findest Du eine Grafik zu Erklärung). * min_5_carbimpact, die Standardeinstellung für den Abbau der Kohlenhydrate im Köper, muss in den Einstellungen von 3 (AMA) auf 8 (SMB) geändert werden. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
 * Der Standardwert von min_5m_carbimpact in den Apsorptions-Einstellungen muss von 3 auf 8 erhöht werden, wenn du von AMA zum SMB wechselst. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
-
-## Einstellungen exportieren & importieren
-
-* **Exportiere die Einstellungen** auf Deinem alten Smartphone
-  
-  * Hamburger Menü (drei Striche oben links am Bildschirm)
-  * Wartung
-  * Exportiere die Einstellungen
-  * Der Speicherort der Datei wird angezeigt.
-    
-    ![AAPS Einstellungen exportieren](../images/AAPS_ExportSettings.png)
-
-* **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
-
-* **Installiere AndroidAPS** auf dem neuen Smartphone.
-* **Importiere die Einstellungen** auf Deinem neuen Smartphone 
-  * Hamburger Menü (drei Striche oben links am Bildschirm)
-  * Wartung
-  * Importiere die Einstellungen
-* **Hinweis für Dana RS Nutzer:** 
-  * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Bitte stelle die Bluetooth-Verbindung zwischen Smartphone und Pumpe manuell her.

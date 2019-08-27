@@ -1,4 +1,4 @@
-# Телефоны
+# List of tested Phones
 
 Пользователи создают список протестированных телефонов [и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
@@ -8,6 +8,6 @@
 
 При обнаружении проблем с таблицей пишите <hardware@androidaps.org>, для пожертвования телефонов/часов, нуждающихся в тестировании, пишите [donations@androidaps.org](mailto:hardware@androidaps.org).
 
-## Заставка телефона
+# Phone Background
 
 ![заставка телефона](../images/bg_phone_thump.jpg) </br> Дизайн: Тиаго :) </br> если вы хотите украсить ваш телефон логотипом AndroidAPS, вы можете скачать фоновое изображение здесь : ![Заставка в высоком разрешении.](../images/bg_phone.jpg)

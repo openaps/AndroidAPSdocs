@@ -1,8 +1,8 @@
-# Algemene CGM aanbevelingen
+**General CGM recommendations**
 
-## Kalibraties
+**CGM hygiene**
 
-Los van het CGM systeem dat je gebruikt, gelden een aantal hele heldere regels voor het gebruiken van een vingerprik om mee te kalibreren. Die regels gelden zowel bij het gebruik van officiële CGM software van de fabrikant, als bij software uit de doe-het-zelf community.
+Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
 
 * Zorg dat je handen (wassen met water en zeep) en je meetbenodigdheden schoon en droog zijn.
 * Kalibreer alleen wanneer jouw CGM een reeks metingen met een platte pijl geeft (15-30 minuten is meestal genoeg)
@@ -12,11 +12,31 @@ Los van het CGM systeem dat je gebruikt, gelden een aantal hele heldere regels v
 
 # BG bron
 
+## Smoothing blood glucose
+
+AAPS werkt het beste wanneer de bloedglucose-gegevens vloeiend en consistent zijn. Afhankelijk van de BG bron die je gebruikt, wordt 'ruis' uit de ruwe waardes gefilterd. Met 'ruis' wordt bedoeld dat jouw glucosegrafiek eruit ziet als een schot hagel. Jouw glucosewaardes zijn dan niet betrouwbaar genoeg om bepaalde AAPS functies te gebruiken. Deze functies, zoals 'Activeer SMB altijd' en 'Gebruik SMB met koolhydraten' kunnen alleen worden gebruikt wanneer je een goed gefilterde BG bron hebt.
+
+### Aangepaste Dexcom G5/G6 app
+
+De Aangepaste Dexcom G5 of G6 app levert vloeiende en consistente BG gegevens. Er zijn geen beperkingen in het gebruik van SMB.
+
+### xDrip+ app met Dexcom G5/G6
+
+Wanneer je in xDrip+ de optie 'OB1 collector in native mode' hebt aangevinkt dan zijn jouw gegevens vloeiend en consistent genoeg. Met deze optie zijn er geen beperkingen in het gebruik van SMB. De reden hierachter is dat in de 'Native mode' xDrip+ het algoritme van de Dexcom zender gebruikt. Hierbij stuurt de zender ook informatie over 'ruis' mee, en heb je dus dezelfde waardes als wanneer je de Aangepaste Dexcom app zou gebruiken. Wanneer je de optie 'OB1 collector in native mode' niet hebt aangevinkt, dan gebruikt xDrip+ een eigen xDrip algoritme, waarbij je beperkt bent in het gebruik van SMB.
+
+### xDrip+ app met Freestyle Libre
+
+Wanneer je de xDrip+ app met de Freestyle Libre gebruikt dan kun je 'Activeer SMB altijd' en 'Gebruik SMB na koolhydraten' niet gebruiken, omdat hiermee je BG-waarden niet vloeiend en consistent genoeg zijn. Afgezien daarvan kun je een paar dingen doen om ruis in je gegevens te verminderen.
+
+**Smooth Sensor Noise (ruisonderdrukking).** In xDrip+ kun je deze optie aanzetten via Instellingen > xDrip+ Display Settings > Smooth sensor noise. Hiermee worden gegevens met veel ruis, wat vloeiender gemaakt.
+
+**Smooth Sensor Noise (Ultrasensitive) (ultragevoelige ruisonderdrukking).** Als je na het inschakelen van bovenstaande optie nog steeds veel ruis in jouw gegevens ziet, dan kun je de ruisonderdrukking wat agressiever zetten met behulp van de Smooth Sensor Noise (Ultrasensitive) optie. Hiermee zullen gegevens vloeiender worden gemaakt wanneer zeer lage niveaus van ruis worden gedetecteerd. Om dit te doen, moet je eerst [engineering mode inschakelen in xDrip+](../Enabling-Engineering-Mode-in-xDrip.md). Daarna kun je de ultragevoelige ruisonderdrukking inschakelen via Instellingen > xDrip+ Display Settings > Smooth Sensor Noise (Ultrasensitive).
+
 ## Voor Dexcom gebruikers
 
-### Dexcom G6: Algemene tips voor looping
+### Dexcom G6: General hints for looping
 
-Zie [Dexcom G6 pagina](../Configuration/Dexcom.md) voor instellingen en veelvoorkomende problemen met de Dexcom G6.
+See [Dexcom G6 page](../Configuration/Dexcom.md) for details on setting Dexcom G6 sensor and solutions for common difficulties with Dexcom G6.
 
 Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht lijkt. Om de G6 veilig te gebruiken, moet je rekening houden met het volgende:
 
@@ -28,14 +48,14 @@ Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht l
 
 Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) (Engelstalig) van Tim Street voor meer achtergrondinformatie en de redenen achter deze aanbevelingen.
 
-### Dexcom G6 met xDrip+
+### If using G6 with xdrip+
 
 * Als het nog niet ingesteld is, download dan [xdrip](https://github.com/NightscoutFoundation/xDrip) en volg de instructies voor nightscout ([G4 zonder 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 met 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * Selecteer xdrip in Configurator (instellingen in AndroidAPS).
 * Stel xDrip+ in zoals beschreven op de [xDrip+ instellingen pagina](../Configuration/xdrip.md)
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### Dexcom G5 met xDrip+
+### If using G5 with xdrip+
 
 * Als het nog niet ingesteld is, download dan [xdrip](https://github.com/NightscoutFoundation/xDrip) en volg de instructies voor nightscout ([G4 zonder 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [G4 met 'share'](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support)).
 * In xdrip ga naar Settings > Interapp Compatibility > Broadcast Data Locally en selecteer ON. Deze instelling zorgt ervoor dat de xDrip app op jouw telefoon jouw waardes direct naar de AndroidAPS app (ook op jouw telefoon) doorstuurt en je dus geen internetverbinding nodig hebt.
@@ -44,7 +64,7 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 * Selecteer xdrip in Configurator (instellingen in AndroidAPS).
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### Dexcom G5 of G6 met de aangepaste Dexcom app
+### If using G5 or G6 with patched Dexcom app
 
 * Download de apk van <https://github.com/dexcomapp/dexcomapp>, en kies de versie die je nodig hebt (mg/dl of mmol/l versie, voor G5 of G6).
 * Stop sensor en verwijder de originele Dexcom app, als je dat nog niet gedaan had.
@@ -52,7 +72,7 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 * Start sensor
 * Selecteer Dexcom G5/G6 App (aangepast) in Configurator (instelling in AndroidAPS).
 
-### Dexcom G4 met OTG kabel ('traditionele' Nightscout)  
+### If using G4 with OTG cable ('traditional' Nightscout)…  
 
 
 * Als dit nog niet is ingesteld download dan Nightscout Uploader app vanuit de Play Store en volg de instructies op [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
@@ -62,14 +82,14 @@ Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-l
 ## Libre met Bluetooth-adapter  
 
 
-Om je Libre te gebruiken als een CGM die elke 5 minuten nieuwe BG waarden krijgt, moet je eerst een NFC naar Bluetooth adapter kopen, zoals:
+To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
 
 * MiaoMiao-Reader <https://www.miaomiao.cool/>
 * Blukon Nightrider <https://www.ambrosiasys.com/howit>
 * BlueReader <https://bluetoolz.de/blueorder/#home>
 * Sony Smartwatch 3 (SWR50) als ontvanger <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-### Libre met xDrip+  
+### If using xdrip...  
 
 
 * Als nog niet is ingesteld dan download xdrip en volg de instructies op: [LimiTTEer](https://github.com/JoernL/LimiTTer), [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) of [BlueReader](https://unendlichkeit.net/wordpress/?p=680&lang=en)([Hardware](https://bluetoolz.de/wordpress/)).
@@ -78,8 +98,9 @@ Om je Libre te gebruiken als een CGM die elke 5 minuten nieuwe BG waarden krijgt
 * Als je AndroidAPS wilt gebruiken om te kalibreren ga dan in xdrip naar Instellingen > Interapp settings > Accept Calibrations en selecteer ON. Je kunt ook de opties aanpassen aan jouw behoefte in Instellingen > Minder vaak voorkomende instellingen > Advanced Calibration Settings.
 * Selecteer xdrip in Configurator (instellingen in AndroidAPS).
 * Stel xDrip+ in zoals beschreven op de [xDrip+ instellingen pagina](../Configuration/xdrip.md)
+* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### Libre met Glimp  
+### If using Glimp...  
 
 
 * Als het niet al is ingesteld, download Glimp en volg de instructies van [Nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
@@ -90,11 +111,11 @@ Om je Libre te gebruiken als een CGM die elke 5 minuten nieuwe BG waarden krijgt
 
 The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) (and unistall the original one first).
 
-**Waarschuwing: door de oude app te verwijderen zullen jouw lokaal opgeslagen (glucose)gegevens ouder dan een week, ook worden verwijderd!**
+**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
 
-Om jouw gegevens vervolgens in AndroidAPS te krijgen, moet je [ESEL installeren](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) en "Send to AAPS and xDrip" (Stuur naar AAPS en xDrip) in ESEL aanzetten. Ook moet je "MM640g" kiezen als BG bron in de [Configuratie Builder](../Configuration/Config-Builder.md) in AndroidAPS. Aangezien de BG-gegevens van Eversense soms veel 'ruis' kunnen hebben, is het goed om "Smooth Data" (gegevens vloeiend maken) in ESEL in te schakelen. Dit heeft de voorkeur boven "Gebruik altijd korte gemiddeld verschil ipv gewone verschil" inschakelen in AAPS.
+To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
 
-Een andere instructie voor het gebruik van xDrip+ met Eversense vind je [hier](https://github.com/BernhardRo/Esel/tree/master/apk).
+You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
 
 ## Medtronic 640g of 630g  
 
@@ -112,7 +133,7 @@ Een andere instructie voor het gebruik van xDrip+ met Eversense vind je [hier](h
 ## Andere CGMs die uploaden naar Nightscout  
 
 
-Als je een andere CGM gebruikt die jouw gegevens doorstuurt naar [Nightscout](http://www.nightscout.info)  
+If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
 
 
 * Ga naar de AndroidAPS Instellingen en vul jouw Nightscout website en API geheim in als BG bron.

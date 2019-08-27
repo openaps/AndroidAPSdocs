@@ -1,10 +1,21 @@
 # SMS Commands
 
+**Note**: SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
+
+## Safety First
+
+- AndroidAPS umożliwia zdalne sterowanie telefonem dziecka za pomocą wiadomości tekstowej. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN.
+- AndroidAPS poinformuje Cię również SMS-em, jeśli Twoje polecenia zdalne, takie jak zmiana bolusa lub profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.
+
+## How it works
+
 In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
 In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 
 Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+
+**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
 ## BG
 
@@ -21,16 +32,16 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 ## LOOP STATUS
 
 - Loop is disabled
-- Pętla jest włączona
-- Wstrzymana (10 min)
+- Loop is enabled
+- Suspended (10 min)
 
 ## LOOP SUSPEND 20
 
-- Pętla wstrzymana na 20 minut
+- Loop suspended for 20 minutes
 
 ## LOOP RESUME
 
-- Pętla wznowiona
+- Loop resumed
 
 ## TREATMENTS REFRESH
 
@@ -42,31 +53,31 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 ## PUMP
 
-- Ostatnie połączenie: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- Aby zatrzymać dawkę bazową lub anulować bazę tymczasową, odpowiedz za pomocą kodu EmF
+- To stop temp basal reply with code EmF
 
 ## BASAL 0.3
 
-- Aby rozpocząć dawkę bazową 0.3U/h odpowiedz kodem Swe
+- To start basal 0.3U/h for 30 min reply with code Swe
 
 ## BASAL 0.3 20
 
-- Aby rozpocząć dawkę bazową 0.3U/h przez 20 min odpowiedz kodem Swe
+- To start basal 0.3U/h for 20 min reply with code Swe
 
-## Baza 30%
+## BASAL 30%
 
 - To start basal 30% for 30 min reply with code Swe
 
-## Baza 30% 50
+## BASAL 30% 50
 
 - To start basal 30% for 50 min reply with code Swe
 
-## Bolus 1.2
+## BOLUS 1.2
 
-- Aby dostarczyć bolusa 1,2U odpowiedz z kodem Rrt (przykład kodu)
+- To deliver bolus 1.2U reply with code Rrt
 - Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
 
 ## EXTENDED STOP/CANCEL

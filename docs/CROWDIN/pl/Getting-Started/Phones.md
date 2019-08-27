@@ -1,4 +1,4 @@
-# Telefony
+# List of tested Phones
 
 Użytkownicy opracowują [listę sprawdzonych telefonów i zegarków](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
@@ -8,6 +8,6 @@ Aby wprowadzić telefon lub zegarek, który nie jest jeszcze wymieniony w arkusz
 
 W razie problemów z arkuszem kalkulacyjnym prosimy o e-mail <hardware@androidaps.org>, w przypadku chęci podarowania modelu telefonu/zegarka, które nadal wymagają testów prosimy o e-mail [donations@androidaps.org](mailto:hardware@androidaps.org).
 
-## Tapeta telefonu
+# Phone Background
 
 ![Tapeta na telefon](../images/bg_phone_thump.jpg) </br> Projekt: Thiago :) </br> Jeśli chcesz ozdobić swój telefon AndroidAPS, tutaj możesz pobrać tapetę: ![Tapeta w wysokiej rozdzielczości.](../images/bg_phone.jpg)

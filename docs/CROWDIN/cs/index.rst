@@ -1,75 +1,35 @@
-Vítejte v dokumentaci k AndroidAPS
+Welcome to the AndroidAPS documentation
 ==============================================
 
-.. poznámka:: 
-   **DŮLEŽITÉ BEZPEČNOSTNÍ UPOZORNĚNÍ**
+AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
 
-   Základy bezpečnosti AndroidAPS diskutované v této dokumentaci jsou postaveny na bezpečnostních vlastnostech hardwaru používaného k vybudování Vašeho systému. Je zásadně důležité, abyste pouze používali testované, plně funkční a pro uzavřenou smyčku schválené insulinové pumpy a CGM. Hardware nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. Pokud najdete nebo získáte rozbité, upravené nebo doma vyrobené inzulínové pumpy nebo CGM, *nepoužívejte* je pro vytvoření systému AndroidAPS.
+Main components are:
 
-   Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaším pumpou nebo CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně - prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
+.. image:: images/modules-female.png
+  :alt: Components
 
-.. note:: 
-	** Upozornění a varování **
+For more details, please read on here.
 
-	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
-
-	* Použití kódu z github.com je bez záruky nebo formální podpory jakéhokoliv druhu. Přečtěte licenci z této repozitoře pro další podrobnosti.
-
-	* Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
-
-	Vezměte prosím na vědomí - tento projekt nemá žádnou spojitost s a není žádným způsobem schválený: `SOOIL <http://www.sooil.com/eng/>` _, `Dexcom <http://www.dexcom.com/>'`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _.
-
-
-**Co je AndroidAPS?**
-
-AndroidAPS je aplikace pro telefony se systémem Android a funguje jako systém umělé slinivky (APS; artificial pancreas system). Co je systém umělé slinivky? Jedná se o softwarový program, jehož účelem je simulovat chování zdravé slinivky: automaticky udržovat hladinu krevního cukru v optimálním rozmezí. APS to sice nedokáže dělat tak dobře, jako skutečná slinivka, avšak dokáže lidem s diabetem 1 typu usnadnit zvládání nemoci, a to za použití zařízení, která jsou běžně dostupná a softwaru, který je jednoduchý a bezpečný. Mezi tato zařízení patří systém pro kontinuální monitoring glykémie (CGM), který systému AndroidAPS předává informace o aktuální glykémii, a inzulinová pumpa, která je řízena pomocí AndroidAPS tak, aby vydávala správné množství inzulínu. Aplikace komunikuje s těmito zařízeními prostřednictvím technologie bluetooth. K výpočtu správného množství inzulínu využívá speciální algoritmus, neboli sadu pravidel, vyvinutý pro jiný systém umělé slinivky zvaný OpenAPS, který na celém světě používají tisíce lidí a eviduje miliony hodin používání. 
-
-Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdravotnickým orgánem. Používání AndroidAPS na vlastní osobě je čistě experimentální. Vytvoření tohoto systému vyžaduje odhodlání a technické znalosti. Pokud na začátku nemáte technické znalosti, na konci je mít budete. Veškeré potřebné informace naleznete v této dokumentaci, jinde na internetu nebo je získáte od ostatních uživatelů -- můžete se jich zeptat prostřednictvím skupin na Facebooku nebo v jiných diskuzních fórech. Spousta lidí si úspěšně sestavila aplikaci AndroidAPS a nyní ji zcela bezpečně používá, nicméně je zcela nezbytné, aby každý uživatel:
-
-* Sestavil aplikaci sám, aby skutečně pochopil, jak funguje
-* Upravil potřebná nastavení dle svých konkrétních potřeb
-* Správně obsluhoval systém a dohlížel na to, zda správně funguje
-
-Jste-li připraveni přijmout tuto výzvu, čtěte dál. 
-
-**Primární cíle AndroidAPS:**
-
-* Aplikace obsahující řadu bezpečnostních opatření. Informace o bezpečnostních opatřeních algoritmů, známých jako oref0 a oref1, najdete zde (https://openaps.org/reference-design/)
-* Jediná aplikace potřebná pro management diabetu 1. typu podporující umělou slinivku a Nightscout
-* Aplikace, kterou lze v snadno rozšiřovat podle potřeb každého uživatele
-* Aplikace dostupná v různých verzích pro konkrétní země a jazyky
-* Aplikace, kterou lze používat v režimu otevřené i uzavřené smyčky
-* Aplikace, jejíž fungování je zcela transparentní: uživatelé mohou zadat parametry, uvidí výsledek a mohou provést konečné rozhodnutí
-* Aplikace, která není závislá na ovladači pro konkrétní pumpu a obsahuje možnost použít „virtuální pumpu“, takže s ní uživatelé mohou bezpečně experimentovat, než ji skutečně začnou používat 
-* Aplikace podporující těsnou integraci s Nightscoutem
-* Aplikace, u které řídí bezpečnostní omezení sám uživatel 
-
-**Co potřebuji, abych mohl začít:**
-
-* Smartphone se systémem Android 5.0 nebo novějším. **Prosím aktualizujte na Android 6 nebo vyšší, protože je brzy plánováno ukončit podporu pro Android 5.x.** `Zde <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ uvidíte, které telefony fungují nejlépe s AndroidAPS.
-* Senzor pro kontinuální monitoring glykémie (CGM): Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian nebo PocTech
-* Aplikaci pro příjem glykémií z CGM: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `upravená aplikace G5 <https://github.com/dexcomapp/dexcomapp>`_, `aplikace PochTech <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ nebo `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
-* Samotnou aplikaci `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ nainstalovanou v telefonu
-* `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 nebo novější
-* Podporovanou pumpu: Dana-R nebo Dana-RS od společnosti Sooil, Accu-Chek Combo nebo Insight od společnosti Roche (pokud si neuděláte vlastní ovladače pro jinou inzulinovou pumpu)
-
-
-
-Začínáme s AndroidAPS
+Getting started
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Bezpečnost především <./Getting-Started/Safety-first>
-   Snímky obrazovky <./Getting-Started/Screenshots.md>
-   Telefony <./Getting-Started/Phones.md>
-   Možné pumpy <./Getting-Started/Pump-Choices.md>
-   Pumpy potenciálně použitelné v budoucnu  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   Ukázkový systém: telefon Samsung S7, pumpa Dana-R, senzor Dexcom G5 a hodinky Sony Smartwatch <./Getting-Started/Sample-Setup.md>
-   Otázky a odpovědi <./Getting-Started/FAQ.md>
-   Glosář <./Getting-Started/Glossary.md>
-  
+   Safety first <./Getting-Started/Safety-first.rst>
+   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
+   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   
+   
+What do I need 
+-----------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   Module <./Module/module.rst>
+
+   
 Jak nainstalovat AndroidAPS
 ------------
 .. toctree::
@@ -80,48 +40,106 @@ Jak nainstalovat AndroidAPS
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
    Poznámky k verzi <./Installing-AndroidAPS/Releasenotes.md>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-   Nightscout <./Installing-AndroidAPS/Nightscout.md>
    
+   
+Component Setup
+---------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   CGM/FGM <./Configuration/BG-Source.md>
+   Pumps <./Hardware/pumps.rst>
+   Phones <./Hardware/Phoneconfig.rst>
+   Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   xDrip+ Settings <./Configuration/xdrip.md>
+   Smartwatch  <./Hardware/Smartwatch.rst>
+   
+
 Konfigurace 
 ---------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Konfigurace <./Configuration/Config-Builder.md>
-   Zdroj glykémií <./Configuration/BG-Source.md>
-   Tipy pro Dexcom G6 <./Configuration/Dexcom.md>
-   Pumpa Dana-R <./Configuration/DanaR-Insulin-Pump.md>
-   Pumpa Dana-RS <./Configuration/DanaRS-Insulin-Pump.md>
-   Pumpa Accu-Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>
-   Pumpa Accu-Chek Insight <./Configuration/Accu-Chek-Insight-Pump.md>
-   Pumpa Medtronic <./Configuration/MedtronicPump.md>
-   Hodinky <./Configuration/Watchfaces.md>
+   Config builder <./Configuration/Config-Builder.md>
    Nastavení <./Configuration/Preferences.md>
-   Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
-   Nastavení xDrip+ <./Configuration/xdrip.md>
    
-Použití
+   
+AndroidAPS Usage
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
+   AndroidAPS screens <./Getting-Started/Screenshots.md>
    Cíle <./Usage/Objectives.md>
-   Možnosti OpenAPS <./Usage/Open-APS-features.md>
+   Možnosti OpenAPS <./Usage/Open-APS-features.md>   
+   Sensitivity detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profily <./Usage/Profiles.md>
-   Dočasné cíle <./Usage/temptarget.md>
-   SMS příkazy <./Usage/SMS-Commands.md>
-   Prodloužené sacharidy (eCarbs) <./Usage/Extended-Carbs.md>
+   Dočasné cíle <./Usage/temptarget.md>   
+   Extended carbs <./Usage/Extended-Carbs.md>    
+  
+ 
+General Hints 
+---------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
    Cestování s pumpou mezi časovými pásmy <./Usage/Timezone-traveling.md>
    Přístup k log souborům <./Usage/Accessing-logfiles.md>
-   Vyhlazování glykémií v xDripu <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   Tipy pro základní používání pumpy Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-   Odstraňování potíží s NSClientem <./Usage/Troubleshooting-NSClient.md>
+   Tipy pro základní používání pumpy Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Export/Import Settings <./Usage/ExportImportSettings.rst>
+   
+
+AndroidAPS for children
+------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
+   SMS příkazy <./Usage/SMS-Commands.md>
+   
+
+Advanced 
+----------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
    Android auto <./Usage/Android-auto.md>
-   Speciální nastavení pro telefony Huawei <./Usage/huawei.md>
-   Jelly Pro - optimalizace výdrže baterie <./Usage/jelly.md>
    Automatizace <./Usage/automation.md>
+   
+
+Troubleshooting
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   NS-Client <./Usage/Troubleshooting-NSClient.md>
+   Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
+   Pumps <./FGT/Troubleshootingpumps.rst>
+
+
+FAQ 
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   FAQ <./Getting-Started/FAQ.md>
+
+   
+Slovníček
+------------------------------------------
+.. toctree::
+   :maxdepth: 1
+   :glob:
+  
+   Glosář <./Getting-Started/Glossary.md>
+  
 
 Kam pro pomoc 
 ------------
@@ -132,13 +150,15 @@ Kam pro pomoc
    Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
+Resources/Reference
+------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Resources/Reference
             
    Zdroje <./Resources/index>
    Pro lékaře <./Resources/clinician-guide-to-AndroidAPS>
+
 
 Jak pomoci
 ------------
@@ -147,5 +167,17 @@ Jak pomoci
    :glob:
 
    Jak mohu pomoci <./Getting-Started/How-can-I-help.md>
-   Jak pomoci s překladem <./translations.md>
+   How to translate the app and documentation <./translations.md>
    Jak editovat wiki <./make-a-PR>
+
+
+.. poznámka:: 
+	** Upozornění a varování **
+
+	* Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
+
+	* Použití kódu z github.com je bez záruky nebo formální podpory jakéhokoliv druhu. Přečtěte licenci z této repozitoře pro další podrobnosti.
+
+	* Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
+
+	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_

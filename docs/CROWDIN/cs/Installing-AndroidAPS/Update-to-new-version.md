@@ -1,6 +1,8 @@
 # Aktualizace na novou verzi nebo větev (branch)
 
-<font color="#FF0000"><b>U verze 2.3 je potřeba použít git pro aktualizaci. Updating via zip file does not work anymore.</font></b>
+<font color="#FF0000"><b>U verze 2.3 je potřeba použít git pro aktualizaci. Updating via zip file does not work anymore.</font></b>.
+
+***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
 
 ## Install git (if you don't have it)
 

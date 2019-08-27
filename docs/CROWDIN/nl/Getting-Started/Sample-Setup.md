@@ -115,27 +115,29 @@ xDrip+ is een andere opensource-app die allerlei opties heeft voor glucosedata. 
     * Instellingen > Inter-app settings > Accepteren Calibraties > `AAN`
     * Menu > Start Sensor (is alleen voor de vorm en heeft niets te maken met de G5 zelf. Dit is nodig omdat je anders steeds een foutmelding krijgt). 
 
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
+
 ### Voorbeeld van alarm instellingen
 
-Het "urgent laag alarm" (onder 55 mg/dl resp. 3,1 mmol) is een standaard alarm van de aangepaste Dexcom app dat niet kan worden uitgeschakeld.
+The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
-![xDrip alarmen](../images/SampleSetupxDripWarning.png)
+![xDrip alarms](../images/SampleSetupxDripWarning.png)
 
-Tips voor tijdens vergaderingen / bioscoop etc..:
+Tip for meetings / church visits / cinema etc..:
 
-In situaties waar je je telefoon op stil hebt staan, zoals in de bioscoop kun je ook glucosealarmen op stil zetten. Als "Niet storen"-modus is geactiveerd in het telefoonmenu van de de Samsung Galaxy S7 (Menu > instellingen > geluiden en trillingen > niet storen: schuifregelaar naar rechts (= actieve)), dan zal je telefoon alleen trillen tijdens een urgent laag alarm, en dus geen geluid maken. Voor de andere alarmen die je via xDrip+ instelt, kun je per alarm instellen of je wilt dat de telefoon de "Niet storen"-modus negeert (wanneer je dit aanvinkt, dan maakt de telefoon maakt dus wel geluid). Laat het vinkje weg als je wilt dat de telefoon geen geluid maakt.
+If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
 
 ## Accubesparing uitschakelen
 
-Ga op de Samsung Galaxy S7 naar Menu > instellingen > apparaat onderhoud > batterij > ongecontroleerde Apps > + apps toevoegen: Selecteer achtereenvolgens de apps AndroidAPS, Dexcom G5 Mobile, xDrip + en Android Wear (als smartwatch wordt gebruikt)
+On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G5 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
 
 ## Optioneel: Sony Smartwatch 3 (SWR50) instellen
 
-Een Android Wear-smartwatch kan het leven met diabetes nog makkelijker maken. Het horloge kan van alles weergeven: de huidige glucosewaarde, de status van de loop etc. op jouw pols. De smartwatch kan ook worden gebruikt om opdrachten te geven aan AndroidAPS (zoals bolussen voor een maaltijd). Om dit te doen, tik tweemaal op de CGM-waarde van de AAPSv2 watchface. De batterij van de SWR50 gaat meestal een volledige dag mee totdat hij weer moet worden opgeladen (dezelfde lader als de Samsung Galaxy S7: microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. De smartwatch kan ook worden gebruikt om opdrachten te geven aan AndroidAPS (zoals bolussen voor een maaltijd). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
 ![Smartwatch](../images/SampleSetupSmartwatch.png)
 
-Meer details over wat er wordt weergegeven op de watchface kun je [hier](../Configuration/Watchfaces.md) vinden.
+Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
 * Installeer de app "Android Wear" op jouw smartphone via de Google Play Store en maak connectie met de smartwatch volgens de instructies die daar staan.
 * Kies in het AAPS menu op je telefoon > Config Builder > Algemeen (aan de onderkant van de lijst) > Wear > activeren aan linker kant, klik op wiel-icoon aan rechter kant > Wear instellingen en activeer `besturingselementen van Watch`
@@ -144,4 +146,4 @@ Meer details over wat er wordt weergegeven op de watchface kun je [hier](../Conf
 
 ## Pomp instellen
 
-Zie [DanaR pomp](../Configuration/DanaR-Insulin-Pump.md)
+see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)

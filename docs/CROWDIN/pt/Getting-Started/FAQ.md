@@ -1,4 +1,4 @@
-# FAQ para loopers
+## FAQ for loopers
 
 Como adicionar perguntas para o FAQ: Siga essas [instruções](../make-a-PR.md)
 
@@ -147,7 +147,7 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
-## Outras configurações
+## Other settings
 
 ### Nightscout settings
 
@@ -190,25 +190,25 @@ The change of cartridge can not be done via AndroidAPS, but must be carried out 
 
 The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
 
-## Higiene
+## Hygiene
 
 ### What to do when taking a shower or bath?
 
 You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
 
-## A Trabalhar
+## Working
 
 Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a profile switch for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a time shift of your profile when standing up much earlier or later than regular. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
-## Atividades de lazer
+## Leasure activities
 
-## Desporto
+## Sports
 
-## Sexo
+## Sex
 
 You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
 
-## Beber álcool
+## Drinking alcohol
 
 Drinking alcohol is risky in closed loop mode as the algorythm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
 
@@ -218,7 +218,7 @@ Drinking alcohol is risky in closed loop mode as the algorythm cannot predict th
 
 When drinking alcohol you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
-## A dormir
+## Sleeping
 
 ### How can I loop during the night without mobile and WIFI radiation?
 
@@ -230,13 +230,13 @@ Many users turn the phone into airplane mode at night. If you want the loop to s
 
 You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
-## Viagem
+## Travelling
 
 ### How to deal with timezone changes?
 
 With DanaR and DanaR Korean you don't have to do anything. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
 
-## Hospitalização
+## Hospitalization
 
 If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
 

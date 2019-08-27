@@ -2,14 +2,19 @@
 
 * * *
 
-***Bitte beachte** beim Erstellen einer AndroidAPS 2.0 apk: **Configuration on demand** wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:*
+**Wichtiger Hinweis:** AndroidAPS Version 2.3 kann nicht mit der neuesten Android Studio Version erstellt werden. Verwende bitte Android Studio 3.4. Diese kannst Du [hier](https://developer.android.com/studio/archive?) herunterladen.
 
-     *  *Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Präferenzen) klickst.*
-    *  *Im linken Fensterbereich, klicke auf Build, Execution, Deployment > Compiler.*
-    *  *Deaktiviere die "Configure on demand" checkbox.*
+**Bitte beachte** beim Erstellen einer AndroidAPS 2.0 apk: **Configuration on demand** wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt!
+
+Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
+
+     * Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.
+     * Klicke im linken Fensterbereich auf Build, Execution, Deployment > Compiler.
+     * Deaktiviere die "Configure on demand" Checkbox.
+     * Klicke Apply oder OK.
     
 
-## * *Klicke Apply oder OK.*
+* * *
 
 ### Dieser Artikel ist in zwei Teile geteilt.
 
@@ -192,7 +197,7 @@ Wähle “App” aus und klicke auf “Next”.
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Klicke auf “Create new...” um einen Keystore zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Diese ist verschlüsselt und mit Passwörtern geschützt. Wir empfehlen, diese Datei in deinem Benutzerverzeichnis zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
+Klicke auf “Create new...” um einen Key zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Diese ist verschlüsselt und mit Passwörtern geschützt. Wir empfehlen, diese Datei in deinem Heimatverzeichnis zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 

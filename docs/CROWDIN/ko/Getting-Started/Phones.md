@@ -1,4 +1,4 @@
-# 스마트폰
+# List of tested Phones
 
 사용자들이 직접 [테스트한 폰과 워치의 리스트](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)를 작성하고 있습니다.
 
@@ -8,6 +8,6 @@
 
 스프레드시트와 관련한 문제는<hardware@androidaps.org>로 알려주시기 바라며, 테스트가 필요한 휴대기기나 스마트워치를 기부하실 분들은 [donations@androidaps.org](mailto:hardware@androidaps.org)로 알려주시기 바랍니다.
 
-## 스마트폰 배경화면
+# Phone Background
 
 ![스마트폰 배경화면](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> AndroidAPS로 당신의 스마트폰을 꾸미고 싶다면, 아래에서 배경화면을 다운로드 할 수 있습니다. ![고해상도 배경화면](../images/bg_phone.jpg)

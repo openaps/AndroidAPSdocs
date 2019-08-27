@@ -115,27 +115,29 @@ xDrip + jest kolejną dojrzało aplikacją typu open source która oferuje dużo
     * Ustawienia > Inter-app settings > Accept Calibrations > `ON`
     * Menu > Start sensora (jest wykonywany tylko "pro forma" i nie ma nic wspólnego z faktycznym uruchomieniem sensora G5. ,jes ont wymagany gydż w innym przypadku regularnie będzie wyświetlany informacja o błędzie). 
 
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
+
 ### Przykład ustawienia alarmu
 
-"Pilny alarm niski" (poniżej 55 mg/dl lub 3,1 mmol) jest standardowym alarmem z zmodyfikowanej aplikacji Dexcoma i nie może zostać wyłączony.
+The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
-![Alarmy xDrip](../images/SampleSetupxDripWarning.png)
+![xDrip alarms](../images/SampleSetupxDripWarning.png)
 
-Porady podczas spotkań / wizyt w kościele / kinie itp..:
+Tip for meetings / church visits / cinema etc..:
 
-Jeśli w Samsung Galaxy S7 aktywowany jest tryb "Nie przeszkadzać" (Menu> Ustawienia> Dźwięki i wibracje> Nie przeszkadzać: suwak po prawej stronie (= aktywny)), telefon tylko wibruje podczas pilnego alarmu niskiego i nie wydaje akustycznego ostrzeżenie. W przypadku innych alarmów ustawionych przez xDrip + możesz wybrać, czy tryb cichy powinien być ignorowany (dźwięk jest odtwarzany), czy nie.
+If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
 
 ## Wyłącz opcję oszczędzania energii
 
-W telefonie Samsung Galaxy S7 wybierz Menu> Ustawienia> Konserwacja urządzenia> Bateria> Aplikacje niemonitorowane> + Dodaj aplikacje: wybierz aplikacje AndroidAPS, Dexcom G5 Mobile, xDrip + i Android Wear (jeśli używany jest smartwatch) jeden po drugim
+On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G5 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
 
 ## Opcjonalnie: Sony Smartwatch 3 (SWR50)
 
-Dzięki smartwatchowi Android Wear życie z cukrzycą może stać się jeszcze bardziej niezauważalne. Zegarek może być używany do wyświetlania aktualnego poziomu glukozy, statusu pętli itp. na nadgarstku Zegarek może nawet służyć do sterowania AndroidAPS (tj. podawanie w sposób dyskretny bolusa na posiłek). Aby to zrobić, dwukrotnie dotknij wartości CGM na watchface AAPSv2. SWR50 zwykle działa przez cały dzień, na jednym ładowaniu baterii (ta sama ładowarka co Samsung Galaxy S7: microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. Zegarek może nawet służyć do sterowania AndroidAPS (tj. podawanie w sposób dyskretny bolusa na posiłek). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
 ![Smartwatch](../images/SampleSetupSmartwatch.png)
 
-Szczegółowe informacje na temat informacji wyświetlanych na watchface można znaleźć [tutaj](../Configuration/Watchfaces.md).
+Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
 * Zainstaluj aplikację "Android Wear" na smartfonie za pośrednictwem sklepu Google Play i podłącz smartwatch zgodnie z instrukcjami.
 * W AAPS wybierz menu hamburgera (lewy górny róg)> Konfiguracja> Ogólne (u dołu listy)> Oprogramowanie Wear> aktywuj po lewej stronie, kliknij koło zębate> Ustawienia Wear ` Sterowanie z zegarka`
@@ -144,4 +146,4 @@ Szczegółowe informacje na temat informacji wyświetlanych na watchface można 
 
 ## Ustawienia pompy
 
-Zobacz [Pompa DanaR](../Configuration/DanaR-Insulin-Pump.md)
+see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)

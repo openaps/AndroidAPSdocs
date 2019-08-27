@@ -1,4 +1,4 @@
-# Veelgestelde vragen
+## FAQ for loopers
 
 Om vragen toe te voegen aan de Veelgestelde Vragen: volg deze [instructies](../make-a-PR.md)
 
@@ -59,7 +59,7 @@ Je kunt hem vastplakken: door je huid van te voren in te smeren met speciale lij
 
 Er bestaan ook speciale bandjes voor om je bovenarm die de CGM/FGM op zijn plek houden. Die zijn online verkrijgbaar (even googelen).
 
-## AndroidAPS instellingen
+## AndroidAPS settings
 
 ### Invloed van instellingen
 
@@ -147,7 +147,7 @@ Controleer als eerste of jouw basaalinstellingen correct zijn, en test je basaal
 
 Controleer als eerste of jouw basaalinstellingen correct zijn, en test je basaalstanden door met een stabiele bloedglucose een tijdlang niets te eten. Pas je basaalstanden aan indien nodig. Nadat je zeker bent dat je basaalstanden goed zijn ingesteld, én je ziet dat jouw glucosewaarde wel weer zakt naar je streefdoel wanneer alle koolhydraten zijn geabsorbeerd dan kun je proberen om enige tijd voorafgaand aan je maaltijd een 'Eet binnenkort' tijdelijk laag streefdoel in te stellen. Of overleg met je behandelaars of je een bepaalde hoeveelheid tijd tussen bolus en maaltijd kunt nemen (pre-bolussen). Wanneer je bloedglucose te hoog is na de maaltijd, en hoog blijft nadat al je koolhydraten zijn geabsorbeerd, dan kun je vragen aan je behandelaars of je jouw KH ratio kunt verlagen. Wanneer je bloedglucose te hoog is terwijl je nog COB hebt, en je te laag uitkomt nadat alle koolhydraten geabsorbeerd zijn, dan kun je vragen aan je behandelaars of je jouw KH ratio kunt verhogen én een bepaalde hoeveelheid tijd te nemen tussen bolus en maaltijd.
 
-## Overige instellingen
+## Other settings
 
 ### Nightscout instellingen
 
@@ -190,25 +190,25 @@ Wisselen van het reservoir kan niet worden gedaan via AndroidAPS maar rechtstree
 
 Het 'Ontlucht/vul' scherm van AAPS gebruikt niet de functie van "prime infusie set" van de pomp, maar vult de infusie set en/of canule met behulp van een bolus die niet in de geschiedenis van AAPS verschijnt. Dit betekent dat een lopende tijdelijke basaalstand niet zal worden onderbroken. Selecteer op het Acties (Act) tabblad, de knop ONTLUCHT/VUL en kies de hoeveelheid insuline die nodig is om de infuusset/canule te vullen en druk op OK. Wanneer er nog lucht in de infuusset zit, herhaal de vorige stap. Je kunt standaardhoeveelheden instellen in Instellingen > Andere > Vul standaard hoeveelheid. Hoeveel eenheden nodig zijn staat in het instructieboekje in de doos met infuussets, dit verschilt per type infuusset en is afhankelijk van de lengte van de canule en de lengte van de slang.
 
-## Hygiëne
+## Hygiene
 
 ### Wat te doen tijdens het douchen?
 
 Je kunt de pomp afkoppelen bij het douchen. Voor deze korte tijd kun je meestal wel zonder je pomp. Maar je moet AAPS wel laten weten dat je de pomp loskoppelt, zodat de IOB berekeningen blijven kloppen. Op het Overzicht-scherm van AAPS houd "Open loop / Closed loop" lang ingedrukt. Selecteer **'Verbreek verbinding ...min/u met pomp'** afhankelijk van jouw behoefte. Nadat je je pomp weer hebt aangesloten, dan kun je in datzelfde menu op 'Hervatten' drukken. Of wachten totdat de door jou gekozen tijd is verstreken, de loop zal dan automatisch weer worden hervat.
 
-## Werken
+## Working
 
 Afhankelijk van het soort werk dat je doet, kun je verschillende instellingen kiezen (basaalstanden, ISF, KH factor) op werkdagen. Als AndroidAPS gebruiker kun je kiezen om een profielwissel te doen voor de duur van jouw werkdag (bijv. meer dan 100% gedurende 8 uur bij zittend werk, of juist minder dan 100% wanneer je fysiek actief werk doet). Je kunt ook kiezen voor een hoger of lager tijdelijk streefdoel, of voor een tijdverschuiving van jouw profiel wanneer je eerder of later dan normaal opstaat. Wanneer je Nightscout profielen gebruikt, kun je ook een specifiek profiel (bijv. 'thuis' of 'werkdag') aanmaken, en dagelijks het profiel activeren dat je op dat moment nodig hebt.
 
-## Vrije tijd
+## Leasure activities
 
-## Sporten
+## Sports
 
 ## Sex
 
 Je kunt de pomp loskoppelen voor wat 'vrijheid', maar je moet AAPS wel vertellen dat je dat doet. Zodat jouw IOB juist wordt berekend. Op het Overzicht-scherm van AAPS houd "Open loop / Closed loop" lang ingedrukt. Selecteer **'Verbreek verbinding ...min/u met pomp'** afhankelijk van jouw behoefte. Nadat je je pomp weer hebt aangesloten, dan kun je in datzelfde menu op 'Hervatten' drukken. Of wachten totdat de door jou gekozen tijd is verstreken, de loop zal dan automatisch weer worden hervat.
 
-## Alcohol
+## Drinking alcohol
 
 Alcohol drinken in de closed loop modus heeft als risico dat het algoritme niet goed kan voorspellen welke invloed de alcohol heeft op jouw bloedglucose. Je zult voor jezelf een manier moeten vinden om hiermee om te gaan. AndroidAPS heeft verschillende functies die je hierbij kunt gebruiken:
 
@@ -218,7 +218,7 @@ Alcohol drinken in de closed loop modus heeft als risico dat het algoritme niet 
 
 Bij het drinken van alcohol moet je altijd je CGM in de gaten houden, om op tijd wat koolydraten te nemen en zo een hypo te kunnen voorkomen.
 
-## Slapen
+## Sleeping
 
 ### Hoe kan ik 's nachts closed loopen zonder mobiele of WIFI straling?
 
@@ -230,17 +230,17 @@ Veel gebruikers zetten 's nachts hun telefoon in vliegtuigmodus. Wanneer je wilt
 
 Je kunt nu niet bellen of gebeld worden, en je bent ook niet verbonden met internet. Maar de closed loop werkt nog wel.
 
-## Reizen
+## Travelling
 
 ### Hoe kan ik wisselen van tijdzone?
 
 Met DanaR en DanaR Koreaans hoef je niets te doen. Zie voor andere pompen de [wisselen van tijdzone](../Usage/Timezone-traveling.md) pagina voor meer details.
 
-## Ziekenhuis
+## Hospitalization
 
 Wanneer je jouw behandelaar informatie wilt geven over AndroidAPS en doe-het-zelf loopen, dan kun je de [Informatie voor zorgprofessionals](../Resources/clinician-guide-to-AndroidAPS.md) uitprinten.
 
-## Afspraak met je internist of diabetesverpleegkundige
+## Medical appointment with your endocrinologist
 
 ### Rapporten
 

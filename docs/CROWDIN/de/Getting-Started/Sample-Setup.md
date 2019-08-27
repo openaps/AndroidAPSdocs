@@ -115,6 +115,8 @@ xDrip + ist eine weitere ausgereifte Open-Source-App, die unzählige Möglichkei
     * Einstellungen > Inter-App-Einstellungen > Accept Calibrations > `AN`
     * Menü > Sensor starten (Ist nur "pro forma" und hat nichts mit dem laufenden G5-Sensor zu tun. Dies ist nötig, da sonst regelmäßig eine Fehlermeldung kommt.) 
 
+Weitere Informationen über xDrip+ findest Du auf der Seite [BZ-Quellen](../Configuration/BG-Source.md).
+
 ### Beispiel für ein Alarm-Setup:
 
 Der "Akut niedrig Alarm" (unter 55 mg/dl bzw. 3,1 mmol/l) ist ein Standardalarm der modifizierten Dexcom App, der nicht abgeschaltet werden kann.
@@ -131,7 +133,7 @@ Im Samsung Galaxy S7 auf Menü > Einstellungen > Gerätewartung > Akku > Nicht �
 
 ## Optional: Sony Smartwatch 3 (SWR50) einrichten
 
-Mit einer Android Wear Smartwatch lässt sich das Leben mit Diabetes noch viel unauffälliger gestalten. Über sie kann am Handgelenk jederzeit der aktuelle Glukosezucker, der Status der Loop etc. angezeigt und es können Bolusgaben vorgenommen werden. Dazu den CGM-Wert im AAPSv2 Watchface doppelklicken. Die SWR50 läuft in der Regel einen ganzen Tag, bis der Akku wieder aufgeladen werden muss (selbes Ladegerät wie das Samsung Galaxy S7: microUSB).
+Mit einer Android Wear Smartwatch lässt sich das Leben mit Diabetes noch viel unauffälliger gestalten. Über sie kann am Handgelenk jederzeit der aktuelle Glukosezucker, der Status der Loop etc. angezeigt Über die Smartwatch kann AndroidAPS auch bedient werden (z.B. Bolusgabe). Dazu den CGM-Wert im AAPSv2 Watchface doppelklicken. Die SWR50 läuft in der Regel einen ganzen Tag, bis der Akku wieder aufgeladen werden muss (selbes Ladegerät wie das Samsung Galaxy S7: microUSB).
 
 ![Smartwatch](../images/SampleSetupSmartwatch.png)
 
