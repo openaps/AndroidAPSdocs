@@ -1,4 +1,4 @@
-# Jak przetłumaczyć AndroidAPS
+# How to translate AndroidAPS and the documentation
 
 * Przejdź do <https://translations.androidaps.org> lub <https://wikitranslations.androidaps.org> i zaloguj się przy użyciu konta Github
 
