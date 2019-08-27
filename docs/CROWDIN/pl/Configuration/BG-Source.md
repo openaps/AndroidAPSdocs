@@ -1,8 +1,8 @@
-# Ogólne zasady używania systemów CGM
+**General CGM recommendations**
 
-## Higiena CGM
+**CGM hygiene**
 
-Niezależnie od tego, jakiego systemu CGM używasz, jeśli zamierzasz korzystać z kalibracji opartej na krwi, istnieją pewne bardzo jasne zasady, które powinieneś zastosować, niezależnie od tego, czy używasz oprogramowania DIY CGM, czy oficjalnych aplikacji.
+Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
 
 * Upewnij się, że ręce i akcesoria do glukometru są czyste.
 * Spróbuj kalibrować, gdy masz w miarę stabilny cukier (seria kropek z płaską strzałką, zwykle wystarcza 15-30 minut).
@@ -12,11 +12,31 @@ Niezależnie od tego, jakiego systemu CGM używasz, jeśli zamierzasz korzystać
 
 # Źródła danych o poziomie cukru we krwi (BG) - CGM/FGM
 
+## Smoothing blood glucose
+
+AAPS działa najlepiej, jeśli otrzymane dane dotyczące poziomu glukozy we krwi są "gładkie" i spójne. Niektóre funkcje, takie jak "Wlącz SMB (Super Mikro Bolusy) zawsze" i "Włącz SMB po węglowodanach", mogą być używane tylko z silnie filtrującym źródłem BG.
+
+### DexcomG5 App (patched)
+
+Podczas korzystania z aplikacji Dexcom G5 (patched) twoje dane BG są gładkie i spójne. Nie ma ograniczeń w korzystaniu z SMB.
+
+### xDrip+ z Dexcom G5
+
+Odpowiednio wygładzone dane są dostarczane tylko wtedy, gdy korzystasz z xDrip G5 "OB1 collector in native mode".
+
+### xDrip + z Freestyle Libre
+
+Używając xDrip+ jako źródła danych z Freestyle Libre jak dotąd nie możesz aktywować opcji "Wlącz SMB (Super Mikro Bolusy) zawsze" i "Włącz SMB po węglowodanach", ponieważ wartości BG nie są wystarczająco wygładzone. Jednak istnieje kilka sposobów, dzięki którym możesz zmniejszyć poziom szumu w danych.
+
+**Smooth Sensor Noise.** W xDrip+ Settings > xDrip+ Display Settings Upewnij się, że Smooth Sensor Noise jest włączony. To ustawienie pozwala zastosować wygładzanie zaszumionych danych.
+
+**Smooth Sensor Noise (Ultrasensitive).** Jeśli nadal widzisz zaszumione dane w xDrip_ możesz zastosować bardziej agresywne wygładzanie, używając ustawienia Smooth Sensor Noise (Ultrasensitive). To spróbuje zastosować wygładzanie nawet przy bardzo niskim poziomie wykrytego szumu. Aby to zrobić najpierw [włącz tryb inżynieryjny w xDrip+](../Enabling-Engineering-Mode-in-xDrip.md). Następnie przejdź do Ustawienia> xDrip + Ustawienia wyświetlania i włącz Smooth Sensor Noise (Ultrasensitive).
+
 ## Dla użytkowników Dexcom
 
-### Dexcom G6: Ogólne wskazówki dotyczące zapętlania
+### Dexcom G6: General hints for looping
 
-Szczegółowe informacje na temat ustawiania sensora [Dexcom G6](../Configuration/Dexcom.md) i rozwiązania typowych problemów z Dexcom G6 można znaleźć na stronie Dexcom G6.
+See [Dexcom G6 page](../Configuration/Dexcom.md) for details on setting Dexcom G6 sensor and solutions for common difficulties with Dexcom G6.
 
 Oczywiste jest, że korzystanie z G6 jest być może nieco bardziej skomplikowane niż wygląda to na początku. Aby bezpiecznie z niego korzystać, należy pamiętać o kilku punktach:
 
@@ -28,14 +48,14 @@ Oczywiste jest, że korzystanie z G6 jest być może nieco bardziej skomplikowan
 
 Aby dowiedzieć się więcej o szczegółach i powodach tych zaleceń, przeczytaj [ kompletny artykuł ](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) opublikowany przez Tima Street na stronie [ www.diabettech.com ](http://www.diabettech.com).
 
-### Jeśli używasz G6 z xdrip+
+### If using G6 with xdrip+
 
 * Jeśli jeszcze nie jest zainstalowany, pobierz [ xdrip ](https://github.com/NightscoutFoundation/xDrip) i postępuj zgodnie z instrukcjami dla nightscout ([ G4 bez udostępniania ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [ G4 z udostępnianiem](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [ G5 ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support) ).
 * Wybierz w AndroidAPS> Konfiguracja> Źródło BG> xdrip.
 * Dostosuj ustawienia w xDrip+ zgodnie ze stroną ustawień [ xDrip+ ](../Configuration/xdrip.md)
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### Jeśli używasz G5 z xdrip+
+### If using G5 with xdrip+
 
 * Jeśli jeszcze nie jest zainstalowany, pobierz [ xdrip ](https://github.com/NightscoutFoundation/xDrip) i postępuj zgodnie z instrukcjami dla nightscout ([ G4 bez udostępniania ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge), [ G4 z udostępnianiem](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless), [ G5 ](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support) ).
 * W Xdrip przejdź do Ustawienia> Zgodność z aplikacją Interapp> Lokalna transmisja danych i wybierz WŁ.
@@ -44,7 +64,7 @@ Aby dowiedzieć się więcej o szczegółach i powodach tych zaleceń, przeczyta
 * Wybierz w AndroidAPS> Konfiguracja> Źródło BG> xdrip.
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### Jeśli używasz G5 lub G6 ze zmodyfikowaną aplikacją Dexcom
+### If using G5 or G6 with patched Dexcom app
 
 * Pobierz apk z [ https://github.com/dexcomapp/dexcomapp ](https://github.com/dexcomapp/dexcomapp) i wybierz wersję, która pasuje do twoich potrzeb (mg/dl lub mmol/l, G5 lub G6).
 * Zatrzymaj działanie sensora i odinstaluj oryginalną aplikacje Dexcom - jeśli jeszcze do tej pory tego nie zrobiłeś.
@@ -52,7 +72,7 @@ Aby dowiedzieć się więcej o szczegółach i powodach tych zaleceń, przeczyta
 * Uruchom sensor
 * W zakładce AndroidAPS Konfiguracja > Źródło BG zaznacz DexcomG5 App (patched).
 
-### Jeśli używasz Dexcom G4 z kablem USB OTG (wysyłka danych do Nightscout)  
+### If using G4 with OTG cable ('traditional' Nightscout)…  
 
 
 * Pobierz aplikację Nightscout Uploader z Play Store i postępuj zgodnie z instrukcjami na [Nightscout](http://www.nightscout.info/wiki/welcome/basic-requirements).
@@ -62,14 +82,14 @@ Aby dowiedzieć się więcej o szczegółach i powodach tych zaleceń, przeczyta
 ## Dla użytkowników Libre z nakładką Bluetooth  
 
 
-Aby używać sensora Libre w charakterze pełnoprawnego systemu CGM przekazującego odczyt glukozy co 5 minut należy zakupić oddzielny adapter NFC-Bluetooth. Kompatybilne urządzenia to:
+To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
 
 * czytnik MiaoMiao <https://www.miaomiao.cool/>
 * czytnik Blucon Nightrider <https://www.ambrosiasys.com/howit>
 * czytnik BlueReader <https://bluetoolz.de/blueorder/#home>
 * zegarek Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-### Jeśli używasz xdrip...  
+### If using xdrip...  
 
 
 * Jeśli jeszcze nie jest zainstalowany, pobierz i zainstaluj xdrip i postępuj zgodnie z instrukcjami na [ LimiTTEer ](https://github.com/JoernL/LimiTTer), [ Libre Alarm ](https://github.com/pimpimmi/LibreAlarm/wiki) lub [ BlueReader ](https://unendlichkeit.net/wordpress/?p=680&lang=en) ([ Sprzęt ](https://bluetoolz.de/wordpress/)).
@@ -78,8 +98,9 @@ Aby używać sensora Libre w charakterze pełnoprawnego systemu CGM przekazując
 * Jeśli chcesz używać AndroidAPS do wprowadzania kalibracji, wówczas w xdrip przejdź do Ustawienia> Zgodność z aplikacjami interapp> > Akceptuj Kalibracje i ustaw na WŁ. Możesz również przejrzeć opcje w ustawieniach > mniej typowe ustawienia > Zaawansowane ustawienia kalibracji.
 * Wybierz w AndroidAPS> Konfiguracja> Źródło BG> xdrip.
 * Ustawienia w xDrip+ ze zrzutami ekranu znajdziesz na stronie [ ustawień xDrip+ ](../Configuration/xdrip.md)
+* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### Jeśli używasz Glimp...  
+### If using Glimp...  
 
 
 * Jeżeli nie masz zainstalowanego i skonfigurowanego programu Glimp - pobierz aplikację i stosuj się do wskazówek zawartych na stronie [nightscout](http://www.nightscout.info/wiki/welcome/nightscout-for-libre).
@@ -90,11 +111,11 @@ Aby używać sensora Libre w charakterze pełnoprawnego systemu CGM przekazując
 
 The easiest way to use Eversense with AndroidAPS is to install the modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk) (and unistall the original one first).
 
-**Ostrzeżenie: Odinstalowanie starej aplikacji spowoduje utratę lokalnych danych historycznych (starszych niż tydzień)!**
+**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
 
-Aby korzystać z danych Eversense w AndroidAPS, musisz zainstalować aplikację ESEL i aktywować tam „Wyślij do AAPS i xDrip”. W konfiguracji AndroidAPS > źródło BG wybierz „MM640g”. Ponieważ dane glukozy z Eversense mogą być czasami „zaszumione”, w ESEL należy włączyć „gładkie dane”. Jest to lepsze niż wybranie opcji „Zawsze używaj krótkiej średniej delty zamiast prostej delty” w AAPS.
+To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
 
-Możesz znaleźć inną instrukcję do używania xDrip z Eversense [ tutaj ](https://github.com/BernhardRo/Esel/tree/master/apk).
+You can find another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
 
 ## Dla użytkowników pomp serii MM640G lub MM630G  
 
@@ -112,7 +133,7 @@ Możesz znaleźć inną instrukcję do używania xDrip z Eversense [ tutaj ](htt
 ## Jeśli masz inny zestaw CGM, który wysyła dane do Nightscout wtedy  
 
 
-Jeśli masz inny zestaw CGM, który wysyła dane do [ Nightscout ](http://www.nightscout.info) wtedy  
+If you have any other CGM set up that sends your data to [Nightscout](http://www.nightscout.info) then  
 
 
 * W Ustawieniach AndroidAPS w części dotyczącej NSClient wpisz adres swojego serwera Nightscout i tajny klucz API.
