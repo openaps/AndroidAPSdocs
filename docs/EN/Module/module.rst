@@ -16,8 +16,9 @@ Necessary Modules
 =====================
 Good individual dosage algorithm for your diabetes therapy
 ------------------
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings not to make severe mistakes.
-Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboratoin with your diabetes team. Some loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes.
+Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. 
+Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
 
 The profile includes
 
@@ -52,7 +53,7 @@ If you need to **privately buy** a pump then you can find various distributors i
 
 The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
 
-The advantages of the DanaR/RS as the pump of choice however are:
+The advantages of the DanaR/RS vs. the Combo as the pump of choice however are:
 
 - The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
 - Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
@@ -97,7 +98,11 @@ Users are creating a `list of tested phones and watches <https://docs.google.com
 To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
 Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
-  
+
+xDrip+
+-------
+Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`_. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+
 Sample Setup
 ============
 If you want to get a step by step example, you might want to look at a sample setup. The first sample setup is quite old, but should be still up-to-date.
@@ -106,14 +111,14 @@ If you want to get a step by step example, you might want to look at a sample se
    :maxdepth: 1
    :glob:
    
-   `Sample Setup 1 <../Getting-Started/Sample-Setup.md>`_
+   Sample Setup 1 <../Getting-Started/Sample-Setup.md>
  
   
 What to do while waiting for modules
 ============================================
 It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where approporiate) adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AndroidAPS. Using this mode, AndroidAPS gives treatment advices you can manually execute.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, read what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Done?**
 If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ (Overview Part 2) before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
