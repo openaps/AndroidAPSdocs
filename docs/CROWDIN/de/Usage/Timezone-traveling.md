@@ -6,56 +6,75 @@ Es gibt keine Probleme beim Zeitzonenwechsel im Smartphone, da die Pumpe keine H
 
 ## DanaRv2, DanaRS
 
-Diese Pumpen benötigen besondere Aufmerksamkeit, weil AndroidAPS die Historie der Pumpe verwendet, die Einträge in der Pumpe aber keine Zeitangaben beinhalten. Das bedeutet, dass ein einfacher Zeitzonenwechsel im Smartphone dazu führt, dass Einträge mit verschiedenen Zeitzonen ausgelesen und doppelt angezeigt werden. Um dies zu vermeiden, führe folgende Schritte bei jedem Zeitzonenwechsel aus:
+Diese Pumpen benötigen besondere Aufmerksamkeit, weil AndroidAPS die Historie der Pumpe verwendet, die Einträge in der Pumpe aber keine Zeitangaben beinhalten. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
-* setze das Smartphone vor der Reise auf manuellen Zeitzonenwechsel
+To avoid this there are two possibilities:
 
-Wenn du aus dem Flugzeug steigst:
+### Option 1: Keep home time and timeshift profile
 
-* schalte die Pumpe aus
-* ändere die Zeitzone auf dem Smartphone
-* schalte das Smartphone aus, schalte die Pumpe an
-* lösche die Historie der Pumpe
-* ändere die Zeit in der Pumpe
-* schalte das Smartphone an
-* lasse das Smartphone mit der Pumpe verbinden und verfeinere die Zeiteinstellung
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+* Phone must keep your standard time as at home for the whole travel period.
+* Time-shift your profile according to time difference between home time and destination time.
+   
+   * Long-press profile name (middle of top section on homescreen)
+   * Select 'Profile Switch'
+   * Set 'Time shift' according to your destination.
+   
+   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   
+   * i.e. Vienna -> New York: profile switch +6 hours
+   * i.e. Vienna -> Sydney: profile switch -8 hours
+
+### Option 2: Delete pump history
+
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+
+When get out of plane:
+
+* turn off pump
+* change timezone on phone
+* turn off phone, turn on pump
+* clear history in pump
+* change time in pump
+* turn on phone
+* let phone connect to the pump and fine-tune time
 
 ## Combo
 
 ## Insight
 
-Der Treiber passt die Uhrzeit in der Pumpe automatisch an die Zeit im Smartphone an.
+The driver automatically adjusts the time of the pump to the time of the phone.
 
-Die Insight dokumentiert auch die historischen Einträge, in denen die Zeit geändert wurde und von welcher (alten) Zeit zu welcher (neuen) Zeit. So kann die richtige Zeit in AAPS trotz der Zeitänderung bestimmt werden.
+The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
 
-Es kann zu Ungenauigkeiten in den TDDs führen. Aber es sollte kein Problem sein.
+It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
 
-Der Insight-Nutzer muss sich also nicht um Zeitumstellung oder den Wechsel von Zeitzonen kümmern. Es gibt eine Ausnahme zu dieser Regel: Die Insight Pumpe hat eine kleine interne Batterie, um die Zeit immer aktuell zu halten etc. während Du die "normale" Batterie wechselst. Wenn der Batteriewechsel zu lange dauert, kann diese interne Batterie leer werden, die Uhr wird zurückgesetzt und Du wirst gebeten, Zeit und Datum nach dem Einlegen der neuen Batterie neu einzugeben. In diesem Fall werden alle Einträge vor dem Batteriewechsel in der Berechnung in AAPS übersprungen, da die richtige Zeit nicht korrekt erkannt werden kann.
+So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skiped in calculation in AAPS as the correct time cannot be identified properly.
 
 # Zeitumstellung (Sommer-/Winterzeit)
 
-Je nach Pumpe und CGM können Zeitsprünge zu Problemen führen. Bei der Combo wird z.B. die Pumpenhistorie neu gelesen und doppelte Einträge werden erstellt. Nimm daher bitte die folgenden Anpassungen tagsüber vor.
+Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
-Nutze den Bolus-Kalkulator erst dann wieder, wenn Du sicher bist, dass COB und IOB absolut korrekt sind. Wahrscheinlich ist es besser, diese für ein paar Stunden nach der Zeitumstellung nicht zu nutzen.
+If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
 
 ## Accu-Chek Combo
 
-AndroidAPS wird Dich alarmieren, wenn die Zeit zwischen Pumpe und Smartphone zu sehr abweicht. Bei der Zeitumstellung wäre dies unerfreulicherweise mitten in der Nacht. Um diese nächtliche Alarmierung zu vermeiden und statt dessen durchzuschlafen, solltest Du wie folgt vorgehen:
+AndroidAPS will issue an alarm if time between pump and phone differs to much. In case of DST time adjustment this would be in the middle of the night. To prevent this and enjoy your sleep instead follow these steps:
 
-1. Schalte den automatischen Wechsel der Zeitzone in deinem Smartphone aus. 2) Wähle eine Zeitzone mit der gewünschten Zeit aber ohne Zeitumstellung. Für die Mitteleuropäische Zeit (MEZ) könnte dies z.B. "Brazzaville" (Kongo) sein. Stelle die Zeitzone deines Smartphones manuell auf Kongo. 3. Aktuallisiere die Pumpe via AndroidAPS. 4. Prüfe den Behandlungs Tab (BEH)... Falls Du doppelte Einträge entdeckst:
+1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. 4) Check the Treatments tab... If you see duplicate treatments:
 
-* KEINESFALLS auf "Lösche Behandlungen in der Zukunft" klicken!
-* Drücke "Löschen" bei allen künftigen und doppelten Behandlungen. Dadurch werden die Behandlungen außer Kraft gesetzt statt nur gelöscht und somit nicht mehr beim IOB berücksichtigt. 5. Falls der Status unklar sein sollte: Pausiere den Loop für mindestens eine DIA (Insulin-Wirkdauer) oder Max-Carb-Time - je nach dem welche Zeitdauer größer ist.
+* DON'T press "delete future treatments"
+* Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore. 5) If the state is unclear - please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.
 
-Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem IOB (z.B. eine Stunde vor dem Essen).
+A good time to make this switch would be with low IOB. E.g. an hour before a meal.
 
 ## Accu-Chek Insight
 
-* Zeitumstellung erfolgt automatisch. Keine Maßnahme erforderlich.
+* Change to DST is done automatically. No action required.
 
 ## Andere Pumpen - neu ab AAPS Version 2.2
 
-<b><font color="#FF0000">Du musst AAPS auf Version 2.2 (oder höher) updaten, um diese Funktion nutzen zu können!</font></b>
+**You have to update AAPS to use this feature!**
 
-* Um Schwierigkeiten zu vermeiden, wird der Loop für 3 Stunden nach der Zeitumstellung deaktiviert. Dies geschieht aus Sicherheitsgründen (IOB zu hoch aufgrund von doppeltem Boluseinträgen vor der Zeitumstellung).
-* Du erhälst 24 Stunden vor der Zeitumstellung einen Hinweis auf dem Startbildschirm, dass der Loop vorübergehend pausiert wird. Diese Nachricht erscheint ohne Ton, Vibration oder anderes.
+* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
+* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
