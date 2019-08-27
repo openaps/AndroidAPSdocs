@@ -53,33 +53,33 @@ http://sourceforge.net/projects/git-osx-installer/)
 
 Нажмите "Далее".
 
-![Screenshot 2](../images/Installation_Screenshot_02.png)
+![Снимок экрана 2](../images/Installation_Screenshot_02.png)
 
 Выберите "Стандартная" установка и нажмите "Далее".
 
-![Screenshot 3](../images/Installation_Screenshot_03.png)
+![Снимок экрана 3](../images/Installation_Screenshot_03.png)
 
 Для интерфейса выберите тему, которая вам нравится. (В этом руководстве мы использовали тему"Intellij". Затем нажмите "Далее". Это всего лишь цветовая схема. Можете выбрать любую (напр. Darcula для темного режима). Этот выбор не влияет на построение APK.
 
-![Screenshot 4](../images/Installation_Screenshot_04.png)
+![Снимок экрана 4](../images/Installation_Screenshot_04.png)
 
 Нажмите "Далее" в диалоге "Проверить настройки".
 
-![Screenshot 5](../images/Installation_Screenshot_05.png)
+![Снимок экрана 5](../images/Installation_Screenshot_05.png)
 
 Эмулятор Android (для эмуляции смартфона на Win или Mac) не используется при построении APK. Нажмите "Готово", чтобы завершить установку и при необходимости прочитать документацию.
 
-![Screenshot 6](../images/Installation_Screenshot_06.png)
+![Снимок экрана 6](../images/Installation_Screenshot_06.png)
 
 Android Studio загружает много программных компонентов. Можете нажать на кнопку "Показать детали" если хотите увидеть, что происходит, но в принципе это не важно.
 
-![Screenshot 7](../images/Installation_Screenshot_07.png)
+![Снимок экрана 7](../images/Installation_Screenshot_07.png)
 
-![Screenshot 8](../images/Installation_Screenshot_08.png)
+![Снимок экрана 8](../images/Installation_Screenshot_08.png)
 
 После завершения загрузок нажмите кнопку "Готово".
 
-![Screenshot 9](../images/Installation_Screenshot_09.png)
+![Снимок экрана 9](../images/Installation_Screenshot_09.png)
 
 * Аплодисменты, аплодисменты. Установка Android Studio завершена и можно приступить к клонированию исходного кода. Можно сделать короткий перерыв.
 
@@ -87,102 +87,102 @@ Android Studio загружает много программных компон
 
 * Используйте клон Git в Android Studio, как показано на снимках экрана ниже. Выберите "Проверить проект из системы управления версиями" при помощи Git в качестве конкретной системы управления версиями.
 
-![Screenshot 10](../images/Installation_Screenshot_10.png)
+![Снимок экрана 10](../images/Installation_Screenshot_10.png)
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
 Заполните URL-адрес главного репозитория AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") и нажмите "clone" (клонировать).
 
-![Screenshot 13](../images/Installation_Screenshot_13.png)
+![Снимок экрана 13](../images/Installation_Screenshot_13.png)
 
 Android Studio начнет клонирование. Не нажимайте на "Background" (фоновое клонирование), так как все происходит быстро и выбор этой опции может лишь усложнить работу.
 
-![Screenshot 14](../images/Installation_Screenshot_14.png)
+![Снимок экрана 14](../images/Installation_Screenshot_14.png)
 
 Завершите установку открытием проекта, нажав "Да".
 
-![Screenshot 15](../images/Installation_Screenshot_15.png)
+![Снимок экрана 15](../images/Installation_Screenshot_15.png)
 
 Выберите стандартный «создатель оболочки gradle по умолчанию» и нажмите «OK».
 
-![Screenshot 16](../images/Installation_Screenshot_16.png)
+![Снимок экрана 16](../images/Installation_Screenshot_16.png)
 
 Прочитайте и закройте экран "Совет дня", нажав "Закрыть".
 
-![Screenshot 17](../images/Installation_Screenshot_17.png)
+![Снимок экрана 17](../images/Installation_Screenshot_17.png)
 
 * Отлично, теперь у нас есть своя копия исходного кода и мы готовы начать сборку.
 * Теперь мы приближаемся к нашему первому сообщению об ошибке. К счастью, Android Studio будет сразу предлагать нам решения.
 
 Нажмите "Установить недостающую платформу(ы) и синхронизировать проект", так как Android Studio нуждается в установке отсутствующей платформы.
 
-![Screenshot 18](../images/Installation_Screenshot_18.png)
+![Снимок экрана 18](../images/Installation_Screenshot_18.png)
 
 Примите лицензионное соглашение, выбрав "Принять" и нажав "Далее".
 
-![Screenshot 19](../images/Installation_Screenshot_19.png)
+![Снимок экрана 19](../images/Installation_Screenshot_19.png)
 
 Как сказано в диалоге, подождите окончания загрузки.
 
-![Screenshot 20](../images/Installation_Screenshot_20.png)
+![Снимок экрана 20](../images/Installation_Screenshot_20.png)
 
 Теперь она завершена. Нажмите "Готово".
 
-![Screenshot 21](../images/Installation_Screenshot_21.png)
+![Снимок экрана 21](../images/Installation_Screenshot_21.png)
 
 Таак, следующая ошибка. Но Android Studio предлагает аналогичное решение. Нажмите "Установить инструменты сборки и синхронизировать проект", так как Android Studio нуждается в загрузке недостающих инструментов.
 
-![Screenshot 22](../images/Installation_Screenshot_22.png)
+![Снимок экрана 22](../images/Installation_Screenshot_22.png)
 
 Как сказано в диалоге, подождите окончания загрузки.
 
-![Screenshot 23](../images/Installation_Screenshot_23.png)
+![Снимок экрана 23](../images/Installation_Screenshot_23.png)
 
 Теперь она завершена. Нажмите "Готово".
 
-![Screenshot 24](../images/Installation_Screenshot_24.png)
+![Снимок экрана 24](../images/Installation_Screenshot_24.png)
 
 И еще одна ошибка, нуждающаяся в обработке так как Android Studio снова должна скачать отсутствующую платформу. Нажмите "Установить недостающую платформу(ы) и синхронизировать проект".
 
-![Screenshot 25](../images/Installation_Screenshot_25.png)
+![Снимок экрана 25](../images/Installation_Screenshot_25.png)
 
 Как сказано в диалоге, подождите окончания загрузки.
 
-![Screenshot 26](../images/Installation_Screenshot_26.png)
+![Снимок экрана 26](../images/Installation_Screenshot_26.png)
 
 Теперь она завершена. Нажмите "Готово".
 
-![Screenshot 27](../images/Installation_Screenshot_27.png)
+![Снимок экрана 27](../images/Installation_Screenshot_27.png)
 
 Нажмите "Установить инструменты сборки и синхронизировать проект", так как Android Studio нуждается в загрузке недостающих инструментов.
 
-![Screenshot 28](../images/Installation_Screenshot_28.png)
+![Снимок экрана 28](../images/Installation_Screenshot_28.png)
 
 Как сказано в диалоге, подождите окончания загрузки.
 
-![Screenshot 29](../images/Installation_Screenshot_29.png)
+![Снимок экрана 29](../images/Installation_Screenshot_29.png)
 
 Теперь она завершена. Нажмите "Готово".
 
-![Screenshot 30](../images/Installation_Screenshot_30.png)
+![Снимок экрана 30](../images/Installation_Screenshot_30.png)
 
 Да, сообщения об ошибках пропали, и первая сборка gradle запущена. Настало время попить водички?
 
-![Screenshot 31](../images/Installation_Screenshot_31.png)
+![Снимок экрана 31](../images/Installation_Screenshot_31.png)
 
 Android Studio рекомендует обновить систему gradle. **Не обновляйте gradle!** Это может привести к трудностям!
 
 Нажмите "Не напоминать снова для этого проекта".
 
-![Screenshot 32](../images/AS_NoGradleUpdate.png)
+![Снимок экрана 32](../images/AS_NoGradleUpdate.png)
 
 Сборка возобновляется.
 
-![Screenshot 33](../images/Installation_Screenshot_33.png)
+![Снимок экрана 33](../images/Installation_Screenshot_33.png)
 
 Да, первая сборка завершена успешно, но мы еще не закончили.
 
-![Screenshot 34](../images/Installation_Screenshot_34.png)
+![Снимок экрана 34](../images/Installation_Screenshot_34.png)
 
 ## Создание подписанного APK
 
@@ -201,7 +201,7 @@ Android Studio рекомендует обновить систему gradle. **
 
 Нажмите "Create new" (cоздать новый...) для создания магазина ключей. В этом случае магазин ключей является всего лишь файлом, в котором хранится информация о цифровой подписи. Он зашифрован и информация защищена паролями. Мы предлагаем хранить его в домашней папке и помнить пароли, но если потеряете эту информацию, то просто должны создать новую. Самое лучшее - бережно хранить эту информацию.
 
-![Screenshot 41](../images/Installation_Screenshot_41.png)
+![Снимок экрана 41](../images/Installation_Screenshot_41.png)
 
 * Заполните информацию для следующего диалога. 
   * Путь к хранилищу ключа: путь к файлу магазина ключей
@@ -211,11 +211,11 @@ Android Studio рекомендует обновить систему gradle. **
   * Вы можете оставить срок валидности по умолчанию 25 лет.
   * Обязательны к заполнению только имя и фамилия, но можно заполнить остальную информацию. Затем нажмите "OK".
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
+![Снимок экрана 42](../images/Installation_Screenshot_42.png)
 
 Заполните информацию последнего диалога в этой серии и нажмите "Далее".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+![Снимок экрана 43](../images/Installation_Screenshot_43.png)
 
 Выберите "full" (полный) в качестве атрибута для сгенерированного приложения. Выберите V1 "Jar Signature" (V2 необязательно) и нажмите "Finish" (закончить). В дальнейшем может пригодиться следующая информация.
 
