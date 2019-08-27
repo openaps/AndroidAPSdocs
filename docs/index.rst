@@ -1,5 +1,5 @@
 AndroidAPS
-================
+============
 
 .. toctree::
    :maxdepth: 1
@@ -22,6 +22,6 @@ AndroidAPS
    Português (Portuguese) </CROWDIN/pt/index>
    Românesc (Romanian) </CROWDIN/ro/index>
    Русский (Russian) </CROWDIN/ru/index>
-   Slovensky (Slavak) </CROWDIN/sk/index>
-   Svenska (Swedish)</CROWDIN/se/index>
+   Slovensky (Slovak) </CROWDIN/sk/index>
+   Svenska (Swedish) </CROWDIN/se/index>
    Türkçe (Turkish) </CROWDIN/tr/index>
