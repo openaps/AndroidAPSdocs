@@ -8,7 +8,7 @@ An APS can't do the job as well as a biological pancreas does, but it can make t
 A note of caution: AndroidAPS is not regulated by any medical authority in any country. Using AndroidAPS is essentially carrying out a medical experiment on yourself. Setting up the system requires determination and technical knowledge. If you don't have the technical know-how at the beginning, you will by the end. All the information you need can be found in these documents, elsewhere online, or from others who have already done it -- you can ask them in Facebook groups or other forums. Many people have successfully built AndroidAPS and are now using it entirely safely, but it is essential that every user:
 
 * Builds the system themselves so that they thoroughly understand how it works
-* Adjusts the settings to suit their own diabetes
+* Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 * Maintains and monitors the system to ensure it is working properly
 
 .. note:: 
