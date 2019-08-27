@@ -9,7 +9,7 @@ Basics first
 General hints for looping with G6
 ================================
 
-See `Dexcom G6 page <../Configuration/Dexcom.md>`_ for details on setting Dexcom G6 sensor and solutions for common difficulties with Dexcom G6.
+See `Dexcom G6 page <../Configuration/Dexcom.html>`_ for details on setting Dexcom G6 sensor and solutions for common difficulties with Dexcom G6.
 
 What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of: 
 
@@ -40,7 +40,7 @@ If using G6 with patched Dexcom app
 Troubleshooting G6
 ====================
 
-General Troubleshoothing for CGMs can be found `here <Hardware/GeneralCGMRecommendation#Troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation#Troubleshooting>`_.
 
 New transmitter with running sensor
 --------------------------------------
