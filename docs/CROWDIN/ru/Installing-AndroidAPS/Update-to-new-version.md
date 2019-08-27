@@ -80,7 +80,7 @@
 
 Затем нажмите "Далее".
 
-![Key store path](../images/KeystorePathUpdate.PNG)
+![Путь к магазину ключей](../images/KeystorePathUpdate.PNG)
 
 Выберите "full" (полный) в качестве атрибута для сгенерированного приложения. Выберите V1 "Jar Signature" (V2 необязательно) и нажмите "Finish" (закончить). В дальнейшем может пригодиться следующая информация.
 
@@ -125,7 +125,7 @@
 
 Версию AAPS можно проверить, нажав на меню из трех точек сверху справа "о приложении".
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Версия AAPS установлена](../images/Update_VersionCheck.png)
 
 # Устранение неполадок
 
@@ -135,25 +135,25 @@
 
 Приложение успешно построено и может быть перенесено на телефон.
 
-![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
+![игнорировать предупреждение компилятора Kotline](../images/GIT_WarningIgnore.PNG)
 
 ## Не удалось загрузить… / Работа оффлайн
 
 Если вы получите такое сообщение об ошибке
 
-![Warning could not download](../images/GIT_Offline1.jpg)
+![Не удалось загрузить предупреждение](../images/GIT_Offline1.jpg)
 
 убедитесь, что «работа оффлайн» отключена.
 
-File -> Settings
+Файл -> параметры
 
-![Settings offline work](../images/GIT_Offline2.jpg)
+![Настройки автономной работы](../images/GIT_Offline2.jpg)
 
 ## Неодобренные изменения
 
-If you receive failure message like
+Если вы получите такое сообщение об ошибке:
 
-![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+![Неудачные изменения](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Вариант 1
 
@@ -168,7 +168,7 @@ If you receive failure message like
 
 ## Приложение не установлено
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![приложение не установлено](../images/Update_AppNotInstalled.png)
 
 * Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
 * Если на вашем телефоне появилось сообщение "приложение не установлено", то выполните следующее: 
@@ -181,11 +181,11 @@ If you receive failure message like
 
 ## Приложение установлено, но старая версия
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
+Если вы успешно построили приложение, перенесли его на телефон и установили, но номер версии остается прежним, то возможно пропущен шаг слияния в [инструкции по обновлению](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
 
 ## Ничего из вышеперечисленного не сработало
 
-If non of the above tips helped you might consider building the app from scratch:
+Если вышеперечисленные советы не помогли попробуйте заново начать сборку приложения:
 
 1. [Экспорт настроек](../Usage/Objectives#export-import-settings) (уже установленной на телефоне версии AAPS)
 2. Приготовьте пароль ключа и пароль для хранения ключа Если вы забыли пароли, вы можете найти их в файлах проекта, как описано [здесь](https://youtu.be/nS3wxnLgZOo).
@@ -200,8 +200,8 @@ If non of the above tips helped you might consider building the app from scratch
 
 ## Сценарий худшего варианта
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
 
-Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Убедитесь, что удалены все файлы, связанные с Android Studio. Руководство можно найти в сети: <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+Установите Android Studio с нуля, как описано [здесь](/Installing-AndroidAPS/Building-APK#install-android-studio) и **не обновляйте gradle**.
