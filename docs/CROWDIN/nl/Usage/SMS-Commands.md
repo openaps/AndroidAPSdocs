@@ -1,90 +1,101 @@
 # SMS-commando's
 
-Ga in je telefoon instellingen naar Apps > AndroidAPS > Machtigingen en schakel SMS in.
+**Note**: SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
 
-In AndroidAPS ga naar Configurator, scroll naar kopje Algemeen en schakel SMS Commando's in. Ga via het tandwiel-icoontje naar de instellingen en voer het(de) telefoonnummer(s) in waar de SMS-commando's vandaan mogen komen. Meerdere nummers kun je scheiden door puntkomma's, gebruik nergens spaties of andere tekens (bijvoorbeeld +31612345678;+31612345679). Schakel ook 'Sta SMS commando's toe' in.
+## Safety First
 
-Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vetgedrukte** SMS commando's naar de telefoon waar AndroidAPS opstaat. De telefoon zal bevestigen dat het commando of de statusverandering succesvol is doorgevoerd.
+- AndroidAPS heeft de optie om de telefoon (van bijvoorbeeld een kind) op afstand te kunnen bedienen via SMS-berichten. Bedenk wel, dat de telefoon die is ingesteld om externe commando's te geven, kan worden gestolen. Beveilig die telefoon dus goed, met op z'n minst een pincode.
+- Nadat jouw externe commando (bijv. bolus geven, profiel aanpassen) is uitgevoerd, zal AndroidAPS een bevestigings-SMS sturen. Het wordt aangeraden om ten minste 2 telefoonnummers te koppelen in de SMS communicator instellingen. Mocht één van de gekoppelde telefoons worden gestolen, dan zul je deze bevestigings-SMS'jes evengoed nog op het tweede telefoonnummer binnenkrijgen.
+
+## How it works
+
+In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+
+In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+
+Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+
+**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
 ## BG
 
-- Laatste BG: 5,6, Verschil:-0,2 mmol, IOB: 0,20E (Bolus: 0,10E Basaal: 0,10E)
+- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 
 ## LOOP STOP/DISABLE
 
-- Loop was uitgeschakeld
+- Loop has been disabled
 
 ## LOOP START/ENABLE
 
-- Loop was ingeschakeld
+- Loop has been enabled
 
 ## LOOP STATUS
 
-- Loop is uitgeschakeld
-- Loop is ingeschakeld
-- Gepauzeerd (10 min)
+- Loop is disabled
+- Loop is enabled
+- Suspended (10 min)
 
 ## LOOP SUSPEND 20
 
-- Loop wordt onderbroken gedurende 20 minuten
+- Loop suspended for 20 minutes
 
 ## LOOP RESUME
 
-- Loop hervat
+- Loop resumed
 
 ## TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers *****LET OP: hiermee haal je behandelingen op uit Nightscout. Zorg dat je de instelling "Alleen NS upload" in de Configurator bij NSClient instellingen UIT hebt staan, anders worden al je behandelingen vervangen door 'niks' en ben je ze dus kwijt! Dat is wel weer op te lossen, maar voorkomen is beter.
+- TERATMENTS REFRESH 1 receivers
 
 ## NSCLIENT RESTART
 
 - NSCLIENT RESTART 1 receivers
 
-## POMP
+## PUMP
 
-- Laatste Verbinding: 1 min geleden Temp: 0,00E/uur @11:38 5/30min IOB: 0,5E Reservoir: 34E Batterij: 100
+- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- Om het tijdelijke basaal te stoppen antwoord met de code EmF
+- To stop temp basal reply with code EmF
 
 ## BASAL 0.3
 
-- Om een tijdelijk basaal van 0,3 E/uur voor 30 min te starten antwoord met de code Swe
+- To start basal 0.3U/h for 30 min reply with code Swe
 
 ## BASAL 0.3 20
 
-- Om een tijdelijk basaal van 0,3 E/uur voor 20 min te starten antwoord met de code Swe
+- To start basal 0.3U/h for 20 min reply with code Swe
 
 ## BASAL 30%
 
-- Om een tijdelijk basaal van 30% voor 30 min te starten antwoord met code Swe
+- To start basal 30% for 30 min reply with code Swe
 
 ## BASAL 30% 50
 
-- Om een tijdelijk basaal van 30% voor 50 min te starten antwoord met code Swe
+- To start basal 30% for 50 min reply with code Swe
 
 ## BOLUS 1.2
 
-- Om een bolus van 1,2 E toe te dienen antwoord met de code Rrt
-- Externe bolus niet toegestaan (*niet toegestaan als je dit binnen 15 min na je laatste bolus commando stuurt, of als externe commando's niet zijn toegestaan*)
+- To deliver bolus 1.2U reply with code Rrt
+- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
 
 ## EXTENDED STOP/CANCEL
 
-- Om een vertraagde bolus te stoppen antwoord met de code EmF
+- To stop extended bolus reply with code EmF
 
 ## EXTENDED 2 120
 
-- Om een vertraagde bolus van 2E voor 120 min te starten antwoord met code EmF
+- To start extended bolus 2U for 120 min reply with code EmF
 
 ## CAL 5.6
 
-- Om een kalibratie van 5,6 mmol/L te verzenden antwoord met de code Rrt
-- Kalibratie verzonden (*als xDrip is geïnstalleerd. In de xDrip+ instellingen moet je aangevinkt hebben dat kalibraties van volgers geaccepteerd worden*)
+- To send calibration 5.6 reply with code Rrt
+- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
 
 ## PROFILE STATUS
 
-- Profiel 1
+- Profile1
 
 ## PROFILE LIST
 
@@ -92,8 +103,8 @@ Stuur vanaf de zojuist ingevoerde telefoonnummer(s) één van onderstaande **vet
 
 ## PROFILE 1
 
-- Om van profiel te wisselen naar Profile1 100% antwoord met code Any
+- To switch profile to Profile1 100% reply with code Any
 
 ## PROFILE 2 30
 
-- Om van profiel te wisselen naar Profile2 30% antwoord met code Any
+- To switch profile to Profile2 30% reply with code Any
