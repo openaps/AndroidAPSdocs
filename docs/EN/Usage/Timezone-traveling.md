@@ -15,13 +15,13 @@ To avoid this there are two possibilities:
 * Turn off 'Automatic date and time' in your phone settings (manual time zone change).
 * Phone must keep your standard time as at home for the whole travel period.
 * Time-shift your profile according to time difference between home time and destination time.
-   * i.e. Vienna -> New York: -6 hours
-   * i.e. Vienna -> Sydney: +8 hours
+   * i.e. Vienna -> New York: profile switch +6 hours
+   * i.e. Vienna -> Sydney: profile switch -8 hours
    * Long-press profile name (middle of top section on homescreen)
    * Select 'Profile Switch'
    * Set 'Time shift' according to your destination.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift.png)
+   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
 
 ### Option 2: Delete pump history
 
