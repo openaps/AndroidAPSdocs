@@ -123,7 +123,7 @@
 
 ## Проверить версию AAPS на телефоне
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Версию AAPS можно проверить, нажав на меню из трех точек сверху справа "о приложении".
 
 ![AAPS version installed](../images/Update_VersionCheck.png)
 
@@ -131,19 +131,19 @@ You can check the AAPS version on your phone by clicking the three dots menu on 
 
 ## Предупреждение компилятора Kotlin
 
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
+Если сборка завершена успешно, но вы получаете предупреждения компилятора Kotlin, просто проигнорируйте эти предупреждения.
 
-App was build successfully and can be transferred to phone.
+Приложение успешно построено и может быть перенесено на телефон.
 
 ![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
 
 ## Не удалось загрузить… / Работа оффлайн
 
-If you get a failure message like this
+Если вы получите такое сообщение об ошибке
 
 ![Warning could not download](../images/GIT_Offline1.jpg)
 
-make sure that ‘Offline work’ is disabled.
+убедитесь, что «работа оффлайн» отключена.
 
 File -> Settings
 
