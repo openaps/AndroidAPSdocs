@@ -1,4 +1,4 @@
-# List of tested Phones
+# Liste der getesteten Smartphones
 
 Benutzer haben eine [Liste von getesteten Handys und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) erstellt.
 
@@ -8,6 +8,6 @@ Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste is
 
 Probleme mit der Tabelle bitte per E-Mail an <hardware@androidaps.org> melden. Wenn du Handys oder Smartwatches zum Testen zur Verfügung stellen möchtest, bitte eine E-Mail an [donations@androidaps.org](mailto:hardware@androidaps.org) schreiben.
 
-# Phone Background
+# Handy Hintergrundbild
 
 ![Handy Hintergrundbild](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Wenn du dein Smartphone mit AndroidAPS verschönern willst, kannst du das Hintergrundbild hier herunterladen: ![Hintergrundbild in hoher Auflösung.](../images/bg_phone.jpg)
