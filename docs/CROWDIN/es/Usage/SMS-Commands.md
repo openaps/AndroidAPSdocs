@@ -1,52 +1,63 @@
 # Comandos SMS
 
-En los ajustes de tu móvil Android ve a aplicaciones- AndroidAPS- permisos y habilitar SMS
+**Note**: SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
+
+## Safety First
+
+- AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
+- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+
+## How it works
+
+In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
 In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 
-Envía un SMS al teléfono con AndroidAPS desde el teléfono autorizado para usar comandos SMS usando algún comando en negrita abajo, el teléfono responderá para confirmar el comando pedido.
+Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+
+**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
 ## BG
 
-- Último valor de glucemia: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 
 ## LOOP STOP/DISABLE
 
-- Lazo se ha deshabilitado
+- Loop has been disabled
 
 ## LOOP START/ENABLE
 
-- Lazo se ha habilitado
+- Loop has been enabled
 
 ## LOOP STATUS
 
-- Lazo deshabilitado
-- Lazo habilitado
-- Suspendido (10 min)
+- Loop is disabled
+- Loop is enabled
+- Suspended (10 min)
 
 ## LOOP SUSPEND 20
 
-- Lazo suspendido durante 20 minutos
+- Loop suspended for 20 minutes
 
 ## LOOP RESUME
 
-- Lazo reiniciado
+- Loop resumed
 
 ## TREATMENTS REFRESH
 
-- Refresca tratamiento
+- TERATMENTS REFRESH 1 receivers
 
 ## NSCLIENT RESTART
 
-- Reinicia NSclient
+- NSCLIENT RESTART 1 receivers
 
 ## PUMP
 
-- Última conexión: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- Para cancelar un basal temporal responder con código EmF
+- To stop temp basal reply with code EmF
 
 ## BASAL 0.3
 
