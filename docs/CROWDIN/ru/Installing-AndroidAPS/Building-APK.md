@@ -91,7 +91,7 @@ Android Studio загружает много программных компон
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
+Заполните URL-адрес главного репозитория AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") и нажмите "clone" (клонировать).
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
