@@ -2,7 +2,7 @@
 
 AndroidAPS má sadu Cílů, které musíte dokončit a které vás provedou jeho funkcemi a nastaveními tak, aby pro vás smyčka nebyla nebezpečná. Zajistí vám, že jste nastavili všechny detaily z dříve uvedených sekcí správně, že rozumíte tomu, co váš systém dělá a proč, a že mu můžete důvěřovat.
 
-Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/Objectives#export-import-settings) a váš postup (již splněné cíle) bude zachován. Kromě vašeho postupu se uloží také řada jiných nastavení, například vaše bezpečnostní nastavení jako maximální bolus apod. Pokud neprovedete export a následný import svých nastavení, pak budete muset začít plnit cíle znovu od začátku. Z preventivních důvodů je vhodné si často zálohovat svá nastavení. Podrobnosti naleznete níže.  
+If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings) to keep your progress through the objectives. Kromě vašeho postupu se uloží také řada jiných nastavení, například vaše bezpečnostní nastavení jako maximální bolus apod. Pokud neprovedete export a následný import svých nastavení, pak budete muset začít plnit cíle znovu od začátku. Z preventivních důvodů je vhodné si často zálohovat svá nastavení. Podrobnosti naleznete níže.  
 
 ### Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry
 
@@ -43,10 +43,10 @@ Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/Ob
 ### Cíl 5: Vyladit uzavřenou smyčku, zvyšovat max IOB nad 0 a postupně snižovat cílovou glykémii
 
 * Zvyšte hodnotu 'Maximální celkový IOB, který OpenAPS nemůže překročit' (v OpenAPS se tento parametr označuje jako 'max-iob') nad 0 po dobu 1 dne. Výchozím doporučením je použít "průměrnou hodnotu bolusu k jídlu + 3× maximální denní bazální dávku" (pro algoritmus SMB) nebo "3× maximální denní bazální dávku" (pro starší algoritmus AMA). Tyto hodnoty byste však měli zvyšovat postupně, dokud neověříte, že jsou nastaveny správně (maximální denní bazální dávka = maximální bazální dávka za hodinu během dne).
-  
-  Toto doporučení by mělo být považováno za výchozí bod. Pokud ho nastavíte na 3x a uvidíte kroky, které vás rychle stahují dolů, pak snižte toto číslo. Pokud jste velmi rezistentní na inzulín, pomalu ho zvyšujte.
-  
-  ![maximální denní bazální dávka](../images/MaxDailyBasal.png)
+    
+    Toto doporučení by mělo být považováno za výchozí bod. Pokud ho nastavíte na 3x a uvidíte kroky, které vás rychle stahují dolů, pak snižte toto číslo. Pokud jste velmi rezistentní na inzulín, pomalu ho zvyšujte.
+    
+    ![maximální denní bazální dávka](../images/MaxDailyBasal.png)
 
 * Až si budete jistí hodnotou IOB, která vyhovuje vašemu způsobu používání smyčky, pak snižte své cílové glykémie na požadovanou úroveň.
 
@@ -67,24 +67,3 @@ Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/Ob
 * Musíte si přečíst [Kapitolu o SMB zde na wiki](../Usage/Open-APS-features#super-micro-bolus-smb) a [Kapitolu o oref1 v dokumentaci k openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html), abyste porozuměli tomu, jak SMB funguje, zejména na čem je založen princip nulových dočasných bazálů.
 * Následně byste měli [zvýšit maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) tak, aby SMB správně fungovaly. maxIOB nyní zahrnuje veškerý IOB, nejen ten z bazálů. To znamená, že pokud byl vydán bolus 8 U na jídlo a maxIOB je 7 U, nebudou vydány žádné SMB, dokud IOB neklesne pod 7 U. Pro začátek je dobré nastavit hodnotu maxIOB jako „průměrný bolus k jídlu + 3× maximální denní bazální dávka“ (maximální denní bazální dávka = maximální bazální dávka za hodinu během dne – viz [Cíl 5](../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) pro příklad)
 * Výchozí hodnota absorpce „min_5m_carbimpact“ se při přechodu z AMA na SMB mění ze 3 na 8. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
-
-## Export a import nastavení
-
-* **Exportujte nastavení** na svém starém telefonu.
-  
-  * Hamburger menu (v levém horním rohu obrazovky)
-  * Údržba
-  * Exportovat nastavení
-  * Zobrazí se umístění souboru exportu
-    
-    ![Nastavení exportu AAPS](../images/AAPS_ExportSettings.png)
-
-* **Přeneste** nastavení ze starého telefonu – použijte stejné umístění souboru, jaké se zobrazilo při exportu.
-
-* **Nainstalujte AndroidAPS** na nový telefon.
-* **Importujte nastavení** do nového telefonu 
-  * Hamburger menu (v levém horním rohu obrazovky)
-  * Údržba
-  * Importujte nastavení
-* **Poznámka pro uživatele Dana RS:** 
-  * Vzhledem k tomu, že jsou importována také nastavení týkající se připojení pumpy, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth. Nový telefon a pumpu prosím spárujte ručně.
