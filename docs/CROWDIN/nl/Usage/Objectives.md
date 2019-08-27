@@ -2,7 +2,7 @@
 
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen. De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 
-Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exporteren](../Usage/Objectives#export-import-settings) om je voortgang door de doelstellingen te behouden. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
+If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings) to keep your progress through the objectives. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen. Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen. Het is een goed idee om regelmatig een back-up van je instellingen te maken, voor het geval dat er iets met je telefoon gebeurt. Zie onderaan de pagina voor details.  
 
 ### Doel 1: Instellen van visualisatie en monitoring en analyseren van basaal en ratio's
 
@@ -43,10 +43,10 @@ Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exp
 ### Doel 5: Inregelen van de closed loop, verhoog de max IOB boven 0 en laat geleidelijk de streef BG dalen
 
 * Verhoog jouw 'Max totaal IOB dat OpenAPS niet kan overschrijden' (in OpenAPS heet dit 'max-iob') naar een getal groter dan 0. Het wordt standaard aanbevolen om de volgende formule te gebruiken: "gemiddelde maalbolus + 3x max dagelijkse basaal"(voor SMB algoritme) of "3x max dagelijkse basaal" (voor het oudere AMA algoritme). NB: in deze formule wordt met "max dagelijkse basaal" bedoeld de hoogste waarde van jouw basaal (in eenheden per uur). Wanneer je deze instelling hoger wilt hebben dan de standaardformule, doe dit dan altijd in kleine stapjes en test gedurende meerdere dagen het effect van die verhoging. 
-  
-  This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
-  
-  ![max daily basal](../images/MaxDailyBasal.png)
+    
+    This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
+    
+    ![max daily basal](../images/MaxDailyBasal.png)
 
 * Nadat je weet welke IOB instelling goed bij jou past, kun je ook je BG streefdoel instellingen gaan verlagen.
 
@@ -67,24 +67,3 @@ Als je **een andere telefoon** gaat gebruiken, dan kun je [jouw instellingen exp
 * Je moet het [SMB hoofdstuk in deze wiki](../Usage/Open-APS-features#super-micro-bolus-smb) en het hoofdstuk over [Oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) lezen om te begrijpen hoe SMB werkt, met name het idee achter de tijdelijke basaalstanden van nul (zero-temp).
 * Daarna kun je [maxIOB verhogen](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) zodat SMB goed kan functioneren. maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. Als je een bolus van 8E geeft voor een maaltijd en jouw maxIOB is 7E, dan zullen er geen SMBs worden afgegeven totdat IOB onder de 7E komt. Een goede start is maxIOB = gemiddelde maalbolus + 3x max dagelijkse basaal (max dagelijkse basaal = de hoogste waarde van jouw basaal (in eenheden per uur). Zie [doel 5](../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) voor een afbeelding)
 * Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_carbimpact in de Opname instellingen veranderen van 3 naar 8. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
-
-## Instellingen exporteren & importeren
-
-* **Exporteer instellingen** op je oude telefoon
-  
-  * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
-  * Onderhoud
-  * Exporteer instellingen
-  * Je ziet nu de locatie waar jouw instellingenbestand zal worden opgeslagen
-    
-    ![Exporteer AAPS instellingen](../images/AAPS_ExportSettings.png)
-
-* **Instellingen overdragen** van je oude naar je nieuwe telefoon doe je door de bestandslocatie op je oude telefoon op te zoeken, en het instellingenbestand te kopiëren naar jouw nieuwe telefoon. Bijvoorbeeld via Bluetooth, email, of met een usb-kabeltje via je computer.
-
-* **Installeer AndroidAPS** op je nieuwe telefoon.
-* **Importeer instellingen** op je nieuwe telefoon 
-  * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
-  * Onderhoud
-  * Importeer instellingen
-* **Tip voor Dana RS gebruikers:** 
-  * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Daarom moet je handmatig een Bluetooth verbinding maken (via de Bluetooth-instellingen van je telefoon) tussen jouw nieuwe telefoon en je pomp.
