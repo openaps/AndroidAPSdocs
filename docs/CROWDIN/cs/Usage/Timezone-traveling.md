@@ -6,19 +6,38 @@ Se změnou časového pásma v telefonu není žádný problém, protože tyto p
 
 ## DanaRv2, DanaRS
 
-Tyto pumpy vyžadují zvláštní péči, protože AndroidAPS z nich používá historické údaje, ale tyto záznamy v pumpě nemají údaj o časovém pásmu. To znamená, že pokud prostě změníte časové pásmo na telefonu, historické záznamy se z pumpy načtou v jiném pásmu a zdvojí se. Abyste tomu předešli, tak při každé změně časového pásma proveďte tyto kroky:
+Tyto pumpy vyžadují zvláštní péči, protože AndroidAPS z nich používá historické údaje, ale tyto záznamy v pumpě nemají údaj o časovém pásmu. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
-* přepněte telefon na ruční zadávání časového pásma, než začnete cestovat
+To avoid this there are two possibilities:
 
-Když vysednete z letadla:
+### Option 1: Keep home time and timeshift profile
 
-* vypněte pumpu
-* změňte časové pásmo na telefonu
-* vypněte telefon, zapněte pumpu
-* vymažte historii v pumpě
-* změňte čas na pumpě
-* zapněte telefon
-* nechejte telefon spojit se s pumpu a sladit se s jejím časem
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+* Phone must keep your standard time as at home for the whole travel period.
+* Time-shift your profile according to time difference between home time and destination time.
+   
+   * Long-press profile name (middle of top section on homescreen)
+   * Select 'Profile Switch'
+   * Set 'Time shift' according to your destination.
+   
+   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   
+   * i.e. Vienna -> New York: profile switch +6 hours
+   * i.e. Vienna -> Sydney: profile switch -8 hours
+
+### Option 2: Delete pump history
+
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+
+When get out of plane:
+
+* turn off pump
+* change timezone on phone
+* turn off phone, turn on pump
+* clear history in pump
+* change time in pump
+* turn on phone
+* let phone connect to the pump and fine-tune time
 
 ## Combo
 
@@ -55,7 +74,7 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 ## Other pumps - new as of AAPS version 2.2
 
-<b><font color="#FF0000">You have to update AAPS to use this feature!</font></b>
+**You have to update AAPS to use this feature!**
 
 * To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
 * You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
