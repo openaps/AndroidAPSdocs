@@ -2,7 +2,7 @@ Dexcom G5
 **********
 If using G5 with xdrip+
 ===========================
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G4 without share <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-wireless-bridge>`_, `G4 share <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless>`_, `G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
+* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
 * In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 * In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
 * If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
