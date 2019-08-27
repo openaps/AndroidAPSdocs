@@ -6,11 +6,26 @@ There is no issue with changing timezone in phone because pump doesn't use histo
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndoridAPS is using history from the pump but the records in pump don't have timezone stamp. 
-That means if you simple change timezone in phone, records will be read with different timezone and will be doubled. 
-To avoid this do the following steps on every timezone change:
+These pumps need a special care because AndoridAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
-* switch phone for manual time zone change before travel
+To avoid this there are two possibilities:
+
+### Option 1: Keep home time and timeshift profile
+
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
+* Phone must keep your standard time as at home for the whole travel period.
+* Time-shift your profile according to time difference between home time and destination time.
+   * i.e. Vienna -> New York: -6 hours
+   * i.e. Vienna -> Sydney: +8 hours
+   * Long-press profile name (middle of top section on homescreen)
+   * Select 'Profile Switch'
+   * Set 'Time shift' according to your destination.
+   
+   ![Profile switch with time shift](../images/ProfileSwitchTimeShift.png)
+
+### Option 2: Delete pump history
+
+* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
 
 When get out of plane:
 
@@ -61,7 +76,7 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 ## Other pumps - new as of AAPS version 2.2 
 
-<b><font color="#FF0000">You have to update AAPS to use this feature!</font></b>
+**You have to update AAPS to use this feature!**
 
 * To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
 * You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
