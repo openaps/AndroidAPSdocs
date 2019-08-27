@@ -1,8 +1,8 @@
 # Обновление до новой версии или ветки
 
-<font color="#FF0000"><b>Важное замечание: Начиная с версии 2.3 следует использовать git для обновления. Updating via zip file does not work anymore.</font></b>.
+<font color="#FF0000"><b>Важное замечание: Начиная с версии 2.3 следует использовать git для обновления. Обновление с zip-файла больше не работает.</font></b>.
 
-***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
+***Примечание***: Обновляясь до AndroidAPS 2.3, рекомендуется использовать версию [Android Studio 3.4](https://developer.android.com/studio/archive?), т. к. с последней версией не работает.
 
 ## Установите git (если у вас его нет)
 
@@ -44,7 +44,7 @@
   
   ![](../images/UpdateAAPS1.png)
 
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
+и затем выход (или 'выход через новую ветку', если просто 'выход' недоступен.)
 
      ![](../images/UpdateAAPS2.png)
     
@@ -55,7 +55,7 @@ and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not ava
   
   ![](../images/merge.png)
 
-On the tray you'll see green message about updated project
+В трее вы увидите зеленое сообщение о обновленном проекте
 
 ## Создание подписанного APK
 
@@ -74,11 +74,11 @@ On the tray you'll see green message about updated project
 
 ![Снимок экрана 40](../images/Installation_Screenshot_40.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+Введите путь к магазину ключей, введите пароль для магазина ключей, выберите название ключа и введите пароль на ключ.
 
-Select 'Remember passwords'.
+Выберите «Запомнить пароли».
 
-Then click next.
+Затем нажмите "Далее".
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
