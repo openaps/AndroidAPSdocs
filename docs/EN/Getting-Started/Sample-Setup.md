@@ -104,7 +104,9 @@ xDrip+ is another mature open source app that offers countless possibilities. In
    - Settings > Hardware Data Source > 640G/EverSense
    - Settings > Inter-app settings > Accept Calibrations > `ON`
    - Menu > Start sensor (is only "pro forma" and has nothing to do with the running G5 sensor. This is necessary otherwise an error message will appear regularly.)       
-          
+
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
+
 ### Example of an alarm setup
 The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
