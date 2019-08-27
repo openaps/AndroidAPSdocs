@@ -122,35 +122,35 @@ Android Studio начнет клонирование. Не нажимайте н
 
 ![Screenshot 19](../images/Installation_Screenshot_19.png)
 
-As it is said in the dialog please wait until the download is finished.
+Как сказано в диалоге, подождите окончания загрузки.
 
 ![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Now it's finished. Please click "Finish".
+Теперь она завершена. Нажмите "Готово".
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-Aaaahhh, next error. But Android Studio suggests a similar solution. Нажмите "Установить инструменты сборки и синхронизировать проект", так как Android Studio нуждается в загрузке недостающих инструментов.
+Таак, следующая ошибка. Но Android Studio предлагает аналогичное решение. Нажмите "Установить инструменты сборки и синхронизировать проект", так как Android Studio нуждается в загрузке недостающих инструментов.
 
 ![Screenshot 22](../images/Installation_Screenshot_22.png)
 
-As it is said in the dialog please wait until the download is finished.
+Как сказано в диалоге, подождите окончания загрузки.
 
 ![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Now it's finished. Please click "Finish".
+Теперь она завершена. Нажмите "Готово".
 
 ![Screenshot 24](../images/Installation_Screenshot_24.png)
 
-And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
+И еще одна ошибка, нуждающаяся в обработке так как Android Studio снова должна скачать отсутствующую платформу. Нажмите "Установить недостающую платформу(ы) и синхронизировать проект".
 
 ![Screenshot 25](../images/Installation_Screenshot_25.png)
 
-As it is said in the dialog please wait until the download is finished.
+Как сказано в диалоге, подождите окончания загрузки.
 
 ![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Now it's finished. Please click "Finish".
+Теперь она завершена. Нажмите "Готово".
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
@@ -158,29 +158,29 @@ Now it's finished. Please click "Finish".
 
 ![Screenshot 28](../images/Installation_Screenshot_28.png)
 
-As it is said in the dialog please wait until the download is finished.
+Как сказано в диалоге, подождите окончания загрузки.
 
 ![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Now it's finished. Please click "Finish".
+Теперь она завершена. Нажмите "Готово".
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
+Да, сообщения об ошибках пропали, и первая сборка gradle запущена. Настало время попить водички?
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
+Android Studio рекомендует обновить систему gradle. **Не обновляйте gradle!** Это может привести к трудностям!
 
-Please click "Don't remind me again for this project".
+Нажмите "Не напоминать снова для этого проекта".
 
 ![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
-The build is running again.
+Сборка возобновляется.
 
 ![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-Yeah, the first build is successful but we are not finished.
+Да, первая сборка завершена успешно, но мы еще не закончили.
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
@@ -199,7 +199,7 @@ Yeah, the first build is successful but we are not finished.
 
 ![Снимок экрана 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Нажмите "Create new" (cоздать новый...) для создания магазина ключей. В этом случае магазин ключей является всего лишь файлом, в котором хранится информация о цифровой подписи. Он зашифрован и информация защищена паролями. Мы предлагаем хранить его в домашней папке и помнить пароли, но если потеряете эту информацию, то просто должны создать новую. Самое лучшее - бережно хранить эту информацию.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
@@ -213,7 +213,7 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Заполните информацию последнего диалога в этой серии и нажмите "Далее".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
