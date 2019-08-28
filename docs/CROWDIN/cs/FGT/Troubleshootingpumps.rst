@@ -1,5 +1,5 @@
-Troubleshooting pumps
+Poradce při potížích s pumpami
 ==============================
 Combo
 -----------
-Have you already been reading `this <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_?
+Už jste si přečetli <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_?
