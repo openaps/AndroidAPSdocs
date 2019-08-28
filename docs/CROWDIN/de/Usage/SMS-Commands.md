@@ -17,7 +17,7 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
-## BZ
+## BG
 
 - Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 
