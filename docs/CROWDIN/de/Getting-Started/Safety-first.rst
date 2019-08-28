@@ -12,7 +12,7 @@ Allgemein
 * Installiere alle Sicherheits-Updates, die der Smartphone-Hersteller und Google zur Verfügung stellen.
 * Du musst auch Deine Diabetes-Gewohnheiten anpassen, da Du Deine Therapie durch den Closed Loop wesentlich veränderst. So brauchen  viele Anwender deutlich weniger Hypo-BE, da AndroidAPS die Insulinzufuhr bereits im Vorfeld reduziert hat.  
    
-SMS-Kommunikator
+SMS Kommunikator
 -----------------
 
 * AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
