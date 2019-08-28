@@ -1,26 +1,26 @@
 Bezpečnost především
 ===========
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+**Jestliže se rozhodnete sestavit si vlastní umělou slinivku, vždy je třeba myslet na bezpečnost a plně si uvědomovat dopad všech vašich akcí**.
 
 Obecné
 ------------
 
-* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-* Do not assume that AndroidAPS will never make mistakes. Toto zařízení přebírá kontrolu nad vaším podáváním inzulinu: Vždy jej kontrolujte, snažte se porozumět tomu, jak funguje a naučte se interpretovat jeho akce.
-* Remember that, once paired, the phone can instruct the pump to do anything. Používejte tento telefon pouze pro systém AndroidAPS a, je-li používán dítětem, pouze na nezbytnou komunikaci. Neinstalujte nepotřebné aplikace nebo hry (!!!), které by mohly do vašeho telefonu zavléci malware, jako jsou trojské koně, viry nebo boty, které by mohly zasahovat do vašeho systému.
-* Install all security updates provided by your phone manufacturer and Google.
-* You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
+* AndroidAPS je jen nástroj, který vám pomůže s managementem diabetu, nejde o plně automatizovaný systém, který jen nainstalujete a zapomenete na něho!
+* Nepředpokládejte, že bude systém AndroidAPS vždy bezchybný. Toto zařízení přebírá kontrolu nad vaším podáváním inzulinu: Vždy jej kontrolujte, snažte se porozumět tomu, jak funguje a naučte se interpretovat jeho akce.
+* Pamatujte na to, že jakmile jednou spárujete pumpu s telefonem, telefon může vydat pumpě jakýkoli pokyn. Používejte tento telefon pouze pro systém AndroidAPS a, je-li používán dítětem, pouze na nezbytnou komunikaci. Neinstalujte nepotřebné aplikace nebo hry (!!!), které by mohly do vašeho telefonu zavléci malware, jako jsou trojské koně, viry nebo boty, které by mohly zasahovat do vašeho systému.
+* Nainstalujte všechny aktualizace zabezpečení poskytované výrobcem telefonu a společností Google.
+* Možná budete muset změnit své diabetické návyky, protože použitím uzavřeného smyčku systému měníte svou léčbu. Např. někteří lidé uvádějí, že jim k řešení hypoglykémie stačí menší množství sacharidů, protože systém AndroidAPS již omezil dodávku inzulinu.  
    
 SMS komunikátor
 -----------------
 
-* AndroidAPS allows you to control a child's phone remotely via text message. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
+* AndroidAPS vám umožňuje kontrolovat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN.
+* Systém AndroidAPS vás rovněž bude informovat textovou zprávou o tom, jestli váš vzdálený příkaz, např. bolus nebo změna profilu, byl proveden. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
 
 .. poznámka:: 
-   **IMPORTANT SAFETY NOTICE**
+   **DŮLEŽITÉ BEZPEČNOSTNÍ UPOZORNĚNÍ**
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+   Základy bezpečnosti AndroidAPS zmíněné v této dokumentaci jsou postaveny na bezpečnostních vlastnostech hardwaru používaného k vybudování vašeho systému. Je zásadně důležité, abyste používali pouze testované, plně funkční a pro uzavřenou smyčku schválené inzulinové pumpy a CGM. Hardwarové nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. Pokud najdete nebo získáte rozbité, upravené nebo doma vyrobené inzulínové pumpy nebo CGM, NEPOUŽÍVEJTE JE pro vytvoření systému AndroidAPS.
 
-   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+   Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaší pumpou nebo CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
