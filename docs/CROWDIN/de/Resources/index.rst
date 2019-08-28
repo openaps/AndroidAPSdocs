@@ -1,8 +1,8 @@
-Resources
+Ressourcen
 ---------
 
 .. toctree::
    :maxdepth: 4
    :glob:
 
-   clinician-guide-to-AndroidAPS
+   Für medizinische Fachkräfte
