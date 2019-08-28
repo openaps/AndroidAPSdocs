@@ -1,3 +1,3 @@
-What is a Closed Loop System
+Co je systém uzavřené smyčky
 **************************************
-The closed loop system is a combination of components to a individual system with the aim to keep the blood glucose in range with reducing fluctuations and as much as avoiding high and low glucose. The most important factor is still the human! The human still has the responsibility of ensuring good data quality. That also means to determine all the factors in life that can influence the diabetes as using the loop in a reasonable way.
+Systém uzavřené smyčky je kombinace komponent tvořící individuální systém, který slouží k udržování glykémie v nastaveném rozsahu, redukuje kolísání glykémie a předchází vysokým a nízkým glykémiím. Nejdůležitějším faktorem stále zůstává člověk! Ten stále nese odpovědnost za zajištění kvalitních dat. Rovněž odpovídá za stanovení všech faktorů, které mají na diabetes vliv, aby bylo možné smyčku rozumně používat.
