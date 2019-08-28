@@ -48,11 +48,10 @@ Component Setup
    :maxdepth: 1
    :glob:
    
-   CGM/FGM <./Configuration/BG-Source.md>
+   CGM/FGM <./Configuration/BG-Source.rst>
    Pumps <./Hardware/pumps.rst>
    Phones <./Hardware/Phoneconfig.rst>
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-   xDrip+ Settings <./Configuration/xdrip.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
    
 
