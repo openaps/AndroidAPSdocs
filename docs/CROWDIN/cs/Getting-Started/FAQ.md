@@ -1,4 +1,4 @@
-## FAQ for loopers
+## Nejčastější otázky uživatelů AAPS
 
 Jak sem přidat další otázky: Postupujte podle těchto pokynů: [odkaz](../make-a-PR.md)
 
@@ -59,7 +59,7 @@ Můžete ho přelepit tejpem: K dispozici jsou již vystřižené přelepky urč
 
 Můžete ho zafixovat: K dispozici jsou speciální krytky, které zafixují CGM/FGM na ruce pomocí gumového pásku (hledejte na Googlu nebo eBay).
 
-## AndroidAPS settings
+## Nastavení AndroidAPS
 
 ### Efekt jednotlivých nastavení
 
@@ -147,7 +147,7 @@ Ze všeho nejdřív ověřte své bazály a proveďte „hladový test“ bazál
 
 Ze všeho nejdřív ověřte své bazály a proveďte „hladový test“ bazálu (bez příjmu sacharidů). Je-li bazál nastaven správně a vaše glykémie se po strávení všech sacharidů vrátí do cílového rozmezí, zkuste před jídlem použít dočasný cíl „Před jídlem“ v AndroidAPS nebo se poraďte se svým lékařem, jak dlouho byste měli po bolusu čekat, než začnete jíst. Je-li vaše glykémie po jídle vysoká a je-li vysoká i poté, co jsou všechny sacharidy stráveny, měli byste se svým lékařem zvážit možnost snížení sacharidového poměru. Je-li vaše glykémie vysoká, když máte aktivní COB, a příliš nízká poté, co jsou všechny sacharidy stráveny, zvažte ve spolupráci se svým lékařem zvýšení sacharidového poměru a také bolusování s adekvátním předstihem.
 
-## Other settings
+## Další nastavení
 
 ### Nastavení Nightscoutu
 
@@ -190,25 +190,25 @@ Výměnu zásobníku nelze provést přes AndroidAPS, výměna musí být proved
 
 Pro výměnu kanyly se však nepoužívá funkce „naplnit infúzní set“ na pumpě, ale set a/nebo kanyla se plní bolusem, který se nezobrazuje v historii bolusů. To znamená, že se nepřeruší běžící dočasná bazální dávka. Na kartě Akce, použijte tlačítko Plnění/Doplňování, abyste nastavili množství inzulínu k naplnění infúzního setu a plnění spustili. Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. Podívejte se do příbalového letáku kanyl, kolik jednotek je nutné do kanyly naplnit v závislosti na délce jehly a hadičky.
 
-## Hygiene
+## Hygiena
 
 ### Co dělat při sprchování a koupání?
 
 Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu ji obvykle nebudete potřebovat. Ale zároveň byste o tom měli systému AAPS říct, aby byly výpočty IOB správné. Stiskněte světle modré pole „Otevřená smyčka“ / „Uzavřená smyčka“ vlevo nahoře na hlavní obrazovce. Vyberte možnost **„Odpojit pumpu na XY min“** podle plánované doby odpojení. Jakmile pumpu znovu připojíte, můžete přidržet stejné tlačítko s vybrat možnost „Znovu připojit pumpu“ nebo prostě počkat, až uplyne vybraná doba odpojení. Smyčka bude automaticky pokračovat.
 
-## Working
+## Práce
 
 V závislosti na druhu vaší práce, možná používáte různé nastavení v pracovních dnech. Jako uživatel smyčky byste měli přemýšlet o změně profilu pro svůj odhadovaný pracovní den (např. více než 100% na 8h při sezení kolem nebo méně než 100% při aktivní činnosti), vysoké nebo nízké dočasné cíle nebo časový posun Vašeho profilu, pokud vstanete mnohem dříve nebo později než pravidelně. Pokud používáte Nightscout profily, můžete také vytvořit druhý profil (např. "domov" "pracovní den"), a přepnout se na profil, který skutečně potřebujete.
 
-## Leasure activities
+## Volnočasové aktivity
 
-## Sports
+## Sporty
 
 ## Sex
 
 Můžete odpojit pumpu, aby nepřekážela, ale měli byste to říci AAPS, aby výpočty IOB byly správné. Stiskněte světle modré pole „Otevřená smyčka“ / „Uzavřená smyčka“ vlevo nahoře na hlavní obrazovce. Vyberte možnost **„Odpojit pumpu na XY min“** podle plánované doby odpojení. Jakmile pumpu znovu připojíte, můžete přidržet stejné tlačítko s vybrat možnost „Znovu připojit pumpu“ nebo prostě počkat, až uplyne vybraná doba odpojení. Smyčka bude automaticky pokračovat.
 
-## Drinking alcohol
+## Alkohol
 
 Požívání alkoholu je v režimu uzavřené smyčky poměrně riskantní, protože algoritmus uzavřené smyčky nedokáže správně předpovědět, jak bude glykémie alkoholem ovlivněna. Musíte si najít vlastní způsob, jak podobné situace řešit, a to pomocí následujících funkcí v AndroidAPS:
 
@@ -218,7 +218,7 @@ Požívání alkoholu je v režimu uzavřené smyčky poměrně riskantní, prot
 
 Jestliže požíváte alkohol, je nezbytné průběžně sledovat CGM a ručně předcházet hypoglykemii příjmem sacharidů.
 
-## Sleeping
+## Spánek
 
 ### Jak mohu provozovat smyčku během noci bez mobilního a WIFI záření?
 
@@ -230,17 +230,17 @@ Mnoho uživatelů na noc přepíná telefon do režimu letadlo. Pokud chcete pro
 
 Nebudete moci přijímat telefonní hovory ani nebudete mít přístup k internetu. Ale smyčka poběží.
 
-## Travelling
+## Cestování
 
 ### Jak se vypořádat s cestováním přes časové zóny?
 
 S DanouR a korejskou verzí DanyR nemusíte dělat nic. Pro ostatní pumpy viz další podrobnosti na stránce [Cestování mezi časovými pásmy](../Usage/Timezone-traveling.md).
 
-## Hospitalization
+## Pobyt v nemocnici
 
 Chcete-li svému lékaři (lékařům) předat nějaké informace o AndroidAPS DIY smyčce, můžete si vytisknout část [Příručka k systému AndroidAPS pro lékaře](../Resources/clinician-guide-to-AndroidAPS.md).
 
-## Medical appointment with your endocrinologist
+## Kontrola u vašeho diabetologa
 
 ### Výkazy
 

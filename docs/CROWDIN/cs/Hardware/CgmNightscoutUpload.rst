@@ -1,6 +1,6 @@
 Pro uživatele ostatních CGM nahrávaných do Nightscoutu
 *************************************************************
-If you have any other CGM set up that sends your data to `Nightscout <http://www.nightscout.info>`_ then
+Pokud máte nějaké jiné CGM, které odesílá data do `Nightscoutu <http://www.nightscout.info>`_, pak
 
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* V nastavení AndroidAPS zadejte Nightscout adresu a API secret.
+* Vyberte NSClient v Konfiguraci AndroidAPS.
