@@ -6,13 +6,13 @@ CGM "Hygiene"
 
 Unabhängig davon, welches CGM-System Du nutzt und egal, ob Du die offizielle App oder eine DIY-App verwendest, solltest Du die folgenden Regeln beachten: 
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. Bei DIY Systemen ist das evtl. nicht der Fall und Du solltest vorsichtig sein, ohne die empfohlenen Kalibrierungen zu arbeiten.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* Hände und Geräte müssen sauber sein.
+* Kalibriere immer dann, wenn Du stabile Werte hast (Messwerte auf einem Niveau und waagerechter Pfeil). In der Regel reicht ein Zeitraum von 15 - 30 Minuten aus.
+* Vermeide die Kalibrierung, wenn der Glukoselevel steigt oder fällt. 
+* Kalibriere "ausreichend" oft. Die offiziellen Apps fordern Dich ein oder zwei Mal pro Tag zum blutigen Test auf. Bei DIY Systemen ist das evtl. nicht der Fall und Du solltest vorsichtig sein, ohne die empfohlenen Kalibrierungen zu arbeiten.
+* Falls möglich, kalibriere mal mit Werten im niedrigen Bereich (72 - 90 mg/dl bzw. 4 - 5 mmol) und mal im erhöhten Bereich (126 - 160 mg/dl bzw. 7 - 9 mmol).  Dies führt zu besseren Ergebnissen, da sich die Kalibrierungsgerade leichter durch zwei entferntere Punkte legen lässt.
 
-Setting sensor (G6)
+Sensor setzen (Dexcom G6)
 ==============
 
 Beim Setzen des Sensors darf die Setzhilfe nicht zu stark auf die Haut gedrückt werden, um Blutungen zu vermeiden. Der Sensorfaden sollte nicht mit Blut in Kontakt kommen.
@@ -35,7 +35,7 @@ Oftmals kann ein Sensorfehler durch sofortiges Trinken und "Massage" an der Sens
 
 Springende Werte
 ---------------
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Versuche, die Einstellungen zum "noise blocking" in xDrip (Einstellungen -> Inter-App Einstellungen -> Verrauschungsunterdrückung) zu ändern, z.B. "Block Very High noise and worse. Siehe auch    `Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
 
 
