@@ -121,4 +121,4 @@ Manchmal dauert es eine Weile, um alle Module für den Closed Loop zusammen zu b
 Du kannst Dich weiter durch das Wiki arbeiten, online und offline mit anderen Loopern in Kontakt treten, weitere `Hintergrundinfos <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ oder Berichte von anderen Loopern lesen. Sei aber vorsichtig, nicht alle Anwenderberichte müssen richtig oder für Deinen Fall zutreffend sein.
 
 **Fertig?**
-Wenn Du alle Komponenten für AAPS zusammen hast - oder zumindest genug, um mit dem Open Loop zu beginnen - solltest Du zuerst die Beschreibung der `Objectives (Ziele) <../Usage/Objectives.html>`_ lesen und Deine `Hardware <../index.html#component-setup>`_ einrichten. Lies Dir nach dem Erreichen eines Objectives (Ziel) auf jeden Fall nochmals durch, was im nächsten Schritt passiert.
+If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
