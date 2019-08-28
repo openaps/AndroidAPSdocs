@@ -1,3 +1,3 @@
-What is a Closed Loop System
+Was ist ein Closed Loop-System?
 **************************************
-The closed loop system is a combination of components to a individual system with the aim to keep the blood glucose in range with reducing fluctuations and as much as avoiding high and low glucose. The most important factor is still the human! The human still has the responsibility of ensuring good data quality. That also means to determine all the factors in life that can influence the diabetes as using the loop in a reasonable way.
+Ein Closed Loop System kombiniert verschiedene Komponenten zu einer Einheit und zielt darauf ab, die Glukosewerte im Zielbereich zu halten, Schwankungen zu reduzieren und zu hohe oder zu niedrige Werte so weit als möglich zu verhindern. Der wichtigste Faktor bleibt aber immer der Anwender! Der Anwender hat nach wie vor die Verantwortung für die Gewährleistung einer hohen Datenqualität. Dies bedeutet auch, alle Faktoren zu bestimmen, die den Diabetes im Alltag beeinflussen können, da nur so ein sinnvoller Einsatz des Closed Loop möglich ist.
