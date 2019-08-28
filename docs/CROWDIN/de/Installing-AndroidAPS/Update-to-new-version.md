@@ -196,7 +196,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
   
   4. Erstelle die App von Grund auf neu wie [hier](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components) beschrieben. Verwende dabei den bestehenden key und key store.
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
-5. [Import settings](../Usage/Objectives#export-import-settings)
+5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
 
 ## Worst case scenario
 

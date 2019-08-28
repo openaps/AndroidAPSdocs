@@ -2,16 +2,16 @@
 
 * Przejdź do <https://translations.androidaps.org> lub <https://wikitranslations.androidaps.org> i zaloguj się przy użyciu konta Github
 
-* Skontaktuj się z [Milos](https://gitter.im/MilosKozak) lub [Adrian](https://gitter.im/AdrianLxM) i określ język oraz czy chcesz być tłumaczem czy korektorem (tylko osoby doświadczone w tłumaczeniu + zaawansowani użytkownicy AndroidAPS)
+* Send a join request to the Wiki team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
 
-* Kiedy Cię zaakceptujemy, kliknij flagę ![](../images/translation-flags.png)
+* When we approve you, click the flag ![When we approve you, click the flag](../images/translation-flags.png)
 
-* Kliknij strings.xml ![](../images/translations-click-strings.png)
+* Click strings.xml ![Click strings.xml](../images/translations-click-strings.png)
 
-* Przetłumacz zdania po lewej stronie przez dodanie nowego tekstu tłumaczenia lub kliknij automatyczne tłumaczenie, które stanie się bazą do Twoich zmian.![](../images/translations-translate.png)
+* Translate sentences on left side by adding new translated text or use & edit suggestion ![Translation](../images/translations-translate.png)
 
-* Korektorzy tekstu muszą przejść do trybu korekty ![](../images/translations-proofreading-mode.png)
-
-* i zatwierdzić przetłumaczone teksty ![](../images/translations-proofreading.png)
+* Proofreaders have to switch to Proofreading mode ![Proffreading mode](../images/translations-proofreading-mode.png)
+    
+    and approve translated texts ![approve text](../images/translations-proofreading.png)
 
 Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji AndroidAPS. Na początku dobrze byłoby przejrzeć istniejące tłumaczenia, które nie zostały jeszcze zatwierdzone i sprawdzić błędy lub zatwierdzić je, jeśli są poprawne.
