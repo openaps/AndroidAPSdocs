@@ -121,7 +121,7 @@ xDrip+ это великолепное приложение с открытым 
 
 "Чрезвычайно низкая ГК" (ниже 55 мг/дл. 3,1 ммол) является стандартным оповещением модифицированного приложения Dexcom, которое не может быть отключено.
 
-![xDrip alarms](../images/SampleSetupxDripWarning.png)
+![Оповещения xDrip](../images/SampleSetupxDripWarning.png)
 
 Совет на случай переговоров / посещений церкви / кино и т. д..:
 
@@ -133,11 +133,11 @@ xDrip+ это великолепное приложение с открытым 
 
 ## Дополнительно: настройте Sony Smartwatch 3 (SWR50)
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. Часы могут даже применяться для контроля AndroidAPS (напр. для дискретной подачи болюса на еду). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+С Android Wear жизнь с диабетом можно сделать еще более незаметной для окружающих. Часы могут использоваться для отображения текущего уровня глюкозы, состояния цикла и т. д. на запястье. Часы могут даже применяться для контроля AndroidAPS (напр. для дискретной подачи болюса на еду). Для этого дважды нажмите на значение ГК на циферблате AAPSv2. SWR50 обычно работает полный день до подзарядки (то же зарядное устройство, что и для Samsung Galaxy S7: microUSB).
 
 ![Смарт часы](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Подробности о информации, отображаемой на экране часов, можно найти [здесь](../Configuration/Watchfaces.md).
 
 * Установите приложение "Android Wear" на вашем смартфоне через Google Play Store и подключите смартфон в соответствии с инструкциями.
 * В AAPS выберите сэндвич-меню (в верхнем левом углу) > Конфигуратор > Общее (в нижней части списка) > Wear > активировать, на левой стороне нажмите на шестеренку > Настройки Wear и активируйте `Управление c часов`
@@ -146,4 +146,4 @@ Details about the information displayed on the watchface can be found [here](../
 
 ## Настройки помпы
 
-see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)
+см [помпа DanaR ](../Configuration/DanaR-Insulin-Pump.md)
