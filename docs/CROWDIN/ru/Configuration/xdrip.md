@@ -29,7 +29,7 @@
    
    ![основные настройки xDrip+ 3](../images/xDrip_Basic3.png)
 
-* У некоторых пользователей обнаружились проблемы с локальной трансляцией (AAPS не получает данные от xDrip+) в режиме авиаперелета. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+* У некоторых пользователей обнаружились проблемы с локальной трансляцией (AAPS не получает данные от xDrip+) в режиме авиаперелета. Перейдите в Настройки xdrip+ > Inter-app settings > Identify receiver и введите `info.nightscout.androidaps`.
    
    ![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
