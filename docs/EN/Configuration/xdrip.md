@@ -91,7 +91,7 @@ To learn more about the details and reasons for these recommendations read the [
 * Use the Source Wizard Button which ensures default settings including OB1 & Native Mode
    - This guides you through the initial set up.
    - you will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter
+* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter). Be careful not to confuse 0 (zero) and O (capital letter o).
 
    ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
 
