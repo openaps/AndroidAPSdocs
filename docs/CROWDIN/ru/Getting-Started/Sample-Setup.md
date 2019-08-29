@@ -115,9 +115,9 @@ xDrip+ это великолепное приложение с открытым 
     * Настройки > Настройки Inter-app > Принимать Калибровки > `включено`
     * Меню > Запуск сенсора (только "pro forma", не имеет ничего общего с работающим датчиком G5.). Необходимо включить иначе будет регулярно появляться сообщение об ошибке.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
+Более подробную информацию о xDrip+, см. здесь: [BG source page](../Configuration/BG-Source.md).
 
-### Пример установки оповещения
+### Пример настройки оповещения
 
 The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
