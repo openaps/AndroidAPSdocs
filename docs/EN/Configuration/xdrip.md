@@ -2,7 +2,9 @@
 
 If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it. If your Dexcom G6 transmitter's serial no. is starting with 8G... try nightly build 2019/07/28 or later.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+
+If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 
 ## Basic settings for all CGM & FGM systems
@@ -39,9 +41,9 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 
 ### xDrip+ version depending on G6 transmitter serial no.
 
-If your G6 transmitter serial no. is starting with **80 or 81** use xDrip+ nightly 2019/05/18 or newer.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
 
-If your G6 transmitter serial no. is starting with **8G** use xDrip+ nightly 2019/08/19 or newer.
+If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 
 ### Dexcom specific settings
@@ -85,7 +87,10 @@ To learn more about the details and reasons for these recommendations read the [
 
 **For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
-* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+
+If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+
 * Turn original Dexcom receiver off (if used).
 * Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
 * Use the Source Wizard Button which ensures default settings including OB1 & Native Mode
@@ -151,7 +156,9 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Replace transmitter
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+
+If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Turn original Dexcom receiver off (if used).
 * Stop sensor (only if replacing sensor)
@@ -270,7 +277,7 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 * Stop sensor
 * Start sensor with "real" code (printed on the adhesive protector)
 
-Check in xDrip+ logs if xDrip+ strats counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ & Freestyle Libre
 
