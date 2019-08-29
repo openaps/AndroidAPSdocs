@@ -6,7 +6,7 @@
 
 * Wenn wir dich freigeschalten haben, klicke auf die entsprechende Landesflagge.![Sprachenübersicht Crowdin](./images/translation-flags.png)
 
-* Click strings.xml (when translating AAPS app) or the name of the wiki page ![Klicke auf strings.xml](./images/translations-click-strings.png)
+* Klicke strings.xml (falls Du die AAPS App übersetzen willst) oder auf den Namen der zu übersetzenden Wiki-Seite. ![Klicke auf strings.xml](./images/translations-click-strings.png)
 
 * Übersetze Sätze auf der linken Seite, indem du übersetzten Text hinzufügst oder verwende & edit suggestion ![Übersetzungen](./images/translations-translate.png)
 
