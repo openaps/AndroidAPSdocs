@@ -1,6 +1,6 @@
-# Watchfaces
+# 시계 화면.
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
+안드로이드APS는 안드로이드폰으로 통제됩니다. If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
 The following functions can be triggered from the watch:
 
