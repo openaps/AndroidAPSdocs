@@ -1,6 +1,6 @@
 Для пользователей других систем мониторинга, передающих данные в Nightscout
 *************************************************************
-If you have any other CGM set up that sends your data to `Nightscout <http://www.nightscout.info>`_ then
+Если у вас другая система мониторинга отправляющая даннные в Nightscout<http://www.nightscout.info>_тогда
 
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* В настройках AndroidAPS введите адрес вашего веб-сайта Nightscout и пароль API secret.
+В конфигураторе (настройки AndroidAPS) выберите NSClient.

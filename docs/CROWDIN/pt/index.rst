@@ -1,4 +1,4 @@
-Welcome to the AndroidAPS documentation
+Bem-vindo à documentação do AndroidAPS
 ==============================================
 
 AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
@@ -10,24 +10,24 @@ Main components are:
 
 For more details, please read on here.
 
-Getting started
+Guia de Introdução
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Segurança primeiro <./Getting-Started/Safety-first.rst>
+   O que é um sistema Closed Loop (Fechado) <./Getting-Started/ClosedLoop.rst>
+   O que é um sistema de Closed Loop (Fechado) com AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
    
-What do I need 
+O que eu preciso 
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Module <./Module/module.rst>
+   Módulo <./Module/module.rst>
 
    
 Como Instalar AndroidAPS
@@ -36,23 +36,23 @@ Como Instalar AndroidAPS
    :maxdepth: 1
    :glob:
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+   Construindo o APK <./Installing-AndroidAPS/Building-APK.md>
+   Actualizar para uma nova versão ou branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Notas de lançamento <./Installing-AndroidAPS/Releasenotes.md>
+   Branch Dev <./Installing-AndroidAPS/Dev_branch.md>
    
    
-Component Setup
+Configuração do Componente
 ---------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    CGM/FGM <./Configuration/BG-Source.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-   xDrip+ Settings <./Configuration/xdrip.md>
+   Bombas de Insulina<./Hardware/pumps.rst>
+   Telefones <./Hardware/Phoneconfig.rst>
+   Configuração do Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Configurações xDrip+  <./Configuration/xdrip.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
    
 
@@ -66,22 +66,22 @@ Configuração
    Preferences <./Configuration/Preferences.md>
    
    
-AndroidAPS Usage
+Uso AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   AndroidAPS screens <./Getting-Started/Screenshots.md>
+   Ecrãs do AndroidAPS <./Getting-Started/Screenshots.md>
    Objectivos <./Usage/Objectives.md>
-   OpenAPS features <./Usage/Open-APS-features.md>   
-   Sensitivity detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   Recursos OpenAPS <./Usage/Open-APS-features.md>   
+   Detecção de Sensibilidade e COB <./Configuration/Sensitivity-detection-and-COB.md>
    Troca de Perfil <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.md>    
   
  
-General Hints 
+Dicas Gerais 
 ---------------------
 .. toctree::
    :maxdepth: 1
@@ -93,13 +93,13 @@ General Hints
    Export/Import Settings <./Usage/ExportImportSettings.rst>
    
 
-AndroidAPS for children
+AndroidAPS para crianças
 ------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   SMS commands <./Usage/SMS-Commands.md>
+   Comandos SMS<./Usage/SMS-Commands.md>
    
 
 Advanced 
@@ -112,24 +112,24 @@ Advanced
    Automation <./Usage/automation.md>
    
 
-Troubleshooting
+Resolução de Problemas
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
   
    NS-Client <./Usage/Troubleshooting-NSClient.md>
-   Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
+   Actualizar <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
    Pumps <./FGT/Troubleshootingpumps.rst>
 
 
-FAQ 
+Perguntas Frequentes (FAQ) 
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
   
-   FAQ <./Getting-Started/FAQ.md>
+   Perguntas Frequentes <./Getting-Started/FAQ.md>
 
    
 Glossário
@@ -150,7 +150,7 @@ Onde ir para obter ajuda
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Resources/Reference
+Recursos/Referência
 ------------
 .. toctree::
    :maxdepth: 1
@@ -167,7 +167,7 @@ Como ajudar
    :glob:
 
    Como ajudar <./Getting-Started/How-can-help.md>
-   How to translate the app and documentation <./translations.md>
+   Como traduzir a aplicação e a documentação <./translations.md>
    Como editar a wiki <./make-a-PR>
 
 
