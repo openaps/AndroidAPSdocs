@@ -119,17 +119,17 @@ xDrip+ это великолепное приложение с открытым 
 
 ### Пример настройки оповещения
 
-The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
+"Чрезвычайно низкая ГК" (ниже 55 мг/дл. 3,1 ммол) является стандартным оповещением модифицированного приложения Dexcom, которое не может быть отключено.
 
 ![xDrip alarms](../images/SampleSetupxDripWarning.png)
 
-Tip for meetings / church visits / cinema etc..:
+Совет на случай переговоров / посещений церкви / кино и т. д..:
 
-If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
+Если в Samsung Galaxy S7 активирован режим "Не беспокоить" (меню > Настройки > Звуки и вибрация > Не беспокоить: ползунок вправо сторону (= вкл)), телефон только вибрирует во время оповещения о чрезвычайно низкой ГК и не подает звукового сигнала. Для других оповещений, настроенных через xDrip+ можно выбрать, игнорировать ли звуковой режим.
 
 ## Отключите энергосбережение
 
-On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G5 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
+На Samsung Galaxy S7 перейдите в меню > Настройки > Поддержка устройства > Батарея > Неотслеживаемые приложения > + Добавить приложения: Выберите одно за другим приложения AndroidAPS, Dexcom G5 Mobile, xDrip+ и Android Wear (если пользуетесь часами).
 
 ## Дополнительно: настройте Sony Smartwatch 3 (SWR50)
 
