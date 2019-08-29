@@ -12,10 +12,10 @@
 * Install all security updates provided by your phone manufacturer and Google.
 * You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
    
-СМС-коммуникатор
+SMS Communicator
 -----------------
 
-* AndroidAPS allows you to control a child's phone remotely via text message. Если вы активируете этот смс-коммуникатор, всегда помните, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом.
+* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом.
 * AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
 
 .. note:: 
