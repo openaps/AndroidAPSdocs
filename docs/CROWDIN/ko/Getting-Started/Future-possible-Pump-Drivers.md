@@ -1,6 +1,6 @@
-# Future (possible) Pump Drivers
+# 가능한 펌프 드라이버.
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+아래는 현재 유효한 펌프리스트이며, AAPS의 상태 및 루핑시스템의 지원과 관련된 것입니다. 펌프에서 루프를 가능하게 하기 위해서 요구되는 정보들이 포함되어있습니다.
 
 ## Pumps whose support is in development
 
@@ -42,7 +42,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
 **Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
 
@@ -52,7 +52,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
 * * *
 
@@ -60,7 +60,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
 * * *
 
@@ -68,7 +68,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It seems to be BT enabled.
 
 * * *
 
@@ -76,7 +76,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It seems to be BT enabled.
 
 * * *
 
@@ -84,7 +84,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It seems to be BT enabled.
 
 ### Medtronic Bluetooth
 
@@ -98,7 +98,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS의 하드웨어 요구사항:** 별도 요구사항은 없을것으로 보여집니다. It's BT enabled.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
