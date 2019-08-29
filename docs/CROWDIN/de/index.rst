@@ -1,7 +1,7 @@
 Willkommen zur AndroidAPS-Dokumentation
 ==============================================
 
-AndroidAPS ist eine Open Source App für Google Android Smartphones, die bei insulinabhängigem Diabetes als künstliche Bauchspeicheldrüse (sog. artificial pancreas system - APS) dient. Hauptkomponenten sind verschiedene OpenAPS-Softwarealgorithmen, die genau das zu tun sollen, was eine echte Bauchspeicheldrüse auch tut: den Blutzuckerspiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten. Die App hat KEINE selbstlernende künstliche Intelligenz. Stattdessen basieren die Berechnungen von AndroidAPS auf den individuellen Therapiefaktoren und Kohlenhydratmengen, die der Benutzer manuell in sein Behandlungsprofil eingibt. Diese Eingaben werden aber aus Sicherheitsgründen vom System verifiziert. Die App wird nicht in Google Play angeboten - du musst sie aus rechtlichen Gründen selbst aus dem Quellcode erstellen.
+AndroidAPS ist eine Open Source App für Google Android Smartphones, die bei insulinabhängigem Diabetes als künstliche Bauchspeicheldrüse (sog. artificial pancreas system - APS) dient. Hauptkomponenten sind verschiedene OpenAPS-Softwarealgorithmen, die genau das zu tun sollen, was eine echte Bauchspeicheldrüse auch tut: den Blutzuckerspiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten. Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. Die App hat KEINE selbstlernende künstliche Intelligenz. Stattdessen basieren die Berechnungen von AndroidAPS auf den individuellen Therapiefaktoren und Kohlenhydratmengen, die der Benutzer manuell in sein Behandlungsprofil eingibt. Diese Eingaben werden aber aus Sicherheitsgründen vom System verifiziert. Die App wird nicht in Google Play angeboten - du musst sie aus rechtlichen Gründen selbst aus dem Quellcode erstellen.
 
 Hauptkomponenten sind:
 
@@ -48,11 +48,10 @@ Komponenten-Setup
    :maxdepth: 1
    :glob:
    
-   CGM/FGM <./Configuration/BG-Source.md>
+   CGM/FGM <./Configuration/BG-Source.rst>
    Pumpen <./Hardware/pumps.rst>
    Smartphones <./Hardware/Phoneconfig.rst>
    Nightscout Installation <./Installing-AndroidAPS/Nightscout.md>
-   xDrip+ Einstellungen <./Configuration/xdrip.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
    
 

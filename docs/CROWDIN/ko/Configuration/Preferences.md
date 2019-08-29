@@ -1,18 +1,18 @@
-# Preferences
+# 설정
 
-## Password for settings
+## 설정 비밀번호
 
-This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
+실수로 또는 권한이 없이 설정이 변경되는 것을 방지하기 위해 비밀번호를 만들 수 있습니다. 이곳에 비밀번호를 입력한 후 설정에 접근하려면 비밀번호를 입력해야 합니다. 암호 옵션을 제거하려면 설정 내에서 이 필드의 글자를 삭제하세요
 
-## Patient age
+## 나이
 
-There are security limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). If you want to know the actual numbers for these hard coded security limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+이 설정에서 선택한 나이에 따라 보안 제한이 적용됩니다. 만약 높은 제한에 가까워지면 (최대bolus처럼) 한 단계를 올려야할 때입니다. 실제 나이보다 더 높게 나이를 선택하게 되면 인슐린창에 잘못된 인슐린 값을 (예를 들어, 소수점을 건너뛰는) 입력하게 되어 과용으로 이어질 수 있기 때문에 좋지 않습니다. If you want to know the actual numbers for these hard coded security limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
 
-## General
+## 일반
 
-* Select your language here. If your language is not available, or not all of the words are translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
+* 사용할 언어를 선택하세요. 언어를 사용할 수 없거나 일부 단어가 번역되지 않은 경우 다음에 대해 자유롭게 [Crowdin](https://crowdin.com/project/androidaps)에 제안하거나 또는 [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS)에 문의하세요
 
-## Overview
+## 개요
 
 * Keep screen on is useful while you are giving a presentation. It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 * Buttons let you choose which buttons are visible on your home screen. Also gives you a few options for the popup screen you will see after pressing a button.
@@ -21,15 +21,15 @@ There are security limits in place based on age you selected in this setting. If
     
     ![Status lights - detail](../images/StatusLights.jpg)
 
-## Treatments safety
+## 관리 안전
 
-### Max allowed bolus [U]
+### 최대 허용 bolus [U]
 
-This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
+This is the maximum amount of bolus insulin that AAPS is allowed to deliver. 실수로 입력되거나 또는 사용자 오류로 인하여 많은 양의 bolus가 주입되는 것을 방지하기 위하여 안전 제한으로 이 설정이 존재합니다. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
 
 ### Max allowed carbs [g]
 
-This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. 실수로 입력되거나 또는 사용자 오류로 인하여 많은 양의 bolus가 주입되는 것을 방지하기 위하여 안전 제한으로 이 설정이 존재합니다. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
 ## Loop
 
@@ -39,9 +39,9 @@ You can toggle between open and closed looping here. Open looping means TBR sugg
 
 OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed Objective 7 to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### 시간당 최대 임시 Basal 설정
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). 이것을 설정할 때에는 합리적으로 설정하는 것이 좋습니다. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
 
 ### Maximum basal IOB OpenAPS can deliver [U]
 

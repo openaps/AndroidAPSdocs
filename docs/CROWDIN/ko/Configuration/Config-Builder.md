@@ -1,28 +1,28 @@
 # 구성 관리자
 
-구성관리자(Conf) 탭에서 AndroidAPS의 여러기능들을 구성할 수 있습니다. The boxes on the left hand side (A) allow you to select which one to use, the boxes on the right hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+구성관리자(Conf) 탭에서 AndroidAPS의 여러기능들을 구성할 수 있습니다. 좌측의 박스를 선택하면 사용하고자 하는 기능을 활성화 할수 있습니다. 우측의 박스는 AndroidAPS에서 이 기능을 탭으로 볼 수 있도록 합니다. 우측 박스가 활성화되지 않은 경우, 당신은 화면 좌측 상단에 있는 hamburger 메뉴를 이용함으로써 그 기능을 이용할 수 있습니다.
 
-Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+모듈내에 있는 추가 세팅이 가능한 데에서, 당신은 메뉴 내 특정세팅을 할수 있는 톱니바퀴를 클릭할 수 있습니다.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen (F) and select 'Setup Wizard' to use it.
+첫번째 구성관리자: AAPS 2.0 설치마법사가 AndroidAPS 설치에 관한 프로세스를 통해 당신을 안내할 것 입니다. 화면 우측 상단에 점3개 메뉴를 누르시고, 설치마법사를 선택해주십시오.
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
 ## 프로파일
 
-Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+당신이 사용하기 원하는 기저 프로파일을 선택해주십시오. 추가적인 설치정보를 원하시면, 프로파일 페이지를 보시기 바랍니다.
 
-### Local profile (recommended)
+### 로컬 프로파일 (권장사항)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+로컬프로필은 폰에 수동으로 입력된 기저 인슐린 프로필을 활용합니다. 일단 그것이 선택되면, AAPS에 새로운 탭이 나타나게 됩니다. 필요하다면 그 탭 내에서 펌프로부터 추출된 프로파일 데이터를 바꿀 수 있습니다. 다음 프로파일로 바꾸면, 그 데이터들은 프로파일1에 있는 펌프에 작성될 것입니다. 이러한 로컬 프로파일 활용은 권장됩니다. 왜냐하면 이것은 인터넷연결에 지장을 받지않기 때문입니다.
 
-Advantage: no internet connection neccessary to change profile settings
+장점: 프로파일 세팅을 바꾸기위해 인터넷을 연결하지 않아도 됩니다.
 
-Disadvantage: only one profile
+단점: 오직 하나의 프로파일만 가능합니다
 
-### NS Profile
+### NS프로파일
 
-NS Profile uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS프로파일은 당신의 NightScout 사이트 저장된 프로파일들을 사용합니다. 여러 프로파일들 중에 하나를 선택하기 위해서는 '프로파일 변경' 메뉴를 사용할 수 있고 AndroidAPS가 제대로 동작하지 않을 경우 현재 선택된 프로파일이 펌프에서 동작합니다. 이것은 Nightscout에서 다양한 프로파일들을 쉽게 만들 수 있도록 합니다 (예를 들어 직장에서, 가정에서, 운동할때, 휴가를 보낼 시 등등 ) 프로파일을 작성하고 "저장" 버튼을 누르면, 당신의 스마트폰이 인터넷에 연결될 때, 그 저장된 프로파일들은 AAPS로 전송이 될 것입니다. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
@@ -60,7 +60,7 @@ With the "Free Peak 0ref" profile you can individually enter the peak time. The 
 
 This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
-## BG Source
+## 혈당정보
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
 
@@ -71,7 +71,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 * [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-## Pump
+## 펌프
 
 Select the pump you are using.
 
@@ -85,7 +85,7 @@ Select the pump you are using.
 
 Use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is pobbile. This may help on some phones where the bluetooth stack freezes.
 
-## Sensitivity Detection
+## 민감도 설정
 
 Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
@@ -126,13 +126,13 @@ You should export your settings (including progress of the objectives) on a regu
 
 See [Objectives](../Usage/Objectives.md) page for more information.
 
-## Treatments
+## 관리
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
 
-## General
+## 일반적인 정보.
 
-### Overview
+### 개요
 
 Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 
@@ -144,7 +144,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 
 Define which Buttons are shown on the home screen.
 
-* Treatments
+* 관리
 * Calculator
 * 인슐린
 * Carbs
