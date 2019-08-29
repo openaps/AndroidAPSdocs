@@ -7,8 +7,8 @@
 ------------
 
 * AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-* Do not assume that AndroidAPS will never make mistakes. Эта система контролирует подачу инсулина в ваш организм: наблюдайте за ней все время, понимайте, как она работает, научитесь интерпретировать ее действия.
-* Remember that, once paired, the phone can instruct the pump to do anything. Используйте ваш телефон только для AndroidAPS и, если он находится у ребенка, только для необходимых коммуникаций. Не устанавливайте ненужных приложений или игр (!). С ними могут проникнуть вредоносные программы, трояны, вирусы или боты, которые могут нарушить или остановить работу вашей системы.
+* Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
+* Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
 * Install all security updates provided by your phone manufacturer and Google.
 * You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
    
