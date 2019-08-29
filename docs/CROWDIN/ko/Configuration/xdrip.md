@@ -57,15 +57,15 @@ The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommen
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+Dexcom G6를 사용하는 것은 맨 처음 육안으로 보여지는 것 보다 좀더 복잡합니다. 그것을 안전하게 사용하기 위해서는 , 몇가지 인지하고 넘어갈 것들이 있습니다.
 
 * If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
-* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
-* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
-* Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
-* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+* 만일 당신이 불가피하게 preemptive restarts 옵션을 사용하여야한다면, 어느장소에서 혈당값 변화를 인지하며, 필요한 경우 이를 보정할 수 있는지 하루 중에 따로따로 기입하세요. 
+* 만일 당신이 센서를 재시작할 예정이라면, 11일 그리고 12일동안에 해당하는 가장 안전한 결과값을 위하여, 공장보정 없이 어느방법으로도 재시작을 할수 있습니다. 그렇지않다면 변화값을 주시하고 보정을 하셔야 합니다.
+* 공장보정을 한 Dexcom G6의 Pre-soaking은 결과적으로 혈당값의 편차를 제공할 수 있습니다. 만일 당신이 Pre-soak을 한다면, 가장 정확한 결과값을 얻기위해 센서보정을 할 필요가 있습니다.
+* 혈당값의 변화를 보는 것이 불가하다면, 공장보정이 되지않은 방식으로 바꾸고, Dexcom G5와 같은 시스템을 사용하는 것이 바람직합니다.
 
-To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
+이러한 Dexcom G6의 권장사항의 세부적인 내용들과 이유들에 대해 더 알고자 하신다면, www.diabettech.com에서 Tim Street 가 게시한 내용 전문을 읽어보시기 바랍니다.
 
 ### Connect G6 transmitter for the first time
 
