@@ -2,7 +2,7 @@
 
 How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
 
-## General
+## 일반적인 정보.
 
 ### Can I just download the AndroidAPS installation file?
 
@@ -161,7 +161,7 @@ In NSClient check 'Connection settings'. Maybe you actually are not in an allowe
 
 If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS openAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
-## Pump
+## 펌프
 
 ### Where to place the pump?
 
