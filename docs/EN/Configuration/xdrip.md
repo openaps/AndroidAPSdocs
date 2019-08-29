@@ -37,6 +37,12 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 
 ## xDrip+ & Dexcom G6
 
+### xDrip+ version depending on G6 transmitter serial no.
+
+If your G6 transmitter serial no. is starting with **80 or 81** use xDrip+ nightly 2019/05/18 or newer.
+
+If your G6 transmitter serial no. is starting with **8G** use xDrip+ nightly 2019/08/19 or newer.
+
 
 ### Dexcom specific settings
 
@@ -91,9 +97,12 @@ To learn more about the details and reasons for these recommendations read the [
 
 * Insert new sensor (only if replacing)
 * Put transmitter into sensor
+* **Wait 15 minutes** before starting sensor so xDrip can initialize communication with the new transmitter
 * Start sensor (only if replacing)
+
    -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
-   -> If there is no time specification after a few minutes stop and restart the sensor.
+
+-> If your transmitter serial no. does not start with 8G and there is no time specification after a few minutes stop and restart the sensor.
 * Restart collector (system status - if not replacing sensor}
 * Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
 * Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
@@ -240,6 +249,28 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
+## Troubleshooting Dexcom G6 and xDrip+
+
+### Problem connecting transmitter
+
+* Transmitter must be shown in your smartphone's bluetooth settings.
+* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
+* Open system status in xDrip+ (hamburger menue on top left side of home screen).
+* Check if your transmitter is shown on first status page ('classic status page').
+* If not: Delete device from your smartphone's bluetooth settings.
+* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+
+### Problem when starting new sensor
+
+* Native sensor is marked as "FAILED: Sensor Failed Start"
+* Stop sensor
+* Restart your phone
+* Start sensor with code 0000 (four times zero)
+* Wait 15 minutes
+* Stop sensor
+* Start sensor with "real" code (printed on the adhesive protector)
+
+Check in xDrip+ logs if xDrip+ strats counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ & Freestyle Libre
 
