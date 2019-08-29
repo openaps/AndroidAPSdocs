@@ -2,7 +2,9 @@
 
 If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it. If your Dexcom G6 transmitter's serial no. is starting with 8G... try nightly build 2019/07/28 or later.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+
+If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 
 ## Basic settings for all CGM & FGM systems
@@ -36,6 +38,12 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 
 
 ## xDrip+ & Dexcom G6
+
+### xDrip+ version depending on G6 transmitter serial no.
+
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+
+If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 
 ### Dexcom specific settings
@@ -79,21 +87,27 @@ To learn more about the details and reasons for these recommendations read the [
 
 **For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
-* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+
+If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+
 * Turn original Dexcom receiver off (if used).
 * Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
 * Use the Source Wizard Button which ensures default settings including OB1 & Native Mode
    - This guides you through the initial set up.
    - you will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter
+* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter). Be careful not to confuse 0 (zero) and O (capital letter o).
 
    ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Insert new sensor (only if replacing)
 * Put transmitter into sensor
+* **Wait 15 minutes** before starting sensor so xDrip can initialize communication with the new transmitter
 * Start sensor (only if replacing)
+
    -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
-   -> If there is no time specification after a few minutes stop and restart the sensor.
+
+-> If your transmitter serial no. does not start with 8G and there is no time specification after a few minutes stop and restart the sensor.
 * Restart collector (system status - if not replacing sensor}
 * Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
 * Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
@@ -142,7 +156,9 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Replace transmitter
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly build xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+
+If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Turn original Dexcom receiver off (if used).
 * Stop sensor (only if replacing sensor)
@@ -240,6 +256,28 @@ For G6 transmitters manufactured after fall/end of 2018 please make sure to use 
 
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
+## Troubleshooting Dexcom G6 and xDrip+
+
+### Problem connecting transmitter
+
+* Transmitter must be shown in your smartphone's bluetooth settings.
+* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
+* Open system status in xDrip+ (hamburger menue on top left side of home screen).
+* Check if your transmitter is shown on first status page ('classic status page').
+* If not: Delete device from your smartphone's bluetooth settings.
+* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+
+### Problem when starting new sensor
+
+* Native sensor is marked as "FAILED: Sensor Failed Start"
+* Stop sensor
+* Restart your phone
+* Start sensor with code 0000 (four times zero)
+* Wait 15 minutes
+* Stop sensor
+* Start sensor with "real" code (printed on the adhesive protector)
+
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ & Freestyle Libre
 
