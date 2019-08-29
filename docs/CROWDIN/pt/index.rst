@@ -3,12 +3,12 @@ Bem-vindo à documentação do AndroidAPS
 
 AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
 
-Main components are:
+Componentes principais são:
 
 .. image:: images/modules-female.png
-  :alt: Components
+  :alt: Componentes
 
-For more details, please read on here.
+Para mais detalhes, leia aqui.
 
 Guia de Introdução
 ----------------
@@ -21,7 +21,7 @@ Guia de Introdução
    O que é um sistema de Closed Loop (Fechado) com AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
    
-O que eu preciso 
+O que é preciso 
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
@@ -63,7 +63,7 @@ Configuração
    :glob:
    
    Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.md>
+   Preferências <./Configuration/Preferences.md>
    
    
 Uso AndroidAPS
@@ -77,8 +77,8 @@ Uso AndroidAPS
    Recursos OpenAPS <./Usage/Open-APS-features.md>   
    Detecção de Sensibilidade e COB <./Configuration/Sensitivity-detection-and-COB.md>
    Troca de Perfil <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.md>    
+   Alvos-Temporários <./Usage/temptarget.md>   
+   Hidratos estendidos <./Usage/Extended-Carbs.md>    
   
  
 Dicas Gerais 
@@ -88,9 +88,9 @@ Dicas Gerais
    :glob:
    
    Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
+   Aceder a registos <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
+   Exportar/Importar Configurações <./Usage/ExportImportSettings.rst>
    
 
 AndroidAPS para crianças
@@ -102,14 +102,14 @@ AndroidAPS para crianças
    Comandos SMS<./Usage/SMS-Commands.md>
    
 
-Advanced 
+Avançado 
 ----------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automation <./Usage/automation.md>
+   Automação <./Usage/automation.md>
    
 
 Resolução de Problemas
@@ -120,7 +120,7 @@ Resolução de Problemas
   
    NS-Client <./Usage/Troubleshooting-NSClient.md>
    Actualizar <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pumps <./FGT/Troubleshootingpumps.rst>
+   Bombas de Insulina <./FGT/Troubleshootingpumps.rst>
 
 
 Perguntas Frequentes (FAQ) 
@@ -156,8 +156,8 @@ Recursos/Referência
    :maxdepth: 1
    :glob:
             
-   Resources <./Resources/index>
-   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+   Recursos <./Resources/index>
+   Para Clínicos <./Resources/clinician-guide-to-AndroidAPS>
 
 
 Como ajudar
