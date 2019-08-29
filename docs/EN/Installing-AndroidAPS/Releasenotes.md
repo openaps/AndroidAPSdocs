@@ -12,6 +12,24 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
+## Version 2.4
+
+Release date: XX-XX-XXXX
+
+### Is this update for me? Currently is NOT supported
+* Android 5
+* Poctech, 600SeriesUploader, Glimp, Patched Dexcom from 2.3 directory
+
+### Major new features
+* Internal change of targetSDK to 28 (Android 9), jetpack support
+* RxJava2, Okhttp3, Retrofit support
+* Old Medtronic pumps support (RileyLink need) - engineering mode only
+* New Automation plugin - engineering mode only
+* Rendering insulin activity
+* Adjusting IOB predictions by autosense result
+* New support for patched Dexcom apks (2.4 folder)
+* Signature verifier
+
 ## Version 2.3
 
 Release date: 25-04-2019
