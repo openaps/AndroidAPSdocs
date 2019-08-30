@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>statusindicator batterij niveau op Overzichtsscherm</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>BG</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>statusindicator infuuswissel op Overzichtsscherm</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -284,7 +284,7 @@
  <td>PH</td>
  <td>pompgeschiedenis (Pump History) - je ziet PH staan op het Behandelingen tabblad, om aan te geven dat die invoer in het pompgeheugen staat</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
 </tr>
 <tr>
  <td>Voorspellingslijnen</td>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>statusindicator reservoir niveau op Overzichtsscherm</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
