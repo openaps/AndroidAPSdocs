@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>statusindicator sensor leeftijd op Overzichtsscherm</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Instellingen</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>Gevoeligheids detectie (Sensitivity detection)</td>
