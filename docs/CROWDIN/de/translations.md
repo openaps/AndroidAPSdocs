@@ -12,30 +12,30 @@
 
 * Übersetze Sätze auf der linken Seite, indem Du übersetzten Text hinzufügst oder verwende & 'edit suggestion'.![Übersetzen der App](./images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode ![Lektorenmodus App](./images/translations-proofreading-mode.png)
+* Lektoren müssen zum Proofreading-Modus wechseln ![Lektorenmodus App](./images/translations-proofreading-mode.png)
     
-    and approve translated texts ![approve text](./images/translations-proofreading.png)
+    und übersetzte Texte freigeben.![Übersetzung freigeben](./images/translations-proofreading.png)
 
 Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version von AndroidAPS hinzugefügt. Am Anfang wäre es gut, auch die vorhandenen Übersetzungen, die noch nicht genehmigt sind, durchzuschauen und zu korrigieren oder zu genehmigen, wenn sie korrekt sind.
 
-## Translate wiki pages
+## Wiki-Seiten übersetzen
 
-* Click the name of the wiki page you want to translate ![Click wiki page](./images/translation_WikiPage.png)
+* Klicke auf den Namen der Wiki-Seite, die Du übersetzen willst. ![Wiki-Seite klicken](./images/translation_WikiPage.png)
 
-* Translate sentences by sentence
+* Übersetze Satz für Satz:
     
-    1 Untranslated text is shown with red background on the left side.
+    1 Noch nicht übersetzter Text wird auf der linken Seite mit rotem Hintergrund angezeigt.
     
-    2 You can copy a proposal to the edit field by clicking on the proposal.
+    2 Du kannst einen Übersetzungsvorschlag in das Bearbeitungsfeld kopieren, indem Du darauf klickst.
     
-    3 Edit the proposal or write the translation yourself.
+    3 Passe den Vorschlag ggf. an oder übersetze selbst.
     
-    4 Click safe
+    4 Klicke auf 'safe'.
     
-    ![Translation wiki](./images/translation_WikiTranslate.png)
+    ![Übersetzen des Wiki](./images/translation_WikiTranslate.png)
 
-* Proofreaders have to switch to Proofreading mode ![Proffreading mode wiki](./images/translation_WikiProofreading.png)
+* Lektoren müssen zum Proofreading-Modus wechseln ![Lektorenmodus Wiki](./images/translation_WikiProofreading.png)
     
-    and approve translated texts ![approve text](./images/translations-proofreading.png)
+    und übersetzte Texte freigeben.![Übersetzung freigeben](./images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.
+Wenn ein Lektor eine Übersetzung freigibt, wird sie in das nächste 'Wiki Build' aufgenommen. Um den Prozess zu beschleunigen, kannst Du das Wiki-Team über neue Übersetzungen informieren.
