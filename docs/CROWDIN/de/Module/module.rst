@@ -39,10 +39,10 @@ Insulinpumpe
 --------
 AndroidAPS funktioniert **derzeit** mit 
 
-- `Accu-Chek Combo <../Configuration/DanaR-Insulin-Pump.html>`_ (zusätzlich werden Ruffy App, LineageOS oder Android 8.1 auf Deinem Smartphone benötigt)
-- `Accu-Chek Insight <../Configuration/DanaRS-Insulin-Pump.html>`_ 
-- `Dana R <../Configuration/Accu-Chek-Combo-Pump.html>`_ 
-- `Dana RS  <../Configuration/Accu-Chek-Insight-Pump.html.html>`_  
+- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+- `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+- `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_  
 - `einigen alten Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ ab der neuen Version 2.4 (zusätzlich werden RileyLink/Gnarl Hardware und ein Android Smartphone mit Bluetooth Low Energy (BLE-Chipset) benötigt.)
 
 **Andere Pumpen** die evtl. das Potential haben, küntig mit AndroidAPS zusammen zu arbeiten, sind auf der Seite `Zukünftig ggf. loopbare Pumpen <Future-possible-Pump-Drivers.html>`_ aufgeführt.
@@ -85,7 +85,7 @@ Weitere Informationen zur Konfiguration von Nightscout für die Verwendung mit A
 
 AAPS-.apk Datei
 ---------------
-Die grundlegende Komponente des Systems. Bevor Du die App installierst, musst Du zuerst die apk-Datei (das ist Dateinamenerweiterung für eine Android-App) erstellen. Die Anleitung dazu findest Du `hier <../../Installing-AndroidAPS/Building-APK.html>`_.  
+Die grundlegende Komponente des Systems. Bevor Du die App installierst, musst Du zuerst die apk-Datei (das ist Dateinamenerweiterung für eine Android-App) erstellen. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
 
 Optionale Module
 ==================
@@ -93,7 +93,7 @@ Smartwatch
 ---------------
 Jede Smartwatch mit Android 1.x oder höher funktioniert. Viele Looper verwenden eine Sony Smartwatch 3 (SWR50), da diese auch Werte vom Dexcom G5/G6 empfangen kann, wenn sich das Smartphone nicht in Reichweite befindet. Einige andere Smartwatches können so gepatched werden, dass sie als 'Standalone receiver' verwendet werden können (siehe `diese Dokumentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ für weitere Details).
 
-Es gibt eine von AAPS Anwendern erstellte `Liste mit getesteten Smartphones und Smartwatches: <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Es gibt verschiedene Watchfaces zur Nutzung mit AndroidAPS, weitere Informationen findest Du `hier <../Configuration/Watchfaces>`_.
+Es gibt eine von AAPS Anwendern erstellte `Liste mit getesteten Smartphones und Smartwatches: <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
 
 Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das  `Formular <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ ausfüllen.
 
@@ -111,7 +111,7 @@ Eine Schritt-für-Schritt-Anleitung findest Du im Sample Setup. Dieses ist schon
    :maxdepth: 1
    :glob:
    
-   Sample Setup 1 <../Getting-Started/Sample-Setup.md>
+   Sample Setup <../Getting-Started/Sample-Setup.html>
  
   
 Wartezeit überbrücken
