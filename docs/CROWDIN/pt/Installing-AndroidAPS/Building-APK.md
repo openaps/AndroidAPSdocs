@@ -8,11 +8,10 @@
 
 If your build fails with an error regarding "on demand configuration" you can do the following:
 
-     * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-     * In the left pane, click Build, Execution, Deployment > Compiler.
-     * Uncheck the Configure on demand checkbox.
-     * Click Apply or OK.
-    
+* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+* In the left pane, click Build, Execution, Deployment > Compiler.
+* Uncheck the Configure on demand checkbox.
+* Click Apply or OK.
 
 * * *
 
@@ -25,8 +24,8 @@ If your build fails with an error regarding "on demand configuration" you can do
 
 In general, the steps necessary to build the APK file:
 
-* Instalar Git
-* Instalar e configurar o Android Studio.
+* Install git
+* Install and setup Android Studio.
 * Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
 * Open the cloned project in Android Studio as active project.
 * Build the signed APK.
@@ -38,10 +37,10 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Install Android Studio
 
-* Instalar Git 
+* Install git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - basta instalar um pacote git através do gerenciador de pacote da sua distribuição
+  * Linux - just install a package git via package manager of your distribution
 * Install [Android Studio](https://developer.android.com/studio/install.html).
 * Setup Android Studio during first start
 
@@ -184,7 +183,8 @@ Yeah, the first build is successful but we are not finished.
 
 ## Generate signed APK
 
-In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)  
+In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
