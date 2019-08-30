@@ -62,7 +62,7 @@ NS Profile использует профили, которые вы сохран
 
 ## Источник данных гликемии
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Выберите источник данных ГК - см. страничку [Источник ГК](BG-Source.rst) для получения дополнительной информации по настройкам.
 
 * [xDrip +](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * СК с клиента Nightscout
