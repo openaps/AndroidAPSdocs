@@ -26,7 +26,7 @@ Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" wh
    - Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
 
 3. [Dexcom G5](https://dexcom.com)
- * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
+ * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
    
 4. Optional: Sony Smartwatch 3 (SWR50)
  * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)

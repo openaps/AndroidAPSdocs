@@ -6,7 +6,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Exp
  
 ### Objective 1: Setting up visualization and monitoring, analysing basals and ratios
 
-* Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
+* Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.rst) for more information.
 * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
 * Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
 

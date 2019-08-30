@@ -6,10 +6,10 @@
 **Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin! 
 
 If your build fails with an error regarding "on demand configuration" you can do the following:
-   * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-   * In the left pane, click Build, Execution, Deployment > Compiler.
-   * Uncheck the Configure on demand checkbox.
-   * Click Apply or OK.
+* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+* In the left pane, click Build, Execution, Deployment > Compiler.
+* Uncheck the Configure on demand checkbox.
+* Click Apply or OK.
    
 ---
 ### This article is divided into two parts.
@@ -185,7 +185,8 @@ Yeah, the first build is successful but we are not finished.
 
 ## Generate signed APK
 
-In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)<br>
+In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)

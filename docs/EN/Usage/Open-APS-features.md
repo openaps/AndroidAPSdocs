@@ -24,8 +24,9 @@ See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/e
 ### Max U/h a temp basal can be set to (OpenAPS “max-basal”)
 This safety setting determines the maximum temporary basal rate the insulin pump may deliver. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.
  
-    Example: 
-    Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
+Example: 
+
+Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
  
 But you cannot choose any value. AAPS limits the value as a 'hard limit' according to the patients age you have selected under settings. The lowest permitted value is for children and the highest for insulin-resistant adults.
  

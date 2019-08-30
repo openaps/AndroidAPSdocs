@@ -22,10 +22,10 @@ The insulin on board figure would be zero if just your standard basal was runnin
 
 The extended lines show the predicted BG calculations and trends - if you have it selected. 
     
-    * Orange line: COB (colour is used generally to represent COB and carbs)
-    * Dark blue line: IOB (colour is used generally to represent IOB and insulin)
-    * Light blue line: zero-temp
-    * Dark yellow line: UAM
+* Orange line: COB (colour is used generally to represent COB and carbs)
+* Dark blue line: IOB (colour is used generally to represent IOB and insulin)
+* Light blue line: zero-temp
+* Dark yellow line: UAM
 
 These lines show you the different predictions based on current carb absorption (COB); insulin only (IOB); showing how long it will take BG to level off at/above target if deviations suddenly cease and we run a zero temp until then (zero-temp) and unannounced meal/effect detection where carbs are detected but have not been entered into the system by the user (UAM).
 
