@@ -6,7 +6,7 @@ Man kann Filter benutzen, um nach bestimmten Pumpen oder Handys zu sortieren, ab
 
 Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das [Formular](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) ausfüllen.
 
-Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
+Bei Problemen mit der Liste bitten wir um eine Nachricht an hardware@androidaps.org. Falls Du ein Smartphone oder eine Smartwatch, die noch getestet werden sollten, zur Verfügung stellen kannst, schreibe bitte an donations@androidaps.org.
 
 # Handy Hintergrundbild
 
