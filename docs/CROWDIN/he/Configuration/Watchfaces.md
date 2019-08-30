@@ -6,7 +6,7 @@ The following functions can be triggered from the watch:
 
 * set a temporary target
 * administer a bolus
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md?highlight=tdd#wear) on the phone)
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
 * check the status of loop and pump
 * show TDD (Total daily dose = bolus + basal per day)
 
