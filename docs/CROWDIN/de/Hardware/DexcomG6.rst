@@ -3,7 +3,7 @@ Dexcom G6
 Grundsätzliches vorab
 ===============
 
-* Beachte die allgemeinen Empfehlungen zur CGM Hygiene und zum Setzen des Sensors, die Du `hier <../Hardware/GeneralCGMRecommendation>`_ findest.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`_.
 * Für G6 transmitter, die nach Herbst / Ende 2018 produziert wurden, musst Du eine der letzten `nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_ verwenden. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 
 Allgemeine Hinweise zum Closed Loop mit dem Dexcom G6
@@ -24,8 +24,8 @@ Dexcom G6 mit xdrip+
 
 * Lade `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
-* Passe die Einstellungen von xDrip+ entsprechend den Angaben auf der `Seite xDrip+ Einstellungen <../Configuration/xdrip.md>`_ an.
-* Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `Identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.md>`_ beschrieben.
+* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
+* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
 G6 mit der gepatchten Dexcom App
 =========================================================
