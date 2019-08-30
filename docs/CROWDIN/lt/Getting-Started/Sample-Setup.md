@@ -28,7 +28,7 @@ Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" wh
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
 
 4. Optional: Sony Smartwatch 3 (SWR50)
     
