@@ -22,11 +22,10 @@ Ilość insuliny na pokładzie wynosiłaby zero, gdyby działała tylko twója s
 
 Rozszerzone linie pokazują przewidywane obliczenia BG i trendy - jeśli zostały wybrane.
 
-    * Pomarańczowa linia: COB (kolor jest ogólnie używany do oznaczania COB i węglowodanów)
-    * Ciemnoniebieska linia: IOB (kolor jest ogólnie używany do oznaczania IOB i insuliny)
-    * Jasnoniebieska linia: zero-temp
-    * Ciemnożółta linia: UAM
-    
+* Orange line: COB (colour is used generally to represent COB and carbs)
+* Dark blue line: IOB (colour is used generally to represent IOB and insulin)
+* Light blue line: zero-temp
+* Dark yellow line: UAM
 
 Te linie pokazują różne przewidywania na podstawie aktualnej absorpcji węglowodanów (COB); tylko insuliny (IOB); pokazują, jak długo zajmie BG, aby wyrównać do/powyżej celu, jeśli odchylenia nagle ustaną, a do tego czasu mamy zerową bazę (zero-temp) i niezapowiedzianą detekcję posiłku, gdzie węglowodany są wykrywane, ale nie zostały wprowadzone do systemu przez użytkownika (UAM).
 
@@ -53,9 +52,9 @@ SUPER BOLUS polega na tym, że dawka insuliny bazowej jak byłaby podana przez n
 <b>Kombinacje COB i IOB i co one oznaczają</b>
 
 <ul>
-    <li>Jeśli zaznaczysz COB i IOB niewchłonięte węglowodany, które nie są już pokryte insuliną + cała insulina dostarczona jako TBR lub SMB zostanie wzięta pod uwagę</li>
-    <li>Jeśli zaznaczysz COB bez IOB, ryzykujesz zbyt dużą ilością insuliny, ponieważ AAPS nie bierze pod uwagę tego, co już zostało podane. </li>
-    <li>Jeśli zaznaczysz IOB bez COB, AAPS bierze pod uwagę już dostarczoną insulinę, ale nie pokryje tego przed jakimkolwiek węglowodanem, który jeszcze zostanie wchłonięty. Prowadzi to do ogłoszenia „brakujących węglowodanów”.
+    <li>If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account</li>
+    <li>If you tick COB without IOB you run the risk of too much insulin as AAPS is not accounting for what’s already given. </li>
+    <li>If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 </ul>
 
 Jeśli po bolusie na posiłek pojawi się dodatkowy pokarm (np. dodatkowy deser), pomocne może być odznaczenie wszystkich pól. W ten sposób dodawane są tylko nowe węglowodany, ponieważ główny posiłek niekoniecznie zostanie wchłonięty, więc IOB nie będzie dokładnie pasował do COB wkrótce po bolusie posiłkowym.
