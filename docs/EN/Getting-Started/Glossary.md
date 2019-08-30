@@ -317,7 +317,7 @@
  <td>SEN</td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Preferences</a><br><a href="../Getting-Started/Screenshots">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>Sensivity detection</td>
