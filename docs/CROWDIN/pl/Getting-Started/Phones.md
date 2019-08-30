@@ -6,7 +6,7 @@ Możesz używać filtrów do wyświetlania poszczególnych pomp lub telefonów, 
 
 Aby wprowadzić telefon lub zegarek, który nie jest jeszcze wymieniony w arkuszu kalkulacyjnym wypełnij [formularz](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email <donations@androidaps.org>.
+Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
 
 # Phone Background
 
