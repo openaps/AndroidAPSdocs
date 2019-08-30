@@ -194,7 +194,7 @@ If non of the above tips helped you might consider building the app from scratch
       ![Key store pad](../images/KeystorePath.PNG)
       
   
-  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Gebruik bestaande keystore en wachtwoord.
+  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Gebruik bestaande keystore en wachtwoord.
 4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
 5. [Importeer instellingen](../Usage/Objectives#export-import-settings)
 

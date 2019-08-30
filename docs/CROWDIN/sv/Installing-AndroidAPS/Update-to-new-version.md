@@ -194,7 +194,7 @@ If non of the above tips helped you might consider building the app from scratch
       ![Key store path](../images/KeystorePath.PNG)
       
   
-  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Use existing key and key store.
+  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Use existing key and key store.
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. [Import settings](../Usage/Objectives#export-import-settings)
 

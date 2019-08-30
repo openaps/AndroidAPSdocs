@@ -6,7 +6,7 @@ Die nachfolgenden Funktionen kannst Du von der Uhr aus starten:
 
 * temporäres Ziel setzen
 * Bolus abgeben
-* Bolusrechner verwenden (Welche Variablen bei der Berechnung berücksichtigt werden, lässt sich in den [Einstellungen](../Configuration/Config-Builder.md?highlight=tdd#wear) auf dem Smartphone festlegen.)
+* Bolusrechner verwenden (Welche Variablen bei der Berechnung berücksichtigt werden, lässt sich in den [Einstellungen](../Configuration/Config-Builder#wear) auf dem Smartphone festlegen.)
 * Loop- und Pumpenstatus prüfen
 * TDD (Total daily dose = Bolus + Basal pro Tag) anzeigen
 

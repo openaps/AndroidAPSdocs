@@ -6,7 +6,7 @@ Z hodinek lze ovládat následující funkce:
 
 * nastavovat dočasné cíle
 * podávat bolusy
-* používat kalkulátor (nastavení kalkulátoru můžete definovat v [nastaveni](../Configuration/Config-Builder.md?highlight=tdd#wear) v telefonu)
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
 * kontrolovat stav smyčky a pumpy
 * zobrazit TDD (celková denní dávka = bolus + bazál za den)
 

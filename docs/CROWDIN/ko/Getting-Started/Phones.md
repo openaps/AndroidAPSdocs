@@ -6,7 +6,7 @@
 
 스프레드시트에 기록되어 있지 않은 스마트폰 혹은 워치를 추가하려면 다음 [양식](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)을 작성해주세요.
 
-Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email <donations@androidaps.org>.
+Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
 
 # Phone Background
 

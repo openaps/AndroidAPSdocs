@@ -28,7 +28,7 @@ Die Daten werden jedoch automatisch zu Nightscout (Open Source Cloud Service) ho
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
+    * Alternativen: siehe Liste der möglichen [BZ-Quellen](../Configuration/BG-Source.rst)
 
 4. Optional: Sony Smartwatch 3 (SWR50)
     

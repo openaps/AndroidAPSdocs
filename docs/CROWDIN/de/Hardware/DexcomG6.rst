@@ -38,7 +38,7 @@ G6 mit der gepatchten Dexcom App
 Problembehandlung G6
 ====================
 
-Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du `hier <./GeneralCGMRecommendation#Troubleshooting>`_.
+Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du `hier <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
 Neuer Transmitter bei laufendem Sensor
 --------------------------------------

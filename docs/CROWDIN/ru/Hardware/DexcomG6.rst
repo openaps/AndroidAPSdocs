@@ -38,7 +38,7 @@ If using G6 with patched Dexcom app
 Troubleshooting G6
 ====================
 
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation#Troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
 Установка нового трансмиттера на работающий сенсор
 --------------------------------------

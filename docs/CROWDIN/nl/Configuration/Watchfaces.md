@@ -6,7 +6,7 @@ De volgende functies kunnen vanaf het horloge worden geactiveerd:
 
 * een tijdelijk BG doel (TT) instellen
 * een bolus toedienen
-* de bolus calculator gebruiken (in [instellingen](../Configuration/Config-Builder.md?highlight=tdd#wear) op de telefoon is geconfigureerd welke variabelen in de berekening worden meegenomen)
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
 * de status van de loop en pomp controleren
 * weergeven van de TDD (Totale Dagelijkse Dosis = bolus + basale insuline per dag)
 
