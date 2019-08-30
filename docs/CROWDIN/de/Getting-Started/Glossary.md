@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>Statusanzeige niedriger Batteriestand auf dem Startbildschirm</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>BZ</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>Statusanzeige Kanülenwechsel auf dem Startbildschirm</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -284,7 +284,7 @@
  <td>PH</td>
  <td>Pumpenhistorie (Eintrag im Behandlungs-Tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
 </tr>
 <tr>
  <td>Predictions (Vorhersagen)</td>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>Statusanzeige Reservoirwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
