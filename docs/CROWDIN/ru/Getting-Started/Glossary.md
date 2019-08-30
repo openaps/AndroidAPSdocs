@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>меняющая цвет надпись состояния просроченного/непросроченного сенсора на главном экране</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots">Снимки экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>Определение чувствительности sensitivity</td>
