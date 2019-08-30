@@ -28,7 +28,7 @@ Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno da
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Alternativy: viz seznam možných [zdrojů glykémie](../Configuration/BG-Source.md)
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
 
 4. Volitelné: Sony Smartwatch 3 (SWR50)
     
