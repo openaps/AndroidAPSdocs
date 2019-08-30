@@ -28,7 +28,7 @@ Niemniej jednak, dane są automatycznie przesyłane do Nightscout "w chmurze" po
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Inne żródła BG: sprawdź [możliwe żródła BG](../Configuration/BG-Source.md)
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
 
 4. Opcjonalnie: Sony Smartwatch 3 (SWR50)
     
