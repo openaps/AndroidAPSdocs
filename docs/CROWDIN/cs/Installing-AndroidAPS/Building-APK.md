@@ -42,7 +42,7 @@ Detailed description of the steps necessary to build the APK file.
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
   * Linux - prostě instalujte balíček git správcem balíčků z vaší distribuce
-* Instalujte [Android Studio](https://developer.android.com/studio/install.html).
+* Nainstalujte [Android Studio](https://developer.android.com/studio/install.html).
 * Nastavte Android Studio při prvním spuštění
 
 Select "Do not import settings" as you have not used it before.
@@ -248,7 +248,7 @@ V nastavení telefonu je nabídka (instalovat neznámé aplikace), kde lze povol
 
 Vyberte možnost „Povolit z tohoto zdroje“. Po instalaci můžete tuto volbu zase zakázat.
 
-![Instalace z neznámých zdrojů](../images/Installation_Screenshot_49-50.png)
+![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
 
 Posledním krokem je klepnout na soubor APK, který jsem přijal přes Gmail, a nainstalovat aplikaci. Pokud se APK nechce nainstalovat a máte v telefonu již starší verzi AndroidAPS, pravděpodobně byla podepsaná jiným klíčem – v tom případě musíte starou verzi nejdřív odinstalovat, avšak nezapomeňte předtím exportovat svá nastavení!
 

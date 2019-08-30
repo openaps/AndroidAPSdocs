@@ -149,13 +149,12 @@ Waar je hulp kunt vinden
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Resources/Reference
+For Clinicians
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
             
-   Achtergrondinformatie <./Resources/index>
    Voor zorgprofessionals <./Resources/clinician-guide-to-AndroidAPS>
 
 
@@ -166,7 +165,7 @@ Hoe je zelf kunt helpen
    :glob:
 
    Hoe kan je helpen <./Getting-Started/How-can-I-help.md>
-   How to translate the app and documentation <./translations.md>
+   How to translate the app and wiki <./translations.md>
    De wiki verbeteren <./make-a-PR>
 
 

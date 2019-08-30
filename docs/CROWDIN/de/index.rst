@@ -1,7 +1,7 @@
 Willkommen zur AndroidAPS-Dokumentation
 ==============================================
 
-AndroidAPS ist eine Open Source App für Google Android Smartphones, die bei insulinabhängigem Diabetes als künstliche Bauchspeicheldrüse (sog. artificial pancreas system - APS) dient. Hauptkomponenten sind verschiedene OpenAPS-Softwarealgorithmen, die genau das zu tun sollen, was eine echte Bauchspeicheldrüse auch tut: den Blutzuckerspiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten. Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. Die App hat KEINE selbstlernende künstliche Intelligenz. Stattdessen basieren die Berechnungen von AndroidAPS auf den individuellen Therapiefaktoren und Kohlenhydratmengen, die der Benutzer manuell in sein Behandlungsprofil eingibt. Diese Eingaben werden aber aus Sicherheitsgründen vom System verifiziert. Die App wird nicht in Google Play angeboten - du musst sie aus rechtlichen Gründen selbst aus dem Quellcode erstellen.
+AndroidAPS ist eine Open Source App für Google Android Smartphones, die bei insulinabhängigem Diabetes als künstliche Bauchspeicheldrüse (sog. artificial pancreas system - APS) dient. Hauptkomponenten sind verschiedene OpenAPS-Softwarealgorithmen, die genau das zu tun sollen, was eine echte Bauchspeicheldrüse auch tut: den Blutzuckerspiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten. Zusätzlich werden zumindest eine unterstützte Insulin-Pumpe und ein CGM benötigt, die eine CE-Kennzeichnung haben. Die App hat KEINE selbstlernende künstliche Intelligenz. Stattdessen basieren die Berechnungen von AndroidAPS auf den individuellen Therapiefaktoren und Kohlenhydratmengen, die der Benutzer manuell in sein Behandlungsprofil eingibt. Diese Eingaben werden aber aus Sicherheitsgründen vom System verifiziert. Die App wird nicht in Google Play angeboten - du musst sie aus rechtlichen Gründen selbst aus dem Quellcode erstellen.
 
 Hauptkomponenten sind:
 
@@ -149,14 +149,13 @@ Hilfe durch die Community
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Informationsquellen/Referenzen
+Für Mediziner & Fachpersonal
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
             
-   Informationsquellen <./Resources/index>
-   Für Klinikpersonal <./Resources/clinician-guide-to-AndroidAPS>
+   Für Mediziner & Fachpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
 
 Mithelfen in der Community
@@ -166,9 +165,8 @@ Mithelfen in der Community
    :glob:
 
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
-   App oder Dokumentation übersetzen <./translations.md>
+   App oder Wiki übersetzen <./translations.md>
    Am Wiki mitschreiben <./make-a-PR>
-   Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>
 
 
 .. note:: 

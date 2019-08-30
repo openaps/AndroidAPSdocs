@@ -149,13 +149,12 @@ Kam pro pomoc
    Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Resources/Reference
+For Clinicians
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
             
-   Zdroje <./Resources/index>
    Pro lékaře <./Resources/clinician-guide-to-AndroidAPS>
 
 
@@ -166,7 +165,7 @@ Jak pomoci
    :glob:
 
    Jak mohu pomoci <./Getting-Started/How-can-I-help.md>
-   How to translate the app and documentation <./translations.md>
+   How to translate the app and wiki <./translations.md>
    Jak editovat wiki <./make-a-PR>
 
 
