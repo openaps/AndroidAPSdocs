@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>Statusanzeige Sensorwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>Sensitivitätserkennung</td>
