@@ -6,7 +6,7 @@ Wenn Du Dein **Smartphone wechselst** kannst Du Deine [Einstellungen exportieren
 
 ### Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren
 
-* Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert. Weitere Informationen findest du unter [BZ-Quelle](../Configuration/BG-Source.md).
+* Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert. See [BG Source](../Configuration/BG-Source.rst) for more information.
 * Wähle die richtige Pumpe im Konfigurations-Generator (wähle virtuelle Pumpe wenn du ein Pumpenmodell benutzt, für das es keinen AndroidAPS-Treiber gibt) um sicherzustellen, dass die Pumpe ihren Status mit AndroidAPS teilen kann. Wenn du eine DanaR Pumpe verwendest, dann stelle sicher, dass du die [DanaR Insulin Pumpen Anleitung](../Configuration/DanaR-Insulin-Pump.md) befolgt hast, damit eine stabile Verbindung zwischen der Pumpe und AndroidAPS gewährleistet ist.
 * Befolge die [Nightscout-Anleitung](../Installing-AndroidAPS/Nightscout.md), um zu gewährleisten, dass Nightscout diese Daten empfangen und anzeigen kann.
 
