@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>Stavový indikátor na domovské obrazovce upozorňující na výměnu senzoru</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>Detekce citlivosti</td>
