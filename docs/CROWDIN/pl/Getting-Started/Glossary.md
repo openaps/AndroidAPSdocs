@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>lampka stanu niski poziom baterii na ekranie głównym</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>BG</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>lampka stanu zaległa zmiana kaniuli na ekranie głównym</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -284,7 +284,7 @@
  <td>PH</td>
  <td>historia pompy (wpis w zakładce Leczenie)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Zrzuty ekranów</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Zrzuty ekranów</a></td>
 </tr>
 <tr>
  <td>Prognozy/Predictions</td>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>lampka stanu zaległa zmiana zbiornika na insulinę na ekranie głównym</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
