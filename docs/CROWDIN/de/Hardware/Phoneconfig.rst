@@ -6,6 +6,6 @@ Smartphones
    :glob:
    
    Liste der getesteten Telefone <../Getting-Started/Phones.md>
-   Jelly Pro Einstellungen <../../Usage/jelly.md>
-   Huawei Einstellungen <../../Usage/huawei.md>
+   Jelly Pro Einstellungen <../Usage/jelly.md>
+   Huawei Einstellungen <../Usage/huawei.md>
    

@@ -164,7 +164,7 @@ Mithelfen in der Community
    :maxdepth: 1
    :glob:
 
-   Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
+   Wie ich helfen kann <./Getting-Started/How-can-I-help.md>
    App oder Wiki übersetzen <./translations.md>
    Am Wiki mitschreiben <./make-a-PR>
 
