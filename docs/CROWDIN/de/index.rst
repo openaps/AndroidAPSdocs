@@ -149,13 +149,12 @@ Hilfe durch die Community
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Informationsquellen/Referenzen
+For Clinicians
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
             
-   Informationsquellen <./Resources/index>
    Für Klinikpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
 
@@ -166,7 +165,7 @@ Mithelfen in der Community
    :glob:
 
    Wie kann ich helfen? <./Getting-Started/How-can-I-help.md>
-   App oder Dokumentation übersetzen <./translations.md>
+   App oder Wiki übersetzen <./translations.md>
    Am Wiki mitschreiben <./make-a-PR>
    Übersetzungs-Richtlinien <https://androidaps.readthedocs.io/en/l10n_master/DE/mithelfen/uebersetzungs-richtlinien.html>
 
