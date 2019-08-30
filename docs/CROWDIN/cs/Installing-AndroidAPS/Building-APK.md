@@ -248,7 +248,7 @@ V nastavení telefonu je nabídka (instalovat neznámé aplikace), kde lze povol
 
 Vyberte možnost „Povolit z tohoto zdroje“. Po instalaci můžete tuto volbu zase zakázat.
 
-![Instalace z neznámých zdrojů](../images/Installation_Screenshot_49-50.png)
+![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
 
 Posledním krokem je klepnout na soubor APK, který jsem přijal přes Gmail, a nainstalovat aplikaci. Pokud se APK nechce nainstalovat a máte v telefonu již starší verzi AndroidAPS, pravděpodobně byla podepsaná jiným klíčem – v tom případě musíte starou verzi nejdřív odinstalovat, avšak nezapomeňte předtím exportovat svá nastavení!
 
