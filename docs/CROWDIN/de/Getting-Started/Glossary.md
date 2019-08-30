@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>Statusanzeige Kanülenwechsel auf dem Startbildschirm</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>CGM</td>
