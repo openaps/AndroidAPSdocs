@@ -62,7 +62,7 @@ Dit profiel wordt aanbevolen als de insuline bij jou een werkingsprofiel heeft d
 
 ## BG bron
 
-Selecteer de bloed glucose bron die je gebruikt - Zie [BG bron](BG-Source.md) pagina voor meer uitleg over hoe je dat instelt.
+Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
