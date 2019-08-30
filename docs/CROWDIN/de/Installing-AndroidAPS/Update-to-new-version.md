@@ -181,7 +181,7 @@ Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
 
 ## App installiert, aber weiter die alte Version auf dem Smartphone
 
-Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich den Schritt 'Merge' in der [Update Anleitung](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github) übersprungen.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
 ## Keiner der oben genannten Löungsvorschläge funktioniert
 
@@ -194,7 +194,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
       ![Key store path](../images/KeystorePath.PNG)
       
   
-  4. Erstelle die App von Grund auf neu wie [hier](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components) beschrieben. Verwende dabei den bestehenden key und key store.
+  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Verwende dabei den bestehenden key und key store.
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
 
@@ -204,4 +204,4 @@ Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, kö
 
 Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. Anleitungen dazu findest Du online z.B. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Installiere Android Studio von Grund auf wie [hier](/Installing-AndroidAPS/Building-APK#install-android-studio) beschrieben und **führe kein gradle update durch**.
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
