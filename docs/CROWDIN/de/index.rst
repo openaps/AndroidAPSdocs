@@ -149,13 +149,13 @@ Hilfe durch die Community
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-For Clinicians
+Für Mediziner & Fachpersonal
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
             
-   Für Klinikpersonal <./Resources/clinician-guide-to-AndroidAPS>
+   Für Mediziner & Fachpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
 
 Mithelfen in der Community
