@@ -197,7 +197,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 
 ### New Sensor
 
-* Vypněte originální Dexcom přijímač (je-li použit).
+* Turn original Dexcom receiver off (if used).
 * Stop sensor if necessary
    
    Ensure it really is stopped:
@@ -262,11 +262,11 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 ### Problem when starting new sensor
 
 * Native sensor is marked as "FAILED: Sensor Failed Start"
-* Zastavte senzor
+* Stop sensor
 * Restart your phone
 * Start sensor with code 0000 (four times zero)
 * Wait 15 minutes
-* Zastavte senzor
+* Stop sensor
 * Start sensor with "real" code (printed on the adhesive protector)
 
 Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
