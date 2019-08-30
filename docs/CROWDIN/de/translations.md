@@ -8,19 +8,29 @@
 
 ## Texte für die AndroidAPS App übersetzen
 
-* Klicke auf strings.xml ![Klicke auf strings.xml](./images/translations-click-strings.png)
-
-* Übersetze Sätze auf der linken Seite, indem Du übersetzten Text hinzufügst oder verwende & 'edit suggestion'.![Übersetzen der App](./images/translations-translate.png)
-
-* Lektoren müssen zum Proofreading-Modus wechseln ![Lektorenmodus App](./images/translations-proofreading-mode.png)
+* Klicke auf strings.xml
     
-    und übersetzte Texte freigeben.![Übersetzung freigeben](./images/translations-proofreading.png)
+    ![Klicke auf strings.xml](./images/translations-click-strings.png)
+
+* Übersetze Sätze auf der linken Seite, indem du übersetzten Text hinzufügst oder verwende & edit suggestion
+    
+    ![Übersetzen der App](./images/translations-translate.png)
+
+* Lektoren müssen zum Proofreading-Modus wechseln
+    
+    ![Lektorenmodus App](./images/translations-proofreading-mode.png)
+    
+    und übersetzte Texte freigeben.
+    
+    ![Übersetzung freigeben](./images/translations-proofreading.png)
 
 Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version von AndroidAPS hinzugefügt. Am Anfang wäre es gut, auch die vorhandenen Übersetzungen, die noch nicht genehmigt sind, durchzuschauen und zu korrigieren oder zu genehmigen, wenn sie korrekt sind.
 
 ## Wiki-Seiten übersetzen
 
-* Klicke auf den Namen der Wiki-Seite, die Du übersetzen willst. ![Wiki-Seite klicken](./images/translation_WikiPage.png)
+* Klicke auf den Namen der Wiki-Seite, die Du übersetzen willst.
+    
+    ![Wiki-Seite klicken](./images/translation_WikiPage.png)
 
 * Übersetze Satz für Satz:
     
@@ -34,8 +44,12 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
     
     ![Übersetzen des Wiki](./images/translation_WikiTranslate.png)
 
-* Lektoren müssen zum Proofreading-Modus wechseln ![Lektorenmodus Wiki](./images/translation_WikiProofreading.png)
+* Lektoren müssen zum Proofreading-Modus wechseln
     
-    und übersetzte Texte freigeben.![Übersetzung freigeben](./images/translations-proofreading.png)
+    ![Lektorenmodus Wiki](./images/translation_WikiProofreading.png)
+    
+    und übersetzte Texte freigeben.
+    
+    ![Übersetzung freigeben](./images/translations-proofreading.png)
 
 Wenn ein Lektor eine Übersetzung freigibt, wird sie in das nächste 'Wiki Build' aufgenommen. Um den Prozess zu beschleunigen, kannst Du das Wiki-Team über neue Übersetzungen informieren.
