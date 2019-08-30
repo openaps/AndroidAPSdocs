@@ -20,7 +20,7 @@ Za prvé, musíte si **opatřit kompatibilní hardwarové komponenty**:
 
 * Podporovanou [inzulínovou pumpu](Pump-Choices.md) 
 * [smartphone s operačním systémem Android](Phones.md) (Apple iOS není systémem AndroidAPS podporován – podívejte se na [iOS Loop](https://loopkit.github.io/loopdocs/)) a 
-* [systém pro kontinuální monitorování glykémie](../Configuration/BG-Source.md). 
+* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
 
 Za druhé, musíte **nastavit hardware**. Viz [příklad nastavení s podrobným návodem](Sample-Setup.md).
 
@@ -63,67 +63,79 @@ Můžete ho zafixovat: K dispozici jsou speciální krytky, které zafixují CGM
 
 ### Efekt jednotlivých nastavení
 
-Tato tabulka vám pomůže optimalizovat nastavení. Nejlepší bude, když ji projdete odshora dolů. Cílem je mít dané nastavení správně, předtím než začnete měnit další. Postupujte po malých krocích a neprovádějte velké změny najednou. Jako vodítko můžete použít nástroj [Autotune](https://autotuneweb.azurewebsites.net/), ale nesmíte mu slepě věřit: ve vašem případě nebo za všech okolností nemusí fungovat správně. Myslete na to, že jednotlivá nastavení se navzájem ovlivňují – můžete mít „špatné“ nastavení, které bude za určitých okolností fungovat dobře (např. vysoký bazál a současně nízký sacharidový poměr), ale nebude tak fungovat vždy. To znamená, že musíte vždy zohledňovat všechna nastavení a ověřovat, zda fungují společně za různých okolností.<table class="tg" border=1> 
+Tato tabulka vám pomůže optimalizovat nastavení. Nejlepší bude, když ji projdete odshora dolů. Cílem je mít dané nastavení správně, předtím než začnete měnit další. Postupujte po malých krocích a neprovádějte velké změny najednou. Jako vodítko můžete použít nástroj [Autotune](https://autotuneweb.azurewebsites.net/), ale nesmíte mu slepě věřit: ve vašem případě nebo za všech okolností nemusí fungovat správně. Myslete na to, že jednotlivá nastavení se navzájem ovlivňují – můžete mít „špatné“ nastavení, které bude za určitých okolností fungovat dobře (např. vysoký bazál a současně nízký sacharidový poměr), ale nebude tak fungovat vždy. To znamená, že musíte vždy zohledňovat všechna nastavení a ověřovat, zda fungují společně za různých okolností.
 
-<th class="tg-0pky">
-  Nastavení
-</th>
-
-<th class="tg-0pky">
-  Popis a testování
-</th>
-
-<th class="tg-0pky">
-  Efekt
-</th>
-
-<td class="tg-0pky">
-  Celková doba aktivity inzulínu (DIA)
-</td>
-
-<td class="tg-0pky">
-  Doba, během níž se veškerý inzulin vstřebá/spotřebuje.<br /><br />Tato hodnota je často nastavena jako příliš nízká. Většina lidí bude mít nastaveno 5 hodin, v některých případech 6 nebo 7 hodin.
-</td>
-
-<td class="tg-0pky">
-  Příliš krátká hodnota DIA může vést k nízkým glykémiím. A naopak.<br /><br />Je-li hodnota DIA příliš krátká, AAPS si bude příliš brzy myslet, že váš předchozí bolus je již zcela spotřebován, a, v případě, že je vaše glykémie stále vyšší, přidá vám více inzulinu. (Systém ve skutečnosti nečeká tak dlouho, ale počítá predikce toho, co by se mohlo stát, a bude přidávat inzulin). Tímto způsobem pak dochází k „hromadění inzulinu“, o kterém však AAPS neví.<br /><br />Příkladem příliš krátkého DIA je situace, kdy je vysoká glykémie přehnaně korigována AAPS a glykémie následně poklesne příliš nízko.
-</td>
-
-<td class="tg-0pky">
-  Základní bazální dávka (U/h)
-</td>
-
-<td class="tg-0pky">
-  Množství inzulinu vydané v daném časovém okamžiku, aby zůstala glykémie stabilní.<br /><br />Testujte své bazály tak, že pozastavíte smyčku, nebudete konzumovat sacharidy, počkáte cca 5 hodin po jídle a budete sledovat, jak se glykémie mění. Tento test několikrát zopakujte.<br /><br />Pokud glykémie klesá, bazální dávka je příliš vysoká. Pokud glykémie stoupá, bazální dávka je příliš nízká.
-</td>
-
-<td class="tg-0pky">
-  Příliš vysoký bazál může vést k nízkým glykémiím. Totéž platí i naopak.<br /><br />Výchozí výpočty AAPS se drží těchto výchozích bazálních dávek. Je-li bazál příliš vysoký, „dočasný nulový bazál“ bude započítán jako větší záporný IOB, než by měl být. To povede k tomu, že AAPS bude provádět větší počet dílčích korekcí, než by měl, aby dostal IOB zpět na nulu.<br /><br />Příliš vysoký bazál tedy bude způsobovat nízké glykémie nejen v době, kdy je daná bazální dávka naprogramována, ale také následně, protože AAPS se bude snažit zkorigovat jej na nulu.<br /><br />Stejně tak příliš nízký bazál může vést k vysokým glykémiím a také k následnému neúspěchu při jejich snižování zpět na cílovou hodnotu.
-</td>
-
-<td class="tg-0pky">
-  Korekční faktor / citlivost na inzulin (ISF) (mmol/l/U nebo mg/dl/U)
-</td>
-
-<td class="tg-0pky">
-  O kolik mmol sníží glykémii 1 jednotka inzulinu.<br /><br />Za předpokladu, že máte správný bazál, můžete citlivost otestovat tak, že pozastavíte smyčku, zkontrolujete, že IOB je nula, a vezmete si pár glukózových tablet, abyste se dostali na stabilní ‘vyšší’ glykémii.<br /><br />Poté si aplikujete dané množství inzulinu (podle aktuálního korekčního faktoru), abyste se dostali na svou cílovou glykémii.<br /><br />Buďte opatrní, protože korekční faktor bývá často nastaven příliš nízký. Příliš nízký znamená, že vám 1 jednotka sníží glykémii rychleji, než jste očekávali.
-</td>
-
-<td class="tg-0pky">
-  Nižší citlivost = každá jednotka inzulinu způsobí menší pokles glykémie (někdy se označuje jako ‘agresivnější / silnější’). Pokud je příliš nízká, může způsobovat nízké glykémie.<br /><br />Vyšší citlivost = každá jednotka inzulinu způsobí větší pokles glykémií (někdy se označuje jako ‘méně agresivní / slabší’). Je-li tato hodnota příliš vysoká, může způsobovat vysoké glykémie.<br /><br />Citlivost na inzulin, která je nastavena příliš nízko (není neobvyklé) může způsobovat ‘přehnané korekce’, protože systém AAPS si bude myslet, že ke srovnání vysoké glykémie je třeba použít více inzulinu, než kolik je ve skutečnosti potřeba. Toto může vést k efektu ‘horské dráhy’ (zejména při hladovění). Pokud se to děje, musíte zvýšit svou hodnotu citlivosti. To znamená, že systém AAPS bude používat menší korekční dávky, čímž se předejde přehnané korekci, kdy by vysoké glykémie střídaly propady do nízké glykémie.<br /><br />A naopak, pokud je citlivost nastavena jako příliš vysoká, korekce mohou být nedostatečné, tzn. vaše glykémie bude zůstávat nad cílovou hodnotou – to je patrné zejména v noci.
-</td>
-
-<td class="tg-0pky">
-  Inzulino-sacharidový poměr (CR) (g/U)
-</td>
-
-<td class="tg-0pky">
-  Kolik gramů sacharidů pokryje jedna jednotka inzulinu.<br /><br />Za předpokladu, že máte správný bazál, můžete tento parametr otestovat tak, že zkontrolujete, že IOB je nula a vy máte dobrou glykémii, zkonzumujete přesně odměřené množství sacharidů a aplikujete si příslušnou dávku inzulinu podle aktuálního sacharidového poměru. Ideální je k testu využít jídlo, které v danou denní dobu běžně jíte a přesně spočítat obsah sacharidů.
-</td>
-
-<td class="tg-0pky">
-  Nižší sacharidový poměr = menší množství jídla na jednotku inzulinu, tzn. dostanete více inzulinu pro dané množství sacharidů. Nižší sach. poměr je označován také jako ‘agresivnější’.<br /><br />Vyšší sacharidový poměr = větší množství jídla na jednotku inzulinu, tzn. dostanete méně inzulinu pro dané množství sacharidů. Vyšší sach. poměr je označován také jako ‘méně agresivní’.<br /><br />Jestliže po strávení jídla a poté, co se váš IOB vrátil na nulu, zůstává vaše glykémie vyšší než před jídlem, máte pravděpodobně nastavenu příliš vysokou hodnotu sacharidového poměru. A naopak, pokud je vaše glykémie nižší než před jídlem, sach. poměr je příliš nízký.
-</td></table> 
+<table>
+  <tr>
+    <th>
+      Setting
+    </th>
+    
+    <th>
+      Description & testing
+    </th>
+    
+    <th>
+      Impact
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      Duration of insulin activity (DIA)
+    </td>
+    
+    <td>
+      The length of time that insulin decays to zero.<br /><br />This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+    </td>
+    
+    <td>
+      Too short DIA can lead to low BGs. And vice-versa.<br /><br />If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.<br /><br />Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Basal rate schedule (U/hr)
+    </td>
+    
+    <td>
+      The amount of insulin in a given hour time block to maintain BG at a stable level.<br /><br />Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.<br /><br />If BG is dropping, basal rate is too high. And vice-versa.
+    </td>
+    
+    <td>
+      Too high basal rate can lead to low BGs. And vice-versa.<br /><br />AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.<br /><br />So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.<br /><br />Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+    </td>
+    
+    <td>
+      The drop in BG expected from dosing 1U of insulin.<br /><br />Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.<br /><br />Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.<br /><br />Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+    </td>
+    
+    <td>
+      Lower ISF = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.<br /><br />Higher ISF = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.<br /><br />An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.<br /><br />Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Carbohydrate to insulin ratio (CR) (g/U)
+    </td>
+    
+    <td>
+      The grams of carbohydrate for each unit of insulin.<br /><br />Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR. Best is to eat food your normally eat at that time of day and count its carbs precicely.
+    </td>
+    
+    <td>
+      Lower CR = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.<br /><br />Higher CR = more food per unit, ie you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.<br /><br />If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are CR is too large. Conversely if your BG is lower than before food, CR is too small.
+    </td>
+  </tr>
+</table>
 
 ### Algoritmus APS
 
