@@ -62,7 +62,7 @@ Dieses Profil wird dann empfohlen, wenn dein Insulintyp von den anderen Profilen
 
 ## BZ-Quelle
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. Weitere Informationen findest du auf der Seite [BZ-Quelle](BG-Source.rst).
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * Nightscout-Client BZ
