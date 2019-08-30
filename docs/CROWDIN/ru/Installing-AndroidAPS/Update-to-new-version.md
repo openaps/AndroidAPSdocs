@@ -194,7 +194,7 @@ If you build the app successfully, transferred it to your phone and installed it
       ![Путь к месту хранения ключа](..../images/KeystorePath.PNG)
       
   
-  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Используйте существующий ключ и место хранения ключей.
+  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Используйте существующий ключ и место хранения ключей.
 4. Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
 
