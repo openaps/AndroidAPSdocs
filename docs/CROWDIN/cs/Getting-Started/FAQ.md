@@ -18,7 +18,7 @@ Proto nejsou soubory APK k dispozici.
 
 Za prvé, musíte si **opatřit kompatibilní hardwarové komponenty**:
 
-* Podporovanou [inzulínovou pumpu](Pump-Choices.md) 
+* podporovanou [inzulínovou pumpu](Pump-Choices.md) 
 * [smartphone s operačním systémem Android](Phones.md) (Apple iOS není systémem AndroidAPS podporován – podívejte se na [iOS Loop](https://loopkit.github.io/loopdocs/)) a 
 * a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
 
