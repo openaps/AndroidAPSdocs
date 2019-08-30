@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>lampka stanu zaległa zmiana sensora na ekranie głównym</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots"> Zrzuty ekranu </a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>Sensivity detection / Wykrywanie czułości</td>
