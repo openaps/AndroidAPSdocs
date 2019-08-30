@@ -22,11 +22,10 @@ Ukazatel aktivního inzulínu by měl být nula, pokud běží pouze váš stand
 
 Prodloužené linky ukazují predikce glykémie a trendy, pokud jste je zvolili.
 
-    * Oranžová linka: COB (barva se používá obecně k zobrazení COB a sacharidů)
-    * Tmavě modrá linka: IOB (barva se používá k zobrazení IOB a inzulinu)
-    * světle modrá linka: bazály
-    * tmavě žlutá čára: UAM
-    
+* Orange line: COB (colour is used generally to represent COB and carbs)
+* Dark blue line: IOB (colour is used generally to represent IOB and insulin)
+* Light blue line: zero-temp
+* Dark yellow line: UAM
 
 Tyto linky ukazují různé predikce založené na aktuální rychlosti absorpce sacharidů (COB); samotném inzulinu (IOB); ukazují, za jak dlouho se glykémie dostane do cílového rozsahu nebo nad něj, pokud by odchylky najednou zmizely a my jsme mezitím měli vypnutý bazál (zero-temp) a efekt/detekci neoznámeného jídla, u kterého byly detekovány sacharidy, ale nebyly uživatelem zaznamenány do systému (UAM).
 
@@ -53,9 +52,9 @@ SUPERBOLUS je funkce, kdy je k dávce okamžitého bolusu přičtený bazální 
 <b>Kombinace COB a IOB a jejich význam</b>
 
 <ul>
-    <li>Pokud vyberete COB a IOB, budou při výpočtu zohledněny nestrávané sacharidy, které již nejsou pokryty inzulinem + veškerý inzulin, který byl dodán jako DBD nebo SMB.</li>
-    <li>Pokud vyberete COB bez IOB, riskujete vydání příliš velkého množství inzulinu, protože AAPS nebude brát v potaz inzulin, který již byl vydán. </li>
-    <li>Pokud vyberete IOB bez COB, AAPS bude zohledňovat již vydaný inzulin, ale nezapočítá žádné zkonzumované sacharidy, které dosud nejsou stráveny. To vede k oznámení o 'chybějících sacharidech'.
+    <li>If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account</li>
+    <li>If you tick COB without IOB you run the risk of too much insulin as AAPS is not accounting for what’s already given. </li>
+    <li>If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 </ul>
 
 V případě, že chcete vydat další bolus krátce po podání bolusu k jídlu (např. když si přidáte zákusek), je užitečné zrušit označení všech těchto políček. Tak lze přidat pouze nově zkonzumované sacharidy, jelikož hlavní jídlo dosud nemusí být stráveno, takže IOB krátce po bolusu k jídlu nebude přesně odpovídat množství COB.
