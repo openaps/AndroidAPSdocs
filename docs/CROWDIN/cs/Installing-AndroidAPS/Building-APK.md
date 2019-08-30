@@ -42,7 +42,7 @@ Detailed description of the steps necessary to build the APK file.
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
   * Linux - prostě instalujte balíček git správcem balíčků z vaší distribuce
-* Instalujte [Android Studio](https://developer.android.com/studio/install.html).
+* Nainstalujte [Android Studio](https://developer.android.com/studio/install.html).
 * Nastavte Android Studio při prvním spuštění
 
 Select "Do not import settings" as you have not used it before.
