@@ -20,7 +20,7 @@ Zunächst einmal musst du dir **loopbare Hardware-Komponenten** besorgen:
 
 * Eine [unterstützte Insulinpumpe](Pump-Choices.md), 
 * ein [Android-Smartphone](Phones.md) (Apple iOS wird von AndroidAPS nicht unterstützt - du kannst dir einmal [iOS Loop](https://loopkit.github.io/loopdocs/) anschauen) und 
-* einem [kontinuierliches Glukose-Mess-System](../Configuration/BG-Source.md). 
+* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
 
 Zweitens musst du deine **Hardware einrichten**. Siehe [Beispiel-Setup mit Schritt für Schritt Tutorial](Sample-Setup.md).
 
@@ -63,67 +63,79 @@ Du kannst es fixieren: Es werden Oberarm-Bänder verkauft, die das CGM/FGM mit e
 
 ### Auswirkungen der verschiedenen Einstellungen
 
-Diese Tabelle kann helfen, die Einstellungen zu optimieren. Am einfachsten ist es, oben in der Tabelle zu beginnen und sich dann nach unten durchzuarbeiten. Stelle sicher, dass die Einstellung wirklich richtig ist, bevor Du die jeweils nächste in Angriff nimmst. Taste dich in kleinen Schritten voran, statt zu viele Änderungen auf einmal vorzunehmen. Du kannst [Autotune](https://autotuneweb.azurewebsites.net/) zwar als Ausgangspunkt für Deine Überlegungen verwenden, solltest ihm aber nicht blind vertrauen: Es funktioniert unter Berücksichtigung aller individuellen Einflüsse möglicherweise bei Dir nicht gut genug. Beachte, dass die einzelnen Einstellungen voneinander abhängen. Sonst kann es passieren, dass Du 'falsche Einstellungen' verwendest, die in bestimmten Situationen gut funktionieren (z. B. wenn eine zu hohe Basalrate mit einem zu hohen Kohlenhydrat-Faktor zusammenfällt), während sie in anderen Situationen nicht funktionieren. Das bedeutet, dass Du alle Einstellungen als Ganzes betrachten und überprüfen musst, ob sie unter verschiedenen Bedingungen gut funktionieren.<table class="tg" border=1> 
+Diese Tabelle kann helfen, die Einstellungen zu optimieren. Am einfachsten ist es, oben in der Tabelle zu beginnen und sich dann nach unten durchzuarbeiten. Stelle sicher, dass die Einstellung wirklich richtig ist, bevor Du die jeweils nächste in Angriff nimmst. Taste dich in kleinen Schritten voran, statt zu viele Änderungen auf einmal vorzunehmen. Du kannst [Autotune](https://autotuneweb.azurewebsites.net/) zwar als Ausgangspunkt für Deine Überlegungen verwenden, solltest ihm aber nicht blind vertrauen: Es funktioniert unter Berücksichtigung aller individuellen Einflüsse möglicherweise bei Dir nicht gut genug. Beachte, dass die einzelnen Einstellungen voneinander abhängen. Sonst kann es passieren, dass Du 'falsche Einstellungen' verwendest, die in bestimmten Situationen gut funktionieren (z. B. wenn eine zu hohe Basalrate mit einem zu hohen Kohlenhydrat-Faktor zusammenfällt), während sie in anderen Situationen nicht funktionieren. Das bedeutet, dass Du alle Einstellungen als Ganzes betrachten und überprüfen musst, ob sie unter verschiedenen Bedingungen gut funktionieren.
 
-<th class="tg-0pky">
-  Einstellung
-</th>
-
-<th class="tg-0pky">
-  Beschreibung & Test
-</th>
-
-<th class="tg-0pky">
-  Auswirkung
-</th>
-
-<td class="tg-0pky">
-  Insulinwirkdauer (DIA)
-</td>
-
-<td class="tg-0pky">
-  Dauer, bis das Insulin vollständig abgebaut ist.<br /><br />Sie wird oft zu kurz angesezt. Bei den meisten Menschen werden mindestens 5 Stunden benötigt, teilweise auch 6 oder 7 Stunden.
-</td>
-
-<td class="tg-0pky">
-  Ein zu kurzer DIA kann niedrige Glukose-Werte verursachen. Und umgekehrt.<br /><br />Wenn die Insulinwirkdauer zu kurz eingestellt ist, geht AAPS zu früh davon aus, dass der vorangegangene Bolus komplett 'aufgebraucht' ist und wird bei steigenden Glukosewerten zusätzliches Insulin abgeben. (Tatsächlich wartet AAPS nicht die volle Insulinwirkdauer ab, sondern sagt die Entwicklung der Glukosewerte vorher und gibt entsprechend Insulin ab oder nicht). Dies führt im Wesentlichen zu einem 'Insulin-Stau', von dem AAPS nichts weiß.<br /><br />Ein typisches Beispiel für eine zu kurze Insulinwirkdauer ist, wenn nach einem hohen BZ-Wert AAPS zu stark korrigiert und es dadurch zu niedrigen BZ-Werten oder gar einer Hypo kommt.
-</td>
-
-<td class="tg-0pky">
-  Basalraten (IE pro Stunde)
-</td>
-
-<td class="tg-0pky">
-  Die Insulinmenge, die notwendig ist, um die BZ-Werte in einem bestimmten Zeitraum stabil zu halten.<br /><br />Pausiere den Loop beim Basalratentest, faste, warte ca. 5 Stunden nach der letzten Mahlzeit und beobachte, wie sich die BZ-Werte entwickeln. Wiederhole den Test einige Male.<br /><br />Wenn die BZ-Werte zu sehr fallen, dann ist die Basalrate zu hoch. Und umgekehrt.
-</td>
-
-<td class="tg-0pky">
-  Eine zu hohe Basalrate kann zu zu niedrigen BZ-Werten führen. Und umgekehrt.<br /><br />Die Standard-Basalrate ist der Referenzwert für AAPS. Wenn die Basalrate zu hoch ist, führt ein 'zero temp' (temporäres Abschalten der Basalrate durch AAPS) zu einem höheren negativen IOB (insulin on board - im Körper aktives Insulin) als es sollte. Dies führt dazu, dass AAPS in der Folge mehr Korrekturinsulin abgibt als es sollte, um das IOB schlussendlich wieder auf Null zu bringen.<br /><br />Somit führt eine zu hohe Basalrate sowohl durch die zu hohe Basalrate selbst zu zu niedrigen BZ-Werten, aber auch einige Stunden später, wenn AAPS wie oben beschrieben 'zu viel' korrigiert.<br /><br />Umgekehrt kann eine zu niedrige Baslarate nicht nur zu überhöhten BZ-Werten führen, sondern verhindert auch das Erreichen des Zielwertes aufgrund zu geringer Korrekturinsulingaben.
-</td>
-
-<td class="tg-0pky">
-  Korrekturfaktor (ISF - mg/dl / IE oder mmol/l / IE)
-</td>
-
-<td class="tg-0pky">
-  Die erwartete Senkung des BZ-Wertes durch eine Einheit (1 IE) Insulin.<br /><br />Unter der Voraussetzung, dass Deine Basalrate stimmt, kannst Du dies testen indem Du den Loop pausierst, sicherstellst das IOB bei 0 ist und dann etwas Traubenzucker einnimmst, um einen stabilen 'hohen BZ-Wert' zu erreichen.<br /><br />Dann gib Korrekturinsulin ab und orientiere Dich dabei an Deinem bisherigen Korrekturfaktor. <br /><br />Sei aber vorsichtig, denn er ist oftmals zu niedrig. D.h. eine Einheit Insulin senkt den BZ stärker als Du denkst.
-</td>
-
-<td class="tg-0pky">
-  Kleinerer ISF = geringere Absenkung des BZ-Werts pro Insulin-Einheit. (Kann auch als 'aggressiver' oder 'stärker' bezeichnet werden.). Wenn der ISF zu niedrig ist, kann dies zu Unterzuckerungen führen.<br /><br />Größerer ISF = ein größerer Rückgang des BZ-Werts pro Insulin-Einheit. (Kann auch als 'schwächer' bezeichnet werden.). Wenn der ISF zu hoch ist, kann dies zu überhöhten BZ-Werten führen.<br /><br />Ein zu niedriger ISF (dies kommt gar nicht so selten vor) kann zu 'Überkorrekturen' führen, da AAPS annimmt, mehr Insulin zur Korrektur eines hohen BZ-Wertes zu benötigen als dies tatsächlich der Fall ist. Dies kann zu einer Achterbahnfahrt der BZ-Werte führen (gerade wenn man fastet). In diesem Fall musst Du Deinen ISF erhöhen. Das bedeutet, dass AAPS kleinere Korrekturdosen abgibt und dadurch zu niedrige BZ-Werte, die durch eine 'Überkorrektur' eines zu hohen BZ-Werts entstehen, vermeidet.<br /><br />Umgekehrt kann ein zu hoher ISF dazu führen, dass zu wenig Korrekturinsulin abgegeben wird und Dein BZ-Wert dadurch oberhalb Deines Zielwerts verbleibt. Dies ist gerade nachts zu beobachten.
-</td>
-
-<td class="tg-0pky">
-  KH-Faktor [Carbohydrate to insulin ratio (CR)] (g/IE)
-</td>
-
-<td class="tg-0pky">
-  Menge an Kohlenhydraten in Gramm, die durch eine Einheit Insulin abgedeckt wird.<br /><br />Unter der Voraussetzung, dass Deine Basalrate stimmt, kannst Du dies testen wenn Dein IOB = 0 ist und sich Dein BZ-Wert im Zielbereich befindet. Iss eine genau bekannte Menge an Kohlenhydraten und gib die dazu passende Menge an Insulin ab, wie sie sich aus Deinem aktuellen KH-Faktor ergibt. Am besten isst Du Nahrungsmittel, die Du zu dieser Tageszeit üblicherweise isst und bestimmst deren Kohlenhydratmenge präzise.
-</td>
-
-<td class="tg-0pky">
-  Niedrigerer CR = weniger Kohlenhydrate pro Insulin-Einheit. D.h. es wird mehr Insulin für eine feste Menge Kohlenhydrate abgegeben. Kann auch als 'aggressiver' bezeichnet werden.<br /><br />Höhere CR = mehr Kohlenhydrate pro Insulin-Einheit. D.h. es wird weniger Insulin für eine feste Menge Kohlenhydrate abgegeben. Kann auch als'schwächer' bezeichnet werden.<br /><br />Wenn nach einer Mahlzeit die Kohlenhydrate komplett abgebaut sind, das IOB wieder bei Null liegt und Dein BZ-Wert höher als vor der Mahlzeit ist, dann ist Dein CR wahrscheinlich zu groß. Umgekehrt ist die CR zu niedrig, wenn Dein BZ-Wert zu diesem Zeitpunkt niedriger ist als vor dem Essen.
-</td></table> 
+<table>
+  <tr>
+    <th>
+      Setting
+    </th>
+    
+    <th>
+      Description & testing
+    </th>
+    
+    <th>
+      Impact
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      Duration of insulin activity (DIA)
+    </td>
+    
+    <td>
+      The length of time that insulin decays to zero.<br /><br />This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+    </td>
+    
+    <td>
+      Too short DIA can lead to low BGs. And vice-versa.<br /><br />If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.<br /><br />Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Basal rate schedule (U/hr)
+    </td>
+    
+    <td>
+      The amount of insulin in a given hour time block to maintain BG at a stable level.<br /><br />Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.<br /><br />If BG is dropping, basal rate is too high. And vice-versa.
+    </td>
+    
+    <td>
+      Too high basal rate can lead to low BGs. And vice-versa.<br /><br />AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.<br /><br />So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.<br /><br />Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+    </td>
+    
+    <td>
+      The drop in BG expected from dosing 1U of insulin.<br /><br />Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.<br /><br />Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.<br /><br />Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+    </td>
+    
+    <td>
+      Lower ISF = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.<br /><br />Higher ISF = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.<br /><br />An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.<br /><br />Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Carbohydrate to insulin ratio (CR) (g/U)
+    </td>
+    
+    <td>
+      The grams of carbohydrate for each unit of insulin.<br /><br />Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR. Best is to eat food your normally eat at that time of day and count its carbs precicely.
+    </td>
+    
+    <td>
+      Lower CR = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.<br /><br />Higher CR = more food per unit, ie you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.<br /><br />If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are CR is too large. Conversely if your BG is lower than before food, CR is too small.
+    </td>
+  </tr>
+</table>
 
 ### Der APS Algorithmus
 
