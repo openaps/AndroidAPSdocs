@@ -51,7 +51,7 @@ Component Setup
    CGM/FGM <./Configuration/BG-Source.rst>
    Pumps <./Hardware/pumps.rst>
    Phones <./Hardware/Phoneconfig.rst>
-   Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Nastavení Nightscoutu <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
    
 
