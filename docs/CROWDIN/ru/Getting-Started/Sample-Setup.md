@@ -28,7 +28,7 @@
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Альтернативы: см. список возможных [ источников ГК](../Configuration/BG-Source.md)
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
 
 4. Дополнительно: Sony Smartwatch 3 (SWR50)
     
