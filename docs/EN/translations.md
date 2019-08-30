@@ -10,17 +10,22 @@
 ## Translate strings for AndroidAPS app
 
 * Click strings.xml
+
    ![Click strings.xml](./images/translations-click-strings.png)
 
 
 * Translate sentences on left side by adding new translated text or use & edit suggestion 
+
    ![Translation app](./images/translations-translate.png)
 
 
 * Proofreaders have to switch to Proofreading mode 
+
    ![Proofreading mode app](./images/translations-proofreading-mode.png) 
 
+
   and approve translated texts 
+  
    ![approve text](./images/translations-proofreading.png)
 
 When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
@@ -29,7 +34,9 @@ When a proofreader approves a translation it will be added to the next version o
 ## Translate wiki pages
 
 * Click the name of the wiki page you want to translate
+
    ![Click wiki page](./images/translation_WikiPage.png)
+
 
 * Translate sentences by sentence
 
@@ -43,10 +50,15 @@ When a proofreader approves a translation it will be added to the next version o
    
    ![Translation wiki](./images/translation_WikiTranslate.png)
 
+
 * Proofreaders have to switch to Proofreading mode 
+
    ![Proffreading mode wiki](./images/translation_WikiProofreading.png) 
 
+
   and approve translated texts 
+  
    ![approve text](./images/translations-proofreading.png)
+
 
 When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.
