@@ -6,17 +6,17 @@
 
 * Wenn wir dich freigeschalten haben, klicke auf die entsprechende Landesflagge.![Sprachenübersicht Crowdin](./images/translation_flags2019.png)
 
-## Translate strings for AndroidAPS app
+## Texte für die AndroidAPS App übersetzen
 
-* Click strings.xml ![Click strings.xml](./images/translations-click-strings.png)
+* Klicke auf strings.xml ![Klicke auf strings.xml](./images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion ![Translation app](./images/translations-translate.png)
+* Übersetze Sätze auf der linken Seite, indem Du übersetzten Text hinzufügst oder verwende & 'edit suggestion'.![Übersetzen der App](./images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode ![Proofreading mode app](./images/translations-proofreading-mode.png)
+* Proofreaders have to switch to Proofreading mode ![Lektorenmodus App](./images/translations-proofreading-mode.png)
     
     and approve translated texts ![approve text](./images/translations-proofreading.png)
 
-Wenn ein Lektor eine Übersetzung genehmigt, wird sie in der nächsten Version von AndroidAPS hinzugefügt. Am Anfang wäre es gut, auch die vorhandenen Übersetzungen, die noch nicht genehmigt sind, durchzuschauen und zu korrigieren oder zu genehmigen, wenn sie korrekt sind.
+Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version von AndroidAPS hinzugefügt. Am Anfang wäre es gut, auch die vorhandenen Übersetzungen, die noch nicht genehmigt sind, durchzuschauen und zu korrigieren oder zu genehmigen, wenn sie korrekt sind.
 
 ## Translate wiki pages
 
