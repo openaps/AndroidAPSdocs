@@ -124,6 +124,8 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 
 ### Extend transmitter life
 
+* So far life cannot be extended for transmitters whos serial no. starts with 8G.
+* To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
 * Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Switch to the `engineering mode`: 
    * tap on the character on the right of the xDrip+ start screen that represents a syringe
@@ -166,14 +168,14 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
    
    ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Forget device in smartphone’s BT settings (Will be shown as DexcomXX whereas XX are the last two digits of the transmitter serial no.)
+* Forget device in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
 
 * Remove transmitter (and sensor if replacing sensor)
 * Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
 * Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
    * This guides you through the initial set up.
    * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter.
+* Put in serial number of new transmitter. Be careful not to confuse 0 (zero) and O (capital letter o).
 * Insert new sensor (only if replacing).
 * Put transmitter into sensor
 * Start sensor (only if replacing)
@@ -234,7 +236,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 
 ### Retrieve sensor code
 
-* In latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
+* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
 * Swipe left once to see second screen.
    
    ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
