@@ -6,7 +6,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Exp
 
 ### Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
 
-* Выберите свой источник мониторинга ГК. См. [Источник ГК](../Configuration/BG-Source.md) для дополнительной информации.
+* Выберите свой источник мониторинга ГК. See [BG Source](../Configuration/BG-Source.rst) for more information.
 * Выбираем нужную помпу в Конфигураторе (если к помпе нет драйвера, можно пользоваться виртуальной помпой) чтобы пома могла вести коммуникацию с AndroidAPS. При работе с [помпой Dana R ](../Configuration/DanaR-Insulin-Pump.md) следуйте отдельным инструкциям по привязке помпы к AndroidAPS.
 * Следуйте инструкциям по настройке [Nightscout](../Installing-AndroidAPS/Nightscout.md) чтобы Nightscout мог получать и отображать данные ГК.
 
