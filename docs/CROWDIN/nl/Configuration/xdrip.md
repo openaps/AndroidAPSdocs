@@ -2,7 +2,7 @@
 
 Als je het nog niet had, download dan [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
 If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -39,7 +39,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 
 ### xDrip+ version depending on G6 transmitter serial no.
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
 If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -79,7 +79,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 **For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
 If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -143,7 +143,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 
 ### Replace transmitter
 
-For G6 transmitters manufactured after fall/end of 2018 please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
 If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
