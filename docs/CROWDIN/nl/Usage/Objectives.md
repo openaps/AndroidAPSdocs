@@ -6,7 +6,7 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Exp
 
 ### Doel 1: Instellen van visualisatie en monitoring en analyseren van basaal en ratio's
 
-* Selecteer de bloedglucose bron die jij gebruikt. Zie [BG bron](../Configuration/BG-Source.md) voor meer informatie.
+* Selecteer de bloedglucose bron die jij gebruikt. See [BG Source](../Configuration/BG-Source.rst) for more information.
 * Selecteer de juiste pomp in ConfigBuilder (Selecteer 'virtuele pomp' als je een pomp gebruikt waar geen AndroidAPS driver voor bestaat) om ervoor te zorgen dat jouw pomp kan communiceren met AndroidAPS. Als je de DanaR pomp gebruikt, volg dan de [DanaR insulinepomp](../Configuration/DanaR-Insulin-Pump.md) instructies om de pomp te koppelen aan AndroidAPS.
 * Volg de instructies van de [Nightscout](../Installing-AndroidAPS/Nightscout.md) pagina om ervoor te zorgen dat Nightscout gegevens kan ontvangen en weergeven.
 

@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>Stavový indikátor nízké baterie na domovské obrazovce</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>BG</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>Stavový indikátor stáří kanyly na domovské obrazovce</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -284,7 +284,7 @@
  <td>PH</td>
  <td>Historie pumpy (záznam na kartě Ošetření)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Snímky obrazovky</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Snímky obrazovky</a></td>
 </tr>
 <tr>
  <td>Predikce</td>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>Stavový indikátor na domovské obrazovce upozorňující na starý zásobník</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>

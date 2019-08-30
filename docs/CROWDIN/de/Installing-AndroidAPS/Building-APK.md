@@ -8,11 +8,10 @@
 
 Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
 
-     * Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.
-     * Klicke im linken Fensterbereich auf Build, Execution, Deployment > Compiler.
-     * Deaktiviere die "Configure on demand" Checkbox.
-     * Klicke Apply oder OK.
-    
+* Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.
+* Klicke im linken Fensterbereich auf Build, Execution, Deployment > Compiler.
+* Deaktiviere die "Configure on demand" Checkbox.
+* Klicke Apply oder OK.
 
 * * *
 
@@ -25,7 +24,7 @@ Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschläg
 
 Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
-* Git installieren
+* Installiere git
 * Installiere und konfiguriere Android Studio.
 * Nutze git clone, um den Quellcode von AndroidAPS auf Github zu downloaden.
 * Öffne das heruntergeladene Projekt in Android Studio.
@@ -184,7 +183,8 @@ Perfekt, der erste “Build Prozess” ist erfolgreich abgeschlossen, aber wir s
 
 ## Siginierte APK erstellen (Generate signed APK)
 
-Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. Falls Du eine ältere Version benutzt, wähle im Menü “Build” und dann “Generate Signed APK...”.)  
+Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. In älteren Versionen wähle im Menü „Build“ und dann „Signed APK generieren...“
+
 Signieren bedeutet, dass du deine generierte Anwendung unterschreibst, aber digital als eine Art digitaler Fingerabdruck in der Anwendung selbst. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)

@@ -56,7 +56,7 @@
  <td>BAT/БАТ</td>
  <td>низкий уровень заряда батареи на главном экране</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots">Снимки экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>BG/ГК</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>меняющая цвет надпись состояния просроченной/непросроченной канюли на главном экране</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots">Снимки экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM/НМГ</td>
@@ -284,7 +284,7 @@
  <td>PH/История записей помпы</td>
  <td>история помпы (запись во вкладке назначений/лечения)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment-xdrip-nsclient">Снимки экрана</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Снимки экрана</a></td>
 </tr>
 <tr>
  <td>Прогнозирование</td>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>меняющая цвет надпись состояния наполненности резервуара на главном экране</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots">Снимки экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>

@@ -39,10 +39,10 @@ Insulin pump
 --------
 AndroidAPS **currently** works with 
 
-- `Accu-Chek Combo <../Configuration/DanaR-Insulin-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
-- `Accu-Chek Insight <../Configuration/DanaRS-Insulin-Pump.html>`_ 
-- `DanaR <../Configuration/Accu-Chek-Combo-Pump.html>`_ 
-- `DanaRS  <../Configuration/Accu-Chek-Insight-Pump.html.html>`_  
+- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+- `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+- `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_  
 - `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)
 
 **Other pumps** that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <Future-possible-Pump-Drivers.html>`_ page.
@@ -85,7 +85,7 @@ Additional information on how to configure Nightscout for use with AndroidAPS ca
 
 AAPS-.apk file
 ---------------
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../../Installing-AndroidAPS/Building-APK.html>`_.  
+The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
 
 Optional Modules
 ==================
@@ -93,7 +93,7 @@ Smartwatch
 ---------------
 You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ for more details).
 
-Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces>`_.
+Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
 
 To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -111,7 +111,7 @@ If you want to get a step by step example, you might want to look at a sample se
    :maxdepth: 1
    :glob:
    
-   Sample Setup 1 <../Getting-Started/Sample-Setup.md>
+   Sample Setup <../Getting-Started/Sample-Setup.html>
  
   
 What to do while waiting for modules

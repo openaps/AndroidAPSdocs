@@ -6,7 +6,7 @@ Je kunt de lijst filteren op bepaalde pompen of telefoons maar zet de filters we
 
 Om een telefoon of horloge toe te voegen aan de lijst kun je dit [formulier](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) invullen
 
-Bij problemen met deze lijst, stuur een email naar <hardware@androidaps.org>. Wanneer je een telefoon/horloge beschikbaar wilt stellen om te testen, stuur een email naar [donations@androidaps.org](mailto:hardware@androidaps.org).
+Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email <donations@androidaps.org>.
 
 # Phone Background
 

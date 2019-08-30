@@ -181,7 +181,7 @@ If you receive failure message like
 
 ## App geïnstalleerd maar oude versie
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](…/Installing-AndroidAPS/Update-to-new-version.html#updating-branch-from-github).
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
 ## Geen van de bovengenoemde
 
@@ -194,7 +194,7 @@ If non of the above tips helped you might consider building the app from scratch
       ![Key store pad](../images/KeystorePath.PNG)
       
   
-  4. Bouw app vanaf nul zoals [hier](…/Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components) beschreven. Gebruik bestaande keystore en wachtwoord.
+  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components). Gebruik bestaande keystore en wachtwoord.
 4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
 5. [Importeer instellingen](../Usage/Objectives#export-import-settings)
 
@@ -204,4 +204,4 @@ In case even building the app from scratch does not solve your problem you might
 
 Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Install Android Studio from scratch as described [here](/Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.

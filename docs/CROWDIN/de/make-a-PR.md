@@ -1,10 +1,8 @@
 # Wie man den ersten PR (Pull Request) macht
 
-`An dieser Stelle wird nur die Bearbeitung der englischen Dokumentation erläutert. 
-Falls Du in eine andere Sprache übersetzen willst (Danke!) benutze bitte [crowdin](https://wikitranslations.androidaps.org).`
+**An dieser Stelle wird nur die Bearbeitung der englischen Dokumentation erläutert. Falls du diese in eine andere Sprache übersetzen willst (Danke dafür!), nutze bitte [crowdin](https://wikitranslations.androidaps.org).**
 
-`Bei Fragen, Feedback oder neue Ideen kannst Du das Dokumentationsteam per E-Mail (wiki@androidaps.org) kontaktieren. 
-Einen "pull request" zu machen ist nicht schwierig, aber wir können Dir helfen, die Dokumentation zu bearbeiten.`
+Bei Fragen, Feedback oder neue Ideen kannst Du das Dokumentationsteam per E-Mail (wiki@androidaps.org) kontaktieren. Einen "pull request" zu machen ist nicht schwierig, aber wir können Dir helfen, die Dokumentation zu bearbeiten.
 
 Es kann sein, dass dir irgendwann vorgeschlagen wird, einen PR zu machen. PR, die Abkürzung für Pull-Request, ist eine Möglichkeit wie man Quellcode oder - wie in diesem Fall - Dokumentationen auf GitHub ergänzen oder ändern kann. Es ist eigentlich nicht allzu schwer und eine gute Möglichkeit, einen Beitrag zu leisten. Diese Dokumentation gibt es, weil Leute wie du PRs gemacht haben. Mach dir keine Sorgen einen Fehler zu machen oder irgendwie die falschen Dokumente zu bearbeiten. Es wird immer Korrektur gelesen, bevor Änderungen in die "finale" AndroidAPS Dokumentation integriert werden. Du kannst das Original nicht zerstören, wenn du beim PR etwas falsch machst. Die allgemeine Vorgehensweise ist:
 

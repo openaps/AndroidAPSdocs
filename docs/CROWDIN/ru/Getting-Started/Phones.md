@@ -6,7 +6,7 @@
 
 Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму [](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-При обнаружении проблем с таблицей пишите <hardware@androidaps.org>, для пожертвования телефонов/часов, нуждающихся в тестировании, пишите [donations@androidaps.org](mailto:hardware@androidaps.org).
+Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email <donations@androidaps.org>.
 
 # Обои для телефона
 

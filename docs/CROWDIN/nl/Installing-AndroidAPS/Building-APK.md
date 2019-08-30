@@ -8,29 +8,28 @@
 
 Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
 
-     * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-     * In the left pane, click Build, Execution, Deployment > Compiler.
-     * Uncheck the Configure on demand checkbox.
-     * Click Apply or OK.
-    
+* Open het Preferences (Voorkeuren) venster door op File > Settings (Bestand > Instellingen) te klikken (op Mac, Android Studio > Voorkeuren).
+* In het linkerscherm, klik op Build, Execution, Deployment > Compiler.
+* Vink de Configure on demand checkbox uit.
+* Klik op Apply (Toepassen) of OK.
 
 * * *
 
 ### Dit artikel is verdeeld in twee delen.
 
-* In het overzicht gedeelte wordt uitgelegd welke stappen je moet nemen om de APK (APK is het bestandsformaat van een app) te bouwen.
-* In de stap voor stap instructie vind je heel gedetailleerd wat je moet doen, met behulp van screenshots. Omdat van Android Studio (het programma waarin je de APK bouwt) vaak een nieuwe versie uitkomt, kan het zijn dat de screenshots niet helemaal hetzelfde zijn als jouw versie maar het is een goede houvast. Android Studio kun je gebruiken onder Windows, Mac OS X en Linux, er kunnen kleine verschillen zitten tussen deze besturingssystemen. Als je vindt dat een belangrijke stap onjuist is of ontbreekt, stel er dan een vraag over in de facebook groep "AndroidAPS gebruikers" of in de Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) of [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) zodat we hiernaar kunnen kijken.
+* In the overview part there is an explanation on what steps are necessary to build the APK file.
+* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
 ## Overzicht
 
 In general, the steps necessary to build the APK file:
 
-* Git installeren
-* Android Studio installeren en instellen
-* Gebruik Git clone, om een kopie ('kloon') van de broncode voor AndroidAPS te downloaden vanaf Github.
-* Open het gedownloade project in Android Studio.
-* Bouw de ondertekende APK.
-* Zet de ondertekende APK op jouw telefoon.
+* Install git
+* Install and setup Android Studio.
+* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
+* Open the cloned project in Android Studio as active project.
+* Build the signed APK.
+* Transfer the signed APK to your smartphone.
 
 ## Step by step walkthrough
 
@@ -38,12 +37,12 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Install Android Studio
 
-* Git installeren 
+* Install git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - installeer simpelweg een ‘Package Git’ van de ‘Package Manager’ die bij jouw Linux-Distribution hoort
-* Installeer [Android Studio](https://developer.android.com/studio/install.html).
-* Instellen van Android Studio als je hem voor het eerst opstart
+  * Linux - just install a package git via package manager of your distribution
+* Install [Android Studio](https://developer.android.com/studio/install.html).
+* Setup Android Studio during first start
 
 Select "Do not import settings" as you have not used it before.
 
@@ -79,11 +78,11 @@ After the downloads are completed click the "Finish" button.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Gefeliciteerd! Je hebt nu Android Studio succesvol geïnstalleerd en je kunt beginnen met het klonen van de broncode. Misschien is het even tijd voor pauze?
+* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
 ## Download code and additional components
 
-* Gebruik Git clone in Android Studio zoals in onderstaande screenshots te zien is. Selecteer “Check out project from Version Control” en kies “Git” als versie controle systeem.
+* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png)
 
@@ -109,8 +108,8 @@ Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
-* Top! Je hebt jouw eigen kopie van de broncode en je bent klaar om de app te gaan bouwen.
-* Nu krijg je je eerste foutmelding. Gelukkig geeft Android Studio je direct de oplossing hiervoor.
+* Excellent, you have your own copy of the source code and are ready to start the build.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
@@ -184,8 +183,9 @@ Yeah, the first build is successful but we are not finished.
 
 ## Bouwen van de ondertekende APK
 
-Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In oudere versies selecteerde je in het menu "Build" en vervolgens "Generate Signed APK...”.)  
-Ondertekenen betekent dat je de door jou gemaakte app ondertekent. Dit is een soort digitale vingerafdruk in de app zelf. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
+Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -201,13 +201,13 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
-* Vul de volgende tekstvelden in. 
-  * Key store path: is de locatie waar je het bestandje met jouw handtekening opslaat
-  * In de Password (wachtwoord) en Confirm (bevestig) velden vul je tweemaal het door jou gekozen wachtwoord in. Tweemaal om op typfouten te controleren.
-  * Alias is de naam voor jouw handtekening. Je kunt de vooraf ingevulde tekst laten staan, of zelf een naam kiezen die je leuk vindt.
-  * Ook hier moet je weer tweemaal een door jou gekozen wachtwoord invullen. Ook weer tweemaal, om op typfouten te controleren.
-  * Je kunt de Validity (geldigheidsduur) op de standaardwaarde van 25 jaar laten staan.
-  * Je hoeft alleen je First and Last Name (voor- en achternaam) in te vullen, de rest is optioneel. Klik daarna op "OK".
+* Fill in the information for the next dialog. 
+  * Key store path: is the path to the keystore file
+  * The password fields below are for the keystore to double check for typing errors.
+  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
+  * The password fields below the key are for the key itself. As always to double check for typing errors.
+  * You can let the validity at the default of 25 years.
+  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 

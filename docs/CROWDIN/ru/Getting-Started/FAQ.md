@@ -20,7 +20,7 @@ AndroidAPS создан для управления помпой и подачи
 
 * Совместимую с AAPS(ИПЖ) инсулиновую помпу 
 * Смартфон с Андроидом (Apple iOS не поддерживается AndroidAPS - вместо этого изучите вариант [iOS Loop](https://loopkit.github.io/loopdocs/)) 
-* [Система непрерывного мониторинга глюкозы крови (ГК)](../Configuration/BG-Source.md). 
+* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
 
 Во-вторых, вам нужно **настроить ваше оборудование**. Смотрите [пример установки с пошаговым руководством](Sample-Setup.md).
 
@@ -63,67 +63,79 @@ AndroidAPS создан для управления помпой и подачи
 
 ### Влияние настроек
 
-Эта таблица должна помочь вам оптимизировать настройки. Начните сверху и двигайтесь вниз. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Можно использовать автонастройку [Autotune](https://autotuneweb.azurewebsites.net/) которая даст общее направление, но принимайте рекомендации не вслепую и не во всех ситуациях. Обратите внимание, что настройки дополняют друг друга - вы можете иметь "неправильные" настройки, которые в некоторых обстоятельствах работают хорошо (например, если слишком высокий базал установлен одновременно со слишком высоким углеводным коэффициентом CR), но в других не работают. Это означает, что нужно учитывать все настройки и убедиться, что они совместно работают в различных обстоятельствах.<table class="tg" border=1> 
+Эта таблица должна помочь вам оптимизировать настройки. Начните сверху и двигайтесь вниз. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Можно использовать автонастройку [Autotune](https://autotuneweb.azurewebsites.net/) которая даст общее направление, но принимайте рекомендации не вслепую и не во всех ситуациях. Обратите внимание, что настройки дополняют друг друга - вы можете иметь "неправильные" настройки, которые в некоторых обстоятельствах работают хорошо (например, если слишком высокий базал установлен одновременно со слишком высоким углеводным коэффициентом CR), но в других не работают. Это означает, что нужно учитывать все настройки и убедиться, что они совместно работают в различных обстоятельствах.
 
-<th class="tg-0pky">
-  Настройка
-</th>
-
-<th class="tg-0pky">
-  Описание & тестирование
-</th>
-
-<th class="tg-0pky">
-  Результат
-</th>
-
-<td class="tg-0pky">
-  Продолжительность активности инсулина DIA
-</td>
-
-<td class="tg-0pky">
-  Время, за которое инсулин снижается до нуля.<br /><br />Многими устанавливается слишком непродолжительным. Правильная настройка для большинства - не менее 5 часов, иногда 6 или 7.
-</td>
-
-<td class="tg-0pky">
-  Слишком малое значение продолжительности действия инсулина DIA может привести к низкой ГК. И наоборот.<br /><br />Если время действия инсулина DIA короткое, AAPS слишком рано посчитает, что предыдущий болюс отработал, и даст больше инсулина при все еще высоком сахаре. (Фактически, алгоритм не выжидает, а продолжает добавлять инсулин, предсказывая, что произойдет). Это, по сути, создает «затоваривание инсулина», о котором ААПС не знает.<br /><br /> Итак, если время DIA слишком короткое, то за высокой ГК последует слишком жесткая коррекция и в результате AAPS приведет к низкой ГК.
-</td>
-
-<td class="tg-0pky">
-  График базала (ед/ч)
-</td>
-
-<td class="tg-0pky">
-  Количество инсулина в заданном часовом блоке для поддержания ГК на стабильном уровне.<br /><br />Проверьте настройки, приостановив цикл и не питаясь, скажем, 5 часов после еды, и проследите, как меняется ГК. Повторите тест несколько раз.<br /><br />Если ГК падает, то скорость базы слишком высока. И наоборот.
-</td>
-
-<td class="tg-0pky">
-  Повышенная скорость подачи базала может привести к низкому уровню ГК. И наоборот.<br /><br />AAPS по умолчанию строит свой алгоритм отталкиваясь от скорости базала. Если базал слишком высокий, то «нулевая временная скорость» будет определяться при большем отрицательном значении активного инсулина IOB, чем нужно. Это приведет к тому, что AAPS будет делать больше корректировок, чем нужно чтобы привести активный инсулин IOB к нулю.<br /><br />Поэтому, слишком высокая база приведет к слишком низкой ГК как из-за высокой базы, так и вследствие корректировок AAPS к цели.<br /><br /> И наоборот, слишком низкая база приведет к высокой гликемии и не поможет снизить уровень ГК до целевого.
-</td>
-
-<td class="tg-0pky">
-  Чувствительность к инсулину (ISF) (ммоль/л/ед или мг/дл/ед)
-</td>
-
-<td class="tg-0pky">
-  Снижение ГК, ожидаемое от подачи 1ед инсулина.<br /><br /> Полагая, что база верна, можно проверить ISF, приостановив алгоритм цикла при нулевом активном инсулине IOB и приняв несколько таблеток глюкозы до получения стабильно «высокого» уровня ГК.<br /><br />Затем ввести инсулин (из текущего расчета 1/ISF), чтобы прийти к целевому значению ГК.<br /><br />Будьте осторожны, так довольно часто величина задается слишком низкой. Слишком низкая чувствительность означает, что 1 ед опустит ГК быстрее, чем ожидалось.
-</td>
-
-<td class="tg-0pky">
-  Более низкая чувствительность ISF = меньшее падение ГК на каждую единицу инсулина (также может называться "более жесткой/агрессивной" или "более сильной"). Если она задана слишком низкой, это может привести к более низким значениям ГК.<br /><br />Более высокая чувствительность ISF = большее падение гликемии на каждую единицу инсулина (может также называться менее жесткой/агрессивной" или "более слабой"). Если она задана слишком высокой, это может привести к более высоким значениям ГК. <br /><br /> Слишком низкая чувствительность ISF (нередкое явление) может приводить к "чрезмерным коррекциям", поскольку AAPS считает, что ему нужно больше инсулина для корректировки высокой гликемии, чем на самом деле. Это может привести к «американским горкам» (особенно если вы поститесь). В этом случае вам нужно увеличить ISF. Это будет означать, что AAPS дает меньшие корректирующие дозы, позволяя избежать чрезмерной коррекции высокой гликемии, приводящей к низким сахарам.<br /><br />И наоборот, слишком высокий ISF может привести к недокорректировкам; ГК останется выше цели – это будет особенно заметно под утро.
-</td>
-
-<td class="tg-0pky">
-  Углеводный коэффициент - соотношение углеводов и инсулина (CR) (г/ед)
-</td>
-
-<td class="tg-0pky">
-  Углеводы в граммах на каждую единицу инсулина. <br /><br /> Полагая, что база задана верно, можно проверить этот коэффициент, убедившись в отсутствии активного инсулина IOB при нормальной гликемии. Для этого надо съесть известную пищу с известным количеством углеводов и подав на нее расчетное количество инсулина, основываясь на текущем соотношении 1/CR. Лучше всего есть пищу, которую вы обычно едите в это время дня и точно посчитать ее углеводы.
-</td>
-
-<td class="tg-0pky">
-  Более низкий углеводный коэффициент CR = меньше еды на единицу инсулина, что означает больше инсулина на фиксированное количество углеводов. Может также называться "более агрессивным".<br /><br /> Более высокий CR = больше еды на единицу инсулина, то есть меньше инсулина на фиксированное количество улеводов. Может также называться "менее агрессивным".<br /><br />Если после усваивания пищи и возвращения активного инсулина IOB к нулю, ГК остается выше прежнего, высока вероятность того, что CR слишком велик. И наоборот, если ГК ниже, чем перед едой, CR слишком мал.
-</td></table> 
+<table>
+  <tr>
+    <th>
+      Setting
+    </th>
+    
+    <th>
+      Description & testing
+    </th>
+    
+    <th>
+      Impact
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      Duration of insulin activity (DIA)
+    </td>
+    
+    <td>
+      The length of time that insulin decays to zero.<br /><br />This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+    </td>
+    
+    <td>
+      Too short DIA can lead to low BGs. And vice-versa.<br /><br />If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.<br /><br />Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Basal rate schedule (U/hr)
+    </td>
+    
+    <td>
+      The amount of insulin in a given hour time block to maintain BG at a stable level.<br /><br />Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.<br /><br />If BG is dropping, basal rate is too high. And vice-versa.
+    </td>
+    
+    <td>
+      Too high basal rate can lead to low BGs. And vice-versa.<br /><br />AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.<br /><br />So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.<br /><br />Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+    </td>
+    
+    <td>
+      The drop in BG expected from dosing 1U of insulin.<br /><br />Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.<br /><br />Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.<br /><br />Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+    </td>
+    
+    <td>
+      Lower ISF = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.<br /><br />Higher ISF = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.<br /><br />An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.<br /><br />Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      Carbohydrate to insulin ratio (CR) (g/U)
+    </td>
+    
+    <td>
+      The grams of carbohydrate for each unit of insulin.<br /><br />Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR. Best is to eat food your normally eat at that time of day and count its carbs precicely.
+    </td>
+    
+    <td>
+      Lower CR = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.<br /><br />Higher CR = more food per unit, ie you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.<br /><br />If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are CR is too large. Conversely if your BG is lower than before food, CR is too small.
+    </td>
+  </tr>
+</table>
 
 ### Алгоритм APS
 

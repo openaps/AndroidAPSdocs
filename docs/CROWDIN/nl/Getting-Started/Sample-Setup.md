@@ -28,7 +28,7 @@ Wat wel is ingesteld in dit voorbeeld, is dat alle gegevens automatisch worden g
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Alternatieven: zie lijst met mogelijke [BG bronnen](../Configuration/BG-Source.md)
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
 
 4. Optioneel: Sony Smartwatch 3 (SWR50)
     

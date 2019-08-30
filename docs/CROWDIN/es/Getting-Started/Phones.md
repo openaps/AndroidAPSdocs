@@ -6,7 +6,7 @@ Puedes usar filtros en el archivos pero por favor cuando termines vuelve a dejar
 
 Para incluir un teléfono y reloj que no está en la lista rellene el formulario
 
-Cualquier problema envíe email: hardware@androidaps.org, cualquier donació de teléfonos/relojes para testar donations@androidaps.org.
+Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email <donations@androidaps.org>.
 
 # Phone Background
 
