@@ -2,7 +2,7 @@
 
 **Αυτό το λογισμικό αποτελεί μέρος μιας λύσης DIY (Do It Yourself) και δεν είναι προϊόν, αλλά απαιτεί από ΕΣΑΣ να διαβάσετε, να μάθετε και να κατανοήσετε το σύστημα, συμπεριλαμβανομένου του τρόπου χρήσης του. Αυτό δεν είναι κάτι που κάνει όλη τη διαχείριση του διαβήτη για σας, αλλά σας επιτρέπει να βελτιώσετε τον διαβήτη σας και την ποιότητα ζωής σας εάν είστε πρόθυμοι να ξοδέψετε τον απαιτούμενο χρόνο. Μη βιάζεστε με αυτό, αλλά δώστε χρόνο στον εαυτό σας να μάθει. Εσείς μόνο είστε υπεύθυνοι για οτιδήποτε κάνετε με αυτό.**
 
-## Hardware requirements
+## Απαιτήσεις μηχανημάτων
 
 - Μία αντλία Roche Accu-Check Combo (οποιοδήποτε λογισμικό, όλα είναι συμβατά)
 - Μία συσκευή Smartpix ή Realtyme μαζί με το λογισμικό 360 Configuration για την διαμόρφωση της αντλίας. Η Roche διανέμει τις συσκευές Smartpix και το λογισμικό διαμόρφωσης χωρίς χρέωση στους πελάτες της κατόπιν αιτήματος.
@@ -36,46 +36,45 @@
     - Προτεινόμενες (με μπλε χρώμα στα στιγμιότυπα οθόνης) 
       - Ορίστε συναγερμό χαμηλή αμπούλα σύμφωνα με τις προτιμήσεις σας
       - Ρυθμίστε μέγιστο bolus κατάλληλο για τη θεραπεία σας για την προστασία από σφάλματα του λογισμικού
-      - Ομοίως, ρυθμίστε μέγιστη διάρκεια TBR για ασφάλεια. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-      - Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-      - Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+      - Ομοίως, ρυθμίστε μέγιστη διάρκεια TBR για ασφάλεια. Αφήστε τουλάχιστον 3 ώρες, αφού η επιλογή αποσύνδεσης της αντλίας για 3 ώρες ρυθμίζει το 0% για 3 ώρες.
+      - Ενεργοποιήστε το κλείδωμα πλήκτρων στην αντλία για να αποφύγετε το bolus από την αντλία, ιδιαίτ. όταν η αντλία χρησιμοποιήθηκε πριν και το γρήγορο bolus ήταν μια συνήθεια.
+      - Ορίστε χρονικό όριο οθόνης και χρονικό όριο μενού στο ελάχιστο των 5,5 και 5 αντίστοιχα. Αυτό επιτρέπει στο AAPS να επανέλθει πιο γρήγορα από καταστάσεις σφάλματος και να μειώσει τις δονήσεις που μπορεί να προκύψουν κατά τη διάρκεια τέτοιων σφαλμάτων
   
-  ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+  ![Στιγμιότυπο οθόνης των ρυθμίσεων μενού χρήστη](../images/combo/combo-menu-settings.png)
   
-  ![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+  ![Στιγμιότυπο οθόνης των ρυθμίσεων TBR](../images/combo/combo-tbr-settings.png)
   
-  ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+  ![Στιγμιότυπο οθόνης των ρυθμίσεων bolus](../images/combo/combo-bolus-settings.png)
   
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![Στιγμιότυπο οθόνης των ρυθμίσεων αμπούλας ινσουλίνης](../images/combo/combo-insulin-settings.png)
   
-  - Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
-  - Make sure to read the wiki to understand how to setup AndroidAPS.
-  - Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
-  - Follow the link <http://ruffy.AndroidAPS.org> and clone ruffy via git.
-  - Install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch. Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code. If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
-  - When AAPS is using ruffy, the ruffy app can't be used. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
-  - If the pump is completely new, you need to do one bolus on the pump, so the pump creates a first history entry.
-  - Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
-  - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+  - Εγκαταστήστε το AndroidAPS όπως περιγράφεται στον [οδηγό AndroidAPS](http://wiki.AndroidAPS.org).
+  - Σιγουρευτείτε ότι διαβάσατε τον οδηγό και καταλάβατε πως να φτιάξετε το AndroidAPS.
+  - Επιλέξτε την προσθήκη MDI στο AndroidAPS, όχι την προσθήκη Combo σε αυτό το σημείο για να αποφύγουμε την παρέμβαση με το ruffy κατά τη διαδικασία της ζεύξης.
+  - Ακολουθήστε το σύνδεσμο <http://ruffy.AndroidAPS.org> και αντιγράψτε το ruffy μέσω του git.
+  - Εγκαταστήστε το ruffy και χρησιμοποιήστετο για σύζευξη με την αντλία. Εάν δεν δουλεύει μετά από μερικές προσπάθειες, γυρίστε το στην επιλογή `σύζευξη`, συνδέστε με την αντλία και μετά γυρίστε το πίσω στην αρχική επιλογή. Να ξέρετε ότι διαδικασία της σύζευξης μπορεί να αποτύχει αρχικά (αλλά γίνετε μόνο μια φορά) και ίσως χρειαστεί μερικές προσπάθειες, αναγνωρίστε γρήγορα τα σημάδια ότι κάτι δεν πάει καλά, και όταν ξαναπροσπαθήσετε αφαιρέστε την αντλία από τις ρυθμίσεις του bluetooth εξαρχής. Μια άλλη επιλογή για να δοκιμάσετε είναι να μεταβείτε στο μενού Bluetooth αφού ξεκινήσετε τη διαδικασία σύζευξης (αυτό διατηρεί το Bluetooth του τηλεφώνου ανιχνεύσιμο όσο εμφανίζεται το μενού) και επιστρέψετε στο ruffy αφού επιβεβαιώσετε την σύζευξη στην αντλία, όταν η αντλία εμφανίζει τον κωδικό εξουσιοδότησης. Αν αποτύχετε στην σύζευξη της αντλίας (ας πούμε 10 φορες), δοκιμάστε να περιμένετε έως και 10 δευτερόλεπτα πριν επιβεβαιώσετε την σύζευξη στην αντλία (όταν εμφανίζεται το όνομα του τηλεφώνου στην αντλία). Εάν έχετε ρυθμίσει το χρονικό όριο του μενού για να είναι παραπάνω από 5 δευτερόλεπτα, θα πρέπει να το αυξήσετε ξανά. Ορισμένοι χρήστες ανέφεραν ότι χρειαζόταν να το κάνουν αυτό. Τέλος, δοκιμάστε να αλλάξετε δωμάτιο σε περίπτωση τοπικών παρεμβολών. Τουλάχιστον ένας χρήστης ξεπέρασε αμέσως το πρόβλημα σύζευξης αλλάζοντας απλά δωμάτια.
+  - Όταν το APPS χρησιμοποιεί το ruffy, η εφαρμογη ruffy δεν μπορεί να χρησιμοποιηθή. Ο ευκολότερος τρόπος είναι απλώς να επανεκκινήσετε το τηλέφωνο μετά τη διαδικασία σύζευξης και να αφήστε το AAPS να αρχίσει το ruffy στο παρασκήνιο.
+  - Εάν η αντλία είναι εντελώς νέα, θα χρειαστεί να κάνετε ένα bolus στην αντλία, έτσι ώστε η αντλία να δημιουργήσει μια πρώτη καταχώρηση ιστορικού.
+  - Πριν ενεργοποιήσετε το Combo plugin στο AAPS βεβαιωθείτε ότι το προφίλ σας έχει ρυθμιστεί σωστά και είναι ενεργό(!) και το προφίλ βασικού είναι ενημερωμένο καθώς το AAPS θα συγχρονίσει το βασικό προφίλ στην αντλία. Στη συνέχεια, ενεργοποιήστε την προσθήκη Combo. Πατήστε το κουμπί *Ανανέωση* στην καρτέλα Combo για να προετοιμάσετε την αντλία.
+  - Για να επαληθεύσετε τη ρύθμισή σας, με την αντλία **αποσυνδεδεμένη**, χρησιμοποιήστε το AAPS για να ρυθμίσετε ένα TBR 500% για 15 λεπτά και να κάνετε ένα bolus. Η αντλία θα πρέπει τώρα να έχει σε λειτουργία το TBR και το bolus στο ιστορικό. Το AAPS θα πρέπει επίσης να δείχνει το ενεργό TBR και το bolus που χορηγήθηκε.
   
-  ## Why does pairing with the pump does not work with the app "ruffy"?
+  ## Γιατί η σύζευξη με την αντλία δεν λειτουργεί με την εφαρμογή "ruffy";
   
-  There are serveral possible reasons. Try the following steps:
+  Υπάρχουν αρκετές πιθανές αιτίες. Δοκιμάστε τα παρακάτω βήματα:
   
-  1. Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
+  1. Εισάγετε μία **νέα ή γεμάτη μπαταρία** στην αντλία. Ανατρέξτε στο τμήμα της μπαταρίας για λεπτομέρειες. Βεβαιωθείτε ότι η αντλία είναι πολύ κοντά στο κινητό.
   
-  ![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+  ![Το Combo θα πρέπει να βρίσκεται δίπλα στο τηλέφωνο](../images/Combo_next_to_Phone.png)
   
-  2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
+  2. Απενεργοποιήστε ή αφαιρέστε οποιαδήποτε άλλη συσκευή bluetooth, ώστε να μην είναι δυνατή η σύνδεση με το τηλέφωνο κατά τη διάρκεια της σύζευξης. Οποιαδήποτε παράλληλη επικοινωνία bluetooth ή προτροπή για τη δημιουργία συνδέσεων μπορεί να διαταράξει τη διαδικασία σύζευξης.
   
-  3.     Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until 
-        **NO DEVICE** is shown.
+  3.     Διαγράψτε τις ήδη συνδεδεμένες συσκευές στο μενού Bluetooth της αντλίας: **BLUETOOTH ΡΥΘΜΙΣΕΙΣ / ΣΥΝΔΕΣΗ / ΑΦΑΙΡΕΣΗ** μέχρι να εμφανίζεται **ΚΑΜΙΑ ΣΥΣΚΕΥΗ**.
         
   
-  4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
-  5. Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
-  6. Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
-  7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Πατήστε *ΣΎΝΔΕΣΗ!** * Τα βήματα 5 και 6 πρέπει να γίνουν σε σύντομο χρονικό διάστημα.
+  4. Διαγράψτε την αντλία που είναι ήδη συνδεδεμένη στο τηλέφωνο μέσω Bluetooth: Στην περιοχή Ρυθμίσεις / Bluetooth, αφαιρέστε τη συζευγμένη συσκευή "**SpiritCombo**"
+  5. Βεβαιωθείτε ότι το AAPS δεν λειτουργεί στο παρασκήνιο σε κύκλωμα. Απενεργοποιήστε το κύκλωμα στο AAPS.
+  6. Τώρα ξεκινήστε το ruffy στο τηλέφωνο. Μπορείτε να πατήσετε Reset! και αφαιρέστε τη παλιά σύνδεση. Μετά πατήστε Σύνδεση!.
+  7. Στο μενού Bluetooth της αντλίας, μεταβείτε στο **ΠΡΟΣΘΗΚΗ ΣΥΣΚΕΥΗΣ / ΠΡΟΣΘΉΚΗ ΣΥΝΔΕΣΗΣ**. Πατήστε *ΣΎΝΔΕΣΗ!** * Τα βήματα 5 και 6 πρέπει να γίνουν σε σύντομο χρονικό διάστημα.
   8.     Τώρα η αντλία θα πρέπει να εμφανίσει το όνομα BT του τηλεφώνου για να επιλέξετε για σύζευξη. Εδώ είναι σημαντικό να περιμένετε τουλάχιστον 5s
         πριν πατήσετε το κουμπί επιλογής στην αντλία. Διαφορετικά, η αντλία δεν θα στείλει το αίτημα σύζευξης στο τηλέφωνο.
         
@@ -103,6 +102,6 @@
   - Όταν ηχήσει συναγερμός χαμηλής στάθμης ή συναγερμός χαμηλής μπαταρίας κατά τη διάρκεια ενός bolus, τότε επιβεβαιώνονται και εμφανίζονται ως ειδοποίηση στην AAPS. Αν συμβούν ενώ δεν υπάρχει ανοικτή σύνδεση στην αντλία, πηγαίνετε στην καρτέλα Combo και το πάτημα του κουμπιού Ανανέωσης θα αναλάβει αυτές τις ειδοποιήσεις, επιβεβαιώνοντάς τες και θα εμφανίσει μια ειδοποίηση στο AAPS.
   - Όταν το AAPS αδυνατεί να επιβεβαιώσει ένα TBR CANCELLED συναγερμό ή κάποιος άλλος συναγερμός ηχεί για κάποιο λόγο, πατώντας το κουμπί της Ανανέωσης στη καρτέλα COMBO, δημιουργείτε σύνδεση επιβεβαιώνονται οι συναγερμοί και εμφανίζετε ειδοποίηση στο AAPS. Αυτό μπορεί να γίνει με ασφάλεια, καθώς αυτές οι ειδοποιήσεις είναι καλοήθεις - το κατάλληλο TBR θα τεθεί ξανά κατά τη διάρκεια της επόμενης επανάληψης του κυκλώματος.
   - Για όλες τις άλλες ειδοποιήσεις που εγείρονται από την αντλία: η σύνδεση με την αντλία θα εμφανίσει το μήνυμα ειδοποίησης στη η καρτέλα Combo, π.χ. "Κατάσταση: Ε4: Απόφραξη" καθώς και μια ειδοποίηση στην κύρια οθόνη. Ένα σφάλμα θα προκαλέσει επείγουσα ειδοποίηση. Το AAPS δεν επιβεβαιώνει ποτέ σοβαρά σφάλματα στην αντλία, αλλά αφήνει την αντλία να δονηθεί και να κουδουνίσει για να βεβαιωθεί ότι ο χρήστης ενημερώνεται για μια κρίσιμη κατάσταση που χρειάζεται δράση.
-  - After pairing, ruffy should not be used directly (AAPS will start in the background as needed), since using ruffy at AAPS at the same time is not supported.
-  - If AAPS crashes (or is stopped from the debugger) while AAPS and the pump were communicating (using ruffy), it might be necessary to force close ruffy. Restarting AAPS will start ruffy again. Restarting the phone is also an easy way to resolve this if you don't know how to force kill an app.
-  - Don't press any buttons on the pump while AAPS communicates with the pump (Bluetooth logo is shown on the pump).
+  - Μετά την αντιστοίχιση, το ruffy δεν πρέπει να χρησιμοποιείται απευθείας (το AAPS θα ξεκινήσει στο παρασκήνιο, όπως απαιτείται), δεδομένου ότι η χρήση του ruffy στο AAPS ταυτόχρονα δεν υποστηρίζεται.
+  - Αν το AAPS διακοπεί (ή σταματήσει από το εργαλείο εντοπισμού σφαλμάτων) ενώ το AAPS και η αντλία επικοινωνούν (χρησιμοποιώντας το ruffy), ίσως είναι απαραίτητο το αναγκαστικό κλείσιμο του ruffy. Η επανεκκίνηση του AAPS θα ξεκινήσει το ruffy ξανά. Η επανεκκίνηση του τηλεφώνου είναι επίσης ένας εύκολος τρόπος για να το λύσετε αν δεν ξέρετε πώς να εξαναγκάσετε το κλείσιμο μιας εφαρμογή.
+  - Μην πατάτε κανένα κουμπί στην αντλία ενώ το AAPS επικοινωνεί με την αντλία (το λογότυπο Bluetooth εμφανίζεται στην αντλία).
