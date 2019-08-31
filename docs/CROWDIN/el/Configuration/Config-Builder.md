@@ -36,19 +36,19 @@
 
 ## Ινσουλίνη
 
-Επιλέξτε τον τύπο ινσουλίνης που χρησιμοποιείτε. Οι επιλογές 'Ταχέως δράσεως Oref', 'Εξαιρετικά ταχέως Oref' και 'Ελεύθερης κορυφής Oref' έχουν όλες ένα εκθετικό σχήμα. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. The DIA should always be at least 5 hours, you can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md) page. For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. The insulin curve graph helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+Επιλέξτε τον τύπο ινσουλίνης που χρησιμοποιείτε. Οι επιλογές 'Ταχέως δράσεως Oref', 'Εξαιρετικά ταχέως Oref' και 'Ελεύθερης κορυφής Oref' έχουν όλες ένα εκθετικό σχήμα. Περισσότερες πληροφορίες παρατίθενται στο [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), οι καμπύλες θα διαφέρουν ανάλογα με το DIA και το χρόνο έως την κορυφή. Η DIA θα πρέπει να είναι πάντα τουλάχιστον 5 ώρες, μπορείτε να διαβάσετε περισσότερα σχετικά με αυτό στην ενότητα Προφίλ ινσουλίνης [σε αυτή](../Getting-Started/Screenshots.md) την σελίδα. Για ταχείες και εξαιρετικά ταχείες δράσης, η DIA είναι η μόνη μεταβλητή που μπορείτε να ρυθμίσετε μόνοι σας, ο χρόνος μέχρι την κορυφή είναι σταθερός. Η Ελεύθερη κορυφή σάς επιτρέπει να ρυθμίσετε τόσο το DIA όσο και το χρόνο έως την κορυφή και πρέπει να χρησιμοποιείται μόνο από προχωρημένους χρήστες που γνωρίζουν τις επιπτώσεις αυτών των ρυθμίσεων. Το γράφημα καμπύλης ινσουλίνης σας βοηθά να κατανοήσετε τις διαφορετικές καμπύλες. Μπορείτε να το δείτε ενεργοποιώντας το tickbox για να το δείξει ως καρτέλα, αλλιώς θα βρίσκεται στο μενού hamburger.
 
-### Rapid-Acting Oref
+### Ταχέως δράσεως Oref
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection
+* προτείνετε για Humalog, Novolog και Novorapid
+* DIA = τουλάχιστον 5 ώρες
+* Μέγιστη. κορυφή = 75 λεπτά μετά την χορήγηση
 
-### Ultra-Rapid Oref
+### Εξαιτετικά ταχέως Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection
+* προτείνεται για FIASP
+* DIA = τουλάχιστον 5 ώρες
+* Μέγιστη. κορυφή = 55 λεπτά μετά την χορήγηση
 
 For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
 
