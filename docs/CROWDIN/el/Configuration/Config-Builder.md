@@ -50,50 +50,50 @@
 * DIA = τουλάχιστον 5 ώρες
 * Μέγιστη. κορυφή = 55 λεπτά μετά την χορήγηση
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
+Για πολλούς ανθρώπους δεν υπάρχει σχεδόν καμία αξιοσημείωτη επίδραση της FIASP μετά από 3-4 ώρες πια, ακόμα κι αν στη συνέχεια είναι διαθέσιμες μονάδες 0,0xx. Αυτό το υπολειπόμενο ποσό μπορεί να παρατηρηθεί κατά τη διάρκεια της άθλησης, για παράδειγμα. Για αυτό το AndroidAPS χρησιμοποιεί κατ ελάχιστο 5 ώρες σαν DIA.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Διαμόρφωση Εξαιρετικά ταχέως Oref](../images/ConfBuild_UltraRapidOref.png)
 
-### Free Peak Oref
+### Ελεύθερης κορυφής Oref
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+Με το προφίλ "Ελεύθερης κορυφής Oref" μπορείτε να εισάγετε μεμονωμένα την ώρα της κορυφής. Το DIA ορίζεται αυτόματα σε 5 ώρες, αν δεν έχει καθοριστεί υψηλότερα στο προφίλ.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+Αυτή η επιλογή στο προφίλ συνιστάται εάν χρησιμοποιείται μη επαναλαμβανόμενη ινσουλίνη ή μείγμα διαφορετικών ινσουλινών.
 
-## BG Source
+## Πηγή BG
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Επιλέξτε την πηγή καταγραφέα γλυκόζης αίματος που χρησιμοποιείτε - δείτε [Πηγή BG](BG-Source.rst) για περισσότερες πληροφορίες εγκατάστασης.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - επιλέξτε "Αποστολή δεδομένων BG στο xDrip+" αν θέλετε να χρησιμοποιήσετε τους συναγερμούς του xDrip+. ![Διαμόρφωση BG πηγή](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-## Pump
+## Αντλία
 
-Select the pump you are using.
+Επιλέξτε την αντλία που χρησιμοποιείτε.
 
 * [DanaR](DanaR-Insulin-Pump.md)
-* DanaR Korean (for domestic DanaR pump)
-* DanaRv2 (DanaR pump with firmware upgrade)
+* DanaR Korean (τοπικκή για την Κορέα DanaR pump)
+* DanaRv2 (DanaR αντλία με αναβάθμιση λογισμικού)
 * [DanaRS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* MDI (receive AAPS suggestions for your multiple daily injections thereapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (απαιτεί εγκατάσταση του ruffy)
+* MDI (λάβετε τις προτάσεις του AAPS για τις πολλαπλές καθημερινές ενέσεις σας)
+* Εικονική αντλία (ανοικτό κύκλωμα για αντλία που δεν έχει ακόμα οδηγό - μόνο προτάσεις AAPS)
 
-Use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is pobbile. This may help on some phones where the bluetooth stack freezes.
+Χρησιμοποιήστε τις **Σύνθετες ρυθμίσεις** για να ενεργοποιήσετε τον BT watchdog εάν είναι απαραίτητο. Απενεργοποιεί το Bluetooth για ένα δευτερόλεπτο αν δεν υπάρχει δυνατή σύνδεση με την αντλία. Αυτό μπορεί να βοηθήσει σε ορισμένα τηλέφωνα όπου το bluetooth κολλάει.
 
-## Sensitivity Detection
+## Ανίχνευση ευαισθησίας
 
-Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Επιλέξτε τον τύπο ανίχνευσης ευαισθησίας. Αυτό θα αναλύσει τα ιστορικά δεδομένα επί τόπου και θα κάνει προσαρμογές αν αναγνωρίσει ότι αντιδράτε πιο ευαίσθητα (ή αντίστροφα, αντίσταση) στην ινσουλίνη από το συνηθισμένο. Λεπτομέρειες σχετικά με τον αλγόριθμο ευαισθησίας Oref0 μπορούν να διαβαστούν στο [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-You can view your sensistivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
+Μπορείτε να δείτε την ευαισθησία σας στην αρχική οθόνη επιλέγοντας SEN και παρακολουθώντας τη λευκή γραμμή. Σημειώστε ότι πρέπει να είστε σε [Στόχος 6](../Usage/Objectives), για να χρησιμοποιήσετε τη λειτουργία Ανίχνευση Ευαισθησίας/autosens.
 
-### Absorption settings
+### Ρυθμίσεις απορρόφησης
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically it is a failsafe.
+Εάν χρησιμοποιείτε Oref1 με SMB, πρέπει να αλλάξετε το **min_5m_carbimpact** στο 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically it is a failsafe.
 
 ## APS
 
