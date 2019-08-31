@@ -132,24 +132,24 @@ Před časem měli firmware zvaný T:AP (zmiňovaný v tomto [článku](https://
 **Minimální požadavky**
 
 - Nastavení dočasné bazální dávky
-- Get Status
-- Cancel Temporary Basal Rate
+- Zjištění stavu
+- Zrušení dočasné bazální dávky
 
-**For oref1(SMB) or Bolusing:**
+**Pro oref1 (SMB) nebo posílání bolusů:**
 
-- Set Bolus
+- Poslat bolus
 
-**Good to have**
+**Hodilo by se**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Zrušit bolus
+- Načíst bazální profil (prakticky nutnost)
+- Nastavit bazální profil (příjemný bonus)
+- Číst historii 
 
-**Other (not required but good to have)**
+**Ostatní (není vyžadováno, ale hodí se)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
+- Nastavit prodloužený bolus
+- Zrušit prodloužený bolus
 - Číst historii
 - Číst TDD
 
