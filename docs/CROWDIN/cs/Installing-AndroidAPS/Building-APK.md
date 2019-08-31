@@ -17,19 +17,19 @@ Jestliže vytváření apk selže s chybou "on demand configuration", proveďte 
 
 ### Tento článek je rozdělený do dvou částí.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
+* V části Přehled najdete vysvětlení, které kroky jsou obecně nutné, abyste sestavili soubor APK.
+* V části Průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android studio běží na Windows, Linuxu a Mac OS X, a proto mohou být na různých platformách malé rozdíly. Jestliže najdete něco zásadního, co je špatně, nebo vám něco chybí, prosím informujte o tom facebookovou skupinu „AndroidAPS users“ nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
 
 ## Přehled
 
 Následují obecné kroky k sestavení souboru APK:
 
-* Install git
-* Install and setup Android Studio.
-* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
-* Open the cloned project in Android Studio as active project.
-* Build the signed APK.
-* Transfer the signed APK to your smartphone.
+* Nainstalujte git
+* Nainstalujte a nastavte Android Studio.
+* Použijte git, abyste si naklonovali zdrojové kódy z centrálního úložiště na Githubu, kam vývojáři umístili poslední zdrojové kódy aplikace.
+* Otevřete naklonovaný projekt v Android Studiu jako aktivní projekt.
+* Sestavete podepsané APK.
+* Přeneste podepsané APK do svého telefonu.
 
 ## Průvodce krok za krokem
 
@@ -37,12 +37,12 @@ Následuje detailní popis kroků nutných k sestavení souboru APK.
 
 ## Nainstalujte Android Studio
 
-* Install git 
+* Nainstalujte git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - just install a package git via package manager of your distribution
-* Install [Android Studio](https://developer.android.com/studio/install.html).
-* Setup Android Studio during first start
+  * Linux - prostě instalujte balíček git správcem balíčků z vaší distribuce
+* Nainstalujte [Android Studio](https://developer.android.com/studio/install.html).
+* Nastavte Android Studio při prvním spuštění
 
 Zvolte "Do not import settings" (Neimportovat nastavení), protože jste tento software zatím nevyužívali.
 
@@ -78,11 +78,11 @@ Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
 ![Snímek 9](../images/Installation_Screenshot_09.png)
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+* Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Možná je teď vhodná doba na krátkou přestávku?
 
 ## Stáhněte si kód a další komponenty
 
-* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
+* Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte "Check out project from Version Control" s "Git" jako konkrétní verzí správce zdrojových kódů.
 
 ![Snímek 10](../images/Installation_Screenshot_10.png)
 
@@ -108,8 +108,8 @@ Přečtěte si okno „Tip of Day“ a kliknutím na tlačítko „Close“ je z
 
 ![Snímek 17](../images/Installation_Screenshot_17.png)
 
-* Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Výborně, teď máte vlastní kopii zdrojových kódů a jste připravení začít se sestavováním.
+* Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
 
 Klikněte na „Install missing platform(s) and sync project“, protože Android Studio potřebuje doinstalovat chybějící platformu.
 
@@ -183,9 +183,9 @@ Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
 
 ## Vytvořte podepsaný soubor APK
 
-V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. Ve starších verzích vyberte nabídku “Build” a poté “Generate Signed APK...”.)
 
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
+Podepsání znamená, že podepíšete vygenerovanou aplikaci, ale digitálním způsobem, jakoby nějakým digitálním otiskem prstu uvnitř samotné aplikace. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
 
 ![Snímek 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -197,23 +197,23 @@ Zvolte „app“ a klepněte na tlačítko „Next“.
 
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Klikněte na „Create new...“ a vytvořte úložiště svých klíčů. Úložiště klíčů v tomto případě není nic jiného než soubor, ve kterém jsou uložené podepisovací informace. Je zašifrované a údaje jsou zabezpečené hesly. Doporučujeme, abyste si ho uložili do své domovské složky a zapamatovali si hesla. Kdybyste však tyto informace ztratili, nebyl by to tak velký problém, protože potom byste prostě museli vytvořit nové úložiště klíčů. Ale lepší je tyto údaje pečlivě uložit.
 
-![Screenshot 41](../images/Installation_Screenshot_41.png)
+![Snímek 41](../images/Installation_Screenshot_41.png)
 
-* Fill in the information for the next dialog. 
-  * Key store path: is the path to the keystore file
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
-  * You can let the validity at the default of 25 years.
-  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
+* Vyplňte údaje pro další dialogové okno. 
+  * Key store path: je cesta k vašemu úložišti klíčů
+  * Políčka s hesly níže jsou pro úložiště klíčů a jsou zdvojená, aby se zabránilo překlepům.
+  * Alias je název pro klíč, který potřebujete. Můžete ponechat výchozí, anebo si vybrat jakýkoli jiný název.
+  * Políčka s hesly pod tím jsou pro samotný klíč. Jako vždy jsou zdvojená, aby se zabránilo překlepům.
+  * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
+  * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje. Pak klikněte na tlačítko „OK“.
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
+![Snímek 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Vyplňte údaje posledního dialogového okna a klikněte na tlačítko „Next“.
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+![Snímek 43](../images/Installation_Screenshot_43.png)
 
 Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
 
