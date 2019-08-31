@@ -99,13 +99,13 @@
 * **Подождите 15 минут** перед запуском сенсора, чтобы xDrip мог инициализировать связь с новым трансмиттером
 * Нажмите старт сенсора (только при смене сенсора)
    
-   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
+   -> В нижней части экрана через несколько минут появится предупреждение о прогреве сенсора `Осталось x,x часов`.
 
--> If your transmitter serial no. does not start with 8G and there is no time specification after a few minutes stop and restart the sensor.
+-> Если серийный номер трансмиттера не начинается с 8G и в течение нескольких минут не появляется никаких указаний о времени прогрева сенсора остановите и перезапустите сенсор.
 
-* Restart collector (system status - if not replacing sensor}
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Перезапустите коллектор (состояние системы - если не заменяете сенсор}
+* Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
+* Удерживайте на главном экране xDrip+ иконку капли крови для деактивации кнопки `Мастер выбора источника ГК`.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
@@ -115,16 +115,16 @@
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### Transmitter battery status
+### Состояние батареи трансмиттера
 
-* Battery status can be controlled in system status (Hamburger menu top left on homescreen)
-* Swipe left once to see second screen. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
+* Статус батареи может быть виден в окне состояния системы (сэндвич-меню вверху слева на главном экране)
+* Сделайте свайп влево, чтобы увидеть второй экран. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”: Transmitter days: 151 Voltage A: 297 Voltage B: 260 Resistance: 2391
+* Точные величины, когда наступает "смерть" трансмиттера из-за низкого заряда батареи, неизвестны. В сети встречалась такая информация после "смерти" трансмиттера: дней передачи: 151 напряжение A: 297 напряжение B: 260 Сопротивление: 2391
 
-### Extend transmitter life
+### Увеличение срока работы трансмиттера
 
-* So far life cannot be extended for transmitters whos serial no. starts with 8G.
+* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G.
 * To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
 * Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Switch to the `engineering mode`: 
@@ -182,10 +182,10 @@
    
    **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
 
-* Restart collector (system status - if not replacing sensor}
+* Перезапустите коллектор (состояние системы - если не заменяете сенсор}
 
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
+* Удерживайте на главном экране xDrip+ иконку капли крови для деактивации кнопки `Мастер выбора источника ГК`.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
