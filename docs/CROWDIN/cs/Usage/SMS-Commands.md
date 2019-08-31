@@ -86,25 +86,25 @@ Z některého z povolených čísel odešlete SMS zprávu na telefon s běžíc�
 
 ## EXTENDED 2 120
 
-- To start extended bolus 2U for 120 min reply with code EmF
+- Pro spusteni prodlouzeneho bolusu 2U na 120 min odpovězte SMS s kodem EmF
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Odeslani kalibrace 5.6 potvrdte kodem Rrt
+- Kalibrace odeslána (*je-li xDrip nainstalovaný. Příjem kalibrací musí být v xDrip+ povolen.*)
 
 ## PROFILE STATUS
 
-- Profile1
+- Profil1
 
 ## PROFILE LIST
 
-- 1.`Profile1` 2.`Profile2`
+- 1.`Profil1` 2.`Profil2`
 
 ## PROFILE 1
 
-- To switch profile to Profile1 100% reply with code Any
+- Pro prepnuti profilu na Profile1 odpovezte SMS s kodem Any
 
 ## PROFILE 2 30
 
-- To switch profile to Profile2 30% reply with code Any
+- Pro prepnuti profilu na Profile2 30% odpovezte SMS s kodem Any
