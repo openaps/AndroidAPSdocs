@@ -234,17 +234,17 @@
    
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-### Retrieve sensor code
+### Получение кода сенсора
 
-* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
-* Swipe left once to see second screen.
+* В свежих версиях программы (начиная с 18 мая 2019) код сенсора отображается в состоянии системы (сэндвич-меню вверху слева на главном экране).
+* Сделайте свайп влево, чтобы увидеть второй экран.
    
    ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
 
-* Dexcom sensor code can also be found in xDrip+ logs.
+* Код сенсора Dexcom можно также найти в логах xDrip+.
 
-* Tap 3 dot menu (top right side on homescreen)
-* Select `View Event Logs` and search for "code"
+* Нажмите 3 точки меню (сверху справа на главном экране)
+* Выберите `Просмотр журнала событий` и выполните поиск по слову "code"
    
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
