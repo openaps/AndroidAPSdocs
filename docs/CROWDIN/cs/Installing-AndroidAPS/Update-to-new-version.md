@@ -181,7 +181,7 @@ Pokud se zobrazí podobná chybová zpráva,
 
 ## Aplikace je nainstalována, ale ve staré verzi
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+Jestliže jste úspěšně sestavili aplikaci, přenesli ji do telefonu a nainstalovali ji, ale číslo verze zůstává stejné, možná jste zapomněli krok sloučení v [návodu na aktualizaci](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
 ## Nic z výše uvedeného nefunguje
 
@@ -194,7 +194,7 @@ Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace ú
       ![Cesta k úložišti klíčů](../images/KeystorePath.PNG)
       
   
-  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Použijte stávající klíč a úložiště klíčů.
+  4. Vytvořte aplikaci úplně od začátku, jak je popsáno [zde](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Použijte stávající klíč a úložiště klíčů.
 4. Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
 5. [Importujte nastavení](../Usage/Objectives#export-import-settings)
 
@@ -204,4 +204,4 @@ V případě, že ani sestavení aplikace úplně od začátku nevyřeší váš
 
 Ujistěte se, že odinstalujte všechny soubory spojené s Android Studio. Návody lze najít online, např. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+Znovu od začátku nainstalujte Android Studio, jak je popsáno [zde](../Installing-AndroidAPS/Building-APK#install-android-studio) a **neaktualizujte gradle**.
