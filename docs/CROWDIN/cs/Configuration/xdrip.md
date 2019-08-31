@@ -132,57 +132,57 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
    * pak klepněte na symbol mikrofonu v dolním pravém rohu
    * Do textového pole, které se otevře, napište "enable engineering mode" 
    * klikněte na "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and check `OB1 collector`.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+   * Pokud máte povoleny Google hlasové příkazy, můžete po klepnutí na symbol mikrofonu říci "enable engeneering mode". 
+* Přejděte do možností ladění G5 a zkontrolujte `OB1 collector`.
+* Použijte hlasový příkaz: "hard reset transmitter"
+* Hlasový příkaz bude proveden při následujícím načtení dat vysílače
+* Přejděte na stav systému (hamburger menu -> Stav systému) a sledujte, co se stalo
+* Když se na druhé systémové stránce objeví hláška "Phone Service State: Hard Reset maybe failed", prostě spusťte senzor a zpráva by měla zmizet.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset možná selhal](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Po úspěšném prodloužení vysílače a startu senzoru by se měla hodnota Transmitter days resetovat na 0.
 
-### Replace transmitter
+### Výměna vysílače
 
 Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
 Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzkoušejte verzi [nightly build 2019/07/28 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Vypněte originální Dexcom přijímač (je-li použit).
-* Stop sensor (only if replacing sensor)
+* Zastavte senzor (pouze když ho měníte)
    
-   Ensure it really is stopped:
+   Ujistěte se, zda se je opravdu zastaven:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about half way down - It may say something like `(1) Stop Sensor`
+   Na druhé obrazovce "G5/G6 Status" se zhruba v dolní polovině podívejte na `Queue Items`, a mělo by tam být něco ve smyslu `(1) Stop Sensor`
    
-   Wait until this goes - usually within a few minutes.
+   Počkejte, až se fronta odešle - obvykle během pár minut.
    
-   -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
+   -> Pro výměnu vysílače bez zastavení senzoru se podívejte na toto video <https://youtu.be/AAhBVsc6NZo>.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Zastavit senzor Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Zastavit senzor Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device (in system status)
+* Forget device (ve Stav systému)
    
-   ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
+   ![xDrip+ Zapomenout zařízení](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Forget device in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
+* Vymažte zařízení z BT nastavení telefonu (Zobrazí se jako Dexcom??, přičemž ?? jsou poslední dva znaky výrobního čísla vysílače)
 
-* Remove transmitter (and sensor if replacing sensor)
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
+* Vyjměte vysílač (a také senzor, pokud ho měníte)
+* Dlouze stiskněte červený symbol kapky krve Xdrip+ na hlavni obrazovce a povolte tlačítko `Source Wizard Button`.
 * Použijte tlačítko Source Wizard, které zajistí, že budou vybrána výchozí nastavení včetně OB1 & nativního režimu 
    * Průvodce vás provede prvotním nastavením.
-   * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Buďte opatrní, abyste nezaměnili 0 (nulu) a O (velké písmeno o).
-* Insert new sensor (only if replacing).
+   * Pokud ho používáte poprvé, budete potřebovat výrobní číslo vysílače.
+* Vložte výrobní číslo nového vysílače. Buďte opatrní, abyste nezaměnili 0 (nulu) a O (velké písmeno o).
+* Vložte nový senzor (pouze když ho měníte).
 * Nasaďte vysílač na senzor
 * Spusťte senzor (pouze pokud ho měníte)
    
-   **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
+   **Po vypnutí se doporučuje počkat zhruba 15 minut před spuštěním nového senzoru (dokud se na druhé obrazovce Stav systému neobjeví `Sensor Status: Stopped`).**
 
-* Restart collector (system status - if not replacing sensor}
+* Klikněte na Restart collector (Stav systému - když neměníte senzor)
 
 * Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
 * Dlouhým stisknutím symbolu červené kapky krve xDrip+ zrušte zobrazení tlačítka `Source Wizard Button`.
@@ -195,37 +195,37 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
    
    ![xDrip+ Vysílač Dexcom 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### New Sensor
+### Nový senzor
 
-* Turn original Dexcom receiver off (if used).
-* Stop sensor if necessary
+* Vypněte originální Dexcom přijímač (pokud jej používáte).
+* Je-li to potřeba, zastavte senzor
    
-   Ensure it really is stopped:
+   Ujistěte se, zda se je opravdu zastaven:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about half way down - It may say something like `(1) Stop Sensor`
+   Na druhé obrazovce "G5/G6 Status" se zhruba v dolní polovině podívejte na `Queue Items`, a mělo by tam být něco ve smyslu `(1) Stop Sensor`
    
-   Wait until this goes - usually within a few minutes.
+   Počkejte, až se fronta odešle - obvykle během pár minut.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Zastavit senzor Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Zastavit senzor Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Clean contacts (transmitter backside) with alcohol and let air-dry.
+* Vyčistěte alkoholem kontakty vysílače (na spodní straně) a nechte je oschnout.
 
-* In case you use this function disable `Restart Sensor` and `Preemptive restarts` (Hamburger menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
+* V tomto případě vypněte funkce `Restart Sensor` a `Preemptive restarts` (Hamburger menu -> Nastavení -> Možnosti ladění pro G5/G6). Když tento krok vynecháte a funkce pro restart budou zapnuté, nemusí se nový senzor korektně spustit.
    
-   ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
+   ![xDrip+ Preemptivní restart](../images/xDrip_Dexcom_Restart.png)
 
-* Start Sensor
+* Spusťte senzor
    
-   **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
+   **Po vypnutí se doporučuje počkat zhruba 15 minut před spuštěním nového senzoru (dokud se na druhé obrazovce Stav systému neobjeví `Sensor Status: Stopped`).**
 
-* Set time inserted
+* Nastavte čas zavedení
    
-   * To use G6 Native mode you must wait for the 2 hour warm up (i.e insertion time is now).
-   * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore this is not recommended.
-* Enter Sensor code (on the peel-off foil of the sensor) 
-   * Keep code for further reference (i.e. new start after transmitter had to be removed)
+   * Pro použití G5/G6 nativního režimu musíte čekat 2 hodiny na zahřívání senzoru (takže čas zavedení senzoru je právě nyní).
+   * Používáte-li algoritmus xDrip+ , můžete nastavit dobu před 2 hodinami s vyhnout se tak zahřívání senzoru. Získaná data ale mohou být velmi nepřesná. Proto se to nedoporučuje.
+* Vložte kód senzoru (je na odlepovací fólii obalu senzoru) 
+   * Kód senzoru si ponechejte pro pozdější použití (např. nový start senzoru po výměně vysílače)
    * Kód senzoru můžete najít i v [log souborech xDrip+](../Configuration/xdrip#retrieve-sensor-code): klikněte na 3 tečky na hlavní obrazovce a vyberte `Zobrazit logy`.
 * Pokud používáte G6 v "nativním režimu", není potřeba žádná kalibrace. Po 2 hodinovém zahřívání senzoru začne xDrip+ zobrazovat nové hodnoty.
 * Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
