@@ -121,4 +121,4 @@ Někdy to zabere nějaký čas, než budete mít všechny moduly potřebné pro 
 Můžete si pročítat tuto dokumentaci, komunikovat s ostatními uživateli uzavřené smyčky online nebo offline, `přečíst si dokumentaci <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ nebo zkušenosti ostatních uživatelů (buďte však opatrní, ne vše musí být správně nebo pro vás daný postup nemusí být vhodný).
 
 **Hotovo?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
+Jestliže máte všechny komponenty systému AAPS pohromadě (gratulujeme!) nebo aspoň máte vše potřebné pro spuštění otevřené smyčky, měli byste si nejprve před každým novým Cílem přečíst `Popis cílů <../Usage/Objectives.html>`_ a nastavit svůj `hardware <../index.html#component-setup>`_.
