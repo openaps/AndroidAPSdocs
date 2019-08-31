@@ -42,7 +42,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
 **Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
 
@@ -52,7 +52,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions.
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
 * * *
 
@@ -60,7 +60,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
 * * *
 
