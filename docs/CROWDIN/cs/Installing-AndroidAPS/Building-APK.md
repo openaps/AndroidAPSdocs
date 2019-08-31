@@ -2,9 +2,9 @@
 
 * * *
 
-**Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+**Poznámka** U AndroidAPS verze 2.3 není možné sestavit soubor APK s nejnovější verzí programu Android Studio. Použijte prosím Android Studio 3.4 z [tohoto](https://developer.android.com/studio/archive?) umístění.
 
-**Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+**Poznámka** Při vytváření AndroidAPS 2.0 apk: **Konfigurace na vyžádání** není v aktuální verzi Android Gradle pluginu podporována!
 
 Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
@@ -22,7 +22,7 @@ Jestliže vytváření apk selže s chybou "on demand configuration", proveďte 
 
 ## Přehled
 
-In general, the steps necessary to build the APK file:
+Následují obecné kroky k sestavení souboru APK:
 
 * Install git
 * Install and setup Android Studio.
@@ -31,11 +31,11 @@ In general, the steps necessary to build the APK file:
 * Build the signed APK.
 * Transfer the signed APK to your smartphone.
 
-## Step by step walkthrough
+## Průvodce krok za krokem
 
-Detailed description of the steps necessary to build the APK file.
+Následuje detailní popis kroků nutných k sestavení souboru APK.
 
-## Install Android Studio
+## Nainstalujte Android Studio
 
 * Install git 
   * [Windows](https://gitforwindows.org/)
@@ -44,27 +44,27 @@ Detailed description of the steps necessary to build the APK file.
 * Install [Android Studio](https://developer.android.com/studio/install.html).
 * Setup Android Studio during first start
 
-Select "Do not import settings" as you have not used it before.
+Zvolte "Do not import settings" (Neimportovat nastavení), protože jste tento software zatím nevyužívali.
 
 ![Snímek 1](../images/Installation_Screenshot_01.png)
 
-Click "Next".
+Klikněte na "Next".
 
-![Screenshot 2](../images/Installation_Screenshot_02.png)
+![Snímek 2](../images/Installation_Screenshot_02.png)
 
-Select "Standard" installation and click "Next".
+Vyberte "Standard" instalaci a klikněte na "Next".
 
-![Screenshot 3](../images/Installation_Screenshot_03.png)
+![Snímek 3](../images/Installation_Screenshot_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Vyberte si motiv uživatelského rozhraní, který se vám líbí. (V tomto návodu používáme "Intellij". Poté klikněte na tlačítko „Next“. Jedná se pouze o barevný motiv. Můžete si vybrat jakýkoli jiný (např. „Darcula“ pro tmavý režim). Tato volba nemá žádný vliv na sestavení APK.
 
-![Screenshot 4](../images/Installation_Screenshot_04.png)
+![Snímek 4](../images/Installation_Screenshot_04.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Klikněte na "Next" v dialogovém okně "Verify Settings".
 
-![Screenshot 5](../images/Installation_Screenshot_05.png)
+![Snímek 5](../images/Installation_Screenshot_05.png)
 
-The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
+Emulátor Androidu (pro simulaci telefonu na vašem PC nebo Macu) se pro sestavení APK nepoužívá. Můžete kliknout na "Finish", abyste dokončili instalaci a odložili četbu dokumentace později na vyžádání.
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
