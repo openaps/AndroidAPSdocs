@@ -68,7 +68,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controlable via iPhone App. No Android app available at the moment.
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It seems to be BT enabled.
+**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
 * * *
 
@@ -84,7 +84,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It seems to be BT enabled.
+**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
 
 ### Medtronic Bluetooth
 
@@ -98,7 +98,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
