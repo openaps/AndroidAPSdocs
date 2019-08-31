@@ -248,7 +248,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
    
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
-## Troubleshooting Dexcom G6 and xDrip+
+## Troubleshooting Dexcom G5/G6 and xDrip+
 
 ### Problem connecting transmitter
 

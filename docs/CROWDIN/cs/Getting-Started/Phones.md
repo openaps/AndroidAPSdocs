@@ -6,7 +6,7 @@ Můžete použít filtr pro zobrazení konkrétní pumpy nebo telefonu, ale pros
 
 Pro zápis telefonu nebo hodinek, který ještě není uveden v tabulce, vyplňte prosím [formulář](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
+V případě jakýchkoli problémů s tabulkou prosím napište e-mail na hardware@androidaps.org, pokud chcete darovat telefony/hodinky potřebné pro testování, napište na e-mail donations@androidaps.org.
 
 # Tapety na telefon
 

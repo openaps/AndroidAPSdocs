@@ -1,47 +1,47 @@
 # SMS příkazy
 
-**Note**: SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
+**Poznámka**: v AndroidAPS verze 2.3 jsou SMS příkazy kvůli bugu zakázány. Ve verzi 2.4 ale fungují.
 
-## Safety First
+## Bezpečnost především
 
 - AndroidAPS vám umožňuje kontrolovat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN.
 - Systém AndroidAPS vás rovněž bude informovat textovou zprávou o tom, jestli váš vzdálený příkaz, např. bolus nebo změna profilu, byl proveden. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
 
-## How it works
+## Jak to funguje
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+Ve vašem Android telefonu přejděte do systémového nastavení, pak Aplikace > AndroidAPS > Oprávnění, a povolte SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+V AndroidAPS jděte do Nastavení > SMS komunikátor a zadejte telefonní čísla, ze kterých umožníte SMS příkazy (oddělené středníkem, žádné mezery nebo jiné znaky kdekoliv - tj. +4412345678;+4412345679) a také povolte 'Povolit posílání příkazů prostřednictvím SMS'.
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Z některého z povolených čísel odešlete SMS zprávu na telefon s běžícím AndroidAPS a do zprávy zadejte některý z níže **tučně** zapsaných příkazů. Telefon vám odpoví, aby potvrdil úspěšné provedení daného příkazu nebo vrátí požadované stavové informace.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Tip**: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
 ## BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Glykemie: 5.6, 4min zpět, Rozdíl: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U), COB: 3g
 
 ## LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Smyčka byla zakázána
 
 ## LOOP START/ENABLE
 
-- Loop has been enabled
+- Smyčka byla povolena
 
 ## LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Smyčka je zakázána
+- Smyčka je povolena
+- Pozastavena (10 minut)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Smyčka pozastavena na 20 minut
 
 ## LOOP RESUME
 
-- Loop resumed
+- Smyčka obnovena
 
 ## TREATMENTS REFRESH
 
@@ -53,58 +53,58 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 ## PUMP
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Poslední spoj: před 1 min Doč. bazál: 110% na 2/30 min IOB: 0.5U Zásobník: 34U Baterie: 100%
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Pro zastaveni docasneho bazalu odpovezte SMS s kodem EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Pro spusteni bazalu 0.3U/h odpovezte SMS s kodem Swe
 
 ## BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Pro spusteni bazalu 0.3U/h na 20 min odpovezte SMS s kodem Swe
 
 ## BASAL 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Pro spusteni bazalu 30% na 30 min odpovezte SMS s kodem Swe
 
 ## BASAL 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Pro spusteni bazalu 30% na 50 min odpovezte SMS s kódem Swe
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Pro potvrzeni bolusu 1.2U odpovezte SMS s kodem Rrt
+- Vzdálený bolus není povolen (*pokud ještě neuplynulo 15 minut od posledního bolus příkazu, anebo pokud nejsou vzdálené příkazy povoleny*)
 
 ## EXTENDED STOP/CANCEL
 
-- To stop extended bolus reply with code EmF
+- Pro zastaveni prodlouzeneho bolusu odpovezte SMS ve tvaru EmF
 
 ## EXTENDED 2 120
 
-- To start extended bolus 2U for 120 min reply with code EmF
+- Pro spusteni prodlouzeneho bolusu 2U na 120 min odpovězte SMS s kodem EmF
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Odeslani kalibrace 5.6 potvrdte kodem Rrt
+- Kalibrace odeslána (*je-li xDrip nainstalovaný. Příjem kalibrací musí být v xDrip+ povolen.*)
 
 ## PROFILE STATUS
 
-- Profile1
+- Profil1
 
 ## PROFILE LIST
 
-- 1.`Profile1` 2.`Profile2`
+- 1.`Profil1` 2.`Profil2`
 
 ## PROFILE 1
 
-- To switch profile to Profile1 100% reply with code Any
+- Pro prepnuti profilu na Profile1 odpovezte SMS s kodem Any
 
 ## PROFILE 2 30
 
-- To switch profile to Profile2 30% reply with code Any
+- Pro prepnuti profilu na Profile2 30% odpovezte SMS s kodem Any

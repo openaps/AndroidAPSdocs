@@ -62,7 +62,7 @@ Tento profil je doporučován v případě, že používáte nepodporovaný inzu
 
 ## Zdroj glykémií
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Vyberte, který zdroj glykémií používáte – další informace k nastavení viz [Zdroj glykémií](BG-Source.rst).
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient

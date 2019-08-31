@@ -248,7 +248,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
    
    ![xDrip+ Dexcom Sensorcode ermitteln](../images/xDrip_Dexcom_SensorCode.png)
 
-## Fehlerbehebung Dexcom G6 und xDrip+
+## Fehlerbehebung Dexcom G5/G6 und xDrip+
 
 ### Problem beim Verbinden mit dem Transmitter
 

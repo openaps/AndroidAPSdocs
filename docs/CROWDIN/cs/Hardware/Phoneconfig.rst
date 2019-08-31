@@ -5,7 +5,7 @@ Telefony
    :maxdepth: 1
    :glob:
    
-   List of tested phones <../Getting-Started/Phones.md>
-   Jelly Pro Settings <../Usage/jelly.md>
-   Huawei Settings <../Usage/huawei.md>
+   Seznam otestovaných telefonů <../Getting-Started/Phones.md>
+   Nastavení Jelly Pro <../Usage/jelly.md>
+   Nastavení telefonů Huawei <../Usage/huawei.md>
    

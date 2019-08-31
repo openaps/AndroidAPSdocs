@@ -1,13 +1,13 @@
-Smartwatches
+Chytré hodinky
 *************
 
-Smartwatches are optional, but very useful for some users.
-More details are here:
+Chytré hodinky jsou volitelné, ale pro některé uživatele velmi užitečné.
+Více informací naleznete zde:
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   list of tested phones and smartwatches <../Getting-Started/Phones.md>
-   watchfaces  <../Configuration/Watchfaces.md>
+   seznam otestovaných telefonů <../Getting-Started/Phones.md>
+   ciferníky <../Configuration/Watchfaces.md>

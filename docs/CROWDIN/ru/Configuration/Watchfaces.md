@@ -6,7 +6,7 @@ AndroidAPS предусматривает возможность *управле
 
 * установить временные целевые значения СК
 * подать болюс
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* использовать калькулятор болюса (переменные могут быть определены в [настройках](../Configuration/Config-Builder#wear) на телефоне)
 * проверить работу алгоритма цикла и помпы
 * показать TDD (Общая суточная доза = болюс + базал в день)
 

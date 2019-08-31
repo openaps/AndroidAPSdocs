@@ -1,116 +1,116 @@
-# Config Builder
+# Διαμόρφωση
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side (A) allow you to select which one to use, the boxes on the right hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+Η Διαμόρφωση (Conf) είναι η καρτέλα όπου μπορείτε να ενεργοποιήσετε και να απενεργοποιήσετε τις λειτουργικές δυνατότητες. Τα κουτάκια στην αριστερή πλευρά (A) σας επιτρέπουν να επιλέξετε ποιο θα χρησιμοποιηθεί, τα κουτάκια στη δεξιά πλευρά (C) σας επιτρέπουν να τα δείτε ως καρτέλα (E) στο AndroidAPS. Σε περίπτωση που το δεξιό κουτάκια δεν είναι ενεργοποιημένα, μπορείτε να φτάσετε στη λειτουργία χρησιμοποιώντας το μενού hamburger (D) στην πάνω αριστερή γωνία της οθόνης.
 
-Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Όπου υπάρχουν διαθέσιμες πρόσθετες ρυθμίσεις στο μενού, μπορείτε να κάνετε κλικ στο γρανάζι (B), ο οποίος θα σας μεταφέρει στις συγκεκριμένες ρυθμίσεις εντός των προτιμήσεων.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen (F) and select 'Setup Wizard' to use it.
+**Πρώτη ρύθμιση:** Καθώς ο Οδηγός ρυθμίσεων AAPS 2.0 σας καθοδηγεί στη διαδικασία της ρύθμισης του AndroidAPS. Πιέστε το μενού 3 κουκκίδων στην πάνω δεξιά πλευρά της οθόνης (F) και επιλέξτε 'Οδηγός εγκατάστασης' για να το χρησιμοποιήσετε.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
+![Κουτάκια Διαμόρφωση και γρανάζι](../images/ConfBuild_ConfigBuilder.png)
 
-## Profile
+## Προφίλ
 
-Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+Επιλέξτε το βασικό προφίλ που θέλετε να χρησιμοποιήσετε. Ανατρέξτε στη σελίδα [Προφίλ](../Usage/Profiles.md) για περισσότερες πληροφορίες εγκατάστασης.
 
-### Local profile (recommended)
+### Τοπικό προφίλ (συνιστάται)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Το τοπικό προφίλ χρησιμοποιεί το βασικό προφίλ που καταχωρήθηκε χειροκίνητα στο τηλέφωνο. Μόλις επιλεγεί, εμφανίζεται μια νέα καρτέλα στο AAPS, όπου μπορείτε να αλλάξετε τα δεδομένα προφίλ που διαβάζονται από την αντλία, εάν είναι απαραίτητο. Με την επόμενη αλλαγή προφίλ εγγράφονται στην αντλία στο προφίλ 1. Αυτό το προφίλ συνιστάται καθώς δεν εξαρτάται από τη σύνδεση στο διαδίκτυο.
 
-Advantage: no internet connection neccessary to change profile settings
+Πλεονέκτημα: δεν χρειάζεται σύνδεση στο Internet για να αλλάξετε τις ρυθμίσεις προφίλ
 
-Disadvantage: only one profile
+Μειονέκτημα: μόνο ένα προφίλ
 
-### NS Profile
+### NS προφίλ
 
-NS Profile uses the profiles you have saved on your nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+Το NS προφίλ χρησιμοποιεί τα προφίλ που έχετε αποθηκεύσει στην nightscout σελίδα σας (https://[yournightscoutsiteaddress]/profile). Μπορείτε να χρησιμοποιήσετε την [αλλαγή προφίλ](../Usage/Profiles.md) για να επιλέξετε ποιο από αυτά τα προφίλ είναι ενεργό, αυτό γράφει το προφίλ στην αντλία σε περίπτωση αποτυχίας του AndroidAPS. Αυτό σας επιτρέπει να δημιουργήσετε εύκολα πολλά προφίλ στο Nightscout (δηλ.. εργασία, σπίτι, άθληση, διακοπές, κλπ.). Λίγο μετά την "Αποθήκευση" θα μεταφερθούν στο AAPS αν το smartphone σας είναι συνδεδεμένο στο διαδίκτυο. Ακόμα και χωρίς σύνδεση στο Internet ή χωρίς σύνδεση με το Nightscout, τα προφίλ Nightscout είναι διαθέσιμα σε AAPS αφού συγχρονιστούν.
 
-Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Κάντε μία **αλλαγή προφίλ** για να ενεργοποιήσετε ένα προφίλ από το Nightscout. Πατήστε και κρατήστε πατημένο το τρέχον προφίλ στην αρχική οθόνη AAPS στην κορυφή (το γκρίζο πεδίο ανάμεσα στο γαλάζιο πεδίο "ανοιχτό/κλειστό κύκλωμα" και στο σκούρο μπλε πεδίο του στόχου) > Διακόπτης προφίλ > Επιλογή προφίλ > OK. Το AAPS γράφει επίσης το επιλεγμένο προφίλ στην αντλία μετά την αλλαγή προφίλ, έτσι ώστε να είναι διαθέσιμο χωρίς AAPS σε περίπτωση έκτακτης ανάγκης και συνεχίζει να τρέχει.
 
-Advantage: multiple profiles & easy to edit via PC or tablet
+Πλεονέκτημα: πολλαπλά προφίλ & εύκολη επεξεργασία μέσω υπολογιστή ή tablet
 
-Disadvantage: no local changes to profile settings
+Μειονέκτημα: καμία τοπική αλλαγή στις ρυθμίσεις προφίλ
 
-### Simple profile
+### Απλό προφίλ
 
-Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
+Απλό προφίλ με μόνο ένα χρονικό μπλοκ για DIA, IC, ISF, βασικό ρυθμό και εύρος στόχου (δηλ. Καμία αλλαγή βασικού ρυθμού κατά τη διάρκεια της ημέρας). Είναι πιθανότερο να χρησιμοποιηθεί για σκοπούς δοκιμής εκτός αν έχετε τους ίδιους παράγοντες σε διάστημα 24 ωρών. Μόλις επιλεγεί το "Απλό προφίλ", θα εμφανιστεί μια νέα καρτέλα στο AAPS, όπου μπορείτε να καταχωρίσετε τα δεδομένα προφίλ.
 
-## Insulin
+## Ινσουλίνη
 
-Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. The DIA should always be at least 5 hours, you can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md) page. For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. The insulin curve graph helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+Επιλέξτε τον τύπο ινσουλίνης που χρησιμοποιείτε. Οι επιλογές 'Ταχέως δράσεως Oref', 'Εξαιρετικά ταχέως Oref' και 'Ελεύθερης κορυφής Oref' έχουν όλες ένα εκθετικό σχήμα. Περισσότερες πληροφορίες παρατίθενται στο [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), οι καμπύλες θα διαφέρουν ανάλογα με το DIA και το χρόνο έως την κορυφή. Η DIA θα πρέπει να είναι πάντα τουλάχιστον 5 ώρες, μπορείτε να διαβάσετε περισσότερα σχετικά με αυτό στην ενότητα Προφίλ ινσουλίνης [σε αυτή](../Getting-Started/Screenshots.md) την σελίδα. Για ταχείες και εξαιρετικά ταχείες δράσης, η DIA είναι η μόνη μεταβλητή που μπορείτε να ρυθμίσετε μόνοι σας, ο χρόνος μέχρι την κορυφή είναι σταθερός. Η Ελεύθερη κορυφή σάς επιτρέπει να ρυθμίσετε τόσο το DIA όσο και το χρόνο έως την κορυφή και πρέπει να χρησιμοποιείται μόνο από προχωρημένους χρήστες που γνωρίζουν τις επιπτώσεις αυτών των ρυθμίσεων. Το γράφημα καμπύλης ινσουλίνης σας βοηθά να κατανοήσετε τις διαφορετικές καμπύλες. Μπορείτε να το δείτε ενεργοποιώντας το tickbox για να το δείξει ως καρτέλα, αλλιώς θα βρίσκεται στο μενού hamburger.
 
-### Rapid-Acting Oref
+### Ταχέως δράσεως Oref
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection
+* προτείνετε για Humalog, Novolog και Novorapid
+* DIA = τουλάχιστον 5 ώρες
+* Μέγιστη. κορυφή = 75 λεπτά μετά την χορήγηση
 
-### Ultra-Rapid Oref
+### Εξαιτετικά ταχέως Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection
+* προτείνεται για FIASP
+* DIA = τουλάχιστον 5 ώρες
+* Μέγιστη. κορυφή = 55 λεπτά μετά την χορήγηση
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
+Για πολλούς ανθρώπους δεν υπάρχει σχεδόν καμία αξιοσημείωτη επίδραση της FIASP μετά από 3-4 ώρες πια, ακόμα κι αν στη συνέχεια είναι διαθέσιμες μονάδες 0,0xx. Αυτό το υπολειπόμενο ποσό μπορεί να παρατηρηθεί κατά τη διάρκεια της άθλησης, για παράδειγμα. Για αυτό το AndroidAPS χρησιμοποιεί κατ ελάχιστο 5 ώρες σαν DIA.
 
-![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
+![Διαμόρφωση Εξαιρετικά ταχέως Oref](../images/ConfBuild_UltraRapidOref.png)
 
-### Free Peak Oref
+### Ελεύθερης κορυφής Oref
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+Με το προφίλ "Ελεύθερης κορυφής Oref" μπορείτε να εισάγετε μεμονωμένα την ώρα της κορυφής. Το DIA ορίζεται αυτόματα σε 5 ώρες, αν δεν έχει καθοριστεί υψηλότερα στο προφίλ.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+Αυτή η επιλογή στο προφίλ συνιστάται εάν χρησιμοποιείται μη επαναλαμβανόμενη ινσουλίνη ή μείγμα διαφορετικών ινσουλινών.
 
-## BG Source
+## Πηγή BG
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Επιλέξτε την πηγή καταγραφέα γλυκόζης αίματος που χρησιμοποιείτε - δείτε [Πηγή BG](BG-Source.rst) για περισσότερες πληροφορίες εγκατάστασης.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - επιλέξτε "Αποστολή δεδομένων BG στο xDrip+" αν θέλετε να χρησιμοποιήσετε τους συναγερμούς του xDrip+. ![Διαμόρφωση BG πηγή](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-## Pump
+## Αντλία
 
-Select the pump you are using.
+Επιλέξτε την αντλία που χρησιμοποιείτε.
 
 * [DanaR](DanaR-Insulin-Pump.md)
-* DanaR Korean (for domestic DanaR pump)
-* DanaRv2 (DanaR pump with firmware upgrade)
+* DanaR Korean (τοπικκή για την Κορέα DanaR pump)
+* DanaRv2 (DanaR αντλία με αναβάθμιση λογισμικού)
 * [DanaRS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* MDI (receive AAPS suggestions for your multiple daily injections thereapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (απαιτεί εγκατάσταση του ruffy)
+* MDI (λάβετε τις προτάσεις του AAPS για τις πολλαπλές καθημερινές ενέσεις σας)
+* Εικονική αντλία (ανοικτό κύκλωμα για αντλία που δεν έχει ακόμα οδηγό - μόνο προτάσεις AAPS)
 
-Use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is pobbile. This may help on some phones where the bluetooth stack freezes.
+Χρησιμοποιήστε τις **Σύνθετες ρυθμίσεις** για να ενεργοποιήσετε τον BT watchdog εάν είναι απαραίτητο. Απενεργοποιεί το Bluetooth για ένα δευτερόλεπτο αν δεν υπάρχει δυνατή σύνδεση με την αντλία. Αυτό μπορεί να βοηθήσει σε ορισμένα τηλέφωνα όπου το bluetooth κολλάει.
 
-## Sensitivity Detection
+## Ανίχνευση ευαισθησίας
 
-Select the type of sensitivity detection. This will analyse historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Επιλέξτε τον τύπο ανίχνευσης ευαισθησίας. Αυτό θα αναλύσει τα ιστορικά δεδομένα επί τόπου και θα κάνει προσαρμογές αν αναγνωρίσει ότι αντιδράτε πιο ευαίσθητα (ή αντίστροφα, αντίσταση) στην ινσουλίνη από το συνηθισμένο. Λεπτομέρειες σχετικά με τον αλγόριθμο ευαισθησίας Oref0 μπορούν να διαβαστούν στο [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-You can view your sensistivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
+Μπορείτε να δείτε την ευαισθησία σας στην αρχική οθόνη επιλέγοντας SEN και παρακολουθώντας τη λευκή γραμμή. Σημειώστε ότι πρέπει να είστε σε [Στόχος 6](../Usage/Objectives), για να χρησιμοποιήσετε τη λειτουργία Ανίχνευση Ευαισθησίας/autosens.
 
-### Absorption settings
+### Ρυθμίσεις απορρόφησης
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically it is a failsafe.
+Εάν χρησιμοποιείτε Oref1 με SMB, πρέπει να αλλάξετε το **min_5m_carbimpact** στο 8. Η τιμή χρησιμοποιείται μόνο κατά τη διάρκεια των κενών στις μετρήσεις CGM ή όταν η σωματική δραστηριότητα "καταναλώνει" όλη την αύξηση της γλυκόζης στο αίμα που διαφορετικά θα προκαλούσε το AAPS να διασπάσει COB. Σε στιγμές που η απορρόφηση των υδατανθράκων δεν μπορεί να επεξεργαστεί δυναμικά με βάση τις αντιδράσεις του αίματός σας, εισάγει μια προκαθορισμένη τιμή κατανάλωσης στους υδατάνθρακες σας. Ουσιαστικά είναι μια βαλβίδα ασφαλείας.
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Επιλέξτε τον αλγόριθμο APS που θέλετε για τις ρυθμίσεις των παρεμβάσεων. Μπορείτε να δείτε την ενεργή λεπτομέρεια του επιλεγμένου αλγορίθμου στην καρτέλα OpenAPS (OAPS).
 
-* OpenAPS MA (meal assist, state of the algorithm in 2016)
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2016)  
-    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
-    Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
-    Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* OpenAPS MA (βοήθεια γεύματος, κατάσταση του αλγορίθμου το 2016)
+* OpenAPS AMA (προηγμένη βοήθεια γεύματος, κατάσταση του αλγορίθμου το 2016)  
+    Περισσότερες λεπτομέρειες για το OpenAPS AMA μπορείτε να βρείτε στο [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Με απλά λόγια το πλεονέκτημα είναι ότι αφού κάνετε ένα bolus γεύματος το σύστημα μπορεί ταχύτερα να δώσει υψηλό προσωρινό ρυθμό αν εχουν δωθεί αξιόπιστα οι υδατάνθρακες.   
+    Σημειώστε ότι πρέπει να είστε στον [Στόχος 7](../Usage/Objectives.md) για να χρησιμοποιήσετε το OpenAPS AMA.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, πιο πρόσφατος αλγόριθμος για προχωρημένους χρήστες)   
+    Σημειώστε ότι πρέπει να είστε στο [Στόχος 8](../Usage/Objectives.md) για να χρησιμοποιήσετε το OpenAPS SMB και το min_5m_carbimpact πρέπει να ρυθμιστεί στο 8 στο μενού Διαμόρφωση> Ανίχνευση ευαισθησίας> Ρυθμίσεις Oref1 ευαισθησίας.
 
-## Loop
+## Κύκλωμα
 
-Define whether you want to allow AAPS automatic controls or not.
+Ορίστε εάν θέλετε να επιτρέψετε ή όχι τα αυτόματα συστήματα ελέγχου AAPS.
 
-### Open Loop
+### Ανοιχτό κύκλωμα
 
 AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
@@ -259,6 +259,6 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 Email and number of logs to be send. Normally no change neccessary.
 
-### Config Builder
+### Διαμόρφωση
 
 Use tab for config builder instead of hambuger menu.

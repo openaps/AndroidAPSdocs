@@ -1,25 +1,25 @@
-General CGM recommendations
+Obecná doporučení ohledně CGM
 *****************************
 
-CGM hygiene
+Opatření při používání CGM
 =============
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps. 
+Ať už používáte jakýkoliv systém CGM, pokud chcete kalibrovat z krve, je třeba dodržovat několik velmi jednoduchých pravidel, a to bez ohledu, zda používáte nebo nepoužíváte DIY software CGM nebo oficiální aplikace. 
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. Pro DIY systémy to nemusí platit a měli byste být opatrní, pokud byste pokračovali v používání CGM bez kalibrací.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* Ujistěte se, že máte čisté ruce i používaná zařízení.
+* Snažte se kalibrovat tehdy, když je vaše glykémie stabilní (rovná křivka po dobu 15–30 minut je obvykle dostatečná)
+Nekalibrujte, pokud se vaše glykémie mění (stoupá nebo klesá). 
+* Kalibrujte dostatečně často – pokud používáte oficiální aplikace, budete na to upozorňováni v pravidelných intervalech. Pro DIY systémy to nemusí platit a měli byste být opatrní, pokud byste pokračovali v používání CGM bez kalibrací.
+* Je-li to možné, kalibrujte pomocí nižších hodnot (4–5 mmol/l nebo 72-90mg/dl), i vyšších (7–9 mmol/l nebo 126-160mg/dl). CGM tak bude mít lepší rozsah referenčních hodnot.
 
-Setting sensor (G6)
+Nastavení senzoru (G6)
 ==============
 
 Při nastřelování senzoru je doporučeno nepřikládat aplikátor příliš velkou silou, aby se zabránilo krvácení. Senzor by se neměl dostat do kontaktu s krví.
 
 Po nastřelení senzoru je možno nakliknout vysílač do pouzdra senzoru. Pozor! Vysílač nejprve nasaďte na hranaté straně senzoru, a až poté na kulaté.
 
-Troubleshooting 
+Řešení problémů 
 ================
 
 Problém s připojením
@@ -35,7 +35,7 @@ V případě vyskytnutí opakovaných problémů se senzorem zkuste senzor nast�
 
 Skákající hodnoty
 ---------------
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Můžete zkusit změnit nastavení xDrip+ pro filtraci a blokování šumu (Nastavení - Komunikace mezi aplikacemi - Noise blocking) t.j. "Block very High noise and worse".  Podívejte se také na `Vyhlazování dat glykémie <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
 
 
