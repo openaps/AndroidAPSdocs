@@ -1,15 +1,15 @@
-What is a closed loop system with AndroidAPS?
+Co je systém uzavřené smyčky AndroidAPS?
 ****************************
 
-AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. 
+AndroidAPS je aplikace, která funguje jako systém umělé slinivky (APS; artificial pancreas system) určena pro smartphony s operačním systémem Android. Co je systém umělé slinivky? Jedná se o softwarový program, jehož účelem je simulovat chování zdravé slinivky: automaticky udržovat hladinu krevního cukru v optimálním rozmezí. 
 
-An APS can't do the job as well as a biological pancreas does, but it can make type 1 diabetes easier to manage using devices that are commercially available and software that is simple and safe. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
+APS to sice nedokáže dělat tak dobře, jako skutečná slinivka, avšak dokáže lidem s diabetem 1 typu usnadnit zvládání nemoci, a to za použití zařízení, která jsou běžně dostupná a softwaru, který je jednoduchý a bezpečný. Mezi tato zařízení patří systém pro kontinuální monitoring glykémie (CGM), který systému AndroidAPS předává informace o aktuální glykémii, a inzulinová pumpa, která je řízena pomocí AndroidAPS tak, aby vydávala správné množství inzulínu. Aplikace komunikuje s těmito zařízeními prostřednictvím technologie bluetooth. K výpočtu správného množství inzulínu využívá speciální algoritmus, neboli sadu pravidel, vyvinutý pro jiný systém umělé slinivky zvaný OpenAPS, který na celém světě používají tisíce lidí a eviduje miliony hodin používání. 
 
-A note of caution: AndroidAPS is not regulated by any medical authority in any country. Using AndroidAPS is essentially carrying out a medical experiment on yourself. Setting up the system requires determination and technical knowledge. If you don't have the technical know-how at the beginning, you will by the end. All the information you need can be found in these documents, elsewhere online, or from others who have already done it -- you can ask them in Facebook groups or other forums. Many people have successfully built AndroidAPS and are now using it entirely safely, but it is essential that every user:
+Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdravotnickým orgánem. Používání AndroidAPS na vlastní osobě je čistě experimentální. Vytvoření tohoto systému vyžaduje odhodlání a technické znalosti. Pokud na začátku nemáte technické znalosti, na konci je mít budete. Veškeré potřebné informace naleznete v této dokumentaci, jinde na internetu nebo je získáte od ostatních uživatelů -- můžete se jich zeptat prostřednictvím skupin na Facebooku nebo v jiných diskuzních fórech. Spousta lidí si úspěšně sestavila aplikaci AndroidAPS a nyní ji zcela bezpečně používá, nicméně je zcela nezbytné, aby každý uživatel:
 
-* Builds the system themselves so that they thoroughly understand how it works
-* Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
-* Maintains and monitors the system to ensure it is working properly
+* Sestavil aplikaci sám, aby skutečně pochopil, jak funguje
+* Nastavil svůj individuální algoritmus dávkování ve spolupráci s lékařem nebo pomocným personálem tak, aby fungoval téměř dokonale
+* Správně obsluhoval systém a dohlížel na to, zda správně funguje
 
 .. poznámka:: 
 	** Upozornění a varování **
@@ -20,25 +20,25 @@ A note of caution: AndroidAPS is not regulated by any medical authority in any c
 
 	* Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_.
+	Vezměte prosím na vědomí – tento projekt nemá žádnou spojitost s a není žádným způsobem schválený společnostmi: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ nebo `Medtronic <http://www.medtronic.com/>`_.
 	
-If you're ready for the challenge, please read on. 
+Jste-li připraveni přijmout tuto výzvu, čtěte dál. 
 
-Primary goals behind AndroidAPS
+Primární cíle AndroidAPS
 ===========================================
 
-* An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
-* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
-* An app to which users can easily add or remove modules as needed
-* An app with different versions for specific locations and languages.
-* An app which can be used in open- and closed-loop mode
-* An app that is totally transparent: users can input parameters, see results, and make the final decision
-* An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
-* An app closely integrated with Nightscout
-* An app in which the user is in control of safety constraints 
+* Aplikace obsahující řadu bezpečnostních opatření. Informace o bezpečnostních opatřeních algoritmů, známých jako oref0 a oref1, najdete zde (https://openaps.org/reference-design/)
+* Jediná aplikace potřebná pro management diabetu 1. typu podporující umělou slinivku a Nightscout
+* Aplikace, kterou lze v snadno rozšiřovat podle potřeb každého uživatele
+* Aplikace dostupná v různých verzích pro konkrétní země a jazyky
+* Aplikace, kterou lze používat v režimu otevřené i uzavřené smyčky
+* Aplikace, jejíž fungování je zcela transparentní: uživatelé mohou zadat parametry, uvidí výsledek a mohou provést konečné rozhodnutí
+* Aplikace, která není závislá na ovladači pro konkrétní pumpu a obsahuje možnost použít „virtuální pumpu“, takže s ní uživatelé mohou bezpečně experimentovat, než ji skutečně začnou používat 
+* Aplikace podporující těsnou integraci s Nightscoutem
+* Aplikace, u které řídí bezpečnostní omezení sám uživatel 
 
-How to start
+Jak začít
 ===============
-Of course, all of this content here is very important, but can be in the beginning quite confusing.
+Veškerý tento obsah je samozřejmě velmi důležitý, ale může být na začátku docela matoucí.
 A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
  
