@@ -2,9 +2,9 @@
 
 Pokud ho ještě nemáte nastaven, stáhněte si [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzkoušejte verzi [nightly build 2019/07/28 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Základní nastavení pro všechny CGM & FGM systémy
 
@@ -20,32 +20,32 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 * Zrušte `Upload treatments` a `Back-fill data`
 * Dále by měla být deaktivována volba `Alert on failures`. Jinak bude každých 5 minut spuštěn alarm, bude-li připojení přes wifi/mobilní síť málo kvalitní, anebo při problémech se spojením k serveru.
    
-   ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
+   ![xDrip+ Základní nastavení 1](../images/xDrip_Basic1.png)
    
-   ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
+   ![xDrip+ Základní nastavení 2](../images/xDrip_Basic2.png)
 
 * **Komunikace mezi aplikacemi** (Broadcast) Pokud budete používat AndroidAPS a data by měla být přenášena např. do AndroidAPS, měli byste v xDripu aktivovat Lokální odesílání dat.
 
 * Aby byly hodnoty stejné, měli byste aktivovat `Odesílat zobrazovanou glykémii`.
 * Pokud jste aktivovali `Přijímat ošetření` a v AndroidAPS i Povolení odesílání, bude xDrip+ přijímat sacharidy, insulín i bazální hodnoty z AndroidAPS, a může tak předpovídat blížící se hypo atd. mnohem přesněji.
    
-   ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
+   ![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
 
 * Objevily se problémy s lokálním odesíláním dat (AAPS nepřijímal nové hodnoty BG z xDrip+) v případě, že byl zapnutý mód letadlo. Jděte do Nastavení > Komunikace mezi zařízeními > Identify reciever, a vložte hodnotu `info.nightscout.androidaps`.
    
-   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+   ![xDrip+ Základní nastavení komunikace mezi aplikacemi rozpoznání přijímače](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ a Dexcom G6
 
-### xDrip+ version depending on G6 transmitter serial no.
+### Verze xDripu+ závisí na výrobním čísle vysílače G6.
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzkoušejte verzi [nightly build 2019/07/28 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
 
-### Dexcom specific settings
+### Speciální nastavení pro Dexcom
 
-* Otevřete G5/G6 Debug Settings -> Hamburger Menu (pravý horní roh domácí obrazovky) -> nastavení -> G5/G6 Debug Settings ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
+* Otevřete G5/G6 Debug Settings -> Hamburger Menu (pravý horní roh domácí obrazovky) -> nastavení -> G5/G6 Debug Settings ![Otevřete nastavení xDrip+](../images/xDrip_Dexcom_SettingsCall.png)
 
 * Zvolte následující nastavení
    
@@ -57,13 +57,13 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 * Všechny ostatní volby by měly zůstat vypnuté
 * Nastavte varování baterie na 280 (G5/G6 nastavení- dolní část)
    
-   ![xDrip+ G5/G6 Debug Settings](../images/xDrip_Dexcom_DebugSettings.png)
+   ![xDrip+ Možnosti ladění pro G5/G6](../images/xDrip_Dexcom_DebugSettings.png)
 
-### Preemptive restarts not recommended
+### Preemptivní restarty nejsou doporučené
 
-The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+Automatické prodloužení senzorů Dexcom (`preemtive restarts`) není doporučeno, tato volba může způsobit „skoky“ v hodnotách glykémie 9. den po restartu.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Skok po preemptivním restartu](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Použití G6 může být o něco složitější, než se na první pohled zdá. Abyste ho mohli používat bezpečně, je třeba vědět o několika skutečnostech:
 
@@ -73,65 +73,65 @@ Použití G6 může být o něco složitější, než se na první pohled zdá. 
 * Nastřelení senzoru G6 předem v kombinaci s tovární kalibrací pravděpodobně povede k odchylkám ve výsledcích měření. Jestliže nastřelujete senzor s předstihem, pak jej pravděpodobně v zájmu co nejlepších výsledků bude nutné zkalibrovat.
 * Jestliže nechcete sledovat změny, ke kterým může docházet, možná bude lepší přepnout na režim bez továrních kalibrací a používat systém jako G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
+Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si [kompletní článek](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/), který sepsal Tim Street na adrese [www.diabettech.com](http://www.diabettech.com).
 
-### Connect G6 transmitter for the first time
+### První připojení vysílače G6
 
-**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
+**Pro druhý a další vysílače viz [Prodloužení životnosti vysílače](../Configuration/xdrip#extend-transmitter-life) níže.**
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzkoušejte verzi [nightly build 2019/07/28 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Vypněte originální Dexcom přijímač (je-li použit).
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
-   * This guides you through the initial set up.
-   * you will need your transmitter serial number if this is the first time you've used it.
+* Dlouze stiskněte symbol kapky krve Xdrip+ na hlavni obrazovce a povolte tlačítko `Source Wizard Button`.
+* Použijte tlačítko Source Wizard, které zajistí, že budou vybrána výchozí nastavení včetně OB1 & nativního režimu 
+   * Průvodce vás provede prvotním nastavením.
+   * Pokud ho používáte poprvé, budete potřebovat výrobní číslo vysílače.
 
-* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter). Be careful not to confuse 0 (zero) and O (capital letter o).
+* Vložte výrobní číslo nového vysílače (je napsané na krabičce od vysílače nebo na spodní straně vysílače). Buďte opatrní, abyste nezaměnili 0 (nulu) a O (velké písmeno o).
    
-   ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
+   ![xDrip+ Výrobní číslo vysílače Dexcom](../images/xDrip_Dexcom_TransmitterSN.png)
 
-* Insert new sensor (only if replacing)
+* Vložte nový senzor (pouze když ho měníte)
 
-* Put transmitter into sensor
-* **Wait 15 minutes** before starting sensor so xDrip can initialize communication with the new transmitter
-* Start sensor (only if replacing)
+* Nasaďte vysílač na senzor
+* **Počkejte 15 minut** před spuštěním senzoru, aby mohl xDrip navázat komunikaci s novým vysílačem
+* Spusťte senzor (pouze pokud ho měníte)
    
-   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
+   -> V dolní části obrazovky se po několika minutách musí zobrazit `Zahřívání zbývá x,x hodin`.
 
--> If your transmitter serial no. does not start with 8G and there is no time specification after a few minutes stop and restart the sensor.
+-> Jestliže výrobní číslo vašeho vysílače. nezačíná znaky 8G a ani po několika minutách se nezobrazí žádný časový údaj, zastavte senzor a restartujte jej.
 
-* Restart collector (system status - if not replacing sensor}
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Klikněte na Restart collector (Stav systému - když neměníte senzor)
+* Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
+* Dlouhým stisknutím symbolu červené kapky krve xDrip+ zrušte zobrazení tlačítka `Source Wizard Button`.
    
-   ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
+   ![xDrip+ Vysílač Dexcom 1](../images/xDrip_Dexcom_Transmitter01.png)
    
-   ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
+   ![xDrip+ Vysílač Dexcom 2](../images/xDrip_Dexcom_Transmitter02.png)
    
-   ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
+   ![xDrip+ Vysílač Dexcom 3](../images/xDrip_Dexcom_Transmitter03.png)
    
-   ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+   ![xDrip+ Vysílač Dexcom 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### Transmitter battery status
+### Stav baterie vysílače
 
-* Battery status can be controlled in system status (Hamburger menu top left on homescreen)
-* Swipe left once to see second screen. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
+* Stav baterie je zobrazen ve stavu systému (Hamburger menu vlevo nahoře na hlavní obrazovce)
+* Jedenkrát potáhněte prstem doleva a přejděte na druhou obrazovku. ![xDrip+ První vysílač 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”: Transmitter days: 151 Voltage A: 297 Voltage B: 260 Resistance: 2391
+* Přesné hodnoty, kdy vysílač "umře" z důvodu vybití baterie, nejsou známy. Po "smrti" vysílače byly na internetu zveřejněny následující hodnoty: Transmitter days: 151 Voltage A: 297 Voltage B: 260 Resistance: 2391
 
-### Extend transmitter life
+### Prodloužení životnosti vysílače
 
-* So far life cannot be extended for transmitters whos serial no. starts with 8G.
-* To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
+* Prozatím nelze prodloužit životnost vysílačů, jejichž výrobní číslo začíná znaky 8G.
+* V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
+* Při operaci prodloužení životnosti vysílače bude přerušena aktuální relace senzoru. Mějte to na paměti a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2 h zahřívání senzoru.
+* Přepněte do `engineering mode`: 
+   * klepněte na symbol injekční stříkačky v pravém horním rohu hlavní obrazovky
+   * pak klepněte na symbol mikrofonu v dolním pravém rohu
+   * Do textového pole, které se otevře, napište "enable engineering mode" 
+   * klikněte na "Done"
    * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
 * Go to the G5 debug settings and check `OB1 collector`.
 * Use the voice command: “hard reset transmitter”
@@ -145,9 +145,9 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 
 ### Replace transmitter
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzkoušejte verzi [nightly build 2019/07/28 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Vypněte originální Dexcom přijímač (je-li použit).
 * Stop sensor (only if replacing sensor)
@@ -172,28 +172,28 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 
 * Remove transmitter (and sensor if replacing sensor)
 * Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
-   * This guides you through the initial set up.
+* Použijte tlačítko Source Wizard, které zajistí, že budou vybrána výchozí nastavení včetně OB1 & nativního režimu 
+   * Průvodce vás provede prvotním nastavením.
    * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Be careful not to confuse 0 (zero) and O (capital letter o).
+* Put in serial number of new transmitter. Buďte opatrní, abyste nezaměnili 0 (nulu) a O (velké písmeno o).
 * Insert new sensor (only if replacing).
-* Put transmitter into sensor
-* Start sensor (only if replacing)
+* Nasaďte vysílač na senzor
+* Spusťte senzor (pouze pokud ho měníte)
    
    **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
 
 * Restart collector (system status - if not replacing sensor}
 
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
+* Dlouhým stisknutím symbolu červené kapky krve xDrip+ zrušte zobrazení tlačítka `Source Wizard Button`.
    
-   ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
+   ![xDrip+ Vysílač Dexcom 1](../images/xDrip_Dexcom_Transmitter01.png)
    
-   ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
+   ![xDrip+ Vysílač Dexcom 2](../images/xDrip_Dexcom_Transmitter02.png)
    
-   ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
+   ![xDrip+ Vysílač Dexcom 3](../images/xDrip_Dexcom_Transmitter03.png)
    
-   ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+   ![xDrip+ Vysílač Dexcom 4](../images/xDrip_Dexcom_Transmitter04.png)
 
 ### New Sensor
 
@@ -226,73 +226,73 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
    * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore this is not recommended.
 * Enter Sensor code (on the peel-off foil of the sensor) 
    * Keep code for further reference (i.e. new start after transmitter had to be removed)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
-* No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
-* Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
+   * Kód senzoru můžete najít i v [log souborech xDrip+](../Configuration/xdrip#retrieve-sensor-code): klikněte na 3 tečky na hlavní obrazovce a vyberte `Zobrazit logy`.
+* Pokud používáte G6 v "nativním režimu", není potřeba žádná kalibrace. Po 2 hodinovém zahřívání senzoru začne xDrip+ zobrazovat nové hodnoty.
+* Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
    
-   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
+   ![xDrip+ Spustit senzor Dexcom 1](../images/xDrip_Dexcom_SensorStart01.png)
    
-   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
+   ![xDrip+ Spustit senzor Dexcom 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-### Retrieve sensor code
+### Získání kódu senzoru
 
-* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
-* Swipe left once to see second screen.
+* Ve verzi master ze dne 2019/05/18 a ve verzích nightly build je kód senzoru zobrazován ve stavu systému (Hamburger menu v levém horním rohu hlavní obrazovky).
+* Jedenkrát potáhněte prstem doleva a přejděte na druhou obrazovku.
    
-   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+   ![xDrip+ Získat kód senzoru Dexcom 2](../images/xDrip_Dexcom_SensorCode2.png)
 
-* Dexcom sensor code can also be found in xDrip+ logs.
+* Kód senzoru můžete najít také v log souborech xDrip+.
 
-* Tap 3 dot menu (top right side on homescreen)
-* Select `View Event Logs` and search for "code"
+* Klepněte na 3 tečky (v pravém horním rohu hlavní obrazovky)
+* Vyberte `Zobrazit logy` a hledejte "code"
    
-   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Získat kód senzoru Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
-## Troubleshooting Dexcom G6 and xDrip+
+## Odstraňování potíží s Dexcom G6 a xDrip+
 
-### Problem connecting transmitter
+### Problém s připojením k vysílači
 
-* Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
-* Open system status in xDrip+ (hamburger menue on top left side of home screen).
-* Check if your transmitter is shown on first status page ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings.
-* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+* Vysílač musí být zobrazen v bluetooth nastavení ve vašem telefonu.
+* Vysílač se musí zobrazovat jako Dexcom??, přičemž ?? jsou poslední dva znaky výrobního čísla vysílače. (např. DexcomHY).
+* Otevřete nabídku Stav systému v xDrip+ (hamburger menu vlevo nahoře na hlavní obrazovce).
+* Ověřte, že je vysílač zobrazen na na první stránce se stavem systému ('classic status page').
+* Pokud ne: Odstraňte zařízení z nastavení bluetooth svého telefonu.
+* Počkejte přibližně 5 minut, dokud se vysílač Dexcom automaticky znovu nepřipojí.
 
-### Problem when starting new sensor
+### Problém se spuštěním nového senzoru
 
-* Native sensor is marked as "FAILED: Sensor Failed Start"
-* Stop sensor
-* Restart your phone
-* Start sensor with code 0000 (four times zero)
-* Wait 15 minutes
-* Stop sensor
-* Start sensor with "real" code (printed on the adhesive protector)
+* Nativní senzor je označen jako "FAILED: Sensor Failed Start"
+* Zastavte senzor
+* Restartujte telefon
+* Spusťte nový senzor s kódem 0000 (čtyři nuly)
+* Počkejte 15 minut
+* Zastavte senzor
+* Spusťte senzor se skutečným kódem (vytištěným na ochranné nálepce)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+V log souborech v xDrip+ ověřte, že xDrip+ začne počítat "Trvání: 1 minuta" (a tak dále). Pouze v log protokolech v xdrip+ můžete v úvodní fázi zjistit, zda xdrip+ zastavil senzor. Pozdější stav není v dolní části hlavní obrazovky vždy zobrazen správně.
 
-## xDrip+ & Freestyle Libre
+## xDrip+ a Freestyle Libre
 
-### Libre specific settings
+### Specifická nastavení pro Libre
 
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+* Otevřete nastavení Bluetooth -> Hamburger menu (levý horní roh hlavní obrazovky) -> Nastavení -> sjeďte dolů -> Méně častá nastavení -> Nastavení BT
    
-   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+   ![xDrip+ Libre nastavení bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Zvolte následující nastavení
    
-   * `Turn Bluetooth on` 
-   * `Use scanning`
-   * `Always discover services`
+   * `Zapnout Bluetooth` 
+   * `Použít vyhledávání`
+   * `Vždy prohledávat služby`
 
 * Všechny ostatní volby by měly zůstat vypnuté
    
-   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+   ![xDrip+ Libre nastavení bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Connect Libre Transmitter & start sensor
+### Připojte vysílač Libre a spusťte senzor
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Spustit vysílač a senzor Libre 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Spustit vysílač a senzor Libre 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Spustit vysílač a senzor Libre 3](../images/xDrip_Libre_Transmitter03.png)
