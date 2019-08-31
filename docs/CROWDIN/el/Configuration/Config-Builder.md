@@ -1,8 +1,8 @@
-# Config Builder
+# Διαμόρφωση
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left hand side (A) allow you to select which one to use, the boxes on the right hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+Η Διαμόρφωση (Conf) είναι η καρτέλα όπου μπορείτε να ενεργοποιήσετε και να απενεργοποιήσετε τις λειτουργικές δυνατότητες. Τα κουτάκια στην αριστερή πλευρά (A) σας επιτρέπουν να επιλέξετε ποιο θα χρησιμοποιηθεί, τα κουτάκια στη δεξιά πλευρά (C) σας επιτρέπουν να τα δείτε ως καρτέλα (E) στο AndroidAPS. Σε περίπτωση που το δεξιό κουτάκια δεν είναι ενεργοποιημένα, μπορείτε να φτάσετε στη λειτουργία χρησιμοποιώντας το μενού hamburger (D) στην πάνω αριστερή γωνία της οθόνης.
 
-Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Όπου υπάρχουν διαθέσιμες πρόσθετες ρυθμίσεις στο μενού, μπορείτε να κάνετε κλικ στο γρανάζι (B), ο οποίος θα σας μεταφέρει στις συγκεκριμένες ρυθμίσεις εντός των προτιμήσεων.
 
 **First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right hand side of the screen (F) and select 'Setup Wizard' to use it.
 
@@ -259,6 +259,6 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 Email and number of logs to be send. Normally no change neccessary.
 
-### Config Builder
+### Διαμόρφωση
 
 Use tab for config builder instead of hambuger menu.
