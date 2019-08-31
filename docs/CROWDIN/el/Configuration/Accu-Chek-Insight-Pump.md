@@ -59,60 +59,60 @@
 * "Αρχείο αλλαγής μπαταρίας": Αυτό καταγράφει μια αλλαγή μπαταρίας όταν βάζετε μια νέα μπαταρία στην αντλία.
 * "Αρχείο αλλαγής λειτουργίας": Αυτό εισάγει μια σημείωση στη βάση δεδομένων AndroidAPS κάθε φορά που ξεκινάτε, σταματάτε ή κάνετε παύση την αντλία.
 * "Αρχείο Ειδοποιήσεις καταγραφής": Καταγράφει μια σημείωση στη βάση δεδομένων AndroidAPS κάθε φορά που η αντλία εκδίδει μια ειδοποίηση (εκτός από τις υπενθυμίσεις, τη δόση και την ακύρωση του TBR - αυτές δεν καταγράφονται).
-* " Αρχείο ενεργοποίηση εξομοίωσης TBR": Η αντλία Insight μπορεί να εκδώσει προσωρινές βασικές τιμές (TBRs) έως και 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.  
-    <font color="red">Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.</font>
-* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
+* " Αρχείο ενεργοποίηση εξομοίωσης TBR": Η αντλία Insight μπορεί να εκδώσει προσωρινές βασικές τιμές (TBRs) έως και 250%. Για να καταλάβετε αυτόν τον περιορισμό, η εξομοίωση TBR θα δώσει εντολή στην αντλία να παράσχει ένα εκτεταμένο bolus για την επιπλέον ινσουλίνη αν ζητήσετε TBR μεγαλύτερο από 250%.   
+    <font color="red">Σημείωση: Απλά χρησιμοποιήστε ένα εκτεταμένο bolus κάθε φορά ως πολλαπλές οι εκτεταμένες bolus ταυτόχρονα ενδέχεται να προκαλέσουν σφάλματα.</font>
+* "Διάρκεια αποκατάστασης": Αυτό καθορίζει το χρονικό διάστημα κατά το οποίο θα περιμένει το AndroidAPS πριν δοκιμάσει ξανά μετά από μια αποτυχημένη προσπάθεια σύνδεσης. Μπορείτε να επιλέξετε από 0 έως 20 δευτερόλεπτα. Εάν αντιμετωπίζετε προβλήματα σύνδεσης, επιλέξτε μεγαλύτερο χρόνο αναμονής.   
       
-    Example for min. recovery duration = 5 and max. recovery duration = 20   
+    Παράδειγμα για λεπτά. διάρκεια ανάκτησης = 5 και μέγιστο. διάρκεια ανάκτησης = 20   
       
-    no connection -> wait **5** sec.   
-    retry -> no connection -> wait **6** sec.   
-    retry -> no connection -> wait **7** sec.   
-    retry -> no connection -> wait **8** sec.   
+    καμία σύνδεση -> περιμένετε **5** δευτ.   
+    επαναλάβετε -> καμία σύνδεση -> περιμένετε **6** δευτ.   
+    επαναλάβετε -> καμία σύνδεση -> περιμένετε **7** δευτ.   
+    επαναλάβετε -> καμία σύνδεση -> περιμένετε **8** δευτ.   
     ...   
-    retry -> no connection -> wait **20** sec.   
-    retry -> no connection -> wait **20** sec.   
+    επαναλάβετε -> καμία σύνδεση -> περιμένετε **20** δευτ.   
+    επαναλάβετε -> καμία σύνδεση -> περιμένετε **20** δευτ.   
     ...
 
-* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
+* "Αποσύνδεση καθυστέρησης": Αυτό καθορίζει πόση ώρα (σε δευτερόλεπτα) το AndroidAPS θα περιμένει να αποσυνδεθεί από την αντλία μετά την ολοκλήρωση μιας λειτουργίας. Η προεπιλεγμένη τιμή είναι 5 δευτερόλεπτα.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+Για τις περιόδους κατά τις οποίες σταμάτησε η αντλία, το AAPS θα καταγράψει μια προσπάθεια. βασικός ρυθμός με 0%.
 
-In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+Στο AndroidAPS, η καρτέλα Accu-Chek Insight εμφανίζει την τρέχουσα κατάσταση της αντλίας και διαθέτει δύο κουμπιά:
 
-* "Refresh": Refreshes pump status
-* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
+* "Ανανέωση": Ανανεώνει την κατάσταση της αντλίας
+* "Ενεργοποίηση / απενεργοποίηση TBR μέσω ειδοποίησης": Μία τυποποιημένη αντλία Insight εκπέμπει συναγερμό όταν ολοκληρωθεί η διαδικασία TBR. Αυτό το κουμπί σας επιτρέπει να ενεργοποιήσετε ή να απενεργοποιήσετε αυτό το συναγερμό χωρίς την ανάγκη για λογισμικό διαμόρφωσης.
     
-    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    ![Στιγμιότυπο οθόνης της κατάστασης Insight](../images/Insight_Status2.png)
 
-## Settings in the pump
+## Ρυθμίσεις στην αντλία
 
-Configure alarms in the pump as follows:
+Ρυθμίστε τους συναγερμούς στην αντλία ως εξής:
 
-* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
-* Menu > Modes > Signal mode > Quiet
+* Μενού> Ρυθμίσεις> Ρυθμίσεις συσκευής> Ρυθμίσεις λειτουργιών> Ήχος> Σήμανση> Μενού ήχου> Ρυθμίσεις> Ρυθμίσεις συσκευής> Ρυθμίσεις λειτουργίας>Ήχος>Ένταση>0 (διαγράψτε όλες τις μπάρες)
+* Μενού> Λειτουργίες> Λειτουργία σήματος> Σίγαση
 
-This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Αυτό θα σιωπά όλους τους συναγερμούς από την αντλία, επιτρέποντας στο AndroidAPS να αποφασίσει αν ένας συναγερμός είναι σχετικός με σας. Αν το AndroidAPS δεν αναγνωρίζει συναγερμό, η ένταση του θα αυξηθεί (πρώτα ήχος, στη συνέχεια δόνηση).
 
-Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
+Οι αντλίες Insight με νεότερο υλικό και λογισμικό θα δονείται σύντομα κάθε φορά που παρέχεται ένα bolus (για παράδειγμα, όταν το AndroidAPS εκδίδει μια SMB ή TBR, παρέχει εκτεταμένο bolus). Η δόνηση δεν μπορεί να απενεργοποιηθεί. Οι παλαιότερες αντλίες δεν δονούνται σε αυτές τις περιπτώσεις.
 
-## Battery replacement
+## Αντικατάσταση μπαταρίας
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Η αντλία Insight διαθέτει μια μικρή εσωτερική μπαταρία για να διατηρεί βασικές λειτουργίες όπως το ρολόι που εκτελείται κατά την αλλαγή της αφαιρούμενης μπαταρίας. Αν η αλλαγή της μπαταρίας διαρκέσει πολύ, αυτή η εσωτερική μπαταρία μπορεί να εξαντληθεί, το ρολόι θα επαναρυθμιστεί και θα σας ζητηθεί να εισάγετε νέα ώρα και ημερομηνία μετά την εισαγωγή μιας νέας μπαταρίας. Εάν συμβεί αυτό, όλες οι καταχωρίσεις στο AndroidAPS πριν από την αλλαγή της μπαταρίας δεν θα συμπεριλαμβάνονται πλέον στους υπολογισμούς, καθώς ο σωστός χρόνος δεν μπορεί να προσδιοριστεί σωστά.
 
-## Insight specific errors
+## Ειδικά σφάλματα σχετικά με το Insight
 
-### Extended bolus
+### Εκτεταμένο bolus
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Απλά χρησιμοποιήστε ένα εκτεταμένο bolus κάθε φορά καθώς πολλαπλά εκτεταμένα bolusταυτόχρονα ενδέχεται να προκαλέσουν σφάλματα.
 
-### Time out
+### Τέλος χρόνου
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Μερικές φορές μπορεί να συμβεί η αντλία Insight να μην απαντά κατά τη διάρκεια ρύθμισης σύνδεσης. Στην περίπτωση αυτή, το AAPS θα εμφανίσει το ακόλουθο μήνυμα: "Τέλος χρονικού ορίου κατά τη διάρκεια της χειραψίας - επαναφορά του Bluetooth".
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Επισκόπηση Επαναφορά Bluetooth](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+Σε αυτήν την περίπτωση, απενεργοποιήστε το bluetooth στην αντλία ΚΑΙ το smartphone για περίπου 10 δευτερόλεπτα και, στη συνέχεια, ενεργοποιήστε τα ξανά.
 
 ## Crossing time zones with Insight pump
 
