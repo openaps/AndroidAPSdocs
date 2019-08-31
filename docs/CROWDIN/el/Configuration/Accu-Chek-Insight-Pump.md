@@ -114,6 +114,6 @@
 
 Σε αυτήν την περίπτωση, απενεργοποιήστε το bluetooth στην αντλία ΚΑΙ το smartphone για περίπου 10 δευτερόλεπτα και, στη συνέχεια, ενεργοποιήστε τα ξανά.
 
-## Crossing time zones with Insight pump
+## Διέλευση χρονικών ζωνών με αντλία Insight
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Για πληροφορίες σχετικά με τη μετακίνηση σε ζώνες ώρας, ανατρέξτε στην ενότητα [Ζώνη ώρας ταξιδεύοντας με αντλίες](../Usage/Timezone-traveling#insight).
