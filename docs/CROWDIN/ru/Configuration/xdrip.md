@@ -248,48 +248,48 @@
    
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
-## Troubleshooting Dexcom G6 and xDrip+
+## Устранение неполадок Dexcom G6 и xDrip+
 
-### Problem connecting transmitter
+### Проблемы сопряжения с трансмиттером
 
-* Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
-* Open system status in xDrip+ (hamburger menue on top left side of home screen).
-* Check if your transmitter is shown on first status page ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings.
-* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+* Трансмиттер должен быть виден в настройках bluetooth вашего смартфона.
+* Трансмиттер будет виден как Dexcom?? где ?? последние две цифры серийного № трансмиттера (например, DexcomHY).
+* Откройте состояние системы в xDrip+ (сэндвич-меню в левой верхней части главного экрана).
+* Проверьте, виден ли трансмиттер на первой странице состояния системы ('классическая страничка состояния системы').
+* Если нет: Удалите устройство из настроек bluetooth вашего смартфона.
+* Подождите около 5 мин. до тех пор, пока трансмиттер Dexcom не подключится автоматически.
 
-### Problem when starting new sensor
+### Проблемы при запуске нового сенсора
 
-* Native sensor is marked as "FAILED: Sensor Failed Start"
+* Запуск сенсора сопровождается сообщением: "ОШИБКА: Сенсор не удалось запустить"
 * Остановить сенсор
-* Restart your phone
-* Start sensor with code 0000 (four times zero)
-* Wait 15 minutes
+* Перезапустить телефон
+* Запустить сенсор введя код 0000 (четыре нуля)
+* Подождать 15 минут
 * Остановить сенсор
-* Start sensor with "real" code (printed on the adhesive protector)
+* Запустить датчик с "реальным" кодом (напечатан на клеящемся протекторе)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Проверьте журнал xDrip+ если xDrip+ начинает отсчет "Duration: 1 минута" (и так далее). Только в журналах xdrip+ вы можете обнаружить на раннем этапе, остановил ли xdrip+ сенсор. Более поздний статус статус не всегда отображается правильно внизу начального экрана.
 
-## xDrip+ & Freestyle Libre
+## xDrip+ & Libre Freestyle
 
-### Libre specific settings
+### Специфические настройки Libre
 
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+* Откройте настройки Bluetooth -> Сэндвич-меню (сверху слева на главном экране) -> Настройки -> прокрутить вниз -> Менее распространенные настройки -> Настройки Bluetooth
    
    ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Активируйте следующие параметры
    
-   * `Turn Bluetooth on` 
-   * `Use scanning`
-   * `Always discover services`
+   * `Включить Bluetooth` 
+   * `Использовать сканирование`
+   * `Всегда обнаруживать сервисы`
 
 * Все другие опции должны быть отключены
    
    ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Connect Libre Transmitter & start sensor
+### Подключите трансмиттер Libre и запустите сенсор
 
 ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
