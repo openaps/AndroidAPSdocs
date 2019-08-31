@@ -66,120 +66,120 @@ Klikněte na "Next" v dialogovém okně "Verify Settings".
 
 Emulátor Androidu (pro simulaci telefonu na vašem PC nebo Macu) se pro sestavení APK nepoužívá. Můžete kliknout na "Finish", abyste dokončili instalaci a odložili četbu dokumentace později na vyžádání.
 
-![Screenshot 6](../images/Installation_Screenshot_06.png)
+![Snímek 6](../images/Installation_Screenshot_06.png)
 
-Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
+Android Studio stahuje velké množství softwarových komponent, které používá. Můžete kliknout na tlačítko "Show Details" pro zobrazení detailů, které ale vůbec nejsou důležité.
 
-![Screenshot 7](../images/Installation_Screenshot_07.png)
+![Snímek 7](../images/Installation_Screenshot_07.png)
 
-![Screenshot 8](../images/Installation_Screenshot_08.png)
+![Snímek 8](../images/Installation_Screenshot_08.png)
 
-After the downloads are completed click the "Finish" button.
+Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
-![Screenshot 9](../images/Installation_Screenshot_09.png)
+![Snímek 9](../images/Installation_Screenshot_09.png)
 
 * Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
-## Download code and additional components
+## Stáhněte si kód a další komponenty
 
 * Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
-![Screenshot 10](../images/Installation_Screenshot_10.png)
+![Snímek 10](../images/Installation_Screenshot_10.png)
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
+Zadejte URL adresu do hlavního úložiště AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") a klikněte na „Clone“.
 
-![Screenshot 13](../images/Installation_Screenshot_13.png)
+![Snímek 13](../images/Installation_Screenshot_13.png)
 
-Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
+Android Studio začne s klonováním. Neklikejte na "Background", což by věci nyní pouze zkomplikovalo.
 
-![Screenshot 14](../images/Installation_Screenshot_14.png)
+![Snímek 14](../images/Installation_Screenshot_14.png)
 
-Finish the checkout from version control with opening the project by clicking "Yes".
+Dokončete načtení projektu od správce zdrojových kódů kliknutím na „Yes“, čímž projekt otevřete.
 
-![Screenshot 15](../images/Installation_Screenshot_15.png)
+![Snímek 15](../images/Installation_Screenshot_15.png)
 
-Use the standard "default gradle wrapper" and click "OK".
+Použijte standardní „default gradle wrapper“ a klikněte na „OK“.
 
-![Screenshot 16](../images/Installation_Screenshot_16.png)
+![Snímek 16](../images/Installation_Screenshot_16.png)
 
-Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
+Přečtěte si okno „Tip of Day“ a kliknutím na tlačítko „Close“ je zavřete.
 
-![Screenshot 17](../images/Installation_Screenshot_17.png)
+![Snímek 17](../images/Installation_Screenshot_17.png)
 
 * Excellent, you have your own copy of the source code and are ready to start the build.
 * Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
-Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
+Klikněte na „Install missing platform(s) and sync project“, protože Android Studio potřebuje doinstalovat chybějící platformu.
 
-![Screenshot 18](../images/Installation_Screenshot_18.png)
+![Snímek 18](../images/Installation_Screenshot_18.png)
 
-Accept the license agreement by selecting "Accept" and clicking "Next".
+Přijměte licenční ujednání zvolením „Accept“ a kliknutím na tlačítko „Next“.
 
-![Screenshot 19](../images/Installation_Screenshot_19.png)
+![Snímek 19](../images/Installation_Screenshot_19.png)
 
-As it is said in the dialog please wait until the download is finished.
+Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
 
-![Screenshot 20](../images/Installation_Screenshot_20.png)
+![Snímek 20](../images/Installation_Screenshot_20.png)
 
-Now it's finished. Please click "Finish".
+Nyní je dokončené. Prosím, klikněte na tlačítko „Finish“.
 
-![Screenshot 21](../images/Installation_Screenshot_21.png)
+![Snímek 21](../images/Installation_Screenshot_21.png)
 
-Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+Aaaach, další chyba. Ale Android Studio navrhuje podobné řešení. Klikněte na „Install Build Tools and sync project“, protože Android Studio potřebuje stáhnout chybějící pomůcky.
 
-![Screenshot 22](../images/Installation_Screenshot_22.png)
+![Snímek 22](../images/Installation_Screenshot_22.png)
 
-As it is said in the dialog please wait until the download is finished.
+Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
 
-![Screenshot 23](../images/Installation_Screenshot_23.png)
+![Snímek 23](../images/Installation_Screenshot_23.png)
 
-Now it's finished. Please click "Finish".
+Nyní je dokončené. Prosím, klikněte na tlačítko „Finish“.
 
-![Screenshot 24](../images/Installation_Screenshot_24.png)
+![Snímek 24](../images/Installation_Screenshot_24.png)
 
-And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
+A další chyba k řešení, protože Android Studio potřebuje zase stáhnout chybějící platformu. Klikněte na „Install missing platform(s) and sync project“.
 
-![Screenshot 25](../images/Installation_Screenshot_25.png)
+![Snímek 25](../images/Installation_Screenshot_25.png)
 
-As it is said in the dialog please wait until the download is finished.
+Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
 
-![Screenshot 26](../images/Installation_Screenshot_26.png)
+![Snímek 26](../images/Installation_Screenshot_26.png)
 
-Now it's finished. Please click "Finish".
+Nyní je dokončené. Prosím, klikněte na tlačítko „Finish“.
 
-![Screenshot 27](../images/Installation_Screenshot_27.png)
+![Snímek 27](../images/Installation_Screenshot_27.png)
 
-Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+Klikněte na „Install Build Tools and sync project“, protože Android Studio potřebuje stáhnout chybějící pomůcky.
 
-![Screenshot 28](../images/Installation_Screenshot_28.png)
+![Snímek 28](../images/Installation_Screenshot_28.png)
 
-As it is said in the dialog please wait until the download is finished.
+Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
 
-![Screenshot 29](../images/Installation_Screenshot_29.png)
+![Snímek 29](../images/Installation_Screenshot_29.png)
 
-Now it's finished. Please click "Finish".
+Nyní je dokončené. Prosím, klikněte na tlačítko „Finish“.
 
-![Screenshot 30](../images/Installation_Screenshot_30.png)
+![Snímek 30](../images/Installation_Screenshot_30.png)
 
-Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
+Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Možná je čas dát si trochu vody?
 
-![Screenshot 31](../images/Installation_Screenshot_31.png)
+![Snímek 31](../images/Installation_Screenshot_31.png)
 
-Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
+Android Studio doporučuje aktualizaci systému gradle. **Nikdy neaktualizujte gradle!** Mohlo by to vše zkomplikovat!
 
-Please click "Don't remind me again for this project".
+Klikněte prosím na „Znovu nepřipomínat pro tento projekt“.
 
-![Screenshot 32](../images/AS_NoGradleUpdate.png)
+![Snímek 32](../images/AS_NoGradleUpdate.png)
 
-The build is running again.
+Sestavení zase běží.
 
-![Screenshot 33](../images/Installation_Screenshot_33.png)
+![Snímek 33](../images/Installation_Screenshot_33.png)
 
-Yeah, the first build is successful but we are not finished.
+Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
 
-![Screenshot 34](../images/Installation_Screenshot_34.png)
+![Snímek 34](../images/Installation_Screenshot_34.png)
 
 ## Vytvořte podepsaný soubor APK
 
