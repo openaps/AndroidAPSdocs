@@ -93,16 +93,16 @@
 
 ### Ρυθμίσεις απορρόφησης
 
-Εάν χρησιμοποιείτε Oref1 με SMB, πρέπει να αλλάξετε το **min_5m_carbimpact** στο 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically it is a failsafe.
+Εάν χρησιμοποιείτε Oref1 με SMB, πρέπει να αλλάξετε το **min_5m_carbimpact** στο 8. Η τιμή χρησιμοποιείται μόνο κατά τη διάρκεια των κενών στις μετρήσεις CGM ή όταν η σωματική δραστηριότητα "καταναλώνει" όλη την αύξηση της γλυκόζης στο αίμα που διαφορετικά θα προκαλούσε το AAPS να διασπάσει COB. Σε στιγμές που η απορρόφηση των υδατανθράκων δεν μπορεί να επεξεργαστεί δυναμικά με βάση τις αντιδράσεις του αίματός σας, εισάγει μια προκαθορισμένη τιμή κατανάλωσης στους υδατάνθρακες σας. Ουσιαστικά είναι μια βαλβίδα ασφαλείας.
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Επιλέξτε τον αλγόριθμο APS που θέλετε για τις ρυθμίσεις των παρεμβάσεων. Μπορείτε να δείτε την ενεργή λεπτομέρεια του επιλεγμένου αλγορίθμου στην καρτέλα OpenAPS (OAPS).
 
-* OpenAPS MA (meal assist, state of the algorithm in 2016)
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2016)  
-    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
-    Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
+* OpenAPS MA (βοήθεια γεύματος, κατάσταση του αλγορίθμου το 2016)
+* OpenAPS AMA (προηγμένη βοήθεια γεύματος, κατάσταση του αλγορίθμου το 2016)  
+    Περισσότερες λεπτομέρειες για το OpenAPS AMA μπορείτε να βρείτε στο [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Με απλά λόγια το πλεονέκτημα είναι ότι αφού κάνετε ένα bolus γεύματος το σύστημα μπορεί ταχύτερα να δώσει υψηλό προσωρινό ρυθμό αν εχουν δωθεί αξιόπιστα οι υδατάνθρακες.   
+    Σημειώστε ότι πρέπει να είστε στον [Στόχος 7](../Usage/Objectives.md) για να χρησιμοποιήσετε το OpenAPS AMA.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
     Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
