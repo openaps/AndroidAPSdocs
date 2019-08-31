@@ -39,13 +39,13 @@ Inzulinová pumpa
 --------
 AndroidAPS **v současné době** funguje s 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (vyžaduje navíc: aplikaci Ruffy, LineageOS nebo Android 8.1 nainstalované v telefonu)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_  
 - `některé staré pumpy Medtronic <../Configuration/MedtronicPump.html>`_ od připravované verze 2.4 (vyžaduje navíc: hardware RileyLink/Gnarl, telefon s Androidem s čipovou sadou s BLE)
 
-**Other pumps** that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <../Getting-Started/Future-possible-Pump-Drivers.html>`_ page.
+**Ostatní pumpy**, které potenciálně mohou fungovat s AndroidAPS, jsou uvedeny na stránce `Pumpy potenciálně použitelné v budoucnu <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
 Pokud je nutné, abyste si pumpu zakoupili **na vlastní náklady**, seznam různých distributorů najdete v `této tabulce <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_. Prosím uveďte podrobnosti o svém distributorovi, není-li v tabulce uveden.
 
@@ -85,7 +85,7 @@ Další informace o konfiguraci Nightscoutu pro použití s AndroidAPS najdete `
 
 Soubor AAPS-.apk
 ---------------
-Základní součást systému. Před samotnou instalací aplikace si nejprve budete muset sestavit soubor apk (což je přípona souboru aplikace pro Android). Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
+Základní součást systému. Před samotnou instalací aplikace si nejprve budete muset sestavit soubor apk (což je přípona souboru aplikace pro Android). Pokyny najdete `zde <../Installing-AndroidAPS/Building-APK.html>`_.  
 
 Volitelné moduly
 ==================
@@ -93,7 +93,7 @@ Chytré hodinky
 ---------------
 Můžete si vybrat chytré hodinky s Android Wear 1.x a novějším. Většina uživatelů uzavřené smyčky používá Sony Smartwatch 3 (SWR50), protože je to jediný model, který dokáže číst data z Dexcomu G5, i když je telefon mimo dosah. Některé další hodinky lze také upravit tak, aby fungovaly jako samostatný přijímač (další informace viz `tato dokumentace <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_).
 
-Uživatelé průběžné doplňují `seznam otestovaných telefonů a hodinek <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
+Uživatelé průběžné doplňují `seznam otestovaných telefonů a hodinek <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Existují různé ciferníky, které můžete s AndroidAPS použít. Najdete je `zde <../Configuration/Watchfaces.html>`_.
 
 Pro zápis telefonu nebo hodinek, které ještě nejsou uvedeny v tabulce, vyplňte prosím `formulář <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
@@ -111,7 +111,7 @@ Pokud chcete příklad krok za krokem, můžete se podívat na ukázkovou instal
    :maxdepth: 1
    :glob:
    
-   Sample Setup <../Getting-Started/Sample-Setup.html>
+   Ukázková instalace <../Getting-Started/Sample-Setup.html>
  
   
 Co dělat při čekání na moduly
