@@ -63,7 +63,7 @@
 
 Автоматическое продление работы сенсоров Dexcom (`упреждающие перезапуски, preemtive restarts`) не рекомендуется, так как это может привести к скачкам значений ГК на 9 день после перезапуска.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ после упреждающего перезапуска](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Применение G6 немного сложнее, чем казалось раньше. Для правильного применения необходимо иметь в виду следующие моменты:
 
@@ -91,7 +91,7 @@
 
 * Введите серийный номер нового трансмиттера (на упаковке трансмиттера или на его обратной стороне). Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
    
-   ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
+   ![серийный № трансмиттера Dexcom](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Вставьте новый сенсор (только при замене)
 
@@ -107,18 +107,18 @@
 * Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
 * Удерживайте на главном экране xDrip+ иконку капли крови для деактивации кнопки `Мастер выбора источника ГК`.
    
-   ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
+   ![xDrip+ трансмиттер Dexcom 1](../images/xDrip_Dexcom_Transmitter01.png)
    
-   ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
+   ![xDrip+ трансмиттер Dexcom 2](../images/xDrip_Dexcom_Transmitter02.png)
    
-   ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
+   ![xDrip+ трансмиттер Dexcom 3](../images/xDrip_Dexcom_Transmitter03.png)
    
-   ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+   ![xDrip+ трансмиттер Dexcom 4](../images/xDrip_Dexcom_Transmitter04.png)
 
 ### Состояние батареи трансмиттера
 
 * Статус батареи может быть виден в окне состояния системы (сэндвич-меню вверху слева на главном экране)
-* Сделайте свайп влево, чтобы увидеть второй экран. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
+* Сделайте свайп влево, чтобы увидеть второй экран. ![xDrip+ первый трансмиттер 4](../images/xDrip_Dexcom_Battery.png)
 
 * Точные величины, когда наступает "смерть" трансмиттера из-за низкого заряда батареи, неизвестны. В сети встречалась такая информация после "смерти" трансмиттера: дней передачи: 151 напряжение A: 297 напряжение B: 260 Сопротивление: 2391
 
@@ -139,7 +139,7 @@
 * Посмотрите на статус системы (сэндвич-меню -> состояние системы) и проверьте результат
 * Если вы видите сообщение "Состояние телефона: жесткий сброс возможно не произошел", просто перезапустите датчик на втором экране состояния системы и это сообщение должно исчезнуть.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Жесткий сброс возможно не произошел](../images/xDrip_HardResetMaybeFailed.png)
 
 * В случае успеха срок работы трансмиттера будет сброшен до 0.
 
@@ -160,13 +160,13 @@
    
    -> Как удалить трансмиттер без остановки сенсора, см. видео <https://youtu.be/AAhBVsc6NZo>.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Остановка сенсора Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Остановка сенсора Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
 * Забыть устройство (в состоянии системы)
    
-   ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
+   ![xDrip+ забыть устройство](../images/xDrip_Dexcom_ForgetDevice.png)
 
 * Забудьте устройство в настройках BT смартфона (будет показано как Dexcom?? где ?? последние две цифры серийного № трансмиттера
 
@@ -187,15 +187,15 @@
 * Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
 * Удерживайте на главном экране xDrip+ иконку капли крови для деактивации кнопки `Мастер выбора источника ГК`.
    
-   ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
+   ![xDrip+ трансмиттер Dexcom 1](../images/xDrip_Dexcom_Transmitter01.png)
    
-   ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
+   ![xDrip+ трансмиттер Dexcom 2](../images/xDrip_Dexcom_Transmitter02.png)
    
-   ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
+   ![xDrip+ трансмиттер Dexcom 3](../images/xDrip_Dexcom_Transmitter03.png)
    
-   ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+   ![xDrip+ трансмиттер Dexcom 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### New Sensor
+### Новый сенсор
 
 * Выключите оригинальный ресивер Dexcom (если используете).
 * При необходимости остановите сенсор
@@ -206,15 +206,15 @@
    
    Подождите, пока это происходит - обычно в течение нескольких минут.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Остановка сенсора Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Остановка сенсора Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
 * Протрите контакты (обратная сторона трансмиттера) спиртом и просушите.
 
 * Если вы пользуетесь этой функцией, отключите `Restart Sensor` и `Preemptive restarts` (Сэндвич-меню -> Настройки -> Отладка G5/G6). Если вы пропустите этот шаг и оставите эти функции включенными, новый сенсор не будет запущен корректно.
    
-   ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
+   ![xDrip+ упреждающий перезапуск](../images/xDrip_Dexcom_Restart.png)
 
 * Запуск сенсора
    
@@ -230,23 +230,23 @@
 * При использовании G6 в "нативном режиме" калибровка не требуется. xDrip+ будет показывать данные автоматически после двухчасового прогрева.
 * Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
    
-   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
+   ![xDrip+ Запуск сенсора Dexcom 1](../images/xDrip_Dexcom_SensorStart01.png)
    
-   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
+   ![xDrip+ Запуск сенсора Dexcom 2](../images/xDrip_Dexcom_SensorStart02.png)
 
 ### Получение кода сенсора
 
 * В свежих версиях программы (начиная с 18 мая 2019) код сенсора отображается в состоянии системы (сэндвич-меню вверху слева на главном экране).
 * Сделайте свайп влево, чтобы увидеть второй экран.
    
-   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+   ![xDrip+ Получение кода сенсора Dexcom 2](../images/xDrip_Dexcom_SensorCode2.png)
 
 * Код сенсора Dexcom можно также найти в логах xDrip+.
 
 * Нажмите 3 точки меню (сверху справа на главном экране)
 * Выберите `Просмотр журнала событий` и выполните поиск по слову "code"
    
-   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Получение кода сенсора Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
 ## Устранение неполадок Dexcom G6 и xDrip+
 
@@ -277,7 +277,7 @@
 
 * Откройте настройки Bluetooth -> Сэндвич-меню (сверху слева на главном экране) -> Настройки -> прокрутить вниз -> Менее распространенные настройки -> Настройки Bluetooth
    
-   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+   ![xDrip+ настройки Libre Bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Активируйте следующие параметры
    
@@ -287,12 +287,12 @@
 
 * Все другие опции должны быть отключены
    
-   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+   ![xDrip+ настройки Libre Bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ запуск трансмиттера Libre & Сенсора 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ запуск трансмиттера Libre & Сенсора 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ запуск трансмиттера Libre & Сенсора 3](../images/xDrip_Libre_Transmitter03.png)
