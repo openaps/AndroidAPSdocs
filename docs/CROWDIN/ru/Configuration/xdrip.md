@@ -125,14 +125,14 @@
 ### Увеличение срока работы трансмиттера
 
 * Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G.
-* To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Для предотвращения трудностей при запуске сенсоров настоятельно рекомендуется продлить срок действия трансмиттера до 100-го дня первого использования.
+* При продлении срока действия трансмиттера работа сенсора будет остановлена. Поэтому проводить эту манипуляцию следует перед заменой сенсора или быть готовыми к тому, что состоится двухчасовая фаза его прогрева.
+* Переключитесь в `инженерный режим`: 
+   * нажмите на пиктограмму шприца на главном экране xDrip+ справа
+   * затем нажмите на значок микрофона в нижнем правом углу
+   * В открывшемся текстовом окне впечатайте "включить инженерный режим" 
+   * нажмите "Готово"
+   * Если включен Google Speak, можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
 * Go to the G5 debug settings and check `OB1 collector`.
 * Use the voice command: “hard reset transmitter”
 * The voice command will be executed with the next data receipt of the transmitter
