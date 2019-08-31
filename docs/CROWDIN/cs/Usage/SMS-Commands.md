@@ -1,47 +1,47 @@
 # SMS příkazy
 
-**Note**: SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
+**Poznámka**: v AndroidAPS verze 2.3 jsou SMS příkazy kvůli bugu zakázány. Ve verzi 2.4 ale fungují.
 
-## Safety First
+## Bezpečnost především
 
 - AndroidAPS vám umožňuje kontrolovat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN.
 - Systém AndroidAPS vás rovněž bude informovat textovou zprávou o tom, jestli váš vzdálený příkaz, např. bolus nebo změna profilu, byl proveden. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
 
-## How it works
+## Jak to funguje
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+Ve vašem Android telefonu přejděte do systémového nastavení, pak Aplikace > AndroidAPS > Oprávnění, a povolte SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+V AndroidAPS jděte do Nastavení > SMS komunikátor a zadejte telefonní čísla, ze kterých umožníte SMS příkazy (oddělené středníkem, žádné mezery nebo jiné znaky kdekoliv - tj. +4412345678;+4412345679) a také povolte 'Povolit posílání příkazů prostřednictvím SMS'.
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Z některého z povolených čísel odešlete SMS zprávu na telefon s běžícím AndroidAPS a do zprávy zadejte některý z níže **tučně** zapsaných příkazů. Telefon vám odpoví, aby potvrdil úspěšné provedení daného příkazu nebo vrátí požadované stavové informace.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Tip**: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
 ## BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Glykemie: 5.6, 4min zpět, Rozdíl: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U), COB: 3g
 
 ## LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Smyčka byla zakázána
 
 ## LOOP START/ENABLE
 
-- Loop has been enabled
+- Smyčka byla povolena
 
 ## LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Smyčka je zakázána
+- Smyčka je povolena
+- Pozastavena (10 minut)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Smyčka pozastavena na 20 minut
 
 ## LOOP RESUME
 
-- Loop resumed
+- Smyčka obnovena
 
 ## TREATMENTS REFRESH
 
