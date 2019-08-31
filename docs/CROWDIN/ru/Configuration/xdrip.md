@@ -84,20 +84,20 @@
 Если серийный номер трансмиттера Dexcom G6 начинается с 8G... пользуйтесь [ночной сборкой от 2019/07/28 или позже](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
-   * This guides you through the initial set up.
-   * you will need your transmitter serial number if this is the first time you've used it.
+* Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
+* Пользуйтесь Мастером выбора источника ГК, который обеспечивает настройки по умолчанию, включая OB1 & и нативный режим 
+   * Мастер позволит провести начальную настройку.
+   * Вам понадобится серийный номер трансмиттера, если вы пользуетесь им впервые.
 
-* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter). Be careful not to confuse 0 (zero) and O (capital letter o).
+* Введите серийный номер нового трансмиттера (на упаковке трансмиттера или на его обратной стороне). Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
    
    ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
 
-* Insert new sensor (only if replacing)
+* Вставьте новый сенсор (только при замене)
 
-* Put transmitter into sensor
-* **Wait 15 minutes** before starting sensor so xDrip can initialize communication with the new transmitter
-* Start sensor (only if replacing)
+* Поместите трансмиттер в платформу сенсора
+* **Подождите 15 минут** перед запуском сенсора, чтобы xDrip мог инициализировать связь с новым трансмиттером
+* Нажмите старт сенсора (только при смене сенсора)
    
    -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
 
@@ -171,14 +171,14 @@
 * Forget device in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
 
 * Remove transmitter (and sensor if replacing sensor)
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
-   * This guides you through the initial set up.
+* Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
+* Пользуйтесь Мастером выбора источника ГК, который обеспечивает настройки по умолчанию, включая OB1 & и нативный режим 
+   * Мастер позволит провести начальную настройку.
    * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Be careful not to confuse 0 (zero) and O (capital letter o).
+* Put in serial number of new transmitter. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
 * Insert new sensor (only if replacing).
-* Put transmitter into sensor
-* Start sensor (only if replacing)
+* Поместите трансмиттер в платформу сенсора
+* Нажмите старт сенсора (только при смене сенсора)
    
    **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
 
