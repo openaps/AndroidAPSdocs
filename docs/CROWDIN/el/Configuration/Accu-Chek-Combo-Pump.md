@@ -75,36 +75,30 @@
   4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
   5. Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
   6. Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
-  7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** * Step 5 and 6 have to be in a short timing.
-  8.     Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
-        bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
+  7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Πατήστε *ΣΎΝΔΕΣΗ!** * Τα βήματα 5 και 6 πρέπει να γίνουν σε σύντομο χρονικό διάστημα.
+  8.     Τώρα η αντλία θα πρέπει να εμφανίσει το όνομα BT του τηλεφώνου για να επιλέξετε για σύζευξη. Εδώ είναι σημαντικό να περιμένετε τουλάχιστον 5s
+        πριν πατήσετε το κουμπί επιλογής στην αντλία. Διαφορετικά, η αντλία δεν θα στείλει το αίτημα σύζευξης στο τηλέφωνο.
         
-        * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
-          between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
-          without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings.
-        * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
-          compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
-          possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
-          (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+        * Εάν η Αντλία Combo έχει ρυθμιστεί σε 5 δευτερόλεπτα διάρκεια φωτισμού οθόνης, μπορείτε να την δοκιμάσετε με 40 δευτερόλεπτα (αρχική ρύθμιση). Από εμπειρία, το διάστημα μεταξύ της αντλία να εμφανιστεί στο τηλέφωνο και να μπορείς να το επιλέξεις είναι 5 με 10 δευτερόλεπτα. Σε πολλές άλλες περιπτώσεις, το χρονικό περιθώριο περνάει, χωρίς επιτυχημένη σύζευξη. Αργότερα θα πρέπει να το επαναφέρετε στα 5 δευτερόλεπτα, για να ικανοποιήσετε τις ρυθμίσεις του AAPS Combo.
+        * Εάν η αντλία δεν εμφανίζει το τηλέφωνο ως συσκευή σύζευξης καθόλου, το Bluetooth του τηλεφώνου σας πιθανώς δεν είναι συμβατό με την αντλία. Σιγουρευτείτε οτι τρέχετε ατο κινητό σας τις αναβαθμίσεις **LineageOS ≥14.1** ή **Android ≥ 8.1 (Oreo)**. Εάν είναι δυνατόν δοκιμάστε ένα άλλο τηλέφωνο. Μπορείτε να βρείτε μια λίστα με ήδη χρησιμοποιούμενα κινητά με επιτυχία παρακάτω:(https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
         
   
-  9.     At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you 
-        should be ready to go.
+  9.     Στη συνέχεια η αντλία πρέπει να δείχνει ένα δεκαψήφιο κωδικό. Και το ruffy να εμφανίζει στη οθόνη επιλογή να το εισάγετε. Εισάγετε το κωδικό στο ruffy και θα είστε έτοιμοι να ξεκινήσετε.
         
   
-  10. Reboot the phone.
-  11. Now you can restart AAPS loop.
+  10. Κάντε επανεκκίνησή το κινητό σας.
+  11. Τώρα μπορείτε να ξανά ξεκινήσετε το AAPS κύκλωμα.
   
-  ## Usage
+  ## Χρήσιμες συμβουλές
   
-  - Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-  - Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS is based upon.
-  - Read the wiki to learn about and understand AndroidAPS http://wiki.AndroidAPS.org
-  - This integration uses the same functionality which the meter provides that comes with the Combo. The meter allows to mirror the pump screen and forwards button presses to the pump. The connection to the pump and this forwarding is what the ruffy app does. A `scripter` components reads the screen and automates entering boluses, TBRs etc and making sure inputs are processed correctly. AAPS then interacts with the scripter to apply loop commands and to administer boluses. This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for), and setting a TBR or giving a bolus causes the pump to vibrate.
-  - The integration of the Combo with AndroidAPS is designed with the assumption that all inputs are made via AndroidAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take up to 20 min before AndroidAPS becomes aware of such a bolus. Reading boluses delivered directly on the pump is a safety feature and not meant to be regularly used (the loop requires knowledge of carbs consumed, which can't be entered on the pump, which is another reason why all inputs should be done in AndroidAPS). 
-  - Don't set or cancel a TBR on the pump. The loop assumes control of TBR and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-  - The pump's first basal rate profile is read on application start and is updated by AAPS. The basal rate should not be manually changed on the pump, but will be detected and corrected as a safety measure (don't rely on safety measures by default, this is meant to detect an unintended change on the pump).
-  - It's recommended to enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit. Also, with keylock enabled, accidentally pressing a key will NOT interrupt active communication between AAPS and pump.
+  - Λάβετε υπόψη ότι αυτό δεν είναι ένα προϊόν, esp. στην αρχή ο χρήστης πρέπει να παρακολουθεί και να κατανοεί το σύστημα, τους περιορισμούς του και τον τρόπο με τον οποίο μπορεί να αποτύχει. Συνιστάται έντονα να μην χρησιμοποιείται αυτό το σύστημα όταν ο χρήστης δεν είναι σε θέση να καταλάβει πλήρως το σύστημα.
+  - Διαβάστε την τεκμηρίωση του OpenAPS εδώ: https://openaps.org για να κατανοήσετε τον αλγόριθμο του κυκλώματος AndroidAPS και που βασίζεται.
+  - Διαβάστε το wiki για να μάθετε και να καταλάβετε το AndroidAPS εδώ: http://wiki.AndroidAPS.org
+  - Αυτή η ενοποίηση χρησιμοποιεί την ίδια λειτουργικότητα που παρέχει ο μετρητής που συνοδεύει το Combo. Ο μετρητής επιτρέπει να αντικατοπτρίζει την οθόνη της αντλίας και να προωθεί τα πλήκτρα πίεσης στην αντλία. Η σύνδεση της αντλίας και αυτή η προώθηση είναι αυτό που κάνει η εφαρμογή ruffy. Ένα μέρος της εφαρμογής διαβάζει τα στοιχεία της οθόνης και αυτόματα εισάγει bolus, TBRs κτλ. και επιβεβαιώνει ότι αυτά τα στοιχεία είναι σωστά. Το AAPS στη συνέχεια αλληλεπιδρά με το κατάλληλο στοιχείο της εφαρμογής για να εφαρμόσει το κύκλωμα και να εισάγει bolus. Αυτή η λειτουργία έχει ορισμένους περιορισμούς: είναι σχετικά αργή (αλλά αρκετά γρήγορη για αυτό που χρησιμοποιείται), και ο καθορισμός ενός TBR ή η χορήγηση bolus προκαλεί την δόνηση της αντλίας.
+  - Η ενσωμάτωση του Combo με το AndroidAPS έχει σχεδιαστεί με την παραδοχή ότι όλες οι εισαγωγές δεδομένων είναι μέσω του AndroidAPS. Τα bolus που εισέρχονται απευθείας στην αντλία θα ανιχνευθούν από το AAPS, αλλά μπορεί να χρειαστούν έως 20 λεπτά πριν γίνει αντιληπτό από το AndroidAPS ένα τέτοιο bolus. Τα bolus που έγιναν μέσω της αντλία είναι ένα χαρακτηριστικό ασφαλείας και δεν προορίζεται για τακτική χρήση (το κύκλωμα απαιτεί γνώση τις ποσότητας των υδατανθράκων που δεν μπορούν να εισαχθούν στην αντλία, που είναι ένας άλλος λόγος για τον οποίο πρέπει να γίνουν όλες οι εισαγωγές δεδομένων στο AndroidAPS). 
+  - Μην ρυθμίσετε ή ακυρώσετε ένα TBR στην αντλία. Το κύκλωμα αναλαμβάνει τον έλεγχο του TBR και δεν μπορεί να λειτουργήσει αξιόπιστα αλλιώς, δεδομένου ότι δεν είναι δυνατόν να προσδιοριστεί ο χρόνος εκκίνησης ενός TBR που ορίστηκε από τον χρήστη στην αντλία λογω της παραπάνω χρονικής καθυστέρησης.
+  - Ο πρώτος βασικός ρυθμός της αντλίας διαβάζεται κατά την εκκίνηση της εφαρμογής και ενημερώνεται από το AAPS. Ο βασικός ρυθμός δεν πρέπει να μεταβάλλεται μέσω της αντλίας, γιατί θα ανιχνεύεται και θα διορθώνεται ως μέτρο ασφάλειας (μην βασίζεστε εξ ολοκλήρου στα μέτρα ασφαλείας, αυτό το μέτρο ασφάλειας υπάρχει για να ανιχνεύεται μια ακούσια αλλαγή στην αντλία).
+  - Συνιστάται να ενεργοποιήσετε το κλείδωμα πλήκτρων στην αντλία για να αποτρέψετε τη παροχή bolus από την αντλία. γιατί όταν η αντλία χρησιμοποιούνταν πριν και η χρήση του χαρακτηριστικού "γρήγορο bolus" ήταν συνήθεια. Επίσης, με ενεργοποιημένη τη λειτουργία κλειδώματος, πατώντας τυχαία ένα πλήκτρο, ΔΕΝ διακόπτεται η ενεργή επικοινωνία μεταξύ AAPS και αντλίας.
   - When a BOLUS/TBR CANCELLED alert starts on the pump during bolusing or setting a TBR, this is caused by a disconnect between pump and phone, which happens from time to time. AAPS will try to reconnect and confirm the alert and then retry the last action (boluses are NOT retried for safety reasons). Therefore, such an alarm can be ignored as AAPS will confirm it automatically, usually within 30s (cancelling it is not problem, but will lead to the currently active action to have to wait till the pump's display turns off before it can reconnect to the pump). If the pump's alarm continues, automatic corfirmation failed, in which case the user needs to confirm the alarm manually.
   - When a low cartridge or low battery alarm is raised during a bolus, they are confirmed and shown as a notification in AAPS. If they occur while no connection is open to the pump, going to the Combo tab and hitting the Refresh button will take over those alerts by confirming them and show a notification in AAPS.
   - When AAPS fails to confirm a TBR CANCELLED alert, or one is raised for a different reason, hitting Refresh in the Combo tab establishes a connection, confirms the alert and shows a notification for it in AAPS. This can safely be done, since those alerts are benign - an appropriate TBR will be set again during the next loop iteration.
