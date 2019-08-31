@@ -40,5 +40,5 @@ Primární cíle AndroidAPS
 Jak začít
 ===============
 Veškerý tento obsah je samozřejmě velmi důležitý, ale může být na začátku docela matoucí.
-A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
+Dobrou představu vám poskytne část `Přehled modulů <./Module/module.html>`_ a `Cíle <./Usage/Objectives.html>`_. Můžete se také podívat na ukázkovou instalaci s pumpou Dana, senzorem Dexcom a hodinkami Sony Smartwatch <../Getting-Started/Sample-Setup.md>`_.
  
