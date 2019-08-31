@@ -248,7 +248,7 @@
    
    ![xDrip+ Получение кода сенсора Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
-## Troubleshooting Dexcom G5/G6 and xDrip+
+## Устранение неполадок Dexcom G6 и xDrip+
 
 ### Проблемы сопряжения с трансмиттером
 
