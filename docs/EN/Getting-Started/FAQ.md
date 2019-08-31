@@ -120,7 +120,9 @@ If after meal has digested and IOB has returned to zero, your BG remains higher 
 
 # APS algorithm
 ## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+
 ![AMA 3h](../images/Screenshot_AMA3h.png) 
+
 In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to connected to the DIA. Now, it means, 'in whích time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore. 
 
 ## Profile
@@ -182,7 +184,7 @@ You can remove the pump while taking a shower or bath. For this short period of 
 ### Work
 Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a profile switch for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a time shift of your profile when standing up much earlier or later than regular. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
-## Leasure activities
+## Leisure activities
 
 ### Sports
 
@@ -213,6 +215,8 @@ You are not receiving calls now, nor are you connected to the internet. But the 
 
 #### How to deal with timezone changes?
 With DanaR and DanaR Korean you don't have to do anything. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
+
+## Medical topics
 
 ### Hospitalization
 If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
