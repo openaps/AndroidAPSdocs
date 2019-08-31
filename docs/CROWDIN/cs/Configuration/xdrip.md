@@ -248,7 +248,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
    
    ![xDrip+ Získat kód senzoru Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
-## Odstraňování potíží s Dexcom G6 a xDrip+
+## Troubleshooting Dexcom G5/G6 and xDrip+
 
 ### Problém s připojením k vysílači
 
