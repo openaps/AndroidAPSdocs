@@ -127,7 +127,7 @@ You can check the AAPS version on your phone by clicking the three dots menu on 
 
 ![AAPS version installed](../images/Update_VersionCheck.png)
 
-# Troubleshooting
+# Poradce při potížích
 
 ## Kotlin compiler warning
 
