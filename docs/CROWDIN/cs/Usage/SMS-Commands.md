@@ -53,36 +53,36 @@ Z některého z povolených čísel odešlete SMS zprávu na telefon s běžíc�
 
 ## PUMP
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Poslední spoj: před 1 min Doč. bazál: 110% na 2/30 min IOB: 0.5U Zásobník: 34U Baterie: 100%
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Pro zastaveni docasneho bazalu odpovezte SMS s kodem EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Pro spusteni bazalu 0.3U/h odpovezte SMS s kodem Swe
 
 ## BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Pro spusteni bazalu 0.3U/h na 20 min odpovezte SMS s kodem Swe
 
 ## BASAL 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Pro spusteni bazalu 30% na 30 min odpovezte SMS s kodem Swe
 
 ## BASAL 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Pro spusteni bazalu 30% na 50 min odpovezte SMS s kódem Swe
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Pro potvrzeni bolusu 1.2U odpovezte SMS s kodem Rrt
+- Vzdálený bolus není povolen (*pokud ještě neuplynulo 15 minut od posledního bolus příkazu, anebo pokud nejsou vzdálené příkazy povoleny*)
 
 ## EXTENDED STOP/CANCEL
 
-- To stop extended bolus reply with code EmF
+- Pro zastaveni prodlouzeneho bolusu odpovezte SMS ve tvaru EmF
 
 ## EXTENDED 2 120
 
