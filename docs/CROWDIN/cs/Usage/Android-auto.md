@@ -1,19 +1,19 @@
 # Android Auto
 
-How it looks like:
+Jak to vypadá:
 
 ![Snímek 1](../images/Android-auto1.png)
 
-How to use it:
+Jak jej používat:
 
-* Install Android Auto
-* In the Android Auto app, tap the Hamburger menu (three horizontal lines)
-* Tap About.
-* Tap the About Android Auto header 10 times, until a toast appears that says "Developer mode enabled".
-* Now you can access developer mode by selecting the overflow menu dots on the top right of the handheld screen and go into developpers settings.
-* Select unknown sources (scroll down all the way to the bottom of the list).
-* Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
+* Nainstalujte Android Auto
+* V aplikaci Android Auto klepněte na Hamburger menu (tři horizontální čárky)
+* Klepněte na položku O aplikaci.
+* Pak desetkrát klepněte na záhlaví "O aplikaci Android Auto", dokud se nezobrazí zpráva "Developer mode enabled" (Vývojářský režim povolen).
+* Nyní můžete vstoupit do vývojářského režimu výběrem nabídky overflow vpravo nahoře, pak přejděte do možností vývojáře.
+* Vyberte neznámé zdroje (sjeďte zcela dolů až na konec seznamu).
+* Nyní můžete opustit režim vývojáře, pokud chcete. Chcete-li jej opustit, klepněte na tři tečky vpravo nahoře.
 
-Troubleshooting:
+Poradce při potížích:
 
-* If you don't see the notification, check if you allowed AAPS to show notifications in Android and if Android Auto has access rights to notifications.
+* Jestliže nevidíte oznámení, zkontrolujte, zda jste povolili AAPS zobrazovat oznámení v systému Androidu a zda aplikace Android Auto má přístupová práva k oznámením.
