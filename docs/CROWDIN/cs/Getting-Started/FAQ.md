@@ -86,11 +86,11 @@ The amount of insulin in a given hour time block to maintain BG at a stable leve
 
 Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-If BG is dropping, basal rate is too high. Pokud glykémie stoupá, bazální dávka je příliš nízká.
+If BG is dropping, basal rate is too high. And vice-versa.
 
 ### Impact
 
-Too high basal rate can lead to low BGs. Pokud glykémie stoupá, bazální dávka je příliš nízká.
+Too high basal rate can lead to low BGs. And vice-versa.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
