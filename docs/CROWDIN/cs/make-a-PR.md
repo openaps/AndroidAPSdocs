@@ -27,31 +27,31 @@ Například: chystáme se upravit AndroidAPSdocs. To není nutné dělat v linux
 
 Gratulujeme, právě jste podali první žádost o změnu!
 
-PS: Váš fork a branch bude nadále na Vašem vlastním osobním účtu GitHub. Po oznámení, že Váš PR byl sloučený, můžete odstranit branch, pokud do něj nechcete dělat další změny (V kroku 8 bude odkaz na odstranění branche, jakmile bude PR uzavřen nebo sloučen). Pro budoucí úpravy, pokud budete následovat tento postup, budou změny vždy začínat aktualizovanou verzí repozitáře AndroidAPSdocs. Pokud se rozhodnete použít jinou metodu pro vytvoření PR žádosti (např. editace začínající z vaší kopie repozitáře), budete muset zajistit, aby Váš repozitář byl aktuální, a to nejprve provedením "Compare" a sloučením všech aktualizací, které se udály od doby, kdy jste naposledy aktualizovali svůj repozitář. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: Váš fork a branch bude nadále na Vašem vlastním osobním účtu GitHub. Po oznámení, že Váš PR byl sloučený, můžete odstranit branch, pokud do něj nechcete dělat další změny (V kroku 8 bude odkaz na odstranění branche, jakmile bude PR uzavřen nebo sloučen). Pro budoucí úpravy, pokud budete následovat tento postup, budou změny vždy začínat aktualizovanou verzí repozitáře AndroidAPSdocs. Pokud se rozhodnete použít jinou metodu pro vytvoření PR žádosti (např. editace začínající z vaší kopie repozitáře), budete muset zajistit, aby Váš repozitář byl aktuální, a to nejprve provedením "Compare" a sloučením všech aktualizací, které se udály od doby, kdy jste naposledy aktualizovali svůj repozitář. Protože lidé mají sklon aktualizovat svůj repozitář, doporučujeme použít pro PR proces popsaný výše, dokud se neseznámíte s detaily fungování "Compare".
 
-### Advanced tips for adding internal links
+### Rozšířené tipy pro přidávání vnitřních odkazů
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages as well.
+Pokud chcete nastavit vnitřní odkaz v dokumentaci AndroidAPS, použijte pouze **relativní odkazy**. Jedině tak bude link fungovat i v ostatních jazycích.
 
-In files with **.md** ending:
+V souborech končících na **.md**:
 
-* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ukončení cílového souboru musí být .md nebo .rst (ne .html)
+* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ukončení cílového souboru musí být .md nebo .rst (ne .html)
 
-To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
+Chcete-li nastavit odkaz na **ukotvení** (např. na titulek) musíte vynechat příponu souboru
 
-* `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+* `[text](../Usage/Test#anchor)` místo `[text](../Usage/Test.md#anchor)`
 
-In files with **.rst** ending:
+V souborech končících na **.rst**:
 
-* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html. Except you are in a toctree. Then you have to write it like this: `Text <../Usage/Test.md>` with .md or .rst (not .html).
-* `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
+* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Koncovka cílového souboru musí být .html. Kromě toho, když jste v toctree. Pak ho musíte psát takto: `Text <../Usage/Test.md>` s .md nebo rst (not .html).
+* `Text <./Usage/Test.md>` nastaví odkaz z místa, kde jste, do podadresáře /Usage.
 
-### Advanced tips for adding multiple images to documentation
+### Rozšířené tipy pro přidávání více obrázků do dokumentace
 
-If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
+Pokud plánujete provést mnoho editací včetně přidání obrázků, které by pomohly vylepšit části dokumentace (děkujeme Vám!), můžete použít následující postup:
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png".
+* Postupně uložte screenshoty, přejmenujte je na popisný název - ale nepoužívejte mezery, protože to GitHub mate. Naopak používejte podtržítka. Jako např. Example_batch_images_upload.png místo "Example batch images upload.png".
 
 * You can upload images in batches easily by:
     
