@@ -35,8 +35,8 @@ Wenn du einen internen Link in die AndroidAPS Dokumentation einfügen willst, be
 
 Dateien mit der Endung **.md**:
 
-* `[text](../Usage/Test.md)` legt einen Hyperlink fest, der auf ein Verzeichnis oberhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
-* `[text](/Usage/Test.md)` legt einen Hyperlink fest, der aus dem aktuellen Verzeichnis auf das Unterverzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
+* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
+* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
 
 Um den Link auf einen **Anker** (d.h. eine Überschrift) zu setzen, muss die Dateierweiterung weggelassen werden.
 
@@ -44,7 +44,7 @@ Um den Link auf einen **Anker** (d.h. eine Überschrift) zu setzen, muss die Dat
 
 Dateien mit der Endung **.rst**:
 
-* `` `Text <../Usage/Test.hmtl>`_ `` legt einen Hyperlink fest, der auf ein Verzeichnis unterhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Endung der Zieldatei muss .html sein. Außer Du bist in einem Toctree. Dann musst Du wie folgt schreiben: `Text <../Usage/Test.md>` mit .md oder .rst (nicht .html).
+* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Die Endung der Zieldatei muss .html sein. Außer Du bist in einem Toctree. Dann musst Du wie folgt schreiben: `Text <../Usage/Test.md>` mit .md oder .rst (nicht .html).
 * `Text <./Usage/Test.md>` setzt einen Link in das Verzeichnis /Usage.
 
 ### Tipps für das Hinzufügen mehrerer Bilder zur Dokumentation für Fortgeschrittene
