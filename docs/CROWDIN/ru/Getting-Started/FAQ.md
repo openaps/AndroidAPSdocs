@@ -82,17 +82,17 @@ AndroidAPS создан для управления помпой и подачи
 
 ### Описание & тестирование
 
-The amount of insulin in a given hour time block to maintain BG at a stable level.
+Количество инсулина в заданном часовом блоке для поддержания ГК на стабильном уровне.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
+Проверьте настройки базы, приостановив цикл и пропуская приемы пищи, чтобы контролировать изменения ГК в течение 5 часов после еды. Повторите несколько раз.
 
-If BG is dropping, basal rate is too high. И наоборот.
+Если ГК падает, то уровень базы слишком велик. И наоборот.
 
 ### Эффект
 
-Too high basal rate can lead to low BGs. И наоборот.
+Повышенная скорость подачи базала может привести к низкому уровню ГК. И наоборот.
 
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+AAPS по умолчанию строит свой алгоритм отталкиваясь от скорости базала. Если базал слишком высокий, то «нулевая временная скорость» будет определяться при большем отрицательном значении активного инсулина IOB, чем нужно. Это приведет к тому, что АААПС будет давать больше коррекций, чем следует, чтобы привести активный инсулин IOB к нулю.
 
 So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
 
