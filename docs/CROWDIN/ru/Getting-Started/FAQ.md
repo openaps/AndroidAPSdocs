@@ -72,13 +72,13 @@ AndroidAPS создан для управления помпой и подачи
 
 ### Эффект
 
-Too short DIA can lead to low BGs. And vice-versa.
+Слишком малое значение продолжительности действия инсулина DIA может привести к низкой ГК. И наоборот.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
+Если DIA слишком короткий, AAPS слишком рано решит, что предыдущий болюс израсходован, и, при все еще высокой ГК, добавит инсулин. (Фактически, алгоритм не выжидает, а продолжает добавлять инсулин, предсказывая, что произойдет). Это, по сути, создает «затоваривание инсулина», о котором AAPS не знает.
 
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+Пример слишком короткого DIA - это высокая ГК, за которой следует избыточная коррекция и в результате - низкая ГК.
 
-## Basal rate schedule (U/hr)
+## График базала (ед/ч)
 
 ### Описание & тестирование
 
@@ -86,11 +86,11 @@ The amount of insulin in a given hour time block to maintain BG at a stable leve
 
 Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-If BG is dropping, basal rate is too high. And vice-versa.
+If BG is dropping, basal rate is too high. И наоборот.
 
 ### Эффект
 
-Too high basal rate can lead to low BGs. And vice-versa.
+Too high basal rate can lead to low BGs. И наоборот.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
