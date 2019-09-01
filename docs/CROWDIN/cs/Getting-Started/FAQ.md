@@ -108,7 +108,7 @@ Assuming correct basal, you can test this by suspending loop, checking IOB is ze
 
 Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
 
-Be careful as this is quite often set too low. Příliš nízký znamená, že vám 1 jednotka sníží glykémii rychleji, než jste očekávali.
+Be careful as this is quite often set too low. Příliš nízko znamená, že vám 1 jednotka inzulinu sníží glykémii více, než jste očekávali.
 
 ### Impact
 
