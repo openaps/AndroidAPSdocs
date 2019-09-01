@@ -1,29 +1,29 @@
-# Making your first PR (pull request)
+# Udělejte svůj první PR (pull request - žádost o změnu)
 
-**This description is just for editing the English documentation. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
+**Tento popis je pouze pro editaci anglické dokumentace. Pokud chcete přeložit wiki do jiných jazyků (děkujeme), použijte prosím [crowdin](https://wikitranslations.androidaps.org).**
 
-For any questions, feedback or new ideas you can contact the documentation team via email (wiki@androidaps.org). Doing a PR isn't difficult, but we can help you editing the documentation.
+Máte-li jakékoliv dotazy, můžete kontaktovat dokumentační tým prostřednictvím e-mailu (wiki@androidaps.org). Vytvoření PR není obtížné, ale můžeme vám pomoci editovat dokumentaci.
 
-At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub. It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. There is always a review process before changes are merged into the "formal" AndroidAPS documentation repository. You can't mess up the originals through any accidents in the PR process. The general process is:
+V určitém okamžiku bude doporučeno, abyste udělali PR. PR je zkratka pro pull request a je to způsob, jak přidat nebo editovat informace uložené v GitHubu. Ve skutečnosti není příliš těžké udělat takový krok a je to skvělý způsob, jak přispět. Tato dokumentace je zde proto, že lidé, jako jste vy, udělali svůj PR. Nebojte se dělat chybu nebo nějak editovat špatné dokumenty. Před sloučením změn do "formálního" repositáře dokumentace AndroidAPS je zde vždy proces přezkumu. Nějakou chybou nemůžete originál poškodit. Obecný proces je:
 
-* Make edits and improvements to code or documentation by editing the existing content.
-* Double-check that your edits look good to you.
-* Make a few notes of what's changed so people may understand the edits.
-* Create a pull request, which asks the administrators to use your changes.
-* They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+* Edituje a vylepšuje kód nebo dokumentaci editací stávajícího obsahu.
+* Zkontrolujte, že vaše úpravy vypadají dobře.
+* Udělejte několik poznámek o tom, co je změněno, aby lidé mohli porozumět editacím.
+* Vytvořte PR, která žádá správce, aby se tyto změny použily.
+* Ten provede přezkum a buď (1) sloučí vaše změny, (2) přidá komentář k vašim změnám, nebo (3) založí nový dokument s vašimi změnami.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Poznámka: Pokud se učíte spíše vizuálně, existuje YouTube video [zde](https://youtu.be/4b6tsL0_kzg) ukazující, jak PR funguje.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This does NOT need to be done in the linux environment on your rig. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+Například: chystáme se upravit AndroidAPSdocs. To není nutné dělat v linuxovém prostředí. To lze udělat na jakémkoli Windows PC, Mac atd. (libovolném počítači s připojením k internetu).
 
-1. Go to https://github.com/openaps/AndroidAPSdocs and hit Fork in the upper right to make your own copy of the repository. ![Fork repo](./images/PR0.png)
-2. Go to http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html or similar and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub.  
-    ![edit doc](./images/PR1.png) Or you can click on the "Edit in Github" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited. ![RTD io](./images/PR2.png)
-3. one or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file. ![Edit branch](./images/PR3.png)
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the both. ![preview mode](./images/PR5.png)
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR. ![commit comments](./images/PR4.png)
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request". ![create pull request](./images/PR6.png)
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have Github notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AndroidAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs. ![PR tracking](./images/PR7.png)
+1. Jděte na https://github.com/openaps/AndroidAPSdocs a kliněte na Fork v horním rohu, abyste si vytvořili vlastní kopii repozitáře. ![Fork repo](./images/PR0.png)
+2. Jděte na http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html nebo podobné a přejděte na stránku, kterou chcete editovat. Klikněte na černou oblast dole na stránce se zeleným slovem "v: latest" nebo podobné. V okně, které vyskočí, stiskněte slovo "edit" pro editaci GutHubu.   
+    ![edit doc](./images/PR1.png) Nebo klikněte na "Edit in Github" v pravém horním rohu a pak na ikonu tužky, která se objeví v pravém horním rohu editované stránky. ![RTD io](./images/PR2.png)
+3. Libovolnou možností v kroku 2 vytvoříte nový branch ve svém repozitáři, kde budou uloženy vaše změny. Udělejte své úpravy do souboru. ![Edit branch](./images/PR3.png)
+4. Pracujete v záložce "<>Edit file". Vyberte záložku "Preview changes" pro nový náhled, abyste zjistili, že vše, co jste změnili, je to, co jste chtěli. Pokud vidíte, že je potřeba další zlepšení, vraťte se zpět na záložku editace a pokračujte. Uvědomte si, že používáme různé rozšíření souborů: .rst (ReStructuredText) a .md (Markdown) a syntax se mezi oběma trochu liší. ![preview mode](./images/PR5.png)
+5. Když jste dokončili své úpravy, přesuňte se do dolní části stránky. V obdélníku dole napište komentář do textového pole "Add an optional extended description...". Výchozí název má jméno souboru. Zkuste přidat větu s vysvětlením **důvodu** změny. Pomůže to při kontrole, o jakou změnu se pokoušíte. ![commit comments](./images/PR4.png)
+6. Klikněte na zelené tlačítko "Propose file changes" nebo "Commit changes". Na stránce se pak objeví tlačítko "Create Pull Request" a znovu na další stránce klepněte na tlačítko "Create Pull Request". ![create pull request](./images/PR6.png)
+7. Tím dokončíte žádost PR. GitHub přiděluje PR číslo, které se nachází za názvem a hashovou značkou. Vraťte se na tuto stránku, abyste zkontrolovali zpětnou vazbu (nebo pokud došla notifikace e-mailem). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AndroidAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs. ![PR tracking](./images/PR7.png)
 
 Congrats, you made your first contribution!
 
