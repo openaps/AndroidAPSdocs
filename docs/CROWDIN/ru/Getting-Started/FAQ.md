@@ -53,24 +53,24 @@ AndroidAPS создан для управления помпой и подачи
 * Резервную копию используемых вами приложений: последний APK программного обеспечения AAPS, пароль на хранилище, файл настроек AAPS, файл настроек xDrip и т. д.. Целесообразно использовать для этого облако(DropBox, Yandex. Disk и пр.)...
 * Батарейки для помпы
 
-## How to safely attach the CGM/FGM?
+## Как безопасно закрепить трансмиттер ГК/сенсор ГК?
 
 Его можно закрепить при помощи пластыря: В продаже можно найти предварительно прорезанные пластыри для распространенных систем мониторинга (выполните поиск Google или ebay). Некоторые пользователи ИПЖ применяют более дешевые стандартные кинезезиотейпы или лейкопластыри.
 
 Можно его закрепить: В продаже есть готовые эластичные повязки, которыми можно фиксировать сенсор (поищите через Google или ebay).
 
-# AndroidAPS settings
+# Настройки системы AndroidAPS
 
-The following list aims to help you optimise settings. Начните сверху и двигайтесь вниз. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Можно использовать автонастройку [Autotune](https://autotuneweb.azurewebsites.net/) которая даст общее направление, но принимайте рекомендации не вслепую и не во всех ситуациях. Обратите внимание, что настройки дополняют друг друга - вы можете иметь "неправильные" настройки, которые в некоторых обстоятельствах работают хорошо (например, если слишком высокий базал установлен одновременно со слишком высоким углеводным коэффициентом CR), но в других не работают. Это означает, что нужно учитывать все настройки и убедиться, что они совместно работают в различных обстоятельствах.
+Этот список поможет оптимизировать настройки. Начните сверху и двигайтесь вниз. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Можно использовать автонастройку [Autotune](https://autotuneweb.azurewebsites.net/) которая даст общее направление, но принимайте рекомендации не вслепую и не во всех ситуациях. Обратите внимание, что настройки дополняют друг друга - вы можете иметь "неправильные" настройки, которые в некоторых обстоятельствах работают хорошо (например, если слишком высокий базал установлен одновременно со слишком высоким углеводным коэффициентом CR), но в других не работают. Это означает, что нужно учитывать все настройки и убедиться, что они совместно работают в различных обстоятельствах.
 
-## Duration of insulin activity (DIA)
+## Продолжительность активности инсулина DIA
 
-### Description & testing
+### Описание & тестирование
 
-The length of time that insulin decays to zero.  
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+Время, за которое инсулин снижается до нуля.  
+Многие устанавливают его слишком непродолжительным. Правильная настройка для большинства - не менее 5 часов, иногда 6 или 7.
 
-### Impact
+### Эффект
 
 Too short DIA can lead to low BGs. And vice-versa.
 
@@ -80,7 +80,7 @@ Example of a too-short DIA is a high BG followed by AAPS over-correcting and giv
 
 ## Basal rate schedule (U/hr)
 
-### Description & testing
+### Описание & тестирование
 
 The amount of insulin in a given hour time block to maintain BG at a stable level.
 
@@ -88,7 +88,7 @@ Test your basal rates by suspending loop, fasting, waiting for say 5 hours after
 
 If BG is dropping, basal rate is too high. And vice-versa.
 
-### Impact
+### Эффект
 
 Too high basal rate can lead to low BGs. And vice-versa.
 
@@ -100,7 +100,7 @@ Conversely a basal rate too low can lead to high BGs, and a failure to bring lev
 
 ## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
 
-### Description & testing
+### Описание & тестирование
 
 The drop in BG expected from dosing 1U of insulin.
 
@@ -110,7 +110,7 @@ Then take an estimated amount of insulin (as per current 1/ISF) to get to your t
 
 Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
 
-### Impact
+### Эффект
 
 **Lower ISF** = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.
 
@@ -122,13 +122,13 @@ Conversely, an ISF set too high can result in under-corrections, meaning your BG
 
 ## Carbohydrate to insulin ratio (CR) (g/U)
 
-### Description & testing
+### Описание & тестирование
 
 The grams of carbohydrate for each unit of insulin.
 
 Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR. Best is to eat food your normally eat at that time of day and count its carbs precicely.
 
-### Impact
+### Эффект
 
 **Lower CR** = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
 
