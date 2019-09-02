@@ -14,7 +14,7 @@ The autopilot receives signals from various sensors, a computer evaluates them t
 
 **Closed Loop System**
 
-The same applies to a closed loop system. It combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, correction and BE factors. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+The same applies to a closed loop system. It combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
 
 Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
 
