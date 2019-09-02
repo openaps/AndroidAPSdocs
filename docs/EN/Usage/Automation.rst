@@ -31,7 +31,7 @@ You can choose between several conditions. Here are some things explained, but m
 * Time vs. recurring time: With time you select just a single time event; with a recurring time, you select something that happens once a week.
 * location: in the config builder (Automation), you can select which location service you want to use:
 
-  * Use passive location: AAPS only takes locations if other apps are requesting it.
+  * Use passive location: AAPS only takes locations if other apps are requesting it
   * Use network location: Location of your Wifi
   * Use GPS location
   
