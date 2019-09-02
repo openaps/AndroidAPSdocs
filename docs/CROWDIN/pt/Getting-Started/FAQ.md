@@ -112,9 +112,16 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 ### Impact
 
-**Lower ISF** = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.
+**Lower ISF** (i.e. 40 instead of 50) = more aggressive / stroger leading to a bigger drop in BGs for each unit of insulin. If too low, this can lead to low BGs.
 
-**Higher ISF** = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.
+**Higher ISF** (i.e. 45 instead of 35) = less agressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
+
+**Example:**
+
+* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
+* So you want correction of 90 mg/dl (= 190 - 110).
+* ISF = 30 -> 90 / 30 = 3 units of insulin
+* ISF = 45 -> 90 / 45 = 2 units of insulin
 
 An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
@@ -188,7 +195,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 * reduce the length of time the backlight stays on (within pump settings menu)
 * select notification settings to a beep rather than vibrate (within pump settings menu)
 * only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. Isto consome bateria. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
 * clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 * for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
 * see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)

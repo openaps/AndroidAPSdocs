@@ -1,55 +1,55 @@
-# How to translate AndroidAPS and the documentation
+# Jak překládat AndroidAPS a dokumentaci
 
 * Jděte na <https://translations.androidaps.org> nebo <https://wikitranslations.androidaps.org> a přihlaste se Vaším Github účtem
 
-* Send a join request to the Wiki team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
+* Odešlete žádost o připojení k Wiki týmu. Klikněte na vlajku požadovaného jazyka a poté na tlačítko "Join" vpravo nahoře na následující stránce. Specifikujte prosím svůj jazyk, uveďte nějaké informace o sobě a svých zkušenostech s AAPS a zda chcete být překladatel nebo korektor (pouze osoby se zkušeností s překlady + pokročilí uživatelé AndroidAPS).
 
-* When we approve you, click the flag ![When we approve you, click the flag](./images/translation_flags2019.png)
+* Jakmile vás schválíme, klikněte na vlajku ![Jakmile vás schválíme, klikněte na vlajku](./images/translation_flags2019.png)
 
-## Translate strings for AndroidAPS app
+## Překlad stringů pro aplikaci AndroidAPS
 
-* Click strings.xml
+* Klikněte na strings.xml
     
-    ![Click strings.xml](./images/translations-click-strings.png)
+    ![Klikněte na strings.xml](./images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion
+* Překládejte věty v levé části přidáváním nového přeloženého textu nebo použijte navrhovaný překlad a upravte ho
     
-    ![Translation app](./images/translations-translate.png)
+    ![Překlad aplikace](./images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode
+* Korektoři se musí přepnout do režimu Proofreading
     
-    ![Proofreading mode app](./images/translations-proofreading-mode.png)
+    ![Režim korektur překladů aplikace](./images/translations-proofreading-mode.png)
     
-    and approve translated texts
+    a schválit přeložené texty
     
-    ![approve text](./images/translations-proofreading.png)
+    ![schválit text](./images/translations-proofreading.png)
 
 Když korektor schválí překlad, tak bude přidaný do příští verze AndroidAPS. Na úvod by také bylo dobré projít existující překlady, které ještě nebyly schválené, a ověřit v nich chyby nebo je schválit, pokud byly správné.
 
-## Translate wiki pages
+## Překlad stránek Wiki
 
-* Click the name of the wiki page you want to translate
+* Klikněte na název stránky wiki, kterou chcete překládat
     
-    ![Click wiki page](./images/translation_WikiPage.png)
+    ![Klikněte na stránku wiki](./images/translation_WikiPage.png)
 
-* Translate sentences by sentence
+* Překládejte větu za větou
     
-    1 Untranslated text is shown with red background on the left side.
+    1 Nepřeložené texty jsou zobrazeny vlevo a mají červené podbarvení.
     
-    2 You can copy a proposal to the edit field by clicking on the proposal.
+    2 Kliknutím na návrh překladu můžete tento návrh zkopírovat a dále jej upravit.
     
-    3 Edit the proposal or write the translation yourself.
+    3 Upravte návrh překladu nebo vepište svůj překlad.
     
-    4 Click safe
+    4 Klikněte na tlačítko Save.
     
-    ![Translation wiki](./images/translation_WikiTranslate.png)
+    ![Překlad wiki](./images/translation_WikiTranslate.png)
 
-* Proofreaders have to switch to Proofreading mode
+* Korektoři se musí přepnout do režimu Proofreading
     
-    ![Proffreading mode wiki](./images/translation_WikiProofreading.png)
+    ![Režim korektur překladů wiki](./images/translation_WikiProofreading.png)
     
-    and approve translated texts
+    a schválit přeložené texty
     
-    ![approve text](./images/translations-proofreading.png)
+    ![schválit text](./images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.
+Když korektor schválí překlad, bude přidaný do příští verze wiki. Pro urychlení procesu můžete informovat wiki tým o nových překladech.

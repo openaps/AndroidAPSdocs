@@ -4,7 +4,7 @@
 
 # Общее
 
-## Can I just download the AndroidAPS installation file?
+## Можно ли скачать установочный файл AndroidAPS?
 
 Нет. Для AndroidAPS не предоставляется загружаемый файл apk. Его надо [скомпилировать](../Installing-AndroidAPS/Building-APK.md) самостоятельно. Причина вот в чем:
 
@@ -14,13 +14,13 @@ AndroidAPS создан для управления помпой и подачи
 
 Именно поэтому распространение в виде готовых приложений (apk) недоступно.
 
-## How to begin?
+## С чего начать?
 
 Прежде всего, нужно **подготовить компоненты, которые работают с ипж**:
 
 * Совместимую с AAPS(ИПЖ) инсулиновую помпу 
 * Смартфон с Андроидом (Apple iOS не поддерживается AndroidAPS - вместо этого изучите вариант [iOS Loop](https://loopkit.github.io/loopdocs/)) 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
+* [Система непрерывного мониторинга глюкозы крови (ГК)](../Configuration/BG-Source.rst). 
 
 Во-вторых, вам нужно **настроить ваше оборудование**. Смотрите [пример установки с пошаговым руководством](Sample-Setup.md).
 
@@ -28,7 +28,7 @@ AndroidAPS создан для управления помпой и подачи
 
 В-четвертых, вам нужно изучить и **понять исходный дизайн OpenAPS для проверки параметров лечения**. Фундаментальный принцип замкнутой петли: скорость подачи вашего базала и соотношение инсулин/углеводы должны быть точно выверены. Все рекомендации, выдаваемые ИПЖ предполагают, что ваши базовые потребности в инсулине удовлетворены и любые пики и провалы характеристики ГК - следствие других факторов, требующих дополнительных одноразовых настроек: упражнения, стресс и пр. В настройках ИПЖ введены ограничения безопасности (см. максимально допустимый базальный уровень в [Архитектуре OpenAPS](https://openaps.org/reference-design/)), которые означают, что вам не придется тратить допустимые дозировки на исправление неправильной базы. Например, если перед едой вы часто ставите временную цель на пониженный уровень ГК, вам, скорее всего, требуется настройка базы. Вы можете использовать [автонастройку](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) для обработки массива ваших данных и определения необходимости коррекции базальной скорости, фактора чувствительности к инсулину ISF и углеводного коэффициента CR. Либо протестировать и определить скорость базала [старым способом](http://integrateddiabetes.com/basal-testing/).
 
-## What practicalities of looping do I have?
+## Важные практические аспекты
 
 * Если вы считаете необходимым исключить несанкционированное изменение настроек ИПЖ, вы можете закрыть паролем настройку, выбрав в меню "Пароль для настроек" и установив пароль на этот раздел. В следующий раз, когда вы войдете в это меню, система запросит пароль и не позволит поменять их без корректного ввода. Если в дальнейшем вы хотите удалить пароль, зайдите в это меню снова и удалите текст.
 
@@ -45,7 +45,7 @@ AndroidAPS создан для управления помпой и подачи
   * [Как ограничить пики после питания](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
   * [Гормоны и autosens](http://seemycgm.com/2017/06/06/hormones-2/) (см.мой мониторинг)
 
-## What emergency equipment is recommended to take with me?
+## Какое запасное оборудование рекомендуется брать с собой?
 
 Прежде всего, вам необходимо иметь стандартный набор для больного диабетом 1го типа. При работе с AndroidAPS настоятельно рекомендуется также иметь:
 
@@ -53,54 +53,54 @@ AndroidAPS создан для управления помпой и подачи
 * Резервную копию используемых вами приложений: последний APK программного обеспечения AAPS, пароль на хранилище, файл настроек AAPS, файл настроек xDrip и т. д.. Целесообразно использовать для этого облако(DropBox, Yandex. Disk и пр.)...
 * Батарейки для помпы
 
-## How to safely attach the CGM/FGM?
+## Как безопасно закрепить трансмиттер ГК/сенсор ГК?
 
 Его можно закрепить при помощи пластыря: В продаже можно найти предварительно прорезанные пластыри для распространенных систем мониторинга (выполните поиск Google или ebay). Некоторые пользователи ИПЖ применяют более дешевые стандартные кинезезиотейпы или лейкопластыри.
 
 Можно его закрепить: В продаже есть готовые эластичные повязки, которыми можно фиксировать сенсор (поищите через Google или ebay).
 
-# AndroidAPS settings
+# Настройки системы AndroidAPS
 
-The following list aims to help you optimise settings. Начните сверху и двигайтесь вниз. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Можно использовать автонастройку [Autotune](https://autotuneweb.azurewebsites.net/) которая даст общее направление, но принимайте рекомендации не вслепую и не во всех ситуациях. Обратите внимание, что настройки дополняют друг друга - вы можете иметь "неправильные" настройки, которые в некоторых обстоятельствах работают хорошо (например, если слишком высокий базал установлен одновременно со слишком высоким углеводным коэффициентом CR), но в других не работают. Это означает, что нужно учитывать все настройки и убедиться, что они совместно работают в различных обстоятельствах.
+Этот список поможет оптимизировать настройки. Начните сверху и двигайтесь вниз. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Можно использовать автонастройку [Autotune](https://autotuneweb.azurewebsites.net/) которая даст общее направление, но принимайте рекомендации не вслепую и не во всех ситуациях. Обратите внимание, что настройки дополняют друг друга - вы можете иметь "неправильные" настройки, которые в некоторых обстоятельствах работают хорошо (например, если слишком высокий базал установлен одновременно со слишком высоким углеводным коэффициентом CR), но в других не работают. Это означает, что нужно учитывать все настройки и убедиться, что они совместно работают в различных обстоятельствах.
 
-## Duration of insulin activity (DIA)
+## Продолжительность активности инсулина DIA
 
-### Description & testing
+### Описание & тестирование
 
-The length of time that insulin decays to zero.  
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+Время, за которое инсулин снижается до нуля.  
+Многие устанавливают его слишком непродолжительным. Правильная настройка для большинства - не менее 5 часов, иногда 6 или 7.
 
-### Impact
+### Эффект
 
-Too short DIA can lead to low BGs. And vice-versa.
+Слишком малое значение продолжительности действия инсулина DIA может привести к низкой ГК. И наоборот.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
+Если DIA слишком короткий, AAPS слишком рано решит, что предыдущий болюс израсходован, и, при все еще высокой ГК, добавит инсулин. (Фактически, алгоритм не выжидает, а продолжает добавлять инсулин, предсказывая, что произойдет). Это, по сути, создает «затоваривание инсулина», о котором AAPS не знает.
 
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+Пример слишком короткого DIA - это высокая ГК, за которой следует избыточная коррекция и в результате - низкая ГК.
 
-## Basal rate schedule (U/hr)
+## График базала (ед/ч)
 
-### Description & testing
+### Описание & тестирование
 
-The amount of insulin in a given hour time block to maintain BG at a stable level.
+Количество инсулина в заданном часовом блоке для поддержания ГК на стабильном уровне.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
+Проверьте настройки базы, приостановив цикл и пропуская приемы пищи, чтобы контролировать изменения ГК в течение 5 часов после еды. Повторите несколько раз.
 
-If BG is dropping, basal rate is too high. And vice-versa.
+Если ГК падает, то уровень базы слишком велик. И наоборот.
 
-### Impact
+### Эффект
 
-Too high basal rate can lead to low BGs. And vice-versa.
+Повышенная скорость подачи базала может привести к низкому уровню ГК. И наоборот.
 
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+AAPS по умолчанию строит свой алгоритм отталкиваясь от скорости базала. Если базал слишком высокий, то «нулевая временная скорость» будет определяться при большем отрицательном значении активного инсулина IOB, чем нужно. Это приведет к тому, что АААПС будет давать больше коррекций, чем следует, чтобы привести активный инсулин IOB к нулю.
 
-So a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
+Таким образом, слишком высокая скорость подачи базала создаст низкую ГК как на стандартной базе, так и несколько часов спустя, так как AAPS еще корректирует к цели.
 
-Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+И наоборот, слишком низкий уровень может привести к высоким ГК, и невозможности снизить уровень до целевого.
 
 ## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
 
-### Description & testing
+### Описание & тестирование
 
 The drop in BG expected from dosing 1U of insulin.
 
@@ -110,11 +110,18 @@ Then take an estimated amount of insulin (as per current 1/ISF) to get to your t
 
 Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
 
-### Impact
+### Эффект
 
-**Lower ISF** = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.
+**Lower ISF** (i.e. 40 instead of 50) = more aggressive / stroger leading to a bigger drop in BGs for each unit of insulin. If too low, this can lead to low BGs.
 
-**Higher ISF** = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.
+**Higher ISF** (i.e. 45 instead of 35) = less agressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
+
+**Example:**
+
+* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
+* So you want correction of 90 mg/dl (= 190 - 110).
+* ISF = 30 -> 90 / 30 = 3 units of insulin
+* ISF = 45 -> 90 / 45 = 2 units of insulin
 
 An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
@@ -122,13 +129,13 @@ Conversely, an ISF set too high can result in under-corrections, meaning your BG
 
 ## Carbohydrate to insulin ratio (CR) (g/U)
 
-### Description & testing
+### Описание & тестирование
 
 The grams of carbohydrate for each unit of insulin.
 
 Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current 1/CR. Best is to eat food your normally eat at that time of day and count its carbs precicely.
 
-### Impact
+### Эффект
 
 **Lower CR** = less food per unit, ie you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
 
@@ -184,22 +191,22 @@ There are innumerable possibilities to place the pump. It does not matter if you
 
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site. Tricks to increase battery life include:
 
-* уменьшить длительность работы экрана LCD (в меню настроек помпы)
-* уменьшить длительность работы подсветки (в меню настроек помпы)
-* выберите уведомления в виде звукового сигнала а не вибрации (в меню настроек помпы)
-* Нажимайте кнопки помпы только для перезагрузки; для просмотра журналов, уровня батареи и объема резервуара помпы пользуйтесь смартфоном с AndroidAPS.
-* На некоторых телефонах AndroidAPS периодически закрывается для экономии энергии или высвобождения оперативной памяти. Когда AndroidAPS вновь инициализируется, то каждом старте устанавливает соединение Bluetooth с помпой и перечитывает текущую базальную скорость и журнал болюсов. Это расходует батарею. Чтобы увидеть, происходит ли это, перейдите в Настройки > NSClient и включите 'Отправлять запуски приложения в NS'. Nightscout будет получать данные о событии при каждом перезапуске AndroidAPS, что облегчит отслеживание проблемы. Чтобы уменьшить расход батареи при таких событиях, в настройках батареи телефона включите AndroidAPS в список разрешенных приложений и тогда монитор расхода энергии перестанет закрывать AAPS.
-* протирайте контакты батареи спиртовыми салфетками, чтобы на ней не оставались следы заводской смазки.
-* в помпах DanaR/RS процедура запуска батареи отправляет импульс высокого напряжения для устранения заводской пленки (которая предотвращает потерю энергии при хранении), но это не всегда срабатывает на 100%. Либо удалите и заново вставьте батарею 2-3 раза до тех пор, пока на экране помпы заряд батареи не покажет 100%, либо замкните контакты батареи на долю секунды при помощи ключа батареи, чтобы удалить этот налет.
-* см. также еще советы для [конкретных типов батареи](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life) для помпы Combo
+* reduce the length of time the LCD stays on (within pump settings menu)
+* reduce the length of time the backlight stays on (within pump settings menu)
+* select notification settings to a beep rather than vibrate (within pump settings menu)
+* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
+* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+* for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
+* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
 ### Changing reservoirs and canulas
 
 The change of cartridge can not be done via AndroidAPS, but must be carried out as before directly via the pump.
 
-* Произведите долгое нажатие на кнопку "Открытый цикл"/"Замкнутый цикл" на вкладке "Домашний экран" AndroidAAPS и выберите "Приостановка цикла на 1ч'
-* Отключите помпу и замените резервуар в соответствии с инструкцией помпы.
-* После переподключения помпы запустите цикл долгим нажатием на 'Приостановлено (X мин.)'.
+* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAAPS and select 'Suspend Loop for 1h'
+* Now disconnect the pump, and change the reservoir as per pump instructions.
+* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
 The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
 
@@ -227,9 +234,9 @@ You can remove the pump to be 'free', but you should tell it to AAPS so that the
 
 Drinking alcohol is risky in closed loop mode as the algorythm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
 
-* Деактивировать режим замкнутого цикла и разбираться с диабетом вручную или
-* устанавливать высокие временные цели и отключать незапланированный прием пищи UAM, чтобы избежать увеличения активного инсулина IOB из-за непредусмотренной еды или
-* переключить профиль на величину, заметно менее 100% 
+* Deactivating closed loop mode and treating the diabetes manually or
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
+* do a profile switch to noticeably less than 100% 
 
 When drinking alcohol you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 

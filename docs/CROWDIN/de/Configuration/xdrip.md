@@ -2,7 +2,7 @@
 
 Wenn Du es nicht bereits eingerichtet hast, lade [xDrip+](https://github.com/NightscoutFoundation/xDrip) herunter.
 
-G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Sereinnummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
+G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -39,7 +39,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### xDrip+ Version abhängig von der G6 Transmitter Seriennummer
 
-G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Sereinnummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
+G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -61,6 +61,8 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### Preemptive restarts werden nicht empfohlen
 
+**Falls die Seriennummer Deines Dexcom G6 transmitters mit 8G beginnt können reemptive restarts nicht genutzt werden und ggf. sogar den Sensor unbenutztbar machen!**
+
 Die automatische Verlängerung von Dexcom G6 Sensoren (`preemtive restarts`) werden nicht empfohlen, da dies zu Sprüngen in den BZ-Werten nach dem eustart am 9. Tag führen kann.
 
 ![xDrip+ Sprünge nach Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
@@ -79,7 +81,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 **Für den zweiten und alle weiteren Transmitter siehe [Transmitterlaufzeit verlängern](../Configuration/xdrip#extend-transmitter-life) weiter unten.**
 
-G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Sereinnummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
+G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -145,7 +147,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### Transmitter ersetzen
 
-G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Sereinnummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
+G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -256,7 +258,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Transmitter wird als Dexcom?? angezeigt, dabei steht ?? für die letzten beiden Zeichen der Seriennummer Deines Transmitters (z.B. DexcomHY).
 * Öffne den Systemstatus in xDrip+ (Hamburger Menü oben links auf dem Startbildschirm).
 * Überprüfe, ob der Transmitter auf der ersten Statusseite angezeigt wird ('classic status page').
-* Wenn nicht: Lösche den Transmitter aus den Bluetooth-Einstellungen Deines Smartphones.
+* Wenn nicht: Lösche den Transmitter aus den Bluetooth-Einstellungen Deines Smartphones und starte den Datensammler neu.
 * Warte etwa 5 Minuten bis der Transmitter wieder automatisch verbunden wird.
 
 ### Probleme beim Starten eines neuen Sensors

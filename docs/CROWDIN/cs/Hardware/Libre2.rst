@@ -1,23 +1,23 @@
 Freestyle Libre 2
 *********************
 
-Freestyle Libre 2 sensors can provide BG values to AndroidAPS every 5 minutes. As they send them directly via bluetooth to your phone, you won't need to buy a bluetooth adapter like MiaoMiao anymore. Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`_ for more details.
+Senzor Freestyle Libre 2 dokáže poskytovat systému AndroidAPS glykémie každých 5 minut. Vzhledem k tomu, že je odesílá prostřednictvím bluetooth přímo do telefonu, není již potřeba žádný bluetooth adaptér, jako např. MiaoMiao. Ani v současné době není možné při používání Libre 2 jako zdroje glykémie povolit v rámci algoritmu SMB funkce ‘Vždy povolit SMB’ a ‘Povolit SMB po jídle’. Hodnoty glykémií z Libre 2 nejsou dostatečné vyhlazené, aby bylo použití těchto funkcí bezpečné. Další podrobnosti viz `Vyhlazování glykémií <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`_.
 
-Step 1: Build your own patched Librelink-App
+Krok 1: Sestavte si svou vlastní upravenou aplikaci Librelink
 ==============
-* Build your own patched Librelink app following `these instructions <https://github.com/user987654321resu/Libre2-patched-App>`_.
-* Install on your phone and start a new sensor with your patched app.
+* Postupujte podle `těchto pokynů <https://github.com/user987654321resu/Libre2-patched-App>`_ a sestavte si vlastní upravenou aplikaci Librelink.
+* Nainstalujte ji do telefonu a spusťte nový senzor s upravenou aplikací.
 
-Step 2: Install and configure xDrip+ app
+Step 2: Nainstalujte a nastavte aplikaci xDrip+
 ==============
-* If not already set up then download xdrip app and install one of the latest nightly builts from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
+* Pokud jste tak dosud neučinili, stáhněte si některou z nejnovějších verzí aplikace xdrip (tzv. nightly built) z `tohoto umístění <https://github.com/NightscoutFoundation/xDrip/releases>`_.
 * V xDrip vyberte Nastavení -> Komunikace mezi aplikacemi - > Lokální odesílání dat a vyberte zapnout.
 * V xDrip vyberte Nastavení -> Komunikace mezi aplikacemi - > Přijímat ošetření a vyberte vypnout.
 * Chcete-li, aby bylo možné přes AndroidAPS kalibrovat senzor, jděte v xDripu do Nastavení > Komunikace mezi aplikacemi > Accept Calibrations a vyberte zapnout.  Můžete také zkontrolovat v xDripu nastavení v částí Nastavení > Méně častá nastavení > Rozšířené kalibrace.
 * Na kartě Konfigurace (v AndroidAPS) vyberte xDrip.
-* For settings in xDrip+ with screenshots see `xDrip+ settings page <../Configuration/xdrip.md>`__. There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
+* Nastavení xDrip+ podle snímků obrazovky najdete na stránce `Nastavení xDrip+ <../Configuration/xdrip.md>`__. Je zde část pro základní nastavení xDrip+ a pro nastavení xDrip_ s Freestyle Libre.
 
-Step 3: Configure AndroidAPS
+Step 3: Nakonfigurujte AndroidAPS
 ==============
-* In AndroidAPS go to Config Builder > BG Source and check 'xDrip+' 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.md>`_.
+* V AndroidAPS přejděte na kartu Konfigurace > Zdroj glykémie a vyberte 'xDrip+' 
+* Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit `Identify receiver` tak, jak je popsáno na stránce `nastavení xDrip+ <../Configuration/xdrip.md>`_.

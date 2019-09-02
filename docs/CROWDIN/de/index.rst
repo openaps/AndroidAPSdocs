@@ -49,6 +49,7 @@ Komponenten-Setup
    :glob:
    
    CGM/FGM <./Configuration/BG-Source.rst>
+   xDrip Einstellungen <./Configuration/xdrip.md>
    Pumpen <./Hardware/pumps.rst>
    Smartphones <./Hardware/Phoneconfig.rst>
    Nightscout Installation <./Installing-AndroidAPS/Nightscout.md>
