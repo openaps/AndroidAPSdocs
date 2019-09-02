@@ -61,9 +61,11 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### Preemptive restarts werden nicht empfohlen
 
-Die automatische Verlängerung von Dexcom G6 Sensoren (`preemtive restarts`) werden nicht empfohlen, da dies zu Sprüngen in den BZ-Werten nach dem eustart am 9. Tag führen kann.
+**With Dexcom transmitters whos serial no. is starting with 8G preemtive restarts do not work and might kill the sensor completely!**
 
-![xDrip+ Sprünge nach Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet. Mache Dir die folgenden Punkte bewusst, um das System sicher zu nutzen:
 
@@ -73,11 +75,11 @@ Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet.
 * Das sogenannte "Pre-soaking" (Sensor früher ohne Transmitter setzen, damit er sich an die Gewebsflüssigkeit "gewöhnt") mit Werkskalibrierung führt wahrscheinlich zu Abweichungen in den Glukosewerten. Falls Du mit "pre-soaking" arbeitest, wirst Du wahrscheinlich besser Ergebnisse erzielen, wenn Du den Sensor kalibrierst.
 * Wenn Du nicht auf die Abweichungen, die stattfinden können, achten willst, wäre es evtl. besser bei der Verlängerung auf die Werkskalibrierung zu verzichten und das System wie den G5 (mit "Pflichtkalibrierung") zu nutzen.
 
-Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [kompletten Artikel](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) (englisch) von Tim Street auf seiner Seite [www.diabettech.com](http://www.diabettech.com).
+To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
 
 ### G6 Transmitter das erste Mal verbinden
 
-**Für den zweiten und alle weiteren Transmitter siehe [Transmitterlaufzeit verlängern](../Configuration/xdrip#extend-transmitter-life) weiter unten.**
+**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
 G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Sereinnummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
@@ -101,7 +103,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
    
    -> Am unteren Bildschirmrand nach einigen Minuten wird `Warm Up x,x Stunden left` angezeigt.
 
--> Falls die Seriennummer Deines Transmitters -nicht mit 8G beginnt und die Zeitangabe auch nach einigen Minuten fehlt, musst Du den Sensor stoppen und erneut starten.
+-> If your transmitter serial no. does not start with 8G and there is no time specification after a few minutes stop and restart the sensor.
 
 * Starte den Datensammler neu (im Systemstatus und nur, wenn Du den Sensor neu gesetzt hast).
 * Falls Du den Dexcom Empfänger nutzt, schalte diesen nicht ein, bevor xDrip+ die ersten BZ-Werte anzeigt.
@@ -256,7 +258,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Transmitter wird als Dexcom?? angezeigt, dabei steht ?? für die letzten beiden Zeichen der Seriennummer Deines Transmitters (z.B. DexcomHY).
 * Öffne den Systemstatus in xDrip+ (Hamburger Menü oben links auf dem Startbildschirm).
 * Überprüfe, ob der Transmitter auf der ersten Statusseite angezeigt wird ('classic status page').
-* Wenn nicht: Lösche den Transmitter aus den Bluetooth-Einstellungen Deines Smartphones.
+* If not: Delete device from your smartphone's bluetooth settings and restart collector.
 * Warte etwa 5 Minuten bis der Transmitter wieder automatisch verbunden wird.
 
 ### Probleme beim Starten eines neuen Sensors
@@ -269,7 +271,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Sensor stoppen
 * Starte den Sensor mit dem "tatsächlichen" Code, den Du auf dem Schutzpapier des Pflasters findest.
 
-Überprüfe in den xDrip+ Logs, ob xDrip+ beginnt, mit "Duration: 1 minute" (und so weiter) zu zählen. Nur in den xdrip+ Logs kannst Du frühzeitig feststellen, ob xdrip+ einen Sensor gestoppt hat. Der letzte Status wird unten auf dem Startbildschirm nicht immer korrekt angezeigt.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ mit Freestyle Libre
 
