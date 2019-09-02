@@ -2,7 +2,7 @@
 
 Wenn Du es nicht bereits eingerichtet hast, lade [xDrip+](https://github.com/NightscoutFoundation/xDrip) herunter.
 
-G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Sereinnummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
+G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -39,7 +39,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### xDrip+ Version abhängig von der G6 Transmitter Seriennummer
 
-G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Sereinnummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
+G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -81,7 +81,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 **Für den zweiten und alle weiteren Transmitter siehe [Transmitterlaufzeit verlängern](../Configuration/xdrip#extend-transmitter-life) weiter unten.**
 
-G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Sereinnummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
+G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -147,7 +147,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### Transmitter ersetzen
 
-G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Sereinnummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
+G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
 
