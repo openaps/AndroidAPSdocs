@@ -118,11 +118,10 @@ Sei vorsichtig, da die Korrektur oftmals zu aggressiv eingestellt ist. D.h. eine
 
 **Beispiel:**
 
-     * Der BZ-Wert ist 190 mg/dl (10,5 mmol) und der Zielwert 100 mg/dl (5,6 mmol). 
-     * Die notwendige Korrektur ist also 90 mg/dl (= 190 - 100).
-     * ISF = 30 -> 90 / 30 = 3 Einheiten Insulin
-    * ISF = 45 -> 90 / 45 = 3 Einheiten Insulin
-    
+* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
+* So you want correction of 90 mg/dl (= 190 - 110).
+* ISF = 30 -> 90 / 30 = 3 units of insulin
+* ISF = 45 -> 90 / 45 = 2 units of insulin
 
 Ein zu niedriger ISF (dies kommt gar nicht so selten vor) kann zu 'Überkorrekturen' führen, da AAPS annimmt, mehr Insulin zur Korrektur eines hohen BZ-Wertes zu benötigen als dies tatsächlich der Fall ist. Dies kann zu einer Achterbahnfahrt der BZ-Werte führen (gerade wenn man fastet). In diesem Fall musst Du Deinen ISF erhöhen. Dies bedeutet, dass AAPS geringere Korrekturdosen abgibt und dass dies Überkorrekturen eines hohen BZ-Werts, die zu niedrigen BZ-Werten führen können, verhindert werden.
 
@@ -194,22 +193,22 @@ Looping kann die Batterien schneller entladen als gewohnt, weil das System viel 
 
 Tipps um die Batteriedauer zu erhöhen:
 
-* verringere die Zeit, bis der Bildschirm der Pumpe sich abschaltet (im Pumpenmenü)
-* Reduziere die Dauer der Displaybeleuchtung bei der Pumpe.
-* Stelle die Pumpenbenachrichtigung auf Töne statt Vibrieren.
-* benutze die Knöpfe auf der Pumpe nur zum Befüllen, alle weiteren Informationen wie Prüfen, Batteriestand und Reservoir-Füllstand solltest du über AndroidAPS checken.
-* Die App AndroidAPS kann öfter vom Android-Betriebssystem des Smartphones “abgeschossen” werden, um Energie zu sparen oder Speicher freizugeben. Wenn AndroidAPS bei jedem Aufruf neu gestartet wird, dann baut es jedes Mal eine Bluetooth-Verbindung zur Pumpe auf, dabei wird die aktuelle Basalrate und das Bolus-Protokoll erneut eingelesen. Das verbraucht viel Energie. Um zu prüfen, ob dies häufiger auftritt, kann man im AndroudAPS Menü “Logge App-Start in NS” aktivieren. Dann erscheinen Neustarts in der Blutzucker-Kurve auf dem Hauptbildschirm und in Nigthscout. Sollte die App häufig neu gestartet werden, versuche sie auf der Whiteliste der Prozesse zu setzen, die nicht automatisch beendet werden und im Hintergrund weiterlaufen dürfen.
-* reinige die Batteriepole mit Alkohol um sicherzustellen, dass keine herstellungsbedingten Wachs- oder Fettreste mehr vorhanden sind.
-* bei der DanaR/RS Pumpe wird während der Startprozedur kurzzeitig mit Hilfe einer hohen Stromstärke versucht, die Schutzfilme auf den Batterie-Kontakten zu entfernen (die einen Energieverlust bei Lagerung verhindern sollen), aber das funktioniert nicht immer zu 100%. Dann kannst du entweder versuchen, die Batterie 2-3 Mal herauszunehmen und wieder einzusetzen, bis die Pumpe einen Batteriestand von 100 % anzeigt oder du schließt die Batterie schon vor dem Einsetzen dadurch kurz, dass du beide Batteriepole für den Bruchteil einer Sekunde mit einem metallischen Gegenstand überbrückst.
-* Beachte auch die [weiteren spezifischen Batterie-Tipps](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life).
+* reduce the length of time the LCD stays on (within pump settings menu)
+* reduce the length of time the backlight stays on (within pump settings menu)
+* select notification settings to a beep rather than vibrate (within pump settings menu)
+* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
+* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+* for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
+* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
 ### Insulin-Reservoir und Katheter wechseln
 
 Der Wechsel des Insulin-Reservoirs kann nicht über AndroidAAPS erfolgen, sondern muss ganz normal direkt über die Pumpe durchgeführt werden.
 
-* Dazu durch langes Drucken auf Closed Loop auf dem Home-Bildschirm von AndroidAAPS Pausiere Loop für 1h auswählen
-* Nun Pumpe vom Körper trennen und wie bisher das Insulin-Reservoir gemäß der Pumpen-Bedienungsanleitung wechseln.
-* Anschließend durch langes Drücken auf Pausiert wieder Forsetzen wählen.
+* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAAPS and select 'Suspend Loop for 1h'
+* Now disconnect the pump, and change the reservoir as per pump instructions.
+* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
 Im Gegensatz zum “klassischen” Vorgehen nutzt AndroidAAPS nicht die “Katheter füllen” Funktion der Pumpe, sondern befüllt den Katheter mit Hilfe eines normalen Bolus, der nicht in der Historie auftaucht. Das hat den Vorteil, dass dadurch keine aktuell laufende temporäre Basalrate unterbrochen wird. Auf dem Tab AKTIONEN in AndoidAPS über den Knopf Vorfüllen/Füllen die Menge an Insulin einstellen, die zum Befüllen nötig ist und den Füllvorgang starten. Sollte die Menge nicht reichen, den Vorgang ggf. wiederholen. Du kannst im Drei-Punkte-Menü unter "Einstellungen > Andere > Füll-/Vorfüll-Standardmengen" Standardmengen festlegen. Schaue bitte im Beipackzettel deines Katheters nach, wie viele Ie du je nach Schlauch- und Nadellänge zum Befüllen verwenden solltest.
 
@@ -237,9 +236,9 @@ Du kannst die Pumpe entfernen, um "frei" zu sein, aber du solltest es in AAPS ei
 
 Alkoholkonsum ist im Closed Loop riskant, weil der Algorythmus einen von Alkohol beeinflussten BZ nicht richtig vorhersagen kann. Du musst deine eigene Methode finden, um das zu behandeln, kannst aber folgende AndroidAPS-Funktionen nutzen:
 
-* Deaktivierung des Closed Loop Modus und manuelle Behandlung des Diabetes oder
-* hohe temporäre Ziele setzen und UAM deaktivieren, um zu vermeiden, dass der Loop das IOB erhöht, weil er eine nicht eingegebene Mahlzeit vermutet
-* einen Profilwechsel auf deutlich weniger als 100% machen 
+* Deactivating closed loop mode and treating the diabetes manually or
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
+* do a profile switch to noticeably less than 100% 
 
 Wenn du Alkohol trinkst musst du immer dein CGM im Blick haben, um eine Hypoglykämie im Zweifel durch das Essen von Kohlenhydraten zu verhindern.
 
