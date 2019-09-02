@@ -47,3 +47,4 @@ After adding your action, don't forget to change the default values to what you 
 
 Examples
 ==========
+These example is for a person, that has lunch at the same time during the week and if it is at a certain time at her lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
