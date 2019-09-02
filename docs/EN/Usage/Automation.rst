@@ -7,6 +7,7 @@ For the same frequent events, you might always have to change the same settings.
 
 How to use it
 ================
+To set up an automation, you have to give it a title, select at least one condition and one action. 
 
 General
 --------
@@ -20,8 +21,10 @@ There are some limits. The glucose value has to be between 72 mg/dl and 270 mg/d
 
 Condition:
 ------------
+You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
+
 * connect conditions: you can have several conditions and can connect them with "And", "Or" or "Exclusive or", which means that if one (and only one of the) conditions applies, the action(s) will happen. 
-* Time vs.recurring time: With time you select just a single time event, with a recurring time, you select something that happens once a week.
+* Time vs. recurring time: With time you select just a single time event, with a recurring time, you select something that happens once a week.
 * location: in the config builder (Automation), you can select which location service you want to use:
 
   * Use passive location
@@ -30,13 +33,14 @@ Condition:
   
 Action
 ------
-Preconditions: For some actions, there are automatically preconditions. I.e. if you want to get a temp target, the precondition is no existing temp target or if you want to make a automated profile switch, the precondition is that the profile has to 100%.
-You choose between for actions
+You can choose one or more actions: 
 
-* start temp target (has to be between 72 mg/dl and 270 mg/dl and only works if there is no previous temp target )
+* start temp target (has to be between 72 mg/dl and 270 mg/dl and only works if there is no previous temp target)
 * stop temp target
 * notification
 * profile switch (has to be between 70% and 130% and only works if there is no previous profile switch)
+
+After adding your action, don't forget to change the default values to what you need by clicking in the default values.
 
 
 
