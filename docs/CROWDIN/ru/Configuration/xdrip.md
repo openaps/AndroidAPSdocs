@@ -61,9 +61,9 @@
 
 ### Упреждающие перезапуски не рекомендуются
 
-**With Dexcom transmitters whos serial no. is starting with 8G preemtive restarts do not work and might kill the sensor completely!**
+**В трансмиттерах Dexcom с серийным номером начинающимся с 8G упреждающий перезапуск не работает и может повредить сенсор!**
 
-The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+Автоматическое продление работы сенсоров Dexcom (`упреждающие перезапуски, preemtive restarts`) не рекомендуется, так как может привести к скачкам значений ГК на 9 день после перезапуска.
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
