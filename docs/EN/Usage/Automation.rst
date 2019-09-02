@@ -52,7 +52,7 @@ Examples
 ==========
 These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these.
 
-Automated Low Glucose Temp Target
+Low Glucose Temp Target
 ------------------------------------
 .. image:: ../images/Automation2.png
   :alt: Automation2
