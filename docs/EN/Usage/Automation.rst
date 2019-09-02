@@ -2,7 +2,7 @@ Automation
 ***************
 What is Automation
 ===================
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation with temp targets, you should be confident with manuel 'temp targets <./temptarget.html>`_ or profile switches. 
+For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation with temp targets, you should be confident with manuel `temp targets <./temptarget.html>`_ or profile switches. 
 
 .. image:: ../images/Automation1.png
   :alt: Automation1
