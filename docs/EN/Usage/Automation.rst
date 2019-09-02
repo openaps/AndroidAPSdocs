@@ -15,7 +15,7 @@ To set up an automation, you have to give it a title, select at least one condit
 
 General
 --------
-There are some limits. The glucose value has to be between 72 mg/dl and 270 mg/dl. The profile switch has to be between 70 % and 130%.
+There are some limits. The glucose value has to be between 72 and 270 mg/dl or 2 and 15 mmol/l. The profile switch has to be between 70 % and 130%.
 
 **Please be careful:**
 
