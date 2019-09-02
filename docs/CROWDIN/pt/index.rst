@@ -49,6 +49,7 @@ Configuração do Componente
    :glob:
    
    CGM/FGM <./Configuration/BG-Source.rst>
+   xDrip Settings <./Configuration/xdrip.md>
    Bombas de Insulina<./Hardware/pumps.rst>
    Telefones <./Hardware/Phoneconfig.rst>
    Configuração do Nightscout <./Installing-AndroidAPS/Nightscout.md>
