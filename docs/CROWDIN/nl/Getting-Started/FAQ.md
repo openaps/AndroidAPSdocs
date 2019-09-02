@@ -112,9 +112,17 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 ### Impact
 
-**Lower ISF** = a smaller drop in BGs for each unit of insulin (also can be called ‘more severe / aggressive’ or ‘stronger’). If too low, this can lead to low BGs.
+**Lower ISF** (i.e. 40 instead of 50) = more aggressive / stroger leading to a bigger drop in BGs for each unit of insulin. If too low, this can lead to low BGs.
 
-**Higher ISF** = a bigger drop in BGs for each unit of insulin (also can be called ‘less severe / aggressive’ or ‘weaker’). If too high, this can lead to high BGs.
+**Higher ISF** (i.e. 45 instead of 35) = less agressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
+
+**Example:**
+
+     * BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
+     * So you want correction of 90 mg/dl (= 190 - 110).
+     * ISF = 30 -> 90 / 30 = 3 units of insulin
+     * ISF = 45 -> 90 / 45 = 2 units of insulin
+    
 
 An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
