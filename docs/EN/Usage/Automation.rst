@@ -10,7 +10,7 @@ How to use it
 
 General
 --------
-There are some limits. The lowest glucose value is 72mg/dl. The lowest profile switch is 70 %.
+There are some limits. The glucose value has to be between 72 mg/dl and 270 mg/dl. The lowest profile switch is between 70 % and 130%.
 
 **Please be careful:**
 
@@ -20,6 +20,7 @@ There are some limits. The lowest glucose value is 72mg/dl. The lowest profile s
 
 Condition:
 ------------
+* connect conditions: you can have several conditions and can connect them with "And", "Or" or "Exclusive or", which means that if one (and only one of the) conditions applies, the action(s) will happen. 
 * Time vs.recurring time: With time you select just a single time event, with a recurring time, you select something that happens once a week.
 * location: in the config builder (Automation), you can select which location service you want to use:
 
@@ -29,8 +30,13 @@ Condition:
   
 Action
 ------
-Preconditions: For some actions, there are automatically preconditions. I.E. if you want to get a temp target, the precondition is no existing temp target.
+Preconditions: For some actions, there are automatically preconditions. I.e. if you want to get a temp target, the precondition is no existing temp target or if you want to make a automated profile switch, the precondition is that the profile has to 100%.
+You choose between for actions
 
+* start temp target (has to be between 72 mg/dl and 270 mg/dl and only works if there is no previous temp target )
+* stop temp target
+* notification
+* profile switch (has to be between 70% and 130% and only works if there is no previous profile switch)
 
 
 
