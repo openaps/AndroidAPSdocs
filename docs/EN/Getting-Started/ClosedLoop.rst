@@ -4,7 +4,7 @@ What is a Closed Loop System
 .. image:: ../images/autopilot.png
   :alt: AAPS is like an autopilot
 
-An artifical pancreas closed loop system combines different components in order to make diabetes management easier for you. 
+An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
 In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps#switching-to-automated-diabetes-mode-autopilot-for-your-diabetes>`_. But what does that mean?
 
 **Autopilot in an aircraft**
@@ -15,27 +15,27 @@ The autopilot receives signals from various sensors, a computer evaluates them t
 
 **Closed Loop System**
 
-The same applies to a closed loop system. It combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+The same applies to an artificial pancreas closed loop system. It combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
 
 Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
 
 Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
 
 
-Open Source Closed Loop Systems
+Open Source  Artificial Pancreas Closed Loop Systems
 ===============================
-At present there are three major Open Source Closed Loop Systems available:
+At present there are three major open source closed loop systems available:
 
 AndroidAPS (AAPS)
 -----------------
-AndroidAPS is described in detail in `this documentation <..\Getting-Started/WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong connection with OpenAPS (i.e. they share algorithms).
+AndroidAPS is described in detail in `this documentation <..\Getting-Started/WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
 Compatible `pumps <..\Hardware\pumps.html>`_ are:
 
 * DanaR / DanaRS
 * Accu-Chek Combo
 * Accu-Chek Insight
-* old Medtronic pumps (as of version 2.4)
+* some old Medtronic pumps (as of version 2.4)
 
 OpenAPS
 -------
@@ -43,7 +43,7 @@ OpenAPS
 
 Compatible pumps are:
 
-* old Medtronic pumps
+* some old Medtronic pumps
 
 Loop for iOS
 ------------
@@ -51,5 +51,5 @@ Loop for iOS
 
 Compatible pumps are:
 
-* old Medtronic pumps
 * Omnipod
+* some old Medtronic pumps
