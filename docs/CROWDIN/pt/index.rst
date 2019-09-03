@@ -78,7 +78,8 @@ Uso AndroidAPS
    Detecção de Sensibilidade e COB <./Configuration/Sensitivity-detection-and-COB.md>
    Troca de Perfil <./Usage/Profiles.md>
    Alvos-Temporários <./Usage/temptarget.md>   
-   Hidratos estendidos <./Usage/Extended-Carbs.md>    
+   Hidratos estendidos <./Usage/Extended-Carbs.md>
+   Automation <./Usage/Automation.rst>
   
  
 Dicas Gerais 
@@ -109,7 +110,7 @@ Avançado
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automação <./Usage/automation.md>
+   Automation with Android Auto App <./Usage/automation.md>
    
 
 Resolução de Problemas
