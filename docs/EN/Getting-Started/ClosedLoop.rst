@@ -22,7 +22,7 @@ Just as you don't want to get on a plane where only the autopilot flies without 
 Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
 
 
-Open Source  Artificial Pancreas Closed Loop Systems
+Open Source Artificial Pancreas Closed Loop Systems
 ===============================
 At present there are three major open source closed loop systems available:
 
