@@ -39,7 +39,7 @@ Compatible `pumps <..\Hardware\pumps.html>`_ are:
 
 OpenAPS
 -------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspery Pi or Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
 
 Compatible pumps are:
 
