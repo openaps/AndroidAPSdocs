@@ -15,7 +15,7 @@ To set up an automation, you have to give it a title, select at least one condit
 
 General
 --------
-There are some limits. The glucose value has to be between 72 and 270 mg/dl or 2 and 15 mmol/l. The profile switch has to be between 70 % and 130%.
+There are some limits. The glucose value has to be between 72 and 270 mg/dl or 2 and 15 mmol/l. The profile percentage has to be between 70 % and 130%.
 
 **Please be careful:**
 
@@ -42,7 +42,7 @@ You can choose one or more actions:
 * start temp target (has to be between 72 mg/dl and 270 mg/dl and only works if there is no previous temp target)
 * stop temp target
 * notification
-* profile switch (has to be between 70% and 130% and only works if there is no previous profile switch)
+* profile percentage (has to be between 70% and 130% and only works if there is no previous profile switch)
 
 After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
  
