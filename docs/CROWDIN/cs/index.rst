@@ -78,7 +78,8 @@ Použití AndroidAPS
    Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profily <./Usage/Profiles.md>
    Dočasné cíle <./Usage/temptarget.md>   
-   Rozložené sacharidy <./Usage/Extended-Carbs.md>    
+   Rozložené sacharidy <./Usage/Extended-Carbs.md>
+   Automation <./Usage/Automation.rst>
   
  
 Obecné tipy 
@@ -109,7 +110,7 @@ Pokročilé
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automatizace <./Usage/automation.md>
+   Automation with Android Auto App <./Usage/automation.md>
    
 
 Poradce při potížích
