@@ -4,7 +4,8 @@ What is a Closed Loop System
 .. image:: ../images/autopilot.png
   :alt: AAPS is like an autopilot
 
-A closed loop system combines different components in order to make diabetes management easier for you. Or in the words of Dana M. Lewis in her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_: "An artificial pancreas in any form of automated insulin delivery isn’t a cure. You still have diabetes. You still need to change your pump site. You still may have to calibrate your CGM sensor. You will still need to change your CGM sensor periodically. It’s very similar to “autopilot” for planes - especially because they still have a pilot. With an APS, you’re still around and piloting, even if you have automated help from the technology. You’re still in charge of flying the plane."
+A closed loop system (or arifical pancreas) combines different components in order to make diabetes management easier for you. 
+In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps#switching-to-automated-diabetes-mode-autopilot-for-your-diabetes>`_. But what does that mean?
 
 **Autopilot in an aircraft**
 
