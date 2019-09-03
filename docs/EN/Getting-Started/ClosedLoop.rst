@@ -1,4 +1,4 @@
-What is a Closed Loop System
+What is a Closed Loop System?
 **************************************
 
 .. image:: ../images/autopilot.png
