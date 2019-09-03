@@ -42,7 +42,7 @@ You can choose one or more actions:
 * start temp target (has to be between 72 mg/dl and 270 mg/dl and only works if there is no previous temp target)
 * stop temp target
 * notification
-* profile percentage (has to be between 70% and 130% and only works if there is no previous profile switch)
+* profile percentage (has to be between 70% and 130% and only works if the previous percentage is 100%)
 
 After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
  
