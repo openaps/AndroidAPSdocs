@@ -1,4 +1,4 @@
-Component Overview 
+Visão Geral do Componente 
 ==============================================
 AndroidAPS is not just a (self-built) application, it is just one of serveral modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, too.
    
@@ -12,7 +12,7 @@ AndroidAPS is not just a (self-built) application, it is just one of serveral mo
 
    Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
 
-Necessary Modules
+Módulos Necessários
 =====================
 Good individual dosage algorithm for your diabetes therapy
 ------------------
@@ -20,14 +20,14 @@ Even though this is not something to create or buy, this is the 'module' which i
 Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. 
 Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
 
-The profile includes
+O perfil inclui
 
-* BR (Basal rates)
+* RB (Rácio de Basal)
 * ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
 * CR (carb ratio) is gramms carbohydrate per one unit insulin
 * DIA (duration of insulin acting).
 
-Phone
+Telefone
 -------
 You need an Android smartphone with Google Android 6.0 or above. Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -35,7 +35,7 @@ To record a phone or watch that isn't already listed in the spreadsheet then ple
 
 Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
-Insulin pump
+Bomba de Insulina
 --------
 AndroidAPS **currently** works with 
 
@@ -83,11 +83,11 @@ Nightscout is independent of the other modules. You will need it to fulfill Obje
 
 Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`_.
 
-AAPS-.apk file
+Ficheiro AAPS-.apk
 ---------------
 The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
 
-Optional Modules
+Módulos Opcionais
 ==================
 Smartwatch
 ---------------
