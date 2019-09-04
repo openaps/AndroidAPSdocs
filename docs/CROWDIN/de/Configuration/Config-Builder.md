@@ -16,9 +16,14 @@ Wähle das Basal-Profil aus, das du benutzen möchtest. Unter [Profile](../Usage
 
 Das lokale Profil nutzt das Profil, das in der Pumpe manuell erfasst wurde. Sobald "Lokales Profil" ausgewählt ist, erscheint ein weiterer Tab, in dem die aus der Pumpe ausgelesenen Profildaten bei Bedarf angepasst werden können. Beim nächsten Profil Wechsel werden sie an die Pumpe übertragen und in deren Profil 1 gespeichert. Diese Einstellung wird empfohlen, da keine Internetverbindung erforderlich ist.
 
-Vorteil: Keine Internetverbindung erforderlich, um die Profileinstellungen zu ändern
+Advantage:
 
-Nachteil: nur ein Profil
+* no internet connection neccessary to change profile settings
+* profile changes can be made directly on the phone
+
+Disadvantage:
+
+* only one profile
 
 ### Nightscout-Profil
 
@@ -26,9 +31,15 @@ Das NS-Profil verwendet das von dir auf deiner Nightscout Seite gespeicherte Pro
 
 Du musst einen **Profil Wechsel** machen, um ein anderes Profil von deiner Nightscout-Seite zu aktivieren. Drücke und halte die Bezeichnung für dein aktuelles Profil auf dem AAPS Startbildschirm (graues Feld zwischen dem hellblauen "Open/Closed Loop" Feld und dem dunkelblauen Bereich mit deinem Zielbereich) > Profil Wechsel > gewünschtes Profil auswählen > OK. AAPS überträgt das gewählte Profil dann an die Pumpe, wo es gespeichert wird. Somit steht das Basalprofil unabhängig von AAPS zur Verfügung und läuft wie programmiert weiter, auch wenn AAPS einmal keine Verbindung mit Deiner Pumpe herstellen kann.
 
-Vorteil: Mehrere Profile & einfach zu bearbeiten per PC oder Tablet
+Advantage:
 
-Nachteil: Keine lokalen Änderungen an den Profileinstellungen möglich
+* multiple profiles
+* easy to edit via PC or tablet
+
+Disadvantage:
+
+* no local changes to profile settings
+* profile cannot be changed directly on the phone
 
 ### Einfaches Profil
 
@@ -40,15 +51,15 @@ Hier musst du auswählen, welchen Insulintyp du verwendest. Die Oref Optionen 'R
 
 ### Rapid-Acting Oref
 
-* empfohlen für Humalog, Novolog und Novorapid
-* DIA = mindestens 5 Stunden
-* Wirkdauermaximum = 75 Minuten nach Insulingabe
+* recommended for Humalog, Novolog and Novorapid
+* DIA = at least 5.0h
+* Max. peak = 75 minutes after injection
 
 ### Ultra-Rapid Oref
 
-* empfohlen für FIASP
-* DIA = mindestens 5 Stunden
-* Wirkdauermaximum = 55 Minuten nach Insulingabe
+* recommended for FIASP
+* DIA = at least 5.0h
+* Max. peak = 55 minutes after injection
 
 Für viele Menschen mit Diabetes gibt es 3 - 4 Stunden nach der Insulingabe nahezu keinen spürbaren Effekt von FIASP mehr, auch wenn dann rechnerisch noch 0.0xx Einheiten vorhanden sind. Die verbleibende Menge kann aber bei Sport und anderen Aktivitäten doch noch einen Einfluss haben. Daher nutzt AAPS eine minimale Wirkdauer von 5 Stunden.
 
@@ -65,10 +76,10 @@ Dieses Profil wird dann empfohlen, wenn dein Insulintyp von den anderen Profilen
 Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. Weitere Informationen findest du auf der Seite [BZ-Quelle](BG-Source.rst).
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* Nightscout-Client BZ
+* NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 App (gepatchet)](https://github.com/dexcomapp/dexcomapp/) - Wähle zusätzlich in den Einstellungen "Sende BZ-Werte zu xDrip+", wenn du die xDrip+ Alarme nutzen willst. ![Konfigurations-Generator - BZ-Quelle](../images/ConfBuild_BGSource.png)
+* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pumpe
@@ -76,12 +87,12 @@ Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. 
 Wähle die von dir genutzte Pumpe.
 
 * [DanaR](DanaR-Insulin-Pump.md)
-* DanaR Korean (koreanische Version der DanaR)
-* DanaRv2 (DanaR mit Firmware Upgrade)
+* DanaR Korean (for domestic DanaR pump)
+* DanaRv2 (DanaR pump with firmware upgrade)
 * [DanaRS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo ](Accu-Chek-Combo-Pump.md) (erfordert Installation von Ruffy)
-* ICT (für OpenLoop mit ICT, AAPS macht nur Behandlungsvorschläge, die du dann selbst mit dem Pen umsetzen musst)
-* Virtuelle Pumpe (für OpenLoop mit nicht unterstützten Pumpen, AAPS macht nur Behandlungsvorschläge, die du dann selbst in deiner Pumpe umsetzen musst)
+* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* MDI (receive AAPS suggestions for your multiple daily injections thereapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
 In den **erweiterten Einstellungen** kannst du den Bluetooth Watchdog aktivieren, falls dies notwendig sein sollte. Er deaktiviert Bluetooth für eine Sekunde, falls keine Verbindung zur Pumpe möglich ist. Dies kann helfen, falls bei deinem Smartphone Probleme mit der Bluetooth-Verbindung auftreten.
 
@@ -99,12 +110,12 @@ Wenn Du Oref1 mit SMB musst du **min_5m_carbimpact** auf 8 ändern. Dieser Wert 
 
 Wähle den gewünschten APS-Algorithmus für Therapie-Anpassungen. Die Details zum ausgewählten Algorithmus findest du im Reiter OpenAPS (OPAS).
 
-* OpenAPS MA (meal assist, Algorithmus aus 2016)
-* OpenAPS AMA (advanced meal assist, Algorithmus aus 2016)  
-    Details zu OpenAPS AMA findest Du in der [OpenAPS Dokumentation](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Einfach ausgedrückt profitierst Du von schnelleren AAPS-Korrekturen nach einem Mahlzeitenbolus, wenn du die Menge der Kohlenhydrate korrekt angegeben hast.  
-    Hinweis: OpenAPS AMA steht ab dem [7. Ziel](../Usage/Objectives.md) (objective 7) zur Verfügung.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, aktuellster Algorithmus für erfahrene Anwender  
-    Hinweis: OpenAPS SMB steht ab dem [8. Ziel](../Usage/Objectives.md) (objective 8) zur Verfügung und min_5m_carbimpact muss auf 8 eingestellt werden (Konfigurations-Generator > Sensitivitätserkennung > Sensitivität Oref1 Einstellungen).
+* OpenAPS MA (meal assist, state of the algorithm in 2016)
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2016)  
+    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
+    Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
+    Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 
@@ -147,9 +158,9 @@ Hier kannst du festlegen, welche Schaltflächen auf der Startseite angezeigt wer
 * Behandlungen
 * Bolus-Rechner
 * Insulin
-* Kohlenhydrate
-* CGM (öffnet xDrip+)
-* Kalibrierung
+* Carbs
+* CGM (opens xDrip+)
+* Calibration
 
 Außerdem kannst du feste Werte für die Erhöhung der Insulin- und Kohlenhydratmengen festlegen und entscheiden, ob ein Notizfeld im Behandlungsdialog angezeigt werden soll.
 
@@ -169,13 +180,13 @@ Aktiviere den SuperBolus im Wizard. Sei vorsichtig und aktiviere das erst, wenn 
 
 Einige Schaltflächen, um auf häufig verwendete Funktionen zugreifen zu können.
 
-* Profilwechsel (Profil Switch - weitere Informationen dazu siehe Seite [Profile](../Usage/Profiles.md))
-* Temporäres Ziel
-* Temporäre Basalrate starten / abbrechen
-* Verzögerter Bolus (nur für DanaR/RS und Combo)
-* Vorfüllen / Füllen (nur für DanaR/RS und Combo)
-* Historie
-* TDD (Total daily dose = Bolus + Basal pro Tag)
+* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
+* Temporary targets
+* Set / cancel temp. Basalrate
+* Extended bolus (DanaR/RS or Combo pump only)
+* Prime / fill (DanaR/RS or Combo pump only)
+* History browser
+* TDD (Total daily dose = bolus + basal per day)
 
 Einige Ärzte nutzen, gerade für neue Pumpenbenutzer, ein Basal-Bolus-Verhältnis von 50:50. Daher wird das Verhältnis als TDD / 2 * TBB (Total base basal = Summe der Basalrate innerhalb von 24 Stunden) berechnet. Andere bevorzugen einen Anteil von 32% bis 37% des Basalinsulins (TBB) am Gesamtinsulin (TDD). Wie die meisten Faustregeln gilt, dass dies nicht allgemeingültig ist. Hinweis: Bei dir und deinem Diabetes kann es ganz anders sein!
 
@@ -211,8 +222,8 @@ Wenn du Boli etc. von der Smartwatch aus abgeben willst, aktiviere "Steuerung du
 
 Über den Wear Tab oder das Hamburger Menü (oben links, falls der Wear Tab nicht angezeigt wird) kannst du
 
-* Alle Daten erneut senden. Dies kann hilfreich sein, wenn die Uhr längere Zeit außer Reichweite war und du die Informationen an die Uhr pushen willst.
-* Über das Smartphone die Einstellungen auf der Uhr öffnen.
+* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
 ### xDrip+ Statuszeile (Uhr)
 
@@ -246,12 +257,12 @@ Wenn Du nur ein bestimmtes WLAN-Netzwerk verwenden möchtest, kannst du dessen *
 
 #### Erweiterte Einstellungen
 
-* Lade fehlende Blutzuckerwerte automatisch aus Nightscout nach.
-* Ankündigungen aus Fehlern generieren Erstelle Nightscout-Einträge für Fehler-Dialoge und lokale Alarme. Sie werden auch im Careportal im Bereich Behandlungen angezeigt,
-* Aktiviere Broadcasts für andere Apps (z. B. xDrip+)
-* Zu Nightscout nur hochladen (keine Synchronisierung)
-* Kein Upload zu Nightscout
-* Verwende absolute statt prozentuale Basalraten -> Muss aktiviert sein, wenn du [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) nutzen willst.
+* Auto backfill missing BGs from Nightscout
+* Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
+* Enable local broadcast to other apps like xDrip+
+* NS upload only (sync disabled)
+* No upload to NS
+* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
 
 ![Nightscout erweiterte Einstellungen](../images/ConfBuild_NSClient_Advanced.png)
 
