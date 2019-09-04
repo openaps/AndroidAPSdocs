@@ -1,15 +1,15 @@
 # SMS-Befehle
 
-### Workaround for bug in AndroidAPS 2.3
+### Workaround für Fehler in AndroidAPS 2.3
 
-SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
+Die Einstellungen der SMS-Befehle sind in AndroidAPS Versionen 2.3 wegen eines Fehlers deaktiviert, können aber ab Version 2.4 erneut verwendet werden.
 
-If you must use SMS commands you can use the following workaround:
+Falls Du zwingend SMS-Befehle nutzen musst, kannst Du folgenden Workaround probieren:
 
 - Exportiere die Einstellungen
-- Downgrade to AndroidAPS version 2.2 (by installing your version 2.2 APK-file)
-- Do SMS command settings in AndroidAPS version 2.2.
-- Upgrade to AndroidAPS 2.3. SMS command settings will not be accessible there.
+- Downgrade zu AndroidAPS Version 2.2 (durch Installation Deiner APK-Datei von Version 2.2)
+- Nimm die Einstellungen für SMS-Befehle in AndroidAPS version 2.2 vor.
+- Upgrade auf AndroidAPS 2.3. Die Einstellungen für SMS-Befehle sind dort nicht zugänglich.
 
 ## Sicherheitshinweise
 
@@ -18,89 +18,89 @@ If you must use SMS commands you can use the following workaround:
 
 ## Funktionsweise
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+Gehe zu den Programmen in Ihrem android-Handy-Einstellung > AndroidAPS > Berechtigungen und SMS aktivieren
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolons ohne weitere Leerzeichen getrennt (z.B. +4912345678;+4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Senden Sie eine SMS auf das Handy, mit AndroidAPS, die von Ihr zugelassenen Telefonnummern mit einem der Befehle unter **Fett**, das Telefon reagiert bestätigen Erfolg der Befehl oder den Status beantragt.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
 ## BZ
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Letzten BG: 5,6 4 min vor Delta:-0,2 Mmol, IOB: 0.20U (Bolus: 0.10U basale: 0.10U)
 
 ## LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Loop wurde deaktiviert.
 
 ## LOOP START/ENABLE
 
-- Loop has been enabled
+- Lopp wurde aktiviert
 
 ## LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Loop ist deaktiviert.
+- Loop ist aktiviert.
+- Pausiert (10 Min)
 
 ## LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Das Loopen wird für 20 Minuten unterbrochen
 
 ## LOOP RESUME
 
-- Loop resumed
+- Loop wurde fortgesetzt
 
 ## TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers
+- TERATMENTS aktualisieren 1 Receiver
 
 ## NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 receivers
+- NSCLIENT neu starten 1 Empfänger
 
 ## PUMP
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Um die temporäre Basalrate zu stoppen, antworte mit dem Code EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Um für 30 Minuten eine temporäre Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
 
 ## BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Um für 20 Minuten eine temporäre Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
 
 ## BASAL 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Um für 30 Minuten eine temporäre Basalrate mit 30% zu starten, antworte mit dem Code Swe
 
 ## BASAL 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Um für 50 Minuten eine temporäre Basalrate mit 50% zu starten, antworte mit dem Code Swe
 
 ## BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Um einen Bolus vo 1.2E abzugeben, antworte mit Code Rrt
+- Remote-Bolus wird nicht zugelassen *wenn innerhalb von 15 Minuten nach dem letzten Bolus-Befehl oder wenn Remote-Befehle grundsätzlich nicht erlaubt sind*.
 
 ## EXTENDED STOP/CANCEL
 
-- To stop extended bolus reply with code EmF
+- Um den verzögerten Bolus zu stoppen, antworte mit dem Code EmF
 
 ## EXTENDED 2 120
 
-- To start extended bolus 2U for 120 min reply with code EmF
+- Um einen verzögertenen Bolus von 2 IE über 120 Minuten zu starten, antworte mit dem Code EmF
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Um einen Kalibrierungswert von 5,6 zu senden, antworte mit Code Rrt
+- Kalibrierung gesendet (*wenn xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein*.)
 
 ## PROFILE STATUS
 
@@ -112,8 +112,8 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 ## PROFILE 1
 
-- To switch profile to Profile1 100% reply with code Any
+- Um zum Profil 1 mit 100% zu wechseln, antworte mit Code Any
 
 ## PROFILE 2 30
 
-- To switch profile to Profile2 30% reply with code Any
+- Um zum Profil 2 mit 30% zu wechseln, antworte mit Code Any
