@@ -16,14 +16,14 @@
 
 Локальным профилем назван базальной профиль, введенный вручную в телефоне. При выборе локального профиля, появляется новая вкладка, на которой можно при необходимости изменить данные профиля, считываемые с помпы. Во время следующего подключения к профилю они будут записаны в профиль 1 на помпе. Мы рекомендуем этот профиль, поскольку он не зависит от интернет-соединения.
 
-Advantage:
+Преимущества:
 
-* no internet connection neccessary to change profile settings
-* profile changes can be made directly on the phone
+* не требуется подключение к интернету для изменения настроек профиля
+* изменения профиля могут быть сделаны непосредственно на телефоне
 
-Disadvantage:
+Недостаток:
 
-* only one profile
+* только один профиль
 
 ### Профиль Nightscout (NS)
 
@@ -31,15 +31,15 @@ NS Profile использует профили, которые вы сохран
 
 Чтобы активировать профиль Nightscout, выберите **переключение профиля**. Нажмите и удерживайте наименование текущего профиля на главном экране AAPS в верхней части (серое поле между светлым синим полем "Незамкнутый/Замкнутый цикл" и темно-синим полем целевой ГК) > Переключение профиля > Выберите профиль > OK. После изменения профиля, AAPS также записывает выбранный профиль в помпу, чтобы он был доступен в случае неполадок с AAPS, и продолжает работать.
 
-Advantage:
+Преимущества:
 
-* multiple profiles
-* easy to edit via PC or tablet
+* множественные профили
+* легко редактировать с помощью ПК или планшета
 
-Disadvantage:
+Недостатки:
 
-* no local changes to profile settings
-* profile cannot be changed directly on the phone
+* невозможность локальных изменений в настройках профиля
+* профиль не может быть изменен непосредственно на телефоне
 
 ### Простой профиль
 
@@ -51,15 +51,15 @@ Disadvantage:
 
 ### Быстродействующий Oref
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection
+* рекомендуется для Humalog, Novolog и Novorapid
+* DIA (длительность действия инсулина) = по крайней мере 5.0 часов
+* Макс. пик = 75 минут после инъекции
 
 ### Сверхбыстрый Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection
+* рекомендуется для FIASP
+* DIA (длительность действия инсулина) = по крайней мере 5.0 часов
+* Макс. пик = 55 минут после инъекции
 
 Для многих людей действие FIASP практически незаметно спустя 3-4 часа, даже если, как правило, остается 0.0xx ед. Это остаточное количество может быть ощутимо во время занятий спортом, например. Поэтому AndroidAPS использует как минимум 5 часов в качестве продолжительности действия инсулина DIA.
 
@@ -76,10 +76,10 @@ Disadvantage:
 Выберите источник данных ГК - см. страничку [Источник ГК](BG-Source.rst) для получения дополнительной информации по настройкам.
 
 * [xDrip +](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
+* ГК с клиента Nightscout
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* Модифицированное приложение [Dexcom G5](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправить данные ГК на xDrip +», если хотите получать оповещения от xDrip +. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Помпа
@@ -87,12 +87,12 @@ Disadvantage:
 Выберите помпу, которой пользуетесь.
 
 * [DanaR](DanaR-Insulin-Pump.md)
-* DanaR Korean (for domestic DanaR pump)
-* DanaRv2 (DanaR pump with firmware upgrade)
+* DanaR Корея (DanaR для корейского рынка)
+* DanaRv2 (DanaR с обновленной прошивкой)
 * [DanaRS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* MDI (receive AAPS suggestions for your multiple daily injections thereapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* [Accu-Chek Combo](Accu-Chek-Combo-Pump.md) (требует установки утилиты ruffy)
+* Инъекции инсулина шприцем/шприц-ручкой (на основе предложений от AAPS по ведению терапии)
+* Виртуальная помпа (открытый цикл для помпы, не имеющей драйверов - только предложения)
 
 При необходимости перейдите в **Дополнительные настройки** для активации функции BT-watchdog (сторожевая собака блутус:)). Если подключение к помпе невозможно, она отключает bluetooth на одну секунду. Это помогает на некоторых телефонах, где зависает стек bluetooth.
 
