@@ -28,9 +28,9 @@ At present there are three major open source closed loop systems available:
 
 AndroidAPS (AAPS)
 -----------------
-AndroidAPS is described in detail in `this documentation <.\Getting-Started\WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
-Compatible `pumps <..\Hardware\pumps.html>`_ are:
+Compatible `pumps <../Hardware/pumps.html>`_ are:
 
 * DanaR / DanaRS
 * Accu-Chek Combo
