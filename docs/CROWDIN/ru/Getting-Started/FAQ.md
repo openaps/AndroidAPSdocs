@@ -210,39 +210,39 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 Однако замена канюли происходит не через функцию "первичного заполнения инфузионного набора", но заполняет набор и канулю с помощью болюса, который не отражается в истории болюса. Это означает, что текущая временная скорость базала не прерывается. На вкладке Действия при помощи кнопки ЗАПОЛНИТЬ задайте то количество инсулина, которое необходимого для заполнения инфузионного набора и начните первичное заполнение. Если этого количества не достаточно, повторите заполнение. Вы можете установить кнопки по умолчанию в Настройках > Другое > Заполнить/Инициировать стандартные количества инсулина. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
 
-## Daily usage
+## Повседневное применение
 
-### Hygiene
+### Гигиена
 
-#### What to do when taking a shower or bath?
+#### Что делать при приеме душа или ванной?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
+Вы можете снять помпу при приеме душа или ванной. На этот короткий период времени она вам, как правило, не понадобится. Но вы должны сообщить об этом AAPS чтобы расчеты активного инсулина IOB были правильными. Нажмите на голубое поле 'Открытый цикл / Замкнутый цикл' наверху главного экрана. Выберите **'Отключить помпу на XY мин'** в зависимости от предполагаемого времени. После переподключения помпы вы можете выбрать 'Продолжить' в том же поле или просто подождите, пока не закончится выбранное вами время отключения. Цикл продолжит работу автоматически.
 
-### Work
+### На работе
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a profile switch for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a time shift of your profile when standing up much earlier or later than regular. If you are using Nightscout profiles, you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+В зависимости от вида работы, возможно, вы используете иные методы лечения в рабочие дни. Следует подумать о переключении профиля на ваш планируемый рабочий день (например, более 100% на 8 ч при сидячей работе или менее 100% при активном режиме), высокой или низкой временной цели или сдвиге времени вашего профиля, когда вы встаете гораздо раньше или позже, чем обычно. Если вы используете профили Nightscout, можно создать второй профиль (например, дом' и 'работа') и при необходимости переключаться с профиля на профиль.
 
-## Leisure activities
+## Досуг
 
-### Sports
+### Спорт
 
-### Sex
+### Секс
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
+Можете снять помпу для "свободы" но следует сообщить об этом AAPS, чтобы расчеты активного инсулина IOB были правильными. Нажмите на голубое поле 'Открытый цикл / Замкнутый цикл' наверху главного экрана. Выберите **'Отключить помпу на XY мин'** в зависимости от предполагаемого времени. После переподключения помпы вы можете выбрать 'Продолжить' в том же поле или просто подождите, пока не закончится выбранное вами время отключения. Цикл продолжит работу автоматически.
 
-### Drinking alcohol
+### Алкоголь
 
-Drinking alcohol is risky in closed loop mode as the algorythm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Употребление алкоголя является рискованным в режиме замкнутого цикла, так как алгоритм ИПЖ не может правильно предсказать влияние алкоголя на ГК. Следует выработать свой собственный метод для подхода к этому с помощью следующих функций в AndroidAPS:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* Деактивировать режим замкнутого цикла и разбираться с диабетом вручную или
+* устанавливать высокие временные цели и отключать незапланированный прием пищи UAM, чтобы избежать увеличения активного инсулина IOB из-за непредусмотренной еды или
+* переключить профиль на величину, заметно менее 100% 
 
-When drinking alcohol you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+При употреблении алкоголя всегда нужно следить за мониторингом, чтобы вручную избежать гипокликемии, съедая углеводы.
 
-### Sleeping
+### Сон
 
-#### How can I loop during the night without mobile and WIFI radiation?
+#### Как обеспечить работу цикла ночью без воздействия мобильного и WIFI излучения?
 
 Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via nightscout):
 
