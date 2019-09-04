@@ -167,19 +167,19 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. Если все правильно, и гликемия падает до целевого значения после того, как углеводы полностью усвоены, попробуйте за некоторое время до еды установить временную цель "приближается прием пищи" в AAPS или продумайте подходящее время преболюса с вашим эндокринологом. Если ваша гликемия слишком высока после еды и все еще слишком высока после того, как углеводы полностью усвоены, подумайте о снижении соотношения инсулин/углеводы IC с вашим эндокринологом. Если гликемия слишком высока при усвоении углеводов COB и слишком низка после их полного усвоения, подумайте об увеличении соотношения инсулин/углеводы IC и о надлежащем времени преболюса с эндокринологом.
 
-# Other settings
+# Другие настройки
 
-## Nightscout settings
+## Настройки Nightscout
 
-### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
+### Клиент NScout AndroidAPS выдает ошибку 'не разрешено' и не передает данные. Что делать?
 
-In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+В клиенте NSClient проверьте 'Настройки подключения'. Возможно, вы в закрытой для вас зоне WLAN или активировали опцию подключаться 'Только при зарядке', а ваш кабель зарядки не подключен.
 
-## CGM settings
+## Настройки мониторинга
 
-### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
+### Почему AndroidAPS выдает сообщение: 'Источник ГК не поддерживает расширенную фильтрацию'?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS openAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Если вы в xDrip+ используете иной источник данных ГК чем Dexcom G5 или G6 в нативном режиме, вы получите это уведомление в панели OpenAPS. Для более подробной информации см [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ## Помпа
 
