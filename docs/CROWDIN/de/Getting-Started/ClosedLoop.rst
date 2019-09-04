@@ -28,7 +28,7 @@ Aktuell sind drei große Open Source Closed Loop Systeme verfügbar:
 
 AndroidAPS (AAPS)
 -----------------
-AndroidAPS wird in `dieser Dokumentation <..\Getting-Started\WhatisAndroidAPS.html>`_ ausführlich beschrieben. AAPS verwendet ein Android Smartphone für die Berechnungen und die Steuerung Deiner Insulinpumpe. AAPS steht in enger Verbindung mit OpenAPS, sie nutzen beide z.B.  die gleichen Algorithmen.
+AndroidAPS is described in detail in `this documentation <.\Getting-Started\WhatisAndroidAPS.html>`_. AAPS verwendet ein Android Smartphone für die Berechnungen und die Steuerung Deiner Insulinpumpe. AAPS steht in enger Verbindung mit OpenAPS, sie nutzen beide z.B.  die gleichen Algorithmen.
 
 Kompatible `Insulinpumpen <..\Hardware\pumps.html>`_ sind:
 
