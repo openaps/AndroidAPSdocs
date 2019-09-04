@@ -112,10 +112,10 @@ NS Profile использует профили, которые вы сохран
 
 * Помощник болюса OpenAPS MA (по состоянию алгоритма на 2016г.)
 * Помощник болюса OpenAPS AMA (расширенный помощник болюса, состояние алгоритма на 2016г.).  
-    Подробнее об OpenAPS AMA в [документации OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
-    Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
-    Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+    Подробнее об OpenAPS AMA в [документации OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Говоря просто, его преимущество в том, что после болюса на еду система быстрее определит верхнюю временную цель если углеводы введены верно.  
+    Обратите внимание, что для пользования алгоритмом следует дойти до [Цели 7](../Usage/Objectives.md).
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (супер микро болюс, новый алгоритм для опытных пользователей)   
+    ; обратите внимание, работа OpenAPS SMB требует достижения [цели 8](../Usage/Objectives.md), а в конфигураторе минимальное 5-мин действие углеводов должно быть установлено как 8: конфигуратор> чувствительность >параметр чувствительности Oref1.
 
 ## Замкнутый цикл
 
@@ -158,9 +158,9 @@ Cледует регулярно экспортировать настройки
 * Терапия
 * Калькулятор
 * Инсулин
-* Carbs
-* CGM (opens xDrip+)
-* Calibration
+* Углеводы
+* Мониторинг (открывает xDrip +)
+* Калибровка
 
 Кроме того можно задать сочетания клавиш для инсулина и приращения углеводов и определить, должны ли диалоговые окна содержать примечания.
 
