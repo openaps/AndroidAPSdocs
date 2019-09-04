@@ -147,7 +147,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ## Почему на вкладке "помощник болюса OPENAPS AMA" время действия инсулина DIA показано как 3, хотя у меня в профиле другая величина?
 
-![AMA 3h](../images/Screenshot_AMA3h.png)
+![Мастер болюса AMA 3 часа](../images/Screenshot_AMA3h.png)
 
 В помощнике болюса AMA "DIA" не означает "длительность действия инсулина". Это параметр, который раньше был связан с DIA. Теперь же он означает, 'время, за которое нужно завершить коррекцию'. Он не имеет ничего общего с расчетом активного инсулина IOB. В алгоритме OpenAPS SMB в этом параметре больше нет необходимости.
 
@@ -161,7 +161,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. Если все верно, то такое поведение обычно вызвано слишком низким значением чувствительности к инсулину ISF. Слишком низкая чувствительность ISF обычно выглядит так:
 
-![ISF too low](../images/isf.jpg)
+![Слишком низкая чувствительность ISF](../images/isf.jpg)
 
 ### Что вызывает постпрандиальные пики в замкнутом цикле?
 
@@ -244,32 +244,32 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 #### Как обеспечить работу цикла ночью без воздействия мобильного и WIFI излучения?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via nightscout):
+Многие пользователи ночью переводят телефон в режим авиаперелета. Если вы хотите, чтобы AAPS работал во время сна, действуйте следующим образом (такое решение будет работать только с локальным источником ГК, таким как xDrip+ или модифицированным приложением Dexcom, но НЕ будет работать, если вы получаете данные ГК с сайта Nightscout):
 
 1. Включите режим авиаперелета на вашем мобильном устройстве.
 2. Подождите, пока режим авиаперелета не будет активирован.
 3. Включите Блутус.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Теперь вы не принимаете звонки и не подключены к Интернету. Но цикл продолжает работу.
 
 У некоторых пользователей обнаружились проблемы с локальной трансляцией (AAPS не получает данные от xDrip+) в режиме авиаперелета. Перейдите в Настройки xdrip+ > Inter-app settings > Identify receiver и введите `info.nightscout.androidaps`.
 
 ![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-### Travelling
+### При переездах
 
-#### How to deal with timezone changes?
+#### Как разбираться с изменениями часового пояса?
 
-With DanaR and DanaR Korean you don't have to do anything. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
+Если у вас DanaR или DanaR для корейского рынка делать ничего не надо. Для других помп смотрите страницу [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling.md) для более подробной информации.
 
-## Medical topics
+## Медицинские аспекты
 
-### Hospitalization
+### Госпитализация
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Если вы хотите поделиться информацией об AndroidAPS и ИПЖ с врачами, можете распечатать [руководство по AndroidAPS для клиник](../Resources/clinician-guide-to-AndroidAPS.md).
 
-### Medical appointment with your endocrinologist
+### На приеме у эндокринолога
 
-#### Reporting
+#### Отчетность
 
-You can either show your nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/)
+Вы можете либо распечатать отчеты вашего сайта Nightscout (https://вашсайт.com/report) или перейти в [репортер Nightscout](https://nightscout-reporter.zreptil.de/)
