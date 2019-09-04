@@ -183,22 +183,22 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ## Помпа
 
-### Where to place the pump?
+### Где размещать помпу?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
+Есть многочисленные возможности размещения помпы. При этом неважно, пользуетесь вы приложениями ИПЖ или нет. Если вы предпочитаете беспроводные помпы, а у вас Dana для AAPS, попробуйте тридцатисантиметровый катетер с оригинальным поясом для помпы.
 
-### Batteries
+### Батареи
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your nightscout site. Tricks to increase battery life include:
+Работа в замкнутом цикле быстрее расходует батарею поскольку система больше взаимодействует по блутусу чем обычная помпа в ручном режиме. Лучше менять батарею при не менее чем 25% заряда так как после этого связь затрудняется. Можно настроить предупредительные сигналы батареи помпы через переменную PUMP_WARN_BATT_P на сайте Nightscout. Способы увеличить срок жизни батареи включают:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
-* reduce the length of time the backlight stays on (within pump settings menu)
-* select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
-* for DanaR/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+* уменьшить длительность работы экрана LCD (в меню настроек помпы)
+* уменьшить длительность работы подсветки (в меню настроек помпы)
+* выбрать уведомления в виде звукового сигнала а не вибрации (в меню настроек помпы)
+* Нажимать кнопки помпы только для перезагрузки; для просмотра журналов, уровня батареи и объема резервуара помпы пользоваться смартфоном с AndroidAPS.
+* На некоторых телефонах AndroidAPS периодически закрывается для экономии энергии или высвобождения оперативной памяти. Когда AndroidAPS вновь инициализируется, то при каждом старте устанавливает соединение Bluetooth с помпой и перечитывает текущую базальную скорость и журнал болюсов. Это расходует батарею. Чтобы увидеть, происходит ли это, перейдите в Настройки > NSClient и включите 'Отправлять запуски приложения в NS'. Nightscout будет получать данные о событии при каждом перезапуске AndroidAPS, что облегчит отслеживание проблемы. Чтобы уменьшить расход батареи при таких событиях, включите AndroidAPS в список разрешенных приложений в настройках батареи телефона и тогда монитор расхода энергии перестанет выключать AAPS.
+* протирайте контакты батареи спиртовыми салфетками, чтобы на ней не оставались следы заводской смазки.
+* в помпах DanaR/RS процедура запуска батареи отправляет импульс высокого напряжения для устранения заводской пленки (которая предотвращает потерю энергии при хранении), но это не всегда срабатывает на 100%. Либо удалите и заново вставьте батарею 2-3 раза до тех пор, пока на экране помпы заряд батареи не покажет 100%, либо замкните контакты батареи на долю секунды при помощи ключа батареи, чтобы удалить этот налет.
+* см. также советы для [конкретных типов батареи](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
 ### Changing reservoirs and canulas
 
