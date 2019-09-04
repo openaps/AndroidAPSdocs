@@ -1,7 +1,7 @@
 Freestyle Libre 2
 *********************
 
-Freestyle Libre 2 Sensoren können alle 5 Minuten BZ-Werte an AndroidAPS übermitteln. Da sie diese direkt per Bluetooth an Dein Telefon schicken, musst Du keinen Bluetooth-Adapter wie MiaoMiao mehr kaufen. Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' nicht zur Verfügung. Die BZ-Werte des Libre 2 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
+Freestyle Libre 2 Sensoren können alle 5 Minuten BZ-Werte an AndroidAPS übermitteln. Da sie diese direkt per Bluetooth an Dein Telefon schicken, musst Du keinen Bluetooth-Adapter wie MiaoMiao mehr kaufen. Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' nicht zur Verfügung. Die BZ-Werte des Libre 2 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. Weitere Details findest Du unter `Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ .
 
 Schritt 1: Erstelle Deine eigene gepatchtete Librelink-App
 ==============
@@ -20,4 +20,4 @@ Schritt 2: Installieren und konfigurieren xDrip+ App
 Schritt 3: AndroidAPS konfigurieren
 ==============
 * Wähle in AndroidAPS Konfiguration (Hamburger-Menü links oben auf dem Startbildschirm), wähle BZ-Quelle und dann xDrip. 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `Identify receiver` wie auf der Seite `xDrip+ settings page <../Configuration/xdrip.html>`_ beschrieben.
