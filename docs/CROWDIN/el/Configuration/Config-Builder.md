@@ -16,9 +16,14 @@
 
 Το τοπικό προφίλ χρησιμοποιεί το βασικό προφίλ που καταχωρήθηκε χειροκίνητα στο τηλέφωνο. Μόλις επιλεγεί, εμφανίζεται μια νέα καρτέλα στο AAPS, όπου μπορείτε να αλλάξετε τα δεδομένα προφίλ που διαβάζονται από την αντλία, εάν είναι απαραίτητο. Με την επόμενη αλλαγή προφίλ εγγράφονται στην αντλία στο προφίλ 1. Αυτό το προφίλ συνιστάται καθώς δεν εξαρτάται από τη σύνδεση στο διαδίκτυο.
 
-Πλεονέκτημα: δεν χρειάζεται σύνδεση στο Internet για να αλλάξετε τις ρυθμίσεις προφίλ
+Advantage:
 
-Μειονέκτημα: μόνο ένα προφίλ
+* no internet connection neccessary to change profile settings
+* profile changes can be made directly on the phone
+
+Disadvantage:
+
+* only one profile
 
 ### NS προφίλ
 
@@ -26,9 +31,15 @@
 
 Κάντε μία **αλλαγή προφίλ** για να ενεργοποιήσετε ένα προφίλ από το Nightscout. Πατήστε και κρατήστε πατημένο το τρέχον προφίλ στην αρχική οθόνη AAPS στην κορυφή (το γκρίζο πεδίο ανάμεσα στο γαλάζιο πεδίο "ανοιχτό/κλειστό κύκλωμα" και στο σκούρο μπλε πεδίο του στόχου) > Διακόπτης προφίλ > Επιλογή προφίλ > OK. Το AAPS γράφει επίσης το επιλεγμένο προφίλ στην αντλία μετά την αλλαγή προφίλ, έτσι ώστε να είναι διαθέσιμο χωρίς AAPS σε περίπτωση έκτακτης ανάγκης και συνεχίζει να τρέχει.
 
-Πλεονέκτημα: πολλαπλά προφίλ & εύκολη επεξεργασία μέσω υπολογιστή ή tablet
+Advantage:
 
-Μειονέκτημα: καμία τοπική αλλαγή στις ρυθμίσεις προφίλ
+* multiple profiles
+* easy to edit via PC or tablet
+
+Disadvantage:
+
+* no local changes to profile settings
+* profile cannot be changed directly on the phone
 
 ### Απλό προφίλ
 
@@ -40,15 +51,15 @@
 
 ### Ταχέως δράσεως Oref
 
-* προτείνετε για Humalog, Novolog και Novorapid
-* DIA = τουλάχιστον 5 ώρες
-* Μέγιστη. κορυφή = 75 λεπτά μετά την χορήγηση
+* recommended for Humalog, Novolog and Novorapid
+* DIA = at least 5.0h
+* Max. peak = 75 minutes after injection
 
 ### Εξαιτετικά ταχέως Oref
 
-* προτείνεται για FIASP
-* DIA = τουλάχιστον 5 ώρες
-* Μέγιστη. κορυφή = 55 λεπτά μετά την χορήγηση
+* recommended for FIASP
+* DIA = at least 5.0h
+* Max. peak = 55 minutes after injection
 
 Για πολλούς ανθρώπους δεν υπάρχει σχεδόν καμία αξιοσημείωτη επίδραση της FIASP μετά από 3-4 ώρες πια, ακόμα κι αν στη συνέχεια είναι διαθέσιμες μονάδες 0,0xx. Αυτό το υπολειπόμενο ποσό μπορεί να παρατηρηθεί κατά τη διάρκεια της άθλησης, για παράδειγμα. Για αυτό το AndroidAPS χρησιμοποιεί κατ ελάχιστο 5 ώρες σαν DIA.
 
@@ -68,7 +79,7 @@
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - επιλέξτε "Αποστολή δεδομένων BG στο xDrip+" αν θέλετε να χρησιμοποιήσετε τους συναγερμούς του xDrip+. ![Διαμόρφωση BG πηγή](../images/ConfBuild_BGSource.png)
+* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Αντλία
@@ -76,12 +87,12 @@
 Επιλέξτε την αντλία που χρησιμοποιείτε.
 
 * [DanaR](DanaR-Insulin-Pump.md)
-* DanaR Korean (τοπικκή για την Κορέα DanaR pump)
-* DanaRv2 (DanaR αντλία με αναβάθμιση λογισμικού)
+* DanaR Korean (for domestic DanaR pump)
+* DanaRv2 (DanaR pump with firmware upgrade)
 * [DanaRS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (απαιτεί εγκατάσταση του ruffy)
-* MDI (λάβετε τις προτάσεις του AAPS για τις πολλαπλές καθημερινές ενέσεις σας)
-* Εικονική αντλία (ανοικτό κύκλωμα για αντλία που δεν έχει ακόμα οδηγό - μόνο προτάσεις AAPS)
+* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* MDI (receive AAPS suggestions for your multiple daily injections thereapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
 Χρησιμοποιήστε τις **Σύνθετες ρυθμίσεις** για να ενεργοποιήσετε τον BT watchdog εάν είναι απαραίτητο. Απενεργοποιεί το Bluetooth για ένα δευτερόλεπτο αν δεν υπάρχει δυνατή σύνδεση με την αντλία. Αυτό μπορεί να βοηθήσει σε ορισμένα τηλέφωνα όπου το bluetooth κολλάει.
 
@@ -99,12 +110,12 @@
 
 Επιλέξτε τον αλγόριθμο APS που θέλετε για τις ρυθμίσεις των παρεμβάσεων. Μπορείτε να δείτε την ενεργή λεπτομέρεια του επιλεγμένου αλγορίθμου στην καρτέλα OpenAPS (OAPS).
 
-* OpenAPS MA (βοήθεια γεύματος, κατάσταση του αλγορίθμου το 2016)
-* OpenAPS AMA (προηγμένη βοήθεια γεύματος, κατάσταση του αλγορίθμου το 2016)  
-    Περισσότερες λεπτομέρειες για το OpenAPS AMA μπορείτε να βρείτε στο [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Με απλά λόγια το πλεονέκτημα είναι ότι αφού κάνετε ένα bolus γεύματος το σύστημα μπορεί ταχύτερα να δώσει υψηλό προσωρινό ρυθμό αν εχουν δωθεί αξιόπιστα οι υδατάνθρακες.   
-    Σημειώστε ότι πρέπει να είστε στον [Στόχος 7](../Usage/Objectives.md) για να χρησιμοποιήσετε το OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, πιο πρόσφατος αλγόριθμος για προχωρημένους χρήστες)   
-    Σημειώστε ότι πρέπει να είστε στο [Στόχος 8](../Usage/Objectives.md) για να χρησιμοποιήσετε το OpenAPS SMB και το min_5m_carbimpact πρέπει να ρυθμιστεί στο 8 στο μενού Διαμόρφωση> Ανίχνευση ευαισθησίας> Ρυθμίσεις Oref1 ευαισθησίας.
+* OpenAPS MA (meal assist, state of the algorithm in 2016)
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2016)  
+    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
+    Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
+    Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Κύκλωμα
 
@@ -146,7 +157,7 @@ Define which Buttons are shown on the home screen.
 
 * Treatments
 * Calculator
-* Insulin
+* Ινσουλίνη
 * Carbs
 * CGM (opens xDrip+)
 * Calibration
