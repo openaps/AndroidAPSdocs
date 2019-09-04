@@ -16,9 +16,14 @@
 
 로컬프로필은 폰에 수동으로 입력된 기저 인슐린 프로필을 활용합니다. 일단 그것이 선택되면, AAPS에 새로운 탭이 나타나게 됩니다. 필요하다면 그 탭 내에서 펌프로부터 추출된 프로파일 데이터를 바꿀 수 있습니다. 다음 프로파일로 바꾸면, 그 데이터들은 프로파일1에 있는 펌프에 작성될 것입니다. 이러한 로컬 프로파일 활용은 권장됩니다. 왜냐하면 이것은 인터넷연결에 지장을 받지않기 때문입니다.
 
-장점: 프로파일 세팅을 바꾸기위해 인터넷을 연결하지 않아도 됩니다.
+Advantage:
 
-단점: 오직 하나의 프로파일만 가능합니다
+* no internet connection neccessary to change profile settings
+* profile changes can be made directly on the phone
+
+Disadvantage:
+
+* only one profile
 
 ### NS프로파일
 
@@ -26,9 +31,15 @@ NS프로파일은 당신의 NightScout 사이트 저장된 프로파일들을 �
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-Advantage: multiple profiles & easy to edit via PC or tablet
+Advantage:
 
-Disadvantage: no local changes to profile settings
+* multiple profiles
+* easy to edit via PC or tablet
+
+Disadvantage:
+
+* no local changes to profile settings
+* profile cannot be changed directly on the phone
 
 ### Simple profile
 
@@ -75,10 +86,10 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 
 Select the pump you are using.
 
-* [DanaR](DanaR-Insulin-Pump.md)
+* [DanaR (다나알)](DanaR-Insulin-Pump.md)
 * DanaR Korean (for domestic DanaR pump)
 * DanaRv2 (DanaR pump with firmware upgrade)
-* [DanaRS](DanaRS-Insulin-Pump.md)
+* [DanaRS(다나알에스)](DanaRS-Insulin-Pump.md)
 * [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
 * MDI (receive AAPS suggestions for your multiple daily injections thereapy)
 * Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)

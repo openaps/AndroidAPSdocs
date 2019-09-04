@@ -16,9 +16,14 @@ Wähle das Basal-Profil aus, das du benutzen möchtest. Unter [Profile](../Usage
 
 Das lokale Profil nutzt das Profil, das in der Pumpe manuell erfasst wurde. Sobald "Lokales Profil" ausgewählt ist, erscheint ein weiterer Tab, in dem die aus der Pumpe ausgelesenen Profildaten bei Bedarf angepasst werden können. Beim nächsten Profil Wechsel werden sie an die Pumpe übertragen und in deren Profil 1 gespeichert. Diese Einstellung wird empfohlen, da keine Internetverbindung erforderlich ist.
 
-Vorteil: Keine Internetverbindung erforderlich, um die Profileinstellungen zu ändern
+Vorteile:
 
-Nachteil: nur ein Profil
+* Keine Internetverbindung erforderlich, um die Profileinstellungen zu ändern.
+* Profilwechsel können direkt auf dem Smartphone vorgenommen werden.
+
+Nachteile:
+
+* nur ein Profil
 
 ### Nightscout-Profil
 
@@ -26,9 +31,15 @@ Das NS-Profil verwendet das von dir auf deiner Nightscout Seite gespeicherte Pro
 
 Du musst einen **Profil Wechsel** machen, um ein anderes Profil von deiner Nightscout-Seite zu aktivieren. Drücke und halte die Bezeichnung für dein aktuelles Profil auf dem AAPS Startbildschirm (graues Feld zwischen dem hellblauen "Open/Closed Loop" Feld und dem dunkelblauen Bereich mit deinem Zielbereich) > Profil Wechsel > gewünschtes Profil auswählen > OK. AAPS überträgt das gewählte Profil dann an die Pumpe, wo es gespeichert wird. Somit steht das Basalprofil unabhängig von AAPS zur Verfügung und läuft wie programmiert weiter, auch wenn AAPS einmal keine Verbindung mit Deiner Pumpe herstellen kann.
 
-Vorteil: Mehrere Profile & einfach zu bearbeiten per PC oder Tablet
+Vorteile:
 
-Nachteil: Keine lokalen Änderungen an den Profileinstellungen möglich
+* Mehrere Profile
+* einfach per PC oder Tablet zu bearbeiten
+
+Nachteile:
+
+* Keine lokalen Änderungen an den Profileinstellungen möglich.
+* Profilwechsel nicht direkt auf dem Smartphone möglich.
 
 ### Einfaches Profil
 

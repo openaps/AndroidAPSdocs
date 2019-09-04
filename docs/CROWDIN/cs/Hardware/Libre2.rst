@@ -1,7 +1,7 @@
 Freestyle Libre 2
 *********************
 
-Senzor Freestyle Libre 2 dokáže poskytovat systému AndroidAPS glykémie každých 5 minut. Vzhledem k tomu, že je odesílá prostřednictvím bluetooth přímo do telefonu, není již potřeba žádný bluetooth adaptér, jako např. MiaoMiao. Ani v současné době není možné při používání Libre 2 jako zdroje glykémie povolit v rámci algoritmu SMB funkce ‘Vždy povolit SMB’ a ‘Povolit SMB po jídle’. Hodnoty glykémií z Libre 2 nejsou dostatečné vyhlazené, aby bylo použití těchto funkcí bezpečné. Další podrobnosti viz `Vyhlazování glykémií <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`_.
+Senzor Freestyle Libre 2 dokáže poskytovat systému AndroidAPS glykémie každých 5 minut. Vzhledem k tomu, že je odesílá prostřednictvím bluetooth přímo do telefonu, není již potřeba žádný bluetooth adaptér, jako např. MiaoMiao. Ani v současné době není možné při používání Libre 2 jako zdroje glykémie povolit v rámci algoritmu SMB funkce ‘Vždy povolit SMB’ a ‘Povolit SMB po jídle’. Hodnoty glykémií z Libre 2 nejsou dostatečné vyhlazené, aby bylo použití těchto funkcí bezpečné. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
 
 Krok 1: Sestavte si svou vlastní upravenou aplikaci Librelink
 ==============
@@ -20,4 +20,4 @@ Step 2: Nainstalujte a nastavte aplikaci xDrip+
 Step 3: Nakonfigurujte AndroidAPS
 ==============
 * V AndroidAPS přejděte na kartu Konfigurace > Zdroj glykémie a vyberte 'xDrip+' 
-* Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit `Identify receiver` tak, jak je popsáno na stránce `nastavení xDrip+ <../Configuration/xdrip.md>`_.
+* If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.

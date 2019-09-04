@@ -1,6 +1,15 @@
 # SMS-Befehle
 
-**Hinweis**: Die Einstellungen der SMS-Befehle sind in AndroidAPS Versionen 2.3 wegen eines Fehlers deaktiviert, können aber ab Version 2.4 erneut verwendet werden.
+### Workaround für Fehler in AndroidAPS 2.3
+
+Die Einstellungen der SMS-Befehle sind in AndroidAPS Versionen 2.3 wegen eines Fehlers deaktiviert, können aber ab Version 2.4 erneut verwendet werden.
+
+Falls Du zwingend SMS-Befehle nutzen musst, kannst Du folgenden Workaround probieren:
+
+- Exportiere die Einstellungen
+- Downgrade zu AndroidAPS Version 2.2 (durch Installation Deiner APK-Datei von Version 2.2)
+- Nimm die Einstellungen für SMS-Befehle in AndroidAPS version 2.2 vor.
+- Upgrade auf AndroidAPS 2.3. Die Einstellungen für SMS-Befehle sind dort nicht zugänglich.
 
 ## Sicherheitshinweise
 
@@ -9,17 +18,17 @@
 
 ## Funktionsweise
 
-Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
+Gehe zu den Programmen in Ihrem android-Handy-Einstellung > AndroidAPS > Berechtigungen und SMS aktivieren
 
 In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolons ohne weitere Leerzeichen getrennt (z.B. +4912345678;+4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden
 
-Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem AndroidAPS installiert ist. Sende dazu eines der folgenden **fettgedruckten** Kommandos und das Handy wird mit einer Erfolgsmitteilung oder dem angeforderten Status antworten.
+Senden Sie eine SMS auf das Handy, mit AndroidAPS, die von Ihr zugelassenen Telefonnummern mit einem der Befehle unter **Fett**, das Telefon reagiert bestätigen Erfolg der Befehl oder den Status beantragt.
 
 **Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
 ## BZ
 
-- Letzter Blutzucker 125 vor 4min, Delta: -12mg/dl, IOB: 0.20E (Bolus: 0.10E Basal: 0.10E)
+- Letzten BG: 5,6 4 min vor Delta:-0,2 Mmol, IOB: 0.20U (Bolus: 0.10U basale: 0.10U)
 
 ## LOOP STOP/DISABLE
 
@@ -45,11 +54,11 @@ Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem
 
 ## TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers
+- TERATMENTS aktualisieren 1 Receiver
 
 ## NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 receivers
+- NSCLIENT neu starten 1 Empfänger
 
 ## PUMP
 
@@ -78,7 +87,7 @@ Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem
 ## BOLUS 1.2
 
 - Um einen Bolus vo 1.2E abzugeben, antworte mit Code Rrt
-- Ferngesteuerte Boli sind nicht erlaubt (*falls innerhalb von 15 Minuten nach dem letzten Bolusbefehl oder wenn ferngesteuerte Kommandos nicht erlaubt sind*)
+- Remote-Bolus wird nicht zugelassen *wenn innerhalb von 15 Minuten nach dem letzten Bolus-Befehl oder wenn Remote-Befehle grundsätzlich nicht erlaubt sind*.
 
 ## EXTENDED STOP/CANCEL
 
@@ -91,7 +100,7 @@ Sende von einem der berechtigten Telefone eine SMS an das Android-Handy, auf dem
 ## CAL 5.6
 
 - Um einen Kalibrierungswert von 5,6 zu senden, antworte mit Code Rrt
-- Kalibrierung gesendet (*wenn xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein*)
+- Kalibrierung gesendet (*wenn xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein*.)
 
 ## PROFILE STATUS
 

@@ -252,6 +252,10 @@ Many users turn the phone into airplane mode at night. If you want the loop to s
 
 You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
+У некоторых пользователей обнаружились проблемы с локальной трансляцией (AAPS не получает данные от xDrip+) в режиме авиаперелета. Перейдите в Настройки xdrip+ > Inter-app settings > Identify receiver и введите `info.nightscout.androidaps`.
+
+![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+
 ### Travelling
 
 #### How to deal with timezone changes?
