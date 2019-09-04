@@ -16,9 +16,14 @@ Selecione o perfil basal que prefere usar. Ver a página [Perfis](../Usage/Profi
 
 Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
-Advantage: no internet connection neccessary to change profile settings
+Advantage:
 
-Disadvantage: only one profile
+* no internet connection neccessary to change profile settings
+* profile changes can be made directly on the phone
+
+Disadvantage:
+
+* only one profile
 
 ### NS Profile
 
@@ -26,9 +31,15 @@ NS Profile uses the profiles you have saved on your nightscout site (https://[yo
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-Advantage: multiple profiles & easy to edit via PC or tablet
+Advantage:
 
-Disadvantage: no local changes to profile settings
+* multiple profiles
+* easy to edit via PC or tablet
+
+Disadvantage:
+
+* no local changes to profile settings
+* profile cannot be changed directly on the phone
 
 ### Simple profile
 
@@ -40,15 +51,15 @@ Select the type of insulin curve you are using. The options 'Rapid-Acting Oref',
 
 ### Oref Acção Rápida
 
-* recomendado para Humalog, Novolog e Novorapid
-* DIA = pelo menos 5.0h
-* Máx. pico = 75 minutos após injeção
+* recommended for Humalog, Novolog and Novorapid
+* DIA = at least 5.0h
+* Max. peak = 75 minutes after injection
 
 ### Oref Ultra-Rápida
 
-* recomendado para FIASP
-* DIA = pelo menos 5.0h
-* Máx. pico = 55 minutos após injeção
+* recommended for FIASP
+* DIA = at least 5.0h
+* Max. peak = 55 minutes after injection
 
 For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore AndroidAPS uses minimum 5h as DIA.
 
@@ -68,7 +79,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 (atualizado)](https://github.com/dexcomapp/dexcomapp/) - Selecione 'Enviar dados BG para xDrip+' se quiser usar alarmes xDrip+. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Bomba
@@ -76,12 +87,12 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 Select the pump you are using.
 
 * [DanaR](DanaR-Insulin-Pump.md)
-* DanaR Coreana (para bombas domésticas DanaR)
-* DanaRv2 (Bomba DanaR com atualização de firmware)
+* DanaR Korean (for domestic DanaR pump)
+* DanaRv2 (DanaR pump with firmware upgrade)
 * [DanaRS](DanaRS-Insulin-Pump.md)
-* [Bomba Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requer instalação de ruffy)
-* MDI (recebe sugestões AAPS para a terapia de múltiplas injecções diárias)
-* Bomba Virtual (loop aberto para uma bomba que nao tenha ainda nenhum driver - apenas sugestões AAPS)
+* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* MDI (receive AAPS suggestions for your multiple daily injections thereapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
 Use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is pobbile. This may help on some phones where the bluetooth stack freezes.
 
@@ -147,9 +158,9 @@ Define which Buttons are shown on the home screen.
 * Tratamentos
 * Calculadora
 * Insulina
-* Hidratos
-* CGM (abre xDrip+)
-* Calibração
+* Carbs
+* CGM (opens xDrip+)
+* Calibration
 
 Furthermore you can set shortcuts for insulin and carb increments and decide wether the notes field should be shown in treatment dialogues.
 
@@ -170,11 +181,11 @@ Enable super bolus functionality in wizard. Use with caution and do not enable u
 Some buttons to quickly access common features:
 
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Alvos temporário
-* Definir / cancelar temp. taxa basal
+* Temporary targets
+* Set / cancel temp. taxa basal
 * Extended bolus (DanaR/RS or Combo pump only)
 * Prime / fill (DanaR/RS or Combo pump only)
-* Navegador do histórico
+* History browser
 * TDD (Total daily dose = bolus + basal per day)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
@@ -211,7 +222,7 @@ If you want to bolus etc from the watch then within "Wear settings" you need to 
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Reenviar Todos os Dados. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 
 ### Linha estado xDrip (relógio)
@@ -249,8 +260,8 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 * Auto backfill missing BGs from Nightscout
 * Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
 * Enable local broadcast to other apps like xDrip+
-* Envio apenas para NS (sincronização desactivada)
-* Sem envio para NS
+* NS upload only (sync disabled)
+* No upload to NS
 * Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
 
 ![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
