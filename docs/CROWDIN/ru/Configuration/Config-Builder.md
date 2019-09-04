@@ -79,7 +79,7 @@ NS Profile использует профили, которые вы сохран
 * ГК с клиента Nightscout
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* Модифицированное приложение [Dexcom G5](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправить данные ГК на xDrip +», если хотите получать оповещения от xDrip +. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* Модифицированное приложение [Dexcom G5](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправить данные ГК на xDrip +», если хотите получать оповещения от xDrip +. ![Источник ГК в конфигураторе](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Помпа
@@ -180,13 +180,13 @@ Cледует регулярно экспортировать настройки
 
 Кнопки быстрого доступа к распространенным настройкам:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. скорость базала
-* Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
-* History browser
-* TDD (Total daily dose = bolus + basal per day)
+* Переключатель профилей (см. [страницу профилей](../Usage/Profiles.md) для дополнительной информации по настройке)
+* Временные цели
+* Задать / отменить врем. скорость базала
+* Пролонгированный болюс (только для DanaR/RS или Combo)
+* Первичное заполнение / заправка картриджа (только для DanaR/RS или Combo)
+* Журнал
+* TDD (Общая суточная доза = болюс + базал за день)
 
 Некоторые врачи рекомендуют - особенно для новичков - соотношение базал-болюс 50:50. Поэтому соотношение рассчитывается как общая суточная доза TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). Другие предпочитают расчет суточного болюса TBB как 32% - 37% от суточного инсулина TDD. Как и большинство подобных поравил они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
@@ -222,8 +222,8 @@ Cледует регулярно экспортировать настройки
 
 При помощи вкладки Wear или многослойного сэндвич-меню (в левой верхней части экрана, если вкладка не отображается) вы можете
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Повторить отправку всех данных. Может быть полезно, если некоторое время часы не были подключены и вы хотите передать на них данные.
+* Открыть настройки на часах прямо с телефона.
 
 ### Cтрока состояния xDrip (часы)
 
@@ -257,12 +257,12 @@ Cледует регулярно экспортировать настройки
 
 #### Расширенные настройки
 
-* Auto backfill missing BGs from Nightscout
-* Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Заполнять пропущенные значения ГК данными из Nightscout
+* Создать оповещение из сообщения об ошибке Создать оповещение Nightscout из диалогов об ошибках и местных оповещений (также отображаются в портале лечения в разделе лечение/назначения)
+* Активировать местную трансляцию на другие приложения (напр. xDrip+)
+* Только отправлять на NS (Синхронизация отключена)
+* Не отправлять в NS
+* Всегда использовать абсолютные значения базала -> должно быть активировано, если вы хотите правильно применять [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 ![Расширенные настройки Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
