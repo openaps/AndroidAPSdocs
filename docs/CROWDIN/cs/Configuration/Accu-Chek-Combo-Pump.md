@@ -1,4 +1,4 @@
-# Accu Chek Combo Pump
+# Pumpa Accu-Chek Combo
 
 **Tento software je součástí DIY řešení a není to produkt, vyžaduje, abyste si přečetli dokumentaci, pochopili celý systém a naučili se ho používat. Není to něco, co za Vás udělá veškerý management diabetu, ale pomůže Vám k lepším výsledkům a kvalitě života, pokud investujete čas k tomu potřebný. Zbytečně nespěchejte, a vytvořte si čas pro učení. Pouze Vy jste zodpovědní za to, jak ze systémem zacházíte.**
 
@@ -40,13 +40,13 @@
     - Aktivujte zámek tlačítek na pumpě, abyste předešli nechtěnému vydání bolusů z pumpy, zvláště pokud jste byli zvyklí používat rychlé bolusy.
     - Nastavte čas zhasnutí displeje na 5,5 s a čas opuštění menu na 5 s. Toto pomůže AAPS k rychlejšímu obnovení v případě chyb a předejde četným vibracím, které se mohou objevit během těchto chyb.
 
-![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+![Screenshot z nastavení uživatelského menu](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+![Screenshot nastavení dočasného bazálu](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+![Screenshot nastavení bolusu](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+![Screenshot nastavení zásobníku](../images/combo/combo-insulin-settings.png)
 
 - Nainstalujte AndroidAPS tak, jak je popsáno na [AndroidAPS wiki](http://wiki.AndroidAPS.org).
 - Přečtěte si dokumentaci, abyste pochopili, jak nastavit AndroidAPS.
@@ -64,7 +64,7 @@ Má to několik možných důvodů. Vyzkoušejte tyto kroky:
 
 1. Vložte ** novou nebo nabitou baterii ** do pumpy. Podívejte se na podrobnosti do návodu do části Baterie. Ujistěte se, že pumpa je velmi blízko telefonu.
 
-![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+![Combo by mělo být vedle telefonu](../images/Combo_next_to_Phone.png)
 
 2. Vypněte nebo odstraňte jakékoliv jiné Bluetooth zařízení, abyste eliminovali možné rušení při párování. Jakákoliv paralelní komunikace s rozhraním Bluetooth nebo výzva k vytvoření připojení může narušit proces párování.
 
