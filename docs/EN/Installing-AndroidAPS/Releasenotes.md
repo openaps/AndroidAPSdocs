@@ -25,6 +25,7 @@ Release date: XX-XX-XXXX
 * RxJava2, Okhttp3, Retrofit support
 * Old Medtronic pumps support (RileyLink need) - engineering mode only
 * New Automation plugin - engineering mode only
+* Allow to bulus only part from bolus wizard calculation
 * Rendering insulin activity
 * Adjusting IOB predictions by autosense result
 * New support for patched Dexcom apks (2.4 folder)
