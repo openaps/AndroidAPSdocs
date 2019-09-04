@@ -17,8 +17,8 @@ Začínáme
    :glob:
    
    Bezpečnost především <./Getting-Started/Safety-first.rst>
-   Co je systém uzavřené smyčky <./Getting-Started/ClosedLoop.rst>
-   Co je systém uzavřené smyčky s AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
+   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
    
 Co potřebuji 
@@ -78,7 +78,8 @@ Použití AndroidAPS
    Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profily <./Usage/Profiles.md>
    Dočasné cíle <./Usage/temptarget.md>   
-   Rozložené sacharidy <./Usage/Extended-Carbs.md>    
+   Rozložené sacharidy <./Usage/Extended-Carbs.md>
+   Automation <./Usage/Automation.rst>
   
  
 Obecné tipy 
@@ -109,7 +110,7 @@ Pokročilé
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automatizace <./Usage/automation.md>
+   Automation with Android Auto App <./Usage/automation.md>
    
 
 Poradce při potížích

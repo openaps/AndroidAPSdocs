@@ -78,7 +78,8 @@ AndroidAPS Nutzung
    Empfindlichkeitserkennung und COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profil Wechsel <./Usage/Profiles.md>
    Temporäre Ziele <./Usage/temptarget.md>   
-   Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.md>    
+   Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.md>
+   Automation <./Usage/Automation.rst>
   
  
 Allgemeine Hinweise 
@@ -109,7 +110,7 @@ Für Fortgeschrittene
    :glob:
    
    Android Auto <./Usage/Android-auto.md>
-   Automatisierung <./Usage/automation.md>
+   Automation mit Android Auto App <./Usage/automation.md>
    
 
 Problembehandlung

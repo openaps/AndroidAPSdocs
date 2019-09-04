@@ -17,8 +17,8 @@ Guia de Introdução
    :glob:
    
    Segurança primeiro <./Getting-Started/Safety-first.rst>
-   O que é um sistema Closed Loop (Fechado) <./Getting-Started/ClosedLoop.rst>
-   O que é um sistema de Closed Loop (Fechado) com AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
+   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
    
 O que é preciso 
@@ -78,7 +78,8 @@ Uso AndroidAPS
    Detecção de Sensibilidade e COB <./Configuration/Sensitivity-detection-and-COB.md>
    Troca de Perfil <./Usage/Profiles.md>
    Alvos-Temporários <./Usage/temptarget.md>   
-   Hidratos estendidos <./Usage/Extended-Carbs.md>    
+   Hidratos estendidos <./Usage/Extended-Carbs.md>
+   Automation <./Usage/Automation.rst>
   
  
 Dicas Gerais 
@@ -109,7 +110,7 @@ Avançado
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automação <./Usage/automation.md>
+   Automation with Android Auto App <./Usage/automation.md>
    
 
 Resolução de Problemas

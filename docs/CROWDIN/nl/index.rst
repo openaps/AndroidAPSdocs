@@ -78,7 +78,8 @@ AndroidAPS Usage
    Sensitivity detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profiel wissel <./Usage/Profiles.md>
    Tijdelijk streefdoel <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.md>    
+   Extended carbs <./Usage/Extended-Carbs.md>
+   Automation <./Usage/Automation.rst>
   
  
 General Hints 
@@ -109,7 +110,7 @@ Advanced
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automatisering <./Usage/automation.md>
+   Automation with Android Auto App <./Usage/automation.md>
    
 
 Problemen oplossen

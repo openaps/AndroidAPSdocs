@@ -37,7 +37,7 @@ Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. Wenn
 **Vorteile**
 
 * Du kannst Nightscout mit ein paar Klicks einrichten und direkt verwenden. 
-* Deutlich weniger manuelelr Aufwand, da Martin versucht, die Administration so weit als möglich zu automatisieren.
+* Deutlich weniger manueller Aufwand, da Martin versucht, die Administration so weit als möglich zu automatisieren.
 * Alle Einstellungen können über eine benutzerfreundliche Weboberfläche vorgenommen werden. 
 * Eine automatisierte Basalratenüberprüfung mit Autotune ist ebenfalls enthalten. 
 * Der Server steht in Deutschland.
