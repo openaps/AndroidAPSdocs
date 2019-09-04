@@ -200,15 +200,15 @@ AAPS по умолчанию строит свой алгоритм отталк
 * в помпах DanaR/RS процедура запуска батареи отправляет импульс высокого напряжения для устранения заводской пленки (которая предотвращает потерю энергии при хранении), но это не всегда срабатывает на 100%. Либо удалите и заново вставьте батарею 2-3 раза до тех пор, пока на экране помпы заряд батареи не покажет 100%, либо замкните контакты батареи на долю секунды при помощи ключа батареи, чтобы удалить этот налет.
 * см. также советы для [конкретных типов батареи](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
-### Changing reservoirs and canulas
+### Замена резервуаров и канюль
 
-The change of cartridge can not be done via AndroidAPS, but must be carried out as before directly via the pump.
+Замена картриджей не может осуществляться через AndroidAPS, ее следует производить как и раньше, непосредственно через помпу.
 
-* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAAPS and select 'Suspend Loop for 1h'
-* Now disconnect the pump, and change the reservoir as per pump instructions.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+* Произведите долгое нажатие на кнопку "Открытый цикл"/"Замкнутый цикл" на вкладке "Домашний экран" AndroidAAPS и выберите "Приостановка цикла на 1ч'
+* Отключите помпу и замените резервуар в соответствии с инструкцией помпы.
+* После переподключения помпы запустите цикл долгим нажатием на 'Приостановлено (X мин.)'.
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+Однако замена канюли происходит не через функцию "первичного заполнения инфузионного набора", но заполняет набор и канулю с помощью болюса, который не отражается в истории болюса. Это означает, что текущая временная скорость базала не прерывается. На вкладке Действия при помощи кнопки ЗАПОЛНИТЬ задайте то количество инсулина, которое необходимого для заполнения инфузионного набора и начните первичное заполнение. Если этого количества не достаточно, повторите заполнение. Вы можете установить кнопки по умолчанию в Настройках > Другое > Заполнить/Инициировать стандартные количества инсулина. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
 
 ## Daily usage
 
