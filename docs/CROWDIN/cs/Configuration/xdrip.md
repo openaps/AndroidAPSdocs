@@ -65,7 +65,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 
 Automatické prodloužení senzorů Dexcom (`preemtivní restart`) není doporučeno, tato volba může způsobit „skoky“ v hodnotách glykémie 9. den po restartu.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Skok po preemptivním restartu](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Použití G6 může být o něco složitější, než se na první pohled zdá. Abyste ho mohli používat bezpečně, je třeba vědět o několika skutečnostech:
 
@@ -258,7 +258,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 * Vysílač se musí zobrazovat jako Dexcom??, přičemž ?? jsou poslední dva znaky výrobního čísla vysílače. (např. DexcomHY).
 * Otevřete nabídku Stav systému v xDrip+ (hamburger menu vlevo nahoře na hlavní obrazovce).
 * Ověřte, že je vysílač zobrazen na na první stránce se stavem systému ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings and restart collector.
+* Pokud ne: Odstraňte zařízení z nastavení bluetooth svého telefonu a restartujte collector.
 * Počkejte přibližně 5 minut, dokud se vysílač Dexcom automaticky znovu nepřipojí.
 
 ### Problém se spuštěním nového senzoru
@@ -271,7 +271,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 * Zastavte senzor
 * Spusťte senzor se skutečným kódem (vytištěným na ochranné nálepce)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+V log souborech v xDrip+ ověřte, že xDrip+ začne počítat "Trvání: 1 minuta" (a tak dále). Pouze v log protokolech v xdrip+ můžete v úvodní fázi zjistit, zda xdrip+ zastavil senzor. Pozdější stav není v dolní části hlavní obrazovky vždy zobrazen správně.
 
 ## xDrip+ a Freestyle Libre
 
@@ -293,8 +293,8 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 
 ### Připojte vysílač Libre a spusťte senzor
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Spustit vysílač a senzor Libre 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Spustit vysílač a senzor Libre 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Spustit vysílač a senzor Libre 3](../images/xDrip_Libre_Transmitter03.png)
