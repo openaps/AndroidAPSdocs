@@ -102,13 +102,13 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ### Описание & тестирование
 
-The drop in BG expected from dosing 1U of insulin.
+Ожидаемое снижение ГК после подачи 1ед. инсулина.
 
-Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Если база рассчитана верно, вы можете определить ISF, приостановив цикл и убедившись что IOB равен нулю, принять несколько таблеток глюкозы, чтобы получить стабильно «высокую» гликемию.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+Затем введите предполагаемое количество инсулина (по текущему соотношению 1/ISF), чтобы прийти к целевой ГК.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Будьте осторожны, так как довольно часто величина слишком занижена. Слишком низкая чувствительность означает, что 1 ед опустит ГК быстрее, чем ожидалось.
 
 ### Эффект
 
