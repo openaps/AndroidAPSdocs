@@ -262,16 +262,16 @@ Bei einigen Anwendern kam es zu Problemen im Flugmodus. AAPS empfing keine BZ-We
 
 #### Wie gehe ich mit einem Zeitzonenwechsel um?
 
-With DanaR and DanaR Korean you don't have to do anything. For other pumps see [timezone travelling](../Usage/Timezone-traveling.md) page for more details.
+Mit der DanaR und der DanaR Korean musst du nichts tun. Details zu weiteren Pumpen kannst du auf der Seite [Zeitzonenwechsel auf Reisen](../Usage/Timezone-traveling.md) finden.
 
 ## Medizinische Themen
 
 ### Krankenhausaufenthalt
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Wenn du dem Klinikpersonal einige Informationen über AndroidAPS und DIY Looping geben willst, dann kannst du [eine allgemeine Einführung und Anleitung zu AndroidAPS fpr Klinikpersonal](../Resources/clinician-guide-to-AndroidAPS.md) ausdrucken.
 
 ### Termin mit deinem betreuenden Arzt (Internisten)
 
 #### Auswertung
 
-You can either show your nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/)
+Du kannst entweder deine Nightscout Berichte zeigen (https://DEINE-NS-SITE.com/report) oder den [Nightscout Reporter](https://nightscout-reporter.zreptil.de/) verwenden
