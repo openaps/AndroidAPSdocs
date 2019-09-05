@@ -22,10 +22,10 @@
 
 Продолженные линии показывают тенденции ГК - если вы это выбрали в настройках. 
 
-* Orange line: COB (colour is used generally to represent COB and carbs)
-* Dark blue line: IOB (colour is used generally to represent IOB and insulin)
-* Light blue line: zero-temp
-* Dark yellow line: UAM
+* Оранжевая линия: активные углеводы COB (цвет обычно используется для отображения активных углеводов COB и углеводов)
+* Темно-синяя линия: активный инсулин IOB (цвет обычно используется для отображения активного инсулина IOB и инсулина)
+* Голубая линия: нулевой временный базал
+* Темно-желтая линия: незапланированный прием пищи UAM
 
 Эти линии отражают различные прогнозы, основанные на текущих усваиваемых углеводах (COB); инсулине (IOB); показывая, сколько времени понадобится ГК, чтобы понизиться до/выше заданного уровня, если не принимать во внимание отклонения и активировать нулевую временную базу, а также распознавание непредусмотренного питания, не введенного в систему пользователем (UAM).
 
@@ -52,8 +52,8 @@ SUPER BOLUS - это когда базальный инсулин следующ
 <b>Комбинации активных углеводов COB и активного инсулина IOB и что они означают</b>
 
 <ul>
-    <li>If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account</li>
-    <li>If you tick COB without IOB you run the risk of too much insulin as AAPS is not accounting for what’s already given. </li>
+    <li>Если отметить галочками COB и IOB, то будут учтены неусвоенные углеводы которые еще не покрыты инсулином + все инсулины, которые были введены в качестве временного базала или супермикроболюса СМБ</li>
+    <li>Если отметить галочками COB без IOB, то возникает риск получить слишком много инсулина поскольку AAPS не примет в расчет то, что уже подано. </li>
     <li>If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 </ul>
 
