@@ -12,6 +12,13 @@ Dexcom G5 mit xdrip+
 G5 mit der gepatchten Dexcom App
 =========================================================
 * Lade die APK von `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_ herunter  und wähle die Version, die Du benötigst (mg/dl oder mmol/l version, G5).
+
+   * Im Ordner 2.3 befinden sich die APK für AndroidAPS 2.3 Anwender, entsprechend im Ordner 2.4 die für AAPS 2.4.
+   * Open https://play.google.com/store/search?q=dexcom%20g5 on your computer. Die Region wird in der URL angezeigt.
+   
+   .. image:: ../images/DexcomG5regionURL.PNG
+     :alt: Region in Dexcom G5 URL
+
 * Stoppe den Sensor und deinstalliere die originale Dexcom App, falls du das noch nicht gemacht hast.
 * Installiere die heruntergeladene apk
 * Starte den Sensor
