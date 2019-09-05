@@ -3,7 +3,7 @@ Automatisierung
 This feature will be available with the next AndroidAPS version (2.4). 
 
 What is Automation
-================
+===================
 For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. So brauchen  when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
 
 .. image:: ../images/Automation1.png
