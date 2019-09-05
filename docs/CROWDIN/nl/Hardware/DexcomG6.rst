@@ -30,6 +30,13 @@ If using G6 with xdrip+
 If using G6 with patched Dexcom app
 =========================================================
 * Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
+
+   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.4.
+   * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. Region will be visible in URL.
+   
+   .. image:: ../images/DexcomG6regionURL.PNG
+     :alt: Region in Dexcom G6 URL
+
 * Stop sensor and uninstall the original Dexcom app, if not already done.
 * Install downloaded apk
 * Start sensor
