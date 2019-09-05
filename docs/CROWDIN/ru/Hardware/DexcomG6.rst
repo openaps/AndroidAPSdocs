@@ -3,8 +3,8 @@ Dexcom G6
 Сначала основное
 ===============
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`_.
-* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the `latest nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_. У этих трансмиттеров новая прошивка и новая стабильная версия xDrip+ (2019/01/10) с ней не работает.
+* Следуйте общим рекомендациям по гигиене и настройкам мониторинга `здесь <../Hardware/GeneralCGMRecommendation.html>`_.
+* Для Трансмиттеров G6, изготовленных после осени/конца 2018 года выберите одну из `последних ночных сборок xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. У этих трансмиттеров новая прошивка и стабильная версия xDrip+ (2019/01/10) с ней не работает.
 
 General hints for looping with G6
 ================================
@@ -30,10 +30,10 @@ If using G6 with xdrip+
 If using G6 with patched Dexcom app
 =========================================================
 * Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
-* Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Oстановите сенсор и удалите оригинальное приложение Dexcom.
+* Установите загруженное приложение
+* Запустите сенсор
+* В конфигуратоге (настройки AndroidAPS) выберите Dexcom G5 App (модифицированное).
 
 Troubleshooting G6
 ====================
