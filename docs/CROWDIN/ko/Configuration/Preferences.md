@@ -6,7 +6,7 @@
 
 ## 나이
 
-이 설정에서 선택한 나이에 따라 보안 제한이 적용됩니다. 만약 높은 제한에 가까워지면 (최대bolus처럼) 한 단계를 올려야할 때입니다. 실제 나이보다 더 높게 나이를 선택하게 되면 인슐린창에 잘못된 인슐린 값을 (예를 들어, 소수점을 건너뛰는) 입력하게 되어 과용으로 이어질 수 있기 때문에 좋지 않습니다. If you want to know the actual numbers for these hard coded security limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+There are safety limits in place based on age you selected in this setting. 만약 높은 제한에 가까워지면 (최대bolus처럼) 한 단계를 올려야할 때입니다. 실제 나이보다 더 높게 나이를 선택하게 되면 인슐린창에 잘못된 인슐린 값을 (예를 들어, 소수점을 건너뛰는) 입력하게 되어 과용으로 이어질 수 있기 때문에 좋지 않습니다. If you want to know the actual numbers for these hard coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
 
 ## 일반
 
