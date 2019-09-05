@@ -15,7 +15,7 @@ Um eine Automatisierung zu erstellen, gibt man dieser einen Namen, mindestens ei
 
 Allgemein
 --------
-Es gibt ein paar Einschränkungen. Der Glukosewert muss zwischen 72 und 270 md/dl (2 und 15 mmol/l) liegen. Der Prozentsatz des Profils muss zwischen 70% und 130% liegen.
+Es gibt ein paar Einschränkungen. The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l. Der Prozentsatz des Profils muss zwischen 70% und 130% liegen.
 
 **Achtung:**
 
@@ -50,7 +50,7 @@ Du kannst eine oder mehrere Aktionen wählen:
 
 * tempöräres Ziel (TT) starten 
 
-   * muss zwischen 72 mg/dl (4 mmol) und 270 mg/dl (15 mmol) liegen
+   * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
    * funktioniert nur, wenn aktuell kein temporäres Ziel eingestellt ist
    
 * Temporäres Ziel (TT) stoppen
