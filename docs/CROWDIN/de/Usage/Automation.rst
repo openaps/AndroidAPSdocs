@@ -4,7 +4,7 @@ Diese Funktion wird mit der nächsten AndroidAPS Version (2.4) verfügbar sein.
 
 Was ist Automatisierung
 ================
-For the same frequent events, you might always have to change the same settings. Um zusätzliche Arbeit zu vermeiden, kann man versuchen das ganze zu automatisieren (sofern man es genau genug spezifizieren kann). Zum Beispiel kann man ein automatisiertes Hypo-Temp-Target erstellen, das bei einem niedrigen Blutzucker automatisch aktiviert wird. Oder wenn man sich in seinem Sportstudio befindet, könnte automatisch ein temporäres Ziel aktiviert werden. Bevor Du Automatisierung nutzt, solltest Du Dich mit `Temporären Zielen <./temptarget.html>`_ und/oder `Profil Wechsel <./Profiles.html>`_ auseinander gesetzt haben. 
+Für gleichbleibende, mehrfach auftretende Ereignisse, kann es sein, dass man immer dieselben Einstellungen ändern muss. Um zusätzliche Arbeit zu vermeiden, kann man versuchen das ganze zu automatisieren (sofern man es genau genug spezifizieren kann). Zum Beispiel kann man ein automatisiertes Hypo-Temp-Target erstellen, das bei einem niedrigen Blutzucker automatisch aktiviert wird. Oder wenn man sich in seinem Sportstudio befindet, könnte automatisch ein temporäres Ziel aktiviert werden. Bevor Du Automatisierung nutzt, solltest Du Dich mit `Temporären Zielen <./temptarget.html>`_ und/oder `Profil Wechsel <./Profiles.html>`_ auseinander gesetzt haben. 
 
 .. image:: ../images/Automation1.png
   :alt: Automation1
@@ -57,14 +57,14 @@ Temporäres Ziel bei niedrigem Blutzucker
 .. image:: ../images/Automation2.png
   :alt: Automation2
 
-This is made by a person that wants to get an automatically hypo temp target when having a hypo.
+Dies ist von einer Person erstellt, die ein automatischen Hypo Temp Target möchte bei einem Unterzucker.
 
-Lunch Time Temp Target
+Mittagsessen Temporäres Ziel
 ------------------------
 .. image:: ../images/Automation3.png
   :alt: Automation3
   
-These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
+Dieses Beispiel ist von einer Person, die ihr Mittagessen zu der gleichen Zeit am gleichen Ort in der Woche hat. Falls sie zur einer bestimmten Zeit an einem bestimmten Ort ist, bekommt sie ein niedrigeres temporäres Ziel (eating soon) während sie auf ihr Mittagsessen wartet. Aufgrund der "Und"-Verknüpfung passiert dies eben nur zu einer bestimmten Zeit UND an einem bestimmten Ort. Es funktioniert also nicht zu einer anderen Zeit am selben Standort oder zu derselben Zeit an einem anderem Standort (z.B. falls die Persion zuhause bleibt oder länger am Arbeitsplatz bleibt). 
 
 
 
