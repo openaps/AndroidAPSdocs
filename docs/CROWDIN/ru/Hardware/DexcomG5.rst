@@ -12,6 +12,13 @@ Dexcom G5
 При пользовании G5 с помощью модифицированного приложения Dexcom
 =========================================================
 * Скачайте приложение из `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, и выберите версию по вашим потребностям (mg/dl или mmol/l, G5).
+
+   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.4.
+   * Open https://play.google.com/store/search?q=dexcom%20g5 on your computer. Region will be visible in URL.
+   
+   .. image:: ../images/DexcomG5regionURL.PNG
+     :alt: Region in Dexcom G5 URL
+
 * Oстановите сенсор и удалите оригинальное приложение Dexcom.
 * Установите загруженное приложение
 * Запустите сенсор
