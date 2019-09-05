@@ -30,6 +30,13 @@ Dexcom G6
 При пользовании G6 с помощью модифицированного приложения Dexcom
 =========================================================
 * Скачайте приложение из `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, и выберите версию в соответствии с предпочтениями (mg/dl или mmol/l, G6).
+
+   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.4.
+   * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. Region will be visible in URL.
+   
+   .. image:: ../images/DexcomG6regionURL.PNG
+     :alt: Region in Dexcom G6 URL
+
 * Oстановите сенсор и удалите оригинальное приложение Dexcom.
 * Установите загруженное приложение
 * Запустите сенсор
