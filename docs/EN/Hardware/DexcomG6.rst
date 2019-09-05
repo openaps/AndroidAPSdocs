@@ -35,7 +35,8 @@ If using G6 with patched Dexcom app
    * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. Region will be visible in URL.
    
    .. image:: ../images/DexcomG6regionURL.PNG
-   
+     :alt: Region in Dexcom G6 URL
+
 * Stop sensor and uninstall the original Dexcom app, if not already done.
 * Install downloaded apk
 * Start sensor
