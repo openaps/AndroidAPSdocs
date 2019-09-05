@@ -27,16 +27,16 @@ Bedingung
 ------------
 Man kann zwischen verschiedenen Bedingungen wählen. Hier sind nur ein paar erwähnt, aber die meisten sind selbsterklärend und werden daher hier nicht beschrieben:
 
-* connect conditions: you can have several conditions and can connect them with 
+Verbundene Bedingunge: Du kannst mehrere Bedingungen verwenden und diese wie folgt verbinden: 
 
-   * "And"
-   * "Or"
-   * "Exclusive or" (which means that if one (and only one of the) conditions applies, the action(s) will happen)
+   * "Und"
+   * "Oder"
+   * Entweder oder (d.h. eine (und nur eine) der Bedingungen muss zutreffen, damit die Aktion ausgeführt wird)
    
-* Zeit vs. recurring time
+* Zeit vs. Wiederkehrende Zeit
 
-   * time =  single time event
-   * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
+   * Zeit = einmaliges Ereignis
+   * Wiederkehrende Zeit = etwas, das regelmäßig passiert (z.B.  einmal pro Woche, jeden Werktag etc.)
    
 * Standort: in "Konfiguration" (Automation) kan man auswählen, welchen Standort Service man möchte:
 
@@ -48,22 +48,22 @@ Aktion
 ------
 Du kannst eine oder mehrere Aktionen wählen: 
 
-* start temp target 
+* tempöräres Ziel (TT) starten 
 
-   * must be between 72 mg/dl and 270 mg/dl
-   * works only if there is no previous temp target
+   * muss zwischen 72 mg/dl (4 mmol) und 270 mg/dl (15 mmol) liegen
+   * funktioniert nur, wenn aktuell kein temporäres Ziel eingestellt ist
    
 * Temporäres Ziel (TT) stoppen
 * Benachrichtigung/Notiz
-* profile percentage
+* prozentuale Änderung des Profils
 
-   * must be between 70% and 130% 
-   * works only if the previous percentage is 100%
+   * muss zwischen 70% und 130% liegen 
+   * funktioniert nur, wenn aktuell das Profil mit 100% läuft
 
 Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte zu ändern** indem du auf die Standard-Werte klickst.
  
 .. image:: ../images/Automation_Default.png
-  :alt: Automation default vs. set values
+  :alt: Automation Standard-Werte vs.  eigene Werte
 
 Beispiele
 ==========
