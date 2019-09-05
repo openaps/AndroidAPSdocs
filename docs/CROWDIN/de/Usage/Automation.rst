@@ -9,50 +9,50 @@ For the same frequent events, you might always have to change the same settings.
 .. image:: ../images/Automation1.png
   :alt: Automation1
 
-How to use it
+Wie erstellt man eine Automatisierung
 ================
-To set up an automation, you have to give it a title, select at least one condition and one action. 
+Um eine Automatisierung zu erstellen, gibt man dieser einen Namen, mindestens eine Bedingung und mindestens eine auszuführende Aktion. 
 
-General
+Allgemein
 --------
-There are some limits. The glucose value has to be between 72 and 270 mg/dl or 2 and 15 mmol/l. The profile percentage has to be between 70 % and 130%.
+Es gibt ein paar Einschränkungen. Der Glukosewert muss zwischen 72 und 270 md/dl (2 und 15 mmol/l) liegen. Der Prozentsatz des Profils muss zwischen 70% und 130% liegen.
 
-**Please be careful:**
+**Achtung:**
 
-* **less than -2 means: -3 and lower (-4,-10, etc)**
-* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+* **weniger als -2 bedeutet: -3 und geringer (-4, -10, etc)**
+* **mehr als -2 bedeutet: -1 und größer (-1, 0, +10)**
 
 
-Condition
+Bedingung
 ------------
-You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
+Man kann zwischen verschiedenen Bedingungen wählen. Hier sind nur ein paar erwähnt, aber die meisten sind selbsterklärend und werden daher hier nicht beschrieben:
 
-* connect conditions: you can have several conditions and can connect them with "And", "Or" or "Exclusive or", which means that if one (and only one of the) conditions applies, the action(s) will happen. 
-* Time vs. recurring time: With time you select just a single time event; with a recurring time, you select something that happens once a week.
-* location: in the config builder (Automation), you can select which location service you want to use:
+* verknüpfte Bedingungen: man kann mehrer Bedingungen haben und diese mit "Und", "Oder" oder "Entweder Oder", was bedeutet das falls eine, (aber wirklich nur eine, nicht wenn beide) Bedingung eintritt, die Aktion erfolgt. 
+* Zeit vs. Wiederholungszeit: Mit Zeit bestimmt man genau einen nicht wiederholenden Zeitpunkt; mit Wiederholungszeit bestimmt man etwas, das sich wöchentlich wiederholt.
+* Standort: in "Konfiguration" (Automation) kan man auswählen, welchen Standort Service man möchte:
 
-  * Use passive location: AAPS only takes locations if other apps are requesting it
+  * Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
   * Netzwerkstandort: Bestimmung des Standorts mithilfe der Infrastruktur Deines Mobilfunkanbieters (teilweise recht ungenau)
-  * Use GPS location
+  * GPS Position
   
-Action
+Aktion
 ------
-You can choose one or more actions: 
+Du kannst eine oder mehrere Aktionen wählen: 
 
-* start temp target (has to be between 72 mg/dl and 270 mg/dl and only works if there is no previous temp target)
-* stop temp target
-* notification
-* profile percentage (has to be between 70% and 130% and only works if the previous percentage is 100%)
+* Temporäres Ziel (TT) starten (muss zwischen 72 mg/dl und 270 mg/dl sein und funktioniert nur falls noch kein vorheriges Ziel aktiviert ist)
+* Temporäres Ziel (TT) stoppen
+* Benachrichtigung/Notiz
+* Wechsel des Prozentsatz des Profils (muss zwischen 70% und 130% sein und funktioniert nur falls der vorherige Prozentsatz bei 100% liegt)
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte zu ändern** indem du auf die Standard-Werte klickst.
  
 
 
-Examples
+Beispiele
 ==========
-These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these.
+Dies sind nur Beispiele, keine Ratschäge. Du sollte diese nicht einfach kopieren ohne sicher zu sein, was Du wirklich tust und ohne zu wissen, warum man diese braucht.
 
-Low Glucose Temp Target
+Temporäres Ziel bei niedrigem Blutzucker
 ------------------------------------
 .. image:: ../images/Automation2.png
   :alt: Automation2
