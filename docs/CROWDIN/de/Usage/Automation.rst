@@ -6,8 +6,8 @@ Was ist Automatisierung
 ================
 Für gleichbleibende, mehrfach auftretende Ereignisse, kann es sein, dass man immer dieselben Einstellungen ändern muss. Um zusätzliche Arbeit zu vermeiden, kann man versuchen das ganze zu automatisieren (sofern man es genau genug spezifizieren kann). Zum Beispiel kann man ein automatisiertes Hypo-Temp-Target erstellen, das bei einem niedrigen Blutzucker automatisch aktiviert wird. Oder wenn man sich in seinem Sportstudio befindet, könnte automatisch ein temporäres Ziel aktiviert werden. Bevor Du Automatisierung nutzt, solltest Du Dich mit `Temporären Zielen <./temptarget.html>`_ und/oder `Profil Wechsel <./Profiles.html>`_ auseinander gesetzt haben. 
 
-.. image:: ../images/Automation1.png
-  :alt: Automation1
+.. image:: ../images/Automation_ConditionAction.png
+  :alt: Automation condition + action
 
 Wie erstellt man eine Automatisierung
 ================
@@ -27,8 +27,17 @@ Bedingung
 ------------
 Man kann zwischen verschiedenen Bedingungen wählen. Hier sind nur ein paar erwähnt, aber die meisten sind selbsterklärend und werden daher hier nicht beschrieben:
 
-* verknüpfte Bedingungen: man kann mehrer Bedingungen haben und diese mit "Und", "Oder" oder "Entweder Oder", was bedeutet das falls eine, (aber wirklich nur eine, nicht wenn beide) Bedingung eintritt, die Aktion erfolgt. 
-* Zeit vs. Wiederholungszeit: Mit Zeit bestimmt man genau einen nicht wiederholenden Zeitpunkt; mit Wiederholungszeit bestimmt man etwas, das sich wöchentlich wiederholt.
+* connect conditions: you can have several conditions and can connect them with 
+
+   * "And"
+   * "Or"
+   * "Exclusive or" (which means that if one (and only one of the) conditions applies, the action(s) will happen)
+   
+* Zeit vs. recurring time
+
+   * time =  single time event
+   * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
+   
 * Standort: in "Konfiguration" (Automation) kan man auswählen, welchen Standort Service man möchte:
 
   * Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
@@ -39,14 +48,22 @@ Aktion
 ------
 Du kannst eine oder mehrere Aktionen wählen: 
 
-* Temporäres Ziel (TT) starten (muss zwischen 72 mg/dl und 270 mg/dl sein und funktioniert nur falls noch kein vorheriges Ziel aktiviert ist)
+* start temp target 
+
+   * must be between 72 mg/dl and 270 mg/dl
+   * works only if there is no previous temp target
+   
 * Temporäres Ziel (TT) stoppen
 * Benachrichtigung/Notiz
-* Wechsel des Prozentsatz des Profils (muss zwischen 70% und 130% sein und funktioniert nur falls der vorherige Prozentsatz bei 100% liegt)
+* profile percentage
+
+   * must be between 70% and 130% 
+   * works only if the previous percentage is 100%
 
 Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte zu ändern** indem du auf die Standard-Werte klickst.
  
-
+.. image:: ../images/Automation_Default.png
+  :alt: Automation default vs. set values
 
 Beispiele
 ==========
@@ -65,6 +82,3 @@ Mittagsessen Temporäres Ziel
   :alt: Automation3
   
 Dieses Beispiel ist von einer Person, die ihr Mittagessen zu der gleichen Zeit am gleichen Ort in der Woche hat. Falls sie zur einer bestimmten Zeit an einem bestimmten Ort ist, bekommt sie ein niedrigeres temporäres Ziel (eating soon) während sie auf ihr Mittagsessen wartet. Aufgrund der "Und"-Verknüpfung passiert dies eben nur zu einer bestimmten Zeit UND an einem bestimmten Ort. Es funktioniert also nicht zu einer anderen Zeit am selben Standort oder zu derselben Zeit an einem anderem Standort (z.B. falls die Persion zuhause bleibt oder länger am Arbeitsplatz bleibt). 
-
-
-
