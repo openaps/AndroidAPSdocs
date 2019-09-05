@@ -23,7 +23,7 @@ If using G6 with xdrip+
 ===============================
 
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+В конфигуратоге (настройки AndroidAPS) выберите xdrip.
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
