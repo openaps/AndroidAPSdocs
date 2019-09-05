@@ -17,8 +17,8 @@ Začínáme
    :glob:
    
    Bezpečnost především <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Co je systém uzavřené smyčky <./Getting-Started/ClosedLoop.rst>
+   Co je systém uzavřené smyčky s AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    
    
 Co potřebuji 
@@ -49,7 +49,7 @@ Nastavení komponent
    :glob:
    
    CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
+   Nastavení xDrip <./Configuration/xdrip.md>
    Pumpy <./Hardware/pumps.rst>
    Telefony <./Hardware/Phoneconfig.rst>
    Nastavení Nightscoutu <./Installing-AndroidAPS/Nightscout.md>
@@ -79,7 +79,7 @@ Použití AndroidAPS
    Profily <./Usage/Profiles.md>
    Dočasné cíle <./Usage/temptarget.md>   
    Rozložené sacharidy <./Usage/Extended-Carbs.md>
-   Automation <./Usage/Automation.rst>
+   Automatizace <./Usage/Automation.rst>
   
  
 Obecné tipy 
@@ -110,7 +110,7 @@ Pokročilé
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automation with Android Auto App <./Usage/automation.md>
+   Automatizace pomocí aplikace Android Auto <./Usage/automation.md>
    
 
 Poradce při potížích

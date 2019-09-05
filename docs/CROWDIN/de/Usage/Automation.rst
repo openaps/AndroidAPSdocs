@@ -1,70 +1,84 @@
 Automatisierung
 ***************
-This feature will be available with the next AndroidAPS version (2.4). 
+Diese Funktion wird mit der nächsten AndroidAPS Version (2.4) verfügbar sein. 
 
-What is Automation
+Was ist Automatisierung
 ================
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. So brauchen  when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Für gleichbleibende, mehrfach auftretende Ereignisse, kann es sein, dass man immer dieselben Einstellungen ändern muss. Um zusätzliche Arbeit zu vermeiden, kann man versuchen das ganze zu automatisieren (sofern man es genau genug spezifizieren kann). Zum Beispiel kann man ein automatisiertes Hypo-Temp-Target erstellen, das bei einem niedrigen Blutzucker automatisch aktiviert wird. Oder wenn man sich in seinem Sportstudio befindet, könnte automatisch ein temporäres Ziel aktiviert werden. Bevor Du Automatisierung nutzt, solltest Du Dich mit `Temporären Zielen <./temptarget.html>`_ und/oder `Profil Wechsel <./Profiles.html>`_ auseinander gesetzt haben. 
 
-.. image:: ../images/Automation1.png
-  :alt: Automation1
+.. image:: ../images/Automation_ConditionAction.png
+  :alt: Automation condition + action
 
-How to use it
+Wie erstellt man eine Automatisierung
 ================
-To set up an automation, you have to give it a title, select at least one condition and one action. 
+Um eine Automatisierung zu erstellen, gibt man dieser einen Namen, mindestens eine Bedingung und mindestens eine auszuführende Aktion. 
 
 Allgemein
 --------
-There are some limits. The glucose value has to be between 72 and 270 mg/dl or 2 and 15 mmol/l. The profile percentage has to be between 70 % and 130%.
+Es gibt ein paar Einschränkungen. Der Glukosewert muss zwischen 72 und 270 md/dl (4 und 15 mmol/l) liegen. Der Prozentsatz des Profils muss zwischen 70% und 130% liegen.
 
-**Please be careful:**
+**Achtung:**
 
-* **less than -2 means: -3 and lower (-4,-10, etc)**
-* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+* **weniger als -2 bedeutet: -3 und geringer (-4, -10, etc)**
+* **mehr als -2 bedeutet: -1 und größer (-1, 0, +10)**
 
 
-Condition
+Bedingung
 ------------
-You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
+Man kann zwischen verschiedenen Bedingungen wählen. Hier sind nur ein paar erwähnt, aber die meisten sind selbsterklärend und werden daher hier nicht beschrieben:
 
-* connect conditions: you can have several conditions and can connect them with "And", "Or" or "Exclusive or", which means that if one (and only one of the) conditions applies, the action(s) will happen. 
-* Time vs. recurring time: With time you select just a single time event; with a recurring time, you select something that happens once a week.
-* location: in the config builder (Automation), you can select which location service you want to use:
+Verbundene Bedingunge: Du kannst mehrere Bedingungen verwenden und diese wie folgt verbinden: 
 
-  * Use passive location: AAPS only takes locations if other apps are requesting it
-  * Use network location: Location of your Wifi
-  * Use GPS location
+   * "Und"
+   * "Oder"
+   * Entweder oder (d.h. eine (und nur eine) der Bedingungen muss zutreffen, damit die Aktion ausgeführt wird)
+   
+* Zeit vs. Wiederkehrende Zeit
+
+   * Zeit = einmaliges Ereignis
+   * Wiederkehrende Zeit = etwas, das regelmäßig passiert (z.B.  einmal pro Woche, jeden Werktag etc.)
+   
+* Standort: in "Konfiguration" (Automation) kan man auswählen, welchen Standort Service man möchte:
+
+  * Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
+  * Netzwerkstandort: Bestimmung des Standorts mithilfe der Infrastruktur Deines Mobilfunkanbieters (teilweise recht ungenau)
+  * GPS Position
   
-Action
+Aktion
 ------
-You can choose one or more actions: 
+Du kannst eine oder mehrere Aktionen wählen: 
 
-* start temp target (has to be between 72 mg/dl and 270 mg/dl and only works if there is no previous temp target)
-* stop temp target
-* notification
-* profile percentage (has to be between 70% and 130% and only works if the previous percentage is 100%)
+* tempöräres Ziel (TT) starten 
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+   * muss zwischen 72 mg/dl und 270 mg/dl (4 mmol/l und 15 mmol/l) liegen
+   * funktioniert nur, wenn aktuell kein temporäres Ziel eingestellt ist
+   
+* Temporäres Ziel (TT) stoppen
+* Benachrichtigung/Notiz
+* prozentuale Änderung des Profils
+
+   * muss zwischen 70% und 130% liegen 
+   * funktioniert nur, wenn aktuell das Profil mit 100% läuft
+
+Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte zu ändern** indem du auf die Standard-Werte klickst.
  
+.. image:: ../images/Automation_Default.png
+  :alt: Automation Standard-Werte vs.  eigene Werte
 
-
-Examples
+Beispiele
 ==========
-These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these.
+Dies sind nur Beispiele, keine Ratschäge. Du sollte diese nicht einfach kopieren ohne sicher zu sein, was Du wirklich tust und ohne zu wissen, warum man diese braucht.
 
-Low Glucose Temp Target
+Temporäres Ziel bei niedrigem Blutzucker
 ------------------------------------
 .. image:: ../images/Automation2.png
   :alt: Automation2
 
-This is made by a person that wants to get an automatically hypo temp target when having a hypo.
+Dies ist von einer Person erstellt, die ein automatischen Hypo Temp Target möchte bei einem Unterzucker.
 
-Lunch Time Temp Target
+Mittagsessen Temporäres Ziel
 ------------------------
 .. image:: ../images/Automation3.png
   :alt: Automation3
   
-These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
-
-
-
+Dieses Beispiel ist von einer Person, die ihr Mittagessen zu der gleichen Zeit am gleichen Ort in der Woche hat. Falls sie zur einer bestimmten Zeit an einem bestimmten Ort ist, bekommt sie ein niedrigeres temporäres Ziel (eating soon) während sie auf ihr Mittagsessen wartet. Aufgrund der "Und"-Verknüpfung passiert dies eben nur zu einer bestimmten Zeit UND an einem bestimmten Ort. Es funktioniert also nicht zu einer anderen Zeit am selben Standort oder zu derselben Zeit an einem anderem Standort (z.B. falls die Persion zuhause bleibt oder länger am Arbeitsplatz bleibt). 

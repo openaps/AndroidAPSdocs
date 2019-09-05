@@ -11,10 +11,10 @@ Step 1: Build your own patched Librelink-App
 Step 2: Install and configure xDrip+ app
 ==============
 * If not already set up then download xdrip app and install one of the latest nightly builts from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
-* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+В xdrip перейдите в настройки > совместимость программ >локальная трансляция данных и выберите Включить (ON).
+В xdrip+ перейдите в настройки > совместимость программ > принимать назначения (Accept treatments) и выберите ВЫКЛ (OFF).
+Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
+В конфигуратоге (настройки AndroidAPS) выберите xdrip.
 * For settings in xDrip+ with screenshots see `xDrip+ settings page <../Configuration/xdrip.md>`__. There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
 
 Step 3: Configure AndroidAPS
