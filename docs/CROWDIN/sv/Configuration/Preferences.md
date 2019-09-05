@@ -6,7 +6,7 @@ This allows you to set a password in order to prevent accidental or unauthorised
 
 ## Patient age
 
-There are security limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). If you want to know the actual numbers for these hard coded security limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+There are safety limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). If you want to know the actual numbers for these hard coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
 
 ## General
 
