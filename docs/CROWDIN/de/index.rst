@@ -110,7 +110,7 @@ Für Fortgeschrittene
    :glob:
    
    Android Auto <./Usage/Android-auto.md>
-   Automation with Android Auto App <./Usage/automationwithapp.md>
+   Automation with 3rd party apps <./Usage/automationwithapp.md>
    
 
 Problembehandlung
