@@ -2,8 +2,8 @@
 ********************************
 Самым простым способом использования Eversense с AndroidAPS является установка модифицированного приложения <https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk>_(с предварительным удалением оригинального приложения).
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+**Предупреждение: после удаления старого приложения, ваши локальные данные старше одной недели будут утрачены!**
 
-To finally get your data to AndroidAPS, you need to install `ESEL <https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk>`_ and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the `Configuration Builder <../Configuration/Config-Builder.html>`_ in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
+Чтобы получать данные в AndroidAPS, необходимо установить `ESEL <https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk>_ и в ESEL активировать "Отправлять в AAPS и xDrip", а в качестве источника данных в Конфигураторе AndroidAPS указать "MM640g". Поскольку данные СК от Eversense могут быть зашумленными, рекомендуется включить "Smooth Data" (сглаживать данные), а не "Всегда использовать усредненную короткую дельту вместо простых данных".
 
-You can find another instruction for using xDrip with an Eversense `here <https://github.com/BernhardRo/Esel/tree/master/apk>`_.
+Еще одну инструкцию по использованию xDrip с Eversense можно найти по этому адресу: <https://github.com/BernhardRo/Esel/tree/master/apk>_.
