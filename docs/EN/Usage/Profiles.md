@@ -14,7 +14,7 @@ Within the "profile switch" you can choose two changes which used to be part of 
 
 When using timeshift be aware of the directions:
 * Timeshift +10 h: 12:00 -> 2:00
-* Timeshift -10 h: 12:00 -> 10:00
+* Timeshift -10 h: 12:00 -> 22:00
 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus.png)
 
