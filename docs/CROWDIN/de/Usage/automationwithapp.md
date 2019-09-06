@@ -1,6 +1,6 @@
 # Automatisierung mit Drittanbieter-App Android Automate
 
-**This article has been written before AndroidAPS version 2.4. There is an [automation plugin in AndroidAPS](./Automation.rst) itself with AndroidAPS version 2.4. For some, this here might be still useful, but should only be used by advanced users.**
+**Dieser Artikel wurde vor Erscheinen von AndroidAPS Version 2.4 geschrieben. Mittlerweile gibt es ein [automation plugin in AndroidAPS](./Automation.rst) selbst. Für einige ist dieser Artikel vielleicht dennoch nützlich, die Drittanbieter-App sollte jedochn nur von fortgeschrittenen Benutzern verwendet werden.**
 
 Da AndroidAPS ein hybrides Closed-Loop-System ist, muss der Benutzer noch einige Informationen von Hand eingeben (z.B. Bewegung, Spritz-Ess-Abstand ("eating soon"), Chillen auf dem Sofa...). Häufig wiederkehrende manuelle Eingaben können über externe Tools wie Automate oder IFTTT automatisiert werden, um die AndroidAPS-Funktionen zu erweitern.
 
