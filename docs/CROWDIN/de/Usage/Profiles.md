@@ -15,27 +15,27 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 * Wendet den gleichen Prozentsatz auf alle Parameter des Profils an. 
 * Wenn du ihn auf 130% setzt (was bedeutet, dass du eine 30% höhere Insulinresistenz hast), wird es die Basalrate um 30% erhöhen. Es senkt auch ISF und IC entsprechend (in diesem Beispiel werden sie durch 1,3 geteilt). 
 * Das wird an die Pumpe gesendet und ist dann die standardmässig verwendete Basalrate. 
-* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So for example separate percentage profiles can be set up for different stages of the hormone cycle.
+* Der Loop Algorithmus (Open Loop oder Closed Loop) wird von da an mit dem ausgewählten prozentualen Profil arbeiten. So können zum Beispiel unterschiedliche prozentuale Profile für die verschiedene Phasen des hormonellen Zyklus eingerichtet werden.
 
-## Timeshift
+## Zeitverschiebung
 
-* This moves everything round the clock by the number of hours entered. 
-* So for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
-* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
-  * Current time: 12:00
-  * **Positive** timeshift 
+* Verschiebt alles um die Anzahl an den eingegebenen Stunden. 
+* So kannst du zum Beispiel bei Nachtschichten angeben, wie viele Stunden später / früher du zu Bett gehst oder aufstehst.
+* Es geht immer um die Frage, die Profileinstellungen welcher Uhrzeit die aktuellen ersetzen sollen. Diese Uhrzeit muss um x Stunden verschoben werden. Achte daher auf die Richtung der Zeitverschiebung wie im folgenden Beispiel beschrieben: 
+  * Aktuelle Zeit: 12:00
+  * **Positive** Zeitverschiebung 
     * 2:00 **+10 h** -> 12:00
-    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive timeshift.
-  * **Negative** timeshift 
+    * Die Einstellungen von 2:00 Uhr werden anstelle der normalerweise um 12:00 Uhr programmierten Einstellungen verwendet.
+  * **Negative** Zeitverschiebung 
     * 22:00 **-10 h** -> 12:00
-    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative timeshift.
+    * Die Einstellungen von 22:00 Uhr werden anstelle der normalerweise um 12:00 Uhr programmierten Einstellungen verwendet.
 
 ![Richtung der Zeitverschiebung für Profile](../images/ProfileSwitch_PlusMinus.png)
 
 Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine sehr viel präzisere Berechnung der Vergangenheit und die Möglichkeit, Änderungen am Profil nachzuverfolgen.
 
-## Troubleshooting Profile Errors
+## Fehlerbehebung bei Profil Fehlern
 
-* 'Invalid profile' or 'Basal Profile not aligned to hours' error message will appear if you have any basal rates or I:C rates not on the hour. The DanaR and DanaRS pumps do not support changes on the half hour.
-* 'Received profile switch from NS but profile does not exist locally' or Go either to Treatments tab in AndoridAPS and select Profile Switch, 'remove' the date and time that was mentioned in the error message. Or go to your mlab collection, search in the treatments for profile switch and delete the date and time that was mentioned in the error message. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
-* 'DIA 3hr too short' error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a Profile Switch to continue.
+* Die Fehlermeldung "Ungültiges Profil" oder "Basal Profil nicht ausgerichtet auf Stunden" wird angezeigt, wenn du eine Basalrate oder I:K Faktoren abseits der vollen Stunden hast. Die Pumpen DanaR und DanaRS lassen Änderungen zur halben Stunde nicht zu.
+* Bei dem Fehler "Profilwechsel von NS empfangen aber Profil existiert lokal nicht" öffne die Registerkarte "Behandlungen" in AndroidAPS, wähle dort "Profilwechsel" aus und klicke "Löschen" bei dem Eintrag, der dem Datum und der Zeit der Fehlermeldung entspricht. Oder öffne die mlab Sammlung und suche in den Behandlungen nach "Profilwechsel". Lösche dann dort den Eintrag, der dem Datum und der Zeit der Fehlermeldung entspricht. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
+* Die Fehlermeldung "DIA 3 h zu kurz" erscheint, wenn die Wirkdauer des Insulins in deinem Profil mit einem Wert angegeben wird, von dem AndroidAPS annimmt, dass er nicht korrekt ist. Lies den Abschnitt [Auswahl des richtigen DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), überarbeite dein Profil und führe einen Profilwechsel aus, um es zu aktivieren.
