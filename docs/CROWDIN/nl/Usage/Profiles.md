@@ -8,16 +8,34 @@ Als je wel een tijdsduur invult bij de Profiel wissel, dan zal AAPS na afloop we
 
 Wanneer je lokale AAPS profielen gebruikt (Eenvoudig, Lokaal) dan moet je ook steeds een Profiel wissel uitvoeren nadat je iets aan jouw profiel hebt gewijzigd. Anders zullen je wijzigingen niet actief worden.
 
-Bij een Profiel wissel zijn er nog 2 (optionele) keuzes die je kunt invullen:
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
-* Percentage - hiermee verander je alle parameters met hetzelfde percentage. Als je het op 130% instelt (wat betekent dat je 30% meer insuline resistent bent), dan zullen je basaalstanden met 30 procent stijgen. Ook worden je KH ratio en ISF (insuline gevoeligheids factor) dienovereenkomstig verlaagd (in dit voorbeeld met een factor 1,3). De nieuwe waardes worden naar je pomp gestuurd en dat zijn vanaf dan je nieuwe basaalstanden. Het loop algoritme (open of closed loop) zal zijn aanpassingen doen bovenop het geselecteerde percentage profiel. Op deze manier kunnen vrouwelijke AAPS gebruikers bijvoorbeeld afzonderlijke percentages kiezen voor verschillende stadia van hun menstruatiecyclus.
-* Tijd verschuiving - hiermee verschuif je alles in de tijd, met het aantal uren dat je hebt ingevoerd. Het ingevulde getal kan positief of negatief zijn. Handig als je bijvoorbeeld wisselende werktijden hebt, en je jouw profiel wilt laten meeschuiven met hoeveel eerder/later je slapen gaat of wakker wordt.
+## Percentage
 
-Deze werkwijze om snapshots van het profiel te maken zorgt ervoor dat gegevens uit het verleden heel nauwkeurig kunnen worden berekend en dat gegevens over eerdere profielwijzigingen correct worden bewaard.
+* This applies the same percentage to all parameters. 
+* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example). 
+* It will be sent to the pump and then be the default basal rate. 
+* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
-<b>Profiel foutmeldingen oplossen</b>  
+## Timeshift
 
+* This moves everything round the clock by the number of hours entered. 
+* So for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
+* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
+  * Current time: 12:00
+  * **Positive** timeshift 
+    * 2:00 **+10 h** -> 12:00
+    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive timeshift.
+  * **Negative** timeshift 
+    * 22:00 **-10 h** -> 12:00
+    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative timeshift.
 
-* De foutmelding 'Ongeldig profiel' of 'Basaalstanden niet ingesteld op hele uren' zal verschijnen als je een aantal basaalstanden of KH ratio-waardes niet op hele uren hebt laten beginnen. De DanaR en DanaRS-pompen staan geen veranderingen op het halve uur toe.
-* Een melding 'Ongeldig profiel [datum+tijdstip]' Ga naar Behandelingen tab in AndoridAPS en selecteer Wisselen van profiel (kan even duren). Scroll naar de datum+tijdstip uit de foutmelding en kies 'Verwijder' voor die regel. Of ga naar je mlab database (Nightscout), zoek in de behandelingen naar profiel wissel en verwijder de datum en tijd die wordt genoemd in het foutbericht. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
-* Een 'DIA 3hr te kort' foutmelding zal verschijnen als je de DIA (duur insuline activiteit) in jouw profiel op een te lage waarde hebt gezet. AndroidAPS hanteert een minimumwaarde. Lees meer (in het Engels) over het [Selecteren van de juiste DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), pas je profiel aan naar een correcte waarde en doe een Profiel wissel om deze wijziging te activeren.
+![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus.png)
+
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+## Troubleshooting Profile Errors
+
+* 'Invalid profile' or 'Basal Profile not aligned to hours' error message will appear if you have any basal rates or I:C rates not on the hour. The DanaR and DanaRS pumps do not support changes on the half hour.
+* 'Received profile switch from NS but profile does not exist locally' or Go either to Treatments tab in AndoridAPS and select Profile Switch, 'remove' the date and time that was mentioned in the error message. Or go to your mlab collection, search in the treatments for profile switch and delete the date and time that was mentioned in the error message. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
+* 'DIA 3hr too short' error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a Profile Switch to continue.
