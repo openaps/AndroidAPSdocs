@@ -16,17 +16,17 @@ Within the "profile switch" you can choose two additional changes which used to 
 * It will be sent to the pump and then be the default basal rate. 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So for example separate percentage profiles can be set up for different stages of the hormone cycle.
  
- ## Timeshift
- * This moves everything round the clock by the number of hours entered. 
- * So for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
- * It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example:
-   * Current time: 12:00
-   * **Positive** timeshift 
-     * 2:00 **+10 h** -> 12:00
-     * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive timeshift.
-   * **Negative** timeshift
-     * 22:00 **-10 h** -> 12:00
-     * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative timeshift.
+## Timeshift
+* This moves everything round the clock by the number of hours entered. 
+* So for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
+* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example:
+  * Current time: 12:00
+  * **Positive** timeshift 
+    * 2:00 **+10 h** -> 12:00
+    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive timeshift.
+  * **Negative** timeshift
+    * 22:00 **-10 h** -> 12:00
+    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative timeshift.
 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus.png)
 
