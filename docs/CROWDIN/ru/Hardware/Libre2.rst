@@ -15,7 +15,7 @@ Step 2: Install and configure xDrip+ app
 В xdrip+ перейдите в настройки > совместимость программ > принимать назначения (Accept treatments) и выберите ВЫКЛ (OFF).
 Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 В конфигуратоге (настройки AndroidAPS) выберите xdrip.
-* For settings in xDrip+ with screenshots see `xDrip+ settings page <../Configuration/xdrip.md>`__. There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
+* For settings in xDrip+ with screenshots see `xDrip+ settings page <../Configuration/xdrip.md>`__. Существует раздел базовых настроек xDrip+ и для параметров Freestyle Libre xDrip+.
 
 Step 3: Configure AndroidAPS
 ==============
