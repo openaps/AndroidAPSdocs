@@ -13,11 +13,17 @@ V rámci "Přepnutí profilu" můžete ještě upravit následující údaje (co
 * % změna - toto uplatní stejná procenta na všechny parametry. Pokud toto pole nastavíte na 130% (což značí, že jste o 30% víc odolní na inzulín), navýší to váš bazál o 30%. Dále se také adekvátně sníží ISF - citlivost a IC - sacharidový poměr (děleno 1.3 v našem příkladě). Bazální dávka bude odeslaná do pumpy jako výchozí (údaje v pumpě se přepíší). Algoritmus smyčky (otevřené nebo uzavřené) bude dále pracovat nad zvoleným procentuálním profilem. Tak například mohou být samostatné procentuální profily nastavené pro různé fáze hormonálního cyklu.
 * Posun času - toto vše okamžitě posouvá o uvedený počet hodin. Například, pokud pracujete na noční směny, upravte počet hodin o kolik později/dříve jdete spát nebo se probouzíte.
 
-Tento mechanismus snímkování profilu umožňuje mnohem přesnější výpočty z minulosti a také umožňuje sledovat změny profilu.
+When using timeshift be aware of the directions:
 
-<b>Řešení chyb profilů</b>  
+* Timeshift +10 h: 12:00 -> 2:00
+* Timeshift -10 h: 12:00 -> 22:00
 
+![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus.png)
 
-* Chyby typu "Chybný profil" nebo "Bazální hodnoty nejsou zarovnané na celé hodiny" se zobrazí, pokud nemáte bazální dávky nebo inzulíno-sacharidové poměry zarovnané na celé hodiny. Pumpy DanaR a DanaRS nepodporují změny po půlhodinách.
-* Při chybě "Zjištěno přepnutí profilu z NS ale místní profil neexistuje" jako první možnost běžte do záložky Ošetření v AndroidAPS a zadejte "Přepnutí profilu", odstraňte datum a čas, který byl zmíněný v chybové hlášce. Jako druhá možnost běžte do vaší mlab databáze, hledejte v kolekci treatments přepnutí profilu a smažte datum a čas, který byl zmíněný v chybové hlášce. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
-* Chybová zpráva "DIA 3h je příliš krátké" se zobrazí, pokud trvání aktivity inzulínu ve vašem profilu má hodnotu, jejíž přesnosti AndroidAPS nevěří. Přečtěte si o Zvolení správného [DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) a upravte ho ve svém profilu a zase udělejte "Přepnutí profilu".
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+## Troubleshooting Profile Errors
+
+* 'Invalid profile' or 'Basal Profile not aligned to hours' error message will appear if you have any basal rates or I:C rates not on the hour. The DanaR and DanaRS pumps do not support changes on the half hour.
+* 'Received profile switch from NS but profile does not exist locally' or Go either to Treatments tab in AndoridAPS and select Profile Switch, 'remove' the date and time that was mentioned in the error message. Or go to your mlab collection, search in the treatments for profile switch and delete the date and time that was mentioned in the error message. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
+* 'DIA 3hr too short' error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a Profile Switch to continue.
