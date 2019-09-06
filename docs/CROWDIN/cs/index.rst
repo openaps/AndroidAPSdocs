@@ -110,7 +110,7 @@ Pokročilé
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automatizace pomocí aplikace Android Auto <./Usage/automation.md>
+   Automation with 3rd party apps <./Usage/automationwithapp.md>
    
 
 Poradce při potížích
