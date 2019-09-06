@@ -8,15 +8,27 @@ Als je wel een tijdsduur invult bij de Profiel wissel, dan zal AAPS na afloop we
 
 Wanneer je lokale AAPS profielen gebruikt (Eenvoudig, Lokaal) dan moet je ook steeds een Profiel wissel uitvoeren nadat je iets aan jouw profiel hebt gewijzigd. Anders zullen je wijzigingen niet actief worden.
 
-Bij een Profiel wissel zijn er nog 2 (optionele) keuzes die je kunt invullen:
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
-* Percentage - hiermee verander je alle parameters met hetzelfde percentage. Als je het op 130% instelt (wat betekent dat je 30% meer insuline resistent bent), dan zullen je basaalstanden met 30 procent stijgen. Ook worden je KH ratio en ISF (insuline gevoeligheids factor) dienovereenkomstig verlaagd (in dit voorbeeld met een factor 1,3). De nieuwe waardes worden naar je pomp gestuurd en dat zijn vanaf dan je nieuwe basaalstanden. Het loop algoritme (open of closed loop) zal zijn aanpassingen doen bovenop het geselecteerde percentage profiel. Op deze manier kunnen vrouwelijke AAPS gebruikers bijvoorbeeld afzonderlijke percentages kiezen voor verschillende stadia van hun menstruatiecyclus.
-* Tijd verschuiving - hiermee verschuif je alles in de tijd, met het aantal uren dat je hebt ingevoerd. Het ingevulde getal kan positief of negatief zijn. Handig als je bijvoorbeeld wisselende werktijden hebt, en je jouw profiel wilt laten meeschuiven met hoeveel eerder/later je slapen gaat of wakker wordt.
+## Percentage
 
-When using timeshift be aware of the directions:
-
-* Timeshift +10 h: 12:00 -> 2:00
-* Timeshift -10 h: 12:00 -> 22:00
+* This applies the same percentage to all parameters. 
+* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example). 
+* It will be sent to the pump and then be the default basal rate. 
+* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So for example separate percentage profiles can be set up for different stages of the hormone cycle.
+    
+    ## Timeshift
+    
+    * This moves everything round the clock by the number of hours entered. 
+    * So for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
+    * It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example:
+    * Current time: 12:00
+    * **Positive** timeshift 
+        * 2:00 **+10 h** -> 12:00
+        * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive timeshift.
+    * **Negative** timeshift 
+        * 22:00 **-10 h** -> 12:00
+        * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative timeshift.
 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus.png)
 
