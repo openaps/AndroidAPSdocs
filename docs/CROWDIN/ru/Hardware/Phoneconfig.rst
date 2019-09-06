@@ -7,5 +7,5 @@
    
    Список проверенных телефонов <../Getting-Started/Phones.md>
    Настройки Jelly Pro <./../../Usage/jelly.md>
-   Настройки Huawei <../../Usage/huawei.md>
+   Настройки Huuawei <../../Usage/huawei.md>и 
    
