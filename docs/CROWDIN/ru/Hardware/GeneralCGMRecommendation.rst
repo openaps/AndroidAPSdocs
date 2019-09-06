@@ -1,18 +1,18 @@
-General CGM recommendations
+Общие рекомендации по мониторингу
 *****************************
 
-CGM hygiene
+Гигиена мониторинга
 =============
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps. 
+Вне зависимости от того, какой у вас мониторинг - официальная система или самодельная, следует соблюдать определенные правила калибровок. 
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. В самодельных системах таких напоминаний не бывает, поэтому будьте осторожны если давно не делали калибровки.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* Убедитесь, что руки и комплект чисты.
+* Старайтесь калибровать на ровных значениях ГК (обычно достаточно 15-30 минут с плоской шкалой)
+* Избегайте калибровки при повышении или понижении уровня глюкозы. 
+* По возможности проводите «достаточно» калибровок – на официальных приложениях раз или два раза за сутки появляется предложение откалибровать систему. В самодельных системах таких напоминаний не бывает, поэтому будьте внимательны и не забывайте калибровать.
+* По возможности калибруйте, имея показания в нижнем диапазоне (4-5 ммоль/л или 72-90мг/дл.) а также в среднем (7-9 ммоль/л или 126-160мг/дл.), поскольку это обеспечивает более широкий охват диапазона калибровок.
 
-Setting sensor (G6)
+Установка сенсора (G6)
 ==============
 
 При установке сенсора не рекомендуется слишком сильно давить на манипулятор, чтобы избежать кровотечения. Нить сенсора не должна вступать в контакт с кровью.
@@ -35,7 +35,7 @@ Setting sensor (G6)
 
 Скачки данных
 ---------------
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Можно попробовать изменить настройки блокировки шума в xdrip (Настройки - Настройки между приложениями - Блокировка шумов), напр. "Блокировать Очень высокий шум и хуже".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
 
 
