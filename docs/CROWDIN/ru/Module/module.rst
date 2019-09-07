@@ -12,15 +12,15 @@ AndroidAPS - это не просто (самостоятельно собран
 
    Допустимо использовать только оригинальные, сертифицированные производителем расходные материалы, такие как инсулиновые картриджи, инфузионные наборы, пристреливатели к ним и т. п. Использование непроверенных или модифицированных материалов может вызвать неточность мониторинга и ошибки дозировки инсулина. Инсулин опасен при неверной дозировке - не рискуйте жизнью, пользуясь неумело переделанными компонентами.
 
-Necessary Modules
+Необходимые модули
 =====================
-Good individual dosage algorithm for your diabetes therapy
+Хороший индивидуальный алгоритм дозировки для вашей терапии диабета
 ------------------
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes.
-Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Хотя его нельзя сконструировать или купить, это, вероятно, самый недооцениваемый "модуль", существенно важный для системы. Когда алгоритму доверяется управлять диабетом, следует знать правильные настройки, чтобы не допустить серьезных ошибок.
+Даже если у вас еще нет других модулей, вы можете в сотрудничестве с вашим эндокринологом проверить и адаптировать свой профиль. 
+Большинство пользователей систем ИПЖ используют циркулярные суточные величины скорости базала (BR), гормональную чувствительность к инсулину ISF и соотношение инсулин-углеводы CR.
 
-The profile includes
+Профиль включает
 
 * BR (Basal rates)
 * ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
