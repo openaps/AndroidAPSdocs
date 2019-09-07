@@ -22,18 +22,18 @@ AndroidAPS - это не просто (самостоятельно собран
 
 Профиль включает
 
-* BR (Basal rates)
-* ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
-* CR (carb ratio) is gramms carbohydrate per one unit insulin
-* DIA (duration of insulin acting).
+* BR (скорость подачи базового инсулина)
+* ISF (коэффициент чувствительности к инсулину) определяет вашу величину понижения ГК в результате введения 1 единицы инсулина
+* CR (соотношение инсулин-углеводы) это количество граммов углеводов на единицу инсулина
+* DIA (продолжительность действия инсулина).
 
-Phone
+Телефон
 -------
-You need an Android smartphone with Google Android 6.0 or above. Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Вам нужен смартфон Android с операционной системой Google Android 6.0 или выше. Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
+Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+При обнаружении проблем с таблицей пишите на `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, для отправки телефонов/часов на тестирование пишите по адресу `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 Insulin pump
 --------
@@ -95,9 +95,9 @@ You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear
 
 Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
+Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+При обнаружении проблем с таблицей пишите на `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, для отправки телефонов/часов на тестирование пишите по адресу `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 xDrip +
 -------
