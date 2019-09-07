@@ -64,15 +64,15 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Источник данных гликемии
 ------------
-This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
-* Dexcom G4: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-* Dexcom G5: It works with xDrip+ app or patched Dexcom app
-* Dexcom G6: It works with xDrip+ app or patched Dexcom app
-* Libre 1: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-* Libre 2: It works with xDrip+ (no transmitter needed), but you have to build your own patched app (see `these instructions <https://github.com/user987654321resu/Libre2-patched-App>`_ for more details)
-* Eversense: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-* Enlite: quite complicated with a lot of extra stuff
+* Dexcom G4: Эти системы достаточно старые, но вы можете найти инструкции по их использованию в приложении xDrip+
+* Dexcom G5: Он работает с xDrip+ или модифицированным приложением Dexcom
+* Dexcom G6: Он работает с xDrip+ или модифицированным приложением Dexcom
+* Libre 1: Вам нужен передатчик, такой как Bluecon или MiaoMiao (сборка или покупка) и xDrip+ приложение
+* Libre 2: Он работает с xDrip+ (трансмиттер не требуется), но вам нужно построить собственное патч-приложение (см.`эти инструкции <https://github.com/user987654321resu/Libre2-patched-App>`_ для подробной информации)
+* Eversense: Он работает до сих пор только в сочетании с модифицированными приложениями ESEL и  Eversense-App (не работает с Dana RS и LineageOS, но Combo и Lineage OS работает прекрасно)
+* Enlite: довольно сложный с большим количеством дополнительных устройств
 
 
 Nightscout
