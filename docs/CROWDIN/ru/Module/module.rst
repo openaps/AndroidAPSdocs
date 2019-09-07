@@ -35,9 +35,9 @@ AndroidAPS - это не просто (самостоятельно собран
 
 При обнаружении проблем с таблицей пишите на `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, для отправки телефонов/часов на тестирование пишите по адресу `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
-Insulin pump
+Инулиновая помпа
 --------
-AndroidAPS **currently** works with 
+AndroidAPS **на данный момент** работает с 
 
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
