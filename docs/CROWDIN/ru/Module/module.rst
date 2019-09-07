@@ -77,17 +77,17 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Nightscout
 ------------
-Nightscout is a open source web application that can log and display your CGM data and AndroidAPS data and creates reports. You can find more information on the `website of the Nightscout project <http://www.nightscout.info/>`_. You can create your own Nightscout website `using Heroko <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. Вы можете найти больше информации на сайте проекта Nightscout <http://www.nightscout.info/>`_. Вы можете создать свой собственный сайт Nightscout `используя Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, используйте полуавтоматизированную установку Nightscout на `zehn.be <https://ns.10be.de/en/index.html>`_ или разместите его на вашем собственном сервере (для IT экспертов).
 
-Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
+Nightscout не зависит от других модулей. Он понадобится для выполнения цели 1.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`_.
+Дополнительную информацию о том, как настроить Nightscout для использования с AndroidAPS можно найти `здесь <../Installing-AndroidAPS/Nightscout.html>`_.
 
-AAPS-.apk file
+Файл AAPS-.apk
 ---------------
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
+Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
 
-Optional Modules
+Дополнительные модули
 ==================
 Смарт часы
 ---------------
