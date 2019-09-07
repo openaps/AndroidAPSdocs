@@ -51,11 +51,11 @@ AndroidAPS **на данный момент** работает с
 
 **Какая же самая лучшая помпа для работы с AndroidAPS?**
 
-The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Combo, Insight и старые Medtronic – это надежные помпы, которые можно использовать в системах замкнутого цикла. У Combo преимущество выбора инфузионной системы, так как в ней применен стандартный разъем типа luer. А батарею вы можете купить на любой заправочной станции или в круглосуточно работающем магазине, а при необходимости ее можно добыть из пульта дистанционного управления в номере отеля ;-).
 
-The advantages of the DanaR/RS vs. the Combo as the pump of choice however are:
+Преимущества DanaR/RS по сравнению с Combo в качестве более предпочтительной помпы таковы:
 
-- The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... С Combo не так просто. (Ситуация может измениться, когда Android 8.1 станет более популярным)
+- DanaR/RS сопрягается почти с любым телефоном с Android >= 5.1 без необходимости перепрошивки на Lineage OS. Если ваш телефон сломался, вы легко найдете телефон для замены, который работает с Dana R/RS... С Combo не так просто. (Ситуация может измениться, когда Android 8.1 станет более популярным)
 - Initial pairing is simpler with the Dana* RS. Но обычно это делается только один раз, так что это свойство важно, если хотите проверить новую функцию на других помпах.
 - So far the Combo works with screen parsing. В целом, это неплохо, но такая работа идет медленно. Для цикла ИПЖ это не имеет значения, так как он работает в фоновом режиме. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
 - The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. В ночное время вы, скорее всего, будете использовать TBR а не SMB.  Dana* RS может быть сконфигурирована так, что не будет ни вибрировать ни пищать.
