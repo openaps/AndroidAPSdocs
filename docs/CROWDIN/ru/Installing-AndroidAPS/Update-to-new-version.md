@@ -181,7 +181,7 @@
 
 ## Приложение установлено, но старая версия
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+Если вы успешно построили приложение, передали его на ваш телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг слияния в [инструкции по обновлению](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
 ## Ничего из вышеперечисленного не сработало
 
@@ -194,7 +194,7 @@ If you build the app successfully, transferred it to your phone and installed it
       ![Путь к месту хранения ключа](..../images/KeystorePath.PNG)
       
   
-  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Используйте существующий ключ и место хранения ключей.
+  4. Постройте приложение с нуля, как описано [здесь](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Используйте существующий ключ и место хранения ключей.
 4. Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
 
@@ -204,4 +204,4 @@ If you build the app successfully, transferred it to your phone and installed it
 
 Убедитесь, что удалены все файлы, связанные с Android Studio. Руководство можно найти в сети: <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+Установите Android Studio с нуля, как описано [здесь](../Installing-AndroidAPS/Building-APK#install-android-studio) и **не обновляйте gradle**.

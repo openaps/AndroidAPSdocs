@@ -17,19 +17,19 @@
 
 ### Эта статья разделена на две части.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
+* В обзорной части находится объяснение того, какие шаги необходимы для создания файла APK.
+* В пошаговой инструкции вы найдете снимки экранов установки. Поскольку версии Android Studio - среды разработки программного обеспечения, в которой мы будем создавать APK - меняются очень быстро, точного соответствия вашей сборке вы не увидите, но общее представление о том, как это делается, получите. Android Studio работает на Windows, Mac OS X и Linux, и между каждой платформой возможны незначительные различия. Если вы обнаружите, что что-то важное выполняется неправильно или отсутствует, сообщите в группе facebook "AndroidAPS users" или в чате Gitter [Android APS](https://gitter.im/MilosKozak/AndroidAPS) или [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) чтобы мы могли устранить проблему.
 
 ## Главный экран
 
 В целом, шаги, необходимые для создания файла APK таковы:
 
-* Install git
-* Install and setup Android Studio.
-* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
-* Open the cloned project in Android Studio as active project.
-* Build the signed APK.
-* Transfer the signed APK to your smartphone.
+* Установить git
+* Установить и настроить Android Studio.
+* Используя Git  клонировать исходный код центрального репозитория Github, где разработчики разместили код приложения.
+* В Android Studio открыть клонированный проект в качестве активного.
+* Построить подписанный APK.
+* Переместите подписанный APK на ваш телефон.
 
 ## Пошаговое руководство
 
@@ -37,12 +37,12 @@
 
 ## Установите Android Studio
 
-* Install git 
+* Установить git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - just install a package git via package manager of your distribution
-* Install [Android Studio](https://developer.android.com/studio/install.html).
-* Setup Android Studio during first start
+  * Linux - просто установите пакет Git через менеджер пакетов вашего дистрибутива
+* Установите [Android Studio](https://developer.android.com/studio/install.html).
+* Настройте Android Studio во время первого запуска
 
 Выберите "Не импортировать настройки", так как вы не использовали их раньше.
 
@@ -78,11 +78,11 @@ Android Studio загружает много программных компон
 
 ![Снимок экрана 9](../images/Installation_Screenshot_09.png)
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+* Аплодисменты, аплодисменты. Установка Android Studio завершена и можно приступить к клонированию исходного кода. Можно сделать короткий перерыв.
 
 ## Скачиваем код и дополнительные компоненты
 
-* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
+* Используйте клон Git в Android Studio, как показано на снимках экрана ниже. Выберите "Извлечь проект из системы управления версиями" при помощи Git в качестве конкретной системы управления версиями.
 
 ![Снимок экрана 10](../images/Installation_Screenshot_10.png)
 
@@ -108,8 +108,8 @@ Android Studio начнет клонирование. Не нажимайте н
 
 ![Снимок экрана 17](../images/Installation_Screenshot_17.png)
 
-* Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Отлично, теперь у нас есть своя копия исходного кода и мы готовы начать сборку.
+* Теперь мы приближаемся к первому сообщению об ошибке. К счастью, Android Studio будет сразу предлагать нам решения.
 
 Нажмите "Установить недостающую платформу(ы) и синхронизировать проект", так как Android Studio нуждается в установке отсутствующей платформы.
 
@@ -183,9 +183,9 @@ Android Studio рекомендует обновить систему gradle. **
 
 ## Создание подписанного APK
 
-В меню выберите "Build"(выполнить сборку) и затем "Generate Signed Bundle / APK..."(создать подписанный пакет программ). (Меню в Android Studio изменилось с сентября 2018 года. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+В меню выберите "Build"(выполнить сборку) и затем "Generate Signed Bundle / APK..."(создать подписанный пакет программ). (Меню в Android Studio изменилось с сентября 2018 года. В более старых версиях выберите в меню «Построить» и «Генерировать подписанный APK...».)
 
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Это необходимо потому, что Android имеет правило, согласно которому принимается только подписанный код для запуска по соображениям безопасности. Для получения дополнительной информации по этой теме перейдите по ссылке [здесь](https://developer.android.com/studio/publish/app-signing.html#generate-key). Безопасность - это глубокая и сложная тема, нам она сейчас не нужна.
+Подписание означает, что вы подписываете ваше созданное приложение, но цифровым способом, как цифровым отпечатком пальца в самом приложении. Это необходимо потому, что Android имеет правило, согласно которому принимается только подписанный код для запуска по соображениям безопасности. Для получения дополнительной информации по этой теме перейдите по ссылке [здесь](https://developer.android.com/studio/publish/app-signing.html#generate-key). Безопасность - это глубокая и сложная тема, нам она сейчас не нужна.
 
 ![Снимок экрана 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -197,23 +197,23 @@ Signing means that you sign your generated app but in a digital way as a kind of
 
 ![Снимок экрана 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Нажмите "Create new" (cоздать новый...) для создания магазина ключей. В этом случае магазин ключей является всего лишь файлом, в котором хранится информация о цифровой подписи. Он зашифрован и информация защищена паролями. Мы предлагаем хранить его в вашей домашней папке и помнить пароли, но если потеряете эту информацию, то просто должны создать новую. Самое лучшее - бережно хранить эту информацию.
 
-![Screenshot 41](../images/Installation_Screenshot_41.png)
+![Снимок экрана 41](../images/Installation_Screenshot_41.png)
 
-* Fill in the information for the next dialog. 
-  * Key store path: is the path to the keystore file
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
-  * You can let the validity at the default of 25 years.
-  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
+* Заполните информацию для следующего диалога. 
+  * Путь к хранилищу ключа: путь к файлу магазина ключей
+  * Поля пароля для хранения ключей даются, чтобы обезопасить ввод от опечаток.
+  * Alias - это имя для нужного вам ключа. Вы можете оставить его по умолчанию или дать ему имя, которое придумаете.
+  * Поля пароля под ключом нужны для самого ключа. Как всегда, дважды проверьте ошибки при вводе.
+  * Вы можете оставить срок валидности по умолчанию 25 лет.
+  * Обязательны к заполнению только имя и фамилия, но можно заполнить остальную информацию. Затем нажмите "OK".
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
+![Снимок экрана 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Заполните информацию последнего диалога в этой серии диалогов и нажмите "Далее".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+![Снимок экрана 43](../images/Installation_Screenshot_43.png)
 
 Выберите "full" (полный) в качестве атрибута для сгенерированного приложения. Выберите V1 "Jar Signature" (V2 необязательно) и нажмите "Finish" (закончить). В дальнейшем может пригодиться следующая информация.
 
