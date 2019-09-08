@@ -1,70 +1,70 @@
 # Nightscout
 
-## Security considerations
+## Sicherheitsüberlegungen
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Neben der Erstellung von Berichten, kann Nightscout auch genutzt werden, um AndroidAPS zu steuern. So kannst Du z.B. temporäre Ziele setzen oder Kohlenhydrate eingeben. Diese Informationen werden von AAPS übernommen, das dann entsprechend reagiert. Daher macht es Sinn, über die Absicherung Deiner Nightscout-Seite nachzudenken.
 
 ### Nightscout Einstellungen
 
-You can deny public access to your Nightscout site by using [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+Du kannst den allgemeinen Zugriff auf Deine Nightscout-Seite mittels [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles) (Benutzer mit verschiedenen Zugriffsrechten) unterbinden.
 
 ### AndroidAPS Einstellungen
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder.html#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
+In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzuladen (keine Synchronisierung). Wenn Du diese Funktion wählst, wird AAPS keine Änderungen von Nightscout (z.B. temporäre Ziele oder Kohlenhydrateingaben) übernehmen. Falls Du ein [NS Profil](../Configuration/Config-Builder.html#ns-profile) nutzt, werden die Profildaten dennoch weiter zwischen AAPS und Nightscout synchronisiert.
 
-* Tap 3-dot menu on top right corner on your AAPS homescreen.
-* Select "Preferences".
-* Scroll down and tap "Advanced settings".
-* Activate "NS upload only
+* Tippe oben rechts auf dem Startbildschirm auf das 3-Punkte-Menü.
+* Klicke auf "Einstellungen".
+* Scrolle nach unten und tippe auf "Erweiterte Einstellungen".
+* Wähle "Zu Nightscout nur hochladen (keine Synchronisation)".
 
-![Nightscout upload only](../images/NSsafety.png)
+![Nightscout nur Daten hochladen](../images/NSsafety.png)
 
-### Further security settings
+### Weitere Sicherheitseinstellungen
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.rst).
+Halte Dein Smartphone aktuell wie es in den [Sicherheitshinweisen](../Getting-Started/Safety-first.rst) beschrieben ist.
 
-## Manual Nightscout setup
+## Manuelles Nightscout-Setup
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, gehe zum [Nightscout Wiki](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku). Dort findest du detaillierte Informationen zur Einrichtung. Die unten stehenden Hinweise beziehen sich auf die Einstellungen, die du zusätzlich in deiner Nightscout Seite vornehmen musst. Deine Nightscout Seite muss mindestens unter Version 10 (wird als 0.10... angezeigt) laufen. Prüfe daher, ob du tatsächlich die [letzte Version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) verwendest. Andersfalls bekommst du in der AAPS App eine Fehlermeldung. Manche Looper haben festgestellt, dass durch das Loopen mehr Speicherplatz verbraucht wird, als Azure kostenfrei zur Verfügung stellt. Daher ist Heroku die bessere Wahl.
 
-* Go to https://herokuapp.com/
+* Gehe zu https://herokuapp.com/
 
-* Click your App Service name.
+* App-Namen auswählen
 
-* Click Application settings (azure) or Settings > "Reveal Config Variables (heroku)
+* Klicke auf "Application settings" (Azure) bzw. "Settings" > "Reveal Config Variables" (Heroku).
 
-* Add or edit the variables as follows:
+* Variablen hinzufügen oder wie folgt ändern:
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Ein Alarm bei [niedrigem Pumpen-Batteriestand](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring) in % kann wie folgt aktiviert werden: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Optional: The following 'timers' can be set for the coloring in the AAPS careportal: 
-    * `BAGE_WARN` = `480` (Warning after x hours since last Battery Changed Event in Careportal)
-  * `BAGE_URGENT` = `504` (Urgent warning after x hours since last Battery Changed Event in Careportal)
-  * `CAGE_WARN` = `40` (Warning after x hours since last Cannula Changed Event in Careportal)
-  * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
-  * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
-  * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * Optional: Die folgenden 'Timer' können für Farbhinweise im AAPS-Careportal eingestellt werden: 
+    * `BAGE_WARN` = `480` (Warnung nach x Stunden seit dem letzten Batteriewechsel-Event im Careportal)
+  * `BAGE_URGENT` = `504` (Dringende Warnung nach x Stunden seit dem letzten Batteriewechsel-Event im Careportal)
+  * `CAGE_WARN` = `40` (Warnung nach x Stunden seit dem letzten Kanülenwechsel-Event im Careportal)
+  * `CAGE_URGENT` = `48` (Dringende Warnung nach x Stunden seit dem letzten Kanülenwechsel-Event im Careportal)
+  * `IAGE_WARN` = `144` (Warnung nach x Stunden seit dem letzten Reservoirwechsel-Event im Careportal)
+  * `IAGE_URGENT` = `192` (Dringende Warnung nach x Stunden seit dem letzten Reservoirwechsel-Event im Careportal)
+  * `SAGE_WARN` = `160` (Warnung nach x Stunden seit dem letzten CGM-Sensor-Setzen-Event im Careportal)
+  * `SAGE_URGENT` = `168` (Dringende Warnung nach x Stunden seit dem letzten CGM-Sensor-Setzen-Event im Careportal)
 
 ![Azure](../../images/nightscout1.png)
 
-* Click "Save" at the top of the panel.
+* Klicke auf "Speichern" am oberen Rand des Fensters.
 
-## Semi-automated Nightscout setup
+## Halb-automatische Nightscout Einrichtung
 
-This service is offered by fellow looper Martin Schiftan free of charge at the moment. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+Dieser Service wird von Looper Martin Schiftan derzeit kostenlos angeboten. Wenn Dir das Angebot gefällt, kannst Du ihm eine kleine Spende zukommen lassen. Den Link findest Du links in der Navigation auf seiner Seite.
 
-**Benefits**
+**Vorteile**
 
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The server is located in Germany.
+* Du kannst Nightscout mit ein paar Klicks einrichten und direkt verwenden. 
+* Deutlich weniger manueller Aufwand, da Martin versucht, die Administration so weit als möglich zu automatisieren.
+* Alle Einstellungen können über eine benutzerfreundliche Web-Oberfläche vorgenommen werden. 
+* Eine automatisierte Basalratenüberprüfung mit Autotune ist ebenfalls enthalten. 
+* Der Server steht in Deutschland.
 
 <http://ns.10be.de/en/index.html>
