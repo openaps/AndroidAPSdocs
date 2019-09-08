@@ -1,14 +1,14 @@
 
-Export & import settings
-***********************************
+Экспорт/импорт настроек
+************************************
 
-* **Export settings** on your old phone
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
-  * File location will be shown
+* **Выполнить Экспорт настроек на вашем старом телефоне
+  * Сэндвич-меню (в верхнем левом углу экрана)
+  * Обслуживание
+  * Экспортировать настройки
+  * Будет показано местоположение файла
   
-  .. image:: ../images/AAPS_ExportSettings.png
+  .. изображение:: ../images/AAPS_ExportSettings.png
   :alt: AndroidAPS export settings
   
   
@@ -16,8 +16,8 @@ Export & import settings
 * **Transfer** settings from old to new phone using the file location shown during export
 * **Install AndroidAPS** on the new phone.
 * **Import settings** on your new phone
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
+  * Сэндвич-меню (в верхнем левом углу экрана)
+  * Обслуживание
   * Import settings
 * **Note for Dana RS users:**
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Выполните сопряжение нового телефона и помпы вручную.
