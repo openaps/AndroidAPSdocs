@@ -39,13 +39,13 @@ AndroidAPS - это не просто (самостоятельно собран
 --------
 AndroidAPS **на данный момент** работает с 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
-- `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (дополнительно необходимо: Ruffy app, LineageOS или Android 8.1 на вашем телефоне)
+- `Помпа Accu-Chek Insight <./Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_  
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)
+- `некоторые старые помпы Medtronic <./Configuration/MedtronicPump.html>`_ начиная с [предстоящей[ версии 2.4 (дополнительно необходимо: RileyLink/Gnarl аппаратное обеспечение, телефон на Android с чипом Bluetooth LE / BLE-chipset)
 
-**Other pumps** that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <../Getting-Started/Future-possible-Pump-Drivers.html>`_ page.
+**Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`_ странице.
 
 Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>_, делитесь информацией о вашем, если не указан.
 
