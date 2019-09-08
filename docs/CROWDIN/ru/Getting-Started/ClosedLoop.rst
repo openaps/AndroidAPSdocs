@@ -38,7 +38,7 @@ Compatible `pumps <../Hardware/pumps.html>`_ are:
 * some old Medtronic pumps (as of version 2.4)
 
 OpenAPS
--------
+---------
 `OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
 
 Compatible pumps are:
