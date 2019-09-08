@@ -84,8 +84,8 @@ Nightscout не зависит от других модулей. Он понад
 Дополнительную информацию о том, как настроить Nightscout для использования с AndroidAPS можно найти `здесь <../Installing-AndroidAPS/Nightscout.html>`_.
 
 Файл AAPS-.apk
----------------
-Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
+-----------------------
+Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Инструкции `здесь <./../Installing-AndroidAPS/Building-APK.html>`_.  
 
 Дополнительные модули
 ====================
@@ -93,7 +93,7 @@ Nightscout не зависит от других модулей. Он понад
 ---------------
 Вы можете выбрать смарт-часы с Android Wear 1.x и выше. Большинство пользователей носят Sony Smartwatch 3 (SWR50), поскольку это единственные смарт-часы, которые могут получать данные от Dexcom G5/G5, когда телефон вне доступа. Некоторые другие часы могут быть пропатчены как самостоятельный коллектор (см. `эту документацию <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ подробно).
 
-Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
+Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Есть разные часы для использования с AndroidAPS, которые вы можете найти `здесь <../Configuration/Watchfaces.html>`_.
 
 Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>.
 
@@ -111,7 +111,7 @@ xDrip +
    :maxdepth: 1
    :glob:
    
-   Sample Setup <../Getting-Started/Sample-Setup.html>
+   Пример системы <../Getting-Started/Sample-Setup.html>
  
   
 Что делать во время ожидания модулей
@@ -121,4 +121,4 @@ xDrip +
 Вы можете продолжать читать документацию здесь <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>, общаться с другими пользователями в сети или offline, узнавать мнение людей (при этом учитывая, что не все рекомендации вам подходят).
 
 **Готово?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
+Если у вас собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать `Описание Целей<../Usage/Objectives.html>`_ (Обзор) перед каждой новой целью и настроить `компоненты <./index.html#component-setup>`_.
