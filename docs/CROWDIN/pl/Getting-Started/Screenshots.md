@@ -49,7 +49,7 @@ SUPER BOLUS polega na tym, że dawka insuliny bazowej jak byłaby podana przez n
 
 ** Sekcja C: ** pokazuje różne składowe, które zostały użyte do obliczenia bolusa. Możesz odznaczyć te pola, których nie chcesz uwzględnić w obliczeniach, jednak normalnie nie powinieneś tego robić.
 
-<b>Kombinacje COB i IOB i co one oznaczają</b>
+### Combinations of COB and IOB and what they mean
 
 <ul>
     <li>If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account</li>
@@ -57,66 +57,76 @@ SUPER BOLUS polega na tym, że dawka insuliny bazowej jak byłaby podana przez n
     <li>If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 </ul>
 
-Jeśli po bolusie na posiłek pojawi się dodatkowy pokarm (np. dodatkowy deser), pomocne może być odznaczenie wszystkich pól. W ten sposób dodawane są tylko nowe węglowodany, ponieważ główny posiłek niekoniecznie zostanie wchłonięty, więc IOB nie będzie dokładnie pasował do COB wkrótce po bolusie posiłkowym.
+If you bolus for additional food shortly after a meal bolus (i.e. additional desert) it can be helpful to untick all boxes. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+
+### Slow carb absorption
+
+As of version 2.4, AAPS warns if slow carb absorption is detected. There will be an additional text on the confirmation screen after calculator usage. The risk is that COB would be overestimated and to much insulin might be given.
+
+![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+
+In this example 41% of time [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) was used instead of value calculated from deviations.
+
+In this case you should think about pressing "Cancel" and calculate again with COB unticked. If from your manual calculation you see the need for a correction bolus enter it manually. But be careful not to overdose!
 
 ## Profil insuliny
 
 ![Profil insuliny](../images/Screenshot_insulin_profile.png)
 
-Pokazuje profil aktywności insuliny, którą wybrałeś. Linia FIOLETOWA pokazuje ile insuliny pozostaje po wstrzyknięciu, ponieważ z czasem insulina się rozkłada, a linia NIEBIESKA pokazuje aktywność insuliny.
+This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
 
-Zwykle używasz jednego z profili Oref - ważne jest, aby pamiętać, że rozkład insuliny ma długi "ogon". Jeśli używałeś wcześniej pompy tradycyjnie to, prawdopodobnie przywykłeś do założenia, że insulina rozpada się przez około 3,5 godziny. Jednakże, w przypadku pętli ten długi "ogon" ma znaczenie a obliczenia są znacznie dokładniejsze, te małe ilości sumują się, gdy są poddawane rekursywnym obliczeniom w algorytmie AndroidAPS.
+You will normally be using one of the Oref profiles - and the important thing to note is that the decay has a long tail. If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
 
-Aby uzyskać więcej szczegółów na temat różnych rodzajów insuliny, ich profili aktywności i wyjaśnienia dlaczego wszystko to ma znaczenie, możesz przeczytać artykuł na ten temat tutaj [ Zrozumienie nowych krzywych IOB na podstawie krzywych aktywności wykładniczej ](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-Możesz przeczytać również świetny artykuł na ten temat na blogu: [Dlaczego regularnie mylimy się z czasem działania insuliny (DIA) i dlaczego to ma znaczenie...](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-I jeszcze więcej na: [Wykładnicze krzywe insuliny + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Status pompy
 
 ![Status pompy](../images/Screenshot_pump_Combo.png)
 
-Tutaj widzimy status pompy insulinowej - w tym przypadku Accu-Chek Combo. Wyświetlane informacje są oczywiste. Dłuższe naciśnięcie przycisku HISTORY odczyta dane z historii pompy, w tym profil bazowy. Pamiętaj jednak, że tylko jeden profil podstawowy jest obsługiwany przez pompę Combo.
+Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
 
 ## Portal opieki
 
 ![Portal opieki](../images/Screenshot_care_portal.png)
 
-To powtórzenie funkcji dostępnych na ekranie Nightscout pod symbolem "+", które umożliwiają dodawanie notatek do twoich rejestrów. Funkcje takie jak wprowadzenie kiedy zmieniono wkłucie czy zbiornik z insuliną powinny być oczywiste. ALE ta sekcja nie wydaje żadnych poleceń twojej pompie. Jeśli więc dodasz bolus za pomocą tego ekranu, po prostu zanotujesz to w swoim rejestrze Nightscout, ale pompa nie będzie instruowana, aby podać bolus.
+This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
 
 ## Loop, MA, AMA, SMB
 
-Zazwyczaj nie musisz się o to martwić, tutaj pokazywane są wyniki algorytmu OpenAPS, który uruchamia się za każdym razem, gdy system otrzymuje nowy odczyt z CGM. Są one omówione w innych miejscach.
+You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
 
 ## Profil
 
 ![Profil](../images/Screenshot_profile.png)
 
-AndroidAPS można uruchomić przy użyciu różnych konfiguracji profilu. Zazwyczaj - tak jak tu pokazano - profil Nightscout zostaje pobrany za pomocą wbudowanego klienta Nighscout i jest on wyświetlany tutaj w formie tylko do odczytu. Jeśli chcesz wprowadzić jakieś zmiany, skorzystaj z interfejsu użytkownika na swojej stronie Nightscout, a następnie użyj polecenia "Aktywuj profil" w aplikacji AndroidAPS, aby ponownie pobrać profil. Dane takie jak profil bazowy (baza) zostaną następnie automatycznie zmienione w twojej pompie.
+AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a "Switch Profile" on your AndroidAPS rig to refresh the download. Data such as the basal profile would then be automatically copied over to your pump.
 
-** DIA: ** oznacza czas działania insuliny i zostało to omówione powyżej w sekcji dotyczącej profili insulinowych.
+**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
 
-** IC: ** współczynnik insuliny do węglowodanów. Ten profil ma wiele różnych wartości ustawionych dla różnych pór dnia.
+**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
 
-** ISF: ** to współczynnik wrażliwości na insulinę - ilość, o którą jedna jednostka insuliny obniży stężenie glukozy we krwi przy założeniu, że nic innego się nie zmieni.
+**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
 
-** Baza: ** jest profilem bazowym zaprogramowanym w pompie.
+**Basal:** is the basal profile programmed into your pump.
 
-** Target: ** to wartość docelowa poziomu stężenia glukozy we krwi, która przez cały czas ma być ustawiana. Jeśli chcesz, możesz ustawić różne poziomy dla różnych okresów dnia. Możesz także ustawić górny i dolny zakres, tak aby system zaczął dokonywać zmian tylko wtedy, gdy przewidywana wartość stężenia glukozy we krwi wychodzi poza ten przedział. Jeśli to zrobisz, wtedy system będzie reagował wolniej i jest mało prawdopodobne, aby osiągnąć stabilne stężenie cukru we krwi.
+**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
 ## Treatment, xDrip, NSClient
 
-Są to po prostu dzienniki terapii (bolusy i węglowodany), wiadomości z xDrip i wiadomości wysyłane do Nightscout za pośrednictwem wbudowanego klienta Nightscout. Zazwyczaj nie musisz się tu o nic martwić, chyba że wystąpi jakiś problem.
+These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 
 ## Kreator konfiguracji
 
-![Konfiguracja](../images/Screenshot_config_builder.png)
+![Config Builder](../images/Screenshot_config_builder.png)
 
-To miejsce gdzie przygotujesz konfigurację aplikacji AndroidAPS i urządzeń. Ten zrzut ekranu prezentuje typową platformę wykorzystującą pompę Combo, CGM Dexcom G5 zarządzany poprzez xDrip+, działający z insuliną NovoRapid z profilem Oref i podłączony do serwera opartego na chmurze Nightscout.
+This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
-Pole wyboru po prawej stronie określa, czy dany moduł będzie wyświetlany na górnym pasku menu (patrz sekcja A na ekranie głównym), a symbol małego kółka zębatego umożliwia dostęp do ustawień tego modułu, jeśli takie istnieją.
+The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
 ## Ustawienia i preferencje
 
-W prawym górnym rogu paska nawigacyjnego znajdują się trzy małe pionowe kropki. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
