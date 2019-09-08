@@ -105,7 +105,7 @@ xDrip +
 
 Пример настройки
 ============
-If you want to get a step by step example, you might want to look at a sample setup. The first sample setup is quite old, but should be still up-to-date.
+Если вам нужна подробная инструкция, здесь приводится образец системы в сборе. Первая образцовая система довольно старая, но все еще актуальна.
 
 .. toctree::
    :maxdepth: 1
