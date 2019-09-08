@@ -49,7 +49,7 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 
 **Section C:** shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
-<b>Combinations of COB and IOB and what they mean</b>
+### Combinations of COB and IOB and what they mean
 
 <ul>
     <li>If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account</li>
@@ -58,6 +58,16 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 </ul>
 
 If you bolus for additional food shortly after a meal bolus (i.e. additional desert) it can be helpful to untick all boxes. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+
+### Slow carb absorption
+
+As of version 2.4, AAPS warns if slow carb absorption is detected. There will be an additional text on the confirmation screen after calculator usage. The risk is that COB would be overestimated and to much insulin might be given.
+
+![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+
+In this example 41% of time [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) was used instead of value calculated from deviations.
+
+In this case you should think about pressing "Cancel" and calculate again with COB unticked. If from your manual calculation you see the need for a correction bolus enter it manually. But be careful not to overdose!
 
 ## Insulin Profile
 
