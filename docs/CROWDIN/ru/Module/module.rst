@@ -91,9 +91,9 @@ Nightscout не зависит от других модулей. Он понад
 ==================
 Смарт часы
 ---------------
-You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ for more details).
+Вы можете выбрать смарт-часы с Android Wear 1.x и выше. Большинство пользователей носят Sony Smartwatch 3 (SWR50), поскольку это единственные смарт-часы, которые могут получать данные от Dexcom G5/G5, когда телефон вне доступа. Некоторые другие часы могут быть пропатчены как самостоятельный коллектор (см. `эту документацию <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ подробно).
 
-Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
+Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
 
 Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>.
 
@@ -101,7 +101,7 @@ Users are creating a `list of tested phones and watches <https://docs.google.com
 
 xDrip +
 -------
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`_. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Даже если приложение xDrip+ вам не нужно как источник данных ГК, вы все равно можете использовать его например для оповещений или хороший дисплей ГК. Вы можете иметь столько оповещений сколько хотите, указать время, когда оповещениям разрешено работать, должны ли они иметь приоритет в режиме тишины и т. п. Некоторую информацию об xDrip+ можно найти `здесь <../Configuration/xdrip.html>`_. Пожалуйста, имейте в виду, что документация к этому приложению не всегда актуальна, так как проект развивается довольно быстро.
 
 Пример настройки
 ============
