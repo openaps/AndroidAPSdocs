@@ -151,6 +151,7 @@ FAQ
 
    시작하기 전에 보면 좋은 유용한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
    도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
 
 For Clinicians
 ------------
