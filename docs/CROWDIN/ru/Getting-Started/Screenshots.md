@@ -103,21 +103,21 @@ SUPER BOLUS - это когда базальный инсулин следующ
 
 ![Профиль](../images/Screenshot_profile.png)
 
-AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a "Switch Profile" on your AndroidAPS rig to refresh the download. Data such as the basal profile would then be automatically copied over to your pump.
+AndroidAPS может работать с различными конфигурациями профиля. Обычно - как показано на снимке - профиль Nightscout загружается через встроенный клиент Nighscout и виден здесь в формате "только для чтения". Если хотите внести какие-либо изменения, делайте это при помощи пользовательского интерфейса Nightscout и затем выполните "Переключить профиль" на AndroidAPS, тем самым обновив загрузку. Такие данные, как профиль базала будут автоматически скопированы на вашу помпу.
 
-**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
+**DIA:** означает Продолжительность действия инсулина и обсуждается выше в разделе профилей инсулина.
 
-**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
+**IC:**означает соотношение Инсулин - Углеводы. Профиль имеет несколько различных значений, установленных на разное время дня.
 
-**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
+**ISF:** это Фактор чувствительности к инсулину - величина, на которую одна единица инсулина уменьшит вашу ГК, при условии, что никакие другие факторы не изменятся.
 
-**Basal:** is the basal profile programmed into your pump.
+**Базал:** это базальный профиль, запрограммированный в вашей помпе.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**Цель:** это уровень ГК, на который вы хотите постоянно держать нацеленным алгоритм цикла. В разные дни можно устанавливать разные целевые значения, можно даже установить верхний и нижний диапазон значений, чтобы система начинала вносить изменения, только когда заданное значение ГК окажется вне диапазона, но при такой настройке то система будет реагировать медленнее и вы вряд ли достигнете очень стабильных ГК.
 
 ## Лечение/назначения, xDrip, NSClient
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+Это просто журналы приема назначений (болюсы и углеводы), сообщения от xDrip и сообщения, отправленные в Nightscout через встроенный клиент NS. Обычно не нужно беспокоиться о каком-либо из них, если не возникают проблемы.
 
 ## Конфигуратор
 
