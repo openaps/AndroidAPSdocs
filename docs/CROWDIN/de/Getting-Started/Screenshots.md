@@ -59,13 +59,13 @@ Beim SUPER BOLUS wird das Basalinsulin der kommenden zwei Stunden zum berechnete
 
 Wenn Du einen zusätzlichen Bolus kurz nach einem Mahlzeitenbolus abgeben willst (z.B. zusätzlicher Nachtisch), so kann es hilfreich sein, alle Häkchen rauszunehmen. Dadurch wird die Insulinmenge nur auf Basis der neuen Kohlenhydrate berechnet.
 
-### Langsame Kohlenhydrat-Aufnahme
+### Langsamer Kohlenhydrat-Abbau
 
-Ab Version 2.4 warnt AAPS, wenn eine langsame Aufnahme der Kohlenhydrate festgestellt wird. Es wird ein zusätzlicher Hinweistext nach der Nutzung des Boluskalkulators angezeigt. In diesem Fall besteht das Risiko, dass die Menge der COB überschätzt und deswegen zu viel Insulin abgegeben wird.
+Ab Version 2.4 warnt AAPS, wenn eine langsamer Abbau der Kohlenhydrate (COB) festgestellt wird. Es wird ein zusätzlicher Hinweistext nach der Nutzung des Boluskalkulators angezeigt. In diesem Fall besteht das Risiko, dass die Menge der COB überschätzt und deswegen zu viel Insulin abgegeben wird.
 
-![Langsame Kohlenhydrat-Aufnahme](../images/Calculator_SlowCarbAbsorbtion.png)
+![Langsamer Kohlenhydrat-Abbau](../images/Calculator_SlowCarbAbsorbtion.png)
 
-In diesem Beispiel wurde 41% der Zeit [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) verwendet statt die Aufnahme der Kohlenhydrate aus der Änderungen der BZ-Werte zu ermitteln.
+In diesem Beispiel wurde 41% der Zeit [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) verwendet statt den Abbau der Kohlenhydrate (und damit COB) aus der Änderungen der BZ-Werte zu ermitteln.
 
 In diesem Fall kann es ratsam sein, die Insulinabgabe abzubrechen und den Boluskalkulator erneut ohne das Kreuz bei COB zu verwenden. Falls Deine manuellen Berechnungen dennoch Bedarf für einen Korrekturbolus ergeben, so gib diesen manuell ein. Aber sei vorsichtig, um nicht zu viel Insulin abzugeben!
 
