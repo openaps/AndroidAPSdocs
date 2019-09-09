@@ -49,7 +49,7 @@ SUPER BOLUS - это когда базальный инсулин следующ
 
 **Секция C:** показывает различные элементы, которые были использованы для подсчета болюса. Можно отменить выбор тех, которые вы не хотите включить, но обычно это не требуется.
 
-### Combinations of COB and IOB and what they mean
+### Комбинации активных углеводов COB и активного инсулина IOB и что они означают
 
 <ul>
     <li>Если отметить галочками COB и IOB, то будут учтены неусвоенные углеводы которые еще не покрыты инсулином + все инсулины, которые были введены в качестве временного базала или супермикроболюса СМБ</li>
@@ -61,7 +61,7 @@ If you bolus for additional food shortly after a meal bolus (i.e. additional des
 
 ### Slow carb absorption
 
-As of version 2.4, AAPS warns if slow carb absorption is detected. There will be an additional text on the confirmation screen after calculator usage. The risk is that COB would be overestimated and to much insulin might be given.
+As of version 2.4, AAPS warns if slow carb absorption is detected. После применения калькулятора на экране подтверждения появляется дополнительный текст. The risk is that COB would be overestimated and to much insulin might be given.
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
 
