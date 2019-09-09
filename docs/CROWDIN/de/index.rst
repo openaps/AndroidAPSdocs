@@ -151,6 +151,7 @@ Hilfe durch die Community
 
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Wiki Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
 
 Für Mediziner & Fachpersonal
 ------------
