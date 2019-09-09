@@ -19,6 +19,7 @@ Začínáme
    Bezpečnost především <./Getting-Started/Safety-first.rst>
    Co je systém uzavřené smyčky <./Getting-Started/ClosedLoop.rst>
    Co je systém uzavřené smyčky s AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
 Co potřebuji 

@@ -1,34 +1,34 @@
-# SMS Commands
+# SMS-команды
 
-### Workaround for bug in AndroidAPS 2.3
+### Обход ошибки в AndroidAPS 2.3
 
-SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
+Настройки команд SMS отключены в версиях AndroidAPS 2.3 из-за ошибки, но могут снова применяться в версии 2.4
 
-If you must use SMS commands you can use the following workaround:
+Если вам необходимо пользоваться SMS командами, можно применить такое решение:
 
 - Экспорт настроек
-- Downgrade to AndroidAPS version 2.2 (by installing your version 2.2 APK-file)
-- Do SMS command settings in AndroidAPS version 2.2.
-- Upgrade to AndroidAPS 2.3. SMS command settings will not be accessible there.
+- Понижение до версии AndroidAPS 2.2 (установив ваш файл APK версии 2.2)
+- Выполните настройки команд SMS в версии AndroidAPS 2.2.
+- Обновитесь до AndroidAPS 2.3. Настройки SMS будут там недоступны.
 
-## Safety First
+## Безопасность прежде всего
 
 - AndroidAPS позволяет вам контролировать телефон ребенка удаленно посредством текстовых сообщений (смс). Если вы активируете этот смс-коммуникатор, всегда помните, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом.
 - AndroidAPS также сообщит вам текстовым сообщением, выполнены ли ваши удаленные команды, такие как болюс или изменения профиля. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
 
-## How it works
+## Как это работает
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+В настройках Android телефон перейдите в приложения > AndroidAPS > Разрешения и включите SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+В AndroidAPS перейдите в Настройки > SMS Коммуникатор и введите номер телефона(ов), с которых вы хотите отправлять SMS команды (разделенные запятыми, без пробелов или других символов где угодно - т.е. +4412345678;+4412345679), а также включите 'Разрешить удаленные команды через SMS'.
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Отправьте SMS на телефон с AndroidAPS с одобренного(ых) вами телефона(ов) при помощи команд перечисленных ниже **жирным шрифтом**, телефон ответит подтверждением успешного выполнения команды или запрошенного статуса.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Подсказка**: Полезно держать функцию SMS незанятой на обоих телефонах, если их отправляется много.
 
 ## BG/ГК
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Текущая ГК: 5,6 4мин назад, Дельта: -0,2 ммол, IOB: 0,20U (Болюс: 0,10U Базал: 0,10U)
 
 ## LOOP STOP/DISABLE
 
