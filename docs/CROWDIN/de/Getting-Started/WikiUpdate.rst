@@ -12,4 +12,5 @@ August 2019
 ===========
 * `Dexcom G6 patched App Region <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_
 * `Dexcom G6 neue Transmitter <../Configuration/xdrip.html#g6-transmitter-das-erste-mal-verbinden>`_ ("firefly" / 8G...)
+* `Was brauche ich? <../index.html#was-brauche-ich>`_ - neue Struktur & zusätzliche Infos
 * Neue Struktur

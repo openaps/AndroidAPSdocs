@@ -151,6 +151,7 @@ Kam pro pomoc
 
    Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
 
 Pro lékaře
 ------------

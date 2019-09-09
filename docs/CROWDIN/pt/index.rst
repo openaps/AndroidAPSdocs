@@ -151,6 +151,7 @@ Onde ir para obter ajuda
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
 
 For Clinicians
 ------------
