@@ -1,15 +1,15 @@
-Wiki updates & changes
+Wiki Updates & Änderungen
 **********************
 September 2019
 ===============
 * `Automate <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - slow carb absorbtion
-* `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
-* `Profile timeshift <../Usage/Profiles.html#timeshift>`_ (more details)
-* `What is a closed loop system? <../Getting-Started/ClosedLoop.html>`_
+* `Bolus-Rechner <../Getting-Started/Screenshots.html#langsamer-kohlenhydrat-abbau>`_ - Langsamer Kohlenhydrat-Abbau
+* `Nightscout Sicherheit <../Installing-AndroidAPS/Nightscout.html#sicherheitsuberlegungen>`_
+* `Profile Zeitverschiebung <../Usage/Profiles.html#zeitverschiebung>`_ (detailliertere Erklärung)
+* `Was ist ein Closed Loop System? <../Getting-Started/ClosedLoop.html>`_
 
 August 2019
 ===========
-* `Dexcom G6 patched app region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
-* `Dexcom G6 new transmitter <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
-* New structure
+* `Dexcom G6 patched App Region <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_
+* `Dexcom G6 neue Transmitter <../Configuration/xdrip.html#g6-transmitter-das-erste-mal-verbinden>`_ ("firefly" / 8G...)
+* Neue Struktur
