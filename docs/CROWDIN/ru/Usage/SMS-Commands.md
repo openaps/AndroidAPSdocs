@@ -1,10 +1,10 @@
-# SMS Commands
+# SMS-команды
 
-### Workaround for bug in AndroidAPS 2.3
+### Обход ошибки в AndroidAPS 2.3
 
-SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
+Настройки команд SMS отключены в версиях AndroidAPS 2.3 из-за ошибки, но могут снова применяться в версии 2.4
 
-If you must use SMS commands you can use the following workaround:
+Если вам необходимо пользоваться SMS командами, можно применить такое решение:
 
 - Экспорт настроек
 - Downgrade to AndroidAPS version 2.2 (by installing your version 2.2 APK-file)
