@@ -151,6 +151,7 @@ Waar je hulp kunt vinden
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
 
 For Clinicians
 ------------
