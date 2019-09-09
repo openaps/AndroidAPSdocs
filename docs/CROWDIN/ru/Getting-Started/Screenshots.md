@@ -57,17 +57,17 @@ SUPER BOLUS - это когда базальный инсулин следующ
     <li>Если нажать IOB без COB, AAPS примет в расчет уже поданный инсулин, но не инсулин на углеводы, которые еще предстоит усвоить. Это приведет к уведомлению о "нехватке углеводов".
 </ul>
 
-If you bolus for additional food shortly after a meal bolus (i.e. additional desert) it can be helpful to untick all boxes. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+Если вы даете болюс на дополнительную еду вскоре после болюса на прием пищи (напр. дополнительный десерт) полезно снять все галочки. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
 
-### Slow carb absorption
+### Медленное усваивание углеводов
 
-As of version 2.4, AAPS warns if slow carb absorption is detected. После применения калькулятора на экране подтверждения появляется дополнительный текст. The risk is that COB would be overestimated and to much insulin might be given.
+Начиная с версии 2.4, AAPS предупреждает, обнаружено ли замедленное поглощение углеводов. После применения калькулятора на экране подтверждения появляется дополнительный текст. Риск заключается в переоценке активных углеводов COB и подаче чрезмерного количества инсулина.
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![Медленное усваивание углеводов](../images/Calculator_SlowCarbAbsorbtion.png)
 
-In this example 41% of time [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) was used instead of value calculated from deviations.
+В этом примере 41% времени использовалось значение [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) вместо значения, рассчитанного из отклонений.
 
-In this case you should think about pressing "Cancel" and calculate again with COB unticked. If from your manual calculation you see the need for a correction bolus enter it manually. But be careful not to overdose!
+Здесь имеет смысл нажать "Отмена" и провести новый расчет с неотмеченными активными углеводами COB. Если из ручного расчета вы видите необходимость в корректирующем болюсе, внесите его вручную. Но следите за тем, чтобы не было передозировки!
 
 ## Профиль Инсулина
 
