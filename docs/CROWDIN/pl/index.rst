@@ -19,6 +19,7 @@ Getting started
    Safety first <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
 What do I need 
