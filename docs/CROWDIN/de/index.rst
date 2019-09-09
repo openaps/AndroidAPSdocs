@@ -19,7 +19,7 @@ Erste Schritte
    Sicherheitshinweise <./Getting-Started/Safety-first.rst>
    Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
    Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Wiki Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
    
    
 Was brauche ich 
