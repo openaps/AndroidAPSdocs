@@ -73,15 +73,15 @@ SUPER BOLUS - это когда базальный инсулин следующ
 
 ![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+Здесь показывается профиль активности выбранного вами инсулина. ФИОЛЕТОВАЯ линия показывает, сколько инсулина остается после ввода по мере рассасывания, а СИНЯЯ линия показывает его активность.
 
-You will normally be using one of the Oref profiles - and the important thing to note is that the decay has a long tail. If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+Обычно мы пользуемся одним из профилей Oref - и важно отметить, что рассасывание имеет длительный след. Если вы раньше управляли помпой вручную, то, вероятно, привыкли полагать, что инсулин рассасывается примерно за 3,5 часа. Однако, при работе цикла ИПЖ долгий след имеет большее значение поскольку расчеты здесь более точные и даже небольшие величины суммируются в рекурсивных вычислениях в алгоритме AndroidAPS.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Более подробное обсуждение различных типов инсулина, их профилей активности и почему это важно, см. здесь [Понимание новых кривых IOB на основе экспоненциальных кривых активности](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+Отличная статья об этом: [Почему мы регулярно ошибались в определении длительности действия инсулина (DIA) и почему это имеет значение…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+Еще на эту тему: [Экспоненциальные кривые инсулина + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Статус помпы
 
