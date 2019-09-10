@@ -113,7 +113,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Closed Loop</td>
+ <td>Κλειστό κύκλωμα</td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
@@ -265,7 +265,7 @@
 <tr>
  <td>Ανοιχτό κύκλωμα</td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>Κλειστό κύκλωμα</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
