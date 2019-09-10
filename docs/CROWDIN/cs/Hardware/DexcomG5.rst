@@ -15,11 +15,11 @@ Používáte-li G5 s upravenou Dexcom aplikací
 `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, 
 kde si podle používaných jednotek glykémie vyberte odpovídající G5 verzi (mg/dl nebo mmol/l).
 
-   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.4.
-   * Open https://play.google.com/store/search?q=dexcom%20g5 on your computer. Region will be visible in URL.
+   * Složka 2.3 je pro uživatele AndroidAPS 2.3, složka 2.4 pro uživatele AAPS 2.4.
+   * Otevřete https://play.google.com/store/search?q=dexcom%20g5 na svém počítači. Region bude viditelný v adrese URL.
    
    .. image:: ../images/DexcomG5regionURL.PNG
-     :alt: Region in Dexcom G5 URL
+     :alt: Region v URL adrese Dexcom G5
 
 * Zastavte senzor a odinstalujte původní aplikaci Dexcom, pokud jste tak ještě neučinili.
 * Nainstalujte stažený apk
