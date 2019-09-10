@@ -40,13 +40,13 @@
 
 * Když pumpa zahlásí alarm **docházející baterie**, vyměňte baterii co možná nejdříve. Je to důležité proto, aby pumpa měla dost energie pro Bluetooth komunikaci, když telefon bude ve větší vzdálenosti od pumpy.
 * I po alarmu **low battery** lze pumpu ještě nějaký čas používat. Nicméně je doporučeno mít sebou vždy náhradní baterii, aby mohla být vyměněna hned.
-* To do this, long-press on **Closed Loop** on the main screen and select **Suspend loop for 1h**. 
-* Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
+* Chcete-li vyměnit baterii, dlouze přidržte **Uzavřená smyčka** na hlavní obrazovce a zvolte **Pozastavit smyčku na 1 h**. 
+* Počkejte po dobu, co AndroidAPS komunikuje s pumpou. Poznáte to podle loga bluetooth na obrazovce pumpy.
 
 ![Bluetooth enabled](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery.
-* Then put the pump back in run mode select **Resume** when lon-pressing on **Suspended** on the main screen.
+* Odemkněte pumpu, přepněte pumpu do režimu STOP, potvrďte případný alarm konce dočasné bazální dávky a vyměňte baterii.
+* Zvolte typ baterie, podle druhu použité baterie. Potom opět spusťte pumpu. Na základní obrazovce AndroidAPS dlouze přidržte **Pozastaveno** a zvolte **Uvolnit**.
 * AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
 
 ### Battery type and causes of short battery life
