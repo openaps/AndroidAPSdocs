@@ -63,8 +63,8 @@ Typická doba výdrže baterie dle typu:
 
 Jestliže vaše baterie vydrží výrazně méně, než je uvedeno výše, zkontrolujte níže uvedené důvody:
 
-* Poslední verze (březen 2018) aplikace [Ruffy](https://github.com/MilosKozak/ruffy) výrazně zlepšila výdrž baterie pumpy. Make sure you are on that version if you have issues with a short battery lifetime.
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
+* Poslední verze (březen 2018) aplikace [Ruffy](https://github.com/MilosKozak/ruffy) výrazně zlepšila výdrž baterie pumpy. Používejte tuto verzi, pokud máte problémy s výdrží baterie.
+* Některá šroubovací „víčka“ baterie pumpy způsobovala rychlé vybíjení baterie (docházelo ke krátkým zkratům). Víčka, která tento problém nezpůsobují, poznáte podle toho, že jejich kontakty jsou pozlacené.
 * If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, only a replacement of the pump by Roche will help, which is not a problem during the warranty period. 
 * The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
 
