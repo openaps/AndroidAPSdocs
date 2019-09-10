@@ -135,82 +135,82 @@
 
 Θα πρέπει να εξαγάγετε τις ρυθμίσεις σας (συμπεριλαμβανομένης της προόδου των στόχων) σε τακτική βάση. Σε περίπτωση που πρέπει να αντικαταστήσετε το smartphone σας αργότερα (νέα αγορά, ζημιά οθόνης κ. λπ.), μπορείτε απλώς να εισαγάγετε αυτές τις ρυθμίσεις.
 
-See [Objectives](../Usage/Objectives.md) page for more information.
+Δες τη σελίδα [Στόχοι](../Usage/Objectives.md) για περισσότερες πληροφορίες.
 
-## Treatments
+## Θεραπείες
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+Αν προβάλετε την καρτέλα Θεραπείες (Θεραπείες), μπορείτε να δείτε τις θεραπείες που έχουν μεταφορτωθεί στο nightscout. Εάν θέλετε να επεξεργαστείτε ή να διαγράψετε μια καταχώριση (π.χ. φάγατε λιγότερους υδατάνθρακες από ό, τι περιμένατε), επιλέξτε 'Αφαίρεση' και εισαγάγετε τη νέα τιμή (αλλάξτε την ώρα αν χρειαστεί) μέσω της καρτέλας Careportal (CP).
 
-## General
+## Γενικά
 
-### Overview
+### Μία γενική ιδέα
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Εμφανίζει την τρέχουσα κατάσταση του κυκλώματος και των κουμπιών σας για τις περισσότερο συνηθισμένες ενέργειες (βλ. [ενότητα Η αρχική οθόνη](../Getting-Started/Screenshots.md) για λεπτομέρειες). Μπορείτε να έχετε πρόσβαση στις ρυθμίσεις κάνοντας κλικ στο γρανάζι.
 
-#### Keep screen on
+#### Κράτα ανοιχτή οθόνη
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore it is recommended to connect the smartphone to a charger cable.
+Η επιλογή 'Ενεργοποίηση οθόνης' θα αναγκάσει το Android να διατηρεί την οθόνη ενεργή ανά πάσα στιγμή. Αυτό είναι χρήσιμο για παρουσιάσεις κ.λ.π. Αλλά καταναλώνει πολύ μπαταρία. Συνεπώς, συνιστάται να συνδέσετε το smartphone με το καλώδιο του φορτιστή.
 
-#### Buttons
+#### Πλήκτρα
 
-Define which Buttons are shown on the home screen.
+Ορίστε ποια πλήκτρα θα εμφανίζονται στην αρχική οθόνη.
 
-* Treatments
+* Θεραπείες
 * Calculator
 * Ινσουλίνη
-* Carbs
+* Υδατάνθρακες
 * CGM (opens xDrip+)
-* Calibration
+* Βαθμονόμιση
 
-Furthermore you can set shortcuts for insulin and carb increments and decide wether the notes field should be shown in treatment dialogues.
+Επιπλέον, μπορείτε να ορίσετε συντομεύσεις για αυξήσεις ινσουλίνης και υδατανθράκων και να αποφασίσετε αν το πεδίο σημειώσεων θα εμφανίζεται στους διαλόγους θεραπείας.
 
-#### QuickWizard settings
+#### Ρυθμίσεις QuickWizard
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Δημιουργήστε ένα κουμπί για ένα συγκεκριμένο πρότυπο γεύματος (υδατάνθρακες και μέθοδος υπολογισμού για το bolus) που θα εμφανίζονται στην αρχική οθόνη. Χρησιμοποιείται για τα γεύματα που καταναλώνονται συχνά. Εάν έχουν οριστεί διαφορετικοί χρόνοι για διαφορετικά γεύματα, θα έχετε πάντα το κατάλληλο κουμπί γεύματος στην αρχική οθόνη, ανάλογα με την ώρα της ημέρας.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Σημείωση: Το κουμπί δεν θα είναι ορατό αν βρίσκεται έξω από το καθορισμένο χρονικό διάστημα ή αν έχετε αρκετό IOB για να καλύψετε τους υδατάνθρακες που ορίζονται στο κουμπί QuickWizard.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Κουμπί QuickWizard](../images/ConfBuild_QuickWizard.png)
 
-#### Advanced settings
+#### Προηγμένες ρυθμίσεις
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Ενεργοποιήστε τη λειτουργία super bolus στον οδηγό. Χρησιμοποιήστε το με προσοχή και μην το ενεργοποιήσετε μέχρι να μάθετε τι πραγματικά κάνει. Ουσιαστικά ο βασικός ρυθμός για τις επόμενες 2 ώρες προστίθεται στο bolus και ένας δίωρος μηδενικός ρυθμός ενεργοποιείται. **Οι λειτουργίες κυκλώματος του AAPS θα απενεργοποιηθούν - για αυτό χρησιμοποιήστε με προσοχή! Εάν χρησιμοποιείτε το SMB οι λειτουργίες κυκλώματος AAPS θα απενεργοποιηθούν σύμφωνα με τις ρυθμίσεις σας σε ["Μέγιστα λεπτά βασικού για να περιορίσετε το SMB σε"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), αν δεν χρησιμοποιείτε SMB οι λειτουργίες κυκλώματος θα απενεργοποιηθούν για δύο ώρες. ** Λεπτομέρειες σχετικά με το σούπερ bolus μπορούν να βρεθούν [εδώ](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-### Actions
+### Ενέργειες
 
-Some buttons to quickly access common features:
+Ορισμένα πλήκτρα για γρήγορη πρόσβαση σε κοινές λειτουργίες:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. basal rate
-* Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
-* History browser
-* TDD (Total daily dose = bolus + basal per day)
+* Προφίλ αλλαγής (δείτε [Σελίδα προφίλ](../Usage/Profiles.md) για περισσότερες πληροφορίες εγκατάστασης)
+* Προσωρινοί στόχοι
+* Ρύθμιση / ακύρωση προσωρ. βασικός ρυθμός
+* Εκτεταμένο bolus (μόνο DanaR/RS ή Combo αντλία)
+* Prime/γέμισμα (μόνο DanaR/RS ή Combo αντλία)
+* Περιήγηση ιστορικού
+* TDD (Συνολική ημερήσια δόση = bolus + βασικός ρυθμός ανά ημέρα)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Μερικοί γιατροί χρησιμοποιούν - ειδικά για νέες αντλίες - μια αναλογία βασικού ρυθμού προς bolus 50:50. Συνεπώς, ο λόγος υπολογίζεται ως TDD / 2 * TBB (Συνολική βασική = άθροισμα βασικού ρυθμού εντός 24 ωρών). Άλλοι προτιμούν το εύρος από 32% έως 37% του TDD για TBB. Όπως και οι περισσότεροι από αυτούς τους κανόνες, είναι περιορισμένης πραγματικής εγκυρότητας. Σημείωση: Ο διαβήτης σας μπορεί να διαφέρει!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
+![Καρτέλα Ενέργειες](../images/ConfBuild_ConfBuild_Actions.png)
 
-### Careportal
+### Φροντίδες
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+Σας επιτρέπει να καταγράφετε τυχόν ειδικές καταχωρήσεις φροντίδας και να βλέπετε την ηλικία του αισθητήρα, της ινσουλίνης, του σωληνα και της αντλίας στην καρτέλα Careportal (CP).
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Σημείωση: **Δεν θα χορηγείται ινσουλίνη** εάν εισάγεται μέσω του Φροντίδα (δηλαδή bolus γεύματος, bolus διόρθωσης...)
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Οι υδατάνθρακες που εισάγονται στο Φροντίδα (δηλαδή οι υδατάνθρακες διόρθωσης) θα χρησιμοποιηθούν για τον υπολογισμό της COB.
 
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Καρτέλα φροντίδας](../images/ConfBuild_CarePortal.png)
 
-### SMS Communicator
+### Επικοινωνία με SMS
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
+Επιτρέπει στους απομακρυσμένους φροντιστές να ελέγχουν ορισμένες λειτουργίες του AndroidAPS μέσω SMS, ανατρέξτε στις [εντολές SMS](../Usage/SMS-Commands.md) για περισσότερες πληροφορίες εγκατάστασης.
 
-### Food
+### Φαγητό
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Εμφανίζει τις προεπιλογές τροφίμων που ορίζονται στη βάση δεδομένων τροφίμων Nightscout, δείτε [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) για περισσότερες πληροφορίες ρύθμισης.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Σημείωση: Οι καταχωρήσεις δεν μπορούν να χρησιμοποιηθούν στους υπολογισμούς του AndroidAPS. (μόνο για ανάγνωση)
 
 ### Wear
 
@@ -255,7 +255,7 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
-#### Advanced settings
+#### Προηγμένες ρυθμίσεις
 
 * Auto backfill missing BGs from Nightscout
 * Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
