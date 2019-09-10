@@ -214,32 +214,32 @@
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Παρακολουθήστε και ελέγχετε το AAPS χρησιμοποιώντας το Android Wear ρολόι σας (δείτε [σελίδα Watchfaces](../Configuration/Watchfaces.md)). Χρησιμοποιήστε τις ρυθμίσεις (γρανάζι) για να ορίσετε ποιες μεταβλητές θα πρέπει να λαμβάνονται υπόψη κατά τον υπολογισμό του bolus που δίνεται από το ρολόι σας (δηλαδή τάση 15 λεπτών, COB...).
 
-If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Εάν θέλετε να κάνετε bolus κα. από το ρολόι τότε δείτε "Wear settings" όπου θα πρέπει να ενεργοποιήσετε το "Controls from Watch".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Ρυθμίσεις Wear](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Μέσα από την καρτέλα Wear ή το μενού χάμπουργκερ (στην πάνω αριστερή πλευρά της οθόνης, αν δεν εμφανίζεται η καρτέλα) μπορείτε:
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Ξαναστείλετε όλα τα δεδομένα. Μπορεί να είναι χρήσιμο εάν το ρολόι δεν συνδεόταν για κάποιο χρονικό διάστημα και θέλετε να ωθήσετε τις πληροφορίες στο ρολόι.
+* Ανοίξτε τις ρυθμίσεις στο ρολόι σας απευθείας από το τηλέφωνό σας.
 
-### xDrip Statusline (watch)
+### xDrip Γραμμή κατάστασης (ρολόι)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Δείτε της πληροφορίες του κυκλώματος στο xDrip+ watchface (εάν δεν χρησιμοποιείται το AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### Ongoing Notification
+### Συνεχείς ενημερώσεις
 
-Displays a summary of current BG, delta, active TBR%, active basal u/hr and profile, IOB and split into bolus IOB and basal IOB on the phones dropdown screen and phonelock screen.
+Εμφανίζει μια σύνοψη του τρέχοντος BG, delta, ενεργού TBR%, ενεργού βασικού u / hr και προφίλ, IOB που χωρίστηκε σε bolus IOB και βασικό IOB στην οθόνη dropdown των τηλεφώνων και την οθόνη κλειδώματος.
 
 ![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+Ρυθμίστε τον συγχρονισμό των δεδομένων AndroidAPS με το Nightscout.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
+Εάν είναι ενεργοποιημένο το **Αρχείο καταγραφής της εφαρμογής στο NS**, κάθε AndroidAPS θα είναι ορατό στο Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
 
 #### Alarm options
 
