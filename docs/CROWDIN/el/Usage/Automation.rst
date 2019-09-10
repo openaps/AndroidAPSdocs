@@ -13,7 +13,7 @@ How to use it
 ================
 To set up an automation, you have to give it a title, select at least one condition and one action. 
 
-General
+Γενικά
 --------
 There are some limits. The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l. The profile percentage has to be between 70 % and 130%.
 
