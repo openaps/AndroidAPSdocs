@@ -47,23 +47,23 @@
 
 * Odemkněte pumpu, přepněte pumpu do režimu STOP, potvrďte případný alarm konce dočasné bazální dávky a vyměňte baterii.
 * Zvolte typ baterie, podle druhu použité baterie. Potom opět spusťte pumpu. Na základní obrazovce AndroidAPS dlouze přidržte **Pozastaveno** a zvolte **Uvolnit**.
-* AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
+* AndroidAPS nastaví všechny potřebné dočasné bazály, jakmile obdrží další glykemii. 
 
-### Battery type and causes of short battery life
+### Typy baterií a důvody krátké výdrže
 
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium ,the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
+* Intezivní komunikace prostřednictvím bluetooth spotřebovává velké množství energie, používejte pouze **velmi kvalitní baterie**, jako jsou Energizer Ultimate Lithium nebo baterie ze velkého servisního balíčku Accu-Chek Combo. Pokud se rozhodnete používat dobíjecí NiMH baterie, používejte baterie Eneloop. 
 
 ![Energizer](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/energizer-l91aa---image.jpg?raw=true) ![OnePower](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/PowerOne.png?raw=true)
 
-Ranges for typical life time of the different battery types are as follows:
+Typická doba výdrže baterie dle typu:
 
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the servcie pack: 2 to 4 weeks
-* **Eneloop rechargable** batteries (BK-3MCCE): 1 to 3 weeks
+* **Energizer Ultimate Lithium**: 4 až 7 týdnů
+* **Power One Alkaline** (Varta) ze servisního balíčku: 2 až 4 týdny
+* **Eneloop NiMH** (BK-3MCCE): 1 až 3 týdny
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+Jestliže vaše baterie vydrží výrazně méně, než je uvedeno výše, zkontrolujte níže uvedené důvody:
 
-* Die latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Make sure you are on that version if you have issues with a short battery lifetime.
+* Poslední verze (březen 2018) aplikace [Ruffy](https://github.com/MilosKozak/ruffy) výrazně zlepšila výdrž baterie pumpy. Make sure you are on that version if you have issues with a short battery lifetime.
 * There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
 * If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, only a replacement of the pump by Roche will help, which is not a problem during the warranty period. 
 * The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
