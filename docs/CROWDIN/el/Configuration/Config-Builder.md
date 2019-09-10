@@ -239,19 +239,19 @@
 
 Ρυθμίστε τον συγχρονισμό των δεδομένων AndroidAPS με το Nightscout.
 
-Εάν είναι ενεργοποιημένο το **Αρχείο καταγραφής της εφαρμογής στο NS**, κάθε AndroidAPS θα είναι ορατό στο Nightscout. Might be useful to detect problems with the app (i.e. battery optimisation not disabled for AAPS) but can flood the Nightscout graph with entries.
+Εάν είναι ενεργοποιημένο το **Αρχείο καταγραφής της εφαρμογής στο NS**, κάθε AndroidAPS θα είναι ορατό στο Nightscout. Μπορεί να είναι χρήσιμο για την ανίχνευση προβλημάτων με την εφαρμογή (δηλαδή, η βελτιστοποίηση της μπαταρίας δεν είναι απενεργοποιημένη για το AAPS) αλλά μπορεί να γεμίσει το γράφημα Nightscout με καταχωρήσεις.
 
-#### Alarm options
+#### Επιλογές συναγερμού
 
-Activate/deactivate AndroidAPS alarms
+Ενεργοποίηση / απενεργοποίηση συναγερμών AndroidAPS
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![Επιλογές συναγερμού](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### Ρυθμίσεις σύνδεσης
 
-Offline looping, disable roaming...
+Εκτός σύνδεσης το κύκλωμα, απενεργοποίηση περιαγωγής...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Αν θέλετε να χρησιμοποιήσετε μόνο ένα συγκεκριμένο δίκτυο WiFi, μπορείτε να εισάγετε το **SSID WiFi **. Αρκετά SSID μπορούν να διαχωριστούν με ερωτηματικό. To delete all SSIDs enter a blank space in the field.
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
