@@ -16,14 +16,14 @@ Vyberte bazální profil, který chcete použít. Další informace viz stránku
 
 Místní profil používá bazální profil zapsaný přímo do telefonu. Po jeho vybrání se v AAPS objeví nová záložka, kde si můžete profil upravovat. Ten je pak v případě potřeby načten pumpou. Při přepnutí profilu je uložen do pumpy – v profilu 1. Tento profile je doporučen, protože nevyžaduje připojení k internetu.
 
-Advantage:
+Výhody:
 
-* no internet connection neccessary to change profile settings
-* profile changes can be made directly on the phone
+* ke změně nastavení profilu nepotřebujete připojení k internetu
+* změny profilu lze provést přímo na telefonu
 
-Disadvantage:
+Nevýhody:
 
-* only one profile
+* pouze jeden profil
 
 ### NS profil
 
@@ -31,15 +31,15 @@ NS profil používá profily, které jste uložili na webu Nightscout (https://[
 
 Vybráním tlačítka **Přepnout profil** se aktivuje vybraný profil z Nightscoutu. V horní části hlavní obrazovky AAPS stiskněte a podržte tlačítko s názvem aktuálního profilu (prostřední šedé pole mezi polem „Otevřená/Uzavřená smyčka“ a polem s hodnotami cíle) > Přepnutí profilu > Vybrat profil > OK. Po změně profilu zapíše AAPS vybraný profil do pumpy, aby bylo možné i v případě nouze pumpu nadále používat.
 
-Advantage:
+Výhody:
 
-* multiple profiles
-* easy to edit via PC or tablet
+* více profilů
+* snadná úprava pomocí PC nebo tabletu
 
-Disadvantage:
+Nevýhody:
 
-* no local changes to profile settings
-* profile cannot be changed directly on the phone
+* nelze provádět místní změny v nastavení profilu
+* změny profilu nelze provést přímo na telefonu
 
 ### Jednoduchý profil
 
@@ -51,15 +51,15 @@ Vyberte typ inzulínové křivky, kterou používáte. Všechny varianty „Rych
 
 ### Rychle působící Oref
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection
+* doporučeno pro Humalog, Novolog a Novorapid
+* DIA = alespoň 5 h
+* Max. účinnost inzulínu = 75 minut po podání
 
 ### Ultra rychlý Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection
+* doporučeno pro FIASP
+* DIA = alespoň 5 h
+* Max. účinnost inzulínu = 55 minut po podání
 
 Pro velké množství lidí nemá po 3–4 hodinách FIASP prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Proto AndroidAPS používá jako minimální hodnotu DIA 5 h.
 
@@ -76,10 +76,10 @@ Tento profil je doporučován v případě, že používáte nepodporovaný inzu
 Vyberte, který zdroj glykémií používáte – další informace k nastavení viz [Zdroj glykémií](BG-Source.rst).
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
+* Glykémie z NSClient
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want tu use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* [Aplikace Dexcom G5 (upravená)](https://github.com/dexcomapp/dexcomapp/) – chcete-li používat alarmy xDrip+, vyberte v nastavení „Odesílat glykémie do xDrip+“. ![Konfigurace – Zdroj glykémie](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pumpy
@@ -87,12 +87,12 @@ Vyberte, který zdroj glykémií používáte – další informace k nastavení
 Vyberte pumpu, kterou používáte.
 
 * [DanaR](DanaR-Insulin-Pump.md)
-* DanaR Korean (for domestic DanaR pump)
-* DanaRv2 (DanaR pump with firmware upgrade)
+* DanaR Korea (pro korejskou verzi pumpy DanaR)
+* DanaR v2 (DanaR s upgradovaným firmwarem)
 * [DanaRS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* MDI (receive AAPS suggestions for your multiple daily injections thereapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* [Accu-Check Combo](Accu-Chek-Combo-Pump.md) (vyžaduje nainstalovanou aplikaci Ruffy)
+* MDI (AAPS poskytuje návrhy pro aplikaci inzulínu pomocí inzulínových per)
+* Virtuální pumpa (otevřená smyčka pro pumpu, pro kterou zatím neexistuje ovladač – AAPS nabízí pouze návrhy)
 
 Pokud je nutný BT watchdog, aktivujte ho v **Rozšířená nastavení**. Při problémech s připojením k pumpě vypne bluetooth na 1 sekundu. Toto nastavení může u některých mobilů pomoci při zamrzání bluetooth.
 
@@ -110,12 +110,12 @@ Pokud používáte Oref1 s funkcí SMB, musíte změnit **min_5m_carbimpact** na
 
 Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algoritmu lze prohlížet na kartě OpenAPS (OAPS).
 
-* OpenAPS MA (meal assist, state of the algorithm in 2016)
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2016)  
-    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
-    Note you need to be in [Objective 7](../Usage/Objectives.md) in order to use OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
-    Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* OpenAPS MA (meal assist, stav algoritmu v roce 2016)
+* OpenAPS AMA (advanced meal assist, stav algoritmu v roce 2016)  
+    Další podrobnosti o OpenAPS AMA najdete v [dokumentaci k OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Zjednodušeně řečeno, přínosem tohoto algoritmu je, že po podání bolusu k jídlu dokáže systém rychleji zvýšit dočasný bazál, POKUD správně zadáte sacharidy.  
+    Poznámka: Abyste mohli používat algoritmus OpenAPS AMA, musíte být u plnění [7. cíle](../Usage/Objectives.md).
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, nejnovější algoritmus pro pokročilé uživatele)  
+    Pozn: abyste mohli používat OpenAPS SMB, musíte splnit [8. cíl](../Usage/Objectives.md) a mít nastavenou hodnotu min_5m_carbimpact na 8. V nabídce Konfigurace > Detekce senzitivity > Nastavení senzitivity Oref1.
 
 ## Smyčka
 
@@ -158,9 +158,9 @@ Určuje, která tlačítka budou zobrazena na domácí obrazovce.
 * Ošetření
 * Kalkulačka
 * Inzulín
-* Carbs
-* CGM (opens xDrip+)
-* Calibration
+* Sacharidy
+* CGM (otevře xDrip+)
+* Kalibrace
 
 Kromě toho můžete nastavit zkratky pro inzulín a sacharidy a rozhodnout se, zda bude v dialogu pro přidání ošetření i poznámka.
 
@@ -180,13 +180,13 @@ Povolit v kalkulačce funkci superbolus. Používejte se zvýšenou opatrností 
 
 Tlačítka pro rychlý přístup k běžně používaným funkcím:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. basal rate
-* Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
-* History browser
-* TDD (Total daily dose = bolus + basal per day)
+* Přepnutí profilu (více informací viz [Stránka profily](../Usage/Profiles.md))
+* Dočasné cíle
+* Nastavit / zrušit dočasný bazál
+* Prodloužený bolus (pouze DanaR/RS nebo Combo)
+* Plnění/Doplňování (Pouze DanaR/RS nebo Combo)
+* Prohlížeč historie
+* CDD (Celková denní dávka = bolusy + bazály za celý den)
 
 Někteří lékaři doporučují – hlavně pro nové uživatele pumpy – poměr bazál-bolus 50:50. Poměr se proto vypočítá jako TDD / 2 * TBB (celková denní dávka = součet hodnot bazálních dávek za 24 hodin). Jiní dávají přednost hodnotám, kdy TBB tvoří 32 % až 37 % z TDD. Stejně jako podobná pravidla má i toto v reálném životě omezenou platnost. Poznámka: Váš diabetes může být jiný!
 
@@ -222,8 +222,8 @@ Pokud chcete poslat například bolus z hodinek, potřebujete v „Nastavení ho
 
 Prostřednictvím záložky Wear nebo hamburger menu (levý horní roh obrazovky, když není záložka zobrazena) můžete
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Znovu odeslat všechna data. To může pomoci v případech, kdy byly hodinky nějakou dobu nedostupné a potřebujete do nich poslat data.
+* Otevřít nastavení hodinek přímo z telefonu.
 
 ### Stavová řádka xDrip (hodinky)
 
@@ -257,12 +257,12 @@ Chcete-li používat pouze konkrétní síť Wi-Fi, můžete zadat její **WiFi 
 
 #### Pokročilá nastavení
 
-* Auto backfill missing BGs from Nightscout
-* Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Automaticky doplňovat chybějící glykémie z NS
+* Vytvářet oznámení z chyb Nightscout vytváří oznámení pro zobrazení chybových dialogů a místní varování (jsou dostupná v Ošetření v sekci Péče)
+* Povolit lokální odesílání do ostatních aplikací jako xDrip+
+* Pouze nahrávání do NS (zakázaná synchronizace)
+* Zakázat nahrávání do NS
+* Vždy pracovat s absolutními hodnotami bazálu -> pokud chcete používat [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html), musíte mít tuto volbu aktivovanou.
 
 ![Rozšířená nastavení Nightscoutu](../images/ConfBuild_NSClient_Advanced.png)
 
