@@ -182,7 +182,7 @@ Tlačítka pro rychlý přístup k běžně používaným funkcím:
 
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
 * Temporary targets
-* Set / cancel temp. bazál (basal rate)
+* Set / cancel temp. basal rate
 * Extended bolus (DanaR/RS or Combo pump only)
 * Prime / fill (DanaR/RS or Combo pump only)
 * History browser
