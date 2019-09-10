@@ -32,14 +32,14 @@
 
 ## Selhání zrušení dočasného bazálu
 
-* Occasionally, AndroidAPS can not automatically cancel a **TBR CANCELED** alert. Then you have to either press **UPDATE** in the AndroidAPS **Combo tab** or the alarm on the pump will be confirmed.
+* Občas se stane, že AndroidAPS se nepodaří zrušit alarm **DBD ZRUŠENA**. Pak je nutno stisknout buď **OBNOVIT** na záložce **Combo** v AndroidAPS, nebo potvrdit alarm přímo na pumpě.
 
-## Pump battery considerations
+## Záležitosti týkající se baterie
 
-### Changing the battery
+### Výměna baterie
 
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
+* Když pumpa zahlásí alarm **docházející baterie**, vyměňte baterii co možná nejdříve. Je to důležité proto, aby pumpa měla dost energie pro Bluetooth komunikaci, když telefon bude ve větší vzdálenosti od pumpy.
+* I po alarmu **low battery** lze pumpu ještě nějaký čas používat. Nicméně je doporučeno mít sebou vždy náhradní baterii, aby mohla být vyměněna hned.
 * To do this, long-press on **Closed Loop** on the main screen and select **Suspend loop for 1h**. 
 * Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
 
