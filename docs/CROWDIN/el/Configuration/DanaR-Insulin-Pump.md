@@ -16,10 +16,10 @@
 * Επιλέξτε τη συσκευή DanaR Bluetooth και κάντε κλικ στον σειριακό αριθμό DanaR.
 * Επιλέξτε τον κωδικό αντλίας και εισαγάγετε τον κωδικό πρόσβασή σας. (Ο προεπιλεγμένος κωδικός πρόσβασης είναι 1234)
 * Εάν θέλετε το AndroidAPS να επιτρέπει βασικό ρυθμό πάνω από 200%, ενεργοποιήστε το Χρήση εκτεταμένων bolus για> 200%. Σημειώστε ότι αυτό σημαίνει ότι δεν μπορείτε να έχετε κύκλωμα με υψηλά TBRs ενώ χρησιμοποιείτε εκτεταμένα bolus για φαγητό.
-* In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
-* Set basal step on pump to 0.01 U/h
-* Enable extended boluses on pump
+* Στις προτιμήσεις κάτω από τις ρυθμίσεις της αντλίας DanaR μπορείτε να αλλάξετε την προεπιλεγμένη ταχύτητα bolus που χρησιμοποιείται ήδη (12sec ανά 1u, 30sec ανά 1u ή 60sec ανά 1u).
+* Τοποθετήστε το βασικό βήμα στην αντλία σε 0,01 U/h
+* Ενεργοποιήστε το εκτεταμένο bolus στην αντλία
 
-## Timezone traveling with Dana R pump
+## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με αντλία Dana R
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Για πληροφορίες σχετικά με τη μετακίνηση σε ζώνες ώρας, ανατρέξτε στην ενότητα [Ζώνη ώρας που ταξιδεύει με αντλίες](../Usage/Timezone-traveling#danarv2-danars).
