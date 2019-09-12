@@ -62,7 +62,7 @@ Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cg
 Request content:
 
 * targetTop / targetBottom: Hodnota vysokého DC (top a bottom by měly mít stejnou hodnotu)
-* trvání: Trvání vysokého DC (po tomto čase se obnoví cíl podle profilu, pokud nebude aktivita pokračovat). 
+* duration: Trvání vysokého DC (po tomto čase se obnoví cíl podle profilu, pokud nebude aktivita pokračovat). 
 * secret: Váš API SHA1 hash. Toto NENÍ váš api key! Svůj API key můžete převést do formátu SHA1 na adrese <http://www.sha1-online.com/>
 
 Save: Tap on 'Done' and on the hook
