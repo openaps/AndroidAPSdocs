@@ -258,18 +258,18 @@
 #### Προηγμένες ρυθμίσεις
 
 * Αυτόματη συμπλήρωση χαμένων BG από το Nightscout
-* Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Δημιουργία ανακοινώσεων από σφάλματα. Δημιουργήστε ειδοποιήσεις στο Nightscout για σφάλματα διαλόγου και τοπικές ειδοποιήσεις (επίσης ορατό στη Φροντιδα από την καρτέλα θεραπειών)
+* Ενεργοποιήστε την τοπική εκπομπή σε άλλες εφαρμογές όπως το xDrip+
+* Μόνο μεταφόρτωση NS (απενεργοποίηση συγχρονισμού)
+* Καμία μεταφόρτωση στο NS
+* Πάντα να χρησιμοποιείτε τις απόλυτες τιμές του βασικού ρυθμού -> Πρέπει να το ενεργοποιήσετε εάν θέλετε να χρησιμοποιήσετε το [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) σωστά.
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Προχωρημένες ρυθμίσεις Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
-### Maintenance
+### Συντήρηση
 
-Email and number of logs to be send. Normally no change neccessary.
+Ηλεκτρονικό ταχυδρομείο και αριθμός αρχείων καταγραφής που αποστέλλονται. Κανονικά καμία αλλαγή δεν είναι απαραίτητη.
 
 ### Διαμόρφωση
 
-Use tab for config builder instead of hambuger menu.
+Χρησιμοποιήστε την καρτέλα για την Διαμόρφωση αντί για το μενού χάμπουργκερ.
