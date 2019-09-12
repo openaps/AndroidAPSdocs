@@ -251,13 +251,13 @@
 
 Εκτός σύνδεσης το κύκλωμα, απενεργοποίηση περιαγωγής...
 
-Αν θέλετε να χρησιμοποιήσετε μόνο ένα συγκεκριμένο δίκτυο WiFi, μπορείτε να εισάγετε το **SSID WiFi **. Αρκετά SSID μπορούν να διαχωριστούν με ερωτηματικό. To delete all SSIDs enter a blank space in the field.
+Αν θέλετε να χρησιμοποιήσετε μόνο ένα συγκεκριμένο δίκτυο WiFi, μπορείτε να εισάγετε το **SSID WiFi **. Αρκετά SSID μπορούν να διαχωριστούν με ερωτηματικό. Για να διαγράψετε όλα τα SSID εισάγετε έναν κενό στο πεδίο.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Ρυθμίσεις σύνδεσης Nightscout](../images/ConfBuild_ConnectionSettings.png)
 
 #### Προηγμένες ρυθμίσεις
 
-* Auto backfill missing BGs from Nightscout
+* Αυτόματη συμπλήρωση χαμένων BG από το Nightscout
 * Create announcement from errors Create Nightscout announcement fro error dialogs and local alerts (also viewable in careportal in treatments section)
 * Enable local broadcast to other apps like xDrip+
 * NS upload only (sync disabled)
