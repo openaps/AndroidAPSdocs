@@ -11,7 +11,7 @@ Functions
 * Kids pump is controlled by kid's phone using AndroidAPS.
 * Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone.
 * Parents can be alarmed by using **xDrip app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands.html>`_
+* Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands.html>`_.
 * Remote profile switch through NSClient app.
 
 Tools and apps for remote monitoring
@@ -24,7 +24,7 @@ Tools and apps for remote monitoring
 
 Things to consider
 ==================
-* Setting the correct `treatment factors (basal rate, DIA, ISF...) <../Getting-Started/FAQ.html#how-to-begin>`_ is difficult for kids, especially when growth hormones are involved. 
+* Setting the correct `treatment factors <../Getting-Started/FAQ.html#how-to-begin>`_ (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved. 
 * So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
 * What is your plan when remote control does not work (i.e. network problems)?
-* Remote monitoring and treatment can be really helpful in kindergarden and elementary school. But make sure the teachers and educators are aware of your kids treatment plan. Examples for such care plans can be found in the `files section of AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_.
+* Remote monitoring and treatment can be really helpful in kindergarden and elementary school. But make sure the teachers and educators are aware of your kids treatment plan. Examples for such care plans can be found in the `files section of AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ on facebook.
