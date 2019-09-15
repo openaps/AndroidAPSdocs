@@ -35,14 +35,42 @@
 
 Подробное описание шагов, необходимых для создания файла APK.
 
-## Установите Android Studio
+## Установите git (если у вас его нет)
+
+### Windows
+
+* Любая версия git должна работать. Например <https://git-scm.com/download/win>
+* Убедитесь, что знаете путь установки. Он понадобится на следующем шаге.
+  
+  ![Путь установки Git](../images/Update_GitPath.png)
+
+* Укажите Studio, где находится git.exe: Файл - Настройки
+  
+  ![Android Studio - открыть настройки](../images/Update_GitSettings1.png)
+
+* В следующем окне: Управление версиями - Git
+
+* Выберите правильный путь: .../Git<font color="#FF0000"><b>/bin</b></font>
+
+* Убедитесь, что выбран метод обновления "Объединение".
+  
+  ![Android Studio - путь GIT](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* Любая версия git должна работать. Например <https://git-scm.com/download/mac>
+* Используйте homebrew для установки git: ```$ brew install git```.
+* Подробности об установке git см. в [официальной git документации](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Если вы устанавливаете git через homebrew, то нет необходимости изменять какие-либо настройки. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
+
+## Install Android Studio
 
 * Установить git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - просто установите пакет Git через менеджер пакетов вашего дистрибутива
-* Установите [Android Studio](https://developer.android.com/studio/install.html).
-* Настройте Android Studio во время первого запуска
+  * Linux - just install a package git via package manager of your distribution
+* Install [Android Studio](https://developer.android.com/studio/install.html).
+* Setup Android Studio during first start
 
 Выберите "Не импортировать настройки", так как вы не использовали их раньше.
 
@@ -78,11 +106,11 @@ Android Studio загружает много программных компон
 
 ![Снимок экрана 9](../images/Installation_Screenshot_09.png)
 
-* Аплодисменты, аплодисменты. Установка Android Studio завершена и можно приступить к клонированию исходного кода. Можно сделать короткий перерыв.
+* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
-## Скачиваем код и дополнительные компоненты
+## Download code and additional components
 
-* Используйте клон Git в Android Studio, как показано на снимках экрана ниже. Выберите "Извлечь проект из системы управления версиями" при помощи Git в качестве конкретной системы управления версиями.
+* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
 ![Снимок экрана 10](../images/Installation_Screenshot_10.png)
 
@@ -108,8 +136,8 @@ Android Studio начнет клонирование. Не нажимайте н
 
 ![Снимок экрана 17](../images/Installation_Screenshot_17.png)
 
-* Отлично, теперь у нас есть своя копия исходного кода и мы готовы начать сборку.
-* Теперь мы приближаемся к первому сообщению об ошибке. К счастью, Android Studio будет сразу предлагать нам решения.
+* Excellent, you have your own copy of the source code and are ready to start the build.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Нажмите "Установить недостающую платформу(ы) и синхронизировать проект", так как Android Studio нуждается в установке отсутствующей платформы.
 
@@ -201,13 +229,13 @@ Android Studio рекомендует обновить систему gradle. **
 
 ![Снимок экрана 41](../images/Installation_Screenshot_41.png)
 
-* Заполните информацию для следующего диалога. 
-  * Путь к хранилищу ключа: путь к файлу магазина ключей
-  * Поля пароля для хранения ключей даются, чтобы обезопасить ввод от опечаток.
-  * Alias - это имя для нужного вам ключа. Вы можете оставить его по умолчанию или дать ему имя, которое придумаете.
-  * Поля пароля под ключом нужны для самого ключа. Как всегда, дважды проверьте ошибки при вводе.
-  * Вы можете оставить срок валидности по умолчанию 25 лет.
-  * Обязательны к заполнению только имя и фамилия, но можно заполнить остальную информацию. Затем нажмите "OK".
+* Fill in the information for the next dialog. 
+  * Key store path: is the path to the keystore file
+  * The password fields below are for the keystore to double check for typing errors.
+  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
+  * The password fields below the key are for the key itself. As always to double check for typing errors.
+  * You can let the validity at the default of 25 years.
+  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
 
 ![Снимок экрана 42](../images/Installation_Screenshot_42.png)
 
