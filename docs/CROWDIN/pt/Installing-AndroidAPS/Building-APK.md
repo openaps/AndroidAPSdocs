@@ -35,6 +35,34 @@ In general, the steps necessary to build the APK file:
 
 Detailed description of the steps necessary to build the APK file.
 
+## Install git (if you don't have it)
+
+### Windows
+
+* Any git version should work. For example <https://git-scm.com/download/win>
+* Make sure to note down the installation path. You will need it in the next step.
+  
+  ![Git installation path](../images/Update_GitPath.png)
+
+* Let Studio know where is git.exe located: File - Settings
+  
+  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+
+* In the next window: Version Control - Git
+
+* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
+
+* Make sure update method "Merge" is selected.
+  
+  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* Any git version should work. For example <https://git-scm.com/download/mac>
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+
 ## Install Android Studio
 
 * Install git 
