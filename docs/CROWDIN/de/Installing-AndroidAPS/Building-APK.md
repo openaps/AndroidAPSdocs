@@ -40,7 +40,7 @@ Detaillierte Beschreibung der notwendigen Schritte.
 ### Windows
 
 * Jede git Version sollte funktionieren. Beispiel: <https://git-scm.com/download/win>
-* Notiere Dir den Installationspfad. You will need it later after you installed Android Studio.
+* Notiere Dir den Installationspfad. Du benötigst diesen nach der Installation von Android Studio.
   
   ![Git Installationspfad](../images/Update_GitPath.png)
 
@@ -50,47 +50,47 @@ Detaillierte Beschreibung der notwendigen Schritte.
 * Benutze Homebrew um git zu installieren: ```$ brew install git```.
 * Details zur Installation von git findest Du in der [offiziellen git Dokumentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-## Install Android Studio
+## Android Studio installieren
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Installiere [Android Studio](https://developer.android.com/studio/install.html) und richte es während des ersten Starts ein.
 
-Select "Do not import settings" as you have not used it before.
+Wähle “Do not import settings”, da bisher keine Einstellungen vorgenommen wurden.
 
 ![Screenshot 1](../images/Installation_Screenshot_01.png)
 
-Click "Next".
+Klicke auf “Next”.
 
 ![Screenshot 2](../images/Installation_Screenshot_02.png)
 
-Select "Standard" installation and click "Next".
+Wähle “Standard” Installation und klicke auf “Next”.
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Wähle das Design für die Benutzeroberfläche, das Dir am besten gefällt. (In diesem Handbuch verwenden wir "Intellij".) Klicke danach auf “Next”. Das ist nur das Farbschema. Du kannst auswählen, was Du möchtest (z.B. "Darcula" für den dunklen Modus). Diese Auswahl hat keinen Einfluss auf die Erstellung der APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Klicke auf “Next” in dem Fenster “Verify Settings”.
 
 ![Screenshot 5](../images/Installation_Screenshot_05.png)
 
-The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
+Der Android Emulator (um ein Smartphone auf Deinem PC oder Mac zu simulieren) wird zum Bau der APK nicht benutzt. Du kannst auf ‘Finish’ klicken, um die Installation zu beenden und die vorgeschlagene Dokumentation bei Bedarf später lesen.
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
-Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
+Android Studio lädt viele benötigte Software-Komponenten herunter. Du kannst auf ‘Show Details’ klicken um zu sehen was passiert, aber das ist nicht relevant für den weiteren Verlauf.
 
 ![Screenshot 7](../images/Installation_Screenshot_07.png)
 
 ![Screenshot 8](../images/Installation_Screenshot_08.png)
 
-After the downloads are completed click the "Finish" button.
+Wenn der Download beendet ist, klicke auf “Finish”.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+* Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Hier ist allerdings auch ein guter Zeitpunkt, um eine Pause einzulegen.
 
-## Set git path in preferences
+## Git-Pfad in Android Studio eintragen
 
 ### Windows
 
@@ -110,112 +110,112 @@ After the downloads are completed click the "Finish" button.
 
 * Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
 
-## Download code and additional components
+## Code und weitere Komponenten herunterladen
 
-* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
+* Nutze “git clone” in Android Studio wie in dem folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png)
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
+Gib die URL der Hauptseite des AndroidAPS Repositorys (“https://github.com/MilosKozak/AndroidAPS”) an und klicke auf “Clone”.
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
+Android Studio fängt an das Projekt zu ”clonen” (kopieren). Klicke nicht auf “Background”, es geht schnell und macht es derzeit nur komplizierter.
 
 ![Screenshot 14](../images/Installation_Screenshot_14.png)
 
-Finish the checkout from version control with opening the project by clicking "Yes".
+Beende “checkout from version control”, indem du auf “Yes” klickst und das Projekt öffnest.
 
 ![Screenshot 15](../images/Installation_Screenshot_15.png)
 
-Use the standard "default gradle wrapper" and click "OK".
+Nutze den Standard “default gradle wrapper” und klicke auf “OK”.
 
 ![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
+Lies und schließe den “Tip of the Day” von Android Studio, indem du auf “close” klickst.
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
-* Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Perfekt, du hast jetzt deine eigene Kopie des Quellcodes erstellt und kannst mit dem Kompilieren beginnen.
+* Als nächstes erwartet uns die erste Fehlermeldung. Glücklicherweise schlägt Android Studio gleich die Lösung vor.
 
-Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
+Klicke auf “Install missing platform(s) and sync project”, da Android Studios noch einige Komponenten installieren muss.
 
 ![Screenshot 18](../images/Installation_Screenshot_18.png)
 
-Accept the license agreement by selecting "Accept" and clicking "Next".
+Akzeptiere die Lizenzvereinbarung, indem du auf “Accept” und “Next” klickst.
 
 ![Screenshot 19](../images/Installation_Screenshot_19.png)
 
-As it is said in the dialog please wait until the download is finished.
+Wie beschrieben, einfach warten, bis die Installation abgeschlossen ist.
 
 ![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Now it's finished. Please click "Finish".
+Ist diese abgeschlossen, dann klicke wieder auf “Finish”. 
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+Und dann wird wohl wieder der nächste Fehler auf dich zukommen... Aber auch hier schlägt Android Studio einen ähnlichen Lösungsweg vor. Klicke auf “Install Build Tools and sync project” um die fehlenden “Tools” zu installieren.
 
 ![Screenshot 22](../images/Installation_Screenshot_22.png)
 
-As it is said in the dialog please wait until the download is finished.
+Wie beschrieben, einfach warten, bis die Installation abgeschlossen ist.
 
 ![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Now it's finished. Please click "Finish".
+Ist diese abgeschlossen, dann klicke wieder auf “Finish”. 
 
 ![Screenshot 24](../images/Installation_Screenshot_24.png)
 
-And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
+Und der nächste Fehler tritt auf. Klicke einfach wieder auf “Install missing platform(s) and sync project”.
 
 ![Screenshot 25](../images/Installation_Screenshot_25.png)
 
-As it is said in the dialog please wait until the download is finished.
+Wie beschrieben, einfach warten, bis die Installation abgeschlossen ist.
 
 ![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Now it's finished. Please click "Finish".
+Ist diese abgeschlossen, dann klicke wieder auf “Finish”. 
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
-Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+Klicke auf “Install Build Tools and sync project” um die fehlenden “Tools” zu installieren.
 
 ![Screenshot 28](../images/Installation_Screenshot_28.png)
 
-As it is said in the dialog please wait until the download is finished.
+Wie beschrieben, einfach warten, bis die Installation abgeschlossen ist.
 
 ![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Now it's finished. Please click "Finish".
+Ist diese abgeschlossen, dann klicke wieder auf “Finish”. 
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
+Sieht so aus, als ob wir die Fehlermeldungen hinter uns haben :). Zeit für eine Trinkpause?
 
 ![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
+Android Studio empfiehlt, das Gradle-System zu aktualisieren. **Führe niemals ein Gradle-Update durch!** Dies kann zu Problemen führen!
 
-Please click "Don't remind me again for this project".
+Klicke auf "Don't remind me again for this project".
 
 ![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
-The build is running again.
+Der Prozess läuft weiter...
 
 ![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-Yeah, the first build is successful but we are not finished.
+Perfekt, der erste “Build Prozess” ist erfolgreich abgeschlossen, aber wir sind noch nicht fertig.
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 ## Siginierte APK erstellen (Generate signed APK)
 
-Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. In älteren Versionen wähle im Menü „Build“ und dann „Signed APK generieren...“
 
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
+Signieren bedeutet, dass du deine generierte Anwendung unterschreibst, aber digital als eine Art digitaler Fingerabdruck in der Anwendung selbst. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -227,21 +227,21 @@ Wähle “App” aus und klicke auf “Next”.
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
+Klicke auf “Create new...” um einen Key zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Diese ist verschlüsselt und mit Passwörtern geschützt. Wir empfehlen, diese Datei in deinem Heimatverzeichnis zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
-* Fill in the information for the next dialog. 
-  * Key store path: is the path to the keystore file
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
-  * You can let the validity at the default of 25 years.
-  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
+* Fülle die Informationen in den nächsten Textfeldern aus. 
+  * “Key store path”: Der Ort, an dem der Keystore gespeichert wird.
+  * Die Passwortfelder sind dazu da, um den Key auf Tippfehler zu überprüfen.
+  * “Alias”: ist der Name des Schlüssels. Du kannst ihn unverändert lassen wie vorgegeben oder jeden beliebigen anderen Namen eingeben.
+  * Die Passwort-Felder unter dem Key sind für den Key selbst. Wie immer, um die Eingabe auf Tippfehler zu prüfen.
+  * Die Gültigkeit kannst du bei den vorgeschlagenen 25 Jahren belassen.
+  * Du musst nur Vor- und Nachname ausfüllen, kannst aber auch den Rest ergänzen. Klicke danach auf “OK”.
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Fülle die Informationen von dem Keystore, den du gerade erstellt hast, aus und klicke auf “Next”.
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
