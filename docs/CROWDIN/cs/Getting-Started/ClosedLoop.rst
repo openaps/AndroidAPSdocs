@@ -1,55 +1,55 @@
-What is a Closed Loop System?
+Co je systém uzavřené smyčky?
 **************************************
 
 .. image:: ../images/autopilot.png
-  :alt: AAPS is like an autopilot
+  :alt: AAPS je jako autopilot
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps#switching-to-automated-diabetes-mode-autopilot-for-your-diabetes>`_. But what does that mean?
+Systém uzavřené smyčky APS využívá kombinaci různých komponent, aby vám usnadnil management diabetu. 
+Dana M. Lewis, jedna za zakladatelek hnutí pro open source uzavřenou smyčku jej ve své skvělé knize `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ přirovnává k „autopilotu pro váš diabetes“ <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps#switching-to-automated-diabetes-mode-autopilot-for-your-diabetes>`_. Co to však znamená?
 
-**Autopilot in an aircraft**
+**Autopilot v letadle**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+Autopilot nedělá úplně všechno a neumožňuje skutečnému pilotovi, abys celý let prospal. Pouze mu pomáhá při jeho práci. Ulevuje mu od zátěže způsobené nutností neustále monitorovat funkce letadla a sledovat letovou hladinu. Pilot se tak může soustředit na sledování letového prostoru a kontrolu funkcí autopilota.
 
-The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
+Autopilot dostává signály od mnoha různých senzorů, počítač je následně vyhodnocuje společně se zadanými specifikacemi od pilota a nakonec provede potřebné korekce. Pilot se tak již nemusí zabývat neustálými drobnými úpravami.
 
-**Closed Loop System**
+**Systém uzavřené smyčky**
 
-The same applies to an artificial pancreas closed loop system. It does not do the whole job, you still have to take care of your diabetes. A closed loop system combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+Totéž platí pro systém uzavřené smyčky APS. Nedělá úplně všechno, stále se musíte o svůj diabetes starat vy sami. Systém uzavřené smyčky využívá data ze senzorů CGM/FGM v kombinaci s vašimi specifikacemi, jako jsou bazální dávky, citlivost na inzulin a inzulino-sacharidový poměr. Na základě toho pak vypočítává návrhy, jak upravit léčbu, a provádí tyto neustále drobné změny tak, aby udržel vaší glykémii v cílovém rozmezí a vy jste s nimi neměli tolik práce. Získáte tak více času na život „mimo diabetes“.
 
-Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
+Stejně jako byste nenastoupili do letadla, které by řídil pouze autopilot bez dohledu živého pilota, tak i systém uzavřené smyčky vám sice usnadní management vašeho diabetu, ale stále vyžaduje vaši pozornost a podporu! **Ani s uzavřenou smyčkou nemůžete na svůj diabetes zcela zapomenout!**
 
-Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
+Stejně jako autopilot závisí na hodnotách ze senzorů i specifikacích pilota, tak i systém uzavřené smyčky potřebuje správné údaje jako bazály, ISF a sacharidový poměr, aby vám mohl dobře pomáhat.
 
 
-Open Source Artificial Pancreas Closed Loop Systems
+Open source systémy uzavřené smyčky APS
 ===============================
-At present there are three major open source closed loop systems available:
+V současnosti jsou k dispozici tři hlavní oper source systémy uzavřené smyčky:
 
 AndroidAPS (AAPS)
 -----------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+Systém AndroidAPS je podrobně popsán v `této dokumentaci <./WhatisAndroidAPS.html>`_. Pro výpočty a ovládání inzulinové pumpy využívá smartphone se systémem Android. Vývojáři úzce spolupracují s OpenAPS (tzn. používají stejné algoritmy).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
+Kompatibilní pumpy <../Hardware/pumps.html>`_ jsou:
 
 * DanaR / DanaRS
 * Accu-Chek Combo
 * Accu-Chek Insight
-* some old Medtronic pumps (as of version 2.4)
+* některé staré pumpy Medtronic (verze 2.4)
 
 OpenAPS
 -------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ byl první open source systém uzavřené smyčky. Používá malý počítač, jako je Raspberry Pi nebo Intel Edison.
 
-Compatible pumps are:
+Kompatibilní pumpy jsou:
 
-* some old Medtronic pumps
+* některé staré pumpy Medtronic
 
-Loop for iOS
+Loop pro iOS
 ------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ je open source systém uzavřené smyčky pro zařízení Apple iPhone.
 
-Compatible pumps are:
+Kompatibilní pumpy jsou:
 
 * Omnipod
-* some old Medtronic pumps
+* některé staré pumpy Medtronic
