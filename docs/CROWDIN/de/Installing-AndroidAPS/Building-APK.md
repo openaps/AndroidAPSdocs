@@ -35,14 +35,42 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 Detaillierte Beschreibung der notwendigen Schritte.
 
-## Android Studio installieren
+## Installiere git (falls du es noch nicht hast)
+
+### Windows
+
+* Jede git Version sollte funktionieren. Beispiel: <https://git-scm.com/download/win>
+* Notiere Dir den Installationspfad. Du brauchst diesen im nächsten Schritt.
+  
+  ![Git Installationspfad](../images/Update_GitPath.png)
+
+* In Android Studio musst Du den Pfad zu git.exe hinterlegen: File - Settings
+  
+  ![Android Studio - Einstellungen öffnen](../images/Update_GitSettings1.png)
+
+* Im nächsten Fenster: Version Control - Git
+
+* Wähle den richtigen Pfad: .../Git<font color="#FF0000"><b>/bin</b></font>
+
+* Stelle sicher, dass die update method "Merge" ausgewählt ist.
+  
+  ![Android Studio - Pfad zu GIT](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* Jede git Version sollte funktionieren. Zum Beispiel <https://git-scm.com/download/mac>
+* Benutze Homebrew um git zu installieren: ```$ brew install git```.
+* Details zur Installation von git findest Du in der [offiziellen git Dokumentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
+
+## Install Android Studio
 
 * Installiere git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - installiere einfach ein ‘Package Git’ über einen ‘Package Manager’ deiner Linux-Distribution
-* Installiere [Android Studio](https://developer.android.com/studio/install.html).
-* Konfiguriere Android Studio gleich beim ersten Öffnen des Programms.
+  * Linux - just install a package git via package manager of your distribution
+* Install [Android Studio](https://developer.android.com/studio/install.html).
+* Setup Android Studio during first start
 
 Wähle “Do not import settings”, da bisher keine Einstellungen vorgenommen wurden.
 
@@ -78,11 +106,11 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Hier ist allerdings auch ein guter Zeitpunkt, um eine Pause einzulegen.
+* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
-## Code und weitere Komponenten herunterladen
+## Download code and additional components
 
-* Nutze “git clone” in Android Studio wie in dem folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
+* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png)
 
@@ -108,8 +136,8 @@ Lies und schließe den “Tip of the Day” von Android Studio, indem du auf “
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
-* Perfekt, du hast jetzt deine eigene Kopie des Quellcodes erstellt und kannst mit dem Kompilieren beginnen.
-* Als nächstes erwartet uns die erste Fehlermeldung. Glücklicherweise schlägt Android Studio gleich die Lösung vor.
+* Excellent, you have your own copy of the source code and are ready to start the build.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Klicke auf “Install missing platform(s) and sync project”, da Android Studios noch einige Komponenten installieren muss.
 
@@ -201,13 +229,13 @@ Klicke auf “Create new...” um einen Key zu erstellen. Dieser ist nichts ande
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
-* Fülle die Informationen in den nächsten Textfeldern aus. 
-  * “Key store path”: Der Ort, an dem der Keystore gespeichert wird.
-  * Die Passwortfelder sind dazu da, um den Key auf Tippfehler zu überprüfen.
-  * “Alias”: ist der Name des Schlüssels. Du kannst ihn unverändert lassen wie vorgegeben oder jeden beliebigen anderen Namen eingeben.
-  * Die Passwort-Felder unter dem Key sind für den Key selbst. Wie immer, um die Eingabe auf Tippfehler zu prüfen.
-  * Die Gültigkeit kannst du bei den vorgeschlagenen 25 Jahren belassen.
-  * Du musst nur Vor- und Nachname ausfüllen, kannst aber auch den Rest ergänzen. Klicke danach auf “OK”.
+* Fill in the information for the next dialog. 
+  * Key store path: is the path to the keystore file
+  * The password fields below are for the keystore to double check for typing errors.
+  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
+  * The password fields below the key are for the key itself. As always to double check for typing errors.
+  * You can let the validity at the default of 25 years.
+  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
