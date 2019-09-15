@@ -35,6 +35,34 @@ In general, the steps necessary to build the APK file:
 
 Detailed description of the steps necessary to build the APK file.
 
+## Installeer Git (als je dat nog niet hebt)
+
+### Windows
+
+* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/win>. Volg de instructies op die site om Git te installeren.
+* Onthoud of noteer in welke map Git op jouw computer geïnstalleerd wordt. Dat heb je nodig in de volgende stap.
+  
+  ![Git installatie pad](../images/Update_GitPath.png)
+
+* Laat Studio weten waar git.exe zich bevindt: File - Settings (Bestand - Instellingen)
+  
+  ![Android Studio - open instellingen](../images/Update_GitSettings1.png)
+
+* In het volgende venster: Versie Control - Git
+
+* Kies het juiste pad: .../Git<font color="#FF0000"><b>/bin</b></font>
+
+* Zorg ervoor dat de update methode "Merge" ("Samenvoegen") is geselecteerd.
+  
+  ![Android Studio - GIT pad](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/mac>. Volg de instructies op die site om Git te installeren.
+* Gebruik homebrew om git te installeren: ```$ brew install git```.
+* Voor meer informatie over het installeren van git zie de [officiële git documentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
+
 ## Install Android Studio
 
 * Install git 
