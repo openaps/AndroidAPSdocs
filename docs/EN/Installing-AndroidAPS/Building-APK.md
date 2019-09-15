@@ -61,12 +61,7 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Install Android Studio
 
-* Install git
-  * [Windows](https://gitforwindows.org/)
-  * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - just install a package git via package manager of your distribution
-* Install [Android Studio](https://developer.android.com/studio/install.html).
-* Setup  Android Studio during first start
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
 Select "Do not import settings" as you have not used it before.
 
