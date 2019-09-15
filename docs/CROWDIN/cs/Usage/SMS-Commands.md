@@ -6,10 +6,10 @@ Poznámka: v AndroidAPS verze 2.3 jsou SMS příkazy kvůli chybě zakázány. V
 
 Pokud musíte používat SMS příkazy, můžete použít následující pracovní postup:
 
-- Export settings
+- Exportujte nastavení
 - Stáhněte AndroidAPS verzi 2.2 (instalací verze 2.2 APK)
 - Udělejte nastavení SMS v AndroidAPS 2.2.
-- Upgrade to AndroidAPS 2.3. SMS command settings will not be accessible there.
+- Aktualizujte na AndroidAPS verze 2.3. SMS příkazy v ní nebudou k dostupné (ale funkční).
 
 ## Bezpečnost především
 

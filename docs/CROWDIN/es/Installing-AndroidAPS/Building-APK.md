@@ -35,14 +35,24 @@ In general, the steps necessary to build the APK file:
 
 Detailed description of the steps necessary to build the APK file.
 
+## Install git (if you don't have it)
+
+### Windows
+
+* Cualquier versión de git sirve. For example <https://git-scm.com/download/win>
+* Make sure to note down the installation path. You will need it later after you installed Android Studio.
+  
+  ![Git installation path](../images/Update_GitPath.png)
+
+### Mac
+
+* Cualquier versión de git sirve. For example <https://git-scm.com/download/mac>
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
 ## Install Android Studio
 
-* Install git 
-  * [Windows](https://gitforwindows.org/)
-  * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - just install a package git via package manager of your distribution
-* Install [Android Studio](https://developer.android.com/studio/install.html).
-* Setup Android Studio during first start
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
 Select "Do not import settings" as you have not used it before.
 
@@ -79,6 +89,26 @@ After the downloads are completed click the "Finish" button.
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
 * Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+
+## Set git path in preferences
+
+### Windows
+
+* Let Studio know where is git.exe located: File - Settings
+  
+  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+
+* In the next window: Version Control - Git
+
+* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
+
+* Make sure update method "Merge" is selected.
+  
+  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
 ## Download code and additional components
 

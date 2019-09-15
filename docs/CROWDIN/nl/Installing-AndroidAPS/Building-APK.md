@@ -35,14 +35,24 @@ In general, the steps necessary to build the APK file:
 
 Detailed description of the steps necessary to build the APK file.
 
+## Installeer Git (als je dat nog niet hebt)
+
+### Windows
+
+* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/win>. Volg de instructies op die site om Git te installeren.
+* Onthoud of noteer in welke map Git op jouw computer geïnstalleerd wordt. You will need it later after you installed Android Studio.
+  
+  ![Git installatie pad](../images/Update_GitPath.png)
+
+### Mac
+
+* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/mac>. Volg de instructies op die site om Git te installeren.
+* Gebruik homebrew om git te installeren: ```$ brew install git```.
+* Voor meer informatie over het installeren van git zie de [officiële git documentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
 ## Install Android Studio
 
-* Install git 
-  * [Windows](https://gitforwindows.org/)
-  * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - just install a package git via package manager of your distribution
-* Install [Android Studio](https://developer.android.com/studio/install.html).
-* Setup Android Studio during first start
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
 Select "Do not import settings" as you have not used it before.
 
@@ -79,6 +89,26 @@ After the downloads are completed click the "Finish" button.
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
 * Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+
+## Set git path in preferences
+
+### Windows
+
+* Laat Studio weten waar git.exe zich bevindt: File - Settings (Bestand - Instellingen)
+  
+  ![Android Studio - open instellingen](../images/Update_GitSettings1.png)
+
+* In het volgende venster: Versie Control - Git
+
+* Kies het juiste pad: .../Git<font color="#FF0000"><b>/bin</b></font>
+
+* Zorg ervoor dat de update methode "Merge" ("Samenvoegen") is geselecteerd.
+  
+  ![Android Studio - GIT pad](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
 
 ## Download code and additional components
 

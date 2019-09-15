@@ -78,13 +78,9 @@ Má to několik možných důvodů. Vyzkoušejte tyto kroky:
 7. V Bluetooth menu pumpy přejděte na ** ADD DEVICE / ADD CONNECTION**. Stiskněte *CONNECT!* Kroky 5 a 6 musí následovat za sebou v krátkém časovém intervalu.
 8.     Nyní se na pumpě ukáže BT název telefonu a nabídne možnost párování. S potvrzením a stisknutím na pumpě je nutné počkat aspoň 5 s. Jinak pumpa neodešle požadavek pro párování korektně.
       
-      * Jestliže je nastaveno zhasnutí displeje na 5 s, můžete zkusit nastavit na 40 s (původní nastavení). From experiance the time 
-        between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
-        without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings.
-      * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
-        compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
-        possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
-        (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+      * Jestliže je nastaveno zhasnutí displeje na 5 s, můžete zkusit nastavit na 40 s (původní nastavení). Ze zkušenosti je potřeba cca 5–10 s počkat, než je pumpa v telefonu vidět a je vybrána. Často se stane, že párovaní vyprší bez úspěšného výsledku. Později můžete vrátit zhasnuti LCD na 5 s, jak je doporučeno pro AAPS.
+      * Pokud váš telefon pumpu vůbec nikdy nevidí, je dost možné, že Bluetooth vašeho telefonu není kompatibilní s pumpou Accu Chek Combo. Podmínkou pro Accu-chek Combo je **LineageOS >= 14.1** nebo **Android >= 8.1 (Oreo)**. Pokud máte možnost, zkuste jiný telefon. Pod níže uvedeným odkazem najdete seznam telefonů, které již byly s AAPS vyzkoušeny (pod AAPS Phones)
+      (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
       
 
 9.     Na pumpě se zobrazí desetimístný bezpečnostní kód. Ruffy zobrazí obrazovku pro zadání. Po zadání kódu do aplikace Ruffy byste měli být připraveni.

@@ -35,14 +35,24 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 Detaillierte Beschreibung der notwendigen Schritte.
 
+## Installiere git (falls du es noch nicht hast)
+
+### Windows
+
+* Jede git Version sollte funktionieren. Beispiel: <https://git-scm.com/download/win>
+* Notiere Dir den Installationspfad. Du benötigst diesen nach der Installation von Android Studio.
+  
+  ![Git Installationspfad](../images/Update_GitPath.png)
+
+### Mac
+
+* Jede git Version sollte funktionieren. Zum Beispiel <https://git-scm.com/download/mac>
+* Benutze Homebrew um git zu installieren: ```$ brew install git```.
+* Details zur Installation von git findest Du in der [offiziellen git Dokumentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
 ## Android Studio installieren
 
-* Installiere git 
-  * [Windows](https://gitforwindows.org/)
-  * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - installiere einfach ein ‘Package Git’ über einen ‘Package Manager’ deiner Linux-Distribution
-* Installiere [Android Studio](https://developer.android.com/studio/install.html).
-* Konfiguriere Android Studio gleich beim ersten Öffnen des Programms.
+Installiere [Android Studio](https://developer.android.com/studio/install.html) und richte es während des ersten Starts ein.
 
 Wähle “Do not import settings”, da bisher keine Einstellungen vorgenommen wurden.
 
@@ -79,6 +89,26 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
 * Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Hier ist allerdings auch ein guter Zeitpunkt, um eine Pause einzulegen.
+
+## Git-Pfad in Android Studio eintragen
+
+### Windows
+
+* In Android Studio musst Du den Pfad zu git.exe hinterlegen: File - Settings
+  
+  ![Android Studio - Einstellungen öffnen](../images/Update_GitSettings1.png)
+
+* Im nächsten Fenster: Version Control - Git
+
+* Wähle den richtigen Pfad: .../Git<font color="#FF0000"><b>/bin</b></font>
+
+* Stelle sicher, dass die update method "Merge" ausgewählt ist.
+  
+  ![Android Studio - Pfad zu GIT](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
 
 ## Code und weitere Komponenten herunterladen
 

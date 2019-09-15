@@ -19,7 +19,7 @@ Začínáme
    Bezpečnost především <./Getting-Started/Safety-first.rst>
    Co je systém uzavřené smyčky <./Getting-Started/ClosedLoop.rst>
    Co je systém uzavřené smyčky s AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Aktualizace wiki a změny <./Getting-Started/WikiUpdate.rst>
    
    
 Co potřebuji 
@@ -111,7 +111,7 @@ Pokročilé
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Automatizace s aplikacemi třetích stran <./Usage/automationwithapp.md>
    
 
 Poradce při potížích
@@ -151,7 +151,7 @@ Kam pro pomoc
 
    Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Aktualizace wiki a změny <./Getting-Started/WikiUpdate.rst>
 
 Pro lékaře
 ------------
