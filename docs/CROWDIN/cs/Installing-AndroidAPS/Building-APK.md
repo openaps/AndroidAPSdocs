@@ -35,14 +35,42 @@ Následují obecné kroky k sestavení souboru APK:
 
 Následuje detailní popis kroků nutných k sestavení souboru APK.
 
-## Nainstalujte Android Studio
+## Nainstalujte git (pokud ho ještě nemáte)
+
+### Windows
+
+* Měly by fungovat všechny verze gitu. Například <https://git-scm.com/download/win>
+* Poznačte si cestu instalace. Budete ji potřebovat v dalším kroku.
+  
+  ![Instalační cesta gitu](../images/Update_GitPath.png)
+
+* Zadejte do Studia umístění souboru git.exe: File - Settings
+  
+  ![Android Studio - otevřete nastavení](../images/Update_GitSettings1.png)
+
+* V dalším okně: Version Control - Git
+
+* Zvolte správnou cestu: .../Git<font color="#FF0000"><b>/bin</b></font>
+
+* Ujistěte se, že je vybrána metoda aktualizace "Merge".
+  
+  ![Android Studio - cesta GIT](../images/Update_GitSettings2a.png)
+
+### Mac
+
+* Měly by fungovat všechny verze gitu. Například <https://git-scm.com/download/mac>
+* Použijte homebrew k instalaci gitu: ```$ brew install git```.
+* Detaily o instalaci gitu naleznete v [oficiální dokumentaci gitu](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Pokud instalujete git přes homebrew, není třeba měnit žádné předvolby. Pokud by bylo třeba: Najdete je zde: Android Studio - Preferences.
+
+## Install Android Studio
 
 * Nainstalujte git 
   * [Windows](https://gitforwindows.org/)
   * [Mac OS X](http://sourceforge.net/projects/git-osx-installer/)
-  * Linux - prostě instalujte balíček git správcem balíčků z vaší distribuce
-* Nainstalujte [Android Studio](https://developer.android.com/studio/install.html).
-* Nastavte Android Studio při prvním spuštění
+  * Linux - just install a package git via package manager of your distribution
+* Install [Android Studio](https://developer.android.com/studio/install.html).
+* Setup Android Studio during first start
 
 Zvolte "Do not import settings" (Neimportovat nastavení), protože jste tento software zatím nevyužívali.
 
@@ -78,11 +106,11 @@ Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
 ![Snímek 9](../images/Installation_Screenshot_09.png)
 
-* Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Možná je teď vhodná doba na krátkou přestávku?
+* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
-## Stáhněte si kód a další komponenty
+## Download code and additional components
 
-* Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte "Check out project from Version Control" s "Git" jako konkrétní verzí správce zdrojových kódů.
+* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
 ![Snímek 10](../images/Installation_Screenshot_10.png)
 
@@ -108,8 +136,8 @@ Přečtěte si okno „Tip of Day“ a kliknutím na tlačítko „Close“ je z
 
 ![Snímek 17](../images/Installation_Screenshot_17.png)
 
-* Výborně, teď máte vlastní kopii zdrojových kódů a jste připravení začít se sestavováním.
-* Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
+* Excellent, you have your own copy of the source code and are ready to start the build.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Klikněte na „Install missing platform(s) and sync project“, protože Android Studio potřebuje doinstalovat chybějící platformu.
 
@@ -201,13 +229,13 @@ Klikněte na „Create new...“ a vytvořte úložiště svých klíčů. Úlo�
 
 ![Snímek 41](../images/Installation_Screenshot_41.png)
 
-* Vyplňte údaje pro další dialogové okno. 
-  * Key store path: je cesta k vašemu úložišti klíčů
-  * Políčka s hesly níže jsou pro úložiště klíčů a jsou zdvojená, aby se zabránilo překlepům.
-  * Alias je název pro klíč, který potřebujete. Můžete ponechat výchozí, anebo si vybrat jakýkoli jiný název.
-  * Políčka s hesly pod tím jsou pro samotný klíč. Jako vždy jsou zdvojená, aby se zabránilo překlepům.
-  * Můžete ponechat "Validity (years)" na výchozí hodnotě 25.
-  * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje. Pak klikněte na tlačítko „OK“.
+* Fill in the information for the next dialog. 
+  * Key store path: is the path to the keystore file
+  * The password fields below are for the keystore to double check for typing errors.
+  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
+  * The password fields below the key are for the key itself. As always to double check for typing errors.
+  * You can let the validity at the default of 25 years.
+  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
 
 ![Snímek 42](../images/Installation_Screenshot_42.png)
 
