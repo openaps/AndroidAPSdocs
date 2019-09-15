@@ -77,7 +77,7 @@ Automatizační schéma bude využívat notifikační kanál xDripu+. Jestliže 
 
 Nejprve musíte přidat výstrahu na vysokou glykémii v aplikaci xDrip+:
 
-![xDrip+ alert settings](../images/automate-xdrip1.png)
+![Nastavení výstrahy xDrip+](../images/automate-xdrip1.png)
 
 Název výstrahy: (Dávejte pozor!) Tento název je zásadní pro spuštění události. Měl by být nezaměnitelný a neměl by se podobat žádnému jinému názvu výstrahy. Příklad: 'Výstraha180' by neměla být hned vedle 'Výstraha80'.
 
@@ -85,7 +85,7 @@ Limit: Hodnota glykémie, při které se spustí výstraha.
 
 Výchozí potvrzení: Zadejte dobu, po kterou chcete nastavit nízký dočasný cíl, protože výstraha se po uplynutí této doby může spustit znovu a případně prodloužit DC.
 
-![xDrip+ alert settings](../images/automate-xdrip2.png)
+![Nastavení výstrahy xDrip+](../images/automate-xdrip2.png)
 
 ##### Automate
 
