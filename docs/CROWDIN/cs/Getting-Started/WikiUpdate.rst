@@ -1,16 +1,16 @@
-Wiki updates & changes
+Aktualizace a změny Wiki
 **********************
-September 2019
+září 2019
 ===============
-* `Automate <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - slow carb absorbtion
-* `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
-* `Profile timeshift <../Usage/Profiles.html#timeshift>`_ (more details)
-* `What is a closed loop system? <../Getting-Started/ClosedLoop.html>`_
+* `Automatizace <../Usage/Automation.html>`_
+* `Bolusová kalkulačka <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - pomalá absorpce sacharidů
+* `Zabezpečení Nightscoutu <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
+* `Časový posun profilu <../Usage/Profiles.html#timeshift>`_ (více podrobností)
+* `Co je systém uzavřené smyčky? <../Getting-Started/ClosedLoop.html>`_
 
-August 2019
+srpen 2019
 ===========
-* `Dexcom G6 patched app region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
-* `Dexcom G6 new transmitter <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
-* `What do I need? <../index.html#what-do-i-need>`_ - new structure & additional information
-* New structure
+* `Region pro upravenou aplikaci Dexcom G6 <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* `Nový vysílač Dexcom G6 <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
+* `Co potřebuji? <../index.html#what-do-i-need>`_ - nová struktura a doplňující informace
+* Nová struktura
