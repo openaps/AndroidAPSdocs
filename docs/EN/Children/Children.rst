@@ -12,7 +12,7 @@ Functions
 * Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone.
 * Parents can be alarmed by using **xDrip app in follower mode** on their phone.
 * Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands.html>`_.
-* Remote profile switch through NSClient app.
+* Remote profile switch and temp targets through NSClient app.
 
 Tools and apps for remote monitoring
 ------------------------------------
