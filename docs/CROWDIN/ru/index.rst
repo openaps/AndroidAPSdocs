@@ -101,6 +101,7 @@ AndroidAPS for children
    :maxdepth: 1
    :glob:
    
+   Remonte monitoring <.Children/Children.rst>
    SMS commands <./Usage/SMS-Commands.md>
    
 
