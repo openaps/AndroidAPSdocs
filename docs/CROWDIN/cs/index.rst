@@ -101,6 +101,7 @@ AndroidAPS pro děti
    :maxdepth: 1
    :glob:
    
+   Remonte monitoring <.Children/Children.rst>
    SMS příkazy <./Usage/SMS-Commands.md>
    
 
