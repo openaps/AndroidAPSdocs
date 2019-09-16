@@ -6,7 +6,7 @@ September 2019
 * `Bolus-Rechner <../Getting-Started/Screenshots.html#langsamer-kohlenhydrat-abbau>`_ - Langsamer Kohlenhydrat-Abbau
 * `Nightscout Sicherheit <../Installing-AndroidAPS/Nightscout.html#sicherheitsuberlegungen>`_
 * `Profile Zeitverschiebung <../Usage/Profiles.html#zeitverschiebung>`_ (detailliertere Erklärung)
-* `Remote monitoring <../Children/Children.rst>`_
+* `Kontrolle aus der Ferne <../Children/Children.rst>`_
 * `Was ist ein Closed Loop System? <../Getting-Started/ClosedLoop.html>`_
 
 August 2019
