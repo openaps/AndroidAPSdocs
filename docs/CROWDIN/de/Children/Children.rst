@@ -4,7 +4,7 @@ Remote monitoring
 .. image:: ../images/KidsMonitoring.png
   :alt: Monitoring children
   
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands.
+AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of corse you can also use remote monitoring to follow your partner or friend.
 
 Functions
 =========
