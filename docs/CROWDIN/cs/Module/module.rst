@@ -111,7 +111,7 @@ Pokud chcete příklad krok za krokem, můžete se podívat na ukázkovou instal
    :maxdepth: 1
    :glob:
    
-   Ukázková instalace <../Getting-Started/Sample-Setup.html>
+   Sample Setup <../Getting-Started/Sample-Setup.rst>
  
   
 Co dělat při čekání na moduly

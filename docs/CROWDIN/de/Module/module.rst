@@ -111,7 +111,7 @@ Eine Schritt-für-Schritt-Anleitung findest Du im Sample Setup. Dieses ist schon
    :maxdepth: 1
    :glob:
    
-   Sample Setup <../Getting-Started/Sample-Setup.html>
+   Sample Setup <../Getting-Started/Sample-Setup.rst>
  
   
 Wartezeit überbrücken

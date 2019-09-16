@@ -101,6 +101,7 @@ AndroidAPS for children
    :maxdepth: 1
    :glob:
    
+   Remote monitoring <./Children/Children.rst>
    SMS Comando's <./Usage/SMS-Commands.md>
    
 
