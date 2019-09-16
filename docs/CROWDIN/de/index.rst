@@ -101,7 +101,7 @@ AndroidAPS für Kinder
    :maxdepth: 1
    :glob:
    
-   Remote monitoring <./Children/Children.rst>
+   Kontrolle aus der Ferne <./Children/Children.rst>
    SMS-Befehle <./Usage/SMS-Commands.md>
    
 
