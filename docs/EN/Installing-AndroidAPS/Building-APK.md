@@ -48,7 +48,7 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Install Android Studio
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start. Install the older version 3.1.3 from the [download archive](https://developer.android.com/studio/archive) if you want it to look exactly like the screens here (recommended for newbies!). Newer versions may behave slightly differently.
 
 Select "Do not import settings" as you have not used it before.
 
