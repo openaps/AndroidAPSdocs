@@ -6,7 +6,7 @@ září 2019
 * `Bolusová kalkulačka <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - pomalá absorpce sacharidů
 * `Zabezpečení Nightscoutu <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
 * `Časový posun profilu <../Usage/Profiles.html#timeshift>`_ (více podrobností)
-* `Remote monitoring <../Children/Children.rst>`_
+* `Remote monitoring <../Children/Children.html>`_
 * `Co je systém uzavřené smyčky? <../Getting-Started/ClosedLoop.html>`_
 
 srpen 2019
