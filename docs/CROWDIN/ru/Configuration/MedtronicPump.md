@@ -24,9 +24,9 @@
     - 554/754 версия ЕС (прошивка 2.6A или ниже)
     - 554/754 Канадская версия (прошивка 2.7A или ниже)
 
-## Configuration of the pump
+## Конфигурация помпы
 
-- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication.
+- **Включите удаленный режим на помпе** (Утилиты -> Параметры удаленной работы, выберите Да, на следующем экране выполните Добавить ID и введите липовый идентификатор (111111 или типа того). Нужен, как минимум, один идентификатор в списке идентификаторов устройств для удаленной работы. Эти опции могут выглядеть по-разному в разных моделях помп. Этот шаг важен, так как при таких настройках помпа будет чаще принимать запрос на дистанционное подключение.
 - **Set Max Basal** on your Pump to your "max basal entry in your STD profile" * 4 (if you want to have 400% TBR as max). This number must be under 35 (as you can see in pump).
 - **Set Max Bolus** on your Pump (max is 25)
 - **Set profile to STD**. This will be the only profile we will use. You can also disable.
