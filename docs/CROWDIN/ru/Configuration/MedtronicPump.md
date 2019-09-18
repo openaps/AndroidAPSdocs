@@ -45,15 +45,15 @@
 
 ![MDT Settings](../images/Medtronic01.png)
 
-You need to set following items: (see picture above)
+Необходимо задать следующие параметры: (см. рисунок выше)
 
-- **Pump Serial Number**: You can find that on back side, entry SN. You need to get only number, your serial is 6 numbers.
-- **Pump Type**: Which pump type you have (i.e. 522). 
-- **Pump Frequency**: According to pump frequency there were two versions of Medtronic pump made (if you are not sure what frequency your pump uses, look at [FAQ](../Configuration/MedtronicPump#faq)): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
-- **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. It limits how much insulin you can Bolus. If you go over this, Bolus won't be set and error will be returned. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
-- **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
+- ** Серийный номер помпы **: Он находится на обратной стороне помпы сразу за буквами SN. Нужно вводить только номер, серийный номер состоит из 6 цифр.
+- ** Тип помпы **: Какой у вас тип помпы (напр. 522). 
+- **Частота помпы**: Существуют две версии помп Medtronic (если вы не уверены, на какой частоте работает ваша помпа, смотрите [справку](../Configuration/MedtronicPump#faq)): 
+    - для США & Канады применяется частота 916 МГц
+    - для остального мира используется частота 868 МГц
+- **Макс болюс на помпе (ед)** (в час): Должен быть таким же какой установлен на помпе. Он ограничивает сколько инсулина можно подать при болюсе. Если его превысить, болюс не будет подан, и появится сообщение об ошибке. Максимальное значение, которое можно задать - 25, задайте его правильно, чтобы не допустить передозировки.
+- **Макс база на помпе (ед/ч)**: должна быть такой же, какая установлена на помпе. Это ограничение определяет какая максимальная база подается в час. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
 - **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
 - **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
 - **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
