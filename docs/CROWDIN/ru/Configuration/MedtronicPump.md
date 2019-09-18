@@ -34,14 +34,14 @@
 
 ## Настройка телефона/AndroidAPS
 
-- **Do not pair RileyLink with your Phone.** If you paired your RileyLink, then AndroidAPS won't be able to find it in configuration.
-- Disable Auto-rotate on your phone (on some devices Auto-rotate restarts BT sessions, which is not something we would want).
-- You can configure pump in AndroidAPS two ways: 
+- **Не сопрягайте RileyLink с телефоном.** Если они сопряжены, AndroidAPS не сможете найти его в конфигурации.
+- Отключите автоматическое вращение на телефоне (на некоторых устройствах в этом режиме автоматически перезапускаются сеансы bluetooth, что нам не нужно).
+- Вы можете настроить помпу в AndroidAPS двумя способами: 
 
-1. Use of Wizard (on new install)
-2. Directly in Config tab (Cog icon on Medtronic driver)
+1. Воспользоваться Мастером (при новой установке)
+2. Непосредственно на вкладке Конфигурация (Значок шестеренки в графе драйвера Medtronic)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Если вы делаете новую установку, то сразу попадаете в Мастер настройки. Иногда, если соединение BT не работает должным образом (не удается подключиться к помпе), возможно, вы не сможете выполнить настройку. В таком случае выберите виртуальную помпу и после того, как Мастер закончит работу, можно обратиться к варианту 2, который обойдет обнаружение помпы.
 
 ![MDT Settings](../images/Medtronic01.png)
 
