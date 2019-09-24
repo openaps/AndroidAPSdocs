@@ -108,7 +108,7 @@
 
 ### Logging
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Поскольку драйвер Medtronic создан не так давно, следует включить ведение журнала, чтобы мы могли при необходимости отладить и устранить проблемы. Нажмите на значок в верхнем левом углу, выберите обслуживание и настройки журнала. Параметры Помпа, PumpComm, PumpBTComm должны быть отмечены.
 
 ### RileyLink/GNARL
 
