@@ -35,8 +35,8 @@ Pokud chcete nastavit vnitřní odkaz v dokumentaci AndroidAPS, použijte pouze 
 
 V souborech končících na **.md**:
 
-* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ukončení cílového souboru musí být .md nebo .rst (ne .html)
-* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ukončení cílového souboru musí být .md nebo .rst (ne .html)
+* `[text](../Usage/Test.md)` nastaví vnitřní odkaz o adresář nahoru, z místa kde jste, a pak do podadresáře /Usage. Ukončení cílového souboru musí být .md nebo .rst (ne .html)
+* `[text](./Usage/Test.md)` nastaví interní hypertextový odkaz z místa, kde se nachází, na /Usage. Ukončení cílového souboru musí být .md nebo .rst (ne .html)
 
 Chcete-li nastavit odkaz na **ukotvení** (např. na titulek) musíte vynechat příponu souboru
 
@@ -44,7 +44,7 @@ Chcete-li nastavit odkaz na **ukotvení** (např. na titulek) musíte vynechat p
 
 V souborech končících na **.rst**:
 
-* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Koncovka cílového souboru musí být .html. Kromě toho, když jste v toctree. Pak ho musíte psát takto: `Text <../Usage/Test.md>` s .md nebo rst (not .html).
+* `` `Text <../Usage/Test.hmtl>`_ `` nastaví vnitřní odkaz o adresář nahoru, z místa kde jste, a pak do podadresáře /Usage. Koncovka cílového souboru musí být .html. Kromě toho, když jste v toctree. Pak ho musíte psát takto: `Text <../Usage/Test.md>` s .md nebo rst (not .html).
 * `Text <./Usage/Test.md>` nastaví odkaz z místa, kde jste, do podadresáře /Usage.
 
 ### Rozšířené tipy pro přidávání více obrázků do dokumentace
