@@ -122,7 +122,7 @@
 
 Не следует выполнять процедуры лечения вручную с помпы. Все команды (болюс, врем базал TBR) должны проходить через AndroidAPS, но если возникнет необходимость выполнять команды вручную, НЕ подавайте их с частотой менее 3 минут (если по какой-то причине подаете 2 болюса, то второй следует начать по крайней мере через 3 минуты после первого).
 
-## Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
+## Изменения часового пояса и сезонное время или путешествия с помпой Medtronic и AndroidAPS
 
 Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
 
