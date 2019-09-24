@@ -98,11 +98,11 @@
 
 ## Действия
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Если выбран драйвер Medtronic, на вкладке Действия можно добавить три варианта:
 
-- **Wake and Tune Up** - If you see that your AndroidAPS hasn't contacted your pump in a while (it should contact it every 5 minutes), you can force Tune Up. This will try to contact your pump, by searching all sub frequencies on which Pump can be contacted. If it finds one it will set it as your default frequency. 
-- **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-- **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
+- ** Пробуждение и настройка **-Если вы видите, что AndroidAPS не связывался с помпой в течение какого-то времени (он должен связаться каждые 5 минут), вы можете нажать кнопку Настройка. Начнется сеанс связи с помпой с поиском всех подчастот, на которых может выполняться связь. Если обнаружится одна из них, она будет задана как частота по умолчанию. 
+- ** Сброс конфигурации RileyLink **-При перезагрузке RileyLink/GNARL необходимо выполнить эту команду, чтобы переконфигурировать устройство (набор частоты, тип частоты, настроенная кодировка).
+- ** Очистить Блокировку болюса **-При подаче болюса происходит блокировка, которая предотвращает выполнение любых других команд на помпе. Если остановить помпу и вновь запустить ее (для отмены болюса), то можно удалить эту блокировку. Опция доступна только при подаче болюса... 
 
 ## Important notes
 
