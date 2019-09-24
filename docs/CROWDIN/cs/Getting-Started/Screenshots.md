@@ -49,7 +49,7 @@ SUPERBOLUS je funkce, kdy je k dávce okamžitého bolusu přičtený bazální 
 
 **Sekce C:** Zobrazuje různé hodnoty, které byly použity k výpočtu bolusu. Můžete zrušit označení všech, které se vám nehodí, ale normálně by k tomu neměl být důvod.
 
-### Combinations of COB and IOB and what they mean
+### Kombinace COB a IOB a jejich význam
 
 <ul>
     <li>Pokud vyberete COB a IOB, budou při výpočtu zohledněny nestrávané sacharidy, které již nejsou pokryty inzulinem + veškerý inzulin, který byl dodán jako DBD nebo SMB.</li>
@@ -57,13 +57,13 @@ SUPERBOLUS je funkce, kdy je k dávce okamžitého bolusu přičtený bazální 
     <li>Pokud vyberete IOB bez COB, AAPS bude zohledňovat již vydaný inzulin, ale nezapočítá žádné zkonzumované sacharidy, které dosud nejsou stráveny. To vede k oznámení o 'chybějících sacharidech'.
 </ul>
 
-If you bolus for additional food shortly after a meal bolus (i.e. additional desert) it can be helpful to untick all boxes. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+V případě, že chcete vydat další bolus krátce po podání bolusu k jídlu (např. když si přidáte zákusek), je užitečné zrušit označení všech těchto políček. Tak lze přidat pouze nově zkonzumované sacharidy, jelikož hlavní jídlo dosud nemusí být stráveno, takže IOB krátce po bolusu k jídlu nebude přesně odpovídat množství COB.
 
-### Slow carb absorption
+### Pomalá absorpce sacharidů
 
 As of version 2.4, AAPS warns if slow carb absorption is detected. There will be an additional text on the confirmation screen after calculator usage. The risk is that COB would be overestimated and to much insulin might be given.
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![Pomalá absorpce sacharidů](../images/Calculator_SlowCarbAbsorbtion.png)
 
 In this example 41% of time [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) was used instead of value calculated from deviations.
 
