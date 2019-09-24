@@ -126,7 +126,7 @@
 
 Важно помнить, что не следует отключать алгоритм цикла во время путешествий и перелетов (если ваш мониторинг может работать в автономном режиме). AAPS автоматически обнаружит изменения часового пояса и отправит команду на помпу когда изменится время на телефоне.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Например, если вы путешествете на Восток и часовой пояс меняется с добавлением часов (например, с GMT + 0 до GMT + 2), хронология помпы изменится без проблем и вам не о чем беспокоиться... но если вы перемещаетесь на Запад и часовой пояс меняется с вычитанием часов (например, с GMT + 2 до GMT-0), то возможна небольшая рассинхронизация. Говоря проще, в течение следующих x часов вам придется быть осторожными, потому что активный инсулин IOB, возможно, будет вести себя немного странно.
 
 We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
 
