@@ -112,15 +112,15 @@
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+При перезапуске RiyeLink или GNARL необходимо либо выполнить новую настройку (действие "Wake and Tune Up"), либо повторно отправить параметры связи (действие "Reset RielyLink Config") иначе обмен информацией завершится неудачей.
 
-### CGMS
+### CGM/Непрерывный мониторинг ГК
 
-Medtronic CGMS is currently NOT supported.
+Мониторинг Medtronic в настоящее время не поддерживается.
 
-### Manual use of pump
+### Использование помпы вручную
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Не следует выполнять процедуры лечения вручную с помпы. Все команды (болюс, врем базал TBR) должны проходить через AndroidAPS, но если возникнет необходимость выполнять команды вручную, НЕ подавайте их с частотой менее 3 минут (если по какой-то причине подаете 2 болюса, то второй следует начать по крайней мере через 3 минуты после первого).
 
 ## Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
 
