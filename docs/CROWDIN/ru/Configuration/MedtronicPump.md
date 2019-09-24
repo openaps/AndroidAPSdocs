@@ -63,17 +63,17 @@
 
 ![MDT Tab](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+На вкладке помпы можно видеть несколько строк, которые отображают текущее состояние помпы (и связь).
 
-- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
-- **Last connection**: Time when last connection to pump was successful.
-- **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
-- **Temp basal**: Temp basal that is running or empty.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **Статус RileyLink**: показывает состояние связи RileyLink. Телефон должен быть все время подключен к RileyLink.
+- ** Состояние помпы **: Состояние соединения с помпой, у него может быть несколько значений, но в основном мы увидим значок спящего режима (когда соединение с помпой не активно), при выполнении команды можно видеть "Устанавливается соединение", то есть AAPS пытается соединиться с помпой или описание других команд, выполняемых помпой (например, чтение времени, устанавливается временный базал TBR и т. д.).
+- ** Батарея **: Показывает состояние батареи в зависимости от конфигурации. Это может быть простой значок, показывающий, разряжена или заряжена батарея (красным, если заряд критически мал, до 20%), или процент заряда и напряжение.
+- ** Последнее соединение **: Время последнего успешного подключения к помпе.
+- **Последний болюс**: когда был дан последний болюс.
+- ** Базовая скорость базала**: Основная скорость, с которой подается база на помпе в этот час.
+- ** Temp basal **: временный базал, который сейчас подается или незаполненная графа.
+- ** Резервуар **: Сколько инсулина находится в картридже (обновляется по крайней мере каждый час).
+- **ошибки**: строка ошибки, если есть проблемы (в основном показывает, есть ли ошибка в конфигурации).
 
 On lower end we have 3 buttons:
 
