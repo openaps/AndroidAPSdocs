@@ -75,23 +75,23 @@
 - ** Резервуар **: Сколько инсулина находится в картридже (обновляется по крайней мере каждый час).
 - **ошибки**: строка ошибки, если есть проблемы (в основном показывает, есть ли ошибка в конфигурации).
 
-On lower end we have 3 buttons:
+В нижней части мы имеем три кнопки:
 
-- **Refresh** is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Обновить** для обновления состояния. Этот параметр следует использовать только после того, как соединение не будет установлено в течение длительного времени, так как это действие приведет к сбросу данных о помпе (потребуется получить историю данных, получить/установить время, получить профиль, получить состояние батареи и т. д.).
+- **Журнал помпы**: показывает хронологию помпы (см. [внизу](../Configuration/MedtronicPump#pump-history))
+- **Статистика RL**: показывает статистику RileyLink (см. [внизу](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
 ## Pump History
 
 ![Pump History Dialog](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Хронология помпы извлекается каждые 5 минут и сохраняется в памяти. Она хранится только последние 24 часа, таким образом, более старые записи удаляются по мере добавления новых. Это простой способ увидеть события хронологии помпы (некоторые записи могут не отображаться, поскольку не важны - например, конфигурация функций, не используемых AndroidAPS).
 
-## RL Status (RileyLink Status)
+## Состояние RL (Состояние RileyLink)
 
 ![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
 
-Dialog has two tabs:
+Диалоговое окно имеет две вкладки:
 
 - **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
 - **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
