@@ -125,8 +125,8 @@ Toto jsou jednoduše záznamy ošetření (bolusy a sacharidy), zprávy xDripu a
 
 Toto je místo, kde se provádí základní nastavení vašeho AndroidAPS. Uvedený snímek ukazuje docela typické nastavení: pumpa Combo, senzor Dexcom G5 spravovaný přes xDrip+, inzulin NovoRapid, profil Oref a připojení k Nightscout serveru v cloudu.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+Zaškrtnutí políčka vpravo určuje, že daný modul se bude zobrazovat v horní liště s nabídkami (viz sekce A na Hlavní obrazovce) a ikona s ozubeným kolečkem zpřístupňuje nastavení daného modulu, pokud jsou nějaká k dispozici.
 
 ## Nastavení a předvolby
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+Vpravo nahoře na navigační liště se nacházejí tři malé tečky pod sebou. Jejich stisknutím otevřete nastavení, prohlížeč historie, průvodce nastavením, informace o aplikaci a tlačítko Konec pro ukončení aplikace.
