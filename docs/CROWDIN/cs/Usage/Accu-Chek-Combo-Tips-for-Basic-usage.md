@@ -80,9 +80,9 @@ Algoritmus OpenAPS nepodporuje paralelní rozšířený bolus nebo multiwave bol
 
 * Zadání sacharidů, ale ne bolusu pro ně. Algoritmus smyčky bude reagovat více agresivně. V případě potřeby použijte **eSacharidy** (rozložené sacharidy).
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you wth disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Pokud jste v pokušení použít rozšířený nebo duální bolus přímo na pumpě, AndroidAPS zareaguje vypnutím uzavřené smyčky na dalších šest hodin, aby se zajistilo, že žádná další dávka inzulínu nebude aktivní.
 
-![Disabled loop after multiwave bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
+![Zakázaná smyčka po duálním bolusu](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
 ## Poplachy při bolusu
 
