@@ -1,4 +1,4 @@
-Remote monitoring
+Vzdálené monitorování
 ******************
 
 .. image:: ../images/KidsMonitoring.png
