@@ -74,9 +74,9 @@ Jestliže vaše baterie vydrží výrazně méně, než je uvedeno výše, zkont
 * Během noci, kdy se mění čas, je čas telefonu aktualizován, ale čas pumpy zůstává beze změny. To vede k alarmu v důsledku rozdílných časů mezi systémy ve 3 ráno.
 * Pokud nechcete být probuzeni, **deaktivujte automatický přechod na letní čas v mobilním telefonu** večer před změnou času a upravte časy ručně ráno.
 
-## Rozšířený bolus, multiwave bolus
+## Rozložený bolus, kombinovaný bolus
 
-Algoritmus OpenAPS nepodporuje paralelní rozšířený bolus nebo multiwave bolus. Podobné léčby však lze dosáhnout touto alternativou:
+Algoritmus OpenAPS nepodporuje paralelní rozložený bolus nebo kombinovaný bolus. Podobné léčby však lze dosáhnout touto alternativou:
 
 * Zadání sacharidů, ale ne bolusu pro ně. Algoritmus smyčky bude reagovat více agresivně. V případě potřeby použijte **eSacharidy** (rozložené sacharidy).
 
