@@ -75,55 +75,55 @@ Użytkowanie AndroidAPS
     
    Zrzuty ekranów AndroidAPS <./Getting-Started/Screenshots.md>
    Cele (samouczek) <./Usage/Objectives.md>
-   OpenAPS features <./Usage/Open-APS-features.md>   
-   Sensitivity detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
-   Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.md>
-   Automation <./Usage/Automation.rst>
+   Funkcje OpenAPS <./Usage/Open-APS-features.md>   
+   Wykrywanie wrażliwości i COB <./Configuration/Sensitivity-detection-and-COB.md>
+   Zmiana profilu <./Usage/Profiles.md>
+   Cele tymczasowe TT <./Usage/temptarget.md>   
+   Przedłużone węglowodany <./Usage/Extended-Carbs.md>
+   Automatyzacja <./Usage/Automation.rst>
   
  
-General Hints 
+Porady ogólne 
 ---------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
+   Przekraczania stref czasowych z pompami <./Usage/Timezone-traveling.md>
+   Dostęp do pliku logu <./Usage/Accessing-logfiles.md>
+   Wskazówki dotyczące podstawowego użytkowania Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Eksport/Import wstawień <./Usage/ExportImportSettings.rst>
    
 
-AndroidAPS for children
+AndroidAPS dla dzieci
 ------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Remote monitoring <./Children/Children.rst>
-   SMS commands <./Usage/SMS-Commands.md>
+   Zdalne monitorowanie <./Children/Children.rst>
+   Komendy SMS <./Usage/SMS-Commands.md>
    
 
-Advanced 
+Zaawansowane 
 ----------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Automatyzacja z aplikacjami innych firm <./Usage/automationwithapp.md>
    
 
-Troubleshooting
+Rozwiązywanie problemów
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
   
    NS-Client <./Usage/Troubleshooting-NSClient.md>
-   Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pumps <./FGT/Troubleshootingpumps.rst>
+   Aktualizacja <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
+   Pompy <./FGT/Troubleshootingpumps.rst>
 
 
 FAQ 
@@ -141,29 +141,29 @@ Słowniczek pojęć
    :maxdepth: 1
    :glob:
   
-   Glossary <./Getting-Started/Glossary.md>
+   Słowniczek pojęć <./Getting-Started/Glossary.md>
   
 
-Where to go for help 
+Gdzie szukać pomocy 
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Przydatne zasoby do przeczytania zanim rozpoczniesz <./Where-To-Go-For-Help/Background-reading.md>
+   Gdzie można znaleźć pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Aktualizacje Wiki i zmiany <./Getting-Started/WikiUpdate.rst>
 
-For Clinicians
+Dla lekarzy specjalistów
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
             
-   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+   Dla lekarzy specjalistów <./Resources/clinician-guide-to-AndroidAPS>
 
 
-How to help
+Jak pomóc
 ------------
 .. toctree::
    :maxdepth: 1
