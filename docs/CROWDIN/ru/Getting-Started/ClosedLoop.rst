@@ -39,17 +39,17 @@ AndroidAPS подробно описан в этой документации <.
 
 OpenAPS
 ---------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+` OpenAPS <https://openaps.readthedocs.io>` _-это первая закольцованная система с открытым исходным кодом. Она использует мини-компьютер, Raspberry Pi или Intel Edison.
 
-Compatible pumps are:
+Совместимые помпы:
 
-* some old Medtronic pumps
+* некоторые старые помпы Medtronic
 
-Loop for iOS
+Петля iOS
 ------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+` Петля для iOS <https://loopkit.github.io/loopdocs/>` _-это замкнутая система Loop для Apple iPhone.
 
-Compatible pumps are:
+Совместимые помпы:
 
 * Omnipod
-* some old Medtronic pumps
+* некоторые старые помпы Medtronic
