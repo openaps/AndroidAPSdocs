@@ -1,10 +1,10 @@
 # Cele (samouczek)
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+AndroidAPS ma szereg zadań (celi), które należy wykonać. Cele służą temu aby przeprowadzić użytkownika przez funkcje i ustawienia systemu dla zapewnienia bezpiecznego używania pętli. Gwarantują, że wszystko poprawnie skonfigurowałeś w sekcjach powyżej i że wiesz, co robi Twój system i dlaczego możesz mu zaufać.
 
-If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
+If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings) to keep your progress through the objectives. Zapiszesz nie tylko Twoje postępy w realizacji celów, ale także ustawienia bezpieczeństwa, takie jak maksymalny bolus itp. Jeśli nie wyeksportujesz i nie zaimportujesz swoich ustawień, będziesz musiał zacząć od początku. Na wszelki wypadek warto często tworzyć kopie zapasowe swoich ustawień. Czytaj dalej, aby poznać szczegóły.  
 
-### Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+### Cel 1: Ustawienie wizualizacji i monitorowania, analizowanie profilu podstawowego i parametrów
 
 * Select the right blood glucose source for your setup. See [BG Source](../Configuration/BG-Source.rst) for more information.
 * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
@@ -66,4 +66,4 @@ If you are **upgrading phones** then you can [export your settings](../Usage/Exp
 
 * You must read the [SMB chapter in this wiki](../Usage/Open-APS-features#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to [rise maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 5](../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
+* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Jeśli uaktualniasz AMA na SMB, należy zmienić go ręcznie.
