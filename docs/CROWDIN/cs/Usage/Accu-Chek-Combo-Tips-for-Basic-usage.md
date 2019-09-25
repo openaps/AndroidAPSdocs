@@ -78,7 +78,7 @@ Jestliže vaše baterie vydrží výrazně méně, než je uvedeno výše, zkont
 
 Algoritmus OpenAPS nepodporuje paralelní rozložený bolus nebo kombinovaný bolus. Podobné léčby však lze dosáhnout touto alternativou:
 
-* Zadání sacharidů, ale ne bolusu pro ně. Algoritmus smyčky bude reagovat více agresivně. V případě potřeby použijte **eSacharidy** (rozložené sacharidy).
+* Zadání sacharidů, ale ne bolusu pro ně. Algoritmus smyčky bude reagovat více agresivně. V případě potřeby použijte **eCarbs** (rozložené sacharidy).
 
 * Pokud jste v pokušení použít rozložený nebo kombinovaný bolus přímo na pumpě, AndroidAPS zareaguje vypnutím uzavřené smyčky na dalších šest hodin, aby se zajistilo, že žádná další dávka inzulínu nebude aktivní.
 
