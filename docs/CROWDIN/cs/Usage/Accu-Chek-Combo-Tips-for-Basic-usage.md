@@ -80,9 +80,9 @@ Algoritmus OpenAPS nepodporuje paralelní rozložený bolus nebo kombinovaný bo
 
 * Zadání sacharidů, ale ne bolusu pro ně. Algoritmus smyčky bude reagovat více agresivně. V případě potřeby použijte **eSacharidy** (rozložené sacharidy).
 
-* Pokud jste v pokušení použít rozšířený nebo duální bolus přímo na pumpě, AndroidAPS zareaguje vypnutím uzavřené smyčky na dalších šest hodin, aby se zajistilo, že žádná další dávka inzulínu nebude aktivní.
+* Pokud jste v pokušení použít rozložený nebo kombinovaný bolus přímo na pumpě, AndroidAPS zareaguje vypnutím uzavřené smyčky na dalších šest hodin, aby se zajistilo, že žádná další dávka inzulínu nebude aktivní.
 
-![Zakázaná smyčka po duálním bolusu](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
+![Zakázaná smyčka po kombinovaném bolusu](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
 ## Poplachy při bolusu
 
