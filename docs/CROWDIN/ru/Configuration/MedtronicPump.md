@@ -15,120 +15,120 @@
 ## Требования к аппаратному и программному обеспечению
 
 - **Телефон:**Драйвер Medtronic должен работать с любым телефоном, поддерживающим BLE. **ВАЖНО: Драйвер работает правильно на всех телефонах, а включение/отключение Bluetooth - нет(иногда требуется, когда теряется соединение с RileyLink и система не может восстанавиться автоматически). Поэтому нужно найти устройство с Android 6.0 - 8.1, в худшем случае можно установить LinegaeOS 15.1 (требуется 15.1 или ниже) на телефоне. Мы изучаем проблему с Android 9, но пока мы не нашли решения (кажется, версия работает только на некоторых моделях).**
-- **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. Device that does is called RileyLink (you can get it here [getrileylink.org](https://getrileylink.org/)). You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). If you are feeling adventurous you can also try Gnarl ([here](https://github.com/ecc1/gnarl)), which is sort-of RileyLink-clone. 
-- **Pump:** Driver works only with following models and firmware versions: 
+- ** RiyeLink/Gnarl: ** Для обмена информацией с помпой необходимо устройство, которое преобразует команды BT из телефона в радиочастотные команды, которые понимает помпа. Устройство, которое выполняет эту задачу, называется RileyLink (его можно найти здесь [ getrileylink.org ](https://getrileylink.org/)). Необходима стабильная версия устройства, 0.9 для старых моделей (еще более старые версии могут работать неправильно) или 2.2 для новых моделей (на сайте RL существует опция обновления). Если вы любите приключения, можете попробовать Gnarl ([здесь](https://github.com/ecc1/gnarl)), который представляет собой клон RileyLink. 
+- **помпа:** драйвер работает только со следующими моделями и версиями прошивок: 
     - 512/712
     - 515/715
     - 522/722
-    - 523/723 (firmware 2.4A or lower)
-    - 554/754 EU release (firmware 2.6A or lower)
-    - 554/754 Canada release (firmware 2.7A or lower)
+    - 523/723 (прошивка 2.4 или ниже)
+    - 554/754 версия ЕС (прошивка 2.6A или ниже)
+    - 554/754 Канадская версия (прошивка 2.7A или ниже)
 
-## Configuration of the pump
+## Настройка помпы
 
-- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication.
-- **Set Max Basal** on your Pump to your "max basal entry in your STD profile" * 4 (if you want to have 400% TBR as max). This number must be under 35 (as you can see in pump).
-- **Set Max Bolus** on your Pump (max is 25)
-- **Set profile to STD**. This will be the only profile we will use. You can also disable.
-- **Set TBR type** to Absolute (not Percent)
+- **Включите удаленный режим на помпе** (Утилиты -> Параметры удаленной работы, выберите Да, на следующем экране выполните Добавить ID и введите липовый идентификатор (111111 или типа того). Нужен, как минимум, один идентификатор в списке идентификаторов устройств для удаленной работы. Эти опции могут выглядеть по-разному в разных моделях помп. Этот шаг важен, так как при таких настройках помпа будет чаще принимать запрос на дистанционное подключение.
+- ** Установите максимальный базал ** как "максимум базала в стандартном профиле" * 4 (если вы хотите получить максимальную временную скорость базала TBR 400%). Как можно видеть в помпе, эта величина не должна превышать 35.
+- **Установите макс. болюс** на помпе (максимальная величина 25)
+- **Определите профиль как STD **. Это будет единственный профиль, которым мы будем пользоваться. Его также можно отключить.
+- ** Задать тип временного базала TBR **как абсолютный (не в процентах)
 
-## Configuration of Phone/AndroidAPS
+## Настройка телефона/AndroidAPS
 
-- **Do not pair RileyLink with your Phone.** If you paired your RileyLink, then AndroidAPS won't be able to find it in configuration.
-- Disable Auto-rotate on your phone (on some devices Auto-rotate restarts BT sessions, which is not something we would want).
-- You can configure pump in AndroidAPS two ways: 
+- **Не сопрягайте RileyLink с телефоном.** Если они сопряжены, AndroidAPS не сможете найти его в конфигурации.
+- Отключите автоматическое вращение на телефоне (на некоторых устройствах в этом режиме автоматически перезапускаются сеансы bluetooth, что нам не нужно).
+- Вы можете настроить помпу в AndroidAPS двумя способами: 
 
-1. Use of Wizard (on new install)
-2. Directly in Config tab (Cog icon on Medtronic driver)
+1. Воспользоваться Мастером (при новой установке)
+2. Непосредственно на вкладке Конфигурация (Значок шестеренки в графе драйвера Medtronic)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Если вы делаете новую установку, то сразу попадаете в Мастер настройки. Иногда, если соединение BT не работает должным образом (не удается подключиться к помпе), возможно, вы не сможете выполнить настройку. В таком случае выберите виртуальную помпу и после того, как Мастер закончит работу, можно обратиться к варианту 2, который обойдет обнаружение помпы.
 
 ![MDT Settings](../images/Medtronic01.png)
 
-You need to set following items: (see picture above)
+Необходимо задать следующие параметры: (см. рисунок выше)
 
-- **Pump Serial Number**: You can find that on back side, entry SN. You need to get only number, your serial is 6 numbers.
-- **Pump Type**: Which pump type you have (i.e. 522). 
-- **Pump Frequency**: According to pump frequency there were two versions of Medtronic pump made (if you are not sure what frequency your pump uses, look at [FAQ](../Configuration/MedtronicPump#faq)): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
-- **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. It limits how much insulin you can Bolus. If you go over this, Bolus won't be set and error will be returned. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
-- **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
-- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
-- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
-- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
-- **RileyLink Configuration**: This will find your RileyLink/GNARL device.
+- ** Серийный номер помпы **: Он находится на обратной стороне помпы сразу за буквами SN. Нужно вводить только номер, серийный номер состоит из 6 цифр.
+- ** Тип помпы **: Какой у вас тип помпы (напр. 522). 
+- **Частота помпы**: Существуют две версии помп Medtronic (если вы не уверены, на какой частоте работает ваша помпа, смотрите [справку](../Configuration/MedtronicPump#faq)): 
+    - для США & Канады применяется частота 916 МГц
+    - для остального мира используется частота 868 МГц
+- **Макс болюс на помпе (ед)** (в час): Должен быть таким же какой установлен на помпе. Он ограничивает сколько инсулина можно подать при болюсе. Если его превысить, болюс не будет подан, и появится сообщение об ошибке. Максимальное значение, которое можно задать - 25, задайте его правильно, чтобы не допустить передозировки.
+- **Макс база на помпе (ед/ч)**: должна быть такой же, какая установлена на помпе. Это ограничение определяет какая максимальная база подается в час. Например, если вы хотите, чтобы максимальный размер временного базала TBR был равен 500%, а самая высокая скорость базала у вас 1,5 ед, то нужно установить Max Basal не ниже 7.5. Если этот параметр является неправильным (например, если одна из ваших базальных скоростей выше этой величины, помпа выдаст ошибку).
+- ** Задержка перед началом подачи болюса **: Это задержка перед отправкой команды помпе на болюс; если вы передумали, есть возможность отменить подачу. Отмена болюса не поддерживается помпой (если вы хотите остановить болюс при подаче, то должны приостановить работу помпы и затем возобновить).
+- ** Кодировка Medtronic **: Это значение определяет, будет кодировка 4b6b, которую применяют устройства Medtronic, использоваться в AndroidAPS или в RileyLink. Если у вас RileyLink с прошивкой 2.х, по умолчанию будет применяться аппаратное кодирование (= выполняемое RileyLink), если прошивка 0.х, этот параметр будет игнорироваться.
+- **Тип батареи (остаток заряда)**: Если вы хотите видеть уровень заряда помпы, необходимо выбрать тип батареи, (в настоящее время поддерживаются литиевые или щелочные), что, в свою очередь, покажет на дисплее оставшиеся проценты и напряжение заряда.
+- ** Конфигурация RileyLink **: Находит устройство RileyLink/GNARL.
 
-## MEDTRONIC (MDT) Tab
+## Вкладка MEDTRONIC (MDT)
 
 ![MDT Tab](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+На вкладке помпы можно видеть несколько строк, которые отображают текущее состояние помпы (и связь).
 
-- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
-- **Last connection**: Time when last connection to pump was successful.
-- **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
-- **Temp basal**: Temp basal that is running or empty.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **Статус RileyLink**: показывает состояние связи RileyLink. Телефон должен быть все время подключен к RileyLink.
+- ** Состояние помпы **: Состояние соединения с помпой, у него может быть несколько значений, но в основном мы увидим значок спящего режима (когда соединение с помпой не активно), при выполнении команды можно видеть "Устанавливается соединение", то есть AAPS пытается соединиться с помпой или описание других команд, выполняемых помпой (например, чтение времени, устанавливается временный базал TBR и т. д.).
+- ** Батарея **: Показывает состояние батареи в зависимости от конфигурации. Это может быть простой значок, показывающий, разряжена или заряжена батарея (красным, если заряд критически мал, до 20%), или процент заряда и напряжение.
+- ** Последнее соединение **: Время последнего успешного подключения к помпе.
+- **Последний болюс**: когда был дан последний болюс.
+- ** Базовая скорость базала**: Основная скорость, с которой подается база на помпе в этот час.
+- ** Temp basal **: временный базал, который сейчас подается или незаполненная графа.
+- ** Резервуар **: Сколько инсулина находится в картридже (обновляется по крайней мере каждый час).
+- **ошибки**: строка ошибки, если есть проблемы (в основном показывает, есть ли ошибка в конфигурации).
 
-On lower end we have 3 buttons:
+В нижней части мы имеем три кнопки:
 
-- **Refresh** is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Обновить** для обновления состояния. Этот параметр следует использовать только после того, как соединение не будет установлено в течение длительного времени, так как это действие приведет к сбросу данных о помпе (потребуется получить историю данных, получить/установить время, получить профиль, получить состояние батареи и т. д.).
+- **Журнал помпы**: показывает хронологию помпы (см. [внизу](../Configuration/MedtronicPump#pump-history))
+- **Статистика RL**: показывает статистику RileyLink (см. [внизу](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
 ## Pump History
 
 ![Pump History Dialog](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Хронология помпы извлекается каждые 5 минут и сохраняется в памяти. Она хранится только последние 24 часа, таким образом, более старые записи удаляются по мере добавления новых. Это простой способ увидеть события хронологии помпы (некоторые записи могут не отображаться, поскольку не важны - например, конфигурация функций, не используемых AndroidAPS).
 
-## RL Status (RileyLink Status)
+## Состояние RL (Состояние RileyLink)
 
 ![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
 
-Dialog has two tabs:
+Диалоговое окно имеет две вкладки:
 
-- **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- ** Параметры **: Показывает параметры RileyLink: Сконфигурированный адрес, Подключенное устройство, Состояние соединения, Ошибка соединения и Версия встроенного ПО (прошивки) RileyLink. Типом устройства всегда является Medtronic Pump, Модель - ваша версия модели, Серийный номер-сконфигурированный серийный номер, Частота помпы- Частота на которой работает связь помпы, Последняя частота-последняя используемая частота связи.
+- ** История **: Показывает хронологию связи, элементы с RyleyLink показывают изменения состояния RileyLink, Medtronic показывает, какие команды были отправлены на помпу.
 
 ## Действия
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Если выбран драйвер Medtronic, на вкладке Действия можно добавить три варианта:
 
-- **Wake and Tune Up** - If you see that your AndroidAPS hasn't contacted your pump in a while (it should contact it every 5 minutes), you can force Tune Up. This will try to contact your pump, by searching all sub frequencies on which Pump can be contacted. If it finds one it will set it as your default frequency. 
-- **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-- **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
+- ** Пробуждение и настройка **-Если вы видите, что AndroidAPS не связывался с помпой в течение какого-то времени (он должен связаться каждые 5 минут), вы можете нажать кнопку Настройка. Начнется сеанс связи с помпой с поиском всех подчастот, на которых может выполняться связь. Если обнаружится одна из них, она будет задана как частота по умолчанию. 
+- ** Сброс конфигурации RileyLink **-При перезагрузке RileyLink/GNARL необходимо выполнить эту команду, чтобы переконфигурировать устройство (набор частоты, тип частоты, настроенная кодировка).
+- ** Очистить Блокировку болюса **-При подаче болюса происходит блокировка, которая предотвращает выполнение любых других команд на помпе. Если остановить помпу и вновь запустить ее (для отмены болюса), то можно удалить эту блокировку. Опция доступна только при подаче болюса... 
 
 ## Important notes
 
 ### Logging
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Поскольку драйвер Medtronic создан не так давно, следует включить ведение журнала, чтобы мы могли при необходимости отладить и устранить проблемы. Нажмите на значок в верхнем левом углу, выберите обслуживание и настройки журнала. Параметры Помпа, PumpComm, PumpBTComm должны быть отмечены.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+При перезапуске RiyeLink или GNARL необходимо либо выполнить новую настройку (действие "Wake and Tune Up"), либо повторно отправить параметры связи (действие "Reset RielyLink Config") иначе обмен информацией завершится неудачей.
 
-### CGMS
+### CGM/Непрерывный мониторинг ГК
 
-Medtronic CGMS is currently NOT supported.
+Мониторинг Medtronic в настоящее время не поддерживается.
 
-### Manual use of pump
+### Использование помпы вручную
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Не следует выполнять процедуры лечения вручную с помпы. Все команды (болюс, врем базал TBR) должны проходить через AndroidAPS, но если возникнет необходимость выполнять команды вручную, НЕ подавайте их с частотой менее 3 минут (если по какой-то причине подаете 2 болюса, то второй следует начать по крайней мере через 3 минуты после первого).
 
-## Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
+## Изменения часового пояса и сезонное время или путешествия с помпой Medtronic и AndroidAPS
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+Важно помнить, что не следует отключать алгоритм цикла во время путешествий и перелетов (если ваш мониторинг может работать в автономном режиме). AAPS автоматически обнаружит изменения часового пояса и отправит команду на помпу когда изменится время на телефоне.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Например, если вы путешествете на Восток и часовой пояс меняется с добавлением часов (например, с GMT + 0 до GMT + 2), хронология помпы изменится без проблем и вам не о чем беспокоиться... но если вы перемещаетесь на Запад и часовой пояс меняется с вычитанием часов (например, с GMT + 2 до GMT-0), то возможна небольшая рассинхронизация. Говоря проще, в течение следующих x часов вам придется быть осторожными, потому что активный инсулин IOB, возможно, будет вести себя немного странно.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Мы знаем об этой проблеме, и мы уже ищем возможные решения (см. https://github.com/andyrozman/RileyLinkAAPS/issues/145),, но на данный момент нужно иметь в виду эту информацию при путешествиях.
 
 ## FAQ
 

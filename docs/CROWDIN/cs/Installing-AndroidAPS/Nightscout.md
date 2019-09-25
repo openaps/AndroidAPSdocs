@@ -1,29 +1,29 @@
 # Nightscout
 
-## Security considerations
+## Bezpečnostní pokyny
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Kromě sledování může být Nightscout použit také k ovládání AAPS. Tj. můžete nastavit dočasné cíle nebo přidat budoucí sacharidy. Tyto informace budou sbírány AAPS a bude to fungovat odpovídajícím způsobem. Proto stojí za to přemýšlet o zabezpečení Nightscout webové stránky.
 
 ### Nastavení Nightscoutu
 
-You can deny public access to your Nightscout site by using [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+Můžete odepřít veřejný přístup k serveru Nightscout pomocí [ověřovacích rolí](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
 
 ### Nastavení AndroidAPS
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
+V nastavení AAPS existuje funkce pouze nahrávání do NS (ne synchronizace). Tím AAPS nebude provádět změny zadané v Nightscoutu, jako jsou dočasné cíle nebo budoucí sacharidy. Pokud používáte [NS Profil](../Configuration/Config-Builder#ns-profile), budou profily synchronizovány mezi AAPS a Nightscoutem i přes nastavení „pouze nahrávání“.
 
-* Tap 3-dot menu on top right corner on your AAPS homescreen.
-* Select "Preferences".
-* Scroll down and tap "Advanced settings".
-* Activate "NS upload only
+* Klepněte na menu (3 tečky v pravém horním rohu) na hlavní obrazovce AAPS.
+* Zvolte „Nastavení“.
+* Posuňte se dolů a klepněte na „Rozšířená nastavení“.
+* Aktivujte možnost „pouze nahrávání do NS“
 
 ![Nightscout pouze nahrávání](../images/NSsafety.png)
 
-### Further security settings
+### Další nastavení zabezpečení
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.rst).
+Udržujte svůj telefon aktualizovaný, jak je popsáno v části [bezpečnost na prvním místě](../Getting-Started/Safety-first.rst).
 
-## Manual Nightscout setup
+## Ruční nastavení Nightscoutu
 
 Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte stránku [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) pro návod k založení. Následující pokyny jsou nastavení, která potřebujete provést v Nightscoutu pro správnou funkčnost AndroidAPS. Je nutné, aby byl váš Nightscout verze alespoň 10 (zobrazeno jako 0.10...), zkontrolujte tedy, jestli provozujete [poslední verzi](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie), jinak se vám V AAPS zobrazí chybová zpráva. Některým uživatelům se při smyčce překračuje Azure kvóta zdarma, proto je hostování na Heroku doporučená volba.
 

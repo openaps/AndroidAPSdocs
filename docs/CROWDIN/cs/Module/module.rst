@@ -33,7 +33,7 @@ Potřebujete telefon s Androidem s operačním systémem Google Android 6.0 a no
 
 Pro zápis telefonu nebo hodinek, které ještě nejsou uvedeny v tabulce, vyplňte prosím `formulář <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
-V případě jakýchkoli problémů s tabulkou napište prosím na e-mail`hardware@androidaps.org <mailto:hardware@androidaps.org>`_, pokud chcete darovat telefon/hodinky potřebné pro testování, napište na e-mail `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+V případě jakýchkoli problémů s tabulkou napište prosím na e-mail `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, pokud chcete darovat telefon/hodinky potřebné pro testování, napište na e-mail `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 Inzulinová pumpa
 --------
@@ -97,7 +97,7 @@ Uživatelé průběžné doplňují `seznam otestovaných telefonů a hodinek <h
 
 Pro zápis telefonu nebo hodinek, které ještě nejsou uvedeny v tabulce, vyplňte prosím `formulář <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
-V případě jakýchkoli problémů s tabulkou napište prosím na e-mail`hardware@androidaps.org <mailto:hardware@androidaps.org>`_, pokud chcete darovat telefon/hodinky potřebné pro testování, napište na e-mail `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+V případě jakýchkoli problémů s tabulkou napište prosím na e-mail `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, pokud chcete darovat telefon/hodinky potřebné pro testování, napište na e-mail `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 xDrip+
 -------
@@ -111,7 +111,7 @@ Pokud chcete příklad krok za krokem, můžete se podívat na ukázkovou instal
    :maxdepth: 1
    :glob:
    
-   Sample Setup <../Getting-Started/Sample-Setup.rst>
+   Ukázková instalace <../Getting-Started/Sample-Setup.rst>
  
   
 Co dělat při čekání na moduly

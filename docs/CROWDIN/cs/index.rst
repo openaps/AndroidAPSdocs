@@ -101,7 +101,7 @@ AndroidAPS pro děti
    :maxdepth: 1
    :glob:
    
-   Remote monitoring <./Children/Children.rst>
+   Vzdálené monitorování <./Children/Children.rst>
    SMS příkazy <./Usage/SMS-Commands.md>
    
 
