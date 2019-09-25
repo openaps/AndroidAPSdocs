@@ -12,9 +12,9 @@
 
 ## Omezení
 
-- Prodloužené bolusy a rozložené bolusy nejsou podporovány (podívejte se na [Extended Carbs](../Usage/Extended-Carbs))
+- Rozložené bolusy a kombinované bolusy nejsou podporovány (podívejte se na [Extended Carbs](../Usage/Extended-Carbs))
 - Je podporován pouze jeden bazální profil.
-- Nastavení více než jednoho bazálního profilu na pumpě nebo rozloženého bolusu z pumpy naruší dočasný bazál a uvede smyčku do režimu zastavení při nízké glykémii na dobu 6 hodin. Za těchto podmínek nemůže smyčka správně pracovat.
+- Nastavení více než jednoho bazálního profilu na pumpě nebo rozloženého či kombinovaného bolusu z pumpy naruší dočasný bazál a uvede smyčku do režimu zastavení při nízké glykémii na dobu 6 hodin. Za těchto podmínek nemůže smyčka správně pracovat.
 - Aktuálně není možné nastavit čas a datum na pumpě, stejně jako změny času, které musí být zadány ručně (můžete deaktivovat automatickou aktualizaci času, abyste předešli alarmům v průběhu noci).
 - Aktuální rozsah bazálních dávek je od 0,05 do 10 U/h. To platí i při úpravách profilu, například při zvýšení na 200 % nesmí nejvyšší bazál přesáhnout 5 U/h, protože tato hodnota bude zdvojnásobena. Obdobně platí, že při snížení na 50% musí být nejnižší bazální dávka 0,10 U/h.
 - Pokud smyčka požaduje zrušení spuštěného dočasného bazálu, Combo nastaví dočasný bazál na 90 % nebo 110 % na dobu 15 minut. Důvodem je, že zrušení dočasného bazálu vyvolá alarm na pumpě, což způsobuje četné vibrace.
