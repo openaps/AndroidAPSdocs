@@ -12,9 +12,9 @@ A note of caution: AndroidAPS is not regulated by any medical authority in any c
 * Maintains and monitors the system to ensure it is working properly
 
 .. note:: 
-	**Disclaimer And Warning**
+	** Wyłączenie odpowiedzialności i ostrzeżenie **
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* Wszystkie informacje, przemyślenia i kod opisane tutaj są przeznaczone wyłącznie do celów informacyjnych i edukacyjnych. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
 
 	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
 
