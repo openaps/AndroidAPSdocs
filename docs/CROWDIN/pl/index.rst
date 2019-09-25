@@ -169,15 +169,15 @@ Jak pomóc
    :maxdepth: 1
    :glob:
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the app and wiki <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   Jak pomóc <./Getting-Started/How-can-I-help.md>
+   W jaki sposób przetłumaczyć aplikację i dokumentację wiki <./translations.md>
+   Jak edytować dokumentację Wiki <./make-a-PR>
 
 
 .. note:: 
-	**Disclaimer And Warning**
+	** Wyłączenie odpowiedzialności i ostrzeżenie **
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* Wszystkie informacje, przemyślenia i kod opisane tutaj są przeznaczone wyłącznie do celów informacyjnych i edukacyjnych. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
 
 	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
 
