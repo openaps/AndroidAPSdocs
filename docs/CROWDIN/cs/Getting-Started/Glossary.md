@@ -138,7 +138,7 @@
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>„rozložené sacharidy“ (extended carbs) - sacharidy rozložené na několik hodin (např. jídla s vysokým obsahem tuků/proteinů)<br>rozložený bolus, který můžete znát z léčby pomocí běžné inzulinové pumpy, nedává při používání smyčky nedává příliš velký smysl</td>
+ <td>„rozložené sacharidy“ (extended carbs, eSacharidy) - sacharidy rozložené na několik hodin (např. jídla s vysokým obsahem tuků/proteinů)<br>rozložený bolus, který můžete znát z léčby pomocí běžné inzulinové pumpy, nedává při používání smyčky nedává příliš velký smysl</td>
  <td>SMB</td>
  <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">Příklad použití funkce eCarbs</a></td>
 </tr>
