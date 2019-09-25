@@ -43,7 +43,7 @@
 
 Если вы делаете новую установку, то сразу попадаете в Мастер настройки. Иногда, если соединение BT не работает должным образом (не удается подключиться к помпе), возможно, вы не сможете выполнить настройку. В таком случае выберите виртуальную помпу и после того, как Мастер закончит работу, можно обратиться к варианту 2, который обойдет обнаружение помпы.
 
-![MDT Settings](../images/Medtronic01.png)
+![Настройки MDT](../images/Medtronic01.png)
 
 Необходимо задать следующие параметры: (см. рисунок выше)
 
@@ -61,7 +61,7 @@
 
 ## Вкладка MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png)
+![Вкладка MDT](../images/Medtronic02.png)
 
 На вкладке помпы можно видеть несколько строк, которые отображают текущее состояние помпы (и связь).
 
@@ -136,33 +136,33 @@
 
 Нет. В данный момент ни однао из этих устройств не поддерживает такую возможность, и ее, скорее всего, не будет и в дальнейшем.
 
-### Is GNARL full replacement for RileyLink?
+### Является ли GNARL полной заменой RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Да. Автор GNARL добавил все функции, используемые драйвером Medtronic. Все средства связи Medtronic поддерживаются (на момент написания (июнь/2019). GNARL нельзя использовать для связи Omnipod. Недостаток GNARL состоит в том, что его придется собирать самостоятельно, и у вас должна быть совместимая версия оборудования.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+** Примечание автора: ** Обратите внимание, что программное обеспечение GNARL по-прежнему экспериментально и недостаточно протестировано и не должно считаться таким же безопасным как RileyLink.
 
-### Where can I get RileyLink or GNARL?
+### Где взять RileyLink или GNARL?
 
-Like mentioned before you can get devices here:
+Как уже было сказано, устройства можно получить по этим ссылкам:
 
-- RileyLink - You can get device here - [getrileylink.org](https://getrileylink.org/).
-- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
+- RileyLink - здесь - [getrileylink.org](https://getrileylink.org/).
+- GNARL- здесь можно получить информацию, но устройство должно быть заказано в другом месте ([ github.com/ecc1/gnarl ](https://github.com/ecc1/gnarl)).
 
-### What to do if I loose connection to RileyLink and/or pump?
+### Что делать, если потеряна связь с RileyLink и/или помпой?
 
-1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
-2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink.
-3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action.
-4. Try 3 and 2 together.
-5. Reset RileyLink and reset phone.
+1. Выполните действие "Пробуждения и настройка", оно приведет к попытке найти правильную частоту связи с помпой.
+2. Отключите Bluetooth, подождите 10 секунд и снова включите его. Это заставит переподключиться к RileyLink.
+3. Выполните сброс RileyLink, после этого не забудьте выполнить действие "сброс конфигурации RileyLink".
+4. Попробуйте 3 и 2 вместе.
+5. Перезагрузите RileyLink и телефон.
 
-### How to determine what Frequency my pump uses
+### Как определить, на какой частоте работает помпа
 
 ![Pump Model](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Если повернуть помпу, в первой строке справа, вы увидите специальный трехбуквенный код. Первые две буквы определяют тип частоты и последняя определяет цвет. Возможны следующие значения частоты:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA-Северная Америка (при выборе частоты необходимо выбрать "US & Canada (916 МГц)")
+- CA-Канада (для выбора частоты необходимо выбрать "US & Canada (916 МГц)")
+- WW- остальные страны (при выборе частоты необходимо выбрать "Worldwide (868 Mhz)")
