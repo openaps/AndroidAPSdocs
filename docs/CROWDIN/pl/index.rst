@@ -1,80 +1,80 @@
-Welcome to the AndroidAPS documentation
+Witamy w dokumentacji systemu AndroidAPS
 ==============================================
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+AndroidAPS jest to aplikacja open source przeznaczona dla osób chorujących na cukrzycę typu 1, która zainstalowana w smartfonach z systemem Android. działa jak system sztucznej trzustki (APS). Głównymi składnikami są różne algorytmy oprogramowania openAPS, których celem jest robienie tego, co robi żywa trzustka: utrzymywanie w odpowiednim zakresie poziomu cukru we krwi dzięki zastosowaniu automatycznego dozowania insuliny (AID). Ponadto co najmniej potrzebujesz obsługiwanej i zatwierdzonej przez FDA/CE pompy insulinowej i systemu ciągłego monitoringu glikemii. Aplikacja NIE korzysta z samouczącej się sztucznej inteligencji. Zamiast tego obliczenia AndroidAPS opierają się na indywidualnym algorytmie dawkowania i spożyciu węglowodanów, które użytkownik ręcznie wprowadza do swojego profilu terapii, ale dodatkowo są one weryfikowane przez system ze względów bezpieczeństwa. Aplikacja nie jest dostępna w Google Play - ze względów prawnych musisz ją samodzielnie zbudować bezpośrednio z kodu źródłowego.
 
-Main components are:
+Głównymi składnikami są:
 
 .. image:: images/modules-female.png
-  :alt: Components
+  :alt: Składniki
 
-For more details, please read on here.
+Aby uzyskać więcej informacji, czytaj dalej.
 
-Getting started
+Pierwsze kroki
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Bezpieczeństwo przede wszystkim <./Getting-Started/Safety-first.rst>
+   Co to jest system zamkniętej pętli <./Getting-Started/ClosedLoop.rst>
+   Co to jest system zamkniętej pętli AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Aktualizacje Wiki i zmiany <./Getting-Started/WikiUpdate.rst>
    
    
-What do I need 
+Czego potrzebuję 
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Module <./Module/module.rst>
+   Moduł <./Module/module.rst>
 
    
-How to Install AndroidAPS
+Jak zainstalować AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+   Tworzenie pakietu APK <./Installing-AndroidAPS/Building-APK.md>
+   Aktualizacja do nowej wersji lub innego branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Informacje o wersjach <./Installing-AndroidAPS/Releasenotes.md>
+   Wersja developerska <./Installing-AndroidAPS/Dev_branch.md>
    
    
-Component Setup
----------------
+Ustawienia składników systemu
+-----------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-   Smartwatch  <./Hardware/Smartwatch.rst>
+   Ustawienia xDrip <./Configuration/xdrip.md>
+   Pompy <./Hardware/pumps.rst>
+   Telefony <./Hardware/Phoneconfig.rst>
+   Konfiguracja Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Zegarki/Smartwatche  <./Hardware/Smartwatch.rst>
    
 
-Configuration 
----------------
+Konfiguracja 
+-----------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.md>
+   Narzędzie do konfiguracji <./Configuration/Config-Builder.md>
+   Ustawienia <./Configuration/Preferences.md>
    
    
-AndroidAPS Usage
+Użytkowanie AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   AndroidAPS screens <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives.md>
+   Zrzuty ekranów AndroidAPS <./Getting-Started/Screenshots.md>
+   Cele (samouczek) <./Usage/Objectives.md>
    OpenAPS features <./Usage/Open-APS-features.md>   
    Sensitivity detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
    Profile switch <./Usage/Profiles.md>
@@ -152,7 +152,7 @@ Where to go for help
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Aktualizacje Wiki i zmiany <./Getting-Started/WikiUpdate.rst>
 
 For Clinicians
 ------------
