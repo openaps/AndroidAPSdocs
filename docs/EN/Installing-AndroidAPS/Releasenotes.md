@@ -30,6 +30,9 @@ Release date: XX-XX-XXXX
 * Adjusting IOB predictions by autosense result
 * New support for patched Dexcom apks (2.4 folder)
 * Signature verifier
+* Allow to bypass objectives for OpenAPS users
+* New objectives - exam, application handling
+* Fixeb bug in Dana* drivers where false time difference was reported
 
 ## Version 2.3
 
