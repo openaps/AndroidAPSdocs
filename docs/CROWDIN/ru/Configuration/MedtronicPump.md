@@ -130,11 +130,11 @@
 
 Мы знаем об этой проблеме, и мы уже ищем возможные решения (см. https://github.com/andyrozman/RileyLinkAAPS/issues/145),, но на данный момент нужно иметь в виду эту информацию при путешествиях.
 
-## FAQ
+## Часто задаваемые вопросы
 
-### Can I see the power of RileyLink/GNARL?
+### Можно ли видеть заряд RileyLink/GNARL?
 
-Нет. At the moment none of this devices support this and it probably won't even in the future.
+Нет. В данный момент ни однао из этих устройств не поддерживает такую возможность, и ее, скорее всего, не будет и в дальнейшем.
 
 ### Is GNARL full replacement for RileyLink?
 
