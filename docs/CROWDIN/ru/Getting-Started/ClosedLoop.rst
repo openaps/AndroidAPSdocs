@@ -24,18 +24,18 @@
 
 Замкнутые системы ИПЖ с открытым исходным кодом
 =====================================
-At present there are three major open source closed loop systems available:
+В настоящее время существует три основных замкнутых системы с открытым исходным кодом:
 
 AndroidAPS (AAPS)
 -----------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AndroidAPS подробно описан в этой документации <./WhatisAndroidAPS.html> ` _. Он использует смартфон Android для вычислений и контроля инсулиновой помпы. Он создан в тесном взаимодействии с OpenAPS (т.е. у них общие алгоритмы).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
+Совместимые ` помпы <../Hardware/pumps.html> ` _:
 
 * DanaR / DanaRS
-* Accu-Chek Combo
+* Accu Chek Combo
 * Accu-Chek Insight
-* some old Medtronic pumps (as of version 2.4)
+* некоторые старые помпы Medtronic (начиная с версии 2.4)
 
 OpenAPS
 ---------
