@@ -61,7 +61,7 @@ Je třeba nastavit následující položky: (viz obrázek výše)
 
 ## Záložka MEDTRONIC (MDT)
 
-![Záložka MDT](../images/Medtronic02.png)
+![Záložka MDT](../images/Medronic02.png)
 
 Na kartě pumpy můžete vidět několik řádků, které zobrazují aktuální stav pumpy (a připojení).
 
@@ -83,13 +83,13 @@ Ve spodní části máme 3 tlačítka:
 
 ## Historie pumpy
 
-![Dialog Historie pumpy](../images/Medtronic03.png)
+![Dialog Historie pumpy](../images/Medronic03.png)
 
 Historie pumpy se načítá každých 5 minut a ukládá se místně. Uchovává se pouze historie za posledních 24 hodin, takže při přidání nových položek jsou ty starší odstraněny. To je jednoduchý způsob, jak vidět historii pumpy (některé položky z pumpy se nemusí zobrazit, protože nejsou relevantní – například konfigurace funkcí, které nejsou používány programem AndroidAPS).
 
 ## Stav RL (Stav RileyLink)
 
-![RileyLink Stav – Nastavení](../images/Medtronic04.png) ![Stav RileyLink – Historie](../images/Medtronic05.png)
+![RileyLink Stav – Nastavení](../images/Medronic04.png) ![Stav RileyLink – Historie](../images/Medronic05.png)
 
 Dialogové okno má dvě záložky:
 
@@ -138,31 +138,31 @@ Ne. V současné době žádné z těchto zařízení toto nepodporuje a pravdě
 
 ### Je GNARL úplná náhrada za RileyLink?
 
-Ano. Autor GNARL přidal všechny funkce používané ovladačem Medtronic. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Ano. Autor GNARL přidal všechny funkce používané ovladačem Medtronic. Veškerá komunikace je podporována (v době vzniku tohoto textu (červen 2019). GNARL nemůže být použit pro komunikaci s Omnipodem. Nevýhodou GNARL je, že si jej musíte postavit sami a musíte mít kompatibilní verzi hardwaru.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Poznámka od autora:** Všimněte si prosím, že software GNARL je stále experimentální, není dostatečně otestovaný a neměl by být považován za bezpečný pro použití jako RileyLink.
 
-### Where can I get RileyLink or GNARL?
+### Kde získám RileyLink nebo GNARL?
 
-Like mentioned before you can get devices here:
+Jak je uvedeno výše, zařízení můžete získat zde:
 
-- RileyLink - You can get device here - [getrileylink.org](https://getrileylink.org/).
-- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
+- RileyLink - Je možné získat zde - [getrileylink.org](https://getrileylink.org/).
+- GNARL - Zde můžete získat informace, ale zařízení je třeba objednat jinde ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
 
-### What to do if I loose connection to RileyLink and/or pump?
+### Co mám dělat, když ztratím spojení s RileyLink a/nebo pumpou?
 
-1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
-2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink.
-3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action.
-4. Try 3 and 2 together.
-5. Reset RileyLink and reset phone.
+1. Spusťte akci „Probouzení a ladění“. AAPS se pokusí najít správnou frekvenci pro komunikaci s pumpou.
+2. Vypněte Bluetooth, počkejte 10 s a znovu zapněte. To vynutí opětovné připojení k RileyLinku.
+3. Resetujte RileyLink. Poté, co to uděláte, nezapomeňte spustit akci „Reset RileyLink konfigurace“.
+4. Zkuste body 3 a 2 dohromady.
+5. Resetujte RileyLink a resetujte telefon.
 
-### How to determine what Frequency my pump uses
+### Jak určit, jakou frekvenci má moje pumpa používat
 
-![Pump Model](../images/Medtronic06.png)
+![Model pumpy](../images/Medronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Pokud zapnete pumpu, kolem první řádky na pravé straně uvidíte speciální 3písmenný kód. První dvě písmena určují typ frekvence a poslední z nich určuje barvu. Zde jsou možné hodnoty pro frekvence:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA - Severní Amerika (ve výběru frekvencí je třeba vybrat „US & Kanada (916 MHz)“)
+- CA - Kanada (ve výběru frekvence je třeba vybrat „US & Kanada (916 MHz)“)
+- WW - Worldwide (ve výběru frekvence je třeba vybrat „Worldwide (868 MHz)“)
