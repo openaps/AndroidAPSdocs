@@ -111,7 +111,7 @@ xDrip +
    :maxdepth: 1
    :glob:
    
-   Sample Setup <../Getting-Started/Sample-Setup.rst>
+   Пример системы <../Getting-Started/Sample-Setup.html>
  
   
 Что делать во время ожидания модулей
