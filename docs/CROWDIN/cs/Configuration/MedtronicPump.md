@@ -43,7 +43,7 @@ Prozatím byl Medtronic ovladač testován s malou testovací skupinou a je stá
 
 Pokud děláte novou instalaci, skočíte přímo do průvodce. Někdy, když vaše připojení BT není plně funkční (nelze se připojit k pumpě), nebudete možná moci úplně dokončit konfiguraci. V takovém případě vyberte virtuální pumpu a po dokončení průvodce můžete použít možnost 2, která obejde detekci pumpy.
 
-![MDT Settings](../images/Medronic01.png)
+![Nastavení MDT](../images/Medronic01.png)
 
 Je třeba nastavit následující položky: (viz obrázek výše)
 
@@ -55,54 +55,54 @@ Je třeba nastavit následující položky: (viz obrázek výše)
 - **Maximální bolus na pumpě(U)** (za hodinu): Toto musí být nastaveno stejně jako na pumpě. Jde o nastavení omezující možnou velikost bolusu. Pokud zadáte větší hodnotu, bolus nebude proveden a bude vrácena chyba. Maximální hodnota, kterou lze použít, je 25. Prosím, nastavte správnou hodnotu pro sebe tak, aby nemohlo dojít k předávkování.
 - **Maximální bazál na pumpě(U/h)**: Toto musí být nastaveno stejně jako na pumpě. Jde o nastavení omezující maximální hodinový bazál. Například, pokud chcete mít nastaveno maximální množství TBR na 500 % a nejvyšší bazál je 1,5 U, pak byste měli nastavit maximální bazál na alespoň 7,5. Pokud je toto nastavení chybné (například pokud by nějaký z vašich bazálů byl vyšší, pumpa by vrátila chybu).
 - **Prodleva před spuštěním bolusu (s)**: Toto je prodleva před odesláním bolusu do pumpy, takže pokud změníte názor, můžete bolus zrušit. Zrušení bolusu po spuštění není pumpou podporováno (pokud chcete zastavit bolus během vydávání, musíte pozastavit pumpu a pak pokračovat).
-- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
-- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
-- **RileyLink Configuration**: This will find your RileyLink/GNARL device.
+- **Kódování Medtronic**: Toto nastavení určuje, zda se kódování 4b6b provádí v AndroidAPS nebo na RileyLink. Máte-li produkt RileyLink s firmwarem verze 2.x, výchozí hodnota bude používat kódování hardwarové (v RileyLinku), pokud máte firmware verze 0.x, toto nastavení bude ignorováno.
+- **Typ baterie (Power View)**: Pokud chcete vidět stav baterie v pumpě, musíte vybrat typ baterie, kterou používáte (momentálně jsou podporované lithiové nebo alkalické), což změní zobrazení vypočítané z procent a voltů.
+- **Konfigurace RieyLink**: Toto vyhledá vaše zařízení RileyLink/GNARL.
 
-## MEDTRONIC (MDT) Tab
+## Záložka MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png)
+![Záložka MDT](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+Na kartě pumpy můžete vidět několik řádků, které zobrazují aktuální stav pumpy (a připojení).
 
-- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
-- **Last connection**: Time when last connection to pump was successful.
-- **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
-- **Temp basal**: Temp basal that is running or empty.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **RileyLink Status**: Zobrazuje stav připojení RileyLink. Telefon by měl být připojen k RileyLink celou dobu.
+- **Stav pumpy**: Stav připojení pumpy může mít několik hodnot, ale většinou se zobrazí ikona spánku (když není aktivní připojení k pumpě). Když je příkaz spuštěn, možná uvidíte „Waking Up“, což znamená, že se AAPS snaží navázat spojení s pumpou, nebo popis jiného příkazu, který může být na pumpě spuštěn (např.: Get Time, Set TBR atd.).
+- **Baterie**: Ukazuje stav baterie v závislosti na konfiguraci. To může být jednoduchá ikona zobrazující, zda je baterie prázdná nebo plná (červená, pokud je baterie kritická, pod 20 %), nebo procenta a napětí.
+- **Poslední připojení**: Čas posledního úspěšného připojení k pumpě.
+- **Poslední bolus**: Kdy byl vydán poslední bolus.
+- **Základní bazál**: Toto je základní bazální dávka, která právě beží.
+- **Dočasný bazál**: Dočasný bazál, který je právě spuštěn nebo je nulový.
+- **Zásobník**: Kolik inzulínu je v zásobníku (aktualizováno nejméně každou hodinu).
+- **Chyby**: Chyba, pokud existuje (většinou ukazuje, zda došlo k chybě v konfiguraci).
 
-On lower end we have 3 buttons:
+Ve spodní části máme 3 tlačítka:
 
-- **Refresh** is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Obnovit** pro obnovení stavu pumpy. To by mělo být použito až po dlouhé době bez připojení, protože tato akce resetuje data o pumpě (načtení historie, času, profilu, stavu baterie atd.).
+- **Historie**: Zobrazí historii z pumpy (viz [níže](../Configuration/MedtronicPump#pump-history))
+- **Statistiky RL**: Zobrazí statistiku RL (viz [níže](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
-## Pump History
+## Historie pumpy
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Dialog Historie pumpy](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Historie pumpy se načítá každých 5 minut a ukládá se místně. Uchovává se pouze historie za posledních 24 hodin, takže při přidání nových položek jsou ty starší odstraněny. To je jednoduchý způsob, jak vidět historii pumpy (některé položky z pumpy se nemusí zobrazit, protože nejsou relevantní – například konfigurace funkcí, které nejsou používány programem AndroidAPS).
 
-## RL Status (RileyLink Status)
+## Stav RL (Stav RileyLink)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![RileyLink Stav – Nastavení](../images/Medtronic04.png) ![Stav RileyLink – Historie](../images/Medtronic05.png)
 
-Dialog has two tabs:
+Dialogové okno má dvě záložky:
 
-- **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Nastavení**: Zobrazí nastavení RileyLinku: Konfigurovaná adresa, Připojené zařízení, Stav připojení, Chyba připojení a verze firmwaru RileyLink. „Typ zařízení“ je vždy Medtronic, „model“ bude váš model, „sériové číslo“ je konfigurované sériové číslo, „frekvence“ udává, jakou frekvenci používáte, „poslední frekvence“ je poslední použitá frekvence.
+- **Historie**: Zobrazuje historii komunikace, položky u RileyLink ukazují změny stavu pro RileyLink a položky Medtronic ukazují, které příkazy byly odeslány do pumpy.
 
 ## Akce
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Je-li vybrán ovladač Medtronic, lze na kartu Akce přidat 3 možné akce:
 
-- **Wake and Tune Up** - If you see that your AndroidAPS hasn't contacted your pump in a while (it should contact it every 5 minutes), you can force Tune Up. This will try to contact your pump, by searching all sub frequencies on which Pump can be contacted. If it finds one it will set it as your default frequency. 
-- **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-- **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
+- **Probudit a Naladit** - Pokud zjistíte, že AndroidAPS nekontaktoval vaší pumpu po nějakou dobu (měl by to dělat každých 5 minut), můžete vynutit Ladění. V tom případě se bude AndroidAPS snažit kontaktovat pumpu prohledáním všech dílčích frekvencí, na kterých lze pumpu kontaktovat. Pokud ji nalezne, nastaví ji jako výchozí frekvenci. 
+- **Obnovit konfiguraci RileyLinku** - Pokud resetujete RileyLink/GNARL, musíte tuto akci použít, aby bylo možné překonfigurovat zařízení (sada frekvencí, sada typů frekvencí, kódování).
+- **Vymazat blokování bolusu** - Když spustíte bolus, nastavíme blokování bolusu, které brání dalším příkazům, které by mohly být odeslány do pumpy. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
 
 ## Important notes
 
