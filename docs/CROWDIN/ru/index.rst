@@ -126,7 +126,7 @@ Advanced
    Pumps <./FGT/Troubleshootingpumps.rst>
 
 
-FAQ 
+Часто задаваемые вопросы 
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
