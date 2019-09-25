@@ -32,7 +32,7 @@
 
 ## Selhání zrušení dočasného bazálu
 
-* Občas se stane, že AndroidAPS se nepodaří zrušit alarm **DBD ZRUŠENA**. Pak je nutno stisknout buď **OBNOVIT** na záložce **Combo** v AndroidAPS, nebo potvrdit alarm přímo na pumpě.
+* Občas se stane, že AndroidAPS se nepodaří zrušit alarm **TBR ZRUŠENO**. Pak je nutno stisknout buď **OBNOVIT** na záložce **Combo** v AndroidAPS, nebo potvrdit alarm přímo na pumpě.
 
 ## Záležitosti týkající se baterie
 
