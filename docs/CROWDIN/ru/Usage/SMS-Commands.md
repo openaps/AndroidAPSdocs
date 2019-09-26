@@ -30,19 +30,19 @@
 
 - Текущая ГК: 5,6 4мин назад, Дельта: -0,2 ммол, IOB: 0,20U (Болюс: 0,10U Базал: 0,10U)
 
-## LOOP STOP/DISABLE
+## ОСТАНОВКА/ОТКЛЮЧЕНИЕ ЦИКЛА
 
-- Loop has been disabled
+- Цикл остановлен
 
-## LOOP START/ENABLE
+## ЦИКЛ ПУСК/ВКЛЮЧИТЬ
 
-- Loop has been enabled
+- зцикл активирован
 
-## LOOP STATUS
+## СТАТУС ПЕТЛИ
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- зцикл не работает
+- зцикл работает
+- Остановлен (на 10 мин)
 
 ## LOOP SUSPEND 20
 
