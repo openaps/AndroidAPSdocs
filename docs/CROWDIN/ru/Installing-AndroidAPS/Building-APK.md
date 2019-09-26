@@ -40,7 +40,7 @@
 ### Windows
 
 * Любая версия git должна работать. Например <https://git-scm.com/download/win>
-* Убедитесь, что знаете путь установки. You will need it later after you installed Android Studio.
+* Убедитесь, что знаете путь установки. Он потребуется вам позже после установки Android Studio.
   
   ![Путь установки Git](../images/Update_GitPath.png)
 
@@ -50,47 +50,47 @@
 * Используйте homebrew для установки git: ```$ brew install git```.
 * Подробности об установке git см. в [официальной git документации](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-## Install Android Studio
+## Установите Android Studio
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Установите [ Android Studio ](https://developer.android.com/studio/install.html) и настройте при первом запуске.
 
-Select "Do not import settings" as you have not used it before.
+Выберите "Не импортировать настройки", так как вы не использовали их раньше.
 
 ![Снимок экрана 1](../images/Installation_Screenshot_01.png)
 
-Click "Next".
+Нажмите "Далее".
 
 ![Screenshot 2](../images/Installation_Screenshot_02.png)
 
-Select "Standard" installation and click "Next".
+Выберите "Стандартная" установка и нажмите "Далее".
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Для интерфейса выберите тему, которая вам нравится. (В этом руководстве мы использовали тему"Intellij". Затем нажмите "Далее". Это всего лишь цветовая схема. Можете выбрать любую (напр. Darcula для темного режима). Этот выбор не влияет на построение APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Нажмите "Далее" в диалоге "Проверить настройки".
 
 ![Screenshot 5](../images/Installation_Screenshot_05.png)
 
-The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
+Эмулятор Android (для эмуляции смартфона на Win или Mac) не используется при построении APK. Нажмите "Готово", чтобы завершить установку и при необходимости прочитать документацию.
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
-Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
+Android Studio загружает много программных компонентов. Можете нажать на кнопку "Показать детали" если хотите увидеть, что происходит, но в принципе это не важно.
 
 ![Screenshot 7](../images/Installation_Screenshot_07.png)
 
 ![Screenshot 8](../images/Installation_Screenshot_08.png)
 
-After the downloads are completed click the "Finish" button.
+После завершения загрузок нажмите кнопку "Готово".
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+* Аплодисменты, аплодисменты. Установка Android Studio завершена и можно приступить к клонированию исходного кода. Можно сделать короткий перерыв.
 
-## Set git path in preferences
+## Задать путь к git в параметрах
 
 ### Windows
 
