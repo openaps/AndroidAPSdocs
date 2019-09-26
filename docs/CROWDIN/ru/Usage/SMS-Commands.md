@@ -78,7 +78,7 @@
 
 ## BASAL 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Для запуска базала 30% на 30 минут ответьте кодом Swe
 
 ## BASAL 30% 50
 
