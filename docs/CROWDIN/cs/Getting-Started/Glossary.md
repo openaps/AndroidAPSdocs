@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>Stavový indikátor nízké baterie na domovské obrazovce</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br ><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
 </tr>
 <tr>
  <td>BG</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>Stavový indikátor stáří kanyly na domovské obrazovce</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br ><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -128,7 +128,7 @@
  <td>DIA</td>
  <td>Doba působnosti inzulinu (duration of insulin action)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Typy inzulinů</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Typy inzulinů</a><br ><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>DST</td>
@@ -138,9 +138,9 @@
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>„rozložené sacharidy“ (extended carbs) - sacharidy rozložené na několik hodin (např. jídla s vysokým obsahem tuků/proteinů)<br>rozložený bolus, který můžete znát z léčby pomocí běžné inzulinové pumpy, nedává při používání smyčky nedává příliš velký smysl</td>
+ <td>„rozložené sacharidy“ (extended carbs) - sacharidy rozložené na několik hodin (např. jídla s vysokým obsahem tuků/proteinů)<br >rozložený bolus, který můžete znát z léčby pomocí běžné inzulinové pumpy, nedává při používání smyčky nedává příliš velký smysl</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">Příklad použití funkce eCarbs</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br ><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">Příklad použití funkce eCarbs</a></td>
 </tr>
 <tr>
  <td>FGM</td>
@@ -150,13 +150,13 @@
 </tr>
 <tr>
  <td>git</td>
- <td>Systém pro správu verzí a sledování změn v počítačových souborech a pro koordinaci prací na těchto souborech<br>-> nezbytný pro aktualizace APK</td>
+ <td>Systém pro správu verzí a sledování změn v počítačových souborech a pro koordinaci prací na těchto souborech<br >-> nezbytný pro aktualizace APK</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - aktualizace APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>Webová hostovací služba pro správu verzí pomocí Gitu<br>-> úložiště zdrojových kódů</td>
+ <td>Webová hostovací služba pro správu verzí pomocí Gitu<br >-> úložiště zdrojových kódů</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
@@ -192,13 +192,13 @@
 </tr>
 <tr>
  <td>LGS</td>
- <td>Vypnutí při nízké glykémii (Low Glucose Suspend)<br>Systém AAPS sníží nebo zastaví bazál, pokud glykémie klesá. Pokud však glykémie stoupá, pak zvýší bazál pouze v případě záporného IOB (v důsledku předchozího LGS), v opačném případě zůstávají bazální dávky stejné jako ve vašem zvoleném profilu. Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.</td>
+ <td>Vypnutí při nízké glykémii (Low Glucose Suspend)<br >Systém AAPS sníží nebo zastaví bazál, pokud glykémie klesá. Pokud však glykémie stoupá, pak zvýší bazál pouze v případě záporného IOB (v důsledku předchozího LGS), v opačném případě zůstávají bazální dávky stejné jako ve vašem zvoleném profilu. Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.</td>
  <td><a href="../Usage/Objectives.html">Cíl 4</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>Bezplatný open-source operační systém pro smartphony atd.<br>alternativní OS pro smartphony, které nevyužívají systém Android 8.1 (Oreo)<br>(pokud používáte pumpu Accu-Chek Combo)</td>
+ <td>Bezplatný open-source operační systém pro smartphony atd.<br >alternativní OS pro smartphony, které nevyužívají systém Android 8.1 (Oreo)<br >(pokud používáte pumpu Accu-Chek Combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Pumpa Combo</a></td>
 </tr>
@@ -218,7 +218,7 @@
  <td>maxIOB</td>
  <td>Bezpečnostní funkce - maximální celkový IOB, který systém AAPS nemůže překročit</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br ><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -248,7 +248,7 @@
  <td>Nightscout Reporter</td>
  <td>Nástroj vytvořený spřízněným looperem, který slouží k vytváření PDF výkazů z dat Nightscoutu</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter na Facebooku</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br ><a href="https://www.facebook.com/nightrep/">NS Reporter na Facebooku</a></td>
 </tr>
 <tr>
  <td>Cíle</td>
@@ -258,7 +258,7 @@
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>Otevřený systém umělé slinivky (Open Artificial Pancreas System)<br>APS běží na malých počítačích (např. Raspberry Pi)<br>Systém AAPS využívá některé funkce OpenAPS</td>
+ <td>Otevřený systém umělé slinivky (Open Artificial Pancreas System)<br >APS běží na malých počítačích (např. Raspberry Pi)<br >Systém AAPS využívá některé funkce OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="https://openaps.readthedocs.io">Dokumentace k OpenAPS</a></td>
 </tr>
@@ -270,7 +270,7 @@
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
- <td>Detekce citlivosti<br>„implementace referenčního návrhu verze 0/1“ - klíčový algoritmus na pozadí OpenAPS</td>
+ <td>Detekce citlivosti<br >„implementace referenčního návrhu verze 0/1“ - klíčový algoritmus na pozadí OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Detekce citlivosti</a></td>
 </tr>
@@ -294,7 +294,7 @@
 </tr>
 <tr>
  <td>Profil</td>
- <td>Základní parametry pro léčbu (bazální dávky, DIA, IC, ISF, cílová glykémie)<br>lze definovat místně nebo prostřednictvím Nightscoutu</td>
+ <td>Základní parametry pro léčbu (bazální dávky, DIA, IC, ISF, cílová glykémie)<br >lze definovat místně nebo prostřednictvím Nightscoutu</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - Profil</a></td>
 </tr>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>Stavový indikátor na domovské obrazovce upozorňující na starý zásobník</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br ><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>Stavový indikátor na domovské obrazovce upozorňující na výměnu senzoru</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br ><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
 </tr>
 <tr>
  <td>Detekce citlivosti</td>
@@ -342,7 +342,7 @@
 </tr>
 <tr>
  <td>SMB</td>
- <td>Super Micro Bolus<br>pokročilá funkce pro rychlejší úpravu glykémie</td>
+ <td>Super Micro Bolus<br >pokročilá funkce pro rychlejší úpravu glykémie</td>
  <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
@@ -372,7 +372,7 @@
 </tr>
 <tr>
  <td>DC (TT)</td>
- <td>Dočasný cíl<br>dočasné zvýšení nebo snížení cílové glykémie (rozsahu)</td>
+ <td>Dočasný cíl<br >dočasné zvýšení nebo snížení cílové glykémie (rozsahu)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Dočasné cíle</a></td>
 </tr>
@@ -392,7 +392,7 @@
  <td>xDrip / xDrip+</td>
  <td>Open source software pro čtení dat z CGM</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br ><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td>Nulový bazál</td>
