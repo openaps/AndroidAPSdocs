@@ -44,37 +44,37 @@
 - зцикл работает
 - Остановлен (на 10 мин)
 
-## LOOP SUSPEND 20
+## ПРИОСТАНОВИТЬ ПЕТЛЮ 20
 
-- Loop suspended for 20 minutes
+- ЗЦикл приостановлен на 20 минут
 
-## LOOP RESUME
+## ВОЗОБНОВИТЬ ПЕТЛЮ
 
-- Loop resumed
+- ЗЦикл возобновлен
 
-## TREATMENTS REFRESH
+## ОБНОВИТЬ НАЗНАЧЕНИЯ
 
-- TERATMENTS REFRESH 1 receivers
+- TERATMENTS REFRESH 1 получатель
 
-## NSCLIENT RESTART
+## ПЕРЕЗАПУСТИТЬ NSCLIENT
 
-- NSCLIENT RESTART 1 receivers
+- NSCLIENT RESTART 1 получатель
 
-## PUMP
+## ПОМПА
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Последнее соед: 1 мин. назад Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Чтобы остановить врем базал ответьте кодом EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Для запуска базала 0.3ед/ч на 30 минут ответьте кодом Swe
 
 ## BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Для запуска базала 0.3ед/ч на 20 минут ответьте кодом Swe
 
 ## BASAL 30%
 
