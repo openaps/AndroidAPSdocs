@@ -12,19 +12,19 @@ AndroidAPS предлагает несколько опций для удале�
 * Родители могут удаленно отслеживать все соответствующие данные, такие как уровни глюкозы, активные углеводы, инсулин и т. д. используя **приложение NSClient** на своих телефонах.
 * Родители оповещаются с помощью приложения **xDrip в режиме слежения follower* * на своем телефоне.
 * Дистанционное управление AndroidAPS с помощью `SMS команд <../Usage/SMS-Commands.html> ` _.
-* Remote profile switch and temp targets through NSClient app.
+* Удаленное переключение профиля и временных целевых значений при помощи приложения NSClient.
 
-Tools and apps for remote monitoring
+Инструменты и приложения для удаленного мониторинга
 ------------------------------------
-* `Nightscout <http://www.nightscout.info/>`_ in web browser (mainly data display)
-*	NSClient app
-*	Dexcom follow if you are using original Dexcom app (BG values only)
-*	`xDrip <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-*	`Spike <https://spike-app.com/>`_ on iPhone (mainly BG values and **alarms**)
+* " Nightscout <http://www.nightscout.info/>` _ в браузере (в основном отображение данных)
+*ГК с клиента Nightscout
+*Приложение Dexcom Follow, если вы используете оригинальное приложение Dexcom (только ГК)
+* `xDrip <../Configuration/xdrip.html>`_ в режиме слежения follower (в основном значения ГК и **сигнализация**)
+* " Spike <https://spike-app.com/>` _ на iPhone (в основном значения ГК и **оповещения**)
 
-Things to consider
+Важные факторы
 ====================
-* Setting the correct `treatment factors <../Getting-Started/FAQ.html#how-to-begin>`_ (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved. 
-* So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
+* Определение правильных `факторов лечения <../Getting-Started/FAQ.html#how-to-begin>`_ (скорость базала, время действия инсулина DIA, чувствительность к инсулину ISF...) - затруднено у детей, особенно, когда участвуют гормоны роста. 
+* Так что не торопитесь, установите их правильно и проверьте их в реальной жизни когда ребенок рядом прежде чем начать дистанционный контроль и дистанционное лечение. Школьные каникулы могут быть хорошим временем для этого.
 * What is your emergency plan when remote control does not work (i.e. network problems)?
 * Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the `files section of AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ on Facebook.
