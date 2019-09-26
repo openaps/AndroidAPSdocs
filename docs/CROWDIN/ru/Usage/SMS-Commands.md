@@ -112,8 +112,8 @@
 
 ## PROFILE 1
 
-- To switch profile to Profile1 100% reply with code Any
+- Чтобы переключиться на Profile 1 100% ответьте кодом Any
 
 ## PROFILE 2 30
 
-- To switch profile to Profile2 30% reply with code Any
+- Чтобы переключиться на Profile 2 30% ответьте кодом Any
