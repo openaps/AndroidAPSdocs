@@ -1,17 +1,17 @@
-Remote monitoring
+Удаленный мониторинг
 ******************
 
 .. image:: ../images/KidsMonitoring.png
-  :alt: Monitoring children
+  :alt: Мониторинг детей
   
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AndroidAPS предлагает несколько опций для удаленного мониторинга детей, а также позволяет отправлять удаленные команды. Конечно, его можно использовать для мониторинга партнера или друга.
 
-Functions
+Функции
 =========
-* Kid's pump is controlled by kid's phone using AndroidAPS.
-* Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone.
-* Parents can be alarmed by using **xDrip app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands.html>`_.
+* Помпа ребенка управляется телефоном ребенка с помощью AndroidAPS.
+* Родители могут удаленно отслеживать все соответствующие данные, такие как уровни глюкозы, активные углеводы, инсулин и т. д. используя **приложение NSClient** на своих телефонах.
+* Родители оповещаются с помощью приложения **xDrip в режиме слежения follower* * на своем телефоне.
+* Дистанционное управление AndroidAPS с помощью `SMS команд <../Usage/SMS-Commands.html> ` _.
 * Remote profile switch and temp targets through NSClient app.
 
 Tools and apps for remote monitoring
