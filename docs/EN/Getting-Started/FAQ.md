@@ -209,7 +209,7 @@ The change of a canula however does not use the "prime infusion set" function of
 #### What to do when taking a shower or bath?
 You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right. 
 
-See [description above](Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Work
 Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
@@ -221,7 +221,7 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 ### Sex
 You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. 
 
-See [description above](Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Drinking alcohol
 Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
