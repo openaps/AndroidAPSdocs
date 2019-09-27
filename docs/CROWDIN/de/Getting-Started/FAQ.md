@@ -247,7 +247,7 @@ Im Gegensatz zum “klassischen” Vorgehen nutzt AndroidAAPS nicht die “Kathe
 
 Du kannst die Pumpe zum Duschen oder Baden ablegen. Für so kurze Zeiträume brauchst du die Pumpe meistens nicht. Aber du solltest es in AAPS eingeben, damit die IOB-Berechnung korrekt bleibt.
 
-Siehe [ Beschreibung oben ](Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Arbeit
 
@@ -261,7 +261,7 @@ Je nachdem, welche Art von Arbeit du hast, kann es sein, dass du an Arbeitstagen
 
 You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
 
-Siehe [ Beschreibung oben ](Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Drinking alcohol
 
