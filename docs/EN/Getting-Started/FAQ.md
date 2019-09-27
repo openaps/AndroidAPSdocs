@@ -54,7 +54,7 @@ If you take your pump off for showering/bathing/swimming/sport etc. you must let
 
    ![Reconnect pump](../images/PumpReconnect.png)
 
-### Recommendations not only based on CGM data
+### Recommendations not only based on one single CGM reading
 For safety, recommendations made are based on not one CGM reading but the average delta.  Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
 ### Further readings
@@ -219,7 +219,9 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 ### Sports
 
 ### Sex
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. Push on the light blue field 'Open loop / Closed loop' on top of the homescreen. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically. 
+You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. 
+
+See [description above](Getting-Started/FAQ#disconnect-pump).
 
 ### Drinking alcohol
 Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
