@@ -1,12 +1,12 @@
-Pump Configuration
+Настройка помпы
 ***********************
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Dana-R pump <../Configuration/DanaR-Insulin-Pump.md>
-   Dana-RS pump <../Configuration/DanaRS-Insulin-Pump.md>
-   Accu-Chek Combo pump <../Configuration/Accu-Chek-Combo-Pump.md>
-   Accu-Chek Insight pump <../Configuration/Accu-Chek-Insight-Pump.md>
-   Medtronic pump <../Configuration/MedtronicPump.md>
+   Помпа DanaR <../Configuration/DanaR-Insulin-Pump.html>
+   Помпа Dana-RS <../Configuration/DanaRS-Insulin-Pump.md>
+   Помпа Аксу-Чек Комбо <../Configuration/Accu-Chek-Combo-Pump.md>
+   Помпа Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.md>
+   Помпа Medtronic <../Configuration/MedtronicPump.md>
