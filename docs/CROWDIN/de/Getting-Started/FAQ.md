@@ -58,7 +58,7 @@ Wenn Du die Pumpe für Dusche/Bad/Schwimmen/Sport etc. abnimmst, musst Du Androi
     
     ![Reconnect pump](../images/PumpReconnect.png)
 
-### Empfehlungen basieren nicht nur auf einzelnen CGM-Daten
+### Recommendations not only based on one single CGM reading
 
 Zur Sicherheit macht AAPS die Vorschläge auf Basis des aktuellen Glukose-Durchschnittswertes (Delta) anstatt eines einzelnen Wertes. Aus diesem Grund kann es etwas dauern bis AAPS Änderungen empfiehlt, wenn das CGM nicht kontinuierlich Werte übermittelt.
 
@@ -259,7 +259,9 @@ Je nachdem, welche Art von Arbeit du hast, kann es sein, dass du an Arbeitstagen
 
 ### Sex
 
-Du kannst die Pumpe entfernen, um "frei" zu sein, aber du solltest es in AAPS eingeben, damit die IOB Berechnungen stimmen. Drücke auf das hellblaue "Open Loop / Closed Loop" Feld oben links auf dem Startbildschirm von AAPS. Select **'Disconnect pump for XY min'** depending on the estimated time. Once you have been reconnected your pump you can select 'Continue' in the same field or just wait until the chosen time of disconnection is over. The loop will continue automatically.
+You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
+
+Siehe [ Beschreibung oben ](Getting-Started/FAQ#disconnect-pump).
 
 ### Drinking alcohol
 
