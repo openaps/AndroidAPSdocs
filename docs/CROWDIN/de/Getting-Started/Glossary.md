@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>Statusanzeige niedriger Batteriestand auf dem Startbildschirm</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br ><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>BZ</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>Statusanzeige Kanülenwechsel auf dem Startbildschirm</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br ><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -128,7 +128,7 @@
  <td>DIA</td>
  <td>Insulinwirkdauer (duration of insulin action)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki Insulintypen</a><br ><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA (englisch)</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki Insulintypen</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA (englisch)</a></td>
 </tr>
 <tr>
  <td>DST</td>
@@ -138,9 +138,9 @@
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>verzögerte Kohlenhydrate (extended carbs) - Kohlenhydrate, die über mehrere Stunden aufgeteilt werden (z.B. hoher Fett- oder Proteinanteil)<br >Der verlängerte Bolus, den du vielleicht aus der klassischen Pumpentherapie kennst, macht beim Loopen wenig Sinn.</td>
+ <td>verzögerte Kohlenhydrate (extended carbs) - Kohlenhydrate, die über mehrere Stunden aufgeteilt werden (z.B. hoher Fett- oder Proteinanteil)<br>Der verlängerte Bolus, den du vielleicht aus der klassischen Pumpentherapie kennst, macht beim Loopen wenig Sinn.</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - verzögerte Kohlenhydrate (eCarbs)</a><br ><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs Anwendungsfall (englisch)</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - verzögerte Kohlenhydrate (eCarbs)</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs Anwendungsfall (englisch)</a></td>
 </tr>
 <tr>
  <td>FGM</td>
@@ -150,13 +150,13 @@
 </tr>
 <tr>
  <td>git</td>
- <td>Versionskontrollsystem für die Nachverfolgung von Änderungen in Computerdateien und Koordinierung der Arbeit an diese Dateien <br >-> für APK-Updates notwendig</td>
+ <td>Versionskontrollsystem für die Nachverfolgung von Änderungen in Computerdateien und Koordinierung der Arbeit an diese Dateien <br>-> für APK-Updates notwendig</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - Update auf neue Version...</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>webbasierter Hosting-Dienst für die Versionskontrolle mit Git <br >-> Speicherort des Quellcodes</td>
+ <td>webbasierter Hosting-Dienst für die Versionskontrolle mit Git <br>-> Speicherort des Quellcodes</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
@@ -192,13 +192,13 @@
 </tr>
 <tr>
  <td>LGS</td>
- <td>Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)<br >AAPS wird die Basalrate reduzieren, wenn die BZ-Werte zu stark sinken. Wenn die BZ-Werte aber steigen, wird AAPS die Basalrate nur dann erhöhen, wenn negatives Insulin on board (von einer vorangegangenen Basalratenreduzierung) ist. Sonst bleibt die Basalrate wie in Deinem Profil eingestellt. Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.</td>
+ <td>Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)<br>AAPS wird die Basalrate reduzieren, wenn die BZ-Werte zu stark sinken. Wenn die BZ-Werte aber steigen, wird AAPS die Basalrate nur dann erhöhen, wenn negatives Insulin on board (von einer vorangegangenen Basalratenreduzierung) ist. Sonst bleibt die Basalrate wie in Deinem Profil eingestellt. Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.</td>
  <td><a href="../Usage/Objectives.html">Ziel 4</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>freies OpenSource Betriebssystem für Smartphones und andere Geräte<br >alternatives Betriebssystem für Smartphones, auf denen Android 8.1 (Oreo) nicht betrieben werden kann<br >(bei Benutzung der Accu-Chek Combo)</td>
+ <td>freies OpenSource Betriebssystem für Smartphones und andere Geräte<br>alternatives Betriebssystem für Smartphones, auf denen Android 8.1 (Oreo) nicht betrieben werden kann<br>(bei Benutzung der Accu-Chek Combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Akku-Chek Combo Pumpe</a></td>
 </tr>
@@ -218,7 +218,7 @@
  <td>maxIOB</td>
  <td>Sicherheitsfunktion - Wert für maximales aktives Insulin im Körper, der von AAPS nicht überschritten werden kann</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br ><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -248,7 +248,7 @@
  <td>Nightscout Reporter</td>
  <td>Tool eines Mitloopers zur Erstellung von PDF-Berichten auf Basis der Nightscout-Daten</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br ><a href="https://www.facebook.com/nightrep/">NS Reporter bei Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter bei Facebook</a></td>
 </tr>
 <tr>
  <td>Objectives (Ziele)</td>
@@ -258,7 +258,7 @@
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>System einer künstlichen Bauchspeicheldrüse (open artificial pancreas system)<br >APS, das auf Minirechnern (z.B. Raspberry Pie) ausgeführt wird<br >AAPS nutzt einige der OpenAPS Funktionen</td>
+ <td>System einer künstlichen Bauchspeicheldrüse (open artificial pancreas system)<br>APS, das auf Minirechnern (z.B. Raspberry Pie) ausgeführt wird<br>AAPS nutzt einige der OpenAPS Funktionen</td>
  <td>&nbsp;</td>
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs (englisch)</a></td>
 </tr>
@@ -270,7 +270,7 @@
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
- <td>Empfindlichkeitserkennung<br >"reference design implementation version 0/1" - der Schlüsselalgorithmus von OpenAPS</td>
+ <td>Empfindlichkeitserkennung<br>"reference design implementation version 0/1" - der Schlüsselalgorithmus von OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Empfindlichkeitserkennung...</a></td>
 </tr>
@@ -293,8 +293,8 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Vorhersagelinien</a></td>
 </tr>
 <tr>
- <td>Profil</td>
- <td>grundlegende Behandlungseinstellungen (Basalrate, DIA, IC, ISF, BZ-Zielbereich)<br >kann lokal auf dem Gerät oder über Nightscout eingerichtet werden</td>
+ <td>Profile</td>
+ <td>grundlegende Behandlungseinstellungen (Basalrate, DIA, IC, ISF, BZ-Zielbereich)<br>kann lokal auf dem Gerät oder über Nightscout eingerichtet werden</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - Profil</a></td>
 </tr>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>Statusanzeige Reservoirwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br ><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>Statusanzeige Sensorwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br ><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>Sensitivitätserkennung</td>
@@ -342,7 +342,7 @@
 </tr>
 <tr>
  <td>SMB</td>
- <td>super micro bolus<br >erweiterte Bolusfunktion für schnellere Anpassung des BZ</td>
+ <td>super micro bolus<br>erweiterte Bolusfunktion für schnellere Anpassung des BZ</td>
  <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
@@ -372,7 +372,7 @@
 </tr>
 <tr>
  <td>TT</td>
- <td>vorübergehendes Ziel (temporary target)<br >vorübergehende Absenkung/Anhebung des BZ-Ziels bzw. BZ-Zielbereichs</td>
+ <td>vorübergehendes Ziel (temporary target)<br>vorübergehende Absenkung/Anhebung des BZ-Ziels bzw. BZ-Zielbereichs</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Temporäre Ziele</a></td>
 </tr>
@@ -392,7 +392,7 @@
  <td>xDrip / xDrip+</td>
  <td>Open Source Software um CGM/FGM-Systeme auszulesen</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br ><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td>Zero-temp</td>
