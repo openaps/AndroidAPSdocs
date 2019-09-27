@@ -2,7 +2,13 @@
 
 ## What are Temp-Targets and where can I set and configure them?
 
-With “Temp-Targets” (or short TT), you can change your blood glucose target for a certain time period. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets. To set “Default-Temp-Targets”, you can press long on your target in the right corner on the top in the overview-tab or in the orange “Carbs” button. To set a “Custom Temp-Target”, you can also do it by long pressing you target or in the “Actions”-tab.
+With “Temp-Targets” (or short TT), you can change your blood glucose target for a certain time period. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets.
+
+![Set default temp targets](../images/TempTarget_Default.png)
+
+To use one of the set “Default-Temp-Targets”, you can press long on your target in the right corner on the top in the overview-tab or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the “Actions”-tab.
+
+![Set temp target](../images/TempTarget_Set2.png)
 
 ## Hypo Temp-Target
 
@@ -14,7 +20,7 @@ Note: if you enter carbs with the carb button and your blood glucose is less the
 
 Before and during activity, you might want to have a higher target to prevent getting low. To simplify setting the Temp-Target, you can configure a default "Activity Temp-Target".
 
-Advanced, objective 8: The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Then AndroidAPS is more sensitive. Some people do instead a profile switch before/while activity TT, but everbody is different. If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, even with COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active.
+Advanced, objective 8: The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Then AndroidAPS is more sensitive. Some people do instead a profile switch before/while activity TT, but everybody is different. If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, even with COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active.
 
 ## Eating soon Temp-Target
 
@@ -25,3 +31,5 @@ Advanced, objective 8: If you use OpenAPS SMB and have “Low temptarget lowers 
 ## Custom Temp-Target
 
 Sometimes, you just want to have a temp target other than the default ones. You can set one by long pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
+
+![Set temp target through Action tab](../images/TempTarget_ActionTab.png)
