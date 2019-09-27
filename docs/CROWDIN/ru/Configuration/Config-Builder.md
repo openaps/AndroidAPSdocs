@@ -6,9 +6,9 @@
 
 Конфигуратор (Конф) - это вкладка, на которой можно подключать и отключать модули программы. Ячейки с левой стороны (A) позволяют выбрать, какими модулями программы вы будете пользоваться, ячейки справа (C) позволяют представить эти модули в виде вкладок (E) в AndroidAPS. Если правая ячейка не активирована, доступ к функциям можно получить из выпадающего меню (D) в левом верхнем углу экрана.
 
-Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Там, где в пределах модуля доступны дополнительные параметры, можно нажать на шестеренку (B), которая их откроет.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right-hand side of the screen (F) and select 'Setup Wizard' to use it.
+**Первая конфигурация:** Начиная с версии 2.0 AAPS процесс настройки AndroidAPS контролируется Мастером установки. Для его запуска нажмите на меню под тремя точками в правом верхнем углу экрана меню (F) и выберите «Мастер установки».
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
