@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>lampka stanu niski poziom baterii na ekranie głównym</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br ><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>BG</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>lampka stanu zaległa zmiana kaniuli na ekranie głównym</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br ><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -128,7 +128,7 @@
  <td>DIA</td>
  <td>czas aktywności insuliny</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki typy insuliny</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki typy insuliny</a><br ><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>DST</td>
@@ -138,9 +138,9 @@
 </tr>
 <tr>
  <td>eCarbs</td>
- <td>"przedłużone węglowodany" - węglowodany podzielone na kilka godzin (tj. sporo tłuszczy i białek)<br> przedłużone bolusy które znasz z normalnej terapii pompą insulinową nie mają wiele sensu gdy używasz pętli</td>
+ <td>"przedłużone węglowodany" - węglowodany podzielone na kilka godzin (tj. sporo tłuszczy i białek)<br > przedłużone bolusy które znasz z normalnej terapii pompą insulinową nie mają wiele sensu gdy używasz pętli</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs przykład użycia</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br ><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs przykład użycia</a></td>
 </tr>
 <tr>
  <td>FGM</td>
@@ -150,13 +150,13 @@
 </tr>
 <tr>
  <td>git</td>
- <td>system kontroli wersji dla śledzenia zmian w plikach komputerowych i koordynowania pracy na tych plikach <br>-> niezbędny do aktualizacji APK</td>
+ <td>system kontroli wersji dla śledzenia zmian w plikach komputerowych i koordynowania pracy na tych plikach <br >-> niezbędny do aktualizacji APK</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - aktualizacja APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>webowy serwis kontroli wersji wykorzystywany przez Git <br>- składowanie kodu źródłowego</td>
+ <td>webowy serwis kontroli wersji wykorzystywany przez Git <br >- składowanie kodu źródłowego</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
@@ -192,13 +192,13 @@
 </tr>
 <tr>
  <td>LGS</td>
- <td>Zawieszenie niskiej glikemii <br> AAPS zmniejszy poziom dawki podstawowej, jeśli poziom glukozy we krwi spadnie. Jeśli jednak poziom glukozy we krwi wzrasta, to wzrośnie on tylko w przypadku, gdy IOB będzie ujemny (z poprzedniego LGS), w przeciwnym razie dawki podstawowe pozostaną takie same jak wybrany profil. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td>Zawieszenie niskiej glikemii <br > AAPS zmniejszy poziom dawki podstawowej, jeśli poziom glukozy we krwi spadnie. Jeśli jednak poziom glukozy we krwi wzrasta, to wzrośnie on tylko w przypadku, gdy IOB będzie ujemny (z poprzedniego LGS), w przeciwnym razie dawki podstawowe pozostaną takie same jak wybrany profil. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
  <td><a href="../Usage/Objectives.html">objective 4</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>darmowy i open-source system operacyjny dla smartfonów itp <br>alternatywny system operacyjny dla smartfonów bez systemu Android 8.1 (Oreo) <br>(wymagany dla pompy Accu-Chek combo)</td>
+ <td>darmowy i open-source system operacyjny dla smartfonów itp <br >alternatywny system operacyjny dla smartfonów bez systemu Android 8.1 (Oreo) <br >(wymagany dla pompy Accu-Chek combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - pompa Combo</a></td>
 </tr>
@@ -218,7 +218,7 @@
  <td>maxIOB</td>
  <td>Funkcja zabezpieczeń - maksymalna całkowita IOB która może zostać ustawiona przez AAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br ><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -248,7 +248,7 @@
  <td>Raporty Nightscout</td>
  <td>Narzędzie od osoby korzystającej z pętli do generowanie raportów PDF z danych Nightscout</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br ><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
  <td>Cele (samouczek)</td>
@@ -258,7 +258,7 @@
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>open artificial pancreas system<br>APS działający na małych komputerach (tj. Raspberry Pie)<br>AAPS używa pewnych elementów OpenAPS</td>
+ <td>open artificial pancreas system<br >APS działający na małych komputerach (tj. Raspberry Pie)<br >AAPS używa pewnych elementów OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="https://openaps.readthedocs.io">OpenAPS dokumentacja</a></td>
 </tr>
@@ -270,7 +270,7 @@
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
- <td>wykrywanie czułości <br>" referencyjny projekt implementujący wersje 0/1"- kluczowy algorytm zaimplementowany w OpenAPS</td>
+ <td>wykrywanie czułości <br >" referencyjny projekt implementujący wersje 0/1"- kluczowy algorytm zaimplementowany w OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
 </tr>
@@ -294,7 +294,7 @@
 </tr>
 <tr>
  <td>Profil</td>
- <td>ustawienia podstawowe terapii (wartość bazy, DIA, IC, ISF, cel BG) <br>mogą być definiowane lokalnie lub za pośrednictwem Nightscout</td>
+ <td>ustawienia podstawowe terapii (wartość bazy, DIA, IC, ISF, cel BG) <br >mogą być definiowane lokalnie lub za pośrednictwem Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>lampka stanu zaległa zmiana zbiornika na insulinę na ekranie głównym</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br ><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>lampka stanu zaległa zmiana sensora na ekranie głównym</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br ><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td>Sensivity detection / Wykrywanie czułości</td>
@@ -342,7 +342,7 @@
 </tr>
 <tr>
  <td>SMB</td>
- <td>super micro bolus<br> zawansowa funkcja do szybszych zmian w BG</td>
+ <td>super micro bolus<br > zawansowa funkcja do szybszych zmian w BG</td>
  <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
@@ -372,7 +372,7 @@
 </tr>
 <tr>
  <td>TT</td>
- <td>temporary target (cel tymczasowy) - <br>tymczasowe zwiększenie lub zmniejszenie wartości żądanej BG (zakres)</td>
+ <td>temporary target (cel tymczasowy) - <br >tymczasowe zwiększenie lub zmniejszenie wartości żądanej BG (zakres)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
 </tr>
@@ -392,7 +392,7 @@
  <td>xDrip / xDrip+</td>
  <td>oprogramowanie open source do odczytu CGM</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br ><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td>Zero-temp</td>

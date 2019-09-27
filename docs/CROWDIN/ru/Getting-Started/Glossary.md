@@ -56,7 +56,7 @@
  <td>BAT/БАТ</td>
  <td>низкий уровень заряда батареи на главном экране</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br ><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
  <td>BG/ГК</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>меняющая цвет надпись состояния просроченной/непросроченной канюли на главном экране</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br ><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
  <td>CGM/НМГ</td>
@@ -128,7 +128,7 @@
  <td>Время действия инсулина DIA</td>
  <td>продолжительность активности инсулина</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - </a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">разновидности инсулина по времени действия</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - </a><br ><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">разновидности инсулина по времени действия</a></td>
 </tr>
 <tr>
  <td>DST</td>
@@ -140,7 +140,7 @@
  <td>eCarbs</td>
  <td>"долгие углеводы" появляются в организме через несколько часов из избытков жиров/протеинов пищи. Необходимо учитывать при обычной помповой терапии, несущественны при использовании замкнутого цикла.</td>
  <td>Супер микро болюс SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Вики - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Вики - eCarbs</a><br ><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs</a></td>
 </tr>
 <tr>
  <td>FGM</td>
@@ -150,13 +150,13 @@
 </tr>
 <tr>
  <td>git</td>
- <td>система контроля версий для отслеживания изменений в компьютерных файлах и координации работы над этими файлами<br>-> требуется для обновления APK</td>
+ <td>система контроля версий для отслеживания изменений в компьютерных файлах и координации работы над этими файлами<br >-> требуется для обновления APK</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - обновление APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
- <td>веб-хостинг сервис для управления версиями с помощью Git<br>-> хранения исходного кода</td>
+ <td>веб-хостинг сервис для управления версиями с помощью Git<br >-> хранения исходного кода</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
@@ -198,7 +198,7 @@
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>бесплатная и открытая операционная система для смартфонов и т.д.<br>альтернативная ОС для смартфонов, не работающих на Android 8.1 (Oreo)<br>(при использовании Accu-Chek Combo)</td>
+ <td>бесплатная и открытая операционная система для смартфонов и т.д.<br >альтернативная ОС для смартфонов, не работающих на Android 8.1 (Oreo)<br >(при использовании Accu-Chek Combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
@@ -218,7 +218,7 @@
  <td>maxIOB/ максимум активного инсулина IOB</td>
  <td>важная системная характеристика: максимально допустимый уровень инсулина в крови (IOB), выше которого AAPS прекращает ввод инсулина.</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br ><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -248,7 +248,7 @@
  <td>Nightscout Reporter / Репортер Nightscout</td>
  <td>Средство создания PDF отчетов из данных Nightscout.</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br ><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
  <td>Цели</td>
@@ -258,7 +258,7 @@
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>Искусственная поджелудочная железа с открытым кодом.<br> Работает на мини-компьютерах (например, RaspBerry PI)<br>проект AAPS использует наработки проекта OpenAPS.</td>
+ <td>Искусственная поджелудочная железа с открытым кодом.<br > Работает на мини-компьютерах (например, RaspBerry PI)<br >проект AAPS использует наработки проекта OpenAPS.</td>
  <td>&nbsp;</td>
  <td><a href="https://openaps.readthedocs.io">Документация OpenAPS</a></td>
 </tr>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>меняющая цвет надпись состояния наполненности резервуара на главном экране</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br ><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>меняющая цвет надпись состояния просроченного/непросроченного сенсора на главном экране</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br ><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
 </tr>
 <tr>
  <td>Определение чувствительности sensitivity</td>
@@ -372,7 +372,7 @@
 </tr>
 <tr>
  <td>ТТ/Временная цель </td>
- <td>временная цель<br>временное увеличение/уменьшение целевой ГК (диапазон)</td>
+ <td>временная цель<br >временное увеличение/уменьшение целевой ГК (диапазон)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - временные цели</a></td>
 </tr>
@@ -392,7 +392,7 @@
  <td>xDrip / xDrip+</td>
  <td>программное обеспечение с открытым исходным кодом для чтения систем мониторинга CGM</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br ><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td>Zero-temp/Временный нулевой базал</td>

@@ -27,7 +27,7 @@ Wrażliwość jest obliczana na podstawie danych zebrany z ostatnich 8 godzin lu
 
 ## Równoczesne węglowodany
 
-Należy podkreślić, iż pomiędzy modelami wykrywania wrażliwości - AAPS, Średnią ważoną a Oref0 i Oref1 istnieją zasadnicze różnice. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. Algorytm AAPS oraz Średnio ważona zaczynają przyjmować wchłanianie posiłku niezwłocznie po tym, kiedy wpiszesz węglowodany do aplikacji. Jeśli w organizmie znajduje się więcej niż jeden posiłek, minimalne wchłanianie węglowodanów dostosowuje się do wielkości posiłku i maksymalnego czasu wchłaniania (carbs max absorption time). Minimalna absorpcja będzie odpowiednio wyższa w porównaniu do algorytmów Oref.
+Należy podkreślić, iż pomiędzy modelami wykrywania wrażliwości - AAPS, Średnią ważoną a Oref0 i Oref1 istnieją zasadnicze różnice. [Oryginalny tekst jest mylący] W tym przypadku do COB dodaje się dodatkowe węglowodany, a następnie COB jest wchłaniany na podstawie obserwowanej absorpcji węglowodorów (w oparciu o to, ile wzrasta BG w stosunku do tego, ile powinno spaść wg. IOB) [Oryginalny tekst jest mylący] Algorytm AAPS oraz Średnio ważona zaczynają przyjmować wchłanianie posiłku niezwłocznie po tym, kiedy wpiszesz węglowodany do aplikacji. Jeśli w organizmie znajduje się więcej niż jeden posiłek, minimalne wchłanianie węglowodanów dostosowuje się do wielkości posiłku i maksymalnego czasu wchłaniania (carbs max absorption time). Minimalna absorpcja będzie odpowiednio wyższa w porównaniu do algorytmów Oref.
 
 ## Przykłady wchłaniania aktywnych węglowodanów (COB)
 
@@ -39,4 +39,4 @@ AAPS, Średnia ważona - absorpcja jest obliczana w taki sposób, aby po określ
 
 ![Aktywne węglowodany (COB) z AAPS](../images/cob_aaps2_orange.png)
 
-If minimal carbs absorption is used instead of value calculated from deviations, an orange dot appears on COB graph
+Jeśli zastosowana zostanie minimalna absorpcja węglowodanów zamiast wartości obliczonej na podstawie odchyleń, na wykresie COB pojawi się pomarańczowa kropka

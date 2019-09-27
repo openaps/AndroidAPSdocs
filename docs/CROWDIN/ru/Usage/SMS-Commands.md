@@ -26,94 +26,94 @@
 
 **Подсказка**: Полезно держать функцию SMS незанятой на обоих телефонах, если их отправляется много.
 
-## BG/ГК
+## ГК
 
 - Текущая ГК: 5,6 4мин назад, Дельта: -0,2 ммол, IOB: 0,20U (Болюс: 0,10U Базал: 0,10U)
 
-## LOOP STOP/DISABLE
+## ОТКЛЮЧИТЬ ЗЦ
 
-- Loop has been disabled
+- Зцикл остановлен
 
-## LOOP START/ENABLE
+## ВКЛЮЧИТЬ ЗЦ
 
-- Loop has been enabled
+- зцикл активирован
 
-## LOOP STATUS
+## СТАТУС ЗЦ
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- зцикл не работает
+- зцикл работает
+- Остановлен (на 10 мин)
 
-## LOOP SUSPEND 20
+## ОСТАНОВИТЬ ЗЦ 20
 
-- Loop suspended for 20 minutes
+- ЗЦикл приостановлен на 20 минут
 
-## LOOP RESUME
+## ВОЗОБНОВИТЬ ЗЦ
 
-- Loop resumed
+- ЗЦикл возобновлен
 
-## TREATMENTS REFRESH
+## ОБНОВИТЬ НАЗНАЧЕНИЯ
 
-- TERATMENTS REFRESH 1 receivers
+- TERATMENTS REFRESH 1 получатель
 
-## NSCLIENT RESTART
+## ПЕРЕЗАПУСТИТЬ NSCLIENT
 
-- NSCLIENT RESTART 1 receivers
+- NSCLIENT RESTART 1 получатель
 
-## PUMP
+## ПОМПА
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Последнее соед: 1 мин. назад Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ## BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Чтобы остановить врем базал ответьте кодом EmF
 
 ## BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Для запуска базала 0.3ед/ч на 30 минут ответьте кодом Swe
 
 ## BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Для запуска базала 0.3ед/ч на 20 минут ответьте кодом Swe
 
 ## BASAL 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Для запуска базала 30% на 30 минут ответьте кодом Swe
 
-## BASAL 30% 50
+## БАЗАЛ 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Для запуска базала 30% на 50 минут ответьте кодом Swe
 
-## BOLUS 1.2
+## Болюс 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Для подачи болюса 1,2 ед ответьте кодом Rrt
+- Удаленный болюс недопустим (* в течение 15 минут после команды Болюс или удаленных команд *)
 
 ## EXTENDED STOP/CANCEL
 
-- To stop extended bolus reply with code EmF
+- Для прекращения подачи пролонгированного болюса ответьте кодом EmF
 
 ## EXTENDED 2 120
 
-- To start extended bolus 2U for 120 min reply with code EmF
+- Для начала подачи пролонгированного болюса 2 ед. на 120 мин. ответьте кодом EmF
 
 ## CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Чтобы отправить калибровку 5.6 ответьте кодом Rrt
+- Калибровка отправлена (*если установлен xDrip. Разрешение на прием калибровок должно быть включено в xDrip+*)
 
-## PROFILE STATUS
+## СТАТУС ПРОФИЛЯ
 
 - Profile1
 
-## PROFILE LIST
+## СПИСОК ПРОФИЛЕЙ
 
-- 1.`Profile1` 2.`Profile2`
+- 1. ` Profile1 ` 2. ` Profile2 `
 
 ## PROFILE 1
 
-- To switch profile to Profile1 100% reply with code Any
+- Чтобы переключиться на Profile 1 100% ответьте кодом Any
 
 ## PROFILE 2 30
 
-- To switch profile to Profile2 30% reply with code Any
+- Чтобы переключиться на Profile 2 30% ответьте кодом Any
