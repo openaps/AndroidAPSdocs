@@ -1,4 +1,4 @@
-# Screenshots
+# AndroidAPS screens
 
 ## The Homescreen
 
@@ -6,19 +6,40 @@
 
 This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
 
-**Section A:** allows you to navigate between the various AndroidAPS modules by swiping left or right.
+### Section A
 
-**Section B:** Allows you to change the loop status (open loop, closed loop, suspend loop etc), see your current profile, to see your current target blood glucose level and to set a temporary target. Long press on any of the buttons to alter the setting. I.e long press the dark blue target bar in the upper right ("5.5" in the screenshot) to set a temp target.
+* navigate between the various AndroidAPS modules by swiping left or right
 
-**Section C:** The latest blood glucose reading from your CGM, how long ago it was read, changes in the last 15 and 40 minutes, your current basal rate - including any temporary basal rate (TBR) programmed by the system, your insulin on board and carbs on board.
+### Section B
 
-The optional [status lights](../Configuration/Preferences.md) (CAN | INS | RES | SEN | BAT) give a visual warning for low reservoir and battery level as well as overdue site change.
+* change the loop status (open loop, closed loop, suspend loop etc)
+* see your current profile and do a [profile switch](../Usage/Profiles.md)
+* see your current target blood glucose level and set a [temporary target](../Usage/temptarget.md).
+
+Long press on any of the buttons to alter the setting. I.e long press the target bar in the upper right ("110" in the screenshot above) to set a temp target.
+
+### Section C
+
+* latest blood glucose reading from your CGM
+* how long ago it was read
+* changes in the last 15 and 40 minutes
+* your current basal rate - including any temporary basal rate (TBR) programmed by the system
+* insulin on board (IOB)
+* carbs on board (COB)
+
+The optional [status lights](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) give a visual warning for low reservoir and battery level as well as overdue site change.
 
 The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
 
-**Section D:** Click the arrow on the right side of the screen in section D to select which information is displayed on the charts below.
+### Section D
 
-**Section E:** Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+Click the arrow on the right side of the screen in section D to select which information is displayed on the charts below.
+
+### Section E
+
+Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries.
+
+Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
 
 The extended lines show the predicted BG calculations and trends - if you have it selected.
 
@@ -31,9 +52,13 @@ These lines show you the different predictions based on current carb absorption 
 
 The solid blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time.
 
-**Section F:** is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
+### Section F
 
-**Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
+This section also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
+
+### Section G
+
+Enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration. Also a Quick Wizzard button would be displayed here if configured in [Config Builder](.../Configuration/Config-Builder#quickwizard-settings).
 
 ## The Calculator
 
@@ -41,13 +66,19 @@ The solid blue line shows the basal delivery of your pump. The dotted blue line 
 
 When you want to make a meal bolus this is where you will normally make it from.
 
-**Section A:** contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected and the bolus will be delayed. You can put a negative number in this field if you are bolusing for past carbs.
+### Section A
+
+contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected and the bolus will be delayed. You can put a negative number in this field if you are bolusing for past carbs.
 
 SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
 
-**Section B:** shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+### Section B
 
-**Section C:** shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
+shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+
+### Section C
+
+shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
 ### Combinations of COB and IOB and what they mean
 
