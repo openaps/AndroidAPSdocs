@@ -245,7 +245,7 @@ The change of a canula however does not use the "prime infusion set" function of
 
 You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
 
-See [description above](Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Work
 
@@ -259,7 +259,7 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 
 You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
 
-See [description above](Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Drinking alcohol
 
