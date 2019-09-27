@@ -1,17 +1,17 @@
-Wiki updates & changes
+Обновления и изменения документации Wiki
 **********************
-September 2019
+Сентябрь 2019 года
 ===============
-* `Automate <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - slow carb absorbtion
-* `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
-* `Profile timeshift <../Usage/Profiles.html#timeshift>`_ (more details)
-* `Remote monitoring <../Children/Children.html>`_
-* `What is a closed loop system? <../Getting-Started/ClosedLoop.html>`_
+* ` Автоматизация <../Usage/Automation.html> ` _
+* `Калькулятор болюса <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - медленное усвоение углеводов
+* " Безопасность Nightscout <../Installing-AndroidAPS/Nightscout.html#security-considerations> `
+* `Сдвиг времени профиля <../Usage/Profiles.html#timeshift>`_ (подробнее)
+* `Удаленный мониторинг <../Children/Children.html>`_
+* `Что такое система замкнутого цикла? <../StartStarted/ClosedLoop.html> ` _
 
-August 2019
+Август 2019
 ===========
-* `Dexcom G6 patched app region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
-* `Dexcom G6 new transmitter <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
-* `What do I need? <../index.html#what-do-i-need>`_ - new structure & additional information
-* New structure
+* `Dexcom G6 модифицированное приложение <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* `Новый трансмиттер Dexcom G6 <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
+* `Что нужно? <../index.html#what-do-ineed> ` _-новая структура и дополнительная информация
+Новая структура
