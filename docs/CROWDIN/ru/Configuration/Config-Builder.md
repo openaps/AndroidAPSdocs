@@ -1,34 +1,34 @@
 # Конфигуратор
 
-Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
+В зависимости от настроек, конфигуратор можно открыть с помощью вкладки в верхней части экрана или через сэндвич-меню.
 
 ![Open config builder](../images/ConfBuild_Open.png)
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+Конфигуратор (Конф) - это вкладка, на которой можно подключать и отключать модули программы. Ячейки с левой стороны (A) позволяют выбрать, какими модулями программы вы будете пользоваться, ячейки справа (C) позволяют представить эти модули в виде вкладок (E) в AndroidAPS. Если правая ячейка не активирована, доступ к функциям можно получить из выпадающего меню (D) в левом верхнем углу экрана.
 
-Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Там, где в пределах модуля доступны дополнительные параметры, можно нажать на шестеренку (B), которая их откроет.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right-hand side of the screen (F) and select 'Setup Wizard' to use it.
+**Первая конфигурация:** Начиная с версии 2.0 AAPS процесс настройки AndroidAPS контролируется Мастером установки. Для его запуска нажмите на меню под тремя точками в правом верхнем углу экрана меню (F) и выберите «Мастер установки».
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
-## Tab or hamburger menu
+## Вкладка или сэндвич-меню
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+С помощью переключателя под значком глаза вы можете решить, как открыть соответствующий раздел программы.
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
+![Вкладка или сэндвич-меню](../images/ConfBuild_TabOrHH.png)
 
 ## Профиль
 
-Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+Выберите нужный базальной профиль См. страницу [Профили](../Usage/Profiles.md) для дополнительной информации.
 
 ### Локальный профиль (рекомендуется)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Локальный профиль использует базальной профиль, введенный вручную в телефоне. Как только он выбран, появляется новая вкладка, где можно при необходимости изменить данные профиля, считываемые с помпы. При следующем переключении профиля они записываются на помпу в профиль 1. Мы рекомендуем этот профиль, поскольку он не зависит от интернет-соединения.
 
 Преимущества:
 
-* no internet connection necessary to change profile settings
+* не требуется подключение к интернету для изменения настроек профиля
 * изменения профиля могут быть сделаны непосредственно на телефоне
 
 Недостатки:
