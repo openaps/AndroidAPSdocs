@@ -48,6 +48,8 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Install Android Studio
 
+The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
+
 Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
 Select "Do not import settings" as you have not used it before.
