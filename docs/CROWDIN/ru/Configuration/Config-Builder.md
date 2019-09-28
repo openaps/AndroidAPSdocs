@@ -12,23 +12,23 @@
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
-## Tab or hamburger menu
+## Вкладка или сэндвич-меню
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+С помощью переключателя под значком глаза вы можете решить, как открыть соответствующий раздел программы.
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
+![Вкладка или сэндвич-меню](../images/ConfBuild_TabOrHH.png)
 
 ## Профиль
 
-Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+Выберите нужный базальной профиль См. страницу [Профили](../Usage/Profiles.md) для дополнительной информации.
 
 ### Локальный профиль (рекомендуется)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Локальный профиль использует базальной профиль, введенный вручную в телефоне. Как только он выбран, появляется новая вкладка, где можно при необходимости изменить данные профиля, считываемые с помпы. При следующем переключении профиля они записываются на помпу в профиль 1. Мы рекомендуем этот профиль, поскольку он не зависит от интернет-соединения.
 
 Преимущества:
 
-* no internet connection necessary to change profile settings
+* не требуется подключение к интернету для изменения настроек профиля
 * изменения профиля могут быть сделаны непосредственно на телефоне
 
 Недостатки:
