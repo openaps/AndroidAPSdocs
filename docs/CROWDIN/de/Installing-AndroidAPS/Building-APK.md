@@ -155,7 +155,7 @@ Wie beschrieben, einfach warten, bis die Installation abgeschlossen ist.
 
 ![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Ist diese abgeschlossen, dann klicke wieder auf “Finish”. Please click "Finish".
+Ist diese abgeschlossen, dann klicke wieder auf “Finish”. 
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
