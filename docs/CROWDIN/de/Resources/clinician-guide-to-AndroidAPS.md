@@ -77,7 +77,7 @@ In diesem Beispiel erkennt AndroidAPS, dass der BZ-Wert deutlich über den Zielw
 
 ### Optimierung von Einstellungen und Änderungen
 
-Als Arzt, der möglicherweise keine Erfahrung mit AndroidAPS oder DIY Closed Loop Systemen hat, kann es für Sie eine Herausforderung sein, Ihrem Patienten zu helfen, seine Einstellungen zu optimieren oder Änderungen vorzunehmen, um seine Ergebnisse zu verbessern. Wir verfügen in der Gemeinschaft über mehrere Tools und Leitfäden<0>, die den Patienten helfen, kleine, getestete Anpassungen vorzunehmen, um ihre Einstellungen zu verbessern.</p> 
+Als Arzt, der möglicherweise keine Erfahrung mit AndroidAPS oder DIY Closed Loop Systemen hat, kann es für Sie eine Herausforderung sein, Ihrem Patienten zu helfen, seine Einstellungen zu optimieren oder Änderungen vorzunehmen, um seine Ergebnisse zu verbessern. Wir verfügen in der Gemeinschaft über mehrere Tools und [Leitfäden](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html), die den Patienten helfen, kleine, getestete Anpassungen vorzunehmen, um ihre Einstellungen zu verbessern.
 
 Das Wichtigste für den Patienten ist, nur jeweils eine Änderung vorzunehmen und deren Auswirkungen 2 - 3 Tage lang zu beobachten, bevor er sich entscheidet, eine andere Einstellung zu ändern oder zu modifizieren. Dies gilt natürlich nicht, wenn es sich offensichtlich um eine "schlechte Anpassung" handelt, die die Situation verschlimmert. In diesem Fall sollte er sofort zur vorherigen Einstellung zurückkehren. Wir Menschen tendieren dazu, alles auf einmal ändern zu wollen. Aber wenn man das tut kann es sein, dass daraus suboptimale Einstellungen entstehen, die nur schwer wieder in einen guten Status zurückgeführt werden können.
 
