@@ -40,7 +40,7 @@ G6 mit der gepatchten Dexcom App
 * Stoppe den Sensor und deinstalliere die originale Dexcom App, falls du das noch nicht gemacht hast.
 * Installiere die heruntergeladene apk
 * Starte den Sensor
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Wähle gepatchte Dexcom App im Konfigurations-Generator (Konfiguration in AndroidAPS).
 
 Problembehandlung G6
 ====================
