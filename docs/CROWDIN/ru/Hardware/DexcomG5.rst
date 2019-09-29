@@ -22,4 +22,4 @@ Dexcom G5
 * Oстановите сенсор и удалите оригинальное приложение Dexcom.
 * Установите загруженное приложение
 * Запустите сенсор
-* В конфигуратоге (настройки AndroidAPS) выберите Dexcom G5 App (модифицированное).
+* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).

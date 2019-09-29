@@ -22,4 +22,4 @@ If using G5 with patched Dexcom app
 * Stop sensor and uninstall the original Dexcom app, if not already done.
 * Install downloaded apk
 * Start sensor
-* Select DexcomG5 App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).

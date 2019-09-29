@@ -22,4 +22,4 @@ G5 mit der gepatchten Dexcom App
 * Stoppe den Sensor und deinstalliere die originale Dexcom App, falls du das noch nicht gemacht hast.
 * Installiere die heruntergeladene apk
 * Starte den Sensor
-* Wähle Dexcom G5 (patched) im Konfigurations-Generator (Einstellung in AndroidAPS).
+* Wähle gepatchte Dexcom App im Konfigurations-Generator (Konfiguration in AndroidAPS).
