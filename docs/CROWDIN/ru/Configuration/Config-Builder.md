@@ -133,11 +133,11 @@
 
 ### Открытый цикл
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+AAPS постоянно оценивает все доступные данные (активный инсулин IOB, активные углеводы COB, сахар крови и т. п.) и при необходимости делает предложения о корректировке терапии. Предложения не выполняются автоматически (как при замкнутом цикле) а вводятся вручную на помпе или командой с телефона с AAPS (при пользовании совместимыми помпами Dana R/RS или Accu Chek Combo). Этот параметр предназначен для знакомства с работой AndroidAPS или для неподдерживаемых помп.
 
 ### Замкнутый цикл
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). The Closed Loop works within numerous safety limits, which you can be set individually. Closed Loop is only possible if you are in [Objective 4](../Usage/Objectives.md) or higher and use a supported pump.
+AAPS постоянно оценивает доступные данные (активный инсулин IOB, активные углеводы COB, сахар крови и т. п.) и при необходимости автоматически корректирует лечение (без вашего дальнейшего вмешательства) для достижения целевого диапазона или величины (подача болюса, временная базальная скорость, отключение подачи инсулина во избежание гипогликемии и т.д.). Замкнутый цикл работает в рамках многочисленных ограничений безопасности, каждое из которых можно задать по отдельности. Замкнутый цикл можно инициировать по достижении [цели 4](../Usage/Objectives.md) или далее с поддерживаемой помпой.
 
 ## Objectives (learning program)
 
