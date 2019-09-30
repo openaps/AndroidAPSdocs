@@ -214,7 +214,7 @@ Cледует регулярно экспортировать настройки
 
 ### SMS коммуникатор
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
+Позволяет удалено управлять некоторыми функциями AndroidAPS при помощи SMS, см. [SMS команды](../Usage/SMS-Commands.md) для получения дополнительной информации по настройке.
 
 ### Еда
 
