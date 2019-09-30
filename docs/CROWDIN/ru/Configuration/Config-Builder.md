@@ -39,7 +39,7 @@
 
 Профиль NS использует профили, которые вы сохранили на сайте Nightscout (https://[адрес вашего сайта]/profile). Вы можете воспользоваться [Переключателем профиля](../Usage/Profiles.md) для изменения активного профиля, это действие записывает данные профиля в помпу на случай отказа AndroidAPS. Это позволяет легко создавать несколько профилей в Nightscout (например.. работа, дом, спорт, отдых и т. п.). Вскоре после нажатия кнопки «Сохранить» они будут переданы в AAPS если ваш смартфон подключен к интернету. Даже без подключения к Интернету или без подключения к Nightscout профили Nightscout доступны в AAPS после синхронизации.
 
-Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Выполните ** переключение профиля** для активации профиля из Nightscout. Нажмите и удерживайте поле текущего профиля в верхнем углу (серое поле между светло синим полем «Открытый/замкнутый цикл» и темно синим полем области целевых значений) > переключатель профиля > выбрать профиль > ОК. AAPS также прописывает выбранный профиль в помпу, так что он будет доступен и выполняться без AAPS при непредвиденных ситуациях.
 
 Преимущества:
 
