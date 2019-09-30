@@ -53,7 +53,7 @@
 
 ### Простой профиль
 
-Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
+Простой профиль с одним блоком времени для продолжительности действия инсулина DIA, углеводного коэффициента IC, чувствительности к инсулину ISF, скорости базала и целевым диапазоном (напр. если скорость базала не изменяется в течение дня). Вероятнее всего, будет использоваться для тестирования, если только у вас не одни и те же коэффициенты 24 часа в сутки. После выбора «Простого профиля», в AAPS появится новая вкладка, куда можно ввести данные профиля.
 
 ## Инсулин
 
