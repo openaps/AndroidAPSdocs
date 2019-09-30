@@ -172,13 +172,13 @@ Cледует регулярно экспортировать настройки
 * Мониторинг (открывает xDrip +)
 * Калибровка
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Кроме того можно задать сочетания клавиш для приращения инсулина и углеводов и определить, должны ли диалоговые окна содержать примечания.
 
 #### Быстрый болюс
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Создайте кнопку для стандартных блюд (углеводы и метод вычисления болюса) которая будет отображаться на главном экране. Пользуйтесь ей для стандартных часто употребляемых блюд. Если для различных блюд указано разное время, у вас всегда будет сответствующая кнопка приема пищи на главном экране, в зависимости от времени суток.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Примечание: Кнопка не будет видна вне диапазона времени, для нее созданного или если у вас есть достаточно активного инсулина IOB на углеводы, заданные кнопкой.
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
