@@ -149,21 +149,21 @@ Cледует регулярно экспортировать настройки
 
 ## Терапия
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+На вкладке терапии (лечения, назначений) отражены назначения, загруженные из Nightscout. Если требуется редактировать или удалить запись (например, съели меньше углеводов, чем ожидали) выберите «Удалить» и введите новое значение (при необходимости измените время) через вкладку портал терапии Careportal (CP).
 
 ## Общие настройки
 
-### Главный экран
+### Главный экран, Начало
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Отображает текущее состояние цикла и кнопки для наиболее распространенных действий (подробнее см. [раздел Главный экран](../Getting-Started/Screenshots.md)). Доступ к параметрам - через значок шестеренки.
 
 #### Не отключать экран
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Параметр «не отключать экран» заставит Android постоянно держать экран включенным. Это полезно для презентаций и т. д. Но эта опция потребляет много энергии аккумулятора. Поэтому рекомендуется подключить смартфон к кабелю зарядного устройства.
 
 #### Кнопки
 
-Define which Buttons are shown on the home screen.
+Определите, какие кнопки отображаются на главном экране.
 
 * Терапия
 * Калькулятор
