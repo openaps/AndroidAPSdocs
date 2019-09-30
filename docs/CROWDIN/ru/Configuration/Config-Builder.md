@@ -108,17 +108,17 @@
 
 ## Определение чувствительности
 
-Select the type of sensitivity detection. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Выберите тип анализа чувствительности. Алгоритм будет анализировать историю данных и вносить коррективы, если признает, что вы реагируете более чутко (или, наоборот, более резистентно) на инсулин, чем обычно. Подробнее об алгоритме чувствительность Oref0 можно прочитать в [документации OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 6](../Usage/Objectives) in order to use Sensitivity Detection/autosens.
+Вы можете вывести график чувствительности на экран, отметив галочкой соответствующий пункт из выпадающего меню графиков. Он изображается в виде белой линии. Для применения авточувствительности вы должны находиться на шестом этапе [целей](../Usage/Objectives).
 
 ### Настройки усваиваемости
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Если вы используете Oref1 с микроболюсами SMB, следует заменить минимальное время действия углеводов**min_5m_carbimpact** на 8. Это значение используется только во время пробелов в мониторинге или когда физическая нагрузка "съедает" весь подъем гликемии, которая в ином случае заставила бы алгоритм AAPS компенсировать активные углеводы COB организма. В те времена когда поглощение углеводов не может быть рассчитано динамически на основе реакции крови, он по умолчанию применяет эту скорость распада. Этот параметр не приводит к отказам.
 
-## APS
+## Система ИПЖ
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Выберите нужный алгоритм APS для ведения терапии. Подробности выбранного алгоритма можно просмотреть на вкладке OpenAPS(OAPS).
 
 * Помощник болюса OpenAPS MA (по состоянию алгоритма на 2016г.)
 * Помощник болюса OpenAPS AMA (расширенный помощник болюса, состояние алгоритма на 2016г.).  
@@ -129,7 +129,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ## Замкнутый цикл
 
-Define whether you want to allow AAPS automatic controls or not.
+Определите, хотите ли вы доверить AAPS автоматическое управление.
 
 ### Открытый цикл
 
