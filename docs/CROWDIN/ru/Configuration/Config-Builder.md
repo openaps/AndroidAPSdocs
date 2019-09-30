@@ -89,24 +89,24 @@
 * ГК с клиента Nightscout
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms. ![Источник ГК в конфигураторе](../images/ConfBuild_BGSource.png)
+* Модифицированное приложение [Dexcom G5](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправлять данные ГК на xDrip +», если хотите получать оповещения от xDrip +. ![Источник ГК в конфигураторе](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Помпа
 
-Select the pump you are using.
+Выберите помпу, которой пользуетесь.
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with firmware upgrade)
+* DanaR Корея (DanaR для корейского рынка)
+* DanaRv2 (DanaR с обновленной прошивкой)
 * [Dana RS](DanaRS-Insulin-Pump.md)
 * [Accu-Chek Combo](Accu-Chek-Combo-Pump.md) (требует установки утилиты ruffy)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Виртуальная помпа (открытый цикл для помпы, не имеющей драйверов - только предложения)
+* MDI инъекции инсулина шприцем/шприц-ручкой (на основе предложений от AAPS по ведению терапии)
+* Виртуальная помпа (открытый цикл для помпы, не имеющей драйверов - только предложения по ведению терапии от AAPS)
 
-Use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Для активации сторожа BT, BT watchdog, пользуйтесь **Дополнительными параметрами**. Он отключает bluetooth на одну секунду, если подключение к помпе невозможно. Это помогает на некоторых телефонах, где зависает стек bluetooth.
 
-## Sensitivity Detection
+## Определение чувствительности
 
 Select the type of sensitivity detection. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
