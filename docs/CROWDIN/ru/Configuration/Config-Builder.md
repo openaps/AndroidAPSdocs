@@ -184,11 +184,11 @@ Cледует регулярно экспортировать настройки
 
 #### Расширенные настройки
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Включите функцию супер болюс в мастере. Применяйтес осторожностью и не активируйте пока не узнаете, как она работает. В общем виде для следующих двух часов к базе добавляется болюс и активируется нулевой временный базал. **Другие функции алгоритма AAPS будут отключены - поэтому применяйте с осторожностью! Если вы используете функции супер микро болюса SMB AAPS, то время его работы будет ограничено в соответствии с настройками в ["Макс. минут базала для микроболюсов SMB"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to); если вы не используете SMB, алгоритм AAPS будет отключен на два часа.** Подробности о супер микро болюсе можно найти [здесь](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Действия
 
-Some buttons to quickly access common features:
+Кнопки быстрого доступа к некоторым распространенным настройкам:
 
 * Переключатель профилей (см. [страницу профилей](../Usage/Profiles.md) для дополнительной информации по настройке)
 * Временные цели
@@ -198,17 +198,17 @@ Some buttons to quickly access common features:
 * Журнал
 * TDD (Общая суточная доза = болюс + базал за день)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Некоторые врачи рекомендуют - особенно для новичков помповой терапии - соотношение базал-болюс 50:50. Поэтому эта величина рассчитывается как общая суточная доза TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). Другие предпочитают диапазон от 32% до 37% от величины базала TBB. Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Портал назначений/терапии
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+Позволяет вносить любые записи связанные с компенсацией диабета и просматривать информацию о сенсоре, инсулине, катетере и батарее помпы на вкладке Портал назначений/терапии.
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Примечание: **Инсулин не подается**, если вводится через Портал назначений/терапии (болюс на еду, коррекцию...)
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Углеводы, введенные через Портал назначений/терапии (т.е. углеводы на коррекцию) учитываются при подсчете активных углеводов COB.
 
 ![Careportal tab](../images/ConfBuild_CarePortal.png)
 
