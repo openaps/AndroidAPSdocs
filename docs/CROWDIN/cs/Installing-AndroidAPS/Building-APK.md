@@ -52,7 +52,7 @@ Následuje detailní popis kroků nutných k sestavení souboru APK.
 
 ## Instalace Android Studio
 
-The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
+Následující snímky obrazovky byly převzaty z aplikace Android Studio verze 3.1.3. Vaše obrazovka by mohla vypadat trochu jinak, v závislosti na verzi aplikace Android Studio, kterou používáte. Měli byste však být schopni najít cestu. Pomoc komunity je poskytována například v [AndroidAPS Facebookové skupině](https://www.facebook.com/groups/1900195340201874/) a [na dalších místech](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
 Nainstalujte [Android Studio](https://developer.android.com/studio/install.html) a proveďte nastavení během prvního spuštění.
 
