@@ -15,7 +15,11 @@ Um eine Automatisierung zu erstellen, gibt man dieser einen Namen, mindestens ei
 
 Allgemein
 --------
-Es gibt ein paar Einschränkungen. Der Glukosewert muss zwischen 72 und 270 md/dl (4 und 15 mmol/l) liegen. Der Prozentsatz des Profils muss zwischen 70% und 130% liegen.
+There are some limits:
+
+* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+* The profile percentage has to be between 70 % and 130%.
+* There is a 5 min. time limit between execusions (and first execustion).
 
 **Achtung:**
 
