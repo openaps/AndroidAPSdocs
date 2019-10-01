@@ -15,7 +15,11 @@ Chcete-li nastavit automatizaci, musíte ji pojmenovat a vybrat alespoň jednu p
 
 Obecné
 --------
-Existují zde určité limity. Hodnota glykémie musí být v rozmezí 4 až 15 mmol/l. Procentuální hodnota profilu musí být mezi 70 % a 130%.
+There are some limits:
+
+* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+* The profile percentage has to be between 70 % and 130%.
+* There is a 5 min. time limit between execusions (and first execustion).
 
 **Buďte prosím opatrní:**
 
