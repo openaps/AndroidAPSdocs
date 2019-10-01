@@ -19,7 +19,7 @@ Ziel 2: Lerne, wie AndroidAPS bedient wird
 * Führe verschiedene Aktionen in AndroidAPS aus, die in dieser Zielaufgabe beschrieben werden. 
 * Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 
-   .. image:: ./images/Objective2.png
+   .. image:: ../images/Objective2.png
      :alt: Screenshot Ziel 2
 
 Ziel 3: Belege Dein Wissen
@@ -27,7 +27,7 @@ Ziel 3: Belege Dein Wissen
 * Beantworte Multiple-choice-Fragen zu verschiedenen AndroidAPS- und Closed-Loop-Themen.
 * Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 
-   .. image:: ./images/Objective3.png
+   .. image:: ../images/Objective3.png
      :alt: Screenshot Ziel 3
 
 Ziel 4: Starte den Open Loop
@@ -53,7 +53,7 @@ Vielleicht möchtest Du mit der Anpassung der Werte für einen engeren Zielberei
 
 Auf dem Startbildschirm wird Dein Zielbereich mit grünen Linien im Diagramm dargestellt. Diesen kannst Du in den `Einstellungen <../Configuration/Preferences.html>`_ > unter 'Zielbereich für die Grafikanzeige' (scrolle weit nach unten) einstellen.
  
-.. image:: ./images/sign_stop.png
+.. image:: ../images/sign_stop.png
   :alt: Stoppzeichen
 
 Falls Du eine virtuelle Pumpe verwendest darfst Du nicht zum 4. Ziel wechseln. Klicke nicht auf 'Bestätigen/Verify' am Ende des 3. Ziels.
@@ -64,7 +64,7 @@ Falls Du eine virtuelle Pumpe verwendest darfst Du nicht zum 4. Ziel wechseln. K
 
 Ziel 6: Closed Loop mit Abschaltung bei niedrigen Glukose-Werten
 ================================================================
-.. image:: ./images/sign_warning.png
+.. image:: ../images/sign_warning.png
   :alt: Warnzeichen
   
 Der Closed Loop korrigiert im Objective 6 keine hohen BZ-Werte, da nur low glucose suspend zum Einsatz kommt. Hohe BZ-Werte müssen daher von Dir manuell korrigiert werden!
@@ -83,7 +83,7 @@ Ziel 7: Stelle den Closed Loop fein ein, erhöhe max IOB über 0 und setze den Z
 
   Betrachte diese Empfehlung als Ausgangspunkt. Wenn Du den Faktor 3x verwendest und feststellst, dass AAPS Deinen BZ zu stark senkt, reduziere diesen Faktor (z.B. 2,..). Wenn Du Resistenzen feststellst, kannst Du diesen Faktor vorsichtig Schritt für Schritt erhöhen.
 
-   .. image:: ./images/MaxDailyBasal.png
+   .. image:: ../images/MaxDailyBasal.png
      :alt: max daily basal
 
 * Wenn du zuverlässig weißt, welcher IOB deinem Looping Muster entspricht, dann senke deinen Zielbereich auf den gewünschten Wert.
