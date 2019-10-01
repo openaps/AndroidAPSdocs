@@ -19,7 +19,7 @@ Objective 2: Learn how to control AndroidAPS
 * Perform several actions in AndroidAPS as described in this objective. 
 * Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-   .. image:: ./images/Objective2.png
+   .. image:: ../images/Objective2.png
      :alt: Screenshot objective 2
 
 Objective 3: Prove your knowledge
@@ -27,7 +27,7 @@ Objective 3: Prove your knowledge
 *Pass a multiple-choice exam testing your AndroidAPS knowledge.
 * Links will be provided to guide you in case you are unsure abouit the correct answers yet.
 
-   .. image:: ./images/Objective3.png
+   .. image:: ../images/Objective3.png
      :alt: Screenshot objective 3
 
 Objective 4: Starting on an open loop
@@ -53,7 +53,7 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`_ > Range for Visualisation.
  
-.. image:: ./images/sign_stop.png
+.. image:: ../images/sign_stop.png
   :alt: Stop sign
 
 Stop hier als je een virtuele pomp gebruikt en in Open Loop wilt blijven - klik NIET op Verificatie aan het einde van dit doel.
@@ -64,7 +64,7 @@ Stop hier als je een virtuele pomp gebruikt en in Open Loop wilt blijven - klik 
 
 Objective 6: Starting to close the loop with Low Glucose Suspend
 ================================================================
-.. image:: ./images/sign_warning.png
+.. image:: ../images/sign_warning.png
   :alt: Warning sign
   
 Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. Om hoge glucosewaarden naar beneden te krijgen, moet je zelf nog handmatig ingrijpen!
@@ -83,7 +83,7 @@ Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lower
 
   This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
 
-   .. image:: ./images/MaxDailyBasal.png
+   .. image:: ../images/MaxDailyBasal.png
      :alt: max daily basal
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
