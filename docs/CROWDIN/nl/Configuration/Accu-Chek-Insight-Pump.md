@@ -8,7 +8,8 @@
 
 ## Benodigde hardware en software
 
-* Een Roche Accu-Chek Insight pomp (firmware maakt niet uit, ze werken allemaal) <br />Opmerking: AAPS zal alleen het **eerste basaal-profiel van de pomp** gebruiken.
+* Een Roche Accu-Chek Insight pomp (firmware maakt niet uit, ze werken allemaal)
+<br>Opmerking: AAPS zal alleen het <b>eerste basaal-profiel van de pomp</b> gebruiken.
 * Een Android-telefoon (in principe werkt elke Android-versie, maar AndroidAPS zelf vereist minstens Android 5 (Lollipop).)
 * De AndroidAPS-app geïnstalleerd op jouw telefoon
 
