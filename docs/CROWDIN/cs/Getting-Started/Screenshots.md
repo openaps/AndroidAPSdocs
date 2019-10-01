@@ -154,7 +154,7 @@ Toto jsou jednoduše záznamy ošetření (bolusy a sacharidy), zprávy xDripu a
 
 ![Konfigurace](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuraton of your AndroidAPS rig. Uvedený snímek ukazuje docela typické nastavení: pumpa Combo, senzor Dexcom G5 spravovaný přes xDrip+, inzulin NovoRapid, profil Oref a připojení k Nightscout serveru v cloudu.
+Toto je místo, kde se provádí základní nastavení vašeho AndroidAPS. Uvedený snímek ukazuje docela typické nastavení: pumpa Combo, senzor Dexcom G5 spravovaný přes xDrip+, inzulin NovoRapid, profil Oref a připojení k Nightscout serveru v cloudu.
 
 Zaškrtnutí políčka vpravo určuje, že daný modul se bude zobrazovat v horní menu liště (viz sekce A na Hlavní stránce) a ikona s ozubeným kolečkem zpřístupňuje nastavení daného modulu, pokud jsou nějaká k dispozici.
 
