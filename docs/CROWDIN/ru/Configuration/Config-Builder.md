@@ -218,38 +218,38 @@ Cледует регулярно экспортировать настройки
 
 ### Еда
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Отображает предустановленные характеристики еды, определенные в базе данных Nightscout, см [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) для получения дополнительной информации по параметрам.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Примечание: Записи нельзя использовать в калькуляторе AndroidAPS. (Только просмотр)
 
 ### Смарт-часы Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Мониторим и контролируем AAPS, при помощи смарт-часов Android Wear (см. [страницу Циферблаты](../Configuration/Watchfaces.md)). Настройте параметры (шестеренка) для определения переменных, которые следует учитывать при расчете болюсов (напр. 15-минутный тренд, активные углеводы COB и т.п....).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Если вы хотите подавать болюс и т. д. с часов, тогда в настройках часов Wear следует включить «Управление с часов».
 
 ![Wear settings](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+При помощи вкладки Wear или многослойного сэндвич-меню (в левой верхней части экрана, если вкладка не отображается) вы можете
 
 * Повторить отправку всех данных. Может быть полезно, если некоторое время часы не были подключены и вы хотите передать на них данные.
 * Открыть настройки на часах прямо с телефона.
 
 ### Cтрока состояния xDrip (часы)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Отображает информацию о состоянии цикла на циферблате xDrip + (если не пользуетесь циферблатом AAPS /[AAPSv2 ](../Configuration/Watchfaces.md))
 
 ### Текущее состояние приложения
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+Показывает текущий СК, изменение СК, актуальный % временного базала TBR, активный базал ед/ч и профиль, активный инсулин с разбивкой на болюсный IOB и базальный IOB на экране вкладки и на экране блокировки телефона.
 
 ![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### Клиент Nightscout
 
-Setup sync of your AndroidAPS data with Nightscout.
+Синхронизация данных AndroidAPS с Nightscout.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
+Если активировать **записывать старт приложения в NS**, каждый запуск AndroidAPS будет виден в Nightscout. Может быть полезным для обнаружения проблем с приложением (напр. если для AAPS не отключена оптимизация аккумулятора) но может переполнить записями график Nightscout.
 
 #### Опции оповещения
 
