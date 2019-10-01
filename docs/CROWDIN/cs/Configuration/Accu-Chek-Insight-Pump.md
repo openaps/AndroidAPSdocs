@@ -8,8 +8,7 @@
 
 ## Hardwarové a softwarové požadavky
 
-* Pumpa Roche Accu-Chek Insight (jákýkoliv firmware, fungují všechny) <br /> Poznámka: AAPS bude vždy zapisovat data do **prvního bazálního profilu v pumpě**
-* Telefon s Androidem (v podstatě všechny verze Android budou fungovat, ale AndroidAPS sám o sobě vyžaduje alespoň Android 5 (Lollipop)).
+* Pumpa Roche Accu-Chek Insight (jákýkoliv firmware, fungují všechny) <br> Poznámka: AAPS bude vždy zapisovat data do <b>prvního bazálního profilu v pumpě</b>* Telefon s Androidem (v podstatě všechny verze Android budou fungovat, ale AndroidAPS sám o sobě vyžaduje alespoň Android 5 (Lollipop)).
 * Aplikace AndroidAPS instalovaná ve vašem telefonu
 
 ## Nastavení
