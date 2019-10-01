@@ -8,7 +8,8 @@
 
 ## Hard- und Softwareanforderungen
 
-* Eine Roche Accu-Chek Insight Insulinpumpe (alle Firmware-Version können genutzt werden) <br /> Hinweis: AAPS schreibt die Daten immer in das **erste Basalraten-Profil in der Pumpe**.
+* Eine Roche Accu-Chek Insight Insulinpumpe (alle Firmware-Version können genutzt werden)
+<br>   Hinweis: AAPS schreibt die Daten immer in das  <b>erste Basalraten-Profil in der Pumpe</b>.
 * Ein Android-Telefon (im Grunde funktionieren alle Android-Versionen, aber AndroidAPS selbst benötigt mindestens Android 5 (Lollipop).
 * AndroidAPS muss auf Deinem Smartphone installiert sein.
 

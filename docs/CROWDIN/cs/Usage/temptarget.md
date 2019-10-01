@@ -4,32 +4,32 @@
 
 Použitím dočasných cílů (DC) lze na přechodnou dobu změnit cílovou hodnotu glykémie. Funkcionalita je využívána nejčastěji ve spojitosti s vyšší tělesnou aktivitou, hypoglykémií nebo s blížícím se jídlem a v systému lze provést nastavení hodnot pro jejich opakované použití. Toto nastavení lze provést v menu v části Nastavení -> Jiné -> Výchozí nastavení dočasných cílů. Samotnou změnu dočasného cíle lze provést stisknutím a přidržením políčka zobrazujícím aktuální cíl v pravém horním rohu hlavní obrazovky AAPS nebo pomocí tlačítka Sacharidy v dolní části téže obrazovky a nebo na záložce Akce tlačítkem Dočasný cíl. Vzhledem k tomu, že dočasné cíle jsou většinou potřebné pro aktivitu, hypoglykémii (dokrmové sacharidy) nebo blížící se jídlo, můžete pro ně nastavit výchozí hodnoty. Chcete-li je nakonfigurovat, přejděte pomocí nabídky v horním pravém rohu do Nastavení -> Jiné -> Výchozí nastavení dočasných cílů.
 
-![Set default temp targets](../images/TempTarget_Default.png)
+![Nastavit výchozí dočasné cíle](../images/TempTarget_Default.png)
 
-To use one of the set “Default-Temp-Targets”, you can press long on your target in the right corner on the top in the overview-tab or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget#custom-temp-target) (BG value and/or duration) use “Custom“ after long-pressing your target in the top right corner or use the “Temporary Target“ button in the “Actions”-tab.
+Chcete-li nastavit „Výchozí dočasný cíl“, můžete tak učinit přidržením cíle v pravém horním rohu hlavní obrazovky nebo pomocí oranžového tlačítka „Sacharidy“. Chcete-li ručně nastavit položku ["Vlastní dočasný cíl"](../Usage/temptarget#custom-temp-target) (hodnota glykémie a/nebo dobu trvání), použijte tlačítko "Vlastní" po dlouhém stisku svého cíle v pravém horním rohu nebo použijte tlačítko "Dočasný cíl" na kartě Akce.
 
-![Set temp target](../images/TempTarget_Set2.png)
+![Spustit dočasný cíl](../images/TempTarget_Set2.png)
 
 ## Dočasný cíl při hypoglykémii
 
-This can be considered as the most important Temp-Target. There are several reasons for it: 1. Realizing you will go low: Usually, the Loop should handle it, but sometimes you can see better in advance than the loop, so the loop can react faster when it targets a higher blood glucose value. 2. When you eat hypo treatments carbs, your blood glucose will rise very fast. The loop will correct against the rising or even give SMBs if enabled. A "Hypo Temp-Target" can prevent that. 3. (advanced, objective 8): You can enable “High Temp-Targets raises sensitivity” for Temp-Targets of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, so AndroidAPS is more sensitive. 4. (advanced, objective 8): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active.
+Jde o nejdůležitější dočasný cíl. A to hned z několika důvodů: 1. Uvědomíte si, že vaše glykémie bude klesat: Obvykle by si s tím měla smyčka poradit, ovšem někdy to budete vědět dříve než smyčka, takže smyčka bude moci reagovat rychleji, když se bude opírat o vyšší cílovou hodnotu glykémie. 2. Když sníte dokrmové sacharidy, vaše glykémie bude rychle stoupat. Smyčka se bude snažit tento vzestup korigovat nebo vám dokonce vydá SMB, jsou-li povoleny. „Dočasný cíl při hypoglykémii“ takovému chování dokáže zabránit. 3. (pokročilé, cíl 8): Pro dočasné cíle vyšší než 5,5 mmol/l můžete v nastavení OpenAPS SMB povolit možnost „Vysoký dočasný cíl zvýší citlivost“, takže AndroidAPS bude citlivější. 4. (pokročilé, cíl 8): Můžete deaktivovat možnost „Povolit SMB s vysokými dočasnými cíli“, takže i když máte COB > 0, možnost „Povolit SMB s dočasnými cíli“ nebo „Vždy povolit SMB“ je povolena a OpenAPS SMB aktivní, AndroidAPS nebude spouštět SMB, je-li aktivní vysoký dočasný cíl.
 
-Note: if you enter carbs with the carb button and your blood glucose is less then 72mg/dl or 4mmol/l, Hypo TT is automatically enabled.
+Poznámka: při přídavku sacharidů pomocí tlačítka Sacharidy na hlavní obrazovce AAPS a současně glykémii pod 4 mmol/l (72 mg/dl) je dočasný cíl při hypoglykémii aktivován automaticky.
 
 ## Dočasný cíl při pohybové aktivitě
 
-Before and during activity, you might want to have a higher target to prevent getting low. To simplify setting the Temp-Target, you can configure a default "Activity Temp-Target".
+Před pohybovou aktivitou a během ní můžete předcházet poklesu glykémie nastavením vyššího dočasného cíle. Pro zjednodušení spuštění dočasného cíle lze hodnotu cíle v systému předdefinovat v Nastavení -> Výchozí nastavení dočasných cílů -> Cíl při aktivitě spolu s trváním aktivity. Chcete-li si zjednodušit nastavení dočasného cíle, můžete nastavit výchozí „Dočasný cíl při aktivitě“.
 
-Advanced, objective 8: The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Then AndroidAPS is more sensitive. Some people do instead a profile switch before/while activity TT, but everybody is different. If “SMB with high Temp-Target” is deactivated, AndroidAPS won't use SMBs, even with COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active.
+Pokročilé nastavení, po splnění 8. cíle: Výhodou dočasného cíle při pohybové aktivitě je možnost současného nastavení vyšší senzitivity pro dočasné cíle 5,5 mmol/l (100 mg/dl) a vyšší. Nastavení lze provést v záložce Konfigurace -> OpenAPS SMB. Někteří uživatelé namísto nastavení dočasného cíle před pohybovou aktivitou nebo během ní přepnou profil. AndroidAPS pak bude citlivější. Někdo místo dočasného cíle před aktivitou nebo během ní přepíná profil, ale každý jsme jiný. Pokud jsou SMB s vyšším dočasným cílem deaktivovány, AAPS nepoužije SMB, přestože bude COB > 0, budou povoleny SMB s dočasnými cíli, povoleny SMB obecně a funkce OpenAPS SMB budou aktivovány.
 
 ## Dočasný cíl pro blížící se jídlo
 
-If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. You can read more about the "Eating soon mode" in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Pokud víte, že budete brzy jíst, můžete zvolit tento dočasný cíl, abyste měli již před jídlem vyšší IOB. Zejména pro ty, kdo neaplikují bolus s předstihem, může být dobrou alternativou snížit glykémii před jídlem pomocí dočasného cíle. Více informací o „Blížícím se jídle“ najdete v článku ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) nebo [zde](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, objective 8: If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Requirement is a Temp-Target less than 100mg/dl or 5.5mmol/l for this option.
+Pokročilé nastavení, po splnění 8. cíle: Pokud v OpenAPS SMB povolíte volbu „Nízký dočasný cíl sníží senzitivitu“, AAPS bude více agresivní. Chcete-li tuto možnost využít, dočasný cíl musí být nižší než 5,5 mmol/l.
 
 ## Vlastní dočasný cíl
 
-Sometimes, you just want to have a temp target other than the default ones. You can set one by long pressing on the target (range) on the right corner in overview or in the “Action”-Tab.
+Někdy je vhodné si nastavit vlastní dočasné cíle. Tento cíl můžete nastavit přidržením cíle (rozsah) v pravém horním rohu obrazovky Přehled nebo na kartě „Akce“.
 
-![Set temp target through Action tab](../images/TempTarget_ActionTab.png)
+![Nastavit dočasný cíl přes kartu Akce](../images/TempTarget_ActionTab.png)

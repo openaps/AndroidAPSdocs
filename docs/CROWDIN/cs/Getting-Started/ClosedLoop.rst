@@ -30,7 +30,7 @@ AndroidAPS (AAPS)
 -----------------
 Systém AndroidAPS je podrobně popsán v `této dokumentaci <./WhatisAndroidAPS.html>`_. Pro výpočty a ovládání inzulinové pumpy využívá smartphone se systémem Android. Vývojáři úzce spolupracují s OpenAPS (tzn. používají stejné algoritmy).
 
-Kompatibilní pumpy <../Hardware/pumps.html>`_ jsou:
+Kompatibilní pumpy jsou:
 
 * DanaR / DanaRS
 * Accu-Chek Combo

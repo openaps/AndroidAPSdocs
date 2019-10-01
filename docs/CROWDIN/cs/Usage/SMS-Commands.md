@@ -26,94 +26,102 @@ Z některého z povolených čísel odešlete SMS zprávu na telefon s běžíc�
 
 **Tip**: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
-## BG
+## Commands
+
+### BG
 
 - Poslední glykémie: 5.6 před 4 min, Rozdíl: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
 
-## LOOP STOP/DISABLE
+### LOOP STOP/DISABLE
 
 - Smyčka byla zakázána
 
-## LOOP START/ENABLE
+### LOOP START/ENABLE
 
 - Smyčka byla povolena
 
-## LOOP STATUS
+### LOOP STATUS
 
 - Smyčka je zakázána
 - Smyčka je povolena
 - Pozastavena (10 minut)
 
-## LOOP SUSPEND 20
+### LOOP SUSPEND 20
 
 - Smyčka pozastavena na 20 minut
 
-## LOOP RESUME
+### LOOP RESUME
 
 - Smyčka obnovena
 
-## TREATMENTS REFRESH
+### TREATMENTS REFRESH
 
 - TERATMENTS REFRESH 1 příjemce
 
-## NSCLIENT RESTART
+### NSCLIENT RESTART
 
 - NSCLIENT RESTART 1 příjemce
 
-## PUMP
+### PUMP
 
 - Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
 
-## BASAL STOP/CANCEL
+### BASAL STOP/CANCEL
 
 - Na ukončení bazálu odpověz SMS s kódem EmF
 
-## BASAL 0.3
+### BASAL 0.3
 
 - Pro spusteni bazalu 0.3U/h na 30 min odpovezte SMS s kodem Swe
 
-## BASAL 0.3 20
+### BASAL 0.3 20
 
 - Pro spusteni bazalu 0.3U/h na 20 min odpovezte SMS s kodem Swe
 
-## BASAL 30%
+### BASAL 30%
 
 - Pro spuštění bazálu 30% na 30 min odpovězte SMS s kódem
 
-## BASAL 30% 50
+### BASAL 30% 50
 
 - Pro spusteni bazalu 30% na 50 min odpovezte SMS s kódem Swe
 
-## BOLUS 1.2
+### BOLUS 1.2
 
 - K potvzení bolusu 1.2U odpověz SMS s kódem Rrt
 - Vzdálený bolus není momentálně povolen (*pokud ještě neuplynulo 15 minut od posledního bolus příkazu anebo pokud nejsou vzdálené příkazy povoleny*)
 
-## EXTENDED STOP/CANCEL
+### EXTENDED STOP/CANCEL
 
 - Na zastavení prodlouženého bolusu odpovězte SMS s kódem EmF
 
-## EXTENDED 2 120
+### EXTENDED 2 120
 
 - Pro spuštění prodlouženého bolusu 2U na 120 min odpovězte SMS s kódem EmF
 
-## CAL 5.6
+### CAL 5.6
 
 - Odeslání kalibrace 5.6 potvrďte kódem Rrt
 - Kalibrace odeslána(*jestliže je xDrip nainstalovaný. Příjem kalibrací musí být v xDrip+ povolen.*)
 
-## PROFILE STATUS
+### PROFILE STATUS
 
 - Profile1
 
-## PROFILE LIST
+### PROFILE LIST
 
 - 1.`Profile1` 2.`Profile2`
 
-## PROFILE 1
+### PROFILE 1
 
 - Pro přepnutí profilu na Profile1 100% odpovězte SMS s kódem Any
 
-## PROFILE 2 30
+### PROFILE 2 30
 
 - Pro přepnutí profilu na Profile2 30% odpovězte SMS s kódem Any
+
+## Poradce při potížích
+
+There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+
+![Disable SMS as chat message](../images/SMSdisableChat.png)

@@ -26,94 +26,102 @@ Senden Sie eine SMS auf das Handy, mit AndroidAPS, die von Ihr zugelassenen Tele
 
 **Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
-## BZ
+## Kommandos
+
+### BZ
 
 - Letzten BG: 5,6 4 min vor Delta:-0,2 Mmol, IOB: 0.20U (Bolus: 0.10U basale: 0.10U)
 
-## LOOP STOP/DISABLE
+### LOOP STOP/DISABLE
 
 - Loop wurde deaktiviert.
 
-## LOOP START/ENABLE
+### LOOP START/ENABLE
 
 - Lopp wurde aktiviert
 
-## LOOP STATUS
+### LOOP STATUS
 
 - Loop ist deaktiviert.
 - Loop ist aktiviert.
 - Pausiert (10 Min)
 
-## LOOP SUSPEND 20
+### LOOP SUSPEND 20
 
 - Das Loopen wird für 20 Minuten unterbrochen
 
-## LOOP RESUME
+### LOOP RESUME
 
 - Loop wurde fortgesetzt
 
-## TREATMENTS REFRESH
+### TREATMENTS REFRESH
 
 - TERATMENTS aktualisieren 1 Receiver
 
-## NSCLIENT RESTART
+### NSCLIENT RESTART
 
 - NSCLIENT neu starten 1 Empfänger
 
-## PUMP
+### PUMP
 
 - Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 
-## BASAL STOP/CANCEL
+### BASAL STOP/CANCEL
 
 - Um die temporäre Basalrate zu stoppen, antworte mit dem Code EmF
 
-## BASAL 0.3
+### BASAL 0.3
 
 - Um für 30 Minuten eine temporäre Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
 
-## BASAL 0.3 20
+### BASAL 0.3 20
 
 - Um für 20 Minuten eine temporäre Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
 
-## BASAL 30%
+### BASAL 30%
 
 - Um für 30 Minuten eine temporäre Basalrate mit 30% zu starten, antworte mit dem Code Swe
 
-## BASAL 30% 50
+### BASAL 30% 50
 
 - Um für 50 Minuten eine temporäre Basalrate mit 50% zu starten, antworte mit dem Code Swe
 
-## BOLUS 1.2
+### BOLUS 1.2
 
 - Um einen Bolus vo 1.2E abzugeben, antworte mit Code Rrt
 - Remote-Bolus wird nicht zugelassen *wenn innerhalb von 15 Minuten nach dem letzten Bolus-Befehl oder wenn Remote-Befehle grundsätzlich nicht erlaubt sind*.
 
-## EXTENDED STOP/CANCEL
+### EXTENDED STOP/CANCEL
 
 - Um den verzögerten Bolus zu stoppen, antworte mit dem Code EmF
 
-## EXTENDED 2 120
+### EXTENDED 2 120
 
 - Um einen verzögertenen Bolus von 2 IE über 120 Minuten zu starten, antworte mit dem Code EmF
 
-## CAL 5.6
+### CAL 5.6
 
 - Um einen Kalibrierungswert von 5,6 zu senden, antworte mit Code Rrt
 - Kalibrierung gesendet (*wenn xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein*.)
 
-## PROFILE STATUS
+### PROFILE STATUS
 
 - Profile1
 
-## PROFILE LIST
+### PROFILE LIST
 
 - 1.`Profile1` 2.`Profile2`
 
-## PROFILE 1
+### PROFILE 1
 
 - Um zum Profil 1 mit 100% zu wechseln, antworte mit Code Any
 
-## PROFILE 2 30
+### PROFILE 2 30
 
 - Um zum Profil 2 mit 30% zu wechseln, antworte mit Code Any
+
+## Problembehandlung
+
+Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als chat message senden' behoben werden.
+
+![SMS als Chatnachricht deaktivieren](../images/SMSdisableChat.png)
