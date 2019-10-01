@@ -8,8 +8,7 @@
 
 ## Wymagania sprzętowe i programowe
 
-* Pompa Roche Accu-Chek Insight (wszelkie oprogramowanie układowe, wszystkie współpracują z AAPS) <br /> Uwaga: AAPS będzie zapisywać dane zawsze w ** pierwszym profilu dawek podstawowych w pompie **
-* Telefon z Androidem (zasadniczo każda wersja Androida będzie dobra, ale sam AndroidAPS wymaga co najmniej Androida 5 (Lollipop)).
+* Pompa Roche Accu-Chek Insight (wszelkie oprogramowanie układowe, wszystkie współpracują z AAPS) <br> Uwaga: AAPS będzie zapisywać dane zawsze w <b> pierwszym profilu dawek podstawowych w pompie </b>* Telefon z Androidem (zasadniczo każda wersja Androida będzie dobra, ale sam AndroidAPS wymaga co najmniej Androida 5 (Lollipop)).
 * Zainstalowana na Twoim telefonie aplikacja AndroidAPS
 
 ## Ustawienia
