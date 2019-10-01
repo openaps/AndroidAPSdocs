@@ -34,7 +34,7 @@ Objective 4: Starting on an open loop
 =====================================
 * Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
 * Work through the `Preferences <../Configuration/Preferences.html>`_ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Überprüfe, ob diese Daten in AndroidAPS und Nightscout angezeigt werden.
+* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
 * Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Nutze das Hypo Temp Target um zu verhindern, dass AAPS aufgrund des Blutzuckeranstiegs nach einer Hypo zu stark korrigiert. 
 
 Objective 5: Understanding your open loop, including its temp basal recommendations
