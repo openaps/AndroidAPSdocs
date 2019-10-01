@@ -41,7 +41,7 @@ kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi 
 * Zastavte senzor a odinstalujte původní aplikaci Dexcom, pokud jste tak ještě neučinili.
 * Nainstalujte stažený apk
 * Spusťte senzor
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte Dexcom aplikace (upravená).
 
 Poradce při potížích s G6
 ====================
