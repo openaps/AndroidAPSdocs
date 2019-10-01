@@ -26,54 +26,59 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
-## BG
+## Commands
+
+### BG
 - Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
-## LOOP STOP/DISABLE
+### LOOP STOP/DISABLE
 - Loop has been disabled
-## LOOP START/ENABLE
+### LOOP START/ENABLE
 - Loop has been enabled
-## LOOP STATUS
+### LOOP STATUS
 - Loop is disabled
 - Loop is enabled
 - Suspended (10 min)
-## LOOP SUSPEND 20
+### LOOP SUSPEND 20
 - Loop suspended for 20 minutes
-## LOOP RESUME
+### LOOP RESUME
 - Loop resumed
-## TREATMENTS REFRESH
+### TREATMENTS REFRESH
 - TERATMENTS REFRESH 1 receivers
-## NSCLIENT RESTART
+### NSCLIENT RESTART
 - NSCLIENT RESTART 1 receivers
-## PUMP
+### PUMP
 - Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-## BASAL STOP/CANCEL
+### BASAL STOP/CANCEL
 - To stop temp basal reply with code EmF
-## BASAL 0.3
+### BASAL 0.3
 - To start basal 0.3U/h for 30 min reply with code Swe
-## BASAL 0.3 20
+### BASAL 0.3 20
 - To start basal 0.3U/h for 20 min reply with code Swe
-## BASAL 30%
+### BASAL 30%
 - To start basal 30% for 30 min reply with code Swe
-## BASAL 30% 50
+### BASAL 30% 50
 - To start basal 30% for 50 min reply with code Swe
-## BOLUS 1.2
+### BOLUS 1.2
 - To deliver bolus 1.2U reply with code Rrt
 - Remote bolus not allowed (_if within 15 min after last bolus command or remote commands not allowed_)
-## EXTENDED STOP/CANCEL
+### EXTENDED STOP/CANCEL
 - To stop extended bolus reply with code EmF
-## EXTENDED 2 120
+### EXTENDED 2 120
 - To start extended bolus 2U for 120 min reply with code EmF
-## CAL 5.6
+### CAL 5.6
 - To send calibration 5.6 reply with code Rrt
 - Calibration sent (_if xDrip is installed. Accepting calibrations must be enabled in xDrip+_)
-## PROFILE STATUS
+### PROFILE STATUS
 - Profile1
-## PROFILE LIST
+### PROFILE LIST
 - 1.`Profile1` 2.`Profile2`
-## PROFILE 1
+### PROFILE 1
 - To switch profile to Profile1 100% reply with code Any
-## PROFILE 2 30
+### PROFILE 2 30
 - To switch profile to Profile2 30% reply with code Any
 
+## Troubleshooting
 
+There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
+![Disable SMS as chat message](../images/SMSdisableChat.png)
