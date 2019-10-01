@@ -15,7 +15,11 @@ To set up an automation, you have to give it a title, select at least one condit
 
 Γενικά
 --------
-There are some limits. The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l. The profile percentage has to be between 70 % and 130%.
+There are some limits:
+
+* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+* The profile percentage has to be between 70 % and 130%.
+* There is a 5 min. time limit between execusions (and first execustion).
 
 **Please be careful:**
 
