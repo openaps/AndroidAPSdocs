@@ -26,7 +26,7 @@ Senden Sie eine SMS auf das Handy, mit AndroidAPS, die von Ihr zugelassenen Tele
 
 **Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
-## Commands
+## Kommandos
 
 ### BZ
 
@@ -122,6 +122,6 @@ Senden Sie eine SMS auf das Handy, mit AndroidAPS, die von Ihr zugelassenen Tele
 
 ## Problembehandlung
 
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als chat message senden' behoben werden.
 
-![Disable SMS as chat message](../images/SMSdisableChat.png)
+![SMS als Chatnachricht deaktivieren](../images/SMSdisableChat.png)
