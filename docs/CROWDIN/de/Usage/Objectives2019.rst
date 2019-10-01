@@ -3,108 +3,108 @@ Objectives (Ziele)
 
 AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, damit du an die Funktionen und Einstellungen von sicherem Looping herangeführt wirst.  Sie stellen sicher, dass du alles, was in den Abschnitten weiter oben beschrieben wurde, korrekt installiert hast und dass du verstehst, was das System tut und warum du ihm vertrauen kannst.
 
-If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert.  Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+Wenn Du Dein **Smartphone wechselst**  kannst Du Deine `Einstellungen exportieren <../Usage/ExportImportSettings.html>`_ um die Objectives nicht von vorn beginnen zu müssen. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert.  Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen.  Denke daran, regelmäßig ein `Backup Deiner Einstellungen <../Usage/ExportImportSettings.html>`_ zu machen, um auf der sicheren Seite zu sein.
  
 Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren
 =================================================================================
-* Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
-* If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ page to ensure Nightscout can receive and display this data.
+* Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert.  Weitere Informationen findest Du unter `BZ-Quelle <../Configuration/BG-Source.html>`_.
+* Wähle die richtige Pumpe im Konfigurations-Generator (wähle virtuelle Pumpe wenn du ein Pumpenmodell benutzt, für das es keinen AndroidAPS-Treiber gibt) um sicherzustellen, dass die Pumpe ihren Status mit AndroidAPS teilen kann.  
+* Wenn du eine DanaR Pumpe verwendest, dann stelle sicher, dass Du die `DanaR Insulinpumpen-Anleitung <../Configuration/DanaR-Insulin-Pump.html>`_ befolgt hast, damit eine gute Verbindung zwischen der Pumpe und AndroidAPS gewährleistet ist.
+* Befolge die  `Nightscout-Anleitung <../Installing-AndroidAPS/Nightscout.html>`_, um zu gewährleisten, dass Nightscout diese Daten empfangen und anzeigen kann.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*Es kann sein, dass du auf das Auslesen des nächsten Zuckerwertes warten musst, bevor AndroidAPS es erkennt.*
 
-Objective 2: Learn how to control AndroidAPS
+Ziel 2: Lerne, wie AndroidAPS bedient wird
 ============================
-* Perform several actions in AndroidAPS as described in this objective. 
-* Links will be provided to guide you in case you are not familiar with a specific action yet.
+* Führe verschiedene Aktionen in AndroidAPS aus, die in dieser Zielaufgabe beschrieben werden. 
+* Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 
    .. image:: ./images/Objective2.png
-     :alt: Screenshot objective 2
+     :alt: Screenshot Ziel 2
 
-Objective 3: Prove your knowledge
+Ziel 3: Belege Dein Wissen
 =================================
-*Pass a multiple-choice exam testing your AndroidAPS knowledge.
-* Links will be provided to guide you in case you are unsure abouit the correct answers yet.
+* Beantworte Multiple-choice-Fragen zu verschiedenen AndroidAPS- und Closed-Loop-Themen.
+* Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 
    .. image:: ./images/Objective3.png
-     :alt: Screenshot objective 3
+     :alt: Screenshot Ziel 3
 
-Objective 4: Starting on an open loop
+Ziel 4: Starte den Open Loop
 =====================================
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the `Preferences <../Configuration/Preferences.html>`_ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
-* Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Nutze das Hypo Temp Target um zu verhindern, dass AAPS aufgrund des Blutzuckeranstiegs nach einer Hypo zu stark korrigiert. 
+* Wähle Open Loop entweder in den Einstellungen oder indem du lange auf den Loop Button in der linken oberen Ecke des Hauptbildschirms drückst.
+* Arbeite Dich durch die  `Einstellungen <../Configuration/Preferences.html>`_, um AndroidAPS an Deine Anforderungen anzupassen.
+* Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der temporären Basalratenanpassungen; gib sie jeweils von Hand in der Pumpe ein und bestätige in AndroidAPS, dass du sie akzeptiert hast.  Überprüfe, ob diese Daten in AndroidAPS und Nightscout angezeigt werden.
+* Aktiviere falls notwendig `temporäre Ziele <../Usage/temptarget.html>`_. Nutze das Hypo Temp Target um zu verhindern, dass AAPS aufgrund des Blutzuckeranstiegs nach einer Hypo zu stark korrigiert. 
 
-Objective 5: Understanding your open loop, including its temp basal recommendations
+Ziel 5: Open Loop inklusive der temporären Basalratenvorschläge verstehen
 ===================================================================================
-* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#section-e>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Lerne das Konzept hinter den Basalratenvorschlägen kennen, indem Du Dir  `Basalraten verstehen <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ durchliest sowie die Vorhersagelinie auf dem AndroidAPS Hauptbildschirm und die Zusammenfassung der Ausgaben von den Berechnungen in deinem OpenAPS Tab anschaust.
  
-Es ist möglicherweise sinnvoll, wenn du das Ziel höher als üblich ansetzt, bis du den Berechnungen und Einstellungen vertraust.  System allows
+Es ist möglicherweise sinnvoll, wenn du das Ziel höher als üblich ansetzt, bis du den Berechnungen und Einstellungen vertraust.  Das System erlaubt:
 
-* a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl) 
-* a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-* a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+* einen niedrigen Zielwert von mindestens 4 mmol (72 mg/dl) oder höchstens 10 mmol (180 mg/dl) 
+* einen hohen Zielwert von mindestens 5 mmol (90 mg/dl) und höchstens 15 mmol (225 mg/dl)
+* ein temporäres Ziel als Einzelwert kann im Bereich von 4 mmol bis 15 mmol (72 mg/dl bis 225 mg/dl) liegen
 
-Der Zielwert ist der Wert, auf dem die Berechnungen basieren und nicht der gleiche wie der, den du als Zuckerwert anstrebst.  If your target is very wide (say, 3 or more mmol [50 mg/dl or more] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested. 
+Der Zielwert ist der Wert, auf dem die Berechnungen basieren und nicht der gleiche wie der, den du als Zuckerwert anstrebst.  Wenn Du einen sehr großen Zielbereich (z.B. 3 mmol / 50 mg/dl oder mehr) wirst Du kaum Aktivitäten von AndroidAPS feststellen. Der vorhergesagte Glukosewert wird mit hoher Wahrscheinlichkeit innerhalb Deines Zielbereichs liegen und daher nicht viele temporäre Änderungen an der Basalrate vorgeschlagen werden. 
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide), and observe how the behavior of your system changes as a result.  
+Vielleicht möchtest Du mit der Anpassung der Werte für einen engeren Zielbereich experimentieren (z.B. 1 mmol/l bzw. 20 mg/dl oder weniger) und beobachten, wie sich das Verhalten des Systems daraufhin ändert.  
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`_ > Range for Visualisation.
+Auf dem Startbildschirm wird Dein Zielbereich mit grünen Linien im Diagramm dargestellt. Diesen kannst Du in den `Einstellungen <../Configuration/Preferences.html>`_ > unter 'Zielbereich für die Grafikanzeige' (scrolle weit nach unten) einstellen.
  
 .. image:: ./images/sign_stop.png
-  :alt: Stop sign
+  :alt: Stoppzeichen
 
 Falls Du eine virtuelle Pumpe verwendest darfst Du nicht zum 4. Ziel wechseln. Klicke nicht auf 'Bestätigen/Verify' am Ende des 3. Ziels.
 --------------------------
 
 .. image:: ./images/blank.png
-  :alt: blank
+  :alt: leer
 
-Objective 6: Starting to close the loop with Low Glucose Suspend
+Ziel 6: Closed Loop mit Abschaltung bei niedrigen Glukose-Werten
 ================================================================
 .. image:: ./images/sign_warning.png
-  :alt: Warning sign
+  :alt: Warnzeichen
   
-Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. Hohe BZ-Werte müssen daher von Dir manuell korrigiert werden!
+Der Closed Loop korrigiert im Objective 6 keine hohen BZ-Werte, da nur low glucose suspend zum Einsatz kommt. Hohe BZ-Werte müssen daher von Dir manuell korrigiert werden!
 ---------------------------
 
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
-* Set your target range slightly higher than you usually aim for, just to be safe.
-* Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  Wenn du nach wie vor häufige oder schwere Unterzuckerungen hast, dann solltest du DIA, Basalraten, ISF oder Kohlenhydrat-Faktoren anpassen.
+* Wähle Closed Loop entweder in den `Einstellungen <../Configuration/Preferences.html>`_ oder indem du lange auf den Loop Button in der linken oberen Ecke des Hauptbildschirms drückst.
+* Stelle deinen Zielbereich etwas höher ein, als du es normalerweise tun würdest, um auf der sicheren Seite zu sein.
+* Die Aktivität der temporären Basalraten kannst du anhand des blauen Textes auf dem Hauptbildschirm oder des blauen Bereichs in der Grafik beobachten.
+* Stelle sicher, dass deine Einstellungen für AndroidAPS korrekt sind. Beobachte das Verhalten über einen Zeitraum von 5 Tagen. Wenn Du nicht eingreifen musst, um niedrige Zuckerwerte zu korrigieren, sind die Einstellungen korrekt.  Wenn du nach wie vor häufige oder schwere Unterzuckerungen hast, dann solltest du DIA, Basalraten, ISF oder Kohlenhydrat-Faktoren anpassen.
 
-*The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.*
+*Das System wird deine maxIOB Einstellungen auf 0 setzen, was bedeutet, dass es bei fallenden Zuckerwerten die Basalrate herabsetzen kann, aber wenn die Zuckerwerte steigen, werden sie nur dann korrigiert, wenn der IOB negativ ist (von einer vorangegangenen niedrigen Zuckerwert Abschaltung). Anderenfalls bleibt die Basalrate die gleiche wie in deinem ausgewählten Profil.  Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.*
 
-Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
+Ziel 7: Stelle den Closed Loop fein ein, erhöhe max IOB über 0 und setze den Zielbereich langsam herunter
 =========================================================
-* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+* Setze dein "Maximales Gesamt-IOB, das nicht überschritten werden darf [IE]" (in OpenAPS als "max-iob" bekannt) für einen Tag auf einen Wert größer als 0. Der empfohlene Standardwert ist "ein durchschnittlicher Mahlzeitenbolus + das Dreifache Deiner größten täglichen Basalrate" (größte stündliche Basalrate = maximaler Basalwert pro Stunde innerhalb des 24-Stunden-Rasters eines Tages) (für den SMB Algoyrithmus), oder das Dreifache Deiner höchsten täglichen Basalrate (für den älteren AMA Algorithmus), aber du solltest dich diesem Wert langsam annähern, bis du weißt, dass die Einstellung für Dich funktioniert).
 
   Betrachte diese Empfehlung als Ausgangspunkt. Wenn Du den Faktor 3x verwendest und feststellst, dass AAPS Deinen BZ zu stark senkt, reduziere diesen Faktor (z.B. 2,..). Wenn Du Resistenzen feststellst, kannst Du diesen Faktor vorsichtig Schritt für Schritt erhöhen.
 
    .. image:: ./images/MaxDailyBasal.png
      :alt: max daily basal
 
-* Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
+* Wenn du zuverlässig weißt, welcher IOB deinem Looping Muster entspricht, dann senke deinen Zielbereich auf den gewünschten Wert.
 
 
-Objective 8: Adjust basals and ratios if needed, and then enable autosens
+Ziel 8: Passe, falls notwendig, Basalraten und Faktoren an und aktiviere dann die Autosens-Funktion
 =============================================
-* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate, or do a traditional basal test.
-* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+* Du kannst  `Autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ verwenden, um dafür zu sorgen, dass Deine Basalraten korrekt bleiben oder einen traditionellen Basalratentest durchführen.
+* Schalte `Autosens <../Usage/Open-APS-features.html>`_ für einen Zeitraum von 7 Tagen ein und beobachte die weiße Linie auf der Grafik auf dem Hauptbildschirm, die anzeigt, dass deine Sensibilität gegenüber Insulin auf Grund von Aktivitäten oder Hormonen steigt oder fällt. Schaue auf dem OpenAPS-Tab nach, wie AndroidAPS die Basalraten und/oder Zielwerte entsprechend anpasst.
 
-*Don’t forget to record your looping in `this form <http://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Vergiss nicht, dich als Looper in `diesem Formular <http://bit.ly/nowlooping>`_ zu registrieren, wenn du das bisher noch nicht getan hast. Gib AndroidAPS als Art deiner DIY Loop-Software an.*
 
 
-Objective 9: Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
+Ziel 9: Aktiviere zusätzliche oref0 Funktionen zum täglichen Gebrauch, wie z. B. den advanced meal assist (AMA)
 ==============================================
-* Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
-* Then over a period of 28 days you can try additional features that automate even more of the work for you such as the `advanced meal assist <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
+* Jetzt solltest du damit vertraut sein, wie AndroidAPS arbeitet und welche Einstellungen dich bei deiner Diabetesbehandlung am besten unterstützen
+* Für einen Zeitraum von 28 Tagen kannst Du zusätzliche Funktionen ausprobieren, die Dir noch mehr Arbeit abnehmen, so wie der  `erweiterte Mahlzeitenassistent <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_.
 
 
-Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+Ziel 10: Aktiviere zusätzliche oref1 Funktionen zum täglichen Gebrauch, wie z. B. den super micro bolus (SMB)
 ===============================================
-* You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
-* Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
+* Du musst das `SMB-Kapitel in diesem Wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ und das `Kapitel oref1 in der openAPS Dokumentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ lesen, um zu verstehen wie der SMB arbeitet, insbesondere was Sinn und Zweck des "zero-temping" ist.
+* Danach solltest Du `maxIOB erhöhen <../Usage/Open-APS-features.html#maximales-basal-iob-das-openaps-abgeben-darf-ie-openaps-max-iob>`_, damit SMB korrekt funktioniert. maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet, wenn Du einen Mahlzeiten-Bolus von 8 IE abgegeben willst und in den Einstellungen ein maxIOB von 7 IE hinterlegt hast, wird kein SMB abgegeben, bis das IOB wieder unter 7 IE gefallen ist. Beginne mit maxIOB = durchschnittlicher Mahlzeiten-Bolus + 3x die größte stündliche Basalrate (größte stündliche Basalrate = maximaler Basalwert pro Stunde innerhalb des 24-Stunden-Rasters eines Tages - bei  `Ziel 7 <../Usage/Objectives.html#ziel-7-stelle-den-closed-loop-fein-ein-erhoehe-max-IOB-ueber-0-und-setze-den-Zielbereich-langsam-herunter>`_  findest Du eine Grafik zu Erklärung).
+* Der Standardwert von min_5m_carbimpact in den Absorptions-Einstellungen muss von 3 auf 8 erhöht werden, wenn du von AMA zum SMB wechselst. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
