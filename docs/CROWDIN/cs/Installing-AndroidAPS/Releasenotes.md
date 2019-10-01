@@ -6,7 +6,7 @@ Počínaje verzí 2.3 a je zaveden nový postup aktualizace. Jakmile bude k disp
 
 ![Informace o aktualizaci](../images/AAPS_LoopDisable90days.png)
 
-Pak máte 60 dnů na aktualizaci. Pokud do těchto 60 dnů neaktualizujete AAPS, přepne se do LGS (low glucose suspend - viz [slovník](../Getting-Started/Glossary.md)) jako v [cíly 4](../Usage/Objectives.md).
+Pak máte 60 dnů na aktualizaci. Pokud do těchto 60 dnů neaktualizujete AAPS, přepne se do LGS (low glucose suspend - viz [slovník](../Getting-Started/Glossary.md)) jako v [cíli 4](../Usage/Objectives.md).
 
 Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde AAPS na otevřenou smyčku.
 
