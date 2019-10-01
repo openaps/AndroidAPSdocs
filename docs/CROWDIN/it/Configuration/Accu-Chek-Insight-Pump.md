@@ -8,7 +8,8 @@
 
 ## Requisiti hardware e software
 
-* Un microinfusore Roche Accu-Chek Insight (qualsiasi versione va bene) <br /> Nota: AAPS utilizzerà sempre il **primo profilo basale del microinfusore** per scrivere i dati
+* Un microinfusore Roche Accu-Chek Insight (qualsiasi versione va bene)
+<br>   Nota: AAPS  utilizzerà sempre il  <b>primo profilo basale del microinfusore</b> per scrivere i dati
 * Un telefono Android (Vanno bene tutte le versioni da Android 6 in poi)
 * L'app AndroidAPS installata sul tuo telefono
 
