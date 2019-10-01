@@ -8,8 +8,8 @@
 
 ## Requisitos de hardware e software
 
-* Uma bomba Insight Roche Accu-Chek (qualquer firmware, todos funcionam) <br /> Nota: AAPS irá escrever os dados sempre no **primeiro perfil de taxa basal na bomba **
-* Um telefone Android (basicamente todas as versões Android funcionariam, mas o próprio AndroidAPS requer pelo menos o Android 5 (Lollipop).)
+* Uma bomba Insight Roche Accu-Chek (qualquer firmware, todos funcionam)
+<br>   Nota: AAPS irá escrever os dados sempre no <b>primeiro perfil de taxa basal na bomba </b>* Um telefone Android (basicamente todas as versões Android funcionariam, mas o próprio AndroidAPS requer pelo menos o Android 5 (Lollipop).)
 * The AndroidAPS app installed on your phone
 
 ## Instalação
