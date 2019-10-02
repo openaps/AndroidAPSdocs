@@ -1,12 +1,12 @@
-Remote monitoring
+Vzdialený monitoring
 ******************
 
 .. image:: ../images/KidsMonitoring.png
-  :alt: Monitoring children
+  :alt: Monitorovanie detí
   
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AndroidAPS ponúka niekoľko možností pre vzdialené monitorovanie detí a tiež umožňuje odosielať vzdialené príkazy. Samozrejme môžete použiť vzdialené monitorovanie aj na sledovanie vášho partnera alebo priateľa.
 
-Functions
+Funkcie
 =========
 * Kid's pump is controlled by kid's phone using AndroidAPS.
 * Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone.
