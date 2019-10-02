@@ -133,37 +133,37 @@ Rozhodněte se, zda chcete AAPS povolit automatické nastavování nebo pouze vy
 
 ### Otevřená smyčka
 
-AAPS průběžně vyhodnocuje všechny dostupné údaje (IOB, COB, glykémie…) a předkládá návrhy, jak v případě potřeby upravit vaši léčbu. Návrhy nebudou provedeny automaticky (tak jako v uzavřené smyčce), ale mohou být zadány ručně přímo do pumpy nebo tlačítkem z aplikace – pokud používáte podporovanou pumpu (DanaR/RS nebo Accu-check Combo). This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+AAPS průběžně vyhodnocuje všechny dostupné údaje (IOB, COB, glykémie…) a předkládá návrhy, jak v případě potřeby upravit vaši léčbu. Návrhy nebudou provedeny automaticky (tak jako v uzavřené smyčce), ale mohou být zadány ručně přímo do pumpy nebo tlačítkem z aplikace – pokud používáte podporovanou pumpu (DanaR/RS nebo Accu-check Combo). Tato možnost slouží k tomu, abyste poznali, jak vlastně AndroidAPS funguje, nebo pro případ, že používáte nepodporovanou pumpu.
 
 ### Uzavřená smyčka
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). The Closed Loop works within numerous safety limits, which you can be set individually. Closed Loop is only possible if you are in [Objective 4](../Usage/Objectives.md) or higher and use a supported pump.
+AAPS průběžně vyhodnocuje všechny dostupné údaje (IOB, COB, glykémie…) a podle potřeby automaticky upravuje léčbu (tj. bez dalšího Vašeho zásahu) s cílem dosáhnout nastaveného cílového pásma nebo hodnoty (podání bolusu, dočasné bazální dávky, vypnutí podávání inzulínu, aby se předešlo hypoglykémii atd.). The Closed Loop works within numerous safety limits, which you can be set individually. Uzavřená smyčka je k dispozici pouze v případě, že máte splněn [4. cíl](../Usage/Objectives.md) nebo vyšší a používáte podporovanou pumpu.
 
-## Objectives (learning program)
+## Cíle (výukový program)
 
-AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AndroidAPS má řadu cílů, které musíte splnit krok za krokem. Ty by vás měly bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině touto cestou můžete svému systému plně důvěřovat.
 
-You should export your settings (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Doporučujeme pravidelně exportovat veškeré nastavení (včetně pokroku při plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
-See [Objectives](../Usage/Objectives.md) page for more information.
+Více informací naleznete na stránce [Cíle](../Usage/Objectives.md).
 
 ## Ošetření
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+Na záložce Ošetření můžete vidět ošetření, která byla nahrána do Nightscoutu. Chcete-li upravit nebo odstranit záznam (například když jste snědli méně sacharidů, než jste očekávali), vyberte „Odstranit“ a zadejte novou hodnotu (případně změňte čas) prostřednictvím záložky Péče.
 
 ## Obecné
 
 ### Přehled
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Zobrazí aktuální stav smyčky a tlačítko pro přístup k běžným akcím (další podrobnosti viz část [Domácí obrazovka](../Getting-Started/Screenshots.md)). Kliknutím na ozubené kolo se dostanete do nastavení.
 
 #### Nechat obrazovku zapnutou
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Tato volba zabrání Androidu vypnout obrazovku. To je velmi vhodné například pro prezentace. Při tomto nastavení ale dochází k velmi rychlému vybíjení baterie. Proto je doporučeno připojit smartphone k napájecímu kabelu.
 
 #### Tlačítka
 
-Define which Buttons are shown on the home screen.
+Určuje, která tlačítka budou zobrazena na domácí obrazovce.
 
 * Ošetření
 * Kalkulačka
@@ -172,19 +172,19 @@ Define which Buttons are shown on the home screen.
 * CGM (otevře xDrip+)
 * Kalibrace
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Kromě toho můžete nastavit zkratky pro inzulín a sacharidy a rozhodnout se, zda bude v dialogu pro přidání ošetření i poznámka.
 
 #### Nastavení Rychlého bolusu
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Vytvořte si tlačítko pro určité standardní jídlo (sacharidy a parametry pro výpočet bolusu), které se zobrazí na domácí obrazovce. Můžete ho použít pro standardní jídlo, které konzumujete pravidelně. U každého jídla (tlačítka) lze definovat i čas, a tak budete mít na domácí obrazovce k dispozici vhodné tlačítko pro dané jídlo odpovídající denní době.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Poznámka: tlačítko nebude viditelné, pokud je aktuální čas mimo interval definovaný v nastavení nebo pokud máte dostatek IOB k pokrytí sacharidů definovaných kalkulačkou.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Tlačítko průvodce nastavením](../images/ConfBuild_QuickWizard.png)
 
 #### Pokročilá nastavení
 
-Enable super bolus functionality in wizard. Používejte se zvýšenou opatrností a nenastavujte, dokud jste si nenastudovali, co to vlastně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu a po dobu těchto 2 h je nastaven nulový dočasný bazál. **Funkce smyčky AAPS budou deaktivovány – používat opatrně! Pokud používáte funkci SMB, funkce smyčky AAPS budou deaktivovány dle vašeho nastavení v části [„Maximální počet minut bazálu, ke kterým se limituje SMB“](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), pokud funkci SMB nevyužíváte, funkce smyčky budou vypnuty na dvě hodiny.** Podrobnosti o superbolusu najdete [zde](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Povolit v kalkulačce funkci superbolus. Používejte se zvýšenou opatrností a nenastavujte, dokud jste si nenastudovali, co to vlastně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu a po dobu těchto 2 h je nastaven nulový dočasný bazál. **Funkce smyčky AAPS budou deaktivovány – používat opatrně! Pokud používáte funkci SMB, funkce smyčky AAPS budou deaktivovány dle vašeho nastavení v části [„Maximální počet minut bazálu, ke kterým se limituje SMB“](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), pokud funkci SMB nevyužíváte, funkce smyčky budou vypnuty na dvě hodiny.** Podrobnosti o superbolusu najdete [zde](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Akce
 
