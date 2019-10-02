@@ -45,7 +45,7 @@ AndroidAPS создан для управления помпой и подачи
 * Нажмите и удерживайте кнопку "Замкнутый цикл" (до активации замкнутого цикла она называется "Открытый цикл") в верхней части главного экрана. 
 * Выберите ** 'Отсоединить помпу на XY мин' **
 * Это установит скорость подачи базала на "0".
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
+* Минимальная продолжительность разъединения - это минимальная длина временных базалов TBR которые можно установить на помпе. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
 * Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
 * AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
     
