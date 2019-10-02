@@ -84,7 +84,7 @@ Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lower
 
   This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
 
-   .. image:: ../images/MaxDailyBasal.png
+   .. image:: ../images/MaxDailyBasal2.png
      :alt: max daily basal
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.

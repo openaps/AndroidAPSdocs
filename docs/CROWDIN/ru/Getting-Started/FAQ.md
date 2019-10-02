@@ -42,12 +42,12 @@ AndroidAPS создан для управления помпой и подачи
 
 Если необходимо отключить помпу для душа/купания/плавания/спорта и т. д. вы должны дать AndroidAPS знать, что инсулин не подается, чтобы обеспечить корректное значение активного инсулина IOB.
 
-* Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
-* This will set your basal to zero for that time period.
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
-* AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
+* Нажмите и удерживайте кнопку "Замкнутый цикл" (до активации замкнутого цикла она называется "Открытый цикл") в верхней части главного экрана. 
+* Выберите ** 'Отсоединить помпу на XY мин' **
+* Это установит скорость подачи базала на "0".
+* Минимальная продолжительность разъединения - это минимальная длина временных базалов TBR которые можно установить на помпе. Поэтому, если вы хотите отсоединиться на более короткий период, все равно выбирайте минимальное время отключения, доступное вашей помпы, и подсоединитесь вручную, как описано ниже.
+* Кнопка 'замкнутый цикл' (или 'разомкнутый цикл') станет красной и будет нименоваться теперь 'отключено на (ХХ мин)', демонстрируя время, оставшееся до возобновления.
+* AAPS автоматически восстановит соединение после выбранного времени, и замкенный цикл снова начнет работу.
     
     ![Отключение помпы](../images/PumpDisconnect.png)
 

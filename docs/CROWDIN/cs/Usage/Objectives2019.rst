@@ -84,7 +84,7 @@ Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lower
 
   Toto doporučení by mělo být považováno za výchozí bod. Pokud ho nastavíte na 3x a uvidíte kroky, které vás rychle stahují dolů, pak snižte toto číslo. Pokud jste velmi rezistentní na inzulín, pomalu ho zvyšujte.
 
-   .. image:: ../images/MaxDailyBasal.png
+   .. image:: ../images/MaxDailyBasal2.png
      :alt: max daily basal
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.

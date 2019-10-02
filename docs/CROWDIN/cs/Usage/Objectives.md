@@ -47,7 +47,7 @@ Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/Ex
     
     Toto doporučení by mělo být považováno za výchozí bod. Pokud ho nastavíte na 3x a uvidíte kroky, které vás rychle stahují dolů, pak snižte toto číslo. Pokud jste velmi rezistentní na inzulín, pomalu ho zvyšujte.
     
-    ![maximální denní bazální dávka](../images/MaxDailyBasal.png)
+    ![maximální denní bazální dávka](../images/MaxDailyBasal2.png)
 
 * Až si budete jistí hodnotou IOB, která vyhovuje vašemu způsobu používání smyčky, pak snižte své cílové glykémie na požadovanou úroveň.
 

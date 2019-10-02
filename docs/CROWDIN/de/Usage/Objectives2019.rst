@@ -84,7 +84,7 @@ Ziel 7: Stelle den Closed Loop fein ein, erhöhe max IOB über 0 und setze den Z
 
   Betrachte diese Empfehlung als Ausgangspunkt. Wenn Du den Faktor 3x verwendest und feststellst, dass AAPS Deinen BZ zu stark senkt, reduziere diesen Faktor (z.B. 2,..). Wenn Du Resistenzen feststellst, kannst Du diesen Faktor vorsichtig Schritt für Schritt erhöhen.
 
-   .. image:: ../images/MaxDailyBasal.png
+   .. image:: ../images/MaxDailyBasal2.png
      :alt: max daily basal
 
 * Wenn du zuverlässig weißt, welcher IOB deinem Looping Muster entspricht, dann senke deinen Zielbereich auf den gewünschten Wert.

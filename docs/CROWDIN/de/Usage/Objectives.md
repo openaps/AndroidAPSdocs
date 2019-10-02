@@ -47,7 +47,7 @@ Wenn Du Dein **Smartphone wechselst** kannst Du Deine [Einstellungen exportieren
     
     Betrachte diese Empfehlung als Ausgangspunkt. Wenn Du den Faktor 3x verwendest und feststellst, dass AAPS Deinen BZ zu stark senkt, reduziere diesen Faktor (z.B. 2,..). Wenn Du Resistenzen feststellst, kannst Du diesen Faktor vorsichtig Schritt für Schritt erhöhen.
     
-    ![max daily basal](../images/MaxDailyBasal.png)
+    ![max daily basal](../images/MaxDailyBasal2.png)
 
 * Wenn du zuverlässig weißt, welcher IOB deinem Looping Muster entspricht, dann senke deinen Zielbereich auf den gewünschten Wert.
 

@@ -84,7 +84,7 @@ Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lower
 
   Эта рекомендация должна рассматриваться как отправная точка. Если вы установили троекратную величину и видите признаки того, что для вас это слишком жестко, понизьте ее. Если у вас высокая резистентность повышайте эту величину постепенно.
 
-   .. image:: ../images/MaxDailyBasal.png
+   .. image:: ../images/MaxDailyBasal2.png
      :alt: max daily basal
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
