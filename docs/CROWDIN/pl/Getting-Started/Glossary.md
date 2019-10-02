@@ -56,7 +56,7 @@
  <td>BAT</td>
  <td>lampka stanu niski poziom baterii na ekranie głównym</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>BG</td>
@@ -104,7 +104,7 @@
  <td>CAN</td>
  <td>lampka stanu zaległa zmiana kaniuli na ekranie głównym</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -308,7 +308,7 @@
  <td>RES</td>
  <td>lampka stanu zaległa zmiana zbiornika na insulinę na ekranie głównym</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -326,7 +326,7 @@
  <td>SEN</td>
  <td>lampka stanu zaległa zmiana sensora na ekranie głównym</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>Sensivity detection / Wykrywanie czułości</td>

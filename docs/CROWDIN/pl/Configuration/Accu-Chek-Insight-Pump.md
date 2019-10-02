@@ -4,7 +4,7 @@
 
 * * *
 
-## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
+## *** OSTRZEŻENIE: ** Jeśli wcześniej korzystałeś z Insight z ** SightRemote **, ** zaktualizuj do najnowszej wersji ** i ** odinstaluj SightRemote </0 >.</em></h2> 
 
 ## Wymagania sprzętowe i programowe
 

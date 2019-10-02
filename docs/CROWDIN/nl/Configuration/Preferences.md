@@ -77,10 +77,15 @@ De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd 
 ## NS Client
 
 * Stel hier jouw 'nightscout URL' in (https://yourwebsitename.herokuapp.com of https://yourwebsitename.azurewebsites.net), en jouw 'API secret' (een wachtwoord van 12 tekens lang uit jouw heroku of azure variabelen). Hierdoor kunnen gegevens zowel worden uitgelezen als weggeschreven tussen de Nightscout website en AndroidAPS. Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
-* 'Log app start naar Nightscout' zal elke keer dat de app is gestart, een notitie maken. De app zou niet vaker dan één keer per dag opnieuw moeten starten; gebeurt dit vaker dan wijst dat op een probleem. Vaak wordt dit veroorzaakt doordat de accubesparings-functie van jouw telefoon steeds de app afsluit. Los dit op door de accubesparings-instellingen van jouw telefoon aan te passen. Het kan ook zijn dat jouw telefoon te weinig (werk)geheugen beschikbaar heeft. Zorg dan dat je niet teveel zware apps draait of maak geheugenruimte vrij. 
-* 'Alarm opties' kun je selecteren om de standaard Nightscout alarmen te gebruiken. Om de alarmen voor Urgent High (urgent hoog), High (hoog), Low (laag) en Urgent Low (urgent laag) in te schakelen, zul je deze moeten toevoegen aan jouw [heroku of azure variabelen](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Deze alarmen werken alleen zolang de telefoon verbinding heeft met Nightscout (internet moet dus aanstaan op de telefoon). Alarmen via Nightscout zijn bedoeld voor bijv. ouder/verzorgers die hun kind vanaf afstand volgen. Als de BG-bron op de telefoon van de patiënt zelf staat, gebruik dan liever die alarmen (bijv. xDrip+) want dan ben je niet afhankelijk van een internetverbinding.
-* 'Activeer lokaal delen' onder de Geavanceerde Instellingen zal jouw careportal gegevens doorsturen naar andere apps op je telefoon, zoals xDrip+.
-* 'Gebruik altijd absolute basale waarden' moet geactiveerd worden als je Autotune correct wilt gebruiken.
+* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+    
+    ![NSClient URL](../images/NSClientURL.png)
+
+* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
+
+* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
+* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
+* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
 
 ## SMS Communicator
 

@@ -1,112 +1,112 @@
-# SMS Commands
+# Komunikator SMS
 
-### Workaround for bug in AndroidAPS 2.3
+### Obejście błędu w wersji AndroidAPS 2.3
 
-SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
+Ustawienia komend SMS są wyłączone w systemie AndroidAPS w wersji 2.3 z powodu błędu programu, ale mogą być ponownie używane w wersji 2.4.
 
-If you must use SMS commands you can use the following workaround:
+Jeśli musisz używać komend SMS możesz użyć następującego rozwiązania:
 
 - Eksport ustawień
-- Downgrade to AndroidAPS version 2.2 (by installing your version 2.2 APK-file)
-- Do SMS command settings in AndroidAPS version 2.2.
-- Upgrade to AndroidAPS 2.3. SMS command settings will not be accessible there.
+- Downgrade do wersji AndroidAPS (poprzez zainstalowanie wersji 2.2 z pliku APK)
+- Skonfiguruj komunikator SMS w AndroidAPS w wersji 2.2.
+- Zaktualizuj AndroidAPS do wersji 2.3. Ustawienia komunikatora SMS nie będą dostępne w tej wersji.
 
-## Safety First
+## Bezpieczeństwo
 
 - AndroidAPS umożliwia zdalne sterowanie telefonem dziecka za pomocą wiadomości tekstowej. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN.
 - AndroidAPS poinformuje Cię również SMS-em, jeśli Twoje polecenia zdalne, takie jak zmiana bolusa lub profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.
 
-## How it works
+## Jak to działa
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+W ustawieniach swojego telefonu z systemem Android wybierz Aplikacje > AndroidAPS > Uprawnienia i włącz SMS-y
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+W AndroidAPS przejdź do Preferencje > Komunikator SMS i wprowadź numer(y) telefonu, z którego będziesz mógł korzystać do wydawania poleceń SMS (oddzielone średnikami), a także włącz "Zezwalaj na zdalne polecenia przez SMS".
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Wyślij SMS-a na telefon z uruchomionym AndroidAPS z któregokolwiek zatwierdzonego numeru telefonu używając dowolnego z poniższych **pogrubionych** poleceń, telefon odpowie, potwierdzając powodzenie żądanego polecenia lub jego status.
 
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
-## Commands
+## Polecenia
 
 ### BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Ostatnia wartość glikemii np.: 120 4min ago, Delta: -2 mg/dl, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 
 ### LOOP STOP/DISABLE
 
-- Loop has been disabled
+- Pętla (Loop) została wyłączona
 
 ### LOOP START/ENABLE
 
-- Loop has been enabled
+- Pętla (Loop) została włączona
 
 ### LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Pętla (Loop) jest wyłączona
+- Pętla (Loop) jest włączona
+- Wstrzymana (10 min)
 
 ### LOOP SUSPEND 20
 
-- Loop suspended for 20 minutes
+- Pętla wstrzymana na 20 minut
 
 ### LOOP RESUME
 
-- Loop resumed
+- Pętla wznowiona
 
 ### TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 receivers
+- Odśwież zabiegi 1 odbiorca
 
 ### NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 receivers
+- NSCLIENT RESTART 1 odbiorca
 
 ### PUMP
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Ostatnie połączenie: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ### BASAL STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Aby anulować bazę tymczasową, odpowiedz za pomocą kodu EmF
 
 ### BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Aby rozpocząć dawkę bazową 0.3U/h odpowiedz kodem Swe
 
 ### BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Aby rozpocząć dawkę bazową 0.3U/h przez 20 min odpowiedz kodem Swe
 
 ### BASAL 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Aby rozpocząć dawkę bazową 30% odpowiedz kodem Swe
 
 ### BASAL 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Aby rozpocząć dawkę bazową 30% przez 50 min odpowiedz kodem Swe
 
 ### BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Aby dostarczyć bolusa 1,2U odpowiedz z kodem Rrt
+- Bolus zdalny jest niedozwolony (* w ciągu 15 minut po ostatnim bolusie lub jeśli zdalne poleceniach nie są dozwolone *)
 
 ### EXTENDED STOP/CANCEL
 
-- To stop extended bolus reply with code EmF
+- Aby zatrzymać bolus przedłużony wprowadź kod EmF
 
 ### EXTENDED 2 120
 
-- To start extended bolus 2U for 120 min reply with code EmF
+- Aby rozpocząć przedłużony bolus 2U na 120 min, odpowiedz kodem EmF
 
 ### CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Wysłanie kalibracji 5.6 odpowiedz kodem Rrt
+- Kalibracja wysłana (*jeśli zainstalowano xDrip. Akceptacja kalibracji musi być włączona w xDrip+*)
 
 ### PROFILE STATUS
 
-- Profile1
+- Profil1
 
 ### PROFILE LIST
 
@@ -114,14 +114,14 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 ### PROFILE 1
 
-- To switch profile to Profile1 100% reply with code Any
+- Aby zmienić profil na Profile1 100% odpowiedz kodem Any
 
 ### PROFILE 2 30
 
-- To switch profile to Profile2 30% reply with code Any
+- Aby zmienić profil na Profile2 30% odpowiedz kodem Any
 
-## Troubleshooting
+## Rozwiązywanie problemów
 
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Pojawił się raport o zatrzymywaniu się poleceń SMS po aktualizacji telefonu Galaxy S10. Można to rozwiązać, wyłączając opcję „wyślij jako wiadomość czatu”.
 
-![Disable SMS as chat message](../images/SMSdisableChat.png)
+![Wyłącz SMS jako wiadomość czatu](../images/SMSdisableChat.png)

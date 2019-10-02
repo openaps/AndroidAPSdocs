@@ -10,7 +10,7 @@
 
 AndroidAPS создан для управления помпой и подачи инсулина. В соответствии с действующим Европейским законодательством, все системы, классифицируемые как IIa или IIb, являются медицинскими устройствами, подлежащими обязательной сертификации (получение знака CE), что в свою очередь требует соответствующих исследований и одобрений. Распространение несертифицированных устройств незаконно. Аналогичные законы существуют и в других частях мира.
 
-This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Создание медицинского устройства для себя является единственным вариантом, не затрагиваемым этими правилами.
+Это положение не ограничивается торговлей, но относится к любому виду распространения (даже безвозмездному). Создание медицинского устройства для себя является единственным вариантом, не затрагиваемым этими правилами.
 
 Именно поэтому распространение в виде готовых приложений (apk) недоступно.
 
@@ -26,21 +26,21 @@ This regulation is not restricted to sales (in the meaning of getting money for 
 
 В-третьих, вам нужно **настроить компоненты программного обеспечения**: AndroidAPS и источники мониторинга.
 
-В-четвертых, вам нужно изучить и **понять исходный дизайн OpenAPS для проверки параметров лечения**. Фундаментальный принцип замкнутой петли: скорость подачи вашего базала и соотношение инсулин/углеводы должны быть точно выверены. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). В настройках ИПЖ введены ограничения безопасности (см. максимально допустимый базальный уровень в [Архитектуре OpenAPS](https://openaps.org/reference-design/)), которые означают, что вам не придется тратить допустимые дозировки на исправление неправильной базы. Например, если перед едой вы часто ставите временную цель на пониженный уровень ГК, вам, скорее всего, требуется настройка базы. Вы можете использовать [автонастройку](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) для обработки массива ваших данных и определения необходимости коррекции базальной скорости, фактора чувствительности к инсулину ISF и углеводного коэффициента CR. Либо протестировать и определить скорость базала [старым способом](http://integrateddiabetes.com/basal-testing/).
+В-четвертых, вам нужно изучить и **понять исходный дизайн OpenAPS для проверки параметров лечения**. Фундаментальный принцип замкнутой петли: скорость подачи вашего базала и соотношение инсулин/углеводы должны быть точно выверены. Все рекомендации, выдаваемые ИПЖ предполагают, что ваши базовые потребности в инсулине удовлетворены и любые пики и провалы характеристики ГК - следствие других факторов, требующих дополнительных настроек ( нагрузка, стресс и пр.). В настройках ИПЖ введены ограничения безопасности (см. максимально допустимый базальный уровень в [Архитектуре OpenAPS](https://openaps.org/reference-design/)), которые означают, что вам не придется тратить допустимые дозировки на исправление неправильной базы. Например, если перед едой вы часто ставите временную цель на пониженный уровень ГК, вам, скорее всего, требуется настройка базы. Вы можете использовать [автонастройку](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) для обработки массива ваших данных и определения необходимости коррекции базальной скорости, фактора чувствительности к инсулину ISF и углеводного коэффициента CR. Либо протестировать и определить скорость базала [старым способом](http://integrateddiabetes.com/basal-testing/).
 
 ## Важные практические аспекты
 
-### Password protection
+### Защита паролем
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+Если вы считаете необходимым исключить несанкционированное изменение настроек ИПЖ, вы можете закрыть паролем настройку, выбрав в меню "Пароль для настроек" и установив пароль на этот раздел. В следующий раз, когда вы войдете в это меню, система запросит пароль и не позволит поменять его без корректного ввода. Если в дальнейшем вы хотите удалить пароль, зайдите в это меню снова и удалите текст.
 
-### Android Wear Smartwatches
+### Смарт-часы Android Wear
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+Если вы планируете использовать Android Wear для изменения болюса или настроек, нужно убедиться, что сообщения от AAPS не блокируются. Подтверждение действий происходит через уведомление.
 
-### Disconnect pump
+### Отключение помпы
 
-If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+Если необходимо отключить помпу для душа/купания/плавания/спорта и т. д. вы должны дать AndroidAPS знать, что инсулин не подается, чтобы обеспечить корректное значение активного инсулина IOB.
 
 * Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
 * Select **'Disconnect pump for XY min'**
@@ -49,7 +49,7 @@ If you take your pump off for showering/bathing/swimming/sport etc. you must let
 * Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
 * AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
     
-    ![Disconnect pump](../images/PumpDisconnect.png)
+    ![Отключение помпы](../images/PumpDisconnect.png)
 
 * If the selected time was too long you can reconnect manually.
 

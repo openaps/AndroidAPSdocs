@@ -1,4 +1,4 @@
-# AndroidAPS screens
+# Zrzuty ekranów AndroidAPS
 
 ## Ekran główny
 
@@ -146,7 +146,7 @@ AndroidAPS can run using a number of different profile configuratons. Typically 
 
 **Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
-## Treatment, xDrip, NSClient
+## Terapia, xDrip, NSClient
 
 These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 

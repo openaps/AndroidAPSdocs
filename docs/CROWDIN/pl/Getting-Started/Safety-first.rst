@@ -1,25 +1,25 @@
 Najważniejsze jest bezpieczeństwo
 ===========
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+**Kiedy decydujesz się na budowę własnej sztucznej trzustki, zawsze ważne jest, aby myśleć o bezpieczeństwie oraz rozumieć wpływ wszystkich swoich działań**
 
-General
+Ogólnie
 ------------
 
-* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-* Do not assume that AndroidAPS will never make mistakes. To urządzenie przejmuje kontrolę nad podawaniem insuliny: oglądaj je cały czas, zrozum, jak działa i naucz się interpretować jego działanie.
-* Remember that, once paired, the phone can instruct the pump to do anything. Używaj tego telefonu tylko do obsługi systemu AndroidAPS i, jeśli jest używany przez dziecko, tylko do koniecznej, niezbędnej komunikacji z dzieckiem. Nie instaluj niepotrzebnych aplikacji lub gier (!!!), które mogłyby wprowadzać złośliwe oprogramowanie, takie jak trojany, wirusy lub boty, które mogłyby zakłócać działanie systemu.
-* Install all security updates provided by your phone manufacturer and Google.
+* AndroidAPS jest tylko narzędziem, które pomaga zarządzać cukrzycą, nie jest czymś co można zainstalować i zapomnieć!
+* Nie zakładaj, że AndroidAPS nigdy nie popełni błędów. To urządzenie przejmuje kontrolę nad podawaniem insuliny: oglądaj je cały czas, zrozum, jak działa i naucz się interpretować jego działanie.
+* Pamiętaj, że po sparowaniu z pompą telefon może poinstruować pompę, aby zrobiła wszystko. Używaj tego telefonu tylko do obsługi systemu AndroidAPS i, jeśli jest używany przez dziecko, tylko do koniecznej, niezbędnej komunikacji z dzieckiem. Nie instaluj niepotrzebnych aplikacji lub gier (!!!), które mogłyby wprowadzać złośliwe oprogramowanie, takie jak trojany, wirusy lub boty, które mogłyby zakłócać działanie systemu.
+* Zainstaluj wszystkie aktualizacje zabezpieczeń dostarczone przez producenta telefonu i Google.
 * You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
    
-SMS Communicator
+Komunikator SMS
 -----------------
 
-* AndroidAPS allows you to control a child's phone remotely via text message. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.
+* AndroidAPS umożliwia zdalne sterowanie telefonem dziecka za pomocą wiadomości tekstowej. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN.
+* AndroidAPS poinformuje Cię również Sms-em, jeśli Twoje polecenia zdalne, takie jak zmiana bolusa lub profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.
 
 .. notatka:: 
-   **IMPORTANT SAFETY NOTICE**
+   ** WAŻNE INFORMACJE DOTYCZĄCE BEZPIECZEŃSTWA * *
 
    The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 

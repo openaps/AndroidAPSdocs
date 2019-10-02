@@ -23,7 +23,7 @@ Většina uživatelů uzavřené smyčky používá cirkadiánní bazální dáv
 Součástí profilu je
 
 * BR (bazální dávky)
-* ISF (citlivost na inzulin) - hodnota, o kolik klesne glykémie po podání jedné jednotky inuzlinu)
+* ISF (citlivost na inzulin) - hodnota, o kolik klesne glykémie po podání jedné jednotky inuzlinu
 * CR (sacharidový poměr) - množství sacharidů v gamech na jednu jednotku inzulinu
 * DIA (doba působnosti inzulinu).
 

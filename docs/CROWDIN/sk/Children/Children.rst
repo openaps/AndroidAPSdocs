@@ -1,30 +1,30 @@
-Remote monitoring
+Vzdialený monitoring
 ******************
 
 .. image:: ../images/KidsMonitoring.png
-  :alt: Monitoring children
+  :alt: Monitorovanie detí
   
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AndroidAPS ponúka niekoľko možností pre vzdialené monitorovanie detí a tiež umožňuje odosielať vzdialené príkazy. Samozrejme môžete použiť vzdialené monitorovanie aj na sledovanie vášho partnera alebo priateľa.
 
-Functions
+Funkcie
 =========
-* Kid's pump is controlled by kid's phone using AndroidAPS.
-* Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone.
-* Parents can be alarmed by using **xDrip app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands.html>`_.
-* Remote profile switch and temp targets through NSClient app.
+* Pumpa dieťaťa je ovládaná pomocou telefónu dieťaťa používajúceho AndroidAPS.
+* Rodičia môžu na diaľku sledovať všetky dôležité údaje, ako sú glykémia, aktívne sacharidy, aktívny inzulín atď. pomocou aplikácie **NSClient** na svojom telefóne.
+* Rodičia môžu dostávať alarmy v aplikácii **xDrip v režime Follower** na svojom telefóne.
+* Diaľkové ovládanie AndroidAPS pomocou `SMS Príkazov <../Usage/SMS-Commands.html>`_.
+* Diaľkové prepnutie profilu a spustenie dočasných cieľov prostredníctvom aplikácie NSClient.
 
-Tools and apps for remote monitoring
+Nástroje a aplikácie pre vzdialené monitorovanie
 ------------------------------------
-* `Nightscout <http://www.nightscout.info/>`_ in web browser (mainly data display)
-*	NSClient app
-*	Dexcom follow if you are using original Dexcom app (BG values only)
-*	`xDrip <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-*	`Spike <https://spike-app.com/>`_ on iPhone (mainly BG values and **alarms**)
+* `Nightscout <http://www.nightscout.info/>`_ vo internetovom prehliadači (hlavne zobrazenie údajov)
+* Aplikácia NSClient
+* Dexcom Follow, pokiaľ používate originálnu aplikáciu Dexcom (iba hodnoty glykémií)
+* `xDrip <../Configuration/xdrip.html>`_ v režime sledovania (hlavne hodnoty glykémií a **alarmy**)
+* `Spike <https://spike-app.com/>`_ na iPhonoch (hlavne hodnoty glykémií a **alarmy**)
 
-Things to consider
+Veci, ktoré treba zvážiť
 ==================
-* Setting the correct `treatment factors <../Getting-Started/FAQ.html#how-to-begin>`_ (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved. 
-* So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
-* What is your emergency plan when remote control does not work (i.e. network problems)?
-* Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the `files section of AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ on Facebook.
+* Nastavenie správnych `parametrov liečby <../Getting-Started/FAQ.html#how-to-begin>`_ (bazálne dávky, DIA, ISF...) je náročné pri deťoch, hlavne pri vplyve rastových hormónov. 
+* Takže si dajte načas, aby ste ich správne nastavili a otestovali, keď je dieťa vo vašej blízkosti, skôr ako začnete so vzdialeným monitorovaním a odosielaním príkazov na diaľku. Vhodným obdobím pre ich nastavenie môžu byť napríklad školské prázdniny.
+* Aký je váš núdzový plán v prípade, že diaľkové ovládanie nefunguje (napr. problémy so sieťou)?
+* Vzdialené monitorovanie a riadenie môže byť veľmi nápomocné v škôlke a na základnej škole. Ale uistite sa, že učitelia a vychovávatelia vedia o plánoch liečby vášho dieťaťa. Príklady takýchto plánov liečby možno nájsť v časti `súbory skupiny AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ na Facebooku.
