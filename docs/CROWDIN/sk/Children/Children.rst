@@ -8,17 +8,17 @@ AndroidAPS ponúka niekoľko možností pre vzdialené monitorovanie detí a tie
 
 Funkcie
 =========
-* Kid's pump is controlled by kid's phone using AndroidAPS.
-* Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone.
-* Parents can be alarmed by using **xDrip app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands.html>`_.
-* Remote profile switch and temp targets through NSClient app.
+* Pumpa dieťaťa je ovládaná pomocou telefónu dieťaťa používajúceho AndroidAPS.
+* Rodičia môžu na diaľku sledovať všetky dôležité údaje, ako sú glykémia, aktívne sacharidy, aktívny inzulín atď. pomocou aplikácie **NSClient** na svojom telefóne.
+* Rodičia môžu dostávať alarmy v aplikácii **xDrip v režime Follower** na svojom telefóne.
+* Diaľkové ovládanie AndroidAPS pomocou `SMS Príkazov <../Usage/SMS-Commands.html>`_.
+* Diaľkové prepnutie profilu a spustenie dočasných cieľov prostredníctvom aplikácie NSClient.
 
-Tools and apps for remote monitoring
+Nástroje a aplikácie pre vzdialené monitorovanie
 ------------------------------------
-* `Nightscout <http://www.nightscout.info/>`_ in web browser (mainly data display)
-*	NSClient app
-*	Dexcom follow if you are using original Dexcom app (BG values only)
+* `Nightscout <http://www.nightscout.info/>`_ vo internetovom prehliadači (hlavne zobrazenie údajov)
+* Aplikácia NSClient
+* Dexcom Follow, pokiaľ používate originálnu aplikáciu Dexcom (iba hodnoty glykémií)
 *	`xDrip <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
 *	`Spike <https://spike-app.com/>`_ on iPhone (mainly BG values and **alarms**)
 
