@@ -51,7 +51,7 @@ _The system will override your maxIOB settings to zero, which means if blood glu
 
   This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
 
-   ![max daily basal](../images/MaxDailyBasal.png)
+   ![max daily basal](../images/MaxDailyBasal2.png)
 
 * Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
