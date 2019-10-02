@@ -77,10 +77,15 @@
 ## Клиент Nightscout
 
 * Введите адрес вашего сайта в поле 'nightscout URL' (в виде https://imyavashegosaita.herokuapp.com или https://imyavashegosaita.azurewebsites.net) и пароль в поле 'API secret' (пароль из 12 символов, который записан в ваших переменных на heroku или azure). Это позволит считывать и записывать данные веб-сайту Nightscout и приложению AAPS. Если вы застряли на Цели 1, еще раз проверьте поля с адресом и паролем на наличие опечаток.
-* Опция 'Делать запись о старте приложения в Nightscout' заносит отметку в учетных записях портала лечения/назначений. Приложение не должно запускаться более одного раза в день; если делать это чаще, могут возникнуть проблемы. 
-* 'Параметры оповещений' позволяет выбрать, какие оповещения приложение будет использовать по умолчанию. Для активации оповещений нужно установить значения экстремально высоких, высоких, низких и экстремально низких порогов сигнализации в полях значений переменных на [heroku или azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Они будут работать только тогда, когда у вас есть подключение к Nightscout и предназначены для родителей/опекунов; если мониторинг есть на вашем телефоне, используйте оповещения на нем (например, на xdrip+).
-* 'Включить локальные трансляции' передаст данные с портала лечения/назначений на другие приложения на телефоне, например xdrip.
-* 'Всегда использовать абсолютные значения базала" должно быть активировано, если вы хотите правильно использовать Autotune.
+* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+    
+    ![NSClient URL](../images/NSClientURL.png)
+
+* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
+
+* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
+* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
+* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
 
 ## СМС-коммуникатор
 
