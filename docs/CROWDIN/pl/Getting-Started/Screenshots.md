@@ -1,4 +1,4 @@
-# AndroidAPS screens
+# Zrzuty ekranów AndroidAPS
 
 ## Ekran główny
 
