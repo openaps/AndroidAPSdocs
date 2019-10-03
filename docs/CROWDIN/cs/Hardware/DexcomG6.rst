@@ -42,6 +42,7 @@ kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi 
 * Nainstalujte stažený apk
 * Spusťte senzor
 * Na kartě Konfigurace (nastavení v AndroidAPS) vyberte Dexcom aplikace (upravená).
+* If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
 
 Poradce při potížích s G6
 ====================
