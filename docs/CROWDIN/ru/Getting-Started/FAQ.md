@@ -62,28 +62,28 @@ AndroidAPS создан для управления помпой и подачи
 
 Для безопасности, рекомендации системы делаются не на одном показании ГК, а на среднем из последних значений (с учетом скользящей дельты). Поэтому, если пропущено несколько показаний, понадобится время на то, чтобы AndroidAPS снова начал компенсацию ГК в режиме замкнутого цикла.
 
-### Further readings
+### Дополнительные ресурсы
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Вот несколько блогов с полезными советами, которые помогут понять практику работы ИПЖ:
 
-* [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-* [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [ Параметры тонкой настройки ](http://seemycgm.com/2017/10/29/fine-tuning-settings/) См. мой мониторинг
+* [Почему длительность работы инсулина DIA имеет значение](http://seemycgm.com/2017/08/09/why-dia-matters/) (см. мой мониторинг)
+* [Как ограничить пики после питания](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+* [Гормоны и autosens](http://seemycgm.com/2017/06/06/hormones-2/) (см. мой мониторинг)
 
 ## Какое запасное оборудование рекомендуется брать с собой?
 
-First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
+Прежде всего, необходимо иметь стандартный набор для диабета 1го типа. При работе с AndroidAPS настоятельно рекомендуется также иметь:
 
-* Battery pack for the energy of your smartphone, wear and (maybe) BT reader
-* Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
-* Pump batteries
+* Запасной аккумулятор для подзарядки смартфона, смарт-часов и (если необходимо) считывателя BT
+* Резервную копию используемых вами приложений: последний APK программного обеспечения AAPS, пароль на хранилище, файл настроек AAPS, файл настроек xDrip и т. д.. Целесообразно использовать для этого облако (DropBox, Yandex. Disk и пр.)...
+* Батарейки для помпы
 
 ## Как безопасно закрепить трансмиттер ГК/сенсор ГК?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask google or ebay). Some loopers use the cheaper standard kinesiology tape or rocktape.
+Его можно закрепить при помощи пластыря: В продаже можно найти предварительно прорезанные пластыри для распространенных систем мониторинга (поиск Google или ebay). Некоторые пользователи ИПЖ применяют более дешевые стандартные кинезезиотейпы или лейкопластыри.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask google or ebay).
+Можно его закрепить: В продаже есть готовые эластичные повязки, которыми можно фиксировать сенсор (поищите через Google или ebay).
 
 # Настройки системы AndroidAPS
 
