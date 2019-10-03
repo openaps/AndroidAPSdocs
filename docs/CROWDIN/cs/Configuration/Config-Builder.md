@@ -89,7 +89,7 @@ Vyberte, který zdroj glykémií používáte – další informace k nastavení
 * Glykémie z NSClient
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Aplikace Dexcom G5 (upravená)](https://github.com/dexcomapp/dexcomapp/) – chcete-li používat alarmy xDrip+, vyberte v nastavení „Odesílat glykémie do xDrip+“. ![Konfigurace – Zdroj glykémie](../images/ConfBuild_BGSource.png)
+* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms. ![Konfigurace – Zdroj glykémie](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pumpa
@@ -137,7 +137,7 @@ AAPS průběžně vyhodnocuje všechny dostupné údaje (IOB, COB, glykémie…)
 
 ### Uzavřená smyčka
 
-AAPS průběžně vyhodnocuje všechny dostupné údaje (IOB, COB, glykémie…) a podle potřeby automaticky upravuje léčbu (tj. bez dalšího Vašeho zásahu) s cílem dosáhnout nastaveného cílového pásma nebo hodnoty (podání bolusu, dočasné bazální dávky, vypnutí podávání inzulínu, aby se předešlo hypoglykémii atd.). The Closed Loop works within numerous safety limits, which you can be set individually. Uzavřená smyčka je k dispozici pouze v případě, že máte splněn [4. cíl](../Usage/Objectives.md) nebo vyšší a používáte podporovanou pumpu.
+AAPS průběžně vyhodnocuje všechny dostupné údaje (IOB, COB, glykémie…) a podle potřeby automaticky upravuje léčbu (tj. bez dalšího Vašeho zásahu) s cílem dosáhnout nastaveného cílového pásma nebo hodnoty (podání bolusu, dočasné bazální dávky, vypnutí podávání inzulínu, aby se předešlo hypoglykémii atd.). Uzavřená smyčka je zabezpečena velkým množstvím bezpečnostních limitů, které lze nastavit individuálně. Uzavřená smyčka je k dispozici pouze v případě, že máte splněn [4. cíl](../Usage/Objectives.md) nebo vyšší a používáte podporovanou pumpu.
 
 ## Cíle (výukový program)
 

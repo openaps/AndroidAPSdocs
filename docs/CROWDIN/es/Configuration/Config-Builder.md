@@ -1,4 +1,4 @@
-# Config Builder
+# Configuraciones
 
 Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
 
@@ -89,7 +89,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom G5 app (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms. ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pump
@@ -280,6 +280,6 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 Email and number of logs to be send. Normally no change necessary.
 
-### Config Builder
+### Configuraciones
 
 Use tab for config builder instead of hamburger menu.
