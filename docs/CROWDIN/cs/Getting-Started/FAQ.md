@@ -42,23 +42,23 @@ Pokud máte v úmyslu používat aplikaci prostřednictvím hodinek s Wear OS na
 
 Pokud si vezmete pumpu do sprchy/na koupání/do bazénu/na sport atd. musíte dát AndroidAPS vědět, že žádný inzulín není podáván, aby počítal IOB správně.
 
-* Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
+* Dlouze stiskněte tlačítko 'Uzavřená smyčka' (v případě, že ještě nepoužíváte uzavřenou smyčku, bude na tlačítku 'Otevřená smyčka') v horní části domovské obrazovky. 
 * Vyberte možnost **"Odpojit pumpu na XY h"**
 * Na dané časové období se tím váš bazál nastaví na nulu.
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
-* AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
+* Minimální doba pro odpojení závisí na minimální délce TBR, který lze nastavit na pumpě. Takže pokud se chcete odpojit na kratší dobu, musíte použít nejkratší dobu pro odpojení pumpy a pak se ručně znovu připojit, jak je popsáno níže.
+* Barva tlačítka 'Uzavřená smyčka' (nebo 'Otevřená smyčka') se změní na červenou a na tlačítku bude napsáno 'Odpojeno (xx m)' a bude zobrazena zbývající doba odpojení.
+* AAPS se po zvoleném čase automaticky znovu připojí a vaše uzavřená smyčka bude opět fungovat.
     
     ![Odpojit pumpu](../images/PumpDisconnect.png)
 
-* If the selected time was too long you can reconnect manually.
+* Pokud byl vybraný čas příliš dlouhý, můžete se znovu připojit ručně.
 
-* Long-press on the red button 'Disconnected (xx m)'.
-* Select 'Reconnect pump'
+* Dlouze stiskněte červené tlačítko 'Odpojeno (xx m)'.
+* Vyberte možnost 'Znovu připojit pumpu'
     
     ![Znovu připojit pumpu](../images/PumpReconnect.png)
 
-### Recommendations not only based on one single CGM reading
+### Doporučení nejsou založena pouze na jediné hodnotě ze senzoru CGM
 
 Z důvodu bezpečnosti nejsou doporučení založena na jediné hodnotě ze senzoru CGM, ale opírají se o průměrnou změnu glykémie. Proto pokud jste některá měření ze senzoru nezachytili, může trvat nějakou dobu, než AndroidAPS nasbírá potřebná nová data a než pak znovu smyčku spustí.
 
@@ -93,9 +93,9 @@ Následující seznam vám pomůže s optimalizací nastavení. Nejlepší bude,
 
 ### Popis & testování
 
-The length of time that insulin decays to zero.
+Doba, za kterou se inzulín zcela rozloží.
 
-To je docela často nastaveno příliš krátké. Většina lidí bude mít nastaveno 5 hodin, v některých případech 6 nebo 7 hodin.
+Tato doba je poměrně často nastavena jako příliš krátká. Většina lidí bude mít nastaveno 5 hodin, v některých případech 6 nebo 7 hodin.
 
 ### Dopad
 
