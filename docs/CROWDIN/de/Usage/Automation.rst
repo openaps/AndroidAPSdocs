@@ -19,7 +19,7 @@ Es gibt ein paar Einschränkungen:
 
 * Der Glukosewert muss zwischen 72 und 270 md/dl (4 und 15 mmol/l) liegen.
 * Der Prozentsatz des Profils muss zwischen 70% und 130% liegen.
-* Es gibt ein 5 Minuten  Zeitlimit zwischen den einzelnen Ausführungen (und vor der ersten Ausführung).
+* Es gibt ein 5 Minuten  time limit between executions (and first execution).
 
 **Achtung:**
 
