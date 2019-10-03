@@ -192,15 +192,15 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ### Что вызывает высокие постпрандиальные пики в замкнутом цикле?
 
-В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. Если все правильно, и гликемия падает до целевого значения после того, как углеводы полностью усвоены, попробуйте за некоторое время до еды установить временную цель "приближается прием пищи" в AAPS или продумайте подходящее время преболюса с вашим эндокринологом. Если ваша гликемия слишком высока после еды и все еще слишком высока после того, как углеводы полностью усвоены, подумайте о снижении соотношения инсулин/углеводы IC с вашим эндокринологом. Если гликемия слишком высока при усвоении углеводов COB и слишком низка после их полного усвоения, подумайте об увеличении соотношения инсулин/углеводы IC и о надлежащем времени преболюса с эндокринологом.
 
 # Другие настройки
 
 ## Настройки Nightscout
 
-### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
+### Клиент NScout AndroidAPS выдает ошибку 'не разрешено' и не передает данные. Что делать?
 
-In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+В клиенте NSClient проверьте 'Настройки подключения'. Возможно, вы в закрытой для вас зоне WLAN или активировали опцию подключаться 'Только при зарядке', а ваш кабель зарядки не подключен.
 
 ## Настройки мониторинга
 
