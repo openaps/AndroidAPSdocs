@@ -233,23 +233,23 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 * Нажмите и удерживайте кнопку "Открытый цикл"/"Замкнутый цикл" на вкладке "Главный экран" AndroidAAPS и выберите "Приостановка цикла на 1ч'
 * Отключите помпу и замените картридж в соответствии с инструкцией помпы.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+* После переподключения помпы запустите цикл долгим нажатием на 'Приостановлено (X мин.)'.
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+Однако замена катетера происходит не через функцию "первичного заполнения инфузионного набора" на помпе, а заполняет его с помощью болюса, который не отражается в истории болюсов. Это означает, что текущая временная скорость базала не прерывается. На вкладке Действия при помощи кнопки ЗАПОЛНИТЬ задайте то количество инсулина, которое необходимого для заполнения инфузионного набора и начните первичное заполнение. Если этого количества не достаточно, повторите заполнение. Вы можете установить кнопки по умолчанию в Настройках > Другое > Заполнить/Инициировать стандартные количества инсулина. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
 
 ## Повседневное применение
 
-### Hygiene
+### Гигиена
 
 #### Что делать при приеме душа или ванной?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
+Вы можете снять помпу при приеме душа или ванной. На этот короткий период времени она вам, как правило, не понадобится. Но вы должны сообщить об этом AAPS чтобы расчеты активного инсулина IOB были правильными.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
 
-### Work
+### На работе
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+В зависимости от вида работы, возможно, вы используете иные методы терапии в рабочие дни. Следует подумать о [ переключении профиля](../Usage/Profiles.md) на планируемый рабочий день (например, более 100% на 8 ч при сидячей работе или менее 100% при активном режиме), высокой или низкой временной цели или [сдвиге времени профиля](../Usage/Profiles#time-shift), когда вы встаете гораздо раньше или позже, чем обычно. Если вы используете профили Nightscout, вы можете создать второй профиль (например, дом' и 'работа') и переключаться с профиля на профиль при необходимости.
 
 ## Досуг
 
@@ -259,7 +259,7 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 
 You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
 
 ### Drinking alcohol
 
