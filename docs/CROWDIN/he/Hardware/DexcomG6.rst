@@ -41,6 +41,7 @@ If using G6 with patched Dexcom app
 * Install downloaded apk
 * Start sensor
 * Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+* If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
 
 Troubleshooting G6
 ====================
