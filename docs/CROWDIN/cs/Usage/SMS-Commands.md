@@ -26,7 +26,7 @@ Z některého z povolených čísel odešlete SMS zprávu na telefon s běžíc�
 
 **Tip**: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
-## Commands
+## Příkazy
 
 ### BG
 
@@ -122,6 +122,6 @@ Z některého z povolených čísel odešlete SMS zprávu na telefon s běžíc�
 
 ## Poradce při potížích
 
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím "odeslání zprávy jako konverzace".
 
-![Disable SMS as chat message](../images/SMSdisableChat.png)
+![Zakázat SMS jako chat zprávu](../images/SMSdisableChat.png)
