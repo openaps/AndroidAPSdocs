@@ -19,7 +19,7 @@ Existují určitá omezení:
 
 * Hodnota glykémie musí být v rozmezí 4 až 15 mmol/l.
 * Procentuální hodnota profilu musí být mezi 70 % a 130%.
-* Je tam 5 min. time limit between executions (and first execution).
+* Je tam 5 min. časový limit mezi provedeními (a prvním provedením).
 
 **Buďte prosím opatrní:**
 
