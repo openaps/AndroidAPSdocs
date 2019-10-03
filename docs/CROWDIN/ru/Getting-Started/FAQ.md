@@ -51,16 +51,16 @@ AndroidAPS создан для управления помпой и подачи
     
     ![Отключение помпы](../images/PumpDisconnect.png)
 
-* If the selected time was too long you can reconnect manually.
+* Если выбранное время было слишком долгим, можно переподключиться вручную.
 
-* Long-press on the red button 'Disconnected (xx m)'.
-* Select 'Reconnect pump'
+* Нажмите и удерживайте красную кнопку 'Отключено (xx мин)'.
+* Выберите 'Переподключить помпу'
     
     ![Reconnect pump](../images/PumpReconnect.png)
 
-### Recommendations not only based on one single CGM reading
+### Рекомендации основаны не на одном показании мониторинга
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+Для безопасности, рекомендации системы делаются не на одном показании ГК, а на среднем из последних значений (с учетом скользящей дельты). Поэтому, если пропущено несколько показаний, понадобится время на то, чтобы AndroidAPS снова начал компенсацию ГК в режиме замкнутого цикла.
 
 ### Further readings
 
