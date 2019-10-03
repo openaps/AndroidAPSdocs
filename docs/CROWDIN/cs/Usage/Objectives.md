@@ -9,7 +9,7 @@ Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/Ex
 * Zvolte správný zdroj glykémie pro svou kombinaci zařízení. Další informace viz [Zdroj glykémií](../Configuration/BG-Source.rst).
 * Vyberte správnou pumpu na kartě Konfigurace (zvolte Virtuální pumpu, pokud používáte model pumpy bez ovladače v AndroidAPS – pouze pro otevřenou smyčku) a na kartě pumpy ověřte, že váš model pumpy dokáže komunikovat s aplikací AndroidAPS a přenášet do ní svůj stav. Pokud používáte pumpu DanaR, ujistěte se, že jste postupovali podle pokynů v části [Inzulínová pumpa DanaR](../Configuration/DanaR-Insulin-Pump.md) a že je správně propojená s AndroidAPS.
 * Postupujte podle pokynů na stránce [Nightscout](../Installing-AndroidAPS/Nightscout.md) a ujistěte se, že Nightscout může přijímat a zobrazovat tato data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](../Configuration/Preferences.html#ns-client).
+* Všimněte si, že adresa URL v NSClientu musí být **BEZ /api/v1/** na konci - viz nastavení [NSClient v předvolbách](../Configuration/Preferences.html#ns-client).
 
 *Možná bude nutné počkat na další odečet glykémie, než AndroidAPS změnu zaregistruje.*
 
