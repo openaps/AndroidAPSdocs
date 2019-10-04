@@ -1,44 +1,44 @@
-# Medtronic Pumps
+# Αντλίες Medtronic
 
-**>>>> Medtronic pump driver is not part of AndroidAPS master yet. It will be available in next master version. <<<<**
-
-* * *
-
-Works only with older Medtronic pumps (details see below). Does not work with Medtronic 640G or 670G.
+**>>>> Το πρόγραμμα οδήγησης της αντλίας Medtronic δεν είναι ακόμα μέρος του master AndroidAPS. Θα είναι διαθέσιμο στην επόμενη κύρια έκδοση. <<<<**
 
 * * *
 
-While Medtronic driver was tested with good test group, it is still considered a beta software, which means that until bigger audience tests it for a longer period of time, you will need to enable Engineering mode, to be able to see driver in AndroidAPS.
+Λειτουργεί μόνο με παλαιότερες αντλίες Medtronic (βλ. λεπτομέρειες παρακάτω). Δε λειτουργεί με την Medtronic 640G και 670G.
+
+* * *
+
+Ενώ το πρόγραμμα οδήγησης της Medtronic δοκιμάστηκε με καλή δοκιμαστική ομάδα, εξακολουθεί να θεωρείται λογισμικό beta, πράγμα που σημαίνει ότι έως ότου ένα μεγαλύτερο κοινό το δοκιμάσει για μεγαλύτερο χρονικό διάστημα, θα χρειαστεί να ενεργοποιήσετε τη λειτουργία Engineering, για να μπορείτε να δείτε τον οδηγό στο AndroidAPS.
 
 * * *
 
 ## Απαιτήσεις υλικού και λογισμικού
 
-- **Phone:** Medtronic driver should work with any phone supporting BLE. **IMPORTANT: While driver works correctly on all phones, enabling/disabling Bluetooth doesn't (this is required when you loose connection to RileyLink and system can't recover automatically - happens from time to time). So you need to get device with Android 6.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. We are looking into problem with Android 9, but so far we haven't found resolution (it seems to work on some models and not on others, and on also works sometimes on some models).**
-- **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. Device that does is called RileyLink (you can get it here [getrileylink.org](https://getrileylink.org/)). You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). If you are feeling adventurous you can also try Gnarl ([here](https://github.com/ecc1/gnarl)), which is sort-of RileyLink-clone. 
-- **Pump:** Driver works only with following models and firmware versions: 
+- ** Τηλέφωνο: ** Ο οδηγός Medtronic θα πρέπει να λειτουργεί με οποιοδήποτε τηλέφωνο που υποστηρίζει BLE. ** ΣΗΜΑΝΤΙΚΟ: Ενώ το πρόγραμμα οδήγησης λειτουργεί σωστά σε όλα τα τηλέφωνα, δεν επιτρέπεται η ενεργοποίηση / απενεργοποίηση του Bluetooth (αυτό απαιτείται όταν χάσετε τη σύνδεση με το RileyLink και το σύστημα δεν μπορεί να ανακτήσει αυτόματα - συμβαίνει κατά διαστήματα). Έτσι πρέπει να πάρετε συσκευή με Android 6.0 - 8.1, στη χειρότερη περίπτωση μπορείτε να εγκαταστήσετε LinegaeOS 15.1 (απαιτείται 15.1 ή χαμηλότερη) στο τηλέφωνό σας. Εξετάζουμε το πρόβλημα με το Android 9, αλλά μέχρι στιγμής δεν έχουμε βρει λύση (φαίνεται ότι λειτουργεί σε μερικά μοντέλα και όχι σε άλλα).**
+- ** RileyLink / Gnarl: ** Για επικοινωνία με την αντλία χρειάζεστε συσκευή που μετατρέπει τις εντολές BT από το τηλέφωνο σε RF εντολές που κατανοεί η αντλία. Η συσκευή που λέγεται RileyLink (μπορείτε να την πάρετε εδώ [ getrileylink.org ](https://getrileylink.org/)). Χρειάζεστε σταθερή έκδοση της συσκευής, η οποία είναι για τα παλαιότερα μοντέλα firmware 0.9 (παλαιότερες εκδόσεις μπορεί να μην λειτουργούν σωστά) ή για νεώτερα μοντέλα 2.2 (υπάρχουν επιλογές για αναβάθμιση διαθέσιμες στην τοποθεσία RL). Εάν νιώθετε περιπετειώδης, μπορείτε επίσης να δοκιμάσετε το Gnarl ([ εδώ ](https://github.com/ecc1/gnarl)), το οποίο είναι είδος του RileyLink-clone. 
+- ** Αντλία: ** Το πρόγραμμα οδήγησης λειτουργεί μόνο με τα ακόλουθα μοντέλα και εκδόσεις υλικολογισμικού: 
     - 512/712
     - 515/715
     - 522/722
-    - 523/723 (firmware 2.4A or lower)
-    - 554/754 EU release (firmware 2.6A or lower)
-    - 554/754 Canada release (firmware 2.7A or lower)
+    - 523/723 (firmware 2.4A ή χαμηλότερη)
+    - 554/754 Έκδοση ΕΕ (firmware 2.6A ή χαμηλότερη)
+    - 554/754 Έκδοση Καναδά (firmware 2.7A ή χαμηλότερη)
 
-## Configuration of the pump
+## Διαμόρφωση της αντλίας
 
-- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication.
-- **Set Max Basal** on your Pump to your "max basal entry in your STD profile" * 4 (if you want to have 400% TBR as max). This number must be under 35 (as you can see in pump).
-- **Set Max Bolus** on your Pump (max is 25)
-- **Set profile to STD**. This will be the only profile we will use. You can also disable.
-- **Set TBR type** to Absolute (not Percent)
+- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). Πρέπει να έχετε τουλάχιστον ένα αναγνωριστικό στη λίστα απομακρυσμένων αναγνωριστικών. Αυτές οι επιλογές ενδέχεται να φαίνονται διαφορετικά σε διαφορετικό μοντέλο αντλίας. Αυτό το βήμα είναι σημαντικό, γιατί όταν ρυθμιστεί, η αντλία θα ακούει πιο συχνά για απομακρυσμένη επικοινωνία.
+- ** Ρυθμίστε το μέγιστο βασικό** στην αντλία σας στο "εισαγωγή μεγίστου βασικού στο προφίλ STD" * 4 (αν θέλετε να έχετε 400% TBR ως μέγιστο). Αυτός ο αριθμός πρέπει να είναι κάτω από 35 (όπως μπορείτε να δείτε στην αντλία).
+- ** Ορισμός μέγιστης δόσης ** στην αντλία σας (το μέγιστο είναι 25)
+- ** Ρυθμίστε το προφίλ σε STD **. Αυτό θα είναι το μοναδικό προφίλ που θα χρησιμοποιήσουμε. Μπορείτε επίσης να απενεργοποιήσετε.
+- ** Ορίστε τον τύπο TBR ** στο Απόλυτο (όχι επί της εκατό)
 
-## Configuration of Phone/AndroidAPS
+## Διαμόρφωση του τηλεφώνου / AndroidAPS
 
-- **Do not pair RileyLink with your Phone.** If you paired your RileyLink, then AndroidAPS won't be able to find it in configuration.
-- Disable Auto-rotate on your phone (on some devices Auto-rotate restarts BT sessions, which is not something we would want).
-- You can configure pump in AndroidAPS two ways: 
+- ** Μην αντιστοιχίζετε το RileyLink με το τηλέφωνό σας. ** Αν έχετε αντιστοιχίσει το RileyLink, τότε το AndroidAPS δεν θα το βρει στη διαμόρφωση.
+- Απενεργοποιήστε την Αυτόματη περιστροφή στο τηλέφωνό σας (σε ορισμένες συσκευές Αυτόματη περιστροφή επανενεργοποιεί τις περιόδους λειτουργίας BT, κάτι που δεν είναι κάτι που θα θέλαμε).
+- Μπορείτε να ρυθμίσετε την αντλία στο AndroidAPS με δύο τρόπους: 
 
-1. Use of Wizard (on new install)
+1. Χρήση του Οδηγού (σε νέα εγκατάσταση)
 2. Directly in Config tab (Cog icon on Medtronic driver)
 
 If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
