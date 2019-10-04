@@ -10,38 +10,38 @@
 
 ## Γενικά
 
-* Επιλέξτε τη γλώσσα σας εδώ. If your language is not available, or not all of the words are translated then feel free to make some suggestions on [Crowdin](https://crowdin.com/project/androidaps) or ask in the [gitter chatroom](https://gitter.im/MilosKozak/AndroidAPS).
+* Επιλέξτε τη γλώσσα σας εδώ. Εάν η γλώσσα σας δεν είναι διαθέσιμη ή δεν έχουν μεταφραστεί όλες οι λέξεις, τότε μην διστάσετε να κάνετε κάποιες προτάσεις στο [ Crowdin ](https://crowdin.com/project/androidaps) ή να ρωτήσετε στο [chatroom gitter ](https://gitter.im/MilosKozak/AndroidAPS).
 
-## Overview
+## Σφαιρική Εικόνα
 
-* Keep screen on is useful while you are giving a presentation. It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
-* Buttons let you choose which buttons are visible on your home screen. Also gives you a few options for the popup screen you will see after pressing a button.
-* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
-* Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
+* Η παρακολούθηση της οθόνης είναι χρήσιμη κατά τη διάρκεια μιας παρουσίασης. Θα καταναλώνει πολλή ενέργεια, οπότε είναι συνετό να συνδέσετε το τηλέφωνό σας σε φορτιστή.
+* Τα κουμπιά σας επιτρέπουν να επιλέξετε ποια κουμπιά είναι ορατά στην αρχική σας οθόνη. Επίσης, σας δίνει μερικές επιλογές για την αναδυόμενη οθόνη που θα δείτε μετά το πάτημα ενός κουμπιού.
+* Οι ρυθμίσεις του γρήγορου οδηγού σας επιτρέπουν να προσθέσετε ένα γρήγορο κουμπί για ένα συνηθισμένο σνακ ή γεύμα, να εισαγάγετε τις λεπτομέρειες σχετικά με την περιεκτικότητα σε υδατάνθρακες και στην αρχική οθόνη, αν επιλέξετε το πλήκτρο γρήγορου οδηγού, θα υπολογίσει και το bolus για αυτούς τους υδατάνθρακες με βάση τις τρέχουσες αναλογίες( ή τη τιμή γλυκόζης στο αίμα ή η ινσουλίνη επί του οργανισμού, εάν έχει ρυθμιστεί).
+* Προηγμένες ρυθμίσεις για να ενεργοποιήσετε το superbolus στον οδηγό και για να εμφανίζετε φως κατάστασης στην αρχική οθόνη. Τα φώτα κατάστασης δίνουν μια οπτική προειδοποίηση για χαμηλό επίπεδο δεξαμενής και μπαταρίας, καθώς και καθυστερημένη αλλαγή θέσης.
     
-    ![Status lights - detail](../images/StatusLights.jpg)
+    ![Φωτισμοί κατάστασης - λεπτομέρειες](../images/StatusLights.jpg)
 
-## Treatments safety
+## Ασφάλεια θεραπειών
 
-### Max allowed bolus [U]
+### Μέγιστο επιτρεπόμενο όριο χορήγησης ινσουλίνης [U μονάδες]
 
-This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
+Αυτή είναι η μέγιστη ποσότητα ινσουλίνης που επιτρέπεται να χορηγήσει το AAPS. Αυτή η ρύθμιση υπάρχει ως όριο ασφαλείας για να αποφευχθεί η υπερβολική χορήγηση ινσουλίνης λόγω τυχαίας εισαγωγής ή σφάλματος χρήστη. Συνιστάται να το ρυθμίζετε σε μια λογική ποσότητα που αντιστοιχεί περίπου στη μέγιστη ποσότητα ινσουλίνης που πιθανόν να χρειαστείτε για ένα γεύμα ή μια διόρθωση. Αυτός ο περιορισμός εφαρμόζεται επίσης στον Υπολογιστή Bolus.
 
-### Max allowed carbs [g]
+### Μέγιστο επιτρεπόμενο όριο υδατανθράκων [γρ]
 
-This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+Αυτή είναι η μέγιστη ποσότητα υδατανθράκων που επιτρέπει ο υπολογιστής bolus AAPS. Αυτή η ρύθμιση υπάρχει ως όριο ασφαλείας για να αποφευχθεί η υπερβολική χορήγηση ινσουλίνης λόγω τυχαίας εισαγωγής ή σφάλματος χρήστη. Συνιστάται να το ορίσετε σε ένα λογικό ποσό που αντιστοιχεί περίπου στη μέγιστη ποσότητα υδατανθράκων που πιθανόν να χρειαστείτε για ένα γεύμα.
 
 ## Κύκλωμα
 
-You can toggle between open and closed looping here. Open looping means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump. Closed looping means TBR suggestions are automatically sent to your pump without confirmation or input from you. The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+Μπορείτε να αλλάξετε μεταξύ ανοιχτού και κλειστού κυκλώματος εδώ. Το ανοιχτό κύκλωμα σημαίνει ότι οι προτάσεις TBR βασίζονται στα δεδομένα σας και εμφανίζονται ως ειδοποίηση, αλλά πρέπει να επιλέξετε να τις αποδεχτείτε με μη αυτόματο τρόπο και να τις εισαγάγετε με μη αυτόματο τρόπο στην αντλία σας. Τα κλειστό κύκλωμα σημαίνει ότι οι προτάσεις TBR αποστέλλονται αυτόματα στην αντλία σας χωρίς επιβεβαίωση ή εισαγωγή από εσάς. Η αρχική οθόνη θα εμφανίσει στην επάνω αριστερή γωνία είτε είστε σε ανοικτό είτε κλειστό κύκλωμα, και πατώντας και κρατώντας πατημένο αυτό το πλήκτρο αρχικής οθόνης θα επιτρέψετε επίσης την εναλλαγή μεταξύ των δύο.
 
 ## OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed Objective 7 to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Το OpenAPS Advanced Meal Assist (Προηγμένος Βοηθός Γεύματος) (AMA) επιτρέπει στο σύστημα να φτάσει σε υψηλές ρυθμούς πιο γρήγορα μετά από ένα bolus γεύματος, αν εισάγετε αξιόπιστα τους υδατάνθρακες. Ενεργοποιήστε την στην καρτέλα Διαμόρφωσης για να δείτε τις ρυθμίσεις ασφάλειας εδώ, θα πρέπει να έχετε ολοκληρώσει τον Στόχο 7 για να χρησιμοποιήσετε αυτή τη λειτουργία. Μπορείτε να διαβάσετε περισσότερα σχετικά με τις ρυθμίσεις και τα [ Autosens στα OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### Μέγιστη U/hr (μονάδες ινσουλίνης ανά ώρα) που ένας προσωρινός βασικός ρυθμός μπορεί να ρυθμιστεί
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+Αυτή η ρύθμιση υπάρχει ως όριο ασφαλείας για να αποφευχθεί η πιθανότητα να δοθεί από το AAPS επικίνδυνα υψηλός βασικός ρυθμός. Η τιμή μετράται σε μονάδες ανά ώρα (u / hr). Συνιστάται να το ορίσετε σε κάτι λογικό. Μια καλή σύσταση είναι να λάβετε το υψηλότερο βασικό ποσοστό </strong> στο προφίλ σας και να το ** να το πολλαπλασιάσετε κατά 4 **. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
 
 ### Maximum basal IOB OpenAPS can deliver [U]
 
