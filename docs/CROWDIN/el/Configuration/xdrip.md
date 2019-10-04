@@ -18,60 +18,60 @@
 
 * Πατήστε ` Επιπλέον επιλογές `
 * Απενεργοποίηστε ` Ανέβασε θεραπείες ` και ` Δεδομένα συμπληρωματικής φόρτωσης `
-* Η επιλογή ` Ειδοποίηση για αποτυχίες ` θα πρέπει επίσης να απενεργοποιηθεί. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
+* Η επιλογή ` Ειδοποίηση για αποτυχίες ` θα πρέπει επίσης να απενεργοποιηθεί. Διαφορετικά, θα λάβετε ένα συναγερμό κάθε 5 λεπτά σε περίπτωση που το δίκτυο wifi / κινητής τηλεφωνίας είναι πολύ κακό ή ο διακομιστής δεν είναι διαθέσιμος.
    
-   ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
+   ![xDrip + Βασικές ρυθμίσεις 1](../images/xDrip_Basic1.png)
    
-   ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
+   ![xDrip + Βασικές ρυθμίσεις 2](../images/xDrip_Basic2.png)
 
-* **InterApp-Settings** (Broadcast) If you are going to use AndroidAPS and the data should be forwarded to i.e. AndroidAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+* ** Ρυθμίσεις InterApp ** (Broadcast) Εάν πρόκειται να χρησιμοποιήσετε το AndroidAPS και τα δεδομένα πρέπει να προωθηθούν π.χ. στο AndroidAPS, πρέπει να ενεργοποιήσετε τη μετάδοση στο xDrip + στις ρυθμίσεις Inter-App.
 
-* In order for the values to be equal, you should activate `Send the displayed glucose value`.
-* If you have also activated `Accept treatments` and broadcasting in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. more accurately.
+* Προκειμένου οι τιμές να είναι ίσες, θα πρέπει να ενεργοποιήσετε το ` Αποστολή της εμφανιζόμενης τιμής γλυκόζης `.
+* Εάν έχετε επίσης ενεργοποιήσει ` Αποδοχή θεραπειών ` και εκπομπή στο AndroidAPS, τότε το xDrip + θα λαμβάνει πληροφορίες από το AndroidAPS για ινσουλίνη, υδατάνθρακες και βασικό ρυθμό και μπορεί να εκτιμήσει την πρόβλεψη υπογλυκαιμίας κ. λπ. με καλύτερη ακρίβεια.
    
-   ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
+   ![+xDrip Βασικές ρυθμίσεις 3](../images/xDrip_Basic3.png)
 
-* Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+* Μερικοί άνθρωποι έχουν ανακαλύψει προβλήματα με την τοπική εκπομπή (το AAPS δεν λαμβάνει τιμές BG από το xDrip+) όταν το τηλέφωνο βρίσκεται σε λειτουργία πτήσης. Μεταβείτε στις Ρυθμίσεις> Ρυθμίσεις μεταξύ εφαρμογών> Εντοπισμός δέκτη και εισαγάγετε ` info.nightscout.androidaps `.
    
-   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+   ![+xDrip Basic Inter-app Ρυθμίσεις Προσδιορίζουν δέκτη](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ & Dexcom G6
 
-### xDrip+ version depending on G6 transmitter serial no.
+### xDrip + έκδοση ανάλογα με τον σειριακό αριθμό του πομπού G6.
 
 Για τους πομπούς G6 που κατασκευάστηκαν μετά το πέρας / τέλος του 2018 (δηλ. με σειριακό αριθμό. ξεκινώντας από 80 ή 81) βεβαιωθείτε ότι χρησιμοποιείτε τουλάχιστον τον κύριο πίνακα [ με ημερομηνία 2019/05/18 ](https://jamorham.github.io/#xdrip-plus).
 
 Εάν ο σειριακός αριθμός του πομπού Dexcom G6. ξεκινά με 8G... δοκιμάστε [nightly έκδοση 2019/07/28 ή μεταγενέστερη](https://github.com/NightscoutFoundation/xDrip/releases).
 
-### Dexcom specific settings
+### Dexcom συγκεκριμένες ρυθμίσεις
 
-* Open G5/G6 Debug Settings -> Hamburger Menu (top left of homescreen) -> Settings -> G5/G6 Debug Settings ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
+* Ανοίξτε τις ρυθμίσεις εντοπισμού σφαλμάτων G5 / G6 -> Μενού Hamburger (επάνω αριστερά στην αρχική οθόνη) -> Ρυθμίσεις -> Ρυθμίσεις εντοπισμού σφαλμάτων G5 / G6 ![Ανοίξτε τις ρυθμίσεις της εφαρμογής xDrip+](../images/xDrip_Dexcom_SettingsCall.png)
 
-* Enable the following settings
+* Ενεργοποιήστε τις ακόλουθες ρυθμίσεις
    
-   * `Use the OB1 Collector`
-   * `Native Algorithm` (important if you want to use SMB)
-   * `G6 support`
-   * `Allow OB1 unbonding`
-   * `Allow OB1 initiate bonding`
-* All other options should be disabled
-* Adjust battery warning level to 280 (bottom of G5/G6 Debug Settings)
+   * `Χρησιμοποιήστε το OB1 Συλλέκτη`
+   * `Τοπικός αλγόριθμος` (σημαντικό αν θέλετε να χρησιμοποιήσετε το SMB)
+   * `G6 υποστήριξη`
+   * `Επιτρέπουν την αποσύνδεση OB1`
+   * `Αφήστε το OB1 να αρχίσει τη σύνδεση`
+* Όλες οι άλλες επιλογές πρέπει να απενεργοποιηθούν
+* Προσαρμόστε το επίπεδο προειδοποίησης μπαταρίας στο 280 (κάτω από τις ρυθμίσεις εντοπισμού σφαλμάτων G5 / G6)
    
-   ![xDrip+ G5/G6 Debug Settings](../images/xDrip_Dexcom_DebugSettings.png)
+   ![ρυθμίσεις εντοπισμού σφαλμάτων xDrip + G5 / G6](../images/xDrip_Dexcom_DebugSettings.png)
 
-### Preemptive restarts not recommended
+### Οι προληπτικές επανεκκινήσεις δεν συνιστώνται
 
-**With Dexcom transmitters whos serial no. is starting with 8G preemtive restarts do not work and might kill the sensor completely!**
+**Με πομπούς της Dexcom, οι οποίοι έχουν σειριακό αριθμό. να ξεκινά με 8G προληπτικές επανεκκινήσεις δεν λειτουργούν και μπορεί να σκοτώσουν τον αισθητήρα εντελώς!**
 
-The automatic extension of Dexcom sensors (`preemtive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+Η αυτόματη επέκταση των αισθητήρων Dexcom (` προληπτικές επανεκκινήσεις`) δεν συνιστάται, καθώς αυτό μπορεί να οδηγήσει σε "άλματα" στις τιμές BG την ένατη ημέρα μετά την επανεκκίνηση.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![+xDrip μετάβαση μετά την προληπτική επανεκκίνηση](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
-* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
-* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
-* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
+* Αν χρησιμοποιείτε τα εγγενή δεδομένα με τον κωδικό βαθμονόμησης σε +xDrip ή Spike, το πιο ασφαλές που μπορείτε να κάνετε είναι να μην επιτρέψετε την προληπτική επανεκκίνηση του αισθητήρα.
+* Αν πρέπει να χρησιμοποιήσετε την προληπτική επανεκκίνηση, βεβαιωθείτε ότι εισάγετε μια ώρα της ημέρας όπου μπορείτε να παρατηρήσετε την αλλαγή και να βαθμονομήσετε εάν είναι απαραίτητο. 
+* Αν κάνετε επανεκκίνηση των αισθητήρων, καταρχήν κάντε το χωρίς την εργοστασιακή βαθμονόμηση για ασφαλέστερα αποτελέσματα στις ημέρες 11 και 12, και βεβαιωθείτε ότι είστε έτοιμοι να βαθμονομήσετε και να παρακολουθήσετε την παραλλαγή.
 * Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
 * If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
 
@@ -281,13 +281,13 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
    
    ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
-* Enable the following settings
+* Ενεργοποιήστε τις ακόλουθες ρυθμίσεις
    
    * `Turn Bluetooth on` 
    * `Use scanning`
    * `Always discover services`
 
-* All other options should be disabled
+* Όλες οι άλλες επιλογές πρέπει να απενεργοποιηθούν
    
    ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
