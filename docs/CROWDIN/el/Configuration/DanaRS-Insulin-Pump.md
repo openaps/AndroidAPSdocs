@@ -1,14 +1,14 @@
 # Αντλία DanaRS
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Αυτές οι οδηγίες αφορούν τη διαμόρφωση της εφαρμογής και της αντλίας σας εάν έχετε μια DanaRS από το 2017 και μετά. Επισκεφθείτε την  DanaR Αντλία Ινσουλίνης </ 0> αν έχετε την DanaR αντλία.</em></p> 
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* Στην αντλία DanaRS χρησιμοποιείται η εφαρμογή "βασικός ρυθμός Α". Τα υπάρχοντα δεδομένα αντικαθίστανται.
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* Στο AndroidAPS μεταβείτε στη Διαμόρφωση και επιλέξτε 'DanaRS'
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Επιλέξτε Μενού αγγίζοντας τις 3 τελείες στην επάνω δεξιά γωνία. Επιλέξτε Προτιμήσεις.
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* Επιλέξτε τη νέα αντλία DanaRS και κάντε κλικ στον σειριακό αριθμό της DanaRS.
   
       ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
       
