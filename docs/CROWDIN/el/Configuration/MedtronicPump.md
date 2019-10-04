@@ -26,7 +26,7 @@
 
 ## Διαμόρφωση της αντλίας
 
-- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). Πρέπει να έχετε τουλάχιστον ένα αναγνωριστικό στη λίστα απομακρυσμένων αναγνωριστικών. Αυτές οι επιλογές ενδέχεται να φαίνονται διαφορετικά σε διαφορετικό μοντέλο αντλίας. Αυτό το βήμα είναι σημαντικό, γιατί όταν ρυθμιστεί, η αντλία θα ακούει πιο συχνά για απομακρυσμένη επικοινωνία.
+- ** Ενεργοποιήστε την απομακρυσμένη λειτουργία στην αντλία ** (Βοηθητικά προγράμματα -> Απομακρυσμένες επιλογές, επιλέξτε Ναι, και στην επόμενη οθόνη κάντε Προσθήκη ταυτότητας και προσθέστε ψεύτικη ταυτότητα (111111 ή κάτι τέτοιο). Πρέπει να έχετε τουλάχιστον ένα αναγνωριστικό στη λίστα απομακρυσμένων αναγνωριστικών. Αυτές οι επιλογές ενδέχεται να φαίνονται διαφορετικά σε διαφορετικό μοντέλο αντλίας. Αυτό το βήμα είναι σημαντικό, γιατί όταν ρυθμιστεί, η αντλία θα ακούει πιο συχνά για απομακρυσμένη επικοινωνία.
 - ** Ρυθμίστε το μέγιστο βασικό** στην αντλία σας στο "εισαγωγή μεγίστου βασικού στο προφίλ STD" * 4 (αν θέλετε να έχετε 400% TBR ως μέγιστο). Αυτός ο αριθμός πρέπει να είναι κάτω από 35 (όπως μπορείτε να δείτε στην αντλία).
 - ** Ορισμός μέγιστης δόσης ** στην αντλία σας (το μέγιστο είναι 25)
 - ** Ρυθμίστε το προφίλ σε STD **. Αυτό θα είναι το μοναδικό προφίλ που θα χρησιμοποιήσουμε. Μπορείτε επίσης να απενεργοποιήσετε.
@@ -39,7 +39,7 @@
 - Μπορείτε να ρυθμίσετε την αντλία στο AndroidAPS με δύο τρόπους: 
 
 1. Χρήση του Οδηγού (σε νέα εγκατάσταση)
-2. Directly in Config tab (Cog icon on Medtronic driver)
+2. Απευθείας στην καρτέλα Config (εικονίδιο Cog στο πρόγραμμα οδήγησης της Medtronic)
 
 Αν κάνετε νέα εγκατάσταση, θα πεταχτείτε απευθείας στον οδηγό. Μερικές φορές, εάν η σύνδεσή σας BT δεν λειτουργεί πλήρως (δεν μπορείτε να συνδεθείτε με την αντλία), ενδέχεται να μην μπορείτε να ολοκληρώσετε τη διαμόρφωση. Σε αυτή την περίπτωση επιλέξτε την εικονική αντλία και αφού ολοκληρωθεί ο οδηγός, μπορείτε να πάτε με την επιλογή 2, η οποία θα παρακάμψει την ανίχνευση της αντλίας.
 
@@ -134,35 +134,35 @@
 
 ### Μπορώ να δω τη δύναμη του RileyLink / GNARL;
 
-No. Προς το παρόν καμία από αυτές τις συσκευές δεν το υποστηρίζει αυτό και μάλλον δεν θα το κάνει στο μέλλον.
+Όχι. Προς το παρόν καμία από αυτές τις συσκευές δεν το υποστηρίζει αυτό και μάλλον δεν θα το κάνει στο μέλλον.
 
 ### Είναι το GNARL πλήρης αντικατάσταση για το RileyLink;
 
-Ναι. Ο συγγραφέας του GNARL πρόσθεσε όλες τις λειτουργίες που χρησιμοποιεί ο οδηγός της Medtronic. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Ναι. Ο συγγραφέας του GNARL πρόσθεσε όλες τις λειτουργίες που χρησιμοποιεί ο οδηγός της Medtronic. Υποστηρίζεται όλη η επικοινωνία της Medtronic (τη στιγμή της σύνταξης (Ιούνιος / 2019). Το GNARL δεν μπορεί να χρησιμοποιηθεί για επικοινωνία Omnipod. Το μειονέκτημα του GNARL είναι ότι πρέπει να το φτιάξετε μόνοι σας και πρέπει να έχετε συμβατή έκδοση υλικού.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+** Σημείωση από συντάκτη: ** Λάβετε υπόψη ότι το λογισμικό GNARL εξακολουθεί να είναι πειραματικό και ελαφρώς δοκιμασμένο και δεν πρέπει να θεωρείται ασφαλές ως RileyLink.
 
-### Where can I get RileyLink or GNARL?
+### Πού μπορώ να βρω το RileyLink ή το GNARL;
 
-Like mentioned before you can get devices here:
+Όπως προαναφέρθηκε μπορείτε να πάρετε συσκευές εδώ:
 
-- RileyLink - You can get device here - [getrileylink.org](https://getrileylink.org/).
-- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
+- RileyLink - Μπορείτε να πάρετε τη συσκευή εδώ - [ getrileylink.org ](https://getrileylink.org/).
+- GNARL - Μπορείτε να λάβετε πληροφορίες εδώ, αλλά η συσκευή πρέπει να παραγγελθεί αλλού ([ github.com/ecc1/gnarl ](https://github.com/ecc1/gnarl)).
 
-### What to do if I loose connection to RileyLink and/or pump?
+### Τι πρέπει να κάνω εάν χάσω τη σύνδεση με το RileyLink ή / και την αντλία;
 
-1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
-2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink.
-3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action.
-4. Try 3 and 2 together.
-5. Reset RileyLink and reset phone.
+1. Εκτελέστε τη λειτουργία "Ξυπνήστε και συντονίστε", αυτή θα προσπαθήσει να βρει τη σωστή συχνότητα για να επικοινωνήσει με την αντλία.
+2. Απενεργοποιήστε το Bluetooth, περιμένετε 10 δευτερόλεπτα και ενεργοποιήστε το ξανά. Αυτό θα αναγκάσει την επανασύνδεση με το RileyLink.
+3. Επαναφέρετε το RileyLink, αφού το κάνετε αυτό, μην ξεχάσετε να εκτελέσετε τη διαδικασία "Επαναφορά διαμόρφωσης RileyLink ".
+4. Δοκιμάστε 3 και 2 μαζί.
+5. Επαναφέρετε το RileyLink και επαναφέρετε το τηλέφωνο.
 
-### How to determine what Frequency my pump uses
+### Πώς να καθορίσετε ποια συχνότητα χρησιμοποιεί η αντλία σας
 
-![Pump Model](../images/Medtronic06.png)
+![Μοντέλο αντλίας](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Εάν γυρίσετε την αντλία σας στην πρώτη γραμμή στη δεξιά πλευρά θα δείτε ειδικό κωδικό 3 γραμμάτων. Τα πρώτα δύο γράμματα καθορίζουν τον τύπο συχνότητας και το τελευταίο προσδιορίζει το χρώμα. Εδώ είναι πιθανές τιμές για τη συχνότητα:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- ΒA - Βόρεια Αμερική (στην επιλογή συχνότητας πρέπει να επιλέξετε "ΗΠΑ & Καναδάς (916 MHz)")
+- ΚA - Καναδάς (στην επιλογή συχνότητας πρέπει να επιλέξετε "ΗΠΑ & Καναδάς (916 MHz)")
+- ΠΑ - Παγκοσμίως (στην επιλογή συχνότητας πρέπει να επιλέξετε "Σε όλο τον κόσμο (868 Mhz)")
