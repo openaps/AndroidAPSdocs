@@ -89,7 +89,7 @@ Vyberte, který zdroj glykémií používáte – další informace k nastavení
 * Glykémie z NSClient
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms. ![Konfigurace – Zdroj glykémie](../images/ConfBuild_BGSource.png)
+* [Aplikace Dexcom G (upravená)](https://github.com/dexcomapp/dexcomapp/) – chcete-li používat alarmy xDrip+, vyberte v nastavení „Odesílat glykémie do xDrip+“. ![Konfigurace – Zdroj glykémie](../images/ConfBuild_BGSource.png)
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pumpa

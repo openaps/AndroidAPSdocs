@@ -6,7 +6,7 @@ How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md
 
 ## Can I just download the AndroidAPS installation file?
 
-No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+Όχι. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
 
 AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
 
@@ -283,9 +283,9 @@ Many users turn the phone into airplane mode at night. If you want the loop to s
 
 You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Μερικοί άνθρωποι έχουν ανακαλύψει προβλήματα με την τοπική εκπομπή (το AAPS δεν λαμβάνει τιμές BG από το xDrip+) όταν το τηλέφωνο βρίσκεται σε λειτουργία πτήσης. Μεταβείτε στις Ρυθμίσεις> Ρυθμίσεις μεταξύ εφαρμογών> Εντοπισμός δέκτη και εισαγάγετε ` info.nightscout.androidaps `.
 
-![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+![+xDrip Basic Inter-app Ρυθμίσεις Προσδιορίζουν δέκτη](../images/xDrip_InterApp_NS.png)
 
 ### Travelling
 

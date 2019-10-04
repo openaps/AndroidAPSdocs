@@ -126,7 +126,7 @@ Troubleshooting
    Pumps <./FGT/Troubleshootingpumps.rst>
 
 
-FAQ 
+Συχνές ερωτήσεις 
 ------------------------------------------
 .. toctree::
    :maxdepth: 1

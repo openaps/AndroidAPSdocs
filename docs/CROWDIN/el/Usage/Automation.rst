@@ -19,7 +19,7 @@ There are some limits:
 
 * The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
 * The profile percentage has to be between 70 % and 130%.
-* There is a 5 min. time limit between execusions (and first execustion).
+* There is a 5 min. time limit between executions (and first execution).
 
 **Please be careful:**
 
