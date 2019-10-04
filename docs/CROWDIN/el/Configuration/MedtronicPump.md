@@ -41,104 +41,104 @@
 1. Χρήση του Οδηγού (σε νέα εγκατάσταση)
 2. Directly in Config tab (Cog icon on Medtronic driver)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Αν κάνετε νέα εγκατάσταση, θα πεταχτείτε απευθείας στον οδηγό. Μερικές φορές, εάν η σύνδεσή σας BT δεν λειτουργεί πλήρως (δεν μπορείτε να συνδεθείτε με την αντλία), ενδέχεται να μην μπορείτε να ολοκληρώσετε τη διαμόρφωση. Σε αυτή την περίπτωση επιλέξτε την εικονική αντλία και αφού ολοκληρωθεί ο οδηγός, μπορείτε να πάτε με την επιλογή 2, η οποία θα παρακάμψει την ανίχνευση της αντλίας.
 
-![MDT Settings](../images/Medtronic01.png)
+![Ρυθμίσεις MDT](../images/Medtronic01.png)
 
-You need to set following items: (see picture above)
+Πρέπει να ορίσετε τα παρακάτω στοιχεία: (δείτε την παραπάνω εικόνα)
 
-- **Pump Serial Number**: You can find that on back side, entry SN. You need to get only number, your serial is 6 numbers.
-- **Pump Type**: Which pump type you have (i.e. 522). 
-- **Pump Frequency**: According to pump frequency there were two versions of Medtronic pump made (if you are not sure what frequency your pump uses, look at [FAQ](../Configuration/MedtronicPump#faq)): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
-- **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. It limits how much insulin you can Bolus. If you go over this, Bolus won't be set and error will be returned. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
-- **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
-- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
-- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
-- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
-- **RileyLink Configuration**: This will find your RileyLink/GNARL device.
+- ** Σειριακός αριθμός αντλίας **: Μπορείτε να βρείτε αυτό στην πίσω πλευρά, είσοδος SN. Πρέπει να πάρετε μόνο τα νούμερα, η σειρά σας είναι 6 αριθμοί.
+- **Τύπος αντλίας**: Ποιο τύπο αντλίας έχετε (π.χ. 522). 
+- ** Συχνότητα αντλίας **: Σύμφωνα με τη συχνότητα της αντλίας, πραγματοποιήθηκαν δύο εκδόσεις της αντλίας Medtronic (αν δεν είστε σίγουροι για τη συχνότητα που χρησιμοποιεί η αντλία σας, κοιτάξτε [ Συχνές ερωτήσεις ](../Configuration/MedtronicPump#faq)): 
+    - για ΗΠΑ & Καναδά, η συχνότητα που χρησιμοποιείται είναι 916 Mhz
+    - για παγκόσμια κλίμακα, η συχνότητα που χρησιμοποιείται είναι 868 Mhz
+- ** Μέγιστο Bolus στην αντλία(U) ** (σε μια ώρα): Αυτό πρέπει να ρυθμιστεί στο ίδιο επίπεδο όπως και στην αντλία. Περιορίζει πόση ινσουλίνη μπορείτε να κάνετε με το Bolus. Εάν υπερβείτε αυτό, το Bolus δεν θα δοθεί και σφάλμα θα ηχήσει. Το μέγιστο που μπορεί να χρησιμοποιηθεί είναι 25, ορίστε τη σωστή τιμή για τον εαυτό σας εδώ, ώστε να μην κάνετε υπερβολική δόση.
+- ** Μέγιστος βασικός στην αντλία (U / h) **: Αυτό πρέπει να ρυθμιστεί στο ίδιο επίπεδο όπως και στην αντλία. Περιορίζει πόση βασική μπορείτε να πάρετε σε μια ώρα. Έτσι, για παράδειγμα, εάν θέλετε να ρυθμίσετε το μέγιστο TBR στο 500% και το υψηλότερο των βασικών μοτίβων σας είναι 1,5 U, τότε θα πρέπει να ρυθμίσετε το Max Basal σε τουλάχιστον 7,5. Αν αυτή η ρύθμιση είναι λάθος (για παράδειγμα, αν ένα από τα βασικά μοτίβα σας υπερβεί αυτή την τιμή, η αντλία θα επιστρέψει σφάλμα).
+- ** Καθυστέρηση πριν από την εκκίνηση του Bolus **: Αυτό είναι καθυστέρηση πριν από την αποστολή bolus στην αντλία, έτσι ώστε αν αλλάξετε γνώμη, μπορείτε να την ακυρώσετε. Η ακύρωση του bolus κατά τη χορήγηση του bolus δεν υποστηρίζεται από την αντλία (εάν θέλετε να σταματήσετε το bolus κατά τη διάρκεια της λειτουργίας, πρέπει να σταματήσετε την αντλία και στη συνέχεια να συνεχίσετε).
+- ** Κωδικοποίηση Medtronic **: Αυτή είναι η ρύθμιση που καθορίζει αν η κωδικοποίηση 4b6b που κάνουν οι συσκευές της Medtronic θα γίνει στο AndroidAPS ή στο RileyLink. Αν έχετε RileyLink με firmware 2.x, η προεπιλεγμένη τιμή θα είναι να χρησιμοποιήσετε την κωδικοποίηση υλικού (= έγινε από RileyLink), αν έχετε 0.x firmware, αυτή η ρύθμιση θα αγνοηθεί.
+- ** Τύπος μπαταρίας (Power View) **: Αν θέλετε να δείτε την ισχύ της μπαταρίας στην αντλία σας, πρέπει να επιλέξετε τον τύπο μπαταρίας που χρησιμοποιείτε (υποστηρίζεται προς το παρόν Lithium ή Alkaline) υπολογισμένο ποσοστό και βολτ.
+- ** Διαμόρφωση RileyLink **: Θα βρείτε τη συσκευή σας RileyLink / GNARL.
 
-## MEDTRONIC (MDT) Tab
+## Καρτέλα MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png)
+![Καρτέλα MDT](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+Στην καρτέλα αντλίας μπορείτε να δείτε αρκετές γραμμές που εμφανίζουν την τρέχουσα κατάσταση αντλιών (και συνδέσεων).
 
-- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
-- **Last connection**: Time when last connection to pump was successful.
-- **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
-- **Temp basal**: Temp basal that is running or empty.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- ** Κατάσταση RileyLink **: Εμφανίζει την κατάσταση της σύνδεσης RileyLink. Το τηλέφωνο θα πρέπει να είναι συνεχώς συνδεδεμένο στο RileyLink.
+- ** Κατάσταση αντλίας **: Κατάσταση σύνδεσης αντλίας, αυτό μπορεί να έχει πολλές τιμές, αλλά κυρίως θα δούμε εικονίδιο ύπνου (όταν η σύνδεση αντλίας δεν είναι ενεργή), όταν η εντολή εκτελείται, μπορεί να δείτε ''ξύπνημα'', το οποίο είναι το AAPS που προσπαθεί να κάνει σύνδεση με την αντλία σας ή την περιγραφή οποιασδήποτε εντολής που μπορεί να τρέχει στην αντλία (π. χ.: ρύθμισε ώρα, όρισε TBR, κλπ.).
+- ** Μπαταρία **: Εμφανίζει την κατάσταση μπαταρίας ανάλογα με τη διαμόρφωσή σας. Αυτό μπορεί να είναι ένα απλό εικονίδιο που δείχνει εάν η μπαταρία είναι άδεια ή γεμάτη (κόκκινο εάν η μπαταρία είναι κρίσιμη, κάτω από 20%), ή ποσοστό και τάση.
+- ** Τελευταία σύνδεση **: Ο χρόνος κατά τον οποίο η τελευταία σύνδεση με την αντλία ήταν επιτυχής.
+- ** Τελευταία bolus **: Πότε δόθηκε το τελευταίο bolus.
+- ** Κύριος βασικός ρυθμός **: Αυτός είναι ο κύριος βασικός ρυθμός που τρέχει στην αντλία αυτή την ώρα.
+- ** Προσωρινός βασικός **: Προσωρινός βασικός που εκτελείται ή είναι άδειος.
+- ** Δεξαμενή **: Πόση ινσουλίνη υπάρχει στη δεξαμενή (ενημερώνεται τουλάχιστον κάθε ώρα).
+- ** Σφάλματα **: Η σειρά σφάλματος αν υπάρχει πρόβλημα (συνήθως δείχνει αν υπάρχει σφάλμα στη διαμόρφωση).
 
-On lower end we have 3 buttons:
+Στο κάτω άκρο έχουμε 3 κουμπιά:
 
-- **Refresh** is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- ** Ανανέωση ** προορίζεται για την ανανέωση της κατάστασης. Αυτό θα πρέπει να χρησιμοποιείται μόνο αφού η σύνδεση δεν υπήρχε εδώ και πολύ καιρό, καθώς αυτή η ενέργεια θα επαναφέρει δεδομένα σχετικά με την αντλία (ανάκτηση ιστορικού, λήψη / ρύθμιση ώρας, λήψη προφίλ, λήψη κατάστασης μπαταρίας κλπ.).
+- ** Ιστορικό αντλίας **: Εμφανίζει το ιστορικό αντλίας (δείτε [ παρακάτω ](../Configuration/MedtronicPump#pump-history))
+- ** Στατιστικά RL **: Εμφάνιση στατιστικών RL (δείτε [ παρακάτω ](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
-## Pump History
+## Ιστορικό αντλίας
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Διάλογος ιστορικού αντλίας](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Το ιστορικό της αντλίας ανακτάται κάθε 5 λεπτά και αποθηκεύεται τοπικά. Διατηρούμε το ιστορικό μόνο για τις τελευταίες 24 ώρες, έτσι οι παλαιότερες καταχωρήσεις καταργούνται όταν προστίθενται νέες. Αυτός είναι ένας απλός τρόπος για να δείτε το ιστορικό της αντλίας (ορισμένες καταχωρίσεις από την αντλία ενδέχεται να μην εμφανίζονται, επειδή δεν είναι σχετικές - για παράδειγμα, διαμόρφωση λειτουργιών που δεν χρησιμοποιούνται από το AndroidAPS).
 
-## RL Status (RileyLink Status)
+## Κατάσταση RL (κατάσταση RileyLink)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![Κατάσταση RileyLink - Ρυθμίσεις](../images/Medtronic04.png) ![Κατάσταση RileyLink - Ιστορικό](../images/Medtronic05.png)
 
-Dialog has two tabs:
+Το παράθυρο διαλόγου έχει δύο καρτέλες:
 
-- **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- ** Ρυθμίσεις **: Εμφανίζει τις ρυθμίσεις για το RileyLink: Διαμορφωμένη διεύθυνση, συνδεδεμένη συσκευή, κατάσταση σύνδεσης, σφάλμα σύνδεσης και εκδόσεις firmware RileyLink. Ο τύπος συσκευής είναι πάντα η αντλία Medtronic, το μοντέλο θα είναι το μοντέλο σας, ο σειριακός αριθμός έχει διαμορφωθεί στον σειριακό αριθμό, η συχνότητα αντλίας δείχνει τη συχνότητα που χρησιμοποιείτε, η τελευταία συχνότητα είναι η τελευταία χρησιμοποιούμενη συχνότητα.
+- ** Ιστορικό **: Εμφανίζει το ιστορικό επικοινωνίας, τα στοιχεία με το RileyLink δείχνει αλλαγές κατάστασης για το RileyLink και το Medtronic δείχνει ποιες εντολές έχουν σταλεί στην αντλία.
 
-## Actions
+## Ενέργειες
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Όταν είναι επιλεγμένο το πρόγραμμα οδήγησης της Medtronic, μπορούν να προστεθούν 3 ενέργειες στην καρτέλα Ενέργειες:
 
-- **Wake and Tune Up** - If you see that your AndroidAPS hasn't contacted your pump in a while (it should contact it every 5 minutes), you can force Tune Up. This will try to contact your pump, by searching all sub frequencies on which Pump can be contacted. If it finds one it will set it as your default frequency. 
-- **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-- **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
+- **Wake and Tune Up ** - Εάν δείτε ότι το AndroidAPS σας δεν έρχεται σε επαφή με την αντλία σας κάποια στιγμή (πρέπει να επικοινωνήσετε με αυτό κάθε 5 λεπτά), μπορείτε να εξαναγκάσετε τη ρύθμιση Tune Up. Αυτό θα προσπαθήσει να επικοινωνήσει με την αντλία σας, αναζητώντας όλες τις δευτερεύουσες συχνότητες στις οποίες μπορεί να επικοινωνήσει η αντλία. Αν βρίσκει κάποια, θα την ορίσει ως την προεπιλεγμένη συχνότητα. 
+- ** Επαναφορά του RileyLink Config ** - Εάν επαναφέρετε το RileyLink / GNARL, πρέπει να χρησιμοποιήσετε αυτήν την ενέργεια, έτσι ώστε να είναι δυνατή η αναδιάρθρωση της συσκευής (ρύθμιση συχνότητας, ρύθμιση τύπου συχνότητας, ρύθμιση παραμέτρων κωδικοποίησης).
+- ** Εκκαθάριση αποκλεισμού bolus ** - Όταν ξεκινάτε το bolus, ρυθμίζουμε το Bolus Block, το οποίο εμποδίζει την έκδοση οποιασδήποτε εντολής για την αντλία. Αν αναστείλετε την αντλία σας και συνεχίσετε (για να ακυρώσετε το bolus), μπορείτε να καταργήσετε αυτό το μπλοκ. Η επιλογή υπάρχει μόνο όταν εκτελείται bolus... 
 
-## Important notes
+## Σημαντικές σημειώσεις
 
-### Logging
+### Καταγραφή
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Εφόσον το πρόγραμμα οδήγησης της Medtronic είναι πολύ καινούργιο, πρέπει να ενεργοποιήσετε την καταγραφή, ώστε να εντοπίσουμε τα λάθη και να διορθώσουμε τα προβλήματα, αν αυτά προκύψουν. Κάντε κλικ στο εικονίδιο στην επάνω αριστερή γωνία, επιλέξτε Συντήρηση και Ρυθμίσεις καταγραφής. Οι επιλογές αντλίας, επικοινωνία αντλίας, επικοινωνία BT αντλίας πρέπει να ελεγχθούν.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+Όταν κάνετε επανεκκίνηση του RileyLink ή του GNARL, πρέπει είτε να κάνετε νέα ρύθμιση ''TuneUp'' (ενέργεια "Ξυπνήστε και συντονίστε") είτε να ξαναστείλετε τις παραμέτρους επικοινωνίας (ενέργεια "Reset RileyLink Config"), διαφορετικά η επικοινωνία θα αποτύχει.
 
 ### CGMS
 
-Medtronic CGMS is currently NOT supported.
+Το Medtronic CGMS δεν υποστηρίζεται επί του παρόντος.
 
-### Manual use of pump
+### Χειροκίνητη χρήση της αντλίας
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Θα πρέπει να αποφύγετε χειροκίνητα την επεξεργασία θεμάτων στην αντλία σας. Όλες οι εντολές (bolus, TBR) θα πρέπει να περάσουν από το AndroidAPS, αλλά εάν συμβεί να κάνετε χειροκίνητες εντολές, ΔΕΝ χρησιμοποιείτε εντολές με συχνότητα μικρότερη από 3 λεπτά (έτσι εάν κάνετε 2 bolus (για οποιοδήποτε λόγο) το δεύτερο πρέπει να είναι τουλάχιστον 3 λεπτά μετά το πρώτο).
 
-## Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
+## Αλλαγές ζώνης ώρας και DST (Daylight Saving Time) ή Ταξιδεύοντας με την αντλία Medtronic και το AndroidAPS
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+Σημαντικό πράγμα που πρέπει να θυμάστε είναι ότι δεν πρέπει ποτέ να απενεργοποιήσετε το κύκλωμα όταν ταξιδεύετε (εκτός αν το CGMS σας δεν μπορεί να κάνει λειτουργία εκτός σύνδεσης). Το AAPS θα ανιχνεύσει αυτόματα τις αλλαγές ζώνης ώρας και θα στείλει εντολή στην αντλία για να αλλάξει το χρόνο, όταν αλλάξει ο χρόνος στο τηλέφωνο.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Τώρα αν ταξιδεύετε στην Ανατολή και οι αλλαγές της ζώνης ώρας αλλάζουν σας προσθέτοντας ώρες (π. χ. από GMT + 0 έως GMT + 2), το ιστορικό αντλιών δεν θα έχει πρόβλημα και δεν χρειάζεται να ανησυχείτε... αλλά αν ταξιδέψετε Δυτικά και οι αλλαγές της ζώνης ώρας γίνονται με την αφαίρεση ωρών (GMT + 2 έως GMT-0), τότε ο συγχρονισμός μπορεί να είναι μικρός. Με απλά λόγια, αυτό σημαίνει ότι για τις επόμενες x ώρες θα πρέπει να είστε προσεκτικοί, επειδή το IOB σας, μπορεί να είναι λίγο περίεργο.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Γνωρίζουμε αυτό το πρόβλημα και ήδη ψάχνουμε για μια πιθανή λύση (βλ. Https://github.com/andyrozman/RileyLinkAAPS/issues/145), αλλά προς το παρόν έχετε υπόψη σας αυτές τις πληροφορίες όταν ταξιδεύετε.
 
-## FAQ
+## Συχνές ερωτήσεις
 
-### Can I see the power of RileyLink/GNARL?
+### Μπορώ να δω τη δύναμη του RileyLink / GNARL;
 
-No. At the moment none of this devices support this and it probably won't even in the future.
+No. Προς το παρόν καμία από αυτές τις συσκευές δεν το υποστηρίζει αυτό και μάλλον δεν θα το κάνει στο μέλλον.
 
-### Is GNARL full replacement for RileyLink?
+### Είναι το GNARL πλήρης αντικατάσταση για το RileyLink;
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Ναι. Ο συγγραφέας του GNARL πρόσθεσε όλες τις λειτουργίες που χρησιμοποιεί ο οδηγός της Medtronic. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
