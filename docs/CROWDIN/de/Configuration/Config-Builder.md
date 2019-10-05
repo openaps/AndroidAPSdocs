@@ -89,7 +89,10 @@ Wähle die von dir genutzte Blutzuckerquelle. Weitere Informationen zu den Einst
 * Nightscout-Client BZ
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
-* [gepatchte Dexcom App](https://github.com/dexcomapp/dexcomapp/) - Wähle zusätzlich in den Einstellungen "Sende BZ-Werte zu xDrip+", wenn du die xDrip+ Alarme nutzen willst. ![Konfigurations-Generator - BZ-Quelle](../images/ConfBuild_BGSource.png)
+* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
+    
+    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pumpe
