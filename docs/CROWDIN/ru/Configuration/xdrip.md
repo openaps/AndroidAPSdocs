@@ -39,13 +39,13 @@
 
 ## xDrip+ & Dexcom G6
 
-### xDrip+ version depending on G6 transmitter serial no.
+### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
 Для трансмиттеров G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
 Если серийный номер трансмиттера Dexcom G6 начинается с 8G... пользуйтесь [ночной сборкой от 2019/07/28 или позже](https://github.com/NightscoutFoundation/xDrip/releases).
 
-### Dexcom specific settings
+### Настройки для работы с Dexcom
 
 * Open G5/G6 Debug Settings -> Hamburger Menu (top left of homescreen) -> Settings -> G5/G6 Debug Settings ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
 
