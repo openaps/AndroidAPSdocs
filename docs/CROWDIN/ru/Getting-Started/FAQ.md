@@ -237,51 +237,55 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 Однако замена катетера происходит не через функцию "первичного заполнения инфузионного набора" на помпе, а заполняет его с помощью болюса, который не отражается в истории болюсов. Это означает, что текущая временная скорость базала не прерывается. На вкладке Действия при помощи кнопки ЗАПОЛНИТЬ задайте то количество инсулина, которое необходимого для заполнения инфузионного набора и начните первичное заполнение. Если этого количества не достаточно, повторите заполнение. Вы можете установить кнопки по умолчанию в Настройках > Другое > Заполнить/Инициировать стандартные количества инсулина. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
 
-## Повседневное применение
+## Wallpaper
+
+You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+
+## Daily usage
 
 ### Гигиена
 
 #### Что делать при приеме душа или ванной?
 
-Вы можете снять помпу при приеме душа или ванной. На этот короткий период времени она вам, как правило, не понадобится. Но вы должны сообщить об этом AAPS чтобы расчеты активного инсулина IOB были правильными.
+You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
 
-См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### На работе
 
-В зависимости от вида работы, возможно, вы используете иные методы терапии в рабочие дни. Следует подумать о [ переключении профиля](../Usage/Profiles.md) на планируемый рабочий день (например, более 100% на 8 ч при сидячей работе или менее 100% при активном режиме), высокой или низкой временной цели или [сдвиге времени профиля](../Usage/Profiles#time-shift), когда вы встаете гораздо раньше или позже, чем обычно. Если вы используете профили Nightscout, вы можете создать второй профиль (например, дом' и 'работа') и переключаться с профиля на профиль при необходимости.
+Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
-## Досуг
+## Leisure activities
 
 ### Спорт
 
 ### Секс
 
-Можете снять помпу для "свободы" но следует сообщить об этом AAPS, чтобы расчеты активного инсулина IOB были правильными.
+You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
 
-См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Употребление алкоголя
 
-Употребление алкоголя является рискованным в режиме замкнутого цикла, так как алгоритм ИПЖ не может правильно предсказать влияние алкоголя на ГК. Следует выработать свой собственный метод подхода к этому вопросу с помощью следующих функций в AndroidAPS:
+Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
 
 * Деактивировать режим замкнутого цикла и разбираться с диабетом вручную или
 * устанавливать высокие временные цели и отключать незапланированный прием пищи UAM, чтобы избежать увеличения активного инсулина IOB из-за непредусмотренной еды или
 * переключить профиль на величину, заметно менее 100% 
 
-При употреблении алкоголя всегда нужно следить за мониторингом, чтобы вручную избежать гипокликемии, съедая углеводы.
+When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
 ### Сон
 
 #### Как обеспечить работу цикла ночью без воздействия мобильного и WIFI излучения?
 
-Многие пользователи ночью переводят телефон в режим авиаперелета. Если вы хотите, чтобы AAPS поддерживал вас во время сна, действуйте следующим образом (будет работать только с локальным источником ГК, таким как xDrip+ или приложением Dexcom с патчем, но НЕ будет работать, если вы получаете данные ГК с сайта Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
 
 1. Включите режим авиаперелета на вашем мобильном устройстве.
 2. Подождите, пока режим авиаперелета не будет активирован.
 3. Включите Блутус.
 
-Теперь вы не принимаете звонки и не подключены к Интернету. Но цикл продолжает работу.
+You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
 У некоторых пользователей обнаружились проблемы с локальной трансляцией (AAPS не получает данные от xDrip+) в режиме авиаперелета. Перейдите в Настройки xdrip+ > Inter-app settings > Identify receiver и введите `info.nightscout.androidaps`.
 
@@ -291,16 +295,16 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 #### Как справляться с изменениями часового пояса?
 
-Если у вас DanaR или DanaR для корейского рынка делать ничего не надо. Для других помп смотрите страницу [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling.md) для более подробной информации.
+With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
 
-## Медицинские аспекты
+## Medical topics
 
 ### Госпитализация
 
-Если вы хотите поделиться информацией об AndroidAPS и ИПЖ с врачами, можете распечатать [руководство по AndroidAPS для клиник](../Resources/clinician-guide-to-AndroidAPS.md).
+If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### На приеме у эндокринолога
 
 #### Отчетность
 
-Вы можете либо распечатать отчеты вашего сайта Nightscout (https://вашсайт.com/report) или перейти в [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
