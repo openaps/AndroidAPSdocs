@@ -380,6 +380,12 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
+ <td>Wallpaper</td>
+ <td>AndroidAPS background image</td>
+ <td></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+</tr>
+<tr>
  <td>xDrip / xDrip+</td>
  <td>open source software to read CGM systems</td>
  <td>&nbsp;</td>
