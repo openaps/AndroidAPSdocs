@@ -269,31 +269,31 @@
 * Остановить сенсор
 * Перезапустить телефон
 * Запустить сенсор введя код 0000 (четыре нуля)
-* Wait 15 minutes
+* Подождать 15 минут
 * Остановить сенсор
-* Start sensor with "real" code (printed on the adhesive protector)
+* Запустить датчик с "реальным" кодом (напечатан на клеящемся протекторе)
 
 Проверьте журнал xDrip+, начинает ли xDrip+ отсчет "Продолжительность:: 1 минута" (и так далее). Только в журналах xdrip+ вы можете обнаружить на раннем этапе, остановлен ли сенсор. Более поздний статус не всегда отображается правильно внизу главного экрана.
 
 ## xDrip+ & Libre Freestyle
 
-### Libre specific settings
+### Специфические настройки Libre
 
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+* Откройте настройки Bluetooth -> Сэндвич-меню (сверху слева на главном экране) -> Настройки -> прокрутить вниз -> Менее распространенные настройки -> Настройки Bluetooth
    
    ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Активируйте следующие параметры
    
-   * `Turn Bluetooth on` 
-   * `Use scanning`
-   * `Always discover services`
+   * `Включить Bluetooth` 
+   * `Использовать сканирование`
+   * `Всегда обнаруживать сервисы`
 
 * Все другие опции должны быть отключены
    
    ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Connect Libre Transmitter & start sensor
+### Подключите трансмиттер Libre и запустите сенсор
 
 ![xDrip+ запуск трансмиттера Libre & Сенсор 1](../images/xDrip_Libre_Transmitter01.png)
 
