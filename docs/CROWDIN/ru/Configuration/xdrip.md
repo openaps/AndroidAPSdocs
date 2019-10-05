@@ -97,19 +97,19 @@
    
    ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
 
-* Insert new sensor (only if replacing)
+* Вставьте новый сенсор (только при замене)
 
-* Put transmitter into sensor
-* **Wait 15 minutes** before starting sensor so xDrip can initialize communication with the new transmitter
-* Start sensor (only if replacing)
+* Поместите трансмиттер в платформу сенсора
+* **Подождите 15 минут** перед запуском сенсора, чтобы xDrip мог инициализировать связь с новым трансмиттером
+* Нажмите старт сенсора (только при смене сенсора)
    
-   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
+   -> В нижней части экрана через несколько минут появится предупреждение о прогреве сенсора `Осталось x,x часов`.
 
 -> Если серийный номер трансмиттера не начинается с 8G и в течение нескольких минут не появляется никаких указаний о времени прогрева сенсора остановите и перезапустите сенсор.
 
-* Restart collector (system status - if not replacing sensor}
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Перезапустите коллектор (состояние системы - если не заменяете сенсор}
+* Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
+* Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
@@ -119,42 +119,42 @@
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### Transmitter battery status
+### Состояние батареи трансмиттера
 
-* Battery status can be controlled in system status (Hamburger menu top left on homescreen)
-* Swipe left once to see second screen. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
+* Статус батареи может быть виден в окне состояния системы (сэндвич-меню вверху слева на главном экране)
+* Проведите по экрану влево, чтобы увидеть второй экран. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”: Transmitter days: 151 Voltage A: 297 Voltage B: 260 Resistance: 2391
+* Точные величины, когда наступает "смерть" трансмиттера из-за низкого заряда батареи, неизвестны. Следующая информация была размещена в сети после "смерти" трансмиттера: дней передачи: 151 напряжение A: 297 напряжение B: 260 Сопротивление: 2391
 
-### Extend transmitter life
+### Увеличение срока работы трансмиттера
 
-* So far life cannot be extended for transmitters whos serial no. starts with 8G.
-* To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and check `OB1 collector`.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G.
+* Для предотвращения трудностей при запуске сенсоров настоятельно рекомендуется продлить срок действия трансмиттера до 100-го дня первого использования.
+* При продлении срока действия трансмиттера работа сенсора будет остановлена. Поэтому проводить эту манипуляцию следует перед заменой сенсора или быть готовыми к тому, что состоится двухчасовая фаза его прогрева.
+* Переключитесь в `инженерный режим`: 
+   * нажмите на пиктограмму шприца на главном экране xDrip+ справа
+   * затем нажмите на значок микрофона в нижнем правом углу
+   * В текстовом поле впечатайте "enable Engineering mode" 
+   * нажмите "Готово"
+   * Если включен Google Speak, вы можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
+* Перейдите в настройки отладки G5 и отметьте `OB1 коллектор`.
+* Дайте голосовую команду: “hard reset transmitter”(«жесткий сброс трансмиттера»)
+* Голосовая команда будет выполнена при следующем получении данных трансмиттера
+* Посмотрите на статус системы (сэндвич-меню -> системный статус) и убедитесь в результате
+* Если вы видите сообщение "Состояние телефона: жесткий сброс возможно не произошел", просто перезапустите датчик на втором экране состояния системы и это сообщение должно исчезнуть.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMabeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Срок работы трансмиттера будет сброшен до 0 в случае успеха.
 
-### Replace transmitter
+### Замена трансмиттера
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
 Если серийный номер трансмиттера Dexcom G6 начинается с 8G... пользуйтесь [ночной сборкой от 2019/07/28 или позже](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
-* Stop sensor (only if replacing sensor)
+* Нажмите остановить сенсор (только при замене сенсора)
    
    Убедитесь, что он действительно остановлен:
    
@@ -162,7 +162,7 @@
    
    Подождите, пока это происходит - обычно в течение нескольких минут.
    
-   -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
+   -> Как удалить трансмиттер без остановки сенсора, см. видео <https://youtu.be/AAhBVsc6NZo>.
    
    ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
    
@@ -181,15 +181,15 @@
    * You will need your transmitter serial number if this is the first time you've used it.
 * Put in serial number of new transmitter. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
 * Insert new sensor (only if replacing).
-* Put transmitter into sensor
-* Start sensor (only if replacing)
+* Поместите трансмиттер в платформу сенсора
+* Нажмите старт сенсора (только при смене сенсора)
    
    **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
 
-* Restart collector (system status - if not replacing sensor}
+* Перезапустите коллектор (состояние системы - если не заменяете сенсор}
 
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
+* Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
