@@ -168,23 +168,23 @@
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device (in system status)
+* Забыть устройство (в статусе системы)
    
    ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Forget device in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
+* Забудьте устройство в настройках BT смартфона (будет показано как Dexcom?? где ?? последние две цифры серийного № трансмиттера
 
-* Remove transmitter (and sensor if replacing sensor)
+* Удалите трансмиттер (и сенсор при замене)
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
 * Пользуйтесь Мастером выбора источника ГК, который обеспечивает настройки по умолчанию, включая OB1 & нативный режим 
    * Мастер позволит провести начальную настройку.
-   * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
-* Insert new sensor (only if replacing).
+   * Вам понадобится серийный номер трансмиттера, если вы пользуетесь им впервые.
+* Введите серийный номер нового трансмиттера. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
+* Вставьте новый сенсор (только при замене).
 * Поместите трансмиттер в платформу сенсора
 * Нажмите старт сенсора (только при смене сенсора)
    
-   **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
+   **Рекомендуется подождать около 15 минут между остановкой и запуском нового сенсора (до `Состояние сенсора: Остановлен` на втором экране состояния системы).**
 
 * Перезапустите коллектор (состояние системы - если не заменяете сенсор}
 
@@ -199,10 +199,10 @@
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### New Sensor
+### Новый сенсор
 
 * Выключите оригинальный ресивер Dexcom (если используете).
-* Stop sensor if necessary
+* При необходимости остановите сенсор
    
    Убедитесь, что он действительно остановлен:
    
@@ -214,50 +214,50 @@
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Clean contacts (transmitter backside) with alcohol and let air-dry.
+* Протрите контакты (обратная сторона трансмиттера) спиртом и просушите.
 
-* In case you use this function disable `Restart Sensor` and `Preemptive restarts` (Hamburger menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
+* Если вы пользуетесь этой функцией, отключите `Restart Sensor` и `Preemptive restarts` (Сэндвич-меню -> Настройки -> Отладка G5/G6). Если вы пропустите этот шаг и оставите эти функции включенными, новый датчик не будет корректно запущен.
    
    ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
 
-* Start Sensor
+* Запустите сенсор
    
-   **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
+   **Рекомендуется подождать около 15 минут между остановкой и запуском нового сенсора (до `Состояние сенсора: Остановлен` на втором экране состояния системы).**
 
-* Set time inserted
+* Введите время установки
    
-   * To use G6 Native mode you must wait for the 2 hour warm up (i.e insertion time is now).
-   * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore this is not recommended.
-* Enter Sensor code (on the peel-off foil of the sensor) 
-   * Keep code for further reference (i.e. new start after transmitter had to be removed)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
-* No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
-* Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
+   * Для использования нативного режима G6 необходимо подождать 2 часа для прогрева (т.е. время установки -- сейчас).
+   * Если вы используете алгоритм xDrip+, то можно установить время более 2 часов назад, чтобы избежать прогрева. Данные могут быть очень неточными. Поэтому это не рекомендуется.
+* Введите код сенсора (на снимаемой фольге сенсора) 
+   * Сохраните код на случай дополнительной переустановки (новый запуск после удаления трансмиттера)
+   * Код также можно найти в логах [xDrip+ ](../Configuration/xdrip#retrieve-sensor-code): Нажмите 3-точечное меню на главном экране xDrip+ и выберите `Просмотр журналов событий`.
+* При использовании G6 в "нативном режиме" калибровка не требуется. xDrip+ будет показывать данные автоматически после двухчасового прогрева.
+* Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
    
    ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
    
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-### Retrieve sensor code
+### Получение кода сенсора
 
-* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
-* Swipe left once to see second screen.
+* В свежих версиях программы (начиная с 18 мая 2019) код сенсора отображается в состоянии системы (сэндвич-меню вверху слева на главном экране).
+* Проведите по экрану влево, чтобы увидеть второй экран.
    
    ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
 
-* Dexcom sensor code can also be found in xDrip+ logs.
+* Код сенсора Dexcom можно также найти в логах xDrip+.
 
-* Tap 3 dot menu (top right side on homescreen)
-* Select `View Event Logs` and search for "code"
+* Нажмите 3 точки меню (сверху справа на главном экране)
+* Выберите `Просмотр журналов событий` и выполните поиск слова "code"
    
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
 ## Устранение неполадок Dexcom G6 и xDrip+
 
-### Problem connecting transmitter
+### Проблемы сопряжения с трансмиттером
 
 * Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
+* Transmitter will be shown as Dexcom?? где ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
 * Open system status in xDrip+ (hamburger menue on top left side of home screen).
 * Check if your transmitter is shown on first status page ('classic status page').
 * If not: Delete device from your smartphone's bluetooth settings and restart collector.
