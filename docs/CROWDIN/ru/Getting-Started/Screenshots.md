@@ -1,4 +1,4 @@
-# AndroidAPS screens
+# Экраны AndroidAPS
 
 ## Главный экран
 
@@ -12,34 +12,34 @@
 
 ### Секция B
 
-* change the loop status (open loop, closed loop, suspend loop etc)
-* see your current profile and do a [profile switch](../Usage/Profiles.md)
-* see your current target blood glucose level and set a [temporary target](../Usage/temptarget.md).
+* изменить состояние цикла (открытый цикл, замкнутый цикл, приостановка цикла и т. д.)
+* посмотреть текущий профиль и выполнить [переключение профиля](../Usage/Profiles.md)
+* посмотреть текущий целевой уровень глюкозы в крови и установить [временные цели](../Usage/temptarget.md).
 
-Long press on any of the buttons to alter the setting. I.e long press the target bar in the upper right ("110" in the screenshot above) to set a temp target.
+Нажмите и удерживайте любую из кнопок для изменения настройки. Например, удерживая темно-синюю целевую панель в верхнем правом углу ("110" на снимке экрана), можно задать временные цели.
 
-### Section C
+### Секция С
 
-* latest blood glucose reading from your CGM
-* how long ago it was read
-* changes in the last 15 and 40 minutes
-* your current basal rate - including any temporary basal rate (TBR) programmed by the system
-* insulin on board (IOB)
-* carbs on board (COB)
+* самые свежие данные ГК с мониторинга
+* как давно они сняты
+* изменения за последние 15 и 40 минут
+* текущая скорость базала включая любой временный базал TBR заданный системой
+* активный инсулин (IOB)
+* активные углеводы COB - углеводы в процессе компенсации
 
-The optional [status lights](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) give a visual warning for low reservoir and battery level as well as overdue site change.
+Дополнительные [индикаторы состояния](../Configuration/Preferences#overview) (КАН| ИНС | РЕЗ | СЕН | БАТ) дают визуальное предупреждения о низком уровне резервуара, заряда батареи а также пропущенное время замены катетера.
 
-The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
+Значение активного инсулина Iob будет нулевым при подаче только стандартного базального и когда нет остатков от предыдущих болюсов. Цифры в скобках показывают, сколько инсулина остается от предыдущих болюсов, и сколько - от временных базалов TBR, запрограммированных ААPS. Второй компонент может быть отрицательным, если перед этим были периоды подачи уменьшенной базы.
 
-### Section D
+### Секция D
 
-Click the arrow on the right side of the screen in section D to select which information is displayed on the charts below.
+Нажмите на стрелку справа экрана в секции D, чтобы выбрать, какую информацию отображать на диаграммах ниже.
 
-### Section E
+### Секция E
 
-Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries.
+Это график, показывающий глюкозу крови (ГК), считанный мониторингом (CGM) он также показывает уведомления сайта Nightscout, такие как калибровки глюкометром и введенные углеводы.
 
-Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+Длительное нажатие на графике изменит шкалу времени. Можно выбрать 6, 8, 12, 18 или 24 часа.
 
 The extended lines show the predicted BG calculations and trends - if you have it selected.
 
@@ -76,7 +76,7 @@ SUPER BOLUS is where the basal insulin for the next two hours is added to the im
 
 shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
-### Section C
+### Секция С
 
 shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
