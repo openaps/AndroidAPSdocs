@@ -41,7 +41,7 @@ Dexcom G6
 * Установите загруженное приложение
 * Запустите сенсор
 * Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
-* If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+* Если хотите использовать xDrip-оповещения через локальную трансляцию: в сэндвич-меню xDrip > settings > hardware data source > 640G /EverSense.
 
 Устранение неполадок с G6
 ======================
