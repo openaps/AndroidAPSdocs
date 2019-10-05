@@ -41,18 +41,18 @@
 
 Длительное нажатие на графике изменит шкалу времени. Можно выбрать 6, 8, 12, 18 или 24 часа.
 
-The extended lines show the predicted BG calculations and trends - if you have it selected.
+Продолженные линии показывают тенденции ГК - если это выбрано в настройках.
 
-* Orange line: COB (colour is used generally to represent COB and carbs)
-* Dark blue line: IOB (colour is used generally to represent IOB and insulin)
-* Light blue line: zero-temp
-* Dark yellow line: UAM
+* Оранжевая линия: активные углеводы COB (цвет обычно используется для отображения активных углеводов COB и углеводов)
+* Темно-синяя линия: активный инсулин IOB (цвет обычно используется для отображения активного инсулина IOB и инсулина)
+* Голубая линия: нулевой временный базал
+* Темно-желтая линия: незапланированный прием пищи UAM
 
-These lines show you the different predictions based on current carb absorption (COB); insulin only (IOB); showing how long it will take BG to level off at/above target if deviations suddenly cease and we run a zero temp until then (zero-temp) and unannounced meal/effect detection where carbs are detected but have not been entered into the system by the user (UAM).
+Эти линии отражают различные прогнозы, основанные на текущих усваиваемых углеводах (COB); инсулине (IOB); показывая, сколько времени понадобится ГК, чтобы понизиться до/выше заданного уровня, если не принимать во внимание отклонения и активировать нулевую временную базу, а также распознавание непредусмотренного питания, не введенного в систему пользователем (UAM).
 
-The solid blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time.
+Сплошная синяя линия показывает подачу базала помпой. Синяя точечная линия показывает какой была бы скорость подачи базала если бы не было временных корректировок базы TBR, а сплошная синяя линия показывает фактически поданный инсулин с течением времени.
 
-### Section F
+### Секция F
 
 This section also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
 
