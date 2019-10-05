@@ -389,6 +389,12 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
+ <td>Smartphone-Hintergrundbild</td>
+ <td>AndroidAPS-Hintergrundbild</td>
+ <td></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">siehe Seite Smartphones</a></td>
+</tr>
+<tr>
  <td>xDrip / xDrip+</td>
  <td>Open Source Software um CGM/FGM-Systeme auszulesen</td>
  <td>&nbsp;</td>

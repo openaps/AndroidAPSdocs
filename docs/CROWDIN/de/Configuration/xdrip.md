@@ -31,6 +31,8 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
    
    ![xDrip+ Grundeinstellungen 3](../images/xDrip_Basic3.png)
 
+### Identifiziere Empfänger
+
 * Bei einigen Anwendern kam es zu Problemen im Flugmodus. AAPS empfing keine BZ-Werte con xdrip+. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
    
    ![xDrip+ Basic Inter-App Einstellungen Identifiziere Empfänger](../images/xDrip_InterApp_NS.png)
