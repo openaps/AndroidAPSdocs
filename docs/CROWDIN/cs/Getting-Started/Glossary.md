@@ -389,18 +389,24 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
+ <td>Wallpaper</td>
+ <td>AndroidAPS background image</td>
+ <td></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+</tr>
+<tr>
  <td>xDrip / xDrip+</td>
- <td>Open source software pro čtení dat z CGM</td>
+ <td>open source software to read CGM systems</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
- <td>Nulový bazál</td>
- <td>Dočasná bazální dávka 0 % (vypnutý bazál)</td>
+ <td>Zero-temp</td>
+ <td>temporary basal rate with 0% (no basal insulin delivery)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>Viz také <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+ <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
 </tr>
 </table>
