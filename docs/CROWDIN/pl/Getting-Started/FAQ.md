@@ -1,6 +1,6 @@
-# FAQ for loopers
+# FAQ dla osób korzystających z pętli
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+Jak dodać pytania do FAQ: postępuj zgodnie z [instrukcją](../make-a-PR.md)
 
 # Ogólnie
 
