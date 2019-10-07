@@ -1,19 +1,19 @@
 # Android Auto
 
-How it looks like:
+Πώς μοιάζει:
 
 ![Screenshot 1](../images/Android-auto1.png)
 
-How to use it:
+Πως να το χρησιμοποιήσεις:
 
-* Install Android Auto
-* In the Android Auto app, tap the Hamburger menu (three horizontal lines)
-* Tap About.
-* Tap the About Android Auto header 10 times, until a toast appears that says "Developer mode enabled".
-* Now you can access developer mode by selecting the overflow menu dots on the top right of the handheld screen and go into developpers settings.
-* Select unknown sources (scroll down all the way to the bottom of the list).
-* Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
+* Εγκατέστησε το Android Auto
+* Στην εφαρμογή Android Auto, πατήστε το μενού Hamburger (τρεις οριζόντιες γραμμές)
+* Πατήστε Πληροφορίες.
+* Αγγίξτε την κεφαλίδα Σχετικά με την εφαρμογή "σύνδεση Android Auto" 10 φορές, μέχρι να εμφανιστεί ένα τοστ που λέει "Ενεργοποιημένη κατάσταση προγραμματιστή".
+* Τώρα μπορείτε να αποκτήσετε πρόσβαση στην κατάσταση προγραμματιστών επιλέγοντας τις τελείες του μενού υπερχείλισης στην επάνω δεξιά γωνία της φορητής οθόνης και μεταβείτε στις ρυθμίσεις των προγραμματιστών.
+* Επιλέξτε άγνωστες πηγές (μετακινηθείτε προς τα κάτω μέχρι το τέλος της λίστας).
+* Τώρα μπορείτε να κλείσετε τη λειτουργία ανάπτυξης, αν θέλετε. Πατήστε το μενού με τρία σημεία στην επάνω δεξιά γωνία για να το κάνετε.
 
-Troubleshooting:
+Αντιμετώπιση προβλημάτων:
 
-* If you don't see the notification, check if you allowed AAPS to show notifications in Android and if Android Auto has access rights to notifications.
+* Αν δεν βλέπετε την ειδοποίηση, ελέγξτε αν επιτρέπεται η AAPS να εμφανίζει ειδοποιήσεις στο Android και αν το Android Auto έχει δικαιώματα πρόσβασης στις ειδοποιήσεις.
