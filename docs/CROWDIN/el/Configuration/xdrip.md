@@ -266,11 +266,11 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 ### Problem when starting new sensor
 
 * Native sensor is marked as "FAILED: Sensor Failed Start"
-* Stop sensor
+* Σταματήστε τον αισθητήρα
 * Restart your phone
 * Start sensor with code 0000 (four times zero)
 * Wait 15 minutes
-* Stop sensor
+* Σταματήστε τον αισθητήρα
 * Start sensor with "real" code (printed on the adhesive protector)
 
 Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
