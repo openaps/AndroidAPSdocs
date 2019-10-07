@@ -39,16 +39,16 @@
 
 ### Windows
 
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Make sure to note down the installation path. Θα το χρειαστείτε αργότερα, αφού έχετε εγκαταστήσει το Android Studio.
+* Κάθε έκδοση git θα πρέπει να λειτουργήσει. Για παράδειγμα [ https://git-scm.com/download/win ](https://git-scm.com/download/win)
+* Βεβαιωθείτε ότι έχετε σημειώσει τη διαδρομή εγκατάστασης. Θα το χρειαστείτε αργότερα, αφού έχετε εγκαταστήσει το Android Studio.
   
-  ![Git installation path](../images/Update_GitPath.png)
+  ![Διαδρομή εγκατάστασης Git](../images/Update_GitPath.png)
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Κάθε έκδοση git θα πρέπει να λειτουργήσει. Για παράδειγμα [ https://git-scm.com/download/mac ](https://git-scm.com/download/mac)
+* Χρησιμοποιήστε το homebrew για να εγκαταστήσετε το git: ```$ brew εγκατέστησε git```.
+* Για λεπτομέρειες σχετικά με την εγκατάσταση του git, ανατρέξτε στην [επίσημη τεκμηρίωση git ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 ## Εγκατάσταση του Android Studio
 
@@ -98,7 +98,7 @@
 
 * Αφήστε το Studio να μάθει πού βρίσκεται το git.exe: Αρχείο - Ρυθμίσεις
   
-  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+  ![Android Studio - ανοίξτε τις ρυθμίσεις](../images/Update_GitSettings1.png)
 
 * Στο επόμενο παράθυρο: Έλεγχος έκδοσης - Git
 
@@ -106,7 +106,7 @@
 
 * Βεβαιωθείτε ότι έχετε επιλέξει τη μέθοδο ενημέρωσης "Συγχώνευση".
   
-  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+  ![Android Studio - διαδρομή GIT](../images/Update_GitSettings2a.png)
 
 ### Mac
 
@@ -219,15 +219,15 @@
 
 Η υπογραφή σημαίνει ότι υπογράφετε την εφαρμογή που δημιουργήσατε, αλλά με ψηφιακό τρόπο ως ένα είδος ψηφιακού δακτυλικού αποτυπώματος στην ίδια την εφαρμογή. Αυτό είναι απαραίτητο επειδή το Android έχει έναν κανόνα ότι δέχεται μόνο υπογεγραμμένο κώδικα για εκτέλεση για λόγους ασφαλείας. Για περισσότερες πληροφορίες σχετικά με αυτό το θέμα, ακολουθήστε τον σύνδεσμο [ εδώ ](https://developer.android.com/studio/publish/app-signing.html#generate-key) Η ασφάλεια είναι ένα βαθύ και πολύπλοκο θέμα και δεν το χρειάζεστε τώρα.
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Στιγμιότυπο οθόνης 39α](../images/Installation_Screenshot_39a.PNG)
 
 Στο παρακάτω παράθυρο διαλόγου επιλέξτε "APK" αντί για "Bundle Android App" και κάντε κλικ στο κουμπί "Επόμενο".
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![Στιγμιότυπο οθόνης 39α](../images/Installation_Screenshot_39b.PNG)
 
 Επιλέξτε "εφαρμογή" και κάντε κλικ στο κουμπί "Επόμενο".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Στιγμιότυπο οθόνης 40](../images/Installation_Screenshot_40.png)
 
 Κάντε κλικ στην επιλογή "Δημιουργία νέας..." για να ξεκινήσετε τη δημιουργία της αποθήκης κλειδιών. Μια θυρίδα κλειδιών σε αυτήν την περίπτωση δεν είναι τίποτα περισσότερο από ένα αρχείο στο οποίο αποθηκεύονται οι πληροφορίες για την υπογραφή. Είναι κρυπτογραφημένο και οι πληροφορίες είναι ασφαλείς με κωδικούς πρόσβασης. Προτείνουμε να το αποθηκεύσετε στον αρχικό φάκελο σας και να θυμάστε τους κωδικούς πρόσβασης, αλλά εάν χάσετε αυτές τις πληροφορίες δεν είναι ένα μεγάλο ζήτημα γιατί τότε πρέπει απλά να δημιουργήσετε ένα νέο. Η καλύτερη πρακτική είναι να αποθηκεύσετε προσεκτικά αυτές τις πληροφορίες.
 
