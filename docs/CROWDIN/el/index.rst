@@ -135,7 +135,7 @@ Troubleshooting
    FAQ <./Getting-Started/FAQ.md>
 
    
-Glossary
+Γλωσσάριο
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
