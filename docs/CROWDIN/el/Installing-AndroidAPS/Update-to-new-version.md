@@ -1,21 +1,21 @@
-# Update to a new version or branch
+# Ενημερώστε σε μια νέα έκδοση ή κλάδο
 
-<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>.
+<font color="#FF0000"> <b> Σημαντική σημείωση: Από την έκδοση 2.3 πρέπει να χρησιμοποιήσετε το git για ενημέρωση. Η ενημέρωση μέσω του αρχείου zip δεν λειτουργεί πια. </font></b>.
 
-***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
+*** Σημείωση ***: Εάν θέλετε να ενημερώσετε το AndroidAPS 2.3, πρέπει να χρησιμοποιήσετε το [ Android Studio Version 3.4 ](https://developer.android.com/studio/archive?), δεν λειτουργεί με το τελευταίο.
 
 ## Εγκαταστήστε το git (αν δεν το έχετε)
 
 ### Windows
 
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Make sure to note down the installation path. You will need it in the next step.
+* Κάθε έκδοση git θα πρέπει να λειτουργήσει. Για παράδειγμα [ https://git-scm.com/download/win ](https://git-scm.com/download/win)
+* Βεβαιωθείτε ότι έχετε σημειώσει τη διαδρομή εγκατάστασης. Θα το χρειαστείτε στο επόμενο βήμα.
   
-  ![Git installation path](../images/Update_GitPath.png)
+  ![Διαδρομή εγκατάστασης Git](../images/Update_GitPath.png)
 
 * Αφήστε το Studio να μάθει πού βρίσκεται το git.exe: Αρχείο - Ρυθμίσεις
   
-  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+  ![Android Studio - ανοίξτε τις ρυθμίσεις](../images/Update_GitSettings1.png)
 
 * Στο επόμενο παράθυρο: Έλεγχος έκδοσης - Git
 
@@ -23,87 +23,87 @@
 
 * Βεβαιωθείτε ότι έχετε επιλέξει τη μέθοδο ενημέρωσης "Συγχώνευση".
   
-  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+  ![Android Studio - διαδρομή GIT](../images/Update_GitSettings2a.png)
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Κάθε έκδοση git θα πρέπει να λειτουργήσει. Για παράδειγμα [ https://git-scm.com/download/mac ](https://git-scm.com/download/mac)
+* Χρησιμοποιήστε το homebrew για να εγκαταστήσετε το git: ```$ brew εγκατέστησε git```.
+* Για λεπτομέρειες σχετικά με την εγκατάσταση του git, ανατρέξτε στην [επίσημη τεκμηρίωση git ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Αν εγκαταστήσετε το git μέσω του homebrew δεν χρειάζεται να αλλάξετε τις προτιμήσεις. Σε περίπτωση που: Μπορούν να βρεθούν εδώ: Android Studio - Προτιμήσεις.
 
-## Update your local copy
+## Ενημερώστε το τοπικό σας αντίγραφο
 
-* Click: VCS->Git->Fetch
+* Κάντε κλικ στο: VCS-> Git-> Fetch
   
-  ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
+  ![Android Studio - GIT - Λήψη](../images/Update_Fetch.png)
 
-## Selecting branch
+## Επιλογή κλάδου
 
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+* Εάν θέλετε να αλλάξετε υποκατάστημα, επιλέξτε άλλο κλάδο από το δίσκο: master (τελευταία έκδοση) ή άλλη έκδοση (δείτε παρακάτω)
   
   ![](../images/UpdateAAPS1.png)
 
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
+και στη συνέχεια κοιτάξτε (Μπορείτε να χρησιμοποιήσετε το 'Checkout as New Branch' εάν το 'Checkout' δεν είναι διαθέσιμο.)
 
      ![](../images/UpdateAAPS2.png)
     
 
-## Updating branch from Github
+## Ενημέρωση κλάδου από το Github
 
-* Press Ctrl+T, select Merge method and press OK
+* Πατήστε Ctrl + T, επιλέξτε τη μέθοδο συγχώνευσης και πατήστε OK
   
   ![](../images/merge.png)
 
-On the tray you'll see green message about updated project
+Στο δίσκο θα δείτε ένα πράσινο μήνυμα σχετικά με το ενημερωμένο έργο
 
 ## Δημιουργία υπογεγραμμένου APK
 
-<!--- Text is maintained in page building-apk.md ---> Στο μενού επιλέξτε "Δημιουργία" και, στη συνέχεια, "Δημιουργία υπογεγραμμένης δέσμης / APK...". (Το μενού στο Android Studio άλλαξε από τον Σεπτέμβριο του 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md ---> Στο μενού επιλέξτε "Δημιουργία" και, στη συνέχεια, "Δημιουργία υπογεγραμμένης δέσμης / APK...". (Το μενού στο Android Studio άλλαξε από τον Σεπτέμβριο του 2018. Σε παλαιότερες εκδόσεις επιλέξτε στο μενού "Κατασκευή" και, στη συνέχεια, "Δημιουργία υπογεγραμμένου APK...".) 
 
   
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Αυτό είναι απαραίτητο επειδή το Android έχει έναν κανόνα ότι δέχεται μόνο υπογεγραμμένο κώδικα για εκτέλεση για λόγους ασφαλείας. Για περισσότερες πληροφορίες σχετικά με αυτό το θέμα, ακολουθήστε τον σύνδεσμο [ εδώ ](https://developer.android.com/studio/publish/app-signing.html#generate-key) Η ασφάλεια είναι ένα βαθύ και πολύπλοκο θέμα και δεν το χρειάζεστε τώρα.
+Η υπογραφή σημαίνει ότι υπογράφετε την εφαρμογή που δημιουργήσατε, αλλά με ψηφιακό τρόπο ως ένα είδος ψηφιακού δακτυλικού αποτυπώματος στην ίδια την εφαρμογή. Αυτό είναι απαραίτητο επειδή το Android έχει έναν κανόνα ότι δέχεται μόνο υπογεγραμμένο κώδικα για εκτέλεση για λόγους ασφαλείας. Για περισσότερες πληροφορίες σχετικά με αυτό το θέμα, ακολουθήστε τον σύνδεσμο [ εδώ ](https://developer.android.com/studio/publish/app-signing.html#generate-key) Η ασφάλεια είναι ένα βαθύ και πολύπλοκο θέμα και δεν το χρειάζεστε τώρα.
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Στιγμιότυπο οθόνης 39α](../images/Installation_Screenshot_39a.PNG)
 
 Στο παρακάτω παράθυρο διαλόγου επιλέξτε "APK" αντί για "Bundle Android App" και κάντε κλικ στο κουμπί "Επόμενο".
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![Στιγμιότυπο οθόνης 39α](../images/Installation_Screenshot_39b.PNG)
 
 Επιλέξτε "εφαρμογή" και κάντε κλικ στο κουμπί "Επόμενο".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Στιγμιότυπο οθόνης 40](../images/Installation_Screenshot_40.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+Εισαγάγετε τη διαδρομή αποθήκευσης κλειδιών, εισάγετε τον κωδικό πρόσβασης του αποθηκευτικού κέντρου, επιλέξτε το ψευδώνυμο και πληκτρολογήστε τον κωδικό πρόσβασης.
 
-Select 'Remember passwords'.
+Επιλέξτε 'Να θυμάται τους κωδικούς πρόσβασης'.
 
-Then click next.
+Στη συνέχεια, κάντε κλικ στο κουμπί Next.
 
-![Key store path](../images/KeystorePathUpdate.PNG)
+![Διαδρομή αποθήκευσης κλειδιών](../images/KeystorePathUpdate.PNG)
 
 Επιλέξτε "πλήρης" ως γεύση για την παραγόμενη εφαρμογή. Επιλέξτε V1 "Signature Jar" (V2 είναι προαιρετικό) και πατήστε "Τέλος". Οι ακόλουθες πληροφορίες μπορεί να είναι σημαντικές για μεταγενέστερη χρήση.
 
 * Το "Απελευθερωμένο" θα πρέπει να είναι η προεπιλεγμένη επιλογή σας για το "Τύπος κατασκευής", το "Debug" είναι μόνο για τους ανθρώπους που κωδικοποιούν.
 * Επιλέξτε τον τύπο κατασκευής που θέλετε να δημιουργήσετε. 
-  * full (i.e. recommendations automatically enacted in closed looping)
+  * πλήρεις (δηλ. συστάσεις που εκτελούνται αυτόματα σε κλειστό κύκλωμα)
   * ανοιχτό κύκλωμα (δηλ. συστάσεις που δίδονται στο χρήστη να χειρίζεται με μη αυτόματο τρόπο)
   * έλεγχος αντλίας (δηλαδή τηλεχειριστήριο για αντλία, χωρίς κύκλωμα)
   * nsclient (δηλ. εμφανίζονται τα δεδομένα του κυκλώματος ενός άλλου χρήστη και μπορούν να προστεθούν καταχωρήσεις στην εξυπηρέτηση)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Στιγμιότυπο οθόνης 44](../images/Installation_Screenshot_44.png)
 
 Στο αρχείο καταγραφής συμβάντων βλέπετε ότι το υπογεγραμμένο APK δημιουργήθηκε με επιτυχία.
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
+![Στιγμιότυπο οθόνης 45](../images/Installation_Screenshot_45.png)
 
 Κάντε κλικ στο σύνδεσμο "εντοπίστε" στο αρχείο καταγραφής συμβάντων.
 
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![Στιγμιότυπο οθόνης 46](../images/Installation_Screenshot_46.png)
 
-## Transfer APK to smartphone
+## Μεταφορά APK σε smartphone
 
-<!--- Text is maintained in page building-apk.md ---> A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+<!--- Text is maintained in page building-apk.md ---> Ανοίγει ένα παράθυρο διαχειριστή αρχείων. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
