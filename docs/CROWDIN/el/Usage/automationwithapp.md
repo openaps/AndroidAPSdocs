@@ -1,12 +1,12 @@
-# Automation with third party Android Automate App
+# Αυτοματοποίηση με τρίτο πρόσωπο του Android Αυτοματοποιημένο App
 
-**This article has been written before AndroidAPS version 2.4. There is an [automation plugin in AndroidAPS](./Automation.rst) itself with AndroidAPS version 2.4. For some, this here might be still useful, but should only be used by advanced users.**
+**Αυτό το άρθρο έχει γραφτεί πριν από την έκδοση 2.4 του AndroidAPS. Υπάρχει plugin [ αυτοματισμού AndroidAPS ](./Automation.rst) με την έκδοση 2.4 του AndroidAPS. Για μερικούς, αυτό εδώ μπορεί να είναι ακόμα χρήσιμο, αλλά θα πρέπει να χρησιμοποιείται μόνο από προχωρημένους χρήστες.**
 
-As AndroidAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AndroidAPS functionality.
+Δεδομένου ότι το AndroidAPS είναι ένα σύστημα υβριδικού κλειστού κυκλώματος, είναι απαραίτητη κάποια αλληλεπίδραση με το χρήστη (π.χ. πείτε στο κύκλωμα ότι περπατάτε, τρώτε, ξαπλώνετε στον καναπέ...). Οι συχνές είσοδοι χειροκίνητων πληροφοριών μπορούν να αυτοματοποιηθούν μέσω εξωτερικών εργαλείων όπως το Automate ή το IFTTT για την επέκταση της πρόσφατης λειτουργικότητας του AndroidAPS.
 
 ## Android Automate App
 
-The free Android™ application Automate lets you automate various tasks on your smartphone. Create your automations with flowscharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. You can automate almost everything on your device, Automate even support plug-ins made for Tasker and Locale.
+Η δωρεάν εφαρμογή Android ™ Automate σάς επιτρέπει να αυτοματοποιήσετε διάφορες εργασίες στο smartphone σας. Create your automations with flowscharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. You can automate almost everything on your device, Automate even support plug-ins made for Tasker and Locale.
 
 Using this tool you can easily create workflows to auto-treat your diabetes based on several conditions according to the principle of 'if this... and this... not this..., then do that... and that...'. There are thousands of possibilities you can configure.
 
