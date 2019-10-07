@@ -58,7 +58,7 @@
 
 Επιλέξτε "Μην εισάγετε ρυθμίσεις", εάν δεν το έχετε χρησιμοποιήσει προηγουμένως.
 
-![Screenshot 1](../images/Installation_Screenshot_01.png)
+![Στιγμιότυπο οθόνης 1](../images/Installation_Screenshot_01.png)
 
 Πατήστε "Επόμενο".
 
@@ -256,32 +256,32 @@
   * έλεγχος αντλίας (δηλαδή τηλεχειριστήριο για αντλία, χωρίς κύκλωμα)
   * nsclient (δηλ. εμφανίζονται τα δεδομένα του κυκλώματος ενός άλλου χρήστη και μπορούν να προστεθούν καταχωρήσεις στην εξυπηρέτηση)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Στιγμιότυπο οθόνης 44](../images/Installation_Screenshot_44.png)
 
 Στο αρχείο καταγραφής συμβάντων βλέπετε ότι το υπογεγραμμένο APK δημιουργήθηκε με επιτυχία.
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
+![Στιγμιότυπο οθόνης 45](../images/Installation_Screenshot_45.png)
 
 Κάντε κλικ στο σύνδεσμο "εντοπίστε" στο αρχείο καταγραφής συμβάντων.
 
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![Στιγμιότυπο οθόνης 46](../images/Installation_Screenshot_46.png)
 
-## Transfer APK to smartphone
+## Μεταφορά APK σε smartphone
 
-A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+Ανοίγει ένα παράθυρο διαχειριστή αρχείων. Μπορεί να φαίνεται λίγο διαφορετικό στο σύστημά σας καθώς χρησιμοποιώ το Linux. Στα Windows θα υπάρχει η Εξερεύνηση αρχείων και στο Mac OS X ο εξερευνητής. Εκεί θα πρέπει να δείτε τον κατάλογο με το αρχείο APK που δημιουργήθηκε. Δυστυχώς, αυτό είναι λάθος, καθώς το "wear-release.apk" δεν είναι η υπογεγραμμένη εφαρμογή APK που ψάχνουμε.
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+![Στιγμιότυπο οθόνης 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Μεταβείτε στον κατάλογο AndroidAPS / εφαρμογή / πλήρεις/ release για να βρείτε το αρχείο "app-full-release.apk". Μεταφέρετε αυτό το αρχείο στο Android smartphone σας. Μπορείτε να το κάνετε με τον προτιμώμενο τρόπο, δηλαδή Bluetooth, upload cloud, ή να συνδέσετε τον υπολογιστή και το τηλέφωνο με καλώδιο ή να χρησιμοποιήσετε email. Χρησιμοποιώ το Gmail εδώ σε αυτό το παράδειγμα, καθώς είναι αρκετά απλό για μένα. Το αναφέρω αυτό επειδή για να εγκαταστήσετε την εφαρμογή που υπογράφηκε αυτόματα πρέπει να επιτρέψουμε στο Android στο smartphone μας να κάνει αυτήν την εγκατάσταση ακόμα κι αν αυτό το αρχείο λαμβάνεται μέσω Gmail, το οποίο κανονικά απαγορεύεται. Αν χρησιμοποιείτε κάτι άλλο παρακαλούμε προχωρήστε ανάλογα.
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
+![Στιγμιότυπο οθόνης 48](../images/Installation_Screenshot_48.png)
 
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+Στις ρυθμίσεις του smartphone σας υπάρχει μια περιοχή "Άγνωστη εγκατάσταση εφαρμογών", όπου πρέπει να δώσω στο Gmail το δικαίωμα να εγκαταστήσει αρχεία APK που λαμβάνω μέσω του Gmail.
 
-Select "Allow from this source". After the installation, you can disable it again.
+Επιλέξτε "Να επιτρέπεται από αυτή την πηγή". Μετά την εγκατάσταση, μπορείτε να την απενεργοποιήσετε ξανά.
 
-![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
+![Εγκατάσταση από άγνωστες πηγές](../images/Installation_Screenshot_49-50.png)
 
-The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
+Το τελευταίο βήμα είναι να πατήσετε το αρχείο APK που λαβατε μέσω του Gmail και να εγκαταστήσετε την εφαρμογή. Αν το APK δεν εγκατασταθεί και έχετε μια παλαιότερη έκδοση του AndroidAPS στο τηλέφωνό σας που έχει υπογραφεί με διαφορετικό κλειδί τότε θα πρέπει πρώτα να την απεγκαταστήσετε, να θυμάστε να εξάγετε τις ρυθμίσεις σας αν το κάνετε!
 
-Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+Ναι, το πήρατε και τώρα μπορείτε να ξεκινήσετε με τη ρύθμιση του AndroidAPS για τη χρήση σας (CGMS, αντλία ινσουλίνης) κλπ.
