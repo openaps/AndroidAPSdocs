@@ -241,51 +241,51 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 Обои AndroidAPS можно найти для телефона на странице [ Телефоны ](../Getting-Started/Phones#phone-background).
 
-## Daily usage
+## Повседневное применение
 
 ### Гигиена
 
 #### Что делать при приеме душа или ванной?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
+Помпу можно снять при приеме душа или ванной. На этот короткий период времени она вам, как правило, не понадобится. Но следует проинформировать об этом AAPS чтобы расчеты активного инсулина IOB были правильными.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
 
 ### На работе
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+В зависимости от вида работы, возможно, вы используете иные методы лечения в рабочие дни. Следует подумать о [ переключении профиля](../Usage/Profiles.md) на планируемый рабочий день (например, более 100% на 8 ч при сидячей работе или менее 100% при активном режиме), высокой или низкой временной цели или [сдвиге времени профиля](../Usage/Profiles#time-shift), когда вы встаете гораздо раньше или позже, чем обычно. Если вы используете профили Nightscout, можно создать второй профиль (например, 'дом' и 'работа') и при необходимости переключаться с профиля на профиль.
 
-## Leisure activities
+## Отдых
 
 ### Спорт
 
 ### Секс
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
+Можете снять помпу для "свободы" но следует проинформировать об этом AAPS, чтобы расчеты активного инсулина IOB были правильными.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
 
 ### Употребление алкоголя
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Употребление алкоголя является рискованным в режиме замкнутого цикла, так как алгоритм ИПЖ не может правильно предсказать влияние алкоголя на ГК. Следует выработать свой собственный метод для подхода к этому вопросу с помощью следующих функций в AndroidAPS:
 
 * Деактивировать режим замкнутого цикла и разбираться с диабетом вручную или
 * устанавливать высокие временные цели и отключать незапланированный прием пищи UAM, чтобы избежать увеличения активного инсулина IOB из-за непредусмотренной еды или
 * переключить профиль на величину, заметно менее 100% 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+При употреблении алкоголя всегда нужно следить за мониторингом, чтобы вручную избежать гипокликемии, съедая углеводы.
 
 ### Сон
 
 #### Как обеспечить работу цикла ночью без воздействия мобильного и WIFI излучения?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
+Многие пользователи ночью переводят телефон в режим авиаперелета. Если вы хотите, чтобы AAPS поддерживал вас во время сна, действуйте следующим образом (будет работать только с локальным источником ГК, таким как xDrip+ или приложением Dexcom с патчем, но НЕ будет работать, если вы получаете данные ГК с сайта Nightscout):
 
 1. Включите режим авиаперелета на вашем мобильном устройстве.
 2. Подождите, пока режим авиаперелета не будет активирован.
 3. Включите Блутус.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Теперь вы не принимаете звонки и не подключены к Интернету. Но цикл продолжает работу.
 
 У некоторых пользователей обнаружились проблемы с локальной трансляцией (AAPS не получает данные от xDrip+) в режиме авиаперелета. Перейдите в Настройки xdrip+ > Inter-app settings > Identify receiver и введите `info.nightscout.androidaps`.
 
@@ -295,7 +295,7 @@ You are not receiving calls now, nor are you connected to the internet. But the 
 
 #### Как справляться с изменениями часового пояса?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+Если у вас DanaR или DanaR для корейского рынка делать ничего не надо. Для других помп смотрите страницу [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling.md) для более подробной информации.
 
 ## Medical topics
 
