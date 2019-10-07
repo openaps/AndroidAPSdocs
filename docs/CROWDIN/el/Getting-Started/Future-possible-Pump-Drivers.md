@@ -74,87 +74,87 @@
 
 ### EOFLOW ([Αρχική σελίδα](http://www.eoflow.com/eng/main/main.html))
 
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
+** Κατάσταση κυκλώματος: ** είναι υποψήφια για κύκλωμα. Το τηλεχειριστήριο που χρησιμοποιούν είναι στην πραγματικότητα τροποποιημένη συσκευή Android. (Η αντλία είναι προς το παρόν διαθέσιμη μόνο στην Κορέα).
 
-**Hardware requirement for AAPS:** Probably none. Φαίνεται ότι είναι ενεργοποιημένο το BT.
+** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. Φαίνεται ότι είναι ενεργοποιημένο το BT.
 
 * * *
 
-### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### Accu-Chek Solo ([Αρχική σελίδα](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate. Pump will start selling at end of 2018 in selected countries in EU. Its rummored to have Android app for control.
+** Κατάσταση κυκλώματος: ** είναι υποψήφια για κύκλωμα. Η αντλία θα αρχίσει να πωλεί στα τέλη του 2018 σε επιλεγμένες χώρες της ΕΕ. Φημολογείται ότι θα έχει εφαρμογή Android για έλεγχο.
 
-**Hardware requirement for AAPS:** Probably none. Φαίνεται ότι είναι ενεργοποιημένο το BT.
+** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. Φαίνεται ότι είναι ενεργοποιημένο το BT.
 
 ### Medtronic Bluetooth
 
-**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+** Σχόλια: ** Αυτή είναι η αντλία που θα κυκλοφορήσει τα επόμενα χρόνια και σχεδιάζεται να υποστηριχθεί στο λογισμικό Tidepool Loop ([ δείτε αυτό το άρθρο ](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
 * * *
 
 ## Pumps no longer sold (companies no longer operating)
 
-### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
+### Αντλία Cellnovo ([ Αρχική σελίδα ](https://www.cellnovo.com/en/homepage))
 
-**Κατάσταση κυκλώματος:** Αυτήν τη στιγμή δεν υποστηρίζεται από κανένα σύστημα κυκλώματος. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Κατάσταση κυκλώματος:** Αυτήν τη στιγμή δεν υποστηρίζεται από κανένα σύστημα κυκλώματος. Η αντλία είναι υποψήφια για κύκλωμα, αλλά δεδομένου ότι το πρωτόκολλο είναι άγνωστο τότε, δεν βλέπω να υποστηρίζεται αυτή η αντλία πολύ σύντομα.
 
-**Hardware requirement for AAPS:** Probably none. Είναι ενεργοποιημένη η λειτουργία BT.
+** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. Είναι ενεργοποιημένη η λειτουργία BT.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+** Σημείωση για το προϊόν: ** Φαίνεται ότι η εταιρεία αποφάσισε να εξέλθει από την επιχείρηση αντλιών. Μπορείτε να δείτε περισσότερα σε αυτό το [ άρθρο ](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
-## Pumps that aren't Loopable
+## Αντλίες που δεν είναι για κύκλωμα
 
-### Tandem:(any) ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: (οποιαδήποτε) ([ Αρχική σελίδα ](https://www.tandemdiabetes.com/))
 
-**Loop status:** Not loopable.
+** Κατάσταση κυκλώματος: ** Δεν είναι για κύκλωμα.
 
-While ago they had firmware called T:AP (mentioned in this [article](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&), which could be used in loop (its no longer available, since pump was upgraded to x2), but that was not intended for commercial use, just for experimental use only (research projects). I talked with one of directors of company and he assured my that Tandem pump will never be open, but they have created their own closed loop system, which they are calling Control-IQ (I think it is already available in USA, and should be available in 2020 in Eu).
+Πριν από λίγο καιρό είχαν firmware που ονομάζεται T:AP (αναφέρεται σε αυτό το [ άρθρο ](https://www.liebertpub.com/doi/full/10.1089/dia.2018.0278?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed&)), το οποίο θα μπορούσε να χρησιμοποιηθεί σε κύκλωμα (δεν είναι πλέον διαθέσιμο, αφού η αντλία αναβαθμίστηκε σε x2) και δεν ήταν για εμπορική χρήση μόνο για ερευνητικά έργα. Μίλησα με έναν από τους διευθυντές της εταιρείας και μου διαβεβαίωσε ότι η αντλία Tandem δεν θα είναι ποτέ ανοιχτή, αλλά έχουν δημιουργήσει το δικό τους σύστημα κλειστού κυκλώματος, το οποίο καλούν Control-IQ (νομίζω ότι είναι ήδη διαθέσιμο στις Η. Π. Α. και θα είναι διαθέσιμο το 2020 στην ΕΕ).
 
 * * *
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
+** Κατάσταση κυκλώματος: ** Δεν είναι για κύκλωμα. Δεν υπάρχει δυνατότητα τηλεχειρισμού. ** Σημείωση: ** Η αντλία δεν πωλείται πια. Η εταιρεία σταμάτησε να δραστηριοποιείται στην παραγωγή αντλιών(J & J).
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped beeing sold when Vibe came out.
+** Κατάσταση κυκλώματος: ** Δεν είναι για κύκλωμα. Έχει δυνατότητα bolus, αλλά οχι TBR. ** Σημείωση ** Σταμάτησε να πωλείται όταν βγήκε το Vibe.
 
-## Requirements for pumps being loopable
+## Απαιτήσεις αντλιών για να είναι συμβατές με κύκλωμα
 
-**Prerequisite**
+**Προαπαιτούμενο**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Η αντλία πρέπει να υποστηρίζει κάποιο είδος τηλεχειρισμού. (BlueTooth, ραδιοφωνική συχνότητα κλπ)
+- Το πρωτόκολλο παραβιάζεται / τεκμηριώνεται / κλπ.
 
-**Minimal requirement**
+**Ελάχιστες απαιτήσεις**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Ορισμός συχνότητας προσωρινού βασικού ρυθμού
+- Δες την κατάσταση
+- Ακύρωση συχνότητας προσωρινού βασικού ρυθμού
 
-**For oref1(SMB) or Bolusing:**
+**Για oref1(SMB) ή Bolusing**
 
 - Set Bolus
 
-**Good to have**
+**Καλό να έχουμε**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Ακύρωση του Bolus
+- Αποκτήστε βασικό προφίλ (σχεδόν απαραίτητο)
+- Ορίστε βασικό προφίλ (ωραίο να έχετε)
+- Διαβάστε το Ιστορικό 
 
-**Other (not required but good to have)**
+**Άλλα (δεν απαιτείται αλλά καλό να έχουμε)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Ορίστε εκτεταμένο bolus
+- Ακύρωση εκτεταμένου Bolus
+- Διαβάστε το Ιστορικό
+- Διαβάστε TDD
 
 * * *
 
-### Other pumps support
+### Άλλες αντλίες που υποστηρίζονται
 
-If you have any other pumps you would like to see status on, please contact me (@andyrozman on gitter). In future release a lot of Pump configurations will be added to be Open loopable (you will be able to select Virtual Pump Type in configuration and your settings will be loaded - [Feature request #863](https://github.com/MilosKozak/AndroidAPS/issues/863)).
+Εάν έχετε οποιεσδήποτε άλλες αντλίες και θέλετε να δείτε την κατάσταση, παρακαλώ με ελάτε σε επαφή με τον (@andyrozman στο gitter). Στη μελλοντική έκδοση θα προστεθούν πολλές διαμορφώσεις αντλίας για να είναι ανοιχτή σε κύκλωμα (θα μπορείτε να επιλέξετε εικονικό τύπο αντλίας στη διαμόρφωση και οι ρυθμίσεις σας θα φορτωθούν - [ Request Feature # 863 ](https://github.com/MilosKozak/AndroidAPS/issues/863)).
