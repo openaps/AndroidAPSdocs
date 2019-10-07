@@ -92,7 +92,7 @@
 
 * * *
 
-## Pumps no longer sold (companies no longer operating)
+## Οι αντλίες που δεν πωλούνται πλέον (εταιρείες που δεν λειτουργούν πλέον)
 
 ### Αντλία Cellnovo ([ Αρχική σελίδα ](https://www.cellnovo.com/en/homepage))
 
@@ -137,7 +137,7 @@
 
 **Για oref1(SMB) ή Bolusing**
 
-- Set Bolus
+- Όρισε bolus
 
 **Καλό να έχουμε**
 
