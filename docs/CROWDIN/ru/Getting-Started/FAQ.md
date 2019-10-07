@@ -297,14 +297,14 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 Если у вас DanaR или DanaR для корейского рынка делать ничего не надо. Для других помп смотрите страницу [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling.md) для более подробной информации.
 
-## Medical topics
+## Медицинские аспекты
 
 ### Госпитализация
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Если вы хотите поделиться информацией об AndroidAPS и ИПЖ с врачами, можете распечатать [руководство по AndroidAPS для клиник](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### На приеме у эндокринолога
 
 #### Отчетность
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Вы можете либо распечатать отчеты вашего сайта Nightscout (https://вашсайт.com/report) или перейти в [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
