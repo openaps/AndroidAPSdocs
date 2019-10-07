@@ -1,58 +1,58 @@
 # Watchfaces
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. If you want to bolus etc from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Το AndroidAPS έχει σχεδιαστεί για να είναι * ελεγχόμενο * από ρολόγια Android Wear. Εάν θέλετε να κάνετε το bolus από το ρολόι στο "Ρυθμίσεις wear" θα πρέπει να ενεργοποιήσετε το "Χειρισμός από ρολόι".
 
-The following functions can be triggered from the watch:
+Οι ακόλουθες λειτουργίες μπορούν να ενεργοποιηθούν από το ρολόι:
 
-* set a temporary target
-* administer a bolus
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* ορίστε έναν προσωρινό στόχο
+* χορηγήστε ένα bolus
+* χρησιμοποιήστε τον υπολογιστή bolus (οι μεταβλητές υπολογισμού μπορούν να οριστούν στις [ ρυθμίσεις ](../Configuration/Config-Builder#wear) στο τηλέφωνο)
+* ελέγξτε την κατάσταση του κυκλώματος και της αντλίας
+* παρουσίασε TDD (Συνολική ημερήσια δόση = bolus + βασικός ρυθμός ημερησίως)
 
-To achieve this you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping). Within AndroidAPS, in the ConfigBuilder you need to [enable Wear](../Configuration/Config-Builder#wear).
+Για να επιτευχθεί αυτό, έπρεπε να επιλέξετε την παραλλαγή κατασκευής "fullRelease" όταν [ δημιουργείτε το APK ](../Installing-AndroidAPS/Building-APK.md) (ή το "pumpRelease" θα σας επιτρέψει να απενεργοποιείτε απλώς την αντλία χωρίς κύκλωμα). Μέσα στο AndroidAPS, στο Μενού διαμόρφωσης πρέπει να [ ενεργοποιήσετε το Wear ](../Configuration/Config-Builder#wear).
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Υπάρχουν διάφορα Watchfaces που μπορείτε να επιλέξετε από αυτά που περιλαμβάνουν το μέσο δέλτα, το IOB, τον ενεργό βασικό ρυθμό και τα βασικά προφίλ + το γράφημα ανάγνωσης CGM.
 
 ![AndroidAPSv2 watchface](../images/AAPSv2_Watchface.png)
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Βεβαιωθείτε ότι οι ειδοποιήσεις από το AndroidAPS δεν αποκλείονται στο ρολόι. Η επιβεβαίωση της δράσης (π.χ. bolus, Ρυθμός-Στόχου) έρχεται μέσω ειδοποίησης που θα χρειαστεί να σύρετε και να τικάρετε.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Για να φτάσετε πιο γρήγορα στο μενού AAPS, κάντε διπλό πάτημα στο BG σας. Με διπλό πάτημα στην καμπύλη BG μπορείτε να αλλάξετε τη χρονική κλίμακα..
 
-## Troubleshooting the wear app:
+## Αντιμετώπιση προβλημάτων σχετικά με την εφαρμογή wear:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* Στο Android Wear 2.0 η οθόνη του ρολογιού δεν εγκαθίσταται πλέον από μόνη της. Πρέπει να μεταβείτε στο playstore στο ρολόι (δεν είναι το ίδιο με το playstore του κινητού) και να το βρείτε στις εφαρμογές κατηγορίας που είναι εγκατεστημένες στο τηλέφωνό σας, από εκεί μπορείτε να το ενεργοποιήσετε. Επίσης, ενεργοποιήστε την αυτόματη ενημέρωση. 
+* Μερικές φορές συμβάλλει στον επανασυγχρονισμό των εφαρμογών στο ρολόι, καθώς μπορεί να είναι λίγο αργή για να γίνει αυτό: Android Wear> Cog icon> Watch name> Resync apps.
+* Ενεργοποιήστε την εκκαθάριση του ADB στις Επιλογές προγραμματιστή (στο ρολόι), συνδέστε το ρολόι μέσω USB και ξεκινήστε την εφαρμογή Wear μία φορά στο Android Studio.
 
 ## Legend AndroidAPSv2 watchface
 
 ![Legend AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
 
-A - time since last loop run
+A - χρόνος από την τελευταία εκτέλεση του κυκλώματος
 
-B - CGM reading
+Β - Ανάγνωση CGM
 
-C - minutes since last CGM reading
+Γ - λεπτά από την τελευταία ανάγνωση CGM
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+Δ - αλλαγή σε σχέση με την τελευταία ανάγνωση CGM (σε mmol ή mg / dl)
 
-E - average change CGM reading last 15 minutes
+E - μέση αλλαγή ανάγνωσης CGM που διαρκεί 15 λεπτά
 
-F - phone battery
+Ζ - μπαταρία τηλεφώνου
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+Η - βασικός ρυθμός (εμφανίζεται σε U / h κατά την κανονική τιμή και σε% κατά τη διάρκεια του TBR)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+Θ - BGI (αλληλεπίδραση γλυκόζης στο αίμα) -> ο βαθμός στον οποίο το BG "πρέπει" να αυξάνεται ή να μειώνεται με βάση μόνο την δραστηριότητα της ινσουλίνης.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - υδατάνθρακες (υδατάνθρακες επί του παρόντος, υδατάνθρακες μελλοντικά)
 
-J - insulin on board (from bolus | from basal)
+Κ - ινσουλίνη επί του παρόντος (από bolus ή από βασικό ρυθμό)
 
-## View Nightscout data
+## Προβολή δεδομένων Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Εάν χρησιμοποιείτε άλλο σύστημα με κύκλωμα και θέλετε να *δείτε* τις λεπτομέρειές σας σε ένα ρολόι Android Wear ή θέλετε να παρακολουθήσετε το κύκλωμα του παιδιού σας, τότε μπορείτε να δημιουργήσετε / κατεβάσετε μόνο το APK NSClient. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Υπάρχουν διάφορα Watchfaces που μπορείτε να επιλέξετε από αυτά που περιλαμβάνουν το μέσο δέλτα, το IOB, τον ενεργό βασικό ρυθμό και τα βασικά προφίλ + το γράφημα ανάγνωσης CGM.
 
 ## Pebble
 
