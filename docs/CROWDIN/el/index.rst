@@ -115,7 +115,7 @@ Advanced
    Automation with 3rd party apps <./Usage/automationwithapp.md>
    
 
-Troubleshooting
+Αντιμετώπιση προβλημάτων
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
