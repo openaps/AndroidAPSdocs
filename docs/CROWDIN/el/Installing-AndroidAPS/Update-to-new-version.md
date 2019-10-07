@@ -103,105 +103,105 @@
 
 ## Μεταφορά APK σε smartphone
 
-<!--- Text is maintained in page building-apk.md ---> Ανοίγει ένα παράθυρο διαχειριστή αρχείων. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+<!--- Text is maintained in page building-apk.md ---> Ανοίγει ένα παράθυρο διαχειριστή αρχείων. Μπορεί να φαίνεται λίγο διαφορετικό στο σύστημά σας καθώς χρησιμοποιώ το Linux. Στα Windows θα υπάρχει η Εξερεύνηση αρχείων και στο Mac OS X ο εξερευνητής. Εκεί θα πρέπει να δείτε τον κατάλογο με το αρχείο APK που δημιουργήθηκε. Δυστυχώς, αυτό είναι λάθος, καθώς το "wear-release.apk" δεν είναι η υπογεγραμμένη εφαρμογή APK που ψάχνουμε.
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+![Στιγμιότυπο οθόνης 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Μεταβείτε στον κατάλογο AndroidAPS / εφαρμογή / πλήρεις/ release για να βρείτε το αρχείο "app-full-release.apk". Μεταφέρετε αυτό το αρχείο στο Android smartphone σας. Μπορείτε να το κάνετε με τον προτιμώμενο τρόπο, δηλαδή Bluetooth, upload cloud, ή να συνδέσετε τον υπολογιστή και το τηλέφωνο με καλώδιο ή να χρησιμοποιήσετε email. Χρησιμοποιώ το Gmail εδώ σε αυτό το παράδειγμα, καθώς είναι αρκετά απλό για μένα. Το αναφέρω αυτό επειδή για να εγκαταστήσετε την εφαρμογή που υπογράφηκε αυτόματα πρέπει να επιτρέψουμε στο Android στο smartphone μας να κάνει αυτήν την εγκατάσταση ακόμα κι αν αυτό το αρχείο λαμβάνεται μέσω Gmail, το οποίο κανονικά απαγορεύεται. Αν χρησιμοποιείτε κάτι άλλο παρακαλούμε προχωρήστε ανάλογα.
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
+![Στιγμιότυπο οθόνης 48](../images/Installation_Screenshot_48.png)
 
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+Στις ρυθμίσεις του smartphone σας υπάρχει μια περιοχή "Άγνωστη εγκατάσταση εφαρμογών", όπου πρέπει να δώσω στο Gmail το δικαίωμα να εγκαταστήσει αρχεία APK που λαμβάνω μέσω του Gmail.
 
-Select "Allow from this source". After the installation, you can disable it again.
+Επιλέξτε "Να επιτρέπεται από αυτή την πηγή". Μετά την εγκατάσταση, μπορείτε να την απενεργοποιήσετε ξανά.
 
-![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
+![Εγκατάσταση από άγνωστες πηγές](../images/Installation_Screenshot_49-50.png)
 
-The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
+Το τελευταίο βήμα είναι να πατήσετε το αρχείο APK που λαβατε μέσω του Gmail και να εγκαταστήσετε την εφαρμογή. Αν το APK δεν εγκατασταθεί και έχετε μια παλαιότερη έκδοση του AndroidAPS στο τηλέφωνό σας που έχει υπογραφεί με διαφορετικό κλειδί τότε θα πρέπει πρώτα να την απεγκαταστήσετε, να θυμάστε να εξάγετε τις ρυθμίσεις σας αν το κάνετε!
 
-Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+Ναι, το πήρατε και τώρα μπορείτε να ξεκινήσετε με τη ρύθμιση του AndroidAPS για τη χρήση σας (CGMS, αντλία ινσουλίνης) κλπ.
 
-## Check AAPS version on phone
+## Ελέγξτε την έκδοση AAPS στο τηλέφωνό σας
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Μπορείτε να ελέγξετε την έκδοση AAPS στο τηλέφωνό σας κάνοντας κλικ στο μενού των τριών κουμπιών επάνω δεξιά και στη συνέχεια σχετικά με.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Η έκδοση AAPS έχει εγκατασταθεί](../images/Update_VersionCheck.png)
 
-# Troubleshooting
+# Αντιμετώπιση προβλημάτων
 
-## Kotlin compiler warning
+## Προειδοποίηση μεταγλωττιστή Kotlin
 
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
+Αν η κατασκευή ολοκληρώθηκε με επιτυχία, αλλά έχετε προειδοποιήσεις μεταγλωττιστή Kotlin τότε απλώς αγνοήστε αυτές τις προειδοποιήσεις.
 
-App was build successfully and can be transferred to phone.
+Η εφαρμογή κατασκευάστηκε με επιτυχία και μπορεί να μεταφερθεί στο τηλέφωνο.
 
-![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
+![αγνοήστε την προειδοποίηση μεταγλωττιστή της Kotline](../images/GIT_WarningIgnore.PNG)
 
-## Could not download… / Offline Work
+## Δεν ήταν δυνατή η λήψη... / εργασία εκτός σύνδεσης
 
-If you get a failure message like this
+Εάν λάβετε ένα μήνυμα αποτυχίας όπως αυτό
 
-![Warning could not download](../images/GIT_Offline1.jpg)
+![Προειδοποίηση δεν ήταν δυνατή η λήψη](../images/GIT_Offline1.jpg)
 
-make sure that ‘Offline work’ is disabled.
+βεβαιωθείτε ότι η εργασία "εκτός σύνδεσης" είναι απενεργοποιημένη.
 
-File -> Settings
+Αρχείο -> Ρυθμίσεις
 
-![Settings offline work](../images/GIT_Offline2.jpg)
+![Ρυθμίσεις εκτός σύνδεσης](../images/GIT_Offline2.jpg)
 
-## Uncommitted changes
+## Μη δεσμευμένες αλλαγές
 
-If you receive failure message like
+Εάν λάβετε μήνυμα αποτυχίας όπως
 
-![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+![Αποτυχία μη δεσμευμένων αλλαγών](../images/GIT_TerminalCheckOut0.PNG)
 
-### Option 1
+### Επιλογή 1
 
-* In Android Studio select VCS -> GIT -> Reset HEAD ![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
+* Στο Android Studio επιλέξτε VCS -> GIT -> Επαναφορά HEAD ![Επαναφορά HEAD](../images/GIT_TerminalCheckOut3.PNG)
 
-### Option 2
+### Επιλογή 2
 
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in Android Studio (lower left side of Android Studio window) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
+* Αντιγράψτε το 'git checkout -' στο πρόχειρο (χωρίς επιγραφές)
+* Μεταβείτε στο Terminal στο Android Studio (στην κάτω αριστερή πλευρά του παραθύρου του Android Studio) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
 
-* Paste copied text and press return ![GIT checkout success](../images/GIT_TerminalCheckOut2.jpg)
+* Επικολλήστε το κείμενο που αντιγράψατε και πατήστε επιστροφή ![Επιτυχία ελέγχου GIT](../images/GIT_TerminalCheckOut2.jpg)
 
-## App not installed
+## Η εφαρμογή δεν έχει εγκατασταθεί
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![ειδοποίηση εγκατάστασης εφαρμογής στο τηλεφώνο](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps: 
-  1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-  2. Uninstall AAPS on your phone.
-  3. Enable airplane mode & turn off bluetooth.
-  4. Install new version (“app-full-release.apk”)
+* Βεβαιωθείτε ότι έχετε μεταφέρει το αρχείο "app-full-release.apk" στο τηλέφωνό σας.
+* Εάν στο τηλέφωνό σας εμφανίζεται "Δεν έχει εγκατασταθεί η εφαρμογή", ακολουθήστε αυτά τα βήματα: 
+  1. [ Εξαγωγή ρυθμίσεων ](../Usage/Objectives#export-import-settings) (σε έκδοση AAPS που είναι ήδη εγκατεστημένη στο τηλέφωνό σας)
+  2. Καταργήστε την εγκατάσταση του AAPS στο τηλέφωνό σας.
+  3. Ενεργοποίηση λειτουργίας αεροπλάνου & απενεργοποιήστε το Bluetooth.
+  4. Εγκατάσταση νέας έκδοσης ("app-full-release.apk")
   5. [Ρυθμίσεις εισαγωγής](../Usage/Objectives#export-import-settings)
-  6. Turn bluetooth back on and disable airplane mode
+  6. Ενεργοποιήστε ξανά το bluetooth και απενεργοποιήστε τη λειτουργία του αεροπλάνου
 
-## App installed but old version
+## Η εφαρμογή έχει εγκατασταθεί αλλά είναι παλαιά έκδοση
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+Εάν χτίσετε την εφαρμογή με επιτυχία, την μεταφέρατε στο τηλέφωνό σας και την εγκαταστήσατε με επιτυχία, αλλά ο αριθμός έκδοσης παραμένει ο ίδιος, τότε ίσως να μην έχετε περάσει το βήμα συγχώνευσης στο [ εγχειρίδιο ενημέρωσης ](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
-## None of the above worked
+## Κανένα από τα παραπάνω δεν δούλεψε
 
-If non of the above tips helped you might consider building the app from scratch:
+Εάν δεν βοηθηθήκατε από τις παραπάνω συμβουλές, μπορείτε να εξετάσετε το ενδεχόμενο να δημιουργήσετε την εφαρμογή από την αρχή:
 
-1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
-3.     Note down the path to your key store
-      In Android Studio Build -> Generate Signed APK
-      ![Key store path](../images/KeystorePath.PNG)
+1. [ Εξαγωγή ρυθμίσεων ](../Usage/Objectives#export-import-settings) (σε έκδοση AAPS που είναι ήδη εγκατεστημένη στο τηλέφωνό σας)
+2. Έχετε έτοιμο τον κωδικό πρόσβασης σας και τον κωδικό αποθήκευσης κλειδιών. Σε περίπτωση που έχετε ξεχάσει κωδικούς πρόσβασης, μπορείτε να προσπαθήσετε να τους βρείτε σε αρχεία έργου όπως περιγράφεται [ εδώ ](https://youtu.be/nS3wxnLgZOo).
+3.     Σημειώστε τη διαδρομή προς το χώρο αποθήκευσης κλειδιών
+      Στο Android Studio Build - > Δημιουργία υπογεγραμμένου APK
+      ! [Διαδρομή αποθήκευσης κλειδιών] (../ images / KeystorePath.PNG)
       
   
-  4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Use existing key and key store.
-4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
+  4. Κατασκευάστε την εφαρμογή από το μηδέν όπως περιγράφεται [ εδώ ](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Χρησιμοποιήστε το υπάρχον κλειδί και την αποθήκευση κλειδιού.
+4. Όταν έχετε δημιουργήσει το APK, διαγράψτε με επιτυχία την εξερχόμενη εφαρμογή στο τηλέφωνό σας, μεταφέρετε το νέο APK στο τηλέφωνό σας και εγκαταστήστε το.
 5. [Ρυθμίσεις εισαγωγής](../Usage/Objectives#export-import-settings)
 
-## Worst case scenario
+## Στη χειρότερη περίπτωση
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+Σε περίπτωση που ακόμη και η οικοδόμηση της εφαρμογής από το μηδέν δεν λύσει το πρόβλημά σας ίσως να θέλετε να προσπαθήσετε να απεγκαταστήσετε πλήρως το Android Studio. Μερικοί χρήστες ανέφεραν ότι αυτό λύνει το πρόβλημά τους.
 
-Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Βεβαιωθείτε ότι έχετε καταργήσει την εγκατάσταση όλων των αρχείων που σχετίζονται με το Android Studio. Τα εγχειρίδια μπορούν να βρεθούν ηλεκτρονικά, δηλαδή [ https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 ](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+Εγκαταστήστε το Android Studio από το μηδέν όπως περιγράφεται [ εδώ ](../Installing-AndroidAPS/Building-APK#install-android-studio) και ** μην ενημερώσετε το gradle **.
