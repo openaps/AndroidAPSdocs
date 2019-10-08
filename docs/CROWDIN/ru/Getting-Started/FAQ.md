@@ -154,45 +154,49 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 В то же время, задание слишком высокой чувствительности ISF может привести к недостаточной коррекции, когда ГК останется выше цели, это особенно заметно за ночь.
 
-## Углеводный коэффициент - соотношение углеводов и инсулина (CR) (г/ед)
+## Insulin to carb ratio (IC) (g/U)
 
 ### Описание & тестирование
 
 Углеводы в граммах на каждую единицу инсулина.
 
-Полагая, что база задана верно, можно проверить этот коэффициент, убедившись в отсутствии активного инсулина IOB при нормальной гликемии. Для этого надо съесть известную пищу с известным количеством углеводов и подав на нее расчетное количество инсулина, основываясь на текущем соотношении 1/CR. Лучше всего есть пищу, которую вы обычно едите в это время дня и точно посчитать ее углеводы.
+Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
+
+Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
 
 ### Результат
 
-**Более низкий углеводный коэффициент CR** = меньше еды на единицу инсулина, то есть вы получаете больше инсулина на фиксированное количество углеводов. Может также назваться «более агрессивным».
+**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
 
-**Более высокий углеводный коэффициент CR** = больше еды на единицу инсулина, то есть вы получаете меньше инсулина на фиксированное количество углеводов. Может также назваться «менее агрессивным».
+**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
 
-Если после усваивания пищи и возвращения активного инсулина IOB к нулю, ГК остается выше чем до еды, высока вероятность того, что CR слишком велик. И наоборот, если ГК ниже, чем перед едой, CR слишком мал.
+If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
+
+If you have been using "bread unit" factors so far (How much insulin is needed to cover one bread unit?) you can find conversion tables online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 # Алгоритм APS
 
 ## Почему на вкладке "помощник болюса OPENAPS AMA" время действия инсулина DIA показано как 3, хотя у меня в профиле другая величина?
 
-![Мастер болюса AMA 3 часа](../images/Screenshot_AMA3h.png)
+![AMA 3h](../images/Screenshot_AMA3h.png)
 
-В помощнике болюса AMA "DIA" не означает "длительность действия инсулина". Этот параметр раньше привязывался к длительности действия инсулина DIA. Теперь же он означает, 'время, за которое нужно завершить коррекцию'. Он не имеет ничего общего с расчетом активного инсулина IOB. В алгоритме OpenAPS SMB в этом параметре больше нет необходимости.
+In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
 
 ## Профиль
 
 ### Почему следует устанавливать минимум продолжительности действия инсулина DIA на 5 часов вместо 2-3 часов?
 
-Хорошо объяснено в [этой статье](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Не забудьте `АКТИВИРОВАТЬ ПРОФИЛЬ` после изменения продолжительности действия инсулина DIA.
+Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
 
 ### Что заставляет алгоритм цикла часто понижать мою ГК до гипогликемических значений в отсутствии углеводов COB в организме?
 
-В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. Если все верно, то такое поведение обычно вызвано слишком низким значением чувствительности к инсулину ISF. Слишком низкая чувствительность ISF обычно выглядит так:
+В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
 
-![Чувствительность ISF слишком низкая](../images/isf.jpg)
+![ISF too low](../images/isf.jpg)
 
 ### Что вызывает высокие постпрандиальные пики в замкнутом цикле?
 
-В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. Если все правильно, и гликемия падает до целевого значения после того, как углеводы полностью усвоены, попробуйте за некоторое время до еды установить временную цель "приближается прием пищи" в AAPS или продумайте подходящее время преболюса с вашим эндокринологом. Если ваша гликемия слишком высока после еды и все еще слишком высока после того, как углеводы полностью усвоены, подумайте о снижении соотношения инсулин/углеводы IC с вашим эндокринологом. Если гликемия слишком высока при усвоении углеводов COB и слишком низка после их полного усвоения, подумайте об увеличении соотношения инсулин/углеводы IC и о надлежащем времени преболюса с эндокринологом.
+В первую очередь, проверьте значения скорости подачи базала и проверьте работу базала безуглеводным test'ом. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
 # Другие настройки
 
@@ -200,23 +204,23 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ### Клиент NScout AndroidAPS выдает ошибку 'не разрешено' и не передает данные. Что делать?
 
-В клиенте NSClient проверьте 'Настройки подключения'. Возможно, вы в закрытой для вас зоне WLAN или активировали опцию подключаться 'Только при зарядке', а ваш кабель зарядки не подключен.
+In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
 ## Настройки мониторинга
 
 ### Почему AndroidAPS выдает сообщение: 'Источник ГК не поддерживает расширенную фильтрацию'?
 
-Если вы используете иной источник ГКБ чем Dexcom G5 или G6 в нативном режиме xDrip, вы получите это уведомление в панели OpenAPS. Для более подробной информации см [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 ## Помпа
 
 ### Где поместить помпу?
 
-Есть многочисленные возможности размещения помпы. Неважно, вы пользуетесь приложениями ИПЖ или нет. Если вы предпочитаете беспроводные помпы, а у вас Dana для AAPS, попробуйте тридцатисантиметровый тубинг катетера с оригинальным поясом для помпы.
+There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
 
 ### Батареи
 
-Работа в замкнутом цикле быстрее расходует батарею поскольку система больше взаимодействует по блутусу чем обычная помпа в ручном режиме. Лучше менять батарею при 25% так как после этого связь становится труднее. Можно настроить предупредительные сигналы батареи помпы через переменную PUMP_WARN_BATT_P на сайте Nightscout. Способы увеличить срок жизни батареи включают:
+Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
 
 * уменьшить длительность работы экрана LCD (в меню настроек помпы)
 * уменьшить длительность работы подсветки (в меню настроек помпы)
@@ -229,17 +233,17 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ### Замена картриджей и катетеров
 
-Замена картриджей не может осуществляться через AndroidAPS, ее следует производить как и раньше, непосредственно через помпу.
+The change of cartridge cannot be done via AndroidAPS, but must be carried out as before directly via the pump.
 
 * Нажмите и удерживайте кнопку "Открытый цикл"/"Замкнутый цикл" на вкладке "Главный экран" AndroidAAPS и выберите "Приостановка цикла на 1ч'
 * Отключите помпу и замените картридж в соответствии с инструкцией помпы.
 * После переподключения помпы запустите цикл долгим нажатием на 'Приостановлено (X мин.)'.
 
-Однако замена катетера происходит не через функцию "первичного заполнения инфузионного набора" на помпе, а заполняет его с помощью болюса, который не отражается в истории болюсов. Это означает, что текущая временная скорость базала не прерывается. На вкладке Действия при помощи кнопки ЗАПОЛНИТЬ задайте то количество инсулина, которое необходимого для заполнения инфузионного набора и начните первичное заполнение. Если этого количества не достаточно, повторите заполнение. Вы можете установить кнопки по умолчанию в Настройках > Другое > Заполнить/Инициировать стандартные количества инсулина. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
+The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
 
 ## Фоновый рисунок
 
-Обои AndroidAPS можно найти для телефона на странице [ Телефоны ](../Getting-Started/Phones#phone-background).
+You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
 
 ## Повседневное применение
 
@@ -247,13 +251,13 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 #### Что делать при приеме душа или ванной?
 
-Помпу можно снять при приеме душа или ванной. На этот короткий период времени она вам, как правило, не понадобится. Но следует проинформировать об этом AAPS чтобы расчеты активного инсулина IOB были правильными.
+You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
 
-См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### На работе
 
-В зависимости от вида работы, возможно, вы используете иные методы лечения в рабочие дни. Следует подумать о [ переключении профиля](../Usage/Profiles.md) на планируемый рабочий день (например, более 100% на 8 ч при сидячей работе или менее 100% при активном режиме), высокой или низкой временной цели или [сдвиге времени профиля](../Usage/Profiles#time-shift), когда вы встаете гораздо раньше или позже, чем обычно. Если вы используете профили Nightscout, можно создать второй профиль (например, 'дом' и 'работа') и при необходимости переключаться с профиля на профиль.
+Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Отдых
 
@@ -261,31 +265,31 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ### Секс
 
-Можете снять помпу для "свободы" но следует проинформировать об этом AAPS, чтобы расчеты активного инсулина IOB были правильными.
+You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
 
-См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Употребление алкоголя
 
-Употребление алкоголя является рискованным в режиме замкнутого цикла, так как алгоритм ИПЖ не может правильно предсказать влияние алкоголя на ГК. Следует выработать свой собственный метод для подхода к этому вопросу с помощью следующих функций в AndroidAPS:
+Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
 
 * Деактивировать режим замкнутого цикла и разбираться с диабетом вручную или
 * устанавливать высокие временные цели и отключать незапланированный прием пищи UAM, чтобы избежать увеличения активного инсулина IOB из-за непредусмотренной еды или
 * переключить профиль на величину, заметно менее 100% 
 
-При употреблении алкоголя всегда нужно следить за мониторингом, чтобы вручную избежать гипокликемии, съедая углеводы.
+When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
 ### Сон
 
 #### Как обеспечить работу цикла ночью без воздействия мобильного и WIFI излучения?
 
-Многие пользователи ночью переводят телефон в режим авиаперелета. Если вы хотите, чтобы AAPS поддерживал вас во время сна, действуйте следующим образом (будет работать только с локальным источником ГК, таким как xDrip+ или приложением Dexcom с патчем, но НЕ будет работать, если вы получаете данные ГК с сайта Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
 
 1. Включите режим авиаперелета на вашем мобильном устройстве.
 2. Подождите, пока режим авиаперелета не будет активирован.
 3. Включите Блутус.
 
-Теперь вы не принимаете звонки и не подключены к Интернету. Но цикл продолжает работу.
+You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
 У некоторых пользователей обнаружились проблемы с локальной трансляцией (AAPS не получает данные от xDrip+) в режиме авиаперелета. Перейдите в Настройки xdrip+ > Inter-app settings > Identify receiver и введите `info.nightscout.androidaps`.
 
@@ -295,16 +299,16 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 #### Как справляться с изменениями часового пояса?
 
-Если у вас DanaR или DanaR для корейского рынка делать ничего не надо. Для других помп смотрите страницу [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling.md) для более подробной информации.
+With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
 
 ## Медицинские аспекты
 
 ### Госпитализация
 
-Если вы хотите поделиться информацией об AndroidAPS и ИПЖ с врачами, можете распечатать [руководство по AndroidAPS для клиник](../Resources/clinician-guide-to-AndroidAPS.md).
+If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### На приеме у эндокринолога
 
 #### Отчетность
 
-Вы можете либо распечатать отчеты вашего сайта Nightscout (https://вашсайт.com/report) или перейти в [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
