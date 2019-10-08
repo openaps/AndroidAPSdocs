@@ -132,10 +132,9 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
    ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
    
 * The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”:
-	 Transmitter days: 151
-	 Voltage A: 297
-	 Voltage B: 260
-	 Resistance: 2391
+
+   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
+   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
 
 
 ### Extend transmitter life
