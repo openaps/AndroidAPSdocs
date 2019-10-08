@@ -275,6 +275,8 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 
 ### Problem when starting new sensor
 
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G...
+
 * Native sensor is marked as "FAILED: Sensor Failed Start"
 * Stop sensor
 * Restart your phone
