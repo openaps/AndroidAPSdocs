@@ -54,8 +54,8 @@ Dexcom G6 specific troubleshooting
 * Do not enable "restart sensors" while setting a new sensor
 * Only start new sensor if the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
 
-  * Transmitter serial starting with 80 or 81: "Goto data hh:mm" (i.e. "Got data 19:04")
-  * Transmitter serial starting with 8G: "Goto glucose hh:mm" (i.e. "Got glucose 19:04")
+  * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+  * Transmitter serial starting with 8G: "Got glucose hh:mm" (i.e. "Got glucose 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
