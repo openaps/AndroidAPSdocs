@@ -45,22 +45,22 @@ G6 mit der gepatchten Dexcom App
 
 Problembehandlung G6
 ====================
-Dexcom G6 specific troubleshooting
+Dexcom G6-spezifische Problembehandlung
 ----
-* Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip version from May 2019 or a newer nightly build.
-* Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
-* Wait at least 15 min. between stopping and starting a sensor.
-* Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
-* Do not enable "restart sensors" while setting a new sensor
-* Only start new sensor if the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Transmitter, deren Seriennummer mit 80 oder 81 beginnt benötigen mind. die letzte Masterversion vom Mai 2019 oder einen neueren nightly build.
+* Transmitter, deren Seriennummer mit 8G beginnt benötigen mind. die nightly build vom 25. Juli 2019 oder ein neueres nightly build.
+* Warte mindestens 15 Minuten zwischen dem Stoppen und Starten des Sensors.
+* Datiere die Einsetzzeit nicht zurück. Beantworte daher die Frage, ob Du den Sensor heute eingesetzt hast, immer mit Ja.
+* Beim Starten eines Sensors darf "restart sensors" nicht aktiviert sein.
+* Starte den neuen Sensor nur wenn eine der folgenden Informationen auf der  Classic Status Page -> G5/G6 status -> PhoneServiceState angezeigt wird:
 
-  * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-  * Transmitter serial starting with 8G: "Got glucose hh:mm" (i.e. "Got glucose 19:04")
+  * Transmitter Seriennummer beginnt mit 80 oder 81: "Got data hh:mm" (z.B. "Got data 19:04")
+  * Transmitter Seriennummer beginnt mit 8G : "Got glucose hh:mm" (z.B. "Got glucose 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshoothing
+Allgemeine Problembehandlung
 ----
 Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du `hier <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
