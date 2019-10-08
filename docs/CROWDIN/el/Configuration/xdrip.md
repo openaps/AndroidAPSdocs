@@ -124,7 +124,10 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 * Battery status can be controlled in system status (Hamburger menu top left on homescreen)
 * Swipe left once to see second screen. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”: Transmitter days: 151 Voltage A: 297 Voltage B: 260 Resistance: 2391
+* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”:
+   
+   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
+   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
 
 ### Extend transmitter life
 
@@ -264,6 +267,8 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 * Wait about 5 min. until Dexcom transmitter reconnects automatically.
 
 ### Problem when starting new sensor
+
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. ξεκινά με 8G...
 
 * Native sensor is marked as "FAILED: Sensor Failed Start"
 * Σταματήστε τον αισθητήρα
