@@ -136,6 +136,8 @@ Conversely, an ISF set too high can result in under-corrections, meaning your BG
 ### Description & testing
 The grams of carbohydrate for each unit of insulin.
 
+Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
+
 Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
 
 ### Impact
