@@ -124,7 +124,10 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Der Batteriestatus kann im Systemstatus (Hamburgermenü links oben auf dem Startbildschirm) überwacht werden.
 * Wische nach links, um den zweiten Status-Bildschirm zu sehen.![xDrip+ Erster Transmitter](../images/xDrip_Dexcom_Battery.png)
 
-* Die genauen Werte, nach denen der Transmitter aufgrund niedrigem Batteriestand ausfällt, sind nicht bekannt. Die folgenden Informationen wurden von einem User gepostet, nachdem sich der Transmitter abgeschaltet hatte: Transmitter days: 151 Voltage A: 297 Voltage B: 260 Resistance: 2391
+* Die genauen Werte, nach denen der Transmitter aufgrund niedrigem Batteriestand ausfällt, sind nicht bekannt. The following information was posted online after the transmitter “died”:
+   
+   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
+   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
 
 ### Transmitterlaufzeit verlängern
 
@@ -265,6 +268,8 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### Probleme beim Starten eines neuen Sensors
 
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. mit 8G... startet 
+
 * Im 'native mode' wird der Sensor als "FAILED: Sensor Failed Start" gekennzeichnet.
 * Sensor stoppen
 * Starte dein Smartphone neu
@@ -273,7 +278,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Sensor stoppen
 * Starte den Sensor mit dem "tatsächlichen" Code, den Du auf dem Schutzpapier des Pflasters findest.
 
-Überprüfe in den xDrip+ Logs, ob xDrip+ beginnt, mit "Duration: 1 minute" (und so weiter) zu zählen. Nur in den xdrip+ Logs kannst Du frühzeitig feststellen, ob xdrip+ einen Sensor gestoppt hat. Der letzte Status wird unten auf dem Startbildschirm nicht immer korrekt angezeigt.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ mit Freestyle Libre
 
