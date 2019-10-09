@@ -45,23 +45,23 @@
 
 Εάν ο σειριακός αριθμός του πομπού Dexcom G6. ξεκινά με 8G... δοκιμάστε [nightly έκδοση 2019/07/28 ή μεταγενέστερη](https://github.com/NightscoutFoundation/xDrip/releases).
 
-### Dexcom specific settings
+### Dexcom συγκεκριμένες ρυθμίσεις
 
-* Open G5/G6 Debug Settings -> Hamburger Menu (top left of homescreen) -> Settings -> G5/G6 Debug Settings ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
+* Ανοίξτε τις ρυθμίσεις εντοπισμού σφαλμάτων G5 / G6 -> Μενού Hamburger (επάνω αριστερά στην αρχική οθόνη) -> Ρυθμίσεις -> Ρυθμίσεις εντοπισμού σφαλμάτων G5 / G6 ![Ανοίξτε τις ρυθμίσεις της εφαρμογής xDrip+](../images/xDrip_Dexcom_SettingsCall.png)
 
-* Enable the following settings
+* Ενεργοποιήστε τις ακόλουθες ρυθμίσεις
    
-   * `Use the OB1 Collector`
-   * `Native Algorithm` (important if you want to use SMB)
-   * `G6 support`
-   * `Allow OB1 unbonding`
-   * `Allow OB1 initiate bonding`
-* All other options should be disabled
-* Adjust battery warning level to 280 (bottom of G5/G6 Debug Settings)
+   * `Χρησιμοποιήστε το OB1 Συλλέκτη`
+   * `Τοπικός αλγόριθμος` (σημαντικό αν θέλετε να χρησιμοποιήσετε το SMB)
+   * `G6 υποστήριξη`
+   * `Επιτρέπουν την αποσύνδεση OB1`
+   * `Αφήστε το OB1 να αρχίσει τη σύνδεση`
+* Όλες οι άλλες επιλογές πρέπει να απενεργοποιηθούν
+* Προσαρμόστε το επίπεδο προειδοποίησης μπαταρίας στο 280 (κάτω από τις ρυθμίσεις εντοπισμού σφαλμάτων G5 / G6)
    
-   ![xDrip+ G5/G6 Debug Settings](../images/xDrip_Dexcom_DebugSettings.png)
+   ![ρυθμίσεις εντοπισμού σφαλμάτων xDrip + G5 / G6](../images/xDrip_Dexcom_DebugSettings.png)
 
-### Preemptive restarts not recommended
+### Οι προληπτικές επανεκκινήσεις δεν συνιστώνται
 
 **Με πομπούς της Dexcom, οι οποίοι έχουν σειριακό αριθμό. να ξεκινά με 8G προληπτικές επανεκκινήσεις δεν λειτουργούν και μπορεί να σκοτώσουν τον αισθητήρα εντελώς!**
 
@@ -71,15 +71,15 @@
 
 Αυτό που είναι σαφές είναι ότι η χρήση του G6 είναι ίσως λίγο πιο πολύπλοκη από ό, τι φαίνεται. Για να το χρησιμοποιήσετε με ασφάλεια, υπάρχουν μερικά σημεία που πρέπει να γνωρίζετε:
 
-* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
-* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
-* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
-* Pre-soaking of the G6 with factory calibration is likely to give variation in results. Αν κάνετε προ-εμβάπτιση, τότε για να έχετε τα καλύτερα αποτελέσματα, πιθανόν να χρειαστεί να βαθμονομήσετε τον αισθητήρα.
-* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+* Αν χρησιμοποιείτε τα εγγενή δεδομένα με τον κωδικό βαθμονόμησης σε +xDrip ή Spike, το πιο ασφαλές που μπορείτε να κάνετε είναι να μην επιτρέψετε την προληπτική επανεκκίνηση του αισθητήρα.
+* Αν πρέπει να χρησιμοποιήσετε την προληπτική επανεκκίνηση, βεβαιωθείτε ότι εισάγετε μια ώρα της ημέρας όπου μπορείτε να παρατηρήσετε την αλλαγή και να βαθμονομήσετε εάν είναι απαραίτητο. 
+* Αν κάνετε επανεκκίνηση των αισθητήρων, καταρχήν κάντε το χωρίς την εργοστασιακή βαθμονόμηση για ασφαλέστερα αποτελέσματα στις ημέρες 11 και 12, και βεβαιωθείτε ότι είστε έτοιμοι να βαθμονομήσετε και να παρακολουθήσετε την παραλλαγή.
+* Η προ-εμβάπτιση του G6 με εργοστασιακή βαθμονόμηση είναι πιθανό να προκαλέσει διακύμανση στα αποτελέσματα. Αν κάνετε προ-εμβάπτιση, τότε για να έχετε τα καλύτερα αποτελέσματα, πιθανόν να χρειαστεί να βαθμονομήσετε τον αισθητήρα.
+* Αν δεν είστε προσεκτικοί σχετικά με τις αλλαγές που ενδεχομένως να πραγματοποιηθούν, ίσως είναι καλύτερο να επιστρέψετε στη μη βαθμονομημένη από το εργοστάσιο λειτουργία και να χρησιμοποιήσετε το σύστημα όπως το G5.
 
 Για να μάθετε περισσότερα σχετικά με τις λεπτομέρειες και τους λόγους που γίνονται αυτές οι συστάσεις διαβάστε το πλήρες άρθρο [ ](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) που δημοσιεύτηκε από την Tim Street στο [ www.diabettech.com ](http://www.diabettech.com).
 
-### Connect G6 transmitter for the first time
+### Συνδέστε το πομπό G6 για πρώτη φορά
 
 **Για τους δεύτερους και τους επόμενους πομπούς βλέπε [ Επεκτείνετε τη διάρκεια ζωής του πομπού ](../Configuration/xdrip#extend-transmitter-life) παρακάτω.**
 
@@ -87,221 +87,221 @@
 
 Εάν ο σειριακός αριθμός του πομπού Dexcom G6. ξεκινά με 8G... δοκιμάστε [nightly έκδοση 2019/07/28 ή μεταγενέστερη](https://github.com/NightscoutFoundation/xDrip/releases).
 
-* Turn original Dexcom receiver off (if used).
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
-   * This guides you through the initial set up.
-   * you will need your transmitter serial number if this is the first time you've used it.
+* Σβήστε τον αρχικό δέκτη Dexcom (εάν χρησιμοποιείται).
+* Πατήστε παρατεταμένα το εικονίδιο αίματος στην κύρια οθόνη +xDrip για να ενεργοποιήσετε το κουμπί `Source Wizard Button`.
+* Χρησιμοποιήστε το κουμπί "Οδηγός πηγής", το οποίο διασφαλίζει τις προεπιλεγμένες ρυθμίσεις, συμπεριλαμβανομένων των OB1 & Εγγενής λειτουργία 
+   * Αυτό σας καθοδηγεί στην αρχική ρύθμιση.
+   * θα χρειαστείτε τον σειριακό αριθμό του πομπού σας αν αυτή είναι η πρώτη φορά που το χρησιμοποιήσατε.
 
-* Put in serial number of new transmitter (on the transmitter packaging or on the back of the transmitter). Be careful not to confuse 0 (zero) and O (capital letter o).
+* Τοποθετήστε τον αύξοντα αριθμό του νέου πομπού (βρίσκετε στη συσκευασία του πομπού ή στο πίσω μέρος του πομπού). Προσέξτε να μην συγχέετε 0 (μηδέν) και O (κεφαλαίο γράμμα o).
    
-   ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
+   ![μεταδότης xDrip + Dexcom σειριακός αριθμός](../images/xDrip_Dexcom_TransmitterSN.png)
 
-* Insert new sensor (only if replacing)
+* Τοποθετήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε)
 
-* Put transmitter into sensor
-* **Wait 15 minutes** before starting sensor so xDrip can initialize communication with the new transmitter
-* Start sensor (only if replacing)
+* Βάλτε τον πομπό στον αισθητήρα
+* **Περιμένετε 15 λεπτά** πριν από την έναρξη αισθητήρα, ώστε να xDrip μπορεί να προετοιμάσει την επικοινωνία με τη νέα συσκευή αποστολής σημάτων
+* Ξεκινήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε)
    
-   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
+   -> Κοντά στο κάτω μέρος της οθόνης ` Θα πρέπει να εμφανιστεί η ένδειξη Warm Up x, x ώρες αριστερά ` μετά από μερικά λεπτά.
 
 -> Εάν ο σειριακός αριθμός του πομπού. δεν ξεκινάει με 8G και δεν υπάρχει προδιαγραφή χρόνου μετά από μερικά λεπτά σταματήστε και επανεκκίνηστε τον αισθητήρα.
 
-* Restart collector (system status - if not replacing sensor}
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Κάντε επανεκκίνηση του συλλέκτη (system status- αν δεν... αντικαταστήστε τον αισθητήρα}
+* Μην ενεργοποιείτε ξανά τον αρχικό δέκτη Dexcom (αν χρησιμοποιείται) πριν το xDrip + εμφανίσει τις πρώτες ενδείξεις.
+* Πατήστε παρατεταμένα το εικονίδιο κόκκινου σταγονιδίου αίματος στην κύρια οθόνη xDrip + για να ενεργοποιήσετε το κουμπί `Οδηγός πηγής`.
    
-   ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
+   ![xDrip+ Dexcom Μεταδότης 1](../images/xDrip_Dexcom_Transmitter01.png)
    
-   ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
+   ![xDrip+ Dexcom Μεταδότης 2](../images/xDrip_Dexcom_Transmitter02.png)
    
-   ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
+   ![xDrip+ Dexcom Μεταδότης 3](../images/xDrip_Dexcom_Transmitter03.png)
    
-   ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+   ![xDrip+ Dexcom Μεταδότης 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### Transmitter battery status
+### Κατάσταση μπαταρίας πομπού
 
-* Battery status can be controlled in system status (Hamburger menu top left on homescreen)
-* Swipe left once to see second screen. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
+* Η κατάσταση της μπαταρίας μπορεί να ρυθμιστεί σε system status (μενού Hamburger πάνω αριστερά στην αρχική οθόνη)
+* Σαρώστε προς τα αριστερά για να δείτε τη δεύτερη οθόνη. ![xDrip+ Dexcom Πρώτος Μεταδότης 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”:
+* Οι ακριβείς τιμές όταν ο πομπός σημάτων "πεθαίνει" λόγω άδειας μπαταρίας δεν είναι γνωστές. Οι ακόλουθες πληροφορίες έχουν αναρτηθεί στο διαδίκτυο μετά από τον ''θάνατο'' του πομπού:
    
-   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
-   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
+   * Ανάρτηση 1: Πομπός ημέρες: 151 / Τάση: 297 / Β Τάση: 260 / Αντίσταση: 2391
+   * Ανάρτηση 2: Πομπός ημέρες: 249 / Τάση: 275 (κατά τη στιγμή της αποτυχίας)
 
-### Extend transmitter life
+### Επέκταση της διάρκειας ζωής του πομπού
 
-* So far life cannot be extended for transmitters whos serial no. starts with 8G.
-* To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Running sensor session will be stopped when extending transmitter life. So extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and check `OB1 collector`.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Μέχρι στιγμής, η ζωή δεν μπορεί να παραταθεί για πομπούς με σειριακό αριθμό. που ξεκινά με 8G.
+* Προκειμένου να αποφευχθούν δυσκολίες στην εκκίνηση των αισθητήρων, συνιστάται ιδιαίτερα να επεκταθεί η διάρκεια ζωής του πομπού πριν από την εκατοστή ημέρα χρήσης.
+* Η περίοδος λειτουργίας του αισθητήρα θα σταματήσει κατά την παράταση της διάρκειας ζωής του πομπού. Έτσι επεκτείνετε πριν αλλάξετε τον αισθητήρα ή θυμηθείτε ότι θα υπάρξει μια νέα φάση προθέρμανσης 2 ωρών.
+* Αλλάξτε σε `engineering mode`: 
+   * πατήστε το χαρακτήρα που βρίσκεται στα δεξιά του xDrip+ οθόνη έναρξης που αντιπροσωπεύει μια σύριγγα
+   * στη συνέχεια, πατήστε το εικονίδιο του μικροφώνου στην κάτω δεξιά γωνία
+   * Στο πλαίσιο κειμένου που ανοίγει πληκτρολογήστε "ενεργοποίηση λειτουργία της μηχανικής"(enable engineering mode) 
+   * κάντε κλικ στο κουμπί "Τέλος"
+   * Εάν είναι ενεργοποιημένος ο μηχανισμός Google Speak, μπορείτε επίσης να δώσετε τη φωνητική εντολή: "ενεργοποίηση λειτουργίας μηχανικής". 
+* Μεταβείτε στις ρυθμίσεις εντοπισμού σφαλμάτων G5 και ελέγξτε τον ` συλλέκτης OB1 `.
+* Χρησιμοποιήστε τη φωνητική εντολή: "επαναφορά πομπού"(hard reset transmitter)
+* Η φωνητική εντολή θα εκτελεστεί στην επόμενη παραλαβή δεδομένων της συσκευής του πομπού
+* Κοιτάξτε την κατάσταση του συστήματος (Hamburger menu -> system status) και δείτε τι θα συμβεί
+* Εάν δείτε ένα μήνυμα "Κατάσταση τηλεφωνικής εξυπηρέτησης: Η επαναφορά ίσως αποτύχει" στην δεύτερη οθόνη κατάστασης συστήματος απλώς ξεκινήστε τον αισθητήρα και αυτό το μήνυμα θα φύγει.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Η αναγκαστική επανεκκίνηση μπορεί να αποτύχει](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Οι ημέρες εκπομπής θα ρυθμιστούν στο 0 μετά την επιτυχή επέκταση και την έναρξη του αισθητήρα.
 
-### Replace transmitter
+### Αντικατάσταση πομπού
 
 Για τους πομπούς G6 που κατασκευάστηκαν μετά το πέρας / τέλος του 2018 (δηλ. με σειριακό αριθμό. ξεκινώντας από 80 ή 81) βεβαιωθείτε ότι χρησιμοποιείτε τουλάχιστον τον κύριο πίνακα [ με ημερομηνία 2019/05/18 ](https://jamorham.github.io/#xdrip-plus).
 
 Εάν ο σειριακός αριθμός του πομπού Dexcom G6. ξεκινά με 8G... δοκιμάστε [nightly έκδοση 2019/07/28 ή μεταγενέστερη](https://github.com/NightscoutFoundation/xDrip/releases).
 
-* Turn original Dexcom receiver off (if used).
-* Stop sensor (only if replacing sensor)
+* Σβήστε τον αρχικό δέκτη Dexcom (εάν χρησιμοποιείται).
+* Διακοπή αισθητήρα (μόνο αν αντικαταστήσετε τον αισθητήρα)
    
-   Ensure it really is stopped:
+   Σιγουρευτείτε ότι έχει πράγματι σταματήσει:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about half way down - It may say something like `(1) Stop Sensor`
+   Στη δεύτερη οθόνη "Κατάσταση G5 / G6" δείτε ` Στοιχεία ουράς ` περίπου στο μισό - Μπορεί να λέει κάτι σαν ` (1) Σταμάτημα αισθητήρα`
    
-   Wait until this goes - usually within a few minutes.
+   Περιμένετε μέχρι να φύγει - συνήθως μέσα σε λίγα λεπτά έχει φύγει.
    
-   -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
+   -> Για να αφαιρέσετε τον πομπό χωρίς να σταματήσετε τον αισθητήρα, δείτε αυτό το βίντεο <https://youtu.be/AAhBVsc6NZo>.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Σταμάτημα Dexcom αισθητήρα 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Σταμάτημα Dexcom αισθητήρα 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device (in system status)
+* Ξεχάστε τη συσκευή (στο system status (κατάσταση συστήματος))
    
-   ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
+   ![xDrip + Ξεχάστε τη συσκευή](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Forget device in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
+* Ξεχάστε τη συσκευή στις ρυθμίσεις BT του smartphone (Θα εμφανιστεί ως Dexcom;; λαμβάνοντας υπόψη ότι ;; είναι τα δύο τελευταία ψηφία του σειριακού αριθμού του πομπού)
 
-* Remove transmitter (and sensor if replacing sensor)
-* Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
-* Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
-   * This guides you through the initial set up.
-   * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Be careful not to confuse 0 (zero) and O (capital letter o).
-* Insert new sensor (only if replacing).
-* Put transmitter into sensor
-* Start sensor (only if replacing)
+* Αφαιρέστε τον πομπό (και τον αισθητήρα αν αντικαθιστάτε τον αισθητήρα)
+* Πατήστε παρατεταμένα το εικονίδιο αίματος στην κύρια οθόνη +xDrip για να ενεργοποιήσετε το κουμπί `Source Wizard Button`.
+* Χρησιμοποιήστε το κουμπί "Οδηγός πηγής", το οποίο διασφαλίζει τις προεπιλεγμένες ρυθμίσεις, συμπεριλαμβανομένων των OB1 & Εγγενής λειτουργία 
+   * Αυτό σας καθοδηγεί στην αρχική ρύθμιση.
+   * Θα χρειαστείτε τον σειριακό αριθμό πομπού σας αν αυτή είναι η πρώτη φορά που το χρησιμοποιήσατε.
+* Τοποθετήστε τον σειριακό αριθμό του νέου πομπού. Προσέξτε να μην συγχέετε 0 (μηδέν) και O (κεφαλαίο γράμμα o).
+* Τοποθετήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε).
+* Βάλτε τον πομπό στον αισθητήρα
+* Ξεκινήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε)
    
-   **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
+   **Συνιστάται να περιμένετε περίπου. 15 λεπτά μεταξύ της διακοπής και της εκκίνησης του νέου αισθητήρα (μέχρι να εμφανιστεί ` Κατάσταση αισθητήρα: Διακοπή ` στη δεύτερη οθόνη κατάστασης συστήματος).**
 
-* Restart collector (system status - if not replacing sensor}
+* Κάντε επανεκκίνηση του συλλέκτη (system status- αν δεν... αντικαταστήστε τον αισθητήρα}
 
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Μην ενεργοποιείτε ξανά τον αρχικό δέκτη Dexcom (αν χρησιμοποιείται) πριν το xDrip + εμφανίσει τις πρώτες ενδείξεις.
+* Πατήστε παρατεταμένα το εικονίδιο κόκκινου σταγονιδίου αίματος στην κύρια οθόνη xDrip + για να ενεργοποιήσετε το κουμπί `Οδηγός πηγής`.
    
-   ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
+   ![xDrip+ Dexcom Μεταδότης 1](../images/xDrip_Dexcom_Transmitter01.png)
    
-   ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
+   ![xDrip+ Dexcom Μεταδότης 2](../images/xDrip_Dexcom_Transmitter02.png)
    
-   ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
+   ![xDrip+ Dexcom Μεταδότης 3](../images/xDrip_Dexcom_Transmitter03.png)
    
-   ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+   ![xDrip+ Dexcom Μεταδότης 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### New Sensor
+### Νέος αισθητήρας
 
-* Turn original Dexcom receiver off (if used).
-* Stop sensor if necessary
+* Σβήστε τον αρχικό δέκτη Dexcom (εάν χρησιμοποιείται).
+* Σταματήστε τον αισθητήρα εάν είναι απαραίτητο
    
-   Ensure it really is stopped:
+   Σιγουρευτείτε ότι έχει πράγματι σταματήσει:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about half way down - It may say something like `(1) Stop Sensor`
+   Στη δεύτερη οθόνη "Κατάσταση G5 / G6" δείτε ` Στοιχεία ουράς ` περίπου στο μισό - Μπορεί να λέει κάτι σαν ` (1) Σταμάτημα αισθητήρα`
    
-   Wait until this goes - usually within a few minutes.
+   Περιμένετε μέχρι να φύγει - συνήθως μέσα σε λίγα λεπτά έχει φύγει.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Σταμάτημα Dexcom αισθητήρα 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Σταμάτημα Dexcom αισθητήρα 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Clean contacts (transmitter backside) with alcohol and let air-dry.
+* Καθαρίστε τις επαφές (πίσω μέρος του πομπού) με αλκοόλ και αφήστε το να στεγνώσει στον αέρα.
 
-* In case you use this function disable `Restart Sensor` and `Preemptive restarts` (Hamburger menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
+* Σε περίπτωση που χρησιμοποιείτε αυτή τη λειτουργία, απενεργοποιήστε την ` Επανεκκίνηση αισθητήρα ` και την ` Προληπτική επανεκκίνηση ` (μενού Hamburger -> Ρυθμίσεις -> Ρυθμίσεις εντοπισμού σφαλμάτων G5 / G6). Εάν ξεχάσετε αυτό το βήμα και έχετε ενεργοποιήσει αυτές τις λειτουργίες, ο νέος αισθητήρας δεν θα ξεκινήσει σωστά.
    
-   ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
+   ![xDrip + Προκαταρκτική επανεκκίνηση](../images/xDrip_Dexcom_Restart.png)
 
-* Start Sensor
+* Ξεκινήστε τον αισθητήρα
    
-   **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
+   **Συνιστάται να περιμένετε περίπου. 15 λεπτά μεταξύ της διακοπής και της εκκίνησης του νέου αισθητήρα (μέχρι να εμφανιστεί ` Κατάσταση αισθητήρα: Διακοπή ` στη δεύτερη οθόνη κατάστασης συστήματος).**
 
-* Set time inserted
+* Ρυθμίστε το χρόνο που παρεμβάλλεται
    
-   * To use G6 Native mode you must wait for the 2 hour warm up (i.e insertion time is now).
-   * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore this is not recommended.
-* Enter Sensor code (on the peel-off foil of the sensor) 
-   * Keep code for further reference (i.e. new start after transmitter had to be removed)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
-* No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
-* Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
+   * Για να χρησιμοποιήσετε τη λειτουργία G6 Native, πρέπει να περιμένετε για την προθέρμανση 2 ωρών (δηλαδή ο χρόνος εισαγωγής είναι τώρα).
+   * Εάν χρησιμοποιείτε τον αλγόριθμο xDrip + τότε μπορείτε να ορίσετε προγενέστερα χρόνο περισσότερο από 2 ώρες για να αποφύγετε τη προθέρμανση. Τα δεδομένα μπορεί να είναι πολύ ασαφής. Ως εκ τούτου, αυτό δεν συνιστάται.
+* Εισαγάγετε τον κωδικό αισθητήρα (στο αφαιρούμενο φύλλο του αισθητήρα) 
+   * Κρατήστε τον κωδικό για περαιτέρω αναφορά (δηλαδή σε νέο ξεκίνημα μετά την αφαίρεση του πομπού)
+   * Ο κώδικας μπορεί επίσης να βρεθεί στο [ xDrip + logs ](../Configuration/xdrip#retrieve-sensor-code): Κάντε κλικ στο μενού 3-dots στην αρχική οθόνη xDrip + και επιλέξτε ` View Logs Event `.
+* Δεν απαιτείται βαθμονόμηση εάν χρησιμοποιείτε το G6 σε "μητρική λειτουργία". το xDrip + θα εμφανίσει αυτόματα τις μετρήσεις μετά από 2 ώρες προθέρμανσης.
+* Μην ενεργοποιείτε ξανά τον αρχικό δέκτη Dexcom (αν χρησιμοποιείται) πριν το xDrip + εμφανίσει τις πρώτες ενδείξεις.
    
-   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
+   ![xDrip+Ξεκίνημα Dexcom αισθητήρα 1](../images/xDrip_Dexcom_SensorStart01.png)
    
-   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
+   ![xDrip+Ξεκίνημα Dexcom αισθητήρα 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-### Retrieve sensor code
+### Ανάκτηση κώδικα αισθητήρα
 
-* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
-* Swipe left once to see second screen.
+* Στο master με ημερομηνία 2019/05/18 και τις τελευταίες nightly κατασκευές ο κωδικός αισθητήρα εμφανίζεται στο system status (μενού Hamburger πάνω αριστερά στην αρχική οθόνη).
+* Σαρώστε προς τα αριστερά για να δείτε τη δεύτερη οθόνη.
    
-   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+   ![xDrip+ Επαναφορά αισθητήρα Dexcom Code2](../images/xDrip_Dexcom_SensorCode2.png)
 
-* Dexcom sensor code can also be found in xDrip+ logs.
+* Ο κώδικας αισθητήρα Dexcom μπορεί επίσης να βρεθεί στα αρχεία καταγραφής xDrip +.
 
-* Tap 3 dot menu (top right side on homescreen)
-* Select `View Event Logs` and search for "code"
+* Αγγίξτε το μενού 3 κουκκίδων (πάνω δεξιά στην αρχική οθόνη)
+* Επιλέξτε ` Προβολή αρχείων καταγραφής συμβάντων ` και αναζητήστε "κώδικα"
    
-   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Επαναφορά αισθητήρα Dexcom Code](../images/xDrip_Dexcom_SensorCode.png)
 
-## Troubleshooting Dexcom G5/G6 and xDrip+
+## Αντιμετώπιση προβλημάτων Dexcom G5/G6 και xDrip+
 
-### Problem connecting transmitter
+### Πρόβλημα στη σύνδεση πομπού
 
-* Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
-* Open system status in xDrip+ (hamburger menue on top left side of home screen).
-* Check if your transmitter is shown on first status page ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings and restart collector.
-* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+* Η συσκευή του πομπού πρέπει να εμφανίζονται στο smartphone σας στις ρυθμίσεις bluetooth.
+* Ο πομπός θα πρέπει να εμφανίζεται ως Dexcom;; λαμβάνοντας υπόψη ότι ;; είναι τα δύο τελευταία ψηφία του σειριακού αριθμού του πομπού). (δηλαδή DexcomHY).
+* Ανοίξτε το system status σε xDrip+ (χάμπουργκερ μενού στην πάνω αριστερή πλευρά της αρχικής οθόνης).
+* Ελέγξτε εάν ο πομπός σας εμφανίζεται στην πρώτη σελίδα κατάστασης ('κλασική σελίδα κατάστασης').
+* Εάν όχι: Διαγράψτε τη συσκευή από τις ρυθμίσεις του Bluetooth του smartphone σας και κάντε επανεκκίνηση του συλλέκτη.
+* Περιμένετε περίπου 5 λεπτά. μέχρι ο πομπός Dexcom να επανασυνδεθεί αυτόματα.
 
-### Problem when starting new sensor
+### Πρόβλημα κατά την εκκίνηση νέων αισθητήρων
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G...
+Παρακαλείστε να σημειώσετε ότι η παρακάτω μέθοδος ενδέχεται να μην λειτουργεί αν ο Dexcom G6 πομπός έχει σειριακό αριθμό που ξεκινά με 8G...
 
-* Native sensor is marked as "FAILED: Sensor Failed Start"
+* Ο εγγενής αισθητήρας επισημαίνεται ως "ΑΠΈΤΥΧΕ: Αισθητήρας Απέτυχε την Έναρξη"(FAILED: Sensor Failed Start)
 * Σταματήστε τον αισθητήρα
-* Restart your phone
-* Start sensor with code 0000 (four times zero)
-* Wait 15 minutes
+* Επανεκκινήστε το τηλέφωνό σας
+* Έναρξη αισθητήρα με κωδικό 0000 (τέσσερις φορές το μηδέν)
+* Περιμένετε 15 λεπτά
 * Σταματήστε τον αισθητήρα
-* Start sensor with "real" code (printed on the adhesive protector)
+* Έναρξη αισθητήρα με το "πραγματικό" κώδικα (τυπωμένο στο προστατευτικό αυτοκόλλητο)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Ελέγξτε τα αρχεία xDrip + εάν το xDrip + αρχίζει να μετράει "Διάρκεια: 1 λεπτό" (και ούτω καθεξής). Μόνο στα αρχεία καταγραφής xdrip + μπορείτε να εντοπίσετε σε πρώιμο στάδιο αν το xdrip + έχει σταματήσει έναν αισθητήρα. Η τελευταία κατάσταση δεν εμφανίζεται πάντα σωστά στο κάτω μέρος της αρχικής οθόνης.
 
 ## xDrip+ & Freestyle Libre
 
-### Libre specific settings
+### Libre συγκεκριμένες ρυθμίσεις
 
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+* Ανοίξτε τις ρυθμίσεις Bluetooth -> Μενού Hamburger (επάνω αριστερά στην αρχική οθόνη) -> Ρυθμίσεις -> μετακινηθείτε προς τα κάτω -> Λιγότερο κοινές ρυθμίσεις -> Ρυθμίσεις Bluetooth
    
-   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+   ![xDrip + Libre Ρυθμίσεις Bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
 
-* Enable the following settings
+* Ενεργοποιήστε τις ακόλουθες ρυθμίσεις
    
-   * `Turn Bluetooth on` 
-   * `Use scanning`
-   * `Always discover services`
+   * `Ενεργοποιήστε το Bluetooth` 
+   * `Χρησιμοποιήστε τη σάρωση`
+   * `Ανακάλυπτε πάντα τις υπηρεσίες`
 
-* All other options should be disabled
+* Όλες οι άλλες επιλογές πρέπει να απενεργοποιηθούν
    
-   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+   ![xDrip + Libre Ρυθμίσεις Bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Connect Libre Transmitter & start sensor
+### Συνδέστε το μεταδότη Libre & ξεκινήστε τον αισθητήρα
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip + Εκκίνηση μεταδότη Libre & Αισθητήρα 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip + Εκκίνηση μεταδότη Libre & Αισθητήρα 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip + Εκκίνηση μεταδότη Libre & Αισθητήρα 3](../images/xDrip_Libre_Transmitter03.png)
