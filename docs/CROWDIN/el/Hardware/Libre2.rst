@@ -1,23 +1,23 @@
 Freestyle Libre 2
 *********************
 
-Freestyle Libre 2 sensors can provide BG values to AndroidAPS every 5 minutes. As they send them directly via bluetooth to your phone, you won't need to buy a bluetooth adapter like MiaoMiao anymore. Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
+Οι Freestyle Libre 2 αισθητήρες μπορούν να παρέχουν τιμές BG στο AndroidAPS κάθε 5 λεπτά. Καθώς τα στέλνουν απευθείας μέσω του bluetooth στο τηλέφωνό σας, δεν θα χρειαστεί να αγοράσετε έναν προσαρμογέα bluetooth όπως το MiaoMiao. Μέχρι τώρα, χρησιμοποιώντας το Libre 2 ως πηγή BG, δεν μπορείτε να ενεργοποιήσετε το "πάντα ενεργοποιημένο SMB" και το "ενεργοποιημένο SMB μετά τους υδατάνθρακες" μέσα στον αλγόριθμο SMB. Οι τιμές BG του Libre 2 δεν είναι αρκετά ομαλές ώστε να το χρησιμοποιείτε με ασφάλεια. Δείτε " Εξομάλυνση δεδομένων της γλυκόζης του αίματος <../Χρήση/Smoothing-Blood-Glucose-Data-in-xDrip.md>`_ για περισσότερες λεπτομέρειες.
 
-Step 1: Build your own patched Librelink-App
+Βήμα 1: Φτιάξτε το δικό σας patched Librelink-App
 ==============
-* Build your own patched Librelink app following `these instructions <https://github.com/user987654321resu/Libre2-patched-App>`_.
-* Install on your phone and start a new sensor with your patched app.
+* Δημιουργήστε τη δική σας patched εφαρμογή Librelink ακολουθώντας αυτές τις οδηγίες<https://github.com/user987654321resu/Libre2-patched-App>.
+* Εγκαταστήσετε στο τηλέφωνό σας και ξεκινήσετε ένα νέο αισθητήρα με το patched app.
 
-Step 2: Install and configure xDrip+ app
+Βήμα 2: Εγκατάσταση και ρύθμιση παραμέτρων xDrip+ app
 ==============
-* If not already set up then download xdrip app and install one of the latest nightly builts from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
+* Εάν δεν έχετε ήδη εγκαταστήσει, κάντε λήψη της εφαρμογής xdrip και εγκαταστήστε ένα από τα τελευταία nightly builts από εδώ <https://github.com/NightscoutFoundation/xDrip/releases>.
 * Στο xdrip, μεταβείτε στις Ρυθμίσεις> Συμβατότητα Interapp> Δυνατότητα τοπικής μετάδοσης δεδομένων και επιλέξτε ΕΝΕΡΓΟΠΟΊΗΣΗ.
 * Στο xdrip πηγαίνετε στο Ρυθμίσεις> Συμβατότητα Interapp> Αποδοχή θεραπειών και επιλέξτε OFF.
 * Εάν θέλετε να μπορείτε να χρησιμοποιήσετε το AndroidAPS για τη βαθμονόμηση, στη συνέχεια στο xdrip μεταβείτε στις Ρυθμίσεις> Συμβατότητα Interapp> Αποδοχή βαθμονομίσεων και επιλέξτε ΕΝΕΡΓΟΠΟΊΗΣΗ.  Ενδέχεται επίσης να θέλετε να ελέγξετε τις επιλογές στις Ρυθμίσεις> Λιγότερες κοινές ρυθμίσεις> Ρυθμίσεις βελτιωμένης βαθμονόμησης.
 * Επιλέξτε xdrip στο Configbuilder ( είναι ρύθμιση στο androidAPS).
-* For settings in xDrip+ with screenshots see `xDrip+ settings page <../Configuration/xdrip.md>`__. There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
+* Για τις ρυθμίσεις στο xDrip + με στιγμιότυπα οθόνης δείτε τη σελίδα ρυθμίσεων xDrip + </ Configuration / xdrip.md> `__. Υπάρχει ένα μέρος για τις βασικές ρυθμίσεις xDrip + και για τις ρυθμίσεις Freestyle Libre xDrip +.
 
-Step 3: Configure AndroidAPS
+Βήμα 3: Ρύθμιση Παραμέτρων AndroidAPS
 ==============
-* In AndroidAPS go to Config Builder > BG Source and check 'xDrip+' 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Στο AndroidAPS πηγαίνετε στο Config Builder > BG Πηγή και έλεγχος " xDrip+' 
+Αν το AndroidAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη[ σελίδα ρυθμίσεων xDrip](../Configuration/xdrip.html).
