@@ -55,17 +55,17 @@ Dexcom G6 αντιμετώπιση συγκεκριμένων προβλημάτ
 * Ξεκινήστε το νέο αισθητήρα μόνο αν εμφανίζονται οι ακόλουθες πληροφορίες στην Κλασική Σελίδα Κατάστασης -> Κατάσταση G5 / G6 -> PhoneServiceState:
 
   * Πομπός με σειριακό αριθμό που ξεκινάει με 80 ή 81: "Έχεις δεδομένα ώρες: λεπτά" (δηλ. "Τα δεδομένα 19:04")
-  * Transmitter serial starting with 8G: "Got glucose hh:mm" (i.e. "Got glucose 19:04")
+  * Πομπός με σειριακό αριθμό που ξεκινάει με 8G: "Έχεις δεδομένα ώρες: λεπτά" (δηλ. "πάρε γλυκόζη από 19:04")
 
-.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
+.. εικόνα:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshoothing
+Γενική αντιμετώπιση προβλημάτων
 ----
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+Γενικά Η αντιμετώπιση προβλημάτων για CGMs μπορεί να βρεθεί εδώ <./ Γενικές συστάσεις CGM # Αντιμετώπιση προβλημάτων> "_.
 
-New transmitter with running sensor
+Νέος πομπός με αισθητήρα λειτουργίας που λειτουργούσε
 --------------------------------------
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
+Εάν συμβεί να αλλάξετε τον πομπό κατά τη διάρκεια μιας περιόδου λειτουργίας του αισθητήρα, μπορεί να προσπαθήσετε να αφαιρέσετε τον πομπό χωρίς να καταστρέψετε τη βάση του αισθητήρα. Ένα βίντεο μπορεί να βρεθεί στο `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
 
 
