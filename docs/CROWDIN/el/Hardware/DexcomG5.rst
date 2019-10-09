@@ -1,26 +1,26 @@
 Dexcom G5
 **********
-If using G5 with xdrip+
+Εάν χρησιμοποιείτε το G5 με xdrip+
 ===========================
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
-* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
-* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
+* Εάν δεν έχετε ήδη ρυθμίσει, κάντε λήψη του `xdrip <https://github.com/NightscoutFoundation/xDrip>` και ακολουθήστε τις οδηγίες στο nightcout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
+* Στο xdrip, μεταβείτε στις Ρυθμίσεις> Συμβατότητα Interapp> Δυνατότητα τοπικής μετάδοσης δεδομένων και επιλέξτε ΕΝΕΡΓΟΠΟΊΗΣΗ.
+* Στο xdrip πηγαίνετε στο Ρυθμίσεις> Συμβατότητα Interapp> Αποδοχή θεραπειών και επιλέξτε OFF.
+* Εάν θέλετε να μπορείτε να χρησιμοποιήσετε το AndroidAPS για τη βαθμονόμηση, στη συνέχεια στο xdrip μεταβείτε στις Ρυθμίσεις> Συμβατότητα Interapp> Αποδοχή βαθμονομίσεων και επιλέξτε ΕΝΕΡΓΟΠΟΊΗΣΗ.  Ενδέχεται επίσης να θέλετε να ελέγξετε τις επιλογές στις Ρυθμίσεις> Λιγότερες κοινές ρυθμίσεις> Ρυθμίσεις βελτιωμένης βαθμονόμησης.
+* Επιλέξτε xdrip στο Configbuilder ( είναι ρύθμιση στο androidAPS).
+Αν το AAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη[ σελίδα ρυθμίσεων xDrip](../Configuration/xdrip.md).
 
-If using G5 with patched Dexcom app
+Εάν χρησιμοποιείτε το G5 με την εφαρμογή patched Dexcom
 =========================================================
-* Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
+* Κάντε λήψη του apk από <https://github.com/dexcomapp/dexcomapp> https://github.com/dexcomapp/dexcomapp και επιλέξτε την έκδοση που ταιριάζει στις ανάγκες σας (mg / dl ή mmol / l, G5).
 
-   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.4.
-   * Open https://play.google.com/store/search?q=dexcom%20g5 on your computer. Region will be visible in URL.
+   * Φάκελος 2.3 είναι για τους χρήστες του AndroidAPS 2.3, φάκελος 2.4 για τους χρήστες του AAPS 2.4.
+   * Ανοίξτε https://play.google.com/store/search?q=dexcom%20g5 στον υπολογιστή σας. Η περιοχή θα είναι ορατή στη διεύθυνση URL.
    
-   .. image:: ../images/DexcomG5regionURL.PNG
-     :alt: Region in Dexcom G5 URL
+   .. εικόνα:: ../images/DexcomG5regionURL.PNG
+     :alt: Περιοχή Dexcom G5 URL
 
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
-* If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+* Απενεργοποιήστε τον αισθητήρα και καταργήστε την εγκατάσταση της αρχικής εφαρμογής Dexcom, εάν δεν το έχετε κάνει ήδη.
+* Εγκαταστήστε το κατεβασμένο apk
+* Ξεκινήστε τον αισθητήρα
+* Επιλέξτε το DexcomG App (patched) στο μενού διαμόρφωσης (ρύθμιση στο AndroidAPS).
+* Αν θέλετε να χρησιμοποιήσετε συναγερμούς xDrip μέσω τοπικής εκπομπής: στο μενού hamburger xDrip> ρυθμίσεις> πηγή δεδομένων υλικού> 640G / EverSense.
