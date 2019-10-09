@@ -1,41 +1,41 @@
-General CGM recommendations
+Γενικές συστάσεις CGM
 *****************************
 
-CGM hygiene
+CGM υγιεινή
 =============
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps. 
+Όποιο σύστημα CGM χρησιμοποιείτε, εάν πρόκειται να χρησιμοποιήσετε τη βαθμονόμηση με βάση το αίμα, τότε υπάρχουν κάποιες πολύ σαφείς κανόνες που πρέπει να εφαρμόσετε, ανεξάρτητα από το αν χρησιμοποιείτε το λογισμικό CGM DIY ή τις επίσημες εφαρμογές. 
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* Βεβαιωθείτε ότι τα χέρια και το κιτ είναι καθαρά.
+* Προσπαθήστε να βαθμονομήσετε όταν έχετε μια σειρά από κουκίδες με ένα επίπεδο βέλος (συνήθως είναι αρκετά 15-30 λεπτά)
+* Αποφύγετε τη βαθμονόμηση όταν τα επίπεδα γλυκόζης κινούνται προς τα επάνω ή προς τα κάτω. 
+* Κάνετε "αρκετές" βαθμονομήσεις - στις επίσημες εφαρμογές, θα σας ζητηθεί μία ή δύο φορές ανά ημέρα. Σε συστήματα DIY πρέπει να είστε προσεκτικοί για τη συνέχιση χωρίς βαθμονομήσεις.
+* Αν είναι δυνατόν, βαθμονομήστε με μερικές από τις μετρήσεις σας σε χαμηλότερο εύρος (4-5mmol / l ή 72-90mg / dl) και μερικές σε ελαφρώς υψηλότερο επίπεδο (7-9mmol / l ή 126-160mg / dl) καθώς αυτό παρέχει μια καλύτερη περιοχή για τη βαθμονόμηση σημείου / κλίσης.
 
-Setting sensor (G6)
+Ρυθμίζοντας τον αισθητήρα(G6)
 ==============
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+Κατά τη ρύθμιση του αισθητήρα, συνιστάται να μην πιέσετε τον εισαγωγέα πολύ έντονα για να αποφύγετε την αιμορραγία. Το νήμα του αισθητήρα δεν πρέπει να έρχεται σε επαφή με το αίμα.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Αφού ρυθμίσετε τον αισθητήρα, ο πομπός μπορεί να κουμπώσει στο στήριγμα του αισθητήρα. Προσοχή! Πρώτο κλικ στην πλατεία πλευρά και στη συνέχεια πιέστε προς τα κάτω την στρογγυλή πλευρά.
 
 Αντιμετώπιση προβλημάτων 
 ================
 
-Connection problems
+Προβλήματα σύνδεσης
 --------------------
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is reestablished the data is backfilled.
+Η σύνδεση Bluetooth ενδέχεται να διαταραχθεί από άλλες κοντινές συσκευές Bluetooth, όπως μετρητές γλυκόζης αίματος, ακουστικά, δισκία ή συσκευές κουζίνας, όπως φούρνοι μικροκυμάτων ή κεραμικές εστίες. Στην περίπτωση αυτή, το xdrip δεν εμφανίζει τιμές BG. Όταν ξαναγίνει η σύνδεση Bluetooth, τα δεδομένα συμπληρώνονται.
 
-Sensor Errors
+Σφάλματα αισθητήρα
 ----------------
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood. 
+Εάν εμφανιστούν επαναλαμβανόμενα σφάλματα αισθητήρων, επιλέξτε μια διαφορετική περιοχή σώματος για να ρυθμίσετε τον αισθητήρα σας. Το νήμα του αισθητήρα δεν πρέπει να έρχεται σε επαφή με το αίμα. 
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Συχνά ένα "σφάλμα αισθητήρα" μπορεί να διορθωθεί με άμεση ενυδάτωση και μασάζ γύρω από τον αισθητήρα!
 
-Jumpy values
+Παράξενες τιμές
 ---------------
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Προσπαθήστε να αλλάξετε τις ρυθμίσεις για αποκλεισμό θορύβου σε xdrip (Ρυθμίσεις - Ρυθμίσεις μεταξύ εφαρμογών - Αποκλεισμός θορύβου).π.χ. "Αποκλεισμός πολύ υψηλού θορύβου".  Δείτε επίσης την ενότητα `Εξομάλυνση δεδομένων BG <../ Χρήση /Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
 
 
