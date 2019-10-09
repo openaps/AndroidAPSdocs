@@ -37,11 +37,11 @@ If using G6 with patched Dexcom app
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in Dexcom G6 URL
 
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
+* Απενεργοποιήστε τον αισθητήρα και καταργήστε την εγκατάσταση της αρχικής εφαρμογής Dexcom, εάν δεν το έχετε κάνει ήδη.
+* Εγκαταστήστε το κατεβασμένο apk
+* Ξεκινήστε τον αισθητήρα
 * Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
-* If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+* Αν θέλετε να χρησιμοποιήσετε συναγερμούς xDrip μέσω τοπικής εκπομπής: στο μενού hamburger xDrip> ρυθμίσεις> πηγή δεδομένων υλικού> 640G / EverSense.
 
 Troubleshooting G6
 ====================
