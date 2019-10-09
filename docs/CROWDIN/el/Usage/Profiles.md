@@ -1,47 +1,47 @@
-# Αλλαγή προφίλ
+# Αλλαγή Προφίλ
 
-On starting your AndroidAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again (in NS or AAPS) to start using these changes.
+Κατά την εκκίνηση του AndroidAPS και την επιλογή του προφίλ σας, θα χρειαστεί να πραγματοποιήσετε ένα συμβάν "Προφίλ αλλαγής" με μηδενική διάρκεια (εξηγείται αργότερα). Με τον τρόπο αυτό, το AAPS ξεκινά την παρακολούθηση του ιστορικού των προφίλ και κάθε νέα αλλαγή προφίλ απαιτεί ένα άλλο "προφίλ" ακόμα και όταν αλλάζετε το περιεχόμενο του προφίλ στο NS. Το ενημερωμένο προφίλ μεταφέρεται αμέσως στο AAPS, αλλά πρέπει να αλλάξετε ξανά το ίδιο προφίλ (σε NS ή AAPS) για να αρχίσετε να χρησιμοποιείτε αυτές τις αλλαγές.
 
-Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period. Duration of zero means infinite. Such profile is valid until new "Profile switch".
+Το εσωτερικό του AAPS δημιουργεί στιγμιότυπο προφίλ με ημερομηνία έναρξης και διάρκεια και το χρησιμοποιεί σε επιλεγμένη περίοδο. Η διάρκεια του μηδενός σημαίνει άπειρη. Το συγκεκριμένο προφίλ ισχύει έως τη νέα αλλαγή "Προφίλ".
 
-To do a profile switch long-press on the name of your profile ("Aktuell (Rad)" in the picture below) and select profile switch.
+Για να κάνετε μια αλλαγή προφίλ πατήστε παρατεταμένα στο όνομα του προφίλ ("Aktuell (Rad)"στη παρακάτω εικόνα) και επιλέξτε αλλαγή προφίλ.
 
-![Do profile switch](../images/ProfileSwitch_HowTo.png)
+![Κάντε αλλαγή προφίλ](../images/ProfileSwitch_HowTo.png)
 
-If you use "Profile switch" with duration profile is switched back to previous valid "Profile switch"
+Εάν χρησιμοποιείτε το "Προφίλ αλλαγής" με προφίλ διάρκειας επιστρέφει σε προηγούμενη έγκυρη "Αλλαγή προφίλ"
 
-If you use local AAPS profiles (Simple, Local, CPP) you have to press button there to apply these changes (it creates proper "Profile switch" event).
+Εάν χρησιμοποιείτε τοπικά προφίλ AAPS (Simple, Local, CPP), πρέπει να πατήσετε το κουμπί εκεί για να εφαρμόσετε αυτές τις αλλαγές (δημιουργεί το σωστό συμβάν "Προφίλ αλλαγής").
 
-Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
+Μέσα στο "διακόπτη προφίλ" μπορείτε να επιλέξετε δύο αλλαγές που ήταν μέρος του Προφίλ ποσοστών του Κιρκαδικού ρυθμου:
 
-## Percentage
+## Ποσοστό
 
-* This applies the same percentage to all parameters. 
-* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example). 
-* It will be sent to the pump and then be the default basal rate. 
-* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
+* Αυτό εφαρμόζει το ίδιο ποσοστό σε όλες τις παραμέτρους. 
+* Εάν το ρυθμίσετε στο 130% (δηλαδή έχετε 30% περισσότερη αντίσταση στην ινσουλίνη), αυξάνεται ο βασικός ρυθμός κατά 30%. Θα μειώσει επίσης το ISF και το IC αντίστοιχα (διαιρέστε με το 1,3 σε αυτό το παράδειγμα). 
+* Θα σταλεί στην αντλία και στη συνέχεια θα είναι ο προεπιλεγμένος βασικός ρυθμός. 
+* Ο αλγόριθμος κυκλώματος (ανοιχτός ή κλειστός) θα συνεχίσει να λειτουργεί πάνω από το επιλεγμένο ποσοστό προφίλ. Έτσι, για παράδειγμα, μπορούν να δημιουργηθούν ξεχωριστά προφίλ ποσοστών για διαφορετικά στάδια του κύκλου ορμονών.
 
-![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
+![Αλλαγή προφίλ ποσοστιαία και χρονικά](../images/ProfileSwitchTimeShift2.png)
 
-## Time shift
+## Αλλαγή της ώρας
 
-* This moves everything round the clock by the number of hours entered. 
-* So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
-* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
-  * Current time: 12:00
-  * **Positive** time shift 
+* Αυτό μετακινεί όλο το 24ωρο σύμφωνα με τον αριθμό των ωρών που εισάγονται. 
+* Έτσι, για παράδειγμα, όταν εργάζεστε νυχτερινές βάρδιες, αλλάξτε τον αριθμό των ωρών ανάλογα με το σε αργότερα / νωρίτερα πηγαίνετε στο κρεβάτι ή ξυπνάτε.
+* Είναι πάντοτε θέμα των ρυθμίσεων του προφίλ ώρας που πρέπει να αντικαταστήσουν τις ρυθμίσεις της τρέχουσας ώρας. Αυτή η ώρα πρέπει να μετατοπιστεί κατά x ώρες. Γι 'αυτό πρέπει να γνωρίζετε τις οδηγίες που περιγράφονται στο παρακάτω παράδειγμα: 
+  * Τρέχουσα ώρα: 12:00
+  * **Θετική** αλλαγή της ώρας 
     * 2:00 **+10 h** -> 12:00
-    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-  * **Negative** time shift 
+    * Θα χρησιμοποιηθούν ρυθμίσεις από τις 2:00 αντί για τις ρυθμίσεις που χρησιμοποιούνται κανονικά στις 12:00 λόγω της θετικής χρονικής μετατόπισης.
+  * **Αρνητική** αλλαγή της ώρας 
     * 22:00 **-10 h** -> 12:00
-    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    * Θα χρησιμοποιηθούν οι ρυθμίσεις από τις 22:00 (10 μ.μ.) αντί των ρυθμίσεων που χρησιμοποιούνται κανονικά στις 12:00 λόγω της αρνητικής χρονικής μετατόπισης.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Προσανατολισμοί των χρονικών μετατοπίσεων προφίλ](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+Αυτός ο μηχανισμός λήψης στιγμιότυπων του προφίλ επιτρέπει πολύ πιο ακριβείς υπολογισμούς του παρελθόντος και τη δυνατότητα παρακολούθησης αλλαγών προφίλ.
 
-## Troubleshooting Profile Errors
+## Αντιμετώπιση σφαλμάτων προφίλ
 
-* 'Invalid profile' or 'Basal Profile not aligned to hours' error message will appear if you have any basal rates or I:C rates not on the hour. The DanaR and DanaRS pumps do not support changes on the half hour.
-* 'Received profile switch from NS but profile does not exist locally' or Go either to Treatments tab in AndroidAPS and select Profile Switch, 'remove' the date and time that was mentioned in the error message. Or go to your mlab collection, search in the treatments for profile switch and delete the date and time that was mentioned in the error message. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
-* 'DIA 3hr too short' error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a Profile Switch to continue.
+* Εμφανίζεται μήνυμα λάθους "Μη έγκυρο προφίλ" ή "Βασικό προφίλ μη ευθυγραμμισμένο με τα ωράρια" εάν έχετε βασικές τιμές ή τιμές Ι: C όχι την ώρα. Οι αντλίες DanaR και DanaRS δεν υποστηρίζουν αλλαγές στη μισή ώρα.
+* "Λήψη προφίλ αλλαγής από NS, αλλά το προφίλ δεν υπάρχει τοπικά" ή Μεταβείτε είτε στην καρτέλα Θεραπείες στο AndoridAPS και επιλέξτε Προφίλ αλλαγής, αφαιρέστε την ημερομηνία και την ώρα που αναφέρθηκαν στο μήνυμα σφάλματος. Ή μεταβείτε στη συλλογή σας, αναζητήστε τις επεξεργασίες για το διακόπτη προφίλ και διαγράψτε την ημερομηνία και την ώρα που αναφέρθηκαν στο μήνυμα σφάλματος. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
+* Το μήνυμα σφάλματος "DIA 3hr too short" θα εμφανιστεί αν η διάρκεια της δράσης σας για ινσουλίνη στο προφίλ σας παρατίθεται σε μια τιμή την οποία το AndroidAPS δεν πιστεύει ότι είναι ακριβής. Διαβάστε σχετικά με το [ επιλέγοντας το σωστό DIA ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) και επεξεργαστείτε το στο προφίλ σας και, στη συνέχεια, κάντε μία Αλλαγή Προφίλ για να συνεχίσετε.
