@@ -1,198 +1,198 @@
-# FAQ for loopers
+# Συχνές Ερωτήσεις
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+Αν θέλετε να προσθέσετε ερωτήσεις σε αυτήν την ενότητα, ακολουθήστε αυτές τις [οδηγίες](../make-a-PR.md).
 
 # Γενικά
 
-## Can I just download the AndroidAPS installation file?
+## Μπορώ να εγκαταστήσω το AndroidAPS, όπως κάνω με τις υπόλοιπες εφαρμογές που έχω;
 
-Όχι. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+Όχι. Δεν υπάρχει έτοιμο apk αρχείο, ώστε να είναι δυνατή η εγκατάσταση του σε Android λειτουργικό, με το συνήθη τρόπο. Χρειάζεται να δημιουργήσετε ένα τέτοιο αρχείο μόνοι σας. Αναλυτικές οδηγίες μπορείτε να βρείτε [εδώ](../Installing-AndroidAPS/Building-APK.md). Ο λόγος που δεν διανέμεται τέτοιο αρχείο είναι ο εξής:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+Το AndroidAPS χρησιμοποιείται για να ελέγχει την αντλία ινσουλίνης που χρησιμοποιείτε, καθορίζοντας τον ρυθμό ή και την ποσότητα ινσουλίνης που θα λαμβάνετε. Σύμφωνα με την ισχύουσα νομοθεσία στην Ευρώπη, όλα τα συστήματα που ανήκουν σε κατηγορίες όπως είναι οι lla ή llb χαρακτηρίζονται ως ιατρικές συσκευές. Για την κυκλοφορία τέτοιων συσκευών απαιτείται έγκριση από τους αρμόδιους φορείς. Προκειμένου να ληφθεί τέτοιου είδους έγκριση (CE) απαιτείται μία σειρά εγγράφων, μελετών, δοκιμών και ελέγχων. Διαφορετικά, η διάθεση τους δεν είναι νόμιμη. Τέτοιες διαδικασίες ελέγχου και εγκρίσεων υπάρχουν και σε άλλα μέρη του κόσμου.
 
-This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+Τα παραπάνω δεν αφορούν μόνο συστήματα μόνο διατίθενται προς πώληση (δηλ. έναντι χρηματικού ποσού) αλλά σε όλα τα συστήματα, με όποιον τρόπο και αν διανέμονται, ακόμα και αν διατίθενται δωρεάν. Το να δημιουργήσεις ένα ιατρικό σύστημα για δική σου χρήση και με δική σου ευθύνη, είναι η μόνη περίπτωση μη εφαρμογής των παραπάνω.
 
-That’s why apks aren’t available.
+Για αυτό δεν διατίθενται εκτελέσιμα αρχεία εγκατάστασης του AndroidAPS.
 
-## How to begin?
+## Από που μπορώ να αρχίσω;
 
-First of all, you have to **get loopable hardware components**:
+Πρώτον, χρειάζονται τα εξής (hardware) **εξαρτήματα**:
 
-* A [supported insulin pump](Pump-Choices.md), 
-* an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
+* Μία αντλία ινσουλίνης (Για περισσότερα δείτε τις [υποστηριζόμενες αντλίες ινσουλίνης](Pump-Choices.md)) 
+* Ένα Android κινητό (Για iPhone κινητά, δείτε το [iOS Loop](Phones.md) ) 
+* [Ένα σύστημα συνεχούς καταγραφής γλυκόζης](../Configuration/BG-Source.rst). 
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+Δεύτερον, πρέπει να **ρυθμίσετε τα εξαρτήματα** που θα χρησιμοποιήσετε. Δείτε το [παράδειγμα εγκατάστασης με αναλυτικές οδηγίες για τις απαραίτητες ρυθμίσεις](Sample-Setup.md).
 
-Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+Τρίτον, χρειάζεται να **ρυθμίσετε το λογισμικό** που θα χρησιμοποιήσετε: Το AndroidAPS και το σύστημα συνεχούς καταγραφής γλυκόζης (CGM) ή το σύστημα παρακολούθησης γλυκόζης με τεχνολογία Flash (FGM).
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
+Τέταρτον, χρειάζεται να μάθετε και **να καταλάβετε το πως λειτουργεί το OpenAPS** ώστε να μπορείτε να ελέγχετε την αγωγή που ακολουθείτε. Η κύρια αρχή λειτουργίας του looping βασίζεται στην ακρίβεια του βασικού ρυθμού και των στοιχείων των υδατανθράκων που καταναλώνετε. Όλες οι προτάσεις προϋποθέτουν ότι ο βασικός ρυθμός ινσουλίνης καλύπτει τις αντίστοιχες ανάγκες σας. Συνεπώς, οι αυξομειώσεις που μπορεί να προκύπτουν οφείλονται σε άλλους λόγους, όπως είναι το άγχος, η άσκηση κ. λπ., και για αυτό απαιτούνται επιπλέον ρυθμίσεις. Οι ρυθμίσεις που μπορεί να κάνει το κλειστό κύκλωμα έχουν περιοριστεί λόγο ασφάλειας (δείτε το μέγιστο επιτρεπόμενο προσωρινό βασικό ρυθμό στο [ OpenAPS Reference Design ](https://openaps.org/reference-design/)), πράγμα που σημαίνει ότι δεν θέλετε να χάσετε την επιτρεπόμενη δοσολογία στη διόρθωση ενός λάθους βασικού. Αν, για παράδειγμα, έχετε συχνά χαμηλές μετρήσεις στην προσέγγιση ενός γεύματος, τότε είναι πιθανό να πρέπει να προσαρμόσετε τις βασικές σας ανάγκες. Μπορείτε να χρησιμοποιήσετε το [autotune ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) για να εξετάσετε ένα μεγάλο σύνολο δεδομένων για να υποδείξετε εάν και πώς πρέπει να προσαρμοστεί ο βασικός και / ή τα ISF και επίσης αν πρέπει να αλλάξετε το λόγο υδατανθράκων. Ή μπορείτε να κάνετε δοκιμές και να ρυθμίσετε το βασικό ρυθμό με τον [παραδοσιακό τρόπο](http://integrateddiabetes.com/basal-testing/).
 
-## What practicalities of looping do I have?
+## Ποιες είναι οι πρακτικές του κυκλώματος που έχω;
 
-### Password protection
+### Προστασία με κωδικό πρόσβασης
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+Αν δεν θέλετε να αλλάζουν εύκολα οι προτιμήσεις σας, μπορείτε να προστατεύσετε με κωδικό πρόσβασης το μενού προτιμήσεων επιλέγοντας στο μενού προτιμήσεων "κωδικό πρόσβασης για τις ρυθμίσεις" και πληκτρολογήστε τον κωδικό πρόσβασης που επιλέγετε. Την επόμενη φορά που θα μεταβείτε στο μενού προτιμήσεων, θα ζητηθεί αυτός ο κωδικός πρόσβασης προτού προχωρήσετε περαιτέρω. Εάν αργότερα θέλετε να καταργήσετε την επιλογή κωδικού πρόσβασης, μεταβείτε στον "κωδικό πρόσβασης για τις ρυθμίσεις" και διαγράψτε το κείμενο.
 
 ### Android Wear Smartwatches
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+Εάν σκοπεύετε να χρησιμοποιήσετε την εφαρμογή wear του Android για bolus ή να αλλάξετε τις ρυθμίσεις, τότε θα πρέπει να διασφαλίσετε ότι οι ειδοποιήσεις από το AndroidAPS δεν αποκλείονται. Η επιβεβαίωση των ενεργειών γίνεται μέσω ειδοποιήσεων.
 
-### Disconnect pump
+### Αποσυνδέστε την αντλία
 
-If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+Εάν αφαιρέσετε την αντλία σας για ντους / κολύμβηση / σπορ κ. λπ. θα πρέπει να επιτρέψετε στο AndroidAPS να γνωρίζει ότι δεν παρέχεται ινσουλίνη για να διατηρεί το IOB σωστά.
 
-* Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
-* This will set your basal to zero for that time period.
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
-* AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
+* Πατήστε παρατεταμένα το πλήκτρο 'Closed loop' (θα καλείται 'Open Loop' όταν δεν το έχετε κλείσει ακόμα) στην κορυφή της αρχικής οθόνης. 
+* Επιλέξτε ** "Αποσύνδεση της αντλίας για X λεπτά" **
+* Αυτό θα θέσει το βασικό στο μηδέν για εκείνη την χρονική περίοδο.
+* Το ελάχιστο χρονικό διάστημα για μια αποσύνδεση εξαρτάται από το ελάχιστο μήκος TBR που μπορεί να ρυθμιστεί στην αντλία. Επομένως, εάν θέλετε να αποσυνδεθείτε για μικρότερο χρονικό διάστημα, πρέπει να χρησιμοποιήσετε το συντομότερο διαθέσιμο χρόνο αποσύνδεσης για την αντλία σας και να επανασυνδεθείτε χειροκίνητα, όπως περιγράφεται παρακάτω.
+* Το πλήκτρο 'Κλειστό κύκλωα' (ή 'Ανοιχτό κύκλωμα') θα γίνει κόκκινο και θα ονομάζεται 'Αποσυνδεδεμένο (xx m)' εμφανίζοντας τον εναπομείναντα χρόνο αποσύνδεσης.
+* Το AAPS θα επανασυνδέσει την αντλία μετά από τον επιλεγμένο χρόνο αυτόματα και το κλειστό κύκλωμα θα αρχίσει να λειτουργεί ξανά.
     
-    ![Disconnect pump](../images/PumpDisconnect.png)
+    ![Αποσυνδέστε την αντλία](../images/PumpDisconnect.png)
 
-* If the selected time was too long you can reconnect manually.
+* Εάν ο επιλεγμένος χρόνος ήταν πολύ μεγάλος, μπορείτε να επανασυνδεθείτε χειροκίνητα.
 
-* Long-press on the red button 'Disconnected (xx m)'.
-* Select 'Reconnect pump'
+* Πατήστε παρατεταμένα το κόκκινο κουμπί "Αποσυνδεδεμένο (xx m)".
+* Επιλέξτε "Επανασύνδεση της αντλίας'
     
-    ![Reconnect pump](../images/PumpReconnect.png)
+    ![Επανασύνδεση αντλίας](../images/PumpReconnect.png)
 
-### Recommendations not only based on one single CGM reading
+### Συστάσεις όχι μόνο βάσει μιας μόνο ανάγνωσης του CGM
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+Για λόγους ασφάλειας, οι συστάσεις που γίνονται δεν βασίζονται σε μία ανάγνωση CGM αλλά στο μέσο δέλτα. Επομένως, εάν χάσετε μερικές αναγνώσεις, μπορεί να χρειαστεί λίγος χρόνος μετά την επιστροφή δεδομένων πριν ξεκινήσει ξανά η επαναφορά του AndroidAPS.
 
-### Further readings
+### Περαιτέρω αναγνώσεις
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Υπάρχουν διάφορα αγγλικά blogs που έχουν συμβουλές για να καταλάβεις καλύτερα το "κύκλωμα":
 
 * [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
 * [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 * [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
-## What emergency equipment is recommended to take with me?
+## Τι εξοπλισμό προτείνεται να έχω μαζί μου για περιπτώσεις έκτακτης ανάγκης;
 
-First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
+Πρώτα από όλα, πρέπει να έχετε μαζί σας ό, τι μεταφέρει μαζί του οποιοσδήποτε άλλος με διαβήτη τύπου 1 που χρησιμοποιεί αντλία ινσουλίνης. Επιπρόσθετα προτείνεται να έχετε μαζί σας τα εξής:
 
-* Battery pack for the energy of your smartphone, wear and (maybe) BT reader
-* Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
-* Pump batteries
+* Μπαταρία για την ενέργεια του smartphone σας, wear και (ίσως) αναγνώστη BT
+* Διατηρήστε αντίγραφα ασφαλείας (backups) σε ό, τι θεωρείτε χρήσιμο για τις εφαρμογές που χρησιμοποιείτε, όπως το τελευταίο εκτελέσιμο του AndroidAPS που φτιάξατε, τους κωδικούς που χρησιμοποιείτε, αρχεία που περιέχουν ρυθμίσεις (όπως AndroidAPS settings file, xDrip settings file, patched Dexcom app) κ. λπ...
+* Μπαταρίες για την αντλία έγχυσης ινσουλίνης
 
-## How to safely attach the CGM/FGM?
+## Πώς να συνδέσετε με ασφάλεια το CGM / FGM;
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask google or ebay). Some loopers use the cheaper standard kinesiology tape or rocktape.
+Μπορείτε να χρησιμοποιήσετε αυτοκόλλητη ταινία. Υπάρχουν διαθέσιμα πολλά είδη ταινιών που προορίζονται για τη σταθεροποίηση GCM. Μπορείτε να χρησιμοποιήσετε ένα τέτοιο ή οποιοδήποτε άλλο είδος ταινίας που διατίθεται μέσω καταστημάτων, φαρμακείων ή μέσω internet(google ή ebay). Κάποιοι χρήστες χρησιμοποιούν χαμηλού κόστους ελαστικές ταινίες κινησιοεπίδεσης (kinesio tape, rocktape).
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask google or ebay).
+Εναλλακτικά μπορείτε να δοκιμάσετε ελαστικούς επιδέσμους για τα μπράτσα, που χρησιμοποιούνται για τη στήριξη των CGM/FMG(ψάξτε στο google ή το ebay).
 
-# AndroidAPS settings
+# Ρυθμίσεις AndroidAPS
 
-The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+Η λίστα που ακολουθεί έχει ως στόχο να σας βοηθήσει να βελτιστοποιήσετε τις ρυθμίσεις. Σας προτείνουμε να δουλέψετε με τα στοιχεία που αναφέρονται δουλεύοντας από πάνω προς κάτω. Προσπαθήστε να θέσετε σωστά την κάθε ρύθμιση προτού προχωρήσετε στην επόμενη. Δοκιμάστε να κάνετε μικρά βήματα αντί να κάνετε πολλές και μεγάλες αλλαγές μαζικά. Μπορείτε να το χρησιμοποιήσετε το [Autotune](https://autotuneweb.azurewebsites.net/) για να σας καθοδηγήσει. Όμως είναι σημαντικό να μην τον ακολουθήσετε στα τυφλά. Μπορεί να μη λειτουργεί σωστά στη δική σας ή και σε ορισμένες άλλες περιπτώσεις. Επίσης, μην ξεχνάτε ότι οι ρυθμίσεις επηρεάζουν η μία την άλλη. Μπορεί να έχετε χρησιμοποιήσει "λάθος" ρυθμίσεις που όμως η λειτουργία τους, σε συνδυασμό με τις άλλες, να είναι εν τέλη σωστή κάτω από συγκεκριμένες συνθήκες. Λόγω αυτών είναι σημαντικό να εξετάσετε μία προς μία τις ρυθμίσεις και να ελέγξετε ότι λειτουργούν όπως θα θέλατε σε διάφορες περιπτώσεις.
 
-## Duration of insulin activity (DIA)
+## Διάρκεια δράσης ινσουλίνης (DIA)
 
-### Description & testing
+### Περιγραφή & τρόπος δοκιμής
 
-The length of time that insulin decays to zero.
+Η διάρκεια του χρόνου που ινσουλίνη διασπάται τελείως.
 
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+Αυτό είναι συχνά πολύ μικρό. Οι περισσότεροι άνθρωποι χρειάζονται τουλάχιστον 5 ώρες, πιθανόν 6 ή και 7 ώρες.
 
-### Impact
+### Επιπτώσεις
 
-Too short DIA can lead to low BGs. And vice-versa.
+Μικρή τιμή στη διάρκεια δράσης της ινσουλινης μπορεί να οδηγήσει σε χαμηλά επίπεδα σακχάρου. Και αντίστροφα.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
+Εάν το DIA είναι πολύ σύντομο, το AAPS πιστεύει πολύ σύντομα ότι το προηγούμενο bolus σας καταναλώθηκε και, σε ακόμα αυξημένη γλυκόζη, θα σας δώσει περισσότερο bolus. Στην πραγματικότητα το AndroidAPS δεν περιμένει μέχρι να ανέβει πολύ το σάκχαρο σας, αλλά προβλέπει τι πρόκειται να γίνει και με βάση την πρόβλεψη του προσθέτει συνεχόμενα ινσουλίνη. Αυτό ουσιαστικά δημιουργεί " συσσώρευση ινσουλίνης" που το AAPS δεν γνωρίζει.
 
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+Παράδειγμα ενός υπερβολικά σύντομου DIA είναι ένα υψηλό BG που ακολουθείται από υπερ-διόρθωση του AAPS και δίνοντας ένα χαμηλό BG.
 
-## Basal rate schedule (U/h)
+## Προγραμματισμός βασικού ρυθμού (Μονάδες/Ώρα)
 
-### Description & testing
+### Περιγραφή & τρόπος δοκιμής
 
-The amount of insulin in a given hour time block to maintain BG at a stable level.
+Η ποσότητα της ινσουλίνης που δίνετε σε μια δεδομένη ώρα για να διατηρήσει το BG σε σταθερό επίπεδο.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
+Δοκιμάστε τα βασικά σας ποσοστά, αναστέλλοντας τον κύκλωμα, με νηστεία, περιμένοντας ας πούμε 5 ώρες μετά το φαγητό και βλέποντας τον τρόπο με τον οποίο η BG αλλάζει. Επαναλάβετε μερικές φορές.
 
-If BG is dropping, basal rate is too high. And vice-versa.
+Αν το BG πέφτει, ο βασικός ρυθμός είναι πολύ υψηλός. Και αντίστροφα.
 
-### Impact
+### Επιπτώσεις
 
-Too high basal rate can lead to low BGs. And vice-versa.
+Υψηλός βασικός ρυθμός μπορεί να οδηγήσει σε χαμηλότερα του επιθυμητού επίπεδα σακχάρου. Και αντίστροφα.
 
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+Βασικές γραμμές της AAPS έναντι του προεπιλεγμένου βασικού ρυθμού. Εάν ο βασικός ρυθμός είναι πολύ υψηλός, ενας 'μηδενικός ρυθμός' θα μετράται ως μεγαλύτερο αρνητικό IOB από ό, τι θα έπρεπε. Αυτό θα οδηγήσει το AAPS να δίνει περισσότερες επακόλουθες διορθώσεις από ό, τι θα έπρεπε για να φέρει τελικά το IOB στο μηδέν.
 
-So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
+Επομένως, ένας βασικός ρυθμός πολύ υψηλός θα δημιουργήσει χαμηλά BGs τόσο με το προκαθορισμένο βασικό, αλλά και σε μερικές ώρες, όπως το AAPS διορθώνει ως προς το στόχο.
 
-Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Αντίστροφα, ένα βασικό ποσοστό πολύ χαμηλό μπορεί να οδηγήσει σε υψηλά επίπεδα BGs και σε μια αποτυχία να φθάσουν τα επίπεδα στο στόχο.
 
-## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+## Ο παράγοντας ευαισθησίας στην ινσουλίνη (ISF) (mmol / l / U ή mg / dl / U)
 
-### Description & testing
+### Περιγραφή & τρόπος δοκιμής
 
-The drop in BG expected from dosing 1U of insulin.
+Η πτώση BG που αναμένεται από τη χορήγηση 1U ινσουλίνης.
 
-Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Υποθέτοντας το σωστό βασικό, μπορείτε να το δοκιμάσετε αναστέλλοντας τον κύκλωμα, ελέγχοντας ότι το IOB είναι μηδέν και λαμβάνοντας μερικά δισκία γλυκόζης για να φτάσετε σε ένα σταθερό 'υψηλό' επίπεδο.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+Στη συνέχεια, πάρτε μια εκτιμώμενη ποσότητα ινσουλίνης (σύμφωνα με το τρέχον 1 / ISF) για να φτάσετε στο στόχο BG.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Να είστε προσεκτικοί, καθώς αυτό είναι αρκετά συχνά ρυθμισμένο πολύ χαμηλά. Πάρα πολύ χαμηλά σημαίνει 1 U θα ρίξει το BG γρηγορότερα από το αναμενόμενο.
 
-### Impact
+### Επιπτώσεις
 
-**Lower ISF** (i.e. 40 instead of 50) = more aggressive / stronger leading to a bigger drop in BGs for each unit of insulin. If too low, this can lead to low BGs.
+** Κάτω ISF ** (δηλαδή 40 αντί για 50) = πιο επιθετικό οδηγώντας σε μεγαλύτερη πτώση των BG για κάθε μονάδα ινσουλίνης. Αν είναι πολύ χαμηλή, αυτό μπορεί να οδηγήσει σε χαμηλή BGs.
 
-**Higher ISF** (i.e. 45 instead of 35) = less aggressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
+** Υψηλότερη ISF ** (δηλ. 45 αντί για 35) = λιγότερο επιθετικό / ασθενέστερο που οδηγεί σε μικρότερη πτώση των BG για κάθε μονάδα ινσουλίνης. Αν είναι πολύ υψηλή, αυτό μπορεί να οδηγήσει σε υψηλή BGs.
 
 **Παράδειγμα:**
 
-* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
-* So, you want correction of 90 mg/dl (= 190 - 110).
-* ISF = 30 -> 90 / 30 = 3 units of insulin
-* ISF = 45 -> 90 / 45 = 2 units of insulin
+* BG είναι 190 mg/dl (10,5 mmol) και στόχος είναι τα 100 mg/dl (5,6 mmol). 
+* Έτσι θέλετε διόρθωση των 90 mg/dl (= 190 - 110).
+* ISF = 30 -> 90 / 30 = 3 μονάδες ινσουλίνης
+* ISF = 45 -> 90 / 45 = 2 μονάδες ινσουλίνης
 
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+Μια ISF που είναι πολύ χαμηλή (όχι ασυνήθιστη) μπορεί να οδηγήσει σε «υπερβολικές διορθώσεις», επειδή το AAPS πιστεύει ότι χρειάζεται περισσότερη ινσουλίνη για να διορθώσει ένα υψηλό BG από ότι συνήθως. Αυτό μπορεί να οδηγήσει σε «ακανόνιστα» BGs ( όταν νηστεύετε. κατά τη νηστεία). Σε αυτή την περίπτωση θα πρέπει να αυξήσετε το ISF σας. Αυτό σημαίνει ότι το AAPS δίνει μικρότερες δόσεις διόρθωσης, και αυτό θα αποφύγει την υπερβολική διόρθωση ενός υψηλού BG που θα οδηγήσει σε χαμηλή BG.
 
-Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+Αντίθετα, ένα ISF που είναι πολύ υψηλό μπορεί να οδηγήσει σε υπο-διορθώσεις, πράγμα που σημαίνει ότι το BG σας παραμένει πάνω από τον στόχο - ιδιαίτερα αξιοσημείωτο κατά τη διάρκεια της νύχτας.
 
-## Insulin to carb ratio (IC) (g/U)
+## Αναλογία Ινσουλίνης υδατανθράκων (IC) (g/U)
 
-### Description & testing
+### Περιγραφή & τρόπος δοκιμής
 
-The grams of carbohydrate for each unit of insulin.
+Τα γραμμάρια υδατανθράκων για κάθε μονάδα ινσουλίνης.
 
-Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
+Μερικοί άνθρωποι χρησιμοποιούν επίσης I: C ως συντομογραφία αντί για IC όταν μιλάμε για αναλογία υδατανθράκων (CR).
 
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
+Υποθέτοντας ότι είναι σωστός ο βασικός ρυθμός, μπορείτε να ελέγξετε εάν ο IOB είναι μηδέν και ότι βρίσκεστε εντός εμβέλειας, καταναλώνετε ακριβώς γνωστούς υδατάνθρακες και πάρετε μια εκτιμώμενη ποσότητα ινσουλίνης με βάση τη τρέχον αναλογία ινσουλίνης υδατανθράκων. Το καλύτερο είναι να τρώτε φαγητό που τρώτε κανονικά εκείνη την εποχή της ημέρας και να μετρήσετε τους υδατάνθρακες με ακρίβεια.
 
-### Impact
+### Επιπτώσεις
 
-**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
+**Χαμηλό IC **= λιγότερα τρόφιμα ανά μονάδα, δηλαδή παίρνετε περισσότερη ινσουλίνη για μια σταθερή ποσότητα υδατανθράκων. Μπορεί επίσης να ονομάζεται "πιο επιθετική".
 
-**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
+**Υψηλότερη IC** = περισσότερη τροφή ανά μονάδα, δηλαδή λαμβάνετε λιγότερη ινσουλίνη για ένα σταθερό ποσό των υδατανθράκων. Μπορεί επίσης να ονομάζεται "λιγότερο επιθετική".
 
-If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
+Εάν μετά τη πέψη του γεύματος και το IOB έχει επιστρέψει στο μηδέν, το BG σας παραμένει υψηλότερο από ό, τι πριν από το φαγητό, οι πιθανότητες είναι ότι το IC είναι μεγάλο. Αντίθετα, εάν το BG σας είναι χαμηλότερο από ό, τι πριν από το φαγητό, η IC είναι πολύ μικρή.
 
-If you have been using "bread unit" factors so far (How much insulin is needed to cover one bread unit?) you can find conversion tables online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+Αν έχετε χρησιμοποιήσει μέχρι στιγμής τους παράγοντες "μονάδας ψωμιού" (Πόση ποσότητα ινσουλίνης χρειάζεται για να καλύψετε μια μονάδα ψωμιού;) μπορείτε να βρείτε πίνακες μετατροπής online, δηλ. [ εδώ ](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-# APS algorithm
+# Ο αλγόριθμος του APS
 
-## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+## Γιατί εμφανίζεται η ένδειξη "dia: 3" στην καρτέλα "OPENAPS AMA", παρόλο που έχω διαφορετικό DIA στο προφίλ μου;
 
-![AMA 3h](../images/Screenshot_AMA3h.png)
+![AMA 3 ώρες](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+Στην ΑΜΑ, η DIA στην πραγματικότητα δεν σημαίνει «διάρκεια δράσης της ινσουλίνης». Πρόκειται για μια παράμετρο, η οποία χρησιμοποιείται για τη σύνδεση με το DIA. Τώρα, αυτό σημαίνει, «σε ποιο χρονικό σημείο πρέπει να ολοκληρωθεί η διόρθωση». Δεν έχει καμία σχέση με τον υπολογισμό του IOB. Στο OpenAPS SMB, δεν υπάρχει πλέον ανάγκη για αυτήν την παράμετρο.
 
 ## Προφίλ
 
-### Why using min. 5h DIA (insulin end time) instead of 2-3h?
+### Γιατί να χρησιμοποιείτε κατ ελάχιστο. 5 ώρες DIA (χρόνος λήξης ινσουλίνης) αντί για 2-3 ώρες;
 
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Εξηγείται καλά σε [ αυτό το άρθρο ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Μην ξεχάσετε να κάνετε ` ΕΝΕΡΓΟΠΟΙΗΣΗ ΠΡΟΦΙΛ ` μετά την αλλαγή του DIA.
 
-### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
+### Τι προκαλεί το κύκλωμα να χαμηλώνει συχνά το BG μου σε υπογλυκαιμικές τιμές χωρίς COB;
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
+Πρώτα απ 'όλα, ελέγξτε το βασικό σας ρυθμό και κάντε δοκιμασία βασικού ρυθμού χωρίς υδατάνθρακες. Εάν είναι σωστό, αυτή η συμπεριφορά προκαλείται συνήθως από πολύ χαμηλή ISF. Μια πολύ χαμηλή ISF μοιάζει συνήθως με αυτό:
 
-![ISF too low](../images/isf.jpg)
+![ISF πολύ χαμηλό](../images/isf.jpg)
 
 ### What causes high postprandial peaks in closed loop?
 
