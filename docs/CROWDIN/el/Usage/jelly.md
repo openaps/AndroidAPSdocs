@@ -56,8 +56,8 @@
 
 ![Jelly πορτρέτο + θέαση τοπίου](../images/jelly_04.jpg)
 
-* Η επικεφαλίδα στην οθόνη έναρξης του τηλεφώνου μπορεί να χωρέσει έως και 6 εικονίδια στα δεξιά. Το ρολόι χρειάζεται 2 από αυτά. So if 5 are already occupied (i.e. bluetooth, do not disturb, no SIM card, flight mode and the battery indicator), no clock will be displayed. Briefly increase the volume with the button in the upper left corner, then the clock appears in the header. ;-)
-* The "alarm clock", which is initially (with factory settings) displayed on the Home screen below the time, is probably a second time zone. Switch this off as AAPS might access wrong timezone (Settings > System > Date&Time > Automatic Time Zone > OFF). Use the time provided by the network instead.
-* A screenshot can be taken by pressing the quiet button (bottom left) + the an button (right) simultaneously. 
+* Η επικεφαλίδα στην οθόνη έναρξης του τηλεφώνου μπορεί να χωρέσει έως και 6 εικονίδια στα δεξιά. Το ρολόι χρειάζεται 2 από αυτά. Έτσι εάν 5 είναι ήδη κατειλημμένα (δηλαδή Bluetooth, μην ενοχλείτε, δεν υπάρχει κάρτα SIM, λειτουργία πτήσης και ένδειξη μπαταρίας), δεν θα εμφανιστεί ρολόι. Αυξήστε για λίγο την ένταση με το πλήκτρο στην επάνω αριστερή γωνία, εμφανίζεται το ρολόι στην κεφαλίδα. ;-)
+* Το "ξυπνητήρι", το οποίο είναι αρχικά (με εργοστασιακές ρυθμίσεις) εμφανίζεται στην Αρχική οθόνη κάτω από το χρόνο, είναι πιθανώς μια δεύτερη ζώνη ώρας. Απενεργοποιήστε αυτήν την επιλογή, επειδή το AAPS ενδέχεται να έχει πρόσβαση στη λανθασμένη ζώνη ώρας (Ρυθμίσεις> Σύστημα> Ημερομηνία και ώρα> Αυτόματη ζώνη ώρας> OFF). Χρησιμοποιήστε την ώρα που παρέχεται από το δίκτυο.
+* Μπορείτε να τραβήξετε στιγμιότυπο οθόνης πατώντας το ήχο (κάτω αριστερά) + το κουμπί ένα (δεξιά) ταυτόχρονα. 
 
-![Jelly headline](../images/jelly_03.png)
+![Επικεφαλίδα Jelly](../images/jelly_03.png)
