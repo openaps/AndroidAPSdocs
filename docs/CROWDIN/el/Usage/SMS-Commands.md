@@ -1,127 +1,127 @@
-# SMS Commands
+# Εντολές SMS
 
-### Workaround for bug in AndroidAPS 2.3
+### Η λύση για το bug στο AndroidAPS 2.3
 
-SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
+Οι Ρυθμίσεις εντολών SMS είναι απενεργοποιημένες σε έκδοση 2.3 του AndroidAPS λόγω σφάλματος, αλλά μπορούν να χρησιμοποιηθούν ξανά στην έκδοση 2.4.
 
-If you must use SMS commands you can use the following workaround:
+Εάν πρέπει να χρησιμοποιήσετε εντολές SMS μπορείτε να χρησιμοποιήσετε την παρακάτω λύση:
 
-- Export settings
-- Downgrade to AndroidAPS version 2.2 (by installing your version 2.2 APK-file)
-- Do SMS command settings in AndroidAPS version 2.2.
-- Upgrade to AndroidAPS 2.3. SMS command settings will not be accessible there.
+- Ρυθμίσεις εξαγωγής
+- Υποβάθμιση σε AndroidAPS έκδοση 2.2 (από την εγκατάσταση του έκδοση 2.2 APK αρχείο)
+- Κάντε ρυθμίσεις εντολών SMS σε έκδοση AndroidAPS 2.2.
+- Αναβάθμιση σε AndroidAPS 2.3. ρυθμίσεις με εντολή SMS δεν θα είναι προσβάσιμα εκεί.
 
-## Safety First
+## Πρώτα η ασφάλεια
 
-- AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
-- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+- Το AndroidAPS σας επιτρέπει να ελέγχετε τηλεφωνικά ένα παιδικό τηλέφωνο μέσω μηνύματος κειμένου. Αν ενεργοποιήσετε αυτό την επικοινωνία με SMS, θυμηθείτε πάντα ότι το τηλέφωνο που έχει ρυθμιστεί για να δώσει απομακρυσμένες εντολές μπορεί να κλαπεί. Συνεπώς, πάντα να το προστατεύετε τουλάχιστον από ένα κωδικό PIN.
+- Το AndroidAPS θα σας ενημερώσει επίσης με μήνυμα κειμένου εάν έχουν πραγματοποιηθεί οι απομακρυσμένες εντολές σας, όπως μια αλλαγή bolus ή προφίλ. Συνιστάται να το ρυθμίσετε έτσι ώστε τα κείμενα επιβεβαίωσης να αποστέλλονται σε τουλάχιστον δύο διαφορετικούς αριθμούς τηλεφώνου σε περίπτωση κλοπής ενός από τα τηλέφωνα λήψης.
 
-## How it works
+## Πώς λειτουργεί
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+Στις ρυθμίσεις του android τηλεφώνου σας, επιλέξτε Εφαρμογές> AndroidAPS> Άδειες και ενεργοποιήστε τα SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+Στο AndroidAPS μεταβείτε στην επιλογή Προτιμήσεις> Μεταδόσεις SMS και εισαγάγετε τους αριθμούς τηλεφώνου στους οποίους θα επιτρέπεται να προέρχονται εντολές SMS (διαχωρισμένες με ερωτηματικά, χωρίς κενά ή άλλους χαρακτήρες οπουδήποτε - π.χ. +4412345678; +4412345679) και επίσης ενεργοποιήστε το "Επιτρέψτε απομακρυσμένες εντολές μέσω SMS".
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Στείλτε ένα SMS στο τηλέφωνο με το AndroidAPS που εκτελείται από τον/τους εγκεκριμένο/ους αριθμό/ούς τηλεφώνου σας χρησιμοποιώντας οποιαδήποτε από τις παρακάτω εντολές ** bold **. Το τηλέφωνο θα απαντήσει για να επιβεβαιώσει την επιτυχία της εντολής ή της ζητούμενης κατάστασης.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+** Συμβουλή **: Μπορεί να είναι χρήσιμο να έχετε ένα όριο στα SMS και για τα δύο τηλέφωνα, εάν στέλνετε πολλά SMS.
 
-## Commands
+## Εντολές
 
 ### BG
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Τελευταία BG: 5,6 4 λεπτά πριν, Delta: -0,2 mmol, IOB: 0,20 U (Bolus: 0,10 U Basal: 0,10 U)
 
-### LOOP STOP/DISABLE
+### Κύκλωμα κλειστό/ απενεργοποιημένο
 
-- Loop has been disabled
+- Το κύκλωμα απενεργοποιήθηκε
 
-### LOOP START/ENABLE
+### Κύκλωμα ενεργοποιημένο
 
-- Loop has been enabled
+- Το κύκλωμα ενεργοποιήθηκε
 
-### LOOP STATUS
+### Στοιχεία κυκλώματος
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Κύκλωμα απενεργοποιημένο
+- Κύκλωμα ενεργοποιημένο
+- Αναστολή (10 λεπτά)
 
-### LOOP SUSPEND 20
+### Κύκλωμα σε αναστολή 20
 
-- Loop suspended for 20 minutes
+- Κύκλωμα σε αναστολή για 20 λεπτά
 
-### LOOP RESUME
+### Συνέχεια κυκλώματος
 
-- Loop resumed
+- Επαναφορά κυκλώματος
 
-### TREATMENTS REFRESH
+### Ανανέωση θεραπείας
 
-- TERATMENTS REFRESH 1 receivers
+- Ανανέωση θεραπείας με ένα παραλήπτη
 
-### NSCLIENT RESTART
+### Επανεκκίνηση NSCLIENT
 
-- NSCLIENT RESTART 1 receivers
+- Επανεκκίνηση NSCCLIENT με ένα παραλήπτη
 
-### PUMP
+### Αντλία
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Τελευταία σύνδεση: 1 λεπτό πριν Ρυθμός: 0.00U / h @ 11: 38 5 / 30 λεπτα IOB: 0.5U Φύλαξη: 34U Batt: 100
 
-### BASAL STOP/CANCEL
+### Σταμάτημα βασικού
 
-- To stop temp basal reply with code EmF
+- Για να διακόψετε το προσωρινό βασικό ρυθμό με απάντηση με τον κωδικό EmF
 
-### BASAL 0.3
+### Βασικός 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Για να ξεκινήσετε βασική 0.3U / h για 30 λεπτά απάντηση με τον κώδικα Swe
 
-### BASAL 0.3 20
+### Βασικός 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Για να ξεκινήσετε βασικό 0.3U / h για 20 λεπτά απάντηση με τον κωδικό Swe
 
-### BASAL 30%
+### Βασικός 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Για να ξεκινήσετε βασικό 30% για 30 λεπτά απάντηση με κωδικό Swe
 
-### BASAL 30% 50
+### Βασικός 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Για να ξεκινήσετε βασικό 30% για 50 λεπτά απάντηση με τον κώδικα Swe
 
 ### BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Για να παραδώσετε bolus την απάντηση 1.2U bolus με τον κώδικα Rrt
+- Δεν επιτρέπεται απομακρυσμένο bolus (* εάν εντός 15 λεπτών μετά την τελευταία εντολή δόσης ή δεν επιτρέπονται απομακρυσμένες εντολές *)
 
-### EXTENDED STOP/CANCEL
+### Σταμάτημα Εκτεταμένου
 
-- To stop extended bolus reply with code EmF
+- Για να σταματήσετε την εκτεταμένη απάντηση bolus με τον κωδικό EmF
 
-### EXTENDED 2 120
+### Εκτεταμένο 2 120
 
-- To start extended bolus 2U for 120 min reply with code EmF
+- Για να ξεκινήσετε εκτεταμένο bolus 2U για 120 λεπτά απάντηση με τον κωδικό EmF
 
-### CAL 5.6
+### Καλιμπράρισμα 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
+- Για να στείλετε την απάντηση βαθμονόμησης 5.6 με τον κωδικό Rrt
+- Η βαθμονόμηση στάλθηκε (* αν είναι εγκατεστημένο το xDrip. Η αποδοχή των βαθμονομήσεων πρέπει να ενεργοποιηθεί στο xDrip + *)
 
 ### PROFILE STATUS
 
 - Profile1
 
-### PROFILE LIST
+### Λίστα προφίλ
 
-- 1.`Profile1` 2.`Profile2`
+- 1.`προφίλ1` 2.`προφίλ2`
 
-### PROFILE 1
+### Προφίλ 1
 
-- To switch profile to Profile1 100% reply with code Any
+- Για να αλλάξετε το προφίλ στο προφίλ1 απάντηση 100% με τον κωδικό Any
 
-### PROFILE 2 30
+### Προφίλ 2 30
 
-- To switch profile to Profile2 30% reply with code Any
+- Για να αλλάξετε το προφίλ στο προφίλ 2 απάντηση 30% με τον κωδικό Any
 
 ## Αντιμετώπιση προβλημάτων
 
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Υπήρξε μια αναφορά σχετικά με τις εντολές SMS που σταματούν μετά από μια ενημέρωση στο τηλέφωνο Galaxy S10. Θα μπορούσε να λυθεί με απενεργοποίηση "αποστολή ως μήνυμα chat'.
 
-![Disable SMS as chat message](../images/SMSdisableChat.png)
+![Απενεργοποίηση SMS με μήνυμα συνομιλίας](../images/SMSdisableChat.png)
