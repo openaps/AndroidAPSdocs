@@ -1,74 +1,74 @@
-# Making your first PR (pull request)
+# Κάνοντας το πρώτο σας PR (pull request=αίτημα έλξης)
 
-**This description is just for editing the English documentation. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
+**Αυτή η περιγραφή αφορά μόνο την επεξεργασία της αγγλικής τεκμηρίωσης. Εάν θέλετε να μεταφράσετε σε άλλες γλώσσες (ευχαριστούμε), χρησιμοποιήστε [ crowdin ](https://wikitranslations.androidaps.org).**
 
-For any questions, feedback or new ideas you can contact the documentation team via email (wiki@androidaps.org). Doing a PR isn't difficult, but we can help you editing the documentation.
+Για τυχόν ερωτήσεις, σχόλια ή νέες ιδέες, μπορείτε να επικοινωνήσετε με την ομάδα τεκμηρίωσης μέσω ηλεκτρονικού ταχυδρομείου (wiki@androidaps.org). Κάνοντας ένα PR δεν είναι δύσκολο, αλλά μπορούμε να σας βοηθήσουμε να επεξεργαστείτε την τεκμηρίωση.
 
-At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub. It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. There is always a review process before changes are merged into the "formal" AndroidAPS documentation repository. You can't mess up the originals through any accidents in the PR process. The general process is:
+Κάποια στιγμή θα σας προτείνουμε να κάνετε ένα PR. Το PR είναι σύντομογραφία για το pull request (αίτημα έλξης) και είναι ένας τρόπος προσθήκης ή επεξεργασίας πληροφοριών που είναι αποθηκευμένες στο GitHub. Δεν είναι πραγματικά πολύ δύσκολο να το κάνεις και είναι ένας πολύ καλός τρόπος να συμβάλεις. Αυτή η τεκμηρίωση είναι εδώ επειδή άνθρωποι σαν εσάς έκαναν PRs. Μην ανησυχείτε αν κάνετε κάποιο λάθος ή επεξεργαστείτε με κάποιο τρόπο τα λάθος έγγραφα. Υπάρχει πάντα μια διαδικασία αναθεώρησης πριν από τη συγχώνευση των αλλαγών στην "επίσημη" αποθήκη τεκμηρίωσης AndroidAPS. Δεν μπορείτε να χαλάσετε τα πρωτότυπα από τυχόν ατυχήματα στη διαδικασία PR. Η γενική διαδικασία είναι:
 
-* Make edits and improvements to code or documentation by editing the existing content.
-* Double-check that your edits look good to you.
-* Make a few notes of what's changed so people may understand the edits.
-* Create a pull request, which asks the administrators to use your changes.
-* They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+* Κάντε τροποποιήσεις και βελτιώσεις σε κώδικα ή τεκμηρίωση με επεξεργασία του υπάρχοντος περιεχομένου.
+* Ελέγξτε ξανά ότι οι επεξεργασίες σας φαίνονται καλές σε εσάς.
+* Δημιουργήστε μερικές σημειώσεις για το τι άλλαξε, ώστε οι άνθρωποι να κατανοήσουν τις αλλαγές.
+* Δημιουργήστε ένα αίτημα έλξης, το οποίο ζητά από τους διαχειριστές να χρησιμοποιήσουν τις αλλαγές σας.
+* Θα κάνουν μια ανασκόπηση και (1) θα συγχωνεύσουν τις αλλαγές σας, (2) θα σας σχολιάσουν τις αλλαγές σας ή (3) θα ξεκινήσουν ένα νέο έγγραφο με τις αλλαγές σας.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Πλευρική σημείωση: Εάν είστε τύπος της οπτικής επαφής, υπάρχει ένα βίντεο στο YouTube [ εδώ ](https://youtu.be/4b6tsL0_kzg) που δείχνει τη ροή εργασίας PR)
 
-For our example we are going to make an edit to AndroidAPSdocs. This does NOT need to be done in the linux environment on your rig. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+Για παράδειγμα, πρόκειται να κάνουμε μια επεξεργασία στο AndroidAPSdocs. Αυτό δεν χρειάζεται να γίνει στο περιβάλλον linux στην εξέδρα σας. Αυτό μπορεί να γίνει σε οποιοδήποτε υπολογιστή με Windows, Mac, κλπ. (οποιοσδήποτε υπολογιστής με πρόσβαση στο Internet).
 
-1. Go to https://github.com/openaps/AndroidAPSdocs and hit Fork in the upper right to make your own copy of the repository. ![Fork repo](./images/PR0.png)
-2. Go to http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html or similar and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub.  
-    ![edit doc](./images/PR1.png) Or you can click on the "Edit in Github" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited. ![RTD io](./images/PR2.png)
-3. one or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file. ![Edit branch](./images/PR3.png)
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the both. ![preview mode](./images/PR5.png)
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR. ![commit comments](./images/PR4.png)
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request". ![create pull request](./images/PR6.png)
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have Github notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AndroidAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs. ![PR tracking](./images/PR7.png)
+1. Μεταβείτε στη διεύθυνση https://github.com/openaps/AndroidAPSdocs και χτυπήστε το Πιρούνι στην επάνω δεξιά γωνία για να δημιουργήσετε το δικό σας αντίγραφο του αποθετηρίου. ![Fork repo](./images/PR0.png)
+2. Μεταβείτε στη διεύθυνση http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html ή παρόμοια και μεταβείτε στη σελίδα που θέλετε να επεξεργαστείτε. Κάντε κλικ στο μαύρο πλαίσιο στο κάτω αριστερά μέρος της σελίδας με την πράσινη λέξη "v: latest" ή παρόμοια. Στο αναδυόμενο παράθυρο που εμφανίζεται, κάντε κλικ στη λέξη "επεξεργασία" για επεξεργασία στο GitHub.   
+    ![edit doc](./images/PR1.png) Ή μπορείτε να κάνετε κλικ στο σύνδεσμο "Επεξεργασία σε Github" στην επάνω δεξιά γωνία και, στη συνέχεια, κάντε κλικ στο εικονίδιο με το μολύβι που εμφανίζεται στην επάνω μπάρα των περιεχομένων της σελίδας για επεξεργασία. ![RTD io](./images/PR2.png)
+3. ή η μία ή η άλλη από τις επιλογές στο Βήμα 2 θα δημιουργήσει ένα νέο υποκατάστημα στην αποθήκη σας όπου θα αποθηκευτούν οι επεξεργασίες σας. Πραγματοποιήστε τις επεξεργασίες σας στο αρχείο. ![Επεξεργασία κλάδου](./images/PR3.png)
+4. Εργάζεστε στην καρτέλα "<> Επεξεργασία αρχείου". Επιλέξτε την καρτέλα "Προεπισκόπηση αλλαγών" για μια νέα εμφάνιση, για να βεβαιωθείτε ότι όλα όσα αλλάξατε μοιάζουν με αυτά που σήμαινε (typos sic.). Αν βλέπετε μια απαραίτητη βελτίωση, επιστρέψτε στην καρτέλα επεξεργασίας για να κάνετε περισσότερες βελτιώσεις. Έχετε υπόψη σας ότι χρησιμοποιούμε διαφορετικές επεκτάσεις αρχείων: .rst (ReStructuredText) και .md (Markdown) και η σύνταξη ποικίλει λίγο μεταξύ των δύο. ![λειτουργία προεπισκόπησης](./images/PR5.png)
+5. Όταν τελειώσετε τις επεξεργασίες σας, μεταβείτε στο κάτω μέρος της σελίδας. Στο πλαίσιο στο κάτω μέρος, δώστε τα σχόλιά σας στο πεδίο κειμένου που αναφέρει "Προσθέστε μια προαιρετική εκτεταμένη περιγραφή...". Ο προεπιλεγμένος τίτλος έχει το όνομα του αρχείου. Προσπαθήστε να συμπεριλάβετε μια πρόταση που εξηγεί τον **λόγο ** για την αλλαγή. Συσχέτιση με την αιτία που έγινε αυτό βοηθά τους αναθεωρητές να καταλάβουν τι προσπαθείτε να κάνετε με το PR. ![παρέθεσε σχόλια](./images/PR4.png)
+6. Κάντε κλικ στο πράσινο κουμπί "Προτεινόμενες αλλαγές αρχείων" ή "Ανάκτηση αλλαγών". Στη σελίδα που εμφανίζεται, κάντε κλικ στην επιλογή "Δημιουργία αιτήματος έλξης" και, στη συνέχεια, στην επόμενη σελίδα, κάντε κλικ στην επιλογή "Δημιουργία αιτήματος έλξης". ![δημιουργήστε αίτημα έλξης](./images/PR6.png)
+7. Αυτό ολοκληρώνει το άνοιγμα ενός αιτήματος έλξης, PR. Το GitHub εκχωρεί στον PR έναν αριθμό που βρίσκεται μετά τον τίτλο και ένα σήμα κατατεθέν. Επιστρέψτε σε αυτήν τη σελίδα για να ελέγξετε για ανατροφοδότηση (ή, αν έχετε ειδοποιήσει μέσω ηλεκτρονικού ταχυδρομείου μέσω του Github, θα λάβετε μηνύματα ηλεκτρονικού ταχυδρομείου που θα σας ειδοποιούν για οποιαδήποτε δραστηριότητα στο PR). Η επεξεργασία θα είναι τώρα σε μια λίστα PR που η ομάδα θα εξετάσει και ενδεχομένως να δώσει σχόλια πριν από τη δέσμευση στην κύρια τεκμηρίωση για το AndroidAPS! Εάν θέλετε να ελέγξετε την πρόοδο του PR, μπορείτε να κάνετε κλικ στο λογότυπο της καμπάνιας στην επάνω δεξιά γωνία του λογαριασμού σας GitHub και να δείτε όλα τα PR σας. ![Παρακολούθηση PR](./images/PR7.png)
 
-Congrats, you made your first contribution!
+Συγχαρητήρια, κάνατε την πρώτη σας συμβολή!
 
-PS, your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS, το πιρούνι και το παρακλάδι σας θα εξακολουθούν να κάθονται στο δικό σας προσωπικό λογαριασμό GitHub. Αφού λάβετε μια ειδοποίηση ότι το PR σας έχει συγχωνευθεί, μπορείτε να διαγράψετε το παρακλάδι σας αν έχετε τελειώσει με αυτό (η περιοχή ειδοποιήσεων του βήματος 8 θα παράσχει έναν σύνδεσμο για να διαγράψει το υποκατάστημα μόλις κλείσει ή συγχωνευθεί). Για μελλοντικές επεξεργασίες, εάν ακολουθήσετε αυτή τη διαδικασία, οι επεξεργασίες θα ξεκινούν πάντα με μια ενημερωμένη έκδοση των αποθετηρίων του AndroidAPSdocs. Εάν επιλέξετε να χρησιμοποιήσετε μια άλλη μέθοδο για να ξεκινήσετε μια αίτηση PR (π.χ. επεξεργασία που ξεκινάει από το κύριο παρακλάδι του repos σας ως σημείο εκκίνησης), θα πρέπει να διασφαλίσετε ότι το repo σας είναι ενημερωμένο κάνοντας πρώτα μια σύγκριση και συγχώνευση σε τυχόν ενημερώσεις που έχουν συμβεί από την τελευταία ενημέρωση του πιρουνιού σας. Εφόσον οι άνθρωποι τείνουν να ξεχνούν να ενημερώσουν τα repos τους, συνιστούμε να χρησιμοποιήσετε τη διαδικασία PR που περιγράφεται παραπάνω, μέχρι να εξοικειωθείτε με την εκτέλεση "συγκρίσεων".
 
-### Advanced tips for adding internal links
+### Σύνθετες συμβουλές για την προσθήκη εσωτερικών συνδέσεων
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages as well.
+Εάν θέλετε να ορίσετε έναν εσωτερικό σύνδεσμο μέσα στην τεκμηρίωση AndroidAPS, χρησιμοποιήστε μόνο ** σχετικούς συνδέσμους **. Μόνο αυτό θα κάνει τη σύνδεση να λειτουργεί και στις άλλες γλώσσες.
 
-In files with **.md** ending:
+Σε αρχεία που τελειώνουν με: **.md **
 
-* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+* ` [text] (../ Usage / Test.md) ` θα ορίσει μια εσωτερική υπερσύνδεση ένα κατάλογο προς τα πάνω από εκεί που βρίσκεστε και στη συνέχεια στον υποκατάλογο / Χρήση. Ο τερματισμός του αρχείου προορισμού πρέπει να είναι .md ή .rst (όχι .html)
+* ` [text] (/ Usage / Test.md) ` θα ορίσει μια εσωτερική υπερσύνδεση από εκεί που βρίσκεστε στο / Usage. Ο τερματισμός του αρχείου προορισμού πρέπει να είναι .md ή .rst (όχι .html)
 
-To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
+Για να ορίσετε τη σύνδεση σε ** άγκυρα ** (δηλαδή μια επικεφαλίδα) πρέπει να παραλείψετε την επέκταση αρχείου
 
-* `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+* `[text](../Usage/Test#anchor)` αντί για `[text](../Usage/Test.md#anchor)`
 
-In files with **.rst** ending:
+Σε αρχεία που λήγουν με: **.rst **
 
-* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html. Except you are in a toctree. Then you have to write it like this: `Text <../Usage/Test.md>` with .md or .rst (not .html).
-* `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
+* `` `Text <../Usage/Test.hmtl>`_ `` θα ορίσει έναν υπερσύνδεσμο έναν κατάλογο απο πάνω από εκεί που βρίσκεστε και στη συνέχεια στον υποκατάλογο / Χρήση. Το τέλος στο αρχείο προορισμού πρέπει να είναι .html. Εκτός του ότι είναι σε toctree. Στη συνέχεια, θα πρέπει να το γράψετε σαν αυτό: `Text <../Usage/Test.md>` με .md ή .rst (όχι .html).
+* `Text <./Usage/Test.md>` θα θέσει μια υπερ-σύνδεση από το σημείο στο οποίο βρίσκεστε /Usage.
 
-### Advanced tips for adding multiple images to documentation
+### Προηγμένες συμβουλές για την προσθήκη πολλών εικόνων στην τεκμηρίωση
 
-If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
+Αν σχεδιάζετε να κάνετε πολλές αλλαγές, συμπεριλαμβανομένης της προσθήκης εικόνων που θα σας βοηθήσουν να απεικονίσετε τμήματα της τεκμηρίωσης (ευχαριστούμε!), Ίσως θελήσετε να ακολουθήσετε την ακόλουθη προσέγγιση:
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png".
+* Καθώς πηγαίνετε και αποθηκεύετε στιγμιότυπα οθόνης, μετονομάστε τα στιγμιότυπα οθόνης σε ένα περιγραφικό όνομα - αλλά προσπαθήστε να μην χρησιμοποιήσετε κενά όπως αυτό προκαλεί σύγχυση στον Github. Αντ 'αυτού, χρησιμοποιήστε τις υπογραμμίσεις. Π.χ. Example_batch_images_upload.png αντί για "Example batch images upload.png".
 
-* You can upload images in batches easily by:
+* Μπορείτε να ανεβάσετε τις εικόνες σε παρτίδες εύκολα με:
     
-    1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
+    1. Πλοηγηθείτε στο φάκελο εικόνων (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - αλλά βεβαιωθείτε ότι βρίσκεστε στο διανομέα πιρούνι / αντίγραφο του φακέλου για να το κάνετε αυτό ( αντικαταστήστε "openaps" στη διεύθυνση URL με το όνομα χρήστη github)).
     
-    2. Click in the upper right corner where it says "Upload files"
+    2. Κάντε κλικ στην επάνω δεξιά γωνία όπου αναγράφεται "Αποστολή αρχείων"
     
-    3. Drag and drop your images into the screen
+    3. Σύρετε και αποθέστε τις εικόνες σας στην οθόνη
     
-    4. Commit these to your branch
+    4. Αναθέστε τα στο υποκατάστημά σας
     
-    5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
+    5. Τώρα, μπορείτε να αναζητήσετε τη διεύθυνση URL / σχετική διαδρομή κάθε αρχείου και να την χρησιμοποιήσετε για να αναφερθείτε κατά την προσθήκη εικόνων σε μια σελίδα της τεκμηρίωσης.
     
-    6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
+    6. Για να δείτε παραδείγματα για τον τρόπο προσθήκης των εικόνων, μπορείτε να δείτε τον "ακατέργαστο" κώδικα μιας σελίδας για να δείτε ένα παράδειγμα από μια σελίδα που έχει ήδη ενσωματώσει τις εικόνες με επιτυχία. Το κύριο πράγμα είναι να έχουμε μια περιγραφή απλού κειμένου, ακολουθούμενη από μια σύνδεση με μια σχετική διαδρομή προς την εικόνα, όπως αυτή: `! [Παράδειγμα αποστολής εικόνων σε παρτίδες] (../ images / Example_batch_images_upload.png) `
     
-    (That code is exactly how the image below is embedded to be displayed.)
+    (Αυτός ο κώδικας είναι ακριβώς πώς θα ενσωματωθεί η εικόνα παρακάτω)
 
-![Example of uploading images in batches](./images/Example_batch_images_upload.png)
+![Παράδειγμα φόρτωσης εικόνων σε παρτίδες](./images/Example_batch_images_upload.png)
 
-7. After adding images or making adjustments, you can submit a PR to the master branch of AndroidAPSdocs.
+7. Μετά την προσθήκη εικόνων ή την πραγματοποίηση προσαρμογών, μπορείτε να υποβάλετε ένα PR στον κύριο κλάδο του AndroidAPSdocs.
