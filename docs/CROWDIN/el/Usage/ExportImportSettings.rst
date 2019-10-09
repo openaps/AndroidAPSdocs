@@ -1,23 +1,23 @@
 
-Export & import settings
+Ρυθμίσεις εξαγωγής εισαγωγής
 ***********************************
 
-* **Export settings** on your old phone
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
-  * File location will be shown
+Εξαγωγή ρυθμίσεων στο παλιό σας τηλέφωνο
+  * Μενού Hamburger (στην πάνω αριστερή γωνία της οθόνης)
+  * Συντήρηση
+  * Εξαγωγή ρυθμίσεων
+  * Θα εμφανιστεί η θέση του αρχείου
   
-  .. image:: ../images/AAPS_ExportSettings.png
-  :alt: AndroidAPS export settings
+  .. εικόνα:: ../images/AAPS_ExportSettings.png
+  :alt: AndroidAPS εξαγωγή ρυθμίσεων
   
   
    
-* **Transfer** settings from old to new phone using the file location shown during export
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
-* **Note for Dana RS users:**
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
+Μεταφορά από παλιό σε νέο τηλέφωνο χρησιμοποιώντας τη θέση αρχείου που εμφανίζεται κατά την εξαγωγή
+Εγκαταστήστε το AndroidAPS στο νέο τηλέφωνο.
+* **Εισαγωγή ρυθμίσεων** για το νέο σας τηλέφωνο
+  * Μενού Hamburger (στην πάνω αριστερή γωνία της οθόνης)
+  * Συντήρηση
+  * Εισαγωγή ρυθμίσεων
+* **Σημείωση για τους χρήστες της Dana RS:**
+  * Καθώς η σύνδεση της αντλίας εισάγετε, το AAPS στο νέο τηλέφωνο θα ξέρει ήδη την αντλία και για αυτό δεν χρειάζεται ξανά σκανάρισμα με bluetooth. Συνδέστε το νέο τηλέφωνο και αντλία χειροκίνητα.
