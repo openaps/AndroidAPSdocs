@@ -194,121 +194,121 @@
 
 ![ISF πολύ χαμηλό](../images/isf.jpg)
 
-### What causes high postprandial peaks in closed loop?
+### Τι προκαλεί υψηλές μεταγευματικές κορυφές σε κλειστό κύκλωμα;
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+Πρώτα απ 'όλα, ελέγξτε το βασικό σας ρυθμό και κάντε δοκιμασία βασικού ρυθμού χωρίς υδατάνθρακες. Εάν είναι σωστό και το BG σας πέφτει από το στόχο σας αφού απορροφηθούν πλήρως οι υδατάνθρακες, προσπαθήστε να ορίσετε κάποιον στόχο "να φάει σύντομα" στο AndroidAPS κάποια στιγμή πριν από το γεύμα ή να σκεφτείτε έναν κατάλληλο χρόνο prebolus με τον ενδοκρινολόγο σας. Εάν το BG σας είναι πολύ υψηλό μετά το γεύμα και ακόμα πολύ υψηλό αφού οι υδατάνθρακες απορροφηθούν πλήρως, σκεφτείτε να μειώσετε το IC σας με τον ενδοκρινολόγο σας. Εάν το BG σας είναι πολύ υψηλό ενώ το COB πολύ χαμηλά μετά την απορρόφηση των υδατανθράκων, σκεφτείτε να αυξήσετε το IC σας και έναν κατάλληλο χρόνο prebolus με τον ενδοκρινολόγο σας.
 
-# Other settings
+# Αλλες ρυθμισεις
 
-## Nightscout settings
+## Ρυθμίσεις Nightscout
 
-### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
+### Το AndroidAPS NSClient λέει ότι δεν επιτρέπεται και δεν μεταφορτώνει δεδομένα. Τι μπορώ να κάνω;
 
-In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+Στο NSClient επιλέξτε 'Ρυθμίσεις σύνδεσης'. Ίσως να μην βρίσκεστε σε επιτρεπόμενο δίκτυο WLAN ή έχετε ενεργοποιήσει το "Μόνο εάν φορτίζετε" και το καλώδιο φόρτισης δεν είναι συνδεδεμένο.
 
-## CGM settings
+## Ρυθμίσεις CGM
 
-### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
+### Γιατί λέει το AndroidAPS: "Η πηγή BG δεν υποστηρίζει προηγμένο φιλτράρισμα";
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Αν χρησιμοποιείτε άλλο CGM / FGM από το Dexcom G5 ή το G6 στη μητρική λειτουργία xDrip, θα λάβετε αυτήν την ειδοποίηση στην καρτέλα openAPS του AndroidAPS. Δείτε [ Εξομάλυνση δεδομένων γλυκόζης αίματος ](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) για περισσότερες λεπτομέρειες.
 
 ## Αντλία
 
-### Where to place the pump?
+### Που μπορώ να τοποθετήσω την αντλία μου;
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
+Υπάρχουν αναρίθμητες δυνατότητες για την τοποθέτηση της αντλίας. Δεν έχει σημασία αν είστε σε κύκλωμα ή όχι. Αν προτιμάτε να έχετε μια αντλία ινσουλίνης χωρίς σωλήνα και να έχετε μια Dana για κύκλωμα, ελέγξτε τον καθετήρα 30 cm με τη ζώνη της κοιλιάς.
 
-### Batteries
+### Μπαταρίες
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+Το κύκλωμα μπορεί να μειώσει την μπαταρία της αντλίας ταχύτερα από την κανονική χρήση, επειδή το σύστημα αλληλεπιδρά με το bluetooth πολύ περισσότερο από ένα χειροκίνητο χρήστη. Το καλύτερο είναι να αλλάξετε τη μπαταρία στο 25%, καθώς η επικοινωνία γίνεται πιο δύσκολη. Μπορείτε να ρυθμίσετε συναγερμούς για την μπαταρία της αντλίας χρησιμοποιώντας τη μεταβλητή PUMP_WARN_BATT_P στον nightscout ιστότοπό σας. Τα κόλπα για την αύξηση της διάρκειας ζωής της μπαταρίας περιλαμβάνουν:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
-* reduce the length of time the backlight stays on (within pump settings menu)
-* select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
-* for Dana R/RS pumps the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+* μειώστε τη διάρκεια ενεργής οθόνης LCD (στο μενού ρυθμίσεων της αντλίας)
+* μειώστε τη διάρκεια παραμονής του φωτισμού (στο μενού ρυθμίσεων της αντλίας)
+* επιλέξτε τις ρυθμίσεις ειδοποίησης σε μπιπ και όχι σε δόνηση (στο μενού ρυθμίσεων αντλίας)
+* πατήστε μόνο τα κουμπιά στην αντλία για να φορτώσετε ξανά, χρησιμοποιήστε το AndroidAPS για να δείτε όλη την ιστορία, την στάθμη της μπαταρίας και τον ογκο του ρεζερβουάρ.
+* Η εφαρμογή AndroidAPS μπορεί συχνά να κλείσει για να εξοικονομήσει ενέργεια ή ελεύθερη μνήμη RAM σε ορισμένα τηλέφωνα. Όταν ξεκινήσει εκ νέου το AndroidAPS σε κάθε εκκίνηση, δημιουργεί μια σύνδεση Bluetooth με την αντλία και ξανά διαβάζει το τρέχον βασικό ρυθμό και το ιστορικό των bolus. Αυτό καταναλώνει μπαταρία. Για να δείτε αν συμβαίνει κάτι τέτοιο, μεταβείτε στην επιλογή Προτιμήσεις> NSClient και ενεργοποιήστε την επιλογή "Αρχείο καταγραφής εφαρμογής σε NS". To Nightscout θα λάβει ένα συμβάν σε κάθε επανεκκίνηση του AndroidAPS, γεγονός που καθιστά εύκολη την παρακολούθηση του προβλήματος. Για να μειώσετε αυτό το συμβάν, προσθέστε στη λίστα εφαρμογών AndroidAPS στις ρυθμίσεις μπαταριών του τηλεφώνου για να σταματήσετε να κλείνει η οθόνη ισχύος της εφαρμογής.
+* καθαρίστε τους ακροδέκτες της μπαταρίας με οινόπνευμα για να διασφαλίσετε ότι δεν παραμένει κατασκευαστικό κέρι / λίπος.
+* για τις αντλίες DanaR / RS, η διαδικασία εκκίνησης αντλεί ένα υψηλό ρεύμα κατά μήκος της μπαταρίας για να σπάσει σκόπιμα το φιλμ παθητικοποίησης (αποτρέπει την απώλεια ενέργειας κατά την αποθήκευση), αλλά δεν λειτουργεί πάντα για να σπάσει το 100%. Αφαιρέστε και επανατοποθετήστε την μπαταρία 2-3 φορές μέχρι να εμφανιστεί 100% στην οθόνη ή χρησιμοποιήστε το κλειδί της μπαταρίας για βραχυκύκλωμα μπαταρίας πριν την τοποθέτηση εφαρμόζοντας και στους δύο ακροδέκτες για ένα δευτερόλεπτο.
+* δείτε επίσης περισσότερες συμβουλές στο [ συγκεκριμένους τύπους μπαταρίας ](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
-### Changing reservoirs and cannulas
+### Αλλαγή δεξαμενών και σωληνών
 
-The change of cartridge cannot be done via AndroidAPS, but must be carried out as before directly via the pump.
+Η αλλαγή κασέτας δεν μπορεί να γίνει μέσω του AndroidAPS, αλλά πρέπει να πραγματοποιηθεί όπως και πριν μέσω της αντλίας.
 
-* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-* Now disconnect the pump, and change the reservoir as per pump instructions.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+* Πατήστε παρατεταμένα το "Ανοιχτό κύκλωμα" / "Κλειστό κύκλωμα" στην καρτέλα Home του AndroidAPS και επιλέξτε 'Αναστολή κυκλώματος για 1 ώρα'
+* Τώρα αποσυνδέστε την αντλία και αλλάξτε τη δεξαμενή σύμφωνα με τις οδηγίες της αντλίας.
+* Μόλις επανασυνδεθείτε με την αντλία, συνεχίστε με το πάτημα του κουμπιού "Αναστολή (X m)".
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+Η αλλαγή ενός σωληναρίου όμως δεν χρησιμοποιεί τη λειτουργία "πρωταρχικής έγχυσης" της αντλίας, αλλά γεμίζει το σετ έγχυσης και / ή το σωληνίσκο χρησιμοποιώντας ένα bolus που δεν εμφανίζεται στο ιστορικό των bolus. Αυτό σημαίνει ότι δεν διακόπτει ένα τρέχον προσωρινό βασικό ρυθμό. Στην καρτέλα Δράσεις (Πράξη), χρησιμοποιήστε το πλήκτρο PRIME / FILL για να ρυθμίσετε την ποσότητα ινσουλίνης που απαιτείται για να γεμίσετε το σετ έγχυσης και να ξεκινήσετε την προετοιμασία. Αν το ποσό δεν είναι αρκετό, επαναλάβετε την πλήρωση. Μπορείτε να ορίσετε κουμπιά προεπιλεγμένου ποσού στις Προτιμήσεις> Άλλο> Συμπληρώστε / Αρχίστε την κανονική ποσότητα ινσουλίνης. Δείτε το φυλλάδιο οδηγιών στο κιβώτιο του σωληνίσκου για το πόσες μονάδες θα πρέπει να προετοιμαστούν ανάλογα με το μήκος της βελόνας και το μήκος της σωλήνωσης.
 
-## Wallpaper
+## Ταπετσαρία
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+Μπορείτε να βρείτε την ταπετσαρία AndroidAPS για το τηλέφωνό σας στη σελίδα [ τηλέφωνα ](../Getting-Started/Phones#phone-background).
 
-## Daily usage
+## Καθημερινή χρήση
 
-### Hygiene
+### Υγιεινή
 
-#### What to do when taking a shower or bath?
+#### Πώς μπορώ να κάνω ένα μπάνιο ή ντουζ;
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
+Μπορείτε να αφαιρέσετε την αντλία ενώ κάνετε ντους ή μπάνιο. Για αυτό το σύντομο χρονικό διάστημα συνήθως δεν θα τη χρειαστείτε. Αλλά πρέπει να το πείτε στο AAPS, έτσι ώστε οι υπολογισμοί IOB να είναι σωστοί.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+Δείτε τη [παραπάνω περιγραφή](../Getting-Started/FAQ#disconnect-pump).
 
-### Work
+### Εργασία
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Ανάλογα με το είδος της δουλειάς σας, ίσως να χρησιμοποιείτε διαφορετικούς παράγοντες θεραπείας στις εργάσιμες ημέρες. Σαν κάποιος που χρησιμοποιεί κύκλωμα πρέπει να σκεφτείτε μια [αλλαγή προφίλ](../Usage/Profiles.md) για την εκτιμώμενη εργάσιμη ημέρα σας (π.χ. περισσότερο από 100% για 8 ώρες όταν κάθεστε γύρω ή λιγότερο από 100% όταν είστε ενεργός), υψηλό ή χαμηλό προσωρινό στόχο ή μια [χρονική μετατόπιση του προφίλ σας](../Usage/Profiles#time-shift) όταν στέκεστε πολύ νωρίτερα ή αργότερα από το κανονικό. Εάν χρησιμοποιείτε[ προφίλ Nightscout](../Configuration/Config-Builder#ns-profile), μπορείτε επίσης να δημιουργήσετε ένα δεύτερο προφίλ (π.χ. 'σπίτι' και 'εργάσιμη ημέρα') και να κάνετε καθημερινή αλλαγή προφίλ στο προφίλ που πραγματικά χρειάζεστε.
 
-## Leisure activities
+## Αθλητικές δραστηριότητες
 
-### Sports
+### Αθλήματα
 
-### Sex
+### Σεξ
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
+Μπορείτε να αφαιρέσετε την αντλία για να είναι «ελεύθεροι», αλλά θα πρέπει να το πείτε στο AAPS, έτσι ώστε οι υπολογισμοί του IOB να είναι σωστοί.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+Δείτε τη [παραπάνω περιγραφή](../Getting-Started/FAQ#disconnect-pump).
 
-### Drinking alcohol
+### Κατανάλωση Αλκοόλ
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Το αλκοολούχο ποτό είναι επικίνδυνο σε λειτουργία κλειστού κυκλώματος, καθώς ο αλγόριθμος δεν μπορεί να προβλέψει σωστά το BG που επηρεάζεται από το αλκοόλ. Πρέπει να ελέγξετε τη δική σας μέθοδο αντιμετώπισης του προβλήματος χρησιμοποιώντας τις ακόλουθες λειτουργίες στο AndroidAPS:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* Απενεργοποίηση λειτουργίας κλειστού κυκλώματος και θεραπεία του διαβήτη χειροκίνητα
+* θέτοντας στόχους υψηλούς και απενεργοποιώντας UAM για να αποφευχθεί ο αυξανόμενος κύκλος IOB λόγω ενός μη επιτηρούμενου γεύματος ή
+* κάντε μια αλλαγή προφίλ σε αισθητά λιγότερο από 100% 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Όταν πίνετε αλκοόλ πρέπει πάντα να προσέχετε το CGM σας για να αποφύγετε χειροκίνητα μια υπογλυκαιμία τρώγοντας υδατάνθρακες.
 
-### Sleeping
+### Ύπνος
 
-#### How can I loop during the night without mobile and WIFI radiation?
+#### Πώς μπορώ να χρησιμοποιώ το κλειστό σύστημα ρύθμισης σακχάρου (loop) το βράδυ, χωρίς να εκτίθεμαι στην ακτινοβολία του κινητού και του WiFi;
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
+Πολλοί χρήστες γυρίζουν το τηλέφωνο τους σε λειτουργία αεροπλάνου το βράδυ. Εάν θέλετε να λειτουργεί το κύκλωμα όταν κοιμάστε, ακολουθήστε την εξής διαδικασία (αυτό θα λειτουργήσει μόνο με μια τοπική BG-πηγή όπως xDrip + ή patched εφαρμογή Dexcom, ΔΕΝ θα λειτουργήσει εάν λάβετε τις αναγνώσεις BG μέσω του nightcout):
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. Ενεργοποιήστε τη "λειτουργία πτήσης" στο κινητό σας.
+2. Περιμένετε μέχρι να ενεργοποιηθεί η λειτουργία του αεροπλάνου.
+3. Ενεργοποιήστε το Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Τώρα δεν δέχεστε τηλεφωνήματα ούτε είναι συνδεδεμένο το κινητό σας στο internet. Όμως το κύκλωμα λειτουργεί κανονικά.
 
 Μερικοί άνθρωποι έχουν ανακαλύψει προβλήματα με την τοπική εκπομπή (το AAPS δεν λαμβάνει τιμές BG από το xDrip+) όταν το τηλέφωνο βρίσκεται σε λειτουργία πτήσης. Μεταβείτε στις Ρυθμίσεις> Ρυθμίσεις μεταξύ εφαρμογών> Εντοπισμός δέκτη και εισαγάγετε ` info.nightscout.androidaps `.
 
 ![+xDrip Basic Inter-app Ρυθμίσεις Προσδιορίζουν δέκτη](../images/xDrip_InterApp_NS.png)
 
-### Travelling
+### Ταξίδια
 
-#### How to deal with time zone changes?
+#### Πώς να διαχειριστώ την αλλαγή ώρας;
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+Με τις αντλίες DanaR και DanaR Korean δεν απαιτείται καμία ρύθμιση από τον χρήστη. Για τις άλλες αντλίες δείτε τη σελίδα που περιέχει αναλυτικές πληροφορίες για την [αλλαγή ώρας λόγω ταξιδιού](../Usage/Timezone-traveling.md).
 
-## Medical topics
+## Ιατρικά θέματα
 
-### Hospitalization
+### Νοσηλεία σε νοσοκομείο
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Αν θέλετε να ενημερώσετε τον γιατρό σας για το AndroidAPS και το DIY looping, μπορείτε να τυπώσετε ή να τους παραπέμψετε στη σελίδα που περιέχει τις αντίστοιχες πληροφορίες: [AndroidAPS για ιατρούς](../Resources/clinician-guide-to-AndroidAPS.md).
 
-### Medical appointment with your endocrinologist
+### Ραντεβού με το γιατρό σας
 
-#### Reporting
+#### Αναφορές
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Στο γιατρό που σας παρακολουθεί μπορείτε να δείξετε τις αναφορές του nightscout (https://YOUR-NS-SITE.com/report) ή δείτε το [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
