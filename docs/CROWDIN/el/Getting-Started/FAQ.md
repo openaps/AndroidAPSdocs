@@ -143,7 +143,7 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 **Higher ISF** (i.e. 45 instead of 35) = less aggressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
 
-**Example:**
+**Παράδειγμα:**
 
 * BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
 * So, you want correction of 90 mg/dl (= 190 - 110).
