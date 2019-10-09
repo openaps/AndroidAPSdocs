@@ -1,11 +1,11 @@
-Phones
+Τηλέφωνα
 ************
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   List of tested phones <../Getting-Started/Phones.md>
-   Jelly Pro Settings <../Usage/jelly.md>
-   Huawei Settings <../Usage/huawei.md>
+   Λίστα με δοκιμασμένες τηλέφωνα <../Getting-Started/Τηλέφωνα.md>
+   Jelly Pro Ρυθμίσεις <../Χρήση/jelly.md>
+   Huawei Ρυθμίσεις <../Χρήση/huawei.md>
    
