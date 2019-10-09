@@ -299,7 +299,7 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - Προφίλ</a></td>
 </tr>
 <tr>
- <td>Αλλαγή προφίλ</td>
+ <td>Αλλαγή Προφίλ</td>
  <td>(προσωρινή) αλλαγή προφίλ που χρησιμοποιείται ή ποσοστιαία αύξηση / μείωση</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki -Αλλαγή προφίλ</a></td>
