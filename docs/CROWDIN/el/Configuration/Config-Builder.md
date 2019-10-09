@@ -41,7 +41,7 @@ NS Profile uses the profiles you have saved on your Nightscout site (https://[yo
 
 Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
 
-Πλεονεκτήματα:
+Advantage:
 
 * πολλαπλά προφίλ
 * εύκολη διαμόρφωση μέσω PC ή tablet
