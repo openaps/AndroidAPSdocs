@@ -1,39 +1,39 @@
-# Timezone traveling with pumps
+# Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με αντλίες
 
 ## DanaR, Korean DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Δεν υπάρχει πρόβλημα με την αλλαγή ζώνης ώρας στο τηλέφωνο, επειδή η αντλία δεν χρησιμοποιεί ιστορικό
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndoridAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+Αυτές οι αντλίες χρειάζονται ιδιαίτερη προσοχή επειδή το AndoridAPS χρησιμοποιεί ιστορία από την αντλία, αλλά τα αρχεία στην αντλία δεν έχουν σφραγίδα χρονικής ζώνης. **Αυτό σημαίνει ότι αν αλλάξετε απλά τη ζώνη ώρας στο τηλέφωνο, οι εγγραφές θα διαβαστούν με διαφορετική ζώνη ώρας και θα διπλασιαστούν.**
 
-To avoid this there are two possibilities:
+Για να αποφευχθεί αυτό, υπάρχουν δύο δυνατότητες:
 
-### Option 1: Keep home time and timeshift profile
+### Επιλογή 1: Διατήρηση του προφίλ ώρας και χρονικής μετατόπισης
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
-* Phone must keep your standard time as at home for the whole travel period.
-* Time-shift your profile according to time difference between home time and destination time.
+* Απενεργοποιήστε την "Αυτόματη ημερομηνία και ώρα" στις ρυθμίσεις του τηλεφώνου σας (αλλαγή σε χειροκίνητης ζώνη ώρας).
+* Το τηλέφωνο πρέπει να διατηρεί τον κανονικό σας χρόνο όπως στο σπίτι για ολόκληρη την περίοδο ταξιδιού.
+* Χρονική μετατόπιση του προφίλ σας σύμφωνα με τη χρονική διαφορά μεταξύ του χρόνου στο σπίτι και του χρόνου προορισμού.
    
-   * Long-press profile name (middle of top section on homescreen)
-   * Select 'Profile Switch'
-   * Set 'Time shift' according to your destination.
+   * Παρατεταμένο πάτημα στο όνομα προφίλ (στη μέση της κορυφαίας ενότητας στην αρχική οθόνη)
+   * Επιλέξτε 'Μετατροπή προφίλ'
+   * Ορίστε την επιλογή "Αλλαγή ώρας" ανάλογα με τον προορισμό σας.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Αλλαγή προφίλ με χρονική μετατόπιση](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: profile switch +6 hours
-   * i.e. Vienna -> Sydney: profile switch -8 hours
+   * π.χ. Βιέννη -> Νέα Υόρκη: διακόπτης προφίλ +6 ώρες
+   * π.χ. Βιέννη -> Σίδνεϊ: διακόπτης προφίλ -8 ώρες
 
-### Option 2: Delete pump history
+### Επιλογή 2: Διαγραφή ιστορικού αντλίας
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* Απενεργοποιήστε την "Αυτόματη ημερομηνία και ώρα" στις ρυθμίσεις του τηλεφώνου σας (αλλαγή σε χειροκίνητης ζώνη ώρας)
 
-When get out of plane:
+Όταν βγείτε από το αεροπλάνο:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
+* κλείστε την αντλία
+* αλλάξτε ώρα στο τηλέφωνο
+* κλείστε το τηλέφωνο, ενεργοποιείστε την αντλία
 * clear history in pump
 * change time in pump
 * turn on phone
