@@ -1,9 +1,9 @@
-For users of Eversense
+Για χρήστες του Eversense
 ********************************
-The easiest way to use Eversense with AndroidAPS is to install the modified `Eversense app <https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk>`_ (and unistall the original one first).
+Ο ευκολότερος τρόπος για να χρησιμοποιήσετε το Eversense με το AndroidAPS είναι να εγκαταστήσετε την τροποποιημένη εφαρμογή Eversense <https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk> (αφού αφαιρέσετε πρώτα την αρχική).
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+**Προειδοποίηση: με την κατάργηση της εγκατάστασης της παλιάς εφαρμογής, τα τοπικά ιστορικά δεδομένα που είναι παλαιότερα από μία εβδομάδα θα χαθούν!**
 
-To finally get your data to AndroidAPS, you need to install `ESEL <https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk>`_ and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the `Configuration Builder <../Configuration/Config-Builder.html>`_ in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
+Για να λάβετε τελικά τα δεδομένα σας στο AndroidAPS, πρέπει να εγκαταστήσετε το `ESEL<https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk> και να ενεργοποιήσετε την επιλογή "Αποστολή σε AAPS και xDrip" στο ESEL και "MM640g" ως πηγή BG στο `Configuration Builder <../ Configuration / Config-Builder.html>` _ στο AndroidAPS. Δεδομένου ότι τα δεδομένα BG από το Eversense μπορεί να είναι θορυβώδη μερικές φορές, καλό είναι να ενεργοποιείτε τα "Smooth Data" στο ESEL, κάτι που είναι καλύτερο από το να επιτρέπετε "Να χρησιμοποιείτε πάντα το σύντομο μέσο delta αντί για το απλό delta" στο AAPS.
 
-You can find another instruction for using xDrip with an Eversense `here <https://github.com/BernhardRo/Esel/tree/master/apk>`_.
+Μπορείτε να βρείτε μια άλλη οδηγία για τη χρήση του xDrip με Eversense εδώ <https://github.com/BernhardRo/Esel/tree/master/apk>.
