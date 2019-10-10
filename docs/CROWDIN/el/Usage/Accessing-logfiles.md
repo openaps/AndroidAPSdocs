@@ -1,8 +1,8 @@
-# Accessing logfiles
+# Πρόσβαση σε αρχεία καταγραφής
 
-* Connect phone to a computer in file transfer mode
-* Locate log files in this directory or similiar (may little bit vary on different phones)
+* Συνδέστε το τηλέφωνο με έναν υπολογιστή σε λειτουργία μεταφοράς αρχείων
+* Εντοπίστε αρχεία καταγραφής σε αυτόν τον κατάλογο ή κάπου εκεί (ενδέχεται να ποικίλλουν λίγο σε διαφορετικά τηλέφωνα)
 
 ![logs](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) in Android Studio, Log Viewer android app, or simply plain text. Previous log files are zipped and stored in folders in date/time order. If sharing your log in [gitter](https://gitter.im/MilosKozak/AndroidAPS) when talking about a potential bug then unzip and upload the folder dated before the error occurred.
+* Το τρέχον αρχείο καταγραφής είναι ένα αρχείο .log το οποίο μπορεί να προβληθεί με διάφορους τρόπους, όπως το  LogCat </ 0> στο Android Studio, το View Viewer και το app Android ή απλά απλό κείμενο. Τα προηγούμενα αρχεία καταγραφής είναι σε μορφή zip και αποθηκεύονται σε φακέλους με ημερομηνία / ώρα. Εάν μοιράζεστε το αρχείο καταγραφής  gitter </ 0> όταν μιλάτε για πιθανό σφάλμα, τότε αποσυνδέστε και μεταφορτώστε το φάκελο που χρονολογείται πριν από την εμφάνιση του σφάλματος.</li> </ul>

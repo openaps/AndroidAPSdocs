@@ -1,70 +1,70 @@
-# Objectives
+# Στόχοι
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping. They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+Το AndroidAPS διαθέτει μια σειρά στόχων που πρέπει να ολοκληρωθούν για να σας καθοδηγήσουν στα χαρακτηριστικά και τις ρυθμίσεις του ασφαλούς κυκλώματος. Εξασφαλίζουν ότι έχετε ρυθμίσει σωστά όλες τις λεπτομέριες στις παραπάνω ενότητες και ότι καταλαβαίνετε τι κάνει το σύστημά και γιατί μπορείτε να το εμπιστευτείτε.
 
-If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc. If you do not export and import your settings then you will need to start the objectives from the beginning again. It is a good idea to back up your settings frequently just in case. See below for details.  
+Εάν είστε στην ** αναβάθμιση τηλεφώνων ** τότε μπορείτε να [ εξάγετε τις ρυθμίσεις σας ](../Usage/ExportImportSettings) για να διατηρήσετε την πρόοδό σας μέσω των στόχων. Όχι μόνο θα αποθηκευτεί η πρόοδός σας μέσω των στόχων, αλλά και οι ρυθμίσεις ασφαλείας σας όπως το μέγιστο bolus κ. λπ. Αν δεν εξάγετε και δεν εισάγετε τις ρυθμίσεις σας, θα χρειαστεί να ξεκινήσετε πάλι τους στόχους από την αρχή. Είναι καλή ιδέα να δημιουργείτε αντίγραφα ασφαλείας των ρυθμίσεών σας συχνά για καλό και για κακό. Δείτε παρακάτω για λεπτομέρειες.  
 
-### Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+### Στόχος 1: Δημιουργία οπτικοποίησης και παρακολούθησης, ανάλυση βασικού δεδομένων και αναλογιών
 
-* Select the right blood glucose source for your setup. See [BG Source](../Configuration/BG-Source.rst) for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS. If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](../Configuration/Preferences.html#ns-client).
+* Επιλέξτε τη σωστή πηγή γλυκόζης αίματος για τη ρύθμιση. Δείτε [ Πηγή BG ](../Configuration/BG-Source.rst) για περισσότερες πληροφορίες.
+* Επιλέξτε τη σωστή αντλία στο ConfigBuilder (επιλέξτε εικονική αντλία αν χρησιμοποιείτε μοντέλο αντλίας χωρίς οδηγό AndroidAPS για βρόχο) για να διασφαλίσετε ότι η κατάσταση της αντλίας σας μπορεί να επικοινωνήσει με το AndroidAPS. Αν χρησιμοποιείτε αντλία DanaR, βεβαιωθείτε ότι έχετε ακολουθήσει τις οδηγίες στο [ Αντλία ινσουλίνης DanaR ](../Configuration/DanaR-Insulin-Pump.md) για να εξασφαλίσετε τη σύνδεση μεταξύ της αντλίας και του AndroidAPS.
+* Ακολουθήστε τις οδηγίες στη σελίδα [ Nightscout ](../Installing-AndroidAPS/Nightscout.md) για να βεβαιωθείτε ότι το Nightscout μπορεί να λάβει και να εμφανίσει αυτά τα δεδομένα.
+* Σημειώστε ότι η διεύθυνση URL στο NSClient πρέπει να είναι ** χωρίς / api / v1 / ** στο τέλος - δείτε [ Ρυθμίσεις NSClient στις Προτιμήσεις ](../Configuration/Preferences.html#ns-client).
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*Ίσως χρειαστεί να περιμένετε για την επόμενη ανάγνωση γλυκόζης στο αίμα πριν το AndroidAPS το αναγνωρίσει.*
 
-### Objective 2: Starting on an open loop
+### Στόχος 2: Ξεκινώντας από ένα ανοικτό κύκλωμα
 
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them. Ensure this data shows in AndroidAPS and Nightscout.
-* Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
+* Επιλέξτε Ανοικτό κύκλωμα είτε από τις Προτιμήσεις είτε πατώντας παρατεταμένα το κουμπί κύκλωμα στο πάνω αριστερό μέρος της αρχικής οθόνης.
+* Εργαστείτε στις [προτιμήσεις ](../Configuration/Preferences.md) για να τις ρυθμίσετε.
+* Χειριστείτε χειροκίνητα τουλάχιστον 20 από τις προσωρινές προτάσεις βασικού ρυθμού για περίοδο 7 ημερών. εισαγάγετε τα στην αντλία σας και επιβεβαιώστε στο AndroidAPS ότι τα έχετε δεχτεί. Βεβαιωθείτε ότι τα δεδομένα αυτά εμφανίζονται σε AndroidAPS και Nightscout.
+* Ενεργοποιήστε [ στόχους ρυθμού ](../Usage/temptarget.md), εάν είναι απαραίτητο. Χρησιμοποιήστε στόχους υπογλυκαιμίας για να αποφύγετε ότι το σύστημα θα διορθώσει πολύ έντονα λόγω αύξησης της γλυκόζης αίματος μετά από υπογλυκαιμία. 
 
-### Objective 3: Understanding your open loop, including its temp basal recommendations
+### Στόχος 3: Κατανόηση του ανοικτού κυκλώματος, συμπεριλαμβανομένων του βασικού ρυθμού και των συστάσεων
 
-* Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the forecast line in AndroidAPS homescreen/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Αρχίστε να κατανοείτε το σκεπτικό πίσω από τις θεμελιώδεις βασικές προτάσεις εξετάζοντας[ τη βασική λογική ](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) και τη γραμμή πρόβλεψης στην αρχική οθόνη AndroidAPS / Nightscout και τη σύνοψη των αποτελεσμάτων από τους υπολογισμούς στην καρτέλα OpenAPS.
 
-*You will want to set your target higher than usual until you are confident in the calculations and settings. The system allows a low target to be a minimum of 4 or maximum of 10, and a high target to be a minimum of 5 and maximum of 15. A temporary target as a single value can be anywhere in the range of 4 to 15. The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within. If your target is very wide (say, 3 or more mmol wide), you will often find because blood glucose is eventually predicted to be somewhere in that wide range not many fluctuating temporary basal rates are suggested. You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol wide), and observe how the behavior of your system changes as a result. You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in Preference > Range for Visualisation.*
+*Θα θελήσετε να ορίσετε το στόχο σας υψηλότερο από το συνηθισμένο έως ότου είστε σίγουροι για τους υπολογισμούς και τις ρυθμίσεις. Το σύστημα επιτρέπει έναν χαμηλό στόχο να είναι τουλάχιστον 4 ή το μέγιστο των 10 και ένας υψηλός στόχος να είναι τουλάχιστον 5 και το μέγιστο 15. Ένας προσωρινός στόχος ως μία μόνο τιμή μπορεί να είναι οπουδήποτε στην περιοχή από 4 έως 15. Ο στόχος είναι η τιμή στην οποία βασίζονται οι υπολογισμοί και όχι η ίδια με εκείνη που στοχεύετε να διατηρείτε τις τιμές γλυκόζης στο αίμα σας μέσα. Εάν ο στόχος σας είναι πολύ ευρύς (π. χ. 3 ή περισσότερα mmol), θα βρείτε συχνά επειδή η γλυκόζη στο αίμα τελικά προβλέπεται να είναι κάπου σε αυτό το ευρύ φάσμα, δεν προτείνονται πολλά κυμαινόμενα προσωρινά βασικά ποσοστά. Μπορεί να θέλετε να πειραματιστείτε με την προσαρμογή των στόχων σας ώστε να έχει ένα πιο στενό εύρος τιμών (ας πούμε, πλάτος 1 ή λιγότερο mmol) και να παρατηρήσετε πώς αλλάζει η συμπεριφορά του συστήματός σας ως αποτέλεσμα αυτού. Μπορείτε να δείτε ένα ευρύτερο εύρος (πράσινες γραμμές) στο γράφημα για τις τιμές που σκοπεύετε να διατηρήσετε τη γλυκόζη του αίματός σας εισάγοντας διαφορετικές τιμές στην επιλογή Προτίμηση> Εύρος για οπτικοποίηση.*
 
-**Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.**
+**Σταματήστε εδώ αν είστε σε ανοιχτό κύκλωμα με μια εικονική αντλία - μην κάνετε κλικ στην επιλογή Επαλήθευση στο τέλος αυτού του στόχου.**
 
-### Objective 4: Starting to close the loop with Low Glucose Suspend
+### Στόχος 4: Έναρξη κλειστού κυκλώματος με χαμηλή αναλογία γλυκόζης
 
-**Closed loop will not correct high bg values in objective 4 as it is limited to low glucose suspend.**
+**Το κλειστό κύκλωμα δεν θα διορθώσει τις υψηλές τιμές BG στον αντικειμενικό στόχο 4, καθώς περιορίζεται σε χαμηλή αναστολή γλυκόζης.**
 
-**High bg values have to be corrected manually by you!**
+**Οι υψηλές τιμές BG πρέπει να διορθωθούν χειροκίνητα από εσάς!**
 
-* Select Closed Loop either from Preferences, or by pressing and holding the Open Loop button in the top left of the home screen.
-* Set your target range slightly higher than you usually aim for, just to be safe.
-* Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days. If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
+* Επιλέξτε Κλειστό κύκλωμα είτε από τις Προτιμήσεις είτε πατώντας παρατεταμένα το κουμπί Ανοικτό κύκλωμα στην επάνω αριστερή γωνία της αρχικής οθόνης.
+* Ορίστε το εύρος στόχων σας ελαφρώς υψηλότερο από αυτό που συνήθως στοχεύετε, μόνο για να είστε ασφαλείς.
+* Παρακολουθήστε τον τρόπο με τον οποίο είναι ενεργοποιημένος ο προσωρινός βασικός, προβάλλοντας το μπλε βασικό κείμενο στην αρχική οθόνη ή την μπλε βασική απόδοση στο γράφημα της αρχικής οθόνης.
+* Βεβαιωθείτε ότι οι ρυθμίσεις σας έχουν υποστηρίξει το AndroidAPS για να αποφύγετε την αντιμετώπιση χαμηλής γλυκόζης σε διάστημα 5 ημερών. Εάν εξακολουθείτε να εμφανίζετε συχνά ή σοβαρά επεισόδια χαμηλής γλυκόζης, εξετάστε το ενδεχόμενο αλλαγής των αναλογιών DIA, βασικών, ISF και υδατανθράκων.
 
-*The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.*
+*Το σύστημα θα παρακάμψει τις ρυθμίσεις μέγιστο IOB στο μηδέν, πράγμα που σημαίνει ότι εάν η γλυκόζη του αίματος πέσει μπορεί να μειώσει τη βασική τιμή για εσάς, αλλά εάν η γλυκόζη του αίματος αυξάνεται, τότε θα αυξηθεί μόνο η βασική τιμή, εάν το IOB είναι αρνητικό (από προηγούμενη αναστολή χαμηλής γλυκόζης) διαφορετικά οι βασικές τιμές θα παραμείνουν οι ίδιες με το επιλεγμένο προφίλ σας. Μπορεί να αντιμετωπίσετε προσωρινά αιχμές μετά από υποβληθείσες σε θεραπεία υπογλυκαιμίες χωρίς την ικανότητα να αυξάνετε το βασικό ρυθμό στην ανάκαμψη.*
 
-### Objective 5: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
+### Στόχος 5: Ρύθμιση του κλειστού κυκλώματος, αύξηση του μέγιστου IOB πάνω από 0 και σταδιακή μείωση των στόχων BG
 
-* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+* Αύξηση του μέγιστου συνολικού IOB OpenAPS δεν μπορεί να υπερβεί (σε OpenAPS ονομάζεται max-iob) πάνω από 0 σε διάστημα 1 ημέρας, η προεπιλεγμένη σύσταση είναι "μέσος όρος γευμάτων bolus + επί 3 μέγιστο καθημερινό βασικό" (για αλγόριθμο SMB) ή "επί 3 μέγιστο καθημερινό βασικό" (για παλαιότερο αλγόριθμο AMA), αλλά θα πρέπει να εργάζεστε αργά σε αυτό έως ότου γνωρίζετε ότι οι ρυθμίσεις σας λειτουργούν για εσάς (μέγιστος καθημερινός βασικός = μέγιστη ωριαία τιμή σε οποιοδήποτε χρονικό τμήμα της ημέρας).
     
-    This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
+    Αυτή η σύσταση πρέπει να θεωρηθεί ως σημείο εκκίνησης. Εάν ρυθμίσετε στο 3x και βλέπετε κινήσεις που σας ωθούν έντονα και γρήγορα τότε μειώστε τον αριθμό. Εάν είστε πολύ ανθεκτικοί, αυξήστε το πολύ λίγο τη φορά.
     
-    ![max daily basal](../images/MaxDailyBasal2.png)
+    ![μέγιστος καθημερινός βασικός](../images/MaxDailyBasal2.png)
 
-* Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
+* Μόλις είστε σίγουροι για το πόσο IOB ταιριάζει με τα μοτίβα του κυκλώματος, τότε μειώστε τους στόχους σας στο επιθυμητό επίπεδο.
 
-### Objective 6: Adjust basals and ratios if needed, and then enable autosens
+### Στόχος 6: Ρυθμίστε τις βασικές τιμές και τους συντελεστές αν χρειαστεί και, στη συνέχεια, ενεργοποιήστε τα αυτόματα αισθητήρια
 
-* You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate, or do a traditional basal test.
-* Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+* Μπορείτε να χρησιμοποιήσετε το [ autotune ](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) για να ελέγξετε ότι ο βασικός σας παραμένει ακριβής ή κάντε μια παραδοσιακή δοκιμή βασικού.
+* Ενεργοποιήστε το [ autosens ](../Usage/Open-APS-features.md) σε μια περίοδο 7 ημερών και παρακολουθήστε τη λευκή γραμμή στο γράφημα της αρχικής οθόνης που δείχνει πώς η ευαισθησία σας στην ινσουλίνη μπορεί να αυξάνεται ή να πέφτει ως αποτέλεσμα άσκησης ή ορμονών κλπ. και παρακολουθήστε την καρτέλα έκθεσης OpenAPS πώς το AndroidAPS προσαρμόζει το βασικό και / ή τους στόχους ανάλογα.
 
-*Don’t forget to record your looping in [this form](http://bit.ly/nowlooping) logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Μην ξεχάσετε να καταγράψετε το βρόχο σας σε [ αυτή τη φόρμα ](http://bit.ly/nowlooping) καταγράφοντας το AndroidAPS ως τον τύπο λογισμικού κυκλώματος DIY, αν δεν το έχετε κάνει ήδη.*
 
-### Objective 7: Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
+### Στόχος 7: Ενεργοποίηση πρόσθετων χαρακτηριστικών oref0 για χρήση κατά τη διάρκεια της ημέρας, όπως η προηγμένη βοήθεια γεύματος (AMA)
 
-* Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
-* Then over a period of 28 days you can try additional features that automate even more of the work for you such as the [advanced meal assist](../Usage/Open-APS-features#advanced-meal-assist-ama)
+* Τώρα θα πρέπει να αισθάνεστε σίγουροι για το πώς λειτουργεί το AndroidAPS και ποιες ρυθμίσεις αντικατοπτρίζουν καλύτερα τον διαβήτη σας
+* Στη συνέχεια, σε μια περίοδο 28 ημερών μπορείτε να δοκιμάσετε πρόσθετες λειτουργίες που αυτοματοποιούν ακόμη περισσότερες εργασίες για εσάς, όπως το βοηθητικό πρόγραμμα [ βοηθός προηγμένου γεύματος ](../Usage/Open-APS-features#advanced-meal-assist-ama)
 
-### Objective 8: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+### Στόχος 8: Ενεργοποίηση πρόσθετων χαρακτηριστικών oref1 για τη χρήση κατά τη διάρκεια της ημέρας, όπως το πολύ μικρό bolus (SMB)
 
-* You must read the [SMB chapter in this wiki](../Usage/Open-APS-features#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-* Then you ought to [rise maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 5](../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
+* Πρέπει να διαβάσετε το κεφάλαιο [ SMB σε αυτό το wiki ](../Usage/Open-APS-features#super-micro-bolus-smb) και το [ κεφάλαιο oref1 στο openAPSdocs ](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) για να καταλάβετε πώς λειτουργεί το SMB, ειδικά ποια είναι η ιδέα πίσω από τον μηδενικό ρυθμό.
+* Στη συνέχεια θα πρέπει να [ να αυξηθεί η μέγιστη IOB ](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) για να δείτε ότι τα SMBs να λειτουργούν καλά. η μέγιστη IOB περιλαμβάνει τώρα όλα τα IOB, όχι μόνο βασικά. Δηλαδή, εάν δοθεί ένα bolus 8 U για ένα γεύμα και το μέγιστο IOB είναι 7 U, δεν θα παραδοθούν SMBs μέχρι το IOB πέσει κάτω από 7 U. Ένα καλό ξεκίνημα είναι μέγιστου IOB = μέσος όρος bolus γευμάτων + επί 3 μέγιστο ημερησίως βασικό (μέγιστο καθημερινό βασικό = μέγιστη ωριαία τιμή σε οποιοδήποτε χρονικό τμήμα της ημέρας - βλέπε [ στόχο 5 ](../Usage/Objectives#objective-5-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) για απεικόνιση)
+* το ελάχιστο 5 λεπτών δράσης υδατανθράκων (min_5m_carbimpact) στις ρυθμίσεις απορρόφησης έχει αλλάξει από 3 σε 8 από AMA σε SMB. Εάν κάνετε αναβάθμιση από AMA σε SMB, πρέπει να το αλλάξετε χειροκίνητα

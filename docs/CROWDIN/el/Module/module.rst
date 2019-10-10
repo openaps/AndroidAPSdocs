@@ -5,7 +5,7 @@ AndroidAPS is not just a (self-built) application, it is just one of serveral mo
 .. image:: ../images/modules.png
   :alt: Compontents overview
 
-.. note:: 
+.. σημείωση:: 
    **IMPORTANT SAFETY NOTICE**
 
    The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
@@ -55,12 +55,12 @@ The Combo, the Insight and the older Medtronics are solid pumps, and loopable. T
 
 The advantages of the DanaR/RS vs. the Combo as the pump of choice however are:
 
-- The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
-- Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
-- The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB.  The Dana* RS is configurable that it does neither beeps or vibrates.
+- The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... όχι τόσο εύκολο με την Combo. (Αυτό μπορεί να αλλάξει στο μέλλον όταν το Android 8.1 γίνει πιο διαδεδομένο)
+- Initial pairing is simpler with the Dana* RS. Επειδή όμως συνήθως αυτό γίνεται μόνο μία φορά, σας επηρεάζει μόνο όταν θέλετε να δοκιμάσετε ένα νέο χαρακτηριστικό με διαφορετικές αντλίες.
+- So far the Combo works with screen parsing. Σε γενικές γραμμές αυτό λειτουργεί καλά αλλά είναι αργό. Για το κύκλωμα αυτό δεν έχει σημασία όσο όλα λειτουργούν στο παρασκήνιο. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
+- The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB.  Η Dana * RS είναι διαμορφωμένη ώστε να μην εκπέμπει ή να δονείται.
 - Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-- All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system. 
+- All pumps AndroidAPS can talk with are waterproof on delivery. Μόνο οι αντλίες Dana είναι επίσης "αδιάβροχες με εγγύηση" λόγω της σφραγισμένης θήκης των μπαταριών και του συστήματος πλήρωσης δεξαμενών. 
 
 Πηγή BG
 ------------
@@ -103,7 +103,7 @@ xDrip+
 -------
 Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`_. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
 
-Sample Setup
+Ρύθμιση δείγματος
 ============
 If you want to get a step by step example, you might want to look at a sample setup. The first sample setup is quite old, but should be still up-to-date.
 

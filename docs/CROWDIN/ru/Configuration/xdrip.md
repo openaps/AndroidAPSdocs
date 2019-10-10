@@ -124,7 +124,10 @@
 * Статус батареи может быть виден в окне состояния системы (сэндвич-меню вверху слева на главном экране)
 * Проведите по экрану влево, чтобы увидеть второй экран. ![xDrip+ первый трансмиттер 4](../images/xDrip_Dexcom_Battery.png)
 
-* Точные величины, когда наступает "смерть" трансмиттера из-за низкого заряда батареи, неизвестны. Следующая информация была размещена в сети после "смерти" трансмиттера: дней передачи: 151 напряжение A: 297 напряжение B: 260 Сопротивление: 2391
+* Точные величины, когда наступает "смерть" трансмиттера из-за низкого заряда батареи, неизвестны. The following information was posted online after the transmitter “died”:
+   
+   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
+   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
 
 ### Увеличение срока работы трансмиттера
 
@@ -265,6 +268,8 @@
 
 ### Проблемы при запуске нового сенсора
 
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. начинается с 8G...
+
 * Запуск сенсора сопровождается сообщением: "ОШИБКА: Сенсор не удалось запустить"
 * Остановить сенсор
 * Перезапустить телефон
@@ -273,7 +278,7 @@
 * Остановить сенсор
 * Запустить датчик с "реальным" кодом (напечатан на клеящемся протекторе)
 
-Проверьте журнал xDrip+, начинает ли xDrip+ отсчет "Продолжительность:: 1 минута" (и так далее). Только в журналах xdrip+ вы можете обнаружить на раннем этапе, остановлен ли сенсор. Более поздний статус не всегда отображается правильно внизу главного экрана.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ & Libre Freestyle
 
@@ -295,8 +300,8 @@
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
-![xDrip+ запуск трансмиттера Libre & Сенсор 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ запуск трансмиттера Libre & Сенсор 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ запуск трансмиттера Libre & Сенсор 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)

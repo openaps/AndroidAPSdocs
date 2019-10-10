@@ -1,17 +1,17 @@
-Wiki updates & changes
+Wiki ενημερώσεις και αλλαγές
 **********************
-September 2019
+Σεπτεμβρίου 2019
 ===============
-* `Automate <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - slow carb absorbtion
-* `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
-* `Profile timeshift <../Usage/Profiles.html#timeshift>`_ (more details)
-* `Remote monitoring <../Children/Children.html>`_
-* `What is a closed loop system? <../Getting-Started/ClosedLoop.html>`_
+* `Αυτοματοποίηση <../Usage/Automation.html>`_
+Υπολογιστής bolus <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - slow carb absorbtion
+* `Nightscout ασφάλεια <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
+* 'Χρονική μετατόπιση προφίλ <../Usage/Profiles.html#timeshift>`_ (περισσότερες πληροφορίες)
+* "Εξ αποστάσεως παρακολούθηση <../Children/Children.html>`_
+* `Τι είναι ένα σύστημα κλειστού κυκλώματος; <../Getting-Started/ClosedLoop.html>`_
 
-August 2019
+Αυγούστου 2019
 ===========
-* `Dexcom G6 patched app region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
-* `Dexcom G6 new transmitter <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
-* `What do I need? <../index.html#what-do-i-need>`_ - new structure & additional information
-* New structure
+* `Dexcom G6 patched app περιφέρεια <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* `Dexcom G6 νέος πομπός <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
+* `Τι χρειάζομαι; <../index.html#what-do-i-need>`_ - νέα δομή και πρόσθετες πληροφορίες
+* Νέα δομή

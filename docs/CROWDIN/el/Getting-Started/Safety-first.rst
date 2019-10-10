@@ -1,26 +1,26 @@
-Safety first
+Πρώτα η ασφάλεια
 ===========
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+**Όταν αποφασίζετε να δημιουργήσετε το δικό σας τεχνητό πάγκρεας, είναι πάντα σημαντικό να σκεφτείτε την ασφάλεια, και να κατανοήσετε τον αντίκτυπο όλων των ενεργειών σας**
 
 Γενικά
 ------------
 
-* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-* Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
-* Remember that, once paired, the phone can instruct the pump to do anything. Only use this phone for AndroidAPS and, if being used by a child, essential communications. Do not install unnecessary apps or games (!!!) which could introduce malware such as trojans, viruses, or bots that could interfere with your system.
-* Install all security updates provided by your phone manufacturer and Google.
-* You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
+* Το AndroidAPS είναι απλά ένα εργαλείο για να σας βοηθήσει να διαχειριστείτε το διαβήτη, δεν είναι ένα πλήρως αυτοματοποιημένο σύστημα που μπορείτε να εγκαταστήσετε και να το ξεχάσετε!
+* Μην υποθέσετε ότι το AndroidAPS ποτέ δεν θα κάνει λάθη. Αυτή η συσκευή αναλαμβάνει τον έλεγχο της χορήγησης ινσουλίνης: Παρακολουθήστε τη συνεχώς, κατανοήστε πώς λειτουργεί και μάθετε πώς να ερμηνεύετε τις ενέργειές της.
+* Να θυμάστε ότι, μόλις συνδεθεί, το τηλέφωνο μπορεί να δώσει εντολή στην αντλία να κάνει οτιδήποτε. Χρησιμοποιήστε μόνο αυτό το τηλέφωνο για το AndroidAPS και, εάν χρησιμοποιείται από ένα παιδί, να του μιλήσετε ώστε να προσέχει το κινητό. Μην εγκαταστήσετε περιττές εφαρμογές ή παιχνίδια (!!!) που θα μπορούσαν να εισάγουν κακόβουλο λογισμικό, όπως trojans, ιούς ή bots που θα μπορούσαν να παρεμβληθούν στο σύστημά σας.
+* Εγκαταστήστε όλες τις ενημερώσεις ασφαλείας που παρέχονται από τον κατασκευαστή του τηλεφώνου σας και το Google.
+* Μπορεί επίσης να χρειαστεί να αλλάξετε τις συνήθειες του διαβήτη καθώς αλλάζετε τη θεραπεία σας χρησιμοποιώντας ένα σύστημα κλειστού κυκλώματος. Π.χ. μερικοί άνθρωποι αναφέρουν ότι χρειάζονται λιγότερες θεραπείες υπογλυκαιμίας, καθώς το AndroidAPS έχει ήδη μειώσει την ινσουλίνη.  
    
 Επικοινωνία με SMS
 -----------------
 
-* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+* Το AndroidAPS σας επιτρέπει να ελέγχετε τηλεφωνικά ένα παιδικό τηλέφωνο μέσω μηνύματος κειμένου. Αν ενεργοποιήσετε αυτό την επικοινωνία με SMS, θυμηθείτε πάντα ότι το τηλέφωνο που έχει ρυθμιστεί για να δώσει απομακρυσμένες εντολές μπορεί να κλαπεί. Συνεπώς, πάντα να το προστατεύετε τουλάχιστον από ένα κωδικό PIN.
+* Το AndroidAPS θα σας ενημερώσει επίσης με μήνυμα κειμένου εάν έχουν πραγματοποιηθεί οι απομακρυσμένες εντολές σας, όπως μια αλλαγή bolus ή προφίλ. Συνιστάται να το ρυθμίσετε έτσι ώστε τα κείμενα επιβεβαίωσης να αποστέλλονται σε τουλάχιστον δύο διαφορετικούς αριθμούς τηλεφώνου σε περίπτωση κλοπής ενός από τα τηλέφωνα λήψης.
 
-.. note:: 
-   **IMPORTANT SAFETY NOTICE**
+.. σημείωση:: 
+   ** ΣΗΜΑΝΤΙΚΗ ΑΝΑΚΟΙΝΩΣΗ ΑΣΦΑΛΕΙΑΣ **
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+   Η ίδρυση των χαρακτηριστικών ασφάλειας του AndroidAPS που αναφέρονται σε αυτήν την τεκμηρίωση βασίζεται στα χαρακτηριστικά ασφαλείας του υλικού που χρησιμοποιείται για την κατασκευή του συστήματός σας. Είναι πολύ σημαντικό να χρησιμοποιείτε μόνο μια δοκιμασμένη, πλήρως λειτουργική FDA ή CE εγκεκριμένη αντλία ινσουλίνης και CGM για το κλείσιμο ενός αυτοματοποιημένου κυκλώματος δοσολογίας ινσουλίνης. Οι τροποποιήσεις υλικού ή λογισμικού σε αυτά τα εξαρτήματα μπορεί να προκαλέσουν απροσδόκητη δόση ινσουλίνης, προκαλώντας σημαντικό κίνδυνο για τον χρήστη. Αν βρείτε σπασμένες, τροποποιημένες ή αυτο-κατασκευαζόμενες αντλίες ινσουλίνης ή δέκτες CGM, * μην τις χρησιμοποιήσετε * για τη δημιουργία ενός συστήματος AndroidAPS.
 
-   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+   Επιπλέον, είναι εξίσου σημαντικό να χρησιμοποιείτε μόνο αυθεντικά προϊόντα όπως εισαγωγείς, κάνουλα και δοχεία ινσουλίνης εγκεκριμένα από τον κατασκευαστή για χρήση με την αντλία ή το CGM. Η χρήση μη δοκιμασμένων ή τροποποιημένων αναλωσίμων μπορεί να προκαλέσει ανακρίβεια CGM και σφάλματα δοσολογίας ινσουλίνης. Η ινσουλίνη είναι εξαιρετικά επικίνδυνη όταν δίνετε σε λάθος δοσολογία - παρακαλώ μην παίζετε με τη ζωή σας με μη εγκεκριμένες προμήθειες.

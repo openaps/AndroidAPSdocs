@@ -46,7 +46,23 @@ kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi 
 
 Poradce při potížích s G6
 ====================
+Dexcom G6 specific troubleshooting
+----
+* Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip version from May 2019 or a newer nightly build.
+* Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
+* Wait at least 15 min. between stopping and starting a sensor.
+* Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
+* Do not enable "restart sensors" while setting a new sensor
+* Only start new sensor if the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
 
+  * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+  * Transmitter serial starting with 8G: "Got glucose hh:mm" (i.e. "Got glucose 19:04")
+
+.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
+  :alt: xDrip PhoneServiceState
+
+General troubleshoothing
+----
 Základní informace o řešení problémů s CGM najdete `zde <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
 Nový vysílač se spuštěným senzorem

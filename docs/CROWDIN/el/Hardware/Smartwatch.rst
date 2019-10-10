@@ -1,13 +1,13 @@
 Smartwatches
 *************
 
-Smartwatches are optional, but very useful for some users.
-More details are here:
+Smartwatches είναι προαιρετικά, αλλά πολύ χρήσιμα για ορισμένους χρήστες.
+Περισσότερες λεπτομέρειες εδώ:
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   list of tested phones and smartwatches <../Getting-Started/Phones.md>
+   λίστα με δοκιμασμένα τηλέφωνα και smartwatches <../Getting-Started/Phones.md>
    watchfaces  <../Configuration/Watchfaces.md>

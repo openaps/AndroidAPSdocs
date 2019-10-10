@@ -18,7 +18,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 * Tippe auf `Extra Options`.
 * Deaktiviere `Upload treatments` und `Back-fill data`.
-* Die Option `Alert on failures` sollte ebenfalls deaktiviert sein. Andernfalls erhälst Du alle 5 Minuten einen Alarm, falls das WLAN / Mobilfunknetz zu schlecht oder der Server nicht verfügbar ist.
+* Die Option `Alert on failures` sollte ebenfalls deaktiviert sein. Andernfalls erhältst Du alle 5 Minuten einen Alarm, falls das WLAN / Mobilfunknetz zu schlecht oder der Server nicht verfügbar ist.
    
    ![xDrip+ Grundeinstellungen 1](../images/xDrip_Basic1.png)
    
@@ -26,14 +26,14 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 * **InterApp-Einstellungen** (Broadcast) Wenn Du planst, AndroidAPS zu nutzen und die Daten an AndroidAPS weiterzugeben, musst Du den sogenannten 'Broadcast' in xDrip+ in den Inter-App Einstellungen einschalten.
 
-* Damit die Werte überseinstimmen, solltest Du `Sende den angezeigten Glukosewert` aktivieren.
+* Damit die Werte übereinstimmen, solltest Du `Sende den angezeigten Glukosewert` aktivieren.
 * Wenn Du zusätzlich `Behandlungen annehmen` und in AndroidAPS den Brodcast aktivierst, dann wird xDrip+ Insulinmengen, Kohlenhydrate und Basalrateninformationen aus AndroidAPS erhalten und kann so z.B. niedrige Werte vorhersagen. 
    
    ![xDrip+ Grundeinstellungen 3](../images/xDrip_Basic3.png)
 
 ### Identifiziere Empfänger
 
-* Bei einigen Anwendern kam es zu Problemen im Flugmodus. AAPS empfing keine BZ-Werte con xdrip+. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+* Bei einigen Anwendern kam es zu Problemen im Flugmodus. AAPS empfing keine BZ-Werte von xDrip+. Gehe zu Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gebe `info.nightscout.androidaps` ein.
    
    ![xDrip+ Basic Inter-App Einstellungen Identifiziere Empfänger](../images/xDrip_InterApp_NS.png)
 
@@ -63,9 +63,9 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### Preemptive restarts werden nicht empfohlen
 
-**Falls die Seriennummer Deines Dexcom G6 transmitters mit 8G beginnt können reemptive restarts nicht genutzt werden und ggf. sogar den Sensor unbenutztbar machen!**
+**Falls die Seriennummer Deines Dexcom G6 Transmitters mit 8G beginnt können preemptive restarts nicht genutzt werden und ggf. sogar den Sensor unbenutzbar machen!**
 
-Die automatische Verlängerung von Dexcom G6 Sensoren (`preemtive restarts`) werden nicht empfohlen, da dies zu Sprüngen in den BZ-Werten nach dem eustart am 9. Tag führen kann.
+Die automatische Verlängerung von Dexcom G6 Sensoren (`preemptive restarts`) werden nicht empfohlen, da dies zu Sprüngen in den BZ-Werten nach dem Neustart am 9. Tag führen kann.
 
 ![xDrip+ Sprünge nach Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
@@ -124,7 +124,10 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Der Batteriestatus kann im Systemstatus (Hamburgermenü links oben auf dem Startbildschirm) überwacht werden.
 * Wische nach links, um den zweiten Status-Bildschirm zu sehen.![xDrip+ Erster Transmitter](../images/xDrip_Dexcom_Battery.png)
 
-* Die genauen Werte, nach denen der Transmitter aufgrund niedrigem Batteriestand ausfällt, sind nicht bekannt. Die folgenden Informationen wurden von einem User gepostet, nachdem sich der Transmitter abgeschaltet hatte: Transmitter days: 151 Voltage A: 297 Voltage B: 260 Resistance: 2391
+* Die genauen Werte, nach denen der Transmitter aufgrund niedrigem Batteriestand ausfällt, sind nicht bekannt. Die folgende Informationen wurde online gepostet, nachdem der Transmitter die Arbeit endgültig eingestellt hatte:
+   
+   * Posting 1: Laufzeit: 151 Tage / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
+   * Posting 2: Laufzeit: 249 Tage / Voltage A: 275 (bei Auftritt des Fehlers)
 
 ### Transmitterlaufzeit verlängern
 
@@ -141,7 +144,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Benutze den Sprachbefehl: “hard reset transmitter”
 * Beim nächsten Dateneingang vom Transmitter wird der Reset durchgeführt.
 * Beobachte im Systemstatus (Hamburgermenü links oben -> Systemstatus) was passiert.
-* Wenn aud dem zweiten Statusbildschirm der Hinweis "Phone Service State: Hard Reset maybe failed" angezeigt wird, kannst Du trotzdem einfach den Sensor starten. Danach sollte diese Meldung verschwinden.
+* Wenn auf dem zweiten Statusbildschirm der Hinweis "Phone Service State: Hard Reset maybe failed" angezeigt wird, kannst Du trotzdem einfach den Sensor starten. Danach sollte diese Meldung verschwinden.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
@@ -179,7 +182,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Benutze den Source Wizard Button. Damit wird sicher gestellt, dass Du die Standardeinstellungen inkl. OB1 & Native Mode verwendest. 
    * Du wirst durch die Grundeinstellungen geführt.
    * Wenn Du den Transmitter zum ersten Mal verbindest, benötigst Du die Transmitter-Seriennummer.
-* Gib die Seriennnummer des neuen Transmitters ein. Achte darauf, 0 (Null) und O (Großbuchstabe o) korrekt auseinander zu halten.
+* Gib die Seriennummer des neuen Transmitters ein. Achte darauf, 0 (Null) und O (Großbuchstabe o) korrekt auseinander zu halten.
 * Setze den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
 * Klicke den Transmitter in die Halterung auf dem Sensorpflaster ein.
 * Starte den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
@@ -227,7 +230,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Gib die Zeit an, zu der der Sensor gesetzt wurde
    
    * Um den G6 im "native mode" zu nutzen, musst Du die 2-Stunden-Aufwärmzeit abwarten.
-   * Wenn Du den xDrip+ Algorithmus verwendest, kannst Du eine Setzzeit von mehr als zwei Stunden in der Vergangenheit setzen, um die Aufwärmphase zu umgehen. Die angeziegten Werte können dann aber recht fehlerhaft sein. Deshalb wird dies nicht empfohlen.
+   * Wenn Du den xDrip+ Algorithmus verwendest, kannst Du eine Setzzeit von mehr als zwei Stunden in der Vergangenheit setzen, um die Aufwärmphase zu umgehen. Die angezeigten Werte können dann aber recht fehlerhaft sein. Deshalb wird dies nicht empfohlen.
 * Gib den Sensorcode ein. Diesen findest Du auf der Abdeckfolie des Sensorpflasters. 
    * Bewahre diesen Code für künftige Nutzung auf (z.B. für einen Neustart nach Tausch des Transmitters).
    * Der Code ist auch in den [xDrip+ Logs](../Configuration/xdrip#retrieve-sensor-code) zu finden: Klicke auf das 3-Punkte-Menü rechts oben auf dem xDrip+ Startbildschirm und wähle `Log anzeigen`.
@@ -264,6 +267,8 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Warte etwa 5 Minuten bis der Transmitter wieder automatisch verbunden wird.
 
 ### Probleme beim Starten eines neuen Sensors
+
+Bitte beachte, dass die folgende Methode evtl. nicht funktioniert, wenn die Seriennummer Deines Transmitters mit 8G... startet 
 
 * Im 'native mode' wird der Sensor als "FAILED: Sensor Failed Start" gekennzeichnet.
 * Sensor stoppen

@@ -124,7 +124,10 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 * Battery status can be controlled in system status (Hamburger menu top left on homescreen)
 * Swipe left once to see second screen. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”: Transmitter days: 151 Voltage A: 297 Voltage B: 260 Resistance: 2391
+* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”:
+   
+   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
+   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
 
 ### Extend transmitter life
 
@@ -265,6 +268,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 
 ### Problem when starting new sensor
 
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. začíná znaky 8G...
+
 * Native sensor is marked as "FAILED: Sensor Failed Start"
 * Zastavte senzor
 * Restart your phone
@@ -273,7 +278,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 * Zastavte senzor
 * Start sensor with "real" code (printed on the adhesive protector)
 
-V log souborech v xDrip+ ověřte, že xDrip+ začne počítat "Trvání: 1 minuta" (a tak dále). Pouze v log protokolech v xdrip+ můžete v úvodní fázi zjistit, zda xdrip+ zastavil senzor. Pozdější stav není v dolní části hlavní obrazovky vždy zobrazen správně.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ a Freestyle Libre
 
@@ -295,8 +300,8 @@ V log souborech v xDrip+ ověřte, že xDrip+ začne počítat "Trvání: 1 minu
 
 ### Connect Libre Transmitter & start sensor
 
-![xDrip+ Spustit vysílač a senzor Libre 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Spustit vysílač a senzor Libre 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Spustit vysílač a senzor Libre 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)

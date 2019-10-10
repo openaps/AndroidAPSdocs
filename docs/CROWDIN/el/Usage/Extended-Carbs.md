@@ -1,31 +1,31 @@
-# Extended carbs / "eCarbs"
+# Εκτεταμένοι υδατάνθρακες / "eCarbs"
 
-With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. The need to deal with such meals still exists though. Which is why AndroidAPS as of version 2.0 supports so called extended carbs or eCarbs.
+Με μια τακτική θεραπεία αντλίας, τα εκτεταμένα bolus είναι ένας καλός τρόπος αντιμετώπισης λιπαρών ή άλλως αργά απορροφούμενων γευμάτων που αυξάνουν τη γλυκόζη του αίματος για εκτεταμένη διάρκεια περισσότερο από την διάρκεια ζωής της ινσουλίνη στον οργανισμό. Σε ένα πλαίσιο κυκλώματος, ωστόσο, τα εκτεταμένα bolus δεν έχουν τόσο νόημα (και δημιουργούν τεχνικές δυσκολίες), επειδή είναι βασικά ένας σταθερός υψηλός προσωρινός βασικός ρυθμός, το οποίο αντίκειται στον τρόπο λειτουργίας του κυκλώματος, ο οποίος ρυθμίζει δυναμικά το βασικό ρυθμό. Ωστόσο, η ανάγκη αντιμετώπισης τέτοιων γευμάτων εξακολουθεί να υπάρχει. Για το λόγο αυτό το AndroidAPS από την έκδοση 2.0 υποστηρίζει τους λεγόμενους εκτεταμένους υδατάνθρακες ή eCarbs.
 
-eCarbs are carbs that are spilt up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery. But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
+τα eCarbs είναι υδατάνθρακες που διασπούντε σε αρκετές ώρες. Για τα συνηθισμένα γεύματα με περισσότερους υδατάνθρακες από ότι λίπος / πρωτεΐνη, η εισαγωγή των υδατανθράκων από πριν (και η μείωση του αρχικού bolus, αν χρειαστεί) είναι συνήθως αρκετή για να αποτρέψει την πρόωρη χορήγηση ινσουλίνης. Αλλά για βραδέως απορροφησήμα γεύματα, όπου η πλήρης εισαγωγή υδατανθράκων από πριν οδηγεί σε υπερβολικά μεγάλο IOB από SMB, τα eCarbs μπορούν να χρησιμοποιηθούν για να προσομοιώσουν με μεγαλύτερη ακρίβεια πώς οι υδατάνθρακες (και τα ισοδύναμα υδατανθράκων που εισάγετε για άλλα μακροθρεπτικά συστατικά) απορροφώνται και επηρεάζουν τη γλυκόζη του αίματος. Με αυτές τις πληροφορίες, το κύκλωμα μπορεί να διαχειριστεί τις SMBs πιο σταδιακά για να αντιμετωπίσει αυτούς τους υδατάνθρακες, πράγμα που μπορεί να θεωρηθεί ως ένα δυναμικό εκτεταμένο bolus (αυτό θα πρέπει επίσης να λειτουργεί χωρίς SMBs, αλλά είναι πιθανώς λιγότερο αποτελεσματικό).
 
-eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+τα eCarbs δεν περιορίζονται σε βαριά γεύματα λιπαρών / πρωτεϊνών: μπορούν επίσης να χρησιμοποιηθούν για να βοηθήσουν σε οποιαδήποτε κατάσταση όπου υπάρχουν επιρροές που αυξάνουν το σάκχαρο του αίματος, π.χ. άλλα φάρμακα όπως τα κορτικοστεροειδή.
 
-To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
+Για να εισαγάγετε eCarbs, ορίστε μια διαδρομή στο παράθυρο διαλόγου * Carbs * στην καρτέλα "Επισκόπηση", στο σύνολο των υδατανθράκων και προαιρετικά σε μια χρονική μετατόπιση:
 
 <img src="https://1.bp.blogspot.com/-gnWKSBIBO2g/WuTPV0Rya3I/AAAAAAAAAEg/BvqiZYrsuKcgbny5t1sHWlPS6feWq-xEwCLcBGAs/s1600/Screenshot_20180427-144305.png" width=400>
 
-The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
+Τα eCarbs στην καρτέλα "Επισκόπηση", σημειώστε τους υδατάνθρακες σε παρένθεση στο πεδίο COB, στο οποίο εμφανίζονται οι υδατάνθρακες στο μέλλον:
 
 <img src="https://4.bp.blogspot.com/-sgc9XdUeaoQ/WuTPXxfaIuI/AAAAAAAAAEk/p7toa_aq_oIWWTnzoQFUPHt4JdPkaXrwwCLcBGAs/s1600/Screenshot_20180427-144324.png" width=400>
 
-Carb entries which are in the future are coloured in dark orange on the treatment tab:
+Οι καταχωρίσεις υδατανθράκων που στο μέλλον θα είναι χρωματισμένες σε σκούρο πορτοκαλί στην καρτέλα θεραπείας:
 
 <img src="https://user-images.githubusercontent.com/1732305/38613978-e6d1748e-3d8b-11e8-9d62-154fe73443da.png" width=400>
 
 * * *
 
-A way to handle fat and protein with that feature is described here: https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html
+Ένας τρόπος αντιμετώπισης του λίπους και των πρωτεϊνών με αυτό το χαρακτηριστικό περιγράφεται εδώ: https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html
 
 * * *
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+Η συνιστώμενη ρύθμιση είναι να χρησιμοποιήσετε την προσθήκη OpenAPS SMB APS, με ενεργοποιημένες τις SMB καθώς και την ενεργοποίηση της προτιμήσεως * Ενεργοποίηση SMB με COB *.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above).
+Ένα σενάριο π.χ. για μια Pizza μπορείτε να δώσετε ένα (μερικό) bolus από πριν μέσω του υπολογιστή * * και στη συνέχεια να χρησιμοποιήσετε το κουμπί * υδατάνθρακες * για να εισάγετε τους υπόλοιπους υδατάνθρακες για διάρκεια 4-6 ωρών, ξεκινώντας μετά από 1 ή 2 ώρες. Θα πρέπει να δοκιμάσετε και να δείτε ποιες συγκεκριμένες αξίες λειτουργούν φυσικά για εσάς. Ίσως επίσης να προσαρμόσετε προσεκτικά τις ρυθμίσεις * μέγιστων λεπτών του βασικού ρυθμού για να περιορίσετε το SMB σε * για να κάνετε τον αλγόριθμο περισσότερο ή λιγότερο επιθετικό. Με γεύματα χαμηλών υδατανθράκων, υψηλών λιπαρών / πρωτεϊνών μπορεί να αρκεί να χρησιμοποιείτε μόνο τα eCarbs χωρίς χειροκίνητα bolus (βλ. Την ανάρτηση του ιστολογίου παραπάνω).
 
-When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+Όταν δημιουργούνται τα eCarbs, δημιουργείται επίσης μια Σημείωση Careport για την τεκμηρίωση όλων των εισροών, για να διευκολυνθεί η επανάληψη και η βελτίωση των εισροών.

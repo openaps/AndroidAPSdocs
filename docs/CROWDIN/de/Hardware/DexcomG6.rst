@@ -45,7 +45,23 @@ G6 mit der gepatchten Dexcom App
 
 Problembehandlung G6
 ====================
+Dexcom G6-spezifische Problembehandlung
+----
+* Transmitter, deren Seriennummer mit 80 oder 81 beginnt benötigen mind. die letzte Masterversion vom Mai 2019 oder einen neueren nightly build.
+* Transmitter, deren Seriennummer mit 8G beginnt benötigen mind. die nightly build vom 25. Juli 2019 oder ein neueres nightly build.
+* Warte mindestens 15 Minuten zwischen dem Stoppen und Starten des Sensors.
+* Datiere die Einsetzzeit nicht zurück. Beantworte daher die Frage, ob Du den Sensor heute eingesetzt hast, immer mit Ja.
+* Beim Starten eines Sensors darf "restart sensors" nicht aktiviert sein.
+* Starte den neuen Sensor nur wenn eine der folgenden Informationen auf der  Classic Status Page -> G5/G6 status -> PhoneServiceState angezeigt wird:
 
+  * Transmitter Seriennummer beginnt mit 80 oder 81: "Got data hh:mm" (z.B. "Got data 19:04")
+  * Transmitter Seriennummer beginnt mit 8G : "Got glucose hh:mm" (z.B. "Got glucose 19:04")
+
+.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
+  :alt: xDrip PhoneServiceState
+
+Allgemeine Problembehandlung
+----
 Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du `hier <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
 Neuer Transmitter bei laufendem Sensor
