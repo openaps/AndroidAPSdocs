@@ -1,6 +1,6 @@
 # Εξομάλυνση των δεδομένων γλυκόζης στο αίμα
 
-Το AAPS λειτουργεί καλύτερα όταν τα δεδομένα γλυκόζης αίματος που λαμβάνει είναι ομαλά και συνεπή. Ορισμένες λειτουργίες όπως "Ενεργοποίηση SMB πάντα " και "Ενεργοποίηση SMB μετά από υδατάνθρακες" μπορούν να χρησιμοποιηθούν μόνο με μια ωραία φιλτραρισμένη πηγή BG.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Εφαρμογή Dexcom G5 (patched)
 
