@@ -1,6 +1,6 @@
 # Filteren van bloed glucose waardes
 
-AAPS werkt het beste wanneer de bloedglucose-gegevens vloeiend en consistent zijn. Afhankelijk van de BG bron die je gebruikt, wordt 'ruis' uit de ruwe waardes gefilterd. Met 'ruis' wordt bedoeld dat jouw glucosegrafiek eruit ziet als een schot hagel. Jouw glucosewaardes zijn dan niet betrouwbaar genoeg om bepaalde AAPS functies te gebruiken. Deze functies, zoals 'Activeer SMB altijd' en 'Gebruik SMB met koolhydraten' kunnen alleen worden gebruikt wanneer je een goed gefilterde BG bron hebt.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Aangepaste Dexcom G5/G6 app
 
