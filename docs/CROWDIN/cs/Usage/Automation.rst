@@ -6,7 +6,7 @@ Co je automatizace
 ===================
 Může se stát, že pro tytéž často se opakující události budete měnit tatáž nastavení. Chcete-li se vyhnout nadbytečným úkonům, můžete se pokusit tyto události zautomatizovat, pokud je dokážete dostatečně jasně specifikovat. Např. když je glykémie příliš nízká, můžete si nechat automaticky nastavit vyšší dočasný cíl. Nebo když se budete nacházet ve fitness centru, automaticky se nastaví dočasný cíl. Dříve než použijete Automatizaci, měli byste ovládat ruční nastavování dočasných cílů <./temptarget.html>`_ nebo přepínání profilu. 
 
-.. image:: ../images/Automation_ConditionAction.png
+.. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Automatizace – podmínka + akce
 
 Jak to používat
