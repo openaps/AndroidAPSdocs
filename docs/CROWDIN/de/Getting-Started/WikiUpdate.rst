@@ -1,5 +1,10 @@
 Wiki Updates & Änderungen
 **********************
+Oktober 2019
+===============
+* `Dexcom G6-spezifische Problembehandlung <../Hardware/DexcomG6.html#dexcom-g6-spezifische-problembehandlung>`_
+* `Problembehandlung SMS Befehle <../Usage/SMS-Commands.html#problembehandlung>`_
+
 September 2019
 ===============
 * `Automate <../Usage/Automation.html>`_

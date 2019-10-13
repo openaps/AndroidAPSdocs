@@ -1,5 +1,10 @@
 Aktualizace a změny Wiki
 **********************
+October 2019
+===============
+* `Dexcom G6 specific troubleshooting <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
+* `Troubleshooting SMS Commands <../Usage/SMS-Commands.html#troubleshooting>`_
+
 září 2019
 ===============
 * `Automatizace <../Usage/Automation.html>`_
