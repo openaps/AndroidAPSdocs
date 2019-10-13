@@ -1,5 +1,10 @@
 Обновления и изменения документации Wiki
 **********************
+October 2019
+===============
+* `Dexcom G6 specific troubleshooting <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
+* `Troubleshooting SMS Commands <../Usage/SMS-Commands.html#troubleshooting>`_
+
 Сентябрь 2019 года
 ===============
 * ` Автоматизация <../Usage/Automation.html> ` _
