@@ -1,9 +1,9 @@
 Wiki Updates & Änderungen
 **********************
-October 2019
+Oktober 2019
 ===============
-* `Dexcom G6 specific troubleshooting <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
-* `Troubleshooting SMS Commands <../Usage/SMS-Commands.html#troubleshooting>`_
+* `Dexcom G6-spezifische Problembehandlung <../Hardware/DexcomG6.html#dexcom-g6-spezifische-problembehandlung>`_
+* `Problembehandlung SMS Befehle <../Usage/SMS-Commands.html#problembehandlung>`_
 
 September 2019
 ===============
