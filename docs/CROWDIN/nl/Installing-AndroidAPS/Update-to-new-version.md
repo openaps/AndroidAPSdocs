@@ -1,6 +1,12 @@
 # Bijwerken naar een nieuwe versie
 
-<font color="#FF0000"><b>Belangrijk: Vanaf versie 2.3 moet je git gebruiken om te updaten. Updating via zip file does not work anymore.</font></b>.
+## Build yourself instead of download
+
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+
+## Important notes
+
+<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>.
 
 ***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
 
@@ -32,13 +38,13 @@
 * Voor meer informatie over het installeren van git zie de [officiële git documentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
 
-## Bijwerken van jouw lokale kopie
+## Update your local copy
 
 * Zorg dat je in het hoofdscherm van Android Studio bent. Klik op VCS > Git > Fetch
   
   ![Android Studio - GIT - Ophalen](../images/Update_Fetch.png)
 
-## Selecteer branch
+## Selecting branch
 
 * Als je de branch wilt wijzigen, selecteer dan een andere branch uit het menu rechtsonder: "master" (de meest actuele, stabiele versie) of een andere versie (zie verderop).
   
@@ -49,7 +55,7 @@ and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not ava
      ![](../images/UpdateAAPS2.png)
     
 
-## Bijwerken vd branch vanuit Github
+## Updating branch from Github
 
 * Druk op Ctrl+T, selecteer Merge method en druk op OK
   
@@ -59,10 +65,10 @@ On the tray you'll see green message about updated project
 
 ## Bouwen van de ondertekende APK
 
-<!--- Text is maintained in page building-apk.md ---> Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In oudere versies selecteerde je in het menu "Build" en vervolgens "Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md ---> Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
   
-Ondertekenen betekent dat je de door jou gemaakte app ondertekent. Dit is een soort digitale vingerafdruk in de app zelf. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -121,7 +127,7 @@ De laatste stap is om op het APK bestand te tikken en de app te installeren. Als
 
 Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met het instellen van AndroidAPS.
 
-## Controleer AAPS versie op telefoon
+## Check AAPS version on phone
 
 You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
@@ -166,7 +172,7 @@ If you receive failure message like
 
 * Plak gekopieerde tekst en druk op return ![GIT checkout succes](../images/GIT_TerminalCheckOut2.jpg)
 
-## App niet geïnstalleerd
+## App not installed
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
@@ -179,11 +185,11 @@ If you receive failure message like
   5. [Importeer instellingen](../Usage/Objectives#export-import-settings)
   6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
 
-## App geïnstalleerd maar oude versie
+## App installed but old version
 
 If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
-## Geen van de bovengenoemde
+## None of the above worked
 
 If non of the above tips helped you might consider building the app from scratch:
 
@@ -198,7 +204,7 @@ If non of the above tips helped you might consider building the app from scratch
 4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
 5. [Importeer instellingen](../Usage/Objectives#export-import-settings)
 
-## In het ergste geval
+## Worst case scenario
 
 In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
