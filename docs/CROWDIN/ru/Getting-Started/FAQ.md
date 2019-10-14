@@ -210,17 +210,17 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ### Почему AndroidAPS выдает сообщение: 'Источник ГК не поддерживает расширенную фильтрацию'?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Если вы используете иной источник данных ГК чем Dexcom G5 или G6 в нативном режиме xDrip, вы получите это уведомление на вкладке OpenAPS. Для более подробной информации см [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ## Помпа
 
 ### Где поместить помпу?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
+Есть многочисленные возможности размещения помпы. Неважно, вы пользуетесь приложениями ИПЖ или нет. Если вы предпочитаете беспроводные помпы, а у вас Dana для AAPS, попробуйте тридцатисантиметровый катетер с оригинальным поясом для помпы.
 
 ### Батареи
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+Работа в замкнутом цикле быстрее расходует батарею поскольку система больше взаимодействует по блутусу чем обычная помпа в ручном режиме. Лучше менять батарею на 25% так как после этого связь становится труднее. Можно настроить предупредительные сигналы батареи помпы через переменную PUMP_WARN_BATT_P на сайте Nightscout. Способы увеличить срок жизни батареи включают:
 
 * уменьшить длительность работы экрана LCD (в меню настроек помпы)
 * уменьшить длительность работы подсветки (в меню настроек помпы)
@@ -233,17 +233,17 @@ Looping can reduce the pump battery faster than normal use because the system in
 
 ### Замена картриджей и катетеров
 
-The change of cartridge cannot be done via AndroidAPS, but must be carried out as before directly via the pump.
+Замена картриджей не может осуществляться через AndroidAPS, ее следует производить как и раньше, непосредственно через помпу.
 
 * Нажмите и удерживайте кнопку "Открытый цикл"/"Замкнутый цикл" на вкладке "Главный экран" AndroidAAPS и выберите "Приостановка цикла на 1ч'
 * Отключите помпу и замените картридж в соответствии с инструкцией помпы.
 * После переподключения помпы запустите цикл долгим нажатием на 'Приостановлено (X мин.)'.
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+Однако замена канюли происходит не через функцию "первичного заполнения инфузионного набора", но заполняет набор и канюлю с помощью болюса, который не отражается в истории болюсов. Это означает, что текущая временная скорость базала не прерывается. На вкладке Действия при помощи кнопки ЗАПОЛНИТЬ задайте то количество инсулина, которое необходимого для заполнения инфузионного набора и начните первичное заполнение. Если этого количества не достаточно, повторите заполнение. Вы можете установить кнопки по умолчанию в Настройках > Другое > Заполнить/Инициировать стандартные количества инсулина. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
 
 ## Фоновый рисунок
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+Обои AndroidAPS можно найти для телефона на странице [ Телефоны ](../Getting-Started/Phones#phone-background).
 
 ## Повседневное применение
 
@@ -251,9 +251,9 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 #### Что делать при приеме душа или ванной?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
+Вы можете снять помпу при приеме душа или ванной. На этот короткий период времени она вам, как правило, не понадобится. Но следует проинформировать об этом AAPS чтобы расчеты активного инсулина IOB были правильными.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
 
 ### На работе
 
@@ -267,7 +267,7 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 
 You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+См. [ описание выше ](../Getting-Started/FAQ#disconnect-pump).
 
 ### Употребление алкоголя
 
