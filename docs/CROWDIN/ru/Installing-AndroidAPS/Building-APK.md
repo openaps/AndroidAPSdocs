@@ -72,11 +72,11 @@ Cледующие снимки экрана были сделаны c Android St
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Нажмите "Далее" в диалоге "Подтвердить настройки".
 
 ![Screenshot 5](../images/Installation_Screenshot_05.png)
 
-The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
+Эмулятор Android (для эмуляции смартфона на Win или Mac) не используется при построении APK. Можно нажать кнопку "Готово", чтобы завершить установку и прочитать документацию позже по требованию.
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
