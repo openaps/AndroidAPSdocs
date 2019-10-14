@@ -55,12 +55,12 @@ Dexcom G6
 * Запускайте новый сенсор, если в Classic Status Page -> G5/G6 статус -> PhoneServicestate:
 
   * Серийный номер передатчика начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04")
-  * Transmitter serial starting with 8G: "Got glucose hh:mm" (i.e. "Got glucose 19:04")
+  * Серийный номер трансмиттера начинается с 8G: "Got glucose hh:mm" (напр. "Got glucose 19:04")
 
-.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
+.. image:../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshoothing
+Общее средство устранения неполадок
 ----
 Общее устранение неполадок мониторинга можно найти `здесь <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
