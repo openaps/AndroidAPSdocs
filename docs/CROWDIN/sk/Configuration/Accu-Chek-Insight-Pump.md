@@ -80,8 +80,8 @@ Po dobu, kým bola pumpa zastavená, AAPS zobrazí záznam s dočasnou bazálnou
 
 V AndroidAPS v záložke Accu-Check Insight sa zobrazuje aktuálny stav pumpy a 2 tlačidlá:
 
-* "Refresh": Refreshes pump status
-* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
+* "Aktualizovať": Opätovné načítanie stavu pumpy
+* "Aktivovať/Deaktivovať dočasný bazál prostredníctvom notifikácie": Štandardne pumpa Insight spúšťa zvukový signál, keď je TBR dokončený. This button lets you enable or disable this alarm without the need for configuration software.
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
