@@ -52,23 +52,23 @@
 
 ## Установите Android Studio
 
-The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
+Cледующие снимки экрана были сделаны c Android Studio версии 3.1.3. Экран может выглядеть несколько иначе в зависимости от используемой версии Android Studio. Но следует постараться найти свое решение установки. Помощь сообщества обеспечивается, например, в [AndroidAPS Facebook Группа](https://www.facebook.com/groups/1900195340201874/) и [в других местах](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Установите [ Android Studio ](https://developer.android.com/studio/install.html) и настройте при первом запуске.
 
-Select "Do not import settings" as you have not used it before.
+Выберите "Не импортировать настройки", так как вы не использовали их раньше.
 
 ![Снимок экрана 1](../images/Installation_Screenshot_01.png)
 
-Click "Next".
+Нажмите "Далее".
 
 ![Screenshot 2](../images/Installation_Screenshot_02.png)
 
-Select "Standard" installation and click "Next".
+Выберите "Стандартная" установка и нажмите "Далее".
 
 ![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Для интерфейса выберите тему, которая вам нравится. (В этом руководстве мы использовали тему"Intellij". Затем нажмите "Далее". Это просто цветовая схема. Можете выбрать любую (напр. Darcula для темного режима). Этот выбор не влияет на построение APK.
 
 ![Screenshot 4](../images/Installation_Screenshot_04.png)
 
