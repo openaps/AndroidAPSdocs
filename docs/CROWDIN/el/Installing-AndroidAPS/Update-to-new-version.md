@@ -1,8 +1,14 @@
 # Ενημερώστε σε μια νέα έκδοση ή κλάδο
 
-<font color="#FF0000"> <b> Σημαντική σημείωση: Από την έκδοση 2.3 πρέπει να χρησιμοποιήσετε το git για ενημέρωση. Η ενημέρωση μέσω του αρχείου zip δεν λειτουργεί πια. </font></b>.
+## Build yourself instead of download
 
-*** Σημείωση ***: Εάν θέλετε να ενημερώσετε το AndroidAPS 2.3, πρέπει να χρησιμοποιήσετε το [ Android Studio Version 3.4 ](https://developer.android.com/studio/archive?), δεν λειτουργεί με το τελευταίο.
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+
+## Σημαντικές σημειώσεις
+
+<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>.
+
+***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
 
 ## Εγκαταστήστε το git (αν δεν το έχετε)
 
@@ -32,37 +38,37 @@
 * Για λεπτομέρειες σχετικά με την εγκατάσταση του git, ανατρέξτε στην [επίσημη τεκμηρίωση git ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Αν εγκαταστήσετε το git μέσω του homebrew δεν χρειάζεται να αλλάξετε τις προτιμήσεις. Σε περίπτωση που: Μπορούν να βρεθούν εδώ: Android Studio - Προτιμήσεις.
 
-## Ενημερώστε το τοπικό σας αντίγραφο
+## Update your local copy
 
 * Κάντε κλικ στο: VCS-> Git-> Fetch
   
   ![Android Studio - GIT - Λήψη](../images/Update_Fetch.png)
 
-## Επιλογή κλάδου
+## Selecting branch
 
 * Εάν θέλετε να αλλάξετε υποκατάστημα, επιλέξτε άλλο κλάδο από το δίσκο: master (τελευταία έκδοση) ή άλλη έκδοση (δείτε παρακάτω)
   
   ![](../images/UpdateAAPS1.png)
 
-και στη συνέχεια κοιτάξτε (Μπορείτε να χρησιμοποιήσετε το 'Checkout as New Branch' εάν το 'Checkout' δεν είναι διαθέσιμο.)
+and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
      ![](../images/UpdateAAPS2.png)
     
 
-## Ενημέρωση κλάδου από το Github
+## Updating branch from Github
 
 * Πατήστε Ctrl + T, επιλέξτε τη μέθοδο συγχώνευσης και πατήστε OK
   
   ![](../images/merge.png)
 
-Στο δίσκο θα δείτε ένα πράσινο μήνυμα σχετικά με το ενημερωμένο έργο
+On the tray you'll see green message about updated project
 
 ## Δημιουργία υπογεγραμμένου APK
 
-<!--- Text is maintained in page building-apk.md ---> Στο μενού επιλέξτε "Δημιουργία" και, στη συνέχεια, "Δημιουργία υπογεγραμμένης δέσμης / APK...". (Το μενού στο Android Studio άλλαξε από τον Σεπτέμβριο του 2018. Σε παλαιότερες εκδόσεις επιλέξτε στο μενού "Κατασκευή" και, στη συνέχεια, "Δημιουργία υπογεγραμμένου APK...".) 
+<!--- Text is maintained in page building-apk.md ---> Στο μενού επιλέξτε "Δημιουργία" και, στη συνέχεια, "Δημιουργία υπογεγραμμένης δέσμης / APK...". (Το μενού στο Android Studio άλλαξε από τον Σεπτέμβριο του 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
   
-Η υπογραφή σημαίνει ότι υπογράφετε την εφαρμογή που δημιουργήσατε, αλλά με ψηφιακό τρόπο ως ένα είδος ψηφιακού δακτυλικού αποτυπώματος στην ίδια την εφαρμογή. Αυτό είναι απαραίτητο επειδή το Android έχει έναν κανόνα ότι δέχεται μόνο υπογεγραμμένο κώδικα για εκτέλεση για λόγους ασφαλείας. Για περισσότερες πληροφορίες σχετικά με αυτό το θέμα, ακολουθήστε τον σύνδεσμο [ εδώ ](https://developer.android.com/studio/publish/app-signing.html#generate-key) Η ασφάλεια είναι ένα βαθύ και πολύπλοκο θέμα και δεν το χρειάζεστε τώρα.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Αυτό είναι απαραίτητο επειδή το Android έχει έναν κανόνα ότι δέχεται μόνο υπογεγραμμένο κώδικα για εκτέλεση για λόγους ασφαλείας. Για περισσότερες πληροφορίες σχετικά με αυτό το θέμα, ακολουθήστε τον σύνδεσμο [ εδώ ](https://developer.android.com/studio/publish/app-signing.html#generate-key) Η ασφάλεια είναι ένα βαθύ και πολύπλοκο θέμα και δεν το χρειάζεστε τώρα.
 
 ![Στιγμιότυπο οθόνης 39α](../images/Installation_Screenshot_39a.PNG)
 
@@ -74,13 +80,13 @@
 
 ![Στιγμιότυπο οθόνης 40](../images/Installation_Screenshot_40.png)
 
-Εισαγάγετε τη διαδρομή αποθήκευσης κλειδιών, εισάγετε τον κωδικό πρόσβασης του αποθηκευτικού κέντρου, επιλέξτε το ψευδώνυμο και πληκτρολογήστε τον κωδικό πρόσβασης.
+Enter your key store path, enter key store password, select key alias and enter key password.
 
-Επιλέξτε 'Να θυμάται τους κωδικούς πρόσβασης'.
+Select 'Remember passwords'.
 
-Στη συνέχεια, κάντε κλικ στο κουμπί Next.
+Then click next.
 
-![Διαδρομή αποθήκευσης κλειδιών](../images/KeystorePathUpdate.PNG)
+![Key store path](../images/KeystorePathUpdate.PNG)
 
 Επιλέξτε "πλήρης" ως γεύση για την παραγόμενη εφαρμογή. Επιλέξτε V1 "Signature Jar" (V2 είναι προαιρετικό) και πατήστε "Τέλος". Οι ακόλουθες πληροφορίες μπορεί να είναι σημαντικές για μεταγενέστερη χρήση.
 
@@ -121,39 +127,39 @@
 
 Ναι, το πήρατε και τώρα μπορείτε να ξεκινήσετε με τη ρύθμιση του AndroidAPS για τη χρήση σας (CGMS, αντλία ινσουλίνης) κλπ.
 
-## Ελέγξτε την έκδοση AAPS στο τηλέφωνό σας
+## Check AAPS version on phone
 
-Μπορείτε να ελέγξετε την έκδοση AAPS στο τηλέφωνό σας κάνοντας κλικ στο μενού των τριών κουμπιών επάνω δεξιά και στη συνέχεια σχετικά με.
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![Η έκδοση AAPS έχει εγκατασταθεί](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 # Αντιμετώπιση προβλημάτων
 
-## Προειδοποίηση μεταγλωττιστή Kotlin
+## Kotlin compiler warning
 
-Αν η κατασκευή ολοκληρώθηκε με επιτυχία, αλλά έχετε προειδοποιήσεις μεταγλωττιστή Kotlin τότε απλώς αγνοήστε αυτές τις προειδοποιήσεις.
+If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
 
-Η εφαρμογή κατασκευάστηκε με επιτυχία και μπορεί να μεταφερθεί στο τηλέφωνο.
+App was build successfully and can be transferred to phone.
 
-![αγνοήστε την προειδοποίηση μεταγλωττιστή της Kotline](../images/GIT_WarningIgnore.PNG)
+![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
 
-## Δεν ήταν δυνατή η λήψη... / εργασία εκτός σύνδεσης
+## Could not download… / Offline Work
 
-Εάν λάβετε ένα μήνυμα αποτυχίας όπως αυτό
+If you get a failure message like this
 
-![Προειδοποίηση δεν ήταν δυνατή η λήψη](../images/GIT_Offline1.jpg)
+![Warning could not download](../images/GIT_Offline1.jpg)
 
-βεβαιωθείτε ότι η εργασία "εκτός σύνδεσης" είναι απενεργοποιημένη.
+make sure that ‘Offline work’ is disabled.
 
-Αρχείο -> Ρυθμίσεις
+File -> Settings
 
-![Ρυθμίσεις εκτός σύνδεσης](../images/GIT_Offline2.jpg)
+![Settings offline work](../images/GIT_Offline2.jpg)
 
-## Μη δεσμευμένες αλλαγές
+## Uncommitted changes
 
-Εάν λάβετε μήνυμα αποτυχίας όπως
+If you receive failure message like
 
-![Αποτυχία μη δεσμευμένων αλλαγών](../images/GIT_TerminalCheckOut0.PNG)
+![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Επιλογή 1
 
@@ -166,9 +172,9 @@
 
 * Επικολλήστε το κείμενο που αντιγράψατε και πατήστε επιστροφή ![Επιτυχία ελέγχου GIT](../images/GIT_TerminalCheckOut2.jpg)
 
-## Η εφαρμογή δεν έχει εγκατασταθεί
+## App not installed
 
-![ειδοποίηση εγκατάστασης εφαρμογής στο τηλεφώνο](../images/Update_AppNotInstalled.png)
+![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Βεβαιωθείτε ότι έχετε μεταφέρει το αρχείο "app-full-release.apk" στο τηλέφωνό σας.
 * Εάν στο τηλέφωνό σας εμφανίζεται "Δεν έχει εγκατασταθεί η εφαρμογή", ακολουθήστε αυτά τα βήματα: 
@@ -179,13 +185,13 @@
   5. [Ρυθμίσεις εισαγωγής](../Usage/Objectives#export-import-settings)
   6. Ενεργοποιήστε ξανά το bluetooth και απενεργοποιήστε τη λειτουργία του αεροπλάνου
 
-## Η εφαρμογή έχει εγκατασταθεί αλλά είναι παλαιά έκδοση
+## App installed but old version
 
-Εάν χτίσετε την εφαρμογή με επιτυχία, την μεταφέρατε στο τηλέφωνό σας και την εγκαταστήσατε με επιτυχία, αλλά ο αριθμός έκδοσης παραμένει ο ίδιος, τότε ίσως να μην έχετε περάσει το βήμα συγχώνευσης στο [ εγχειρίδιο ενημέρωσης ](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
-## Κανένα από τα παραπάνω δεν δούλεψε
+## None of the above worked
 
-Εάν δεν βοηθηθήκατε από τις παραπάνω συμβουλές, μπορείτε να εξετάσετε το ενδεχόμενο να δημιουργήσετε την εφαρμογή από την αρχή:
+If non of the above tips helped you might consider building the app from scratch:
 
 1. [ Εξαγωγή ρυθμίσεων ](../Usage/Objectives#export-import-settings) (σε έκδοση AAPS που είναι ήδη εγκατεστημένη στο τηλέφωνό σας)
 2. Έχετε έτοιμο τον κωδικό πρόσβασης σας και τον κωδικό αποθήκευσης κλειδιών. Σε περίπτωση που έχετε ξεχάσει κωδικούς πρόσβασης, μπορείτε να προσπαθήσετε να τους βρείτε σε αρχεία έργου όπως περιγράφεται [ εδώ ](https://youtu.be/nS3wxnLgZOo).
@@ -198,10 +204,10 @@
 4. Όταν έχετε δημιουργήσει το APK, διαγράψτε με επιτυχία την εξερχόμενη εφαρμογή στο τηλέφωνό σας, μεταφέρετε το νέο APK στο τηλέφωνό σας και εγκαταστήστε το.
 5. [Ρυθμίσεις εισαγωγής](../Usage/Objectives#export-import-settings)
 
-## Στη χειρότερη περίπτωση
+## Worst case scenario
 
-Σε περίπτωση που ακόμη και η οικοδόμηση της εφαρμογής από το μηδέν δεν λύσει το πρόβλημά σας ίσως να θέλετε να προσπαθήσετε να απεγκαταστήσετε πλήρως το Android Studio. Μερικοί χρήστες ανέφεραν ότι αυτό λύνει το πρόβλημά τους.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-Βεβαιωθείτε ότι έχετε καταργήσει την εγκατάσταση όλων των αρχείων που σχετίζονται με το Android Studio. Τα εγχειρίδια μπορούν να βρεθούν ηλεκτρονικά, δηλαδή [ https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 ](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
+Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Εγκαταστήστε το Android Studio από το μηδέν όπως περιγράφεται [ εδώ ](../Installing-AndroidAPS/Building-APK#install-android-studio) και ** μην ενημερώσετε το gradle **.
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
