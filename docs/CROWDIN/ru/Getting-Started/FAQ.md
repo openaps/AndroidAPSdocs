@@ -154,15 +154,15 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 В то же время, задание слишком высокой чувствительности ISF может привести к недостаточной коррекции, когда ГК останется выше цели, это особенно заметно за ночь.
 
-## Insulin to carb ratio (IC) (g/U)
+## Соотношение инсулин-углеводы (IC) (г/ед)
 
 ### Описание & тестирование
 
 Углеводы в граммах на каждую единицу инсулина.
 
-Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
+Некоторые пользователи также используют I:C в качестве сокращения вместо IC или говорят о коэффициенте углеводов (carb ratio, CR).
 
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
+Полагая, что база задана верно, можно проверить этот коэффициент, убедившись в отсутствии активного инсулина IOB при нормальной гликемии. Для этого надо съесть известную пищу с известным количеством углеводов и подав на нее расчетное количество инсулина, основываясь на текущем соотношении IC. Лучше всего есть пищу, которую вы обычно едите в это время дня и точно посчитать ее углеводы.
 
 ### Результат
 
