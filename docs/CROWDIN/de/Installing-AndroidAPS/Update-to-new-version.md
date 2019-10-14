@@ -1,8 +1,14 @@
 # Update auf eine neue Version oder branch
 
-<font color="#FF0000"><b>Wichtiger Hinweis: Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.</font></b>.
+## Build yourself instead of download
 
-***Wichtiger Hinweis***: Das Update auf AndroidAPS Version 2.3 kann nicht mit der letzten Version von Android Studio durchgeführt werden. Verwende bitte [Android Studio Version 3.4](https://developer.android.com/studio/archive?).
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+
+## Wichtige Hinweise
+
+<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>.
+
+***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
 
 ## Installiere git (falls du es noch nicht hast)
 
@@ -32,37 +38,37 @@
 * Details zur Installation von git findest Du in der [offiziellen git Dokumentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
 
-## Führe ein Update deiner lokalen Version durch
+## Update your local copy
 
 * Klicke: VCS->Git->Fetch
   
   ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
 
-## Branch auswählen
+## Selecting branch
 
 * Falls du “branch” wechseln willst, wähle eine andere “branch” vom Reiter: master (aktuellste, getestete Version), oder andere (siehe weiter unten).
   
   ![](../images/UpdateAAPS1.png)
 
-und anschließend "checkout". Verwende 'Checkout as New Branch' falls 'Checkout' nicht angezeigt wird.
+and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
      ![](../images/UpdateAAPS2.png)
     
 
-## Branch-Update von Github
+## Updating branch from Github
 
 * Drücke Strg+T, wähle Merge method und drücke OK
   
   ![](../images/merge.png)
 
-Auf dem Reiter siehst du eine grüne Nachricht “updated project”.
+On the tray you'll see green message about updated project
 
 ## Siginierte APK erstellen (Generate signed APK)
 
-<!--- Text is maintained in page building-apk.md ---> Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. Falls Du eine ältere Version benutzt, wähle im Menü “Build” und dann “Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md ---> Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
   
-Signieren bedeutet, dass du deine generierte Anwendung unterschreibst, aber digital als eine Art digitaler Fingerabdruck in der Anwendung selbst. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -74,11 +80,11 @@ Wähle “App” aus und klicke auf “Next”.
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Gib den Pfad zu Deinem key store und Dein key store Passwort ein. Wähle anschließend key alias und gib Dein key Passwort ein.
+Enter your key store path, enter key store password, select key alias and enter key password.
 
-Klicke 'Remember passwords' an.
+Select 'Remember passwords'.
 
-Klicke danach auf “Next”.
+Then click next.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
@@ -121,39 +127,39 @@ Der letzte Schritt ist es, auf die APK Datei zu klicken und die App zu installie
 
 Herzlichen Glückwunsch, du hast es geschafft! Nun kannst du AndroidAPS starten und einrichten.
 
-## AAPS-Version auf dem Smartphone überprüfen
+## Check AAPS version on phone
 
-Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um auf Deinem Smartphone die installierte AAPS-Version anzuzeigen.
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![Installierte AAPS version](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 # Problembehandlung
 
-## Kotlin Compiler Warnung
+## Kotlin compiler warning
 
-Wenn der Build erfolgreich abgeschlossen wurde, Du aber eine Warnung des 'Kotlin Compilers' erhälst, so kannst Du diese ignorieren.
+If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
 
-Die App wurde erfolgreich erstellt und kann auf das Smartphone übertragen werden.
+App was build successfully and can be transferred to phone.
 
-![ignoriere Kotline Compiler Warnung](../images/GIT_WarningIgnore.PNG)
+![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
 
 ## Could not download… / Offline Work
 
-Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
+If you get a failure message like this
 
 ![Warning could not download](../images/GIT_Offline1.jpg)
 
-stelle sicher, dass 'offline work' deaktiviert ist.
+make sure that ‘Offline work’ is disabled.
 
 File -> Settings
 
-![Einstellungen offline work](../images/GIT_Offline2.jpg)
+![Settings offline work](../images/GIT_Offline2.jpg)
 
 ## Uncommitted changes
 
-Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
+If you receive failure message like
 
-![Fehler uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Option 1
 
@@ -166,9 +172,9 @@ Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
 
 * Fügen den Text aus der Zwischenablage ein und drücke Return.![GIT checkout erfolgreich](../images/GIT_TerminalCheckOut2.jpg)
 
-## App not installed / Installation fehlgeschlagen
+## App not installed
 
-![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
+![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
 * Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor: 
@@ -179,13 +185,13 @@ Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
   5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
   6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
 
-## App installiert, aber weiter die alte Version auf dem Smartphone
+## App installed but old version
 
-Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich den Schritt 'Merge' in der [Update Anleitung](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github) übersprungen.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
-## Keiner der oben genannten Löungsvorschläge funktioniert
+## None of the above worked
 
-Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
+If non of the above tips helped you might consider building the app from scratch:
 
 1. [Exportiere die Einstellungen](../Usage/Objectives#export-import-settings) (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
 2. Halte Dein key password und key store password bereit. Falls Du diese vergessen haben solltest, kannst Du sie evtl. wie [hier](https://youtu.be/nS3wxnLgZOo) beschrieben herausfinden.
@@ -200,8 +206,8 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 
 ## Worst case scenario
 
-Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, könntest Du versuchen, Android Studio komplett neu zu installieren. Einige Benutzer berichteten, dass dies ihr Problem gelöst hat.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. Anleitungen dazu findest Du online z.B. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Installiere Android Studio von Grund auf wie [hier](../Installing-AndroidAPS/Building-APK#install-android-studio) beschrieben und **führe kein gradle update durch**.
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
