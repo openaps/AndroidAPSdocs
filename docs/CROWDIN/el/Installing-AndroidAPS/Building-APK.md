@@ -1,10 +1,14 @@
 # Δημιουργώντας την εφαρμογή APK
 
-* * *
+## Build yourself instead of download
 
-** Σημειώστε ότι ** Με την έκδοση 2.3 του AndroidAPS δεν είναι δυνατή η δημιουργία του APK με την τελευταία έκδοση του Android Studio. Χρησιμοποιήστε το Android Studio 3.4 από [ εδώ ](https://developer.android.com/studio/archive?).
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
 
-** Σημειώστε ** κατά την κατασκευή του AndroidAPS 2.0 apk: ** Η διαμόρφωση κατά παραγγελία ** δεν υποστηρίζεται από την τρέχουσα έκδοση του plugin Android Gradle!
+## ## Important notes
+
+**Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+
+**Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
 
@@ -22,7 +26,7 @@
 
 ## Μία γενική ιδέα
 
-Γενικά, τα απαραίτητα βήματα για τη δημιουργία του αρχείου APK:
+In general, the steps necessary to build the APK file:
 
 * Εγκαταστήστε το git
 * Εγκαταστήστε και ρυθμίστε το Android Studio.
@@ -31,9 +35,9 @@
 * Δημιουργήστε το υπογεγραμμένο APK.
 * Μεταφέρετε το υπογεγραμμένο APK στο smartphone σας.
 
-## Περιγραφή βήμα-βήμα
+## Step by step walkthrough
 
-Λεπτομερής περιγραφή των βημάτων που είναι απαραίτητα για τη δημιουργία του αρχείου APK.
+Detailed description of the steps necessary to build the APK file.
 
 ## Εγκαταστήστε το git (αν δεν το έχετε)
 
@@ -50,49 +54,49 @@
 * Χρησιμοποιήστε το homebrew για να εγκαταστήσετε το git: ```$ brew εγκατέστησε git```.
 * Για λεπτομέρειες σχετικά με την εγκατάσταση του git, ανατρέξτε στην [επίσημη τεκμηρίωση git ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-## Εγκατάσταση του Android Studio
+## Install Android Studio
 
-Τα παρακάτω στιγμιότυπα οθόνης έχουν ληφθεί από το Android Studio Version 3.1.3. Η οθόνη σας μπορεί να φαίνεται διαφορετική ανάλογα με την έκδοση του Android Studio που χρησιμοποιείτε. Αλλά θα πρέπει να μπορείτε να βρείτε το δρόμο σας. Βοήθεια από την κοινότητα παρέχεται, για παράδειγμα, στην ομάδα [ AndroidAPS Facebook ](https://www.facebook.com/groups/1900195340201874/) και σε [ άλλα μέρη ](../Where-To-Go-For-Help/Connect-with-other-users.md).
+The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-Εγκατάσταση [το Android Studio](https://developer.android.com/studio/install.html) και το πρόγραμμα εγκατάστασης κατά την πρώτη εκκίνηση.
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
-Επιλέξτε "Μην εισάγετε ρυθμίσεις", εάν δεν το έχετε χρησιμοποιήσει προηγουμένως.
+Select "Do not import settings" as you have not used it before.
 
-![Στιγμιότυπο οθόνης 1](../images/Installation_Screenshot_01.png)
+![Screenshot 1](../images/Installation_Screenshot_01.png)
 
-Πατήστε "Επόμενο".
+Click "Next".
 
-![Στιγμιότυπο οθόνης 2](../images/Installation_Screenshot_02.png)
+![Screenshot 2](../images/Installation_Screenshot_02.png)
 
-Επιλέξτε την "βασική" εγκατάσταση και κάντε κλικ στο "Επόμενο".
+Select "Standard" installation and click "Next".
 
-![Στιγμιότυπο οθόνης 3](../images/Installation_Screenshot_03.png)
+![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Επιλέξτε το θέμα για τη διεπαφή χρήστη που σας αρέσει. (Σε αυτό το εγχειρίδιο χρησιμοποιήσαμε το "Intellij". Στη συνέχεια, κάντε κλικ στο κουμπί "Επόμενο". Αυτό είναι μόνο το χρωματικό σχέδιο. Μπορείτε να επιλέξετε όποιο θέλετε (δηλ. "Darcula" για σκοτεινή λειτουργία). Αυτή η επιλογή δεν επηρεάζει τη δημιουργία του APK.
+Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
-![Στιγμιότυπο οθόνης 4](../images/Installation_Screenshot_04.png)
+![Screenshot 4](../images/Installation_Screenshot_04.png)
 
-Κάντε κλικ στο κουμπί "Επόμενο" στο παράθυρο διαλόγου "Επαλήθευση ρυθμίσεων".
+Click "Next" on the "Verify Settings" dialog.
 
-![Στιγμιότυπο οθόνης 5](../images/Installation_Screenshot_05.png)
+![Screenshot 5](../images/Installation_Screenshot_05.png)
 
-Ο εξομοιωτής Android (για να μιμηθεί το smartphone στον υπολογιστή σας ή το Mac) δεν χρησιμοποιείται για την κατασκευή του APK. Μπορείτε να κάνετε κλικ στο "Finish" για να ολοκληρώσετε την εγκατάσταση και να διαβάσετε αργότερα την τεκμηρίωση κατόπιν αιτήματος.
+The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
 
-![Στιγμιότυπο οθόνης 6](../images/Installation_Screenshot_06.png)
+![Screenshot 6](../images/Installation_Screenshot_06.png)
 
-Το Android Studio κάνει λήψη πολλών στοιχείων λογισμικού που χρησιμοποιεί. Μπορείτε να κάνετε κλικ στο κουμπί "Εμφάνιση λεπτομερειών" στο τι συμβαίνει, αλλά αυτό δεν είναι καθόλου σημαντικό.
+Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
 
-![Στιγμιότυπο οθόνης 7](../images/Installation_Screenshot_07.png)
+![Screenshot 7](../images/Installation_Screenshot_07.png)
 
-![Στιγμιότυπο οθόνης 8](../images/Installation_Screenshot_08.png)
+![Screenshot 8](../images/Installation_Screenshot_08.png)
 
-Αφού ολοκληρωθούν οι λήψεις, κάντε κλικ στο κουμπί "Τέλος".
+After the downloads are completed click the "Finish" button.
 
-![Στιγμιότυπο οθόνης 9](../images/Installation_Screenshot_09.png)
+![Screenshot 9](../images/Installation_Screenshot_09.png)
 
 * Μπράβο!!! Έχετε τελειώσει την εγκατάσταση του Android Studio και μπορείτε να ξεκινήσετε την κλωνοποίηση του πηγαίου κώδικα. Ίσως ήρθε η ώρα για ένα σύντομο διάλειμμα;
 
-## Ορίστε τη διαδρομή git στις προτιμήσεις
+## Set git path in preferences
 
 ### Windows
 
@@ -112,112 +116,112 @@
 
 * Αν εγκαταστήσετε το git μέσω του homebrew δεν χρειάζεται να αλλάξετε τις προτιμήσεις. Σε περίπτωση που: Μπορούν να βρεθούν εδώ: Android Studio - Προτιμήσεις.
 
-## Λήψη κωδικού και πρόσθετων στοιχείων
+## Download code and additional components
 
 * Χρησιμοποιήστε τον κλώνο git στο Android Studio όπως φαίνεται στα στιγμιότυπα οθόνης παρακάτω. Επιλέξτε "Έλεγχος έργου από τον έλεγχο έκδοσης" με το "Git" ως σύστημα ελέγχου συγκεκριμένης έκδοσης.
 
-![Στιγμιότυπο οθόνης 10](../images/Installation_Screenshot_10.png)
+![Screenshot 10](../images/Installation_Screenshot_10.png)
 
-![Έλεγχος έκδοσης Git](../images/Version_Control_Git.png)
+![Version_Control_Git](../images/Version_Control_Git.png)
 
-Συμπληρώστε τη διεύθυνση URL στο κύριο αποθετήριο AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") και κάντε κλικ στην επιλογή "κλώνος".
+Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 
-![Στιγμιότυπο οθόνης 13](../images/Installation_Screenshot_13.png)
+![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Το Android Studio θα ξεκινήσει την κλωνοποίηση. Μην κάνετε κλικ στο "Παρασκήνιο" καθώς πηγαίνει γρήγορα και κάνει τα πράγματα πιο περίπλοκα προς το παρόν.
+Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
-![Στιγμιότυπο οθόνης 14](../images/Installation_Screenshot_14.png)
+![Screenshot 14](../images/Installation_Screenshot_14.png)
 
-Ολοκληρώστε το checkout από τον έλεγχο έκδοσης ανοίγοντας το έργο κάνοντας κλικ στο "Ναι".
+Finish the checkout from version control with opening the project by clicking "Yes".
 
-![Στιγμιότυπο οθόνης 15](../images/Installation_Screenshot_15.png)
+![Screenshot 15](../images/Installation_Screenshot_15.png)
 
-Χρησιμοποιήστε το τυπικό "προεπιλεγμένο περιτύλιγμα" και κάντε κλικ στο "OK".
+Use the standard "default gradle wrapper" and click "OK".
 
-![Στιγμιότυπο οθόνης 16](../images/Installation_Screenshot_16.png)
+![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-Διαβάστε και κλείστε την οθόνη "Συμβουλή ημέρας" του Android Studio πατώντας "Κλείσιμο".
+Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
-![Στιγμιότυπο οθόνης 17](../images/Installation_Screenshot_17.png)
+![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Εξαιρετικά, έχετε το δικό σας αντίγραφο του πηγαίου κώδικα και είστε έτοιμοι να ξεκινήσετε την κατασκευή.
 * Τώρα πλησιάζουμε στο πρώτο μας μήνυμα σφάλματος. Ευτυχώς, το Android Studio θα μας δώσει άμεσα τη λύση για αυτό.
 
-Κάντε κλικ στην επιλογή "Εγκατάσταση πλατφόρμων που λείπουν και έργου συγχρονισμού", καθώς το Android Studio χρειάζεται να εγκαταστήσει μια πλατφόρμα που λείπει.
+Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
-![Στιγμιότυπο οθόνης 18](../images/Installation_Screenshot_18.png)
+![Screenshot 18](../images/Installation_Screenshot_18.png)
 
-Αποδεχτείτε τη συμφωνία άδειας χρήσης επιλέγοντας "Αποδοχή" και κάνοντας κλικ στο "Επόμενο".
+Accept the license agreement by selecting "Accept" and clicking "Next".
 
-![Στιγμιότυπο οθόνης 19](../images/Installation_Screenshot_19.png)
+![Screenshot 19](../images/Installation_Screenshot_19.png)
 
-Όπως λέγεται στο παράθυρο διαλόγου, παρακαλώ περιμένετε μέχρι να ολοκληρωθεί η λήψη.
+As it is said in the dialog please wait until the download is finished.
 
-![Στιγμιότυπο οθόνης 20](../images/Installation_Screenshot_20.png)
+![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Τώρα έχει τελειώσει. Κάντε κλικ στο κουμπί "Τέλος".
+Now it's finished. Please click "Finish".
 
-![Στιγμιότυπο οθόνης 21](../images/Installation_Screenshot_21.png)
+![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-Ααααααα, επόμενο σφάλμα. Αλλά το Android Studio προτείνει μια παρόμοια λύση. Κάντε κλικ στην επιλογή "Εγκατάσταση εργαλείων δημιουργίας και έργου συγχρονισμού", καθώς το Android Studio χρειάζεται να κατεβάσει τα εργαλεία που λείπουν.
+Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
-![Στιγμιότυπο οθόνης 22](../images/Installation_Screenshot_22.png)
+![Screenshot 22](../images/Installation_Screenshot_22.png)
 
-Όπως λέγεται στο παράθυρο διαλόγου, παρακαλώ περιμένετε μέχρι να ολοκληρωθεί η λήψη.
+As it is said in the dialog please wait until the download is finished.
 
-![Στιγμιότυπο οθόνης 23](../images/Installation_Screenshot_23.png)
+![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Τώρα έχει τελειώσει. Κάντε κλικ στο κουμπί "Τέλος".
+Now it's finished. Please click "Finish".
 
-![Στιγμιότυπο οθόνης 24](../images/Installation_Screenshot_24.png)
+![Screenshot 24](../images/Installation_Screenshot_24.png)
 
-Και ένα άλλο σφάλμα που πρέπει να αντιμετωπίσετε καθώς το Android Studio χρειάζεται να κατεβάσει ξανά μια πλατφόρμα που λείπει. Κάντε κλικ στην επιλογή "Εγκατάσταση πλατφόρμων που λείπουν και έργου συγχρονισμού".
+And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
 
-![Στιγμιότυπο οθόνης 25](../images/Installation_Screenshot_25.png)
+![Screenshot 25](../images/Installation_Screenshot_25.png)
 
-Όπως λέγεται στο παράθυρο διαλόγου, παρακαλώ περιμένετε μέχρι να ολοκληρωθεί η λήψη.
+As it is said in the dialog please wait until the download is finished.
 
-![Στιγμιότυπο οθόνης 26](../images/Installation_Screenshot_26.png)
+![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Τώρα έχει τελειώσει. Κάντε κλικ στο κουμπί "Τέλος".
+Now it's finished. Please click "Finish".
 
-![Στιγμιότυπο οθόνης 27](../images/Installation_Screenshot_27.png)
+![Screenshot 27](../images/Installation_Screenshot_27.png)
 
-Κάντε κλικ στην επιλογή "Εγκατάσταση εργαλείων δημιουργίας και έργου συγχρονισμού", καθώς το Android Studio χρειάζεται να κατεβάσει τα εργαλεία που λείπουν.
+Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
-![Στιγμιότυπο οθόνης 28](../images/Installation_Screenshot_28.png)
+![Screenshot 28](../images/Installation_Screenshot_28.png)
 
-Όπως λέγεται στο παράθυρο διαλόγου, παρακαλώ περιμένετε μέχρι να ολοκληρωθεί η λήψη.
+As it is said in the dialog please wait until the download is finished.
 
-![Στιγμιότυπο οθόνης 29](../images/Installation_Screenshot_29.png)
+![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Τώρα έχει τελειώσει. Κάντε κλικ στο κουμπί "Τέλος".
+Now it's finished. Please click "Finish".
 
-![Στιγμιότυπο οθόνης 30](../images/Installation_Screenshot_30.png)
+![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Ναι, τα μηνύματα σφάλματος έχουν εξαφανιστεί και η κατασκευή του πρώτου gradle που τρέχει. Ίσως ήρθε η ώρα να πιείτε λίγο νερό;
+Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
 
-![Στιγμιότυπο οθόνης 31](../images/Installation_Screenshot_31.png)
+![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-Το Android Studio συνιστά να ενημερώσετε το σύστημα gradle. ** Ποτέ μην ενημερώστε το grale! ** Αυτό μπορεί να προκαλέσει δυσκολίες!
+Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
-Κάντε κλικ στο κουμπί "Μην μου υπενθυμίσεις ξανά για αυτό το έργο".
+Please click "Don't remind me again for this project".
 
-![Στιγμιότυπο οθόνης 32](../images/AS_NoGradleUpdate.png)
+![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
-Η κατασκευή εκτελείται ξανά.
+The build is running again.
 
-![Στιγμιότυπο οθόνης 33](../images/Installation_Screenshot_33.png)
+![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-Ναι, η πρώτη κατασκευή είναι επιτυχημένη, αλλά δεν έχουμε τελειώσει.
+Yeah, the first build is successful but we are not finished.
 
-![Στιγμιότυπο οθόνης 34](../images/Installation_Screenshot_34.png)
+![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 ## Δημιουργία υπογεγραμμένου APK
 
-Στο μενού επιλέξτε "Δημιουργία" και, στη συνέχεια, "Δημιουργία υπογεγραμμένης δέσμης / APK...". (Το μενού στο Android Studio άλλαξε από τον Σεπτέμβριο του 2018. Σε παλαιότερες εκδόσεις επιλέξτε στο μενού "Δημιουργία" και στη συνέχεια "Δημιουργία υπογεγραμμένου APK...")
+Στο μενού επιλέξτε "Δημιουργία" και, στη συνέχεια, "Δημιουργία υπογεγραμμένης δέσμης / APK...". (Το μενού στο Android Studio άλλαξε από τον Σεπτέμβριο του 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
-Η υπογραφή σημαίνει ότι υπογράφετε την εφαρμογή που δημιουργήσατε, αλλά με ψηφιακό τρόπο ως ένα είδος ψηφιακού δακτυλικού αποτυπώματος στην ίδια την εφαρμογή. Αυτό είναι απαραίτητο επειδή το Android έχει έναν κανόνα ότι δέχεται μόνο υπογεγραμμένο κώδικα για εκτέλεση για λόγους ασφαλείας. Για περισσότερες πληροφορίες σχετικά με αυτό το θέμα, ακολουθήστε τον σύνδεσμο [ εδώ ](https://developer.android.com/studio/publish/app-signing.html#generate-key) Η ασφάλεια είναι ένα βαθύ και πολύπλοκο θέμα και δεν το χρειάζεστε τώρα.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Αυτό είναι απαραίτητο επειδή το Android έχει έναν κανόνα ότι δέχεται μόνο υπογεγραμμένο κώδικα για εκτέλεση για λόγους ασφαλείας. Για περισσότερες πληροφορίες σχετικά με αυτό το θέμα, ακολουθήστε τον σύνδεσμο [ εδώ ](https://developer.android.com/studio/publish/app-signing.html#generate-key) Η ασφάλεια είναι ένα βαθύ και πολύπλοκο θέμα και δεν το χρειάζεστε τώρα.
 
 ![Στιγμιότυπο οθόνης 39α](../images/Installation_Screenshot_39a.PNG)
 
@@ -229,9 +233,9 @@
 
 ![Στιγμιότυπο οθόνης 40](../images/Installation_Screenshot_40.png)
 
-Κάντε κλικ στην επιλογή "Δημιουργία νέας..." για να ξεκινήσετε τη δημιουργία της αποθήκης κλειδιών. Μια θυρίδα κλειδιών σε αυτήν την περίπτωση δεν είναι τίποτα περισσότερο από ένα αρχείο στο οποίο αποθηκεύονται οι πληροφορίες για την υπογραφή. Είναι κρυπτογραφημένο και οι πληροφορίες είναι ασφαλείς με κωδικούς πρόσβασης. Προτείνουμε να το αποθηκεύσετε στον αρχικό φάκελο σας και να θυμάστε τους κωδικούς πρόσβασης, αλλά εάν χάσετε αυτές τις πληροφορίες δεν είναι ένα μεγάλο ζήτημα γιατί τότε πρέπει απλά να δημιουργήσετε ένα νέο. Η καλύτερη πρακτική είναι να αποθηκεύσετε προσεκτικά αυτές τις πληροφορίες.
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
-![Στιγμιότυπο οθόνης 41](../images/Installation_Screenshot_41.png)
+![Screenshot 41](../images/Installation_Screenshot_41.png)
 
 * Συμπληρώστε τις πληροφορίες για το επόμενο παράθυρο διαλόγου. 
   * Διαδρομή κλειδιού αποθήκευσης: είναι η διαδρομή προς το αρχείο του κλειδιού
@@ -241,11 +245,11 @@
   * Μπορείτε να αφήσετε την εγκυρότητα στην προεπιλογή των 25 ετών.
   * Πρέπει μόνο να συμπληρώσετε το όνομα και το επώνυμο, αλλά μπορείτε να συμπληρώσετε και τις υπόλοιπες πληροφορίες. Στη συνέχεια, κάντε κλικ στο "OK".
 
-![Στιγμιότυπο οθόνης 42](../images/Installation_Screenshot_42.png)
+![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Συμπληρώστε τις πληροφορίες του τελευταίου διαλόγου σε αυτό το παράθυρο διαλόγου και κάντε κλικ στο κουμπί "Επόμενο".
+Fill in the information of the last dialog in this dialog and click "Next".
 
-![Στιγμιότυπο οθόνης 43](../images/Installation_Screenshot_43.png)
+![Screenshot 43](../images/Installation_Screenshot_43.png)
 
 Επιλέξτε "πλήρης" ως γεύση για την παραγόμενη εφαρμογή. Επιλέξτε V1 "Signature Jar" (V2 είναι προαιρετικό) και πατήστε "Τέλος". Οι ακόλουθες πληροφορίες μπορεί να είναι σημαντικές για μεταγενέστερη χρήση.
 

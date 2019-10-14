@@ -1,10 +1,14 @@
 # Создание андроид-приложения (APK)
 
-* * *
+## Build yourself instead of download
 
-**Обратите внимание** Версию AndroidAPS 2.3 невозможно построить на последней версии Android Studio. Скачивайте Android Studio 3.4 [отсюда](https://developer.android.com/studio/archive?).
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
 
-**Пожалуйста, обратите внимание** при создании приложения AndroidAPS 2.0: **Выборочная Конфигурация ** не поддерживается текущей версией плагина Android Gradle!
+## ## Important notes
+
+**Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+
+**Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
 
@@ -22,7 +26,7 @@
 
 ## Главный экран, Начало
 
-В целом, шаги, необходимые для создания файла APK таковы:
+In general, the steps necessary to build the APK file:
 
 * Установить git
 * Установить и настроить Android Studio.
@@ -31,9 +35,9 @@
 * Построить подписанный APK.
 * Переместите подписанный APK на ваш телефон.
 
-## Пошаговое руководство
+## Step by step walkthrough
 
-Подробное описание шагов, необходимых для создания файла APK.
+Detailed description of the steps necessary to build the APK file.
 
 ## Установите git (если у вас его нет)
 
@@ -50,7 +54,7 @@
 * Используйте homebrew для установки git: ```$ brew install git```.
 * Подробности об установке git см. в [официальной git документации](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-## Установите Android Studio
+## Install Android Studio
 
 The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
@@ -92,7 +96,7 @@ After the downloads are completed click the "Finish" button.
 
 * Аплодисменты, аплодисменты. Установка Android Studio завершена и можно приступить к клонированию исходного кода. Можно сделать короткий перерыв.
 
-## Задать путь к git в параметрах
+## Set git path in preferences
 
 ### Windows
 
@@ -112,7 +116,7 @@ After the downloads are completed click the "Finish" button.
 
 * Если вы устанавливаете git через homebrew, то нет необходимости изменять какие-либо настройки. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
 
-## Скачиваем код и дополнительные компоненты
+## Download code and additional components
 
 * Используйте клон Git в Android Studio, как показано на снимках экрана ниже. Выберите "Проверить проект из системы управления версиями" при помощи Git в качестве конкретной системы управления версиями.
 

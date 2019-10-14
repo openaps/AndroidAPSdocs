@@ -1,5 +1,11 @@
 # Update auf eine neue Version oder branch
 
+## Kein Download möglich - APK muss selbst erstellt werden
+
+**Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist AndroidAPS nicht als Download verfügbar. Du kannst die App legal für Dich selbst erstellen, darfst aber keine Kopie an andere weiter geben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).**
+
+## Wichtige Hinweise
+
 <font color="#FF0000"><b>Wichtiger Hinweis: Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.</font></b>.
 
 ***Wichtiger Hinweis***: Das Update auf AndroidAPS Version 2.3 kann nicht mit der letzten Version von Android Studio durchgeführt werden. Verwende bitte [Android Studio Version 3.4](https://developer.android.com/studio/archive?).

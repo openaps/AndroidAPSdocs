@@ -40,27 +40,27 @@ Dexcom G6
 * Oстановите сенсор и удалите оригинальное приложение Dexcom.
 * Установите загруженное приложение
 * Запустите сенсор
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+* В конфигуратоге (настройки AndroidAPS) выберите Dexcom G App (модифицированное).
 * Если хотите использовать xDrip-оповещения через локальную трансляцию: в сэндвич-меню xDrip > settings > hardware data source > 640G /EverSense.
 
 Устранение неполадок с G6
 ======================
-Dexcom G6 specific troubleshooting
+Устранение неполадок, связанных с dexcom G6
 ----
-* Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip version from May 2019 or a newer nightly build.
-* Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
-* Wait at least 15 min. between stopping and starting a sensor.
-* Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
-* Do not enable "restart sensors" while setting a new sensor
-* Only start new sensor if the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Трансмиттеры с серийным номером начинающиеся с 80 или 81, требуют, по крайней мере, последнюю стабильную версию xDrip с мая 2019 года или более позднюю ночную сборку
+* Трансмиттеры с серийным номером начиная с 8G, требуют по крайней мере ночную сборку 25 июля 2019 года или новее
+* Подождите не менее 15 минут. между остановкой и запуском сенсора
+* Не отматывайте обратно время установки Отвечайте на вопрос "сенсор установлен сегодня?" всегда "Да, сегодня".
+* Не активируйте "перезапускать сенсор" при установке нового сенсора
+* Запускайте новый сенсор, если в Classic Status Page -> G5/G6 статус -> PhoneServicestate:
 
-  * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-  * Transmitter serial starting with 8G: "Got glucose hh:mm" (i.e. "Got glucose 19:04")
+  * Серийный номер передатчика начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04")
+  * Серийный номер трансмиттера начинается с 8G: "Got glucose hh:mm" (напр. "Got glucose 19:04")
 
-.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
+.. image:../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshoothing
+Общее средство устранения неполадок
 ----
 Общее устранение неполадок мониторинга можно найти `здесь <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 

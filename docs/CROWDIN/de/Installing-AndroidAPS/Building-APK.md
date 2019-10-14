@@ -1,6 +1,10 @@
 # AndroidAPS installieren - App erstellen
 
-* * *
+## Kein Download möglich - APK muss selbst erstellt werden
+
+**Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist AndroidAPS nicht als Download verfügbar. Du kannst die App legal für Dich selbst erstellen, darfst aber keine Kopie an andere weiter geben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).**
+
+## Wichtige Hinweise
 
 **Wichtiger Hinweis:** AndroidAPS Version 2.3 kann nicht mit der neuesten Android Studio Version erstellt werden. Verwende bitte Android Studio 3.4. Diese kannst Du [hier](https://developer.android.com/studio/archive?) herunterladen.
 
@@ -124,7 +128,7 @@ Gib die URL der Hauptseite des AndroidAPS Repositorys (“https://github.com/Mil
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio fängt an das Projekt zu ”clonen” (kopieren). Klicke nicht auf “Background”, es geht schnell und macht es derzeit nur komplizierter.
+Android Studio fängt an das Projekt zu ”clonen” (kopieren). Klicke nicht auf “Background”. Das Clonen geht rasch und durch das Clonen im Background würde dies komplizierter.
 
 ![Screenshot 14](../images/Installation_Screenshot_14.png)
 
@@ -213,7 +217,7 @@ Perfekt, der erste “Build Prozess” ist erfolgreich abgeschlossen, aber wir s
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
-## Signierte APK erstellen (Generate signed APK)
+## Siginierte APK erstellen (Generate signed APK)
 
 Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. In älteren Versionen wähle im Menü „Build“ und dann „Signed APK generieren...“
 
