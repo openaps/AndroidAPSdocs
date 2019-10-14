@@ -27,6 +27,10 @@ The profile includes
 * CR (carb ratio) is gramms carbohydrate per one unit insulin
 * DIA (duration of insulin acting).
 
+No use of SGLT-2 inhibitors
+-------
+SGLT2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AndroidAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! 
+
 Phone
 -------
 You need an Android smartphone with Google Android 6.0 or above. Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
