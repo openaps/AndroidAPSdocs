@@ -62,33 +62,33 @@ Cледующие снимки экрана были сделаны c Android St
 
 Нажмите "Далее".
 
-![Screenshot 2](../images/Installation_Screenshot_02.png)
+![Снимок экрана 2](../images/Installation_Screenshot_02.png)
 
 Выберите "Стандартная" установка и нажмите "Далее".
 
-![Screenshot 3](../images/Installation_Screenshot_03.png)
+![Снимок экрана 3](../images/Installation_Screenshot_03.png)
 
 Для интерфейса выберите тему, которая вам нравится. (В этом руководстве мы использовали тему"Intellij". Затем нажмите "Далее". Это просто цветовая схема. Можете выбрать любую (напр. Darcula для темного режима). Этот выбор не влияет на построение APK.
 
-![Screenshot 4](../images/Installation_Screenshot_04.png)
+![Снимок экрана 4](../images/Installation_Screenshot_04.png)
 
 Нажмите "Далее" в диалоге "Подтвердить настройки".
 
-![Screenshot 5](../images/Installation_Screenshot_05.png)
+![Снимок экрана 5](../images/Installation_Screenshot_05.png)
 
 Эмулятор Android (для эмуляции смартфона на Win или Mac) не используется при построении APK. Можно нажать кнопку "Готово", чтобы завершить установку и прочитать документацию позже по требованию.
 
-![Screenshot 6](../images/Installation_Screenshot_06.png)
+![Снимок экрана 6](../images/Installation_Screenshot_06.png)
 
 Android Studio загружает много программных компонентов. Можете нажать на кнопку "Показать детали" если хотите увидеть, что происходит, но в принципе это не важно.
 
-![Screenshot 7](../images/Installation_Screenshot_07.png)
+![Снимок экрана 7](../images/Installation_Screenshot_07.png)
 
-![Screenshot 8](../images/Installation_Screenshot_08.png)
+![Снимок экрана 8](../images/Installation_Screenshot_08.png)
 
 После завершения загрузок нажмите кнопку "Готово".
 
-![Screenshot 9](../images/Installation_Screenshot_09.png)
+![Снимок экрана 9](../images/Installation_Screenshot_09.png)
 
 * Аплодисменты, аплодисменты. Установка Android Studio завершена и можно приступить к клонированию исходного кода. Можно сделать короткий перерыв.
 
