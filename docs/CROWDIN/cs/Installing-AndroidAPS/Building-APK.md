@@ -1,10 +1,14 @@
 # Sestavení APK
 
-* * *
+## Build yourself instead of download
 
-**Poznámka** U AndroidAPS verze 2.3 není možné sestavit soubor APK s nejnovější verzí programu Android Studio. Použijte prosím Android Studio 3.4 z [tohoto](https://developer.android.com/studio/archive?) umístění.
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
 
-**Poznámka** Při vytváření AndroidAPS 2.0 apk: **Konfigurace na vyžádání** není v aktuální verzi Android Gradle pluginu podporována!
+## ## Important notes
+
+**Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+
+**Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
@@ -22,7 +26,7 @@ Jestliže vytváření apk selže s chybou "on demand configuration", proveďte 
 
 ## Přehled
 
-Následují obecné kroky k sestavení souboru APK:
+In general, the steps necessary to build the APK file:
 
 * Nainstalujte git
 * Nainstalujte a nastavte Android Studio.
@@ -31,9 +35,9 @@ Následují obecné kroky k sestavení souboru APK:
 * Sestavete podepsané APK.
 * Přeneste podepsané APK do svého telefonu.
 
-## Průvodce krok za krokem
+## Step by step walkthrough
 
-Následuje detailní popis kroků nutných k sestavení souboru APK.
+Detailed description of the steps necessary to build the APK file.
 
 ## Nainstalujte git (pokud ho ještě nemáte)
 
@@ -50,49 +54,49 @@ Následuje detailní popis kroků nutných k sestavení souboru APK.
 * Použijte homebrew k instalaci gitu: ```$ brew install git```.
 * Detaily o instalaci gitu naleznete v [oficiální dokumentaci gitu](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-## Instalace Android Studio
+## Install Android Studio
 
-Následující snímky obrazovky byly převzaty z aplikace Android Studio verze 3.1.3. Vaše obrazovka by mohla vypadat trochu jinak, v závislosti na verzi aplikace Android Studio, kterou používáte. Měli byste však být schopni najít cestu. Pomoc komunity je poskytována například v [AndroidAPS Facebookové skupině](https://www.facebook.com/groups/1900195340201874/) a [na dalších místech](../Where-To-Go-For-Help/Connect-with-other-users.md).
+The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-Nainstalujte [Android Studio](https://developer.android.com/studio/install.html) a proveďte nastavení během prvního spuštění.
+Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
-Zvolte "Do not import settings", protože jste tento software zatím nevyužívali.
+Select "Do not import settings" as you have not used it before.
 
 ![Snímek 1](../images/Installation_Screenshot_01.png)
 
-Klikněte na "Next".
+Click "Next".
 
-![Snímek 2](../images/Installation_Screenshot_02.png)
+![Screenshot 2](../images/Installation_Screenshot_02.png)
 
-Vyberte "Standard" instalaci a klikněte na "Next".
+Select "Standard" installation and click "Next".
 
-![Snímek 3](../images/Installation_Screenshot_03.png)
+![Screenshot 3](../images/Installation_Screenshot_03.png)
 
-Vyberte si motiv uživatelského rozhraní, který se vám líbí. (V tomto návodu používáme "Intellij". Poté klepněte na tlačítko „Next“. Jedná se pouze o barevný motiv. Můžete si vybrat jakýkoli jiný (např. „Darcula“ pro tmavý režim). Tato volba nemá žádný vliv na sestavení APK.
+Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
 
-![Snímek 4](../images/Installation_Screenshot_04.png)
+![Screenshot 4](../images/Installation_Screenshot_04.png)
 
-Klikněte na "Next" v dialogovém okně "Verify Settings".
+Click "Next" on the "Verify Settings" dialog.
 
-![Snímek 5](../images/Installation_Screenshot_05.png)
+![Screenshot 5](../images/Installation_Screenshot_05.png)
 
-Emulátor Androidu (pro simulaci telefonu na vašem PC nebo Macu) se pro sestavení APK nepoužívá. Můžete kliknout na "Finish", abyste dokončili instalaci a odložili četbu dokumentace později na vyžádání.
+The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
 
-![Snímek 6](../images/Installation_Screenshot_06.png)
+![Screenshot 6](../images/Installation_Screenshot_06.png)
 
-Android Studio stahuje velké množství softwarových komponent, které používá. Můžete kliknout na tlačítko "Show Details" pro zobrazení detailů, které ale vůbec nejsou důležité.
+Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
 
-![Snímek 7](../images/Installation_Screenshot_07.png)
+![Screenshot 7](../images/Installation_Screenshot_07.png)
 
-![Snímek 8](../images/Installation_Screenshot_08.png)
+![Screenshot 8](../images/Installation_Screenshot_08.png)
 
-Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
+After the downloads are completed click the "Finish" button.
 
-![Snímek 9](../images/Installation_Screenshot_09.png)
+![Screenshot 9](../images/Installation_Screenshot_09.png)
 
 * Hurá, hurá, nyní jste dokončili instalaci Android Studia a můžete začít s klonováním zdrojových souborů. Možná je teď vhodná doba na krátkou přestávku?
 
-## Nastavení cesty k nástroji git v předvolbách
+## Set git path in preferences
 
 ### Windows
 
@@ -112,112 +116,112 @@ Jakmile jsou stahování dokončena, klikněte na tlačítko "Finish".
 
 * Pokud instalujete git přes homebrew, není třeba měnit žádné předvolby. Pokud by bylo třeba: Najdete je zde: Android Studio - Preferences.
 
-## Stáhněte si kód a další komponenty
+## Download code and additional components
 
 * Použijte klonování gitu v Android Studiu, jak je vidět na snímku níže. Zvolte „Check out project from Version Control“ s „Git“ jako konkrétní verzí správce zdrojových kódů.
 
-![Snímek 10](../images/Installation_Screenshot_10.png)
+![Screenshot 10](../images/Installation_Screenshot_10.png)
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
-Zadejte URL adresu do hlavního úložiště AndroidAPS ("https://github.com/MilosKozak/AndroidAPS") a klepněte na "Clone".
+Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 
-![Snímek 13](../images/Installation_Screenshot_13.png)
+![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio začne s klonováním. Neklikejte na „Background“, což by věci nyní pouze zkomplikovalo.
+Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
-![Snímek 14](../images/Installation_Screenshot_14.png)
+![Screenshot 14](../images/Installation_Screenshot_14.png)
 
-Dokončete načtení projektu od správce zdrojových kódů kliknutím na "Yes", což projekt otevře.
+Finish the checkout from version control with opening the project by clicking "Yes".
 
-![Snímek 15](../images/Installation_Screenshot_15.png)
+![Screenshot 15](../images/Installation_Screenshot_15.png)
 
-Použijte standardní "default gradle wrapper" a klikněte na "OK".
+Use the standard "default gradle wrapper" and click "OK".
 
-![Snímek 16](../images/Installation_Screenshot_16.png)
+![Screenshot 16](../images/Installation_Screenshot_16.png)
 
-Přečtěte si okno „Tip of Day“ a kliknutím na tlačítko „Close“ je zavřete.
+Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
-![Snímek 17](../images/Installation_Screenshot_17.png)
+![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Výborně, teď máte vlastní kopii zdrojových kódů a jste připravení začít se sestavováním.
 * Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
 
-Klikněte na "Install missing platform(s) and sync project", protože Android Studio potřebuje doinstalovat chybějící platformu.
+Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
-![Snímek 18](../images/Installation_Screenshot_18.png)
+![Screenshot 18](../images/Installation_Screenshot_18.png)
 
-Přijměte licenční ujednání zvolením "Accept" a kliknutím na "Next".
+Accept the license agreement by selecting "Accept" and clicking "Next".
 
-![Snímek 19](../images/Installation_Screenshot_19.png)
+![Screenshot 19](../images/Installation_Screenshot_19.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+As it is said in the dialog please wait until the download is finished.
 
-![Snímek 20](../images/Installation_Screenshot_20.png)
+![Screenshot 20](../images/Installation_Screenshot_20.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+Now it's finished. Please click "Finish".
 
-![Snímek 21](../images/Installation_Screenshot_21.png)
+![Screenshot 21](../images/Installation_Screenshot_21.png)
 
-Aaaach, další chyba. Ale Android Studio navrhuje podobné řešení. Klikněte na "Install Build Tools and sync project", protože Android Studio potřebuje stáhnout chybějící pomůcky.
+Aaaahhh, next error. But Android Studio suggests a similar solution. Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
-![Snímek 22](../images/Installation_Screenshot_22.png)
+![Screenshot 22](../images/Installation_Screenshot_22.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+As it is said in the dialog please wait until the download is finished.
 
-![Snímek 23](../images/Installation_Screenshot_23.png)
+![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+Now it's finished. Please click "Finish".
 
-![Snímek 24](../images/Installation_Screenshot_24.png)
+![Screenshot 24](../images/Installation_Screenshot_24.png)
 
-A další chyba k řešení, protože Android Studio potřebuje zase stáhnout chybějící platformu. Klikněte na "Install missing platform(s) and sync project".
+And another error to handle as Android Studio needs to download again a missing platform. Click "Install missing platform(s) and sync project".
 
-![Snímek 25](../images/Installation_Screenshot_25.png)
+![Screenshot 25](../images/Installation_Screenshot_25.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+As it is said in the dialog please wait until the download is finished.
 
-![Snímek 26](../images/Installation_Screenshot_26.png)
+![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+Now it's finished. Please click "Finish".
 
-![Snímek 27](../images/Installation_Screenshot_27.png)
+![Screenshot 27](../images/Installation_Screenshot_27.png)
 
-Klikněte na "Install Build Tools and sync project", protože Android Studio potřebuje stáhnout chybějící pomůcky.
+Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
 
-![Snímek 28](../images/Installation_Screenshot_28.png)
+![Screenshot 28](../images/Installation_Screenshot_28.png)
 
-Jak již bylo řečeno v dialogovém okně, počkejte, než se stahování dokončí.
+As it is said in the dialog please wait until the download is finished.
 
-![Snímek 29](../images/Installation_Screenshot_29.png)
+![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Nyní je dokončené. Prosím, klikněte na "Finish".
+Now it's finished. Please click "Finish".
 
-![Snímek 30](../images/Installation_Screenshot_30.png)
+![Screenshot 30](../images/Installation_Screenshot_30.png)
 
-Ano, chybové zprávy jsou pryč a první gradle sestavení běží. Možná je čas dát si trochu vody?
+Yeah, the error messages are gone and the first gradle build is runing. Maybe it's time to drink some water?
 
-![Snímek 31](../images/Installation_Screenshot_31.png)
+![Screenshot 31](../images/Installation_Screenshot_31.png)
 
-Android Studio doporučuje aktualizaci systému gradle. **Nikdy neaktualizujte gradle!** Mohlo by to vše zkomplikovat!
+Android Studio recommends to update the gradle system. **Never update gradle!** This might lead to difficulties!
 
-Klikněte prosím na „Znovu nepřipomínat pro tento projekt“.
+Please click "Don't remind me again for this project".
 
-![Snímek 32](../images/AS_NoGradleUpdate.png)
+![Screenshot 32](../images/AS_NoGradleUpdate.png)
 
-Sestavení zase běží.
+The build is running again.
 
-![Snímek 33](../images/Installation_Screenshot_33.png)
+![Screenshot 33](../images/Installation_Screenshot_33.png)
 
-Ano, první sestavení bylo úspěšné, ale ještě nejsme hotoví.
+Yeah, the first build is successful but we are not finished.
 
-![Snímek 34](../images/Installation_Screenshot_34.png)
+![Screenshot 34](../images/Installation_Screenshot_34.png)
 
 ## Vytvořte podepsaný soubor APK
 
-V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. Ve starších verzích vyberte nabídku “Build” a poté “Generate Signed APK...”.)
+V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
-Podepsání znamená, že podepíšete vygenerovanou aplikaci, ale digitálním způsobem, jakoby nějakým digitálním otiskem prstu uvnitř samotné aplikace. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
 
 ![Snímek 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -229,9 +233,9 @@ Zvolte „app“ a klepněte na tlačítko „Next“.
 
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
-Klikněte na "Create new...", abyste začali připravovat úložiště svých klíčů. Úložiště klíčů v tomto případě není nic jiného než soubor, ve kterém jsou uložené podepisovací informace. Je zašifrované a údaje jsou zabezpečené hesly. Doporučujeme, abyste si ho uložili do své domovské složky a zapamatovali si hesla. Kdybyste však tyto informace ztratili, nebyl by to tak velký problém, protože potom byste prostě museli vytvořit nové úložiště klíčů. Ale lepší je tyto údaje pečlivě uložit.
+Click "Create new..." to start creating your keystore. A keystore in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. Best practice is to store this information carefully.
 
-![Snímek 41](../images/Installation_Screenshot_41.png)
+![Screenshot 41](../images/Installation_Screenshot_41.png)
 
 * Vyplňte údaje pro další dialogové okno. 
   * Key store path: je cesta k vašemu úložišti klíčů
@@ -241,11 +245,11 @@ Klikněte na "Create new...", abyste začali připravovat úložiště svých kl
   * „Validity“ můžete ponechat na výchozí hodnotě 25 let.
   * Povinná pole jsou pouze jméno a příjmení, ale klidně můžete vyplnit i zbývající údaje. Pak klikněte na tlačítko „OK“.
 
-![Snímek 42](../images/Installation_Screenshot_42.png)
+![Screenshot 42](../images/Installation_Screenshot_42.png)
 
-Vyplňte údaje posledního dialogového okna a klikněte na "Next".
+Fill in the information of the last dialog in this dialog and click "Next".
 
-![Snímek 43](../images/Installation_Screenshot_43.png)
+![Screenshot 43](../images/Installation_Screenshot_43.png)
 
 Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
 
