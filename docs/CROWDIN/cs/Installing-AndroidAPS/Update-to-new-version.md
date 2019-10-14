@@ -1,8 +1,14 @@
 # Aktualizace na novou verzi nebo větev (branch)
 
-<font color="#FF0000"><b>U verze 2.3 je potřeba použít git pro aktualizaci. Aktualizace pomocí zip souboru již nefunguje.</font></b>.
+## Build yourself instead of download
 
-***Poznámka***: Jestliže aktualizujete na verzi AndroidAPS 2.3, musíte použít [Android Studio Version 3.4](https://developer.android.com/studio/archive?), protože s nejnovější verzí nefunguje.
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+
+## Důležité poznámky
+
+<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>.
+
+***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
 
 ## Nainstalujte git (pokud ho ještě nemáte)
 
@@ -32,37 +38,37 @@
 * Detaily o instalaci gitu naleznete v [oficiální dokumentaci gitu](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Pokud instalujete git přes homebrew, není třeba měnit žádné předvolby. Pokud by bylo třeba: Najdete je zde: Android Studio - Preferences.
 
-## Aktualizujte svou lokální kopii
+## Update your local copy
 
 * Klikněte na: VCS->Git->Fetch
   
   ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
 
-## Vyberte větev
+## Selecting branch
 
 * Pokud chcete změnit větev, vyberte jinou z dolní lišty: master (poslední vydání) nebo jiná verze (viz níže)
   
   ![](../images/UpdateAAPS1.png)
 
-a poté zvolte možnost „checkout“ (Můžete použít rovněž volbu 'Checkout as New Branch', jestliže možnost 'Checkout' není k dispozici.)
+and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
 
      ![](../images/UpdateAAPS2.png)
     
 
-## Aktualizace větve z Githubu
+## Updating branch from Github
 
 * Stiskněte Ctrl+T, zvolte metodu Merge a klikněte na OK
   
   ![](../images/merge.png)
 
-Na dolní liště uvidíte zelenou zprávu o aktualizovaném projektu
+On the tray you'll see green message about updated project
 
 ## Vytvořte podepsaný soubor APK
 
-<!--- Text is maintained in page building-apk.md ---> V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. Ve starších verzích vyberte nabídku „Build“ a pak „Generate Signed APK...“.)
+<!--- Text is maintained in page building-apk.md ---> V nabídce vyberte „Build“ a pak „Generate Signed Bundle / APK…“. (Nabídka Android Studio se v září 2018 změnila. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
   
-Podepsání znamená, že podepíšete svou generovanou aplikaci, ale digitálním způsobem, něco jako digitálním otiskem prstu v samotné aplikaci. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Pokud se o toto téma zajímáte, můžete si k tomu víc přečíst [zde](https://developer.android.com/studio/publish/app-signing.html#generate-key), ale Bezpečnost je hluboké a komplexní téma a teď ho nepotřebujete.
 
 ![Snímek 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -74,13 +80,13 @@ Zvolte „app“ a klepněte na tlačítko „Next“.
 
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
-Zadejte cestu ke svému úložišti klíčů, zadejte heslo k úložišti klíčů, vyberte alias klíče a zadejte heslo klíče.
+Enter your key store path, enter key store password, select key alias and enter key password.
 
-Vyberte 'Zapamatovat hesla'.
+Select 'Remember passwords'.
 
-Poté klepněte na tlačítko „Next“.
+Then click next.
 
-![Cesta k úložišti klíčů](../images/KeystorePathUpdate.PNG)
+![Key store path](../images/KeystorePathUpdate.PNG)
 
 Zvolte „full“ jako flavour generované aplikace. Zvolte V1 „Jar Signature“ (V2 je volitelné) a klikněte na tlačítko „Finish“. Následující údaje mohou být důležité pro pozdější použití.
 
@@ -121,39 +127,39 @@ Posledním krokem je klepnout na soubor APK, který jsem přijal přes Gmail, a 
 
 Ano, máte to a můžete začít s úvodní konfigurací AndroidAPS (CGM, inzulínová pumpa) atd.
 
-## Zkontrolujte verzi AAPS na telefonu
+## Check AAPS version on phone
 
-Verzi AAPS můžete na telefonu zkontrolovat klepnutím na tři tečky vpravo nahoře a poté na položku O aplikaci.
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![Nainstalovaná verze AAPS](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 # Poradce při potížích
 
-## Varování kompilátoru Kotlin
+## Kotlin compiler warning
 
-Pokud sestavení proběhne úspěšně, ale objeví se varování kompilátoru Kotlin, prostě je ignorujte.
+If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
 
-Sestavení aplikace bylo úspěšné a můžete ji přenést do telefonu.
+App was build successfully and can be transferred to phone.
 
-![Ignorujte varování kompilátoru Kotlin](../images/GIT_WarningIgnore.PNG)
+![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
 
-## Nelze stáhnout… / Práce Offline
+## Could not download… / Offline Work
 
-Pokud se zobrazí podobná chybová zpráva,
+If you get a failure message like this
 
-![Varování nelze stáhnout](../images/GIT_Offline1.jpg)
+![Warning could not download](../images/GIT_Offline1.jpg)
 
-ujistěte se, že položka ‘Offline work’ je deaktivována.
+make sure that ‘Offline work’ is disabled.
 
 File -> Settings
 
-![Nastavení práce offline](../images/GIT_Offline2.jpg)
+![Settings offline work](../images/GIT_Offline2.jpg)
 
-## Neprovedené změny
+## Uncommitted changes
 
-Pokud se zobrazí podobná chybová zpráva,
+If you receive failure message like
 
-![Chyba neprovedené změny](../images/GIT_TerminalCheckOut0.PNG)
+![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Možnost 1
 
@@ -166,9 +172,9 @@ Pokud se zobrazí podobná chybová zpráva,
 
 * Vložte zkopírovaný text a stiskněte enter. ![Načtení GIT úspěšné](../images/GIT_TerminalCheckOut2.jpg)
 
-## Aplikace není nainstalována
+## App not installed
 
-![poznámka o nainstalované aplikaci v telefonu](../images/Update_AppNotInstalled.png)
+![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Ujistěte se, že jste do telefonu přenesli soubor „app-full-release.apk“.
 * Pokud se na telefonu zobrazí "Aplikace není nainstalována", postupujte následovně: 
@@ -179,13 +185,13 @@ Pokud se zobrazí podobná chybová zpráva,
   5. [Importujte nastavení](../Usage/Objectives#export-import-settings)
   6. Znovu zapněte bluetooth a vypněte režim letadlo
 
-## Aplikace je nainstalována, ale ve staré verzi
+## App installed but old version
 
-Jestliže jste úspěšně sestavili aplikaci, přenesli ji do telefonu a nainstalovali ji, ale číslo verze zůstává stejné, možná jste zapomněli krok sloučení v [návodu na aktualizaci](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
-## Nic z výše uvedeného nefunguje
+## None of the above worked
 
-Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace úplně od začátku:
+If non of the above tips helped you might consider building the app from scratch:
 
 1. [Exportujte nastavení](../Usage/Objectives#export-import-settings) (ve verzi AAPS, kterou již máte nainstalovanou v telefonu)
 2. Připravte si heslo klíče a heslo úložiště klíčů Pokud jste hesla zapomněli, můžete je zkusit najít v souborech projektu, jak je popsáno [zde](https://youtu.be/nS3wxnLgZOo).
@@ -198,10 +204,10 @@ Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace ú
 4. Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
 5. [Importujte nastavení](../Usage/Objectives#export-import-settings)
 
-## Nejčernější scénář
+## Worst case scenario
 
-V případě, že ani sestavení aplikace úplně od začátku nevyřeší váš problém, zkuste úplně odinstalovat Android Studio. Někteří uživatelé uvedli, že to jejich problém vyřešilo.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-Ujistěte se, že odinstalujte všechny soubory spojené s Android Studio. Návody lze najít online, např. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Znovu od začátku nainstalujte Android Studio, jak je popsáno [zde](../Installing-AndroidAPS/Building-APK#install-android-studio) a **neaktualizujte gradle**.
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
