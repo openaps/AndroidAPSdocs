@@ -82,13 +82,11 @@ If you bolus for additional food shortly after a meal bolus (i.e. additional des
 
 ### Slow carb absorption
 
-As of version 2.4, AAPS warns if slow carb absorption is detected. There will be an additional text on the confirmation screen after calculator usage. The risk is that COB would be overestimated and to much insulin might be given.
+As of version 2.4, AAPS warns you if slow carb absorption is detected. There will be an additional hint on the confirmation screen after usage of bolus wizard. It will warn you against overdosing if AndroidAPS detects faster carb absorption of a previous meal than estimated from algorythm (maybe because of activity or wrong factors).  
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
 
-In this example 41% of time [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) was used instead of value calculated from deviations.
-
-In this case you should think about pressing "Cancel" and calculate again with COB unticked. If from your manual calculation you see the need for a correction bolus enter it manually. But be careful not to overdose!
+In this example, 41% of time the carb absorption was calculated by the [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) instead of the value calculated from deviations. In this case maybe you are having less carbs on board (COB) than calculated by the algorythm. So you should think about pressing "Cancel" and calculate again with COB unticked. If you need a correction bolus as well, enter it manually please. But be careful not to overdose!
 
 ## Insulin Profile
 
