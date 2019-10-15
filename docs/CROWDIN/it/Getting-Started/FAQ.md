@@ -113,7 +113,7 @@ The amount of insulin in a given hour time block to maintain BG at a stable leve
 
 Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-If BG is dropping, basal rate is too high. E vice-versa.
+If BG is dropping, basal rate is too high. And vice-versa.
 
 ### Impact
 
