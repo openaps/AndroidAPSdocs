@@ -1,64 +1,64 @@
-# FAQ for loopers
+# Domande frequenti (FAQ)
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+Come si aggiunge una FAQ alla lista delle domande: Segui queste [istruzioni](../make-a-PR.md)
 
-# General
+# Generale
 
-## Can I just download the AndroidAPS installation file?
+## Posso semplicemente scaricare il file di installazione (apk) di AndroidAPS?
 
-No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+No. Non c'è un file apk scaricabile per AndroidAPS. Devi [costruirlo](../Installing-AndroidAPS/Building-APK.md) da solo. E per questo c'è un motivo:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AndroidAPS è utilizzato per controllare il tuo microinfusore e per somministrare insulina. In base alle norme vigenti, in Europa tutti i sistemi di classe Ia o IIb sono dispositivi medici che richiedono l'approvazione normativa (un marchio CE) e che necessitano di vari studi e autorizzazioni. Distribuire un dispositivo non regolamentato è illegale. Esistono norme analoghe in altre parti del mondo.
 
-This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+Il regolamento non si limita all'atto della vendita (con il fine di ottenere denaro) ma si applica a qualsiasi modalità di distribuzione (anche se la concessione avviene a titolo gratuito). Costruire un'app medica in prima persona è l'unico modo per non essere influenzato da queste norme.
 
-That’s why apks aren’t available.
+Ecco perché gli apks non sono disponibili.
 
-## How to begin?
+## Come iniziare?
 
-First of all, you have to **get loopable hardware components**:
+Innanzitutto devi avere a disposizione ** componenti hardware adatte per un loop**:
 
-* A [supported insulin pump](Pump-Choices.md), 
-* an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
+* Un [microinfusore supportato](Pump-Choices.md), 
+* Uno [smartphone Android](Phones.md) (Gli smartphone Apple non sono supportati da AAPS- per questo, dai uno sguardo a [iOS Loop](https://loopkit.github.io/loopdocs/)) e 
+* Un [sistema di monitoraggio continuo della glicemia](../Configuration/BG-Source.rst). 
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+In secondo luogo, devi **configurare le tue componenti hardware**. Dai uno sguardo all' [esempio di configurazione con il tutorial passo dopo passo](Sample-Setup.md).
 
-Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+Poi, devi **configurare le componenti software**: AndroidAPS e la fonte CGM/FGM.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
+Infine devi imparare e **capire le caratteristiche fondamentali di OpenAPS per gestire i parametri necessari per il trattamento**. Il profilo basale, il rapporto insulina: cho (IC) e il fattore di sensibilità (ISF) devono essere accuratamente impostati prima di usare un sistema di Loop chiuso. Il sistema di Loop fornisce ogni suggerimento assumendo che le basali da te impostate siano corrette e che ogni picco sia motivato da altri fattori(attività fisica, stress ecc.). Per una questione di sicurezza, gli aggiustamenti che il sistema di Loop può fare hanno delle limitazioni (dai uno sguardo alla sezione variazione massima di basale temporanea nella pagina sulle [caratteristiche fondamentali di OpenAPS](https://openaps.org/reference-design/) ). Impostare (manualmente) basali sbagliate significa sprecare il dosaggio (automatico) di AAPS che cercherà di correggere in continuazione un profilo basale sbagliato. Se, per esempio, noti che il sistema imposta spesso una basale temporanea bassa prima di un pasto, è probabile che sia necessario rivedere il tuo profilo basale. Puoi usare [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) per analizzare lunghe serie di dati. Questo è uno strumento molto utile in grado di darti suggerimenti su quali variazioni sulle basali e sui tuoi fattori (IC e ISF) sarebbe necessario apportare. Oppure puoi testare se le tue basali sono corrette [alla vecchia maniera](http://integrateddiabetes.com/basal-testing/).
 
-## What practicalities of looping do I have?
+## Quali sono gli aspetti pratici del sistema di loop?
 
-### Password protection
+### Proteggi con password
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+Se non vuoi che la preferenze da te inserite siano facilmente modificabili, puoi impostare una password per proteggere il menù delle preferenze. Per farlo seleziona "password per impostazioni" dal menù delle preferenze e inserisci una password a tua scelta. Quando aprirai nuovamente il menù delle preferenze, ti verrà richiesta la password da te inserita prima di poter procedere con qualsiasi cambiamento. Nel caso in cui volessi successivamente eliminare la password sarà sufficiente andare nuovamente in "password per impostazioni" e cancellare il testo.
 
-### Android Wear Smartwatches
+### Smartwatch Android Wear
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+Se desideri utilizzare l'android wear app per erogare boli e per cambiare le impostazioni direttamente dallo smartwatch, è necessario assicurarsi che le notifiche provenienti da AndroidAPS non siano bloccate. La conferma di ogni azione, infatti, avviene tramite notifiche.
 
-### Disconnect pump
+### Sconnetti micro
 
-If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+Se sconnetti il microinfusore per fare la doccia/fare il bagno/nuotare/ fare sport ecc. devi far sapere ad AndroidAPS che non vi è erogazione di insulina al fine di mantenere corretto il calcolo di IOB.
 
-* Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
-* This will set your basal to zero for that time period.
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
-* AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
+* Tieni premuto il pulsante 'Loop Chiuso' (se invece non hai ancora chiuso il loop tieni premuto su 'Loop aperto') in alto nella schermata principale. 
+* Seleziona **'Sconnetti micro per XY min'**
+* Questo imposterà automaticamente la basale a zero per il periodo di tempo selezionato.
+* La durata minimi per cui il microinfusore può essere sconnesso dipende dalla durata minima di basale temporanea che il vostro microinfusore può impostare. Quindi, se si desidera sconnettere il microinfusore per un periodo di tempo più breve di quello minimo, il microinfusore va riconnesso manualmente mediante la procedure descritta in seguito.
+* Il pulsante 'Loop Chiuso' (o 'Loop Aperto') a questo punto diventerà rosso, sarà denominato 'Sconnesso (xx m)' e mostrerà i minuti restanti prima che il microinfusore venga considerato da AAPS riconnesso.
+* AAPS considererà riconnesso il microinfusore allo scadere del tempo impostato e il loop chiuso ricomincerà a funzionare regolarmente.
     
-    ![Disconnect pump](../images/PumpDisconnect.png)
+    ![Sconnetti micro](../images/PumpDisconnect.png)
 
-* If the selected time was too long you can reconnect manually.
+* Se si desidera riconnettere il microinfusore prima del tempo selezionato, questo può essere riconnesso manualmente.
 
-* Long-press on the red button 'Disconnected (xx m)'.
-* Select 'Reconnect pump'
+* Tenere premuto sul pulsante 'Sconnesso (xx m)'.
+* Seleziona 'Riconnetti micro'
     
     ![Reconnect pump](../images/PumpReconnect.png)
 
-### Recommendations not only based on one single CGM reading
+### Le decisioni del loop non sono basate su un singolo valore rilavato dal CGM
 
 For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
@@ -99,7 +99,7 @@ This is quite often set too short. Most people will want at least 5 hours, poten
 
 ### Impact
 
-Too short DIA can lead to low BGs. And vice-versa.
+Too short DIA can lead to low BGs. E vice-versa.
 
 If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
 
@@ -113,11 +113,11 @@ The amount of insulin in a given hour time block to maintain BG at a stable leve
 
 Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-If BG is dropping, basal rate is too high. And vice-versa.
+If BG is dropping, basal rate is too high. E vice-versa.
 
 ### Impact
 
-Too high basal rate can lead to low BGs. And vice-versa.
+Too high basal rate can lead to low BGs. E vice-versa.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
