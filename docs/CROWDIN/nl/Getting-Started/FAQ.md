@@ -71,7 +71,7 @@ There are several blogs with good tips to help you understand the practicalities
 * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 * [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
-## What emergency equipment is recommended to take with me?
+## Welke spullen moet ik bij me hebben voor noodgevallen?
 
 First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
 
@@ -198,7 +198,7 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
-# Other settings
+# Overige instellingen
 
 ## Nightscout settings
 
