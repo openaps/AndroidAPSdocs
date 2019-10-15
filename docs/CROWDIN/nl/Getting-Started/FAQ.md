@@ -125,7 +125,7 @@ So, a basal rate too high will create low BGs both with the default rate, but al
 
 Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
-## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+## Insuline gevoeligheids factor (Insulin Sensitivity Factor, ISF) (mmol/l/E of mg/dl/E)
 
 ### Description & testing
 
