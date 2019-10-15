@@ -249,7 +249,7 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 ### Hygiene
 
-#### What to do when taking a shower or bath?
+#### Wat te doen tijdens het douchen?
 
 You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
 
