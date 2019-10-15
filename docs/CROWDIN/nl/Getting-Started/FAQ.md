@@ -154,7 +154,7 @@ An ISF that is too low (not uncommon) can result in ‘over corrections’, beca
 
 Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
 
-## Insulin to carb ratio (IC) (g/U)
+## Koolhydraat ratio (KH) (g/E)
 
 ### Description & testing
 
