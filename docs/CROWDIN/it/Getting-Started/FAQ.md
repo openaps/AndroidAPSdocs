@@ -117,7 +117,7 @@ If BG is dropping, basal rate is too high. And vice-versa.
 
 ### Impact
 
-Too high basal rate can lead to low BGs. E vice-versa.
+Too high basal rate can lead to low BGs. And vice-versa.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
