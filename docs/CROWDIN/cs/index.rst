@@ -76,7 +76,8 @@ Použití AndroidAPS
    Obrazovky AndroidAPS <./Getting-Started/Screenshots.md>
    Cíle <./Usage/Objectives.md>
    Možnosti OpenAPS <./Usage/Open-APS-features.md>   
-   Detekce senzitivity a COB <./Configuration/Sensitivity-detection-and-COB.md>
+   COB calculation <./Usage/COB-calculation.rst>
+   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
    Profily <./Usage/Profiles.md>
    Dočasné cíle <./Usage/temptarget.md>   
    Rozložené sacharidy <./Usage/Extended-Carbs.md>
