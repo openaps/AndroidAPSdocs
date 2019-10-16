@@ -24,14 +24,3 @@ Sensitivity is calculated from 8h data in the past or from last site change, if 
 There is significant difference while using AAPS, WeightedAverage vs Oref0, Oref1.
 Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. 
 AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparation to Oref plugins.
-
-## COB Examples
-Oref0 / Oref1 - unabsorbed carbs are cut off after specified time
-
-![COB from oref0](../images/cob_oref0_orange.png)
-
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
-
-![COB from AAPS](../images/cob_aaps2_orange.png)
-
-If minimal carbs absorption is used instead of value calculated from deviations, an orange dot appears on COB graph
