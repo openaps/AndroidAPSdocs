@@ -58,7 +58,7 @@
 
 ### Ενότητα Η
 
-Σας επιτρέπει να διαχειριστείτε ένα bolus (κανονικά θα χρησιμοποιούσατε το κουμπί Αριθμομηχανής για να το κάνετε αυτό) και να προσθέσετε βαθμονόμηση CGM μέσω του δακτύλου. Επίσης, θα εμφανιστεί ένα κουμπί Quick Wizzard, αν έχει ρυθμιστεί στη [ Διαμόρφωση ](.../Configuration/Config-Builder#quickwizard-settings).
+Σας επιτρέπει να διαχειριστείτε ένα bolus (κανονικά θα χρησιμοποιούσατε το κουμπί Αριθμομηχανής για να το κάνετε αυτό) και να προσθέσετε βαθμονόμηση CGM μέσω του δακτύλου. Also a Quick Wizzard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
 
 ## Η Αριθμομηχανή
 
@@ -90,74 +90,70 @@
 
 Εάν κάνατε bolus για επιπλέον τροφή λίγο μετά το bolus γεύματος (δηλαδή πρόσθετο επιδόρπιο), μπορεί να είναι χρήσιμο ξετσεκάρετε όλα τα κουτιά. Με αυτόν τον τρόπο προστίθενται μόνο οι νέοι υδατάνθρακες καθώς το κύριο γεύμα δεν θα απορροφηθεί απαραιτήτως, έτσι ώστε το IOB να μην ταιριάζει με το COB με ακρίβεια λίγο μετά το bolus γεύματος.
 
-### Αργή απορρόφηση υδατανθράκων
+### Wrong COB detection
 
-Από την έκδοση 2.4, το AAPS προειδοποιεί για αργή απορρόφηση υδατανθράκων εάν κάτι τέτοιο ανιχνευθεί. Θα εμφανιστεί ένα πρόσθετο κείμενο στην οθόνη επιβεβαίωσης μετά τη χρήση της αριθμομηχανής. Ο κίνδυνος είναι ότι το COB θα υπερεκτιμηθεί και ότι θα χορηγηθεί πολύ ινσουλίνη.
+![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
 
-![Αργή απορρόφηση υδατανθράκων](../images/Calculator_SlowCarbAbsorbtion.png)
-
-Σε αυτό το παράδειγμα χρησιμοποιήθηκε 41% του χρόνου [ 5 λεπτά ελάχιστη δράση υδατανθράκων ](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) αντί της τιμής που υπολογίστηκε από τις αποκλίσεις.
-
-Σε αυτή την περίπτωση θα πρέπει να σκεφτείτε να πατήσετε "Ακύρωση" και να υπολογίσετε ξανά με το COB μη επιλεγμένο. Εάν από τον χειροκίνητο υπολογισμό σας βλέπετε την ανάγκη για διορθωτικό bolus εισάγετε το με το χέρι. Αλλά να είστε προσεκτικοί για να μην πάρετε υπερβολική δόση!
+If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. So if you want to bolus again after a previous meal with COB you should be aware of overdosing! For details see the hints on [COB calculation page](../Usage/COB-calculation.html#detection-of-wrong-cob-values).
 
 ## Προφίλ ινσουλίνης
 
 ![Προφίλ ινσουλίνης](../images/Screenshot_insulin_profile.png)
 
-Αυτό δείχνει το προφίλ δραστηριότητας της ινσουλίνης που έχετε επιλέξει. Η μώβ γραμμή δείχνει πόση ινσουλίνη παραμένει μετά την ένεση της καθώς αποσυντίθεται με το χρόνο και η μπλέ γραμμή δείχνει πόσο ενεργή είναι.
+This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
 
-Συνήθως θα χρησιμοποιείτε ένα από τα προφίλ Oref - και το σημαντικό πράγμα που πρέπει να σημειωθεί είναι ότι η αποσύνθεση έχει μια μακρά ουρά. Εάν έχετε συνηθίσει στη χειροκίνητη άντληση, πιθανότατα έχετε συνηθίσει να υποθέτετε ότι η ινσουλίνη αποσυντίθεται σε περίπου 3,5 ώρες. Ωστόσο, όταν είστε σε κύκλωμα οι μακριές ουρές παίζουν ρόλο δεδομένου ότι οι υπολογισμοί είναι πολύ πιο ακριβείς και αυτές οι μικρές ποσότητες προσθέτουν όταν υποβάλλονται στους αναδρομικούς υπολογισμούς στον αλγόριθμο AndroidAPS.
+You will normally be using one of the Oref profiles - and the important thing to note is that the decay has a long tail. If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
 
-Για μια πιο λεπτομερή συζήτηση σχετικά με τους διαφορετικούς τύπους ινσουλίνης, τα προφίλ δραστηριότητάς τους και γιατί όλα αυτά είναι σημαντικά, μπορείτε να διαβάσετε ένα άρθρο εδώ στο [ Κατανόηση των νέων καμπυλών IOB με βάση τις καμπύλες εκθετικής δραστηριότητας ](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-Και μπορείτε να διαβάσετε ένα εξαιρετικό άρθρο σχετικά με αυτό εδώ: [ Γιατί κάνουμε συχνά λάθος στη διάρκεια της δράσης της ινσουλίνης (DIA) φορές που χρησιμοποιούμε και γιατί έχει σημασία... ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-Και περισσότερα στο: [ Εκθετικές καμπύλες ινσουλίνης + Fiasp ](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Κατάσταση Αντλίας
 
 ![Κατάσταση Αντλίας](../images/Screenshot_pump_Combo.png)
 
-Εδώ βλέπουμε την κατάσταση της αντλίας ινσουλίνης - στην περίπτωση αυτή ένα Accu-Chek Combo. Οι πληροφορίες που εμφανίζονται είναι αυτονόητες. Με το πάτημα του πλήκτρου ΙΣΤΟΡΙΚΟ θα διαβαστούν τα δεδομένα από το ιστορικό της αντλίας σας, συμπεριλαμβανομένου του βασικού σας προφίλ. Αλλά θυμηθείτε ότι υποστηρίζεται μόνο ένα βασικό προφίλ στην αντλία Combo.
+Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
 
 ## Πύλη φροντίδας
 
 ![Πύλη φροντίδας](../images/Screenshot_care_portal.png)
 
-Αυτό επαναλαμβάνει τις λειτουργίες που θα βρείτε στην οθόνη Nightscout κάτω από το σύμβολο "+" που σας επιτρέπει να προσθέσετε σημειώσεις στα αρχεία σας. Λειτουργίες όπως εγγραφή όταν αλλάζετε θέση του καθετήρα της αντλίας ή κασέτα ινσουλίνης πρέπει να είναι αυτονόητες. ΑΛΛΑ Η παρούσα ενότητα δεν εκδίδει εντολές στην αντλία σας. Έτσι, αν προσθέσετε ένα bolus χρησιμοποιώντας αυτή την οθόνη, σημειώνει απλά αυτό στο αρχείο Nightscout σας, η αντλία δεν θα έχει οδηγίες να παραδώσει ένα bolus.
+This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
 
 ## Κύκλωμα, MA, AMA, SMB
 
-Συνήθως δεν χρειάζεται να ανησυχείτε για αυτά, δείχνουν τα αποτελέσματα του αλγορίθμου OpenAPS που εκτελείται κάθε φορά που το σύστημα παίρνει μια νέα ανάγνωση από το CGM. Αυτά συζητούνται αλλού.
+You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
 
 ## Προφίλ
 
 ![Προφίλ](../images/Screenshot_profile.png)
 
-Το AndroidAPS μπορεί να τρέξει χρησιμοποιώντας διάφορες διαφορετικές διαμορφώσεις προφίλ. Συνήθως - όπως φαίνεται εδώ - το προφίλ Nightscout έχει ληφθεί μέσω του ενσωματωμένου πελάτη Nighscout και εμφανίζεται εδώ σε μορφή μόνο για ανάγνωση. Εάν θέλετε να κάνετε οποιεσδήποτε αλλαγές, θα το κάνετε από τη διεπαφή χρήστη Nightscout και, στη συνέχεια, κάντε μία [ Αλλαγή προφίλ ](../Usage/Profiles.md) στο AndroidAPS για να ενεργοποιήσετε τις αλλαγές. Δεδομένα όπως το βασικό προφίλ θα αντιγραφούν αυτόματα στην αντλία σας.
+AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
 
-** DIA: ** σημαίνει τη Διάρκεια της δράσης της ινσουλίνης και αναλύεται παραπάνω στην ενότητα σχετικά με τα προφίλ ινσουλίνης.
+**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
 
-** IC: ** είναι η αναλογία ινσουλίνης προς υδατάνθρακες. Αυτό το προφίλ έχει πολλές διαφορετικές τιμές για διαφορετικές ώρες της ημέρας.
+**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
 
-** ISF: ** είναι ο συντελεστής ευαισθησίας στην ινσουλίνη - η ποσότητα με την οποία μια μονάδα ινσουλίνης θα μειώσει τη γλυκόζη του αίματός σας, υποθέτοντας ότι δεν αλλάζει τίποτα άλλο.
+**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
 
-** Βασικό: ** είναι το βασικό προφίλ που έχει προγραμματιστεί στην αντλία σας.
+**Basal:** is the basal profile programmed into your pump.
 
-** Στόχος: ** είναι το επίπεδο γλυκόζης στο αίμα που θέλετε να επιδιώκετε όλη την ώρα. Μπορείτε να ρυθμίσετε διαφορετικά επίπεδα για τις διαφορετικές ώρες της ημέρας, αν θέλετε, και μπορείτε ακόμη και να ορίσετε ένα ανώτερο και κατώτερο εύρος έτσι ώστε η εξέδρα να αρχίσει να κάνει αλλαγές μόνο όταν η προβλεπόμενη τιμή γλυκόζης αίματος πέφτει έξω, αλλά αν το κάνετε αυτό, θα απαντήσει πιο αργά και είναι απίθανο να επιτύχετε τέτοια σταθερά σάκχαρα αίματος.
+**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
 ## Θεραπεία, xDrip, NSClient
 
-Αυτά είναι απλώς ημερολόγια θεραπειών (boluses και υδατάνθρακες), μηνύματα xDrip και μηνύματα που αποστέλλονται στη Nightscout μέσω του ενσωματωμένου πελάτη Nightscout. Συνήθως δεν χρειάζεται να ανησυχείτε για κανένα από αυτά εκτός αν υπάρχει κάποιο πρόβλημα.
+These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 
 ## Διαμόρφωση
 
 ![Διαμόρφωση](../images/Screenshot_config_builder.png)
 
-Εδώ θα ρυθμίσετε τη διαμόρφωση της συσκευής AndroidAPS. Αυτό το στιγμιότυπο δείχνει μια αρκετά τυπική εξέδρα χρησιμοποιώντας μια αντλία Combo, έναν αισθητήρα Dexcom G5 CGM που διαχειρίζεται μέσω xDrip + και τρέχει με ινσουλίνη NovoRapid σε ένα προφίλ Oref και συνδέεται με ένα διακομιστή με βάση το cloud Nightscout.
+This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
-Το πλαίσιο ελέγχου στα δεξιά καθορίζει εάν η συγκεκριμένη ενότητα θα εμφανιστεί στην επάνω μπάρα μενού (δείτε την ενότητα A στην οθόνες) και το σύμβολο μικρού γραναζιού επιτρέπει την πρόσβαση στη ρύθμιση αυτής της ενότητας, εάν υπάρχουν.
+The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
 ## Ρυθμίσεις και προτιμήσεις
 
-Στην επάνω δεξιά γωνία της γραμμής πλοήγησης θα βρείτε τρεις μικρές κάθετες κουκίδες. Πατώντας σε αυτά, θα μεταβείτε στις προτιμήσεις της εφαρμογής, στο πρόγραμμα περιήγησης ιστορικού, στον οδηγό εγκατάστασης, στις πληροφορίες της εφαρμογής και στο κουμπί εξόδου που θα κλείσει το AAPS.
+At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
