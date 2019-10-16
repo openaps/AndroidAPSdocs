@@ -28,15 +28,3 @@ Deze moet je kiezen wanneer je SMB met UAM gebruikt. De gevoeligheid wordt berek
 ## Gelijktijdige koolhydraten
 
 Er zit een aanzienlijk verschil tussen AAPS en Gewogen gemiddelde versus Oref0 en Oref1. De Oref gevoeligheids-algoritmes werken met de aanname dat er slechts één maaltijd tegelijkertijd wordt opgenomen in je lichaam. Dit betekent dat een tweede maaltijd pas opgenomen begint te worden nadat de eerste maaltijd volledig is opgenomen. Bij AAPS en Gewogen gemiddelde begint de opname meteen wanneer je een maaltijd invoert. Dit betekent dat, als er meer dan één maaltijd aan boord is dat de minimale koolhydraten absorptie wordt aangepast aan de grootte van de maaltijd en de max absorptie tijd. De minimale absorptie zal daarom hoger zijn in vergelijking met de Oref gevoeligheids-algoritmes.
-
-## COB (koolhydraten aan boord) voorbeelden
-
-Oref0 / Oref1 - niet-opgenomen koolhydraten worden afgekapt (naar nul) na bepaalde tijd. NB: nieuwere versies van AndroidAPS gebruiken oranje (ipv groen) als kleur voor koolhydraten.
-
-![COB van oref0](../images/cob_oref0_orange.png)
-
-AAPS, Gewogen gemiddelde - opname wordt berekend op `COB == 0` na opgegeven tijd
-
-![COB van AAPS](../images/cob_aaps2_orange.png)
-
-Als de door jou ingestelde minimale koolhydraten absorptie wordt gebruikt in plaats van de waarde berekend op basis van afwijkingen, verschijnt een oranje stip op jouw COB grafiek
