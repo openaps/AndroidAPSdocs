@@ -76,7 +76,8 @@ Uso AndroidAPS
    Ecrãs do AndroidAPS <./Getting-Started/Screenshots.md>
    Objectivos <./Usage/Objectives.md>
    Recursos OpenAPS <./Usage/Open-APS-features.md>   
-   Detecção de Sensibilidade e COB <./Configuration/Sensitivity-detection-and-COB.md>
+   COB calculation <./Usage/COB-calculation.rst>
+   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
    Troca de Perfil <./Usage/Profiles.md>
    Alvos-Temporários <./Usage/temptarget.md>   
    Hidratos estendidos <./Usage/Extended-Carbs.md>
