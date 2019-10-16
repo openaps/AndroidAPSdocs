@@ -76,7 +76,8 @@ Użytkowanie AndroidAPS
    Zrzuty ekranów AndroidAPS <./Getting-Started/Screenshots.md>
    Cele (samouczek) <./Usage/Objectives.md>
    Funkcje OpenAPS <./Usage/Open-APS-features.md>   
-   Wykrywanie wrażliwości i COB <./Configuration/Sensitivity-detection-and-COB.md>
+   COB calculation <./Usage/COB-calculation.rst>
+   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
    Zmiana profilu <./Usage/Profiles.md>
    Cele tymczasowe TT <./Usage/temptarget.md>   
    Przedłużone węglowodany <./Usage/Extended-Carbs.md>
