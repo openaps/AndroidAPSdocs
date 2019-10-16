@@ -5,11 +5,13 @@ How does AndroidAPS calculate the COB value?
 ==========================
 Oref0 / Oref1: unabsorbed carbs are cut off after specified time
 ----------------------
-![COB from oref0](../images/cob_oref0_orange.png)
+.. image:: ../images/cob_oref0_orange.png
+  :alt: Oref0 / Oref1
 
 AAPS, WeightedAverage: absorption is calculated to have `COB == 0` after specified time
 ----------------------
-![COB from AAPS](../images/cob_aaps2_orange.png)
+.. image:: ../images/cob_aaps2_orange.png
+  :alt: AAPS, WheitedAverage
 
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
 
@@ -21,9 +23,10 @@ As of version 2.4, AAPS warns you if you are about to bolus with COB from a prev
 How does AndroidAPS detect wrong COB values? 
 -------------------
 
-Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
+Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the `min_5m_carbimpact <..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+.. image:: ../images/Calculator_SlowCarbAbsorbtion.png
+  :alt: Hint on wrong COB value
 
 In the screenshot above, 41% of1 time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm. 
 
