@@ -28,15 +28,3 @@ Wrażliwość jest obliczana na podstawie danych zebrany z ostatnich 8 godzin lu
 ## Równoczesne węglowodany
 
 Należy podkreślić, iż pomiędzy modelami wykrywania wrażliwości - AAPS, Średnią ważoną a Oref0 i Oref1 istnieją zasadnicze różnice. [Oryginalny tekst jest mylący] W tym przypadku do COB dodaje się dodatkowe węglowodany, a następnie COB jest wchłaniany na podstawie obserwowanej absorpcji węglowodorów (w oparciu o to, ile wzrasta BG w stosunku do tego, ile powinno spaść wg. IOB) [Oryginalny tekst jest mylący] Algorytm AAPS oraz Średnio ważona zaczynają przyjmować wchłanianie posiłku niezwłocznie po tym, kiedy wpiszesz węglowodany do aplikacji. Jeśli w organizmie znajduje się więcej niż jeden posiłek, minimalne wchłanianie węglowodanów dostosowuje się do wielkości posiłku i maksymalnego czasu wchłaniania (carbs max absorption time). Minimalna absorpcja będzie odpowiednio wyższa w porównaniu do algorytmów Oref.
-
-## Przykłady wchłaniania aktywnych węglowodanów (COB)
-
-Oref0 / Oref1 - węglowodany niewchłonięte są "odcinane"/ignorowane po określonym czasie
-
-![Aktywne węglowodany (COB) z oref0](../images/cob_oref0_orange.png)
-
-AAPS, Średnia ważona - absorpcja jest obliczana w taki sposób, aby po określonym czasie liczba aktywnych węglowodanów zeszła do zera (`COB == 0`)
-
-![Aktywne węglowodany (COB) z AAPS](../images/cob_aaps2_orange.png)
-
-Jeśli zastosowana zostanie minimalna absorpcja węglowodanów zamiast wartości obliczonej na podstawie odchyleń, na wykresie COB pojawi się pomarańczowa kropka
