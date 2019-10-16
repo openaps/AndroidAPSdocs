@@ -3,13 +3,20 @@ COB calculation
 
 How does AndroidAPS calculate the COB value?
 ==========================
-Oref0 / Oref1: unabsorbed carbs are cut off after specified time
+
+Oref0 / Oref1
 ----------------------
+
+Unabsorbed carbs are cut off after specified time
+
 .. image:: ../images/cob_oref0_orange.png
   :alt: Oref0 / Oref1
 
-AAPS, WeightedAverage: absorption is calculated to have `COB == 0` after specified time
+AAPS, WeightedAverage
 ----------------------
+
+absorption is calculated to have `COB == 0` after specified time
+
 .. image:: ../images/cob_aaps2_orange.png
   :alt: AAPS, WheitedAverage
 
@@ -23,7 +30,7 @@ As of version 2.4, AAPS warns you if you are about to bolus with COB from a prev
 How does AndroidAPS detect wrong COB values? 
 -------------------
 
-Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the `min_5m_carbimpact <..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
+Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
 
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Hint on wrong COB value
