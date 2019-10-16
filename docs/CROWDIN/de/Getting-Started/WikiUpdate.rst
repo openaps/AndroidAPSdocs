@@ -4,6 +4,10 @@ Oktober 2019
 ===============
 * `Dexcom G6-spezifische Problembehandlung <../Hardware/DexcomG6.html#dexcom-g6-spezifische-problembehandlung>`_
 * `Problembehandlung SMS Befehle <../Usage/SMS-Commands.html#problembehandlung>`_
+*  `Hint not to loop while taking SGLT-2 inhibitors <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
+* `New COB calculation page <../Usage/COB-calculation.html>`_
+*  `Wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+
 
 September 2019
 ===============
