@@ -4,6 +4,10 @@
 ===============
 * ` Dexcom G6: устранение неполадок <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting> ` _
 * ` Устранение неполадок команд SMS <../Usage/SMS-Commands.html#troubleshooting> ` _
+*  `Hint not to loop while taking SGLT-2 inhibitors <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
+* `New COB calculation page <../Usage/COB-calculation.html>`_
+*  `Wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+
 
 Сентябрь 2019 года
 ===============
