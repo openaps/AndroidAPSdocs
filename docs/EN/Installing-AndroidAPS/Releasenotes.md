@@ -23,8 +23,8 @@ Release date: XX-XX-XXXX
 ### Major new features
 * Internal change of targetSDK to 28 (Android 9), jetpack support
 * RxJava2, Okhttp3, Retrofit support
-* Old Medtronic pumps support (RileyLink need) - engineering mode only
-* New Automation plugin - engineering mode only
+* Old Medtronic pumps support (RileyLink need)
+* New Automation plugin
 * Allow to bulus only part from bolus wizard calculation
 * Rendering insulin activity
 * Adjusting IOB predictions by autosense result
