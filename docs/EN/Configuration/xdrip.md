@@ -113,6 +113,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
+
 * Start sensor (only if replacing)
 
    -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
@@ -205,6 +206,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
   * Transmitter serial starting with 8G: "Got glucose hh:mm" (i.e. "Got glucose 19:04")
 
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+
 
 * Restart collector (system status - if not replacing sensor}
 * Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
