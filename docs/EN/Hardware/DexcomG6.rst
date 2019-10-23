@@ -52,7 +52,7 @@ Dexcom G6 specific troubleshooting
 * Wait at least 15 min. between stopping and starting a sensor.
 * Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
 * Do not enable "restart sensors" while setting a new sensor
-* Only start new sensor if the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
 
   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
   * Transmitter serial starting with 8G: "Got glucose hh:mm" (i.e. "Got glucose 19:04")
