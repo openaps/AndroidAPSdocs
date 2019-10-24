@@ -46,17 +46,17 @@ kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi 
 
 Poradce při potížích s G6
 ====================
-Dexcom G6 specific troubleshooting
+Dexcom G6 konkrétní řešení problémů
 ----
-* Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip version from May 2019 or a newer nightly build.
-* Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
-* Wait at least 15 min. between stopping and starting a sensor.
-* Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
-* Do not enable "restart sensors" while setting a new sensor
-* Only start new sensor if the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Vysílače se sériovým číslem začínajícím na 80 nebo 81 potřebují minimálně poslední stabilní xDrip verzi z května 2019 nebo novější noční sestavení.
+* Vysílače se sériovým číslem začínajícím na 8G potřebuje minimálně noční sestavení z 25. července 2019 nebo novější.
+* Vyčkejte nejméně 15 minut. mezi zastavením a spuštěním senzoru.
+* Nepoužívejte zadání dřívějšího času. Odpovězte na otázku "Byl senzor zaveden dnes?" vždy "Ano, dnes".
+* Nepovolujte "restartování senzoru" při nastavení nového senzoru
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
 
-  * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-  * Transmitter serial starting with 8G: "Got glucose hh:mm" (i.e. "Got glucose 19:04")
+  * Sériové číslo vysílače začínající na 80 nebo 81: "Got data hh:mm" (tj. "Got data 19:04")
+  * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
