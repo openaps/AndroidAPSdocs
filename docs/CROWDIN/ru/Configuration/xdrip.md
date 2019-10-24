@@ -100,7 +100,13 @@
 * Вставьте новый сенсор (только при замене)
 
 * Поместите трансмиттер в платформу сенсора
-* **Подождите 15 минут** перед запуском сенсора, чтобы xDrip мог инициализировать связь с новым трансмиттером
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+   
+   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+
 * Нажмите старт сенсора (только при смене сенсора)
    
    -> В нижней части экрана через несколько минут появится предупреждение о прогреве сенсора `Осталось x,x часов`.
@@ -184,10 +190,13 @@
    * Вам понадобится серийный номер трансмиттера, если вы пользуетесь им впервые.
 * Введите серийный номер нового трансмиттера. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
 * Вставьте новый сенсор (только при замене).
-* Поместите трансмиттер в платформу сенсора
-* Нажмите старт сенсора (только при смене сенсора)
+* Put transmitter into sensor - Do not start sensor immediately!
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
-   **Рекомендуется подождать около 15 минут между остановкой и запуском нового сенсора (до `Состояние сенсора: Остановлен` на втором экране состояния системы).**
+   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Перезапустите коллектор (состояние системы - если не заменяете сенсор}
 
