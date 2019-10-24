@@ -1,55 +1,55 @@
-What is a Closed Loop System?
+Qu'est ce qu'un Système de boucle fermée ?
 **************************************
 
 .. image:: ../images/autopilot.png
-  :alt: AAPS is like an autopilot
+  :alt: AAPS est comme un pilote automatique
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps#switching-to-automated-diabetes-mode-autopilot-for-your-diabetes>`_. But what does that mean?
+Un système de boucle fermée du pancréas artificiel combine différents composants afin de vous faciliter la gestion du diabète. 
+Dans son grand livre `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, une des fondatrices du mouvement boucle fermée en Open Source, appelle cela `"pilote automatique pour votre diabète" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps#switching-to-automated-diabetes-mode-autopilot-for-your-diabetes>`_. Mais qu'est-ce que cela signifie ?
 
-**Autopilot in an aircraft**
+**Pilot automatique dans un avion**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+Le pilote automatique ne fait pas le travail complet et ne donne pas la possibilité au pilote de dormir pendant tout le vol. Il facilite le travail des pilotes. Il les soulage de la charge de la surveillance permanente de l'avion et de l'attitude de vol. Cela permet au pilote de se concentrer sur la surveillance de l'espace aérien et le contrôle des fonctions du pilote automatique.
 
-The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
+Le pilote automatique reçoit des signaux de différents capteurs, un ordinateur les évalue avec les spécifications du pilote et effectue ensuite les ajustements nécessaires. Le pilote n'a plus à s'inquiéter des ajustements constants.
 
-**Closed Loop System**
+**Système de boucle fermée**
 
-The same applies to an artificial pancreas closed loop system. It does not do the whole job, you still have to take care of your diabetes. A closed loop system combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+Il en va de même pour un système de boucle fermée du pancréas artificiel. Il ne fait pas tout le travail, vous devez toujours faire attention à votre diabète. Un système de boucle fermée combine les données du capteur d'une MGC/MGF avec vos spécifications de gestion du diabète telles que le taux de basal, le facteur de sensibilité à l'insuline (SI) et le ratio du glucides/insuline (G/I). De cette façon, il calcule les propositions de traitements et implémente ces petits ajustements permanents afin de garder votre diabète dans la plage cible et vous soulager. Cela vous laisse plus de temps pour votre vie "à côté" du diabète.
 
-Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
+Tout comme vous ne voudriez pas monter dans un avion où seul un pilote automatique vole sans surveillance humaine, un système de boucle fermée vous aide à gérer votre diabète, mais a toujours besoin de votre soutien! **Même avec une boucle fermée, vous ne pouvez pas simplement oublier votre diabète !**
 
-Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
+Tout comme le pilote automatique dépend des valeurs du capteur ainsi que des spécifications du pilote, un système de boucle fermée nécessite des entrées adaptées, telles que les débits de basal, la SI et le rapport G/I, pour vous aider à réussir.
 
 
-Open Source Artificial Pancreas Closed Loop Systems
+Systèmes de boucle fermée de pancréas artificiels en Open Source
 ===============================
-At present there are three major open source closed loop systems available:
+À l'heure actuelle, il existe trois grands systèmes de boucle fermée en Open Source :
 
 AndroidAPS (AAPS)
 -----------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AndroidAPS est décrit en détail dans `cette documentation <./WhatisAndroidAPS.html>`_. Il utilise un Smartphone Android pour le calcul et le contrôle de votre pompe à insuline. Il est en étroite collaboration avec OpenAPS (par ex. ils partagent les algorithmes).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
+Les `pompes <../Hardware/pumps.html>`_ compatibles sont :
 
 * DanaR / DanaRS
 * Accu-Chek Combo
 * Accu-Chek Insight
-* some old Medtronic pumps (as of version 2.4)
+* quelques anciennes pompes Medtronic (à partir de la version 2.4)
 
 OpenAPS
 -------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ a été le premier système de boucle fermée Open Source. Il utilise un petit ordinateur comme un Raspberry Pi ou un Intel Edison.
 
-Compatible pumps are:
+Les pompes compatibles sont :
 
-* some old Medtronic pumps
+* quelques anciennes pompes Medtronic
 
-Loop for iOS
+Loop pour iOS
 ------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+`Loop pour iOS <https://loopkit.github.io/loopdocs/>`_ est le système de boucle fermée Open Source à utiliser avec un iPhone Apple.
 
-Compatible pumps are:
+Les pompes compatibles sont :
 
 * Omnipod
-* some old Medtronic pumps
+* quelques anciennes pompes Medtronic
