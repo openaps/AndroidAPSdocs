@@ -100,7 +100,13 @@
 * Τοποθετήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε)
 
 * Βάλτε τον πομπό στον αισθητήρα
-* **Περιμένετε 15 λεπτά** πριν από την έναρξη αισθητήρα, ώστε να xDrip μπορεί να προετοιμάσει την επικοινωνία με τη νέα συσκευή αποστολής σημάτων
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+   
+   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+
 * Ξεκινήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε)
    
    -> Κοντά στο κάτω μέρος της οθόνης ` Θα πρέπει να εμφανιστεί η ένδειξη Warm Up x, x ώρες αριστερά ` μετά από μερικά λεπτά.
@@ -184,10 +190,13 @@
    * Θα χρειαστείτε τον σειριακό αριθμό πομπού σας αν αυτή είναι η πρώτη φορά που το χρησιμοποιήσατε.
 * Τοποθετήστε τον σειριακό αριθμό του νέου πομπού. Προσέξτε να μην συγχέετε 0 (μηδέν) και O (κεφαλαίο γράμμα o).
 * Τοποθετήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε).
-* Βάλτε τον πομπό στον αισθητήρα
-* Ξεκινήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε)
+* Put transmitter into sensor - Do not start sensor immediately!
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
-   **Συνιστάται να περιμένετε περίπου. 15 λεπτά μεταξύ της διακοπής και της εκκίνησης του νέου αισθητήρα (μέχρι να εμφανιστεί ` Κατάσταση αισθητήρα: Διακοπή ` στη δεύτερη οθόνη κατάστασης συστήματος).**
+   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Κάντε επανεκκίνηση του συλλέκτη (system status- αν δεν... αντικαταστήστε τον αισθητήρα}
 
