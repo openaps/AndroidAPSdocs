@@ -58,7 +58,7 @@ Die Anzeige ist ebenfalls über die Optionen in Abschnitt D konfigurierbar. In d
 
 ### Abschnitt G
 
-Ermöglicht es dir, einen Bolus zu verabreichen (normalerweise würdest du dazu die Schaltfläche “Calculator” verwenden) und eine CGM-Kalibrierung mit einer Blutzuckermessung (Finger) hinzuzufügen. Zudem wird hier der Quick Wizzard Button angezeigt, wenn Du ihn im [Konfigurationsgenerator](.../Configuration/Config-Builder#quickwizard-settings) eingestellt hast.
+Ermöglicht es dir, einen Bolus zu verabreichen (normalerweise würdest du dazu die Schaltfläche “Calculator” verwenden) und eine CGM-Kalibrierung mit einer Blutzuckermessung (Finger) hinzuzufügen. Zudem wird hier der Quick Wizzard Button angezeigt, wenn Du ihn im [Konfigurationsgenerator](../Configuration/Config-Builder#quickwizard-settings) eingestellt hast.
 
 ## Der Bolus-Rechner
 
@@ -90,15 +90,11 @@ zeigt die verschiedenen Einflussfaktoren der Bolusberechnung. Du kannst diejenig
 
 Wenn Du einen zusätzlichen Bolus kurz nach einem Mahlzeitenbolus abgeben willst (z.B. zusätzlicher Nachtisch), so kann es hilfreich sein, alle Häkchen rauszunehmen. Dadurch wird die Insulinmenge nur auf Basis der neuen Kohlenhydrate berechnet.
 
-### Langsamer Kohlenhydrat-Abbau
-
-Ab Version 2.4 warnt AAPS, wenn eine langsamer Abbau der Kohlenhydrate (COB) festgestellt wird. Es wird ein zusätzlicher Hinweistext nach der Nutzung des Boluskalkulators angezeigt. In diesem Fall besteht das Risiko, dass die Menge der COB überschätzt und deswegen zu viel Insulin abgegeben wird.
+### Fehlerhafte Erkennung der aktiven Kohlenhydrate (COB)
 
 ![Langsamer Kohlenhydrat-Abbau](../images/Calculator_SlowCarbAbsorbtion.png)
 
-In diesem Beispiel wurde 41% der Zeit [min_5m_carbimpact](..//Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings) verwendet statt den Abbau der Kohlenhydrate (und damit COB) aus der Änderungen der BZ-Werte zu ermitteln.
-
-In diesem Fall kann es ratsam sein, die Insulinabgabe abzubrechen und den Boluskalkulator erneut ohne das Kreuz bei COB zu verwenden. Falls Deine manuellen Berechnungen dennoch Bedarf für einen Korrekturbolus ergeben, so gib diesen manuell ein. Aber sei vorsichtig, um nicht zu viel Insulin abzugeben!
+Wenn Du nach Verwendung des Bolus-Assistenten die obige Warnung siehst, hat AAPS erkannt, dass aktiven Kohlenhydrate (COB) eventuell nicht korrekt berechnet werden konnten. Wenn Du kurz nach einer vorangegangenen Mahlzeit erneut einen Bolus abgeben willst, solltest Du Dir der Gefahr einer Überdosierung bewusst sein! Weitere Hinweise findest Du auf der Seite zur [Berechnung der aktiven Kohlenhydrate (COB)](../Usage/COB-calculation.html#detection-of-wrong-cob-values).
 
 ## Insulin Profil
 
@@ -106,9 +102,9 @@ In diesem Fall kann es ratsam sein, die Insulinabgabe abzubrechen und den Bolusk
 
 Hier wird das Aktivitätsprofil des von Dir gewählten Insulins angezeigt. Die LILA Linie zeigt an, wie viel Insulin nach der Injektion verbleibt und wie es im Zeitverlauf abnimmt. Die BLAUE Linie veranschaulicht die Aktivität des Insulins.
 
-Normalerweise wirst du eines der Oref Profile verwenden. Wichtig dabei ist, dass der Abbau über einen deutlich längeren Zeitraum erfolgt. Von der klassischen Pumpentherapie bist du es vermutlich gewohnt anzunehmen, dass das Insulin nach ca. 3 1/2 Stunden vollständig abgebaut ist. Allerdings spielt der langsamere Abbau beim Loopen eine wichtige Rolle da die Berechnungen deutlich präziser sind und sich diese geringen Mengen unter den rekursiven Berechnungen des AndroidAPS Algorithmus summieren.
+Normalerweise wirst du eines der Oref Profile verwenden. Wichtig dabei ist, dass der Abbau über einen deutlich längeren Zeitraum erfolgt. Von der klassischen Pumpentherapie bist du es vermutlich gewohnt anzunehmen, dass das Insulin nach ca. 3 1/2 Stunden vollständig abgebaut ist. Allerdings spielt der langsamere Abbau beim Loopen eine wichtige Rolle, da die Berechnungen deutlich präziser sind und sich diese geringen Mengen unter den rekursiven Berechnungen des AndroidAPS Algorithmus summieren.
 
-Weitere Informationen zu den verschiedenen Insulintypen, ihren Aktivitätsprofilen und warum dies alles eine Rolle spielt findest du in diesem Artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
+Weitere Informationen zu den verschiedenen Insulintypen, ihren Aktivitätsprofilen und warum dies alles eine Rolle spielt findest du in diesem Artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
 Du solltest auch einen Blick in diesen exzellenten Blog-Artikel werfen: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
@@ -124,17 +120,17 @@ Hier sehen wir den Status des Insulin-Pumpe - in diesem Fall eine Accu-Chek Comb
 
 ![Care Portal (Behandlungen)](../images/Screenshot_care_portal.png)
 
-Dies entspricht den Funktionen, die du bei Nightscout unter dem "+" Symbol findest. Diese erlauben dir, zusätzliche Notizen in deine Aufzeichnungen zu übernehmen. Funktionen wie Katheter- und Reservoirwechsel sollten selbsterklärend sein. ACHTUNG! Vom Care Portal können keine Kommandos an Deine Pumpe gesandt werden! Wenn du also über das Care Portal einen Bolus hinzufügst, so wird nur eine entsprechende Notiz in Nightscout eingetragen. Die Pumpe selbst wird keinen Bolus abgeben.
+Dies entspricht den Funktionen, die du bei Nightscout unter dem "+" Symbol findest. Diese erlauben dir, zusätzliche Notizen in deine Aufzeichnungen zu übernehmen. Funktionen wie Katheter- und Reservoirwechsel sollten selbsterklärend sein. ACHTUNG! Vom Care Portal können keine Kommandos an Deine Pumpe gesandt werden! Wenn Du also über das Care Portal einen Bolus hinzufügst, so wird nur eine entsprechende Notiz in Nightscout eingetragen. Die Pumpe selbst wird keinen Bolus abgeben.
 
 ## Loop, MA, AMA, SMB
 
-Normalerweise musst du dich um diese Punkte nicht kümmern. Sie zeigen die Ergebnisse des OpenAPS Algorithmus der jedes mal berechnet wird, wenn das System einen neuen Wert vom CGM erhält. Diese werden an anderer Stelle beschrieben.
+Normalerweise musst Du Dich um diese Punkte nicht kümmern. Sie zeigen die Ergebnisse des OpenAPS Algorithmus, der jedes mal berechnet wird, wenn das System einen neuen Wert vom CGM erhält. Einstellungen und Vorgaben werden an anderer Stelle des Wikis erläutert.
 
 ## Profile
 
 ![Profile](../images/Screenshot_profile.png)
 
-AndroidAPS kann mit verschiedenen Profileinstellungen betrieben werden. In der Regel wird - wie abgebildet - das Nightscout-Profil über den eingebaute Nighscout Client heruntergeladen und hier in Nur-Lesen-Form dargestellt. Wenn Du Änderungen vornehmen willst, mache das auf Deiner Nightscout-Seite und führe dann einen [ Profil-Wechel](../Usage/Profiles.md) in AndroidAPS durch, um die Änderungen zu aktivieren. Daten wie z. B. das Basalprofil werden dann automatisch zur Pumpe übertragen.
+AndroidAPS kann mit verschiedenen Profileinstellungen betrieben werden. In der Regel wird - wie abgebildet - das Nightscout-Profil über den eingebaute Nightscout Client heruntergeladen und hier in Nur-Lesen-Form dargestellt. Wenn Du Änderungen vornehmen willst, mache das auf Deiner Nightscout-Seite und führe dann einen [ Profil-Wechsel](../Usage/Profiles.md) in AndroidAPS durch, um die Änderungen zu aktivieren. Daten wie z. B. das Basalprofil werden dann automatisch zur Pumpe übertragen.
 
 **DIA** (Duration of Insulin Action) steht für die Wirkdauer des Insulins und wurde oben bei den Insulinprofilen erläutert.
 
@@ -144,7 +140,7 @@ AndroidAPS kann mit verschiedenen Profileinstellungen betrieben werden. In der R
 
 **Basal:** Das in der Pumpe programmierte Basalprofil.
 
-**Target:** ist der Zielbereich, den AndroidAPS immer anstreben soll. Du kannst verschiedene Zielbereiche für unterschiedliche Tageszeiten setzen, wenn du willst. Du kannst sogar einen oberen und unteren Zielwert definieren, so dass AndroidAPS nur Änderungen vornimmt, wenn der Blutzucker den Zielbereich verlässt. Wenn Du das tust wird das System aber langsamerer reagieren und es wird unwahrscheinlicher, dass du stabile Zuckerwerte erreichst.
+**Target:** ist der Zielbereich, den AndroidAPS immer anstreben soll. Du kannst verschiedene Zielbereiche für unterschiedliche Tageszeiten setzen, wenn Du willst. Dies muss kein Zielpunkt sein, Du kannst einen oberen und unteren Zielwert definieren so dass AndroidAPS nur Änderungen vornimmt, wenn der Blutzucker den Zielbereich verlässt. Wenn Du das tust wird das System aber langsamerer reagieren.
 
 ## Behandlungen, xDrip, NSClient
 
@@ -156,8 +152,8 @@ Diese sind einfach Aufzeichnungen der Behandlungen (Bolus und Kohlenhydrate), xD
 
 An dieser Stelle wird dein AndroidAPS System eingerichtet. Das Bild zeigt ein typisches System, das mit einer Accu-Chek Combo Insulinpumpe und einem Dexcom G5 CGM betrieben wird. Der Dexcom Sensor wird über xDrip+ gesteuert. Als Insulin wird NovoRapid mit einem Oref Profil verwendet und die Daten auf einen Nightscout Cloudserver hochgeladen.
 
-Wenn die Box rechts markiert ist, wird das entsprechende Modul in der oberen Menüliste angezeigt (siehe Abschnitt A beim Hauptbildschirm). Über das kleine Zahnradsymbol können weitere Einstellungen für dieses Modul vorgenommen werden sofern verfügbar.
+Wenn die Box rechts angehakt ist, wird das entsprechende Modul in der oberen Menüliste angezeigt. Über das kleine Zahnradsymbol können weitere Einstellungen für dieses Modul vorgenommen werden - sofern verfügbar.
 
 ## Einstellungen und Vorgaben
 
-Oben rechts in der Navigationsleiste findest du drei übereinander angeordnete Punkte. Ein Klick darauf führt Dich zu den Einstellungen, der Historie, dem Einrichtungsassistenten, den Informationen über die App und den Schließen-Button, mit dem Du AAPS verlassen kannst.
+Oben rechts in der Navigationsleiste findest du drei übereinander angeordnete kleine Punkte. Ein Klick darauf führt Dich zu den Einstellungen, der Historie, dem Einrichtungsassistenten, den Informationen über die App und den Schließen-Button, mit dem Du AAPS verlassen kannst.

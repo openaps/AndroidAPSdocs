@@ -100,7 +100,13 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Setze den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
 
 * Klicke den Transmitter in die Halterung auf dem Sensorpflaster ein.
-* **Warte 15 Minuten** bevor Du den Sensor startest damit xDrip+ die Kommunikation mit dem neuen Transmitter initialisieren kann.
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+   
+   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+
 * Starte den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
    
    -> Am unteren Bildschirmrand nach einigen Minuten wird `Warm Up x,x Stunden left` angezeigt.
@@ -184,10 +190,13 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
    * Wenn Du den Transmitter zum ersten Mal verbindest, benötigst Du die Transmitter-Seriennummer.
 * Gib die Seriennummer des neuen Transmitters ein. Achte darauf, 0 (Null) und O (Großbuchstabe o) korrekt auseinander zu halten.
 * Setze den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
-* Klicke den Transmitter in die Halterung auf dem Sensorpflaster ein.
-* Starte den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
+* Put transmitter into sensor - Do not start sensor immediately!
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
-   **Es wird empfohlen, ca. 15 Minuten zwischen dem Stoppen des alten Sensors und dem Start des neuen Sensors zu warten (bis `Sensor Status: Stopped` auf dem zweiten Statusbildschirm angezeigt wird).**
+   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Starte den Datensammler neu (im Systemstatus und nur, wenn Du den Sensor neu gesetzt hast).
 

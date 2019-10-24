@@ -10,7 +10,7 @@
 
 **Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
-Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
+If your build fails with an error regarding "on demand configuration" you can do the following:
 
 * Ανοίξτε το παράθυρο "Προτιμήσεις" κάνοντας κλικ στην επιλογή Αρχείο> Ρυθμίσεις (σε Mac, Android Studio> Προτιμήσεις).
 * Στο αριστερό τμήμα του παραθύρου, κάντε κλικ στην επιλογή Δημιουργία, εκτέλεση, ανάπτυξη> μεταγλωττιστής.

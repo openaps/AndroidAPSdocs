@@ -86,8 +86,8 @@
 
 ## Συναγερμοί κατά την χορήγηση bolus
 
-* Εάν το AndroidAPS ανιχνεύσει ότι ένα πανομοιότυπο έχει παραδοθεί με επιτυχία την ίδια στιγμή, θα αποφευχθεί η χορήγηση bolus με ταυτόσημο αριθμό μονάδων ινσουλίνης. Αν πραγματικά θέλετε να κάνετε bolus την ίδια ινσουλίνη δύο φορές σε σύντομη διαδοχή, απλά περιμένετε δύο ακόμη λεπτά και στη συνέχεια παραδώστε το bolus ξανά. Εάν το bolus έχει διακοπεί ή δεν χορηγήθηκε για άλλους λόγους, μπορείτε να υποβάλετε ξανά το bolus από το AAPS 2.0.
-* Το υπόβαθρο είναι ένας μηχανισμός ασφαλείας ο οποίος διαβάζει το ιστορικό των bolus της αντλίας πριν από τη χορήγηση ενός νέου bolus για να υπολογίσει σωστά την ινσουλίνη στον οργανισμό(IOB), ακόμα και όταν χορηγείται bolus απευθείας από την αντλία. Εδώ πρέπει να αποφευχθούν οι δυσδιάκριτες καταχωρήσεις.
+* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If you really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
+* Background is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Εδώ πρέπει να αποφευχθούν οι δυσδιάκριτες καταχωρήσεις.
 
 ![Διπλό bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
 

@@ -23,7 +23,7 @@ Within the "profile switch" you can choose two additional changes which used to 
 
 ![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
-## Time shift
+## Tijd verschuiving
 
 * This moves everything round the clock by the number of hours entered. 
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.

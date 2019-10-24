@@ -1,30 +1,30 @@
-Remote monitoring
+Nuotolinis stebėjimas
 ******************
 
-.. image:: ../images/KidsMonitoring.png
-  :alt: Monitoring children
+.. nuotrauka:: ../images/KidsMonitoring.png
+  :alt: Vaikų stebėjimas
   
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AndroidAPS siūlo kelis variantus vaikų nuotoliniam stebėjimui, taip pat leidžia siųsti nuotolinio valdymo komandas. Žinoma, jūs galite taip pat naudoti nuotolinį stebėjimą jūsų partneriui arba draugui.
 
-Functions
+Funkcijos
 =========
-* Kid's pump is controlled by kid's phone using AndroidAPS.
-* Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone.
-* Parents can be alarmed by using **xDrip app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands.html>`_.
-* Remote profile switch and temp targets through NSClient app.
+* Vaiko pompa yra kontroliuojama per vaiko telefoną naudojant AndroidAPS.
+* Tėvai gali nuotoliniu būdu sekti, matyti visus svarbius duomenis, tokius, kaip gliukozės kiekis, aktyvūs angliavandeniai, aktyvus insulinas, ir pan. naudojant **NSClient app** jų telefone.
+* Tėvai gali gauti savo telefone perspėjimus, naudodami **xDrip app sekėjo režime**.
+* AndroidAPS nuotolinis valdymas naudojant SMS Komandas <../Usage/SMS-Commands.html>`_.
+* Profilio perjungimas ir laikinų tikslų nustatymas nuotoliniu būdu per NSClient programą.
 
-Tools and apps for remote monitoring
+Įrankiai ir programos, skirtos nuotoliniam stebėjimui
 ------------------------------------
-* `Nightscout <http://www.nightscout.info/>`_ in web browser (mainly data display)
-*	NSClient app
-*	Dexcom follow if you are using original Dexcom app (BG values only)
-*	`xDrip <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-*	`Spike <https://spike-app.com/>`_ on iPhone (mainly BG values and **alarms**)
+* `Nightscout <http://www.nightscout.info/>`_ interneto naršyklėje (pateikiami duomenys)
+* NSClient programėlė
+* Dexcom Follow, jei naudojate originalią Dexcom programėlę (tik glikemijos duomenys)
+* `xDrip <../Configuration/xdrip.html>`_ sekėjo režime (glikemijos reikšmės ir **aliarmai**)
+* `Spike <https://spike-app.com/>` _ " iPhone (glikemijos reikšmės ir **aliarmai**)
 
-Things to consider
+Būtina atsižvelgti
 ==================
-* Setting the correct `treatment factors <../Getting-Started/FAQ.html#how-to-begin>`_ (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved. 
-* So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
-* What is your emergency plan when remote control does not work (i.e. network problems)?
-* Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the `files section of AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ on Facebook.
+* Nustatyti vaikams teisingus `terapijos faktorius <../Getting-Started/DUK.html#how-to-begin>`_ (bazės, IVT, JIF...) yra sudėtinga, ypač veikiant augimo hormonams. 
+* Todėl skirkite laiko, kad nustatytumėte juos teisingai ir išbandykite juos, kai vaikas yra šalia jūsų, ypač prieš pradėdami nuotolinį stebėjimą ir nuotolines terapijas. Mokyklinės atostogos gali būti labai geras laikas tam.
+* Koks yra jūsų veiksmų planas, kai nuotolinis valdymas neveikia (t. y. kyla ryšio problemos)?
+* Nuotolinis stebėjimas ir terapija gali būti tikrai naudingi vaikui esant darželyje ar pradinėje mokykloje. Tačiau įsitikinkite, kad mokytojai ir auklėtojai žino jūsų vaiko diabeto priežiūros planą. Tokių sveikatos priežiūros planų galima rasti 'Facebook "AndroidAPS users" dokumentų skyriuje <https://www.facebook.com/groups/AndroidAPSUsers/files/>`.

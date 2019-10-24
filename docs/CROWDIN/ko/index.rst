@@ -76,7 +76,8 @@ AndroidAPS Usage
    AndroidAPS screens <./Getting-Started/Screenshots.md>
    목적 <./Usage/Objectives.md>
    OpenAPS 기능들 <./Usage/Open-APS-features.md>   
-   Sensitivity detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   COB calculation <./Usage/COB-calculation.rst>
+   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
    프로파일 변경 <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.md>

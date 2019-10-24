@@ -76,7 +76,8 @@ AndroidAPS Usage
    AndroidAPS screens <./Getting-Started/Screenshots.md>
    Doelen <./Usage/Objectives.md>
    OpenAPS functies <./Usage/Open-APS-features.md>   
-   Sensitivity detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
+   COB calculation <./Usage/COB-calculation.rst>
+   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
    Profiel wissel <./Usage/Profiles.md>
    Tijdelijk streefdoel <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.md>

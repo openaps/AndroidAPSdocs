@@ -71,7 +71,7 @@ There are several blogs with good tips to help you understand the practicalities
 * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 * [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
-## What emergency equipment is recommended to take with me?
+## Welke spullen moet ik bij me hebben voor noodgevallen?
 
 First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
 
@@ -125,7 +125,7 @@ So, a basal rate too high will create low BGs both with the default rate, but al
 
 Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
-## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+## Insuline gevoeligheids factor (Insulin Sensitivity Factor, ISF) (mmol/l/E of mg/dl/E)
 
 ### Description & testing
 
@@ -154,7 +154,7 @@ An ISF that is too low (not uncommon) can result in ‘over corrections’, beca
 
 Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
 
-## Insulin to carb ratio (IC) (g/U)
+## Koolhydraat ratio (KH) (g/E)
 
 ### Description & testing
 
@@ -198,7 +198,7 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
-# Other settings
+# Overige instellingen
 
 ## Nightscout settings
 
@@ -249,7 +249,7 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 ### Hygiene
 
-#### What to do when taking a shower or bath?
+#### Wat te doen tijdens het douchen?
 
 You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
 

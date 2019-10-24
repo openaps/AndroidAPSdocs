@@ -28,15 +28,3 @@ Citlivost je vypočítaná z údajů 8 hodin do minulosti nebo od poslední vým
 ## Souběžné sacharidy
 
 Zde je oproti použití citlivosti AAPS, váženému průměru a Oref0, Oref1 výrazný rozdíl. Pluginy Oref předpokládají, že se vždy vstřebává pouze jedno jídlo. To znamená, že druhé jídlo se začne vstřebávat až poté, co je první jídlo již zcela vstřebáno. Citlivosti AAPS + Vážený průměr začnou počítat vstřebávání ihned, jakmile zadáte sacharidy. Jestliže jste snědli více než jedno jídlo, minimální rychlost vstřebávání sacharidů se nastaví podle velikosti jídla a max. doby absorpce. Minimální absorpce bude v porovnání s pluginy Oref vyšší.
-
-## Příklady COB
-
-Oref0 / Oref1 - nestrávené sacharidy jsou odříznuty po určené době
-
-![COB z Oref0](../images/cob_oref0_orange.png)
-
-AAPS, vážený průměr – absorpce se počítá tak, aby bylo `COB == 0` po určité době
-
-![COB z AAPS](../images/cob_aaps2_orange.png)
-
-Jestliže je použitá minimální absorpce sacharidů namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví oranžová tečka

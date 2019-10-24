@@ -52,10 +52,10 @@ Dexcom G6-spezifische Problembehandlung
 * Warte mindestens 15 Minuten zwischen dem Stoppen und Starten des Sensors.
 * Datiere die Einsetzzeit nicht zurück. Beantworte daher die Frage, ob Du den Sensor heute eingesetzt hast, immer mit Ja.
 * Beim Starten eines Sensors darf "restart sensors" nicht aktiviert sein.
-* Starte den neuen Sensor nur wenn eine der folgenden Informationen auf der  Classic Status Page -> G5/G6 status -> PhoneServiceState angezeigt wird:
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
 
   * Transmitter Seriennummer beginnt mit 80 oder 81: "Got data hh:mm" (z.B. "Got data 19:04")
-  * Transmitter Seriennummer beginnt mit 8G : "Got glucose hh:mm" (z.B. "Got glucose 19:04")
+  * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
