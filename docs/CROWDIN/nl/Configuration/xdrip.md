@@ -100,7 +100,13 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
 * Insert new sensor (only if replacing)
 
 * Put transmitter into sensor
-* **Wait 15 minutes** before starting sensor so xDrip can initialize communication with the new transmitter
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+   
+   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+
 * Start sensor (only if replacing)
    
    -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
@@ -184,10 +190,13 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... try [nightly b
    * You will need your transmitter serial number if this is the first time you've used it.
 * Put in serial number of new transmitter. Be careful not to confuse 0 (zero) and O (capital letter o).
 * Insert new sensor (only if replacing).
-* Put transmitter into sensor
-* Start sensor (only if replacing)
+* Put transmitter into sensor - Do not start sensor immediately!
+* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
-   **It is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen).**
+   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   
+   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Restart collector (system status - if not replacing sensor}
 
