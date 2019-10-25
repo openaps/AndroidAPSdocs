@@ -14,7 +14,7 @@ Please understand that this change is not intended to bug you but is due to safe
 
 ## Version 2.4
 
-Release date: XX-XX-XXXX
+Release date: 26-10-2019
 
 ### Is this update for me? Currently is NOT supported
 * Android 5
