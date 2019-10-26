@@ -2,12 +2,12 @@
 **********************
 Октябрь 2019
 ===============
-* `COB calculation on separate page <../Usage/COB-calculation.html>`_
-* `COB - wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+* Расчет активных углеводов COB на отдельной странице <../Usage/COB-calculation.html>`_
+* ` активные углеводы COB-неправильное определение значения COB <../Usage/COB-calculation.html#detection-оф-неправо-cob-values> ` _
 * ` Dexcom G6: устранение неполадок <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting> ` _
-* `SGLT-2 inhibitors - do not use when looping <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
-* `SMS Commands Troubleshooting <../Usage/SMS-Commands.html#troubleshooting>`_
-* `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
+* "Ингибиторы SGLT-2"-не использовать с AAPS <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
+* ` Устранение неполадок команд SMS <../Usage/SMS-Commands.html#troubleshooting> ` _
+* ` xDrip-обновление - замена трансмиттера G6 <../Configuration/xdrip.html#replacee-transmitter> ` _
 
 Сентябрь 2019 года
 ===============

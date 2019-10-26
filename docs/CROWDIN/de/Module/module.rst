@@ -1,6 +1,6 @@
 Übersicht der Komponenten 
 ==============================================
-AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf das `Komponenten-Setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_ werfen..
+AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf das `Komponenten-Setup<https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, werfen..
    
 .. image:: ../images/modules.png
   :alt: Übersicht der Komponenten
@@ -57,7 +57,7 @@ Falls Du eine Pumpe **auf eigene Kosten** erwerben willst, findest Du in `dieser
 
 **Welche Pumpe ist am Besten für den Closed Loop mit AndroidAPS geeignet?**
 
-Die Combo, die Insight und die älteren Medtronic Pumpen sind solide und "loopfähig". Die Combo hat wegen des Standard Luer-Lock-Anschlusses auch den Vorteil, dass die Auswahl an Kathetern groß ist. Und sie verwendet Standard-Batterien, die rund um die Uhr an jeder Tankstelle erhältlich sind. Im Notfall kannst du sie sogar aus der Fernbedienung in deinem Hotelzimmer "ausleihen" ;-)
+Die Combo, die Insight und die älteren Medtronic Pumpen sind solide und "loopfähig". Die Combo hat wegen des Standard Luer-Lock-Anschlusses auch den Vorteil, dass die Auswahl an Kathetern groß ist. Und sie verwendet Standard-Batterien, die rund um die Uhr an jeder Tankstelle erhältlich sind. Im Notfall kannst du sie sogar aus der Fernbedienung in deinem Hotelzimmer "ausleihen" ;-).
 
 Die Vorteile der Dana R/RS gegenüber  der Combo sind aber:
 
@@ -115,7 +115,7 @@ Eine Schritt-für-Schritt-Anleitung findest Du im Sample Setup. Dieses ist schon
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
    
    Sample Setup <../Getting-Started/Sample-Setup.rst>
  

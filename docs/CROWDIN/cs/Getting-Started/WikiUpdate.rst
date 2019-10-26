@@ -2,12 +2,12 @@ Aktualizace a změny Wiki
 **********************
 Říjen 2019
 ===============
-* `COB calculation on separate page <../Usage/COB-calculation.html>`_
-* `COB - wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
-* `Dexcom G6 specific troubleshooting <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
-* `SGLT-2 inhibitors - do not use when looping <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
-* `SMS Commands Troubleshooting <../Usage/SMS-Commands.html#troubleshooting>`_
-* `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
+* ` COB výpočet na samostatné stránce <../Usage/COB-calculation.html>`_
+* ` COB - chybná hodnota COB detekce <../Usage/COB-calculation.html#detection-ofs wronc-cob-values>`_
+* `Dexcom G6 konkrétní řešení problémů <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
+* `Inhibitory SGLT-2 - nepoužívat při smyčce <../Module/module.html#no-use-of-sgl-t2-inhibitors>`_
+* `SMS příkazy odstraňování problémů <../Usage/SMS-Commands.html#troubleshooting>`_
+* `xDrip - aktualizace výměna G6 vysílače <../Konfigurace/xdrip.html#replace-transmitter>`_
 
 září 2019
 ===============

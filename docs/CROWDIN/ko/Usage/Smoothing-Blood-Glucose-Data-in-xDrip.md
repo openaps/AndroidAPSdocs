@@ -1,6 +1,6 @@
 # 혈당 데이터 평활화
 
-If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. '항상 SMB를 사용합니다'나 '탄수화물 이후 SMB를 사용합니다'와 같은 기능은 잘 필터링된 혈당데이터로만 사용할 수 있습니다.
 
 ## DexcomG5 앱(패치버전)
 

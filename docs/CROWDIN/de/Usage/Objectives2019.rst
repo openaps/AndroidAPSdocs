@@ -3,7 +3,7 @@ Objectives (Ziele)
 
 AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, damit du an die Funktionen und Einstellungen von sicherem Looping herangeführt wirst.  Sie stellen sicher, dass du alles, was in den Abschnitten weiter oben beschrieben wurde, korrekt installiert hast und dass du verstehst, was das System tut und warum du ihm vertrauen kannst.
 
-Wenn Du Dein **Smartphone wechselst**  kannst Du Deine `Einstellungen exportieren <../Usage/ExportImportSettings.html>`_ um die Objectives nicht von vorn beginnen zu müssen. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert.  Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du mit den Zielen erneut von Anfang an beginnen.  Denke daran, regelmäßig ein `Backup Deiner Einstellungen <../Usage/ExportImportSettings.html>`_ zu machen, um auf der sicheren Seite zu sein.
+Wenn Du Dein **Smartphone wechselst**  kannst Du Deine `Einstellungen exportieren <../Usage/ExportImportSettings.html>`_ um die Objectives nicht von vorn beginnen zu müssen. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert.  Wenn du die Einstellungen nicht exportierst und wieder importierst, musst du die Ziele von Anfang an neu erreichen.  Denke daran, regelmäßig ein `Backup Deiner Einstellungen <../Usage/ExportImportSettings.html>`_ zu machen, um auf der sicheren Seite zu sein.
  
 Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren
 =================================================================================

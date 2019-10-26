@@ -1,44 +1,44 @@
-What is a closed loop system with AndroidAPS?
+Что такое система замкнутого цикла с AndroidAPS?
 ****************************
 
-AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. 
+AndroidAPS - это приложение, которое работает как искусственная система поджелудочной железы (APS) на смартфоне Android. Что такое система искусственной поджелудочной железы? Это программа, которая призвана делать то, что делает живая поджелудочная: автоматически поддерживать уровень сахара в крови в допустимых пределах. 
 
-An APS can't do the job as well as a biological pancreas does, but it can make type 1 diabetes easier to manage using devices that are commercially available and software that is simple and safe. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
+ИПЖ не может выполнять все функции биологической поджелудочной железы, но она может сделать диабет типа 1 более легким в управлении с использованием коммерчески доступных устройств и простого и безопасного ПО. Эти устройства включают в себя непрерывный мониторинг глюкозы (CGM), который сообщает AndroidAPS о вашей ГК и инсулиновую помпу, управляемую алгоритмом AndroidAPS для подачи соответствующих доз инсулина. Приложение взаимодействует с этими устройствами через Bluetooth. Она производит расчет дозирования с использованием алгоритма или набора правил, разработанных для другой системы ИПЖ, OpenAPS, которая имеет тысячи пользователей и миллионы часов использования. 
 
-A note of caution: AndroidAPS is not regulated by any medical authority in any country. Using AndroidAPS is essentially carrying out a medical experiment on yourself. Setting up the system requires determination and technical knowledge. If you don't have the technical know-how at the beginning, you will by the end. All the information you need can be found in these documents, elsewhere online, or from others who have already done it -- you can ask them in Facebook groups or other forums. Many people have successfully built AndroidAPS and are now using it entirely safely, but it is essential that every user:
+Предупреждение: AndroidAPS не регулируется медицинскими органами ни в одной стране. Использование AndroidAPS-это, по сути, медицинский эксперимент над самим собой. Настройка системы требует настойчивости и технических знаний. Если у вас нет технических знаний, вы их постепенно приобретете. Вся нужная информация есть в этих документах, на соответствующих сайтах интернете или у других пользователей, которые уже спостроили APS -вы можете спросить их в группах Facebook или на форумах. Многие люди успешно построили AndroidAPS и теперь спокойно им пользуются, но важно, чтобы каждый пользователь:
 
-* Builds the system themselves so that they thoroughly understand how it works
-* Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
-* Maintains and monitors the system to ensure it is working properly
+* Построил систему самостоятельно, чтобы досконально понимать как все работает
+* Скорректировал свой индивидуальный алгоритм дозирования с эндокринологом, чтобы он работать почти идеально
+* Обслуживал систему и следил за ней, чтобы она работала правильно
 
-.. note:: 
-	**Disclaimer And Warning**
+.. примечание:: 
+	**Отказ от ответственности и предупреждение**
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* Вся информация, идеи, и описанный здесь код предназначен только для ознакомительных и образовательных целей. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Вы применяете Nightscout и AndroidAPS на свой собственный риск и пожалуйста не используйте информацию или код для принятия медицинских решений.
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+	*Вы пользуетесь кодом github.com без гарантии и какой-либо официальной поддержки. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+	* Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_.
+	Обратите внимание, что этот проект не имеет связи с и одобрения от: ` SOOIL <http://www.sooil.com/eng/>` _, ` Dexcom <http://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabet Care <http://www.accu-chek.com/>` _ или ` Medtronic <http://www.medtronic.com/>` _.
 	
-If you're ready for the challenge, please read on. 
+Если вы готовы продолжать, читайте дальше. 
 
-Primary goals behind AndroidAPS
+Основные цели AndroidAPS
 ===========================================
 
-* An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
-* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
-* An app to which users can easily add or remove modules as needed
-* An app with different versions for specific locations and languages.
-* An app which can be used in open- and closed-loop mode
-* An app that is totally transparent: users can input parameters, see results, and make the final decision
-* An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
-* An app closely integrated with Nightscout
-* An app in which the user is in control of safety constraints 
+* Приложение с встроенной безопасностью. Для того чтобы ознакомиться с защитными функциями алгоритмов, известных как oref0 и oref1, нажмите здесь (https: //openaps.org/reference-design/)
+* Это приложение все-в-одном для управления диабетом первого типа с алгоритмом ИПЖ и Nightscout
+* Приложение, в которым пользователи могут легко добавлять или удалять модули по мере необходимости
+* Приложение в различных версиях локализации и языков.
+* Приложение, которое может использоваться в открытом и замкнутом режиме
+* Приложение, полностью прозрачное: пользователи могут ввести параметры, увидеть результаты и принять окончательное решение
+* Приложение, которое не зависит от конкретных драйверов помп и содержит "виртуальную помпу", чтобы пользователи могли безопасно экспериментировать, прежде чем применять самостоятельно 
+* Приложение, тесно интегрированное с Nightscout
+* Приложение, в котором пользователь контролирует ограничения безопасности 
 
-How to start
+Как начать
 ===============
-Of course, all of this content here is very important, but can be in the beginning quite confusing.
-A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
+Все, что здесь написано, очень важно, но поначалу может показаться довольно запутанным.
+Хорошая ориентация задается в `Обзоре модулей <./Module/module.html>`_ и`Целей <. /Usage/Objectives.html>`_. Также можно посмотреть пример установки с помпой Dana, мониторингом Dexcom и смарт-часами Sony SmartWatch <../Getting-Started/Sample-Setup.md>`_.
  

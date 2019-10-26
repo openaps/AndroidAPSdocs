@@ -41,7 +41,7 @@ kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi 
 * Zastavte senzor a odinstalujte původní aplikaci Dexcom, pokud jste tak ještě neučinili.
 * Nainstalujte stažený apk
 * Spusťte senzor
-* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte Dexcom aplikace (upravená).
+* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte DexcomG aplikace (upravená).
 * Pokud chcete použít xDrip alarmy přes místní vysílání: v xDrip hamburger menu > nastavení > hardwarový zdroj dat > 640G /EverSense.
 
 Poradce při potížích s G6
@@ -53,15 +53,15 @@ Dexcom G6 konkrétní řešení problémů
 * Vyčkejte nejméně 15 minut. mezi zastavením a spuštěním senzoru.
 * Nepoužívejte zadání dřívějšího času. Odpovězte na otázku "Byl senzor zaveden dnes?" vždy "Ano, dnes".
 * Nepovolujte "restartování senzoru" při nastavení nového senzoru
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Nespuštějte nový senzor dokud nejsou zobrazeny následující informace ve Statusu -> G5/G6 status -> PhoneServiceState:
 
   * Sériové číslo vysílače začínající na 80 nebo 81: "Got data hh:mm" (tj. "Got data 19:04")
-  * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+  * Sériové číslo vysílače začínající na 8G nebo 8H: "Got glucose hh:mm" (tj. "Got glucose 19:04") nebo "Got no raw hh:mm" (tj. "Got now raw 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshoothing
+Obecné odstraňování problémů
 ----
 Základní informace o řešení problémů s CGM najdete `zde <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 

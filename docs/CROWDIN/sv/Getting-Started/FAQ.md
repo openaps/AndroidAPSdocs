@@ -1,4 +1,4 @@
-# FAQ for loopers
+# Vanliga frågor för loopers
 
 How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
 

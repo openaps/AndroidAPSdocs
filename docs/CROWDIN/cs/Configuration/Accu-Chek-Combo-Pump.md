@@ -1,6 +1,6 @@
 # Pumpa Accu-Chek Combo
 
-**Tento software je součástí DIY řešení a není to produkt, vyžaduje, abyste si přečetli dokumentaci, pochopili celý systém a naučili se ho používat. Není to něco, co za Vás udělá veškerý management diabetu, ale pomůže Vám k lepším výsledkům a kvalitě života, pokud investujete čas k tomu potřebný. Zbytečně nespěchejte, a vytvořte si čas pro učení. Pouze Vy jste zodpovědní za to, jak ze systémem zacházíte.**
+**Tento software je součástí DIY řešení a není to produkt, vyžaduje, abyste si přečetli dokumentaci, pochopili celý systém a naučili se ho používat. Není to něco, co za Vás udělá veškerý management diabetu, ale pomůže Vám k lepším výsledkům a kvalitě života, pokud investujete čas k tomu potřebný. Zbytečně nespěchejte, a vytvořte si čas pro učení. Pouze Vy jste zodpovědní za ovládání Vašeho systému.**
 
 ## Hardwarové požadavky
 

@@ -14,7 +14,7 @@ Erste Schritte
 ----------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
    
    Sicherheitshinweise <./Getting-Started/Safety-first.rst>
    Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
@@ -88,7 +88,7 @@ Allgemeine Hinweise
 ---------------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
    
    Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
    Logfiles erhalten <./Usage/Accessing-logfiles.md>
@@ -100,7 +100,7 @@ AndroidAPS für Kinder
 ------------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
    
    Kontrolle aus der Ferne <./Children/Children.rst>
    SMS-Befehle <./Usage/SMS-Commands.md>
@@ -110,7 +110,7 @@ Für Fortgeschrittene
 ----------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
    
    Android Auto <./Usage/Android-auto.md>
    Automation mit Drittanbieter-Apps <./Usage/automationwithapp.md>
@@ -120,7 +120,7 @@ Problembehandlung
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
   
    Nightscout Client <./Usage/Troubleshooting-NSClient.md>
    Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
@@ -131,7 +131,7 @@ FAQ
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
   
    FAQ <./Getting-Started/FAQ.md>
 
@@ -140,7 +140,7 @@ Glossar
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
   
    Glossar <./Getting-Started/Glossary.md>
   
@@ -149,7 +149,7 @@ Hilfe durch die Community
 ------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
 
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -159,7 +159,7 @@ Für Mediziner & Fachpersonal
 ------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
             
    Für Mediziner & Fachpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
@@ -168,7 +168,7 @@ Mithelfen in der Community
 ------------
 .. toctree::
    :maxdepth: 1
-   :glob:
+       
 
    Wie ich helfen kann <./Getting-Started/How-can-I-help.md>
    App oder Wiki übersetzen <./translations.md>

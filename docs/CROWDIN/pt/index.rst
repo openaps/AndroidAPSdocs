@@ -17,8 +17,8 @@ Guia de Introdução
    :glob:
    
    Segurança primeiro <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   O que é um sistema Closed Loop (Fechado) <./Getting-Started/ClosedLoop.rst>
+   O que é um sistema de Closed Loop (Fechado) com AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
    
    

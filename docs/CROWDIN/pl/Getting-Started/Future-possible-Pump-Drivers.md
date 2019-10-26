@@ -12,7 +12,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ** Implementacje Java: ** Dostępne częściowe implementacje [ Rountrip2 ](https://github.com/TC2013/Roundtrip2) i [ RileyLinkAAPS ](https://github.com/andyrozman/RileyLinkAAPS)
 
-** Status wdrożenia AAPS: ** Trwają prace. Szczegóły na GitHUBie [Andy's AndroidAPS](https://github.com/andyrozman/AndroidAPS), gałąź medtronic_andy. Większość prac została wykonana dla [ RileyLinkAAPS ](https://github.com/andyrozman/RileyLinkAAPS) do uzyskania dostępu do struktury aplikacji i poleceń. W tym repozytorium został stworzony projekt (Medtronic) i zadania otwarte do dalszego rozwoju. Rozwój odbywa się w oddziale dev_medtronic (jest to lokalna gałąź domyślna). Istnieje również czat dla użytkowników GitHUB: RileyLinkAAPS/Lobby. AAPS. 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. Project will probably be merged to main repository by end of July 2019. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+** Status wdrożenia AAPS: ** Trwają prace. Szczegóły na GitHUBie [Andy's AndroidAPS](https://github.com/andyrozman/AndroidAPS), gałąź medtronic_andy. Większość prac została wykonana dla [ RileyLinkAAPS ](https://github.com/andyrozman/RileyLinkAAPS) do uzyskania dostępu do struktury aplikacji i poleceń. W tym repozytorium został stworzony projekt (Medtronic) i zadania otwarte do dalszego rozwoju. Rozwój odbywa się w oddziale dev_medtronic (jest to lokalna gałąź domyślna). Istnieje również czat dla użytkowników GitHUB: RileyLinkAAPS / Lobby. AAPS. 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. Project will probably be merged to main repository by end of July 2019. Szczegółowe informacje i harmonogram można znaleźć w [ tablicy projektu ](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
 **Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
 
@@ -32,7 +32,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 **Implementacji Javy:** brak do tej pory.
 
-**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) for Omnipod (dev_omnipod branch) which will not require a Raspberry Pi, but this is not finished. Na stronie https://omniaps.slack.com/ na kanale android-driver możesz śledzić rozwój prac.
+**AAPS implementation status:** Work has started on [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) for Omnipod (dev_omnipod branch) which will not require a Raspberry Pi, but this is not finished. Na stronie https://omniaps.slack.com/ na kanale android-driver możesz śledzić rozwój.
 
 **Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
 
@@ -42,7 +42,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ** Status pętli: ** Obecnie nie jest obsługiwany przez żaden z systemów pętli. Pompa jest kandydatem do pętli, ale protokół komunikacji jest jeszcze nieznany. Selling of pump officially started in January 2019.
 
-** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się poprzez Bluetooth.
+** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 
 **Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
 
@@ -52,7 +52,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ** Status pętli: ** Wersja 1 - 1.5 (2 kwartał 2018) nie są kandydatami dla pętli. Mimo że komunikuje się poprzez Bluetooth, transfer danych wydaje się być bardzo ograniczony (tylko w jedną stronę: od pompy do aplikacji). Może to zmieni się w jednym z kolejnych modeli pompy.
 
-** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się poprzez Bluetooth.
+** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 
 * * *
 
@@ -60,7 +60,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ** Status pętli: ** Obecnie nie jest obsługiwany przez żaden z systemów pętli. Pompa może być odpowiednia do wykonania pętli, ale ponieważ protokół komunikacji jest obecnie nieznany, przyszła implementacja jest mało prawdopodobna.
 
-** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się poprzez Bluetooth.
+** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 
 * * *
 
@@ -98,7 +98,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ** Status pętli: ** Obecnie nie jest obsługiwany przez żaden z systemów pętli. Pompa może być odpowiednia do wykonania pętli, ale ponieważ protokół komunikacji jest obecnie nieznany, przyszła implementacja jest mało prawdopodobna.
 
-** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się poprzez Bluetooth.
+** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 

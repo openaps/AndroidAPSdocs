@@ -1,4 +1,4 @@
-# FAQ for loopers
+# FAQ para loopers
 
 Como adicionar perguntas para o FAQ: Siga essas [instruções](../make-a-PR.md)
 

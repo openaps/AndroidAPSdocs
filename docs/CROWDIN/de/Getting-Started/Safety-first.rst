@@ -10,7 +10,7 @@ Allgemein
 * Nimm nicht an, dass AndroidAPS nie Fehler machen wird. AndroidAPS übernimmt die Kontrolle Deiner Insulinabgabe: Habe es immer im Auge, verstehe wie es arbeitet und lerne, seine Handlungen zu interpretieren.
 * Bedenke das ein Smartphone, das einmal mit Deiner Pumpe verbunden ist, jegliche Anweisungen an die Pumpe geben kann. Verwende das Smartphone ausschließlich für AndroidAPS und - falls es von einem Kind genutzt wird - für die unentbehrliche Kommunikation. Installiere keine unnötigen Anwendungen oder Spiele (!!!!!), die Malware wie Trojaner, Viren oder Bots einschleppen könnten, die Dein System stören könnten.
 * Installiere alle Sicherheits-Updates, die der Smartphone-Hersteller und Google zur Verfügung stellen.
-* Du musst auch Deine Diabetes-Gewohnheiten anpassen, da Du Deine Therapie durch den Closed Loop wesentlich veränderst. So brauchen  viele Anwender deutlich weniger Hypo-BE, da AndroidAPS die Insulinzufuhr bereits im Vorfeld reduziert hat.  
+* Du musst auch Deine Diabetes-Gewohnheiten anpassen, da Du Deine Therapie durch den Closed Loop wesentlich veränderst. Zum Beispiel viele Anwender deutlich weniger Hypo-BE, da AndroidAPS die Insulinzufuhr bereits im Vorfeld reduziert hat.  
    
 SMS Kommunikator
 -----------------
