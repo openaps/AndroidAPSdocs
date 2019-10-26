@@ -112,7 +112,7 @@ While ago they had firmware called T:AP (mentioned in this [article](https://www
 
 * * *
 
-### Animas Vibe
+### Animais Vibe
 
 **Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump bussiness (J&J).
 
