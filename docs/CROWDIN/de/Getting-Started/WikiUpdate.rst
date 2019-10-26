@@ -2,12 +2,12 @@ Wiki Updates & Änderungen
 **********************
 Oktober 2019
 ===============
-* `COB calculation on separate page <../Usage/COB-calculation.html>`_
-* `COB - wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+* `Aktiven Kohlenhydrate (COB) - eigene Seite <../Usage/COB-calculation.html>`_
+*  `Aktiven Kohlynhydrate (COB) - Fehlerhafte Ermittlung <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
 * `Dexcom G6-spezifische Problembehandlung <../Hardware/DexcomG6.html#dexcom-g6-spezifische-problembehandlung>`_
-* `SGLT-2 inhibitors - do not use when looping <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
-* `SMS Commands Troubleshooting <../Usage/SMS-Commands.html#troubleshooting>`_
-* `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
+* ` SGLT-2 Inhibitoren - beim Loopen nicht verwenden <../Module/module.html#keine-verwendung-von-sglt-2-hemmern> ` _
+* ` SMS-Befehle Fehlerbehebung <../Usage/SMS-Commands.html#störhooting> ` _
+* `xDrip - Update G6 Transmitter ersetzen <../Configuration/xdrip.html#replace-transmitter>`_
 
 September 2019
 ===============
