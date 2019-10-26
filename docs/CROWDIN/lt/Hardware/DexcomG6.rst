@@ -31,8 +31,8 @@ If using G6 with patched Dexcom app
 =========================================================
 * Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
 
-   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.4.
-   * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. Region will be visible in URL.
+   * 2.3 aplankas skirtas AndroidAPS 2.3 vartotojams, 2.4 aplankas yra skirtas AAPS 2.4 vartotojams.
+   * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. Regionas bus matomas URL adrese.
    
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in Dexcom G6 URL
@@ -40,7 +40,7 @@ If using G6 with patched Dexcom app
 * Stop sensor and uninstall the original Dexcom app, if not already done.
 * Install downloaded apk
 * Start sensor
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite Dexcom App (modifikuota).
 * If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
 
 Troubleshooting G6
