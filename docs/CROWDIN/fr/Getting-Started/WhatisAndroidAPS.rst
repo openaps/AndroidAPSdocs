@@ -29,18 +29,18 @@ Si vous êtes prêt à relever le défi, lisez la suite.
 Principaux objectifs derrière AndroidAPS :
 ===========================================
 
-* An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
-* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
-* An app to which users can easily add or remove modules as needed
-* An app with different versions for specific locations and languages.
-* An app which can be used in open- and closed-loop mode
-* An app that is totally transparent: users can input parameters, see results, and make the final decision
-* An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
-* An app closely integrated with Nightscout
-* An app in which the user is in control of safety constraints 
+* Une application construite avec sécurité. Cliquez ici pour connaître les caractéristiques de sécurité des algorithmes, appelés oref0 et oref1, (https://openaps.org/reference-design/)
+* Une application tout-en-un pour la gestion de diabète de type 1 avec un pancréas artificiel et Nightscout
+* Une application à laquelle les utilisateurs peuvent facilement ajouter ou supprimer des modules selon leurs besoins
+* Une application avec différentes versions pour des pays et des langues spécifiques.
+* Une application qui peut être utilisée en mode "boucle ouverte" et "boucle fermée"
+* Une application totalement transparente : les utilisateurs peuvent saisir des paramètres, voir les résultats et prendre la décision finale.
+* Une application indépendante de pilotes de pompe particuliers et contenant une "pompe virtuelle" afin que les utilisateurs puissent expérimenter en toute sécurité avant de l'utiliser sur eux-mêmes 
+* Une application étroitement intégrée à Nightscout
+* Une application dans laquelle l'utilisateur maîtrise les contraintes de sécurité 
 
-How to start
+Comment débuter
 ===============
-Of course, all of this content here is very important, but can be in the beginning quite confusing.
-A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
+Bien sûr, tout ce contenu ici est très important, mais peut être au début assez déroutant.
+Une bonne orientation est donnée par le `Module de présentation <../Module/module.html>`_ et les `Objectifs <../Usage/Objectives.html>`_. Vous pouvez également consulter l'exemple de configuration avec Dana, Dexcom et montre Sony <../Getting-Started/Sample-Setup.html> ` _.
  
