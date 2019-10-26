@@ -101,31 +101,31 @@ Sélectionnez "fullRelease" pour Buid Variants. Sélectionnez "V1 (Jar Signature
 
 Dans le journal des événements, vous voyez que l'APK signé a été généré avec succès.
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
+![Capture d'écran 45](../images/Installation_Screenshot_45.png)
 
-Click the "locate" link in the event log.
+Cliquez sur le lien "locate" dans le journal des événements.
 
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![Capture d'écran 46](../images/Installation_Screenshot_46.png)
 
-## Transfer APK to smartphone
+## Transférer le fichier APK sur le smartphone
 
-<!--- Text is maintained in page building-apk.md ---> A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+<!--- Text is maintained in page building-apk.md ---> Une fenêtre du gestionnaire de fichiers s'ouvre. Comme j'utilise Linux, il se peut que ce soit un peu différent sur votre système. Sur Windows, il y aura l'Explorateur de fichiers et sur Mac OS X le Finder. Vous devez voir le répertoire avec le fichier APK généré. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+![Capture d'écran 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire à votre convenance, via le Bluetooth, en téléchageant sur le cloud, en connectant le smartphone à l'ordinateur avec un câble USB ou en utilisant la messagerie. J'utilise Gmail dans cet exemple car c'est assez simple pour moi. Je mentionne cela parce que pour installer l'application auto-signée, nous devons permettre à Android de faire cette installation sur notre smartphone même si ce fichier est reçu via Gmail qui est normalement interdit. Si vous utilisez une autre solution, veuillez procéder en conséquence.
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
+![Capture d'écran 48](../images/Installation_Screenshot_48.png)
 
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+Dans les paramètres de sécurité votre smartphone, il y a un paramètre "Sources inconnues" qu'il faut autoriser pour donner le droit d'installer les fichiers APK reçus par Gmail ou copiés manuellement sur le téléphone.
 
-Select "Allow from this source". After the installation, you can disable it again.
+Autorisez "Sources inconnues". Après l'installation, vous pouvez le désactiver à nouveau.
 
-![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
+![Installation à partir de sources inconnues](../images/Installation_Screenshot_49-50.png)
 
-The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
+La dernière étape consiste à cliquer sur le fichier APK obtenu via Gmail et installer l'application. Si l'APK ne s'installe pas et que vous avez une version plus ancienne d'AndroidAPS sur votre téléphone (signé avec une autre clé), vous devrez au préalable la désinstaller. N'oubliez pas dans ce cas d'exporter vos paramètres auparavant !
 
-Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour votre utilisation (MGC, pompe à insuline), etc.
 
 ## Check AAPS version on phone
 
