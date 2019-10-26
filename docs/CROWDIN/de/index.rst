@@ -74,7 +74,7 @@ AndroidAPS Nutzung
        
     
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives2019.rst>
+   Objectives (Ziele) <./Usage/Objectives2019.rst>
    OpenAPS-Funktionen <./Usage/Open-APS-features.md>   
    Berechnung der aktiven Kohlenhydrate (COB) <../Usage/COB-calculation.rst>
    Empfindlichkeitserkennung <./Configuration/Sensitivity-detection-and-COB.md>
