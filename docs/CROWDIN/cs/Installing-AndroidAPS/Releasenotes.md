@@ -28,15 +28,15 @@ Datum vydání: 26. 10. 2019
 
 * Interní změna targetSDK na 28 (Android 9), podpora jetpack
 * RxJava2, Okthttp3, podpora Retrofit
-* Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
-* New [Automation plugin](../Usage/Automation.rst)
-* Allow to bolus only part from bolus wizard calculation
+* Podpora starších [Medtronic pump](../Configuration/MedtronicPump.md) (nutný RileyLink)
+* Nový plugin [Automatizace](../Usage/Automation.rst)
+* Povolení vydání pouze části bolusu z kalkulátoru
 * Vykreslování aktivity inzulínu
 * Úprava předpovědí IOB podle výsledku detekce senzitivity
-* New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+* Nová podpora pro upravené Dexcom plikace ([složka 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Ověřování certifikátu aplikace
 * Povolit vynechání cílů pro uživatele OpenAPS
-* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+* Nové [cíle](../Usage/Objectives2019.rst) - zkouška, obsluha aplikace
 * Opravena chyba v ovladačích Dana, kde byl hlášen nesprávný čas
 
 ## Verze 2.3
