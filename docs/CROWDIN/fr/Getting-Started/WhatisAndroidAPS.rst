@@ -7,11 +7,11 @@ Malheureusement, l’APS ne peut pas faire le même travail qu'un pancréas biol
 - une mesure de glycémie en continu (MGC) qui communique à AndroidAPS le taux de sucre dans le sang.
 - une pompe à insuline compatible qui administre des doses appropriées d'insuline calculée par AndroidAPS. L’application communique avec ces périphériques Bluetooth. Elle effectue les calculs de dosage à l’aide d’un algorithme, ou ensemble de règles, mis au point pour un autre système de pancréas artificiel, appelé OpenAPS, qui a des milliers d’utilisateurs et a accumulé des millions d’heures d’utilisation. 
 
-Prudence : AndroidAPS n’est réglementée par aucune autorité médicale dans aucun pays. À l’aide d'AndroidAPS, vous procédez à une expérience médicale sur vous-même! Setting up the system requires determination and technical knowledge. If you don't have the technical know-how at the beginning, you will by the end. All the information you need can be found in these documents, elsewhere online, or from others who have already done it -- you can ask them in Facebook groups or other forums. Many people have successfully built AndroidAPS and are now using it entirely safely, but it is essential that every user:
+Prudence : AndroidAPS n’est réglementée par aucune autorité médicale dans aucun pays. À l’aide d'AndroidAPS, vous procédez à une expérience médicale sur vous-même! La mise en place du système nécessite détermination et connaissances techniques. Si vous n’avez pas le savoir-faire technique au début, vous l'aurez à la fin. Toutes les informations dont vous avez besoin se trouve dans ces documents, ailleurs en ligne, ou par d’autres personnes qui l'ont déjà fait -- vous pouvez leur demander dans les groupes Facebook ou autres forums. Beaucoup de personnes ont construit avec succès la boucle avec AndroidAPS, et l’utilise à présent entièrement en toute sécurité, mais il est essentiel que tous les utilisateurs :
 
-* Builds the system themselves so that they thoroughly understand how it works
-* Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
-* Maintains and monitors the system to ensure it is working properly
+* Construisent eux-mêmes le système afin qu’ils comprennent bien comment ça marche
+* Ajustent les dosages individuels de leur algorithme avec leur équipe médicale pour que cela fonctionne presque parfaitement
+* Gèrent et surveillent le système pour s’assurer qu’il fonctionne correctement
 
 .. note:: 
 	** Avertissement **
@@ -22,11 +22,11 @@ Prudence : AndroidAPS n’est réglementée par aucune autorité médicale dans 
 
 	* Tous les noms de produits et de sociétés, marques commerciales, marques de service, marques déposées,  sont la propriété de leurs détenteurs respectifs. Leur utilisation est à titre informatif et n'implique aucune affiliation avec eux ni aucune approbation de leur part.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_.
+	A noter - ce projet n'a aucun lien avec, et n'est pas approuvé par : `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ ou `Medtronic <http://www.medtronic.com/>`_.
 	
-If you're ready for the challenge, please read on. 
+Si vous êtes prêt à relever le défi, lisez la suite. 
 
-Primary goals behind AndroidAPS
+Principaux objectifs derrière AndroidAPS :
 ===========================================
 
 * An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
