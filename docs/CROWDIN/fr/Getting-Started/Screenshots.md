@@ -1,22 +1,22 @@
-# AndroidAPS screens
+# Ecrans AndroidAPS
 
-## The Homescreen
+## Écran d'accueil
 
-![Homescreen V2.1](../images/Screenshot_Home_screen_V2_1.png)
+![Écran d'accueil V2.1](../images/Screenshot_Home_screen_V2_1.png)
 
-This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
+Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il contient la plupart des informations dont vous aurez besoin au jour le jour.
 
 ### Section A
 
-* navigate between the various AndroidAPS modules by swiping left or right
+* naviguer entre les différents modules AndroidAPS en balayant à gauche ou à droite
 
 ### Section B
 
-* change the loop status (open loop, closed loop, suspend loop etc)
-* see your current profile and do a [profile switch](../Usage/Profiles.md)
-* see your current target blood glucose level and set a [temporary target](../Usage/temptarget.md).
+* changer le statut de la boucle (boucle ouverte, boucle fermée, suspendre la boucle etc)
+* voir votre profil actif et faire un [changement de profil](../Usage/Profiles.md)
+* voir votre niveau actuel de cible glycémique et définir une [cible temporaire](../Usage/temptarget.md).
 
-Long press on any of the buttons to alter the setting. I.e long press the target bar in the upper right ("110" in the screenshot above) to set a temp target.
+Un appui long sur n’importe lequel de ces boutons permet de modifier les paramètres. Par ex. un appui long sur la cible en haut à droite ("110" dans la copie d'écran ci-dessus) pour définir une cible temp.
 
 ### Section C
 
