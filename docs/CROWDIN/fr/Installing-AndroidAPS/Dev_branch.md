@@ -1,7 +1,7 @@
-## Development branch
+## Branche "développement"
 
 <font color="#FF0000"><strong>Attention:</strong></font>
-Dev branch is for the further development of AndroidAPS only. It should be used on a separate phone for testing <font color="#FF0000"><strong>not for actual looping!</strong></font>
+La branche "développement" est pour les développements ultérieurs d'AndroidAPS seulement. Elle doit être utilisée sur un téléphone séparé pour faire des tests <font color="#FF0000"><strong>mais pas pour la boucle réellement utilisée !</strong></font>
 
 The most stable version of AndroidAPS to use is that in the [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
 
