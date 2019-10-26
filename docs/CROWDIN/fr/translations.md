@@ -1,55 +1,55 @@
-# How to translate AndroidAPS and the documentation
+# Comment traduire l'application et la documentation wiki
 
-* Go to <https://translations.androidaps.org> or <https://wikitranslations.androidaps.org> and login using your Github account
+* Allez à <https://translations.androidaps.org> ou <https://wikitranslations.androidaps.org> et connectez-vous à l'aide de votre compte Github
 
-* Send a join request to the Wiki team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
+* Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Veuillez renseigner la langue, donner quelques informations sur vous et votre expérience AAPS et si vous voulez être un traducteur ou un correcteur (seulement les personnes qualifiées pour traduire + les utilisateurs avancés d'AndroidAPS).
 
-* When we approve you, click the flag ![When we approve you, click the flag](./images/translation_flags2019.png)
+* Lorsque nous vous approuvons, cliquez sur le drapeau ![Lorsque nous vous approuvons, cliquez sur le drapeau](./images/translation_flags2019.png)
 
-## Translate strings for AndroidAPS app
+## Traduire les textes de l'application AndroidAPS
 
-* Click strings.xml
+* Cliquez sur strings.xml
     
-    ![Click strings.xml](./images/translations-click-strings.png)
+    ![Cliquez sur strings.xml](./images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion
+* Traduisez les phrases sur le côté gauche en ajoutant un nouveau texte traduit ou en utilisant la suggestion d'édition
     
-    ![Translation app](./images/translations-translate.png)
+    ![Traduction app](./images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode
+* Les relecteurs doivent passer au mode Proofreading
     
     ![Proofreading mode app](./images/translations-proofreading-mode.png)
     
-    and approve translated texts
+    et approuver les textes traduits
     
-    ![approve text](./images/translations-proofreading.png)
+    ![approuver le texte](./images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
+Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine version d'AndroidAPS. Au départ, il serait bon de vérifier les traductions existantes qui ne sont pas encore approuvées et de vérifier les erreurs ou de les approuver si elles sont correctes.
 
-## Translate wiki pages
+## Traduire les pages wiki
 
-* Click the name of the wiki page you want to translate
+* Cliquez sur le nom de la page wiki que vous voulez traduire
     
-    ![Click wiki page](./images/translation_WikiPage.png)
+    ![Cliquez sur la page wiki](./images/translation_WikiPage.png)
 
-* Translate sentences by sentence
+* Traduisez phrase par phrase
     
-    1 Untranslated text is shown with red background on the left side.
+    1 Le texte non traduit s'affiche avec un fond rouge sur le côté gauche.
     
-    2 You can copy a proposal to the edit field by clicking on the proposal.
+    2 Vous pouvez copier une proposition vers la zone d'édition en cliquant sur la proposition.
     
-    3 Edit the proposal or write the translation yourself.
+    3 Modifiez la proposition ou écrivez vous-même la traduction.
     
-    4 Click safe
+    4 Cliquez sur SAVE
     
-    ![Translation wiki](./images/translation_WikiTranslate.png)
+    ![Traduction wiki](./images/translation_WikiTranslate.png)
 
-* Proofreaders have to switch to Proofreading mode
+* Les relecteurs doivent passer au mode Proofreading
     
     ![Proffreading mode wiki](./images/translation_WikiProofreading.png)
     
-    and approve translated texts
+    et approuver les textes traduits
     
-    ![approve text](./images/translations-proofreading.png)
+    ![approuver le texte](./images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.
+Quand un correcteur approuve une traduction, elle sera ajoutée à la prochaine publication du wiki. Pour accélérer le processus, vous pouvez informer l'équipe wiki sur les nouvelles traductions.

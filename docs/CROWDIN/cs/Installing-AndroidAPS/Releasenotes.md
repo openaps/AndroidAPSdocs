@@ -12,7 +12,7 @@ Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
-## Verze 2.41
+## Verze 2.5.0
 
 Datum vydání: 26. 10. 2019
 

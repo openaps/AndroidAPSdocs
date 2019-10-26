@@ -28,7 +28,7 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 ## Commands
 
-### BG
+### Gly
 
 - Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 

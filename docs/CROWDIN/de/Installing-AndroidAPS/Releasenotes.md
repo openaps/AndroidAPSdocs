@@ -6,13 +6,13 @@ Mit Version 2.3 wurde ein neues Update-Verfahren eingeführt. Folgende Informati
 
 ![Update-Info](../images/AAPS_LoopDisable90days.png)
 
-Dann hast Du 60 Tage Zeit, das Update durchzuführen. Wenn Du nicht innerhalb dieser 60 Tage updatest, wird AndroidAPS in den LGS-Modus (Reduzierung der Baslarate bei niedrigen Glukosewerten, keine korrektur zu hoher BZ-Werte - siehe [Glossar](../Getting-Started/Glossary.md)) wie im [Objective 4](../Usage/Objectives.md) zurückgesetzt.
+Dann hast Du 60 Tage Zeit, das Update durchzuführen. Wenn Du nicht innerhalb dieser 60 Tage updatest, wird AndroidAPS in den LGS-Modus (Reduzierung der Baslarate bei niedrigen Glukosewerten, keine Korrektur zu hoher BZ-Werte - siehe [Glossar](../Getting-Started/Glossary.md)) wie im [Objective 4](../Usage/Objectives.md) zurückgesetzt.
 
 Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualisierst, wird AAPS auf Open Loop wechseln.
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
-## Version 2.41
+## Version 2.5.0
 
 Erscheinungsdatum: 26.10.2019
 
@@ -22,22 +22,22 @@ Erscheinungsdatum: 26.10.2019
 * Poctech
 * 600SeriesUploader
 * Glimp
-* Patched Dexcom from 2.3 directory
+* Patched Dexcom App aus dem Verzeichnis 2.3
 
 ### Wichtige neue Funktionen
 
 * Interne Änderung des targetSDK auf 28 (Android 9), Jetpack-Unterstützung
 * RxJava2, Okhttp3, Retrofit support
-* Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
-* New [Automation plugin](../Usage/Automation.rst)
-* Allow to bolus only part from bolus wizard calculation
+* Unterstützung für alte [Medtronic Pumpen](../Configuration/MedtronicPump.md) (RileyLink erforderlich)
+* Neues Plugin [Automatisierung](../Usage/Automation.rst)
+* Möglichkeit, nur einen Teil des vom Bolus-Kalkulator berechneten Insulins abzugeben
 * Darstellung der Insulinaktivität
 * Anpassung der IOB-Vorhersagen auf Basis der Autosens Ergebnisse
-* New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+* Unterstützung für die gepatchten Dexcom Apps aus dem [Verzeichnis 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)
 * Signaturprüfung
 * Möglichkeit für OpenAPS Anwender, die Ziele (Objectives) zu überspringen
-* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
-* Fehlerbehbung Dana Treiber, bei dem eine falsche Zeitdifferenz angegeben wurde
+* Neue [Ziele (Objectives)](../Usage/Objectives2019.rst) - Wissens-Check & Handling der App
+* Fehlerbehebung Dana Treiber, bei dem eine falsche Zeitdifferenz angegeben wurde
 
 ## Version 2.3
 
@@ -89,8 +89,8 @@ Erscheinungsdatum: 03.03.2019
 * Assistent für die Zeitumstellung (Sommer-/Winterzeit - Roumen Georgiev)
 * Korrektur der Verarbeitung von Profilnamen, die von Nightscout übertragen werden (Johannes Mockenhaupt)
 * Sperre des User Interface behoben (Johannes Mockenhaupt)
-* Unterstützung für die aktualisierte G5-App (Tebbe Ubben und Milos Kozak)
-* G6, Poctech, Tomato, Eversense als BZ-Quelle (Tebbe Ubben und Milos Kozak)
+* Unterstützung für die aktualisierte G5-App (Tebbe Übben und Milos Kozak)
+* G6, Poctech, Tomato, Eversense als BZ-Quelle (Tebbe Übben und Milos Kozak)
 * Korrektur deaktivieren SMB Präferenzen (Johannes Mockenhaupt)
 
 ### Verschiedenes
@@ -109,7 +109,7 @@ Erscheinungsdatum: 03.11.2018
 
 ### Einstellungen, die bei Umstellung von AMA zu SMB erforderlich sind
 
-* Objective 8 muss gestartet sein, damit die SMB-Funktion zur Verfügung steht (der SMB-Reiter zeigt dir, welche Beschräkungen bestehen).
+* Objective 8 muss gestartet sein, damit die SMB-Funktion zur Verfügung steht (der SMB-Reiter zeigt dir, welche Beschränkungen bestehen).
 * Der Wert maxIOB enthält jetzt *das gesamte* IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet: Wenn du einen Bolus von 8 IE gegeben hast und maxIOB ist 7, dann wird kein SMB ausgelöst, solange das Gesamt-IOB nicht wieder auf unter 7 IE abgefallen ist.
 * Der Standardwert von min_5m_carbimpact erhöht sich von 3 bei AMA auf 8 beim SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
 * Bitte beachte beim Erstellen einer AndroidAPS 2.0 apk: Configuration on demand wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
@@ -151,6 +151,6 @@ Erscheinungsdatum: 03.11.2018
 * Neues App-Icon
 * Viele weitere Verbesserungen und Fehlerbehebungen.
 * Nightscout-unabhängige Alarme, falls die Pumpe für längere Zeit nicht erreichbar ist (z.B. leere Pumpenbatterie) und veraltete BZ-Werte (siehe *Lokale Alarme* in den Einstellungen)
-* Option, den Bildschrim immer an zu lassen.
+* Option, das Display immer an zu lassen.
 * Option, die Hinweise als Systemmeldungen anzuzeigen.
 * Advanced filtering (das erlaubt die Nutzung von “SMB immer an” und “6 Stunden nach dem Essen”) wird unterstützt mit der gepatchten Dexcom App (nicht mit der originalen Dexcom App!) oder xDrip mit dem G5 native mode als BZ-Quelle.

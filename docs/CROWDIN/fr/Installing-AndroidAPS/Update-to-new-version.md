@@ -1,8 +1,8 @@
 # Update to a new version or branch
 
-## Build yourself instead of download
+## Construire vous-même au lieu de télécharger
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+**AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir [FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
 ## Important notes
 
@@ -10,7 +10,7 @@
 
 ***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
 
-## Install git (if you don't have it)
+## Installer git (si vous ne l'avez pas)
 
 ### Windows
 
@@ -63,22 +63,22 @@ and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not ava
 
 On the tray you'll see green message about updated project
 
-## Generate signed APK
+## Générer un APK signé
 
-<!--- Text is maintained in page building-apk.md ---> In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md ---> Dans le menu , sélectionnez "Build" puis "Generate Signed Bundle / APK...". (Le menu d'Android Studio a changé en septembre 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
   
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez le lien [ici](https://developer.android.com/studio/publish/app-signing.html#generate-key). La sécurité est un sujet important et complexe et vous n'avez pas besoin de cela maintenant.
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Capture d'écran 39a](../images/Installation_Screenshot_39a.PNG)
 
-In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
+Dans la boite de dialogue suivante, sélectionnez "APK" à la place de "Android App Bundle" et cliquez sur le bouton "Next".
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![Capture d'écran 39b](../images/Installation_Screenshot_39b.PNG)
 
-Select "app" and click "Next".
+Sélectionnez "app" et cliquez sur "Next".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Capture d'écran 40](../images/Installation_Screenshot_40.png)
 
 Enter your key store path, enter key store password, select key alias and enter key password.
 
@@ -88,7 +88,7 @@ Then click next.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
-Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+Sélectionnez "fullRelease" pour Buid Variants. Sélectionnez "V1 (Jar Signature)" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
 * 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
 * Select the build type you want to build. 
@@ -97,35 +97,35 @@ Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is
   * pumpcontrol (i.e. remote control for pump, no looping)
   * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Capture d'écran 44](../images/Installation_Screenshot_44.png)
 
-In the event log you see that the Signed APK was generated successfully.
+Dans le journal des événements, vous voyez que l'APK signé a été généré avec succès.
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
+![Capture d'écran 45](../images/Installation_Screenshot_45.png)
 
-Click the "locate" link in the event log.
+Cliquez sur le lien "locate" dans le journal des événements.
 
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![Capture d'écran 46](../images/Installation_Screenshot_46.png)
 
-## Transfer APK to smartphone
+## Transférer le fichier APK sur le smartphone
 
-<!--- Text is maintained in page building-apk.md ---> A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+<!--- Text is maintained in page building-apk.md ---> Une fenêtre du gestionnaire de fichiers s'ouvre. Comme j'utilise Linux, il se peut que ce soit un peu différent sur votre système. Sur Windows, il y aura l'Explorateur de fichiers et sur Mac OS X le Finder. Vous devez voir le répertoire avec le fichier APK généré. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+![Capture d'écran 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire à votre convenance, via le Bluetooth, en téléchageant sur le cloud, en connectant le smartphone à l'ordinateur avec un câble USB ou en utilisant la messagerie. J'utilise Gmail dans cet exemple car c'est assez simple pour moi. Je mentionne cela parce que pour installer l'application auto-signée, nous devons permettre à Android de faire cette installation sur notre smartphone même si ce fichier est reçu via Gmail qui est normalement interdit. Si vous utilisez une autre solution, veuillez procéder en conséquence.
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
+![Capture d'écran 48](../images/Installation_Screenshot_48.png)
 
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+Dans les paramètres de sécurité votre smartphone, il y a un paramètre "Sources inconnues" qu'il faut autoriser pour donner le droit d'installer les fichiers APK reçus par Gmail ou copiés manuellement sur le téléphone.
 
-Select "Allow from this source". After the installation, you can disable it again.
+Autorisez "Sources inconnues". Après l'installation, vous pouvez le désactiver à nouveau.
 
-![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
+![Installation à partir de sources inconnues](../images/Installation_Screenshot_49-50.png)
 
-The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
+La dernière étape consiste à cliquer sur le fichier APK obtenu via Gmail et installer l'application. Si l'APK ne s'installe pas et que vous avez une version plus ancienne d'AndroidAPS sur votre téléphone (signé avec une autre clé), vous devrez au préalable la désinstaller. N'oubliez pas dans ce cas d'exporter vos paramètres auparavant !
 
-Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour votre utilisation (MGC, pompe à insuline), etc.
 
 ## Check AAPS version on phone
 
