@@ -2,7 +2,7 @@
 
 AndroidAPS má sadu Cílů, které musíte dokončit a které vás provedou jeho funkcemi a nastaveními tak, aby pro vás smyčka nebyla nebezpečná. Zajistí vám, že jste nastavili všechny detaily z dříve uvedených sekcí správně, že rozumíte tomu, co váš systém dělá a proč, a že mu můžete důvěřovat.
 
-Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/ExportImportSettings) a váš postup (již splněné cíle) bude zachován. Kromě vašeho postupu se uloží také řada jiných nastavení, například vaše bezpečnostní nastavení jako maximální bolus apod. Pokud neprovedete export a následný import svých nastavení, pak budete muset začít plnit cíle znovu od začátku. Z preventivních důvodů je vhodné si často zálohovat svá nastavení. Podrobnosti naleznete níže.  
+Pokud **měníte telefon**, můžete si [exportovat své nastavení](../Usage/ExportImportSettings) a váš postup (již splněné cíle) bude zachován. Kromě vašeho postupu se exportem/importem uloží řada jiných nastavení, například vaše bezpečnostní nastavení jako maximální bolus apod. Pokud neabsolvujete export/import svých nastavení, pak budete muset začít plnit cíle znovu od začátku. Je vhodné často si zálohovat svá nastavení, jen pro případ. Podrobnosti naleznete níže.  
 
 ### Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry
 
