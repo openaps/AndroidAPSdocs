@@ -1,6 +1,6 @@
-# Accu Chek Combo Pump
+# Pompe Accu-Chek Combo
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Ce logiciel est un système "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. Vous devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
 
 ## Hardware requirements
 
