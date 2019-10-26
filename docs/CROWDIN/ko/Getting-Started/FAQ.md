@@ -1,4 +1,4 @@
-# FAQ for loopers
+# Loop 사용자를 위한 FAQ
 
 How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
 
