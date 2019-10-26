@@ -32,7 +32,7 @@ Release date: 26-10-2019
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
 * New objectives - exam, application handling
-* Fixeb bug in Dana* drivers where false time difference was reported
+* Fixed bug in Dana* drivers where false time difference was reported
 
 ## Version 2.3
 
