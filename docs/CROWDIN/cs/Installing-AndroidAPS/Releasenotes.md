@@ -12,35 +12,35 @@ Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
 
-## Version 2.4
+## Verze 2.4
 
-Release date: 26-10-2019
+Datum vydání: 26. 10. 2019
 
-### Is this update for me? Currently is NOT supported
+### Je tato aktualizace pro mě? Aktuálně není podporováno
 
 * Android 5
-* Poctech, 600SeriesUploader, Glimp, Patched Dexcom from 2.3 directory
+* Poctech, 600SeriesUploader, Glimp, Upravená Dexcom aplikace z adresáře 2.3
 
-### Hlavní nové funkce
+### Major new features
 
-* Internal change of targetSDK to 28 (Android 9), jetpack support
-* RxJava2, Okhttp3, Retrofit support
-* Old Medtronic pumps support (RileyLink need)
-* New Automation plugin
-* Allow to bulus only part from bolus wizard calculation
-* Rendering insulin activity
-* Adjusting IOB predictions by autosense result
-* New support for patched Dexcom apks (2.4 folder)
-* Signature verifier
-* Allow to bypass objectives for OpenAPS users
-* New objectives - exam, application handling
-* Fixeb bug in Dana* drivers where false time difference was reported
+* Interní změna targetSDK na 28 (Android 9), podpora jetpack
+* RxJava2, Okthttp3, podpora Retrofit
+* Podpora starších pump Medtronic (nutný RileyLink)
+* Nový plugin automatizace
+* Povolení vydání pouze části bolusu z kalkulátoru
+* Vykreslování aktivity inzulínu
+* Úprava předpovědí IOB podle výsledku detekce senzitivity
+* Nová podpora upravených Dexcom aplikací (složka 2.4)
+* Ověřování certifikátu aplikace
+* Povolit vynechání cílů pro uživatele OpenAPS
+* Nové cíle - zkouška, ovládání aplikace
+* Fixed bug in Dana* drivers where false time difference was reported
 
 ## Version 2.3
 
 Release date: 25-04-2019
 
-### Hlavní nové funkce
+### Major new features
 
 * Important safety fix for Insight (really important if you use Insight!)
 * Fix History-Browser
@@ -56,7 +56,7 @@ Release date: 25-04-2019
 
 Release date: 07-04-2019
 
-### Hlavní nové funkce
+### Major new features
 
 * Autosens fix: deactivate TT raises/lowers target
 * New translations
@@ -67,7 +67,7 @@ Release date: 07-04-2019
 
 Release date: 29-03-2019
 
-### Hlavní nové funkce
+### Major new features
 
 * [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
 * Wear Update
@@ -79,7 +79,7 @@ Release date: 29-03-2019
 
 Release date: 03-03-2019
 
-### Hlavní nové funkce
+### Major new features
 
 * Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 * Status lights on main screen (Nico Schmitz)
@@ -98,7 +98,7 @@ Release date: 03-03-2019
 
 Release date: 03-11-2018
 
-### Hlavní nové funkce
+### Major new features
 
 * oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
 * Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
