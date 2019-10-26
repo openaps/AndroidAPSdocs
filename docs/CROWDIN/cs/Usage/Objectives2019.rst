@@ -3,94 +3,94 @@ Cíle
 
 AndroidAPS má sadu Cílů, které musíte dokončit a které vás provedou jeho funkcemi a nastaveními tak, aby pro vás smyčka nebyla nebezpečná.  Zajistí vám, že jste nastavili všechny detaily z dříve uvedených sekcí správně, že rozumíte tomu, co váš systém dělá a proč, a že mu můžete důvěřovat.
 
-If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Kromě vašeho postupu se uloží také řada jiných nastavení, například vaše bezpečnostní nastavení jako maximální bolus apod.  Pokud neprovedete export a následný import svých nastavení, pak budete muset začít plnit cíle znovu od začátku.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+Pokud měníte telefon, můžete si `exportovat své nastavení <../Usage/ExportImportSettings.html>`_ a váš postup (již splněné cíle) bude zachován. Kromě vašeho postupu se exportem/importem uloží řada jiných nastavení, například vaše bezpečnostní nastavení jako maximální bolus apod.  Pokud neabsolvujete export/import svých nastavení, pak budete muset začít plnit cíle znovu od začátku.  Je dobrý nápad `zálohovat Vaše nastavení <../Usage/ExportImportSettings.html>`_ často jen tak pro jistotu.
  
 Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry
 =================================================================================
-* Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
-* If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ page to ensure Nightscout can receive and display this data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#ns-client>`_.
+* Zvolte správný zdroj glykémie pro svou kombinaci zařízení.  Více informací viz `Zdroj glykémií <../Configuration/BG-Source.html>`_.
+* Vyberte správnou pumpu na kartě Konfigurace (zvolte Virtuální pumpu, pokud používáte model pumpy bez ovladače v AndroidAPS – pouze pro otevřenou smyčku) a na kartě pumpy ověřte, že váš model pumpy dokáže komunikovat s aplikací AndroidAPS a přenášet do ní svůj stav.  
+* Pokud používáte pumpu DanaR, ujistěte se, že jste postupovali podle pokynů v části `Inzulinová pumpa DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ a že je propojená s AndroidAPS.
+* Postupujte podle pokynů na stránce `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ a ověřte, že Nightscout může přijímat a zobrazovat tato data.
+* Všimněte si, že adresa URL v NSClientovi musí být ** BEZ /api/v1 /** na konci - viz `Nastavení NSClienta v předvolbách <../Configuration/Preferences.html#ns-client>`_.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*Možná bude nutné počkat na další odečet glykémie, než AndroidAPS změnu zaregistruje.*
 
-Objective 2: Learn how to control AndroidAPS
+Cíl 2: Naučte se ovládat AndroidAPS
 ============================
-* Perform several actions in AndroidAPS as described in this objective. 
-* Links will be provided to guide you in case you are not familiar with a specific action yet.
+* Proveďte několik akcí v AndroidAPS, jak je popsáno v tomto cíli. 
+* Odkazy budou poskytnuty jako vodítko pro případ, že dosud nejste obeznámeni se specifickou akcí.
 
    .. image:: ../images/Objective2.png
-     :alt: Screenshot objective 2
+     :alt: Screenshot cíl 2
 
-Objective 3: Prove your knowledge
+Cíl 3: Prokázat své znalosti
 =================================
-*Pass a multiple-choice exam testing your AndroidAPS knowledge.
-* Links will be provided to guide you in case you are unsure abouit the correct answers yet.
+* Splnit test znalostí AndroidAPS.
+* Odkazy budou poskytnuty jako vodítko pro případ, že si nejste jisti odpovědí.
 
    .. image:: ../images/Objective3.png
-     :alt: Screenshot objective 3
+     :alt: Screenshot cíl 3
 
-Objective 4: Starting on an open loop
+Cíl 4: Začít s otevřenou smyčkou
 =====================================
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the `Preferences <../Configuration/Preferences.html>`_ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ujistěte se, že se tyto údaje zobrazí v AndroidAPS a Nightscoutu.
-* Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Použijte dočasný cíl Hypoglykémie, abyste systému zabránili v příliš agresivních korekcích, pokud by glykémie po vyřešení hypoglykémie stoupala. 
+* Vyberte možnost Otevřená smyčka buď v Nastavení, nebo stisknutím a podržením tlačítka Smyčka v levém horním rohu hlavní obrazovky.
+* Projděte `Nastavení <../Configuration/Preferences.html>`_ pro nastavení.
+* Ručně nařiďte alespoň 20 dočasných bazálních dávek, které vám systém navrhuje, a to během 7 dní; zadejte je do své pumpy a potvrďte v AndroidAPS, že jste návrhy přijali.  Ujistěte se, že se tyto údaje zobrazí v AndroidAPS a Nightscoutu.
+* Povolte `dočasné cíle <../Usage/temptarget.html>`_ pokud je to nutné. Použijte dočasný cíl Hypoglykémie, abyste systému zabránili v příliš agresivních korekcích, pokud by glykémie po vyřešení hypoglykémie stoupala. 
 
-Objective 5: Understanding your open loop, including its temp basal recommendations
+Cíl 5: Porozumění otevřené smyčce, včetně doporučení pro dočasné bazály
 ===================================================================================
-* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#section-e>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Začněte chápat úvahy, které se skrývají za doporučeními dočasných bazálních dávek, tím, že si projdete `logiku <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ a budete sledovat graf předpovědí na `domovské obrazovce AndroidAPS <../Getting-Started/Screenshots.html#sekce-e>`_/ v Nightscoutu. Také si v aplikaci procházejte výstupy z výpočtů na záložce OpenAPS.
  
-Cíl nastavte o něco výše než obvykle, dokud si nebudete jisti správností výpočtů a nastavení.  System allows
+Cíl nastavte o něco výše než obvykle, dokud si nebudete jisti správností výpočtů a nastavení.  Systém umožňuje
 
-* a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl) 
-* a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-* a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+* dolní cílová hodnota musí být minimálně 4 mmol (72 mg/dl) nebo nejvýše 10 mmol (180 mg/dl) 
+* horní cílová hodnota musí být minimálně 5 mmol (90 mg/dl) nebo nejvýše 15 mmol (225 mg/dl)
+* dočasný cíl jako jediná hodnota může být kdekoliv mezi 4 až 15 mmol (72 mg/dl až 225 mg/dl)
 
-Cíl je hodnota, o kterou se opírá kalkulace, nikoliv hodnota, na které byste chtěli svou glykémii držet.  If your target is very wide (say, 3 or more mmol [50 mg/dl or more] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested. 
+Cíl je hodnota, o kterou se opírá kalkulace, nikoliv hodnota, na které byste chtěli svou glykémii držet.  Pokud je váš cíl velmi široký (řekněme 3 nebo více mmol široký), často se objeví pouze málo AAPS akcí. To je proto, že predikovaná glykémie bude někde v tomto širokém rozmezí a proto není doporučováno mnoho dočasných bazálů. 
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide), and observe how the behavior of your system changes as a result.  
+Snažte se tedy experimentováním upravit svůj cíl tak, aby nebyl rozptyl hodnot příliš velký (řekněme 1 mmol nebo méně) a přitom sledujte, jak se mění chování systému.  
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`_ > Range for Visualisation.
+Cílový rozsah hodnot v grafu na hlavní obrazovce (zelené linky), ve kterých chcete udržovat svou glykémii, můžete změnit změnou hodnot v části `Nastavení <../Configuration/Preferences.html>`_ > Rozsah pro zobrazení.
  
 .. image:: ../images/sign_stop.png
-  :alt: Stop sign
+  :alt: Znaménko Stop
 
 Zastavte se zde, pokud používáte otevřenou smyčku s virtuální pumpou – neklikejte na tlačítko Zkontrolovat na konci tohoto cíle.
 --------------------------
 
 .. image:: ./images/blank.png
-  :alt: blank
+  :alt: prázdný
 
-Objective 6: Starting to close the loop with Low Glucose Suspend
+Cíl 6: Začátek uzavřené smyčky - s pozastavením pumpy při nízké glykémii
 ================================================================
 .. image:: ../images/sign_warning.png
-  :alt: Warning sign
+  :alt: Varování
   
-Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. Na vysoké glykémie musíte ručně dopíchnout vy sami!
+U 6. cíle nebude uzavřená smyčka korigovat vysokou glykémii, bude pouze zastavovat před nízkou. Na vysoké glykémie musíte ručně dopíchnout vy sami!
 ---------------------------
 
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
-* Set your target range slightly higher than you usually aim for, just to be safe.
-* Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  Pokud stále řešíte časté nebo vážné výskyty nízkých glykémií, zvažte úpravu svého DIA, bazálů, citlivosti a sacharidových poměrů.
+* Vyberte Uzavřená smyčka buď z `Nastavení <../Configuration/Preferences.html>`_, nebo stisknutím a držením tlačítka Otevřená smyčka z levého horního rohu hlavní stránky.
+* Nastavte cílový rozsah mírně vyšší, než který je pro vás běžný, jen pro jistotu.
+* Sledujte, jak jsou aktivní dočasné bazální dávky buď prohlížením modrého textu bazálu na hlavní stránce anebo v modrém vykreslení bazálů na grafu.
+* Ujistěte se, že AndroidAPS je teď nastavený tak, že po dobu 5 dní nemusíte řešit nízké glykémie.  Pokud stále řešíte časté nebo vážné výskyty nízkých glykémií, zvažte úpravu svého DIA, bazálů, citlivosti a sacharidových poměrů.
 
-*The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.*
+*Systém přepíše vaše nastavení maxIOB na nulu, což znamená, že pokud glykémie klesá, může snížit bazál, ale pokud glykémie stoupá, pak zvýší bazál pouze v případě, že IOB je záporný (z předchozího sníženého bazálu nebo zastavené pumpy). Pokud IOB není záporný, vaše bazální dávky zůstanou stejné jako ve vámi zvoleném aktivním profilu.  Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.*
 
-Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
+Cíl 7: Vyladit uzavřenou smyčku, zvyšovat max IOB nad 0 a postupně snižovat cílovou glykémii
 =========================================================
-* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+* Zvyšte hodnotu 'Maximální celkový IOB, který OpenAPS nemůže překročit' (v OpenAPS se tento parametr označuje jako 'max-iob') nad 0 po dobu 1 dne. Výchozím doporučením je použít "průměrnou hodnotu bolusu k jídlu + 3× maximální denní bazální dávku" (pro algoritmus SMB) nebo "3× maximální denní bazální dávku" (pro starší algoritmus AMA). Tyto hodnoty byste však měli zvyšovat postupně, dokud neověříte, že jsou nastaveny správně (maximální denní bazální dávka = maximální bazální dávka za hodinu během dne).
 
   Toto doporučení by mělo být považováno za výchozí bod. Pokud ho nastavíte na 3x a uvidíte kroky, které vás rychle stahují dolů, pak snižte toto číslo. Pokud jste velmi rezistentní na inzulín, pomalu ho zvyšujte.
 
    .. image:: ../images/MaxDailyBasal2.png
-     :alt: max daily basal
+     :alt: max denní bazál
 
-* Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
+* Až si budete jistí množstvím IOB, které sedí vašemu vzoru smyčky, pak snižte své cílové glykémie na požadovanou úroveň.
 
 
-Objective 8: Adjust basals and ratios if needed, and then enable autosens
+Cíl 8: Upravit bazály a poměry, když bude potřeba, a povolit automatickou detekci citlivosti na inzulín
 =============================================
 * You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate, or do a traditional basal test.
 * Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc, and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
@@ -98,13 +98,13 @@ Objective 8: Adjust basals and ratios if needed, and then enable autosens
 *Don’t forget to record your looping in `this form <http://bit.ly/nowlooping>`_ logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
-Objective 9: Enabling additional oref0 features for daytime use, such as advanced meal assist (AMA)
+Cíl 9: Povolit další funkce oref0 pro běžné používání, jako je AMA (advanced meal assist)
 ==============================================
-* Now you should feel confident with how AndroidAPS works and what settings reflect your diabetes best
+* Nyní byste si již měli být jisti tím, jak AndroidAPS funguje a která nastavení jsou pro váš konkrétní diabetes nejlepší
 * Then over a period of 28 days you can try additional features that automate even more of the work for you such as the `advanced meal assist <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
 
 
-Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+Cíl 10: Povolit další funkce oref1 pro běžné používání, jako je SMB (super micro bolus)
 ===============================================
 * You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB nyní zahrnuje veškerý IOB, nejen ten z bazálů. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives2019.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
