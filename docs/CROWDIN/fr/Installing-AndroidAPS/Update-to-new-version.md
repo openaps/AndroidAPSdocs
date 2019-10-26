@@ -88,7 +88,7 @@ Then click next.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
-Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+Sélectionnez "fullRelease" pour Buid Variants. Sélectionnez "V1 (Jar Signature)" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
 * 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
 * Select the build type you want to build. 
@@ -97,9 +97,9 @@ Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is
   * pumpcontrol (i.e. remote control for pump, no looping)
   * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Capture d'écran 44](../images/Installation_Screenshot_44.png)
 
-In the event log you see that the Signed APK was generated successfully.
+Dans le journal des événements, vous voyez que l'APK signé a été généré avec succès.
 
 ![Screenshot 45](../images/Installation_Screenshot_45.png)
 
