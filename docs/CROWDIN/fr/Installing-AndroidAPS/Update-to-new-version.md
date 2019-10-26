@@ -1,8 +1,8 @@
 # Update to a new version or branch
 
-## Build yourself instead of download
+## Construire vous-même au lieu de télécharger
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+**AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir [FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
 ## Important notes
 
@@ -10,7 +10,7 @@
 
 ***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
 
-## Install git (if you don't have it)
+## Installer git (si vous ne l'avez pas)
 
 ### Windows
 
@@ -63,22 +63,22 @@ and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not ava
 
 On the tray you'll see green message about updated project
 
-## Generate signed APK
+## Générer un APK signé
 
-<!--- Text is maintained in page building-apk.md ---> In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md ---> Dans le menu , sélectionnez "Build" puis "Generate Signed Bundle / APK...". (Le menu d'Android Studio a changé en septembre 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
   
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez le lien [ici](https://developer.android.com/studio/publish/app-signing.html#generate-key). La sécurité est un sujet important et complexe et vous n'avez pas besoin de cela maintenant.
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Capture d'écran 39a](../images/Installation_Screenshot_39a.PNG)
 
-In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
+Dans la boite de dialogue suivante, sélectionnez "APK" à la place de "Android App Bundle" et cliquez sur le bouton "Next".
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![Capture d'écran 39b](../images/Installation_Screenshot_39b.PNG)
 
-Select "app" and click "Next".
+Sélectionnez "app" et cliquez sur "Next".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Capture d'écran 40](../images/Installation_Screenshot_40.png)
 
 Enter your key store path, enter key store password, select key alias and enter key password.
 
