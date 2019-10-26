@@ -29,9 +29,9 @@ AndroidAPS - это не просто (самостоятельно собран
 * CR (соотношение инсулин-углеводы) это количество граммов углеводов на единицу инсулина
 * DIA (продолжительность действия инсулина).
 
-No use of SGLT-2 inhibitors
+Не использовать SGLT-2 ингибиторы
 ---------
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AndroidAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+SGLT-2 ингибиторы, которые также называются глифлозины, блокируют реабсорбцию глюкозы в почках. Поскольку они непредсказуемо снижают уровень сахара в крови, их принимать НЕЛЬЗЯ при использовании таких систем как AAPS! Существует огромный риск возникновения кетоацидоза или гипогликемии! Сочетание с системой, которая снижает базальную скорость для повышения ГК является особенно опасным, поскольку из-за глифлозинов этот подъем ГК может не произойти и возникнет нехватка инсулина.
 
 Телефон
 ---------
