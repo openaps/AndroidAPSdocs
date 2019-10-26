@@ -1,54 +1,54 @@
-COB calculation
+Kalkulace COB
 *****************
 
-How does AndroidAPS calculate the COB value?
+Jak AndroidAPS počítá COB hodnotu?
 ==========================
 
 Oref0 / Oref1
 ----------------------
 
-Unabsorbed carbs are cut off after specified time
+Nestrávené sacharidy jsou odříznuty po určené době
 
 .. image:: ../images/cob_oref0_orange.png
   :alt: Oref0 / Oref1
 
-AAPS, WeightedAverage
+AAPS, Vážený průměr
 ----------------------
 
-absorption is calculated to have `COB == 0` after specified time
+absorpce je vypočtena tak, aby bylo "COB == 0" po stanoveném čase
 
 .. image:: ../images/cob_aaps2_orange.png
-  :alt: AAPS, WheitedAverage
+  :alt: AAPS, Vážený průměr
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
+Jestliže je použitá minimální absorpce sacharidů (min_5m_carbimpact) namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví oranžová tečka.
 
-Detection of wrong COB values
+Zjišťování nesprávných hodnot COB
 ========================
 
-As of version 2.4, AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard. 
+Pokud jde o verzi 2.4, AAPS vás varuje, pokud se chystáte počítat bolus s COB z předchozího jídla a algoritmus si myslí, že aktuální výpočet COB může být chybný. V takovém případě Vám bude po použití bolusové kalkulačky zobrazen dodatečný pokyn na obrazovce s potvrzením. 
 
-How does AndroidAPS detect wrong COB values? 
--------------------
+Jak AndroidAPS zjistí nesprávné hodnoty COB? 
+------------------------
 
-Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
+Obvykle AAPS detekuje absorpci sacharidů prostřednictvím odchylek glykémií. V případě, že jste zadali sacharidy, ale AAPS nevidí jejich odhadovanou absorpci prostřednictvím odchylek glykémií, bude používat metodu `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carcarimpact#sapution-settings>`_ jako náhradu pro výpočet absorpce místo (tzv. "fallback"). Protože tato metoda počítá pouze minimální absorbci sacharidů, aniž by zvážila odchylky glykémií, může to vést k chybným hodnotám COB.
 
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-  :alt: Hint on wrong COB value
+  :alt: Pokyn pro chybnou hodnotu COB
 
-In the screenshot above, 41% of1 time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm. 
+Na obrázku výše, 41% času absorpce sacharidů byla počítána pomocí min_5m_carbimpact místo hodnoty zjištěné odchylkami.  To znamená, že možná máte méně zbývajících sacharidů, než vypočteno. 
 
-How to deal with this warning? 
+Jak se vypořádat s tímto varováním? 
 --------------------
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+- Zvážit zrušení bolusu - stiskněte tlačítko Zrušit namísto OK.
+- Vypočítejte znovu nachystané jídlo bez zatrhnutého COB.
+- V případě, že jste si jisti, že potřebujete podat korekční bolus, zadejte jej ručně.
+- Ale buďte opatrní, aby nedošlo k předávkování!
 
-Why does the algorithm not detect COB correctly? 
--------------------
+Proč algoritmus nedetekuje COB správně? 
+------------------------
 
-- Maybe you overestimated carbs when entering them.  
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+- Možná jste přecenil sacharidy při jejich vkládání.  
+- Aktivita / cvičení po předchozím jídle
+- Inzulínovosacharidový poměr vyžaduje úpravu
+- Hodnota pro min_5m_carbimpact je chybná (doporučeno je 8 s SMB, 3 s AMA)

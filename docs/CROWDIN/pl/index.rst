@@ -74,7 +74,7 @@ Użytkowanie AndroidAPS
    :glob:
     
    Zrzuty ekranów AndroidAPS <./Getting-Started/Screenshots.md>
-   Cele (samouczek) <./Usage/Objectives.md>
+   Objectives <./Usage/Objectives2019.rst>
    Funkcje OpenAPS <./Usage/Open-APS-features.md>   
    COB calculation <./Usage/COB-calculation.rst>
    Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>

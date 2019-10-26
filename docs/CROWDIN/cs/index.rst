@@ -74,7 +74,7 @@ Použití AndroidAPS
    :glob:
     
    Obrazovky AndroidAPS <./Getting-Started/Screenshots.md>
-   Cíle <./Usage/Objectives.md>
+   Cíle <./Usage/Objectives2019.rst>
    Možnosti OpenAPS <./Usage/Open-APS-features.md>   
    Výpočet COB <./Usage/COB-calculation.rst>
    Detekce citlivosti <./Configuration/Sensitivity-detection-and-COB.md>

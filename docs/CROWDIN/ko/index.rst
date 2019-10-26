@@ -74,7 +74,7 @@ AndroidAPS Usage
    :glob:
     
    AndroidAPS screens <./Getting-Started/Screenshots.md>
-   목적 <./Usage/Objectives.md>
+   Objectives <./Usage/Objectives2019.rst>
    OpenAPS 기능들 <./Usage/Open-APS-features.md>   
    COB calculation <./Usage/COB-calculation.rst>
    Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
