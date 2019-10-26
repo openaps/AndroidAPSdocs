@@ -114,7 +114,7 @@ Une fois les téléchargements terminés, cliquez sur le bouton "Finish".
 
 ### Mac
 
-* Si vous installez git via homebrew, il n'est pas nécessaire de modifier les préférences. Just in case: They can be found here: Android Studio - Preferences.
+* Si vous installez git via homebrew, il n'est pas nécessaire de modifier les préférences. Juste au cas où: on peut y accéder ici : Android Studio - Preferences.
 
 ## Télécharger le code et les composants supplémentaires
 
@@ -187,11 +187,11 @@ Maintenant, c'est fini. Veuillez cliquer sur "Finish".
 
 ![Capture d'écran 27](../images/Installation_Screenshot_27.png)
 
-Click "Install Build Tools and sync project" as Android Studio needs to download missing Tools.
+Cliquez sur "Install Build Tools and sync project" car Android Studio a besoin de télécharger des outils complémentaires.
 
 ![Capture d'écran 28](../images/Installation_Screenshot_28.png)
 
-As it is said in the dialog please wait until the download is finished.
+Comme il est dit dans la boîte de dialogue, veuillez patienter jusqu'à ce que le téléchargement soit terminé.
 
 ![Capture d'écran 29](../images/Installation_Screenshot_29.png)
 
