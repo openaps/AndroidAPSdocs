@@ -12,7 +12,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Java implementace:** Částečná implementace dostupná [Roundrtrip2](https://github.com/TC2013/Roundtrip2) a [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**Stav implementace AAPS:** Probíhající práce. Více viz [Andyho fork AndroidAPS](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Většina práce byla provedena v souvislosti s [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS), aby fungoval framework a příkazy. V daném úložišti je projekt (Medtronic) a otevřené tikety pro budoucí vývoj, vývoj probíhá na branchi dev_medtronic (což je zde výchozí branch). K dispozici je také místnost na gitteru: RileyLinkAAPS/Lobby. AAPS. 0.10 testovací verze "release" je vydána, obsahuje přibližně 95 % všech funkcí, v současnosti však chybí synchronizace dočasných bazálů a událostí pumpy "Výdej zastaven". Project pravděpodobně bude koncem července 2019 sloučen do hlavního úložiště. Podrobnosti a termíny viz [Přehled projektu](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+**Stav implementace AAPS:** Probíhající práce. Více viz [Andyho fork AndroidAPS](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Většina práce byla provedena v souvislosti s [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS), aby fungoval framework a příkazy. V daném repository je projekt (Medtronic) a otevřené tikety pro budoucí vývoj, vývoj je prováděný na branchi dev_medtronic (což je zde výchozí branch). K dispozici je také místnost na gitteru: RileyLinkAAPS/Lobby. AAPS. 0.10 testovací verze "release" je vydána, obsahuje přibližně 95 % všech funkcí, v současnosti však chybí synchronizace dočasných bazálů a událostí pumpy "Výdej zastaven". Project pravděpodobně bude koncem července 2019 sloučen do hlavního úložiště. Podrobnosti a termíny viz [Přehled projektu](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
 **Hardwarové požadavky pro AAPS:** RileyLink (s 916MHz anténou).
 
@@ -32,7 +32,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Java implementace:** Prozatím žádné.
 
-**Stav implementace AAPS:** Začaly práce na [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) for Omnipod (dev_omnipod branch), který nebude vyžadovat Raspberry Pi, prozatím nedokončeno. Postup můžete sledovat na https://omniaps.slack.com/ kanál android-driver.
+**Stav implementace AAPS:** Začaly práce na [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) for Omnipod (dev_omnipod branch), který nebude vyžadovat Raspberry Pi, prozatím nedokončeno. Můžete sledovat postup na https://omniaps.slack.com/ kanál android-driver.
 
 **Hardwarové požadavky pro AAPS:** RileyLink s Omnipod firmware (2.x) a 433MHz anténou.
 
