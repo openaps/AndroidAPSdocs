@@ -1,4 +1,4 @@
-# FAQ for loopers
+# Veelgestelde vragen
 
 Om vragen toe te voegen aan de Veelgestelde Vragen: volg deze [instructies](../make-a-PR.md)
 
