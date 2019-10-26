@@ -20,26 +20,26 @@ Un appui long sur n’importe lequel de ces boutons permet de modifier les param
 
 ### Section C
 
-* latest blood glucose reading from your CGM
-* how long ago it was read
-* changes in the last 15 and 40 minutes
-* your current basal rate - including any temporary basal rate (TBR) programmed by the system
-* insulin on board (IOB)
-* carbs on board (COB)
+* dernière glycémie reçue de votre MGC
+* depuis combien de temps elle a été reçue
+* les changements dans les 15 et 40 dernières minutes
+* votre débit de basal - y compris les débits de base temporaires (DBT) programmés par le système
+* Insuline Active (IA)
+* Glucides Actifs (GA)
 
-The optional [status lights](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) give a visual warning for low reservoir and battery level as well as overdue site change.
+Les [voyants d'état optionnels](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) donnent un avertissement visuel pour un réservoir bas et le niveau de batterie ainsi que le changement de site en retard.
 
-The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
+Le chiffre de l’insuline active serait à 0 s’il n’y avait que votre basal standard en cours et qu’il ne restait plus d’insuline active d’un précédent bolus. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. Ce second chiffre peut être négatif s’il y a eu récemment des périodes de basal réduit.
 
 ### Section D
 
-Click the arrow on the right side of the screen in section D to select which information is displayed on the charts below.
+Cliquez sur la flèche située à droite de l'écran de la section D pour sélectionner les informations à afficher dans les graphiques ci-dessous.
 
 ### Section E
 
-Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries.
+Graphique montrant votre glycémie (GLY) lue à partir de votre capteur de glycémie (MGC), il montre également des notifications Nightscout telles que les glycémies capillaires de calibrations et des entrées de glucides.
 
-Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+Long press on the graph to change the time scale. Vous pouvez choisir 6, 8, 12, 18 ou 24 heures.
 
 The extended lines show the predicted BG calculations and trends - if you have it selected.
 
