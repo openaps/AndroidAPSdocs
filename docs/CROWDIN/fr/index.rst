@@ -136,7 +136,7 @@ Questions fréquentes
    Questions fréquentes <./Getting-Started/FAQ.md>
 
    
-Glossary
+Glossaire
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
