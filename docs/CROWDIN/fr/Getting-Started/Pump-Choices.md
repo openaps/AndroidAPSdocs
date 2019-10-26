@@ -21,7 +21,7 @@ La Combo et l'Insight sont des pompes solides, compatibles avec la boucle fermé
 
 * La Combo vibre à la fin des DBT, la Dana* R vibre (ou bipe) sur les SMB. La nuit, vous êtes susceptibles de plus utiliser les DBT que les SMB. Le Dana * RS est configurable pour ne pas émettre de bip ni vibrer.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* La lecture de l'historique sur le RS en quelques secondes avec des glucides permet de changer facilement de téléphone en mode hors connexion et de poursuivre la boucle dès que des valeurs de MGC sont lues.
 
 * Toutes les pompes compatibles avec AndroidAPS sont étanches à la livraison. Seules les pompes Dana sont également "étanches par garantie" en raison du compartiment de batteries scellées et du système de remplissage du réservoir.
 
