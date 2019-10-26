@@ -211,14 +211,14 @@
 <tr>
  <td>MA</td>
  <td>Assistance Repas - algorithme standard pour gérer les repas</td>
- <td>AMA / SMB</td>
+ <td>AAR / SMB</td>
  <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
 </tr>
 <tr>
  <td>maxIOB</td>
  <td>fonction de sécurité - niveau d'insuline actvie maximal que AAPS ne peut pas dépasser</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -374,22 +374,22 @@
  <td>TT</td>
  <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Cibles temp.</a></td>
 </tr>
 <tr>
  <td>UAM</td>
  <td>Repas Non Signalés - détection d'une augmentation significative de la glycémie dûe aux repas, à l'adrénaline ou à d'autres influences et tentative d'ajustement avec SMB</td>
  <td>SMB</td>
- <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki RNS</a></td>
 </tr>
 <tr>
  <td>Pompe virtuelle</td>
  <td>option permettant d'essayer les fonctions de AndroidAPS à l'aide d'un modèle de pompe sans pilote AAPS pour le bouclage</td>
- <td>Open Loop</td>
+ <td>Boucle Ouverte</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Wallpaper</td>
+ <td>Fonds d'écran</td>
  <td>Image d'arrière-plan de AndroidAPS</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">voir la page des smartphones</a></td>
