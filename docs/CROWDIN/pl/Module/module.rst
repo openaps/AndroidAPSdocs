@@ -6,7 +6,7 @@ AndroidAPS is not just a (self-built) application, it is just one of serveral mo
   :alt: Compontents overview
 
 .. notatka:: 
-   **IMPORTANT SAFETY NOTICE**
+   ** WAŻNE INFORMACJE DOTYCZĄCE BEZPIECZEŃSTWA * *
 
    The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
@@ -68,7 +68,7 @@ The advantages of the DanaR/RS vs. the Combo as the pump of choice however are:
 - Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 - All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system. 
 
-BG Source
+Źródło BG
 ------------
 This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
