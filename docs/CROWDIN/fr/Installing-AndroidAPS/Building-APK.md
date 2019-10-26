@@ -237,32 +237,32 @@ Cliquez sur "Create new..." pour commencer la création de votre fichier de clé
 
 ![Capture d'écran 41](../images/Installation_Screenshot_41.png)
 
-* Fill in the information for the next dialog. 
-  * Key store path: is the path to the keystore file
-  * The password fields below are for the keystore to double check for typing errors.
-  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
-  * The password fields below the key are for the key itself. As always to double check for typing errors.
-  * You can let the validity at the default of 25 years.
-  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
+* Renseignez les informations de la boîte de dialogue suivante. 
+  * Key store path : chemin d'accès au fichier de clés
+  * Les champs password en dessous permettent une double vérification du mot de passe pour éviter les erreurs de frappe.
+  * Alias est un nom pour la clé dont vous avez besoin. Vous pouvez laisser la valeur par défaut ou lui donner un nom spécifique.
+  * Les champs password en dessous de la clé sont pour la clé elle-même. Comme précédemment double contrôle pour éviter les erreurs de frappe.
+  * Vous pouvez laisser la validité par défaut de 25 ans.
+  * Vous n'avez qu'à remplir le prénom et le nom de famille, mais n'hésitez pas à compléter les autres informations. Puis cliquez sur "OK".
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
+![Capture d'écran 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Renseignez les informations de la dernière boîte de dialogue et cliquez sur "Next".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+![Capture d'écran 43](../images/Installation_Screenshot_43.png)
 
-Select "full" as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+Sélectionnez "fullRelease" pour Buid Variants. Sélectionnez "V1 (Jar Signature)" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
-  * full (i.e. recommendations automatically enacted in closed looping)
+* 'Release' devrait être votre choix par défaut pour "Build Variants", 'Debug' est juste pour les personnes qui codent.
+* Sélectionnez le type de génération que vous souhaitez complier. 
+  * full (c'est à dire recommandations automatiquement adoptées en boucle fermée)
   * openloop (i.e. recommendations given to user to manually enact)
-  * pumpcontrol (i.e. remote control for pump, no looping)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+  * pumpcontrol (c'est-à-dire télécommande pour la pompe, pas pour le bouclage)
+  * nsclient (c'est-à-dire que les données de bouclage d'un autre utilisateur sont affichées et que des entrées de careportal peuvent être ajoutées)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Capture d'écran 44](../images/Installation_Screenshot_44.png)
 
-In the event log you see that the Signed APK was generated successfully.
+Dans le journal des événements, vous voyez que l'APK signé a été généré avec succès.
 
 ![Screenshot 45](../images/Installation_Screenshot_45.png)
 
