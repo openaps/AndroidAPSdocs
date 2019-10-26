@@ -18,20 +18,23 @@ Release date: 26-10-2019
 
 ### Is this update for me? Currently is NOT supported
 * Android 5
-* Poctech, 600SeriesUploader, Glimp, Patched Dexcom from 2.3 directory
+* Poctech
+* 600SeriesUploader
+* Glimp
+* Patched Dexcom from 2.3 directory
 
 ### Major new features
 * Internal change of targetSDK to 28 (Android 9), jetpack support
 * RxJava2, Okhttp3, Retrofit support
-* Old Medtronic pumps support (RileyLink need)
-* New Automation plugin
-* Allow to bulus only part from bolus wizard calculation
+* Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
+* New [Automation plugin](../Usage/Automation.rst)
+* Allow to bolus only part from bolus wizard calculation
 * Rendering insulin activity
 * Adjusting IOB predictions by autosense result
-* New support for patched Dexcom apks (2.4 folder)
+* New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
-* New objectives - exam, application handling
+* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
 * Fixed bug in Dana* drivers where false time difference was reported
 
 ## Version 2.3
