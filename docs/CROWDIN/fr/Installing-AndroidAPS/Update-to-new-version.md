@@ -19,17 +19,19 @@
   
   ![Git installation path](../images/Update_GitPath.png)
 
+* Reboot your PC to update System Environment.
+
 * Let Studio know where is git.exe located: File - Settings
   
-  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+  ![Android Studio - ouvrir les paramètres](../images/Update_GitSettings1.png)
 
 * In the next window: Version Control - Git
 
-* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
+* Choisissez le chemin correct : .../Git<font color="#FF0000"><b>/bin</b></font>
 
 * Make sure update method "Merge" is selected.
   
-  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+  ![Android Studio - chemin GIT](../images/Update_GitSettings2a.png)
 
 ### Mac
 
@@ -170,6 +172,10 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
      2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
      3. Change apk destination folder (different location).
     
+
+## No CGM data when using xDrip
+
+[Identify receiver](../Configuration/xdrip#identify-receiver)
 
 ## Uncommitted changes
 
