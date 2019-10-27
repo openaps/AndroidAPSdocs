@@ -6,9 +6,9 @@
 
 ## ## Důležité poznámky
 
-**Poznámka** U AndroidAPS verze 2.3 není možné sestavit soubor APK s nejnovější verzí programu Android Studio. Použijte prosím Android Studio 3.4 z [tohoto](https://developer.android.com/studio/archive?) umístění.
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
-**Mějte prosím na paměti** při vytváření AndroidAPS 2.0 apk: **Konfigurace na vyžádání** není podporována v aktuální verzi Android Gradle pluginu!
+**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
