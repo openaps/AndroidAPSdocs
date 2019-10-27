@@ -8,7 +8,7 @@
 
 <font color="#FF0000"><b>Wichtiger Hinweis: Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.</font></b>.
 
-***Wichtiger Hinweis***: Das Update auf AndroidAPS Version 2.3 kann nicht mit der letzten Version von Android Studio durchgeführt werden. Verwende bitte [Android Studio Version 3.4](https://developer.android.com/studio/archive?).
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ## Installiere git (falls du es noch nicht hast)
 
