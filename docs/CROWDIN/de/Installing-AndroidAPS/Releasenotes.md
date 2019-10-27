@@ -16,7 +16,7 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Erscheinungsdatum: 26.10.2019
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+*** Hinweis ***: Verwende [ Android Studio Version 3.5.1 ](https://developer.android.com/studio/) oder höher um die [ APK zu erstellen ](../Installing-AndroidAPS/Building-APK.md) oder zu [aktualisieren](../Installing-AndroidAPS/Update-to-new-version.md).
 
 ### Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:
 
@@ -40,11 +40,11 @@ Erscheinungsdatum: 26.10.2019
 * Möglichkeit für OpenAPS Anwender, die Ziele (Objectives) zu überspringen
 * Neue [Ziele (Objectives)](../Usage/Objectives2019.rst) - Wissens-Check & Handling der App
 * Fehlerbehebung Dana Treiber, bei dem eine falsche Zeitdifferenz angegeben wurde
-* Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
+* Fehler bei den [SMS-Befehlen](../Usage/SMS-Commands.md) behoben
 
 ## Version 2.3
 
-Release date: 25-04-2019
+Erscheinungsdatum: 25.04.2019
 
 ### Wichtige neue Funktionen
 
@@ -60,7 +60,7 @@ Release date: 25-04-2019
 
 ## Version 2.2.2
 
-Release date: 07-04-2019
+Erscheinungsdatum: 07.04.2019
 
 ### Wichtige neue Funktionen
 
@@ -71,7 +71,7 @@ Release date: 07-04-2019
 
 ## Version 2.2
 
-Release date: 29-03-2019
+Erscheinungsdatum: 29.03.2019
 
 ### Wichtige neue Funktionen
 
@@ -83,7 +83,7 @@ Release date: 29-03-2019
 
 ## Version 2.1
 
-Release date: 03-03-2019
+Erscheinungsdatum: 03.03.2019
 
 ### Wichtige neue Funktionen
 
@@ -102,7 +102,7 @@ Release date: 03-03-2019
 
 ## Version 2.0
 
-Release date: 03-11-2018
+Erscheinungsdatum: 03.11.2018
 
 ### Wichtige neue Funktionen
 
