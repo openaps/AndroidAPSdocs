@@ -4,7 +4,7 @@
 
 **AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir [FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
-## Important notes
+## Remarques importantes
 
 <font color="#FF0000"> <b>Remarque importante : A partir de la version 2.3, vous devez utiliser git pour mettre à jour. La mise à jour via le fichier zip ne fonctionne plus.</font></b>.
 
@@ -131,11 +131,11 @@ Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour vo
 
 ## Check AAPS version on phone
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Vous pouvez vérifier la version AAPS sur votre téléphone en cliquant sur le menu 3 points en haut à droite puis sur "à propos".
 
 ![AAPS version installed](../images/Update_VersionCheck.png)
 
-# Troubleshooting
+# Résolution de problèmes
 
 ## Kotlin compiler warning
 
@@ -198,14 +198,14 @@ If you receive failure message like
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps: 
-  1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-  2. Uninstall AAPS on your phone.
-  3. Enable airplane mode & turn off bluetooth.
-  4. Install new version (“app-full-release.apk”)
+* Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
+* Si vous avez le message "App non installé" sur votre téléphone, suivez ces étapes : 
+  1. [Exporter les paramètres](../Usage/Objectives#export-import-settings) (dans la version AAPS déjà installée sur votre téléphone)
+  2. Désinstaller AAPS sur votre téléphone.
+  3. Activer le mode avion & désactiver bluetooth.
+  4. Installer la nouvelle version (« app-full-release.apk »)
   5. [Import settings](../Usage/Objectives#export-import-settings)
-  6. Turn bluetooth back on and disable airplane mode
+  6. Activer le bluetooth et désactiver le mode avion
 
 ## App installed but old version
 
@@ -215,7 +215,7 @@ If you build the app successfully, transferred it to your phone and installed it
 
 If non of the above tips helped you might consider building the app from scratch:
 
-1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
+1. [Exporter les paramètres](../Usage/Objectives#export-import-settings) (dans la version AAPS déjà installée sur votre téléphone)
 2. Have your key password and key store password ready In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
 3.     Note down the path to your key store
       In Android Studio Build -> Generate Signed APK
