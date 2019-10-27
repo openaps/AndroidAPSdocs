@@ -43,14 +43,14 @@ Description détaillée des étapes nécessaires à la construction du fichier A
 
 ### Windows
 
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Make sure to note down the installation path. Vous en aurez besoin plus tard après avoir installé Android Studio.
+* N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/win>
+* Assurez-vous de noter le chemin d’installation. Vous en aurez besoin plus tard après avoir installé Android Studio.
   
-  ![Git installation path](../images/Update_GitPath.png)
+  ![Chemin d'installation Git](../images/Update_GitPath.png)
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>
+* N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/mac>
 * Utilisez homebrew pour installer git: ```$ brew install git```.
 * Pour plus de détails sur l'installation de git, voir la [documentation officielle](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
