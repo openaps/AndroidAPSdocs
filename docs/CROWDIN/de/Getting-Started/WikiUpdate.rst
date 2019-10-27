@@ -2,7 +2,7 @@ Wiki Updates & Änderungen
 **********************
 Oktober 2019
 ===============
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS Version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ - Seitenaktuallisierungen (vor allem auf der Seite `Update auf eine neue Version <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `Aktiven Kohlenhydrate (COB) - eigene Seite <../Usage/COB-calculation.html>`_
 *  `Aktiven Kohlynhydrate (COB) - Fehlerhafte Ermittlung <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
 * `Dexcom G6-spezifische Problembehandlung <../Hardware/DexcomG6.html#dexcom-g6-spezifische-problembehandlung>`_
