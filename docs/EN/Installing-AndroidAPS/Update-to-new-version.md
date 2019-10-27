@@ -173,6 +173,10 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
    2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
    3. Change apk destination folder (different location).
 
+## No CGM data when using xDrip
+
+[Identify receiver](../Configuration/xdrip#identify-receiver)
+
 ## Uncommitted changes
 
 If you receive failure message like
