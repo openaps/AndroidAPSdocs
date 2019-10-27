@@ -2,13 +2,13 @@
 
 ## Постройте сами вместо того, чтобы загружать
 
-**AndroidAPS недоступен для скачивания из-за законодательства, касающегося медицинских устройств. Построить приложение для собственного использования вполне законно, но вам не разрешается передавать копию другим! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS недоступен для скачивания из-за законодательства, касающегося медицинских устройств. Построить приложение для собственного использования вполне законно, но вам не разрешается передавать копию другим! См. раздел [ FAQ ](../Getting-Started/FAQ.md).**
 
 ## ## Важные Примечания
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+*** Примечание ***: Для построения apk используйте [ Android Studio версии 3.5.1 ](https://developer.android.com/studio/) или новее.
 
-**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+** Конфигурация по требованию ** не поддерживается текущей версией модуля Android Gradle!
 
 Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
 
@@ -290,6 +290,6 @@ Android Studio рекомендует обновить систему gradle. **
 
 Да, все получилось, теперь можно начать настройку AndroidAPS (CGMS, помпа) и т. д.
 
-## Identify receiver if using xDrip
+## Идентифицировать ресивер при использовании xDrip
 
-[See xDrip page](../Configuration/xdrip#identify-receiver)
+[См. страницу xDrip](../Configuration/xdrip#identify-receiver)
