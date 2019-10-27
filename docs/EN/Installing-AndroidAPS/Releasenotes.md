@@ -16,6 +16,8 @@ Please understand that this change is not intended to bug you but is due to safe
 
 Release date: 26-10-2019
 
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+
 ### Is this update for me? Currently is NOT supported
 * Android 5
 * Poctech
