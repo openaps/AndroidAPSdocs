@@ -19,6 +19,8 @@
   
   ![Путь установки Git](../images/Update_GitPath.png)
 
+* Reboot your PC to update System Environment.
+
 * Укажите Studio, где находится git.exe: Файл - Настройки
   
   ![Android Studio - открыть настройки](../images/Update_GitSettings1.png)
@@ -170,6 +172,10 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
      2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
      3. Change apk destination folder (different location).
     
+
+## No CGM data when using xDrip
+
+[Идентификатор ресивера](../Configuration/xdrip#identify-receiver)
 
 ## Uncommitted changes
 
