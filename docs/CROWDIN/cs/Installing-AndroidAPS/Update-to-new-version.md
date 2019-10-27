@@ -8,7 +8,7 @@
 
 <font color="#FF0000"><b>U verze 2.3 je potřeba použít git pro aktualizaci. Aktualizace pomocí zip souboru již nefunguje.</font></b>.
 
-***Poznámka***: Jestliže aktualizujete na verzi AndroidAPS 2.3, musíte použít [Android Studio Version 3.4](https://developer.android.com/studio/archive?), protože s nejnovější verzí nefunguje.
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ## Nainstalujte git (pokud ho ještě nemáte)
 
