@@ -2,7 +2,7 @@
 
 ## Vyrobte si místo stažení
 
-**AndroidAPS není k dispozici ke stažení kvůli regulaci zdravotnických zařízení. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! Další informace naleznete v části [FAQ](../Getting-Started/FAQ.md).**
+**AndroidAPS není k dispozici ke stažení kvůli regulaci zdravotnických zařízení. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
 ## ## Důležité poznámky
 
