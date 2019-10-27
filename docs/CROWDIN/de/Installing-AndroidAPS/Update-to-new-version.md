@@ -8,7 +8,7 @@
 
 <font color="#FF0000"><b>Wichtiger Hinweis: Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.</font></b>.
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+*** Hinweis ***: Verwende [ Android Studio Version 3.5.1 ](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
 
 ## Installiere git (falls du es noch nicht hast)
 
