@@ -1,26 +1,26 @@
-Wiki updates & changes
+Wiki mises à jour et modifications
 **********************
-October 2019
+Octobre 2019
 ===============
-* `COB calculation on separate page <../Usage/COB-calculation.html>`_
-* `COB - wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
-* `Dexcom G6 specific troubleshooting <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
-* `SGLT-2 inhibitors - do not use when looping <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
-* `SMS Commands Troubleshooting <../Usage/SMS-Commands.html#troubleshooting>`_
-* `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
+* `Le calcul des GA sur une page distincte <../Usage/COB-calculation.html>`_
+* `GA - mauvaise detection de la valeur des GA <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+* `Dépannages spécifiques du Dexcom G6 <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
+* `Inhibiteurs SGLT-2 - ne pas utiliser lors de la boucle <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
+* `Dépannage des commandes SMS <../Usage/SMS-Commands.html#troubleshooting>`_
+* `xDrip - Mise à jour du remplacement de l'émetteur G6 <../Configuration/xdrip.html#replace-transmitter>`_
 
-September 2019
+Septembre 2019
 ===============
-* `Automate <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - slow carb absorbtion
-* `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
-* `Profile timeshift <../Usage/Profiles.html#timeshift>`_ (more details)
-* `Remote monitoring <../Children/Children.html>`_
-* `What is a closed loop system? <../Getting-Started/ClosedLoop.html>`_
+* `Automatisation <../Usage/Automation.html>`_
+* `Calculatrice Bolus <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - absorption lente des glucides
+* `Sécurité Nightscout <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
+* `Décalage horaire du profil <../Usage/Profiles.html#timeshift>`_ (plus de détails)
+* `Surveillance à distance <../Children/Children.html>`_
+* `Qu'est-ce qu'un système à boucle fermée ? <../Getting-Started/ClosedLoop.html>`_
 
-August 2019
+Août 2019
 ===========
-* `Dexcom G6 patched app region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
-* `Dexcom G6 new transmitter <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
-* `What do I need? <../index.html#what-do-i-need>`_ - new structure & additional information
-* New structure
+* `Application Dexcom G6 patchée par region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* `Nouvel émetteur Dexcom G6 <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
+* `Ce dont j'ai besoin? <../index.html#what-do-i-need>`_ - nouvelle structure & informations supplémentaires
+* Nouvelle structure
