@@ -19,6 +19,7 @@
 
    ![Git installation path](../images/Update_GitPath.png)
 
+* Reboot your PC to update System Environment.
 * Let Studio know where is git.exe located: File - Settings 
 
    ![Android Studio - open settings](../images/Update_GitSettings1.png)
