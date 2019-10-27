@@ -16,6 +16,8 @@
 
 Дата выпуска: 26-10-2019
 
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+
 ### Это обновление для меня? В настоящее время НЕ поддерживается
 
 * Android 5
@@ -38,10 +40,11 @@
 * Возможность обойти цели пользователям OpenAPS
 * New [objectives](../Usage/Objectives2019.rst) - exam, application handling
 * Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
+* Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
 
 ## Версия 2.3
 
-Дата выпуска: 25-04-2019
+Release date: 25-04-2019
 
 ### Новые возможности
 
@@ -57,7 +60,7 @@
 
 ## Версия 2.2.2
 
-Дата выпуска: 07-04-2019
+Release date: 07-04-2019
 
 ### Новые возможности
 
@@ -68,7 +71,7 @@
 
 ## Версия 2.2
 
-Дата выпуска: 29-03-2019
+Release date: 29-03-2019
 
 ### Новые возможности
 
@@ -80,7 +83,7 @@
 
 ## Версия 2.1
 
-Дата выпуска: 03-03-2019
+Release date: 03-03-2019
 
 ### Новые возможности
 
@@ -99,7 +102,7 @@
 
 ## Версия 2.0
 
-Дата выпуска: 03-11-2018
+Release date: 03-11-2018
 
 ### Новые возможности
 
