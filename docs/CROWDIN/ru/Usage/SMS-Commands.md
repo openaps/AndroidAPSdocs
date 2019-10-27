@@ -1,108 +1,97 @@
 # SMS-команды
 
-### Обход ошибки в AndroidAPS 2.3
-
-Настройки команд SMS отключены в версиях AndroidAPS 2.3 из-за ошибки, но могут снова применяться в версии 2.4
-
-Если вам необходимо пользоваться SMS командами, можно применить такое решение:
-
-- Экспорт настроек
-- Понижение до версии AndroidAPS 2.2 (установив ваш файл APK версии 2.2)
-- Выполните настройки команд SMS в версии AndroidAPS 2.2.
-- Обновитесь до AndroidAPS 2.3. Настройки SMS будут там недоступны.
-
 ## Безопасность прежде всего
 
-- AndroidAPS позволяет вам контролировать телефон ребенка удаленно посредством текстовых сообщений (смс). Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом.
-- AndroidAPS также сообщит вам текстовым сообщением, выполнены ли ваши удаленные команды, такие как болюс или изменения профиля. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
+- AndroidAPS allows you to control a child's phone remotely via text message. Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом.
+- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
 
 ## Как это работает
 
-В настройках Android телефон перейдите в приложения > AndroidAPS > Разрешения и включите SMS
+In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
-В AndroidAPS перейдите в Настройки > SMS Коммуникатор и введите номер телефона(ов), с которых вы хотите отправлять SMS команды (разделенные запятыми, без пробелов или других символов где угодно - т.е. +4412345678;+4412345679), а также включите 'Разрешить удаленные команды через SMS'.
+In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 
-Отправьте SMS на телефон с AndroidAPS с одобренного(ых) вами телефона(ов) при помощи команд перечисленных ниже **жирным шрифтом**, телефон ответит подтверждением успешного выполнения команды или запрошенного статуса.
+Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
 
-**Подсказка**: Полезно держать функцию SMS незанятой на обоих телефонах, если их отправляется много.
+**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
 ## Commands
 
 ### BG/ГК
 
-- Текущая ГК: 5,6 4мин назад, Дельта: -0,2 ммол, IOB: 0,20U (Болюс: 0,10U Базал: 0,10U)
+- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 
 ### LOOP STOP/DISABLE
 
-- Зцикл остановлен
+- Loop has been disabled
 
 ### LOOP START/ENABLE
 
-- зцикл активирован
+- Loop has been enabled
 
 ### LOOP STATUS
 
-- зцикл не работает
-- зцикл работает
-- Остановлен (на 10 мин)
+- Loop is disabled
+- Loop is enabled
+- Suspended (10 min)
 
 ### LOOP SUSPEND 20
 
-- ЗЦикл приостановлен на 20 минут
+- Loop suspended for 20 minutes
 
 ### LOOP RESUME
 
-- ЗЦикл возобновлен
+- Loop resumed
 
 ### TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 получатель
+- TERATMENTS REFRESH 1 receivers
 
 ### NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 получатель
+- NSCLIENT RESTART 1 receivers
 
 ### PUMP
 
-- Последнее соед: 1 мин. назад Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ### BASAL STOP/CANCEL
 
-- Чтобы остановить врем базал ответьте кодом EmF
+- To stop temp basal reply with code EmF
 
 ### BASAL 0.3
 
-- Для запуска базала 0.3ед/ч на 30 минут ответьте кодом Swe
+- To start basal 0.3U/h for 30 min reply with code Swe
 
 ### BASAL 0.3 20
 
-- Для запуска базала 0.3ед/ч на 20 минут ответьте кодом Swe
+- To start basal 0.3U/h for 20 min reply with code Swe
 
 ### BASAL 30%
 
-- Для запуска базала 30% на 30 минут ответьте кодом Swe
+- To start basal 30% for 30 min reply with code Swe
 
 ### BASAL 30% 50
 
-- Для запуска базала 30% на 50 минут ответьте кодом Swe
+- To start basal 30% for 50 min reply with code Swe
 
 ### BOLUS 1.2
 
-- Для подачи болюса 1,2 ед ответьте кодом Rrt
-- Удаленный болюс недопустим (* в течение 15 минут после команды Болюс или удаленных команд *)
+- To deliver bolus 1.2U reply with code Rrt
+- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
 
 ### EXTENDED STOP/CANCEL
 
-- Для прекращения подачи пролонгированного болюса ответьте кодом EmF
+- To stop extended bolus reply with code EmF
 
 ### EXTENDED 2 120
 
-- Для начала подачи пролонгированного болюса 2 ед. на 120 мин. ответьте кодом EmF
+- To start extended bolus 2U for 120 min reply with code EmF
 
 ### CAL 5.6
 
-- Чтобы отправить калибровку 5.6 ответьте кодом Rrt
-- Калибровка отправлена (*если установлен xDrip. Разрешение на прием калибровок должно быть включено в xDrip+*)
+- To send calibration 5.6 reply with code Rrt
+- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
 
 ### PROFILE STATUS
 
@@ -110,15 +99,15 @@
 
 ### PROFILE LIST
 
-- 1. ` Profile1 ` 2. ` Profile2 `
+- 1.`Profile1` 2.`Profile2`
 
 ### PROFILE 1
 
-- Чтобы переключиться на Profile 1 100% ответьте кодом Any
+- To switch profile to Profile1 100% reply with code Any
 
 ### PROFILE 2 30
 
-- Чтобы переключиться на Profile 2 30% ответьте кодом Any
+- To switch profile to Profile2 30% reply with code Any
 
 ## Устранение неполадок
 
