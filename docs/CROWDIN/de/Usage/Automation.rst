@@ -1,6 +1,5 @@
 Automatisierung
 ***************
-Diese Funktion wird mit der nächsten AndroidAPS Version (2.4) verfügbar sein. 
 
 Was ist Automatisierung
 ================
