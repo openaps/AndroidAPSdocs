@@ -36,6 +36,7 @@ Release date: 26-10-2019
 * Allow to bypass objectives for OpenAPS users
 * New [objectives](../Usage/Objectives2019.rst) - exam, application handling
 * Fixed bug in Dana* drivers where false time difference was reported
+* Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
 
 ## Version 2.3
 
