@@ -6,9 +6,9 @@
 
 ## ## Remarques importantes
 
-**Veuillez noter** Avec AndroidAPS version 2.3, il n'est pas possible de construire l'APK avec la dernière version d'Android Studio. Veuillez utiliser Android Studio 3.4 à partir de [ici](https://developer.android.com/studio/archive?).
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
-**Veuillez noter** lors de la construction d'AndroidAPS 2.0 apk : **Configuration on demand** n'est pas supporté par la version actuelle du plugin Android Gradle !
+**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
 
