@@ -2,7 +2,7 @@ Wiki mises à jour et modifications
 **********************
 Octobre 2019
 ===============
-* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ mises à jour (en particulier sur la `page de mise à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `Le calcul des GA sur une page distincte <../Usage/COB-calculation.html>`_
 * `GA - mauvaise detection de la valeur des GA <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 * `Dépannages spécifiques du Dexcom G6 <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
