@@ -74,7 +74,7 @@ Utilisation d'AndroidAPS
    :glob:
     
    Les écrans d'AndroidAPS <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives2019.rst>
+   Objectifs <./Usage/Objectives2019.rst>
    Fonctionnalités d'OpenAPS <./Usage/Open-APS-features.md>   
    Calcul des GA <./Usage/COB-calculation.rst>
    Estimation de la Sensibilité <./Configuration/Sensitivity-detection-and-COB.md>
