@@ -19,6 +19,7 @@
 
    ![Git installation path](../images/Update_GitPath.png)
 
+* Reboot your PC to update System Environment.
 * Let Studio know where is git.exe located: File - Settings 
 
    ![Android Studio - open settings](../images/Update_GitSettings1.png)
@@ -172,6 +173,10 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
    1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
    2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
    3. Change apk destination folder (different location).
+
+## No CGM data when using xDrip
+
+[Identify receiver](../Configuration/xdrip#identify-receiver)
 
 ## Uncommitted changes
 
