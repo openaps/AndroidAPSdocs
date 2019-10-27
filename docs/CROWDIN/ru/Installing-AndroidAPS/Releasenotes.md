@@ -12,13 +12,13 @@
 
 Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
-## Version 2.5.0
+## Версия 2.5.0
 
 Дата выпуска: 26-10-2019
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+*** Примечание ***: используйте [ Android Studio 3.5.1 ](https://developer.android.com/studio/) или новее для [ построения apk ](../Installing-AndroidAPS/Building-APK.md) или [ обновите ](../Installing-AndroidAPS/Update-to-new-version.md).
 
-***Note***: When using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+*** Примечание ***: При использовании xDrip отметьте [ identify receiver](../Configuration/xdrip#identify-receiver).
 
 ### Это обновление для меня? В настоящее время НЕ поддерживается
 
@@ -26,7 +26,7 @@
 * Poctech
 * 600SeriesUploader
 * Glimp
-* Patched Dexcom from 2.3 directory
+* Модифицированное приложение Dexcom из каталога 2.3
 
 ### Новые возможности
 
