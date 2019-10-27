@@ -6,9 +6,9 @@
 
 ## Wichtige Hinweise
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+*** Hinweis ***: Verwende [ Android Studio Version 3.5.1 ](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
 
-**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+** Konfiguration auf Abruf ** (Configuration on demand) wird von der aktuellen Version des Android-Gradle-Plugins nicht unterstützt!
 
 Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
 
