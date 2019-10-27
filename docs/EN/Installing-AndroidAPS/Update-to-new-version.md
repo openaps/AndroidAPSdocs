@@ -159,6 +159,20 @@ File -> Settings
 
 ![Settings offline work](../images/GIT_Offline2.jpg)
 
+## Error: buildOutput.apkData must not be null
+
+Sometimes you might get an error message when building the apk saying
+
+    `Errors while building APK.`
+   
+    `Cause: buildOutput.apkData must not be null`
+
+This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+
+   1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
+   2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
+   3. Change apk destination folder (different location).
+
 ## Uncommitted changes
 
 If you receive failure message like
