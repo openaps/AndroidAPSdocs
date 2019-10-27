@@ -1,6 +1,5 @@
 Automatizace
 ***************
-Tato funkce bude k dispozici v příští verzi AndroidAPS (2.4). 
 
 Co je automatizace
 ===================
