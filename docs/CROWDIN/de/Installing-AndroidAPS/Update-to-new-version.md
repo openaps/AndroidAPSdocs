@@ -19,6 +19,8 @@
   
   ![Git Installationspfad](../images/Update_GitPath.png)
 
+* Reboot your PC to update System Environment.
+
 * In Android Studio musst Du den Pfad zu git.exe hinterlegen: File - Settings
   
   ![Android Studio - Einstellungen öffnen](../images/Update_GitSettings1.png)
@@ -171,11 +173,15 @@ Dies ist ein bekannter Fehler in Android Studio 3.5 und wird wahrscheinlicherst 
      3. Ändere den Pfad des Zielordners (destination folder) auf ein neues Verzeichnis.
     
 
+## No CGM data when using xDrip
+
+[Identifiziere Empfänger](../Configuration/xdrip#identify-receiver)
+
 ## Uncommitted changes
 
-Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
+If you receive failure message like
 
-![Fehler uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Option 1
 
@@ -188,9 +194,9 @@ Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
 
 * Fügen den Text aus der Zwischenablage ein und drücke Return.![GIT checkout erfolgreich](../images/GIT_TerminalCheckOut2.jpg)
 
-## App not installed / Installation fehlgeschlagen
+## App not installed
 
-![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
+![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
 * Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor: 
@@ -201,13 +207,13 @@ Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
   5. [Importiere die Einstellungen](../Usage/Objectives#export-import-settings)
   6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
 
-## App installiert, aber weiter die alte Version auf dem Smartphone
+## App installed but old version
 
-Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich den Schritt 'Merge' in der [Update Anleitung](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github) übersprungen.
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
-## Keiner der oben genannten Löungsvorschläge funktioniert
+## None of the above worked
 
-Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
+If non of the above tips helped you might consider building the app from scratch:
 
 1. [Exportiere die Einstellungen](../Usage/Objectives#export-import-settings) (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
 2. Halte Dein key password und key store password bereit. Falls Du diese vergessen haben solltest, kannst Du sie evtl. wie [hier](https://youtu.be/nS3wxnLgZOo) beschrieben herausfinden.
@@ -222,8 +228,8 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 
 ## Worst case scenario
 
-Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, könntest Du versuchen, Android Studio komplett neu zu installieren. Einige Benutzer berichteten, dass dies ihr Problem gelöst hat.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. Anleitungen dazu findest Du online z.B. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Installiere Android Studio von Grund auf wie [hier](../Installing-AndroidAPS/Building-APK#install-android-studio) beschrieben und **führe kein gradle update durch**.
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
