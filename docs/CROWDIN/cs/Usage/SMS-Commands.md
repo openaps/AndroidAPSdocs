@@ -1,108 +1,97 @@
 # SMS příkazy
 
-### Obejití chyby v AndroidAPS 2.3
-
-Poznámka: v AndroidAPS verze 2.3 jsou SMS příkazy kvůli chybě zakázány. Ve verzi 2.4 ale fungují.
-
-Pokud musíte používat SMS příkazy, můžete použít následující pracovní postup:
-
-- Exportujte nastavení
-- Stáhněte AndroidAPS verzi 2.2 (instalací verze 2.2 APK)
-- Udělejte nastavení SMS v AndroidAPS 2.2.
-- Aktualizujte na AndroidAPS verze 2.3. SMS příkazy v ní nebudou k dostupné (ale funkční).
-
 ## Bezpečnost především
 
-- AndroidAPS vám umožňuje kontrolovat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN.
-- Systém AndroidAPS vás rovněž bude informovat textovou zprávou o tom, jestli váš vzdálený příkaz, např. bolus nebo změna profilu, byl proveden. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
+- AndroidAPS allows you to control a child's phone remotely via text message. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN.
+- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
 
 ## Jak to funguje
 
-Ve vašem Android telefonu běžte do jeho systémového nastavení, pak do Aplikace > AndroidAPS > Oprávnění a povolte SMS
+In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
-V AndroidAPS jděte do Nastavení > SMS komunikátor a zadajte telefonní čísla, ze kterých umožníte SMS příkazy (oddělené středníkem, žádné mezery nebo jiné znaky kdekoliv - tj. +4412345678;+4412345679) a také povolte "Povolit posílání příkazů prostřednictvím SMS".
+In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 
-Z některého z povolených čísel odešlete SMS zprávu na telefon s běžícím AndroidAPS a do zprávy zadejte některý z níže **tučně** zapsaných příkazů. Telefon vám odpoví, aby potvrdil úspěšné provedení daného příkazu anebo vrátí požadované stavové informace.
+Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
 
-**Tip**: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
+**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
 ## Příkazy
 
 ### BG
 
-- Poslední glykémie: 5.6 před 4 min, Rozdíl: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
+- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 
 ### LOOP STOP/DISABLE
 
-- Smyčka byla zakázána
+- Loop has been disabled
 
 ### LOOP START/ENABLE
 
-- Smyčka byla povolena
+- Loop has been enabled
 
 ### LOOP STATUS
 
-- Smyčka je zakázána
-- Smyčka je povolena
-- Pozastavena (10 minut)
+- Loop is disabled
+- Loop is enabled
+- Suspended (10 min)
 
 ### LOOP SUSPEND 20
 
-- Smyčka pozastavena na 20 minut
+- Loop suspended for 20 minutes
 
 ### LOOP RESUME
 
-- Smyčka obnovena
+- Loop resumed
 
 ### TREATMENTS REFRESH
 
-- TERATMENTS REFRESH 1 příjemce
+- TERATMENTS REFRESH 1 receivers
 
 ### NSCLIENT RESTART
 
-- NSCLIENT RESTART 1 příjemce
+- NSCLIENT RESTART 1 receivers
 
 ### PUMP
 
-- Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
+- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
 ### BASAL STOP/CANCEL
 
-- Na ukončení bazálu odpověz SMS s kódem EmF
+- To stop temp basal reply with code EmF
 
 ### BASAL 0.3
 
-- Pro spusteni bazalu 0.3U/h na 30 min odpovezte SMS s kodem Swe
+- To start basal 0.3U/h for 30 min reply with code Swe
 
 ### BASAL 0.3 20
 
-- Pro spusteni bazalu 0.3U/h na 20 min odpovezte SMS s kodem Swe
+- To start basal 0.3U/h for 20 min reply with code Swe
 
 ### BASAL 30%
 
-- Pro spuštění bazálu 30% na 30 min odpovězte SMS s kódem
+- To start basal 30% for 30 min reply with code Swe
 
 ### BASAL 30% 50
 
-- Pro spusteni bazalu 30% na 50 min odpovezte SMS s kódem Swe
+- To start basal 30% for 50 min reply with code Swe
 
 ### BOLUS 1.2
 
-- K potvzení bolusu 1.2U odpověz SMS s kódem Rrt
-- Vzdálený bolus není momentálně povolen (*pokud ještě neuplynulo 15 minut od posledního bolus příkazu anebo pokud nejsou vzdálené příkazy povoleny*)
+- To deliver bolus 1.2U reply with code Rrt
+- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
 
 ### EXTENDED STOP/CANCEL
 
-- Na zastavení prodlouženého bolusu odpovězte SMS s kódem EmF
+- To stop extended bolus reply with code EmF
 
 ### EXTENDED 2 120
 
-- Pro spuštění prodlouženého bolusu 2U na 120 min odpovězte SMS s kódem EmF
+- To start extended bolus 2U for 120 min reply with code EmF
 
 ### CAL 5.6
 
-- Odeslání kalibrace 5.6 potvrďte kódem Rrt
-- Kalibrace odeslána(*jestliže je xDrip nainstalovaný. Příjem kalibrací musí být v xDrip+ povolen.*)
+- To send calibration 5.6 reply with code Rrt
+- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
 
 ### PROFILE STATUS
 
@@ -114,14 +103,14 @@ Z některého z povolených čísel odešlete SMS zprávu na telefon s běžíc�
 
 ### PROFILE 1
 
-- Pro přepnutí profilu na Profile1 100% odpovězte SMS s kódem Any
+- To switch profile to Profile1 100% reply with code Any
 
 ### PROFILE 2 30
 
-- Pro přepnutí profilu na Profile2 30% odpovězte SMS s kódem Any
+- To switch profile to Profile2 30% reply with code Any
 
 ## Poradce při potížích
 
-Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím "odeslání zprávy jako konverzace".
+There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
-![Zakázat SMS jako chat zprávu](../images/SMSdisableChat.png)
+![Disable SMS as chat message](../images/SMSdisableChat.png)
