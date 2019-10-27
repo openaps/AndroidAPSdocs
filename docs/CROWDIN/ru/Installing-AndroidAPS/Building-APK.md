@@ -6,9 +6,9 @@
 
 ## ## Важные Примечания
 
-**Обратите внимание** Версию AndroidAPS 2.3 невозможно построить на последней версии Android Studio. Скачивайте Android Studio 3.4 [отсюда](https://developer.android.com/studio/archive?).
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
-**Пожалуйста, обратите внимание** при создании приложения AndroidAPS 2.0: **Выборочная Конфигурация ** не поддерживается текущей версией плагина Android Gradle!
+**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
 
