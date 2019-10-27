@@ -8,7 +8,7 @@
 
 <font color="#FF0000"><b>Важное замечание: Начиная с версии 2.3 следует использовать git для обновления. Обновление с zip-файла больше не работает.</font></b>.
 
-***Примечание***: Обновляясь до AndroidAPS 2.3, рекомендуется использовать версию [Android Studio 3.4](https://developer.android.com/studio/archive?), т. к. в новейших версиях Android Studio построить AAPS невозможно.
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ## Установите git (если у вас его нет)
 
