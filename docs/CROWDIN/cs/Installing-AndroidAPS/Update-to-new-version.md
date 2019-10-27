@@ -155,11 +155,27 @@ File -> Settings
 
 ![Nastavení práce offline](../images/GIT_Offline2.jpg)
 
-## Neprovedené změny
+## Error: buildOutput.apkData must not be null
 
-Pokud se zobrazí podobná chybová zpráva,
+Sometimes you might get an error message when building the apk saying
 
-![Chyba neprovedené změny](../images/GIT_TerminalCheckOut0.PNG)
+      `Errors while building APK.`
+    
+      `Cause: buildOutput.apkData must not be null`
+    
+
+This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+
+     1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
+     2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
+     3. Change apk destination folder (different location).
+    
+
+## Uncommitted changes
+
+If you receive failure message like
+
+![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Možnost 1
 
@@ -172,9 +188,9 @@ Pokud se zobrazí podobná chybová zpráva,
 
 * Vložte zkopírovaný text a stiskněte enter. ![Načtení GIT úspěšné](../images/GIT_TerminalCheckOut2.jpg)
 
-## Aplikace není nainstalována
+## App not installed
 
-![poznámka o nainstalované aplikaci v telefonu](../images/Update_AppNotInstalled.png)
+![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Ujistěte se, že jste do telefonu přenesli soubor „app-full-release.apk“.
 * Pokud se na telefonu zobrazí "Aplikace není nainstalována", postupujte následovně: 
@@ -185,13 +201,13 @@ Pokud se zobrazí podobná chybová zpráva,
   5. [Importujte nastavení](../Usage/Objectives#export-import-settings)
   6. Znovu zapněte bluetooth a vypněte režim letadlo
 
-## Aplikace je nainstalována, ale ve staré verzi
+## App installed but old version
 
-Jestliže jste úspěšně sestavili aplikaci, přenesli ji do telefonu a nainstalovali ji, ale číslo verze zůstává stejné, možná jste zapomněli krok sloučení v [návodu na aktualizaci](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
-## Nic z výše uvedeného nefunguje
+## None of the above worked
 
-Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace úplně od začátku:
+If non of the above tips helped you might consider building the app from scratch:
 
 1. [Exportujte nastavení](../Usage/Objectives#export-import-settings) (ve verzi AAPS, kterou již máte nainstalovanou v telefonu)
 2. Připravte si heslo klíče a heslo úložiště klíčů Pokud jste hesla zapomněli, můžete je zkusit najít v souborech projektu, jak je popsáno [zde](https://youtu.be/nS3wxnLgZOo).
@@ -204,10 +220,10 @@ Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace ú
 4. Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
 5. [Importujte nastavení](../Usage/Objectives#export-import-settings)
 
-## Nejčernější scénář
+## Worst case scenario
 
-V případě, že ani sestavení aplikace úplně od začátku nevyřeší váš problém, zkuste úplně odinstalovat Android Studio. Někteří uživatelé uvedli, že to jejich problém vyřešilo.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-Ujistěte se, že odinstalujte všechny soubory spojené s Android Studio. Návody lze najít online, např. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Znovu od začátku nainstalujte Android Studio, jak je popsáno [zde](../Installing-AndroidAPS/Building-APK#install-android-studio) a **neaktualizujte gradle**.
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
