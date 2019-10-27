@@ -2,115 +2,115 @@
 
 ## Sicherheitshinweise
 
-- AndroidAPS allows you to control a child's phone remotely via text message. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
-- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
+- AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
+- AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Befehle, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
 
 ## Funktionsweise
 
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+Gehe zu den Programmen in Ihrem android-Handy-Einstellung > AndroidAPS > Berechtigungen und SMS aktivieren
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolons ohne weitere Leerzeichen getrennt (z.B. +4912345678;+4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **bold**, the phone will respond to confirm success of command or status requested.
+Senden Sie eine SMS auf das Handy, mit AndroidAPS, die von Ihr zugelassenen Telefonnummern mit einem der Befehle unter **Fett**, das Telefon reagiert bestätigen Erfolg der Befehl oder den Status beantragt.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
 ## Kommandos
 
 ### BZ
 
-- Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- Letzten BG: 5,6 4 min vor Delta:-0,2 Mmol, IOB: 0.20U (Bolus: 0.10U basale: 0.10U)
 
-### LOOP STOP/DISABLE
+### SCHLEIFE BEENDEN/DEAKTIVIEREN
 
-- Loop has been disabled
+- Loop wurde deaktiviert.
 
-### LOOP START/ENABLE
+### LOOP STARTEN/AKTIVIEREN
 
-- Loop has been enabled
+- Lopp wurde aktiviert
 
 ### LOOP STATUS
 
-- Loop is disabled
-- Loop is enabled
-- Suspended (10 min)
+- Loop ist deaktiviert.
+- Loop ist aktiviert.
+- Pausiert (%1$d min)
 
-### LOOP SUSPEND 20
+### SCHLEIFE UNTERBRECHEN 20
 
-- Loop suspended for 20 minutes
+- Schleife für 20 Minuten unterbrochen
 
-### LOOP RESUME
+### LOOP-LEBENSLAUF
 
-- Loop resumed
+- Loop wurde fortgesetzt
 
-### TREATMENTS REFRESH
+### BEHANDLUNGEN-REFRESH
 
 - TERATMENTS REFRESH 1 receivers
 
-### NSCLIENT RESTART
+### NSCLIENT NEUSTART
 
 - NSCLIENT RESTART 1 receivers
 
-### PUMP
+### PUMPE
 
-- Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- Letzten conn: 1 Minago Temp: 0.00U / h @11: 38 5/30 min IOB: 0.5U Reserv: 34U Batt: 100
 
-### BASAL STOP/CANCEL
+### BASALEN STOP/CANCEL
 
-- To stop temp basal reply with code EmF
+- Um die Tbr abzubrechen, antworte mit dem Code %s
 
 ### BASAL 0.3
 
-- To start basal 0.3U/h for 30 min reply with code Swe
+- Um für 30 Minuten eine temporäre Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
 
 ### BASAL 0.3 20
 
-- To start basal 0.3U/h for 20 min reply with code Swe
+- Um für 20 Minuten eine temporäre Basalrate mit 0,3 IE pro Stunde zu starten, antworte mit dem Code Swe
 
 ### BASAL 30%
 
-- To start basal 30% for 30 min reply with code Swe
+- Um für 30 Minuten eine temporäre Basalrate mit 30% zu starten, antworte mit dem Code Swe
 
 ### BASAL 30% 50
 
-- To start basal 30% for 50 min reply with code Swe
+- Um für 50 Minuten eine temporäre Basalrate mit 50% zu starten, antworte mit dem Code Swe
 
 ### BOLUS 1.2
 
-- To deliver bolus 1.2U reply with code Rrt
-- Remote bolus not allowed (*if within 15 min after last bolus command or remote commands not allowed*)
+- Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code Rrt
+- Entfernten Bolus nicht zugelassen (*Wenn innerhalb von 15 Minuten nach dem letzten Bolus-Befehl oder remote-Befehle nicht erlaubt*)
 
 ### EXTENDED STOP/CANCEL
 
-- To stop extended bolus reply with code EmF
+- Um den verzögerten Bolus zu stoppen, antworte mit dem Code EmF
 
 ### EXTENDED 2 120
 
-- To start extended bolus 2U for 120 min reply with code EmF
+- Um einen verzögertenen Bolus von 2 IE über 120 Minuten zu starten, antworte mit dem Code EmF
 
 ### CAL 5.6
 
-- To send calibration 5.6 reply with code Rrt
-- Calibration sent (*if xDrip is installed. Accepting calibrations must be enabled in xDrip+*)
-
-### PROFILE STATUS
-
-- Profile1
-
-### PROFILE LIST
-
-- 1.`Profile1` 2.`Profile2`
-
-### PROFILE 1
-
-- To switch profile to Profile1 100% reply with code Any
-
-### PROFILE 2 30
-
-- To switch profile to Profile2 30% reply with code Any
-
-## Problembehandlung
-
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
-
-![Disable SMS as chat message](../images/SMSdisableChat.png)
+- Um einen Kalibrierungswert von 5,6 zu senden, antworte mit Code Rrt
+- Kalibrierung gesendet (*wenn xDrip installiert ist. Sdgs</li> </ul> 
+    
+    ### PROFILE STATUS
+    
+    - Profile1
+    
+    ### PROFILE LIST
+    
+    - 1.`Profile1` 2.`Profile2`
+    
+    ### PROFILE 1
+    
+    - To switch profile to Profile1 100% reply with code Any
+    
+    ### PROFILE 2 30
+    
+    - To switch profile to Profile2 30% reply with code Any
+    
+    ## Problembehandlung
+    
+    There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+    
+    ![Disable SMS as chat message](../images/SMSdisableChat.png)
