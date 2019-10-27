@@ -18,6 +18,8 @@
 
 ***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
 
+***Note***: When using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+
 ### Это обновление для меня? В настоящее время НЕ поддерживается
 
 * Android 5
