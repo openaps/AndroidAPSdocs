@@ -289,3 +289,7 @@ Vyberte možnost „Povolit z tohoto zdroje“. Po instalaci můžete tuto volbu
 Posledním krokem je klepnout na soubor APK, který jsem přijal přes Gmail, a nainstalovat aplikaci. Pokud se APK nechce nainstalovat a máte v telefonu již starší verzi AndroidAPS, pravděpodobně byla podepsaná jiným klíčem – v tom případě musíte starou verzi nejdřív odinstalovat, avšak nezapomeňte předtím exportovat svá nastavení!
 
 Ano, máte to a můžete začít s úvodní konfigurací AndroidAPS (CGM, inzulínová pumpa) atd.
+
+## Identify receiver if using xDrip
+
+[See xDrip page](../Configuration/xdrip#identify-receiver)
