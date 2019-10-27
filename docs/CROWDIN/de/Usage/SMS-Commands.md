@@ -103,14 +103,14 @@ Senden Sie eine SMS auf das Handy, mit AndroidAPS, die von Ihr zugelassenen Tele
     
     ### PROFILE 1
     
-    - To switch profile to Profile1 100% reply with code Any
+    - Um zum Profil 1 mit 100% zu wechseln, antworte mit Code Any
     
     ### PROFILE 2 30
     
-    - To switch profile to Profile2 30% reply with code Any
+    - Um zum Profil 2 mit 30% zu wechseln, antworte mit Code Any
     
     ## Problembehandlung
     
-    There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+    Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als chat message senden' behoben werden.
     
-    ![Disable SMS as chat message](../images/SMSdisableChat.png)
+    ![SMS als Chatnachricht deaktivieren](../images/SMSdisableChat.png)
