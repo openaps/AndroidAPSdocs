@@ -1,40 +1,40 @@
-# Release notes
+# Notes de Version
 
-Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
+Veuillez suivre les instructions du [manuel de mise à jour](../Installing-AndroidAPS/Update-to-new-version.md). Vous pouvez également trouver une section de dépannage répondant aux difficultés les plus courantes lors de la mise à jour dans la page du manuel de mise à jour.
 
-Starting with version 2.3 a new update procedure is established. You will receive the following information as soon as a new update is available:
+A partir de la version 2.3, une nouvelle procédure de mise à jour est établie. Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera disponible :
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 4](../Usage/Objectives.md).
+Ensuite, vous avez 60 jours pour mettre à jour. Si vous ne faites pas de mise à jour au cours de ces 60 jours, AAPS retournera en mode AGB (Arrêt Glycémie Basse - voir le [glossaire](../Getting-Started/Glossary.md)) comme dans [ l'objectif 4 ](../Usage/Objectives.md).
 
-If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
+Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à partir de la nouvelle date de sortie), AAPS passe à Boucle Ouverte.
 
-Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
+Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
 ## Version 2.5.0
 
-Release date: 26-10-2019
+Date de sortie : 26-10-2019
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+***Remarque*** : Utilisez [Android Studio Version 3.5.1](https://developer.android.com/studio/) ou une version plus récente pour [générer l'apk](../Installing-AndroidAPS/Building-APK.md) ou [mettre à jour](../Installing-AndroidAPS/Update-to-new-version.md).
 
-***Note***: When using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+***Remarque*** : Lors de l'utilisation de xDrip [Identifier le récepteur](../Configuration/xdrip#identify-receiver) doit être défini.
 
-### Is this update for me? Currently is NOT supported
+### Cette mise à jour est-elle pour moi ? N'est actuellement PAS pris en charge :
 
 * Android 5
 * Poctech
 * 600SeriesUploader
 * Glimp
-* Patched Dexcom from 2.3 directory
+* Dexcom patchés présents dans le répertoire 2.3
 
-### Major new features
+### Nouvelles fonctionnalités majeures
 
-* Internal change of targetSDK to 28 (Android 9), jetpack support
-* RxJava2, Okhttp3, Retrofit support
-* Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
-* New [Automation plugin](../Usage/Automation.rst)
-* Allow to bolus only part from bolus wizard calculation
+* Changement interne de targetSDK à 28 (Android 9), prise en charge de jetpack
+* Prise en charge de RxJava2, Okhttp3, Retrofit
+* Prise en charge d'anciennes [Pompes Medtronic](../Configuration/MedtronicPump.md) (besoin de RileyLink)
+* Nouveau [Plugin d'Automatisation](../Usage/Automation.rst)
+* Autorisation du bolus que d'une partie du calcul de l'assistant bolus
 * Rendering insulin activity
 * Adjusting IOB predictions by autosense result
 * New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
@@ -48,7 +48,7 @@ Release date: 26-10-2019
 
 Release date: 25-04-2019
 
-### Major new features
+### Nouvelles fonctionnalités majeures
 
 * Important safety fix for Insight (really important if you use Insight!)
 * Fix History-Browser
@@ -64,7 +64,7 @@ Release date: 25-04-2019
 
 Release date: 07-04-2019
 
-### Major new features
+### Nouvelles fonctionnalités majeures
 
 * Autosens fix: deactivate TT raises/lowers target
 * New translations
@@ -75,7 +75,7 @@ Release date: 07-04-2019
 
 Release date: 29-03-2019
 
-### Major new features
+### Nouvelles fonctionnalités majeures
 
 * [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
 * Wear Update
@@ -87,7 +87,7 @@ Release date: 29-03-2019
 
 Release date: 03-03-2019
 
-### Major new features
+### Nouvelles fonctionnalités majeures
 
 * Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 * Status lights on main screen (Nico Schmitz)
@@ -106,7 +106,7 @@ Release date: 03-03-2019
 
 Release date: 03-11-2018
 
-### Major new features
+### Nouvelles fonctionnalités majeures
 
 * oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
 * Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
