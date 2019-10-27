@@ -1,4 +1,4 @@
-# Update to a new version or branch
+# Mise à jour vers une nouvelle version ou une branche
 
 ## Construire vous-même au lieu de télécharger
 
@@ -6,7 +6,7 @@
 
 ## Important notes
 
-<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>.
+<font color="#FF0000"> <b>Remarque importante : A partir de la version 2.3, vous devez utiliser git pour mettre à jour. La mise à jour via le fichier zip ne fonctionne plus.</font></b>.
 
 ***Remarque*** : Utilisez [Android Studio Version 3.5.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
@@ -14,12 +14,12 @@
 
 ### Windows
 
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Make sure to note down the installation path. You will need it in the next step.
+* N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/win>
+* Assurez-vous de noter le chemin d’installation. Vous en aurez besoin dans la prochaine étape.
   
-  ![Git installation path](../images/Update_GitPath.png)
+  ![Chemin d'installation Git](../images/Update_GitPath.png)
 
-* Reboot your PC to update System Environment.
+* Redémarrez votre PC pour mettre à jour l'environnement système.
 
 * Let Studio know where is git.exe located: File - Settings
   
@@ -35,31 +35,31 @@
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/mac>
+* Utilisez homebrew pour installer git: ```$ brew install git```.
+* Pour plus de détails sur l'installation de git, voir la [documentation officielle](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Si vous installez git via homebrew, il n'est pas nécessaire de modifier les préférences. Juste au cas où: on peut y accéder ici : Android Studio - Preferences.
 
-## Update your local copy
+## Mettez à jour votre copie locale
 
-* Click: VCS->Git->Fetch
+* Cliquez sur : VCS->Git->Fetch
   
   ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
 
-## Selecting branch
+## Sélectionnez une branche
 
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+* Si vous souhaitez changer de branche, sélectionnez une autre branche : master (dernière version) ou une autre version (merci de voir ci-dessous)
   
   ![](../images/UpdateAAPS1.png)
 
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
+puis sortir (checkout) (vous pouvez utiliser « Checkout comme nouvelle branche » si « Checkout » n’est pas disponible.)
 
      ![](../images/UpdateAAPS2.png)
     
 
-## Updating branch from Github
+## Mise à jour de la branche depuis Github
 
-* Press Ctrl+T, select Merge method and press OK
+* Appuyez sur Ctrl + T, sélectionnez la méthode Merge (fusion) et appuyez sur OK
   
   ![](../images/merge.png)
 
@@ -84,20 +84,20 @@ Sélectionnez "app" et cliquez sur "Next".
 
 Enter your key store path, enter key store password, select key alias and enter key password.
 
-Select 'Remember passwords'.
+Sélectionnez 'Remember passwords'.
 
-Then click next.
+Puis cliquez sur next.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
 Sélectionnez "fullRelease" pour Buid Variants. Sélectionnez "V1 (Jar Signature)" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
-  * full (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
-  * pumpcontrol (i.e. remote control for pump, no looping)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+* 'Release' devrait être votre choix par défaut pour "Build Variants", 'Debug' est juste pour les personnes qui codent.
+* Sélectionnez le type de génération que vous souhaitez complier. 
+  * full (c'est à dire recommandations automatiquement adoptées en boucle fermée)
+  * openloop (c'est à dire les recommandations données à l'utilisateur commandes manuelles)
+  * pumpcontrol (c'est-à-dire télécommande pour la pompe, pas pour le bouclage)
+  * nsclient (c'est-à-dire que les données de bouclage d'un autre utilisateur sont affichées et que des entrées de careportal peuvent être ajoutées)
 
 ![Capture d'écran 44](../images/Installation_Screenshot_44.png)
 
