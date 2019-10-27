@@ -155,11 +155,27 @@
 
 ![Настройки автономной работы](../images/GIT_Offline2.jpg)
 
-## Неодобренные изменения
+## Error: buildOutput.apkData must not be null
 
-Если вы получите такое сообщение об ошибке
+Sometimes you might get an error message when building the apk saying
 
-![Неудачные изменения](../images/GIT_TerminalCheckOut0.PNG)
+      `Errors while building APK.`
+    
+      `Cause: buildOutput.apkData must not be null`
+    
+
+This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+
+     1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
+     2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
+     3. Change apk destination folder (different location).
+    
+
+## Uncommitted changes
+
+If you receive failure message like
+
+![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Вариант 1
 
@@ -172,9 +188,9 @@
 
 * Вставьте скопированный текст и нажмите ввод ![Проверка GIT успешно завершена](../images/GIT_TerminalCheckOut2.jpg)
 
-## Приложение не установлено
+## App not installed
 
-![приложение не установлено](../images/Update_AppNotInstalled.png)
+![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
 * Если на вашем телефоне появилось сообщение "приложение не установлено", то выполните следующее: 
@@ -185,13 +201,13 @@
   5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
   6. Снова включите Bluetooth и отключите режим самолета
 
-## Приложение установлено, но старая версия
+## App installed but old version
 
-Если вы успешно построили приложение, передали его на ваш телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг слияния в [инструкции по обновлению](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
-## Ничего из вышеперечисленного не сработало
+## None of the above worked
 
-Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
+If non of the above tips helped you might consider building the app from scratch:
 
 1. [Экспорт настроек](../Usage/Objectives#export-import-settings) (уже установленной на телефоне версии AAPS)
 2. Приготовьте пароль ключа и пароль для хранения ключа Если вы забыли пароли, вы можете найти их в файлах проекта, как описано [здесь](https://youtu.be/nS3wxnLgZOo).
@@ -204,10 +220,10 @@
 4. Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
 
-## Сценарий худшего варианта
+## Worst case scenario
 
-Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-Убедитесь, что удалены все файлы, связанные с Android Studio. Руководство можно найти в сети: <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Установите Android Studio с нуля, как описано [здесь](../Installing-AndroidAPS/Building-APK#install-android-studio) и **не обновляйте gradle**.
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
