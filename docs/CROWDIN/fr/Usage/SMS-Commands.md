@@ -109,7 +109,7 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 - To switch profile to Profile2 30% reply with code Any
 
-## Troubleshooting
+## Résolution de problèmes
 
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
