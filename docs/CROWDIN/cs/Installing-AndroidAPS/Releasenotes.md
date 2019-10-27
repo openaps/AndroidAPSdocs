@@ -16,6 +16,8 @@ Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to 
 
 Datum vydání: 26. 10. 2019
 
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+
 ### Je tato aktualizace pro mě? Aktuálně není podporováno
 
 * Android 5
@@ -38,10 +40,11 @@ Datum vydání: 26. 10. 2019
 * Povolit vynechání cílů pro uživatele OpenAPS
 * Nové [cíle](../Usage/Objectives2019.rst) - zkouška, obsluha aplikace
 * Opravena chyba v ovladačích Dana, kde byl hlášen nesprávný čas
+* Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
 
 ## Verze 2.3
 
-Datum vydání: 25. 04. 2019
+Release date: 25-04-2019
 
 ### Hlavní nové funkce
 
@@ -57,7 +60,7 @@ Datum vydání: 25. 04. 2019
 
 ## Verze 2.2.2
 
-Datum vydání: 07. 04. 2019
+Release date: 07-04-2019
 
 ### Hlavní nové funkce
 
@@ -68,7 +71,7 @@ Datum vydání: 07. 04. 2019
 
 ## Verze 2.2
 
-Datum vydání: 29. 03. 2019
+Release date: 29-03-2019
 
 ### Hlavní nové funkce
 
@@ -80,7 +83,7 @@ Datum vydání: 29. 03. 2019
 
 ## Verze 2.1
 
-Podpora Accu-Chek <0>Insight</0> (od Tebbe Ubben a JamOrHam)
+Release date: 03-03-2019
 
 ### Hlavní nové funkce
 
@@ -99,7 +102,7 @@ Podpora Accu-Chek <0>Insight</0> (od Tebbe Ubben a JamOrHam)
 
 ## Verze 2.0
 
-Datum vydání: 03. 11. 2018
+Release date: 03-11-2018
 
 ### Hlavní nové funkce
 
