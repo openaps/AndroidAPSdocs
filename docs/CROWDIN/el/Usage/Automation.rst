@@ -95,9 +95,9 @@ Lunch Time Temp Target
   
 These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
 
-Misuse of Automation
+Incorrect use of Automation
 ------------------------------------
-As every system Automation can be used in unintended ways. This might lead to difficulties and even danger for your health. Such bad examples are for instance
+As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
 
 * Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
 * Setting profile to compensate food
