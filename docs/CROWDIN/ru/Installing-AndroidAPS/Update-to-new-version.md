@@ -169,19 +169,19 @@
 Это известная ошибка в Android Studio 3.5 и, вероятно, не будет исправлна до Android Studio 3.6. Три варианта:
 
      1. Вручную удалите три папки компоновки (обычная "сборка", папка компоновки в "app" и папка компоновки в "wear") и снова сгенерируйте подписанный apk.
-     2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
-     3. Change apk destination folder (different location).
+     2. Установите папку назначения в папку проекта, а не в папку приложения, как описано в [ этом видео] (https: //www.youtube.com/watch?v=BWUFWzG-kag).
+     3. Измените папку назначения apk (другое расположение).
     
 
-## No CGM data when using xDrip
+## Нет данных мониторинга CGM при использовании xDrip
 
 [Идентификатор ресивера](../Configuration/xdrip#identify-receiver)
 
-## Uncommitted changes
+## Неодобренные изменения
 
-If you receive failure message like
+Если вы получите сообщение об ошибке, как это
 
-![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+![Отказ неодобренные изменения](../images/GIT_TerminalCheckOut0.PNG)
 
 ### Вариант 1
 
@@ -194,9 +194,9 @@ If you receive failure message like
 
 * Вставьте скопированный текст и нажмите ввод ![Проверка GIT успешно завершена](../images/GIT_TerminalCheckOut2.jpg)
 
-## App not installed
+## Приложение не установлено
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![приложение не установлено](../images/Update_AppNotInstalled.png)
 
 * Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
 * Если на вашем телефоне появилось сообщение "приложение не установлено", то выполните следующее: 
@@ -207,13 +207,13 @@ If you receive failure message like
   5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
   6. Снова включите Bluetooth и отключите режим самолета
 
-## App installed but old version
+## Приложение установлено, но старая версия
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+Если вы успешно построили приложение, передали его на ваш телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг слияния в [инструкции по обновлению](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
 
-## None of the above worked
+## Ничего из вышеперечисленного не сработало
 
-If non of the above tips helped you might consider building the app from scratch:
+Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
 
 1. [Экспорт настроек](../Usage/Objectives#export-import-settings) (уже установленной на телефоне версии AAPS)
 2. Приготовьте пароль ключа и пароль для хранения ключа Если вы забыли пароли, вы можете найти их в файлах проекта, как описано [здесь](https://youtu.be/nS3wxnLgZOo).
@@ -226,10 +226,10 @@ If non of the above tips helped you might consider building the app from scratch
 4. Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. [Выполните импорт настроек](../Usage/Objectives#export-import-settings)
 
-## Worst case scenario
+## Сценарий худшего варианта
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
 
-Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
+Убедитесь, что удалены все файлы, связанные с Android Studio. Руководство можно найти в сети: <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+Установите Android Studio с нуля, как описано [здесь](../Installing-AndroidAPS/Building-APK#install-android-studio) и **не обновляйте gradle**.
