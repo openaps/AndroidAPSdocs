@@ -6,9 +6,9 @@ BG Source
    :maxdepth: 1
    :glob:
    
-   General <../Hardware/GeneralCGMRecommendation.rst>
-   Data Smoothing <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   xDrip+Settings <./xdrip.md>
+   Général <../Hardware/GeneralCGMRecommendation.rst>
+   Lissage des Glycémies <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   xDrip+Paramètres <./xdrip.md>
    Dexcom G6 <../Hardware/DexcomG6.rst>
    Dexcom G5 <../Hardware/DexcomG5.rst>
    Dexcom G4 <../Hardware/DexcomG4.rst>
