@@ -68,9 +68,18 @@ Po přidání akce kliknutím na výchozí hodnoty **nezapomeňte změnit výcho
 .. image:: ../images/Automation_Default.png
   :alt: Výchozí hodnoty automatizace vs. nastavené hodnoty
 
+Good practice
+==========
+* When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
+* Whatch the rule results.
+
 Příklady
 ==========
-Toto jsou jen příklady, žádné rady. Nesnažte se je reprodukovat, aniž byste si uvědomovali, co vlastně děláte nebo proč je potřebujete.
+Toto jsou jen příklady, žádné rady. Nesnažte se je reprodukovat, aniž byste si uvědomovali, co vlastně děláte nebo proč je potřebujete. See below for two examples with screenshots.
+
+* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
+* Setting temp target for activities based on time, location...
+* Setting eating soon temp targets based on time, location...
 
 Dočasný cíl při nízké glykémii
 ------------------------------------
@@ -86,6 +95,15 @@ Dočasný cíl v době oběda
   
 Toto je ukázkové nastavení osoby, která během týdne mívá oběd ve stejnou dobu. Pokud se v určitou dobu nachází na místě, kde obvykle obědvá, spustí se při čekání na oběd dočasný cíl „Před jídlem“. Vzhledem k použitému operátoru „A“ se tak stane pouze tehdy, když je splněna podmínka určitého času A polohy. Tato automatizace tedy nefunguje, pokud je osoba v nastaveném místě v jakoukoli jinou dobu, ani když je v nastavenou dobu někde jinde, např. pracuje z domu nebo pracuje přesčas. 
 
+Misuse of Automation
+------------------------------------
+As every system Automation can be used in unintended ways. This might lead to difficulties and even danger for your health. Such bad examples are for instance
+
+* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
+* Setting profile to compensate food
+* Setting profile without duration
+* Creating one way rules (i.e. do something but don't undo it by another rule)
+* Creating long term rules
 
 Alternativy
 ============
