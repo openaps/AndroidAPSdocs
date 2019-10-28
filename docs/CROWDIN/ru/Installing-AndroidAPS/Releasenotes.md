@@ -32,21 +32,21 @@
 
 * Внутреннее изменение targetSDK на 28 (Android 9), поддержка jetpack
 * Поддержка RxJava2, Okhttp3, Retrofit
-* Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
-* New [Automation plugin](../Usage/Automation.rst)
-* Allow to bolus only part from bolus wizard calculation
+* Поддержка старых [помп Medtronic](../Configuration/MedtronicPump.md) (нужен RileyLink)
+* Новый [ модуль автоматизации ](../Usage/Automation.rst)
+* Возможность подать только часть болюса из рассчитанного мастером болюса
 * Рендеринг активности инсулина
 * Корректировка прогнозов IOB с помощью результата autosense
-* New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+* Новая поддержка модифицированных приложений Dexcom ([ папка 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Верификатор подписи
 * Возможность обойти цели пользователям OpenAPS
-* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+* Новые цели [ цели ](../Usage/Objectives2019.rst)-экзамен, обработка приложений
 * Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
-* Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
+* Исправлена ошибка [СМС коммуникатора](../Usage/SMS-Commands.md)
 
 ## Версия 2.3
 
-Release date: 25-04-2019
+Дата выпуска: 25-04-2019
 
 ### Новые возможности
 
@@ -62,7 +62,7 @@ Release date: 25-04-2019
 
 ## Версия 2.2.2
 
-Release date: 07-04-2019
+Дата выпуска: 07-04-2019
 
 ### Новые возможности
 
@@ -73,7 +73,7 @@ Release date: 07-04-2019
 
 ## Версия 2.2
 
-Release date: 29-03-2019
+Дата выпуска: 29-03-2019
 
 ### Новые возможности
 
@@ -85,7 +85,7 @@ Release date: 29-03-2019
 
 ## Версия 2.1
 
-Release date: 03-03-2019
+Дата выпуска: 03-03-2019
 
 ### Новые возможности
 
@@ -104,7 +104,7 @@ Release date: 03-03-2019
 
 ## Версия 2.0
 
-Release date: 03-11-2018
+Дата выпуска: 03-11-2018
 
 ### Новые возможности
 
