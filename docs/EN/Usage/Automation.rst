@@ -68,9 +68,18 @@ After adding your action, **don't forget to change the default values** to what 
 .. image:: ../images/Automation_Default.png
   :alt: Automation default vs. set values
 
+Good practice
+==========
+* When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
+* Whatch the rule results.
+
 Examples
 ==========
-These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these.
+These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
+
+* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
+* Setting temp target for activities based on time, location...
+* Setting eating soon temp targets based on time, location...
 
 Low Glucose Temp Target
 ------------------------------------
@@ -86,6 +95,15 @@ Lunch Time Temp Target
   
 These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
 
+Misuse of Automation
+------------------------------------
+As every system Automation can be used in unintended ways. This might lead to difficulties and even danger for your health. Such bad examples are for instance
+
+* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
+* Setting profile to compensate food
+* Setting profile without duration
+* Creating one way rules (i.e. do something but don't undo it by another rule)
+* Creating long term rules
 
 Alternatives
 ============
