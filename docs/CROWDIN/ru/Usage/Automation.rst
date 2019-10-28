@@ -28,15 +28,15 @@ How to use it
 
 Condition
 ------------
-Вы можете выбрать между несколькими условиями. Here are some things explained, but most of it should be easy to understand and is not all described here:
+Вы можете выбрать между несколькими условиями. Некоторые моменты здесь объясняются, но основное легко понять и оно не все здесь описано:
 
-* connect conditions: you can have several conditions and can connect them with 
+* условия соединения: можно иметь несколько условий и подключить их с помощью 
 
    * "And"
    * "Or"
-   * "Exclusive or" (which means that if one (and only one of the) conditions applies, the action(s) will happen)
+   * "Исключающее или" (что означает, что если одно (и только одно из) условий применимо, то действие (действия) произойдет)
    
-* Time vs. recurring time
+* Время vs. recurring time
 
    * time =  single time event
    * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
