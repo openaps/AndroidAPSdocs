@@ -204,7 +204,7 @@ If you receive failure message like
   2. Désinstaller AAPS sur votre téléphone.
   3. Activer le mode avion & désactiver bluetooth.
   4. Installer la nouvelle version (« app-full-release.apk »)
-  5. [Import settings](../Usage/Objectives#export-import-settings)
+  5. [Importez les paramètres](../Usage/Objectives#export-import-settings)
   6. Activer le bluetooth et désactiver le mode avion
 
 ## App installed but old version
@@ -224,7 +224,7 @@ If non of the above tips helped you might consider building the app from scratch
   
   4. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Use existing key and key store.
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Usage/Objectives#export-import-settings)
+5. [Importez les paramètres](../Usage/Objectives#export-import-settings)
 
 ## Worst case scenario
 
