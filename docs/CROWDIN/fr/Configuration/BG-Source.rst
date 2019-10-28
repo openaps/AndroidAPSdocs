@@ -1,4 +1,4 @@
-BG Source
+Source GLY
 ************
 
 
@@ -17,5 +17,5 @@ BG Source
    Eversense <../Hardware/Eversense.rst>
    MM640g/MM630g  <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nightscout as BG Source <../Hardware/CGMNightscoutUpload.rst>
+   Nightscout en tant que Source de GLY<../Hardware/CGMNightscoutUpload.rst>
    
