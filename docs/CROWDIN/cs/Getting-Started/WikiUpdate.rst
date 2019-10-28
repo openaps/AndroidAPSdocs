@@ -2,6 +2,7 @@ Aktualizace a změny Wiki
 **********************
 Říjen 2019
 ===============
+* `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * ` COB výpočet na samostatné stránce <../Usage/COB-calculation.html>`_
 * ` COB - chybná hodnota COB detekce <../Usage/COB-calculation.html#detection-ofs wronc-cob-values>`_
 * `Dexcom G6 konkrétní řešení problémů <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_

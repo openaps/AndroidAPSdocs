@@ -1,77 +1,85 @@
 Automation
 ***************
-This feature will be available with the next AndroidAPS version (2.4). 
 
-What is Automation
+Что такое автоматизация
 ===================
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. Например, when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Для одинаковых частых событий приходится изменять одни и те же параметры. Чтобы избежать лишней работы, можно автоматизировать событие, если вы можете описать его достаточно точно и позволить ему делать это автоматически. Например, при низкой ГК, вы можете решить, что должна автоматически установиться высокая временная цель. Или если вы находитесь в фитнес-центре, вы автоматически получаете временную цель. Перед использованием автоматизации следует уверенно овладеть ручным управлением ` временными целями <./temptarget.html> ` _ или переключением профиля. 
 
-.. image:: ../images/Automation_ConditionAction_RC3.png
-  :alt: Automation condition + action
+.. изображение:: ../images/Automation_ConditionAction_RC3.png
+  :alt: условие автоматизации + действие
 
 How to use it
 ================
-To set up an automation, you have to give it a title, select at least one condition and one action. 
+Чтобы настроить автоматизацию, нужно дать ей заголовок, выбрать хотя бы одно условие и одно действие. 
 
 Общие настройки
 --------
-There are some limits:
+Есть некоторые ограничения:
 
-* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-* The profile percentage has to be between 70 % and 130%.
-* There is a 5 min. time limit between executions (and first execution).
+* Значение ГК должно составлять от 72 до 270 мг/дл или от 4 до 15 ммоль/л.
+* Процент профилирования должен составлять от 70% до 130%.
+* Есть 5 минут ограничения по времени между выполнениями (и первым выполнением).
 
-**Please be careful:**
+**Пожалуйста, будьте внимательны:**
 
-* **less than -2 means: -3 and lower (-4,-10, etc)**
-* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+* ** менее -2 означает: -3 и ниже (-4, -10 и т.д.) * *
+* **более -2 означает: -1 и выше (-1, 0, +10 и т.д)**
 
 
 Condition
 ------------
-You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
+Вы можете выбрать между несколькими условиями. Некоторые моменты здесь объясняются, но основное легко понять и оно не все здесь описано:
 
-* connect conditions: you can have several conditions and can connect them with 
+* условия соединения: можно иметь несколько условий и подключить их с помощью 
 
    * "And"
    * "Or"
-   * "Exclusive or" (which means that if one (and only one of the) conditions applies, the action(s) will happen)
+   * "Исключающее или" (что означает, что если одно (и только одно из) условий применимо, то действие (действия) произойдет)
    
-* Time vs. recurring time
+* Время vs. recurring time
 
-   * time =  single time event
-   * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
+   * время = одно событие времени
+   * повторяющееся время = то, что происходит регулярно (напр. раз в неделю, каждый рабочий день и т. д.)
    
-* location: in the config builder (Automation), you can select which location service you want to use:
+* расположение: в конфигураторе (автоматизация), можете выбрать местоположение сервиса, который хотите использовать:
 
-  * Use passive location: AAPS only takes locations if other apps are requesting it
-  * Use network location: Location of your Wifi
+  * Использовать пассивное расположение: AAPS принимает положения только в том случае, если другие приложения запрашивали его
+  * Использовать расположение сети: расположение вашего Wifi
   * Use GPS location
   
 Action
 ------
-You can choose one or more actions: 
+Можно выбрать одно или несколько действий: 
 
 * start temp target 
 
-   * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-   * works only if there is no previous temp target
+   * должно быть между 72 мг/дл и 270 мг/дл (4 ммоль/л и 15 ммоль/л)
+   * работает только в том случае, если нет предыдущей временной цели
    
 * stop temp target
 * notification
 * profile percentage
 
-   * must be between 70% and 130% 
-   * works only if the previous percentage is 100%
+   * должно быть от 70% до 130% 
+   * работает только в том случае, если предыдущий процент составляет 100%
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+После добавления ваших действий, **не забудьте изменить значения по умолчанию** на те, которые требуются, нажав на значения по умолчанию.
  
-.. image:: ../images/Automation_Default.png
-  :alt: Automation default vs. set values
+.. изображение:: ../images/Automation_Default.png
+  :alt: автоматизация по умолчанию vs. set values
+
+Good practice
+==========
+* When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
+* Whatch the rule results.
 
 Examples
 ==========
-These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these.
+These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
+
+* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
+* Setting temp target for activities based on time, location...
+* Setting eating soon temp targets based on time, location...
 
 Low Glucose Temp Target
 ------------------------------------
@@ -87,6 +95,15 @@ Lunch Time Temp Target
   
 These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
 
+Incorrect use of Automation
+------------------------------------
+As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
+
+* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
+* Setting profile to compensate food
+* Setting profile without duration
+* Creating one way rules (i.e. do something but don't undo it by another rule)
+* Creating long term rules
 
 Alternatives
 ============

@@ -2,13 +2,13 @@
 
 ## Build yourself instead of download
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
 ## ## Important notes
 
-**Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
-**Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
 
@@ -289,3 +289,7 @@ Selecteer "Toestaan van deze bron". Nadat je klaar bent met installeren, wordt h
 De laatste stap is om op het APK bestand te tikken en de app te installeren. Als hij niet uit zichzelf installeert en je hebt een vorige versie van AndroidAPS op je telefoon staan die met een andere handtekening is ondertekend, dan moet je die versie van de app eerst verwijderen. Vergeet niet om eerst je instellingen van die versie te exporteren vóórdat je de app verwijdert!
 
 Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met het instellen van AndroidAPS.
+
+## Identify receiver if using xDrip
+
+[See xDrip page](../Configuration/xdrip#identify-receiver)

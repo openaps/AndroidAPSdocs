@@ -51,7 +51,7 @@ AndroidAPS funktioniert **derzeit** mit
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_  
 - `einigen alten Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ ab der neuen Version 2.4 (zusätzlich werden RileyLink/Gnarl Hardware und ein Android Smartphone mit Bluetooth Low Energy (BLE-Chipset) benötigt.)
 
-**Andere Pumpen,** die zukünftig möglicherweise von AndroidAPS unterstützt werden können, sind auf der Seite `Zukünftig ggf. loopbare Pumpen <Future-possible-Pump-Drivers.html>`_ aufgeführt.
+**Andere Pumpen,** die zukünftig möglicherweise von AndroidAPS unterstützt werden können, sind auf der Seite `Zukünftig ggf. loopbare Pumpen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ aufgeführt.
 
 Falls Du eine Pumpe **auf eigene Kosten** erwerben willst, findest Du in `dieser Tabelle <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_ die Adressen der Anbieter in verschiedenen Ländern. Ergänze bitte die Angaben zu Deinem Händler, falls dieser dort noch nicht aufgeführt ist.
 

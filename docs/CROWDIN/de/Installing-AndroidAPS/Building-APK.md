@@ -6,9 +6,9 @@
 
 ## Wichtige Hinweise
 
-**Wichtiger Hinweis:** AndroidAPS Version 2.3 kann nicht mit der neuesten Android Studio Version erstellt werden. Verwende bitte Android Studio 3.4. Diese kannst Du [hier](https://developer.android.com/studio/archive?) herunterladen.
+*** Hinweis ***: Verwende [ Android Studio Version 3.5.1 ](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
 
-**Bitte beachte** beim Erstellen einer AndroidAPS 2.0 apk: **Configuration on demand** wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt!
+** Konfiguration auf Abruf ** (Configuration on demand) wird von der aktuellen Version des Android-Gradle-Plugins nicht unterstützt!
 
 Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
 
@@ -289,3 +289,7 @@ Klicke dort auf “aus dieser Quelle zulassen”. Nach der Installation ist es e
 Der letzte Schritt ist es, auf die APK Datei zu klicken und die App zu installieren. Sollte es nicht funktionieren, kann es sein, dass sich eine ältere Version mit einem anderen “Key”/einer anderen Signatur auf dem Handy befindet. Exportiere deine Einstellungen aus der älteren Version und deinstalliere diese erst danach.
 
 Herzlichen Glückwunsch, du hast es geschafft! Nun kannst du AndroidAPS starten und einrichten.
+
+## Identifiziere den Empfänger falls Du xDrip verwendest
+
+[Siehe xDrip Seite](../Configuration/xdrip#identify-receiver)

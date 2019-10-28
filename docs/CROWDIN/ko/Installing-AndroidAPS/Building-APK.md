@@ -2,13 +2,13 @@
 
 ## Build yourself instead of download
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
 ## ## Important notes
 
-**Please note** With AndroidAPS version 2.3 it is not possible to build the APK with the latest Android Studio version. Please use Android Studio 3.4 from [here](https://developer.android.com/studio/archive?).
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
-**Please note** when building AndroidAPS 2.0 apk: **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 If your build fails with an error regarding "on demand configuration" you can do the following:
 
@@ -289,3 +289,7 @@ Select "Allow from this source". After the installation, you can disable it agai
 The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
 
 Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+
+## Identify receiver if using xDrip
+
+[See xDrip page](../Configuration/xdrip#identify-receiver)

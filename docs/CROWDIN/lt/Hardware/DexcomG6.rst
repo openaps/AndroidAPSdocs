@@ -31,7 +31,7 @@ If using G6 with patched Dexcom app
 =========================================================
 * Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
 
-   * 2.3 aplankas skirtas AndroidAPS 2.3 vartotojams, 2.4 aplankas yra skirtas AAPS 2.4 vartotojams.
+   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.5.
    * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. Regionas bus matomas URL adrese.
    
    .. image:: ../images/DexcomG6regionURL.PNG

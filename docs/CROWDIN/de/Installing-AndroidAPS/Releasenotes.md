@@ -16,6 +16,10 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Erscheinungsdatum: 26.10.2019
 
+*** Hinweis ***: Verwende [ Android Studio Version 3.5.1 ](https://developer.android.com/studio/) oder höher um die [ APK zu erstellen ](../Installing-AndroidAPS/Building-APK.md) oder zu [aktualisieren](../Installing-AndroidAPS/Update-to-new-version.md).
+
+***Hinweis***: Wenn Du xDrip benutzt, musst Du den [Empfänger identifizieren](../Configuration/xdrip#identify-receiver).
+
 ### Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:
 
 * Android 5
@@ -38,6 +42,7 @@ Erscheinungsdatum: 26.10.2019
 * Möglichkeit für OpenAPS Anwender, die Ziele (Objectives) zu überspringen
 * Neue [Ziele (Objectives)](../Usage/Objectives2019.rst) - Wissens-Check & Handling der App
 * Fehlerbehebung Dana Treiber, bei dem eine falsche Zeitdifferenz angegeben wurde
+* Fehler bei den [SMS-Befehlen](../Usage/SMS-Commands.md) behoben
 
 ## Version 2.3
 

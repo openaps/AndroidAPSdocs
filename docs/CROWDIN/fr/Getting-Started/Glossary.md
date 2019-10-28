@@ -173,7 +173,7 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td>IC (or I:C)</td>
+ <td>G/I (IC)</td>
  <td>ratio Glucide / Insuline (combien de glucides sont couverts par une unité d'insuline ?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -191,7 +191,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>LGS</td>
+ <td>AGB (LGS)</td>
  <td>Arrêt Glycémie Basse<br>AAPS réduira le débit de base si la glycémie baisse rapidement. Mais si la glycémie augmente, il ne fera qu'augmenter le débit de base si l'IA (IOB) est négatif (à partir d'un AGB précédent), sinon les débits de base resteront les mêmes que ceux de votre profil sélectionné. Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.</td>
  <td><a href="../Usage/Objectives.html">objectif 4</a></td>
  <td>&nbsp;</td>
@@ -209,13 +209,13 @@
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - fichiers log</a></td>
 </tr>
 <tr>
- <td>MA</td>
+ <td>AR (MA)</td>
  <td>Assistance Repas - algorithme standard pour gérer les repas</td>
  <td>AAR / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
+ <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - AR</a></td>
 </tr>
 <tr>
- <td>maxIOB</td>
+ <td>maxIA (maxIOB)</td>
  <td>fonction de sécurité - niveau d'insuline actvie maximal que AAPS ne peut pas dépasser</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
@@ -372,12 +372,12 @@
 </tr>
 <tr>
  <td>TT</td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td>Cible Temporaire <br> augmentation / diminution temporaire de la cible glycémique (plage)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Cibles temp.</a></td>
 </tr>
 <tr>
- <td>UAM</td>
+ <td>RNS (UAM)</td>
  <td>Repas Non Signalés - détection d'une augmentation significative de la glycémie dûe aux repas, à l'adrénaline ou à d'autres influences et tentative d'ajustement avec SMB</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki RNS</a></td>

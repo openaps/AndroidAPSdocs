@@ -1,63 +1,65 @@
-# Update to a new version or branch
+# Mise à jour vers une nouvelle version ou une branche
 
 ## Construire vous-même au lieu de télécharger
 
 **AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir [FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
-## Important notes
+## Remarques importantes
 
-<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>.
+<font color="#FF0000"> <b>Remarque importante : A partir de la version 2.3, vous devez utiliser git pour mettre à jour. La mise à jour via le fichier zip ne fonctionne plus.</font></b>.
 
-***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
+***Remarque*** : Utilisez [Android Studio Version 3.5.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
 ## Installer git (si vous ne l'avez pas)
 
 ### Windows
 
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Make sure to note down the installation path. You will need it in the next step.
+* N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/win>
+* Assurez-vous de noter le chemin d’installation. Vous en aurez besoin dans la prochaine étape.
   
-  ![Git installation path](../images/Update_GitPath.png)
+  ![Chemin d'installation Git](../images/Update_GitPath.png)
+
+* Redémarrez votre PC pour mettre à jour l'environnement système.
 
 * Let Studio know where is git.exe located: File - Settings
   
-  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+  ![Android Studio - ouvrir les paramètres](../images/Update_GitSettings1.png)
 
 * In the next window: Version Control - Git
 
-* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
+* Choisissez le chemin correct : .../Git<font color="#FF0000"><b>/bin</b></font>
 
 * Make sure update method "Merge" is selected.
   
-  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+  ![Android Studio - chemin GIT](../images/Update_GitSettings2a.png)
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/mac>
+* Utilisez homebrew pour installer git: ```$ brew install git```.
+* Pour plus de détails sur l'installation de git, voir la [documentation officielle](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Si vous installez git via homebrew, il n'est pas nécessaire de modifier les préférences. Juste au cas où: on peut y accéder ici : Android Studio - Preferences.
 
-## Update your local copy
+## Mettez à jour votre copie locale
 
-* Click: VCS->Git->Fetch
+* Cliquez sur : VCS->Git->Fetch
   
   ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
 
-## Selecting branch
+## Sélectionnez une branche
 
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
+* Si vous souhaitez changer de branche, sélectionnez une autre branche : master (dernière version) ou une autre version (merci de voir ci-dessous)
   
   ![](../images/UpdateAAPS1.png)
 
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
+puis sortir (checkout) (vous pouvez utiliser « Checkout comme nouvelle branche » si « Checkout » n’est pas disponible.)
 
      ![](../images/UpdateAAPS2.png)
     
 
-## Updating branch from Github
+## Mise à jour de la branche depuis Github
 
-* Press Ctrl+T, select Merge method and press OK
+* Appuyez sur Ctrl + T, sélectionnez la méthode Merge (fusion) et appuyez sur OK
   
   ![](../images/merge.png)
 
@@ -82,20 +84,20 @@ Sélectionnez "app" et cliquez sur "Next".
 
 Enter your key store path, enter key store password, select key alias and enter key password.
 
-Select 'Remember passwords'.
+Sélectionnez 'Remember passwords'.
 
-Then click next.
+Puis cliquez sur next.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
 Sélectionnez "fullRelease" pour Buid Variants. Sélectionnez "V1 (Jar Signature)" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
-  * full (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
-  * pumpcontrol (i.e. remote control for pump, no looping)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+* 'Release' devrait être votre choix par défaut pour "Build Variants", 'Debug' est juste pour les personnes qui codent.
+* Sélectionnez le type de génération que vous souhaitez complier. 
+  * full (c'est à dire recommandations automatiquement adoptées en boucle fermée)
+  * openloop (c'est à dire les recommandations données à l'utilisateur commandes manuelles)
+  * pumpcontrol (c'est-à-dire télécommande pour la pompe, pas pour le bouclage)
+  * nsclient (c'est-à-dire que les données de bouclage d'un autre utilisateur sont affichées et que des entrées de careportal peuvent être ajoutées)
 
 ![Capture d'écran 44](../images/Installation_Screenshot_44.png)
 
@@ -109,11 +111,11 @@ Cliquez sur le lien "locate" dans le journal des événements.
 
 ## Transférer le fichier APK sur le smartphone
 
-<!--- Text is maintained in page building-apk.md ---> Une fenêtre du gestionnaire de fichiers s'ouvre. Comme j'utilise Linux, il se peut que ce soit un peu différent sur votre système. Sur Windows, il y aura l'Explorateur de fichiers et sur Mac OS X le Finder. Vous devez voir le répertoire avec le fichier APK généré. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+<!--- Text is maintained in page building-apk.md ---> Une fenêtre du gestionnaire de fichiers s'ouvre. Comme j'utilise Linux, il se peut que ce soit un peu différent sur votre système. Sur Windows, il y aura l'Explorateur de fichiers et sur Mac OS X le Finder. Vous devez voir le répertoire avec le fichier APK généré. Malheureusement, c'est le mauvais endroit car "wear-release.apk" n'est pas l'application signée "app" APK que nous recherchons.
 
 ![Capture d'écran 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire à votre convenance, via le Bluetooth, en téléchageant sur le cloud, en connectant le smartphone à l'ordinateur avec un câble USB ou en utilisant la messagerie. J'utilise Gmail dans cet exemple car c'est assez simple pour moi. Je mentionne cela parce que pour installer l'application auto-signée, nous devons permettre à Android de faire cette installation sur notre smartphone même si ce fichier est reçu via Gmail qui est normalement interdit. Si vous utilisez une autre solution, veuillez procéder en conséquence.
+Veuillez sélectionner le répertoire AndroidAPS/app/full/release pour trouver le fichier "app-full-release.apk". Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire à votre convenance, via le Bluetooth, en téléchageant sur le cloud, en connectant le smartphone à l'ordinateur avec un câble USB ou en utilisant la messagerie. J'utilise Gmail dans cet exemple car c'est assez simple pour moi. Je mentionne cela parce que pour installer l'application auto-signée, nous devons permettre à Android de faire cette installation sur notre smartphone même si ce fichier est reçu via Gmail qui est normalement interdit. Si vous utilisez une autre solution, veuillez procéder en conséquence.
 
 ![Capture d'écran 48](../images/Installation_Screenshot_48.png)
 
@@ -129,11 +131,11 @@ Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour vo
 
 ## Check AAPS version on phone
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Vous pouvez vérifier la version AAPS sur votre téléphone en cliquant sur le menu 3 points en haut à droite puis sur "à propos".
 
 ![AAPS version installed](../images/Update_VersionCheck.png)
 
-# Troubleshooting
+# Résolution de problèmes
 
 ## Kotlin compiler warning
 
@@ -154,6 +156,26 @@ make sure that ‘Offline work’ is disabled.
 File -> Settings
 
 ![Settings offline work](../images/GIT_Offline2.jpg)
+
+## Error: buildOutput.apkData must not be null
+
+Sometimes you might get an error message when building the apk saying
+
+      `Errors while building APK.`
+    
+      `Cause: buildOutput.apkData must not be null`
+    
+
+This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+
+     1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
+     2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
+     3. Change apk destination folder (different location).
+    
+
+## No CGM data when using xDrip
+
+[Identify receiver](../Configuration/xdrip#identify-receiver)
 
 ## Uncommitted changes
 
@@ -176,14 +198,14 @@ If you receive failure message like
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps: 
-  1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
-  2. Uninstall AAPS on your phone.
-  3. Enable airplane mode & turn off bluetooth.
-  4. Install new version (“app-full-release.apk”)
+* Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
+* Si vous avez le message "App non installé" sur votre téléphone, suivez ces étapes : 
+  1. [Exporter les paramètres](../Usage/Objectives#export-import-settings) (dans la version AAPS déjà installée sur votre téléphone)
+  2. Désinstaller AAPS sur votre téléphone.
+  3. Activer le mode avion & désactiver bluetooth.
+  4. Installer la nouvelle version (« app-full-release.apk »)
   5. [Import settings](../Usage/Objectives#export-import-settings)
-  6. Turn bluetooth back on and disable airplane mode
+  6. Activer le bluetooth et désactiver le mode avion
 
 ## App installed but old version
 
@@ -193,7 +215,7 @@ If you build the app successfully, transferred it to your phone and installed it
 
 If non of the above tips helped you might consider building the app from scratch:
 
-1. [Export settings](../Usage/Objectives#export-import-settings) (in AAPS version already installed on your phone)
+1. [Exporter les paramètres](../Usage/Objectives#export-import-settings) (dans la version AAPS déjà installée sur votre téléphone)
 2. Have your key password and key store password ready In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
 3.     Note down the path to your key store
       In Android Studio Build -> Generate Signed APK

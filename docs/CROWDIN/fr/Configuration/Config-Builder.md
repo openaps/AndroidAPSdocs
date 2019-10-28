@@ -18,7 +18,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
 
-## Profile
+## Profil
 
 Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
@@ -95,7 +95,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-## Pump
+## Pompe
 
 Select the pump you are using.
 

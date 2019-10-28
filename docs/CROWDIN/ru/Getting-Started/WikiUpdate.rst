@@ -2,6 +2,7 @@
 **********************
 Октябрь 2019
 ===============
+* ` AAPS версии 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0> ` _ updates (особенно на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _)
 * Расчет активных углеводов COB на отдельной странице <../Usage/COB-calculation.html>`_
 * ` активные углеводы COB-неправильное определение значения COB <../Usage/COB-calculation.html#detection-оф-неправо-cob-values> ` _
 * ` Dexcom G6: устранение неполадок <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting> ` _

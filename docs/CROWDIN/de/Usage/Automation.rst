@@ -1,6 +1,5 @@
 Automatisierung
 ***************
-Diese Funktion wird mit der nächsten AndroidAPS Version (2.4) verfügbar sein. 
 
 Was ist Automatisierung
 ================
@@ -69,9 +68,18 @@ Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte
 .. image:: ../images/Automation_Default.png
   :alt: Automation Standard-Werte vs.  eigene Werte
 
+Empfehlung
+==========
+* Wenn Du Automation zum ersten Mal nutzt oder eine neue Regel erstellst, solltest Du zusätzlich eine Benachrichtigung erstellen bis Du sicher bist, dass die Regel so funktioniert, wie beabsichtigt.
+* Beobachte die Resultate Deiner Regel.
+
 Beispiele
 ==========
-Dies sind nur Beispiele, keine Ratschäge. Du sollte diese nicht einfach kopieren ohne sicher zu sein, was Du wirklich tust und ohne zu wissen, warum man diese braucht.
+Dies sind nur Beispiele, keine Ratschäge. Du sollte diese nicht einfach kopieren ohne sicher zu sein, was Du wirklich tust und ohne zu wissen, warum man diese braucht. Weiter unten findest Du zwei Beispiele mit Bildschirmfotos.
+
+* Profilwechsel für Deine täglichen Aktivitäten (z. B. Schule, Sport, Wochenende vs. Arbeitstag) mit Standort, WLAN SSID, Zeit etc.
+* Temporäre Ziele für Aktivitäten auf Basis von Zeit, Standort,...
+* Bald-Essen-Temp Target auf Basis von Zeit, Standort,...
 
 Temporäres Ziel bei niedrigem Blutzucker
 ------------------------------------
@@ -87,6 +95,15 @@ Mittagsessen Temporäres Ziel
   
 Dieses Beispiel ist von einer Person, die ihr Mittagessen zu der gleichen Zeit am gleichen Ort in der Woche hat. Falls sie zur einer bestimmten Zeit an einem bestimmten Ort ist, bekommt sie ein niedrigeres temporäres Ziel (eating soon) während sie auf ihr Mittagsessen wartet. Aufgrund der "Und"-Verknüpfung passiert dies eben nur zu einer bestimmten Zeit UND an einem bestimmten Ort. Es funktioniert also nicht zu einer anderen Zeit am selben Standort oder zu derselben Zeit an einem anderem Standort (z.B. falls die Person zuhause bleibt oder länger am Arbeitsplatz bleibt). 
 
+Fehlerhafte Nutzung
+------------------------------------
+Wie jedes System kann auch Automation falsch eingesetzt werden. Dies könnte zu Schwierigkeiten und sogar zu einer Gefahr für Deine Gesundheit führen. Beispiele für eine fehlerhafte Verwendung sind z. B.:
+
+* Versuche, den Algorithmus zu überlisten statt ihn nur zu unterstützen (z.B.  Profilwechsel statt Feinanpassung der Basalrate und Faktoren)
+* Profilwechsel zum Ausgleich von Lebensmitteln festlegen
+* Profilwechsel ohne Dauer festlegen
+* Einweg-Regeln (z.B.  Regel einrichten, aber Rückgängigmachung vergessen)
+* Langzeitregeln erstellen
 
 Alternativen
 ============

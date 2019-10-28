@@ -2,13 +2,13 @@
 
 ## Vyrobte si místo stažení
 
-**AndroidAPS není k dispozici ke stažení kvůli regulaci zdravotnických zařízení. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! Další informace naleznete v části [FAQ](../Getting-Started/FAQ.md).**
+**AndroidAPS není k dispozici ke stažení kvůli regulaci zdravotnických zařízení. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
 ## ## Důležité poznámky
 
-**Poznámka** U AndroidAPS verze 2.3 není možné sestavit soubor APK s nejnovější verzí programu Android Studio. Použijte prosím Android Studio 3.4 z [tohoto](https://developer.android.com/studio/archive?) umístění.
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
-**Mějte prosím na paměti** při vytváření AndroidAPS 2.0 apk: **Konfigurace na vyžádání** není podporována v aktuální verzi Android Gradle pluginu!
+**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
@@ -289,3 +289,7 @@ Vyberte možnost „Povolit z tohoto zdroje“. Po instalaci můžete tuto volbu
 Posledním krokem je klepnout na soubor APK, který jsem přijal přes Gmail, a nainstalovat aplikaci. Pokud se APK nechce nainstalovat a máte v telefonu již starší verzi AndroidAPS, pravděpodobně byla podepsaná jiným klíčem – v tom případě musíte starou verzi nejdřív odinstalovat, avšak nezapomeňte předtím exportovat svá nastavení!
 
 Ano, máte to a můžete začít s úvodní konfigurací AndroidAPS (CGM, inzulínová pumpa) atd.
+
+## Identify receiver if using xDrip
+
+[See xDrip page](../Configuration/xdrip#identify-receiver)

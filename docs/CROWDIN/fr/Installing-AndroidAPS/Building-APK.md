@@ -2,13 +2,13 @@
 
 ## Construire vous-même au lieu de télécharger
 
-**AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir [FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
+**AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
 ## ## Remarques importantes
 
-**Veuillez noter** Avec AndroidAPS version 2.3, il n'est pas possible de construire l'APK avec la dernière version d'Android Studio. Veuillez utiliser Android Studio 3.4 à partir de [ici](https://developer.android.com/studio/archive?).
+***Remarque*** : Utilisez [Android Studio Version 3.5.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
-**Veuillez noter** lors de la construction d'AndroidAPS 2.0 apk : **Configuration on demand** n'est pas supporté par la version actuelle du plugin Android Gradle !
+**Configuration onr demand** n'est pas pris en charge par la version actuelle du plug-in Android Gradle !
 
 Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
 
@@ -43,14 +43,14 @@ Description détaillée des étapes nécessaires à la construction du fichier A
 
 ### Windows
 
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Make sure to note down the installation path. Vous en aurez besoin plus tard après avoir installé Android Studio.
+* N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/win>
+* Assurez-vous de noter le chemin d’installation. Vous en aurez besoin plus tard après avoir installé Android Studio.
   
-  ![Git installation path](../images/Update_GitPath.png)
+  ![Chemin d'installation Git](../images/Update_GitPath.png)
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>
+* N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/mac>
 * Utilisez homebrew pour installer git: ```$ brew install git```.
 * Pour plus de détails sur l'installation de git, voir la [documentation officielle](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
@@ -272,11 +272,11 @@ Cliquez sur le lien "locate" dans le journal des événements.
 
 ## Transférer le fichier APK sur le smartphone
 
-Une fenêtre du gestionnaire de fichiers s'ouvre. Comme j'utilise Linux, il se peut que ce soit un peu différent sur votre système. Sur Windows, il y aura l'Explorateur de fichiers et sur Mac OS X le Finder. Vous devez voir le répertoire avec le fichier APK généré. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+Une fenêtre du gestionnaire de fichiers s'ouvre. Comme j'utilise Linux, il se peut que ce soit un peu différent sur votre système. Sur Windows, il y aura l'Explorateur de fichiers et sur Mac OS X le Finder. Vous devez voir le répertoire avec le fichier APK généré. Malheureusement, c'est le mauvais endroit car "wear-release.apk" n'est pas l'application signée "app" APK que nous recherchons.
 
 ![Capture d'écran 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire à votre convenance, via le Bluetooth, en téléchageant sur le cloud, en connectant le smartphone à l'ordinateur avec un câble USB ou en utilisant la messagerie. J'utilise Gmail dans cet exemple car c'est assez simple pour moi. Je mentionne cela parce que pour installer l'application auto-signée, nous devons permettre à Android de faire cette installation sur notre smartphone même si ce fichier est reçu via Gmail qui est normalement interdit. Si vous utilisez une autre solution, veuillez procéder en conséquence.
+Veuillez sélectionner le répertoire AndroidAPS/app/full/release pour trouver le fichier "app-full-release.apk". Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire à votre convenance, via le Bluetooth, en téléchageant sur le cloud, en connectant le smartphone à l'ordinateur avec un câble USB ou en utilisant la messagerie. J'utilise Gmail dans cet exemple car c'est assez simple pour moi. Je mentionne cela parce que pour installer l'application auto-signée, nous devons permettre à Android de faire cette installation sur notre smartphone même si ce fichier est reçu via Gmail qui est normalement interdit. Si vous utilisez une autre solution, veuillez procéder en conséquence.
 
 ![Capture d'écran 48](../images/Installation_Screenshot_48.png)
 
@@ -289,3 +289,7 @@ Autorisez "Sources inconnues". Après l'installation, vous pouvez le désactiver
 La dernière étape consiste à cliquer sur le fichier APK obtenu via Gmail et installer l'application. Si l'APK ne s'installe pas et que vous avez une version plus ancienne d'AndroidAPS sur votre téléphone (signé avec une autre clé), vous devrez au préalable la désinstaller. N'oubliez pas dans ce cas d'exporter vos paramètres auparavant !
 
 Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour votre utilisation (MGC, pompe à insuline), etc.
+
+## Identify receiver if using xDrip
+
+[See xDrip page](../Configuration/xdrip#identify-receiver)

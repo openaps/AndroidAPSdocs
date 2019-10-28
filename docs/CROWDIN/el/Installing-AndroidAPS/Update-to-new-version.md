@@ -8,7 +8,7 @@
 
 <font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>.
 
-***Note***: If updating to AndroidAPS 2.3, you need to use [Android Studio Version 3.4](https://developer.android.com/studio/archive?), it doesn't work with the latest one.
+***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ## Εγκαταστήστε το git (αν δεν το έχετε)
 
@@ -18,6 +18,8 @@
 * Βεβαιωθείτε ότι έχετε σημειώσει τη διαδρομή εγκατάστασης. Θα το χρειαστείτε στο επόμενο βήμα.
   
   ![Διαδρομή εγκατάστασης Git](../images/Update_GitPath.png)
+
+* Reboot your PC to update System Environment.
 
 * Αφήστε το Studio να μάθει πού βρίσκεται το git.exe: Αρχείο - Ρυθμίσεις
   
@@ -154,6 +156,26 @@ make sure that ‘Offline work’ is disabled.
 File -> Settings
 
 ![Settings offline work](../images/GIT_Offline2.jpg)
+
+## Error: buildOutput.apkData must not be null
+
+Sometimes you might get an error message when building the apk saying
+
+      `Errors while building APK.`
+    
+      `Cause: buildOutput.apkData must not be null`
+    
+
+This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+
+     1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
+     2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
+     3. Change apk destination folder (different location).
+    
+
+## No CGM data when using xDrip
+
+[Προσδιορίστε δέκτη](../Configuration/xdrip#identify-receiver)
 
 ## Uncommitted changes
 

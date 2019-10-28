@@ -1,16 +1,5 @@
 # SMS Commands
 
-### Workaround for bug in AndroidAPS 2.3
-
-SMS Command Settings are disabled in AndroidAPS versions 2.3 because of a bug, but can be used in version 2.4 again.
-
-If you must use SMS commands you can use the following workaround:
-
-- Export settings
-- Downgrade to AndroidAPS version 2.2 (by installing your version 2.2 APK-file)
-- Do SMS command settings in AndroidAPS version 2.2.
-- Upgrade to AndroidAPS 2.3. SMS command settings will not be accessible there.
-
 ## Safety First
 
 - AndroidAPS allows you to control a child's phone remotely via text message. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN.
@@ -120,7 +109,7 @@ Send a SMS to the phone with AndroidAPS running from your approved phone number(
 
 - To switch profile to Profile2 30% reply with code Any
 
-## Troubleshooting
+## Résolution de problèmes
 
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 

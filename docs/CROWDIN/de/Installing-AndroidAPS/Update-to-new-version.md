@@ -8,7 +8,7 @@
 
 <font color="#FF0000"><b>Wichtiger Hinweis: Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.</font></b>.
 
-***Wichtiger Hinweis***: Das Update auf AndroidAPS Version 2.3 kann nicht mit der letzten Version von Android Studio durchgeführt werden. Verwende bitte [Android Studio Version 3.4](https://developer.android.com/studio/archive?).
+*** Hinweis ***: Verwende [ Android Studio Version 3.5.1 ](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
 
 ## Installiere git (falls du es noch nicht hast)
 
@@ -18,6 +18,8 @@
 * Notiere Dir den Installationspfad. Du brauchst diesen im nächsten Schritt.
   
   ![Git Installationspfad](../images/Update_GitPath.png)
+
+* Starte Deinen PC neu, um die Systemumgebung zu aktualisieren.
 
 * In Android Studio musst Du den Pfad zu git.exe hinterlegen: File - Settings
   
@@ -154,6 +156,26 @@ stelle sicher, dass 'offline work' deaktiviert ist.
 File -> Settings
 
 ![Einstellungen offline work](../images/GIT_Offline2.jpg)
+
+## Fehler: buildOutput.apkData must not be null
+
+Manchmal kann es sein, dass Du beim Erstellen der APK-Datei folgende Fehlermeldung bekommst:
+
+      `Errors while building APK.`
+    
+      `Cause: buildOutput.apkData must not be null`
+    
+
+Dies ist ein bekannter Fehler in Android Studio 3.5 und wird wahrscheinlicherst in Android Studio 3.6 behoben. Drei mögliche Vorgehensweisen:
+
+     1. Lösche manuell die drei Build-Ordner (normalen "Build"-Ordner, Build-Ordner in "app" und Build-Ordner in "wear") und generiere die signierte APK-Datei erneut.
+     2. Definiere als Zielordner (destination folder) den Projekt-Ordner anstelle des App-Ordner - siehe [dieses Video] (https: //www.youtube.com/watch?v=BWUFWzG-kag).
+     3. Ändere den Pfad des Zielordners (destination folder) auf ein neues Verzeichnis.
+    
+
+## Fehlende CGM Daten (bei xDrip-Nutzung)
+
+[Identifiziere Empfänger](../Configuration/xdrip#identify-receiver)
 
 ## Uncommitted changes
 

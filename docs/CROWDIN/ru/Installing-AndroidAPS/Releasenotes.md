@@ -12,9 +12,13 @@
 
 Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
-## Version 2.5.0
+## Версия 2.5.0
 
 Дата выпуска: 26-10-2019
+
+*** Примечание ***: используйте [ Android Studio 3.5.1 ](https://developer.android.com/studio/) или новее для [ построения apk ](../Installing-AndroidAPS/Building-APK.md) или [ обновите ](../Installing-AndroidAPS/Update-to-new-version.md).
+
+*** Примечание ***: При использовании xDrip отметьте [ identify receiver](../Configuration/xdrip#identify-receiver).
 
 ### Это обновление для меня? В настоящее время НЕ поддерживается
 
@@ -22,22 +26,23 @@
 * Poctech
 * 600SeriesUploader
 * Glimp
-* Patched Dexcom from 2.3 directory
+* Модифицированное приложение Dexcom из каталога 2.3
 
 ### Новые возможности
 
 * Внутреннее изменение targetSDK на 28 (Android 9), поддержка jetpack
 * Поддержка RxJava2, Okhttp3, Retrofit
-* Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
-* New [Automation plugin](../Usage/Automation.rst)
-* Allow to bolus only part from bolus wizard calculation
+* Поддержка старых [помп Medtronic](../Configuration/MedtronicPump.md) (нужен RileyLink)
+* Новый [ модуль автоматизации ](../Usage/Automation.rst)
+* Возможность подать только часть болюса из рассчитанного мастером болюса
 * Рендеринг активности инсулина
 * Корректировка прогнозов IOB с помощью результата autosense
-* New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+* Новая поддержка модифицированных приложений Dexcom ([ папка 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Верификатор подписи
 * Возможность обойти цели пользователям OpenAPS
-* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+* Новые цели [ цели ](../Usage/Objectives2019.rst)-экзамен, обработка приложений
 * Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
+* Исправлена ошибка [СМС коммуникатора](../Usage/SMS-Commands.md)
 
 ## Версия 2.3
 
