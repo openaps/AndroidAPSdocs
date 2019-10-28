@@ -1,34 +1,34 @@
 Automation
 ***************
 
-What is Automation
+Что такое автоматизация
 ===================
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. Например, when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Для одинаковых частых событий приходится изменять одни и те же параметры. Чтобы избежать лишней работы, можно автоматизировать событие, если вы можете описать его достаточно точно и позволить ему делать это автоматически. Например, при низкой ГК, вы можете решить, что должна автоматически установиться высокая временная цель. Или если вы находитесь в фитнес-центре, вы автоматически получаете временную цель. Перед использованием автоматизации следует уверенно овладеть ручным управлением ` временными целями <./temptarget.html> ` _ или переключением профиля. 
 
-.. image:: ../images/Automation_ConditionAction_RC3.png
-  :alt: Automation condition + action
+.. изображение:: ../images/Automation_ConditionAction_RC3.png
+  :alt: условие автоматизации + действие
 
 How to use it
 ================
-To set up an automation, you have to give it a title, select at least one condition and one action. 
+Чтобы настроить автоматизацию, нужно дать ей заголовок, выбрать хотя бы одно условие и одно действие. 
 
 Общие настройки
 --------
-There are some limits:
+Есть некоторые ограничения:
 
-* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-* The profile percentage has to be between 70 % and 130%.
-* There is a 5 min. time limit between executions (and first execution).
+* Значение ГК должно составлять от 72 до 270 мг/дл или от 4 до 15 ммоль/л.
+* Процент профилирования должен составлять от 70% до 130%.
+* Есть 5 минут ограничения по времени между выполнениями (и первым выполнением).
 
-**Please be careful:**
+**Пожалуйста, будьте внимательны:**
 
-* **less than -2 means: -3 and lower (-4,-10, etc)**
-* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+* ** менее -2 означает: -3 и ниже (-4, -10 и т.д.) * *
+* **более -2 означает: -1 и выше (-1, 0, +10 и т.д)**
 
 
 Condition
 ------------
-You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
+Вы можете выбрать между несколькими условиями. Here are some things explained, but most of it should be easy to understand and is not all described here:
 
 * connect conditions: you can have several conditions and can connect them with 
 
