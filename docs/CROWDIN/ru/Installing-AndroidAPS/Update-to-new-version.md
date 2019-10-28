@@ -19,7 +19,7 @@
   
   ![Путь установки Git](../images/Update_GitPath.png)
 
-* Reboot your PC to update System Environment.
+* Перезагрузите компьютер, чтобы обновить среду системы.
 
 * Укажите Studio, где находится git.exe: Файл - Настройки
   
@@ -157,18 +157,18 @@
 
 ![Настройки автономной работы](../images/GIT_Offline2.jpg)
 
-## Error: buildOutput.apkData must not be null
+## Ошибка: buildOutput.apkData не может быть пустым
 
-Sometimes you might get an error message when building the apk saying
+Иногда появляется сообщение об ошибке при компоновке apk
 
-      `Errors while building APK.`
+      ` Ошибки при построении APK. `
     
-      `Cause: buildOutput.apkData must not be null`
+      ` Причина: buildOutput.apkData не может быть пустым `
     
 
-This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+Это известная ошибка в Android Studio 3.5 и, вероятно, не будет исправлна до Android Studio 3.6. Три варианта:
 
-     1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
+     1. Вручную удалите три папки компоновки (обычная "сборка", папка компоновки в "app" и папка компоновки в "wear") и снова сгенерируйте подписанный apk.
      2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
      3. Change apk destination folder (different location).
     
