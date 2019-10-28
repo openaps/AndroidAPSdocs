@@ -95,9 +95,9 @@ Mittagsessen Temporäres Ziel
   
 Dieses Beispiel ist von einer Person, die ihr Mittagessen zu der gleichen Zeit am gleichen Ort in der Woche hat. Falls sie zur einer bestimmten Zeit an einem bestimmten Ort ist, bekommt sie ein niedrigeres temporäres Ziel (eating soon) während sie auf ihr Mittagsessen wartet. Aufgrund der "Und"-Verknüpfung passiert dies eben nur zu einer bestimmten Zeit UND an einem bestimmten Ort. Es funktioniert also nicht zu einer anderen Zeit am selben Standort oder zu derselben Zeit an einem anderem Standort (z.B. falls die Person zuhause bleibt oder länger am Arbeitsplatz bleibt). 
 
-Misuse of Automation
+Incorrect use of Automation
 ------------------------------------
-As every system Automation can be used in unintended ways. This might lead to difficulties and even danger for your health. Such bad examples are for instance
+As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
 
 * Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
 * Setting profile to compensate food
