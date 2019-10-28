@@ -95,9 +95,9 @@ Dočasný cíl v době oběda
   
 Toto je ukázkové nastavení osoby, která během týdne mívá oběd ve stejnou dobu. Pokud se v určitou dobu nachází na místě, kde obvykle obědvá, spustí se při čekání na oběd dočasný cíl „Před jídlem“. Vzhledem k použitému operátoru „A“ se tak stane pouze tehdy, když je splněna podmínka určitého času A polohy. Tato automatizace tedy nefunguje, pokud je osoba v nastaveném místě v jakoukoli jinou dobu, ani když je v nastavenou dobu někde jinde, např. pracuje z domu nebo pracuje přesčas. 
 
-Misuse of Automation
+Incorrect use of Automation
 ------------------------------------
-As every system Automation can be used in unintended ways. This might lead to difficulties and even danger for your health. Such bad examples are for instance
+As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
 
 * Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
 * Setting profile to compensate food
