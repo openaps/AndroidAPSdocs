@@ -38,39 +38,48 @@ Condition
    
 * Время vs. recurring time
 
-   * time =  single time event
-   * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
+   * время = одно событие времени
+   * повторяющееся время = то, что происходит регулярно (напр. раз в неделю, каждый рабочий день и т. д.)
    
-* location: in the config builder (Automation), you can select which location service you want to use:
+* расположение: в конфигураторе (автоматизация), можете выбрать местоположение сервиса, который хотите использовать:
 
-  * Use passive location: AAPS only takes locations if other apps are requesting it
-  * Use network location: Location of your Wifi
+  * Использовать пассивное расположение: AAPS принимает положения только в том случае, если другие приложения запрашивали его
+  * Использовать расположение сети: расположение вашего Wifi
   * Use GPS location
   
 Action
 ------
-You can choose one or more actions: 
+Можно выбрать одно или несколько действий: 
 
 * start temp target 
 
-   * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-   * works only if there is no previous temp target
+   * должно быть между 72 мг/дл и 270 мг/дл (4 ммоль/л и 15 ммоль/л)
+   * работает только в том случае, если нет предыдущей временной цели
    
 * stop temp target
 * notification
 * profile percentage
 
-   * must be between 70% and 130% 
-   * works only if the previous percentage is 100%
+   * должно быть от 70% до 130% 
+   * работает только в том случае, если предыдущий процент составляет 100%
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+После добавления ваших действий, **не забудьте изменить значения по умолчанию** на те, которые требуются, нажав на значения по умолчанию.
  
-.. image:: ../images/Automation_Default.png
-  :alt: Automation default vs. set values
+.. изображение:: ../images/Automation_Default.png
+  :alt: автоматизация по умолчанию vs. set values
+
+Good practice
+==========
+* When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
+* Whatch the rule results.
 
 Examples
 ==========
-These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these.
+These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
+
+* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
+* Setting temp target for activities based on time, location...
+* Setting eating soon temp targets based on time, location...
 
 Low Glucose Temp Target
 ------------------------------------
@@ -86,6 +95,15 @@ Lunch Time Temp Target
   
 These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
 
+Misuse of Automation
+------------------------------------
+As every system Automation can be used in unintended ways. This might lead to difficulties and even danger for your health. Such bad examples are for instance
+
+* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
+* Setting profile to compensate food
+* Setting profile without duration
+* Creating one way rules (i.e. do something but don't undo it by another rule)
+* Creating long term rules
 
 Alternatives
 ============
