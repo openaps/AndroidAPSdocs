@@ -12,15 +12,15 @@
 
 Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Ως εκ τούτου, είναι απαραίτητο κάθε χρήστης να ενημερώνει όσων το δυνατό πιο γρήγορα.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
 
-## Version 2.5.0
+## Έκδοση 2.5.0
 
 Ημερομηνία κυκλοφορίας: 26-10-2019
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+***Σημείωση***: Παρακαλώ χρησιμοποιήστε [το Android Studio Έκδοση 3.5.1](https://developer.android.com/studio/) ή νεότερη έκδοση για να [φτιάξτε το apk](../Installing-AndroidAPS/Building-APK.md) ή [ενημέρωση](../Installing-AndroidAPS/Update-to-new-version.md).
 
-***Note***: When using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+***Σημείωση***: Όταν χρησιμοποιείτε xDrip [προσδιορίστε δέκτη](../Configuration/xdrip#identify-receiver) πρέπει να οριστεί.
 
-### Is this update for me? Currently is NOT supported
+### Είναι αυτή η ενημερωμένη έκδοση για μένα; Επί του παρόντος ΔΕΝ υποστηρίζεται
 
 * Android 5
 * Poctech
@@ -30,19 +30,19 @@
 
 ### Σημαντικά νέα χαρακτηριστικά
 
-* Internal change of targetSDK to 28 (Android 9), jetpack support
-* RxJava2, Okhttp3, Retrofit support
-* Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
-* New [Automation plugin](../Usage/Automation.rst)
-* Allow to bolus only part from bolus wizard calculation
-* Rendering insulin activity
-* Adjusting IOB predictions by autosense result
-* New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+* Εσωτερική αλλαγή targetSDK 28 (Android 9), jetpack υποστηρίζονται
+* RxJava2, Okhttp3, Retrofit υποστηρίζονται
+* Παλιές [Medtronic αντλίες](../Configuration/MedtronicPump.md) υποστηρίζονται (RileyLink αναγκαίο)
+* Νέα [Αυτόματα plugin](../Usage/Automation.rst)
+* Επιτρέπετε το bolus εν μέρει από τον υπολογιστή bolus wizard
+* Παροχή δραστηριότητας ινσουλίνης
+* Προσαρμογή προβλέψεων IOB με τα αποτελέσματα από autosense
+* Νέα υποστήριξη για patched Dexcom apks ([2.4 φάκελο](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Έλεγχος υπογραφής
-* Allow to bypass objectives for OpenAPS users
-* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
-* Fixed bug in Dana* drivers where false time difference was reported
-* Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
+* Επιτρέπετε να παρακάμψετε στόχους για OpenAPS χρήστες
+* Νέα [στόχοι](../Usage/Objectives2019.rst) - εξέταση, διαχείριση εφαρμογής
+* Διορθώθηκε σφάλμα στα προγράμματα οδήγησης Dana * όπου αναφέρθηκε ψευδής χρονική διαφορά
+* Διορθώθηκε σφάλμα στην [ επικοινωνία με SMS ](../Usage/SMS-Commands.md)
 
 ## Έκδοση 2.3
 
@@ -96,66 +96,66 @@
 * Διόρθωση φραγής UI (Johannes Mockenhaupt)
 * Υποστήριξη για ενημερωμένη εφαρμογή G5 (Tebbe Ubben και Milos Kozak)
 * Υποστήριξη G6, Poctech, Tomato, Eversense BG source(Tebbe Ubben and Milos Kozak)
-* Fixed disabling SMB from preferences (Johannes Mockenhaupt)
+* Σταθερή απενεργοποίηση του SMB από τις προτιμήσεις (Johannes Mockenhaupt)
 
-### Misc
+### Διάφορα
 
-* If you are using non default `smbmaxminutes` value you have to setup this value again
+* Εάν χρησιμοποιείτε μη προεπιλεγμένη τιμή ` smbmaxminutes `, πρέπει να ρυθμίσετε ξανά αυτήν την τιμή
 
-## Version 2.0
+## Έκδοση 2.0
 
-Release date: 03-11-2018
+Ημερομηνία κυκλοφορίας: 03-11-2018
 
 ### Σημαντικά νέα χαρακτηριστικά
 
-* oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
-* Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
-* Setup wizard: guides you through the process of setting up AndroidAPS
+* υποστήριξη oref1 / SMB (<τεκμηρίωση oref1 </ 0>) Βεβαιωθείτε ότι έχετε διαβάσει την τεκμηρίωση για να μάθετε τι να περιμένετε από την SMB, πώς θα συμπεριφερθεί, τι μπορεί να επιτευχθεί και πώς να την χρησιμοποιήσει ώστε να μπορεί να λειτουργεί ομαλά.
+* Υποστήριξη αντλίας Combo Accu-check ([ οδηγίες εγκατάστασης ](../Configuration/Accu-Chek-Combo-Pump.md))
+* Οδηγός εγκατάστασης: σας καθοδηγεί στη διαδικασία εγκατάστασης του AndroidAPS
 
-### Settings to adjust when switching from AMA to SMB
+### Ρυθμίσεις για προσαρμογή κατά τη μετάβαση από AMA σε SMB
 
-* Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
-* maxIOB now includes *all* IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
-* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Εάν κάνετε αναβάθμιση από AMA σε SMB, πρέπει να το αλλάξετε χειροκίνητα
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
+* Ο στόχος 8 πρέπει να ξεκινήσει για ενεργοποίηση των SMB (η καρτέλα SMB δείχνει γενικά τι περιορισμοί ισχύουν)
+* το μέγιστο IOB περιλαμβάνει πλέον * όλα *τα IOB, όχι μόνο το βασικό. Δηλαδή, εάν δοθεί ένας βώλος 8 U για ένα γεύμα και το μέγιστο IOB είναι 7 U, δεν θα παραδοθούν SMBs έως ότου η IOB πέσει κάτω από 7 U.
+* το ελάχιστο 5 λεπτών δράσης υδατανθράκων (min_5m_carbimpact) έχει αλλάξει από 3 σε 8 από AMA σε SMB. Εάν κάνετε αναβάθμιση από AMA σε SMB, πρέπει να το αλλάξετε χειροκίνητα
+* Σημείωση κατά την κατασκευή του AndroidAPS 2.0 apk: Η διαμόρφωση κατά παραγγελία δεν υποστηρίζεται από την τρέχουσα έκδοση του plugin Android Gradle! Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
   
   * Ανοίξτε το παράθυρο "Προτιμήσεις" κάνοντας κλικ στην επιλογή Αρχείο> Ρυθμίσεις (σε Mac, Android Studio> Προτιμήσεις).
   * Στο αριστερό τμήμα του παραθύρου, κάντε κλικ στην επιλογή Δημιουργία, εκτέλεση, ανάπτυξη> μεταγλωττιστής.
   * Καταργήστε την επιλογή του πλαισίου ελέγχου Configure κατα παραγγελία.
   * Κάντε κλικ στην επιλογή Εφάρμοσε ή ΟΚ.
 
-### Overview tab
+### Καρτέλα Επισκόπηση
 
-* Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
-* Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
-* Colored prediction lines: 
-  * Orange: COB (colour is used generally to represent COB and carbs)
-  * Dark blue: IOB (colour is used generally to represent IOB and insulin)
-  * Light blue: zero-temp
-  * Dark yellow: UAM
-* Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
-* Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
+* Η κορυφαία κορδέλα παρέχει πρόσβαση σε αναστολή / απενεργοποίηση κυκλώματος, προβολή / προσαρμογή προφίλ και έναρξη / τερματισμό προσωρινών στόχων (TT). Τα TT χρησιμοποιούν τις προεπιλογές που έχουν οριστεί στις προτιμήσεις. Η νέα επιλογή Hypo TT είναι ένα υψηλού ρυθμού TT για να αποτρέψει το κύκλωμα από υπερβολική διόρθωση στους υδατάνθρακες.
+* Κουμπιά επεξεργασίας: το παλιό κουμπί επεξεργασίας είναι ακόμα διαθέσιμο, αλλά κρυμμένο από προεπιλογή. Η ορατότητα των κουμπιών μπορεί τώρα να ρυθμιστεί. Νέο κουμπί για την ινσουλίνη, κουμπί για τα νέους υδατάνθρακες (συμπεριλαμβανομένων των [ eCarbs / εκτεταμένων υδατανθράκων ](../Usage/Extended-Carbs.md))
+* Γραμμές χρωματισμένης πρόβλεψης: 
+  * Πορτοκαλί: COB (το χρώμα χρησιμοποιείται γενικά για να αντιπροσωπεύει COB και υδατάνθρακες)
+  * Σκούρο μπλε: IOB (το χρώμα χρησιμοποιείται γενικά για να αντιπροσωπεύει το IOB και την ινσουλίνη)
+  * Ανοιχτό γαλάζιο: μηδενικός ρυθμός
+  * Σκούρο κίτρινο: UAM
+* Επιλογή για εμφάνιση πεδίου σημειώσεων σε διαλόγους ινσουλίνης / υδατάνθρακες / αριθμομηχανή / πρωτεύοντος γεμίσματος, οι οποίοι μεταφορτώνονται στο NS
+* Το επικαιροποιημένο παράθυρο διαλόγου πρωτεύοντος / γεμίσματος επιτρέπει το priming και τη δημιουργία καταχωρήσεων στην εξυπηρέτηση για αλλαγή τοποθεσίας και αλλαγή κασέτας
 
-### Watch
+### Ρολόι
 
-* Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
-* Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
-* confirmations and info dialogs now work on wear 2.0 as well
-* Added eCarbs menu entry
+* Η ξεχωριστή παραλλαγή κατασκευής αφέθηκε, περιλαμβάνεται στην κανονική πλήρη κατασκευή τώρα. Για να χρησιμοποιήσετε τα κουμπιά ελέγχου από το ρολόι, ενεργοποιήστε αυτήν τη ρύθμιση στο τηλέφωνο
+* Ο Οδηγός τώρα ζητά μόνο υδατάνθρακες (και ποσοστό εάν είναι ενεργοποιημένο στις ρυθμίσεις του ρολογιού). Το ποιες παράμετροι περιλαμβάνονται στον υπολογισμό μπορούν να ρυθμιστούν στις ρυθμίσεις του τηλεφώνου
+* οι επιβεβαιώσεις και οι διάλογοι πληροφοριών λειτουργούν τώρα και στην wear 2.0
+* Προστέθηκε η καταχώρηση μενού eCarbs
 
-### New plugins
+### Νέες προσθήκες
 
-* PocTech app as BG source
-* Dexcom patched app as BG source
-* oref1 sensitivity plugin
+* Εφαρμογή PocTech σαν πηγή του BG
+* Η εφαρμογή Dexcom patched ως πηγή BG
+* προσθήκη ευαισθησίας oref1
 
-### Misc
+### Διάφορα
 
-* App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
-* Overhaul for config builder and objectives tabs, adding descriptions
-* New app icon
-* Lots of improvements and bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
-* Option to keep screen on
-* Option to show notification as Android notification
-* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+* Η εφαρμογή χρησιμοποιεί τώρα συρτάρι για να εμφανίζει όλα τα πρόσθετα. οι προσθήκες που έχουν επιλεγεί ως ορατά στο config builder εμφανίζονται ως καρτέλες στην κορυφή (αγαπημένα)
+* Επανεξέταση για δημιουργούς config και καρτέλες αντικειμένων, προσθέτοντας περιγραφές
+* Νέο εικονίδιο εφαρμογής
+* Πολλές βελτιώσεις και διορθώσεις σφαλμάτων
+* Ειδοποιήσεις ανεξάρτητες από nightscout αν η αντλία δεν είναι προσβάσιμη για μεγαλύτερο χρονικό διάστημα (π.χ.αντλία μπαταρίας εξαντλημένη) και τις χαμένες αναγνώσεις BG (βλέπε * Τοπικές ειδοποιήσεις * στις ρυθμίσεις)
+* Επιλογή για να κρατήσετε την οθόνη ενεργή
+* Δυνατότητα προβολής ειδοποίησης ως ειδοποίηση από Android
+* Το προηγμένο φιλτράρισμα (επιτρέποντας πάντα την ενεργοποίηση της λειτουργίας SMB και 6 ώρες μετά τα γεύματα) υποστηρίζεται με εφαρμογή patched Dexcom ή xDrip με εγγενή λειτουργία G5 ως πηγή BG.
