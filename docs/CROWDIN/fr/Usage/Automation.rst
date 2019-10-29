@@ -12,7 +12,7 @@ How to use it
 ================
 To set up an automation, you have to give it a title, select at least one condition and one action. 
 
-General
+Généralités
 --------
 There are some limits:
 
