@@ -146,9 +146,9 @@ AndroidAPS peut s'exécuter avec différentes configurations de profil. Typiquem
 
 Il s'agit simplement des journaux de traitements (bolus et glucides), des messages xDrip et des messages envoyés à Nightscout via le client intégré Nightscout. Vous n'avez normalement pas besoin de vous en inquiéter à moins qu'il y ait un problème.
 
-## Config Builder
+## Générateur de configuration
 
-![Config Builder](../images/Screenshot_config_builder.png)
+![Générateur de configuration](../images/Screenshot_config_builder.png)
 
 C'est ici que vous allez paramétrer la configuration de votre plate-forme AndroidAPS. Cette capture d'écran montre une configuration typique utilisant une pompe Combo, un capteur MGC Dexcom G5 géré par xDrip + et fonctionnant avec de l'insuline NovoRapid sur un profil Oref et connecté à un serveur Nightscout hébergé sur le cloud.
 
