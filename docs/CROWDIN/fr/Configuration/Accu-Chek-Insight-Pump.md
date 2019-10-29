@@ -12,7 +12,7 @@
 <br>   Note: AAPS va toujours écrire des données dans le <b>premier profil de débits de base dans la pompe</b>* Un téléphone Android (en gros, toutes les versions d'Android pourrait fonctionner, mais AndroidAPS nécessite au moins Android 5 (Lollipop).)
 * L'application AndroidAPS installée sur votre téléphone
 
-## Setup
+## Paramètres
 
 * La pompe Insight ne doit être connectée qu'à un seul appareil à la fois. Si vous avez précédemment utilisé la télécommande Insight (lecteur), vous devez supprimer le lecteur de la liste des appareils appairés de votre pompe : Menu > Réglages > Communication > Retirer un dispositif
     
