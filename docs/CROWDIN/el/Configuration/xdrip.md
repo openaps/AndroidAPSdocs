@@ -100,10 +100,10 @@
 * Τοποθετήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε)
 
 * Βάλτε τον πομπό στον αισθητήρα
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Μην ξεκινήστε το νέο αισθητήρα πριν να εμφανιστούν οι ακόλουθες πληροφορίες στην Κλασική Σελίδα Κατάστασης -> Κατάσταση G5 / G6 -> PhoneServiceState:
    
-   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   * Πομπός με σειριακό αριθμό που ξεκινάει με 80 ή 81: "Έχεις δεδομένα ώρες: λεπτά" (δηλ Έχεις δεδομένα 19:04 ")
+   * Πομπός που ξεκινάει ο σειριακός αριθμός με 8G ή 8H: "Έχεις γλυκόζη ώρες: λεπτά" (δηλ. "Έχεις γλυκόζη 19:04") ή "Δεν έχεις ακατέργαστο ώρες: λεπτά" (δηλαδή "Πήρε τώρα ακατέργαστο 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
@@ -190,11 +190,11 @@
    * Θα χρειαστείτε τον σειριακό αριθμό πομπού σας αν αυτή είναι η πρώτη φορά που το χρησιμοποιήσατε.
 * Τοποθετήστε τον σειριακό αριθμό του νέου πομπού. Προσέξτε να μην συγχέετε 0 (μηδέν) και O (κεφαλαίο γράμμα o).
 * Τοποθετήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε).
-* Put transmitter into sensor - Do not start sensor immediately!
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Βάλτε τον πομπό στον αισθητήρα - μην ξεκινήσετε τον αισθητήρα αμέσως!
+* Μην ξεκινήστε το νέο αισθητήρα πριν να εμφανιστούν οι ακόλουθες πληροφορίες στην Κλασική Σελίδα Κατάστασης -> Κατάσταση G5 / G6 -> PhoneServiceState:
    
-   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   * Πομπός με σειριακό αριθμό που ξεκινάει με 80 ή 81: "Έχεις δεδομένα ώρες: λεπτά" (δηλ Έχεις δεδομένα 19:04 ")
+   * Πομπός που ξεκινάει ο σειριακός αριθμός με 8G ή 8H: "Έχεις γλυκόζη ώρες: λεπτά" (δηλ. "Έχεις γλυκόζη 19:04") ή "Δεν έχεις ακατέργαστο ώρες: λεπτά" (δηλαδή "Πήρε τώρα ακατέργαστο 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
