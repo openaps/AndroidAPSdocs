@@ -41,12 +41,12 @@ NS Profile utilise les profils que vous avez enregistrés sur votre site Nightsc
 
 Effectuez un **changement de profil** pour activer un profil de Nightscout. Faites un appui long sur le nom du profil en cours dans la page d'accueil AAPS en haut (zone grise entre le champ "Boucle ouverte / fermée" et la zone cible) > Changement de profil > Profil > OK. AAPS écrit également le profil sélectionné dans la pompe après le changement de profil, de sorte qu'il est disponible sans AAPS en cas d'urgence et continue de s'exécuter.
 
-Advantage:
+Avantages :
 
 * profils multiples
 * facile à modifier via un PC ou une tablette
 
-Disadvantage:
+Inconvénients :
 
 * aucune modification locale des paramètres de profil
 * le profil ne peut pas être modifié directement sur le téléphone
@@ -68,8 +68,8 @@ Sélectionnez le type de courbe d'insuline que vous utilisez. Les options 'Insul
 ### Insuline à Action Ultra Rapide Oref
 
 * recommendé pour FIASP
-* DIA = at least 5.0h
-* Max. max. = 55 minutes après l'injection
+* DAI = au moins 5.0h
+* Pic max. = 55 minutes après l'injection
 
 Pour beaucoup de personnes, il n'y a pratiquement pas d'effet notable de FIASP après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
 
@@ -130,7 +130,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
     Note you need to be in [Objective 8](../Usage/Objectives.md) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
-## Loop
+## Boucle
 
 Define whether you want to allow AAPS automatic controls or not.
 
@@ -154,7 +154,7 @@ See [Objectives](../Usage/Objectives.md) page for more information.
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
 
-## General
+## Généralités
 
 ### Aperçu
 
@@ -173,7 +173,7 @@ Define which Buttons are shown on the home screen.
 * Insuline
 * Glucides
 * CGM (opens xDrip+)
-* Calibration
+* Étalonnage
 
 Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
 
