@@ -215,7 +215,7 @@ Carbs entered in the careportal (i.e. correction carbs) will be used for COB cal
 
 ![Careportal tab](../images/ConfBuild_CarePortal.png)
 
-### SMS Communicator
+### Communicateur SMS
 
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
 
