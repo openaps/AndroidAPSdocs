@@ -41,13 +41,13 @@ L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de reagir plu
 
 ### Max. U/hr pour le débit de basal temp
 
-Ce paramètre existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé. The value is measured in units per hour (u/hr). It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+Ce paramètre existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé. La valeur est definie en Unités d'insuline par heure (U/h). Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **plus haut dosage Basal** de votre profil et de le **multiplier par 4**. Par exemple, si le dosage basal le plus élevé dans votre profil a été 0.5 U/hr, vous qui pourriez la multiplier par 4 pour obtenir la valeur de 2 U/h.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### L'IA basal maximum que l'OpenAPS pourra délivrer [U]
 
 Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
 
-* This value does not consider bolus IOB, only basal.
+* Cette valeur ne prend pas en compte pas l'Insuline Active IA des bolus, mais seulement la Basal.
 * This value is calculated and monitored indepentandlty of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
 * This value is measured in insulin units (u).
 
@@ -87,11 +87,11 @@ The options here will vary depending on which pump driver you have selected in '
 * 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
 * 'Always use basal absolute values' must be activated if you want to use Autotune properly.
 
-## SMS Communicator
+## Communicateur SMS
 
 This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Usage/SMS-Commands.md) but it will only display in Preferences if you have selected this option in the Config Builder.
 
-## Other
+## Autre
 
 * You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
 * You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
@@ -99,6 +99,6 @@ This setting allows remote control of the app by texting instructions to the pat
 * 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
 * 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
 
-## Data Choices
+## Choix de données
 
 * 'Fabric Upload' will send crash reporting and feature usage data to the developers.
