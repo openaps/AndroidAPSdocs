@@ -1,28 +1,28 @@
-Welcome to the AndroidAPS documentation
+Καλώς ήρθατε στην τεκμηρίωση AndroidAPS
 ==============================================
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+AndroidAPS είναι ένα open source εφαρμογή για τους ανθρώπους που ζουν με ινσουλίνο-εξαρτώμενο διαβήτη, η οποία ενεργεί ως ένα τεχνητό πάγκρεας system (APS) σε Google Android smartphones. Τα κύρια συστατικά είναι διαφορετικοί αλγόριθμοι λογισμικού openAPS που στοχεύουν να κάνουν ό, τι κάνει το ζωντανό πάγκρεας: διατηρώντας τα επίπεδα του σακχάρου στο αίμα μέσα σε υγιή όρια χρησιμοποιώντας αυτοματοποιημένη δοσολογία ινσουλίνης (AID). Επιπλέον, χρειάζεστε τουλάχιστον μια υποστηριζόμενη από την FDA / CE εγκεκριμένη αντλία ινσουλίνης και έναν συνεχή μετρητή γλυκόζης. Η εφαρμογή ΔΕΝ χρησιμοποιεί αυτο-μάθηση στην τεχνητή νοημοσύνη. Αντ 'αυτού, οι υπολογισμοί του AndroidAPS βασίζονται στον ατομικό αλγόριθμο δοσολογίας και την πρόσληψη υδατανθράκων που ο χρήστης θέτει χειροκίνητα στο προφίλ θεραπείας του, αλλά επαληθεύονται από το σύστημα για λόγους ασφαλείας. Η εφαρμογή δεν παρέχεται στο Google Play - πρέπει να το κατασκευάσετε από τον πηγαίο κώδικα μόνοι σας για νομικούς λόγους.
 
-Main components are:
+Κύρια συστατικά είναι:
 
-.. image:: images/modules-female.png
-  :alt: Components
+.. εικόνα::../images/modules-female.png
+  :alt: Συστατικά
 
-For more details, please read on here.
+Για περισσότερες λεπτομέρειες, παρακαλούμε διαβάστε εδώ.
 
-Getting started
+Ξεκινώντας
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Πρώτα η ασφάλεια <./Getting-Started/Safety-first.rst>
+   Τι είναι ένα κλειστό σύστημα κυκλώματος <./Getting-Started/ClosedLoop.rst>
+   Τι είναι ένα κλειστό σύστημα κυκλώματος με AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Wiki ενημερώσεις και αλλαγές <./Getting-Started/WikiUpdate.rst>
    
    
-What do I need 
+* `Τι χρειάζομαι 
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
@@ -31,82 +31,82 @@ What do I need
    Module <./Module/module.rst>
 
    
-How to Install AndroidAPS
+Πώς να Εγκαταστήσετε AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+   Χτίζοντας το APK <./Installing-AndroidAPS/Building-APK.md>
+   Ενημέρωση σε νέα έκδοση ή υποκατάστημα <./Installing-AndroidAPS/Update-to-new-version.md>
+   Σημειώσεις έκδοσης <./Installing-AndroidAPS/Releasenotes.md>
+   Dev υποκατάστημα <./Installing-AndroidAPS/Dev_branch.md>
    
    
-Component Setup
+Ρυθμίσεις συστατικών
 ---------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+   xDrip Ρυθμίσεις <./Configuration/xdrip.md>
+   Αντλίες <./Hardware/pumps.rst>
+   Τηλέφωνα <./Hardware/Phoneconfig.rst>
+   Ρύθμιση Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
    
 
-Configuration 
+Ρύθμιση παραμέτρων 
 ---------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.md>
+   Προτιμήσεις <./Configuration/Preferences.md>
    
    
-AndroidAPS Usage
+AndroidAPS Χρήση
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   AndroidAPS screens <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives2019.rst>
-   OpenAPS features <./Usage/Open-APS-features.md>   
-   COB calculation <./Usage/COB-calculation.rst>
+   AndroidAPS οθόνες <./Getting-Started/Screenshots.md>
+   Στόχοι <./Usage/Objectives.rst>
+   OpenAPS χαρακτηριστικά <./Usage/Open-APS-features.md>   
+   Υπολογιστής COB <./Usage/COB-calculation.rst>
    Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
-   Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.md>
-   Automation <./Usage/Automation.rst>
+   Αλλαγή προφίλ <./Usage/Profiles.md>
+   Προσωρινοί στόχοι <./Usage/temptarget.md>   
+   Εκτεταμένη υδατάνθρακες <./Usage/Extended-Carbs.md>
+   Αυτοματοποίηση <./Usage/Automation.rst>
   
  
-General Hints 
+Γενικές Συμβουλές 
 ---------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
+   Διασχίζοντας ζώνες ώρας με αντλίες <./Usage/Timezone-traveling.md>
+   Πρόσβαση σε αρχεία καταγραφής <./Usage/Accessing-logfiles.md>
+   Accu-Chek Combo συμβουλές για την βασική χρήση <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Εισαγωγή/Εξαγωγή Ρυθμίσεων <./Usage/ExportImportSettings.rst>
    
 
-AndroidAPS for children
+AndroidAPS για τα παιδιά
 ------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Remote monitoring <./Children/Children.rst>
-   SMS commands <./Usage/SMS-Commands.md>
+   * "Εξ αποστάσεως παρακολούθηση <./Children/Children.rst>
+   Εντολές SMS <./Usage/SMS-Commands.md>
    
 
-Advanced 
+Για προχωρημένους 
 ----------
 .. toctree::
    :maxdepth: 1
