@@ -1,26 +1,26 @@
-# Making your first PR (pull request)
+# Faire votre premier PR (Pull Request)
 
-**This description is just for editing the English documentation. If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
+**Cette description est juste pour l'édition de la documentation en anglais. Si vous voulez traduire la documentation dans d'autres langues (merci), utilisez [crowdin](https://wikitranslations.androidaps.org).**
 
-For any questions, feedback or new ideas you can contact the documentation team via email (wiki@androidaps.org). Doing a PR isn't difficult, but we can help you editing the documentation.
+Pour toute question, commentaires ou idées nouvelles, vous pouvez contacter l'équipe de documentation par e-mail (wiki@androidaps.org). Faire un PR n'est pas difficile, mais nous pouvons vous aider à éditer la documentation.
 
-At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub. It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. There is always a review process before changes are merged into the "formal" AndroidAPS documentation repository. You can't mess up the originals through any accidents in the PR process. The general process is:
+À un moment donné, on vous suggère de faire un PR. PR est l'acronyme de Pull Request, et c'est une façon d'ajouter ou de modifier des informations enregistrées dans GitHub. En fait, ce n'est pas si difficile à faire et c'est une excellente façon de contribuer. Cette documentation est ici parce que les gens comme vous ont fait des PRs. Ne craignez pas de vous tromper ou d’éditer les mauvais documents. Il y a toujours un processus de vérification avant que les modifications ne soient fusionnées dans le référentiel "formel" de la documentation AndroidAPS. Vous ne pouvez pas endommager les originaux lors d'accidents du processus de PR. Le processus général est :
 
-* Make edits and improvements to code or documentation by editing the existing content.
-* Double-check that your edits look good to you.
-* Make a few notes of what's changed so people may understand the edits.
-* Create a pull request, which asks the administrators to use your changes.
-* They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+* Apportez des modifications au code ou à la documentation en modifiant le contenu existant.
+* Vérifiez deux fois que vos modifications vous semblent bonnes.
+* Prenez quelques notes sur ce qui a changé afin que les personnes puissent comprendre les modifications.
+* Créer un Pull Request, qui demande aux administrateurs d'utiliser vos modifications.
+* Ils feront une vérification et soit (1) ils fusionneront vos modifications, (2) ils vous feront un retour au sujet de vos modifications, ou (3) ils commenceront un nouveau document avec vos modifications.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Remarque : Si vous êtes un apprenant visuel, il y a une vidéo YouTube [ici](https://youtu.be/4b6tsL0_kzg) montrant le flux de travail PR.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This does NOT need to be done in the linux environment on your rig. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+Pour notre exemple, nous allons faire une modification à AndroidAPSdocs. Cela ne doit PAS être fait dans l'environnement linux sur votre plateforme. Cela peut être fait sur n'importe quel PC Windows, Mac, etc. (n'importe quel ordinateur avec un accès à Internet).
 
-1. Go to https://github.com/openaps/AndroidAPSdocs and hit Fork in the upper right to make your own copy of the repository. ![Fork repo](./images/PR0.png)
-2. Go to http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html or similar and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub.  
-    ![edit doc](./images/PR1.png) Or you can click on the "Edit in Github" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited. ![RTD io](./images/PR2.png)
-3. one or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file. ![Edit branch](./images/PR3.png)
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the both. ![preview mode](./images/PR5.png)
+1. Accédez à https://github.com/openaps/AndroidAPSdocs et appuyez sur Fork en haut à droite pour faire votre propre copie du référentiel. ![Fork repo](./images/PR0.png)
+2. Accédez à http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html ou autre et accédez à la page que vous souhaitez éditer. Cliquez sur la boîte noire en bas à gauche de la page avec le mot vert "v: latest" ou similaire. Dans la fenêtre popup qui s'affiche, cliquez sur le mot "edit" pour l'éditer dans GitHub.   
+    ![edit doc](./images/PR1.png) Ou vous pouvez cliquer sur le lien "Edit in Github" dans le coin supérieur droit, puis cliquer sur l'icône en forme de crayon qui apparaît dans la barre supérieure du contenu de la page à éditer. ![RTD io](./images/PR2.png)
+3. L'une ou l'autre des options de l'étape 2 créera une nouvelle branche dans le référentiel où vos modifications seront enregistrées. Effectuez vos modifications dans le fichier. ![Edit branch](./images/PR3.png)
+4. Vous avez travaillé dans l'onglet "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the both. ![preview mode](./images/PR5.png)
 5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR. ![commit comments](./images/PR4.png)
 6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request". ![create pull request](./images/PR6.png)
 7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have Github notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AndroidAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs. ![PR tracking](./images/PR7.png)
@@ -71,4 +71,4 @@ If you are planning to make a lot of edits, including adding images to help illu
 
 ![Example of uploading images in batches](./images/Example_batch_images_upload.png)
 
-7. After adding images or making adjustments, you can submit a PR to the master branch of AndroidAPSdocs.
+7. Après avoir ajouté des images ou effectué des modifications, vous pouvez soumettre un PR à la branche principale d'AndroidAPSdocs.
