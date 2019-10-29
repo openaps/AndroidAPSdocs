@@ -14,7 +14,7 @@
 
 ## Version 2.5.0
 
-Release date: 26-10-2019
+Ημερομηνία κυκλοφορίας: 26-10-2019
 
 ***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
 
@@ -38,64 +38,64 @@ Release date: 26-10-2019
 * Rendering insulin activity
 * Adjusting IOB predictions by autosense result
 * New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
-* Signature verifier
+* Έλεγχος υπογραφής
 * Allow to bypass objectives for OpenAPS users
 * New [objectives](../Usage/Objectives2019.rst) - exam, application handling
 * Fixed bug in Dana* drivers where false time difference was reported
 * Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
 
-## Version 2.3
+## Έκδοση 2.3
 
-Release date: 25-04-2019
-
-### Σημαντικά νέα χαρακτηριστικά
-
-* Important safety fix for Insight (really important if you use Insight!)
-* Fix History-Browser
-* Fix delta calculations
-* Language updates
-* Check for GIT and warn on gradle upgrade
-* More automatic testing
-* Fixing potential crash in AlarmSound Service (thanks @lee-b !)
-* Fix broadcast of BG data (works independently of SMS permission now!)
-* New Version-Checker
-
-## Version 2.2.2
-
-Release date: 07-04-2019
+Ημερομηνία κυκλοφορίας: 25-04-2019
 
 ### Σημαντικά νέα χαρακτηριστικά
 
-* Autosens fix: deactivate TT raises/lowers target
-* New translations
-* Insight driver fixes
-* SMS plugin fix
+* Σημαντικό στοιχείο ασφαλείας για το Insight (πολύ σημαντικό αν χρησιμοποιείτε το Insight!)
+* Επιδιόρθωση ιστορικού-προγράμματος περιήγησης
+* Επιδιόρθωση τους υπολογισμούς του δέλτα
+* Ενημέρωση γλωσσών
+* Έλεγχος για το GIT και προειδοποιήσει για την αναβάθμιση του gradle
+* Περισσότερες αυτόματες δοκιμές
+* Επιδιόρθωση πιθανών σφαλμάτων στην υπηρεσία Alarmsound (ευχαριστούμε τον @lee-b !)
+* Επιδιόρθωση προβολής δεδομένων BG (λειτουργεί ανεξάρτητα από την υπηρεσία SMS τώρα!)
+* Νέα Έκδοση-Έλεγχος
 
-## Version 2.2
+## Έκδοση 2.2.2
 
-Release date: 29-03-2019
-
-### Σημαντικά νέα χαρακτηριστικά
-
-* [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
-* Wear Update
-* [SMS plugin](../Usage/SMS-Commands.md) update
-* Go back in objectives.
-* Stop loop if phone disk is full
-
-## Version 2.1
-
-Release date: 03-03-2019
+Ημερομηνία κυκλοφορίας: 07-04-2019
 
 ### Σημαντικά νέα χαρακτηριστικά
 
-* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
-* Status lights on main screen (Nico Schmitz)
-* Daylight saving time helper (Roumen Georgiev)
-* Fix processing profile names comming from NS (Johannes Mockenhaupt)
-* Fix UI blocking (Johannes Mockenhaupt)
-* Support for updated G5 app (Tebbe Ubben and Milos Kozak)
-* G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
+* Επιδιόρθωση Autosens: απενεργοποίηση του TT αυξάνει / μειώνει το στόχο
+* Νέες μεταφράσεις
+* Επιδιόρθωση οδηγών του Insight
+* Επιδιόρθωση plugin SMS
+
+## Έκδοση 2.2
+
+Ημερομηνία κυκλοφορίας: 29-03-2019
+
+### Σημαντικά νέα χαρακτηριστικά
+
+* [Επιδιόρθωση DST](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
+* Αναβάθμιση Wear
+* Αναβάθμιση [SMS plugin](../Usage/SMS-Commands.md)
+* Επιστρέψτε στους στόχους.
+* Σταματήστε το κύκλωμα αν ο δίσκος του τηλεφώνου είναι γεμάτος
+
+## Έκδοση 2.1
+
+Ημερομηνία κυκλοφορίας: 03-03-2019
+
+### Σημαντικά νέα χαρακτηριστικά
+
+* Υποστήριξη Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) (από Tebbe Ubben and JamOrHam)
+* Τα φώτα κατάστασης στην κύρια οθόνη (Nico Schmitz)
+* Βοηθός ώρας για τη θερινή ώρα (Roumen Georgiev)
+* Διόρθωση στα ονόματα προφίλ επεξεργασίας που προέρχονται από την NS (Johannes Mockenhaupt)
+* Διόρθωση φραγής UI (Johannes Mockenhaupt)
+* Υποστήριξη για ενημερωμένη εφαρμογή G5 (Tebbe Ubben και Milos Kozak)
+* Υποστήριξη G6, Poctech, Tomato, Eversense BG source(Tebbe Ubben and Milos Kozak)
 * Fixed disabling SMB from preferences (Johannes Mockenhaupt)
 
 ### Misc
@@ -117,7 +117,7 @@ Release date: 03-11-2018
 * Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes *all* IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
 * min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Εάν κάνετε αναβάθμιση από AMA σε SMB, πρέπει να το αλλάξετε χειροκίνητα
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
   
   * Ανοίξτε το παράθυρο "Προτιμήσεις" κάνοντας κλικ στην επιλογή Αρχείο> Ρυθμίσεις (σε Mac, Android Studio> Προτιμήσεις).
   * Στο αριστερό τμήμα του παραθύρου, κάντε κλικ στην επιλογή Δημιουργία, εκτέλεση, ανάπτυξη> μεταγλωττιστής.
