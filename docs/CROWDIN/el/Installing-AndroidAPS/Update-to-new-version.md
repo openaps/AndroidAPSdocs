@@ -1,14 +1,14 @@
 # Ενημερώστε σε μια νέα έκδοση ή κλάδο
 
-## Build yourself instead of download
+## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+**AndroidAPS δεν είναι διαθέσιμο για κατέβασμα λόγω κανονισμού για τις ιατρικές συσκευές. Είναι νόμιμο να χτίσει η εφαρμογή για δική σας χρήση, αλλά δεν πρέπει να δώσετε αντίγραφο σε άλλους! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
 
 ## Σημαντικές σημειώσεις
 
 <font color="#FF0000"> <b> Σημαντική σημείωση: Από την έκδοση 2.3 πρέπει να χρησιμοποιήσετε το git για ενημέρωση. Η ενημέρωση μέσω του αρχείου zip δεν λειτουργεί πια. </font></b>.
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+***Σημείωση***: Παρακαλώ χρησιμοποιήστε [το Android Studio Έκδοση 3.5.1](https://developer.android.com/studio/) ή νεότερη έκδοση για να χτίσει το apk.
 
 ## Εγκαταστήστε το git (αν δεν το έχετε)
 
