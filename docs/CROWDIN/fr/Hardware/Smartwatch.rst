@@ -1,13 +1,13 @@
-Smartwatches
+Montres connectées
 *************
 
-Smartwatches are optional, but very useful for some users.
-More details are here:
+Les montrées connectées sont optionnelles, mais très utiles pour certains utilisateurs.
+Plus de détails ici :
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   list of tested phones and smartwatches <../Getting-Started/Phones.md>
-   watchfaces  <../Configuration/Watchfaces.md>
+   liste des smartphones testé et des montrées connectées <../Getting-Started/Phones.md>
+   cadrans de montres  <../Configuration/Watchfaces.md>
