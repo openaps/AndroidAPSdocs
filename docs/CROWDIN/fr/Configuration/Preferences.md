@@ -6,7 +6,7 @@ Cela vous permet de définir un mot de passe afin d’empêcher toute modificati
 
 ## Age du patient
 
-Il existe des limites de sécurité en fonction de l'âge que vous avez sélectionné dans ce paramètre. Si vous commencez à atteindre ces limites restrictives (comme le Maximum Bolus), il est temps de changer d’un cran. C’est une mauvaise idée de selectionner un âge supérieur a l'âge réel car cela peut conduire à un surdosage lorsque l'on entre une valeur incorrecte dans la boîte de dialogue de l’insuline (en oubliant le point décimal ou la virgule par exemple). If you want to know the actual numbers for these hard coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+Il existe des limites de sécurité en fonction de l'âge que vous avez sélectionné dans ce paramètre. Si vous commencez à atteindre ces limites restrictives (comme le Maximum Bolus), il est temps de changer d’un cran. C’est une mauvaise idée de selectionner un âge supérieur a l'âge réel car cela peut conduire à un surdosage lorsque l'on entre une valeur incorrecte dans la boîte de dialogue de l’insuline (en oubliant le point décimal ou la virgule par exemple). Si vous voulez connaître les valeurs réelles de ces limites de sécurité codées en dur, faites défiler jusqu'à l'algorithme que vous utilisez sur [cette page](../Usage/Open-APS-features.md).
 
 ## Généralités
 
@@ -14,12 +14,12 @@ Il existe des limites de sécurité en fonction de l'âge que vous avez sélecti
 
 ## Aperçu
 
-* Keep screen on is useful while you are giving a presentation. It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
-* Buttons let you choose which buttons are visible on your home screen. Also gives you a few options for the popup screen you will see after pressing a button.
+* Garder l'écran allumé est utile pendant que vous faites une présentation. Cela consomme beaucoup d'énergie, il est donc prudent de brancher votre téléphone sur un chargeur.
+* Boutons vous permet de choisir quels boutons sont visibles sur votre écran d'accueil. Vous avez également quelques options des fenêtres contextuelles que vous verrez après avoir appuyé sur un bouton.
 * Les paramètres de l’Assistant Rapide vous permettent d’ajouter un bouton rapide pour un goûter fréquent ou un repas, entrez votre choix de Glucides, sur l’écran d’accueil si vous cliquez sur le bouton Assistant rapide, il calculera et adminitrera le bolus pour ces glucides basé sur vos ratios actuels (en tenant compte de la valeur de glycémie ou de l'insuline encore active si c'est le cas).
-* Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
+* Paramètres Avancés permet d'activer le superbolus dans l'assistant et d'afficher les voyants d'état sur l'écran d'accueil. Les voyants d'état donnent un avertissement visuel pour un niveau de réservoir faible et de batterie ainsi qu'un changement de site en retard.
     
-    ![Status lights - detail](../images/StatusLights.jpg)
+    ![Voyants d'état - détail](../images/StatusLights.jpg)
 
 ## Sécurités des traitements
 
@@ -66,32 +66,32 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 *Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
 
-## Absorption Settings
+## Paramètres d’absorption
 
 If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
-## Pump settings
+## Paramètres de la pompe
 
 The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) or [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) or [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) instructions where relevant. If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 ## NS Client
 
-* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+* Définissez ici votre 'URL Nightscout' (https://yourwebsitename.herokuapp.com ou https://yourwebsitename.azurewebsites.net), et votre "NS API Secret" (un mot de passe de 12 caractères enregistré dans vos variables heroku ou azure). Cela permet de lire et d'écrire des données entre le site Nightscout et AndroidAPS. Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
+* **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
     
-    ![NSClient URL](../images/NSClientURL.png)
+    ![URL de NSClient](../images/NSClientURL.png)
 
-* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
+* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. L'application ne devrait pas avoir besoin de démarrer plus d'une fois par jour; si c'est plus souvent, cela suggère un problème.
 
-* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
-* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
-* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+* 'Options d'alarme' vous permet de sélectionner les alarmes de Nightscout à utiliser par défaut dans l'application. Pour que les alarmes sonnent, vous devez définir les valeurs d'alerte Haute urgent, Haute, Basse et Basse urgent dans vos variables [heroku ou azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Elles ne fonctionneront que si vous êtes connecté à nightscout et sont destinées aux parents/tuteurs. Si vous avez la source MGC sur votre téléphone, utilisez ces alarmes à la place (par exemple xdrip+).
+* 'Activer les transmissions locales' partagera vos données Careportal vers d'autres applications sur le téléphone, telles que xdrip.
+* 'Utiliser toujours les valeurs absolues du basal' doit être activé si vous souhaitez utiliser Autotune correctement.
 
 ## Communicateur SMS
 
 This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Usage/SMS-Commands.md) but it will only display in Preferences if you have selected this option in the Config Builder.
 
-## Autre
+## Autres
 
 * You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
 * You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
@@ -101,4 +101,4 @@ This setting allows remote control of the app by texting instructions to the pat
 
 ## Choix de données
 
-* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
+* 'Téléchargement Fabric' permet d'envoyer des rapports d'incidents en cas de crash et les données d'utilisation pour les développeurs.
