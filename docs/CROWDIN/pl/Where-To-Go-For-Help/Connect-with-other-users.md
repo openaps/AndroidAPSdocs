@@ -4,7 +4,7 @@ Ten projekt opiera się na pracy wolontariuszy, dlatego obowiązują pewne zasad
 
 * poziom 1: Przeczytaj Wiki - teraz mamy funkcję wyszukiwania, która Ci pomoże!
 * poziom 2: Przeszukuj grupę na Facebooku, jeśli nie ma już odpowiedzi, zadaj pytanie w grupie [AndroidAPS Users na Facebooku ](https://www.facebook.com/groups/1900195340201874/)
-* poziom 3: Jeśli Facebook nie dał rezultatów, zapytaj na [ gitter ](https://gitter.im/MilosKozak/AndroidAPS). Bezpośrednie crossposty będą ignorowane/usuwane na obu kanałach w celu zabezpieczenia przed duplikowaniem odpowiedzi. Nie zapominaj, że większość programistów znajduje się w Europie, więc odpowiedź może nie być dostępna 24/7; być może będziesz musiał poczekać kilka godzin, szczególnie w weekendy i święta.
+* poziom 3: Jeśli Facebook nie dał rezultatów, zapytaj na [ gitter ](https://gitter.im/MilosKozak/AndroidAPS). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Nie zapominaj, że większość programistów znajduje się w Europie, więc odpowiedź może nie być dostępna 24/7; być może będziesz musiał poczekać kilka godzin, szczególnie w weekendy i święta.
 * poziom 4: Utwórz [ problem](https://github.com/MilosKozak/AndroidAPS/issues) i dołącz [pliki dziennika](../Usage/Accessing-logfiles.md)
 * poziom 5: e-mail *developers@androidaps.org* (tylko w przypadku danych osobowych, które nie powinny wejść do publicznej wiadomości, a twoje problemy nie zostały rozwiązane na innych poziomach)
 
