@@ -57,7 +57,7 @@ Auf dem Startbildschirm wird Dein Zielbereich mit grünen Linien im Diagramm dar
 .. image:: ../images/sign_stop.png
   :alt: Stoppzeichen
 
-Falls Du eine virtuelle Pumpe verwendest darfst Du nicht zum 4. Ziel wechseln. Klicke nicht auf 'Bestätigen/Verify' am Ende des 3. Ziels.
+Falls Du eine virtuelle Pumpe verwendest darfst Du nicht zum 6. Ziel wechseln. Klicke nicht auf 'Bestätigen/Verify' am Ende des 5. Ziels.
 --------------------------
 
 .. image:: ./images/blank.png
