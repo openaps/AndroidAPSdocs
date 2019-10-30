@@ -1,16 +1,16 @@
-General CGM recommendations
+Recommandations générales MGC
 *****************************
 
-CGM hygiene
+Hygiène de la MGC
 =============
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps. 
+Quel que soit le système MGC que vous utilisez, si vous souhaitez faire un calibrage avec une glycémie capillaire, il existe des règles très claires à respecter, que vous utilisiez ou non un logiciel DIY MGC ou les applications officielles. 
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* Assurez-vous que vos mains et le kit sont propres.
+* Essayez de calibrer lorsque vous avez une série de mesures avec une flèche horizontale (15-30 minutes sont habituellement suffisantes)
+* Évitez de calibrer lorsque les glycémie montent ou descendent. 
+* Faites "assez" de calibrations - sur les applications officielles, vous serez invité à effectuer des vérifications une ou deux fois par jour. Sur les systèmes DIY, vous pouvez ne pas être sollicités pour calibrer, mais soyez prudents si vous continuez sans calibration.
+* Si c'est possible, calibrez avec certaines de vos lectures dans une plage basse (4-5mmol/l ou 72-90mg/dl) et d'autres à un niveau légèrement plus élevé (7-9mmol/l ou 126-160mg/dl) car cela offre une meilleure gamme pour le calibrage des points par rapport à la pente.
 
 Setting sensor (G6)
 ==============
