@@ -12,28 +12,28 @@ Quel que soit le système MGC que vous utilisez, si vous souhaitez faire un cali
 * Faites "assez" de calibrations - sur les applications officielles, vous serez invité à effectuer des vérifications une ou deux fois par jour. Sur les systèmes DIY, vous pouvez ne pas être sollicités pour calibrer, mais soyez prudents si vous continuez sans calibration.
 * Si c'est possible, calibrez avec certaines de vos lectures dans une plage basse (4-5mmol/l ou 72-90mg/dl) et d'autres à un niveau légèrement plus élevé (7-9mmol/l ou 126-160mg/dl) car cela offre une meilleure gamme pour le calibrage des points par rapport à la pente.
 
-Setting sensor (G6)
+Réglage du capteur (G6)
 ==============
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+Lors de la mise en place du capteur, il est recommandé de ne pas appuyer trop fermement sur le serteur pour éviter les saignements. Le fil du capteur ne doit pas entrer en contact avec le sang.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Après la mise en place du capteur, l'émetteur peut être cliqué dans son support. Attention ! Cliquez d'abord sur le côté carré, puis appuyez sur le côté rond.
 
 Résolution de problèmes 
 ================
 
-Connection problems
+Problèmes de connexion
 --------------------
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is reestablished the data is backfilled.
+La connexion Bluetooth peut être perturbée par d'autres appareils Bluetooth voisins tels que des lecteurs de glycémie, des casques, des tablettes ou des appareils de cuisine tels que des fours à micro-ondes ou des plaques vitrocéramique. Dans ce cas, xdrip n'affiche aucune valeur de Gly. Lorsque la connexion bluetooth est rétablie les données sont comblées.
 
-Sensor Errors
+Erreurs de capteur
 ----------------
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood. 
+Si des erreurs de capteur récurrentes se produisent, essayez de positionner votre capteur ailleurs sur votre corps. Le fil du capteur ne doit pas entrer en contact avec le sang. 
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Souvent une "erreur de capteur" peut être corrigée en buvant immédiatement et en massant autour du capteur !
 
-Jumpy values
+Saut de valeurs
 ----------------------------------------
 You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
