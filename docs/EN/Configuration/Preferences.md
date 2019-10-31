@@ -1,5 +1,9 @@
 # Preferences
 
+Open preferences by clicking three-dot-menu on top right side of homescreen:
+
+   ![How to open Preferences](../images/PreferencesOpen.png)
+
 ## Password for settings
 This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences.  To remove the password option then when within the Preferences delete the text within this field.
 
@@ -13,10 +17,28 @@ There are safety limits in place based on age you selected in this setting. If y
 * Keep screen on is useful while you are giving a presentation. It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 * Buttons let you choose which buttons are visible on your home screen. Also gives you a few options for the popup screen you will see after pressing a button.
 * Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
-* Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
 
-   ![Status lights - detail](../images/StatusLights.jpg)
+### Advanced Settings
 
+   ![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
+
+* General setting to deliver only part of bolus wizard result. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. The percentage is shown in bolus wizard.
+
+   ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
+
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
+* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+
+   ![Status lights - detail](../images/StatusLights_V2_5.png)
+   
+   Settings for status lights must be made in Nightscout settings. Set the following variables:
+   * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
+   * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
+   * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
+   * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+   
+* Treshold for warning reservoir level and critical reservoir level.
+* Treshold for warning battery level and critical battery level.
 
 ## Treatments safety
 
