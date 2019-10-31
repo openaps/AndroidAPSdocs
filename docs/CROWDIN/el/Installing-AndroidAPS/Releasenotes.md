@@ -34,14 +34,18 @@
 * RxJava2, Okhttp3, Retrofit υποστηρίζονται
 * Παλιές [Medtronic αντλίες](../Configuration/MedtronicPump.md) υποστηρίζονται (RileyLink αναγκαίο)
 * Νέα [Αυτόματα plugin](../Usage/Automation.rst)
-* Επιτρέπετε το bolus εν μέρει από τον υπολογιστή bolus wizard
+* Allow to [bolus only part](../Configuration/Preferences#advanced-settings) from bolus wizard calculation
 * Παροχή δραστηριότητας ινσουλίνης
 * Προσαρμογή προβλέψεων IOB με τα αποτελέσματα από autosense
 * Νέα υποστήριξη για patched Dexcom apks ([2.4 φάκελο](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Έλεγχος υπογραφής
 * Επιτρέπετε να παρακάμψετε στόχους για OpenAPS χρήστες
-* Νέα [στόχοι](../Usage/Objectives2019.rst) - εξέταση, διαχείριση εφαρμογής
-* Διορθώθηκε σφάλμα στα προγράμματα οδήγησης Dana * όπου αναφέρθηκε ψευδής χρονική διαφορά
+* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+  
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+
+* Fixed bug in Dana* drivers where false time difference was reported
+
 * Διορθώθηκε σφάλμα στην [ επικοινωνία με SMS ](../Usage/SMS-Commands.md)
 
 ## Έκδοση 2.3
