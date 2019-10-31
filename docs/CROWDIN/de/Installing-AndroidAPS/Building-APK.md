@@ -238,7 +238,7 @@ Klicke auf “Create new...” um einen Key zu erstellen. Dieser ist nichts ande
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
 * Fülle die Informationen in den nächsten Textfeldern aus. 
-  * “Key store path”: Der Ort, an dem der Keystore gespeichert wird.
+  * Key store path: is the path to the keystore file. **Do not save in same folder as projekt. You must use a different directory!**
   * Die Passwortfelder sind dazu da, um den Key auf Tippfehler zu überprüfen.
   * “Alias”: ist der Name des Schlüssels. Du kannst ihn unverändert lassen wie vorgegeben oder jeden beliebigen anderen Namen eingeben.
   * Die Passwort-Felder unter dem Key sind für den Key selbst. Wie immer, um die Eingabe auf Tippfehler zu prüfen.
