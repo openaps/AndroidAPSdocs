@@ -50,32 +50,35 @@ Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. E
 
 ## Einstellungen in AndroidAPS
 
-![Screenshot of Insight Settings](../images/Insight_pairing.png)
+![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
 In den Insight-Einstellungen in AndroidAPS kannst Du die folgenden Optionen aktivieren:
 
-* "Katheterwechsel protokollieren": Es wird automatisch ein Eintrag Katheterwechsel erfasst, wenn das Programm zum Füllen der Kanüle auf der Pumpe ausgeführt wird.  
-    <font color="red">Hinweis: Ein Wechsel der Kanüle führt zu einem Reset von Autosens.</b></font>
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.  
+    <font color="red">Note: A cannula change also resets Autosens</b></font>
 * "Schlauchwechsel protokollieren": In der AndroidAPS Datenbank wird ein entsprechender Eintrag vermerkt, wenn das Programm "Schlauch befüllen" auf der Pumpe gestartet wird.
-* "Batteriewechsel protokollieren": Es erfolgt ein Eintrag, wenn Du in der Pumpe die Batterie wechselst.
-* "Wechsel des Betriebsmodus protokollieren": Es wird in der AndroidAPS Datenbank vermerkt, wenn Du die Pumpe startest, stoppst oder pausierst.
-* "Alarme protokollieren": Wenn die Pumpe einen Alarm ausgibt, wird ein entsprechender Eintrag in der AndroidAPS Datenbank gemacht. Ausgenommen davon sind Erinnerung, Bolus- und TBR-Abbrüche. Diese werden nicht aufgezeichnet.
-* "TBR-Emulation aktivieren": Mit der Insight Pumpe können temporäre Baslaraten (TBR) nur bis max. 250% abgegeben werden. Um diese Einschränkung zu umgehen, führt TBR Emulation dazu, dass die Pumpe einen verzögerten Bolus für das zusätzlich benötigte Insulin abgibt, wenn Du eine TBR von mehr als 250 % einstellst..  
-    <font color="red">Hinweis: Bitte verwende nicht mehrere verzögerte Boli gleichzeitig, da dies zu Fehlern führen kann.</font>
-* "Erholungsdauer": Dies legt fest, wie lange AndroidAPS abwartet, bevor nach einem fehlgeschlagenen Verbindungsversuch ein neuer Versuch unternommen wird. Du kannst Werte zwischen 0 und 20 Sekunden auswählen. Falls Du Verbindungsprobleme haben solltest, wähle eine längere Wartezeit aus ("Erholungsdauer").   
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump.
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
+* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
+    
+    **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
+
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Beispiel für min. Erholungsdauer = 5 und max. Erholungsdauer = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    keine Verbindung - warte **5** Sek.   
-    neuer Versuch - keine Verbindung - warte **6** Sek.   
-    neuer Versuch - keine Verbindung - warte **7** Sek.   
-    neuer Versuch - keine Verbindung - warte **8** Sek.   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    neuer Versuch - keine Verbindung - warte **20** Sek.   
-    neuer Versuch - keine Verbindung - warte **20** Sek.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
-* "Verbindungsabbau-Verzögerung": Legt (in Sekunden) fest, wie lange AndroidAPS wartet, bevor die Verbindung zur Pumpe getrennt wird, nachdem eine Aktion erfolgreich beendet wurde. Der Standardwert ist 5 Sekunden.
+* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 Für Zeiträume, in denen die Pumpe gestoppt war, speichert AndroidAPS eine temporäre Basalrate mit 0%.
 
