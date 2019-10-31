@@ -39,6 +39,8 @@ Release date: 26-10-2019
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
 * New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+   
+   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Fixed bug in Dana* drivers where false time difference was reported
 * Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
 
