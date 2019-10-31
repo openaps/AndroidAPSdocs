@@ -238,7 +238,7 @@ Cliquez sur "Create new..." pour commencer la création de votre fichier de clé
 ![Capture d'écran 41](../images/Installation_Screenshot_41.png)
 
 * Renseignez les informations de la boîte de dialogue suivante. 
-  * Key store path : chemin d'accès au fichier de clés
+  * Key store path: is the path to the keystore file. **Do not save in same folder as projekt. You must use a different directory!**
   * Les champs password en dessous permettent une double vérification du mot de passe pour éviter les erreurs de frappe.
   * Alias est un nom pour la clé dont vous avez besoin. Vous pouvez laisser la valeur par défaut ou lui donner un nom spécifique.
   * Les champs password en dessous de la clé sont pour la clé elle-même. Comme précédemment double contrôle pour éviter les erreurs de frappe.
