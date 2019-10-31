@@ -81,7 +81,13 @@ _Note: As a safety feature, Max Basal IOB is hard-limited to 7u._
 If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh.  If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
 ## Pump settings
-The options here will vary depending on which pump driver you have selected in 'Config Builder'.  Pair and set your pump up according to the [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) or [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) or [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) instructions where relevant. If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+The options here will vary depending on which pump driver you have selected in 'Config Builder'.  Pair and set your pump up according to the pump related instructions:
+* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
+* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) 
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+
+If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 ## NS Client
 * Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables).  This enables data to be read and written between both the nightscout website and AndroidAPS.  Double check for typos here if you are stuck in Objective 1.
