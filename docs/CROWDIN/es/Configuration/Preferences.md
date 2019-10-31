@@ -98,7 +98,14 @@ If you have selected to use AMA Autosens then you will be able to enter your max
 
 ## Configuración de la bomba
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) or [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) or [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) instructions where relevant. If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
+
+* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
+* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Bomba de insulina Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+
+If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 ## NS Client
 
