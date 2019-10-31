@@ -34,14 +34,18 @@ Date de sortie : 26-10-2019
 * Prise en charge de RxJava2, Okhttp3, Retrofit
 * Prise en charge d'anciennes [Pompes Medtronic](../Configuration/MedtronicPump.md) (besoin de RileyLink)
 * Nouveau [Plugin d'Automatisation](../Usage/Automation.rst)
-* Autorisation du bolus que d'une partie du calcul de l'assistant bolus
+* Allow to [bolus only part](../Configuration/Preferences#advanced-settings) from bolus wizard calculation
 * Affichage de l'activité de l'insuline
 * Ajustement des prévisions de l'IA par le résultat autosense
 * Nouvelle prise en charge des apk de Dexcom patchés ([dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Vérificateur de signature
 * Autorisation de contourner les objectifs pour les utilisateurs d'OpenAPS
-* Nouveaux [objectifs](../Usage/Objectives2019.rst) - examen, manipulation de l'application
-* Correction d'un bug dans les pilotes Dana*, où une différence de temps erronée a été signalée
+* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+  
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+
+* Fixed bug in Dana* drivers where false time difference was reported
+
 * Correction d'un bug dans [Communicateur SMS](../Usage/SMS-Commands.md)
 
 ## Version 2.3
