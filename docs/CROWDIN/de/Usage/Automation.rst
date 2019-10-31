@@ -65,7 +65,7 @@ Du kannst eine oder mehrere Aktionen wählen:
 
 Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte zu ändern** indem du auf die Standard-Werte klickst.
  
-.. image:: ../images/Automation_Default.png
+.. image:: ../images/Automation_Default_V2_5.png
   :alt: Automation Standard-Werte vs.  eigene Werte
 
 Empfehlung
