@@ -34,14 +34,18 @@
 * Поддержка RxJava2, Okhttp3, Retrofit
 * Поддержка старых [помп Medtronic](../Configuration/MedtronicPump.md) (нужен RileyLink)
 * Новый [ модуль автоматизации ](../Usage/Automation.rst)
-* Возможность подать только часть болюса из рассчитанного мастером болюса
+* Allow to [bolus only part](../Configuration/Preferences#advanced-settings) from bolus wizard calculation
 * Рендеринг активности инсулина
 * Корректировка прогнозов IOB с помощью результата autosense
 * Новая поддержка модифицированных приложений Dexcom ([ папка 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Верификатор подписи
 * Возможность обойти цели пользователям OpenAPS
-* Новые цели [ цели ](../Usage/Objectives2019.rst)-экзамен, обработка приложений
-* Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
+* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+  
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+
+* Fixed bug in Dana* drivers where false time difference was reported
+
 * Исправлена ошибка [СМС коммуникатора](../Usage/SMS-Commands.md)
 
 ## Версия 2.3
