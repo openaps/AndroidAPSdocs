@@ -238,7 +238,7 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
 * Fill in the information for the next dialog. 
-  * Key store path: is the path to the keystore file
+  * Key store path: is the path to the keystore file. **Do not save in same folder as projekt. You must use a different directory!**
   * The password fields below are for the keystore to double check for typing errors.
   * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
   * The password fields below the key are for the key itself. As always to double check for typing errors.
