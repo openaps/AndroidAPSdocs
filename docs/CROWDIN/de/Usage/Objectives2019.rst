@@ -17,18 +17,20 @@ Die URL im NSClient muss **OHNE /api/v1/** am Ende eingegeben werden - siehe `NS
 
 Ziel 2: Lerne, wie AndroidAPS bedient wird
 ============================
-* Führe verschiedene Aktionen in AndroidAPS aus, die in dieser Zielaufgabe beschrieben werden. 
+* Führe verschiedene Aktionen in AndroidAPS aus, die in dieser Zielaufgabe beschrieben werden.
+* Click on the orange text "Not completed yet" to access the to-dos.
 * Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 
-   .. image:: ../images/Objective2.png
+   .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot Ziel 2
 
 Ziel 3: Belege Dein Wissen
 =================================
-* Beantworte Multiple-choice-Fragen zu verschiedenen AndroidAPS- und Closed-Loop-Themen.
+* Pass a multiple-choice exam testing your AndroidAPS knowledge.
+* Click on the orange text "Not completed yet" to access the page with the question and answering optons.
 * Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 
-   .. image:: ../images/Objective3.png
+   .. image:: ../images/Objective3_V2_5.png
      :alt: Screenshot Ziel 3
 
 Ziel 4: Starte den Open Loop
