@@ -49,32 +49,35 @@
 
 ## AAPS의 설정
 
-![Screenshot of Insight Settings](../images/Insight_pairing.png)
+![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
 Android Aps에서 Insight 설정을 통해 다음 활동들을 활성화 할 수 있습니다.
 
-* "로그 사이트 변경": 펌프에서 카뉼라 채우기를 할 경우 자동으로 인슐린의 카트리지 교체을 기록합니다.   
-    <font color="red">주의: 카뉼라 변경시 Autosens 또한 재설정됩니다.</b></font>
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.  
+    <font color="red">Note: A cannula change also resets Autosens</b></font>
 * "로그 튜브 변경": 펌프에서 '튜브 채우기"를 실행했을 경우 Android APS 데이타 베이스에 메모로 기록됩니다.
-* "로그 베터리 변경": 펌프의 베터리를 교체했을 경우 베터리 교체에 대해 기록합니다.
-* "로그 운영모드 변경": 펌프를 시작하시거나, 멈추시거나 중지하실때 Android APS 데이타베이스에 메모로 기록합니다.
-* "로그 알림": 펌프에서 경고성 알림이 울리는 경우(인지 차원의 알림, Bolus와 임시 Basal 취소는 제외 - 이 부분은 기록되지 않습니다.)
-* "임시 Basal 활성화 제한": Insight 펌프는 임시 Basal 양을 최대 250%까지 설정할수 있습니다. 만약 임시 basal을 250%이상 설정한 경우, 임시 Basal활성화 제한을 피하기 위해서 임시 Basal 에뮬레이션은 추가 인슐린을 확장 bolus로 진행 합니다.  
-    <font color="red">주의: 한 번에 한번의 확장 Bolus를 진행하여야 합니다. 그렇지 않을 경우 오류가 날 수 있습니다.</font>
-* "재연결 시간": 이것은 AndroidAPS가 연결 시도 실패한 후에 다시 시도하기까지 기다리는 시간을 정의합니다. 0~ 20초에서 선택하실 수 있습니다. 만약, 연결 문제를 경험하시고 계씨면 기다리는 시간을 길게 선택해주시기 바랍니다.   
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump.
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
+* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
+    
+    **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
+
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    예를 들어 1분 동안 재연결 시간 =5와 최대 재연결시간 = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    연결이 안됐을 경우 -> **5**초를 기다립니다.   
-    재시도 -> 연결이 안됐을 경우 -> **6**초를 기다립니다.   
-    재시도 -> 연결이 안됐을 경우 -> **7**초를 기다립니다.   
-    재시도 -> 연결이 안됐을 경우 -> **8**초를 기다립니다.   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    재시도 -> 연결이 안됐을 경우 -> **20**초를 기다립니다.   
-    재시도 -> 연결이 안됐을 경우 -> **20**초를 기다립니다.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
-* "연결 해지 지연": 이것은 작동이 끝난 후 AndroidAPS가 펌프와의 연결 해지를 기다리는 시간 (초) 을 정의합니다. 기본 값은 5초 입니다.
+* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 펌프가 멈췄을 경우에 AAPS는 Basal양 0%로 임시로그를 남깁니다.
 
