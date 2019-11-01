@@ -53,31 +53,31 @@
 
 В настройках Insight в AndroidAPS следует активировать следующие параметры:
 
-* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.  
-    <font color="red">Note: A cannula change also resets Autosens</b></font>
+* "Отслеживать смену катетера помпы": При этом автоматически отслеживается каждая замена картриджа инсулина при запуске программы "заполнить катетер" на помпе.   
+    <font color="red">Примечание: Смена канюли также сбрасывает Autosens</b></font>
 * "Отслеживать смену инфузионного набора": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AndroidAP добавляется соответствующая заметка.
-* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump.
-* "Log battery changes": This records a battery change when you put a new battery in the pump.
-* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
-* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
-* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
+* "Отслеживать смену места установки катетера": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AndroidAP добавляется соответствующая заметка.
+* "Отслеживать замену батареи": При установке нового аккумулятора в помпе в базе данных Aaps добавляется соответствующая заметка.
+* "Отслеживать изменение режима работы": Это добавляет заметку в базу данных AndroidAPS, когда вы запускаете, останавливаете или приостанавливаете помпу.
+* "Отслеживать оповещения": В базе данных AndroidAPS автоматически делается заметка при оповещениях помпы (за исключением напоминаний, болюсов и отмены временной скорости базала TBR).
+* "Разрешить эмуляцию временного базала TBR": помпа Insight может давать только до 250% временной базальной скорости TBR. Чтобы обойти это ограничение, эмуляция временной базальной скорости TBR поручит помпе подать пролонгированный болюс с дополнительным инсулином если запрошенная временная скорость базала превышает 250%.
     
-    **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
+    **Рекомендуется применять только один растянутый болюс единовременно так как одновременное использование нескольких растянутых болюсов может вызвать ошибки.**
 
-* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
+* "Длительность восстановления": Это определяет, время ожидания AndroidAPS перед новой попыткой подключения после неудачной. Можно выбрать от 0 до 20 секунд. Если вы испытываете проблемы с подключением, выберите более длительное время ожидания.   
       
-    Example for min. recovery duration = 5 and max. recovery duration = 20   
+    Пример для мин. длительности восстановления = 5 и макс. длительности восстановления = 20   
       
-    no connection -> wait **5** sec.   
-    retry -> no connection -> wait **6** sec.   
-    retry -> no connection -> wait **7** sec.   
-    retry -> no connection -> wait **8** sec.   
+    нет соединения -> подождать **5** сек.   
+    повторите -> нет соединения -> подождать **6** сек.   
+    повторите -> нет соединения -> подождать **7** сек.   
+    повторите -> нет соединения -> подождать **8** сек.   
     ...   
-    retry -> no connection -> wait **20** sec.   
-    retry -> no connection -> wait **20** sec.   
+    повторите -> нет соединения -> подождать **20** сек.   
+    повторите -> нет соединения -> подождать **20** сек.   
     ...
 
-* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
+* "Задержка при разъединении": Определяет, сколько времени (в секундах) AndroidAPS будет ждать, чтобы отключиться от помпы после завершения операции. Значение по умолчанию - 5 секунд.
 
 В период, когда помпа не работает, AAPS записывает темп. базальную скорость равную 0%.
 
