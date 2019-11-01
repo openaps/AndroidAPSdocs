@@ -103,7 +103,7 @@ AndroidAPS pour les enfants
    :glob:
    
    Surveillance à distance <./Children/Children.rst>
-   Commandes SMS <./Usage/SMS-Commands.md>
+   SMS commands <./Children/SMS-commands2019.rst>
    
 
 Avancé 
