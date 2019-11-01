@@ -1,94 +1,94 @@
-SMS Commands
+SMS-Befehle
 *****
-Safety First
+Sicherheitshinweise
 ======
 * AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
 * AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Befehle, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
 
-How it works
+Funktionsweise
 =====
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolons ohne weitere Leerzeichen getrennt (z.B. +4912345678;+4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden .
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+Sende von einer deiner zugelassenen Telefonnummern eine SMS auf das Handy, auf dem AndroidAPS läuft. Du kannst jeden der unten IN GROSSBUCHSTABEN aufgeführten Befehle verwenden. Das AndroidAPS-Handy bestätigt die erfolgreiche Ausführung des Befehls oder gibt den angefragten Status zurück. Bestätige gegebenenfalls das Kommando indem Du den vom AndroidAPS Smartphone per SMS übermittelten Code zurücksendest.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Hinweis:"" Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
-Commands
+Befehle
 =====
 
 Loop
 -----
 * LOOP STOP/DISABLE
-   * Response: Loop has been disabled
-* LOOP START/ENABLE
-   * Response: Loop has been enabled
-* LOOP STATUS
-   * Response depends on actual status
-      * Loop is disabled
-      * Loop is enabled
-      * Suspended (10 min)
+   * Antwort: Loop wurde deaktiviert.
+* LOOP STARTEN/AKTIVIEREN
+   * Antwort: Loop wurde aktiviert
+* LOOP-STATUS
+   * Antwort hängt vom aktuellen Status ab
+      * Loop ist deaktiviert.
+      * Loop ist aktiviert.
+      * Pausiert (%1$d min)
 * LOOP SUSPEND 20
-   * Response: Loop suspended for 20 minutes
+   * Antwort: Loop unterbrochen für 20 Minuten
 * LOOP RESUME
-   * Response: Loop resumed
+   * Antwort: Loop wurde fortgesetzt
 
-CGM data
+CGM-Daten
 -----
-* BG
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+* BZ
+   * Antwort: Letzter BZ: 5.6 4min her, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * Antwort: Um die Kalibrierung 5.6 zu senden, antworte mit dem Code Rrt.
+   * Antwort, nachdem der korrekte Code von AAPS empfangen wurde: Kalibrierung gesendet (**Falls xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein.)
 
 Basal
 -----
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * Antwort: Antworte mit dem Code EmF, um die temporäre Basalrate zu beenden
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * Antwort: Um eine Basalrate von 0.3IE/h für 30 Minuten zu setzen, antworte mit dem Swe
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   * Antwort: Um eine Basalrate von 0.3IE/h für 20 Minuten zu setzen, antworte mit dem Swe
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
+   * Antwort: Um die Basalrate von 30% für 30 Minuten zu setzen, antworte mit dem Code Swe
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * Antwort: Um die Basalrate von 30% für 50 Minuten zu setzen, antworte mit dem Code Swe
 
 Bolus
 -----
 * BOLUS 1.2
-   * Response depends time last bolus was given
-      * To deliver bolus 1.2U reply with code Rrt
-      * Remote bolus not allowed (**If within 15 min after last bolus command or remote commands not allowed!**)
+   * Die Antwort hängt davon ab, wann der letzte Bolus abgegeben wurde.
+      * Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code Rrt
+      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min after last bolus command or remote commands!**)
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Antwort: Antworte mit dem Code EmF, um den erweiterten Bolus zu beenden
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Antwort: Um den erweiterten Bolus2 IE für 120 Minuten abzugeben, antworte mit dem Code EmF
 
 Profile
 -----
 * PROFILE STATUS
-   * Response: Profile1
+   * Antwort: Profil1
 * PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
+   * Antwort: 1. ` Profil1 ` 2. ` Profil2 `
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * Antwort: Um zum Profil 1 mit 100% zu wechseln, antworte mit Code Any
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * Antwort: Um zum Profil 2 mit 30% zu wechseln, antworte mit Code Any
 
 Andere
 -----
-* TREATMENTS REFRESH
-   * Response: TERATMENTS REFRESH 1 receivers
+* BEHANDLUNGEN-REFRESH
+   * Response: Refresh treatments from NS
 * NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
-* PUMP
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * Antwort: NSCLIENT RESTART 1 receivers
+* PUMPE
+   * Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 
 Problembehandlung
 =====
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als chat message senden' behoben werden.
 
 .. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+  :alt: SMS als Chatnachricht deaktivieren
