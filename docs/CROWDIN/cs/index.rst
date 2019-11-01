@@ -103,7 +103,7 @@ AndroidAPS pro děti
    :glob:
    
    Vzdálené monitorování <./Children/Children.rst>
-   SMS příkazy <./Usage/SMS-Commands.md>
+   SMS commands <./Children/SMS-commands2019.rst>
    
 
 Pokročilé 
