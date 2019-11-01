@@ -16,7 +16,7 @@ Please understand that this change is not intended to bug you but is due to safe
 
 Release date: 31-10-2019
 
-* Fix a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things.)
+* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
 ## Version 2.5.0
