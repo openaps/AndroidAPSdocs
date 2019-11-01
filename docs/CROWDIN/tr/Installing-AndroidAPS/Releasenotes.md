@@ -2,7 +2,7 @@
 
 Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
 
-Starting with version 2.3 a new update procedure is established. You will receive the following information as soon as a new update is available:
+You will receive the following information as soon as a new update is available:
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
@@ -11,6 +11,13 @@ Then you have 60 days to update. If you do not update within these 60 days AAPS 
 If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
+
+## Version 2.5.1
+
+Release date: 31-10-2019
+
+* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
+* New versioning that will allow to do minor updates without triggering the update-notification.
 
 ## Version 2.5.0
 
