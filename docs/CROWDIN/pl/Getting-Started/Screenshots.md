@@ -2,7 +2,7 @@
 
 ## Ekran główny
 
-![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5.png)
+![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
 
 To jest pierwszy ekran, który zobaczysz po uruchomieniu AndroidAPS, zawiera on większość informacji, których będziesz codziennie potrzebować
 
@@ -56,11 +56,14 @@ The **thin yellow** line shows the activity of insulin, calculated by your insul
 
 ### Sekcja F
 
-This section also configurable using the options in section D.
+This section is also configurable using the options in section D.
 
 * **Insulin On Board** (blue chart): It shows the insulin you have on board. If there were no TBRs, SMBs and no remaining boluses this would be zero. Decaying depends on your DIA and insulin profile settings. 
 * **Carbs On Board** (orange chart): It shows the carbs you habe von board. Decaying depends on the deviations the algorithm detects. If it detects a lower carb absorption than expected, it will increase IOB (more or less, depending on your safety settings). If it detects a higher carb absorption than expected, it will fall back to the value that is calculated by the min_5min_carbimpact.
-* **Deviations**: **GREY** bars show a deviation due to carbs. **GREEN** bars show that BG is higher than the algorithm expected it to be. **RED** bars show that BG is lower than the algorithm expected.
+* **Deviations**: 
+   * **GREY** bars show a deviation due to carbs. 
+   * **GREEN** bars show that BG is higher than the algorithm expected it to be. 
+   * **RED** bars show that BG is lower than the algorithm expected.
 * **Sensitivity** (white line): It shows the sensitivity that Autosense has detected.
 * **Activity** (yellow line): It shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). The value is higher for insulin closer to peak time. It would mean to be negative when IOB is decreasing. 
 
