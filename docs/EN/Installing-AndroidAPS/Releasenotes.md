@@ -14,7 +14,7 @@ Please understand that this change is not intended to bug you but is due to safe
 
 ## Version 2.5.1
 
-Release date: 26-10-2019
+Release date: 31-10-2019
 
 * Fix a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things.)
 * New versioning that will allow to do minor updates without triggering the update-notification.
