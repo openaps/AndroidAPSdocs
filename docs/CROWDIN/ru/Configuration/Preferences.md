@@ -32,11 +32,11 @@
 
 * Опция включения [ суперболюса ](../Getting-Started/Screenshots#section-a) в мастере болюса.
 
-* Индикаторы состояния дают визуальное предупреждение о низком уровне резервуара и заряда батареи, а также о просроченном времени смены места катетера помпы. Extended version shows elapsed time / battery percentage.
+* Индикаторы состояния дают визуальное предупреждение о низком уровне резервуара и заряда батареи, а также о просроченном времени смены места катетера помпы. Расширенная версия показывает истекшее время / процент заряда батареи.
     
     ![Status lights - detail](../images/StatusLights_V2_5.png)
     
-    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    Параметры индикаторов состояния должны быть заданы в параметрах Nightscout. Задайте следующие параметры:
     
     * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
     * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
