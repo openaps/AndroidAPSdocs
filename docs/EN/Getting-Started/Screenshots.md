@@ -53,7 +53,7 @@ The **thin yellow** line shows the activity of insulin, calculated by your insul
 This section is also configurable using the options in section D. 
 
 * **Insulin On Board** (blue chart): It shows the insulin you have on board. If there were no TBRs, SMBs and no remaining boluses this would be zero. Decaying depends on your DIA and insulin profile settings. 
-* **Carbs On Board** (orange chart): It shows the carbs you habe von board. Decaying depends on the deviations the algorithm detects. If it detects a lower carb absorption than expected, it will increase COB (more or less, depending on your safety settings). If it detects a higher carb absorption than expected, it will fall back to the value that is calculated by the min_5min_carbimpact.
+* **Carbs On Board** (orange chart): It shows the carbs you habe von board. Decaying depends on the deviations the algorithm detects. If it detects a lower carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). If it detects a higher carb absorption than expected, it will fall back to the value that is calculated by the min_5min_carbimpact.
 * **Deviations**: 
    * **GREY** bars show a deviation due to carbs. 
    * **GREEN** bars show that BG is higher than the algorithm expected it to be. 
