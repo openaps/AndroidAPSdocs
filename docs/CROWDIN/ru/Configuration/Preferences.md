@@ -38,14 +38,14 @@
     
     Параметры индикаторов состояния должны быть заданы в параметрах Nightscout. Задайте следующие параметры:
     
-    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
-    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
-    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
-    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+    * Возраст канюли: CAGE_WARN и CAGE_URGENT (стандартно 48 и 72 часа)
+    * Возраст инсулина (резервуар): IAGE_WARN и IAGE_URGENT (стандартно 72 и 96 часов)
+    * Возраст сенсора: SAGE_WARN и SAGE_URGENT (стандартно 164 и 166 часов)
+    * Возраст батареи: BAGE_WARN и BAGE_URGENT (стандартно 240 и 360 часов)
 
-* Treshold for warning reservoir level and critical reservoir level.
+* Порог для уровня резервуара и критического уровня резервуара.
 
-* Treshold for warning battery level and critical battery level.
+* Порог для уровня батареи и критического уровня батареи.
 
 ## Безопасность назначений
 
