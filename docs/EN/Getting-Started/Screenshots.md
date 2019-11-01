@@ -2,7 +2,7 @@
 
 ## The Homescreen
 
-![Homescreen V2.1](../images/Screenshot_Home_screen_V2_1.png)
+![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5.png)
 
 This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
 
@@ -47,8 +47,22 @@ These lines show you the different predictions based on current carb absorption 
 
 The solid blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time. 
 
+The thin yellow line shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). The value is higher for insulin closer to peak time. It would mean to be negative when IOB is decreasing. 
+
 ### Section F
-This section also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
+This section also configurable using the options in section D. 
+
+* Insulin On Board (blue chart): It shows the insulin you have on board. If there were no TBRs, SMBs and no remaining boluses this would be zero. Decaying depends on your DIA and insulin profile settings. 
+* Carbs On Board (orange chart): It shows the carbs you habe von board. Decaying depends on the deviations the algorithm detects. If it detects a lower carb absorption than expected, it will increase IOB (more or less, depending on your safety settings). If it detects a higher carb absorption than expected, it will fall back to the value that is calculated by the min_5min_carbimpact.
+* Deviations:
+
+::
+    **GREY** bars show a deviation due to carbs
+    **GREEN** bars show that BG is higher than the algorithm expected it to be
+    **RED** bars show that BG is lower than the algorithm expected.
+
+* Sensitivity (white line): It shows the sensitivity that Autosense has detected.
+* Activity (yellow line): It shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). The value is higher for insulin closer to peak time. It would mean to be negative when IOB is decreasing. 
 
 ### Section G
 Enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration. Also a Quick Wizzard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
