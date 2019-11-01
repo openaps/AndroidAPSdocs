@@ -2,7 +2,7 @@
 
 Volg de instructies in de handleiding voor het [bijwerken van de app naar een nieuwe versie](../Installing-AndroidAPS/Update-to-new-version.md). Daar vind je ook oplossingen voor veelvoorkomende problemen.
 
-Vanaf versie 2.3 is er een nieuwe update procedure ingesteld. Zodra een nieuwe update beschikbaar is zie je de volgende melding:
+You will receive the following information as soon as a new update is available:
 
 ![Informatie bijwerken](../images/AAPS_LoopDisable90days.png)
 
@@ -11,6 +11,13 @@ Dan heb je 60 dagen om bij te werken. Als je niet binnen deze 60 dagen bijwerkt,
 Als je daarna nog eens 30 dagen wacht met bijwerken (dus 90 dagen vanaf de datum dat de nieuwe versie beschikbaar kwam) zal AAPS overschakelen naar Open Loop.
 
 Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er om veiligheidsredenen. Nieuwe versies van AndroidAPS bevatten niet alleen nieuwe handige functies, maar ook belangrijke veiligheidsupdates. Daarom is het noodzakelijk dat elke gebruiker zijn app bijwerkt zodra een nieuwe versie beschikbaar komt. Helaas zijn er nog steeds signalen dat sommige gebruikers een hele oude versie van hun app gebruiken, dus dit is een poging om de veiligheid voor individuele gebruikers en de hele doe-het-zelf loop-gemeenschap te verbeteren. 
+
+## Version 2.5.1
+
+Release date: 31-10-2019
+
+* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
+* New versioning that will allow to do minor updates without triggering the update-notification.
 
 ## Version 2.5.0
 
