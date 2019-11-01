@@ -1,5 +1,9 @@
 Wiki Updates & Änderungen
 **********************
+November 2019
+===============
+* `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
+
 Oktober 2019
 ===============
 * `AAPS Version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ - Seitenaktuallisierungen (vor allem auf der Seite `Update auf eine neue Version <../Installing-AndroidAPS/Update-to-new-version.html>`_)
