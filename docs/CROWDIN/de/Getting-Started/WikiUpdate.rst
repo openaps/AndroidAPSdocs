@@ -2,7 +2,7 @@ Wiki Updates & Änderungen
 **********************
 November 2019
 ===============
-* `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
+* `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#abschnitt-e>`_
 
 Oktober 2019
 ===============
