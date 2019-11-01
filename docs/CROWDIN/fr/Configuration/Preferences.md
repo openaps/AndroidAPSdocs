@@ -36,7 +36,7 @@ Il existe des limites de sécurité en fonction de l'âge que vous avez sélecti
     
     ![Voyants d'état - détail](../images/StatusLights_V2_5.png)
     
-    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    Les paramètres des voyants d'état doivent être définis dans les paramètres Nightscout. Définir les variables suivantes :
     
     * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
     * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
@@ -49,7 +49,7 @@ Il existe des limites de sécurité en fonction de l'âge que vous avez sélecti
 
 ## Sécurités des traitements
 
-### Max allowed bolus [U]
+### Maximum Bolus autorisé [U]
 
 This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
 
