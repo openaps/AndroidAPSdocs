@@ -42,7 +42,7 @@ CGM data
    * Reply: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
    * Reply: To send calibration 5.6 reply with code Rrt
-   * Reply after correct code was received: Calibration sent (_if xDrip is installed. Accepting calibrations must be enabled in xDrip+_)
+   * Reply after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
 
 Basal
 -----
@@ -62,7 +62,7 @@ Bolus
 * BOLUS 1.2
    * Reply depends time last bolus was given
       * To deliver bolus 1.2U reply with code Rrt
-      * Remote bolus not allowed (if within 15 min after last bolus command or remote commands not allowed)
+      * Remote bolus not allowed (**If within 15 min after last bolus command or remote commands not allowed!**)
 * EXTENDED STOP/CANCEL
    * Reply: To stop extended bolus reply with code EmF
 * EXTENDED 2 120
