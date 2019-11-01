@@ -26,13 +26,13 @@
 
 ![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
 
-* Общая настройка для подачи только части рекомендации мастера болюса. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. The percentage is shown in bolus wizard.
+* Общая настройка для подачи только части инсулина, рекомендованного мастером болюса. При использовании мастера болюса подается только заданный процент (должен быть от 10 до 100) от вычисленного. Этот процент показан в мастере болюса.
     
     ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
 
-* Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
+* Опция включения [ суперболюса ](../Getting-Started/Screenshots#section-a) в мастере болюса.
 
-* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+* Индикаторы состояния дают визуальное предупреждение о низком уровне резервуара и заряда батареи, а также о просроченном времени смены места катетера помпы. Extended version shows elapsed time / battery percentage.
     
     ![Status lights - detail](../images/StatusLights_V2_5.png)
     
