@@ -60,7 +60,7 @@ Bolus
 * BOLUS 1.2
    * Response depends time last bolus was given
       * To deliver bolus 1.2U reply with code Rrt
-      * Remote bolus not allowed (**If within 15 min after last bolus command or remote commands not allowed!**)
+      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min after last bolus command or remote commands!**)
 * EXTENDED STOP/CANCEL
    * Response: To stop extended bolus reply with code EmF
 * EXTENDED 2 120
@@ -80,7 +80,7 @@ Profiel
 Andere
 -----
 * TREATMENTS REFRESH
-   * Response: TERATMENTS REFRESH 1 receivers
+   * Response: Refresh treatments from NS
 * NSCLIENT RESTART
    * Response: NSCLIENT RESTART 1 receivers
 * PUMP
