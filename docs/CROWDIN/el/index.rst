@@ -103,7 +103,7 @@ AndroidAPS για τα παιδιά
    :glob:
    
    * "Εξ αποστάσεως παρακολούθηση <./Children/Children.rst>
-   Εντολές SMS <./Usage/SMS-Commands.md>
+   SMS commands <./Children/SMS-commands2019.rst>
    
 
 Για προχωρημένους 
