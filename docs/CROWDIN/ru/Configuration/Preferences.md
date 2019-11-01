@@ -26,7 +26,7 @@
 
 ![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
 
-* General setting to deliver only part of bolus wizard result. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. The percentage is shown in bolus wizard.
+* Общая настройка для подачи только части рекомендации мастера болюса. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. The percentage is shown in bolus wizard.
     
     ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
 
