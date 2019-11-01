@@ -74,7 +74,7 @@ Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS j
 Menge an zusätzlichem Basalinsulin (in Einheiten), das deinem Körper zusätzlich zu deiner normalen Basalrate zugeführt werden darf. Wenn dieser Wert erreicht wird, wird AAPS aufhören, zusätzliches Basalinsulin abzugeben, bis dein Basalinsulin On Board (IOB) wieder unterhalb dieses Wertes liegt.
 
 * Dieser Wert berücksichtigt kein Bolus-IOB, nur Basal.
-* Dieser Wert wird unabhängig von deiner normalen Basalrate berechnet und überwacht. Es wird lediglich das zusätzliche Basalinsulin zu der normalen Basalrate berücksichtigt.
+* This value is calculated and monitored independently of your normal basal rate. Es wird lediglich das zusätzliche Basalinsulin zu der normalen Basalrate berücksichtigt.
 * Dieser Wert wird in Insulineinheiten gemessen (IE).
 
 Wenn Du anfängst den Loop zu benutzen, **wird empfohlen das Maximale Basal-IOB für eine bestimmte Zeit auf 0 zu setzen**, während du dich mit dem System vertraut machst. Das verhindert, dass AAPS dir generell zusätzliches Basal-Insulin verabreicht. Während dieser Zeit wird AAPS trotzdem in der Lage sein, dein Basalinsulin abzuschalten, um Hypoglykämien zu verhinden.
