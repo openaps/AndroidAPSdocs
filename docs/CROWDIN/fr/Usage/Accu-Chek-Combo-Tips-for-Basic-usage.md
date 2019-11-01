@@ -1,8 +1,8 @@
-# AkkuChek Combo Tips for basic usage
+# Accu-Chek Combo conseils pour une utilisation de base
 
 ## How to ensure smooth operations
 
-* Always **carry the smartphone with you**, leave it next to your bed at night.
+* Toujours **porter le smartphone avec vous**, laissez-le à côté de votre lit la nuit.
 * Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
 * It is best to **not touch the app ruffy** while the system is running. If the app is started again, the connection to the pump can break off. Once the pump is connected to ruffy, there is no need to re-connect. Even after a restart of the phone, the connection is automatically re-established. If possible, move the app to an unused screen or in a folder on your smartphone so you do not accidentally open it.
 * If you unintentionally open the app ruffy during looping, it's best to restart the smartphone right away.
@@ -27,7 +27,7 @@
 
 ![Pump unreachable](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Pump_Unreachable.png) ![No connection to pump](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/No_connection_to_pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
+* Cette erreur peut vider la pile de la pompe plus rapidement car le profil basal est lu à partir de la pompe lorsque l'application est redémarrée.
 * It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 
 
 ## Cancellation of temporary basal rate fails
