@@ -1,16 +1,16 @@
 # Настройки
 
-Open preferences by clicking three-dot-menu on top right side of homescreen:
+Откройте настройки, нажав три точки меню в верхней правой части главного экрана:
 
 ![How to open Preferences](../images/PreferencesOpen.png)
 
 ## Пароль для настроек
 
-This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
+Пароль для настроек позволяет предотвратить случайное или несанкционированное изменение настроек. После того, как вы введете пароль в этом разделе меню, вам потребуется ввести его, чтобы получить доступ к настройкам. Чтобы удалить пароль, в настройках удалите текст в этом поле.
 
 ## Возраст пациента
 
-There are safety limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). If you want to know the actual numbers for these hard coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+В этом параметре установлены ограничения безопасности, основанные на возрасте, который вы выбрали. Если вы начинаете достигать верхних ограничений (как например максимальный болюс) пора подняться на один шаг вверх. Выбирать возраст выше, чем реальный, не следует, потому что может привести к передозировке при введении ошибочного значения в диалоге инсулина (например, если пропущен десятичный разделитель - точка или запятая). Если вы хотите знать фактические величины жестких кодовых ограничений безопасности, перейдите к функции алгоритма на [этой странице](../Usage/Open-APS-features.md).
 
 ## Общие настройки
 
