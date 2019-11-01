@@ -80,7 +80,7 @@ Profile
 Other
 -----
 * TREATMENTS REFRESH
-   * Response: TERATMENTS REFRESH 1 receivers
+   * Response: Refresh treatments from NS
 * NSCLIENT RESTART
    * Response: NSCLIENT RESTART 1 receivers
 * PUMP
