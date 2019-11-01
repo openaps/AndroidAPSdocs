@@ -103,7 +103,7 @@ AndroidAPS für Kinder
        
    
    Kontrolle aus der Ferne <./Children/Children.rst>
-   SMS-Befehle <./Usage/SMS-Commands.md>
+   SMS commands <./Children/SMS-commands2019.rst>
    
 
 Für Fortgeschrittene 
