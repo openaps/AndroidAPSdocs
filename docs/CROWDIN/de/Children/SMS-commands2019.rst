@@ -60,7 +60,7 @@ Bolus
 * BOLUS 1.2
    * Die Antwort hängt davon ab, wann der letzte Bolus abgegeben wurde.
       * Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code Rrt
-      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min after last bolus command or remote commands!**)
+      * Ferngesteuerter Bolus ist nicht verfügbar. Versuch es später nochmal. (**Ein ferngsteuerter Bolus ist innerhalb eines Zeitfensters von 15 min. nach einer Bolusgabe oder einem anderen Ferbedienungsbefehl nicht zugelassen!**)
 * EXTENDED STOP/CANCEL
    * Antwort: Antworte mit dem Code EmF, um den erweiterten Bolus zu beenden
 * EXTENDED 2 120
@@ -80,7 +80,7 @@ Profile
 Andere
 -----
 * BEHANDLUNGEN-REFRESH
-   * Response: Refresh treatments from NS
+   * Antwort: Behandlungen von NS aktualisieren
 * NSCLIENT RESTART
    * Antwort: NSCLIENT RESTART 1 receivers
 * PUMPE
