@@ -29,6 +29,10 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
    ![Android Studio - GIT - Pull](../images/Update_Pull.png)
 
+* Click Pull (no changes neccessary)
+
+   ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
+
 ## Generate signed APK
 <!--- Text is maintained in page building-apk.md --->
 In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)<br>
