@@ -61,12 +61,12 @@ Now the smartphone settings can be changed again if necessary, e.g. if you want 
 
 When starting the next sensor, however, all settings must be set again!
 
-Schritt 2: Installieren und konfigurieren xDrip+ App
+Schritt 2: Installieren und konfigurieren der xDrip+ App
 ==============
 
 The blood sugar values are received on the smartphone by the xDrip+ App. 
 
-* Falls noch nicht geschehen lade die xDrip App `hier <https://github.com/NightscoutFoundation/xDrip/releases>`_ herunter und installiere sie auf Deinem Smartphone.
+* Falls noch nicht geschehen lade die xDrip App `hier <https://github.com/NightscoutFoundation/xDrip/releases>`_ herunter und installiere eine der neuesten nightly builts auf Deinem Smartphone.
 * In xDrip+ select "Libre2 (patched App)" as data source. If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages fo trouble shooting.
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
@@ -93,7 +93,7 @@ Step 4: Configure AndroidAPS
 Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' nicht zur Verfügung. Die BZ-Werte des Libre 2 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. Weitere Details findest Du unter `Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ .
 
 Experiences and Troubleshooting
-================
+===================
 
 The connectivity is extraordinary good. With the exception of Huawei mobile phones, all current smartphones seems to work well. The reconnect in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone.
 
