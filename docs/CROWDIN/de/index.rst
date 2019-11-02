@@ -39,7 +39,7 @@ AndroidAPS installieren
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
+   Release Notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
    
    
@@ -103,7 +103,7 @@ AndroidAPS für Kinder
        
    
    Kontrolle aus der Ferne <./Children/Children.rst>
-   SMS commands <./Children/SMS-commands2019.rst>
+   SMS-Befehle <./Children/SMS-commands2019.rst>
    
 
 Für Fortgeschrittene 
