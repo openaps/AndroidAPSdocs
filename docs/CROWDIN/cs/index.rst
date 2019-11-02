@@ -39,6 +39,7 @@ Jak nainstalovat AndroidAPS
 
    Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
+   Troubleshooting Android Studio </Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    
