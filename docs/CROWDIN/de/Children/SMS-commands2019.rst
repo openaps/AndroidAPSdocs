@@ -4,31 +4,31 @@ Sicherheitshinweise
 ======
 * AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
 * AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Befehle, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus.
+* **Wenn Du einen Bolus über  SMS-Befehle abgibst, musst Du die Kohelnhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
 
 Funktionsweise
 =====
-* Most of the adjustments of temp targets, following AAPS etc. can be done on NSclient app on an Android phone with an internet connection.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
-* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
+* Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. können über die NSClient App auf einem Android Smartphone durchgeführt werden.
+* Boluses können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Befehle verwenden.
+* Falls Du als Follower ein iPhone verwendest und daher NSclient nicht nutzen kannst, gibt es weitere SMS-Befehle.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. .
+* Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
+* In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolons ohne weitere Leerzeichen getrennt (z.B.  +4912345678;+4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden.
 
   .. image:: ../images/SMSCommandsSetup.png
-    :alt: SMS Commands Setup
+    SMS-Befehle einrichten
 
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Bestätige gegebenenfalls das Kommando indem Du den vom AndroidAPS Smartphone per SMS übermittelten Code zurücksendest.
+* Sende von einer deiner zugelassenen Telefonnummern eine SMS auf das Handy, auf dem AndroidAPS läuft. Du kannst jeden der unten IN GROSSBUCHSTABEN aufgeführten Befehle verwenden. Das AndroidAPS-Handy bestätigt die erfolgreiche Ausführung des Befehls oder gibt den angefragten Status zurück. Bestätige gegebenenfalls das Kommando indem Du den vom AndroidAPS Smartphone per SMS übermittelten Code zurücksendest.
 
 **Hinweis:"" Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
 Befehle
 =====
 
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Befehle müssen in Englisch gesendet werden, die Antwort erhälst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits ` übersetzt ist <../translations.html##texte-fur-die-androidaps-app-ubersetzen> ` _.
 
 .. image:: ../images/SMSCommands.png
-  :alt: SMS Commands Example
+  :alt: Beispiele für SMS-Befehle
 
 Loop
 -----
