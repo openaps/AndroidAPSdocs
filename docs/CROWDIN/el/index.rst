@@ -39,7 +39,7 @@ AndroidAPS είναι ένα open source εφαρμογή για τους ανθ
 
    Χτίζοντας το APK <./Installing-AndroidAPS/Building-APK.md>
    Ενημέρωση σε νέα έκδοση ή υποκατάστημα <./Installing-AndroidAPS/Update-to-new-version.md>
-   Σημειώσεις έκδοσης <./Installing-AndroidAPS/Releasenotes.md>
+   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev υποκατάστημα <./Installing-AndroidAPS/Dev_branch.md>
    
    
