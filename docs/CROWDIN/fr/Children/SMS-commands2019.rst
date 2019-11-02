@@ -98,7 +98,7 @@ Autres
 * PUMP
    * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 
-Résolution de problèmes
+Dépannage
 =====
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
