@@ -37,9 +37,10 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
 2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Измените папку назначения apk (другое расположение).
 
-Нет данных мониторинга CGM при использовании xDrip
+No CGM data
 =====
-Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip#identify-receiver>`_.
+* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip#identify-receiver>`_.
+* In case you are using `patched Dexcom G6 app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Неодобренные изменения
 =====
@@ -82,34 +83,28 @@ Option 3 - Check for updates
 * Make sure you have transferred the “app-full-release.apk” file to your phone.
 * If "App not installed" is displayed on your phone follow these steps:
   
-1. `Export settings <../Usage/Objectives#export-import-settings>`_ (in AAPS version already installed on your phone)
+1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Удалите AAPS с телефона.
 3. Enable airplane mode & turn off bluetooth.
 4. Установите новую версию («app-full-release.apk»)
-5. `Import settings <../Usage/Objectives#export-import-settings>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`_
 6. Снова включите Bluetooth и отключите режим самолета
 
 Приложение установлено, но старая версия
 =====
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
 
 Ничего из вышеперечисленного не сработало
 =====
 Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
 
-1. `Export settings <../Usage/Objectives#export-import-settings>`_ (in AAPS version already installed on your phone)
+1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. In this case you have to `export settings <../Usage/Objectives#export-import-settings>`_ in AAPS on your phone, uninstall the old version of AAPS, install the new one and then `import settings <../Usage/Objectives#export-import-settings>`_ in the new version.
-3. Note down the path to your key store
-    In Android Studio Build -> Generate Signed APK
-    
-    .. image:: ../images/KeystorePath.PNG
-     :alt: Key store path
- 
-4. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK#download-code-and-additional-components>`_.
+    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK#download-code-and-additional-components>`_.
      Используйте существующий ключ и место хранения ключей.
-5.	Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
-6. `Import settings <../Usage/Objectives#export-import-settings>`_
+4.	Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
+5. `Import settings <../Usage/ExportImportSettings.html>`_
 
 Сценарий худшего варианта
 =====
