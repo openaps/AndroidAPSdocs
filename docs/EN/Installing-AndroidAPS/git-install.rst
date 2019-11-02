@@ -8,10 +8,8 @@ Windows
 * Any git version should work. For example `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
 * Make sure to note down the installation path. You will need it in the next step.
 
-.. image:: ../images/modules.png
-  :alt: 
-
-   ![Git installation path](../images/Update_GitPath.png)
+.. image:: ../images/Update_GitPath.png
+  :alt: Git installation path
 
 2. Set git path in Android Studio
 -----
