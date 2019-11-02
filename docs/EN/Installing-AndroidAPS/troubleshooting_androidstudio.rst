@@ -82,11 +82,11 @@ App not installed
 * Make sure you have transferred the “app-full-release.apk” file to your phone.
 * If "App not installed" is displayed on your phone follow these steps:
   
-1. `Export settings <../Usage/Objectives#export-import-settings>`_ (in AAPS version already installed on your phone)
+1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Uninstall AAPS on your phone.
 3. Enable airplane mode & turn off bluetooth.
 4. Install new version (“app-full-release.apk”)
-5. `Import settings <../Usage/Objectives#export-import-settings>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`_
 6. Turn bluetooth back on and disable airplane mode
 
 App installed but old version
