@@ -4,6 +4,9 @@ November 2019
 ===============
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
 * `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
+* `SMS commands update <../Children/SMS-commands2019.html>`_
+* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
 
 Октябрь 2019
 ===============
