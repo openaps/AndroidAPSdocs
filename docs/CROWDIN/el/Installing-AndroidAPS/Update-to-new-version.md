@@ -110,6 +110,6 @@ In this example Gmail is used as it is fairly simple. To install the self-signed
 
 ![Η έκδοση AAPS έχει εγκατασταθεί](../images/Update_VersionCheck.png)
 
-# Αντιμετώπιση προβλημάτων
+## Αντιμετώπιση προβλημάτων
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
