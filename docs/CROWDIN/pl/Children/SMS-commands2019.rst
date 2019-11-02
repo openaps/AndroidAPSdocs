@@ -4,19 +4,31 @@ Bezpieczeństwo
 ======
 * AndroidAPS umożliwia zdalne sterowanie telefonem dziecka za pomocą wiadomości tekstowej. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN.
 * AndroidAPS poinformuje Cię również Sms-em, jeśli Twoje polecenia zdalne, takie jak zmiana bolusa lub profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.
+* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus.
 
 Jak to działa
 =====
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+* Most of the adjustments of temp targets, following AAPS etc. can be done on NSclient app on an Android phone with an internet connection.
+* Boluses can't be given through Nightscout, but you can use SMS commands.
+* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+  .. image:: ../images/SMSCommandsSetup.png
+    :alt: SMS Commands Setup
+
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
 
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
 Polecenia
 =====
+
+Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+
+.. image:: ../images/SMSCommands.png
+  :alt: SMS Commands Example
 
 Loop
 -----
