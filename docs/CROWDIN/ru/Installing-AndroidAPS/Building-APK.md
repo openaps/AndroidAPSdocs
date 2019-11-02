@@ -35,7 +35,7 @@
 * Построить подписанный APK.
 * Переместите подписанный APK на ваш телефон.
 
-# Step by step walkthrough
+## Step by step walkthrough
 
 Подробное описание шагов, необходимых для создания файла APK.
 
@@ -290,6 +290,6 @@ In this example Gmail is used as it is fairly simple. To install the self-signed
 
 [See xDrip page](../Configuration/xdrip#identify-receiver)
 
-# Устранение неполадок
+## Устранение неполадок
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
