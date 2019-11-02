@@ -102,7 +102,6 @@ If non of the above tips helped you might consider building the app from scratch
 2. Have your key password and key store password ready
     In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK#download-code-and-additional-components>`_.
-     Use existing key and key store.
 4.	When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 
