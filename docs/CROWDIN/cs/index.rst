@@ -39,7 +39,7 @@ Jak nainstalovat AndroidAPS
 
    Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
-   Poznámky k verzi <./Installing-AndroidAPS/Releasenotes.md>
+   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    
    
