@@ -3,7 +3,10 @@ Wiki Updates & Änderungen
 November 2019
 ===============
 * `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#abschnitt-e>`_
-* `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
+* `Neue Anleitung zum Freestyle Libre 2 <../Hardware/Libre2.html>`_
+* `Update SMS-Befehle <../Children/SMS-commands2019.html>`_
+* `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
 
 Oktober 2019
 ===============
