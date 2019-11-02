@@ -35,7 +35,7 @@ Následují obecné kroky k sestavení souboru APK:
 * Sestavete podepsané APK.
 * Přeneste podepsané APK do svého telefonu.
 
-# Step by step walkthrough
+## Step by step walkthrough
 
 Následuje detailní popis kroků nutných k sestavení souboru APK.
 
@@ -290,6 +290,6 @@ Ano, máte to a můžete začít s úvodní konfigurací AndroidAPS (CGM, inzul�
 
 [See xDrip page](../Configuration/xdrip#identify-receiver)
 
-# Poradce při potížích
+## Poradce při potížích
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
