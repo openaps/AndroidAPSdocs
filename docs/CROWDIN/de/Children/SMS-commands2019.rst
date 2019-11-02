@@ -4,11 +4,11 @@ Sicherheitshinweise
 ======
 * AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
 * AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Befehle, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+* **Wenn Du einen Bolus über  SMS-Befehle abgibst, musst Du die Kohelnhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
 
 Funktionsweise
 =====
-* Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
+* Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. können über die `NSclient App <../Children/Children.html>`_ auf einem Android Smartphone durchgeführt werden.
 * Boluses können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Befehle verwenden.
 * Falls Du als Follower ein iPhone verwendest und daher NSclient nicht nutzen kannst, gibt es weitere SMS-Befehle.
 
