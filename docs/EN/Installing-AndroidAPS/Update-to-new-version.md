@@ -14,41 +14,20 @@
 
 Please scipt this paragraph if you update for the first time. The next lines are for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in three simple steps:
+If you already updated AAPS in previous versions and use a Windows PC you can update in two simple steps:
 
-1. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Fetch)
-2. [Update branch from Github](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github) (press Ctrl+T)
-3. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
+1. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
+2. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
 
 ## Install git (if you don't have it)
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
-
 ## Update your local copy
 
-* Click: VCS->Git->Fetch
+* Click: VCS->Git->Pull
 
-   ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
-
-## Selecting branch
-
-* If you want to change branch select another branch from tray: master (latest release) or another version (please see below)
-
-   ![](../images/UpdateAAPS1.png)
-
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
-
-   ![](../images/UpdateAAPS2.png)
-
-
-## Updating branch from Github
-
-* Press Ctrl+T, select Merge method and press OK
-
-   ![](../images/merge.png)
-
-On the tray you'll see green message about updated project
+   ![Android Studio - GIT - Pull](../images/Update_Pull.png)
 
 ## Generate signed APK
 <!--- Text is maintained in page building-apk.md --->
