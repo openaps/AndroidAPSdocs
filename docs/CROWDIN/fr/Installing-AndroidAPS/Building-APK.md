@@ -35,7 +35,7 @@ En général, les étapes nécessaires pour construire le fichier APK sont :
 * Construisez l'APK signé.
 * Transférez l'APK généré sur votre téléphone.
 
-# Step by step walkthrough
+## Step by step walkthrough
 
 Description détaillée des étapes nécessaires à la construction du fichier APK.
 
@@ -290,6 +290,6 @@ Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour vo
 
 [See xDrip page](../Configuration/xdrip#identify-receiver)
 
-# Résolution de problèmes
+## Dépannage
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
