@@ -1,7 +1,11 @@
 Witamy w dokumentacji systemu AndroidAPS
 ==============================================
 
-AndroidAPS jest to aplikacja open source przeznaczona dla osób chorujących na cukrzycę typu 1, która zainstalowana w smartfonach z systemem Android. działa jak system sztucznej trzustki (APS). Głównymi składnikami są różne algorytmy oprogramowania openAPS, których celem jest robienie tego, co robi żywa trzustka: utrzymywanie w odpowiednim zakresie poziomu cukru we krwi dzięki zastosowaniu automatycznego dozowania insuliny (AID). Ponadto co najmniej potrzebujesz obsługiwanej i zatwierdzonej przez FDA/CE pompy insulinowej i systemu ciągłego monitoringu glikemii. Aplikacja NIE korzysta z samouczącej się sztucznej inteligencji. Zamiast tego obliczenia AndroidAPS opierają się na indywidualnym algorytmie dawkowania i spożyciu węglowodanów, które użytkownik ręcznie wprowadza do swojego profilu terapii, ale dodatkowo są one weryfikowane przez system ze względów bezpieczeństwa. Aplikacja nie jest dostępna w Google Play - ze względów prawnych musisz ją samodzielnie zbudować bezpośrednio z kodu źródłowego.
+AndroidAPS jest to aplikacja open source przeznaczona dla osób chorujących na cukrzycę typu 1, która zainstalowana w smartfonach z systemem Android. działa jak system sztucznej trzustki (APS). Głównymi składnikami są różne algorytmy oprogramowania openAPS, których celem jest robienie tego, co robi żywa trzustka: utrzymywanie w odpowiednim zakresie poziomu cukru we krwi dzięki zastosowaniu automatycznego dozowania insuliny (AID). Ponadto co najmniej potrzebujesz obsługiwanej i zatwierdzonej przez FDA/CE pompy insulinowej i systemu ciągłego monitoringu glikemii. 
+
+Aplikacja NIE korzysta z samouczącej się sztucznej inteligencji. Zamiast tego obliczenia AndroidAPS opierają się na indywidualnym algorytmie dawkowania i spożyciu węglowodanów, które użytkownik ręcznie wprowadza do swojego profilu terapii, ale dodatkowo są one weryfikowane przez system ze względów bezpieczeństwa. 
+
+Aplikacja nie jest dostępna w Google Play - ze względów prawnych musisz ją samodzielnie zbudować bezpośrednio z kodu źródłowego.
 
 Głównymi składnikami są:
 
@@ -39,6 +43,7 @@ Jak zainstalować AndroidAPS
 
    Tworzenie pakietu APK <./Installing-AndroidAPS/Building-APK.md>
    Aktualizacja do nowej wersji lub innego branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio </Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Wersja developerska <./Installing-AndroidAPS/Dev_branch.md>
