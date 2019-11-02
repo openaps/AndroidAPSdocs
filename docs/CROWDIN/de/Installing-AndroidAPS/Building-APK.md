@@ -2,7 +2,7 @@
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
-**Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist AndroidAPS nicht als Download verfügbar. Du kannst die App legal für Dich selbst erstellen, darfst aber keine Kopie an andere weiter geben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).**
+**Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist AndroidAPS nicht als Download verfügbar. Du kannst die App legal für Dich selbst erstellen, darfst aber keine Kopie an andere weitergeben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).**
 
 ## Wichtige Hinweise
 
