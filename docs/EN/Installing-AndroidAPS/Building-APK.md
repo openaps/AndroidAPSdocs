@@ -25,7 +25,7 @@ If your build fails with an error regarding "on demand configuration" you can do
 
 In general, the steps necessary to build the APK file:
 
-* Install git
+* [Install git](../Installing-AndroidAPS/git-install.rst)
 * Install and setup Android Studio.
 * Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
 * Open the cloned project in Android Studio as active project.
@@ -38,18 +38,7 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Install git (if you don't have it)
 
-### Windows
-
-* Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win)
-* Make sure to note down the installation path. You will need it later after you installed Android Studio.
-
-   ![Git installation path](../images/Update_GitPath.png)
-
-### Mac
-
-* Any git version should work. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
 ## Install Android Studio
 
