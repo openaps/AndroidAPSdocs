@@ -37,9 +37,10 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
 2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Ändere den Pfad des Zielordners (destination folder) auf ein neues Verzeichnis.
 
-Fehlende CGM Daten (bei xDrip-Nutzung)
+No CGM data
 =====
-Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip#identify-receiver>`_.
+* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip#identify-receiver>`_.
+* In case you are using `patched Dexcom G6 app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Uncommitted changes
 =====
@@ -82,34 +83,28 @@ App not installed / Installation fehlgeschlagen
 * Make sure you have transferred the “app-full-release.apk” file to your phone.
 * If "App not installed" is displayed on your phone follow these steps:
   
-1. `Export settings <../Usage/Objectives#export-import-settings>`_ (in AAPS version already installed on your phone)
+1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Deinstalliere AAPS auf Deinem Smartphone.
 3. Enable airplane mode & turn off bluetooth.
 4. Installiere die neue Version ("app-full-release.apk").
-5. `Import settings <../Usage/Objectives#export-import-settings>`_
+5. `Import settings <../Usage/ExportImportSettings.html>`_
 6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
 
 App installiert, aber weiter die alte Version auf dem Smartphone
 =====
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
 
 Keiner der oben genannten Löungsvorschläge funktioniert
 =====
 Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
 
-1. `Export settings <../Usage/Objectives#export-import-settings>`_ (in AAPS version already installed on your phone)
+1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. In this case you have to `export settings <../Usage/Objectives#export-import-settings>`_ in AAPS on your phone, uninstall the old version of AAPS, install the new one and then `import settings <../Usage/Objectives#export-import-settings>`_ in the new version.
-3. Note down the path to your key store
-    In Android Studio Build -> Generate Signed APK
-    
-    .. image:: ../images/KeystorePath.PNG
-     :alt: Key store path
- 
-4. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK#download-code-and-additional-components>`_.
+    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK#download-code-and-additional-components>`_.
      Verwende dabei den bestehenden key und key store.
-5.	Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
-6. `Import settings <../Usage/Objectives#export-import-settings>`_
+4.	Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
+5. `Import settings <../Usage/ExportImportSettings.html>`_
 
 Worst case scenario
 =====
