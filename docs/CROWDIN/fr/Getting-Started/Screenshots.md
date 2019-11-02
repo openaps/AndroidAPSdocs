@@ -91,10 +91,10 @@ affiche le bolus calculé et permet de renseigner une note. Si la quantité d'in
 
 montre les différents éléments qui ont été utilisées pour calculer le bolus. Vous pouvez décocher tout ce que vous ne souhaitez pas inclure mais vous ne voudrez normalement pas faire cela.
 
-### Combinations of COB and IOB and what they mean
+### Combinaisons de GA (Glucides Actifs) et IA (Insuline Active) et leur signification
 
 <ul>
-    <li>If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account</li>
+    <li>Si vous cochez GA et IA, les glucides non absorbés qui ne sont pas couverts par de l'insuline + toute l'insuline qui a été délivrée en DBT (basal temporaire) ou SMB seront pris en compte</li>
     <li>Si vous cochez GA sans IA vous courez le risque d'avoir trop d'insuline car AAPS ne comptera pas ce qui a déjà été diffusé. </li>
     <li>Si vous cochez l’IA sans GA, AAPS prendra en compte l’insuline déjà délivrée, mais pas les glucides absorbés. Cela conduit à un avis de « manque de glucides ».
 </ul>
