@@ -95,7 +95,7 @@ montre les différents éléments qui ont été utilisées pour calculer le bolu
 
 <ul>
     <li>If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account</li>
-    <li>If you tick COB without IOB you run the risk of too much insulin as AAPS is not accounting for what’s already given. </li>
+    <li>Si vous cochez GA sans IA vous courez le risque d'avoir trop d'insuline car AAPS ne comptera pas ce qui a déjà été diffusé. </li>
     <li>Si vous cochez l’IA sans GA, AAPS prendra en compte l’insuline déjà délivrée, mais pas les glucides absorbés. Cela conduit à un avis de « manque de glucides ».
 </ul>
 
