@@ -3,6 +3,7 @@ Wiki Updates & Änderungen
 November 2019
 ===============
 * `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#abschnitt-e>`_
+* `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
 
 Oktober 2019
 ===============
