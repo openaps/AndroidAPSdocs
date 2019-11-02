@@ -35,7 +35,7 @@ In general, the steps necessary to build the APK file:
 * Build the signed APK.
 * Transfer the signed APK to your smartphone.
 
-# Step by step walkthrough
+## Step by step walkthrough
 
 Detailed description of the steps necessary to build the APK file.
 
@@ -290,6 +290,6 @@ Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met 
 
 [See xDrip page](../Configuration/xdrip#identify-receiver)
 
-# Problemen oplossen
+## Problemen oplossen
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
