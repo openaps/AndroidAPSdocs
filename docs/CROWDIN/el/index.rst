@@ -44,7 +44,7 @@ AndroidAPS είναι ένα open source εφαρμογή για τους ανθ
    Χτίζοντας το APK <./Installing-AndroidAPS/Building-APK.md>
    Ενημέρωση σε νέα έκδοση ή υποκατάστημα <./Installing-AndroidAPS/Update-to-new-version.md>
    Install git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio </Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev υποκατάστημα <./Installing-AndroidAPS/Dev_branch.md>
    
