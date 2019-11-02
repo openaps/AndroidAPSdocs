@@ -1,14 +1,10 @@
 # Αντλίες Medtronic
 
-**>>>> Το πρόγραμμα οδήγησης της αντλίας Medtronic δεν είναι ακόμα μέρος του master AndroidAPS. Θα είναι διαθέσιμο στην επόμενη κύρια έκδοση. <<<<**
+**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)). <<<<**
 
 * * *
 
 Λειτουργεί μόνο με παλαιότερες αντλίες Medtronic (βλ. λεπτομέρειες παρακάτω). Δε λειτουργεί με την Medtronic 640G και 670G.
-
-* * *
-
-Ενώ το πρόγραμμα οδήγησης της Medtronic δοκιμάστηκε με καλή δοκιμαστική ομάδα, εξακολουθεί να θεωρείται λογισμικό beta, πράγμα που σημαίνει ότι έως ότου ένα μεγαλύτερο κοινό το δοκιμάσει για μεγαλύτερο χρονικό διάστημα, θα χρειαστεί να ενεργοποιήσετε τη λειτουργία Engineering, για να μπορείτε να δείτε τον οδηγό στο AndroidAPS.
 
 * * *
 
@@ -41,11 +37,11 @@
 1. Χρήση του Οδηγού (σε νέα εγκατάσταση)
 2. Απευθείας στην καρτέλα Config (εικονίδιο Cog στο πρόγραμμα οδήγησης της Medtronic)
 
-Αν κάνετε νέα εγκατάσταση, θα πεταχτείτε απευθείας στον οδηγό. Μερικές φορές, εάν η σύνδεσή σας BT δεν λειτουργεί πλήρως (δεν μπορείτε να συνδεθείτε με την αντλία), ενδέχεται να μην μπορείτε να ολοκληρώσετε τη διαμόρφωση. Σε αυτή την περίπτωση επιλέξτε την εικονική αντλία και αφού ολοκληρωθεί ο οδηγός, μπορείτε να πάτε με την επιλογή 2, η οποία θα παρακάμψει την ανίχνευση της αντλίας.
+If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
 
-![Ρυθμίσεις MDT](../images/Medtronic01.png)
+![MDT Settings](../images/Medtronic01.png)
 
-Πρέπει να ορίσετε τα παρακάτω στοιχεία: (δείτε την παραπάνω εικόνα)
+You need to set following items: (see picture above)
 
 - ** Σειριακός αριθμός αντλίας **: Μπορείτε να βρείτε αυτό στην πίσω πλευρά, είσοδος SN. Πρέπει να πάρετε μόνο τα νούμερα, η σειρά σας είναι 6 αριθμοί.
 - **Τύπος αντλίας**: Ποιο τύπο αντλίας έχετε (π.χ. 522). 
@@ -61,9 +57,9 @@
 
 ## Καρτέλα MEDTRONIC (MDT)
 
-![Καρτέλα MDT](../images/Medtronic02.png)
+![MDT Tab](../images/Medtronic02.png)
 
-Στην καρτέλα αντλίας μπορείτε να δείτε αρκετές γραμμές που εμφανίζουν την τρέχουσα κατάσταση αντλιών (και συνδέσεων).
+On pump tab you can see several lines that are showing pumps (and connections) current status.
 
 - ** Κατάσταση RileyLink **: Εμφανίζει την κατάσταση της σύνδεσης RileyLink. Το τηλέφωνο θα πρέπει να είναι συνεχώς συνδεδεμένο στο RileyLink.
 - ** Κατάσταση αντλίας **: Κατάσταση σύνδεσης αντλίας, αυτό μπορεί να έχει πολλές τιμές, αλλά κυρίως θα δούμε εικονίδιο ύπνου (όταν η σύνδεση αντλίας δεν είναι ενεργή), όταν η εντολή εκτελείται, μπορεί να δείτε ''ξύπνημα'', το οποίο είναι το AAPS που προσπαθεί να κάνει σύνδεση με την αντλία σας ή την περιγραφή οποιασδήποτε εντολής που μπορεί να τρέχει στην αντλία (π. χ.: ρύθμισε ώρα, όρισε TBR, κλπ.).
@@ -75,7 +71,7 @@
 - ** Δεξαμενή **: Πόση ινσουλίνη υπάρχει στη δεξαμενή (ενημερώνεται τουλάχιστον κάθε ώρα).
 - ** Σφάλματα **: Η σειρά σφάλματος αν υπάρχει πρόβλημα (συνήθως δείχνει αν υπάρχει σφάλμα στη διαμόρφωση).
 
-Στο κάτω άκρο έχουμε 3 κουμπιά:
+On lower end we have 3 buttons:
 
 - ** Ανανέωση ** προορίζεται για την ανανέωση της κατάστασης. Αυτό θα πρέπει να χρησιμοποιείται μόνο αφού η σύνδεση δεν υπήρχε εδώ και πολύ καιρό, καθώς αυτή η ενέργεια θα επαναφέρει δεδομένα σχετικά με την αντλία (ανάκτηση ιστορικού, λήψη / ρύθμιση ώρας, λήψη προφίλ, λήψη κατάστασης μπαταρίας κλπ.).
 - ** Ιστορικό αντλίας **: Εμφανίζει το ιστορικό αντλίας (δείτε [ παρακάτω ](../Configuration/MedtronicPump#pump-history))
@@ -83,22 +79,22 @@
 
 ## Ιστορικό αντλίας
 
-![Διάλογος ιστορικού αντλίας](../images/Medtronic03.png)
+![Pump History Dialog](../images/Medtronic03.png)
 
-Το ιστορικό της αντλίας ανακτάται κάθε 5 λεπτά και αποθηκεύεται τοπικά. Διατηρούμε το ιστορικό μόνο για τις τελευταίες 24 ώρες, έτσι οι παλαιότερες καταχωρήσεις καταργούνται όταν προστίθενται νέες. Αυτός είναι ένας απλός τρόπος για να δείτε το ιστορικό της αντλίας (ορισμένες καταχωρίσεις από την αντλία ενδέχεται να μην εμφανίζονται, επειδή δεν είναι σχετικές - για παράδειγμα, διαμόρφωση λειτουργιών που δεν χρησιμοποιούνται από το AndroidAPS).
+Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
 
 ## Κατάσταση RL (κατάσταση RileyLink)
 
-![Κατάσταση RileyLink - Ρυθμίσεις](../images/Medtronic04.png) ![Κατάσταση RileyLink - Ιστορικό](../images/Medtronic05.png)
+![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
 
-Το παράθυρο διαλόγου έχει δύο καρτέλες:
+Dialog has two tabs:
 
 - ** Ρυθμίσεις **: Εμφανίζει τις ρυθμίσεις για το RileyLink: Διαμορφωμένη διεύθυνση, συνδεδεμένη συσκευή, κατάσταση σύνδεσης, σφάλμα σύνδεσης και εκδόσεις firmware RileyLink. Ο τύπος συσκευής είναι πάντα η αντλία Medtronic, το μοντέλο θα είναι το μοντέλο σας, ο σειριακός αριθμός έχει διαμορφωθεί στον σειριακό αριθμό, η συχνότητα αντλίας δείχνει τη συχνότητα που χρησιμοποιείτε, η τελευταία συχνότητα είναι η τελευταία χρησιμοποιούμενη συχνότητα.
 - ** Ιστορικό **: Εμφανίζει το ιστορικό επικοινωνίας, τα στοιχεία με το RileyLink δείχνει αλλαγές κατάστασης για το RileyLink και το Medtronic δείχνει ποιες εντολές έχουν σταλεί στην αντλία.
 
 ## Ενέργειες
 
-Όταν είναι επιλεγμένο το πρόγραμμα οδήγησης της Medtronic, μπορούν να προστεθούν 3 ενέργειες στην καρτέλα Ενέργειες:
+When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
 
 - **Wake and Tune Up ** - Εάν δείτε ότι το AndroidAPS σας δεν έρχεται σε επαφή με την αντλία σας κάποια στιγμή (πρέπει να επικοινωνήσετε με αυτό κάθε 5 λεπτά), μπορείτε να εξαναγκάσετε τη ρύθμιση Tune Up. Αυτό θα προσπαθήσει να επικοινωνήσει με την αντλία σας, αναζητώντας όλες τις δευτερεύουσες συχνότητες στις οποίες μπορεί να επικοινωνήσει η αντλία. Αν βρίσκει κάποια, θα την ορίσει ως την προεπιλεγμένη συχνότητα. 
 - ** Επαναφορά του RileyLink Config ** - Εάν επαναφέρετε το RileyLink / GNARL, πρέπει να χρησιμοποιήσετε αυτήν την ενέργεια, έτσι ώστε να είναι δυνατή η αναδιάρθρωση της συσκευής (ρύθμιση συχνότητας, ρύθμιση τύπου συχνότητας, ρύθμιση παραμέτρων κωδικοποίησης).
@@ -108,43 +104,43 @@
 
 ### Καταγραφή
 
-Εφόσον το πρόγραμμα οδήγησης της Medtronic είναι πολύ καινούργιο, πρέπει να ενεργοποιήσετε την καταγραφή, ώστε να εντοπίσουμε τα λάθη και να διορθώσουμε τα προβλήματα, αν αυτά προκύψουν. Κάντε κλικ στο εικονίδιο στην επάνω αριστερή γωνία, επιλέξτε Συντήρηση και Ρυθμίσεις καταγραφής. Οι επιλογές αντλίας, επικοινωνία αντλίας, επικοινωνία BT αντλίας πρέπει να ελεγχθούν.
+Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
 
 ### RileyLink/GNARL
 
-Όταν κάνετε επανεκκίνηση του RileyLink ή του GNARL, πρέπει είτε να κάνετε νέα ρύθμιση ''TuneUp'' (ενέργεια "Ξυπνήστε και συντονίστε") είτε να ξαναστείλετε τις παραμέτρους επικοινωνίας (ενέργεια "Reset RileyLink Config"), διαφορετικά η επικοινωνία θα αποτύχει.
+When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
 
 ### CGMS
 
-Το Medtronic CGMS δεν υποστηρίζεται επί του παρόντος.
+Medtronic CGMS is currently NOT supported.
 
 ### Χειροκίνητη χρήση της αντλίας
 
-Θα πρέπει να αποφύγετε χειροκίνητα την επεξεργασία θεμάτων στην αντλία σας. Όλες οι εντολές (bolus, TBR) θα πρέπει να περάσουν από το AndroidAPS, αλλά εάν συμβεί να κάνετε χειροκίνητες εντολές, ΔΕΝ χρησιμοποιείτε εντολές με συχνότητα μικρότερη από 3 λεπτά (έτσι εάν κάνετε 2 bolus (για οποιοδήποτε λόγο) το δεύτερο πρέπει να είναι τουλάχιστον 3 λεπτά μετά το πρώτο).
+You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
 
 ## Αλλαγές ζώνης ώρας και DST (Daylight Saving Time) ή Ταξιδεύοντας με την αντλία Medtronic και το AndroidAPS
 
-Σημαντικό πράγμα που πρέπει να θυμάστε είναι ότι δεν πρέπει ποτέ να απενεργοποιήσετε το κύκλωμα όταν ταξιδεύετε (εκτός αν το CGMS σας δεν μπορεί να κάνει λειτουργία εκτός σύνδεσης). Το AAPS θα ανιχνεύσει αυτόματα τις αλλαγές ζώνης ώρας και θα στείλει εντολή στην αντλία για να αλλάξει το χρόνο, όταν αλλάξει ο χρόνος στο τηλέφωνο.
+Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
 
-Τώρα αν ταξιδεύετε στην Ανατολή και οι αλλαγές της ζώνης ώρας αλλάζουν σας προσθέτοντας ώρες (π. χ. από GMT + 0 έως GMT + 2), το ιστορικό αντλιών δεν θα έχει πρόβλημα και δεν χρειάζεται να ανησυχείτε... αλλά αν ταξιδέψετε Δυτικά και οι αλλαγές της ζώνης ώρας γίνονται με την αφαίρεση ωρών (GMT + 2 έως GMT-0), τότε ο συγχρονισμός μπορεί να είναι μικρός. Με απλά λόγια, αυτό σημαίνει ότι για τις επόμενες x ώρες θα πρέπει να είστε προσεκτικοί, επειδή το IOB σας, μπορεί να είναι λίγο περίεργο.
+Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
 
-Γνωρίζουμε αυτό το πρόβλημα και ήδη ψάχνουμε για μια πιθανή λύση (βλ. Https://github.com/andyrozman/RileyLinkAAPS/issues/145), αλλά προς το παρόν έχετε υπόψη σας αυτές τις πληροφορίες όταν ταξιδεύετε.
+We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
 
 ## Συχνές ερωτήσεις
 
 ### Μπορώ να δω τη δύναμη του RileyLink / GNARL;
 
-Όχι. Προς το παρόν καμία από αυτές τις συσκευές δεν το υποστηρίζει αυτό και μάλλον δεν θα το κάνει στο μέλλον.
+Όχι. At the moment none of this devices support this and it probably won't even in the future.
 
 ### Είναι το GNARL πλήρης αντικατάσταση για το RileyLink;
 
-Ναι. Ο συγγραφέας του GNARL πρόσθεσε όλες τις λειτουργίες που χρησιμοποιεί ο οδηγός της Medtronic. Υποστηρίζεται όλη η επικοινωνία της Medtronic (τη στιγμή της σύνταξης (Ιούνιος / 2019). Το GNARL δεν μπορεί να χρησιμοποιηθεί για επικοινωνία Omnipod. Το μειονέκτημα του GNARL είναι ότι πρέπει να το φτιάξετε μόνοι σας και πρέπει να έχετε συμβατή έκδοση υλικού.
+Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
 
-** Σημείωση από συντάκτη: ** Λάβετε υπόψη ότι το λογισμικό GNARL εξακολουθεί να είναι πειραματικό και ελαφρώς δοκιμασμένο και δεν πρέπει να θεωρείται ασφαλές ως RileyLink.
+**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
 ### Πού μπορώ να βρω το RileyLink ή το GNARL;
 
-Όπως προαναφέρθηκε μπορείτε να πάρετε συσκευές εδώ:
+Like mentioned before you can get devices here:
 
 - RileyLink - Μπορείτε να πάρετε τη συσκευή εδώ - [ getrileylink.org ](https://getrileylink.org/).
 - GNARL - Μπορείτε να λάβετε πληροφορίες εδώ, αλλά η συσκευή πρέπει να παραγγελθεί αλλού ([ github.com/ecc1/gnarl ](https://github.com/ecc1/gnarl)).
@@ -159,9 +155,9 @@
 
 ### Πώς να καθορίσετε ποια συχνότητα χρησιμοποιεί η αντλία σας
 
-![Μοντέλο αντλίας](../images/Medtronic06.png)
+![Pump Model](../images/Medtronic06.png)
 
-Εάν γυρίσετε την αντλία σας στην πρώτη γραμμή στη δεξιά πλευρά θα δείτε ειδικό κωδικό 3 γραμμάτων. Τα πρώτα δύο γράμματα καθορίζουν τον τύπο συχνότητας και το τελευταίο προσδιορίζει το χρώμα. Εδώ είναι πιθανές τιμές για τη συχνότητα:
+If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
 
 - ΒA - Βόρεια Αμερική (στην επιλογή συχνότητας πρέπει να επιλέξετε "ΗΠΑ & Καναδάς (916 MHz)")
 - ΚA - Καναδάς (στην επιλογή συχνότητας πρέπει να επιλέξετε "ΗΠΑ & Καναδάς (916 MHz)")
