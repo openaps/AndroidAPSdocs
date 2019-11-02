@@ -11,32 +11,32 @@ AndroidAPS позволяет контролировать телефон реб
 
 В AndroidAPS перейдите в Настройки > SMS Коммуникатор и введите номер телефона(ов), с которых вы хотите отправлять SMS команды (разделенные точками с запятой, без пробелов или других символов - напр. +4412345678;+4412345679), а также включите опцию 'Разрешить удаленные команды с помощью СМС'.
 
-Отправьте SMS на телефон с AndroidAPS с одобренного(ых) вами телефона(ов) при помощи команд перечисленных ниже **ЗАГЛАВНЫМИ БУКВАМИ**, телефон ответит подтверждением успешного выполнения команды или запрошенного статуса. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+Отправьте SMS на телефон с AndroidAPS с одобренного(ых) вами телефона(ов) при помощи команд перечисленных ниже **ЗАГЛАВНЫМИ БУКВАМИ**, телефон ответит подтверждением успешного выполнения команды или запрошенного статуса. Если необходимо, подтвердите команду, отправив код, предлагаемый в ответном SMS-сообщении.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Подсказка: Если отправляется много SMS, полезно держать функцию SMS незанятой на обоих телефонах,.
 
-Commands
+Команды
 =====
 
 Замкнутый цикл
 -----
-* LOOP STOP/DISABLE
-   * Response: Loop has been disabled
-* LOOP START/ENABLE
-   * Response: Loop has been enabled
-* LOOP STATUS
-   * Response depends on actual status
-      * Loop is disabled
-      * Loop is enabled
-      * Suspended (10 min)
-* LOOP SUSPEND 20
-   * Response: Loop suspended for 20 minutes
-* LOOP RESUME
-   * Response: Loop resumed
+* ОТКЛЮЧИТЬ ЗЦ
+   * Ответ: цикл отключен
+* ВКЛЮЧИТЬ ЗЦ
+   * Ответ: цикл включен
+* СТАТУС ЗЦ
+   * Ответ зависит от фактического состояния
+      * зцикл не работает
+      * зцикл работает
+      * Остановлен (на 10 мин)
+* ОСТАНОВИТЬ ЗЦ 20
+   * Зцикл остановлен на 20 минут
+* ВОЗОБНОВИТЬ ЗЦ
+   * Ответ: Цикл возобновлен
 
-CGM data
+Данные мониторинга
 -----
-* BG
+* BG/ГК
    * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
    * Response: To send calibration 5.6 reply with code Rrt
