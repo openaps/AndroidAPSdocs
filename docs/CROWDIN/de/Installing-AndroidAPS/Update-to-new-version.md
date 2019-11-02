@@ -2,43 +2,43 @@
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
-**Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist AndroidAPS nicht als Download verfügbar. Du kannst die App legal für Dich selbst erstellen, darfst aber keine Kopie an andere weiter geben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).**
+**Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist AndroidAPS nicht als Download verfügbar. Du kannst die App legal für Dich selbst erstellen, darfst aber keine Kopie an andere weitergeben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).**
 
 ## Wichtige Hinweise
 
-* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.
+* Nutze bitte [Android Studio Version 3.5.1](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
+* Wenn Du den Dexcom G6 mit der [gepatchted Dexcom App](../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app) verwendest, dann musst Du die Version aus dem [2.4 Verzeichnis](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) installiert haben.
 
-## Quick walk-through for experienced users
+## Kurzanleitung für erfahrene Anwender
 
-Please scipt this paragraph if you update for the first time. The next lines are for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Dein nächster Schritt ist, [git zu installieren](../Installing-AndroidAPS/git-install.rst) wenn das Programm bisher nicht auf Deinem Computer installiert ist.
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in two simple steps:
+Wenn Du AAPS bereits in früheren Versionen aktualisiert hast und einen Windows-PC verwendest, kannst Du in zwei einfachen Schritten aktualisieren:
 
-1. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
-2. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
+1. [Aktualisiere Deine lokale Kopie](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
+2. [Erstelle die signierte APK-Datei](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Generate signed APK - Wähle dabei 'app' statt 'wear' im Dialogfeld!)
 
 ## Installiere git (falls du es noch nicht hast)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installation](../Installing-AndroidAPS/git-install.rst).
 
-## Update your local copy
+## Führe ein Update deiner lokalen Version durch
 
-* Click: VCS->Git->Pull
+* Click: VCS -> Git -> Pull
   
   ![Android Studio - GIT - Pull](../images/Update_Pull.png)
 
-* Click Pull (no changes neccessary)
+* Click Pull (no changes in dialog field)
   
   ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
 
-## Siginierte APK erstellen (Generate signed APK)
+## Signierte APK erstellen (Generate signed APK)
 
-<!--- Text is maintained in page building-apk.md ---> Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md ---> Wähle im Menü "Build" und dann "Generate Signed Bundle / APK...". (Das Menü in Android Studio wurde im September 2018 geändert. Falls Du eine ältere Version benutzt, wähle im Menü “Build” und dann “Generate Signed APK...”.)
 
   
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
+Signieren bedeutet, dass du deine generierte Anwendung unterschreibst, aber digital als eine Art digitaler Fingerabdruck in der Anwendung selbst. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Falls dich das Thema interessiert, findest du [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key) mehr. Sicherheit ist ein großes und komplexes Thema, um das du dich zur Zeit noch nicht kümmern musst.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -50,11 +50,11 @@ Wähle “App” aus und klicke auf “Next”.
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+Gib den Pfad zu Deinem key store und Dein key store Passwort ein. Wähle anschließend key alias und gib Dein key Passwort ein.
 
-Select 'Remember passwords'.
+Klicke 'Remember passwords' an.
 
-Then click next.
+Klicke danach auf “Next”.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
@@ -83,14 +83,14 @@ Klicke auf “locate” im “event log”.
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Um zu der gesuchten APK zu gelangen, musst du zu dem Ordner AndroidAPS/app/full/release gehen und nach der “app-full-release.apk” Datei Ausschau halten. Übertrage die Datei auf dein Smartphone. You can do it on your preferred way:
+Um zu der gesuchten APK zu gelangen, musst du zu dem Ordner AndroidAPS/app/full/release gehen und nach der “app-full-release.apk” Datei Ausschau halten. Übertrage die Datei auf dein Smartphone. Wähle Deinen bevorzugten Weg:
 
 * Bluetooth
-* cloud upload (Google Drive or other cloud services)
-* connect computer and phone by cable 
-* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+* Upload in die Cloud (Google Drive oder vergleichbare Dienste)
+* Computer und Smartphone per Kabel verbinden 
+* per E-Mail (Beachte, dass einige Mail-Apps keine APK-Anhänge zulassen, verwende in diesem Fall eine andere Übertragungsmethode.)
 
-In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Wenn Du einen anderen Übertragungsweg nutzt, setze die entsprechenden Rechte analog zum Vorgehen bei Gmail.
+In diesem Beispiel wird Gmail verwendet, da es ziemlich einfach ist. Du musst Android erlauben, auf Deinem Smartphone diese Installation auszuführen, auch wenn diese Datei via Google Mail empfangen wurde, was normalerweise verboten ist. Wenn Du einen anderen Übertragungsweg nutzt, setze die entsprechenden Rechte analog zum Vorgehen bei Gmail.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
@@ -104,7 +104,7 @@ Der letzte Schritt ist es, auf die APK Datei zu klicken und die App zu installie
 
 Herzlichen Glückwunsch, du hast es geschafft! Nun kannst du AndroidAPS starten und einrichten.
 
-## Check AAPS version on phone
+## AAPS-Version auf dem Smartphone überprüfen
 
 Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um auf Deinem Smartphone die installierte AAPS-Version anzuzeigen.
 
@@ -112,4 +112,4 @@ Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um a
 
 # Problembehandlung
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Siehe die separate Seite zur [Problembehandlung bei Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
