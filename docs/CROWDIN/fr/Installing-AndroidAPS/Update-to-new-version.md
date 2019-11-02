@@ -110,6 +110,6 @@ Vous pouvez vérifier la version AAPS sur votre téléphone en cliquant sur le m
 
 ![AAPS version installed](../images/Update_VersionCheck.png)
 
-# Résolution de problèmes
+## Dépannage
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
