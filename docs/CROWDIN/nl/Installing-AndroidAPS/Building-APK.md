@@ -28,31 +28,20 @@ Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het
 
 In general, the steps necessary to build the APK file:
 
-* Install git
+* [Install git](../Installing-AndroidAPS/git-install.rst)
 * Install and setup Android Studio.
 * Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
 * Open the cloned project in Android Studio as active project.
 * Build the signed APK.
 * Transfer the signed APK to your smartphone.
 
-## Step by step walkthrough
+# Step by step walkthrough
 
 Detailed description of the steps necessary to build the APK file.
 
 ## Installeer Git (als je dat nog niet hebt)
 
-### Windows
-
-* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/win>. Volg de instructies op die site om Git te installeren.
-* Onthoud of noteer in welke map Git op jouw computer geïnstalleerd wordt. You will need it later after you installed Android Studio.
-  
-  ![Git installatie pad](../images/Update_GitPath.png)
-
-### Mac
-
-* Elke versie van Git zou moeten werken. Bijvoorbeeld <https://git-scm.com/download/mac>. Volg de instructies op die site om Git te installeren.
-* Gebruik homebrew om git te installeren: ```$ brew install git```.
-* Voor meer informatie over het installeren van git zie de [officiële git documentatie](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
 ## Install Android Studio
 
@@ -100,21 +89,21 @@ After the downloads are completed click the "Finish" button.
 
 ### Windows
 
-* Laat Studio weten waar git.exe zich bevindt: File - Settings (Bestand - Instellingen)
+* Let Studio know where is git.exe located: File - Settings
   
-  ![Android Studio - open instellingen](../images/Update_GitSettings1.png)
+  ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
-* In het volgende venster: Versie Control - Git
+* In the next window: Version Control - Git
 
-* Kies het juiste pad: .../Git<font color="#FF0000"><b>/bin</b></font>
+* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
 
-* Zorg ervoor dat de update methode "Merge" ("Samenvoegen") is geselecteerd.
+* Make sure update method "Merge" is selected.
   
-  ![Android Studio - GIT pad](../images/Update_GitSettings2a.png)
+  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
 
 ### Mac
 
-* Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
 ## Download code and additional components
 
@@ -276,7 +265,14 @@ Een Verkenner venster zal openen. Het kan dat het er iets anders uitziet, dit sc
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Om de juiste locatie te openen, ga naar de map met AndroidAPS/app/full/release om het bestand "app-full-release.apk" te vinden. Zet dit bestand op jouw Android telefoon. Het overzetten op je telefoon kun je simpelweg via een usb-kabeltje doen. Andere opties zijn Bluetooth, cloud upload, e-mail. Kies wat je makkelijk vindt. In dit voorbeeld wordt Gmail gebruikt. Om de zelf-ondertekende app te kunnen installeren, moet je Android hiervoor toestemming geven ookal is dit bestand via Gmail ontvangen, wat normaal gesproken niet toegestaan is. Als je een andere manier gebruikt om de APK over te zetten op je telefoon, geef dan de toestemmingen waar hij naar vraagt zodat je verder kunt.
+Om de juiste locatie te openen, ga naar de map met AndroidAPS/app/full/release om het bestand "app-full-release.apk" te vinden. Zet dit bestand op jouw Android telefoon. You can do it on your preferred way, i.e.
+
+* Bluetooth
+* cloud upload (Google Drive or other cloud services)
+* connect computer and phone by cable 
+* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+
+In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Als je een andere manier gebruikt om de APK over te zetten op je telefoon, geef dan de toestemmingen waar hij naar vraagt zodat je verder kunt.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
@@ -293,3 +289,7 @@ Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met 
 ## Identify receiver if using xDrip
 
 [See xDrip page](../Configuration/xdrip#identify-receiver)
+
+# Problemen oplossen
+
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
