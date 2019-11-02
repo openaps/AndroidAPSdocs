@@ -110,6 +110,6 @@ Klicke oben rechts auf das Drei-Punkte-Menü und dann den Menüpunkt Über, um a
 
 ![Installierte AAPS version](../images/Update_VersionCheck.png)
 
-# Problembehandlung
+## Problembehandlung
 
 Siehe die separate Seite zur [Problembehandlung bei Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
