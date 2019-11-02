@@ -278,7 +278,7 @@ Please change to the directory AndroidAPS/app/full/release to find the "app-full
 * connect computer and phone by cable 
 * by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
 
-I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
