@@ -39,7 +39,7 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
 
 No CGM data when using xDrip
 =====
-`Identify receiver <../Configuration/xdrip#identify-receiver>`_
+Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip#identify-receiver>`_.
 
 Uncommitted changes
 =====
@@ -48,17 +48,24 @@ If you receive failure message like
 .. image:: ../images/GIT_TerminalCheckOut0.PNG
   :alt: Failure uncommitted changes
 
-Option 2
+Option 1 - Check git installation
+-----
+* git might be not installed correctly (must be globally available)
+* `Check git installation <../Installing-AndroidAPS/git-install.rst#4-check-git-settings-in-android-studio>`_
+* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.rst#2-set-git-path-in-android-studio>`_ on your computer.
+
+Option 2 - Reload source code
 -----
 * In Android Studio select VCS -> GIT -> Reset HEAD
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
    
-Option 3
+Option 3 - Check for updates
 -----
 * Copy ‘git checkout --’ to clipboard (without quote signs)
 * Switch to Terminal in Android Studio (lower left side of Android Studio window)
+
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
   :alt: Android Studio Terminal
    
