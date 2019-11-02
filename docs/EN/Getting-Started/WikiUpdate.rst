@@ -4,7 +4,8 @@ November 2019
 ===============
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
 * `Libre 2 - detailed manual for patched LibreLink app <../Hardware/Libre2.html>`_
-* `Troubleshooting Android Studio <..//Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `SMS commands update <../Children/SMS-commands2019.html>`_
+* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 
 October 2019
 ===============
