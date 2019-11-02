@@ -9,7 +9,7 @@ Windows
 * Notiere Dir den Installationspfad. Du brauchst diesen im nächsten Schritt.
 
 .. image:: ../images/Update_GitPath.png
-  :alt: Git installation path
+  :alt: Git Installationspfad
 
 2. Pfad zu git in Android Studio festlegen
 -----
