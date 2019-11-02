@@ -12,7 +12,7 @@
 
 ## Kurzanleitung für erfahrene Anwender
 
-Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Dein nächster Schritt ist, [git zu installieren](../Installing-AndroidAPS/git-install.rst) wenn das Programm bisher nicht auf Deinem Computer installiert ist.
+Bitte überspringe diesen Absatz, wenn Du zum ersten Mal aktualisierst. Die Kurzanleitung ist für erfahrene Anwender. Dein nächster Schritt ist, [git zu installieren](../Installing-AndroidAPS/git-install.rst) wenn das Programm bisher nicht auf Deinem Computer installiert ist.
 
 Wenn Du AAPS bereits in früheren Versionen aktualisiert hast und einen Windows-PC verwendest, kannst Du in zwei einfachen Schritten aktualisieren:
 
@@ -25,11 +25,11 @@ Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installatio
 
 ## Führe ein Update deiner lokalen Version durch
 
-* Click: VCS -> Git -> Pull
+* Klicke: VCS -> Git -> Pull
   
   ![Android Studio - GIT - Pull](../images/Update_Pull.png)
 
-* Click Pull (no changes in dialog field)
+* Klicke auf Pull (keine Änderungen im Dialogfeld erforderlich)
   
   ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
 
