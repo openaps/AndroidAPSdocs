@@ -3,6 +3,7 @@ Wiki updates & changes
 November 2019
 ===============
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
+* `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
 
 October 2019
 ===============
