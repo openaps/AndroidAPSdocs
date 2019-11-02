@@ -4,19 +4,31 @@ SMS-команды
 ======
 AndroidAPS позволяет контролировать телефон ребенка удаленно посредством текстовых сообщений (смс). Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом.
 * AndroidAPS при помощи смс также сообщит, выполнены ли удаленные команды, такие как болюс или изменения профиля. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
+* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus.
 
 Как это работает
 =====
-В настройках телефона перейдите в приложения > AndroidAPS > Разрешения и включите SMS
+* Most of the adjustments of temp targets, following AAPS etc. can be done on NSclient app on an Android phone with an internet connection.
+* Boluses can't be given through Nightscout, but you can use SMS commands.
+* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
 
-В AndroidAPS перейдите в Настройки > SMS Коммуникатор и введите номер телефона(ов), с которых вы хотите отправлять SMS команды (разделенные точками с запятой, без пробелов или других символов - напр. +4412345678;+4412345679), а также включите опцию 'Разрешить удаленные команды с помощью СМС'.
+* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679), а также включите опцию 'Разрешить удаленные команды с помощью СМС'.
 
-Отправьте SMS на телефон с AndroidAPS с одобренного(ых) вами телефона(ов) при помощи команд перечисленных ниже **ЗАГЛАВНЫМИ БУКВАМИ**, телефон ответит подтверждением успешного выполнения команды или запрошенного статуса. Если необходимо, подтвердите команду, отправив код, предлагаемый в ответном SMS-сообщении.
+  .. image:: ../images/SMSCommandsSetup.png
+    :alt: SMS Commands Setup
+
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Если необходимо, подтвердите команду, отправив код, предлагаемый в ответном SMS-сообщении.
 
 **Подсказка: Если отправляется много SMS, полезно держать функцию SMS незанятой на обоих телефонах,.
 
 Команды
 =====
+
+Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+
+.. image:: ../images/SMSCommands.png
+  :alt: SMS Commands Example
 
 Замкнутый цикл
 -----
