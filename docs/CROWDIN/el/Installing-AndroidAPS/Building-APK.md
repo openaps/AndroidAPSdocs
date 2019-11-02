@@ -35,7 +35,7 @@
 * Δημιουργήστε το υπογεγραμμένο APK.
 * Μεταφέρετε το υπογεγραμμένο APK στο smartphone σας.
 
-# Step by step walkthrough
+## Step by step walkthrough
 
 Λεπτομερής περιγραφή των βημάτων που είναι απαραίτητα για τη δημιουργία του αρχείου APK.
 
@@ -290,6 +290,6 @@ In this example Gmail is used as it is fairly simple. To install the self-signed
 
 [See xDrip page](../Configuration/xdrip#identify-receiver)
 
-# Αντιμετώπιση προβλημάτων
+## Αντιμετώπιση προβλημάτων
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
