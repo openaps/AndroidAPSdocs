@@ -39,7 +39,7 @@ Comment installer AndroidAPS
 
    Construire l'APK <./Installing-AndroidAPS/Building-APK.md>
    Télécharger la nouvelle version ou branche <./Installing-AndroidAPS/Update-to-new-version.md>
-   Notes de version <./Installing-AndroidAPS/Releasenotes.md>
+   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Branches de développement <./Installing-AndroidAPS/Dev_branch.md>
    
    
