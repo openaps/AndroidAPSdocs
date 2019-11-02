@@ -29,7 +29,7 @@ Un appui long sur n’importe lequel de ces boutons permet de modifier les param
 
 Les [voyants d'état optionnels](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) donnent un avertissement visuel pour un réservoir bas et le niveau de batterie ainsi que le changement de site en retard.
 
-Le chiffre de l’insuline active serait à 0 s’il n’y avait que votre basal standard en cours et qu’il ne restait plus d’insuline active d’un précédent bolus. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. Ce second chiffre peut être négatif s’il y a eu récemment des périodes de basal réduit.
+Le chiffre de l’insuline active serait à 0 s’il n’y avait que votre basal standard en cours et qu’il ne restait plus d’insuline active d’un précédent bolus. Les chiffres entre parenthèses indiquent le niveau d’insuline restant d’un bolus précédent et de combien est la variation de basal due à un précédent débit basal temporaire (DBT) programmé par AndroidAPS (AAPS). Ce second chiffre peut être négatif s’il y a eu récemment des périodes de basal réduit.
 
 ### Section D
 
