@@ -102,7 +102,6 @@ If non of the above tips helped you might consider building the app from scratch
 2. Have your key password and key store password ready
     In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK#download-code-and-additional-components>`_.
-     Použijte stávající klíč a úložiště klíčů.
 4.	Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 
