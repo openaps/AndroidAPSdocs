@@ -6,38 +6,23 @@
 
 ## Important notes
 
-<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>. 
+* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
+* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+## Quick walk-through for experienced users
+
+Please scipt this paragraph if you update for the first time. The next lines are for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+
+If you already updated AAPS in previous versions and use a Windows PC you can update in three simple steps:
+
+1. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Fetch)
+2. [Update branch from Github](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github) (press Ctrl+T)
+3. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
 
 ## Install git (if you don't have it)
 
-### Windows
-
-* Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win)
-* Make sure to note down the installation path. You will need it in the next step.
-
-   ![Git installation path](../images/Update_GitPath.png)
-
-* Reboot your PC to update System Environment.
-* Let Studio know where is git.exe located: File - Settings 
-
-   ![Android Studio - open settings](../images/Update_GitSettings1.png)
-
-* In the next window: Version Control - Git
-
-* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
-
-* Make sure update method "Merge" is selected.
-
-   ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
-
-### Mac
-
-* Any git version should work. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
 
 ## Update your local copy
@@ -45,7 +30,6 @@
 * Click: VCS->Git->Fetch
 
    ![Android Studio - GIT - Fetch](../images/Update_Fetch.png)
-
 
 ## Selecting branch
 
@@ -116,7 +100,14 @@ A file manager window opens. It might look a bit different on your system as I a
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way:
+
+* Bluetooth
+* cloud upload (Google Drive or other cloud services)
+* connect computer and phone by cable 
+* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+
+In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
