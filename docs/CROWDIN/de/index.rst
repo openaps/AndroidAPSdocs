@@ -43,8 +43,8 @@ AndroidAPS installieren
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Install git <./Installing-AndroidAPS/git-install.rst>
-   Fehlerbehebung Android Studio </Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Installation git <./Installing-AndroidAPS/git-install.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release Notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
    
