@@ -7,7 +7,7 @@ You will receive the following information as soon as a new update is available:
 .. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Update info
 
-Dan heb je 60 dagen om bij te werken. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 4 <../Usage/Objectives.md>`_.
+Dan heb je 60 dagen om bij te werken. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 4 <../Usage/Objectives.html>`_.
 
 Als je daarna nog eens 30 dagen wacht met bijwerken (dus 90 dagen vanaf de datum dat de nieuwe versie beschikbaar kwam) zal AAPS overschakelen naar Open Loop.
 
@@ -33,7 +33,7 @@ Important notes
 
 Is this update for me? Currently is NOT supported
 -----
-* Android 5 and lowser
+* Android 5 and lower
 * Poctech
 * 600SeriesUploader
 * Glimp
@@ -55,7 +55,7 @@ Belangrijkste nieuwe functies
    
    (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Fixed bug in Dana* drivers where false time difference was reported
-* Fixed bug in `SMS communicator <../Usage/SMS-Commands.html>`_
+* Fixed bug in `SMS communicator <../Usage/SMS-Commands2019.html>`_
 
 Version 2.3
 =====
@@ -94,7 +94,7 @@ Belangrijkste nieuwe functies
 -----
 * `DST fix <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Wear Update
-* `SMS plugin <../Usage/SMS-Commands.html>`_ update
+* `SMS plugin <../Usage/SMS-Commands2019.html>`_ update
 * Go back in objectives.
 * Stop loop if phone disk is full
 
