@@ -102,7 +102,6 @@ If you build the app successfully, transferred it to your phone and installed it
 2. Have your key password and key store password ready
     In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK#download-code-and-additional-components>`_.
-     Используйте существующий ключ и место хранения ключей.
 4.	Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 
