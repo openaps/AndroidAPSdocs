@@ -32,7 +32,7 @@ In general, the steps necessary to build the APK file:
 * Build the signed APK.
 * Transfer the signed APK to your smartphone.
 
-# Step by step walkthrough
+## Step by step walkthrough
 
 Detailed description of the steps necessary to build the APK file.
 
