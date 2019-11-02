@@ -19,7 +19,7 @@ Lors de la mise en place du capteur, il est recommandé de ne pas appuyer trop f
 
 Après la mise en place du capteur, l'émetteur peut être cliqué dans son support. Attention ! Cliquez d'abord sur le côté carré, puis appuyez sur le côté rond.
 
-Résolution de problèmes 
+Dépannage 
 ================
 
 Problèmes de connexion
