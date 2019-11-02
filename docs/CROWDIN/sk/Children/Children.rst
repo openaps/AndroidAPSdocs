@@ -11,7 +11,7 @@ Funkcie
 * Pumpa dieťaťa je ovládaná pomocou telefónu dieťaťa používajúceho AndroidAPS.
 * Rodičia môžu na diaľku sledovať všetky dôležité údaje, ako sú glykémia, aktívne sacharidy, aktívny inzulín atď. pomocou aplikácie **NSClient** na svojom telefóne.
 * Rodičia môžu dostávať alarmy v aplikácii **xDrip v režime Follower** na svojom telefóne.
-* Diaľkové ovládanie AndroidAPS pomocou `SMS Príkazov <../Usage/SMS-Commands.html>`_.
+* Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands2019.html>`_.
 * Diaľkové prepnutie profilu a spustenie dočasných cieľov prostredníctvom aplikácie NSClient.
 
 Nástroje a aplikácie pre vzdialené monitorovanie
