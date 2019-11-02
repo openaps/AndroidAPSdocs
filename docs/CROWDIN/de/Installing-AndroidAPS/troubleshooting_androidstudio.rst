@@ -102,7 +102,6 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 2. Halte Dein key Passwort und Dein key store Passwort bereit.
     Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>` _ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore. 
 3. Erstelle die App von Grund auf neu wie `hier <../Installing-AndroidAPS/Building-APK#code-und-weitere-komponenten-herunterladen>`_ beschrieben.
-     Verwende dabei den bestehenden key und key store.
 4.	Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. `Export/Import von Einstellungen <./Usage/ExportImportSettings.rst>`_
 
