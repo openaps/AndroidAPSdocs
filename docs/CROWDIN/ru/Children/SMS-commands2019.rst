@@ -7,11 +7,11 @@ AndroidAPS позволяет контролировать телефон реб
 
 Как это работает
 =====
-In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+В настройках телефона перейдите в приложения > AndroidAPS > Разрешения и включите SMS
 
-In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+В AndroidAPS перейдите в Настройки > SMS Коммуникатор и введите номер телефона(ов), с которых вы хотите отправлять SMS команды (разделенные точками с запятой, без пробелов или других символов - напр. +4412345678;+4412345679), а также включите опцию 'Разрешить удаленные команды с помощью СМС'.
 
-Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+Отправьте SMS на телефон с AndroidAPS с одобренного(ых) вами телефона(ов) при помощи команд перечисленных ниже **ЗАГЛАВНЫМИ БУКВАМИ**, телефон ответит подтверждением успешного выполнения команды или запрошенного статуса. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
 
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
