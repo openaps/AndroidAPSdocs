@@ -35,7 +35,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 * Erstelle die signierte APK.
 * Übertrage die erstellte APK auf dein Smartphone.
 
-# Schritt für Schritt Anleitung
+## Step by step walkthrough
 
 Detaillierte Beschreibung der notwendigen Schritte.
 
@@ -43,7 +43,7 @@ Detaillierte Beschreibung der notwendigen Schritte.
 
 Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installation](../Installing-AndroidAPS/git-install.rst).
 
-## Android Studio installieren
+## Install Android Studio
 
 Die folgenden Screenshots stammen aus Android Studio Version 3.1.3. Je nach verwendeter Android Studio-Version kann Dein Bildschirm etwas anders aussehen. Aber Du solltest Dich dennoch zurechtfinden. Hilfe aus der Community findest Du z. B. in der [ -AndroidAPS-Facebook-Gruppe ](https://www.facebook.com/groups/1900195340201874/) und [auf diesen Seiten](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
@@ -85,7 +85,7 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 * Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Hier ist allerdings auch ein guter Zeitpunkt, um eine Pause einzulegen.
 
-## Git-Pfad in Android Studio eintragen
+## Set git path in preferences
 
 ### Windows
 
@@ -105,7 +105,7 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 * Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
 
-## Code und weitere Komponenten herunterladen
+## Download code and additional components
 
 * Nutze “git clone” in Android Studio wie in folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
 
@@ -286,10 +286,10 @@ Der letzte Schritt ist es, auf die APK Datei zu klicken und die App zu installie
 
 Herzlichen Glückwunsch, du hast es geschafft! Nun kannst du AndroidAPS starten und einrichten.
 
-## Identifiziere den Empfänger falls Du xDrip verwendest
+## Identify receiver if using xDrip
 
 [Siehe xDrip Seite](../Configuration/xdrip#identify-receiver)
 
-# Problembehandlung
+## Problembehandlung
 
 Siehe die separate Seite zur [Problembehandlung bei Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
