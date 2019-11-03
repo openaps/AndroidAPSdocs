@@ -9,6 +9,15 @@ Troubleshooting Android Studio
 .. image:: ../images/GIT_WarningIgnore.PNG
   :alt: ignore Kotline compiler warning
 
+Key was created with errors
+=====
+When creating a new keystore for building the signed APK, on Windows the following error message might appear
+
+.. image:: ../images/AndroidStudio35SigningKeys.png
+  :alt: Key was created with errors
+
+This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+
 Δεν ήταν δυνατή η λήψη... / εργασία εκτός σύνδεσης
 =====
 Εάν λάβετε ένα μήνυμα αποτυχίας όπως αυτό
@@ -52,6 +61,7 @@ No CGM data
 Option 1 - Check git installation
 -----
 * git might be not installed correctly (must be globally available)
+* when on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
 * `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
 * If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
 
