@@ -18,7 +18,7 @@ October 2019
 * `COB calculation on separate page <../Usage/COB-calculation.html>`_
 * `COB - wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 * `Dexcom G6 specific troubleshooting <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
-* `Objectives update version 2.5 <..//Usage/Objectives.html>`_
+* `Objectives update version 2.5 <../Usage/Objectives.html>`_
 * `Preferences update <../Configuration/Preferences.html>`_
 * `SGLT-2 inhibitors - do not use when looping <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
 * `SMS Commands Troubleshooting <../Children/SMS-Commands.html#troubleshooting>`_
