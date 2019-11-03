@@ -2,7 +2,7 @@
 
 Open de instellingen door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm:
 
-![How to open Preferences](../images/PreferencesOpen.png)
+![Instellingen openen](../images/PreferencesOpen.png)
 
 ## Wachtwoord voor instelligen
 
@@ -24,28 +24,28 @@ AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier heb
 
 ### Geavanceerde instellingen
 
-![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
+![Instellingen - Overzicht - Geavanceerde instellingen](../images/PreferencesOverviewAdvanced_V2_5.png)
 
 * Met deze instelling laat je slechts een deel toedienen van de uitkomst van de boluswizard. Alleen het ingestelde percentage (moet tussen 10 en 100 liggen) van de berekende bolus wordt afgeleverd wanneer de bolus wizard wordt gebruikt. Het percentage zie je terug in de boluswizard.
     
-    ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
+    ![Boluswizard 80%](../images/BolusWizardPartDelivery.png)
 
-* Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
+* Inschakelen van [superbolus](../Getting-Started/Screenshots#section-a) in de boluswizard.
 
-* Deze functie is nieuw in versie 2.1.1. Extended version shows elapsed time / battery percentage.
+* Deze functie is nieuw in versie 2.1.1. Uitgebreide versie toont verstreken tijd / batterij percentage.
     
     ![Statusindicatoren - details](../images/StatusLights_V2_5.png)
     
-    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    De statusindicatoren moeten worden ingesteld in de instellingen van jouw Nightscout-pagina. Ga naar jouw Nightscout en stel de volgende variabelen in zoals jij ze wilt hebben:
     
-    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
-    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
-    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
-    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+    * Canule ouderdom: CAGE_WARN en CAGE_URGENT (standaard 48 en 72 uur)
+    * Insuline ouderdom (reservoir): IAGE_WARN en IAGE_URGENT (standaard 72 en 96 uur)
+    * Sensor ouderdom: SAGE_WARN en SAGE_URGENT (standaard 164 en 166 uur)
+    * Batterij ouderdom: BAGE_WARN en BAGE_URGENT (standaard 240 en 360 uur)
 
-* Treshold for warning reservoir level and critical reservoir level.
+* Grenswaarde voor de waarschuwing van reservoir niveau en voor het alarm van reservoir niveau.
 
-* Treshold for warning battery level and critical battery level.
+* Grenswaarde voor de waarschuwing van het batterijniveau en voor het alarm van het batterijniveau.
 
 ## Behandelingen veiligheid
 
@@ -63,7 +63,7 @@ Je kunt hier schakelen tussen open loop en closed loop. Open loop betekent dat e
 
 ## OpenAPS AMA
 
-Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. Onderstaande tekst gaat dieper in op de instellingen voor AMA, de andere opties (MA en SMB) worden elders in deze wiki omschreven op de pagina over "OpenAPS functies". Of je kunt meer lezen over de instellingen en [Autosens in de OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. In de Configurator kun je dit inschakelen, en de bijbehorende veiligheidsinstellingen bekijken/aanpassen. Je moet minimaal [Doel 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) hebben voltooid om deze functie te gebruiken. Onderstaande tekst gaat dieper in op de instellingen voor AMA, de andere opties (MA en SMB) worden elders in deze wiki omschreven op de pagina over "OpenAPS functies". Of je kunt meer lezen over de instellingen en [Autosens in de OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Maximale E/uur dat OpenAPS kan toedienen
 
@@ -74,7 +74,7 @@ Deze instelling is een veiligheidslimiet om te voorkomen dat AAPS ooit een gevaa
 Hoeveelheid extra basale insuline (in eenheden) tot waaraan OpenAPS de hoeveelheid insuline in jouw lichaam mag laten oplopen, bovenop je normale basale insuline. Zodra deze waarde is bereikt, zal AAPS stoppen met het geven van extra basale insuline totdat jouw basale Insulin On Board (IOB, insuline aan boord) naar binnen dit bereik is teruggelopen.
 
 * Deze waarde laat bolus IOB buiten beschouwing, alleen basale insuline wordt meegerekend.
-* This value is calculated and monitored independently of your normal basal rate. Alleen de extra basale insuline die werd afgegeven bovenop je normale basaalstand, wordt meenomen.
+* Het berekenen en sturen op deze waarde gebeurt onafhankelijk van jouw normale basale insuline. Alleen de extra basale insuline die werd afgegeven bovenop je normale basaalstand, wordt meenomen.
 * Deze waarde wordt gemeten in eenheden (E).
 
 Wanneer je begint met loopen, wordt tijdens een van de leerdoelen een tijd lang **Max Basal IOB beperkt naar 0**, zodat je gewend raakt aan het systeem. Dit zorgt ervoor dat AAPS helemaal geen extra basale insuline kan geven. Terwijl AAPS wel je basale insuline naar beneden kan bijstellen, of zelfs helemaal uitschakelen om een hypo te helpen voorkomen.
@@ -98,10 +98,10 @@ Wanneer je AMA Autosens aan hebt staan, kun je jouw maximale maaltijd absorptie 
 
 ## Pomp instellingen
 
-De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd in de 'Configurator'. Pair and set your pump up according to the pump related instructions:
+De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd in de 'Configurator'. Koppel en stel je pomp in volgens de instructies van jouw pomp:
 
-* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
-* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [DanaR Insulinepomp](../Configuration/DanaR-Insulin-Pump.md) 
+* [DanaRS Insulinepomp](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu Chek Combo Pomp](../Configuration/Accu-Chek-Combo-Pump.md) 
 * [Medtronic Pomp](..//Configuration/MedtronicPump.md)
 
@@ -110,7 +110,7 @@ Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuel
 ## NS Client
 
 * Stel hier jouw 'nightscout URL' in (https://yourwebsitename.herokuapp.com of https://yourwebsitename.azurewebsites.net), en jouw 'API secret' (een wachtwoord van 12 tekens lang uit jouw heroku of azure variabelen). Hierdoor kunnen gegevens zowel worden gelezen als geschreven tussen de Nightscout website en AndroidAPS. Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+* **Zorg ervoor dat de URL is ingevuld ZONDER /api/v1/ aan het eind.**
     
     ![NSClient URL](../images/NSClientURL.png)
 
