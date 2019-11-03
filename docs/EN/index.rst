@@ -86,7 +86,7 @@ AndroidAPS Usage
    Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
    Profile switch <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.md>
+   Extended carbs <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
   
  
