@@ -101,7 +101,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 * 'Always use basal absolute values' must be activated if you want to use Autotune properly.
 
 ## SMS Communicator
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing.  Further information is described in [SMS Commands](../Children/SMS-commands2019.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
+This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing.  Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
 
 ## Other
 * You can set defaults for your temp targets here for the different types of temp target (eating soon and activity).  When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md).  
