@@ -18,7 +18,7 @@ November 2019
 * Расчет активных углеводов COB на отдельной странице <../Usage/COB-calculation.html>`_
 * ` активные углеводы COB-неправильное определение значения COB <../Usage/COB-calculation.html#detection-оф-неправо-cob-values> ` _
 * ` Dexcom G6: устранение неполадок <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting> ` _
-* `Objectives update version 2.5 <..//Usage/Objectives.html>`_
+* `Objectives update version 2.5 <../Usage/Objectives.html>`_
 * `Preferences update <../Configuration/Preferences.html>`_
 * "Ингибиторы SGLT-2"-не использовать с AAPS <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
 * `SMS Commands Troubleshooting <../Children/SMS-Commands.html#troubleshooting>`_
