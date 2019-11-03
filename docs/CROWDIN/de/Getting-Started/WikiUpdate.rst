@@ -2,9 +2,12 @@ Wiki Updates & Änderungen
 **********************
 November 2019
 ===============
+* `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#abschnitt-e>`_
+* `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
 * `Neue Anleitung zum Freestyle Libre 2 <../Hardware/Libre2.html>`_
-* `Update SMS-Befehle <../Children/SMS-commands2019.html>`_
+* `SMS commands update <../Children/SMS-Commands.html>`_
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
 
@@ -15,9 +18,10 @@ Oktober 2019
 * `Aktiven Kohlenhydrate (COB) - eigene Seite <../Usage/COB-calculation.html>`_
 *  `Aktiven Kohlynhydrate (COB) - Fehlerhafte Ermittlung <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
 * `Dexcom G6-spezifische Problembehandlung <../Hardware/DexcomG6.html#dexcom-g6-spezifische-problembehandlung>`_
+* `Objectives update version 2.5 <..//Usage/Objectives.html>`_
 * `Update Einstellungen <./Configuration/Preferences.md>`_
 * ` SGLT-2 Inhibitoren - beim Loopen nicht verwenden <../Module/module.html#keine-verwendung-von-sglt-2-hemmern> ` _
-* ` SMS-Befehle Fehlerbehebung <../Usage/SMS-Commands.html#störhooting> ` _
+* `SMS Commands Troubleshooting <../Children/SMS-Commands.html#troubleshooting>`_
 * `xDrip - Update G6 Transmitter ersetzen <../Configuration/xdrip.html#replace-transmitter>`_
 
 September 2019
