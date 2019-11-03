@@ -18,7 +18,7 @@
 
 3. Πρόσθετοι υπολογισμοί για την πρόβλεψη της πορείας της γλυκόζης, π.χ. από UAM (μη αναγγελθέντα γεύματα). Ακόμα και χωρίς την εισαγωγή υδατανθράκων από τον χρήστη, το UAM μπορεί να ανιχνεύσει αυτόματα μια σημαντική αύξηση των επιπέδων γλυκόζης λόγω γευμάτων, αδρεναλίνης ή άλλων επιδράσεων και να προσπαθήσει να το προσαρμόσει με SMB. Για να είμαστε στην ασφαλή πλευρά, αυτό λειτουργεί και στην άλλη κατεύθυνση και μπορεί να σταματήσει την SMB νωρίτερα, εάν εμφανιστεί μια απροσδόκητα γρήγορη πτώση της γλυκόζης. Αυτός είναι ο λόγος για τον οποίο η UAM πρέπει να είναι πάντα ενεργή στην SMB.
 
-**Πρέπει να έχετε ολοκληρώσει το [ στόχο 8 ](../Usage/Objectives.md) για να χρησιμοποιήσετε το SMB.**
+**You must have completed [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 Δείτε επίσης: [ Τεκμηρίωση OpenAPS για oref1 SMB ](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) και [ Πληροφορίες Tim για SMB ](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -131,7 +131,7 @@
 
 AMA, η σύντομη μορφή του "advanced meal assist" είναι μια δυνατότητα OpenAPS από το 2017 (oref0). Το OpenAPS Advanced Meal Assist (Προηγμένος Βοηθός Γεύματος) (AMA) επιτρέπει στο σύστημα να φτάσει σε υψηλούς ρυθμούς πιο γρήγορα μετά από ένα bolus γεύματος, αν εισάγετε αξιόπιστα τους υδατάνθρακες.
 
-**Πρέπει να έχετε ολοκληρώσει το [ στόχο 7 ](../Usage/Objectives.md) για να το χρησιμοποιήσετε**
+**You will need to have completed [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
 
 Μπορείτε να βρείτε περισσότερες πληροφορίες στο [OpenAPS τεκμηρίωση](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
