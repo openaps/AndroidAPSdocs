@@ -20,7 +20,7 @@ October 2019
 * `Dexcom G6 specific troubleshooting <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
 * `Preferences update <../Configuration/Preferences.html>`_
 * `SGLT-2 inhibitors - do not use when looping <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
-* `SMS Commands Troubleshooting <../Usage/SMS-Commands.html#troubleshooting>`_
+* `SMS Commands Troubleshooting <../Children/SMS-commands2019.html#troubleshooting>`_
 * `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
 
 September 2019
