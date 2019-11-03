@@ -4,7 +4,7 @@ Pokud ho ještě nemáte nastaven, stáhněte si [xDrip+](https://github.com/Nig
 
 Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzkoušejte verzi [nightly build 2019/07/28 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Základní nastavení pro všechny CGM & FGM systémy
 
@@ -43,7 +43,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 
 Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzkoušejte verzi [nightly build 2019/07/28 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Dexcom specifická nastavení
 
@@ -63,9 +63,9 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 
 ### Preemptivní restarty nejsou doporučené
 
-**S vysílači Dexcom začínající na č. 8G nefungují preemptivní restarty a ty mohou senzor i zničit!**
+**S vysílači Dexcom začínající na č. is starting with 8G or 8H preemptive restarts do not work and might kill the sensor completely!**
 
-Automatické prodloužení senzorů Dexcom (`preemtivní restart`) není doporučeno, tato volba může způsobit „skoky“ v hodnotách glykémie 9. den po restartu.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
 ![xDrip+ Skok po preemptivním restartu](../images/xDrip_Dexcom_PreemptiveJump.png)
 
@@ -85,7 +85,7 @@ Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato d
 
 Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzkoušejte verzi [nightly build 2019/07/28 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Vypněte originální Dexcom přijímač (pokud jej používáte).
 * Dlouze stiskněte na symbol kapky krve Xdrip+ a vyberte zobrazení zobrazit `Source Wizard Button`.
@@ -111,7 +111,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
    
    -> V dolní části obrazovky se po několika minutách musí zobrazit `Zahřívání zbývá x,x hodin`.
 
--> Jestliže výrobní číslo vašeho vysílače nezačíná znaky 8G a ani po několika minutách se nezobrazí žádný časový údaj, zastavte senzor a restartujte jej.
+-> Jestliže výrobní číslo vašeho vysílače does not start with 8G or 8H and there is no time specification after a few minutes stop and restart the sensor.
 
 * Klikněte na Restart collector (Stav systému - když neměníte senzor)
 * Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
@@ -137,9 +137,9 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 
 ### Prodloužení životnosti vysílače
 
-* Prozatím nelze prodloužit životnost vysílačů, jejichž výrobní číslo začíná znaky 8G.
+* Prozatím nelze prodloužit životnost vysílačů, jejichž výrobní číslo starts with 8G or 8H.
 * V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
-* Při operaci prodloužení životnosti vysílače bude přerušena aktuální session senzoru. Mějte to na paměti, a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2 h zahřívání senzoru.
+* Při operaci prodloužení životnosti vysílače bude přerušena aktuální session senzoru. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Přejděte do `engineering mode`: 
    * klikněte na symbol injekční stříkačky v pravém horním roku hlavní obrazovky
    * pak chvíli podržte symbol mikrofonu v dolním pravém roku
@@ -160,16 +160,16 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 
 Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzkoušejte verzi [nightly build 2019/07/28 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Vypněte originální Dexcom přijímač (pokud jej používáte).
 * Stop senzor (pouze když ho měníte)
    
    Ujistěte se, zda se je opravdu zastaven:
    
-   Na druhé obrazovce "G5/G6 Status" se zhruba v dolní polovině podívejte na `Queue Items`, a mělo by tam být něco ve smyslu `(1) Stop Sensor`
+   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
    
-   Počkejte, až se fronta odešle - obvykle během pár minut.
+   Počkejte, až se fronta odešle - obvykle během pár minut. Sensor Status must be "Stopped" (see screenshot).
    
    -> Pro výměnu vysílače bez zastavení senzoru se podívejte na toto video <https://youtu.be/AAhBVsc6NZo>.
    
@@ -177,29 +177,43 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
    
    ![xDrip+ Zastavit senzor Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device (ve Stav systému)
+* Forget device in xDrip system status AND in smartphone’s BT settings (Will be shown as Dexcom?? přičemž ?? are the last two digits of the transmitter serial no.)
    
    ![xDrip+ Zapomenout zařízení](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Vymažte zařízení z BT nastavení telefonu (Zobrazí se jako Dexcom??, přičemž ?? jsou poslední dva znaky výrobního čísla vysílače)
+* Remove transmitter (and sensor if replacing sensor)
 
-* Vyjměte vysílač (a také senzor - pokud ho měníte)
+* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
 * Dlouze stiskněte na symbol kapky krve Xdrip+ a vyberte zobrazení zobrazit `Source Wizard Button`.
 * Klikněte na tlačítko Start Source Setup Wizard, a při výběru G5 / G6 se zajistí nastavení správného OB1 & Nativního módu 
    * Průvodce vás provede přes prvotní nastavení.
    * Pokud ho vkládáte poprvé, budete potřebovat sériové číslo vysílače.
 * Vložte sériové číslo nového vysílače. Buďte opatrní, abyste nezaměnili 0 (nulu) a O (velké písmeno o).
 * Vložte nový senzor (pouze když ho měníte).
-* Vložte vysílač do senzoru - ale nestartujte ho ihned!
-* * Nespuštějte nový senzor dokud nejsou zobrazeny následující informace ve Statusu -> G5/G6 status -> PhoneServiceState:
+* Put transmitter into sensor - **Do not start sensor immediately!**
+* New "Firefly Transmitters" (serial no. starting with 8G or 8H) can only be used in native mode.
+* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G or 8H):
+   
+   * Preemptive Restart (disable!)
+   * Restart sensor (disable!)
+   * Fallback to xDrip (disable!)
+   
+   ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
+
+* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
    
    * Sériové číslo vysílače začínající na 80 nebo 81: "Got data hh:mm" (např. "Got data 19:04")
    * Sériové číslo vysílače začínající na 8G nebo 8H: "Got glucose hh:mm" (např. "Got glucose 19:04") nebo "nemá raw hh:mm" Got no raw hh:mm" (např. "Got now raw 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Klikněte na Restart collector (Stav systému - když neměníte senzor)
+* Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
+   
+   ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
 
+* Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
+
+* Restart collector (system status - if not replacing sensor)
 * Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
 * Dlouhým stisknutím symbolu kapky krve xDrip+ zrušíte zobrazování `Source Wizard Button`.
    
@@ -218,7 +232,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
    
    Ujistěte se, zda se je opravdu zastaven:
    
-   Na druhé obrazovce "G5/G6 Status" se zhruba v dolní polovině podívejte na `Queue Items`, a mělo by tam být něco ve smyslu `(1) Stop Sensor`
+   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
    
    Počkejte, až se fronta odešle - obvykle během pár minut.
    
@@ -234,12 +248,12 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 
 * Spuštění senzoru
    
-   **Po vypnutí se doporučuje počkat zhruba 15 minut před spuštěním nového senzoru (dokud se na druhé obrazovce Stav systému neobjeví `Sensor Status: Stopped`).**
+   **For new Firefly transmitters** (serial no. starting with 8G or 8H) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
 
 * Nastavit čas vložení
    
    * Při použití G5/G6 nativního módu musíte čekat 2 hodiny na zahřívání senzoru (takže čas vložení senzoru je právě nyní).
-   * Používáte-li algoritmus xDrip+ , můžete nastavit dobu před 2 hodinami, a tak se vyhnout zahřívání senzoru. Získaná data ale mohou být velmi nepředvídatelná. Proto se to nedoporučuje.
+   * Používáte-li algoritmus xDrip+ , můžete nastavit dobu před 2 hodinami, a tak se vyhnout zahřívání senzoru. Získaná data ale mohou být velmi nepředvídatelná. Therefore, this is not recommended.
 * Vložte kód senzoru (je odlepovací fólii obalu senzoru) 
    * Kód senzoru si ponechejte pro pozdější použití (např. nový start senzoru po výměně vysílače)
    * Kód senzoru můžete najít i v [logách xDrip+](../Configuration/xdrip#retrieve-sensor-code): klikněte na 3 tečky na hlavní straně a vyberte `Zobrazit logy`.
@@ -270,14 +284,14 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... vyzko
 
 * Vysílač musí být zobrazen v bluetooth nastavení ve vašem telefonu.
 * Vysílač se musí zobrazovat jako Dexcom??, přičemž ?? jsou poslední dva znaky výrobního čísla vysílače. (např. DexcomHY).
-* Otevřete nabídku Stav systému v xDrip+ (hamburger menu vlevo nahoře na hlavní obrazovce).
+* Open system status in xDrip+ (hamburger menu on top left side of home screen).
 * Ověřte, že je vysílač zobrazen na na první stránce se stavem systému ('classic status page').
 * Pokud ne: Odstraňte zařízení z nastavení bluetooth svého telefonu a restartujte collector.
 * Počkejte přibližně 5 minut, dokud se vysílač Dexcom automaticky znovu nepřipojí.
 
 ### Problém se spuštěním nového senzoru
 
-Berte prosím na vědomí, že následující metoda nebude pravděpodobně fungovat, jestliže sériové číslo Vašeho Dexcom G6 začíná znaky 8G...
+Berte prosím na vědomí, že následující metoda nebude pravděpodobně fungovat, jestliže sériové číslo Vašeho Dexcom G6 is starting with 8G or 8H.
 
 * Nativní senzor je označen jako "FAILED: Sensor Failed Start"
 * Zastavte senzor
