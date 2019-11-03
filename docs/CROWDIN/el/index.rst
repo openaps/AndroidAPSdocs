@@ -80,13 +80,13 @@ AndroidAPS Χρήση
    :glob:
     
    AndroidAPS οθόνες <./Getting-Started/Screenshots.md>
-   Στόχοι <./Usage/Objectives.rst>
+   Objectives <./Usage/Objectives.rst>
    OpenAPS χαρακτηριστικά <./Usage/Open-APS-features.md>   
    Υπολογιστής COB <./Usage/COB-calculation.rst>
    Ανίχνευση ευαισθησίας <./Configuration/Sensitivity-detection-and-COB.md>
    Αλλαγή προφίλ <./Usage/Profiles.md>
    Προσωρινοί στόχοι <./Usage/temptarget.md>   
-   Εκτεταμένη υδατάνθρακες <./Usage/Extended-Carbs.md>
+   Extended carbs <./Usage/Extended-Carbs.rst>
    Αυτοματοποίηση <./Usage/Automation.rst>
   
  
@@ -109,7 +109,7 @@ AndroidAPS για τα παιδιά
    :glob:
    
    * "Εξ αποστάσεως παρακολούθηση <./Children/Children.rst>
-   SMS commands <./Children/SMS-commands2019.rst>
+   SMS commands <./Children/SMS-Commands.rst>
    
 
 Για προχωρημένους 
