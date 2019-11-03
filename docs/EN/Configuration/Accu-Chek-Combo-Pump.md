@@ -25,7 +25,7 @@ Please be aware that this is not complete list and reflects personal user experi
 
 ## Limitations
 
-- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs) instead)
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.rst) instead)
 - Only one basal profile is supported.
 - Setting a basal profile other than 1 on the pump, or delivering extended boluses or multiwave
   boluses from the pump interferes with TBRs and forces the loop into low-suspend only mode for 6 hours
