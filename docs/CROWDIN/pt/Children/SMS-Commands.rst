@@ -18,6 +18,7 @@ How it works
   .. image:: ../images/SMSCommandsSetupSpace.png
     :alt: SMS Commands Setup
 
+
 * Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
 
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
