@@ -34,7 +34,7 @@ Loop
 -----
 * LOOP STOP/DISABLE
    * Antwort: Loop wurde deaktiviert.
-* LOOP STARTEN/AKTIVIEREN
+* LOOP START/ENABLE
    * Antwort: Loop wurde aktiviert
 * LOOP-STATUS
    * Antwort hängt vom aktuellen Status ab
@@ -91,11 +91,11 @@ Profile
 
 Andere
 -----
-* BEHANDLUNGEN-REFRESH
+* TREATMENTS REFRESH
    * Antwort: Behandlungen von NS aktualisieren
 * NSCLIENT RESTART
    * Antwort: NSCLIENT RESTART 1 receivers
-* PUMPE
+* PUMP
    * Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 
 Problembehandlung
