@@ -80,13 +80,13 @@ Použití AndroidAPS
    :glob:
     
    Obrazovky AndroidAPS <./Getting-Started/Screenshots.md>
-   Cíle <./Usage/Objectives2019.rst>
+   Objectives <./Usage/Objectives.rst>
    Možnosti OpenAPS <./Usage/Open-APS-features.md>   
    Výpočet COB <./Usage/COB-calculation.rst>
    Detekce citlivosti <./Configuration/Sensitivity-detection-and-COB.md>
    Profily <./Usage/Profiles.md>
    Dočasné cíle <./Usage/temptarget.md>   
-   Rozložené sacharidy <./Usage/Extended-Carbs.md>
+   Extended carbs <./Usage/Extended-Carbs.rst>
    Automatizace <./Usage/Automation.rst>
   
  
@@ -109,7 +109,7 @@ AndroidAPS pro děti
    :glob:
    
    Vzdálené monitorování <./Children/Children.rst>
-   SMS commands <./Children/SMS-commands2019.rst>
+   SMS commands <./Children/SMS-Commands.rst>
    
 
 Pokročilé 
