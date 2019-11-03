@@ -12,7 +12,12 @@
 
 ## Υπογλυκαιμικός Ρυθμός-Στόχος
 
-Αυτό μπορεί να θεωρηθεί ως ο πιο σημαντικός Ρυθμός -Στόχος. Υπάρχουν πολλοί λόγοι για αυτό: 1. Συνειδητοποιώντας ότι θα πάτε σε υπογλυκαιμία: Συνήθως, το κύκλωμα πρέπει να το χειριστεί, αλλά μερικές φορές μπορείτε να το δείτε καλύτερα εκ των προτέρων από τον κύκλωμα, έτσι ώστε ο βρόχος μπορεί να αντιδράσει γρηγορότερα όταν στοχεύει υψηλότερη τιμή γλυκόζης στο αίμα. 2. Όταν τρώτε υδατάνθρακες λόγο της υπογλυκαιμίας, η γλυκόζη του αίματός σας θα αυξηθεί πολύ γρήγορα. Το κύκλωμα θα διορθώσει την αύξηση ή ακόμη και θα δώσει SMB, αν είναι ενεργοποιημένη. Ένας "Υπογλυκαιμικός ρυθμός-Στόχος" μπορεί να αποτρέψει αυτό. 3. (προχωρημένος, στόχος 8): Μπορείτε να ενεργοποιήσετε το "Υπογλυκαιμικός ρυθμός-Στόχος με αυξημένη ευαισθησία" για στόχους ρυθμού των 100mg / dl ή 5.5mmol / l ή υψηλότερο στο OpenAPS SMB, έτσι ώστε το AndroidAPS να είναι πιο ευαίσθητο. 4. (προχωρημένο, στόχος 8): Μπορείτε να απενεργοποιήσετε τη λειτουργία "SMB με στόχο υψηλού ρυθμού", έτσι ώστε ακόμη και αν έχετε COB> 0, με "SMB με Ρυθμό-Στόχο" ή "SMB πάντα" ενεργοποιημένη και OpenAPS SMB ενεργό, παρέχετε SMB ενώ οι στόχοι υψηλού ρυθμού είναι ενεργοί.
+Αυτό μπορεί να θεωρηθεί ως ο πιο σημαντικός Ρυθμός -Στόχος. There are several reasons for it:
+
+1. Realizing you will go low: Usually, the Loop should handle it, but sometimes you can see better in advance than the loop, so the loop can react faster when it targets a higher blood glucose value.
+2. When you eat hypo treatments carbs, your blood glucose will rise very fast. The loop will correct against the rising or even give SMBs if enabled. A "Hypo Temp-Target" can prevent that. 
+3. (advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can enable “High Temp-Targets raises sensitivity” for Temp-Targets of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, so AndroidAPS is more sensitive.
+4. (advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active. 
 
 Σημείωση: Εάν εισαγάγετε υδατάνθρακες με το κουμπί υδατάνθρακες και η γλυκόζη του αίματός σας είναι μικρότερη από 72mg / dl ή 4mmol / l, ο Υπογλυκαιμικός Ρυθμός-Στόχος ενεργοποιείται αυτόματα.
 
@@ -20,13 +25,13 @@
 
 Πριν και κατά τη διάρκεια της δραστηριότητας, ίσως θελήσετε να έχετε έναν υψηλότερο στόχο για να αποφύγετε το χαμηλό σάκχαρο. Για να απλοποιήσετε τη ρύθμιση του Ρυθμού-Στόχου, μπορείτε να διαμορφώσετε μια προεπιλεγμένη "Δραστηριότητα Ρυθμού-Στόχου".
 
-Προηγμένος στόχος 8: Τα πλεονεκτήματα σχετικά με τη "Δραστηριότητα Ρυθμού-Στόχου" είναι ότι μπορείτε να ενεργοποιήσετε το "Υψηλού Ρυθμού-Στόχου αυξημένη ευαισθησία" για Ρυθμού-Στόχου υψηλότερα ή ίσα των 100mg / dl ή 5.5mmol / L στο OpenAPS SMB. Στη συνέχεια, το AndroidAPS είναι πιο ευαίσθητο. Μερικοί άνθρωποι κάνουν αντ 'αυτού μια αλλαγή προφίλ πριν / παράλληλα με την δραστηριότητα ΡΣ, αλλά όλοι είναι διαφορετικοί. Εάν το "SMB με υψηλό Ρυθμού-Στόχου" είναι απενεργοποιημένο, το AndroidAPS δεν θα χρησιμοποιήσει SMB, ακόμη και με COB> 0, "SMB με Ρυθμού-Στόχου" ή "SMB πάντα" ενεργοποιημένο και OpenAPS SMB ενεργό.
+Advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Στη συνέχεια, το AndroidAPS είναι πιο ευαίσθητο. Μερικοί άνθρωποι κάνουν αντ 'αυτού μια αλλαγή προφίλ πριν / παράλληλα με την δραστηριότητα ΡΣ, αλλά όλοι είναι διαφορετικοί. Εάν το "SMB με υψηλό Ρυθμού-Στόχου" είναι απενεργοποιημένο, το AndroidAPS δεν θα χρησιμοποιήσει SMB, ακόμη και με COB> 0, "SMB με Ρυθμού-Στόχου" ή "SMB πάντα" ενεργοποιημένο και OpenAPS SMB ενεργό.
 
 ## Τρώγοντας νωρίς Ρυθμός-Στόχος
 
 Αν γνωρίζετε ότι θέλετε να φάτε σύντομα, μπορείτε να ενεργοποιήσετε αυτό το Ρυθμός-Στόχος, οπότε υπάρχει ήδη περισσότερο IOB πριν από το φαγητό. Ειδικά για όσους δεν κάνουν προληπτική χρήση bolus, μπορεί να είναι μια καλή εναλλακτική λύση για να έχετε ήδη τη γλυκόζη του αίματος σε χαμηλότερο στόχο. Μπορείτε να διαβάσετε περισσότερα σχετικά με τη λειτουργία πρόωρης κατανάλωσης φαγητού στο άρθρο [ «Πώς να κάνετε» να φάτε σύντομα «λειτουργία» ](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) ή [ εδώ ](https://diyps.org/tag/eating-soon-mode/).
 
-Προηγμένος στόχος 8: Εάν χρησιμοποιείτε το OpenAPS SMB και έχετε "Χαμηλό Ρυθμό-Στόχο με μειώνει την ευαισθησία", το AndroidAPS λειτουργεί λίγο πιο επιθετικό. Η απαίτηση είναι ο Ρυθμός-Στόχος να είναι μικρότερος από 100mg / dl ή 5.5mmol / l για αυτή την επιλογή.
+Advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Η απαίτηση είναι ο Ρυθμός-Στόχος να είναι μικρότερος από 100mg / dl ή 5.5mmol / l για αυτή την επιλογή.
 
 ## Διαμορφόμενος Ρυθμός-Στόχος
 
