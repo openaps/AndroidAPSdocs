@@ -49,7 +49,7 @@ Dies ist ein bekannter Fehler in Android Studio 3.5 und wird wahrscheinlich erst
 Fehlende CGM-Daten
 =====
 * Falls Du xDrip+ verwendest: Identifiziere den Empfänger wie in den `xDrip+ Einstellungen <../Configuration/xdrip.html#identifiziere-empfanger>`_ beschrieben.
-* Falls Du die `gepatchte Dexcom G6 App </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ verwendest: Stelle sicher, dass Du die korrekte Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ verwendest.
+* Falls Du die `gepatchte Dexcom G6 App <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ verwendest: Stelle sicher, dass Du die korrekte Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ verwendest.
 
 Uncommitted changes
 =====
