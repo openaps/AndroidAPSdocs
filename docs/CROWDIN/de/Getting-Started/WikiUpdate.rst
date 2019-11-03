@@ -18,7 +18,7 @@ Oktober 2019
 * `Aktiven Kohlenhydrate (COB) - eigene Seite <../Usage/COB-calculation.html>`_
 *  `Aktiven Kohlynhydrate (COB) - Fehlerhafte Ermittlung <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
 * `Dexcom G6-spezifische Problembehandlung <../Hardware/DexcomG6.html#dexcom-g6-spezifische-problembehandlung>`_
-* `Objectives update version 2.5 <../Usage/Objectives.html>`_
+* `Ziele (objectives) Update AAPS Version 2.5 <../Usage/Objectives.html>`_
 * `Update Einstellungen <./Configuration/Preferences.md>`_
 * ` SGLT-2 Inhibitoren - beim Loopen nicht verwenden <../Module/module.html#keine-verwendung-von-sglt-2-hemmern> ` _
 * `SMS-Befehle Problembehandlung <../Children/SMS-Commands.html#problembehandlung>`_
