@@ -4,12 +4,12 @@ SMS-команды
 ======
 AndroidAPS позволяет контролировать телефон ребенка удаленно посредством текстовых сообщений (смс). Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом.
 * AndroidAPS при помощи смс также сообщит, выполнены ли удаленные команды, такие как болюс или изменения профиля. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+* **Если вы подаете болюс через SMS-команды необходимо вводить углеводы через Nightscout (NSClient, сайт...)!** Если вы этого не сделаете, AAPS учтет правильное количество активного инсулина IOB, и будет считать, что активных углеводов COB слишком мало и, вероятно, не будет подавать корректировочный болюс, полагая, что у вас много активного инсулина.
 
 Как это работает
 =====
-* Most of the adjustments of temp targets, following AAPS etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
+* Большинство корректировок временных целей, слежение за работой ААПС и т. д. может выполняться в приложении ` NSclient <../Children/Children.html> ` _ на Android-телефоне с подключением к Интернету.
+* Болюсы не могут подаваться через Nightscout, но можно использовать SMS-команды.
 * If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
 
 * In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
