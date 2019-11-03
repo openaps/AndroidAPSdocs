@@ -8,7 +8,7 @@
 
 * As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
 * Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Quick walk-through for experienced users
 
@@ -58,11 +58,11 @@ Then click next.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
-Sélectionnez "fullRelease" pour Buid Variants. Sélectionnez "V1 (Jar Signature)" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
+Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
 * 'Release' devrait être votre choix par défaut pour "Build Variants", 'Debug' est juste pour les personnes qui codent.
 * Sélectionnez le type de génération que vous souhaitez complier. 
-  * full (c'est à dire recommandations automatiquement adoptées en boucle fermée)
+  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
   * openloop (i.e. recommendations given to user to manually enact)
   * pumpcontrol (c'est-à-dire télécommande pour la pompe, pas pour le bouclage)
   * nsclient (c'est-à-dire que les données de bouclage d'un autre utilisateur sont affichées et que des entrées de careportal peuvent être ajoutées)
