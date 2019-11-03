@@ -1,4 +1,4 @@
-For users of MM640g or MM630g
+Für Minimed 640G / 630G Nutzer
 *****
 
 * Lade `600SeriesAndroidUploaer <http://pazaan.github.io/600SeriesAndroidUploader/>`_ herunter und folge den Anleitungen auf `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
