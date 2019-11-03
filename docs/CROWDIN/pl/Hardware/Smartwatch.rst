@@ -9,5 +9,5 @@ Więcej informacji znajduje się tutaj:
    :maxdepth: 1
    :glob:
    
-   lista przetestowanych telefonów i smartwatchy <../Getting-Started/Phones.md>
-   watchfaces (tarcze) <../Configuration/Watchfaces.md>
+   List of tested phones and smartwatches <../Getting-Started/Phones.md>
+   Watchfaces  <../Configuration/Watchfaces.md>
