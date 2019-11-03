@@ -80,13 +80,13 @@ AndroidAPS Nutzung
        
     
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
-   Objectives (Ziele) <./Usage/Objectives2019.rst>
+   Objectives <./Usage/Objectives.rst>
    OpenAPS-Funktionen <./Usage/Open-APS-features.md>   
    Berechnung der aktiven Kohlenhydrate (COB) <../Usage/COB-calculation.rst>
    Empfindlichkeitserkennung <./Configuration/Sensitivity-detection-and-COB.md>
    Profil Wechsel <./Usage/Profiles.md>
    Temporäre Ziele <./Usage/temptarget.md>   
-   Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.md>
+   Extended carbs <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
   
  
@@ -109,7 +109,7 @@ AndroidAPS für Kinder
        
    
    Kontrolle aus der Ferne <./Children/Children.rst>
-   SMS-Befehle <./Children/SMS-commands2019.rst>
+   SMS commands <./Children/SMS-Commands.rst>
    
 
 Für Fortgeschrittene 
