@@ -95,7 +95,7 @@
 3. [Сконфигурируйте AndroidAPS](../Configuration/Config-Builder.md) в соответствии с Вашими потребностями, используя мастер настройки или вручную
 4. В этом примере мы использовали (среди прочего)
 
-* Источник BG: `Dexcom G5 App (patched)` -- нажмите на значок шестеренки и активируйте `Загружать данные ГК на NS` и `Отправлять данные ГК на xDrip+` (см. [источник ГК](../Configuration/BG-Source.md))
+* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
 
 ![Настройки G5](../images/SampleSetupG5Settings.png)
 
@@ -115,7 +115,7 @@ xDrip+ это великолепное приложение с открытым 
     * Настройки > Настройки Inter-app > Принимать Калибровки > `включено`
     * Меню > Запуск сенсора (только "pro forma", не имеет ничего общего с работающим датчиком G5.). Необходимо включить иначе будет регулярно появляться сообщение об ошибке.) 
 
-Более подробную информацию о xDrip+, см. здесь: [BG source page](../Configuration/BG-Source.md).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
 
 ### Пример настройки оповещения
 
