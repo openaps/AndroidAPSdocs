@@ -18,7 +18,7 @@ November 2019
 * ` COB výpočet na samostatné stránce <../Usage/COB-calculation.html>`_
 * ` COB - chybná hodnota COB detekce <../Usage/COB-calculation.html#detection-ofs wronc-cob-values>`_
 * `Dexcom G6 konkrétní řešení problémů <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
-* `Objectives update version 2.5 <..//Usage/Objectives.html>`_
+* `Objectives update version 2.5 <../Usage/Objectives.html>`_
 * `Preferences update <../Configuration/Preferences.html>`_
 * `Inhibitory SGLT-2 - nepoužívat při smyčce <../Module/module.html#no-use-of-sgl-t2-inhibitors>`_
 * `SMS Commands Troubleshooting <../Children/SMS-Commands.html#troubleshooting>`_
