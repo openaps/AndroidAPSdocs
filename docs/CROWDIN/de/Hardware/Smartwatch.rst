@@ -9,5 +9,5 @@ Mehr Infos hier
    :maxdepth: 1
        
    
-   Liste der getesteten Telefone und Smartphones <../Getting-Started/Phones.md>
-   Smartwatch-Integration <../Configuration/Watchfaces.md>
+   List of tested phones and smartwatches <../Getting-Started/Phones.md>
+   Watchfaces  <../Configuration/Watchfaces.md>
