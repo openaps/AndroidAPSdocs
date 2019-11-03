@@ -39,7 +39,7 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
 
 No CGM data
 =====
-* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip#identify-receiver>`_.
+* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
 * In case you are using `patched Dexcom G6 app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Неодобренные изменения
@@ -52,8 +52,8 @@ No CGM data
 Option 1 - Check git installation
 -----
 * git might be not installed correctly (must be globally available)
-* `Check git installation <../Installing-AndroidAPS/git-install.rst#4-check-git-settings-in-android-studio>`_
-* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.rst#2-set-git-path-in-android-studio>`_ on your computer.
+* `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
+* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
 
 Option 2 - Reload source code
 -----
@@ -101,7 +101,7 @@ If you build the app successfully, transferred it to your phone and installed it
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Have your key password and key store password ready
     In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK#download-code-and-additional-components>`_.
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
 4.	Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 
@@ -111,4 +111,4 @@ If you build the app successfully, transferred it to your phone and installed it
 
 Убедитесь, что удалены все файлы, связанные с Android Studio. Manuals can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
-Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK#install-android-studio>`_ and **do not update gradle**.
+Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.

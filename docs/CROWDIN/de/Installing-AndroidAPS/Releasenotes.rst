@@ -7,7 +7,7 @@ Folgende Information wird angezeigt, so bald ein neues Update zur Verfügung ste
 .. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Update info
 
-Dann hast Du 60 Tage Zeit, das Update durchzuführen. Wenn Du nicht innerhalb dieser 60 Tage updatest, wird AndroidAPS in den LGS-Modus (Reduzierung der Basalrate bei niedrigen Glukosewerten, keine Korrektur zu hoher BZ-Werte - siehe `Glossar <../Getting-Started/Glossary.html>`_) wie im  `Ziel (objective) 4 <../Usage/Objectives.html>`_ beschrieben.
+Dann hast Du 60 Tage Zeit, das Update durchzuführen. Wenn Du nicht innerhalb dieser 60 Tage updatest, wird AndroidAPS in den LGS-Modus (Reduzierung der Basalrate bei niedrigen Glukosewerten, keine Korrektur zu hoher BZ-Werte - siehe `Glossar <../Getting-Started/Glossary.html>`_) wie im  `Ziel (objective) 6 <../Usage/Objectives.html>`_ beschrieben.
 
 Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualisierst, wird AAPS auf Open Loop wechseln.
 
@@ -51,11 +51,11 @@ Wichtige neue Funktionen
 * Neue gepatchte Dexcom App (`2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Signaturprüfung
 * Möglichkeit für OpenAPS Anwender, die Ziele (Objectives) zu überspringen
-* Neue `Ziele (objectives) <../Usage/Objectives2019.html>`_ -  Wissens-Check & App-Bedienung
+* Neue `Ziele (objectives) <../Usage/Objectives.html>`_ -  Wissens-Check & App-Bedienung
    
    (Wenn Du mindestens mit dem Ziel "Starte den Open Loop" in einer vorhergehenden Version begonnen hast, ist der Wissens-Check optional.)
 * Fehlerbehebung Dana Treiber, bei dem eine falsche Zeitdifferenz angegeben wurde
-* Fehlerbehebung `SMS-Befehle <../Usage/SMS-Commands2019.html>`_
+* Fehlerbehebung `SMS-Befehle <../Children/SMS-Commands.html>`_
 
 Version 2.3
 =====
@@ -94,7 +94,7 @@ Wichtige neue Funktionen
 -----
 * Anpassung Assistent für die `Zeitumstellung <../Usage/Timezone-traveling.html#zeitumstellung-sommer-winterzeit>`_
 * Wear Update für die Smartwatch
-* Update `SMS plugin <../Usage/SMS-Commands2019.html>`_
+* Update `SMS plugin <../Children/SMS-Commands.html>`_
 * Möglichkeit, bei den Objectives (Zielen) zurück zu gehen
 * Unterbrechung des Loop wenn Speicherplatz des Smartphones aufgebraucht ist.
 
@@ -131,7 +131,7 @@ Wichtige neue Funktionen
 
 Einstellungen, die bei Umstellung von AMA zu SMB erforderlich sind
 -----
-* Objective 8 muss gestartet sein, damit die SMB-Funktion zur Verfügung steht (der SMB-Reiter zeigt dir, welche Beschränkungen bestehen).
+* Objective 10 muss gestartet sein, damit die SMB-Funktion zur Verfügung steht (der SMB-Reiter zeigt dir, welche Beschränkungen bestehen).
 * maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet: Wenn du einen Bolus von 8 IE gegeben hast und maxIOB ist 7, dann wird kein SMB ausgelöst, solange das Gesamt-IOB nicht wieder auf unter 7 IE abgefallen ist.
 * Der Standardwert von min_5m_carbimpact erhöht sich von 3 bei AMA auf 8 beim SMB. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
 * Bitte beachte beim Erstellen einer AndroidAPS 2.0 apk: Configuration on demand wird in der aktuellen Version des Android Gradle Plugins nicht unterstützt! Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:

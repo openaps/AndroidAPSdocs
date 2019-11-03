@@ -11,7 +11,7 @@ Funkcje
 * Pompa dziecka jest kontrolowana przez telefon dziecka z AndroidAPS.
 * Rodzice mogą zdalnie śledzić wszystkie istotne dane, takie jak poziom glukozy, węglowodany na pokładzie, insulina na pokładzie itp. przy użyciu aplikacji ** NSClient * * na swoim telefonie.
 * Rodzice mogą otrzymywać alarmy przy użyciu aplikacji **xDrip w trybie follower** na swoim telefonie.
-* Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands2019.html>`_.
+* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_.
 * Zdalna zmiana profilu i celów tymczasowych za pośrednictwem aplikacji NSClient.
 
 Narzędzia i aplikacje do zdalnego monitorowania

@@ -8,7 +8,7 @@
 
 * Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.
 * Nutze bitte [Android Studio Version 3.5.1](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
-* Wenn Du den Dexcom G6 mit der [gepatchted Dexcom App](../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app) verwendest, dann musst Du die Version aus dem [2.4 Verzeichnis](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) installiert haben.
+* Wenn Du den Dexcom G6 mit der [gepatchted Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) verwendest, dann musst Du die Version aus dem [2.4 Verzeichnis](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) installiert haben.
 
 ## Kurzanleitung für erfahrene Anwender
 
@@ -58,11 +58,11 @@ Klicke danach auf “Next”.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
-Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
+Wähle “full” (oder "fullRelease") in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
 
 * “Release” solltest du immer lassen, “Debug” ist nur für Programmierer, um Fehler zu finden.
 * Wähle den “build type”, den du kompilieren möchtest: 
-  * full (d.h. automatische Pumpensteuerung im Closed Loop)
+  * full / fullRelease (d.h. automatische Pumpensteuerung im Closed Loop)
   * openloop (d.h. gibt temporäre Basalraten-Vorschläge, die manuell auszuführen sind)
   * pumpcontrol (d.h. nur Fernbedienung für die Pumpe, kein Loopen)
   * nsclient (d.h. es werden z.B. die Daten eines anderen Nutzers dargestellt und Careportal-Einträge können hinzugefügt werden)

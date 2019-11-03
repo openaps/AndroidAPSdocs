@@ -80,13 +80,13 @@ Użytkowanie AndroidAPS
    :glob:
     
    Zrzuty ekranów AndroidAPS <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives2019.rst>
+   Objectives <./Usage/Objectives.rst>
    Funkcje OpenAPS <./Usage/Open-APS-features.md>   
    COB calculation <./Usage/COB-calculation.rst>
    Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
    Zmiana profilu <./Usage/Profiles.md>
    Cele tymczasowe TT <./Usage/temptarget.md>   
-   Przedłużone węglowodany <./Usage/Extended-Carbs.md>
+   Extended carbs <./Usage/Extended-Carbs.rst>
    Automatyzacja <./Usage/Automation.rst>
   
  
@@ -109,7 +109,7 @@ AndroidAPS dla dzieci
    :glob:
    
    Zdalne monitorowanie <./Children/Children.rst>
-   SMS commands <./Children/SMS-commands2019.rst>
+   SMS commands <./Children/SMS-Commands.rst>
    
 
 Zaawansowane 

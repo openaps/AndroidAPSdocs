@@ -2,9 +2,12 @@ Aktualizace a změny Wiki
 **********************
 November 2019
 ===============
+* `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
+* `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
 * `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
-* `SMS commands update <../Children/SMS-commands2019.html>`_
+* `SMS commands update <../Children/SMS-Commands.html>`_
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
 
@@ -15,9 +18,10 @@ November 2019
 * ` COB výpočet na samostatné stránce <../Usage/COB-calculation.html>`_
 * ` COB - chybná hodnota COB detekce <../Usage/COB-calculation.html#detection-ofs wronc-cob-values>`_
 * `Dexcom G6 konkrétní řešení problémů <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting>`_
+* `Objectives update version 2.5 <../Usage/Objectives.html>`_
 * `Preferences update <../Configuration/Preferences.html>`_
 * `Inhibitory SGLT-2 - nepoužívat při smyčce <../Module/module.html#no-use-of-sgl-t2-inhibitors>`_
-* `SMS příkazy odstraňování problémů <../Usage/SMS-Commands.html#troubleshooting>`_
+* `SMS Commands Troubleshooting <../Children/SMS-Commands.html#troubleshooting>`_
 * `xDrip - aktualizace výměna G6 vysílače <../Konfigurace/xdrip.html#replace-transmitter>`_
 
 září 2019

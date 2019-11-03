@@ -8,7 +8,7 @@
 
 * As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
 * Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Quick walk-through for experienced users
 
@@ -58,11 +58,11 @@ Then click next.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
-Выберите "full" (полный) в качестве атрибута для сгенерированного приложения. Выберите V1 "Jar Signature" (V2 необязательно) и нажмите "Finish" (закончить). В дальнейшем может пригодиться следующая информация.
+Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". В дальнейшем может пригодиться следующая информация.
 
 * 'Release' должен быть вашим выбором по умолчанию для "Build Type"(типа сборки), 'Debug' только для программистов.
 * Выберите тип сборки, который хотите создать. 
-  * полный (с автоматически принимаемыми рекомендациями в закрытом цикле)
+  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
   * открытый цикл (рекомендации, адресованные пользователю, выполняются вручную)
   * управление помпой (дистанционное управление помпой, без функционирования цикла)
   * nsclient (например, отображаются данные другого пользователя, могут добавляться записи портала лечения/назначений)

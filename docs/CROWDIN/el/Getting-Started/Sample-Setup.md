@@ -95,7 +95,7 @@
 3. [ Διαμορφώστε το AndroidAPS ](../Configuration/Config-Builder.md) ανάλογα με τις ανάγκες σας χρησιμοποιώντας το βοηθό εγκατάστασης ή με μη αυτόματο τρόπο
 4. Σε αυτό το δείγμα χρησιμοποιήσαμε (μεταξύ άλλων)
 
-* Πηγή BG: ` Dexcom G5 App (patched) `   - κάντε κλικ στο ρόπαλο και ενεργοποιήστε ` Μεταφόρτωση δεδομένων BG σε NS ` και ` Αποστολή δεδομένων BG στο xDrip + ` (δείτε [πηγή BG ](../Configuration/BG-Source.md)
+* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
 
 ![Ρυθμίσεις G5](../images/SampleSetupG5Settings.png)
 
@@ -115,7 +115,7 @@
     * Ρυθμίσεις> Ρυθμίσεις μεταξύ εφαρμογών> Αποδοχή βαθμονομήσεων> ` ON `
     * Μενού> Έναρξη αισθητήρα (είναι μόνο "pro forma" και δεν έχει καμία σχέση με τον τρέχοντα αισθητήρα G5. Αυτό είναι απαραίτητο, διαφορετικά θα εμφανίζεται τακτικά ένα μήνυμα σφάλματος.) 
 
-Για περισσότερες πληροφορίες σχετικά με το xDrip +, δείτε εδώ [ σελίδα προέλευσης BG ](../Configuration/BG-Source.md).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
 
 ### Παράδειγμα ρύθμισης συναγερμού
 

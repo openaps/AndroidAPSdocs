@@ -35,7 +35,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 * Erstelle die signierte APK.
 * Übertrage die erstellte APK auf dein Smartphone.
 
-## Step by step walkthrough
+## Schritt für Schritt Anleitung
 
 Detaillierte Beschreibung der notwendigen Schritte.
 
@@ -43,7 +43,7 @@ Detaillierte Beschreibung der notwendigen Schritte.
 
 Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installation](../Installing-AndroidAPS/git-install.rst).
 
-## Install Android Studio
+## Android Studio installieren
 
 Die folgenden Screenshots stammen aus Android Studio Version 3.1.3. Je nach verwendeter Android Studio-Version kann Dein Bildschirm etwas anders aussehen. Aber Du solltest Dich dennoch zurechtfinden. Hilfe aus der Community findest Du z. B. in der [ -AndroidAPS-Facebook-Gruppe ](https://www.facebook.com/groups/1900195340201874/) und [auf diesen Seiten](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
@@ -85,7 +85,7 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 * Herzlichen Glückwunsch, jetzt hast du Android Studio soweit fertig installiert und kannst mit dem Clonen des Quellcodes beginnen. Hier ist allerdings auch ein guter Zeitpunkt, um eine Pause einzulegen.
 
-## Set git path in preferences
+## Git-Pfad in Android Studio eintragen
 
 ### Windows
 
@@ -105,7 +105,7 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 * Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
 
-## Download code and additional components
+## Code und weitere Komponenten herunterladen
 
 * Nutze “git clone” in Android Studio wie in folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
 
@@ -240,11 +240,11 @@ Fülle die Informationen von dem Keystore, den du gerade erstellt hast, aus und 
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
+Wähle “full” (oder "fullRelease") in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
 
 * “Release” solltest du immer lassen, “Debug” ist nur für Programmierer, um Fehler zu finden.
 * Wähle den “build type”, den du kompilieren möchtest: 
-  * full (d.h. automatische Pumpensteuerung im Closed Loop)
+  * full / fullRelease (d.h. automatische Pumpensteuerung im Closed Loop)
   * openloop (d.h. gibt temporäre Basalraten-Vorschläge, die manuell auszuführen sind)
   * pumpcontrol (d.h. nur Fernbedienung für die Pumpe, kein Loopen)
   * nsclient (d.h. es werden z.B. die Daten eines anderen Nutzers dargestellt und Careportal-Einträge können hinzugefügt werden)
@@ -286,7 +286,7 @@ Der letzte Schritt ist es, auf die APK Datei zu klicken und die App zu installie
 
 Herzlichen Glückwunsch, du hast es geschafft! Nun kannst du AndroidAPS starten und einrichten.
 
-## Identify receiver if using xDrip
+## Identifiziere den Empfänger falls Du xDrip verwendest
 
 [Siehe xDrip Seite](../Configuration/xdrip#identify-receiver)
 

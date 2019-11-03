@@ -59,7 +59,7 @@ La ligne **fine jaune** indique l'activité de l'insuline, calculée par votre p
 Cette section est aussi configurable en utilisant les options de la section D.
 
 * **Insuline Active (IA)** (diagramme bleu) : affiche l'insuline que vous avez dans le corps. S'il n'y avait pas de DBT, de SMB et plus de bolus restants, elle serait nulle. La diminution dépend de votre DAI et de vos paramètres de profil d'insuline. 
-* **Glucides Actifs (GA)** (diagramme orange) : affiche les glucides que vous avez dans le corps. La diminution dépend des écarts que l'algorithme détecte. S'il détecte une absorption de glucide inférieure à ce qui est prévu, de l'insuline est administrée et cela augmente l'IA (plus ou moins, selon vos paramètres de sécurité). If it detects a higher carb absorption than expected, it will fall back to the value that is calculated by the min_5min_carbimpact.
+* **Carbs On Board** (orange chart): It shows the carbs you have on board. La diminution dépend des écarts que l'algorithme détecte. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
 * **Déviations**: 
    * barres **GRISES** montrent un écart dû aux glucides. 
    * barres **VERTES** montrent que la Gly est supérieure à l'attendu de l'algorithme 
@@ -105,7 +105,7 @@ Si vous faites un bolus aditionnel rapidement après un bolus de repas (par exem
 
 ![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation.html#detection-of-wrong-cob-values).
+Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Profil d'Insuline
 

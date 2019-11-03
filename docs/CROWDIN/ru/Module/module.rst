@@ -72,13 +72,13 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 ------------
 Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
-* Dexcom G4: Эти системы достаточно старые, но вы можете найти инструкции по их использованию в приложении xDrip+
-* Dexcom G5: Он работает с xDrip+ или модифицированным приложением Dexcom
-* Dexcom G6: Он работает с xDrip+ или модифицированным приложением Dexcom
-* Libre 1: Вам нужен передатчик, такой как Bluecon или MiaoMiao (сборка или покупка) и xDrip+ приложение
-* Libre 2: Он работает с xDrip+ (трансмиттер не требуется), но вам нужно построить собственное патч-приложение (см.`эти инструкции <https://github.com/user987654321resu/Libre2-patched-App>`_ для подробной информации)
-* Eversense: Он работает до сих пор только в сочетании с модифицированными приложениями ESEL и  Eversense-App (не работает с Dana RS и LineageOS, но Combo и Lineage OS работает прекрасно)
-* Enlite: довольно сложный с большим количеством дополнительных устройств
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
+* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
+* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
+* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
+* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+* `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
+* `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
 
 
 Nightscout

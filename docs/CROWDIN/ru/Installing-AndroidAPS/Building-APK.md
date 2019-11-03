@@ -240,11 +240,11 @@ Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Выберите "full" (полный) в качестве атрибута для сгенерированного приложения. Выберите V1 "Jar Signature" (V2 необязательно) и нажмите "Finish" (закончить). В дальнейшем может пригодиться следующая информация.
+Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". В дальнейшем может пригодиться следующая информация.
 
 * 'Release' должен быть вашим выбором по умолчанию для "Build Type"(типа сборки), 'Debug' только для программистов.
 * Выберите тип сборки, который хотите создать. 
-  * полный (с автоматически принимаемыми рекомендациями в закрытом цикле)
+  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
   * открытый цикл (рекомендации, адресованные пользователю, выполняются вручную)
   * управление помпой (дистанционное управление помпой, без функционирования цикла)
   * nsclient (например, отображаются данные другого пользователя, могут добавляться записи портала лечения/назначений)

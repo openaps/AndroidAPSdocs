@@ -12,7 +12,7 @@
 
 ## 제약
 
-- 확장 Bolus그리고 Multiwave bolus는 지원되지 않습니다. ([Extended Carbs](../Usage/Extended-Carbs) 를 참고하시기 바랍니다.)
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.rst) instead)
 - 하나의 Basal프로파일만 지원이됩니다.
 - 펌프에서 1나이상의 Basal프로파일을 설정하는 것, 확장 Bolus 또는 펌프인터페이스 TBR의 Multiwave Bolus를 전송하는 것은 6시간 동안 Low-suspend 모드로만 적용되며 이는 Loop가 이러한 상황에서는 안전하게 실행되지 않을 수 있기 때문입니다.
 - 현재는 펌프의 시간과 날자를 설정할 수 없으므로, Daylight saving시간은 수동으로 설정되어야합니다. 야간의 알람을 피하기 위해서는 저녁에 휴대폰의 자동시간업데이트를 비활성화시키고, 아침에 펌프시간과 함께 다시 복구 시킬 필요가 있습니다.

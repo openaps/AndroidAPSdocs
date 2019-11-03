@@ -5,7 +5,7 @@
   :alt: AAPS-как автопилот
 
 Искусственная поджелудочная железа замкнутой системы сочетает в себе различные компоненты чтобы облегчить управление диабетом. 
-В своей книге " Automated Insulin Delivery <https://www.artificialpancreasbook.com/>` _ Dana M. Lewis, одна из основателей движения ИПЖ с открытым исходным кодом, назвала алгоритм системы "автопилот для диабета" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps#switching-to-automated-diabetes-mode-autopilot-for-your-diabetes>` _. Что это означает?
+In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Что это означает?
 
 **Автопилот в самолете**
 

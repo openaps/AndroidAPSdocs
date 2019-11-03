@@ -95,7 +95,7 @@ Aby zainstalować tą wersje postepują zgodnie z poniższymi krokami:
 3. [Skonfigurować AndroidAPS](../Configuration/Config-Builder.md) zgodie z własnymi potrzebami używając Asystenta ustawień lub ręcznie
 4. W tej przykładowej konfiguracji używamy (m.in.)
 
-* Źródła BG: `Aplikacja Dexcom G5 (zmodyfikowana wersja)` --kliknij ikonkę koła zębatego i aktywuj `Przesłanie dane BG do NS` i `Wyślij dane BG do xDrip +` (patrz [źródła BG](../Configuration/BG-Source.md)
+* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
 
 ![Ustawienia G5](../images/SampleSetupG5Settings.png)
 
@@ -115,7 +115,7 @@ xDrip + jest kolejną dojrzało aplikacją typu open source która oferuje dużo
     * Ustawienia > Inter-app settings > Accept Calibrations > `ON`
     * Menu > Start sensora (jest wykonywany tylko "pro forma" i nie ma nic wspólnego z faktycznym uruchomieniem sensora G5. ,jes ont wymagany gydż w innym przypadku regularnie będzie wyświetlany informacja o błędzie). 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
 
 ### Przykład ustawienia alarmu
 
