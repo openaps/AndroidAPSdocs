@@ -8,7 +8,7 @@
 
 * As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
 * Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Quick walk-through for experienced users
 
