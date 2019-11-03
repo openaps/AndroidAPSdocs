@@ -95,7 +95,7 @@ If you bolus for additional food shortly after a meal bolus (i.e. additional des
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
 
-If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. So if you want to bolus again after a previous meal with COB you should be aware of overdosing! For details see the hints on [COB calculation page](../Usage/COB-calculation.html#detection-of-wrong-cob-values).
+If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. So if you want to bolus again after a previous meal with COB you should be aware of overdosing! For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Insulin Profile
 
