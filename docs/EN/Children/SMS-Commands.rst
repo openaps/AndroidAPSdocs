@@ -13,9 +13,9 @@ How it works
 * If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
 
 * In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, just one space after the semicolons - i.e. +4412345678; +4412345679) and also enable 'Allow remote commands via SMS'.
 
-  .. image:: ../images/SMSCommandsSetup.png
+  .. image:: ../images/SMSCommandsSetupSpace.png
     :alt: SMS Commands Setup
 
 * Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
