@@ -2,6 +2,7 @@ Wiki updates & changes
 **********************
 November 2019
 ===============
+* `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
 * `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
