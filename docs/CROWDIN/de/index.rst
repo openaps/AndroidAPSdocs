@@ -44,7 +44,7 @@ AndroidAPS installieren
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Installation git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Fehlerbehebung Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release Notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
    
@@ -80,13 +80,13 @@ AndroidAPS Nutzung
        
     
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives.rst>
+   Objectives (Ziele) <./Usage/Objectives.rst>
    OpenAPS-Funktionen <./Usage/Open-APS-features.md>   
    Berechnung der aktiven Kohlenhydrate (COB) <../Usage/COB-calculation.rst>
    Empfindlichkeitserkennung <./Configuration/Sensitivity-detection-and-COB.md>
    Profil Wechsel <./Usage/Profiles.md>
    Temporäre Ziele <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.rst>
+   Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
   
  
@@ -109,7 +109,7 @@ AndroidAPS für Kinder
        
    
    Kontrolle aus der Ferne <./Children/Children.rst>
-   SMS commands <./Children/SMS-Commands.rst>
+   SMS-Befehle <./Children/SMS-Commands.rst>
    
 
 Für Fortgeschrittene 
