@@ -7,7 +7,7 @@ You will receive the following information as soon as a new update is available:
 .. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Update info
 
-Pak máte 60 dnů na aktualizaci. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 4 <../Usage/Objectives.html>`_.
+Pak máte 60 dnů na aktualizaci. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
 
 Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde AAPS na otevřenou smyčku.
 
@@ -51,11 +51,11 @@ Hlavní nové funkce
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
-* New `objectives <../Usage/Objectives2019.html>`_ - exam, application handling
+* New `objectives <../Usage/Objectives.html>`_ - exam, application handling
    
    (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Fixed bug in Dana* drivers where false time difference was reported
-* Fixed bug in `SMS communicator <../Usage/SMS-Commands2019.html>`_
+* Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
 Version 2.3
 =====
@@ -94,7 +94,7 @@ Hlavní nové funkce
 -----
 * `DST fix <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Wear Update
-* `SMS plugin <../Usage/SMS-Commands2019.html>`_ update
+* `SMS plugin <../Children/SMS-Commands.html>`_ update
 * Go back in objectives.
 * Stop loop if phone disk is full
 
@@ -131,7 +131,7 @@ Hlavní nové funkce
 
 Settings to adjust when switching from AMA to SMB
 -----
-* Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
+* Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
 * min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
 * Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
