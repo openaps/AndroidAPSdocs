@@ -72,13 +72,13 @@ Zdroj glykémií
 ------------
 Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. Další podrobnosti naleznete `zde <../Configuration/BG-Source.html>`_. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
 
-* Dexcom G4: Tyto senzory jsou poměrně staré, ale jsou k dispozici pokyny, jak je můžete používat s aplikací xDrip+
-* Dexcom G5: Pracují s aplikací xDrip+ nebo s upravenou aplikací Dexcom
-* Dexcom G6: Pracují s aplikací xDrip+ nebo s upravenou aplikací Dexcom
-* Libre 1: Je potřeba transmitter jako Bluecon nebo MiaoMiao (sestavený nebo koupený) a aplikace xDrip+
-* Libre 2: Pracuje s aplikací xDrip+ (nevyžaduje transmitter), musíte si však sestavit svou vlastní upravenou aplikaci (více podrobností viz`tyto pokyny <https://github.com/user987654321resu/Libre2-patched-App>`_)
-* Eversense: Prozatím pracuje pouze v kombinaci s aplikací ESEL a upravenou aplikací Eversense (nefunguje s Dana RS a LineageOS, ale DanaRS a Android nebo Combo a Lineage OS fungují v pořádku)
-* Enlite: Poměrně komplikované, vyžaduje spoustu dalších věcí navíc
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
+* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
+* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
+* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
+* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+* `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
+* `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
 
 
 Nightscout
