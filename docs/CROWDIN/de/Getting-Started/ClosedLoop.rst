@@ -5,7 +5,7 @@ Was ist ein Closed Loop-System?
   :alt: AAPS ist wie ein Autopilot
 
 Ein Closed Loop System für eine künstliche Bauchspeicheldrüse kombiniert verschiedene Komponenten, um Dein Diabetes Management zu vereinfachen. 
-In ihrem großartigen Buch `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ bezeichnet Dana M. Lewis, eine der Gründerinnen der Open Source Closed Loop Bewegung, es als `"Autopilot für Deinen Diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps#switching-to-automated-diabetes-mode-autopilot-for-your-diabetes>`_. Aber was bedeutet das?
+In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Aber was bedeutet das?
 
 **Autopilot in einem Flugzeug**
 
