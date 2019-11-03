@@ -240,11 +240,11 @@ Fülle die Informationen von dem Keystore, den du gerade erstellt hast, aus und 
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Wähle “full” in dem “Flavors” Menü aus, um die vollständige AndroidAPS App zu erstellen und klicke auf V1 “Jar Signature” (V2 ist optional) und klicke auf “Finish”. Folgende Informationen könnten später für dich nützlich sein:
+Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". Folgende Informationen könnten später für dich nützlich sein:
 
 * “Release” solltest du immer lassen, “Debug” ist nur für Programmierer, um Fehler zu finden.
 * Wähle den “build type”, den du kompilieren möchtest: 
-  * full (d.h. automatische Pumpensteuerung im Closed Loop)
+  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
   * openloop (d.h. gibt temporäre Basalraten-Vorschläge, die manuell auszuführen sind)
   * pumpcontrol (d.h. nur Fernbedienung für die Pumpe, kein Loopen)
   * nsclient (d.h. es werden z.B. die Daten eines anderen Nutzers dargestellt und Careportal-Einträge können hinzugefügt werden)
