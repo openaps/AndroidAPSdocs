@@ -9,5 +9,5 @@ Plus de détails ici :
    :maxdepth: 1
    :glob:
    
-   liste des smartphones testé et des montrées connectées <../Getting-Started/Phones.md>
-   cadrans de montres  <../Configuration/Watchfaces.md>
+   List of tested phones and smartwatches <../Getting-Started/Phones.md>
+   Watchfaces  <../Configuration/Watchfaces.md>
