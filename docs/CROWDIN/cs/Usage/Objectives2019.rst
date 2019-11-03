@@ -17,18 +17,20 @@ Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry
 
 Cíl 2: Naučte se ovládat AndroidAPS
 ============================
-* Proveďte několik akcí v AndroidAPS, jak je popsáno v tomto cíli. 
+* Proveďte několik akcí v AndroidAPS, jak je popsáno v tomto cíli.
+* Click on the orange text "Not completed yet" to access the to-dos.
 * Odkazy budou poskytnuty jako vodítko pro případ, že dosud nejste obeznámeni se specifickou akcí.
 
-   .. image:: ../images/Objective2.png
+   .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot cíl 2
 
 Cíl 3: Prokázat své znalosti
 =================================
-* Splnit test znalostí AndroidAPS.
+* Pass a multiple-choice exam testing your AndroidAPS knowledge.
+* Click on the orange text "Not completed yet" to access the page with the question and answering optons.
 * Odkazy budou poskytnuty jako vodítko pro případ, že si nejste jisti odpovědí.
 
-   .. image:: ../images/Objective3.png
+   .. image:: ../images/Objective3_V2_5.png
      :alt: Screenshot cíl 3
 
 Cíl 4: Začít s otevřenou smyčkou

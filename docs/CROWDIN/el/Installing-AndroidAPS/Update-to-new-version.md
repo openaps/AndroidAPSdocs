@@ -1,69 +1,37 @@
 # Ενημερώστε σε μια νέα έκδοση ή κλάδο
 
-## Build yourself instead of download
+## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+**AndroidAPS δεν είναι διαθέσιμο για κατέβασμα λόγω κανονισμού για τις ιατρικές συσκευές. Είναι νόμιμο να χτίσει η εφαρμογή για δική σας χρήση, αλλά δεν πρέπει να δώσετε αντίγραφο σε άλλους! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
 
 ## Σημαντικές σημειώσεις
 
-<font color="#FF0000"><b>Important note: As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.</font></b>.
+* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
+* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+## Quick walk-through for experienced users
+
+Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+
+If you already updated AAPS in previous versions and use a Windows PC you can update in two simple steps:
+
+1. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
+2. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
 
 ## Εγκαταστήστε το git (αν δεν το έχετε)
 
-### Windows
-
-* Κάθε έκδοση git θα πρέπει να λειτουργήσει. Για παράδειγμα [ https://git-scm.com/download/win ](https://git-scm.com/download/win)
-* Βεβαιωθείτε ότι έχετε σημειώσει τη διαδρομή εγκατάστασης. Θα το χρειαστείτε στο επόμενο βήμα.
-  
-  ![Διαδρομή εγκατάστασης Git](../images/Update_GitPath.png)
-
-* Reboot your PC to update System Environment.
-
-* Αφήστε το Studio να μάθει πού βρίσκεται το git.exe: Αρχείο - Ρυθμίσεις
-  
-  ![Android Studio - ανοίξτε τις ρυθμίσεις](../images/Update_GitSettings1.png)
-
-* Στο επόμενο παράθυρο: Έλεγχος έκδοσης - Git
-
-* Επιλέξτε σωστή διαδρομή: ... / Git <font color="#FF0000"><b> / bin </b></font>
-
-* Βεβαιωθείτε ότι έχετε επιλέξει τη μέθοδο ενημέρωσης "Συγχώνευση".
-  
-  ![Android Studio - διαδρομή GIT](../images/Update_GitSettings2a.png)
-
-### Mac
-
-* Κάθε έκδοση git θα πρέπει να λειτουργήσει. Για παράδειγμα [ https://git-scm.com/download/mac ](https://git-scm.com/download/mac)
-* Χρησιμοποιήστε το homebrew για να εγκαταστήσετε το git: ```$ brew εγκατέστησε git```.
-* Για λεπτομέρειες σχετικά με την εγκατάσταση του git, ανατρέξτε στην [επίσημη τεκμηρίωση git ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* Αν εγκαταστήσετε το git μέσω του homebrew δεν χρειάζεται να αλλάξετε τις προτιμήσεις. Σε περίπτωση που: Μπορούν να βρεθούν εδώ: Android Studio - Προτιμήσεις.
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
 ## Update your local copy
 
-* Κάντε κλικ στο: VCS-> Git-> Fetch
+* Click: VCS -> Git -> Pull
   
-  ![Android Studio - GIT - Λήψη](../images/Update_Fetch.png)
+  ![Android Studio - GIT - Pull](../images/Update_Pull.png)
 
-## Selecting branch
-
-* Εάν θέλετε να αλλάξετε υποκατάστημα, επιλέξτε άλλο κλάδο από το δίσκο: master (τελευταία έκδοση) ή άλλη έκδοση (δείτε παρακάτω)
+* Click Pull (no changes in dialog field)
   
-  ![](../images/UpdateAAPS1.png)
-
-and then checkout (You can use 'Checkout as New Branch' if 'Checkout' is not available.)
-
-     ![](../images/UpdateAAPS2.png)
-    
-
-## Updating branch from Github
-
-* Πατήστε Ctrl + T, επιλέξτε τη μέθοδο συγχώνευσης και πατήστε OK
-  
-  ![](../images/merge.png)
-
-On the tray you'll see green message about updated project
+  ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
 
 ## Δημιουργία υπογεγραμμένου APK
 
@@ -115,7 +83,14 @@ Then click next.
 
 ![Στιγμιότυπο οθόνης 47](../images/Installation_Screenshot_47.png)
 
-Μεταβείτε στον κατάλογο AndroidAPS / εφαρμογή / πλήρεις/ release για να βρείτε το αρχείο "app-full-release.apk". Μεταφέρετε αυτό το αρχείο στο Android smartphone σας. Μπορείτε να το κάνετε με τον προτιμώμενο τρόπο, δηλαδή Bluetooth, upload cloud, ή να συνδέσετε τον υπολογιστή και το τηλέφωνο με καλώδιο ή να χρησιμοποιήσετε email. Χρησιμοποιώ το Gmail εδώ σε αυτό το παράδειγμα, καθώς είναι αρκετά απλό για μένα. Το αναφέρω αυτό επειδή για να εγκαταστήσετε την εφαρμογή που υπογράφηκε αυτόματα πρέπει να επιτρέψουμε στο Android στο smartphone μας να κάνει αυτήν την εγκατάσταση ακόμα κι αν αυτό το αρχείο λαμβάνεται μέσω Gmail, το οποίο κανονικά απαγορεύεται. Αν χρησιμοποιείτε κάτι άλλο παρακαλούμε προχωρήστε ανάλογα.
+Μεταβείτε στον κατάλογο AndroidAPS / εφαρμογή / πλήρεις/ release για να βρείτε το αρχείο "app-full-release.apk". Μεταφέρετε αυτό το αρχείο στο Android smartphone σας. You can do it on your preferred way:
+
+* Bluetooth
+* cloud upload (Google Drive or other cloud services)
+* connect computer and phone by cable 
+* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+
+In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Αν χρησιμοποιείτε κάτι άλλο παρακαλούμε προχωρήστε ανάλογα.
 
 ![Στιγμιότυπο οθόνης 48](../images/Installation_Screenshot_48.png)
 
@@ -131,105 +106,10 @@ Then click next.
 
 ## Check AAPS version on phone
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Μπορείτε να ελέγξετε την έκδοση AAPS στο τηλέφωνό σας κάνοντας κλικ στο μενού των τριών κουμπιών επάνω δεξιά και στη συνέχεια σχετικά με.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Η έκδοση AAPS έχει εγκατασταθεί](../images/Update_VersionCheck.png)
 
-# Αντιμετώπιση προβλημάτων
+## Αντιμετώπιση προβλημάτων
 
-## Kotlin compiler warning
-
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
-
-App was build successfully and can be transferred to phone.
-
-![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
-
-## Could not download… / Offline Work
-
-If you get a failure message like this
-
-![Warning could not download](../images/GIT_Offline1.jpg)
-
-make sure that ‘Offline work’ is disabled.
-
-File -> Settings
-
-![Settings offline work](../images/GIT_Offline2.jpg)
-
-## Error: buildOutput.apkData must not be null
-
-Sometimes you might get an error message when building the apk saying
-
-      `Errors while building APK.`
-    
-      `Cause: buildOutput.apkData must not be null`
-    
-
-This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
-
-     1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
-     2. Set destination folder to project folder instead of app folder as described in [this video](https://www.youtube.com/watch?v=BWUFWzG-kag).
-     3. Change apk destination folder (different location).
-    
-
-## No CGM data when using xDrip
-
-[Προσδιορίστε δέκτη](../Configuration/xdrip#identify-receiver)
-
-## Uncommitted changes
-
-If you receive failure message like
-
-![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
-
-### Επιλογή 1
-
-* Στο Android Studio επιλέξτε VCS -> GIT -> Επαναφορά HEAD ![Επαναφορά HEAD](../images/GIT_TerminalCheckOut3.PNG)
-
-### Επιλογή 2
-
-* Αντιγράψτε το 'git checkout -' στο πρόχειρο (χωρίς επιγραφές)
-* Μεταβείτε στο Terminal στο Android Studio (στην κάτω αριστερή πλευρά του παραθύρου του Android Studio) ![Android Studio Terminal](../images/GIT_TerminalCheckOut1.PNG)
-
-* Επικολλήστε το κείμενο που αντιγράψατε και πατήστε επιστροφή ![Επιτυχία ελέγχου GIT](../images/GIT_TerminalCheckOut2.jpg)
-
-## App not installed
-
-![phone app note installed](../images/Update_AppNotInstalled.png)
-
-* Βεβαιωθείτε ότι έχετε μεταφέρει το αρχείο "app-full-release.apk" στο τηλέφωνό σας.
-* Εάν στο τηλέφωνό σας εμφανίζεται "Δεν έχει εγκατασταθεί η εφαρμογή", ακολουθήστε αυτά τα βήματα: 
-  1. [ Εξαγωγή ρυθμίσεων ](../Usage/Objectives#export-import-settings) (σε έκδοση AAPS που είναι ήδη εγκατεστημένη στο τηλέφωνό σας)
-  2. Καταργήστε την εγκατάσταση του AAPS στο τηλέφωνό σας.
-  3. Ενεργοποίηση λειτουργίας αεροπλάνου & απενεργοποιήστε το Bluetooth.
-  4. Εγκατάσταση νέας έκδοσης ("app-full-release.apk")
-  5. [Ρυθμίσεις εισαγωγής](../Usage/Objectives#export-import-settings)
-  6. Ενεργοποιήστε ξανά το bluetooth και απενεργοποιήστε τη λειτουργία του αεροπλάνου
-
-## App installed but old version
-
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed the merging step in the [update manual](../Installing-AndroidAPS/Update-to-new-version#updating-branch-from-github).
-
-## None of the above worked
-
-If non of the above tips helped you might consider building the app from scratch:
-
-1. [ Εξαγωγή ρυθμίσεων ](../Usage/Objectives#export-import-settings) (σε έκδοση AAPS που είναι ήδη εγκατεστημένη στο τηλέφωνό σας)
-2. Έχετε έτοιμο τον κωδικό πρόσβασης σας και τον κωδικό αποθήκευσης κλειδιών. Σε περίπτωση που έχετε ξεχάσει κωδικούς πρόσβασης, μπορείτε να προσπαθήσετε να τους βρείτε σε αρχεία έργου όπως περιγράφεται [ εδώ ](https://youtu.be/nS3wxnLgZOo).
-3.     Σημειώστε τη διαδρομή προς το χώρο αποθήκευσης κλειδιών
-      Στο Android Studio Build - > Δημιουργία υπογεγραμμένου APK
-      ! [Διαδρομή αποθήκευσης κλειδιών] (../ images / KeystorePath.PNG)
-      
-  
-  4. Κατασκευάστε την εφαρμογή από το μηδέν όπως περιγράφεται [ εδώ ](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components). Χρησιμοποιήστε το υπάρχον κλειδί και την αποθήκευση κλειδιού.
-4. Όταν έχετε δημιουργήσει το APK, διαγράψτε με επιτυχία την εξερχόμενη εφαρμογή στο τηλέφωνό σας, μεταφέρετε το νέο APK στο τηλέφωνό σας και εγκαταστήστε το.
-5. [Ρυθμίσεις εισαγωγής](../Usage/Objectives#export-import-settings)
-
-## Worst case scenario
-
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
-
-Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>.
-
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio) and **do not update gradle**.
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

@@ -1,5 +1,9 @@
 # Einstellungen
 
+Öffne die Einstellungen durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm:
+
+![Wie man die Einstellungen öffnet](../images/PreferencesOpen.png)
+
 ## Passwort für die Einstellungen
 
 Dies erlaubt dir, ein Passwort zu vergeben, um zu vermeiden, aus Versehen oder ohne Berechtigung Änderungen in den Einstellungen vorzunehmen. Wenn du hier ein Passwort festgelegt hast, dann musst du es eingeben, wenn du auf die Einstellungen zugreifen willst. Um die Passwort Option zu entfernen, lösche den Text in diesem Feld.
@@ -17,19 +21,41 @@ Es gibt Sicherheitsgrenzen aufgrund des Alters, die hier eingestellt werden kön
 * Bildschirm aktiv lassen ist hilfreich, wenn Du AAPS präsentieren willst. Dies wird ziemlich viel Energie verbrauchen, daher ist es ratsam, Dein Telefon an ein Ladekabel anzuschließen.
 * Unter Schaltflächen kannst Du festlegen, welche Buttons auf dem Startbildschirm verfügbar sind. Außerdem kannst Du einige Einstellungen für die Dialogfelder, die zu den Buttons gehören, festlegen.
 * QuickWizard-Einstellungen erlauben es dir, einen Schnellzugriffsbutton für übliche Snacks oder Mahlzeiten hinzuzufügen. Gib die Details der Kohlenhydrate ein und wenn du diesen QuickWizard-Button auf dem Homescreen drückst, wird der Bolus für diese Kohlenhydrate auf Basis der aktuellen Werte berechnet (wobei der Zuckerwert und das Insulin On Board verwendet werden, wenn Du es bei er Einstellung des Buttons eingibst).
-* Erweiterte Einstellungen, um Superbolus im Assistenten zu aktivieren und für die Statusanzeige auf dem Startbildschirm. Die Statusanzeige gibt eine visuelle Warnung bei niedrigem Reservoir- und Akkustand sowie überfälligem Katheterwechsel.
+
+### Erweiterte Einstellungen
+
+![Einstellungen-Übersicht-Erweiterte Einstellungen](../images/PreferencesOverviewAdvanced_V2_5.png)
+
+* Systemweite Einstellung, dass nur ein Teil des im Bolus Kalkulator berechneten Insulins abgegeben wird. Nur der eingestellte prozentuale Anteil (muss zwischen 10 und 100 liegen) wird abgegeben. Der Prozentsatz wird auch im Bolus Kalkulator angezeigt.
     
-    ![Statusanzeige - Bildschirmdetails](../images/StatusLights.jpg)
+    ![Bolus-Rechner 80%](../images/BolusWizardPartDelivery.png)
+
+* Option, den [Superbolus](../Getting-Started/Screenshots#section-a) im Bolus Kalkulator auswählen zu können.
+
+* Die Status Lights geben eine visuelle Warnung bei niedrigem Reservoir- und Akkustand sowie überfälligem Katheterwechsel. Die erweiterte Version zeigt die abgelaufene Zeit / Batteriestand in % an.
+    
+    ![Statusanzeige - Bildschirmdetails](../images/StatusLights_V2_5.png)
+    
+    Die Einstellungen für die Status Lights müssen in den Nightscout-Einstellungen vorgenommen werden. Setze die folgenden Variablen:
+    
+    * Kanülenalter: CAGE_WARN und CAGE_URGENT (Standard 48 und 72 Stunden)
+    * Insulinalter (Reservoir): IAGE_WARN und IAGE_URGENT (Standard 72 und 96 Stunden)
+    * Sensoralter: SAGE_WARN und SAGE_URGENT (Standard 164 und 166 Stunden)
+    * Batteriestand: BAGE_WARN und BAGE_URGENT (Standard 240 und 360 Stunden)
+
+* Warnschwelle und kritische Warnschwelle für den Reservoirstand.
+
+* Warnschwelle und kritische Warnschwelle für den Batterieladestand.
 
 ## Sicherheitseinstellungen für die Behandlung
 
-### Maximal erlaubert Bolus [U]
+### Maximal erlaubter Bolus [U]
 
-Das ist die maximale Menge an Bolus Insulin, die AAPS abgeben darf. Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Abgabemenge von Bolus Insulin entspricht, das Du für eine Mahlzeitenkorrektur brauchst. Diese Einschränkung gilt ebenfalls für die Ergebnisse des Bolus-Rechners.
+Das ist die maximale Menge an Bolus Insulin, die AAPS abgeben darf. Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhindern. Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Abgabemenge von Bolus Insulin entspricht, das Du für eine Mahlzeitenkorrektur brauchst. Diese Einschränkung gilt ebenfalls für die Ergebnisse des Bolus-Rechners.
 
 ### Maximal erlaubte Kohlenhydrate [g]
 
-Dies ist die maximale Menge an Kohlenhydraten, für die der AAPS Bolus-Rechner eine Dosis berechnen darf. Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhinden. Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Menge an Kohlenhydraten entspricht, die du vermutlich jemals für eine Mahlzeit brauchen wirst.
+Dies ist die maximale Menge an Kohlenhydraten, für die der AAPS Bolus-Rechner eine Dosis berechnen darf. Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhindern. Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Menge an Kohlenhydraten entspricht, die du vermutlich jemals für eine Mahlzeit brauchen wirst.
 
 ## Loop
 
@@ -55,7 +81,7 @@ Wenn Du anfängst den Loop zu benutzen, **wird empfohlen das Maximale Basal-IOB 
 
 Das ist ein wichtiger Schritt, um:
 
-* Zeit zu haben, sich auf sichere Art mit der Verwendung des AAPS systems vertraut zu machen und zu überwachen, wie es funktioniert.
+* Zeit zu haben, sich auf sichere Art mit der Verwendung des AAPS Systems vertraut zu machen und zu überwachen, wie es funktioniert.
 * Die Gelegenheit zu nutzen, dein Basalratenprofil und die Insulinsensibilitäts-Faktoren (ISF) anzupassen.
 * zu sehen, wie AAPS die Basalrate einschränkt, um Hypoglykämien zu verhindern.
 
@@ -64,15 +90,22 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 * Du kannst konservativ mit diesem Wert starten und ihn im Laufe der Zeit langsam erhöhen. 
 * Das sind aber nur Richtlinien; jeder Körper ist anders. Es kann durchaus sein, dass du mehr oder weniger benötigst als hier empfohlen wurde, aber beginne dennoch konservativ und passe es langsam an.
 
-*Hinweis: Aus Sicherheitsgründen ist es nicht möglich, den Wert Max-Basal IOB bei höher als 7 IE festzulegen.*
+*Bemerkung: zur Sicherheit ist es nicht möglich, den Wert Max-Basal IOB bei höher als 7 IE festzulegen.*
 
 ## Resorptions-Einstellungen
 
-Wenn du AMA Autosense eingestellt hast, dann wird dir hier ermöglicht, die maximale Zeit für die Resorption des Essens einzustellen und wie oft du eine Aktualisierung von Autosense möchtest. Wenn du oft Mahlzeiten mit viel Fett oder Eiweiss zu dir nimmst, wirst du die Resorptionszeit für das Essen erhöhen müssen.
+Wenn du AMA Autosense eingestellt hast, dann wird dir hier ermöglicht, die maximale Zeit für die Resorption des Essens einzustellen und wie oft du eine Aktualisierung von Autosense möchtest. Wenn du oft Mahlzeiten mit viel Fett oder Eiweiß zu dir nimmst, wirst du die Resorptionszeit für das Essen erhöhen müssen.
 
 ## Pumpen-Einstellungen
 
-Die Optionen hier hängen davon ab, welchen Pumpentreiber du im Config-Generator ausgewählt hast. Kopple deine Pumpe und richte sie gegebenenfalls entsprechend den Anweisungen für [DanaR Insulin Pumpe](../Configuration/DanaR-Insulin-Pump.md), [DanaRS Insulin Pumpe](../Configuration/DanaRS-Insulin-Pump.md) oder [Accu Chek Combo Pumpe](../Configuration/Accu-Chek-Combo-Pump.md) ein. Stelle sicher, dass du die virtuelle Pumpe im Config-Generator ausgewählt hast, wenn du AndroidAPS als Open Loop betreibst.
+Die Optionen hier hängen davon ab, welchen Pumpentreiber du im Config-Generator ausgewählt hast. Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
+
+* [DanaR Insulinpumpe](../Configuration/DanaR-Insulin-Pump.md) 
+* [DanaRS Insulinpumpe](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
+* [Medtronic Pumpe](..//Configuration/MedtronicPump.md)
+
+Stelle sicher, dass du die virtuelle Pumpe im Config-Generator ausgewählt hast, wenn du AndroidAPS als Open Loop betreibst.
 
 ## Nightscout-Client
 
@@ -93,7 +126,7 @@ Diese Einstellung erlaubt eine Fernsteuerung der App, indem Anweisungen an das S
 
 ## Andere
 
-* Hier kannst du Voreinstellungen für die verschiedenen temporären Ziele angeben ("bald Essen" und "Aktivitäten"). Wenn du bei "Temporäres Ziel" im Careportal zum Beispiel "Bald essen" auswählst, werden die hier eingegebenen Werte automatisch in die entsprechenden Eingabefelder eingetragen. Weitere Informationen zur Benutzung der temporären Ziele findest du in [OpenAPS Features](../Usage/Open-APS-features.md). 
+* Hier kannst du Voreinstellungen für die verschiedenen temporären Ziele angeben (bald Essen und Aktivitäten). Wenn du bei "Temporäres Ziel" im Careportal zum Beispiel "Bald essen" auswählst, werden die hier eingegebenen Werte automatisch in die entsprechenden Eingabefelder eingetragen. Weitere Informationen zur Benutzung der temporären Ziele findest du in [OpenAPS Features](../Usage/Open-APS-features.md). 
 * Du kannst Werte für die Befüllung setzen - diese werden an die Pumpe weitergegeben und das zur Befüllung verwendete Insulin wird vom Füllstand des Reservoir abgezogen, ohne in IOB Berechnungen berücksichtigt zu werden. Schaue bitte im Beipackzettel deines Katheters nach, wie viele Einheiten du je nach Nadel- und Schlauchlänge zur Befüllung verwenden sollst.
 * Du kannst die Werte zur Anzeige der Zielbereiche auf dem Hauptbildschirm und der Smartwatch eingeben. Beachte bitte, dass dies nur die Anzeige in der Grafik betrifft und nicht die Ziel- oder Berechnungswerte beeinflusst.
 * "Kurze Tab-Überschriften" ermöglicht es dir, mehr Tab-Reiter auf dem Bildschirm zu sehen. Zum Beispiel wird aus 'Open APS' der Titel 'OAPS' und 'Careportal' wird zu 'CP'.

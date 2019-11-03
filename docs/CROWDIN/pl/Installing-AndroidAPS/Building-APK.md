@@ -28,7 +28,7 @@ If your build fails with an error regarding "on demand configuration" you can do
 
 In general, the steps necessary to build the APK file:
 
-* Install git
+* [Install git](../Installing-AndroidAPS/git-install.rst)
 * Install and setup Android Studio.
 * Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
 * Open the cloned project in Android Studio as active project.
@@ -41,18 +41,7 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Install git (if you don't have it)
 
-### Windows
-
-* Any git version should work. For example <https://git-scm.com/download/win>
-* Make sure to note down the installation path. You will need it later after you installed Android Studio.
-  
-  ![Git installation path](../images/Update_GitPath.png)
-
-### Mac
-
-* Any git version should work. For example <https://git-scm.com/download/mac>
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
 ## Install Android Studio
 
@@ -238,7 +227,7 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
 * Fill in the information for the next dialog. 
-  * Key store path: is the path to the keystore file
+  * Key store path: is the path to the keystore file. **Do not save in same folder as projekt. You must use a different directory!**
   * The password fields below are for the keystore to double check for typing errors.
   * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
   * The password fields below the key are for the key itself. As always to double check for typing errors.
@@ -276,7 +265,14 @@ A file manager window opens. It might look a bit different on your system as I a
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e. Bluetooth, cloud upload, connect computer and phone by cable or use email. I use Gmail here in this example as it is fairly simple for me. I mention this because to install the self-signed app we need to allow Android on our smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e.
+
+* Bluetooth
+* cloud upload (Google Drive or other cloud services)
+* connect computer and phone by cable 
+* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+
+In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
@@ -293,3 +289,7 @@ Yeah, you got it and can now start with configuring AndroidAPS for your use (CGM
 ## Identify receiver if using xDrip
 
 [See xDrip page](../Configuration/xdrip#identify-receiver)
+
+## Rozwiązywanie problemów
+
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

@@ -48,31 +48,35 @@ Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude na
 
 ## Nastavení v AAPS
 
-![Screenshot nastavení Insight](../images/Insight_pairing.png)
+![Screenshot nastavení Insight](../images/Insight_pairing_V2_5.png)
 
 V Insight nastavení v AndroidAPS můžete upravit následující možnosti:
 
-* „Zaznamenat výměnu kanyly“: Automaticky provede záznam výměny kanyly, když v pumpě provedete „Naplnit kanylu“   
-    <font color="red">Poznámka: Výměna kanyly také způsobí reset automatické citlivosti</b></font>
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.  
+    <font color="red">Note: A cannula change also resets Autosens</b></font>
 * „Zaznamenat výměnu hadičky“: Automaticky provede záznam v databázi AndroidAPS, když v pumpě provedete „Naplnit hadičku“.
-* „Zaznamenat výměnu baterie“: Automaticky provede záznam výměny baterie, pokud vložíte do pumpy novou baterii.
-* „Zaznamenat změnu režimu provozu“: Automaticky provede záznam v databázi AndroidAPS, kdykoliv spustíte/zastavíte pumpu.
-* „Zaznamenat výstrahy“: Automaticky provede záznam v databázi AndroidAPS, kdykoliv pumpa zahlásí alarm (s výjimkou upomínek, bolusů a konce dočasných bazálů (TBR) – ty zaznamenány nejsou).
-* „Povolit emulaci dočasných bazálů“: pumpa Insight umožňuje hodnotu maximálního dočasného bazálu (TBR) do výše 250 %. Aby bylo možné toto omezení obejít, pumpa obdrží příkaz provést prodloužený bolus, aby bylo možné zvýšit TBR nad 250 %. <font color="red">Pozn.: Současné používání prodlouženého bolusu ve stejný čas jako další prodloužený bolus může způsobit chybu.</font>
-* „Doba čekání na obnovení spojení“: Definuje, jak dlouho bude AndroidAPS čekat před opětovným pokusem po neúspěšném pokusu o připojení. Můžete vybrat 0 až 20 sekund. Pokud máte problémy s připojením, vyberte delší dobu čekání.   
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump.
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
+* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
+    
+    **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
+
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Příklad pro min. dobu trvání zotavení = 5 a max. dobu zotavení = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    žádné spojení -> čekej **5** sec.   
-    znovu -> žádné spojení -> čekej **6** sec.   
-    znovu -> žádné spojení -> čekej **7** sec.   
-    znovu -> žádné spojení -> čekej **8** sec.   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    znovu -> žádné spojení -> čekej **20** sec.   
-    znovu -> žádné spojení -> čekej **20** sec.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
-* „Limit pro odpojení“: Definuje, jak dlouho (v sekundách) bude AndroidAPS čekat s odpojením od pumpy po dokončení úlohy. Výchozí hodnota je 5 sekund.
+* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 Po dobu, kdy byla pumpa zastavena, AAPS zobrazí záznam s dočasnou bazální hodnotou 0 %.
 

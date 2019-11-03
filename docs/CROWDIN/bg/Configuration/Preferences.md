@@ -1,8 +1,12 @@
 # Preferences
 
+Open preferences by clicking three-dot-menu on top right side of homescreen:
+
+![How to open Preferences](../images/PreferencesOpen.png)
+
 ## Password for settings
 
-Това ви позволява да сложите парола, за да предотвратите случайни или неоторизирани промени в Опции. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
+This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
 
 ## Patient age
 
@@ -17,9 +21,31 @@ There are safety limits in place based on age you selected in this setting. If y
 * Keep screen on is useful while you are giving a presentation. It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 * Buttons let you choose which buttons are visible on your home screen. Also gives you a few options for the popup screen you will see after pressing a button.
 * Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
-* Advanced settings to enable superbolus in wizard and to show status lights on home screen. Status lights give a visual warning for low reservoir and battery level as well as overdue site change.
+
+### Advanced Settings
+
+![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
+
+* General setting to deliver only part of bolus wizard result. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. The percentage is shown in bolus wizard.
     
-    ![Status lights - detail](../images/StatusLights.jpg)
+    ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
+
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
+
+* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+    
+    ![Status lights - detail](../images/StatusLights_V2_5.png)
+    
+    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    
+    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
+    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
+    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
+    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+
+* Treshold for warning reservoir level and critical reservoir level.
+
+* Treshold for warning battery level and critical battery level.
 
 ## Treatments safety
 
@@ -48,7 +74,7 @@ This setting exists as a safety limit to prevent AAPS from ever being capable of
 Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
 
 * This value does not consider bolus IOB, only basal.
-* This value is calculated and monitored indepentandlty of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
 * This value is measured in insulin units (u).
 
 When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
@@ -72,7 +98,14 @@ If you have selected to use AMA Autosens then you will be able to enter your max
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) or [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) or [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) instructions where relevant. If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
+
+* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
+* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) 
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+
+If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 ## NS Client
 

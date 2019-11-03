@@ -1,12 +1,16 @@
 # Προτιμήσεις
 
+Open preferences by clicking three-dot-menu on top right side of homescreen:
+
+![How to open Preferences](../images/PreferencesOpen.png)
+
 ## Κωδικός για ρυθμίσεις
 
-Αυτό σας επιτρέπει να ορίσετε έναν κωδικό πρόσβασης για να αποτρέψετε τυχαίες ή μη εξουσιοδοτημένες αλλαγές στις Προτιμήσεις. Αφού εισάγετε έναν κωδικό πρόσβασης εδώ, θα πρέπει να τον εισάγετε για να αποκτήσετε πρόσβαση στις Προτιμήσεις. Για να καταργήσετε την επιλογή κωδικού πρόσβασης, στις "Προτιμήσεις" διαγράψετε το κείμενο μέσα στο πεδίο.
+This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
 
 ## Ηλικία Ασθενούς
 
-Υπάρχουν όρια ασφαλείας βάσει της ηλικίας που επιλέξατε σε αυτή τη ρύθμιση. Αν αρχίσετε να χτυπάτε αυτά τα όρια (όπως το μέγιστο bolus) είναι ώρα να προχωρήσετε ένα βήμα προς τα πάνω. Είναι κακή ιδέα να επιλέξετε υψηλότερη από την πραγματική ηλικία, επειδή μπορεί να οδηγήσει σε υπερδοσολογία εισάγοντας λάθος τιμή στο παράθυρο διαλόγου ινσουλίνης (παρακάμπτοντας για παράδειγμα την δεκαδική τελεία). Αν θέλετε να μάθετε τους πραγματικούς αριθμούς για αυτά τα σκληρά κωδικοποιημένα όρια ασφαλείας, μεταβείτε στη λειτουργία αλγορίθμου που χρησιμοποιείτε σε [ αυτή τη σελίδα ](../Usage/Open-APS-features.md).
+There are safety limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). If you want to know the actual numbers for these hard coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
 
 ## Γενικά
 
@@ -17,88 +21,117 @@
 * Η παρακολούθηση της οθόνης είναι χρήσιμη κατά τη διάρκεια μιας παρουσίασης. Θα καταναλώνει πολλή ενέργεια, οπότε είναι συνετό να συνδέσετε το τηλέφωνό σας σε φορτιστή.
 * Τα κουμπιά σας επιτρέπουν να επιλέξετε ποια κουμπιά είναι ορατά στην αρχική σας οθόνη. Επίσης, σας δίνει μερικές επιλογές για την αναδυόμενη οθόνη που θα δείτε μετά το πάτημα ενός κουμπιού.
 * Οι ρυθμίσεις του γρήγορου οδηγού σας επιτρέπουν να προσθέσετε ένα γρήγορο κουμπί για ένα συνηθισμένο σνακ ή γεύμα, να εισαγάγετε τις λεπτομέρειες σχετικά με την περιεκτικότητα σε υδατάνθρακες και στην αρχική οθόνη, αν επιλέξετε το πλήκτρο γρήγορου οδηγού, θα υπολογίσει και το bolus για αυτούς τους υδατάνθρακες με βάση τις τρέχουσες αναλογίες( ή τη τιμή γλυκόζης στο αίμα ή η ινσουλίνη επί του οργανισμού, εάν έχει ρυθμιστεί).
-* Προηγμένες ρυθμίσεις για να ενεργοποιήσετε το superbolus στον οδηγό και για να εμφανίζετε φως κατάστασης στην αρχική οθόνη. Τα φώτα κατάστασης δίνουν μια οπτική προειδοποίηση για χαμηλό επίπεδο δεξαμενής και μπαταρίας, καθώς και καθυστερημένη αλλαγή θέσης.
+
+### Προηγμένες ρυθμίσεις
+
+![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
+
+* General setting to deliver only part of bolus wizard result. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. The percentage is shown in bolus wizard.
     
-    ![Φωτισμοί κατάστασης - λεπτομέρειες](../images/StatusLights.jpg)
+    ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
+
+* Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
+
+* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+    
+    ![Status lights - detail](../images/StatusLights_V2_5.png)
+    
+    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    
+    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
+    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
+    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
+    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+
+* Treshold for warning reservoir level and critical reservoir level.
+
+* Treshold for warning battery level and critical battery level.
 
 ## Ασφάλεια θεραπειών
 
-### Μέγιστο επιτρεπόμενο όριο χορήγησης ινσουλίνης [U μονάδες]
+### Max allowed bolus [U]
 
-Αυτή είναι η μέγιστη ποσότητα ινσουλίνης που επιτρέπεται να χορηγήσει το AAPS. Αυτή η ρύθμιση υπάρχει ως όριο ασφαλείας για να αποφευχθεί η υπερβολική χορήγηση ινσουλίνης λόγω τυχαίας εισαγωγής ή σφάλματος χρήστη. Συνιστάται να το ρυθμίζετε σε μια λογική ποσότητα που αντιστοιχεί περίπου στη μέγιστη ποσότητα ινσουλίνης που πιθανόν να χρειαστείτε για ένα γεύμα ή μια διόρθωση. Αυτός ο περιορισμός εφαρμόζεται επίσης στον Υπολογιστή Bolus.
+This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
 
-### Μέγιστο επιτρεπόμενο όριο υδατανθράκων [γρ]
+### Max allowed carbs [g]
 
-Αυτή είναι η μέγιστη ποσότητα υδατανθράκων που επιτρέπει ο υπολογιστής bolus AAPS. Αυτή η ρύθμιση υπάρχει ως όριο ασφαλείας για να αποφευχθεί η υπερβολική χορήγηση ινσουλίνης λόγω τυχαίας εισαγωγής ή σφάλματος χρήστη. Συνιστάται να το ορίσετε σε ένα λογικό ποσό που αντιστοιχεί περίπου στη μέγιστη ποσότητα υδατανθράκων που πιθανόν να χρειαστείτε για ένα γεύμα.
+This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
 ## Κύκλωμα
 
-Μπορείτε να αλλάξετε μεταξύ ανοιχτού και κλειστού κυκλώματος εδώ. Το ανοιχτό κύκλωμα σημαίνει ότι οι προτάσεις TBR βασίζονται στα δεδομένα σας και εμφανίζονται ως ειδοποίηση, αλλά πρέπει να επιλέξετε να τις αποδεχτείτε με μη αυτόματο τρόπο και να τις εισαγάγετε με μη αυτόματο τρόπο στην αντλία σας. Τα κλειστό κύκλωμα σημαίνει ότι οι προτάσεις TBR αποστέλλονται αυτόματα στην αντλία σας χωρίς επιβεβαίωση ή εισαγωγή από εσάς. Η αρχική οθόνη θα εμφανίσει στην επάνω αριστερή γωνία είτε είστε σε ανοικτό είτε κλειστό κύκλωμα, και πατώντας και κρατώντας πατημένο αυτό το πλήκτρο αρχικής οθόνης θα επιτρέψετε επίσης την εναλλαγή μεταξύ των δύο.
+You can toggle between open and closed looping here. Open looping means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump. Closed looping means TBR suggestions are automatically sent to your pump without confirmation or input from you. The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
 
 ## OpenAPS AMA
 
-Το OpenAPS Advanced Meal Assist (Προηγμένος Βοηθός Γεύματος) (AMA) επιτρέπει στο σύστημα να φτάσει σε υψηλές ρυθμούς πιο γρήγορα μετά από ένα bolus γεύματος, αν εισάγετε αξιόπιστα τους υδατάνθρακες. Ενεργοποιήστε την στην καρτέλα Διαμόρφωσης για να δείτε τις ρυθμίσεις ασφάλειας εδώ, θα πρέπει να έχετε ολοκληρώσει τον Στόχο 7 για να χρησιμοποιήσετε αυτή τη λειτουργία. Μπορείτε να διαβάσετε περισσότερα σχετικά με τις ρυθμίσεις και τα [ Autosens στα OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed Objective 7 to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Μέγιστη U/hr (μονάδες ινσουλίνης ανά ώρα) που ένας προσωρινός βασικός ρυθμός μπορεί να ρυθμιστεί
+### Max U/hr a Temp Basal can be set to
 
-Αυτή η ρύθμιση υπάρχει ως όριο ασφαλείας για να αποφευχθεί η πιθανότητα να δοθεί από το AAPS επικίνδυνα υψηλός βασικός ρυθμός. Η τιμή μετράται σε μονάδες ανά ώρα (u / hr). Συνιστάται να το ορίσετε σε κάτι λογικό. Μια καλή σύσταση είναι να λάβετε το υψηλότερο **βασικό ποσοστό ** στο προφίλ σας και να το ** να το πολλαπλασιάσετε κατά 4 **. Για παράδειγμα, εάν ο υψηλότερος βασικός ρυθμός στο προφίλ σας ήταν 0.5u / hr θα μπορούσατε να το πολλαπλασιάσετε κατά 4 για να πάρετε μια τιμή 2u / hr.
+This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). Συνιστάται να το ορίσετε σε κάτι λογικό. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
 
-### Το μέγιστο βασικό IOB που το OpenAPS μπορεί να παραδώσει [U]
+### Maximum basal IOB OpenAPS can deliver [U]
 
-Η ποσότητα πρόσθετης βασικής ινσουλίνης (σε μονάδες) που επιτρέπεται να συσσωρεύεται στο σώμα σας, πάνω από το φυσιολογικό βασικό προφίλ σας. Μόλις επιτευχθεί αυτή η τιμή, το AAPS θα σταματήσει να χορηγεί πρόσθετη βασική ινσουλίνη έως ότου η βασική σας ινσουλίνη επί του οργανισμού (ΙΟΒ) καταστραφεί ξανά εντός αυτού του εύρους.
+Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
 
-* Αυτή η τιμή δεν θεωρεί το bolus IOB, μόνο το βασικό.
-* Αυτή η τιμή υπολογίζεται και παρακολουθείται ανεξάρτητα από το κανονικό βασικό σας ρυθμό. Είναι μόνο η πρόσθετη βασική ινσουλίνη στην κορυφή αυτού του κανονικού ρυθμού που λαμβάνεται υπόψη.
-* Η τιμή αυτή μετράται σε μονάδες ινσουλίνης (u).
+* This value does not consider bolus IOB, only basal.
+* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* This value is measured in insulin units (u).
 
-Όταν ξεκινάτε το κύκλωμα, ** συνιστάται να ορίσετε το μέγιστο βασικό IOB σε 0 ** για μια χρονική περίοδο, ενώ θα συνηθίσετε στο σύστημα. Αυτό εμποδίζει το AAPS να δώσει οποιαδήποτε επιπλέον βασική ινσουλίνη. Κατά τη διάρκεια αυτού του χρόνου, το AAPS θα εξακολουθεί να είναι σε θέση να περιορίσει ή να απενεργοποιήσει την βασική σας ινσουλίνη για να βοηθήσει στην πρόληψη της υπογλυκαιμίας.
+When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
 
-Πρόκειται για ένα σημαντικό βήμα προκειμένου:
+This is an important step in order to:
 
-* Έχετε μια χρονική περίοδο για να συνηθίσετε με ασφάλεια το σύστημα AAPS και να παρακολουθήσετε τον τρόπο λειτουργίας του.
-* Πάρτε την ευκαιρία για να τελειοποιήσετε το βασικό προφίλ σας και τον παράγοντα ευαισθησίας στην ινσουλίνη (ISF).
-* Δείτε πώς το AAPS περιορίζει την βασική σας ινσουλίνη για την πρόληψη της υπογλυκαιμίας.
+* Have a period of time to safely get used to the AAPS system and monitor how it works.
+* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
+* See how AAPS limits your basal insulin to prevent hypoglycaemia.
 
-Όταν αισθάνεστε άνετα, μπορείτε να επιτρέψετε στο σύστημα να σας δώσει πρόσθετη βασική ινσουλίνη αυξάνοντας την τιμή Μέγιστος βασικός IOB. Η συνιστώμενη κατευθυντήρια γραμμή για αυτό είναι να πάρετε το υψηλότερο βασικό ρυθμό ** στο προφίλ σας και ** να το πολλαπλασιάσετε κατά 3 **. Για παράδειγμα, αν ο υψηλότερος βασικός ρυθμός στο προφίλ σας ήταν 0.5u / hr θα μπορούσατε να το πολλαπλασιάσετε κατά 3 για να πάρετε μια τιμή 1,5u.</p> 
+When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
 
-* Μπορείτε να ξεκινήσετε συντηρητικά με αυτή την τιμή και να την αυξήσετε αργά με την πάροδο του χρόνου. 
-* Αυτές είναι μόνο κατευθυντήριες γραμμές. το σώμα του καθενός είναι διαφορετικό. Μπορεί να διαπιστώσετε ότι χρειάζεστε περισσότερο ή λιγότερο από αυτό που συνιστάται εδώ, αλλά πάντα ξεκινήστε συντηρητικά και ρυθμίστε αργά.
+* You can start conservatively with this value and increase it slowly over time. 
+* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
 
-*Σημείωση: Ως χαρακτηριστικό ασφαλείας, ο μέγιστος βασικός IOB είναι αυστηρά περιορισμένος σε 7u.*
+*Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
 
 ## Ρυθμίσεις απορρόφησης
 
-Αν έχετε επιλέξει να χρησιμοποιήσετε το AMA Autosens τότε θα μπορείτε να εισάγετε το μέγιστο χρόνο απορρόφησης γεύματος σας και πόσο συχνά θέλετε να ανανεώνεται το autosense. Εάν τρώτε συχνά φαγητά με υψηλή περιεκτικότητα σε λιπαρά ή πρωτεΐνες, θα χρειαστεί να αυξήσετε το χρόνο απορρόφησης του γεύματος.
+If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
 ## Ρυθμίσεις αντλίας
 
-Οι επιλογές εδώ θα διαφέρουν ανάλογα με το πρόγραμμα οδήγησης της αντλίας που έχετε επιλέξει στο 'Config Builder'. Συνδυάστε και ρυθμίστε την αντλία σας σύμφωνα με τις οδηγίες [ Αντλία ινσουλίνης DanaR ](../Configuration/DanaR-Insulin-Pump.md) ή [ Αντλία ινσουλίνης DanaRS ](../Configuration/DanaRS-Insulin-Pump.md) ή [ Αντλία Accu Chek Combo ](../Configuration/Accu-Chek-Combo-Pump.md). Εάν χρησιμοποιείτε το AndroidAPS για να ανοίχτό κύκλωμα βεβαιωθείτε ότι έχετε επιλέξει Εικονική αντλία στο config Builder.
+The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
+
+* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
+* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Αντλία Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+
+If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 ## NS Client
 
-* Ρυθμίστε τη διεύθυνση URL σας στο διαδίκτυο (https://yourwebsitename.herokuapp.com ή https://yourwebsitename.azurewebsites.net) και το 'μυστικό API' (ένας κωδικός 12 χαρακτήρων που καταγράφεται στις μεταβλητές heroku ή azure). Αυτό επιτρέπει την ανάγνωση και την εγγραφή δεδομένων μεταξύ της ιστοσελίδας nightscout και του AndroidAPS. Κάντε διπλό έλεγχο για τυπογραφικά λάθη εδώ, εάν είστε κολλημένοι στο Στόχο 1.
-* **Βεβαιωθείτε ότι η διεύθυνση URL είναι ΧΩΡΊΣ /api/v1/ στο τέλος.**
+* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
+* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
     
     ![NSClient URL](../images/NSClientURL.png)
 
-* Το 'Log app start to nightscout' θα καταγράφει μια σημείωση στις καταχωρήσεις σας για τα προσωπικά σας δεδομένα κάθε φορά που ξεκινάει η εφαρμογή. Η εφαρμογή δεν πρέπει να χρειάζεται να ξεκινάει περισσότερες από μία φορές την ημέρα. πιο συχνά από αυτό υποδηλώνει ένα πρόβλημα.
+* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
 
-* Οι "επιλογές συναγερμού" σάς επιτρέπουν να επιλέξετε ποιοι προεπιλεγμένοι συναγερμοί Nightcout να χρησιμοποιηθούν μέσω της εφαρμογής. Για τους ήχους συναγερμού θα πρέπει να ορίσετε τις τιμές συναγερμού Επείγουσας Υψηλής, Υψηλής, Χαμηλής και Επείγουσας Χαμηλής Ειδοποίησης στις τιμές σας [ heroku ή azure ](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Θα λειτουργούν μόνο ενώ έχετε μια σύνδεση με το nightcout και προορίζονται για γονείς / φροντιστές, εάν έχετε την πηγή CGM στο τηλέφωνό σας και, στη συνέχεια, χρησιμοποιήστε αυτούς τους συναγερμούς (π.χ. xdrip +).
-* Η επιλογή "Ενεργοποίηση τοπικών εκπομπών" θα μοιράζεται τα δεδομένα σας για τα προσωπικά σας δεδομένα σε άλλες εφαρμογές του τηλεφώνου, όπως το xdrip.
-* Πρέπει πάντα να ενεργοποιείτε την "χρήση βασικών απόλυτων τιμών" εάν θέλετε να χρησιμοποιήσετε σωστά το Autotune.
+* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
+* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
+* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
 
 ## Επικοινωνία με SMS
 
-Αυτή η ρύθμιση επιτρέπει τον απομακρυσμένο έλεγχο της εφαρμογής με οδηγίες γραπτών μηνυμάτων στο τηλέφωνο ασθενών που θα ακολουθήσει η εφαρμογή, όπως η αναστολή του κυκλώματος ή το bolus. Περισσότερες πληροφορίες περιγράφονται σε [ εντολές SMS ](../Usage/SMS-Commands.md), αλλά θα εμφανίζονται μόνο στις Προτιμήσεις εάν έχετε επιλέξει αυτήν την επιλογή στη Διαμόρφωση.
+This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Usage/SMS-Commands.md) but it will only display in Preferences if you have selected this option in the Config Builder.
 
 ## Άλλα
 
-* Μπορείτε να ορίσετε τις προεπιλογές για τους στόχους ρυθμού σας εδώ για τους διαφορετικούς τύπους στόχων (απρογραμμάτιστο γεύμα και δραστηριότητα). Όταν επιλέγετε ένα στόχο ρυθμού και, στη συνέχεια, επιλέγετε, για παράδειγμα, το "απρογραμμάτιστο γεύμα" από το αναπτυσσόμενο πλαίσιο, αυτόματα θα συμπληρώσετε τη διάρκεια και την αξία για εσάς με βάση τα στοιχεία που παρείχατε εδώ. Για περισσότερες πληροφορίες σχετικά με τη χρήση των στόχων ρυθμού βλέπε [ λειτουργίες OpenAPS ](../Usage/Open-APS-features.md). 
-* Μπορείτε να ορίσετε προεπιλεγμένα αρχικά ποσά - αυτό θα προκαλέσει prime στην αντλία την καθορισμένη τιμή και αυτή η ινσουλίνη υπολογίζεται όπως χρησιμοποιείται από τη δεξαμενή αλλά δεν υπολογίζεται στους υπολογισμούς IOB. Ανατρέξτε στο φυλλάδιο οδηγιών στο κουτί της κάνουλας για το πόσες μονάδες θα πρέπει να γίνουν ανάλογα με το μήκος της βελόνας και το μήκος της σωλήνωσης.
-* Μπορείτε να αλλάξετε την προβολή στην αρχική οθόνη και να παρακολουθήσετε τις τιμές που βρίσκονται στην εμβέλεια. Σημειώστε ότι αυτό είναι πώς φαίνονται τα γραφήματα και δεν επηρεάζουν τον στόχο ή τους υπολογισμούς σας.
-* Ο τίτλος "Καρτέλα συντόμευσης" σας επιτρέπει να βλέπετε περισσότερους τίτλους καρτελών στην οθόνη, για παράδειγμα η καρτέλα 'Open APS' γίνεται 'OAPS', 'Στοχοι' γίνεται 'Στο' κ. λπ.
-* Οι "Τοπικές ειδοποιήσεις" σάς επιτρέπουν να αποφασίσετε αν λαμβάνετε μια προειδοποίηση και μετά από πόσο καιρό δεν λαμβάνετε τιμές γλυκόζης στο αίμα (παλαιά δεδομένα) ή αν η αντλία δεν είναι προσβάσιμη. Εάν λαμβάνετε συχνά ειδοποίηση μη προσβάσιμης αντλίας, ενεργοποιήστε τον BT Watchdog στις Ρυθμίσεις για προχωρημένους.
+* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
+* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
+* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
+* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
 
 ## Επιλογές δεδομένων
 
-* Το "Fabric Upload" θα στείλει δεδομένα σχετικά με σφάλματα και τη χρήση χαρακτηριστικών για τους προγραμματιστές.
+* 'Fabric Upload' will send crash reporting and feature usage data to the developers.

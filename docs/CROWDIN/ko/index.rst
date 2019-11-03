@@ -1,7 +1,11 @@
 Welcome to the AndroidAPS documentation
 ==============================================
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
+
+The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. 
+
+The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
 
 Main components are:
 
@@ -39,7 +43,9 @@ AndroidAPS 설치하기
 
    APK 파일 빌드하기 <./Installing-AndroidAPS/Building-APK.md>
    새 버전 혹은 다른 branch로 업데이트 하기 <./Installing-AndroidAPS/Update-to-new-version.md>
-   릴리즈 노트 <./Installing-AndroidAPS/Releasenotes.md>
+   Install git <./Installing-AndroidAPS/git-install.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    
    
@@ -103,7 +109,7 @@ AndroidAPS for children
    :glob:
    
    Remote monitoring <./Children/Children.rst>
-   SMS commands <./Usage/SMS-Commands.md>
+   SMS commands <./Children/SMS-commands2019.rst>
    
 
 Advanced 

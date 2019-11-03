@@ -1,7 +1,11 @@
 Vítejte v dokumentaci k AndroidAPS
 ==============================================
 
-AndroidAPS je open source aplikace určená pro osoby s diabetem, které jsou závislé na inuzlinu. Funguje jako umělá slinivka (APS) na telefonech se systémem Google Android. Hlavními součástmi jsou různé softwarové algoritmy openAPS, jejichž cílem je dělat totéž, co zdravá slinivka: udržovat glykémii ve zdravém rozmezí pomocí automatizovaného dávkování inzulinu (AID). Komě toho potřebujete schválenou inzulinovou pumpu a senzor pro kontinuální monitoraci glykémie. Tato aplikace NEPOUŽÍVÁ umělou inteligenci, která se sama učí. Místo toho se výpočty AndroidAPS zakládají na algoritmu individuálního dávkování a příjmu sacharidů, které uživatel ručně zadává do svého profilu ošetření, ale z bezpečnostních důvodů jsou systémem ověřovány. Aplikace není k dispozici v Google Play - z právních důvodů si ji musíte sami sestavit ze zdrojového kódu.
+AndroidAPS je open source aplikace určená pro osoby s diabetem, které jsou závislé na inuzlinu. Funguje jako umělá slinivka (APS) na telefonech se systémem Google Android. Hlavními součástmi jsou různé softwarové algoritmy openAPS, jejichž cílem je dělat totéž, co zdravá slinivka: udržovat glykémii ve zdravém rozmezí pomocí automatizovaného dávkování inzulinu (AID). Komě toho potřebujete schválenou inzulinovou pumpu a senzor pro kontinuální monitoraci glykémie. 
+
+Tato aplikace NEPOUŽÍVÁ umělou inteligenci, která se sama učí. Místo toho se výpočty AndroidAPS zakládají na algoritmu individuálního dávkování a příjmu sacharidů, které uživatel ručně zadává do svého profilu ošetření, ale z bezpečnostních důvodů jsou systémem ověřovány. 
+
+Aplikace není k dispozici v Google Play - z právních důvodů si ji musíte sami sestavit ze zdrojového kódu.
 
 Hlavní součásti jsou:
 
@@ -39,7 +43,9 @@ Jak nainstalovat AndroidAPS
 
    Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
-   Poznámky k verzi <./Installing-AndroidAPS/Releasenotes.md>
+   Install git <./Installing-AndroidAPS/git-install.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    
    
@@ -103,7 +109,7 @@ AndroidAPS pro děti
    :glob:
    
    Vzdálené monitorování <./Children/Children.rst>
-   SMS příkazy <./Usage/SMS-Commands.md>
+   SMS commands <./Children/SMS-commands2019.rst>
    
 
 Pokročilé 

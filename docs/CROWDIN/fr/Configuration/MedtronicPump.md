@@ -1,6 +1,6 @@
 # Medtronic Pumps
 
-**>>>> Medtronic pump driver is not part of AndroidAPS master yet. It will be available in next master version. <<<<**
+**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)). <<<<**
 
 * * *
 
@@ -8,11 +8,7 @@ Works only with older Medtronic pumps (details see below). Does not work with Me
 
 * * *
 
-While Medtronic driver was tested with good test group, it is still considered a beta software, which means that until bigger audience tests it for a longer period of time, you will need to enable Engineering mode, to be able to see driver in AndroidAPS.
-
-* * *
-
-## Hardware and software requirements
+## Configuration matérielle et logicielle requise
 
 - **Phone:** Medtronic driver should work with any phone supporting BLE. **IMPORTANT: While driver works correctly on all phones, enabling/disabling Bluetooth doesn't (this is required when you loose connection to RileyLink and system can't recover automatically - happens from time to time). So you need to get device with Android 6.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. We are looking into problem with Android 9, but so far we haven't found resolution (it seems to work on some models and not on others, and on also works sometimes on some models).**
 - **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. Device that does is called RileyLink (you can get it here [getrileylink.org](https://getrileylink.org/)). You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). If you are feeling adventurous you can also try Gnarl ([here](https://github.com/ecc1/gnarl)), which is sort-of RileyLink-clone. 

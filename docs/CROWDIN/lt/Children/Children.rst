@@ -11,7 +11,7 @@ Funkcijos
 * Vaiko pompa yra kontroliuojama per vaiko telefoną naudojant AndroidAPS.
 * Tėvai gali nuotoliniu būdu sekti, matyti visus svarbius duomenis, tokius, kaip gliukozės kiekis, aktyvūs angliavandeniai, aktyvus insulinas, ir pan. naudojant **NSClient app** jų telefone.
 * Tėvai gali gauti savo telefone perspėjimus, naudodami **xDrip app sekėjo režime**.
-* AndroidAPS nuotolinis valdymas naudojant SMS Komandas <../Usage/SMS-Commands.html>`_.
+* Remote control of AndroidAPS using `SMS Commands <../Usage/SMS-Commands2019.html>`_.
 * Profilio perjungimas ir laikinų tikslų nustatymas nuotoliniu būdu per NSClient programą.
 
 Įrankiai ir programos, skirtos nuotoliniam stebėjimui

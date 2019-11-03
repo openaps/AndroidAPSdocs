@@ -4,7 +4,7 @@ Tento projekt je založený na dobrovolnické práci, takže platí určitá pra
 
 * 1. úroveň: Přečtěte si dokumentaci - máme nyní vyhledávací funkce, které vám pomohou!
 * 2. úroveň: Hledejte ve facebookové skupině, pokud tam už není existující odpověď, pak se zeptejte na facebookové skupině [AndroidAPS Users](https://www.facebook.com/groups/1900195340201874/)
-* 3. úroveň: Pokud jste z Facebooku nedostali výsledek, pak se zkuste zeptat v [Gitteru](https://gitter.im/MilosKozak/AndroidAPS). Položení znovu stejné otázky bude ignorované/smazané na obou kanálech, aby se předešlo duplicitnímu odpovídání. Nezapomeňte, že většina vývojářů žije v Evropě, proto odpovědi nemusí být 24/7; můžete čekat několik hodin obzvlášť přes víkendy a svátky.
+* 3. úroveň: Pokud jste z Facebooku nedostali výsledek, pak se zkuste zeptat v [Gitteru](https://gitter.im/MilosKozak/AndroidAPS). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Nezapomeňte, že většina vývojářů žije v Evropě, proto odpovědi nemusí být 24/7; můžete čekat několik hodin obzvlášť přes víkendy a svátky.
 * 4. úroveň: Založte problém - [issue](https://github.com/MilosKozak/AndroidAPS/issues) a přiložte své [log soubory](../Usage/Accessing-logfiles.md)
 * 5. úroveň: zašlete email na *developers@androidaps.org* (jedině pokud obsahuje osobní údaje, které by neměly jít na veřejnost, a vaše problémy ještě nebyly vyřešeny v předchozích úrovních)
 

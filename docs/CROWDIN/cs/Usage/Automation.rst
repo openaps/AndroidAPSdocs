@@ -65,7 +65,7 @@ Můžete si vybrat jednu nebo více akcí:
 
 Po přidání akce kliknutím na výchozí hodnoty **nezapomeňte změnit výchozí hodnoty** na to, co potřebujete.
  
-.. image:: ../images/Automation_Default.png
+.. image:: ../images/Automation_Default_V2_5.png
   :alt: Výchozí hodnoty automatizace vs. nastavené hodnoty
 
 Good practice

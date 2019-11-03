@@ -2,7 +2,7 @@
 
 Следуйте инструкциям [ в руководстве по обновлению](../Installing-AndroidAPS/Update-to-new-version.md). На ее страницах решаются наиболее распространенные проблемы связанные с обновлениями.
 
-Начиная с версии 2.3 установлена новая процедура обновления. Как только будет доступно новое обновление вы получите следующую информацию:
+You will receive the following information as soon as a new update is available:
 
 ![Информация об обновлении](../images/AAPS_LoopDisable90days.png)
 
@@ -12,150 +12,165 @@
 
 Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
-## Версия 2.5.0
+## Version 2.5.1
 
-Дата выпуска: 26-10-2019
+Release date: 31-10-2019
 
-*** Примечание ***: используйте [ Android Studio 3.5.1 ](https://developer.android.com/studio/) или новее для [ построения apk ](../Installing-AndroidAPS/Building-APK.md) или [ обновите ](../Installing-AndroidAPS/Update-to-new-version.md).
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes#important-notes) and [limitations](../Installing-AndroidAPS/Releasenotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes#version-2-5-0).
 
-*** Примечание ***: При использовании xDrip отметьте [ identify receiver](../Configuration/xdrip#identify-receiver).
+* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
+* New versioning that will allow to do minor updates without triggering the update-notification.
 
-### Это обновление для меня? В настоящее время НЕ поддерживается
+## Version 2.5.0
+
+Release date: 26-10-2019
+
+### Важные Примечания
+
+* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+* If you are using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+
+### Is this update for me? Currently is NOT supported
 
 * Android 5
 * Poctech
 * 600SeriesUploader
 * Glimp
-* Модифицированное приложение Dexcom из каталога 2.3
+* Patched Dexcom from 2.3 directory
 
 ### Новые возможности
 
-* Внутреннее изменение targetSDK на 28 (Android 9), поддержка jetpack
-* Поддержка RxJava2, Okhttp3, Retrofit
-* Поддержка старых [помп Medtronic](../Configuration/MedtronicPump.md) (нужен RileyLink)
-* Новый [ модуль автоматизации ](../Usage/Automation.rst)
-* Возможность подать только часть болюса из рассчитанного мастером болюса
-* Рендеринг активности инсулина
-* Корректировка прогнозов IOB с помощью результата autosense
-* Новая поддержка модифицированных приложений Dexcom ([ папка 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
-* Верификатор подписи
-* Возможность обойти цели пользователям OpenAPS
-* Новые цели [ цели ](../Usage/Objectives2019.rst)-экзамен, обработка приложений
-* Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
-* Исправлена ошибка [СМС коммуникатора](../Usage/SMS-Commands.md)
+* Internal change of targetSDK to 28 (Android 9), jetpack support
+* RxJava2, Okhttp3, Retrofit support
+* Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
+* New [Automation plugin](../Usage/Automation.rst)
+* Allow to [bolus only part](../Configuration/Preferences#advanced-settings) from bolus wizard calculation
+* Rendering insulin activity
+* Adjusting IOB predictions by autosense result
+* New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+* Signature verifier
+* Allow to bypass objectives for OpenAPS users
+* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+  
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 
-## Версия 2.3
+* Fixed bug in Dana* drivers where false time difference was reported
 
-Дата выпуска: 25-04-2019
+* Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
 
-### Новые возможности
+## Version 2.3
 
-* Важное решение безопасности для Insight (действительно важно, если вы используете Insight!)
-* Исправлен браузер истории
-* Исправление расчетов дельты
-* Обновление переводов
-* Проверка GIT и предостережение об обновлении gradle
-* Больше автоматического тестирования
-* Исправление потенциального сбоя в службе AlarmSound (спасибо @lee-b !)
-* Исправлена передача данных ГК (теперь работает независимо от разрешения SMS!)
-* Новый модуль проверки версий
-
-## Версия 2.2.2
-
-Дата выпуска: 07-04-2019
+Release date: 25-04-2019
 
 ### Новые возможности
 
-* Исправление Autosens: деактивировать значение временная цель ТТ повышает/понижает целевое значение
-* Новые переводы
-* Исправления драйверов Insight
-* Исправление расширения SMS
+* Important safety fix for Insight (really important if you use Insight!)
+* Fix History-Browser
+* Fix delta calculations
+* Language updates
+* Check for GIT and warn on gradle upgrade
+* More automatic testing
+* Fixing potential crash in AlarmSound Service (thanks @lee-b !)
+* Fix broadcast of BG data (works independently of SMS permission now!)
+* New Version-Checker
 
-## Версия 2.2
+## Version 2.2.2
 
-Дата выпуска: 29-03-2019
-
-### Новые возможности
-
-* [Исправление перехода на летнее время](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
-* Обновление Wear
-* [Обновление расширения SMS](../Usage/SMS-Commands.md)
-* Возможность возврата к предыдущим целям.
-* Остановка цикла, если память телефона заполнена
-
-## Версия 2.1
-
-Дата выпуска: 03-03-2019
+Release date: 07-04-2019
 
 ### Новые возможности
 
-* Поддержка Аccu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) (от Tebbe Ubben и JamOrHam)
-* Индикаторы состояния на главном экране (Nico Schmitz)
-* Помощник перехода на летнее время (Румен Георгиев)
-* Исправлеие обработки названий профилей, поступивших от NS (Johannes Mockenhaupt)
-* Исправление блокировки интерфейса (Johannes Mockenhaupt)
-* Поддержка обновленного приложения G5 (Tebbe Ubben и Milos Kozak)
-* Поддержка G6, Poctech, Tomato, Eversense BG (Tebbe Ubben и Milos Kozak)
-* Исправлено отключение SMB в настройках (Johannes Mockenhaupt)
+* Autosens fix: deactivate TT raises/lowers target
+* New translations
+* Insight driver fixes
+* SMS plugin fix
 
-### Разное
+## Version 2.2
 
-* Если вы задавали собственное значение `smbmaxminutes` нужно заново его настроить
-
-## Версия 2.0
-
-Дата выпуска: 03-11-2018
+Release date: 29-03-2019
 
 ### Новые возможности
 
-* Поддержка oref1/SMB ([документация oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)). Обязательно прочтите документацию, чтобы знать, чего ожидать от SMB, как он себя поведет, чего может достичь и как добиться его ровной работы.
-* Поддержка помпы Accu-check Combo ([инструкции по установке](../Configuration/Accu-Chek-Combo-Pump.md))
-* Мастер установки: направляет вас через процесс настройки AndroidAPS
+* [DST fix](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
+* Wear Update
+* [SMS plugin](../Usage/SMS-Commands.md) update
+* Go back in objectives.
+* Stop loop if phone disk is full
 
-### Настройки при переключении с AMA на SMB
+## Version 2.1
 
-* Для включения SMB необходимо начать выполнение цели 8 (вкладка SMB обычно показывает какие применяются ограничения)
-* maxIOB теперь включает *все* активные инсулины IOB, а не только добавленный basal. То есть, если дан болюс 8 ед. на еду a максимальный IOB ограничен 7 ед., то SMB не будет подан до тех пор, пока активный инсулин IOB не опустится ниже 7 ед.
-* при переходе с AMA на SMB минимальное действие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8. Если вы переходите с AMA на SMB, то вам нужно изменить его вручную
-* Обратите внимание при создании приложения AndroidAPS 2.0: Выборочная Конфигурация не поддерживается текущей версией плагина Android Gradle! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
+Release date: 03-03-2019
+
+### Новые возможности
+
+* Accu-Chek [Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
+* Status lights on main screen (Nico Schmitz)
+* Daylight saving time helper (Roumen Georgiev)
+* Fix processing profile names comming from NS (Johannes Mockenhaupt)
+* Fix UI blocking (Johannes Mockenhaupt)
+* Support for updated G5 app (Tebbe Ubben and Milos Kozak)
+* G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
+* Fixed disabling SMB from preferences (Johannes Mockenhaupt)
+
+### Misc
+
+* If you are using non default `smbmaxminutes` value you have to setup this value again
+
+## Version 2.0
+
+Release date: 03-11-2018
+
+### Новые возможности
+
+* oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
+* Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
+* Setup wizard: guides you through the process of setting up AndroidAPS
+
+### Settings to adjust when switching from AMA to SMB
+
+* Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
+* maxIOB now includes *all* IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
+* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Если вы переходите с AMA на SMB, то вам нужно изменить его вручную
+* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
   
   * Откройте окно настроек, нажав Файл > Настройки (на Mac, Android Studio > Настройки).
   * В левой панели нажмите Сборка, Выполнение, Развертывание > Компилятор.
   * Снимите флажок с ячейки "выборочная конфигурация".
   * Нажмите Применить или OK.
 
-### Вкладка обзора
+### Overview tab
 
-* Верхняя полоса дает доступ к приостановке/отключению цикла, просмотру/настройке профиля и запуску/остановке временных целей (TT). Временные цели TT используют настройки по умолчанию. Новая опция Гипо TT является высокой временной целью TT для предотвращения слишком агрессивной реакции на корректирующие углеводы.
-* Кнопки лечения: старая кнопка все еще доступна, но скрыта по умолчанию. Видимость кнопок теперь может быть сконфигурирована. Новая кнопка инсулина, новая кнопка углеводов (включая [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
-* Цветные линии прогноза: 
-  * Оранжевый: активные углеводы COB (цвет обычно используется для активных углеводов COB и углеводов)
-  * Темно-синий: активный инсулин IOB (цвет обычно используется для представления активного инсулина IOB и инсулина)
-  * Голубой: нулевой временный базал
-  * Темно-желтый: незапланированный прием пищи UAM
-* Опция отображения поля заметок об инсулине/углеводах/калькуляторе/первичном заполнении которые передаются в NS
-* Обновленное диалоговое окно «первичное/заполнение» позволяет заполнять инфузионный набор и вносить данные об изменении места установки и замене картриджа
+* Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
+* Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
+* Colored prediction lines: 
+  * Orange: COB (colour is used generally to represent COB and carbs)
+  * Dark blue: IOB (colour is used generally to represent IOB and insulin)
+  * Light blue: zero-temp
+  * Dark yellow: UAM
+* Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
+* Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
-### Часы
+### Watch
 
-* Отдельный вариант сборки изъят, теперь включен в регулярную полную сборку. Чтобы иметь управление болюсами с часов, включите этот параметр на телефоне
-* Мастер теперь запрашивает только углеводы (и процент, если он включен в настройках часов). То, какие параметры входят в расчет можно задать в настройках телефона
-* диалоги подтверждения и информирования теперь работают и на wear 2.0
-* Добавлена запись меню eCarbs
+* Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
+* Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
+* confirmations and info dialogs now work on wear 2.0 as well
+* Added eCarbs menu entry
 
-### Новые расширения
+### New plugins
 
-* Приложение PocTech в качестве источника данных ГК
-* Измененное приложение Dexcom как источник ГК
-* плагин чувствительности oref1
+* PocTech app as BG source
+* Dexcom patched app as BG source
+* oref1 sensitivity plugin
 
-### Разное
+### Misc
 
-* Приложение теперь использует меню для отображения расширений; плагины, выбранные как видимые в конфигураторе, показаны как вкладки сверху (избранное)
-* Переработан конфигуратор и вкладки целей, добавлены описания
-* Новый значок приложения
-* Много улучшений и исправлений
-* Независимые от Nightscout оповещения о недоступности помпы, (например, батарея помпы села) и пропущенных данных ГК (см. *Локальные оповещения* в настройках)
-* Возможность держать экран включенным
-* Опция отображения уведомлений как уведомление Android
-* Расширенная фильтрация (позволяющая всегда включать SMB и на 6час. после еды) поддерживаемая модифицированным приложением Dexcom или xDrip в нативном режиме G5 в качестве источника ГК.
+* App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
+* Overhaul for config builder and objectives tabs, adding descriptions
+* New app icon
+* Lots of improvements and bugfixes
+* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+* Option to keep screen on
+* Option to show notification as Android notification
+* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.

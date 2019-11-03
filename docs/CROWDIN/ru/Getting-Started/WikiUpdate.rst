@@ -1,11 +1,21 @@
 Обновления и изменения документации Wiki
 **********************
+November 2019
+===============
+* `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
+* `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
+* `SMS commands update <../Children/SMS-commands2019.html>`_
+* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
+
 Октябрь 2019
 ===============
 * ` AAPS версии 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0> ` _ updates (особенно на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _)
+* `AccuChek Insight - log options <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * Расчет активных углеводов COB на отдельной странице <../Usage/COB-calculation.html>`_
 * ` активные углеводы COB-неправильное определение значения COB <../Usage/COB-calculation.html#detection-оф-неправо-cob-values> ` _
 * ` Dexcom G6: устранение неполадок <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting> ` _
+* `Preferences update <../Configuration/Preferences.html>`_
 * "Ингибиторы SGLT-2"-не использовать с AAPS <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
 * ` Устранение неполадок команд SMS <../Usage/SMS-Commands.html#troubleshooting> ` _
 * ` xDrip-обновление - замена трансмиттера G6 <../Configuration/xdrip.html#replacee-transmitter> ` _

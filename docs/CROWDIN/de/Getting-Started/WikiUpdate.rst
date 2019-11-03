@@ -1,11 +1,21 @@
 Wiki Updates & Änderungen
 **********************
+November 2019
+===============
+* `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#abschnitt-e>`_
+* `Neue Anleitung zum Freestyle Libre 2 <../Hardware/Libre2.html>`_
+* `Update SMS-Befehle <../Children/SMS-commands2019.html>`_
+* `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
+
 Oktober 2019
 ===============
 * `AAPS Version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ - Seitenaktuallisierungen (vor allem auf der Seite `Update auf eine neue Version <../Installing-AndroidAPS/Update-to-new-version.html>`_)
+* ` AccuChek Insight-Log-Optionen <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps> ` _
 * `Aktiven Kohlenhydrate (COB) - eigene Seite <../Usage/COB-calculation.html>`_
 *  `Aktiven Kohlynhydrate (COB) - Fehlerhafte Ermittlung <../Usage/COB-calculation.html#erkennung-fehlerhafter-cob-werte>`_
 * `Dexcom G6-spezifische Problembehandlung <../Hardware/DexcomG6.html#dexcom-g6-spezifische-problembehandlung>`_
+* `Update Einstellungen <./Configuration/Preferences.md>`_
 * ` SGLT-2 Inhibitoren - beim Loopen nicht verwenden <../Module/module.html#keine-verwendung-von-sglt-2-hemmern> ` _
 * ` SMS-Befehle Fehlerbehebung <../Usage/SMS-Commands.html#störhooting> ` _
 * `xDrip - Update G6 Transmitter ersetzen <../Configuration/xdrip.html#replace-transmitter>`_

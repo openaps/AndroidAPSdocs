@@ -1,67 +1,67 @@
-# DanaRS Pump
+# Pompe DanaRS
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* Sur la pompe DanaRS, pompe « BASAL A » est utilisé par l'application. Les données existantes se font écrasé.
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* Dans AndroidAPS, allez dans Générateur de configuration et sélectionnez « DanaRS »
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Sélectionnez le Menu en appuyant sur les 3 points en haut à droite. Sélectionnez le menu Préférences.
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* Sélectionnez Appairage sur la nouvelle pompe DanaRS, puis cliquez sur le numéro de série de votre DanaRS.
   
       ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
-* Select Pump password and input your password. (Default password is 1234)   
-  **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* Sélectionnez Mot de passe de la pompe et saisissez votre mot de passe. (Le mot de passe par défaut est 1234)   
+  ** Vous devez confirmer l'appairage sur la pompe ! ** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
   
-      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      ![DanaRS confirm pairing](../images/DanaRS_Pairing.png)
       
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).
 
-* Restart your phone.
+* Redémarrez votre téléphone.
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Régler l'incrément Basale sur pompe à 0,01 U/h en utilisant le menu de Médecins (voir le guide de l’utilisateur de la pompe)
 
-* Enable extended boluses on pump
+* Activez les Bolus Étendus sur la pompe
 
-## Dana RS specific errors
+## Erreurs spécifiques à DanaRS
 
-### Error during insulin delivery
+### Erreur lors de la distribution de l'insuline
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'insuline (par ex. vous vous éloignez de votre téléphone alors que la DanaRS est en train de délivrer de l'insuline), vous verrez le message suivant et vous entendrez une alarme sonore.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarme d'administration de l'insuline](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in CP tab if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* Dans la plupart des cas c'est juste un problème de communication et la quantité d'insuline délivrée est correcte.
+* Vérifiez dans l'historique de la pompe (à la pompe ou à l'aide de l'onglet Dana > historique de la pompe > bolus) si le bolus est correct.
+* Supprimez l'entrée erreur dans l'onglet CP si vous le souhaitez.
+* Le montant réel est lu et enregistré lors de la prochaine connexion. Pour forcer cette mise à jour, appuyez sur l'icône BT dans l'onglet dana ou attendez juste la prochaine connexion.
 
-## Special note when switching phone
+## Remarque spéciale lors du changement de téléphone
 
-When switching to a new phone the following steps are neccessary:
+Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
 
-* **Export settings** on your old phone
+* **Exportez les paramètres** sur votre ancien téléphone
   
-  * Hamburger menu (top left corner of screen)
+  * Menu Hamburger (coin supérieur gauche de l'écran)
   * Maintenance
-  * Export settings
+  * Exporter les paramètres
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![Export des paramètres AAPS](../images/AAPS_ExportSettings.png)
 
-* **Transfer** settings from old to new phone
+* **Transférez** les paramètres de l'ancien au nouveau téléphone
 
-* **Manually pair** Dana RS with the new phone 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
-  * Hamburger menu (top left corner of screen)
+* **Appairez manuellement** DanaRS avec le nouveau téléphone 
+  * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Par conséquent, le nouveau téléphone et la pompe doivent être appairés manuellement.
+* **Installez AndroidAPS** sur le nouveau téléphone.
+* **Importez les paramètres** Sur votre nouveau téléphone 
+  * Menu Hamburger (coin supérieur gauche de l'écran)
   * Maintenance
-  * Import settings
+  * Importer les paramètres
 
-## Timezone traveling with Dana RS pump
+## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Pour plus d'informations sur les voyages dans différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#danarv2-danars).

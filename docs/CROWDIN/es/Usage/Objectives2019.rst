@@ -17,18 +17,20 @@ Objective 1: Setting up visualization and monitoring, analysing basals and ratio
 
 Objective 2: Learn how to control AndroidAPS
 ============================
-* Perform several actions in AndroidAPS as described in this objective. 
+* Perform several actions in AndroidAPS as described in this objective.
+* Click on the orange text "Not completed yet" to access the to-dos.
 * Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-   .. image:: ../images/Objective2.png
+   .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot objective 2
 
 Objective 3: Prove your knowledge
 =================================
-*Pass a multiple-choice exam testing your AndroidAPS knowledge.
+* Pass a multiple-choice exam testing your AndroidAPS knowledge.
+* Click on the orange text "Not completed yet" to access the page with the question and answering optons.
 * Links will be provided to guide you in case you are unsure abouit the correct answers yet.
 
-   .. image:: ../images/Objective3.png
+   .. image:: ../images/Objective3_V2_5.png
      :alt: Screenshot objective 3
 
 Objective 4: Starting on an open loop
