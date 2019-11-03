@@ -2,7 +2,9 @@ Wiki updates & changes
 **********************
 November 2019
 ===============
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
+* `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
 * `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
 * `SMS commands update <../Children/SMS-commands2019.html>`_
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
