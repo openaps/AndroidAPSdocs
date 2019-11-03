@@ -12,7 +12,7 @@
 
 ## Omezení
 
-- Rozložené bolusy a kombinované bolusy nejsou podporovány (podívejte se na [Extended Carbs](../Usage/Extended-Carbs))
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.rst) instead)
 - Je podporován pouze jeden bazální profil.
 - Nastavení více než jednoho bazálního profilu na pumpě nebo rozloženého či kombinovaného bolusu z pumpy naruší dočasný bazál a uvede smyčku do režimu zastavení při nízké glykémii na dobu 6 hodin. Za těchto podmínek nemůže smyčka správně pracovat.
 - Aktuálně není možné nastavit čas a datum na pumpě, stejně jako změny času, které musí být zadány ručně (můžete deaktivovat automatickou aktualizaci času, abyste předešli alarmům v průběhu noci).
