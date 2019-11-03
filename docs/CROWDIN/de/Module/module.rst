@@ -72,13 +72,13 @@ BZ-Quelle
 ------------
 Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAPS. Weitere Details findest Du `hier <../Configuration/BG-Source.html>`_. Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-* `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-* `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* ` Dexcom G6 <../Hardware/DexcomG6.html> ` _: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
+* ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
+* `Dexcom G4 <../Hardware/DexcomG4.html>`_:  Diese Sensoren sind relativ alt, aber es gibt im Netz Anleitungen wie Du sie mit der xDrip+ App verwenden kannst.
+* `Libre 2 <../Hardware/Libre2.html>`_: Funktioniert mit xDrip+ (kein Transmitter erforderlich), Du musst aber auch für den Libre 2 eine eigene gepatchte App erstellen.
+* `Libre 1 <../Hardware/Libre1.html>`_: Du benötigst einen Sender wie Bluecon oder MiaoMiao, den Du selbst bauen oder einfach kaufen kannst, und die xDrip+ App.
+* `Eversense <../Hardware/Eversense.html>`_: Funktioniert bisher nur in Kombination mit der ESEL-App und einer gepatchten Eversense-App (funktioniert nicht mit der Kombination Dana RS und LineageOS, jedoch gut mit DanaRS und Android oder Combo und Lineage OS).
+* `Enlite <../Hardware/MM640g.html>`_: ziemlich kompliziert mit viel zusätzlichem Aufwand
 
 
 Nightscout
