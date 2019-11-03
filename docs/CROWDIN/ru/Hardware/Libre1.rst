@@ -8,7 +8,7 @@ Freestyle Libre 1
 * BlueReader <https://bluetoolz.de/blueorder/#home>https://bluetoolz.de/blueorder/#home`_
 * Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>https://github.com/pimpimmi/LibreAlarm/wiki`_
 
-До настоящего времени, используя Libre 1 в качестве источника данных ГК, невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов» в алгоритме SMB. Значения BG Libre 1 недостаточно ровные, чтобы использовать их безопасно. Подробнее см. в `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`.
+До настоящего времени, используя Libre 1 в качестве источника данных ГК, невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов» в алгоритме SMB. Значения BG Libre 1 недостаточно ровные, чтобы использовать их безопасно. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data>`_ for more details.
 
 При использовании xdrip
 ===================
