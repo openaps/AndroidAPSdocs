@@ -4,7 +4,7 @@
 
 Για τους πομπούς G6 που κατασκευάστηκαν μετά το πέρας / τέλος του 2018 (δηλ. με σειριακό αριθμό. ξεκινώντας από 80 ή 81) βεβαιωθείτε ότι χρησιμοποιείτε τουλάχιστον τον κύριο πίνακα [ με ημερομηνία 2019/05/18 ](https://jamorham.github.io/#xdrip-plus).
 
-Εάν ο σειριακός αριθμός του πομπού Dexcom G6. ξεκινά με 8G... δοκιμάστε [nightly έκδοση 2019/07/28 ή μεταγενέστερη](https://github.com/NightscoutFoundation/xDrip/releases).
+Εάν ο σειριακός αριθμός του πομπού Dexcom G6. ξεκινά με 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Βασικές ρυθμίσεις για όλα τα CGM & FGM Συστήματα
 
@@ -43,7 +43,7 @@
 
 Για τους πομπούς G6 που κατασκευάστηκαν μετά το πέρας / τέλος του 2018 (δηλ. με σειριακό αριθμό. ξεκινώντας από 80 ή 81) βεβαιωθείτε ότι χρησιμοποιείτε τουλάχιστον τον κύριο πίνακα [ με ημερομηνία 2019/05/18 ](https://jamorham.github.io/#xdrip-plus).
 
-Εάν ο σειριακός αριθμός του πομπού Dexcom G6. ξεκινά με 8G... δοκιμάστε [nightly έκδοση 2019/07/28 ή μεταγενέστερη](https://github.com/NightscoutFoundation/xDrip/releases).
+Εάν ο σειριακός αριθμός του πομπού Dexcom G6. is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Dexcom συγκεκριμένες ρυθμίσεις
 
@@ -63,9 +63,9 @@
 
 ### Οι προληπτικές επανεκκινήσεις δεν συνιστώνται
 
-**Με πομπούς της Dexcom, οι οποίοι έχουν σειριακό αριθμό. να ξεκινά με 8G προληπτικές επανεκκινήσεις δεν λειτουργούν και μπορεί να σκοτώσουν τον αισθητήρα εντελώς!**
+**Με πομπούς της Dexcom, οι οποίοι έχουν σειριακό αριθμό. is starting with 8G or 8H preemptive restarts do not work and might kill the sensor completely!**
 
-Η αυτόματη επέκταση των αισθητήρων Dexcom (` προληπτικές επανεκκινήσεις`) δεν συνιστάται, καθώς αυτό μπορεί να οδηγήσει σε "άλματα" στις τιμές BG την ένατη ημέρα μετά την επανεκκίνηση.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
 ![+xDrip μετάβαση μετά την προληπτική επανεκκίνηση](../images/xDrip_Dexcom_PreemptiveJump.png)
 
@@ -85,7 +85,7 @@
 
 Για τους πομπούς G6 που κατασκευάστηκαν μετά το πέρας / τέλος του 2018 (δηλ. με σειριακό αριθμό. ξεκινώντας από 80 ή 81) βεβαιωθείτε ότι χρησιμοποιείτε τουλάχιστον τον κύριο πίνακα [ με ημερομηνία 2019/05/18 ](https://jamorham.github.io/#xdrip-plus).
 
-Εάν ο σειριακός αριθμός του πομπού Dexcom G6. ξεκινά με 8G... δοκιμάστε [nightly έκδοση 2019/07/28 ή μεταγενέστερη](https://github.com/NightscoutFoundation/xDrip/releases).
+Εάν ο σειριακός αριθμός του πομπού Dexcom G6. is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Σβήστε τον αρχικό δέκτη Dexcom (εάν χρησιμοποιείται).
 * Πατήστε παρατεταμένα το εικονίδιο αίματος στην κύρια οθόνη +xDrip για να ενεργοποιήσετε το κουμπί `Source Wizard Button`.
@@ -111,7 +111,7 @@
    
    -> Κοντά στο κάτω μέρος της οθόνης ` Θα πρέπει να εμφανιστεί η ένδειξη Warm Up x, x ώρες αριστερά ` μετά από μερικά λεπτά.
 
--> Εάν ο σειριακός αριθμός του πομπού. δεν ξεκινάει με 8G και δεν υπάρχει προδιαγραφή χρόνου μετά από μερικά λεπτά σταματήστε και επανεκκίνηστε τον αισθητήρα.
+-> Εάν ο σειριακός αριθμός του πομπού. does not start with 8G or 8H and there is no time specification after a few minutes stop and restart the sensor.
 
 * Κάντε επανεκκίνηση του συλλέκτη (system status- αν δεν... αντικαταστήστε τον αισθητήρα}
 * Μην ενεργοποιείτε ξανά τον αρχικό δέκτη Dexcom (αν χρησιμοποιείται) πριν το xDrip + εμφανίσει τις πρώτες ενδείξεις.
@@ -137,9 +137,9 @@
 
 ### Επέκταση της διάρκειας ζωής του πομπού
 
-* Μέχρι στιγμής, η ζωή δεν μπορεί να παραταθεί για πομπούς με σειριακό αριθμό. που ξεκινά με 8G.
+* Μέχρι στιγμής, η ζωή δεν μπορεί να παραταθεί για πομπούς με σειριακό αριθμό. starts with 8G or 8H.
 * Προκειμένου να αποφευχθούν δυσκολίες στην εκκίνηση των αισθητήρων, συνιστάται ιδιαίτερα να επεκταθεί η διάρκεια ζωής του πομπού πριν από την εκατοστή ημέρα χρήσης.
-* Η περίοδος λειτουργίας του αισθητήρα θα σταματήσει κατά την παράταση της διάρκειας ζωής του πομπού. Έτσι επεκτείνετε πριν αλλάξετε τον αισθητήρα ή θυμηθείτε ότι θα υπάρξει μια νέα φάση προθέρμανσης 2 ωρών.
+* Η περίοδος λειτουργίας του αισθητήρα θα σταματήσει κατά την παράταση της διάρκειας ζωής του πομπού. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Αλλάξτε σε `engineering mode`: 
    * πατήστε το χαρακτήρα που βρίσκεται στα δεξιά του xDrip+ οθόνη έναρξης που αντιπροσωπεύει μια σύριγγα
    * στη συνέχεια, πατήστε το εικονίδιο του μικροφώνου στην κάτω δεξιά γωνία
@@ -160,16 +160,16 @@
 
 Για τους πομπούς G6 που κατασκευάστηκαν μετά το πέρας / τέλος του 2018 (δηλ. με σειριακό αριθμό. ξεκινώντας από 80 ή 81) βεβαιωθείτε ότι χρησιμοποιείτε τουλάχιστον τον κύριο πίνακα [ με ημερομηνία 2019/05/18 ](https://jamorham.github.io/#xdrip-plus).
 
-Εάν ο σειριακός αριθμός του πομπού Dexcom G6. ξεκινά με 8G... δοκιμάστε [nightly έκδοση 2019/07/28 ή μεταγενέστερη](https://github.com/NightscoutFoundation/xDrip/releases).
+Εάν ο σειριακός αριθμός του πομπού Dexcom G6. is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Σβήστε τον αρχικό δέκτη Dexcom (εάν χρησιμοποιείται).
 * Διακοπή αισθητήρα (μόνο αν αντικαταστήσετε τον αισθητήρα)
    
    Σιγουρευτείτε ότι έχει πράγματι σταματήσει:
    
-   Στη δεύτερη οθόνη "Κατάσταση G5 / G6" δείτε ` Στοιχεία ουράς ` περίπου στο μισό - Μπορεί να λέει κάτι σαν ` (1) Σταμάτημα αισθητήρα`
+   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
    
-   Περιμένετε μέχρι να φύγει - συνήθως μέσα σε λίγα λεπτά έχει φύγει.
+   Περιμένετε μέχρι να φύγει - συνήθως μέσα σε λίγα λεπτά έχει φύγει. Sensor Status must be "Stopped" (see screenshot).
    
    -> Για να αφαιρέσετε τον πομπό χωρίς να σταματήσετε τον αισθητήρα, δείτε αυτό το βίντεο <https://youtu.be/AAhBVsc6NZo>.
    
@@ -177,29 +177,43 @@
    
    ![xDrip+ Σταμάτημα Dexcom αισθητήρα 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Ξεχάστε τη συσκευή (στο system status (κατάσταση συστήματος))
+* Forget device in xDrip system status AND in smartphone’s BT settings (Will be shown as Dexcom?? λαμβάνοντας υπόψη ότι ;; are the last two digits of the transmitter serial no.)
    
    ![xDrip + Ξεχάστε τη συσκευή](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Ξεχάστε τη συσκευή στις ρυθμίσεις BT του smartphone (Θα εμφανιστεί ως Dexcom;; λαμβάνοντας υπόψη ότι ;; είναι τα δύο τελευταία ψηφία του σειριακού αριθμού του πομπού)
+* Remove transmitter (and sensor if replacing sensor)
 
-* Αφαιρέστε τον πομπό (και τον αισθητήρα αν αντικαθιστάτε τον αισθητήρα)
+* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
 * Πατήστε παρατεταμένα το εικονίδιο αίματος στην κύρια οθόνη +xDrip για να ενεργοποιήσετε το κουμπί `Source Wizard Button`.
 * Χρησιμοποιήστε το κουμπί "Οδηγός πηγής", το οποίο διασφαλίζει τις προεπιλεγμένες ρυθμίσεις, συμπεριλαμβανομένων των OB1 & Εγγενής λειτουργία 
    * Αυτό σας καθοδηγεί στην αρχική ρύθμιση.
    * Θα χρειαστείτε τον σειριακό αριθμό πομπού σας αν αυτή είναι η πρώτη φορά που το χρησιμοποιήσατε.
 * Τοποθετήστε τον σειριακό αριθμό του νέου πομπού. Προσέξτε να μην συγχέετε 0 (μηδέν) και O (κεφαλαίο γράμμα o).
 * Τοποθετήστε το νέο αισθητήρα (μόνο αν αντικαθηστάτε).
-* Βάλτε τον πομπό στον αισθητήρα - μην ξεκινήσετε τον αισθητήρα αμέσως!
-* Μην ξεκινήστε το νέο αισθητήρα πριν να εμφανιστούν οι ακόλουθες πληροφορίες στην Κλασική Σελίδα Κατάστασης -> Κατάσταση G5 / G6 -> PhoneServiceState:
+* Put transmitter into sensor - **Do not start sensor immediately!**
+* New "Firefly Transmitters" (serial no. starting with 8G or 8H) can only be used in native mode.
+* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G or 8H):
+   
+   * Preemptive Restart (disable!)
+   * Restart sensor (disable!)
+   * Fallback to xDrip (disable!)
+   
+   ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
+
+* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
    
    * Πομπός με σειριακό αριθμό που ξεκινάει με 80 ή 81: "Έχεις δεδομένα ώρες: λεπτά" (δηλ Έχεις δεδομένα 19:04 ")
    * Πομπός που ξεκινάει ο σειριακός αριθμός με 8G ή 8H: "Έχεις γλυκόζη ώρες: λεπτά" (δηλ. "Έχεις γλυκόζη 19:04") ή "Δεν έχεις ακατέργαστο ώρες: λεπτά" (δηλαδή "Πήρε τώρα ακατέργαστο 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Κάντε επανεκκίνηση του συλλέκτη (system status- αν δεν... αντικαταστήστε τον αισθητήρα}
+* Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
+   
+   ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
 
+* Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
+
+* Restart collector (system status - if not replacing sensor)
 * Μην ενεργοποιείτε ξανά τον αρχικό δέκτη Dexcom (αν χρησιμοποιείται) πριν το xDrip + εμφανίσει τις πρώτες ενδείξεις.
 * Πατήστε παρατεταμένα το εικονίδιο κόκκινου σταγονιδίου αίματος στην κύρια οθόνη xDrip + για να ενεργοποιήσετε το κουμπί `Οδηγός πηγής`.
    
@@ -218,7 +232,7 @@
    
    Σιγουρευτείτε ότι έχει πράγματι σταματήσει:
    
-   Στη δεύτερη οθόνη "Κατάσταση G5 / G6" δείτε ` Στοιχεία ουράς ` περίπου στο μισό - Μπορεί να λέει κάτι σαν ` (1) Σταμάτημα αισθητήρα`
+   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
    
    Περιμένετε μέχρι να φύγει - συνήθως μέσα σε λίγα λεπτά έχει φύγει.
    
@@ -234,12 +248,12 @@
 
 * Ξεκινήστε τον αισθητήρα
    
-   **Συνιστάται να περιμένετε περίπου. 15 λεπτά μεταξύ της διακοπής και της εκκίνησης του νέου αισθητήρα (μέχρι να εμφανιστεί ` Κατάσταση αισθητήρα: Διακοπή ` στη δεύτερη οθόνη κατάστασης συστήματος).**
+   **For new Firefly transmitters** (serial no. starting with 8G or 8H) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
 
 * Ρυθμίστε το χρόνο που παρεμβάλλεται
    
    * Για να χρησιμοποιήσετε τη λειτουργία G6 Native, πρέπει να περιμένετε για την προθέρμανση 2 ωρών (δηλαδή ο χρόνος εισαγωγής είναι τώρα).
-   * Εάν χρησιμοποιείτε τον αλγόριθμο xDrip + τότε μπορείτε να ορίσετε προγενέστερα χρόνο περισσότερο από 2 ώρες για να αποφύγετε τη προθέρμανση. Τα δεδομένα μπορεί να είναι πολύ ασαφής. Ως εκ τούτου, αυτό δεν συνιστάται.
+   * Εάν χρησιμοποιείτε τον αλγόριθμο xDrip + τότε μπορείτε να ορίσετε προγενέστερα χρόνο περισσότερο από 2 ώρες για να αποφύγετε τη προθέρμανση. Τα δεδομένα μπορεί να είναι πολύ ασαφής. Therefore, this is not recommended.
 * Εισαγάγετε τον κωδικό αισθητήρα (στο αφαιρούμενο φύλλο του αισθητήρα) 
    * Κρατήστε τον κωδικό για περαιτέρω αναφορά (δηλαδή σε νέο ξεκίνημα μετά την αφαίρεση του πομπού)
    * Ο κώδικας μπορεί επίσης να βρεθεί στο [ xDrip + logs ](../Configuration/xdrip#retrieve-sensor-code): Κάντε κλικ στο μενού 3-dots στην αρχική οθόνη xDrip + και επιλέξτε ` View Logs Event `.
@@ -270,14 +284,14 @@
 
 * Η συσκευή του πομπού πρέπει να εμφανίζονται στο smartphone σας στις ρυθμίσεις bluetooth.
 * Ο πομπός θα πρέπει να εμφανίζεται ως Dexcom;; λαμβάνοντας υπόψη ότι ;; είναι τα δύο τελευταία ψηφία του σειριακού αριθμού του πομπού). (δηλαδή DexcomHY).
-* Ανοίξτε το system status σε xDrip+ (χάμπουργκερ μενού στην πάνω αριστερή πλευρά της αρχικής οθόνης).
+* Open system status in xDrip+ (hamburger menu on top left side of home screen).
 * Ελέγξτε εάν ο πομπός σας εμφανίζεται στην πρώτη σελίδα κατάστασης ('κλασική σελίδα κατάστασης').
 * Εάν όχι: Διαγράψτε τη συσκευή από τις ρυθμίσεις του Bluetooth του smartphone σας και κάντε επανεκκίνηση του συλλέκτη.
 * Περιμένετε περίπου 5 λεπτά. μέχρι ο πομπός Dexcom να επανασυνδεθεί αυτόματα.
 
 ### Πρόβλημα κατά την εκκίνηση νέων αισθητήρων
 
-Παρακαλείστε να σημειώσετε ότι η παρακάτω μέθοδος ενδέχεται να μην λειτουργεί αν ο Dexcom G6 πομπός έχει σειριακό αριθμό που ξεκινά με 8G...
+Παρακαλείστε να σημειώσετε ότι η παρακάτω μέθοδος ενδέχεται να μην λειτουργεί αν ο Dexcom G6 πομπός έχει σειριακό αριθμό is starting with 8G or 8H.
 
 * Ο εγγενής αισθητήρας επισημαίνεται ως "ΑΠΈΤΥΧΕ: Αισθητήρας Απέτυχε την Έναρξη"(FAILED: Sensor Failed Start)
 * Σταματήστε τον αισθητήρα
