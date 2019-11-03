@@ -1,4 +1,4 @@
-Resources
+Achtergrondinformatie
 ---------
 
 .. toctree::
