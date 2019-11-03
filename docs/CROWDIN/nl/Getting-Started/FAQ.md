@@ -8,11 +8,11 @@ Om vragen toe te voegen aan de Veelgestelde Vragen: volg deze [instructies](../m
 
 Nee. Er is geen downloadbaar apk bestand voor AndroidAPS. Je moet het zelf [bouwen](../Installing-AndroidAPS/Building-APK.md). Omdat:
 
-AndroidAPS wordt gebruikt om je pomp te bedienen en insuline te geven. Volgens de huidige regelgeving vallen dit soort systemen onder klasse Ia of IIb voor medische hulpmiddelen. Dat betekent dat die een wettelijke goedkeuring (CE-markering) vereisen, waarvoor verschillende studies en verificaties nodig zijn. Het verspreiden van een ongereguleerd medisch hulpmiddel is illegaal. In andere delen van de wereld bestaat vergelijkbare regelgeving.
+AndroidAPS wordt gebruikt om je pomp te bedienen en insuline te geven. Volgens de huidige Europese regelgeving vallen dit soort systemen onder klasse IIa of IIb voor medische hulpmiddelen. Dat betekent dat die een wettelijke goedkeuring (CE-markering) vereisen, waarvoor verschillende studies en verificaties nodig zijn. Het verspreiden van een ongereguleerd medisch hulpmiddel is illegaal. In andere delen van de wereld bestaat vergelijkbare regelgeving.
 
 This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Het bouwen van een medisch apparaat voor jouzelf is de enige manier om niet onder deze regelgeving te vallen.
 
-Dat is waarom een kant-en-klare app niet beschikbaar is.
+Dat is waarom een kant-en-klare app niet verspreid mag worden.
 
 ## How to begin?
 
