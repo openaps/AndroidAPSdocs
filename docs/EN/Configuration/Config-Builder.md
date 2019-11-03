@@ -184,7 +184,7 @@ Carbs entered in the careportal (i.e. correction carbs) will be used for COB cal
 ![Careportal tab](../images/ConfBuild_CarePortal.png)
 
 ### SMS Communicator
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Usage/SMS-Commands.md) for more setup information.
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-commands2019.rst) for more setup information.
 
 ### Food
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
