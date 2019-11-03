@@ -55,7 +55,7 @@ Major new features
    
    (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Fixed bug in Dana* drivers where false time difference was reported
-* Fixed bug in `SMS communicator <../Usage/SMS-Commands2019.html>`_
+* Fixed bug in `SMS communicator <../Children/SMS-commands2019.html>`_
 
 Version 2.3
 =====
