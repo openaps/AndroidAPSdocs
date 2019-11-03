@@ -39,7 +39,7 @@ Dies ist ein bekannter Fehler in Android Studio 3.5 und wird wahrscheinlich erst
 
 Fehlende CGM-Daten
 =====
-* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
+* Falls Du xDrip+ verwendest: Identifiziere den Empfänger wie in den `xDrip+ Einstellungen <../Configuration/xdrip#identifiziere-empfanger>`_ beschrieben.
 * Falls Du die `gepatchte Dexcom G6 App </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ verwendest: Stelle sicher, dass Du die korrekte Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ verwendest.
 
 Uncommitted changes
@@ -52,8 +52,8 @@ Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
 Option 1 - Prüfe die git Installation
 -----
 * Evtl. ist git nicht korrekt installiert. git muss global auf Deinem Rechner verfügbar sein.
-* `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
-* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
+* `Prüfe die git Installation <../Installing-AndroidAPS/git-install.rst#prufe-die-einstellungen-in-android-studio>`_
+* Wenn keine git Version angezeigt wird, Du aber sicher bist, dass git auf Deinem Computer installiert ist, stelle sicher, dass Android Studio `den Pfad zu git <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ kennt.
 
 Option 2 - Quellcode erneut laden
 -----
@@ -101,7 +101,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`_ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
 2. Halte Dein key Passwort und Dein key store Passwort bereit.
     Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>` _ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
+3. Erstelle die App von Grund auf neu wie `hier <../Installing-AndroidAPS/Building-APK#code-und-weitere-komponenten-herunterladen>`_ beschrieben.
 4.	Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. `Export/Import von Einstellungen <./Usage/ExportImportSettings.rst>`_
 
@@ -111,4 +111,4 @@ Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, kö
 
 Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. Anleitungen dazu findest Du online, z.B. unter `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
-Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.
+Installiere Android Studio von Grund auf wie `hier <../Installing-AndroidAPS/Building-APK#android-studio-installieren>`_ beschrieben und **führe kein gradle Update durch**.
