@@ -9,6 +9,15 @@ Die App wurde erfolgreich erstellt und kann auf das Smartphone übertragen werde
 .. image:: ../images/GIT_WarningIgnore.PNG
   :alt: Kotline compiler warning ignorieren
 
+Key was created with errors
+=====
+When creating a new keystore for building the signed APK, on Windows the following error message might appear
+
+.. image:: ../images/AndroidStudio35SigningKeys.png
+  :alt: Key was created with errors
+
+This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+
 Could not download… / Offline Work
 =====
 Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
@@ -52,6 +61,7 @@ Falls Du eine Fehlermeldung bekommst, die wie folgt oder ähnlich aussieht
 Option 1 - Prüfe die git Installation
 -----
 * Evtl. ist git nicht korrekt installiert. git muss global auf Deinem Rechner verfügbar sein.
+* when on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
 * `Prüfe die git Installation <../Installing-AndroidAPS/git-install.rst#prufe-die-einstellungen-in-android-studio>`_
 * Wenn keine git Version angezeigt wird, Du aber sicher bist, dass git auf Deinem Computer installiert ist, stelle sicher, dass Android Studio `den Pfad zu git <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ kennt.
 
