@@ -56,12 +56,12 @@ Then click next.
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
-Select "full" as flavour for the generated app.
+Select "full" (or "fullRelease") as flavour for the generated app.
 Select V1 "Jar Signature" (V2 is optional) and click "Finish".
 The following information might be important for later use.
 * 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
 * Select the build type you want to build. 
-  * full (i.e. recommendations automatically enacted in closed looping)
+  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
   * openloop (i.e. recommendations given to user to manually enact)
   * pumpcontrol (i.e. remote control for pump, no looping)
   * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
