@@ -26,6 +26,8 @@ AndroidAPS позволяет контролировать телефон реб
 Команды
 =====
 
+Upper and lower case is irrelevant when sending commands.
+
 Команды должны отправляться на английском языке, ответ будет получен на локальном языке, если строка ответа уже " переведена <../translations.html#translate-strings-pl-androidaps-app> ` _.
 
 .. изображение:: ../images/SMSCommandsSetup.png
