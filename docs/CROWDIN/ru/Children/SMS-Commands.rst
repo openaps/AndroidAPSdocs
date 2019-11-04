@@ -60,11 +60,11 @@ AndroidAPS позволяет контролировать телефон реб
 базал
 -----
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * Ответ: Чтобы остановить временный базал ответьте кодом EmF [ Примечание: код EmF-это пример]
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * Для запуска базала 0.3ед/ч на 30 минут ответьте кодом Swe
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   * Для запуска базала 0.3ед/ч на 20 минут ответьте кодом Swe
 * BASAL 30%
    * Response: To start basal 30% for 30 min reply with code Swe
 * BASAL 30% 50
