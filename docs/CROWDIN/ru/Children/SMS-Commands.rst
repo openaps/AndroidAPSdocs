@@ -79,31 +79,31 @@ AndroidAPS позволяет контролировать телефон реб
 * EXTENDED STOP/CANCEL
    * Ответ: Для прекращения подачи пролонгированного болюса ответьте кодом EmF
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Ответ: Для начала подачи пролонгированного болюса 2 ед. на 120 мин. ответьте кодом EmF
 
 Профиль
 -----
-* PROFILE STATUS
-   * Response: Profile1
-* PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
+* СТАТУС ПРОФИЛЯ
+   * Ответ: Профиль1
+* СПИСОК ПРОФИЛЕЙ
+   * Ответ: 1. ` Profile1 ` 2. ` Profile2 `
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * Ответ: Чтобы переключиться на Профиль 1 100% ответьте кодом Any
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * Ответ: Чтобы переключиться на Профиль 2 30% ответьте кодом Any
 
 Другое
 -----
-* TREATMENTS REFRESH
-   * Response: Refresh treatments from NS
-* NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
-* PUMP
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+* ОБНОВИТЬ НАЗНАЧЕНИЯ
+   * Ответ: Синхронизировать назначения с NS
+* ПЕРЕЗАПУСТИТЬ NSCLIENT
+   * Ответ: Перезапуск NSCLIENT 1 получатель
+* ПОМПА
+   * Ответ: Последнее соед: 1 мин. назад временный базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5U Reserv: 34U Batt: 100
 
 Устранение неполадок
 =====
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Была жалоба на остановку работы SMS команд после обновления на телефоне Galaxy S10. Решается путем отключения опции "отправлять как сообщения чата".
 
-.. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+.. изображение:: ../images/SMSdisableChat.png
+  :alt: Отключить SMS как сообщение чата
