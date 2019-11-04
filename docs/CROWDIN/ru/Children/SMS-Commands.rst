@@ -62,22 +62,22 @@ AndroidAPS позволяет контролировать телефон реб
 * BASAL STOP/CANCEL
    * Ответ: Чтобы остановить временный базал ответьте кодом EmF [ Примечание: код EmF-это пример]
 * BASAL 0.3
-   * Для запуска базала 0.3ед/ч на 30 минут ответьте кодом Swe
+   * Ответ: Для запуска базала 0.3ед/ч на 30 минут ответьте кодом Swe
 * BASAL 0.3 20
-   * Для запуска базала 0.3ед/ч на 20 минут ответьте кодом Swe
+   *Ответ: Для запуска базала 0.3ед/ч на 20 минут ответьте кодом Swe
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
-* BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * Ответ: Для запуска базала 30% на 30 минут ответьте кодом Swe
+* БАЗАЛ 30% 50
+   * Ответ: Для запуска базала 30% на 50 минут ответьте кодом Swe
 
-Bolus
+болюс
 -----
-* BOLUS 1.2
-   * Response depends time last bolus was given
-      * To deliver bolus 1.2U reply with code Rrt
-      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min after last bolus command or remote commands!**)
+* Болюс 1.2
+   * Ответ зависит от времени последнего болюса
+      * Для подачи болюса 1,2 ед ответьте кодом Rrt
+      * Удаленный болюс недоступен. Повторите позже. (* *Удаленный болюс не допускается в течение 15 минут после последней команды bolus или удаленных команд! **)
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Ответ: Для прекращения подачи пролонгированного болюса ответьте кодом EmF
 * EXTENDED 2 120
    * Response: To start extended bolus 2U for 120 min reply with code EmF
 
