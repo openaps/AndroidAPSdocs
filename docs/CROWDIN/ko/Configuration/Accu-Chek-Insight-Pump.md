@@ -53,10 +53,9 @@
 
 Android Aps에서 Insight 설정을 통해 다음 활동들을 활성화 할 수 있습니다.
 
-* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.  
-    <font color="red">Note: A cannula change also resets Autosens</b></font>
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 * "로그 튜브 변경": 펌프에서 '튜브 채우기"를 실행했을 경우 Android APS 데이타 베이스에 메모로 기록됩니다.
-* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump.
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
 * "Log battery changes": This records a battery change when you put a new battery in the pump.
 * "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
 * "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
