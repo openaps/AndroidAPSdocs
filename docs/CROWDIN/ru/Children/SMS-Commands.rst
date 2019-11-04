@@ -52,12 +52,12 @@ AndroidAPS позволяет контролировать телефон реб
 Данные мониторинга
 -----
 * BG/ГК
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+   * Ответ: новая ГК: 5.6 4мин назад, дельта: -0,2 ммоль, активный инсулин IOB: 0.20 ед (болюс: 0.10 ед базал: 0.10 ед)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * Ответ: Чтобы отправить калибровку 5.6 ответьте кодом Rrt
+   * Ответ после получения правильного кода: Калибровка отправлена / Calibration sent (* *Если установлен xDrip. Разрешение на прием калибровок должно быть включено в xDrip+**)
 
-Basal
+базал
 -----
 * BASAL STOP/CANCEL
    * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
