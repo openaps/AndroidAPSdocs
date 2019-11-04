@@ -26,6 +26,8 @@ How it works
 Commands
 =====
 
+Upper and lower case is irrelevant when sending commands.
+
 Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
 
 .. image:: ../images/SMSCommands.png
