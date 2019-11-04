@@ -13,7 +13,7 @@ AndroidAPS позволяет контролировать телефон реб
 * Если у вас iPhone для слежения и, следовательно, нет возможности использовать NSclient, доступны дополнительные SMS-команды.
 
 * В настройках Android телефон перейдите в приложения > AndroidAPS > Разрешения и включите SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, just one space after the semicolons - i.e. +4412345678; +4412345679) and also enable 'Allow remote commands via SMS'.
+* В AndroidAPS перейдите в Настройки > SMS Коммуникатор и введите номер телефона(ов), с которых вы хотите отправлять SMS команды (разделенные точками с запятой, без пробелов или других символов - напр. +4412345678; +4412345679), а также включите опцию 'Разрешить удаленные команды с помощью SMS'.
 
   .. image:: ../images/SMSCommandsSetupSpace.png
     :alt: Настройка SMS команд
