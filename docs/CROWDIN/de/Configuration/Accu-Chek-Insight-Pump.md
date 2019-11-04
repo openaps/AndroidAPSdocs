@@ -56,7 +56,7 @@ In den Insight-Einstellungen in AndroidAPS kannst Du die folgenden Optionen akti
 
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 * "Schlauchwechsel protokollieren": In der AndroidAPS Datenbank wird ein entsprechender Eintrag vermerkt, wenn das Programm "Schlauch befüllen" auf der Pumpe gestartet wird.
-* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A cannula change also resets Autosens.**
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
 * "Batteriewechsel protokollieren": Es erfolgt ein Eintrag, wenn Du in der Pumpe die Batterie wechselst.
 * "Wechsel des Betriebsmodus protokollieren": Es wird in der AndroidAPS Datenbank vermerkt, wenn Du die Pumpe startest, stoppst oder pausierst.
 * "Alarme protokollieren": Wenn die Pumpe einen Alarm ausgibt, wird ein entsprechender Eintrag in der AndroidAPS Datenbank gemacht. Ausgenommen davon sind Erinnerung, Bolus- und TBR-Abbrüche. Diese werden nicht aufgezeichnet.
