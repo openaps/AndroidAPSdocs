@@ -104,27 +104,27 @@
 
 ### Запись логов в файл
 
-Поскольку драйвер Medtronic создан не так давно, следует включить ведение журнала, чтобы мы могли при необходимости отладить и устранить проблемы. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Поскольку драйвер Medtronic создан не так давно, следует включить ведение журнала, чтобы мы могли при необходимости отладить и устранить проблемы. Нажмите на значок в верхнем левом углу, выберите обслуживание и настройки журнала. Параметры Помпа, PumpComm, PumpBTComm должны быть отмечены.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+При перезапуске RiyeLink или GNARL необходимо либо выполнить новую настройку (действие "Wake and Tune Up"), либо повторно отправить параметры связи (действие "Reset RielyLink Config") иначе обмен информацией завершится неудачей.
 
 ### CGM/Непрерывный мониторинг ГК
 
-Medtronic CGMS is currently NOT supported.
+Мониторинг Medtronic в настоящее время не поддерживается.
 
 ### Использование помпы вручную
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Не следует выполнять процедуры лечения вручную с помпы. Все команды (болюс, врем базал TBR) должны проходить через AndroidAPS, но если возникнет необходимость выполнять команды вручную, НЕ подавайте их с частотой менее 3 минут (если по какой-то причине подаете 2 болюса, то второй следует начать по крайней мере через 3 минуты после первого).
 
 ## Изменения часового пояса и сезонное время или путешествия с помпой Medtronic и AndroidAPS
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+Важно помнить, что не следует отключать алгоритм цикла во время путешествий и перелетов (если ваш мониторинг может работать в автономном режиме). AAPS автоматически обнаружит изменения часового пояса и отправит команду на помпу когда изменится время на телефоне.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Например, если вы путешествете на Восток и часовой пояс меняется с добавлением часов (например, с GMT + 0 до GMT + 2), хронология помпы изменится без проблем и вам не о чем беспокоиться... но если вы перемещаетесь на Запад и часовой пояс меняется с вычитанием часов (например, с GMT + 2 до GMT-0), то возможна небольшая рассинхронизация. Говоря проще, в течение следующих x часов вам придется быть осторожными, потому что активный инсулин IOB, возможно, будет вести себя немного странно.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Мы знаем об этой проблеме, и мы уже ищем возможные решения (см. https://github.com/andyrozman/RileyLinkAAPS/issues/145),, но на данный момент нужно иметь в виду эту информацию при путешествиях.
 
 ## Часто задаваемые вопросы
 
