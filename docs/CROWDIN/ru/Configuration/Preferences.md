@@ -2,7 +2,7 @@
 
 Откройте настройки, нажав три точки меню в верхней правой части главного экрана:
 
-![How to open Preferences](../images/PreferencesOpen.png)
+![Как открыть Настройки](../images/PreferencesOpen.png)
 
 ## Пароль для настроек
 
@@ -24,17 +24,17 @@
 
 ### Дополнительные настройки
 
-![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
+![Настройки - Обзор - Расширенные настройки](../images/PreferencesOverviewAdvanced_V2_5.png)
 
 * Общая настройка для подачи только части инсулина, рекомендованного мастером болюса. При использовании мастера болюса подается только заданный процент (должен быть от 10 до 100) от вычисленного. Этот процент показан в мастере болюса.
     
-    ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
+    ![Мастер Болюса 80%](../images/BolusWizardPartDelivery.png)
 
 * Опция включения [ суперболюса ](../Getting-Started/Screenshots#section-a) в мастере болюса.
 
 * Индикаторы состояния дают визуальное предупреждение о низком уровне резервуара и заряда батареи, а также о просроченном времени смены места катетера помпы. Расширенная версия показывает истекшее время / процент заряда батареи.
     
-    ![Status lights - detail](../images/StatusLights_V2_5.png)
+    ![Индикаторы состояния - подробно](../images/StatusLights_V2_5.png)
     
     Параметры индикаторов состояния должны быть заданы в параметрах Nightscout. Задайте следующие параметры:
     
@@ -49,40 +49,40 @@
 
 ## Безопасность назначений
 
-### Max allowed bolus [U]
+### Макс разрешенный болюс [U] ед
 
-This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
+Это максимальное количество болюсного инсулина, разрешаемое к подаче в AAPS. Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя. Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству болюсного инсулина, который вы когда-либо можете подать на еду или на коррекцию. Это ограничение также налагается на результаты калькулятора болюса.
 
-### Max allowed carbs [g]
+### Макс разрешенные углеводы (г)
 
-This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+Это максимальное количество углеводов, на которое калькулятор болюса AAPS может подать дозу инсулина. Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя. Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству углеводов, которые вам когда-либо понадобится на еду.
 
 ## Замкнутый цикл
 
-You can toggle between open and closed looping here. Open looping means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump. Closed looping means TBR suggestions are automatically sent to your pump without confirmation or input from you. The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+Здесь можно переключаться между открытым и замкнутым циклом. Открытый цикл означает, что предложения по изменению скорости временного базала TBR, сделанные на основе ваших данных, появляются на экране в качестве уведомления, но вы должны самостоятельно принять их и вручную ввести в помпу. Закрытый цикл означает, что предложения по изменению скорости временного базала TBR автоматически отправляются на вашу помпу без вашего подтверждения. Домашний экран в левом верхнем углу отображает открытое или замкнутое состояние цикла и нажатие и удерживание этого участка экрана позволяет переключаться между этими опциями.
 
 ## Помощник болюса OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Помощник болюса OpenAPS Advanced Meal Assist (AMA) позволяет системе быстрее установить высокое временное целевое значение после болюса на еду, ЕСЛИ вы правильно ввели углеводы. Включите его на вкладке Конфигуратор, чтобы просмотреть параметры безопасности, чтобы использовать эту возможность, вам нужно будет выполнить [ Цель 9 ](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama). Подробнее о настройках и автонастройке чувствительности [Autosens можно прочитать в документации OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### Максималное значение ед./ч для скорости временного базала
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). Рекомендуется установить это значение на разумный предел. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+Эта настройка существует как ограничение безопасности, чтобы не позволить алгоритму ААПС когда-либо задать слишком большую величину скорости базала. Значение задается в единицах в час (ед./ч). Рекомендуется установить это значение на разумный предел. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 4**. Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 4, вы получите значение 2 ед./ч.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### Максимальный активный базальный инсулин IOB, разрешенный к подаче для OpenAPS [ед.]
 
-Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
+Количество базального инсулина (в единицах) которому позволено накопиться в вашем организме в дополнение к нормальному базальному профилю. По достижении этой величины AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока ваш активный базальный Инсулин (IOB) снова не вернется в этот диапазон.
 
-* This value does not consider bolus IOB, only basal.
-* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
-* This value is measured in insulin units (u).
+* Эта величина не включает в себя активный болюсный инсулин IOB, только базальный.
+* Эта величина вычисляется и отслеживается независимо от скорости вашего обычного базала. Учитывается только дополнительный базал, который свыше обычного.
+* Значение задается в единицах инсулина (ед.).
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
+Когда вы начинаете работать с алгоритмом ИПЖ, **рекомендуется установить макс. активный базальный инсулин IOB на 0 ** на время привыкания к системе. Такая настройка запрещает AAPS давать дополнительный базальный инсулин. В этот период алгоритм AAPS в состоянии ограничить или отключить базу инсулина для предотвращения гипогликемии.
 
-This is an important step in order to:
+Это важный шаг для того чтобы:
 
-* Have a period of time to safely get used to the AAPS system and monitor how it works.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
+* Безопасно привыкнуть к системе AAPS и тому, как она работает.
+* Совершенствовать свой базальный профиль и лучше настроить фактор чувствительности к инсулину ISF.
 * See how AAPS limits your basal insulin to prevent hypoglycaemia.
 
 When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
@@ -98,10 +98,10 @@ If you have selected to use AMA Autosens then you will be able to enter your max
 
 ## Настройки помпы
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
+The options here will vary depending on which pump driver you have selected in 'Config Builder'. Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
 
-* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
-* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Инсулиновая помпа DanaR](../Configuration/DanaR-Insulin-Pump.md) 
+* [Инсулиновая помпа DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
 * [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
