@@ -4,7 +4,7 @@
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 начинается с 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 начинается с 8G... или 8H... используйте одну из новейших [ночных сборок](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Основные настройки для всех систем мониторинга
 
