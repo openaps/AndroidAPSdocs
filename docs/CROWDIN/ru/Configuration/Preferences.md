@@ -83,55 +83,55 @@
 
 * Безопасно привыкнуть к системе AAPS и тому, как она работает.
 * Совершенствовать свой базальный профиль и лучше настроить фактор чувствительности к инсулину ISF.
-* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+* Увидеть, как AAPS ограничивает ваш базальный инсулин, чтобы предотвратить гипокликемию.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
+Когда вы почувствуете себя комфортно, то можете позволить системе начать давать вам дополнительный базал, повышая макс. значение активного базального инсулина IOB. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 3**. Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 3, вы получите значение 1.5 ед./ч.
 
-* You can start conservatively with this value and increase it slowly over time. 
-* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Вы можете консервативно принять это значение и медленно увеличивать его со временем. 
+* Это только руководящие принципы; организмы всех людей отличаются друг от друга. Вы можете понять, что вам требуется больше или меньше, чем рекомендуется здесь, но всегда начинать консервативно и регулировать медленно.
 
-*Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
+*Примечание: В качестве функции безопасности максимально допустимый базальный Max Basal IOB жестко ограничен 7ед.*
 
 ## Настройки усваиваемости
 
-If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Если вы выбрали AMA Autosens, то сможете ввести максимальное время усвоения пищи и то, как часто вы хотите обновлять Autosens. Если вы часто едите блюда с высоким содержанием жиров или белка, вам следует увеличить время усвоения пищи.
 
 ## Настройки помпы
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
+Параметры здесь варьируются в зависимости от того, какой драйвер помпы вы выбрали в конфигураторе. Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
 
 * [Инсулиновая помпа DanaR](../Configuration/DanaR-Insulin-Pump.md) 
 * [Инсулиновая помпа DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Помпа Medtronic](..//Configuration/MedtronicPump.md)
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Для работы открытого цикла AndroidAPS, в конфигураторе выберите виртуальную помпу.
 
 ## Клиент Nightscout
 
-* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+* Введите адрес вашего сайта в поле 'nightscout URL' (в виде https://imyavashegosaita.herokuapp.com или https://imyavashegosaita.azurewebsites.net) и пароль в поле 'API secret' (пароль из 12 символов, который записан в ваших переменных на heroku или azure). Это позволит считывать и записывать данные веб-сайту Nightscout и приложению AAPS. Если вы застряли на Цели 1, еще раз проверьте поля с адресом и паролем на наличие опечаток.
+* **Убедитесь, что URL-адреса без /api/v1/ в конце.**
     
-    ![NSClient URL](../images/NSClientURL.png)
+    ![URL-адрес клиента Nightscout](../images/NSClientURL.png)
 
-* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
+* Опция 'Делать запись о старте приложения в Nightscout' заносит отметку в учетных записях портала лечения/назначений. Приложение не должно запускаться более одного раза в день; если делать это чаще, могут возникнуть проблемы.
 
-* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
-* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
-* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+* 'Параметры оповещений' позволяет выбрать, какие оповещения приложение будет использовать по умолчанию. Для активации оповещений нужно установить значения экстремально высоких, высоких, низких и экстремально низких порогов сигнализации в полях значений переменных на [heroku или azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Они будут работать только тогда, когда у вас есть подключение к Nightscout и предназначены для родителей/опекунов; если на вашем телефоне есть мониторинг, используйте оповещения на нем (например, xdrip+).
+* 'Включить локальные трансляции' передаст данные с портала лечения/назначений на другие приложения на телефоне, например xdrip.
+* 'Всегда использовать абсолютные значения базала" должно быть активировано, если вы хотите правильно использовать Autotune.
 
 ## СМС-коммуникатор
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
+Эта настройка позволяет осуществлять удаленное управление приложением при помощи смс-инструкций, отправляемых на телефон пациента, который выполняет их в AAPS, например, приостанавливая работу цикла или подавая болюсы. Дополнительная информация описана в [SMS командах](../Children/SMS-Commands.rst) но они отображаются в настройках только если вы выбрали эту опцию в конфигураторе.
 
 ## Другое
 
-* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
-* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
-* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
-* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
-* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* Здесь вы можете установить значения по умолчанию для различных типов временных целей (таких как ожидаемый прием пищи и нагрузка). Когда вы выбираете временную цель, например, "Ожидаемый прием пищи", выпадающее окно автоматически заполнится продолжительностью и количеством на основе заданных здесь параметров. Более подробную информацию о применении временных целей см. [ Функции OpenAPS ](../Usage/Open-APS-features.md). 
+* Вы можете установить стандартные значения для первичного заполнения инфузионной системы по умолчанию - и этот инсулин будет считаться израсходованным но не приниматься в расчет как активный инсулин IOB. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
+* Вы можете изменить вид домашнего экрана и следить за параметрами в установленном вами диапазоне. Обратите внимание, что это только способ отображения, который не влияет на ваши цели или расчеты.
+* "Краткие имена табул" позволяет видеть больше вкладок на экране, например вкладка "Открыть APS" становится "OAPS", "Целевые значения" становится "Цели" и т. д.
+* 'Местные оповещения' позволяют вам решить, следует ли принимать предупреждения и если да, то через какое время после отсутствия данных (старые данные) или когда помпа недоступна. Если вы часто получаете уведомления о недоступности помпы, включите BT Watchdog в расширенных настройках.
 
 ## Отбор данных
 
-* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
+* 'Fabric Upload' будет отправлять разработчикам сообщения об ошибках и данные об использовании.
