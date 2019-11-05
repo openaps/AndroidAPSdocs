@@ -130,17 +130,17 @@
 
 ### Можно ли видеть заряд RileyLink/GNARL?
 
-Нет. At the moment none of this devices support this and it probably won't even in the future.
+Нет. В данный момент ни одно из этих устройств не поддерживает такую возможность, и ее, скорее всего, не будет и в дальнейшем.
 
 ### Является ли GNARL полной заменой RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Да. Автор GNARL добавил все функции, используемые драйвером Medtronic. Все средства связи Medtronic поддерживаются (на момент написания (июнь/2019). GNARL нельзя использовать для связи Omnipod. Недостаток GNARL состоит в том, что его придется собирать самостоятельно, и у вас должна быть совместимая версия оборудования.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+** Примечание автора: ** Обратите внимание, что программное обеспечение GNARL по-прежнему экспериментально и недостаточно протестировано и не должно считаться таким же безопасным как RileyLink.
 
 ### Где взять RileyLink или GNARL?
 
-Like mentioned before you can get devices here:
+Как уже было сказано, устройства можно получить по этим ссылкам:
 
 - RileyLink - здесь - [getrileylink.org](https://getrileylink.org/).
 - GNARL- здесь можно получить информацию, но устройство должно быть заказано в другом месте ([ github.com/ecc1/gnarl ](https://github.com/ecc1/gnarl)).
@@ -155,9 +155,9 @@ Like mentioned before you can get devices here:
 
 ### Как определить, на какой частоте работает помпа
 
-![Pump Model](../images/Medtronic06.png)
+![Модель помпы](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Если перевернуть помпу, в первой строке справа, вы увидите специальный трехбуквенный код. Первые две буквы определяют тип частоты и последняя определяет цвет. Возможны следующие значения частоты:
 
 - NA-Северная Америка (при выборе частоты необходимо выбрать "US & Canada (916 МГц)")
 - CA-Канада (для выбора частоты необходимо выбрать "US & Canada (916 МГц)")
