@@ -190,26 +190,26 @@
    * Вам понадобится серийный номер трансмиттера, если вы пользуетесь им впервые.
 * Введите серийный номер нового трансмиттера. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
 * Вставьте новый сенсор (только при замене).
-* Put transmitter into sensor - **Do not start sensor immediately!**
-* New "Firefly Transmitters" (serial no. starting with 8G or 8H) can only be used in native mode.
-* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G or 8H):
+* Поместите трансмиттер на сенсор - ** не запускайте сенсор немедленно!**
+* Новые "Трансмиттеры Firefly" (серийный номер начинающиеся с 8G или 8H) можно использовать только в нативном режиме.
+* Следующие опции не должны быть активированы для новых трансмиттеров "Firefly" (серийный номер начинается с 8G или 8H):
    
-   * Preemptive Restart (disable!)
-   * Restart sensor (disable!)
-   * Fallback to xDrip (disable!)
+   * Упреждающий перезапуск (отключить!)
+   * Перезапуск сенсора (отключить!)
+   * Возврат к xDrip (отключить!)
    
-   ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
+   ![Параметры для трансмиттеров "Firefly"](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
+* Проверьте в классическом состоянии страницу Состояние-> Состояние G5/G6-> PhoneServiceState, показано ли одно из следующих сведений:
    
    * С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
    * С трансмиттерами, серийный номер которых начинается с 8G или 8H: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
+* Подождите 15 минут, так как трансмиттер должен соединиться несколько раз с xDrip до запуска нового сенсора. Данные батареи будут показаны ниже информации о прошивке.
    
-   ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
+   ![Данные о батареях трансмиттера "Firefly"](../images/xDrip_Dexcom_FireflyBattery.png)
 
 * Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
 
