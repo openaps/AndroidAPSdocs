@@ -43,7 +43,7 @@
 
 Для трансмиттеров G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 начиная с 8G и 8Н попробуйте [ночные сборки от 2019/07/28 или позднее](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Настройки для работы с Dexcom
 
@@ -63,9 +63,9 @@
 
 ### Упреждающие перезапуски не рекомендуются
 
-**В трансмиттерах Dexcom с серийным номером is starting with 8G or 8H preemptive restarts do not work and might kill the sensor completely!**
+**В трансмиттерах Dexcom с серийным номером начинается с 8G или 8H, упреждающие перезапуски не работают и могут полностью убить сенсор!**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+Автоматическое продление работы сенсоров Dexcom (`упреждающие перезапуски, preemtive restarts`) не рекомендуется, так как может привести к скачкам значений ГК на 9 день после перезапуска.
 
 ![xDrip+ после упреждающего перезапуска](../images/xDrip_Dexcom_PreemptiveJump.png)
 
@@ -85,7 +85,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 начиная с 8G и 8Н попробуйте [ночные сборки от 2019/07/28 или позднее](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
@@ -111,7 +111,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
    
    -> В нижней части экрана через несколько минут появится предупреждение о прогреве сенсора `Осталось x,x часов`.
 
--> Если серийный номер трансмиттера does not start with 8G or 8H and there is no time specification after a few minutes stop and restart the sensor.
+-> Если серийный номер трансмиттера не начинается с 8G и в течение нескольких минут не появляется никаких указаний о времени прогрева сенсора остановите и перезапустите сенсор.
 
 * Перезапустите коллектор (состояние системы - если не заменяете сенсор}
 * Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
@@ -137,9 +137,9 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 ### Увеличение срока работы трансмиттера
 
-* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер starts with 8G or 8H.
+* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G или 8H.
 * Для предотвращения трудностей при запуске сенсоров настоятельно рекомендуется продлить срок действия трансмиттера до 100-го дня первого использования.
-* При продлении срока действия трансмиттера работа сенсора будет остановлена. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* При продлении срока действия трансмиттера работа сенсора будет остановлена. Поэтому проводить эту манипуляцию следует перед заменой сенсора или быть готовыми к тому, что состоится двухчасовая фаза его прогрева.
 * Переключитесь в `инженерный режим`: 
    * нажмите на пиктограмму шприца на главном экране xDrip+ справа
    * затем нажмите на значок микрофона в нижнем правом углу
@@ -160,16 +160,16 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 начинается с 8G или 8H, используйте одну из [новых ночных сборок](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
 * Нажмите остановить сенсор (только при замене сенсора)
    
    Убедитесь, что он действительно остановлен:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   На следующем экране "G5/G6 Status" найдите `Queue Items` (`Элементы в очереди`) на полпути вниз - там появится что-то вроде "Остановить Сенсор"
    
-   Подождите, пока это происходит - обычно в течение нескольких минут. Sensor Status must be "Stopped" (see screenshot).
+   Подождите, пока это происходит - обычно в течение нескольких минут. Состояние сенсора должно быть "Остановлен" (см. снимок экрана).
    
    -> Как удалить трансмиттер без остановки сенсора, см. видео <https://youtu.be/AAhBVsc6NZo>.
    
@@ -177,13 +177,13 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
    
    ![xDrip+ Остановка сенсора Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip system status AND in smartphone’s BT settings (Will be shown as Dexcom?? где ?? are the last two digits of the transmitter serial no.)
+* Забудь устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? are the last two digits of the transmitter serial no.)
    
    ![xDrip+ забыть устройство](../images/xDrip_Dexcom_ForgetDevice.png)
 
 * Remove transmitter (and sensor if replacing sensor)
 
-* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
+* Поместите старый трансмиттер подальше, чтобы предотвратить повторное соединение. Микроволновая печь является идеальным щитом Фарадея для этого - но отключите кабель питания, чтобы быть на 100% уверенным, что никто ее не включит.
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
 * Пользуйтесь Мастером выбора источника ГК, который обеспечивает настройки по умолчанию, включая OB1 & нативный режим 
    * Мастер позволит провести начальную настройку.
@@ -232,7 +232,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
    
    Убедитесь, что он действительно остановлен:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   На следующем экране "G5/G6 Status" найдите `Queue Items` (`Элементы в очереди`) на полпути вниз - там появится что-то вроде "Остановить Сенсор"
    
    Подождите, пока это происходит - обычно в течение нескольких минут.
    
