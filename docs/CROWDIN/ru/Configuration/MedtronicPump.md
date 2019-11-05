@@ -1,6 +1,6 @@
 # Помпы Medtronic
 
-**>>>> Начиная с версии 2.5 AndroidAPS драйвер помп Medtronic является частью ветки master. While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)). <<<<**
+**>>>> Начиная с версии 2.5 AndroidAPS драйвер помп Medtronic является частью ветки master. Несмотря на это, драйвер Medtronic все еще должен рассматриваться как бета-версия программного обеспечения. Установите, только если вы опытный пользователь. В настоящий момент мы по-прежнему боремся с проблемой Double Bolus (получаем 2 болюса в лечении, что нарушает калькуляцию активного инсулина IOB (если вы получаете эту ошибку, включите Double Bolus Logging в конфигурации Medtronic и пришлите ваши журналы отчета)). <<<<**
 
 * * *
 
@@ -37,11 +37,11 @@
 1. Воспользоваться Мастером (при новой установке)
 2. Непосредственно на вкладке Конфигурация (Значок шестеренки в графе драйвера Medtronic)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Если вы делаете новую установку, то сразу попадаете в Мастер настройки. Иногда, если соединение BT не работает должным образом (не удается подключиться к помпе), возможно, вы не сможете выполнить настройку. В таком случае выберите виртуальную помпу и после того, как Мастер закончит работу, можно обратиться к варианту 2, который обойдет обнаружение помпы.
 
-![MDT Settings](../images/Medtronic01.png)
+![Настройки ручной подачи инсулина MDT](../images/Medtronic01.png)
 
-You need to set following items: (see picture above)
+Необходимо задать следующие параметры: (см. рисунок выше)
 
 - ** Серийный номер помпы **: Он находится на обратной стороне помпы сразу за буквами SN. Нужно вводить только номер, серийный номер состоит из 6 цифр.
 - ** Тип помпы **: Какой у вас тип помпы (напр. 522). 
@@ -57,9 +57,9 @@ You need to set following items: (see picture above)
 
 ## Вкладка MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png)
+![Вкладка MDT](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+На вкладке помпы можно видеть несколько строк, которые отображают текущее состояние помпы (и связь).
 
 - **Статус RileyLink**: показывает состояние связи RileyLink. Телефон должен быть все время подключен к RileyLink.
 - ** Состояние помпы **: Состояние соединения с помпой, у него может быть несколько значений, но в основном мы увидим значок спящего режима (когда соединение с помпой не активно), при выполнении команды можно видеть "Устанавливается соединение", то есть AAPS пытается соединиться с помпой или описание других команд, выполняемых помпой (например, чтение времени, устанавливается временный базал TBR и т. д.).
@@ -71,7 +71,7 @@ On pump tab you can see several lines that are showing pumps (and connections) c
 - ** Резервуар **: Сколько инсулина находится в картридже (обновляется по крайней мере каждый час).
 - **ошибки**: строка ошибки, если есть проблемы (в основном показывает, есть ли ошибка в конфигурации).
 
-On lower end we have 3 buttons:
+В нижней части мы имеем три кнопки:
 
 - **Обновить** для обновления состояния. Этот параметр следует использовать только после того, как соединение не будет установлено в течение длительного времени, так как это действие приведет к сбросу данных о помпе (потребуется получить историю данных, получить/установить время, получить профиль, получить состояние батареи и т. д.).
 - **Журнал помпы**: показывает хронологию помпы (см. [внизу](../Configuration/MedtronicPump#pump-history))
@@ -79,22 +79,22 @@ On lower end we have 3 buttons:
 
 ## Журнал помпы
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Диалоговое окно журнала помпы](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Хронология помпы извлекается каждые 5 минут и сохраняется в памяти. Она хранится только последние 24 часа, таким образом, более старые записи удаляются по мере добавления новых. Это простой способ увидеть события хронологии помпы (некоторые записи могут не отображаться, поскольку не важны - например, конфигурация функций, не используемых AndroidAPS).
 
 ## Состояние RL (Состояние RileyLink)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![Состояние RileyLink-Параметры](../images/Medtronic04.png) ![Состояние RileyLink-хронология](../images/Medtronic05.png)
 
-Dialog has two tabs:
+Диалоговое окно имеет две вкладки:
 
 - ** Параметры **: Показывает параметры RileyLink: Сконфигурированный адрес, Подключенное устройство, Состояние соединения, Ошибка соединения и Версия встроенного ПО (прошивки) RileyLink. Типом устройства всегда является Medtronic Pump, Модель - ваша версия модели, Серийный номер-сконфигурированный серийный номер, Частота помпы- Частота на которой работает связь помпы, Последняя частота-последняя используемая частота связи.
 - ** История **: Показывает хронологию связи, элементы с RyleyLink показывают изменения состояния RileyLink, Medtronic показывает, какие команды были отправлены на помпу.
 
 ## Действия
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Если выбран драйвер Medtronic, на вкладке Действия можно добавить три варианта:
 
 - ** Пробуждение и настройка **-Если вы видите, что AndroidAPS не связывался с помпой в течение какого-то времени (он должен связаться каждые 5 минут), вы можете нажать кнопку Настройка. Начнется сеанс связи с помпой с поиском всех подчастот, на которых может выполняться связь. Если обнаружится одна из них, она будет задана как частота по умолчанию. 
 - ** Сброс конфигурации RileyLink **-При перезагрузке RileyLink/GNARL необходимо выполнить эту команду, чтобы переконфигурировать устройство (набор частоты, тип частоты, настроенная кодировка).
@@ -104,7 +104,7 @@ When Medtronic driver is selected, 3 possible actions can be added to Actions Ta
 
 ### Запись логов в файл
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Поскольку драйвер Medtronic создан не так давно, следует включить ведение журнала, чтобы мы могли при необходимости отладить и устранить проблемы. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
 
 ### RileyLink/GNARL
 
