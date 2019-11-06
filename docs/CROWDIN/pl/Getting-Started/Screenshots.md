@@ -16,7 +16,7 @@ To jest pierwszy ekran, który zobaczysz po uruchomieniu AndroidAPS, zawiera on 
 * see your current profile and do a [profile switch](../Usage/Profiles.md)
 * see your current target blood glucose level and set a [temporary target](../Usage/temptarget.md).
 
-Naciśnij dłużej dowolny przycisk, aby zmienić ustawienie. I.e long press the target bar in the upper right ("110" in the screenshot above) to set a temp target.
+Naciśnij dłużej dowolny przycisk, aby zmienić ustawienie. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
 
 ### Sekcja C
 
