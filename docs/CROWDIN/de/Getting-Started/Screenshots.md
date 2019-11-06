@@ -16,7 +16,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 * Anzeige des aktuellen Profils und Möglichkeit zum [Profil-Wechsel](../Usage/Profiles.md)
 * Anzeige des aktuellen Zielwertes/-bereichs und Möglichkeit zum Setzen eines [Temporary Target](../Usage/temptarget.md).
 
-Um eines davon zu verändern, drücke länger auf das entsprechende Feld. Drücke z.B. lange auf das dunkelblaue Feld im oberen rechten Bereich ("110" im Screenshot oben), um ein temporäres Ziel zu setzen.
+Um eines davon zu verändern, drücke länger auf das entsprechende Feld. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
 
 ### Abschnitt C
 
