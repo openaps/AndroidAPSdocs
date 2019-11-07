@@ -15,12 +15,13 @@ Funktionsweise
 * Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 * In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolon und ein Leerzeichen getrennt (z.B.  +4912345678; +4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden.
 * If you want to use more than one number:
+
   * Enter just one number.
   * Make that single number work by sending and confirming a SMS command.
   * Enter additional number(s) separated by semicolon and one space.
-
-  .. image:: ../images/SMSCommandsSetupSpace.png
-    :alt: SMS-Befehle einrichten
+  
+    .. image:: ../images/SMSCommandsSetupSpace.png
+      :alt: SMS-Befehle einrichten
 
 
 * Sende von einer deiner zugelassenen Telefonnummern eine SMS auf das Handy, auf dem AndroidAPS läuft. Du kannst jeden der unten IN GROSSBUCHSTABEN aufgeführten Befehle verwenden. Das AndroidAPS-Handy bestätigt die erfolgreiche Ausführung des Befehls oder gibt den angefragten Status zurück. Bestätige gegebenenfalls das Kommando indem Du den vom AndroidAPS Smartphone per SMS übermittelten Code zurücksendest.
