@@ -38,10 +38,10 @@ Il existe des limites de sécurité en fonction de l'âge que vous avez sélecti
     
     Les paramètres des voyants d'état doivent être définis dans les paramètres Nightscout. Définir les variables suivantes :
     
-    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
-    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
-    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
-    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+    * Age canule : CAGE_WARN et CAGE_URGENT (standard 48 et 72 heures)
+    * Age insuline (réservoir) : IAGE_WARN et IAGE_URGENT (standard 72 et 96 heures)
+    * Age du capteur : SAGE_WARN et SAGE_URGENT (standard 164 et 166 heures)
+    * Age pile : BAGE_WARN et BAGE_URGENT (standard 240 et 360 heures)
 
 * Seuils pour le niveau d'alerte du réservoir et le niveau critique du réservoir.
 
@@ -63,7 +63,7 @@ Vous pouvez alterner entre Boucle Ouverte et Boucle Fermée. Open looping means 
 
 ## OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. Vous pouvez apprendre plus sur les Paramètres et [Autosens dans le manuel d'OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. Activez-le dans le Générateur de configuration pour voir les paramètres de sécurité, vous devrez avoir complété l'[Objectif 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) pour utiliser cette fonctionnalité. Vous pouvez apprendre plus sur les Paramètres et [Autosens dans le manuel d'OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Max. U/hr pour le débit de basal temp
 
