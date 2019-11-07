@@ -2,7 +2,7 @@
 
 ## Главный экран
 
-![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
+![Главный экран V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
 
 Это первый экран, который вы увидите, когда откроете AndroidAPS, и он содержит большую часть повседной информации.
 
@@ -16,7 +16,7 @@
 * посмотреть текущий профиль и выполнить [переключение профиля](../Usage/Profiles.md)
 * посмотреть текущий целевой уровень глюкозы в крови и установить [временные цели](../Usage/temptarget.md).
 
-Нажмите и удерживайте любую из кнопок для изменения настройки. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
+Нажмите и удерживайте любую из кнопок для изменения настройки. Например, удерживая темно-синюю целевую панель в верхнем правом углу ("100" на снимке экрана), можно задать временные цели.
 
 ### Секция С
 
@@ -60,26 +60,26 @@
 
 * ** Активный Инсулин ** (синяя диаграмма): Он показывает инсулин, который действует в организме. Если нет временных базалов TBR, микроболюсов SMB и оставшихся болюсов, то это значение равно нулю. Всасывание зависит от продолжительности действия инсулина и настроек его профиля. 
 * ** Активные Углеводы ** (оранжевый график): показывает углеводы, которые усваиваются организмом. Всасывание зависит от отклонений, замеченных алгоритмом. Если он обнаружит более высокое поглощение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (более или менее, в зависимости от ваших настроек безопасности). 
-* **Deviations**: 
+* **Отклонение**: 
    * ** СЕРЫЕ ** столбцы показывают отклонение, вызванное углеводами. 
    * ** ЗЕЛЕНЫЕ ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. 
-   * **RED** bars show that BG is lower than the algorithm expected.
-* **Sensitivity** (white line): It shows the sensitivity that Autosense has detected. Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
-* **Activity** (yellow line): It shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). The value is higher for insulin closer to peak time. It would mean to be negative when IOB is decreasing. 
+   * ** КРАСНЫЕ ** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом.
+* ** Чувствительность ** (белая линия): Показывает чувствительность, обнаруженную Autosense'ом. Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
+* **активность** (желтая линия): показывает активность инсулина, рассчитанную на основе профиля инсулина (не производная от активного инсулина). Значение выше ближе к пику времени действия. Это будет означать, что при снижении IOB величина будет отрицательной. 
 
 ### Секция G
 
-Enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration. Also a Quick Wizzard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
+Позволяет подавать болюс (обычно это делается кнопкой Калькулятора болюса) и добавлять калибровку после замера глюкометром. Здесь также будет видна кнопка Quick Wizard, если она настроена в [ Конфигураторе](../Configuration/Config-Builder#quickwizard-settings).
 
 ## Калькулятор
 
 ![Калькулятор](../images/Screenshot_Bolus_calculator.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Когда необходимо дать болюс на еду, он обычно подается отсюда.
 
 ### Секция A
 
-contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+место, куда вы вводите информацию о желательном болюсе. Поле ГК обычно уже заполнено данными с мониторинга. Если мониторинг не работает, то поле будет пустым. В поле УГЛЕВОДЫ вы добавляете рассчитанное вами количества углеводов - или эквивалента - на которые хотите дать болюс. Поле CORR/ИСПРАВ нужно, если вы по какой-то причине хотите изменить конечную дозу, а поле CARB TIME нужно для предварительного болюса, чтобы сказать системе, что будет задержка приема углеводов. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
 
 SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
 
