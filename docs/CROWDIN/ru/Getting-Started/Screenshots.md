@@ -161,10 +161,10 @@ AndroidAPS может работать с различными конфигур�
 
 ![Конфигуратор](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+Здесь вы настраиваете конфигурацию вашей системы AndroidAPS. Снимок экрана показывает довольно типичную комбинацию, состоящую из помпы Combo, сенсора Dexcom G5, управляемую через приложение xDrip + и работающую с инсулином NovoRapid на профиле Oref, подключенную к облачному серверу Nightscout.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+Галочка в ячейке справа определяет, будет ли этот модуль отображаться в верхней панели меню (см. Секция А на домашнем экране) а значок шестеренки позволяет получить доступ к настройкам модуля, если они имеются.
 
 ## Параметры и настройки
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+В верхней части панели навигации вы найдете три маленьких вертикальных точки. Нажатие на них приводит вас к настройкам приложения, браузеру истории, мастеру установки, информации о приложении и кнопке выхода, которая закрывает AAPS.
