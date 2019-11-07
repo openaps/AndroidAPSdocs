@@ -58,11 +58,11 @@
 
 Эта секция также настраивается с использованием опций в разделе D.
 
-* ** Активный Инсулин ** (синяя диаграмма): Он показывает инсулин, который действует в организме. Если нет временных базалов TBR, микроболюсов SMB и оставшихся болюсов, то это значение равно нулю. Decaying depends on your DIA and insulin profile settings. 
-* **Carbs On Board** (orange chart): It shows the carbs you have on board. Decaying depends on the deviations the algorithm detects. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* ** Активный Инсулин ** (синяя диаграмма): Он показывает инсулин, который действует в организме. Если нет временных базалов TBR, микроболюсов SMB и оставшихся болюсов, то это значение равно нулю. Всасывание зависит от продолжительности действия инсулина и настроек его профиля. 
+* ** Активные Углеводы ** (оранжевый график): показывает углеводы, которые усваиваются организмом. Всасывание зависит от отклонений, замеченных алгоритмом. Если он обнаружит более высокое поглощение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (более или менее, в зависимости от ваших настроек безопасности). 
 * **Deviations**: 
-   * **GREY** bars show a deviation due to carbs. 
-   * **GREEN** bars show that BG is higher than the algorithm expected it to be. 
+   * ** СЕРЫЕ ** столбцы показывают отклонение, вызванное углеводами. 
+   * ** ЗЕЛЕНЫЕ ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. 
    * **RED** bars show that BG is lower than the algorithm expected.
 * **Sensitivity** (white line): It shows the sensitivity that Autosense has detected. Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 * **Activity** (yellow line): It shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). The value is higher for insulin closer to peak time. It would mean to be negative when IOB is decreasing. 
