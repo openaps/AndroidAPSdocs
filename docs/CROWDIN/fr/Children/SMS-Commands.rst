@@ -14,6 +14,10 @@ How it works
 
 * In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 * In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, just one space after the semicolons - i.e. +4412345678; +4412345679) and also enable 'Allow remote commands via SMS'.
+* If you want to use more than one number:
+  * Enter just one number.
+  * Make that single number work by sending and confirming a SMS command.
+  * Enter additional number(s) separated by semicolon and one space.
 
   .. image:: ../images/SMSCommandsSetupSpace.png
     :alt: SMS Commands Setup
