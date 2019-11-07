@@ -58,7 +58,7 @@
 
 Эта секция также настраивается с использованием опций в разделе D.
 
-* ** Активный Инсулин ** (синяя диаграмма): Он показывает инсулин, который действует в организме. If there were no TBRs, SMBs and no remaining boluses this would be zero. Decaying depends on your DIA and insulin profile settings. 
+* ** Активный Инсулин ** (синяя диаграмма): Он показывает инсулин, который действует в организме. Если нет временных базалов TBR, микроболюсов SMB и оставшихся болюсов, то это значение равно нулю. Decaying depends on your DIA and insulin profile settings. 
 * **Carbs On Board** (orange chart): It shows the carbs you have on board. Decaying depends on the deviations the algorithm detects. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
 * **Deviations**: 
    * **GREY** bars show a deviation due to carbs. 
