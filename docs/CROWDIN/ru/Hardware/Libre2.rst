@@ -14,21 +14,21 @@ https://github.com/TinoKossmann/LibreLink-xDrip-Patch
 
 The patched app has to be installed instead of the original app. The next sensor started with it will wireless transmit its values to the smartphone.
 
-Important: First install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app. This can de checked by the foreground authorization notification. 
+Important: First install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Затем установите модифицированное приложение. На установку модификации укажет предварительное уведомление об авторизации. 
 
-.. image:: ../images/fsl2pic1.jpg
-  :alt: LibreLink Foreground Service
+.. изображение:: ../images/fsl2pic1.jpg
+  :alt: LibreLink Служба переднего плана
 
-It significantly improves the connection stability compared to the original app. Now set the permissions memory and location, enable automatic time and timezone and set the alarms in the LibreLink app. Now start the Libre2 sensor with the patched app by simply scanning the sensor. Follow the instructions. The sensor remembers the device it was started with. Only this device can receive alarms in the future.
+Это значительно повышает стабильность соединения по сравнению с исходным приложением. Теперь задайте права доступа к памяти и расположению, включите автоматическое изменение времени и часового пояса и задайте оповещения в приложении LibreLink. Затем запустите датчик Libre2 с модифицированного приложения, просто сканируя сенсор. Следуйте инструкциям. Сенсор запоминает устройство, с которого он был запущен. Только это устройство может получать оповещения в будущем.
 
-.. image:: ../images/fsl2pic2.jpg
-  :alt: LibreLink permissions memory & location
+.. изображение:: ../images/fsl2pic2.jpg
+  :alt: LibrreLink-разрешение на доступ к памяти и расположению
   
-.. image:: ../images/fsl2pic3.jpg
-  :alt: Android settings location
+.. изображение:: ../images/fsl2pic3.jpg
+  :alt: Android Настройки местоположения
   
-.. image:: ../images/fsl2pic4.jpg
-  :alt: LibreLink settings alarm
+.. изображение:: ../images/fsl2pic4.jpg
+  :alt: Параметры LibreLink
   
 You can use a second NFC capable smartphone with the original LibreLink app for scanning via NFC. The Reader can NOT be used any more, it cannot be connected in parallel! The second phone can upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for the DiaDoc. There are many parents who absolutely need this. The patched app does not have any connection to the Internet.
 
