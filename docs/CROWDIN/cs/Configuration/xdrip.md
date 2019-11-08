@@ -16,8 +16,12 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... or 8H
 
 * Zrušte `Automatické kalibrace` Je-li checkbox `Automatic Calibration` zaškrtnut, aktivujte jednou `Download data`, poté odškrtněte checkbox `Automatic Calibration` na znovu deaktivujte `Download data`. Jinak budou ošetření (sacharidy & inzulín) poslána do Nigtscoutu dvakrát.
 
-* Zvolte `Extra Options`
-* Zrušte `Upload treatments` a `Back-fill data`
+* Tap `Extra Options`
+
+* Deactivate `Upload treatments` and `Back-fill data`.
+   
+   **Safety warning : You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+
 * Dále by měla být deaktivována volba `Alert on failures`. Jinak bude každých 5 minut spuštěn alarm, bude-li připojení přes wifi/mobilní síť málo kvalitní, anebo při problémech se spojením k serveru.
    
    ![xDrip+ Základní nastavení 1](../images/xDrip_Basic1.png)
@@ -26,7 +30,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... or 8H
 
 * **Komunikace mezi aplikacemi** (Broadcast) Pokud budete používat AndroidAPS a data by měla být přenášena např. do AndroidAPS, měli byste v xDripu aktivovat Lokální odesílání dat.
 
-* Aby byly hodnoty stejné, měli byste aktivovat `Odesílat zobrazovanou glykémii`.
+* In order for the values to be equal, you should activate `Send the displayed glucose value`.
+
 * Pokud jste aktivovali `Přijímat ošetření` a v AndroidAPS i Povolení odesílání, bude xDrip+ přijímat sacharidy, insulín i bazální hodnoty z AndroidAPS, a může tak předpovídat blížící se hypo atd. mnohem přesněji.
    
    ![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
