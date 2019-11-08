@@ -17,8 +17,13 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use o
    
 * Deactivate `Automatic Calibration`
    If the checkbox for `Automatic Calibration` is checked, activate `Download data` once, then remove the checkbox for `Automatic Calibration` and deactivate `Download data` again, otherwise the treatments (insulin & carbs) will be added twice to Nightscout.
+   
 * Tap `Extra Options`
-* Deactivate `Upload treatments` and `Back-fill data`
+
+* Deactivate `Upload treatments` and `Back-fill data`. 
+
+   **Safety warning : You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+
 * Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
 
    ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
@@ -27,7 +32,9 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use o
 
 * **InterApp-Settings** (Broadcast)
    If you are going to use AndroidAPS and the data should be forwarded to i.e. AndroidAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+   
 * In order for the values to be equal, you should activate `Send the displayed glucose value`.
+
 * If you have also activated `Accept treatments` and broadcasting in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. more accurately.
 
    ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
@@ -209,7 +216,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H use one of 
    * Fallback to xDrip (disable!)
 
    ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
- 
+
 * Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
 
   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
@@ -267,7 +274,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H use one of 
    - Code can also be found in [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
 * Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
-   
+  
    ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
 
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
@@ -321,7 +328,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
    -> scroll down
    -> Less common settings
    -> Bluetooth Settings
- 
+
    ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Enable the following settings
