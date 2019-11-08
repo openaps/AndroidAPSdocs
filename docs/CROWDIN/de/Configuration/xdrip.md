@@ -16,11 +16,11 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet oder 8H... verwe
 
 * Deaktiviere `Automatic Calibration` Falls die Checkbox für `Automatic Calibration` ausgewählt ist, aktiviere `Download data` einmalig, entferne dann den Haken in der Checkbox für `Automatic Calibration` und deaktiviere `Download data` wieder. Sonst werden die Behandlungen (Insulin & Kohlenhydrate) doppelt in Nightscout eingetragen.
 
-* Tap `Extra Options`
+* Tippe auf `Extra Options`.
 
-* Deactivate `Upload treatments` and `Back-fill data`.
+* Deaktiviere `Upload treatments` und `Back-fill data`.
    
-   **Safety warning : You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+   **Sicherheitshinweis: Du musst "Upload treatments" in xDrip deaktivieren, da sonst die Behandlungen in AAPS doppelt erscheinen können. Dies würde zu falschen COB und IOB führen.**
 
 * Die Option `Alert on failures` sollte ebenfalls deaktiviert sein. Andernfalls erhältst Du alle 5 Minuten einen Alarm, falls das WLAN / Mobilfunknetz zu schlecht oder der Server nicht verfügbar ist.
    
@@ -30,7 +30,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet oder 8H... verwe
 
 * **InterApp-Einstellungen** (Broadcast) Wenn Du planst, AndroidAPS zu nutzen und die Daten an AndroidAPS weiterzugeben, musst Du den sogenannten 'Broadcast' in xDrip+ in den Inter-App Einstellungen einschalten.
 
-* In order for the values to be equal, you should activate `Send the displayed glucose value`.
+* Damit die Werte übereinstimmen, solltest Du `Sende den angezeigten Glukosewert` aktivieren.
 
 * Wenn Du zusätzlich `Behandlungen annehmen` und in AndroidAPS den Broadcast aktivierst, dann wird xDrip+ Insulinmengen, Kohlenhydrate und Basalrateninformationen aus AndroidAPS erhalten und kann so z.B. niedrige Werte vorhersagen. 
    
