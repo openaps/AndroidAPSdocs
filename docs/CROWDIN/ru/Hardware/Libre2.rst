@@ -38,11 +38,11 @@ Context | Edit Context
 
 Первая установка соединения с сенсором имеет решающее значение. Приложение LibreLink пытается установить беспроводное соединение с сенсором каждые 30 секунд. Все параметры должны быть верными: 
 
-* NFC enabled
-* memory permission enabled 
-* location enabled
-* automatic time and timezone 
-* at least one alarm setting in the LibreLink app. 
+Модуль NFC включен
+* разрешение на доступ к памяти дано 
+Определение местоположения включено
+* автоматическое время и часовой пояс 
+* хотя бы одно оповещение в приложении LibreLink установлено. 
 
 As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
 
