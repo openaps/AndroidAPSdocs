@@ -34,7 +34,7 @@ Context | Edit Context
 .. изображение:: ../images/fsl2pic4.jpg
   :alt: Параметры LibreLink
   
-You can use a second NFC capable smartphone with the original LibreLink app for scanning via NFC. The Reader can NOT be used any more, it cannot be connected in parallel! The second phone can upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for the DiaDoc. There are many parents who absolutely need this. The patched app does not have any connection to the Internet.
+Можно использовать второй смартфон с NFC и оригинальным приложением LibreLink для сканирования через NFC. Ридер после этого нельзя использовать, он не может быть сопряжен параллельно! Второй телефон может передавать значения сахара крови в Abbott Cloud (LibreView). LibreView может генерировать отчеты для DiaDoc. There are many parents who absolutely need this. The patched app does not have any connection to the Internet.
 
 The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. All settings must be correct: 
 
