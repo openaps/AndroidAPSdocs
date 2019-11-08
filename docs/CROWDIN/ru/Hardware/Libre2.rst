@@ -1,20 +1,24 @@
 Freestyle Libre 2
 **********************
 
-The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar values to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink App, you can continuously receive your blood sugar values on your smartphone. Поскольку они посылают их напрямую через Bluetooth на телефон, необходимость в покупке таких устройств как MiaoMiao отпадает. 
+Система Freestyle Libre 2 может автоматически сообщать об опасных уровнях глюкозы в крови. Сенсор Libre2 каждую минуту отправляет текущие значения гликемии на принимающее устройство (ридер или смартфон). При необходимости приемник инициирует оповещение. С помощью модифицированного приложения LibreLink, вы можете непрерывно получать значения ГК на смартфон. Поскольку они посылают их напрямую через Bluetooth на телефон, необходимость в покупке таких устройств как MiaoMiao отпадает. 
 
 Шаг 1: Создайте свое модифицированное приложение Librelink-App
 ==============
 
-For legal reasons, the so-called patching has to be done by yourself according to one of two instructions:
+По юридическим причинам так называемое исправление/модификация должна быть выполнена самостоятельно в соответствии с одной из двух инструкций:
 
 https://github.com/user987654321resu/Libre2-patched-App
+ 
+Context | Edit Context
 
 https://github.com/TinoKossmann/LibreLink-xDrip-Patch
+ 
+Context | Edit Context
 
-The patched app has to be installed instead of the original app. The next sensor started with it will wireless transmit its values to the smartphone.
+Модифицированное приложение должно быть установлено вместо исходного. Следующий сенсор, запущенный с него, будет передавать данные ГК на смартфон.
 
-Important: First install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Затем установите модифицированное приложение. На установку модификации укажет предварительное уведомление об авторизации. 
+Важно: первая установка и удаление исходного приложения должно производиться на смартфоне с поддержкой NFC. NFC должен быть включен. Это не требует дополнительной энергии. Затем установите модифицированное приложение. На установку модификации укажет предварительное уведомление об авторизации. 
 
 .. изображение:: ../images/fsl2pic1.jpg
   :alt: LibreLink Служба переднего плана
