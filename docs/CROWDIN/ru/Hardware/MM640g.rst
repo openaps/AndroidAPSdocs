@@ -1,4 +1,4 @@
-For users of MM640g or MM630g
+Для пользователей MM640g или MM630g
 *****
 
 * Если это еще не сделано, скачайте `600SeriesAndroidUploaer <http://pazaan.github.io/600SeriesAndroidUploader/>`_ и следуйте инструкциям на Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
