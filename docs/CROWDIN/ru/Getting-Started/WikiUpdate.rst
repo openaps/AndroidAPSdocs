@@ -1,9 +1,9 @@
 Обновления и изменения документации Wiki
 **********************
-November 2019
+ноябрь 2019
 ===============
-* `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
+Пролонгированный болюс - почему не работает в контексте ИПЖ <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
 * `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
 * `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
