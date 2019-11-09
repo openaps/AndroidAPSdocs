@@ -1,16 +1,16 @@
 # Δημιουργώντας την εφαρμογή APK
 
-## Build yourself instead of download
+## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS δεν είναι διαθέσιμο για κατέβασμα λόγω κανονισμού για τις ιατρικές συσκευές. Είναι νόμιμο να χτίσει η εφαρμογή για δική σας χρήση, αλλά δεν πρέπει να δώσετε αντίγραφο σε άλλους! Δείτε το [σελίδα FAQ](../Getting-Started/FAQ.md) για λεπτομέρειες.**
 
-## ## Important notes
+## ## Σημαντικές σημειώσεις
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+***Σημείωση***: Παρακαλώ χρησιμοποιήστε [το Android Studio Έκδοση 3.5.1](https://developer.android.com/studio/) ή νεότερη έκδοση για να χτίσει το apk.
 
-**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+**Διαμόρφωση της ζήτησης** δεν υποστηρίζεται από την τρέχουσα έκδοση του Android Gradle plugin!
 
-If your build fails with an error regarding "on demand configuration" you can do the following:
+Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
 
 * Ανοίξτε το παράθυρο "Προτιμήσεις" κάνοντας κλικ στην επιλογή Αρχείο> Ρυθμίσεις (σε Mac, Android Studio> Προτιμήσεις).
 * Στο αριστερό τμήμα του παραθύρου, κάντε κλικ στην επιλογή Δημιουργία, εκτέλεση, ανάπτυξη> μεταγλωττιστής.
@@ -26,9 +26,9 @@ If your build fails with an error regarding "on demand configuration" you can do
 
 ## Μία γενική ιδέα
 
-In general, the steps necessary to build the APK file:
+Γενικά, τα απαραίτητα βήματα για τη δημιουργία του αρχείου APK:
 
-* Εγκαταστήστε το git
+* [Install git](../Installing-AndroidAPS/git-install.rst)
 * Εγκαταστήστε και ρυθμίστε το Android Studio.
 * Χρησιμοποιήστε git για να κλωνοποιήσετε τον πηγαίο κώδικα από το κεντρικό αποθετήριο Github όπου οι προγραμματιστές έχουν βάλει τον πραγματικό κώδικα για την εφαρμογή.
 * Ανοίξτε το κλωνοποιημένο έργο στο Android Studio ως ενεργό έργο.
@@ -37,22 +37,11 @@ In general, the steps necessary to build the APK file:
 
 ## Step by step walkthrough
 
-Detailed description of the steps necessary to build the APK file.
+Λεπτομερής περιγραφή των βημάτων που είναι απαραίτητα για τη δημιουργία του αρχείου APK.
 
 ## Εγκαταστήστε το git (αν δεν το έχετε)
 
-### Windows
-
-* Κάθε έκδοση git θα πρέπει να λειτουργήσει. Για παράδειγμα [ https://git-scm.com/download/win ](https://git-scm.com/download/win)
-* Βεβαιωθείτε ότι έχετε σημειώσει τη διαδρομή εγκατάστασης. Θα το χρειαστείτε αργότερα, αφού έχετε εγκαταστήσει το Android Studio.
-  
-  ![Διαδρομή εγκατάστασης Git](../images/Update_GitPath.png)
-
-### Mac
-
-* Κάθε έκδοση git θα πρέπει να λειτουργήσει. Για παράδειγμα [ https://git-scm.com/download/mac ](https://git-scm.com/download/mac)
-* Χρησιμοποιήστε το homebrew για να εγκαταστήσετε το git: ```$ brew εγκατέστησε git```.
-* Για λεπτομέρειες σχετικά με την εγκατάσταση του git, ανατρέξτε στην [επίσημη τεκμηρίωση git ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
 ## Install Android Studio
 
@@ -94,31 +83,31 @@ After the downloads are completed click the "Finish" button.
 
 ![Screenshot 9](../images/Installation_Screenshot_09.png)
 
-* Μπράβο!!! Έχετε τελειώσει την εγκατάσταση του Android Studio και μπορείτε να ξεκινήσετε την κλωνοποίηση του πηγαίου κώδικα. Ίσως ήρθε η ώρα για ένα σύντομο διάλειμμα;
+* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
 
 ## Set git path in preferences
 
 ### Windows
 
-* Αφήστε το Studio να μάθει πού βρίσκεται το git.exe: Αρχείο - Ρυθμίσεις
+* Let Studio know where is git.exe located: File - Settings
   
-  ![Android Studio - ανοίξτε τις ρυθμίσεις](../images/Update_GitSettings1.png)
+  ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
-* Στο επόμενο παράθυρο: Έλεγχος έκδοσης - Git
+* In the next window: Version Control - Git
 
-* Επιλέξτε σωστή διαδρομή: ... / Git <font color="#FF0000"><b> / bin </b></font>
+* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
 
-* Βεβαιωθείτε ότι έχετε επιλέξει τη μέθοδο ενημέρωσης "Συγχώνευση".
+* Make sure update method "Merge" is selected.
   
-  ![Android Studio - διαδρομή GIT](../images/Update_GitSettings2a.png)
+  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
 
 ### Mac
 
-* Αν εγκαταστήσετε το git μέσω του homebrew δεν χρειάζεται να αλλάξετε τις προτιμήσεις. Σε περίπτωση που: Μπορούν να βρεθούν εδώ: Android Studio - Προτιμήσεις.
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
 ## Download code and additional components
 
-* Χρησιμοποιήστε τον κλώνο git στο Android Studio όπως φαίνεται στα στιγμιότυπα οθόνης παρακάτω. Επιλέξτε "Έλεγχος έργου από τον έλεγχο έκδοσης" με το "Git" ως σύστημα ελέγχου συγκεκριμένης έκδοσης.
+* Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png)
 
@@ -144,8 +133,8 @@ Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
-* Εξαιρετικά, έχετε το δικό σας αντίγραφο του πηγαίου κώδικα και είστε έτοιμοι να ξεκινήσετε την κατασκευή.
-* Τώρα πλησιάζουμε στο πρώτο μας μήνυμα σφάλματος. Ευτυχώς, το Android Studio θα μας δώσει άμεσα τη λύση για αυτό.
+* Excellent, you have your own copy of the source code and are ready to start the build.
+* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
 
 Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
@@ -237,13 +226,13 @@ Click "Create new..." to start creating your keystore. A keystore in this case i
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 
-* Συμπληρώστε τις πληροφορίες για το επόμενο παράθυρο διαλόγου. 
-  * Διαδρομή κλειδιού αποθήκευσης: είναι η διαδρομή προς το αρχείο του κλειδιού
-  * Τα παρακάτω πεδία κωδικών πρόσβασης επιτρέπουν στο θυροκατάλογο να ελέγξει για τυχόν σφάλματα πληκτρολόγησης.
-  * Το ψευδώνυμο είναι ένα όνομα για το κλειδί που χρειάζεστε. Μπορείτε να αφήσετε την προεπιλογή ή να της δώσετε ένα όνομα που θέλετε.
-  * Τα πεδία κωδικού πρόσβασης κάτω από το κλειδί είναι για το ίδιο το κλειδί. Όπως πάντα, πρέπει να ελέγξετε για τυχόν σφάλματα πληκτρολόγησης.
-  * Μπορείτε να αφήσετε την εγκυρότητα στην προεπιλογή των 25 ετών.
-  * Πρέπει μόνο να συμπληρώσετε το όνομα και το επώνυμο, αλλά μπορείτε να συμπληρώσετε και τις υπόλοιπες πληροφορίες. Στη συνέχεια, κάντε κλικ στο "OK".
+* Fill in the information for the next dialog. 
+  * Key store path: is the path to the keystore file. **Do not save in same folder as projekt. You must use a different directory!**
+  * The password fields below are for the keystore to double check for typing errors.
+  * Alias is a name for the key you need. You can leave the default or give it a fancy name you want.
+  * The password fields below the key are for the key itself. As always to double check for typing errors.
+  * You can let the validity at the default of 25 years.
+  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
 
 ![Screenshot 42](../images/Installation_Screenshot_42.png)
 
@@ -251,11 +240,11 @@ Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Screenshot 43](../images/Installation_Screenshot_43.png)
 
-Επιλέξτε "πλήρης" ως γεύση για την παραγόμενη εφαρμογή. Επιλέξτε V1 "Signature Jar" (V2 είναι προαιρετικό) και πατήστε "Τέλος". Οι ακόλουθες πληροφορίες μπορεί να είναι σημαντικές για μεταγενέστερη χρήση.
+Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". Οι ακόλουθες πληροφορίες μπορεί να είναι σημαντικές για μεταγενέστερη χρήση.
 
 * Το "Απελευθερωμένο" θα πρέπει να είναι η προεπιλεγμένη επιλογή σας για το "Τύπος κατασκευής", το "Debug" είναι μόνο για τους ανθρώπους που κωδικοποιούν.
 * Επιλέξτε τον τύπο κατασκευής που θέλετε να δημιουργήσετε. 
-  * πλήρεις (δηλ. συστάσεις που εκτελούνται αυτόματα σε κλειστό κύκλωμα)
+  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
   * ανοιχτό κύκλωμα (δηλ. συστάσεις που δίδονται στο χρήστη να χειρίζεται με μη αυτόματο τρόπο)
   * έλεγχος αντλίας (δηλαδή τηλεχειριστήριο για αντλία, χωρίς κύκλωμα)
   * nsclient (δηλ. εμφανίζονται τα δεδομένα του κυκλώματος ενός άλλου χρήστη και μπορούν να προστεθούν καταχωρήσεις στην εξυπηρέτηση)
@@ -276,7 +265,14 @@ Fill in the information of the last dialog in this dialog and click "Next".
 
 ![Στιγμιότυπο οθόνης 47](../images/Installation_Screenshot_47.png)
 
-Μεταβείτε στον κατάλογο AndroidAPS / εφαρμογή / πλήρεις/ release για να βρείτε το αρχείο "app-full-release.apk". Μεταφέρετε αυτό το αρχείο στο Android smartphone σας. Μπορείτε να το κάνετε με τον προτιμώμενο τρόπο, δηλαδή Bluetooth, upload cloud, ή να συνδέσετε τον υπολογιστή και το τηλέφωνο με καλώδιο ή να χρησιμοποιήσετε email. Χρησιμοποιώ το Gmail εδώ σε αυτό το παράδειγμα, καθώς είναι αρκετά απλό για μένα. Το αναφέρω αυτό επειδή για να εγκαταστήσετε την εφαρμογή που υπογράφηκε αυτόματα πρέπει να επιτρέψουμε στο Android στο smartphone μας να κάνει αυτήν την εγκατάσταση ακόμα κι αν αυτό το αρχείο λαμβάνεται μέσω Gmail, το οποίο κανονικά απαγορεύεται. Αν χρησιμοποιείτε κάτι άλλο παρακαλούμε προχωρήστε ανάλογα.
+Μεταβείτε στον κατάλογο AndroidAPS / εφαρμογή / πλήρεις/ release για να βρείτε το αρχείο "app-full-release.apk". Μεταφέρετε αυτό το αρχείο στο Android smartphone σας. You can do it on your preferred way, i.e.
+
+* Bluetooth
+* cloud upload (Google Drive or other cloud services)
+* connect computer and phone by cable 
+* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+
+In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Αν χρησιμοποιείτε κάτι άλλο παρακαλούμε προχωρήστε ανάλογα.
 
 ![Στιγμιότυπο οθόνης 48](../images/Installation_Screenshot_48.png)
 
@@ -293,3 +289,7 @@ Fill in the information of the last dialog in this dialog and click "Next".
 ## Identify receiver if using xDrip
 
 [See xDrip page](../Configuration/xdrip#identify-receiver)
+
+## Αντιμετώπιση προβλημάτων
+
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

@@ -12,7 +12,7 @@ How to use it
 ================
 To set up an automation, you have to give it a title, select at least one condition and one action. 
 
-General
+Généralités
 --------
 There are some limits:
 
@@ -65,7 +65,7 @@ You can choose one or more actions:
 
 After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
  
-.. image:: ../images/Automation_Default.png
+.. image:: ../images/Automation_Default_V2_5.png
   :alt: Automation default vs. set values
 
 Good practice

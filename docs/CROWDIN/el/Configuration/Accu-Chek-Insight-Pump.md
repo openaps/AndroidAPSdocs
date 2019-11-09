@@ -49,32 +49,34 @@
 
 ## Ρυθμίσεις στο AAPS
 
-![Στιγμιότυπο ρυθμίσεων Insight](../images/Insight_pairing.png)
+![Στιγμιότυπο ρυθμίσεων Insight](../images/Insight_pairing_V2_5.png)
 
 Στις ρυθμίσεις του Insight στο AndroidAPS μπορείτε να ενεργοποιήσετε τις ακόλουθες επιλογές:
 
-* "Αρχείο Αλλαγές τοποθεσίας καταγραφής": Αυτό θα καταγράψει αυτόματα την αλλαγή καθετήρα όταν εκτελείτε το πρόγραμμα "γεμίσματος κάνουλας" στην αντλία.   
-    <font color="red">Σημείωση: Η αλλαγή κάνουλας επαναφέρει επίσης τα Autosens</b></font>
+* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 * "Αρχείο Αλλαγές σωλήνα": Αυτό προσθέτει μια σημείωση στη βάση δεδομένων AndroidAPS όταν εκτελείτε το πρόγραμμα "πλήρωση σωλήνα" στην αντλία.
-* "Αρχείο αλλαγής μπαταρίας": Αυτό καταγράφει μια αλλαγή μπαταρίας όταν βάζετε μια νέα μπαταρία στην αντλία.
-* "Αρχείο αλλαγής λειτουργίας": Αυτό εισάγει μια σημείωση στη βάση δεδομένων AndroidAPS κάθε φορά που ξεκινάτε, σταματάτε ή κάνετε παύση την αντλία.
-* "Αρχείο Ειδοποιήσεις καταγραφής": Καταγράφει μια σημείωση στη βάση δεδομένων AndroidAPS κάθε φορά που η αντλία εκδίδει μια ειδοποίηση (εκτός από τις υπενθυμίσεις, τη δόση και την ακύρωση του TBR - αυτές δεν καταγράφονται).
-* " Αρχείο ενεργοποίηση εξομοίωσης TBR": Η αντλία Insight μπορεί να εκδώσει προσωρινές βασικές τιμές (TBRs) έως και 250%. Για να καταλάβετε αυτόν τον περιορισμό, η εξομοίωση TBR θα δώσει εντολή στην αντλία να παράσχει ένα εκτεταμένο bolus για την επιπλέον ινσουλίνη αν ζητήσετε TBR μεγαλύτερο από 250%.   
-    <font color="red">Σημείωση: Απλά χρησιμοποιήστε ένα εκτεταμένο bolus κάθε φορά ως πολλαπλές οι εκτεταμένες bolus ταυτόχρονα ενδέχεται να προκαλέσουν σφάλματα.</font>
-* "Διάρκεια αποκατάστασης": Αυτό καθορίζει το χρονικό διάστημα κατά το οποίο θα περιμένει το AndroidAPS πριν δοκιμάσει ξανά μετά από μια αποτυχημένη προσπάθεια σύνδεσης. Μπορείτε να επιλέξετε από 0 έως 20 δευτερόλεπτα. Εάν αντιμετωπίζετε προβλήματα σύνδεσης, επιλέξτε μεγαλύτερο χρόνο αναμονής.   
+* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+* "Log battery changes": This records a battery change when you put a new battery in the pump.
+* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
+* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
+    
+    **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
+
+* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Παράδειγμα για λεπτά. διάρκεια ανάκτησης = 5 και μέγιστο. διάρκεια ανάκτησης = 20   
+    Example for min. recovery duration = 5 and max. recovery duration = 20   
       
-    καμία σύνδεση -> περιμένετε **5** δευτ.   
-    επαναλάβετε -> καμία σύνδεση -> περιμένετε **6** δευτ.   
-    επαναλάβετε -> καμία σύνδεση -> περιμένετε **7** δευτ.   
-    επαναλάβετε -> καμία σύνδεση -> περιμένετε **8** δευτ.   
+    no connection -> wait **5** sec.   
+    retry -> no connection -> wait **6** sec.   
+    retry -> no connection -> wait **7** sec.   
+    retry -> no connection -> wait **8** sec.   
     ...   
-    επαναλάβετε -> καμία σύνδεση -> περιμένετε **20** δευτ.   
-    επαναλάβετε -> καμία σύνδεση -> περιμένετε **20** δευτ.   
+    retry -> no connection -> wait **20** sec.   
+    retry -> no connection -> wait **20** sec.   
     ...
 
-* "Αποσύνδεση καθυστέρησης": Αυτό καθορίζει πόση ώρα (σε δευτερόλεπτα) το AndroidAPS θα περιμένει να αποσυνδεθεί από την αντλία μετά την ολοκλήρωση μιας λειτουργίας. Η προεπιλεγμένη τιμή είναι 5 δευτερόλεπτα.
+* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 Για τις περιόδους κατά τις οποίες σταμάτησε η αντλία, το AAPS θα καταγράψει μια προσπάθεια. βασικός ρυθμός με 0%.
 

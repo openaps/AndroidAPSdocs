@@ -1,5 +1,5 @@
-Troubleshooting pumps
+Résolution des problèmes de pompe
 ==============================
 Combo
 -----------
-Have you already been reading `this <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_?
+Avez-vous déjà lu `ceci<../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_?

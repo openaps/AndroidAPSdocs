@@ -95,7 +95,7 @@ Volg onderstaande stappen om de aangepaste app op je telefoon te krijgen:
 3. [AndroidAPS instellen](../Configuration/Config-Builder.md) met de setup wizard of handmatig
 4. In dit voorbeeld gebruikten we (o.a.)
 
-* BG Bron: `Dexcom G5 App (aangepast)` --Klik op het wieltje en activeer `upload BG gegevens naar NS` en `stuur BG data naar xDrip+` (Zie [BG bron](../Configuration/BG-Source.md)
+* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
 
 ![G5 instellingen](../images/SampleSetupG5Settings.png)
 
@@ -115,7 +115,7 @@ xDrip+ is een andere opensource-app die allerlei opties heeft voor glucosedata. 
     * Instellingen > Inter-app settings > Accepteren Calibraties > `AAN`
     * Menu > Start Sensor (is alleen voor de vorm en heeft niets te maken met de G5 zelf. Dit is nodig omdat je anders steeds een foutmelding krijgt). 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
 
 ### Voorbeeld van alarm instellingen
 

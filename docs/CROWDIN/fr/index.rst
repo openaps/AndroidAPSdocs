@@ -1,7 +1,11 @@
 Bienvenue dans la documentation de AndroidAPS
 ==============================================
 
-AndroidAPS est une application open source pour les personnes vivant avec un diabète insulino-dépendant et qui agit comme un pancréas artificiel (APS) sur les smartphones Google Android. Les principaux composants sont les différents algorithmes du logiciel openAPS qui visent à faire ce qu'est un pancréas vivant : maintenir les taux de sucre dans le sang à l'intérieur de limites saines en utilisant l'administration automatisée de l'insuline (AID). De plus, il vous faut une pompe à insuline compatible approuvée FDA/CE et un capteur de Mesure de Glycémies en Continu (MGC). L'application n'utilise PAS d'auto-apprentissage par de l'intelligence artificielle. A la place, les calculs d'AndroidAPS sont basés sur des algorithmes qui exploitent les débits de basal, la sensibilité à l'insuline ou la quantité de glucides correspondant à une unité d'insuline que l'utilisateur renseigne manuellement dans son profil de traitements, mais ils sont vérifiés par le système pour des raisons de sécurité. L'application n'est pas fournie dans Google Play - vous devez la compiler vous même à partir du code source pour des raisons juridiques.
+AndroidAPS est une application open source pour les personnes vivant avec un diabète insulino-dépendant et qui agit comme un pancréas artificiel (APS) sur les smartphones Google Android. Les principaux composants sont les différents algorithmes du logiciel openAPS qui visent à faire ce qu'est un pancréas vivant : maintenir les taux de sucre dans le sang à l'intérieur de limites saines en utilisant l'administration automatisée de l'insuline (AID). De plus, il vous faut une pompe à insuline compatible approuvée FDA/CE et un capteur de Mesure de Glycémies en Continu (MGC). 
+
+L'application n'utilise PAS d'auto-apprentissage par de l'intelligence artificielle. A la place, les calculs d'AndroidAPS sont basés sur des algorithmes qui exploitent les débits de basal, la sensibilité à l'insuline ou la quantité de glucides correspondant à une unité d'insuline que l'utilisateur renseigne manuellement dans son profil de traitements, mais ils sont vérifiés par le système pour des raisons de sécurité. 
+
+L'application n'est pas fournie dans Google Play - vous devez la compiler vous même à partir du code source pour des raisons juridiques.
 
 Les principaux composants sont :
 
@@ -39,7 +43,9 @@ Comment installer AndroidAPS
 
    Construire l'APK <./Installing-AndroidAPS/Building-APK.md>
    Télécharger la nouvelle version ou branche <./Installing-AndroidAPS/Update-to-new-version.md>
-   Notes de version <./Installing-AndroidAPS/Releasenotes.md>
+   Install git <./Installing-AndroidAPS/git-install.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Branches de développement <./Installing-AndroidAPS/Dev_branch.md>
    
    
@@ -74,13 +80,13 @@ Utilisation d'AndroidAPS
    :glob:
     
    Les écrans d'AndroidAPS <./Getting-Started/Screenshots.md>
-   Objectifs <./Usage/Objectives2019.rst>
+   Objectives <./Usage/Objectives.rst>
    Fonctionnalités d'OpenAPS <./Usage/Open-APS-features.md>   
    Calcul des GA <./Usage/COB-calculation.rst>
    Estimation de la Sensibilité <./Configuration/Sensitivity-detection-and-COB.md>
    Changement de profil <./Usage/Profiles.md>
    Cibles <./Usage/temptarget.md>   
-   Glucides étendus <./Usage/Extended-Carbs.md>
+   Extended carbs <./Usage/Extended-Carbs.rst>
    Automatisation <./Usage/Automation.rst>
   
  
@@ -103,7 +109,7 @@ AndroidAPS pour les enfants
    :glob:
    
    Surveillance à distance <./Children/Children.rst>
-   Commandes SMS <./Usage/SMS-Commands.md>
+   SMS commands <./Children/SMS-Commands.rst>
    
 
 Avancé 

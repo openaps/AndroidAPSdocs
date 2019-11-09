@@ -1,13 +1,27 @@
 Обновления и изменения документации Wiki
 **********************
+November 2019
+===============
+* `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
+* `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
+* `New Freestyle Libre 2 tutorial <../Hardware/Libre2.html>`_
+* `SMS commands update <../Children/SMS-Commands.html>`_
+* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
+
 Октябрь 2019
 ===============
 * ` AAPS версии 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0> ` _ updates (особенно на странице обновления <../Instaling-AndroidAPS/Update-to-new-version.html> ` _)
+* `AccuChek Insight - log options <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * Расчет активных углеводов COB на отдельной странице <../Usage/COB-calculation.html>`_
 * ` активные углеводы COB-неправильное определение значения COB <../Usage/COB-calculation.html#detection-оф-неправо-cob-values> ` _
 * ` Dexcom G6: устранение неполадок <../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting> ` _
+* `Objectives update version 2.5 <../Usage/Objectives.html>`_
+* `Preferences update <../Configuration/Preferences.html>`_
 * "Ингибиторы SGLT-2"-не использовать с AAPS <../Module/module.html#no-use-of-sglt-2-inhibitors>`_
-* ` Устранение неполадок команд SMS <../Usage/SMS-Commands.html#troubleshooting> ` _
+* `SMS Commands Troubleshooting <../Children/SMS-Commands.html#troubleshooting>`_
 * ` xDrip-обновление - замена трансмиттера G6 <../Configuration/xdrip.html#replacee-transmitter> ` _
 
 Сентябрь 2019 года

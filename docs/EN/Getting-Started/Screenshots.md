@@ -14,7 +14,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * see your current profile and do a [profile switch](../Usage/Profiles.md)
 * see your current target blood glucose level and set a [temporary target](../Usage/temptarget.md).
 
-Long press on any of the buttons to alter the setting. I.e long press the target bar in the upper right ("110" in the screenshot above) to set a temp target.
+Long press on any of the buttons to alter the setting. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
 
 ### Section C
 * latest blood glucose reading from your CGM

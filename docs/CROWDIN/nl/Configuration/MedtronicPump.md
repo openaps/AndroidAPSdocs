@@ -1,14 +1,10 @@
 # Medtronic Pompen
 
-**>>>> Medtronic pompen bevinden zich in een testfase, ze zijn nog niet te gebruiken met de normale versie van de AndroidAPS app (de zgn 'master' versie). Als de volgende 'master' versie van de app uitkomt, zul je die kunnen gebruiken met Medtronic pompen. <<<<**
+**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)). <<<<**
 
 * * *
 
 Werkt alleen met oudere Medtronic pompen (zie hieronder welke). Werkt niet met Medtronic 640G of 670G.
-
-* * *
-
-De Medtronic aanstuursoftware is al getest door een goede groep testers, op dit moment is het nog wel een 'beta versie'. Dit betekent dat totdat het grote publiek het gedurende een langere periode heeft getest, jij als gebruiker moet weten hoe je de Engineering mode inschakelt, zodat de Medtronic aanstuursoftware wordt weergegeven in AndroidAPS. Als deze alinea adacadabra voor jou is, laat dan het testen van de beta versie over aan anderen (voor je eigen veiligheid).
 
 * * *
 

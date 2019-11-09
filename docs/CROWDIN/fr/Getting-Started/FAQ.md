@@ -2,7 +2,7 @@
 
 Comment ajouter des questions à la FAQ : suivez ces [instructions](../make-a-PR.md)
 
-# General
+# Généralités
 
 ## Puis-je télécharger le fichier d'installation d'AndroidAPS ?
 
@@ -299,7 +299,7 @@ Certaines personnes ont découvert des problèmes de diffusion locale (AAPS ne r
 
 #### Comment traiter les changements de fuseau horaire ?
 
-Avec les pompes Dana R et Dana R coréenne, vous n'avez rien à faire. Pour d'autres pompes, consultez la page [voyager avec différents fuseaux horaires](../Usage/Timezone-traveling.md) pour plus de détails.
+Avec les pompes Dana R et Dana R coréenne, vous n'avez rien à faire. Pour d'autres pompes, consultez la page [voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling.md) pour plus de détails.
 
 ## Rubriques médicales
 

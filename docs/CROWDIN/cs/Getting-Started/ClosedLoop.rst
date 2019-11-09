@@ -5,7 +5,7 @@ Co je systém uzavřené smyčky?
   :alt: AAPS je jako autopilot
 
 Systém uzavřené smyčky APS využívá kombinaci různých komponent, aby vám usnadnil management diabetu. 
-Dana M. Lewis, jedna za zakladatelek hnutí pro open source uzavřenou smyčku jej ve své skvělé knize `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ přirovnává k „autopilotu pro váš diabetes“ <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps#switching-to-automated-diabetes-mode-autopilot-for-your-diabetes>`_. Co to však znamená?
+In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Co to však znamená?
 
 **Autopilot v letadle**
 

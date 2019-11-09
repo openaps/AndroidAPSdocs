@@ -1,7 +1,11 @@
 Witamy w dokumentacji systemu AndroidAPS
 ==============================================
 
-AndroidAPS jest to aplikacja open source przeznaczona dla osób chorujących na cukrzycę typu 1, która zainstalowana w smartfonach z systemem Android. działa jak system sztucznej trzustki (APS). Głównymi składnikami są różne algorytmy oprogramowania openAPS, których celem jest robienie tego, co robi żywa trzustka: utrzymywanie w odpowiednim zakresie poziomu cukru we krwi dzięki zastosowaniu automatycznego dozowania insuliny (AID). Ponadto co najmniej potrzebujesz obsługiwanej i zatwierdzonej przez FDA/CE pompy insulinowej i systemu ciągłego monitoringu glikemii. Aplikacja NIE korzysta z samouczącej się sztucznej inteligencji. Zamiast tego obliczenia AndroidAPS opierają się na indywidualnym algorytmie dawkowania i spożyciu węglowodanów, które użytkownik ręcznie wprowadza do swojego profilu terapii, ale dodatkowo są one weryfikowane przez system ze względów bezpieczeństwa. Aplikacja nie jest dostępna w Google Play - ze względów prawnych musisz ją samodzielnie zbudować bezpośrednio z kodu źródłowego.
+AndroidAPS jest to aplikacja open source przeznaczona dla osób chorujących na cukrzycę typu 1, która zainstalowana w smartfonach z systemem Android. działa jak system sztucznej trzustki (APS). Głównymi składnikami są różne algorytmy oprogramowania openAPS, których celem jest robienie tego, co robi żywa trzustka: utrzymywanie w odpowiednim zakresie poziomu cukru we krwi dzięki zastosowaniu automatycznego dozowania insuliny (AID). Ponadto co najmniej potrzebujesz obsługiwanej i zatwierdzonej przez FDA/CE pompy insulinowej i systemu ciągłego monitoringu glikemii. 
+
+Aplikacja NIE korzysta z samouczącej się sztucznej inteligencji. Zamiast tego obliczenia AndroidAPS opierają się na indywidualnym algorytmie dawkowania i spożyciu węglowodanów, które użytkownik ręcznie wprowadza do swojego profilu terapii, ale dodatkowo są one weryfikowane przez system ze względów bezpieczeństwa. 
+
+Aplikacja nie jest dostępna w Google Play - ze względów prawnych musisz ją samodzielnie zbudować bezpośrednio z kodu źródłowego.
 
 Głównymi składnikami są:
 
@@ -39,7 +43,9 @@ Jak zainstalować AndroidAPS
 
    Tworzenie pakietu APK <./Installing-AndroidAPS/Building-APK.md>
    Aktualizacja do nowej wersji lub innego branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Informacje o wersjach <./Installing-AndroidAPS/Releasenotes.md>
+   Install git <./Installing-AndroidAPS/git-install.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Wersja developerska <./Installing-AndroidAPS/Dev_branch.md>
    
    
@@ -74,13 +80,13 @@ Użytkowanie AndroidAPS
    :glob:
     
    Zrzuty ekranów AndroidAPS <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives2019.rst>
+   Objectives <./Usage/Objectives.rst>
    Funkcje OpenAPS <./Usage/Open-APS-features.md>   
    COB calculation <./Usage/COB-calculation.rst>
    Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
    Zmiana profilu <./Usage/Profiles.md>
    Cele tymczasowe TT <./Usage/temptarget.md>   
-   Przedłużone węglowodany <./Usage/Extended-Carbs.md>
+   Extended carbs <./Usage/Extended-Carbs.rst>
    Automatyzacja <./Usage/Automation.rst>
   
  
@@ -103,7 +109,7 @@ AndroidAPS dla dzieci
    :glob:
    
    Zdalne monitorowanie <./Children/Children.rst>
-   Komendy SMS <./Usage/SMS-Commands.md>
+   SMS commands <./Children/SMS-Commands.rst>
    
 
 Zaawansowane 

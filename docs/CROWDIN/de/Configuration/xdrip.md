@@ -4,7 +4,7 @@ Wenn Du es nicht bereits eingerichtet hast, lade [xDrip+](https://github.com/Nig
 
 G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
-Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
+Falls die Seriennummer Deines G6 Transmitters mit 8G... startet oder 8H... verwende einen der [letzten nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Grundsätzliche Einstellungen für alle CGM & FGM-Systeme
 
@@ -27,7 +27,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * **InterApp-Einstellungen** (Broadcast) Wenn Du planst, AndroidAPS zu nutzen und die Daten an AndroidAPS weiterzugeben, musst Du den sogenannten 'Broadcast' in xDrip+ in den Inter-App Einstellungen einschalten.
 
 * Damit die Werte übereinstimmen, solltest Du `Sende den angezeigten Glukosewert` aktivieren.
-* Wenn Du zusätzlich `Behandlungen annehmen` und in AndroidAPS den Brodcast aktivierst, dann wird xDrip+ Insulinmengen, Kohlenhydrate und Basalrateninformationen aus AndroidAPS erhalten und kann so z.B. niedrige Werte vorhersagen. 
+* Wenn Du zusätzlich `Behandlungen annehmen` und in AndroidAPS den Broadcast aktivierst, dann wird xDrip+ Insulinmengen, Kohlenhydrate und Basalrateninformationen aus AndroidAPS erhalten und kann so z.B. niedrige Werte vorhersagen. 
    
    ![xDrip+ Grundeinstellungen 3](../images/xDrip_Basic3.png)
 
@@ -43,7 +43,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
-Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
+Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende einen der [letzten nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Dexcom-spezifische Einstellungen
 
@@ -63,7 +63,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### Preemptive restarts werden nicht empfohlen
 
-**Falls die Seriennummer Deines Dexcom G6 Transmitters mit 8G beginnt können preemptive restarts nicht genutzt werden und ggf. sogar den Sensor unbenutzbar machen!**
+**Falls die Seriennummer Deines Dexcom G6 Transmitters mit 8G oder 8H beginnt können preemptive restarts nicht genutzt werden und ggf. sogar den Sensor unbenutzbar machen!**
 
 Die automatische Verlängerung von Dexcom G6 Sensoren (`preemptive restarts`) werden nicht empfohlen, da dies zu Sprüngen in den BZ-Werten nach dem Neustart am 9. Tag führen kann.
 
@@ -85,11 +85,11 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
-Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
+Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende einen der [letzten nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Schalte den Original Dexcom Empfänger aus (falls Du diesen verwendet).
 * Drücke auf der Startseite lang auf den roten Blutstropfen des xDrip+ Logos, um den `Source Wizard Button` zu aktivieren.
-* Benutze den Source Wizard Button. Damit wird sicher gestellt, dass Du die Standardeinstellungen inkl. OB1 & Native Mode verwendest. 
+* Benutze den Source Wizard Button. Damit wird sichergestellt, dass Du die Standardeinstellungen inkl. OB1 & Native Mode verwendest. 
    * Du wirst durch die Grundeinstellungen geführt.
    * Wenn Du den Transmitter zum ersten Mal verbindest, benötigst Du die Transmitter-Seriennummer.
 
@@ -111,7 +111,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
    
    -> Am unteren Bildschirmrand nach einigen Minuten wird `Warm Up x,x Stunden left` angezeigt.
 
--> Falls die Seriennummer Deines Transmitters -nicht mit 8G beginnt und die Zeitangabe auch nach einigen Minuten fehlt, musst Du den Sensor stoppen und erneut starten.
+-> Falls die Seriennummer Deines Transmitters nicht mit 8G oder 8H beginnt und die Zeitangabe auch nach einigen Minuten fehlt, musst Du den Sensor stoppen und erneut starten.
 
 * Starte den Datensammler neu (im Systemstatus und nur, wenn Du den Sensor neu gesetzt hast).
 * Falls Du den Dexcom Empfänger nutzt, schalte diesen nicht ein, bevor xDrip+ die ersten BZ-Werte anzeigt.
@@ -130,14 +130,14 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 * Der Batteriestatus kann im Systemstatus (Hamburgermenü links oben auf dem Startbildschirm) überwacht werden.
 * Wische nach links, um den zweiten Status-Bildschirm zu sehen.![xDrip+ Erster Transmitter](../images/xDrip_Dexcom_Battery.png)
 
-* Die genauen Werte, nach denen der Transmitter aufgrund niedrigem Batteriestand ausfällt, sind nicht bekannt. Die folgende Informationen wurde online gepostet, nachdem der Transmitter die Arbeit endgültig eingestellt hatte:
+* Die genauen Werte, nach denen der Transmitter aufgrund niedrigem Batteriestand ausfällt, sind nicht bekannt. Die folgenden Informationen wurden online gepostet, nachdem der Transmitter die Arbeit endgültig eingestellt hatte:
    
    * Posting 1: Laufzeit: 151 Tage / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
    * Posting 2: Laufzeit: 249 Tage / Voltage A: 275 (bei Auftritt des Fehlers)
 
 ### Transmitterlaufzeit verlängern
 
-* Bisher kann die Laufzeit von Transmittern, deren Seriennummer mit 8G beginnt, nicht verlängert werden.
+* Bisher kann die Laufzeit von Transmittern, deren Seriennummer mit 8G oder 8H beginnt, nicht verlängert werden.
 * Um Schwierigkeiten beim Start von Sensoren zu vermeiden, wird dringend empfohlen, den Transmitter vor Ablauf des 100. Tags der ersten Nutzung zu verlängern.
 * Eine laufende Sensorsitzung wird gestoppt, wenn Du die Transmitterlaufzeit verlängerst. Verlängere daher bei einem Sensorwechsel oder sei Dir bewusst, dass nach der Verlängerung eine neue zweistündige Warm-Up-Phase des Sensors beginnt.
 * Wechsle in den `engineering mode`: 
@@ -160,7 +160,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) benötigen mindestens [xDrip+ Master vom 18.05.2019](https://jamorham.github.io/#xdrip-plus).
 
-Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightly build vom 28.07.2019 oder später](https://github.com/NightscoutFoundation/xDrip/releases).
+Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende einen der [letzten nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Schalte den Original Dexcom Empfänger aus (falls Du diesen verwendet).
 * Stoppe den Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
@@ -169,7 +169,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
    
    Schaue auf dem zweiten "G5/G6 Status" Bildschirm nach `Queue Items` (etwa in der Mitte) - dort wird `(1) Stop Sensor` oder ähnlich angezeigt.
    
-   Warte, bis diese Meldung verschwindet. Erfahrungsgemäß dauert dies einige Minuten.
+   Warte, bis diese Meldung verschwindet. Erfahrungsgemäß dauert dies einige Minuten. Beim Sensor Status muss "Stopped" stehen (siehe Screenshot).
    
    -> Eine Videoanleitung zum Wechsel des Transmitters ohne den Sensor zu stoppen findest Du unter <https://youtu.be/AAhBVsc6NZo>.
    
@@ -177,29 +177,43 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
    
    ![xDrip+ Dexcom Sensor 2 stoppen](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Wähle im Systemstatus "Gerät löschen".
+* Gerät in den Bluetooth-Einstellungen von xDrip UND des Smartphones löschen (wird als Dexcom?? angezeigt, dabei steht ?? für die letzten beiden Zeichen der Seriennummer Deines Transmitters).
    
    ![xDrip+ Gerät löschen](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Gerät in den BT-Einstellungen des Smartphones löschen (wird als Dexcom?? angezeigt, dabei steht ?? für die letzten beiden Zeichen der Seriennummer Deines Transmitters).
-
 * Entferne den Transmitter (und den Sensor, falls Du auch diesen wechselst).
+
+* Lege den alten Transmitter weit weg, um eine erneute Verbindung zu verhindern. Eine Mikrowelle bildet dafür einen hervorragenden Faraday'schen Käfig - ziehe aber den Stromstecker um 100% sicher zu sein, dass die Mikrowelle nicht versehentlich eingeschaltet wird.
 * Drücke auf der Startseite lang auf den roten Blutstropfen des xDrip+ Logos, um den `Source Wizard Button` zu aktivieren.
-* Benutze den Source Wizard Button. Damit wird sicher gestellt, dass Du die Standardeinstellungen inkl. OB1 & Native Mode verwendest. 
+* Benutze den Source Wizard Button. Damit wird sichergestellt, dass Du die Standardeinstellungen inkl. OB1 & Native Mode verwendest. 
    * Du wirst durch die Grundeinstellungen geführt.
    * Wenn Du den Transmitter zum ersten Mal verbindest, benötigst Du die Transmitter-Seriennummer.
 * Gib die Seriennummer des neuen Transmitters ein. Achte darauf, 0 (Null) und O (Großbuchstabe o) korrekt auseinander zu halten.
 * Setze den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
-* Setze den Transmitter in die Aufnahme des Sensors - starte den Sensor aber nicht sofort!
-* * Starte den neuen Sensor NICHT bevor eine der folgenden Informationen auf der Classic Status Page -> G5/G6 status -> PhoneServiceState angezeigt wird:
+* Setze den Transmitter in die Aufnahme des Sensors - **starte den Sensor aber nicht sofort!**
+* Die neuen "Firefly Transmitter" (Seriennr. beginnt mit 8G oder 8H) können nur im "nativ mode" verwendet werden.
+* Die folgenden Optionen dürfen für neue "Firefly Transmitter" NICHT aktiviert werden (Seriennr. beginnt mit 8G oder 8H).
+   
+   * Preemptive Restart (Ausschalten!)
+   * Restart sensor (Ausschalten!)
+   * Fallback to xDrip (Ausschalten!)
+   
+   ![Einstellungen für Firefly Transmitter](../images/xDrip_Dexcom_FireflySettings.png)
+
+* Prüfe, ob auf der Classic Status Page -> G5/G6 status -> PhoneServiceState eine der folgenden Informationen angezeigt wird:
    
    * Transmitter Seriennummer beginnt mit 80 oder 81: "Got data hh:mm" (z.B. "Got data 19:04")
    * Transmitter Seriennummer beginnt mit 8G oder 8H: "Got glucose hh:mm" (z.B. "Got glucose 19:04") oder "Got no raw hh:mm" (z.B. "Got now raw 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Starte den Datensammler neu (im Systemstatus und nur, wenn Du den Sensor neu gesetzt hast).
+* Warte 15 Minuten. Der Transmitter sollte mehrfach mit xDrip kommunizieren, bevor Du einen neuen Sensor startest. Batteriedaten werden unterhalb der Informationen zur Firmware angezeigt, sobald es soweit ist.
+   
+   ![Firefly Transmitter Batteriedaten](../images/xDrip_Dexcom_FireflyBattery.png)
 
+* Starte den Sensor OHNE RÜCKDATIERUNG! Wählen Sie immer "Yes, today"!
+
+* Starte den Datensammler neu (im Systemstatus und nur, wenn Du den Sensor neu gesetzt hast).
 * Falls Du den Dexcom Empfänger nutzt, schalte diesen nicht ein, bevor xDrip+ die ersten BZ-Werte anzeigt.
 * Drücke auf der Startseite lang auf den roten Blutstropfen des xDrip+ Logos, um den `Source Wizard Button` zu deaktivieren.
    
@@ -234,7 +248,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 * Starte den Sensor
    
-   **Es wird empfohlen, ca. 15 Minuten zwischen dem Stoppen des alten Sensors und dem Start des neuen Sensors zu warten (bis `Sensor Status: Stopped` auf dem zweiten Statusbildschirm angezeigt wird).**
+   ** Für neue Firefly-Transmitter ** (Seriennr. beginnt mit 8G oder 8H)** muss zwischen Stopp des alten Sensors und Start des neuen Sensors mind. 15 Minuten gewartet werden (bis `Sensor Status: Stopped` auf dem zweiten Systemstatus-Bildschirm angezeigt wird). Bei anderen Transmittern wird das Warten empfohlen. KEINE RÜCKDATIERUNG!**
 
 * Gib die Zeit an, zu der der Sensor gesetzt wurde
    
@@ -277,7 +291,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet verwende [nightl
 
 ### Probleme beim Starten eines neuen Sensors
 
-Bitte beachte, dass die folgende Methode evtl. nicht funktioniert, wenn die Seriennummer Deines Transmitters mit 8G... startet 
+Bitte beachte, dass die folgende Methode evtl. nicht funktioniert, wenn die Seriennummer Deines Transmitters mit 8G oder 8H beginnt.
 
 * Im 'native mode' wird der Sensor als "FAILED: Sensor Failed Start" gekennzeichnet.
 * Sensor stoppen

@@ -2,7 +2,7 @@
 
 Veuillez suivre les instructions du [manuel de mise à jour](../Installing-AndroidAPS/Update-to-new-version.md). Vous pouvez également trouver une section de dépannage répondant aux difficultés les plus courantes lors de la mise à jour dans la page du manuel de mise à jour.
 
-A partir de la version 2.3, une nouvelle procédure de mise à jour est établie. Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera disponible :
+You will receive the following information as soon as a new update is available:
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
@@ -12,68 +12,83 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+## Version 2.5.1
+
+Release date: 31-10-2019
+
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes#important-notes) and [limitations](../Installing-AndroidAPS/Releasenotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes#version-2-5-0).
+
+* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
+* New versioning that will allow to do minor updates without triggering the update-notification.
+
 ## Version 2.5.0
 
-Date de sortie : 26-10-2019
+Release date: 26-10-2019
 
-***Remarque*** : Utilisez [Android Studio Version 3.5.1](https://developer.android.com/studio/) ou une version plus récente pour [générer l'apk](../Installing-AndroidAPS/Building-APK.md) ou [mettre à jour](../Installing-AndroidAPS/Update-to-new-version.md).
+### Important notes
 
-***Remarque*** : Lors de l'utilisation de xDrip [Identifier le récepteur](../Configuration/xdrip#identify-receiver) doit être défini.
+* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+* If you are using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-### Cette mise à jour est-elle pour moi ? N'est actuellement PAS pris en charge :
+### Is this update for me? Currently is NOT supported
 
 * Android 5
 * Poctech
 * 600SeriesUploader
 * Glimp
-* Dexcom patchés présents dans le répertoire 2.3
+* Patched Dexcom from 2.3 directory
 
 ### Nouvelles fonctionnalités majeures
 
-* Changement interne de targetSDK à 28 (Android 9), prise en charge de jetpack
-* Prise en charge de RxJava2, Okhttp3, Retrofit
-* Prise en charge d'anciennes [Pompes Medtronic](../Configuration/MedtronicPump.md) (besoin de RileyLink)
-* Nouveau [Plugin d'Automatisation](../Usage/Automation.rst)
-* Autorisation du bolus que d'une partie du calcul de l'assistant bolus
-* Affichage de l'activité de l'insuline
-* Ajustement des prévisions de l'IA par le résultat autosense
-* Nouvelle prise en charge des apk de Dexcom patchés ([dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
-* Vérificateur de signature
-* Autorisation de contourner les objectifs pour les utilisateurs d'OpenAPS
-* Nouveaux [objectifs](../Usage/Objectives2019.rst) - examen, manipulation de l'application
-* Correction d'un bug dans les pilotes Dana*, où une différence de temps erronée a été signalée
-* Correction d'un bug dans [Communicateur SMS](../Usage/SMS-Commands.md)
+* Internal change of targetSDK to 28 (Android 9), jetpack support
+* RxJava2, Okhttp3, Retrofit support
+* Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
+* New [Automation plugin](../Usage/Automation.rst)
+* Allow to [bolus only part](../Configuration/Preferences#advanced-settings) from bolus wizard calculation
+* Rendering insulin activity
+* Adjusting IOB predictions by autosense result
+* New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+* Signature verifier
+* Allow to bypass objectives for OpenAPS users
+* New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+  
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+
+* Fixed bug in Dana* drivers where false time difference was reported
+
+* Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
 
 ## Version 2.3
 
-Date de sortie : 25-04-2019
+Release date: 25-04-2019
 
 ### Nouvelles fonctionnalités majeures
 
-* Correctif de sécurité important pour Insight (vraiment important si vous utilisez Insight !)
-* Correctif du Navigateur-Historique
-* Correction des Calculs Delta
-* Mises à jour des langues
-* Vérification de GIT et avertissement de la mise à niveau gradle
-* Plus de tests automatiques
-* Correction d'un crash potentiel dans le service d'Alarm Sonore (merci @lee-b !)
-* Correction de la diffusion de données Gly (fonctionne indépendamment des droits SMS maintenant !)
-* Nouveau vérificateur de version
+* Important safety fix for Insight (really important if you use Insight!)
+* Fix History-Browser
+* Fix delta calculations
+* Language updates
+* Check for GIT and warn on gradle upgrade
+* More automatic testing
+* Fixing potential crash in AlarmSound Service (thanks @lee-b !)
+* Fix broadcast of BG data (works independently of SMS permission now!)
+* New Version-Checker
 
 ## Version 2.2.2
 
-Date de sortie : 07-04-2019
+Release date: 07-04-2019
 
 ### Nouvelles fonctionnalités majeures
 
 * Autosens fix: deactivate TT raises/lowers target
-* Nouvelles traductions&nbsp;
-* Correctifs du pilote Insight
-* Correction du plugin SMS
+* New translations
+* Insight driver fixes
+* SMS plugin fix
 
 ## Version 2.2
 
-Date de sortie : 29-03-2019
+Release date: 29-03-2019
 
 ### Nouvelles fonctionnalités majeures
 
@@ -85,7 +100,7 @@ Date de sortie : 29-03-2019
 
 ## Version 2.1
 
-Date de sortie : 03-03-2019
+Release date: 03-03-2019
 
 ### Nouvelles fonctionnalités majeures
 
@@ -98,13 +113,13 @@ Date de sortie : 03-03-2019
 * G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
 * Fixed disabling SMB from preferences (Johannes Mockenhaupt)
 
-### Divers
+### Misc
 
 * If you are using non default `smbmaxminutes` value you have to setup this value again
 
 ## Version 2.0
 
-Date de sortie : 03-11-2018
+Release date: 03-11-2018
 
 ### Nouvelles fonctionnalités majeures
 
@@ -112,7 +127,7 @@ Date de sortie : 03-11-2018
 * Accu-check Combo pump support ([setup instructions](../Configuration/Accu-Chek-Combo-Pump.md))
 * Setup wizard: guides you through the process of setting up AndroidAPS
 
-### Paramètres à ajuster lors du passage d'AMA à SMB
+### Settings to adjust when switching from AMA to SMB
 
 * Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes *all* IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
@@ -136,20 +151,20 @@ Date de sortie : 03-11-2018
 * Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
 * Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
-### Montre
+### Watch
 
 * Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
 * Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
 * confirmations and info dialogs now work on wear 2.0 as well
 * Added eCarbs menu entry
 
-### Nouveaux plugins
+### New plugins
 
 * PocTech app as BG source
 * Dexcom patched app as BG source
 * oref1 sensitivity plugin
 
-### Divers
+### Misc
 
 * App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
 * Overhaul for config builder and objectives tabs, adding descriptions

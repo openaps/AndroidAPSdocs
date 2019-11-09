@@ -12,7 +12,7 @@
 
 ## Limitações
 
-- Bolus prolongado e bolus multi onda não são suportados ( ver [Extended Carbs](../Usage/Extended-Carbs))
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.rst) instead)
 - Apenas é suportado um perfil de basal.
 - Programar mais do que 1 perfil de basal na bomba, ou dar bolus prolongado ou multi onda desde a bomba interfere com as TBRs e irá forçar o LOOP a entrar em modo de suspensão por 6 horas dado que o LOOP não consegue funcionar em segurança nestas condições.
 - Actualmente não é possível programar tempo e hora na bomba, então as alterações horárias têm de ser efectuadas manualmente (poderá desactivar as actualizações de horário automáticas no telefone de noite e voltar a activar de manhã e ao mesmo tempo alterar o relógio da bomba e assim evitar alarmes nessas duas noites do ano).

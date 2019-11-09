@@ -193,7 +193,7 @@
 <tr>
  <td>LGS</td>
  <td>Lage Glucose Stop<br>AAPS zal het basaal verminderen als bloedglucose daalt. Maar als de bloedglucose stijgt, wordt de basaal verhoogd zolang IOB negatief is (van een eerdere LGS), anders geeft hij de basaal uit jouw profiel. Het kan daardoor voorkomen dat je na een hypo een piek krijgt in je glucosewaarde, omdat het systeem op dat moment geen hogere basaalstand zal instellen._</td>
- <td><a href="../Usage/Objectives.html">doel 4</a></td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -389,7 +389,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Wallpaper</td>
+ <td>Achtergrond</td>
  <td>AndroidAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>

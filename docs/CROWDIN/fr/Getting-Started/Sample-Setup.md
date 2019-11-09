@@ -95,7 +95,7 @@ Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 3. [Configurez AndroidAPS](../Configuration/Config-Builder.md) selon vos besoins en utilisant l'assistant de configuration ou manuellement
 4. Dans cet exemple de configuration, nous avons utilisé (entre autres)
 
-* Source GLY: ` App Dexcom G5 (patché) ` -- cliquez sur la roue crantée et activez ` remontez les GLY vers NS ` et ` Envoyer les données GLY à xDrip + ` (voir [ source GLY ](../Configuration/BG-Source.md)
+* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
 
 ![Paramètres G5](../images/SampleSetupG5Settings.png)
 
@@ -115,7 +115,7 @@ xDrip+ est une autre application open source très aboutie qui offre d'innombrab
     * Paramètres > Paramètres Inter-app > Accepter les calibrations > `ON`
     * Menu > Démarrer le capteur (n'est rien qu'un "pro forma" et n'a rien à voir avec le capteur G5 en cours. Ceci est nécessaire sinon un message d'erreur apparaîtra régulièrement.) 
 
-Pour plus d'informations sur xDrip +, voir ici [ Page source GLY ](../Configuration/BG-Source.md).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
 
 ### Exemple d'une installation d'alarme
 

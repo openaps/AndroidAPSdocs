@@ -10,4 +10,4 @@ Mehr Infos hier
        
    
    Liste der getesteten Telefone und Smartphones <../Getting-Started/Phones.md>
-   Smartwatch-Integration <../Configuration/Watchfaces.md>
+   Smartwatch-Integration <./Configuration/Watchfaces.md>

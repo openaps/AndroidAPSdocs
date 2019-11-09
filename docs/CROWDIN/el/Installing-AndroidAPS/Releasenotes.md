@@ -2,7 +2,7 @@
 
 Ακολουθήστε τις οδηγίες στο [εγχειρίδιο ενημερώσεων](../Installing-AndroidAPS/Update-to-new-version.md). Μπορείτε επίσης να βρείτε μια ενότητα αντιμετώπισης προβλημάτων που αντιμετωπίζει τις πιο συνήθεις δυσκολίες κατά την ενημέρωση στη σελίδα του εγχειριδίου ενημέρωσης.
 
-Ξεκινώντας με την έκδοση 2.3 δημιουργείται μια νέα διαδικασία ενημέρωσης. Θα λάβετε τις ακόλουθες πληροφορίες μόλις είναι διαθέσιμη μια νέα ενημέρωση:
+You will receive the following information as soon as a new update is available:
 
 ![Ενημέρωση πληροφοριών](../images/AAPS_LoopDisable90days.png)
 
@@ -12,13 +12,24 @@
 
 Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Ως εκ τούτου, είναι απαραίτητο κάθε χρήστης να ενημερώνει όσων το δυνατό πιο γρήγορα.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
 
+## Version 2.5.1
+
+Release date: 31-10-2019
+
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes#important-notes) and [limitations](../Installing-AndroidAPS/Releasenotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes#version-2-5-0).
+
+* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
+* New versioning that will allow to do minor updates without triggering the update-notification.
+
 ## Version 2.5.0
 
 Release date: 26-10-2019
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+### Σημαντικές σημειώσεις
 
-***Note***: When using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+* If you are using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ### Is this update for me? Currently is NOT supported
 
@@ -34,14 +45,18 @@ Release date: 26-10-2019
 * RxJava2, Okhttp3, Retrofit support
 * Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
 * New [Automation plugin](../Usage/Automation.rst)
-* Allow to bolus only part from bolus wizard calculation
+* Allow to [bolus only part](../Configuration/Preferences#advanced-settings) from bolus wizard calculation
 * Rendering insulin activity
 * Adjusting IOB predictions by autosense result
 * New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
 * New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+  
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+
 * Fixed bug in Dana* drivers where false time difference was reported
+
 * Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
 
 ## Version 2.3
@@ -117,7 +132,7 @@ Release date: 03-11-2018
 * Objective 8 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes *all* IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
 * min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Εάν κάνετε αναβάθμιση από AMA σε SMB, πρέπει να το αλλάξετε χειροκίνητα
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
   
   * Ανοίξτε το παράθυρο "Προτιμήσεις" κάνοντας κλικ στην επιλογή Αρχείο> Ρυθμίσεις (σε Mac, Android Studio> Προτιμήσεις).
   * Στο αριστερό τμήμα του παραθύρου, κάντε κλικ στην επιλογή Δημιουργία, εκτέλεση, ανάπτυξη> μεταγλωττιστής.

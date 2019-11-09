@@ -1,0 +1,124 @@
+Troubleshooting Android Studio
+*****
+Предупреждение компилятора Kotlin
+=====
+Если сборка завершена успешно, но вы получаете предупреждения компилятора Kotlin, просто проигнорируйте эти предупреждения. 
+
+Приложение успешно построено и может быть перенесено на телефон.
+
+.. image:: ../images/GIT_WarningIgnore.PNG
+  :alt: ignore Kotline compiler warning
+
+Key was created with errors
+=====
+When creating a new keystore for building the signed APK, on Windows the following error message might appear
+
+.. image:: ../images/AndroidStudio35SigningKeys.png
+  :alt: Key was created with errors
+
+This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+
+Не удалось загрузить… / Работа оффлайн
+=====
+Если вы получите подобное сообщение об ошибке
+
+.. image:: ../images/GIT_Offline1.jpg
+  :alt: Warning could not download
+
+убедитесь, что 'Автономная работа' выключена.
+
+Файл -> параметры
+
+.. image:: ../images/GIT_Offline2.jpg
+  :alt: Settings offline work
+
+Ошибка: buildOutput.apkData не может быть пустым
+=====
+Иногда появляется сообщение об ошибке при компоновке apk
+
+  `Errors while building APK.`
+   
+  `Cause: buildOutput.apkData must not be null`
+
+This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+
+1. Вручную удалите три папки компоновки (обычная "сборка", папка компоновки в "app" и папка компоновки в "wear") и снова сгенерируйте подписанный apk.
+2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
+3. Измените папку назначения apk (другое расположение).
+
+No CGM data
+=====
+* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
+* In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+
+Неодобренные изменения
+=====
+Если вы получите сообщение об ошибке, как это
+
+.. image:: ../images/GIT_TerminalCheckOut0.PNG
+  :alt: Failure uncommitted changes
+
+Option 1 - Check git installation
+-----
+* git might be not installed correctly (must be globally available)
+* when on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
+* `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
+* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
+
+Option 2 - Reload source code
+-----
+* In Android Studio select VCS -> GIT -> Reset HEAD
+
+.. image:: ../images/GIT_TerminalCheckOut3.PNG
+  :alt: Reset HEAD
+   
+Option 3 - Check for updates
+-----
+* Copy ‘git checkout --’ to clipboard (without quote signs)
+* Switch to Terminal in Android Studio (lower left side of Android Studio window)
+
+  .. image:: ../images/GIT_TerminalCheckOut1.PNG
+  :alt: Android Studio Terminal
+   
+* Paste copied text and press return
+
+  .. image:: ../images/GIT_TerminalCheckOut2.jpg
+    :alt: GIT checkout success
+
+Приложение не установлено
+=====
+.. image:: ../images/Update_AppNotInstalled.png
+  :alt: phone app note installed
+
+* Make sure you have transferred the “app-full-release.apk” file to your phone.
+* If "App not installed" is displayed on your phone follow these steps:
+  
+1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
+2. Удалите AAPS с телефона.
+3. Enable airplane mode & turn off bluetooth.
+4. Установите новую версию («app-full-release.apk»)
+5. `Import settings <../Usage/ExportImportSettings.html>`_
+6. Снова включите Bluetooth и отключите режим самолета
+
+Приложение установлено, но старая версия
+=====
+If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+
+Ничего из вышеперечисленного не сработало
+=====
+Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
+
+1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
+2. Have your key password and key store password ready
+    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
+3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
+4.	Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
+5. `Import settings <../Usage/ExportImportSettings.html>`_
+
+Сценарий худшего варианта
+=====
+Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
+
+Убедитесь, что удалены все файлы, связанные с Android Studio. Manuals can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+
+Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.

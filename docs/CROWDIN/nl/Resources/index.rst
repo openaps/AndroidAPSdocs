@@ -1,8 +1,8 @@
-Resources
+Achtergrondinformatie
 ---------
 
 .. toctree::
    :maxdepth: 4
    :glob:
 
-   clinician-guide-to-AndroidAPS
+   Voor zorgprofessionals

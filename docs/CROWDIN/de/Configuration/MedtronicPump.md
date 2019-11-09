@@ -1,14 +1,10 @@
 # Medtronic Pumpen
 
-**>>>> Der Medtronic Pumpentreiber ist bisher noch nicht Bestandteil der AndroidAPS Master Version. Er wird in der kommenden Version verfügbar sein. <<<<**
+**>>>> Der Medtronic Pumpentreiber ist seit Version 2.5 Bestandteil der AndroidAPS Master Version. Dennoch sollte er weiter als Software im Beta-Status angesehen werden. Bitte nutze ihn nur, wenn Du ein erfahrener AAPS-Anwender bist. Momentan gibt es immer noch Probleme mit doppelten Boluseinträgen. In den Behandlungen werden Boli teilweise doppelt aufgeführt und dies bringt natürlich IOB durcheinander. (Aktiviere Double Bolus Logging in den Einstellungen der Medtronic Pumpe, falls dieser Fehler bei Dir auftritt und stelle den Entwicklern bitte Deine Logs zur Verfügung.) <<<<**
 
 * * *
 
 Funktioniert nur mit ältern Medtronic Pumpen (Details siehe weiter unten). Funktioniert nicht mit Medtronic 640G oder 670G.
-
-* * *
-
-Der Medtronic Treiber muss immer noch als Beta-Version angesehen werden, obwohl er bereits mit einer größeren Anwendergruppe getestet wurde. Das bedeutet, dass Du den Engineering Mode einschalten muss, um den Medtronic Treiber für AndroidAPS auswählen zu können, bis die Tests mit einer größeren Gruppe abgeschlossen sind.
 
 * * *
 
@@ -85,7 +81,7 @@ Am unteren Ende gibt es 3 Buttons:
 
 ![Dialog Pumpenhistorie](../images/Medtronic03.png)
 
-Die Pumpen Historie wird alle 5 Minuten abgerufen und lokal gespeichert. Es werden nur die Einträge der letzten 24 Stunden gespeichert, so dass ältere Einträge entfernt werden, wenn neue hinzugefügt werden. Dies ist ein einfacher Weg, um die Pumpenhistorie einzusehen. Einige Einträge aus der Pumpe werden möglicherweise nicht angezeigt, weil sie nicht relevant sind - zum Beispiel die Konfiguration von Funktionen, die nicht von AndroidAPS verwendet werden.
+Die Pumpen Historie wird alle 5 Minuten abgerufen und lokal gespeichert. Es werden nur die Einträge der letzten 24 Stunden gespeichert, so dass ältere Einträge entfernt werden, wenn neue hinzugefügt werden. Dies ist ein einfacher Weg, um die Pumpenhostorie einzusehen. Einige Einträge aus der Pumpe werden möglicherweise nicht angezeigt, weil sie nicht relevant sind - zum Beispiel die Konfiguration von Funktionen, die nicht von AndroidAPS verwendet werden.
 
 ## RL Status (RileyLink Status)
 

@@ -1,6 +1,6 @@
 # Αυτοματοποίηση με τρίτο πρόσωπο του Android Αυτοματοποιημένο App
 
-**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.rst) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**Αυτό το άρθρο έχει γραφτεί πριν από την έκδοση 2.5 του AndroidAPS. Υπάρχει plugin [ αυτοματισμού AndroidAPS ](./Automation.rst) με την έκδοση 2.5 του AndroidAPS. Για μερικούς, αυτό εδώ μπορεί να είναι ακόμα χρήσιμο, αλλά θα πρέπει να χρησιμοποιείται μόνο από προχωρημένους χρήστες.**
 
 Δεδομένου ότι το AndroidAPS είναι ένα σύστημα υβριδικού κλειστού κυκλώματος, είναι απαραίτητη κάποια αλληλεπίδραση με το χρήστη (π.χ. πείτε στο κύκλωμα ότι περπατάτε, τρώτε, ξαπλώνετε στον καναπέ...). Οι συχνές είσοδοι χειροκίνητων πληροφοριών μπορούν να αυτοματοποιηθούν μέσω εξωτερικών εργαλείων όπως το Automate ή το IFTTT για την επέκταση της πρόσφατης λειτουργικότητας του AndroidAPS.
 

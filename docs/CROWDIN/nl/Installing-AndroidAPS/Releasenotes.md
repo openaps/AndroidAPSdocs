@@ -2,7 +2,7 @@
 
 Volg de instructies in de handleiding voor het [bijwerken van de app naar een nieuwe versie](../Installing-AndroidAPS/Update-to-new-version.md). Daar vind je ook oplossingen voor veelvoorkomende problemen.
 
-Vanaf versie 2.3 is er een nieuwe update procedure ingesteld. Zodra een nieuwe update beschikbaar is zie je de volgende melding:
+You will receive the following information as soon as a new update is available:
 
 ![Informatie bijwerken](../images/AAPS_LoopDisable90days.png)
 
@@ -12,13 +12,24 @@ Als je daarna nog eens 30 dagen wacht met bijwerken (dus 90 dagen vanaf de datum
 
 Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er om veiligheidsredenen. Nieuwe versies van AndroidAPS bevatten niet alleen nieuwe handige functies, maar ook belangrijke veiligheidsupdates. Daarom is het noodzakelijk dat elke gebruiker zijn app bijwerkt zodra een nieuwe versie beschikbaar komt. Helaas zijn er nog steeds signalen dat sommige gebruikers een hele oude versie van hun app gebruiken, dus dit is een poging om de veiligheid voor individuele gebruikers en de hele doe-het-zelf loop-gemeenschap te verbeteren. 
 
+## Version 2.5.1
+
+Release date: 31-10-2019
+
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes#important-notes) and [limitations](../Installing-AndroidAPS/Releasenotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes#version-2-5-0).
+
+* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
+* New versioning that will allow to do minor updates without triggering the update-notification.
+
 ## Version 2.5.0
 
 Release date: 26-10-2019
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+### Important notes
 
-***Note***: When using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+* If you are using xDrip [identify receiver](../Configuration/xdrip#identify-receiver) must be set.
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ### Is this update for me? Currently is NOT supported
 
@@ -34,14 +45,18 @@ Release date: 26-10-2019
 * RxJava2, Okhttp3, Retrofit support
 * Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
 * New [Automation plugin](../Usage/Automation.rst)
-* Allow to bolus only part from bolus wizard calculation
+* Allow to [bolus only part](../Configuration/Preferences#advanced-settings) from bolus wizard calculation
 * Rendering insulin activity
 * Adjusting IOB predictions by autosense result
 * New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 * Signature verifier
 * Allow to bypass objectives for OpenAPS users
 * New [objectives](../Usage/Objectives2019.rst) - exam, application handling
+  
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+
 * Fixed bug in Dana* drivers where false time difference was reported
+
 * Fixed bug in [SMS communicator](../Usage/SMS-Commands.md)
 
 ## Version 2.3

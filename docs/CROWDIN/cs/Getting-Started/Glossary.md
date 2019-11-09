@@ -193,7 +193,7 @@
 <tr>
  <td>LGS</td>
  <td>Vypnutí při nízké glykémii (Low Glucose Suspend)<br>Systém AAPS sníží nebo zastaví bazál, pokud glykémie klesá. Pokud však glykémie stoupá, pak zvýší bazál pouze v případě záporného IOB (v důsledku předchozího LGS), v opačném případě zůstávají bazální dávky stejné jako ve vašem zvoleném profilu. Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie bude následovat přílišný vzestup glykémie.</td>
- <td><a href="../Usage/Objectives.html">Cíl 4</a></td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>

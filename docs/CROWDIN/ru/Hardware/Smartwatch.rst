@@ -9,5 +9,5 @@
    :maxdepth: 1
    :glob:
    
-   список проверенных телефонов <../Getting-Started/Phones.md>
-   циферблаты <../Configuration/Watchfaces.md>
+   List of tested phones and smartwatches <../Getting-Started/Phones.md>
+   Watchfaces  <../Configuration/Watchfaces.md>

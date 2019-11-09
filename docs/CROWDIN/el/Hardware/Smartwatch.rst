@@ -9,5 +9,5 @@ Smartwatches είναι προαιρετικά, αλλά πολύ χρήσιμα
    :maxdepth: 1
    :glob:
    
-   λίστα με δοκιμασμένα τηλέφωνα και smartwatches <../Getting-Started/Phones.md>
-   watchfaces  <../Configuration/Watchfaces.md>
+   List of tested phones and smartwatches <../Getting-Started/Phones.md>
+   Watchfaces  <../Configuration/Watchfaces.md>

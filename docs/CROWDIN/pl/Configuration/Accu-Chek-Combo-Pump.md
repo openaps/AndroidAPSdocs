@@ -12,7 +12,7 @@
 
 ## Ograniczenia
 
-- Bolus przedłużony i bolus wielofalowy nie są obsługiwane (zamiast tego patrz wydłużone węglowodany - [Extended Carbs](../Usage/Extended-Carbs))
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.rst) instead)
 - Pompa obsługuje tylko jeden schemat (profil) bazy.
 - Ręczne ustawienie profilu podstawowego innego niż 1 na pompie lub podanie bolusa przedłużonego, lub wielofalowego kolidują z TBR i powodują, że pętla przechodzi w tryb niskiego zawieszenia na 6 godzin. Wynika to z faktu, że pętla nie może bezpiecznie działać w tych warunkach.
 - Obecnie nie można ustawić godziny i daty zdalnie na pompie, więc zmiany na czas letni czy zimowy muszą być wykonywane ręcznie. Aby zapobiec komplikacjom związanym z brakiem synchronizacji zegarów w pompie i smartfonie (w czasie zmiany czasu z letniego na zimowy i odwrotnie) możesz wyłączyć automatyczną aktualizację zegara w telefonie w godzinach wieczornych i zmienić go rano razem z zegarem pompy, aby uniknąć alarmu w nocy.
