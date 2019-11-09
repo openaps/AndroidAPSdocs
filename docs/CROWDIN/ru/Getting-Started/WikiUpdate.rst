@@ -5,6 +5,7 @@
 Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
 Пролонгированный болюс - почему не работает в контексте ИПЖ <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `Главный экран - линии на графике <../Getting-Started/Screenshots.html#section-e>`_
+* `Insight - Disable absolut values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * ` Помпа Medtronic - возможные двойные записи <../Configuration/MedtronicPump.html> ` _
 * ` Новые инструкции по Freestyle Libre 2 <../Hardware/Libre2.html> ` _
 * ` Обновление для команд по SMS <../Children/SMS-Commands.html> ` _
