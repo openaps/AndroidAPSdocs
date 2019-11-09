@@ -84,7 +84,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 * If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
 В xdrip перейдите в настройки > совместимость программ >локальная трансляция данных и выберите Включить (ON).
 В xdrip+ перейдите в настройки > совместимость программ > принимать назначения (Accept treatments) и выберите ВЫКЛ (OFF).
-* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xdrip please set Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" 
+* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xdrip please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
 Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 
 .. image:: ../images/fsl2pic7.jpg
@@ -103,7 +103,7 @@ In fact this will not start any Libre2 sensor or interact with them in any case.
 Step 4: Configure AndroidAPS
 ==============
 * В AndroidAPS перейдите в Config Builder > BG Source и проверьте 'xDrip+' 
-Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией Идентифицировать приемник в соответствии с описанием на странице настроек `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html#identifiziere-empfanger>`_.
 
 До настоящего времени, используя Libre 2 в качестве источника данных ГК, невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов» в алгоритме SMB. Значения BG Libre 2 недостаточно ровные, чтобы использовать их безопасно. Подробнее см. в `Выравнивание данных мониторинга <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`.
 
@@ -135,7 +135,7 @@ A sensor exchange takes place on-the-fly: Set new sensor shortly before activati
 
 If not, please check the phone settings and proceed as with the first start. You have no time limit. Try to find the correct seetings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Please take your time. In most cases you accidentially changed one setting which causes now problems. 
 
-Once successful please select please select in xdrip "Sensor Stop" and "Delete calibration only". You do not need to start the sensor. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations has to be deleted. No real interaction is done with the Libre2 sensor here! 
+Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! You do not need to start the sensor in xDrip.
 
 .. image:: ../images/fsl2pic11.jpg
   :alt: xDrip+ missing data when changing Libre 2 sensor
