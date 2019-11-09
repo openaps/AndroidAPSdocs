@@ -118,7 +118,9 @@ Stelle sicher, dass du die virtuelle Pumpe im Config-Generator ausgewählt hast,
 
 * "Alarm-Optionen" ermöglicht es dir festzulegen, welche Nightscout Alarme in der App verwendet werden sollen. Damit die Alarme ausgelöst werden, müssen die Variablen für die Alarme "Urgent High", "High", "Low" und "Urgent Low" in deinen [heroku oder azure Variablen](http://www.nightscout.info/wiki/welcome/website-features#customalarms) festgelegt werden. Sie werden nur dann funktionieren, wenn du über eine aktive Internetverbindung zu Nightscout verfügst und sind für Eltern/Betreuer gedacht. Wenn du die CGM-Quelle hingegen direkt auf dem Smartphone hast, dann solltest du lieber deren Alarme verwenden (z.B. xdrip+).
 * "Aktiviere lokale Broadcasts" teilt deine Daten aus dem Careportal mit anderen Apps auf dem Smartphone (z. B. xdrip+).
-* 'Verwende absolute statt prozentuale Basalwerte beim Upload zu NightScout.' muss aktiviert werden, wenn Du Autotune einsetzen willst.
+* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+    
+    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
 
 ## SMS-Kommunikator
 
