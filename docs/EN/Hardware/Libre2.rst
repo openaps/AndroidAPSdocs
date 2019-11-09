@@ -43,7 +43,7 @@ Mandatory settings for successful sensor start:
 .. image:: ../images/fsl2pic4.jpg
   :alt: LibreLink settings alarm
   
-The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds.  
+The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different seetings before even think of changing the sensor.
 
 As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
 
@@ -62,7 +62,7 @@ Restarting the phone can help, you may have to do it several times. As soon as t
 .. image:: ../images/fsl2pic6.jpg
   :alt: LibreLink connection established
   
-Now the smartphone settings can be changed again if necessary, e.g. if you want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The values are transferred anyway.
+Now the smartphone settings can be changed again if necessary, e.g. if you want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
 
 When starting the next sensor, however, all settings must be set again!
 
@@ -121,13 +121,17 @@ The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no longer e
 .. image:: ../images/fsl2pic10.jpg
   :alt: Libre 2 start time
   
-Altogether it is one of the smallest CGM systems on the market. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dL the deviations are typical smaller than 10 md/dL. Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soacking. That would disturbe the internal leveling mechanism.
+Altogether it is one of the smallest CGM systems on the market. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dL the deviations are typical smaller than 10 md/dL. Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturbe the internal leveling mechanism.
 
 There seem to be bad sensors from time to time, which are far away from the blood values. It stays that way. These should be immediately replaced.
 
-Moved sensors can result in bad results. The filament which sits in the tissue is a little bit moved and will measure different results. Mostly you will see jumping values in xDrip+. Or the difference to the bloody values change. Please replace the sensor immediately! The results are inaccurate now.
+If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probabaly you will see jumping values in xDrip+. Or the difference to the bloody values change. Please replace the sensor immediately! The results are inaccurate now.
 
-A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+. If not, please check the phone settings and proceed as with the first start. In xDrip+ please select "Sensor Stop" and "Delete calibration only". You do not need to start the sensor. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations has to be deleted. No interaction is done with the Libre2 sensor here! 
+A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+. 
+
+If not, please check the phone settings and proceed as with the first start. You have no time limit. Try to find the correct seetings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Please take your time. In most cases you accidentially changed one setting which causes now problems. 
+
+Once successful please select please select in xdrip "Sensor Stop" and "Delete calibration only". You do not need to start the sensor. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations has to be deleted. No real interaction is done with the Libre2 sensor here! 
 
 .. image:: ../images/fsl2pic11.jpg
   :alt: xDrip+ missing data when changing Libre 2 sensor
