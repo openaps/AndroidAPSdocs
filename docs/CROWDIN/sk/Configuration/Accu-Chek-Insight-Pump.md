@@ -8,8 +8,12 @@
 
 ## Hardwarové a softwarové požiadavky
 
-* Pumpa Accu-Chek Insight od firmy Roche (ktorýkoľvek firmware, fungujú všetky)
-<br> Poznámka: AAPS bude vždy zapisovať údaje do <b>prvého bazálneho profilu v pumpe</b>* Telefón s Androidom (bude to fungovať v podstate so všetkými verziami, ale samotný AndroidAPS vyžaduje aspoň Android 5 (Lollipop)).
+* A Roche Accu-Chek Insight pump (any firmware, they all work)
+    
+    Note: AAPS will write data always in **first basal rate profile in the pump**.
+
+* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+
 * Aplikácia AndroidAPS nainštalovaná vo vašom telefóne
 
 ## Nastavenia
@@ -45,13 +49,15 @@
     
     ![Screenshot Informácií Párovania Insight](../images/Insight_PairingInformation.png)
 
-Poznámka: Spojenie medzi pumpou a telefónom nebude permanentné. Spojenie bude nadviazané iba keď to bude potrebné (napríklad pri nastavovaní dočasného bazálu, podávaní bolusu, čítaní histórie pumpy, ...). V opačnom prípade by sa batéria v telefóne a pumpe vybila príliš rýchlo.
+Poznámka: Spojenie medzi pumpou a telefónom nebude permanentné. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). V opačnom prípade by sa batéria v telefóne a pumpe vybila príliš rýchlo.
 
 ## Nastavenia v AAPS
 
-![Screenshot Nastavení Insight](../images/Insight_pairing_V2_5.png)
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
 
-V nastaveniach pre Insight môžete upraviť nasledujúce možnosti:
+![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+
+In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 * "Zaznamenať výmenu zásobníka": Pridá poznámku do databázy AndroidAPS ak na pumpe zadáte "Výmena zásobníka".
@@ -78,9 +84,9 @@ V nastaveniach pre Insight môžete upraviť nasledujúce možnosti:
 
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
-Po dobu, kým bola pumpa zastavená, AAPS zobrazí záznam s dočasnou bazálnou hodnotou 0%.
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
-V AndroidAPS v záložke Accu-Check Insight sa zobrazuje aktuálny stav pumpy a 2 tlačidlá:
+In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
 * "Aktualizovať": Opätovné načítanie stavu pumpy
 * "Aktivovať/Deaktivovať dočasný bazál prostredníctvom notifikácie": Štandardne pumpa Insight spúšťa zvukový signál, keď je TBR dokončený. This button lets you enable or disable this alarm without the need for configuration software.
@@ -118,4 +124,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Crossing time zones with Insight pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
