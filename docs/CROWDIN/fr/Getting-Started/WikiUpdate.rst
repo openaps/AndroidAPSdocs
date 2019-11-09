@@ -5,6 +5,7 @@ Novembre 2019
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Captures d'écran.html#section-e>`_
+* `Insight - Disable absolut values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
 * `Nouveau tutoriel Freestyle Libre 2 <../Hardware/Libre2.html> ` _
 * `SMS commands update <../Children/SMS-Commands.html>`_
