@@ -1,8 +1,7 @@
 Freestyle Libre 2
 **********************
 
-Das Freestyle Libre 2 System kann gefährliche Blutzuckerwerte automatisch melden. Dazu sendet der Libre2 Sensor minütlich die aktuellen
-Blutzuckerwerte an einen Empfänger (Reader oder Smartphone). Dieser löst dann ggf. einen Alarm aus. Modifiziert man die LibreLink App, dann kann man die Blutzuckerwerte kontinuierlich auf dem Smartphone empfangen. Da diese direkt per Bluetooth an Dein Telefon geschickt werden, musst Du keinen Bluetooth-Adapter wie MiaoMiao mehr kaufen. 
+Das Freestyle Libre 2 System kann gefährliche Blutzuckerwerte automatisch melden. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. Dieser löst dann ggf. einen Alarm aus. With a self-modified LibreLink App, you can continuously receive your blood sugar level on your smartphone. As they send them directly via bluetooth to your phone, you won't need to buy a bluetooth adapter like MiaoMiao or blucon anymore. 
 
 Schritt 1: Erstelle Deine eigene gepatchtete Librelink-App
 ==============
@@ -15,12 +14,22 @@ https://github.com/TinoKossmann/LibreLink-xDrip-Patch
 
 Die gepachtete App wird dann anstelle der originalen App installiert. Der nächste damit gestartete Sensor übermittelt dann drahtlos seine Werte an das Smartphone.
 
-Wichtig: Erst die originale App auf einem NFC-fähigen Smartphone installieren und wieder deinstallieren. NFC muss eingeschaltet sein. Das verbraucht keine zusätzliche Energie. Dann die gepatchte App installieren. Diese ist an der Vordergrund-Berechtigung "Notification" eindeutig erkennbar. 
+Wichtig: Erst die originale App auf einem NFC-fähigen Smartphone installieren und wieder deinstallieren. NFC muss eingeschaltet sein. Das verbraucht keine zusätzliche Energie. Then install the patched app. It can be identified by the foreground authorization notification. 
 
 .. image:: ../images/fsl2pic1.jpg
   :alt: LibreLink Vordergrund Service
 
-Dies sorgt für eine deutliche Verbesserung der Verbindungsstabilität verglichen zu originalen App. Nun die Berechtigungen für Speicher und Standort setzen, automatische Zeit und Zeitzone aktivieren und danach in der LibreLink app die Alarme einstellen. Jetzt den Libre2 Sensor mit der gepatchen App starten. Folge den Anweisungen. Der Sensor merkt sich das Gerät, mit dem er gestartet wurde. Nur dieses Gerät kann zukünftig Alarme empfangen.
+This significantly improves the connection stability compared to the original app. Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and timezone and set at least one alarm in the patched app. 
+
+Now start the Libre2 sensor with the patched app by simply scanning the sensor. Folge den Anweisungen. Der Sensor merkt sich das Gerät, mit dem er gestartet wurde. Nur dieses Gerät kann zukünftig Alarme empfangen.
+
+Mandatory settings for successful sensor start: 
+
+* NFC enabled / BT enabled
+* Speicherberechtigung und Standortfreigabe 
+* Standortdienst aktiviert
+* automatic time and timezone setting
+* set at least one alarm in the patched app
 
 .. image:: ../images/fsl2pic2.jpg
   :alt: LibreLink Berechtigungen für Speicher & Standort
@@ -28,27 +37,22 @@ Dies sorgt für eine deutliche Verbesserung der Verbindungsstabilität vergliche
 .. image:: ../images/fsl2pic3.jpg
   :alt: Android Standort-Einstellungen
   
+.. image:: ../images/fsl2pic4a.jpg
+  :alt: automatic time and timezone
+  
 .. image:: ../images/fsl2pic4.jpg
   :alt: LibreLink Alarmeinstellungen
   
-Parallel kann ein weiteres NFC-fähiges Smartphone mit der originalen LibreLink App zum Scannen verwendet werden. Der Reader kann NICHT mehr verwendet werden, er läßt sich nicht parallel aufschalten! Mit dem Zweithandy kann man parallel scannen und die Werte in die Abbott Cloud (LibreView) hochladen lassen, um diese dann dem DiaDoc zeigen zu können. LibreView kann Berichte für DiaDoc erstellen. Es gibt viele Eltern, die das unbedingt brauchen. Die gepatchte App hat keinerlei Verbindung zum Internet, um nicht als solche erkannt zu werden.
-
-Der erste Verbindungsaufbau ist kritisch. Die App versucht alle 30 Sekunden eine drahtlose Verbindung zum Sensor aufzubauen. Alle Einstellungen müssen zwingend gesetzt sein: 
-
-* NFC aktiviert
-* Speicherberechtigung und Standortfreigabe 
-* Standortdienst aktiviert
-* Uhrzeit und Datum automatisch beziehen 
-* mindestens ein Alarm. 
+Der erste Verbindungsaufbau ist kritisch. Die App versucht alle 30 Sekunden eine drahtlose Verbindung zum Sensor aufzubauen. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different seetings before even think of changing the sensor.
 
 Im Startbildschirm der gepatchten App ist links oben erst ein rotes Ausrufezeichen ("!") zu sehen. Erst wenn das Ausrufezeichen weg ist, steht die Verbindung und Blutzuckerwerte werden an das Smartphone gesendet. Das sollte nach maximal 5 Minuten passiert sein.
 
 .. image:: ../images/fsl2pic5.jpg
   :alt: LibreLink keine Verbindung
   
-Bleibt das Ausrufezeichen stehen, kann das mehrere Gründe haben:
+If the exclamation mark remains or you get an error message, this can have several reasons:
 
-- die Standortfreigabe von Android ist nicht erteilt - bitte in den Systemeinstellungen freigeben
+- Android location service is not granted - please enable it in the system settings
 - automatische Zeitzone und Uhrzeit ist nicht gesetzt - bitte entsprechend die Einstellungen ändern
 - Alarme einschalten - mindestens einer der drei Alarme muss aktiviert sein
 - Bluetooth ist ausgeschaltet - bitte einschalten
@@ -58,9 +62,13 @@ Handyneustart kann helfen, muss ggf. mehrmals gemacht werden. Sobald die Verbind
 .. image:: ../images/fsl2pic6.jpg
   :alt: LibreLink Verbindung hergestellt
   
-Nun können die Smartphone Einstellungen bei Bedarf wieder verändert werden, wenn man z.B. Strom sparen will. Standortfreigabe (GPS) kann ausgeschaltet werden, Lautstärke kann auf Null gesetzt werden oder auch die Alarme können wieder abgeschaltet werden. Die Werte werden trotzdem übertragen.
+Nun können die Smartphone Einstellungen bei Bedarf wieder verändert werden, wenn man z.B. Strom sparen will. Standortfreigabe (GPS) kann ausgeschaltet werden, Lautstärke kann auf Null gesetzt werden oder auch die Alarme können wieder abgeschaltet werden. The bloodsugar levels are transferred anyway.
 
 Beim Start des nächsten Sensors müssen jedoch alle Einstellungen wieder gesetzt sein!
+
+Parallel kann ein weiteres NFC-fähiges Smartphone mit der originalen LibreLink App zum Scannen verwendet werden. Der Reader kann NICHT mehr verwendet werden, er läßt sich nicht parallel aufschalten! Mit dem Zweithandy kann man parallel scannen und die Werte in die Abbott Cloud (LibreView) hochladen lassen, um diese dann dem DiaDoc zeigen zu können. LibreView kann Berichte für DiaDoc erstellen. Es gibt viele Eltern, die das unbedingt brauchen. 
+
+Remark: The patched app does not have any connection to the Internet.
 
 Schritt 2: Installieren und konfigurieren der xDrip+ App
 ==============
@@ -68,9 +76,11 @@ Schritt 2: Installieren und konfigurieren der xDrip+ App
 Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen. 
 
 * Falls noch nicht geschehen lade die xDrip App `hier <https://github.com/NightscoutFoundation/xDrip/releases>`_ herunter und installiere eine der neuesten nightly builts auf Deinem Smartphone.
-* In xDrip+ als Datenquelle „Libre2 (patched App)“ auswählen. Ggf. unter Less Common Settings->Extra Logging Settings->Extra tags for logging „BgReading:d,xdrip libre_receiver:v“ eintragen. Damit werden evtl. Fehlermeldungen protokolliert.
+* In xDrip+ select "Libre2 (patched App)" as data source
+* If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
+* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xdrip please set Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" 
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN.  Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 
 .. image:: ../images/fsl2pic7.jpg
@@ -84,7 +94,7 @@ Schritt 3: Sensor starten
 
 In xDrip+ den Sensor dann mit „Start Sensor“ und „nicht heute“ starten. 
 
-Wenn vorhanden zwei blutige Messwerte zur initialen Kalibrierung eingeben. Damit soll xDrip+ einfach nur mitgeteilt werden, dass ein neuer Sensor Blutzuckerwerte liefert. Wenn verfügbar, gib zwei blutige Messwerte für die Anfangskalibrierung ein. Nun sollten die Blutzuckerte alle 5 Minuten in xDrip+ angezeigt werden. Ausgefallene Werte, weil man z.B. zu weit vom Smartphone weg war, werden nicht nachträglich eingetragen.
+Wenn vorhanden zwei blutige Messwerte zur initialen Kalibrierung eingeben. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. Wenn verfügbar, gib zwei blutige Messwerte für die Anfangskalibrierung ein. Nun sollten die Blutzuckerte alle 5 Minuten in xDrip+ angezeigt werden. Ausgefallene Werte, weil man z.B. zu weit vom Smartphone weg war, werden nicht nachträglich eingetragen.
 
 Schritt 4: AndroidAPS konfigurieren
 ==============
@@ -98,7 +108,7 @@ Erfahrungen und Troubleshooting
 
 Die Verbindungsqualität ist außerordentlich gut. Bis auf Huawei Handys scheinen alle aktuellen Smartphones gut zu funktionieren. Das Wiederverbinden nach Verbindungsverlust ist phänomenal. Die Verbindung kann durchaus einmal abreißen, wenn sich der Sensor auf der einen Körperseite, das Handy auf der anderen in der Hosentasche befindet oder wenn man im Freien unterwegs ist. Bei Gartenarbeit habe ich mir angewöhnt, das Handy auf der Sensorseite am Körper zu tragen. In Räumen, wo sich Bluetooth über Reflektionen ausbreitet, sollten keine Probleme auftreten. Bei Verbindungsproblemen bitte ein anderes Telefon testen.
 
-Technisch wird alle Minute der aktuelle Blutzucker-Wert an xDrip+ übertragen. Daraus wird mit einem weighted average Filter über die letzten 25 Minuten ein geglätteter Wert errechnet,  um damit bei Bedarf loopen zu können. Die Kurven sehen glatt aus und die Loopergebnisse sind prima. Die Rohwerte, die den Alarmen zugrunde liegen, schwanken ein wenig mehr, entsprechen aber den Werten, die auch der Reader anzeigt. Man kann zusätzlich die Rohwerte im xDrip+ Graph anzeigen lassen, um bei schnellen Veränderungen rechtzeitig reagieren zu können. Dazu bitte Less Common Settings->Advanced Settings for Libre2->show Raw values anschalten. Dann sind die Rohwerte als kleine weisse Punkte zusätzlich eingeblendet.
+Technisch wird alle Minute der aktuelle Blutzucker-Wert an xDrip+ übertragen. Daraus wird mit einem weighted average Filter über die letzten 25 Minuten ein geglätteter Wert errechnet,  um damit bei Bedarf loopen zu können. Die Kurven sehen glatt aus und die Loopergebnisse sind prima. Die Rohwerte, die den Alarmen zugrunde liegen, schwanken ein wenig mehr, entsprechen aber den Werten, die auch der Reader anzeigt. Man kann zusätzlich die Rohwerte im xDrip+ Graph anzeigen lassen, um bei schnellen Veränderungen rechtzeitig reagieren zu können. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor infos are available in the System menu.
 
 .. image:: ../images/fsl2pic8.jpg
   :alt: xDrip+ Erweiterte Einstellungen Libre 2
@@ -106,19 +116,23 @@ Technisch wird alle Minute der aktuelle Blutzucker-Wert an xDrip+ übertragen. D
 .. image:: ../images/fsl2pic9.jpg
   :alt: xDrip+ Startbildschirm mit Rohwerten
   
-Die Sensorlaufzeit ist fix 14 Tage. Die 12 extra Stunden des Libre1 existieren nicht mehr. Aktiviert man unter Advanced settings for Libre2->show Sensor wird im Systemstatus die Sensor Startzeit sowie weitere Infos angezeigt. xDrip+ zeigt Batteriestärke des L2 Sensors nicht an. Die Restzeit ist ebenfalls in der gepatchten LibreLink App zu sehen. Entweder im Hauptbildschirm als Resttagesanzeige oder als Startzeit im Dreipunktmenü->Hilfe->Ereignisprotokoll unter „Neuer Sensor gefunden“.
+Die Sensorlaufzeit ist fix 14 Tage. Die 12 extra Stunden des Libre1 existieren nicht mehr. xDrip+ shows additional sensor information after enabling Avanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
 
 .. image:: ../images/fsl2pic10.jpg
   :alt: Libre 2 Startzeit
   
-Insgesamt eines der kleinsten CGM System am Markt. Klein, kein Transmitter notwendig und (bei mir) sehr genaue Werte ohne Schwankungen. Nach rd. 12 Stunden Einlaufphase mit Abweichungen von bis zu 30 mg/dL sind die Abweichungen bei mir kleiner als 10 md/dL. Beste Ergebnisse am hinteren Oberarm, andere Setzstellen mit Vorsicht! Den Sensor einen Tag vorher zu setzen ist hier unnötig. Das würde den Einpendelmechanismus stören.
+Insgesamt eines der kleinsten CGM System am Markt. Klein, kein Transmitter notwendig und (bei mir) sehr genaue Werte ohne Schwankungen. Nach rd. 12 Stunden Einlaufphase mit Abweichungen von bis zu 30 mg/dL sind die Abweichungen bei mir kleiner als 10 md/dL. Beste Ergebnisse am hinteren Oberarm, andere Setzstellen mit Vorsicht! No need to set a new sensor one day ahead for soaking. Das würde den Einpendelmechanismus stören.
 
 Es scheint ab und an schlechte Sensoren zu geben, die weit neben den Blutwerten liegen. Das bleibt dann so. Diese sollten umgehend reklamiert und getauscht werden.
 
-Verschobene Sensoren können schlechte Werte liefern. Das Filament, das im Gewebe sitzt, wurde in diesem Fall ein wenig bewegt und liefert deshalb falsche Messergebnisse. Meistens springen dann die Werte in xDrip+. Oder es kommt zu Abweichungen zu blutig gemessenen Werten. Bitte ersetze den Sensor sofort! Die Ergebnisse sind ab diesem Zeitpunkt ungenau.
+If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probabaly you will see jumping values in xDrip+. Oder es kommt zu Abweichungen zu blutig gemessenen Werten. Bitte ersetze den Sensor sofort! Die Ergebnisse sind ab diesem Zeitpunkt ungenau.
 
 Ein Sensortausch erfolgt danach dann immer on-the-fly: Neuen Sensor kurz vor Aktivieren setzen. Sobald xDrip+ keine Datem mehr vom alten Sensor empfängt den neuen Sensor
-mit der gepatchten App starten. Nach einer Stunde sollten automatisch neue Werte in xDrip+ erscheinen.  Wenn nicht, dann die Smartphoneeinstellungen prüfen und vorgehen wie beim ersten Start. Bitte in xDrip+ den Sensor Stop und Sensor Start->nur Kalibrierung löschen anwählen. Keine Notwendigkeit, den Sensor in xDrip + später zu starten.
+mit der gepatchten App starten. Nach einer Stunde sollten automatisch neue Werte in xDrip+ erscheinen.  
+
+Wenn nicht, dann die Smartphoneeinstellungen prüfen und vorgehen wie beim ersten Start. You have no time limit. Try to find the correct seetings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Please take your time. In most cases you accidentially changed one setting which causes now problems. 
+
+Once successful please select please select in xdrip "Sensor Stop" and "Delete calibration only". You do not need to start the sensor. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations has to be deleted. No real interaction is done with the Libre2 sensor here! 
 
 .. image:: ../images/fsl2pic11.jpg
   :alt: xDrip+ Fehlende Daten beim Libre 2 Sensorwechsel
