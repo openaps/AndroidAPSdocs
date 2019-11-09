@@ -100,6 +100,8 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 * 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
 * 'Always use basal absolute values' must be activated if you want to use Autotune properly.
 
+   **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!**  It would lead to false TBR settings in Insight pump.
+
 ## SMS Communicator
 This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing.  Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
 
