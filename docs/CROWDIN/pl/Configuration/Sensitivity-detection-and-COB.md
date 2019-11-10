@@ -19,7 +19,7 @@ Wrażliwość jest obliczana w taki sam sposób, jak algorytm Oref0, ale dodatko
 
 ### Wrażliwość Średnia ważona
 
-Wrażliwość jest obliczana jako średnia ważona odchyleń. Nowsze odchylenia mają wyższą wagę. Minimalna absorpcja węglowodanów jest obliczana na podstawie wskaźnika - maksymalnego czasu absorpcji węglowodanów (max carbs absorption time) określonego w ustawieniach. Algorytm ten jest najszybciej wykrywa zmiany wrażliwości.
+Wrażliwość jest obliczana jako średnia ważona odchyleń. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
 ### Wrażliwość Oref1
 
