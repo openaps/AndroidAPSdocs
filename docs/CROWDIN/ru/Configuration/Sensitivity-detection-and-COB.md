@@ -19,7 +19,7 @@
 
 ### Средневзвешенная чувствительность
 
-Чувствительность рассчитывается как средневзвешанная от отклонений. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+Чувствительность рассчитывается как средневзвешанная от отклонений. Можно указать время в прошлом. Новые отклонения имеют большее значение. Минимальное усвоение углеводов рассчитывается из максимального времени поглощения углеводов в настройках. Этот алгоритм является самым быстрым при отслеживании изменений чувствительности.
 
 ### Чувствительность Oref1
 
