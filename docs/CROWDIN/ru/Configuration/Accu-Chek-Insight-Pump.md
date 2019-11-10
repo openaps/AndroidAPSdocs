@@ -8,11 +8,11 @@
 
 ## Требования к аппаратному и программному обеспечению
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work)
+* Помпа Roche Accu-Chek Combo (любая версия прошивки, работают все)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Примечание: AAPS всегда записывает данные в ** первый профиль скорости базала в помпе **.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Телефон на Android (будет работать любая версия, но сам AndroidAPS требует как минимум Android 5 (Lollipop).)
 
 * Приложение AndroidAPS установлено на вашем телефоне
 
@@ -49,15 +49,15 @@
     
     ![Снимок экрана информации о сопряжения Insight](../images/Insight_PairingInformation.png)
 
-Примечание: Постоянного соединения между помпой и телефоном не будет. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). В ином случае аккумуляторы телефона и помпы будут расходоваться слишком быстро.
+Примечание: Постоянного соединения между помпой и телефоном не будет. Подключение будет устанавливаться только в случае необходимости (т.е. для изменения временного базала, подачи болюса, чтения логов помпы и т.п...). В ином случае аккумуляторы телефона и помпы будут расходоваться слишком быстро.
 
 ## Настройки на AAPS
 
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
+** Не следует применять 'Всегда использовать абсолютные значения базала' ** на помпе Insight. В AAPS выберите Параметры > Nightscout-Client > Дополнительные параметры и убедитесь, что 'Всегда использовать абсолютные значения базала' выключено. Это привело бы к неверным настройкам временного базала TBR в помпе Insight. Как следствие, вы не сможете использовать Autotune, но такому отключению нет альтернативы на помпе Insight.
 
-![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+![Снимок экрана настроек Insight](../images/Insight_pairing_V2_5.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+В настройках Insight в AndroidAPS следует активировать следующие параметры:
 
 * "Отслеживать замены картриджа": При выполнении команды "заполнение инфузионного набора" на помпе, это действие автоматически внесется в журнал как замена картриджа.
 * "Отслеживать смену инфузионного набора": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AndroidAP добавляется соответствующая заметка.
@@ -124,4 +124,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Пересечение часовых поясов с помпой Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#insight).
