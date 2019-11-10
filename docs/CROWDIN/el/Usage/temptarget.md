@@ -23,7 +23,7 @@
 
 ## Δραστηριότητα Ρυθμού-Στόχου
 
-Πριν και κατά τη διάρκεια της δραστηριότητας, ίσως θελήσετε να έχετε έναν υψηλότερο στόχο για να αποφύγετε το χαμηλό σάκχαρο. Για να απλοποιήσετε τη ρύθμιση του Ρυθμού-Στόχου, μπορείτε να διαμορφώσετε μια προεπιλεγμένη "Δραστηριότητα Ρυθμού-Στόχου".
+Πριν και κατά τη διάρκεια της δραστηριότητας, ίσως θελήσετε να έχετε έναν υψηλότερο στόχο για να αποφύγετε το χαμηλό σάκχαρο. Για να απλοποιήσετε τη ρύθμιση του Ρυθμού-Στόχου, μπορείτε να διαμορφώσετε μια προεπιλεγμένη "Δραστηριότητα Ρυθμού-Στόχου". Based on DIA, IOB and your experience you might want to set TT prior to activity.
 
 Advanced, [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Στη συνέχεια, το AndroidAPS είναι πιο ευαίσθητο. Μερικοί άνθρωποι κάνουν αντ 'αυτού μια αλλαγή προφίλ πριν / παράλληλα με την δραστηριότητα ΡΣ, αλλά όλοι είναι διαφορετικοί. Εάν το "SMB με υψηλό Ρυθμού-Στόχου" είναι απενεργοποιημένο, το AndroidAPS δεν θα χρησιμοποιήσει SMB, ακόμη και με COB> 0, "SMB με Ρυθμού-Στόχου" ή "SMB πάντα" ενεργοποιημένο και OpenAPS SMB ενεργό.
 

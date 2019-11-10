@@ -8,8 +8,12 @@
 
 ## 하드웨어와 소프트웨어의 필요 요건
 
-* 로슈 아큐-첵 Insight 펌프 (모든 펌웨어 작동 가능)
-<br>  주의: AAPS는 항상 펌프의 첫번째 Basal  프로파일로<b> 데이터를 기록합니다.</b>* 안드로이드 폰(모든 안드로이드 버젼에서 작동하지만, Android APS는 안드로이드 5 (Lollipop) 이상이 필요합니다.)
+* A Roche Accu-Chek Insight pump (any firmware, they all work)
+    
+    Note: AAPS will write data always in **first basal rate profile in the pump**.
+
+* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+
 * AndroidAPS앱을 핸드폰에 설치해주시기 바랍니다.
 
 ## 설정
@@ -45,13 +49,15 @@
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-주의: 펌프와 휴대폰의 연결은 영구적이지 않습니다. 필요할 경우에만 연결이 됩니다. (예, 임시 Basal양 설정, bolus 주입, 펌프 이력 불러오기 등) 그렇지 않으면 핸드폰과 펌프의 베터리가 너무 빨리 소모됩니다.
+주의: 펌프와 휴대폰의 연결은 영구적이지 않습니다. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). 그렇지 않으면 핸드폰과 펌프의 베터리가 너무 빨리 소모됩니다.
 
 ## AAPS의 설정
 
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
+
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
-Android Aps에서 Insight 설정을 통해 다음 활동들을 활성화 할 수 있습니다.
+In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 * "로그 튜브 변경": 펌프에서 '튜브 채우기"를 실행했을 경우 Android APS 데이타 베이스에 메모로 기록됩니다.
@@ -78,7 +84,7 @@ Android Aps에서 Insight 설정을 통해 다음 활동들을 활성화 할 수
 
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
-펌프가 멈췄을 경우에 AAPS는 Basal양 0%로 임시로그를 남깁니다.
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
 In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
@@ -89,18 +95,18 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 
 ## 펌프 설정
 
-다음과 같이 펌프에 알림을 설정하세요
+Configure alarms in the pump as follows:
 
 * 메뉴 > 설정 > 기기설정 > 모드설정 > 조용 > 시그널 > 소리 메뉴 > 설정 > 기기설정 > 모드설정 > 조용 > 볼륨 > 0 (모든 바 제거)
 * 메뉴 > 모드 > 시그널 모드 > 조용
 
-이렇게하면 펌프의 모든 알람이 울리지 않으며 AndroidAPS가 알람이 당신에게 적합한 지 결정할 수 있습니다. AndroidAPS가 알람을 인지하지 못하면 볼륨이 증가합니다 (첫 번째 경고음과 진동).
+This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-최선 펌웨어의 Insight 펌프의 경우 Bolus할 때 일시적으로 진동이 울립니다. (예를 들어 AndroidAPS가 SMB 또는 임시 Bolus 에뮬레이션이 확정 Bolus를 진행한 경우) 진동은 비활성화 하실 수 없습니다. 예전 펌프는 동일한 상황에서 진동이 울리지 않습니다.
+Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
 
 ## 베터리 교체
 
-Insight 펌프에는 배터리를 교체하는 동안 시계 작동과 같은 필수 기능을 유지하는 작은 내부 배터리가 있습니다. 배터리 교체 시간이 오래 걸리면 이 내장 배터리가 소진되고 시계가 재설정되며 새 배터리를 넣은 후 새 시간과 날짜를 입력하라는 메시지가 표시됩니다. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 ## Insight specific errors
 
@@ -118,4 +124,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Crossing time zones with Insight pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).

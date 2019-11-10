@@ -1,18 +1,26 @@
 
 Einstellungen exportieren & importieren
-***********************************
+******
+Wann sollte man die Einstellungen exportieren?
+=====
+Sei bereit für das Unvorhergesehene. Vielleicht änderst Du versehentlich wichtige Einstellungen und hast Schwierigkeiten, die Änderungen rückgängig zu machen. Dein Smartphone könnte defekt oder gestohlen werden. Um einfach auf den Stand zurückkehren zu können, an dem Du warst, sollten die Einstellungen regelmäßig exportiert werden.
 
+Die Empfehlung ist, den Export nach einer Änderung der Einstellungen oder dem Abschluss eines Ziels (Objective) durchzuführen. Die exportierten Einstellungen sollten in einen Cloud-Speicher oder auf Deinen Computer kopiert werden. Dann ist Du für den Verlust oder die Beschädigung Deines AAPS-Smartphones vorbereitet und musst nicht wieder bei Null anfangen.
+
+Exportieren der Einstellungen
+=====
 * **Exportiere die Einstellungen** auf Deinem alten Smartphone
+
   * Hamburger Menü (drei Striche oben links am Bildschirm)
   * Wartung
   * Einstellungen exportieren
   Der Speicherort der Datei wird angezeigt.
   
+  
   .. image:: ../images/AAPS_ExportSettings.png
-  :alt: AndroidAPS export settings
+    :alt: AndroidAPS export settings
   
-  
-   
+     
 * **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
 * **Installiere AndroidAPS** auf dem neuen Smartphone.
 * **Importiere die Einstellungen** auf Deinem neuen Smartphone

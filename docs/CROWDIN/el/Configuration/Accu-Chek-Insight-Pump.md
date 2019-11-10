@@ -8,8 +8,12 @@
 
 ## Απαιτήσεις υλικού και λογισμικού
 
-* Μία Roche Accu-Chek Insight pump (οποιαδήποτε εταιρεία όλες δουλεύουν) Σημειώσει: Το AAPS πάντα θα αποθηκεύει στο προφίλ του πρώτου βασικού ρυθμού της αντλίας
-* Ένα τηλέφωνο Android (Βασικά κάθε έκδοση Android θα λειτουργούσε, αλλά το ίδιο το AndroidAPS απαιτεί τουλάχιστον Android 5 (Lollipop).)
+* A Roche Accu-Chek Insight pump (any firmware, they all work)
+    
+    Note: AAPS will write data always in **first basal rate profile in the pump**.
+
+* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+
 * Την εφαρμογή AndroidAPS εγκατεστημένη στο τηλέφωνό σας
 
 ## Ρύθμιση
@@ -45,13 +49,15 @@
     
     ![Στιγμιότυπο πληροφοριών Insight Pairing](../images/Insight_PairingInformation.png)
 
-Σημείωση: Δεν θα υπάρχει μόνιμη σύνδεση μεταξύ της αντλίας και του τηλεφώνου. Μια σύνδεση θα καθοριστεί μόνο εάν είναι απαραίτητο (δηλ. Ο καθορισμός προσωρινών βασικών ρυθμών, η χορήγηση bolus, η ανάγνωση του ιστορικού της αντλίας...). Διαφορετικά, η μπαταρία του τηλεφώνου και της αντλίας θα εξαντλούνταν πολύ γρήγορα.
+Σημείωση: Δεν θα υπάρχει μόνιμη σύνδεση μεταξύ της αντλίας και του τηλεφώνου. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Διαφορετικά, η μπαταρία του τηλεφώνου και της αντλίας θα εξαντλούνταν πολύ γρήγορα.
 
 ## Ρυθμίσεις στο AAPS
 
-![Στιγμιότυπο ρυθμίσεων Insight](../images/Insight_pairing_V2_5.png)
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
 
-Στις ρυθμίσεις του Insight στο AndroidAPS μπορείτε να ενεργοποιήσετε τις ακόλουθες επιλογές:
+![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+
+In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 * "Αρχείο Αλλαγές σωλήνα": Αυτό προσθέτει μια σημείωση στη βάση δεδομένων AndroidAPS όταν εκτελείτε το πρόγραμμα "πλήρωση σωλήνα" στην αντλία.
@@ -78,9 +84,9 @@
 
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
-Για τις περιόδους κατά τις οποίες σταμάτησε η αντλία, το AAPS θα καταγράψει μια προσπάθεια. βασικός ρυθμός με 0%.
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
-Στο AndroidAPS, η καρτέλα Accu-Chek Insight εμφανίζει την τρέχουσα κατάσταση της αντλίας και διαθέτει δύο κουμπιά:
+In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
 * "Ανανέωση": Ανανεώνει την κατάσταση της αντλίας
 * "Ενεργοποίηση / απενεργοποίηση TBR μέσω ειδοποίησης": Μία τυποποιημένη αντλία Insight εκπέμπει συναγερμό όταν ολοκληρωθεί η διαδικασία TBR. Αυτό το κουμπί σας επιτρέπει να ενεργοποιήσετε ή να απενεργοποιήσετε αυτό το συναγερμό χωρίς την ανάγκη για λογισμικό διαμόρφωσης.
@@ -89,33 +95,33 @@
 
 ## Ρυθμίσεις στην αντλία
 
-Ρυθμίστε τους συναγερμούς στην αντλία ως εξής:
+Configure alarms in the pump as follows:
 
 * Μενού> Ρυθμίσεις> Ρυθμίσεις συσκευής> Ρυθμίσεις λειτουργιών> Ήχος> Σήμανση> Μενού ήχου> Ρυθμίσεις> Ρυθμίσεις συσκευής> Ρυθμίσεις λειτουργίας>Ήχος>Ένταση>0 (διαγράψτε όλες τις μπάρες)
 * Μενού> Λειτουργίες> Λειτουργία σήματος> Σίγαση
 
-Αυτό θα σιωπά όλους τους συναγερμούς από την αντλία, επιτρέποντας στο AndroidAPS να αποφασίσει αν ένας συναγερμός είναι σχετικός με σας. Αν το AndroidAPS δεν αναγνωρίζει συναγερμό, η ένταση του θα αυξηθεί (πρώτα ήχος, στη συνέχεια δόνηση).
+This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-Οι αντλίες Insight με νεότερο υλικό και λογισμικό θα δονείται σύντομα κάθε φορά που παρέχεται ένα bolus (για παράδειγμα, όταν το AndroidAPS εκδίδει μια SMB ή TBR, παρέχει εκτεταμένο bolus). Η δόνηση δεν μπορεί να απενεργοποιηθεί. Οι παλαιότερες αντλίες δεν δονούνται σε αυτές τις περιπτώσεις.
+Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
 
 ## Αντικατάσταση μπαταρίας
 
-Η αντλία Insight διαθέτει μια μικρή εσωτερική μπαταρία για να διατηρεί βασικές λειτουργίες όπως το ρολόι που εκτελείται κατά την αλλαγή της αφαιρούμενης μπαταρίας. Αν η αλλαγή της μπαταρίας διαρκέσει πολύ, αυτή η εσωτερική μπαταρία μπορεί να εξαντληθεί, το ρολόι θα επαναρυθμιστεί και θα σας ζητηθεί να εισάγετε νέα ώρα και ημερομηνία μετά την εισαγωγή μιας νέας μπαταρίας. Εάν συμβεί αυτό, όλες οι καταχωρίσεις στο AndroidAPS πριν από την αλλαγή της μπαταρίας δεν θα συμπεριλαμβάνονται πλέον στους υπολογισμούς, καθώς ο σωστός χρόνος δεν μπορεί να προσδιοριστεί σωστά.
+The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 ## Ειδικά σφάλματα σχετικά με το Insight
 
 ### Εκτεταμένο bolus
 
-Απλά χρησιμοποιήστε ένα εκτεταμένο bolus κάθε φορά καθώς πολλαπλά εκτεταμένα bolusταυτόχρονα ενδέχεται να προκαλέσουν σφάλματα.
+Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 
 ### Τέλος χρόνου
 
-Μερικές φορές μπορεί να συμβεί η αντλία Insight να μην απαντά κατά τη διάρκεια ρύθμισης σύνδεσης. Στην περίπτωση αυτή, το AAPS θα εμφανίσει το ακόλουθο μήνυμα: "Τέλος χρονικού ορίου κατά τη διάρκεια της χειραψίας - επαναφορά του Bluetooth".
+Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
 
-![Επισκόπηση Επαναφορά Bluetooth](../images/Insight_ResetBT.png)
+![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-Σε αυτήν την περίπτωση, απενεργοποιήστε το bluetooth στην αντλία ΚΑΙ το smartphone για περίπου 10 δευτερόλεπτα και, στη συνέχεια, ενεργοποιήστε τα ξανά.
+In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
 
 ## Διέλευση χρονικών ζωνών με αντλία Insight
 
-Για πληροφορίες σχετικά με τη μετακίνηση σε ζώνες ώρας, ανατρέξτε στην ενότητα [Ζώνη ώρας ταξιδεύοντας με αντλίες](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).

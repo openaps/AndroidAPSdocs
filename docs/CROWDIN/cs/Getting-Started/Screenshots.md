@@ -16,7 +16,7 @@ Toto je první obrazovka, na kterou narazíte, když spustíte aplikaci AndroidA
 * zobrazení aktuálního profilu a provedení [Přepnutí profilu](../Usage/Profiles.md)
 * zobrazení aktuálního cíl a nastavení [dočasného cíl](../Usage/temptarget.md).
 
-Podržte prst dlouze na některém z tlačítek pro změnu nastavení. Tj. dlouze držte prst na cílovém modrém poli v horní pravé části ("5,5" na snímku), abyste nastavili dočasný cíl.
+Podržte prst dlouze na některém z tlačítek pro změnu nastavení. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
 
 ### Sekce C
 

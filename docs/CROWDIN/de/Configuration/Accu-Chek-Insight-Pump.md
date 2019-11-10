@@ -8,9 +8,12 @@
 
 ## Hard- und Softwareanforderungen
 
-* Eine Roche Accu-Chek Insight Insulinpumpe (alle Firmware-Version können genutzt werden)
-<br>   Hinweis: AAPS schreibt die Daten immer in das  <b>erste Basalraten-Profil in der Pumpe</b>.
+* Eine Roche Accu-Chek Insight (jede Firmware funktioniert)
+    
+    Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe**.
+
 * Ein Android-Telefon (im Grunde funktionieren alle Android-Versionen, aber AndroidAPS selbst benötigt mindestens Android 5 (Lollipop).
+
 * AndroidAPS muss auf Deinem Smartphone installiert sein.
 
 ## Einrichtung
@@ -50,6 +53,8 @@ Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. E
 
 ## Einstellungen in AndroidAPS
 
+Du darfst **‘Verwende absolute statt prozentuale Basalwerte beim Upload zu NightScout’ NICHT aktivieren **, wenn Du die Insight nutzt. Gehe in AAPS zu Einstellungen > Nightscout-Client > Erweiterte Einstellungen und stelle sicher, dass ‘Verwende absolute statt prozentuale Basalwerte beim Upload zu NightScout‘ deaktiviert ist. Es würde zu falschen Einstellungen der temporären Basalrate in der Insight-Pumpe führen. Folglich wirst Du Autotune nicht nutzen können, aber es gibt keine Alternative zum Abschalten, wenn Du die Insight nutzt.
+
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
 In den Insight-Einstellungen in AndroidAPS kannst Du die folgenden Optionen aktivieren:
@@ -60,7 +65,7 @@ In den Insight-Einstellungen in AndroidAPS kannst Du die folgenden Optionen akti
 * "Batteriewechsel protokollieren": Es erfolgt ein Eintrag, wenn Du in der Pumpe die Batterie wechselst.
 * "Wechsel des Betriebsmodus protokollieren": Es wird in der AndroidAPS Datenbank vermerkt, wenn Du die Pumpe startest, stoppst oder pausierst.
 * "Alarme protokollieren": Wenn die Pumpe einen Alarm ausgibt, wird ein entsprechender Eintrag in der AndroidAPS Datenbank gemacht. Ausgenommen davon sind Erinnerung, Bolus- und TBR-Abbrüche. Diese werden nicht aufgezeichnet.
-* "TBR-Emulation aktivieren": Mit der Insight Pumpe können temporäre Baslaraten (TBR) nur bis max. 250% abgegeben werden. Um diese Einschränkung zu umgehen, führt TBR Emulation dazu, dass die Pumpe einen verzögerten Bolus für das zusätzlich benötigte Insulin abgibt, wenn Du eine TBR von mehr als 250 % einstellst.
+* "TBR-Emulation aktivieren": Mit der Insight Pumpe können temporäre Basalraten (TBR) nur bis max. 250% abgegeben werden. Um diese Einschränkung zu umgehen, führt TBR Emulation dazu, dass die Pumpe einen verzögerten Bolus für das zusätzlich benötigte Insulin abgibt, wenn Du eine TBR von mehr als 250 % einstellst.
     
     **Hinweis: Bitte verwende nicht mehrere verzögerte Boli gleichzeitig, da dies zu Fehlern führen kann.**
 
@@ -113,7 +118,7 @@ Bitte verwende nicht mehrere verzögerte Boli gleichzeitig, da dies zu Fehlern f
 
 Manchmal kann es passieren, dass die Insight Pumpe während des Verbindungsaufbaus nicht antwortet. In diesem Fall wird AAPS die folgende Nachricht anzeigen: "Zeitüberschreitung während des Handshakes - Bluetooth zurücksetzen".
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Bluetooth zurücksetzen](../images/Insight_ResetBT.png)
 
 Schalte dann Bluetooth auf Pumpe und Smartphone für etwa 10 Sekunden aus und schalte es dann wieder ein.
 

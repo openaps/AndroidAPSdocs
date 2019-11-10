@@ -13,10 +13,15 @@ AndroidAPS позволяет контролировать телефон реб
 * Если у вас iPhone для слежения и, следовательно, нет возможности использовать NSclient, доступны дополнительные SMS-команды.
 
 * В настройках Android телефон перейдите в приложения > AndroidAPS > Разрешения и включите SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, just one space after the semicolons - i.e. +4412345678; +4412345679) and also enable 'Allow remote commands via SMS'.
+* В AndroidAPS перейдите в Настройки > SMS Коммуникатор и введите номер телефона(ов), с которых вы хотите отправлять SMS команды (разделенные точками с запятой, без пробелов или других символов - напр. +4412345678; +4412345679), а также включите опцию 'Разрешить удаленные команды с помощью SMS'.
+* Если вы хотите использовать более одного номера:
 
-  .. image:: ../images/SMSCommandsSetupSpace.png
-    :alt: Настройка SMS команд
+  * Введите только один номер.
+  * Убедитесь, что этот телефон работает с алгоритмом путем отправки и подтверждения команды SMS.
+  * Введите дополнительный номер(а), разделяя их точкой с запятой и одним пробелом.
+  
+    .. изображение:: ../images/SMSCommandsSetupSpace.png
+      :alt: Настройка SMS команд
 
 
 * Отправьте SMS на телефон с AndroidAPS с одобренного(ых) вами телефона(ов) при помощи команд перечисленных ниже **ЗАГЛАВНЫМИ БУКВАМИ**, телефон ответит подтверждением успешного выполнения команды или запрошенного статуса. Если необходимо, подтвердите команду, отправив код, предлагаемый в ответном SMS-сообщении.
@@ -26,7 +31,7 @@ AndroidAPS позволяет контролировать телефон реб
 Команды
 =====
 
-Upper and lower case is irrelevant when sending commands.
+Верхний и нижний регистр не имеет значения при отправке команд.
 
 Команды должны отправляться на английском языке, ответ будет получен на локальном языке, если строка ответа уже " переведена <../translations.html#translate-strings-pl-androidaps-app> ` _.
 
@@ -52,58 +57,58 @@ Upper and lower case is irrelevant when sending commands.
 Данные мониторинга
 -----
 * BG/ГК
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+   * Ответ: новая ГК: 5.6 4мин назад, дельта: -0,2 ммоль, активный инсулин IOB: 0.20 ед (болюс: 0.10 ед базал: 0.10 ед)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * Ответ: Чтобы отправить калибровку 5.6 ответьте кодом Rrt
+   * Ответ после получения правильного кода: Калибровка отправлена / Calibration sent (* *Если установлен xDrip. Разрешение на прием калибровок должно быть включено в xDrip+**)
 
-Basal
+базал
 -----
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * Ответ: Чтобы остановить временный базал ответьте кодом EmF [ Примечание: код EmF-это пример]
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * Ответ: Для запуска базала 0.3ед/ч на 30 минут ответьте кодом Swe
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   *Ответ: Для запуска базала 0.3ед/ч на 20 минут ответьте кодом Swe
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
-* BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * Ответ: Для запуска базала 30% на 30 минут ответьте кодом Swe
+* БАЗАЛ 30% 50
+   * Ответ: Для запуска базала 30% на 50 минут ответьте кодом Swe
 
-Bolus
+болюс
 -----
-* BOLUS 1.2
-   * Response depends time last bolus was given
-      * To deliver bolus 1.2U reply with code Rrt
-      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min after last bolus command or remote commands!**)
+* Болюс 1.2
+   * Ответ зависит от времени последнего болюса
+      * Для подачи болюса 1,2 ед ответьте кодом Rrt
+      * Удаленный болюс недоступен. Повторите позже. (* *Удаленный болюс не допускается в течение 15 минут после последней команды bolus или удаленных команд! **)
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Ответ: Для прекращения подачи пролонгированного болюса ответьте кодом EmF
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Ответ: Для начала подачи пролонгированного болюса 2 ед. на 120 мин. ответьте кодом EmF
 
 Профиль
 -----
-* PROFILE STATUS
-   * Response: Profile1
-* PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
+* СТАТУС ПРОФИЛЯ
+   * Ответ: Профиль1
+* СПИСОК ПРОФИЛЕЙ
+   * Ответ: 1. ` Profile1 ` 2. ` Profile2 `
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * Ответ: Чтобы переключиться на Профиль 1 100% ответьте кодом Any
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * Ответ: Чтобы переключиться на Профиль 2 30% ответьте кодом Any
 
 Другое
 -----
-* TREATMENTS REFRESH
-   * Response: Refresh treatments from NS
-* NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
-* PUMP
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+* ОБНОВИТЬ НАЗНАЧЕНИЯ
+   * Ответ: Синхронизировать назначения с NS
+* ПЕРЕЗАПУСТИТЬ NSCLIENT
+   * Ответ: Перезапуск NSCLIENT 1 получатель
+* ПОМПА
+   * Ответ: Последнее соед: 1 мин. назад временный базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5U Reserv: 34U Batt: 100
 
 Устранение неполадок
 =====
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Была жалоба на остановку работы SMS команд после обновления на телефоне Galaxy S10. Решается путем отключения опции "отправлять как сообщения чата".
 
-.. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+.. изображение:: ../images/SMSdisableChat.png
+  :alt: Отключить SMS как сообщение чата

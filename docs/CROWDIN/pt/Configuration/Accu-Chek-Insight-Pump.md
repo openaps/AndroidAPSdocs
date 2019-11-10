@@ -8,8 +8,12 @@
 
 ## Requisitos de hardware e software
 
-* Uma bomba Insight Roche Accu-Chek (qualquer firmware, todos funcionam)
-<br>   Nota: AAPS irá escrever os dados sempre no <b>primeiro perfil de taxa basal na bomba </b>* Um telefone Android (basicamente todas as versões Android funcionariam, mas o próprio AndroidAPS requer pelo menos o Android 5 (Lollipop).)
+* A Roche Accu-Chek Insight pump (any firmware, they all work)
+    
+    Note: AAPS will write data always in **first basal rate profile in the pump**.
+
+* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+
 * The AndroidAPS app installed on your phone
 
 ## Instalação
@@ -45,9 +49,11 @@
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
-Note: There will be no permanent connection between pump and phone. A connection will only be established if neccessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
+Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## Configurações no AAPS
+
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
@@ -89,7 +95,7 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 
 ## Configurações na bomba
 
-Configurar alarmes na bomba da seguinte forma:
+Configure alarms in the pump as follows:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 * Menu > Modes > Signal mode > Quiet
@@ -118,4 +124,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Crossing time zones with Insight pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).

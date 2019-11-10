@@ -19,7 +19,7 @@
 
 ### Ευαισθησία WeightedAverage
 
-Η ευαισθησία υπολογίζεται ως σταθμισμένος μέσος όρος από τις αποκλίσεις. Οι νεότερες αποκλίσεις έχουν μεγαλύτερο βάρος στον υπολογισμό. Η ελάχιστη απορρόφηση υδατανθράκων υπολογίζεται από το μέγιστο χρόνο απορρόφησης υδατανθράκων από τις προτιμήσεις. Αυτός ο αλγόριθμος είναι ταχύτερος στο να ακολουθεί τις αλλαγές ευαισθησίας.
+Η ευαισθησία υπολογίζεται ως σταθμισμένος μέσος όρος από τις αποκλίσεις. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
 ### Ευαισθησία Oref1
 

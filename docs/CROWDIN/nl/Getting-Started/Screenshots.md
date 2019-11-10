@@ -16,7 +16,7 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 * Je huidige profiel. Je kunt hier ook een (tijdelijke) [profielwissel](../Usage/Profiles.md) instellen.
 * Je huidige bloedglucose streefdoel. Je kunt hier ook een [tijdelijk streefdoel](../Usage/temptarget.md) instellen.
 
-Aanpassingen maak je door een veld lang ingedrukt te houden. Houd bijvoorbeeld de grijze knop rechtsboven met streefdoel ("110" in screenshot) lang ingedrukt om een tijdelijk streefdoel in te stellen.
+Aanpassingen maak je door een veld lang ingedrukt te houden. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
 
 ### Sectie C
 
