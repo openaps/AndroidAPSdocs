@@ -17,11 +17,11 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 ## Prozentsatz
 
 * Wendet den gleichen Prozentsatz auf alle Parameter des Profils an. 
-* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
+* Wenn du ihn auf 130% setzt (was bedeutet, dass du eine 30% höhere Insulinresistenz hast), wird es die Basalrate um 30% erhöhen. Es senkt auch ISF und IC entsprechend (in diesem Beispiel werden sie durch 1,3 geteilt).
   
-  ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
+  ![Beispiel Profilwechsel mit Prozentsatz](../images/ProfileSwitchPercentageD.png)
 
-* It will be sent to the pump and then be the default basal rate.
+* Das wird an die Pumpe gesendet und ist dann die standardmässig verwendete Basalrate.
 
 * Der Loop Algorithmus (Open Loop oder Closed Loop) wird von da an mit dem ausgewählten prozentualen Profil arbeiten. So können zum Beispiel unterschiedliche prozentuale Profile für die verschiedene Phasen des hormonellen Zyklus eingerichtet werden.
 
