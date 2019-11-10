@@ -131,7 +131,7 @@ Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#obj
 ## Objectives (learning program)
 AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
-You should export your settings (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
 See [Objectives](../Usage/Objectives.rst) page for more information.
 
