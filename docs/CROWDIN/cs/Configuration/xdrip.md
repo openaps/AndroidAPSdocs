@@ -39,6 +39,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... or 8H
 ### Identifikovat příjemce
 
 * Objevily se problémy s lokálním odesíláním dat (AAPS nepřijímal nové hodnoty BG z xDrip+) v případě, že byl zapnutý mód letadlo. Jděte do Nastavení > Komunikace mezi zařízeními > Identify reciever, a vložte hodnotu `info.nightscout.androidaps`.
+* Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps`. Capital I would prevent AAPS from receiving BG values from xDrip.
    
    ![xDrip+ Základní nastavení komunikace mezi aplikacemi rozpoznání přijímače](../images/xDrip_InterApp_NS.png)
 
