@@ -17,12 +17,16 @@ Within the "profile switch" you can choose two additional changes which used to 
 ## Percentage
 * This applies the same percentage to all parameters. 
 * If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example). 
+
+   ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
+
 * It will be sent to the pump and then be the default basal rate. 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
+## Time shift
+
 ![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
-## Time shift
 * This moves everything round the clock by the number of hours entered. 
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
 * It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example:
