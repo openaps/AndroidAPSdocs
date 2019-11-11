@@ -8,6 +8,7 @@ Novembre 2019
 * `Insight - Disable absolut values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
 * `Nouveau tutoriel Freestyle Libre 2 <../Hardware/Libre2.html> ` _
+* `Profile switch with percentage - example <../Usage/Profiles.html>`_
 * `SMS commands update <../Children/SMS-Commands.html>`_
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Mise à jour - démarrage rapide pour les utilisateurs expérimentés <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experied-users>`_
