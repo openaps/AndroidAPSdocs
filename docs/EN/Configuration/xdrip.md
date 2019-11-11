@@ -20,7 +20,9 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use o
    
 * Tap `Extra Options`
 
-* **Deactivate `Upload treatments` and `Back-fill data`. * Safety warning : you must deactivate "Upload treatments" from xdrip, otherwise treatments (carbs and insulin) can be delivered twice by AAPS.**
+* Deactivate `Upload treatments` and `Back-fill data`. 
+
+   **Safety warning : You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
 
 * Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
 
