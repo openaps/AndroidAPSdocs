@@ -11,7 +11,7 @@ Always keep in mind that everyone is different. This page presents examples of c
 
 You'll see in the pictures below the evolution of the prediction curves during the 4 hours after a meal
 
-![](C:\Users\Titi\StudioProjects\AndroidAPSdocs\docs\EN\images\4h_Meal_EN.jpg)
+![](..\images\4h_Meal_EN.jpg)
 
 COB prediction curve (orange): For a meal, if you have correctly estimated the carbohydrate, the main curve to be analyzed is the COB curve. But it takes about 1 hour in this example before having prediction close to reality! And after one hour, it's the only curve that remains very stable...
 
@@ -57,7 +57,7 @@ UAM
 
 You can have "noisy periods" with some sensors (eg Freestyle Libre) (see below)
 
-![](C:\Users\Titi\StudioProjects\AndroidAPSdocs\docs\EN\images\Noisy_Sensor_EN.jpg)
+![](..\images\Noisy_Sensor_EN.jpg)
 
 As the prediction curve takes into account the 5 minutes of the delta, they are completely false when the sensor is in a noisy period. Always check that you are back in a "stable" period (without abrupt variation), before looking at the prediction curves again.
 Noisy periods can last from a few minutes to several tens of minutes.
