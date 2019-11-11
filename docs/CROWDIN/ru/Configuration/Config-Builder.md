@@ -181,23 +181,23 @@ AndroidAPS ставит перед вами ряд задач (целей), ко
 * Мониторинг (открывает xDrip +)
 * Калибровка
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Кроме того можно задать сочетания клавиш для приращения инсулина и углеводов и определить, должны ли диалоговые окна содержать примечания.
 
 #### Быстрый болюс
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Создайте кнопки для некоторых стандартных блюд (углеводы и метод вычисления болюса) которые будут отображаться на главном экране. Применяйте для стандартных часто употребляемых блюд. Если для различных блюд указано разное время, у вас всегда будет соответствующая кнопка приема пищи на домашнем экране, в зависимости от времени суток.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Примечание: Кнопка не будет видна вне диапазона времени, для нее созданного или если у вас есть достаточно активного инсулина IOB на углеводы, заданные кнопкой.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Кнопка мастера быстрой настройки](../images/ConfBuild_QuickWizard.png)
 
 #### Расширенные настройки
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Включает функцию супер болюс в мастере. Применяйтес осторожностью и не активируйте пока не узнаете, как она работает. В общем виде на следующие два часа к болюсу добавляется база и активируется нулевой временный базал. **Другие функции алгоритма AAPS будут отключены - поэтому применяйте с осторожностью! Если вы используете функции супер микро болюса SMB AAPS, то время его работы будет ограничено в соответствии с настройками в ["Макс. минут базала для ограничения SMB"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to); если вы не используете SMB, алгоритм AAPS будет отключен на два часа.** Подробности о супер-болюсе можно найти [здесь](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Действия
 
-Some buttons to quickly access common features:
+Кнопки быстрого доступа к распространенным настройкам:
 
 * Переключатель профилей (см. [страницу профилей](../Usage/Profiles.md) для дополнительной информации по настройке)
 * Временные цели
@@ -207,7 +207,7 @@ Some buttons to quickly access common features:
 * Журнал
 * TDD (Общая суточная доза = болюс + базал за день)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50. Поэтому эта величина рассчитывается как суммарная суточная доза инсулина TDD / 2 *суммарную суточную величину болюса TBB (общая суточная база = сумма базала в течение 24 часов). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
