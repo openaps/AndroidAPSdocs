@@ -1,4 +1,4 @@
-Objectives
+Tikslai
 **********
 
 AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
