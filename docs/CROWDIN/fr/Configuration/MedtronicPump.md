@@ -1,10 +1,10 @@
-# Medtronic Pumps
+# Pompes Medtronic
 
 **>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)). <<<<**
 
 * * *
 
-Works only with older Medtronic pumps (details see below). Does not work with Medtronic 640G or 670G.
+Fonctionne uniquement avec les anciennes pompes Medtronic (voir détails ci-dessous). Ne fonctionne pas avec Medtronic 640G ou 670G.
 
 * * *
 
@@ -12,15 +12,15 @@ Works only with older Medtronic pumps (details see below). Does not work with Me
 
 - **Phone:** Medtronic driver should work with any phone supporting BLE. **IMPORTANT: While driver works correctly on all phones, enabling/disabling Bluetooth doesn't (this is required when you loose connection to RileyLink and system can't recover automatically - happens from time to time). So you need to get device with Android 6.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. We are looking into problem with Android 9, but so far we haven't found resolution (it seems to work on some models and not on others, and on also works sometimes on some models).**
 - **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. Device that does is called RileyLink (you can get it here [getrileylink.org](https://getrileylink.org/)). You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). If you are feeling adventurous you can also try Gnarl ([here](https://github.com/ecc1/gnarl)), which is sort-of RileyLink-clone. 
-- **Pump:** Driver works only with following models and firmware versions: 
+- **Pompe :** Le pilote fonctionne uniquement avec les modèles et versions de firmware suivants : 
     - 512/712
     - 515/715
     - 522/722
-    - 523/723 (firmware 2.4A or lower)
-    - 554/754 EU release (firmware 2.6A or lower)
-    - 554/754 Canada release (firmware 2.7A or lower)
+    - 523/723 (firmware 2.4A ou inférieur)
+    - 554/754 version EU (firmware 2.6A ou inférieur)
+    - 554/754 version canadienne (firmware 2.7A ou inférieure)
 
-## Configuration of the pump
+## Configuration de la pompe
 
 - **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication.
 - **Set Max Basal** on your Pump to your "max basal entry in your STD profile" * 4 (if you want to have 400% TBR as max). This number must be under 35 (as you can see in pump).
@@ -28,7 +28,7 @@ Works only with older Medtronic pumps (details see below). Does not work with Me
 - **Set profile to STD**. This will be the only profile we will use. You can also disable.
 - **Set TBR type** to Absolute (not Percent)
 
-## Configuration of Phone/AndroidAPS
+## Configuration du téléphone / AndroidAPS
 
 - **Do not pair RileyLink with your Phone.** If you paired your RileyLink, then AndroidAPS won't be able to find it in configuration.
 - Disable Auto-rotate on your phone (on some devices Auto-rotate restarts BT sessions, which is not something we would want).
@@ -100,7 +100,7 @@ When Medtronic driver is selected, 3 possible actions can be added to Actions Ta
 - **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
 - **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
 
-## Important notes
+## Remarques importantes
 
 ### Logging
 
@@ -126,7 +126,7 @@ Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 
 
 We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
 
-## FAQ
+## Questions fréquentes
 
 ### Can I see the power of RileyLink/GNARL?
 
@@ -134,7 +134,7 @@ Non. At the moment none of this devices support this and it probably won't even 
 
 ### Is GNARL full replacement for RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Oui. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
