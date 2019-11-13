@@ -43,7 +43,7 @@ Comment installer AndroidAPS
 
    Construire l'APK <./Installing-AndroidAPS/Building-APK.md>
    Télécharger la nouvelle version ou branche <./Installing-AndroidAPS/Update-to-new-version.md>
-   Install git <./Installing-AndroidAPS/git-install.rst>
+   Installer git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Branches de développement <./Installing-AndroidAPS/Dev_branch.md>
@@ -80,13 +80,13 @@ Utilisation d'AndroidAPS
    :glob:
     
    Les écrans d'AndroidAPS <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives.rst>
+   Objectifs <./Usage/Objectives.rst>
    Fonctionnalités d'OpenAPS <./Usage/Open-APS-features.md>   
    Calcul des GA <./Usage/COB-calculation.rst>
    Estimation de la Sensibilité <./Configuration/Sensitivity-detection-and-COB.md>
    Changement de profil <./Usage/Profiles.md>
    Cibles <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.rst>
+   Glucides étendus <./Usage/Extended-Carbs.rst>
    Automatisation <./Usage/Automation.rst>
   
  
@@ -109,7 +109,7 @@ AndroidAPS pour les enfants
    :glob:
    
    Surveillance à distance <./Children/Children.rst>
-   SMS commands <./Children/SMS-Commands.rst>
+   Commandes SMS <./Children/SMS-Commands.rst>
    
 
 Avancé 
