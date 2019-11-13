@@ -1,6 +1,6 @@
-Component Overview 
+Vue d'ensemble des composants 
 ==============================================
-AndroidAPS is not just a (self-built) application, it is just one of serveral modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, too.
+AndroidAPS n'est pas seulement une application (faite vous même), c'est juste un des modules fonctionnels de votre système de boucle fermée. Avant de décider des composants, ce serait une bonne idée de jeter un oeil à la `configuration des composants <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_.
    
 .. image:: ../images/modules.png
   :alt: Compontents overview
@@ -14,58 +14,58 @@ AndroidAPS is not just a (self-built) application, it is just one of serveral mo
    
    Enfin et surtout, vous ne devez pas prendre d'inhibiteurs du SGLT-2 (gliflozines), car ils abaissent de façon incalculable la glycémie.  La combinaison avec un système qui réduit les débits de base pour augmenter la glycémie est particulièrement dangereuse car en raison de la gliflozine, cette augmentation de glycémie pourrait ne pas se produire et un état dangereux d'absence d'insuline peut se produire.
 
-Necessary Modules
+Modules Nécessaires
 =====================
-Good individual dosage algorithm for your diabetes therapy
+Un bon algorithme de dosage individuel pour votre diabète
 ------------------
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes.
-Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Même si ce n'est pas quelque chose à créer ou à acheter, c'est le "module" qui est probablement le plus sous-estimé, mais essentiel. Quand vous laissez un algorithme vous aider à gérer votre diabète, il doit en connaître les bons réglages pour ne pas faire de graves erreurs.
+Même si d'autres modules vous manquent, vous pouvez déjà vérifier et adapter votre « profil » en collaboration avec votre équipe médicale. 
+La plupart des "boucleurs" utilisent le rythme circadienpour les DB, la SI et le G/I, qui adaptent la sensibilité à l'insuline hormonale durant la journée.
 
-The profile includes
+Le profil inclut :
 
-* BR (Basal rates)
-* ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
-* CR (carb ratio) is gramms carbohydrate per one unit insulin
-* DIA (duration of insulin acting).
+* DB (débits de basal)
+* SI (sensibilité à l'insuline) est la baisse de glycémie que provoque une unité d'insuline
+* G/I (ratio Glucides / Insuline) est la quantité de glucides en grammes par unité d'insuline
+* DAI (durée d'action de l'insuline).
 
-No use of SGLT-2 inhibitors
+Ne pas utiliser d'inhibiteurs SGLT-2
 -------
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AndroidAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption du glucose dans le rein. Comme ils abaissent de façon incalculable la glycémie, vous NE DEVEZ PAS les prendre en utilisant un système à boucle fermée comme AndroidAPS! Il y aurait un risque énorme d'une acidocétose ou d'une hypoglycémie ! La combinaison de ce médicament avec un système qui abaisse les débits de basal pour augmenter la glycémie est particulièrement dangereuse car en raison de la gliflozine, cette augmentation de Gly pourrait ne pas se produire et un état dangereux d'absence d'insuline peut se produire.
 
-Phone
+Téléphone
 -------
-You need an Android smartphone with Google Android 6.0 or above. Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Il vous faut un smartphone Android avec Google Android 6.0 ou supérieur. Les utilisateurs sont en train de créer une `liste des téléphones et des montres testées <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
+Pour enregistrer un téléphone ou une montre qui n'est pas déjà dans la feuille de calcul, veuillez remplir le `formulaire <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+En cas de problème avec la feuille de calcul, merci d'envoyer un mail à `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, pour tous les dons de téléphone/montre qui ont encore besoin d'être testés, merci d'envoyer un mail à `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
-Insulin pump
+Pompe à insuline
 --------
-AndroidAPS **currently** works with 
+AndroidAPS fonctionne **actuellement** avec 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (également nécessaire : application Ruffy, LineageOS ou Android 8.1 sur votre téléphone)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_  
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)
+- `quelques vieilles pompes Medtronic <../Configuration/MedtronicPump.html>`_ à partir de la version 2.4 (également nécessaires : RileyLink/Gnarl, téléphone Android avec bluetooth basse énergie / puce BLE)
 
-**Other pumps** that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <../Getting-Started/Future-possible-Pump-Drivers.html>`_ page.
+**D'autres pompes ** qui peuvent potentiellement fonctionner avec AndroidAPS sont listées sur la page `Futures pompes (possible) <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
-If you need to **privately buy** a pump then you can find various distributors is in `this spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, please share the details of yours if not already listed.
+Si vous avez besoin d'acheter ** à titre privé** une pompe alors vous pouvez trouver différents distributeurs dans ` cette feuille de calcul <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>` _, veuillez s'il vous plaît partager les détails de la vôtre si elle n'est pas déjà listée.
 
-**So what's the best pump for looping with AndroidAPS?**
+**Alors quelle est la meilleure pompe pour boucler avec AndroidAPS ?**
 
-The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+La Combo, l'Insight et les anciennes Medtronics sont des pompes solides et bouclables. La Combo offre l’avantage d'avoir un choix parmi beaucoup plus de sets d’infusion, car elle est dotée d’un verrouillage Luer standard. Et elle est alimentée par une pile standard que vous pouvez acheter dans n'importe quelle station service, un magasin de proximité 24 heures / 24 et si vous en avez vraiment besoin, vous pouvez l'emprunter à la télécommande de votre chambre d'hôtel ;-).
 
-The advantages of the DanaR/RS vs. the Combo as the pump of choice however are:
+Les avantages de la DanaR/RS vs. la Combo comme choix de pompe de choix sont :
 
 - The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... ce n'est pas aussi facile avec la Combo. (Cela pourrait changer à l'avenir quand Android 8.1 sera plus populaire)
 - Initial pairing is simpler with the Dana* RS. Mais en général, vous ne le faites qu'une seule fois, cela n'a d'impact que si vous voulez tester une nouvelle fonctionnalité avec des pompes différentes.
-- So far the Combo works with screen parsing. En général, cela fonctionne bien, mais c'est lent. Pour le bouclage, cela n'a pas d'importance car tout fonctionne en arrière-plan. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
+- Jusqu'à présent, le Combo fonctionne avec l'écran en veille. En général, cela fonctionne bien, mais c'est lent. Pour le bouclage, cela n'a pas d'importance car tout fonctionne en arrière-plan. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
 - The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. La nuit, vous êtes susceptibles de plus utiliser les DBT que les SMB.  Le Dana * RS est configurable pour ne pas émettre de bip ni vibrer.
-- Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+- La lecture de l'historique sur le RS en quelques secondes avec des glucides permet de changer facilement de téléphone en mode hors connexion et de poursuivre la boucle dès que des valeurs de MGC sont lues.
 - All pumps AndroidAPS can talk with are waterproof on delivery. Seules les pompes Dana sont également "étanches par garantie" en raison du compartiment de batteries scellées et du système de remplissage du réservoir. 
 
 Source GLY
@@ -101,9 +101,9 @@ You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear
 
 Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
+Pour enregistrer un téléphone ou une montre qui n'est pas déjà dans la feuille de calcul, veuillez remplir le `formulaire <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+En cas de problème avec la feuille de calcul, merci d'envoyer un mail à `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, pour tous les dons de téléphone/montre qui ont encore besoin d'être testés, merci d'envoyer un mail à `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 xDrip+
 -------
