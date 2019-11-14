@@ -227,7 +227,7 @@ Cliquez sur "Create new..." pour commencer la création de votre fichier de clé
 ![Capture d'écran 41](../images/Installation_Screenshot_41.png)
 
 * Renseignez les informations de la boîte de dialogue suivante. 
-  * Key store path : chemin d'accès au fichier de clés. **Do not save in same folder as projekt. You must use a different directory!**
+  * Key store path : chemin d'accès au fichier de clés. **Ne pas enregistrer dans le même dossier que celui du projet. Vous devez utiliser un répertoire différent!**
   * Les champs password en dessous permettent une double vérification du mot de passe pour éviter les erreurs de frappe.
   * Alias est un nom pour la clé dont vous avez besoin. Vous pouvez laisser la valeur par défaut ou lui donner un nom spécifique.
   * Les champs password en dessous de la clé sont pour la clé elle-même. Comme précédemment double contrôle pour éviter les erreurs de frappe.
@@ -240,12 +240,12 @@ Renseignez les informations de la dernière boîte de dialogue et cliquez sur "N
 
 ![Capture d'écran 43](../images/Installation_Screenshot_43.png)
 
-Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
+Sélectionnez "full" (ou "fullRelease") comme favori pour l'application générée. Sélectionnez V1 "Jar Signature" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
 * 'Release' devrait être votre choix par défaut pour "Build Variants", 'Debug' est juste pour les personnes qui codent.
 * Sélectionnez le type de génération que vous souhaitez complier. 
-  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
+  * full / fullRelease (c'est-à-dire recommandations automatiquement adoptées en boucle fermée)
+  * openloop (c'est à dire recommandations données à l'utilisateur pour des commandes manuelles)
   * pumpcontrol (c'est-à-dire télécommande pour la pompe, pas pour le bouclage)
   * nsclient (c'est-à-dire que les données de bouclage d'un autre utilisateur sont affichées et que des entrées de careportal peuvent être ajoutées)
 
@@ -265,14 +265,14 @@ Une fenêtre du gestionnaire de fichiers s'ouvre. Comme j'utilise Linux, il se p
 
 ![Capture d'écran 47](../images/Installation_Screenshot_47.png)
 
-Veuillez sélectionner le répertoire AndroidAPS/app/full/release pour trouver le fichier "app-full-release.apk". Transférez ce fichier sur votre smartphone Android. You can do it on your preferred way, i.e.
+Veuillez sélectionner le répertoire AndroidAPS/app/full/release pour trouver le fichier "app-full-release.apk". Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire comme vous voulez, c-à-d.
 
 * Bluetooth
-* cloud upload (Google Drive or other cloud services)
-* connect computer and phone by cable 
-* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+* envoi dans le cloud (Google Drive ou autres services cloud)
+* connection de l'ordinateur et du téléphone par câble 
+* par mail (Notez que certaines applications de messagerie ne permettent pas les pièces jointes apk, dans ce cas utiliser une autre méthode de transfert.)
 
-In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Si vous utilisez une autre solution, veuillez procéder en conséquence.
+Dans cet exemple, Gmail est utilisé car c'est assez simple. Pour installer l'application "auto-signée", vous devez autoriser Android sur votre smartphone à effectuer cette installation même si ce fichier est reçu via Gmail, ce qui est interdit par défaut. Si vous utilisez une autre solution, veuillez procéder en conséquence.
 
 ![Capture d'écran 48](../images/Installation_Screenshot_48.png)
 
@@ -286,10 +286,10 @@ La dernière étape consiste à cliquer sur le fichier APK obtenu via Gmail et i
 
 Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour votre utilisation (MGC, pompe à insuline), etc.
 
-## Identify receiver if using xDrip
+## Identifier le récepteur si vous utilisez xDrip
 
-[See xDrip page](../Configuration/xdrip#identify-receiver)
+[Voir la page xDrip](../Configuration/xdrip#identify-receiver)
 
 ## Dépannage
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Voir la page spécifique [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
