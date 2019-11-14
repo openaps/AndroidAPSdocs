@@ -7,38 +7,38 @@ Si vous **mettez à jour les téléphones** alors vous pouvez `exporter vos para
  
 Objectif 1 : Paramétrage de la visualisation et la surveillance des données, analyse des débits Basal et des ratios
 =================================================================================
-* Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
-* If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ page to ensure Nightscout can receive and display this data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#ns-client>`_.
+* Sélectionnez la source de glycémie adaptée à votre configuration.  Voir `Source GLY <../Configuration/BG-Source.html>`_ pour plus d'informations.
+* Sélectionnez la bonne pompe dans le générateur de configuration (sélectionnez la Pompe virtuelle si vous utilisez un modèle de pompe sans pilote AndroidAPS pour le bouclage) afin de vous assurer que votre pompe peut communiquer avec AndroidAPS.  
+* Si vous utilisez la pompe DanaR, assurez-vous d'avoir suivi les instructions `Pompe à insuline DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ pour assurer le lien entre la pompe et AndroidAPS.
+* Suivez les instructions de la page `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ pour s'assurer que Nightscout peut recevoir et afficher ces données.
+* Notez que l'URL dans NSClient doit être **SANS /api/v1/** à la fin - voir les `paramètres NSClient dans les Préférences <../Configuration/Preferences.html#ns-client>`_.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*Vous devrez peut-être attendre la prochaine lecture de glycémie avant qu'AndroidAPS ne la reconnaisse.*
 
 Objectif 2 : Apprendre comment contrôler AndroidAPS
 ============================
-* Perform several actions in AndroidAPS as described in this objective.
-* Click on the orange text "Not completed yet" to access the to-dos.
-* Links will be provided to guide you in case you are not familiar with a specific action yet.
+* Exécutez différentes actions dans AndroidAPS tel que décrit dans cet objectif.
+* Cliquez sur le texte orange "Pas encore terminé" pour accéder à la liste des tâches.
+* Des liens seront fournis pour vous guider si vous n'êtes pas encore familiarisé avec une action spécifique.
 
    .. image:: ../images/Objective2_V2_5.png
      :alt: Screenshot objective 2
 
 Objectif 3 : Prouver ses connaissances
 =================================
-* Pass a multiple-choice exam testing your AndroidAPS knowledge.
-* Click on the orange text "Not completed yet" to access the page with the question and answering optons.
-* Links will be provided to guide you in case you are unsure abouit the correct answers yet.
+* Passez un examen à choix multiples pour tester vos connaissances d'AndroidAPS.
+* Cliquez sur le texte orange "Pas encore terminé" pour accéder à la page avec la question et répondre aux options.
+* Des liens seront fournis pour vous guider si vous n'êtes pas certain d'avoir les bonnes réponses.
 
    .. image:: ../images/Objective3_V2_5.png
      :alt: Screenshot objective 3
 
 Objectif 4 : Démarrage de la boucle ouverte
 =====================================
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the `Preferences <../Configuration/Preferences.html>`_ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
-* Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
+* Sélectionnez la Boucle Ouverte soit à partir des Préférences, soit en faisant un appui long sur le bouton de boucle en haut à gauche de l'écran d'accueil.
+* Travaillez dans les `Préférences <../Configuration/Preferences.html>`_ pour la configurer pour vous.
+* Adoptez manuellement au moins 20 suggestions de débits de base temporaires sur une période de 7 jours; saisissez-les sur votre pompe et confirmez dans AndroidAPS que vous les avez acceptés.  Assurez-vous que ces données apparaissent bien dans AndroidAPS et dans Nightscout.
+* Activez des `Cibles temporaires <../Usage/temptarget.html>`_, si nécessaire. Utilisez des cibles temp. hypo temp pour éviter que le système ne corrige trop fortement une augmentation de la glycémie après une hypo. 
 
 Objectif 5 : Compréhension de la Boucle Ouverte, y compris les propositions de débits Basal temporaires
 ===================================================================================
