@@ -27,11 +27,13 @@ Objectif 2 : Apprendre comment contrôler AndroidAPS
 Objectif 3 : Prouver ses connaissances
 =================================
 * Passez un examen à choix multiples pour tester vos connaissances d'AndroidAPS.
-* Cliquez sur le texte orange "Pas encore terminé" pour accéder à la page avec la question et répondre aux options.
-* Des liens seront fournis pour vous guider si vous n'êtes pas certain d'avoir les bonnes réponses.
+* Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
    .. image:: ../images/Objective3_V2_5.png
      :alt: Screenshot objective 3
+
+* Links will be provided to guide you in case you are unsure about the correct answers yet.
+* Only if you have been closed looping with another system (i.e. OpenAPS, iOS Loop) before and can proof this (i.e. at least 3 months of looping data in Nightscout), you can send an email to `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ with your NS address and request code to bypass the rest of objectives.
 
 Objectif 4 : Démarrage de la boucle ouverte
 =====================================
