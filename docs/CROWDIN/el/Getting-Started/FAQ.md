@@ -226,9 +226,17 @@
 * μειώστε τη διάρκεια παραμονής του φωτισμού (στο μενού ρυθμίσεων της αντλίας)
 * επιλέξτε τις ρυθμίσεις ειδοποίησης σε μπιπ και όχι σε δόνηση (στο μενού ρυθμίσεων αντλίας)
 * πατήστε μόνο τα κουμπιά στην αντλία για να φορτώσετε ξανά, χρησιμοποιήστε το AndroidAPS για να δείτε όλη την ιστορία, την στάθμη της μπαταρίας και τον ογκο του ρεζερβουάρ.
-* Η εφαρμογή AndroidAPS μπορεί συχνά να κλείσει για να εξοικονομήσει ενέργεια ή ελεύθερη μνήμη RAM σε ορισμένα τηλέφωνα. Όταν ξεκινήσει εκ νέου το AndroidAPS σε κάθε εκκίνηση, δημιουργεί μια σύνδεση Bluetooth με την αντλία και ξανά διαβάζει το τρέχον βασικό ρυθμό και το ιστορικό των bolus. Αυτό καταναλώνει μπαταρία. Για να δείτε αν συμβαίνει κάτι τέτοιο, μεταβείτε στην επιλογή Προτιμήσεις> NSClient και ενεργοποιήστε την επιλογή "Αρχείο καταγραφής εφαρμογής σε NS". To Nightscout θα λάβει ένα συμβάν σε κάθε επανεκκίνηση του AndroidAPS, γεγονός που καθιστά εύκολη την παρακολούθηση του προβλήματος. Για να μειώσετε αυτό το συμβάν, προσθέστε στη λίστα εφαρμογών AndroidAPS στις ρυθμίσεις μπαταριών του τηλεφώνου για να σταματήσετε να κλείνει η οθόνη ισχύος της εφαρμογής.
+* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+    
+    For example, to whitelist on a Samsung phone running Android Pie:
+    
+    * Go to Settings -> Device Care -> Battery 
+    * Scroll until you find AndroidAPS and select it 
+    * De-select "Put app to sleep"
+    * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
+    * Scroll to AndroidAPS and make sure it is de-selected.
 * καθαρίστε τους ακροδέκτες της μπαταρίας με οινόπνευμα για να διασφαλίσετε ότι δεν παραμένει κατασκευαστικό κέρι / λίπος.
-* για τις αντλίες DanaR / RS, η διαδικασία εκκίνησης αντλεί ένα υψηλό ρεύμα κατά μήκος της μπαταρίας για να σπάσει σκόπιμα το φιλμ παθητικοποίησης (αποτρέπει την απώλεια ενέργειας κατά την αποθήκευση), αλλά δεν λειτουργεί πάντα για να σπάσει το 100%. Αφαιρέστε και επανατοποθετήστε την μπαταρία 2-3 φορές μέχρι να εμφανιστεί 100% στην οθόνη ή χρησιμοποιήστε το κλειδί της μπαταρίας για βραχυκύκλωμα μπαταρίας πριν την τοποθέτηση εφαρμόζοντας και στους δύο ακροδέκτες για ένα δευτερόλεπτο.
+* for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Αφαιρέστε και επανατοποθετήστε την μπαταρία 2-3 φορές μέχρι να εμφανιστεί 100% στην οθόνη ή χρησιμοποιήστε το κλειδί της μπαταρίας για βραχυκύκλωμα μπαταρίας πριν την τοποθέτηση εφαρμόζοντας και στους δύο ακροδέκτες για ένα δευτερόλεπτο.
 * δείτε επίσης περισσότερες συμβουλές στο [ συγκεκριμένους τύπους μπαταρίας ](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
 ### Αλλαγή δεξαμενών και σωληνών
