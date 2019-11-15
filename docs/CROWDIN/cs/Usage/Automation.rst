@@ -45,7 +45,7 @@ Můžete si vybrat mezi několika podmínkami. Některé věci jsou zde vysvětl
 
   * Používat pasivní polohu: AAPS zjistí polohu pouze v případě, že ji budou požadovat ostatní aplikace
   * Používat zjištění polohy podle sítě: Poloha podle vaší sítě Wifi
-  * Používat polohu GPS
+  * Use GPS location (Attention! May cause excessive battery drain!)
   
 Akce
 ------
