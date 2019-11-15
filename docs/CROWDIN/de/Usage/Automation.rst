@@ -45,7 +45,7 @@ Verbundene Bedingunge: Du kannst mehrere Bedingungen verwenden und diese wie fol
 
   * Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
   * Netzwerkstandort: Bestimmung des Standorts mithilfe der Infrastruktur Deines Mobilfunkanbieters (teilweise recht ungenau)
-  * Use GPS location (Attention! May cause excessive battery drain!)
+  * GPS-Standort (Achtung! Kann zu übermäßigen Akkuverbrauch führen!)
   
 Aktion
 ------
