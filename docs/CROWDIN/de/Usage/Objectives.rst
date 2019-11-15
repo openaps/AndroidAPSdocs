@@ -27,13 +27,13 @@ Ziel 2: Lerne, wie AndroidAPS bedient wird
 Ziel 3: Belege Dein Wissen
 =================================
 * Beantworte Multiple-choice-Fragen zu verschiedenen AndroidAPS- und Closed-Loop-Themen.
-* Click on the orange text "Not completed yet" to access the page with the question and answering options.
+* Klicke auf den orangenen Text "Noch nicht abgeschlossen", um zur Seite mit den Fragen und Antwortmöglichkeiten zu kommen.
 
    .. image:: ../images/Objective3_V2_5.png
      :alt: Screenshot Ziel 3
 
-* Links will be provided to guide you in case you are unsure about the correct answers yet.
-* Only if you have been closed looping with another system (i.e. OpenAPS, iOS Loop) before and can proof this (i.e. at least 3 months of looping data in Nightscout), you can send an email to `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ with your NS address and request code to bypass the rest of objectives.
+* Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
+* Nur falls Du bereits mit einem anderen System (z.B. OpenAPS, iOS Loop) geloopt hast und dies belegen kannst (z.B.  mind. drei Monate Loop-Daten in Nightscout), kannst Du eine E-Mail an `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ senden, um einen Code zu erhalten, um die restlichen Ziele (Objectives) zu überspringen. Füge dieser Mail Deine Nightscout-URL und den Code, der Dir in AAPS angezeigt wird, bei.
 
 Ziel 4: Starte den Open Loop
 =====================================
