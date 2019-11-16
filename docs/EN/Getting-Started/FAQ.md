@@ -224,6 +224,16 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 ## Leisure activities
 
 ### Sports
+You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+
+So you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+
+When looping you should try these steps:
+* Make a [profile switch](../Usage/Profiles.md) < 100%.
+* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
+* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+
+The percentage of the profile switch and the value for your activity temp target are inidivual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 ### Sex
 You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. 
