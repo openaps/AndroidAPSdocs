@@ -233,7 +233,9 @@ When looping you should try these steps:
 * Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
 * If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
-The percentage of the profile switch and the value for your activity temp target are inidivual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Pre- and postprocessing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+
+The percentage of the profile switch, the value for your activity temp target and best time for the changes are inidivual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 ### Sex
 You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right. 
