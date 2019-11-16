@@ -1,4 +1,4 @@
-Welcome to the AndroidAPS documentation
+Bienvenido a la documentación sobre AndroidAPS
 ==============================================
 
 AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
@@ -14,19 +14,19 @@ Main components are:
 
 For more details, please read on here.
 
-Getting started
+Guia de inicio
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Seguridad primero <./Getting-Started/Safety-first.rst>
+   ¿Qué es el sistema de asa o lazo cerrada? <./Getting-Started/ClosedLoop.rst>
+  ¿Qué es el sistema de asa o lazo cerrada con AndroidAPS? <./Getting-Started/WhatisAndroidAPS.rst>  
+   Wiki actualizaciones & cambios <./Getting-Started/WikiUpdate.rst>
    
    
-What do I need 
+¿Qué es lo que necesito?
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
@@ -42,25 +42,25 @@ Instalando AndroidAPS
    :glob:
 
    Compilando la APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Install git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
-   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
+   Actualizar a una nueva versión o rama  <./Installing-AndroidAPS/Update-to-new-version.md>
+   Instalar git <./Installing-AndroidAPS/git-install.rst>
+   Errores comunes en Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Notas de la versión <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
    
    
-Component Setup
+Componentes para la instalación
 ---------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-   Smartwatch  <./Hardware/Smartwatch.rst>
+   Ajustes de xDrip <./Configuration/xdrip.md>
+   Bombas <./Hardware/pumps.rst>
+   Móviles <./Hardware/Phoneconfig.rst>
+   Configuración del Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   Reloj inteligente  <./Hardware/Smartwatch.rst>
    
 
 Configuración 
@@ -69,11 +69,11 @@ Configuración
    :maxdepth: 1
    :glob:
    
-   Config builder <./Configuration/Config-Builder.md>
+   Tabla de Configuración <./Configuration/Config-Builder.md>
    Preferencias <./Configuration/Preferences.md>
    
    
-AndroidAPS Usage
+Uso del AndroidAPS
 ------------
 .. toctree::
    :maxdepth: 1
@@ -102,7 +102,7 @@ General Hints
    Export/Import Settings <./Usage/ExportImportSettings.rst>
    
 
-AndroidAPS for children
+AndroidAPS para niños
 ------------------
 .. toctree::
    :maxdepth: 1
