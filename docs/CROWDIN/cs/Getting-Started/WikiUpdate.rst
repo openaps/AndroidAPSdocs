@@ -4,6 +4,7 @@ November 2019
 ===============
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-e>`_
 * `Insight - Disable absolut values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Medtronic pump - possible double entries <../Configuration/MedtronicPump.html>`_
