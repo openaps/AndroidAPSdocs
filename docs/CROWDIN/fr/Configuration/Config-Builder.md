@@ -61,9 +61,9 @@ Sélectionnez le type de courbe d'insuline que vous utilisez. Les options 'Insul
 
 The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
 
-For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
+Pour l'insuline à Action Rapide et l'insuline à Action Ultra-Rapid, la DAI est la seule variable que vous pouvez ajuster vous-même, le temps du pic est fixé. Le Profil d'insuline ajustable vous permet d'ajuster à la fois la DAI et le temps du pic, et ne doit être utilisé que par les utilisateurs confirmés qui connaissent les effets de ces paramètres.
 
-The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. Vous pouvez le voir en activant la case à cocher pour l'afficher sous forme d'onglet, sinon il se trouve dans le menu hamburger.
 
 ### Insuline à Action Rapide Oref 
 
@@ -77,19 +77,19 @@ The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps 
 * DAI = au moins 5.0h
 * Pic peak = 55 minutes after injection (fixed, not adjustable)
 
-For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+Pour beaucoup de personnes, il n'y a pratiquement pas d'effet notable de la FIASP après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
 ### Profil d'insuline ajustable Oref
 
-With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+Avec le "Profil d'insuline ajustable 0ref" vous pouvez entrer individuellement l'heure du pic. La DAI est automatiquement définie à 5 heures si elle n'est pas spécifiée plus haut dans le profil.
 
-This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+Ce profil est recommandé si une insuline non supportée ou un mélange d'insulines différentes est utilisé.
 
 ## Source GLY
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Sélectionnez la source de glycémie que vous utilisez - consultez la page [Source Gly](BG-Source.rst) pour plus d'informations sur la configuration.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * Glycémie NSClient
@@ -103,7 +103,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 
 ## Pompe
 
-Select the pump you are using.
+Sélectionner la pompe que vous utilisez.
 
 * [DanaR](DanaR-Insulin-Pump.md)
 * DanaR coréenne (pour la pompe DanaR domestique)
@@ -152,7 +152,7 @@ AAPS continuously evaluates all available data (IOB, COB, BG...) and automatical
 
 AndroidAPS has a number of objectives that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
-You should export your settings (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
 See [Objectives](../Usage/Objectives.rst) page for more information.
 
@@ -175,7 +175,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 Define which Buttons are shown on the home screen.
 
 * Traitements
-* Calculator
+* Calculatrice
 * Insuline
 * Glucides
 * CGM (opens xDrip+)
@@ -197,7 +197,7 @@ Enable super bolus functionality in wizard. Use with caution and do not enable u
 
 ### Actions
 
-Some buttons to quickly access common features:
+Quelques boutons pour accéder rapidement aux fonctions communes:
 
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
 * Temporary targets
@@ -237,7 +237,7 @@ Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](..
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Paramètres Wear](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 

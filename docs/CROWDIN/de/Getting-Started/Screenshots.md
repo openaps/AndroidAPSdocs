@@ -61,7 +61,7 @@ Dieser Abschnitt kann mit den Optionen in Abschnitt D konfiguriert werden.
 * **Insulin On Board** (blaue Balken): Zeigt das aktive Insulin in Deinem Körper an. Wenn das aus temporären Basalraten, SMB und vorherigen Bolusgaben stammende Insulin komplett abgebaut ist, ist dieser Wert Null. Der errechnete Insulinabbau hängt davon ab, welchen DIA Du eingestellt hast und welches Insulinprofil Du verwendest. 
 * **Carbs On Board** (Orange Balken): Zeigt die noch im Körper vorhandenen Kohlenhydrate. Der Abbau hängt davon ab, was der Algorithmus anhand der BZ-Abweichungen erkennt. Falls der Kohlenhydratabbau höhrer ausfällt als erwartet, wird Insulin abgegeben und dies erhöht Dein IOB (je nach Deinen Sicherheitseinstellungen mehr oder weniger). 
 * **Abweichungen**: 
-   * ** GRAUE** Balken zeigen eine Abweichung aufgrund von Kohlenhydraten. 
+   * **GRAUE** Balken zeigen eine Abweichung aufgrund von Kohlenhydraten. 
    * **GRÜNE** Balken zeigen, dass der BZ höher ist als der Algorithmus es erwartet. 
    * **ROTE** Balken zeigen, dass der BZ niedriger ist als der Algorithmus erwartet.
 * **Sensitivität** (weiße Linie): Von Autosense ermittelte Sensitivität. Die Sensitivität ist die Berechnung der Insulinempfindlichkeit, die auf Grund von Bewegung, Hormonen etc. schwankt.

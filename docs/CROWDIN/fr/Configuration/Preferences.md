@@ -59,7 +59,7 @@ Il s’agit de la quantité maximale de Glucides que la Calculatrice de Bolus AA
 
 ## Boucle
 
-Vous pouvez alterner entre Boucle Ouverte et Boucle Fermée. Open looping means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump. Closed looping means TBR suggestions are automatically sent to your pump without confirmation or input from you. L’écran d’accueil affiche dans le coin supérieur gauche si vous êtes en Boucle Ouverte ou en Boucle Fermée. Appuyer et maintenir ce bouton de l’écran d’accueil vous permettra également de basculer entre les deux.
+Vous pouvez alterner entre Boucle Ouverte et Boucle Fermée. La Boucle Ouverte signifie que les suggestions de DBT (Débit de Basal Temporaire) sont calculées à partir de vos données et apparaissent sous forme d’une notification, mais vous devez choisir manuellement de les accepter et de les entrer manuellement sur votre pompe. La Boucle fermée signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part. L’écran d’accueil affiche dans le coin supérieur gauche si vous êtes en Boucle Ouverte ou en Boucle Fermée. Appuyer et maintenir ce bouton de l’écran d’accueil vous permettra également de basculer entre les deux.
 
 ## OpenAPS AMA
 
@@ -118,7 +118,7 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 
 * 'Options d'alarme' vous permet de sélectionner les alarmes de Nightscout à utiliser par défaut dans l'application. Pour que les alarmes sonnent, vous devez définir les valeurs d'alerte Haute urgent, Haute, Basse et Basse urgent dans vos variables [heroku ou azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Elles ne fonctionneront que si vous êtes connecté à nightscout et sont destinées aux parents/tuteurs. Si vous avez la source MGC sur votre téléphone, utilisez ces alarmes à la place (par exemple xdrip+).
 * 'Activer les transmissions locales' partagera vos données Careportal vers d'autres applications sur le téléphone, telles que xdrip.
-* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+* 'Utiliser toujours les valeurs absolues du basal' doit être activé si vous souhaitez utiliser Autotune correctement.
     
     **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
 

@@ -27,11 +27,13 @@ Cíl 2: Naučte se ovládat AndroidAPS
 Cíl 3: Prokázat své znalosti
 =================================
 * Pass a multiple-choice exam testing your AndroidAPS knowledge.
-* Click on the orange text "Not completed yet" to access the page with the question and answering optons.
-* Odkazy budou poskytnuty jako vodítko pro případ, že si nejste jisti odpovědí.
+* Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
    .. image:: ../images/Objective3_V2_5.png
      :alt: Screenshot cíl 3
+
+* Links will be provided to guide you in case you are unsure about the correct answers yet.
+* Only if you have been closed looping with another system (i.e. OpenAPS, iOS Loop) before and can proof this (i.e. at least 3 months of looping data in Nightscout), you can send an email to `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ with your NS address and request code to bypass the rest of objectives.
 
 Cíl 4: Začít s otevřenou smyčkou
 =====================================

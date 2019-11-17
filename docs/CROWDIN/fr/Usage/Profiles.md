@@ -19,7 +19,7 @@ Within the "profile switch" you can choose two additional changes which used to 
 * This applies the same percentage to all parameters. 
 * If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
   
-  ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
+  ![Example profile switch percentage](../images/ProfileSwitchPercentageF.png)
 
 * It will be sent to the pump and then be the default basal rate.
 

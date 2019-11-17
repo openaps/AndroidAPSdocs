@@ -16,7 +16,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 * voir votre profil actif et faire un [changement de profil](../Usage/Profiles.md)
 * voir votre niveau actuel de cible glycémique et définir une [cible temporaire](../Usage/temptarget.md).
 
-Un appui long sur n’importe lequel de ces boutons permet de modifier les paramètres. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
+Un appui long sur n’importe lequel de ces boutons permet de modifier les paramètres. Par ex. faites un appui long sur la cible en haut à droite ("100" dans la copie d'écran ci-dessus) pour définir une cible temp.
 
 ### Section C
 
@@ -48,28 +48,28 @@ Le prolongement des lignes indique la glycémie prévue, et la tendance, si vous
 * Ligne **bleu clair** ligne : zéro-temp (glycémie prévisionnelle si un débit de base temporaire à 0% était défini)
 * Ligne **jaune foncé**: [RNS](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (Repas Non Signalés)
 
-These lines show you the different predictions based on current carb absorption (COB); insulin only (IOB); showing how long it will take BG to level off at/above target if deviations suddenly cease and we run a zero temp until then (zero-temp) and unannounced meal/effect detection where carbs are detected but have not been entered into the system by the user (UAM).
+Ces lignes vous montrent les différentes prédictions basées sur l'absorption actuelle de glucides (GA ou COB); l'insuline seulement (IA ou IOB); montrant combien de temps cela prendra pour que la glycémie soit en dessous de la cible, à la cible ou au dessus de la cible si les déviations cessent soudainement et nous poursuivons un temp zéro jusque là (zéro temp) et des Repas/effets Non Signalés (RNS ou UAM) où les glucides sont détectés mais n'ont pas été entrés dans le système par l'utilisateur.
 
 La ligne **bleu continu** indique le débit de base de votre pompe. La ligne **bleue pointillée** correspond au débit de basal du profil sélectionné sans débits de basal temporaires (DBT) et la ligne bleue continue est le débit réel distribué au fil du temps.
 
-The **thin yellow** line shows the activity of Insulin. It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+La ligne **jaune fine** montre l'activité de l'insuline. Elle indique la capacité de l'insuline présente dans votre corps à faire baisser la glycémie, si aucun autre facteur (comme les glucides) n'était présent.
 
 ### Section F
 
 Cette section est aussi configurable en utilisant les options de la section D.
 
-* **Insuline Active (IA)** (diagramme bleu) : affiche l'insuline que vous avez dans le corps. S'il n'y avait pas de DBT, de SMB et plus de bolus restants, elle serait nulle. La diminution dépend de votre DAI et de vos paramètres de profil d'insuline. 
-* **Carbs On Board** (orange chart): It shows the carbs you have on board. La diminution dépend des écarts que l'algorithme détecte. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* **Insuline Active (IA)** (courbe bleu) : affiche l'insuline que vous avez dans le corps. S'il n'y avait pas de DBT, de SMB et plus de bolus restants, elle serait nulle. La diminution dépend de votre DAI et de vos paramètres de profil d'insuline. 
+* **Glucides Actifs (GA)** (courbe orange) : affiche les glucides que vous avez dans le corps. La diminution dépend des écarts que l'algorithme détecte. S'il détecte une absorption plus élevée de glucides que prévu, de l'insuline sera injectée, ce qui augmentera l'IA (plus ou moins, selon vos paramètres de sécurité). 
 * **Déviations**: 
    * barres **GRISES** montrent un écart dû aux glucides. 
    * barres **VERTES** montrent que la Gly est supérieure à l'attendu de l'algorithme 
    * barres **ROUGES** montrent que la Gly est inférieur à l'attendu de l'algorithme.
 * **Sensibilité** (ligne blanche) : Elle montre la sensibilité détectée par Autosense. C'est le résultat d'un calcul de la sensibilité à l'insuline suite à de l'exercice, aux hormones, etc.
-* **Activité** (ligne jaune) : indique l'activité de l'insuline, calculée par votre profil d'insuline (elle n'est pas dérivée de l'IA). La valeur est plus élevée quand l'insuline délivrée est proche de son pic d'activité. It would mean to be negative when IOB is decreasing. 
+* **Activité** (ligne jaune) : indique l'activité de l'insuline, calculée par votre profil d'insuline (elle n'est pas dérivée de l'IA). La valeur est plus élevée quand l'insuline délivrée est proche de son pic d'activité. Elle n'est pas dérivée de l'IA, car si c'était le cas elle serait négative quand l'IA diminue. 
 
 ### Section G
 
-Enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration. Un bouton d'assistant rapide s'affiche également ici s'il est configuré dans le [Générateur de configuration](../Configuration/Config-Builder#quickwizard-settings).
+Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calculatrice pour effectuer cette opération), de renseigner des glucides et d'ajouter une glycémie capillaire de calibration MGC. Un bouton d'assistant rapide s'affiche également ici s'il est configuré dans le [Générateur de configuration](../Configuration/Config-Builder#quickwizard-settings).
 
 ## Calculatrice
 
@@ -79,7 +79,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 ### Section A
 
-zone où vous renseignez les informations concernant le bolus que vous voulez. Le champ de la glycémie (Gly) est normalement déjà renseigné avec la dernière lecture de votre MGC. Si vous n'avez pas de MGC, il sera vide. Dans le champ Glucides, vous indiquez votre estimation de la quantité de glucides pour laquelle vous voulez faire le bolus. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Vous pouvez mettre un nombre négatif dans ce champ si vous faites un bolus pour des glucides déjà consommés.
+zone où vous renseignez les informations concernant le bolus que vous voulez. Le champ de la glycémie (Gly) est normalement déjà renseigné avec la dernière lecture de votre MGC. Si vous n'avez pas de MGC, il sera vide. Dans le champ Glucides, vous indiquez votre estimation de la quantité de glucides pour laquelle vous voulez faire le bolus. Le champ "Corr" (correction) vous permet de modifier le dosage final si vous le souhaitez, et le champ "Heure glucides" est prévu pour le pré-bolus, pour que vous puissiez indiquer au système qu'il va y avoir un délai avant que les glucides n'arrivent et le bolus sera retardé. Vous pouvez mettre un nombre négatif dans ce champ si vous faites un bolus pour des glucides déjà consommés.
 
 SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
 
@@ -105,7 +105,7 @@ Si vous faites un bolus aditionnel rapidement après un bolus de repas (par exem
 
 ![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Profil d'Insuline
 

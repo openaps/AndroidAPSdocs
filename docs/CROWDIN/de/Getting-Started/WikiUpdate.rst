@@ -4,10 +4,12 @@ November 2019
 ===============
 * `Dexcom G6 Update zum Transmitter-Wechsel <../Configuration/xdrip.html#transmitter-ersetzen>`_
 * `Warum ein verzögerter Bolus beim Loopen nicht funktioniert <../Usage/Extended-Carbs.html#verzogerter-bolus>`_
+* `FAQ - Sport <../Getting-Started/FAQ.html#sport>`_
 * `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#abschnitt-e>`_
 * `Insight - Absolute Werte im NS Client deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
 * `Medtronic Pumpe - mögliche Doppeleinträge <../Configuration/MedtronicPump.html>`_
 * `Neue Anleitung zum Freestyle Libre 2 <../Hardware/Libre2.html>`_
+* `Profilwechsel mit Prozentsatz - Beispiel <../Usage/Profiles.html>`_
 * `Update SMS-Befehle <../Children/SMS-Commands.html>`_
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
