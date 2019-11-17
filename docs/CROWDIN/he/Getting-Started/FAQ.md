@@ -81,9 +81,9 @@ First of all, you have to take the same emergency equipment with you like every 
 
 ## How to safely attach the CGM/FGM?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask google or ebay). Some loopers use the cheaper standard kinesiology tape or rocktape.
+You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Some loopers use the cheaper standard kinesiology tape or rocktape.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask google or ebay).
+You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
 
 # AndroidAPS settings
 
@@ -235,16 +235,18 @@ Looping can reduce the pump battery faster than normal use because the system in
     * De-select "Put app to sleep"
     * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
     * Scroll to AndroidAPS and make sure it is de-selected.
+
 * clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+
 * for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
 * see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
 ### Changing reservoirs and cannulas
 
-The change of cartridge cannot be done via AndroidAPS, but must be carried out as before directly via the pump.
+The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
 * Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-* Now disconnect the pump, and change the reservoir as per pump instructions.
+* Now disconnect the pump and change the reservoir as per pump instructions.
 * Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
 The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
@@ -270,6 +272,22 @@ Depending on the kind of your job, maybe you use different treatment factors on 
 ## Leisure activities
 
 ### Sports
+
+You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+
+So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+
+When looping you should try these steps:
+
+* Make a [profile switch](../Usage/Profiles.md) < 100%.
+* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
+* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+
+Pre- and postprocessing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+
+The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 ### Sex
 
