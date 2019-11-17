@@ -16,8 +16,12 @@
 
 * Απενεργοποίηστε την ` Αυτόματη βαθμονόμηση ` Εάν έχει επιλεγεί το πλαίσιο ελέγχου ` Αυτόματη βαθμονόμηση `, ενεργοποιήστε μία φορά ` Λήψη δεδομένων ` και αφαιρέστε το πλαίσιο ελέγχου ` Αυτόματη βαθμονόμηση ` / 0> ξανά, διαφορετικά οι θεραπείες (ινσουλίνη & υδατάνθρακες) θα προστεθούν δύο φορές στη Nightscout.
 
-* Πατήστε ` Επιπλέον επιλογές `
-* Απενεργοποίηστε ` Ανέβασε θεραπείες ` και ` Δεδομένα συμπληρωματικής φόρτωσης `
+* Tap `Extra Options`
+
+* Deactivate `Upload treatments` and `Back-fill data`.
+   
+   **Safety warning : You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+
 * Η επιλογή ` Ειδοποίηση για αποτυχίες ` θα πρέπει επίσης να απενεργοποιηθεί. Διαφορετικά, θα λάβετε ένα συναγερμό κάθε 5 λεπτά σε περίπτωση που το δίκτυο wifi / κινητής τηλεφωνίας είναι πολύ κακό ή ο διακομιστής δεν είναι διαθέσιμος.
    
    ![xDrip + Βασικές ρυθμίσεις 1](../images/xDrip_Basic1.png)
@@ -26,7 +30,8 @@
 
 * ** Ρυθμίσεις InterApp ** (Broadcast) Εάν πρόκειται να χρησιμοποιήσετε το AndroidAPS και τα δεδομένα πρέπει να προωθηθούν π.χ. στο AndroidAPS, πρέπει να ενεργοποιήσετε τη μετάδοση στο xDrip + στις ρυθμίσεις Inter-App.
 
-* Προκειμένου οι τιμές να είναι ίσες, θα πρέπει να ενεργοποιήσετε το ` Αποστολή της εμφανιζόμενης τιμής γλυκόζης `.
+* In order for the values to be equal, you should activate `Send the displayed glucose value`.
+
 * Εάν έχετε επίσης ενεργοποιήσει ` Αποδοχή θεραπειών ` και εκπομπή στο AndroidAPS, τότε το xDrip + θα λαμβάνει πληροφορίες από το AndroidAPS για ινσουλίνη, υδατάνθρακες και βασικό ρυθμό και μπορεί να εκτιμήσει την πρόβλεψη υπογλυκαιμίας κ. λπ. με καλύτερη ακρίβεια.
    
    ![+xDrip Βασικές ρυθμίσεις 3](../images/xDrip_Basic3.png)
@@ -34,6 +39,7 @@
 ### Προσδιορίστε δέκτη
 
 * Μερικοί άνθρωποι έχουν ανακαλύψει προβλήματα με την τοπική εκπομπή (το AAPS δεν λαμβάνει τιμές BG από το xDrip+) όταν το τηλέφωνο βρίσκεται σε λειτουργία πτήσης. Μεταβείτε στις Ρυθμίσεις> Ρυθμίσεις μεταξύ εφαρμογών> Εντοπισμός δέκτη και εισαγάγετε ` info.nightscout.androidaps `.
+* Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps`. Capital I would prevent AAPS from receiving BG values from xDrip.
    
    ![+xDrip Basic Inter-app Ρυθμίσεις Προσδιορίζουν δέκτη](../images/xDrip_InterApp_NS.png)
 

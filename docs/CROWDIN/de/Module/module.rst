@@ -14,7 +14,7 @@ AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von versc
    
    Nicht zuletzt darfst Du keine SGLT-2-Hemmer (Gliflozins) einnehmen, da sie den Blutzuckerspiegel unberechenbar senken.  Die Kombination mit einem Closed Loop System, das die basalen Raten senkt, um den BZ zu erhöhen ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann.
 
-Notwendige Fähigkeiten
+Erforderliche Komponenten
 =====================
 Gute individuelle Profileinstellungen für Deine Diabetes-Therapie
 ------------------
@@ -93,7 +93,7 @@ AAPS-.apk Datei
 ---------------
 Die grundlegende Komponente des Systems. Bevor Du die App installierst, musst Du zuerst die apk-Datei (das ist Dateinamenerweiterung für eine Android-App) erstellen. Die Anleitung dazu findest Du  `hier <../Installing-AndroidAPS/Building-APK.html>`_.  
 
-Optionale Module
+Optionale Komponenten
 ==================
 Smartwatch
 ---------------

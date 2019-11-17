@@ -57,33 +57,39 @@ Le Profil simple n'a qu'un seul bloc de temps pour la DAI, G/I, SI, le débit de
 
 ## Insuline
 
-Sélectionnez le type de courbe d'insuline que vous utilisez. Les options 'Insuline à Action rapide Oref', 'Insuline à action Ultra Rapide Oref' et 'Profil d'insuline ajustable Oref' ont toutes une forme exponentielle. Plus d'informations sont listées dans les [docs OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), les courbes varieront en fonction du DAI et du temps maximum. La DAI devrait toujours être d'au moins 5 heures, vous pouvez en savoir plus sur cela dans la section Profil d'insuline de [cette page](../Getting-Started/Screenshots.md). Pour l'insuline à Action Rapide et l'insuline à Action Ultra-Rapid, la DAI est la seule variable que vous pouvez ajuster vous-même, le temps du pic est fixé. Le Profil d'insuline ajustable vous permet d'ajuster à la fois la DAI et le temps du pic, et ne doit être utilisé que par les utilisateurs confirmés qui connaissent les effets de ces paramètres. Le graphique de courbes d'insuline vous aide à comprendre les différentes courbes. Vous pouvez le voir en activant la case à cocher pour l'afficher sous forme d'onglet, sinon il se trouve dans le menu hamburger.
+Sélectionnez le type de courbe d'insuline que vous utilisez. Les options 'Insuline à Action rapide Oref', 'Insuline à action Ultra Rapide Oref' et 'Profil d'insuline ajustable Oref' ont toutes une forme exponentielle. Plus d'informations sont listées dans les [docs OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), les courbes varieront en fonction du DAI et du temps maximum.
+
+The DIA is not the same for each person. That's why you have to test it for yourself. But it must always be at least 5 hours. You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page.
+
+For Rapid-Acting and Ultra-Rapid, the DIA is the only variable you can adjust by yourself, the time to peak is fixed. Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings.
+
+The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
 ### Insuline à Action Rapide Oref 
 
 * recommandé pour Humalog, Novolog et Novorapid
 * DAI = au moins 5.0h
-* Pic max. = 75 minutes après l'injection
+* Pic peak = 75 minutes after injection (fixed, not adjustable)
 
 ### Insuline à Action Ultra Rapide Oref
 
 * recommendé pour FIASP
 * DAI = au moins 5.0h
-* Pic max. = 55 minutes après l'injection
+* Pic peak = 55 minutes after injection (fixed, not adjustable)
 
-Pour beaucoup de personnes, il n'y a pratiquement pas d'effet notable de FIASP après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
+For a lot of people there is practically no noticeable effect of FIASP after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
 
 ![Config Builder Ultra-Rapid Oref](../images/ConfBuild_UltraRapidOref.png)
 
 ### Profil d'insuline ajustable Oref
 
-Avec le "Profil d'insuline ajustable 0ref" vous pouvez entrer individuellement l'heure du pic. La DAI est automatiquement définie à 5 heures s'il n'est pas spécifié plus haut dans le profil.
+With the "Free Peak 0ref" profile you can individually enter the peak time. The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 
-Ce profil est recommandé si une insuline non soutenue ou un mélange d'insulines différentes est utilisé.
+This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## Source GLY
 
-Sélectionnez la source de glycémie que vous utilisez - consultez la page [Source Gly](BG-Source.rst) pour plus d'informations sur la configuration.
+Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * Glycémie NSClient
@@ -97,7 +103,7 @@ Sélectionnez la source de glycémie que vous utilisez - consultez la page [Sour
 
 ## Pompe
 
-Sélectionner la pompe que vous utilisez.
+Select the pump you are using.
 
 * [DanaR](DanaR-Insulin-Pump.md)
 * DanaR coréenne (pour la pompe DanaR domestique)
@@ -191,7 +197,7 @@ Enable super bolus functionality in wizard. Use with caution and do not enable u
 
 ### Actions
 
-Quelques boutons pour accéder rapidement aux fonctions communes:
+Some buttons to quickly access common features:
 
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
 * Temporary targets
@@ -231,7 +237,7 @@ Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](..
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Paramètres Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 

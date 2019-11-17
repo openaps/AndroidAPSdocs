@@ -17,7 +17,11 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use o
 * Deactivate `Automatic Calibration` If the checkbox for `Automatic Calibration` is checked, activate `Download data` once, then remove the checkbox for `Automatic Calibration` and deactivate `Download data` again, otherwise the treatments (insulin & carbs) will be added twice to Nightscout.
 
 * Tap `Extra Options`
-* Deactivate `Upload treatments` and `Back-fill data`
+
+* Deactivate `Upload treatments` and `Back-fill data`.
+   
+   **Safety warning : You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+
 * Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
    
    ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
@@ -27,6 +31,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use o
 * **InterApp-Settings** (Broadcast) If you are going to use AndroidAPS and the data should be forwarded to i.e. AndroidAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
 
 * In order for the values to be equal, you should activate `Send the displayed glucose value`.
+
 * If you have also activated `Accept treatments` and broadcasting in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. more accurately.
    
    ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
@@ -34,6 +39,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use o
 ### Identify receiver
 
 * Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+* Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps`. Capital I would prevent AAPS from receiving BG values from xDrip.
    
    ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 

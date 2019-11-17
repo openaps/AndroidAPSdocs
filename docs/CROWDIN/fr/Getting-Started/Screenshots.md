@@ -16,7 +16,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 * voir votre profil actif et faire un [changement de profil](../Usage/Profiles.md)
 * voir votre niveau actuel de cible glycémique et définir une [cible temporaire](../Usage/temptarget.md).
 
-Un appui long sur n’importe lequel de ces boutons permet de modifier les paramètres. Par ex. un appui long sur la cible en haut à droite ("110" dans la copie d'écran ci-dessus) pour définir une cible temp.
+Un appui long sur n’importe lequel de ces boutons permet de modifier les paramètres. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
 
 ### Section C
 

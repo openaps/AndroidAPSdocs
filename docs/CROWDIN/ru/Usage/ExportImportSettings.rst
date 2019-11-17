@@ -1,18 +1,26 @@
 
 Экспорт/импорт настроек
-************************************
+******
+When should I export settings?
+=====
+Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
 
+Best practice is to export after change of settings or completing an objective. Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+
+How to export settings
+=====
 * **Выполнить Экспорт настроек на вашем старом телефоне
+
   * Сэндвич-меню (в верхнем левом углу экрана)
   * Обслуживание
   * Экспортировать настройки
   * Будет показано местоположение файла
   
+  
   .. изображение:: ../images/AAPS_ExportSettings.png
-  :alt: настройки экспорта AndroidAPS
+    :alt: настройки экспорта AndroidAPS
   
-  
-   
+     
 * **Перенесите** настройки со старого на новый телефон, используя местоположение файла, показанное во время экспорта
 * **Установите AndroidAPS ** на новом телефоне.
 * **Импорт настроек** на вашем новом телефоне

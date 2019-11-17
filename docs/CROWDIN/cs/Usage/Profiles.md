@@ -17,13 +17,17 @@ V rámci „Přepnutí profilu“ můžete ještě upravit následující dva pa
 ## Procento
 
 * Toto uplatní stejný procentní přepočet na všechny parametry. 
-* Pokud toto pole nastavíte na 130% (což značí, že jste o 30 % více rezistentní na inzulín), navýší to váš bazál o 30 %. Dále se také adekvátně sníží citlivost (ISF) a sacharidový poměr (IC) (děleno 1,3 v našem příkladě). 
-* Bazální dávka bude odeslaná do pumpy jako výchozí (údaje v pumpě se přepíší). 
+* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
+  
+  ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
+
+* It will be sent to the pump and then be the default basal rate.
+
 * Algoritmus smyčky (otevřené nebo uzavřené) bude dále pracovat se zvoleným procentuálním profilem. Tak například mohou být samostatné procentuální profily nastavené pro různé fáze hormonálního cyklu.
 
-![Profilový procentní podíl a časový posun](../images/ProfileSwitchTimeShift2.png)
-
 ## Posun času
+
+![Profilový procentní podíl a časový posun](../images/ProfileSwitchTimeShift2.png)
 
 * Tato volba vše posouvá o uvedený počet hodin. 
 * Například, pokud pracujete na noční směny, upravte počet hodin o kolik později/dříve jdete spát nebo se probouzíte.

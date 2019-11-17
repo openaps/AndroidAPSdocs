@@ -119,6 +119,8 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 * 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
 * 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
 * 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+    
+    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
 
 ## Επικοινωνία με SMS
 

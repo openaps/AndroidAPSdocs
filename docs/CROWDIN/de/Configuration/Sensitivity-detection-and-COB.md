@@ -19,7 +19,7 @@ Die Empfindlichkeit wird wie bei Oref0 berechnet, aber du kannst einstellen wie 
 
 ### Durchschnittliche Sensitivität
 
-Die Empfindlichkeit wird als gewichtetes Mittel der Schwankungen berechnet. Neuere Schwankungen haben ein größeres Gewicht. Die minimale Kohlenhydrat-Absorption wird ausgehend von der maximalen Kohlenhydrat-Absorption berechnet, die in den Einstellungen festgelegt werden kann. Dieser Algorithmus berücksichtigt Empfindlichkeitsveränderungen am schnellsten.
+Die Empfindlichkeit wird als gewichtetes Mittel der Schwankungen berechnet. Du kannst angeben, wie lange rückwirkend betrachtet wird. Neuere Schwankungen haben ein größeres Gewicht. Die minimale Kohlenhydrat-Absorption wird ausgehend von der maximalen Kohlenhydrat-Absorption berechnet, die in den Einstellungen festgelegt werden kann. Dieser Algorithmus berücksichtigt Empfindlichkeitsveränderungen am schnellsten.
 
 ### Sensitivität Oref1
 
