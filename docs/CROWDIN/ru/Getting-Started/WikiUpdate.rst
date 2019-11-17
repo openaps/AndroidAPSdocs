@@ -4,6 +4,7 @@
 ===============
 Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
 Пролонгированный болюс - почему не работает в контексте ИПЖ <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Главный экран - линии на графике <../Getting-Started/Screenshots.html#section-e>`_
 * ` Insight-Выключить абсолютные значения в NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * ` Помпа Medtronic - возможные двойные записи <../Configuration/MedtronicPump.html> ` _
