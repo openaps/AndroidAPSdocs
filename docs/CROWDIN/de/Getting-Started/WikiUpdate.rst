@@ -4,7 +4,7 @@ November 2019
 ===============
 * `Dexcom G6 Update zum Transmitter-Wechsel <../Configuration/xdrip.html#transmitter-ersetzen>`_
 * `Warum ein verzögerter Bolus beim Loopen nicht funktioniert <../Usage/Extended-Carbs.html#verzogerter-bolus>`_
-* `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
+* `FAQ - Sport <../Getting-Started/FAQ.html#sport>`_
 * `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#abschnitt-e>`_
 * `Insight - Absolute Werte im NS Client deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
 * `Medtronic Pumpe - mögliche Doppeleinträge <../Configuration/MedtronicPump.html>`_
