@@ -82,33 +82,33 @@ Bolus
       * Pro poslání bolusu 1.2 U odpovězte pomocí SMS s kódem Rrt
       * Vzdálený bolus není momentálně povolen. Zkuste to později. (**Vzdálený bolus není povolen, pokud neuplynulo 15 minut od posledního bolus příkazu nebo pokud nejsou vzdálené příkazy povoleny!**)
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Odpověď: Pro zastavení prodlouženého bolusu odpovězte pomocí SMS s kódem EmF
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Odpověď: Pro spuštění prodlouženého bolusu 2 U na 120 min odpovězte pomocí SMS s kódem EmF
 
 Profil
 -----
 * PROFILE STATUS
-   * Response: Profile1
+   *Odpověď: Profile1
 * PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
+   * Odpověď : 1.`Profile1` 2.`Profile2`
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * Odpověď: Pro přepnutí profilu na Profile1 100% odpovězte pomocí SMS s kódem Any
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * Odpověď: Pro přepnutí profilu na Profile2 30% odpovězte pomocí SMS s kódem Any
 
 Jiné
 -----
 * TREATMENTS REFRESH
-   * Response: Refresh treatments from NS
+   * Odpověď: Obnovit ošetření z NS
 * NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
+   * Odpověď: NSCLIENT RESTART 1 příjemce
 * PUMP
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * Odpověď: Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
 
 Poradce při potížích
 =====
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti „odeslání zprávy jako konverzace“.
 
 .. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+  :alt: Zakázat odesílání SMS jako konverzace
