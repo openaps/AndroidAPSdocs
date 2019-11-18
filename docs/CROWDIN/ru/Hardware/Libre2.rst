@@ -6,15 +6,7 @@ Freestyle Libre 2
 Шаг 1: Создайте свое модифицированное приложение Librelink-App
 ==============
 
-По юридическим причинам так называемое исправление/модификация должна быть выполнена самостоятельно в соответствии с одной из двух инструкций:
-
-https://github.com/user987654321resu/Libre2-patched-App
- 
-Context | Edit Context
-
-https://github.com/TinoKossmann/LibreLink-xDrip-Patch
- 
-Context | Edit Context
+For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links.
 
 Модифицированное приложение должно быть установлено вместо исходного. Следующий сенсор, запущенный с него, будет передавать данные ГК на смартфон.
 
