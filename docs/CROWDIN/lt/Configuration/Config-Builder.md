@@ -92,36 +92,36 @@ This effect profile is recommended if an unbacked insulin or a mixture of differ
 Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
+* NSClient KG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
 * [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
-    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+    ![Glikemijos šaltinis konfigūratoriuje](../images/ConfBuild_BGSource.png)
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
 ## Pump
 
-Select the pump you are using.
+Pasirinkite pompą, kurią naudojate.
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with firmware upgrade)
-* [Dana RS](DanaRS-Insulin-Pump.md)
-* [Accu Chek Combo Pump](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* DanaR Korean (DanaR, skirta Korėjos rinkai)
+* DanaRv2 (DanaR su atnaujinta programine įranga)
+* [Dana R](DanaRS-Insulin-Pump.md)
+* [ Accu-Chek Combo](Accu-Chek-Combo-Pump.md) (reikia įdiegti ruffy programą)
+* MDI (AAPS pateikia insulino tiekimo patarimus naudojant insulino švirkštimo priemones)
+* Virtuali pompa (atviras ciklas pompai, kuri dar nėra palaikoma - AAPS teikia tik pasiūlymus)
 
-Use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Jei reikia, eikite į ** Išplėstiniai nustatymai **, kad suaktyvintumėte BT Watchdog. Jei prisijungti prie pompos neįmanoma, jis vienai sekundei išjungia Bluetooth. Tai padeda kai kuriuose telefonuose, kur užstringa Bluetooth modulis.
 
-## Sensitivity Detection
+## Jautrumo nustatymas
 
 Select the type of sensitivity detection. This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Details about the Sensitivity Oref0 algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to use Sensitivity Detection/autosens.
 
-### Absorption settings
+### Angliavandenių įsisavinimo parametrai
 
 If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
