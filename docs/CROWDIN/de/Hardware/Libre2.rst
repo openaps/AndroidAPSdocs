@@ -7,7 +7,7 @@ Blutzuckerwerte an einen Empfänger (Reader oder Smartphone). Dieser löst dann 
 Schritt 1: Erstelle Deine eigene gepatchte LibreLink-App
 ==============
 
-For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links.
+Aus rechtlichen Gründen muss das sogenannte Patchen von Dir selbst erledigt werden. Verwende Suchmaschinen, um die entsprechenden Links zu finden.
 
 Die gepachtete App wird dann anstelle der originalen App installiert. Der nächste damit gestartete Sensor übermittelt dann drahtlos seine Werte an das Smartphone.
 
