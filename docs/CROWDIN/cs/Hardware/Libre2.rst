@@ -6,11 +6,7 @@ The Freestyle Libre 2 system can automatically report dangerous blood glucose le
 Krok 1: Sestavte si svou vlastní upravenou aplikaci Librelink
 ==============
 
-For legal reasons, the so-called patching has to be done by yourself according to one of two instructions:
-
-https://github.com/user987654321resu/Libre2-patched-App
-
-https://github.com/TinoKossmann/LibreLink-xDrip-Patch
+For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links.
 
 The patched app has to be installed instead of the original app. The next sensor started with it will wireless transmit its values to the smartphone.
 

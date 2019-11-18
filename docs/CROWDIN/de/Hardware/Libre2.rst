@@ -7,11 +7,7 @@ Blutzuckerwerte an einen Empfänger (Reader oder Smartphone). Dieser löst dann 
 Schritt 1: Erstelle Deine eigene gepatchte LibreLink-App
 ==============
 
-Das sogenannte Patchen muss aus rechtlichen Gründen selbst erfolgen nach einer von zwei Anleitungen:
-
-https://github.com/user987654321resu/Libre2-patched-App
-
-https://github.com/TinoKossmann/LibreLink-xDrip-Patch
+Aus rechtlichen Gründen muss das sogenannte Patchen von Dir selbst erledigt werden. Verwende Suchmaschinen, um die entsprechenden Links zu finden.
 
 Die gepachtete App wird dann anstelle der originalen App installiert. Der nächste damit gestartete Sensor übermittelt dann drahtlos seine Werte an das Smartphone.
 

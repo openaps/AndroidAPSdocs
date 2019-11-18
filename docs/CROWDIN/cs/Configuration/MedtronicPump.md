@@ -37,11 +37,11 @@ Pracuje pouze se staršími pumpami Medtronic (podrobnosti viz níže). Nefunguj
 1. Použití průvodce (při nové instalaci)
 2. Přímo na kartě Konfigurace (ikona ozubeného kola u ovladače Medtronic)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Pokud děláte novou instalaci, skočíte přímo do průvodce. Někdy, když vaše připojení BT není plně funkční (nelze se připojit k pumpě), nebudete možná moci úplně dokončit konfiguraci. V takovém případě vyberte virtuální pumpu a po dokončení průvodce můžete použít možnost 2, která obejde detekci pumpy.
 
-![MDT Settings](../images/Medtronic01.png)
+![Nastavení MDT](../images/Medtronic01.png)
 
-You need to set following items: (see picture above)
+Je třeba nastavit následující položky: (viz obrázek výše)
 
 - ** Sériové číslo pumpy**: Můžete ho najít na zadní straně, SN. Použijte pouze číslice, vaše sériové číslo je 6 čísel.
 - **Typ pumpy**: Typ pumpy, který máte (tj. 522). 
@@ -57,9 +57,9 @@ You need to set following items: (see picture above)
 
 ## Záložka MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png)
+![Záložka MDT](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+Na kartě pumpy můžete vidět několik řádků, které zobrazují aktuální stav pumpy (a připojení).
 
 - **RileyLink Status**: Zobrazuje stav připojení RileyLink. Telefon by měl být připojen k RileyLink celou dobu.
 - **Stav pumpy**: Stav připojení pumpy může mít několik hodnot, ale většinou se zobrazí ikona spánku (když není aktivní připojení k pumpě). Když je příkaz spuštěn, možná uvidíte „Waking Up“, což znamená, že se AAPS snaží navázat spojení s pumpou, nebo popis jiného příkazu, který může být na pumpě spuštěn (např.: Get Time, Set TBR atd.).
@@ -71,7 +71,7 @@ On pump tab you can see several lines that are showing pumps (and connections) c
 - **Zásobník**: Kolik inzulínu je v zásobníku (aktualizováno nejméně každou hodinu).
 - **Chyby**: Chyba, pokud existuje (většinou ukazuje, zda došlo k chybě v konfiguraci).
 
-On lower end we have 3 buttons:
+Ve spodní části máme 3 tlačítka:
 
 - **Obnovit** pro obnovení stavu pumpy. To by mělo být použito až po dlouhé době bez připojení, protože tato akce resetuje data o pumpě (načtení historie, času, profilu, stavu baterie atd.).
 - **Historie**: Zobrazí historii z pumpy (viz [níže](../Configuration/MedtronicPump#pump-history))
@@ -79,22 +79,22 @@ On lower end we have 3 buttons:
 
 ## Historie pumpy
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Dialog Historie pumpy](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Historie pumpy se načítá každých 5 minut a ukládá se místně. Uchovává se pouze historie za posledních 24 hodin, takže při přidání nových položek jsou ty starší odstraněny. To je jednoduchý způsob, jak vidět historii pumpy (některé položky z pumpy se nemusí zobrazit, protože nejsou relevantní – například konfigurace funkcí, které nejsou používány programem AndroidAPS).
 
 ## Stav RL (Stav RileyLink)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![RileyLink Stav – Nastavení](../images/Medtronic04.png) ![Stav RileyLink – Historie](../images/Medtronic05.png)
 
-Dialog has two tabs:
+Dialogové okno má dvě záložky:
 
 - **Nastavení**: Zobrazí nastavení RileyLinku: Konfigurovaná adresa, Připojené zařízení, Stav připojení, Chyba připojení a verze firmwaru RileyLink. „Typ zařízení“ je vždy Medtronic, „model“ bude váš model, „sériové číslo“ je konfigurované sériové číslo, „frekvence“ udává, jakou frekvenci používáte, „poslední frekvence“ je poslední použitá frekvence.
 - **Historie**: Zobrazuje historii komunikace, položky u RileyLink ukazují změny stavu pro RileyLink a položky Medtronic ukazují, které příkazy byly odeslány do pumpy.
 
 ## Akce
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Je-li vybrán ovladač Medtronic, lze na kartu Akce přidat 3 možné akce:
 
 - **Probudit a Naladit** - Pokud zjistíte, že AndroidAPS nekontaktoval vaší pumpu po nějakou dobu (měl by to dělat každých 5 minut), můžete vynutit Ladění. V tom případě se bude AndroidAPS snažit kontaktovat pumpu prohledáním všech dílčích frekvencí, na kterých lze pumpu kontaktovat. Pokud ji nalezne, nastaví ji jako výchozí frekvenci. 
 - **Obnovit konfiguraci RileyLinku** - Pokud resetujete RileyLink/GNARL, musíte tuto akci použít, aby bylo možné překonfigurovat zařízení (sada frekvencí, sada typů frekvencí, kódování).
@@ -104,43 +104,43 @@ When Medtronic driver is selected, 3 possible actions can be added to Actions Ta
 
 ### Logování
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Vzhledem k tomu, že ovladač Medtronic je velmi nový, musíte povolit protokolování, abychom mohli ladit a opravit problémy, pokud nastanou. Klepněte na ikonu v levém horním rohu, vyberte volbu Údržba a Nastavení logování. Volby Pump, PumpComm, PumpBTComm musí být zašktnuté.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+Když restartujete RileyLink nebo GNARL, musíte buď provést nové ladění (akce „Probudit a naladit“), nebo znovu odeslat komunikační parametry (akce „Reset RieyLink konfigurace“), jinak komunikace selže.
 
 ### CGM
 
-Medtronic CGMS is currently NOT supported.
+Medtronic CGM v současné době NENÍ podporován.
 
 ### Ruční použití pumpy
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Měli byste se vyhnout manuálním zásahům ve vaší pumpě. Všechny příkazy (bolus, TBR) by měly projít přes AndroidAPS, ale pokud se stane, že provedete ruční příkazy, NEspouštějte příkazy s frekvencí méně než 3 minuty (takže pokud provedete 2× bolus (z jakéhokoli důvodu), druhý by měl být spuštěn nejméně 3 minuty po prvním).
 
 ## Změna časového pásma a letní čas (Letní čas) nebo Cestování s Medtronic pumpou a AndroidAPS
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+Důležité je, abyste nezapomínali, že byste nikdy neměli zakazovat smyčku, když cestujete (kromě případu, že vaše CGM nemůže pracovat v offline režimu). AAPS automaticky zjistí změny v časovém pásmu a jakmile se čas v telefonu změní, odešle příkaz do pumpy, aby se změnil čas v pumpě.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Nyní, pokud cestujete na východ a časové pásmo se mění do plusu (např. z GMT+0 na GMT+2), nebude problém s historíí pumpy a nemusíte se obávat…, ale pokud cestujete na západ a vaše časové pásmo se mění do mínusu (GMT+2 na GMT+0), pak může být synchronizace trochu ošemetná. Konkrétně to znamená, že na dalších x hodin budete muset být opatrní, protože vaše hodnota IOB by nemusela tak úplně souhlasit.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Jsme si vědomi tohoto problému a již hledáme možné řešení (viz https://github.com/andyrozman/RileyLinkAAPS/issues/145), ale prozatím je nutné při cestování vést tento problém v patrnosti.
 
 ## Nejčastější dotazy
 
 ### Můžu se podívat na stav baterie RileyLink/GNARL?
 
-Ne. At the moment none of this devices support this and it probably won't even in the future.
+Ne. V současné době žádné z těchto zařízení toto nepodporuje a pravděpodobně nebude ani v budoucnu.
 
 ### Je GNARL úplná náhrada za RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Ano. Autor GNARL přidal všechny funkce používané ovladačem Medtronic. Veškerá komunikace je podporována (v době vzniku tohoto textu (červen 2019). GNARL nemůže být použit pro komunikaci s Omnipodem. Nevýhodou GNARL je, že si jej musíte postavit sami a musíte mít kompatibilní verzi hardwaru.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Poznámka od autora:** Všimněte si prosím, že software GNARL je stále experimentální, není dostatečně otestovaný a neměl by být považován za bezpečný pro použití jako RileyLink.
 
 ### Kde získám RileyLink nebo GNARL?
 
-Like mentioned before you can get devices here:
+Jak je uvedeno výše, zařízení můžete získat zde:
 
 - RileyLink - Je možné získat zde - [getrileylink.org](https://getrileylink.org/).
 - GNARL - Zde můžete získat informace, ale zařízení je třeba objednat jinde ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
@@ -155,9 +155,9 @@ Like mentioned before you can get devices here:
 
 ### Jak určit, jakou frekvenci má moje pumpa používat
 
-![Pump Model](../images/Medtronic06.png)
+![Model pumpy](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Pokud zapnete pumpu, vpravo na prvním řádku uvidíte speciální 3písmenný kód. První dvě písmena určují typ frekvence a poslední z nich určuje barvu. Zde jsou možné hodnoty pro frekvence:
 
 - NA - Severní Amerika (ve výběru frekvencí je třeba vybrat „US & Kanada (916 MHz)“)
 - CA - Kanada (ve výběru frekvence je třeba vybrat „US & Kanada (916 MHz)“)

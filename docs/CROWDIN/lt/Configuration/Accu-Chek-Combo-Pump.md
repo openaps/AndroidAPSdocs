@@ -12,7 +12,7 @@
 
 ## Apribojimai
 
-- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.rst) instead)
+- Ištęstinis bolusas ir dvibangis bolusas negalimi (žr. [Ištęsti angliavandeniai](../Usage/Extended-Carbs.rst))
 - Galimas tik vienas bazės profilis.
 - Daugiau nei 1 bazinio greičio profilio nustatymas, ištęsto ar daugiabangio boluso suleidimas iš pompos sutrikdo laikinas bazes (TBR) ir išjungia ciklą 6 valandoms, todėl ciklas negali saugiai veikti tokiomis sąlygomis.
 - Šiuo metu nėra galimybės pompoje nustatyti datos ir laiko, todėl žiemos/vasaros laiko pokyčius turite atlikti rankiniu būdu (galite išjungti telefono automatinį laiko nustatymą iš vakaro, ir nustatyti jį ryte, kad išvengtumėte aliarmų nakties metu). 

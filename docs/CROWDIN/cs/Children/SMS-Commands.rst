@@ -4,36 +4,36 @@ Bezpečnost především
 ======
 * AndroidAPS vám umožňuje kontrolovat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN.
 * Systém AndroidAPS vás rovněž bude informovat textovou zprávou o tom, jestli váš vzdálený příkaz, např. bolus nebo změna profilu, byl proveden. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+* **Pokud jste zadali bolus prostřednictvím SMS příkazů, musíte přes Nightscout (NSClient, webovou stránku...) zadat odpovídající množství sacharidů!** Jestliže to neuděláte, bude IOB kalkulováno oproti nízkému COB. Případný korekční bolus pak nemusí být vydán, protože AAPS předpokládá, že máte příliš mnoho aktivního inzulínu.
 
 Jak to funguje
 =====
-* Most of the adjustments of temp targets, following AAPS etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
-* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
+* Většinu úprav dočasných cílů, se kterými pracuje AAPS apod., můžete provést přes `aplikaci NSclient <../Children/Children.html>`_ na telefonu připojenému k internetu.
+* Bolusy přes Nightscout nepošlete. Můžete to ale provést pomocí SMS příkazů.
+* Používáte-li ke sledování iPhone, nemůžete použít NSclient. Pak máte k dispozici pouze SMS příkazy.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, just one space after the semicolons - i.e. +4412345678; +4412345679) and also enable 'Allow remote commands via SMS'.
-* If you want to use more than one number:
+* Ve vašem Android telefonu přejděte do jeho systémového nastavení, následně do Aplikace > AndroidAPS > Oprávnění a povolte SMS
+* V AndroidAPS jděte do Nastavení > SMS komunikátor a zadejte telefonní číslo(a), ze kterých umožníte přijímat SMS příkazy (oddělené středníkem a jedinou mezerou za středníkem – např. +420123456788; +420123456789), a také povolte 'Povolit vzdálené příkazy přes SMS'.
+* Chcete-li nastavit více než jedno číslo:
 
-  * Enter just one number.
+  * Zadejte pouze jedno číslo.
   * Make that single number work by sending and confirming a SMS command.
-  * Enter additional number(s) separated by semicolon and one space.
+  * Přidejte další čísla oddělená středníkem a jednou mezerou.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
       :alt: SMS Commands Setup
 
 
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+* Z některého z povolených čísel odešlete SMS zprávu na telefon s běžícím AndroidAPS a do zprávy zadejte některý z níže tučně zapsaných příkazů. Telefon vám odpoví, aby potvrdil úspěšné provedení daného příkazu nebo vrátí požadované stavové informace. V případě potřeby potvrďte příkaz odesláním kódu, který poskytne telefon s AndroidAPS.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Tip: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
 Příkazy
 =====
 
-Upper and lower case is irrelevant when sending commands.
+Při odesílání příkazů nezáleží na velikosti písmen.
 
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi `přeložen <../translations.html#translate-řetězce-pro-androidaps-app> ` _, bude odpověď ve vašem jazyce.
 
 .. image:: ../images/SMSCommands.png
   :alt: SMS Commands Example
@@ -41,74 +41,74 @@ Commands must be send in English, response will be in your local language if the
 Smyčka
 -----
 * LOOP STOP/DISABLE
-   * Response: Loop has been disabled
+   * Odpověď: Smyčka byla zakázána
 * LOOP START/ENABLE
-   * Response: Loop has been enabled
+   * Odpověď: Smyčka byla povolena
 * LOOP STATUS
-   * Response depends on actual status
-      * Loop is disabled
-      * Loop is enabled
-      * Suspended (10 min)
+   * Odpověď záleží na aktuálním stavu
+      * Smyčka je zakázána
+      * Smyčka je povolena
+      * Pozastavena (10 minut)
 * LOOP SUSPEND 20
-   * Response: Loop suspended for 20 minutes
+   * Odpověď: Smyčka pozastavena na 20 minut
 * LOOP RESUME
-   * Response: Loop resumed
+   * Odpověď: Smyčka obnovena
 
 CGM data
 -----
-* BG
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+* Glykémie
+   * Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * Odpověď: Pro odeslání kalibrace 5.6 odpovězte pomocí SMS s kódem Rrt
+   * Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (*je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací**)
 
-Basal
+Bazál
 -----
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * Odpověď: Pro zastavení dočasného bazálu odpovězte pomocí SMS s kódem EmF [Poznámka: Kód EmF je pouze příklad]
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * Odpověď: Pro spuštění dočasného bazálu 0.3U/h odpovězte pomocí SMS s kódem Swe
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   * Odpověď: Pro spuštění dočasného bazálu 0.3U/h na 20 min odpovězte pomocí SMS s kódem Swe
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
+   * Odpověď: Pro spuštění dočasného bazálu 30% odpovězte pomocí SMS s kódem Swe
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * Odpověď: Pro spuštění dočasného bazálu 30% na 50 min odpovězte pomocí SMS s kódem Swe
 
 Bolus
 -----
 * BOLUS 1.2
-   * Response depends time last bolus was given
-      * To deliver bolus 1.2U reply with code Rrt
-      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min after last bolus command or remote commands!**)
+   * Odpověď závisí na době, která uplynula od poslední aplikace bolusu
+      * Pro poslání bolusu 1.2 U odpovězte pomocí SMS s kódem Rrt
+      * Vzdálený bolus není momentálně povolen. Zkuste to později. (**Vzdálený bolus není povolen, pokud neuplynulo 15 minut od posledního bolus příkazu nebo pokud nejsou vzdálené příkazy povoleny!**)
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Odpověď: Pro zastavení prodlouženého bolusu odpovězte pomocí SMS s kódem EmF
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Odpověď: Pro spuštění prodlouženého bolusu 2 U na 120 min odpovězte pomocí SMS s kódem EmF
 
 Profil
 -----
 * PROFILE STATUS
-   * Response: Profile1
+   *Odpověď: Profile1
 * PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
+   * Odpověď : 1.`Profile1` 2.`Profile2`
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * Odpověď: Pro přepnutí profilu na Profile1 100% odpovězte pomocí SMS s kódem Any
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * Odpověď: Pro přepnutí profilu na Profile2 30% odpovězte pomocí SMS s kódem Any
 
 Jiné
 -----
 * TREATMENTS REFRESH
-   * Response: Refresh treatments from NS
+   * Odpověď: Obnovit ošetření z NS
 * NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
+   * Odpověď: NSCLIENT RESTART 1 příjemce
 * PUMP
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * Odpověď: Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
 
 Poradce při potížích
 =====
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti „odeslání zprávy jako konverzace“.
 
 .. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+  :alt: Zakázat odesílání SMS jako konverzace

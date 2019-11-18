@@ -1,127 +1,127 @@
-# Accu-Chek Insight Pump
+# Accu-Chek Insight pompa
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Nepulkite stačia galva, skirkite laiko mokymuisi. Tik Jūs pats atsakote už tai, ką darysite su šia sistema.**
+**Ši programinė įranga yra ne paruoštas produktas, o Pasidaryk Pats sprendimo dalis, todėl Jūs turite skaityti, mokytis ir suprasti sistemos veikimą savarankiškai. Tai nėra kažkas, kas kontroliuos Jūsų diabetą už Jus, tačiau jei skirsite tiek laiko, kiek reikia, sistema leis Jums pagerinti diabeto kontrolę ir gyvenimo kokybę. Nepulkite stačia galva, skirkite laiko mokymuisi. Tik Jūs pats atsakote už tai, ką darysite su šia sistema.**
 
 * * *
 
-## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
+## *** DĖMESIO: ** Jei iki šiol naudojote „Insight“ pompą su ** SightRemote ** nuotolinio valdymo pultu, ** įdiekite naujausią AAPS versiją ** ir ** pašalinkite SightRemote **.*
 
-## Hardware and software requirements
+## Reikalavimai techninei ir programinei įrangai
 
 * A Roche Accu-Chek Insight pump (any firmware, they all work)
     
     Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Android telefonas (veiks bet kuri versija, bet AndroidAPS veikimui reikia bent Android 5 („Lollipop“).)
 
-* The AndroidAPS app installed on your phone
+* Jūsų telefone įdiegtos AndroidAPS programos
 
-## Setup
+## Sąranka
 
-* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
+* Insight pompa turi būti prijungta tik prie vieno įrenginio vienu metu. Jei anksčiau esate prijungę nuotolinio valdymo pultą „Insight“ (matuoklį), jį turite pašalinti iš pompos suporuotų įrenginių sąrašo: Meniu > Nustatymai > Ryšiai > Ištrinti įrenginį
     
-    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+    ![Ekrano vaizdas, kaip pašalinti gliukometrą iš Insight pompos](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
+* AndroidAPS programos [ konfigūratoriuje ](../Configuration/Config-Builder) pompos skyriuje pasirinkite Accu-Chek Insight
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Insight pompos konfigūratoriaus ekrano vaizdas](../images/Insight_ConfigBuilder.png)
 
-* Tap the cog-wheel to open Insight settings.
+* Spustelėkite krumpliaračio piktogramą, kad atidarytumėte Insight nustatymus.
 
-* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
-* On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
+* Nustatymuose ekrano viršuje spustelėkite mygtuką „Prijungti Insight“. Pamatysite netoliese esančių Bluetooth įrenginių sąrašą (žemiau kairėje).
+* Insight pompoje eikite į meniu> Nustatymai> Ryšiai> Pridėti įrenginį. Pompos ekrane (apačioje dešinėje) pasirodys pompos serijos numeris.
     
-    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+    ![Insight suporavimo ekrano vaizdas 1](../images/Insight_Pairing1.png)
 
-* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm.
+* Telefono Bluetooth įrenginių sąraše spustelėkite pompos serijos numerį. Tada spustelėkite Suporuoti, kad patvirtintumėte veiksmą.
     
-    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+    ![Insight suporavimo ekrano vaizdas 2](../images/Insight_Pairing2.png)
 
-* Both the pump and phone will then display a code. Check that the codes are the same on both devices and confirm on both the pump and the phone.
+* Tiek pompa, tiek telefonas parodys kodą. Įsitikinkite, kad abiejuose įrenginiuose kodai yra vienodi, ir patvirtinkite pompoje ir telefone.
     
-    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+    ![Insight suporavimo ekrano vaizdas 3](../images/Insight_Pairing3.png)
 
-* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+* Atlikta! Paplokite sau už tai, kad sėkmingai suporavote pompą su AndroidAPS.
     
-    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+    ![Insight suporavimo ekrano vaizdas 4](../images/Insight_Pairing4.png)
 
-* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+* Norėdami įsitikinti, kad viskas tvarkoje, grįžkite į AndroidAPS konfigūratorių ir spustelėkite nustatymų piktogramą šalia „Insight pompa“, eikite į Insight nustatymus, tada spustelėkite „Insight suporavimas“ ir pamatysite informaciją apie pompą:
     
-    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+    ![Insight suporavimo informacijos ekrano vaizdas](../images/Insight_PairingInformation.png)
 
-Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
+Pastaba: tarp pompos ir telefono nebus nuolatinio ryšio. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Priešingu atveju telefono ir pompos baterijos greitai išseks.
 
-## Settings in AAPS
+## AAPS nustatymai
 
 You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
 
-![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+![Insight nustatymų ekrano vaizdas](../images/Insight_pairing_V2_5.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+AndroidAPS Insight nustatymuose suaktyvinkite šiuos parametrus:
 
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
-* "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
+* „Įrašyti infuzijos rinkinio pakeitimą“: Paleidus pompos funkciją „pradinis infuzijos rinkinio pildymas“, atitinkama pastaba pridedama prie AndroidAPS duomenų bazės.
 * "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
-* "Log battery changes": This records a battery change when you put a new battery in the pump.
-* "Log operating mode changes": This inserts a note in the AndroidAPS database whenever you start, stop or pause the pump.
-* "Log alerts": This records a note in the AndroidAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
-* "Enable TBR emulation": The Insight pump can only issue temporary basal rates (TBRs) up to 250%. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
+* „Įrašyti akumuliatoriaus pakeitimą“: Kai pompoje įdedama nauja baterija, į AndroidAPS duomenų bazę pridedama pastaba.
+* „Įrašyti darbo režimo pasikeitimą“: prie AndroidAPS duomenų bazės pridedama pastaba, kai paleidžiate, sustabdote ar pristabdote pompą.
+* „Įrašyti perspėjimus“: AndroidAPS duomenų bazėje įrašoma pastaba apie pompos perspėjimus (išskyrus priminimus, bolusus ir laikinos bazės atšaukimą).
+* „Įgalinti laikinos bazės emuliaciją“: Insight pompa gali nustatyti tik iki 250% laikinos bazės dydžio. To get round this restriction, TBR emulation will instruct the pump to deliver an extended bolus for the extra insulin if you request a TBR of more than 250%.
     
     **Note: Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.**
 
-* "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
+* „Atkūrimo trukmė“: tai nustato, kaip ilgai AndroidAPS laukia naujo bandymo prisijungti po nesėkmingo. Jūs galite pasirinkti nuo 0 iki 20 sekundžių. Jei kyla ryšio problemų, pasirinkite ilgesnį laukimo laiką.   
       
-    Example for min. recovery duration = 5 and max. recovery duration = 20   
+    Pavyzdys min. atkūrimo trukmė = 5 ir maks. atkūrimo trukmė = 20   
       
-    no connection -> wait **5** sec.   
-    retry -> no connection -> wait **6** sec.   
-    retry -> no connection -> wait **7** sec.   
-    retry -> no connection -> wait **8** sec.   
+    nėra ryšio -> palaukti **5** sek.   
+    kartoti -> nėra ryšio -> palaukti **6** sek.   
+    kartoti -> nėra ryšio -> palaukti **7** sek.   
+    kartoti -> nėra ryšio -> palaukti **8** sek.   
     ...   
-    retry -> no connection -> wait **20** sec.   
-    retry -> no connection -> wait **20** sec.   
+    kartoti -> nėra ryšio -> palaukti **20** sek.   
+    kartoti -> nėra ryšio -> palaukti **20** sek.   
     ...
 
-* "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
+* „Atjungimo atidėjimas“: nusako, kiek laiko (sekundėmis) AndroidAPS lauks, kol atsijungs nuo pompos po veiksmo atlikimo. Numatytoji vertė yra 5 sekundės.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+Kol pompa sustabdyta, AAPS rodo laikiną bazės dydį 0%.
 
-In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+AndroidAPS skirtuke „Accu-Chek Insight“ rodoma dabartinė pompos būklė ir du mygtukai:
 
-* "Refresh": Refreshes pump status
-* "Enable/Disable TBR over notification": A standard Insight pump emits an alarm when a TBR is finished. This button lets you enable or disable this alarm without the need for configuration software.
+* Atnaujinti: Atnaujina pompos būklę
+* „Įgalinti / išjungti pranešimą apie LB“: Standartiškai Insight pompa siunčia aliarmą apie laikinos bazės LB pabaigą. Mygtukas leidžia įjungti arba išjungti šį perspėjimą nekeičiant programinės įrangos konfigūracijos.
     
-    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    ![Dabartinės Insight būsenos ekrano vaizdas](../images/Insight_Status2.png)
 
-## Settings in the pump
+## Pompos nustatymai
 
-Configure alarms in the pump as follows:
+Signalus pompoje nustatykite taip:
 
-* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
-* Menu > Modes > Signal mode > Quiet
+* Meniu> Nustatymai> Įrenginio nustatymai> Režimo nustatymai> Tylus> Signalas> Garso meniu> Nustatymai> Įrenginio nustatymai> Režimo nustatymai> Tylus> Garsumas> 0 (pašalinti visas juostas)
+* Meniu> Režimo nustatymai> Signalo režimas> Tylus
 
-This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Tai pašalins visų pompos perspėjimų garsą ir leis AndroidAPS nuspręsti, kuris signalas jums aktualus. Jei AndroidAPS neatpažįsta signalo, padidės jo garsas (pirmiausia pypsėjimas, paskui vibracija).
 
-Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
+Insight pompos su naujesne programine įranga visada vibruos, kai bus pateiktas bolusas (pvz., kai AndroidAPS siunčia SMB arba LB emuliaciją, nustato ištęstinį bolusą). Vibracija negali būti išjungta. Senesnės pompos šiais atvejais nevibruoja.
 
-## Battery replacement
+## Baterijos pakeitimas
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Insight pompoje yra maža vidinė baterija, palaikanti svarbias funkcijas, tokias kaip laikrodis, kuris ir toliau veikia kol keičiama pagrindinė pompos baterija. Jei baterijos keitimas užima per daug laiko, šio vidinio akumuliatoriaus įkrova gali pasibaigti, laikrodis bus nustatytas iš naujo ir, įdėjus naujas baterijas, jums bus pasiūlyta įvesti naują laiką ir datą. Jei taip atsitiks, visi AndroidAPS įrašai nebebus įtraukti į skaičiavimus, kol nebus pakeista baterija, nes nebus galima identifikuoti tinkamo laiko.
 
-## Insight specific errors
+## Insight specifinės klaidos
 
-### Extended bolus
+### Ištęstas bolusas
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Rekomenduojama naudoti tik vieną ištęstinį bolusą vienu metu, nes tuo pačiu metu naudojant kelis ištęstinius bolusus tai gali sukelti klaidas.
 
-### Time out
+### Baigėsi laikas
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Kartais Insight pompa gali nereaguoti sujungimo metu. Tokiu atveju AAPS rodomas šis pranešimas: „Sujungimo laikas baigėsi - nustatykite Bluetooth iš naujo“.
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Iš naujo nustatyti Bluetooth](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+Tokiu atveju maždaug 10 sekundžių išjunkite pompos ir išmaniojo telefono Bluetooth, tada vėl atgal įjunkite.
 
-## Crossing time zones with Insight pump
+## Kelionė per laiko zonas su Insight pompa
 
 For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
