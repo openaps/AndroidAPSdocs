@@ -8,52 +8,52 @@ Konfigūratorius yra skirtukas, kuriame galite įjungti ir atjungti programos mo
 
 Jei modulyje yra papildomų parametrų, galite spustelėti krumpliaratį (B), kuris nukreipia jus į nustatymus.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right-hand side of the screen (F) and select 'Setup Wizard' to use it.
+** Pirmoji konfigūracija: ** Pradedant AAPS 2.0 versija, AndroidAPS sąrankos procesą kontroliuoja sąrankos vedlys. Norėdami jį pradėti, spustelėkite trijų taškų meniu viršutiniame dešiniajame meniu ekrano kampe (F) ir pasirinkite „Sąrankos vedlys“.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
+![Konfigūratoriaus parinktys ir krumpliaratis](../images/ConfBuild_ConfigBuilder.png)
 
-## Tab or hamburger menu
+## Skirtukai arba trijų linijų meniu
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+Pažymėdami langelį po akies simboliu jūs nuspręsite, kaip atidaryti atitinkamą programos skyrių.
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
+![Skirtukai arba trijų linijų meniu](../images/ConfBuild_TabOrHH.png)
 
 ## Profile
 
-Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+Pasirinkite bazės profilį, kurį norite naudoti. Papildomos informacijos apie diegimą rasite puslapyje [ Profiliai ](../Usage/Profiles.md).
 
-### Local profile (recommended)
+### Vietinis profilis (rekomenduojama)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Vietinis profilis yra pagrindinis profilis, rankiniu būdu įvestas į telefoną. Pasirinkus vietinį profilį, pasirodo naujas skirtukas, kuriame prireikus galite pakeisti iš pompos nuskaitytus profilio duomenis. Kito prijungimo prie profilio metu jie bus įrašyti į pompos profilį Nr. 1. Mes rekomenduojame šį profilį, nes jis nepriklauso nuo jūsų interneto ryšio.
 
-Advantage:
+Privalumai:
 
-* no internet connection necessary to change profile settings
-* profile changes can be made directly on the phone
+* norint pakeisti profilio parametrus, nereikia interneto ryšio
+* profilio pakeitimai gali būti atliekami tiesiogiai telefone
 
-Disadvantage:
+Trūkumai:
 
-* only one profile
+* tik vienas profilis
 
-### NS Profile
+### NS profilis
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS Profilis naudoja profilius, kuriuos išsaugojote savo Nightscout svetainėje (https://[yournightscoutsiteaddress]/profilis). Jei norite pakeisti aktyvų profilį, galite naudoti [ Profilio perjungimas ](../Usage/Profiles.md). Sukurtas profilis perduodamas į pompą, tai svarbu, jei kyla problemų su AndroidAPS. Tai leidžia jums lengvai sukurti kelis profilius Nightscout (pvz., darbe, namuose, sporto, švenčių dienomis ir pan.). Paspaudus mygtuką „Išsaugoti“, jie bus perkelti į AAPS, jei jūsų išmanusis telefonas prijungtas prie interneto. Net be interneto ryšio ar be Nightscout ryšio, po sinchronizacijos NS profiliai yra pasiekiami AAPS.
 
-Do a **profile switch** to activate a profile from Nightscout. Press and hold the current profile in the AAPS homescreen at the top (grey field between the light blue "Open/Closed Loop" field and the dark blue target area field) > Profile switch > Select profile > OK. AAPS also writes the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Norėdami suaktyvinti Nightscout profilį, pasirinkite ** Profilio perjungimas**. Paspauskite ir palaikykite dabartinio profilio pavadinimą viršutinėje AAPS ekrano dalyje > Perjungti profilį> Pasirinkti profilį> Gerai. Pakeitus profilį, AAPS taip pat įrašo pasirinktą profilį į pompą, kad jis būtų prieinamas ir veiktų iškilus AAPS problemoms.
 
-Advantage:
+Privalumai:
 
-* multiple profiles
-* easy to edit via PC or tablet
+* keli profiliai
+* lengva redaguoti per kompiuterį arba planšetę
 
-Disadvantage:
+Trūkumai:
 
-* no local changes to profile settings
-* profile cannot be changed directly on the phone
+* profilio parametrų pakeisti vietoje negalima
+* profilio pakeitimai negali būti atliekami tiesiogiai telefone
 
-### Simple profile
+### Paprastas profilis
 
-Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
+Paprastas profilis su vienu laiko bloku, kuriame nustatyta IVT, IA, JIF, bazė ir tikslinė glikemija (t.y., valandinės bazės paros metu nesikeičia). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
 
 ## Insulin
 
