@@ -40,7 +40,7 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
     
     3 Passe den Vorschlag ggf. an oder übersetze selbst.
     
-    4 Klicke auf 'save'.
+    4 Click save
     
     ![Übersetzen des Wiki](./images/translation_WikiTranslate.png)
 
@@ -50,7 +50,7 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
 
 * Wenn ein interner Link nur auf eine bestimmte Seite (z.B. ../Usage/Profiles.html) verweist, muss er nicht übersetzt werden.
 * Interne Links zu einer Überschrift (z.B. ..//Usage/Profiles.html#percentage) müssen hingegeben übersetzt werden, da der Text der Überschrift in der Übersetzung meist vom englischen Original abweicht.
-* Wenn Du eine Überschrift übersetzt, kannst Du daraus den Anker-Teil des Links (der Teil hinter # - z.B. #percentage) in dem Du alle Buchstaben klein schreibst, sprachenspezifische Zeichen (z.B. ä, ö, ü) in Standardzeichen umwandelst (z.B. a, o, u), Leerzeichen durch ein Minuszeichen ersetzt und alle Satzzeichen weglässt.
+* If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
     
     Hier einige Beispiele:
     
@@ -60,9 +60,9 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
 
 #### Link-Übersetzung in Markdown-Dateien (.md)
 
-Momentan werden im Wiki zwei [Markup Sprachen](./make-a-PR#code-syntax) verwendet. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.
+Momentan werden im Wiki zwei [Markup Sprachen](./make-a-PR#code-syntax) verwendet. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
 
-Wenn bei Dir Links so in Crowdin angezeigt werden:
+If links are displayed like this in Crowdin
 
 ![Crowdin - keine Anzeige der Linkadressen](./images/CrowdinShowURL1.png)
 
