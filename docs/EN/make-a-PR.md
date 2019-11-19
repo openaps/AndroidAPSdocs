@@ -65,18 +65,43 @@ At the moment there are two languages used for wiki pages:
 
 We will change all wiki pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
 
-|  |.md files|.rst files|
-|-|-|-|
-|bold|`**text**`|`**text**`|
-|italic|`*text*`|`*text*`|
-|Headline 1|`# headline`|`headline`<br>`*****`|
-|Headline 2|`## headline`|`headline`<br>`=====`|
-|Headline 1|`### headline`|`headline`<br>`-----`|
-|images|`![alt text](../images/file.png)`|`.. image:: ../images/modules.png`<br>`  :alt: alt text`|
-|external link|`[alt text](www.url.tld)`|`` `alt text <www.url.tld>_` ``|
-|internal link to .md page|`[alt text](.../folder/file.md)`|`` `alt text <../folder/file.html>_` ``|
-|internal link to .rst page|`[alt text](.../folder/file.rst)`|`` `alt text <../folder/file.html>_` ``|
-|internal link to headline|`[alt text](.../folder/file#headline)`|`` `alt text <../folder/file.html#headline>_` ``|
+### .md files
+#### Text format
+* bold: `**text**`
+* italic: `*text*`
+* Headline 1: `# headline`
+* Headline 2: `## headline`
+* Headline 3: `### headline`
+#### Images
+* images: `![alt text](../images/file.png)`
+#### Links
+* external link: `[alt text](www.url.tld)`
+* internal link to .md page: `[alt text](.../folder/file.md)`
+* internal link to .rst page: `[alt text](.../folder/file.rst)`
+* internal link to headline: `[alt text](.../folder/file#headline)`
+
+### .rst files
+#### Text format
+* bold: `**text**`
+* italic: `*text*`
+* Headline 1: 
+
+   `headline`<br>`*****`
+* Headline 2: 
+
+   `headline`<br>`=====`
+* Headline 3: 
+
+   `headline`<br>`-----`
+#### Images
+* images:
+
+   `.. image:: ../images/modules.png`<br>`  :alt: alt text`
+#### Links
+* external link: `` `alt text <www.url.tld>_` ``
+* internal link to .md page: `` `alt text <../folder/file.html>_` ``
+* internal link to .rst page: `` `alt text <../folder/file.html>_` ``
+* internal link to headline: `` `alt text <../folder/file.html#headline>_` ``
 
 ### Internal links
 
