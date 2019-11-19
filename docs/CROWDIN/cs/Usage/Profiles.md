@@ -46,6 +46,38 @@ Tento mechanismus snímkování profilu umožňuje mnohem přesnější výpočt
 
 ## Řešení chyb profilů
 
-* Chyby typu „Chybný profil“ nebo „Bazální hodnoty nejsou zarovnané na celé hodiny“ se zobrazí, pokud nemáte bazální dávky nebo inzulíno-sacharidové poměry zarovnané na celé hodiny. Pumpy DanaR a DanaRS nepodporují změny po půlhodinách.
-* Při chybě "Zjištěno přepnutí profilu z NS ale místní profil neexistuje" jako první možnost běžte do záložky Ošetření v AndroidAPS a zadejte "Přepnutí profilu", odstraňte datum a čas, který byl zmíněný v chybové hlášce. Zadruhé: běžte do své mlab databáze, hledejte v kolekci treatments přepnutí profilu a smažte datum a čas, které byly zmíněny v chybové hlášce. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
-* Chybová zpráva „DIA 3h je příliš krátké“ se zobrazí, pokud trvání aktivity inzulínu ve vašem profilu má hodnotu, jejíž přesnosti AndroidAPS nevěří. Přečtěte si o Zvolení správného [DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), upravte ho ve svém profilu a znovu proveďte „Přepnutí profilu“.
+### 'Invalid profile' / 'Basal Profile not aligned to hours'
+
+![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
+
+* These error message will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
+  
+  ![Example profile not aligned to hours](../images/ProfileNotAlignedToHours.png)
+
+* Remember / note down date and time shown in the error message (26/07/2019 5:45 pm in screenshot above).
+
+* Go to Treatments tab
+* Select ProfileSwitch
+* Scroll until you find date and time from error message.
+* Use remove function.
+* Sometimes there is not only one faulty profile switch. In this case remove also the others.
+  
+  ![Remove profile switch](../images/PSRemove.png)
+
+Alternatively you can delete the profile switch directly in mLab as described below.
+
+### 'Received profile switch from NS but profile does not exist locally'
+
+* The requested profile was not synced correctly from Nightscout.
+* Follow instructions from above to delte the profile switch
+
+Alternatively you can delete the profile switch directly in mLab:
+
+* Go to your mlab collection
+* Search in the treatments for profile switch
+* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
+
+### 'DIA 3hr too short'
+
+* Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. 
+* Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles#profile-switch) to continue.
