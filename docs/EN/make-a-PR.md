@@ -57,8 +57,8 @@ We will change all wiki pages from Markdown to reStructuredText bit by bit. In t
 |Headline 1|`# headline`|`headline`<br>`*****`|
 |Headline 2|`## headline`|`headline`<br>`=====`|
 |Headline 1|`### headline`|`headline`<br>`-----`|
-|images|`![alt text](../images/filename.png)`|`.. image:: ../images/modules.png<br>  :alt: alt text`|
-|external link|`[alt text]`|``|
+|images|`![alt text](../images/file.png)`|`.. image:: ../images/modules.png`<br>`  :alt: alt text`|
+|external link|`[alt text](www.url.tld)`|`` `_alt text <www.url.tld>__` ``|
 ||``|``|
 
 ### Advanced tips for adding internal links
