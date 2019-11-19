@@ -40,39 +40,39 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
     
     3 Passe den Vorschlag ggf. an oder übersetze selbst.
     
-    4 Klicke auf 'safe'.
+    4 Klicke auf 'save'.
     
     ![Übersetzen des Wiki](./images/translation_WikiTranslate.png)
 
-* A translated page will not be published in wiki before the translation is proofread.
+* Eine übersetzte Seite wird nicht im Wiki veröffentlicht, bevor die Übersetzung korrekturgelesen wurde.
 
-### Translate headline links
+### Links zu Überschriften übersetzen
 
-* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
-* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
-* If you create a new headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters and skipping punctuation marks.
+* Wenn ein interner Link nur auf eine bestimmte Seite (z.B. ../Usage/Profiles.html) verweist, muss er nicht übersetzt werden.
+* Interne Links zu einer Überschrift (z.B. ..//Usage/Profiles.html#percentage) müssen hingegeben übersetzt werden, da der Text der Überschrift in der Übersetzung meist vom englischen Original abweicht.
+* Wenn Du eine Überschrift übersetzt, kannst Du daraus den Anker-Teil des Links (der Teil hinter # - z.B. #percentage) in dem Du alle Buchstaben klein schreibst, sprachenspezifische Zeichen (z.B. ä, ö, ü) in Standardzeichen umwandelst (z.B. a, o, u), Leerzeichen durch ein Minuszeichen ersetzt und alle Satzzeichen weglässt.
     
-    Here are some examples:
+    Hier einige Beispiele:
     
     * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
     * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
     * AAPS-.apk Datei \---> #aaps-apk-datei
 
-#### Link translation in Markdown files (.md)
+#### Link-Übersetzung in Markdown-Dateien (.md)
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in wiki. Whereas files written in reStructuredText syntax (.rst) always show link address, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+Momentan werden im Wiki zwei [Markup Sprachen](./make-a-PR#code-syntax) verwendet. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.
 
-If links are displayed like this in your browser
+Wenn bei Dir Links so in Crowdin angezeigt werden:
 
-![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+![Crowdin - keine Anzeige der Linkadressen](./images/CrowdinShowURL1.png)
 
-click on the cogwheel to open settings, select "Show" and click "Save".
+Klicke auf das Zahnrad, um die Einstellungen zu öffnen, wähle "Show" aus und klicke dann auf "Save".
 
-![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+![Crowdin - Anzeige der Linkadressen einschalten](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./translations#translate-headline-links) beschrieben übersetzt werden.
 
-![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+![Crowdin - Anzeige der Linkadressen](./images/CrowdinShowURL3.png)
 
 ## Proofreading
 
@@ -84,4 +84,4 @@ Links will then be shown in standard HTML format and can be translated consideri
     
     ![Übersetzung freigeben](./images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.
+* Wenn ein Lektor eine Übersetzung freigibt, wird sie in das nächste 'Wiki Build' aufgenommen. Um den Prozess zu beschleunigen, kannst Du das Wiki-Team über neue Übersetzungen informieren.
