@@ -52,7 +52,7 @@ I - carbs (carbs on board | e-carbs in the future)
 J - insulin on board (from bolus | from basal)
 
 ## Settings
-There are different settings to modify and to chose from while using AndroidAPS on your smartwatch:
+There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
 * Vibrate on Bolus (on | off)
 * Units for Actions (mg/dl | mmol/l)
 * Show Date (on | off)
