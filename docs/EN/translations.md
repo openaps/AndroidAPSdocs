@@ -56,7 +56,7 @@ When a proofreader approves a translation it will be added to the next version o
 
 * When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
 * Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
-* If you create a new headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transfrming special characters to standard characters and skipping punctuation marks. 
+* If you create a new headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters and skipping punctuation marks. 
 
    Here are some examples:
    * Was ist ein Closed Loop System mit AndroidAPS?  --->   #was-ist-ein-closed-loop-system-mit-androidaps
@@ -83,7 +83,7 @@ Links will then be shown in standard HTML format and can be translated consideri
 
 * Proofreaders have to switch to Proofreading mode 
 
-   ![Proffreading mode wiki](./images/translation_WikiProofreading.png) 
+   ![Proofreading mode wiki](./images/translation_WikiProofreading.png) 
 
 
   and approve translated texts 
