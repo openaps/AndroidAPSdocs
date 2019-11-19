@@ -103,7 +103,7 @@ If you are planning to make a lot of edits, including adding images to help illu
    The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: 
     * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` 
         (That code is exactly how the image below is embedded to be displayed.)
-    * For .rst pages:
+    * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`<br>`  :alt: Example of uploading images in batches`
  
 ![Example of uploading images in batches](./images/Example_batch_images_upload.png)
 
