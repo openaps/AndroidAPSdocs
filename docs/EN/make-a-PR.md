@@ -58,25 +58,30 @@ We will change all wiki pages from Markdown to reStructuredText bit by bit. In t
 |Headline 2|`## headline`|`headline`<br>`=====`|
 |Headline 1|`### headline`|`headline`<br>`-----`|
 |images|`![alt text](../images/file.png)`|`.. image:: ../images/modules.png`<br>`  :alt: alt text`|
-|external link|`[alt text](www.url.tld)`|`` `_alt text <www.url.tld>__` ``|
-||``|``|
+|external link|`[alt text](www.url.tld)`|`` `alt text <www.url.tld>_` ``|
+|internal link to .md page|`[alt text](.../folder/file.md)`|`` `alt text <../folder/file.html>_` ``|
+|internal link to .rst page|`[alt text](.../folder/file.rst)`|`` `alt text <../folder/file.html>_` ``|
+|internal link to headline|`[alt text](.../folder/file#headline)`|`` `alt text <../folder/file.html#headline>_` ``|
 
-### Advanced tips for adding internal links
+### Internal links
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages as well.
+If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
 
-In files with **.md** ending:
-   *  `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-   * `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+#### In files with **.md** ending:
+* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
+* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+* To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
+  * `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
 
-To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
-* `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+#### In files with **.rst** ending:
+* `` `Text <../Usage/Test.hmtl>`_``  will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html. 
 
-In files with **.rst** ending:
-   * `` `Text <../Usage/Test.hmtl>`_``  will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html. Except you are in a toctree. Then you have to write it like this:  `Text <../Usage/Test.md>` with .md or .rst (not .html).
-   * `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
-
-## Advanced tips for adding multiple images to documentation
+   Except you are in a toctree. Then you have to write it like this:  `Text <../Usage/Test.md>` with .md or .rst (not .html).
+* `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
+* To set the link to an **anchor** (i.e. a headline) you have to add the anchor to the link
+  * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test#anchor)`
+  
+## Adding multiple images to documentation
 
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
@@ -94,9 +99,11 @@ If you are planning to make a lot of edits, including adding images to help illu
  
  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
  
- 6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)`
- 
- (That code is exactly how the image below is embedded to be displayed.)
+ 6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-orthography) for the page type you are on (.md or .rst).
+   The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: 
+    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` 
+        (That code is exactly how the image below is embedded to be displayed.)
+    * For .rst pages:
  
 ![Example of uploading images in batches](./images/Example_batch_images_upload.png)
 
