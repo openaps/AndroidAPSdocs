@@ -13,12 +13,12 @@ How it works
 * If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
 
 * In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, just one space after the semicolons - i.e. +4412345678; +4412345679) and also enable 'Allow remote commands via SMS'.
+* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 * If you want to use more than one number:
 
   * Enter just one number.
   * Make that single number work by sending and confirming a SMS command.
-  * Enter additional number(s) separated by semicolon and one space.
+  * Enter additional number(s) separated by semicolon, no space.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
       :alt: SMS Commands Setup
