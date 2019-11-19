@@ -8,7 +8,7 @@ AndroidAPS app
 =====
 Building & updating
 -----
-* `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.rst#lost-keystore>`_
+* `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 Settings
 -----
