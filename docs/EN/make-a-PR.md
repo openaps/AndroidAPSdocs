@@ -3,7 +3,7 @@
 **This description is just for editing the English documentation. 
 If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code orthography"](../make-a-PR#code-orthography) section of this page.
+For hints how to format text (headline, bold...) and set links please see the ["code synatx"](./make-a-PR#code-synatx) section of this page.
 
 ## General
 For any questions, feedback or new ideas you can contact the documentation team via email (wiki@androidaps.org). 
@@ -28,8 +28,11 @@ For our example we are going to make an edit to AndroidAPSdocs.  This does NOT n
 Or you can click on the "Edit in Github" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
 ![RTD io](./images/PR2.png)
 3.  one or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved.  Make your edits to the file.
+
+   Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the two. Take care to use the correct syntax as [described below](./make-a-PR#code-synatx).
+
 ![Edit branch](./images/PR3.png)
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the both. 
+4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements.  
 ![preview mode](./images/PR5.png)
 5. When you have finished your edits, scroll to the bottom of the page.  In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the __reason__ for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
 ![commit comments](./images/PR4.png)
@@ -42,13 +45,13 @@ Congrats, you made your first contribution!
 
 PS, your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories.  If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork.  Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
-## Code orthography
+## Code synatx
 
 At the moment there are two languages used for wiki pages:
 * Markdown (.md) - the markup language originally used for wiki pages
 * reStructuredText (.rst) - the new markup language
 
-We will change all wiki pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct code when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+We will change all wiki pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct synatx when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
 
 |  |.md files|.rst files|
 |-|-|-|
@@ -99,7 +102,7 @@ If you are planning to make a lot of edits, including adding images to help illu
  
  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
  
- 6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-orthography) for the page type you are on (.md or .rst).
+ 6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-synatx) for the page type you are on (.md or .rst).
    The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: 
     * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` 
         (That code is exactly how the image below is embedded to be displayed.)
