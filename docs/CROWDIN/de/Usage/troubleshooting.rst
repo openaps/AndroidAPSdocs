@@ -33,7 +33,7 @@ CGM
 * `Dexcom G6 <../Hardware/DexcomG6.html#problembehandlung-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#erfahrungen-und-troubleshooting>`_
 * `xDrip - fehlende CGM Daten <../Configuration/xdrip.html#identifiziere-empfanger>`_
-* `xDrip - Dexcom troubleshooting <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
+* `xDrip - Dexcom Problembehandlung <../Configuration/xdrip.html#fehlerbehebung-dexcom-g5-g6-und-xdrip>`_
 
 Pumpen
 =====
