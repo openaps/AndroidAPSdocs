@@ -46,38 +46,38 @@ Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine
 
 ## Fehlerbehebung bei Profil Fehlern
 
-### 'Invalid profile' / 'Basal Profile not aligned to hours'
+### “Ungültiges Profil” / “Basal Profil nicht ausgerichtet auf Stunden”
 
-![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
+![Basalprofil nicht auf Stunden ausgerichtet](../images/BasalNotAlignedToHours2.png)
 
-* These error message will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
+* Diese Fehlermeldungen werden angezeigt, wenn Du eine Basalrate oder I:C Faktoren nicht nur zur vollen Stunde hast. (Die Pumpen DanaR und DanaRS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
   
-  ![Example profile not aligned to hours](../images/ProfileNotAlignedToHours.png)
+  ![Beispiel Basalprofil nicht auf Stunden ausgerichtet](../images/ProfileNotAlignedToHours.png)
 
-* Remember / note down date and time shown in the error message (26/07/2019 5:45 pm in screenshot above).
+* Merke bzw. notiere Dir das in der Fehlermeldung angegebene Datum und die Uhrzeit (26/07/2019 5:45 pm im Bildschirmfoto oben).
 
-* Go to Treatments tab
-* Select ProfileSwitch
-* Scroll until you find date and time from error message.
-* Use remove function.
-* Sometimes there is not only one faulty profile switch. In this case remove also the others.
+* Gehe zum Behandlungs-Tab.
+* Wähle Profilwechsel.
+* Scrolle zum in der Fehlermeldung angegebenen Zeitpunkt.
+* Klicke auf 'Löschen'.
+* Manchmal gibt es nicht nur einen fehlerhaften Profilwechsel. In diesem Fall musst Du auch alle anderen entfernen.
   
-  ![Remove profile switch](../images/PSRemove.png)
+  ![Profilwechsel löschen](../images/PSRemove.png)
 
-Alternatively you can delete the profile switch directly in mLab as described below.
+Alternativ kannst Du den Profilwechsel auch direkt in mLab wie unten beschrieben löschen.
 
-### 'Received profile switch from NS but profile does not exist locally'
+### “Profilwechsel von NS empfangen aber Profil existiert lokal nicht”
 
-* The requested profile was not synced correctly from Nightscout.
-* Follow instructions from above to delte the profile switch
+* Das Profil wurde nicht korrekt von Nightscout synchronisiert.
+* Lösche den Profilwechsel wie oben beschrieben.
 
-Alternatively you can delete the profile switch directly in mLab:
+Alternativ kannst Du den Profilwechsel auch direkt in mLab löschen:
 
-* Go to your mlab collection
-* Search in the treatments for profile switch
-* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
+* Öffne Deine mLab Datensammlung.
+* Suche in den Behandlungen nach “Profile switch”.
+* Lösche dann dort den Eintrag, der dem Datum und der Zeit der Fehlermeldung entspricht. ![mlab](../images/mLabDeletePS.png)
 
-### 'DIA 3hr too short'
+### “DIA 3 h zu kurz”
 
-* Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. 
-* Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles#profile-switch) to continue.
+* Die Fehlermeldung erscheint, wenn die Wirkdauer des Insulins in Deinem Profil mit einem Wert angegeben wird, von dem AndroidAPS annimmt, dass er nicht korrekt ist. 
+* Lies den Abschnitt [Auswahl des richtigen DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), überarbeite dein Profil und führe einen [Profilwechsel](../Usage/Profiles) aus, um es zu aktivieren.
