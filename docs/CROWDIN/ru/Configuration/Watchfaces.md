@@ -6,9 +6,10 @@ AndroidAPS предусматривает возможность *управле
 
 * установить временные целевые значения СК
 * подать болюс
-* использовать калькулятор болюса (переменные могут быть определены в [настройках](../Configuration/Config-Builder#wear) на телефоне)
-* проверить работу алгоритма цикла и помпы
-* показать TDD (Общая суточная доза = болюс + базал в день)
+* administer eCarbs
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* check the status of loop and pump
+* show TDD (Total daily dose = bolus + basal per day)
 
 Для этого необходимо выбрать вариант сборки "fullRelease" при [построении приложения APK](../Installing-AndroidAPS/Building-APK.md) (или "pumpRelease", который позволяет просто дистанционно управлять помпой без активации цикла). В конфигураторе AndroidAPS при этом нужно [активировать Wear](../Configuration/Config-Builder#wear).
 
@@ -50,10 +51,42 @@ I - углеводы (активные углеводы | e-carb в будуще
 
 J - активный инсулин (от болюсов | от базала)
 
-## Просмотр данных Nightscout
+## Settings
 
-Если вы используете другую систему цикла (не AAPS) и хотите *просмотреть* детали работы контура на часах Android Wear, или хотите посмотреть работу контура вашего ребенка, то можете построить/загрузить только NSClient APK. Для этого перейдите по ссылке [инструкции по созданию APK ](../Installing-AndroidAPS/Building-APK.md) выбрав вариант сборки "NSClientRelease". Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
+There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
 
-## Смарт-часы Pebble
+* Vibrate on Bolus (on | off)
+* Units for Actions (mg/dl | mmol/l)
+* Show Date (on | off)
+* Show IOB (on | off)
+* Show COB (on | off)
+* Show Delta (on | off)
+* Show AvgDelta (on | off)
+* Show Phone Battery (on | off)
+* Show Rig Battery (on | off)
+* Show Basal Rate (on | off)
+* Show Loop Status (on | off)
+* Show BG (on | off)
+* Show Direction Arrow (on | off)
+* Show Ago (on | off)
+* Dark (on | off)
+* Highlight Basals (on | off)
+* Chart Timeframe (1 | 2 | 3 | 4 | 5 hours)
+* Input Design (Default | Quick righty | Quick lefty | Modern Sparse)
+* Delta Granularity (Steampunk) (Low | Medium | High)
+* Big Numbers (on | off)
+* Ring History (on | off)
+* Light Ring History (on | off)
+* Animations (on | off)
+* Wizard in Menu (on | off)
+* Prime in Menu (on | off)
+* Single Target (on | off)
+* Wizard Percentage (on | off)
 
-Пользователи Pebble могут пользоваться [циферблатом Urchin](https://github.com/mddub/urchin-cgm) для *просмотра* данных цикла (если они загружаются на сайт Nightscout), но не смогут взаимодействовать с AndroidAPS через часы. Вы можете выбрать поля для отображения, такие как активный инсулин IOB, активный врем. базал и прогнозы. Если вы работаете с открытым циклом, вы можете пользоваться алгоритмом [IFTTT](https://ifttt.com/) для создания апплета, который, получив уведомление от AndroidAPS, отправляет SMS или создает push-уведомление.
+## View Nightscout data
+
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
+
+## Pebble
+
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
