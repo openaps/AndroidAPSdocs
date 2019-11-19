@@ -23,7 +23,7 @@ Exportieren der Einstellungen
        
 * **Übertrage** die exportierten Einstellungen vom alten auf das neue Smartphone
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone.
+  Die exportierte Datei heißt "AndroidAPSPreferences" und sollte sich im root-Ordner Deines Smartphones (vergleichbar C:\ auf Deinem Computer) befinden.
 
 * **Installiere AndroidAPS** auf dem neuen Smartphone.
 * **Importiere die Einstellungen** auf Deinem neuen Smartphone
