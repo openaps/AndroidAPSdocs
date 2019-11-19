@@ -74,7 +74,7 @@ Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./tra
 
 ![Crowdin - Anzeige der Linkadressen](./images/CrowdinShowURL3.png)
 
-## Proofreading
+## Korrekturlesen
 
 * Lektoren müssen zum Proofreading-Modus wechseln
     
