@@ -46,7 +46,7 @@ When a proofreader approves a translation it will be added to the next version o
    
    3 Edit the proposal or write the translation yourself.
    
-   4 Click safe
+   4 Click save
    
    ![Translation wiki](./images/translation_WikiTranslate.png)
 
