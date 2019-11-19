@@ -17,3 +17,11 @@ Settings
     :alt: Error: Basal not aligned to hours
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+Usage
+-----
+* `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+
+  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
+    :alt: Error: Slow carb absorbtion
+
+* `SMS commands <../Children/SMS-Commands.html#troubleshooting>`_
