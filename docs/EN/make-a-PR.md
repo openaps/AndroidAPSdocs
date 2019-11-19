@@ -3,6 +3,9 @@
 **This description is just for editing the English documentation. 
 If you want to translate to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org).**
 
+For hints how to format text (headline, bold...) and set links please see the ["code orthography"](../make-a-PR#code-orthography) section of this page.
+
+## General
 For any questions, feedback or new ideas you can contact the documentation team via email (wiki@androidaps.org). 
 Doing a PR isn't difficult, but we can help you editing the documentation.
 
@@ -39,6 +42,25 @@ Congrats, you made your first contribution!
 
 PS, your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories.  If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork.  Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
+## Code orthography
+
+At the moment there are two languages used for wiki pages:
+* Markdown (.md) - the markup language originally used for wiki pages
+* reStructuredText (.rst) - the new markup language
+
+We will change all wiki pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct code when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+
+|  |.md files|.rst files|
+|-|-|-|
+|bold|`**text**`|`**text**`|
+|italic|`*text*`|`*text*`|
+|Headline 1|`# headline`|`headline`<br>`*****`|
+|Headline 2|`## headline`|`headline`<br>`=====`|
+|Headline 1|`### headline`|`headline`<br>`-----`|
+|images|`![alt text](../images/filename.png)`|`.. image:: ../images/modules.png<br>  :alt: alt text`|
+|external link|`[alt text]`|``|
+||``|``|
+
 ### Advanced tips for adding internal links
 
 If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages as well.
@@ -54,7 +76,7 @@ In files with **.rst** ending:
    * `` `Text <../Usage/Test.hmtl>`_``  will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html. Except you are in a toctree. Then you have to write it like this:  `Text <../Usage/Test.md>` with .md or .rst (not .html).
    * `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
 
-### Advanced tips for adding multiple images to documentation
+## Advanced tips for adding multiple images to documentation
 
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
