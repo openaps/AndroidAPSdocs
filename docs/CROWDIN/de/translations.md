@@ -44,12 +44,44 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
     
     ![Übersetzen des Wiki](./images/translation_WikiTranslate.png)
 
+* A translated page will not be published in wiki before the translation is proofread.
+
+### Translate headline links
+
+* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
+* If you create a new headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters and skipping punctuation marks.
+    
+    Here are some examples:
+    
+    * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
+    * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
+    * AAPS-.apk Datei \---> #aaps-apk-datei
+
+#### Link translation in Markdown files (.md)
+
+At the moment two [markup languages](./make-a-PR#code-syntax) are used in wiki. Whereas files written in reStructuredText syntax (.rst) always show link address, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+
+If links are displayed like this in your browser
+
+![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+
+click on the cogwheel to open settings, select "Show" and click "Save".
+
+![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+
+![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+
+## Proofreading
+
 * Lektoren müssen zum Proofreading-Modus wechseln
     
-    ![Lektorenmodus Wiki](./images/translation_WikiProofreading.png)
+    ![Proofreading mode wiki](./images/translation_WikiProofreading.png)
     
     und übersetzte Texte freigeben.
     
     ![Übersetzung freigeben](./images/translations-proofreading.png)
 
-Wenn ein Lektor eine Übersetzung freigibt, wird sie in das nächste 'Wiki Build' aufgenommen. Um den Prozess zu beschleunigen, kannst Du das Wiki-Team über neue Übersetzungen informieren.
+* When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.
