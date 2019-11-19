@@ -40,7 +40,7 @@ Proofreader(번역검증자) 가 번역된 내용을 승인하면, AndroidAPS �
     
     3 Edit the proposal or write the translation yourself.
     
-    4 Click safe
+    4 Click save
     
     ![Translation wiki](./images/translation_WikiTranslate.png)
 
@@ -50,7 +50,7 @@ Proofreader(번역검증자) 가 번역된 내용을 승인하면, AndroidAPS �
 
 * When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
 * Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
-* If you create a new headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters and skipping punctuation marks.
+* If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
     
     Here are some examples:
     
@@ -60,9 +60,9 @@ Proofreader(번역검증자) 가 번역된 내용을 승인하면, AndroidAPS �
 
 #### Link translation in Markdown files (.md)
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in wiki. Whereas files written in reStructuredText syntax (.rst) always show link address, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+At the moment two [markup languages](./make-a-PR#code-syntax) are used in wiki. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
 
-If links are displayed like this in your browser
+If links are displayed like this in Crowdin
 
 ![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
 
