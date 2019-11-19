@@ -1,19 +1,19 @@
 Fehlerbehebung für Android Studio
 *****
-Lost keystore
+Verlorener Keystore
 =====
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+Wenn Du beim Update von AndroidAPS den selben keystore verwendest, musst Du die Vorgängerversion von AAPS auf Deinem Smartphone nicht deinstallieren. Daher wird empfohlen, den keystore an einem sicheren Platz zu speichern.
 
-In case you cannot find your old keystore anymore, proceed as follows:
+Falls Du Deinen bisherigen keystore nicht mehr findest, kannst Du wie folgt vorgehen:
 
-1. `Export settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ on your phone.
-2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
-3. Make sure settings file "AndroidAPS Preferences" is stored safely.
-4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. `Import settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - if you can't find them on your phone copy them from the external storage.
-8. Keep on looping.
+1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html#exportieren-der-einstellungen>`_ auf Deinem Smartphone.
+2. Kopiere die Datei mit den Einstellungen von Deinem Smartphone auf einen externen Speicherort (z.B. Dein Computer, einen Cloud-Speicher-Dienst...).
+3. Stelle sicher, dass die Datei "AndroidAPS Preferences" sicher gespeichert ist.
+4. Erstelle die signierte apk-Datei der neuen Version wie auf der `Update Seite <../Installing-AndroidAPS/Update-to-new-version.html>`_ beschrieben.
+5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
+6. Installiere die neue AAPS-Version auf Deinem Smartphone.
+7. `Importiere Deine Einstellungen <../Usage/ExportImportSettings.html#exportieren-der-einstellungen>`_ - falls Du sie auf Deinem Smartphone nicht findest, kopiere sie einfach vom externen Speicherort auf das Smartphone.
+8. Loope weiter!
 
 Kotlin Compiler Warnung
 =====
