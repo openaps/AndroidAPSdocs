@@ -353,60 +353,60 @@
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
- <td>TBB</td>
+ <td>PB</td>
  <td>total base basal (sum of basal rate within 24 hours)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>TBR</td>
+ <td>LB</td>
  <td>temporary basal rate</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>TDD</td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td>bendra paros dozė = bolusai + bazė per dieną</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>TT</td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td>LT</td>
+ <td>laikinas tikslas <br> laikinas glikemijos tikslo (diapazono) padidinimas / sumažinimas</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - laikini tikslai</a></td>
 </tr>
 <tr>
  <td>UAM</td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td>nedeklaruotas maistas - reikšmingo glikemijos kilimo dėl neįvesto maisto, adrenalino ar kito poveikio nustatymas ir bandymas kompensuoti per SMB mechanizmą</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Virtual pump</td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Virtuali pompa</td>
+ <td>galimybė naudoti AAPS su pompa, kuri neturi palaikomos tvarkyklės</td>
+ <td>Atviras Ciklas</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Wallpaper</td>
- <td>AndroidAPS background image</td>
+ <td>Fonas</td>
+ <td>AndroidAPS fono paveikslėlis</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">žr. psl. Telefonai</a></td>
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>
- <td>open source software to read CGM systems</td>
+ <td>atviro kodo programinė įranga NGJ duomenų apdorojimui</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
- <td>Zero-temp</td>
- <td>temporary basal rate with 0% (no basal insulin delivery)</td>
+ <td>Nulinė bazė</td>
+ <td>0% laikina valandinė bazė (insulinas netiekiamas)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+ <td colspan=4>Taip pat žr. <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
 </tr>
 </table>
