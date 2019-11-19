@@ -42,7 +42,7 @@
 </tr>
 <tr>
  <td>Autosens</td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>jautrumo insulinui pokyčių dėl fizinio krūvio, hormonų ir kt. nustatymas.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
@@ -89,7 +89,7 @@
  <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
 <tr>
- <td>BR</td>
+ <td>VB</td>
  <td>valandinė bazė</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -101,7 +101,7 @@
   <td>&nbsp;</td>
 </tr>
 <tr>
- <td>CAN</td>
+ <td>KAT</td>
  <td>pagrindiniame ekrane pateikiamas būsenos indikatorius, kad laiku nepakeistas kateteris</td>
  <td>BAT / REZ / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Nuostatos</a><br><a href="../Getting-Started/Screenshots.html">Ekrano vaizdai</a></td>
@@ -354,18 +354,18 @@
 </tr>
 <tr>
  <td>PB</td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td>pagrindinė bazė (bazinis insulino kiekis per 24 valandas)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LB</td>
- <td>temporary basal rate</td>
+ <td>laikina bazė</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>TDD</td>
+ <td>BPD</td>
  <td>bendra paros dozė = bolusai + bazė per dieną</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -377,7 +377,7 @@
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - laikini tikslai</a></td>
 </tr>
 <tr>
- <td>UAM</td>
+ <td>NDM</td>
  <td>nedeklaruotas maistas - reikšmingo glikemijos kilimo dėl neįvesto maisto, adrenalino ar kito poveikio nustatymas ir bandymas kompensuoti per SMB mechanizmą</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
