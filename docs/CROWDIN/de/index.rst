@@ -128,7 +128,7 @@ Problembehandlung
    :maxdepth: 1
        
   
-   Troubleshooting <./Usage/troubleshooting.rst>
+   Problembehandlung <./Usage/troubleshooting.rst>
    
 
 FAQ 
