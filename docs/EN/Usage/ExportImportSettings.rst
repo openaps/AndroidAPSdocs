@@ -31,4 +31,5 @@ How to export settings
   * Import settings
 
 * **Note for Dana RS users:**
+
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
