@@ -288,67 +288,67 @@
 </tr>
 <tr>
  <td>Prognozės</td>
- <td>preditions for BG in the future based on different calculations</td>
+ <td>glikemijos prognozės ateityje, remiantis skirtingais skaičiavimo algoritmais</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - glikemijos prognozavimo linijos</a></td>
 </tr>
 <tr>
- <td>Profile</td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
+ <td>Profilis</td>
+ <td>pagrindiniai terapijos nustatymai (bazė, IVT, IA, JIF, tikslinė glikemija). <br>Galima nustatyti lokaliai arba per Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profilis</a></td>
 </tr>
 <tr>
- <td>Profile switch</td>
- <td>(temporary) change of profile used or percentual increase/decrease</td>
+ <td>Profilio keitimas</td>
+ <td>(laikinas) profilio pakeitimas arba procentinis padidinimas / sumažinimas</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
+ <td><a href="../Usage/Profiles.html">Wiki - profilio keitimas</a></td>
 </tr>
 <tr>
- <td>RES</td>
- <td>status light overdue reservoir change on homescreen</td>
- <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td>REZ</td>
+ <td>pagrindiniame ekrane pateikiamas būsenos indikatorius, kad laiku nepakeistas rezervuaras</td>
+ <td>BAT / KAT / SEN</td>
+ <td><a href="../Configuration/Preferences.html#overview">Nuostatos</a><br><a href="../Getting-Started/Screenshots.html">Ekrano vaizdai</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
+ <td>įtaisas, skirtas mažos energijos Bluetooth (BLE) turinčių prietaisų susiejimui su 916 MHz dažnio įrenginiais (senesnėms Medtronic pompoms)</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>SAGE</td>
- <td>sensor age - displayed in Nightscout if information was entered in the AAPS careportal tab</td>
+ <td>SAMŽ</td>
+ <td>sensoriaus amžius - rodomas Nightscout svetainėje, jei informacija įvedama AAPS Priežiūros skirtuke</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>SEN</td>
- <td>status light sensor change on homescreen</td>
- <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td>pagrindiniame ekrane pateikiamas būsenos indikatorius, kad laiku nepakeistas sensorius</td>
+ <td>BAT / KAT / REZ</td>
+ <td><a href="../Configuration/Preferences.html#overview">Nuostatos</a><br><a href="../Getting-Started/Screenshots.html">Ekrano vaizdai</a></td>
 </tr>
 <tr>
- <td>Sensivity detection</td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>Jautrumo nustatymas</td>
+ <td>jautrumo insulinui pokyčių dėl fizinio krūvio, hormonų ir kt. nustatymas.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
- <td>Sensor noise</td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td>Sensoriaus triukšmas</td>
+ <td>nestabilūs NGJ duomenys, pasireiškiantys dideliais glikemijos reikšmių svyravimais</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensoriaus triukšmas</a></td>
 </tr>
 <tr>
  <td>SMB</td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
- <td>UAM</td>
+ <td>super mikro bolusas<br> pažangi technologija, leidžianti greičiau sureguliuoti glikemijos lygį</td>
+ <td>NDM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Super bolus</td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td>Super bolusas</td>
+ <td>bazinio insulino pridėjimas prie boluso greitesnei glikemijos korekcijai</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
