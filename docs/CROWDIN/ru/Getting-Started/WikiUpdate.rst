@@ -12,7 +12,9 @@
 * Выбрать профиль с процент - пример <../Usage/Profiles.html>`_
 * ` Обновление для команд по SMS <../Children/SMS-Commands.html> ` _
 * ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
+* `Troubleshooting - link collection <../Usage/troubleshooting.html>`_
 * `Обновление - краткое руководство для опытных пользователей <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
+* Wiki - update `edit <../make-a-PR.md#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
 
 Октябрь 2019
 ===============
