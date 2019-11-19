@@ -18,8 +18,8 @@ How to export settings
   * Export settings
   * File location will be shown
     
-  .. image:: ../images/AAPS_ExportSettings.png
-    :alt: AndroidAPS export settings
+.. image:: ../images/AAPS_ExportSettings.png
+  :alt: AndroidAPS export settings
        
 * **Transfer** settings from old to new phone using the file location shown during export
 
