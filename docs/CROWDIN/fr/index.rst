@@ -128,10 +128,8 @@ Dépannage
    :maxdepth: 1
    :glob:
   
-   NS-Client <./Usage/Troubleshooting-NSClient.md>
-   Mise à jour <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pompes à insuline <./FGT/Troubleshootingpumps.rst>
-
+   Troubleshooting <./Usage/troubleshooting.rst>
+   
 
 Questions fréquentes 
 ------------------------------------------

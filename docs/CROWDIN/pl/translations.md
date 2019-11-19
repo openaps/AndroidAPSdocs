@@ -40,16 +40,48 @@ Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji
     
     3 Edit the proposal or write the translation yourself.
     
-    4 Click safe
+    4 Click save
     
     ![Translation wiki](./images/translation_WikiTranslate.png)
 
+* A translated page will not be published in wiki before the translation is proofread.
+
+### Translate headline links
+
+* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
+* If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
+    
+    Here are some examples:
+    
+    * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
+    * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
+    * AAPS-.apk Datei \---> #aaps-apk-datei
+
+#### Link translation in Markdown files (.md)
+
+At the moment two [markup languages](./make-a-PR#code-syntax) are used in wiki. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+
+If links are displayed like this in Crowdin
+
+![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+
+click on the cogwheel to open settings, select "Show" and click "Save".
+
+![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+
+![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+
+## Proofreading
+
 * Proofreaders have to switch to Proofreading mode
     
-    ![Proffreading mode wiki](./images/translation_WikiProofreading.png)
+    ![Proofreading mode wiki](./images/translation_WikiProofreading.png)
     
     and approve translated texts
     
     ![approve text](./images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.
+* When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.

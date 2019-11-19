@@ -40,16 +40,48 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
     
     3 Passe den Vorschlag ggf. an oder übersetze selbst.
     
-    4 Klicke auf 'safe'.
+    4 Klicke auf 'save'.
     
     ![Übersetzen des Wiki](./images/translation_WikiTranslate.png)
 
+* Eine übersetzte Seite wird nicht im Wiki veröffentlicht, bevor die Übersetzung korrekturgelesen wurde.
+
+### Links zu Überschriften übersetzen
+
+* Wenn ein interner Link nur auf eine bestimmte Seite (z.B. ../Usage/Profiles.html) verweist, muss er nicht übersetzt werden.
+* Interne Links zu einer Überschrift (z.B. ..//Usage/Profiles.html#percentage) müssen hingegeben übersetzt werden, da der Text der Überschrift in der Übersetzung meist vom englischen Original abweicht.
+* Wenn Du eine Überschrift übersetzt, kannst Du daraus den Anker-Teil des Links (der Teil hinter # - z.B. #percentage) in dem Du alle Buchstaben klein schreibst, sprachenspezifische Zeichen (z.B. ä, ö, ü) in Standardzeichen umwandelst (z.B. a, o, u), Leerzeichen durch ein Minuszeichen ersetzt und alle Satzzeichen weglässt.
+    
+    Hier einige Beispiele:
+    
+    * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
+    * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
+    * AAPS-.apk Datei \---> #aaps-apk-datei
+
+#### Link-Übersetzung in Markdown-Dateien (.md)
+
+Momentan werden im Wiki zwei [Markup Sprachen](./make-a-PR#code-syntax) verwendet. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.
+
+Wenn bei Dir Links so in Crowdin angezeigt werden:
+
+![Crowdin - keine Anzeige der Linkadressen](./images/CrowdinShowURL1.png)
+
+Klicke auf das Zahnrad, um die Einstellungen zu öffnen, wähle "Show" aus und klicke dann auf "Save".
+
+![Crowdin - Anzeige der Linkadressen einschalten](./images/CrowdinShowURL2.png)
+
+Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./translations#translate-headline-links) beschrieben übersetzt werden.
+
+![Crowdin - Anzeige der Linkadressen](./images/CrowdinShowURL3.png)
+
+## Korrekturlesen
+
 * Lektoren müssen zum Proofreading-Modus wechseln
     
-    ![Lektorenmodus Wiki](./images/translation_WikiProofreading.png)
+    ![Proofreading mode wiki](./images/translation_WikiProofreading.png)
     
     und übersetzte Texte freigeben.
     
     ![Übersetzung freigeben](./images/translations-proofreading.png)
 
-Wenn ein Lektor eine Übersetzung freigibt, wird sie in das nächste 'Wiki Build' aufgenommen. Um den Prozess zu beschleunigen, kannst Du das Wiki-Team über neue Übersetzungen informieren.
+* Wenn ein Lektor eine Übersetzung freigibt, wird sie in das nächste 'Wiki Build' aufgenommen. Um den Prozess zu beschleunigen, kannst Du das Wiki-Team über neue Übersetzungen informieren.

@@ -128,10 +128,8 @@ AndroidAPS για τα παιδιά
    :maxdepth: 1
    :glob:
   
-   NS-Client <./Usage/Troubleshooting-NSClient.md>
-   Αναβάθμιση <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Αντλίες <./FGT/Troubleshootingpumps.rst>
-
+   Troubleshooting <./Usage/troubleshooting.rst>
+   
 
 Συχνές ερωτήσεις 
 ------------------------------------------

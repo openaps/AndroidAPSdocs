@@ -4,7 +4,7 @@
 ===============
 Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
 Пролонгированный болюс - почему не работает в контексте ИПЖ <../Usage/Extended-Carbs.html#extended-bolus>`_
-* `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
+* ` FAQ-занятия спортом <../Начало/FAQ.html#спорт> ` _
 * `Главный экран - линии на графике <../Getting-Started/Screenshots.html#section-e>`_
 * ` Insight-Выключить абсолютные значения в NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * ` Помпа Medtronic - возможные двойные записи <../Configuration/MedtronicPump.html> ` _
@@ -12,7 +12,9 @@
 * Выбрать профиль с процент - пример <../Usage/Profiles.html>`_
 * ` Обновление для команд по SMS <../Children/SMS-Commands.html> ` _
 * ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
+* ` Устранение неполадок- ссылки <../Usage/troubleshooting.html> ` _
 * `Обновление - краткое руководство для опытных пользователей <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
+* Обновление Wiki ` редактирование <../make-a-PR.md#code-syntax> ` _ и ` перевод <../translations.html#translate-wiki-pages> ` _.
 
 Октябрь 2019
 ===============

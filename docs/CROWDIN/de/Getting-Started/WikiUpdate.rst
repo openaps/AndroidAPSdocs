@@ -12,7 +12,9 @@ November 2019
 * `Profilwechsel mit Prozentsatz - Beispiel <../Usage/Profiles.html>`_
 * `Update SMS-Befehle <../Children/SMS-Commands.html>`_
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Fehlerbehebungen - Linksammlung <../Usage/troubleshooting.html>`_
 * `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
+* Wiki - Update `Mitschreiben <../make-a-PR.md#code-syntax>`_ und `Übersetzen <../translations.html#wiki-seiten-ubersetzen>`_.
 
 Oktober 2019
 ===============
