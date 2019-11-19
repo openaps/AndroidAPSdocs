@@ -192,21 +192,21 @@
 </tr>
 <tr>
  <td>ŽGS</td>
- <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
+ <td>Žemos glikemijos stabdymas<br>AAPS sumažins valandinę bazę, jei krenta glikemijos lygis. Bet jei gliukozės kiekis kraujyje didėja, AAPS algoritmas padidins valandinę bazę tik tuo atveju, jei aktyvus insulinas AIO yra neigiamas (dėl ankstesnio bazės stabdymo). Kai AIO yra teigiamas, valandinė bazė išliks tokia, kaip nustatyta jūsų pasirinktame profilyje. Dėl to Jūs galite patirti laikinus staigius glikemijos šuolius, ypač po hipoglikemijos korekcijos, nes neturėsite galimybės padidinti valandinės bazės.</td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">6 tikslas</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
- <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
+ <td>nemokama ir atviro kodo operacinė sistema, skirta išmaniesiems telefonams ir pan.<br> alternatyvi OS išmaniesiems telefonams, kuriuose neveikia Android 8.1 (Oreo) <br> (kai naudojate Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pompa</a></td>
 </tr>
 <tr>
- <td>Log files</td>
- <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
+ <td>Žurnalo failai</td>
+ <td>įrašo visus AAPS veiksmus. Naudojama norint išsiaiškinti, išspręsti problemas, suderinti programinę įrangą</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - žurnalo failai</a></td>
 </tr>
 <tr>
  <td>MA</td>
