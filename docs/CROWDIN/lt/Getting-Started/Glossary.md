@@ -17,7 +17,7 @@
   </td>
   
   <td>
-    išmanusis maisto asistentas - patobulintas algoritmas angliavandeniams tvarkyti
+    aukštesnysis (išmanusis) maisto asistentas - patobulintas algoritmas angliavandeniams tvarkyti
   </td>
   
   <td>
@@ -29,7 +29,7 @@
   </td>
 <tr>
  <td>Android auto</td>
- <td>rodyti AAPS pranešimus suderinamose automobilių borto kompiuterių sistemose</td>
+ <td>rodo AAPS pranešimus suderinamose automobilių borto kompiuterių sistemose</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
 </tr>
@@ -210,84 +210,84 @@
 </tr>
 <tr>
  <td>MA</td>
- <td>meal assist - standard algorithm to handle carbs</td>
+ <td>maisto asistentas - standartinis algoritmas angliavandeniams tvarkyti</td>
  <td>AMA / SMB</td>
  <td><a href="../Usage/Open-APS-features.html#meal-assist-ma">Wiki - MA</a></td>
 </tr>
 <tr>
- <td>maxIOB</td>
- <td>safety feature - maximum total IOB AAPS can't go over</td>
+ <td>maksAIO</td>
+ <td>saugumo funkcija: didžiausias leistinas bendras aktyvaus insulino lygis, kurio AAPS negali viršyti</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maksAIO</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>Freestyle Libre sensoriaus Bluetooth siųstuvas, naudojamas kaip NGJ</td>
  <td>BlueReader / Blukon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
 <tr>
- <td>min_5m_carbimpact</td>
- <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
+ <td>min_5m_AV_įtaka</td>
+ <td>saugumo funkcija - standartinis angliavandenių įsisavinimo laikas. Naudojamas, jei jo negalima dinamiškai nustatyti atsižvelgiant į glikemiją</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - konfigūratorius</a></td>
 </tr>
 <tr>
  <td>Nightscout</td>
- <td>open source project to access and report CGM data</td>
+ <td>atvirojo kodo projektas, skirtas prieigai prie NGJ duomenų</td>
  <td>Nightscout Reporter</td>
  <td><a href="http://www.nightscout.info/">Nightscout</a></td>
 </tr>
 <tr>
  <td>NS Client</td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td>AAPS dalis, skirta keistis duomenimis su Nightscout serveriu</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td>Nightscout Reporter</td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
+ <td> Nightscout duomenų PDF ataskaitų kūrimo įrankis</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NR Reporter @ Facebook</a></td>
 </tr>
 <tr>
  <td>Tikslai</td>
- <td>learning program within AAPS guiding you step by step from open to closed loop</td>
+ <td>AAPS mokymo programa su palaipsniu perėjimu iš atviro į uždarą ciklą</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
+ <td><a href="../Usage/Objectives.html">Wiki - tikslai</a></td>
 </tr>
 <tr>
  <td>OpenAPS</td>
- <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
+ <td>Atvirojo kodo dirbtinės kasos sistema <br>Veikia mažuose kompiuteriuose (pvz., Raspberry PI)<br> AAPS naudoja kai kurias OpenAPS funkcijas</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">OpenAPS dokumentacija</a></td>
 </tr>
 <tr>
- <td>Open Loop</td>
- <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td>Atviras Ciklas</td>
+ <td>būsena, kai sistema rekomenduoja rankinius pompos nustatymus</td>
+ <td>Uždaras Ciklas</td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - konfigūratorius</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
- <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
+ <td>Jautrumo (insulinui) nustatymas<br> OpenAPS naudojama pagrindinio algoritmo versija 0/1</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Jautrumo nustatymas</a></td>
 </tr>
 <tr>
- <td>Peak time</td>
- <td>time of maximum effect of insulin given</td>
+ <td>Piko laikas</td>
+ <td>laikas, po kurio suleisto insulino poveikis tampa maksimalus</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - konfigūratorius</a></td>
 </tr>
 <tr>
- <td>PH</td>
- <td>pump history (entry in treatments tab)</td>
+ <td>PI</td>
+ <td>pompos istorija (įrašas Terapijos skirtuke)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Ekrano nuotraukos</a></td>
 </tr>
 <tr>
- <td>Predictions</td>
+ <td>Prognozės</td>
  <td>preditions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
