@@ -8,12 +8,13 @@ AndroidAPS app
 =====
 Building & updating
 -----
+* `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.rst#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 Settings
 -----
 * `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
-  .. image:: ../images/BasalNotAlignedToHours.png
+  .. image:: ../images/BasalNotAlignedToHours2.png
     :alt: Error: Basal not aligned to hours
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
