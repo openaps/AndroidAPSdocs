@@ -50,7 +50,7 @@ Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine
 
 ![Basalprofil nicht auf Stunden ausgerichtet](../images/BasalNotAlignedToHours2.png)
 
-* Diese Fehlermeldungen werden angezeigt, wenn Du eine Basalrate oder I:C Faktoren nicht nur zur vollen Stunde hast. (Die Pumpen DanaR und DanaRS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
+* These error messages will appear if you have any basal rates or I:C rates not on the hour. (Die Pumpen DanaR und DanaRS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
   
   ![Beispiel Basalprofil nicht auf Stunden ausgerichtet](../images/ProfileNotAlignedToHours.png)
 
@@ -80,4 +80,4 @@ Alternativ kannst Du den Profilwechsel auch direkt in mLab löschen:
 ### “DIA 3 h zu kurz”
 
 * Die Fehlermeldung erscheint, wenn die Wirkdauer des Insulins in Deinem Profil mit einem Wert angegeben wird, von dem AndroidAPS annimmt, dass er nicht korrekt ist. 
-* Lies den Abschnitt [Auswahl des richtigen DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), überarbeite dein Profil und führe einen [Profilwechsel](../Usage/Profiles) aus, um es zu aktivieren.
+* Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
