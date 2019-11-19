@@ -23,7 +23,7 @@ How to export settings
        
 * **Перенесите** настройки со старого на новый телефон, используя местоположение файла, показанное во время экспорта
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone.
+  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
 
 * **Установите AndroidAPS ** на новом телефоне.
 * **Импорт настроек** на вашем новом телефоне
