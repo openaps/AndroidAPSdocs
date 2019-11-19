@@ -23,7 +23,7 @@ How to export settings
        
 Μεταφορά από παλιό σε νέο τηλέφωνο χρησιμοποιώντας τη θέση αρχείου που εμφανίζεται κατά την εξαγωγή
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone.
+  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
 
 Εγκαταστήστε το AndroidAPS στο νέο τηλέφωνο.
 * **Εισαγωγή ρυθμίσεων** για το νέο σας τηλέφωνο
