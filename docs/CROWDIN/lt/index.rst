@@ -140,7 +140,7 @@ FAQ
    FAQ <./Getting-Started/FAQ.md>
 
    
-Glossary
+Terminų žodynas
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
