@@ -128,10 +128,8 @@ Advanced
    :maxdepth: 1
    :glob:
   
-   NS-Client <./Usage/Troubleshooting-NSClient.md>
-   Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pumps <./FGT/Troubleshootingpumps.rst>
-
+   Troubleshooting <./Usage/troubleshooting.rst>
+   
 
 Часто задаваемые вопросы 
 ------------------------------------------
