@@ -1,4 +1,4 @@
-Install git
+Установите Git
 *****
 Windows
 =====
