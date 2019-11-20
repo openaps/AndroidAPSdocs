@@ -109,7 +109,7 @@ Other
 * PUMP
    * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 * SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you\'ll able to reactivate it directly from the AAPS master smartphone only.
+   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
 * TARGET MEAL/ACTIVITY/HYPO   
    * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
 
