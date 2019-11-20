@@ -28,24 +28,24 @@
 
 В целом, шаги, необходимые для создания файла APK таковы:
 
-* [Установите Git](../Installing-AndroidAPS/git-install.rst)
+* [Установите Git](../Instaling-AndroidAPS/git-install.rst)
 * Установить и настроить Android Studio.
 * Используя Git  клонировать исходный код центрального репозитория Github, где разработчики разместили код приложения.
 * В Android Studio открыть клонированный проект в качестве активного.
 * Построить подписанный APK.
 * Переместите подписанный APK на ваш телефон.
 
-## Step by step walkthrough
+## Пошаговое руководство
 
 Подробное описание шагов, необходимых для создания файла APK.
 
 ## Установите git (если у вас его нет)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Следуйте инструкциям на странице установки [git](../Installing-AndroidAPS/git-install.rst).
 
-## Install Android Studio
+## Установите Android Studio
 
-The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
+Cледующие снимки экрана были сделаны c Android Studio версии 3.1.3. Экран может выглядеть несколько иначе в зависимости от используемой версии Android Studio. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
 Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
 
