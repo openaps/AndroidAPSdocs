@@ -6,10 +6,10 @@ AndroidAPS предусматривает возможность *управле
 
 * установить временные целевые значения СК
 * подать болюс
-* administer eCarbs
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* расписать eCarbs
+* использовать калькулятор болюса (переменные могут быть определены в [настройках](../Configuration/Config-Builder#wear) на телефоне)
+* проверить работу алгоритма цикла и помпы
+* показать TDD (Общая суточная доза = болюс + базал в день)
 
 Для этого необходимо выбрать вариант сборки "fullRelease" при [построении приложения APK](../Installing-AndroidAPS/Building-APK.md) (или "pumpRelease", который позволяет просто дистанционно управлять помпой без активации цикла). В конфигураторе AndroidAPS при этом нужно [активировать Wear](../Configuration/Config-Builder#wear).
 
@@ -51,19 +51,19 @@ I - углеводы (активные углеводы | e-carb в будуще
 
 J - активный инсулин (от болюсов | от базала)
 
-## Settings
+## Настройки
 
-There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
+Существуют различные настройки смарт-часов для AndroidAPS:
 
-* Vibrate on Bolus (on | off)
-* Units for Actions (mg/dl | mmol/l)
-* Show Date (on | off)
-* Show IOB (on | off)
-* Show COB (on | off)
-* Show Delta (on | off)
-* Show AvgDelta (on | off)
-* Show Phone Battery (on | off)
-* Show Rig Battery (on | off)
+* Вибрация на болюс (вкл | выкл)
+* Единицы для действий (мг/дл | ммоль/л)
+* Показать дату (вкл. | выключить)
+* Показывать активный инсулин IOB (вкл. | выключить)
+* Показать активные углеводы COB (вкл| выкл)
+* Показывать дельту изменений (вкл | выкл)
+* Показывать среднюю дельту изменений (вкл | выкл)
+* Показывать батарею телефона (вкл | выкл.)
+* Показывать батарею главного устройства (вкл | выкл.)
 * Show Basal Rate (on | off)
 * Show Loop Status (on | off)
 * Show BG (on | off)
