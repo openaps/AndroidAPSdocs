@@ -65,28 +65,28 @@ J - активный инсулин (от болюсов | от базала)
 * Показывать батарею телефона (вкл | выкл.)
 * Показывать батарею главного устройства (вкл | выкл.)
 * Показывать базальную скорость (вкл | выкл)
-* Show Loop Status (on | off)
-* Show BG (on | off)
-* Show Direction Arrow (on | off)
-* Show Ago (on | off)
-* Dark (on | off)
-* Highlight Basals (on | off)
-* Chart Timeframe (1 | 2 | 3 | 4 | 5 hours)
-* Input Design (Default | Quick righty | Quick lefty | Modern Sparse)
-* Delta Granularity (Steampunk) (Low | Medium | High)
-* Big Numbers (on | off)
-* Ring History (on | off)
-* Light Ring History (on | off)
-* Animations (on | off)
-* Wizard in Menu (on | off)
-* Prime in Menu (on | off)
-* Single Target (on | off)
-* Wizard Percentage (on | off)
+* Показать закольцованность (вкл | выкл)
+* Показать ГК (вкл | выкл)
+* Показать стрелку тенденции (вкл | выкл)
+* Показать давность (вкл | выкл)
+* Темный фон (вкл | выкл)
+* Выделить базал (вкл | выкл)
+* Временной диапазон графика (1 | 2 | 3 | 4 | 5 часов)
+* Эскиз ввода (по умолчанию | быстрый для правшей | быстрый для левшей | современный разреженный)
+* Зернистость (для циферблата Steampunk) (Низкая | Средняя | Высокая)
+* Большие цифры (вкл | выкл)
+* Хронология кольца (вкл | выкл)
+* Краткая хронология кольца (вкл | выкл)
+* Анимация (вкл | выкл)
+* Мастер настроек в меню (вкл | выкл)
+* Заполнение инфузионного набора в меню (вкл | выкл)
+* Одиночная цель (вкл | выкл)
+* Процент мастера (вкл | выкл)
 
-## View Nightscout data
+## Просмотр данных Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
+Если вы используете другую систему цикла (не AAPS) и хотите *просмотреть* детали работы контура на часах Android Wear, или хотите посмотреть работу контура вашего ребенка, то можете построить/загрузить только NSClient APK. Для этого перейдите по ссылке [инструкции по созданию APK ](../Installing-AndroidAPS/Building-APK.md) выбрав вариант сборки "NSClientRelease". Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
 
-## Pebble
+## Смарт-часы Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Пользователи Pebble могут пользоваться [циферблатом Urchin](https://github.com/mddub/urchin-cgm) для *просмотра* данных цикла (если они загружаются на сайт Nightscout), но не смогут взаимодействовать с AndroidAPS через часы. Вы можете выбрать поля для отображения, такие как активный инсулин IOB, активный врем. базал и прогнозы. Если вы работаете с открытым циклом, вы можете пользоваться алгоритмом [IFTTT](https://ifttt.com/) для создания апплета, который, получив уведомление от AndroidAPS, отправляет SMS или создает push-уведомление.
