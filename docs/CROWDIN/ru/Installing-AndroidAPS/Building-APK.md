@@ -28,7 +28,7 @@
 
 В целом, шаги, необходимые для создания файла APK таковы:
 
-* [Install git](../Installing-AndroidAPS/git-install.rst)
+* [Установите Git](../Installing-AndroidAPS/git-install.rst)
 * Установить и настроить Android Studio.
 * Используя Git  клонировать исходный код центрального репозитория Github, где разработчики разместили код приложения.
 * В Android Studio открыть клонированный проект в качестве активного.
