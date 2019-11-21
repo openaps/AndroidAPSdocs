@@ -13,12 +13,12 @@ Jak to funguje
 * Používáte-li ke sledování iPhone, nemůžete použít NSclient. Pak máte k dispozici pouze SMS příkazy.
 
 * Ve vašem Android telefonu přejděte do jeho systémového nastavení, následně do Aplikace > AndroidAPS > Oprávnění a povolte SMS
-* V AndroidAPS jděte do Nastavení > SMS komunikátor a zadejte telefonní číslo(a), ze kterých umožníte přijímat SMS příkazy (oddělené středníkem a jedinou mezerou za středníkem – např. +420123456788; +420123456789), a také povolte 'Povolit vzdálené příkazy přes SMS'.
+* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 * Chcete-li nastavit více než jedno číslo:
 
   * Zadejte pouze jedno číslo.
   * Make that single number work by sending and confirming a SMS command.
-  * Přidejte další čísla oddělená středníkem a jednou mezerou.
+  * Enter additional number(s) separated by semicolon, no space.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
       :alt: SMS Commands Setup
@@ -80,7 +80,11 @@ Bolus
 * BOLUS 1.2
    * Odpověď závisí na době, která uplynula od poslední aplikace bolusu
       * Pro poslání bolusu 1.2 U odpovězte pomocí SMS s kódem Rrt
-      * Vzdálený bolus není momentálně povolen. Zkuste to později. (**Vzdálený bolus není povolen, pokud neuplynulo 15 minut od posledního bolus příkazu nebo pokud nejsou vzdálené příkazy povoleny!**)
+      * Vzdálený bolus není momentálně povolen. Zkuste to později. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)
+* BOLUS 0.60 MEAL
+      * To deliver meal bolus 0.60U reply with code Rrt
+      * Vzdálený bolus není momentálně povolen. Zkuste to později. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)  
+    If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins)
 * EXTENDED STOP/CANCEL
    * Odpověď: Pro zastavení prodlouženého bolusu odpovězte pomocí SMS s kódem EmF
 * EXTENDED 2 120
@@ -105,6 +109,10 @@ Jiné
    * Odpověď: NSCLIENT RESTART 1 příjemce
 * PUMP
    * Odpověď: Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
+* SMS DISABLE/STOP
+   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+* TARGET MEAL/ACTIVITY/HYPO   
+   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
 
 Poradce při potížích
 =====
