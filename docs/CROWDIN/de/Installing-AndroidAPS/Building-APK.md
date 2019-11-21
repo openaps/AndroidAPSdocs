@@ -7,7 +7,7 @@
 ## Wichtige Hinweise
 
 * Nutze bitte **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
-* [Windows 10 32-bit Systeme](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/) werden von Android Studio 3.5.1 nicht unterstützt.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
 
 ** Konfiguration auf Abruf ** (Configuration on demand) wird von der aktuellen Version des Android-Gradle-Plugins nicht unterstützt!
 
