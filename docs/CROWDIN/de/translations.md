@@ -58,7 +58,7 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
     * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
     * AAPS-.apk Datei \---> #aaps-apk-datei
 
-* Check your link if it is working as intended. If it is linking to a new translated headline you may have to wait until next build to be able to check correct link syntax. In this case do not forget to make a reminder in your calendar / todo app.
+* Prüfe den Link, ob er wie beabsichtigt funktioniert. Wenn es ein Link zu einer neu übersetzten Überschrift ist, musst Du abwarten, bis diese im Wiki erscheint, um dies zu testen. Vergiss nicht, Dir ggf. eine Erinnerung in Deinem Kalender oder Deiner ToDo App einzutragen.
 
 #### Link-Übersetzung in Markdown-Dateien (.md)
 
