@@ -205,9 +205,9 @@ Mygtukai greitesniam pagrindinių funkcijų paleidimui:
 * Ištęstas bolusas (tik DanaR/RS arba Combo pompa)
 * Rezervuaro / kateterio pildymas (tik DanaR/RS arba Combo)
 * Istorija
-* TDD (Total daily dose = bolus + basal per day)
+* BPD (Bendra paros dozė = bolusas + bazė per dieną)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Kai kurie gydytojai rekomenduoja - ypač pradedantiesiems - bazinio ir boluso insulino santykį 50:50. Todėl santykis apskaičiuojamas kaip BPD / 2 * PB (pagrindinė bazė = valandinių bazių suma per 24 valandas). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
