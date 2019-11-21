@@ -7,7 +7,7 @@
 ## ## Důležité poznámky
 
 * Please use **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/) are not supported by Android Studio 3.5.1.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
 
 **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
