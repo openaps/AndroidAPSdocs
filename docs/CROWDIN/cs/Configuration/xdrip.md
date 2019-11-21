@@ -4,7 +4,7 @@ Pokud ho ještě nemáte nastaven, stáhněte si [xDrip+](https://github.com/Nig
 
 Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... nebo 8H... použijte jednu z [nejnovějších nightly builds](https://github.com/NightscoutFoundation/xDrip/releases) verzí.
 
 ## Základní nastavení pro všechny CGM & FGM systémy
 
@@ -16,9 +16,9 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G... or 8H
 
 * Zrušte `Automatické kalibrace` Je-li checkbox `Automatic Calibration` zaškrtnut, aktivujte jednou `Download data`, poté odškrtněte checkbox `Automatic Calibration` na znovu deaktivujte `Download data`. Jinak budou ošetření (sacharidy & inzulín) poslána do Nigtscoutu dvakrát.
 
-* Tap `Extra Options`
+* Zvolte `Extra Options`
 
-* Deactivate `Upload treatments` and `Back-fill data`.
+* Zrušte `Upload treatments` a `Back-fill data`.
    
    **Safety warning : You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
 
