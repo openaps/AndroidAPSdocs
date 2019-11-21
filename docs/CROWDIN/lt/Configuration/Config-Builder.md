@@ -185,26 +185,26 @@ Taip pat galite nustatyti fiksuotus insulino ir angliavandenių įvedimo žingsn
 
 #### Greitojo patarėjo nustatymai
 
-Čia galite sukurti mygtuką konkrečiam standartiniam maistui (angliavandenių ir boluso skaičiavimo metodas), kuris bus rodomas pagrindiniame ekrane. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Čia galite sukurti mygtuką konkrečiam standartiniam maistui (angliavandenių ir boluso skaičiavimo metodas), kuris bus rodomas pagrindiniame ekrane. Tai labai praverčia, jei jūs dažnai valgote tą patį. Jei sukursite keletą standartinių patiekalų ir jiems nustatysite skirtingą laiką, priklausomai nuo dienos laiko pagrindiniame ekrane visada turėsite atitinkamą standartinio patiekalo mygtuką.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Pastaba: mygtukas nebus rodomas už nustatytų laikotarpių ribų bei tuo atveju, jei yra pakankamai insulino (AIO) angliavandenių kiekiui, numatytam mygtuko nustatymuose, padengti.
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Advanced settings
+#### Papildomi nustatymai
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Įjungti super boluso funkciją. Būkite atsargūs ir neaktyvinkite jo tol, kol nesuprasite, ką jis iš tikrųjų daro. Jo esmė ta, kad dviejų būsimų valandų bazinis insulinas pridedamas prie boluso, o bazė dviem valandoms nustatoma ties nuliu. ** AAPS ciklo funkcijos bus išjungtos - naudokite atsargiai! Jei naudosite SMB, AAPS ciklo funkcijos bus išjungtos atsižvelgiant į jūsų nustatymus, pateiktus [ „SMB atitinka valandinės bazės insulino kiekį, kuris gaunamas ne daugiau, kaip per“ ](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to). Jei nenaudosite SMB, ciklas bus išjungtas dviem valandoms. **Norėdami gauti daugiau informacijos apie Superbolusus, skaitykite [ čia ](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-### Actions
+### Veiksmai
 
-Some buttons to quickly access common features:
+Mygtukai greitesniam pagrindinių funkcijų paleidimui:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. basal rate
-* Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
-* History browser
+* Profilio keitimas (profilio perjungimas - daugiau informacijos rasite [Profiliai](../Usage/Profiles.md))
+* Laikinas tikslas
+* Nustatyti / atšaukti laikiną valandinę bazę
+* Ištęstas bolusas (tik DanaR/RS arba Combo pompa)
+* Rezervuaro / kateterio pildymas (tik DanaR/RS arba Combo)
+* Istorija
 * TDD (Total daily dose = bolus + basal per day)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
