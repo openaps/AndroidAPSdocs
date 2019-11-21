@@ -61,6 +61,16 @@ Dies ist ein bekannter Fehler in Android Studio 3.5 und wird wahrscheinlich erst
 2. Definiere als Zielordner (destination folder) den Projekt-Ordner anstelle des App-Ordner - siehe `dieses Video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Ändere den Pfad des Zielordners (destination folder) auf ein neues Verzeichnis.
 
+Unable to start daemon process
+=====
+If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
+
+There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+
+.. image:: ../images/AndroidStudioWin10_32bitError.png
+  :alt: Screenshot Unable to start daemon process
+  
+
 Fehlende CGM-Daten
 =====
 * Falls Du xDrip+ verwendest: Identifiziere den Empfänger wie in den `xDrip+ Einstellungen <../Configuration/xdrip.html#identifiziere-empfanger>`_ beschrieben.
