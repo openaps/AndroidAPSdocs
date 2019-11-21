@@ -19,7 +19,7 @@ Citlivost se počítá stejným způsobem jako v Oref0 variantě, ale můžete z
 
 ### Citlivost váženým průměrem
 
-Citlivost je vypočítaná jako vážený průměr z odchylek. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+Citlivost je vypočítaná jako vážený průměr z odchylek. You can specify time to the past. Novější odchylky mají větší váhu. Minimální absorpce sacharidů se počítá z maximální doby trávení sacharidů z nastavení. Tento algoritmus nejrychleji reaguje na změny citlivosti.
 
 ### Citlivost Oref1
 
