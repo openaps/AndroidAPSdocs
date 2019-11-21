@@ -189,7 +189,7 @@ Taip pat galite nustatyti fiksuotus insulino ir angliavandenių įvedimo žingsn
 
 Pastaba: mygtukas nebus rodomas už nustatytų laikotarpių ribų bei tuo atveju, jei yra pakankamai insulino (AIO) angliavandenių kiekiui, numatytam mygtuko nustatymuose, padengti.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Greitojo patarėjo mygtukas](../images/ConfBuild_QuickWizard.png)
 
 #### Papildomi nustatymai
 
@@ -209,7 +209,7 @@ Mygtukai greitesniam pagrindinių funkcijų paleidimui:
 
 Kai kurie gydytojai rekomenduoja - ypač pradedantiesiems - bazinio ir boluso insulino santykį 50:50. Todėl santykis apskaičiuojamas kaip BPD / 2 * PB (pagrindinė bazė = valandinių bazių suma per 24 valandas). Kiti labiau rekomenduoja, kad PB sudarytų 32–37% nuo BPD. Kaip ir dauguma kitų "normų", tai turi ribotą praktinę reikšmę. Jūsų diabetas gali būti kitoks!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
+![Veiksmų skirtukas](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Priežiūra
 
@@ -219,7 +219,7 @@ Pastaba: ** Insulinas nesuleidžiamas**, o tik įrašomas priežiūros skirtuke 
 
 Į angliavandenius, įvestus per priežiūros skirtuką (pvz.: korekcijai), atsižvelgiama skaičiuojant aktyvius angliavandenius AAO.
 
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Priežiūros skirtukas](../images/ConfBuild_CarePortal.png)
 
 ### SMS komunikatorius
 
@@ -237,7 +237,7 @@ Android Wear laikrodyje galima peržiūrėti AAPS duomenis ir valdyti kai kurias
 
 Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Išmaniojo laikrodžio nustatymai](../images/ConfBuild_Wear.png)
 
 Naudodamiesi skirtuku „Wear“ arba trijų linijų meniu (ekrano viršutiniame kairiajame kampe, jei skirtukas nerodomas), galite
 
@@ -252,7 +252,7 @@ Rodo informaciją apie ciklo būseną xDrip+ ekrane (jei nenaudojate AAPS /[ AAP
 
 Išskleidžiamajame ekrane ir telefono užrakto ekrane rodo dabartinę glikemiją, jos pokytį, dabartinį laikinos bazės procentą, aktyvią bazę vv/val ir profilį, AIO, suskirstytą į boluso ir bazės dedamąsias.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![AAPS valdiklis](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
@@ -272,23 +272,23 @@ Ciklo vykdymas neprisijungus prie interneto, išjungti tarptinklinį ryšį...
 
 Jei norite naudoti tik tam tikrą Wi-Fi tinklą, galite įvesti jo **WiFi SSID **. Keli SSID gali būti atskirti kabliataškiu (kabliataškiais). Laukelyje įveskite tarpą, jei norite ištrinti visus SSID.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Nightscout ryšio nustatymai](../images/ConfBuild_ConnectionSettings.png)
 
 #### Papildomi nustatymai
 
 * Automatiškai atstatyti trūkstamus glikemijos duomenis iš Nightscout
-* Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Generuoti pranešimus apie klaidas. Sukurti klaidų dialogų ir vietinių aliarmų įrašus Nightscout (jie taip pat rodomi Priežiūros skirtuko terapijos dalyje)
+* Įgalinti duomenų perdavimą kitoms programėlėms, kaip xDrip+
+* Tik įkelti į NS (sinchronizacija išjungta)
+* Nėra įkėlimų į NS
+* Vietoje procentinių bazinių dydžių naudoti absoliučius -> Turi būti įjungta, jei norite naudoti [ Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Nightscout išplėstiniai nustatymai](../images/ConfBuild_NSClient_Advanced.png)
 
-### Maintenance
+### Servisas
 
-Email and number of logs to be send. Normally no change necessary.
+El. Pašto adresas ir siunčiamų protokolų skaičius. Paprastai nereikia jokių pakeitimų.
 
-### Config Builder
+### Konfigūracija
 
-Use tab for config builder instead of hamburger menu.
+Vietoj trijų linijų meniu kairėje galite naudoti konfigūratoriaus skirtuką.
