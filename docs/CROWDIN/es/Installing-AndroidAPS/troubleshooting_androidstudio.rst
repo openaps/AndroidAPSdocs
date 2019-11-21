@@ -61,6 +61,16 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
 2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Change apk destination folder (different location).
 
+Unable to start daemon process
+=====
+If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
+
+There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+
+.. image:: ../images/AndroidStudioWin10_32bitError.png
+  :alt: Screenshot Unable to start daemon process
+  
+
 No CGM data
 =====
 * In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
