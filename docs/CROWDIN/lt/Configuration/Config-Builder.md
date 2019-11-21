@@ -274,9 +274,9 @@ Jei norite naudoti tik tam tikrą Wi-Fi tinklą, galite įvesti jo **WiFi SSID *
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
-#### Advanced settings
+#### Papildomi nustatymai
 
-* Auto backfill missing BGs from Nightscout
+* Automatiškai atstatyti trūkstamus glikemijos duomenis iš Nightscout
 * Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
 * Enable local broadcast to other apps like xDrip+
 * NS upload only (sync disabled)
