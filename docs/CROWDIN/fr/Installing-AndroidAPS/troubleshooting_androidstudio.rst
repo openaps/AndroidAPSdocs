@@ -1,5 +1,20 @@
 Troubleshooting Android Studio
 *****
+Lost keystore
+=====
+If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+
+In case you cannot find your old keystore anymore, proceed as follows:
+
+1. `Export settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ on your phone.
+2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
+3. Make sure settings file "AndroidAPS Preferences" is stored safely.
+4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+5. Uninstall previous AAPS version on your phone.
+6. Install new AAPS version on your phone.
+7. `Import settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - if you can't find them on your phone copy them from the external storage.
+8. Keep on looping.
+
 Kotlin compiler warning
 =====
 If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings. 

@@ -128,10 +128,8 @@ Troubleshooting
    :maxdepth: 1
    :glob:
   
-   NS-Client <./Usage/Troubleshooting-NSClient.md>
-   Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pumps <./FGT/Troubleshootingpumps.rst>
-
+   Troubleshooting <./Usage/troubleshooting.rst>
+   
 
 FAQ 
 ------------------------------------------
@@ -142,7 +140,7 @@ FAQ
    FAQ <./Getting-Started/FAQ.md>
 
    
-Glossary
+Terminų žodynas
 ------------------------------------------
 .. toctree::
    :maxdepth: 1

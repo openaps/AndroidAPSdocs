@@ -1,13 +1,13 @@
-# Glossary<table style="width:100%" border=1>
+# Terminų žodynas<table style="width:100%" border=1>
 <tr>
- <th>Term</th>
- <th>Description</th>
- <th>see also</th>
- <th>more details @</th>
+ <th>Terminas</th>
+ <th>Aprašymas</th>
+ <th>Taip pat žiūrėti</th>
+ <th>Išsamiau</th>
 </tr>
 <tr>
  <td>AAPS</td>
- <td>AndroidAPS - artifical pancreas system</td>
+ <td>AndroidAPS - dirbtinės kasos sistema</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -17,7 +17,7 @@
   </td>
   
   <td>
-    advanced meal assist - advanced algorithm to handle carbs
+    išmanusis maisto asistentas - patobulintas algoritmas angliavandeniams tvarkyti
   </td>
   
   <td>
@@ -29,16 +29,16 @@
   </td>
 <tr>
  <td>Android auto</td>
- <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
+ <td>rodyti AAPS pranešimus suderinamose automobilių borto kompiuterių sistemose</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
 </tr>
 </tr>
 <tr>
  <td>APK</td>
- <td>software installation file (Android application package)</td>
+ <td>programinės įrangos įdiegimo failas (Android programų paketas)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Building APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - APK kūrimas</a></td>
 </tr>
 <tr>
  <td>Autosens</td>
@@ -48,145 +48,145 @@
 </tr>
 <tr>
  <td>Azure</td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>debesų kompiuterijos platforma Nightscout duomenims talpinti</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
  <td>BAT</td>
- <td>status light low battery on homescreen</td>
- <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td>išsikraunančios baterijos būsenos indikatorius pagrindiniame ekrane</td>
+ <td>KAT / REZ / SEN</td>
+ <td><a href="../Configuration/Preferences.html#overview">Nuostatos</a><br><a href="../Getting-Started/Screenshots.html">Ekrano vaizdai</a></td>
 </tr>
 <tr>
- <td>BG</td>
- <td>blood glucose</td>
- <td>&nbsp;</td>
- <td>&nbsp;</td>
-</tr>
-<tr>
-<td>BGI</td>
- <td>blood glucose interaction -degree to which BG 'should' be rising or falling based on insulin activity alone</td>
+ <td>KG</td>
+ <td>kraujo glikemija</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td>BG source</td>
- <td>Where do your glucose values come from?</td>
- <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
+<td>KGS</td>
+ <td>kraujo glikemijos sąveika - tikėtinas glikemijos pokytis, pagrįstas vien aktyviu insulinu</td>
+ <td>&nbsp;</td>
+ <td>&nbsp;</td>
+</tr>
+<tr>
+<td>Glikemijos šaltinis</td>
+ <td>Duomenų apie gliukozės kiekį kraujyje šaltinis</td>
+ <td>NGJ / SGJ</td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - glikemijos šaltinis</a></td>
 </tr>
 <tr>
  <td>BlueReader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>Freestyle Libre sensoriaus Bluetooth siųstuvas, naudojamas kaip NGJ</td>
  <td>Blukon Nightreader / MiaoMiao</td>
  <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
 </tr>
 <tr>
  <td>Blukon Nightreader</td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>Freestyle Libre sensoriaus Bluetooth siųstuvas, naudojamas kaip NGJ</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>valandinė bazė</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>CAGE</td>
- <td>canula age - displayed in Nightscout if information was entered in the AAPS careportal tab or through AAPS actions tab 'prime'</td>
+ <td>KAMŽ</td>
+ <td>kateterio amžius - rodomas Nightscout, jei informacija buvo įvesta AAPS skirtuke Priežiūra arba AAPS veiksmų skirtuke "pradinis užpildymas“</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td>CAN</td>
- <td>status light overdue canula change on homescreen</td>
- <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td>pagrindiniame ekrane pateikiamas būsenos indikatorius, kad laiku nepakeistas kateteris</td>
+ <td>BAT / REZ / SEN</td>
+ <td><a href="../Configuration/Preferences.html#overview">Nuostatos</a><br><a href="../Getting-Started/Screenshots.html">Ekrano vaizdai</a></td>
 </tr>
 <tr>
- <td>CGM</td>
- <td>continuous glucose monitor</td>
- <td>&nbsp;</td>
- <td>&nbsp;</td>
-</tr>
-<tr>
- <td>Closed Loop</td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
- <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
-</tr>
-<tr>
- <td>COB</td>
- <td>carbs on board</td>
+ <td>NGJ</td>
+ <td>nuolatinis gliukozės jutiklis</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>DIA</td>
- <td>duration of insulin action</td>
+ <td>Uždaras Ciklas</td>
+ <td>uždaras ciklas - sistema, remdamasi algoritmu, atlieka automatinius bazės pakeitimus, nereikalaudama vartotojo patvirtinimo</td>
+ <td>Atviras Ciklas</td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki uždaras ciklas</a></td>
+</tr>
+<tr>
+ <td>AAO</td>
+ <td>aktyvūs angliavandeniai organizme</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td>&nbsp;</td>
+</tr>
+<tr>
+ <td>IVT</td>
+ <td>insulino veikimo trukmė</td>
+ <td>&nbsp;</td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulino tipai</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>DST</td>
- <td>daylight savings time</td>
+ <td>vasaros / žiemos laikas </td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
 <tr>
- <td>eCarbs</td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
+ <td>iAV</td>
+ <td>„Ištęsti angliavandeniai“ organizme išdalinami per kelias valandas, kai maiste yra daug riebalų / baltymų. <br> Ši funkcija pakeičia ištęstą bolusą, žinomą iš klasikinio pompos naudojimo, kuris netenka prasmės, kai naudojamas uždaras ciklas</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - iAV</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">iAV naudojimo atvejai</a></td>
 </tr>
 <tr>
- <td>FGM</td>
- <td>flash glucose monitor (Freestyle Libre)</td>
+ <td>SGJ</td>
+ <td>skanuojamas gliukozės jutiklis (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - glikemijos šaltinis</a></td>
 </tr>
 <tr>
  <td>git</td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
+ <td>versijos valdymo sistema, skirta kompiuterių failų pokyčių stebėjimui ir darbui su šiais failais koordinuoti <br> -> būtina, kai reikia atnaujinti APK</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - atnaujinti APK</a></td>
 </tr>
 <tr>
- <td>Github</td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>GitHub</td>
+ <td>žiniatinklio versijos valdymo paslauga Git naudotojams<br> - šaltinio kodo saugykla</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/MilosKozak/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td>Glimp</td>
- <td>app to collect values from Freestyle Libre</td>
+ <td>programa duomenų skaitymui iš Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout with Glimp</a> </td>
+ <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout su Glimp</a> </td>
 </tr>
 <tr>
  <td>Heroku</td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>debesų kompiuterijos platforma Nightscout duomenims talpinti</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td>IC (or I:C)</td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td>IA (arba I:A)</td>
+ <td>insulino - angliavandenių santykis (Kiek vienas vienetas insulino dengia angliavandenių?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>IOB</td>
- <td>insulin on board -  insulin active in your body</td>
+ <td>AIO</td>
+ <td>aktyvus insulinas organizme</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>ISF</td>
- <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
+ <td>JIF</td>
+ <td>jautrumo insulinui faktorius - numatomas glikemijos sumažėjimas, sušvirkštus vieną vienetą insulino</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>

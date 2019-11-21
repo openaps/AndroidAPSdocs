@@ -128,10 +128,8 @@ Poradce při potížích
    :maxdepth: 1
    :glob:
   
-   NS-Client <./Usage/Troubleshooting-NSClient.md>
-   Aktualizace <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pumpy <./FGT/Troubleshootingpumps.rst>
-
+   Troubleshooting <./Usage/troubleshooting.rst>
+   
 
 Nejčastější dotazy 
 ------------------------------------------
