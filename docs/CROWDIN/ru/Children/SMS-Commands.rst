@@ -13,12 +13,12 @@ AndroidAPS позволяет контролировать телефон реб
 * Если у вас iPhone для слежения и, следовательно, нет возможности использовать NSclient, доступны дополнительные SMS-команды.
 
 * В настройках Android телефон перейдите в приложения > AndroidAPS > Разрешения и включите SMS
-* В AndroidAPS перейдите в Настройки > SMS Коммуникатор и введите номер телефона(ов), с которых вы хотите отправлять SMS команды (разделенные точками с запятой, без пробелов или других символов - напр. +4412345678; +4412345679), а также включите опцию 'Разрешить удаленные команды с помощью SMS'.
+* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 * Если вы хотите использовать более одного номера:
 
   * Введите только один номер.
   * Убедитесь, что этот телефон работает с алгоритмом путем отправки и подтверждения команды SMS.
-  * Введите дополнительный номер(а), разделяя их точкой с запятой и одним пробелом.
+  * Enter additional number(s) separated by semicolon, no space.
   
     .. изображение:: ../images/SMSCommandsSetupSpace.png
       :alt: Настройка SMS команд
@@ -80,7 +80,11 @@ AndroidAPS позволяет контролировать телефон реб
 * Болюс 1.2
    * Ответ зависит от времени последнего болюса
       * Для подачи болюса 1,2 ед ответьте кодом Rrt
-      * Удаленный болюс недоступен. Повторите позже. (* *Удаленный болюс не допускается в течение 15 минут после последней команды bolus или удаленных команд! **)
+      * Удаленный болюс недоступен. Повторите позже. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)
+* BOLUS 0.60 MEAL
+      * To deliver meal bolus 0.60U reply with code Rrt
+      * Удаленный болюс недоступен. Повторите позже. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)  
+    If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins)
 * EXTENDED STOP/CANCEL
    * Ответ: Для прекращения подачи пролонгированного болюса ответьте кодом EmF
 * EXTENDED 2 120
@@ -105,6 +109,10 @@ AndroidAPS позволяет контролировать телефон реб
    * Ответ: Перезапуск NSCLIENT 1 получатель
 * ПОМПА
    * Ответ: Последнее соед: 1 мин. назад временный базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5U Reserv: 34U Batt: 100
+* SMS DISABLE/STOP
+   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+* TARGET MEAL/ACTIVITY/HYPO   
+   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
 
 Устранение неполадок
 =====
