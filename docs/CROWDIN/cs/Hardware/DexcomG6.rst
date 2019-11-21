@@ -32,7 +32,7 @@ Používáte-li G6 s upravenou Dexcom aplikací
 * Stáhněte si apk z `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, 
 kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi (mg/dl nebo mmol/l).
 
-   * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.5.
+   * Složka 2.3 je pro uživatele AndroidAPS 2.3, složka 2.4 pro uživatele AAPS 2.5.
    * Otevřete https://play.google.com/store/search?q=dexcom%20g6 na svém počítači. Region bude viditelný v adrese URL.
    
    .. image:: ../images/DexcomG6regionURL.PNG
