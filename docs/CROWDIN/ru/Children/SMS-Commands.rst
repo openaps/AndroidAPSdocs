@@ -77,14 +77,15 @@ AndroidAPS позволяет контролировать телефон реб
 
 болюс
 -----
+Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+
 * Болюс 1.2
-   * Ответ зависит от времени последнего болюса
-      * Для подачи болюса 1,2 ед ответьте кодом Rrt
-      * Удаленный болюс недоступен. Повторите позже. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)
+   * Response A: To deliver bolus 1.2U reply with code Rrt
+   * Response B: Remote bolus not available. Повторите позже.
 * BOLUS 0.60 MEAL
-      * To deliver meal bolus 0.60U reply with code Rrt
-      * Удаленный болюс недоступен. Повторите позже. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)  
-    If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins)
+   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
+   * Response A: To deliver meal bolus 0.60U reply with code Rrt
+   * Response B: Remote bolus not available. 
 * EXTENDED STOP/CANCEL
    * Ответ: Для прекращения подачи пролонгированного болюса ответьте кодом EmF
 * EXTENDED 2 120
