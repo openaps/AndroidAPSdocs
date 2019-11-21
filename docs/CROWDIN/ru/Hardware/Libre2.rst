@@ -1,7 +1,7 @@
 Freestyle Libre 2
 **********************
 
-Система Freestyle Libre 2 может автоматически сообщать об опасных уровнях глюкозы в крови. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. При необходимости приемник инициирует оповещение. With a self-modified LibreLink App, you can continuously receive your blood sugar level on your smartphone. As they send them directly via bluetooth to your phone, you won't need to buy a bluetooth adapter like MiaoMiao or blucon anymore. 
+Система Freestyle Libre 2 может автоматически сообщать об опасных уровнях глюкозы в крови. Сенсор Libre2 каждую минуту отправляет текущие значения гликемии на принимающее устройство (ридер или смартфон). При необходимости приемник инициирует оповещение. С помощью модифицированного приложения LibreLink, вы можете непрерывно получать значения ГК на смартфон. Поскольку данные идут напрямую через Bluetooth на телефон, необходимость в покупке таких устройств как MiaoMiao или bluecon отпадает. 
 
 Шаг 1: Создайте свое модифицированное приложение Librelink-App
 ==============
