@@ -156,7 +156,7 @@ Turėtumėte reguliariai[eksportuoti savo nustatymus](../Usage/ExportImportSetti
 
 Norėdami rasti daugiau informacijos, žiūrėkite puslapį [ Tikslai ](../Usage/Objectives.rst).
 
-## Treatments
+## Terapija
 
 Skirtuke Terapija (Terapija) rodomos terapijos, kurios buvo įkeltos į Nightscout. Jei norite taisyti ar ištrinti įrašą (pavyzdžiui, suvalgėte mažiau angliavandenių nei tikėtasi), pasirinkite Pašalinti ir terapijos portalo skirtuko lape įveskite naują vertę (jei reikia, pakeiskite laiką).
 
@@ -172,20 +172,20 @@ Parinktis „Laikyti ekraną įjungtą“ privers Android sistemą nuolat laikyt
 
 #### Mygtukai
 
-Define which Buttons are shown on the home screen.
+Galite nustatyti, kurie mygtukai bus rodomi pradiniame ekrane.
 
-* Treatments
-* Calculator
+* Terapija
+* Skaičiuotuvas
 * Insulinas
-* Carbs
-* CGM (opens xDrip+)
-* Calibration
+* Angliavandeniai
+* NGJ (atsidaro xDrip+)
+* Kalibravimas
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Taip pat galite nustatyti fiksuotus insulino ir angliavandenių įvedimo žingsnius ir nuspręsti, ar prie šių terapijos įrašų reikia rodyti "pastabų" lauką.
 
-#### QuickWizard settings
+#### Greitojo patarėjo nustatymai
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Čia galite sukurti mygtuką konkrečiam standartiniam maistui (angliavandenių ir boluso skaičiavimo metodas), kuris bus rodomas pagrindiniame ekrane. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
 Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
