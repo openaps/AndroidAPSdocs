@@ -6,38 +6,39 @@
 
 ## ## Σημαντικές σημειώσεις
 
-***Σημείωση***: Παρακαλώ χρησιμοποιήστε [το Android Studio Έκδοση 3.5.1](https://developer.android.com/studio/) ή νεότερη έκδοση για να χτίσει το apk.
+* Please use **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/) are not supported by Android Studio 3.5.1.
 
-**Διαμόρφωση της ζήτησης** δεν υποστηρίζεται από την τρέχουσα έκδοση του Android Gradle plugin!
+**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
 
-* Ανοίξτε το παράθυρο "Προτιμήσεις" κάνοντας κλικ στην επιλογή Αρχείο> Ρυθμίσεις (σε Mac, Android Studio> Προτιμήσεις).
-* Στο αριστερό τμήμα του παραθύρου, κάντε κλικ στην επιλογή Δημιουργία, εκτέλεση, ανάπτυξη> μεταγλωττιστής.
-* Καταργήστε την επιλογή του πλαισίου ελέγχου Configure κατα παραγγελία.
-* Κάντε κλικ στην επιλογή Εφάρμοσε ή ΟΚ.
+* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+* In the left pane, click Build, Execution, Deployment > Compiler.
+* Uncheck the Configure on demand checkbox.
+* Click Apply or OK.
 
 * * *
 
 ### Αυτό το άρθρο χωρίζεται σε δύο μέρη.
 
-* Στο τμήμα επισκόπησης υπάρχει μια εξήγηση για τα βήματα που απαιτούνται για τη δημιουργία του αρχείου APK.
-* Στο τμήμα βήμα προς βήμα θα βρείτε τα στιγμιότυπα οθόνης μιας πετυχημένης εγκατάστασης. Επειδή οι εκδόσεις του Android Studio - το περιβάλλον ανάπτυξης λογισμικού που θα χρησιμοποιήσουμε για την κατασκευή του APK - θα αλλάξουν πολύ γρήγορα αυτό δεν θα είναι ταυτόσημο με την εγκατάστασή σας, αλλά θα πρέπει να σας δώσει ένα καλό σημείο εκκίνησης. Το Android Studio τρέχει επίσης σε Windows, Mac OS X και Linux και ενδέχεται να υπάρχουν μικρές διαφορές σε ορισμένες πτυχές μεταξύ κάθε πλατφόρμας. Αν διαπιστώσετε ότι κάτι σημαντικό είναι λάθος ή λείπει, παρακαλούμε ενημερώστε την ομάδα του facebook "AndroidAPS users" ή στο chat Gitter [ Android APS ](https://gitter.im/MilosKozak/AndroidAPS) ή [ AndroidAPSwiki ](https://gitter.im/AndroidAPSwiki/Lobby) ώστε να το κοιτάξουμε.
+* In the overview part there is an explanation on what steps are necessary to build the APK file.
+* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
 ## Μία γενική ιδέα
 
-Γενικά, τα απαραίτητα βήματα για τη δημιουργία του αρχείου APK:
+In general, the steps necessary to build the APK file:
 
 * [Install git](../Installing-AndroidAPS/git-install.rst)
-* Εγκαταστήστε και ρυθμίστε το Android Studio.
-* Χρησιμοποιήστε git για να κλωνοποιήσετε τον πηγαίο κώδικα από το κεντρικό αποθετήριο Github όπου οι προγραμματιστές έχουν βάλει τον πραγματικό κώδικα για την εφαρμογή.
-* Ανοίξτε το κλωνοποιημένο έργο στο Android Studio ως ενεργό έργο.
-* Δημιουργήστε το υπογεγραμμένο APK.
-* Μεταφέρετε το υπογεγραμμένο APK στο smartphone σας.
+* Install and setup Android Studio.
+* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
+* Open the cloned project in Android Studio as active project.
+* Build the signed APK.
+* Transfer the signed APK to your smartphone.
 
 ## Step by step walkthrough
 
-Λεπτομερής περιγραφή των βημάτων που είναι απαραίτητα για τη δημιουργία του αρχείου APK.
+Detailed description of the steps necessary to build the APK file.
 
 ## Εγκαταστήστε το git (αν δεν το έχετε)
 
