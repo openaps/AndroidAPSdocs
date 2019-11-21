@@ -55,7 +55,7 @@ Trūkumai:
 
 Paprastas profilis su vienu laiko bloku, kuriame nustatyta IVT, IA, JIF, bazė ir tikslinė glikemija (t.y., valandinės bazės paros metu nesikeičia). Greičiausiai jis bus naudojamas testavimui, nebent jūsų nustatymai nesikeičia 24 valandas per parą. Pasirinkus „Paprastas profilis“, AAPS pasirodys naujas skirtukas, kuriame galėsite įvesti profilio duomenis.
 
-## Insulin
+## Insulinas
 
 Pasirinkite insulino veikimo kreivės tipą. „Greitai veikiantis Oref“, „Ypač greitas Oref“ ir „Be piko Oref“ parinktys turi eksponentinę formą. Norėdami sužinoti daugiau informacijos, žiūrėkite [ OpenAPS dokumentai ](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). Kreivės skiriasi atsižvelgiant į insulino trukmę ir piko laiką.
 
@@ -87,7 +87,7 @@ Daugeliui žmonių FIASP poveikis beveik nepastebimas po 3–4 valandų, net jei
 
 Šis insulino profilis yra rekomenduojamas, jei naudojamas nepalaikomas insulino tipas arba skirtingų insulinų mišiniai.
 
-## BG Source
+## Glikemijos šaltinis
 
 Pasirinkite pagrindinį glikemijos duomenų šaltinį - daugiau informacijos apie nustatymus ieškokite puslapyje [ Glikemijos šaltinis ](BG-Source.rst).
 
@@ -101,7 +101,7 @@ Pasirinkite pagrindinį glikemijos duomenų šaltinį - daugiau informacijos api
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-## Pump
+## Pompa
 
 Pasirinkite pompą, kurią naudojate.
 
@@ -136,7 +136,7 @@ Pasirinkite norimą APS algoritmą terapijos koregavimui. Išsamią informaciją
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super mikro bolusas, naujausias algoritmas patyrusiems vartotojams)  
     Pastaba: jūs turite būti[ 10-ame tiksle ](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)norint naudoti OpenAPS SMB ir min_5m_carbimpact turi būti nustatyti į 8 Konfigūracijos generatorius> Jautrumo aptikimas> Jautrumo Oref1 nustatymai.
 
-## Loop
+## Ciklas
 
 Čia galite nustatyti, ar norite leisti automatinį AAPS valdymą, ar ne.
 
@@ -176,7 +176,7 @@ Define which Buttons are shown on the home screen.
 
 * Treatments
 * Calculator
-* Insulin
+* Insulinas
 * Carbs
 * CGM (opens xDrip+)
 * Calibration
