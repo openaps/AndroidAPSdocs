@@ -112,7 +112,7 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
    * Ответ: Последнее соед: 1 мин. назад временный базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5U Reserv: 34U Batt: 100
 * SMS DISABLE/STOP
    * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
-* TARGET MEAL/ACTIVITY/HYPO   
+* ЦЕЛЬ ПРИЕМ ПИЩИ/НАГРУЗКА/ГИПО MEAL/ACTIVITY/HYPO   
    * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
 
 Устранение неполадок
