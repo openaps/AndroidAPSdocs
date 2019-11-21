@@ -73,7 +73,7 @@ Enables you to administer a bolus (normally you would use the Calculator button 
 
 ## The Calculator
 
-![Calculator](../images/Screenshot_Bolus_calculator.png)
+![Skaičiuotuvas](../images/Screenshot_Bolus_calculator.png)
 
 When you want to make a meal bolus this is where you will normally make it from.
 
