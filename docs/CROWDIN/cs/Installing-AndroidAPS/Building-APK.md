@@ -6,38 +6,39 @@
 
 ## ## Důležité poznámky
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+* Please use **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/) are not supported by Android Studio 3.5.1.
 
 **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
-* Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
-* V levé části pak na Build, Execution, Deployment > Compiler.
-* Zrušte označení možnosti Configure on demand.
-* Klepněte na tlačítko použít nebo OK.
+* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+* In the left pane, click Build, Execution, Deployment > Compiler.
+* Uncheck the Configure on demand checkbox.
+* Click Apply or OK.
 
 * * *
 
 ### Tento článek je rozdělený do dvou částí.
 
-* V části Přehled najdete vysvětlení, které kroky jsou obecně nutné, abyste sestavili soubor APK.
-* V části Průvodce krok za krokem najdete snímky obrazovky z konkrétní instalace. Jelikož se Android Studio (vývojové prostředí, které použijeme k sestavení APK) v čase mění velmi rychle, nebudou snímky úplně shodné s vaší instalací, ale určitě vám poskytnou dobrý záchytný bod. Android studio běží na Windows, Linuxu a Mac OS X, a proto mohou být na různých platformách malé rozdíly. Jestliže najdete něco zásadního, co je špatně, nebo vám něco chybí, prosím informujte o tom facebookovou skupinu „AndroidAPS users“ nebo použijte Gitter chat [Android APS](https://gitter.im/MilosKozak/AndroidAPS) nebo [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby), abychom se na to mohli podívat.
+* In the overview part there is an explanation on what steps are necessary to build the APK file.
+* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
 ## Přehled
 
-Následují obecné kroky k sestavení souboru APK:
+In general, the steps necessary to build the APK file:
 
 * [Install git](../Installing-AndroidAPS/git-install.rst)
-* Nainstalujte a nastavte Android Studio.
-* Použijte git, abyste si naklonovali zdrojové kódy z centrálního úložiště na Githubu, kam vývojáři umístili poslední zdrojové kódy aplikace.
-* Otevřete naklonovaný projekt v Android Studiu jako aktivní projekt.
-* Sestavete podepsané APK.
-* Přeneste podepsané APK do svého telefonu.
+* Install and setup Android Studio.
+* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
+* Open the cloned project in Android Studio as active project.
+* Build the signed APK.
+* Transfer the signed APK to your smartphone.
 
 ## Step by step walkthrough
 
-Následuje detailní popis kroků nutných k sestavení souboru APK.
+Detailed description of the steps necessary to build the APK file.
 
 ## Nainstalujte git (pokud ho ještě nemáte)
 
