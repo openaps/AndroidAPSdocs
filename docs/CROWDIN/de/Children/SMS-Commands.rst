@@ -13,12 +13,12 @@ Funktionsweise
 * Falls Du als Follower ein iPhone verwendest und daher NSclient nicht nutzen kannst, gibt es weitere SMS-Befehle.
 
 * Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+* In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolon ohne Leerzeichen getrennt (z.B.  +4912345678;+4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden.
 * Wenn Du mehr als eine Nummer verwenden möchtest:
 
   * Gib nur eine der Telefonnummern ein.
   * Führe einen SMS-Befehl aus um sicher zu stellen, dass die Kommandos mit dieser Telefonnummer funktionieren.
-  * Enter additional number(s) separated by semicolon, no space.
+  * Gib die zusätzliche(n) Telefonnummer(n) getrennt durch Semikolon ohne Leerzeichen ein.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
       :alt: SMS-Befehle einrichten
@@ -77,14 +77,15 @@ Basal
 
 Bolus
 -----
+Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAPS oder nach dem letzten SMS-Befehl nicht möglich. Den Wert kannst Du nur anpassen, wenn mind. zwei Rufnummern eingetragen sind. Die Antwort hängt daher davon ab, wann der letzte Bolus abgegeben wurde.
+
 * BOLUS 1.2
-   * Die Antwort hängt davon ab, wann der letzte Bolus abgegeben wurde.
-      * Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code Rrt
-      * Ferngesteuerter Bolus ist nicht verfügbar. Versuch es später nochmal. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)
+   * Antwort A: Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code Rrt
+   * Antwort B: Ferngesteuerter Bolus ist nicht verfügbar. Versuch es später nochmal.
 * BOLUS 0.60 MEAL
-      * To deliver meal bolus 0.60U reply with code Rrt
-      * Ferngesteuerter Bolus ist nicht verfügbar. Versuch es später nochmal. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)  
-    If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins)
+   * Mit dem optionalen Parameter MEAL wird ein Mahlzeiten TT gesetzt (Standardwerte sind 90 mg/dL / 5.0 mmol/L für 45 Minuten).
+   * Antwort A: Um einen Bolus von 0,6 IE abzugeben, antworte mit dem Code Rrt
+   * Antwort B: Ferngesteuerter Bolus ist nicht verfügbar. 
 * EXTENDED STOP/CANCEL
    * Antwort: Antworte mit dem Code EmF, um den erweiterten Bolus zu beenden
 * EXTENDED 2 120
@@ -110,9 +111,9 @@ Andere
 * PUMP
    * Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 * SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+   * Antwort: Um den SMS Remote Service zu deaktivieren, antworte mit dem Code Any. Beachte, dass Du die Fernsteuerung nur am AAPS Master-Smartphone wieder aktivieren kannst.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+   * Antwort: Um ein MEAL/ACTIVITY/HYPO TT zu setzen, antwort mit dem Code Any.
 
 Problembehandlung
 =====
