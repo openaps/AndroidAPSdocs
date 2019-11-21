@@ -95,7 +95,7 @@ Chcete-li to provést, proveďte na svém smartphonu následující kroky:
 3. [Nakonfigurujte AndroidAPS ](../Configuration/Config-Builder.md) podle svých potřeb pomocí průvodce nastavením nebo ručně
 4. V tomto vzorovém nastavení jsme (mimo jiné) použili
 
-* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* Zdroj glykémie: `Dexcom G5 App (upravená)` -- zapněte `Nahrávat glykémie do NS` a `Posílat glykémie do xDrip+` (Více [Zdroj glykémií ](../Configuration/BG-Source.rst))
 
 ![Nastavení G5](../images/SampleSetupG5Settings.png)
 
@@ -115,7 +115,7 @@ xDrip+ je další vyspělá open source aplikace, která nabízí bezpočet mož
     * Nastavení > Komunikace mezi aplikacemi > Přijímat kalibrace > `ZAP`
     * Menu > Spustit senzor (je pouze „pro forma“ a nemá nic společného s běžícím senzorem G5. (To je nezbytné, jinak se bude pravidelně objevovat chybová zpráva.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+Další informace o aplikaci xDrip+ viz zde [stránka Zdroj glykémií](../Configuration/BG-Source.rst).
 
 ### Příklad nastavení výstrahy
 
