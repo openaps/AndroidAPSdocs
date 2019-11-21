@@ -207,70 +207,70 @@ Mygtukai greitesniam pagrindinių funkcijų paleidimui:
 * Istorija
 * BPD (Bendra paros dozė = bolusas + bazė per dieną)
 
-Kai kurie gydytojai rekomenduoja - ypač pradedantiesiems - bazinio ir boluso insulino santykį 50:50. Todėl santykis apskaičiuojamas kaip BPD / 2 * PB (pagrindinė bazė = valandinių bazių suma per 24 valandas). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Kai kurie gydytojai rekomenduoja - ypač pradedantiesiems - bazinio ir boluso insulino santykį 50:50. Todėl santykis apskaičiuojamas kaip BPD / 2 * PB (pagrindinė bazė = valandinių bazių suma per 24 valandas). Kiti labiau rekomenduoja, kad PB sudarytų 32–37% nuo BPD. Kaip ir dauguma kitų "normų", tai turi ribotą praktinę reikšmę. Jūsų diabetas gali būti kitoks!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
-### Careportal
+### Priežiūra
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+Priežiūros skirtuke galite kurti įrašus apie įvairius jūsų diabeto terapijos įvykius, be to čia rodomas sensoriaus, insulino rezervuaro, kateterio ir pompos baterijos amžius.
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Pastaba: ** Insulinas nesuleidžiamas**, o tik įrašomas priežiūros skirtuke (pvz.: maisto bolusas, korekcija...)
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Į angliavandenius, įvestus per priežiūros skirtuką (pvz.: korekcijai), atsižvelgiama skaičiuojant aktyvius angliavandenius AAO.
 
 ![Careportal tab](../images/ConfBuild_CarePortal.png)
 
-### SMS Communicator
+### SMS komunikatorius
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Leidžia nuotoliniu būdu valdyti kai kurias AndroidAPS funkcijas SMS žinutėmis, daugiau informacijos apie konfigūraciją žr. [ SMS komandos ](../Children/SMS-Commands.rst).
 
-### Food
+### Maistas
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Parodo iš anksto nustatytus maisto ruošinius, apibrėžtus Nightscout duomenų bazėje, daugiau informacijos apie parinktis žr. [ Nightscout ](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Pastaba: įrašų negalima naudoti AndroidAPS skaičiuotuve. (Tik peržiūra)
 
-### Wear
+### Išmanieji laikrodžiai
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Android Wear laikrodyje galima peržiūrėti AAPS duomenis ir valdyti kai kurias funkcijas (žr. [ Laikrodžiai](../Configuration/Watchfaces.md)). Nustatymuose (krumpliaračio piktograma) galite nustatyti kintamuosius, į kuriuos reikia atsižvelgti apskaičiuojant bolusą naudojant laikrodį (pavyzdžiui, 15 min. tendencija, AAO...).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
 
 ![Wear settings](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Naudodamiesi skirtuku „Wear“ arba trijų linijų meniu (ekrano viršutiniame kairiajame kampe, jei skirtukas nerodomas), galite
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Pakartotinai siųsti visus duomenis. Gali būti naudinga, jei žiūrėti nebuvo prijungtas šiek tiek laiko ir norite stumti informaciją žiūrėti.
+* Atidaryti laikrodžio nustatymus tiesiai iš savo telefono.
 
-### xDrip Statusline (watch)
+### xdrip būsenos juosta (laikrodyje)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Rodo informaciją apie ciklo būseną xDrip+ ekrane (jei nenaudojate AAPS /[ AAPSv2 laikrodžio ekrano](../Configuration/Watchfaces.md))
 
-### Ongoing Notification
+### Nuolatinis pranešimas
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+Išskleidžiamajame ekrane ir telefono užrakto ekrane rodo dabartinę glikemiją, jos pokytį, dabartinį laikinos bazės procentą, aktyvią bazę vv/val ir profilį, AIO, suskirstytą į boluso ir bazės dedamąsias.
 
 ![AAPS widget](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
-Setup sync of your AndroidAPS data with Nightscout.
+AndroidAPS duomenų sinchronizavimo su Nightscout nustatymai.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
+Jei įjungsite ** Programos paleisties registravimas Nightscout **, kiekvienas AndroidAPS paleidimas iš naujo bus matomas Nightscout. Tai gali padėti aptikti programos problemas (pvz., AAPS programai nėra išjungtas akumuliatoriaus taupymo režimas), bet taip pat apkrauna Nightscout kreives įrašais.
 
-#### Alarm options
+#### Aliarmų nustatymai
 
-Activate/deactivate AndroidAPS alarms
+Įjungia / išjungia AndroidAPS signalus
 
-![Alarm options](../images/ConfBuild_NSClient_Alarms.png)
+![Aliarmų nustatymai](../images/ConfBuild_NSClient_Alarms.png)
 
-#### Connection settings
+#### Ryšio nustatymai
 
-Offline looping, disable roaming...
+Ciklo vykdymas neprisijungus prie interneto, išjungti tarptinklinį ryšį...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Jei norite naudoti tik tam tikrą Wi-Fi tinklą, galite įvesti jo **WiFi SSID **. Keli SSID gali būti atskirti kabliataškiu (kabliataškiais). Laukelyje įveskite tarpą, jei norite ištrinti visus SSID.
 
 ![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
 
