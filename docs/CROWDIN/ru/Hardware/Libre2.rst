@@ -15,11 +15,11 @@ Freestyle Libre 2
 .. изображение:: ../images/fsl2pic1.jpg
   :alt: LibreLink Служба переднего плана
 
-This significantly improves the connection stability compared to the original app. Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and timezone and set at least one alarm in the patched app. 
+Это значительно повышает стабильность соединения по сравнению с исходным приложением. Убедитесь, что NFC активирована, дайте новому приложению разрешения на память и геолокацию, включите автоматическое время и часовой пояс и задайте хотя бы одно оповещение. 
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Следуйте инструкциям. Сенсор запоминает устройство, с которого он был запущен. Только это устройство может получать оповещения в будущем.
+Теперь запустите датчик Libre2 при помощи модифицированного приложения, просто сканируя сенсор. Следуйте инструкциям. Сенсор запоминает устройство, с которого он был запущен. Только это устройство может получать оповещения в будущем.
 
-Mandatory settings for successful sensor start: 
+Обязательные параметры для успешного запуска сенсора: 
 
 * NFC enabled / BT enabled
 * разрешение на доступ к памяти дано 
