@@ -80,7 +80,11 @@ Bolus
 * BOLUS 1.2
    * Response depends time last bolus was given
       * To deliver bolus 1.2U reply with code Rrt
-      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min after last bolus command or remote commands!**)
+      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)
+* BOLUS 0.60 MEAL
+      * To deliver meal bolus 0.60U reply with code Rrt
+      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands!**)  
+    If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins)
 * EXTENDED STOP/CANCEL
    * Response: To stop extended bolus reply with code EmF
 * EXTENDED 2 120
@@ -105,6 +109,10 @@ Other
    * Response: NSCLIENT RESTART 1 receivers
 * PUMP
    * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+* SMS DISABLE/STOP
+   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+* TARGET MEAL/ACTIVITY/HYPO   
+   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
 
 Troubleshooting
 =====
