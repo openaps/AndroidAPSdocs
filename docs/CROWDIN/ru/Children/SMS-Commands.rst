@@ -13,12 +13,12 @@ AndroidAPS позволяет контролировать телефон реб
 * Если у вас iPhone для слежения и, следовательно, нет возможности использовать NSclient, доступны дополнительные SMS-команды.
 
 * В настройках Android телефон перейдите в приложения > AndroidAPS > Разрешения и включите SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+* В AndroidAPS перейдите в Настройки > SMS коммуникатор и введите номер телефона, от которого вы сможете получать SMS команды (разделенные точками с запятыми), т.е. +4412345678;+4412345679), а также включите опцию 'Разрешить удаленные команды с помощью СМС'.
 * Если вы хотите использовать более одного номера:
 
   * Введите только один номер.
   * Убедитесь, что этот телефон работает с алгоритмом путем отправки и подтверждения команды SMS.
-  * Enter additional number(s) separated by semicolon, no space.
+  * Введите дополнительные номера, разделенные точкой с запятой, без пробела.
   
     .. изображение:: ../images/SMSCommandsSetupSpace.png
       :alt: Настройка SMS команд
@@ -77,15 +77,15 @@ AndroidAPS позволяет контролировать телефон реб
 
 болюс
 -----
-Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+Удаленный болюс не допускается в пределах 15 минут -значение редактируемое только в том случае, если добавлено 2 номера телефонов-после последней команды болюс или удаленных команд! * Поэтому ответ зависит от времени последнего болюса.
 
 * Болюс 1.2
-   * Response A: To deliver bolus 1.2U reply with code Rrt
-   * Response B: Remote bolus not available. Повторите позже.
-* BOLUS 0.60 MEAL
-   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
-   * Response A: To deliver meal bolus 0.60U reply with code Rrt
-   * Response B: Remote bolus not available. 
+   *Ответ А: Для подачи болюса 1,2 ед ответьте кодом Rrt
+   * Ответ B: Удаленный болюс недоступен. Повторите позже.
+* БОЛЮС на 0.60 ЕДЫ
+   * Если вы зададите необязательный параметр прием пищи MEAL, то будет задано значение временная цель прием пищи MEAL (значения по умолчанию: 90 мг/дл, 5,0 ммоль/л на 45 мин).
+   *Ответ А: Для подачи болюса 0,6 ед на еду ответьте кодом Rrt
+   * Ответ B: Удаленный болюс недоступен. 
 * EXTENDED STOP/CANCEL
    * Ответ: Для прекращения подачи пролонгированного болюса ответьте кодом EmF
 * EXTENDED 2 120
@@ -110,10 +110,10 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
    * Ответ: Перезапуск NSCLIENT 1 получатель
 * ПОМПА
    * Ответ: Последнее соед: 1 мин. назад временный базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5U Reserv: 34U Batt: 100
-* SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+* ОТКЛЮЧИТЬ/ОСТАНОВИТЬ СМС
+   * Ответ: Чтобы отключить удаленную службу SMS ответьте кодом Any. Имей в виду, что вы сможете его повторно активировать только непосредственно с главного смартфона AAPS.
 * ЦЕЛЬ ПРИЕМ ПИЩИ/НАГРУЗКА/ГИПО MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+   * Ответ: Чтобы установить временную цель MEAL/ACTIVITY/HYPO ответьте кодом Any
 
 Устранение неполадок
 =====
