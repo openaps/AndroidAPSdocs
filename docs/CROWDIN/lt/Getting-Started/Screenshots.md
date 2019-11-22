@@ -2,7 +2,7 @@
 
 ## Pradžios ekranas
 
-![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
+![Pradžios ekranas V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
 
 Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa svarbiausia informacija.
 
@@ -12,7 +12,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 ### Sritis B
 
-* pakeisti ciklo būseną (atviras ciklas, uždaras ciklas, ciklo sustabdymas ir kt.)
+* leidžia pakeisti ciklo būseną (atviras ciklas, uždaras ciklas, ciklo sustabdymas ir kt.)
 * peržiūrėti dabartinį profilį ir atlikti [profilio perjungimą](../Usage/Profiles.md)
 * peržiūrėti esamą glikemijos tikslą ir nustatyti [laikiną tikslą](../Usage/temptarget.md).
 
@@ -20,7 +20,7 @@ Palaikykite ilgai prispaudę bet kurį mygtuką, jei norite pakeisti nustatymus.
 
 ### Sritis C
 
-* naujausi glikemijos duomenys, pateikti NGJ
+* rodomi naujausi glikemijos duomenys, pateikti NGJ
 * laikas nuo paskutinio duomenų gavimo
 * pokyčiai per paskutines 15 ir 40 minučių
 * dabartinė valandinė bazė, įskaitant visus sistemos nustatytos laikinos bazės (LB) duomenis
@@ -37,7 +37,7 @@ Paspauskite mažą rodyklę D srities dešinėje pusėje ir pasirinkite, kokią 
 
 ### Sritis E
 
-Rodoma Jūsų sensoriaus (NGJ) pateikiama kraujo gliukozės kiekio (KG) kreivė bei Nightscout perspėjimai, kaip kalibracijos ar įvesti angliavandeniai.
+Rodoma Jūsų sensoriaus (NGJ) pateikiama kraujo gliukozės kiekio (KG) kreivė bei Nightscout perspėjimai, pvz.: kalibracijos ar įvesti angliavandeniai.
 
 Ilgai paspaudę ant grafiko, galite pakeisti laiko skalę. Galite matyti 6, 8, 12, 18 ar 24 val. duomenis.
 
@@ -103,7 +103,7 @@ Jei norite suleisti bolusą papildomam maistui, kurį valgėte tuoj po jau įves
 
 ### Neteisingo AAO kiekio nustatymas
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![Lėtas angliavandenių įsisavinimas](../images/Calculator_SlowCarbAbsorbtion.png)
 
 Jei pasinaudoję skaičiuotuvu matote tokį perspėjimą, reiškia sistema nustatė galimai klaidingą AAO kiekį. Todėl suleisdami papildomą bolusą rizikuojate perdozuoti! Išsamesnės informacijos ieškokite [AAO apskaičiavimo puslapyje](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
@@ -149,22 +149,22 @@ AndroidAPS gali veikti įvairių profilių nustatymų pagrindu. Dažnai (kaip pa
 
 **JIF:** jautrumo insulinui faktorius - tai skaičius, kuris parodo, kiek mmol/l sumažina kraujo gliukozę suleistas 1 V insulino.
 
-**Basal:** is the basal profile programmed into your pump.
+**Valandinė bazė:** tai bazės profilis Jūsų pompoje.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**Tikslas:** tai glikemijos vertė, kurios algoritmas sieks visą laiką. Jūs galite nustatyti skirtingus tikslus skirtingiems paros laikotarpiams. Jūs taip pat galite nustatyti tikslinį diapazoną, tačiau tada algoritmas atliks pakeitimus tik tada, kai prognozė rodys, kad glikemija "išeis" iš numatytų ribų. Tokiu atveju sistema reaguos žymiai vangiau ir Jums bus sunkiau pasiekti stabilią glikemiją.
 
-## Treatment, xDrip, NSClient
+## Terapija, xDrip, NSClient
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+Čia rasite paprastus įrašus apie terapiją (bolusus ir angliavandenius), xDrip žinutes ir pranešimus, nusiųstus į Nightscout per įdiegtą Nightscout Client. Įprastai Jūs neturėtumėte rūpintis šiais įrašais, nebent iškyla nenumatyta problema.
 
-## Config Builder
+## Konfigūracija
 
 ![Konfigūracija](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+Čia Jūs konfigūruosite savo AndroidAPS. Pavyzdyje matote įprastą derinį, kai naudojama Combo pompa, Dexcom G5 su xDrip+, NovoRapid insulinas su Oref profiliu ir duomenų perdavimas į Nightscout debesijos serverį.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+Pažymėti laukeliai dešinėje reiškia, kad tam tikras modulis bus rodomas viršutinėje meniu eilutėje (žr. Pradžios ekrano A sritis), o dantračio simbolis leidžia patekti į konkretaus modulio nustatymus, jei tokie yra.
 
-## Settings and Preferences
+## Parametrai ir Nustatymai
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+Dešiniajame viršutiniame kampe rasite tris vertikalius taškus. Paspaudę pateksite į programos parametrų, istorijos peržiūros, sąrankos vedlio, programos informacijos pasirinkimus bei rasite mygtuką "išeiti", kuris uždaro AAPS programą.
