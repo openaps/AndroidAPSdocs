@@ -39,14 +39,15 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet oder 8H... verwe
 ### Identifiziere Empfänger
 
 * Bei einigen Anwendern kam es zu Problemen im Flugmodus. AAPS empfing keine BZ-Werte von xDrip+. Gehe zu Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gebe `info.nightscout.androidaps` ein.
-* Achtung: Die Auto-Korrektur neigt manchmal dazu, das i von ino in einen Großbuchstaben zu ändern. Du **darfst nur Kleinbuchstaben** verwenden, wenn Du ` info.nightscout.androidaps ` eingibst. Ein groß geschriebenes I würde dazu führen, dass AAPS keine BZ-Werte von xDrip empfangen kann.
+* Achtung: Die Auto-Korrektur neigt manchmal dazu, das i von info in einen Großbuchstaben zu ändern. Du **darfst nur Kleinbuchstaben** verwenden, wenn Du ` info.nightscout.androidaps ` eingibst. Ein groß geschriebenes I würde dazu führen, dass AAPS keine BZ-Werte von xDrip empfangen kann.
    
    ![xDrip+ Basic Inter-App Einstellungen Identifiziere Empfänger](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ mit Dexcom G6
 
-* Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
-* Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die [gepatchte Dexcom App](../Hardware/DexcomG6#g6-mit-der-gepatchten-dexcom-app) mit lokaler Datenübertragung zu xDrip+ verwenden.
+* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
+* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
+* If you need Clarity and want to profit from xDrip+ alarms use the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) with local broadcast to xDrip+.
 
 ### xDrip+ Version abhängig von der G6 Transmitter Seriennummer
 
@@ -158,7 +159,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende e
 * Benutze den Sprachbefehl: “hard reset transmitter”
 * Beim nächsten Dateneingang vom Transmitter wird der Reset durchgeführt.
 * Beobachte im Systemstatus (Hamburgermenü links oben -> Systemstatus) was passiert.
-* Wenn aud dem zweiten Statusbildschirm der Hinweis "Phone Service State: Hard Reset maybe failed" angezeigt wird, kannst Du trotzdem einfach den Sensor starten. Danach sollte diese Meldung verschwinden.
+* Wenn auf dem zweiten Statusbildschirm der Hinweis "Phone Service State: Hard Reset maybe failed" angezeigt wird, kannst Du trotzdem einfach den Sensor starten. Danach sollte diese Meldung verschwinden.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
@@ -196,7 +197,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende e
 * Benutze den Source Wizard Button. Damit wird sicher gestellt, dass Du die Standardeinstellungen inkl. OB1 & Native Mode verwendest. 
    * Du wirst durch die Grundeinstellungen geführt.
    * Wenn Du den Transmitter zum ersten Mal verbindest, benötigst Du die Transmitter-Seriennummer.
-* Gib die Seriennnummer des neuen Transmitters ein. Achte darauf, 0 (Null) und O (Großbuchstabe o) korrekt auseinander zu halten.
+* Gib die Seriennummer des neuen Transmitters ein. Achte darauf, 0 (Null) und O (Großbuchstabe o) korrekt auseinander zu halten.
 * Setze den neuen Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
 * Setze den Transmitter in die Aufnahme des Sensors - **starte den Sensor aber nicht sofort!**
 * Die neuen "Firefly Transmitter" (Seriennr. beginnt mit 8G oder 8H) können nur im "nativ mode" verwendet werden.
@@ -261,7 +262,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende e
 * Gib die Zeit an, zu der der Sensor gesetzt wurde
    
    * Um den G6 im "native mode" zu nutzen, musst Du die 2-Stunden-Aufwärmzeit abwarten.
-   * Wenn Du den xDrip+ Algorithmus verwendest, kannst Du eine Setzzeit von mehr als zwei Stunden in der Vergangenheit setzen, um die Aufwärmphase zu umgehen. Die angeziegten Werte können dann aber recht fehlerhaft sein. Deshalb wird dies nicht empfohlen.
+   * Wenn Du den xDrip+ Algorithmus verwendest, kannst Du eine Setzzeit von mehr als zwei Stunden in der Vergangenheit setzen, um die Aufwärmphase zu umgehen. Die angezeigten Werte können dann aber recht fehlerhaft sein. Deshalb wird dies nicht empfohlen.
 * Gib den Sensorcode ein. Diesen findest Du auf der Abdeckfolie des Sensorpflasters. 
    * Bewahre diesen Code für künftige Nutzung auf (z.B. für einen Neustart nach Tausch des Transmitters).
    * Der Code ist auch in den [xDrip+ Logs](../Configuration/xdrip#retrieve-sensor-code) zu finden: Klicke auf das 3-Punkte-Menü rechts oben auf dem xDrip+ Startbildschirm und wähle `Log anzeigen`.
