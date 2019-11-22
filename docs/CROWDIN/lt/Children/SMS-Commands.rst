@@ -91,7 +91,7 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
 * EXTENDED 2 120
    * Response: To start extended bolus 2U for 120 min reply with code EmF
 
-Profile
+Profilis
 -----
 * PROFILE STATUS
    * Response: Profile1
