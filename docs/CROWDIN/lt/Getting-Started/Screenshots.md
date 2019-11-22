@@ -1,35 +1,35 @@
-# AndroidAPS screens
+# AndroidAPS ekranai
 
-## The Homescreen
+## Pradžios ekranas
 
 ![Homescreen V2.5](../images/Screenshot_Home_screen_V2_5_1.png)
 
-This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
+Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa svarbiausia informacija.
 
-### Section A
+### Skyrius A
 
-* navigate between the various AndroidAPS modules by swiping left or right
+* leidžia naviguoti tarp skirtingų AndroidAPS modulių braukiant į kairę arba dešinę
 
-### Section B
+### Skyrius B
 
-* change the loop status (open loop, closed loop, suspend loop etc)
-* see your current profile and do a [profile switch](../Usage/Profiles.md)
-* see your current target blood glucose level and set a [temporary target](../Usage/temptarget.md).
+* pakeisti ciklo būseną (atviras ciklas, uždaras ciklas, ciklo sustabdymas ir kt.)
+* peržiūrėti dabartinį profilį ir atlikti [profilio perjungimą](../Usage/Profiles.md)
+* peržiūrėti esamą glikemijos tikslą ir nustatyti [laikiną tikslą](../Usage/temptarget.md).
 
-Long press on any of the buttons to alter the setting. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
+Palaikykite ilgai prispaudę bet kurį mygtuką, jei norite pakeisti nustatymus. Pvz.: palaikykite ilgai prispaudę tikslo laukelį (nuotraukoje "100"), jei norite nustatyti laikiną tikslą.
 
-### Section C
+### Skyrius C
 
-* latest blood glucose reading from your CGM
-* how long ago it was read
-* changes in the last 15 and 40 minutes
-* your current basal rate - including any temporary basal rate (TBR) programmed by the system
-* insulin on board (IOB)
-* carbs on board (COB)
+* naujausi glikemijos duomenys, pateikti NGJ
+* laikas nuo paskutinio duomenų gavimo
+* pokyčiai per paskutines 15 ir 40 minučių
+* dabartinė valandinė bazė, įskaitant visus sistemos nustatytos laikinos bazės (LB) duomenis
+* aktyvus insulinas organizme (AIO)
+* aktyvūs angliavandeniai organizme (AAO)
 
-The optional [status lights](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) give a visual warning for low reservoir and battery level as well as overdue site change.
+Pasirinktiniai [spalvoti indikatoriai](../Configuration/Preferences#overview) (KAT | INS | REZ | SEN | BAT) suteikia vizualinę informaciją ir perspėjimus apie kateterio ir insulino naudojimo laiką, senkantį rezervuarą, sensoriaus ar baterijos naudojimo trukmę.
 
-The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
+Aktyvaus insulino organizme kiekis yra nulis, jei naudojama tik standartinė bazė ir nėra bolusų insulino. Skaičiai laužtiniuose skliaustuose rodo, kiek aktyvaus insulino yra iš buvusių bolusų ir kiek - iš bazės pakeitimų, kuriuose atliko AAPS. Antras skaičius gali būti su minuso ženklu, jei kurį laiką sistema bazę mažino arba buvo išjungusi.
 
 ### Section D
 
@@ -77,17 +77,17 @@ Enables you to administer a bolus (normally you would use the Calculator button 
 
 When you want to make a meal bolus this is where you will normally make it from.
 
-### Section A
+### Skyrius A
 
 contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
 SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
 
-### Section B
+### Skyrius B
 
 shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
-### Section C
+### Skyrius C
 
 shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
