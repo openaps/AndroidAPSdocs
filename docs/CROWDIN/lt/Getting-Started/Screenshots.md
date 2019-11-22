@@ -58,48 +58,48 @@ Jei pasirinkote, taip pat matysite gliukozės kitimo prognozės kreives.
 
 Šią sritį galite keisti naudodamiesi D srities pasirinkimais.
 
-* **Insulin On Board** (blue chart): It shows the insulin you have on board. If there were no TBRs, SMBs and no remaining boluses this would be zero. Decaying depends on your DIA and insulin profile settings. 
-* **Carbs On Board** (orange chart): It shows the carbs you have on board. Decaying depends on the deviations the algorithm detects. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* **Aktyvus insulinas organizme** (mėlynas grafikas): rodo, kiek aktyvaus organizmo yra Jūsų organizme. Jei nebuvo laikinų bazių, SMB ir bolusų, AIO yra lygus nuliui. AIO nykimas priklauso nuo IVT ir insulino profilio nustatymų. 
+* **Aktyvūs angliavandeniai organizme** (oranžinis grafikas): rodo, kiek Jūsų organizme yra dar aktyvių angliavandenių. Jų nykimas priklauso nuo algoritmo apskaičiuotų nuokrypių (deviacijų). Kai nustatoma didesnė angliavandenių įtaka, nei tikėtasi, sistema suleis daugiau insulino ir AIO padidės (kaip labai padidės priklauso nuo Jūsų saugumo nustatymų). 
 * **Nuokrypiai**: 
-   * **GREY** bars show a deviation due to carbs. 
-   * **GREEN** bars show that BG is higher than the algorithm expected it to be. 
-   * **RED** bars show that BG is lower than the algorithm expected.
-* **Sensitivity** (white line): It shows the sensitivity that Autosense has detected. Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
-* **Activity** (yellow line): It shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). The value is higher for insulin closer to peak time. It would mean to be negative when IOB is decreasing. 
+   * **PILKI** stulpeliai rodo glikemijos svyravimus (nuokrypius arba deviacijas), kuriuos sukelia angliavandeniai. 
+   * **ŽALI** stulpeliai rodo, kad glikemija yra didesnė, nei algoritmas apskaičiavo. 
+   * **RAUDONI** stulpeliai rodo, kad glikemija yra mažesnė, nei algoritmas apskaičiavo.
+* **Jautrumas** (balta linija): tai jautrumas insulinui, kurį apskaičiavo Autosense funkcija. Tai jautrumo insulinui faktoriaus pokyčiai dėl fizinio aktyvumo, hormonų ir pan.
+* **Aktyvumas** (geltona linija): tai insulino aktyvumas, apskaičiuotas pagal insulino profilio nustatymus (jis nėra išskaičiuotas iš AIO). Kreivė tuo aukštesnė, kuo insulino aktyvumo pikas arčiau. AIO mažėjant, aktyvumas gali tapti neigiamas. 
 
-### Section G
+### Sritis G
 
-Enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration. Also a Quick Wizzard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
+Čia galite suleisti bolusą (įprastai tam naudosite Skaičiuotuvo mygtuką) ir įvesti kalibracijas. Čia taip pat bus matomas Greitojo vedlio mygtukas, jei jis sukonfigūruotas [Konfigūratoriuje](../Configuration/Config-Builder#quickwizard-settings).
 
-## The Calculator
+## Skaičiuotuvas
 
 ![Skaičiuotuvas](../images/Screenshot_Bolus_calculator.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Įprastai jis naudojamas maisto bolusams suleisti.
 
 ### Sritis A
 
-contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+vieta, kur įvedate informaciją apie norimą bolusą. KG (kraujo gliukozės) langelyje matosi paskutinis sensoriaus rodmuo. Jei sensorius neveikia, šis langelis bus tuščias. AV langelyje turite įvesti maisto, kurį valgysite, angliavandenių ar jų atitikmens kiekį. KOREKCIJOS langelyje galite pakeisti pasiūlytą insulino dozę, AV LAIKO langelyje galite nurodyti sistemai, kad valgysite tik po kažkurio laiko, todėl ir bolusas bus atidėtas. Šiame langelyje galite įvesti ir laiką su minuso ženklu, jei angliavandenius jau suvalgėte anksčiau.
 
-SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
+Jei pažymėsite SUPER BOLUSO laukelį, bus suleistas papildomas insulinas, kurio kiekis lygus ateinančių 2 valandų bazei, o bazė taps nulinė. Tai galbūt padės išvengti didelio glikemijos pakilimo po maisto, nes papildomai "pasiskolinama" insulino iš bazės.
 
 ### Sritis B
 
-shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+rodo apskaičiuotą bolusą. Jei aktyvaus, anksčiau suleisto insulino kiekis viršija apskaičiuotą boluso kiekį, bus parodytas tik papildomai reikalingų angliavandenių kiekis.
 
 ### Sritis C
 
-shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
+rodo įvairius elementus, kurie naudojami apskaičiuojant bolusą. Jūs galite nuimti žymes nuo bet kurių iš jų, tačiau normaliai neturėtumėte to daryti.
 
-### Combinations of COB and IOB and what they mean
+### AAO ir AIO kombinacijos ir jų reikšmė
 
 <ul>
-    <li>If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account</li>
-    <li>If you tick COB without IOB you run the risk of too much insulin as AAPS is not accounting for what’s already given. </li>
-    <li>If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
+    <li>Jei pažymėsite ir AAO, ir AIO, į skaičiavimus bus įtraukti visi dar aktyvūs angliavandeniai ir visas aktyvus insulinas (suleistas kaip laikina bazė ar SMB)</li>
+    <li>Jei pažymėsite tik AAO, bet ne AIO, anksčiau suleistas ir dar aktyvus insulinas nebus įskaičiuotas, todėl rizikuojate perdozuoti. </li>
+    <li>Jei pažymėsite tik AIO be AAO, AAPS skaičiavimuose atsižvelgs į anksčiau suleistą ir aktyvų insuliną, tačiau ne į angliavandenius. Todėl matysite pranešimą 'trūksta angliavandenių'.
 </ul>
 
-If you bolus for additional food shortly after a meal bolus (i.e. additional desert) it can be helpful to untick all boxes. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+Jei norite suleisti bolusą papildomam maistui, kurį valgėte tuoj po jau įvesto maisto (pvz.: užsimanėte deserto), naudinga nuimti žymes nuo visų laukelių. Tokiu būdu bus įskaičiuojami tik nauji angliavandeniai, o ne tie, kurie buvo įvesti anksčiau, nes jie nebūtinai tiksliai absorbuoti ir AIO nebūtinai juos tiksliai atitinka.
 
 ### Wrong COB detection
 
