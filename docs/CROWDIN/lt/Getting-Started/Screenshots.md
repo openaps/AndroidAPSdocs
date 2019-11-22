@@ -69,7 +69,7 @@ Jei pasirinkote, taip pat matysite gliukozės kitimo prognozės kreives.
 
 ### Sritis G
 
-Čia galite suleisti bolusą (įprastai tam naudosite Skaičiuotuvo mygtuką) ir įvesti kalibracijas. Čia taip pat bus matomas Greitojo vedlio mygtukas, jei jis sukonfigūruotas [Konfigūratoriuje](../Configuration/Config-Builder#quickwizard-settings).
+Čia galite suleisti bolusą (įprastai tam naudosite Skaičiuotuvo mygtuką) ir įvesti kalibracijas. Čia taip pat bus matomas Greitojo vedlio mygtukas, jei jis sukonfigūruotas [Konfigūracijoje](../Configuration/Config-Builder#quickwizard-settings).
 
 ## Skaičiuotuvas
 
