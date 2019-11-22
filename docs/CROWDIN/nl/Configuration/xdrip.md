@@ -45,11 +45,13 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use o
 
 ## Dexcom G6 met xDrip+
 
+* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
+* If you need Clarity and want to profit from xDrip+ alarms use the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) with local broadcast to xDrip+.
+
 ### xDrip+ version depending on G6 transmitter serial no.
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
-
-If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+* For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+* If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Dexcom specific settings
 
@@ -93,7 +95,7 @@ For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. startin
 
 If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
-* Zet originele Dexcom ontvanger uit (indien je die gebruikt).
+* Turn original Dexcom receiver off (if used).
 * Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
 * Use the Source Wizard Button which ensures default settings including OB1 & Native Mode 
    * This guides you through the initial set up.
@@ -168,14 +170,14 @@ For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. startin
 
 If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
-* Zet originele Dexcom ontvanger uit (indien je die gebruikt).
+* Turn original Dexcom receiver off (if used).
 * Stop sensor (only if replacing sensor)
    
-   Controleer of de zender ook echt is gestopt:
+   Ensure it really is stopped:
    
    On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
    
-   Wacht tot deze melding verdwijnt - dit gebeurt meestal binnen een paar minuten. Sensor Status must be "Stopped" (see screenshot).
+   Wait until this goes - usually within a few minutes. Sensor Status must be "Stopped" (see screenshot).
    
    -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
    
@@ -233,14 +235,14 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H use one of 
 
 ### New Sensor
 
-* Zet originele Dexcom ontvanger uit (indien je die gebruikt).
+* Turn original Dexcom receiver off (if used).
 * Stop sensor if necessary
    
-   Controleer of de zender ook echt is gestopt:
+   Ensure it really is stopped:
    
    On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
    
-   Wacht tot deze melding verdwijnt - dit gebeurt meestal binnen een paar minuten.
+   Wait until this goes - usually within a few minutes.
    
    ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
    
