@@ -6,11 +6,11 @@
 
 Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa svarbiausia informacija.
 
-### Skyrius A
+### Sritis A
 
 * leidžia naviguoti tarp skirtingų AndroidAPS modulių braukiant į kairę arba dešinę
 
-### Skyrius B
+### Sritis B
 
 * pakeisti ciklo būseną (atviras ciklas, uždaras ciklas, ciklo sustabdymas ir kt.)
 * peržiūrėti dabartinį profilį ir atlikti [profilio perjungimą](../Usage/Profiles.md)
@@ -18,7 +18,7 @@ Tai pradinis ekranas, kurį matysite paleidę AndroidAPS, ir kuriame yra visa sv
 
 Palaikykite ilgai prispaudę bet kurį mygtuką, jei norite pakeisti nustatymus. Pvz.: palaikykite ilgai prispaudę tikslo laukelį (nuotraukoje "100"), jei norite nustatyti laikiną tikslą.
 
-### Skyrius C
+### Sritis C
 
 * naujausi glikemijos duomenys, pateikti NGJ
 * laikas nuo paskutinio duomenų gavimo
@@ -31,19 +31,19 @@ Pasirinktiniai [spalvoti indikatoriai](../Configuration/Preferences#overview) (K
 
 Aktyvaus insulino organizme kiekis yra nulis, jei naudojama tik standartinė bazė ir nėra bolusų insulino. Skaičiai laužtiniuose skliaustuose rodo, kiek aktyvaus insulino yra iš buvusių bolusų ir kiek - iš bazės pakeitimų, kuriuose atliko AAPS. Antras skaičius gali būti su minuso ženklu, jei kurį laiką sistema bazę mažino arba buvo išjungusi.
 
-### Section D
+### Sritis D
 
-Click the arrow on the right side of the screen in section D to select which information is displayed on the charts below.
+Paspauskite mažą rodyklę D srities dešinėje pusėje ir pasirinkite, kokią informaciją matysite grafikuose žemiau.
 
-### Section E
+### Sritis E
 
-Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries.
+Rodoma Jūsų sensoriaus (NGJ) pateikiama kraujo gliukozės kiekio (KG) kreivė bei Nightscout perspėjimai, kaip kalibracijos ar įvesti angliavandeniai.
 
-Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+Ilgai paspaudę ant grafiko, galite pakeisti laiko skalę. Galite matyti 6, 8, 12, 18 ar 24 val. duomenis.
 
-The extended lines show the predicted BG calculations and trends - if you have it selected.
+Jei pasirinkote, taip pat matysite gliukozės kitimo prognozės kreives.
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* **Oranžinė** linija: [AAO](../Usage/COB-calculation.rst) (oranžinė spalva dažniausiai naudojama angliavandeniams vaizduoti)
 * **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
 * **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
 * **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
@@ -77,17 +77,17 @@ Enables you to administer a bolus (normally you would use the Calculator button 
 
 When you want to make a meal bolus this is where you will normally make it from.
 
-### Skyrius A
+### Sritis A
 
 contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
 SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
 
-### Skyrius B
+### Sritis B
 
 shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
-### Skyrius C
+### Sritis C
 
 shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
 
