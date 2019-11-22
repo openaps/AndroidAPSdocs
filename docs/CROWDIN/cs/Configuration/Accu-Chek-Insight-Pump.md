@@ -8,11 +8,11 @@
 
 ## Hardwarové a softwarové požadavky
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work)
+* Roche Accu-Chek Insight (kterýkoli firmware, funguje se všemi)
     
     Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Telefon s Androidem (v podstatě všechny verze Androidu budou fungovat, ale AndroidAPS sám o sobě vyžaduje alespoň Android 5 (Lollipop)).
 
 * Aplikace AndroidAPS instalovaná ve vašem telefonu
 
@@ -49,11 +49,11 @@
     
     ![Screenshot informací o spárování Insight](../images/Insight_PairingInformation.png)
 
-Poznámka: Spojení mezi pumpou a telefonem není permanentní. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). V opačném případě by se baterie v pumpě i mobilu velmi rychle vybila.
+Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude navázáno pouze tehdy, je-li to nezbytné (např. při nastavování dočasného bazálu, posílání bolusu, čtení historie z pumpy apod.). V opačném případě by se baterie v pumpě i mobilu velmi rychle vybila.
 
 ## Nastavení v AAPS
 
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
+Při používání pumpy Insight **nesmí být nastaveno 'Vždy použít absolutní hodnoty bazálu'**. V AAPS přejděte do předvoleb > Interní NSClient > Rozšířené nastavení a ujistěte se, že možnost 'Vždy použít bazální absolutní hodnoty' je vypnuta. Toto nastavení způsobuje problémy při nastavování dočasných bazálů. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
