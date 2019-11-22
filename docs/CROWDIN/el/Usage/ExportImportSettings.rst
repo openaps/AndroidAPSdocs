@@ -9,6 +9,12 @@ Best practice is to export after change of settings or completing an objective.
 
 Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
 
+On a Windows 10 computer it looks like this:
+  
+  .. image:: ../images/SmartphoneRootLevelWin10.png
+    :alt: AndroidAPS Preferences phone connected to computer
+
+
 How to export settings
 =====
 Εξαγωγή ρυθμίσεων στο παλιό σας τηλέφωνο
@@ -24,7 +30,7 @@ How to export settings
 Μεταφορά από παλιό σε νέο τηλέφωνο χρησιμοποιώντας τη θέση αρχείου που εμφανίζεται κατά την εξαγωγή
 
   The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
-
+  
 Εγκαταστήστε το AndroidAPS στο νέο τηλέφωνο.
 * **Εισαγωγή ρυθμίσεων** για το νέο σας τηλέφωνο
 
