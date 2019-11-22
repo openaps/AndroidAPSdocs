@@ -44,17 +44,17 @@ Ilgai paspaudę ant grafiko, galite pakeisti laiko skalę. Galite matyti 6, 8, 1
 Jei pasirinkote, taip pat matysite gliukozės kitimo prognozės kreives.
 
 * **Oranžinė** linija: [AAO](../Usage/COB-calculation.rst) (oranžinė spalva dažniausiai naudojama angliavandeniams vaizduoti)
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* **Mėlyna** linija: AIO (ši spalva įprastai žymi insuliną)
+* **Žydra** linija: glikemijos kitimo prognozė, jei būtų nustatyta nulinė bazė
+* **Geltona** linija: [NDM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (nedeklaruotas maistas)
 
-These lines show you the different predictions based on current carb absorption (COB); insulin only (IOB); showing how long it will take BG to level off at/above target if deviations suddenly cease and we run a zero temp until then (zero-temp) and unannounced meal/effect detection where carbs are detected but have not been entered into the system by the user (UAM).
+Šios kreivės rodo skirtingas gliukozės kitimo prognozes, atsižvelgiant į įvairius parametrus: aktyvių angliavandenių absorbciją; aktyvaus insulino veikimą; laiką, per kurį gliukozė galėtų peržengti žemą arba aukštą ribą, jei staiga pradėtų kristi labiau, nei numatyta ir reikėtų nulinės bazės, arba kilti labiau, nei numatyta dėl nedeklaruoto maisto.
 
-The **solid blue** line shows the basal delivery of your pump. The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time.
+**Ištisinė mėlyna** linija rodo bazės tiekimą. **Punktyrinė mėlyna** linija rodo bazę, kuri suprogramuota pompoje ir kuri būtų leidžiama, jei programa nieko nekeistų. Ištisinė linija yra reali bazė su visais pokyčiais (LB).
 
-The **thin yellow** line shows the activity of Insulin. It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+**Plona geltona** linija rodo insulino aktyvumą. Ji remiasi tikėtinu insulino poveikiu glikemijai, kai neveikia kiti veiksniai (pvz.: angliavandeniai).
 
-### Section F
+### Sritis F
 
 This section is also configurable using the options in section D.
 
