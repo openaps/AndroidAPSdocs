@@ -18,7 +18,7 @@ Pažymėdami langelį po akies simboliu jūs nuspręsite, kaip atidaryti atitink
 
 ![Skirtukai arba trijų linijų meniu](../images/ConfBuild_TabOrHH.png)
 
-## Profile
+## Profilis
 
 Pasirinkite bazės profilį, kurį norite naudoti. Papildomos informacijos apie diegimą rasite puslapyje [ Profiliai ](../Usage/Profiles.md).
 
