@@ -56,11 +56,11 @@ Jei pasirinkote, taip pat matysite gliukozės kitimo prognozės kreives.
 
 ### Sritis F
 
-This section is also configurable using the options in section D.
+Šią sritį galite keisti naudodamiesi D srities pasirinkimais.
 
 * **Insulin On Board** (blue chart): It shows the insulin you have on board. If there were no TBRs, SMBs and no remaining boluses this would be zero. Decaying depends on your DIA and insulin profile settings. 
 * **Carbs On Board** (orange chart): It shows the carbs you have on board. Decaying depends on the deviations the algorithm detects. If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
-* **Deviations**: 
+* **Nuokrypiai**: 
    * **GREY** bars show a deviation due to carbs. 
    * **GREEN** bars show that BG is higher than the algorithm expected it to be. 
    * **RED** bars show that BG is lower than the algorithm expected.
