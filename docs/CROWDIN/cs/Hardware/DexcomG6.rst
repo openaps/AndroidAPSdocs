@@ -1,13 +1,13 @@
 Dexcom G6
-************
+******
 Základní nastavení
-===============
+======
 
 * Postupujte podle obecných opatření při používání CGM a doporučení pro nastavení senzoru `zde <../Hardware/GeneralCGMRecommendation.html>`_.
 * U G6 vysílačů vyrobených na/po konci roku 2018 se ujistěte, že používáte jednu z,nejnovějších verzí z xDrip+ (tzn. night build) <https://github.com/NightscoutFoundation/xDrip/releases>`_. Tyto vysílače mají nový firmware, a poslední stabilní verze xDrip+ (2019/01/10) si s ním neporadí.
 
 Obecné tipy pro použití smyčky s G6
-================================
+======
 
 Použití G6 může být o něco složitější, než se na první pohled zdá. Abyste ho mohli používat bezpečně, je třeba vědět o několika skutečnostech: 
 
@@ -19,16 +19,17 @@ Použití G6 může být o něco složitější, než se na první pohled zdá. 
 
 Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si `kompletní článek <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ který sepsal Tim Street na adrese `www.diabettech.com <http://www.diabettech.com>`_.
 
-Používáte-li G6 s aplikací xDrip+
-===============================
-
+If using G6 with xDrip+
+======
+* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
+* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
 * Pokud jste ještě nic nenastavovali, tak stáhněte `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ a postupujte podle instrukcí na Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * V průvodci nastavení (v AndroidAPS) vyberte xDrip.
 * Nastavte xDrip+ podle popisu konfigurace na stránce <../Configuration/xdrip.html>`_
 * Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit `Identify receiver` tak, jak je popsáno v `nastavení xDrip+ <../Configuration/xdrip.html>`_.
 
 Používáte-li G6 s upravenou Dexcom aplikací
-=========================================================
+======
 * Stáhněte si apk z `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, 
 kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi (mg/dl nebo mmol/l).
 
@@ -45,11 +46,12 @@ kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi 
 * Pokud chcete použít xDrip alarmy přes místní vysílání: v xDrip hamburger menu > nastavení > hardwarový zdroj dat > 640G /EverSense.
 
 Poradce při potížích s G6
-====================
+=====
 Dexcom G6 konkrétní řešení problémů
 ----
 * Vysílače se sériovým číslem začínajícím na 80 nebo 81 potřebují minimálně poslední stabilní xDrip verzi z května 2019 nebo novější noční sestavení.
 * Vysílače se sériovým číslem začínajícím na 8G potřebuje minimálně noční sestavení z 25. července 2019 nebo novější.
+* xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
 * Vyčkejte nejméně 15 minut. mezi zastavením a spuštěním senzoru.
 * Nepoužívejte zadání dřívějšího času. Odpovězte na otázku "Byl senzor zaveden dnes?" vždy "Ano, dnes".
 * Nepovolujte "restartování senzoru" při nastavení nového senzoru
