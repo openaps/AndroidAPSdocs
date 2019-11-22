@@ -9,10 +9,10 @@ Die Empfehlung ist, den Export nach einer Änderung der Einstellungen oder dem A
 
 Die exportierten Einstellungen sollten in einen Cloud-Speicher oder auf Deinen Computer kopiert werden. Dann ist Du für den Verlust oder die Beschädigung Deines AAPS-Smartphones vorbereitet und musst nicht wieder bei Null anfangen.
 
-On a Windows 10 computer it looks like this:
+Auf einem Windows 10 PC sieht es in etwa so aus:
   
   .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS Preferences phone connected to computer
+    :alt: AndroidAPS Preferences Datei - Smartphone mit PC verbunden
 
 
 Exportieren der Einstellungen
