@@ -1,13 +1,13 @@
 Dexcom G6
-************
+******
 Πρώτα τα βασικά
-===============
+======
 
 * Ακολουθήστε τη γενική υγιεινή CGM και ρυθμίστε των αισθητήρα `εδώ <../Υλικό / Γενικές συστάσεις CGM>` _.
 * Για πομπούς G6 που κατασκευάζονται μετά το πέρας / τέλος του 2018, βεβαιωθείτε ότι έχετε χρησιμοποιήσει μία από τις πιο πρόσφατες εκδόσεις xDrip + <https://github.com/NightscoutFoundation/xDrip/releases> _ _. Αυτοί οι πομποί έχουν ένα νέο firmware και η τελευταία σταθερή έκδοση του xDrip + (2019/01/10) δεν μπορεί να το αντιμετωπίσει.
 
 Γενικές συμβουλές για το κύκλωμα με το G6
-================================
+======
 
 Αυτό που είναι σαφές είναι ότι η χρήση του G6 είναι ίσως λίγο πιο πολύπλοκη από ό, τι φαίνεται. Για να το χρησιμοποιήσετε με ασφάλεια, υπάρχουν μερικά σημεία που πρέπει να γνωρίζετε: 
 
@@ -19,16 +19,17 @@ Dexcom G6
 
 Για να μάθετε περισσότερα σχετικά με τις λεπτομέρειες και τους λόγους που γίνονται αυτές οι συστάσεις διαβάστε το πλήρες άρθρο <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/> που δημοσιεύτηκε από την Tim Street στο www.diabettech.com <http://www.diabettech.com>`_.
 
-Αν χρησιμοποιείτε το G6 με xdrip+
-===============================
-
+If using G6 with xDrip+
+======
+* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
+* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
 * Εάν δεν έχετε ήδη ρυθμίσει, κάντε λήψη του `xdrip <https://github.com/NightscoutFoundation/xDrip>` και ακολουθήστε τις οδηγίες στο nightcout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Επιλέξτε xdrip στο Configbuilder ( είναι ρύθμιση στο androidAPS).
 * Προσαρμογή των ρυθμίσεων στο xDrip + σύμφωνα με τη σελίδα ρυθμίσεων xDrip + <../ Configuration / xdrip.html> `_
 Αν το AAPS δεν λαμβάνει τιμές BG όταν το τηλέφωνο βρίσκεται σε κατάσταση λειτουργίας αεροπλάνου, χρησιμοποιήστε Προσδιορισμός δέκτη όπως περιγράφεται στη[ σελίδα ρυθμίσεων xDrip](../Configuration/xdrip.html).
 
 Εάν χρησιμοποιείτε το G6 με την εφαρμογή patched Dexcom
-=========================================================
+======
 * Κάντε λήψη του apk από <https://github.com/dexcomapp/dexcomapp> https://github.com/dexcomapp/dexcomapp και επιλέξτε την έκδοση που ταιριάζει στις ανάγκες σας (mg / dl ή mmol / l, G6).
 
    * Φάκελος 2.3 είναι για τους χρήστες του AndroidAPS 2.3, φάκελος 2.4 για τους χρήστες του AAPS 2.5.
@@ -44,11 +45,12 @@ Dexcom G6
 * Αν θέλετε να χρησιμοποιήσετε συναγερμούς xDrip μέσω τοπικής εκπομπής: στο μενού hamburger xDrip> ρυθμίσεις> πηγή δεδομένων υλικού> 640G / EverSense.
 
 Αντιμετώπιση προβλημάτων G6
-====================
+=====
 Dexcom G6 αντιμετώπιση συγκεκριμένων προβλημάτων
 ----
 * Πομποί με σειριακό αριθμό. ξεκινώντας με 80 ή 81 χρειάζεται τουλάχιστον την τελευταία σταθερή xDrip έκδοση από τον Μάιο του 2019 ή μια νεότερη nightly build.
 * Πομποί με σειριακό αριθμό. ξεκινώντας με 8G πρέπει τουλάχιστον να έχετε nightly build από 25 Ιουλίου, του 2019 ή νεότερη έκδοση.
+* xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
 * Περιμένετε τουλάχιστον 15 λεπτά. μεταξύ παύση και η έναρξη ενός αισθητήρα.
 * Μην το πας πίσω το χρόνο της εισαγωγής. Απάντηση ερώτηση "Μήπως το βάλατε σήμερα;" πάντα με "Ναι, σήμερα".
 * Μην ενεργοποιήσετε την επιλογή "επανεκκίνηση αισθητήρα'', ενώ ρυθμίζετε νέο αισθητήρα
