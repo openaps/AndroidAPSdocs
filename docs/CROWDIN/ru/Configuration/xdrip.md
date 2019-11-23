@@ -137,56 +137,56 @@
 ### Состояние батареи трансмиттера
 
 * Статус батареи может быть виден в окне состояния системы (сэндвич-меню вверху слева на главном экране)
-* Swipe left once to see second screen. ![xDrip+ первый трансмиттер 4](../images/xDrip_Dexcom_Battery.png)
+* Сделайте свайп влево, чтобы увидеть второй экран. ![xDrip+ первый трансмиттер 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”:
+* Точные величины, когда наступает "смерть" трансмиттера из-за низкого заряда батареи, неизвестны. Следующая информация была размещена в сети после того, как передатчик "умер":
    
-   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
-   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
+   * Пост 1: Дни передатчика: 151/Напряжение А: 297/Напряжение В: 260/Сопротивление: 2391
+   * Пост 2: передатчик дней: 249 / напряжение: 275 (на момент отказа)
 
 ### Увеличение срока работы трансмиттера
 
-* So far life cannot be extended for transmitters whos serial no. starts with 8G or 8H.
-* To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and check `OB1 collector`.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G или 8H.
+* Для предотвращения трудностей при запуске сенсоров настоятельно рекомендуется продлить срок действия трансмиттера до 100-го дня первого использования.
+* При продлении срока действия трансмиттера работа сенсора будет остановлена. Поэтому проводить эту манипуляцию следует перед заменой сенсора или быть готовыми к тому, что состоится двухчасовая фаза его прогрева.
+* Переключитесь в `инженерный режим`: 
+   * нажмите на пиктограмму шприца на главном экране xDrip+ справа
+   * затем нажмите на значок микрофона в нижнем правом углу
+   * В открывшемся текстовом окне впечатайте "включить инженерный режим" 
+   * нажмите "Готово"
+   * Если включен Google Speak, вы можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
+* Перейдите в настройки отладки G5 и отметьте `OB1 коллектор`.
+* Дайте голосовую команду: “hard reset transmitter”(«жесткий сброс трансмиттера»)
+* Голосовая команда будет выполнена при следующем получении данных трансмиттера
+* Посмотрите на статус системы (сэндвич-меню -> системный статус) и убедитесь в результате
+* Если вы видите сообщение "Состояние телефона: жесткий сброс возможно не произошел", просто перезапустите датчик на втором экране состояния системы и это сообщение должно исчезнуть.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMabeFailed.png)
+   ![xDrip+ Жесткий сброс возможно не произошел](../images/xDrip_HardResetMabeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Срок работы трансмиттера будет сброшен до 0 в случае успеха.
 
 ### Замена трансмиттера
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 начинается с 8G или 8H, используйте одну из [новых ночных сборок](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
-* Stop sensor (only if replacing sensor)
+* Остановить сенсор (только при смене сенсора)
    
-   Ensure it really is stopped:
+   Убедитесь, что он действительно остановлен:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   На следующем экране "G5/G6 Status" найдите `Queue Items` (`Элементы в очереди`) на полпути вниз - там появится что-то вроде "Остановить Сенсор"
    
    Wait until this goes - usually within a few minutes. Sensor Status must be "Stopped" (see screenshot).
    
    -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Остановка сенсора Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Остановка сенсора Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
+* Forget device in xDrip system status AND in smartphone’s BT settings (Will be shown as Dexcom?? где ?? are the last two digits of the transmitter serial no.)
    
    ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
 
@@ -209,20 +209,20 @@
    
    ![Параметры для трансмиттеров "Firefly"](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
+* Проверьте в классическом меню страницу Состояние-> Состояние G5/G6-> PhoneServiceState, показано ли одно из следующих сведений:
    
    * С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
    * С трансмиттерами, серийный номер которых начинается с 8G или 8H: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
+* Подождите 15 минут, так как трансмиттер должен соединиться несколько раз с xDrip до запуска нового сенсора. Данные батареи будут показаны ниже информации о прошивке.
    
-   ![Firefly transmitter battery data](../images/xDrip_Dexcom_Battery.png)
+   ![Данные о батареях трансмиттера "Firefly"](../images/xDrip_Dexcom_Battery.png)
 
-* Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
+* Выполните пуск сенсора но НЕ ЗАДНИМ ЧИСЛОМ! Всегда выбираем "Да, сегодня"!
 
-* Restart collector (system status - if not replacing sensor)
+* Перезапустите коллектор (состояние системы - если не заменяете сенсор)
 * Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
    
@@ -237,103 +237,103 @@
 ### Новый сенсор
 
 * Выключите оригинальный ресивер Dexcom (если используете).
-* Stop sensor if necessary
+* При необходимости остановите сенсор
    
-   Ensure it really is stopped:
+   Убедитесь, что он действительно остановлен:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   На следующем экране "G5/G6 Status" найдите `Queue Items` (`Элементы в очереди`) на полпути вниз - там появится что-то вроде "Остановить Сенсор"
    
-   Wait until this goes - usually within a few minutes.
+   Подождите, пока не исчезнет - обычно в течение нескольких минут.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Остановка сенсора Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Остановка сенсора Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Clean contacts (transmitter backside) with alcohol and let air-dry.
+* Протрите контакты (обратная сторона трансмиттера) спиртом и просушите.
 
-* In case you use this function disable `Restart Sensor` and `Preemptive restarts` (Hamburger menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
+* Если вы пользуетесь этой функцией, отключите `Restart Sensor` и `Preemptive restarts` (Сэндвич-меню -> Настройки -> Отладка G5/G6). Если вы пропустите этот шаг и оставите эти функции включенными, новый датчик не будет корректно запущен.
    
-   ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
+   ![xDrip+ профилактический перезапуск](../images/xDrip_Dexcom_Restart.png)
 
-* Start Sensor
+* Запустите сенсор
    
-   **For new Firefly transmitters** (serial no. starting with 8G or 8H) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
+   ** Для новых трансмиттеров Firefly ** (серийный номер начинается с 8G или 8H) ** это обязательно, для всех остальных трансмиттеров рекомендуется ждать около 15 минут между остановкой и запуском нового сенсора (до тех пор пока ` Sensor Status: Stopped ` не появится на втором экране состояния системы). НЕ НАСТРАИВАЙТЕ ЗАДНИМ ЧИСЛОМ!**
 
-* Set time inserted
+* Введите время установки
    
-   * To use G6 Native mode you must wait for the 2 hour warm up (i.e insertion time is now).
-   * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore, this is not recommended.
-* Enter Sensor code (on the peel-off foil of the sensor) 
-   * Keep code for further reference (i.e. new start after transmitter had to be removed)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
-* No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
-* Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
+   * Для использования нативного режима G6 необходимо подождать 2 часа для прогрева (т.е. время установки -- сейчас).
+   * Если вы используете алгоритм xDrip+, то можно установить время более 2 часов назад, чтобы избежать прогрева. Данные могут быть очень неточными. Поэтому это не рекомендуется.
+* Введите код сенсора (на снимаемой фольге сенсора) 
+   * Сохраните код на случай дополнительной переустановки (новый запуск после удаления трансмиттера)
+   * Код также можно найти в логах [xDrip+ ](../Configuration/xdrip#retrieve-sensor-code): Нажмите 3-точечное меню на главном экране xDrip+ и выберите `Просмотр журналов событий`.
+* При использовании G6 в "нативном режиме" калибровка не требуется. xDrip+ будет показывать данные автоматически после двухчасового прогрева.
+* Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
    
-   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
+   ![xDrip+ Запуск сенсора Dexcom 1](../images/xDrip_Dexcom_SensorStart01.png)
    
-   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
+   ![xDrip+ Запуск сенсора Dexcom 2](../images/xDrip_Dexcom_SensorStart02.png)
 
 ### Получение кода сенсора
 
-* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
-* Swipe left once to see second screen.
+* В свежих версиях программы (начиная с 18 мая 2019) код сенсора отображается в состоянии системы (сэндвич-меню вверху слева на главном экране).
+* Сделайте свайп влево, чтобы увидеть второй экран.
    
-   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+   ![xDrip+ Получение кода сенсора Dexcom 2](../images/xDrip_Dexcom_SensorCode2.png)
 
-* Dexcom sensor code can also be found in xDrip+ logs.
+* Код сенсора Dexcom можно также найти в логах xDrip+.
 
-* Tap 3 dot menu (top right side on homescreen)
-* Select `View Event Logs` and search for "code"
+* Нажмите 3 точки меню (сверху справа на главном экране)
+* Выберите `Просмотр журналов событий` и выполните поиск слова "code"
    
-   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Получение кода сенсора Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
 ## Устранение неполадок Dexcom G6 и xDrip+
 
 ### Проблемы сопряжения с трансмиттером
 
-* Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
-* Open system status in xDrip+ (hamburger menu on top left side of home screen).
-* Check if your transmitter is shown on first status page ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings and restart collector.
-* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+* Трансмиттер должен быть виден в настройках bluetooth вашего смартфона.
+* Трансмиттер будет виден как Dexcom?? где ?? последние две цифры серийного № трансмиттера (например, DexcomHY).
+* Откройте состояние системы в xDrip+ (сэндвич-меню в левой верхней части главного экрана).
+* Проверьте, виден ли трансмиттер на первой странице состояния системы ('классическая страничка состояния системы').
+* Если нет: Удалите устройство из настроек bluetooth вашего смартфона.
+* Подождите около 5 мин. до тех пор, пока трансмиттер Dexcom не подключится автоматически.
 
 ### Проблемы при запуске нового сенсора
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G or 8H.
+Обратите внимание, что следующий метод, скорее всего, не работает, если серийный номер передатчика Dexcom G6 начинается с 8G или 8H.
 
-* Native sensor is marked as "FAILED: Sensor Failed Start"
+* Запуск сенсора сопровождается сообщением: "ОШИБКА: Сенсор не удалось запустить"
 * Остановить сенсор
-* Restart your phone
-* Start sensor with code 0000 (four times zero)
-* Wait 15 minutes
+* Перезапустить телефон
+* Запустить сенсор введя код 0000 (четыре нуля)
+* Подождать 15 минут
 * Остановить сенсор
-* Start sensor with "real" code (printed on the adhesive protector)
+* Запустить датчик с "реальным" кодом (напечатан на клеящемся протекторе)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Проверьте журнал xDrip+ если xDrip+ начинает отсчет "Duration: 1 минута" (и так далее). Только в журналах xdrip+ вы можете обнаружить на раннем этапе, остановил ли xdrip+ сенсор. Более поздний статус статус не всегда отображается правильно внизу начального экрана.
 
 ## xDrip+ & Libre Freestyle
 
 ### Специфические настройки Libre
 
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+* Откройте настройки Bluetooth -> Сэндвич-меню (сверху слева на главном экране) -> Настройки -> прокрутить вниз -> Менее распространенные настройки -> Настройки Bluetooth
    
-   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+   ![xDrip+ настройки Libre Bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Активируйте следующие параметры
    
-   * `Turn Bluetooth on` 
-   * `Use scanning`
-   * `Always discover services`
+   * `Включить Bluetooth` 
+   * `Использовать сканирование`
+   * `Всегда обнаруживать сервисы`
 
 * Все другие опции должны быть отключены
    
-   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+   ![xDrip+ настройки Libre Bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ запуск трансмиттера Libre & Сенсора 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ запуск трансмиттера Libre & Сенсора 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ запуск трансмиттера Libre & Сенсора 3](../images/xDrip_Libre_Transmitter03.png)
