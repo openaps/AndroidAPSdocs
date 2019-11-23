@@ -6,44 +6,45 @@
 
 ## ## Важные Примечания
 
-*** Примечание ***: Для построения apk используйте [ Android Studio версии 3.5.1 ](https://developer.android.com/studio/) или новее.
+* Please use **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
 
-** Конфигурация по требованию ** не поддерживается текущей версией модуля Android Gradle!
+**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
 Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
 
-* Откройте окно настроек, нажав Файл > Настройки (на Mac, Android Studio > Настройки).
-* В левой панели нажмите Сборка, Выполнение, Развертывание > Компилятор.
-* Снимите флажок с ячейки "выборочная конфигурация".
-* Нажмите Применить или OK.
+* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+* In the left pane, click Build, Execution, Deployment > Compiler.
+* Uncheck the Configure on demand checkbox.
+* Click Apply or OK.
 
 * * *
 
 ### Эта статья разделена на две части.
 
-* В обзорной части находится объяснение того, какие шаги необходимы для создания файла APK.
-* В пошаговой инструкции вы найдете снимки экранов установки. Поскольку версии Android Studio - среды разработки программного обеспечения, в которой мы будем создавать APK - меняются очень быстро, точного соответствия вашей сборке вы не увидите, но общее представление о том, как это делается, получите. Android Studio работает на Windows, Mac OS X и Linux, и между каждой платформой возможны незначительные различия. Если вы обнаружите, что что-то важное выполняется неправильно или отсутствует, сообщите в группе facebook "AndroidAPS users" или в чате Gitter [Android APS](https://gitter.im/MilosKozak/AndroidAPS) или [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) чтобы мы могли устранить проблему.
+* In the overview part there is an explanation on what steps are necessary to build the APK file.
+* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
 ## Главный экран, Начало
 
-В целом, шаги, необходимые для создания файла APK таковы:
+In general, the steps necessary to build the APK file:
 
-* [Install git](../Installing-AndroidAPS/git-install.rst)
-* Установить и настроить Android Studio.
-* Используя Git  клонировать исходный код центрального репозитория Github, где разработчики разместили код приложения.
-* В Android Studio открыть клонированный проект в качестве активного.
-* Построить подписанный APK.
-* Переместите подписанный APK на ваш телефон.
+* [Установите Git](../Installing-AndroidAPS/git-install.rst)
+* Install and setup Android Studio.
+* Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
+* Open the cloned project in Android Studio as active project.
+* Build the signed APK.
+* Transfer the signed APK to your smartphone.
 
-## Step by step walkthrough
+## Пошаговое руководство
 
-Подробное описание шагов, необходимых для создания файла APK.
+Detailed description of the steps necessary to build the APK file.
 
 ## Установите git (если у вас его нет)
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
-## Install Android Studio
+## Установите Android Studio
 
 The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
 

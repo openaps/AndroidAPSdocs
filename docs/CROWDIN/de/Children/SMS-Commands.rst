@@ -4,21 +4,21 @@ Sicherheitshinweise
 ======
 * AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
 * AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Befehle, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
-* **Wenn Du einen Bolus über  SMS-Befehle abgibst, musst Du die Kohelnhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
+* **Wenn Du einen Bolus über  SMS-Befehle abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
 
 Funktionsweise
 =====
 * Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. können über die `NSclient App <../Children/Children.html>`_ auf einem Android Smartphone durchgeführt werden.
-* Boluses können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Befehle verwenden.
+* Boli können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Befehle verwenden.
 * Falls Du als Follower ein iPhone verwendest und daher NSclient nicht nutzen kannst, gibt es weitere SMS-Befehle.
 
-* Gehe dazu in den Systemeinstellungen deines Android-Telefones zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
-* In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolon und ein Leerzeichen getrennt (z.B.  +4912345678; +4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden.
+* Gehe dazu in den Systemeinstellungen deines Android-Telefons zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
+* In AndroidAPS gehst du zu Einstellungen > SMS-Kommunikator und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden, mehrere Nummern werden dabei durch Semikolon ohne Leerzeichen getrennt (z.B.  +4912345678;+4912345679). ‘Erlaube externe Befehle per SMS’ muss außerdem aktiviert werden.
 * Wenn Du mehr als eine Nummer verwenden möchtest:
 
   * Gib nur eine der Telefonnummern ein.
   * Führe einen SMS-Befehl aus um sicher zu stellen, dass die Kommandos mit dieser Telefonnummer funktionieren.
-  * Gib die zusätzliche(n) Telefonnummer(n) getrennt durch Semikolon und ein Leerzeichen ein.
+  * Gib die zusätzliche(n) Telefonnummer(n) getrennt durch Semikolon ohne Leerzeichen ein.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
       :alt: SMS-Befehle einrichten
@@ -33,7 +33,7 @@ Befehle
 
 Groß- und Kleinschreibung müssen beim Senden der Befehle nicht berücksichtigt werden.
 
-Befehle müssen in Englisch gesendet werden, die Antwort erhälst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits ` übersetzt ist <../translations.html##texte-fur-die-androidaps-app-ubersetzen> ` _.
+Befehle müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits ` übersetzt ist <../translations.html##texte-fur-die-androidaps-app-ubersetzen> ` _.
 
 .. image:: ../images/SMSCommands.png
   :alt: Beispiele für SMS-Befehle
@@ -77,10 +77,15 @@ Basal
 
 Bolus
 -----
+Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAPS oder nach dem letzten SMS-Befehl nicht möglich. Den Wert kannst Du nur anpassen, wenn mind. zwei Rufnummern eingetragen sind. Die Antwort hängt daher davon ab, wann der letzte Bolus abgegeben wurde.
+
 * BOLUS 1.2
-   * Die Antwort hängt davon ab, wann der letzte Bolus abgegeben wurde.
-      * Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code Rrt
-      * Ferngesteuerter Bolus ist nicht verfügbar. Versuch es später nochmal. (**Ein ferngsteuerter Bolus ist innerhalb eines Zeitfensters von 15 min. nach einer Bolusgabe oder einem anderen Ferbedienungsbefehl nicht zugelassen!**)
+   * Antwort A: Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code Rrt
+   * Antwort B: Bolusabgabe aus der Ferne nicht verfügbar. Versuch es später nochmal.
+* BOLUS 0.60 MEAL
+   * Mit dem optionalen Parameter MEAL wird ein Mahlzeiten TT gesetzt (Standardwerte sind 90 mg/dL / 5.0 mmol/L für 45 Minuten).
+   * Antwort A: Um einen Bolus von 0,6 IE abzugeben, antworte mit dem Code Rrt
+   * Antwort B: Bolusabgabe aus der Ferne nicht verfügbar. 
 * EXTENDED STOP/CANCEL
    * Antwort: Antworte mit dem Code EmF, um den erweiterten Bolus zu beenden
 * EXTENDED 2 120
@@ -105,6 +110,10 @@ Andere
    * Antwort: NSCLIENT RESTART 1 receivers
 * PUMP
    * Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
+* SMS DISABLE/STOP
+   * Antwort: Um den SMS Remote Service zu deaktivieren, antworte mit dem Code Any. Beachte, dass Du die Fernsteuerung nur am AAPS Master-Smartphone wieder aktivieren kannst.
+* TARGET MEAL/ACTIVITY/HYPO   
+   * Antwort: Um ein MEAL/ACTIVITY/HYPO TT zu setzen, antworte mit dem Code Any.
 
 Problembehandlung
 =====

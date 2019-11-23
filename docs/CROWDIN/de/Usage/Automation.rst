@@ -12,6 +12,15 @@ Wie erstellt man eine Automatisierung
 ================
 Um eine Automatisierung zu erstellen, gibt man dieser einen Namen, mindestens eine Bedingung und mindestens eine auszuführende Aktion. 
 
+Wichtiger Hinweis
+-----
+**Automation bleibt aktiv, wenn Du den Loop deaktivierst!**
+
+Schalte daher ggf. die Automation-Regeln aus während Du den Loop deaktiviert hast. Entferne dazu das Häkchen in der Box links vom Namen der Automation-Regel.
+
+.. image:: ../images/Automation_ActivateDeactivate.png
+  :alt: Automation Regeln ein- und ausschalten
+
 Allgemein
 --------
 Es gibt ein paar Einschränkungen:

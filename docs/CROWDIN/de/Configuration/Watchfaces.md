@@ -6,6 +6,7 @@ Die nachfolgenden Funktionen kannst Du von der Uhr aus starten:
 
 * temporäres Ziel setzen
 * Bolus abgeben
+* eCarbs eintragen
 * Bolusrechner verwenden (Welche Variablen bei der Berechnung berücksichtigt werden, lässt sich in den [Einstellungen](../Configuration/Config-Builder#wear) auf dem Smartphone festlegen.)
 * Loop- und Pumpenstatus prüfen
 * TDD (Total daily dose = Bolus + Basal pro Tag) anzeigen
@@ -22,7 +23,7 @@ Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten CGM-Wert auf der
 
 ## Fehlerbehebung der Smartwatch App:
 
-* In Android Wear 2.0 installiert sich das Watchface nicht von alleine. Du musst in den Playstore der Uhr (unterscheidet sich vom Playstore des Smartphones!) gehen und unter der Kategorie “installierte Apps auf dem Handy” AAPS aktivieren. Aktiviere ebenalls Auto Update. 
+* In Android Wear 2.0 installiert sich das Watchface nicht von alleine. Du musst in den Playstore der Uhr (unterscheidet sich vom Playstore des Smartphones!) gehen und unter der Kategorie “installierte Apps auf dem Handy” AAPS aktivieren. Aktiviere ebenfalls Auto Update. 
 * Manchmal hilft es, Apps erneut mit der Uhr zu synchronisieren, da es manchmal ein bisschen langsam sein kann, bis der Sync automatisch erfolgt: Wear Os > Zahnrad-Symbol (ganz unten) > Name deiner Uhr > Apps erneut synchronisieren.
 * Schalte ADB Debuggen in den Entwickleroptionen der Uhr ein, verbinde die Uhr via USB mit dem PC und starte die Wear App einmal in Android Studio.
 
@@ -49,6 +50,38 @@ H - BGI (blood glucose interaction) -> erwartete BZ-Änderung allein auf Basis d
 I - Kohlenhydrate (carbs on board | e-carbs in der Zukunft)
 
 J - Insulin on board (aus Boli | aus Basal)
+
+## Einstellungen
+
+Du kannst verschiedene Einstellungen für den Einsatz von AndroidAPS auf Deiner Smartwatch vornehmen:
+
+* Bei Bolusgabe vibrieren (ein | aus)
+* Einheiten für Aktionen (mg/dl | mmol/l)
+* Datum anzeigen (ein | aus)
+* IOB anzeigen (ein | aus)
+* COB anzeigen (ein | aus)
+* Abweichung anzeigen (ein | aus)
+* Durchschnittliche Abweichung anzeigen (ein | aus)
+* Akkustand Smartphone anzeigen (ein | aus)
+* Akkustand Rig anzeigen (ein | aus)
+* Basalrate anzeigen (ein | aus)
+* Loop Status (ein | aus)
+* BZ anzeigen (ein | aus)
+* Trendpfeil anzeigen (ein | aus)
+* Letze Aktualisierung anzeigen (ein | aus)
+* Dunkelmodus (ein | aus)
+* Basal hervorheben (ein | aus)
+* Anzeigezeitraum Diagramm (1 | 2 | 3 | 4 | 5 Stunden)
+* Art der Eingabe (Standard | Quick rechts | Quick links | Modern Sparse)
+* Delta Granularity (Steampunk) (Low | Medium | High)
+* Große Zahlen (ein | aus)
+* Anrufhistorie (ein | aus)
+* Anrufhistorie light (ein | aus)
+* Animationen (ein | aus)
+* Assistent im Menü (ein | aus)
+* Katheterfüllen über Menü (ein | aus)
+* Einzelnes Ziel (ein | aus)
+* Assistent Prozentsatz (ein | aus)
 
 ## Nightscout Daten anzeigen
 

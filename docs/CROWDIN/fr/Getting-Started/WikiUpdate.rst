@@ -2,6 +2,7 @@ Wiki mises à jour et modifications
 **********************
 Novembre 2019
 ===============
+* `Automation - deactivate when disabeling loop <../Usage/Automation.html#important-note>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#replace-transmitter>`_
 * `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_

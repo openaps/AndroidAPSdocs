@@ -12,6 +12,15 @@ How to use it
 ================
 To set up an automation, you have to give it a title, select at least one condition and one action. 
 
+Important note
+-----
+**Automation is still active when you disable loop!**
+
+So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
+
+.. image:: ../images/Automation_ActivateDeactivate.png
+  :alt: Activate and deactivaten automation rule
+
 Γενικά
 --------
 There are some limits:

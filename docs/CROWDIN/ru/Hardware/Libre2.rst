@@ -1,25 +1,25 @@
 Freestyle Libre 2
 **********************
 
-Система Freestyle Libre 2 может автоматически сообщать об опасных уровнях глюкозы в крови. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. При необходимости приемник инициирует оповещение. With a self-modified LibreLink App, you can continuously receive your blood sugar level on your smartphone. As they send them directly via bluetooth to your phone, you won't need to buy a bluetooth adapter like MiaoMiao or blucon anymore. 
+Система Freestyle Libre 2 может автоматически сообщать об опасных уровнях глюкозы в крови. Сенсор Libre2 каждую минуту отправляет текущие значения гликемии на принимающее устройство (ридер или смартфон). При необходимости приемник инициирует оповещение. С помощью модифицированного приложения LibreLink, вы можете непрерывно получать значения ГК на смартфон. Поскольку данные идут напрямую через Bluetooth на телефон, необходимость в покупке таких устройств как MiaoMiao или bluecon отпадает. 
 
 Шаг 1: Создайте свое модифицированное приложение Librelink-App
 ==============
 
-For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links.
+По юридическим причинам установка так называемого патча должна быть произведена самостоятельно. Используйте поисковые системы для поиска соответствующих ссылок.
 
 Модифицированное приложение должно быть установлено вместо исходного. Следующий сенсор, запущенный с него, будет передавать данные ГК на смартфон.
 
-Важно: первая установка и удаление исходного приложения должно производиться на смартфоне с поддержкой NFC. NFC должен быть включен. Это не требует дополнительной энергии. Then install the patched app. It can be identified by the foreground authorization notification. 
+Важно: первая установка и удаление исходного приложения должно производиться на смартфоне с поддержкой NFC. NFC должен быть включен. Это не требует дополнительной энергии. Затем установите модифицированное приложение. На установку модификации укажет уведомление об авторизации. 
 
 .. изображение:: ../images/fsl2pic1.jpg
   :alt: LibreLink Служба переднего плана
 
-This significantly improves the connection stability compared to the original app. Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and timezone and set at least one alarm in the patched app. 
+Это значительно повышает стабильность соединения по сравнению с исходным приложением. Убедитесь, что NFC активирована, дайте новому приложению разрешения на память и геолокацию, включите автоматическое время и часовой пояс и задайте хотя бы одно оповещение. 
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Следуйте инструкциям. Сенсор запоминает устройство, с которого он был запущен. Только это устройство может получать оповещения в будущем.
+Теперь запустите датчик Libre2 при помощи модифицированного приложения, просто сканируя сенсор. Следуйте инструкциям. Сенсор запоминает устройство, с которого он был запущен. Только это устройство может получать оповещения в будущем.
 
-Mandatory settings for successful sensor start: 
+Обязательные параметры для успешного запуска сенсора: 
 
 * NFC enabled / BT enabled
 * разрешение на доступ к памяти дано 

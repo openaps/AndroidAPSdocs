@@ -1,13 +1,13 @@
 Dexcom G6
-************
+******
 Grundsätzliches vorab
-===============
+======
 
 * Beachte die allgemeinen Empfehlungen zur CGM Hygiene und zum Setzen des Sensors, die Du `hier <../Hardware/GeneralCGMRecommendation.html>`_ findest.
-* Für G6 transmitter, die nach Herbst / Ende 2018 produziert wurden, musst Du eine der letzten `nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_ verwenden. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
+* Für G6 Transmitter, die nach Herbst / Ende 2018 produziert wurden, musst Du eine der letzten `nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_ verwenden. Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 
 Allgemeine Hinweise zum Closed Loop mit dem Dexcom G6
-================================
+======
 
 Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet. Mache Dir die folgenden Punkte bewusst, um das System sicher zu nutzen: 
 
@@ -19,16 +19,18 @@ Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet.
 
 Mehr zu den Details und Gründen für diese Empfehlungen findest Du im `kompletten Artikel (englisch) <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ von Tim Street auf seiner Seite `www.diabettech.com <http://www.diabettech.com>`_.
 
-Dexcom G6 mit xdrip+
-===============================
-
+Dexcom G6 mit xDrip+
+======
+* Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
+* Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
+* Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die <a href="../Hardware/DexcomG6#g6-mit-der-gepatchten-dexcom-app">gepatchte Dexcom App</a> mit lokaler Datenübertragung zu xDrip+ verwenden.
 * Lade `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xdrip.
 * Passe die Einstellungen von xDrip+ entsprechend den Angaben auf der `Seite xDrip+ Einstellungen  <../Configuration/xdrip.html>`_ an.
 * Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `Identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.html>`_ beschrieben.
 
 G6 mit der gepatchten Dexcom App
-=========================================================
+======
 * Lade die APK von `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_ herunter und wähle die Version, die Du benötigst (mg/dl oder mmol/l Version, G6).
 
    * Im Ordner 2.3 befinden sich die APK für AndroidAPS 2.3 Anwender, entsprechend im Ordner 2.4 die für AAPS 2.5.
@@ -44,11 +46,12 @@ G6 mit der gepatchten Dexcom App
 * xDrip Alarme kannst Du über den lokalen Broadcast nutzen: In xDrip > Hamburger Menü > Einstellungen > Datenquelle > 640G / EverSense.
 
 Problembehandlung G6
-====================
+=====
 Dexcom G6-spezifische Problembehandlung
 ----
 * Transmitter, deren Seriennummer mit 80 oder 81 beginnt benötigen mind. die letzte Masterversion vom Mai 2019 oder einen neueren nightly build.
 * Transmitter, deren Seriennummer mit 8G beginnt benötigen mind. die nightly build vom 25. Juli 2019 oder ein neueres nightly build.
+* xDrip+ und Dexcom App können nicht gleichzeitig mit dem Transmitter verbunden werden.
 * Warte mindestens 15 Minuten zwischen dem Stoppen und Starten des Sensors.
 * Datiere die Einsetzzeit nicht zurück. Beantworte daher die Frage, ob Du den Sensor heute eingesetzt hast, immer mit Ja.
 * Beim Starten eines Sensors darf "restart sensors" nicht aktiviert sein.

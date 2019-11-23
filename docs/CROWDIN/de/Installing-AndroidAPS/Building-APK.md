@@ -6,7 +6,8 @@
 
 ## Wichtige Hinweise
 
-***Hinweis***: Verwende [ Android Studio Version 3.5.1 ](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
+* Nutze bitte **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
+* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 3.5.1 nicht unterstützt.
 
 ** Konfiguration auf Abruf ** (Configuration on demand) wird von der aktuellen Version des Android-Gradle-Plugins nicht unterstützt!
 
@@ -22,7 +23,7 @@ Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschläg
 ### Dieser Artikel ist in zwei Teile geteilt.
 
 * Im Überblick werden die wichtigsten Schritte kurz zusammengefasst die allgemein nötig sind, um die APK Datei zu erstellen.
-* In der “Schritt für Schritt Anleitung” wird detailliert auf die einzelnen Punkte mithilfe von Screenshots eingegangen. Da die Versionen von Android Studio - der Software, die wir zum Bau der APK verwenden werden - sich schnell weiterentwickeln werden diese nicht mit deiner Installation übereinstimmen, aber sie geben einen guten ersten Eindruck. Android Studio läuft sowohl auf Windows als auch auf Mac OS X und Linux. Es kann sein, dass es bei jedem Betriebssystem einige kleinere Unterschiede gibt. Bei größeren Veränderungen oder fehlenden bzw. falschen Informationen wäre es hilfreich, dies den Entwicklern in der Facebookgruppe "Android APS" oder in den Gitter Chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) oder [AndroidAPS wiki](https://gitter.im/AndroidAPSwiki/Lobby) mitzuteilen, so dass wir einen Blick darauf werfen können.
+* In der “Schritt für Schritt Anleitung” wird detailliert auf die einzelnen Punkte mithilfe von Screenshots eingegangen. Da die Versionen von Android Studio - der Software, die wir zum Bau der APK verwenden werden - sich schnell weiterentwickeln werden diese nicht mit deiner Installation übereinstimmen, aber sie geben einen guten ersten Eindruck. Android Studio läuft sowohl auf Windows, als auch auf Mac OS X und Linux. Es kann sein, dass es bei jedem Betriebssystem einige kleinere Unterschiede gibt. Bei grösseren Veränderungen oder fehlenden bzw. falschen Informationen wäre es hilfreich, dies den Entwicklern in der Facebookgruppe "Android APS" oder in den Gitter Chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) oder [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) mitzuteilen, so dass wir einen Blick darauf werfen können.
 
 ## Übersicht
 
@@ -45,7 +46,7 @@ Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installatio
 
 ## Android Studio installieren
 
-Die folgenden Screenshots stammen aus Android Studio Version 3.1.3. Je nach verwendeter Android Studio-Version kann Dein Bildschirm etwas anders aussehen. Aber Du solltest Dich dennoch zurechtfinden. Hilfe aus der Community findest Du z. B. in der [ -AndroidAPS-Facebook-Gruppe ](https://www.facebook.com/groups/1900195340201874/) und [auf diesen Seiten](../Where-To-Go-For-Help/Connect-with-other-users.md).
+Die folgenden Screenshots stammen aus Android Studio Version 3.1.3. Je nach verwendeter Android Studio-Version kann Dein Bildschirm etwas anders aussehen. Aber Du solltest Dich dennoch zurecht finden. Hilfe aus der Community findest Du z. B. in der [ -AndroidAPS-Facebook-Gruppe ](https://www.facebook.com/groups/1900195340201874/) und [auf diesen Seiten](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
 Installiere [Android Studio](https://developer.android.com/studio/install.html) und richte es während des ersten Starts ein.
 
@@ -73,7 +74,7 @@ Der Android Emulator (um ein Smartphone auf Deinem PC oder Mac zu simulieren) wi
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
-Android Studio lädt viele benötigte Software-Komponenten herunter. Du kannst auf ‘Show Details’ klicken, um zu sehen was passiert, aber das ist nicht relevant für den weiteren Verlauf.
+Android Studio lädt viele benötigte Software-Komponenten herunter. Du kannst auf ‘Show Details’ klicken um zu sehen was passiert, aber das ist nicht relevant für den weiteren Verlauf.
 
 ![Screenshot 7](../images/Installation_Screenshot_07.png)
 
@@ -107,7 +108,7 @@ Wenn der Download beendet ist, klicke auf “Finish”.
 
 ## Code und weitere Komponenten herunterladen
 
-* Nutze “git clone” in Android Studio wie in folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
+* Nutze “git clone” in Android Studio wie in dem folgendem Screenshot angegeben. Wähle “Check out project from Version Control” und “Git” als konkretes System zur Versionskontrolle aus.
 
 ![Screenshot 10](../images/Installation_Screenshot_10.png)
 
@@ -117,7 +118,7 @@ Gib die URL der Hauptseite des AndroidAPS Repositorys (“https://github.com/Mil
 
 ![Screenshot 13](../images/Installation_Screenshot_13.png)
 
-Android Studio fängt an das Projekt zu ”clonen” (kopieren). Klicke nicht auf “Background”, es geht schnell und macht es derzeit nur komplizierter.
+Android Studio fängt an das Projekt zu ”clonen” (kopieren). Klicke nicht auf “Background”. Das Clonen geht rasch und durch das Clonen im Background würde dies komplizierter.
 
 ![Screenshot 14](../images/Installation_Screenshot_14.png)
 
@@ -222,7 +223,7 @@ Wähle “App” aus und klicke auf “Next”.
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Klicke auf “Create new...” um einen Keystore zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Sie ist verschlüsselt und passwortgeschützt. Wir empfehlen, diese Datei in deinem Heimatverzeichnis zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
+Klicke auf “Create new...” um einen Key zu erstellen. Dieser ist nichts anderes als eine Datei, in der die Informationen deiner Signatur der App gespeichert sind. Diese ist verschlüsselt und mit Passwörtern geschützt. Wir empfehlen, diese Datei in deinem Heimatverzeichnis zu speichern und dir die Passwörter zu merken. Falls du aber diese Informationen verlierst, ist es auch kein Beinbruch, weil du sie jederzeit wieder neu erzeugen kannst. Am besten ist es, diese Informationen sorgfältig aufzubewahren.
 
 ![Screenshot 41](../images/Installation_Screenshot_41.png)
 

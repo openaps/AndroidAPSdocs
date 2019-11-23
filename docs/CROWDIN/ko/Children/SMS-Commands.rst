@@ -13,12 +13,12 @@ How it works
 * If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
 
 * In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, just one space after the semicolons - i.e. +4412345678; +4412345679) and also enable 'Allow remote commands via SMS'.
+* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 * If you want to use more than one number:
 
   * Enter just one number.
   * Make that single number work by sending and confirming a SMS command.
-  * Enter additional number(s) separated by semicolon and one space.
+  * Enter additional number(s) separated by semicolon, no space.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
       :alt: SMS Commands Setup
@@ -77,10 +77,15 @@ Basal
 
 Bolus
 -----
+Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+
 * BOLUS 1.2
-   * Response depends time last bolus was given
-      * To deliver bolus 1.2U reply with code Rrt
-      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min after last bolus command or remote commands!**)
+   * Response A: To deliver bolus 1.2U reply with code Rrt
+   * Response B: Remote bolus not available. Try again later.
+* BOLUS 0.60 MEAL
+   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
+   * Response A: To deliver meal bolus 0.60U reply with code Rrt
+   * Response B: Remote bolus not available. 
 * EXTENDED STOP/CANCEL
    * Response: To stop extended bolus reply with code EmF
 * EXTENDED 2 120
@@ -105,6 +110,10 @@ Other
    * Response: NSCLIENT RESTART 1 receivers
 * PUMP
    * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+* SMS DISABLE/STOP
+   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+* TARGET MEAL/ACTIVITY/HYPO   
+   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
 
 Troubleshooting
 =====

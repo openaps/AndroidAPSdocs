@@ -45,11 +45,14 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G... ou 8H...
 
 ## xDrip+ & Dexcom G6
 
+* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
+* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
+* If you need Clarity and want to profit from xDrip+ alarms use the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) with local broadcast to xDrip+.
+
 ### Version de XDrip+ en fonction du numéro de série de l'émetteur G6.
 
-Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) veuillez vous assurer d'utiliser au minimum la version [release du 2019/05/18](https://jamorham.github.io/#xdrip-plus).
-
-Si le numéro de série de votre émetteur Dexcom G6 commence par 8G ou 8H essayez [Nightly build 2019/07/28 ou ultérieure](https://github.com/NightscoutFoundation/xDrip/releases).
+* Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) veuillez vous assurer d'utiliser au minimum la version [release du 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+* Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Paramètres spécifiques à Dexcom
 
@@ -91,7 +94,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) veuillez vous assurer d'utiliser au minimum la version [release du 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
-Si le numéro de série de votre émetteur Dexcom G6 commence par 8G ou 8H essayez [Nightly build 2019/07/28 ou ultérieure](https://github.com/NightscoutFoundation/xDrip/releases).
+Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Turn original Dexcom receiver off (if used).
 * Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
@@ -301,7 +304,7 @@ Please note that the following method might likely not work if your Dexcom G6 tr
 
 * Native sensor is marked as "FAILED: Sensor Failed Start"
 * Arrêter le capteur
-* Redémarrez votre téléphone
+* Restart your phone
 * Start sensor with code 0000 (four times zero)
 * Wait 15 minutes
 * Arrêter le capteur

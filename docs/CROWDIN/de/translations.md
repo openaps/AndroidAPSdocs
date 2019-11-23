@@ -58,6 +58,8 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
     * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
     * AAPS-.apk Datei \---> #aaps-apk-datei
 
+* Prüfe den Link, ob er wie beabsichtigt funktioniert. Wenn es ein Link zu einer neu übersetzten Überschrift ist, musst Du abwarten, bis diese im Wiki erscheint, um dies zu testen. Vergiss nicht, Dir ggf. eine Erinnerung in Deinem Kalender oder Deiner ToDo App einzutragen.
+
 #### Link-Übersetzung in Markdown-Dateien (.md)
 
 Momentan werden im Wiki zwei [Markup Sprachen](./make-a-PR#code-syntax) verwendet. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.

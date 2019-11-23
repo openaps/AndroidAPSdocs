@@ -6,9 +6,10 @@ De volgende functies kunnen vanaf het horloge worden geactiveerd:
 
 * een tijdelijk BG doel (TT) instellen
 * een bolus toedienen
+* administer eCarbs
 * use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* de status van de loop en pomp controleren
-* weergeven van de TDD (Totale Dagelijkse Dosis = bolus + basale insuline per dag)
+* check the status of loop and pump
+* show TDD (Total daily dose = bolus + basal per day)
 
 Om dit te bereiken moet je de build variant "fullRelease" selecteren wanneer je [de APK bouwt](../Installing-AndroidAPS/Building-APK.md) (terwijl "pumpRelease" je in staat stelt om ook zonder loop de pomp te bedienen). Hierna kunt u binnen AndroidAPS vervolgens binnen de Configurator [Wear inschakelen](../Configuration/Config-Builder#wear).
 
@@ -50,10 +51,42 @@ I - koolhydraten (koolhydraten aan boord | e-carbs in de toekomst)
 
 J - insuline aan boord (van bolus | van basaal)
 
-## Bekijken van gegevens in Nightscout
+## Settings
 
-Als je een ander looping systeem gebruikt en je wilt de loop details *bekijken* op een Android Wear horloge, of als je wilt kijken naar de looping van uw kind, dan kunt u alleen de NSClient APK bouwen/downloaden. Om dit te doen volg de [APK build instructies](../Installing-AndroidAPS/Building-APK.md) waarbij je de build variant "NSClientRelease" selecteert. Er zijn verschillende watchfaces om uit te kiezen die de gemiddelde delta, IOB, momenteel actieve tijdelijke basaal en basale profielen + een CGM grafiek kunnen weergeven.
+There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
+
+* Vibrate on Bolus (on | off)
+* Units for Actions (mg/dl | mmol/l)
+* Show Date (on | off)
+* Show IOB (on | off)
+* Show COB (on | off)
+* Show Delta (on | off)
+* Show AvgDelta (on | off)
+* Show Phone Battery (on | off)
+* Show Rig Battery (on | off)
+* Show Basal Rate (on | off)
+* Show Loop Status (on | off)
+* Show BG (on | off)
+* Show Direction Arrow (on | off)
+* Show Ago (on | off)
+* Dark (on | off)
+* Highlight Basals (on | off)
+* Chart Timeframe (1 | 2 | 3 | 4 | 5 hours)
+* Input Design (Default | Quick righty | Quick lefty | Modern Sparse)
+* Delta Granularity (Steampunk) (Low | Medium | High)
+* Big Numbers (on | off)
+* Ring History (on | off)
+* Light Ring History (on | off)
+* Animations (on | off)
+* Wizard in Menu (on | off)
+* Prime in Menu (on | off)
+* Single Target (on | off)
+* Wizard Percentage (on | off)
+
+## View Nightscout data
+
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Er zijn verschillende watchfaces om uit te kiezen die de gemiddelde delta, IOB, momenteel actieve tijdelijke basaal en basale profielen + een CGM grafiek kunnen weergeven.
 
 ## Pebble
 
-Pebble gebruikers kunnen de [Urchin watchface gebruiken](https://github.com/mddub/urchin-cgm) om de loopdata (indien geüpload naar Nightscout) *te bekijken*, maar je kunt niet via het horloge met AndroidAPS communiceren. U kunt verschillende velden kiezen om te tonen zoals IOB, en momenteel actief tijdelijk basaal en voorspellingen. Als u een open loop gebruikt kunt u [IFTTT](https://ifttt.com/) gebruiken om een applet te maken die zegt als Notificatie wordt ontvangen van AndroidAPS verzend dan een SMS of pushover notificatie.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.

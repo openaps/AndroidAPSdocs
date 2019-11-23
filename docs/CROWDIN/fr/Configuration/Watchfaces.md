@@ -6,9 +6,10 @@ Les fonctions suivantes peuvent être déclenchées à partir de la montre :
 
 * définir une cible temporaire
 * administrer un bolus
-* utilisez le calculateur de bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](../Configuration/Config-Builder#wear) sur le téléphone)
-* vérifier l'état de la boucle et de la pompe
-* montrer le DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
+* administer eCarbs
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* check the status of loop and pump
+* show TDD (Total daily dose = bolus + basal per day)
 
 Pour ce faire, vous devez sélectionner la variante "fullRelease" dans [Construire l'APK](../Installing-AndroidAPS/Building-APK.md) (ou "pumpRelease" qui vous permet de contrôler la pompe à distance sans boucle). Dans AndroidAPS, dans le Générateur de configuration, vous devez [activer Wear](../Configuration/Config-Builder#wear).
 
@@ -49,6 +50,38 @@ H - BGI (blood glucose interaction) -> the degree to which BG “should” be ri
 I - carbs (carbs on board | e-carbs in the future)
 
 J - insulin on board (from bolus | from basal)
+
+## Settings
+
+There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
+
+* Vibrate on Bolus (on | off)
+* Units for Actions (mg/dl | mmol/l)
+* Show Date (on | off)
+* Show IOB (on | off)
+* Show COB (on | off)
+* Show Delta (on | off)
+* Show AvgDelta (on | off)
+* Show Phone Battery (on | off)
+* Show Rig Battery (on | off)
+* Show Basal Rate (on | off)
+* Show Loop Status (on | off)
+* Show BG (on | off)
+* Show Direction Arrow (on | off)
+* Show Ago (on | off)
+* Dark (on | off)
+* Highlight Basals (on | off)
+* Chart Timeframe (1 | 2 | 3 | 4 | 5 hours)
+* Input Design (Default | Quick righty | Quick lefty | Modern Sparse)
+* Delta Granularity (Steampunk) (Low | Medium | High)
+* Big Numbers (on | off)
+* Ring History (on | off)
+* Light Ring History (on | off)
+* Animations (on | off)
+* Wizard in Menu (on | off)
+* Prime in Menu (on | off)
+* Single Target (on | off)
+* Wizard Percentage (on | off)
 
 ## View Nightscout data
 
