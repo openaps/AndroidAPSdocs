@@ -8,7 +8,7 @@
 
 * Ab Version 2.3 muss für das Update git genutzt werden. Ein Update mittels ZIP-File ist nicht mehr möglich.
 * Nutze bitte [Android Studio Version 3.5.1](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
+* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 3.5.1 nicht unterstützt.
 * Wenn Du den Dexcom G6 mit der [gepatchted Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) verwendest, dann musst Du die Version aus dem [2.4 Verzeichnis](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) installiert haben.
 
 ## Kurzanleitung für erfahrene Anwender
