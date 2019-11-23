@@ -178,34 +178,34 @@
    
    На следующем экране "G5/G6 Status" найдите `Queue Items` (`Элементы в очереди`) на полпути вниз - там появится что-то вроде "Остановить Сенсор"
    
-   Wait until this goes - usually within a few minutes. Sensor Status must be "Stopped" (see screenshot).
+   Подождите, пока это происходит - обычно в течение нескольких минут. Состояние сенсора должно быть "Остановлен" (см. снимок экрана).
    
-   -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
+   -> Как удалить трансмиттер без остановки сенсора, см. видео <https://youtu.be/AAhBVsc6NZo>.
    
    ![xDrip+ Остановка сенсора Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
    ![xDrip+ Остановка сенсора Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip system status AND in smartphone’s BT settings (Will be shown as Dexcom?? где ?? are the last two digits of the transmitter serial no.)
+* Забудь устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? последние две цифры серийного № трансмиттера
    
-   ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
+   ![xDrip+ забыть устройство](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Remove transmitter (and sensor if replacing sensor)
+* Удалите трансмиттер (и сенсор при замене)
 
-* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
+* Поместите старый трансмиттер подальше, чтобы предотвратить повторное соединение. Микроволновая печь является идеальным щитом Фарадея для этого - но отключите кабель питания, чтобы быть на 100% уверенным, что никто ее не включит.
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
 * Использование Мастера выбора источника ГК обеспечивает настройки по умолчанию, включая OB1 & нативный режим 
    * Мастер позволит провести начальную настройку.
-   * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
-* Insert new sensor (only if replacing).
-* Put transmitter into sensor - **Do not start sensor immediately!**
-* New "Firefly Transmitters" (serial no. starting with 8G or 8H) can only be used in native mode.
-* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G or 8H):
+   * Вам понадобится серийный номер трансмиттера, если вы пользуетесь им впервые.
+* Введите серийный номер нового трансмиттера. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
+* Вставьте новый сенсор (только при замене).
+* Поместите трансмиттер на сенсор - ** не запускайте сенсор немедленно!**
+* Новые "Трансмиттеры Firefly" (серийный номер начинающиеся с 8G или 8H) можно использовать только в нативном режиме.
+* Следующие опции не должны быть активированы для новых трансмиттеров "Firefly" (серийный номер начинается с 8G или 8H):
    
-   * Preemptive Restart (disable!)
-   * Restart sensor (disable!)
-   * Fallback to xDrip (disable!)
+   * Упреждающий перезапуск (отключить!)
+   * Перезапуск сенсора (отключить!)
+   * Возврат к xDrip (отключить!)
    
    ![Параметры для трансмиттеров "Firefly"](../images/xDrip_Dexcom_FireflySettings.png)
 
