@@ -21,7 +21,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im `komplett
 
 Dexcom G6 mit xDrip+
 ======
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
+* Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
 * Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
 * Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die <a href="../Hardware/DexcomG6#g6-mit-der-gepatchten-dexcom-app">gepatchte Dexcom App</a> mit lokaler Datenübertragung zu xDrip+ verwenden.
 * Lade `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
