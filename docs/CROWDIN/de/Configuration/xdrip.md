@@ -45,9 +45,9 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet oder 8H... verwe
 
 ## xDrip+ mit Dexcom G6
 
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) with local broadcast to xDrip+.
+* Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
+* Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
+* Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die [gepatchte Dexcom App](../Hardware/DexcomG6#g6-mit-der-gepatchten-dexcom-app) mit lokaler Datenübertragung zu xDrip+ verwenden.
 
 ### xDrip+ Version abhängig von der G6 Transmitter Seriennummer
 
