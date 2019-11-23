@@ -14,11 +14,7 @@ To set up an automation, you have to give it a title, select at least one condit
 
 Important note
 -----
-Automation is still active when you 
-
-* disable loop
-* suspend loop
-* disconnect pump
+**Automation is still active when you disable loop!**
 
 So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
 
