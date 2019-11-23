@@ -2,6 +2,7 @@ Aktualizace a změny Wiki
 **********************
 November 2019
 ===============
+* `Automation - deactivate when disabeling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
