@@ -45,9 +45,9 @@
 
 ## xDrip+ & Dexcom G6
 
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) with local broadcast to xDrip+.
+* Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
+* При использовании xDrip+ в качестве приемника сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
+* Если вам нужен функционал оригинального приложения Clarity и оповещения от xDrip +, пользуйтесь [модифицированным приложением Dexcom ](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) с локальной передачей данных в xDrip +.
 
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
@@ -161,7 +161,7 @@ To learn more about the details and reasons for these recommendations read the [
 * Look at the system status (Hamburger menu -> system status) and see what happens
 * If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMabeFailed.png)
 
 * Transmitter days will be set to 0 after successful extension and start of sensor.
 
@@ -218,7 +218,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 * Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
    
-   ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
+   ![Firefly transmitter battery data](../images/xDrip_Dexcom_Battery.png)
 
 * Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
 
