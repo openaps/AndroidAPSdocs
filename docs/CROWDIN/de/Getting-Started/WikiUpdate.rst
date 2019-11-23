@@ -2,7 +2,7 @@ Wiki Updates & Änderungen
 **********************
 November 2019
 ===============
-* `Automation - deactivate when disabeling loop <../Usage/Automation.html#important-note>`_
+* `Automation - bei deaktiviertem Loop ausschalten <../Usage/Automation.html#wichtiger-hinweis>`_
 * `Dexcom G6 Update zum Transmitter-Wechsel <../Configuration/xdrip.html#transmitter-ersetzen>`_
 * `Warum ein verzögerter Bolus beim Loopen nicht funktioniert <../Usage/Extended-Carbs.html#verzogerter-bolus>`_
 * `FAQ - Sport <../Getting-Started/FAQ.html#sport>`_
