@@ -128,7 +128,7 @@ Dépannage
    :maxdepth: 1
    :glob:
   
-   Troubleshooting <./Usage/troubleshooting.rst>
+   Dépannage <./Usage/troubleshooting.rst>
    
 
 Questions fréquentes 
