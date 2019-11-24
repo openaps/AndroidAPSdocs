@@ -176,9 +176,9 @@ AAPS по умолчанию строит свой алгоритм отталк
 > 
 > Множитель хлебной единицы (ХЕ = 12г. углеводов): 2,4 -> Вам нужно 2,4 ед. инсулина для компенсации одной ХЕ.
 > 
-> Corresponding IC: 12 / 2,4 = 5,2 -> 5,2g carbs can be covered with one unit of insulin.
+> Соответствующий фактор инсулин-углеводы IC: 12/2,4 = 5,2 -> 5 2г углеводов можно покрыть одной единицей инсулина.
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Таблицы преобразования доступны в Интернете: [ здесь ](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Результат
 
