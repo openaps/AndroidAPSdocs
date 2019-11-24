@@ -99,10 +99,7 @@ Chart Timeframe (default 3 hours): you can select in the sub menu the max time f
 
 Input Design: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
 
-- Default:
-- Quick righty:
-- Quick lefty:
-- Modern Sparse:
+![../images/inputdesign.jpg](C:\Users\Titi\StudioProjects\AndroidAPSdocs\docs\EN\images\InputDesign.jpg)
 
 ### Specific watchface parameters
 
