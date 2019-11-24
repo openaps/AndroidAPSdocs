@@ -143,7 +143,7 @@ Soyez prudent, car elle est bien souvent trop faible. Trop basse signifie qu'1 U
 
 **Augmentation de la SI** (par ex. 45 au lieu de 35) = moins agressif et plus faible, conduisant à une plus petite baisse des glycmémies pour chaque unité d'insuline. Si elle est trop élevée, cela peut conduire à des hyperglycémies.
 
-**Example:**
+**Exemple :**
 
 * Glycémie est à 190 mg/dl (10,5 mmol) et la cible est à 100 mg/dl (5,6 mmol). 
 * Donc, vous voulez une correction de 90 mg/dl (= 190-100).
