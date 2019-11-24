@@ -13,13 +13,17 @@ You'll see in the pictures below the evolution of the prediction curves during t
 
 ![](..\images\4h_Meal_EN.jpg)
 
-COB prediction curve (orange): For a meal, if you have correctly estimated the carbohydrate, the main curve to be analyzed is the COB curve. But it takes about 1 hour in this example before having prediction close to reality! And after one hour, it's the only curve that remains very stable...
+**COB prediction curve (orange):** For a meal, if you have correctly estimated the carbohydrate, the main curve to be analyzed is the COB curve. But it takes about 1 hour in this example before having prediction close to reality! And after one hour, it's the only curve that remains very stable...
 
-UAM prediction curve (yellow): the first hour, the UAM curve is far below COB curve but it raise slowly and after one hour, it's very close to COB curve. That means that estimated carbs entered for the meal was quite good... If the UAM curve had quickly raised far above the COB curve, it would probably indicate an underestimated amount of carbs (or may be a IC too high). If the UAM curve had remained far below the COB curve, even after 1 hour, it would probably indicate an over-estimated amount of carbs (or may be a too low IC).
+**UAM prediction curve (yellow):** The UAM curve represents and extrapolates the deviation of the observed and expected CGM values. With prebolus a typical observation could be that the first hour, the UAM curve is far below COB curve but will rise slowly and be very close to the COB curve. Usually this means "everything is going accordig to plan"; carb amount has been estimated well.
+With a larger pre-bolus time and a very flat postprandial BG cuve the UAM curve might be below COB for a much longer period of time.
+If the UAM curves deviates heavily from the COB curve:
+If the UAM curve raises quickly above COB this might mean that carbs have been over-estimated (carb counting) or insulin underestimated (IC factor). Be careful when setting an action here. The algorithm most likely will have increased insulin already.
+If the UAM curve had remained far below the COB curve, it could indicate an under-estimated amount of carbs (or wrong IC). It may also mean that carbs don't materialize due to more physical activity, a stomach bug, ... the algorithm will reduce insulin but it is good to still have an eye open for hypoglycemia.
 
-IOB prediction curve (dark blue): Because this curve does not take into account carbs, it is of interest only if you have a high BG before the meal and you do a pre-bolus. It allows to see how the BG will evolve and when it will be necessary to start the meal not to risk making a hypo.
+**IOB prediction curve (dark blue):** Because this curve does not take into account carbs, it is of interest only if you have a high BG before the meal and you do a pre-bolus. It allows to see how the BG will evolve and when it will be necessary to start the meal not to risk making a hypo.
 
-ZT prediction curve (light blue): when this curve is below IOB curve, you can forget it...
+**ZT prediction curve (light blue):** *mostly for internal calculation. Maximum impact a zero-temp can have on an IOB-only curve*
 
 
 
