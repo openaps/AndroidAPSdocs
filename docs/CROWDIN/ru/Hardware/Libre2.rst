@@ -43,7 +43,7 @@ Freestyle Libre 2
 
 As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
 
-.. image:: ../images/fsl2pic5.jpg
+.. изображение:: ../images/fsl2pic5.jpg
   :alt: LibreLink no connection
   
 If the exclamation mark remains or you get an error message, this can have several reasons:
@@ -55,7 +55,7 @@ If the exclamation mark remains or you get an error message, this can have sever
 
 Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
 
-.. image:: ../images/fsl2pic6.jpg
+.. изображение:: ../images/fsl2pic6.jpg
   :alt: LibreLink connection established
   
 Now the smartphone settings can be changed again if necessary, e.g. if you want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
@@ -79,7 +79,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 * to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xdrip please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
 Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 
-.. image:: ../images/fsl2pic7.jpg
+.. изображение:: ../images/fsl2pic7.jpg
   :alt: xDrip+ LibreLink logging
   
 .. image:: ../images/fsl2pic7a.jpg
@@ -92,7 +92,7 @@ In xDrip+ start the sensor with "Start Sensor" and "not today".
 
 In fact this will not start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
 
-Step 4: Configure AndroidAPS
+Шаг 4: Настройка AndroidAPS
 ==============
 * В AndroidAPS перейдите в Config Builder > BG Source и проверьте 'xDrip+' 
 * If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html#identifiziere-empfanger>`_.
@@ -106,15 +106,15 @@ The connectivity is extraordinary good. With the exception of Huawei mobile phon
 
 Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor infos are available in the System menu.
 
-.. image:: ../images/fsl2pic8.jpg
+.. изображение:: ../images/fsl2pic8.jpg
   :alt: xDrip+ advanced settings Libre 2
   
-.. image:: ../images/fsl2pic9.jpg
+.. изображение:: ../images/fsl2pic9.jpg
   :alt: xDrip+ homescreen with raw data
   
 The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Avanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
 
-.. image:: ../images/fsl2pic10.jpg
+.. изображение:: ../images/fsl2pic10.jpg
   :alt: Libre 2 start time
   
 Altogether it is one of the smallest CGM systems on the market. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dL the deviations are typical smaller than 10 md/dL. Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturbe the internal leveling mechanism.
@@ -129,7 +129,7 @@ If not, please check the phone settings and proceed as with the first start. You
 
 Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! You do not need to start the sensor in xDrip.
 
-.. image:: ../images/fsl2pic11.jpg
+.. изображение:: ../images/fsl2pic11.jpg
   :alt: xDrip+ missing data when changing Libre 2 sensor
   
 You can calibrate the Libre2 with an offset of plus/minus 20 mg/dL (intercept), but no slope. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
