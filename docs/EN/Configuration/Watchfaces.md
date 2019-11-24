@@ -50,8 +50,93 @@ I - carbs (carbs on board | e-carbs in the future)
 
 J - insulin on board (from bolus | from basal)
 
+## Settings (in wear watch)
+
+To access to the watchface settings, double tap on your BG, slide up and select "Settings".
+
+### AAPS companion parameters
+
+Vibrate on Bolus (default On):
+
+Units for Actions (default mg/dl): if "On" units for actions is mg/dl, if "Off" unit is mmol/l. Used when setting a TT from watch.
+
+### Watchface settings
+
+Show Date (default Off): note, date is not available on all watchfaces
+
+Show IOB (default On):
+
+Show COB (default On):
+
+Show Delta (default On):
+
+Show AvgDelta (default On):
+
+Show Phone Battery (default On): Phone battery in %. Red if below 30% .
+
+Show Rig Battery (default Off):
+
+Show Basal Rate (default On):
+
+Show Loop Status (default On): 
+
+Show BG (default On):
+
+Show Direction Arrow (default On):
+
+Show Ago (default On): show how many minutes since last reading.
+
+Dark (default On): 
+
+Highlight Basals (default Off): Improve the visibility of basal rate and temp basals
+
+Chart Timeframe (default 3 hours): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+
+### User Interface setting
+
+Input Design: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+
+- Default:
+- Quick righty:
+- Quick lefty:
+- Modern Sparse:
+
+### Specific watchface parameters
+
+#### Steampunk watchface
+
+Delta Granularity (default Medium)
+
+- Low:
+- Medium:
+- High:
+
+#### Circle WF
+
+Big Numbers:
+
+Ring History:
+
+Light Ring History:
+
+Animations:
+
+### Commands settings
+
+Wizard in Menu (default On):
+
+Prime in Menu (default Off):
+
+Single Target (default On):
+
+Wizard Percentage (default Off):
+
+### Version Number
+
+
 
 ## View Nightscout data
+
 If you are using another looping system and want to _view_ your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK.  To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease".  There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 ## Pebble
