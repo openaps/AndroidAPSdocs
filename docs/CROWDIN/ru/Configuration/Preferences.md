@@ -120,7 +120,7 @@
 * 'Включить локальные трансляции' передаст данные с портала лечения/назначений на другие приложения на телефоне, например xdrip.
 * 'Всегда использовать абсолютные значения базала" должно быть активировано, если вы хотите правильно использовать Autotune.
     
-    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
+    ** Не активируйте при пользовании [помпой Insight pump ](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)! ** Это приведет к неверным настройкам временной скорости базала TBR в помпе Insight.
 
 ## СМС-коммуникатор
 
