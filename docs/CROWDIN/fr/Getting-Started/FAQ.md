@@ -224,13 +224,13 @@ In NSClient check 'Connection settings'. Maybe you actually are not in an allowe
 
 ### Pourquoi ne AndroidAPS indique 'la source de glycémie actuelle ne supporte pas de filtrage avancé' ?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Si vous utilisez un autre MGC/MGF que le Dexcom G5 ou G6 en mode natif xDrip, vous obtiendrez cette alerte dans l'onglet AndroidAPS OpenAPS SMB. Voir [Lissage des données de glycémie](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) pour plus de détails.
 
 ## Pompe
 
 ### Où placer la pompe ?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
+Il y a de nombreuses possibilités de placer la pompe. Peu importe si vous êtes en boucle fermée ou pas. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
 
 ### Piles
 
