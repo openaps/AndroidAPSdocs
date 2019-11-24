@@ -20,11 +20,6 @@ Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation 
 To get faster to the AAPS menu, do a double tap on your BG. 
 With a double tap onto the BG curve you can change the time scale..
 
-## Troubleshooting the wear app: 
-*  On Android Wear 2.0 the watch screen does not install by itself anymore.  You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it.  Also enable auto update.  
-*  Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-*  Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-
 ## Different Watchfaces available
 
 ![watchfaces](..\images\watchfaces.jpg)
@@ -117,15 +112,13 @@ Delta Granularity (default Medium)
 
 ![steampunk_gauge](C:\Users\Titi\StudioProjects\AndroidAPSdocs\docs\EN\images\steampunk_gauge.jpg)
 
-
-
 #### Circle WF
 
 Big Numbers: Increase text size to improve visibility
 
-Ring History: Show 30' BG history with 5 rings
+Ring History: View graphically BG history with gray rings inside the hour's green ring
 
-Light Ring History: 
+Light Ring History: Ring history more discreet with a darker gray
 
 Animations:
 
@@ -133,15 +126,22 @@ Animations:
 
 Wizard in Menu (default On): Allow wizard interface in main menu to input Carbs and set Bolus from watch
 
-Prime in Menu (default Off):
+Prime in Menu (default Off): Allow Prime / Fill action from watch
 
-Single Target (default On):
+Single Target (default On): 
 
-Wizard Percentage (default Off): Allow bolus correction from wizard (percentage)
+- On: you set a single value for TT
+- Off: you set Low target and high target for TT
+
+Wizard Percentage (default Off): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
 ### Version Number
 
+## Troubleshooting the wear app: 
 
+*  On Android Wear 2.0 the watch screen does not install by itself anymore.  You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it.  Also enable auto update.  
+*  Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+*  Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 
 ## View Nightscout data
 
