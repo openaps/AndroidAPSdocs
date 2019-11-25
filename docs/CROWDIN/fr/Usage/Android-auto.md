@@ -1,19 +1,19 @@
 # Android Auto
 
-How it looks like:
+À quoi cela ressemble :
 
-![Screenshot 1](../images/Android-auto1.png)
+![Capture d'écran 1](../images/Android-auto1.png)
 
-How to use it:
+Comment l’utiliser :
 
-* Install Android Auto
-* In the Android Auto app, tap the Hamburger menu (three horizontal lines)
-* Tap About.
-* Tap the About Android Auto header 10 times, until a toast appears that says "Developer mode enabled".
-* Now you can access developer mode by selecting the overflow menu dots on the top right of the handheld screen and go into developpers settings.
-* Select unknown sources (scroll down all the way to the bottom of the list).
-* Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
+* Installez Android Auto
+* Dans l'application Android Auto, appuyez sur le menu Hamburger (trois lignes horizontales)
+* Appuyer sur "à propos".
+* Appuyez 10 fois sur l'en-tête "À propos" d'Android Auto jusqu'à ce qu'un message apparaisse indiquant "Mode développeur activé".
+* Vous pouvez maintenant accéder au mode développeur en sélectionnant les trois points du menu en haut à droite de l'écran de la voiture et accéder aux paramètres de développement.
+* Sélectionnez "Sources inconnues" (faites défiler jusqu'en bas de la liste).
+* Vous pouvez maintenant quitter le mode de développement si vous le souhaitez. Appuyez sur les trois points du menu en haut à droite pour le faire.
 
-Troubleshooting:
+Résolution de problèmes:
 
-* If you don't see the notification, check if you allowed AAPS to show notifications in Android and if Android Auto has access rights to notifications.
+* Si vous ne voyez pas la notification, vérifiez si vous avez autorisé AAPS à afficher des notifications dans Android et si Android Auto a des droits d'accès aux notifications.
