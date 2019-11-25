@@ -86,6 +86,10 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
    * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
    * Response A: To deliver meal bolus 0.60U reply with code Rrt
    * Response B: Remote bolus not available. 
+* CARBS 5
+   * Response: To enter 5g at 12:45 reply with code EmF
+* CARBS 5 17:35/5:35PM
+   * Response: To enter 5g at 17:35 reply with code EmF
 * EXTENDED STOP/CANCEL
    * Response: To stop extended bolus reply with code EmF
 * EXTENDED 2 120
@@ -114,6 +118,12 @@ Outro
    * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
 * TARGET MEAL/ACTIVITY/HYPO   
    * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+* TARGET STOP/CANCEL   
+   * Response: To cancel Temp Target reply with code Any
+* HELP
+   * Response: BG, LOOP, TREATMENTS, .....
+* HELP BOLUS
+   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Resolução de Problemas
 =====
