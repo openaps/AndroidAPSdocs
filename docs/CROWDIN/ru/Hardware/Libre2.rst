@@ -41,10 +41,10 @@ Freestyle Libre 2
   
 Первая установка соединения с сенсором имеет решающее значение. Приложение LibreLink пытается установить беспроводное соединение с сенсором каждые 30 секунд. Если один или несколько обязательных параметров отсутствуют, их надо скорректировать. У вас нет ограничений по времени для этого. Сенсор постоянно пытается установить соединение. Даже если это длится несколько часов. Будьте терпеливы и попробуйте разные настройки, прежде чем даже подумать о замене сенсора.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+Пока вы видите красный восклицательный знак ("!") в левом верхнем углу стартового экрана LibreLink - соединения нет. Только когда восклицательный знак исчезнет, соединение установлено и значения гликемии отправляются на смартфон. Это должно произойти не более чем через 5 минут.
 
 .. изображение:: ../images/fsl2pic5.jpg
-  :alt: LibreLink no connection
+  :alt: LibreLink нет соединения
   
 If the exclamation mark remains or you get an error message, this can have several reasons:
 
