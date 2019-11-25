@@ -86,6 +86,10 @@ Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAP
    * Mit dem optionalen Parameter MEAL wird ein Mahlzeiten TT gesetzt (Standardwerte sind 90 mg/dL / 5.0 mmol/L für 45 Minuten).
    * Antwort A: Um einen Bolus von 0,6 IE abzugeben, antworte mit dem Code Rrt
    * Antwort B: Bolusabgabe aus der Ferne nicht verfügbar. 
+* CARBS 5
+   * Response: To enter 5g at 12:45 reply with code EmF
+* CARBS 5 17:35/5:35PM
+   * Response: To enter 5g at 17:35 reply with code EmF
 * EXTENDED STOP/CANCEL
    * Antwort: Antworte mit dem Code EmF, um den erweiterten Bolus zu beenden
 * EXTENDED 2 120
@@ -114,6 +118,12 @@ Andere
    * Antwort: Um den SMS Remote Service zu deaktivieren, antworte mit dem Code Any. Beachte, dass Du die Fernsteuerung nur am AAPS Master-Smartphone wieder aktivieren kannst.
 * TARGET MEAL/ACTIVITY/HYPO   
    * Antwort: Um ein MEAL/ACTIVITY/HYPO TT zu setzen, antworte mit dem Code Any.
+* TARGET STOP/CANCEL   
+   * Response: To cancel Temp Target reply with code Any
+* HELP
+   * Response: BG, LOOP, TREATMENTS, .....
+* HELP BOLUS
+   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Problembehandlung
 =====
