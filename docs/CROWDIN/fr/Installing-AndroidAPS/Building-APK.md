@@ -42,7 +42,7 @@ Description détaillée des étapes nécessaires à la construction du fichier A
 
 ## Installer git (si vous ne l'avez pas)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Suivez le manuel sur la [page d'installation de git](../Installing-AndroidAPS/git-install.rst).
 
 ## Installez Android Studio
 
@@ -241,12 +241,12 @@ Renseignez les informations de la dernière boîte de dialogue et cliquez sur "N
 
 ![Capture d'écran 43](../images/Installation_Screenshot_43.png)
 
-Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
+Sélectionnez "full" (ou "fullRelease") comme favori pour l'application générée. Sélectionnez V1 "Jar Signature" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
 * 'Release' devrait être votre choix par défaut pour "Build Variants", 'Debug' est juste pour les personnes qui codent.
 * Sélectionnez le type de génération que vous souhaitez complier. 
-  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
+  * full / fullRelease (c'est-à-dire recommandations automatiquement adoptées en boucle fermée)
+  * openloop (c'est à dire les recommandations données à l'utilisateur commandes manuelles)
   * pumpcontrol (c'est-à-dire télécommande pour la pompe, pas pour le bouclage)
   * nsclient (c'est-à-dire que les données de bouclage d'un autre utilisateur sont affichées et que des entrées de careportal peuvent être ajoutées)
 
@@ -269,11 +269,11 @@ Une fenêtre du gestionnaire de fichiers s'ouvre. Comme j'utilise Linux, il se p
 Veuillez sélectionner le répertoire AndroidAPS/app/full/release pour trouver le fichier "app-full-release.apk". Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire comme vous voulez, c-à-d.
 
 * Bluetooth
-* cloud upload (Google Drive or other cloud services)
-* connect computer and phone by cable 
-* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+* envoi dans le cloud (Google Drive ou autres services cloud)
+* connection de l'ordinateur et du téléphone par câble 
+* par mail (Notez que certaines applications de messagerie ne permettent pas les pièces jointes apk, dans ce cas utiliser une autre méthode de transfert.)
 
-In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Si vous utilisez une autre solution, veuillez procéder en conséquence.
+Dans cet exemple, Gmail est utilisé car c'est assez simple. Pour installer l'application "auto-signée", vous devez autoriser Android sur votre smartphone à effectuer cette installation même si ce fichier est reçu via Gmail, ce qui est interdit par défaut. Si vous utilisez une autre solution, veuillez procéder en conséquence.
 
 ![Capture d'écran 48](../images/Installation_Screenshot_48.png)
 
@@ -293,4 +293,4 @@ Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour vo
 
 ## Dépannage
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Voir la page spécifique [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
