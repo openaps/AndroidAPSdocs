@@ -52,7 +52,7 @@ Installez [Android Studio](https://developer.android.com/studio/install.html) et
 
 Sélectionnez "Ne pas importer les paramètres" car vous n'avez pas eu d'utilisation préalable.
 
-![Screenshot 1](../images/Installation_Screenshot_01.png)
+![Capture d'écran 1](../images/Installation_Screenshot_01.png)
 
 Cliquez sur "Suivant".
 
