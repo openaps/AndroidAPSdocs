@@ -86,6 +86,10 @@ AndroidAPS позволяет контролировать телефон реб
    * Если вы зададите необязательный параметр прием пищи MEAL, то будет задано значение временная цель прием пищи MEAL (значения по умолчанию: 90 мг/дл, 5,0 ммоль/л на 45 мин).
    *Ответ А: Для подачи болюса 0,6 ед на еду ответьте кодом Rrt
    * Ответ B: Удаленный болюс недоступен. 
+* CARBS 5
+   * Response: To enter 5g at 12:45 reply with code EmF
+* CARBS 5 17:35/5:35PM
+   * Response: To enter 5g at 17:35 reply with code EmF
 * EXTENDED STOP/CANCEL
    * Ответ: Для прекращения подачи пролонгированного болюса ответьте кодом EmF
 * EXTENDED 2 120
@@ -114,6 +118,12 @@ AndroidAPS позволяет контролировать телефон реб
    * Ответ: Чтобы отключить удаленную службу SMS ответьте кодом Any. Имей в виду, что вы сможете его повторно активировать только непосредственно с главного смартфона AAPS.
 * ЦЕЛЬ ПРИЕМ ПИЩИ/НАГРУЗКА/ГИПО MEAL/ACTIVITY/HYPO   
    * Ответ: Чтобы установить временную цель MEAL/ACTIVITY/HYPO ответьте кодом Any
+* TARGET STOP/CANCEL   
+   * Response: To cancel Temp Target reply with code Any
+* HELP
+   * Response: BG, LOOP, TREATMENTS, .....
+* HELP BOLUS
+   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Устранение неполадок
 =====
