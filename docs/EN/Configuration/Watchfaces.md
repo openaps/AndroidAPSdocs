@@ -55,7 +55,7 @@ J - insulin on board (from bolus | from basal)
 
 To access to the watchface settings, double tap on your BG, slide up and select "Settings".
 
-![settings_on_off](C:\Users\Titi\StudioProjects\AndroidAPSdocs\docs\EN\images\settings_on_off.jpg)
+![settings_on_off](..\images\settings_on_off.jpg)
 
 ### AAPS companion parameters
 
@@ -99,7 +99,7 @@ Chart Timeframe (default 3 hours): you can select in the sub menu the max time f
 
 Input Design: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
 
-![../images/inputdesign.jpg](C:\Users\Titi\StudioProjects\AndroidAPSdocs\docs\EN\images\InputDesign.jpg)
+![../images/inputdesign.jpg](..\images\InputDesign.jpg)
 
 ### Specific watchface parameters
 
@@ -107,7 +107,7 @@ Input Design: with this parameter, you can select the position of "+" and "-" bu
 
 Delta Granularity (default Medium)
 
-![steampunk_gauge](C:\Users\Titi\StudioProjects\AndroidAPSdocs\docs\EN\images\steampunk_gauge.jpg)
+![steampunk_gauge](..\images\steampunk_gauge.jpg)
 
 #### Circle WF
 
