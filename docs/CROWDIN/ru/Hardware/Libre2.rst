@@ -46,14 +46,14 @@ Freestyle Libre 2
 .. изображение:: ../images/fsl2pic5.jpg
   :alt: LibreLink нет соединения
   
-If the exclamation mark remains or you get an error message, this can have several reasons:
+Если восклицательный знак остается или вы получите сообщение об ошибке, это может иметь несколько причин:
 
-- Android location service is not granted - please enable it in the system settings
-- automatic time and time zone is not set - please change the settings accordingly
-- activate alarms - at least one of the three alarms must be activated in LibreLink
-- Bluetooth is switched off - please switch on
+- Служба определения местоположения Android не предоставлена - включите ее в системных настройках
+- автоматическое время и часовой пояс не заданы - измените настройки
+-активировать сигналы -по крайней мере однин из трех сигналов в LibreLink
+- Bluetooth выключен - включите
 
-Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Перезапуск телефона помогает, возможно, придется перезапустить несколько раз. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
 
 .. изображение:: ../images/fsl2pic6.jpg
   :alt: LibreLink connection established
