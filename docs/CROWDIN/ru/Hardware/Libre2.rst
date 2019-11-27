@@ -53,10 +53,10 @@ Freestyle Libre 2
 -активировать сигналы -по крайней мере однин из трех сигналов в LibreLink
 - Bluetooth выключен - включите
 
-Перезапуск телефона помогает, возможно, придется перезапустить несколько раз. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Перезапуск телефона помогает, возможно, придется перезапустить несколько раз. Как только соединение будет установлено, красный восклицательный знак исчезнет и самый важный этап - сопряжение - пройден. Сенсор и телефон теперь сопряжены, каждую минуту передаются данные ГК.
 
 .. изображение:: ../images/fsl2pic6.jpg
-  :alt: LibreLink connection established
+  :alt: Соединение LibreLink установлено
   
 Now the smartphone settings can be changed again if necessary, e.g. if you want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
 
