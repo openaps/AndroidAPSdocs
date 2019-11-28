@@ -7,9 +7,9 @@ Z hodinek lze ovládat následující funkce:
 * nastavovat dočasné cíle
 * podávat bolusy
 * administer eCarbs
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* používat kalkulátor (nastavení kalkulátoru můžete definovat v [nastaveni](../Configuration/Config-Builder#wear) v telefonu)
+* kontrolovat stav smyčky a pumpy
+* zobrazit TDD (celková denní dávka = bolus + bazál za den)
 
 Aby bylo možné tyto funkce ovládat z hodinek, musíte při [sestavování APK](../Installing-AndroidAPS/Building-APK.md) zvolit možnost „fullRelease“ (nebo „pumpRelease“, která vám umožní vzdálené ovládání pumpy bez smyčky). V aplikaci AndroidAPS musíte na kartě „Konfigurace“ [povolit plugin Wear](../Configuration/Config-Builder#wear).
 
@@ -83,10 +83,10 @@ There are different settings to modify and to choose from while using AndroidAPS
 * Single Target (on | off)
 * Wizard Percentage (on | off)
 
-## View Nightscout data
+## Zobrazení dat z Nightscoutu
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Lze si vybrat z několika ciferníků (watchfaces), které zobrazují průměrnou hodnotu delta, IOB, aktuálně aktivní bazál a bazální profil + graf hodnot glykémie z CGM.
+Pokud používáte jiný systém smyčky a chtěli byste si *prohlédnout* detailní informace o své smyčce na hodinkách s Wear OS nebo byste chtěli sledovat smyčku svého dítěte, pak vám bude stačit stáhnout pouze aplikaci NSClient. V tom případě se řiďte [pokyny, jak sestavit APK](../Installing-AndroidAPS/Building-APK.md) a vyberte variantu sestavení „NSClientRelease“. Lze si vybrat z několika ciferníků (watchfaces), které zobrazují průměrnou hodnotu delta, IOB, aktuálně aktivní bazál a bazální profil + graf hodnot glykémie z CGM.
 
 ## Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Uživatelé hodinek Pebble mohou také použít [Watchface Urchin](https://github.com/mddub/urchin-cgm), aby si *prohlédli* informace o smyčce (pokud jsou nahrávané do Nightscoutu), ale nebudete přes hodinky schopní komunikovat s AndroidAPS. Můžete si zvolit údaje, které se mají zobrazovat, např. IOB, aktuální dočasný bazál a predikce. Jestliže používáte otevřenou smyčku, můžete využít [IFTTT](https://ifttt.com/), abyste vytvořili applet, který říká: „Pokud je od AndroidAPS přijatá notifikace, tak buď odešli SMS, nebo push notifikaci“.
