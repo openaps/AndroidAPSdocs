@@ -281,7 +281,7 @@ Viz [popis výše](../Getting-Started/FAQ#disconnect-pump).
 
 ### Práce
 
-V závislosti na druhu vaší práce možná používáte jiné nastavení pro pracovní dny. Jako uživatel smyčky byste měli přemýšlet o [změně profilu](../Usage/Profiles.md) pro svůj odhadovaný pracovní den (např. více než 100 % na 8 h při sedavé práci nebo méně než 100 % při aktivní činnosti), vysoké nebo nízké dočasné cíle nebo [časový posun](../Usage/Profiles#time-shift) Vašeho profilu, pokud vstanete mnohem dříve nebo později než obvykle. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+V závislosti na druhu vaší práce možná používáte jiné nastavení pro pracovní dny. Jako uživatel smyčky byste měli přemýšlet o [změně profilu](../Usage/Profiles.md) pro svůj odhadovaný pracovní den (např. více než 100 % na 8 h při sedavé práci nebo méně než 100 % při aktivní činnosti), vysoké nebo nízké dočasné cíle nebo [časový posun](../Usage/Profiles#time-shift) Vašeho profilu, pokud vstanete mnohem dříve nebo později než obvykle. Pokud používáte [Nightscout profily](../Configuration/Config-Builder#ns-profile), můžete také vytvořit druhý profil (např. „doma“ a „pracovní den“) a přepnout se na profil, který skutečně potřebujete.
 
 ## Volnočasové aktivity
 
@@ -305,31 +305,31 @@ The percentage of the profile switch, the value for your activity temp target an
 
 ### Sex
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
+Můžete odpojit pumpu, aby nepřekážela, ale měli byste to říci AAPS, aby výpočty IOB byly správné.
 
 Viz [popis výše](../Getting-Started/FAQ#disconnect-pump).
 
 ### Požívání alkoholu
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Požívání alkoholu je v režimu uzavřené smyčky poměrně riskantní, protože algoritmus uzavřené smyčky nedokáže správně předpovědět, jak bude glykémie alkoholem ovlivněna. Musíte si najít vlastní způsob, jak podobné situace řešit, a to pomocí následujících funkcí v AndroidAPS:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* Vypnout režim uzavřené smyčky a provést nezbytné zásahy ručně nebo
+* nastavit vyšší dočasný cíl a vypnout funkci UAM, aby smyčka nezvyšovala váš IOB kvůli neoznámenému jídlu nebo
+* provést přepnutí profilu a nastavit profil na výrazně nižší hodnoty než 100 % 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Jestliže požíváte alkohol, je nezbytné průběžně sledovat CGM a ručně předcházet hypoglykemii příjmem sacharidů.
 
 ### Spánek
 
 #### Jak mohu provozovat smyčku během noci bez mobilního a WIFI záření?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
+Mnoho uživatelů na noc přepíná telefon do režimu letadlo. Pokud chcete provozovat smyčku během spánku s telefonem v režimu letadlo, postupujte následovně (toto bude fungovat pouze se zdrojem glykémií xDrip + nebo upravená Dexcom aplikace. Nebude to fungovat pokud získáváte glykémie přes Nightscout):
 
 1. Zapněte na mobilu režim letadlo.
 2. Počkejte dokud není režim aktivní.
 3. Zapněte Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Nebudete moci přijímat telefonní hovory ani nebudete mít přístup k internetu. Ale smyčka poběží.
 
 Objevily se problémy s lokálním odesíláním dat (AAPS nepřijímal nové hodnoty BG z xDrip+) v případě, že byl zapnutý mód letadlo. Jděte do Nastavení > Komunikace mezi zařízeními > Identify reciever, a vložte hodnotu `info.nightscout.androidaps`.
 
@@ -339,16 +339,16 @@ Objevily se problémy s lokálním odesíláním dat (AAPS nepřijímal nové ho
 
 #### Jak se vypořádat s cestováním přes časové zóny?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+S DanouR a korejskou verzí DanyR nemusíte dělat nic. Pro ostatní pumpy viz další podrobnosti na stránce [Cestování mezi časovými pásmy](../Usage/Timezone-traveling.md).
 
 ## Lékařská témata
 
 ### Pobyt v nemocnici
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Chcete-li svému lékaři (lékařům) předat nějaké informace o DIY smyčce AndroidAPS, můžete si vytisknout část [Příručka k systému AndroidAPS pro lékaře](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### Kontrola u vašeho diabetologa
 
 #### Výkazy
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Můžete ukázat své výkazy z Nightscoutu (https://ADRESA-VAŠEHO-NS.com/report) nebo vyzkoušet nástroj [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
