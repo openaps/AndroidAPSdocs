@@ -1,15 +1,15 @@
 
-Export & import settings
+Export/Import des paramètres
 ******
-When should I export settings?
+Quand dois-je exporter les paramètres ?
 =====
-Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
+Préparez-vous aux imprévus. Vous pouvez modifier des paramètres importants par accident et avoir des problèmes pour annuler les modifications. Votre téléphone pourrait se casser ou être volé. Pour revenir facilement à l'état où vous étiez, les paramètres doivent être exportés régulièrement.
 
-Best practice is to export after change of settings or completing an objective. 
+La meilleure pratique consiste à exporter les paramètres après un changement ou la réalisation d'un objectif. 
 
-Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Paramètres exportés doivent être copiés sur un stockage cloud ou sur votre ordinateur. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
 
-On a Windows 10 computer it looks like this:
+Sur un ordinateur Windows 10, cela ressemble à ceci :
   
   .. image:: ../images/SmartphoneRootLevelWin10.png
     :alt: AndroidAPS Preferences phone connected to computer
