@@ -108,21 +108,21 @@ Pumpy Insight s novějším firmwarem budou vibrovat vždy při podání bolusu 
 
 Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Pumpa Insight má malou interní baterii udržující základní funkce, jako jsou vnitřní hodiny, zatímco vyměňujete hlavní baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. Pokud se tak stane, všechny položky v AndroidAPS provedené před výměnou baterie nebudou zahrnuty do kalkulací, jelikož nelze určit správný čas.
 
 ## Specifické chyba Insight
 
 ### Prodloužený bolus
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Používejte pouze jeden rozložený bolus v daném čase, protože používání více rozložených bolusů současně může způsobit chyby.
 
 ### Časový limit
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Někdy se může stát, že pumpa Insight neodpoví během navazování spojení. V takovém případě AAPS zobrazí následující zprávu „Timeout during handshake - reset bluetooth“.
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+V tom případě vypněte bluetooth v pumpě i telefonu na 10 sekund a potom jej opět zapněte.
 
 ## Změna časových pásem s pumpou Insight
 
