@@ -132,8 +132,8 @@ Toto nastavení dovoluje vzdálené ovládání telefonu s AAPS posláním SMS s
 * Můžete nastavit výchozí množství pro plnění kanyly – toto množství pak bude pumpa do kanyly/setu plnit a tento inzulin se bude odečítat ze zásobníku, ale přitom se nebude započítávat do IOB výpočtů. Podívejte se do příbalového letáku kanyly, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
 * Můžete změnit nastavení zobrazení hlavní stránky a vzhled hodnot glykémie podle toho, zda jsou v cílovém rozsahu. Toto nastavení ovlivňuje pouze vzhled grafu a nemá žádný vliv ani na váš cíl glykémie ani na výpočty.
 * „Krátké názvy modulů“ vám umožní, abyste viděli více záložek na jedné obrazovce, např. štítek záložky „Open APS“ se změní jen na „OAPS“, „Ošetření“ se změní na „OŠET“ atd.
-* „Místní výstrahy“ vám umožňují rozhodnout, po jaké době nedostupnosti dat nebo pumpy se zobrazí výstraha. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* „Místní výstrahy“ vám umožňují rozhodnout, po jaké době nedostupnosti dat nebo pumpy se zobrazí výstraha. Pokud často dostáváte výstrahu, že je pumpa nedostupná, tak zapněte Hlídač BT v rozšířeném nastavení v sekci pumpa.
 
 ## Možnosti dat
 
-* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
+* „Odesílání do Fabric“ odešle vývojářům reporty o pádech aplikace a data o používání.
