@@ -81,9 +81,9 @@ Tout d'abord, vous devez prendre le même équipement d'urgence avec vous, comme
 
 ## Comment attacher en toute sécurité la MGC/MFG ?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Certains Boucleur utilisent également des cassettes Kinesi standard ou des cassettes rock moins chères.
+Vous pouvez le coller : des « patches » pré-perforés sont vendus pour les systèmes MGC courants (demandez à Google ou à eBay). Certains Boucleur utilisent également des cassettes Kinesi standard ou des cassettes rock moins chères.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
+Vous pouvez le fixer : il y a des brassards aux bras qui fixent la MGC / MGF avec un élastique (demandez à Google ou eBay).
 
 # Paramètres AndroidAPS
 
