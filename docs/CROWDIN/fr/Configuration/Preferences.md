@@ -128,11 +128,11 @@ Ce paramètre permet de contrôler à distance de l'application en envoyant des 
 
 ## Autres
 
-* Vous pouvez définir des valeurs par défaut pour vos cibles temporaires à cet endroit pour les différents types de cible temporaire (hypo, repas imminent et activité). Lorsque vous sélectionnez une cible temporaire et que vous choisissez, par exemple, "Repas imminent" dans la liste déroulante, elle renseignera automatiquement la durée et la valeur de votre CT en fonction des valeurs que vous avez paramétrées ici. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
-* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
-* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
-* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
-* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* Vous pouvez définir des valeurs par défaut pour vos cibles temporaires à cet endroit pour les différents types de cible temporaire (hypo, repas imminent et activité). Lorsque vous sélectionnez une cible temporaire et que vous choisissez, par exemple, "Repas imminent" dans la liste déroulante, elle renseignera automatiquement la durée et la valeur de votre CT en fonction des valeurs que vous avez paramétrées ici. Pour plus d'informations sur l'utilisation des cibles temporaires, voir [Fonctions OpenAPS](../Usage/Open-APS-features.md). 
+* Vous pouvez définir des quantités par défaut pour remplir&amorcer - ceci amorcera la pompe avec la valeur spécifiée et cette insuline sera comptabilisée comme utilisée depuis le réservoir, mais pas dans les calculs de l'IA. Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
+* Vous pouvez changer dans l'écran d'accueil et sur la montre les plages d'objectifs. Notez que cela ne concerne que la représentation graphique et n'a pas d'impact sur vos cibles ou sur les calculs.
+* 'Raccourcir les titres des onglets' permet de voir plus d'onglets à l'écran, par exemple l'onglet 'OpenAPS' devient 'OAPS', 'Objectifs' devient 'OBJ' etc.
+* 'Alertes locales' vous permet de décider si vous recevez un avertissement et après combien de temps pour ne pas recevoir de valeurs de glycémie (données périmées) ou si la pompe n'est pas accessible. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
 
 ## Choix de données
 
