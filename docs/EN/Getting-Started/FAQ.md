@@ -200,7 +200,7 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 ## Pump
 
 ### Where to place the pump?
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
+There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
 
 ### Batteries
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does.  It is best to change battery at 25% as communication becomes challenging then.  You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site.  Tricks to increase battery life include:
