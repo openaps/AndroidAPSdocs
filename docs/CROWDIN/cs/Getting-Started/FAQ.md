@@ -230,7 +230,7 @@ Pokud v nativním režimu xDripu používáte jiný CGM/FGM než Dexcom G5 nebo 
 
 ### Kam pumpu umístit?
 
-Existuje bezpočet možností, kam pumpu umístit. Nezáleží na tom, zda používáte smyčku nebo ne. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
+Existuje bezpočet možností, kam pumpu umístit. Nezáleží na tom, zda používáte smyčku nebo ne.
 
 ### Baterie
 
