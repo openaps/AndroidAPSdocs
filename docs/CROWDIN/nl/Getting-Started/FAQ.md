@@ -230,7 +230,7 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 
 ### Waar moet ik mijn pomp dragen?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
+There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
 
 ### Batterijen
 
