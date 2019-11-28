@@ -230,7 +230,7 @@ Wenn du ein anderes CGM/FGM als Dexcom G5 oder G6 im xDrip native mode verwendes
 
 ### Wo soll ich die Pumpe tragen?
 
-Es gibt unzählige Möglichkeiten, die Pumpe zu platzieren. Es spielt keine Rolle, ob du loopst oder nicht. Wenn du lieber eine schlauchlose Pumpe hättest und zum Loopen eine Dana verwendest, probiere einmal den 30cm Katheter in Verbindung mit dem original Bauchgurt aus.
+Es gibt unzählige Möglichkeiten, die Pumpe zu platzieren. Es spielt keine Rolle, ob du loopst oder nicht.
 
 ### Batterien
 
