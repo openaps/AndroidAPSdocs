@@ -137,75 +137,75 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H,
 ### Stav baterie vysílače
 
 * Stav baterie je zobrazen v system status (Hamburger menu levý horní roh domácí obrazovky)
-* Swipe left once to see second screen. ![xDrip+ První vysílač 4](../images/xDrip_Dexcom_Battery.png)
+* Posuňte obrazovku doleva pro zobrazení druhé obrazovky.![xDrip+ První vysílač 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”:
+* Přesné hodnoty, kdy vysílač „umře“ z důvodu vybití baterie, nejsou známy. Následující údaje byly zaslány poté, co vysílač „umřel“:
    
-   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
-   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
+   * První případ: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
+   * Druhý případ: Transmitter days: 249 / Voltage A: 275 (v okamžiku selhání)
 
 ### Prodloužení životnosti vysílače
 
-* So far life cannot be extended for transmitters whos serial no. starts with 8G or 8H.
-* To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and check `OB1 collector`.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Prozatím nelze prodloužit životnost vysílačů, jejichž výrobní číslo začíná znaky 8G nebo 8H.
+* V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
+* Při operaci prodloužení životnosti vysílače bude přerušena aktuální relace senzoru. Mějte to na paměti a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2 h zahřívání senzoru.
+* Přejděte do `engineering mode`: 
+   * klepněte na symbol injekční stříkačky v pravém horním roku hlavní obrazovky
+   * pak chvíli podržte symbol mikrofonu v dolním pravém rohu
+   * a do textového pole napište bez uvozovek „enable engineering mode“ 
+   * klikněte na tlačítko „OK“
+   * Pokud máte povoleny Google hlasové příkazy, můžete po klepnutí na symbol mikrofonu vyslovit „enable engeneering mode“. 
+* Přejděte do „Možnosti ladění pro G5/G6“ a zkontrolujte `OB1 collector`.
+* Použijte hlasový příkaz: „hard reset transmitter“
+* Hlasový příkaz bude proveden při následujícím odeslání dat do vysílače
+* Přejděte na stav systému (hamburger menu -> Stav systému) a sledujte, co se stalo
+* Když se na druhé systémové stránce objeví hláška „Phone Service State: Hard Reset maybe failed“, prostě spusťte senzor a zpráva by měla zmizet.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset možná selhal](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Po úspěšném prodloužení vysílače a startu senzoru by se měla hodnota Transmitter days resetovat na 0.
 
 ### Výměna vysílače
 
 Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
-Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H, použijte jednu z [nejnovějších nightly build](https://github.com/NightscoutFoundation/xDrip/releases) verzí.
 
 * Vypněte originální Dexcom přijímač (pokud ho používáte).
-* Stop sensor (only if replacing sensor)
+* Stop senzor (pouze když ho měníte)
    
-   Ensure it really is stopped:
+   Ujistěte se, zda je opravdu zastaven:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   Na druhé obrazovce „G5/G6 Status“ se zhruba v dolní polovině podívejte na `Queue Items`, mělo by tam být něco jako `(1) Stop Sensor`
    
-   Wait until this goes - usually within a few minutes. Sensor Status must be "Stopped" (see screenshot).
+   Počkejte, až se fronta odešle – obvykle během pár minut. Sensor Status musí být „Stopped“ (viz snímek obrazovky).
    
-   -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
+   -> Pro výměnu vysílače bez zastavení senzoru se podívejte na toto video <https://youtu.be/AAhBVsc6NZo>.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Zastavit senzor Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Zastavit senzor Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
+* Vymažte zařízení z xDripu (Stav systému -> Forget device) a ze seznamu BT v nastavení telefonu (Zobrazuje se jako Dexcom??, přičemž ?? jsou poslední dva znaky výrobního čísla vysílače)
    
-   ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
+   ![xDrip+ Zapomenout zařízení](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Remove transmitter (and sensor if replacing sensor)
+* Vyjměte vysílač (a také senzor – pokud ho měníte)
 
-* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
+* Uložte starý vysílač dostatečně daleko, aby se předešlo jeho opětovnému připojení. Výborné odstínění poskytne (jako dokonalá Faradayova klec) mikrovlnná trouba. Jen ji raději odpojte od napájení, aby se vyloučila možnost náhodného zapnutí.
 * Dlouze přidržte symbol kapky krve Xdrip+ a vyberte možnost zobrazit `Source Wizard Button`.
 * Použijte tlačítko Source Wizard, které zajistí, že budou vybrána výchozí nastavení včetně OB1 a nativního režimu 
    * Průvodce vás provede prvotním nastavením.
-   * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Buďte opatrní, abyste nezaměnili 0 (nulu) a O (velké písmeno o).
-* Insert new sensor (only if replacing).
-* Put transmitter into sensor - **Do not start sensor immediately!**
-* New "Firefly Transmitters" (serial no. starting with 8G or 8H) can only be used in native mode.
-* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G or 8H):
+   * Pokud ho vkládáte poprvé, budete potřebovat sériové číslo vysílače.
+* Vložte sériové číslo nového vysílače. Buďte opatrní, abyste nezaměnili 0 (nulu) a O (velké písmeno o).
+* Vložte nový senzor (pouze když ho měníte).
+* Vložte vysílač do senzoru – **ale nestartujte ho ihned!**
+* Nový vysílač „Firefly“ (jehož sériové číslo začíná znaky 8G nebo 8H) lze používat pouze v nativním modu.
+* U nových „Firefly“ vysílačů (jejichž sériové číslo začíná znaky 8G nebo 8H) nesmí být zapnuté následující volby:
    
-   * Preemptive Restart (disable!)
-   * Restart sensor (disable!)
-   * Fallback to xDrip (disable!)
+   * Preemptivní restart (zakázat!)
+   * Restartovat senzor (zakázat!)
+   * Vrátit se k xDrip algoritmu (zakázat!)
    
    ![Nastavení pro vysílače Firefly](../images/xDrip_Dexcom_FireflySettings.png)
 
@@ -239,15 +239,15 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G or 8H u
 * Vypněte originální Dexcom přijímač (pokud ho používáte).
 * Je-li to potřeba, vypněte senzor
    
-   Ensure it really is stopped:
+   Ujistěte se, zda je opravdu zastaven:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   Na druhé obrazovce „G5/G6 Status“ se zhruba v dolní polovině podívejte na `Queue Items`, mělo by tam být něco jako `(1) Stop Sensor`
    
-   Wait until this goes - usually within a few minutes.
+   Počkejte, až se fronta odešle – obvykle během pár minut.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Zastavit senzor Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Zastavit senzor Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
 * Vyčistěte alkoholem kontakty vysílače (na spodní straně) a nechte je oschnout.
 
@@ -292,48 +292,48 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G or 8H u
 ### Problém s připojením k vysílači
 
 * Vysílač musí být zobrazen v bluetooth nastavení ve vašem telefonu.
-* Vysílač se musí zobrazovat jako Dexcom??, whereas ?? kde ?? jsou poslední dva znaky výrobního čísla vysílače. (např. DexcomHY).
+* Vysílač se musí zobrazovat jako Dexcom??, přičemž ?? kde ?? jsou poslední dva znaky výrobního čísla vysílače. (např. DexcomHY).
 * Otevřete nabídku Stav systému v xDrip+ (hamburger menu vlevo nahoře na hlavní obrazovce).
 * Ověřte, že je vysílač zobrazen na první stránce se stavem systému ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings and restart collector.
-* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+* Pokud ne: Odstraňte zařízení z nastavení bluetooth svého telefonu a restartujte collector.
+* Počkejte přibližně 5 minut, dokud se vysílač Dexcom automaticky znovu nepřipojí.
 
 ### Problém se spuštěním nového senzoru
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G or 8H.
+Berte prosím na vědomí, že následující metoda nebude pravděpodobně fungovat, jestliže sériové číslo Vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H.
 
-* Native sensor is marked as "FAILED: Sensor Failed Start"
+* Nativní senzor je označen jako "FAILED: Sensor Failed Start"
 * Zastavte senzor
-* Restart your phone
-* Start sensor with code 0000 (four times zero)
-* Wait 15 minutes
+* Restartujte telefon
+* Spusťte nový senzor s kódem 0000 (čtyři nuly)
+* Počkejte 15 minut
 * Zastavte senzor
-* Start sensor with "real" code (printed on the adhesive protector)
+* Spusťte senzor se skutečným kódem (vytištěným na ochranné nálepce)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+V log souborech v xDrip+ ověřte, že xDrip+ začne počítat „Trvání: 1 minuta“ (a tak dále). Pouze v log protokolech v xdrip+ můžete v úvodní fázi zjistit, zda xdrip+ zastavil senzor. Pozdější stav není v dolní části hlavní obrazovky vždy zobrazen správně.
 
 ## xDrip+ a Freestyle Libre
 
 ### Speciální nastavení Libre
 
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+* Otevřete nastavení Bluetooth -> Hamburger menu (levý horní roh hlavní obrazovky) -> Nastavení -> sjeďte dolů -> Méně častá nastavení -> Nastavení BT
    
-   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+   ![xDrip+ Libre nastavení bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Zvolte následující nastavení
    
-   * `Turn Bluetooth on` 
-   * `Use scanning`
-   * `Always discover services`
+   * `Zapnout Bluetooth` 
+   * `Použít vyhledávání`
+   * `Vždy prohledávat služby`
 
 * Všechny ostatní volby by měly zůstat vypnuté
    
-   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+   ![xDrip+ Libre nastavení bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
 ### Připojte Libre vysílač & spusťte senzor
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Spustit vysílač a senzor Libre 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Spustit vysílač a senzor Libre 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Spustit vysílač a senzor Libre 3](../images/xDrip_Libre_Transmitter03.png)
