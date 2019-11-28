@@ -8,11 +8,11 @@
 
 ## Configuration matérielle et logicielle requise
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work)
+* Une pompe Roche Accu-Chek Insight (n'importe quel firmware, ils marchent tous)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Remarque : AAPS écrira toujours les données dans le **premier profil débit de base de la pompe**.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Un téléphone Android (en gros, toutes les versions d'Android pourrait fonctionner, mais AndroidAPS nécessite au moins Android 5 (Lollipop).)
 
 * L'application AndroidAPS installée sur votre téléphone
 
@@ -49,17 +49,17 @@
     
     ![Copie d'écran informations appairage Insight](../images/Insight_PairingInformation.png)
 
-Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléphone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Sinon, la batterie du téléphone et de la pompe se videraient beaucoup trop rapidement.
+Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléphone. Une connexion ne sera établie que si c'est nécessaire (par ex. pour fixer un débit de basal temporaire, un bolus, ou lire l'historique de la pompe...). Sinon, la batterie du téléphone et de la pompe se videraient beaucoup trop rapidement.
 
 ## Paramètres dans AAPS
 
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
+Vous **ne devez pas activer 'Utiliser toujours les valeurs absolues du basal'** avec la pompe Insight. Dans AAPS, allez dans Préférences > NSClient > Paramètres Avancés et assurez-vous que 'Utiliser toujours utiliser les valeurs absolues du basal' est désactivé. Cela conduirait à de mauvais réglages des DBT dans la pompe Insight. Par conséquent, vous ne pourrez pas utiliser Autotune mais il n'y a pas d'alternative pour désactiver cette fonction lors de l'utilisation de la pompe Insight.
 
-![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+![Copie d'écran paramètres Insight](../images/Insight_pairing_V2_5.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suivantes :
 
-* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+* "Enreg. changement de réservoir": ajoute automatiquement le changement de réservoire quand vous effectuez "Remplir tubulure" sur la pompe.
 * "Enreg. changement de tubulure": ajoute une note dans la base de données AndroidAPS quand vous exécutez "Remplir tubulure" sur la pompe.
 * "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
 * "Enreg. changements de batterie" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
