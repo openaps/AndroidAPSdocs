@@ -58,7 +58,7 @@ Freestyle Libre 2
 .. изображение:: ../images/fsl2pic6.jpg
   :alt: Соединение LibreLink установлено
   
-Now the smartphone settings can be changed again if necessary, e.g. if you want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
+Теперь параметры смартфона могут быть изменены в случае необходимости, например, для экономии энергии. Служба определения местоположения может быть отключена, громкость установлена на ноль, сигналы снова отключены. The bloodsugar levels are transferred anyway.
 
 When starting the next sensor, however, all settings must be set again!
 
