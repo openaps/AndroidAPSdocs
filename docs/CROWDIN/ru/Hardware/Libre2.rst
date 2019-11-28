@@ -82,10 +82,10 @@ Freestyle Libre 2
 .. изображение:: ../images/fsl2pic7.jpg
   :alt: xDrip+ LibreLink журналы
   
-.. image:: ../images/fsl2pic7a.jpg
-  :alt: xDrip+ log
+.. изображение:: ../images/fsl2pic7.jpg
+  :alt: xDrip+ журнал
   #
-Step 3: Start sensor
+Шаг 3: Запустить сенсор
 ===============
 
 In xDrip+ start the sensor with "Start Sensor" and "not today". 
