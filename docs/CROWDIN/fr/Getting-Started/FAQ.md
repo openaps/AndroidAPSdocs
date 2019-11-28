@@ -230,7 +230,7 @@ Si vous utilisez un autre MGC/MGF que le Dexcom G5 ou G6 en mode natif xDrip, vo
 
 ### Où placer la pompe ?
 
-Il y a de nombreuses possibilités de placer la pompe. Peu importe si vous êtes en boucle fermée ou pas. Si vous préférez une pompe à insuline sans tubulure et un Dana pour la boucle, vérifiez le cathéter de 30 cm avec la ceinture abdominale d’origine.
+Il y a de nombreuses possibilités de placer la pompe. Peu importe si vous êtes en boucle fermée ou pas.
 
 ### Piles
 
