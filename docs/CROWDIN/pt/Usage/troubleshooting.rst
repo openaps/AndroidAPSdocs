@@ -10,7 +10,7 @@ Building & updating
 -----
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-Settings
+Configurações
 -----
 * `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
@@ -35,7 +35,7 @@ CGM
 * `xDrip - no CGM data <../Configuration/xdrip.html#identify-receiver>`_
 * `xDrip - Dexcom troubleshooting <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
 
-Pumps
+Bombas
 =====
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
 * `Accu-Chek Combo general <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
