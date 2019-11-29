@@ -3,10 +3,10 @@ Dexcom G5
 If using G5 with xdrip+
 ===========================
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
-* In xdrip go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
+* No xdrip ir a configurações > Interapp Compatibility > Broadcast Data Locally and select ON.
+* No xdrip ir a configurações> Interapp Compatibility > Accept Treatments e seleccionar OFF.
+* Se você quiser utilizar AndoidAPS para calibrar no xdrip seleccionar Settings > Interapp Compatibility > Accept Calibrations e seleccione ON.  Também poderá querer rever as opções em Settings > Less Common Settings > Advanced Calibration Settings.
+* Seleccione xdrip no ConfigBuilder (configuração em AndroidAPS).
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
 If using G5 with patched Dexcom app
@@ -19,8 +19,8 @@ If using G5 with patched Dexcom app
    .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Region in Dexcom G5 URL
 
-* Stop sensor and uninstall the original Dexcom app, if not already done.
-* Install downloaded apk
-* Start sensor
+* Pare o sensor e desinstale a app original Dexcom, se ainda não o fez.
+* Instale a apk que descarregou
+* Inicie sensor
 * Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
 * If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
