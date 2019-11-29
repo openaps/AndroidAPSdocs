@@ -6,11 +6,11 @@ Open preferences by clicking three-dot-menu on top right side of homescreen:
 
 ## Password para definições
 
-This allows you to set a password in order to prevent accidental or unauthorised changes to Preferences. After you enter a password here you will be required to enter it in order to access Preferences. To remove the password option then when within the Preferences delete the text within this field.
+Isso permite que você defina uma paswword para evitar alterações acidentais ou não autorizadas de preferências. Depois de definir uma password aqui, será solicitado que a introduza para aceder às Preferências. Para remover a opção de password, quando estiver dentro das Preferências, apague o texto nesse campo.
 
 ## Idade do Paciente
 
-There are safety limits in place based on age you selected in this setting. If you start hitting this hard limits (like max bolus) it's time move one step up. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). If you want to know the actual numbers for these hard coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+There are safety limits in place based on age you selected in this setting. Se começar a atingir esses limites rígidos (como o bolus máximo), é hora de dar um passo em frente. É uma má ideia selecionar uma idade superior à real, pois pode levar a uma sobre-dosagem inserindo o valor errado de insulina (ignorando a casa decimal, por exemplo). If you want to know the actual numbers for these hard coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
 
 ## Geral
 
@@ -22,7 +22,7 @@ There are safety limits in place based on age you selected in this setting. If y
 * Botões permitem que você escolha quais botões são visíveis no ecrã inicial. Também lhe dá algumas opções para a ecrã popup que você verá depois de pressionar um botão.
 * Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
 
-### Advanced Settings
+### Configurações Avançadas
 
 ![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
 
@@ -34,7 +34,7 @@ There are safety limits in place based on age you selected in this setting. If y
 
 * Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
     
-    ![Status lights - detail](../images/StatusLights_V2_5.png)
+    ![Luzes de estado - detalhe](../images/StatusLights_V2_5.png)
     
     Settings for status lights must be made in Nightscout settings. Set the following variables:
     
@@ -49,11 +49,11 @@ There are safety limits in place based on age you selected in this setting. If y
 
 ## Segurança de tratamentos
 
-### Max allowed bolus [U]
+### Max bolus permitido [U]
 
 This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
 
-### Max allowed carbs [g]
+### Max hidratos permitidos [g]
 
 This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
@@ -65,17 +65,17 @@ You can toggle between open and closed looping here. Open looping means TBR sugg
 
 OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### Max U/hr em que uma Temp Basal pode ser definida
 
 This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### Basal Máxima IOB que OpenAPS pode dar [U]
 
 Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
 
-* This value does not consider bolus IOB, only basal.
+* Este valor não considera o IOB bolus, apenas basal.
 * This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
-* This value is measured in insulin units (u).
+* Este valor é medido em unidades de insulina (u).
 
 When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
 
@@ -103,7 +103,7 @@ The options here will vary depending on which pump driver you have selected in '
 * [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
 * [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Bomba de Insulina Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Bomba Medtronic](..//Configuration/MedtronicPump.md)
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
@@ -122,7 +122,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
     
     **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
 
-## SMS Communicator
+## Comunicador SMS
 
 This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
 
