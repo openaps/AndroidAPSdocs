@@ -1,4 +1,4 @@
-# xDrip+ settings
+# Definições xDrip+
 
 If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
@@ -78,7 +78,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+O que é claro, é que usar o G6 é talvez seja um pouco mais complexo do que o que sugere inicialmente. Para usá-lo com segurança, há alguns pontos que têm de ser conhecidos:
 
 * If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
@@ -86,7 +86,7 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 * Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
 * If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
+Para saber mais sobre os detalhes e razões destas recomendações leia o [todo o artigo](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) publicado pelo Tim Street em [www.diabettech.com](http://www.diabettech.com).
 
 ### Connect G6 transmitter for the first time
 
@@ -304,7 +304,7 @@ Please note that the following method might likely not work if your Dexcom G6 tr
 
 * Native sensor is marked as "FAILED: Sensor Failed Start"
 * Stop sensor
-* Restart your phone
+* Reinicie o seu telefone
 * Start sensor with code 0000 (four times zero)
 * Wait 15 minutes
 * Stop sensor
