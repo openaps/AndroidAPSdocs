@@ -1,4 +1,4 @@
-COB calculation
+Cálculo COB
 *****************
 
 How does AndroidAPS calculate the COB value?
