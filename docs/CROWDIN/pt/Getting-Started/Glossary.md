@@ -73,8 +73,8 @@
 <tr>
 <td>Origem da Glicemia</td>
  <td>Where do your glucose values come from?</td>
- <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
+ <td>CGM / MGF</td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - Fonte Glic</a></td>
 </tr>
 <tr>
  <td>BlueReader</td>
@@ -83,7 +83,7 @@
  <td><a href="https://bluetoolz.de/blueorder/#home">BlueReader</a></td>
 </tr>
 <tr>
- <td>Blukon Nightreader</td>
+ <td>Blucon Nightreader</td>
  <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/howit">Ambrosia Blukon Nightreader</a></td>
@@ -116,7 +116,7 @@
  <td>Closed Loop</td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki loop fechado</a></td>
 </tr>
 <tr>
  <td>COB</td>
@@ -146,7 +146,7 @@
  <td>FGM</td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BG source</a></td>
+ <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - Fonte Glic</a></td>
 </tr>
 <tr>
  <td>git</td>
@@ -185,7 +185,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>ISF</td>
+ <td>FSI</td>
  <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -193,7 +193,7 @@
 <tr>
  <td>LGS</td>
  <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objectivo 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -203,10 +203,10 @@
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
- <td>Log files</td>
+ <td>Ficheiros de registo</td>
  <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - ficheiros de registo</a></td>
 </tr>
 <tr>
  <td>MA</td>
@@ -242,7 +242,7 @@
  <td>Cliente NS</td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - Cliente NS</a></td>
 </tr>
 <tr>
  <td>Nightscout Reporter</td>
@@ -254,13 +254,13 @@
  <td>Objectivos</td>
  <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
+ <td><a href="../Usage/Objectives.html">Wiki - objectivos</a></td>
 </tr>
 <tr>
  <td>OpenAPS</td>
  <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">Documentos OpenAPS</a></td>
 </tr>
 <tr>
  <td>Open Loop</td>
@@ -275,7 +275,7 @@
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
 </tr>
 <tr>
- <td>Peak time</td>
+ <td>Hora do pico</td>
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
@@ -287,22 +287,22 @@
  <td><a href="../Getting-Started/Screenshots.html#treatment-xdrip-nsclient">Capturas de ecrã</a></td>
 </tr>
 <tr>
- <td>Predictions</td>
+ <td>Previsão</td>
  <td>preditions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - linhas de predições</a></td>
 </tr>
 <tr>
  <td>Perfil</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - perfil</a></td>
 </tr>
 <tr>
  <td>Troca de Perfil</td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
+ <td><a href="../Usage/Profiles.html">Wiki - mudança de perfil</a></td>
 </tr>
 <tr>
  <td>RES</td>
@@ -329,7 +329,7 @@
  <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
- <td>Sensivity detection</td>
+ <td>Detecção de Sensibilidade</td>
  <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
  <td>&nbsp;</td>
  <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
@@ -347,13 +347,13 @@
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Super bolus</td>
+ <td>Super bólus</td>
  <td>shift of basal to bolus insulin for faster BG adjustment</td>
  <td>&nbsp;</td>
- <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
+ <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - O Super Bólus</a></td>
 </tr>
 <tr>
- <td>TBB</td>
+ <td>Basal diária</td>
  <td>total base basal (sum of basal rate within 24 hours)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -383,7 +383,7 @@
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td>Virtual pump</td>
+ <td>Bomba virtual</td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
  <td>Open Loop</td>
  <td>&nbsp;</td>
