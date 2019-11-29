@@ -43,15 +43,15 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
   
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Captura de ecrã 39a](../images/Installation_Screenshot_39a.PNG)
 
 In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![Captura de ecrã 39b](../images/Installation_Screenshot_39b.PNG)
 
 Select "app" and click "Next".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Captura de ecrã 40](../images/Installation_Screenshot_40.png)
 
 Enter your key store path, enter key store password, select key alias and enter key password.
 
@@ -70,21 +70,21 @@ Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Ja
   * pumpcontrol (i.e. remote control for pump, no looping)
   * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Captura de ecrã 44](../images/Installation_Screenshot_44.png)
 
 In the event log you see that the Signed APK was generated successfully.
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
+![Captura de ecrã 45](../images/Installation_Screenshot_45.png)
 
 Click the "locate" link in the event log.
 
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![Captura de ecrã 46](../images/Installation_Screenshot_46.png)
 
 ## Transfer APK to smartphone
 
 <!--- Text is maintained in page building-apk.md ---> A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+![Captura de ecrã 47](../images/Installation_Screenshot_47.png)
 
 Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way:
 
@@ -95,7 +95,7 @@ Please change to the directory AndroidAPS/app/full/release to find the "app-full
 
 In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
+![Captura de ecrã 48](../images/Installation_Screenshot_48.png)
 
 In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
 
