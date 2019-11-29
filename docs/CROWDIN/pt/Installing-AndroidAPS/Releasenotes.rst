@@ -15,7 +15,7 @@ Please understand that this change is not intended to bug you but is due to safe
 
 Version 2.5.1
 =====
-Release date: 31-10-2019
+Data de lançamento: 31-10-2019
 
 Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
@@ -23,7 +23,7 @@ Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#imp
 
 Version 2.5.0
 =====
-Release date: 26-10-2019
+Data de lançamento: 26-10-2019
 
 Important notes
 -----
@@ -50,7 +50,7 @@ Major new features
 * Rendering insulin activity
 * Adjusting IOB predictions by autosense result
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
-* Signature verifier
+* Verificador de assinatura
 * Allow to bypass objectives for OpenAPS users
 * New `objectives <../Usage/Objectives.html>`_ - exam, application handling
    
@@ -58,9 +58,9 @@ Major new features
 * Fixed bug in Dana* drivers where false time difference was reported
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
-Version 2.3
+Versão 2.3
 =====
-Release date: 25-04-2019
+Data de lançamento: 25-04-2019
 
 Major new features
 -----
@@ -75,9 +75,9 @@ Major new features
 * New Version-Checker
 
 
-Version 2.2.2
+Versão 2.2.2
 =====
-Release date: 07-04-2019
+Data de lançamento: 07-04-2019
 
 Major new features
 -----
@@ -87,9 +87,9 @@ Major new features
 * SMS plugin fix
 
 
-Version 2.2
+Versão 2.2
 =====
-Release date: 29-03-2019
+Data de lançamento: 29-03-2019
 
 Major new features
 -----
@@ -100,9 +100,9 @@ Major new features
 * Stop loop if phone disk is full
 
 
-Version 2.1
+Versão 2.1
 =====
-Release date: 03-03-2019
+Data de lançamento: 03-03-2019
 
 Major new features
 -----
@@ -120,9 +120,9 @@ Misc
 * If you are using non default `smbmaxminutes` value you have to setup this value again
 
 
-Version 2.0
+Versão 2.0
 =====
-Release date: 03-11-2018
+Data de lançamento: 03-11-2018
 
 Major new features
 -----
@@ -150,7 +150,7 @@ Overview tab
 * Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
 * Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
-Watch
+Relógio
 -----
 * Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
 * Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
