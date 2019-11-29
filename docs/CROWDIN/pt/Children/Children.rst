@@ -1,20 +1,20 @@
-Remote monitoring
+Monitorização remota
 ******************
 
-.. image:: ../images/KidsMonitoring.png
-  :alt: Monitoring children
+.. imagem: ../images/KidsMonitoring.png
+  :alt: Monitorizando crianças
   
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AndroidAPS oferece várias opções para monitorização remota de crianças e também permite enviar comandos remotos. É claro que também é possível usar a monitorização remota para seguir o seu parceiro ou amigo.
 
-Functions
-=========
-* Kid's pump is controlled by kid's phone using AndroidAPS.
-* Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone.
-* Parents can be alarmed by using **xDrip app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_.
-* Remote profile switch and temp targets through NSClient app.
+Funções
+== == == == == =
+* A bomba da criança é controlada pelo telefone da criança usando o AndroidAPS.
+* Os Pais podem seguir remotamente vendo todos os dados relevantes, como níveis de glicose, hidratos de carbono ativos, insulina ativa, etc. usando **app NSClient** no seu telefone.
+* Os pais podem ter alarmes usando o **xDrip no modo de seguidor** no seu telefone.
+* Controle remoto do AndroidAPS usando ` Comandos SMS <../Children/SMS-Commands.html> ` _.
+* Alternador de perfil remoto e metas temporárias através do aplicativo NSClient.
 
-Tools and apps for remote monitoring
+Ferramentas e aplicativos para monitorização remota
 ------------------------------------
 * `Nightscout <http://www.nightscout.info/>`_ in web browser (mainly data display)
 *	NSClient app
