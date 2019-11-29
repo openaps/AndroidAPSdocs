@@ -8,7 +8,7 @@ If nobody is following you on Nightscout you can pause NSClient to save (a lot) 
 
 Go to NSClient tab in AAPS and watch the log. Common beavior is to receive PING every ~30s and almost none reconnection messages. If you see many reconnections there is a problem. Since AndoridAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
 
-* Restart
+* Reiniciar
 
 What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
 
