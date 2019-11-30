@@ -20,7 +20,7 @@ Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation 
 To get faster to the AAPS menu, do a double tap on your BG. 
 With a double tap onto the BG curve you can change the time scale..
 
-## Different Watchfaces available
+## Watchfaces available
 
 ![watchfaces](..\images\watchfaces.jpg)
 
