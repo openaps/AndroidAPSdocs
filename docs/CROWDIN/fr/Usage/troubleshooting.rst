@@ -18,7 +18,7 @@ Settings
     :alt: Error: Débits de Basal non alignés sur les heures
 
 * `Client Nightscout <../Usage/Troubleshooting-NSClient.html>`_
-Usage
+Utilisation
 -----
 * `Valeur de glucides incorrectes <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
