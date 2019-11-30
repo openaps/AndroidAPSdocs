@@ -1,25 +1,25 @@
-# Troubleshooting NSClient
+# Dépannage NSClient
 
-NSClient rely on stable communication with Nightscout. Unstable connection leads to synchronization errors and high data usage.
+NSClient repose sur une communication stable avec Nightscout. Une connexion instable entraîne des erreurs de synchronisation et une forte utilisation des données.
 
-If nobody is following you on Nightscout you can pause NSClient to save (a lot) battery life or setup connection only on wifi and during charging.
+Si personne ne vous suit sur Nightscout vous pouvez faire une pause NSClient pour préserver (beaucoup) l'autonomie de la pile ou dans les paramètres de connexion, activez wifi uniquement pendant la charge.
 
-* How to detect unstable connection?
+* Comment détecter une connexion instable ?
 
-Go to NSClient tab in AAPS and watch the log. Common beavior is to receive PING every ~30s and almost none reconnection messages. If you see many reconnections there is a problem. Since AndoridAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
+Allez dans l'onglet NSClient dans AAPS et regardez le journal. Le comportement habituel est de recevoir de la commande PING toutes les ~ 30 secondes et presque aucun message de reconnexion. Si vous voyez beaucoup de reconnexions il y a un problème. Depuis andoridAPS 2.0 quand un tel comportement est détecté NSClient est mis en pause pendant 15 minutes et le message "Dysfonctionnement du NSClient" s'affiche dans l'aperçu.
 
-* Restart
+* Redémarrer
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+La première chose que vous devez essayer est de redémarrer à la fois : Nightscout et ensuite le téléphone pour voir si le problème est permanent
 
-* Phone issues
+* Problèmes de téléphone
 
-Android may put your phone into a sleep. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Check it again on strong network signal. Try another phone.
+Android peut mettre votre téléphone en veille. Vérifiez que vous avez une exception pour AndroidAPS dans les options d'alimentation pour lui permettre de s'exécuter en arrière-plan tout le temps. Vérifiez à nouveau avec un signal réseau fort. Essayez un autre téléphone.
 
 * Nightscout
 
-If you are on Azure for many people helped to move to Heroku. Recently was reported Azure workaround to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Si vous êtes sur Azure, de nombreuses personnes ont aidé à transférer sur Heroku. Une solution de contournement Azure à été définie récemment dans les paramètres de l'application, protocole HTTP sur 2.0 et Websockets sur ON
 
-* If you still get an error...
+* Si vous avez toujours une erreur...
 
-Check the size of your database in mLab. 496MB means it is full and needs to be compacted. [Follow these OpenAPS instructions for checking the size of your database](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). If compacting does not work, you should consider donating your AndroidAPS data to the Data Commons (for research) before deleting any data collections. There are [instructions in the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) for how to accomplish this.
+Vérifiez la taille de votre base de données dans mLab. 496Mo signifie qu'elle est pleine et doit être compactée. [Suivez ces instructions OpenAPS pour vérifier la taille de votre base de données](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). Si le compactage ne fonctionne pas, vous devriez envisager de faire don de vos données AndroidAPS dans des Données Communes (pour la recherche) avant de supprimer toutes les données des collections. Il y a des [instructions dans la documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) pour faire ceci.
