@@ -41,8 +41,8 @@ L'argent n'est PAS utilisé pour payer qui que ce soit pour son travail ! Il est
 
 **J'ai du matériel de rechange, où dois-je l'envoyer ?**
 
-We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+Nous collectons actuellement tout ce qui "sera disponible plus tard" pour commencer à les distribuer pour les tests. À la fin du processus, tout équipement non utilisé sera donné à l'un des groupes facebook Pay-it-Forward existants pour soutenir la communauté T1. Si vous voulez faire un don de matériel de rechange, envoyez un email à developers@androidaps.org et nous vous enverrons une adresse.
 
 **Je n'ai pas d'argent ou d'équipement, comment puis-je aider ?**
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Les compétences requises incluent la conception graphique, le retour d'expérience, les traductions, les pages wiki ou simplement aider en répondant à des questions simples dans gitter & Facebook pour donner aux développeurs le temps et l’espace nécessaires pour se concentrer sur les choses les plus difficiles.
