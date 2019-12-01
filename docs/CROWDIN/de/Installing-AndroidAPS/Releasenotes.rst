@@ -37,7 +37,7 @@ Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:
 * Poctech
 * 600SeriesUploader
 * Glimp
-   Glimp stopps working when offline. Glimp developer must update app to use SDK28 broadcast.
+   Glimp arbeitet im Offline-Modus nicht. Der Glimp-Entwickler muss die App updaten, um den SDK28 Broadcast zu nutzen.
 * Patched Dexcom App aus dem Verzeichnis 2.3
 
 Wichtige neue Funktionen
