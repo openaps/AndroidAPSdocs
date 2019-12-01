@@ -18,7 +18,7 @@ De SMB-functie heeft een aantal veiligheidsmaatregelen:
 
 3. Allerlei berekeningen om het verloop van je glucosewaardes te kunnen voorspellen, bijv. met UAM (onaangekondigde maaltijden, unannounced meals). Zelfs zonder dat jij als gebruiker handmatig je koolhydraten invoert, zal UAM een sterke stijging van jouw glucosewaardes opmerken. Een stijging door maaltijden, adrenaline of andere invloeden. Vervolgens zal het systeem jouw waardes proberen te verlagen met SMB. Andersom werkt dit ook: om veilig te kunnen werken zal het systeem eerder stoppen met het geven van SMB als het merkt dat jouw glucosewaarde plotseling daalt. Daarom moet je UAM altijd ingeschakeld hebben wanneer je SMB gebruikt.
 
-**You must have completed [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**Je moet [leerdoel 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) hebben voltooid om SMB te kunnen gebruiken.**
 
 Zie ook: [OpenAPS documentatie voor oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) en [Tim's info over SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -101,47 +101,47 @@ Standaard instelling: 30 min.
 
 ### Activeer UAM
 
-Als deze optie is ingeschakeld, herkent het SMB-algoritme onaangekondigde maaltijden (UnAnnounced Meals). Dit is handig, als je het systeem vergeet te vertellen dat je koolhydraten hebt gegeten, of als je de koolhydraten verkeerd hebt ingeschat. Of wanneer je na een maaltijd met veel vet en eiwit een langdurige stijging van je glucosewaardes krijgt. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
+Als deze optie is ingeschakeld, herkent het SMB-algoritme onaangekondigde maaltijden (UnAnnounced Meals). Dit is handig, als je het systeem vergeet te vertellen dat je koolhydraten hebt gegeten, of als je de koolhydraten verkeerd hebt ingeschat. Of wanneer je na een maaltijd met veel vet en eiwit een langdurige stijging van je glucosewaardes krijgt. Wanneer je geen koolhydraten hebt ingegeven, kan UAM snelle glucosestijgingen veroorzaakt door koolhydraten, adrenaline, etc. herkennen, en zal het proberen dit te compenseren met SMBs. Dit werkt ook andersom: als je een snelle glucosedaling hebt, dan zal het systeem SMBs eerder stoppen.
 
-**Therefore, UAM should always be activated when using SMB.**
+**Daarom moet je UAM altijd geactiveerd hebben bij het gebruik van SMB!**
 
 ### Hoog tijdelijk streefdoel verhoogt gevoeligheid
 
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target over 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease.
+Als je deze optie ingeschakeld hebt, zal de insulinegevoeligheid worden verhoogd zolang een tijdelijk streefdoel van boven de 100 mg/dl of 5,6 mmol/l actief is. Dit betekent dat je ISF verhoogd wordt en dat je KH ratio en basaalstand verlaagd worden.
 
 ### Laag tijdelijk streefdoel verlaagt gevoeligheid
 
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
+Als je deze optie ingeschakeld hebt, zal de insulinegevoeligheid worden verlaagd zolang een tijdelijk streefdoel van onder de 100 mg/dl of 5,6 mmol/l actief is. Dit betekent dat je ISF verlaagd wordt en dat je KH ratio en basaalstand verhoogd worden.
 
 ### Geavanceerde instellingen
 
-**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+**Gebruik altijd korte gemiddeld verschil ipv gewone verschil** Wanneer je deze functie inschakelt, dan gebruikt AndroidAPS het korte gemiddelde (= gemiddelde vd afgelopen 15 minuten), wat meestal het gemiddelde is van de afgelopen drie waardes. Dit helpt AndroidAPS om stabieler te werken met bloedglucose bronnen met veel ruis, zoals xDrip+ en Libre.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Maximale dagelijkse veiligheids vermenigvuldigings factor** Dit is een belangrijke veiligheids-limiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat AndroidAPS nooit wordt toegestaan om een tijdelijke basaalstand in te stellen die groter is dan 3 x de huidige basaalstand per uur. Voorbeeld: als jouw hoogste basaalstand op een dag 1,0 E/uur is, en jouw maximale dagelijkse veiligheids vermenigvuldigingsfactor is 3, dan kan AndroidAPS maximaal een tijdelijke basaalstand geven van 3,0 E/uur (= 3 x 1,0 E/uur).
 
-Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standaardwaarde: 3 (mag niet worden gewijzigd, tenzij je het echt wilt en weet wat je doet)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Huidige basaalstand veiligheids vermenigvuldigings factor** Dit is ook een belangrijke veiligheids-limiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 4. Dit betekent dat AndroidAPS nooit wordt toegestaan om een tijdelijke basaalstand in te stellen die groter is dan 4 x de huidige basaalstand per uur.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet wat je doet)
 
 * * *
 
 ## Geavanceerde maaltijdhulp (AMA)
 
-AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AMA (Advanced Meal Assist), oftewel "geavanceerde maaltijdhulp" is een OpenAPS functie uit 2017 (oref0). Dankzij AMA kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd.
 
-**You will need to have completed [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
+**Je moet [leerdoel 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) hebben voltooid om AMA te kunnen gebruiken.**
 
-You can find more information in the [OpenAPS documentation](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Meer informatie vind je in de [documentatie van OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Maximale E/uur dat een tijdelijke basaalstand kan toedienen (OpenAPS "max-basal")
 
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. We raden je aan je verstand te gebruiken bij het invullen van deze waarde. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Deze veiligheidsinstelling voorkomt dat AndroidAPS ooit een gevaarlijk hoge basaalstand instelt, en beperkt de tijdelijke basaalstand tot xx E/uur. We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de hoogste basaalstand van jouw profiel te vermenigvuldigen met 4, of ten minste met 3. Bijvoorbeeld, als de hoogste basaalstand in jouw profiel 1,0 E/uur is dan kun je dat vermenigvuldigen met 4. Je krijgt dan een waarde van 4 E/uur, dus stel je "4" in bij deze veiligheidsinstelling.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Je kunt niet elke waarde kiezen: om veiligheidsredenen is er een 'harde limiet', afhankelijk van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij AMA dan bij SMB. Voor kinderen is deze waarde het laagste terwijl voor insulineresistentie volwassenen deze waarde het grootste is.
 
-The hardcoded parameters in AndroidAPS are:
+AndroidAPS gebruikt de volgende 'harde limieten':
 
 * Kind: 2
 * Tiener: 5
@@ -150,9 +150,9 @@ The hardcoded parameters in AndroidAPS are:
 
 ### Max basaal IOB dat OpenAPS kan toedienen \[E\] (OpenAPS "max-iob")
 
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Deze instelling beperkt het maximum van basaal IOB waar AndroidAPS nog steeds werkt. Als de IOB hoger is, wordt er geen extra basale insuline meer gegeven totdat de waarde van basaal IOB weer onder de limiet ligt.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. The 'hard limit' for maxIOB is lower in AMA than in SMB.
+De standaardinstelling is 2, je moet deze waarde in kleine stapjes ophogen om te zien wat de invloed is en welke waarde het beste bij jou past. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij AMA dan bij SMB.
 
 * Kind: 3
 * Tiener: 5
@@ -161,27 +161,27 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 
 ### Activeer AMA autosens
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
+Hier kun je kiezen of je [gevoeligheidsdetectie](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' wilt inschakelen of niet.
 
 ### Autosens past de streefwaardes ook aan
 
-If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+Als je deze optie ingeschakeld hebt dan kan autosense ook jouw tijdelijke streefdoelen (naast basaalstanden, ISF en KH ratio), ook aanpassen. Hierdoor grijpt AndroidAPS 'agressiever' in. Jouw streefdoel kan hierdoor wellicht sneller bereikt worden.
 
 ### Geavanceerde instellingen
 
-**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+**Gebruik altijd korte gemiddeld verschil ipv gewone verschil** Wanneer je deze functie inschakelt, dan gebruikt AndroidAPS het korte gemiddelde (= gemiddelde vd afgelopen 15 minuten), wat meestal het gemiddelde is van de afgelopen drie waardes. Dit helpt AndroidAPS om stabieler te werken met bloedglucose bronnen met veel ruis, zoals xDrip+ en Libre.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Maximale dagelijkse veiligheids vermenigvuldigings factor** Dit is een belangrijke veiligheids-limiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat AndroidAPS nooit wordt toegestaan om een tijdelijke basaalstand in te stellen die groter is dan 3 x de hoogste basaalstand per uur, eventueel aangepast door autotune. Voorbeeld: als jouw hoogste basaalstand op een dag 1,0 E/uur is, en jouw maximale dagelijkse veiligheids vermenigvuldigingsfactor is 3, dan kan AndroidAPS maximaal een tijdelijke basaalstand geven van 3,0 E/uur (= 3 x 1,0 E/uur).
 
-Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standaardwaarde: 3 (mag niet worden gewijzigd, tenzij je het echt wilt en weet wat je doet)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump, or, if enabled, determined by autotune.
+**Huidige basaalstand veiligheids vermenigvuldigings factor** Dit is ook een belangrijke veiligheids-limiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 4. Dit betekent dat AndroidAPS nooit wordt toegestaan om een tijdelijke basaalstand in te stellen die groter is dan 4 x de huidige basaalstand per uur, eventueel aangepast door autotune.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet wat je doet)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Bolus snooze dia deler** De functie "bolus snooze" werkt na een maaltijd bolus. Na een maaltijd, gedurende de periode voor de DIA gedeeld door de "bolus snooze"-parameter, stelt AAPS geen lage tijdelijke basaalstand in. De standaardwaarde is 2. Dat betekent met een DIA van 5h, dat de "bolus snooze" dus 5uur : 2 = 2,5 uur zal duren.
 
-Default value: 2
+Standaardwaarde: 2
 
 * * *
 
@@ -189,11 +189,11 @@ Default value: 2
 
 ### Maximale E/uur dat een tijdelijke basaalstand kan toedienen (OpenAPS "max-basal")
 
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. We raden je aan je verstand te gebruiken bij het invullen van deze waarde. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Deze veiligheidsinstelling voorkomt dat AndroidAPS ooit een gevaarlijk hoge basaalstand instelt, en beperkt de tijdelijke basaalstand tot xx E/uur. We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de hoogste basaalstand van jouw profiel te vermenigvuldigen met 4, of ten minste met 3. Bijvoorbeeld, als de hoogste basaalstand in jouw profiel 1,0 E/uur is dan kun je dat vermenigvuldigen met 4. Je krijgt dan een waarde van 4 E/uur, dus stel je "4" in bij deze veiligheidsinstelling.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in MA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Je kunt niet elke waarde kiezen: om veiligheidsredenen is er een 'harde limiet', afhankelijk van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij MA dan bij SMB. Voor kinderen is deze waarde het laagste terwijl voor insulineresistentie volwassenen deze waarde het grootste is.
 
-The hardcoded parameters in AndroidAPS are:
+AndroidAPS gebruikt de volgende 'harde limieten':
 
 * Kind: 2
 * Tiener: 5
@@ -202,9 +202,9 @@ The hardcoded parameters in AndroidAPS are:
 
 ### Max basaal IOB dat OpenAPS kan toedienen \[E\] (OpenAPS "max-iob")
 
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Deze instelling beperkt het maximum van basaal IOB waar AndroidAPS nog steeds werkt. Als de IOB hoger is, wordt er geen extra basale insuline meer gegeven totdat de waarde van basaal IOB weer onder de limiet ligt.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. The 'hard limit' for maxIOB is lower in MA than in SMB.
+De standaardinstelling is 2, je moet deze waarde in kleine stapjes ophogen om te zien wat de invloed is en welke waarde het beste bij jou past. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij MA dan bij SMB.
 
 * Kind: 3
 * Tiener: 5
@@ -213,8 +213,8 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 
 ### Geavanceerde instellingen
 
-**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+**Gebruik altijd korte gemiddeld verschil ipv gewone verschil** Wanneer je deze functie inschakelt, dan gebruikt AndroidAPS het korte gemiddelde (= gemiddelde vd afgelopen 15 minuten), wat meestal het gemiddelde is van de afgelopen drie waardes. Dit helpt AndroidAPS om stabieler te werken met bloedglucose bronnen met veel ruis, zoals xDrip+ en Libre.
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Bolus snooze dia deler** De functie "bolus snooze" werkt na een maaltijd bolus. Na een maaltijd, gedurende de periode voor de DIA gedeeld door de "bolus snooze"-parameter, stelt AAPS geen lage tijdelijke basaalstand in. Dat betekent met een DIA van 5h, dat de "bolus snooze" dus 5uur : 2 = 2,5 uur zal duren.
 
-Default value: 2
+Standaardwaarde: 2
