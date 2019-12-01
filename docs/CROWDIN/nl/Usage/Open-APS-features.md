@@ -26,13 +26,13 @@ Zie ook: [OpenAPS documentatie voor oref1 SMB](https://openaps.readthedocs.io/en
 
 Deze veiligheidsinstelling bepaalt de maximale tijdelijke basaalstand die je insulinepomp mag geven. Deze waarde zou hetzelfde moeten zijn in je pompinstellingen als in AAPS, en zou op zijn minst 3 x jouw hoogste basaalstand moeten zijn.
 
-Example:
+Voorbeeld:
 
-Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
+De hoogste basaalstand op enig moment van de dag in jouw profiel is 1,00 E/uur. Dan wordt een max-basal waarde van minstens 3 E/uur aanbevolen.
 
-But you cannot choose any value. AAPS limits the value as a 'hard limit' according to the patients age you have selected under settings. The lowest permitted value is for children and the highest for insulin-resistant adults.
+Maar je kunt niet iedere waarde kiezen. AAPS beperkt de waarde tot een 'harde limiet' volgens de leeftijd van de patiënt die je hebt geselecteerd in je Instellingen. De laagste toegestane waarde is voor kinderen en de hoogste voor insuline-resistente volwassenen.
 
-AndroidAPS limits the value as follows:
+AndroidAPS beperkt de waarde als volgt:
 
 * Kind: 2
 * Tiener: 5
@@ -41,67 +41,67 @@ AndroidAPS limits the value as follows:
 
 ### Max totaal IOB dat OpenAPS niet kan overschrijden (OpenAPS "max-iob")
 
-This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
+Deze waarde bepaalt tot aan welk max-IOB AAPS mag gaan in closed loop modus. Als de huidige IOB (bijvoorbeeld na een maaltijd bolus) hoger is dan de door jou ingestelde waarde voor max-IOB, stopt het systeem met insuline geven totdat de IOB onder deze waarde zakt.
 
-Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
+Wanneer je SMB gebruikt, wordt max-IOB anders berekend dan wannneer je AMA gebruikt. Bij AMA was max-IOB alleen een veiligheidsbeperking voor basale IOB, terwijl bij SMB de max-IOB ook bolus IOB meeneemt. Een goed begin is
 
-    maxIOB = average mealbolus + 3x max daily basal
+    max-IOB = gemiddelde maaltijdbolus + 3x jouw hoogste basaalstand
     
 
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
+Wees voorzichtig en geduldig en verander de instellingen stap voor stap. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is hoger dan in AMA.
 
 * Kind: 3
 * Tiener: 7
 * Volwassene: 12
 * Insuline-resistente volwassene: 25
 
-See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
+Zie ook [OpenAPS documentatie over SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
 ### Activeer AMA autosens
 
-Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
+Hier kun je kiezen of je [gevoeligheidsdetectie](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' wilt inschakelen of niet.
 
 ### Activeer SMB
 
-Here you can enable or completely disable SMB feature.
+Hier kun je kiezen of je de SMB functie inschakelt.
 
 ### Activeer SMB met Koolhydraten
 
-SMB is working when there is COB active.
+SMB is ingeschakeld wanneer jouw COB groter is dan nul.
 
 ### Gebruik SMB met tijdelijke streefdoelen
 
-SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
+SMB is ingeschakeld wanneer er een laag of hoog tijdelijk streefdoel actief is (eet binnenkort, activiteit, hypo, aangepast)
 
 ### Gebruik SMB met een hoog tijdelijk streefdoel
 
-SMB is working when there is a high temporary target active (activity, hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
+SMB is ingeschakeld wanneer er een hoog tijdelijk streefdoel actief is (activiteit, hypo). Deze optie kan andere SMB-instellingen beperken, dat wil zeggen als 'Gebruik SMB met tijdelijke streefdoelen' is ingeschakeld en 'Gebruik SMB met een hoog tijdelijk streefdoel' is uitgeschakeld, dat SMB zal werken met een laag maar niet met een hoog tijdelijk streefdoel. Dat geldt ook voor ingeschakelde SMB met COB: als 'Gebruik SMB met een hoog tijdelijk streefdoel' is uitgeschakeld, dan zal er geen SMB worden gegeven met een hoog tijdelijk streefdoel zelfs als er wel COB zijn.
 
 ### Activeer SMB altijd
 
-SMB is working always (independent of COB, temp targets or boluses). Om veiligheidsredenen is deze optie alleen mogelijk voor BG bronnen met een mooi filtersysteem voor 'ruis' in de BG waardes. Voor nu werkt het enkel met een Dexcom G5 in combinatie met de aangepaste Dexcom App, of met de G5 of G6 in combinatie met 'native algorithm' in xDrip+. Dankzij deze filtering zal de Dexcom zender een BG-waarde met een te grote afwijking, niet sturen en wachten op de volgende waarde in 5 minuten.
+SMB is altijd ingeschakeld (onafhankelijk van COB, tijdelijke streefdoelen of bolussen). Om veiligheidsredenen is deze optie alleen mogelijk voor BG bronnen met een mooi filtersysteem voor 'ruis' in de BG waardes. Voor nu werkt het enkel met een Dexcom G5 in combinatie met de aangepaste Dexcom App, of met de G5 of G6 in combinatie met 'native algorithm' in xDrip+. Dankzij deze filtering zal de Dexcom zender een BG-waarde met een te grote afwijking, niet sturen en wachten op de volgende waarde in 5 minuten.
 
-For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Voor andere CGM/FGM zoals Freestyle Libre, is 'Activeer SMB altijd' niet mogelijk. Dit wordt pas mogelijk wanneer xDrip+ een betere ruis-filtering heeft voor die systemen. Je kunt er [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) meer over vinden.
 
 ### Activeer SMB na koolhydraten
 
-SMB is working for 6h after carbohydrates , even if COB is at 0. Om veiligheidsredenen is deze optie alleen mogelijk voor BG bronnen met een mooi filtersysteem voor 'ruis' in de BG waardes. Voor nu werkt het enkel met een Dexcom G5 in combinatie met de aangepaste Dexcom App, of met de G5 of G6 in combinatie met 'native algorithm' in xDrip+. Dankzij deze filtering zal de Dexcom zender een BG-waarde met een te grote afwijking, niet sturen en wachten op de volgende waarde in 5 minuten.
+SMB is ingeschakeld gedurende 6 uur na koolhydraten, zelfs als COB nul is. Om veiligheidsredenen is deze optie alleen mogelijk voor BG bronnen met een mooi filtersysteem voor 'ruis' in de BG waardes. Voor nu werkt het enkel met een Dexcom G5 in combinatie met de aangepaste Dexcom App, of met de G5 of G6 in combinatie met 'native algorithm' in xDrip+. Dankzij deze filtering zal de Dexcom zender een BG-waarde met een te grote afwijking, niet sturen en wachten op de volgende waarde in 5 minuten.
 
-For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Voor andere CGM/FGM zoals Freestyle Libre, is 'Activeer SMB altijd' niet mogelijk. Dit wordt pas mogelijk wanneer xDrip+ een betere ruis-filtering heeft voor die systemen. Je kunt er [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) meer over vinden.
 
 ### Maximum aantal minuten basaal om SMB te limiteren tot
 
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
+Dit is een belangrijke veiligheidsinstelling. Deze waarde bepaalt hoeveel SMB kan worden gegeven op basis van de hoeveelheid basale insuline binnen een bepaalde tijd, wanneer het niet gedekt is door COBs.
 
-This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
+Dit maakt SMB agressiever. In het begin moet je de standaardwaarde van 30 minuten gebruiken. Na enige ervaring kun je de waarde met stappen van 15 minuten verhogen en kijken wat de invloed is van deze veranderingen.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to adjust a decreasing BG with 0 IE/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.
+Het is raadzaam om deze waarde niet hoger te zetten dan 90 minuten, omdat dit ervoor kan zorgen dat het algoritme een dalende bloedsuiker niet meer kan bijsturen met een basaal van 0 E/uur ('zero-temp'). Je zou ook alarmen moeten instellen, vooral als je nog nieuwe instellingen aan het testen bent, zodat je wordt gewaarschuwd voordat je in een hypo raakt.
 
-Default value: 30 min.
+Standaard instelling: 30 min.
 
 ### Activeer UAM
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful, if you forget to tell AndroidAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
+Als deze optie is ingeschakeld, herkent het SMB-algoritme onaangekondigde maaltijden (UnAnnounced Meals). Dit is handig, als je het systeem vergeet te vertellen dat je koolhydraten hebt gegeten, of als je de koolhydraten verkeerd hebt ingeschat. Of wanneer je na een maaltijd met veel vet en eiwit een langdurige stijging van je glucosewaardes krijgt. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
 
 **Therefore, UAM should always be activated when using SMB.**
 
@@ -152,7 +152,7 @@ The hardcoded parameters in AndroidAPS are:
 
 This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Kind: 3
 * Tiener: 5
@@ -204,7 +204,7 @@ The hardcoded parameters in AndroidAPS are:
 
 This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in MA than in SMB.
+The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. The 'hard limit' for maxIOB is lower in MA than in SMB.
 
 * Kind: 3
 * Tiener: 5
