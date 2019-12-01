@@ -172,7 +172,7 @@ Zorg dat je eerst jouw basaal + ISF goed hebt ingesteld, daarna kun je CR testen
 > 
 > When using IC the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
 > 
-> Example:
+> Voorbeeld:
 > 
 > Bread unit facor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
 > 
