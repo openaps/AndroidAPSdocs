@@ -1,14 +1,14 @@
 # Bijwerken naar een nieuwe versie
 
-## Build yourself instead of download
+## Zelf bouwen, in plaats van downloaden
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+**AndroidAPS is niet beschikbaar als download vanwege regelgeving voor medische hulpmiddelen. Het is wettelijk wel toegestaan om de app voor eigen gebruik te bouwen, maar het is verboden om de kant-en-klare app te verspreiden. See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
 
 ## Important notes
 
 * As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
 * Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
+* [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 3.5.1.
 * If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
 * If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
