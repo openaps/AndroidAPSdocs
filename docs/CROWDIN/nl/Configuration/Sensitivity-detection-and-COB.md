@@ -19,7 +19,7 @@ De gevoeligheid wordt op dezelfde manier berekend als Oref0, maar hier kun je ze
 
 ### Gemiddelde gevoeligheid
 
-De gevoeligheid wordt berekend als een gewogen gemiddelde van alle afwijkingen. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+De gevoeligheid wordt berekend als een gewogen gemiddelde van alle afwijkingen. Je kunt instellen hoelang wordt teruggekeken. Nieuwere afwijkingen tellen zwaarder mee. De minimale koolhydraten absorptie wordt berekend op basis van jouw max koolhydraten absorptie tijd uit je Instellingen. Dit algoritme is snelste in het volgen van wijzigingen aan jouw gevoeligheid.
 
 ### Gevoeligheid Oref1
 
