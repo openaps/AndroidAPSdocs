@@ -7,7 +7,7 @@ AndroidAPS kan dit nooit zo perfect als een echte alvleesklier, maar kan het lev
 
 Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hulpmiddelen gereguleerd. Wie AndroidAPS gebruikt, voert eigenlijk een medisch experiment uit op zichzelf. Het bouwen en instellen van het systeem vereist doorzettingsvermogen en technische kennis. Je hoeft deze technische kennis aan het begin nog niet te hebben, je zult die gaandeweg krijgen. Alle informatie die je nodig hebt kun je online vinden: hier in de wiki, op andere websites of van mensen de jou zijn voorgegaan -- je kunt ze vinden in Facebook groepen en andere online platforms. Veel mensen hebben AndroidAPS succesvol gebouwd en gebruiken het nu volledig veilig, maar het is essentieel dat elke gebruiker:
 
-* Het systeem zelf bouwt zodat ze goed begrijpen hoe het werkt
+* Het systeem zelf bouwt zodat je goed begrijpt hoe het werkt
 * Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 * Controleert wat het systeem doet en het zo nodig updatet om ervoor te zorgen dat het goed blijft werken
 
