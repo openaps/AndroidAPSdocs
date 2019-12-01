@@ -29,7 +29,7 @@ Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het
 
 De belangrijkste stappen voor het bouwen van het APK bestand zijn:
 
-* [Install git](../Installing-AndroidAPS/git-install.rst)
+* [Git installeren](../Installing-AndroidAPS/git-install.rst)
 * Android Studio installeren en instellen
 * Gebruik Git clone, om een kopie ('kloon') van de broncode voor AndroidAPS te downloaden vanaf Github.
 * Open het gedownloade project in Android Studio.
@@ -104,7 +104,7 @@ Wanneer hij klaar is met downloaden, klik op "Finish" (afronden).
 
 ### Mac
 
-* Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Just in case: They can be found here: Android Studio - Preferences.
+* Als je git installeert via homebrew, hoef je niets aan de instellingen te wijzigen. Voor het geval je ze toch zoekt: je vind ze hier: Android Studio - Preferences.
 
 ## Code en extra componenten downloaden
 
