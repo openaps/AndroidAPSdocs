@@ -6,7 +6,7 @@ Wenn dir niemand auf Nightscout folgt, kannst du den NSClient pausieren, um (vie
 
 * Wie erkenne ich eine instabile Verbindung?
 
-Wechsele zur Registerkarte NSClient in AAPS und prüfe das Protokoll. Pings alle ~30 Sekunden und fast keine Nachrichten zur Wiederverbindung sind häufig ein Zeichen für instabile Verbindungen. Wenn Du viele Wiederverbindungen siehst, liegt ein Problem vor. Ab AAPS-Version 2.0 werden solche Probleme erkannt, der NSClient wird für 15 Minuten pausiert und eine Meldung "Fehlfunktion NSClient" im Startbildschirm angezeigt.
+Wechsele zur Registerkarte NSClient in AAPS und prüfe das Protokoll. Common behavior is to receive PING every ~30s and almost none reconnection messages. Wenn Du viele Wiederverbindungen siehst, liegt ein Problem vor. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
 
 * Neustart
 
