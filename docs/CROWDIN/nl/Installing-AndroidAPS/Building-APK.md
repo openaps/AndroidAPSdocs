@@ -246,9 +246,9 @@ Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Ja
 * 'Release' is wat je hoort te kiezen als "Build Type", 'Debug' is alleen voor programmeurs.
 * Kies de "Flavour" die je wilt bouwen: 
   * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
-  * openloop (dwz voorstellen voor tijdelijke basaalstanden, die de gebruiker handmatig op de pomp instelt)
-  * pumpcontrol (dwz alleeneen afstandsbediening voor de pomp, zonder te loopen)
-  * nsclient (dwz de gegevens van een andere gebruiker worden weergegeven en care portal bijdragen kunnen worden toegevoegd)
+  * openloop (i.e. recommendations given to user to manually enact)
+  * pumpcontrol (i.e. remote control for pump, no looping)
+  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
