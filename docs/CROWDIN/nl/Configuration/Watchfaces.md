@@ -51,7 +51,7 @@ I - koolhydraten (koolhydraten aan boord | e-carbs in de toekomst)
 
 J - insuline aan boord (van bolus | van basaal)
 
-## Settings
+## Verdere instellingen
 
 There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
 
