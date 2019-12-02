@@ -1,22 +1,22 @@
 Allereerst de veiligheid
 ===========
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+**Wanneer je besluit om je eigen kunstmatige alvleesklier te bouwen, is het belangrijk om je eigen veiligheid op de eerste plek te zetten, daarom zul je de impact van al je acties moeten leren begrijpen**
 
 Algemeen
 ------------
 
-* AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-* Do not assume that AndroidAPS will never make mistakes. Dit systeem krijgt uiteindelijk de controle over jouw insuline toediening: kijk ernaar, leer hoe het systeem werkt en 'denkt'. En zorg dat je begrijpt hoe je zijn keuzes moet interpreteren.
-* Remember that, once paired, the phone can instruct the pump to do anything. Wanneer AndroidAPS door een kind wordt gebruikt, gebruik deze telefoon dan alleen voor AndroidAPS en om te communiceren met je kind. Installeer geen onnodige apps of spelletjes (!!!) die malware zouden kunnen bevatten zoals trojans, virussen of bots die je systeem zouden kunnen verstoren.
-* Install all security updates provided by your phone manufacturer and Google.
-* You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
+* AndroidAPS is alleen een hulpmiddel bij het onder controle houden van je diabetes, niet iets wat je eenmalig installeert en daarna nooit meer naar hoeft om te kijken!
+* Ga er niet vanuit dat AndroidAPS nooit fouten zal maken. Dit systeem krijgt uiteindelijk de controle over jouw insuline toediening: kijk ernaar, leer hoe het systeem werkt en 'denkt'. En zorg dat je begrijpt hoe je zijn keuzes moet interpreteren.
+* Vergeet niet dat zodra een telefoon gekoppeld is aan het systeem, hij de pomp kan opdragen iets te doen. Wanneer AndroidAPS door een kind wordt gebruikt, gebruik deze telefoon dan alleen voor AndroidAPS en om te communiceren met je kind. Installeer geen onnodige apps of spelletjes (!!!) die malware zouden kunnen bevatten zoals trojans, virussen of bots die je systeem zouden kunnen verstoren.
+* Installeer alle beveiligingsupdates van de telefoonfabrikant en Google.
+* Je moet misschien ook je diabetesgewoonten veranderen omdat je overschakelt naar een closed loop. Bijv. sommige mensen merken dat ze minder hypo-koolhydraten nodig hebben omdat AndroidAPS de hoeveelheid toegediende insuline al heeft verminderd.  
    
 SMS Communicator
 -----------------
 
-* AndroidAPS allows you to control a child's phone remotely via text message. Bedenk wel, dat de telefoon die is ingesteld om externe commando's te geven, kan worden gestolen. Beveilig die telefoon dus goed, met op z'n minst een pincode.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Het wordt aangeraden om ten minste 2 telefoonnummers te koppelen in de SMS communicator instellingen. Mocht één van de gekoppelde telefoons worden gestolen, dan zul je deze bevestigings-SMS'jes evengoed nog op het tweede telefoonnummer binnenkrijgen.
+* AndroidAPS heeft de optie om de telefoon (van bijvoorbeeld een kind) op afstand te kunnen bedienen via SMS-berichten. Bedenk wel, dat de telefoon die is ingesteld om externe commando's te geven, kan worden gestolen. Beveilig die telefoon dus goed, met op z'n minst een pincode.
+* Nadat jouw externe commando (bijv. bolus geven, profiel aanpassen) is uitgevoerd, zal AndroidAPS een bevestigings-SMS sturen. Het wordt aangeraden om ten minste 2 telefoonnummers te koppelen in de SMS communicator instellingen. Mocht één van de gekoppelde telefoons worden gestolen, dan zul je deze bevestigings-SMS'jes evengoed nog op het tweede telefoonnummer binnenkrijgen.
 
 .. note:: 
    **VOOR JE EIGEN VEILIGHEID**
@@ -25,4 +25,4 @@ SMS Communicator
 
    Daarnaast is het belangrijk om alleen originele verbruiksartikelen te gebruiken, zoals infuussets, inschiethulpen en reservoirs die door de fabrikant zijn goedgekeurd voor gebruik met jouw pomp of CGM. Door het gebruik van niet-originele, niet-geteste verbruiksmaterialen kunnen CGM metingen onnauwkeurig worden en/of fouten optreden in de insulinedosering. Insuline is zeer gevaarlijk wanneer het verkeerd wordt gedoseerd - speel alstublieft niet met je leven door jouw hulpmiddelen aan te passen.
 
-   Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels.  The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+   Tensotte een belangrijke opmerking: je mag géén SGLT-2 inhibitors (glifozines) gebruiken wanneer je loopt. Omdat deze medicatie ook de bloedsuiker verlaagt.  Deze medicatie in combinatie met een systeem dat de basale insuline verlaagt om BG te verhogen is bijzonder gevaarlijk, omdat deze stijging in BG mogelijk niet zal gebeuren en daardoor een gevaarlijk gebrek aan insuline kan ontstaan.
