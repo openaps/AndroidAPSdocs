@@ -10,7 +10,7 @@ Building & updating
 -----
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-Settings
+Verdere instellingen
 -----
 * `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
