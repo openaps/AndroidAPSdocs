@@ -8,6 +8,6 @@ To record a phone or watch that isn't already listed in the spreadsheet then ple
 
 Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
 
-# Phone Background
+# Fundo do Telefone
 
 ![fundo do telefone](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)

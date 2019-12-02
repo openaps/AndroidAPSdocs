@@ -19,11 +19,11 @@ Dexcom G6
 
 Подробнее о деталях и причинах этих рекомендаций читайте полную статью <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>_опубликованную в Tim Street на`www.diabettech.com <http://www.diabettech.com>_.
 
-If using G6 with xDrip+
+При использовании G6 с xdrip+
 ======
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
+* Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
+* При использовании xDrip+ в качестве ресивера сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
+Если вам нужен функционал оригинального приложения Clarity и оповещения от xDrip +, пользуйтесь ` модифицированным приложением Dexcom </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ с локальной передачей данных в xDrip +.
 * Если это еще не сделано, скачайте `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ и следуйте инструкциям на Nightscout (G5<http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 В конфигуратоге (настройки AndroidAPS) выберите xdrip.
 * Настройте параметры в xDrip+ в соответствии со страницей настроек `xDrip+ <../Configuration/xdrip.html>`_
@@ -51,7 +51,7 @@ If using G6 with xDrip+
 ----
 * Трансмиттеры с серийным номером начинающиеся с 80 или 81, требуют, по крайней мере, последнюю стабильную версию xDrip с мая 2019 года или более позднюю ночную сборку
 * Трансмиттеры с серийным номером начиная с 8G, требуют по крайней мере ночную сборку 25 июля 2019 года или новее
-* xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
+* Приложения xDrip + и Dexcom не могут быть одновременно подключены к трансмиттеру.
 * Подождите не менее 15 минут. между остановкой и запуском сенсора
 * Не отматывайте обратно время установки Отвечайте на вопрос "сенсор установлен сегодня?" всегда "Да, сегодня".
 * Не активируйте "перезапускать сенсор" при установке нового сенсора

@@ -1,45 +1,47 @@
 # Bijwerken naar een nieuwe versie
 
-## Build yourself instead of download
+## Zelf bouwen, in plaats van downloaden
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+**AndroidAPS is niet beschikbaar als download vanwege regelgeving voor medische hulpmiddelen. Het is wettelijk wel toegestaan om de app voor eigen gebruik te bouwen, maar het is verboden om de kant-en-klare app te verspreiden. Zie de [Veelgestelde vragen](../Getting-Started/FAQ.md) pagina voor meer informatie.**
 
-## Important notes
+## Belangrijk:
 
-* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.
+* Gebruik [](https://developer.android.com/studio/)Android Studio Versie 3.5.1 of nieuwer om de apk te bouwen.
+* [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 3.5.1.
+* Als je "xDrip+" gebruikt, zorg dan dat je de instelling voor [Identify receiver](../Configuration/xdrip#identify-receiver) (identificeer ontvanger) hebt ingevuld in xDrip+.
+* Als je de Dexcom G6 gebruikt met de [aangepaste Dexcom-app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), dan moet je de versie uit de [2.4 map](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) gebruiken.
 
-## Quick walk-through for experienced users
+## Snelle methode voor ervaren gebruikers
 
-Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+Sla deze alinea over als je app voor de eerste keer bijwerkt. De snelle methode is voor ervaren gebruikers. De eerste stap is [Git installeren](../Installing-AndroidAPS/git-install.rst) als je dit nog niet gedaan had.
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in two simple steps:
+Als je al eerder een update van AAPS hebt gedaan en je gebruikt een Windows-PC dan kun je bijwerken in drie simpele stappen:
 
-1. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
-2. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
+1. [Lokale kopie bijwerken](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS-> Git-> Pull)
+2. [Ondertekende APK genereren](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Vergeet onderweg niet om 'app' in plaats van 'wear' te selecteren!)
+3. Afhankelijk van jouw [BG-bron](../Configuration/BG-Source.rst), zorg dat je bij xDrip+ de [Identify receiver](../Configuration/xdrip#identify-receiver) hebt ingesteld, of zorg dat je de aangepaste Dexcom-app uit de [2.4 map](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) gebruikt.
 
 ## Installeer Git (als je dat nog niet hebt)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-install.rst).
 
-## Update your local copy
+## Bijwerken van jouw lokale kopie
 
-* Click: VCS -> Git -> Pull
+* Klik op: VCS-> Git-> Pull
   
   ![Android Studio - GIT - Pull](../images/Update_Pull.png)
 
-* Click Pull (no changes in dialog field)
+* Klik op Pull (laat alles staan zoals het is in het dialoogvenster)
   
   ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
 
 ## Bouwen van de ondertekende APK
 
-<!--- Text is maintained in page building-apk.md ---> Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md ---> Selecteer in het menu "Build" en vervolgens "Generate Signed Bundle / APK...". (Het menu in Android Studio is gewijzigd per september 2018. In oudere versies selecteerde je in het menu "Build" en vervolgens "Generate Signed APK...”.)
 
   
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
+Ondertekenen betekent dat je de door jou gemaakte app ondertekent. Dit is een soort digitale vingerafdruk in de app zelf. Dat is nodig omdat Android om veiligheidsredenen voorschrijft dat een app altijd zo'n handtekening moet hebben. Voor meer informatie over dit onderwerp, volg de link [hier](https://developer.android.com/studio/publish/app-signing.html#generate-key). Veiligheid van apps is een groot en ingewikkeld onderwerp waarin je je niet verder hoeft te verdiepen.
 
 ![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -51,22 +53,22 @@ Selecteer "App" en klik op "Next".
 
 ![Screenshot 40](../images/Installation_Screenshot_40.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+Vul de locatie in waar jouw key store bestand (digitale handtekening) te vinden is, en het wachtwoord van jouw key store. Vul ook jouw key alias (naam van jouw 'handtekening') en het bijbehorende wachtwoord in.
 
-Select 'Remember passwords'.
+Selecteer 'Wachtwoorden onthouden'.
 
-Then click next.
+Klik daarna op "Next" (Volgende).
 
 ![Key store path](../images/KeystorePathUpdate.PNG)
 
-Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". De volgende informatie kan handig zijn voor later.
+Selecteer "full" (volledig) als "Flavour" (smaak) om de volledige AndroidAPS app te maken. Selecteer "V1 Jar Signature" (V2 is optioneel) en klik op "Finish". De volgende informatie kan handig zijn voor later.
 
 * 'Release' is wat je hoort te kiezen als "Build Type", 'Debug' is alleen voor programmeurs.
 * Kies de "Flavour" die je wilt bouwen: 
-  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
-  * openloop (dwz voorstellen voor tijdelijke basaalstanden, die de gebruiker handmatig op de pomp instelt)
-  * pumpcontrol (dwz alleeneen afstandsbediening voor de pomp, zonder te loopen)
-  * nsclient (dwz de gegevens van een andere gebruiker worden weergegeven en care portal bijdragen kunnen worden toegevoegd)
+  * full/fullRelease (volledige versie van de app, deze heb je nodig om het systeem in closed loop modus te gebruiken)
+  * openloop (je krijgt alleen voorstellen voor tijdelijke basaalstanden, die jij als gebruiker handmatig op de pomp moet invoeren)
+  * pumpcontrol (functioneert alleen als afstandsbediening voor je pomp, zonder te loopen)
+  * nsclient (je kunt de real time gegevens van een andere looper bekijken je kunt dingen invullen in de care portal van die andere looper, wordt gebruikt door ouders van een loopend kind)
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
@@ -84,14 +86,14 @@ Klik op de "locate" link in het Event Log.
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Om de juiste locatie te openen, ga naar de map met AndroidAPS/app/full/release om het bestand "app-full-release.apk" te vinden. Zet dit bestand op jouw Android telefoon. You can do it on your preferred way:
+Om de juiste locatie te openen, ga naar de map met AndroidAPS/app/full/release om het bestand "app-full-release.apk" te vinden. Zet dit bestand op jouw Android telefoon. Dit kan op verschillende manieren:
 
 * Bluetooth
-* cloud upload (Google Drive or other cloud services)
-* connect computer and phone by cable 
-* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+* Via de cloud (bijvoorbeeld Google Drive, Dropbox)
+* Simpelweg met een usb kabeltje tussen computer en telefoon 
+* Via e-mail (let op: sommige e-mailapps hebben de mogelijkheid om een apk-bestand als bijlage toe te voegen, geblokkeerd. Kies dan één van bovenstaande opties.)
 
-In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Als je een andere manier gebruikt om de APK over te zetten op je telefoon, geef dan de toestemmingen waar hij naar vraagt zodat je verder kunt.
+In dit voorbeeld wordt Gmail gebruikt omdat het vrij eenvoudig is. Om de zelf-ondertekende app te kunnen installeren, moet je Android hiervoor toestemming geven, ook al is dit bestand via Gmail ontvangen, wat normaal gesproken niet toegestaan is. Als je een andere manier gebruikt om de APK over te zetten op je telefoon, geef dan de toestemmingen waar hij naar vraagt zodat je verder kunt.
 
 ![Screenshot 48](../images/Installation_Screenshot_48.png)
 
@@ -105,12 +107,12 @@ De laatste stap is om op het APK bestand te tikken en de app te installeren. Als
 
 Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met het instellen van AndroidAPS.
 
-## Check AAPS version on phone
+## Controleer AAPS versie op telefoon
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Je kunt nakijken welke AAPS-versie er op jouw telefoon staat door op de drie stipjes in de rechterbovenhoek van het Overzicht scherm te tikken, en te kiezen voor 'Over'.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![AAPS versie geïnstalleerd](../images/Update_VersionCheck.png)
 
 ## Problemen oplossen
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Zie afzonderlijke pagina over [Probleemoplossing Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

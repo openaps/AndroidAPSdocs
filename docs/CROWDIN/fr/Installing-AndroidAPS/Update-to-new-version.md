@@ -6,40 +6,42 @@
 
 ## Remarques importantes
 
-* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
+* À partir de la version 2.3, vous devez utiliser git pour la mise à jour. La mise à jour via le fichier zip ne fonctionne plus.
+* Utilisez [Android Studio Version 3.5.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
+* [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 3.5.1.
+* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
 * If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-## Quick walk-through for experienced users
+## Accès rapide aux utilisateurs expérimentés
 
-Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+Veuillez sauter ce paragraphe si vous mettez à jour AAPS pour la première fois. L'accès rapide est destiné aux utilisateurs expérimentés. Votre étape suivante serait [d'installer git](../Installing-AndroidAPS/git-install.rst) si vous ne l'avez pas déjà.
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in two simple steps:
+If you already updated AAPS in previous versions and use a Windows PC you can update in three simple steps:
 
-1. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
-2. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
+1. [Mettez à jour la copie locale](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
+2. [Générez un APK signé](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Sélectionnez 'app' au lieu de 'wear' au passage !)
+3. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the patched Dexcom app from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Installer git (si vous ne l'avez pas)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Suivez le manuel sur la [page d'installation de git](../Installing-AndroidAPS/git-install.rst).
 
-## Update your local copy
+## Mettez à jour votre copie locale
 
-* Click: VCS -> Git -> Pull
+* Cliquez sur : VCS -> Git -> Pull
   
   ![Android Studio - GIT - Pull](../images/Update_Pull.png)
 
-* Click Pull (no changes in dialog field)
+* Cliquez sur Pull (pas de changements dans la boîte de dialogue)
   
   ![Android Studio - GIT - Pull 2](../images/Update_Pull2.png)
 
 ## Générer un APK signé
 
-<!--- Text is maintained in page building-apk.md ---> Dans le menu , sélectionnez "Build" puis "Generate Signed Bundle / APK...". (Le menu d'Android Studio a changé en septembre 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+<!--- Text is maintained in page building-apk.md ---> Dans le menu , sélectionnez "Build" puis "Generate Signed Bundle / APK...". (Le menu d'Android Studio a changé en septembre 2018. Dans les anciennes versions, sélectionnez dans le menu « Build » puis « Generate Signed APK... ».)
 
   
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez le lien [ici](https://developer.android.com/studio/publish/app-signing.html#generate-key). La sécurité est un sujet important et complexe et vous n'avez pas besoin de cela maintenant.
+La signature signifie que vous signez votre application générée mais de manière numérique comme une sorte d’empreinte digitale dans l’application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez le lien [ici](https://developer.android.com/studio/publish/app-signing.html#generate-key). La sécurité est un sujet important et complexe et vous n'avez pas besoin de cela maintenant.
 
 ![Capture d'écran 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -51,20 +53,20 @@ Sélectionnez "app" et cliquez sur "Next".
 
 ![Capture d'écran 40](../images/Installation_Screenshot_40.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+Entrez le chemin d'accès au fichier de clés, entrez le mot de passe du fichier, sélectionnez l'alias de clé et entrez le mot de passe de la clé.
 
-Select 'Remember passwords'.
+Sélectionnez 'Remember passwords'.
 
-Then click next.
+Puis cliquez sur next.
 
-![Key store path](../images/KeystorePathUpdate.PNG)
+![Chemin du fichier de clés](../images/KeystorePathUpdate.PNG)
 
-Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
+Sélectionnez "full" (ou "fullRelease") comme favori pour l'application générée. Sélectionnez V1 "Jar Signature" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
 * 'Release' devrait être votre choix par défaut pour "Build Variants", 'Debug' est juste pour les personnes qui codent.
 * Sélectionnez le type de génération que vous souhaitez complier. 
-  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
+  * full / fullRelease (c'est-à-dire recommandations automatiquement adoptées en boucle fermée)
+  * openloop (c'est à dire les recommandations données à l'utilisateur commandes manuelles)
   * pumpcontrol (c'est-à-dire télécommande pour la pompe, pas pour le bouclage)
   * nsclient (c'est-à-dire que les données de bouclage d'un autre utilisateur sont affichées et que des entrées de careportal peuvent être ajoutées)
 
@@ -84,14 +86,14 @@ Cliquez sur le lien "locate" dans le journal des événements.
 
 ![Capture d'écran 47](../images/Installation_Screenshot_47.png)
 
-Veuillez sélectionner le répertoire AndroidAPS/app/full/release pour trouver le fichier "app-full-release.apk". Transférez ce fichier sur votre smartphone Android. You can do it on your preferred way:
+Veuillez sélectionner le répertoire AndroidAPS/app/full/release pour trouver le fichier "app-full-release.apk". Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire de votre façon préférée :
 
 * Bluetooth
-* cloud upload (Google Drive or other cloud services)
-* connect computer and phone by cable 
-* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+* envoi dans le cloud (Google Drive ou autres services cloud)
+* connection de l'ordinateur et du téléphone par câble 
+* par mail (Notez que certaines applications de messagerie ne permettent pas les pièces jointes apk, dans ce cas utiliser une autre méthode de transfert.)
 
-In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Si vous utilisez une autre solution, veuillez procéder en conséquence.
+Dans cet exemple, Gmail est utilisé car c'est assez simple. Pour installer l'application "auto-signée", vous devez autoriser Android sur votre smartphone à effectuer cette installation même si ce fichier est reçu via Gmail, ce qui est interdit par défaut. Si vous utilisez une autre solution, veuillez procéder en conséquence.
 
 ![Capture d'écran 48](../images/Installation_Screenshot_48.png)
 
@@ -105,12 +107,12 @@ La dernière étape consiste à cliquer sur le fichier APK obtenu via Gmail et i
 
 Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour votre utilisation (MGC, pompe à insuline), etc.
 
-## Check AAPS version on phone
+## Vérifier la version d'AAPS sur le téléphone
 
 Vous pouvez vérifier la version AAPS sur votre téléphone en cliquant sur le menu 3 points en haut à droite puis sur "à propos".
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Version installée d'AAPS](../images/Update_VersionCheck.png)
 
 ## Dépannage
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Voir la page spécifique [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

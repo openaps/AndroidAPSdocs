@@ -126,15 +126,15 @@ Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 
 
 We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
 
-## FAQ
+## Perguntas Frequentes (FAQ)
 
 ### Can I see the power of RileyLink/GNARL?
 
-No. At the moment none of this devices support this and it probably won't even in the future.
+Não. At the moment none of this devices support this and it probably won't even in the future.
 
 ### Is GNARL full replacement for RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Sim. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 

@@ -6,7 +6,7 @@ Als niemand je volgt op Nightscout, kun je NSClient pauzeren om (veel) batterijd
 
 * Hoe weet je of je een instabiele verbinding hebt?
 
-Ga naar NSClient tab in AAPS en kijk het logboek. Normaal gesproken zul je elke ~30s een PING received (PING ontvangen) melding zien en bijna geen disconnect event (verbinding verbroken) meldingen. Als je veel disconnect event meldingen ziet, is er een probleem. Sinds AndoridAPS versie 2.0 zul je een NSClient malfunction (NSClient storing) melding op het overzicht zien verschijnen wanneer dergelijk gedrag wordt gedetecteerd. Ook zal nsclient worden gepauzeerd gedurende 15 minuten.
+Ga naar NSClient tab in AAPS en kijk het logboek. Common behavior is to receive PING every ~30s and almost none reconnection messages. Als je veel disconnect event meldingen ziet, is er een probleem. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
 
 * Herstarten
 

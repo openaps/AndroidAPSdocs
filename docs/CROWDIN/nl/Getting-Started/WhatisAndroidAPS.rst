@@ -1,4 +1,4 @@
-What is a closed loop system with AndroidAPS?
+Wat is een closed loop systeem met AndroidAPS?
 ****************************
 
 AndroidAPS is een app die wordt gebruikt als 'kunstmatige alvleesklier' systeem (Artificial Pancreas System of kortweg APS in het Engels). Deze app draait op een Android smartphone   en heeft hetzelfde doel als een menselijke alvleesklier: de bloedglucosewaardes automatisch binnen gezonde grenzen houden. 
@@ -7,9 +7,9 @@ AndroidAPS kan dit nooit zo perfect als een echte alvleesklier, maar kan het lev
 
 Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hulpmiddelen gereguleerd. Wie AndroidAPS gebruikt, voert eigenlijk een medisch experiment uit op zichzelf. Het bouwen en instellen van het systeem vereist doorzettingsvermogen en technische kennis. Je hoeft deze technische kennis aan het begin nog niet te hebben, je zult die gaandeweg krijgen. Alle informatie die je nodig hebt kun je online vinden: hier in de wiki, op andere websites of van mensen de jou zijn voorgegaan -- je kunt ze vinden in Facebook groepen en andere online platforms. Veel mensen hebben AndroidAPS succesvol gebouwd en gebruiken het nu volledig veilig, maar het is essentieel dat elke gebruiker:
 
-* Het systeem zelf bouwt zodat ze goed begrijpen hoe het werkt
-* Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
-* Controleert wat het systeem doet en het zo nodig updatet om ervoor te zorgen dat het goed blijft werken
+* Het systeem zelf bouwt zodat je goed begrijpt hoe het werkt.
+* Het doserings algoritme instelt. Vooral jouw individuele insulinebehoefte moet nagenoeg perfect zijn, om het systeem goed te laten werken. Werk samen met jouw behandelaars om jouw insulinebehoefte te bepalen.
+* Controleert wat het systeem doet en het zo nodig updatet om ervoor te zorgen dat het goed blijft werken.
 
 .. note:: 
 	**Disclaimer en waarschuwing**
@@ -20,11 +20,11 @@ Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hu
 
 	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_.
+	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: 'SOOIL <http://www.sooil.com/eng/>'_, 'Dexcom<http://www.dexcom.com/>'_, 'Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>'_ of 'Medtronic</3>'_.
 	
 Als je klaar bent voor deze uitdaging, lees dan verder. 
 
-Primary goals behind AndroidAPS
+** Belangrijkste doelen van AndroidAPS: **
 ===========================================
 
 * Een app waarbij de veiligheid ingebouwd zit. Om meer te lezen over de veiligheids-functies van de oref0 en oref1 algoritmen, klik hier (https://openaps.org/reference-design/)
@@ -37,8 +37,8 @@ Primary goals behind AndroidAPS
 * Een app die geïntegreerd is met Nightscout
 * Een app waarvan de gebruiker de veiligheidsbeperkingen zelf instelt 
 
-How to start
+Hoe te beginnen
 ===============
-Of course, all of this content here is very important, but can be in the beginning quite confusing.
-A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
+Natuurlijk is alles wat hier beschreven staat belangrijk, maar de grote hoeveelheid nieuwe informatie kan in het begin behoorlijk verwarrend zijn.
+Een goede oriëntatie wordt gegeven door het `Module Overzicht <../Module/module.html>'_ en de `Doelen <../Usage/Objectives.html>`_. Of bekijk het 'Gebruiksvoorbeeld <../Getting-Started/Sample-Setup.html>`_: met Dana pomp, Dexcom sensor en Sony Smartwatch.
  

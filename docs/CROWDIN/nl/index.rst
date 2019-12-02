@@ -1,32 +1,32 @@
-Welcome to the AndroidAPS documentation
+Welkom bij de Android APS documentatie
 ==============================================
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
+AndroidAPS is een open source app voor mensen met insuline-afhankelijke diabetes. De app fungeert als een kunstmatig alvleesklier systeem (APS, Artificial Pancreas System) op Android smartphones. Belangrijkste componenten zijn verschillende OpenAPS software algoritmen die doen wat een levende alvleesklier doet: de bloedsuiker binnen gezonde grenzen houden. Het algoritme doet dit door het gebruik van geautomatiseerde insulinedosering (AID, Automated Insulin Dosing). Daarnaast is een door de app ondersteunde en FDA/CE goedgekeurde insulinepomp en een continue glucosesensor nodig. 
 
-The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into his treatments profile, but they are verified by the system for safety reasons. 
+De app gebruikt GEEN zelflerende kunstmatige intelligentie. In plaats daarvan zijn de berekeningen van AndroidAPS gebaseerd op de individuele insulinebehoefte en de inname van koolhydraten die de gebruiker handmatig invoert, maar ze worden om veiligheidsredenen door het systeem gecontroleerd. 
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+De app is niet verkrijgbaar in de Google Play store - om juridische redenen moet iedere gebruiker de app zelf vanuit de broncode bouwen.
 
-Main components are:
+De belangrijkste onderdelen zijn:
 
 .. image:: images/modules-female.png
   :alt: Components
 
-For more details, please read on here.
+Hieronder volgt de inhoudsopgave.
 
-Getting started
+Aan de slag
 ----------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
+   Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
+   Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
    
    
-What do I need 
+Wat heb ik nodig 
 -----------------------------------------
 .. toctree::
    :maxdepth: 1
@@ -43,24 +43,24 @@ AndroidAPS installeren
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
-   Install git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Git installeren <./Installing-AndroidAPS/git-install.rst>
+   Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
    
    
-Component Setup
+Onderdelen instellen
 ---------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
+   BG bron <./Configuration/BG-Source.rst>
+   xDrip+ instellingen <./Configuratie/xdrip.md>
+   Pompen <./Hardware/pumps.rst>
+   Telefoons <./Hardware/Phoneconfig.rst>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
-   Smartwatch  <./Hardware/Smartwatch.rst>
+   Smartwatch <./Hardware/Smartwatch.rst>
    
 
 AndroidAPS instellingen 
@@ -69,28 +69,28 @@ AndroidAPS instellingen
    :maxdepth: 1
    :glob:
    
-   Config builder <./Configuration/Config-Builder.md>
+   Configurator <./Configuration/Config-Builder.md>
    Instellingen <./Configuration/Preferences.md>
    
    
-AndroidAPS Usage
+AndroidAPS gebruik
 ------------
 .. toctree::
    :maxdepth: 1
    :glob:
     
-   AndroidAPS screens <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives.rst>
+   AndroidAPS Screenshots <./Getting-Started/Screenshots.md>
+   Doelen <./Usage/Objectives.rst>
    OpenAPS functies <./Usage/Open-APS-features.md>   
-   COB calculation <./Usage/COB-calculation.rst>
-   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+   COB Berekening <./Usage/COB-calculation.rst>
+   Gevoeligheidsdetectie <./Configuration/Sensitivity-detection-and-COB.md>
    Profiel wissel <./Usage/Profiles.md>
    Tijdelijk streefdoel <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.rst>
-   Automation <./Usage/Automation.rst>
+   Vertraagde koolhydraten (eCarbs) <./Usage/Extended-Carbs.rst>
+   Automatisering <./Usage/Automation.rst>
   
  
-General Hints 
+Algemene Tips 
 ---------------------
 .. toctree::
    :maxdepth: 1
@@ -99,27 +99,27 @@ General Hints
    Wisselen van tijdzone <./Usage/Timezone-traveling.md>
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
    AccuChek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
+   Instellingen exporteren/importeren <./Usage/ExportImportSettings.rst>
    
 
-AndroidAPS for children
+AndroidAPS voor kinderen
 ------------------
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Remote monitoring <./Children/Children.rst>
-   SMS commands <./Children/SMS-Commands.rst>
+   Monitoren op afstand <./Children/Children.rst>
+   SMS Comando's <./Usage/SMS-Commands.rst>
    
 
-Advanced 
+Geavanceerd 
 ----------
 .. toctree::
    :maxdepth: 1
    :glob:
    
    Android auto <./Usage/Android-auto.md>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Automatisering met andere apps <./Usage/automationwithapp.md>
    
 
 Problemen oplossen
@@ -128,16 +128,16 @@ Problemen oplossen
    :maxdepth: 1
    :glob:
   
-   Troubleshooting <./Usage/troubleshooting.rst>
+   Problemen oplossen <./Usage/troubleshooting.rst>
    
 
-FAQ 
+Veelgestelde vragen 
 ------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
   
-   FAQ <./Getting-Started/FAQ.md>
+   Veelgestelde vragen <./Getting-Started/FAQ.md>
 
    
 Veelgebruikte woordenlijst
@@ -157,9 +157,9 @@ Waar je hulp kunt vinden
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
+   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
 
-For Clinicians
+Zorgprofessionals
 ------------
 .. toctree::
    :maxdepth: 1
@@ -175,7 +175,7 @@ Hoe je zelf kunt helpen
    :glob:
 
    Hoe kan je helpen <./Getting-Started/How-can-I-help.md>
-   How to translate the app and wiki <./translations.md>
+   De app of wiki vertalen <./translations.md>
    De wiki verbeteren <./make-a-PR>
 
 
@@ -188,4 +188,4 @@ Hoe je zelf kunt helpen
 
 	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_
+	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: 'SOOIL <http://www.sooil.com/eng/>'_, 'Dexcom<http://www.dexcom.com/>'_, 'Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>'_ of 'Medtronic</3>'_.

@@ -81,9 +81,9 @@ Tout d'abord, vous devez prendre le même équipement d'urgence avec vous, comme
 
 ## Comment attacher en toute sécurité la MGC/MFG ?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Certains Boucleur utilisent également des cassettes Kinesi standard ou des cassettes rock moins chères.
+Vous pouvez le coller : des « patches » pré-perforés sont vendus pour les systèmes MGC courants (demandez à Google ou à eBay). Certains Boucleur utilisent également des cassettes Kinesi standard ou des cassettes rock moins chères.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
+Vous pouvez le fixer : il y a des brassards aux bras qui fixent la MGC / MGF avec un élastique (demandez à Google ou eBay).
 
 # Paramètres AndroidAPS
 
@@ -143,7 +143,7 @@ Soyez prudent, car elle est bien souvent trop faible. Trop basse signifie qu'1 U
 
 **Augmentation de la SI** (par ex. 45 au lieu de 35) = moins agressif et plus faible, conduisant à une plus petite baisse des glycmémies pour chaque unité d'insuline. Si elle est trop élevée, cela peut conduire à des hyperglycémies.
 
-**Example:**
+**Exemple :**
 
 * Glycémie est à 190 mg/dl (10,5 mmol) et la cible est à 100 mg/dl (5,6 mmol). 
 * Donc, vous voulez une correction de 90 mg/dl (= 190-100).
@@ -164,21 +164,21 @@ En anglais les acronymes utilisés sont I:C, IC ou également Ratio Carbone (CR)
 
 En supposant que le débit de basal est correct, vous pouvez tester en vérifiant que l'IA est nulle et que vous êtes à l'objectif glycémique, en mangeant une quantité exacte de glucides connue, et en prenant la valeur estimée d'insuline basée sur le rapport actuel de G/I. Le mieux est de manger de la nourriture de votre mangez habituellement à ce moment de la journée et de compter ses glucides précisément.
 
-> **NOTE:**
+> **REMARQUE :**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equaled 12g of carbs, later some changed to 10g of carbs.
+> Dans certains pays européens, des unités de pain ont été utilisées pour déterminer la quantité d'insuline nécessaire à l'alimentation. A l'origine 1 unité de pain est équivalent à 12g de glucides, mais plus tard certains ont changés la référence à 10g de glucides.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> Dans ce modèle, la quantité de glucides est la référence et la quantité d'insuline variable. ("Quelle quantité d'insuline est nécessaire pour couvrir une unité de pain?")
 > 
-> When using IC the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> Lors de l'utilisation du ratio G/I, la quantité d'insuline est la référence et la quantité de glucides est variable. ("Combien de glucides peuvent être couverts par une unité d'insuline?")
 > 
-> Example:
+> Exemple :
 > 
-> Bread unit facor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
+> Facteur d'Unité de Pain (BU = 12g glucides) : 2,4 -> Vous avez besoin de 2,4 unités d'insuline lorsque vous mangez une Unité de Pain.
 > 
-> Corresponding IC: 12 / 2,4 = 5,2 -> 5,2g carbs can be covered with one unit of insulin.
+> G/I correspondant : 12 / 2,4 = 5 -> 5g de glucides peuvent être couverts avec une unité d'insuline.
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Les tables de conversion sont disponibles en ligne : [ici](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impact
 
@@ -192,25 +192,25 @@ Si, après que le repas ait été digéré et que l'IA est revenu à zéro, votr
 
 ## Pourquoi est-ce que cela montre "dia: 3" dans l'onglet "OPENAPS AMA" même si j'ai une DAI différente dans mon profil ?
 
-![AMA 3h](../images/Screenshot_AMA3h.png)
+![AAR 3h](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+Dans l'AMA, DIA ne signifie pas "Durée d'Action de l'Insuline". C'est un paramètre qui était connecté au DAI. Maintenant, cela signifie "à quel moment la correction devrait être terminée". Cela n'a rien à voir avec le calcul de l'IA. Dans OpenAPS SMB, ce paramètre n'est plus nécessaire.
 
 ## Profil
 
 ### Pourquoi utiliser une DAI min. de 5h (heure de fin de l'insuline) au lieu de 2-3h ?
 
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Bien expliqué dans [cet article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). N'oubliez pas d'`ACTIVER LE PROFIL` après avoir changé votre DAI.
 
 ### Pourquoi la boucle réduit-elle fréquemment ma glycémie à des valeurs hypoglycémiques sans GA ?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
+Tout d'abord, vérifiez votre débit de basal et faites un test de débits de basal sans glucides. S'il est correct, c'est généralement provoqué par une SI trop faible. Une SI trop basse ressemble généralement à ceci :
 
-![ISF too low](../images/isf.jpg)
+![SI trop faible](../images/isf.jpg)
 
 ### Quelles sont les causes des pics post-prandiaux en boucle fermée ?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+Tout d'abord, vérifiez votre débit de basal et faites un test de débits de basal sans glucides. S'il est correct et que votre glycémie est en train d'atteindre votre cible une fois que les glucides sont complètement absorbés, essayez de définir une cible temporaire pour "Début Repas imminent" dans AndroidAPS un peu avant le repas ou réfléchissez à faire un prébolus avec un décalage horaire adapté vu avec votre diabétologue. Si votre glycémie est trop élevée après le repas et encore trop élevée une fois les glucides absorbés, pensez à diminuer votre G/I avec votre diabétologue. Si votre glycémie est trop élevée en GA et trop faible après l'absorption complète des glucides, pensez à augmenter votre ratio G/I et faite un prébolus avec un décalage horaire vu avec votre diabétologue.
 
 # Autres paramètres
 
@@ -218,23 +218,23 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 ### AndroidAPS NSClient indique 'non autorisé' et ne télécharge pas les données. Que puis-je faire ?
 
-In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+Dans NSClient, vérifiez les 'Paramètres de connexion'. Peut-être n'êtes-vous pas dans un Wi-Fi autorisé ou vous avez activé "Uniquement pendant la charge" et votre câble de charge n'est pas branché.
 
 ## Paramètres MGC
 
 ### Pourquoi ne AndroidAPS indique 'la source de glycémie actuelle ne supporte pas de filtrage avancé' ?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Si vous utilisez un autre MGC/MGF que le Dexcom G5 ou G6 en mode natif xDrip, vous obtiendrez cette alerte dans l'onglet AndroidAPS OpenAPS SMB. Voir [Lissage des données de glycémie](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) pour plus de détails.
 
 ## Pompe
 
 ### Où placer la pompe ?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not. If you rather would have a tubeless insulin pump and have a Dana for looping, check the 30cm catheter with the original belly belt.
+Il y a de nombreuses possibilités de placer la pompe. Peu importe si vous êtes en boucle fermée ou pas.
 
 ### Piles
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+La boucle peut réduire la durée de vie de la pile de la pompe plus rapidement que la normale car le système interagit bien plus qu'un utilisateur manuel. Il est préférable de changer la pile à 25% car la communication devient alors difficile. Vous pouvez définir des alarmes d'avertissement pour la pile de la pompe à l'aide de la variable PUMP_WARN_BATT_P de votre site Nightscout. Les astuces pour augmenter la durée de vie de la pile sont les suivantes :
 
 * réduire la durée d'affichage de l'écran LCD (dans le menu des paramètres de la pompe)
 * réduire la durée du rétro-éclairage (dans le menu des paramètres de la pompe)
@@ -250,24 +250,24 @@ Looping can reduce the pump battery faster than normal use because the system in
     * AUSSI allez dans Paramètres -> Applications -> (Trois points en haut à droite de l'écran), sélectionnez "accès spécial" -> Optimiser util. de la batterie
     * Faites défiler jusqu'à AndroidAPS et assurez-vous qu'elle est désélectionnée.
 
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+* nettoyez les bornes de la pile avec un tampon d'alcool pour s'assurer qu'aucune cire ou graisse de fabrication ne reste.
 
 * pour les [pompes Dana R/RS](../Configuration/DanaRS-Insulin-Pump.md) la procédure de démarrage établit un courant élevé à travers la batterie pour briser de manière ciblée le film passif (cela empêche la perte d'énergie pendant le stockage) mais cela ne suffit pas toujours à la casser à 100%. Supprimez et réinsérez la batterie 2 à 3 fois jusqu'à ce qu'elle affiche 100 % à l'écran, ou utilisez la clé de batterie pour faire un court circuit bref de la batterie avant de l'insérer en appliquant aux deux bornes une fraction de seconde.
 * voir également plus de conseils pour les [types particuliers de piles](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
 ### Changement des réservoirs et des canules
 
-The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
+Le changement de cartouche ne peut pas être fait via AndroidAPS, mais doit être effectué comme avant directement via la pompe.
 
 * Faites un appui long sur "Boucle Ouverte" / "Boucle Fermée" de l'onglet Accueil de AndroidAPS et sélectionnez 'Suspendre la Boucle pour 1h'
-* Now disconnect the pump and change the reservoir as per pump instructions.
+* Débranchez maintenant la pompe et changez le réservoir selon les instructions de la pompe.
 * Une fois reconnecté à la pompe, continuez la boucle en appuyant sur "Suspendu (X m)".
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+Le changement d'une canule n'utilise cependant pas la fonction "Remplir tubulure" / "Remplir canule" de la pompe, mais remplit l'ensemble de perfusion et / ou la canule à l'aide d'un bolus qui n'apparaît pas dans l'historique des bolus. Cela signifie qu'il n'interrompt pas un débit de basal temporaire en cours d'exécution. Dans l'onglet Actions (ACT), utilisez le bouton AMORCER/REMPLIR pour définir la quantité d'insuline nécessaire pour remplir la tubulure et la canule et commencer la mise en place. Si la quantité n'est pas suffisante, répétez le remplissage. Vous pouvez définir les quantités par défaut dans les Préférences > Autres > Valeurs prédéfinies pour remplir&amorcer. Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
 
 ## Fonds d'écran
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+Vous pouvez trouver le fond d'écran AndroidAPS pour votre téléphone sur la [page téléphones](../Getting-Started/Phones#phone-background).
 
 ## Utilisation quotidienne
 
@@ -275,61 +275,61 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 #### Que faire pour prendre une douche ou un bain?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
+Vous pouvez retirer la pompe pour prendre une douche ou un bain. Pour cette courte période de temps, vous n'en aurez généralement pas besoin. Mais vous devez le dire à AAPS, pour que le calcul de l'IA soit juste.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
 
 ### Travail
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Selon votre type de travail, vous pouvez peut-être utiliser différents paramètres de traitement pendant les jours travaillés. En tant que boucleur, vous devez penser à un [changement de profil](../Usage/Profiles.md) pour votre journée de travail (par exemple, plus de 100% pendant 8h lorsque vous êtes assis ou moins de 100% lorsque vous êtes actif), une cible temporaire élevée ou basse ou un [décalage horaire de votre profil](../Usage/Profiles#time-shift) lorsque vous êtes debout plus tôt ou plus tard que d'habitude. Si vous utilisez des [profils Nightscout](../Configuration/Config-Builder#ns-profile), vous pouvez également créer un second profil (par exemple "Maison" et "Travail") et faire un changement de profil quotidien vers le profil dont vous avez besoin.
 
 ## Activités de loisirs
 
 ### Sports
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Vous devez retravailler vos vieilles habitudes sportives à partir de l'époque "d'avant-boucle". Si vous consommez simplement des glucides de sportifs comme avant, la boucle fermée les reconnaîtra et les corrigera en conséquence.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Donc, vous auriez plus de glucides à bord, mais en même temps, la boucle les neutraliserait en libérerant de l'insuline.
 
-When looping you should try these steps:
+Lors de la boucle, vous devriez essayer ces étapes :
 
-* Make a [profile switch](../Usage/Profiles.md) < 100%.
-* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+* Faite un [changement de profil](../Usage/Profiles.md) < 100%.
+* Définissez une [cible temporaire d'activité](../Usage/temptarget#activity-temp-target) au-dessus de votre cible standard.
+* Si vous utilisez SMB, assurez-vous que ["Activer SMB avec cibles temp. hautes"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) et [ "Activer en permanence les SMB" ](../Usage/Open-APS-features#enable-smb-always) sont désactivées.
 
-Pre- and postprocessing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+Le pré-traitement et le post-traitement de ces paramètres sont importants. Faite les changements suffisament tôt avant le sport et tenez compte de l'effet sur les muscles après.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+Si vous faites du sport régulièrement au même moment (par exemple entrainement régulier dans votre salle de sport), vous pouvez envisager d'utiliser des règles [d'automatisation](../Usage/Automation.rst) pour faire des changements de profil et mettre des CT. L'automatisation basée sur l'emplacement peut également être une idée, mais rend l'anticipation du traitement plus difficile.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Le pourcentage du changement de profil, la valeur de votre cible temporaire d'activité et le meilleur moment pour effectuer ces changements sont propres à chacun. Commencez prudemment si vous recherchez la valeur qui vous convient (commencez par un pourcentage faible et une CT plus élevée).
 
 ### Sexe
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
+Vous pouvez retirer la pompe pour être "libre", mais vous devez le dire à l'AAPS, pour que les calculs d'IA soient justes.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
 
 ### Boire de l'alcool
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+La consommation d'alcool est dangereux en mode boucle fermée car l'algorithme ne peut pas prévoir correctement l'impact de l'alcool sur la glycémie. Vous devez vérifier votre propre méthode de traitement en utilisant une des fonctions suivantes dans AndroidAPS :
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* désactivation de la boucle fermée et traitement du diabète manuellement ou
+* réglage d'une cible de temp élevées et désactivation des RNS pour éviter l'augmentation de l'IA par la boucle en raison d'un repas non signalé
+* faire un changement de profil pour nettement moins de 100% 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Lorsque vous buvez de l'alcool, vous devez toujours avoir un œil sur votre MGC pour éviter manuellement une hypoglycémie en mangeant des glucides.
 
 ### En veille
 
 #### Comment puis-je boucler pendant la nuit sans rayonnement smartphone et WIFI ?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
+De nombreux utilisateurs mettent le téléphone en mode avion la nuit. Si vous voulez que la boucle vous aide lorsque vous dormez, procédez comme suit (ceci ne fonctionne qu'avec une source de Gly locale telle que xDrip+ ou une application Dexcom patchée, elle ne fonctionne PAS si vous obtenez les glycémies via Nightscout) :
 
 1. Activez le mode avion de votre mobile.
 2. Attendez que le mode avion soit actif.
 3. Activez le Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Maintenant vous ne recevez pas d'appels téléphonique, et vous n'êtes pas connecté à Internet. Mais la boucle est toujours en cours.
 
 Certaines personnes ont découvert des problèmes de diffusion locale (AAPS ne recevant pas les valeurs Gly de xDrip+) lorsque le téléphone est en mode avion. Dans xDrip+ accédez à Paramètres > Paramètres Inter-app > Identifiez le récepteur, et entrez `info.nightscout.androidaps`.
 
@@ -339,16 +339,16 @@ Certaines personnes ont découvert des problèmes de diffusion locale (AAPS ne r
 
 #### Comment traiter les changements de fuseau horaire ?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+Avec les pompes Dana R et Dana R coréenne, vous n'avez rien à faire. Pour d'autres pompes, consultez la page [voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling.md) pour plus de détails.
 
 ## Rubriques médicales
 
 ### Hospitalisation
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Si vous souhaitez partager des informations sur AndroidAPS et DIY en boucle avec votre équipe médicale, vous pouvez imprimer le [guide AndroidAPS pour les professionnels de santé](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### Rendez-vous médical avec votre diabétologue
 
 #### Rapports
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Vous pouvez montrer vos rapports Nightscout (https://YOUR-NS-SITE.com/report) ou consulter [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).

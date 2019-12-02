@@ -53,7 +53,7 @@ Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. E
 
 ## Einstellungen in AndroidAPS
 
-Du darfst **‘Verwende absolute statt prozentuale Basalwerte beim Upload zu NightScout’ NICHT aktivieren **, wenn Du die Insight nutzt. Gehe in AAPS zu Einstellungen > Nightscout-Client > Erweiterte Einstellungen und stelle sicher, dass ‘Verwende absolute statt prozentuale Basalwerte beim Upload zu NightScout‘ deaktiviert ist. Es würde zu falschen Einstellungen der temporären Basalrate in der Insight-Pumpe führen. Folglich wirst Du Autotune nicht nutzen können, aber es gibt keine Alternative zum Abschalten, wenn Du die Insight nutzt.
+Du darfst **‘Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout’ NICHT aktivieren **, wenn Du die Insight nutzt. Gehe in AAPS zu Einstellungen > Nightscout-Client > Erweiterte Einstellungen und stelle sicher, dass ‘Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout‘ deaktiviert ist. Es würde zu falschen Einstellungen der temporären Basalrate in der Insight-Pumpe führen. Folglich wirst Du Autotune nicht nutzen können, aber es gibt keine Alternative zum Abschalten, wenn Du die Insight nutzt.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
@@ -105,6 +105,8 @@ So werden alle Alarme der Pumpe nur noch ohne Ton abgegeben, so dass AndroidAPS 
 Insight Pumpen mit neuerer Firmware werden bei jeder Bolusabgabe kurz vibrieren (z.B. wenn AndroidAPS eine SMB- oder TBR-Emulation anführt). Diese Vibration kann nicht deaktiviert werden. Ältere Pumpen vibrieren in diesen Fällen nicht.
 
 ## Batteriewechsel
+
+Die Batterielebensdauer bei der Insight im Loop liegt zwischen 10 und 14 Tagen, maximal wurden 20 Tage erreicht. Diese Angaben wurden mit Energizer Lithium Batterien ermittelt.
 
 Die Innenpumpe hat eine kleine interne Batterie, um wichtige Funktionen wie die Uhr am Laufen zu halten, während Du die herausnehmbare Batterie wechselst. Wenn der Batteriewechsel zu lange dauert, kann diese interne Batterie leer werden, die Uhr wird zurückgesetzt und Du wirst gebeten, Zeit und Datum nach dem Einlegen der neuen Batterie neu einzugeben. Falls dies geschieht, werden alle Einträge in AndroidAPS, die vor dem Batteriewechsel liegen, nicht mehr in Berechnungen aufgenommen, da die richtige Zeit nicht korrekt erkannt werden kann.
 

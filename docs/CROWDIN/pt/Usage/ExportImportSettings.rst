@@ -20,8 +20,8 @@ How to export settings
 * **Export settings** on your old phone
 
   * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
+  * Manutenção
+  * Exportar configurações
   * File location will be shown
     
 .. image:: ../images/AAPS_ExportSettings.png
@@ -35,9 +35,9 @@ How to export settings
 * **Import settings** on your new phone
 
   * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+  * Manutenção
+  * Importar configurações
 
-* **Note for Dana RS users:**
+* **Nota para utilizadores da Dana RS:**
 
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.

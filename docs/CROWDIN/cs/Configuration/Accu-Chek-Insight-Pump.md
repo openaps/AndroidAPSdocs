@@ -106,6 +106,8 @@ Pumpy Insight s novějším firmwarem budou vibrovat vždy při podání bolusu 
 
 ## Výměna baterie
 
+Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
+
 Pumpa Insight má malou interní baterii udržující základní funkce, jako jsou vnitřní hodiny, zatímco vyměňujete hlavní baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. Pokud se tak stane, všechny položky v AndroidAPS provedené před výměnou baterie nebudou zahrnuty do kalkulací, jelikož nelze určit správný čas.
 
 ## Specifické chyba Insight
@@ -116,7 +118,7 @@ Používejte pouze jeden rozložený bolus v daném čase, protože používán�
 
 ### Časový limit
 
-Někdy se může stát, že pumpa Insight neodpoví během navazování spojení. V takovém případě AAPS zobrazí následující zprávu „Timeout during handshake – reset bluetooth“.
+Někdy se může stát, že pumpa Insight neodpoví během navazování spojení. V takovém případě AAPS zobrazí následující zprávu „Timeout during handshake - reset bluetooth“.
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 

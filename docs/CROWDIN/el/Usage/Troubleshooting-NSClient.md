@@ -6,7 +6,7 @@
 
 * Πώς να ανιχνεύσετε ασταθή σύνδεση;
 
-Μεταβείτε στην καρτέλα NSClient στο AAPS και παρακολουθήστε το αρχείο καταγραφής. Κοινότοπο είναι να λαμβάνετε PING κάθε ~ 30s και σχεδόν κανένα μήνυμα επανασύνδεσης. Εάν δείτε πολλούς επανασύνδεσμους, υπάρχει κάποιο πρόβλημα. Από το AndoridAPS 2.0 όταν ανιχνεύεται τέτοια συμπεριφορά, ο NSClient παύει για 15 λεπτά και εμφανίζεται το μήνυμα "NSClient δυσλειτουργία" στην επισκόπηση.
+Μεταβείτε στην καρτέλα NSClient στο AAPS και παρακολουθήστε το αρχείο καταγραφής. Common behavior is to receive PING every ~30s and almost none reconnection messages. Εάν δείτε πολλούς επανασύνδεσμους, υπάρχει κάποιο πρόβλημα. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
 
 * Επανεκκίνηση
 

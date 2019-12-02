@@ -14,7 +14,7 @@ If you use local AAPS profiles (Simple, Local, CPP) you have to press button the
 
 Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
-## Percentage
+## Percentagem
 
 * This applies the same percentage to all parameters. 
 * If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
@@ -25,7 +25,7 @@ Within the "profile switch" you can choose two additional changes which used to 
 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
-## Time shift
+## Alteração Turno
 
 ![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
@@ -33,10 +33,10 @@ Within the "profile switch" you can choose two additional changes which used to 
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
 * It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
   * Current time: 12:00
-  * **Positive** time shift 
+  * **Positive** alteração Turno 
     * 2:00 **+10 h** -> 12:00
     * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-  * **Negative** time shift 
+  * **Negative** alteração Turno 
     * 22:00 **-10 h** -> 12:00
     * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 

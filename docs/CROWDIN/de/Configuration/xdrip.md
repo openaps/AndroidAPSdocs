@@ -38,7 +38,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G... startet oder 8H... verwe
 
 ### Identifiziere Empfänger
 
-* Bei einigen Anwendern kam es zu Problemen im Flugmodus. AAPS empfing keine BZ-Werte von xDrip+. Gehe zu Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gebe `info.nightscout.androidaps` ein.
+* Falls AAPS keine BZ-Werte von xDrip+ empfängt, dann gehe zu Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gebe `info.nightscout.androidaps` ein.
 * Achtung: Die Auto-Korrektur neigt manchmal dazu, das i von info in einen Großbuchstaben zu ändern. Du **darfst nur Kleinbuchstaben** verwenden, wenn Du ` info.nightscout.androidaps ` eingibst. Ein groß geschriebenes I würde dazu führen, dass AAPS keine BZ-Werte von xDrip empfangen kann.
    
    ![xDrip+ Basic Inter-App Einstellungen Identifiziere Empfänger](../images/xDrip_InterApp_NS.png)
@@ -96,7 +96,7 @@ G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 od
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende einen der [letzten nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
-* Schalten Sie den Original Dexcom Empfänger aus (falls Du diesen verwendet).
+* Schalte den Original Dexcom Empfänger aus (falls Du diesen verwendet).
 * Drücke auf der Startseite lang auf den roten Blutstropfen des xDrip+ Logos, um den `Source Wizard Button` zu aktivieren.
 * Benutze den Source Wizard Button. Damit wird sicher gestellt, dass Du die Standardeinstellungen inkl. OB1 & Native Mode verwendest. 
    * Du wirst durch die Grundeinstellungen geführt.
@@ -171,7 +171,7 @@ G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 od
 
 Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende einen der [letzten nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
-* Schalten Sie den Original Dexcom Empfänger aus (falls Du diesen verwendet).
+* Schalte den Original Dexcom Empfänger aus (falls Du diesen verwendet).
 * Stoppe den Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
    
    Stelle sicher, dass er tatsächlich gestoppt ist.
@@ -220,7 +220,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende e
    
    ![Firefly Transmitter Batteriedaten](../images/xDrip_Dexcom_FireflyBattery.png)
 
-* Starte den Sensor OHNE RÜCKDATIERUNG! Wählen Sie immer "Yes, today"!
+* Starte den Sensor OHNE RÜCKDATIERUNG! Wähle immer "Yes, today"!
 
 * Starte den Datensammler neu (im Systemstatus und nur, wenn Du den Sensor neu gesetzt hast).
 * Falls Du den Dexcom Empfänger nutzt, schalte diesen nicht ein, bevor xDrip+ die ersten BZ-Werte anzeigt.
@@ -236,7 +236,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende e
 
 ### Neuer Sensor
 
-* Schalten Sie den Original Dexcom Empfänger aus (falls Du diesen verwendet).
+* Schalte den Original Dexcom Empfänger aus (falls Du diesen verwendet).
 * Stoppe den alten Sensor - falls erforderlich.
    
    Stelle sicher, dass er tatsächlich gestoppt ist.

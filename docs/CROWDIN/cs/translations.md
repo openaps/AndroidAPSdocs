@@ -40,7 +40,7 @@ Když korektor schválí překlad, tak bude přidaný do příští verze Androi
     
     3 Upravte návrh překladu nebo vepište svůj překlad.
     
-    4 Click save
+    4 Klikněte na tlačítko Save
     
     ![Překlad wiki](./images/translation_WikiTranslate.png)
 

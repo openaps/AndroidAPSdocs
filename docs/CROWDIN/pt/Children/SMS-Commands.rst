@@ -1,14 +1,14 @@
-SMS Commands
+Comandos SMS
 *****
-Safety First
-======
+Segurança Em Primeiro Lugar
+== == ==
 * AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
 * AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
 * **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 
-How it works
+Como funciona
 =====
-* Most of the adjustments of temp targets, following AAPS etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
+* A maioria dos ajustes de alvos temporários, de acordo com AAPS etc. pode ser feito na ` app NSclient <../Children/Children.html> ` _ num telefone Android com ligação à internet.
 * Boluses can't be given through Nightscout, but you can use SMS commands.
 * If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
 
@@ -46,8 +46,8 @@ Loop
    * Response: Loop has been enabled
 * LOOP STATUS
    * Response depends on actual status
-      * Loop is disabled
-      * Loop is enabled
+      * Loop desactivado
+      * Loop activado
       * Suspended (10 min)
 * LOOP SUSPEND 20
    * Response: Loop suspended for 20 minutes
@@ -56,7 +56,7 @@ Loop
 
 CGM data
 -----
-* BG
+* GLIC
    * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
    * Response: To send calibration 5.6 reply with code Rrt
@@ -75,7 +75,7 @@ Basal
 * BASAL 30% 50
    * Response: To start basal 30% for 50 min reply with code Swe
 
-Bolus
+Bólus
 -----
 Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
 
@@ -86,6 +86,10 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
    * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
    * Response A: To deliver meal bolus 0.60U reply with code Rrt
    * Response B: Remote bolus not available. 
+* CARBS 5
+   * Response: To enter 5g at 12:45 reply with code EmF
+* CARBS 5 17:35/5:35PM
+   * Response: To enter 5g at 17:35 reply with code EmF
 * EXTENDED STOP/CANCEL
    * Response: To stop extended bolus reply with code EmF
 * EXTENDED 2 120
@@ -108,12 +112,18 @@ Outro
    * Response: Refresh treatments from NS
 * NSCLIENT RESTART
    * Response: NSCLIENT RESTART 1 receivers
-* PUMP
+* BOMBA
    * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 * SMS DISABLE/STOP
    * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
 * TARGET MEAL/ACTIVITY/HYPO   
    * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+* TARGET STOP/CANCEL   
+   * Response: To cancel Temp Target reply with code Any
+* HELP
+   * Response: BG, LOOP, TREATMENTS, .....
+* HELP BOLUS
+   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Resolução de Problemas
 =====
