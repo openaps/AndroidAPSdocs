@@ -6,7 +6,7 @@ For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. startin
 
 If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
-## Basisinstellingen voor alle CGM-systemen & FGM
+## Basisinstellingen voor alle CGM-systemen & FSL
 
 * Zorg ervoor dat je de Basis URL correct instelt, inclusief **S** aan het einde van http**s**:/// (niet http:/)
    
