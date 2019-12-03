@@ -1,5 +1,8 @@
 Обновления и изменения документации Wiki
 **********************
+December 2019
+=====
+* `Watchfaces <../Configuration/Watchfaces.html>`_
 ноябрь 2019
 ===============
 * ` Автоматизация-деактивируйте при отключении петли <../Usage/Automation.html#important-note> ` _
