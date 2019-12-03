@@ -23,7 +23,7 @@ Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Ave
 
 ## Watchfaces available
 
-![watchfaces](..\images\watchfaces.jpg)
+![watchfaces](../images/watchfaces.jpg)
 
 ## Legend AAPSv2 watchface
 
@@ -53,7 +53,7 @@ J - insulin on board (from bolus | from basal)
 
 To access to the watchface settings, double tap on your BG, slide up and select "Settings".
 
-![settings_on_off](..\images\settings_on_off.jpg)
+![settings_on_off](../images/settings_on_off.jpg)
 
 ### AAPS companion parameters
 
@@ -83,7 +83,7 @@ Units for Actions (default mg/dl): if "On" units for actions is mg/dl, if "Off" 
 
 Input Design: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
 
-![../images/inputdesign.jpg](..\images\InputDesign.jpg)
+![Input design options](../images/InputDesign.jpg)
 
 ### Specific watchface parameters
 
@@ -91,7 +91,7 @@ Input Design: with this parameter, you can select the position of "+" and "-" bu
 
 Delta Granularity (default Medium)
 
-![steampunk_gauge](..\images\steampunk_gauge.jpg)
+![Steampunk_gauge](../images/steampunk_gauge.jpg)
 
 #### Circle WF
 
