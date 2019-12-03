@@ -1,5 +1,8 @@
 Wiki mises à jour et modifications
 **********************
+December 2019
+=====
+* `Watchfaces <../Configuration/Watchfaces.html>`_
 Novembre 2019
 ===============
 * `Automatisation - à désactiver lors de la désactivation de la boucle <../Usage/Automation.html#important-note>`_
