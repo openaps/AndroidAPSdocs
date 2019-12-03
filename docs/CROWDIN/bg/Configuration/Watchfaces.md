@@ -21,13 +21,11 @@ Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation 
 
 To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
-## Troubleshooting the wear app:
+## Watchfaces available
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+![watchfaces](..\images\watchfaces.jpg)
 
-## Legend AndroidAPSv2 watchface
+## Legend AAPSv2 watchface
 
 ![Legend AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
 
@@ -51,37 +49,78 @@ I - carbs (carbs on board | e-carbs in the future)
 
 J - insulin on board (from bolus | from basal)
 
-## Settings
+## Settings (in wear watch)
 
-There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
+To access to the watchface settings, double tap on your BG, slide up and select "Settings".
 
-* Vibrate on Bolus (on | off)
-* Units for Actions (mg/dl | mmol/l)
-* Show Date (on | off)
-* Show IOB (on | off)
-* Show COB (on | off)
-* Show Delta (on | off)
-* Show AvgDelta (on | off)
-* Show Phone Battery (on | off)
-* Show Rig Battery (on | off)
-* Show Basal Rate (on | off)
-* Show Loop Status (on | off)
-* Show BG (on | off)
-* Show Direction Arrow (on | off)
-* Show Ago (on | off)
-* Dark (on | off)
-* Highlight Basals (on | off)
-* Chart Timeframe (1 | 2 | 3 | 4 | 5 hours)
-* Input Design (Default | Quick righty | Quick lefty | Modern Sparse)
-* Delta Granularity (Steampunk) (Low | Medium | High)
-* Big Numbers (on | off)
-* Ring History (on | off)
-* Light Ring History (on | off)
-* Animations (on | off)
-* Wizard in Menu (on | off)
-* Prime in Menu (on | off)
-* Single Target (on | off)
-* Wizard Percentage (on | off)
+![settings_on_off](..\images\settings_on_off.jpg)
+
+### AAPS companion parameters
+
+Vibrate on Bolus (default On):
+
+Units for Actions (default mg/dl): if "On" units for actions is mg/dl, if "Off" unit is mmol/l. Used when setting a TT from watch.
+
+### Watchface settings
+
+* Show Date (default Off): note, date is not available on all watchfaces
+* Show IOB (default On): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
+* Show COB (default On): Display or not COB value
+* Show Delta (default On): Display or not the BG variation of the last 5 minutes
+* Show AvgDelta (default On): Display or not the average BG variation of the last 15 minutes
+* Show Phone Battery (default On): Phone battery in %. Red if below 30% .
+* Show Rig Battery (default Off): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
+* Show Basal Rate (default On): Display or not current basal rate (in U/h or in % if TBR)
+* Show Loop Status (default On): show how many minutes since last loop run (arrows around value turn red if above 15').
+* Show BG (default On): Display or not last BG value
+* Show Direction Arrow (default On): 
+* Show Ago (default On): show how many minutes since last reading.
+* Dark (default On): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
+* Highlight Basals (default Off): Improve the visibility of basal rate and temp basals
+* Chart Timeframe (default 3 hours): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+
+### User Interface setting
+
+Input Design: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+
+![../images/inputdesign.jpg](..\images\InputDesign.jpg)
+
+### Specific watchface parameters
+
+#### Steampunk watchface
+
+Delta Granularity (default Medium)
+
+![steampunk_gauge](..\images\steampunk_gauge.jpg)
+
+#### Circle WF
+
+Big Numbers: Increase text size to improve visibility
+
+Ring History: View graphically BG history with gray rings inside the hour's green ring
+
+Light Ring History: Ring history more discreet with a darker gray
+
+Animations:
+
+### Commands settings
+
+Wizard in Menu (default On): Allow wizard interface in main menu to input Carbs and set Bolus from watch
+
+Prime in Menu (default Off): Allow Prime / Fill action from watch
+
+Single Target (default On):
+
+* On: you set a single value for TT
+* Off: you set Low target and high target for TT
+
+Wizard Percentage (default Off): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+
+## Troubleshooting the wear app:
+
+* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
+* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 
 ## View Nightscout data
 
