@@ -46,6 +46,38 @@ Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine
 
 ## Fehlerbehebung bei Profil Fehlern
 
-* Die Fehlermeldung "Ungültiges Profil" oder "Basal Profil nicht ausgerichtet auf Stunden" wird angezeigt, wenn du eine Basalrate oder I:K Faktoren abseits der vollen Stunden hast. Die Pumpen DanaR und DanaRS lassen Änderungen zur halben Stunde nicht zu.
-* Bei dem Fehler "Profilwechsel von NS empfangen aber Profil existiert lokal nicht" öffne die Registerkarte "Behandlungen" in AndroidAPS, wähle dort "Profilwechsel" aus und klicke "Löschen" bei dem Eintrag, der dem Datum und der Zeit der Fehlermeldung entspricht. Oder öffne die mlab Sammlung und suche in den Behandlungen nach "Profilwechsel". Lösche dann dort den Eintrag, der dem Datum und der Zeit der Fehlermeldung entspricht. ![mlab](https://files.gitter.im/MilosKozak/AndroidAPS/I5am/image.png)
-* Die Fehlermeldung "DIA 3 h zu kurz" erscheint, wenn die Wirkdauer des Insulins in deinem Profil mit einem Wert angegeben wird, von dem AndroidAPS annimmt, dass er nicht korrekt ist. Lies den Abschnitt [Auswahl des richtigen DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), überarbeite dein Profil und führe einen Profilwechsel aus, um es zu aktivieren.
+### “Ungültiges Profil” / “Basal Profil nicht ausgerichtet auf Stunden”
+
+![Basalprofil nicht auf Stunden ausgerichtet](../images/BasalNotAlignedToHours2.png)
+
+* Diese Fehlermeldungen werden angezeigt, wenn Du eine Basalrate oder I:C Faktoren nicht nur zur vollen Stunde hast. (Die Pumpen DanaR und DanaRS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
+  
+  ![Beispiel Basalprofil nicht auf Stunden ausgerichtet](../images/ProfileNotAlignedToHours.png)
+
+* Merke bzw. notiere Dir das in der Fehlermeldung angegebene Datum und die Uhrzeit (26/07/2019 5:45 pm im Bildschirmfoto oben).
+
+* Gehe zum Behandlungs-Tab.
+* Wähle Profilwechsel.
+* Scrolle zum in der Fehlermeldung angegebenen Zeitpunkt.
+* Klicke auf 'Löschen'.
+* Manchmal gibt es nicht nur einen fehlerhaften Profilwechsel. In diesem Fall musst Du auch alle anderen entfernen.
+  
+  ![Profilwechsel löschen](../images/PSRemove.png)
+
+Alternativ kannst Du den Profilwechsel auch direkt in mLab wie unten beschrieben löschen.
+
+### “Profilwechsel von NS empfangen aber Profil existiert lokal nicht”
+
+* Das Profil wurde nicht korrekt von Nightscout synchronisiert.
+* Lösche den Profilwechsel wie oben beschrieben.
+
+Alternativ kannst Du den Profilwechsel auch direkt in mLab löschen:
+
+* Öffne Deine mLab Datensammlung.
+* Suche in den Behandlungen nach “Profile switch”.
+* Lösche dann dort den Eintrag, der dem Datum und der Zeit der Fehlermeldung entspricht. ![mlab](../images/mLabDeletePS.png)
+
+### “DIA 3 h zu kurz”
+
+* Die Fehlermeldung erscheint, wenn die Wirkdauer des Insulins in Deinem Profil mit einem Wert angegeben wird, von dem AndroidAPS annimmt, dass er nicht korrekt ist. 
+* Lies den Abschnitt [Auswahl des richtigen DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), überarbeite dein Profil und führe einen [Profilwechsel](../Usage/Profiles) aus, um es zu aktivieren.

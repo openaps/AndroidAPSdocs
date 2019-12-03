@@ -128,10 +128,8 @@ Rozwiązywanie problemów
    :maxdepth: 1
    :glob:
   
-   NS-Client <./Usage/Troubleshooting-NSClient.md>
-   Aktualizacja <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pompy <./FGT/Troubleshootingpumps.rst>
-
+   Troubleshooting <./Usage/troubleshooting.rst>
+   
 
 FAQ 
 ------------------------------------------

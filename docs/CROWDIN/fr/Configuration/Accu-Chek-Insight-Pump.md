@@ -8,11 +8,11 @@
 
 ## Configuration matérielle et logicielle requise
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work)
+* Une pompe Roche Accu-Chek Insight (n'importe quel firmware, ils marchent tous)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Remarque : AAPS écrira toujours les données dans le **premier profil débit de base de la pompe**.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Un téléphone Android (en gros, toutes les versions d'Android pourrait fonctionner, mais AndroidAPS nécessite au moins Android 5 (Lollipop).)
 
 * L'application AndroidAPS installée sur votre téléphone
 
@@ -49,19 +49,19 @@
     
     ![Copie d'écran informations appairage Insight](../images/Insight_PairingInformation.png)
 
-Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléphone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Sinon, la batterie du téléphone et de la pompe se videraient beaucoup trop rapidement.
+Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléphone. Une connexion ne sera établie que si c'est nécessaire (par ex. pour fixer un débit de basal temporaire, un bolus, ou lire l'historique de la pompe...). Sinon, la batterie du téléphone et de la pompe se videraient beaucoup trop rapidement.
 
 ## Paramètres dans AAPS
 
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
+Vous **ne devez pas activer 'Utiliser toujours les valeurs absolues du basal'** avec la pompe Insight. Dans AAPS, allez dans Préférences > NSClient > Paramètres Avancés et assurez-vous que 'Utiliser toujours utiliser les valeurs absolues du basal' est désactivé. Cela conduirait à de mauvais réglages des DBT dans la pompe Insight. Par conséquent, vous ne pourrez pas utiliser Autotune mais il n'y a pas d'alternative pour désactiver cette fonction lors de l'utilisation de la pompe Insight.
 
-![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+![Copie d'écran paramètres Insight](../images/Insight_pairing_V2_5.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suivantes :
 
-* "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
+* "Enreg. changement de réservoir": ajoute automatiquement le changement de réservoire quand vous effectuez "Remplir tubulure" sur la pompe.
 * "Enreg. changement de tubulure": ajoute une note dans la base de données AndroidAPS quand vous exécutez "Remplir tubulure" sur la pompe.
-* "Log site change": This adds a note to the AndroidAPS database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+* "Enreg. changement de site": ajoute une note dans la base de données AndroidAPS lorsque vous exécutez "Remplir canule" sur la pompe. Remarque: Une modification de canule réinitialise également Autosens. **Remarque : un changement de site réinitialise également Autosens.**
 * "Enreg. changements de batterie" : Ceci enregistre un changement de pile quand vous en mettez une nouvelle dans la pompe.
 * "Enreg. changement mode de fonctionnement" : ajoute une note dans la base de données AndroidAPS quand vous démarrez, arrêtez ou mettez en pause la pompe.
 * "Enreg. alertes" : ajoute une note dans la base de données AndroidAPS chaque fois que la pompe émet une alerte (sauf les rappels, annulations de bolus et annulations de DBT - ceux-ci ne sont pas enregistrés).
@@ -84,9 +84,9 @@ In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Délai de déconnexion": indique combien de temps (en secondes) AndroidAPS attendra avant de se déconnecter de la pompe une fois l'opération terminée. La valeur par défaut est de 5 secondes.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+Pendant les périodes où la pompe est débranchée, AAPS va enregistrer un débit de basal temporaire avec 0%.
 
-In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+Dans AndroidAPS, l'onglet Accu-Chek Insight affiche le statut actuel de la pompe et comporte deux boutons :
 
 * Actualiser : Actualise l'état de la pompe
 * "Activer/Désactiver la notification de la fin DBT" : Une pompe Insight émet par défaut une alarme lorsqu'un DBT est terminé. Ce bouton vous permet d'activer ou de désactiver cette alarme sans avoir besoin du logiciel de configuration.
@@ -95,33 +95,35 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 
 ## Paramètres de la pompe
 
-Configure alarms in the pump as follows:
+Configurez les alarmes dans la pompe comme suit :
 
 * Menu > Réglages > Réglages pompe > Réglages Mode > Silencieux > Signal > Sonore puis Menu > Réglages > Réglages pompe > Réglages Mode > Silencieux > Volume > 0 (supprimer toutes les barres)
 * Menu > Modes > Type de signal > Silencieux
 
-This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Ceci supprimera toutes les alarmes de la pompe, permettant à AndroidAPS de décider si une alarme est pertinente pour vous. Si AndroidAPS ne reconnaît pas une alarme, son volume augmentera (d'abord bip, puis vibration).
 
-Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
+Les pompes Insight avec un firmware plus récent vibreront brièvement chaque fois qu'un bolus est livré (par exemple, lorsque AndroidAPS émet un SMB ou une émulation DBT avec un bolus étendu). La vibration ne peut pas être désactivée. Les pompes plus anciennes ne vibrent pas dans ces circonstances.
 
 ## Remplacement de pile
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+La durée de vie de la pile de l'Insight, lorsque vous bouclez, est comprise entre 10 et 14 jours, et au maximum 20 jours. L'utilisateur qui a déclaré cela utilise des piles Energizer ultimate lithium.
+
+La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer à nouveau la date et l'heure après avoir mis la nouvelle pile. Si cela se produit, toutes les entrées mémorisées dans AndroidAPS avant le changement de pile ne seront plus intégrées dans les calculs car l'heure réelle ne peut pas être identifiée correctement.
 
 ## Erreurs spécifiques à Insight
 
 ### Bolus étendu
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Il ne faut utiliser qu'un seul bolus étendu à la fois car plusieurs bolus étendus en même temps peuvent provoquer des erreurs.
 
 ### Délai expiré
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Il arrive parfois que la pompe Insight ne réponde pas pendant la configuration de la connexion. Dans ce cas, AAPS affichera le message suivant : "Expiration pendant l'appairage - réinitialiser le Bluetooth".
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Réinitialisation Bluetooth Insight](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+Dans ce cas, désactivez le bluetooth sur la pompe ET sur le smartphone pendant environ 10 secondes, puis rallumez-le.
 
 ## Voyager avec différents fuseaux horaires avec une pompe Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#insight).

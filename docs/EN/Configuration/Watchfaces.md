@@ -5,6 +5,7 @@ AndroidAPS is designed to be _controlled_ by Android Wear watches. If you want t
 The following functions can be triggered from the watch:
 * set a temporary target
 * administer a bolus
+* administer eCarbs
 * use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
 * check the status of loop and pump
 * show TDD (Total daily dose = bolus + basal per day)
@@ -65,35 +66,21 @@ Units for Actions (default mg/dl): if "On" units for actions is mg/dl, if "Off" 
 
 ### Watchface settings
 
-Show Date (default Off): note, date is not available on all watchfaces
-
-Show IOB (default On): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-
-Show COB (default On): Display or not COB value
-
-Show Delta (default On): Display or not the BG variation of the last 5 minutes
-
-Show AvgDelta (default On): Display or not the average BG variation of the last 15 minutes
-
-Show Phone Battery (default On): Phone battery in %. Red if below 30% .
-
-Show Rig Battery (default Off): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-
-Show Basal Rate (default On): Display or not current basal rate (in U/h or in % if TBR)
-
-Show Loop Status (default On): show how many minutes since last loop run (arrows around value turn red if above 15').
-
-Show BG (default On): Display or not last BG value
-
-Show Direction Arrow (default On): 
-
-Show Ago (default On): show how many minutes since last reading.
-
-Dark (default On): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
-
-Highlight Basals (default Off): Improve the visibility of basal rate and temp basals
-
-Chart Timeframe (default 3 hours): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* Show Date (default Off): note, date is not available on all watchfaces
+* Show IOB (default On): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
+* Show COB (default On): Display or not COB value
+* Show Delta (default On): Display or not the BG variation of the last 5 minutes
+* Show AvgDelta (default On): Display or not the average BG variation of the last 15 minutes
+* Show Phone Battery (default On): Phone battery in %. Red if below 30% .
+* Show Rig Battery (default Off): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
+* Show Basal Rate (default On): Display or not current basal rate (in U/h or in % if TBR)
+* Show Loop Status (default On): show how many minutes since last loop run (arrows around value turn red if above 15').
+* Show BG (default On): Display or not last BG value
+* Show Direction Arrow (default On): 
+* Show Ago (default On): show how many minutes since last reading.
+* Dark (default On): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
+* Highlight Basals (default Off): Improve the visibility of basal rate and temp basals
+* Chart Timeframe (default 3 hours): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
 
 ### User Interface setting
 
@@ -131,8 +118,6 @@ Single Target (default On):
 - Off: you set Low target and high target for TT
 
 Wizard Percentage (default Off): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
-
-### Version Number
 
 ## Troubleshooting the wear app: 
 

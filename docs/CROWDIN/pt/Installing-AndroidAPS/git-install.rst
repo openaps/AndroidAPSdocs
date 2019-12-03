@@ -1,4 +1,4 @@
-Install git
+Instalar Git
 *****
 Windows
 =====

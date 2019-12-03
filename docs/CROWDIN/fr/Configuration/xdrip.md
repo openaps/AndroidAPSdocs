@@ -38,44 +38,47 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G... ou 8H...
 
 ### Identifier le récepteur
 
-* Certaines personnes ont découvert des problèmes de diffusion locale (AAPS ne recevant pas les valeurs Gly de xDrip+) lorsque le téléphone est en mode avion. Dans xDrip+ accédez à Paramètres > Paramètres Inter-app > Identifiez le récepteur, et entrez `info.nightscout.androidaps`.
+* Si vous avez des problèmes de diffusion locale (AAPS ne recevant pas les valeurs Gly de xDrip +) allez dans Paramètres > Inter-app settings > Identify receiver et entrez `info.nightscout.androidaps`.
 * Attention: La correction automatique a parfois tendance à changer la lettre i en majuscules. Vous **ne devez utiliser que des minuscules** pour taper `info.nightscout.androidaps`. Un I majuscule empêcherait AAPS de recevoir les valeurs de Gly de xDrip.
    
    ![xDrip+ Paramètres interapp basiques Identifier le récepteur](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ & Dexcom G6
 
+* L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
+* Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter xDrip + et l'application Dexcom avec l'émetteur en même temps !**
+* Si vous avez besoin d'éclaircissements et voulez profiter des alarmes xDrip+, utilisez l'applications [Dexcom patchée](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) avec la diffusion locale vers xDrip+.
+
 ### Version de XDrip+ en fonction du numéro de série de l'émetteur G6.
 
-Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) veuillez vous assurer d'utiliser au minimum la version [release du 2019/05/18](https://jamorham.github.io/#xdrip-plus).
-
-Si le numéro de série de votre émetteur Dexcom G6 commence par 8G ou 8H essayez [Nightly build 2019/07/28 ou ultérieure](https://github.com/NightscoutFoundation/xDrip/releases).
+* Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) veuillez vous assurer d'utiliser au minimum la version [release du 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
+* Si le numéro de série de votre émetteur Dexcom G6 commence par 8G ou 8H essayez [Nightly build 2019/07/28 ou ultérieure](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Paramètres spécifiques à Dexcom
 
-* Open G5/G6 Debug Settings -> Hamburger Menu (top left of homescreen) -> Settings -> G5/G6 Debug Settings ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
+* Ouvez les paramètres de débogage G5/G6 -> Menu Hamburger (en haut à gauche de l'écran d'accueil) -> Paramètres -> G5/G6 Debug Settings ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
 
-* Enable the following settings
+* Activez les paramètres suivants
    
    * `Use the OB1 Collector`
    * `Native Algorithm` (important if you want to use SMB)
    * `G6 support`
    * `Allow OB1 unbonding`
    * `Allow OB1 initiate bonding`
-* All other options should be disabled
-* Adjust battery warning level to 280 (bottom of G5/G6 Debug Settings)
+* Toutes les autres options doivent être désactivées
+* Ajuster le niveau d'alerte batterie à 280 (en bas des paramètres de débogage G5/G6)
    
    ![xDrip+ G5/G6 Debug Settings](../images/xDrip_Dexcom_DebugSettings.png)
 
-### Preemptive restarts not recommended
+### Redémarrages préventifs non recommandés
 
-**With Dexcom transmitters whos serial no. is starting with 8G or 8H preemptive restarts do not work and might kill the sensor completely!**
+**Avec Dexcom les émetteurs dont le numéro de série commence par 8G ou 8H le redémarrage préventif ne fonctionnent pas et pourrait tuer complètement le capteur !**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+L'extension automatique des détecteurs Dexcom (`preemptive restarts`) n'est pas recommandée car cela peut entraîner des "sauts" dans les valeurs Gly le 9ème jour après le redémarrage.
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+Ce qui est clair, c’est que l’utilisation du G6 est peut-être un peu plus complexe qu’on pourrait le penser au premier abord. Pour l'utiliser en toute sécurité, il y a quelques points à prendre en compte :
 
 * If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
@@ -85,7 +88,7 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 
 To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
 
-### Connect G6 transmitter for the first time
+### Connecter l'émetteur G6 pour la première fois
 
 **For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
@@ -121,7 +124,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G ou 8H essay
 
 * Restart collector (system status - if not replacing sensor}
 * Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Faites un appui long sur l'icône rouge xDrip+ sur l'écran principal pour désactiver `Source Wizard Button`.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
@@ -131,7 +134,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G ou 8H essay
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### Transmitter battery status
+### Etat de la batterie de l'émetteur
 
 * Battery status can be controlled in system status (Hamburger menu top left on homescreen)
 * Swipe left once to see second screen. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
@@ -221,7 +224,7 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G or 8H u
 
 * Restart collector (system status - if not replacing sensor)
 * Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Faites un appui long sur l'icône rouge xDrip+ sur l'écran principal pour désactiver `Source Wizard Button`.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
@@ -311,23 +314,23 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 
 ## xDrip+ & Freestyle Libre
 
-### Libre specific settings
+### Paramètres spécifiques au Freestyle Libre
 
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+* Ouvrir les paramètres Bluetooth -> Menu Hamburger (en haut à gauche de l'homescreen) -> Paramètres -> défilement vers le bas -> Paramètres moins courants -> Bluetooth Settings
    
    ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
-* Enable the following settings
+* Activez les paramètres suivants
    
    * `Turn Bluetooth on` 
    * `Use scanning`
    * `Always discover services`
 
-* All other options should be disabled
+* Toutes les autres options doivent être désactivées
    
    ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Connect Libre Transmitter & start sensor
+### Connectez l'émetteur du Freestyle Libre & démarrez le capteur
 
 ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 

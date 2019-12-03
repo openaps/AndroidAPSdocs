@@ -6,9 +6,10 @@
 
 * ορίστε έναν προσωρινό στόχο
 * χορηγήστε ένα bolus
-* χρησιμοποιήστε τον υπολογιστή bolus (οι μεταβλητές υπολογισμού μπορούν να οριστούν στις [ ρυθμίσεις ](../Configuration/Config-Builder#wear) στο τηλέφωνο)
-* ελέγξτε την κατάσταση του κυκλώματος και της αντλίας
-* παρουσίασε TDD (Συνολική ημερήσια δόση = bolus + βασικός ρυθμός ημερησίως)
+* administer eCarbs
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* check the status of loop and pump
+* show TDD (Total daily dose = bolus + basal per day)
 
 Για να επιτευχθεί αυτό, έπρεπε να επιλέξετε την παραλλαγή κατασκευής "fullRelease" όταν [ δημιουργείτε το APK ](../Installing-AndroidAPS/Building-APK.md) (ή το "pumpRelease" θα σας επιτρέψει να απενεργοποιείτε απλώς την αντλία χωρίς κύκλωμα). Μέσα στο AndroidAPS, στο Μενού διαμόρφωσης πρέπει να [ ενεργοποιήσετε το Wear ](../Configuration/Config-Builder#wear).
 
@@ -50,10 +51,42 @@ I - υδατάνθρακες (υδατάνθρακες επί του παρόν�
 
 Κ - ινσουλίνη επί του παρόντος (από bolus ή από βασικό ρυθμό)
 
-## Προβολή δεδομένων Nightscout
+## Ρυθμίσεις
 
-Εάν χρησιμοποιείτε άλλο σύστημα με κύκλωμα και θέλετε να *δείτε* τις λεπτομέρειές σας σε ένα ρολόι Android Wear ή θέλετε να παρακολουθήσετε το κύκλωμα του παιδιού σας, τότε μπορείτε να δημιουργήσετε / κατεβάσετε μόνο το APK NSClient. Για να το κάνετε αυτό, ακολουθήστε τις [ οδηγίες APK ](../Installing-AndroidAPS/Building-APK.md) επιλέγοντας την παραλλαγή κατασκευής "NSClientRelease". Υπάρχουν διάφορα Watchfaces που μπορείτε να επιλέξετε από αυτά που περιλαμβάνουν το μέσο δέλτα, το IOB, τον ενεργό βασικό ρυθμό και τα βασικά προφίλ + το γράφημα ανάγνωσης CGM.
+There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
+
+* Vibrate on Bolus (on | off)
+* Units for Actions (mg/dl | mmol/l)
+* Show Date (on | off)
+* Show IOB (on | off)
+* Show COB (on | off)
+* Show Delta (on | off)
+* Show AvgDelta (on | off)
+* Show Phone Battery (on | off)
+* Show Rig Battery (on | off)
+* Show Basal Rate (on | off)
+* Show Loop Status (on | off)
+* Show BG (on | off)
+* Show Direction Arrow (on | off)
+* Show Ago (on | off)
+* Dark (on | off)
+* Highlight Basals (on | off)
+* Chart Timeframe (1 | 2 | 3 | 4 | 5 hours)
+* Input Design (Default | Quick righty | Quick lefty | Modern Sparse)
+* Delta Granularity (Steampunk) (Low | Medium | High)
+* Big Numbers (on | off)
+* Ring History (on | off)
+* Light Ring History (on | off)
+* Animations (on | off)
+* Wizard in Menu (on | off)
+* Prime in Menu (on | off)
+* Single Target (on | off)
+* Wizard Percentage (on | off)
+
+## View Nightscout data
+
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Υπάρχουν διάφορα Watchfaces που μπορείτε να επιλέξετε από αυτά που περιλαμβάνουν το μέσο δέλτα, το IOB, τον ενεργό βασικό ρυθμό και τα βασικά προφίλ + το γράφημα ανάγνωσης CGM.
 
 ## Pebble
 
-Οι χρήστες του Pebble μπορούν να χρησιμοποιήσουν τα στοιχεία κυκλώματος [ ρολόι Urchin ](https://github.com/mddub/urchin-cgm) για *προβολή * (αν φορτωθούν στο nightcout), αλλά δεν θα μπορείτε να αλληλεπιδράσετε με το AndroidAPS μέσω του ρολογιού. Μπορείτε να επιλέξετε πεδία που θα εμφανίζονται όπως ο IOB και ο ενεργός βασικός ρυθμός και οι προγνώσεις κατά την τρέχουσα περίοδο. Εάν έχετε ανοιχτό κύκλωμα, μπορείτε να χρησιμοποιήσετε το [ IFTTT ](https://ifttt.com/) για να δημιουργήσετε μια μικροεφαρμογή που λέει ότι εάν ειδοποιηθεί από το AndroidAPS τότε στέλνει είτε ειδοποίηση μέσω SMS είτε pushover ειδοποίηση.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.

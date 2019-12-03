@@ -1,4 +1,4 @@
-For users of MM640g or MM630g
+Pro uživatele MM640g nebo MM630g
 *****
 
 * Pokud jste tak dosud neučinili, stáhněte si `600SeriesAndroidUploaer <http://pazaan.github.io/600SeriesAndroidUploader/>`_ a postupujte podle pokynů na `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.

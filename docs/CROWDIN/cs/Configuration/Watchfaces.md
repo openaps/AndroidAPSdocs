@@ -6,6 +6,7 @@ Z hodinek lze ovládat následující funkce:
 
 * nastavovat dočasné cíle
 * podávat bolusy
+* administer eCarbs
 * používat kalkulátor (nastavení kalkulátoru můžete definovat v [nastaveni](../Configuration/Config-Builder#wear) v telefonu)
 * kontrolovat stav smyčky a pumpy
 * zobrazit TDD (celková denní dávka = bolus + bazál za den)
@@ -49,6 +50,38 @@ G - ukazatel BGI (blood glucose interaction), neboli jak moc „by měla“ glyk
 I - sacharidy (zbývající sacharidy I rozložené sacharidy v budoucnosti)
 
 J - zbývající inzulín (z bolusu I bazálu)
+
+## Nastavení
+
+There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
+
+* Vibrate on Bolus (on | off)
+* Units for Actions (mg/dl | mmol/l)
+* Show Date (on | off)
+* Show IOB (on | off)
+* Show COB (on | off)
+* Show Delta (on | off)
+* Show AvgDelta (on | off)
+* Show Phone Battery (on | off)
+* Show Rig Battery (on | off)
+* Show Basal Rate (on | off)
+* Show Loop Status (on | off)
+* Show BG (on | off)
+* Show Direction Arrow (on | off)
+* Show Ago (on | off)
+* Dark (on | off)
+* Highlight Basals (on | off)
+* Chart Timeframe (1 | 2 | 3 | 4 | 5 hours)
+* Input Design (Default | Quick righty | Quick lefty | Modern Sparse)
+* Delta Granularity (Steampunk) (Low | Medium | High)
+* Big Numbers (on | off)
+* Ring History (on | off)
+* Light Ring History (on | off)
+* Animations (on | off)
+* Wizard in Menu (on | off)
+* Prime in Menu (on | off)
+* Single Target (on | off)
+* Wizard Percentage (on | off)
 
 ## Zobrazení dat z Nightscoutu
 

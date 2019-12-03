@@ -19,7 +19,7 @@ The following settings and handling advice (use watch for daily operations inste
 
 ![Telemóvel Jelly](../images/jelly_01.jpg)
 
-### First setup
+### Primeira configuração
 
 <b><font color="#FF0000">Very important:</b></font> If you don't need Android 8.1 (i.e. to loop with an Accu-Check Combo) stay with android 7.0!
 
@@ -34,7 +34,7 @@ Follow these rules to stay with Andorid 7.0:
 
 ![Configurações do Jelly](../images/jelly_02.jpg)
 
-### Settings
+### Configurações
 
 * Use Jelly only for looping.
 * Set up wifi to install xDrip, AAPS and WearOS, otherwise wifi off. 

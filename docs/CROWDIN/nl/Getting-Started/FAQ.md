@@ -81,9 +81,9 @@ Allereerst, je moet dezelfde spullen bij je hebben als iedere andere persoon die
 
 ## Hoe zorg ik dat de CGM/FSL goed blijft vastzitten?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Je kunt ze ook zelf op maat knippen van kinesiotape of een eilandpleister.
+Je kunt hem vastplakken: er zijn op maat gemaakte 'fixeerpleisters' voor veelgebruikte CGM-systemen verkrijgbaar. Vraag jouw diabetesverpleegkundige, hulpmiddelenleverancier of op een online forum/facebook. Of gebruik google. Je kunt ze ook zelf op maat knippen van kinesiotape of een eilandpleister.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
+Er bestaan ook speciale bandjes voor om je bovenarm die de CGM/FGM op zijn plek houden. Die zijn online verkrijgbaar (even googelen).
 
 # AndroidAPS instellingen
 
@@ -164,6 +164,22 @@ Je zult ook wel de Engelse afkortingen I:C ratio (Insulin to Carb ratio) of CR (
 
 Zorg dat je eerst jouw basaal + ISF goed hebt ingesteld, daarna kun je CR testen door AAPS op 'open loop' te zetten, op een moment dat IOB nul is en je geen voedsel in je maag hebt. Neem dan een maaltijd waarvan je de koolhydraten precies weet, en injecteer een hoeveelheid insuline op basis van je huidige KH ratio. Wanneer de BG enkele uren later gestabiliseerd is, weet je of jouw KH ratio klopt. Je kunt bij deze test het beste kiezen voor voedsel dat je normaal gesproken ook zou eten rond dat tijdstip. En zorg dat je het aantal koolhydraten exact weet (pak weegschaal + koolhydratentabel erbij).
 
+> **Opmerking:**
+> 
+> In sommige Europese landen werden/worden broodeenheden (ookwel: broodwaarden of koolhydraten porties) gebruikt om te berekenen hoeveel insuline nodig is voor een bepaalde hoeveelheid voedsel. Hierbij staat 1 broodeenheid gelijk aan een vaste hoeveelheid koolhydraten. In Duitsland werd/wordt 12 of 10 gram koolhydraten gebruikt voor 1 broodeenheid, in België wordt vaak gerekend met 1 broodeenheid = 12,5 gram koolhydraten.
+> 
+> Bij deze berekeningsmethode was de hoeveelheid koolhydraten een vast getal, waarbij de hoeveelheid insuline varieert per persoon. ("Hoeveel insuline is nodig voor één broodeenheid?")
+> 
+> Bij gebruik van KH ratio's (insuline:koolhydraat ratio's) is de hoeveelheid insuline een vast getal, en de hoeveelheid koolhydraten varieert per persoon. ("Hoeveel gram koolhydraten kan iemand eten bij één eenheid insuline?")
+> 
+> Voorbeeld:
+> 
+> Broodeenheid factor (BE = 12,5g koolhydraten): 2,4 -> Je hebt 2,4 eenheden insuline nodig wanneer je één brood-eenheid eet.
+> 
+> Bijbehorende KH ratio: 12,5/2,4 = 5,2 -> je kunt 5,2g koolhydraten eten bij één eenheid insuline.
+> 
+> Conversietabellen zijn online beschikbaar, bijvoorbeeld [ hier ](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf) (in het Duitse systeem).
+
 ### Invloed op BG
 
 **Lagere KH ratio** = minder voedsel per eenheid. Oftewel je gebruikt meer insuline voor dezelfde hoeveelheid koolhydraten. Kan ook ‘agressiever’ worden genoemd.
@@ -171,8 +187,6 @@ Zorg dat je eerst jouw basaal + ISF goed hebt ingesteld, daarna kun je CR testen
 **Hogere KH ratio** = meer voedsel per eenheid. Oftewel je gebruikt minder insuline voor dezelfde hoeveelheid koolhydraten. Kan ook ‘minder agressief’ worden genoemd.
 
 Als jouw BG hoger uitkomt nadat een maaltijd is verteerd en IOB weer is teruggekomen naar nul, dan is jouw KH ratio te groot. En omgekeerd: als je BG lager uitkomt, dan is KH ratio te klein.
-
-Als je van België bent en gewend bent om "brood-eenheden" of "koolhydraat-waardes" te gebruiken (hoeveel insuline is nodig voor een broodeenheid?) dan zul je vanaf nu moeten gaan rekenen in grammen koolhydraten. Conversietabellen zijn online te vinden, bijvoorbeeld [ hier ](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 # APS algoritme
 
@@ -216,7 +230,7 @@ Als je een andere CGM/FGM dan Dexcom G5 en G6 in xDrip Native-modus gebruikt, da
 
 ### Waar moet ik mijn pomp dragen?
 
-Er zijn talloze mogelijkheden om de pomp te dragen. Het maakt niet uit of je loop gebruikt of niet. Als je eigenlijk liever een slangloze pomp zou willen hebben, maar je hebt voor een Dana gekozen om te kunnen loopen, dan kun je ook kiezen voor een infuusset van 30cm en die gebruiken met de bijgeleverde buikband.
+Er zijn talloze mogelijkheden om de pomp te dragen. Het maakt niet uit of je loop gebruikt of niet.
 
 ### Batterijen
 
@@ -226,27 +240,27 @@ Bij loopen kan de pompbatterij sneller leegraken dan bij normaal gebruik, omdat 
 * de tijd dat de achtergrondverlichting van het beeldscherm aan staat, verkorten (in instellingen menu van de pomp)
 * stel meldingen in op geluid in plaats van trillen (in instellingen menu van de pomp)
 * gebruik de knoppen van de pomp alleen bij het vullen van de pomp. Bekijk alle andere informatie op je telefoon (batterijduur, reservoir inhoud, geschiedenis etc).
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+* op sommige telefoons wordt AndroidAPS app vaak afgesloten om de batterij of het RAM geheugen te besparen. Elke keer dat AndroidAPS dan weer opnieuw wordt gestart, maakt je telefoon weer verbinding met de pomp om opnieuw de bolus geschiedenis en huidige basaalstand uit te lezen vanuit het pompgeheugen. Hierdoor raakt de batterij van de pomp sneller leeg. Om te zien of dit gebeurt, ga naar Instellingen > NSClient en schakel 'Log app start naar NS' in. Hiermee zul je iedere keer dat de app herstart, een notificatie terugzien op je AAPS hoofdscherm in de glucosegrafiek, en ook in Nightscout. Wanneer je ziet dat de app vaak opnieuw gestart wordt, dan moet je dit uitzetten. Ga naar je telefooninstellingen, ergens onder energiebeheer/accuoptimalisatie moet je instellen dat de AndroidAPS app in de achtergrond mag blijven draaien en niet automatisch wordt afgesloten.
     
-    For example, to whitelist on a Samsung phone running Android Pie:
+    Bijvoorbeeld, om dit in te stellen op een Samsung telefoon met Android Pie:
     
-    * Go to Settings -> Device Care -> Battery 
-    * Scroll until you find AndroidAPS and select it 
-    * De-select "Put app to sleep"
-    * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    * Scroll to AndroidAPS and make sure it is de-selected.
+    * Ga naar Instellingen-> Apparaatonderhoud-> Batterij 
+    * Scroll totdat je AndroidAPS tegenkomt en tik op AndroidAPS 
+    * Schakel de optie "Zet app op spaarstand" uit
+    * OOK ga je naar Instellingen -> Apps -> (Drie cirkel symbool in de rechterbovenhoek van het scherm), selecteer "bijzondere toegang" -> het Optimaliseren van het gebruik van de batterij
+    * Scroll naar AndroidAPS en zorg ervoor dat deze niet geselecteerd is.
 
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+* maak de contactpunten van de batterij schoon met een alcoholdoekje, om te voorkomen dat er nog vet of olie van het productieproces is achtergebleven.
 
 * for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Wanneer een nieuwe batterij geen 100% aangeeft nadat de pomp is opgestart, kun je 2-3 keren de batterij verwijderen en terugdoen in de pomp, of je kunt met een metalen voorwerp beide polen kort (fractie van een seconde) contact laten maken.
 * bekijk meer tips over [specifieke soorten batterijen](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life) voor de Combo-pomp
 
 ### Verwisselen van reservoirs en canules
 
-The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
+Wisselen van het reservoir kan niet worden gedaan via AndroidAPS, maar moet gedaan worden rechtstreeks via de pomp, zoals beschreven in de handleiding van de pompfabrikant.
 
 * Houd "Open Loop" / "Closed Loop" op het Overzicht-scherm van AndroidAPS lang ingedrukt en selecteer 'Verbreek verbinding 1u met pomp'
-* Now disconnect the pump and change the reservoir as per pump instructions.
+* Koppel nu de pomp af en verwissel het reservoir volgens de instructies van de pompfabrikant.
 * Wanneer je daarmee klaar bent, koppel je de pomp weer aan en houd 'Verbinding verbroken (.. m)' lang ingedrukt. Selecteer 'Hervatten'.
 
 Het 'Ontlucht/vul' scherm van AAPS gebruikt niet de functie van "prime infusie set" van de pomp, maar vult de infusie set en/of canule met behulp van een bolus die niet in de geschiedenis van AAPS verschijnt. Dit betekent dat een lopende tijdelijke basaalstand niet zal worden onderbroken. Selecteer op het Acties (Act) tabblad, de knop ONTLUCHT/VUL en kies de hoeveelheid insuline die nodig is om de infuusset/canule te vullen en druk op OK. Wanneer er nog lucht in de infuusset zit, herhaal de vorige stap. Je kunt standaardhoeveelheden instellen in Instellingen > Andere > Vul standaard hoeveelheid. Hoeveel eenheden nodig zijn staat in het instructieboekje in de doos met infuussets, dit verschilt per type infuusset en is afhankelijk van de lengte van de canule en de lengte van de slang.
@@ -273,49 +287,49 @@ Afhankelijk van het soort werk dat je doet, kun je verschillende instellingen ki
 
 ### Sporten
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Je moet je oude gewoontes uit de pre-loop tijd afleren. Als je simpelweg evenveel extra koolhydraten neemt als voorheen bij het sporten, dan zal het systeem voor deze koolhydraten gaan corrigeren waarmee hun effect teniet wordt gedaan.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Wat je wilt is dat je extra koolhydraten kunt nemen, zonder dat de loop daarvoor de bijbehorende hoeveelheid insuline toedient.
 
-When looping you should try these steps:
+Probeer daarvoor deze stappen:
 
-* Make a [profile switch](../Usage/Profiles.md) < 100%.
-* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+* Stel een [Profiel wissel ](../Usage/Profiles.md) in kleiner dan 100%.
+* Stel een [Tijdelijk streefdoel voor Activiteit](../Usage/temptarget#activity-temp-target) in dat hoger ligt dan jouw normale streefdoel.
+* Als je SMB gebruikt, zorg er dan voor dat ["Gebruik SMB met een hoog tijdelijk streefdoel"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) en ["Activeer SMB altijd"](../Usage/Open-APS-features#enable-smb-always) zijn uitgeschakeld.
 
-Pre- and postprocessing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+De timing voor het veranderen van deze instellingen is ook belangrijk. Houd rekening met de (trage) werkingsduur van insuline, zorg dus dat je enige tijd voorafgaand aan de sport al minder insuline krijgt. Ook na het sporten kun je nog minder (of juist meer!) insuline nodig hebben.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+Als je op vaste tijden vaste activiteiten doet, (bijvoorbeeld een klasje in de sportschool) kun je overwegen om [Automatisering](../Usage/Automation.rst) voor een Profiel wissel en Tijdelijk streefdoel te gebruiken. Je kunt de Automatisering ook op basis van GPS locatie instellen, maar dat maakt het timen voorafgaand aan sporten wel lastiger.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Het exacte percentage van de Profiel wissel, de waarde voor het Tijdelijke streefdoel en de timing van al deze instellingen zijn voor iedereen anders. Begin aan de veilige kant als je op zoek gaat naar de juiste waarde voor jou (start met een lager percentage en hoger streefdoel).
 
 ### Sex
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
+Je kunt de pomp loskoppelen voor wat 'vrijheid', maar je moet AAPS wel vertellen dat je dat doet. Zodat jouw IOB juist wordt berekend.
 
 Zie de [ beschrijving hierboven ](../Getting-Started/FAQ#disconnect-pump).
 
 ### Alcohol
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Alcohol drinken in de closed loop modus heeft als risico dat het algoritme niet goed kan voorspellen welke invloed de alcohol heeft op jouw bloedglucose. Je zult voor jezelf een manier moeten vinden om hiermee om te gaan. AndroidAPS heeft verschillende functies die je hierbij kunt gebruiken:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* De closed loop uitschakelen en je diabetes handmatig onder controle houden
+* Een hoger tijdelijk streefdoel instellen en onaangekondigde maaltijden (UAM, UnAnnounced Meals) uitschakelen, om te voorkomen dat je extra IOB krijgt toegediend
+* een profielwissel, naar beduidend minder dan 100% 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Bij het drinken van alcohol moet je altijd je CGM in de gaten houden, om op tijd wat koolydraten te nemen en zo een hypo te kunnen voorkomen.
 
 ### Slapen
 
 #### Hoe kan ik 's nachts closed loopen zonder mobiele of WIFI straling?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
+Veel gebruikers zetten 's nachts hun telefoon in vliegtuigmodus. Wanneer je wilt dat de loop werkt in vliegtuigmodus, volg dan deze stappen (dit werkt alleen als je een locale BG-bron hebt zoals xDrip+ of de gepatchte Dexcom app, het werkt NIET wanneer jouw BG-waardes via Nightscout binnenkomen):
 
 1. Zet de telefoon in vliegtuigmodus.
 2. Wacht totdat de vliegtuigmodus actief is.
 3. Schakel Bluetooth in.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Je kunt nu niet bellen of gebeld worden, en je bent ook niet verbonden met internet. Maar de closed loop werkt nog wel.
 
 Sommige mensen hebben problemen met lokale uitzendingen ontdekt (AAPS ontvangt geen BG-waarden van xDrip +) wanneer de telefoon in vliegtuigmodus is. Ga naar Instellingen > Inter-app-instellingen > Identificatie-ontvanger en geef ` info.nightscout.androidaps ` op.
 
@@ -325,16 +339,16 @@ Sommige mensen hebben problemen met lokale uitzendingen ontdekt (AAPS ontvangt g
 
 #### Hoe kan ik wisselen van tijdzone?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+Met DanaR en DanaR Koreaans hoef je niets te doen. Zie voor andere pompen de [wisselen van tijdzone](../Usage/Timezone-traveling.md) pagina voor meer details.
 
 ## Arts en diabetesverpleegkundige
 
 ### Ziekenhuis
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Wanneer je jouw behandelaar informatie wilt geven over AndroidAPS en doe-het-zelf loopen, dan kun je de [Informatie voor zorgverleners/behandelaars](../Resources/clinician-guide-to-AndroidAPS.md) uitprinten.
 
 ### Afspraak met je internist of diabetesverpleegkundige
 
 #### Rapporten
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Je kunt rapporten op jouw nightscout site (https://YOUR-NS-SITE.com/report) laten zien tijdens jouw afspraak, of gebruik [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).

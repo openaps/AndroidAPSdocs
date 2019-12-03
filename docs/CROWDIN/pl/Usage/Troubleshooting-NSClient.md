@@ -6,7 +6,7 @@ Jeśli nikt inny nie potrzebuje stałego podglądu Twoich danych na Nightscout, 
 
 * Jak wykryć niestabilne połączenie?
 
-Przejdź do zakładki NSClient w AAPS i obejrzyj log. Typowym zachowaniem jest odbieranie PING co około 30 sekund i praktycznie brak komunikatów o ponownym połączeniu. Jeśli widzisz wiele ponownych połączeń, wówczas pojawia się problem. Od czasu AndoridAPS 2.0 po wykryciu takiego zachowania NSClient jest wstrzymywany na 15 minut i wyświetlany jest ostrzeżenie "Usterka NSClient" w zakładce Przegląd.
+Przejdź do zakładki NSClient w AAPS i obejrzyj log. Common behavior is to receive PING every ~30s and almost none reconnection messages. Jeśli widzisz wiele ponownych połączeń, wówczas pojawia się problem. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
 
 * Restart
 

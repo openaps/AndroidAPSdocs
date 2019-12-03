@@ -16,7 +16,7 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 * Je huidige profiel. Je kunt hier ook een (tijdelijke) [profielwissel](../Usage/Profiles.md) instellen.
 * Je huidige bloedglucose streefdoel. Je kunt hier ook een [tijdelijk streefdoel](../Usage/temptarget.md) instellen.
 
-Aanpassingen maak je door een veld lang ingedrukt te houden. I.e long press the target bar in the upper right ("100" in the screenshot above) to set a temp target.
+Aanpassingen maak je door een veld lang ingedrukt te houden. Houd bijvoorbeeld de grijze knop rechtsboven met streefdoel ("100" in screenshot) lang ingedrukt om een tijdelijk streefdoel in te stellen.
 
 ### Sectie C
 
@@ -103,9 +103,9 @@ Wanneer je een bolus wilt geven voor extra koolhydraten, vlak na een maaltijdbol
 
 ### Verkeerde COB-detectie
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorbtion.png)
+![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorbtion.png)
 
-If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. So if you want to bolus again after a previous meal with COB you should be aware of overdosing! For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Als je de waarschuwing hierboven ziet na het gebruik van de boluswizard, dan heeft AndroidAPS vastgesteld dat de berekende COB-waarde misschien onjuist is. Dit betekent dat, als je weer wilt bolussen na een vorige maaltijd met COB, je dan moet waken voor overdosering. Zie voor meer informatie de [COB Berekening](../Usage/COB-calculation#detection-of-wrong-cob-values) pagina.
 
 ## Insuline curve
 
@@ -141,7 +141,7 @@ Je hoeft je hier meestal niet druk om te maken. Je ziet hier de resultaten terug
 
 ![Profiel](../images/Screenshot_profile.png)
 
-AndroidAPS kan werken met verschillende soorten profielen. Een veelgebruikte optie is - zoals hier weergegeven - een Nightscout profiel, waarbij het profiel via de ingebouwde Nightscout client wordt gedownload en hier is weergegeven in alleen-lezen modus. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Gegevens zoals bijv. je basaalstanden worden dan automatisch ook naar je pomp gestuurd.
+AndroidAPS kan werken met verschillende soorten profielen. Een veelgebruikte optie is - zoals hier weergegeven - een Nightscout profiel, waarbij het profiel via de ingebouwde Nightscout client wordt gedownload en hier is weergegeven in alleen-lezen modus. Als je iets wilt veranderen, dan doe je dit vanuit de Nightscout-gebruikersinterface en doe je daarna een [Profiel wissel](../Usage/Profiles.md) in de AndroidAPS app om de wijzigingen te activeren. Gegevens zoals bijv. je basaalstanden worden dan automatisch ook naar je pomp gestuurd.
 
 **DIA:** betekent werkingsduur van je insuline (Duration of Insulin Action), zie hierboven het stuk over insuline curve.
 
@@ -167,4 +167,4 @@ Als er in de kolom aan de rechterkant een vinkje staat, dan betekent dit dat die
 
 ## Instellingen en voorkeuren
 
-In de rechterbovenhoek zie je drie stipjes onder elkaar staan. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
+In de rechterbovenhoek zie je drie stipjes onder elkaar staan. Als je hier op drukt, kom je bij de instellingen van de app, geschiedenisbrowser, setup-wizard, informatie over de app (zoals versie nummer), en de Afsluiten-knop AAPS om af te sluiten.

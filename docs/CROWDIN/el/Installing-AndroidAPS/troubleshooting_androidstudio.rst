@@ -1,5 +1,20 @@
 Troubleshooting Android Studio
 *****
+Lost keystore
+=====
+If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+
+In case you cannot find your old keystore anymore, proceed as follows:
+
+1. `Export settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ on your phone.
+2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
+3. Make sure settings file "AndroidAPS Preferences" is stored safely.
+4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+5. Uninstall previous AAPS version on your phone.
+6. Install new AAPS version on your phone.
+7. `Import settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - if you can't find them on your phone copy them from the external storage.
+8. Keep on looping.
+
 Προειδοποίηση μεταγλωττιστή Kotlin
 =====
 Αν η κατασκευή ολοκληρώθηκε με επιτυχία, αλλά έχετε προειδοποιήσεις μεταγλωττιστή Kotlin τότε απλώς αγνοήστε αυτές τις προειδοποιήσεις. 
@@ -45,6 +60,16 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
 1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
 2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Change apk destination folder (different location).
+
+Unable to start daemon process
+=====
+If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
+
+There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+
+.. image:: ../images/AndroidStudioWin10_32bitError.png
+  :alt: Screenshot Unable to start daemon process
+  
 
 No CGM data
 =====

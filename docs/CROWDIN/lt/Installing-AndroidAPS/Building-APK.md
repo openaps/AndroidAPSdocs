@@ -6,7 +6,8 @@
 
 ## ## Important notes
 
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+* Please use **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
 
 **Configuration on demand** is not supported by the current version of the Android Gradle plugin!
 
@@ -24,7 +25,7 @@ If your build fails with an error regarding "on demand configuration" you can do
 * In the overview part there is an explanation on what steps are necessary to build the APK file.
 * In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
-## Overview
+## Apžvalga
 
 In general, the steps necessary to build the APK file:
 

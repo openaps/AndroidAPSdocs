@@ -1,34 +1,34 @@
-SMS Commands
+Commandes SMS
 *****
-Safety First
+La sécurité avant tout
 ======
 * AndroidAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN.
 * AndroidAPS vous informera également par SMS si vos commandes distantes, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+* **Si vous faites un bolus au moyen de commandes SMS, vous devez entrer des glucides par Nightscout (NSClient, site Web ...) !** Si vous ne le faites pas, l'IA serait correct mais le GA serait lui trop faible pouvant conduire à ne pas effectuer de bolus de correction car AAPS estimerait que vous avez trop d'insuline active.
 
-How it works
+Comment ça marche
 =====
-* Most of the adjustments of temp targets, following AAPS etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
-* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
+* La plupart des ajustements des cibles temporaires, suivi d'AAPS, etc. peuvent être fait avec l'application `NSclient <../Children/Children.html>`_ sur un téléphone Android avec une connexion Internet.
+* Les bolus ne peuvent pas être donnés à partir de Nightscout, mais vous pouvez utiliser des commandes SMS.
+* Si vous utilisez un iPhone comme follower et ne pouvez donc pas utiliser NSclient, il y a des commandes SMS supplémentaires disponibles.
 
 * In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, just one space after the semicolons - i.e. +4412345678; +4412345679) and also enable 'Allow remote commands via SMS'.
-* If you want to use more than one number:
+* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+* Si vous voulez utiliser plus d'un numéro :
 
-  * Enter just one number.
-  * Make that single number work by sending and confirming a SMS command.
-  * Enter additional number(s) separated by semicolon and one space.
+  * Entrez seulement un numéro.
+  * Vérifiez le bon fonctionnement de ce numéro unique en envoyant et en confirmant une commande SMS.
+  * Enter additional number(s) separated by semicolon, no space.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
       :alt: SMS Commands Setup
 
 
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+* Envoyez un SMS au téléphone avec AndroidAPS à partir de(s) numéro(s) de téléphone approuvé(s) à l'aide de l'une des commandes ci-dessous en **LETTRES CAPITALES**, le téléphone répondra pour confirmer le succès de la commande ou du statut demandé. Confirmer la commande en envoyant le code fourni dans le SMS de AndroidAPS de téléphone quand cela s'avère nécessaire.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Astuce**: Il peut être utile d'avoir un forfait SMS pour les deux téléphones si beaucoup de SMS seront envoyés.
 
-Commands
+Commandes
 =====
 
 Upper and lower case is irrelevant when sending commands.
@@ -41,50 +41,59 @@ Commands must be send in English, response will be in your local language if the
 Boucle
 -----
 * LOOP STOP/DISABLE
-   * Response: Loop has been disabled
+   * Réponse : La boucle a été désactivée
 * LOOP START/ENABLE
-   * Response: Loop has been enabled
+   * Réponse : La boucle a été activée
 * LOOP STATUS
-   * Response depends on actual status
-      * Loop is disabled
-      * Loop is enabled
-      * Suspended (10 min)
+   * La réponse dépend du statut réel
+      * La Boucle est désactivée
+      * La Boucle est activée
+      * Suspendu (10 min)
 * LOOP SUSPEND 20
-   * Response: Loop suspended for 20 minutes
+   * Réponse : Suspendu (20 min)
 * LOOP RESUME
-   * Response: Loop resumed
+   * Réponse : Boucle relancée
 
-CGM data
+Données MGC
 -----
-* BG
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+* Gly
+   * Réponse: Dernière G: 5,6 il y a 4 min, Delta: 2 mmol, IA: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * Renvoyer le code Rrt pour envoyer la calibration 5.6
+   * Réponse après réception du code correct : Étalonnage envoyé. La réception doit être activée dans xDrip. (**Si xDrip est installé. L'acceptation des calibrations doit être activée dans xDrip+**)
 
 Basal
 -----
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * Réponse: Envoyer le code EmF pour arrêter la Basal temporaire [Note: le Code de la EmF est juste un exemple]
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * Réponse : Pour démarrer la Basal 0.3U/h pendant 30 min, renvoyer le code Swe
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   * Réponse : Pour démarrer la Basal 0.3U/h pendant 20 min, renvoyer le code Swe
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
+   * Réponse : Pour démarrer la Basal 30% pendant 30 min, renvoyer le code Swe
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * Réponse : Pour démarrer la Basal 30% pendant 50 min, renvoyer le code Swe
 
 Bolus
 -----
+Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+
 * BOLUS 1.2
-   * Response depends time last bolus was given
-      * To deliver bolus 1.2U reply with code Rrt
-      * Remote bolus not available. Try again later. (**Remote bolus not allowed within 15 min after last bolus command or remote commands!**)
+   * Response A: To deliver bolus 1.2U reply with code Rrt
+   * Response B: Remote bolus not available. Réessayez plus tard.
+* BOLUS 0.60 MEAL
+   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
+   * Response A: To deliver meal bolus 0.60U reply with code Rrt
+   * Response B: Remote bolus not available. 
+* CARBS 5
+   * Response: To enter 5g at 12:45 reply with code EmF
+* CARBS 5 17:35/5:35PM
+   * Response: To enter 5g at 17:35 reply with code EmF
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Réponse : Pour arrêter le Bolus étendu, renvoyer le code EmF
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Réponse : Pour démarrer le Bolus étendu 2U pendant 120 min, renvoyer le code EmF
 
 Profil
 -----
@@ -103,8 +112,18 @@ Autres
    * Response: Refresh treatments from NS
 * NSCLIENT RESTART
    * Response: NSCLIENT RESTART 1 receivers
-* PUMP
+* POMPE
    * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+* SMS DISABLE/STOP
+   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+* TARGET MEAL/ACTIVITY/HYPO   
+   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+* TARGET STOP/CANCEL   
+   * Response: To cancel Temp Target reply with code Any
+* HELP
+   * Response: BG, LOOP, TREATMENTS, .....
+* HELP BOLUS
+   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Dépannage
 =====

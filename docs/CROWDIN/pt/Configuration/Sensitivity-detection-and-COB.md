@@ -17,7 +17,7 @@ Basically sensitivity is calculated from 24h data in the past and carbs (if not 
 
 Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
 
-### Sensitivity WeightedAverage
+### Média ponderada da Sensibilidade
 
 Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 

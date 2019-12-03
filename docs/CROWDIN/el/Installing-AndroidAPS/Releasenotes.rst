@@ -37,6 +37,7 @@ Is this update for me? Currently is NOT supported
 * Poctech
 * 600SeriesUploader
 * Glimp
+   Glimp stopps working when offline. Glimp developer must update app to use SDK28 broadcast.
 * Patched Dexcom from 2.3 directory
 
 Σημαντικά νέα χαρακτηριστικά

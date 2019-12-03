@@ -1,6 +1,6 @@
 # Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
 
-![Sample Setup](../images/SampleSetup.png)
+![Configuração de Exemplo](../images/SampleSetup.png)
 
 ## Description
 
@@ -144,6 +144,6 @@ Details about the information displayed on the watchface can be found [here](../
 * On your smartwatch: Long press display to change watchface and select `AAPSv2`
 * If necessary restart both devices once.
 
-## Pump setup
+## Configurações da bomba
 
 see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)

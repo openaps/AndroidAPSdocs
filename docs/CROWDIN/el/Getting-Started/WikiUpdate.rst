@@ -2,6 +2,7 @@ Wiki ενημερώσεις και αλλαγές
 **********************
 November 2019
 ===============
+* `Automation - deactivate when disabeling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
@@ -12,7 +13,9 @@ November 2019
 * `Profile switch with percentage - example <../Usage/Profiles.html>`_
 * `SMS commands update <../Children/SMS-Commands.html>`_
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Troubleshooting - link collection <../Usage/troubleshooting.html>`_
 * `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
+* Wiki - update `edit <../make-a-PR.md#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
 
 October 2019
 ===============

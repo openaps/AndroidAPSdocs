@@ -69,7 +69,7 @@ Save: Tap on 'Done' and on the hook
 
 Start sling: Tap on Play button
 
-#### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes.
+#### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... minutos.
 
 This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temprorary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
 

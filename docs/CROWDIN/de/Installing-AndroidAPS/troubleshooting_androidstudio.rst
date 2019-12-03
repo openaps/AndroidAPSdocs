@@ -1,5 +1,20 @@
 Fehlerbehebung für Android Studio
 *****
+Verlorener Keystore
+=====
+Wenn Du beim Update von AndroidAPS den selben keystore verwendest, musst Du die Vorgängerversion von AAPS auf Deinem Smartphone nicht deinstallieren. Daher wird empfohlen, den keystore an einem sicheren Platz zu speichern.
+
+Falls Du Deinen bisherigen keystore nicht mehr findest, kannst Du wie folgt vorgehen:
+
+1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html#exportieren-der-einstellungen>`_ auf Deinem Smartphone.
+2. Kopiere die Datei mit den Einstellungen von Deinem Smartphone auf einen externen Speicherort (z.B. Dein Computer, einen Cloud-Speicher-Dienst...).
+3. Stelle sicher, dass die Datei "AndroidAPS Preferences" sicher gespeichert ist.
+4. Erstelle die signierte apk-Datei der neuen Version wie auf der `Update Seite <../Installing-AndroidAPS/Update-to-new-version.html>`_ beschrieben.
+5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
+6. Installiere die neue AAPS-Version auf Deinem Smartphone.
+7. `Importiere Deine Einstellungen <../Usage/ExportImportSettings.html#exportieren-der-einstellungen>`_ - falls Du sie auf Deinem Smartphone nicht findest, kopiere sie einfach vom externen Speicherort auf das Smartphone.
+8. Loope weiter!
+
 Kotlin Compiler Warnung
 =====
 Wenn der Build erfolgreich abgeschlossen wurde, Du aber eine Warnung des 'Kotlin Compilers' erhältst, so kannst Du diese ignorieren. 
@@ -7,7 +22,7 @@ Wenn der Build erfolgreich abgeschlossen wurde, Du aber eine Warnung des 'Kotlin
 Die App wurde erfolgreich erstellt und kann auf das Smartphone übertragen werden.
 
 .. image:: ../images/GIT_WarningIgnore.PNG
-  :alt: Kotline compiler warning ignorieren
+  :alt: Kotlin compiler warning ignorieren
 
 Key was created with errors
 =====
@@ -45,6 +60,16 @@ Dies ist ein bekannter Fehler in Android Studio 3.5 und wird wahrscheinlich erst
 1. Lösche manuell die drei Build-Ordner (normalen "Build"-Ordner, Build-Ordner in "app" und Build-Ordner in "wear") und generiere die signierte APK-Datei erneut.
 2. Definiere als Zielordner (destination folder) den Projekt-Ordner anstelle des App-Ordner - siehe `dieses Video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
 3. Ändere den Pfad des Zielordners (destination folder) auf ein neues Verzeichnis.
+
+Unable to start daemon process
+=====
+Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. Dieses wird von Android Studio 3.5.1 und höher nicht unterstützt. Wenn Du Windows 10 zum Erstellen der App verwendest, musst Du ein 64-bit Betriebssystem einsetzen.
+
+Im Internet findest Du viele Anleitungen, wie Du herausfinden kannst, ob Du ein 32-bit- oder ein 64-bit-System einsetzt - z.B. `hier <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+
+.. image:: ../images/AndroidStudioWin10_32bitError.png
+  :alt: Screenshot Unable to start daemon process
+  
 
 Fehlende CGM-Daten
 =====
