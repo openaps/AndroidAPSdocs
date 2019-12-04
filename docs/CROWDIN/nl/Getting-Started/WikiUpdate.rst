@@ -1,4 +1,4 @@
-Wiki updates & changes
+Wiki updates & veranderingen
 **********************
 December 2019
 =====
