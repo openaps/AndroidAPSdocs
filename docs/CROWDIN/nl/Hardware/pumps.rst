@@ -1,4 +1,4 @@
-Pump Configuration
+Pomp Instellingen
 ***********************
 
 .. toctree::
