@@ -21,35 +21,35 @@ AndroidAPS предусматривает возможность *управле
 
 Чтобы быстрее попасть в меню AAPS, сделайте двойное нажатие на ГК. При двойном нажатии на кривую ГК можно изменить масштаб времени..
 
-## Watchfaces available
+## Доступные циферблаты
 
 ![watchfaces](../images/watchfaces.jpg)
 
-## Legend AAPSv2 watchface
+## Циферблат Легенда AndroidAPSv2
 
 ![Legend AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
 
-A - time since last loop run
+О - время с запуска последнего цикла
 
-B - CGM reading
+B - данные ГК мониторинга
 
-C - minutes since last CGM reading
+C - минуты с последнего получения данных ГК
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - изменение по сравнению с последним полученным значением ГК (в mmol или mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - среднее изменение данных ГК за последние 15 минут
 
-F - phone battery
+F - состояние аккумулятора телефона
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - скорость подачи базала (в ед/ч во время стандартной подачи и в % при временном базале TBR)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (взаимодействие с глюкозой крови) -> Степень, с которой ГК “должна” расти или падать, основываясь только на активности инсулина (без учета других факторов).
 
-I - carbs (carbs on board | e-carbs in the future)
+I - углеводы (активные углеводы | e-carb в будущем)
 
-J - insulin on board (from bolus | from basal)
+J - активный инсулин (от болюсов | от базала)
 
-## Settings (in wear watch)
+## Параметры (в часах Wear)
 
 To access to the watchface settings, double tap on your BG, slide up and select "Settings".
 
