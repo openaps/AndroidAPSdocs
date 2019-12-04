@@ -9,14 +9,14 @@ Windows
 * Onthoud of noteer in welke map Git op jouw computer geïnstalleerd wordt. Dat heb je nodig in de volgende stap.
 
 .. image:: ../images/Update_GitPath.png
-  :alt: Git installation path
+  :alt: Git locatie
 
 2. Stel git path in Android Studio in
 -----
 Laat Studio weten waar git.exe zich bevindt: File - Settings (Bestand - Instellingen) 
 
   .. image:: ../images/Update_GitSettings1.png
-    :alt: Android Studio - open settings
+    :alt: Android Studio - open instellingen
 
 * In het volgende venster: Versie Control - Git
 
@@ -25,7 +25,7 @@ Laat Studio weten waar git.exe zich bevindt: File - Settings (Bestand - Instelli
 * Zorg ervoor dat de update methode "Merge" ("Samenvoegen") is geselecteerd.
 
   .. image:: ../images/Update_GitSettings2a.png
-    :alt: Android Studio - GIT path
+    :alt: Android Studio - GIT locatie
    
 3. Herstarten
 -----
@@ -37,12 +37,12 @@ Laat Studio weten waar git.exe zich bevindt: File - Settings (Bestand - Instelli
 * Voer "git --version" (zonder aanhalingstekens!) in en druk op Return
 
   .. image:: ../images/AndroidStudio_gitversion1.png
-    :alt: git --version
+    :alt: git-versie
 
 * Als git succesvol is geïnstalleerd en als het pad goed is ingevuld, dan zie je deze informatie over de geïnstalleerde versie:
 
   .. image:: ../images/AndroidStudio_gitversion2.png
-    :alt: result git-version
+    :alt: resultaat git-versie
 
 Mac
 =====
