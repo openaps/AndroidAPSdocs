@@ -51,7 +51,7 @@ J - активный инсулин (от болюсов | от базала)
 
 ## Параметры (в часах Wear)
 
-To access to the watchface settings, double tap on your BG, slide up and select "Settings".
+Чтобы получить доступ к настройкам, дважды коснитесь ГК, сдвиньте экран вверх и выберите "Настройки".
 
 ![settings_on_off](../images/settings_on_off.jpg)
 
