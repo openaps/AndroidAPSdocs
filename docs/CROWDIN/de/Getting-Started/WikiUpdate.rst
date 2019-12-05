@@ -1,6 +1,6 @@
 Wiki Updates & Änderungen
 **********************
-December 2019
+Dezember 2019
 =====
 * `Watchfaces <../Configuration/Watchfaces.html>`_
 November 2019
