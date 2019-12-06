@@ -9,5 +9,5 @@ Více informací naleznete zde:
    :maxdepth: 1
    :glob:
    
-   List of tested phones and smartwatches <../Getting-Started/Phones.md>
-   Watchfaces  <../Configuration/Watchfaces.md>
+   Seznam otestovaných telefonů a hodinek <../Getting-Started/Phones.md>
+   Ciferníky <../Configuration/Watchfaces.md>

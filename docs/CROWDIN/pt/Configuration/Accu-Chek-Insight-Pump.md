@@ -12,7 +12,7 @@
     
     Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Um telefone Android (basicamente todas as versões Android funcionariam, mas o próprio AndroidAPS requer pelo menos o Android 5 (Lollipop).)
 
 * The AndroidAPS app installed on your phone
 
@@ -41,7 +41,7 @@
     
     ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Success! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
+* Sucesso! Pat yourself on the back for successfully pairing your pump with AndroidAPS.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
@@ -71,15 +71,15 @@ In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time.   
       
-    Example for min. recovery duration = 5 and max. recovery duration = 20   
+    Exemplo por min. duração da recuperação = 5 e max. duração da recuperação = 20   
       
-    no connection -> wait **5** sec.   
-    retry -> no connection -> wait **6** sec.   
-    retry -> no connection -> wait **7** sec.   
-    retry -> no connection -> wait **8** sec.   
+    sem conexão -> aguarde **5** seg.   
+    tente novamente -> sem conexão -> aguarde **6** seg.   
+    tente novamente -> sem conexão -> aguarde **7** seg.   
+    tente novamente -> sem conexão -> aguarde **8** seg.   
     ...   
-    retry -> no connection -> wait **20** sec.   
-    retry -> no connection -> wait **20** sec.   
+    tente novamente -> sem conexão -> aguarde **20** seg.   
+    tente novamente -> sem conexão -> aguarde **20** seg.   
     ...
 
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
@@ -95,7 +95,7 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 
 ## Configurações na bomba
 
-Configure alarms in the pump as follows:
+Configurar alarmes na bomba da seguinte forma:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 * Menu > Modes > Signal mode > Quiet
@@ -106,11 +106,13 @@ Insight pumps with newer firmware will vibrate briefly every time a bolus is del
 
 ## Battery replacement
 
+Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
+
 The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 ## Insight specific errors
 
-### Extended bolus
+### Bólus estendido
 
 Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 

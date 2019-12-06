@@ -14,6 +14,6 @@ How to use it:
 * Select unknown sources (scroll down all the way to the bottom of the list).
 * Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
 
-Troubleshooting:
+Resolução de Problemas:
 
 * If you don't see the notification, check if you allowed AAPS to show notifications in Android and if Android Auto has access rights to notifications.

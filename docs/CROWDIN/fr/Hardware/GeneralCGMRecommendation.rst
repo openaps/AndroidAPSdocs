@@ -35,7 +35,7 @@ Souvent une "erreur de capteur" peut être corrigée en buvant immédiatement et
 
 Saut de valeurs
 ----------------------------------------
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (Paramètres - Inter-app settings - Noise Blocking) par ex. "Block Very High noise and worse".  Voir également `Lissage des glycémies <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
 
 

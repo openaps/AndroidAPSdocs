@@ -6,6 +6,7 @@ Les fonctions suivantes peuvent être déclenchées à partir de la montre :
 
 * définir une cible temporaire
 * administrer un bolus
+* Administrer des eGlucides
 * utilisez le calculateur de bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](../Configuration/Config-Builder#wear) sur le téléphone)
 * vérifier l'état de la boucle et de la pompe
 * montrer le DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
@@ -14,7 +15,7 @@ Pour ce faire, vous devez sélectionner la variante "fullRelease" dans [Construi
 
 Il y a plusieurs cadrans à choisir qui inclus le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
 
-![AndroidAPSv2 watchface](../images/AAPSv2_Watchface.png)
+![Cadran AndroidAPSv2](../images/AAPSv2_Watchface.png)
 
 Vérifiez que les notifications d'AndroidAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
 
@@ -22,37 +23,69 @@ Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Ave
 
 ## Dépannage de l'application wear :
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Sur Android Wear 2.0, le cadran de la montre ne s'installe plus tout seul. Vous devez aller dans le playstore sur la montre (pas le même playstore que celui du téléphone) et le trouver dans la catégorie applications installées sur votre téléphone, à partir de là, vous pouvez l'activer. Activer également les mises à jour automatiques 
+* Parfois, cela peut aider de resynchroniser AAPS avec la montre car cela peut être un peu lent quand il le fait tout seul : Wear / Renvoyer toutes les données
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 
-## Legend AndroidAPSv2 watchface
+## Légende du cadran AndroidAPSv2
 
-![Legend AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
+![Légende du cadran AndroidAPSv2](../images/AAPSv2_Watchface_legend.png)
 
-A - time since last loop run
+A - temps écoulé depuis le dernier calcul de la boucle
 
-B - CGM reading
+B - lecture du capteur MGC
 
-C - minutes since last CGM reading
+C - nombre de minutes depuis la dernière lecture MGC
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - changement par rapport à la dernière lecture MGC (en mmol ou mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - variation moyenne des lectures MGC depuis 15 minutes
 
-F - phone battery
+F - niveau de batterie du téléphone
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - débits de basal (en U/h ou en % pendant un DBT)
 
 H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - glucides (glucides actifs | e-glucides à venir)
 
-J - insulin on board (from bolus | from basal)
+J - Insuline Active (de bolus | de basal)
 
-## View Nightscout data
+## Settings
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Il y a plusieurs cadrans à choisir qui inclus le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
+There are different settings to modify and to choose from while using AndroidAPS on your smartwatch:
+
+* Vibrate on Bolus (on | off)
+* Units for Actions (mg/dl | mmol/l)
+* Show Date (on | off)
+* Show IOB (on | off)
+* Show COB (on | off)
+* Show Delta (on | off)
+* Show AvgDelta (on | off)
+* Show Phone Battery (on | off)
+* Show Rig Battery (on | off)
+* Show Basal Rate (on | off)
+* Show Loop Status (on | off)
+* Show BG (on | off)
+* Show Direction Arrow (on | off)
+* Show Ago (on | off)
+* Dark (on | off)
+* Highlight Basals (on | off)
+* Chart Timeframe (1 | 2 | 3 | 4 | 5 hours)
+* Input Design (Default | Quick righty | Quick lefty | Modern Sparse)
+* Delta Granularity (Steampunk) (Low | Medium | High)
+* Big Numbers (on | off)
+* Ring History (on | off)
+* Light Ring History (on | off)
+* Animations (on | off)
+* Wizard in Menu (on | off)
+* Prime in Menu (on | off)
+* Single Target (on | off)
+* Wizard Percentage (on | off)
+
+## Afficher les données Nightscout
+
+Si vous utilisez un autre système de bouclage et que vous voulez *voir* le détail de la boucle sur une montre Android Wear, ou si vous voulez regarder la boucle de votre enfant, vous pouvez juste construire/télécharger le fichier APK NSClient. Pour ce faire, suivez les instructions [construire l'APK](../Installing-AndroidAPS/Building-APK.md) en sélectionnant la variante de génération "NSClientRelease". Il y a plusieurs cadrans à choisir qui inclus le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
 
 ## Pebble
 

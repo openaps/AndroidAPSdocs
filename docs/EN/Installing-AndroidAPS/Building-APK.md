@@ -6,7 +6,8 @@
 
 ## Important notes
 ---
-***Note***: Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+* Please use **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
 
 **Configuration on demand** is not supported by the current version of the Android Gradle plugin! 
 

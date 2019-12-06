@@ -1,6 +1,6 @@
 Pour les utilisateurs de MM640g ou MM630g
 *****
 
-* If not already set up then download `600SeriesAndroidUploaer <http://pazaan.github.io/600SeriesAndroidUploader/>`_ and follow instructions on `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
-* In 600 Series Uploader go to Settings > Send to xdrip+ and select ON (tick).
-* Select MM640g in ConfigBuilder (setting in AndroidAPS).
+* Si vous ne l'avez pas déjà configuré, téléchargez `600SeriesAndroidUploaer <http://pazaan.github.io/600SeriesAndroidUploader/>`_ et suivez les instructions sur `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
+* Dans 600 Series Uploader, allez dans Paramètres > Envoyer à xDrip+ et sélectionnez ON (tick).
+* Sélectionnez MM640g dans ConfigBuilder (Menu Paramètres dans AndroidAPS).

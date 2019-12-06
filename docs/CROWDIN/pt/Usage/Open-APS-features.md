@@ -61,35 +61,35 @@ See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/lates
 
 Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
 
-### Enable SMB
+### Activar SMB
 
 Here you can enable or completely disable SMB feature.
 
-### Enable SMB with COB
+### Activar SMB com COB
 
 SMB is working when there is COB active.
 
-### Enable SMB with temp targets
+### SMB activo com valores alvo temporários
 
 SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
 
-### Enable SMB with high temp targets
+### SMB activo com alvos temporários elevados
 
 SMB is working when there is a high temporary target active (activity, hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
 
-### Enable SMB always
+### SMB sempre activado
 
 SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
 
 For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### Enable SMB after carbs
+### Activar SMB após hidratos
 
 SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
 
 For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### Max minutes of basal to limit SMB to
+### Limite de minutos de basal para SMB
 
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
 
@@ -99,7 +99,7 @@ It is recommended not to set the value higher than 90 minutes, as this would lea
 
 Default value: 30 min.
 
-### Enable UAM
+### Activar UAM
 
 With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful, if you forget to tell AndroidAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
 
@@ -113,7 +113,7 @@ If you have this option enabled, the insulin sensitivity will be increased while
 
 If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
 
-### Advanced Settings
+### Configurações Avançadas
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -144,9 +144,9 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 The hardcoded parameters in AndroidAPS are:
 
 * Criança: 2
-* Teenage: 5
-* Adult: 10
-* Insulin resistant adult: 12
+* Adolescente: 5
+* Adulto: 10
+* Adulto insulino-resistente: 12
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
@@ -155,9 +155,9 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Criança: 3
-* Teenage: 5
-* Adult: 7
-* Insulin resistant adult: 12
+* Adolescente: 5
+* Adulto: 7
+* Adulto insulino-resistente: 12
 
 ### Enable AMA Autosense
 
@@ -167,7 +167,7 @@ Here, you can chose, if you want to use the [sensitivity detection](../Configura
 
 If you have this option enabled, autosense can adjust targets (next to basal, ISF and IC), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
 
-### Advanced Settings
+### Configurações Avançadas
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -181,7 +181,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 **Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-Default value: 2
+Valor padrão: 2
 
 * * *
 
@@ -217,4 +217,4 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 
 **Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
-Default value: 2
+Valor padrão: 2

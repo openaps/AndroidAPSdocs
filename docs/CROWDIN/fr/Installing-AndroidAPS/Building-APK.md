@@ -6,9 +6,10 @@
 
 ## ## Remarques importantes
 
-***Remarque*** : Utilisez [Android Studio Version 3.5.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
+* Utilisez **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** ou une version plus récente pour construire l'apk.
+* [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 3.5.1.
 
-**Configuration onr demand** n'est pas pris en charge par la version actuelle du plug-in Android Gradle !
+**Configuration on demand** n'est pas pris en charge par la version actuelle du plug-in Android Gradle !
 
 Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
 
@@ -51,7 +52,7 @@ Installez [Android Studio](https://developer.android.com/studio/install.html) et
 
 Sélectionnez "Ne pas importer les paramètres" car vous n'avez pas eu d'utilisation préalable.
 
-![Screenshot 1](../images/Installation_Screenshot_01.png)
+![Capture d'écran 1](../images/Installation_Screenshot_01.png)
 
 Cliquez sur "Suivant".
 
@@ -69,17 +70,17 @@ Cliquez sur "Suivant" dans la boîte de dialogue "Vérifier les paramètres".
 
 ![Capture d'écran 5](../images/Installation_Screenshot_05.png)
 
-L'émulateur Android (pour émuler le smartphone sur votre PC ou Mac) n'est pas utilisé pour construire l'APK. Vous pouvez cliquer sur "Terminer" pour terminer l'installation et lire la documentation plus tard sur demande.
+L'émulateur Android (pour émuler le smartphone sur votre PC ou Mac) n'est pas utilisé pour construire l'APK. Vous pouvez cliquer sur "Finish" pour terminer l'installation et lire la documentation plus tard sur demande.
 
 ![Capture d'écran 6](../images/Installation_Screenshot_06.png)
 
-Android Studio télécharge beaucoup de composants logiciels qu'il utilise. Vous pouvez cliquer sur le bouton "Afficher les détails" pour voir ce qui se passe, mais cela n'est pas du tout important.
+Android Studio télécharge beaucoup de composants logiciels qu'il utilise. Vous pouvez cliquer sur le bouton "Show Details" pour voir ce qui se passe, mais ce n'est pas important.
 
 ![Capture d'écran 7](../images/Installation_Screenshot_07.png)
 
 ![Capture d'écran 8](../images/Installation_Screenshot_08.png)
 
-Une fois les téléchargements terminés, cliquez sur le bouton "Terminer".
+Une fois les téléchargements terminés, cliquez sur le bouton "Finish".
 
 ![Capture d'écran 9](../images/Installation_Screenshot_09.png)
 
@@ -222,7 +223,7 @@ Sélectionnez "app" et cliquez sur "Next".
 
 ![Capture d'écran 40](../images/Installation_Screenshot_40.png)
 
-Cliquez sur "Create new..." pour commencer la création de votre fichier de clés. Un fichier de clés dans ce cas n'est rien de plus qu'un fichier dans lequel les informations de signature sont stockées. Il est crypté et les informations sont sécurisées avec des mots de passe. Nous vous conseillons de le stocker dans votre dossier personnel et de vous rappeler des mots de passe, mais si vous perdez cette information, ce n'est pas très grave car vous devrez juste en créer un nouveau. Une bonne pratique consiste à sauvegarder ces informations avec soin.
+Cliquez sur "Create new..." pour commencer la création de votre fichier de clés. Un fichier de clés dans cette affaire n'est rien de plus qu'un fichier dans lequel les informations de signature est stockée. Il est crypté et les informations sont sécurisées avec des mots de passe. Nous vous conseillons de le stocker dans votre dossier personnel et de vous rappeler des mots de passe, mais si vous perdez cette information, ce n'est pas très grave car vous devrez juste en créer un nouveau. Une bonne pratique consiste à sauvegarder ces informations avec soin.
 
 ![Capture d'écran 41](../images/Installation_Screenshot_41.png)
 
@@ -245,7 +246,7 @@ Sélectionnez "full" (ou "fullRelease") comme favori pour l'application génér�
 * 'Release' devrait être votre choix par défaut pour "Build Variants", 'Debug' est juste pour les personnes qui codent.
 * Sélectionnez le type de génération que vous souhaitez complier. 
   * full / fullRelease (c'est-à-dire recommandations automatiquement adoptées en boucle fermée)
-  * openloop (c'est à dire recommandations données à l'utilisateur pour des commandes manuelles)
+  * openloop (c'est à dire les recommandations données à l'utilisateur commandes manuelles)
   * pumpcontrol (c'est-à-dire télécommande pour la pompe, pas pour le bouclage)
   * nsclient (c'est-à-dire que les données de bouclage d'un autre utilisateur sont affichées et que des entrées de careportal peuvent être ajoutées)
 

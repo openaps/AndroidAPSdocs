@@ -128,10 +128,8 @@ Problembehandlung
    :maxdepth: 1
        
   
-   Nightscout Client <./Usage/Troubleshooting-NSClient.md>
-   Update <./Installing-AndroidAPS/Update-to-new-version.html#troubleshooting>
-   Pumpen <./FGT/Troubleshootingpumps.rst>
-
+   Problembehandlung <./Usage/troubleshooting.rst>
+   
 
 FAQ 
 ------------------------------------------

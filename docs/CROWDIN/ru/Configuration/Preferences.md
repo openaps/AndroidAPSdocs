@@ -118,9 +118,9 @@
 
 * 'Параметры оповещений' позволяет выбрать, какие оповещения приложение будет использовать по умолчанию. Для активации оповещений нужно установить значения экстремально высоких, высоких, низких и экстремально низких порогов сигнализации в полях значений переменных на [heroku или azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Они будут работать только тогда, когда у вас есть подключение к Nightscout и предназначены для родителей/опекунов; если на вашем телефоне есть мониторинг, используйте оповещения на нем (например, xdrip+).
 * 'Включить локальные трансляции' передаст данные с портала лечения/назначений на другие приложения на телефоне, например xdrip.
-* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+* 'Всегда использовать абсолютные значения базала" должно быть активировано, если вы хотите правильно использовать Autotune.
     
-    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
+    ** Не активируйте при пользовании [помпой Insight pump ](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)! ** Это приведет к неверным настройкам временной скорости базала TBR в помпе Insight.
 
 ## СМС-коммуникатор
 

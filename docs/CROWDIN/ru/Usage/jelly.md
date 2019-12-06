@@ -34,7 +34,7 @@ Follow these rules to stay with Andorid 7.0:
 
 ![Jelly settings](../images/jelly_02.jpg)
 
-### Settings
+### Настройки
 
 * Use Jelly only for looping.
 * Set up wifi to install xDrip, AAPS and WearOS, otherwise wifi off. 

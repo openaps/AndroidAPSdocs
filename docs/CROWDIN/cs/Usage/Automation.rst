@@ -12,6 +12,15 @@ Jak to používat
 ================
 Chcete-li nastavit automatizaci, musíte ji pojmenovat a vybrat alespoň jednu podmínku a jednu akci. 
 
+Important note
+-----
+**Automation is still active when you disable loop!**
+
+So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
+
+.. image:: ../images/Automation_ActivateDeactivate.png
+  :alt: Activate and deactivaten automation rule
+
 Obecné
 --------
 Existují určitá omezení:

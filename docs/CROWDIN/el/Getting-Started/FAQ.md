@@ -164,6 +164,22 @@ You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM 
 
 Υποθέτοντας ότι είναι σωστός ο βασικός ρυθμός, μπορείτε να ελέγξετε εάν ο IOB είναι μηδέν και ότι βρίσκεστε εντός εμβέλειας, καταναλώνετε ακριβώς γνωστούς υδατάνθρακες και πάρετε μια εκτιμώμενη ποσότητα ινσουλίνης με βάση τη τρέχον αναλογία ινσουλίνης υδατανθράκων. Το καλύτερο είναι να τρώτε φαγητό που τρώτε κανονικά εκείνη την εποχή της ημέρας και να μετρήσετε τους υδατάνθρακες με ακρίβεια.
 
+> **NOTE:**
+> 
+> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equaled 12g of carbs, later some changed to 10g of carbs.
+> 
+> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> 
+> When using IC the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> 
+> Παράδειγμα:
+> 
+> Bread unit facor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
+> 
+> Corresponding IC: 12 / 2,4 = 5,2 -> 5,2g carbs can be covered with one unit of insulin.
+> 
+> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+
 ### Επιπτώσεις
 
 **Χαμηλό IC **= λιγότερα τρόφιμα ανά μονάδα, δηλαδή παίρνετε περισσότερη ινσουλίνη για μια σταθερή ποσότητα υδατανθράκων. Μπορεί επίσης να ονομάζεται "πιο επιθετική".
@@ -172,31 +188,29 @@ You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM 
 
 Εάν μετά τη πέψη του γεύματος και το IOB έχει επιστρέψει στο μηδέν, το BG σας παραμένει υψηλότερο από ό, τι πριν από το φαγητό, οι πιθανότητες είναι ότι το IC είναι μεγάλο. Αντίθετα, εάν το BG σας είναι χαμηλότερο από ό, τι πριν από το φαγητό, η IC είναι πολύ μικρή.
 
-Αν έχετε χρησιμοποιήσει μέχρι στιγμής τους παράγοντες "μονάδας ψωμιού" (Πόση ποσότητα ινσουλίνης χρειάζεται για να καλύψετε μια μονάδα ψωμιού;) μπορείτε να βρείτε πίνακες μετατροπής online, δηλ. [ εδώ ](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
-
 # Ο αλγόριθμος του APS
 
 ## Γιατί εμφανίζεται η ένδειξη "dia: 3" στην καρτέλα "OPENAPS AMA", παρόλο που έχω διαφορετικό DIA στο προφίλ μου;
 
-![AMA 3 ώρες](../images/Screenshot_AMA3h.png)
+![AMA 3h](../images/Screenshot_AMA3h.png)
 
-Στην ΑΜΑ, η DIA στην πραγματικότητα δεν σημαίνει «διάρκεια δράσης της ινσουλίνης». Πρόκειται για μια παράμετρο, η οποία χρησιμοποιείται για τη σύνδεση με το DIA. Τώρα, αυτό σημαίνει, «σε ποιο χρονικό σημείο πρέπει να ολοκληρωθεί η διόρθωση». Δεν έχει καμία σχέση με τον υπολογισμό του IOB. Στο OpenAPS SMB, δεν υπάρχει πλέον ανάγκη για αυτήν την παράμετρο.
+In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
 
 ## Προφίλ
 
 ### Γιατί να χρησιμοποιείτε κατ ελάχιστο. 5 ώρες DIA (χρόνος λήξης ινσουλίνης) αντί για 2-3 ώρες;
 
-Εξηγείται καλά σε [ αυτό το άρθρο ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Μην ξεχάσετε να κάνετε ` ΕΝΕΡΓΟΠΟΙΗΣΗ ΠΡΟΦΙΛ ` μετά την αλλαγή του DIA.
+Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
 
 ### Τι προκαλεί το κύκλωμα να χαμηλώνει συχνά το BG μου σε υπογλυκαιμικές τιμές χωρίς COB;
 
-Πρώτα απ 'όλα, ελέγξτε το βασικό σας ρυθμό και κάντε δοκιμασία βασικού ρυθμού χωρίς υδατάνθρακες. Εάν είναι σωστό, αυτή η συμπεριφορά προκαλείται συνήθως από πολύ χαμηλή ISF. Μια πολύ χαμηλή ISF μοιάζει συνήθως με αυτό:
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
 
-![ISF πολύ χαμηλό](../images/isf.jpg)
+![ISF too low](../images/isf.jpg)
 
 ### Τι προκαλεί υψηλές μεταγευματικές κορυφές σε κλειστό κύκλωμα;
 
-Πρώτα απ 'όλα, ελέγξτε το βασικό σας ρυθμό και κάντε δοκιμασία βασικού ρυθμού χωρίς υδατάνθρακες. Εάν είναι σωστό και το BG σας πέφτει από το στόχο σας αφού απορροφηθούν πλήρως οι υδατάνθρακες, προσπαθήστε να ορίσετε κάποιον στόχο "να φάει σύντομα" στο AndroidAPS κάποια στιγμή πριν από το γεύμα ή να σκεφτείτε έναν κατάλληλο χρόνο prebolus με τον ενδοκρινολόγο σας. Εάν το BG σας είναι πολύ υψηλό μετά το γεύμα και ακόμα πολύ υψηλό αφού οι υδατάνθρακες απορροφηθούν πλήρως, σκεφτείτε να μειώσετε το IC σας με τον ενδοκρινολόγο σας. Εάν το BG σας είναι πολύ υψηλό ενώ το COB πολύ χαμηλά μετά την απορρόφηση των υδατανθράκων, σκεφτείτε να αυξήσετε το IC σας και έναν κατάλληλο χρόνο prebolus με τον ενδοκρινολόγο σας.
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
 # Αλλες ρυθμισεις
 
@@ -204,23 +218,23 @@ You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM 
 
 ### Το AndroidAPS NSClient λέει ότι δεν επιτρέπεται και δεν μεταφορτώνει δεδομένα. Τι μπορώ να κάνω;
 
-Στο NSClient επιλέξτε 'Ρυθμίσεις σύνδεσης'. Ίσως να μην βρίσκεστε σε επιτρεπόμενο δίκτυο WLAN ή έχετε ενεργοποιήσει το "Μόνο εάν φορτίζετε" και το καλώδιο φόρτισης δεν είναι συνδεδεμένο.
+In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
 ## Ρυθμίσεις CGM
 
 ### Γιατί λέει το AndroidAPS: "Η πηγή BG δεν υποστηρίζει προηγμένο φιλτράρισμα";
 
-Αν χρησιμοποιείτε άλλο CGM / FGM από το Dexcom G5 ή το G6 στη μητρική λειτουργία xDrip, θα λάβετε αυτήν την ειδοποίηση στην καρτέλα openAPS του AndroidAPS. Δείτε [ Εξομάλυνση δεδομένων γλυκόζης αίματος ](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) για περισσότερες λεπτομέρειες.
+If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 ## Αντλία
 
 ### Που μπορώ να τοποθετήσω την αντλία μου;
 
-Υπάρχουν αναρίθμητες δυνατότητες για την τοποθέτηση της αντλίας. Δεν έχει σημασία αν είστε σε κύκλωμα ή όχι. Αν προτιμάτε να έχετε μια αντλία ινσουλίνης χωρίς σωλήνα και να έχετε μια Dana για κύκλωμα, ελέγξτε τον καθετήρα 30 cm με τη ζώνη της κοιλιάς.
+There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
 
 ### Μπαταρίες
 
-Το κύκλωμα μπορεί να μειώσει την μπαταρία της αντλίας ταχύτερα από την κανονική χρήση, επειδή το σύστημα αλληλεπιδρά με το bluetooth πολύ περισσότερο από ένα χειροκίνητο χρήστη. Το καλύτερο είναι να αλλάξετε τη μπαταρία στο 25%, καθώς η επικοινωνία γίνεται πιο δύσκολη. Μπορείτε να ρυθμίσετε συναγερμούς για την μπαταρία της αντλίας χρησιμοποιώντας τη μεταβλητή PUMP_WARN_BATT_P στον nightscout ιστότοπό σας. Τα κόλπα για την αύξηση της διάρκειας ζωής της μπαταρίας περιλαμβάνουν:
+Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
 
 * μειώστε τη διάρκεια ενεργής οθόνης LCD (στο μενού ρυθμίσεων της αντλίας)
 * μειώστε τη διάρκεια παραμονής του φωτισμού (στο μενού ρυθμίσεων της αντλίας)
@@ -249,11 +263,11 @@ The change of cartridge cannot be done via AndroidAPS but must be carried out as
 * Now disconnect the pump and change the reservoir as per pump instructions.
 * Μόλις επανασυνδεθείτε με την αντλία, συνεχίστε με το πάτημα του κουμπιού "Αναστολή (X m)".
 
-Η αλλαγή ενός σωληναρίου όμως δεν χρησιμοποιεί τη λειτουργία "πρωταρχικής έγχυσης" της αντλίας, αλλά γεμίζει το σετ έγχυσης και / ή το σωληνίσκο χρησιμοποιώντας ένα bolus που δεν εμφανίζεται στο ιστορικό των bolus. Αυτό σημαίνει ότι δεν διακόπτει ένα τρέχον προσωρινό βασικό ρυθμό. Στην καρτέλα Δράσεις (Πράξη), χρησιμοποιήστε το πλήκτρο PRIME / FILL για να ρυθμίσετε την ποσότητα ινσουλίνης που απαιτείται για να γεμίσετε το σετ έγχυσης και να ξεκινήσετε την προετοιμασία. Αν το ποσό δεν είναι αρκετό, επαναλάβετε την πλήρωση. Μπορείτε να ορίσετε κουμπιά προεπιλεγμένου ποσού στις Προτιμήσεις> Άλλο> Συμπληρώστε / Αρχίστε την κανονική ποσότητα ινσουλίνης. Δείτε το φυλλάδιο οδηγιών στο κιβώτιο του σωληνίσκου για το πόσες μονάδες θα πρέπει να προετοιμαστούν ανάλογα με το μήκος της βελόνας και το μήκος της σωλήνωσης.
+The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
 
 ## Ταπετσαρία
 
-Μπορείτε να βρείτε την ταπετσαρία AndroidAPS για το τηλέφωνό σας στη σελίδα [ τηλέφωνα ](../Getting-Started/Phones#phone-background).
+You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
 
 ## Καθημερινή χρήση
 
@@ -261,13 +275,13 @@ The change of cartridge cannot be done via AndroidAPS but must be carried out as
 
 #### Πώς μπορώ να κάνω ένα μπάνιο ή ντουζ;
 
-Μπορείτε να αφαιρέσετε την αντλία ενώ κάνετε ντους ή μπάνιο. Για αυτό το σύντομο χρονικό διάστημα συνήθως δεν θα τη χρειαστείτε. Αλλά πρέπει να το πείτε στο AAPS, έτσι ώστε οι υπολογισμοί IOB να είναι σωστοί.
+You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
 
-Δείτε τη [παραπάνω περιγραφή](../Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Εργασία
 
-Ανάλογα με το είδος της δουλειάς σας, ίσως να χρησιμοποιείτε διαφορετικούς παράγοντες θεραπείας στις εργάσιμες ημέρες. Σαν κάποιος που χρησιμοποιεί κύκλωμα πρέπει να σκεφτείτε μια [αλλαγή προφίλ](../Usage/Profiles.md) για την εκτιμώμενη εργάσιμη ημέρα σας (π.χ. περισσότερο από 100% για 8 ώρες όταν κάθεστε γύρω ή λιγότερο από 100% όταν είστε ενεργός), υψηλό ή χαμηλό προσωρινό στόχο ή μια [χρονική μετατόπιση του προφίλ σας](../Usage/Profiles#time-shift) όταν στέκεστε πολύ νωρίτερα ή αργότερα από το κανονικό. Εάν χρησιμοποιείτε[ προφίλ Nightscout](../Configuration/Config-Builder#ns-profile), μπορείτε επίσης να δημιουργήσετε ένα δεύτερο προφίλ (π.χ. 'σπίτι' και 'εργάσιμη ημέρα') και να κάνετε καθημερινή αλλαγή προφίλ στο προφίλ που πραγματικά χρειάζεστε.
+Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Αθλητικές δραστηριότητες
 
@@ -293,7 +307,7 @@ The percentage of the profile switch, the value for your activity temp target an
 
 You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
 
-Δείτε τη [παραπάνω περιγραφή](../Getting-Started/FAQ#disconnect-pump).
+See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Κατανάλωση Αλκοόλ
 
