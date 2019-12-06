@@ -25,4 +25,4 @@ The Combo and the Insight are solid pumps, and loopable. The advantages of the D
 
 * Wszystkie pompy powiązane z AndroidAPS mają wodoodporne zestawy do infuzji. Tylko pompy Dana mają "gwarancję wodoszczelności" ze względu na zamknięty przedział baterii i przedział zbiornika.
 
-The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+Combo jest oczywiście bardzo dobrą pompą i nadaje się do pętli. Zaletą tej pompy jest również to że ma kilka typów zestawów infuzyjnych do wyboru oraz posiada złącze typu luer lock. Baterie są łatwo dostępne na dowolnej stacji benzynowej, całodobowym sklepie spożywczym, a jeśli naprawdę ich potrzebujesz, możesz je wymienić z pilota do TV w pokoju hotelowym ;-)
