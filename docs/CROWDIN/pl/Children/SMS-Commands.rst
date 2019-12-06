@@ -60,7 +60,7 @@ CGM data
    * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
    * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * Response after correct code was received: Calibration sent (**If xDrip is installed. Akceptacja kalibracji musi być włączona w xDrip+**)
 
 Basal
 -----
@@ -127,7 +127,7 @@ Other
 
 Rozwiązywanie problemów
 =====
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Pojawił się raport o zatrzymywaniu się poleceń SMS po aktualizacji telefonu Galaxy S10. Można to rozwiązać, wyłączając opcję „wyślij jako wiadomość czatu”.
 
 .. image:: ../images/SMSdisableChat.png
   :alt: Disable SMS as chat message
