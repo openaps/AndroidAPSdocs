@@ -28,7 +28,7 @@ Erscheinungsdatum: 26.10.2019
 Wichtige Hinweise
 -----
 * Verwende `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ oder neuer `um die App zu erstellen <../Installing-AndroidAPS/Building-APK.html>`_ oder `ein Update durchzuführen <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-* Wenn Du xDrip+ verwendest, muss `identify receiver <../Configuration/xdrip.html#identifiziere-empfanger>`_ gesetzt sein.
+* Wenn Du xDrip verwendest, muss `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ gesetzt sein.
 * Falls Du den Dexcom G6 mit der `gepatchen Dexcom App <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_ verwendest, benötigst Du die Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:
@@ -46,7 +46,7 @@ Wichtige neue Funktionen
 * RxJava2, Okhttp3, Retrofit support
 * Alte `Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ werden unterstützt (RileyLink erforderlich)
 * Neues Plugin `Automation <../Usage/Automation.html>`_
-* Möglichkeit, `nur einen Teil des vom Bolus-Rechner ermittelten Bolus <../Configuration/Preferences.html#erweiterte-instellungen>`_ abzugeben
+* Möglichkeit, `nur einen Teil des vom Bolus-Rechner ermittelten Bolus <../Configuration/Preferences.html#erweiterte-instellungen>`_ abzugeben.
 * Darstellung der Insulinaktivität
 * Anpassung der IOB-Vorhersagen auf Basis der Autosens Ergebnisse
 * Neue gepatchte Dexcom App (`2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
