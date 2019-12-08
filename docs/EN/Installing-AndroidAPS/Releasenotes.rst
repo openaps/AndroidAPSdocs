@@ -19,7 +19,7 @@ Release date: ?
 
 Major new features
 -----
-* New LocalProfile plugin
+* New `LocalProfile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Local profile can hold more than 1 profile
   * Profiles can be cloned and edited
@@ -34,8 +34,8 @@ Major new features
 * `Wear complications <../Configuration/Watchfaces.html>`_
 * New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 * Fixed language support
-* Objectives: `Allow to go back <../Usage/Objectives.html>`_, Time fetching dialog
-* Automation: `allow sorting <../Usage/Automation.html>`_
+* Objectives: `Allow to go back <../Usage/Objectives.html#go-back-in-objectives>`_, Time fetching dialog
+* Automation: `allow sorting <../Usage/Automation.html#sort-automation-rules>`_
 * Automation: fixed bug when automation was running with disabled loop
 * New status line for Combo
 * GlucoseStatus improvement
