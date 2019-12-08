@@ -2,7 +2,7 @@
 **********************
 December 2019
 =====
-* `Watchfaces <../Configuration/Watchfaces.html>`_
+* `Watchfaces <../Configuration/Watchfaces.html>`_ (major update, way more details)
 ноябрь 2019
 ===============
 * ` Автоматизация-деактивируйте при отключении петли <../Usage/Automation.html#important-note> ` _
