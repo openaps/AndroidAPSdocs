@@ -1,131 +1,162 @@
-# Smartwatch instellingen
+# AAPS on Wear OS smartwatch
 
-AndroidAPS is ontworpen om *te worden bediend* vanaf Android Wear horloges. Om te kunnen bolussen enz vanaf je horloge moet je bij "Wear instellingen" de optie "Bedieningen via horloge" geactiveerd hebben.
+You can install AndroidAPS app on your **Wear OS based** smartwatch. Watch version of AAPS allows you to:
 
-De volgende functies kunnen vanaf het horloge worden geactiveerd:
+* **display data on your watch**: by providing [custom watchfaces](../Configuration/Watchfaces#aaps-watchfaces) or in standard watchfaces with use of complications
+* **control AAPS on phone**: to bolus, set a temporary target etc. 
 
-* een tijdelijk BG doel (TT) instellen
-* een bolus toedienen
-* invoeren van vertraagde koolhydraten (eCarbs)
-* de bolus calculator gebruiken (in [instellingen](../Configuration/Config-Builder#wear) op de telefoon is geconfigureerd welke variabelen in de berekening worden meegenomen)
-* de status van de loop en pomp controleren
-* weergeven van de TDD (Totale Dagelijkse Dosis = bolus + basale insuline per dag)
+### Before you buy watch...
 
-Om dit te bereiken moet je de build variant "fullRelease" selecteren wanneer je [de APK bouwt](../Installing-AndroidAPS/Building-APK.md) (terwijl "pumpRelease" je in staat stelt om ook zonder loop de pomp te bedienen). Hierna kunt u binnen AndroidAPS vervolgens binnen de Configurator [Wear inschakelen](../Configuration/Config-Builder#wear).
+* Some features like *complications* require Wear OS version 2.0 or newer to work
+* Google rebranded *Android Wear 1.x* to *Wear OS* from version 2.x, so when it says *Android Wear* it may indicate older 1.x version of system
+* If description of smartwatch indicates only compatibility with *Android* and *iOS* - it **does not** means it runs on *Wear OS* - it may as well be some other sort of Vendor specific OS **which is not compatible with AAPS wear!**
+* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
-Er zijn verschillende watchfaces om uit te kiezen die de gemiddelde delta, IOB, momenteel actieve tijdelijke basaal en basale profielen + een CGM grafiek kunnen weergeven.
+### Building Wear OS version of AAPS
 
-![AndroidAPSv2-watchface](../images/AAPSv2_Watchface.png)
+To build Wear OS version of AAPS you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping).
 
-Zorg er voor dat meldingen van AndroidAPS niet geblokkeerd zijn op het horloge. Een actie (bijv. bolus, tijdelijk BG doel) moet door middel van een notificatie worden bevestigd. Pas na swipen en herbevestiging wordt deze uitgevoerd.
+Make sure both phone and wear versions of AAPS are signed with same keys!
 
-Voer een double-tap uit op je BG om sneller naar het AAPS-menu te gaan. Voer een double-tap uit op de BG grafiek om de tijdschaal ervan te wijzigen.
+Wear variant of APK need to be installed on watch in the same way you will install phone APK on phone. It may require enabling *developer mode* on watch and uploading and installing APK on watch with: `adb install wear-full-release.apk`
 
-## Beschikbare watchfaces
+When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync.
 
-![smartwatch instellingen](../images/watchfaces.jpg)
+### Setup on the Phone
 
-## Legenda AndroidAPSv2 watchface
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
 
-![Legenda AndroidAPSv2 watchface](../images/AAPSv2_Watchface_legend.png)
+## Controlling AAPS from Watch
 
-A - tijd sinds laatste uitvoering loop
+AndroidAPS is designed to be *controlled* by Android Wear watches. Als je wilt bolussen etc. vanaf je horloge, dan moet je bij "Wear instellingen" de optie "Bedieningen via horloge" geactiveerd hebben.
 
-B - CGM-uitlezing
+The following functions can be triggered from the watch:
 
-C - minuten sinds laatste CGM-uitlezing
+* set a temporary target
+* administer a bolus
+* administer eCarbs
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
+* check the status of loop and pump
+* show TDD (Total daily dose = bolus + basal per day)
 
-D - wijziging in vergelijking met de laatste CGM-uitlezing (in mmol of mg/dl)
+## AAPS Watchfaces
 
-Gemiddelde wijziging in de CGM-uitlezing in de laatste 15 minuten
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-F - telefoon batterij
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-G - basaal (getoond in E/uur tijdens standaard patroon en in % tijdens TBR)
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
-H - BGI (bloed glucose interactie) -> de mate waarin BG zou moeten stijgen of dalen uitgaande van enkel de insuline activiteit.
+## Watchfaces available
 
-I - koolhydraten (koolhydraten aan boord | e-carbs in de toekomst)
+![Available watchfaces](../images/Watchface_Types.png)
 
-J - insuline aan boord (van bolus | van basaal)
+## AAPSv2 watchface - Legend
 
-## Instellingen (in Android Wear horloge)
+![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-Om in de watchface instellingen te komen, dubbeltik op je BG, swipe omhoog en selecteer "Instellingen".
+A - time since last loop run
 
-![instellingen_aan_uit](../images/settings_on_off.jpg)
+B - CGM reading
 
-### AAPS-parameters
+C - minutes since last CGM reading
 
-Trillen bij Bolus (standaard Aan):
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-Eenheden voor Acties (standaard mg/dl): als "Aan" dan zijn eenheden voor acties in mg/dl, als "Uit" dan is de eenheid mmol/l. Wordt gebruikt bij het instellen van een tijdelijs streefdoel vanaf het horloge.
+E - average change CGM reading last 15 minutes
 
-### Watchface instellingen
+F - phone battery
 
-* Toon datum (standaard Uit): let op, weergave van de datum is niet op alle watchfaces beschikbaar
-* Toon IOB (standaard Aan): Laat de IOB waarde wel of niet zien (instelling voor gedetailleerde IOB waarde bevindt zich in de AAPS Wear parameters)
-* Toon COB (standaard Aan): Laat de COB waarde wel of niet zien
-* Toon Delta (standaard Aan): Laat de BG verandering van de afgelopen 5 minuten wel of niet zien
-* Toon GemiddDelta (standaard Aan): Laat de gemiddelde BG verandering van de afgelopen 15 minuten wel of niet zien
-* Toon Telefoon Batterij (standaard Aan): Laat de batterij van de Telefoon in % wel of niet zien. Is rood beneden de 30%.
-* Toon Rig Batterij (standaard Uit): Rig batterij is een samenvoeging van telefoon batterij, pomp batterij en sensor batterij (meestal de laagste van de 3 waarden)
-* Toon Basaal Stand (standaard Aan): Laat Actuele basaalstand in E/u (of in % als er een tijdelijk basaal actief is) al dan niet zien
-* Toon Loop Status (standaard Aan): Hoeveel minuten zijn verstreken sinds de laatste berekeningscyclus van de loop. De pijlen rondom het getal worden rood wanneer er meer dan 15 minuten zijn verstreken.
-* Toon BG (standaard Aan): Laat de meest recente BG waarde wel of niet zien
-* Toon Richtings Pijl (standaard Aan): Laat pijl voor richting van BG waarde wel of niet zien 
-* Toon Geleden (standaard Aan): Hoeveel minuten geleden sinds laatste CGM meting.
-* Donker (standaard Aan): Om te schakelen van zwarte achtergrond naar witte achtergrond (behalve voor Cockpit en Steampunk watchface)
-* Markeer Basaalstanden (standaard Uit): Om de zichtbaarheid van basaalstanden en tijdelijke basalen te verbeteren
-* Grafiek Tijdsschaal (standaard 3 uur): Selecteer in het submenu de maximale tijdsschaal van de grafiek (tussen 1 uur en 5 uur)
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-### Gebruikersinterface instellingen
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-Invoerontwerp: met deze parameter kun je de positie van "+" en "-"-knoppen selecteren wanneer je opdrachten invoert voor AAPS (Tijdelijk streefdoel, insuline, koolhydraten...)
+I - carbs (carbs on board | e-carbs in the future)
 
-![Opties voor invoerontwerp](../images/InputDesign.jpg)
+J - insulin on board (from bolus | from basal)
 
-### Specifieke watchface parameters
+## Accessing main menu of AAPS
+
+To access main menu of AAPS you can use on of following options:
+
+* double tap on your BG value
+* select AAPS icon in watch applications menu
+* tap on AAPS complication (if configured for menu)
+
+## Settings (in wear watch)
+
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+
+![Settings on/off](../images/Watchface_Settings_On_Off.png)
+
+### AAPS companion parameters
+
+* **Vibrate on Bolus** (default `On`):
+* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+
+### Watchface settings
+
+* **Show Date** (default `Off`): note, date is not available on all watchfaces
+* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
+* **Show COB** (default `On`): Display or not COB value
+* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
+* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
+* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
+* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
+* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
+* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
+* **Show BG** (default `On`): Display or not last BG value
+* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
+* **Show Ago** (default `On`): show how many minutes since last reading.
+* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
+* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
+* **Matching divider** (default Off): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
+* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+
+### User Interface setting
+
+* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+
+![Input design options](../images/Watchface_InputDesign.png)
+
+### Specific watchface parameters
 
 #### Steampunk watchface
 
-Delta Granulariteit (standaard Medium)
+* **Delta Granularity** (default Medium)
 
-![Steampunk_meter](../images/steampunk_gauge.jpg)
+![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Cirkel Watchface
 
-Grote Nummers: Tekstgrootte vergroten om zichtbaarheid te verbeteren
+* **Big Numbers**: Increase text size to improve visibility
+* **Ring History**: View graphically BG history with gray rings inside the hour's green ring
+* **Light Ring History**: Ring history more discreet with a darker gray
+* **Animations**: When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
 
-Ring geschiedenis: Grafische weergaven van BG geschiedenis met grijze ringen binnen de groene ring van het horloge
+### Commands settings
 
-Ring Geschiedenis Light: Discretere versie van Ring geschiedenis met een donkerdere grijstint
+* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
+* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
+* **Single Target** (default `On`):
+  
+  * `On`: you set a single value for TT
+  * `Off`: you set Low target and high target for TT
 
-Animaties:
+* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
-### Opdracht Instellingen
+## Troubleshooting the wear app:
 
-Wizard in het menu (standaard Aan): Staat de wizard-interface in het hoofdmenu toe om koolhydraten in te voeren en te bolussen vanaf het horloge
+* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
+* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 
-Ontlucht in het Menu (standaard Uit): Staat Ontlucht / Vul actie toe vanaf het horloge
+## View Nightscout data
 
-Enkel Streefdoel (standaard Aan):
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-* Aan: je stelt een enkele waarde in als Tijdelijk streefdoel
-* Uit: je stelt een Tijdelijk streefgebied in (lage + hoge grenswaarde)
+# Pebble
 
-Wizard Percentage (standaard Uit): Bolus correctie toestaan van wizard (waarde is opgegeven in percentage vóór bevestigingsnotificatie)
-
-## Probleemoplossing van de wear app:
-
-* Onder Android Wear 2.0 zal AndroidAPS niet meer vanzelf op je horloge worden geïnstalleerd. Om AndroidAPS op je wear horloge te installeren moet je nu naar de playstore op het horloge gaan (let op dit is niet hetzelfde als de playstore op de telefoon). Onder de categorie 'apps geinstalleerd op je telefoon' vind je een item AndroidAPS waarmee de installatie op je telefoon kan worden uitgevoerd. Schakel ook 'Automatisch bijwerken' in. 
-* Soms helpt het om de apps opnieuw te synchroniseren naar het horloge, omdat het een beetje langzaam kan zijn om dit zelf te doen: Android Wear > Tandwiel icoon > Horlogenaam > Synchroniseren apps.
-* Schakel ADB-foutopsporing in onder Ontwikkelaars Opties (op het horloge), verbind het horloge via USB en start de Wear app eenmaal in Android Studio.
-
-## Bekijken van gegevens in Nightscout
-
-Als je een ander looping systeem gebruikt en je wilt de loop details *bekijken* op een Android Wear horloge, of als je wilt kijken de loop van jouw kind bekijken, dan kunt je de NSClient APK downloaden en gebruiken. Om dit te doen volg de [APK build instructies](../Installing-AndroidAPS/Building-APK.md) waarbij je de build variant "NSClientRelease" selecteert. Er zijn verschillende watchfaces om uit te kiezen die de gemiddelde delta, IOB, momenteel actieve tijdelijke basaal en basale profielen + een CGM grafiek kunnen weergeven.
-
-## Pebble
-
-Pebble gebruikers kunnen de [Urchin watchface gebruiken](https://github.com/mddub/urchin-cgm) om de loopdata (indien geüpload naar Nightscout) *te bekijken*, maar je kunt niet via het horloge met AndroidAPS communiceren. U kunt verschillende velden kiezen om te tonen zoals IOB, en momenteel actief tijdelijk basaal en voorspellingen. Als u een open loop gebruikt kunt u [IFTTT](https://ifttt.com/) gebruiken om een applet te maken die zegt als Notificatie wordt ontvangen van AndroidAPS verzend dan een SMS of pushover notificatie.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
