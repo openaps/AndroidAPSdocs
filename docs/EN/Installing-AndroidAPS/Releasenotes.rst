@@ -13,6 +13,35 @@ If you do not update for another 30 days (90 days from new release date) AAPS wi
 
 Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
+Version 2.6
+=====
+Release date: ?
+
+Major new features
+-----
+* New LocalProfile plugin
+
+  * Local profile can hold more than 1 profile
+  * Profiles can be cloned and edited
+  * Ability of upload profiles to NS
+  * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
+  * Veritical NumberPicker for targets
+* SimpleProfile is removed
+* MDT plugin: Fixed bug with duplicated entries
+* Units are not specified in profile but it's global setting
+* Added new settings to startup wizard
+* Different UI and internal improvements
+* `Wear complications <../Configuration/Watchfaces.html>`_
+* New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Fixed language support
+* Objectives: `Allow to go back <../Usage/Objectives.html>`_, Time fetching dialog
+* Automation: `allow sorting <../Usage/Automation.html>`_
+* Automation: fixed bug when automation was running with disabled loop
+* New status line for Combo
+* GlucoseStatus improvement
+* Fixed TempTarget NS sync
+* Tons on new translations
+
 Version 2.5.1
 =====
 Release date: 31-10-2019
