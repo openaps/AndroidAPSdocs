@@ -112,7 +112,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 * **Show Ago** (default `On`): show how many minutes since last reading.
 * **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
 * **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default Off): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
+* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
 * **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
 
 ### User Interface setting
@@ -125,16 +125,16 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 #### Steampunk watchface
 
-* **Delta Granularity** (default Medium)
+* **Delta Granularity** (default `Medium`)
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Cirkel Watchface
 
-* **Big Numbers**: Increase text size to improve visibility
-* **Ring History**: View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History**: Ring history more discreet with a darker gray
-* **Animations**: When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* **Big Numbers** (default `Off`): Increase text size to improve visibility
+* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
+* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
+* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
 
 ### Commands settings
 
