@@ -37,5 +37,10 @@
 ---------------
 Можно попробовать изменить настройки блокировки шума в xdrip (Настройки - Настройки между приложениями - Блокировка шумов), напр. "Блокировать Очень высокий шум и хуже".  См. также `Сглаживание данных ГК <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
+Negative Sensor Age
+-----
+.. image:: ../images/Troubleshooting_SensorAge.png
+  :alt: Negative sensor age
 
+This occurs if there is either a double "CGM Sensor Insert" entry in careportal or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
 
