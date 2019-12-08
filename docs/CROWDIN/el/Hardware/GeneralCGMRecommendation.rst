@@ -37,5 +37,10 @@ CGM υγιεινή
 ---------------
 Προσπαθήστε να αλλάξετε τις ρυθμίσεις για αποκλεισμό θορύβου σε xdrip (Ρυθμίσεις - Ρυθμίσεις μεταξύ εφαρμογών - Αποκλεισμός θορύβου).π.χ. "Αποκλεισμός πολύ υψηλού θορύβου".  Δείτε επίσης την ενότητα `Εξομάλυνση δεδομένων BG <../ Χρήση /Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
+Negative Sensor Age
+-----
+.. image:: ../images/Troubleshooting_SensorAge.png
+  :alt: Negative sensor age
 
+This occurs if there is either a double "CGM Sensor Insert" entry in careportal or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
 
