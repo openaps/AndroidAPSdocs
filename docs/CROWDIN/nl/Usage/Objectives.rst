@@ -42,6 +42,16 @@ Doel 4: Beginnen met een open loop
 * Voer minstens 20 tijdelijke basaalstanden in over een periode van 7 dagen; voer ze in op jouw pomp en bevestig in AndroidAPS dat je ze hebt geaccepteerd.  Controleer dat deze gegevens zichtbaar zijn in AndroidAPS en Nightscout.
 * Stel 'tijdelijke streefdoelen <../Usage/temptarget.html>'_ in indien nodig. Gebruik bijvoorbeeld een tijdelijk hypo streefdoel om te voorkomen dat het systeem te sterk corrigeert voor een stijgende bloedsuiker na een hypo. 
 
+Reduce number of notifications
+-----
+* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l. * You might even want to wider upper limit (or disable Open Loop) at night. 
+* In Preferences you can set a minimum percentage for suggestion of basal rate change.
+
+   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
+     :alt: Open Loop minimal reqeust change
+     
+* Also, you do not need to act every 5 minutes on all suggestions...
+
 Doel 5: De Open Loop begrijpen, inclusief de voorgestelde tijdelijke basaalstanden
 ===================================================================================
 * Leer de reden achter een suggestie voor tijdelijke basaalstand kennen. Kijk naar de 'determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>'_ en naar de 'voorspelling in de glucosegrafiek van het AndroidAPS Overzichts-scherm <../Getting-Started/Screenshots.html#section-e>`_ of Nightscout, en naar de berekening in je OpenAPS tab.
