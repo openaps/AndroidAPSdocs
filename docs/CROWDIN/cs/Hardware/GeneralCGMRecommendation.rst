@@ -37,5 +37,10 @@ Skákající hodnoty
 ---------------
 Můžete zkusit změnit nastavení xDrip+ pro filtraci a blokování šumu (Nastavení - Komunikace mezi aplikacemi - Noise blocking) t.j. "Block very High noise and worse".  Podívejte se také na `Vyhlazování dat glykémie <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
+Negative Sensor Age
+-----
+.. image:: ../images/Troubleshooting_SensorAge.png
+  :alt: Negative sensor age
 
+This occurs if there is either a double "CGM Sensor Insert" entry in careportal or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
 
