@@ -20,7 +20,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 * * *
 
-### Insulet Omnipod (avec les anciens Pods Eros) ([Page d'accueil](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Etat de la boucle :** Non pris en charge nativement par AAPS pour le moment. Le décodage du protocole Omnipod est terminé : [OpenOmni](http://www.openomni.org/) et [OmniAPS Slack](https://omniaps.slack.com/)
 
@@ -32,7 +32,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 **Implémentations Java : **Aucun jusqu'à présent.
 
-**Etat d'implémentation AAPSb:** Le travail a commencé sur [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) pour Omnipod (branche dev_omnipod) qui n'aura pas besoin d'un Pi Raspberry, mais ce n'est pas terminé. Vous pouvez suivre l'avancement sur https://omniaps.slack.com/ canal android-driver.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
 
 **Configuration matérielle requise pour AAPS :** RileyLink avec Omnipod firmware (2.x) et une antenne 433 MHz.
 
