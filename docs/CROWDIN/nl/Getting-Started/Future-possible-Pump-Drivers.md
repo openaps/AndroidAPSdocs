@@ -20,7 +20,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 * * *
 
-### Omnipod Eros ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Status:** (Opmerking: de Omnipod Eros is de huidige versie pods) Op dit moment nog niet ondersteund door de master-versie van AAPS. Daar wordt wel al een tijd aan gewerkt. Het Omnipod communicatieprotocol is al gedecodeerd, zie [OpenOmni](http://www.openomni.org/) en [OmniAPS Slack](https://omniaps.slack.com/). De Eros pods kunnen nu al worden gebruikt met andere systemen (zie hieronder), de precieze status voor AAPS lees je ook verderop (zie AAPS status).
 
@@ -32,7 +32,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 
 
-**AAPS status:** Er wordt gewerkt aan een versie van AndroidAPS waar alleen een Rileylink nodig zal zijn en geen Raspberry Pi meer (zoals bij Omnipy). Zie [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) voor Omnipod (dev_omnipod branch). Dit is nog niet afgerond. Je kunt de voortgang volgen op https://omniaps.slack.com/ in kanaal 'android-driver'.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
 
 **Hardware eisen voor AAPS:** RileyLink (versie 2.x) met 433MHz antenne.
 
