@@ -37,5 +37,10 @@ Springende Werte
 ---------------
 Versuche, die Einstellungen zum "noise blocking" in xDrip (Einstellungen -> Inter-App Einstellungen -> Verrauschungsunterdrückung) zu ändern, z.B. "Block Very High noise and worse. Siehe auch    `Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
+Negative Sensor Age
+-----
+.. image:: ../images/Troubleshooting_SensorAge.png
+  :alt: Negative sensor age
 
+This occurs if there is either a double "CGM Sensor Insert" entry in careportal or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
 
