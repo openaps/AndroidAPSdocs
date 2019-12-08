@@ -42,6 +42,16 @@ Objective 4: Starting on an open loop
 * Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
 * Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
 
+Reduce number of notifications
+-----
+* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l. * You might even want to wider upper limit (or disable Open Loop) at night. 
+* In Preferences you can set a minimum percentage for suggestion of basal rate change.
+
+   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
+     :alt: Open Loop minimal reqeust change
+     
+* Also, you do not need to act every 5 minutes on all suggestions...
+
 Objective 5: Understanding your open loop, including its temp basal recommendations
 ===================================================================================
 * Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#section-e>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
