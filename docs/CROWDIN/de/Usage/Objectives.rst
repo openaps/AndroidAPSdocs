@@ -42,6 +42,16 @@ Ziel 4: Starte den Open Loop
 * Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der temporären Basalratenanpassungen; gib sie jeweils von Hand in der Pumpe ein und bestätige in AndroidAPS, dass du sie akzeptiert hast.  Überprüfe, ob diese Daten in AndroidAPS und Nightscout angezeigt werden.
 * Aktiviere falls notwendig `temporäre Ziele <../Usage/temptarget.html>`_. Nutze das Hypo Temp Target um zu verhindern, dass AAPS aufgrund des Blutzuckeranstiegs nach einer Hypo zu stark korrigiert. 
 
+Reduce number of notifications
+-----
+* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l. * You might even want to wider upper limit (or disable Open Loop) at night. 
+* In Preferences you can set a minimum percentage for suggestion of basal rate change.
+
+   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
+     :alt: Open Loop minimal reqeust change
+     
+* Also, you do not need to act every 5 minutes on all suggestions...
+
 Ziel 5: Open Loop inklusive der temporären Basalratenvorschläge verstehen
 ===================================================================================
 * Lerne das Konzept hinter den Basalratenvorschlägen kennen, indem Du Dir  `Basalraten verstehen <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ durchliest sowie die Vorhersagelinie auf dem AndroidAPS Hauptbildschirm und die Zusammenfassung der Ausgaben von den Berechnungen in deinem OpenAPS Tab anschaust.
