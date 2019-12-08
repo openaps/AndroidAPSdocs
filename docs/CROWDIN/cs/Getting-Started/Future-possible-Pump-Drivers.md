@@ -26,9 +26,9 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Ostatní implementace:**
 
-- Omnipy for AndroidAPS (stabilní verze se testuje, vyžaduje Raspberry Pi i RileyLink a speciálně upravneou verzi AndroidAPS) [Omnipy](https://github.com/winemug/omnipy)
-- OmniCore for AndroidAPS (dosud nevydáno, C# kód běžící "nativně" na Androidu, vyžaduje pouze RileyLink a speciálně upravenou verzi AndroidAPS - příští verze projektu Omnipy). [OmniCore](https://github.com/winemug/OmniCore)
-- Loop (stabilní, vydáno, vyžaduje RileyLink). [Loop](https://loopkit.github.io/loopdocs/)
+- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
+- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
+- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
 
 **Java implementace:** Prozatím žádné.
 
