@@ -2,7 +2,7 @@ Wiki updates & veranderingen
 **********************
 December 2019
 =====
-* `Watchfaces <../Configuration/Watchfaces.html>`_
+* `Watchfaces <../Configuration/Watchfaces.html>`_ (major update, way more details)
 November 2019
 ===============
 * `Automation - deactivate when disabeling loop <../Usage/Automation.html#important-note>`_
