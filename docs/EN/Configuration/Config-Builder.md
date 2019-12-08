@@ -31,6 +31,7 @@ Buttons:
 * red X: delete
 * blue arrow: duplicate
 
+#### Clone profile switch
 You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 1. Go to treatments tab.
 2. Select ProfileSwitch.
@@ -40,6 +41,11 @@ You can easily create a new local profile from a profile switch. In this case ti
 ![Clone profile switch](../images/LocalProfile_ClonePS.png)
 
 If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+
+#### Upload loacal profiles to Nightscout
+Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+
+![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
 Advantage:
 * no internet connection necessary to change profile settings
@@ -63,10 +69,6 @@ Advantage:
 Disadvantage: 
 * no local changes to profile settings
 * profile cannot be changed directly on the phone
-
-### Simple profile
-Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
-
 
 ## Insulin
 Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. 
