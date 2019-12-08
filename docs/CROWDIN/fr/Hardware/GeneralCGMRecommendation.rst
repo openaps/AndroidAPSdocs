@@ -37,5 +37,10 @@ Saut de valeurs
 ----------------------------------------
 Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (Paramètres - Inter-app settings - Noise Blocking) par ex. "Block Very High noise and worse".  Voir également `Lissage des glycémies <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
+Negative Sensor Age
+-----
+.. image:: ../images/Troubleshooting_SensorAge.png
+  :alt: Negative sensor age
 
+This occurs if there is either a double "CGM Sensor Insert" entry in careportal or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
 
