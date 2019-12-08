@@ -83,6 +83,13 @@ To sort automation rules click and hold the four-lines-button on the right side 
 
 .. image:: ../images/Automation_Sort.png
   :alt: Sort automation rules
+  
+Delete automation rules
+-----
+To delete an automation rule just swipe it left or right.
+
+.. image:: ../images/Automation_Delete.png
+  :alt: Delete automation rule
 
 Good practice
 ==========
