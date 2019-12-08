@@ -26,9 +26,9 @@
 
 **Άλλες εφαρμογές:**
 
-- Omnipy για το AndroidAPS (σταθερό στη δοκιμή, απαιτεί το Raspberry Pi καθώς και το RileyLink και το ειδικά τροποποιημένο AndroidAPS) [ Omnipy ](https://github.com/winemug/omnipy)
-- Το OmniCore για το AndroidAPS (δεν κυκλοφορεί ακόμα, ο κώδικας C # που "τρέχει" στο Android, απαιτεί μόνο RileyLink και ειδικά τροποποιημένο AndroidAPS - επόμενη έκδοση του προγράμματος Omnipy). [OmniCore](https://github.com/winemug/OmniCore)
-- Κύκλωμα(σταθερό, απελευθερωμένο, απαιτεί RileyLink). [Κύκλωμα](https://loopkit.github.io/loopdocs/)
+- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
+- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
+- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
 
 **Υλοποιήσεις της εφαρμογής Java: ** Καμία μέχρι τώρα.
 
