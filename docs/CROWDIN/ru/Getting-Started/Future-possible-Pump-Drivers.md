@@ -20,7 +20,7 @@
 
 * * *
 
-### Insulet Omnipod (со старыми pod-блоками Eros) ([Домашняя страница](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Статус взаимодействия с ИПЖ:** В настоящее время нативно не поддерживается в среде AAPS. Завершено декодирование протокола Omnipod- [OpenOmni](http://www.openomni.org/) и [OmniAPS Slack](https://omniaps.slack.com/)
 
@@ -32,7 +32,7 @@
 
 **Реализации на Java:** Пока нет.
 
-**Cтатус реализации на AAPS:** Работа началась на [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) для Omnipod (dev_omnipod branch), который не потребует Raspberry Pi, не завершена. За развитием можно следить на на https://omniaps.slack.com/, канал android-driver.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
 
 **Требование к оборудованию для AAPS:** RileyLink с прошивкой Omnipod (2.x) и антенной 433 МГц.
 
