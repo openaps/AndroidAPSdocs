@@ -26,9 +26,9 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 **Autres implémentations :**
 
-- Omnipy pour AndroidAPS (stable lors des tests, nécessite un Raspberry Pi ainsi qu'un RileyLink, et une version d'AndroidAPS modifiée) [Omnipy](https://github.com/winemug/omnipy)
-- OmniCore pour AndroidAPS (pas encore publié, le code C# fonctionne "nativement" sur Android, ne nécessite que le RileyLink et une version spécialement modifiées d'AndroidAPS - prochaine version du projet Omnipy). [OmniCore](https://github.com/winemug/OmniCore)
-- Loop (stable, publié, nécessite RileyLink). [Loop](https://loopkit.github.io/loopdocs/)
+- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
+- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
+- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
 
 **Implémentations Java : **Aucun jusqu'à présent.
 
