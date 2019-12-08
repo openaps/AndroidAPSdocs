@@ -2,7 +2,7 @@
 
 You can install AndroidAPS app on your **Wear OS based** smartwatch. 
 Watch version of AAPS allows you to:
-* **display data on your watch**: by providing [custom watchfaces](../Getting-Started/Watchfaces#aaps-watchfaces) or in standard watchfaces with use of complications
+* **display data on your watch**: by providing [custom watchfaces](../Configuration/Watchfaces#aaps-watchfaces) or in standard watchfaces with use of complications
 * **control AAPS on phone**: to bolus, set a temporary target etc. 
 
 ### Before you buy watch...
