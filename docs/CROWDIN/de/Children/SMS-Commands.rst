@@ -1,13 +1,13 @@
 SMS-Befehle
-*****
+**************************************************
 Sicherheitshinweise
-======
+==================================================
 * AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
 * AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Befehle, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
 * **Wenn Du einen Bolus über  SMS-Befehle abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
 
 Funktionsweise
-=====
+==================================================
 * Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. können über die `NSclient App <../Children/Children.html>`_ auf einem Android Smartphone durchgeführt werden.
 * Boli können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Befehle verwenden.
 * Falls Du als Follower ein iPhone verwendest und daher NSclient nicht nutzen kannst, gibt es weitere SMS-Befehle.
@@ -29,7 +29,7 @@ Funktionsweise
 **Hinweis:** Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
 Befehle
-=====
+==================================================
 
 Groß- und Kleinschreibung müssen beim Senden der Befehle nicht berücksichtigt werden.
 
@@ -39,7 +39,7 @@ Befehle müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner 
   :alt: Beispiele für SMS-Befehle
 
 Loop
------
+--------------------------------------------------
 * LOOP STOP/DISABLE
    * Antwort: Loop wurde deaktiviert.
 * LOOP START/ENABLE
@@ -55,7 +55,7 @@ Loop
    * Antwort: Loop wurde fortgesetzt
 
 CGM-Daten
------
+--------------------------------------------------
 * BZ
    * Antwort: Letzter BZ: 5.6 4min her, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
@@ -63,7 +63,7 @@ CGM-Daten
    * Antwort, nachdem der korrekte Code von AAPS empfangen wurde: Kalibrierung gesendet (**Falls xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein.)
 
 Basal
------
+--------------------------------------------------
 * BASAL STOP/CANCEL
    * Antwort: Antworte mit dem Code EmF, um die temporäre Basalrate zu beenden
 * BASAL 0.3
@@ -76,7 +76,7 @@ Basal
    * Antwort: Um die Basalrate von 30% für 50 Minuten zu setzen, antworte mit dem Code Swe
 
 Bolus
------
+--------------------------------------------------
 Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAPS oder nach dem letzten SMS-Befehl nicht möglich. Den Wert kannst Du nur anpassen, wenn mind. zwei Rufnummern eingetragen sind. Die Antwort hängt daher davon ab, wann der letzte Bolus abgegeben wurde.
 
 * BOLUS 1.2
@@ -96,7 +96,7 @@ Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAP
    * Antwort: Um den erweiterten Bolus2 IE für 120 Minuten abzugeben, antworte mit dem Code EmF
 
 Profile
------
+--------------------------------------------------
 * PROFILE STATUS
    * Antwort: Profil1
 * PROFILE LIST
@@ -107,7 +107,7 @@ Profile
    * Antwort: Um zum Profil 2 mit 30% zu wechseln, antworte mit Code Any
 
 Andere
------
+--------------------------------------------------
 * TREATMENTS REFRESH
    * Antwort: Behandlungen von NS aktualisieren
 * NSCLIENT RESTART
@@ -126,7 +126,7 @@ Andere
    * Antwort: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Problembehandlung
-=====
+==================================================
 Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als chat message senden' behoben werden.
 
 .. image:: ../images/SMSdisableChat.png
