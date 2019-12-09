@@ -14,7 +14,7 @@ If using G5 with patched Dexcom app
 * Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
 
    * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.5.
-   * Open https://play.google.com/store/search?q=dexcom%20g5 on your computer. Region will be visible in URL.
+   * Open https://play.google.com/store/search?q=dexcom%20g5 on your computer. La región estará visible en el URL.
    
    .. image:: ../images/DexcomG5regionURL.PNG
      :alt: Region in Dexcom G5 URL
