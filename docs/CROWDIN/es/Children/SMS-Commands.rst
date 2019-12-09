@@ -13,7 +13,7 @@ Cómo funciona
 * If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
 
 * In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
+* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678; +4412345679) y también habilita 'Permitir comandos remotos via SMS'.
 * Si desea utilizar más de un número:
 
   * Introduzca sólo un número.
@@ -59,33 +59,33 @@ Datos de CGM
 * BG
    * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   *Respuesta: Para enviar calibración 5.6 enviar código Rrt
+   * Respuesta después de recibir el código correcto: Calibración enviada (**Si xDrip está instalado. Debe estar habilitado aceptar calibración en xDdrip+**)
 
-Basal
+Dosis Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
    * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * Respuesta: Para iniciar una basal 0.3 U/h durante 30 min responder con código Swe
 * BASAL 0.3 20
    * Response: To start basal 0.3U/h for 20 min reply with code Swe
 * BASAL 30%
    * Response: To start basal 30% for 30 min reply with code Swe
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * Respuesta: Para iniciar una basal 30% durante 50 min responder con código Swe
 
-Bolus
+Bolo
 --------------------------------------------------
 Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code Rrt
-   * Response B: Remote bolus not available. Try again later.
+   * Respuesta A: Para entregar el bolo 1.2 U responder con el código de Rrt
+   * Respuesta B: Los bolos remotos no están disponibles. Vuelve a intentarlo más tarde.
 * BOLUS 0.60 MEAL
    * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
    * Response A: To deliver meal bolus 0.60U reply with code Rrt
-   * Response B: Remote bolus not available. 
+   * Respuesta B: Los bolos remotos no están disponibles. 
 * CARBS 5
    * Response: To enter 5g at 12:45 reply with code EmF
 * CARBS 5 17:35/5:35PM
