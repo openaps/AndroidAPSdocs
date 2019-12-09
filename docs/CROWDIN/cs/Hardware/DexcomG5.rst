@@ -1,7 +1,7 @@
 Dexcom G5
-**********
+**************************************************
 Používáte-li G5 s xDrip+
-===========================
+==================================================
 * Pokud jste tak dosud neučinili, tak stáhněte `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ a postupujte podle instrukcí na Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
 * V xDrip vyberte Nastavení -> Komunikace mezi aplikacemi - > Lokální odesílání dat a vyberte zapnout.
 * V xDrip vyberte Nastavení -> Komunikace mezi aplikacemi - > Přijímat ošetření a vyberte vypnout.
@@ -10,7 +10,7 @@ Používáte-li G5 s xDrip+
 Pokud AndroidAPS nepřijímá v režimu letadlo hodnoty glykémie, musíte nastavit `Identify receiver` tak, jak je popsáno v [nastavení xDrip+](../Configuration/xdrip.md).
 
 Používáte-li G5 s upravenou Dexcom aplikací
-=========================================================
+==================================================
 * Stáhněte si apk z 
 `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, 
 kde si podle používaných jednotek glykémie vyberte odpovídající G5 verzi (mg/dl nebo mmol/l).
