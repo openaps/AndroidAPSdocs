@@ -1,18 +1,18 @@
 Dexcom G6
 **************************************************
-Basics first
+Lo básico primero
 ==================================================
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`_.
-* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the `latest nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_. Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* Siga la higiene general de la CGM y establezca la recomendación del sensor ` Aquí <../Hardware/GeneralCGMRecommendation.html>` _.
+* Para los transmisores G6 fabricados después del final del otoño de 2018, asegúrese de utilizar una de las ` última versión nightly de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>` _. Dichos transmisores tienen un nuevo firmware y la última versión estable de xDrip+ (2019/01/10) no puede tratar con él.
 
-General hints for looping with G6
+Consejos generales para el bucle con G6
 ==================================================
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of: 
+Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo que se sugiere en primer lugar. Para utilizar de manera segura, hay un par de puntos a tener en cuenta: 
 
-* If you are using the native data with the calibration code in xDrip or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
-* If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
+* Si está utilizando los datos nativos con el código de calibración en xDrip o Spike, la cosa más segura es no permitir reinicios preventivos del sensor.
+* Si debe usar reinicio preventivo, a continuación, asegúrese de insertar una hora del día donde puede observar el cambio y calibrar si es necesario. 
 * If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
 * Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
 * If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
@@ -31,10 +31,10 @@ If using G6 with xDrip+
 
 If using G6 with patched Dexcom app
 ==================================================
-* Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
+* Descargar el apk desde `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, y elegir la versión que más se adapte a sus necesidades (mg/dl o mmol/l versión, G6).
 
    * Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.5.
-   * Open https://play.google.com/store/search?q=dexcom%20g6 on your computer. Region will be visible in URL.
+   * Abrir https://play.google.com/store/search?q=dexcom%20g6 en tu ordenador. La región estará visible en el URL.
    
    .. image:: ../images/DexcomG6regionURL.PNG
      :alt: Region in Dexcom G6 URL
@@ -58,17 +58,17 @@ Dexcom G6 specific troubleshooting
 * Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
 
   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-  * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+  * Transmisor de serie empezando con 8G o 8H: "Obengo la glucosa hh:mm" (es decir, "Obtuviste la glucosa 19:04") o "No hay datos hh:mm" (por ejemplo. "Obtenidos ahora en bruto 19:04")
 
-.. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
+.. imagen:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshoothing
+Resolver problemas generales
 --------------------------------------------------
 General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
 
-New transmitter with running sensor
+Nuevo transmisor con sensor en ejecución
 --------------------------------------------------
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
+If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. Se puede encontrar un vídeo en 'https: //youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>` _.
 
 
