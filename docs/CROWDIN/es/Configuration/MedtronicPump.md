@@ -1,10 +1,10 @@
-# Medtronic Pumps
+# Bombas Medtronic
 
-**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)). <<<<**
+**>>>> El controlador de bomba de Medtronic es de la versión 2.5 de AndroidAPS (maestro). Si bien este es el caso, el controlador Medtronic debe ser considerado como software beta. Por favor, instale sólo si es usuario experimentado. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)). <<<<**
 
 * * *
 
-Works only with older Medtronic pumps (details see below). Does not work with Medtronic 640G or 670G.
+Funciona sólo con las bombas Medtronic más antiguas (detalles a continuación). No funciona con Medtronic 640G o 670G.
 
 * * *
 
@@ -16,11 +16,11 @@ Works only with older Medtronic pumps (details see below). Does not work with Me
     - 512/712
     - 515/715
     - 522/722
-    - 523/723 (firmware 2.4A or lower)
-    - 554/754 EU release (firmware 2.6A or lower)
-    - 554/754 Canada release (firmware 2.7A or lower)
+    - 523/723 (firmware 2.4A o inferior)
+    - 554/754 versión de EU (firmware 2.6A o inferior)
+    - 554/754 versión de Canadá (firmware 2.7A o inferior)
 
-## Configuration of the pump
+## Configuración de la bomba
 
 - **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication.
 - **Set Max Basal** on your Pump to your "max basal entry in your STD profile" * 4 (if you want to have 400% TBR as max). This number must be under 35 (as you can see in pump).
