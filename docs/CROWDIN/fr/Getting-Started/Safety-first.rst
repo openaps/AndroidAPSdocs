@@ -1,10 +1,10 @@
 La sécurité avant tout
-===========
+**************************************************
 
 **Quand vous décidez de construire votre propre pancreas artificiel, c’est toujours important de penser à la sécurité et à la sureté, et de bien comprendre les impacts de toutes vos actions**
 
 Généralités
-------------
+==================================================
 
 * AndroidAPS est seulement un outil pour vous aider à gérer votre diabète, ce n’est pas un système totalement automatique que vous pouvez installer et oublier!
 * Ne partez pas du principe que AndroidAPS ne fera jamais d’erreur. Le dispositif prend le contrôle de la délivrance d’insuline : surveillez le tout le temps, comprenez comment il fonctionne, et apprenez comment interpréter ses actions.
@@ -13,7 +13,7 @@ Généralités
 * Vous pourriez aussi avoir besoin de modifier vos habitudes en tant que diabétique lorsque vous changez de thérapie en utilisant un système de boucle fermée. Par ex. certaines personnes signalent qu'elles ont besoin de moins de traitements d'hypo car AndroidAPS a déjà réduit l'insuline.  
    
 Communicateur SMS
------------------
+==================================================
 
 * AndroidAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN.
 * AndroidAPS vous informera également par SMS si vos commandes distantes, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
