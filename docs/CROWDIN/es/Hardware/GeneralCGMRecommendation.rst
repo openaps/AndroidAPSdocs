@@ -10,37 +10,37 @@ Sea cual sea el sistema CGM que esté usando, si va a utilizar la calibración b
 * Trata de calibrar cuando tienes una serie de puntos con una flecha plana (de 15 a 30 minutos es normalmente suficiente)
 * Evitar la calibración cuando los niveles de glucosa se mueven hacia arriba o hacia abajo. 
 * Haz las "suficientes" calibraciones-en las aplicaciones oficiales, se te pedirá una o dos verificaciones por día. En sistemas DIY es posible que no lo sea, y debe tener cuidado de continuar sin calibraciones.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* Si es posible, calibrar con algunas de sus lecturas en un rango inferior (4-5mmol/l o 72-90mg/dl) y algunas a un nivel ligeramente superior (7-9mmol/l o 126-160mg/dl) ya que esto proporciona un mejor rango para la calibración de punto/pendiente.
 
 Configurando el sensor (G6)
 ==================================================
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. La hebra de sensor no debe entrar en contacto con la sangre.
+Al establecer el sensor, se recomienda no presionar demasiado el insertador para evitar la hemorragia. La hebra de sensor no debe entrar en contacto con la sangre.
 
-Después de ajustar el sensor, el transmisor se puede colocar en el adaptador del sensor. Caution! First click in the square side and then press down the round side.
+Después de ajustar el sensor, el transmisor se puede colocar en el adaptador del sensor. ¡Precaución! Primero haga clic en el lado cuadrado y, a continuación, presione hacia abajo la parte circular.
 
 Troubleshooting 
 ==================================================
 
-Connection problems
+Problemas de conexión
 --------------------------------------------------
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is reestablished the data is backfilled.
+La conexión Bluetooth puede ser alterada por otros dispositivos Bluetooth cercanos como, por ejemplo, medidores de glucosa en sangre, auriculares, tabletas o dispositivos de cocina tales como hornos de microondas o placas de cerámica. En este caso, xdrip no muestra ningún valor de BG. Cuando se restablece la conexión bluetooth, los datos se completan.
 
-Sensor Errors
+Errores de sensor
 --------------------------------------------------
-If recurring sensor errors occur try selecting a different body site to set your sensor. La hebra de sensor no debe entrar en contacto con la sangre. 
+Si se producen errores recurrentes del sensor, intente seleccionar un sitio del cuerpo diferente para colocar el sensor. La hebra de sensor no debe entrar en contacto con la sangre. 
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+A menudo un "Error de Sensor" puede ser corregido de inmediato bebiendo líquidos y masajeando alrededor del sensor!
 
-Jumpy values
+Valores inestables
 --------------------------------------------------
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Puede tratar de cambiar la configuración del bloqueo de ruido en xdrip (Settings - Inter-App Settings - Noise Blocking), es decir,. "Bloque de Muy Alto nivel de ruido y peor".  Véase también " Suavizado datos de BG <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
-Negative Sensor Age
+Edad de sensor negativa
 --------------------------------------------------
-.. image:: ../images/Troubleshooting_SensorAge.png
-  :alt: Negative sensor age
+.. imagen:: ../images/Troubleshooting_SensorAge.png
+  :alt: Edad de sensor negativa
 
-This occurs if there is either a double "CGM Sensor Insert" entry in careportal or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
+Esto ocurre si hay una entrada doble "CGM Sensor Insert" en el careportal o un sensor insertado con una fecha incorrecta. Vaya a pestaña tratamientos > careportal y suprima la entrada errónea.
 
