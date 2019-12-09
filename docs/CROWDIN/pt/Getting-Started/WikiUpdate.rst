@@ -1,10 +1,10 @@
 Wiki updates & changes
-**********************
+**************************************************
 December 2019
-=====
+==================================================
 * `Watchfaces <../Configuration/Watchfaces.html>`_ (major update, way more details)
 November 2019
-===============
+==================================================
 * `Automation - deactivate when disabeling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
 * `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
@@ -21,7 +21,7 @@ November 2019
 * Wiki - update `edit <../make-a-PR.md#code-syntax>`_ and `translation <../translations.html#translate-wiki-pages>`_.
 
 October 2019
-===============
+==================================================
 * `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ updates (especially on `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - log options <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `COB calculation on separate page <../Usage/COB-calculation.html>`_
@@ -34,7 +34,7 @@ October 2019
 * `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
 
 September 2019
-===============
+==================================================
 * `Automate <../Usage/Automation.html>`_
 * `Bolus calculator <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - slow carb absorbtion
 * `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
@@ -43,7 +43,7 @@ September 2019
 * `What is a closed loop system? <../Getting-Started/ClosedLoop.html>`_
 
 August 2019
-===========
+==================================================
 * `Dexcom G6 patched app region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
 * `Dexcom G6 new transmitter <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `O que é preciso? <../index.html#what-do-i-need>`_ - new structure & additional information
