@@ -1,5 +1,5 @@
 Wat is een closed loop systeem met AndroidAPS?
-****************************
+**************************************************
 
 AndroidAPS is een app die wordt gebruikt als 'kunstmatige alvleesklier' systeem (Artificial Pancreas System of kortweg APS in het Engels). Deze app draait op een Android smartphone   en heeft hetzelfde doel als een menselijke alvleesklier: de bloedglucosewaardes automatisch binnen gezonde grenzen houden. 
 
@@ -25,7 +25,7 @@ Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hu
 Als je klaar bent voor deze uitdaging, lees dan verder. 
 
 ** Belangrijkste doelen van AndroidAPS: **
-===========================================
+==================================================
 
 * Een app waarbij de veiligheid ingebouwd zit. Om meer te lezen over de veiligheids-functies van de oref0 en oref1 algoritmen, klik hier (https://openaps.org/reference-design/)
 * Een alles-in-één app voor het beheer van type 1 diabetes
@@ -38,7 +38,7 @@ Als je klaar bent voor deze uitdaging, lees dan verder.
 * Een app waarvan de gebruiker de veiligheidsbeperkingen zelf instelt 
 
 Hoe te beginnen
-===============
+==================================================
 Natuurlijk is alles wat hier beschreven staat belangrijk, maar de grote hoeveelheid nieuwe informatie kan in het begin behoorlijk verwarrend zijn.
 Een goede oriëntatie wordt gegeven door het `Module Overzicht <../Module/module.html>'_ en de `Doelen <../Usage/Objectives.html>`_. Of bekijk het 'Gebruiksvoorbeeld <../Getting-Started/Sample-Setup.html>`_: met Dana pomp, Dexcom sensor en Sony Smartwatch.
  
