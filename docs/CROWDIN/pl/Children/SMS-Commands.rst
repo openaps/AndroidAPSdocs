@@ -1,13 +1,13 @@
 Komunikator SMS
-*****
+**************************************************
 Bezpieczeństwo
-======
+==================================================
 * AndroidAPS umożliwia zdalne sterowanie telefonem dziecka za pomocą wiadomości tekstowej. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN.
 * AndroidAPS poinformuje Cię również Sms-em, jeśli Twoje polecenia zdalne, takie jak zmiana bolusa lub profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.
 * **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 
 Jak to działa
-=====
+==================================================
 * Most of the adjustments of temp targets, following AAPS etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
 * Boluses can't be given through Nightscout, but you can use SMS commands.
 * If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
@@ -29,7 +29,7 @@ Jak to działa
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
 Polecenia
-=====
+==================================================
 
 Upper and lower case is irrelevant when sending commands.
 
@@ -39,7 +39,7 @@ Commands must be send in English, response will be in your local language if the
   :alt: SMS Commands Example
 
 Loop
------
+--------------------------------------------------
 * LOOP STOP/DISABLE
    * Response: Loop has been disabled
 * LOOP START/ENABLE
@@ -55,7 +55,7 @@ Loop
    * Response: Loop resumed
 
 CGM data
------
+--------------------------------------------------
 * BG
    * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
@@ -63,7 +63,7 @@ CGM data
    * Response after correct code was received: Calibration sent (**If xDrip is installed. Akceptacja kalibracji musi być włączona w xDrip+**)
 
 Basal
------
+--------------------------------------------------
 * BASAL STOP/CANCEL
    * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
 * BASAL 0.3
@@ -76,7 +76,7 @@ Basal
    * Response: To start basal 30% for 50 min reply with code Swe
 
 Bolus
------
+--------------------------------------------------
 Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
 
 * BOLUS 1.2
@@ -96,7 +96,7 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
    * Response: To start extended bolus 2U for 120 min reply with code EmF
 
 Profil
------
+--------------------------------------------------
 * PROFILE STATUS
    * Response: Profile1
 * PROFILE LIST
@@ -107,7 +107,7 @@ Profil
    * Response: To switch profile to Profile2 30% reply with code Any
 
 Other
------
+--------------------------------------------------
 * TREATMENTS REFRESH
    * Response: Refresh treatments from NS
 * NSCLIENT RESTART
@@ -126,7 +126,7 @@ Other
    * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Rozwiązywanie problemów
-=====
+==================================================
 Pojawił się raport o zatrzymywaniu się poleceń SMS po aktualizacji telefonu Galaxy S10. Można to rozwiązać, wyłączając opcję „wyślij jako wiadomość czatu”.
 
 .. image:: ../images/SMSdisableChat.png
