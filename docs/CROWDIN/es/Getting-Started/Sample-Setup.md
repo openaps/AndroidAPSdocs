@@ -1,8 +1,8 @@
 # Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
 
-![Sample Setup](../images/SampleSetup.png)
+![Configuración de ejemplo](../images/SampleSetup.png)
 
-## Description
+## Descripción
 
 In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G5 CGM. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
@@ -10,7 +10,7 @@ As the Dexcom App only offers limited alarm options the open source app xDrip+ i
 
 Optionally an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values on your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
 
-The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
+El sistema funciona sin conexión. This means there is no need for a data connection from the smartphone to the Internet for operation.
 
 Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" when a data connection is established. By doing so you can provide comprehensive reports for the doctor's visit or share the current values with family members at any time. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
 
@@ -55,7 +55,7 @@ Please be patient when installing Android Studio as the software downloads a lot
 
 ### Allow installation from unknown sources
 
-Menu > Settings > Device security > Unknown sources > slider to right side (= active)
+Menú > Ajustes > Ajustes de seguridad > fuentes Desconocidas > deslizar hacia la derecha (= activo)
 
 For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
 
@@ -66,11 +66,11 @@ For security reasons this setting should be set back to inactive once the instal
 
 Location services ("GPS") must be activated in order for Bluetooth to work properly.
 
-### Install Dexcom App (modified version)
+### Instalar la aplicación Dexcom (versión modificada)
 
-![Dexcom App patched](../images/SampleSetupDexApp.png)
+![Aplicación Dexcom parcheada](../images/SampleSetupDexApp.png)
 
-The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility). A mmol/l version and a mg/dl version of the modified Dexcom app are available at https://github.com/dexcomapp/dexcomapp?files=1.
+The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Por lo tanto, se requiere una versión ligeramente modificada por la comunidad. Sólo esta aplicación de Dexcom modificada se puede comunicar con AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility). A mmol/l version and a mg/dl version of the modified Dexcom app are available at https://github.com/dexcomapp/dexcomapp?files=1.
 
 To do this perform the following steps on your smartphone:
 
