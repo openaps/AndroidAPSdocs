@@ -1,7 +1,7 @@
 Dexcom G5
-**********
+**************************************************
 Dexcom G5 met xDrip+
-===========================
+==================================================
 * Als dat nog niet is ingesteld, download dan 'xDrip+<https://github.com/NightscoutFoundation/xDrip>'_ en volg de instructies voor Nightscout 'G5<http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
 * In xdrip ga naar Settings > Interapp Compatibility > Broadcast Data Locally en selecteer ON. Deze instelling zorgt ervoor dat de xDrip app op jouw telefoon jouw waardes direct naar de AndroidAPS app (ook op jouw telefoon) doorstuurt en je dus geen internetverbinding nodig hebt.
 * In xdrip ga naar Instellingen > Interapp Settings > Accept Treatments selecteer OFF.
@@ -10,7 +10,7 @@ Dexcom G5 met xDrip+
 * Als AAPS geen BG-waarden ontvangt wanneer de telefoon in vliegtuigmodus staat, gebruik dan `Identify receiver' (Identificer ontvanger) zoals beschreven op de [xDrip+ instellingen pagina] (../Configuration/xdrip.md).
 
 G5 met aangepaste Dexcom G5 app
-=========================================================
+==================================================
 * Download de apk van 'https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>'_, en kies de versie die je nodig hebt (mg/dl of mmol/l versie, voor G5).
 
    * Map 2.3 is voor gebruikers van AndroidAPS 2.3, map 2.4 voor gebruikers van AAPS 2.5.1.
