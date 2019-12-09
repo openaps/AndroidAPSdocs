@@ -62,22 +62,20 @@
 
 Hay varias razones posibles. Realice los siguientes pasos:
 
-1. Ponga una **batería nueva o totalmente cargada ** en la bomba. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
+1. Ponga una **batería nueva o totalmente cargada ** en la bomba. Mire la sección de batería para más detalles. Asegúrese de que la bomba esta muy cerca del teléfono.
 
-![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+![La bomba debe estar al lado del teléfono](../images/Combo_next_to_Phone.png)
 
-2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
+2. Apague o retire cualquier otro dispositivo bluetooth de manera que no establezca conexión con el teléfono mientras la vinculación está en marcha. Cualquier comunicación bluetooth simultánea o pregunta de establecer conexión puede interferir con el proceso de vinculación.
 
-3.     Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until 
-      **NO DEVICE** is shown.
+3.     Borre los dispositivos Bluetooth ya vinculados en el menú de la bomba:**AJUSTES BLUETOOTH / CONEXION / BORRAR** hasta que se muestre **NO DEVICE**.
       
 
-4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
-5. Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
-6. Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
-7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** * Step 5 and 6 have to be in a short timing.
-8.     Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
-      bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
+4. Borre la bomba ya conectada al teléfono vía Bluetooth: En ajustes/Bluetooth, eliminar dispositivo emparejado "**SpiritCombo**"
+5. Asegúrese que el lazo de AAPS no está en ejecución. Desactive el lazo en AAPS.
+6. Ahora inicie ruffy en el teléfono. Debe pulsar Reset! eliminar el antiguo emparejamiento. Y por último pulsar en Connectar!.
+7. El el menú Bluetooth de la bomba, ir a **ADD DEVICE / ADD CONNECTION**. Pulse *CONECTAR! ** * Los pasos 5 y 6 tienen que estar en un momento corto.
+8.     Now the Pump should show up the BT Name of phone to select for pairing. Aquí es importante esperar al menos 5 seg. antes de presionar el botón de selección en la bomba. De lo contrario, la bomba no enviará la solicitud de emparejamiento al teléfono correctamente.
       
       * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
         between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
@@ -88,16 +86,15 @@ Hay varias razones posibles. Realice los siguientes pasos:
         (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
       
 
-9.     At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you 
-      should be ready to go.
+9.     At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. Ingrese el código en la pantalla de Ruffy y todo debe estar listo para continuar.
       
 
-10. Reboot the phone.
-11. Now you can restart AAPS loop.
+10. Reinicie el teléfono.
+11. Ahora puede reiniciar el lazo AAPS.
 
 ## Uso
 
-- Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
+- Tenga en cuenta que esto no es un producto, especializado, in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
 - Lea la documentación de OpenAPS https://openaps.org para comprender el algoritmo de lazo cerrado en el que se basa AndroidAPS.
 - Lea la wiki para conocer y comprender AndroidAPS http://wiki.AndroidAPS.org
 - Esta integración usa la misma funcionalidad que proporciona el medidor que viene con el Combo. El medidor permite reflejar la pantalla de la bomba y presiona el botón hacia la bomba. La conexión a la bomba y este reenvío es lo que hace la aplicación Ruffy. Un componente de script lee la pantalla y automatiza el ingreso de bolos, TBR, etc., y se asegura de que las entradas se procesen correctamente. AAPS luego interactúa con el scripter para aplicar comandos de lazo cerrado y administrar bolos. Este modo tiene algunas restricciones: es comparativamente lento (pero lo suficientemente rápido para lo que se usa), y establecer un TBR o administrar un bolo hace que la bomba vibre.
