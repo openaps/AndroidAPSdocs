@@ -27,7 +27,7 @@ Uso
 
 * `SMS commands <../Children/SMS-Commands.html#troubleshooting>`_
 
-CGM
+MCG
 ==================================================
 * `General <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
