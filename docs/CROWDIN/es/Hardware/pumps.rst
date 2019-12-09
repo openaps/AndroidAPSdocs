@@ -1,13 +1,13 @@
-Pump Configuration
-***********************
+Configuración de bomba
+**************************
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Dana-R pump <../Configuration/DanaR-Insulin-Pump.md>
-   Dana-RS pump <../Configuration/DanaRS-Insulin-Pump.md>
-   Accu-Chek Combo pump <../Configuration/Accu-Chek-Combo-Pump.md>
-   Accu-Chek Insight pump <../Configuration/Accu-Chek-Insight-Pump.md>
-   Medtronic pump <../Configuration/MedtronicPump.md>
-   Future possible pump drivers <../Getting-Started/Future-possible-Pump-Drivers.md>
+   Bomba Dana-R <../Configuration/DanaR-Insulin-Pump.md>
+   Bomba Dana-RS <../Configuration/DanaRS-Insulin-Pump.md>
+   Bomba Combo Accu-Chek <../Configuration/Accu-Chek-Combo-Pump.md>
+   Bomba Accu-ChekInsight <../Configuration/Accu-Chek-Insight-Pump.md>
+   Bomba Medtronic <../Configuration/MedtronicPump.md>
+   Futuros posibles controladores de bomba <../Getting-Started/Future-possible-Pump-Drivers.md>
