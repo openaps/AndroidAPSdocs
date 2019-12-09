@@ -1,15 +1,15 @@
-What is a Closed Loop System?
+¿Qué es un Sistema de Lazo Cerrado?
 **************************************************
 
-.. image:: ../images/autopilot.png
-  :alt: AAPS is like an autopilot
+.. imagen:: ../images/autopilot.png
+  :alt: AAPS es como un autopiloto
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. But what does that mean?
+Un sistema de páncreas artificial de lazo cerrado combina diferentes componentes para facilitarte la gestión de la diabetes. 
+In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. ¿Qué quiere decir eso?
 
-**Autopilot in an aircraft**
+**Piloto automático de un avión**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. Facilita el trabajo de los pilotos. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
 
 The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
 
