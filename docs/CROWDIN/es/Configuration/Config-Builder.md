@@ -1,8 +1,8 @@
 # Configuraciones
 
-Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
+Dependiendo de sus ajustes, puede abrir el administrador de configuraciones a través de una pestaña en la parte superior de la pantalla o a través del menú de la hamburguesa.
 
-![Open config builder](../images/ConfBuild_Open.png)
+![Abrir configuraciones](../images/ConfBuild_Open.png)
 
 Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
 
