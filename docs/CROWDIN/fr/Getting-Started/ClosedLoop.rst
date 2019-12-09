@@ -1,5 +1,5 @@
 Qu'est ce qu'un Système de boucle fermée ?
-**************************************
+**************************************************
 
 .. image:: ../images/autopilot.png
   :alt: AAPS est comme un pilote automatique
@@ -23,11 +23,11 @@ Tout comme le pilote automatique dépend des valeurs du capteur ainsi que des sp
 
 
 Systèmes de boucle fermée de pancréas artificiels en Open Source
-===============================
+==================================================
 À l'heure actuelle, il existe trois grands systèmes de boucle fermée en Open Source :
 
 AndroidAPS (AAPS)
------------------
+--------------------------------------------------
 AndroidAPS est décrit en détail dans `cette documentation <./WhatisAndroidAPS.html>`_. Il utilise un Smartphone Android pour le calcul et le contrôle de votre pompe à insuline. Il est en étroite collaboration avec OpenAPS (par ex. ils partagent les algorithmes).
 
 Les `pompes <../Hardware/pumps.html>`_ compatibles sont :
@@ -38,7 +38,7 @@ Les `pompes <../Hardware/pumps.html>`_ compatibles sont :
 * quelques anciennes pompes Medtronic (à partir de la version 2.4)
 
 OpenAPS
--------
+--------------------------------------------------
 `OpenAPS <https://openaps.readthedocs.io>`_ a été le premier système de boucle fermée Open Source. Il utilise un petit ordinateur comme un Raspberry Pi ou un Intel Edison.
 
 Les pompes compatibles sont :
@@ -46,7 +46,7 @@ Les pompes compatibles sont :
 * quelques anciennes pompes Medtronic
 
 Loop pour iOS
-------------
+--------------------------------------------------
 `Loop pour iOS <https://loopkit.github.io/loopdocs/>`_ est le système de boucle fermée Open Source à utiliser avec un iPhone Apple.
 
 Les pompes compatibles sont :
