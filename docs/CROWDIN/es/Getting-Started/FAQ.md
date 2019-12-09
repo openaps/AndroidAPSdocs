@@ -1,20 +1,20 @@
-# FAQ for loopers
+# Preguntas frecuentes para loopers
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+¿Como añadir preguntas a las FAQ?: Siga las siguientes [instrucciones](../make-a-PR.md)
 
 # General
 
-## Can I just download the AndroidAPS installation file?
+## ¿Puedo descargar directamente el archivo de instalación AndroidAPS?
 
-No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+No. No hay ningún archivo de apk descargable para AndroidAPS. Tienes que [montarlo](../Installing-AndroidAPS/Building-APK.md) tu mismo. Te explicamos el porqué:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AndroidAPS se utiliza para controlar tu bomba y para suministrar insulina. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. La distribución de dispositivos no regulados es ilegal. Existen reglamentos similares en otras partes del mundo.
 
-This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Construir un dispositivo médico para uno mismo es la única manera de no verse afectado por estas regulaciones.
 
-That’s why apks aren’t available.
+Esta es la razón por lo que las apks no están disponibles.
 
-## How to begin?
+## ¿Cómo empezar?
 
 First of all, you have to **get loopable hardware components**:
 
