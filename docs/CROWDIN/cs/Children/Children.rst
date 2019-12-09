@@ -1,5 +1,5 @@
 Vzdálené monitorování
-******************
+**************************************************
 
 .. image:: ../images/KidsMonitoring.png
   :alt: Monitorování dětí
@@ -7,7 +7,7 @@ Vzdálené monitorování
 AndroidAPS nabízí několik možností pro vzdálené monitorování dětí a také umožňuje odesílání vzdálených příkazů. Samozřejmě můžete také použít vzdálené monitorování, abyste sledovali svého partnera nebo přítele.
 
 Funkce
-=========
+==================================================
 * Pumpa dítěte je řízena z telefonu dítěte používajícího AndroidAPS.
 * Rodiče mohou na dálku sledovat všechny důležité údaje, jako jsou glykémie, zbývající sacharidy, inzulin atd. pomocí aplikace **NSClient** v jejich telefonu.
 * Rodiče mohou použít alarmy v aplikaci **xDrip v režimu sledování** na svém telefonu.
@@ -15,7 +15,7 @@ Funkce
 * Dálkové přepínání profilů a dočasných cílů prostřednictvím aplikace NSClient.
 
 Nástroje a aplikace pro vzdálené monitorování
-------------------------------------
+--------------------------------------------------
 * `Nightscout <http://www.nightscout.info/>`_ v prohlížeči (hlavně zobrazení dat)
 * Aplikace NSClient
 * Dexcom follow, pokud používáte originální aplikaci Dexcom (pouze hodnoty glykémie)
@@ -23,7 +23,7 @@ Nástroje a aplikace pro vzdálené monitorování
 * `Spike <https://spike-app.com/>` _ na iPhonech (hlavně hodnoty glykémií a ** alarmy**)
 
 Co je třeba zvážit
-==================
+==================================================
 * Nastavení správných `parametrů léčby <../Getting-Started/FAQ.html#how-to-begin>`_ (bazální dávky, DIA, ISF...) u dětí je obtížné, zejména při zapojení růstových hormonů. 
 * Takže si dejte načas a nastavte je správně a otestujte je v reálném životě se svým dítětem vedle sebe ještě předtím, než začnete se vzdáleným monitorováním a řízením na dálku. Ideální dobou pro jejich nastavení a otestování by mohly být školní prázdniny.
 * Jaký je váš nouzový plán, když vzdálené ovládání nefunguje (např. problémy se sítí)?
