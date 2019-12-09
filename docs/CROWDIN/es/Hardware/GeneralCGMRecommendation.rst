@@ -1,23 +1,23 @@
-General CGM recommendations
+Recomendaciones generales CGM
 **************************************************
 
-CGM hygiene
+Higiene CGM
 ==================================================
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps. 
+Sea cual sea el sistema CGM que esté usando, si va a utilizar la calibración basada en la sangre, entonces hay algunas reglas muy claras que debe aplicar, ya sea que esté usando software de DIY CGM o las aplicaciones oficiales. 
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
+* Asegúrese de que las manos y el kit estén limpios.
+* Trata de calibrar cuando tienes una serie de puntos con una flecha plana (de 15 a 30 minutos es normalmente suficiente)
+* Evitar la calibración cuando los niveles de glucosa se mueven hacia arriba o hacia abajo. 
+* Haz las "suficientes" calibraciones-en las aplicaciones oficiales, se te pedirá una o dos verificaciones por día. En sistemas DIY es posible que no lo sea, y debe tener cuidado de continuar sin calibraciones.
 * If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
 
-Setting sensor (G6)
+Configurando el sensor (G6)
 ==================================================
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. La hebra de sensor no debe entrar en contacto con la sangre.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Después de ajustar el sensor, el transmisor se puede colocar en el adaptador del sensor. Caution! First click in the square side and then press down the round side.
 
 Troubleshooting 
 ==================================================
@@ -29,7 +29,7 @@ Bluetooth connection may be disturbed by other nearby Bluetooth devices such as 
 
 Sensor Errors
 --------------------------------------------------
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood. 
+If recurring sensor errors occur try selecting a different body site to set your sensor. La hebra de sensor no debe entrar en contacto con la sangre. 
 
 Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 
