@@ -10,9 +10,9 @@ Cómo funciona
 ==================================================
 * La mayoría de los ajustes de los objetivos temporales, después de AAPS, etc. se puede realizar en la aplicación ` NSclient <../Children/Children.html>` _ en un teléfono Android con una conexión a Internet.
 * Los bolsos no pueden introducirse a través de Nightscout, pero puedes usar comandos SMS.
-* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
+* Si utiliza un iPhone como seguidor y, por lo tanto, no puede utilizar NSclient, hay otros mandatos de SMS disponibles.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+* En los ajustes de tu móvil Android ve a aplicaciones > AndroidAPS > permisos y habilitar SMS
 * In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678; +4412345679) y también habilita 'Permitir comandos remotos via SMS'.
 * Si desea utilizar más de un número:
 
@@ -24,9 +24,9 @@ Cómo funciona
       :alt: Configuración de comandos SMS
 
 
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirme el comando, enviando el código proporcionado por el SMS enviado desde el teléfono AndroidAPS cuando sea necesario.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+** Importante**: Puede ser útil tener una tarifa plana de SMS para ambos teléfonos, si se envían muchos SMS.
 
 Comandos
 ==================================================
@@ -57,7 +57,7 @@ Loop
 Datos de CGM
 --------------------------------------------------
 * BG
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+   * Respuesta: Último BG: 5,6 4min atrás, Delta: -0,2 mmol, IOB: 0,20U (Bolo: 0,10U Basal: 0,10U)
 * CAL 5.6
    *Respuesta: Para enviar calibración 5.6 enviar código Rrt
    * Respuesta después de recibir el código correcto: Calibración enviada (**Si xDrip está instalado. Debe estar habilitado aceptar calibración en xDdrip+**)
@@ -65,69 +65,69 @@ Datos de CGM
 Dosis Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * Respuesta: Para detener la basal temporal responda con el código EmF [ Nota: el Código EmF es sólo un ejemplo]
 * BASAL 0.3
    * Respuesta: Para iniciar una basal 0.3 U/h durante 30 min responder con código Swe
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   * Respuesta: Para iniciar una basal 0.3 U/h durante 20 min responder con código Swe
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
+   * Respuesta: Para iniciar una basal 30% durante 30 min responder con código Swe
 * BASAL 30% 50
    * Respuesta: Para iniciar una basal 30% durante 50 min responder con código Swe
 
 Bolo
 --------------------------------------------------
-Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! *Por lo tanto la respuesta depende del tiempo en que se dio el último bolo.
 
 * BOLUS 1.2
    * Respuesta A: Para entregar el bolo 1.2 U responder con el código de Rrt
    * Respuesta B: Los bolos remotos no están disponibles. Vuelve a intentarlo más tarde.
-* BOLUS 0.60 MEAL
+* BOLUS 0,60 MEAL
    * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
-   * Response A: To deliver meal bolus 0.60U reply with code Rrt
+   * Respuesta A: Para entregar el bolo Meal 0.60 U responder con el código de Rrt
    * Respuesta B: Los bolos remotos no están disponibles. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code EmF
+   * Respuesta: Para ingresar 5g a las 12:45 responder con el código EmF
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code EmF
+   * Respuesta: Para ingresar 5g a las 17:35 responder con el código EmF
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Para detener un bolo extendido, responder con el código EmF
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Respuesta: Para iniciar un bolo extendido de 2U durante 120 min responder con código EmF
 
 Profile
 --------------------------------------------------
 * PROFILE STATUS
-   * Response: Profile1
-* PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
-* PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * Respuesta: Perfil1
+* LISTADO DE PERFILES
+   * Respuesta: 1. ` Profile1 ` 2. ` Profile2 `
+* PERFIL 1
+   * Respuesta: Para cambiar el perfil a Profile1 100% responder con el código Any
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * Respuesta: Para cambiar el perfil a Profile2 30% responder con el código Any
 
 Otros
 --------------------------------------------------
-* TREATMENTS REFRESH
-   * Response: Refresh treatments from NS
-* NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
-* PUMP
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-* SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+*Actualizar tratamientos
+   * Respuesta: Actualizar los tratamientos desde NS
+*REINICIAR NSCLIENT
+   * Respuesta: NSCLIENT REINICIAR de 1 receptor
+* BOMBA
+   * Respuesta: Última conexión: 1 min antes Temporal: 0.00U/h @11:38 5/30min IOB: 0.5U Reservorio: 34U Batt: 100
+* SMS DISHABILITADO/STOP
+   * Respuesta: Para inhabilitar la respuesta de servicio remoto de SMS responda con el código Any. Ten en cuenta que puedes reactivarlo directamente desde el smartphone maestro AAPS solamente.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+   * Respuesta: Para establecer la respuesta MEAL/ACTIVIDAD/HYPO de objetivo temporal responder con el código Any
 * TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code Any
-* HELP
-   * Response: BG, LOOP, TREATMENTS, .....
-* HELP BOLUS
-   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
+   * Respuesta: Para cancelar el objetivo temporal, responder con el código Any
+* AYUDA
+   * Respuesta: BG, LOOP, TRATAMIENTOS, .....
+* AYUDA BOLUS
+   * Respuesta: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Troubleshooting
 ==================================================
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Hubo un reporte sobre los comandos de SMS que se detenían después de una actualización en el teléfono Galaxy S10. Se puede resolver mediante el desetiquetado de 'enviar como mensaje de conversación '.
 
-.. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+.. imagen:: ../images/SMSdisableChat.png
+  :alt: Desactivar SMS como mensaje de chat
