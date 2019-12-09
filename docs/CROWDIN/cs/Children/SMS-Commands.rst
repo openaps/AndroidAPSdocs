@@ -1,13 +1,13 @@
 SMS příkazy
-*****
+**************************************************
 Bezpečnost především
-======
+==================================================
 * AndroidAPS vám umožňuje kontrolovat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN.
 * Systém AndroidAPS vás rovněž bude informovat textovou zprávou o tom, jestli váš vzdálený příkaz, např. bolus nebo změna profilu, byl proveden. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
 * **Pokud jste zadali bolus prostřednictvím SMS příkazů, musíte přes Nightscout (NSClient, webovou stránku...) zadat odpovídající množství sacharidů!** Jestliže to neuděláte, bude IOB kalkulováno oproti nízkému COB. Případný korekční bolus pak nemusí být vydán, protože AAPS předpokládá, že máte příliš mnoho aktivního inzulínu.
 
 Jak to funguje
-=====
+==================================================
 * Většinu úprav dočasných cílů, se kterými pracuje AAPS apod., můžete provést přes `aplikaci NSclient <../Children/Children.html>`_ na telefonu připojenému k internetu.
 * Bolusy přes Nightscout nepošlete. Můžete to ale provést pomocí SMS příkazů.
 * Používáte-li ke sledování iPhone, nemůžete použít NSclient. Pak máte k dispozici pouze SMS příkazy.
@@ -29,7 +29,7 @@ Jak to funguje
 **Tip: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
 Příkazy
-=====
+==================================================
 
 Při odesílání příkazů nezáleží na velikosti písmen.
 
@@ -39,7 +39,7 @@ Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi `př
   :alt: SMS Commands Example
 
 Smyčka
------
+--------------------------------------------------
 * LOOP STOP/DISABLE
    * Odpověď: Smyčka byla zakázána
 * LOOP START/ENABLE
@@ -55,7 +55,7 @@ Smyčka
    * Odpověď: Smyčka obnovena
 
 CGM data
------
+--------------------------------------------------
 * Glykémie
    * Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
 * CAL 5.6
@@ -63,7 +63,7 @@ CGM data
    * Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (*je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací**)
 
 Bazál
------
+--------------------------------------------------
 * BASAL STOP/CANCEL
    * Odpověď: Pro zastavení dočasného bazálu odpovězte pomocí SMS s kódem EmF [Poznámka: Kód EmF je pouze příklad]
 * BASAL 0.3
@@ -76,7 +76,7 @@ Bazál
    * Odpověď: Pro spuštění dočasného bazálu 30% na 50 min odpovězte pomocí SMS s kódem Swe
 
 Bolus
------
+--------------------------------------------------
 Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
 
 * BOLUS 1.2
@@ -96,7 +96,7 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
    * Odpověď: Pro spuštění prodlouženého bolusu 2 U na 120 min odpovězte pomocí SMS s kódem EmF
 
 Profil
------
+--------------------------------------------------
 * PROFILE STATUS
    *Odpověď: Profile1
 * PROFILE LIST
@@ -107,7 +107,7 @@ Profil
    * Odpověď: Pro přepnutí profilu na Profile2 30% odpovězte pomocí SMS s kódem Any
 
 Jiné
------
+--------------------------------------------------
 * TREATMENTS REFRESH
    * Odpověď: Obnovit ošetření z NS
 * NSCLIENT RESTART
@@ -126,7 +126,7 @@ Jiné
    * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Poradce při potížích
-=====
+==================================================
 Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti „odeslání zprávy jako konverzace“.
 
 .. image:: ../images/SMSdisableChat.png
