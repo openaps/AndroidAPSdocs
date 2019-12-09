@@ -1,5 +1,5 @@
 What is a closed loop system with AndroidAPS?
-****************************
+**************************************************
 
 AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. 
 
@@ -25,7 +25,7 @@ A note of caution: AndroidAPS is not regulated by any medical authority in any c
 If you're ready for the challenge, please read on. 
 
 Primary goals behind AndroidAPS
-===========================================
+==================================================
 
 * An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
 * An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
@@ -38,7 +38,7 @@ Primary goals behind AndroidAPS
 * An app in which the user is in control of safety constraints 
 
 How to start
-===============
+==================================================
 Of course, all of this content here is very important, but can be in the beginning quite confusing.
 A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
  

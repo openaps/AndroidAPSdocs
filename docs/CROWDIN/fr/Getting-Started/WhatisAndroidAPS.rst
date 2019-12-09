@@ -1,5 +1,5 @@
 Qu'est-ce qu'un système de boucle fermé avec AndroidAPS ?
-****************************
+**************************************************
 
 AndroidAPS est une application qui peut communiquer avec des pompes à insuline compatibles Bluetooth et exécute une version des algorithmes OpenAPS «oref0» et «oref1». Qu'est ce qu'un système de pancréas artificiel? C’est un logiciel qui a pour but de faire ce que fait un pancréas vivant : maintenir la glycémie dans les limites saines automatiquement. 
 
@@ -27,7 +27,7 @@ Prudence : AndroidAPS n’est réglementée par aucune autorité médicale dans 
 Si vous êtes prêt à relever le défi, lisez la suite. 
 
 Principaux objectifs derrière AndroidAPS :
-===========================================
+==================================================
 
 * Une application construite avec sécurité. Cliquez ici pour connaître les caractéristiques de sécurité des algorithmes, appelés oref0 et oref1, (https://openaps.org/reference-design/)
 * Une application tout-en-un pour la gestion de diabète de type 1 avec un pancréas artificiel et Nightscout
@@ -40,7 +40,7 @@ Principaux objectifs derrière AndroidAPS :
 * Une application dans laquelle l'utilisateur maîtrise les contraintes de sécurité 
 
 Comment débuter
-===============
+==================================================
 Bien sûr, tout ce contenu ici est très important, mais peut être au début assez déroutant.
 Une bonne orientation est donnée par le `Module de présentation <../Module/module.html>`_ et les `Objectifs <../Usage/Objectives.html>`_. Vous pouvez également consulter l'exemple de configuration avec Dana, Dexcom et montre Sony <../Getting-Started/Sample-Setup.html> ` _.
  

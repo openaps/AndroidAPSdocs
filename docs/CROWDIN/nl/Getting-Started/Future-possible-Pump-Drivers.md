@@ -20,19 +20,19 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 * * *
 
-### Omnipod Eros ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 **Status:** (Opmerking: de Omnipod Eros is de huidige versie pods) Op dit moment nog niet ondersteund door de master-versie van AAPS. Daar wordt wel al een tijd aan gewerkt. Het Omnipod communicatieprotocol is al gedecodeerd, zie [OpenOmni](http://www.openomni.org/) en [OmniAPS Slack](https://omniaps.slack.com/). De Eros pods kunnen nu al worden gebruikt met andere systemen (zie hieronder), de precieze status voor AAPS lees je ook verderop (zie AAPS status).
 
 **Andere implementaties:**
 
-- Omnipy voor AndroidAPS (stabiel in tests, vereist Raspberry Pi en RileyLink, en een speciale versie van AndroidAPS. Enkele tientalen mensen gebruiken dit al in het dagelijks leven.) Lees meer op [Omnipy](https://github.com/winemug/omnipy)
-- OmniCore voor AndroidAPS (nog niet vrijgegeven, is geschreven in C# programmeertaal die "native" op Android draait. Heeft alleen een RileyLink nodig en een speciale versie van AndroidAPS. NB: dit is de opvolger van het Omnipy project). Lees meer op [OmniCore](https://github.com/winemug/OmniCore)
-- Loop (Werkt stabiel, vereist RileyLink en iPhone met Loop app. Wordt door een grotere groep mensen al gebruikt in dagelijks leven.). Lees meer op [Loop](https://loopkit.github.io/loopdocs/)
+- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
+- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
+- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
 
 
 
-**AAPS status:** Er wordt gewerkt aan een versie van AndroidAPS waar alleen een Rileylink nodig zal zijn en geen Raspberry Pi meer (zoals bij Omnipy). Zie [RileyLinkAAPS](https://github.com/bartsopers/RileyLinkAAPS/) voor Omnipod (dev_omnipod branch). Dit is nog niet afgerond. Je kunt de voortgang volgen op https://omniaps.slack.com/ in kanaal 'android-driver'.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
 
 **Hardware eisen voor AAPS:** RileyLink (versie 2.x) met 433MHz antenne.
 

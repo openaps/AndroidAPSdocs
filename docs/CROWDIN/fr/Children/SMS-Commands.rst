@@ -1,13 +1,13 @@
 Commandes SMS
-*****
+**************************************************
 La sécurité avant tout
-======
+==================================================
 * AndroidAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN.
 * AndroidAPS vous informera également par SMS si vos commandes distantes, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
 * **Si vous faites un bolus au moyen de commandes SMS, vous devez entrer des glucides par Nightscout (NSClient, site Web ...) !** Si vous ne le faites pas, l'IA serait correct mais le GA serait lui trop faible pouvant conduire à ne pas effectuer de bolus de correction car AAPS estimerait que vous avez trop d'insuline active.
 
 Comment ça marche
-=====
+==================================================
 * La plupart des ajustements des cibles temporaires, suivi d'AAPS, etc. peuvent être fait avec l'application `NSclient <../Children/Children.html>`_ sur un téléphone Android avec une connexion Internet.
 * Les bolus ne peuvent pas être donnés à partir de Nightscout, mais vous pouvez utiliser des commandes SMS.
 * Si vous utilisez un iPhone comme follower et ne pouvez donc pas utiliser NSclient, il y a des commandes SMS supplémentaires disponibles.
@@ -29,7 +29,7 @@ Comment ça marche
 **Astuce**: Il peut être utile d'avoir un forfait SMS pour les deux téléphones si beaucoup de SMS seront envoyés.
 
 Commandes
-=====
+==================================================
 
 Upper and lower case is irrelevant when sending commands.
 
@@ -39,7 +39,7 @@ Commands must be send in English, response will be in your local language if the
   :alt: SMS Commands Example
 
 Boucle
------
+--------------------------------------------------
 * LOOP STOP/DISABLE
    * Réponse : La boucle a été désactivée
 * LOOP START/ENABLE
@@ -55,7 +55,7 @@ Boucle
    * Réponse : Boucle relancée
 
 Données MGC
------
+--------------------------------------------------
 * Gly
    * Réponse: Dernière G: 5,6 il y a 4 min, Delta: 2 mmol, IA: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
@@ -63,7 +63,7 @@ Données MGC
    * Réponse après réception du code correct : Étalonnage envoyé. La réception doit être activée dans xDrip. (**Si xDrip est installé. L'acceptation des calibrations doit être activée dans xDrip+**)
 
 Basal
------
+--------------------------------------------------
 * BASAL STOP/CANCEL
    * Réponse: Envoyer le code EmF pour arrêter la Basal temporaire [Note: le Code de la EmF est juste un exemple]
 * BASAL 0.3
@@ -76,7 +76,7 @@ Basal
    * Réponse : Pour démarrer la Basal 30% pendant 50 min, renvoyer le code Swe
 
 Bolus
------
+--------------------------------------------------
 Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
 
 * BOLUS 1.2
@@ -96,7 +96,7 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
    * Réponse : Pour démarrer le Bolus étendu 2U pendant 120 min, renvoyer le code EmF
 
 Profil
------
+--------------------------------------------------
 * PROFILE STATUS
    * Response: Profile1
 * PROFILE LIST
@@ -107,7 +107,7 @@ Profil
    * Response: To switch profile to Profile2 30% reply with code Any
 
 Autres
------
+--------------------------------------------------
 * TREATMENTS REFRESH
    * Response: Refresh treatments from NS
 * NSCLIENT RESTART
@@ -126,7 +126,7 @@ Autres
    * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 Dépannage
-=====
+==================================================
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
 .. image:: ../images/SMSdisableChat.png

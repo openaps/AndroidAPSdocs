@@ -1,5 +1,5 @@
 Wat is een closed loop systeem?
-**************************************
+**************************************************
 
 .. image:: ../images/autopilot.png
   :alt: AAPS is als een automatische piloot
@@ -23,11 +23,11 @@ Just as the autopilot depends on the sensor values as well as the pilot's specif
 
 
 Open Source Artificial Pancreas Closed Loop Systems
-===============================
+==================================================
 At present there are three major open source closed loop systems available:
 
 AndroidAPS (AAPS)
------------------
+--------------------------------------------------
 AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
 Compatible `pumps <../Hardware/pumps.html>`_ are:
@@ -38,7 +38,7 @@ Compatible `pumps <../Hardware/pumps.html>`_ are:
 * some old Medtronic pumps (as of version 2.4)
 
 OpenAPS
--------
+--------------------------------------------------
 `OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
 
 Compatible pumps are:
@@ -46,7 +46,7 @@ Compatible pumps are:
 * some old Medtronic pumps
 
 Loop for iOS
-------------
+--------------------------------------------------
 `Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
 
 Compatible pumps are:

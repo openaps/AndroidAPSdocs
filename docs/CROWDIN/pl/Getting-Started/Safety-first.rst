@@ -1,10 +1,10 @@
 Najważniejsze jest bezpieczeństwo
-===========
+**************************************************
 
 **Kiedy decydujesz się na budowę własnej sztucznej trzustki, zawsze ważne jest, aby myśleć o bezpieczeństwie oraz rozumieć wpływ wszystkich swoich działań**
 
 Ogólnie
-------------
+==================================================
 
 * AndroidAPS jest tylko narzędziem, które pomaga zarządzać cukrzycą, nie jest czymś co można zainstalować i zapomnieć!
 * Nie zakładaj, że AndroidAPS nigdy nie popełni błędów. To urządzenie przejmuje kontrolę nad podawaniem insuliny: oglądaj je cały czas, zrozum, jak działa i naucz się interpretować jego działanie.
@@ -13,7 +13,7 @@ Ogólnie
 * You might also need to change your diabetes habits as you change your therapy by using a closed loop system. I.e. some people report, they need less hypo treatments as AndroidAPS has already reduced insulin.  
    
 Komunikator SMS
------------------
+==================================================
 
 * AndroidAPS umożliwia zdalne sterowanie telefonem dziecka za pomocą wiadomości tekstowej. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN.
 * AndroidAPS poinformuje Cię również Sms-em, jeśli Twoje polecenia zdalne, takie jak zmiana bolusa lub profilu, zostały wykonane. Zaleca się takie ustawienie funkcji sterowania pompą poprzez sms, aby teksty potwierdzające były wysyłane na co najmniej dwa różne numery telefonów, w przypadku kradzieży jednego z telefonów odbierających drugi telefon odbierze informację o zmianach.

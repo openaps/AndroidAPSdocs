@@ -1,8 +1,8 @@
 
 Einstellungen exportieren & importieren
-******
+**************************************************
 Wann sollte man die Einstellungen exportieren?
-=====
+==================================================
 Sei bereit für das Unvorhergesehene. Vielleicht änderst Du versehentlich wichtige Einstellungen und hast Schwierigkeiten, die Änderungen rückgängig zu machen. Dein Smartphone könnte defekt oder gestohlen werden. Um einfach auf den Stand zurückkehren zu können, an dem Du warst, sollten die Einstellungen regelmäßig exportiert werden.
 
 Die Empfehlung ist, den Export nach einer Änderung der Einstellungen oder dem Abschluss eines Ziels (Objective) durchzuführen. 
@@ -16,7 +16,7 @@ Auf einem Windows 10 PC sieht es in etwa so aus:
 
 
 Exportieren der Einstellungen
-=====
+==================================================
 * **Exportiere die Einstellungen** auf Deinem alten Smartphone
 
   * Hamburger Menü (drei Striche oben links am Bildschirm)

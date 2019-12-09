@@ -1,5 +1,5 @@
 Co je systém uzavřené smyčky AndroidAPS?
-****************************
+**************************************************
 
 AndroidAPS je aplikace, která funguje jako systém umělé slinivky (APS; artificial pancreas system) určena pro smartphony s operačním systémem Android. Co je systém umělé slinivky? Jedná se o softwarový program, jehož účelem je simulovat chování zdravé slinivky: automaticky udržovat hladinu krevního cukru v optimálním rozmezí. 
 
@@ -25,7 +25,7 @@ Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdra
 Jste-li připraveni přijmout tuto výzvu, čtěte dál. 
 
 Primární cíle AndroidAPS
-===========================================
+==================================================
 
 * Aplikace obsahující řadu bezpečnostních opatření. Informace o bezpečnostních opatřeních algoritmů, známých jako oref0 a oref1, najdete zde (https://openaps.org/reference-design/)
 * Jediná aplikace potřebná pro management diabetu 1. typu podporující umělou slinivku a Nightscout
@@ -38,7 +38,7 @@ Primární cíle AndroidAPS
 * Aplikace, u které řídí bezpečnostní omezení sám uživatel 
 
 Jak začít
-===============
+==================================================
 Veškerý tento obsah je samozřejmě velmi důležitý, ale může být na začátku docela matoucí.
 Dobrou představu vám poskytne část `Přehled modulů <./Module/module.html>`_ a `Cíle <./Usage/Objectives.html>`_. Můžete se také podívat na ukázkovou instalaci s pumpou Dana, senzorem Dexcom a hodinkami Sony Smartwatch <../Getting-Started/Sample-Setup.md>`_.
  
