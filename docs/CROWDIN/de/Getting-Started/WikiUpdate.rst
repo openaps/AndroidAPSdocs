@@ -1,10 +1,10 @@
 Wiki Updates & Änderungen
-**********************
+**************************************************
 Dezember 2019
-=====
+==================================================
 * `Watchfaces <../Configuration/Watchfaces.html>`_ (viel mehr Details!)
 November 2019
-===============
+==================================================
 * `Automation - bei deaktiviertem Loop ausschalten <../Usage/Automation.html#wichtiger-hinweis>`_
 * `Dexcom G6 Update zum Transmitter-Wechsel <../Configuration/xdrip.html#transmitter-ersetzen>`_
 * `Warum ein verzögerter Bolus beim Loopen nicht funktioniert <../Usage/Extended-Carbs.html#verzogerter-bolus>`_
@@ -21,7 +21,7 @@ November 2019
 * Wiki - Update `Mitschreiben <../make-a-PR.md#code-syntax>`_ und `Übersetzen <../translations.html#wiki-seiten-ubersetzen>`_.
 
 Oktober 2019
-===============
+==================================================
 * `AAPS Version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ - Seitenaktuallisierungen (vor allem auf der Seite `Update auf eine neue Version <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight-Log-Optionen <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
 * `Aktiven Kohlenhydrate (COB) - eigene Seite <../Usage/COB-calculation.html>`_
@@ -34,7 +34,7 @@ Oktober 2019
 * `xDrip - Update G6 Transmitter ersetzen <../Configuration/xdrip.html#replace-transmitter>`_
 
 September 2019
-===============
+==================================================
 * `Automate <../Usage/Automation.html>`_
 * `Bolus-Rechner <../Getting-Started/Screenshots.html#langsamer-kohlenhydrat-abbau>`_ - Langsamer Kohlenhydrat-Abbau
 * `Nightscout Sicherheit <../Installing-AndroidAPS/Nightscout.html#sicherheitsuberlegungen>`_
@@ -43,7 +43,7 @@ September 2019
 * `Was ist ein Closed Loop System? <../Getting-Started/ClosedLoop.html>`_
 
 August 2019
-===========
+==================================================
 * `Dexcom G6 patched App Region <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_
 * `Dexcom G6 neue Transmitter <../Configuration/xdrip.html#g6-transmitter-das-erste-mal-verbinden>`_ ("firefly" / 8G...)
 * `Was brauche ich? <../index.html#was-brauche-ich>`_ - neue Struktur & zusätzliche Infos
