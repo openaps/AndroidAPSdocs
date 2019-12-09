@@ -6,7 +6,7 @@
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Seleccione Menú pulsando los 3 puntos en la parte superior derecha. Seleccione preferencias.
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
@@ -25,7 +25,7 @@
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
-* Enable extended boluses on pump
+* Habilitar bolos extendidos en bomba
 
 ## Dana RS specific errors
 
@@ -64,4 +64,4 @@ When switching to a new phone the following steps are neccessary:
 
 ## Timezone traveling with Dana RS pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Para obtener información sobre cómo actuar a través de zonas horarias consulte la sección [cambio de zona Horaria con bombas](../Usage/Timezone-traveling#danarv2-danars).
