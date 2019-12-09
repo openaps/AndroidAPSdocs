@@ -12,7 +12,7 @@
 
 ## Limitaciones
 
-- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.rst) instead)
+- Los bolos extendidos y multiondas no están soportados (consulte el apartado [Carbohidratos Extendidos](../Usage/Extended-Carbs.rst) en su lugar)
 - Solo se admite un perfil basal.
 - Establecer más de un perfil basal en la bomba, o administrar bolos extendidos o bolos multionda desde la bomba interfiere con TBR y fuerza al lazo cerrado a un modo de suspensión baja durante 6 horas ya que al lazo cerrado no puede funcionar de manera segura bajo estas condiciones.
 - •Actualmente no es posible configurar la hora y la fecha en la bomba, por lo que los cambios de horario de verano deben realizarse manualmente (puede desactivar la actualización automática del reloj por la tarde y volver a cambiarla por la mañana junto con el reloj de la bomba para evitar una alarma durante la noche).
@@ -40,29 +40,29 @@
     - Habilitar el bloqueo de teclas en la bomba para evitar los bolos desde la bomba, especialmente. cuando la bomba se usó antes y el bolusing rápido era un hábito.
     - Establezca el tiempo de espera de la pantalla y el tiempo de espera del menú en un mínimo de 5.5 y 5 respectivamente. Esto permite que el AAPS se recupere más rápidamente de situaciones de error y reduce la cantidad de vibraciones que pueden ocurrir durante tales errores
 
-![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+![Pantalla del menú de usuarios](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+![Pantalla de los ajustes de basal temporal](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+![Pantalla de los ajustes de bolus](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+![Pantalla de los ajustes del cartucho de insulina](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org).
+- Instalar AndroidAPS como se describe en la [AndroidAPS wiki](http://wiki.AndroidAPS.org).
 - Asegúrese de leer la wiki para comprender cómo configurar AndroidAPS.
 - Seleccione el complemento MDI en AndroidAPS, no el complemento Combo en este punto para evitar que el complemento Combo interfiera con ruffy durante el proceso de emparejamiento.
-- Follow the link <http://ruffy.AndroidAPS.org> and clone ruffy via git.
-- Instale ruffy y úselo para emparejar la bomba. Si no funciona después de varios intentos, cambie a la rama 'pairing', empareje la bomba y luego vuelva a cambiar a la rama original. Tenga en cuenta que el proceso de emparejamiento es algo frágil (pero solo debe hacerse una vez) y puede necesitar algunos intentos; confirme rápidamente las indicaciones y, cuando comience nuevamente, elimine la bomba de dispositivos en la configuración de Bluetooth de antemano. Otra opción para probar es ir al menú de Bluetooth después de iniciar el proceso de emparejamiento (esto permite que el Bluetooth del teléfono sea visible siempre que se muestre el menú) y volver a cambiar a ruffy después de confirmar el emparejamiento en la bomba, cuando la bomba muestra la autorización código. Si no logra emparejar la bomba (por ejemplo, después de 10 intentos), intente esperar hasta 10 s antes de confirmar el emparejamiento en la bomba (cuando se muestra el nombre del teléfono en la bomba). Si ha configurado el tiempo de espera del menú para que sea 5s arriba, necesita aumentarlo nuevamente. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
+- Siga el enlace <http://ruffy.AndroidAPS.org> y clone ruffy a través de git.
+- Instale ruffy y úselo para emparejar la bomba. Si no funciona después de varios intentos, cambie a la rama 'pairing', empareje la bomba y luego vuelva a cambiar a la rama original. Tenga en cuenta que el proceso de emparejamiento es algo frágil (pero solo debe hacerse una vez) y puede necesitar algunos intentos; confirme rápidamente las indicaciones y, cuando comience nuevamente, elimine la bomba de dispositivos en la configuración de Bluetooth de antemano. Otra opción para probar es ir al menú de Bluetooth después de iniciar el proceso de emparejamiento (esto permite que el Bluetooth del teléfono sea visible siempre que se muestre el menú) y volver a cambiar a ruffy después de confirmar el emparejamiento en la bomba, cuando la bomba muestra la autorización código. Si no logra emparejar la bomba (por ejemplo, después de 10 intentos), intente esperar hasta 10 s antes de confirmar el emparejamiento en la bomba (cuando se muestra el nombre del teléfono en la bomba). Si ha configurado el tiempo de espera del menú para que sea 5s arriba, necesita aumentarlo nuevamente. Algunos usuarios informaron que necesitaban hacer esto. Por último, considere la posibilidad de pasar de una habitación a otra en caso de interferencia de radio local. Al menos un usuario superó inmediatamente los problemas de emparejamiento simplemente cambiando de ubicación.
 - Cuando AAPS usa ruffy, la aplicación ruffy no se puede usar. La manera más fácil es simplemente reiniciar el teléfono después del proceso de emparejamiento y dejar que AAPS comience con ruffy en segundo plano.
 - Si la bomba es completamente nueva, debe poner un bolo con la bomba, para que se cree una primera entrada de historia de la bomba.
 - Antes de habilitar el complemento Combo en AAPS, asegúrese de que su perfil esté configurado correctamente y activado (!) Y su perfil basal esté actualizado, ya que AAPS sincronizará el perfil basal con la bomba. Luego active el complemento Combo. Presione el botón Actualizar en la pestaña Combo para inicializar la bomba.
 - Para verificar su configuración, con la bomba desconectada, use AAPS para establecer un TBR de 500% durante 15 minutos y ponga un bolo. La bomba ahora debería tener un TBR en ejecución y el bolo en la historia. AAPS debe mostrar la TBR y el bolo.
 
-## Why does pairing with the pump does not work with the app "ruffy"?
+## ¿Por qué la vinculación con la bomba no funciona con la app "ruffy"?
 
-There are serveral possible reasons. Try the following steps:
+Hay varias razones posibles. Realice los siguientes pasos:
 
-1. Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
+1. Ponga una **batería nueva o totalmente cargada ** en la bomba. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
 
 ![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
