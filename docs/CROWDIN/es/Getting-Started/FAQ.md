@@ -196,7 +196,7 @@ If after meal has digested and IOB has returned to zero, your BG remains higher 
 
 In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
 
-## Profile
+## Perfil
 
 ### Why using min. 5h DIA (insulin end time) instead of 2-3h?
 
