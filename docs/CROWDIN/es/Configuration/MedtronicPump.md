@@ -136,29 +136,29 @@ No. At the moment none of this devices support this and it probably won't even i
 
 Sí. El autor de GNARL añadió todas las funciones utilizadas por el controlador Medtronic. Se da soporte a toda la comunicación Medtronic (en el momento de la escritura (junio/2019). GNARL no se puede utilizar para la comunicación de Omnipod. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Nota del autor: ** Tenga en cuenta que el software GNARL sigue siendo experimental y poco probado, y no debe ser considerado seguro para su uso como un RileyLink.
 
 ### ¿Dónde puedo obtener RileyLink o GNARL?
 
 Como se mencionó antes se pueden obtener dispositivos aquí:
 
 - RileyLink - Puede obtener el dispositivo aquí-[getrileylink.org](https://getrileylink.org/).
-- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
+- GNARL-Puede obtener información aquí, pero el dispositivo debe soliciarse en otro lugar ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
 
 ### ¿Qué hacer si pierdo la conexión con RileyLink y/o bomba?
 
-1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
-2. Inhabilite Bluetooth, espere 10s y vuelva a habilitarlo. This will force reconnecting to RileyLink.
-3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action.
-4. Try 3 and 2 together.
-5. Reset RileyLink and reset phone.
+1. Ejecute la acción "Despertar y Sintonizar", esta tratará de encontrar la frecuencia correcta para comunicarse con la bomba.
+2. Inhabilite Bluetooth, espere 10s y vuelva a habilitarlo. Esto obligará a reconectar a RileyLink.
+3. Restablezca(Reset) RileyLink, después de esta acción y no olvide ejecutar la acción "Restablecer configuración de RileyLink".
+4. Pruebe 3 y 2 juntos.
+5. Restablecer a RileyLink y reinicializar el teléfono.
 
-### How to determine what Frequency my pump uses
+### Cómo determinar qué frecuencia utiliza mi bomba
 
 ![Modelo de bomba](../images/Medtronic06.png)
 
-Si giras tu bomba, la primera línea en el lado derecho, verás un código especial de 3 letras. Las dos primeras letras determinan el tipo de frecuencia y el último determina el color. Here are possible values for Frequency:
+Si giras tu bomba, la primera línea en el lado derecho, verás un código especial de 3 letras. Las dos primeras letras determinan el tipo de frecuencia y el último determina el color. A continuación se muestran los valores posibles para la Frecuencia:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA-América del Norte (en la selección de frecuencia se debe seleccionar "US & Canada (916 MHz)")
+- CA-Canadá (en la selección de frecuencia se debe seleccionar "US & Canada (916 MHz)")
+- WW-Todo el mundo (en la selección de frecuencia se debe seleccionar "Worldwide (868 Mhz)")
