@@ -1,4 +1,4 @@
-# AAPS on Wear OS smartwatch
+# AAPS sur montres Wear OS
 
 You can install AndroidAPS app on your **Wear OS based** smartwatch. Watch version of AAPS allows you to:
 
@@ -28,134 +28,134 @@ Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Conf
 
 ## Controlling AAPS from Watch
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+AndroidAPS est conçu pour être *contrôlé* par les montres Android Wear. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-The following functions can be triggered from the watch:
+Les fonctions suivantes peuvent être déclenchées à partir de la montre :
 
-* set a temporary target
-* administer a bolus
-* administer eCarbs
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* définir une cible temporaire
+* administrer un bolus
+* administrer des eGlucides
+* utilisez le calculateur de bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](../Configuration/Config-Builder#wear) sur le téléphone)
+* vérifier l'état de la boucle et de la pompe
+* montrer le DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
 
-## AAPS Watchfaces
+## Cadrans AAPS
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Il y a plusieurs cadrans à choisir qui inclus le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Vérifiez que les notifications d'AndroidAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Avec un double appui sur la courbe Gly vous pouvez changer l'échelle de temps.
 
-## Watchfaces available
+## Cadrans disponibles
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
-## AAPSv2 watchface - Legend
+## Cadran AAPSv2 - Légende
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Légende du cadran AndroidAPSv2](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - temps écoulé depuis le dernier calcul de la boucle
 
-B - CGM reading
+B - lecture du capteur MGC
 
-C - minutes since last CGM reading
+C - nombre de minutes depuis la dernière lecture MGC
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - changement par rapport à la dernière lecture MGC (en mmol ou mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - variation moyenne des lectures MGC depuis 15 minutes
 
-F - phone battery
+F - niveau de batterie du téléphone
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - débits de basal (en U/h ou en % pendant un DBT)
 
 H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - glucides (glucides actifs | e-glucides à venir)
 
-J - insulin on board (from bolus | from basal)
+J - Insuline Active (de bolus | de basal)
 
-## Accessing main menu of AAPS
+## Accès menu principal de AAPS
 
-To access main menu of AAPS you can use on of following options:
+Pour accéder au menu principal d'AAPS, vous pouvez utiliser les options suivantes :
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* double appui sur votre valeur de glycémie
+* sélectionnez l'icône AAPS dans les applications de la montre
+* appuyez sur la complication AAPS (si configuré pour le menu)
 
-## Settings (in wear watch)
+## Paramètres (dans la montre)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Pour accéder aux paramètres du cadran, entrez dans le menu principal AAPS, faites glisser vers le haut et sélectionnez "Paramètres".
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique que le paramètre est désactivé (**Off**) :
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### Paramètres du compagnon AAPS
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Vibrer sur Bolus** (par défaut `Oui`):
+* **Unités des Actions** (par défaut `mg/dl`) : si **On** l'unité des actions est `mg/dl`, si **Off** l'unité est `mmol/l`. Utilisé lors de la définition d'une CT à partir de la montre.
 
-### Watchface settings
+### Paramètres cadran
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
-* **Show Ago** (default `On`): show how many minutes since last reading.
-* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
-* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
-* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* **Afficher Date** (par défaut `Off`): remarque, la date n'est pas disponible sur tous les cadrans
+* **Afficher IA** (par défaut `On`) : afficher ou non la valeur de l'IA (le paramétrage de l'affichage des valeurs détaillées est dans les paramètres Wear du Générateur de configurations de AAPS)
+* **Afficher GA** (par défaut `On`) : afficher ou non la valeur GA
+* **Afficher Delta** (par défaut `On`) : afficher ou non la variation de Gly des 5 dernières minutes
+* ** Afficher Delta Moyen** (par défaut `On`) : afficher ou non la variation moyenne des Gly des 15 dernières minutes
+* **Afficher Batterie Téléphone** (par défaut `On`) : batterie du téléphone en %. Rouge si en dessous de 30%.
+* **Afficher Batterie Système** (par défaut `Off`) : la batterie système est une synthèse de la batterie du Téléphone, de la pompe et de la pile du capteur (en général la plus faible des 3 valeurs)
+* **Afficher Basale** (par défaut `On`) : afficher ou non le débit de basal (en U/h ou en % si DBT)
+* **Afficher État Boucle** (par défaut `On`) : afficher ou non le nombre de minutes depuis le dernier calcul de boucle (les flèches autour de la valeur deviennent rouge si au-dessus de 15').
+* **Afficher Glycémie** (par défaut `On`) : afficher ou non la dernière valeur de glycémie
+* **Afficher flèche** (par défaut `On`) : afficher ou non la flèche de tendance Gly
+* **Afficher Min Passées** (par défaut `On`) : afficher ou non le nombre de minutes depuis la dernière lecture.
+* **Sombre** (par défaut `On`) : Vous pouvez changer l'arrière plan du cadran de noir à blanc (sauf pour les cadrans Cockpit et Steampunk)
+* **Surbrillance Basale** (par défaut `Off`) : Améliorer la visibilité des débits de basal et basales temporaires
+* **Séparateur** (par défaut `Off`) : pour les cadrans AAPS, AAPSv2 et AAPS(Large), affiche le fond du séparateur contrasté avec l'arrière plan (**Off**) ou de la même couleur que l'arrière plan (**On**)
+* **Echelle Graphique** (par défaut `3 heures`) : vous pouvez sélectionner dans le sous-menu de la durée max de votre graphique entre 1 heure et 5 heures.
 
-### User Interface setting
+### Paramètre Interface Utilisateur
 
 * **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
 
 ![Input design options](../images/Watchface_InputDesign.png)
 
-### Specific watchface parameters
+### Paramètres spécifiques à certains cadrans
 
-#### Steampunk watchface
+#### Cadran Steampunk
 
-* **Delta Granularity** (default `Medium`)
+* **Précision Delta** (par défaut `Moyenne`)
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
-#### Circle WF
+#### Cadran Cercle
 
 * **Big Numbers** (default `Off`): Increase text size to improve visibility
 * **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
 * **Light Ring History** (default `On`): Ring history more discreet with a darker gray
 * **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
 
-### Commands settings
+### Paramètres des commandes
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
-* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
-* **Single Target** (default `On`):
+* **Assistant dans Menu** (par défaut `On`) : Autoriser l'action Assistant dans le menu principal pour renseigner les Glucides et faire des Bolus à partir de la montre
+* **Amorcer dans Menu** (par défaut `Off`) : Autoriser l'action Amorcer/Remplir à partir de la montre
+* **Cible unique** (par défaut `On`):
   
-  * `On`: you set a single value for TT
-  * `Off`: you set Low target and high target for TT
+  * `On` : vous définissez une valeur unique pour une CT
+  * `Off`: vous définissez une cible basse et haute pour une CT
 
-* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+* **Assistant Pourcentage** (par défaut `Off`) : Autoriser la correction du bolus à partir de l'assistant (valeur saisie en pourcentage avant la confirmation)
 
-## Troubleshooting the wear app:
+## Dépannage de l'application wear :
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Sur Android Wear 2.0, le cadran de la montre ne s'installe plus tout seul. Vous devez aller dans le playstore sur la montre (pas le même playstore que celui du téléphone) et le trouver dans la catégorie applications installées sur votre téléphone, à partir de là, vous pouvez l'activer. Activer également les mises à jour automatiques 
+* Parfois, cela peut aider de resynchroniser AAPS avec la montre car cela peut être un peu lent quand il le fait tout seul : Wear / Renvoyer toutes les données
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 
-## View Nightscout data
+## Afficher les données Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Si vous utilisez un autre système de bouclage et que vous voulez *voir* le détail de la boucle sur une montre Android Wear, ou si vous voulez regarder la boucle de votre enfant, vous pouvez juste construire/télécharger le fichier APK NSClient. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Il y a plusieurs cadrans à choisir qui inclus le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
 
 # Pebble
 
