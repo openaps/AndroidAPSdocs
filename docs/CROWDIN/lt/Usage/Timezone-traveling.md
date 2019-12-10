@@ -1,6 +1,6 @@
-# Timezone traveling with pumps
+# Keliavimas per skirtingas laiko juostas
 
-## DanaR, Korean DanaR
+## DanaR, Korėjiečių DanaR
 
 There is no issue with changing timezone in phone because pump doesn't use history
 
