@@ -108,22 +108,22 @@ Insight pompos su naujesne programine įranga visada vibruos, kai bus pateiktas 
 
 Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Insight pompoje yra maža vidinė baterija, palaikanti svarbias funkcijas, tokias kaip laikrodis, kuris ir toliau veikia kol keičiama pompos baterija. Jei baterijos keitimas užima per daug laiko, šios vidinės akumuliatoriaus įkrova gali pasibaigti, laikrodis bus nustatytas iš naujo ir, įdėjus naujas baterijas, jums bus pasiūlyta įvesti naują laiką ir datą. Jei taip atsitiks, visi AndroidAPS įrašai nebebus įtraukti į skaičiavimus, kol nebus pakeista baterija, nes nebus galima identifikuoti tinkamo laiko.
 
 ## Insight specifinės klaidos
 
 ### Ištęstas bolusas
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Rekomenduojama naudoti tik vieną ištęstinį bolusą vienu metu, nes tuo pačiu metu naudojant kelis ištęstinius bolusus gali sukelti klaidas.
 
 ### Baigėsi laikas
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Kartais Insight pompa gali nereaguoti jungimo metu. Tokiu atveju AAPS rodomas šis pranešimas: „Suderinimo laikas baigėsi - nustatykite Bluetooth iš naujo“.
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Iš naujo nustatyti Bluetooth Insight](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+Tokiu atveju maždaug 10 sekundžių išjunkite pompos ir išmaniojo telefono Bluetooth, tada vėl atgal įjunkite.
 
 ## Kelionė per laiko zonas su Insight pompa
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+Žiūrėkite skyrių [Keliavimas per skirtingas laiko juostas su pompa](../Usage/Timezone-traveling#insight).
