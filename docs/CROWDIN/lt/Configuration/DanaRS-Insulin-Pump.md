@@ -4,64 +4,64 @@
 
 * Programėlė naudoja tik "BASAL A". Programa pati perrašo duomenis pompoje.
 
-* In AndroidAPS go to Config Builder and select 'DanaRS'
+* AndroidAPS programoje eikite į Konfigūraciją ir pasirinkite DanaRS.
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Viršutiniame dešiniajame kampe paspauskite 3 taškus. Pasirinkite Nustatymai.
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* Pasirinkite "DanaRS susieti naują pompą" ir patvirtinkite Jūsų DanaRS pompos serijinį numerį.
   
-      ![AAPS pairing Dana RS](../images/AAPS_DanaRSPairing.png)
+      ![AAPS susiejama su Dana RS](../images/AAPS_DanaRSPairing.png)
       
 
-* Select Pump password and input your password. (Default password is 1234)   
-  **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* Paspauskite "Pompos slaptažodis" ir įveskite savo pompos slaptažodį. (Standartinis slaptažodis yra 1234)   
+  **Patvirtinkite susiejimą pompoje!**Taip, kaip įprastai darote susiedami bluetooth prietaisus (pvz.: išmanųjį telefoną ir automobilio garso sistemą).
   
-      ![Dana RS confirm pairing](../images/DanaRS_Pairing.png)
+      ![Dana RS patvirtina susiejimą](../images/DanaRS_Pairing.png)
       
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Pasirinkite "Boluso greitis", jei norite pakeisti standartinį boluso greitį (1 V per 12 s, 1 V per 30 s, 1 V per 60 s).
 
-* Restart your phone.
+* Paleiskite telefoną iš naujo.
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Naudodami Gydytojo meniu (žr. pompos Vartotojo vadovą) nustatykite pompos bazinį greitį 0,01 U/h.
 
-* Enable extended boluses on pump
+* Aktyvuokite pompoje ištęstinius bolusus.
 
-## Dana RS specific errors
+## Specifinės DanaRS klaidos 
 
-### Error during insulin delivery
+### Klaida suleidžiant insuliną
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Jei ryšys tarp AAPS ir DanaRS pompos nutrūksta boluso suleidimo metu (pvz.: Jūs nueinate per toli nuo telefono), Jūs matysite klaidos pranešimą ir girdėsite garsinį signalą.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Insulino tiekimo perspėjimas](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in CP tab if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* Dažniausiai tai tik ryšio klaida ir visas insulino kiekis sėkmingai suleidžiamas.
+* Patikrinkite, ar suleistas teisingas insulino kiekis pompos istorijoje (pačioje pompoje arba AAPS skirtuke Dana > Pompos istorija > Bolusai.
+* Priežiūros portale galite ištrinti klaidos pranešimą, jei to pageidaujate.
+* Kito programos ir pompos susijungimo metu suleisto insulino kiekis bus patikrintas ir įrašytas. Galite tiesiog palaukti kito susijungimo arba jį pagreitinti paspaudę BT ikoną Dana skirtuke.
 
-## Special note when switching phone
+## Specialūs veiksmai keičiant telefoną
 
-When switching to a new phone the following steps are neccessary:
+Kai keičiate seną telefoną į naują, turite atlikti šiuos veiksmus:
 
-* **Export settings** on your old phone
+* **Eksportuoti nustatymus** senajame telefone
   
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
+  * Paspauskite "Sumuštinio" meniu (viršutiniame kairiajame kampe)
+  * Servisas
+  * Eksportuoti nustatymus
     
-    ![AAPS export settings](../images/AAPS_ExportSettings.png)
+    ![AAPS eksportuoti nustatymus](../images/AAPS_ExportSettings.png)
 
-* **Transfer** settings from old to new phone
+* **Perkelti** nustatymus į naują telefoną
 
-* **Manually pair** Dana RS with the new phone 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+* **Rankiniu būdu susieti** Dana RS su nauju telefonu 
+  * Kadangi pompos susiejimo nustatymai persikelia į naują telefoną kartu su kitais, Jūsų naujas telefonas jau "pažįsta" pompą, todėl nepradės BT paieškos. Todėl naują telefoną ir pompą reikia susieti rankiniu būdu.
+* **Instaliuokite AndroidAPS** naujame telefone.
+* **Importuokite nustatymus** naujame telefone 
+  * Paspauskite "Sumuštinio" meniu (viršutiniame kairiajame kampe)
+  * Servisas
+  * Importuoti nustatymus
 
-## Timezone traveling with Dana RS pump
+## Keliavimas per skirtingas laiko juostas su DanaRS pompa
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Žiūrėkite skyrių [Keliavimas per skirtingas laiko juostas su pompa](../Usage/Timezone-traveling#danarv2-danars).
