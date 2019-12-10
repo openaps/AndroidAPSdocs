@@ -13,7 +13,7 @@ Cómo funciona
 * Si utiliza un iPhone como seguidor y, por lo tanto, no puede utilizar NSclient, hay otros mandatos de SMS disponibles.
 
 * En los ajustes de tu móvil Android ve a aplicaciones > AndroidAPS > permisos y habilitar SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678; +4412345679) y también habilita 'Permitir comandos remotos via SMS'.
+* En AndroidAPS vaya a Preferencias > Comunicaciones SMS e introduce el número(s) de teléfono que será habilitado para enviar comandos SMS (separados por punto y coma, y un espacio después del punto y coma - por ejemplo,. +4412345678; +4412345679) y también habilita 'Permitir comandos remotos via SMS'.
 * Si desea utilizar más de un número:
 
   * Introduzca sólo un número.
@@ -24,7 +24,7 @@ Cómo funciona
       :alt: Configuración de comandos SMS
 
 
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirme el comando, enviando el código proporcionado por el SMS enviado desde el teléfono AndroidAPS cuando sea necesario.
+* Envie SMS al teléfono con AndroidAPS desde el número(s) del teléfono(s) aprobado(s) utilizando cualquiera de los comandos siguientes en ** LETRAS MAYUSCULAS* *, el teléfono responderá para confirmar el éxito del comando o el estado solicitado. Confirme el comando, enviando el código proporcionado por el SMS enviado desde el teléfono AndroidAPS cuando sea necesario.
 
 ** Importante**: Puede ser útil tener una tarifa plana de SMS para ambos teléfonos, si se envían muchos SMS.
 
@@ -33,7 +33,7 @@ Comandos
 
 Las mayúsculas y minúsculas son irrelevantes al enviar comandos.
 
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Los comandos deben enviarse en inglés, la respuesta estará en el idioma local si la serie de respuesta ya está `traducida <../translations.html#translate-strings-for-androidaps-app>` _.
 
 .. imagen:: ../images/SMSCommands.png
   :alt: Ejemplo de comandos SMS
@@ -77,13 +77,13 @@ Dosis Basal
 
 Bolo
 --------------------------------------------------
-Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! *Por lo tanto la respuesta depende del tiempo en que se dio el último bolo.
+El bolo remoto no está permitido dentro de 15 minutos -valor editable sólo si 2 números de teléfono lo añaden- después del último comando de bolo o comandos remotos! *Por lo tanto la respuesta depende del tiempo en que se dio el último bolo.
 
 * BOLUS 1.2
    * Respuesta A: Para entregar el bolo 1.2 U responder con el código de Rrt
    * Respuesta B: Los bolos remotos no están disponibles. Vuelve a intentarlo más tarde.
 * BOLUS 0,60 MEAL
-   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
+   * Si especifica el parámetro opcional MEAL, esto establece el objetivo temporal MEAL (valores por defecto son: 90 mg/dL, 5,0 mmol/l para 45 minutos).
    * Respuesta A: Para entregar el bolo Meal 0.60 U responder con el código de Rrt
    * Respuesta B: Los bolos remotos no están disponibles. 
 * CARBS 5
