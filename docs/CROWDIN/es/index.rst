@@ -131,7 +131,7 @@ Troubleshooting
    Troubleshooting <./Usage/troubleshooting.rst>
    
 
-FAQ 
+Preguntas frecuentes 
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1
