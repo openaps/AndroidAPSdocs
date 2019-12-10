@@ -293,7 +293,7 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - líneas de predicción</a></td>
 </tr>
 <tr>
- <td>Profile</td>
+ <td>Perfil</td>
  <td>valores básicos del tratamiento (tasa basal, DIA, IC, ISF, BG objetivo) <br>se pueden definir localmente o a través de Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - perfil</a></td>
