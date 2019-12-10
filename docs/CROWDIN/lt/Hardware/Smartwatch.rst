@@ -1,13 +1,13 @@
-Smartwatches
+Išmanieji laikrodžiai
 *************
 
-Smartwatches are optional, but very useful for some users.
-More details are here:
+Išmanieji laikrodžiai nėra būtini, bet naudingi kai kuriems vartotojams.
+Daugiau informacijos rasite čia:
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   List of tested phones and smartwatches <../Getting-Started/Phones.md>
-   Watchfaces  <../Configuration/Watchfaces.md>
+   Sąrašas išbandytų išmaniųjų telefonų ir laikrodžių <../Getting-Started/Phones.md>
+   Laikrodžio ekranai <../Configuration/Watchfaces.md>
