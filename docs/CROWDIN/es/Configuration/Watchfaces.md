@@ -132,31 +132,31 @@ La estrella rellena muestra el estado habilitado (**On**), y el icono de estrell
 #### Pantalla "Círculo"
 
 * **Números Grandes** (predeterminado `Off`): Aumente el tamaño del texto para mejorar la visibilidad
-* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
-* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* **Historial Anillos** (predeterminado `Off`): Ver la historia gráfica de BG con anillos grises dentro del anillo verde de la hora
+* **Historial Anillos Livianos** (predeterminado `On`): Historial con Anillos de forma más discreta, con un gris más oscuro
+* **Animaciones ** (predeterminado `on `): Cuando está habilitado, en el soporte del reloj y no está en modo de ahorro de energía, el círculo de la esfera será animado
 
 ### Parámetros para las acciones
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
+* **Asistente en el Menú** (predeterminado `On`): se permite la interfaz del asistente en el menú principal para la entrada de Carbohidratos y Bolos
 * **Llenado en el Menú** (predeterminado `Off`): Permitir acción de Prime / Llenado desde el reloj
 * **Objetivo simple** (predeterminado `On`):
   
   * `On`: únicamente se indica un valor para un objetivo temporal (TT)
-  * `Off`: you set Low target and high target for TT
+  * `off`: deberás establecer un objetivo bajo y un objetivo alto para TT
 
-* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+* **Asistente Porcentaje** (por defecto `Off`): permite bolos de corrección del asistente (valor introducido en porcentaje antes de la notificación de confirmación)
 
-## Troubleshooting the wear app:
+## Resolución de problemas de app del reloj:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* En Android Wear 2.0 la pantalla de reloj ya no se instala por sí misma. Necesitas ir a la playstore en el reloj (no es el mismo que el playstore del teléfono) y encontrarla en la categoría de aplicaciones instaladas en su teléfono, desde allí se puede activar. Habilite también la actualización automática. 
+* A veces ayuda re-sincronizar las aplicaciones para el reloj, ya que puede ser un poco lento para hacer lo mismo: Android Wear > ícono de la rueda Dentada > Reloj nombre > Sincronizar apps.
+* Habilite la depuración de ADB en las opciones de desarrollador (en el reloj), conecte el reloj a través de USB e inicie la aplicación Wear una vez en Android Studio.
 
-## View Nightscout data
+## Ver datos de Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Hay varias pantallas para elegir que incluyen datos como: delta promedio, IOB, dosis basal temporal activa, perfiles basales o gráfico de lecturas del medidor contínuo (CGM).
+Si estás usando otro sistema de lazo y quieres *ver* el detalle de tu lazo en el reloj Android Wear o quiere ver el bucle de tu hijo, entonces puedes construir/descargar sólo el APK NSClient. Para hacer esto siga las instrucciones de [compilar APK](../Installing-AndroidAPS/Building-APK.md) seleccionando la variante de compilación "NSClientRelease". Hay varias pantallas para elegir que incluyen datos como: delta promedio, IOB, dosis basal temporal activa, perfiles basales o gráfico de lecturas del medidor contínuo (CGM).
 
 # Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Los usuarios de Pebble pueden utilizar la [esfera del reloj Urchin](https://github.com/mddub/urchin-cgm) para *ver* los datos del lazos (si están cargados en nightscout), pero no podrá interactuar con AndroidAPS a través del reloj. Puede elegir campos para mostrar como, por ejemplo, IOB y la basal temporal activa y las predicciones. Si abre el lazo puede utilizar [IFTTT](https://ifttt.com/) para crear un applet que diga si la notificación se recibe de AndroidAPS, entonces envíe una notificación de SMS o pushover.
