@@ -95,7 +95,7 @@ El bolo remoto no está permitido dentro de 15 minutos -valor editable sólo si 
 * EXTENDED 2 120
    * Respuesta: Para iniciar un bolo extendido de 2U durante 120 min responder con código EmF
 
-Profile
+Perfil
 --------------------------------------------------
 * PROFILE STATUS
    * Respuesta: Perfil1
