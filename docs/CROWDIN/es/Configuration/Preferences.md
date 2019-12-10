@@ -20,7 +20,7 @@ Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa 
 
 * Mantener la pantalla encendida es útil, mientras que usted está dando una presentación. Va a consumir una gran cantidad de energía, por lo que es recomendable tener el teléfono conectado a un cargador.
 * Botones le permiten elegir qué botones están visibles en la pantalla de inicio. También le da algunas opciones para la pantalla emergente que verá después de pulsar un botón.
-* Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
+* Ajuste rápido de wizard permite añadir un botón rápido para los snack o comidas, introduce los carbohidratos en la pantalla principal y selecciona el botón wizard para calcular el bolo para esos carbohidratos basado en tus ratios ( teniendo en cuenta glucosa o insulina a bordo).
 
 ### Advanced Settings
 
@@ -59,15 +59,15 @@ Esta es la cantidad máxima de carbohidratos que la calculadora de bolo AAPS pue
 
 ## Loop
 
-Puede alternar entre lazo abierto y cerrado aquí. Open looping means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump. El lazo cerrado significa que las sugerencias de TBR se envían automáticamente a su bomba sin confirmación o aportación suya. The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+Puede alternar entre lazo abierto y cerrado aquí. Abrir lazo significa que las sugerencias de Basales temporales se basan en sus datos y aparecen como una notificación, pero debe elegir aceptarlas manualmente e ingresarlas manualmente en su bomba. El lazo cerrado significa que las sugerencias de TBR se envían automáticamente a su bomba sin confirmación o aportación suya. La pantalla de inicio se mostrará en la esquina superior izquierda, ya sea que esté abierto o cerrado, y al mantener presionado este botón de pantalla de inicio también podrá alternar entre los dos.
 
 ## OpenaAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. Puede leer más sobre la configuración y Autosens en los documentos de OpenAPS.
+Openaps AMA Permite que el sistema funcione más agresivamente de manera temporal después de un bolo de comida SI se ingresa carbohidratos. Actívelo en la pestaña Configuración para ver los valores de seguridad aquí, tendrá que haber completado [Objetivo 9 ](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) para utilizar esta característica. Puede leer más sobre la configuración y Autosens en los documentos de OpenAPS.
 
 ### Max U/hr que se pueden configurar la Basal Temporal
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. El valor se mide en unidades por hora (u / h). Se aconseja establecer esto en algo sensato. Una buena recomendación es tomar la tasa basal más alta en su perfil y multiplicarla por 4. Por ejemplo, si la tasa basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 4 para obtener un valor de 2u / hr.
+Esta configuración existe como un límite de seguridad para evitar que AAPS sea capaz de dar una tasa basal peligrosamente alta. El valor se mide en unidades por hora (u / h). Se aconseja establecer esto en algo sensato. Una buena recomendación es tomar la tasa basal más alta en su perfil y multiplicarla por 4. Por ejemplo, si la tasa basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 4 para obtener un valor de 2u / hr.
 
 ### Max IOB que OpenAPS puede proporcionar [U]
 
@@ -116,7 +116,7 @@ Si usa AndroidAPS en lazo abierto, asegúrese de haber seleccionado Virtual Pump
 
 * Inicio de sesión de la aplicación de registro en Nightscout grabará una nota en sus entradas de careportal cada vez que se inicie la aplicación. La aplicación no debería necesitar comenzar más de una vez al día, mayor frecuencia denota un problema.
 
-* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
+* 'Opciones de alarma' le permite seleccionar qué alarmas nightscout predeterminadas usar a través de la aplicación. Para que suenen las alarmas, debe establecer los valores de alarma Urgente alto, Alto, Bajo y Urgente bajo en sus variables heroku o azure. Solo funcionarán mientras tenga una conexión a Nightscout y están destinados a padres / cuidadores, si tiene la fuente CGM en su teléfono y luego usan esas alarmas (por ejemplo, xdrip +)
 * 'Habilitar transmisiones locales' compartirá los datos de su careportal con otras aplicaciones del teléfono, como xdrip.
 * 'Utilizar siempre los valores absolutos basales' debe activarse si desea utilizar la Autoajuste correctamente.
     
@@ -124,15 +124,15 @@ Si usa AndroidAPS en lazo abierto, asegúrese de haber seleccionado Virtual Pump
 
 ## Comunicaciones SMS
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
+Esta configuración permite el control remoto de la aplicación enviando instrucciones por mensaje de texto al teléfono del paciente que la aplicación seguidora, como suspender el lazo o el bolo. Más información se muestra en [Comandos SMS](../Children/SMS-Commands.rst), pero sólo se mostrará en las Preferencias de si se ha seleccionado esta opción en el Config Builder.
 
 ## Otros
 
-* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
-* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
-* You can change the display on the homescreen and watch for the values that are in range. Tenga en cuenta que solo afecta a cómo se ven los gráficos y no afecta su objetivo o sus cálculos.
-* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
-* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* Puede establecer los valores predeterminados para sus objetivos temporales aquí, para los diferentes tipos de objetivos temporales (eating soon y actividad). Cuando selecciona un objetivo temporal, si elige, por ejemplo, "eating soon" en el cuadro desplegable, automáticamente rellenará la duración y el valor en función de las cifras que proporcionó aquí. Para obtener más información sobre el uso de Objetivos temporales, vea Abrir las características de Aps. 
+* Puede establecer cantidades de purgado predeterminadas: esto hará que la bomba cuente con el valor especificado y esta insulina se cuenta como utilizada desde el depósito, pero no se cuenta en los cálculos IOB. Consulte el folleto de instrucciones en su caja de cánulas para saber cuántas unidades debe llenar las cánulas según la longitud de la aguja y la longitud del tubo.
+* Puede cambiar la visualización en la pantalla de inicio y observar los valores que están dentro del rango. Tenga en cuenta que solo afecta a cómo se ven los gráficos y no afecta su objetivo o sus cálculos.
+* 'Cortar títulos de pestaña' le permite ver más títulos de pestañas en la pantalla, por ejemplo, la pestaña 'Abrir APS' se convierte en 'OAPS', 'Objetivos' se convierte en 'Obj', etc.
+* 'Alertas locales' le permite decidir si recibe una advertencia y a partir de cuánto tiempo no recibe los valores de glucosa en sangre (datos obsoletos) o si la bomba no está disponible. Si con frecuencia recibe alertas de bomba inaccesible, active BT Watchdog en Configuración avanzada.
 
 ## Opciones de datos
 
