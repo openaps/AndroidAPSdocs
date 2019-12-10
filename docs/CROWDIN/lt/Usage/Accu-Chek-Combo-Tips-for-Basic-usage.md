@@ -80,13 +80,13 @@ OpenAPS algortimas nepalaiko lygiagretaus ištęsto ar daugiabangio boluso. Bet 
 
 * Įveskite angliavandenius, bet nebolusuokite jiems. Uždaro ciklo algoritmas reaguos daug agresyviau. Jei reikalinga, naudokite **eAngliavandeniai** (ištęstus angliavandenius).
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you wth disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Jei jūs bandysite tiesiog naudoti ištęstą ar daugiabangį bolusą tiesiai iš pompos, AndroidAPS nubaus jus išjungdama uždarą ciklą kitoms šešioms valandoms, kad būtų išvengta perteklinio insulino suleidimo.
 
 ![Disabled loop after multiwave bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
-## Alarms at bolus delivery
+## Aliarmai leidžiant bolusą
 
-* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If you really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
+* Jei AndroidAPS nustato, kad identiškas bolusas buvo sėkmingai suleistas tą pačią minutę, nebus leidžiama suleisti identiško skaičiaus insulino vienetų. Jei jūs tikrai norite du kartus suleisti tą pačią insulino dozę viena po kitos, tiesiog palaukite dvi minutes ir tada vėl suleiskite bolusą. If the first bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * Background is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Here indistinguishable entries must be prevented.
 
 ![Double bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
