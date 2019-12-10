@@ -4,7 +4,7 @@
 
 **AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
 
-## Important notes
+## Notas importantes
 
 * As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
 * Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
