@@ -10,7 +10,7 @@ Permite establecer una contraseña para prevenir el uso accidental o no autoriza
 
 ## Edad paciente
 
-Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa con frecuencia los límites establecidos (como el max bolo) quizás sea momento de ir un paso más allá. It's bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). If you want to know the actual numbers for these hard coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa con frecuencia los límites establecidos (como el max bolo) quizás sea momento de ir un paso más allá. Es una mala idea seleccionar una edad mayor que la real ya que podría provocar la sobredosificación introduciendo por error un valor equivocado (por ej: comerse un decimal en la cantidad del bolo por equivocación). Si desea conocer los números actuales de estos límites de seguridad codificados, desplácese hasta la característica de algoritmo que está utilizando en [esta página](../Usage/Open-APS-features.md).
 
 ## General
 
@@ -18,25 +18,25 @@ Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa 
 
 ## Overview
 
-* Keep screen on is useful while you are giving a presentation. It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
-* Buttons let you choose which buttons are visible on your home screen. Also gives you a few options for the popup screen you will see after pressing a button.
+* Mantener la pantalla encendida es útil, mientras que usted está dando una presentación. Va a consumir una gran cantidad de energía, por lo que es recomendable tener el teléfono conectado a un cargador.
+* Botones le permiten elegir qué botones están visibles en la pantalla de inicio. También le da algunas opciones para la pantalla emergente que verá después de pulsar un botón.
 * Quick Wizard settings allows you to add a quick button for a frequent snack or meal, enter your decided carb details and on the homescreen if you select the quick wizard button it will calculate and bolus for those carbs based on your current ratios (taking into account blood glucose value or insulin on board if set up).
 
 ### Advanced Settings
 
-![Preferences - Overview - Advanced Settings](../images/PreferencesOverviewAdvanced_V2_5.png)
+![Preferencias - General - Configuración Avanzada](../images/PreferencesOverviewAdvanced_V2_5.png)
 
-* General setting to deliver only part of bolus wizard result. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. The percentage is shown in bolus wizard.
+* Configuración general para entregar sólo parte del resultado del asistente de bolo. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. El porcentaje se muestra en el asistente en bolos.
     
-    ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
+    ![Asistente de Bolos 80%](../images/BolusWizardPartDelivery.png)
 
-* Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
+* Opción para habilitar [superbolo](../Getting-Started/Screenshots#section-a) en el asistente de bolos.
 
-* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. La versión ampliada muestra el tiempo transcurrido / el porcentaje de la batería.
     
     ![Status lights - detail](../images/StatusLights_V2_5.png)
     
-    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    Settings for status lights must be made in Nightscout settings. Establezca las siguientes variables:
     
     * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
     * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
@@ -49,11 +49,11 @@ Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa 
 
 ## Seguridad en los tratamientos
 
-### Max allowed bolus [U]
+### Max bolo permitido [U]
 
-This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
+Esta es la cantidad máxima de insulina en bolo que AAPS puede poner. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
 
-### Max allowed carbs [g]
+### Máx. Carbohidratos permitidos [g]
 
 This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
