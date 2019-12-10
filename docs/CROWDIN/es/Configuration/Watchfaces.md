@@ -80,69 +80,69 @@ J - insulina a bordo (de bolos | de basal)
 Para acceder al menú principal de AAPS, puede utilizar en las siguientes opciones:
 
 * Pulsar dos veces en el valor de BG
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* seleccione el icono de AAPS en el menú de aplicaciones
+* pulsación en complicación de AAPS (si se ha configurado para el menú)
 
-## Settings (in wear watch)
+## Configuración (desde el smartwatch)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Para acceder a la configuración de la pantalla, ingrese al menú principal de AAPS, deslice y seleccione "Ajustes".
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+La estrella rellena muestra el estado habilitado (**On**), y el icono de estrella hueca indica que el valor está inhabilitado (**Off**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Configuración on/off](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### Parametros de la aplicación AAPS para smartwatch
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Vibrar en Bolo** (predeterminado `On`):
+* **Unidades para Acciones** (valor por omisión `mg/dl`): si **On** unidades para acciones es `mg/dl`, si **Off** unidad es `mmol/l`. Estas unidades se utilizan cuando se fijan obetivos temporales (TT) desde el reloj.
 
-### Watchface settings
+### Parámetros de la pantalla
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
-* **Show Ago** (default `On`): show how many minutes since last reading.
-* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
-* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
-* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* **Mostrar Fecha** (predeterminado `Off`): nota, la fecha no está disponible en todas las pantallas
+* **Mostrar IOB** (predeterminado `On`): Visualizar o no el valor de IOB (ajustes para el mismo está en los parámetros del reloj de AAPS)
+* **Mostrar COB** (predeterminado `On`): la Visualización o no del valor COB
+* **Mostrar Delta** (predeterminado `On`): Mostrar o no la variación de BG de los últimos 5 minutos
+* **Show AvgDelta** (predeterminado `On`): Visualizar o no la variación media de BG de los últimos 15 minutos
+* **Mostrar batería del teléfono** (predetermiando `On`): Batería de teléfono en%. (en rojo si es inferior al 30%)
+* **Mostrar batería Rig** (predetermiando `Off`): La batería Rig es una síntesis de la batería de teléfono, la batería de la bomba y la batería del sensor (generalmente la más baja de los 3 valores)
+* **Mostrar Tasa Basal** (predeterminado `On`): Mostrar o no la tasa basal actual (en U/h o en % si TBR)
+* **Mostrar estado del Lazo** (predeterminado `On`): mostrar cuántos minutos transcurrió desde la última ejecución del lazo (las flechas alrededor del valor se vuelven rojas si por encima de 15 ').
+* **Mostrar BG** (predeterminado `On`): Mostrar o no el último valor de BG
+* **Mostrar Flecha de Dirección** (predeterminado `On`): Visualizar o no flecha de tendencia de BG
+* **Mostrar Hace** (predeterminado `On`): mostrar cuantos minutos pasaron desde la última lectura.
+* **Oscuro** (predeterminado `On`): Puede conmutar de fondo negro a fondo blanco (excepto para la pantalla de reloj Cockpit y Steampunk)
+* **Resaltar Basales** (predeterminado `Off`): Mejorar la visibilidad de la tasa basal y temporales basales
+* **Divisor de coincidencia** (predeterminado `Off`): Para pantallas de relojes AAPS, AAPSv2 y AAPS(Grande), mostrar el contraste de fondo para el divisor (**Off**) o coincidir con el divisor con el color de fondo (**On**)
+* **Escala de tiempos en Gráficos** (valor por omisión `3 horas`): puede seleccionar en el submenú el intervalo de tiempo máximo de su gráfico entre 1 y 5 horas.
 
-### User Interface setting
+### Parámetros de la interfaz de usuario
 
-* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+* **Diseño de Entrada**: con este parámetro, puede seleccionar la posición de "+" y "-" botones cuando introduzca los comandos para AAPS (TT, la Insulina, los Carbohidratos...)
 
-![Input design options](../images/Watchface_InputDesign.png)
+![Opciones del diseño de entrada de datos](../images/Watchface_InputDesign.png)
 
-### Specific watchface parameters
+### Parámetros específicos de las esferas
 
-#### Steampunk watchface
+#### Pantalla "Steampunk"
 
-* **Delta Granularity** (default `Medium`)
+* **Granularidad Delta** (valor predeterminado `Medio`)
 
-![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
+![Calibre_steampunk](../images/Watchface_Steampunk_Gauge.png)
 
-#### Circle WF
+#### Pantalla "Círculo"
 
-* **Big Numbers** (default `Off`): Increase text size to improve visibility
+* **Números Grandes** (predeterminado `Off`): Aumente el tamaño del texto para mejorar la visibilidad
 * **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
 * **Light Ring History** (default `On`): Ring history more discreet with a darker gray
 * **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
 
-### Commands settings
+### Parámetros para las acciones
 
 * **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
-* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
-* **Single Target** (default `On`):
+* **Llenado en el Menú** (predeterminado `Off`): Permitir acción de Prime / Llenado desde el reloj
+* **Objetivo simple** (predeterminado `On`):
   
-  * `On`: you set a single value for TT
+  * `On`: únicamente se indica un valor para un objetivo temporal (TT)
   * `Off`: you set Low target and high target for TT
 
 * **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
