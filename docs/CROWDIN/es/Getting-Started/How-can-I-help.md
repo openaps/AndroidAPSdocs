@@ -8,41 +8,41 @@ Los desarrolladores son los padres, guardianes, seres queridos y personas con di
 
 **Puedo escribir código! ¿Cómo puedo participar?**
 
-¡Síiiii! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+¡Síiiii! Mira los temas, pregunta en el canal de gitter, ¡ siempre hay mucho que hacer! ¡Elige una pequeña tarea al principio y haz tu primera solicitud de pull! :)
 
-**I know the system and can write documentation!**
+**Conozco el sistema y puedo escribir documentación!**
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+¡Genial, esto es una cosa muy apreciada y una buena manera de pagarlo de antemano!
 
-* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Instead, you can now also contact the documentation team via the new email address: wiki@androidaps.org.
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+* El canal de gitter antiguo relativo a la wiki se puede encontrar aquí: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). En su lugar, ahora también puede ponerse en contacto con el equipo de documentación a través de la nueva dirección de correo electrónico: wiki@androidaps.org.
+* Puede encontrar una guía sobre cómo realizar confirmaciones en el wiki inglés: [Cómo hacer un PR](../make-a-PR.md). Los demás idiomas sólo se traducen del inglés y no se pueden editar por razones de coherencia.
 
-**I do speak multiple languages and whant to translate the app or the documentation**
+**Yo hablo varios idiomas y quiero traducir la aplicación o la documentación**
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://translations.androidaps.org).
-* If you want to translate **the wiki** to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org). 
+* Si desea traducir **la aplicación** a otros idiomas (gracias), utilice [crowdin](https://translations.androidaps.org).
+* Si desea traducir **la aplicación** a otros idiomas (gracias), utilice [crowdin](https://wikitranslations.androidaps.org). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Sólo tiene que registrarse en CROWDIN, hacer clic en su idioma, esperar a la autorización del administrador y seguir adelante!
 
-**I've got cash I'd like to donate, how do I do that?**
+**Tengo dinero en efectivo que me gustaría donar, ¿cómo hago eso?**
 
     PayPal: [donations@androidaps.org](donations@androidaps.org)  
     
 
-**What is the money used for?**
+**¿Para qué se utiliza el dinero?**
 
-The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. Here's an example from 2018:
+¡El dinero no se paga a nadie por su trabajo! Se utiliza para mantener bajos los costes de los desarrolladores al organizar las reuniones. Tratamos de ser muy transparentes. He aquí un ejemplo de 2018:
 
-* European Dev Meetup in Prague end of May 2018:
-* hiring a room plus internet
-* equipment
-* food / coffee
-* in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
+* European Dev Meetup en Praga, a finales de mayo de 2018:
+* alquiler de habitación más internet
+* equipamiento
+* alimentos / café
+* en el caso poco probable de que se cubran totalmente las cosas, y sigue habiendo algo de dinero: gastos de viaje para aquellos que tienen que viajar a una distancia más larga. (Algunos desarrolladores de otros continentes asistirán, pero ya se encuentran en Europa en ese momento, por lo que los costos de viaje se mantendrán bajos)
 
-**I've got spare equipment, where do I send it?**
+**Tengo equipo de repuesto, ¿dónde lo envío?**
 
-We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+Actualmente estamos recolectando "se proveerán más tarde" para empezar a distribuirlos para las pruebas. Al final del proceso, cualquier equipo sobrante se donará a uno de los grupos de facebook Pay it forward que existen para dar soporte a la comunidad T1. Si quiere donar equipo de repuesto, envíe un correo electrónico a developers@androidaps.org y le enviaremos una dirección.
 
-**I don't have cash or equipment, how can I help?**
+**No tengo dinero en efectivo ni equipo, ¿cómo puedo ayudar?**
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Las habilidades necesarias incluyen diseño gráfico, diseño de UX, traductores, editores de wiki o simplemente pay it forward al responder las preguntas simples en el gitter & Facebook para permitir a los desarrolladores el tiempo y el espacio para enfocarse en las cosas más difíciles.
