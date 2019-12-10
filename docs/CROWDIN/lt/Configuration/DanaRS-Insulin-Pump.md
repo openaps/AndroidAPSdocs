@@ -1,8 +1,8 @@
-# DanaRS Pump
+# DanaRS pompa
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Naudokite šias instrukcijas AAPS programėlės ir DanaRS (nuo 2017 m.) pompos konfigūravimui. Jei turite DanaR pompą, skaitykite [DanaR insulino pompa](./DanaR-Insulin-Pump).*
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+* Programėlė naudoja tik "BASAL A". Programa pati perrašo duomenis pompoje.
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
