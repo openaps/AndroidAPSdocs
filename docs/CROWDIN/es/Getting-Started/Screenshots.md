@@ -64,7 +64,7 @@ Esta sección también se puede configurar utilizando las opciones de la secció
    * **GRIS** barras que muestran una desviación debido a los carbohidratos. 
    * **VERDE** barras que muestran un BG mayor al que el algoritmo esperaba. 
    * **RED ** barras que muestran que BG es menor que el algoritmo esperaba.
-* **Sensitivity** (white line): It shows the sensitivity that Autosense has detected. La Sensibilidad es el cálculo de la respuesta a la insulina como resultado del ejercicio, las hormonas, etc.
+* **Sensibilidad** (línea blanca): muestra la sensibilidad que el Autosense ha detectado. La Sensibilidad es el cálculo de la respuesta a la insulina como resultado del ejercicio, las hormonas, etc.
 * **Actividad** (línea amarilla): muestra la actividad de la insulina, calculada por su perfil de insulina (no es un derivado de IOB). El valor es más alto para la insulina más próxima a la hora punta. Esto significaría un valor negativo cuando el IOB está disminuyendo. 
 
 ### Sección G
@@ -79,17 +79,17 @@ Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo 
 
 ### Sección A
 
-es el lugar donde se introduce la información sobre el bolo que desea. El campo BG normalmente se llena con la lectura más reciente de la CGM. Si no tienes una CGM que funcione, entonces estará en blanco. En el campo CARBS se añade su estimación de la cantidad de carbohidratos (o equivalente) a los que desea realizar el bolo. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+es el lugar donde se introduce la información sobre el bolo que desea. El campo BG normalmente se llena con la lectura más reciente de la CGM. Si no tienes una CGM que funcione, entonces estará en blanco. En el campo CARBS se añade su estimación de la cantidad de carbohidratos (o equivalente) a los que desea realizar el bolo. El campo CORR es si desea modificar la dosificación final por alguna razón, y el campo CARB TIME es para hacer PRE-bolo, de modo que pueda indicar al sistema que habrá un retraso antes de que se esperen los carbohidratos. Puede poner un número negativo en este campo si está colocando un bolo para los carbohidratos ya ingeridos.
 
-SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
+SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. La idea es entregar la insulina antes y esperar que reduzca los picos.
 
 ### Sección B
 
-shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+muestra el bolo calculado. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
 ### Sección C
 
-shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
+le muestra los diversos elementos que se han utilizado para calcular el bolo. Puede anular la selección de cualquier que no desee incluir, pero normalmente no es algo que realizaría.
 
 ### Combinaciones de COB e IOB y lo que significan
 
@@ -105,7 +105,7 @@ If you bolus for additional food shortly after a meal bolus (i.e. additional des
 
 ![Absorción lenta de carbohidratos](../images/Calculator_SlowCarbAbsorbtion.png)
 
-If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. So if you want to bolus again after a previous meal with COB you should be aware of overdosing! For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. Así que si quieres bolo de nuevo después de una comida previa con COB, debes ser consciente de una posible sobredosis! Para obtener detalles, consulte las sugerencias sobre [página de cálculo de COB](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Perfil de Insulina
 
@@ -155,16 +155,16 @@ AndroidAPS can run using a number of different profile configuratons. Typically 
 
 ## Treatment, xDrip, NSClient
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. Normalmente no tienes que preocuparte por nada de esto a menos que haya un problema.
 
 ## Configuraciones
 
 ![Configuraciones](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+Aquí es donde se ajustará la configuración de su plataforma AndroidAPS. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
 The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
-## Settings and Preferences
+## Ajustes y preferencias
 
 At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
