@@ -1,79 +1,79 @@
-Freestyle Libre 2
+Freestyle libre 2
 **************************************************
 
-The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink App, you can continuously receive your blood sugar level on your smartphone. As they send them directly via bluetooth to your phone, you won't need to buy a bluetooth adapter like MiaoMiao or blucon anymore. 
+El sistema Freestyle Libre 2 puede reportar automáticamente niveles peligrosos de glucosa en sangre. El Sensor Libre2 envía el nivel de azúcar en sangre actual a un receptor (lector o smartphone) cada minuto. El receptor activa una alarma si es necesario. Con una aplicación LibreLink auto-modificada, puede recibir continuamente su nivel de azúcar en la sangre en su smartphone. Como los envían directamente a través de Bluetooth a tu teléfono, no necesitarás comprar un adaptador Bluetooth como MiaoMiao o Blucon nunca más. 
 
-Step 1: Build your own patched Librelink-App
+Paso 1: Construye tu propia Librelink-App parcheada
 ==================================================
 
-For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links.
+Por razones legales, el llamado parche tiene que ser hecho por usted mismo. Utilizar motores de búsqueda para encontrar los enlaces correspondientes.
 
-The patched app has to be installed instead of the original app. The next sensor started with it will wireless transmit its values to the smartphone.
+La aplicación patchada tiene que ser instalada en lugar de la aplicación original. El siguiente sensor que se inicia con ella transmitirá sus valores al smartphone.
 
-Important: First install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app. It can be identified by the foreground authorization notification. 
+Importante: Primero instale y desinstale la aplicación original en un smartphone con capacidad NFC. NFC tiene que estar habilitado. Esto no suma consumo a la batería. A continuación, instale la aplicación parcheada. Se puede identificar mediante la notificación de autorización en primer plano. 
 
 .. image:: ../images/fsl2pic1.jpg
-  :alt: LibreLink Foreground Service
+  :alt: LibreLink Servicio en segundo plano
 
 This significantly improves the connection stability compared to the original app. Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and timezone and set at least one alarm in the patched app. 
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Follow the instructions. The sensor remembers the device it was started with. Only this device can receive alarms in the future.
+Ahora inicie el sensor de Libre2 con la aplicación patchada, simplemente escaneando el sensor. Siga las instrucciones. El sensor recuerda el dispositivo con el que se inició. Sólo este dispositivo puede recibir alarmas en el futuro.
 
-Mandatory settings for successful sensor start: 
+Ajustes obligatorios para el inicio del sensor con éxito: 
 
-* NFC enabled / BT enabled
-* memory permission enabled 
-* location enabled
-* automatic time and timezone setting
-* set at least one alarm in the patched app
+* NFC habilitado / BT habilitado
+* permiso de memoria habilitado 
+* ubicación habilitada
+* configuración automática de hora y zona horaria
+* establecer al menos una alarma en la aplicación parchada
 
 .. image:: ../images/fsl2pic2.jpg
-  :alt: LibreLink permissions memory & location
+  :alt: LibreLink permisos de memoria y ubicación
   
-.. image:: ../images/fsl2pic3.jpg
-  :alt: Android settings location
+.. imagen:: ../images/fsl2pic3.jpg
+  :alt: Android ajustes de ubicación
   
 .. image:: ../images/fsl2pic4a.jpg
-  :alt: automatic time and timezone
+  :alt: hora y zona horaria automática
   
-.. image:: ../images/fsl2pic4.jpg
-  :alt: LibreLink settings alarm
+.. imagen:: ../images/fsl2pic4.jpg
+  :alt: LibreLink configuración de alarma
   
-The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different seetings before even think of changing the sensor.
+La primera configuración de la conexión para el sensor es fundamental. La aplicación LibreLink intenta establecer una conexión inalámbrica al sensor cada 30 segundos. Si faltan uno o más valores obligatorios, hay que establecerlos. No tienes límite de tiempo para hacer eso. El sensor está constantemente intentando configurar la conexión. Incluso después de algunas horas. Be patient and try different seetings before even think of changing the sensor.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. Esto debería ocurrir después de un máximo de 5 minutos.
 
-.. image:: ../images/fsl2pic5.jpg
-  :alt: LibreLink no connection
+.. imagen:: ../images/fsl2pic5.jpg
+  :alt: LibreLink no hay conexión
   
 If the exclamation mark remains or you get an error message, this can have several reasons:
 
 - Android location service is not granted - please enable it in the system settings
 - automatic time and time zone is not set - please change the settings accordingly
 - activate alarms - at least one of the three alarms must be activated in LibreLink
-- Bluetooth is switched off - please switch on
+- El Bluetooth está apagado, por favor enciendalo
 
-Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Reiniciar el teléfono puede ayudar, es posible que tenga que hacerlo varias veces. Tan pronto como se establezca la conexión, desaparece la marca de exclamación roja y se toma el paso más importante. El sensor y el teléfono están ahora conectados, cada minuto se transmite un valor de azúcar en la sangre.
 
-.. image:: ../images/fsl2pic6.jpg
-  :alt: LibreLink connection established
+.. imagen:: ../images/fsl2pic6.jpg
+  :alt: Conexión LibreLink establecida
   
-Now the smartphone settings can be changed again if necessary, e.g. if you want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
+Ahora los ajustes de smartphone se pueden cambiar nuevamente si es necesario, p.ej. si desea ahorrar energía. El servicio de ubicación se puede desactivar, el volumen puede establecerse en cero o las alarmas se pueden desactivar de nuevo. Los niveles de azúcar de sangre se transfieren de todos modos.
 
-When starting the next sensor, however, all settings must be set again!
+Al iniciar el siguiente sensor, no obstante, todos los valores deben volver a establecerse!
 
-You can use a second NFC capable smartphone with the original LibreLink app for scanning via NFC. The Reader can NOT be used any more, it cannot be connected in parallel! The second phone can upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for the DiaDoc. There are many parents who absolutely need this. 
+Puede utilizar un segundo smartphone con capacidad de NFC con la aplicación de LibreLink original para el escaneo a través de NFC. El lector original NO se puede utilizar más, no se puede conectar en paralelo! El segundo teléfono puede subir los valores de azúcar en la sangre a la Nube Abbott (LibreView). LibreView puede generar informes para el DiaDoc. Hay muchos padres que necesitan absolutamente esto. 
 
-Remark: The patched app does not have any connection to the Internet.
+Aviso: La aplicación parcheada no tiene conexión a Internet.
 
-Step 2: Install and configure xDrip+ app
+Paso 2: Instalar y configurar la aplicación xDrip+
 ==================================================
 
 The blood sugar values are received on the smartphone by the xDrip+ App. 
 
 * If not already set up then download xdrip app and install one of the latest nightly builts from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
 * In xDrip+ select "Libre2 (patched App)" as data source
-* If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+* If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. Esto registrará mensajes de error adicionales ante problemas.
 * En xdrip vaya a Configuración > Interapp Compatibilidad > Datos de Difusión a nivel Local y seleccione ON.
 * En xdrip vaya a Configuración > Interapp Compatibilidad > Aceptar Tratamientos y seleccione OFF.
 * to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xdrip please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
