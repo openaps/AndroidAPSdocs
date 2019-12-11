@@ -20,7 +20,7 @@ With automated insulin delivery, the system does the same thing: it gathers data
 
 If the device running AndroidAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates runnning.
 
-### How data is gathered:
+### Cómo se recopilan los datos:
 
 With AndroidAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AndroidAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
 
