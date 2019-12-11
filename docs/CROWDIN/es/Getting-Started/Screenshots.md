@@ -131,11 +131,11 @@ Aquí vemos el estado de la bomba de insulina - en este caso un Combo Accu-Chek.
 
 ![Portal de Atención (Care Portal)](../images/Screenshot_care_portal.png)
 
-Este replica las funciones que encontrará en su Nightscout pantalla bajo el símbolo "+" que te permite añadir notas a sus registros. Las funciones tales como la grabación al cambiar un sitio de la bomba o el cartucho de insulina deben ser autoexplicativas. Pero esta sección no emite ningún comando a la bomba. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
+Este replica las funciones que encontrará en su Nightscout pantalla bajo el símbolo "+" que te permite añadir notas a sus registros. Las funciones tales como la grabación al cambiar un sitio de la bomba o el cartucho de insulina deben ser autoexplicativas. Pero esta sección no emite ningún comando a la bomba. Así que si añade un bolo usando esta pantalla simplemente hace una nota de esto en su registro de Nightscout, la bomba no será mandada para entregar un bolo.
 
 ## Loop, MA, AMA, SMB
 
-You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. Estos temas se debaten en otro lugar.
+Normalmente no tienes que preocuparte de esto, muestran los resultados del algoritmo OpenAPS que se ejecuta cada vez que el sistema recibe una nueva lectura de la CGM. Estos temas se debaten en otro lugar.
 
 ## Perfil
 
@@ -151,11 +151,11 @@ AndroidAPS se puede ejecutar utilizando un número de diferentes configuradores 
 
 **Basal:** es el perfil basal programado en la bomba.
 
-**Destino:** es el nivel de glucosa en sangre objetivo que desea para todo el tiempo. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**Destino:** es el nivel de glucosa en sangre objetivo que desea para todo el tiempo. Si lo desea, puede establecer diferentes niveles para las diferentes horas del día, e incluso puede establecer un rango superior e inferior para que la plataforma empiece a hacer cambios cuando el valor de glucosa en sangre previsto cae fuera, pero si hace eso, la plataforma responderá más lentamente y es poco probable que consiga esa glucosa estables.
 
 ## Tratamiento, xDrip, NSClient
 
-Estos son simplemente registros de tratamientos (bolos y carbohidratos), mensajes de xDrip y mensajes enviados a Nightscout a través de Nightscout. Normalmente no tienes que preocuparte por nada de esto a menos que haya un problema.
+Estos son registros de tratamientos (bolos y carbohidratos), mensajes de xDrip y mensajes enviados a Nightscout a través de Nightscout. Normalmente no tienes que preocuparte por nada de esto a menos que haya un problema.
 
 ## Configuraciones
 
