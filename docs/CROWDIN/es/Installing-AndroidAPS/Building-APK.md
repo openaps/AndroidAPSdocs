@@ -1,26 +1,26 @@
-# Building the APK
+# Construyendo la APK
 
-## Build yourself instead of download
+## Construyela tú mismo en lugar de descargarla
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS no está disponible como descarga debido a la regulación de los dispositivos mediales. ¡Es legal construir la aplicación para su propio uso, pero no debe dar una copia a los demás! Consulte la página [FAQ](../Getting-Started/FAQ.md) para obtener detalles.**
 
-## ## Important notes
+## ## Notas importantes
 
-* Please use **[Android Studio Version 3.5.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
+* Por favor utilice **[Android Studio Versión 3.5.1](https://developer.android.com/studio/)** o más reciente para construir el apk.
+* [Windows 10 sistemas de 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) no son compatibles con Android Studio 3.5.1.
 
-**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+**Configuración bajo demanda** no está soportada por la versión actual del plugin de Gradle de Android!
 
 If your build fails with an error regarding "on demand configuration" you can do the following:
 
-* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-* In the left pane, click Build, Execution, Deployment > Compiler.
-* Uncheck the Configure on demand checkbox.
-* Click Apply or OK.
+* Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
+* En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
+* Desmarque la casilla de verificación Configurar bajo demanda.
+* Haga clic en Aplicar o en Aceptar.
 
 * * *
 
-### This article is divided into two parts.
+### Este artículo se divide en dos partes.
 
 * In the overview part there is an explanation on what steps are necessary to build the APK file.
 * In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
