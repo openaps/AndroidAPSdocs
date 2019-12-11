@@ -32,19 +32,19 @@ In general, the steps necessary to build the APK file:
 * [Install git](../Installing-AndroidAPS/git-install.rst)
 * Install and setup Android Studio.
 * Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
-* Open the cloned project in Android Studio as active project.
-* Build the signed APK.
-* Transfer the signed APK to your smartphone.
+* Abra el proyecto clonado en Android Studio como proyecto activo.
+* Construya el APK firmado.
+* Transfiera la APK firmada generada a su teléfono.
 
-## Step by step walkthrough
+## Tutorial paso a paso
 
-Detailed description of the steps necessary to build the APK file.
+Descripción detallada de los pasos necesarios para crear el archivo APK.
 
 ## Install git (if you don't have it)
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
-## Install Android Studio
+## Instalar Android Studio
 
 The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
@@ -291,6 +291,6 @@ Yeah, you got it and can now start with configuring AndroidAPS for your use (CGM
 
 [See xDrip page](../Configuration/xdrip#identify-receiver)
 
-## Troubleshooting
+## Solución de problemas
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
