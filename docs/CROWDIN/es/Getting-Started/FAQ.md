@@ -18,45 +18,45 @@ Esta es la razón por lo que las apks no están disponibles.
 
 First of all, you have to **get loopable hardware components**:
 
-* A [supported insulin pump](Pump-Choices.md), 
+* Una [bomba de insulina compatible ](Pump-Choices.md), 
 * an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
+* un [sistema de monitorización continua de glucosa](../Configuration/BG-Source.rst) (Mcg). 
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+En segundo lugar, tienes que **configurar el hardware **. Ver el ejemplo del [tutorial de configuración paso a paso](Sample-Setup.md).
 
-Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+En tercer lugar, tienes que **configurar los componentes de software **: AndroidAPS y la fuente MCG/FGM.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. O puedes probar y establecer tu basal [con el método tradicional](http://integrateddiabetes.com/basal-testing/).
 
-## What practicalities of looping do I have?
+## ¿Qué aspectos prácticos de lazo tengo?
 
-### Password protection
+### Protección con contraseña
 
 If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
-### Android Wear Smartwatches
+### Relojes inteligentes Android Wear
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. La confirmación de la acción se realiza a través de la notificación.
 
-### Disconnect pump
+### Desconectando la bomba
 
 If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
 * Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
-* This will set your basal to zero for that time period.
+* Selecciona **'Desconectar bomba XY min'**
+* Esto establecerá tu basal a cero durante ese periodo de tiempo.
 * The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
 * Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
 * AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
     
-    ![Disconnect pump](../images/PumpDisconnect.png)
+    ![Desconectando la bomba](../images/PumpDisconnect.png)
 
 * If the selected time was too long you can reconnect manually.
 
-* Long-press on the red button 'Disconnected (xx m)'.
+* Manten pulsado el botón rojo 'Desconectado (xx m)'.
 * Select 'Reconnect pump'
     
-    ![Reconnect pump](../images/PumpReconnect.png)
+    ![Reconectando la bomba](../images/PumpReconnect.png)
 
 ### Recommendations not only based on one single CGM reading
 
