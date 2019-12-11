@@ -1,149 +1,149 @@
-# Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
+# Ejemplo de instalación: Samsung S7, DanaR, Dexcom G5 y el Smartwatch de Sony
 
 ![Configuración de ejemplo](../images/SampleSetup.png)
 
 ## Descripción
 
-In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G5 CGM. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
+En esta configuración, se utiliza el Samsung Galaxy S7 como centro de control del lazo. La aplicación Dexcom, ligeramente modificada, lee los valores de glucosa del sensor MCG Dexcom G5. Se utiliza AndroidAPS para controlar la bomba de insulina Dana R del fabricante coreano SOOIL a través de bluetooth. No se requieren otros dispositivos.
 
-As the Dexcom App only offers limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
+Como la aplicación Dexcom sólo ofrece opciones de alarma limitadas, la aplicación de código abierto xDrip+ se utiliza para definir no sólo alarmas altas y bajas, sino también alarmas adicionales según las necesidades individuales.
 
-Optionally an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values on your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+Opcionalmente se puede usar un smartwatch Android (en este ejemplo de instalación: Sony Smartwatch 3 (SWR50)) para mostrar los valores de glucosa y AndroidAPS en la muñeca. El reloj también puede ser utilizado para controlar AndroidAPS (por ejemplo, poner discretamente un bolus de comida).
 
-El sistema funciona sin conexión. This means there is no need for a data connection from the smartphone to the Internet for operation.
+El sistema funciona sin conexión. Esto significa que no hay necesidad de una conexión de datos desde el móvil a Internet para funcionar.
 
-Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" when a data connection is established. By doing so you can provide comprehensive reports for the doctor's visit or share the current values with family members at any time. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
+Sin embargo, los datos se subirán automáticamente a Nightscout "en la nube" cuando se establece una conexión de datos. De esta manera, puedes disponer de informes completos para la visita al médico o compartir los valores actuales con los miembros de la familia en cualquier momento. También es posible enviar datos a Nightscout sólo cuando se utiliza una conexión Wi-Fi (predefinida) con el fin de beneficiarse de los diferentes informes de Nightscout.
 
-## Required components
+## Componentes necesarios
 
 1. Samsung Galaxy S7
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS
+    * Alternativas: véase [lista de teléfonos y relojes probados ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) para AndroidAPS
 
-2. [DanaR](http://www.sooil.com/eng/product/) or Dana RS insulin pump
+2. Bomba de insulina [DanaR](http://www.sooil.com/eng/product/) o Dana RS
     
-    * Alternatives: 
-    * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * Alternativas: 
+    * [Accu-Check Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+    * Puede que otras bombas estén disponibles en el futuro, vea [futuros drivers de bomba ](Future-possible-Pump-Drivers.md) para obtener detalles.
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
+    * Alternativas: ver lista de posibles [fuentes BG](../Configuration/BG-Source.rst)
 
-4. Optional: Sony Smartwatch 3 (SWR50)
+4. Opcional: Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * Alternativas: véase [lista de teléfonos y relojes probados ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) para AndroidAPS (el sistema operativo deber ser Android Wear)
 
 ## Nightscout
 
-See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
+Consulta el detallado apartado [Nightscout setup ](../Installing-AndroidAPS/Nightscout.md)
 
-## Computer setup
+## Configuración del ordenador
 
-To be able to create an Android app from the freely available AAPS open source code you need Android Studio on your computer or notebook (Windows, Mac, Linux). A detailed instruction can be found at [building the APK](../Installing-AndroidAPS/Building-APK.md).
+Para poder crear una aplicación Android desde el código abierto AAPS, disponible libremente, necesitas Android Studio en tu ordenador o portátil (Windows, Mac, Linux). Se pueden encontrar instrucciones detalladas en [construyendo la APK ](../Installing-AndroidAPS/Building-APK.md).
 
-Please be patient when installing Android Studio as the software downloads a lot of additional data once installed on your computer.
+Por favor, ten paciencia al instalar Android Studio, ya que el software descarga muchos datos adicionales una vez instalado en tu ordenador.
 
-## Smartphone setup
+## Configuración del Smartphone
 
-![Smartphone](../images/SampleSetupSmartphone.png)
+![Teléfono inteligente](../images/SampleSetupSmartphone.png)
 
-### Check smartphone firmware
+### Comprobar firmware del smartphone
 
-* Menu > Settings > Phone info > Software info: At least "Android-Version 7.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
-* For firmware update: menu > Preferences > software update
+* Menú > Valores > Teléfono info > Información de software: Al menos "Android-Versión 7.0" (se ha probado con éxito en Android versión 8.0.0 Oreo-Samsung Experience Versión 9.0) 
+* Para actualizar el firmware: menú > Preferencias > actualización de software
 
-### Allow installation from unknown sources
+### Permitir la instalación de aplicaciones de fuentes desconocidas
 
 Menú > Ajustes > Ajustes de seguridad > fuentes Desconocidas > deslizar hacia la derecha (= activo)
 
-For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
+Por razones de seguridad, esta configuración debería estar inactiva una vez que la instalación de todas las aplicaciones descritas aquí se haya completado.
 
 ### Habilitar Bluetooth
 
-1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
-2. Menu > Settings > Connections > Location > slider to right side (= active)
+1. Menú > Configuración > Conexiones > Bluetooth > control deslizante hacia la derecha (= activo)
+2. Menú > Ajustes > Conexiones > Ubicación > control deslizante a la derecha (= activo)
 
-Location services ("GPS") must be activated in order for Bluetooth to work properly.
+Servicios de ubicación ("GPS") se debe activar para que Bluetooth funcione correctamente.
 
 ### Instalar la aplicación Dexcom (versión modificada)
 
 ![Aplicación Dexcom parcheada](../images/SampleSetupDexApp.png)
 
-The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Por lo tanto, se requiere una versión ligeramente modificada por la comunidad. Sólo esta aplicación de Dexcom modificada se puede comunicar con AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility). A mmol/l version and a mg/dl version of the modified Dexcom app are available at https://github.com/dexcomapp/dexcomapp?files=1.
+La aplicación de Dexcom original de Google Play Store no funcionará porque no difunde los valores a otras aplicaciones. Por lo tanto, se requiere una versión ligeramente modificada por la comunidad. Sólo esta aplicación de Dexcom modificada se puede comunicar con AAPS. Además, la aplicación Dexcom modificada se puede utilizar con todos los smartphones de Android y no sólo con los que están en la lista de compatibilidad de [Dexcom](https://www.dexcom.com/dexcom-international-compatibility). Una versión mmol/l y una versión mg/dl de la aplicación modificada de Dexcom están disponibles en https://github.com/dexcomapp/dexcomapp?files=1.
 
-To do this perform the following steps on your smartphone:
+Para ello, realice los pasos siguientes en el smartphone:
 
-1. If the original Dexcom app is already installed: 
-    * Stop sensor
-    * Uninstall app via Menu > Settings > Apps > Dexcom G5 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l according to your needs): <https://github.com/dexcomapp/dexcomapp?files=1>
-3. Install modified Dexcom app on your smartphone (= select the downloaded APK file)
-4. Start modified Dexcom app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
+1. Si la aplicación Dexcom original ya está instalada: 
+    * Detener Sensor
+    * Desinstalar la aplicación a través de Menú > Ajustes > Aplicaciones > Dexcom G5 Móvil > Desinstalar
+2. Descargar la aplicación de Dexcom modificada (compruebe la unidad mg/dl o mmol/l de acuerdo con sus necesidades): <https://github.com/dexcomapp/dexcomapp?files=1>
+3. Instale la aplicación Dexcom modificada en el smartphone (= seleccione el archivo APK descargado)
+4. Inicie la aplicación Dexcom modificada, activar/calibrar el sensor según las instrucciones dadas y espere hasta que la fase de inicialización esté terminada.
 5. Once the first two calibrations have been entered successfully and the modified Dexcom app shows actual glucose value setup the warnings (hamburger menu on top left side of the screen) as follows: 
-    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
-    * Low `OFF`
-    * High `OFF`
-    * Rise rate `OFF`
-    * Fall rate `OFF`
-    * Signal loss `OFF`
+    * Urgente baja `55mg/dl` / `3.1mmol/l` (no se puede inhabilitar)
+    * Baja `OFF`
+    * Alta `OFF`
+    * Tasa de subida `OFF`
+    * Tasa de bajada `OFF`
+    * Pérdida de señal `OFF`
 
-## Install AndroidAPS
+## Instalar AndroidAPS
 
-1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Transfer](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) the generated APK to your phone
-3. [Configure AndroidAPS](../Configuration/Config-Builder.md) according to your needs using the setup assistant or manually
-4. In this sample setup we used (among others)
+1. Siga las instrucciones para [construir la APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
+2. [Transferir](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) el APK generado a su teléfono
+3. [Configurar AndroidAPS](../Configuration/Config-Builder.md) de acuerdo a sus necesidades utilizando el asistente de configuración o de forma manual
+4. En esta configuración de ejemplo hemos utilizado (entre otros)
 
-* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* Origen BG: `Dexcom G5 App (parcheado)` -- haga clic en el engranaje y active `Subir datos BG a NS` y `Enviar datos BG a xDrip+` (consulte [BG origen](../Configuration/BG-Source.rst))
 
-![G5 Settings](../images/SampleSetupG5Settings.png)
+![Ajustes de G5](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* Cliente de NS activado (consulte [NS Client](../Configuration/Config-Builder#ns-profile) y [Configuración de Nightscout](../Installing-AndroidAPS/Nightscout.md))
 
-## Install xDrip+
+## Instalar xDrip+
 
-xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+ es otra aplicación de código abierto madura que ofrece innumerables posibilidades. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. Con xDrip+ las alarmas se pueden ajustar mucho más individualmente que con el software Dexcom AAPS o Nightscout (sin limitación en la selección de sonidos, diferentes alarmas dependiendo de la hora del día/noche, etc.).
 
-1. Download the latest stable APK version of xDrip+ with your smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - not the version from the Google Play Store!
-2. Install xDrip+ by selecting the downloaded APK file.
-3. Start xDrip+ and make the following settings (hamburger menu at top left) 
-    * Settings > Alarms and Alerts > Glucose Level Alert List > Create Alerts (high and low) according to your needs. 
-    * The existing alarms can be changed with a long press on the alarm.
-    * Settings > Alarms and Alerts > Calibration Alerts: disabled (reminded via the modified Dexcom app)
-    * Settings > Hardware Data Source > 640G/EverSense
-    * Settings > Inter-app settings > Accept Calibrations > `ON`
-    * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G5 sensor. This is necessary otherwise an error message will appear regularly.) 
+1. Descarga la última versión estable de xDrip+ con tu smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - ¡no la versión de Google Play Store!
+2. Instala xDrip+ seleccionando el archivo APK descargado.
+3. Inicia xDrip+ y haz los siguientes ajustes (menú hamburguesa en la parte superior izquierda) 
+    * Configuración > Alarmas y Alertas > Lista de nivel de Glucosa de Alertas > Crear Alertas (alta y baja) de acuerdo a sus necesidades. 
+    * Las alarmas existentes pueden ser cambiadas con una pulsación larga en la alarma.
+    * Configuración > Alarmas y Alertas > Calibración de Alertas: deshabilitado (recordado a través de la modificación de Dexcom app)
+    * Ajustes > Hardware de Origen de Datos > 640G/EverSense
+    * Ajustes > Configuración Inter-app > Aceptar Calibraciones> `ON`
+    * Menú > Inicio Sensor (sólo es "formal" y no tiene función que ver con el sensor G5 que está en operaciones. Esto es necesario, de lo contrario, aparecerá un mensaje de error con regularidad.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+Para obtener más información acerca de xDrip+, consulte aquí [BG fuente de la página](../Configuration/BG-Source.rst).
 
-### Example of an alarm setup
+### Ejemplo de una configuración de alarma
 
-The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
+La "Urgente alarma baja" (por debajo de los 55 mg/dl respectivamente. 3,1 mmol) es una alarma estándar de la aplicación de Dexcom modificada que no se puede inhabilitar.
 
-![xDrip alarms](../images/SampleSetupxDripWarning.png)
+![alarmas xDrip](../images/SampleSetupxDripWarning.png)
 
-Tip for meetings / church visits / cinema etc..:
+Consejo para reuniones / visitas de iglesias / cine, etc..:
 
-If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
+Si el modo "No molestar" está activado en el Samsung Galaxy S7 (Menú > Ajustes > Sonidos y vibración > No molestar: deslizador a la derecha (= activo)), el teléfono sólo vibra durante la baja alarma urgente y no emite una advertencia acústica. Para las otras alarmas configuradas vía xDrip+ puede seleccionar si el modo silencioso debe ser ignorado (sonido acústico reproducido) o no.
 
-## Disable power saving option
+## Inhabilitar opción de ahorro de energía
 
-On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G5 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
+En tu Samsung Galaxy S7 ve al menú > Ajustes > Mantenimiento del dispositivo > Batería > Aplicaciones no supervisadas > + Añadir aplicaciones: Selecciona las aplicaciones AndroidAPS, Dexcom G5 Mobile, xDrip+ y Android Wear (si se utiliza smartwatch) uno tras otro
 
-## Optional: Setup Sony Smartwatch 3 (SWR50)
+## Opcional: Configuración de Sony Smartwatch 3 (SWR50)
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+Con un Android Wear smartwatch la vida con diabetes se puede hacer aún más discreta. El reloj se puede utilizar para mostrar el nivel actual de glucosa, el estado del lazo etc. en la muñeca. El reloj también puede ser utilizado para controlar AndroidAPS (por ejemplo, poner discretamente un bolus de comida). Para hacer esto, toque dos veces el valor MCG del reloj AAPSv2. El SWR50 normalmente funciona durante un día entero hasta que la batería necesita ser recargada (mismo cargador que el Samsung Galaxy S7: microUSB).
 
 ![Smartwatch](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Detalles sobre la información mostrada en el watchface se pueden encontrar [aquí](../Configuration/Watchfaces.md).
 
-* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
-* In AAPS choose hamburger menu (top left corner) > Config Builder > General (at the bottom of the list) > Wear > activate on left side, click cock wheel > Wear settings and activate `Controls from Watch`
-* On your smartwatch: Long press display to change watchface and select `AAPSv2`
-* If necessary restart both devices once.
+* Instale la aplicación "Android Wear" en su smartphone a través de Google Play Store y conecte el smartwatch de acuerdo con las instrucciones allí.
+* En AAPS elija el menú de hamburguesa (esquina superior izquierda) > Configurar Builder > General (al final de la lista) > Usar > activar en el lado izquierdo, haga clic en el engranaje > Usar ajustes y activar `Controles desde el reloj`
+* En tu reloj inteligente: Pulsación larga para cambiar el watchface y selecciona `AAPSv2`
+* Si es necesario reiniciar ambos dispositivos una vez.
 
-## Pump setup
+## Ajustes de la bomba
 
-see [DanaR pump](../Configuration/DanaR-Insulin-Pump.md)
+ver [Bomba DanaR](../Configuration/DanaR-Insulin-Pump.md)
