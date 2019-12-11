@@ -1,20 +1,20 @@
 # Medtronic Pumpen
 
-**>>>> Der Medtronic Pumpentreiber ist seit Version 2.5 Bestandteil der AndroidAPS Master Version. Dennoch sollte er weiter als Software im Beta-Status angesehen werden. Bitte nutze ihn nur, wenn Du ein erfahrener AAPS-Anwender bist. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcomming release. <<<<**
+**>>>> Der Medtronic Pumpentreiber ist seit Version 2.5 Bestandteil der AndroidAPS Master Version. Dennoch sollte er weiter als Software im Beta-Status angesehen werden. Bitte nutze ihn nur, wenn Du ein erfahrener AAPS-Anwender bist. Momentan gibt es immer noch Probleme mit doppelten Boluseinträgen. In den Behandlungen werden Boli teilweise doppelt aufgeführt und dies bringt natürlich IOB durcheinander. (Aktiviere Double Bolus Logging in den Einstellungen der Medtronic Pumpe, falls dieser Fehler bei Dir auftritt und stelle den Entwicklern bitte Deine Logs zur Verfügung.) Dieses Problem sollte mit der kommenden Version behoben werden. <<<<**
 
 * * *
 
-Funktioniert nur mit ältern Medtronic Pumpen (Details siehe weiter unten). Funktioniert nicht mit Medtronic 640G oder 670G.
+Funktioniert nur mit älteren Medtronic Pumpen (Details siehe weiter unten). Funktioniert nicht mit Medtronic 640G oder 670G.
 
 * * *
 
-If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
+So bald Du AAPS mit einer Medtronic Pumpe nutzt, bitten wir um Eintrag in diese [Liste](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). Damit wollen wir einen Eindruck gewinnen, welche Smartphones gut und welche nicht so gut (oder gar nicht) mit dem Treiber funktionieren. Es gibt dort ein Spalte "BT restart". Damit wollen wir abfragen, ob Du an Deinem Smartphone Bluetooth ein- und ausschalten kannst. Das kann man nutzen, wenn die Pumpe sich nicht mehr verbindet - was hin und wieder vorkommen kann. Falls Dir andere Schwierigkeiten auffallen, trage diese bitte in die Kommentarspalte ein.
 
 * * *
 
 ## Hardware- und Softwareanforderungen
 
-- **Smartphone:** Der Medtronic sollte mit jedem Smartphone, das Bluetooth Low Energy (BLE) unterstützt, funktionieren. **WICHTIG: Der Treiber funktioniert zwar mit allen Telefonen, Aktivieren/Deaktivieren von Bluetooth aber leider nicht. (Dies ist aber erforderlich, falls die Verbindung zum RileyLink verloren geht und das System sie nicht wieder selbst herstellen kann. Das kann hin und wieder passieren.) Daher solltest Du ein Gerät mit Android 6.0 bis 8.1 verwenden. Im schlimmsten Fall kannst Du darauf LinegaeOS 15.1 (15.1 oder niedriger erforderlich) installieren. Wir arbeiten an den Problemen mit Android 9, haben bisher aber noch keine Lösung gefunden. (Es scheint, als ob es auf einigen Geräten funktioniert und auf anderen nicht, bei manchen auch nur hin und wieder.)**
+- **Smartphone:** Der Medtronic sollte mit jedem Smartphone, das Bluetooth Low Energy (BLE) unterstützt, funktionieren. **WICHTIG: Der Treiber funktioniert zwar mit allen Telefonen, Aktivieren/Deaktivieren von Bluetooth aber leider nicht. (Dies ist aber erforderlich, falls die Verbindung zum RileyLink verloren geht und das System sie nicht wieder selbst herstellen kann. Das kann hin und wieder passieren.) Daher solltest Du ein Gerät mit Android 6.0 bis 8.1 verwenden. Im schlimmsten Fall kannst Du darauf LineageOS 15.1 (15.1 oder niedriger erforderlich) installieren. Wir arbeiten an den Problemen mit Android 9, haben bisher aber noch keine Lösung gefunden. (Es scheint, als ob es auf einigen Geräten funktioniert und auf anderen nicht, bei manchen auch nur hin und wieder.)**
 - **RileyLink/Gnarl:** Um mit der Pumpe zu kommunizieren benötigst Du ein Gerät, das die Bluetooth Kommandos des Smartphones in Radiosignale übersetzt, damit diese von der Pumpe verstanden werden können. Dieses Gerät nennt man RileyLink. (Du kannst es unter [getrileylink.org](https://getrileylink.org/) bestellen.) Du benötigst eine stabile Geräteversion. Das bedeutet für ältere Modell Firmware 0.9 (ältere Versionen arbeiten evtl. nicht korrekt) und für neuere Modelle 2.2. Auf der RileyLink Seite findest Du Möglichkeiten zum Upgrade. Wenn Du etwas abenteuerlustiger bis, kannst Du auch [Gnarl](https://github.com/ecc1/gnarl), eine Art RileyLink-Clone, verwenden. 
 - **Pumpe:** Der Treiber funktioniert nur mit den folgenden Pumpenmodellen und Firmware-Versionen: 
     - 512/712
@@ -41,18 +41,18 @@ If you started using Medtronic driver please add yourself to this [list](https:/
 1. Verwendung des Assistenten (bei Neuinstallation)
 2. Direkt im Einstellungs-Tab (Zahnrad-Symbol beim Medtronic-Treiber)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Bei einer Neuinstallation startet der Assistent automatisch. Falls Deine Bluetooth-Verbindung nicht vollständig funktioniert und das Smartphone sich nicht mit der Pumpe verbinden kann, kannst Du die Konfiguration ggf. nicht abschließen. Wähle in diesem Fall die virtuelle Pumpe und am Ende der Konfiguration des Assistenten die Option 2 , damit die Pumpenerkennung umgangen wird.
 
-![MDT Settings](../images/Medtronic01.png)
+![Medtronic (MDT) Einstellungen](../images/Medtronic01.png)
 
-You need to set following items: (see picture above)
+Folgende Einstellungen sind erforderlich (vgl. Bild oben):
 
 - **Seriennummer der Pumpe**: Du findest diese auf der Rückseite der Pumpe (Bezeichnung mit SN). Du benötigst nur die Ziffern. Die Seriennummer umfasst sechs Ziffern.
 - **Pumpentyp**: Wähle den von Dir verwendeten Pumpentyp (z.B. 522). 
 - **Funkfrequenz der Pumpe**: Je nach Modell hat Medtronic zwei verschiedene Funkfrequenzen verwendet. Details dazu findest Du weiter unten in den [FAQ](../Configuration/MedtronicPump#faq). 
     - für Pumpen aus den USA & Kanada ist die Frequenz 916 MHz.
     - Pumpen aus anderen Ländern ("worldwide") nutzen 868 MHz.
-- **Max Bolus der Pumpe (IE)** (pro Stunde): Gleiche Einstellung wie in der Pumpe verwenden. Diese Einstellung beschränkt die Bolusabgabe. Falls Du diesen Wert überschreiten solltest, wird kein Bolus abgegeben und eine Fehlermeldung angezeigt. Maxmimal können 25 IE pro Stunde eingestellt werden. Wähle die für Dich passende Obergrenze, um Überdosierungen zu verhindern.
+- **Max Bolus der Pumpe (IE)** (pro Stunde): Gleiche Einstellung wie in der Pumpe verwenden. Diese Einstellung beschränkt die Bolusabgabe. Falls Du diesen Wert überschreiten solltest, wird kein Bolus abgegeben und eine Fehlermeldung angezeigt. Maximal können 25 IE pro Stunde eingestellt werden. Wähle die für Dich passende Obergrenze, um Überdosierungen zu verhindern.
 - **Max Basal der Pump (IE pro Stunde)**: Auch hier die identische Einstellung wie auf der Pumpe eintragen. Diese Einstellung beschränkt die maximale Basalmenge pro Stunde. Beispiel: Du möchtest, dass AAPS die TBR maximal auf 500% stellen kann und Deine größte stündliche Basalrate (= maximaler Basalwert pro Stunde innerhalb des 24-Stunden-Rasters eines Tages) liegt bei 1,5 IE pro Stunde. Dann musst Du Max Basal auf 7,5 setzen. Falls diese Einstellung falsch sein und z.B. Deine Basalrate einmal über diesem Wert liegen sollte, würde die Pumpe eine Fehlermeldung anzeigen.
 - **Verzögerung vor dem Start des Bolus (in Sek.)**: Anzahl Sekunden bevor der Bolus an die Pumpe geschickt wird, so dass Du ihn ggf. vorher noch abbrechen kannst. Der Abbruch des Bolus während dieser abgegeben wird, wird von der Pumpe nicht unterstützt. Wenn Du den Bolus dennoch während der Abgabe stoppen willst, musst Du die Verbindung zur Pumpe unterbrechen und danach wieder herstellen.
 - **Medtronic Encoding**: Diese Einstellung legt fest, ob die "4b6b Kodierung" des Medtronic Geräts durch AndroidAPS oder RileyLink erfolgen soll. Wenn Du einen RileyLink mit 2.x Firmware verwendest, ist die Standardeinstellung die Hardware-Kodierung durch den RileyLink. Bei älteren RileyLink mit 0.x firmware wird diese Einstellung ignoriert.
@@ -61,9 +61,9 @@ You need to set following items: (see picture above)
 
 ## MEDTRONIC (MDT) Tab
 
-![MDT Tab](../images/Medtronic02.png)
+![Medtronic (MDT) Tab](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+Anzeige verschiedener Informationen zum aktuellen Pumpenstatus:
 
 - **RileyLink Status**: Status der RileyLink-Verbindung. Das Telefon sollte immer mit dem RileyLink verbunden sein.
 - **Pumpenstatus**: Der Status der Pumpenverbindung kann verschiedene Werte haben, die meiste Zeit wird aber - bei inaktiver Pumpenverbindung - "Sleep" angezeigt werden. Bei der Ausführung eines Befehls wird zunächst "Waking up" angezeigt während sich AAPS mit dem Pumpe verbindet oder ein Befehl auf der Pumpe läuft (z.B. Get Time, Set TBR, etc.).
@@ -75,7 +75,7 @@ On pump tab you can see several lines that are showing pumps (and connections) c
 - **Reservoir**: Insulinstand im Reservoir (Update erfolgt mindestens stündlich).
 - **Errors**: Fehlercode, falls ein Problem erkannt wurde - meistens, wenn es fehlerhafte Einstellungen in der Konfiguration gibt.
 
-On lower end we have 3 buttons:
+Am unteren Ende gibt es 3 Buttons:
 
 - **Aktualisieren** ist für das Aktualisieren des Status. Dies sollte erst dann verwendet werden, wenn die Verbindung lange nicht vorhanden war, da diese Aktion Daten über die Pumpe zurücksetzt (Verlauf abrufen, get/set time, Profil abrufen, Akkustatus erhalten, etc.).
 - **Pump History**: Anzeige der Pumpen Historie (siehe [unten](../Configuration/MedtronicPump#pump-history))
@@ -83,68 +83,68 @@ On lower end we have 3 buttons:
 
 ## Pumpen Historie
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Dialog Pumpenhistorie](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Die Pumpen Historie wird alle 5 Minuten abgerufen und lokal gespeichert. Es werden nur die Einträge der letzten 24 Stunden gespeichert, so dass ältere Einträge entfernt werden, wenn neue hinzugefügt werden. Dies ist ein einfacher Weg, um die Pumpenhistorie einzusehen. Einige Einträge aus der Pumpe werden möglicherweise nicht angezeigt, weil sie nicht relevant sind - zum Beispiel die Konfiguration von Funktionen, die nicht von AndroidAPS verwendet werden.
 
 ## RL Status (RileyLink Status)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![RileyLink Status - Einstellungen](../images/Medtronic04.png) ![RileyLink Status - Verlauf](../images/Medtronic05.png)
 
-Dialog has two tabs:
+Der Dialog hat zwei Tabs:
 
 - **Settings**: Zeigt Einstellungen des RileyLink: Konfigurierte Adresse, verbundene Geräte, Verbindungsstatus, Verbindungsfehler und RileyLink Firmware Versionen. "Device Type" ist immer Medtronic Pump, Modell wäre Dein Modell, Seriennummer entsprechend Deiner Konfiguration, Pumpenfrequenz zeigt die verwendete Frequenz, Last Frequenz ist die zuletzt verwendete Frequenz.
 - **History**: Zeigt den Kommunikationsverlauf, Zeilen mit RileyLink zeigt die Statusänderungen für RileyLink und Zeilen mit Medtronic die an die Pumpe geschickten Befehle .
 
 ## Aktionen
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Wenn der Medtronic-Treiber ausgewählt ist, können drei Aktionen dem Tab Aktionen hinzugefügt werden:
 
 - **Wake and Tune Up** - Falls AndroidAPS die Pumpe über längere Zeit nicht erreichen kann (Kontakt sollte normalerweise alle fünf Minuten erfolgen), kannst Du die Verbindung mit Tune Up erzwingen. Dabei wird versucht, die Pumpe über alle zur Verfügung stehenden Unterfrequenzen zu erreichen. Die gefundene Frequenz wird als Standardfrequenz gesetzt. 
 - **RileyLink Config** - Wenn Du den RileyLink/GNARL zurücksetzt, musst Du mit diese Aktion verwenden, damit das Gerät neu konfiguriert werden kann (Frequenzsatz, Frequenztyp, codierende Konfiguration).
-- **Clear Bolus Block** - Während der Bolusabgabe, wird der Bolus Block gesetzt, um zu verhindern, das weitere Befehle an die Pumpe gesandt werden. Wenn Du die Pumpe trennst, um einen Bolus abzubrechen, kannst Du nach der erneuten Verbindung der Pumpe mit dieser Aktion den Bolus Block entfernen. Die Aktion ist nur während der Bolusabgabe verfügbar. 
+- **Clear Bolus Block** - Während der Bolusabgabe, wird der Bolus Block gesetzt, um zu verhindern, dass weitere Befehle an die Pumpe gesandt werden. Wenn Du die Pumpe trennst, um einen Bolus abzubrechen, kannst Du nach der erneuten Verbindung der Pumpe mit dieser Aktion den Bolus Block entfernen. Die Aktion ist nur während der Bolusabgabe verfügbar. 
 
 ## Wichtige Hinweise
 
 ### Protokollierung
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Der Medtronic-Treiber ist noch sehr neu. Aktiviere daher bitte die Protokollierung ("Logging"), damit wir evtl. auftretende Probleme debuggen und beheben können. Klicke auf das Symbol in der oberen linken Ecke, wähle Wartung (Maintenance) und dann Log Settings. Die Optionen Pumpe, PumpComm, PumpBTComm muss mit einem Häkchen versehen werden.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+Wenn Du den RileyLink oder GNARL neu startest, musst Du entweder TuneUp (Aktion "Wake and Tune Up") verwenden oder die Kommunikationsparameter erneut senden (Aktion "Reset RileyLink Config"), sonst kann keine Verbindung hergestellt werden.
 
 ### CGM
 
-Medtronic CGMS is currently NOT supported.
+Das Medtronic CGM ("Enlite") wird derzeit NICHT unterstützt.
 
 ### Manuelle Pumpenbedienung
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Die händische Bedienung der Pumpe sollte vermieden werden. Die Steuerung aller Befehle (Bolus, TBR) sollte durch AndroidAPS erfolgen. Wenn Du dennoch die Pumpe von Hand bedienen musst, müssen zwischen den manuellen Kommandos mindestens drei Minuten vergehen. Beispiel: Abgabe von zwei Boli; der zweite darf frühestens drei Minuten nach dem ersten manuell an der Pumpe abgegeben werden.
 
 ## Wechsel der Zeitzone / Zeitumstellung - oder Reisen mit AndroidAPS und einer Medtronic Pumpe
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+AndroidAPS sollte auf Reisen nicht deaktiviert werden, außer Dein CGM lässt keinen Offline-Betrieb zu. Sobald die Zeit im Smartphone geändert wird, erkennt AAPS die Zeitumstellung und schickt ein entsprechendes Kommando an die Pumpe, um auch dort die Zeit zu ändern.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Wenn Du nun gen Osten reist und sozusagen einige Stunden "überspringst" (z.B. von GMT+0 nach GMT+2), wird es keine Probleme mit der Pumpenhistorie geben und Du musst Dich um nichts kümmern. Wenn Du aber Richtung Westen reist und damit quasi ein paar Stunden "doppelt durchlebst" (z.B. GMT+2 nach GMT+0), bringt das die Synchronisierung durcheinander. Deutlich gesagt: In den folgenden Stunden musst Du vorsichtig sein und AAPS genau beobachten, da Dein IOB etwas durcheinander sein dürfte.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Wir sind uns dieses Problems bewusst und suchen nach einer möglichen Lösung (siehe https://github.com/andyrozman/RileyLinkAAPS/issues/145). Momentan musst Du Dir bei Reisen über Zeitzonen dieses Problems aber bewusst sein und entsprechend handeln.
 
 ## FAQ
 
 ### Kann ich die Ladestand des RileyLink/GNARL sehen?
 
-Leider nein. At the moment none of this devices support this and it probably won't even in the future.
+Leider nein. Derzeit unterstützt keines dieser Geräte diese Funktion und wird es wahrscheinlich auch in Zukunft nicht tun.
 
 ### Kann GNARL den RileyLink vollständig ersetzt?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Ja. Der Autor von GNARL hat alle Funktionen hinzugefügt, die vom Medtronic-Treiber verwendet werden. Stand Juni 2019 werden alle notwendigen Kommandos unterstützt. GNARL funktioniert aber nicht zusammen mit dem Omnipod. Der Nachteil von GNARL ist, dass Du ihn selbst bauen und über kompatible Hardware verfügen musst.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Hinweis:** Die GNARL-Software ist noch experimentell und wenig getestet ist. Sie sollte daher nicht als so sicher angesehen werden wie die des RileyLink.
 
 ### Wo kann ich den RileyLink oder GNARL bekommen?
 
-Like mentioned before you can get devices here:
+Wie bereits erwähnt:
 
 - RileyLink - zu bestellen unter [getrileylink.org](https://getrileylink.org/).
 - GNARL - Informationen findest Du unter [github.com/ecc1/gnarl](https://github.com/ecc1/gnarl), die Hardware muss aber an anderer Stelle bestellt werden.
@@ -159,9 +159,9 @@ Like mentioned before you can get devices here:
 
 ### Ermittlung der Pumpen-Frequenz
 
-![Pump Model](../images/Medtronic06.png)
+![Rückseite Medtronic Pumpe](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Auf der Rückseite findest Du in der ersten Zeile rechts einen speziellen Drei-Zeichen-Code. Die ersten beiden Stellen geben Auskunft über den Frequenztyp, die dritte über die Farbe. Hier sind mögliche Werte für die Frequenz:
 
 - NA - Nordamerika (in der Frequenzauswahl musst Du "US & Kanada (916 MHz)" auswählen)
 - CA - Kanada (in Frequenzauswahl musst Du "US & Kanada (916 MHz)" auswählen)
