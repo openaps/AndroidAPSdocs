@@ -80,7 +80,7 @@ Para ello, realice los pasos siguientes en el smartphone:
 2. Descargar la aplicación de Dexcom modificada (compruebe la unidad mg/dl o mmol/l de acuerdo con sus necesidades): <https://github.com/dexcomapp/dexcomapp?files=1>
 3. Instale la aplicación Dexcom modificada en el smartphone (= seleccione el archivo APK descargado)
 4. Inicie la aplicación Dexcom modificada, activar/calibrar el sensor según las instrucciones dadas y espere hasta que la fase de inicialización esté terminada.
-5. Once the first two calibrations have been entered successfully and the modified Dexcom app shows actual glucose value setup the warnings (hamburger menu on top left side of the screen) as follows: 
+5. Una vez que las dos primeras calibraciones se han introducido con éxito y la aplicación Dexcom modificada muestra el valor real de la glucosa, configure los avisos (menú de la hamburguesa en la parte superior izquierda de la pantalla) como se indica a continuación: 
     * Urgente baja `55mg/dl` / `3.1mmol/l` (no se puede inhabilitar)
     * Baja `OFF`
     * Alta `OFF`
@@ -103,7 +103,7 @@ Para ello, realice los pasos siguientes en el smartphone:
 
 ## Instalar xDrip+
 
-xDrip+ es otra aplicación de código abierto madura que ofrece innumerables posibilidades. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. Con xDrip+ las alarmas se pueden ajustar mucho más individualmente que con el software Dexcom AAPS o Nightscout (sin limitación en la selección de sonidos, diferentes alarmas dependiendo de la hora del día/noche, etc.).
+xDrip+ es otra aplicación de código abierto madura que ofrece innumerables posibilidades. En esta configuración, al contrario de lo que los desarrolladores escribieron por primera vez la aplicación, xDrip+ no se utiliza para recopilar datos de glucosa de la Dexcom G5, pero sólo para mostrar alarmas y el valor actual de la glucosa incluyendo la curva en la pantalla de inicio de Android en el widget. Con xDrip+ las alarmas se pueden ajustar mucho más individualmente que con el software Dexcom AAPS o Nightscout (sin limitación en la selección de sonidos, diferentes alarmas dependiendo de la hora del día/noche, etc.).
 
 1. Descarga la última versión estable de xDrip+ con tu smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - ¡no la versión de Google Play Store!
 2. Instala xDrip+ seleccionando el archivo APK descargado.
