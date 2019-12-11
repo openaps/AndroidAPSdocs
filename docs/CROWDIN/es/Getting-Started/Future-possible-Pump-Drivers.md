@@ -1,48 +1,48 @@
-# Future (possible) Pump Drivers
+# Posibles (futuros) drivers para Bombas
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado de soporte a las mismas en cualquiera de los sistemas de Lazo cerrado y, a continuación, su situación respecto en AAPS. Al final hay alguna información, de lo que se requiere para que una bomba pueda ser utilizada para "Lazos Cerrados".
 
-## Pumps whose support is in development
+## Bombas con soporte en desarrollo
 
 ### Medtronic
 
-**Loop status:** Some of older versions of pumps are loopable, but not the newer models (see below)
+**Loop status:** algunas de la versiones antiguas son utilizables, pro no los modelos más recientes (ver más abajo)
 
-**Other implementations:** OpenAPS, Loop
+**Otras plataformas: ** OpenAPS, Loop
 
-**Java implementations:** Partial implementation available [Rountrip2](https://github.com/TC2013/Roundtrip2), and [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
+**Plataformas Java:** aplicación parcial, disponible en [Rountrip2](https://github.com/TC2013/Roundtrip2), y [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS implementation status:** Work in progress. See [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Most of work was done on [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) to get framework and commands working. There is project (Medtronic) and tickets opened for future development on that repository, development is being done on branch dev_medtronic (which is default branch there). There is also gitter room: RileyLinkAAPS/Lobby. AAPS. 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. Project will probably be merged to main repository by end of July 2019. For details and timing see [Project board](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+**Estado de implementación AAPS:** Trabajo en curso. Mira [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), rama medtronic_andy. La mayor parte del trabajo se hizo en [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) para tener la estructura y los comandos funcionando. Hay proyecto (Medtronic) y tickets abiertos para el desarrollo futuro en ese repositorio, el desarrollo se está realizando en la rama dev_medtronic (que es la rama predeterminada allí). También hay un espacio en git: RileyLinkAAPS/Lobby. AAPS. 0.10 test "release" is out, with about 95% of all functionality, at the moment what is missing is synhronization of TBRs and Pump "Delivery stopped" events. El proyecto probablemente se añadirá al repositorio principal a finales de julio de 2019. Para más detalles y calendario vea [Tabla de proyecto](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
-**Hardware requirement for AAPS:** RileyLink (with 916 MHz antenna).
+**Requisitos hardware para AAPS: ** RileyLink (con antena de 916 MHz).
 
-**Loopable versions:** 512-522, 523 (Fw 2.4A or lower), 554 (EU firmware 2.6A or lower, CA firmware 2.7A or lower). Same for 7xx versions. All other devices are not supported, and probably won't be.
+**Versiones Loopables: ** 512-522, 523 (Fw 2.4A o inferior), 554 (firmware de la UE 2.6A o inferior, firmware de CA 2.7A o inferior). Lo mismo ocurre con las versiones 7xx. Todos los demás dispositivos no son compatibles, y probablemente no lo serán.
 
 * * *
 
-### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (con los viejos Eros Pods) ([Página de inicio ](https://www.myomnipod.com/en-gb/about/how-to-use))
 
-**Loop status:** Not supported natively by AAPS at the moment. Decoding of the Omnipod protocol is finished- [OpenOmni](http://www.openomni.org/) and [OmniAPS Slack](https://omniaps.slack.com/)
+**Loop status:** En este momento no soportado de forma nativa por parte de AAPS. El decodificación del protocolo Omnipod ha finalizado-[OpenOmni ](http://www.openomni.org/) y [OmniAPS Slack ](https://omniaps.slack.com/)
 
-**Other implementations:**
+**Otras plataformas:**
 
 - Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
 - OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
-- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
+- [iOS Loop](https://loopkit.github.io/loopdocs/) (estable, distribuida, requere RileyLink).
 
-**Java implementations:** None till now.
+**Plataformas en Java:** Ninguna hasta ahora.
 
-**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). No requiere Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
 
 **Hardware requirement for AAPS:** RileyLink with Omnipod firmware (2.x) and 433 MHz antenna.
 
-## Pumps that are Loopable
+## Bombas compatibles
 
-### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
+### Omnipod DASH ([Homepage ](https://www.myomnipod.com/DASH))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but protocol unknown at the moment. Selling of pump officially started in January 2019.
+**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. La bomba es candidata, pero el protocolo aún se desconoce. La venta de la bomba se inició oficialmente en enero de 2019.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. Está habilitada para BT.
 
 **Comments:** We are looking into development of Omnipod DASH, but problem at the moment is, that Dash is not yet available in Europe (where most of AAPS developers are) and that communciation protocol is unknown. We will try to reverse engineer official Dash APK, to determine how communication works and then implementation based on that findings. You can follow what is happening here: [DashAAPS](https://github.com/andyrozman/DashAAPS/projects/1), but don't expect this to be available anytime soon. This is at the moment only Proof Of Concept (until Milestone 2 is completed).
 
@@ -52,7 +52,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, it seems that communication is very limited (uni directional: Pump->App). Maybe this will change in the next versions.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. Está habilitada para BT.
 
 * * *
 
@@ -60,7 +60,7 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. Está habilitada para BT.
 
 * * *
 
@@ -96,9 +96,9 @@ This is list of some Pumps floating around there, and status of support for them
 
 ### Cellnovo Pump ([Homepage](https://www.cellnovo.com/en/homepage))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Loop status: ** Actualmente no está soportado por ninguno de los sistemas de lazo cerrado. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. Está habilitada para BT.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
