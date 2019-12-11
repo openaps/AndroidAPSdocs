@@ -113,7 +113,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Closed Loop</td>
+ <td>Lazo cerrado</td>
  <td>los sistemas de lazo cerrado hacen ajustes automáticos a la dosis basal, sin necesidad de aprobación del usuario, en base a un algoritmo</td>
  <td>Lazo abierto</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Lazo cerrado de Wiki</a></td>
@@ -263,9 +263,9 @@
  <td><a href="https://openaps.readthedocs.io">Documentos de OpenAPS</a></td>
 </tr>
 <tr>
- <td>Open Loop</td>
+ <td>Lazo abierto</td>
  <td>el sistema propone ajustes recomendados, los que deben colocarse manualmente en la bomba</td>
- <td>Closed Loop</td>
+ <td>Lazo cerrado</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - configuración</a></td>
 </tr>
 <tr>
@@ -385,7 +385,7 @@
 <tr>
  <td>Bomba virtual</td>
  <td>opción para probar las funciones de AAPS o PWD utilizando un modelo de bomba sin el controlador AndroidAPS para el lazo</td>
- <td>Open Loop</td>
+ <td>Lazo abierto</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
