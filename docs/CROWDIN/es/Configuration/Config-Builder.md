@@ -123,7 +123,7 @@ Usted puede ver su sensibilidad en la pantalla de inicio seleccionando SEN y vie
 
 ### Ajustes absorción
 
-Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. El valor sólo se utiliza durante las diferencias en las lecturas de MCG o cuando la actividad física "utiliza" todo el aumento de la glucosa en la sangre, lo que de otra manera causaría que la AAPS descienda a COB. At times when carb absorption can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Básicamente, es un seguro contra fallos.
+Si utiliza Oref1 con SMB, debe cambiar **min_5m_carbimpact ** a 8. El valor sólo se utiliza durante las diferencias en las lecturas de MCG o cuando la actividad física "utiliza" todo el aumento de la glucosa en la sangre, lo que de otra manera causaría que la AAPS descienda a COB. A veces, cuando la absorción de carbohidratos no puede ser dinámicamente trabajada, en base a sus reacciones de sangre, inserta una baja por defecto en sus carbohidratos. Básicamente, es un seguro contra fallos.
 
 ## APS
 
@@ -131,10 +131,10 @@ Seleccione el algoritmo APS deseado para realizar los ajustes de la terapia. Pue
 
 * OpenAPS MA (asistencia para comidas, estado del algoritmo en 2016)
 * OpenAPS AMA (asistencia de comida avanzada, estado del algoritmo en 2016)   
-    Más detalles acerca de OpenAPS AMA se pueden encontrar en [OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
-    Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) in order to use OpenAPS AMA.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
-    Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+    Más detalles acerca de OpenAPS AMA se pueden encontrar en [OpenAPS docs ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). En términos simples, los beneficios son después de que se pone un bolo de comida, que el sistema puede ser más rápido si especifica los carbohidratos de forma fiable.   
+    Note que necesita estar en [Objetivo 9 ](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) para poder utilizar OpenAPS AMA.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolo, el más reciente algoritmo para usuarios avanzados)  
+    Nota: debe estar en [Objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) para utilizar OpenAPS SMB y min_5m_carbimpact debe estar ajustado a las 8 en el Config builder > Sensibilidad de detección > Valor de sensibilidad Oref1.
 
 ## Loop
 
@@ -142,11 +142,11 @@ Defina si quieres permitir controles automáticos AAPS o no.
 
 ### Lazo abierto
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). Esta opción es para conocer cómo funciona AndroidAPS o si está usando una bomba no soportada.
+AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y hace sugerencias de tratamiento sobre cómo ajustar su terapia si es necesario. Las sugerencias no se ejecutarán automáticamente (como en el lazo cerrado) deben introducirse manualmente en la bomba o usando un botón en caso de que esté usando una bomba compatible (Dana R/RS o Accu Chek Combo). Esta opción es para conocer cómo funciona AndroidAPS o si está usando una bomba no soportada.
 
 ### Lazo cerrado
 
-AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente. El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba soportada.
+AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y ajusta automáticamente el tratamiento si es necesario (es decir, sin intervención adicional) para alcanzar el rango o valor de destino establecido (entrega de bolo, velocidad basal temporal, cambio de insulina para evitar la hipoglucemia, etc.). El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente. El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba soportada.
 
 ## Objetivos (programa de aprendizaje)
 
