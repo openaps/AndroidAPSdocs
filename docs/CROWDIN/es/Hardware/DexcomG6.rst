@@ -13,17 +13,17 @@ Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo 
 
 * Si está utilizando los datos nativos con el código de calibración en xDrip o Spike, la cosa más segura es no permitir reinicios preventivos del sensor.
 * Si debe usar reinicio preventivo, a continuación, asegúrese de insertar una hora del día donde puede observar el cambio y calibrar si es necesario. 
-* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
+* Si está reiniciando sensores, o bien haga esto sin la calibración de fábrica para obtener resultados más seguros en los días 11 y 12, o asegúrate de que estás listo para calibrar y vigilar la variación.
 * La preabsorción del G6 con calibración de fábrica es probable que dé variaciones en los resultados. Si haces preconfiguración, entonces para obtener los mejores resultados, probablemente necesitarás calibrar el sensor.
-* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+* Si no estás observando los cambios que pueden estar teniendo lugar, puede ser mejor volver al modo no calibrado en fábrica y usar el sistema como un G5.
 
 Para obtener más información acerca de los detalles y las razones de estas recomendaciones, lea el artículo completo <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/> publicado por Tim Street en 'www.diabettech.com<http://www.diabettech.com>`_.
 
 Si se utiliza G6 con xdrip+
 ==================================================
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
+* El transmisor Dexcom G6 puede conectarse simultáneamente al receptor Dexcom (o alternativamente a la bomba t:slim) y a una aplicación en tu teléfono.
 * Para usar xDrip+ como receptor, desinstala primero la aplicación Dexcom. **No se puede conectar la aplicación xDrip+ y Dexcom con el transmisor al mismo tiempo!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
+* Si necesita Clarity y quiere beneficiarse de las alarmas de xDrip+ `use la aplicacción Dexcom parchada </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ con difusión local a xDrip+.
 * Si todavía no se ha configurado, descargue `xdrip <https://github.com/NightscoutFoundation/xDrip>` _ y siga las instrucciones de nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>` _).
 * Seleccione xdrip en ConfigBuilder (seteos en AndroidAPS).
 * Ajuste los valores en xDrip+ según la página de valores de `xDrip+ <../Configuration/xdrip.html>` _
