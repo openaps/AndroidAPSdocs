@@ -146,19 +146,19 @@ AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y hace 
 
 ### Lazo cerrado
 
-AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y ajusta automáticamente el tratamiento si es necesario (es decir, sin intervención adicional) para alcanzar el rango o valor de destino establecido (entrega de bolo, velocidad basal temporal, cambio de insulina para evitar la hipoglucemia, etc.). El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente. El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba soportada.
+AAPS evalúa continuamente todos los datos disponibles (IOB, COB, BG...) y ajusta automáticamente el tratamiento si es necesario (es decir, sin intervención adicional) para alcanzar el rango o valor de destino establecido (entrega de bolo, basal temporal, parada de infusión de insulina para evitar la hipoglucemia, etc.). El Loop Cerrado funciona dentro de numerosos límites de seguridad, que se pueden establecer individualmente. El Lazo Cerrado sólo es posible si está en [Objetivo 6 ](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) o superior y utiliza una bomba soportada.
 
 ## Objetivos (programa de aprendizaje)
 
 AndroidAPS tiene una serie de objetivos que tiene que cumplir paso a paso. Esto debería guiarle de forma segura hacia la configuración de un sistema de lazo cerrado. Esto garantiza que usted tiene configurado todo correctamente y que entienda lo que el sistema hace exactamente. Esta es la única forma en la que puedes confiar en el sistema.
 
-Deberías [exportar tus ajustes](../Usage/ExportImportSettings.rst) (incluyendo el progreso de los objetivos) regularmente. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Deberías [exportar tus ajustes](../Usage/ExportImportSettings.rst) (incluyendo el progreso de los objetivos) regularmente. En caso de que tenga que reemplazar su smartphone más tarde (compra de uno nuevo, daños de pantalla, etc.), simplemente puede importar estos ajustes.
 
 Consulte la página [Objetivos](../Usage/Objectives.rst) para obtener más información de configuración.
 
 ## Tratamientos
 
-Si ve la pestaña Tratamientos (Trat), usted puede ver los tratamientos que se han subido a nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+Si ve la pestaña Tratamientos (Trat), usted puede ver los tratamientos que se han subido a nightscout. Si desea editar o eliminar una entrada (por ejemplo, si ha comido menos carbohidratos de lo que esperaba), seleccione 'Eliminar' y especifique el nuevo valor (cambie el tiempo si es necesario) a través de la pestaña Careportal (CP).
 
 ## General
 
@@ -181,19 +181,19 @@ Definir los Botones que se muestran en la pantalla de inicio.
 * MCG (abre xDrip +)
 * Calibración
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Además, puede establecer accesos directos para los incrementos de insulina y carb y decidir si el campo de notas debe mostrarse en los diálogos de tratamiento.
 
 #### Asistente configuración
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Usar para comidas que se consumen con frecuencia. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Crear un botón para una determinada comida estándar (carbohidratos y método de cálculo para el bolo) que se mostrará en la pantalla de inicio. Usar para comidas que se consumen con frecuencia. Si se especifican diferentes horas para las diferentes comidas, siempre tendrá el botón de comida adecuado en la pantalla de inicio, dependiendo de la hora del día.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Nota: el botón, no será visible si se encuentra fuera del intervalo de tiempo especificado, o si usted tiene suficiente IOB para cubrir los hidratos de carbono definidos en el botón Asistente rápido (QuickWizard).
 
 ![Configuración del asistente rápido](../images/ConfBuild_QuickWizard.png)
 
 #### Ajustes avanzados
 
-Habilite la funcionalidad de super bolo en el asistente. Utilícelo con precaución y no lo habilite hasta que aprenda lo que realmente hace. Básicamente, el basal para las próximas dos horas se añade al bolo y se activa un tiempo cero de dos horas. **Las funciones de lazo AAPS se inhabilitarán, por lo que se utilizará con precaución! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Habilite la funcionalidad de super bolo en el asistente. Utilícelo con precaución y no lo habilite hasta que aprenda lo que realmente hace. Básicamente, el basal para las próximas dos horas se añade al bolo y se activa un tiempo cero de dos horas. **Las funciones de lazo AAPS se inhabilitarán, por lo que se utilizará con precaución! Si utiliza las funciones de SMB, AAPS se inhabilitará de acuerdo con los valores en ["Máx minutos de basal para limitar SMB a" ](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), si no utiliza funciones de bucle de SMB se inhabilitarán durante dos horas. ** Detalles de super bolo pueden encontrarse [aquí ](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Acciones
 
@@ -223,17 +223,17 @@ Los carbohidratos que se introducen en el portal (por ejemplo los de corrección
 
 ### Comunicaciones SMS
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Permite a los cuidadores remotos controlar algunas características de AndroidAPS a través de SMS, ver [mandos SMS ](../Children/SMS-Commands.rst) para obtener más información de configuración.
 
 ### Comida
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Muestra los valores de alimentos definidos en la base de datos de alimentos de Nightscout, consulte el apartado [Información de Nightscout](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) para obtener más información de configuración.
 
 Nota: Las entradas no se pueden utilizar en la calculadora AndroidAPS. (Ver solamente)
 
 ### Reloj
 
-Supervise y controle AAPS con su reloj Android Wear (vea [pagina de pantallas de reloj](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Supervise y controle AAPS con su reloj Android Wear (vea [pagina de pantallas de reloj](../Configuration/Watchfaces.md)). Utilice la configuración (engranaje) para definir las variables que deben tenerse en cuenta a la hora de calcular el bolo dado a través de su reloj (por ejemplo, la tendencia de 15min, COB...).
 
 Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" que necesitas para activar "Controles desde el Reloj".
 
@@ -250,7 +250,7 @@ Visualizar información del lazo en el reloj de xDrip + (si no está utilizando 
 
 ### Avisos permanentes
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+Visualiza un resumen del BG actual, delta, TBR% activo, basal activo u/h y perfil, IOB y se divide en IOB en bolo y basal IOB en la pantalla desplegable de los teléfonos y en la pantalla de bloqueo del teléfono.
 
 ![Widget de AAPS](../images/ConfBuild_Widget.png)
 
