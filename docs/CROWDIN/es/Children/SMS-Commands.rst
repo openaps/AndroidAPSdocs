@@ -125,7 +125,7 @@ Otros
 * AYUDA BOLUS
    * Respuesta: BOLUS 1.2 BOLUS 1.2 MEAL
 
-Troubleshooting
+Solución de problemas
 ==================================================
 Hubo un reporte sobre los comandos de SMS que se detenían después de una actualización en el teléfono Galaxy S10. Se puede resolver mediante el desetiquetado de 'enviar como mensaje de conversación '.
 
