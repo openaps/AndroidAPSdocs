@@ -1,26 +1,26 @@
-# Accu-Chek Insight Pump
+# Bomba Accu-Chek Insight
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Este software es parte de una solución de páncreas artificial de "hágalo usted mismo" y no es un producto, pero requiere que lea, aprenda y entienda el sistema, incluyendo cómo utilizarlo. No es algo que haga todo el manejo de su diabetes, pero le permite mejorar su diabetes y su calidad de vida si está dispuesto a dedicar el tiempo necesario. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
 
 * * *
 
-## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
+## ***AVISO: ** Si ha estado utilizando la bomba con **SightRemote ** en el pasado, por favor, **actualice a la versión más reciente de AAPS ** y **desinstale SightRemote **.*
 
-## Hardware and software requirements
+## Requisitos hardware y software
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work)
+* Una bomba de insulina Roche Accu-Chek Combo (cualquier firmware, todos funcionan)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la bomba**.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Un teléfono Android (Basicamente todas las versiones de Android funcionarían, pero el AndroidAPS requiere al menos Android 5 (Lollipop)
 
-* The AndroidAPS app installed on your phone
+* La aplicación AndroidAPS instalada en el teléfono
 
 ## Configuración
 
-* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
+* La bomba Insight sólo debe estar conectado a un dispositivo a la vez. Si ha utilizado previamente el Insight remote control (medidor), debe quitar el medidor de la lista de dispositivos emparejados de la bomba: Menú > ajustes > Ajustes Comunicación > Quitar dispositivo
     
-    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+    ![Pantalla de quitar el medidor Insight](../images/Insight_RemoveMeter.png)
 
 * In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
