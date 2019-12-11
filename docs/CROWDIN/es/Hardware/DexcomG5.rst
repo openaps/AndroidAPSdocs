@@ -22,5 +22,5 @@ Si utiliza G5 con la aplicación Dexcom parcheada
 * Detener el sensor y desinstalar el app de Dexcom original, si no lo ha hecho ya.
 * Instalar el apk descargado
 * Iniciar Sensor
-* Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+* Seleccione la aplicación Dexcom (parchada) en ConfigBuilder (seteos en AndroidAPS).
 * Si desea utilizar xDrip alarmas a través de la difusión local: en xDrip menú hamburguesa > ajustes > ajustes de hardware de origen de datos > 640G /EverSense.
