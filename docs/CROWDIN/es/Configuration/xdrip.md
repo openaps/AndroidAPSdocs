@@ -1,47 +1,47 @@
-# xDrip+ settings
+# Configuración de xDrip+
 
-If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip)
+Si todavía no lo has hecho, descarga [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie que empiezan por 80 u 81) por favor, asegúrate de utilizar la versión [maestra fechada 2019/05/18 ](https://jamorham.github.io/#xdrip-plus) o posterior.
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Si el número de serie de su transmisor Dexcom G6 empieza por 8G u 8H utiliza una de las [últimas compilaciones nocturnas](https://github.com/NightscoutFoundation/xDrip/releases).
 
-## Basic settings for all CGM & FGM systems
+## Configuración básica para todos los medidores contínuos (CGM), sistemas CGM puros o sistemas flash (FGM)
 
-* Make sure to set Base URL correctly including **S** at the end of http**s**:// (not http://)
+* Asegúrate de establecer la URL base correctamente utilizando **https://** y no http://
    
-   i.e. https://API_SECRET@your-app-name.herokuapp.com/api/v1/
+   Por ejemplo, https://TU_API_SECRET@nombre_de_tu_app.herokuapp.com/api/v1/
    
-   -> Hamburger Menu (top left of homescreen) -> Settings-> Cloud Upload-> Nightscout Sync (REST-API) -> Base URL
+   -> Pulsa en la hamburguesa (menú con tres líneas de la parte superior izquierda de la pantalla) -> Configuración-> Subir a la nube-> Sincronización con Nightscout (REST-API) -> URL base
 
-* Deactivate `Automatic Calibration` If the checkbox for `Automatic Calibration` is checked, activate `Download data` once, then remove the checkbox for `Automatic Calibration` and deactivate `Download data` again, otherwise the treatments (insulin & carbs) will be added twice to Nightscout.
+* Desactiva `Calibración automática` Si la caja de verificación `Automatic Calibration` está marcada, activa `Descargar datos` y a continuación desmarca la caja de verificación de `Calibración automática` y desactiva `Descargar datos` de nuevo, de lo contrario los tratamientos (insulina y carbohidratos) se añadirán dos veces a Nightscout.
 
-* Tap `Extra Options`
+* Pulsa `Opciones adicionales`
 
-* Deactivate `Upload treatments` and `Back-fill data`.
+* Desactiva `Cargar tratamientos` y `Rellenar datos`.
    
-   **Safety warning : You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
+   **Advertencia de seguridad: Debes desactivar "Cargar tratamientos" en xDrip+, de lo contrario, si los tratamientos se duplican pueden dar lugar a cifras erróneas de insulina activa (IOB) y carbohidratos activos (COB) en en AAPS.**
 
-* Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
+* La opción `Alerta de fallos` también debe desactivarse. De lo contrario, recibirás una alarma cada 5 minutos si la red wifi/móvil es demasiado mala o si el servidor no está disponible.
    
-   ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
+   ![xDrip+ Ajustes Básicos 1](../images/xDrip_Basic1.png)
    
-   ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
+   ![xDrip+ Ajustes Básicos 2](../images/xDrip_Basic2.png)
 
-* **InterApp-Settings** (Broadcast) If you are going to use AndroidAPS and the data should be forwarded to i.e. AndroidAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+* **Configuración InterApps** Si vas a utilizar AndroidAPS es necesario activar <0>Difusión local</0> dentro de las opciones InterApps de xDrip+ para que los datos sean emitidos y AndroidAPS pueda leerlos.
 
-* In order for the values to be equal, you should activate `Send the displayed glucose value`.
+* Para que los valores sean consistentes, debes activar `Enviar el valor de glucosa visualizado`.
 
-* If you have also activated `Accept treatments` and broadcasting in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. more accurately.
+* Si has activado `Aceptar tratamientos` en xDrip+ y <0>Difusión de datos</0> en AndroidAPS, entonces xDrip+ recibirá los datos de insulina, carbohidratos y dosis basal desde AndroidAPS para poder realizar predicciones de hipoglucemia, etc. con mayor precisión.
    
-   ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
+   ![xDrip+ Ajustes Básicos 3](../images/xDrip_Basic3.png)
 
-### Identify receiver
+### Identificar receptor
 
-* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
-* Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps`. Capital I would prevent AAPS from receiving BG values from xDrip.
+* Si descubres problemas con la difusión local (AAPS no recibe los valores de glucemia en sangre (BG) de xDrip+) ve a Ajustes > Ajustes InterApp > Identificar receptor y especifica `info.nightscout.androidaps`.
+* Importante: la corrección automática a veces tiende a cambiar la "i" de "info" por una mayúscula. Debes utilizar **solo letras minúsculas** al escribir `info.nightscout.androidaps`. Las mayúsculas impedirían que AAPS recibiera valores de glucemia en sangre (BG) desde xDrip+.
    
-   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+   ![xDrip+ Inter-app Ajustes Básicos Identificar receptor](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ & Dexcom G6
 
@@ -51,32 +51,32 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use o
 
 ### xDrip+ version depending on G6 transmitter serial no.
 
-* For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
-* If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+* Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie que empiezan por 80 u 81) por favor, asegúrate de utilizar la versión [maestra fechada 2019/05/18 ](https://jamorham.github.io/#xdrip-plus) o posterior. 
+* Si el número de serie de su transmisor Dexcom G6 is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Dexcom specific settings
 
 * Open G5/G6 Debug Settings -> Hamburger Menu (top left of homescreen) -> Settings -> G5/G6 Debug Settings ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
 
-* Enable the following settings
+* Habilite los siguientes parámetros
    
-   * `Use the OB1 Collector`
-   * `Native Algorithm` (important if you want to use SMB)
-   * `G6 support`
-   * `Allow OB1 unbonding`
-   * `Allow OB1 initiate bonding`
-* All other options should be disabled
-* Adjust battery warning level to 280 (bottom of G5/G6 Debug Settings)
+   * `Usar el Colector OB1`
+   * `Algoritmo nativo` (importante si desea utilizar SMB)
+   * `Soporte G6`
+   * `Permitir desvinculación de OB1`
+   * `Permitir a OB1 iniciar la vinculación`
+* Todas las demás opciones deben ser desactivados
+* Ajuste el nivel de aviso de la batería a 280 (parte inferior de los valores de depuración G5/G6)
    
-   ![xDrip+ G5/G6 Debug Settings](../images/xDrip_Dexcom_DebugSettings.png)
+   ![ajustes de depuración de xDrip+ G5/G6](../images/xDrip_Dexcom_DebugSettings.png)
 
-### Preemptive restarts not recommended
+### No se recomiendan reinicios preventivos
 
-**With Dexcom transmitters whos serial no. is starting with 8G or 8H preemptive restarts do not work and might kill the sensor completely!**
+**Con transmisores Dexcom con número de serie que empieza por 8G o 8H, los reinicios preventivos no funcionan y podrían matar el sensor completamente!**
 
 The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Saltar después de un reinicio preventivo](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo que se sugiere en primer lugar. Para utilizar de manera segura, hay un par de puntos a tener en cuenta:
 
@@ -92,9 +92,9 @@ To learn more about the details and reasons for these recommendations read the [
 
 **For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie que empiezan por 80 u 81) por favor, asegúrate de utilizar la versión [maestra fechada 2019/05/18 ](https://jamorham.github.io/#xdrip-plus) o posterior.
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Si el número de serie de su transmisor Dexcom G6 is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Turn original Dexcom receiver off (if used).
 * Long press the red xDrip+ blood drop icon on the main screen to enable the `Source Wizard Button`.
@@ -167,9 +167,9 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H try [nightl
 
 ### Replace transmitter
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie que empiezan por 80 u 81) por favor, asegúrate de utilizar la versión [maestra fechada 2019/05/18 ](https://jamorham.github.io/#xdrip-plus) o posterior.
 
-If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Si el número de serie de su transmisor Dexcom G6 is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Turn original Dexcom receiver off (if used).
 * Stop sensor (only if replacing sensor)
@@ -320,13 +320,13 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
    
    ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
-* Enable the following settings
+* Habilite los siguientes parámetros
    
    * `Turn Bluetooth on` 
    * `Use scanning`
    * `Always discover services`
 
-* All other options should be disabled
+* Todas las demás opciones deben ser desactivados
    
    ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
