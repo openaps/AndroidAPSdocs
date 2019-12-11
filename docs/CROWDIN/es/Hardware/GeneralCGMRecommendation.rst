@@ -19,7 +19,7 @@ Al establecer el sensor, se recomienda no presionar demasiado el insertador para
 
 Después de ajustar el sensor, el transmisor se puede colocar en el adaptador del sensor. ¡Precaución! Primero haga clic en el lado cuadrado y, a continuación, presione hacia abajo la parte circular.
 
-Troubleshooting 
+Solución de problemas 
 ==================================================
 
 Problemas de conexión
