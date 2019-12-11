@@ -73,7 +73,7 @@ Le permite administrar un bolo (normalmente usaría el botón Calculadora para h
 
 ## La calculadora
 
-![Calculator](../images/Screenshot_Bolus_calculator.png)
+![Calculadora](../images/Screenshot_Bolus_calculator.png)
 
 Cuando usted quiere hacer un bolo para comida, aquí es de donde normalmente lo hará.
 
