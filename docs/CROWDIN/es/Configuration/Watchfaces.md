@@ -28,7 +28,7 @@ Dentro de AndroidAPS, en la "Tabla de configuraciones" necesitas activar ["habil
 
 ## Control AAPS desde el reloj
 
-AndroidAPS está diseñado para ser controlado por relojes Android Wear. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+AndroidAPS está diseñado para ser controlado por relojes Android Wear. Si desea bolo etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
 Las siguientes funciones pueden activarse desde el reloj:
 
