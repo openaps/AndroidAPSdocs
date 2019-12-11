@@ -2,8 +2,8 @@ Comandos SMS
 **************************************************
 La seguridad Primero
 ==================================================
-* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+* AndroidAPS te permite controlar el teléfono de un niño de forma remota mediante mensajes de texto. Si activas esta función "SMS Communicator", recuerda siempre que el teléfono configurado para dar comandos remotos podría ser robado. Por lo que protege siempre el móvil con código PIN.
+* AndroidAPS también te avisará por mensaje de texto si tus comandos resmotos, tales como bolos o cambios de perfil, se han llevado a cabo. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
 * **Si usted envia un bolo por Comandos SMS debe introducir hidratos de carbono a través de Nightscout (NSClient, página Web...)!** Si no lo hace el IOB sería correcto con bajos COB lo potencialmente conduce a no realizar la corrección de bolo dado que AAPS supone que tiene demasiada insulina activa.
 
 Cómo funciona
