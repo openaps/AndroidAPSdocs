@@ -18,7 +18,7 @@ Con la casilla de verificación, bajo el símbolo de ojo, puede decidir cómo ab
 
 ![Pestañas o menú de hamburguesa](../images/ConfBuild_TabOrHH.png)
 
-## Profile
+## Perfil
 
 Seleccione el perfil basal que desea utilizar. Consulte la página [Perfiles](../Usage/Profiles.md) para obtener más información de configuración.
 
@@ -55,7 +55,7 @@ Desventajas:
 
 Perfil simple con sólo un bloque de tiempo para DIA, IC, ISF, tasa basal y rango de objetivo (es decir, sin cambios en la tasa basal durante el día). Es más probable que se utilice para fines de prueba a menos que tenga los mismos factores durante las 24 horas. Una vez seleccionado "Perfil simple", aparecerá una nueva pestaña en AAPS donde puede introducir los datos del perfil.
 
-## Insulin
+## Insulina
 
 Seleccione el tipo de curva de insulina que está usando. Las opciones 'Rapid-Acting Oref', Ultra-Rapid Oref' y 'Free-Peak Oref' tienen una forma exponencial. Más información disponible en [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), las curvas varían según el DIA y el tiempo de pico de acción.
 
@@ -75,7 +75,7 @@ El [gráfico de la curva de insulina](../Getting-Started/Screenshots#insulin-pro
 
 * recomendado para FIASP
 * DIA = al menos 5.0h
-* Max. pico = 55 minutos después de la inyección (fijo, no ajustable)
+* Máximo pico = 55 minutos después de la inyección (fijo, no ajustable)
 
 Para mucha gente no hay prácticamente ningún efecto visible de FIASP después de 3-4 horas es más, incluso si las unidades 0.0xx están disponibles como regla entonces. Esta cantidad residual puede percibirse durante los deportes, por ejemplo. Por lo tanto, AndroidAPS utiliza el mínimo de 5h como DIA.
 
@@ -87,7 +87,7 @@ Con el perfil "Free Peak 0ref" usted puede ingresar individualmente el tiempo de
 
 Este perfil de efecto se recomienda si se utiliza una insulina no respaldada o una mezcla de insulinas diferentes.
 
-## BG Source
+## Fuentes de BG (datos de glucemia)
 
 Seleccione la fuente de glucosa en sangre que está utilizando: consulte la página [BG Fuentes ](BG-Source.rst) para obtener más información de configuración.
 
@@ -101,7 +101,7 @@ Seleccione la fuente de glucosa en sangre que está utilizando: consulte la pág
 
 * [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
 
-## Pump
+## Bomba
 
 Seleccione la bomba que está utilizando.
 
@@ -193,7 +193,7 @@ Note: Button will not be visible if outside the specified time range or if you h
 
 #### Ajustes avanzados
 
-Habilite la funcionalidad de super bolo en el asistente. Utilícelo con precaución y no lo habilite hasta que aprenda lo que realmente hace. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **Las funciones de lazo AAPS se inhabilitarán, por lo que se utilizará con precaución! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Habilite la funcionalidad de super bolo en el asistente. Utilícelo con precaución y no lo habilite hasta que aprenda lo que realmente hace. Básicamente, el basal para las próximas dos horas se añade al bolo y se activa un tiempo cero de dos horas. **Las funciones de lazo AAPS se inhabilitarán, por lo que se utilizará con precaución! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Acciones
 
@@ -207,17 +207,17 @@ Algunos botones para acceder rápidamente a funciones comunes:
 * Navegador de Historial
 * TDD (dosis diaria total = bolo + basal por día)
 
-Algunos médicos usan -especialmente para los recién iniciados en las bombas- una relación basal-bolo de 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Otros prefieren un rango de 32% a 37% de TDD para TBB. Al igual que la mayoría de estas reglas empíricas, su validez real es limitada. Nota: ¡Tu diabetes puede variar!
+Algunos médicos usan -especialmente para los recién iniciados en las bombas- una relación basal-bolo de 50:50. Por lo tanto, la proporción se calcula como TDD / 2 * TBB (Total base basal = suma de la tasa basal en 24 horas). Otros prefieren un rango de 32% a 37% de TDD para TBB. Al igual que la mayoría de estas reglas empíricas, su validez real es limitada. Nota: ¡Tu diabetes puede variar!
 
 ![Pestaña de acciones](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Careportal
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+Le permite registrar cualquier entrada de tratamiento específico y ver el sensor actual, la insulina, la vida de la cánula y la batería de la bomba en la pestaña Careportal (CP).
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Nota: **No se dará insulina** si se ingresa a través de careportal (por ejemplo, bolo de comida, corregir bolo...)
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Los carbohidratos que se introducen en el portal (por ejemplo los de corrección) se utilizarán para el cálculo de la COB.
 
 ![Pestaña de tratamientos (Careportal)](../images/ConfBuild_CarePortal.png)
 
@@ -229,24 +229,24 @@ Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS C
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (Ver solamente)
+Nota: Las entradas no se pueden utilizar en la calculadora AndroidAPS. (Ver solamente)
 
 ### Reloj
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Supervise y controle AAPS con su reloj Android Wear (vea [pagina de pantallas de reloj](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-Si desea bolo etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" que necesitas para activar "Controles desde el Reloj".
 
 ![Ajustes reloj](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+A través de la pestaña Reloj o el menú de hamburguesas (la parte superior izquierda de la pantalla, si no se visualiza el tabulador) puede
 
-* Reenviar todos los datos. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Reenviar todos los datos. Puede ser útil si el reloj no está conectado durante algún tiempo y desea enviar la información al reloj.
 * Abre los ajustes en tu reloj directamente desde tu teléfono.
 
 ### Linea de estado xDrip (reloj)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Visualizar información del lazo en el reloj de xDrip + (si no está utilizando AAPS/[AAPSv2 watchface ](../Configuration/Watchfaces.md)
 
 ### Avisos permanentes
 
@@ -258,7 +258,7 @@ Displays a summary of current BG, delta, active TBR%, active basal u/h and profi
 
 Configuración de la sincronización de datos de su AndroidAPS con Nightscout.
 
-If **Log app start to NS** is activated each AndroidAPS will be visible in Nightscout. Might be useful to detect problems with the app (i.e. battery optimization not disabled for AAPS) but can flood the Nightscout graph with entries.
+Si **Comenzar registro de app hacia NS** se activa cada dato de AndroidAPS será visible en Nightscout. Puede ser útil para detectar problemas con la aplicación (por ejemplo, la optimización de la batería no inhabilitada para AAPS), pero puede llenar el gráfico Nightscout con datos.
 
 #### Opciones de alarma
 
@@ -270,25 +270,25 @@ Activar/desactivar alarmas AndroidAPS
 
 Lazo sin conexión, desactivar roaming...
 
-If you want to use only a specific WiFi network you can enter its **WiFi SSID **. Several SSIDs can be separated by semicolon. To delete all SSIDs enter a blank space in the field.
+Si desea utilizar sólo una red WiFi específica, puede especificar su **SSID de WiFi **. Varios SSID se pueden separar mediante punto y coma. Para suprimir todos los SSID, introduzca un espacio en blanco en el campo.
 
-![Nightscout connection settings](../images/ConfBuild_ConnectionSettings.png)
+![Configuración conexión de Nightscout](../images/ConfBuild_ConnectionSettings.png)
 
 #### Ajustes avanzados
 
-* Auto backfill missing BGs from Nightscout
-* Create announcement from errors Create Nightscout announcement for error dialogs and local alerts (also viewable in careportal in treatments section)
-* Enable local broadcast to other apps like xDrip+
-* NS upload only (sync disabled)
-* No upload to NS
-* Always use basal absolute values -> Must be activated if you want to use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) properly.
+* Rellenar BGs perdidos desde NS
+* Crear un anuncio a partir de los errores Crear anuncio de Nightscout para los diálogos de errores y alertas locales (también disponible en careportal en la sección de tratamientos)
+* Permitir emisión de mensajes a otras aplicaciones como xDrip+
+* Sólo carga de NS (sincronización inhabilitada)
+* Datos no enviados a NS
+* Utilice siempre los valores absolutos basales-> Debe activarse si desea utilizar [Autoajuste ](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) correctamente.
 
-![Nightscout advanced settings](../images/ConfBuild_NSClient_Advanced.png)
+![Ajustes avanzados de Nightscout](../images/ConfBuild_NSClient_Advanced.png)
 
-### Maintenance
+### Mantenimiento
 
-Email and number of logs to be send. Normally no change necessary.
+Correo electrónico y logs a enviar. Normalmente no es necesario ningún cambio.
 
 ### Configuraciones
 
-Use tab for config builder instead of hamburger menu.
+Utilice la pestaña para configuraciones en lugar del menú hamburgesa.
