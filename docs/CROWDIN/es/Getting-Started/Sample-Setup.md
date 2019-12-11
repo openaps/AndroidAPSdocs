@@ -135,7 +135,7 @@ En tu Samsung Galaxy S7 ve al menú > Ajustes > Mantenimiento del dispositivo > 
 
 Con un Android Wear smartwatch la vida con diabetes se puede hacer aún más discreta. El reloj se puede utilizar para mostrar el nivel actual de glucosa, el estado del lazo etc. en la muñeca. El reloj también puede ser utilizado para controlar AndroidAPS (por ejemplo, poner discretamente un bolus de comida). Para hacer esto, toque dos veces el valor MCG del reloj AAPSv2. El SWR50 normalmente funciona durante un día entero hasta que la batería necesita ser recargada (mismo cargador que el Samsung Galaxy S7: microUSB).
 
-![Smartwatch](../images/SampleSetupSmartwatch.png)
+![Smartwatches (Relojes inteligentes)](../images/SampleSetupSmartwatch.png)
 
 Detalles sobre la información mostrada en el watchface se pueden encontrar [aquí](../Configuration/Watchfaces.md).
 
