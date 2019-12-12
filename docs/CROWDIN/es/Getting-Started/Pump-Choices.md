@@ -7,7 +7,7 @@ AndroidAPS trabaja actualmente con
 * DanaR
 * DanaRS 
 
-bombas. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+bombas. Los detalles del estado de otras bombas que pueden tener el potencial de trabajar con AndroidAPS se listan en la página [Future (possible) Pumps](Future-possible-Pump-Drivers.md).
 
 Si necesita cambiar de bomba de insulina puede encontrar información en grupos de usuarios. Detalles sobre distribuidores puede encontrarlos aquí, por favor comparte los detalles de la tuya si no están en las opciones mencionadas.
 
@@ -15,13 +15,13 @@ La Combo y la Insight son bombas solidas, y loopeables. Las ventajas de DanaRS c
 
 * DanaR/RS conecta con casi cualquier móvil con Android>=5.1 sin necesidad de flash Lineage. Si tu teléfono se rompe puede ser sustituido fácilmente... no así con la Combo. (esto puede cambiar en el futuro cuando Android 8.1 sea más popular)
 
-* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
+* El emparejamiento inicial es más fácil con DanaRS. Pero esto se realiza normalmente solo una vez, por lo que solo impacta si quieres probar nuevas características con bombas diferentes.
 
-* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+* Hasta ahora Combo funciona con análisis de pantalla. En general funciona bien pero es lento. Para lazo cerrado eso no es crucial puesto que trabaja en segundo plano, sin embargo, usa más tiempo la conexión bluetooth aumentando la probabilidad de fallo de conexión, lo cual no es fácil si te lejas del móvil mientras pones un bolo y cocinas. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
 
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Combo vibra cuando termina una basal temporal, la DanaR vibra (o hace sonido) con SMB. Por la noche, preferirás usar TBR sobre SMB. DanaRS se puede configurar para que ni haga sonido ni vibre.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* Leyendo el histórico de la bomba Dana RS en unos segundo junto con los carbohidratos hace posible cambiar fácilmente entre modo offline y continuar el lazo cerrado en cuanto tenga datos de MCG.
 
 * Todas las bombas AndroidAPS compatibles son waterproof. Aunque solo la Dana es tiene garantizado waterproof debido a su sellado en el compartimento de la batería y el reservorio.
 
