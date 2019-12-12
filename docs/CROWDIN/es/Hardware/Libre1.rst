@@ -8,7 +8,7 @@ Para utilizar su libre como un CGM que obtiene nuevos valores de BG cada 5 minut
 * BlueReader `https: //bluetoolz.de/blueorder/#home <https://bluetoolz.de/blueorder/#home>`_
 * Sony Smartwatch 3 (SWR50) como herramienta de lectura `https: //github.com/pimpimmi/LibreAlarm/wiki/ <https://github.com/pimpimmi/LibreAlarm/wiki/>`_
 
-Hasta ahora, usando Libre 1 como fuente BG usted no puede activar 'Habilitar SMB siempre' y 'Habilitar SMB después de los carbohidratos' dentro del algoritmo SMB. Los valores de BG de Libre 1 no son lo suficientemente estables para usarlo de forma segura. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
+Hasta ahora, usando Libre 1 como fuente BG usted no puede activar 'Habilitar SMB siempre' y 'Habilitar SMB después de los carbohidratos' dentro del algoritmo SMB. Los valores de BG de Libre 1 no son lo suficientemente estables para usarlo de forma segura. Consulte ' Suavizar los datos de glucosa en sangre <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ para más detalles.
 
 Si utiliza xdrip
 ==================================================
