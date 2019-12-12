@@ -87,7 +87,7 @@ Puedes fijarlo: se venden brazaletes para la parte superior del brazo que sujeta
 
 # Ajustes en AndroidAPS
 
-La lista siguiente trata de ayudarte a optimizar los valores de tus ajustes. Quizás sea mejor empezar por los principales y bajar a detalle progresivamente. Trata de tener un ajuste correcto antes de pasar al siguiente. Procura realizar pequeñas modificaciones en lugar de hacer grande cambios de golpe. Puedes utilizar [Autotune ](https://autotuneweb.azurewebsites.net/) como orientación, aunque no se debe seguir ciegamente: puede que no funcione bien para ti en todas las circunstancias. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+La lista siguiente trata de ayudarte a optimizar los valores de tus ajustes. Quizás sea mejor empezar por los principales y bajar a detalle progresivamente. Trata de tener un ajuste correcto antes de pasar al siguiente. Procura realizar pequeñas modificaciones en lugar de hacer grande cambios de golpe. Puedes utilizar [Autotune ](https://autotuneweb.azurewebsites.net/) como orientación, aunque no se debe seguir ciegamente: puede que no funcione bien para ti en todas las circunstancias. Ten en cuenta que hay parámetros que interactuan con otros - puedes tener ajustes 'incorrectos' que en conjunto funcionan bien en algunas situaciones (p.e. si una basal demasiado alta coincide en el tiempo con CR demasiado alto) pero no en otras. Esto significa que es necesario tener en cuenta todos los valores y comprobar que trabajan juntos en una variedad de circunstancias.
 
 ## Duración de la actividad de la insulina (DIA)
 
@@ -101,7 +101,7 @@ A menudo se elige un valor demasiado pequeño. Para la mayoría de gente estará
 
 Un valor demasiado pequeño puede llevar a glucemias bajas. Y viceversa.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (En realidad, no espera tanto tiempo, sino que predice lo que ocurriría, y sigue añadiendo la insulina). Básicamente, esto crea excedentes de insulina que AAPS no considerará en sus cálculos por considerar que ya se ha consumido.
+Si la DIA es demasiado pequeña, AAPS pensará antes de tiempo que la insulina del bolo anterior ya se ha consumido, y, estando con valores altos de glucemia, suministrará más insulina. (En realidad, no espera tanto tiempo, sino que predice lo que ocurriría, y sigue añadiendo la insulina). Básicamente, esto crea excedentes de insulina que AAPS no considerará en sus cálculos por considerar que ya se ha consumido.
 
 Un ejemplo de DIA demasiado pequeña serían: valores altos de glucemia seguidos de sobre-correciones por parte de AAPS, provocando valores demasiado bajos de glucemia.
 
@@ -109,9 +109,9 @@ Un ejemplo de DIA demasiado pequeña serían: valores altos de glucemia seguidos
 
 ### Descripción & pruebas
 
-The amount of insulin in a given hour time block to maintain BG at a stable level.
+Es el caudal de insulina (Unidades / hora) en una determinada franja horaria para mantener la BG a un nivel estable.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repite unas cuantas veces.
+Prueba tus basales deteniendo el lazo, ayunando, esperando unas 5 horas después de comer (para asgurar que ya has digerido los hidratos) y viendo como evoluciona tu BG. Repite unas cuantas veces.
 
 Si la BG va disminuyendo, la basal es demasiado alta. Y viceversa.
 
@@ -119,7 +119,7 @@ Si la BG va disminuyendo, la basal es demasiado alta. Y viceversa.
 
 Basales demasiado elevadas pueden provocar BG demasido bajas. Y viceversa.
 
-AAPS toma como referencia las basales por defecto. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. Esto provocará que AAPS genere más correcciones de las que debería para llevar la IOB finalmente a cero.
+AAPS toma como referencia las basales por defecto. Si una basal es demasiado alta, una "temporal a zero" (utilizadas para contrarrestar excesos de insulina) provocará que la IOB calculada disminuya más de lo que debería. Esto provocará que AAPS genere más correcciones de las que debería para llevar la IOB finalmente a cero.
 
 Por lo tanto, una basal demasiado alta generará BG bajas, mientras dure esa basal y algunas horas más hasta que AAPS corrija a objetivo.
 
@@ -133,7 +133,7 @@ La disminución de BG esperada ante una dosis de 1U de insulina.
 
 Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+A continuación, suministrate una cantidad determinada de insulina y observa la variación en tu BG (para acercarte a tu objetivo puedes probar con: [BG-Objetivo] * 1/ISF).
 
 Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado bajo, significa que 1 U bajará la BG más y más rápido de lo esperado!!.
 
@@ -141,7 +141,7 @@ Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado b
 
 **Lower ISF** (i.e. 40 instead of 50) = more aggressive / stronger leading to a bigger drop in BGs for each unit of insulin. Valores demasiado bajos pueden provocar glucemias demasiado bajas.
 
-**Higher ISF** (i.e. 45 instead of 35) = less aggressive / weaker leading to a smaller drop in BGs for each unit of insulin. Valores demasiado altos pueden provocar glucemias demasiado altas.
+**Mayor ISF** (p.e. 45 en lugar de 35) = menos agresivo / más débil - provocando descensos menores de BG por cada unidad de insulina. Valores demasiado altos pueden provocar glucemias demasiado altas.
 
 **Example:**
 
@@ -162,11 +162,11 @@ Gramos de carbohidratos por unidad de insulina.
 
 Algunas personas también utilizan I:C en lugar de IC o hablan de la proporción de carbohidratos (CR).
 
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
+Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión).
 
 > **NOTA:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equaled 12g of carbs, later some changed to 10g of carbs.
+> En algunos países Europeos unidades pan fueron utilizadas para la determinación de la cantidad de insulina que se necesita para la comida. At the beginning 1 bread unit equaled 12g of carbs, later some changed to 10g of carbs.
 > 
 > In this model the amount of carbs was fixed and the amount of insulin was variable. ("¿Cuánta insulina se necesita para cubrir una sola unidad de pan?")
 > 
