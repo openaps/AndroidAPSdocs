@@ -46,11 +46,11 @@ As long as you see a red exclamation mark ("!") on the upper left corner of the 
 .. imagen:: ../images/fsl2pic5.jpg
   :alt: LibreLink no hay conexión
   
-If the exclamation mark remains or you get an error message, this can have several reasons:
+Si la marca de exclamación permanece o se obtiene un mensaje de error, esto puede tener varias razones:
 
-- Android location service is not granted - please enable it in the system settings
-- automatic time and time zone is not set - please change the settings accordingly
-- activate alarms - at least one of the three alarms must be activated in LibreLink
+- El servicio de ubicación de Android no está disponible - por favor actívalo en la configuración del sistema
+- la hora y zona horaria automáticas no están configuradas - por favor cambie la configuración en consecuencia
+- activar alarmas - al menos una de las tres alarmas debe activarse en LibreLink
 - El Bluetooth está apagado, por favor enciendalo
 
 Reiniciar el teléfono puede ayudar, es posible que tenga que hacerlo varias veces. Tan pronto como se establezca la conexión, desaparece la marca de exclamación roja y se toma el paso más importante. El sensor y el teléfono están ahora conectados, cada minuto se transmite un valor de azúcar en la sangre.
@@ -69,10 +69,10 @@ Aviso: La aplicación parcheada no tiene conexión a Internet.
 Paso 2: Instalar y configurar la aplicación xDrip+
 ==================================================
 
-The blood sugar values are received on the smartphone by the xDrip+ App. 
+Los valores de azúcar en sangre son recibidos en el smartphone por la aplicación xDrip+. 
 
-* If not already set up then download xdrip app and install one of the latest nightly builts from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
-* In xDrip+ select "Libre2 (patched App)" as data source
+* Si aún no se ha configurado, descargue la aplicación xdrip e instale uno de los más recientes de `aqui <https://github.com/NightscoutFoundation/xDrip/releases>`_.
+* En xDrip+ seleccione "Libre2 (aplicación parchada)" como origen de datos
 * If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. Esto registrará mensajes de error adicionales ante problemas.
 * En xdrip vaya a Configuración > Interapp Compatibilidad > Datos de Difusión a nivel Local y seleccione ON.
 * En xdrip vaya a Configuración > Interapp Compatibilidad > Aceptar Tratamientos y seleccione OFF.
@@ -80,31 +80,31 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 * Si usted quiere ser capaz de utilizar AndroidAPS para calibrar, a continuación, en xdrip vaya a Configuración > Interapp Compatibilidad > Aceptar Calibraciones y seleccione ON.  Puede que también desee revisar las opciones en Ajustes > Ajustes Menos Comunes > Ajustes Avanzados de Calibración.
 
 .. image:: ../images/fsl2pic7.jpg
-  :alt: xDrip+ LibreLink logging
+  :alt: registro de xDrip+ LibreLink
   
 .. image:: ../images/fsl2pic7a.jpg
-  :alt: xDrip+ log
+  :alt: xDrip+ registro
   #
-Step 3: Start sensor
+Paso 3: Iniciar el sensor
 ==================================================
 
-In xDrip+ start the sensor with "Start Sensor" and "not today". 
+En xDrip+ inicie el sensor con "Iniciar Sensor" y "hoy no". 
 
-In fact this will not start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+De hecho, esto no iniciará ningún sensor de Libre2 o interactuará con ellos en ningún caso. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. Si está disponible, introduzca dos valores capilares para la calibración inicial. Ahora los valores de glucosa en sangre deben ser mostrados en xDrip+ cada 5 minutos. Se omiten los valores, por ejemplo. porque estabas demasiado lejos de tu teléfono, no se cargarán los valores.
 
-Step 4: Configure AndroidAPS
+Paso 4: Configurar AndroidAPS
 ==================================================
-* In AndroidAPS go to Config Builder > BG Source and check 'xDrip+' 
+* En AndroidAPS vaya a Config Builder > Fuente de BG y compruebe 'xDrip+' 
 * If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html#identifiziere-empfanger>`_.
 
-Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
+Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. Los valores de BG de Libre 2 no son lo suficientemente estables para usarlo de forma segura. Consulte ' Suavizar los datos de glucosa en sangre <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ para más detalles.
 
-Experiences and Troubleshooting
+Consejos y solución de problemas
 ==================================================
 
-The connectivity is extraordinary good. With the exception of Huawei mobile phones, all current smartphones seems to work well. The reconnect in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone.
+La conectividad es extraordinariamente buena. Con la excepción de los teléfonos móviles Huawei, todos los teléfonos inteligentes actuales parecen funcionar bien. La reconexión en caso de pérdida de conexión es fenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. Cuando estoy en jardinería, coloco mi teléfono en el lado del sensor de mi cuerpo. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone.
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor infos are available in the System menu.
+Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. Esto es obligatorio. Las curvas de aspecto liso y el lazo que los resultados son excelentes. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor infos are available in the System menu.
 
 .. image:: ../images/fsl2pic8.jpg
   :alt: xDrip+ advanced settings Libre 2
@@ -115,9 +115,9 @@ Technically, the current blood sugar value is transmitted to xDrip+ every minute
 The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Avanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
 
 .. image:: ../images/fsl2pic10.jpg
-  :alt: Libre 2 start time
+  :alt: Libre 2 hora de inicio
   
-Altogether it is one of the smallest CGM systems on the market. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dL the deviations are typical smaller than 10 md/dL. Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturbe the internal leveling mechanism.
+En conjunto, es uno de los sistemas de MCG más pequeños del mercado. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dL the deviations are typical smaller than 10 md/dL. Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturbe the internal leveling mechanism.
 
 There seem to be bad sensors from time to time, which are far away from the blood values. It stays that way. These should be immediately replaced.
 
