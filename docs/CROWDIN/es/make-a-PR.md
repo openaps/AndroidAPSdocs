@@ -49,7 +49,7 @@ Por nuestro ejemplo, vamos a hacer una edición a AndroidAPSdocs. Esto NO es nec
 
 6. Haga clic en el botón verde "Propose file changes" o "Commit changes". En la página que aparece, pulse "Create Pull Request" y otra vez en la página siguiente, pulse "Create Pull Request".
 
-![create pull request](./images/PR6.png)
+![crear petición de modificación](./images/PR6.png)
 
 7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have Github notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AndroidAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
 
@@ -57,85 +57,85 @@ Por nuestro ejemplo, vamos a hacer una edición a AndroidAPSdocs. Esto NO es nec
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
-## Code syntax
+## Sintaxis del código
 
-At the moment there are two languages used for wiki pages:
+En este momento hay dos idiomas utilizados para las páginas de wiki:
 
-* Markdown (.md) - the markup language originally used for wiki pages
-* reStructuredText (.rst) - the new markup language
+* Markdown (.md) - el lenguaje de marcado utilizado originalmente para las páginas de wiki
+* texto reStructuredText (.rst) - el nuevo lenguaje de códigos
 
-We will change all wiki pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+Cambiaremos todas las páginas de la wiki de Markdown a reStructuredText bit a bit. Mientras tanto, es importante que utilice la sintaxis correcta al formatear texto o enlazar. Si no está seguro de tener un vistazo a los códigos de formato/enlace en las páginas existentes.
 
-### .md files
+### Archivos .md
 
-#### Text format
+#### Formato de texto
 
-* bold: `**text**`
-* italic: `*text*`
-* Headline 1: `# headline`
-* Headline 2: `## headline`
-* Headline 3: `### headline`
+* negrita: `**text**`
+* cursiva: `*texto*`
+* Título 1: `# título`
+* Título 2: `## título`
+* Título 3: `### título`
 
-#### Images
+#### Imagenes
 
-* images: `![alt text](../images/file.png)`
+* imágenes: `![alt text](../images/file.png)`
 
-#### Links
+#### Enlaces
 
-* external link: `[alt text](www.url.tld)`
-* internal link to .md page: `[alt text](.../folder/file.md)`
-* internal link to .rst page: `[alt text](.../folder/file.rst)`
-* internal link to headline: `[alt text](.../folder/file#headline)`
+* enlace externo: `[alt text](www.url.tld)`
+* enlace interno a archivo .md: `[alt text](.../folder/file.md)`
+* enlace interno a archivo .rst: `[alt text](.../folder/file.rst)`
+* enlace interno a tíyulo: `[alt text](.../folder/file#headline)`
 
-### .rst files
+### Archivos .rst
 
-#### Text format
+#### Formato de texto
 
-* bold: `**text**`
-* italic: `*text*`
-* Headline 1:
+* negrita: `**text**`
+* cursiva: `*texto*`
+* Título 1:
   
-  `headline`  
+  `título`  
   `*****`
 
-* Headline 2:
+* Título 2:
   
-  `headline`  
+  `título`  
   `=====`
 
-* Headline 3:
+* Título 3:
   
-  `headline`  
+  `título`  
   `-----`
 
-#### Images
+#### Imagenes
 
-* images:
+* imagenes:
   
-  `.. image:: ../images/modules.png`  
+  `.. imagen:: ../images/modules.png`  
   `:alt: alt text`
 
-#### Links
+#### Enlaces
 
-* external link: `` `alt text <www.url.tld>_` ``
-* internal link to .md page: `` `alt text <../folder/file.html>_` ``
-* internal link to .rst page: `` `alt text <../folder/file.html>_` ``
-* internal link to headline: `` `alt text <../folder/file.html#headline>_` ``
+* enlace externo: `` `alt text <www.url.tld>_` ``
+* enlace interno a archivo .md: `` `alt text <../folder/file.html>_` ``
+* enlace interno al archivo .rst: `` `alt text <../folder/file.html>_` ``
+* enlace interno a título: `` `alt text <../folder/file.html#headline>_` ``
 
-### Internal links
+### Enlaces internos
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
+Si desea establecer un enlace interno dentro de la documentación de AndroidAPS, utilice sólo **enlaces relativos**. Sólo esto hará que el enlace trabaje en los otros idiomas (checo, alemán...) también.
 
-#### In files with **.md** ending:
+#### En archivos que terminan con **.md**:
 
-* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
-* To set the link to an **anchor** (i.e. a headline) you have to omit the file extension 
-  * `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. El final del archivo de destino debe ser .md o .rst (no .html)
+* `[text](./Usage/Test.md)` establecerá un hiperenlace interno desde donde estés en /Usage. El final del archivo de destino debe ser .md o .rst (no .html)
+* Para establecer el enlace a un **ancla** (por ejemplo, un título) tiene que omitir la extensión del archivo 
+  * `[text](../Usage/Test#anchor)` en lugar de `[text](../Usage/Test.md#anchor)`
 
-#### In files with **.rst** ending:
+#### En archivos que terminan con **.md**:
 
-* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html.
+* `` `Text <../Usage/Test.hmtl>`_ `` establecerá un hiperenlace un directorio arriba desde donde estés y luego en el subdirectorio /Usage. Ending of the target file must be .html.
   
   Except you are in a toctree. Then you have to write it like this: `Text <../Usage/Test.md>` with .md or .rst (not .html).
 
@@ -150,24 +150,24 @@ If you are planning to make a lot of edits, including adding images to help illu
 
 * As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png".
 
-* You can upload images in batches easily by:
+* Puede subir imágenes en lotes fácilmente mediante:
   
   1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
   
-  2. Click in the upper right corner where it says "Upload files"
+  2. Haga clic en la esquina superior derecha donde dice "Cargar archivos"
   
-  3. Drag and drop your images into the screen
+  3. Arrastre y suelte las imágenes en la pantalla
   
-  4. Commit these to your branch
+  4. Confírmelo a su rama
   
   5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
   
   6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
     
-    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
-    * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Example of uploading images in batches`
+    * Para páginas .md: `![ Ejemplo de carga de imágenes en lotes](../images/Example_batch_images_upload.png)` (Este código es exactamente la forma en que se incorpora la imagen siguiente)
+    * Para páginas .rst: `.. imagen:: ../images/Example_batch_images_upload.png`  
+      `:alt: Ejemplo de carga de imágenes en lotes`
 
-![Example of uploading images in batches](./images/Example_batch_images_upload.png)
+![Ejemplo de carga de imágenes en lotes](./images/Example_batch_images_upload.png)
 
 7. After adding images or making adjustments, you can submit a PR to the master branch of AndroidAPSdocs.
