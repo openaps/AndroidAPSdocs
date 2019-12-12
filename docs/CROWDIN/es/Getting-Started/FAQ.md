@@ -141,7 +141,7 @@ Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado b
 
 **Lower ISF** (i.e. 40 instead of 50) = more aggressive / stronger leading to a bigger drop in BGs for each unit of insulin. Valores demasiado bajos pueden provocar glucemias demasiado bajas.
 
-**Higher ISF** (i.e. 45 instead of 35) = less aggressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
+**Higher ISF** (i.e. 45 instead of 35) = less aggressive / weaker leading to a smaller drop in BGs for each unit of insulin. Valores demasiado altos pueden provocar glucemias demasiado altas.
 
 **Example:**
 
@@ -150,7 +150,7 @@ Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado b
 * ISF = 30 => 90/30 = 3 unidades de insulina
 * ISF = 45 => 90/45 = 2 unidades de insulina
 
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
 Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
 
@@ -158,43 +158,43 @@ Conversely, an ISF set too high can result in under-corrections, meaning your BG
 
 ### Descripción & pruebas
 
-The grams of carbohydrate for each unit of insulin.
+Gramos de carbohidratos por unidad de insulina.
 
-Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
+Algunas personas también utilizan I:C en lugar de IC o hablan de la proporción de carbohidratos (CR).
 
 Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
 
-> **NOTE:**
+> **NOTA:**
 > 
 > In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equaled 12g of carbs, later some changed to 10g of carbs.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> In this model the amount of carbs was fixed and the amount of insulin was variable. ("¿Cuánta insulina se necesita para cubrir una sola unidad de pan?")
 > 
-> When using IC the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> When using IC the amount of insulin is fixed and the amount of carbs is variable. ("¿Cuántos gr de carbohidratos pueden estar cubiertos por una sola unidad de insulina?")
 > 
 > Example:
 > 
-> Bread unit facor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
+> Unidad factor de pan (BU = 12g carbs) de: 2,4 -> Se necesitan 2,4 unidades de insulina cuando se come una sola unidad de pan.
 > 
-> Corresponding IC: 12 / 2,4 = 5,2 -> 5,2g carbs can be covered with one unit of insulin.
+> IC correspondiente: 12/2,4 = 5,2 -> 5,2 g de carbohidratos pueden estar cubiertos con una sola unidad de insulina.
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Las tablas de conversión están disponibles en línea, por ejemplo, [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impacto
 
-**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
+**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Podríamos decir que es "más agresiva".
 
 **Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
 
-If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
+If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Por el contrario, si tu BG es menor que antes de comer, tu IC es demasiado pequeña.
 
-# APS algorithm
+# Algoritmo APS
 
 ## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+En AMA, DIA en realidad no significa la "duración de la actividad de la insulina ". Es un parámetro que tiene cierta relacion con DIA. En este caso significa, "el tiempo en le que la corrección debería haber acabado". It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
 
 ## Perfil
 
