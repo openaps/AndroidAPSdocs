@@ -389,7 +389,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td>Wallpaper</td>
+ <td>Fondo de pantalla</td>
  <td>Imagen de fondo AndroidAPS</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">ver la página de teléfonos</a></td>
