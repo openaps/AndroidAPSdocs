@@ -10,7 +10,7 @@ AndroidAPS no es sólo una aplicación (auto-construida), es sólo uno de los m�
 
    La base de las características de seguridad de AndroidAPS discutidas en esta documentación se basan en las características de seguridad del hardware utilizado para construir su sistema. Es importante que sólo utilice una bomba de insulina y una bomba de insulina y MCG aprobados por la FDA o CE, para cerrar un lazo de dosificación de insulina automatizado. Las modificaciones de hardware o software a estos componentes pueden causar una dosificación inesperada de la insulina, causando un riesgo significativo para el usuario. Si encuentra o recibe una oferta rota, modificada o autofabricada de las bombas de insulina o de los receptores de MCG, * no las utilice * para crear un sistema AndroidAPS.
 
-   Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+   Además, es igualmente importante utilizar los suministros originales, como los insertadores, las canulas y los recipientes de insulina aprobados por el fabricante para su uso con la bomba o MCG. El uso de suministros no probados o modificados puede provocar inexactitud del MCG y errores de dosificación de la insulina. Insulina es muy peligrosa cuando se malinterpreta-por favor, no juegas con tu vida hackeando con tus suministros.
    
    Por último pero no por ello menos importante, no hay que tomar inhibidores SGLT-2 (gliflozins) ya que reducen incalculablemente los niveles de azúcar en sangre.  La combinación con un sistema que reduce las tasas basales para aumentar la BG es especialmente peligrosa, ya que debido al gliflozin este aumento en BG podría no suceder y podría derivar en un peligroso estado de falta de insulina.
 
@@ -31,7 +31,7 @@ El perfil incluye
 
 Sin uso de inhibidores de SGLT-2
 --------------------------------------------------
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AndroidAPS! ¡ Habrá un riesgo enorme de cetoacidosis o de una hipoglucemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+Los inhibidores de la SGLT-2, también llamados gliflozinas, inhiben la reabsorción de la glucosa en el riñón. A medida que incalculablemente reducen los niveles de azúcar en la sangre, NO DEBE tomarlos mientras use un sistema de circuito cerrado como AndroidAPS! ¡ Habrá un riesgo enorme de cetoacidosis o de una hipoglucemia! La combinación de este medicamento con un sistema que reduce las tasas basales con el fin de aumentar el BG es especialmente peligroso ya que debido a la gliflozina este aumento en BG podría no suceder y puede ocurrir un estado peligroso de falta de insulina.
 
 Teléfono
 --------------------------------------------------
@@ -39,7 +39,7 @@ Necesitas un smartphone Android con Google Android 6.0 o superior. Los usuarios 
 
 Para registrar un teléfono o un reloj que no está ya listado en la hoja de cálculo, por favor rellene la `forma <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+Cualquier problema con la hoja de cálculo por favor envíe un correo electrónico a `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, cualquier donación de los modelos de teléfono/reloj que aún necesitan pruebas por favor envíe un correo electrónico a `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 Bomba de insulina
 --------------------------------------------------
@@ -53,24 +53,24 @@ AndroidAPS **actualmente** funciona con
 
 **Otras bombas** que pueden tener el potencial de trabajar con AndroidAPS se listan en la página `Futuras (posibles) Bombas <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
-If you need to **privately buy** a pump then you can find various distributors is in `this spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, please share the details of yours if not already listed.
+Si necesitas **comprar privadamente** una bomba entonces puedes encontrar varios distribuidores en `esta hoja de cálculo <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, por favor comparta los detalles suyos si no aparecen en la lista.
 
 **Entonces, ¿cuál es la mejor bomba para lazos cerrados con AndroidAPS?**
 
-El Combo, el Insight y los Medtronics más antiguos son bombas sólidas y loopeables. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+El Combo, el Insight y los Medtronics más antiguos son bombas sólidas y loopeables. Además el Combo tiene la ventaja de más tipos de equipos de infusión entre los que escoger teniendo el estándar luer lock. Y la batería es una común que puedes comprar en cualquier gasolinera, tienda de conveniencia 24 horas y si realmente necesitas una, Usted puede robar/tomarlo prestado del mando a distancia en la habitación del hotel ;-).
 
 Las ventajas de la DanaR/RS vs. la Combo como la bomba de elección, sin embargo, son:
 
-- La Dana*R/RS se conecta a casi cualquier teléfono con Android >= 5.1 sin necesidad de flash linage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... no así con la Combo. (esto puede cambiar en el futuro cuando Android 8.1 sea más popular)
+- La Dana*R/RS se conecta a casi cualquier teléfono con Android >= 5.1 sin necesidad de flash linage. Si su teléfono se rompe por lo general, puede encontrar fácilmente cualquier teléfono que funciona con las bombas Dana*R/RS como un reemplazo rápido... no así con la Combo. (esto puede cambiar en el futuro cuando Android 8.1 sea más popular)
 - El emparejamiento inicial es más fácil con DanaRS. Pero esto se realiza normalmente solo una vez, por lo que solo impacta si quieres probar nuevas características con bombas diferentes.
-- Hasta ahora Combo funciona con análisis de pantalla. En general funciona bien pero es lento. Para lazo cerrado eso no es crucial puesto que trabaja en segundo plano, sin embargo, usa más tiempo la conexión bluetooth aumentando la probabilidad de fallo de conexión, lo cual no es fácil si te lejas del móvil mientras pones un bolo y cocinas. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
+- Hasta ahora Combo funciona con análisis de pantalla. En general funciona bien pero es lento. Para lazo cerrado eso no es crucial puesto que trabaja en segundo plano, sin embargo, usa más tiempo la conexión bluetooth aumentando la probabilidad de fallo de conexión, lo cual no es fácil si te lejas del móvil mientras pones un bolo y cocinas. Aún hay mucho más tiempo que necesitas para estar conectado más tiempo en el que la conexión BT podría romperse, lo cual no es tan fácil si te alejas de tu teléfono mientras se dan bolos y se cocina. 
 - Combo vibra cuando termina una basal temporal, la DanaR vibra (o hace sonido) con SMB. Por la noche, preferirás usar TBR sobre SMB.  DanaRS se puede configurar para que ni haga sonido ni vibre.
-- Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+- Leyendo el histórico de la bomba Dana RS en unos segundo junto con los carbohidratos hace posible cambiar fácilmente entre modo offline y continuar el lazo cerrado en cuanto tenga datos de MCG.
 - Todas las bombas AndroidAPS compatibles son waterproof. Aunque solo la Dana es tiene garantizado waterproof debido a su sellado en el compartimento de la batería y el reservorio. 
 
 Fuentes de datos de glucemia (BG)
 --------------------------------------------------
-This is just a short overview of all compatible CGMs/FGM with AndroidAPS. Para obtener más detalles, busque `aquí <../Configuration/BG-Source.html>`_. Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles con AndroidAPS. Para obtener más detalles, busque `aquí <../Configuration/BG-Source.html>`_. Solo una breve sugerencia: si puedes visualizar tus datos de glucosa en la aplicación xDrip+ o en el sitio web de Nightscout, puedes elegir xDrip+ (o Nightscout con la conexión web) como fuente BG en AAPS.
 
 * `Dexcom G6 <../Hardware/DexcomG6.html>`_: Funciona con la aplicación xDrip+ ó con la aplicación Dexcom parchada
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Se trabaja con app xDrip+ 'o app parchada Dexcom
@@ -91,23 +91,23 @@ Se puede encontrar información adicional sobre cómo configurar Nightscout para
 
 Archivo AAPS-.apk
 --------------------------------------------------
-El componente básico del sistema. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Las instrucciones están `aquí <../Installing-AndroidAPS/Building-APK.html>`_.  
+El componente básico del sistema. Antes de instalar la aplicación, tienes que construir el archivo apk (que es la extensión de nombre de archivo para una aplicación Android) primero. Las instrucciones están `aquí <../Installing-AndroidAPS/Building-APK.html>`_.  
 
 Módulos opcionales
 ==================================================
 Smartwatches (Relojes inteligentes)
 --------------------------------------------------
-Puede elegir cualquier smartwatch con Android Wear 1.x y superior. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ for more details).
+Puede elegir cualquier smartwatch con Android Wear 1.x y superior. La mayoría de los loopers llevan un Sony Smartwatch 3 (SWR50), ya que es el único reloj que puede obtener lecturas de Dexcom G5/G5 cuando el teléfono está fuera de rango. Algunos otros relojes pueden ser parcheados para funcionar como un receptor autónomo también (consulte `esta documentación <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>` _ para más detalles).
 
-Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
+Los usuarios están creando una "lista de teléfonos probados y relojes <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Hay diferentes caras de observación para su uso con AndroidAPS, que puede encontrar `aquí <../Configuration/Watchfaces.html>`_.
 
 Para registrar un teléfono o un reloj que no está ya listado en la hoja de cálculo, por favor rellene la `forma <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+Cualquier problema con la hoja de cálculo por favor envíe un correo electrónico a `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, cualquier donación de los modelos de teléfono/reloj que aún necesitan pruebas por favor envíe un correo electrónico a `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 xDrip+
 --------------------------------------------------
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarmas o una buena muestra de glucosa en sangre. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Se puede encontrar alguna información de xDrip+ "aqui <../Configuration/xdrip.html>`_. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Incluso si no necesitas tener la aplicación xDrip + como fuente de BG, todavía puedes usarla para esto. alarmas o una buena muestra de glucosa en sangre. Puede tener el número de alarmas que desee, especificar la hora en la que la alarma debe estar activa, se puede alterar temporalmente la modalidad silenciosa, etc. Se puede encontrar alguna información de xDrip+ "aqui <../Configuration/xdrip.html>`_. Por favor, tenga en cuenta que las documentaciones de esta aplicación no siempre están al día, ya que su progreso es bastante rápido.
 
 Configuración de ejemplo
 ==================================================
@@ -122,9 +122,9 @@ Si desea obtener un ejemplo paso a paso, es posible que desee ver una configurac
   
 Qué hacer mientras se espera a los módulos
 ==================================================
-A veces se tarda un tiempo en obtener todos los módulos para cerrar el lazo. Pero no te preocupes, hay un montón de cosas que puedes hacer mientras esperas. It is NECESSARY to check and (where approporiate) adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AndroidAPS. Using this mode, AndroidAPS gives treatment advices you can manually execute.
+A veces se tarda un tiempo en obtener todos los módulos para cerrar el lazo. Pero no te preocupes, hay un montón de cosas que puedes hacer mientras esperas. Es NECESARIO comprobar y (donde correspondiente) adaptar las tasas basales (BR), la insulina/carbohidratos (IC), la sensibilidad de los factores (ISF), etc. Y tal vez un lazo abierto puede ser una buena forma de probar el sistema y familiarizarse con AndroidAPS. Usando este modo, AndroidAPS le da consejos de tratamiento que puede ejecutar manualmente.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Usted puede seguir leyendo a través de los documentos aquí, ponerse en contacto con otros loopers en línea o fuera de línea, `leer <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ documentaciones o lo que escriben otros loopers (incluso si tiene que ser cuidadoso, no todo es correcto o bueno para que se reproduzca).
 
-**Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
+**Hecho?**
+Si tiene todos los componentes de AAPS juntos (congratulaciones) o al menos lo suficiente para iniciarse en el modo de bucle abierto, primero debe leer la descripción de `objetivo <../Usage/Objectives.html>`_ antes de cada nuevo objetivo y configurar el `hardware <../index.html#component-setup>`_.
