@@ -22,15 +22,15 @@ If your build fails with an error regarding "on demand configuration" you can do
 
 ### Este artículo se divide en dos partes.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
+* En la parte de descripción general hay una explicación sobre qué pasos son necesarios para crear el archivo APK.
+* En el paso paso a paso encontrará las capturas de pantalla de una instalación en concreto. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
 
 ## Inicio
 
-In general, the steps necessary to build the APK file:
+En general, los pasos necesarios para crear el archivo APK son:
 
 * [Install git](../Installing-AndroidAPS/git-install.rst)
-* Install and setup Android Studio.
+* Instale y configura Android Studio.
 * Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
 * Abra el proyecto clonado en Android Studio como proyecto activo.
 * Construya el APK firmado.
@@ -46,81 +46,81 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
 ## Instalar Android Studio
 
-The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
+The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. Pero deberías ser capaz de encontrar el camino a través del proceso. La ayuda de la comunidad se proporciona, por ejemplo, en el grupo de Facebook [AndroidAPS](https://www.facebook.com/groups/1900195340201874/) y [en otros lugares](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Instale [Android Studio](https://developer.android.com/studio/install.html) y configurelo durante el primer inicio.
 
-Select "Do not import settings" as you have not used it before.
+Seleccione "No importar valores", ya que no lo ha utilizado anteriormente.
 
 ![Screenshot 1](../images/Installation_Screenshot_01.png)
 
-Click "Next".
+Haga clic en "Siguiente".
 
-![Screenshot 2](../images/Installation_Screenshot_02.png)
+![Captura de Pantalla 2](../images/Installation_Screenshot_02.png)
 
-Select "Standard" installation and click "Next".
+Seleccione la instalación "Estándar" y haga clic en "Siguiente".
 
-![Screenshot 3](../images/Installation_Screenshot_03.png)
+![Captura de Pantalla 3](../images/Installation_Screenshot_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Seleccione el tema para la interfaz de usuario que desee. (En este manual usamos "Intellij". Luego haga clic en "Siguiente". Este es sólo el esquema de colores. Usted puede seleccionar cualquier que le gusta (por ejemplo, "Darcula" para el modo oscuro). Esta selección no tiene ninguna influencia sobre la construcción del APK.
 
-![Screenshot 4](../images/Installation_Screenshot_04.png)
+![Captura de Pantalla 4](../images/Installation_Screenshot_04.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Pulse "Siguiente" en el diálogo "Verificar valores".
 
-![Screenshot 5](../images/Installation_Screenshot_05.png)
+![Captura de Pantalla 5](../images/Installation_Screenshot_05.png)
 
 The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
 
-![Screenshot 6](../images/Installation_Screenshot_06.png)
+![Captura de Pantalla 6](../images/Installation_Screenshot_06.png)
 
-Android Studio is downloading a lot of software components it uses. You can click on the "Show Details" button to the what happens but that's not important at all.
+Android Studio está descargando una gran cantidad de componentes de software que utiliza. You can click on the "Show Details" button to the what happens but that's not important at all.
 
-![Screenshot 7](../images/Installation_Screenshot_07.png)
+![Captura de Pantalla 7](../images/Installation_Screenshot_07.png)
 
-![Screenshot 8](../images/Installation_Screenshot_08.png)
+![Captura de Pantalla 8](../images/Installation_Screenshot_08.png)
 
-After the downloads are completed click the "Finish" button.
+Una vez que se hayan completado las descargas, haga clic en el botón "Finish".
 
-![Screenshot 9](../images/Installation_Screenshot_09.png)
+![Captura de Pantalla 9](../images/Installation_Screenshot_09.png)
 
-* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. Maybe it's time for a short break?
+* Applause, applause you have now finished the Android Studio installation and can start cloning the source code. ¿Tal vez es hora de un descanso?
 
-## Set git path in preferences
+## Establecer la ruta git en las preferencias
 
 ### Windows
 
-* Let Studio know where is git.exe located: File - Settings
+* Deja que Studio sepa dónde se encuentra git.exe: Archivo - Ajustes
   
-  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+  ![Android Studio - abrir la configuración](../images/Update_GitSettings1.png)
 
-* In the next window: Version Control - Git
+* En la ventana siguiente: Versión Control - Git
 
-* Choose correct path: .../Git<font color="#FF0000"><b>/bin</b></font>
+* Elija la ruta correcta: .../Git<font color="#FF0000"><b>/bin</b></font>
 
-* Make sure update method "Merge" is selected.
+* Asegúrese de que el método de actualización "Combinar" (Merge) está seleccionado.
   
-  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
+  ![Android Studio - Ruta de GIT](../images/Update_GitSettings2a.png)
 
 ### Mac
 
 * If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
-## Download code and additional components
+## Descargar código y componentes adicionales
 
 * Use git clone in Android Studio as shown in screenshots below. Select "Check out project from Version Control" with "Git" as concrete version control system.
 
-![Screenshot 10](../images/Installation_Screenshot_10.png)
+![Captura de Pantalla 10](../images/Installation_Screenshot_10.png)
 
 ![Version_Control_Git](../images/Version_Control_Git.png)
 
 Fill in the URL to the main AndroidAPS repository ("https://github.com/MilosKozak/AndroidAPS") and click "clone".
 
-![Screenshot 13](../images/Installation_Screenshot_13.png)
+![Captura de Pantalla 13](../images/Installation_Screenshot_13.png)
 
-Android Studio will start cloning. Don't click "Background" as it goes fast and makes things more complicated at the moment.
+Android Studio empezará a clonar. Don't click "Background" as it goes fast and makes things more complicated at the moment.
 
-![Screenshot 14](../images/Installation_Screenshot_14.png)
+![Captura de Pantalla 14](../images/Installation_Screenshot_14.png)
 
 Finish the checkout from version control with opening the project by clicking "Yes".
 
@@ -128,28 +128,28 @@ Finish the checkout from version control with opening the project by clicking "Y
 
 Use the standard "default gradle wrapper" and click "OK".
 
-![Screenshot 16](../images/Installation_Screenshot_16.png)
+![Captura de Pantalla 16](../images/Installation_Screenshot_16.png)
 
 Read and close the "Tip of Day" screen of Android Studio by pressing "Close".
 
-![Screenshot 17](../images/Installation_Screenshot_17.png)
+![Captura de Pantalla 17](../images/Installation_Screenshot_17.png)
 
-* Excellent, you have your own copy of the source code and are ready to start the build.
-* Now we are approaching our first error message. Fortunately, Android Studio will directly give us the solution for this.
+* Excelente, tiene su propia copia del código fuente y está listo para iniciar la construcción.
+* Ahora nos estamos acercando a nuestro primer mensaje de error. Afortunadamente, Android Studio nos dará directamente la solución para esto.
 
 Click "Install missing platform(s) and sync project" as Android Studio needs to install a missing platform.
 
-![Screenshot 18](../images/Installation_Screenshot_18.png)
+![Captura de Pantalla 18](../images/Installation_Screenshot_18.png)
 
 Accept the license agreement by selecting "Accept" and clicking "Next".
 
-![Screenshot 19](../images/Installation_Screenshot_19.png)
+![Captura de 19](../images/Installation_Screenshot_19.png)
 
 As it is said in the dialog please wait until the download is finished.
 
-![Screenshot 20](../images/Installation_Screenshot_20.png)
+![Captura de Pantalla 20](../images/Installation_Screenshot_20.png)
 
-Now it's finished. Please click "Finish".
+Ahora ha terminado. Please click "Finish".
 
 ![Screenshot 21](../images/Installation_Screenshot_21.png)
 
@@ -161,7 +161,7 @@ As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 23](../images/Installation_Screenshot_23.png)
 
-Now it's finished. Please click "Finish".
+Ahora ha terminado. Please click "Finish".
 
 ![Screenshot 24](../images/Installation_Screenshot_24.png)
 
@@ -173,7 +173,7 @@ As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 26](../images/Installation_Screenshot_26.png)
 
-Now it's finished. Please click "Finish".
+Ahora ha terminado. Please click "Finish".
 
 ![Screenshot 27](../images/Installation_Screenshot_27.png)
 
@@ -185,7 +185,7 @@ As it is said in the dialog please wait until the download is finished.
 
 ![Screenshot 29](../images/Installation_Screenshot_29.png)
 
-Now it's finished. Please click "Finish".
+Ahora ha terminado. Please click "Finish".
 
 ![Screenshot 30](../images/Installation_Screenshot_30.png)
 
