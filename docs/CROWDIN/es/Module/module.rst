@@ -107,11 +107,11 @@ Any problems with the spreadsheet please send an email to `hardware@androidaps.o
 
 xDrip+
 --------------------------------------------------
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarmas o una buena muestra de glucosa en sangre. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`_. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarmas o una buena muestra de glucosa en sangre. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Se puede encontrar alguna información de xDrip+ "aqui <../Configuration/xdrip.html>`_. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
 
 Configuración de ejemplo
 ==================================================
-If you want to get a step by step example, you might want to look at a sample setup. La primera configuración de la muestra es bastante antigua, pero debe estar todavía actualizada.
+Si desea obtener un ejemplo paso a paso, es posible que desee ver una configuración de ejemplo. La primera configuración de la muestra es bastante antigua, pero debe estar todavía actualizada.
 
 .. toctree::
    :maxdepth: 1
