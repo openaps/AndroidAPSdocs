@@ -81,13 +81,13 @@ En primer lugar, tienes que llevar el mismo equipo de emergencia que llevarías 
 
 ## ¿Cómo asegurar el sensor CGM/FGM?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Some loopers use the cheaper standard kinesiology tape or rocktape.
+You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Algunos loopers utilizan la cinta de kinesiología estándar (más barata) o cinta Rocktape.
 
 You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
 
 # Ajustes en AndroidAPS
 
-La lista siguiente trata de ayudarte a optimizar los valores de tus ajustes. It may be best to start at the top and work to the bottom. Trata de tener un ajuste correcto antes de pasar al siguiente. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+La lista siguiente trata de ayudarte a optimizar los valores de tus ajustes. Quizás sea mejor empezar por los principales y bajar a detalle progresivamente. Trata de tener un ajuste correcto antes de pasar al siguiente. Procura realizar pequeñas modificaciones en lugar de hacer grande cambios de golpe. Puedes utilizar [Autotune ](https://autotuneweb.azurewebsites.net/) como orientación, aunque no se debe seguir ciegamente: puede que no funcione bien para ti en todas las circunstancias. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
 ## Duración de la actividad de la insulina (DIA)
 
@@ -101,56 +101,56 @@ A menudo se elige un valor demasiado pequeño. Para la mayoría de gente estará
 
 Un valor demasiado pequeño puede llevar a glucemias bajas. Y viceversa.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
+If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (En realidad, no espera tanto tiempo, sino que predice lo que ocurriría, y sigue añadiendo la insulina). Básicamente, esto crea excedentes de insulina que AAPS no considerará en sus cálculos por considerar que ya se ha consumido.
 
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+Un ejemplo de DIA demasiado pequeña serían: valores altos de glucemia seguidos de sobre-correciones por parte de AAPS, provocando valores demasiado bajos de glucemia.
 
-## Basal rate schedule (U/h)
+## Programación de basales (U/h)
 
 ### Descripción & pruebas
 
 The amount of insulin in a given hour time block to maintain BG at a stable level.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
+Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repite unas cuantas veces.
 
-If BG is dropping, basal rate is too high. Y viceversa.
+Si la BG va disminuyendo, la basal es demasiado alta. Y viceversa.
 
 ### Impacto
 
-Too high basal rate can lead to low BGs. Y viceversa.
+Basales demasiado elevadas pueden provocar BG demasido bajas. Y viceversa.
 
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+AAPS toma como referencia las basales por defecto. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
 So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
 
 Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
-## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+## Factor de sensibilidad a la insulina (ISF) (mmol/l/U o mg/dl/U)
 
 ### Descripción & pruebas
 
-The drop in BG expected from dosing 1U of insulin.
+La disminución de BG esperada ante una dosis de 1U de insulina.
 
 Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
 Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado bajo, significa que 1 U bajará la BG más y más rápido de lo esperado!!.
 
 ### Impacto
 
-**Lower ISF** (i.e. 40 instead of 50) = more aggressive / stronger leading to a bigger drop in BGs for each unit of insulin. If too low, this can lead to low BGs.
+**Lower ISF** (i.e. 40 instead of 50) = more aggressive / stronger leading to a bigger drop in BGs for each unit of insulin. Valores demasiado bajos pueden provocar glucemias demasiado bajas.
 
 **Higher ISF** (i.e. 45 instead of 35) = less aggressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
 
 **Example:**
 
-* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
-* So, you want correction of 90 mg/dl (= 190 - 110).
-* ISF = 30 -> 90 / 30 = 3 units of insulin
-* ISF = 45 -> 90 / 45 = 2 units of insulin
+* BG de 190 mg/dl (10,5 mmol) y el objetivo es de 100 mg/dl (5,6 mmol). 
+* Por lo tanto, necesitas una corrección de 90 mg/dl (= 190-100).
+* ISF = 30 => 90/30 = 3 unidades de insulina
+* ISF = 45 => 90/45 = 2 unidades de insulina
 
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
 Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
 
