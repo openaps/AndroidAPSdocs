@@ -148,81 +148,81 @@ Si el número de serie de su transmisor Dexcom G6 Si el número de serie de su t
 
 * Hasta ahora el tiempo de vida no se puede extender para los transmisores cuyo número de serie empieza por 8G o 8H.
 * Para evitar las dificultades iniciando los sensores, se recomienda encarecidamente extender la vida del transmisor antes del día 100 de la primera utilización.
-* La sesión en ejecución del sensor se detendrá al ampliar la vida del transmisor. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and check `OB1 collector`.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* La sesión en ejecución del sensor se detendrá al ampliar la vida del transmisor. Así que, extienda antes del cambio de sensor o tenga en cuenta que habrá una nueva fase de inicialización de 2 h.
+* Cambie a la `modalidad de ingeniería`: 
+   * pulsar sobre el carácter a la derecha de la pantalla de inicio de xDrip+ que representa una jeringa
+   * luego toca el icono del micrófono en la esquina inferior derecha
+   * En el recuadro de texto que abre escriba "enable engineering mode" 
+   * pulse "Terminado"
+   * Si el motor de Google Speak está habilitado, también puede hablar el comando de voz: "enable engineering mode". 
+* Vaya a los valores de depuración G5 y compruebe `OB1 recopilador`.
+* Utilice el mandato de voz: "hard reset transmitter"
+* El comando de voz se ejecutará con la siguiente recepción de datos del transmisor
+* Examine el estado del sistema (menú Hamburgesa-> estado del sistema) y consulte lo que sucede
+* Si ve un mensaje "Phone Service State: Hard Reset habría fallado" en la segunda pantalla de estado del sistema, solo inicie el sensor y este mensaje debe desaparecer.
    
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ El reseteo pudo haber fallado](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Los días de Transmisor se establecerán en 0 después de la extensión y el inicio satisfactorios del sensor.
 
-### Replace transmitter
+### Sustituir transmisor
 
 Para los transmisores G6 fabricados después de otoño/finales de 2018 (es decir, con números de serie que empiezan por 80 u 81) por favor, asegúrate de utilizar la versión [maestra fechada 2019/05/18 ](https://jamorham.github.io/#xdrip-plus) o posterior.
 
-Si el número de serie de su transmisor Dexcom G6 is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Si el número de serie de su transmisor Dexcom G6 comienza con 8G u 8H utilizar una de las [últimas compilaciones nocturnas](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Desactive el receptor Dexcom original (si se utiliza).
-* Stop sensor (only if replacing sensor)
+* Detener sensor (sólo si sustituye el sensor)
    
-   Ensure it really is stopped:
+   Asegúrese de que realmente se ha detenido:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   En la segunda pantalla "Estado de G5/G6", mire a `Elementos de cola` aproximadamente en la mitad hacia abajo - Puede que diga algo como `(1) Detener sensor`
    
-   Wait until this goes - usually within a few minutes. Sensor Status must be "Stopped" (see screenshot).
+   Espere hasta que esto ocurra - normalmente en unos pocos minutos. El estado del sensor debe ser "Detenido" (consulte la captura de pantalla).
    
-   -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
+   -> Para quitar el transmisor sin detener el sensor ver este video <https://youtu.be/AAhBVsc6NZo>.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Detener sensor Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Detener sensor Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
+* Olvidar el dispositivo en estado del sistema de xDrip Y en la configuración BT del smartphone (¿Será mostrado como Dexcom?? mientras ?? son los dos últimos dígitos del número de serie del transmisor)
    
-   ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
+   ![xDrip+ Olvidar dispositivo](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Remove transmitter (and sensor if replacing sensor)
+* Retire el transmisor (y el sensor si reemplaza el sensor)
 
-* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
+* Coloque el transmisor antiguo lejos para evitar la reconexión. Un microondas es un escudo de Faraday perfecto para esto, pero desenchufa el cable de alimentación para estar seguro al 100% de que nadie lo encienda.
 * Pulse el icono xDrip+ en la gota de sangre de color rojo en la pantalla principal para habilitar el botón `Asistente de Origen`.
 * Utilice el Botón Asistente de Origen que asegura la configuración predeterminada incluyendo OB1 & Modo Nativo 
    * Esto le guiará a través de la configuración inicial.
-   * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Tenga cuidado de no confundir 0 (cero) y O (letra o mayúscula).
-* Insert new sensor (only if replacing).
-* Put transmitter into sensor - **Do not start sensor immediately!**
-* New "Firefly Transmitters" (serial no. starting with 8G or 8H) can only be used in native mode.
-* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G or 8H):
+   * Necesitará el número de serie del transmisor si es la primera vez que lo utiliza.
+* Introducir el número de serie del transmisor nuevo. Tenga cuidado de no confundir 0 (cero) y O (letra o mayúscula).
+* Insertar nuevo sensor (sólo si se sustituye).
+* Coloque el transmisor en el sensor - **No iniciar el sensor inmediatamente!**
+* Nuevos "Transmisores Firefly" (número de serie que empiezan por 8G o 8H) sólo se pueden utilizar en la modalidad nativa.
+* Las opciones siguientes no deben activarse para los nuevos "Transmisores Firefly" (número de serie que empiezan por 8G o 8H):
    
-   * Preemptive Restart (disable!)
-   * Restart sensor (disable!)
-   * Fallback to xDrip (disable!)
+   * Reinicio preventivo (inhabilitar)
+   * Reiniciar el sensor (deshabilitar!)
+   * Volver a xDrip (deshabilitar!)
    
-   ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
+   ![Configuración de los transmisores Firefly](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
+* Compruebe en la Página de Estado Clásica-> G5/G6 status-> PhoneServiceState si se muestra una de las siguientes informaciones:
    
    * Transmisor con número de serie que empieza por 80 o 81: "Obtiene datos hh:mm" (por ejemplo, "Obtiene datos 19:04")
    * Transmisor con número de serie que empieza por 8G o 8H: "Got glucose hh:mm" (es decir, "Obtiene glucosa 19:04") o "No tengo ninguna hh:mm" (por ejemplo, "No tengo ninguna 19:04")
    
    ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
+* Espere 15 minutos ya que el transmisor debe comunicarse varias veces con xDrip antes de que se inicie el nuevo sensor. La batería de datos se muestra a continuación la información del Firmware.
    
-   ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
+   ![Datos de batería del transmisor firefly](../images/xDrip_Dexcom_FireflyBattery.png)
 
-* Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
+* ¡Inicie el sensor y NO PREDATE LA FECHA! Seleccione siempre "Sí, hoy"!
 
-* Restart collector (system status - if not replacing sensor)
+* Reiniciar el colector (estado del sistema - si no se reemplaza el sensor)
 * No encienda el receptor original de Dexcom (si lo utiliza) de nuevo antes de xDrip+ muestre las primeras lecturas.
 * Pulse el icono xDrip+ de goteo de sangre de color rojo en la pantalla principal para inhabilitar el `Botón Asistente de origen`.
    
@@ -234,106 +234,106 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G or 8H use 
    
    ![xDrip+ Dexcom Transmisor 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### New Sensor
+### Nuevo Sensor
 
 * Desactive el receptor Dexcom original (si se utiliza).
-* Stop sensor if necessary
+* Detener sensor si es necesario
    
-   Ensure it really is stopped:
+   Asegúrese de que realmente se ha detenido:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   En la segunda pantalla "Estado de G5/G6", mire a `Elementos de cola` aproximadamente en la mitad hacia abajo - Puede que diga algo como `(1) Detener sensor`
    
-   Wait until this goes - usually within a few minutes.
+   Espere hasta que esto ocurra - normalmente en unos pocos minutos.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Detener sensor Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Detener sensor Dexcom 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Clean contacts (transmitter backside) with alcohol and let air-dry.
+* Limpiar los contactos (lado trasero del transmisor) con alcohol y dejemos secar al aire.
 
-* In case you use this function disable `Restart Sensor` and `Preemptive restarts` (Hamburger menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
+* En caso de que utilice esta función, inhabilite `Reiniciar el sensor` y `Reinicios anticipados` (menú Hamburgesa-> Valores-> G5/G6 Depuración de valores). Si se pierda este paso y tiene estas funciones habilitadas, el nuevo sensor no se iniciará correctamente.
    
-   ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
+   ![xDrip+ Reinicio preventivo](../images/xDrip_Dexcom_Restart.png)
 
-* Start Sensor
+* Iniciar Sensor
    
-   **For new Firefly transmitters** (serial no. starting with 8G or 8H) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
+   **Para los nuevos transmisores Firefly** (número de serie comenzando con 8G o 8H) **es obligatorio, para todos los demás transmisores se recomienda esperar aprox. 15 minutos entre parada y arranque el nuevo sensor (hasta `Estado de Sensor: Detenido` se muestra en la segunda pantalla de estado del sistema). DO NOT BACKDATE!**
 
-* Set time inserted
+* Establecer tiempo insertado
    
-   * To use G6 Native mode you must wait for the 2 hour warm up (i.e insertion time is now).
-   * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore, this is not recommended.
-* Enter Sensor code (on the peel-off foil of the sensor) 
-   * Keep code for further reference (i.e. new start after transmitter had to be removed)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
-* No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
-* Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
+   * Para utilizar el modo Nativo G6, debe esperar a que se inicie son 2 horas (por ejemplo, el tiempo de inserción es ahora).
+   * Si utiliza el algoritmo xDrip+, puede establecer un tiempo anterior de más de 2 horas para evitar el inicio. Las lecturas pueden ser muy erráticas. Por lo tanto, esto no se recomienda.
+* Introduzca el código del Sensor (en la lámina de papel de aluminio del sensor) 
+   * Mantenga el código para futuras referencias (por ejemplo, un nuevo inicio después de que el transmisor haya tenido que eliminarse)
+   * También se puede encontrar código en [xDrip+ logs ](../Configuration/xdrip#retrieve-sensor-code): pulse el menú de 3 puntos en la pantalla de inicio de xDrip+ y elija `Ver registros de sucesos`.
+* No se necesita ninguna calibración si utiliza G6 en "modalidad nativa". xDrip+ mostrará las lecturas automáticamente después del inicio de 2 horas.
+* No encienda el receptor original de Dexcom (si lo utiliza) de nuevo, antes de que xDrip+ muestre las primeras lecturas.
    
-   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
+   ![xDrip+ Inicio Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
    
-   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
+   ![xDrip+ Inicio Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-### Retrieve sensor code
+### Recuperar código de sensor
 
-* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
-* Swipe left once to see second screen.
+* En el maestro fechado 2019/05/18 y las últimas Versiones el código del sensor se muestra en el estado del sistema (la parte superior del menú de Hamburgesa que queda en la pantalla de inicio).
+* Deslizar la izquierda una vez para ver la segunda pantalla.
    
-   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+   ![xDrip+ Recuperar código2 sensor Dexcom](../images/xDrip_Dexcom_SensorCode2.png)
 
-* Dexcom sensor code can also be found in xDrip+ logs.
+* El código de sensor de Dexcom también se puede encontrar en los registros de xDrip+.
 
-* Tap 3 dot menu (top right side on homescreen)
-* Select `View Event Logs` and search for "code"
+* Pulse el menú de 3 puntos (parte superior derecha en la pantalla de inicio)
+* Seleccione `Ver registros de sucesos` y busque "código"
    
-   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Recuperar código sensor Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
-## Troubleshooting Dexcom G5/G6 and xDrip+
+## Solución de problemas de Dexcom G5/G6 y xDrip+
 
-### Problem connecting transmitter
+### Problema al conectar el transmisor
 
-* Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
-* Open system status in xDrip+ (hamburger menu on top left side of home screen).
-* Check if your transmitter is shown on first status page ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings and restart collector.
-* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+* El transmisor debe mostrarse en la configuración bluetooth de su smartphone.
+* El transmisor se muestra como Dexcom?? mientras ?? representan los dos últimos dígitos del número de serie del transmisor (por ejemplo, DexcomHY).
+* Abrir el estado del sistema en xDrip+ (menú hamburguesa en la parte superior izquierda de la pantalla de inicio).
+* Compruebe si el transmisor se muestra en la primera página de estado ('página de estado clásico').
+* Si no, elimine el dispositivo de la configuración bluetooth de su smartphone y reinicie el recolector.
+* Espere unos 5 minutos. hasta que el transmisor Dexcom se vuelva a conectar automáticamente.
 
-### Problem when starting new sensor
+### Problema al iniciar un nuevo sensor
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G or 8H.
+Por favor, tenga en cuenta que es posible que el siguiente método no funcione si el transmisor Dexcom G6 tiene el número de serie que empieza por 8G o 8H.
 
-* Native sensor is marked as "FAILED: Sensor Failed Start"
+* El sensor nativo se marca como "FAILED: Sensor Failed Start"
 * Detener Sensor
-* Restart your phone
-* Start sensor with code 0000 (four times zero)
-* Wait 15 minutes
+* Reinicia tu dispositivo
+* Iniciar el sensor con el código 0000 (cuatro veces cero)
+* Espere 15 minutos
 * Detener Sensor
-* Start sensor with "real" code (printed on the adhesive protector)
+* Iniciar sensor con el código "real" (impreso en el protector adhesivo)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Consulte los registros de xDrip+ si xDrip+ inicia el conteo de "Duración: 1 minuto" (y siguiendo). Sólo en los registros de xdrip+ se puede detectar en una fase temprana si xdrip+ ha detenido un sensor. El estado más reciente no se muestra siempre correctamente en la parte inferior de la pantalla de inicio.
 
 ## xDrip+ & Freestyle Libre
 
-### Libre specific settings
+### Libre configuración específica
 
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+* Abrir la Configuración Bluetooth -> Menú Hamburguesa (parte superior izquierda de la pantalla) -> Configuración -> desplácese hacia abajo -> Ajustes menos comunes -> Ajustes de Bluetooth
    
-   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+   ![xDrip+ Libre Configuración 1 de Bluetooth](../images/xDrip_Libre_BTSettings1.png)
 
 * Habilite los siguientes parámetros
    
-   * `Turn Bluetooth on` 
-   * `Use scanning`
-   * `Always discover services`
+   * `Encender Bluetooth` 
+   * `Usar escaneo`
+   * `Siempre descubrir servicios`
 
 * Todas las demás opciones deben ser desactivados
    
-   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+   ![xDrip+ Libre Configuración 2 de Bluetooth](../images/xDrip_Libre_BTSettings2.png)
 
-### Connect Libre Transmitter & start sensor
+### Conectar el transmisor de Libre & iniciar sensor
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ iniciar transmisor Libre & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ iniciar transmisor Libre & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ iniciar transmisor Libre & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
