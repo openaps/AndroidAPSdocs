@@ -45,7 +45,7 @@ Si te quitas la bomba para ducharte/bañarte/nadar/hacer deporte/ etc. debes ind
 * Mantén pulsado el botón "Lazo Cerrado" ( "Lazo Abierto" si aún no lo has cerrado) en la parte superior de la pantalla. 
 * Selecciona **'Desconectar bomba XY min'**
 * Esto establecerá tu basal a cero durante ese periodo de tiempo.
-* La duración mínima de la desconexión vendrá fijada por la duración mínima de basales temporales (TBR) que permita la bomba. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
+* La duración mínima de la desconexión vendrá fijada por la duración mínima de basales temporales (TBR) que permita la bomba. Por lo tanto, si deseas desconectarte durante un periodo de tiempo más corto, deberás utilizar el tiempo de desconexión más corto disponible en tu bomba y volver a conectarte manualmente tal como se describe a continuación.
 * El botón 'Lazo Cerrado' (o 'Lazo Abierto') aparecerá en rojo con el texto 'Desconectado (xx m)' mostrando el tiempo restante de desconexión.
 * AAPS volverá a conectar la bomba, automáticamente, una vez haya transcurrido el tiempo seleccionado y el lazo cerrado empezará a funcionar de nuevo.
     
@@ -60,11 +60,11 @@ Si te quitas la bomba para ducharte/bañarte/nadar/hacer deporte/ etc. debes ind
 
 ### Las recomendaciones no se basan en lecturas aisladas del sensor
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+Por razones de seguridad, las recomendaciones no se basan en una sola lectura del sensor (MCG), sino en promedios de variaciones (delta). Por lo tanto, si se pierden algunas mediciones, puede pasar un tiempo entre que se vuelvan a recibir datos y que AndroidAPS vuelva a iniciar el lazo.
 
 ### Lecturas adicionales
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Hay varios blogs con buenos consejos y sugerencias para ayudarte a entender cómo funciona el lazo:
 
 * ['Fine-tuning Settings'](http://seemycgm.com/2017/10/29/fine-tuning-settings/) en 'See my CGM'
 * ['Why DIA matters'](http://seemycgm.com/2017/08/09/why-dia-matters/) en 'See my CGM'
@@ -73,17 +73,17 @@ There are several blogs with good tips to help you understand the practicalities
 
 ## ¿Qué equipo de emergencia se recomienda llevar?
 
-En primer lugar, tienes que llevar el mismo equipo de emergencia que llevarías como T1D con terapia de bomba de insulina. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
+En primer lugar, tienes que llevar el mismo equipo de emergencia que llevarías como T1D con terapia de bomba de insulina. Como usuario de AndroidAPS, se recomienda, encarecidamente, tener cerca el siguiente equipo adicional:
 
 * Cargador extra para tu móvil, smartwatch y (quizá) lector de BlueTooth
-* Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
+* Copia de seguridad en la nube (Dropbox, Google Drive...) de las aplicaciones que usas: la última apk de AndroidAPS y la contraseña de tu "key store", el fichero de preferencias AndroidAPS, el fichero de preferencias de xDrip, la app parcheada de Dexcom,....
 * Baterias para la bomba
 
 ## ¿Cómo asegurar el sensor CGM/FGM?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Algunos loopers utilizan la cinta de kinesiología estándar (más barata) o cinta Rocktape.
+Puedes pegarlo con cinta adhesiva: se venden parches adhersivos perforados para los sensores habituales (busca en Google o eBay). Algunos loopers utilizan la cinta de kinesiología estándar (más barata) o cinta Rocktape.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
+Puedes fijarlo: se venden brazaletes para la parte superior del brazo que sujetan el MCG/FGM con una banda de goma ( busca en Google o eBay).
 
 # Ajustes en AndroidAPS
 
@@ -119,11 +119,11 @@ Si la BG va disminuyendo, la basal es demasiado alta. Y viceversa.
 
 Basales demasiado elevadas pueden provocar BG demasido bajas. Y viceversa.
 
-AAPS toma como referencia las basales por defecto. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+AAPS toma como referencia las basales por defecto. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. Esto provocará que AAPS genere más correcciones de las que debería para llevar la IOB finalmente a cero.
 
-So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
+Por lo tanto, una basal demasiado alta generará BG bajas, mientras dure esa basal y algunas horas más hasta que AAPS corrija a objetivo.
 
-Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Por el contrario, una basal demasiado baja puede llevar a BG altas, y a la imposibilidad de reducir los niveles hasta el objetivo.
 
 ## Factor de sensibilidad a la insulina (ISF) (mmol/l/U o mg/dl/U)
 
@@ -154,7 +154,7 @@ An ISF that is too low (not uncommon) can result in ‘over corrections’, beca
 
 Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
 
-## Insulin to carb ratio (IC) (g/U)
+## Ratio Carbohidratos/Insulina (IC) (g/U)
 
 ### Descripción & pruebas
 
@@ -182,9 +182,9 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 
 ### Impacto
 
-**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Podríamos decir que es "más agresiva".
+**Menor IC** = menos comida por unidad, es decir, obtendrás más insulina por cantidad fija de hidratos. Podríamos decir que es "más agresiva".
 
-**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
+**Mayor IC** = más comida por unidad, es decir, obtendrás menos insulina por cantidad fija de hidratos. Can also be called ‘less aggressive’.
 
 If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Por el contrario, si tu BG es menor que antes de comer, tu IC es demasiado pequeña.
 
@@ -194,15 +194,15 @@ If after meal has digested and IOB has returned to zero, your BG remains higher 
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-En AMA, DIA en realidad no significa la "duración de la actividad de la insulina ". Es un parámetro que tiene cierta relacion con DIA. En este caso significa, "el tiempo en le que la corrección debería haber acabado". It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+En AMA, DIA en realidad no significa la "duración de la actividad de la insulina ". Es un parámetro que tiene cierta relacion con DIA. En este caso significa, "el tiempo en le que la corrección debería haber acabado". No participan en el cáclulo de la IOB. En OpenAPS SMB, este parámetro ya no es necesario.
 
 ## Perfil
 
-### Why using min. 5h DIA (insulin end time) instead of 2-3h?
+### ¿Por qué usar una DIA de 5h como mínimo (duración de la actividad de la insulina) en lugar de 2-3h?
 
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Bien explicado en [este artículo ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). No te olvides de `ACTIVAR EL PERFIL` después de modificar tu DIA.
 
-### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
+### ¿Por qué motivo mi lazo baja mis BG hasta valores de hipo-glucemia sin COB?
 
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
 
