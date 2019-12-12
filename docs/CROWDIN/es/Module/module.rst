@@ -62,9 +62,9 @@ El Combo, el Insight y los Medtronics más antiguos son bombas sólidas y loopea
 Las ventajas de la DanaR/RS vs. la Combo como la bomba de elección, sin embargo, son:
 
 - La Dana*R/RS se conecta a casi cualquier teléfono con Android >= 5.1 sin necesidad de flash linage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... no así con la Combo. (esto puede cambiar en el futuro cuando Android 8.1 sea más popular)
-- El emparejamiento inicial es más fácil con DanaRS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- Hasta ahora Combo funciona con análisis de pantalla. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
-- Combo vibra cuando termina una basal temporal, la DanaR vibra (o hace sonido) con SMB. At night time you are likely to be using TBRs more than SMB.  The Dana* RS is configurable that it does neither beeps or vibrates.
+- El emparejamiento inicial es más fácil con DanaRS. Pero esto se realiza normalmente solo una vez, por lo que solo impacta si quieres probar nuevas características con bombas diferentes.
+- Hasta ahora Combo funciona con análisis de pantalla. En general funciona bien pero es lento. Para lazo cerrado eso no es crucial puesto que trabaja en segundo plano, sin embargo, usa más tiempo la conexión bluetooth aumentando la probabilidad de fallo de conexión, lo cual no es fácil si te lejas del móvil mientras pones un bolo y cocinas. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
+- Combo vibra cuando termina una basal temporal, la DanaR vibra (o hace sonido) con SMB. Por la noche, preferirás usar TBR sobre SMB.  DanaRS se puede configurar para que ni haga sonido ni vibre.
 - Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 - Todas las bombas AndroidAPS compatibles son waterproof. Aunque solo la Dana es tiene garantizado waterproof debido a su sellado en el compartimento de la batería y el reservorio. 
 
