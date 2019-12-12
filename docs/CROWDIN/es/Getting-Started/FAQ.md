@@ -170,7 +170,7 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 > 
 > In this model the amount of carbs was fixed and the amount of insulin was variable. ("¿Cuánta insulina se necesita para cubrir una sola unidad de pan?")
 > 
-> When using IC the amount of insulin is fixed and the amount of carbs is variable. ("¿Cuántos gr de carbohidratos pueden estar cubiertos por una sola unidad de insulina?")
+> Cuando se utiliza IC, la cantidad de insulina es fija y la cantidad de carbohidratos es variable. ("¿Cuántos gr de carbohidratos pueden estar cubiertos por una sola unidad de insulina?")
 > 
 > Example:
 > 
@@ -184,13 +184,13 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 
 **Menor IC** = menos comida por unidad, es decir, obtendrás más insulina por cantidad fija de hidratos. Podríamos decir que es "más agresiva".
 
-**Mayor IC** = más comida por unidad, es decir, obtendrás menos insulina por cantidad fija de hidratos. Can also be called ‘less aggressive’.
+**Mayor IC** = más comida por unidad, es decir, obtendrás menos insulina por cantidad fija de hidratos. Podríamos decir que es "menos agresiva".
 
-If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Por el contrario, si tu BG es menor que antes de comer, tu IC es demasiado pequeña.
+Si, una vez digerida la comida y con la IOB a cero, tu BG continua más alta que antes de comer, es probable que tu IC sea demasiado grande. Por el contrario, si tu BG es menor que antes de comer, tu IC es demasiado pequeña.
 
 # Algoritmo APS
 
-## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+## ¿Por qué se muestra "dia: 3" en la pestaña "OPENAPS AMA", a pesar de que tengo un DIA diferente en mi perfil?
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
@@ -204,13 +204,13 @@ Bien explicado en [este artículo ](http://www.diabettech.com/insulin/why-we-are
 
 ### ¿Por qué motivo mi lazo baja mis BG hasta valores de hipo-glucemia sin COB?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
+En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. Si están correctas, este comportamiento tendrá origen en un ISF demasiado bajo. A too low ISF looks typically like this:
 
 ![ISF too low](../images/isf.jpg)
 
 ### What causes high postprandial peaks in closed loop?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
 # Other settings
 
