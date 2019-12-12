@@ -1,8 +1,8 @@
 Wiki mises à jour et modifications
 **************************************************
-December 2019
+Décembre 2019
 ==================================================
-* `Watchfaces <../Configuration/Watchfaces.html>`_ (major update, way more details)
+* `Cadrans des montres <../Configuration/Watchfaces.html>`_ (mise à jour majeure, beaucoup plus de détails)
 Novembre 2019
 ==================================================
 * `Automatisation - à désactiver lors de la désactivation de la boucle <../Usage/Automation.html#important-note>`_
