@@ -1,19 +1,19 @@
 Automatizace
-***************
+**************************************************
 
 Co je automatizace
-===================
+==================================================
 Může se stát, že pro tytéž často se opakující události budete měnit tatáž nastavení. Chcete-li se vyhnout nadbytečným úkonům, můžete se pokusit tyto události zautomatizovat, pokud je dokážete dostatečně jasně specifikovat. Např. když je glykémie příliš nízká, můžete si nechat automaticky nastavit vyšší dočasný cíl. Nebo když se budete nacházet ve fitness centru, automaticky se nastaví dočasný cíl. Dříve než použijete Automatizaci, měli byste ovládat ruční nastavování dočasných cílů <./temptarget.html>`_ nebo přepínání profilu. 
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Automatizace – podmínka + akce
 
 Jak to používat
-================
+==================================================
 Chcete-li nastavit automatizaci, musíte ji pojmenovat a vybrat alespoň jednu podmínku a jednu akci. 
 
 Important note
------
+--------------------------------------------------
 **Automation is still active when you disable loop!**
 
 So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
@@ -22,7 +22,7 @@ So make sure to deactivate Automation rules during these occations if neccessary
   :alt: Activate and deactivaten automation rule
 
 Obecné
---------
+--------------------------------------------------
 Existují určitá omezení:
 
 * Hodnota glykémie musí být v rozmezí 4 až 15 mmol/l.
@@ -36,7 +36,7 @@ Existují určitá omezení:
 
 
 Podmínka
-------------
+--------------------------------------------------
 Můžete si vybrat mezi několika podmínkami. Některé věci jsou zde vysvětleny, ale většina z nich by měla být snadno srozumitelná a není zde popsána:
 
 * spojování podmínek: můžete mít několik podmínek, které navzájem spojíte pomocí operátorů 
@@ -57,7 +57,7 @@ Můžete si vybrat mezi několika podmínkami. Některé věci jsou zde vysvětl
   * Use GPS location (Attention! May cause excessive battery drain!)
   
 Akce
-------
+--------------------------------------------------
 Můžete si vybrat jednu nebo více akcí: 
 
 * spustit dočasný cíl 
@@ -78,12 +78,12 @@ Po přidání akce kliknutím na výchozí hodnoty **nezapomeňte změnit výcho
   :alt: Výchozí hodnoty automatizace vs. nastavené hodnoty
 
 Good practice
-==========
+==================================================
 * When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
 * Whatch the rule results.
 
 Příklady
-==========
+==================================================
 Toto jsou jen příklady, žádné rady. Nesnažte se je reprodukovat, aniž byste si uvědomovali, co vlastně děláte nebo proč je potřebujete. See below for two examples with screenshots.
 
 * Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
@@ -91,21 +91,21 @@ Toto jsou jen příklady, žádné rady. Nesnažte se je reprodukovat, aniž bys
 * Setting eating soon temp targets based on time, location...
 
 Dočasný cíl při nízké glykémii
-------------------------------------
+--------------------------------------------------
 .. image:: ../images/Automation2.png
   :alt: Automatizace 2
 
 Toto nastavení má osoba, která chce, aby se při hypoglykémii automaticky spustil dočasný cíl „Hypoglykémie“.
 
 Dočasný cíl v době oběda
-------------------------
+--------------------------------------------------
 .. image:: ../images/Automation3.png
   :alt: Automatizace 3
   
 Toto je ukázkové nastavení osoby, která během týdne mívá oběd ve stejnou dobu. Pokud se v určitou dobu nachází na místě, kde obvykle obědvá, spustí se při čekání na oběd dočasný cíl „Před jídlem“. Vzhledem k použitému operátoru „A“ se tak stane pouze tehdy, když je splněna podmínka určitého času A polohy. Tato automatizace tedy nefunguje, pokud je osoba v nastaveném místě v jakoukoli jinou dobu, ani když je v nastavenou dobu někde jinde, např. pracuje z domu nebo pracuje přesčas. 
 
 Incorrect use of Automation
-------------------------------------
+--------------------------------------------------
 As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
 
 * Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
@@ -115,6 +115,6 @@ As every system Automation can be used incorrectly. This might lead to difficult
 * Creating long term rules
 
 Alternativy
-============
+==================================================
 
 Pokročilí uživatelé mohou využít další možnosti pro automatizaci úloh pomocí IFTTT nebo externí aplikace pro Android zvané Automate. Některé příklady jsou uvedeny v části <./automationwithapp.html>`_.

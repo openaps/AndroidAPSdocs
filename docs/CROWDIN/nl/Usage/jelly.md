@@ -1,63 +1,63 @@
 # Jelly Pro
 
-## Advantage/Disadvantage
+## De voor- en nadelen
 
-### Advantages Jelly
+### Voordelen Jelly
 
-* It's really small.
-* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
+* Hij is echt heel klein.
+* Zelfs als je het aan mensen vertelt, zullen veel niet geloven dat het een normale smartphone is. Dat maakt het makkelijker als je wilt dat er voor jou een uitzondering wordt gemaakt op een plek waar telefoons normaal niet zijn toegestaan.
 
-### Disadvantages Jelly
+### Nadelen Jelly
 
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
-* Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
-* If you don't treat Jelly like a diva (Always (!) carry it with you!) Jelly shows its bitchy side, disconnects all Bluetooth and sulks until you restart. 
+* Heel klein. Wordt daarom alleen aangeraden voor ervaren loopers (sommige instellingen zijn niet herkenbaar, je moet van eerdere ervaringen met een grote AndroidAPS telefoon weten hoe en waar je alles kunt vinden). Sommige AAPS knoppen zijn lastig te raken en vereisen veel gevoel, dit is erg lastig met grote of onhandige vingers.
+* Kan alleen worden gebruikt als extra telefoon om mee te loopen. Het is beter om een andere smartphone bij je te hebben voor dagelijks telefoon/internetgebruik. 
+* Als je de Jelly niet (altijd! ja echt altijd!) behandelt als de diva die het is, dan toont de Jelly zijn bitchy kant: hij vergeet alle Bluetooth-verbindingen en gaat zitten mokken totdat je hem opnieuw opstart. 
 
-## Jelly Pro - battery life optimization
+## Jelly Pro - batterijduur <./Usage
 
 De volgende instellingen zorgen ervoor dat de batterij van de Jelly smartphone ongeveer 35 uur meegaat (zolang je een smartwatch gebruikt voor bolussen etc). Een extra batterijbesparingsmodus is niet nodig, zelfs contraproductief, dus schakel die uit.
 
 ![Jelly smartphone](../images/jelly_01.jpg)
 
-### First setup
+### Instellingen voor eerste gebruik
 
 <b><font color="#FF0000">Belangrijk:</b></font> Als je Android 8.1 niet persé nodig hebt (alleen nodig om te loopel met een Accu-Check Combo), dan laat je de telefoon op Android versie 7.0 staan!
 
 Volg deze regels om bij Andorid 7.0 te blijven:
 
-* Do not connect to wifi or mobile network on first use to prevent auto update.
-* Skip setting up wifi network.
-* Setting up Google account offline is the only thing that cannot be skipped.
-* Go to settings and disable auto update (Settings >System >About the phone >System update >Three-point menu top right >Settings >Automatically check for updates >Once)
-* Every time you activate the wifi or mobile network you will be notified that a system update is available. Do not update! It is best to delete the notification so that you do not accidentally update. This would not be so easy to undo. 
-* Installed apps can and should be upgraded.
+* Geen verbinding maken met wifi of mobiel netwerk bij het eerste gebruik, om automatische update te voorkomen.
+* Stel géén wifi-netwerk in.
+* Het offline instellen van een Google account is het enige wat niet kan worden overgeslagen.
+* Ga naar instellingen en schakel automatisch updaten uit (Instellingen >Systeem >Over de telefoon >Systeem update >Menu via drie-stipjes rechtsboven >Instellingen >Automatisch controleren op updates >Eenmalig)
+* Elke keer dat je het wifi- of mobiele netwerk activeert, krijg je een melding dat er een systeemupdate beschikbaar is. Niet bijwerken! Het is het beste om de melding te verwijderen zodat je niet per ongeluk bijwerkt. Dat is namelijk niet zo gemakkelijk om ongedaan te maken. 
+* Geïnstalleerde apps kunnen en moeten worden bijgewerkt.
 
 ![Jelly instellingen](../images/jelly_02.jpg)
 
-### Settings
+### Verdere instellingen
 
-* Use Jelly only for looping.
-* Set up wifi to install xDrip, AAPS and WearOS, otherwise wifi off. 
-* Wifi can be enabled for a short time if you want to upload the data to Nightscout.
-* Jelly does not need a SIM card, but if you use one make sure to turn off the mobile data. The easiest way is to activate flight mode.
-* Also if you do not use a SIM card turn of mobile data.
-* Bluetooth must be turned on of course. If the pump is not within range for a longer period of time, the "search" will consume a lot of battery power.
-* DURASPEED ON (Settings > Device > Duraspeed on). Whitelist AAPS, WearOS and xDrip+ to run in background. All other apps should not run in background.
-* End all other tasks in the background. Settings > Intelligent assistant > Exit tasks in background > Disable all other apps (despite AAPS, WearOS and xDrip+).
-* Location services must be on but in power save mode (Settings > User > Location > Mode > Energy Saver Mode).
-* Screen brightness set to 0%, sleep 15-30 sec. (Settings > Device > Display).
-* The daily operations only via the watch. Other settings and display use only during charging. 
-* Jelly, just like the pump, remains untouched under clothing all day long.
+* Gebruik Jelly alleen voor loopen.
+* Stel wifi in om xDrip, AAPS en WearOS te installeren, zet daarna wifi steeds uit. 
+* Wifi kan voor korte tijd worden ingeschakeld als je jouw gegevens wilt uploaden naar Nightscout.
+* Jelly heeft geen SIM-kaart nodig, maar als je deze gebruikt, zorg ervoor dat je gebruik van mobiele data kunt uitschakelen. De eenvoudigste manier om dat te doen is om de vliegtuigmodus te activeren (daarna wel weer Bluetooth aan).
+* Ook als je geen SIM-kaart gebruikt, schakel het gebruik van mobiele data uit.
+* Zorg dat je Bluetooth altijd aan hebt staan. Als de pomp lange tijd niet binnen bereik is, dan zal de "zoek-activiteit" veel stroom verbruiken.
+* DURASPEED AAN (Instellingen > Apparaat > Duraspeed aan). Whitelist AAPS, WearOS en xDrip+ om op de achtergrond te draaien. Alle andere apps mogen niet op de achtergrond draaien.
+* Beëindig alle andere taken op de achtergrond. Instellingen > Intelligente assistent > Taken op de achtergrond afsluiten > Alle andere apps uitschakelen (uitgezonderd AAPS, WearOS en xDrip+).
+* Locatieservices moeten ingeschakeld zijn, maar in de energie besparingsmodus (Instellingen > Gebruiker > Locatie > Modus > Energiebesparingsmodus).
+* Schermhelderheid ingesteld op 0%, slaapstand na 15-30 sec. (Instellingen > Apparaat > Weergave).
+* Gebruik voor de dagelijkse interactie (bolussen etc) alleen je smartwatch. Andere instellingen en het scherm van de Jelly gebruik je alleen terwijl hij aan de lader hangt. 
+* Jelly blijft, net als de pomp, de hele dag onaangeraakt onder je kleding.
 
 ## Tips
 
-* The Jelly is a not always intuitive to use and sometimes acts like a baby diva. A restart (button on the right) every now and then might be a good idea.
-* In portrait view not all buttons might be displayed. So it is worth turning Jelly by 90 degrees.
+* Jelly is niet altijd intuïtief in gebruik en gedraagt zich soms als een kleine diva. Zo nu en dan opnieuw opstarten (knop aan de rechterkant) kan een goed idee zijn.
+* In portret schermweergave zijn wellicht niet alle knoppen zichtbaar. Het is dan handiger om het scherm van de Jelly 90 graden te draaien.
 
 ![Jelly portret + landschapsbeeld](../images/jelly_04.jpg)
 
-* The headline on the startscreen of the phone can hold up to 6 icons on the right. The clock needs 2 of them. So if 5 are already occupied (i.e. bluetooth, do not disturb, no SIM card, flight mode and the battery indicator), no clock will be displayed. Briefly increase the volume with the button in the upper left corner, then the clock appears in the header. ;-)
-* The "alarm clock", which is initially (with factory settings) displayed on the Home screen below the time, is probably a second time zone. Switch this off as AAPS might access wrong timezone (Settings > System > Date&Time > Automatic Time Zone > OFF). Use the time provided by the network instead.
-* A screenshot can be taken by pressing the quiet button (bottom left) + the an button (right) simultaneously. 
+* De menubalk op het startscherm van de telefoon kan aan de rechterkant tot 6 pictogrammen weergeven. De klok heeft er daarvan 2 nodig. Dus als 5 al bezet zijn (bijv. bluetooth, niet storen, geen SIM-kaart, vlucht modus en de batterij indicator), wordt de klok niet weergegeven. Wanneer je kort de volume-verhoog knop in de linkerbovenhoek indrukt, zal de klok in de menubalk verschijnen. 
+* De "alarmklok", die aanvankelijk (met fabrieksinstellingen) op het startscherm onder de tijd wordt weergegeven, is waarschijnlijk een tweede tijdzone. Schakel dit uit om te voorkomen dat AAPS een verkeerde tijdzone zal gebruiken (Instellingen > Systeem > Datum&Tijd > Automatische tijdzone > UIT). Gebruik in plaats daarvan de tijd die het netwerk aangeeft.
+* Een schermafbeelding kun je maken door de volume-zachter knop (linksonder) tegelijkertijd in te drukken met de aanknop (rechts). 
 
 ![Jelly menubalk](../images/jelly_03.png)

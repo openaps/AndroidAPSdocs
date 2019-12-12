@@ -1,11 +1,11 @@
 Freestyle Libre 2
-**********************
+**************************************************
 
 Das Freestyle Libre 2 System kann gefährliche Blutzuckerwerte automatisch melden. Dazu sendet der Libre2 Sensor minütlich die aktuellen
 Blutzuckerwerte an einen Empfänger (Reader oder Smartphone). Dieser löst dann ggf. einen Alarm aus. Modifiziert man die LibreLink App, dann kann man die Blutzuckerwerte kontinuierlich auf dem Smartphone empfangen. Da diese direkt per Bluetooth an Dein Telefon geschickt werden, musst Du keinen Bluetooth-Adapter wie MiaoMiao oder bluecon mehr kaufen. 
 
 Schritt 1: Erstelle Deine eigene gepatchte LibreLink-App
-==============
+==================================================
 
 Aus rechtlichen Gründen muss das sogenannte Patchen von Dir selbst erledigt werden. Verwende Suchmaschinen, um die entsprechenden Links zu finden.
 
@@ -68,7 +68,7 @@ Parallel kann ein weiteres NFC-fähiges Smartphone mit der originalen LibreLink 
 Hinweis: The patched app does not have any connection to the Internet.
 
 Schritt 2: Installieren und konfigurieren der xDrip+ App
-==============
+==================================================
 
 Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen. 
 
@@ -87,21 +87,21 @@ Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen.
   :alt: xDrip+ Fehlerprotokoll
   #
 Schritt 3: Sensor starten
-===============
+==================================================
 
 In xDrip+ den Sensor dann mit „Start Sensor“ und „nicht heute“ starten. 
 
 Wenn vorhanden zwei blutige Messwerte zur initialen Kalibrierung eingeben. Damit soll xDrip+ einfach nur mitgeteilt werden, dass ein neuer Sensor Blutzuckerwerte liefert. Wenn verfügbar, gib zwei blutige Messwerte für die Anfangskalibrierung ein. Nun sollten die Blutzuckerte alle 5 Minuten in xDrip+ angezeigt werden. Ausgefallene Werte, weil man z.B. zu weit vom Smartphone weg war, werden nicht nachträglich eingetragen.
 
 Schritt 4: AndroidAPS konfigurieren
-==============
+==================================================
 * Wähle in AndroidAPS Konfiguration (Hamburger-Menü links oben auf dem Startbildschirm), wähle BZ-Quelle und dann xDrip. 
 * Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `Identify receiver` wie auf der Seite `xDrip+ settings page <../Configuration/xdrip.html#identifiziere-empfanger>`_ beschrieben.
 
 Wenn Du den Libre 2 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' nicht zur Verfügung. Die BZ-Werte des Libre 2 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug. Weitere Details findest Du unter `Glättung der Blut-Glukose-Daten <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ .
 
 Erfahrungen und Troubleshooting
-===================
+==================================================
 
 Die Verbindungsqualität ist außerordentlich gut. Bis auf Huawei Handys scheinen alle aktuellen Smartphones gut zu funktionieren. Das Wiederverbinden nach Verbindungsverlust ist phänomenal. Die Verbindung kann durchaus einmal abreißen, wenn sich der Sensor auf der einen Körperseite, das Handy auf der anderen in der Hosentasche befindet oder wenn man im Freien unterwegs ist. Bei Gartenarbeit habe ich mir angewöhnt, das Handy auf der Sensorseite am Körper zu tragen. In Räumen, wo sich Bluetooth über Reflektionen ausbreitet, sollten keine Probleme auftreten. Bei Verbindungsproblemen bitte ein anderes Telefon testen.
 

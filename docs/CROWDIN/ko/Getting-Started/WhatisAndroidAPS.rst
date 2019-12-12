@@ -1,5 +1,5 @@
 What is a closed loop system with AndroidAPS?
-****************************
+**************************************************
 
 AndroidAPS는 인공췌장시스템(APS) 안드로이드용 스마트폰 앱입니다. 인공췌장시스템(APS)는 무엇입니까? 혈당을 건강한 범위안에서 유지시켜주는 췌장의 역할을 소프트웨어적으로 하게 만든 프로그램입니다. 
 
@@ -25,7 +25,7 @@ APS가 실제 췌장과 동일한 역할을 하진 못하지만, 1형당뇨인�
 이 도전을 하실 준비가 되었다면 계속 읽어주세요. 
 
 Primary goals behind AndroidAPS
-===========================================
+==================================================
 
 * 안전 기능이 내장된 앱 Oref0와 oref1라는 이름으로 알려진 알고리즘의 안전 기능에 대해서 알고 싶다면 여기를 눌러주세요 (https://openaps.org/reference-design/)
 1형당뇨 관리를 위해 인공췌장과 Nightscout를 하나로 통합한 앱
@@ -38,7 +38,7 @@ Primary goals behind AndroidAPS
 * An app in which the user is in control of safety constraints 
 
 How to start
-===============
+==================================================
 Of course, all of this content here is very important, but can be in the beginning quite confusing.
 A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
  

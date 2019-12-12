@@ -1,10 +1,10 @@
 Freestyle Libre 2
-**********************
+**************************************************
 
 Система Freestyle Libre 2 может автоматически сообщать об опасных уровнях глюкозы в крови. Сенсор Libre2 каждую минуту отправляет текущие значения гликемии на принимающее устройство (ридер или смартфон). При необходимости приемник инициирует оповещение. С помощью модифицированного приложения LibreLink, вы можете непрерывно получать значения ГК на смартфон. Поскольку данные идут напрямую через Bluetooth на телефон, необходимость в покупке таких устройств как MiaoMiao или bluecon отпадает. 
 
 Шаг 1: Создайте свое модифицированное приложение Librelink-App
-==============
+==================================================
 
 По юридическим причинам установка так называемого патча должна быть произведена самостоятельно. Используйте поисковые системы для поиска соответствующих ссылок.
 
@@ -67,7 +67,7 @@ Freestyle Libre 2
 Примечание: модифицированное приложение не имеет соединения с Интернетом.
 
 Шаг 2: Установите и настройте приложение xDrip+
-==============
+==================================================
 
 Значения гликемии передаются на смартфон приложением xDrip+. 
 
@@ -86,21 +86,21 @@ Freestyle Libre 2
   :alt: xDrip+ журнал
   #
 Шаг 3: Запустить сенсор
-===============
+==================================================
 
 In xDrip+ start the sensor with "Start Sensor" and "not today". 
 
 In fact this will not start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
 
 Шаг 4: Настройка AndroidAPS
-==============
+==================================================
 * В AndroidAPS перейдите в Config Builder > BG Source и проверьте 'xDrip+' 
 * If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html#identifiziere-empfanger>`_.
 
 До настоящего времени, используя Libre 2 в качестве источника данных ГК, невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов» в алгоритме SMB. Значения BG Libre 2 недостаточно ровные, чтобы использовать их безопасно. Подробнее см. в `Выравнивание данных мониторинга <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`.
 
 Experiences and Troubleshooting
-===================
+==================================================
 
 The connectivity is extraordinary good. With the exception of Huawei mobile phones, all current smartphones seems to work well. The reconnect in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone.
 

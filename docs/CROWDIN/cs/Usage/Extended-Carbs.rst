@@ -1,5 +1,5 @@
 Rozložené sacharidy / "eCarbs"
-=====
+**************************************************
 S běžnou léčbou pomocí inzulínové pumpy je rozložený bolus dobrý způsob, jak řešit tučná nebo jinak pomalu stravovaná jídla, která zvyšují hladinu glukózy v krvi déle, než je působnost inzulínu. Nicméně v rámci smyčky nedávají rozložené bolusy moc smysl (a způsobují technické potíže), protože to jsou v podstatě fixní vysoké TBR, což je proti hlavnímu principu smyčky, která bazální dávky přizpůsobuje dynamicky. For details see `extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ below.
 
 Potřeba řešit taková jídla však stále zůstává. To je důvod, proč AndroidAPS od verze 2.0 podporuje takzvané rozložené sacharidy neboli eCarbs.
@@ -38,7 +38,7 @@ Pro jídla s nízkým obsahem sacharidů a s vysokým obsahem tuků/bílkovin m�
 Když jsou eSacharidy generovány, je také založena poznámka do ošetření, aby byly všechny uživatelské zásahy zdokumentované, aby bylo snazší opakovat a vylepšovat své postupy.
 
 Prodloužený bolus
-=====
+==================================================
 As mentioned above extended or multiwave boluses do not really work in a closed loop environment. Therefore there is no option to issue an extended bolus in AndroidAPS. Here's why:
 
 1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.

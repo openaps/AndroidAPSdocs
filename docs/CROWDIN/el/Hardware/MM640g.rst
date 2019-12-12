@@ -1,5 +1,5 @@
 For users of MM640g or MM630g
-*****
+**************************************************
 
 * Εάν δεν έχετε ήδη ρυθμίσει, κάντε λήψη του `600SeriesAndroidUploaer <http://pazaan.github.io/600SeriesAndroidUploader/> και ακολουθήστε τις οδηγίες στο nightcout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>.
 * Στον Uploader Series 600 μεταβείτε στις Ρυθμίσεις> Αποστολή στο xdrip + και επιλέξτε ON (tick).

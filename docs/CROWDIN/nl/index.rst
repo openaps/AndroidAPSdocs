@@ -1,5 +1,5 @@
 Welkom bij de Android APS documentatie
-==============================================
+==================================================
 
 AndroidAPS is een open source app voor mensen met insuline-afhankelijke diabetes. De app fungeert als een kunstmatig alvleesklier systeem (APS, Artificial Pancreas System) op Android smartphones. Belangrijkste componenten zijn verschillende OpenAPS software algoritmen die doen wat een levende alvleesklier doet: de bloedsuiker binnen gezonde grenzen houden. Het algoritme doet dit door het gebruik van geautomatiseerde insulinedosering (AID, Automated Insulin Dosing). Daarnaast is een door de app ondersteunde en FDA/CE goedgekeurde insulinepomp en een continue glucosesensor nodig. 
 
@@ -15,7 +15,7 @@ De belangrijkste onderdelen zijn:
 Hieronder volgt de inhoudsopgave.
 
 Aan de slag
-----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -27,7 +27,7 @@ Aan de slag
    
    
 Wat heb ik nodig 
------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -36,7 +36,7 @@ Wat heb ik nodig
 
    
 AndroidAPS installeren
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -50,7 +50,7 @@ AndroidAPS installeren
    
    
 Onderdelen instellen
----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -64,7 +64,7 @@ Onderdelen instellen
    
 
 AndroidAPS instellingen 
----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -74,7 +74,7 @@ AndroidAPS instellingen
    
    
 AndroidAPS gebruik
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -91,7 +91,7 @@ AndroidAPS gebruik
   
  
 Algemene Tips 
----------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -103,7 +103,7 @@ Algemene Tips
    
 
 AndroidAPS voor kinderen
-------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -113,7 +113,7 @@ AndroidAPS voor kinderen
    
 
 Geavanceerd 
-----------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -123,7 +123,7 @@ Geavanceerd
    
 
 Problemen oplossen
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -132,7 +132,7 @@ Problemen oplossen
    
 
 Veelgestelde vragen 
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -141,7 +141,7 @@ Veelgestelde vragen
 
    
 Veelgebruikte woordenlijst
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -150,7 +150,7 @@ Veelgebruikte woordenlijst
   
 
 Waar je hulp kunt vinden 
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -160,7 +160,7 @@ Waar je hulp kunt vinden
    Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
 
 Zorgprofessionals
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -169,7 +169,7 @@ Zorgprofessionals
 
 
 Hoe je zelf kunt helpen
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:

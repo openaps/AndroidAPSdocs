@@ -1,5 +1,5 @@
 Co je systém uzavřené smyčky?
-**************************************
+**************************************************
 
 .. image:: ../images/autopilot.png
   :alt: AAPS je jako autopilot
@@ -23,11 +23,11 @@ Stejně jako autopilot závisí na hodnotách ze senzorů i specifikacích pilot
 
 
 Open source systémy uzavřené smyčky APS
-===============================
+==================================================
 V současnosti jsou k dispozici tři hlavní oper source systémy uzavřené smyčky:
 
 AndroidAPS (AAPS)
------------------
+--------------------------------------------------
 Systém AndroidAPS je podrobně popsán v `této dokumentaci <./WhatisAndroidAPS.html>`_. Pro výpočty a ovládání inzulinové pumpy využívá smartphone se systémem Android. Vývojáři úzce spolupracují s OpenAPS (tzn. používají stejné algoritmy).
 
 Kompatibilní pumpy jsou:
@@ -38,7 +38,7 @@ Kompatibilní pumpy jsou:
 * některé staré pumpy Medtronic (verze 2.4)
 
 OpenAPS
--------
+--------------------------------------------------
 `OpenAPS <https://openaps.readthedocs.io>`_ byl první open source systém uzavřené smyčky. Používá malý počítač, jako je Raspberry Pi nebo Intel Edison.
 
 Kompatibilní pumpy jsou:
@@ -46,7 +46,7 @@ Kompatibilní pumpy jsou:
 * některé staré pumpy Medtronic
 
 Loop pro iOS
-------------
+--------------------------------------------------
 `Loop for iOS <https://loopkit.github.io/loopdocs/>`_ je open source systém uzavřené smyčky pro zařízení Apple iPhone.
 
 Kompatibilní pumpy jsou:

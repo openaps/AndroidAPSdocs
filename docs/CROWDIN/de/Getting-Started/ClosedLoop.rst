@@ -1,5 +1,5 @@
 Was ist ein Closed Loop-System?
-**************************************
+**************************************************
 
 .. image:: ../images/autopilot.png
   :alt: AAPS ist wie ein Autopilot
@@ -23,11 +23,11 @@ So wie der Autopilot neben den Sensorwerten auf die Vorgaben der Piloten angewie
 
 
 Open Source Closed Loop System für eine künstliche Bauchspeicheldrüse
-===============================
+==================================================
 Aktuell sind drei große Open Source Closed Loop Systeme verfügbar:
 
 AndroidAPS (AAPS)
------------------
+--------------------------------------------------
 AndroidAPS wird in `dieser Dokumentation <./WhatisAndroidAPS.html>`_ ausführlich beschrieben. AAPS verwendet ein Android Smartphone für die Berechnungen und die Steuerung Deiner Insulinpumpe. AAPS steht in enger Verbindung mit OpenAPS, sie nutzen beide z.B.  die gleichen Algorithmen.
 
 Kompatible `Insulinpumpen <../Hardware/pumps.html>`_ sind:
@@ -38,7 +38,7 @@ Kompatible `Insulinpumpen <../Hardware/pumps.html>`_ sind:
 * einige alte Medtronic Pumpen (ab AAPS-Version 2.4)
 
 OpenAPS
--------
+--------------------------------------------------
 `OpenAPS <https://openaps.readthedocs.io>`_ war das erste Open Source Closed Loop System. OpenAPS verwendet einen kleinen Computer wie Raspberry Pi oder Intel Edison.
 
 Kompatible Insulinpumpen sind:
@@ -46,7 +46,7 @@ Kompatible Insulinpumpen sind:
 * einige alte Medtronic Pumpen
 
 Loop für iOS
-------------
+--------------------------------------------------
 `Loop for iOS <https://loopkit.github.io/loopdocs/>`_ ist ein Open Source Closed Loop System für iPhones von Apple.
 
 Kompatible Insulinpumpen sind:

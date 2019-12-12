@@ -20,19 +20,19 @@
 
 * * *
 
-### Insulet Omnipod (με παλιές Eros pods) ([ Αρχική σελίδα ](https://www.myomnipod.com/en-gb/about/how-to-use))
+### Insulet Omnipod (with "old" Eros Pods) ([Homepage](https://www.myomnipod.com/en-gb/about/how-to-use))
 
 ** Κατάσταση κυκλώματος: ** Αυτή τη στιγμή δεν υποστηρίζεται από το AAPS. Η αποκωδικοποίηση του πρωτοκόλλου Omnipod έχει ολοκληρωθεί - [ OpenOmni ](http://www.openomni.org/) και [ OmniAPS Slack ](https://omniaps.slack.com/)
 
 **Άλλες εφαρμογές:**
 
-- Omnipy για το AndroidAPS (σταθερό στη δοκιμή, απαιτεί το Raspberry Pi καθώς και το RileyLink και το ειδικά τροποποιημένο AndroidAPS) [ Omnipy ](https://github.com/winemug/omnipy)
-- Το OmniCore για το AndroidAPS (δεν κυκλοφορεί ακόμα, ο κώδικας C # που "τρέχει" στο Android, απαιτεί μόνο RileyLink και ειδικά τροποποιημένο AndroidAPS - επόμενη έκδοση του προγράμματος Omnipy). [OmniCore](https://github.com/winemug/OmniCore)
-- Κύκλωμα(σταθερό, απελευθερωμένο, απαιτεί RileyLink). [Κύκλωμα](https://loopkit.github.io/loopdocs/)
+- Omnipy for AndroidAPS (stable in testing, requires Raspberry Pi as well as RileyLink, and specially modified AndroidAPS) 
+- OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
+- [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
 
 **Υλοποιήσεις της εφαρμογής Java: ** Καμία μέχρι τώρα.
 
-** Κατάσταση εφαρμογής AAPS: ** Έχει ξεκινήσει η εργασία για [ RileyLinkAAPS ](https://github.com/bartsopers/RileyLinkAAPS/) για το Omnipod (υποκατάστημα dev_omnipod) που δεν θα απαιτήσει Raspberry Pi, αλλά αυτό δεν έχει ολοκληρωθεί. Μπορείτε να παρακολουθήσετε την πρόοδο στο https://omniaps.slack.com/ κανάλι android-driver.
+**AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
 
 ** Απαιτήσεις υλικού για το AAPS: ** RileyLink με firmware Omnipod (2.x) και 433 MHz κεραία.
 

@@ -1,5 +1,5 @@
 Для пользователей MM640g или MM630g
-*****
+**************************************************
 
 * Если это еще не сделано, скачайте `600SeriesAndroidUploaer <http://pazaan.github.io/600SeriesAndroidUploader/>`_ и следуйте инструкциям на Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
 * В Загрузчике Серии 600, перейдите в настройки > отправить на xdrip + и выберите ВКЛ (ON).

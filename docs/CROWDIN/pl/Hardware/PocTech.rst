@@ -1,4 +1,4 @@
 Dla użytkowników PocTech CT-100
-******************************
-* Install PocTech App
-* Select PocTech App in ConfigBuilder (setting in AndroidAPS)
+**************************************************
+* Zainstaluj aplikację PocTech
+* Wybierz PocTech App w ConfigBuilder (ustawienie w AndroidAPS)
