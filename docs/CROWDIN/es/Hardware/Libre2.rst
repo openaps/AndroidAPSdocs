@@ -102,15 +102,15 @@ Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always�
 Consejos y solución de problemas
 ==================================================
 
-La conectividad es extraordinariamente buena. Con la excepción de los teléfonos móviles Huawei, todos los teléfonos inteligentes actuales parecen funcionar bien. La reconexión en caso de pérdida de conexión es fenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. Cuando estoy en jardinería, coloco mi teléfono en el lado del sensor de mi cuerpo. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone.
+La conectividad es extraordinariamente buena. Con la excepción de los teléfonos móviles Huawei, todos los teléfonos inteligentes actuales parecen funcionar bien. La reconexión en caso de pérdida de conexión es fenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. Cuando estoy en jardinería, coloco mi teléfono en el lado del sensor de mi cuerpo. En las habitaciones, donde el Bluettooth se propaga por las refecciones, no se deben producir problemas. Si tiene problemas de conectividad, por favor pruebe otro teléfono.
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. Esto es obligatorio. Las curvas de aspecto liso y el lazo que los resultados son excelentes. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor infos are available in the System menu.
+Técnicamente, el valor de azúcar en sangre actual se transmite a xDrip+ cada minuto. Un filtro promedio ponderado calcula un valor suavizado en los últimos 25 minutos. Esto es obligatorio. Las curvas de aspecto liso y el lazo que los resultados son excelentes. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor infos are available in the System menu.
 
-.. image:: ../images/fsl2pic8.jpg
-  :alt: xDrip+ advanced settings Libre 2
+.. imagen:: ../images/fsl2pic8.jpg
+  :alt: xDrip+ configuración avanzada Libre 2
   
-.. image:: ../images/fsl2pic9.jpg
-  :alt: xDrip+ homescreen with raw data
+.. imagen:: ../images/fsl2pic9.jpg
+  :alt: xDrip+ pantalla de inicio con datos en bruto
   
 The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Avanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
 
