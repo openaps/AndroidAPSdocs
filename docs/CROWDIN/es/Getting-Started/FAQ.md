@@ -150,7 +150,7 @@ Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado b
 * ISF = 30 => 90/30 = 3 unidades de insulina
 * ISF = 45 => 90/45 = 2 unidades de insulina
 
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+Un factos de sensibilidad a la insulina (ISF) demasiado bajo puede resultar en sobre-correcciones ya que AAPS piensa que necesita más insulina, para corregir BGs altas, de la que realmente necesita. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. Esto significará que AAPS corregirá con dosis más pequeñas, evitando que las sobre-correcciones de BG altas provoquen BG demasiado bajas This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
 Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
 
@@ -162,7 +162,7 @@ Gramos de carbohidratos por unidad de insulina.
 
 Algunas personas también utilizan I:C en lugar de IC o hablan de la proporción de carbohidratos (CR).
 
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión).
+Suponiendo una basal correcta, puedes comprobar el parámetro: con una IOB de cero, estando en rango, si comes una cantidad conocida de carbohidratos y tomas la cantidad de insulina calculada con el IC actual (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión).
 
 > **NOTA:**
 > 
@@ -210,7 +210,7 @@ En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. 
 
 ### ¿Qué causa picos postprandiales elevados en lazo cerrado?
 
-En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. Si es correcta, y tu BG se acerca a tu objetivo una vez se han absorbido completamente los hidratos, prueba de poner un objetivo temporal "comida en breve" ('eating soon') en AndroidAPS un rato antes de comer, o piensa en un pre-bolus adecuando con la ayuda de tu endocrino. Si tu BG es demasiado alta despues de comer y aún demasiado alta despues de que los hidratos se hayan absorbido completamente, piensa en reducir tu IC con la ayuda de tu endocrino. Si tu BG es demasiado alta mientras haya COB y demasiado baja una vez absorbidos todos los hidratos, piensa en incrementar tu IC y en un pre-bolus apropiado con la ayuda de tu endocrino.
 
 # Otros ajustes
 
@@ -218,13 +218,13 @@ En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. 
 
 ### NSClient de AndroidAPS indica "no permitido" y no carga datos. ¿Qué puedo hacer?
 
-En NSClient compruebe 'Ajustes de conexión'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+En NSClient compruebe 'Ajustes de conexión'. Quizás no estés conectado a una red de datos permitida, o bien tienes activada la opción "Sólo mientras este cargando" y el cable de carga no está enchufado.
 
 ## Ajustes del sensor (MCG)
 
 ### ¿Por qué AndroidAPS indica 'Origen de BG no soporta el filtrado avanzado'?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. Consulta [Suavizado de glucosa en la sangre de datos](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) para más detalles.
+Si usas un CGM/FGM que no sea Dexcom G5 o G6 en modo nativo xDrip, recibirás esta alerta en la pestaña OpenAPS de AndroidAPS. Consulta [Suavizado de glucosa en la sangre de datos](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) para más detalles.
 
 ## Bomba
 
@@ -234,25 +234,25 @@ Hay un sinfín de posibilidades para colocar la bomba. No importa si estás con 
 
 ### Baterías
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Algunos trucos para alargar la vida de la bateria:
+El lazo puede reducir la batería de la bomba más rápido que el uso normal porque el sistema interactúa a través de Bluetooth mucho más de lo que hace un usuario manual. Es mejor cambiar la batería en un 25%, ya que a partir de ese punto la comunicación puede fallar. Puedes establecer alarmas de aviso para la batería de la bomba utilizando la variable PUMP_WARN_BATT_P en la web de Nightscout. Algunos trucos para alargar la vida de la bateria:
 
 * dismunir el tiempo que pasa la pantalla LCD encendida(desde el menú de configuración de la bomba)
 * reducir la duración de la iluminación de fondo (desde el menú de configuración de la bomba)
 * seleccionar los ajustes de notificación para que suene en lugar de que vibre (desde el menú de configuración de la bomba) 
-* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. Esto consume batería. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+* sólo utilizar los botones de la bomba para recargar, usa AndroidAPS para visualizar el historial, el nivel de la bateria o la cantidad de insulina restante.
+* Puede que la app AndroidAPS se cierre a menudo para ahorrar bateria o liberar memoria RAM en algunos móvies. Cuando AndroidAPS se reinicializa en cada arranque, vueleve a establecer la conexión Bluetooth con la bomba y descarga la basal actual y el historial de bolus. Esto consume batería. Para ver si esto esta sucediendo, ve a Preferencias > NSClient y habilita "Registro de inicio de la app en NS'. Nightscout va a recibir un aviso en cada reinicio de AndroidAPS, lo que facilitará identificar el problema. Para evitar que esto suceda, añade AndroidAPS en la lista de excepciones en "ajustes de batería" de tu móvil, así el modo "Ahorro de batería" no cerrará la app.
     
     Por ejemplo, para añadir la lista un teléfono de Samsung que ejecuta Android Pie:
     
     * Vaya a Configuración -> Cuidado del Dispositivo -> Batería 
     * Desplácese hasta que encuentre AndroidAPS y selecciónelo 
     * Deselecciona "Poner aplicación a dormir"
-    * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
+    * TAMBIÉN ir a Configuración -> Aplicaciones -> (Tres puntos símbolo en la parte superior derecha de la pantalla), seleccione "acceso especial" -> Optimizar el uso de la batería
     * Desplácese hacia AndroidAPS y asegúrese de que está desseleccionado.
 
 * limpia los terminales de la batería con alcohol para asegurar que no queden restos de cera/grasa.
 
-* for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Retira y vuelve a insertar la batería 2-3 veces hasta aparezca un 100% en la pantalla, o, antes de colocarla, toca con una llave los dos terminales de la batería, pero solo un instante, para provocar un cortocircuito.
+* para las bombas [Dana R/RS](../Configuration/DanaRS-Insulin-Pump.md) el procedimiento de inicio extrae una alta corriente a través de la batería para romper deliberadamente la película de pasivación (previene la pérdida de energía durante el almacenamiento), pero no siempre funciona para romperlo en un 100%. Retira y vuelve a insertar la batería 2-3 veces hasta aparezca un 100% en la pantalla, o, antes de colocarla, toca con una llave los dos terminales de la batería, pero solo un instante, para provocar un cortocircuito.
 * consulta más sugerencias para [otros tipos de batería](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
 ### Cambiando cánulas y cartuchos
@@ -263,7 +263,7 @@ El cambio de cartucho no puede realizarse desde AndroidAPS, debe llevarse a cabo
 * Ahora desconecta la bomba y cambia el cartucho según las instrucciones de la bomba.
 * Una vez que hayas vuelto a conectar a la bomba, continúa el lazo manteniendo pulsado "Suspendido (X m)".
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. Esto significa que no es necesario interrumpir la basal temporal que este funcionando. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. Si la cantidad no es suficiente, repite el llenado. Puedes establecer las cantidades predeterminadas de los botones en "Preferencias > Otros > Rellenar/Cebado cantidades de insulina standard". See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+El cambio de cánula no utiliza la función "cebado del equipo", pero se debe rellenar el equipo de infusión y/o la cánula con un bolo que no debe aparecer en el historial de bolos. Esto significa que no es necesario interrumpir la basal temporal que este funcionando. En la pestaña "Acciones (Act)", utilice el botón PRIME/FILL para establecer la cantidad de insulina que necesitas para rellenar el conjunto de infusión e iniciar el proceso de cebado. Si la cantidad no es suficiente, repite el llenado. Puedes establecer las cantidades predeterminadas de los botones en "Preferencias > Otros > Rellenar/Cebado cantidades de insulina standard". Consulta el folleto de instrucciones en tu caja de cánulas para saber cuántas unidades se deben utilizar para llenar las cánulas según la longitud de la aguja y la longitud del tubo.
 
 ## Fondo de pantalla
 
@@ -281,13 +281,13 @@ Consulta el [procedimiento anterior ](../Getting-Started/FAQ#disconnect-pump).
 
 ### Trabajo
 
-Dependiendo del tipo de su trabajo, quizás uses pautas diferentes en los días de trabajo. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Dependiendo del tipo de su trabajo, quizás uses pautas diferentes en los días de trabajo. Como "looper" deberias considerar: - un [cambio de perfil](../Usage/Profiles.md) para la duración de tu jornada de trabajo (p.e. más de un 100% durante 8 horas si estas sentado o menos de un 100% si estás activo) - objetivos temporales altos o bajos - [desplazamiento temporal de tu perfil](../Usage/Profiles#time-shift) cuando te levantes mucho más tarde o mucho más temprano de lo normal. Si estás usando [perfiles de Nightscout](../Configuration/Config-Builder#ns-profile), tienes la opción de crear un segundo perfil (p.e. "trabajo" y "casa") y realizar un cambio de perfil diario según lo que vayas a necesitar.
 
 ## Actividades de ocio
 
 ### Deportes
 
-Tienes que rehacer tus viejos hábitos deportivos desde tiempos anteriores al lazo de vuelta. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Tienes que rehacer tus viejos hábitos deportivos desde tiempos anteriores al lazo de vuelta. Si usted simplemente consume uno o más carbohidratos deportivos como antes, el sistema de circuito cerrado los reconocerá y corregirá en consecuencia.
 
 Así que usted tendría más hidratos de carbono a bordo, pero al mismo tiempo el bucle contrarrestaría y liberaría insulina.
 
@@ -299,9 +299,9 @@ Cuando utilices lazo, debe intentar estos pasos:
 
 El pre y postprocesamiento de estos ajustes es importante. Realice los cambios en el tiempo antes del deporte y tenga en cuenta el efecto del relleno muscular.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+Si usted hace deportes regularmente al mismo tiempo (es decir, la clase deportiva en su gimnasio), puede considerar utilizar [automatización ](../Usage/Automation.rst) para el cambio de perfil y TT. La automatización basada en la ubicación también puede ser una idea, pero hace que el preproceso sea más difícil.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Los porcentajes del conmutador de perfil, el valor para el objetivo temporal de la actividad y el mejor tiempo para los cambios son individuales. Empiece en el lado seguro si está buscando el valor correcto para usted (empiece con un porcentaje más bajo y un TT superior).
 
 ### Sexo
 
@@ -323,7 +323,7 @@ Cuando bebas alcohol debes estar pendiente de tu sensor para evitar, manualmente
 
 #### ¿Cómo puede funcionar por la noche sin radiación del móvil ni radiación WIFI?
 
-Muchos usuarios ponen el teléfono en modo de avión por la noche. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
+Muchos usuarios ponen el teléfono en modo de avión por la noche. Si quieres que el lazo funcione mientras estás durmiendo, haz lo siguiente (ésto solo sirve si AAPS recibe los datos de una fuente local, como por ejemplo xDrip+ o la app parcheada de Dexcom, esto NO sirve si recibes los datos vía Nightscout):
 
 1. Activa el modo avión en tu móvil.
 2. Espera hasta que el modo avión esté activo.
@@ -345,7 +345,7 @@ Con Dana R y Dana R Coreana no tienes que hacer nada. Para otras bombas ve a la 
 
 ### Hospitalización
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Si quieres compartir alguna información sobre AndroidAPS y lazos cerrados DIY con tus médicos, puedes imprimir la [guía a AndroidAPS para médicos de clínicas](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### Cita médica con tu endocrinólogo
 
