@@ -2,7 +2,8 @@ Actualizaciones y cambios de Wiki
 **************************************************
 Diciembre 2019
 ==================================================
-* `Pantallas de reloj <../Configuration/Watchfaces.html>`_ (actualización importante, de manera más detalles)
+* `Android auto <../Usage/Android-auto.html>`_ - enter developer mode
+* `Watchfaces <../Configuration/Watchfaces.html>`_ - major update, way more details
 Noviembre 2019
 ==================================================
 * `Automatización - desactivación cuando se deshabilita el lazo <../Usage/Automation.html#important-note>`_
