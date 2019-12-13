@@ -1,11 +1,11 @@
 Berechnung der aktiven Kohlenhydrate (COB)
-*****************
+**************************************************
 
 Wie berechnet AAPS die aktiven Kohlenhydrate?
-==========================
+==================================================
 
 Oref0 / Oref1
-----------------------
+--------------------------------------------------
 
 Nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, werden also bei Berechnungen nicht mehr berücksichtigt
 
@@ -13,7 +13,7 @@ Nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, we
   :alt: Oref0 / Oref1
 
 AAPS, WeightedAverage
-----------------------
+--------------------------------------------------
 
 Die Kohlenhydratresorption wird auf Basis der angegebenen Zeit berechnet, so dass nach deren Ablauf  `COB = 0` gilt.
 
@@ -23,12 +23,12 @@ Die Kohlenhydratresorption wird auf Basis der angegebenen Zeit berechnet, so das
 Falls die minimale Kohlenhydrat-Resorption (min_5m_carbimpact) statt einem aus den Entwicklungen des BZ berechneten Wert genutzt wird, wird in der COB-Kurve ein orangener Punkt angezeigt.
 
 Erkennung Fehlerhafter COB-Werte
-========================
+==================================================
 
 Ab Version 2.4 warnt AAPS Dich, wenn Du mit aktiven Kohlenhydraten von einer vorherigen Mahlzeit bolen willst und der Algorithmus davon ausgeht, dass die aktuelle COB-Berechnung falsch sein könnte. In diesem Fall gibt es einen zusätzlichen Hinweis in der Bestätigungsanzeige nach der Nutzung des Bolus-Assistenten. 
 
 Wie erkennt AndroidAPS falsche COB-Werte? 
--------------------
+--------------------------------------------------
 
 Normalerweise erkennt AAPS die Kohlenhydrat-Resorption auf Basis der Entwicklung der BZ-Werte. Für den Fall, dass Du Kohlenhydrate eingegeben hast, aber AAPS deren erwartete Absorption nicht durch BZ-Veränderungen erkennen kann, wird die Methode ` min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#resorptions-einstellungen> ` _ verwendet, um die Absorption zu berechnen (so genanntes 'Fallback '). Da diese Methode nur die minimale Kohlenhydrat-Resorption ohne Berücksichtigung von BZ-Änderungen berechnet, kann dies zu falschen COB-Werten führen.
 
@@ -38,7 +38,7 @@ Normalerweise erkennt AAPS die Kohlenhydrat-Resorption auf Basis der Entwicklung
 In der Abbildung oben wurde 41% der 1Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet.  Das bedeutet, dass evtl. weniger Kohlenhydrate noch im Körper aktiv sind als der Algorithmus berechnet hat. 
 
 Wie kann man mit dieser Warnung umgehen? 
---------------------
+--------------------------------------------------
 
 - Erwäge, die Insulinabgabe abzubrechen - drücke Abbrechen statt OK.
 - Berechne die Mahlzeit erneut mit dem Bolus-Assistenten, entferne aber den Haken bei COB.
@@ -46,7 +46,7 @@ Wie kann man mit dieser Warnung umgehen?
 - Sei in jedem Fall vorsichtig, um nicht zu viel Insulin abzugeben!
 
 Warum erkennt der Algorithmus COB nicht richtig? 
--------------------
+--------------------------------------------------
 
 - Vielleicht hast Du die Kohlenhydrate der vorangegangenen Mahlzeit überschätzt.  
 - Sportliche Aktivität oder Bewegung nach der vorangegangenen Mahlzeit.

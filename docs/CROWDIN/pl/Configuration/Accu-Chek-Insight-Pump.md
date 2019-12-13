@@ -12,7 +12,7 @@
     
     Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* An Android phone (Basically every Android version would work, but AndroidAPS itself requires at least Android 5 (Lollipop).)
+* Telefon z Androidem (zasadniczo każda wersja Androida będzie dobra, ale sam AndroidAPS wymaga co najmniej Androida 5 (Lollipop)).
 
 * Zainstalowana na Twoim telefonie aplikacja AndroidAPS
 
@@ -84,9 +84,9 @@ In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+Dla okresów, w których pompa została zatrzymana, AAPS zapisze tymczasową dawkę podstawową z 0%.
 
-In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+W AndroidAPS zakładka Accu-Chek Insight pokazuje aktualny stan pompy i ma dwa przyciski:
 
 * „Odśwież”: Odświeża status pompy
 * „Włącz / wyłącz powiadamianie TBR”: standardowa pompa Insight wysyła alarm po zakończeniu TBR. Ten przycisk umożliwia włączenie lub wyłączenie tego alarmu bez konieczności instalowania oprogramowania konfiguracyjnego.

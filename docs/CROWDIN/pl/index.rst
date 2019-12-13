@@ -1,5 +1,5 @@
 Witamy w dokumentacji systemu AndroidAPS
-==============================================
+==================================================
 
 AndroidAPS jest to aplikacja open source przeznaczona dla osób chorujących na cukrzycę typu 1, która zainstalowana w smartfonach z systemem Android. działa jak system sztucznej trzustki (APS). Głównymi składnikami są różne algorytmy oprogramowania openAPS, których celem jest robienie tego, co robi żywa trzustka: utrzymywanie w odpowiednim zakresie poziomu cukru we krwi dzięki zastosowaniu automatycznego dozowania insuliny (AID). Ponadto co najmniej potrzebujesz obsługiwanej i zatwierdzonej przez FDA/CE pompy insulinowej i systemu ciągłego monitoringu glikemii. 
 
@@ -15,7 +15,7 @@ Głównymi składnikami są:
 Aby uzyskać więcej informacji, czytaj dalej.
 
 Pierwsze kroki
-----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -27,7 +27,7 @@ Pierwsze kroki
    
    
 Czego potrzebuję 
------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -36,7 +36,7 @@ Czego potrzebuję
 
    
 Jak zainstalować AndroidAPS
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -50,7 +50,7 @@ Jak zainstalować AndroidAPS
    
    
 Ustawienia składników systemu
------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -64,7 +64,7 @@ Ustawienia składników systemu
    
 
 Konfiguracja 
------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -74,7 +74,7 @@ Konfiguracja
    
    
 Użytkowanie AndroidAPS
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -91,7 +91,7 @@ Użytkowanie AndroidAPS
   
  
 Porady ogólne 
----------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -103,7 +103,7 @@ Porady ogólne
    
 
 AndroidAPS dla dzieci
-------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -113,7 +113,7 @@ AndroidAPS dla dzieci
    
 
 Zaawansowane 
-----------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -123,7 +123,7 @@ Zaawansowane
    
 
 Rozwiązywanie problemów
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -132,7 +132,7 @@ Rozwiązywanie problemów
    
 
 FAQ 
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -141,7 +141,7 @@ FAQ
 
    
 Słowniczek pojęć
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -150,7 +150,7 @@ Słowniczek pojęć
   
 
 Gdzie szukać pomocy 
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -160,7 +160,7 @@ Gdzie szukać pomocy
    Aktualizacje Wiki i zmiany <./Getting-Started/WikiUpdate.rst>
 
 Dla lekarzy specjalistów
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -169,7 +169,7 @@ Dla lekarzy specjalistów
 
 
 Jak pomóc
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:

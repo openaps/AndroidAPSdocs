@@ -1,7 +1,10 @@
 Wiki mises à jour et modifications
-**********************
+**************************************************
+December 2019
+==================================================
+* `Watchfaces <../Configuration/Watchfaces.html>`_ (major update, way more details)
 Novembre 2019
-===============
+==================================================
 * `Automatisation - à désactiver lors de la désactivation de la boucle <../Usage/Automation.html#important-note>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#replace-transmitter>`_
 * `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
@@ -18,7 +21,7 @@ Novembre 2019
 * Wiki - mise à jour `édition <../make-a-PR.md#code-syntax>`_ et `traduction <../translations.html#translate-wiki-pages>`_.
 
 Octobre 2019
-===============
+==================================================
 * `AAPS version 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ mises à jour (en particulier sur la `page de mise à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_)
 * `AccuChek Insight - options d'enregistrement <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * `Le calcul des GA sur une page distincte <../Usage/COB-calculation.html>`_
@@ -31,7 +34,7 @@ Octobre 2019
 * `xDrip - Mise à jour du remplacement de l'émetteur G6 <../Configuration/xdrip.html#replace-transmitter>`_
 
 Septembre 2019
-===============
+==================================================
 * `Automatisation <../Usage/Automation.html>`_
 * `Calculatrice Bolus <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - absorption lente des glucides
 * `Sécurité Nightscout <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
@@ -40,7 +43,7 @@ Septembre 2019
 * `Qu'est-ce qu'un système à boucle fermée ? <../Getting-Started/ClosedLoop.html>`_
 
 Août 2019
-===========
+==================================================
 * `Application Dexcom G6 patchée par region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
 * `Nouvel émetteur Dexcom G6 <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `Ce dont j'ai besoin? <../index.html#what-do-i-need>`_ - nouvelle structure & informations supplémentaires

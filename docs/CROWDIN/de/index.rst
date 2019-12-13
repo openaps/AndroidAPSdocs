@@ -1,5 +1,5 @@
 Willkommen zur AndroidAPS-Dokumentation
-==============================================
+==================================================
 
 AndroidAPS ist eine Open Source App für Google Android Smartphones, die bei insulinabhängigem Diabetes als künstliche Bauchspeicheldrüse (sog. artificial pancreas system - APS) dient. Hauptkomponenten sind verschiedene OpenAPS-Softwarealgorithmen, die genau das zu tun sollen, was eine echte Bauchspeicheldrüse auch tut: den Blutzuckerspiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten. Zusätzlich werden zumindest eine unterstützte Insulin-Pumpe und ein CGM benötigt, die eine CE-Kennzeichnung haben. 
 
@@ -15,7 +15,7 @@ Hauptkomponenten sind:
 Für weitere Details lies bitte hier weiter.
 
 Erste Schritte
-----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -27,7 +27,7 @@ Erste Schritte
    
    
 Was brauche ich 
------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -36,7 +36,7 @@ Was brauche ich
 
    
 AndroidAPS installieren
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -50,7 +50,7 @@ AndroidAPS installieren
    
    
 Komponenten-Setup
----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -64,7 +64,7 @@ Komponenten-Setup
    
 
 AndroidAPS einrichten 
----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
     
@@ -74,7 +74,7 @@ AndroidAPS einrichten
    
    
 AndroidAPS Nutzung
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -91,7 +91,7 @@ AndroidAPS Nutzung
   
  
 Allgemeine Hinweise 
----------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -103,7 +103,7 @@ Allgemeine Hinweise
    
 
 AndroidAPS für Kinder
-------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -113,7 +113,7 @@ AndroidAPS für Kinder
    
 
 Für Fortgeschrittene 
-----------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -123,7 +123,7 @@ Für Fortgeschrittene
    
 
 Problembehandlung
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -132,7 +132,7 @@ Problembehandlung
    
 
 FAQ 
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -141,7 +141,7 @@ FAQ
 
    
 Glossar
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -150,7 +150,7 @@ Glossar
   
 
 Hilfe durch die Community 
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -160,7 +160,7 @@ Hilfe durch die Community
    Wiki Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
 
 Für Mediziner & Fachpersonal
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        
@@ -169,7 +169,7 @@ Für Mediziner & Fachpersonal
 
 
 Mithelfen in der Community
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
        

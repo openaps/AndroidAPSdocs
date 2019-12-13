@@ -1,5 +1,5 @@
 Přehled komponent 
-==============================================
+**************************************************
 AndroidAPS není jen (uživatelem sestavená) aplikace, je to jeden z několika modulů vašeho systému uzavřené smyčky. Dříve než se rozhodnete pro konkrétní komponenty, bylo by dobré podívat se také na `nastavení komponent <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_,.
    
 .. obrázek:: ../images/modules.png
@@ -15,9 +15,9 @@ AndroidAPS není jen (uživatelem sestavená) aplikace, je to jeden z několika 
    V neposlední řadě nesmíte užívat SGLT-2 inhibitory (glifloziny), které snižují hadinu cukru v krvi.  Kombinace se systémem, která snižuje bazální hodnoty ke zvýšení glykémie je zvláště nebezpečná, protože v důsledku gliflozinu tento nárůst glykémie nemusí nastat a může dojít k nebezpečnému stavu nedostatku inzulínu.
 
 Nezbytné moduly
-=====================
+==================================================
 Správný individuální algoritmus dávkování pro léčbu vašeho diabetu
-------------------
+--------------------------------------------------
 I když to není něco, co by bylo možné vytvořit nebo koupit, je to "modul", který je pravděpodobně nejvíce podceňován, je však nejdůležitější. Když necháte algoritmus zasahovat do léčby vašeho diabetu, musí znát správná nastavení, aby nedělal vážné chyby.
 I když vám stále chybí další moduly, již nyní můžete ve spolupráci se svým diabetologem ověřit a upravit svůj 'profil'. 
 Většina uživatelů uzavřené smyčky používá cirkadiánní bazální dávkování, citlivost a sacharidový poměr, které se přizpůsobují hormonální aktivitě inzulinu v průběhu dne.
@@ -30,11 +30,11 @@ Součástí profilu je
 * DIA (doba působnosti inzulinu).
 
 Nepoužívat inhibitory SGLT-2
--------
+--------------------------------------------------
 Inhibitory SGLT-2, též nazývané glifloziny, inhibují reabsorpci glukózy v ledvinách. Vzhledem k tomu, že nevyčíslitelně snižují hladinu cukru v krvi, NESMÍTE je užívat při používání uzavřené smyčky jako je AndroidAPS! Bylo by obrovské riziko ketoacidózy nebo hypoglykémií! Kombinace této léčby se systémem, která snižuje bazální hodnoty ke zvýšení glykémie je zvláště nebezpečná, protože v důsledku gliflozinu tento nárůst glykémie nemusí nastat a může dojít k nebezpečnému stavu nedostatku inzulínu.
 
 Telefon
--------
+--------------------------------------------------
 Potřebujete telefon s Androidem s operačním systémem Google Android 6.0 a novějším. Uživatelé průběžné doplňují `seznam otestovaných telefonů a hodinek <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
 Pro zápis telefonu nebo hodinek, které ještě nejsou uvedeny v tabulce, vyplňte prosím `formulář <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
@@ -42,7 +42,7 @@ Pro zápis telefonu nebo hodinek, které ještě nejsou uvedeny v tabulce, vypl�
 V případě jakýchkoli problémů s tabulkou napište prosím na e-mail `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, pokud chcete darovat telefon/hodinky potřebné pro testování, napište na e-mail `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 Inzulinová pumpa
---------
+--------------------------------------------------
 AndroidAPS **v současné době** funguje s 
 
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (vyžaduje navíc: aplikaci Ruffy, LineageOS nebo Android 8.1 nainstalované v telefonu)
@@ -69,7 +69,7 @@ Výhody pump DanaR/RS oproti Combu:
 - Všechny pumpy, se kterými AndroidAPS komunikuje, jsou vodotěsné. Pouze pumpy Dana mají také „záruku na vodotěsnost“ díky uzavřenému prostoru pro baterii a prostoru pro plnicí zásobník. 
 
 Zdroj glykémií
-------------
+--------------------------------------------------
 Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. Další podrobnosti naleznete `zde <../Configuration/BG-Source.html>`_. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
 
 * `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
@@ -82,7 +82,7 @@ Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. Dalš
 
 
 Nightscout
-------------
+--------------------------------------------------
 Nightscout je open source webová aplikace, která může zaznamenávat a zobrazovat vaše údaje z CGM a údaje z AndroidAPS a vytvářet zprávy. Další informace najdete na webové stránce Nightscout project <http://www.nightscout.info/>`_. S využitím Heroku si můžete vytvořit vlastní webovou stránku Nightscout <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, nebo můžete použít poloautomatizované nastavení Nightscoutu na `zehn.be <https://ns.10be.de/en/index.html>`_ nebo aplikaci hostovat na vlastním severu (pro IT experty).
 
 Nightscout je nezávislý na ostatních modulech. Budete jej potřebovat ke splnění Cíle 1.
@@ -90,13 +90,13 @@ Nightscout je nezávislý na ostatních modulech. Budete jej potřebovat ke spln
 Další informace o konfiguraci Nightscoutu pro použití s AndroidAPS najdete `zde <../Installing-AndroidAPS/Nightscout.html>`_.
 
 Soubor AAPS-.apk
----------------
+--------------------------------------------------
 Základní součást systému. Před samotnou instalací aplikace si nejprve budete muset sestavit soubor apk (což je přípona souboru aplikace pro Android). Pokyny najdete `zde <../Installing-AndroidAPS/Building-APK.html>`_.  
 
 Volitelné moduly
-==================
+==================================================
 Chytré hodinky
----------------
+--------------------------------------------------
 Můžete si vybrat chytré hodinky s Android Wear 1.x a novějším. Většina uživatelů uzavřené smyčky používá Sony Smartwatch 3 (SWR50), protože je to jediný model, který dokáže číst data z Dexcomu G5, i když je telefon mimo dosah. Některé další hodinky lze také upravit tak, aby fungovaly jako samostatný přijímač (další informace viz `tato dokumentace <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_).
 
 Uživatelé průběžné doplňují `seznam otestovaných telefonů a hodinek <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Existují různé ciferníky, které můžete s AndroidAPS použít. Najdete je `zde <../Configuration/Watchfaces.html>`_.
@@ -106,11 +106,11 @@ Pro zápis telefonu nebo hodinek, které ještě nejsou uvedeny v tabulce, vypl�
 V případě jakýchkoli problémů s tabulkou napište prosím na e-mail `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, pokud chcete darovat telefon/hodinky potřebné pro testování, napište na e-mail `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
 xDrip+
--------
+--------------------------------------------------
 I když aplikaci xDrip+ nepotřebujete jako zdroj glykémie, stále ji můžete používat např. pro výstrahy a zobrazování glykémie. Můžete tak mít libovolný počet výstrah, specifikovat časy, kdy budou aktivní, zda mají přebít tichý režim telefonu apod. Některé informace o aplikaci xDrip+ najdete `zde <../Configuration/xdrip.html>`_. Uvědomte si prosím, že dokumentace k této aplikaci není vždy aktuální, protože vývoj aplikace je poměrně rychlý.
 
 Ukázková instalace
-============
+==================================================
 Pokud chcete příklad krok za krokem, můžete se podívat na ukázkovou instalaci. První příklad je poměrně starý, ale stále je aktuální.
 
 .. toctree::
@@ -121,7 +121,7 @@ Pokud chcete příklad krok za krokem, můžete se podívat na ukázkovou instal
  
   
 Co dělat při čekání na moduly
-============================================
+==================================================
 Někdy to zabere nějaký čas, než budete mít všechny moduly potřebné pro uzavření smyčky. Ale žádné obavy, je mnoho věcí, které můžete při čekání udělat. Je NEZBYTNÉ ověřit a případně upravit bazální dávky (BR), sacharidový poměr (IC), citlivost na inzulin (ISF) atd. Otevřená smyčka možná bude dobrým způsobem, jak systém otestovat a seznámit se s AndroidAPS. AndroidAPS v tomto režimu poskytuje rady ohledně léčby, které musíte provádět manuálně.
 
 Můžete si pročítat tuto dokumentaci, komunikovat s ostatními uživateli uzavřené smyčky online nebo offline, `přečíst si dokumentaci <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ nebo zkušenosti ostatních uživatelů (buďte však opatrní, ne vše musí být správně nebo pro vás daný postup nemusí být vhodný).

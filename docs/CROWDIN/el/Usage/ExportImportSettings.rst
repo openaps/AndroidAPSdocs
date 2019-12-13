@@ -1,8 +1,8 @@
 
 Ρυθμίσεις εξαγωγής εισαγωγής
-******
+**************************************************
 When should I export settings?
-=====
+==================================================
 Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
 
 Best practice is to export after change of settings or completing an objective. 
@@ -16,7 +16,7 @@ On a Windows 10 computer it looks like this:
 
 
 How to export settings
-=====
+==================================================
 Εξαγωγή ρυθμίσεων στο παλιό σας τηλέφωνο
 
   * Μενού Hamburger (στην πάνω αριστερή γωνία της οθόνης)

@@ -1,7 +1,7 @@
 Troubleshooting Android Studio
-*****
+**************************************************
 Lost keystore
-=====
+==================================================
 If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
 In case you cannot find your old keystore anymore, proceed as follows:
@@ -16,7 +16,7 @@ In case you cannot find your old keystore anymore, proceed as follows:
 8. Keep on looping.
 
 Προειδοποίηση μεταγλωττιστή Kotlin
-=====
+==================================================
 Αν η κατασκευή ολοκληρώθηκε με επιτυχία, αλλά έχετε προειδοποιήσεις μεταγλωττιστή Kotlin τότε απλώς αγνοήστε αυτές τις προειδοποιήσεις. 
 
 Η εφαρμογή κατασκευάστηκε με επιτυχία και μπορεί να μεταφερθεί στο τηλέφωνο.
@@ -25,7 +25,7 @@ In case you cannot find your old keystore anymore, proceed as follows:
   :alt: ignore Kotline compiler warning
 
 Key was created with errors
-=====
+==================================================
 When creating a new keystore for building the signed APK, on Windows the following error message might appear
 
 .. image:: ../images/AndroidStudio35SigningKeys.png
@@ -34,7 +34,7 @@ When creating a new keystore for building the signed APK, on Windows the followi
 This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
 
 Δεν ήταν δυνατή η λήψη... / εργασία εκτός σύνδεσης
-=====
+==================================================
 Εάν λάβετε ένα μήνυμα αποτυχίας όπως αυτό
 
 .. image:: ../images/GIT_Offline1.jpg
@@ -48,7 +48,7 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
   :alt: Settings offline work
 
 Error: buildOutput.apkData must not be null
-=====
+==================================================
 Sometimes you might get an error message when building the apk saying
 
   `Errors while building APK.`
@@ -62,7 +62,7 @@ This is a known bug in Android Studio 3.5 and will probably not be fixed before 
 3. Change apk destination folder (different location).
 
 Unable to start daemon process
-=====
+==================================================
 If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
 
 There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
@@ -72,33 +72,33 @@ There are a lot of manuals on the internet how to determine wether you have a 32
   
 
 No CGM data
-=====
+==================================================
 * In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
 * In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Μη δεσμευμένες αλλαγές
-=====
+==================================================
 Εάν λάβετε μήνυμα αποτυχίας όπως
 
 .. image:: ../images/GIT_TerminalCheckOut0.PNG
   :alt: Failure uncommitted changes
 
 Option 1 - Check git installation
------
+--------------------------------------------------
 * git might be not installed correctly (must be globally available)
 * when on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
 * `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
 * If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
 
 Option 2 - Reload source code
------
+--------------------------------------------------
 * In Android Studio select VCS -> GIT -> Reset HEAD
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
    
 Option 3 - Check for updates
------
+--------------------------------------------------
 * Copy ‘git checkout --’ to clipboard (without quote signs)
 * Switch to Terminal in Android Studio (lower left side of Android Studio window)
 
@@ -111,7 +111,7 @@ Option 3 - Check for updates
     :alt: GIT checkout success
 
 Η εφαρμογή δεν έχει εγκατασταθεί
-=====
+==================================================
 .. image:: ../images/Update_AppNotInstalled.png
   :alt: phone app note installed
 
@@ -126,11 +126,11 @@ Option 3 - Check for updates
 6. Ενεργοποιήστε ξανά το bluetooth και απενεργοποιήστε τη λειτουργία του αεροπλάνου
 
 Η εφαρμογή έχει εγκατασταθεί αλλά είναι παλαιά έκδοση
-=====
+==================================================
 If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
 
 Κανένα από τα παραπάνω δεν δούλεψε
-=====
+==================================================
 Εάν δεν βοηθηθήκατε από τις παραπάνω συμβουλές, μπορείτε να εξετάσετε το ενδεχόμενο να δημιουργήσετε την εφαρμογή από την αρχή:
 
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
@@ -141,7 +141,7 @@ If you build the app successfully, transferred it to your phone and installed it
 5. `Import settings <../Usage/ExportImportSettings.html>`_
 
 Στη χειρότερη περίπτωση
-=====
+==================================================
 Σε περίπτωση που ακόμη και η οικοδόμηση της εφαρμογής από το μηδέν δεν λύσει το πρόβλημά σας ίσως να θέλετε να προσπαθήσετε να απεγκαταστήσετε πλήρως το Android Studio. Μερικοί χρήστες ανέφεραν ότι αυτό λύνει το πρόβλημά τους.
 
 Βεβαιωθείτε ότι έχετε καταργήσει την εγκατάσταση όλων των αρχείων που σχετίζονται με το Android Studio. Manuals can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.

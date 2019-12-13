@@ -1,19 +1,19 @@
 Automation
-***************
+**************************************************
 
 What is Automation
-===================
+==================================================
 For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Automation condition + action
 
 How to use it
-================
+==================================================
 To set up an automation, you have to give it a title, select at least one condition and one action. 
 
 Important note
------
+--------------------------------------------------
 **Automation is still active when you disable loop!**
 
 So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
@@ -22,7 +22,7 @@ So make sure to deactivate Automation rules during these occations if neccessary
   :alt: Activate and deactivaten automation rule
 
 General
---------
+--------------------------------------------------
 There are some limits:
 
 * The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
@@ -36,7 +36,7 @@ There are some limits:
 
 
 Condition
-------------
+--------------------------------------------------
 You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
 
 * connect conditions: you can have several conditions and can connect them with 
@@ -57,7 +57,7 @@ You can choose between several conditions. Here are some things explained, but m
   * Use GPS location (Attention! May cause excessive battery drain!)
   
 Action
-------
+--------------------------------------------------
 You can choose one or more actions: 
 
 * start temp target 
@@ -78,12 +78,12 @@ After adding your action, **don't forget to change the default values** to what 
   :alt: Automation default vs. set values
 
 Good practice
-==========
+==================================================
 * When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
 * Whatch the rule results.
 
 Examples
-==========
+==================================================
 These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
 
 * Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
@@ -91,21 +91,21 @@ These are just set up examples, no advises. Don't reproduce it without being awa
 * Setting eating soon temp targets based on time, location...
 
 Low Glucose Temp Target
-------------------------------------
+--------------------------------------------------
 .. image:: ../images/Automation2.png
   :alt: Automation2
 
 This is made by a person that wants to get an automatically hypo temp target when having a hypo.
 
 Lunch Time Temp Target
-------------------------
+--------------------------------------------------
 .. image:: ../images/Automation3.png
   :alt: Automation3
   
 These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
 
 Incorrect use of Automation
-------------------------------------
+--------------------------------------------------
 As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
 
 * Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
@@ -115,6 +115,6 @@ As every system Automation can be used incorrectly. This might lead to difficult
 * Creating long term rules
 
 Alternatives
-============
+==================================================
 
 For advanced users there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.

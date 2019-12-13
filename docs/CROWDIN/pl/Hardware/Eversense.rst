@@ -1,5 +1,5 @@
 Dla użytkowników Eversense
-********************************
+**************************************************
 Najłatwiejszym sposobem na korzystanie z Eversense'a i AndroidAPS jest zainstalowanie zmodyfikowanej aplikacji Eversense, która dostępna jest pod adresem <https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk>'_ (należy pamiętać o usunięciu oryginalnej aplikacji producenta). 
 
 **Uwaga: odinstalowując starą aplikację, lokalne dane historyczne starsze niż 1 tydzień zostaną utracone!**

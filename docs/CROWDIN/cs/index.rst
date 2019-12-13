@@ -1,5 +1,5 @@
 Vítejte v dokumentaci k AndroidAPS
-==============================================
+==================================================
 
 AndroidAPS je open source aplikace určená pro osoby s diabetem, které jsou závislé na inuzlinu. Funguje jako umělá slinivka (APS) na telefonech se systémem Google Android. Hlavními součástmi jsou různé softwarové algoritmy openAPS, jejichž cílem je dělat totéž, co zdravá slinivka: udržovat glykémii ve zdravém rozmezí pomocí automatizovaného dávkování inzulinu (AID). Komě toho potřebujete schválenou inzulinovou pumpu a senzor pro kontinuální monitoraci glykémie. 
 
@@ -15,7 +15,7 @@ Hlavní součásti jsou:
 Další informace naleznete zde.
 
 Začínáme
-----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -27,7 +27,7 @@ Začínáme
    
    
 Co potřebuji 
------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -36,7 +36,7 @@ Co potřebuji
 
    
 Jak nainstalovat AndroidAPS
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -50,7 +50,7 @@ Jak nainstalovat AndroidAPS
    
    
 Nastavení komponent
----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -64,7 +64,7 @@ Nastavení komponent
    
 
 Konfigurace 
----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -74,7 +74,7 @@ Konfigurace
    
    
 Použití AndroidAPS
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -91,7 +91,7 @@ Použití AndroidAPS
   
  
 Obecné tipy 
----------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -103,7 +103,7 @@ Obecné tipy
    
 
 AndroidAPS pro děti
-------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -113,7 +113,7 @@ AndroidAPS pro děti
    
 
 Pokročilé 
-----------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -123,7 +123,7 @@ Pokročilé
    
 
 Poradce při potížích
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -132,7 +132,7 @@ Poradce při potížích
    
 
 Nejčastější dotazy 
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -141,7 +141,7 @@ Nejčastější dotazy
 
    
 Slovníček
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -150,7 +150,7 @@ Slovníček
   
 
 Kam pro pomoc 
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -160,7 +160,7 @@ Kam pro pomoc
    Aktualizace wiki a změny <./Getting-Started/WikiUpdate.rst>
 
 Pro lékaře
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -169,7 +169,7 @@ Pro lékaře
 
 
 Jak pomoci
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
