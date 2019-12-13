@@ -46,31 +46,31 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
 ## Instalace Android Studio
 
-The following screenshots have been taken from Android Studio Version 3.1.3. Your screen might look a bit different depending on the Android Studio version you use. But you should be able to find your way through. Help from the community is provided for example in the [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and [other places](../Where-To-Go-For-Help/Connect-with-other-users.md).
+Následující snímky obrazovky byly převzaty z aplikace Android Studio verze 3.1.3. Vaše obrazovka by mohla vypadat trochu jinak, v závislosti na verzi aplikace Android Studio, kterou používáte. Měli byste však být schopni najít cestu. Pomoc komunity je poskytována například ve [facebookové skupině AndroidAPS](https://www.facebook.com/groups/1900195340201874/) a [na dalších místech](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Nainstalujte [Android Studio](https://developer.android.com/studio/install.html) a proveďte úvodní nastavení.
 
-Select "Do not import settings" as you have not used it before.
+Zvolte "Do not import settings", protože jste tento software zatím nevyužívali.
 
 ![Snímek 1](../images/Installation_Screenshot_01.png)
 
-Click "Next".
+Klikněte na „Next“.
 
-![Screenshot 2](../images/Installation_Screenshot_02.png)
+![Snímek 2](../images/Installation_Screenshot_02.png)
 
-Select "Standard" installation and click "Next".
+Vyberte "Standard" instalaci a klikněte na „Next“.
 
-![Screenshot 3](../images/Installation_Screenshot_03.png)
+![Snímek 3](../images/Installation_Screenshot_03.png)
 
-Select the theme for the user interface you like. (In this manual we used "Intellij". Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Vyberte si motiv uživatelského rozhraní, který se vám líbí. (V tomto návodu používáme "Intellij". Poté klikněte na tlačítko „Next“. Jedná se pouze o barevný motiv. Můžete si vybrat jakýkoli jiný (např. „Darcula“ pro tmavý režim). Tato volba nemá žádný vliv na sestavení APK.
 
-![Screenshot 4](../images/Installation_Screenshot_04.png)
+![Snímek 4](../images/Installation_Screenshot_04.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Klikněte na „Next“ v dialogovém okně „Verify Settings“.
 
-![Screenshot 5](../images/Installation_Screenshot_05.png)
+![Snímek 5](../images/Installation_Screenshot_05.png)
 
-The Android emulator (to emulate the smartphone on your PC or Mac) is not used to build the APK. You can click "Finish" to finish the installation and read the documentation later on demand.
+Emulátor Androidu (pro simulaci telefonu na vašem PC nebo Macu) se pro sestavení APK nepoužívá. Můžete kliknout na „Finish“, abyste dokončili instalaci a odložili četbu dokumentace později na vyžádání.
 
 ![Screenshot 6](../images/Installation_Screenshot_06.png)
 
