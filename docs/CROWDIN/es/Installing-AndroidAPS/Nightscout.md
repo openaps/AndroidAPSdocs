@@ -1,29 +1,29 @@
 # Nightscout
 
-## Security considerations
+## Consideraciones de Seguridad
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Además de informar Nightscout también se puede utilizar para controlar AAPS. Por ejemplo, puede establecer objetivos temporales o añadir futuros carbohidratos. Esta información será recogida por la AAPS y actuará de forma correspondiente. Por lo tanto, vale la pena pensar en asegurar el sitio web de Nightscout.
 
 ### Ajustes de Nightscout
 
-You can deny public access to your Nightscout site by using [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+Puede denegar el acceso público a su sitio de Nightscout utilizando los roles de autenticación [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
 
 ### Ajustes en AndroidAPS
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
+Sólo hay una función de carga NS (sin sincronización) en los valores de AAPS. Al hacerlo, AAPS no recogerá los cambios realizados en Nightscout, tales como objetivos temporales o futuros carbohidratos. Si está utilizando el perfil [NS profile](../Configuration/Config-Builder#ns-profile), los perfiles se sincronizarán entre AAPS y Nightscout a pesar del valor de "upload only" (solo subir).
 
-* Tap 3-dot menu on top right corner on your AAPS homescreen.
-* Select "Preferences".
-* Scroll down and tap "Advanced settings".
-* Activate "NS upload only
+* Toca el menú de 3 puntos en la esquina superior derecha en la pantalla de inicio de AAPS.
+* Seleccione "preferencias".
+* Desplácese hacia abajo y toque "Configuración avanzada".
+* Activar "sólo carga de NS
 
-![Nightscout upload only](../images/NSsafety.png)
+![Nightscout solo cargar](../images/NSsafety.png)
 
-### Further security settings
+### Ajustes de seguridad adicionales
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.rst).
+Mantenga su teléfono actualizado, tal como se describe en la seguridad [safety first](../Getting-Started/Safety-first.rst).
 
-## Manual Nightscout setup
+## Configuración manual de Nightscout
 
 It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
