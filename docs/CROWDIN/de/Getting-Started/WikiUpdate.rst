@@ -2,7 +2,8 @@ Wiki Updates & Änderungen
 **************************************************
 Dezember 2019
 ==================================================
-* `Watchfaces <../Configuration/Watchfaces.html>`_ (viel mehr Details!)
+* `Android Auto <../Usage/Android-auto.html>`_ - Aufruf Entwicklermodus
+* `Watchfaces <../Configuration/Watchfaces.html>`_ - major update, way more details
 November 2019
 ==================================================
 * `Automation - bei deaktiviertem Loop ausschalten <../Usage/Automation.html#wichtiger-hinweis>`_
