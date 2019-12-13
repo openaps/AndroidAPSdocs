@@ -9,7 +9,7 @@ Zo stel je het in:
 * Installeer Android Auto
 * In de Android Auto applicatie, klik op het Hamburger menu (drie horizontale lijnen)
 * Klik op 'Over'.
-* Klik 10 x op de titel 'Over Android Auto', totdat er een popup bericht komt dat zegt 'Ontwikkelaars-instellingen geactiveerd'.
+* Tap the About Android Auto version and permission info 10 times, until a toast appears that says "Developer mode enabled".
 * Ga naar de ontwikkelaarsinstellingen door op de menu-puntjes te klikken aan de rechterkant.
 * Selecteer 'onbekende bronnen'.
 * Je kunt de ontwikkelaars-modus nu sluiten als je wilt. Klik hiervoor op de 3 menupuntjes rechtsboven.
