@@ -233,13 +233,13 @@ Pulse "Crear nuevo..." para empezar a crear el almacén de claves. Un almacén d
   * Alias es un nombre para la clave que necesita. Puede dejar el valor predeterminado o darle un nombre de fantasía que desee.
   * Los campos de contraseña por debajo de la clave son para la clave en sí. Como siempre doble verificación, para comprobar si hay errores tipográficos.
   * Puede dejar que la validez sea la predeterminada de 25 años.
-  * You only have to fill out first name and last name but feel free to complete the rest of information. Then click "OK".
+  * Sólo tiene que llenar el nombre y apellido, pero se siente libre de completar el resto de la información. A continuación, haga clic en "OK".
 
-![Screenshot 42](../images/Installation_Screenshot_42.png)
+![Captura de Pantalla 42](../images/Installation_Screenshot_42.png)
 
-Fill in the information of the last dialog in this dialog and click "Next".
+Rellene la información del último cuadro de diálogo en este diálogo y pulse "Siguiente".
 
-![Screenshot 43](../images/Installation_Screenshot_43.png)
+![Captura de Pantalla 43](../images/Installation_Screenshot_43.png)
 
 Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
 
@@ -266,7 +266,7 @@ A file manager window opens. It might look a bit different on your system as I a
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e.
+Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. Puede hacerlo de la forma que prefiera, por ejemplo.
 
 * Bluetooth
 * cloud upload (Google Drive or other cloud services)
@@ -287,9 +287,9 @@ The last step is to press on the APK file I got via Gmail and install the app. I
 
 Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
 
-## Identify receiver if using xDrip
+## Identificar receptor si se utiliza xDrip
 
-[See xDrip page](../Configuration/xdrip#identify-receiver)
+[Consulte la página xDrip](../Configuration/xdrip#identify-receiver)
 
 ## Solución de problemas
 
