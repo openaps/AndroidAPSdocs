@@ -9,7 +9,7 @@
 * Установите Android Studio
 * В приложении Android Auto нажмите на сендвич-меню (три горизонтальных линии)
 * Выберите О приложении.
-* Tap the About Android Auto version and permission info 10 times, until a toast appears that says "Developer mode enabled".
+* Tap the version and permission info 10 times, until a toast appears that says "Developer mode enabled".
 * Теперь вы можете получить доступ к режиму разработчика, выбрав точки меню в верхнем правом углу экрана и перейдя в настройки для разработчиков.
 * Выберите неизвестные источники (прокрутка к нижней части списка).
 * Теперь можно выйти из режима разработчика. Чтобы сделать это, нажмите на три точки меню вверху справа.
