@@ -116,23 +116,23 @@ Jei AndroidAPS naudojate kaip atvirą ciklą, įsitikinkite, kad konfigūratoriu
 
 * Parinktis „Įrašyti programos paleidimą Nightscout" įveda pranešimus Priežiūros skirtuke kiekvieną kartą kai programa paleidžiama. Programa neturėtų būti paleista daugiau kaip kartą per dieną; jei tai darysite dažniau, gali kilti problemų.
 
-* „Įspėjimų nustatymai“ leidžia pasirinkti, kuriuos įspėjimus programa praneš. Kad suaktyvintumėte perspėjimus, [heroku ar azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms) kintamųjų reikšmių laukuose turite nustatyti Labai aukštų, Aukštų, Žemų ir Labai žemų įspėjimų reikšmes. They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
-* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
-* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+* „Įspėjimų nustatymai“ leidžia pasirinkti, kuriuos įspėjimus programa praneš. Kad suaktyvintumėte perspėjimus, [heroku ar azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms) kintamųjų reikšmių laukuose turite nustatyti Labai aukštų, Aukštų, Žemų ir Labai žemų įspėjimų reikšmes. Jie veiks tik tada, kai turėsite ryšį su Nightscout ir yra skirti tėvams / globėjams; jei stebėjimas vykdomas jūsų telefone, naudokite vietinius perspėjimus (pavyzdžiui, xdrip+).
+* „Įgalinti vietines transliacijas“ leis jūsų duomenimis iš priežiūros portalo dalintis su kitomis programomis išmaniajame telefone (pvz., xdrip+).
+* Jei norite tinkamai naudotis Autotune, reikia suaktyvinti „Visada naudokite absoliučias bazines reikšmes“.
     
-    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
+    **Nejunkite šito, jei naudojate [Insight pompą](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** Tai lemtų klaidingus laikinos bazės nustatymus Insight pompoje.
 
-## SMS Communicator
+## SMS komunikatorius
 
-This setting allows remote control of the app by texting instructions to the patients phone which the app will follow such as suspending loop, or bolusing. Further information is described in [SMS Commands](../Children/SMS-Commands.rst) but it will only display in Preferences if you have selected this option in the Config Builder.
+Šis nustatymas leidžia nuotoliniu būdu valdyti programą siunčiant instrukcijas paciento išmaniajam telefonui, kuriame vykdoma programa, pvz., sustabdyti ciklą ar suleisti bolusą. Išsamesnė informacija aprašyta [SMS komandose](../Children/SMS-Commands.rst). SMS komandos nustatymuose rodomos tik tuo atveju, jei ši parinktis buvo suaktyvinta Konfigūratoriuje.
 
-## Other
+## Kiti
 
-* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
-* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
-* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
-* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
-* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* Čia galite nustatyti numatytąsias vertes įvairių tipų laikiniems tikslams (tokiems kaip Greitai valgysiu ar Aktyvumas). Kai pasirinksite laikiną tikslą, pavyzdžiui, „Greitai valgysiu“, langas automatiškai užpildys laiką ir tikslą, atsižvelgiant į čia nustatytus parametrus. Daugiau informacijos apie laikinus tikslus, žr. [OpenAPS funkcijos](../Usage/Open-APS-features.md). 
+* Galite nustatyti pradinio užpildymo reikšmes - jie bus perduoti pompai, o insulinas, naudojamas užpildymui, bus išskaičiuotas iš rezervuaro lygio, bet neįtraukiamas į AIO skaičiavimus. Norėdami sužinoti, kiek vienetų turėtumėte naudoti, priklausomai nuo adatos ir vamzdelio ilgio, skaitykite kateterio (kaniulės) instrukcijas.
+* Galite pakeisti pagrindinio ekrano išvaizdą ir stebėti parametrus jūsų pasirinktame diapazone. Atminkite, kad tai tik rodymo metodas, kuris neturi įtakos jūsų tikslams ar skaičiavimams.
+* "Sutrumpinti skirtukų pavadinimus" leidžia matyti daugiau skirtukų pavadinimų ant ekrano, pavyzdžiui, "Open APS" skirtukas tampa "OAPS', 'Tikslai" tampa "Tiksl." ir pan.
+* „Vietiniai perspėjimai“ leidžia nuspręsti, ar gauti perspėjimus, o jei taip, tai kiek laiko po to, kai nėra glikemijos duomenų (seni duomenys), arba kai pompa nepasiekiama. Jei dažnai gaunate pranešimus apie tai, kad pompa nepasiekiama, išplėstiniuose nustatymuose įgalinkite BT Watchdog.
 
 ## Duomenų pasirinkimas
 
