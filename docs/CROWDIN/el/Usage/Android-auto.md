@@ -9,7 +9,7 @@
 * Εγκατέστησε το Android Auto
 * Στην εφαρμογή Android Auto, πατήστε το μενού Hamburger (τρεις οριζόντιες γραμμές)
 * Πατήστε Πληροφορίες.
-* Tap the About Android Auto version and permission info 10 times, until a toast appears that says "Developer mode enabled".
+* Tap the version and permission info 10 times, until a toast appears that says "Developer mode enabled".
 * Τώρα μπορείτε να αποκτήσετε πρόσβαση στην κατάσταση προγραμματιστών επιλέγοντας τις τελείες του μενού υπερχείλισης στην επάνω δεξιά γωνία της φορητής οθόνης και μεταβείτε στις ρυθμίσεις των προγραμματιστών.
 * Επιλέξτε άγνωστες πηγές (μετακινηθείτε προς τα κάτω μέχρι το τέλος της λίστας).
 * Τώρα μπορείτε να κλείσετε τη λειτουργία ανάπτυξης, αν θέλετε. Πατήστε το μενού με τρία σημεία στην επάνω δεξιά γωνία για να το κάνετε.
