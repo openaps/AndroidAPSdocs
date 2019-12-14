@@ -106,7 +106,7 @@ Profilis
 * PROFILE 2 30
    * Response: To switch profile to Profile2 30% reply with code Any
 
-Other
+Kiti
 --------------------------------------------------
 * TREATMENTS REFRESH
    * Response: Refresh treatments from NS
