@@ -71,52 +71,52 @@ OpenAPS Pažangusis maisto asistentas (AMA) leidžia sistemai greičiau reaguoti
 
 ### Didžiausias valandinės bazės insulino kiekis, kurį gali suleisti OpenAPS [U]
 
-Papildomo bazinio insulino kiekis (vienetais), sukauptas jūsų kūne, neskaitant įprastos nustatytos bazės. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
+Papildomo bazinio insulino kiekis (vienetais), sukauptas jūsų kūne, neskaitant įprastos nustatytos bazės. Pasiekus šią reikšmę, AAPS nustoja tiekti papildomą bazinį insuliną, kol aktyviojo insulino (AIO) kiekis grįš į nustatytą diapazoną.
 
-* This value does not consider bolus IOB, only basal.
-* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
-* This value is measured in insulin units (u).
+* Į šią reikšmę neįeina aktyvusis boluso insulinas, tik bazinis.
+* Ši reikšmė apskaičiuojama ir stebima nepriklausomai nuo jūsų įprastos valandinės bazės dydžio. Atsižvelgiama tik į papildomą bazės kiekį.
+* Ši vertė yra matuojamas insulino vienetais (vv).
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
+Pradėjus naudoti ciklą,**rekomenduojama nustatyti maksimalų bazinio insulino AIO=0** tam, kad išmoktumėte elgtis su sistema. Šis nustatymas neleidžia AAPS suleisti papildomo bazinio insulino. Šiuo laikotarpiu AAPS algoritmas gali apriboti arba išjungti valandinę bazę, kad būtų išvengta hipoglikemijos.
 
-This is an important step in order to:
+Tai yra svarbus žingsnis, siekiant:
 
-* Have a period of time to safely get used to the AAPS system and monitor how it works.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+* Turėti laiko susipažinimui su AAPS sistemos naudojimu ir stebėti, kaip ji veikia.
+* Pasinaudokite proga pakoreguoti savo valandinės bazės profilį ir jautrumo insulinui parametrus (JIF).
+* Pamatyti, kaip AAPS riboja valandinę bazę, kad būtų išvengta hipoglikemijos.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 3 to get a value of 1.5u.
+Kai jums priimtina, galite leisti sistemai suleisti papildomo bazinio insulino, padidindami Maks Bazės AIO reikšmę. Rekomenduojama naudoti savo profilio **didžiausią valandinę bazę** ir **padauginti reikšmę iš 3**. Pvz., jei didžiausia valandinė bazė jūsų profilyje yra 0,5 vv/val, padauginkite ją iš 3, ir gaunate 1.5 vv/val reikšmę.
 
-* You can start conservatively with this value and increase it slowly over time. 
-* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Galite pradėti nuo šios vertės konservatyviai ir laikui bėgant palaipsniui ją padidinti. 
+* Tai yra tik gairės; kiekvieno žmogaus kūnas yra skirtingas. Gali būti, kad jums reikia daugiau ar mažiau, nei rekomenduojama, tačiau pradėkite konservatyviai ir palaipsniui koreguokite.
 
-*Note: As a safety feature, Max Basal IOB is hard-limited to 7u.*
+*Pastaba: saugumo sumetimais neįmanoma nustatyti didesnės nei 7vv Maks Bazės AIO reikšmės.*
 
-## Absorption Settings
+## Angliavandenių įsisavinimo parametrai
 
-If you have selected to use AMA Autosens then you will be able to enter your maximum meal absorption time and how frequently you want autosense to refresh. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Jei esate nustatę AMA Autosens, tada jums bus leista nustatyti maksimalų maisto įsisavinimo laiką ir tai, kaip dažnai norite atnaujinti Autosens. Jei dažnai valgote maistą, kuriame gausu riebalų ar baltymų, turėsite padidinti maisto absorbcijos laiką.
 
-## Pump settings
+## Pompos nustatymai
 
-The options here will vary depending on which pump driver you have selected in 'Config Builder'. Pair and set your pump up according to the pump related instructions:
+Čia parametrai skiriasi priklausomai nuo to, kurią pompos tvarkyklę pasirinkote konfigūratoriuje. Suporuokite ir nustatykite savo pompą pagal naudojamos pompos instrukcijas:
 
-* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
-* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [DanaR insulino pompa](../Configuration/DanaR-Insulin-Pump.md) 
+* [DanaRS insulino pompa](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu Chek Combo pompa](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Medtronic pompa](..//Configuration/MedtronicPump.md)
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Jei AndroidAPS naudojate kaip atvirą ciklą, įsitikinkite, kad konfigūratoriuje pasirinkote virtualią pompą.
 
 ## NS Client
 
-* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+* Čia įveskite savo Nightscout URL (https://jususvetaine.herokuapp.com arba https://jususvetaine.azurewebsites.net) ir API slaptažodį (12 simbolių slaptažodis heroku arba azure nustatymuose). Tai leidžia AndroidAPS imti ir siųsti duomenis iš/į Nightscout. Jei įstrigote 1-ame tiksle, patikrinkite, ar įvedėte teisingus duomenis (ar nėra rašybos klaidų).
+* **Įsitikinkite, kad URL yra be /api/v1/ pabaigoje.**
     
     ![NSClient URL](../images/NSClientURL.png)
 
-* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
+* Parinktis „Įrašyti programos paleidimą Nightscout" įveda pranešimus Priežiūros skirtuke kiekvieną kartą kai programa paleidžiama. Programa neturėtų būti paleista daugiau kaip kartą per dieną; jei tai darysite dažniau, gali kilti problemų.
 
-* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
+* „Įspėjimų nustatymai“ leidžia pasirinkti, kuriuos įspėjimus programa praneš. Kad suaktyvintumėte perspėjimus, [heroku ar azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms) kintamųjų reikšmių laukuose turite nustatyti Labai aukštų, Aukštų, Žemų ir Labai žemų įspėjimų reikšmes. They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
 * 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
 * 'Always use basal absolute values' must be activated if you want to use Autotune properly.
     
@@ -134,6 +134,6 @@ This setting allows remote control of the app by texting instructions to the pat
 * 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
 * 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
 
-## Data Choices
+## Duomenų pasirinkimas
 
-* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
+* „Fabric Upload“ išsiųs kūrėjams klaidų pranešimus ir naudojimo duomenis.
