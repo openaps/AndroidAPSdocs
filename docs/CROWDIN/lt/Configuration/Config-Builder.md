@@ -160,7 +160,7 @@ Norėdami rasti daugiau informacijos, žiūrėkite puslapį [ Tikslai ](../Usage
 
 Skirtuke Terapija (Terapija) rodomos terapijos, kurios buvo įkeltos į Nightscout. Jei norite taisyti ar ištrinti įrašą (pavyzdžiui, suvalgėte mažiau angliavandenių nei tikėtasi), pasirinkite Pašalinti ir terapijos portalo skirtuko lape įveskite naują vertę (jei reikia, pakeiskite laiką).
 
-## General
+## Bendrieji
 
 ### Apžvalga
 
