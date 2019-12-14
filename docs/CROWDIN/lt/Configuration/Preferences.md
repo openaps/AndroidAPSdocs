@@ -26,52 +26,52 @@ Tai leidžia nustatyti slaptažodį, kad būtų išvengta netyčinių ar neleist
 
 ![Nustatymai - Apžvalga - Papildomi Nustatymai](../images/PreferencesOverviewAdvanced_V2_5.png)
 
-* General setting to deliver only part of bolus wizard result. Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. The percentage is shown in bolus wizard.
+* Pagrindiniai nustatymai norint suleisti tik dalį boluso skaičiuoklės rezultato. Tik nustatytas procentas (turi būti tarp 10 ir 100) iš apskaičiuoto boluso yra suleidžiama, kai naudojama boluso skaičiuoklė. Procentai rodomi boluso skaičiuoklėje.
     
-    ![Bolus Wizard 80%](../images/BolusWizardPartDelivery.png)
+    ![Boluso skaičiuoklė 80%](../images/BolusWizardPartDelivery.png)
 
-* Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
+* Galimybė įjungti [superbolusus](../Getting-Started/Screenshots#section-a) boluso skaičiuoklėje.
 
-* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+* Būsenos indikatoriai vizualiai įspėja apie mažą insulino kiekį rezervuare ir senkančią bateriją, taip pat apie tai, kad laikas keisti kateterį. Išplėstinė versija rodo likusį laiką / baterijos procentą.
     
-    ![Status lights - detail](../images/StatusLights_V2_5.png)
+    ![Būsenos indikatoriai - išsamiai](../images/StatusLights_V2_5.png)
     
-    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    Būsenos indikatorių nustatymai turi būti atlikti Nightscout nustatymuose. Nustatyti kintamuosius:
     
-    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
-    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
-    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
-    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+    * Kateterio amžius: CAGE_WARN ir CAGE_URGENT (standartinis 48 ir 72 val.)
+    * Insulino amžius (rezervuaro): IAGE_WARN ir IAGE_URGENT (standartinis 72 ir 96 val.)
+    * Jutiklio amžius: SAGE_WARN ir SAGE_URGENT (standartinis 164 ir 166 val.)
+    * Baterijos amžius: BAGE_WARN ir BAGE_URGENT (standartinis 240 iki 360 val.)
 
-* Treshold for warning reservoir level and critical reservoir level.
+* Įspėjimo apie rezervuaro lygį ir kritinį rezervuaro lygį riba.
 
-* Treshold for warning battery level and critical battery level.
+* Įspėjimo apie baterijos lygį ir kritinį baterijos lygį riba.
 
-## Treatments safety
+## Terapijos saugumas
 
-### Max allowed bolus [U]
+### Maksimalus leistinas bolusas [U]
 
-This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
+Tai yra didžiausias leidžiamas boluso insulino kiekis, kurį gali suleisti AAPS. Šis nustatymas yra saugos apribojimas, siekiant užkirsti kelią per didelei boluso dozei dėl atsitiktinio įvedimo ar vartotojo klaidos. Rekomenduojama šią vertę nustatyti kaip pagrįstą ribą, maždaug atitinkančią maksimalią boluso dozę, kurią jūs galite susileisti maistui ar korekcijai. Šis apribojimas taip pat nustatomas boluso kalkuliatoriaus rezultatams.
 
-### Max allowed carbs [g]
+### Maks. leistini angliavandeniai [g]
 
-This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+Tai yra didžiausias angliavandenių kiekis, kuriam AAPS boluso skaičiuoklė gali apskaičiuoti insulino dozę. Šis nustatymas yra saugos apribojimas, siekiant užkirsti kelią per didelei boluso dozei dėl atsitiktinio įvedimo ar vartotojo klaidos. Rekomenduojama šią vertę nustatyti kaip pagrįstą ribą, maždaug atitinkančią maksimalią angliavandenių dozę, kurią jūs galite suvartoti.
 
-## Loop
+## Ciklas
 
-You can toggle between open and closed looping here. Open looping means TBR suggestions are made based on your data and appear as a notification, but you must manually choose to accept them and manually enter them into your pump. Closed looping means TBR suggestions are automatically sent to your pump without confirmation or input from you. The homescreen will display in the top left corner whether you are open or closed looping, and pressing and holding this homescreen button will also allow you to toggle between the two.
+Čia galite perjungti atvirą ir uždarą ciklą. Atviras ciklas reiškia, kad remiantis jūsų duomenimis pateikiami pasiūlymai nustatyti laikiną bazę. Jie ekrane pasirodo kaip pranešimas, o jūs turite juos priimti patys ir rankiniu būdu įvesti į pompą. Uždaras ciklas reiškia, kad pasiūlymai nustatyti laikiną bazę automatiškai siunčiami pompai be jūsų patvirtinimo. Pagrindinis ekranas viršutiniame kairiajame kampe rodo atviro arba uždaro ciklo būseną, o paspaudę ir laikydami šią ekrano dalį galite perjungti šias parinktis.
 
 ## OpenAPS AMA
 
-OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+OpenAPS Pažangusis maisto asistentas (AMA) leidžia sistemai greičiau reaguoti įvedus valgio bolusą, JEI teisingai įvedate angliavandenius. Įjunkite jį nustatymuose, kad čia matytumėte saugos nustatymus. Jei norite naudoti šią funkciją, turite būti pasiekę [9 tikslą](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama). Daugiau apie šį nustatymą galite perskaityti OpenAPS dokumentuose [ Automatinis jautrumo nustatymas Autosens](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### Maks vv/val skaičius, kuris gali būti nustatytas kaip laikina bazė
 
-This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
+Šis nustatymas egzistuoja kaip saugos riba, neleidžianti AAPS nustatyti pavojingai aukštos laikinos bazės. Reikšmė matuojama vienetais per valandą (vv/val). It is advised to set this to something sensible. Rekomenduojama naudoti savo profilio **didžiausią valandinę bazę** ir **padauginti reikšmę iš 4**. Pvz., jei didžiausia valandinė bazė jūsų profilyje yra 0,5 vv/val, padauginkite ją iš 4, ir gaunate 2 vv/val reikšmę.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### Didžiausias valandinės bazės insulino kiekis, kurį gali suleisti OpenAPS [U]
 
-Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
+Papildomo bazinio insulino kiekis (vienetais), sukauptas jūsų kūne, neskaitant įprastos nustatytos bazės. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
 
 * This value does not consider bolus IOB, only basal.
 * This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
