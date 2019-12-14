@@ -38,7 +38,7 @@ Commands must be send in English, response will be in your local language if the
 .. image:: ../images/SMSCommands.png
   :alt: SMS Commands Example
 
-Loop
+Ciklas
 --------------------------------------------------
 * LOOP STOP/DISABLE
    * Response: Loop has been disabled
