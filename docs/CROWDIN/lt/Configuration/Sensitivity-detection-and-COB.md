@@ -1,15 +1,15 @@
-# Sensitivity detection
+# Jautrumo nustatymas
 
-## Sensitvity algorithm
+## Jautrumo algoritmas
 
-Currently we have 4 sensitivity detection models:
+Šiuo metu yra 4 jautrumo nustatymo modeliai:
 
-* Sensitivity Oref0
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Jautrumo nustatymo algoritmas Oref0
+* Jautrumo nustatymo algoritmas AAPS
+* Jautrumas pagal svertinį vidurkį
+* Jautrumo nustatymo algoritmas Oref1
 
-### Sensitivity Oref0
+### Jautrumo nustatymo algoritmas Oref0
 
 Basically sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cut off after time specified in preferences. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html).
 
