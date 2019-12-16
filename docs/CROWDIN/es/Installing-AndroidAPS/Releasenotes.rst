@@ -2,28 +2,28 @@ Release notes
 **************************************************
 Please follow the instructions in the `update manual <../Installing-AndroidAPS/Update-to-new-version.html>`_. You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
 
-You will receive the following information as soon as a new update is available:
+Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
-.. image:: ../images/AAPS_LoopDisable90days.png
-  :alt: Update info
+.. imagen:: ../images/AAPS_LoopDisable90days.png
+  :alt: Información de actualización
 
-Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+Entonces tienes 60 días para actualizarte. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
 
 If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
 
-Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
+Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is neccessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Gracias por tu comprensión.
 
-Version 2.5.1
+Versión 2.5.1
 ==================================================
-Release date: 31-10-2019
+Fecha de lanzamiento: 31-10-2019
 
 Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
-Version 2.5.0
+Versión 2.5.0
 ==================================================
-Release date: 26-10-2019
+Fecha de lanzamiento: 26-10-2019
 
 Notas importantes
 --------------------------------------------------
@@ -31,19 +31,19 @@ Notas importantes
 * If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
 * If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
-Is this update for me? Currently is NOT supported
+¿Es esta actualización para mí? Actualmente NO es soportado
 --------------------------------------------------
-* Android 5 and lower
+* Android 5 e inferiores
 * Poctech
 * 600SeriesUploader
 * Glimp
-   Glimp stopps working when offline. Glimp developer must update app to use SDK28 broadcast.
-* Patched Dexcom from 2.3 directory
+   Glimp se detiene cuando está offline. El desarrollador de Glimp debe actualizar la aplicación para utilizar la difusión SDK28.
+* Dexcom Parchado desde el directorio 2.3
 
-Major new features
+Nuevas características importantes
 --------------------------------------------------
-* Internal change of targetSDK to 28 (Android 9), jetpack support
-* RxJava2, Okhttp3, Retrofit support
+* Cambio interno de targetSDK a 28 (Android 9), soporte de jetpack
+* Soporte de RxJava2, Okhttp3, Retrofit
 * Old `Medtronic pumps <../Configuration/MedtronicPump.html>`_ support (RileyLink need)
 * New `Automation plugin <../Usage/Automation.html>`_
 * Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings>`_ from bolus wizard calculation
@@ -62,7 +62,7 @@ Version 2.3
 ==================================================
 Release date: 25-04-2019
 
-Major new features
+Nuevas características importantes
 --------------------------------------------------
 * Important safety fix for Insight (really important if you use Insight!)
 * Fix History-Browser
@@ -79,7 +79,7 @@ Version 2.2.2
 ==================================================
 Release date: 07-04-2019
 
-Major new features
+Nuevas características importantes
 --------------------------------------------------
 * Autosens fix: deactivate TT raises/lowers target
 * New translations
@@ -91,7 +91,7 @@ Version 2.2
 ==================================================
 Release date: 29-03-2019
 
-Major new features
+Nuevas características importantes
 --------------------------------------------------
 * `DST fix <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
 * Wear Update
@@ -104,7 +104,7 @@ Version 2.1
 ==================================================
 Release date: 03-03-2019
 
-Major new features
+Nuevas características importantes
 --------------------------------------------------
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ support (by Tebbe Ubben and JamOrHam)
 * Status lights on main screen (Nico Schmitz)
@@ -124,7 +124,7 @@ Version 2.0
 ==================================================
 Release date: 03-11-2018
 
-Major new features
+Nuevas características importantes
 --------------------------------------------------
 * oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ pump support
