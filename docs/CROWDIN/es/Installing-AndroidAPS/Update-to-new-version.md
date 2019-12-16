@@ -41,7 +41,7 @@ Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-ins
 
 <!--- Text is maintained in page building-apk.md ---> En el menú, seleccione "Build" y, a continuación, "Generate Firmado Bundle/APK...". (El menú de Android Studio cambió a partir de septiembre de 2018. En las versiones anteriores, seleccione en el menú "Build" y luego "Generar APK Firmado...".)
 
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Esto es necesario porque Android tiene una regla que sólo acepta el código firmado para ejecutarse por razones de seguridad. Para obtener más información acerca de este tema, siga el enlace [aquí](https://developer.android.com/studio/publish/app-signing.html#generate-key) Seguridad es un tema profundo y complejo y no lo necesita ahora.
+La firma significa que usted firma su aplicación generada, pero en una forma digital como una especie de huella digital digital en la aplicación en sí. Esto es necesario porque Android tiene una regla que sólo acepta el código firmado para ejecutarse por razones de seguridad. Para obtener más información acerca de este tema, siga el enlace [aquí](https://developer.android.com/studio/publish/app-signing.html#generate-key) Seguridad es un tema profundo y complejo y no lo necesita ahora.
 
 ![Captura pantalla 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -68,7 +68,7 @@ Seleccione "full" (o "fullRelease") como sabor para la aplicación generada. Sel
   * full / fullRelease (es decir, recomendaciones promulgadas automáticamente en un lazo cerrado)
   * openloop (es decir, recomendaciones entregada al usuario para la acción manual)
   * pumpcontrol (es decir, control remoto para la bomba, sin lazo)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+  * nsclient (es decir, se visualizan los datos de bucle de otro usuario y se pueden añadir entradas del portal profesional careportal)
 
 ![Captura pantalla 44](../images/Installation_Screenshot_44.png)
 
@@ -93,25 +93,25 @@ Por favor, cambie al directorio AndroidAPS/app/full/release para encontrar el ar
 * Bluetooth
 * subido en la nube (Google Drive u otros servicios en la nube)
 * conectar el ordenador y el teléfono por cable 
-* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+* por correo (Tenga en cuenta que algunas aplicaciones de correo no permiten adjuntos apk, en este caso utilizan otro método de transferencia.)
 
-En este ejemplo, Gmail se utiliza ya que es bastante simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Si utiliza algo otro, continúe en consecuencia.
+En este ejemplo, Gmail se utiliza ya que es bastante simple. Para instalar la aplicación autofirmada, es necesario permitir que Android en el smartphone realice esta instalación incluso si este archivo se recibe a través de Gmail, lo que normalmente está prohibido. Si utiliza algo otro, continúe en consecuencia.
 
 ![Captura pantalla 48](../images/Installation_Screenshot_48.png)
 
-In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
+En los ajustes de tu smartphone hay un área "instalación de aplicaciones desconocida" donde tengo que darle a Gmail el derecho de instalar archivos APK que obtengo a través de Gmail.
 
 Seleccione "Permitir de esta fuente". Después de la instalación, puede inhabilitarla de nuevo.
 
 ![Permitir la instalación de aplicaciones de fuentes desconocidas](../images/Installation_Screenshot_49-50.png)
 
-The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
+El último paso es presionar en el archivo APK que tengo a través de Gmail e instalar la aplicación. Si el APK no instala y tiene una versión más antigua de AndroidAPS en su teléfono que fue firmado con una clave distinta, entonces tendrá que desinstalar esto primero, recuerde exportar sus ajustes, si es así!
 
 Sí, ya lo tienes y ahora puedes empezar con la configuración de AndroidAPS para tu uso (MCG, bomba de insulina), etc.
 
 ## Comprobar la versión de AAPS en el teléfono
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Puede comprobar la versión de AAPS en su teléfono haciendo clic en el menú de tres puntos en la parte superior derecha y luego acerca.
 
 ![Versión de AAPS instalada](../images/Update_VersionCheck.png)
 
