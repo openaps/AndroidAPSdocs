@@ -12,7 +12,7 @@
 
 ### Activar alarma de bomba inalcanzable
 
-* In AndroidAPS, go to **Settings / Local Alarms** and activate **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutes. 
+* En AndroidAPS, vaya a **Settings/Local Alarms** y active **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutos. 
 * Esto le dará tiempo suficiente para no activar la alarma al salir de la habitación mientras su teléfono está a la izquierda en el escritorio, pero le informa si la bomba no puede ser alcanzado por un tiempo que exceda de la duración de un temporal basal.
 
 ### Restaure la posibilidad de alcance de la bomba
@@ -23,7 +23,7 @@
 
 ### Causas raíz y consecuencias de los errores de comunicación frecuentes
 
-* On phones with **low memory** (or **aggressive power-saving** settings), AndroidAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. Esto puede desencadenar "alarmas de bomba inalcanzable" durante el arranque. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
+* En los teléfonos con **baja memoria** (o **ajustes agresivos de ahorro de energía**), AndroidAPS a menudo se cierra. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. Esto puede desencadenar "alarmas de bomba inalcanzable" durante el arranque. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
 
 ![Bomba no alcanzable](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Pump_Unreachable.png) ![No hay conexión con la bomba](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/No_connection_to_pump.png)
 
@@ -32,7 +32,7 @@
 
 ## La cancelación de la tasa basal temporal
 
-* Ocasionalmente, AndroidAPS no puede cancelar automáticamente una alerta **TBR CANCELED**. Then you have to either press **UPDATE** in the AndroidAPS **Combo tab** or the alarm on the pump will be confirmed.
+* Ocasionalmente, AndroidAPS no puede cancelar automáticamente una alerta **TBR CANCELED**. Entonces tiene que pulsar **UPDATE** en la pestaña AndroidAPS **Combo** o la alarma en la bomba se confirmará.
 
 ## Consideraciones sobre la batería de la bomba
 
@@ -63,15 +63,15 @@ Los rangos para el tiempo de vida típico de los diferentes tipos de batería so
 
 If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
 
-* Die latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Make sure you are on that version if you have issues with a short battery lifetime.
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, only a replacement of the pump by Roche will help, which is not a problem during the warranty period. 
-* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+* La última versión (marzo de 2018) de la [ruffy App](https://github.com/MilosKozak/ruffy) mejoró significativamente la duración de la batería de la bomba. Asegúrate de que estás en esa versión si tienes problemas con una vida corta de batería.
+* Hay algunas variantes de la tapa de la batería de tornillos de la bomba Combo, que parcialmente cortocircuita las baterías y las drena rápidamente. Las tapas sin este problema pueden ser reconocidas por los contactos de metal dorado.
+* Si el reloj de la bomba no "sobrevive" a un cambio de batería corto, es probable que el capacitor esté roto, lo que mantiene el reloj en funcionamiento durante un breve corte de energía. En este caso, sólo una sustitución de la bomba por parte de Roche ayudará, lo cual no es un problema durante el período de garantía. 
+* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. Si tiene la oportunidad, pruebe otro smartphone y compare los tiempos de vida de la batería.
 
 ## Cambios en el horario de verano
 
-* Currently the combo driver does not support automatic adjustment of the pump's time.
-* During the night of a daylight saving time change, the time of the smartphone is updated, but the time of the pump remains unchanged. This leads to an alarm due to deviating times between the systems at 3 am.
+* Actualmente, el controlador de combo no soporta el ajuste automático de la hora de la bomba.
+* During the night of a daylight saving time change, the time of the smartphone is updated, but the time of the pump remains unchanged. Esto da lugar a una alarma debido a la desviación de tiempo entre los sistemas a las 3 am.
 * If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning.
 
 ## Bolos extendidos, bolo Multionda
