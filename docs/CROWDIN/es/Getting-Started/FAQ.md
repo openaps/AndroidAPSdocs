@@ -152,7 +152,7 @@ Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado b
 
 Un factos de sensibilidad a la insulina (ISF) demasiado bajo puede resultar en sobre-correcciones ya que AAPS piensa que necesita más insulina, para corregir BGs altas, de la que realmente necesita. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. Esto significará que AAPS corregirá con dosis más pequeñas, evitando que las sobre-correcciones de BG altas provoquen BG demasiado bajas This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
-Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+Por el contrario, un ISF demasiado alto puede resultar en correcciones insuficientes, provocando que tu BG se mantenga por encima del objetivo – especialmente durante la noche.
 
 ## Ratio Carbohidratos/Insulina (IC) (g/U)
 
