@@ -1,13 +1,13 @@
-Smartwatches
-*************
+Smartwatches (Relojes inteligentes)
+***********************************
 
-Smartwatches are optional, but very useful for some users.
-More details are here:
+Los Smartwatches son opcionales, pero son muy útiles para algunos usuarios.
+Más detalles aquí:
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   List of tested phones and smartwatches <../Getting-Started/Phones.md>
-   Watchfaces  <../Configuration/Watchfaces.md>
+   Lista de teléfonos y smartwatches probados <../Getting-Started/Phones.md>
+   Fondos de pantallas <../Configuration/Watchfaces.md>

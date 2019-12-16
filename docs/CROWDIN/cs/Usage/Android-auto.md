@@ -9,7 +9,7 @@ Jak jej používat:
 * Nainstalujte Android Auto
 * V aplikaci Android Auto klepněte na Hamburger menu (tři horizontální čárky)
 * Klepněte na položku O aplikaci.
-* Pak desetkrát klepněte na záhlaví "O aplikaci Android Auto", dokud se nezobrazí zpráva "Developer mode enabled" (Vývojářský režim povolen).
+* Tap the version and permission info 10 times, until a toast appears that says "Developer mode enabled".
 * Nyní můžete vstoupit do vývojářského režimu výběrem nabídky overflow vpravo nahoře, pak přejděte do možností vývojáře.
 * Vyberte neznámé zdroje (sjeďte zcela dolů až na konec seznamu).
 * Nyní můžete opustit režim vývojáře, pokud chcete. Chcete-li jej opustit, klepněte na tři tečky vpravo nahoře.

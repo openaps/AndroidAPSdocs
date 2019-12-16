@@ -2,7 +2,8 @@
 **************************************************
 December 2019
 ==================================================
-* `Watchfaces <../Configuration/Watchfaces.html>`_ (major update, way more details)
+* `Android auto <../Usage/Android-auto.html>`_ - enter developer mode
+* `Watchfaces <../Configuration/Watchfaces.html>`_ - major update, way more details
 ноябрь 2019
 ==================================================
 * ` Автоматизация-деактивируйте при отключении петли <../Usage/Automation.html#important-note> ` _

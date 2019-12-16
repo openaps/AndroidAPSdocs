@@ -1,4 +1,4 @@
-Troubleshooting
+Solución de problemas
 **************************************************
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
@@ -27,7 +27,7 @@ Uso
 
 * `SMS commands <../Children/SMS-Commands.html#troubleshooting>`_
 
-CGM
+MCG
 ==================================================
 * `General <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_

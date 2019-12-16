@@ -2,7 +2,8 @@ Aktualizace a změny Wiki
 **************************************************
 December 2019
 ==================================================
-* `Watchfaces <../Configuration/Watchfaces.html>`_ (major update, way more details)
+* `Android auto <../Usage/Android-auto.html>`_ - enter developer mode
+* `Watchfaces <../Configuration/Watchfaces.html>`_ - major update, way more details
 November 2019
 ==================================================
 * `Automation - deactivate when disabeling loop <../Usage/Automation.html#important-note>`_

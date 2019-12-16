@@ -37,7 +37,7 @@ Con comidas bajas en carbohidratos, altas en grasas y proteínas, puede ser sufi
 
 Cuando los eCarbs son generados, se genera una nota en el Careportal para documentar los inputs, para así hacer más fácil la iteración y mejorar los inputs.
 
-Extended bolus
+Bolo extendido
 ==================================================
 As mentioned above extended or multiwave boluses do not really work in a closed loop environment. Therefore there is no option to issue an extended bolus in AndroidAPS. Here's why:
 
