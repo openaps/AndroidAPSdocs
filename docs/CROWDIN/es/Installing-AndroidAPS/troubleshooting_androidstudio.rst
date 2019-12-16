@@ -11,41 +11,41 @@ En caso de que ya no pueda encontrar el almacén de claves antiguo, haga lo sigu
 3. Make sure settings file "AndroidAPS Preferences" is stored safely.
 4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
+6. Instale la nueva versión de AAPS en el teléfono.
 7. `Import settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - if you can't find them on your phone copy them from the external storage.
-8. Keep on looping.
+8. Continuar con el lazo.
 
-Kotlin compiler warning
+Avisos del compilador Kotlin
 ==================================================
 If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings. 
 
 App was build successfully and can be transferred to phone.
 
-.. image:: ../images/GIT_WarningIgnore.PNG
-  :alt: ignore Kotline compiler warning
+.. imagen:: ../images/GIT_WarningIgnore.PNG
+  :alt: ignora el aviso del compilador Kotlin
 
-Key was created with errors
+La clave fue creada con errores
 ==================================================
 When creating a new keystore for building the signed APK, on Windows the following error message might appear
 
-.. image:: ../images/AndroidStudio35SigningKeys.png
-  :alt: Key was created with errors
+.. imagen:: ../images/AndroidStudio35SigningKeys.png
+  :alt: La clave fue creada con errores
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. Esto se puede ignorar actualmente.
 
-Could not download… / Offline Work
+No es posible descargar… / Trabajar sin conexión
 ==================================================
-If you get a failure message like this
+Si se obtiene un mensaje de error como este
 
-.. image:: ../images/GIT_Offline1.jpg
-  :alt: Warning could not download
+.. imagen:: ../images/GIT_Offline1.jpg
+  :alt: Aviso no se ha podido descargar
 
 make sure that ‘Offline work’ is disabled.
 
-File -> Settings
+Archivo -> Ajustes
 
-.. image:: ../images/GIT_Offline2.jpg
-  :alt: Settings offline work
+.. imagen:: ../images/GIT_Offline2.jpg
+  :alt: Configuración fuera de línea
 
 Error: buildOutput.apkData must not be null
 ==================================================
