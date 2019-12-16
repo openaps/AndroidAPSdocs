@@ -172,7 +172,7 @@ Suponiendo una basal correcta, puedes comprobar el parámetro: con una IOB de ce
 > 
 > Cuando se utiliza IC, la cantidad de insulina es fija y la cantidad de carbohidratos es variable. ("¿Cuántos gr de carbohidratos pueden estar cubiertos por una sola unidad de insulina?")
 > 
-> Example:
+> Ejemplo:
 > 
 > Unidad factor de pan (BU = 12g carbs) de: 2,4 -> Se necesitan 2,4 unidades de insulina cuando se come una sola unidad de pan.
 > 
