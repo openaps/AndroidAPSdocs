@@ -2,7 +2,7 @@
 
 You can install AndroidAPS app on your **Wear OS based** smartwatch. 
 Watch version of AAPS allows you to:
-* **display data on your watch**: by providing [custom watchfaces](../Configuration/Watchfaces#aaps-watchfaces) or in standard watchfaces with use of complications
+* **display data on your watch**: by providing [custom watchfaces](#aaps-watchfaces) or in standard watchfaces with use of [complications](#complications)
 * **control AAPS on phone**: to bolus, set a temporary target etc. 
 
 ### Before you buy watch...
@@ -146,11 +146,93 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
+## Complications
+
+_Complication_ is a term from traditional watchmaking, where it describe addition to main watchface - as another small window or sub-dial (with: date, day of week, moon phase etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like: weather, notifications, fitness counters and more - to be added to any watchfaces that supports complications.
+
+AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with trend, IOB, COB etc.).
+
+Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+
+![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+
+### Complication Types
+
+AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complication, including its layout, border, color and font. From many Wear OS complication types available, AAPS uses:
+
+* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred as value and label. Usually rendered inside circle or small pill - one below another, or side by side. It is very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values etc.
+* `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside rectangle or long pill - one below another. It is used for more details and textual status.
+* `RANGED VALUE` - Used for values from predefined range, like percentage. Contains icon, label and is usually rendered as circle progress dial.
+* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
+
+### Complication Setup
+
+To add complication to watchface, configure it by long press and clicking gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter watchface setup menu for complications. AAPS complications are grouped under AAPS menu entry.
+
+When configuring complication on watchface, Wear OS will present and filter list of complications that can be fit into selected complication place on watchface. If specific complication cannot be found on the list, it is probably due to its type that cannot be used for given place.
+
+### Complications provided by AAPS
+
+AndroidAPS provides following complications:
+
+![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+
+* **BR, CoB & IoB** (`SHORT TEXT`, opens _Menu_): Displays _Basal Rate_ on the first line and _Carbs on Board_ and _Insulin on Board_ on second line.
+* **Blood Glucose** (`SHORT TEXT`, opens _Menu_): Displays _Blood Glucose_ value and _trend_ arrow on the first line and _measurement age_ and _BG delta_ on the second line.
+* **CoB & IoB** (`SHORT TEXT`, opens _Menu_): Displays _Carbs on Board_ on the first line and _Insulin on Board_ on the second line.
+* **CoB Detailed** (`SHORT TEXT`, opens _Wizard_): Displays current active _Carbs on Board_ on the first line and planed (future, eCarbs) Carbs on the second line.
+* **CoB Icon** (`SHORT TEXT`, opens _Wizard_): Displays _Carbs on Board_ value with static icon.
+* **Full Status** (`LONG TEXT`, opens _Menu_): Shows most of data at once: _Blood Glucose_ value and _trend_ arrow, _BG delta_ and _measurement age_ on the first line. On the second line _Carbs on Board_, _Insulin on Board_ and _Basal Rate_.
+* **Full Status (flipped)** (`LONG TEXT`, opens _Menu_): Same data as for standard _Full Status_, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
+* **IoB Detailed** (`SHORT TEXT`, opens _Bolus_): Displays total _Insulin on Board_ on the first line and split of _IoB_ for _Bolus_ and _Basal_ part on the second line.
+* **IoB Icon** (`SHORT TEXT`, opens _Bolus_): Displays _Insulin on Board_ value with static icon.
+* **Uploader/Phone Battery** (`RANGED VALUE`, opens _Status_): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with battery icon that reflects reported value. It may be not updated in real time, but when other important AAPS data changes (usually: every ~5 minutes with new _Blood Glucose_ measurement).
+
+Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
+
+### Complication related settings
+
+* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication:
+  * _Default_: action specific to complication type _(see list above)_
+  * _Menu_: AAPS main menu
+  * _Wizard_: bolus wizard - bolus calculator
+  * _Bolus_: direct bolus value entry
+  * _eCarb_: eCarb configuration dialog
+  * _Status_: status sub-menu
+  * _None_: Disables tap action on AAPS complications
+* **Unicode in Complications** (default `On`): When `On`, complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on font, and that can be very watchface-specific. This option allows to switch Unicode `Off` when needed - if font used by custom watchface does not support those symbols - to avoid graphical glitches.
+
+## Performance and battery life tips
+
+Wear OS watches are very power constrained devices. Size of watch case limits the capacity of included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+
+If experienced battery span is shorter than day (from dusk to dawn), here are some tips to troubleshoot the issues. 
+
+Main battery-demanding areas are:
+
+* Active display with backlight on (for LED) or in full intensity mode (for OLED)
+* Rendering on screen
+* Radio communication over Bluetooth
+
+Since we cannot compromise on communication (we need up-to-date data) and want have most recent data rendered, most optimisation can be done in _display time_ area:
+
+* Stock watchfaces are usually better optimised than custom one, downloaded from store.
+* It is better to use watchfaces that limit amount of rendered data in inactive / dimmed mode.
+* Be aware when mixing other Complications, like third party weather widgets, or other using data from external sources.
+* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
+* Try to use **Dark** theme for AAPS watchfaces, and **Matching divider**. On OLED devices it will limit amount of pixels lit and limit burnout.
+* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
+* Observe over few days span, with different activity profiles. Most watches activate display on glancing, movement and other usage-related triggers.
+* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
+* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* **We cannot guarantee that data displayed on watchface or complication is up-to date**. At end, it is up to Wear OS to decide when to update a watchface or a complication. Even when AAPS app requests update, System may decide to postpone or ignore update to conserve battery. When in doubt and low on battery on watch - always double check with main AAPS app on phone.
+
 ## Troubleshooting the wear app: 
 
 *  On Android Wear 2.0 the watch screen does not install by itself anymore.  You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it.  Also enable auto update.  
 *  Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 *  Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+*  If Complications does not update data - check first if AAPS watchfaces work at all.
 
 ## View Nightscout data
 
