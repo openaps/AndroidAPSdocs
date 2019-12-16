@@ -25,46 +25,46 @@ Mantenga su teléfono actualizado, tal como se describe en la seguridad [safety 
 
 ## Configuración manual de Nightscout
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Se presume que ya usas Nightscout, sino visita la página Nightscout para seguir las instrucciones de montaje. Las siguientes instrucciones son las adiciones que debes hacer a tu sitio. Tu sitio debe ser versión 10 o superior, por lo que comprueba que tengas la última versión de lo contrario recibirás mensajes de error en tu AAPS app.Algunas personas comentan que el lazo cerrado usa más cuota que la gratuita en Azure, por lo que Heroku es la opción preferida.
 
-* Go to https://herokuapp.com/
+* Ve a https://herokuapp.com/
 
-* Click your App Service name.
+* Pincha en App Service name
 
-* Click Application settings (azure) or Settings > "Reveal Config Variables (heroku)
+* Pincha en Application settings (azure) or Settings(ajustes) > "Reveal Config Variables (heroku)
 
-* Add or edit the variables as follows:
+* Añade o edita las variables siguientes:
   
-  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
-  * `DEVICESTATUS_ADVANCED` = `true`
-  * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * ENABLE = careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps
+  * DEVICESTATUS_ADVANCED = true
+  * PUMP_FIELDS = reservoir battery clock
+  * Multitud de alarmas pueden ser configuradas para monitorizar la bomba El % de batería es recomendable: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Optional: The following 'timers' can be set for the coloring in the AAPS careportal: 
-    * `BAGE_WARN` = `480` (Warning after x hours since last Battery Changed Event in Careportal)
-  * `BAGE_URGENT` = `504` (Urgent warning after x hours since last Battery Changed Event in Careportal)
-  * `CAGE_WARN` = `40` (Warning after x hours since last Cannula Changed Event in Careportal)
-  * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
-  * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
-  * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * Opcional: se pueden habilitar los siguientes 'temporizadores' para colorear en el careportal de AAPS: 
+    * `BAGE_WARN` = `480` (Aviso pasaron x horas desde el último evento de batería cambiada en Careportal)
+  * `BAGE_URGENT` = `504` (advertencia Urgente pasaron x horas desde el último cambio de Batería en Careportal)
+  * `CAGE_WARN` = `40` (Aviso pasaron x horas desde el último cambio de cánula en Careportal)
+  * `CAGE_URGENT` = `48` (Aviso urgente pasaron x horas desde el último cambio de cánula en el portal Careportal)
+  * `IAGE_WARN` = `144` (Aviso pasaron x horas desde el último cambio de cartucho de Insulina en Careportal)
+  * `IAGE_URGENT` = `192` (Aviso urgente pasaron x horas desde la última vez que se cambió el cartucho de Insulina en Careportal)
+  * `SAGE_WARN` = `160` (Advertencia pasaron x horas desde que se insertó el sensor MCG en Careportal)
+  * `SAGE_URGENT` = `168` (Aviso urgente pasaron x horas desde el último suceso de inserción de sensor de MCG en el portal de Careportal)
 
 ![Azure](../../images/nightscout1.png)
 
-* Click "Save" at the top of the panel.
+* Pinchar en guardar arriba en el panel.
 
-## Semi-automated Nightscout setup
+## Configuración de Nightscout semi automatizada
 
-This service is offered by fellow looper Martin Schiftan free of charge at the moment. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+Este servicio es ofrecido por el compañero Martin Schiftan de forma gratuita en este momento. Si le gusta el servicio, puede considerar enviarle una pequeña donación (enlace en la navegación en el lado izquierdo).
 
-**Benefits**
+**Beneficios**
 
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The server is located in Germany.
+* Puede instalar Nightscout con un par de clics y usarlo directamente. 
+* Reducción del trabajo manual mientras Martin trata de automatizar la administración.
+* Todos los ajustes se pueden realizar a través de una interfaz web fácil de usar. 
+* El servicio incluye una verificación automática de la tasa basal usando Autotune. 
+* El servidor se encuentra en Alemania.
 
 <http://ns.10be.de/en/index.html>
