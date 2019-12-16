@@ -59,7 +59,7 @@ En este ejemplo, el BG está aumentando en el corto plazo; sin embargo, se prev�
 
 #### Escenario 2 - Temporal cero por seguridad
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AndroidAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+En este ejemplo, se prevé que la BG esté baja en el corto plazo, pero se prevé que finalmente estará por encima de la meta. Sin embargo, debido a que el mínimo a corto plazo está en realidad por debajo del umbral de seguridad, AndroidAPS emitirá un temporal cero, hasta que ya no haya ningún punto de la línea de predicción que esté por debajo del umbral.
 
 ![Escenario de dosificación 2](../images/Dosing_scenario_2.jpg)
 
@@ -79,7 +79,7 @@ En este ejemplo, AndroidAPS ve que BG está subiendo muy por encima del objetivo
 
 Como un profesional clínico que no tiene experiencia con AndroidAPS o lazos cerrados DIY, es posible que le sea difícil ayudar a su paciente a optimizar su configuración o a realizar cambios para mejorar sus resultados. Tenemos varias herramientas y [guías](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) en la comunidad que ayudan a los pacientes a realizar ajustes pequeños y probados para mejorar sus ajustes.
 
-Lo más importante para los pacientes es hacer un cambio a la vez, y observar el impacto durante 2-3 días antes de elegir cambiar o modificar otro valor (a menos que sea obviamente un mal cambio que empeore las cosas, en cuyo caso deberían revertir inmediatamente a la configuración anterior). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+Lo más importante para los pacientes es hacer un cambio a la vez, y observar el impacto durante 2-3 días antes de elegir cambiar o modificar otro valor (a menos que sea obviamente un mal cambio que empeore las cosas, en cuyo caso deberían revertir inmediatamente a la configuración anterior). La tendencia humana es cambiar todo a la vez; pero si alguien lo hace, entonces se puede acabar con la configuración subóptima para el futuro, y les resulta difícil volver a un estado bueno conocido.
 
 Una de las herramientas más potentes para realizar los cambios de configuración es una herramienta de cálculo automatizada para las tasas basales, ISF y coeficiente de carbohidratos. Esto se llama "[Autoajuste](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Está diseñado para que se ejecute de forma independiente/manualmente, y permita que los datos le guíen a usted o a su paciente en la realización de cambios incrementales en los valores. Es la mejor práctica en la comunidad ejecutar (o revisar) los informes de Autoajuste primero, antes de intentar realizar ajustes manuales en los valores. Con AndroidAPS, Autoajustar se ejecutará como un "sistema separado", aunque hay esfuerzos en curso para incorporarlo directamente a AndroidAPS también. Dado que estos parámetros son un pre-requesito tanto para la entrega de insulina de la bomba estándar como para la entrega de insulina de lazo cerrado, la discusión de los resultados del autoajuste y el ajuste de estos parámetros sería el enlace natural con el médico.
 
