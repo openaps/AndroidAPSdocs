@@ -145,15 +145,15 @@ Valores para ajustar cuando se cambia de AMA a SMB
 Pestaña general
 --------------------------------------------------
 * Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). Los TTs utilizan los valores predeterminados establecidos en las preferencias. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
-* Treatment buttons: old treatment button still available, but hidden by default. Ahora la visibilidad de los botones se puede configurar. New insulin button, new carbs button (including `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
+* Botones de tratamiento: el botón de tratamiento viejo aún está disponible, pero está oculto de forma predeterminada. Ahora la visibilidad de los botones se puede configurar. Nuevo botón de insulina, nuevo botón de carbohidratos (incluyendo `eCarbs/carbs extendidos <../Usage/Extended-Carbs.html>`_)
 * `Las líneas de predicción tienen colores <../Getting-Started/Screenshots.html#section-e>`_
 * Opción para mostrar un campo de notas en los diálogos de insulina/carbs/calculadora/cebado + relleno, que se suben a NS
-* Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
+* Actualizado el dialogo cebado/relleno permite el cebado y la creación de entradas para el careportal para el cambio de sitio y de cambio de los cartuchos
 
 Reloj
 --------------------------------------------------
 * Se eliminó la variante de compilación separada, incluida en la compilación completa regular ahora. Para utilizar los controles de bolo desde el reloj, habilite este valor en el teléfono
-* Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
+* El asistente ahora sólo solicita carbohidratos (y el porcentaje si está habilitado en la configuración del reloj). Los parámetros que se incluyen en el cálculo se pueden configurar en la configuración del teléfono
 * Las confirmaciones y los diálogos de información ahora funcionan también en el reloj 2.0
 * Se añade Entrada de menú de eCarbs
 
@@ -165,11 +165,11 @@ Nuevos plugins
 
 Misceláneo
 --------------------------------------------------
-* App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
+* La aplicación ahora utiliza el cajón para mostrar todos los plugins; los plugins seleccionados como visibles en el creador de configuración se muestran como pestañas en la parte superior (favoritos)
 * Revisión para las pestañas del constructor de configuración y objetivos, añadiendo descripciones
 * Nuevo icono de la aplicación
 * Muchas mejoras y correcciones de errores
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
+* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. batería de bomba agotada) y lecturas de BG perdidas (ver _Local alerts_ en configuración)
 * Opción para mantener la pantalla encendida
 * Opción de mostrar notificaciónes como notificación Android
 * Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
