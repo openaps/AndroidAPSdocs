@@ -1,13 +1,13 @@
-Troubleshooting Android Studio
+Solución de problemas para Android Studio
 **************************************************
-Lost keystore
+Perdida de almacén de claves
 ==================================================
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. Es por eso que se recomienda almacenar el almacén de claves en un lugar seguro.
 
-In case you cannot find your old keystore anymore, proceed as follows:
+En caso de que ya no pueda encontrar el almacén de claves antiguo, haga lo siguiente:
 
-1. `Export settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ on your phone.
-2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
+1. `Exportar valores <../Usage/ExportImportSettings.html#how-to-export-settings>`_ en su teléfono.
+2. Copie la configuración desde su teléfono a una ubicación externa (es decir,. su computadora, almacenamiento en la nube...).
 3. Make sure settings file "AndroidAPS Preferences" is stored safely.
 4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Uninstall previous AAPS version on your phone.
