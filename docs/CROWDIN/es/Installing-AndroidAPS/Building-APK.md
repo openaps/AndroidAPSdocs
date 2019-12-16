@@ -40,9 +40,9 @@ En general, los pasos necesarios para crear el archivo APK son:
 
 Descripción detallada de los pasos necesarios para crear el archivo APK.
 
-## Install git (if you don't have it)
+## Instalar git (si no lo tienes ya)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-install.rst).
 
 ## Instalar Android Studio
 
@@ -207,9 +207,9 @@ Síiiiii, la primera compilación tiene éxito, pero no hemos terminado.
 
 ![Captura de Pantalla 34](../images/Installation_Screenshot_34.png)
 
-## Generate signed APK
+## Generar APK firmado
 
-In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. En las versiones anteriores, seleccione en el menú "Build" y luego "Generar APK Firmado...".)
+En el menú, seleccione "Build" y, a continuación, "Generate Firmado Bundle/APK...". (El menú de Android Studio cambió a partir de septiembre de 2018. En las versiones anteriores, seleccione en el menú "Build" y luego "Generar APK Firmado...".)
 
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Esto es necesario porque Android tiene una regla que sólo acepta el código firmado para ejecutarse por razones de seguridad. Para obtener más información acerca de este tema, siga el enlace [aquí](https://developer.android.com/studio/publish/app-signing.html#generate-key) Seguridad es un tema profundo y complejo y no lo necesita ahora.
 
@@ -243,11 +243,11 @@ Rellene la información del último cuadro de diálogo en este diálogo y pulse 
 
 Seleccione "full" (o "fullRelease") como sabor para la aplicación generada. Select V1 "Jar Signature" (V2 es opcional) y haga clic en "Finish". La siguiente información puede ser importante para su uso posterior.
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
-  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
-  * pumpcontrol (i.e. remote control for pump, no looping)
+* La opción 'Release' debe ser la opción predeterminada para "Tipo de compilación", "Depurar" es sólo para la codificación de personas.
+* Seleccione el tipo de construcción que quiere realizar. 
+  * full / fullRelease (es decir, recomendaciones promulgadas automáticamente en un lazo cerrado)
+  * openloop (es decir, recomendaciones entregada al usuario para la acción manual)
+  * pumpcontrol (es decir, control remoto para la bomba, sin lazo)
   * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
 
 ![Captura pantalla 44](../images/Installation_Screenshot_44.png)
@@ -260,32 +260,32 @@ Pulse el enlace "locate" en el registro de sucesos.
 
 ![Captura pantalla 46](../images/Installation_Screenshot_46.png)
 
-## Transfer APK to smartphone
+## Transferir APK a smartphone
 
-Se abrirá una ventana del gestor de archivos. Puede parecer un poco diferente en su sistema, ya que estoy usando Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+Se abrirá una ventana del gestor de archivos. Puede parecer un poco diferente en su sistema, ya que estoy usando Linux. En Windows estará el Explorador de archivos y en Mac OS X the Finder. Allí debe ver el directorio con el archivo APK generado. Desafortunadamente este es el lugar incorrecto porque "wear-release.apk" no es la APK firmada que estamos buscando.
 
-![Screenshot 47](../images/Installation_Screenshot_47.png)
+![Captura pantalla 47](../images/Installation_Screenshot_47.png)
 
-Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. Puede hacerlo de la forma que prefiera, por ejemplo.
+Por favor, cambie al directorio AndroidAPS/app/full/release para encontrar el archivo "app-full-release.apk". Transfiera este archivo a tu smartphone Android. Puede hacerlo de la forma que prefiera, por ejemplo.
 
 * Bluetooth
-* cloud upload (Google Drive or other cloud services)
-* connect computer and phone by cable 
+* subido en la nube (Google Drive u otros servicios en la nube)
+* conectar el ordenador y el teléfono por cable 
 * by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
 
-In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
+En este ejemplo, Gmail se utiliza ya que es bastante simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. Si utiliza algo otro, continúe en consecuencia.
 
-![Screenshot 48](../images/Installation_Screenshot_48.png)
+![Captura pantalla 48](../images/Installation_Screenshot_48.png)
 
 In the settings of your smartphone there is an area "unknown apps install" where I have to give Gmail the right to install APK files which I get via Gmail.
 
-Select "Allow from this source". After the installation, you can disable it again.
+Seleccione "Permitir de esta fuente". Después de la instalación, puede inhabilitarla de nuevo.
 
-![Installation from unknown sources](../images/Installation_Screenshot_49-50.png)
+![Permitir la instalación de aplicaciones de fuentes desconocidas](../images/Installation_Screenshot_49-50.png)
 
 The last step is to press on the APK file I got via Gmail and install the app. If the APK does not install and you have an older version of AndroidAPS on your phone that was signed with a different key then you will need to uninstall this first, remember to export your settings if so!
 
-Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
+Sí, ya lo tienes y ahora puedes empezar con la configuración de AndroidAPS para tu uso (MCG, bomba de insulina), etc.
 
 ## Identificar receptor si se utiliza xDrip
 
@@ -293,4 +293,4 @@ Yeah, you got it and can now start with configuring AndroidAPS for your use (CGM
 
 ## Solución de problemas
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Consulte la página separada [para la resolución de problemas de Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
