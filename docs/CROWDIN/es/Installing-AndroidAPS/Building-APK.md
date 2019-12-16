@@ -211,17 +211,17 @@ Síiiiii, la primera compilación tiene éxito, pero no hemos terminado.
 
 In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. En las versiones anteriores, seleccione en el menú "Build" y luego "Generar APK Firmado...".)
 
-Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
+Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Esto es necesario porque Android tiene una regla que sólo acepta el código firmado para ejecutarse por razones de seguridad. Para obtener más información acerca de este tema, siga el enlace [aquí](https://developer.android.com/studio/publish/app-signing.html#generate-key) Seguridad es un tema profundo y complejo y no lo necesita ahora.
 
-![Screenshot 39a](../images/Installation_Screenshot_39a.PNG)
+![Captura pantalla 39a](../images/Installation_Screenshot_39a.PNG)
 
-In the following dialogue box select "APK" instead of "Android App Bundle" and click button "Next".
+En el recuadro de diálogo siguiente, seleccione "APK" en lugar de "Android App Bundle" y haga clic en el botón "Next".
 
-![Screenshot 39b](../images/Installation_Screenshot_39b.PNG)
+![Captura pantalla 39b](../images/Installation_Screenshot_39b.PNG)
 
-Select "app" and click "Next".
+Seleccione "app" y haga clic en "Siguiente".
 
-![Screenshot 40](../images/Installation_Screenshot_40.png)
+![Captura pantalla 40](../images/Installation_Screenshot_40.png)
 
 Pulse "Crear nuevo..." para empezar a crear el almacén de claves. Un almacén de claves en este caso no es nada más que un archivo en el que se almacena la información para la firma. Está encriptado y la información está protegida con contraseñas. We suggest storing it in your home folder and remember the passwords but if you lose this information it's not a big issue because then you just have to create a new one. La mejor práctica es almacenar esta información cuidadosamente.
 
@@ -229,7 +229,7 @@ Pulse "Crear nuevo..." para empezar a crear el almacén de claves. Un almacén d
 
 * Rellene la información para el siguiente diálogo. 
   * Ruta del almacén de claves: es la ruta al archivo del archivo de claves. **No guardar en la misma carpeta del projecto. Debe utilizar un directorio diferente!**
-  * The password fields below are for the keystore to double check for typing errors.
+  * Los campos de contraseña siguientes son para que el almacén de claves efectúe una doble comprobación por los errores de escritura.
   * Alias es un nombre para la clave que necesita. Puede dejar el valor predeterminado o darle un nombre de fantasía que desee.
   * Los campos de contraseña por debajo de la clave son para la clave en sí. Como siempre doble verificación, para comprobar si hay errores tipográficos.
   * Puede dejar que la validez sea la predeterminada de 25 años.
@@ -241,7 +241,7 @@ Rellene la información del último cuadro de diálogo en este diálogo y pulse 
 
 ![Captura de Pantalla 43](../images/Installation_Screenshot_43.png)
 
-Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
+Seleccione "full" (o "fullRelease") como sabor para la aplicación generada. Select V1 "Jar Signature" (V2 es opcional) y haga clic en "Finish". La siguiente información puede ser importante para su uso posterior.
 
 * 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
 * Select the build type you want to build. 
@@ -250,19 +250,19 @@ Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Ja
   * pumpcontrol (i.e. remote control for pump, no looping)
   * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
 
-![Screenshot 44](../images/Installation_Screenshot_44.png)
+![Captura pantalla 44](../images/Installation_Screenshot_44.png)
 
-In the event log you see that the Signed APK was generated successfully.
+En el registro de sucesos, verá que el APK firmado se ha generado satisfactoriamente.
 
-![Screenshot 45](../images/Installation_Screenshot_45.png)
+![Captura pantalla 45](../images/Installation_Screenshot_45.png)
 
-Click the "locate" link in the event log.
+Pulse el enlace "locate" en el registro de sucesos.
 
-![Screenshot 46](../images/Installation_Screenshot_46.png)
+![Captura pantalla 46](../images/Installation_Screenshot_46.png)
 
 ## Transfer APK to smartphone
 
-A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
+Se abrirá una ventana del gestor de archivos. Puede parecer un poco diferente en su sistema, ya que estoy usando Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
 ![Screenshot 47](../images/Installation_Screenshot_47.png)
 
