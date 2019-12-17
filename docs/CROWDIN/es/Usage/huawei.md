@@ -1,36 +1,36 @@
-# How-to configure a Huawei phone
+# Cómo configurar un teléfono Huawei
 
-There are different options, some Android specific, some Huawei specific:
+Hay diferentes opciones, algunas específicas de Android, algunas específicas de Huawei:
 
-* Add AndroidAPS and xdrip+ to apps list which ignore battery optimisations:
+* Añada AndroidAPS y xdrip+ a la lista de aplicaciones que ignoran las optimizaciones de batería:
   
-  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+  * Ajustes / App / Config / Autorizaciones Especiales / Ignorar la optimización de la batería / Seleccione "Todas las aplicaciones" / Configurar aplicación a permitido
     
-    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+    ![Huawei - ignorar la optimización de la batería](../images/Huawei_BatteryOptimization.png)
 
-* Set battery option settings:
+* Establezca los valores de la opción de batería:
   
-  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
+  * Valores / aplicación / Seleccionar AndroidAPS / xdrip+ / Bajo lanzamiento de batería / aplicación
     
-    * Make sure to remove "automatic management"
-    * Allow:
+    * Asegúrese de eliminar la "gestión automática"
+    * Permitir:
       
-      * Automatic launch
-      * Secondary launch (can be launched from other apps)
-      * Background run
+      * Inicio automático
+      * Lanzamientos secundarios (se pueden lanzar desde otras aplicaciones)
+      * Ejecutar en fondo
         
-        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+        ![Huawei - opciones de batería](../images/Huawei_BatteryOptions.png)
 
-* Lock App
+* Bloquear la aplicación
   
-  * Go into App recent list and select the lock icon
+  * Ir a la Aplicación reciente de la lista y seleccione el icono de bloqueo
     
-    ![Huawei - lock app](../images/Huawei_LockApp.png)
+    ![Huawei - bloqueo de la aplicación](../images/Huawei_LockApp.png)
 
-For xdrip+, you can also enable persitent notifications (within xdrip+ app):
+Para xdrip+, también puede habilitar las notificaciones de persistencia (en la aplicación xdrip+):
 
-* Setttings / less common settings / other misc options / Run Collector in foreground
+* Setttings / valores menos comunes / otras opciones de error / Ejecutar recopilador en primer plano
   
-  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
+  ![xdrip+ ajustes - recolector en primer plano](../images/xdrip_collector_foreground.png)
 
-Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
+En función de la versión de Android, estos valores se encuentran en otro lugar. Estas explicaciones son para Android 8.1.
