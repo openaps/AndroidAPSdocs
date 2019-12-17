@@ -22,7 +22,7 @@ Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa 
 * Botones le permiten elegir qué botones están visibles en la pantalla de inicio. También le da algunas opciones para la pantalla emergente que verá después de pulsar un botón.
 * Ajuste rápido de wizard permite añadir un botón rápido para los snack o comidas, introduce los carbohidratos en la pantalla principal y selecciona el botón wizard para calcular el bolo para esos carbohidratos basado en tus ratios ( teniendo en cuenta glucosa o insulina a bordo).
 
-### Advanced Settings
+### Ajustes avanzados
 
 ![Preferencias - General - Configuración Avanzada](../images/PreferencesOverviewAdvanced_V2_5.png)
 
