@@ -11,7 +11,7 @@
 
 **Configuración bajo demanda** no está soportada por la versión actual del plugin de Gradle de Android!
 
-If your build fails with an error regarding "on demand configuration" you can do the following:
+Si la compilación falla con un error en la configuración personalizada, puede realizar lo siguiente:
 
 * Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
 * En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
@@ -29,7 +29,7 @@ If your build fails with an error regarding "on demand configuration" you can do
 
 En general, los pasos necesarios para crear el archivo APK son:
 
-* [Install git](../Installing-AndroidAPS/git-install.rst)
+* [Instala Git](../Installing-AndroidAPS/git-install.rst)
 * Instale y configura Android Studio.
 * Utilice git para clonar el código fuente desde el repositorio central de Github, donde los desarrolladores han puesto el código actual para la aplicación.
 * Abra el proyecto clonado en Android Studio como proyecto activo.
@@ -104,7 +104,7 @@ Una vez que se hayan completado las descargas, haga clic en el botón "Finish".
 
 ### Mac
 
-* Si instala git a través de un homebrew, no es necesario cambiar ninguna preferencia. Just in case: They can be found here: Android Studio - Preferences.
+* Si instala git a través de un homebrew, no es necesario cambiar ninguna preferencia. Solo por caso: se puedan encontrar aquí: Android Studio - Preferencias.
 
 ## Descargar código y componentes adicionales
 
