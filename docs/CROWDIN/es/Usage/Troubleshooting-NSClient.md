@@ -1,25 +1,25 @@
-# Troubleshooting NSClient
+# Resolución de problemas de NSClient
 
-NSClient rely on stable communication with Nightscout. Unstable connection leads to synchronization errors and high data usage.
+NSClient depende de una comunicación estable con Nightscout. Unstable connection leads to synchronization errors and high data usage.
 
 If nobody is following you on Nightscout you can pause NSClient to save (a lot) battery life or setup connection only on wifi and during charging.
 
-* How to detect unstable connection?
+* ¿Cómo detectar la conexión inestable?
 
-Go to NSClient tab in AAPS and watch the log. Common behavior is to receive PING every ~30s and almost none reconnection messages. If you see many reconnections there is a problem. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
+Vaya a la pestaña NSClient en AAPS y vea el registro. Comportamiento común es recibir PING cada ~ 30s y casi ninguno de los mensajes de reconexiones. Si ve muchas reconexiones, hay un problema. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
 
-* Restart
+* Reiniciar
 
 What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
 
-* Phone issues
+* Problemas de teléfono
 
-Android may put your phone into a sleep. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Check it again on strong network signal. Try another phone.
+Android puede poner su teléfono a dormir. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Vuelva a comprobar si hay una señal de red fuerte. Intenta con otro teléfono.
 
 * Nightscout
 
-If you are on Azure for many people helped to move to Heroku. Recently was reported Azure workaround to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Si usted está en Azure para muchas personas las ha ayudado el moverse a Heroku. Recently was reported Azure workaround to set in Application settings HTTP protocol to 2.0 and Websockets to ON
 
-* If you still get an error...
+* Si aún tienes un error...
 
-Check the size of your database in mLab. 496MB means it is full and needs to be compacted. [Follow these OpenAPS instructions for checking the size of your database](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). If compacting does not work, you should consider donating your AndroidAPS data to the Data Commons (for research) before deleting any data collections. There are [instructions in the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) for how to accomplish this.
+Compruebe el tamaño de la base de datos en el mLab. 496MB significa que está lleno y que debe ser compactado. [Follow these OpenAPS instructions for checking the size of your database](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). Si la compactación no funciona, debe considerar la posibilidad de donar sus datos AndroidAPS a los Data Commons (para investigación) antes de suprimir cualquier colección de datos. Hay [instrucciones en la documentación de OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) para la forma de llevar a cabo esto.
