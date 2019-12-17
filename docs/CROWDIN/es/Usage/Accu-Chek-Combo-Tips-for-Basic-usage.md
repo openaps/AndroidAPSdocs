@@ -45,13 +45,13 @@
 
 ![Bluetooth habilitado](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery.
-* Then put the pump back in run mode select **Resume** when lon-pressing on **Suspended** on the main screen.
-* AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
+* Suelte la tecla de bloqueo en la bomba, coloque la bomba en el modo de parada, confirmar una posible cancelación de basal temporal, y cambiar la batería.
+* A continuación, vuelva a colocar la bomba en el modo de ejecución, seleccione **Reanudar** con una presión-larga en **Suspendido** en la pantalla principal.
+* AndroidAPS volverá a establecer una tasa basal temporal necesaria con la llegada del próximo valor de glucosa en la sangre. 
 
 ### Tipos de batería y la causa de la corta vida de las mismas
 
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium ,the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
+* Como la comunicación Bluetooth intensiva consume mucha energía, sólo usa **baterías de alta calidad** como Energizer Ultimate Lithium, el "power one" del paquete de servicio "grande" Accu-Chek, o si vas a tener una batería recargable, usa baterías Eneloop. 
 
 ![Energizer](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/energizer-l91aa---image.jpg?raw=true) ![OnePower](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/PowerOne.png?raw=true)
 
@@ -61,18 +61,18 @@ Los rangos para el tiempo de vida típico de los diferentes tipos de batería so
 * **Power One Alkaline** (Varta) del envase de servcie: 2 a 4 semanas
 * **Eneloop rechargable** baterías (BK-3MCCE): de 1 a 3 semanas
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+Si la duración de la batería es claramente inferior a los rangos indicados más arriba, por favor compruebe las siguientes causas posibles:
 
 * La última versión (marzo de 2018) de la [ruffy App](https://github.com/MilosKozak/ruffy) mejoró significativamente la duración de la batería de la bomba. Asegúrate de que estás en esa versión si tienes problemas con una vida corta de batería.
 * Hay algunas variantes de la tapa de la batería de tornillos de la bomba Combo, que parcialmente cortocircuita las baterías y las drena rápidamente. Las tapas sin este problema pueden ser reconocidas por los contactos de metal dorado.
 * Si el reloj de la bomba no "sobrevive" a un cambio de batería corto, es probable que el capacitor esté roto, lo que mantiene el reloj en funcionamiento durante un breve corte de energía. En este caso, sólo una sustitución de la bomba por parte de Roche ayudará, lo cual no es un problema durante el período de garantía. 
-* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. Si tiene la oportunidad, pruebe otro smartphone y compare los tiempos de vida de la batería.
+* El hardware y el software del teléfono inteligente (sistema operativo Android y pila de bluetooth) también impactan la duración de la batería de la bomba, a pesar de que los factores exactos aún no se conocen completamente. Si tiene la oportunidad, pruebe otro smartphone y compare los tiempos de vida de la batería.
 
 ## Cambios en el horario de verano
 
 * Actualmente, el controlador de combo no soporta el ajuste automático de la hora de la bomba.
-* During the night of a daylight saving time change, the time of the smartphone is updated, but the time of the pump remains unchanged. Esto da lugar a una alarma debido a la desviación de tiempo entre los sistemas a las 3 am.
-* If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning.
+* Durante la noche de un cambio horario de horario de verano, se actualiza el tiempo del smartphone, pero el tiempo de la bomba permanece sin cambios. Esto da lugar a una alarma debido a la desviación de tiempo entre los sistemas a las 3 am.
+* Si no desea ser despertado por la noche, **desactive el cambio automático de horario de verano en el teléfono móvil** por la noche antes del cambio de tiempo y ajuste las horas manualmente a la mañana siguiente.
 
 ## Bolos extendidos, bolo Multionda
 
