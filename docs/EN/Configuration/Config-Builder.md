@@ -82,7 +82,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 - [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 - NSClient BG
 - [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-- [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+- [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 - [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
 
    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
