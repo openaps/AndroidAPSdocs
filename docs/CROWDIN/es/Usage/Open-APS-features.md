@@ -75,17 +75,17 @@ SMB está trabajando cuando hay un objetivo temporal bajo o alto activo (comer p
 
 ### Habilitar SMB con Objetivo Temporal Alto
 
-SMB está trabajando cuando hay un alto objetivo temporal activo (actividad, hipo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
+SMB está trabajando cuando hay un alto objetivo temporal activo (actividad, hipo). Esta opción puede limitar otros valores de SMB, es decir, si 'SMB con objetivos temporales' está habilitado y 'SMB con objetivos temporales altos' está desactivado, SMB sólo funciona con destinos bajos y no con altos temporales. Es lo mismo para SMB habilitado con COB: si se desactiva 'SMB con objetivos temporales altos', no hay ningún SMB con un destino de alto temporal, incluso si COB está activo.
 
 ### Habilitar SMB siempre
 
-SMB está trabajando siempre (independiente de COB, objetivos temporales o bolos). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. Por ahora, sólo funciona con Dexcom G5, si utiliza la aplicación Dexcom (parcheado) o "modalidad nativa" en xDrip+. Si un valor BG tiene una desviación demasiado grande, el G5 no lo envía y espera a que el siguiente valor se haga en 5 minutos.
+SMB está trabajando siempre (independiente de COB, objetivos temporales o bolos). Por razones de seguridad, esta opción es solamente para fuentes de BG con un buen sistema de filtrado para los datos ruidosos. Por ahora, sólo funciona con Dexcom G5, si utiliza la aplicación Dexcom (parcheado) o "modalidad nativa" en xDrip+. Si un valor BG tiene una desviación demasiado grande, el G5 no lo envía y espera a que el siguiente valor se haga en 5 minutos.
 
-For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. Usted puede encontrar más [aquí](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Para otros CGM/FGM como Freestyle Libre, 'SMB siempre' se desactiva hasta que xDrip+ tenga un mejor plugin de suavizado de ruido. Usted puede encontrar más [aquí](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Habilitar SMB después de Carbohidratos
 
-SMB está trabajando por 6h después de los hidratos de carbono, incluso si COB está en 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. Por ahora, sólo funciona con Dexcom G5, si utiliza la aplicación Dexcom (parcheado) o "modalidad nativa" en xDrip+. Si un valor BG tiene una desviación demasiado grande, el G5 no lo envía y espera a que el siguiente valor se haga en 5 minutos.
+SMB está trabajando por 6h después de los hidratos de carbono, incluso si COB está en 0. Por razones de seguridad, esta opción es solamente para fuentes de BG con un buen sistema de filtrado para los datos ruidosos. Por ahora, sólo funciona con Dexcom G5, si utiliza la aplicación Dexcom (parcheado) o "modalidad nativa" en xDrip+. Si un valor BG tiene una desviación demasiado grande, el G5 no lo envía y espera a que el siguiente valor se haga en 5 minutos.
 
 For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+ has a better noise smoothing plugin. Usted puede encontrar [más información aquí](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
@@ -93,7 +93,7 @@ For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+
 
 Esta es una configuración importante. Este valor determina la cantidad de SMB que se puede dar en función de la cantidad de insulina basal en un momento determinado, cuando no está cubierto por los COB.
 
-Esto hace que el SMB sea más agresivo. Para el principio, debe empezar por el valor predeterminado de 30 minutos. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
+Esto hace que el SMB sea más agresivo. Para el principio, debe empezar por el valor predeterminado de 30 minutos. Después de cierta experiencia, puede aumentar el valor con pasos de 15 minutos y observar cómo están afectando estos cambios.
 
 It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to adjust a decreasing BG with 0 IE/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.
 
