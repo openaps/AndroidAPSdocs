@@ -52,7 +52,7 @@ Instale [Android Studio](https://developer.android.com/studio/install.html) y co
 
 Seleccione "No importar valores", ya que no lo ha utilizado anteriormente.
 
-![Screenshot 1](../images/Installation_Screenshot_01.png)
+![Captura de pantalla 1](../images/Installation_Screenshot_01.png)
 
 Haga clic en "Siguiente".
 
