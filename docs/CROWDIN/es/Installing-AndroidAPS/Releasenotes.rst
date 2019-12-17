@@ -1,24 +1,24 @@
 Notas de la versión
 **************************************************
-Siga las instrucciones en el manual ` manual de actualización <../Installing-AndroidAPS/Update-to-new-version.html>`_. You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
+Siga las instrucciones en el manual ` manual de actualización <../Installing-AndroidAPS/Update-to-new-version.html>`_. También puede encontrar una sección de resolución de problemas que se ocupa de las dificultades más comunes cuando se actualiza en la página de actualización manual.
 
 Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
 .. imagen:: ../images/AAPS_LoopDisable90days.png
   :alt: Información de actualización
 
-Entonces tienes 60 días para actualizarte. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+Entonces tienes 60 días para actualizarte. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver `glosario <../Getting-Started/Glossary.html>`_) como en el `objetivo 6 <../Usage/Objectives.html>`_.
 
-If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
+Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
-Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, son necesarias que todas las actualizaciones de usuario a.s.a.p. (Lo antes posible).. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Gracias por tu comprensión.
+Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, son necesarias que todas las actualizaciones de usuario a.s.a.p. (Lo antes posible).. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
 Versión 2.5.1
 ==================================================
 Fecha de lanzamiento: 31-10-2019
 
 Tenga en cuenta las `notas importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes>` _ y `limitaciones <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-actualmente-is-not-soportado>` _ listados para `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
-* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
+* Se corrigió un error en el receptor de estado de red que conduce a muchos fallos (no críticos, sino que desperdiciarían mucha energía en el recálculo de cosas).
 * Nuevo mantenimiento de versiones que permitirá realizar actualizaciones menores sin activar la notificación de actualización.
 
 Versión 2.5.0
@@ -126,16 +126,16 @@ Fecha de lanzamiento: 03-11-2018
 
 Nuevas características importantes
 --------------------------------------------------
-* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
+* soporte oref1/SMB (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Esté seguro de leer la documentación para conocer que esperar de SMB, como se va a comportar, que puede alcanzar, como usarlo y operarlo suavemente.
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ soporte de la bomba
 * Asistente de configuración: le guiará a través del proceso de configuración de AndroidAPS
 
 Valores para ajustar cuando se cambia de AMA a SMB
 --------------------------------------------------
-* Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
+* El objetivo 10 debe iniciarse para que las SMB estén habilitadas (la pestaña SMB muestra generalmente las restricciones que se aplican)
 * maxIOB ahora incluye _all_ IOB, no sólo el basal añadido. Es decir, si se le da un bolo de 8 U para una comida y maxIOB es 7 U, no se entregarán SMB hasta que el IOB caiga por debajo de 7 U.
 * El valor predeterminado de min_5m_carbimpact ha cambiado de 3 a 8 llendo de AMA a SMB. Si está actualizando desde AMA a SMB, tiene que cambiarlo manualmente
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+* Nota cuando se construya AndroidAPS 2.0 apk: La configuración personalizada no está soportada por la versión actual del plugin de Android Gradle! Si la compilación falla con un error en la configuración personalizada, puede realizar lo siguiente:
 
    * Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
    * En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
@@ -144,7 +144,7 @@ Valores para ajustar cuando se cambia de AMA a SMB
 
 Pestaña general
 --------------------------------------------------
-* Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). Los TTs utilizan los valores predeterminados establecidos en las preferencias. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
+* La cinta de arriba da acceso a suspensión/desactivación del lazo, ver/ajuste perfil y a inicio/detención de objetivos temporales (TTs). Los TTs utilizan los valores predeterminados establecidos en las preferencias. La nueva opción de Hypo TT es una temporal alta TT para evitar que el lazo haga una sobrecorrección muy agresiva en el rescate de carbohidratos.
 * Botones de tratamiento: el botón de tratamiento viejo aún está disponible, pero está oculto de forma predeterminada. Ahora la visibilidad de los botones se puede configurar. Nuevo botón de insulina, nuevo botón de carbohidratos (incluyendo `eCarbs/carbs extendidos <../Usage/Extended-Carbs.html>`_)
 * `Las líneas de predicción tienen colores <../Getting-Started/Screenshots.html#section-e>`_
 * Opción para mostrar un campo de notas en los diálogos de insulina/carbs/calculadora/cebado + relleno, que se suben a NS
@@ -172,4 +172,4 @@ Misceláneo
 * Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. batería de bomba agotada) y lecturas de BG perdidas (ver _Local alerts_ en configuración)
 * Opción para mantener la pantalla encendida
 * Opción de mostrar notificaciónes como notificación Android
-* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+* Filtrado avanzado (que permite siempre habilitar SMB y 6h después de las comidas) soportado con el app de Dexcom o xDrip patched con el modo nativo G5 como fuente BG.
