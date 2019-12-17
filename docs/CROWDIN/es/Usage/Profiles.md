@@ -1,8 +1,8 @@
-# Profile switch
+# Cambio de perfil
 
 On starting your AndroidAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again (in NS or AAPS) to start using these changes.
 
-Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period. Duration of zero means infinite. Such profile is valid until new "Profile switch".
+Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period. Duración de cero significa infinito. Este perfil es válido hasta el nuevo "Cambio de perfil".
 
 To do a profile switch long-press on the name of your profile ("Aktuell (Rad)" in the picture below) and select profile switch.
 
