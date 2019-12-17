@@ -86,11 +86,11 @@ El algoritmo OpenAPS no soporta un bolo extendido en paralelo o en bolo Multiond
 
 ## Alarmas en la entrega en bolo
 
-* Si AndroidAPS detecta que un bolo idéntico ha sido entregado con éxito en el mismo minuto, la entrega en bolo se evitará con idéntico número de unidades de insulina. If you really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. Si el primer bolo se ha interrumpido o no se ha entregado por otras razones, puede volver a enviar inmediatamente el bolo desde AAPS 2.0.
-* Background is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Las entradas indistinguibles deben evitarse.
+* Si AndroidAPS detecta que un bolo idéntico ha sido entregado con éxito en el mismo minuto, la entrega en bolo se evitará con idéntico número de unidades de insulina. Si realmente quieres llegar a la misma insulina dos veces en una breve sucesión, sólo espera dos minutos más y luego reentrega el bolo de nuevo. Si el primer bolo se ha interrumpido o no se ha entregado por otras razones, puede volver a enviar inmediatamente el bolo desde AAPS 2.0.
+* El segundo plano es un mecanismo de seguridad que lee la historia del bolo de la bomba antes de enviar un bolo nuevo para calcular correctamente la insulina a bordo (IOB), incluso cuando un bolo se entrega directamente desde la bomba. Las entradas indistinguibles deben evitarse.
 
 ![Doble bolo](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
 
-* This mechanism is also responsible for a second cause of the error: If during the use of the bolus calculator another bolus is delivered via the pump and thereby the bolus history changes, the basis of the bolus calculation is wrong and the bolus is aborted. 
+* Este mecanismo también es responsable de una segunda causa del error: Si durante el uso de la calculadora en bolo se entrega otro bolo a través de la bomba y, por lo tanto, cambia la historia del bolo, la base del cálculo del bolo es errónea y el bolo es abortado. 
 
 ![Bolo cancelado](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/History_changed.png)
