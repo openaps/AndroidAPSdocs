@@ -4,7 +4,7 @@ December 2019
 ==================================================
 * `Android auto <../Usage/Android-auto.html>`_ - enter developer mode
 * `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - workaround for usage
-* `Glimp <../Usage/Android-auto.html>`_ - version 4.15.57 and newer supported
+* `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - version 4.15.57 and newer supported
 * `Watchfaces <../Configuration/Config-Builder.html#bg-source>`_ - major update, way more details
 November 2019
 ==================================================
