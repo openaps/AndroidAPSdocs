@@ -80,13 +80,13 @@ El algoritmo OpenAPS no soporta un bolo extendido en paralelo o en bolo Multiond
 
 * Aporta los carbohidratos, pero no el bolo para ellos. El algoritmo de lazo reaccionará de forma más agresiva. Si es necesario, utilice **eCarbs** (carbohidratos ampliados).
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you wth disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Si se siente tentado a utilizar el bolo extendido o de multionda directamente en la bomba, AndroidAPS le penalizará desactivando el lazo cerrado durante las próximas seis horas para asegurarse de que no se calcula ningún exceso de dosis de insulina.
 
 ![Lazo deshabilitado después del bolo Multionda](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
 ## Alarmas en la entrega en bolo
 
-* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If you really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. Si el primer bolo se ha interrumpido o no se ha entregado por otras razones, puede volver a enviar inmediatamente el bolo desde AAPS 2.0.
+* Si AndroidAPS detecta que un bolo idéntico ha sido entregado con éxito en el mismo minuto, la entrega en bolo se evitará con idéntico número de unidades de insulina. If you really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. Si el primer bolo se ha interrumpido o no se ha entregado por otras razones, puede volver a enviar inmediatamente el bolo desde AAPS 2.0.
 * Background is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Las entradas indistinguibles deben evitarse.
 
 ![Doble bolo](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
