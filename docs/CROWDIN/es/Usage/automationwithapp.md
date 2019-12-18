@@ -10,7 +10,7 @@ La aplicación gratuita de Android™ Automate le permite automatizar varias tar
 
 Usando esta herramienta puedes crear fácilmente flujos de trabajo para tratar tu diabetes en base a varias condiciones de acuerdo con el principio de 'si esto... y esto... no esto..., entonces hacer eso... y esto...'. Hay miles de posibilidades que puedes configurar.
 
-Until now it is **necessary to loop via Nightscout Profile**, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AndroidAPS app.
+Hasta ahora, es **necesario enlazar a través de Perfil de Nightscout**, ya que Automate ejecuta los comandos a través de HTTP-request directamente en su sitio web de nightscout que posteriormente sincroniza con tu app AndroidAPS.
 
 **La comunicación fuera de línea (comunicación directa entre la aplicación Automate y AndroidAPS) no está soportada todavía**, pero es técnicamente posible. Tal vez haya una solución en el futuro. Si ha averiguado una forma de hacerlo, añádelo a esta documentación o póngase en contacto con un desarrollador.
 
@@ -18,52 +18,52 @@ Until now it is **necessary to loop via Nightscout Profile**, as Automate execut
 
 #### Automate aplicación
 
-Download Android Automate in Google Play Store or at <https://llamalab.com/automate/> and install it on your smartphone where AndroidAPS runs.
+Descargar Android Automate en Google Play Store o en <https://llamalab.com/automate/> e instalarlo en tu smartphone en el que se ejecuta AndroidAPS.
 
-Go to smartphone system settings > Apps > Automate > Tap on the gear on the upper right of the screen > Check 'Run on system startup'. This will automatically run your workflows on system startup.
+Ir a smartphone ajustes del sistema > Aplicaciones > Automate > Toque en el engranaje en la parte superior derecha de la pantalla > de Verificación "Ejecutar en el arranque del sistema'. De este modo se ejecutarán automáticamente los flujos de trabajo en el arranque del sistema.
 
-![Automate HTTP request](../images/automate-app2.png)
+![Automatizar la solicitud HTTP](../images/automate-app2.png)
 
 #### AndroidAPS
 
 In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
 
-![Nightscout connection preferences](../images/automate-aaps1.jpg)
+![Preferencias de conexión de Nightscout](../images/automate-aaps1.jpg)
 
 In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Advanced Settings > Uncheck 'NS upload only (dosable sync)' and 'No upload to NS'
 
-![Nightscout download preferences](../images/automate-aaps2.jpg)
+![Preferencias de descarga de Nightscout](../images/automate-aaps2.jpg)
 
-### Workflow examples
+### Ejemplos de flujo de trabajo
 
-#### Example 1: If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
+#### Ejemplo 1: Si se detecta la actividad (por ejemplo, caminar o correr), establezcer un TT alto. Y si la actividad termina, entonces espere 20 minutos y luego cancele la TT
 
 This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bycicle present, then Automate will set a user specified high temprorary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
 
-Download the Automate script <https://llamalab.com/automate/community/flows/27808>.
+Descargue el script Automate [https://llamalab.com/automate/community/flows/ 27808](https://llamalab.com/automate/community/flows/27808).
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Editar comando pulsando en el lápiz de edición > Flowchart
 
-![Automate sling](../images/automate-app3.png)
+![Automatizar comandos](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+Personalice el flujo de trabajo según sus deseos como se indica a continuación:
 
-![Automate sling](../images/automate-app6.png)
+![Automatizar comandos](../images/automate-app6.png)
 
-1. = Set high TT
-2. = Go back to normal target 20 minutes after the end of acitivity
+1. = Establecer TT alto
+2. = Volver a la meta normal 20 minutos después del final de la acitividad
 
-1 ![Automate sling](../images/automate-app1.png)
+1 ![Automatizar comandos](../images/automate-app1.png)
 
-2 ![Automate sling](../images/automate-app5.png)
+2 ![Automatizar comandos](../images/automate-app5.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+La URL de la solicitud: Es su NS-URL con final /api/v1/tratamientos.json (por ejemplo, https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-Request content:
+Contenido de la solicitud:
 
-* targetTop / targetBottom: The high TT value (top and bottom should be the same value)
-* duration: The duration of the high TT (after time it will fallback to regular profile target unless activity goes on). 
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* objetivoAlto/objetivoBajo: el valor de TT alto (superior e inferior debe ser el mismo valor)
+* duración: la duración del TT alto (después de que se repliegue a un objetivo de perfil regular a menos que la actividad se activa). 
+* secreto: Tu hash API SHA1. NO es tu clave de api! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
 
 Save: Tap on 'Done' and on the hook
 
@@ -91,25 +91,25 @@ Default Snooze: Insert the duration you are planning to set for your low TT here
 
 Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Editar comando pulsando en el lápiz de edición > Flowchart
 
-![Automate sling](../images/automate-app3.png)
+![Automatizar comandos](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+Personalice el flujo de trabajo según sus deseos como se indica a continuación:
 
 Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
 
-![Automate sling](../images/automate-app7.png)
+![Automatizar comandos](../images/automate-app7.png)
 
-![Automate sling](../images/automate-app4.png)
+![Automatizar comandos](../images/automate-app4.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+La URL de la solicitud: Es su NS-URL con final /api/v1/tratamientos.json (por ejemplo, https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-Request content:
+Contenido de la solicitud:
 
 * targetTop / targetBottom: The low TT value (top and bottom should be the same value)
 * duration: The duration of the low TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* secreto: Tu hash API SHA1. NO es tu clave de api! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
 
 Save: Tap on 'Done' and on the hook
 
