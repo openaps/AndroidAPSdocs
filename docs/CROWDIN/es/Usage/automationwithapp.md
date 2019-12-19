@@ -2,7 +2,7 @@
 
 **Este artículo se ha escrito antes de AndroidAPS versión 2.5. Hay un plugin de automatización [en AndroidAPS](./Automation.rst) mismo con AndroidAPS versión 2.5. Para algunos, esto puede ser todavía útil, pero sólo debe ser utilizado por usuarios avanzados.**
 
-As AndroidAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Las entradas de usuario manual frecuentes se pueden automatizar a través de herramientas externas como Automate o IFTTT para ampliar las funcionalidades recientes de AndroidAPS.
+Como AndroidAPS es un sistema de lazo cerrado híbrido, es necesario una interacción de usuario (por ejemplo, decir al lazo que estás caminando, comiendo pronto, tirado en el sofá...). Las entradas de usuario manual frecuentes se pueden automatizar a través de herramientas externas como Automate o IFTTT para ampliar las funcionalidades recientes de AndroidAPS.
 
 ## Aplicación Automate de Android
 
@@ -97,7 +97,7 @@ Editar comando pulsando en el lápiz de edición > Flowchart
 
 Personalice el flujo de trabajo según sus deseos como se indica a continuación:
 
-Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
+Dentro de la "Notificación publicada" disparador, usted tiene que fijar el 'TÍTULO' en el nombre de su alerta de xDrip+ que debe disparar la activación y añadir una *variable antes y después de ese nombre.
 
 ![Automatizar comandos](../images/automate-app7.png)
 
