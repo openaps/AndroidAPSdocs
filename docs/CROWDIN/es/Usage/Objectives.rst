@@ -8,7 +8,7 @@ Si estás **actualizando teléfonos** entonces puedes `exportar tus ajustes <../
 Objetivo 1: Establecimiento de la visualización y la supervisión, análisis de las basales y las tasas
 ====================================================================================================
 * Seleccione la fuente correcta de glucosa en sangre para su configuración.  Ver `BG Source <../Configuration/BG-Source.html>`_ para más información.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
+* Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si utiliza un modelo de bomba sin el controlador AndroidAPS para bucles) para asegurarse de que el estado de la bomba se puede comunicar con AndroidAPS.  
 * Si utiliza la bomba DanaR asegúrese de haber seguido las instrucciones `DanaR Insulin Bump <../Configuration/DanaR-Insulin-Pump.html>`_ para asegurar el enlace entre la bomba y AndroidAPS.
 * Siga las instrucciones en la página `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ para asegurar que Nightscout pueda recibir y mostrar estos datos.
 * Tenga en cuenta que la URL en NSClient debe ser **SIN /api/v1/** al final - vea `NSClient settings in Preferences <../Configuration/Preferences.html#ns-client>`_.
@@ -40,7 +40,7 @@ Objetivo 4: Iniciar en un lazo abierto
 * Seleccione Abrir lazo desde Preferencias, o pulsando y manteniendo pulsado el botón de Lazo en la parte superior izquierda de la pantalla de inicio.
 * Trabaje a través de `Preferencias <../Configuration/Preferences.html>`_ para configurarlo para usted.
 * Promulgar manualmente al menos 20 de las sugerencias de la tasa basal temporal durante un período de 7 días; póngalos en su bomba y confirme en AndroidAPS que los ha aceptado.  Asegúrese de que estos datos se muestran en AndroidAPS y Nightscout.
-* Activar `objetivos temporales <../Usage/temptarget.html>`_ si es necesario. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
+* Activar `objetivos temporales <../Usage/temptarget.html>`_ si es necesario. Utilice los objetivos temporales de hipoglucemia para evitar que el sistema se corrija demasiado fuerte debido a un aumento de la glucosa en sangre tras una hipoglucemia. 
 
 Reducir el número de notificaciones
 --------------------------------------------------
@@ -54,15 +54,15 @@ Reducir el número de notificaciones
 
 Objetivo 5: Comprensión de su lazo abierto, incluidas sus recomendaciones basales temporales
 ====================================================================================================
-* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#section-e>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Comience a entender el pensamiento detrás de las recomendaciones basales temporales, mirando la `lógica para determinar basales <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ y también la `línea de pronóstico en la pantalla de inicio de AndroidAPS <../Getting-Started/Screenshots.html#section-e>`_/Nightscout y el resumen de salidas de los cálculos en la pestaña OpenAPS.
  
 Usted querrá establecer su objetivo más alto de lo normal hasta que esté seguro en los cálculos y los ajustes.  El sistema permite
 
 * un objetivo bajo es un mínimo de 4 mmol (72 mg/dl) o máximo de 10 mmol (180 mg/dl) 
 * un objetivo alto puede ser un mínimo de 5 mmol (90 mg/dl) y un máximo de 15 mmol (225 mg/dl)
-* a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+* un objetivo temporal como un solo valor puede estar en cualquier lugar en el rango de 4 mmol a 15 mmol (72 mg/dl a 225 mg/dl)
 
-The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within.  If your target is very wide (say, 3 or more mmol [50 mg/dl or more] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested. 
+El objetivo es el valor en el que se basan los cálculos, y no es el mismo que al que apuntamos para mantener la glucosa dentro del rango.  Si su objetivo es muy amplio (digamos, 3 o más mmol [50 mg/dl o más] de ancho), a menudo encontrarás poca acción de AAPS. Esto se debe a que eventualmente se prevé que la glucosa en sangre esté en algún lugar de esa amplia gama y, por lo tanto, no se sugieran muchas variaciones de basales temporales. 
 
 Es posible que desee experimentar con el ajuste de los destinos para que sea un rango más estrecho (digamos, 1 o menos mmol [20 mg/dl o menos] de ancho), y observe cómo cambia el comportamiento del sistema como resultado.  
 
@@ -87,15 +87,15 @@ El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se
 
 * Seleccionar lazo cerrado desde `Preferencias <../Configuration/Preferences.html>`_ o pulsando y manteniendo pulsado el botón Abrir Lazo en la parte superior izquierda de la pantalla de inicio.
 * Establezca el rango de destino un poco más alto de lo que normalmente pretende, sólo para estar seguros.
-* Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Asegúrese de que sus ajustes han soportado AndroidAPS para evitar tener que tratar una glucosa baja durante un período de 5 días.  If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
+* Vea cómo las basales temporales están activas al visualizar el texto basal azul en la pantalla de inicio o en la representación basal azul en el gráfico de pantalla.
+* Asegúrese de que sus ajustes han soportado AndroidAPS para evitar tener que tratar una glucosa baja durante un período de 5 días.  Si sigue teniendo episodios frecuentes o graves de glucosa baja, considere la posibilidad de ajustar las proporciones de DIA, basal, ISF y tasa de carbohidratos.
 * No tienes que cambiar tu configuración. Durante el objetivo 6, el valor de maxIOB se establece internamente en cero automáticamente. Esta alteración temporal se invertirá cuando se mueva al objetivo 7.
 
-*The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  Puede experimentar temporalmente picos después de los hipos tratados sin la posibilidad de aumentar basal en el rebote.*
+*El sistema pondrá los valores maxIOB a cero, lo que significa que si la glucosa en sangre está cayendo puede reducir el basal para usted, pero si la glucosa en sangre está aumentando entonces sólo incrementará la basal si el IOB es negativo (de un anterior Glucosa Baja Glucosa), de lo contrario las tasas basales seguirán siendo las mismas que el perfil seleccionado.  Puede experimentar temporalmente picos después de los hipos tratados sin la posibilidad de aumentar basal en el rebote.*
 
-Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
+Objetivo 7: Ajustar el lazo cerrado, elevando el IOB máximo por encima de 0 y reduciendo gradualmente los objetivos de BG
 ====================================================================================================
-* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+* Aumente su 'Máximo Total IOB OpenAPS no puede pasar' (en OpenAPS llamado 'max-iob') por encima de 0 durante un período de 1 día, la recomendación por defecto es "promedio bolos de comidas + 3x max basal diaria" (para el algoritmo SMB) o "3x max basal diaria" (para el algoritmo AMA más antiguo), pero debería trabajar lentamente hasta que sepa que los ajustes funcionan para usted (max basal diaria = el valor máximo por hora en cualquier segmento de tiempo del día).
 
   Esta recomendación debe considerarse como un punto de partida. Si se establece en el 3x y se están viendo movimientos que le empuja a cambios fuertes y rápidos, a continuación, baje ese número. Si eres muy resistente, levanta un poco a la vez.
 
@@ -107,7 +107,7 @@ Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lower
 
 Objetivo 8: ajustar las basales y proporciones si es necesario, y luego habilitar el autosensado
 ====================================================================================================
-* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate, or do a traditional basal test.
+* Puede utilizar `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ como una de las formas para comprobar que las basales siguen siendo exactas, o realizar una prueba basal tradicional.
 * Habilite `autosens <../Usage/Open-APS-features.html>`_ durante un periodo de 7 días y vea la línea blanca en el gráfico de pantalla muestra cómo su sensibilidad a la insulina puede estar aumentando o cayendo como resultado del ejercicio o de las hormonas, etc, y manteniendo un ojo en la pestaña de informe OpenAPS cómo AndroidAPS está ajustando las basales y/o los objetivos en consecuencia.
 
 *No olvide registrar su lazo en `este formulario <http://bit.ly/nowlooping>`_ registrando AndroidAPS como su tipo de software de bucle DIY, si aún no lo has hecho.*
@@ -116,11 +116,11 @@ Objetivo 8: ajustar las basales y proporciones si es necesario, y luego habilita
 Objetivo 9: Habilitación de funciones adicionales de oref0 para el uso horario, como por ejemplo la ayuda para comidas avanzadas (AMA)
 ====================================================================================================
 * Ahora usted debe sentirse seguro con cómo AndroidAPS funciona y cuáles son los ajustes que reflejan su diabetes mejor
-* Then over a period of 28 days you can try additional features that automate even more of the work for you such as the `advanced meal assist <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
+* A continuación, durante un período de 28 días, puede probar características adicionales que automatizan aún más el trabajo para usted, como la `asistencia de comida avanzada <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_
 
 
-Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+Objetivo 10: Habilitación adicional oref1 características para uso durante el día, tales como super micro bolo (SMB)
 ====================================================================================================
-* You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
-* A continuación, usted debe `subir maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ para tener los SMBs trabajando bien. maxIOB ahora incluye todo IOB, no sólo la basal añadida. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
+* Debe leer el capítulo `SMB en este wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ y `capítulo oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ para entender cómo funciona SMB, especialmente cuál es la idea detrás de cero-temporal.
+* A continuación, usted debe `subir maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ para tener los SMBs trabajando bien. maxIOB ahora incluye todo IOB, no sólo la basal añadida. Es decir, si se le da un bolo de 8 U para una comida y maxIOB es 7 U, no se entregarán SMB hasta que el IOB caiga por debajo de 7 U. Un buen inicio es maxIOB = promedio bolos de comidas + 3x valor máximo diario (máx. basal diario = el valor máximo por hora en cualquier segmento de tiempo del día - vea `objetivo 7 <../Usage/Objectives.html#objective-7-tuning-the-cerró-loop-loop-max-iob-arriba-0-and-gradualmente-lowering-bg-targets>`_ para una ilustración)
 * El valor predeterminado de min_5m_carbimpact en los valores de absorción ha cambiado de 3 a 8 al ir de AMA a SMB. Si está actualizando desde AMA a SMB, tiene que cambiarlo manualmente
