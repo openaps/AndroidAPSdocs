@@ -2,11 +2,11 @@
 
 **Este artículo se ha escrito antes de AndroidAPS versión 2.5. Hay un plugin de automatización [en AndroidAPS](./Automation.rst) mismo con AndroidAPS versión 2.5. Para algunos, esto puede ser todavía útil, pero sólo debe ser utilizado por usuarios avanzados.**
 
-As AndroidAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AndroidAPS functionality.
+As AndroidAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Las entradas de usuario manual frecuentes se pueden automatizar a través de herramientas externas como Automate o IFTTT para ampliar las funcionalidades recientes de AndroidAPS.
 
 ## Aplicación Automate de Android
 
-La aplicación gratuita de Android™ Automate le permite automatizar varias tareas en el smartphone. Create your automations with flowscharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. Puede automatizar casi todo lo que esté en su dispositivo, Automatizar incluso los plugins de soporte realizados para Tareas y Localización.
+La aplicación gratuita de Android™ Automate le permite automatizar varias tareas en el smartphone. Cree sus automatizaciones con diagramas de flujo, haga que su dispositivo cambie automáticamente la configuración como Bluetooth, Wi-Fi, NFC o realice acciones como enviar SMS, correo electrónico, en función de su ubicación, la hora del día, o cualquier otro "evento desencadenante". Puede automatizar casi todo lo que esté en su dispositivo, Automatizar incluso los plugins de soporte realizados para Tareas y Localización.
 
 Usando esta herramienta puedes crear fácilmente flujos de trabajo para tratar tu diabetes en base a varias condiciones de acuerdo con el principio de 'si esto... y esto... no esto..., entonces hacer eso... y esto...'. Hay miles de posibilidades que puedes configurar.
 
@@ -26,11 +26,11 @@ Ir a smartphone ajustes del sistema > Aplicaciones > Automate > Toque en el engr
 
 #### AndroidAPS
 
-In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
+En AndroidAPS NSClient, pulse sobre el engranaje en la parte superior derecha de la pantalla y vaya a la configuración de la Conexión > Desmarcar la casilla "Utilizar la conexión WiFi solo" y "Sólo si la carga' ya que el sistema automatizado sólo funciona cuando AndroidAPS tiene una conexión con nightscout.
 
 ![Preferencias de conexión de Nightscout](../images/automate-aaps1.jpg)
 
-In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Advanced Settings > Uncheck 'NS upload only (dosable sync)' and 'No upload to NS'
+En AndroidAPS NSClient, pulse sobre el engranaje en la parte superior derecha de la pantalla y vaya a Configuración Avanzada > Desmarcar la casilla " NS solo cargar (dosable sync)' y 'No subir a NS'
 
 ![Preferencias de descarga de Nightscout](../images/automate-aaps2.jpg)
 
@@ -38,7 +38,7 @@ In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Adva
 
 #### Ejemplo 1: Si se detecta la actividad (por ejemplo, caminar o correr), establezcer un TT alto. Y si la actividad termina, entonces espere 20 minutos y luego cancele la TT
 
-This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bycicle present, then Automate will set a user specified high temprorary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
+Este flujo de trabajo se escucha en el teléfono inteligente con los sensores (podómetro, sensor de gravedad...) que detectan la actividad por el comportamiento. Si hay actividad reciente como caminar, correr o montar una bicicleta, Automate establecerá un destino de alto nivel de temporal especificado por el usuario para el tiempo especificado por el usuario. Si la actividad termina, el smartphone lo detectará, esperará 20 minutos y, a continuación, establecerá el objetivo en el valor de perfil normal.
 
 Descargue el script Automate [https://llamalab.com/automate/community/flows/ 27808](https://llamalab.com/automate/community/flows/27808).
 
@@ -71,7 +71,7 @@ Inicio de comando: pulse en el botón Play
 
 #### Ejemplo 2: Si xDrip+ da una alarma BG alta, entonces se establece un bajo TT para ... minutos.
 
-Este flujo de trabajo escuchará el canal de notificación xDrip+. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temprorary target for the user specified time. Después del tiempo, otra posibilidad es alertar para prolongar la duración del TT bajo.
+Este flujo de trabajo escuchará el canal de notificación xDrip+. Si se desencadena una alerta por alta BG especificada por el usuario en xDrip+ Automate establecerá un objetivo de bajo nivel temporal especificado por el usuario para el tiempo especificado por el usuario. Después del tiempo, otra posibilidad es alertar para prolongar la duración del TT bajo.
 
 ##### xDrip+
 
