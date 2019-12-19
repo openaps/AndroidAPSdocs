@@ -10,7 +10,7 @@ Cómo se usa:
 * En la aplicación Android Auto, toca el menú Hamburgesa (tres líneas horizontales)
 * Toca sobre.
 * Tap the version and permission info 10 times, until a toast appears that says "Developer mode enabled".
-* Now you can access developer mode by selecting the overflow menu dots on the top right of the handheld screen and go into developpers settings.
+* Ahora puede acceder a la modalidad de desarrollador seleccionando los puntos del menú de desbordamiento en la parte superior derecha de la pantalla portátil e ir a los valores de desarrollo.
 * Seleccione orígenes desconocidos (desplácese hacia abajo hasta la parte inferior de la lista).
 * Ahora puede salir del modo de desarrollo si lo desea. Toque tres puntos en el menú de arriba a la derecha para hacerlo.
 
