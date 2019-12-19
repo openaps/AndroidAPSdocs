@@ -25,17 +25,17 @@ Si se utiliza la absorción mínima de carbohidratos (min_5m_carbimpact) en luga
 Detección de valores COB incorrectos
 ==================================================
 
-As of version 2.4, AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard. 
+A partir de la versión 2.4, AAPS le avisa si está a punto de bolo con COB de una comida previa y el algoritmo cree que el cálculo de COB actual podría estar mal. En este caso, le dará una sugerencia adicional en la pantalla de confirmación después del uso del asistente en bolo. 
 
-How does AndroidAPS detect wrong COB values? 
+¿Cómo detecta AndroidAPS valores de COB erróneo? 
 --------------------------------------------------
 
-Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
+Normalmente, AAPS detecta la absorción de carbohidros a través de desviaciones de BG. En caso de que haya especificado carbohidratos, pero AAPS no puede ver su absorción estimada a través de las desviaciones BG, utilizará el método `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ para calcular la absorción en su lugar (lo que se denomina 'fallback'). Como este método calcula sólo la absorción mínima de carbohidratos sin considerar desviaciones de BG, podría llevar a valores de COB incorrectos.
 
-.. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-  :alt: Hint on wrong COB value
+.. imagen:: ../images/Calculator_SlowCarbAbsorbtion.png
+  :alt: Pista de un valor COB incorrecto
 
-In the screenshot above, 41% of1 time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Esto significa que tal vez tenga menos carbohidratos a bordo que los calculados por el algoritmo. 
+En la captura de pantalla de arriba, 41% de 1 vez que la absorción de carbohidratos fue calculada matemáticamente por el min_5m_carbimpacto en lugar del valor detectado de las desviaciones.  Esto significa que tal vez tenga menos carbohidratos a bordo que los calculados por el algoritmo. 
 
 ¿Cómo hacer frente a esta advertencia? 
 --------------------------------------------------
@@ -49,6 +49,6 @@ In the screenshot above, 41% of1 time the carb absorption was mathematically cal
 --------------------------------------------------
 
 - Tal vez sobreestimaste los carbohidratos cuando los entraste.  
-- Activity / exercise after your previous meal
+- Actividad / ejercicio después de la comida anterior
 - I:C necesita ajuste
 - El valor de min_5m_carbimpact es incorrecto (el recomendado es 8 con SMB, 3 con AMA)
