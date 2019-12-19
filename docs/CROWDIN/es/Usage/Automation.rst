@@ -3,7 +3,7 @@ Automatización
 
 Qué es la automatización
 ==================================================
-Para los mismos sucesos frecuentes, es posible que siempre tenga que cambiar los mismos valores. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. P.e. cuando su BG es demasiado bajo, puede decidir tener automáticamente un objetivo temporal alto. O si estás en tu centro de fitness, obtienes automáticamente un objetivo temporal. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Para los mismos sucesos frecuentes, es posible que siempre tenga que cambiar los mismos valores. Para evitar el trabajo extra, puede simplemente intentar automatizar el evento si puede especificarlo lo suficientemente bien y dejar que lo haga automáticamente. P.e. cuando su BG es demasiado bajo, puede decidir tener automáticamente un objetivo temporal alto. O si estás en tu centro de fitness, obtienes automáticamente un objetivo temporal. Antes de utilizar Automatización, debe tener confianza en los `objetivos temporales <./temptarget.html>` _ o en los conmutadores de perfil. 
 
 .. imagen:: ../images/Automation_ConditionAction_RC3.png
   :alt: Condición de automatización + acción
@@ -72,14 +72,14 @@ Puede elegir una o varias acciones:
    * debe estar entre el 70% y el 130% 
    * sólo funciona si el porcentaje anterior es 100%
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+Después de añadir la acción, **no olvide cambiar los valores por defecto** a lo que necesita pulsando en los valores predeterminados.
  
 .. imagen:: ../images/Automation_Default_V2_5.png
   :alt: Valor por omisión de automatización frente a. valores del usuario
 
 Buenas prácticas
 ==================================================
-* When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
+* Cuando empiece a utilizar la automatización o cree una regla nueva, añada una notificación hasta que esté seguro de que la regla funciona bien.
 * Cuál es el resultado de las reglas.
 
 Ejemplos
@@ -102,7 +102,7 @@ Objetivo temporal para hora de almuerzo
 .. imagen:: ../images/Automation3.png
   :alt: Automation3
   
-These example is made by a person, that has lunch at the same time during the week. Si se encuentra en un momento determinado en su lugar de almuerzo, obtiene un objetivo temporal más bajo (comer pronto) mientras espera a la comida. Debido a la conexión "And", sólo ocurre durante el tiempo y la ubicación. Así que no funciona en ningún otro momento en este lugar o en este momento cuando las personas se quedan en casa o trabajan más tiempo. 
+Este ejemplo es realizado por una persona, que tiene el almuerzo a la misma hora durante la semana. Si se encuentra en un momento determinado en su lugar de almuerzo, obtiene un objetivo temporal más bajo (comer pronto) mientras espera a la comida. Debido a la conexión "And", sólo ocurre durante el tiempo y la ubicación. Así que no funciona en ningún otro momento en este lugar o en este momento cuando las personas se quedan en casa o trabajan más tiempo. 
 
 Uso incorrecto de la automatización
 --------------------------------------------------
