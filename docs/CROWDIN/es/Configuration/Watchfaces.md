@@ -161,10 +161,10 @@ Complications also serve as **shortcut** to AAPS functions. By tapping them you 
 
 AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
-* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-* `LONG TEXT` - Contains two lines of text, about 20 characters each. Normalmente se representa dentro de un rectángulo o una píldora larga - una debajo de otra. Se utiliza para obtener más detalles y el estado.
+* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Normalmente se representa dentro de un círculo o una píldora pequeña - una por debajo de otra, o lado a lado. It is a very space-limited complication. AAPS intenta eliminar los caracteres innecesarios para adaptarse redondeando valores, eliminando los ceros iniciales y finales de los valores, etc.
+* `TEXTO LARGO` - Contiene dos líneas de texto, acerca de 20 caracteres cada una. Normalmente se representa dentro de un rectángulo o una píldora larga - una debajo de otra. Se utiliza para obtener más detalles y el estado.
 * `RANGO DE VALORES` -Utilizado para valores de rango predefinido, como un porcentaje. Contiene el icono, la etiqueta y se representa normalmente como porcentaje de progreso de un círculo.
-* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
+* `IMAGEN LARGA` -Imagen de fondo personalizada que se puede utilizar (cuando está soportado por la pantalla) como fondo.
 
 ### Complication Setup
 
@@ -178,11 +178,11 @@ AndroidAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
-* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
-* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
-* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
-* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
+* **BR, CoB & IoB** (`TEXTO CORTO`, abre *Menú*): Muestra *Basal* en la primera línea y *Carbohidratos a Bordo* y *de Insulina a Bordo* en la segunda línea.
+* **Blood Glucose** (`SHORT TEXT`, abre *Menu*): Muestra valor de *Glucos en Sangre* y *tendencia* flecha en la primera línea y *tiempo de medición* y *delta BG* en la segunda línea.
+* **CoB & IoB** (`TEXTO CORTO`, abre *Menú*): Muestra *Carbohidratos a Bordo* en la primera línea e *Insulina a Bordo* en la segunda línea.
+* **CoB Detallada** (`TEXTO CORTO`, abre *Asistente*): Muestra los *Carbohidratos a Bordo* activos en la primera línea y los planificados (futuros, eCarbs) Carbohidrátos en la segunda línea.
+* **CoB Icono** (`TEXTO CORTO`, abre *Asistente*): Muestra el valor de los *Carbohidratos a Bordo* con un icono estático.
 * **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
 * **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
 * **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
