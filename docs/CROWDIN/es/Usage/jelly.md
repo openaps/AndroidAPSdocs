@@ -5,17 +5,17 @@
 ### Ventajas Jelly
 
 * Es realmente pequeño.
-* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
+* Incluso si se lo dice a la gente, es posible que no lo consideren como un smartphone normal y lo hará más fácil como una excepción cuando los teléfonos normalmente no están permitidos.
 
 ### Inconvenientes Jelly
 
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Algunos botones de AAPS son difíciles de tocar con mucha sensación, pero no con los dedos rechonchos.)
+* Recomendado sólo para los loopers experimentados (algunos ajustes no son reconocibles, tienes que tener la experiencia de un teléfono grande Android AAPS, cómo y dónde se encuentra cada cosa. Algunos botones de AAPS son difíciles de tocar con mucha sensación, pero no con los dedos rechonchos.)
 * Sólo se puede utilizar como LooperPhone. Es mejor tener un smartphone normal en tu bolsillo. 
 * Si no tratas a Jelly como una diva (Siempre (¡) llevalo contigo!) Jelly muestra su lado amargo, desconecta todos los Bluetooth y se enfurruña hasta que lo reinicies. 
 
 ## Optimización de la duración de la batería Jelly Pro
 
-The following settings and handling advice (use watch for daily operations instead of Jelly smartphone) lead to approx. 35 hours of battery life. Un modo de ahorro de batería adicional no es necesario, más bien contraproducente, por lo tanto, apagalo.
+Los siguientes valores y consejos de manejo (uso de reloj para las operaciones diarias en lugar de un smartphone Jelly) llevan a aproximadamente 35 horas de duración de batería. Un modo de ahorro de batería adicional no es necesario, más bien contraproducente, por lo tanto, apagalo.
 
 ![Teléfono inteligente Jelly](../images/jelly_01.jpg)
 
@@ -56,7 +56,7 @@ Siga estas reglas para permanecer con Andorid 7.0:
 
 ![Jelly vertical + vista horizontal](../images/jelly_04.jpg)
 
-* El titulo en la pantalla de inicio del teléfono puede contener hasta 6 iconos a la derecha. El reloj necesita dos de ellos. So if 5 are already occupied (i.e. bluetooth, do not disturb, no SIM card, flight mode and the battery indicator), no clock will be displayed. Aumente brevemente el volumen con el botón en la esquina superior izquierda, y el reloj aparece en la cabecera. ;-)
+* El titulo en la pantalla de inicio del teléfono puede contener hasta 6 iconos a la derecha. El reloj necesita dos de ellos. Así que si 5 ya están ocupados (es decir, bluetooth, no molestar, no hay tarjeta SIM, modo de vuelo y el indicador de la batería), no se mostrará ningún reloj. Aumente brevemente el volumen con el botón en la esquina superior izquierda, y el reloj aparece en la cabecera. ;-)
 * El "despertador", que inicialmente (con la configuración de fábrica) aparece en la pantalla de inicio debajo de la hora, es probablemente una segunda zona horaria. Desactive esta opción ya que AAPS puede acceder al huso horario incorrecto (Settings > System > Date&Time > Automatic Time Zone > OFF). Utilice el tiempo proporcionado por la red en su lugar.
 * Una captura de pantalla puede tomarse presionando el botón de silencio (inferior izquierda) + el botón (derecha) simultáneamente. 
 
