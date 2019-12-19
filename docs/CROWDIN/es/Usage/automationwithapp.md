@@ -1,6 +1,6 @@
 # Automatización con la aplicación Automate de Android de terceros
 
-**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.rst) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**Este artículo se ha escrito antes de AndroidAPS versión 2.5. Hay un plugin de automatización [en AndroidAPS](./Automation.rst) mismo con AndroidAPS versión 2.5. Para algunos, esto puede ser todavía útil, pero sólo debe ser utilizado por usuarios avanzados.**
 
 As AndroidAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AndroidAPS functionality.
 
@@ -63,33 +63,33 @@ Contenido de la solicitud:
 
 * objetivoAlto/objetivoBajo: el valor de TT alto (superior e inferior debe ser el mismo valor)
 * duración: la duración del TT alto (después de que se repliegue a un objetivo de perfil regular a menos que la actividad se activa). 
-* secreto: Tu hash API SHA1. NO es tu clave de api! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* secreto: Tu hash API SHA1. NO es tu clave de api! Puede convertir la clave de API al formato SHA1 en <http://www.sha1-online.com/>
 
-Save: Tap on 'Done' and on the hook
+Guardar: Pulse en 'Hecho' y en el enganche
 
-Start sling: Tap on Play button
+Inicio de comando: pulse en el botón Play
 
-#### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes.
+#### Ejemplo 2: Si xDrip+ da una alarma BG alta, entonces se establece un bajo TT para ... minutos.
 
-This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temprorary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
+Este flujo de trabajo escuchará el canal de notificación xDrip+. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temprorary target for the user specified time. Después del tiempo, otra posibilidad es alertar para prolongar la duración del TT bajo.
 
 ##### xDrip+
 
-First, you must add a BG high alert in xDrip+ as follows:
+En primer lugar, debe añadir una alerta máxima de BG en xDrip+ como se indica a continuación:
 
-![xDrip+ alert settings](../images/automate-xdrip1.png)
+![valores de alerta de xDrip+](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for fireing the trigger. It should be unmistakeable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
+Nombre de alerta: (Presta atención en él!) Este nombre es esencial para activar el disparador. Debe ser inconfundible y no similar a otros nombres de alertas. Ejemplo: '180alarm' no debe existir junto a '80alarm'.
 
-Threshold: BG value that should fire the high alert.
+Umbral: Valor de BG que debe activar la alerta máxima.
 
-Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
+Tiempo de espera predefinido: Inserte la duración que planea establecer para su TT baja aquí, ya que la alerta volverá a aparecer y tal vez prorrogue la duración de la baja TT.
 
-![xDrip+ alert settings](../images/automate-xdrip2.png)
+![valores de alerta de xDrip+](../images/automate-xdrip2.png)
 
 ##### Automate
 
-Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
+En segundo lugar, descargue el script Automate [https://llamalab.com/automate/community/flows/ 27809](https://llamalab.com/automate/community/flows/27809).
 
 Editar comando pulsando en el lápiz de edición > Flowchart
 
@@ -107,18 +107,18 @@ La URL de la solicitud: Es su NS-URL con final /api/v1/tratamientos.json (por ej
 
 Contenido de la solicitud:
 
-* targetTop / targetBottom: The low TT value (top and bottom should be the same value)
-* duration: The duration of the low TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
-* secreto: Tu hash API SHA1. NO es tu clave de api! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* objetivoAlto / objetivoBajo: el valor bajo de TT (superior e inferior debe ser el mismo valor)
+* duración: la duración del TT bajo (después de que se repliegue a un objetivo de perfil regular a menos que la actividad se activa). Se recomienda que utilice la misma duración que en la alerta xDrip+ 'Tiempo de espera predefinido'
+* secreto: Tu hash API SHA1. NO es tu clave de api! Puede convertir la clave de API al formato SHA1 en <http://www.sha1-online.com/>
 
-Save: Tap on 'Done' and on the hook
+Guardar: Pulse en 'Hecho' y en el enganche
 
-Start sling: Tap on Play button
+Inicio de comando: pulse en el botón Play
 
-#### Example 3: To be added by you!!!
+#### Ejemplo 3: Para ser añadido por ti!!!
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSdocs repository](../make-a-PR.md).
+Por favor agregue más flujos de trabajo subiendo .flo archivos para automatizar en la comunidad (bajo la palabra clave 'Nightscout') y describirlo aquí haciendo [Pull Request en el repositorio AndroidAPSdocs](../make-a-PR.md).
 
-## If this, then that (IFTTT)
+## Si esto, entonces eso (IFTTT)
 
-Feel free to add a Howto by PR...
+Siéntase libre de añadir un cómo por PR...
