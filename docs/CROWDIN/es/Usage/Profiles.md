@@ -8,11 +8,11 @@ Para hacer un cambio de perfil de larga duración en el nombre de su perfil ("Ak
 
 ![Realizar un cambio de perfil](../images/ProfileSwitch_HowTo.png)
 
-If you use "Profile switch" with duration profile is switched back to previous valid "Profile switch"
+Si utiliza "Cambio de perfil" con el perfil de duración, se vuelve a cambiar al "Conmutador de perfil" válido anterior
 
 Si utiliza perfiles de AAPS locales (Simple, Local, CPP), tiene que pulsar el botón para aplicar estos cambios (crea un suceso de "cambio de perfil" adecuado).
 
-Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
+Dentro del "cambio de perfil", puede elegir dos cambios adicionales que se utilizaron para formar parte del perfil de porcentaje de circuito:
 
 ## Porcentaje
 
