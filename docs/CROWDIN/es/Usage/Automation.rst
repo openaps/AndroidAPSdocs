@@ -3,7 +3,7 @@ Automatización
 
 Qué es la automatización
 ==================================================
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. P.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Para los mismos sucesos frecuentes, es posible que siempre tenga que cambiar los mismos valores. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. P.e. cuando su BG es demasiado bajo, puede decidir tener automáticamente un objetivo temporal alto. O si estás en tu centro de fitness, obtienes automáticamente un objetivo temporal. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
 
 .. imagen:: ../images/Automation_ConditionAction_RC3.png
   :alt: Condición de automatización + acción
@@ -48,24 +48,24 @@ Usted puede elegir entre varias condiciones. Aquí están algunos componentes ex
 * Tiempo vs. hora de Repetición
 
    * hora = suceso de una sola vez
-   * hora recurrente = algo que ocurre regulamente (por ejemplo. once a week, every working day etc.)
+   * hora recurrente = algo que ocurre regulamente (por ejemplo. una vez a la semana, todos los días laborables, etc.)
    
-* location: in the config builder (Automation), you can select which location service you want to use:
+* ubicación: en el constructor de configuración (Automatización), puede seleccionar el servicio de ubicación que desea utilizar:
 
-  * Use passive location: AAPS only takes locations if other apps are requesting it
-  * Use network location: Location of your Wifi
-  * Use GPS location (Attention! May cause excessive battery drain!)
+  * Usar ubicación pasiva: AAPS sólo toma ubicaciones si otras aplicaciones lo están solicitando
+  * Usar la ubicación de la red: la ubicación de su Wifi
+  * Usar localización GPS (Atención! ¡ Puede provocar una descarga excesiva de la batería!)
   
-Action
+Acción
 --------------------------------------------------
-You can choose one or more actions: 
+Puede elegir una o varias acciones: 
 
-* start temp target 
+* iniciar objetivo temporal 
 
-   * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-   * works only if there is no previous temp target
+   * debe estar entre 72 mg/dl y 270 mg/dl (4 mmol/l y 15 mmol/l)
+   * sólo funciona si no hay ningún valor temporal anterior
    
-* stop temp target
+* detener objetivo temporal
 * notificación
 * porcentaje de perfil
 
@@ -102,19 +102,19 @@ Objetivo temporal para hora de almuerzo
 .. imagen:: ../images/Automation3.png
   :alt: Automation3
   
-These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
+These example is made by a person, that has lunch at the same time during the week. Si se encuentra en un momento determinado en su lugar de almuerzo, obtiene un objetivo temporal más bajo (comer pronto) mientras espera a la comida. Debido a la conexión "And", sólo ocurre durante el tiempo y la ubicación. Así que no funciona en ningún otro momento en este lugar o en este momento cuando las personas se quedan en casa o trabajan más tiempo. 
 
-Incorrect use of Automation
+Uso incorrecto de la automatización
 --------------------------------------------------
-As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
+Como cualquier Automatización de sistema se puede utilizar de forma incorrecta. Esto podría conducir a dificultades e incluso a un peligro para su salud. Por ejemplo, los ejemplos de uso incorrecto son:
 
-* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-* Setting profile to compensate food
-* Setting profile without duration
-* Creating one way rules (i.e. do something but don't undo it by another rule)
-* Creating long term rules
+* Tratar de alterar temporalmente el algoritmo en lugar de sólo ayuda (por ejemplo. cambiando el perfil en lugar de ajustar basal, IC, etc.)
+* Estableciendo perfil para compensar a los alimentos
+* Establecimiento de un perfil sin duración
+* Creación de reglas de un sentido (por ejemplo. hacer algo, pero no deshacerlo con otra regla)
+* Creando reglas a largo plazo
 
-Alternatives
+Alternativas
 ==================================================
 
-For advanced users there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
+Para los usuarios avanzados hay otras posibilidades para automatizar las tareas usando IFTTT o una aplicación de Android llamada Automate. Algunos ejemplos se pueden encontrar `aquí <./automationwithapp.html>`_.
