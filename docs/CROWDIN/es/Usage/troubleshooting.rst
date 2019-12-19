@@ -33,9 +33,9 @@ MCG
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
 * `xDrip-no hay datos MCG <../Configuration/xdrip.html#identify-receiver>`_
-* `xDrip - Dexcom troubleshooting <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
+* `Solución de problemas de xDrip - Dexcom <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
 
-Pumps
+Bombas
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
 * `Accu-Chek Combo general <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
@@ -46,4 +46,4 @@ Pumps
 Teléfonos
 ==================================================
 * `Jelly <../Usage/jelly.html>`_
-* `Huawei bluetooth & battery optimization <../Usage/huawei.html>`_
+* `Optimización de batería y bluetooth de Huawei <../Usage/huawei.html>`_
