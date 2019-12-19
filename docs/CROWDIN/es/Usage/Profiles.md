@@ -1,16 +1,16 @@
 # Cambio de perfil
 
-Al iniciar el AndroidAPS y seleccionar su perfil, tendrá que hacer un evento de "Conmutador de perfil" con una duración cero (explicado más tarde). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again (in NS or AAPS) to start using these changes.
+Al iniciar el AndroidAPS y seleccionar su perfil, tendrá que hacer un evento de "Conmutador de perfil" con una duración cero (explicado más tarde). Al hacer esto en AAPS se inicia el seguimiento de la historia de los perfiles y cada cambio de perfil nuevo requiere otro "Conmutador de perfil" incluso cuando cambia el contenido del perfil en NS. El perfil actualizado se envía a AAPS de forma inmediata, pero es necesario volver a cambiar el mismo perfil (en NS o AAPS) para empezar a utilizar estos cambios.
 
 Internamente, AAPS crea una instantánea de perfil con fecha de inicio y duración y se la está utilizando en el periodo seleccionado. Duración de cero significa infinito. Este perfil es válido hasta el nuevo "Cambio de perfil".
 
-To do a profile switch long-press on the name of your profile ("Aktuell (Rad)" in the picture below) and select profile switch.
+Para hacer un cambio de perfil de larga duración en el nombre de su perfil ("Aktuell (Rad)" en la imagen siguiente) y seleccione el cambio de perfil.
 
 ![Realizar un cambio de perfil](../images/ProfileSwitch_HowTo.png)
 
 If you use "Profile switch" with duration profile is switched back to previous valid "Profile switch"
 
-If you use local AAPS profiles (Simple, Local, CPP) you have to press button there to apply these changes (it creates proper "Profile switch" event).
+Si utiliza perfiles de AAPS locales (Simple, Local, CPP), tiene que pulsar el botón para aplicar estos cambios (crea un suceso de "cambio de perfil" adecuado).
 
 Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
@@ -35,14 +35,14 @@ Within the "profile switch" you can choose two additional changes which used to 
   * Hora actual: 12:00
   * **Positivo** cambio de tiempo 
     * 2:00 **+10 h** -> 12:00
-    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
+    * La configuración de las 2:00 se utilizará en lugar de la configuración utilizada normalmente a las 12:00, debido al cambio positivo de tiempo.
   * **Negativo** cambio de tiempo 
     * 22:00 **-10 h** -> 12:00
-    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    * Los valores de 22:00 (22:00) se utilizarán en lugar de los valores que se utilizan normalmente a las 12:00 debido al cambio de hora negativo.
 
 ![Cambio de perfil indicaciones para la fecha/hora](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+Este mecanismo de toma de instantáneas del perfil permite realizar cálculos mucho más precisos del pasado y la posibilidad de realizar un seguimiento de los cambios de perfil.
 
 ## Resolución de errores de perfil
 
