@@ -9,24 +9,24 @@ Objective 1: Setting up visualization and monitoring, analysing basals and ratio
 ====================================================================================================
 * Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
 * Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
-* If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ page to ensure Nightscout can receive and display this data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#ns-client>`_.
+* Si utiliza la bomba DanaR asegúrese de haber seguido las instrucciones `DanaR Insulin Bump <../Configuration/DanaR-Insulin-Pump.html>`_ para asegurar el enlace entre la bomba y AndroidAPS.
+* Siga las instrucciones en la página `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ para asegurar que Nightscout pueda recibir y mostrar estos datos.
+* Tenga en cuenta que la URL en NSClient debe ser **SIN /api/v1/** al final - vea `NSClient settings in Preferences <../Configuration/Preferences.html#ns-client>`_.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*Es posible que tengas que esperar a que llegue la próxima lectura de glucosa en sangre para que AndroidAPS la reconozca.*
 
-Objective 2: Learn how to control AndroidAPS
+Objetivo 2: Aprender a controlar AndroidAPS
 ==================================================
-* Perform several actions in AndroidAPS as described in this objective.
-* Click on the orange text "Not completed yet" to access the to-dos.
-* Links will be provided to guide you in case you are not familiar with a specific action yet.
+* Llevar a cabo varias acciones en AndroidAPS como se describe en este objetivo.
+* Haga clic en el texto naranja "Aún no completado" para acceder a los tareas.
+* Se proporcionarán enlaces para guiarle en caso de que aún no esté familiarizado con una acción específica.
 
-   .. image:: ../images/Objective2_V2_5.png
-     :alt: Screenshot objective 2
+   .. imagen:: ../images/Objective2_V2_5.png
+     :alt: Captura de pantalla de objetivo 2
 
-Objective 3: Prove your knowledge
+Objetivo 3: Demuestra tus conocimientos
 ==================================================
-* Pass a multiple-choice exam testing your AndroidAPS knowledge.
+* Pasar un examen de múltiples opciones probando su conocimiento de AndroidAPS.
 * Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
    .. image:: ../images/Objective3_V2_5.png
@@ -35,12 +35,12 @@ Objective 3: Prove your knowledge
 * Links will be provided to guide you in case you are unsure about the correct answers yet.
 * Only if you have been closed looping with another system (i.e. OpenAPS, iOS Loop) before and can proof this (i.e. at least 3 months of looping data in Nightscout), you can send an email to `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ with your NS address and request code to bypass the rest of objectives.
 
-Objective 4: Starting on an open loop
+Objetivo 4: Iniciar en un lazo abierto
 ==================================================
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the `Preferences <../Configuration/Preferences.html>`_ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
-* Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
+* Seleccione Abrir lazo desde Preferencias, o pulsando y manteniendo pulsado el botón de Lazo en la parte superior izquierda de la pantalla de inicio.
+* Trabaje a través de `Preferencias <../Configuration/Preferences.html>`_ para configurarlo para usted.
+* Promulgar manualmente al menos 20 de las sugerencias de la tasa basal temporal durante un período de 7 días; póngalos en su bomba y confirme en AndroidAPS que los ha aceptado.  Asegúrese de que estos datos se muestran en AndroidAPS y Nightscout.
+* Activar `objetivos temporales <../Usage/temptarget.html>`_ si es necesario. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
 
 Reduce number of notifications
 --------------------------------------------------
