@@ -11,7 +11,7 @@
 
 * Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Algunos botones de AAPS son difíciles de tocar con mucha sensación, pero no con los dedos rechonchos.)
 * Sólo se puede utilizar como LooperPhone. Es mejor tener un smartphone normal en tu bolsillo. 
-* If you don't treat Jelly like a diva (Always (!) carry it with you!) Jelly shows its bitchy side, disconnects all Bluetooth and sulks until you restart. 
+* Si no tratas a Jelly como una diva (Siempre (¡) llevalo contigo!) Jelly muestra su lado amargo, desconecta todos los Bluetooth y se enfurruña hasta que lo reinicies. 
 
 ## Optimización de la duración de la batería Jelly Pro
 
