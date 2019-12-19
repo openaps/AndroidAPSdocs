@@ -1,24 +1,24 @@
 # Resolución de problemas de NSClient
 
-NSClient depende de una comunicación estable con Nightscout. Unstable connection leads to synchronization errors and high data usage.
+NSClient depende de una comunicación estable con Nightscout. La conexión inestable conduce a errores de sincronización y a un alto uso de los datos.
 
-If nobody is following you on Nightscout you can pause NSClient to save (a lot) battery life or setup connection only on wifi and during charging.
+Si nadie te está siguiendo en Nightscout puede pausar NSClient para guardar (mucha) vida de la batería o la conexión de configuración sólo en wifi y durante la carga.
 
 * ¿Cómo detectar la conexión inestable?
 
-Vaya a la pestaña NSClient en AAPS y vea el registro. Comportamiento común es recibir PING cada ~ 30s y casi ninguno de los mensajes de reconexiones. Si ve muchas reconexiones, hay un problema. Since AndroidAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
+Vaya a la pestaña NSClient en AAPS y vea el registro. Comportamiento común es recibir PING cada ~ 30s y casi ninguno de los mensajes de reconexiones. Si ve muchas reconexiones, hay un problema. Desde AndroidAPS 2.0 cuando tal comportamiento se detecta NSClient se pausa por 15 minutos y el mensaje "NSClient mal funcionamiento" se muestra en información general.
 
 * Reiniciar
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+Lo que se debe intentar como un primer paso es reiniciar tanto: Nightscout y luego el teléfono para ver si el problema es permanente
 
 * Problemas de teléfono
 
-Android puede poner su teléfono a dormir. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Vuelva a comprobar si hay una señal de red fuerte. Intenta con otro teléfono.
+Android puede poner su teléfono a dormir. Compruebe que tiene la excepción de AndroidAPS en las opciones de alimentación para permitir que se ejecute en segundo plano todo el tiempo. Vuelva a comprobar si hay una señal de red fuerte. Intenta con otro teléfono.
 
 * Nightscout
 
-Si usted está en Azure para muchas personas las ha ayudado el moverse a Heroku. Recently was reported Azure workaround to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Si usted está en Azure para muchas personas las ha ayudado el moverse a Heroku. Recientemente se ha informado de que Azure está trabajando para establecer el protocolo HTTP de valores de aplicación en 2.0 y Websockets en ON
 
 * Si aún tienes un error...
 
