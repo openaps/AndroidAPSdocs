@@ -14,7 +14,7 @@ Para utilizar uno de los conjuntos "Por defecto-Objetivos-Temporales", puede pre
 
 Esto se puede considerar como el Objetivo-Temporal más importante. Hay varias razones para ello:
 
-1. Realizing you will go low: Usually, the Loop should handle it, but sometimes you can see better in advance than the loop, so the loop can react faster when it targets a higher blood glucose value.
+1. Al darse cuenta de que va a ser baja: Generalmente, el Lazo debe manejarlo, pero a veces se puede ver mejor en avance que el lazo, por lo que el lazo puede reaccionar más rápido cuando se dirige a un valor de glucosa en sangre más alto.
 2. Cuando usted come carbohidratos para una hipoglucemia, su glucosa en sangre se elevará muy rápido. El lazo corregirá el aumento o incluso dara SMB si está habilitado. Un "Objetivo-Temporal-Hipo-Hipo" puede evitar eso. 
 3. (Avanzado, [objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): Puede activar "Alto Objetivos-Temporales subir sensibilidad" para Objetivos-Temporales de 100mg/dl o 5.5mmol/l o superior en OpenAPS SMB, por lo que AndroidAPS es más sensible.
 4. (avanzado, [Objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): Puede desactivar “SMB con un objetivo temporal alto”, de modo que incluso si tiene COB > 0, "SMB con Objetivo-Temporal" o "SMB siempre" habilitado y OpenAPS SMB activo, AndroidAPS no dará SMB mientras estén activos los altos objetivos temporales. 
@@ -29,7 +29,7 @@ Avanzado, [objetivo 10](../Usage/Objectives#objective-10-enabling-additional-ore
 
 ## Comer pronto objetivo-temporal
 
-If you know, that you want to eat soon, you can enable this Temp-Target, so there is already more IOB before eating. Especially for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. Puedes leer más sobre el "modo de comer pronto" en el artículo ['Cómo hacer "comiendo pronto" modo'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) o [aquí](https://diyps.org/tag/eating-soon-mode/).
+Si sabes, que quieres comer pronto, puedes activar este Objetivo-Temporal, así que ya hay más IOB antes de comer. Especialmente para aquellos que no hacen el pre-bolo, podría ser una buena alternativa para conseguir que la glucosa en sangre llegue a un objetivo más bajo. Puedes leer más sobre el "modo de comer pronto" en el artículo ['Cómo hacer "comiendo pronto" modo'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) o [aquí](https://diyps.org/tag/eating-soon-mode/).
 
 Avanzado, [objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): Si utiliza OpenAPS SMB y tiene "Bajo Objetivo-Temporal bajando Sensibilidad", AndroidAPS funciona un poco más agresivo. El requisito es una Objetivo-Temporal de menos de 100 mg/dl o 5.5 mmol/l para esta opción.
 
