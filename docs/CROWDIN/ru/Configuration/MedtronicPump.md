@@ -43,7 +43,7 @@
 
 Если вы делаете новую установку, то сразу попадаете в Мастер настройки. Иногда, если соединение BT не работает должным образом (не удается подключиться к помпе), возможно, вы не сможете выполнить настройку. В таком случае выберите виртуальную помпу и после того, как Мастер закончит работу, можно обратиться к варианту 2, который обойдет обнаружение помпы.
 
-![MDT Settings](../images/Medtronic01.png)
+![Настройки MDT](../images/Medtronic01.png)
 
 Необходимо задать следующие параметры: (см. рисунок выше)
 
@@ -61,7 +61,7 @@
 
 ## Вкладка MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png)
+![Вкладка MDT](../images/Medtronic02.png)
 
 На вкладке помпы можно видеть несколько строк, которые отображают текущее состояние помпы (и связь).
 
@@ -83,13 +83,13 @@
 
 ## Журнал помпы
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Диалоговое окно журнала помпы](../images/Medtronic03.png)
 
 Хронология помпы извлекается каждые 5 минут и сохраняется в памяти. Она хранится только последние 24 часа, более старые записи удаляются по мере добавления новых. Это простой способ увидеть события хронологии помпы (некоторые записи могут не отображаться, поскольку не важны - например, конфигурация функций, не используемых AndroidAPS).
 
 ## Состояние RL (Состояние RileyLink)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![Состояние RileyLink-Параметры](../images/Medtronic04.png) ![Состояние RileyLink-хронология](../images/Medtronic05.png)
 
 Диалоговое окно имеет две вкладки:
 
@@ -126,25 +126,25 @@
 
 Важно помнить, что не следует отключать алгоритм цикла во время путешествий и перелетов (если ваш мониторинг может работать в автономном режиме). AAPS автоматически обнаружит изменения часового пояса и отправит команду на помпу когда изменится время на телефоне.
 
-Например, если вы путешествете на Восток и часовой пояс меняется с добавлением часов (например, from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Например, если вы путешествете на Восток и часовой пояс меняется с добавлением часов (например, с GMT + 0 до GMT + 2), хронология помпы изменится без проблем и вам не о чем беспокоиться... но если вы перемещаетесь на Запад и часовой пояс меняется с вычитанием часов (например, с GMT + 2 до GMT-0), то возможна небольшая рассинхронизация. Говоря проще, в течение следующих x часов вам придется быть осторожными, потому что активный инсулин IOB, возможно, будет вести себя немного странно.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Мы знаем об этой проблеме, и мы уже ищем возможные решения (см. https://github.com/andyrozman/RileyLinkAAPS/issues/145),, но на данный момент нужно иметь в виду эту информацию при путешествиях.
 
 ## Часто задаваемые вопросы
 
 ### Можно ли видеть заряд RileyLink/GNARL?
 
-Нет. At the moment none of this devices support this and it probably won't even in the future.
+Нет. В данный момент ни однао из этих устройств не поддерживает такую возможность, и ее, скорее всего, не будет и в дальнейшем.
 
 ### Является ли GNARL полной заменой RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Да. Автор GNARL добавил все функции, используемые драйвером Medtronic. Все средства связи Medtronic поддерживаются (на момент написания (июнь/2019). GNARL нельзя использовать для связи Omnipod. Недостаток GNARL состоит в том, что его придется собирать самостоятельно, и у вас должна быть совместимая версия оборудования.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+** Примечание автора: ** Обратите внимание, что программное обеспечение GNARL по-прежнему экспериментально и недостаточно протестировано и не должно считаться таким же безопасным как RileyLink.
 
 ### Где взять RileyLink или GNARL?
 
-Like mentioned before you can get devices here:
+Как уже было сказано, устройства можно получить по этим ссылкам:
 
 - RileyLink - здесь - [getrileylink.org](https://getrileylink.org/).
 - GNARL- здесь можно получить информацию, но устройство должно быть заказано в другом месте ([ github.com/ecc1/gnarl ](https://github.com/ecc1/gnarl)).
@@ -159,9 +159,9 @@ Like mentioned before you can get devices here:
 
 ### Как определить, на какой частоте работает помпа
 
-![Pump Model](../images/Medtronic06.png)
+![Модель помпы](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Если повернуть помпу, в первой строке справа, вы увидите специальный трехбуквенный код. Первые две буквы определяют тип частоты и последняя определяет цвет. Возможны следующие значения частоты:
 
 - NA-Северная Америка (при выборе частоты необходимо выбрать "US & Canada (916 МГц)")
 - CA-Канада (для выбора частоты необходимо выбрать "US & Canada (916 МГц)")
