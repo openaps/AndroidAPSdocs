@@ -2,7 +2,7 @@
 
 Puede instalar la aplicación AndroidAPS en su reloj **basado en Wear OS**. La versión de AAPS para reloj le permite:
 
-* **display data on your watch**: by providing [custom watchfaces](#aaps-watchfaces) or in standard watchfaces with use of [complications](#complications)
+* **muestra datos en el reloj**: proporcionando [pantallas personalizadas](#aaps-watchfaces) o en pantalla estándar con el uso de compilaciones [complicaciones](#complications)
 * **control de AAPS en el teléfono**: para bolo, establecer un objetivo temporal, etc. 
 
 ### Antes de comprar un reloj...
@@ -147,9 +147,9 @@ La estrella rellena muestra el estado habilitado (**On**), y el icono de estrell
 
 * **Asistente Porcentaje** (por defecto `Off`): permite bolos de corrección del asistente (valor introducido en porcentaje antes de la notificación de confirmación)
 
-## Complications
+## Compilaciones
 
-*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+*Compilación* es un término de la relojería tradicional, que se refiere la adición en la pantalla del reloj - de otra pequeña ventana o sub-pantalla (con fecha, día de la semana, fase lunar, etc.). Wear OS 2.0 trae esa metáfora para permitir que los proveedores de datos personalizados, como el tiempo, las notificaciones, los contadores de ejercicios y más cosas, se añadan a cualquier pantalla de observación que soporte compilaciones.
 
 AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
@@ -157,18 +157,18 @@ Complications also serve as **shortcut** to AAPS functions. By tapping them you 
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Complication Types
+### Tipos de compilaciones
 
-AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+La aplicación AAPS Wear OS sólo proporciona datos en bruto, de acuerdo con formatos predefinidos. Es responsabilidad de un tercero decidir dónde y cómo hacer las compilaciones, incluyendo su diseño, borde, color y fuente. A partir de muchos tipos de compilación de SO Wear disponibles, AAPS utiliza:
 
-* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Normalmente se representa dentro de un círculo o una píldora pequeña - una por debajo de otra, o lado a lado. It is a very space-limited complication. AAPS intenta eliminar los caracteres innecesarios para adaptarse redondeando valores, eliminando los ceros iniciales y finales de los valores, etc.
+* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Normalmente se representa dentro de un círculo o una píldora pequeña - una por debajo de otra, o lado a lado. Se trata de una compilación n muy limitada en el espacio. AAPS intenta eliminar los caracteres innecesarios para adaptarse redondeando valores, eliminando los ceros iniciales y finales de los valores, etc.
 * `TEXTO LARGO` - Contiene dos líneas de texto, acerca de 20 caracteres cada una. Normalmente se representa dentro de un rectángulo o una píldora larga - una debajo de otra. Se utiliza para obtener más detalles y el estado.
 * `RANGO DE VALORES` -Utilizado para valores de rango predefinido, como un porcentaje. Contiene el icono, la etiqueta y se representa normalmente como porcentaje de progreso de un círculo.
 * `IMAGEN LARGA` -Imagen de fondo personalizada que se puede utilizar (cuando está soportado por la pantalla) como fondo.
 
-### Complication Setup
+### Configuración de compilación
 
-To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+Para añadir complicaciones al reloj, configúrelo pulso largo y haciendo clic en el icono de engranaje de abajo. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
 When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
@@ -241,4 +241,4 @@ Si estás usando otro sistema de lazo y quieres *ver* el detalle de tu lazo en e
 
 # Pebble
 
-Los usuarios de Pebble pueden utilizar la [esfera del reloj Urchin](https://github.com/mddub/urchin-cgm) para *ver* los datos del lazos (si están cargados en nightscout), pero no podrá interactuar con AndroidAPS a través del reloj. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Los usuarios de Pebble pueden utilizar la [esfera del reloj Urchin](https://github.com/mddub/urchin-cgm) para *ver* los datos del lazos (si están cargados en nightscout), pero no podrá interactuar con AndroidAPS a través del reloj. You can choose fields to display such as IOB and currently active temp basal rate and predictions. Si abre el lazo puede utilizar [IFTTT](https://ifttt.com/) para crear un applet que diga si la notificación se recibe de AndroidAPS, entonces envíe una notificación de SMS o pushover.
