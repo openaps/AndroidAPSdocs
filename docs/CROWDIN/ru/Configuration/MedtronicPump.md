@@ -1,6 +1,6 @@
 # Помпы Medtronic
 
-**>>>> Начиная с версии 2.5 AndroidAPS драйвер помп Medtronic является частью ветки master. Несмотря на это, драйвер Medtronic все еще должен рассматриваться как бета-версия программного обеспечения. Установите, только если вы опытный пользователь. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcomming release. <<<<**
+**>>>> Начиная с версии 2.5 AndroidAPS драйвер помп Medtronic является частью ветки master. Несмотря на это, драйвер Medtronic все еще должен рассматриваться как бета-версия программного обеспечения. Установите, только если вы опытный пользователь. В настоящий момент мы по-прежнему боремся с проблемой двойного болюса (получаем 2 болюса в модуле лечения, что нарушает калькуляцию активного инсулина IOB (если вы получаете эту ошибку, включите Double Bolus Logging в конфигурации Medtronic и пришлите ваши журналы отчета)), должна быть устранена в следующей версии. <<<<**
 
 * * *
 
