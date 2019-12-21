@@ -257,7 +257,7 @@ Si el número de serie de su transmisor Dexcom G6 comienza con 8G u 8H utilizar 
 
 * Iniciar Sensor
    
-   **Para los nuevos transmisores Firefly** (número de serie comenzando con 8G o 8H) **es obligatorio, para todos los demás transmisores se recomienda esperar aprox. 15 minutos entre parada y arranque el nuevo sensor (hasta `Estado de Sensor: Detenido` se muestra en la segunda pantalla de estado del sistema). DO NOT BACKDATE!**
+   **Para los nuevos transmisores Firefly** (número de serie comenzando con 8G o 8H) **es obligatorio, para todos los demás transmisores se recomienda esperar aprox. 15 minutos entre parada y arranque el nuevo sensor (hasta `Estado de Sensor: Detenido` se muestra en la segunda pantalla de estado del sistema). NO PREDATE FECHAS!**
 
 * Establecer tiempo insertado
    
