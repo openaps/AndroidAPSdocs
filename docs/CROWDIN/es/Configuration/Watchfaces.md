@@ -151,24 +151,24 @@ La estrella rellena muestra el estado habilitado (**On**), y el icono de estrell
 
 *Compilación* es un término de la relojería tradicional, que se refiere la adición en la pantalla del reloj - de otra pequeña ventana o sub-pantalla (con fecha, día de la semana, fase lunar, etc.). Wear OS 2.0 trae esa metáfora para permitir que los proveedores de datos personalizados, como el tiempo, las notificaciones, los contadores de ejercicios y más cosas, se añadan a cualquier pantalla de observación que soporte compilaciones.
 
-AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+La aplicación AndroidAPS Wear OS soporta Compilaciones desde `2.6`, y permite que cualquier aplicación de terceros que soporte a Compilaciones, se configure para mostrar los datos relacionados con AAPS (BG con la tendencia, IOB, COB, etc.).
 
-Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+Complications also serve as **shortcut** to AAPS functions. Tocándolos puede abrir AAPS menús relacionados y cuadros de diálogo (dependiendo de la compilación del tipo y configuración).
 
-![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Compilaciones en Relojes](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Tipos de compilaciones
 
 La aplicación AAPS Wear OS sólo proporciona datos en bruto, de acuerdo con formatos predefinidos. Es responsabilidad de un tercero decidir dónde y cómo hacer las compilaciones, incluyendo su diseño, borde, color y fuente. A partir de muchos tipos de compilación de SO Wear disponibles, AAPS utiliza:
 
-* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Normalmente se representa dentro de un círculo o una píldora pequeña - una por debajo de otra, o lado a lado. Se trata de una compilación n muy limitada en el espacio. AAPS intenta eliminar los caracteres innecesarios para adaptarse redondeando valores, eliminando los ceros iniciales y finales de los valores, etc.
+* `TEXTO CORTO` - Contiene dos líneas de texto, de 7 caracteres cada uno, a veces referido como el valor y la etiqueta. Normalmente se representa dentro de un círculo o una píldora pequeña - una por debajo de otra, o lado a lado. Se trata de una compilación n muy limitada en el espacio. AAPS intenta eliminar los caracteres innecesarios para adaptarse redondeando valores, eliminando los ceros iniciales y finales de los valores, etc.
 * `TEXTO LARGO` - Contiene dos líneas de texto, acerca de 20 caracteres cada una. Normalmente se representa dentro de un rectángulo o una píldora larga - una debajo de otra. Se utiliza para obtener más detalles y el estado.
 * `RANGO DE VALORES` -Utilizado para valores de rango predefinido, como un porcentaje. Contiene el icono, la etiqueta y se representa normalmente como porcentaje de progreso de un círculo.
 * `IMAGEN LARGA` -Imagen de fondo personalizada que se puede utilizar (cuando está soportado por la pantalla) como fondo.
 
 ### Configuración de compilación
 
-Para añadir complicaciones al reloj, configúrelo pulso largo y haciendo clic en el icono de engranaje de abajo. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+Para añadir complicaciones al reloj, configúrelo pulso largo y haciendo clic en el icono de engranaje de abajo. Dependiendo de la forma en que cada pantalla lo configura, ya sea haciendo clic en los marcadores o introduzca el menú de configuración de la pantalla para las compilaciones. AAPS complications are grouped under the AAPS menu entry.
 
 When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
@@ -176,32 +176,32 @@ When configuring complications on watchface, Wear OS will present and filter the
 
 AndroidAPS provides following complications:
 
-![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+![AAPS Lista de compilaciones](../images/Watchface_Complications_List.png)
 
 * **BR, CoB & IoB** (`TEXTO CORTO`, abre *Menú*): Muestra *Basal* en la primera línea y *Carbohidratos a Bordo* y *de Insulina a Bordo* en la segunda línea.
 * **Blood Glucose** (`SHORT TEXT`, abre *Menu*): Muestra valor de *Glucos en Sangre* y *tendencia* flecha en la primera línea y *tiempo de medición* y *delta BG* en la segunda línea.
 * **CoB & IoB** (`TEXTO CORTO`, abre *Menú*): Muestra *Carbohidratos a Bordo* en la primera línea e *Insulina a Bordo* en la segunda línea.
 * **CoB Detallada** (`TEXTO CORTO`, abre *Asistente*): Muestra los *Carbohidratos a Bordo* activos en la primera línea y los planificados (futuros, eCarbs) Carbohidrátos en la segunda línea.
 * **CoB Icono** (`TEXTO CORTO`, abre *Asistente*): Muestra el valor de los *Carbohidratos a Bordo* con un icono estático.
-* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
-* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
-* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
-* **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
-* **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
+* **Estado completo** (`LONG TEXT`, abre *Menú*): Muestra la mayoría de los datos a la vez: *Valor de Glucosa en sangre* y *flecha de tendencia*, *delta GS* y *edad de medición* en la primera línea. En la segunda línea *Carbohidratos a Bordo*, *Insulina a Bordo* y *Tasa basal*.
+* **Estado Completo (volteado)** (`TEXTO LARGO`, abre *Menú*): Mismos datos que para el estándar *Estado Completo*, pero las líneas están invertidas. Puede ser utilizado en relojes que ignoran una de las dos líneas en `TEXTO LARGO`
+* **IoB Detallado** (`SHORT TEXT`, abre *Bolos*): Muestra el total de *Insulina a Bordo* en la primera línea y dividido *IoB* para *Bolos* y *Basal* en la segunda línea.
+* **Icono IoB** (`TEXTO CORTO`, abre *Bolo*): Muestra *de Insulina a Bordo* valor con un icono estático.
+* **Cargador/Batería del Teléfono** (`VALOR RANGO`, abre *Estado*): Muestra el porcentaje de la batería del teléfono con AAPS, según lo informado por la AAPS. Se visualiza como indicador de porcentaje con un icono de batería que refleja el valor notificado. Puede que no se actualice en tiempo real, pero con otros cambios importantes de datos de AAPS (por lo general: cada ~ 5 minutos con la nueva medición *Glucosa en Sangre*).
 
-Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
+Adicionalmente, hay tres compilaciones de `IMAGEN GRANDE` kind: **Fondo Oscuror**, **Fondo Gris** y **Fondo Claro**, que muestran el fondo estático de AAPS.
 
-### Complication related settings
+### Ajustes relacionados con la Compilación
 
-* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
+* **Acción de Toque Compilación** (valor predeterminado `Valor predetermiando`): Decide qué diálogo se abre cuando se pulsa la compilación: 
   * *Default*: action specific to complication type *(see list above)*
-  * *Menu*: AAPS main menu
-  * *Wizard*: bolus wizard - bolus calculator
-  * *Bolus*: direct bolus value entry
-  * *eCarb*: eCarb configuration dialog
-  * *Status*: status sub-menu
-  * *None*: Disables tap action on AAPS complications
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+  * *Menú*: Menú principal de AAPS
+  * *Asistente*: asistente de bolos - calculadora de bolos
+  * *Bolo*: ingreso directo del valor de bolo
+  * *eCarb*: diálogo de configuración de Carbohidratos extendidos
+  * *Estado*: submenú de estado
+  * *Ninguno*: Deshabilita el pulsado en AAPS compilaciones
+* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. La representación de los mismos depende de la fuente, y eso puede ser muy específico del reloj. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
 ## Performance and battery life tips
 
@@ -217,28 +217,28 @@ Main battery-demanding areas are:
 
 Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
 
-* Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-* It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
+* Las pantallas de reloj estandars suelen estar mejor optimizadas que las personalizadas, descargadas desde la tienda.
+* Es mejor utilizar las pantallas que limitan la cantidad de datos representados en modalidad inactiva / atenuada.
 * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and **Matching divider**. On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Empiece con las pantallas más sencillas. Add one complication at the time and observe how they affect battery life.
+* Intente utilizar el tema **Oscuro** para la pantalla de AAPS y **Divisor de Coincidencias**. En los dispositivos OLED, esto limitará la cantidad de píxeles encendidos y limitará el agotamiento.
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-* Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
-* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+* Observar durante unos días, con diferentes perfiles de actividad. La mayoría de los relojes activan la pantalla al mirar, mover y otros disparadores relacionados con el uso.
+* Compruebe los valores del sistema global que afectan al rendimiento: notificaciones, tiempo de espera de visualización retroiluminación/activo, cuando se activa el GPS.
+* Consulte la [lista de teléfonos y relojes probados ](../Getting-Started/Phones#list-of-tested-phones) y [pregunta a la comunidad ](../Where-To-Go-For-Help/Connect-with-other-users.md) si duda de si su reloj será compatible.
+* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. Al final, depende de Wear OS decidir cuándo actualizar una superposición o una compilación. Incluso cuando la aplicación de AAPS solicita actualizaciones, el sistema puede decidir posponer o ignorar actualizaciones para conservar la batería. Cuando está en duda y bajo en batería en el reloj - siempre haga doble verificación con la aplicación principal de AAPS en el teléfono.
 
-## Troubleshooting the wear app:
+## Resolución de problemas de app del reloj:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* En Android Wear 2.0 la pantalla de reloj ya no se instala por sí misma. Necesitas ir a la playstore en el reloj (no es el mismo que el playstore del teléfono) y encontrarla en la categoría de aplicaciones instaladas en su teléfono, desde allí se puede activar. Habilite también la actualización automática. 
+* A veces ayuda re-sincronizar las aplicaciones para el reloj, ya que puede ser un poco lento para hacer lo mismo: Android Wear > ícono de la rueda Dentada > Reloj nombre > Sincronizar apps.
+* Habilite la depuración de ADB en las opciones de desarrollador (en el reloj), conecte el reloj a través de USB e inicie la aplicación Wear una vez en Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
 
-## View Nightscout data
+## Ver datos de Nightscout
 
 Si estás usando otro sistema de lazo y quieres *ver* el detalle de tu lazo en el reloj Android Wear o quiere ver el lazo de tu hijo, entonces puedes construir/descargar sólo el APK NSClient. Para hacer esto siga las instrucciones de [compilar APK](../Installing-AndroidAPS/Building-APK.md) seleccionando la variante de compilación "NSClientRelease". Hay varias pantallas para elegir que incluyen datos como: delta promedio, IOB, dosis basal temporal activa, perfiles basales o gráfico de lecturas del medidor contínuo (CGM).
 
 # Pebble
 
-Los usuarios de Pebble pueden utilizar la [esfera del reloj Urchin](https://github.com/mddub/urchin-cgm) para *ver* los datos del lazos (si están cargados en nightscout), pero no podrá interactuar con AndroidAPS a través del reloj. You can choose fields to display such as IOB and currently active temp basal rate and predictions. Si abre el lazo puede utilizar [IFTTT](https://ifttt.com/) para crear un applet que diga si la notificación se recibe de AndroidAPS, entonces envíe una notificación de SMS o pushover.
+Los usuarios de Pebble pueden utilizar la [esfera del reloj Urchin](https://github.com/mddub/urchin-cgm) para *ver* los datos del lazos (si están cargados en nightscout), pero no podrá interactuar con AndroidAPS a través del reloj. Puede elegir campos para mostrar como, por ejemplo, IOB y la frecuencia de basal temporal activa y las predicciones. Si abre el lazo puede utilizar [IFTTT](https://ifttt.com/) para crear un applet que diga si la notificación se recibe de AndroidAPS, entonces envíe una notificación de SMS o pushover.
