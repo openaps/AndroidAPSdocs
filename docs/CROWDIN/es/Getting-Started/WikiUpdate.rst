@@ -2,10 +2,10 @@ Actualizaciones y cambios de Wiki
 **************************************************
 Diciembre 2019
 ==================================================
-* `Android auto <../Usage/Android-auto.html>`_ - enter developer mode
-* `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - workaround for usage
-* `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - version 4.15.57 and newer supported
-* `Watchfaces <../Configuration/Config-Builder.html#bg-source>`_ - major update, way more details
+* `Android auto <../Usage/Android-auto.html>`_ - entrar en el modo de programador
+* `Accu-Chek Insight & Autoajustar <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - solución para el uso
+* `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - versión 4.15.57 y soporte más reciente
+* `Pantalla de reloj <../Configuration/Config-Builder.html#bg-source>`_ - actualización importante, mas detalles
 Noviembre 2019
 ==================================================
 * `Automatización - desactivación cuando se deshabilita el lazo <../Usage/Automation.html#important-note>`_
