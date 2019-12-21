@@ -150,7 +150,7 @@ Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado b
 * ISF = 30 => 90/30 = 3 unidades de insulina
 * ISF = 45 => 90/45 = 2 unidades de insulina
 
-Un factos de sensibilidad a la insulina (ISF) demasiado bajo puede resultar en sobre-correcciones ya que AAPS piensa que necesita más insulina, para corregir BGs altas, de la que realmente necesita. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. Esto significará que AAPS corregirá con dosis más pequeñas, evitando que las sobre-correcciones de BG altas provoquen BG demasiado bajas This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+Un factos de sensibilidad a la insulina (ISF) demasiado bajo puede resultar en sobre-correcciones ya que AAPS piensa que necesita más insulina, para corregir BGs altas, de la que realmente necesita. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. Esto significará que AAPS corregirá con dosis más pequeñas, evitando que las sobre-correcciones de BG altas provoquen BG demasiado bajas Esto significa que AAPS entregará dosis de corrección más pequeñas evitando provocar bajadas de BG al sobrecorregir BG altos.
 
 Por el contrario, un ISF demasiado alto puede resultar en correcciones insuficientes, provocando que tu BG se mantenga por encima del objetivo – especialmente durante la noche.
 
@@ -275,7 +275,7 @@ Puedes encontrar el fondo de pantalla AndroidAPS para tu teléfono en la página
 
 #### ¿Qué hacer al ducharse o bañarse?
 
-Puede quitarte la bomba para ducharte o bañarte. Para periodos cortos de tiempo no viene a ser necesario, pero puedes indicarlo en AAPS para que los cálculos de IOB sean correctos. But you should tell it to AAPS so that the IOB calculations are right.
+Puede quitarte la bomba para ducharte o bañarte. Para periodos cortos de tiempo no viene a ser necesario, pero puedes indicarlo en AAPS para que los cálculos de IOB sean correctos. Pero deberías indicarlo a AAPS para obtener cálculos de IOB correctos.
 
 Consulta el [procedimiento anterior ](../Getting-Started/FAQ#disconnect-pump).
 
