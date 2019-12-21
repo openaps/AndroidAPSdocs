@@ -201,19 +201,19 @@ Adicionalmente, hay tres compilaciones de `IMAGEN GRANDE` kind: **Fondo Oscuror*
   * *eCarb*: diálogo de configuración de Carbohidratos extendidos
   * *Estado*: submenú de estado
   * *Ninguno*: Deshabilita el pulsado en AAPS compilaciones
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. La representación de los mismos depende de la fuente, y eso puede ser muy específico del reloj. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. La representación de los mismos depende de la fuente, y eso puede ser muy específico del reloj. Esta opción permite cambiar los símbolos Unicode `Off` cuando sea necesario - si la fuente utilizada por la pantalla personalizada no soporta esos símbolos - para evitar problemas gráficos.
 
-## Performance and battery life tips
+## Sugerencias de rendimiento y batería
 
-Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+Los relojes de con OS Wear son dispositivos muy limitados en energía. El tamaño del caso de reloj limita la capacidad de la batería incluida. Incluso con los avances recientes tanto en hardware como en software, los relojes de Wear OS todavía requieren una carga diaria.
 
-If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+Si experimenta una duración de batería más corto que un día (desde el atardecer hasta el amanecer), aquí hay algunos consejos para solucionar los problemas.
 
-Main battery-demanding areas are:
+Las principales áreas que requieren batería son:
 
-* Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-* Rendering on screen
-* Radio communication over Bluetooth
+* Pantalla activa con una luz de fondo de encendido (LED) o el modo de intensidad máxima (para OLED)
+* Renderizado en la pantalla
+* Comunicación de radio sobre Bluetooth
 
 Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
 
