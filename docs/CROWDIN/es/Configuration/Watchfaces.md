@@ -153,7 +153,7 @@ La estrella rellena muestra el estado habilitado (**On**), y el icono de estrell
 
 La aplicación AndroidAPS Wear OS soporta Compilaciones desde `2.6`, y permite que cualquier aplicación de terceros que soporte a Compilaciones, se configure para mostrar los datos relacionados con AAPS (BG con la tendencia, IOB, COB, etc.).
 
-Complications also serve as **shortcut** to AAPS functions. Tocándolos puede abrir AAPS menús relacionados y cuadros de diálogo (dependiendo de la compilación del tipo y configuración).
+Las compilaciones también sirven como **acceso directo** a las funciones de AAPS. Tocándolos puede abrir AAPS menús relacionados y cuadros de diálogo (dependiendo de la compilación del tipo y configuración).
 
 ![Compilaciones en Relojes](../images/Watchface_Complications_On_Watchfaces.png)
 
@@ -168,13 +168,13 @@ La aplicación AAPS Wear OS sólo proporciona datos en bruto, de acuerdo con for
 
 ### Configuración de compilación
 
-Para añadir complicaciones al reloj, configúrelo pulso largo y haciendo clic en el icono de engranaje de abajo. Dependiendo de la forma en que cada pantalla lo configura, ya sea haciendo clic en los marcadores o introduzca el menú de configuración de la pantalla para las compilaciones. AAPS complications are grouped under the AAPS menu entry.
+Para añadir complicaciones al reloj, configúrelo pulso largo y haciendo clic en el icono de engranaje de abajo. Dependiendo de la forma en que cada pantalla lo configura, ya sea haciendo clic en los marcadores o introduzca el menú de configuración de la pantalla para las compilaciones. Las compilaciones de AAPS se agrupan bajo la entrada de menú de AAPS.
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+Cuando se configuran compilaciones en el reloj, Wear OS presentará y filtrará la lista para que puedan caber en el lugar seleccionado de la pantalla. Si no se pueden encontrar compilaciones específicas en la lista, probablemente se debe a su tipo que no se puede utilizar para el lugar asignado.
 
-### Complications provided by AAPS
+### Compilaciones proporcionadas por AAPS
 
-AndroidAPS provides following complications:
+AndroidAPS proporciona las siguientes compilaciones:
 
 ![AAPS Lista de compilaciones](../images/Watchface_Complications_List.png)
 
@@ -194,14 +194,14 @@ Adicionalmente, hay tres compilaciones de `IMAGEN GRANDE` kind: **Fondo Oscuror*
 ### Ajustes relacionados con la Compilación
 
 * **Acción de Toque Compilación** (valor predeterminado `Valor predetermiando`): Decide qué diálogo se abre cuando se pulsa la compilación: 
-  * *Default*: action specific to complication type *(see list above)*
+  * *Predeterminado*: acción específica para el tipo de compilación *(ver la lista anterior)*
   * *Menú*: Menú principal de AAPS
   * *Asistente*: asistente de bolos - calculadora de bolos
   * *Bolo*: ingreso directo del valor de bolo
   * *eCarb*: diálogo de configuración de Carbohidratos extendidos
   * *Estado*: submenú de estado
   * *Ninguno*: Deshabilita el pulsado en AAPS compilaciones
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. La representación de los mismos depende de la fuente, y eso puede ser muy específico del reloj. Esta opción permite cambiar los símbolos Unicode `Off` cuando sea necesario - si la fuente utilizada por la pantalla personalizada no soporta esos símbolos - para evitar problemas gráficos.
+* **Unicode en Complications** (valor por omisión `On`): Cuando está `On`, la compilación utilizará caracteres Unicode para símbolos como `Δ` Delta, `formato vertical` o `en formato` Tasa Basal. La representación de los mismos depende de la fuente, y eso puede ser muy específico del reloj. Esta opción permite cambiar los símbolos Unicode `Off` cuando sea necesario - si la fuente utilizada por la pantalla personalizada no soporta esos símbolos - para evitar problemas gráficos.
 
 ## Sugerencias de rendimiento y batería
 
@@ -215,25 +215,25 @@ Las principales áreas que requieren batería son:
 * Renderizado en la pantalla
 * Comunicación de radio sobre Bluetooth
 
-Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
+Puesto que no podemos comprometer la comunicación (necesitamos datos actualizados) y queremos tener los datos más recientes representados, la mayoría de las optimizaciones se pueden realizar en el área *de tiempo de visualización*:
 
 * Las pantallas de reloj estandars suelen estar mejor optimizadas que las personalizadas, descargadas desde la tienda.
 * Es mejor utilizar las pantallas que limitan la cantidad de datos representados en modalidad inactiva / atenuada.
-* Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-* Empiece con las pantallas más sencillas. Add one complication at the time and observe how they affect battery life.
+* Tenga en cuenta que al mezclar otras compilaciones, como los widgets meteorológicos de terceros, u otros datos de utilización de orígenes externos.
+* Empiece con las pantallas más sencillas. Añada una compilación por vez y observe cómo afecta a la duración de la batería.
 * Intente utilizar el tema **Oscuro** para la pantalla de AAPS y **Divisor de Coincidencias**. En los dispositivos OLED, esto limitará la cantidad de píxeles encendidos y limitará el agotamiento.
-* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
+* Compruebe lo que funciona mejor en su reloj: AAPS en pantallas estándars o relojes con AAPS y pantallas con compilaciones.
 * Observar durante unos días, con diferentes perfiles de actividad. La mayoría de los relojes activan la pantalla al mirar, mover y otros disparadores relacionados con el uso.
 * Compruebe los valores del sistema global que afectan al rendimiento: notificaciones, tiempo de espera de visualización retroiluminación/activo, cuando se activa el GPS.
 * Consulte la [lista de teléfonos y relojes probados ](../Getting-Started/Phones#list-of-tested-phones) y [pregunta a la comunidad ](../Where-To-Go-For-Help/Connect-with-other-users.md) si duda de si su reloj será compatible.
-* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. Al final, depende de Wear OS decidir cuándo actualizar una superposición o una compilación. Incluso cuando la aplicación de AAPS solicita actualizaciones, el sistema puede decidir posponer o ignorar actualizaciones para conservar la batería. Cuando está en duda y bajo en batería en el reloj - siempre haga doble verificación con la aplicación principal de AAPS en el teléfono.
+* **No podemos garantizar que los datos visualizados en la pantalla o que la compilación estén actualizados**. Al final, depende de Wear OS decidir cuándo actualizar una superposición o una compilación. Incluso cuando la aplicación de AAPS solicita actualizaciones, el sistema puede decidir posponer o ignorar actualizaciones para conservar la batería. Cuando está en duda y bajo en batería en el reloj - siempre haga doble verificación con la aplicación principal de AAPS en el teléfono.
 
 ## Resolución de problemas de app del reloj:
 
 * En Android Wear 2.0 la pantalla de reloj ya no se instala por sí misma. Necesitas ir a la playstore en el reloj (no es el mismo que el playstore del teléfono) y encontrarla en la categoría de aplicaciones instaladas en su teléfono, desde allí se puede activar. Habilite también la actualización automática. 
 * A veces ayuda re-sincronizar las aplicaciones para el reloj, ya que puede ser un poco lento para hacer lo mismo: Android Wear > ícono de la rueda Dentada > Reloj nombre > Sincronizar apps.
 * Habilite la depuración de ADB en las opciones de desarrollador (en el reloj), conecte el reloj a través de USB e inicie la aplicación Wear una vez en Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* Si la compilación no actualiza los datos - compruebe primero si reloj con AAPS esta funcionando.
 
 ## Ver datos de Nightscout
 
