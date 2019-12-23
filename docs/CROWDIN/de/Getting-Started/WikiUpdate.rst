@@ -3,9 +3,9 @@ Wiki Updates & Änderungen
 Dezember 2019
 ==================================================
 * `Android Auto <../Usage/Android-auto.html>`_ - Aufruf Entwicklermodus
-* `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - workaround for usage
-* `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - version 4.15.57 and newer supported
-* `Watchfaces <../Configuration/Config-Builder.html#bg-source>`_ - major update, way more details
+* `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_ - Workaround
+* `Glimp <../Configuration/Config-Builder.html#bz-quelle>`_ - Version 4.15.57 und neuer wird unterstützt
+* `Watchfaces <../Configuration/Watchfaces.html>`_ - großes Update mit viel mehr Details
 November 2019
 ==================================================
 * `Automation - bei deaktiviertem Loop ausschalten <../Usage/Automation.html#wichtiger-hinweis>`_
