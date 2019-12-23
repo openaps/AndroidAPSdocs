@@ -32,28 +32,30 @@ AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier heb
 
 * Inschakelen van [superbolus](../Getting-Started/Screenshots#section-a) in de boluswizard.
 
-* Deze functie is nieuw in versie 2.1.1. Uitgebreide versie toont verstreken tijd / batterij percentage.
-    
-    ![Statusindicatoren - details](../images/StatusLights_V2_5.png)
-    
-    De statusindicatoren moeten worden ingesteld in de instellingen van jouw Nightscout-pagina. Ga naar jouw Nightscout en stel de volgende variabelen in zoals jij ze wilt hebben:
-    
-    * Canule ouderdom: CAGE_WARN en CAGE_URGENT (standaard 48 en 72 uur)
-    * Insuline ouderdom (reservoir): IAGE_WARN en IAGE_URGENT (standaard 72 en 96 uur)
-    * Sensor ouderdom: SAGE_WARN en SAGE_URGENT (standaard 164 en 166 uur)
-    * Batterij ouderdom: BAGE_WARN en BAGE_URGENT (standaard 240 en 360 uur)
+### Status lights
 
-* Grenswaarde voor de waarschuwing van reservoir niveau en voor het alarm van reservoir niveau.
+* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+    
+    ![Status lights - detail](../images/StatusLights_V2_5.png)
+    
+    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    
+    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
+    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
+    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
+    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
 
-* Grenswaarde voor de waarschuwing van het batterijniveau en voor het alarm van het batterijniveau.
+* Treshold for warning reservoir level and critical reservoir level.
+
+* Treshold for warning battery level and critical battery level.
 
 ## Behandelingen veiligheid
 
-### Max toegestane bolus [E]
+### Max allowed bolus [U]
 
 Dit is de maximale hoeveelheid bolus insuline die AAPS mag leveren. Deze instelling is een veiligheidslimiet om te voorkomen dat er per ongeluk een enorme bolus wordt afgegeven door een misrekening of typfout van de gebruiker. Het wordt aangeraden om deze in te stellen op de maximale hoeveelheid bolus insuline die je ooit voor een maaltijd of correctie nodig zult hebben. Deze beperking wordt ook toegepast op de resultaten van de Bolus Calculator.
 
-### Max toegestane koolhydraten [g]
+### Max allowed carbs [g]
 
 Dit is de maximale hoeveelheid koolhydraten waarvoor de Boluscalculator insuline mag geven. Deze instelling is een veiligheidslimiet om te voorkomen dat er per ongeluk een enorme bolus wordt afgegeven door een misrekening of typfout van de gebruiker. Het wordt aangeraden om deze in te stellen op de maximale hoeveelheid koolhydraten die je ooit zult eten bij een maaltijd.
 
@@ -65,30 +67,30 @@ Je kunt hier schakelen tussen open loop en closed loop. Open loop betekent dat e
 
 Dankzij de geavanceerde maaltijdhulp (Advanced Meal Assist, AMA) kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd. In de Configurator kun je dit inschakelen, en de bijbehorende veiligheidsinstellingen bekijken/aanpassen. Je moet minimaal [Doel 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) hebben voltooid om deze functie te gebruiken. Onderstaande tekst gaat dieper in op de instellingen voor AMA, de andere opties (MA en SMB) worden elders in deze wiki omschreven op de pagina over "OpenAPS functies". Of je kunt meer lezen over de instellingen en [Autosens in de OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Maximale E/uur dat OpenAPS kan toedienen
+### Max U/hr a Temp Basal can be set to
 
 Deze instelling is een veiligheidslimiet om te voorkomen dat AAPS ooit een gevaarlijk hoge basaalstand kan instellen. Dit getal wordt weergegeven in eenheden per uur (E/uur). We raden je aan je verstand te gebruiken bij het invullen van deze waarde. Een goede aanbeveling is om de **hoogste basaalstand** in je profiel te nemen en die te **vermenigvuldigen met 4**. Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 4 om een waarde van 2 E/uur te krijgen.
 
-### Max totaal IOB dat OpenAPS niet kan overschrijden [E]
+### Maximum basal IOB OpenAPS can deliver [U]
 
 Hoeveelheid extra basale insuline (in eenheden) tot waaraan OpenAPS de hoeveelheid insuline in jouw lichaam mag laten oplopen, bovenop je normale basale insuline. Zodra deze waarde is bereikt, zal AAPS stoppen met het geven van extra basale insuline totdat jouw basale Insulin On Board (IOB, insuline aan boord) naar binnen dit bereik is teruggelopen.
 
-* Deze waarde laat bolus IOB buiten beschouwing, alleen basale insuline wordt meegerekend.
-* Het berekenen en sturen op deze waarde gebeurt onafhankelijk van jouw normale basale insuline. Alleen de extra basale insuline die werd afgegeven bovenop je normale basaalstand, wordt meenomen.
-* Deze waarde wordt gemeten in eenheden (E).
+* This value does not consider bolus IOB, only basal.
+* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* This value is measured in insulin units (u).
 
 Wanneer je begint met loopen, wordt tijdens een van de leerdoelen een tijd lang **Max Basal IOB beperkt naar 0**, zodat je gewend raakt aan het systeem. Dit zorgt ervoor dat AAPS helemaal geen extra basale insuline kan geven. Terwijl AAPS wel je basale insuline naar beneden kan bijstellen, of zelfs helemaal uitschakelen om een hypo te helpen voorkomen.
 
 Dit is een belangrijke stap omdat:
 
-* Je de tijd krijgt om veilig gebruik te maken van het AAPS-systeem en rustig kunt observeren hoe het werkt.
-* Je nu de kans hebt om jouw basaalprofiel en insuline gevoeligheidsfactor (ISF, Insulin Sensitivity Factor) perfect te maken.
-* Je kunt zien hoe AAPS jouw basale insuline naar beneden bijstelt om hypo's te voorkomen.
+* Have a period of time to safely get used to the AAPS system and monitor how it works.
+* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
+* See how AAPS limits your basal insulin to prevent hypoglycaemia.
 
 Pas na een tijd mag je het systeem toestaan om extra basale insuline te geven door de Max Basal IOB waarde te verhogen. Als eerste start wordt aangeraden om de **hoogste basaalstand** in je profiel te nemen en die te **vermenigvuldigen met 3**. Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, dan moet je dat vermenigvuldigen met 3 om een waarde van 1,5 E/uur te krijgen.
 
-* Je kunt voorzichtig beginnen met deze waarde en deze langzaam verhogen. 
-* Dit zijn alleen richtlijnen; ieder mens is anders. Je kunt onderweg merken dat jij zelf minder of meer nodig hebt dan wat hier wordt aanbevolen, begin altijd voorzichtig en pas langzaam aan.
+* You can start conservatively with this value and increase it slowly over time. 
+* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
 
 *Opmerking: om veiligheidsredenen geldt er voor Max Basal IOB een 'harde limiet' (voor volwassenen is die 7E). Zie ook de pagina over "OpenAPS functies" elders in deze wiki.*
 
@@ -100,27 +102,27 @@ Wanneer je AMA Autosens aan hebt staan, kun je jouw maximale maaltijd absorptie 
 
 De opties hier zullen variëren afhankelijk van welke pomp je hebt geselecteerd in de 'Configurator'. Koppel en stel je pomp in volgens de instructies van jouw pomp:
 
-* [DanaR Insulinepomp](../Configuration/DanaR-Insulin-Pump.md) 
-* [DanaRS Insulinepomp](../Configuration/DanaRS-Insulin-Pump.md) 
+* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
+* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu Chek Combo Pomp](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic Pomp](..//Configuration/MedtronicPump.md)
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
 Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuele Pomp hebt geselecteerd in de Configurator.
 
 ## NS Client
 
-* Stel hier jouw 'nightscout URL' in (https://yourwebsitename.herokuapp.com of https://yourwebsitename.azurewebsites.net), en jouw 'API secret' (een wachtwoord van 12 tekens lang uit jouw heroku of azure variabelen). Hierdoor kunnen gegevens zowel worden gelezen als geschreven tussen de Nightscout website en AndroidAPS. Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
-* **Zorg ervoor dat de URL is ingevuld ZONDER /api/v1/ aan het eind.**
+* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
+* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
     
     ![NSClient URL](../images/NSClientURL.png)
 
-* 'Log app start naar Nightscout' zal elke keer dat de app is gestart, een notitie maken. De app zou niet vaker dan één keer per dag opnieuw moeten starten; gebeurt dit vaker dan wijst dat op een probleem. Vaak wordt dit veroorzaakt doordat de accubesparings-functie van jouw telefoon steeds de app afsluit. Los dit op door de accubesparings-instellingen van jouw telefoon aan te passen.
+* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
 
-* 'Alarm opties' kun je selecteren om de standaard Nightscout alarmen te gebruiken. Om de alarmen voor Urgent High (urgent hoog), High (hoog), Low (laag) en Urgent Low (urgent laag) in te schakelen, zul je deze moeten toevoegen aan jouw [heroku of azure variabelen](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Deze alarmen werken alleen zolang de telefoon verbinding heeft met Nightscout (internet moet dus aanstaan op de telefoon). Alarmen via Nightscout zijn bedoeld voor bijv. ouder/verzorgers die hun kind vanaf afstand volgen. Als de BG-bron op de telefoon van de patiënt zelf staat, gebruik dan liever die alarmen (bijv. xDrip+) want dan ben je niet afhankelijk van een internetverbinding.
-* 'Activeer lokaal delen' onder de Geavanceerde Instellingen zal jouw careportal gegevens doorsturen naar andere apps op je telefoon, zoals xDrip+.
-* 'Gebruik altijd absolute basale waarden' moet geactiveerd worden als je Autotune correct wilt gebruiken.
+* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
+* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
+* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
     
-    ** Activeer dit niet bij het gebruik van een [Insight-pomp](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** Dit geeft onjuiste TBR-instellingen in de Insight-pomp.
+    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
 
 ## SMS Communicator
 
@@ -128,14 +130,12 @@ Deze instelling maakt externe controle van de app mogelijk door SMS instructies 
 
 ## Andere
 
-* Je kunt hier standaardwaarden instellen voor jouw tijdelijke streefdoelen (Eet binnenkort en Activiteit). Als je bijvoorbeeld "Eet binnenkort" kiest uit de drop-down box op het Overzicht-scherm, dan zal automatisch de duur en streef-BG worden ingevuld die je hier hebt aangegeven. Voor meer informatie over het gebruik van tijdelijke streefdoelen (Temp Targets) zie de [OpenAPS functies](../Usage/Open-APS-features.md). 
-* Je kunt standaardhoeveelheden instellen voor het vullen (van de canule, en van de slang). De hoeveelheden die je hier instelt zal de pomp wel afgeven, maar deze hoeveelheden worden niet meegeteld bij IOB berekeningen. Hoeveel eenheden nodig zijn staat in het instructieboekje in de doos met infuussets, dit verschilt per type infuusset en is afhankelijk van de lengte van de canule en de lengte van de slang.
-* Je kunt de visualisatie van jouw hoge en lage BG waardes op het Overzicht-scherm en op je smartwatch instellen. Let op: dit bepaalt alleen hoe jouw grafieken eruit zien, en heeft geen enkele link met de streefdoelen of andere berekeningen van het algoritme.
-* 'Afgekorte tab titels' zorgt dat er meer tab titels op je scherm passen, bijvoorbeeld het 'Open APS'-tabblad wordt 'OAPS', 'Doelen' wordt 'Doel' etc.
-* 'Lokaal gegenereerde waarschuwingen' laat je kiezen of je een waarschuwing ontvangt en na hoe lang voor als je geen bloedglucose waarden binnenkrijgt of de pomp onbereikbaar is. Als je vaak waarschuwingen over een onbereikbare pomp krijgt, schakel dan de BT Watchdog in in de geavanceerde pompinstellingen.   
-      
-    'Gebruik systeem notificaties voor waarschuwingen en notificaties': hiermee zullen ze als meldingen bovenin jouw Android-menubalk verschijnen.
+* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
+* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
+* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
+* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
 
 ## Data Keuzes
 
-* 'Fabric Upload' zal crashrapporten en gebruiksgegevens naar de ontwikkelaars sturen.
+* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
