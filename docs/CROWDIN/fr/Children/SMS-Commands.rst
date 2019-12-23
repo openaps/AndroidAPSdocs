@@ -113,9 +113,9 @@ Autres
 * NSCLIENT RESTART
    * Réponse : NSCLIENT RESTART 1 receivers
 * POMPE
-   * Response: Dernière conn : il y a 1 min Temp: 0.00U/h @11:38 5/30min IA: 0.5U Réserv: 34U Batt.: 100
+   * Réponse : Dernière conn : il y a 1 min Temp: 0.00U/h @11:38 5/30min IA: 0.5U Réserv: 34U Batt.: 100
 * SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+   * Réponse : Pour désactiver les commandes à distance SMS renvoyer le code Any. Gardez à l'esprit que vous ne pourrez le réactiver que directement à partir de l'application AAPS du smartphone maitre.
 * TARGET MEAL/ACTIVITY/HYPO   
    * Response: Pour définir la Cible Temp MEAL/ACTIVITY/HYPO renvoyer le code Any
 * TARGET STOP/CANCEL   
