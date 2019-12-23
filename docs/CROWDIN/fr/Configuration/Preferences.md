@@ -32,7 +32,7 @@ Il existe des limites de sécurité en fonction de l'âge que vous avez sélecti
 
 * Option permettant d'activer [superbolus](../Getting-Started/Screenshots#section-a) dans l'assistant de bolus.
 
-### Status lights
+### Voyants d'état
 
 * Les voyants d'état donnent un avertissement visuel pour un niveau de réservoir faible et de batterie ainsi qu'un changement de site en retard. La version étendue indique le temps écoulé / le pourcentage de la batterie.
     
@@ -134,7 +134,7 @@ Ce paramètre permet de contrôler à distance de l'application en envoyant des 
 * Vous pouvez définir des quantités par défaut pour remplir&amorcer - ceci amorcera la pompe avec la valeur spécifiée et cette insuline sera comptabilisée comme utilisée depuis le réservoir, mais pas dans les calculs de l'IA. Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
 * Vous pouvez changer dans l'écran d'accueil et sur la montre les plages d'objectifs. Notez que cela ne concerne que la représentation graphique et n'a pas d'impact sur vos cibles ou sur les calculs.
 * 'Raccourcir les titres des onglets' permet de voir plus d'onglets à l'écran, par exemple l'onglet 'OpenAPS' devient 'OAPS', 'Objectifs' devient 'OBJ' etc.
-* 'Alertes locales' vous permet de décider si vous recevez un avertissement et après combien de temps pour ne pas recevoir de valeurs de glycémie (données périmées) ou si la pompe n'est pas accessible. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* 'Alertes locales' vous permet de décider si vous recevez un avertissement et après combien de temps pour ne pas recevoir de valeurs de glycémie (données périmées) ou si la pompe n'est pas accessible. Si vous recevez fréquemment des alertes de pompe injoignable, activez le Watchdog BT dans les Paramètres avancés.
 
 ## Choix de données
 
