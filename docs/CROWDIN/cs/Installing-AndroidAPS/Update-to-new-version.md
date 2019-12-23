@@ -6,17 +6,17 @@
 
 ## Důležité poznámky
 
-* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+* U verze 2.3 je potřeba pro aktualizaci použít git. Aktualizace pomocí zip souboru již nefunguje.
+* Chcete-li sestavit apk, použijte [ Android Studio verze 3.5.1 ](https://developer.android.com/studio/) nebo novější.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
-* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* Používáte-li xDrip, ujistěte se, že máte zapnutou volbu [identifikovat příjemce ](../Configuration/xdrip#identify-receiver).
+* Používáte-li Dexcom G6 [ s upravenou Dexcom aplikací ](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), musíte si stáhnout verzi z adresáře [ 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
-## Quick walk-through for experienced users
+## Rychlý postup pro pokročilé uživatele
 
-Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+Pokud aplikaci aktualizujete poprvé, přeskočte tento odstavec. Je určen pouze pro zkušené uživatele. Pokud ho ještě nemáte, měli byste pokračovat bodem [ nainstalujte git ](../Installing-AndroidAPS/git-install.rst).
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in four simple steps:
+Pokud jste v minulosti již AAPS aktualizovali a používáte-li Windows PC, můžete provést aktualizaci ve čtyřech jednoduchých krocích:
 
 1. [Export your settings](../Usage/ExportImportSettings#how-to-export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
@@ -27,7 +27,7 @@ If you already updated AAPS in previous versions and use a Windows PC you can up
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
-## Update your local copy
+## Aktualizace lokální kopie
 
 * Click: VCS -> Git -> Pull
   
@@ -53,13 +53,13 @@ Zvolte „app“ a klepněte na tlačítko „Next“.
 
 ![Snímek 40](../images/Installation_Screenshot_40.png)
 
-Enter your key store path, enter key store password, select key alias and enter key password.
+Zadejte cestu ke svému úložišti klíčů, zadejte heslo k úložišti klíčů, vyberte alias klíče a zadejte heslo klíče.
 
-Select 'Remember passwords'.
+Vyberte 'Zapamatovat hesla'.
 
-Then click next.
+Poté klepněte na tlačítko „Next“.
 
-![Key store path](../images/KeystorePathUpdate.PNG)
+![Cesta k úložišti klíčů](../images/KeystorePathUpdate.PNG)
 
 Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". Následující údaje mohou být důležité pro pozdější použití.
 
@@ -109,11 +109,11 @@ Posledním krokem je klepnout na soubor APK, který jsem přijal přes Gmail, a 
 
 Ano, máte to a můžete začít s úvodní konfigurací AndroidAPS (CGM, inzulínová pumpa) atd.
 
-## Check AAPS version on phone
+## Zkontrolujte verzi AAPS na telefonu
 
-You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
+Verzi AAPS můžete na telefonu zkontrolovat klepnutím na tři tečky vpravo nahoře a poté na položku O aplikaci.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![Nainstalovaná verze AAPS](../images/Update_VersionCheck.png)
 
 ## Poradce při potížích
 
