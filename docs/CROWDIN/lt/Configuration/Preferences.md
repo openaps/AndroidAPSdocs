@@ -32,28 +32,30 @@ Tai leidžia nustatyti slaptažodį, kad būtų išvengta netyčinių ar neleist
 
 * Galimybė įjungti [superbolusus](../Getting-Started/Screenshots#section-a) boluso skaičiuoklėje.
 
-* Būsenos indikatoriai vizualiai įspėja apie mažą insulino kiekį rezervuare ir senkančią bateriją, taip pat apie tai, kad laikas keisti kateterį. Išplėstinė versija rodo likusį laiką / baterijos procentą.
-    
-    ![Būsenos indikatoriai - išsamiai](../images/StatusLights_V2_5.png)
-    
-    Būsenos indikatorių nustatymai turi būti atlikti Nightscout nustatymuose. Nustatyti kintamuosius:
-    
-    * Kateterio amžius: CAGE_WARN ir CAGE_URGENT (standartinis 48 ir 72 val.)
-    * Insulino amžius (rezervuaro): IAGE_WARN ir IAGE_URGENT (standartinis 72 ir 96 val.)
-    * Jutiklio amžius: SAGE_WARN ir SAGE_URGENT (standartinis 164 ir 166 val.)
-    * Baterijos amžius: BAGE_WARN ir BAGE_URGENT (standartinis 240 iki 360 val.)
+### Status lights
 
-* Įspėjimo apie rezervuaro lygį ir kritinį rezervuaro lygį riba.
+* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+    
+    ![Status lights - detail](../images/StatusLights_V2_5.png)
+    
+    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    
+    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
+    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
+    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
+    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
 
-* Įspėjimo apie baterijos lygį ir kritinį baterijos lygį riba.
+* Treshold for warning reservoir level and critical reservoir level.
+
+* Treshold for warning battery level and critical battery level.
 
 ## Terapijos saugumas
 
-### Maksimalus leistinas bolusas [U]
+### Max allowed bolus [U]
 
 Tai yra didžiausias leidžiamas boluso insulino kiekis, kurį gali suleisti AAPS. Šis nustatymas yra saugos apribojimas, siekiant užkirsti kelią per didelei boluso dozei dėl atsitiktinio įvedimo ar vartotojo klaidos. Rekomenduojama šią vertę nustatyti kaip pagrįstą ribą, maždaug atitinkančią maksimalią boluso dozę, kurią jūs galite susileisti maistui ar korekcijai. Šis apribojimas taip pat nustatomas boluso kalkuliatoriaus rezultatams.
 
-### Maks. leistini angliavandeniai [g]
+### Max allowed carbs [g]
 
 Tai yra didžiausias angliavandenių kiekis, kuriam AAPS boluso skaičiuoklė gali apskaičiuoti insulino dozę. Šis nustatymas yra saugos apribojimas, siekiant užkirsti kelią per didelei boluso dozei dėl atsitiktinio įvedimo ar vartotojo klaidos. Rekomenduojama šią vertę nustatyti kaip pagrįstą ribą, maždaug atitinkančią maksimalią angliavandenių dozę, kurią jūs galite suvartoti.
 
@@ -65,30 +67,30 @@ Tai yra didžiausias angliavandenių kiekis, kuriam AAPS boluso skaičiuoklė ga
 
 OpenAPS Pažangusis maisto asistentas (AMA) leidžia sistemai greičiau reaguoti įvedus valgio bolusą, JEI teisingai įvedate angliavandenius. Įjunkite jį nustatymuose, kad čia matytumėte saugos nustatymus. Jei norite naudoti šią funkciją, turite būti pasiekę [9 tikslą](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama). Daugiau apie šį nustatymą galite perskaityti OpenAPS dokumentuose [ Automatinis jautrumo nustatymas Autosens](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Maks vv/val skaičius, kuris gali būti nustatytas kaip laikina bazė
+### Max U/hr a Temp Basal can be set to
 
 Šis nustatymas egzistuoja kaip saugos riba, neleidžianti AAPS nustatyti pavojingai aukštos laikinos bazės. Reikšmė matuojama vienetais per valandą (vv/val). It is advised to set this to something sensible. Rekomenduojama naudoti savo profilio **didžiausią valandinę bazę** ir **padauginti reikšmę iš 4**. Pvz., jei didžiausia valandinė bazė jūsų profilyje yra 0,5 vv/val, padauginkite ją iš 4, ir gaunate 2 vv/val reikšmę.
 
-### Didžiausias valandinės bazės insulino kiekis, kurį gali suleisti OpenAPS [U]
+### Maximum basal IOB OpenAPS can deliver [U]
 
 Papildomo bazinio insulino kiekis (vienetais), sukauptas jūsų kūne, neskaitant įprastos nustatytos bazės. Pasiekus šią reikšmę, AAPS nustoja tiekti papildomą bazinį insuliną, kol aktyviojo insulino (AIO) kiekis grįš į nustatytą diapazoną.
 
-* Į šią reikšmę neįeina aktyvusis boluso insulinas, tik bazinis.
-* Ši reikšmė apskaičiuojama ir stebima nepriklausomai nuo jūsų įprastos valandinės bazės dydžio. Atsižvelgiama tik į papildomą bazės kiekį.
-* Ši vertė yra matuojamas insulino vienetais (vv).
+* This value does not consider bolus IOB, only basal.
+* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* This value is measured in insulin units (u).
 
 Pradėjus naudoti ciklą,**rekomenduojama nustatyti maksimalų bazinio insulino AIO=0** tam, kad išmoktumėte elgtis su sistema. Šis nustatymas neleidžia AAPS suleisti papildomo bazinio insulino. Šiuo laikotarpiu AAPS algoritmas gali apriboti arba išjungti valandinę bazę, kad būtų išvengta hipoglikemijos.
 
 Tai yra svarbus žingsnis, siekiant:
 
-* Turėti laiko susipažinimui su AAPS sistemos naudojimu ir stebėti, kaip ji veikia.
-* Pasinaudokite proga pakoreguoti savo valandinės bazės profilį ir jautrumo insulinui parametrus (JIF).
-* Pamatyti, kaip AAPS riboja valandinę bazę, kad būtų išvengta hipoglikemijos.
+* Have a period of time to safely get used to the AAPS system and monitor how it works.
+* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
+* See how AAPS limits your basal insulin to prevent hypoglycaemia.
 
 Kai jums priimtina, galite leisti sistemai suleisti papildomo bazinio insulino, padidindami Maks Bazės AIO reikšmę. Rekomenduojama naudoti savo profilio **didžiausią valandinę bazę** ir **padauginti reikšmę iš 3**. Pvz., jei didžiausia valandinė bazė jūsų profilyje yra 0,5 vv/val, padauginkite ją iš 3, ir gaunate 1.5 vv/val reikšmę.
 
-* Galite pradėti nuo šios vertės konservatyviai ir laikui bėgant palaipsniui ją padidinti. 
-* Tai yra tik gairės; kiekvieno žmogaus kūnas yra skirtingas. Gali būti, kad jums reikia daugiau ar mažiau, nei rekomenduojama, tačiau pradėkite konservatyviai ir palaipsniui koreguokite.
+* You can start conservatively with this value and increase it slowly over time. 
+* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
 
 *Pastaba: saugumo sumetimais neįmanoma nustatyti didesnės nei 7vv Maks Bazės AIO reikšmės.*
 
@@ -100,27 +102,27 @@ Jei esate nustatę AMA Autosens, tada jums bus leista nustatyti maksimalų maist
 
 Čia parametrai skiriasi priklausomai nuo to, kurią pompos tvarkyklę pasirinkote konfigūratoriuje. Suporuokite ir nustatykite savo pompą pagal naudojamos pompos instrukcijas:
 
-* [DanaR insulino pompa](../Configuration/DanaR-Insulin-Pump.md) 
-* [DanaRS insulino pompa](../Configuration/DanaRS-Insulin-Pump.md) 
+* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
+* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Accu Chek Combo pompa](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic pompa](..//Configuration/MedtronicPump.md)
+* [Medtronic Pump](..//Configuration/MedtronicPump.md)
 
 Jei AndroidAPS naudojate kaip atvirą ciklą, įsitikinkite, kad konfigūratoriuje pasirinkote virtualią pompą.
 
 ## NS Client
 
-* Čia įveskite savo Nightscout URL (https://jususvetaine.herokuapp.com arba https://jususvetaine.azurewebsites.net) ir API slaptažodį (12 simbolių slaptažodis heroku arba azure nustatymuose). Tai leidžia AndroidAPS imti ir siųsti duomenis iš/į Nightscout. Jei įstrigote 1-ame tiksle, patikrinkite, ar įvedėte teisingus duomenis (ar nėra rašybos klaidų).
-* **Įsitikinkite, kad URL yra be /api/v1/ pabaigoje.**
+* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
+* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
     
     ![NSClient URL](../images/NSClientURL.png)
 
-* Parinktis „Įrašyti programos paleidimą Nightscout" įveda pranešimus Priežiūros skirtuke kiekvieną kartą kai programa paleidžiama. Programa neturėtų būti paleista daugiau kaip kartą per dieną; jei tai darysite dažniau, gali kilti problemų.
+* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
 
-* „Įspėjimų nustatymai“ leidžia pasirinkti, kuriuos įspėjimus programa praneš. Kad suaktyvintumėte perspėjimus, [heroku ar azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms) kintamųjų reikšmių laukuose turite nustatyti Labai aukštų, Aukštų, Žemų ir Labai žemų įspėjimų reikšmes. Jie veiks tik tada, kai turėsite ryšį su Nightscout ir yra skirti tėvams / globėjams; jei stebėjimas vykdomas jūsų telefone, naudokite vietinius perspėjimus (pavyzdžiui, xdrip+).
-* „Įgalinti vietines transliacijas“ leis jūsų duomenimis iš priežiūros portalo dalintis su kitomis programomis išmaniajame telefone (pvz., xdrip+).
-* Jei norite tinkamai naudotis Autotune, reikia suaktyvinti „Visada naudokite absoliučias bazines reikšmes“.
+* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
+* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
+* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
     
-    **Nejunkite šito, jei naudojate [Insight pompą](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** Tai lemtų klaidingus laikinos bazės nustatymus Insight pompoje.
+    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
 
 ## SMS komunikatorius
 
@@ -128,12 +130,12 @@ Jei AndroidAPS naudojate kaip atvirą ciklą, įsitikinkite, kad konfigūratoriu
 
 ## Kiti
 
-* Čia galite nustatyti numatytąsias vertes įvairių tipų laikiniems tikslams (tokiems kaip Greitai valgysiu ar Aktyvumas). Kai pasirinksite laikiną tikslą, pavyzdžiui, „Greitai valgysiu“, langas automatiškai užpildys laiką ir tikslą, atsižvelgiant į čia nustatytus parametrus. Daugiau informacijos apie laikinus tikslus, žr. [OpenAPS funkcijos](../Usage/Open-APS-features.md). 
-* Galite nustatyti pradinio užpildymo reikšmes - jie bus perduoti pompai, o insulinas, naudojamas užpildymui, bus išskaičiuotas iš rezervuaro lygio, bet neįtraukiamas į AIO skaičiavimus. Norėdami sužinoti, kiek vienetų turėtumėte naudoti, priklausomai nuo adatos ir vamzdelio ilgio, skaitykite kateterio (kaniulės) instrukcijas.
-* Galite pakeisti pagrindinio ekrano išvaizdą ir stebėti parametrus jūsų pasirinktame diapazone. Atminkite, kad tai tik rodymo metodas, kuris neturi įtakos jūsų tikslams ar skaičiavimams.
-* "Sutrumpinti skirtukų pavadinimus" leidžia matyti daugiau skirtukų pavadinimų ant ekrano, pavyzdžiui, "Open APS" skirtukas tampa "OAPS', 'Tikslai" tampa "Tiksl." ir pan.
-* „Vietiniai perspėjimai“ leidžia nuspręsti, ar gauti perspėjimus, o jei taip, tai kiek laiko po to, kai nėra glikemijos duomenų (seni duomenys), arba kai pompa nepasiekiama. Jei dažnai gaunate pranešimus apie tai, kad pompa nepasiekiama, išplėstiniuose nustatymuose įgalinkite BT Watchdog.
+* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
+* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
+* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
+* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
 
 ## Duomenų pasirinkimas
 
-* „Fabric Upload“ išsiųs kūrėjams klaidų pranešimus ir naudojimo duomenis.
+* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
