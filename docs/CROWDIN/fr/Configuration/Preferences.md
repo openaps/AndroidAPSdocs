@@ -34,28 +34,28 @@ Il existe des limites de sécurité en fonction de l'âge que vous avez sélecti
 
 ### Status lights
 
-* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+* Les voyants d'état donnent un avertissement visuel pour un niveau de réservoir faible et de batterie ainsi qu'un changement de site en retard. La version étendue indique le temps écoulé / le pourcentage de la batterie.
     
-    ![Status lights - detail](../images/StatusLights_V2_5.png)
+    ![Voyants d'état - détail](../images/StatusLights_V2_5.png)
     
-    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    Les paramètres des voyants d'état doivent être définis dans les paramètres Nightscout. Définir les variables suivantes :
     
-    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
-    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
-    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
-    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+    * Age canule : CAGE_WARN et CAGE_URGENT (standard 48 et 72 heures)
+    * Age insuline (réservoir) : IAGE_WARN et IAGE_URGENT (standard 72 et 96 heures)
+    * Age du capteur : SAGE_WARN et SAGE_URGENT (standard 164 et 166 heures)
+    * Age pile : BAGE_WARN et BAGE_URGENT (standard 240 et 360 heures)
 
-* Treshold for warning reservoir level and critical reservoir level.
+* Seuils pour le niveau d'alerte du réservoir et le niveau critique du réservoir.
 
-* Treshold for warning battery level and critical battery level.
+* Seuils pour le niveau d'alerte de la pile et le niveau critique de la pile.
 
 ## Sécurités des traitements
 
-### Max allowed bolus [U]
+### Maximum Bolus autorisé [U]
 
 C’est la quantité maximale d’insuline en bolus que AAPS est autorisé à administrer. Ce paramètre existe comme une limite de sécurité pour empêcher l'administration d’un bolus trop important dû à une saisie accidentelle ou une erreur de l’utilisateur. Il est recommandé de définir cette valeur à un montant raisonnable qui correspond approximativement à la quantité maximale d’insuline de bolus que vous êtes susceptible d’avoir besoin pour un repas ou pour une dose de correction. Cette restriction s’applique également aux résultats de la Calculatrice de Bolus.
 
-### Max allowed carbs [g]
+### Maximum de Glucides autorisé [g]
 
 Il s’agit de la quantité maximale de Glucides que la Calculatrice de Bolus AAPS est autorisée à doser. Ce paramètre existe comme une limite de sécurité pour empêcher l'administration d’un bolus trop important dû à une saisie accidentelle ou une erreur de l’utilisateur. Il est recommandé de définir cette valeur à un montant raisonnable qui correspond approximativement à la quantité maximale de glucides que vous êtes susceptible d’avoir dans d'un repas.
 
@@ -67,30 +67,30 @@ Vous pouvez alterner entre Boucle Ouverte et Boucle Fermée. La Boucle Ouverte s
 
 L'Assistance Améliorée Repas (AAR) de OpenAPS permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable. Activez-le dans le Générateur de configuration pour voir les paramètres de sécurité, vous devrez avoir complété l'[Objectif 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) pour utiliser cette fonctionnalité. Vous pouvez apprendre plus sur les Paramètres et [Autosens dans le manuel d'OpenAPS](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### Max. U/hr pour le débit de basal temp
 
 Ce paramètre existe comme une limite de sécurité pour empêcher AAPS d'être capable d'administrer un dosage Basal dangereusement élevé. La valeur est definie en Unités d'insuline par heure (U/h). Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **plus haut dosage Basal** de votre profil et de le **multiplier par 4**. Par exemple, si le dosage basal le plus élevé dans votre profil a été 0.5 U/hr, vous qui pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### L'IA basal maximum que l'OpenAPS pourra délivrer [U]
 
 Une quantité d'insuline basale supplémentaire (en unités) a pu s'accumuler dans votre corps, en plus de votre profil basal normal. Une fois cette valeur atteinte, AAPS cessera de délivrer de l'insuline basale supplémentaire jusqu'à ce que votre Insuline basale Active (IA) aie diminuée et soit de nouveau dans cette plage.
 
-* This value does not consider bolus IOB, only basal.
-* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
-* This value is measured in insulin units (u).
+* Cette valeur ne prend pas en compte pas l'Insuline Active IA des bolus, mais seulement la Basal.
+* Cette valeur est calculée et surveillée indépendamment de votre débit de basal normal. Ce n'est que l'insuline basale additionnelle en plus du débit normal qui est pris en compte.
+* Cette valeur est mesurée en unités d'insuline (u).
 
 Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA basal Max à 0** pour une période de temps, pendant que vous vous habituez au système. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie.
 
 C'est une étape importante pour :
 
-* Have a period of time to safely get used to the AAPS system and monitor how it works.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+* Avoir un certain temps pour s'habituer en toute sécurité au système AAPS et surveiller son fonctionnement.
+* Profiter de l'occasion pour parfaire votre profil basal et votre Sensibilité à l'Insulin (SI).
+* Voir comment AAPS limite votre insuline basale pour prévenir l'hypoglycémie.
 
 Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le débit de basal le plus élevé dans votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U.
 
-* You can start conservatively with this value and increase it slowly over time. 
-* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps. 
+* Ce ne sont que des lignes directrices; chacun a un corps différent. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
 
 *Remarque : En tant que fonction de sécurité, l'IA Max Basal est limitée à 7 U.*
 
