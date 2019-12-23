@@ -135,41 +135,41 @@ Nastavení k přizpůsobení při přechodu od AMA k SMB
 * Cíl 10 musí být zahájen, aby byly SMB povolené (SMB záložka obecně ukazuje, která omezení jsou aktivní)
 * maxIOB now includes _all_ IOB, not just added basal. To znamená, že pokud je k jídlu poslaný bolus 8 U a maxIOB je 7 U, tak SMB nic nepošle, dokud IOB neklesne pod 7 U.
 * výchozí hodnota min_5m_carbimpact se změnila z 3 na 8 při přechodu od AMA k SMB. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
+* Při vytváření AndroidAPS 2.0 apk mějte na paměti: Konfigurace na vyžádání není aktuální verzí pluginu Android Gradle podporována! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
-   * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-   * In the left pane, click Build, Execution, Deployment > Compiler.
-   * Uncheck the Configure on demand checkbox.
-   * Click Apply or OK.
+   * Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
+   * V levé části pak na Build, Execution, Deployment > Compiler.
+   * Odtrhněte Configure on demand.
+   * Klikněte na Apply nebo OK.
 
-Overview tab
+Hlavní stránka
 --------------------------------------------------
-* Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
-* Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
+* Horní pruh umožňuje pozastavení/zakázání smyčky, zobrazení/úpravu profilu a k zahájení/ukončení dočasných cílů (DC). DC používají výchozí nastavení. Nová možnost DC Hypoglykémie je vysoký dočasný cíl, který má smyčce zabránit, aby příliš agresivně překorigovala dokrmové sacharidy na odvrácení hypoglykémie.
+* Tlačítka ošetření: staré tlačítko ošetření je stále dostupné, ale ve výchozím nastavení je skryté. Viditelnost tlačítek může být nově nastavitelná. New insulin button, new carbs button (including `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
 * `Colored prediction lines <../Getting-Started/Screenshots.html#section-e>`_
-* Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
-* Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
+* Možnost zobrazit pole poznámky v dialogových oknech inzulínu/sacharidů/kalkulátoru/plnění, poznámka se pak nahrává do NS
+* Aktualizované dialogové okno plnění umožňuje plnění samotné a navíc vložení ošetřujících vstupů pro výměnu kanyly a výměnu zásobníku
 
-Watch
+Hodinky
 --------------------------------------------------
-* Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
-* Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
-* confirmations and info dialogs now work on wear 2.0 as well
-* Added eCarbs menu entry
+* Oddělená varianta sestavení byla zrušena, nyní se pro sestavení používá varianta full. Abyste mohli používat ovládání bolusů z hodinek, povolte nejdřív toto nastavení na telefonu
+* Průvodce se nyní ptá jenom na sacharidy (a procenta, pokud je to povoleno v nastavení hodinek). Nyní lze konfigurovat v nastavení na telefonu, které parametry jsou zahrnuty do výpočtu
+* potvrzení a informační zprávy nyní fungují také na wear 2.0
+* Přidána volba eSacharidy v nabídce
 
-New plugins
+Nové pluginy
 --------------------------------------------------
-* PocTech app as BG source
-* Dexcom patched app as BG source
-* oref1 sensitivity plugin
+* PocTech aplikace jako zdroj glykémie
+* Upravená Dexcom aplikace jako zdroj glykémie
+* Oref1 plugin citlivosti
 
 Různé
 --------------------------------------------------
-* App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
-* Overhaul for config builder and objectives tabs, adding descriptions
-* New app icon
-* Lots of improvements and bugfixes
+* Nové výsuvné okno k zobrazení všech pluginů. Pluginy označené jako viditelné jsou nadále ve vrchním pruhu (oblíbené)
+* Přepracovaná Konfigurace a Cíle, přídány popisky
+* Nová ikona aplikace
+* Spousty vylepšení a oprav chyb
 * Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
-* Option to keep screen on
-* Option to show notification as Android notification
-* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+* Možnost ponechat obrazovku trvale zapnutou
+* Možnost zobrazovat upozornění jako Android notifikace
+* Rozšířené filtrování (dovolující mít povolené SMB i více než 6 h po jídle) je podporováno Dexcom upravenou aplikací a xDripem v nativním módu.
