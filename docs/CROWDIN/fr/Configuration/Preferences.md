@@ -90,7 +90,7 @@ C'est une étape importante pour :
 Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le débit de basal le plus élevé dans votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U.
 
 * Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps. 
-* Ce ne sont que des lignes directrices; chacun a un corps différent. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous aurez besoin de paramétrer une valeur supérieure ou inférieure à ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
 
 *Remarque : En tant que fonction de sécurité, l'IA Max Basal est limitée à 7 U.*
 
@@ -102,27 +102,27 @@ Si vous avez choisi d'utiliser l'Autosense AMA, vous pourrez alors entrer votre 
 
 Les options ici varient selon le pilote de pompe que vous avez sélectionné dans 'Générateur de configuration'. Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
-* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
-* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Pompe à insuline DanaR](../Configuration/DanaR-Insulin-Pump.md) 
+* [Pompe à insuline DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Pompe Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Pompe Medtronic](..//Configuration/MedtronicPump.md)
 
 Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sélectionné Pompe virtuelle Pump dans le Générateur de configuration.
 
 ## NS Client
 
-* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+* Définissez ici votre 'URL Nightscout' (https://yourwebsitename.herokuapp.com ou https://yourwebsitename.azurewebsites.net), et votre "API Secret NS" (un mot de passe de 12 caractères enregistré dans vos variables heroku ou azure). Cela permet de lire et d'écrire des données entre le site Nightscout et AndroidAPS. Vérifiez deux fois les fautes de frappe à cet endroit si vous êtes coincé dans l'objectif 1.
+* **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
     
-    ![NSClient URL](../images/NSClientURL.png)
+    ![URL de NSClient](../images/NSClientURL.png)
 
-* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
+* 'Log app start to nightscout' enregistre une note dans Careportal à chaque démarrage de l'application. L'application ne devrait pas avoir besoin de démarrer plus d'une fois par jour; si c'est plus souvent, cela suggère un problème.
 
-* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
-* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
-* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+* 'Options d'alarme' vous permet de sélectionner les alarmes de Nightscout à utiliser par défaut dans l'application. Pour que les alarmes sonnent, vous devez définir les valeurs d'alerte Haute urgent, Haute, Basse et Basse urgent dans vos variables [heroku ou azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms). Elles ne fonctionneront que si vous êtes connecté à nightscout et sont destinées aux parents/tuteurs. Si vous avez la source MGC sur votre téléphone, utilisez ces alarmes à la place (par exemple xdrip+).
+* 'Activer les transmissions locales' partagera vos données Careportal vers d'autres applications sur le téléphone, telles que xdrip.
+* 'Utiliser toujours les valeurs absolues du basal' doit être activé si vous souhaitez utiliser Autotune correctement.
     
-    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
+    **Ne pas activer cette fonction si vous utilisez une [pompe Insight](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** Cela conduirait à de mauvais réglages DBT dans la pompe Insight.
 
 ## Communicateur SMS
 
@@ -130,12 +130,12 @@ Ce paramètre permet de contrôler à distance de l'application en envoyant des 
 
 ## Autres
 
-* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
-* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
-* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
-* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
-* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* Vous pouvez définir des valeurs par défaut pour vos cibles temporaires à cet endroit pour les différents types de cible temporaire (hypo, repas imminent et activité). Lorsque vous sélectionnez une cible temporaire et que vous choisissez, par exemple, "Repas imminent" dans la liste déroulante, elle renseignera automatiquement la durée et la valeur de votre CT en fonction des valeurs que vous avez paramétrées ici. Pour plus d'informations sur l'utilisation des cibles temporaires, voir [Fonctions OpenAPS](../Usage/Open-APS-features.md). 
+* Vous pouvez définir des quantités par défaut pour remplir&amorcer - ceci amorcera la pompe avec la valeur spécifiée et cette insuline sera comptabilisée comme utilisée depuis le réservoir, mais pas dans les calculs de l'IA. Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
+* Vous pouvez changer dans l'écran d'accueil et sur la montre les plages d'objectifs. Notez que cela ne concerne que la représentation graphique et n'a pas d'impact sur vos cibles ou sur les calculs.
+* 'Raccourcir les titres des onglets' permet de voir plus d'onglets à l'écran, par exemple l'onglet 'OpenAPS' devient 'OAPS', 'Objectifs' devient 'OBJ' etc.
+* 'Alertes locales' vous permet de décider si vous recevez un avertissement et après combien de temps pour ne pas recevoir de valeurs de glycémie (données périmées) ou si la pompe n'est pas accessible. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
 
 ## Choix de données
 
-* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
+* 'Téléchargement Fabric' permet d'envoyer des rapports d'incidents en cas de crash et les données d'utilisation pour les développeurs.
