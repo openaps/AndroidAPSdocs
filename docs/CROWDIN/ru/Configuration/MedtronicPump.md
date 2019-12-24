@@ -106,9 +106,9 @@
 
 ## Важные Примечания
 
-### OpenAPS users
+### Пользователям OpenAPS
 
-When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+При запуске AndroidAPS главным контроллером является AndroidAPS, и все команды должны идти через него. Подача болюса должна идти через AAPS а не с помпы. У нас есть код, который обнаружит любую команду, выполненную на помпе, но если этого можно избежать, лучше этого не делать (я думаю, что мы устранили все проблемы с историей помпы и синхронизацией истории AAPS, но небольшие проблемы все еще могут появляться, особенно если вы используете нестандартную конфигурацию). С тех пор как я запустил AndroidAPS, я к помпе не прикасался, за исключением тех случаев, когда приходилось менять резервуар, и так и следует пользоваться AndroidAPS.
 
 ### Запись логов в файл
 
