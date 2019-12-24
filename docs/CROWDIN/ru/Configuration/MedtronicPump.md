@@ -165,7 +165,7 @@ When you start using AndroidAPS, primary controller is AndroidAPS and all comman
 
 ![Модель помпы](../images/Medtronic06.png)
 
-Если перевернуть помпу, в первой строке справа, вы увидите специальный трехбуквенный код. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Если перевернуть помпу, в первой строке справа, вы увидите специальный трехбуквенный код. Первые две буквы определяют тип частоты и последняя определяет цвет. Возможны следующие значения частоты:
 
 - NA-Северная Америка (при выборе частоты необходимо выбрать "US & Canada (916 МГц)")
 - CA-Канада (для выбора частоты необходимо выбрать "US & Canada (916 МГц)")
