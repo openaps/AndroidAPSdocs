@@ -106,50 +106,54 @@
 
 ## Важные Примечания
 
-### Запись логов в файл
+### OpenAPS users
 
-Поскольку драйвер Medtronic создан не так давно, следует включить ведение журнала, чтобы мы могли при необходимости отладить и устранить проблемы. Нажмите на значок в верхнем левом углу, выберите обслуживание и настройки журнала. Параметры Помпа, PumpComm, PumpBTComm должны быть отмечены.
+When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+
+### Logging
+
+Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
 
 ### RileyLink/GNARL
 
-При перезапуске RiyeLink или GNARL необходимо либо выполнить новую настройку (действие "Wake and Tune Up"), либо повторно отправить параметры связи (действие "Reset RielyLink Config") иначе обмен информацией завершится неудачей.
+When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
 
-### CGM/Непрерывный мониторинг ГК
+### CGMS
 
-Мониторинг Medtronic в настоящее время не поддерживается.
+Medtronic CGMS is currently NOT supported.
 
-### Использование помпы вручную
+### Manual use of pump
 
-Не следует выполнять процедуры лечения вручную с помпы. Все команды (болюс, врем базал TBR) должны проходить через AndroidAPS, но если возникнет необходимость выполнять команды вручную, НЕ подавайте их с частотой менее 3 минут (если по какой-то причине подаете 2 болюса, то второй следует начать по крайней мере через 3 минуты после первого).
+You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
 
 ## Изменения часового пояса и сезонное время или путешествия с помпой Medtronic и AndroidAPS
 
-Важно помнить, что не следует отключать алгоритм цикла во время путешествий и перелетов (если ваш мониторинг может работать в автономном режиме). AAPS автоматически обнаружит изменения часового пояса и отправит команду на помпу когда изменится время на телефоне.
+Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
 
-Например, если вы путешествете на Восток и часовой пояс меняется с добавлением часов (например, с GMT + 0 до GMT + 2), хронология помпы изменится без проблем и вам не о чем беспокоиться... но если вы перемещаетесь на Запад и часовой пояс меняется с вычитанием часов (например, с GMT + 2 до GMT-0), то возможна небольшая рассинхронизация. Говоря проще, в течение следующих x часов вам придется быть осторожными, потому что активный инсулин IOB, возможно, будет вести себя немного странно.
+Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
 
-Мы знаем об этой проблеме, и мы уже ищем возможные решения (см. https://github.com/andyrozman/RileyLinkAAPS/issues/145),, но на данный момент нужно иметь в виду эту информацию при путешествиях.
+We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
 
 ## Часто задаваемые вопросы
 
-### Можно ли видеть заряд RileyLink/GNARL?
+### Can I see the power of RileyLink/GNARL?
 
-Нет. В данный момент ни однао из этих устройств не поддерживает такую возможность, и ее, скорее всего, не будет и в дальнейшем.
+Нет. At the moment none of this devices support this and it probably won't even in the future.
 
-### Является ли GNARL полной заменой RileyLink?
+### Is GNARL full replacement for RileyLink?
 
-Да. Автор GNARL добавил все функции, используемые драйвером Medtronic. Все средства связи Medtronic поддерживаются (на момент написания (июнь/2019). GNARL нельзя использовать для связи Omnipod. Недостаток GNARL состоит в том, что его придется собирать самостоятельно, и у вас должна быть совместимая версия оборудования.
+Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
 
-** Примечание автора: ** Обратите внимание, что программное обеспечение GNARL по-прежнему экспериментально и недостаточно протестировано и не должно считаться таким же безопасным как RileyLink.
+**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
-### Где взять RileyLink или GNARL?
+### Where can I get RileyLink or GNARL?
 
-Как уже было сказано, устройства можно получить по этим ссылкам:
+Like mentioned before you can get devices here:
 
 - RileyLink - здесь - [getrileylink.org](https://getrileylink.org/).
 - GNARL- здесь можно получить информацию, но устройство должно быть заказано в другом месте ([ github.com/ecc1/gnarl ](https://github.com/ecc1/gnarl)).
 
-### Что делать, если потеряна связь с RileyLink и/или помпой?
+### What to do if I loose connection to RileyLink and/or pump?
 
 1. Выполните действие "Пробуждения и настройка", оно приведет к попытке найти правильную частоту связи с помпой.
 2. Отключите Bluetooth, подождите 10 секунд и снова включите его. Это заставит переподключиться к RileyLink.
@@ -157,11 +161,11 @@
 4. Попробуйте 3 и 2 вместе.
 5. Перезагрузите RileyLink и телефон.
 
-### Как определить, на какой частоте работает помпа
+### How to determine what Frequency my pump uses
 
-![Модель помпы](../images/Medtronic06.png)
+![Pump Model](../images/Medtronic06.png)
 
-Если повернуть помпу, в первой строке справа, вы увидите специальный трехбуквенный код. Первые две буквы определяют тип частоты и последняя определяет цвет. Возможны следующие значения частоты:
+If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
 
 - NA-Северная Америка (при выборе частоты необходимо выбрать "US & Canada (916 МГц)")
 - CA-Канада (для выбора частоты необходимо выбрать "US & Canada (916 МГц)")
