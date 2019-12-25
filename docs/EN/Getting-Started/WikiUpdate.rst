@@ -6,6 +6,7 @@ December 2019
 * `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - workaround for usage
 * `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - version 4.15.57 and newer supported
 * `Watchfaces <../Configuration/Watchfaces.html>`_ - major update, way more details
+* `Watchface complications <../Configuration/Watchfaces.html#complications>`_ - use your favorite watchface with AAPS data
 November 2019
 ==================================================
 * `Automation - deactivate when disabeling loop <../Usage/Automation.html#important-note>`_
