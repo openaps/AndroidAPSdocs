@@ -1,8 +1,8 @@
-# AAPS on Wear OS smartwatch
+# AAPS на смартчасах с Wear OS
 
-You can install AndroidAPS app on your **Wear OS based** smartwatch. Watch version of AAPS allows you to:
+Приложение AndroidAPS можно установить в смарт-часах на ** Wear **. Версия на часах позволяет:
 
-* **display data on your watch**: by providing [custom watchfaces](#aaps-watchfaces) or in standard watchfaces with use of [complications](#complications)
+* **отображать данные на часах**: при помощи [пользовательских циферблатов](#aaps-watchfaces) или стандартных циферблатов с использованием [дополнений](#complications)
 * **control AAPS on phone**: to bolus, set a temporary target etc. 
 
 ### Before you buy watch...
