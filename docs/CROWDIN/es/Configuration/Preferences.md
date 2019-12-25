@@ -34,28 +34,28 @@ Hay límites de seguridad basados en la edad que selecciona aquí. Si sobrepasa 
 
 ### Status lights
 
-* Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
+* Las luces de estado proporcionan un aviso visual para el bajo nivel de reservorio y batería, así como para el cambio de cánula por tiempo vencido (cambio de sitio). La versión ampliada muestra el tiempo transcurrido / el porcentaje de la batería.
     
     ![Status lights - detail](../images/StatusLights_V2_5.png)
     
-    Settings for status lights must be made in Nightscout settings. Set the following variables:
+    Los ajustes para las luces de estado se deben hacer en la configuración de Nightscout. Establezca las siguientes variables:
     
-    * Cannula age: CAGE_WARN and CAGE_URGENT (standard 48 and 72 hours)
-    * Insulin age (reservoir): IAGE_WARN and IAGE_URGENT (standard 72 and 96 hours)
-    * Sensor age: SAGE_WARN and SAGE_URGENT (standard 164 and 166 hours)
-    * Battery age: BAGE_WARN and BAGE_URGENT (standard 240 and 360 hours)
+    * Tiempo de uso de canula: CAGE_WARN y CAGE_URGENT (normalmente 48 y 72 horas)
+    * Tiempo de uso de reservorio: IAGE_WARN y IAGE_URGENT (normalmente 72 y 96 horas)
+    * Tiempo de uso del sensor: SAGE_WARN y SAGE_URGENT (normalmente 164 y 166 horas)
+    * Tiempo de uso de la batería: BAGE_WARN y BAGE_URGENT (normalmente 240 y 360 horas)
 
-* Treshold for warning reservoir level and critical reservoir level.
+* Umbral de advertencia de nivel del reservorio y de nivel crítico del mismo.
 
-* Treshold for warning battery level and critical battery level.
+* Umbral de advertencia de nivel de batería y el nivel crítico de batería.
 
 ## Seguridad en los tratamientos
 
-### Max allowed bolus [U]
+### Max bolo permitido [U]
 
 Esta es la cantidad máxima de insulina en bolo que AAPS puede poner. Esta configuración existe como un límite de seguridad para evitar la administración de un bolo masivo debido a una entrada accidental o error del usuario. Se recomienda establecer esto en una cantidad razonable que corresponda aproximadamente a la cantidad máxima de insulina en bolo que probablemente necesitará para una dosis de comida o corrección. Esta restricción también se aplica a los resultados de la Calculadora de bolo.
 
-### Max allowed carbs [g]
+### Máx. Carbohidratos permitidos [g]
 
 Esta es la cantidad máxima de carbohidratos que la calculadora de bolo AAPS puede dosificar. Esta configuración existe como un límite de seguridad para evitar la administración de un bolo masivo debido a una entrada accidental o error del usuario. Se recomienda establecer esto en una cantidad razonable que corresponda aproximadamente a la cantidad máxima de carbohidratos que probablemente necesite para una comida.
 
@@ -67,30 +67,30 @@ Puede alternar entre lazo abierto y cerrado aquí. Abrir lazo significa que las 
 
 Openaps AMA Permite que el sistema funcione más agresivamente de manera temporal después de un bolo de comida SI se ingresa carbohidratos. Actívelo en la pestaña Configuración para ver los valores de seguridad aquí, tendrá que haber completado [Objetivo 9 ](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) para utilizar esta característica. Puede leer más sobre la configuración y Autosens en los documentos de OpenAPS.
 
-### Max U/hr a Temp Basal can be set to
+### Max U/hr que se pueden configurar la Basal Temporal
 
 Esta configuración existe como un límite de seguridad para evitar que AAPS sea capaz de dar una tasa basal peligrosamente alta. El valor se mide en unidades por hora (u / h). Se aconseja establecer esto en algo sensato. Una buena recomendación es tomar la tasa basal más alta en su perfil y multiplicarla por 4. Por ejemplo, si la tasa basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 4 para obtener un valor de 2u / hr.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### Max IOB que OpenAPS puede proporcionar [U]
 
 Cantidad de insulina basal adicional (en unidades) que se acumula en el cuerpo, además de su perfil basal normal. Una vez que se alcanza este valor, AAPS dejará de administrar insulina basal adicional hasta que la Insulina a Bordo (IOB) basal vuelva a estar dentro de este rango.
 
-* This value does not consider bolus IOB, only basal.
-* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
-* This value is measured in insulin units (u).
+* Este valor no considera IOB de bolos, solo basal.
+* Este valor se calcula y monitorea independientemente de su tasa basal normal. Solo se considera la insulina basal adicional además de la tasa normal.
+* Este valor se mide en unidades de insulina (u).
 
 Cuando comience el lazo cerrado, se recomienda establecer Max Basal IOB en 0 durante un período de tiempo, mientras se está acostumbrando al sistema. Esto evita que AAPS administre insulina basal adicional. Durante este tiempo, AAPS aún podrá limitar o cortar su insulina basal para ayudar a prevenir la hipoglucemia.
 
 Este es un paso importante para:
 
-* Have a period of time to safely get used to the AAPS system and monitor how it works.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+* Disponga de un período de tiempo para acostumbrarse de manera segura al sistema AAPS y monitorear cómo funciona.
+* Aproveche la oportunidad de perfeccionar su perfil basal y el Factor de sensibilidad a la insulina (FSI).
+* Vea cómo AAPS limita su insulina basal para prevenir la hipoglucemia.
 
 Cuando se sienta cómodo, puede permitir que el sistema comience a administrarle insulina basal adicional, aumentando el valor de IOB basal máxima. La pauta recomendada para esto es tomar la tasa basal más alta en su perfil y multiplicarla por 3. Por ejemplo, si la tasa basal más alta en su perfil fue de 0.5u / h, podría multiplicarla por 3 para obtener un valor de 1.5u.
 
-* You can start conservatively with this value and increase it slowly over time. 
-* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Puede comenzar de manera conservadora con este valor y aumentarlo lentamente con el tiempo. 
+* Estas son solo pautas; el cuerpo de todos es diferente. Puede encontrar que necesita más o menos de lo que se recomienda aquí, pero siempre comience de manera conservadora y ajuste lentamente.
 
 *Nota: Como medida de seguridad, Max Basal IOB está limitada a 7u.*
 
@@ -102,17 +102,17 @@ Si ha seleccionado usar AMA Autosens, podrá ingresar su tiempo máximo de absor
 
 Las opciones aquí variarán según el controlador de la bomba que haya seleccionado en 'Config Builder'. Empareje y configure su bomba de acuerdo a las instrucciones relacionadas con la misma:
 
-* [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
-* [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
+* [Bomba de insulina DanaR](../Configuration/DanaR-Insulin-Pump.md) 
+* [Bomba de insulina DanaRS](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Bomba de insulina Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Infusora Medtronic](..//Configuration/MedtronicPump.md)
 
 Si usa AndroidAPS en lazo abierto, asegúrese de haber seleccionado Virtual Pump en config builder.
 
 ## NS Client
 
-* Set your 'nightscout URL' here (https://yourwebsitename.herokuapp.com or https://yourwebsitename.azurewebsites.net), and the 'API secret' (a 12 character password recorded in your heroku or azure variables). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+* Establezca su URL de 'nightscout' aquí (https://yourwebsitename.herokuapp.com o https://yourwebsitename.azurewebsites.net), y la 'API secret' (una contraseña de 12 caracteres registrada en sus variables heroku o azure). Esto permite que los datos se lean y escriban entre el sitio web nightscout y AndroidAPS. Verifique si hay errores tipográficos aquí sí está atrapado en el Objetivo 1.
+* **Asegúrese de que el URL NO CONTIENE /api/v1/al final.**
     
     ![NSClient URL](../images/NSClientURL.png)
 
