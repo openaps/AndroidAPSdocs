@@ -110,21 +110,21 @@ Cuando se selecciona el controlador Medtronic, se pueden añadir 3 acciones posi
 
 When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
 
-### Logging
+### Registro
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Las opciones Pump, PumpComm, PumpBTComm tienen que ser seleccionadas.
 
 ### RileyLink/GNARL
 
 When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
 
-### CGMS
+### MCG
 
-Medtronic CGMS is currently NOT supported.
+Medtronic MCG NO está soportado actualmente.
 
-### Manual use of pump
+### Uso manual de la bomba
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Debe evitar realizar manualmente las cosas en su bomba. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
 
 ## Cambios de zona horaria y DST (Hora extra solar) o viajando con bomba Medtronic y AndroidAPS
 
@@ -136,24 +136,24 @@ We are aware of this problem, and we are already looking into possible solution 
 
 ## Preguntas frecuentes
 
-### Can I see the power of RileyLink/GNARL?
+### ¿Puedo ver el nivel de batería erá de RileyLink/GNARL?
 
-No. At the moment none of this devices support this and it probably won't even in the future.
+No. En este momento ninguno de estos dispositivos soporta esto y probablemente no lo hará en el futuro.
 
-### Is GNARL full replacement for RileyLink?
+### ¿Es GNARL un sustituto totalmente equivalente de RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Sí. El autor de GNARL añadió todas las funciones utilizadas por el controlador Medtronic. Se da soporte a toda la comunicación Medtronic (en el momento de la escritura (junio/2019). GNARL no se puede utilizar para la comunicación de Omnipod. La contra cara de GNARL es que tiene que construirlo usted mismo, y tiene que tener una versión compatible de hardware.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Nota del autor: ** Tenga en cuenta que el software GNARL sigue siendo experimental y poco probado, y no debe ser considerado seguro para su uso como un RileyLink.
 
-### Where can I get RileyLink or GNARL?
+### ¿Dónde puedo obtener RileyLink o GNARL?
 
-Like mentioned before you can get devices here:
+Como se mencionó antes se pueden obtener dispositivos aquí:
 
 - RileyLink - Puede obtener el dispositivo aquí-[getrileylink.org](https://getrileylink.org/).
 - GNARL-Puede obtener información aquí, pero el dispositivo debe soliciarse en otro lugar ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
 
-### What to do if I loose connection to RileyLink and/or pump?
+### ¿Qué hacer si pierdo la conexión con RileyLink y/o bomba?
 
 1. Ejecute la acción "Despertar y Sintonizar", esta tratará de encontrar la frecuencia correcta para comunicarse con la bomba.
 2. Inhabilite Bluetooth, espere 10s y vuelva a habilitarlo. Esto obligará a reconectar a RileyLink.
@@ -161,11 +161,11 @@ Like mentioned before you can get devices here:
 4. Pruebe 3 y 2 juntos.
 5. Restablecer a RileyLink y reinicializar el teléfono.
 
-### How to determine what Frequency my pump uses
+### Cómo determinar qué frecuencia utiliza mi bomba
 
-![Pump Model](../images/Medtronic06.png)
+![Modelo de bomba](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Si giras tu bomba, la primera línea en el lado derecho, verás un código especial de 3 letras. Las dos primeras letras determinan el tipo de frecuencia y el último determina el color. A continuación se muestran los valores posibles para la Frecuencia:
 
 - NA-América del Norte (en la selección de frecuencia se debe seleccionar "US & Canada (916 MHz)")
 - CA-Canadá (en la selección de frecuencia se debe seleccionar "US & Canada (916 MHz)")
