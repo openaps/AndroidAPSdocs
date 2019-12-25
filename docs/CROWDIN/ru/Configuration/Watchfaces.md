@@ -1,18 +1,18 @@
-# AAPS на смартчасах с Wear OS
+# AAPS на смарт-часах с Wear OS
 
 Приложение AndroidAPS можно установить в смарт-часах на ** Wear **. Версия на часах позволяет:
 
 * **отображать данные на часах**: при помощи [пользовательских циферблатов](#aaps-watchfaces) или стандартных циферблатов с использованием [дополнений](#complications)
-* **control AAPS on phone**: to bolus, set a temporary target etc. 
+* **контролировать AAPS на телефоне**: чтобы подать болюс, установить временную цель и т. д. 
 
-### Before you buy watch...
+### Перед тем как купить часы...
 
-* Some features like *complications* require Wear OS version 2.0 or newer to work
-* Google rebranded *Android Wear 1.x* to *Wear OS* from version 2.x, so when it says *Android Wear* it may indicate older 1.x version of system
-* If description of smartwatch indicates only compatibility with *Android* and *iOS* - it **does not** means it runs on *Wear OS* - it may as well be some other sort of Vendor specific OS **which is not compatible with AAPS wear!**
-* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* Некоторые * дополнения *, требуют Wear OS версии 2.0 или новее
+* Google переименовал *Android Wear 1.x* в *Wear OS* начиная с версии 2.x, так что *Android Wear* может означать старую версию 1.x системы
+* Если описание смарт-часов указывает только на совместимость с * Android * и * iOS *-то это не **означает**, что они работают в * Wear OS *, - это может быть другой тип ОС от производителя часов, ** который несовместим с wear AAPS! **
+* Проверьте [ список проверенных телефонов и часов ](../Getting-Started/Phones#list-of-tested-phones) и [ спросите пользователей ](../Where-To-Go-For-Help/Connect-with-other-users.md) в случае сомнений
 
-### Building Wear OS version of AAPS
+### Создание Wear-версии AAPS
 
 To build Wear OS version of AAPS you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping).
 
