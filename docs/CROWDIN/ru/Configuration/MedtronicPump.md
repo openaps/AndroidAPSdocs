@@ -1,6 +1,6 @@
 # Помпы Medtronic
 
-**>>>> Начиная с версии 2.5 AndroidAPS драйвер помп Medtronic является частью ветки master. Несмотря на это, драйвер Medtronic все еще должен рассматриваться как бета-версия программного обеспечения. Установите, только если вы опытный пользователь. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcomming release. <<<<**
+**>>>> Начиная с версии 2.5 AndroidAPS драйвер помп Medtronic является частью ветки master. Несмотря на это, драйвер Medtronic все еще должен рассматриваться как бета-версия программного обеспечения. Установите, только если вы опытный пользователь. В настоящий момент мы по-прежнему боремся с проблемой двойного болюса (получаем 2 болюса в модуле лечения, что нарушает калькуляцию активного инсулина IOB (если вы получаете эту ошибку, включите Double Bolus Logging в конфигурации Medtronic и пришлите ваши журналы отчета)), должна быть устранена в следующей версии. <<<<**
 
 * * *
 
@@ -8,7 +8,7 @@
 
 * * *
 
-If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
+Если вы начали пользоваться драйвером Medtronic, включите себя в этот [ список ](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). Это для того, чтобы можно было видеть, какие телефоны хороши (и какие не очень) для этого драйвера. Там есть один столбец под названием "BT restart" (перезапуск блутуз). Он нужен чтобы проверить, поддерживает ли ваш телефон включение/выключение BT, когда не происходит сопряжения с помпой. Если замечена какая-либо другая проблема, напишите о ней в столбце Комментарии.
 
 * * *
 
@@ -41,11 +41,11 @@ If you started using Medtronic driver please add yourself to this [list](https:/
 1. Воспользоваться Мастером (при новой установке)
 2. Непосредственно на вкладке Конфигурация (Значок шестеренки в графе драйвера Medtronic)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Если вы делаете новую установку, то сразу попадаете в Мастер настройки. Иногда, если соединение BT не работает должным образом (не удается подключиться к помпе), возможно, вы не сможете выполнить настройку. В таком случае выберите виртуальную помпу и после того, как Мастер закончит работу, можно обратиться к варианту 2, который обойдет обнаружение помпы.
 
-![MDT Settings](../images/Medtronic01.png)
+![Настройки MDT](../images/Medtronic01.png)
 
-You need to set following items: (see picture above)
+Необходимо задать следующие параметры: (см. рисунок выше)
 
 - ** Серийный номер помпы **: Он находится на обратной стороне помпы сразу за буквами SN. Нужно вводить только номер, серийный номер состоит из 6 цифр.
 - ** Тип помпы **: Какой у вас тип помпы (напр. 522). 
@@ -61,9 +61,9 @@ You need to set following items: (see picture above)
 
 ## Вкладка MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png)
+![Вкладка MDT](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+На вкладке помпы можно видеть несколько строк, которые отображают текущее состояние помпы (и связь).
 
 - **Статус RileyLink**: показывает состояние связи RileyLink. Телефон должен быть все время подключен к RileyLink.
 - ** Состояние помпы **: Состояние соединения с помпой, у него может быть несколько значений, но в основном мы увидим значок спящего режима (когда соединение с помпой не активно), при выполнении команды можно видеть "Устанавливается соединение", то есть AAPS пытается соединиться с помпой или описание других команд, выполняемых помпой (например, чтение времени, устанавливается временный базал TBR и т. д.).
@@ -75,7 +75,7 @@ On pump tab you can see several lines that are showing pumps (and connections) c
 - ** Резервуар **: Сколько инсулина находится в картридже (обновляется по крайней мере каждый час).
 - **ошибки**: строка ошибки, если есть проблемы (в основном показывает, есть ли ошибка в конфигурации).
 
-On lower end we have 3 buttons:
+В нижней части мы имеем три кнопки:
 
 - **Обновить** для обновления состояния. Этот параметр следует использовать только после того, как соединение не будет установлено в течение длительного времени, так как это действие приведет к сбросу данных о помпе (потребуется получить историю данных, получить/установить время, получить профиль, получить состояние батареи и т. д.).
 - **Журнал помпы**: показывает хронологию помпы (см. [внизу](../Configuration/MedtronicPump#pump-history))
@@ -83,22 +83,22 @@ On lower end we have 3 buttons:
 
 ## Журнал помпы
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Диалоговое окно журнала помпы](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Хронология помпы извлекается каждые 5 минут и сохраняется в памяти. Она хранится только последние 24 часа, более старые записи удаляются по мере добавления новых. Это простой способ увидеть события хронологии помпы (некоторые записи могут не отображаться, поскольку не важны - например, конфигурация функций, не используемых AndroidAPS).
 
 ## Состояние RL (Состояние RileyLink)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![Состояние RileyLink-Параметры](../images/Medtronic04.png) ![Состояние RileyLink-хронология](../images/Medtronic05.png)
 
-Dialog has two tabs:
+Диалоговое окно имеет две вкладки:
 
 - ** Параметры **: Показывает параметры RileyLink: Сконфигурированный адрес, Подключенное устройство, Состояние соединения, Ошибка соединения и Версия встроенного ПО (прошивки) RileyLink. Типом устройства всегда является Medtronic Pump, Модель - ваша версия модели, Серийный номер-сконфигурированный серийный номер, Частота помпы- Частота на которой работает связь помпы, Последняя частота-последняя используемая частота связи.
 - ** История **: Показывает хронологию связи, элементы с RyleyLink показывают изменения состояния RileyLink, Medtronic показывает, какие команды были отправлены на помпу.
 
 ## Действия
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Если выбран драйвер Medtronic, на вкладке Действия можно добавить три варианта:
 
 - ** Пробуждение и настройка **-Если вы видите, что AndroidAPS не связывался с помпой в течение какого-то времени (он должен связаться каждые 5 минут), вы можете нажать кнопку Настройка. Начнется сеанс связи с помпой с поиском всех подчастот, на которых может выполняться связь. Если обнаружится одна из них, она будет задана как частота по умолчанию. 
 - ** Сброс конфигурации RileyLink **-При перезагрузке RileyLink/GNARL необходимо выполнить эту команду, чтобы переконфигурировать устройство (набор частоты, тип частоты, настроенная кодировка).
@@ -106,45 +106,49 @@ When Medtronic driver is selected, 3 possible actions can be added to Actions Ta
 
 ## Важные Примечания
 
+### Пользователям OpenAPS
+
+При запуске AndroidAPS главным контроллером является AndroidAPS, и все команды должны идти через него. Подача болюса должна идти через AAPS а не с помпы. У нас есть код, который обнаружит любую команду, выполненную на помпе, но если этого можно избежать, лучше этого не делать (я думаю, что мы устранили все проблемы с историей помпы и синхронизацией истории AAPS, но небольшие проблемы все еще могут появляться, особенно если вы используете нестандартную конфигурацию). С тех пор как я запустил AndroidAPS, я к помпе не прикасался, за исключением тех случаев, когда приходилось менять резервуар, и так и следует пользоваться AndroidAPS.
+
 ### Запись логов в файл
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Поскольку драйвер Medtronic создан не так давно, следует включить ведение журнала, чтобы мы могли при необходимости отладить и устранить проблемы. Нажмите на значок в верхнем левом углу, выберите обслуживание и настройки журнала. Параметры Помпа, PumpComm, PumpBTComm должны быть отмечены.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+При перезапуске RiyeLink или GNARL необходимо либо выполнить новую настройку (действие "Wake and Tune Up"), либо повторно отправить параметры связи (действие "Reset RielyLink Config") иначе обмен информацией завершится неудачей.
 
 ### CGM/Непрерывный мониторинг ГК
 
-Medtronic CGMS is currently NOT supported.
+Мониторинг Medtronic в настоящее время не поддерживается.
 
 ### Использование помпы вручную
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Не следует выполнять процедуры лечения вручную с помпы. Все команды (болюс, врем базал TBR) должны проходить через AndroidAPS, но если возникнет необходимость выполнять команды вручную, НЕ подавайте их с частотой менее 3 минут (если по какой-то причине подаете 2 болюса, то второй следует начать по крайней мере через 3 минуты после первого).
 
 ## Изменения часового пояса и сезонное время или путешествия с помпой Medtronic и AndroidAPS
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+Важно помнить, что не следует отключать алгоритм цикла во время путешествий и перелетов (если ваш мониторинг может работать в автономном режиме). AAPS автоматически обнаружит изменения часового пояса и отправит команду на помпу когда изменится время на телефоне.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Например, если вы путешествете на Восток и часовой пояс меняется в сторону увеличения (например, с GMT + 0 до GMT + 2), хронология помпы изменится без проблем и вам не о чем беспокоиться... но если вы перемещаетесь на Запад и часовой пояс меняется в сторону уменьшения (например, с GMT + 2 до GMT-0), то возможна небольшая рассинхронизация. Говоря проще, в течение следующих x часов вам придется быть осторожными, потому что активный инсулин IOB, возможно, будет вести себя немного странно.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Мы знаем об этой проблеме, и мы уже ищем возможные решения (см. https://github.com/andyrozman/RileyLinkAAPS/issues/145),, но на данный момент нужно иметь в виду эту информацию при путешествиях.
 
 ## Часто задаваемые вопросы
 
 ### Можно ли видеть заряд RileyLink/GNARL?
 
-Нет. At the moment none of this devices support this and it probably won't even in the future.
+Нет. В данный момент ни одно из этих устройств не поддерживает такую возможность, и ее, скорее всего, не будет и в дальнейшем.
 
 ### Является ли GNARL полной заменой RileyLink?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Да. Автор GNARL добавил все функции, используемые драйвером Medtronic. Все средства связи Medtronic поддерживаются (на момент написания (июнь/2019). GNARL нельзя использовать для связи с Omnipod. Недостаток GNARL состоит в том, что его придется собирать самостоятельно, и у вас должна быть совместимая версия оборудования.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+** Примечание автора: ** Обратите внимание, что программное обеспечение GNARL по-прежнему экспериментально и недостаточно протестировано и не должно считаться таким же безопасным как RileyLink.
 
 ### Где взять RileyLink или GNARL?
 
-Like mentioned before you can get devices here:
+Как уже было сказано, устройства можно получить по этим ссылкам:
 
 - RileyLink - здесь - [getrileylink.org](https://getrileylink.org/).
 - GNARL- здесь можно получить информацию, но устройство должно быть заказано в другом месте ([ github.com/ecc1/gnarl ](https://github.com/ecc1/gnarl)).
@@ -159,9 +163,9 @@ Like mentioned before you can get devices here:
 
 ### Как определить, на какой частоте работает помпа
 
-![Pump Model](../images/Medtronic06.png)
+![Модель помпы](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Если перевернуть помпу, в первой строке справа, вы увидите специальный трехбуквенный код. Первые две буквы определяют тип частоты и последняя определяет цвет. Возможны следующие значения частоты:
 
 - NA-Северная Америка (при выборе частоты необходимо выбрать "US & Canada (916 МГц)")
 - CA-Канада (для выбора частоты необходимо выбрать "US & Canada (916 МГц)")

@@ -1,8 +1,8 @@
-Inteligentne zegarki
+Smartwatches
 *************
 
-Smartwache są opcjonalne, ale bardzo przydatne dla niektórych użytkowników.
-Więcej informacji znajduje się tutaj:
+Smartwatches are optional, but very useful for some users.
+More details are here:
 
 
 .. toctree::
@@ -10,4 +10,6 @@ Więcej informacji znajduje się tutaj:
    :glob:
    
    List of tested phones and smartwatches <../Getting-Started/Phones.md>
-   Watchfaces  <../Configuration/Watchfaces.md>
+   Phone background <../Getting-Started/Phones.md#phone-background>
+   Watchfaces Wear OS <../Configuration/Watchfaces.md>
+   Pebble <../Configuration/Watchfaces.md#pebble>

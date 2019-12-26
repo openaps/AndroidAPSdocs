@@ -2,7 +2,7 @@
 
 Puede instalar la aplicación AndroidAPS en su reloj **basado en Wear OS**. La versión de AAPS para reloj le permite:
 
-* **mostrar datos en su reloj** proporcionando[ esferas personalizadas del reloj](../Configuration/Watchfaces#aaps-watchfaces) o en esferas estándar con complicaciones
+* **muestra datos en el reloj**: proporcionando [pantallas personalizadas](#aaps-watchfaces) o en pantalla estándar con el uso de compilaciones [complicaciones](#complications)
 * **control de AAPS en el teléfono**: para bolo, establecer un objetivo temporal, etc. 
 
 ### Antes de comprar un reloj...
@@ -147,16 +147,98 @@ La estrella rellena muestra el estado habilitado (**On**), y el icono de estrell
 
 * **Asistente Porcentaje** (por defecto `Off`): permite bolos de corrección del asistente (valor introducido en porcentaje antes de la notificación de confirmación)
 
+## Compilaciones
+
+*Compilación* es un término de la relojería tradicional, que se refiere la adición en la pantalla del reloj - de otra pequeña ventana o sub-pantalla (con fecha, día de la semana, fase lunar, etc.). Wear OS 2.0 trae esa metáfora para permitir que los proveedores de datos personalizados, como el tiempo, las notificaciones, los contadores de ejercicios y más cosas, se añadan a cualquier pantalla de observación que soporte compilaciones.
+
+La aplicación AndroidAPS Wear OS soporta Compilaciones desde `2.6`, y permite que cualquier aplicación de terceros que soporte a Compilaciones, se configure para mostrar los datos relacionados con AAPS (BG con la tendencia, IOB, COB, etc.).
+
+Las compilaciones también sirven como **acceso directo** a las funciones de AAPS. Tocándolos puede abrir AAPS menús relacionados y cuadros de diálogo (dependiendo de la compilación del tipo y configuración).
+
+![Compilaciones en Relojes](../images/Watchface_Complications_On_Watchfaces.png)
+
+### Tipos de compilaciones
+
+La aplicación AAPS Wear OS sólo proporciona datos en bruto, de acuerdo con formatos predefinidos. Es responsabilidad de un tercero decidir dónde y cómo hacer las compilaciones, incluyendo su diseño, borde, color y fuente. A partir de muchos tipos de compilación de SO Wear disponibles, AAPS utiliza:
+
+* `TEXTO CORTO` - Contiene dos líneas de texto, de 7 caracteres cada uno, a veces referido como el valor y la etiqueta. Normalmente se representa dentro de un círculo o una píldora pequeña - una por debajo de otra, o lado a lado. Se trata de una compilación n muy limitada en el espacio. AAPS intenta eliminar los caracteres innecesarios para adaptarse redondeando valores, eliminando los ceros iniciales y finales de los valores, etc.
+* `TEXTO LARGO` - Contiene dos líneas de texto, acerca de 20 caracteres cada una. Normalmente se representa dentro de un rectángulo o una píldora larga - una debajo de otra. Se utiliza para obtener más detalles y el estado.
+* `RANGO DE VALORES` -Utilizado para valores de rango predefinido, como un porcentaje. Contiene el icono, la etiqueta y se representa normalmente como porcentaje de progreso de un círculo.
+* `IMAGEN LARGA` -Imagen de fondo personalizada que se puede utilizar (cuando está soportado por la pantalla) como fondo.
+
+### Configuración de compilación
+
+Para añadir complicaciones al reloj, configúrelo pulso largo y haciendo clic en el icono de engranaje de abajo. Dependiendo de la forma en que cada pantalla lo configura, ya sea haciendo clic en los marcadores o introduzca el menú de configuración de la pantalla para las compilaciones. Las compilaciones de AAPS se agrupan bajo la entrada de menú de AAPS.
+
+Cuando se configuran compilaciones en el reloj, Wear OS presentará y filtrará la lista para que puedan caber en el lugar seleccionado de la pantalla. Si no se pueden encontrar compilaciones específicas en la lista, probablemente se debe a su tipo que no se puede utilizar para el lugar asignado.
+
+### Compilaciones proporcionadas por AAPS
+
+AndroidAPS proporciona las siguientes compilaciones:
+
+![AAPS Lista de compilaciones](../images/Watchface_Complications_List.png)
+
+* **BR, CoB & IoB** (`TEXTO CORTO`, abre *Menú*): Muestra *Basal* en la primera línea y *Carbohidratos a Bordo* y *de Insulina a Bordo* en la segunda línea.
+* **Blood Glucose** (`SHORT TEXT`, abre *Menu*): Muestra valor de *Glucos en Sangre* y *tendencia* flecha en la primera línea y *tiempo de medición* y *delta BG* en la segunda línea.
+* **CoB & IoB** (`TEXTO CORTO`, abre *Menú*): Muestra *Carbohidratos a Bordo* en la primera línea e *Insulina a Bordo* en la segunda línea.
+* **CoB Detallada** (`TEXTO CORTO`, abre *Asistente*): Muestra los *Carbohidratos a Bordo* activos en la primera línea y los planificados (futuros, eCarbs) Carbohidrátos en la segunda línea.
+* **CoB Icono** (`TEXTO CORTO`, abre *Asistente*): Muestra el valor de los *Carbohidratos a Bordo* con un icono estático.
+* **Estado completo** (`LONG TEXT`, abre *Menú*): Muestra la mayoría de los datos a la vez: *Valor de Glucosa en sangre* y *flecha de tendencia*, *delta GS* y *edad de medición* en la primera línea. En la segunda línea *Carbohidratos a Bordo*, *Insulina a Bordo* y *Tasa basal*.
+* **Estado Completo (volteado)** (`TEXTO LARGO`, abre *Menú*): Mismos datos que para el estándar *Estado Completo*, pero las líneas están invertidas. Puede ser utilizado en relojes que ignoran una de las dos líneas en `TEXTO LARGO`
+* **IoB Detallado** (`SHORT TEXT`, abre *Bolos*): Muestra el total de *Insulina a Bordo* en la primera línea y dividido *IoB* para *Bolos* y *Basal* en la segunda línea.
+* **Icono IoB** (`TEXTO CORTO`, abre *Bolo*): Muestra *de Insulina a Bordo* valor con un icono estático.
+* **Cargador/Batería del Teléfono** (`VALOR RANGO`, abre *Estado*): Muestra el porcentaje de la batería del teléfono con AAPS, según lo informado por la AAPS. Se visualiza como indicador de porcentaje con un icono de batería que refleja el valor notificado. Puede que no se actualice en tiempo real, pero con otros cambios importantes de datos de AAPS (por lo general: cada ~ 5 minutos con la nueva medición *Glucosa en Sangre*).
+
+Adicionalmente, hay tres compilaciones de `IMAGEN GRANDE` kind: **Fondo Oscuror**, **Fondo Gris** y **Fondo Claro**, que muestran el fondo estático de AAPS.
+
+### Ajustes relacionados con la Compilación
+
+* **Acción de Toque Compilación** (valor predeterminado `Valor predetermiando`): Decide qué diálogo se abre cuando se pulsa la compilación: 
+  * *Predeterminado*: acción específica para el tipo de compilación *(ver la lista anterior)*
+  * *Menú*: Menú principal de AAPS
+  * *Asistente*: asistente de bolos - calculadora de bolos
+  * *Bolo*: ingreso directo del valor de bolo
+  * *eCarb*: diálogo de configuración de Carbohidratos extendidos
+  * *Estado*: submenú de estado
+  * *Ninguno*: Deshabilita el pulsado en AAPS compilaciones
+* **Unicode en Complications** (valor por omisión `On`): Cuando está `On`, la compilación utilizará caracteres Unicode para símbolos como `Δ` Delta, `formato vertical` o `en formato` Tasa Basal. La representación de los mismos depende de la fuente, y eso puede ser muy específico del reloj. Esta opción permite cambiar los símbolos Unicode `Off` cuando sea necesario - si la fuente utilizada por la pantalla personalizada no soporta esos símbolos - para evitar problemas gráficos.
+
+## Sugerencias de rendimiento y batería
+
+Los relojes de con OS Wear son dispositivos muy limitados en energía. El tamaño del caso de reloj limita la capacidad de la batería incluida. Incluso con los avances recientes tanto en hardware como en software, los relojes de Wear OS todavía requieren una carga diaria.
+
+Si experimenta una duración de batería más corto que un día (desde el atardecer hasta el amanecer), aquí hay algunos consejos para solucionar los problemas.
+
+Las principales áreas que requieren batería son:
+
+* Pantalla activa con una luz de fondo de encendido (LED) o el modo de intensidad máxima (para OLED)
+* Renderizado en la pantalla
+* Comunicación de radio sobre Bluetooth
+
+Puesto que no podemos comprometer la comunicación (necesitamos datos actualizados) y queremos tener los datos más recientes representados, la mayoría de las optimizaciones se pueden realizar en el área *de tiempo de visualización*:
+
+* Las pantallas de reloj estandars suelen estar mejor optimizadas que las personalizadas, descargadas desde la tienda.
+* Es mejor utilizar las pantallas que limitan la cantidad de datos representados en modalidad inactiva / atenuada.
+* Tenga en cuenta que al mezclar otras compilaciones, como los widgets meteorológicos de terceros, u otros datos de utilización de orígenes externos.
+* Empiece con las pantallas más sencillas. Añada una compilación por vez y observe cómo afecta a la duración de la batería.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). En los dispositivos OLED, esto limitará la cantidad de píxeles encendidos y limitará el agotamiento.
+* Compruebe lo que funciona mejor en su reloj: AAPS en pantallas estándars o relojes con AAPS y pantallas con compilaciones.
+* Observar durante unos días, con diferentes perfiles de actividad. La mayoría de los relojes activan la pantalla al mirar, mover y otros disparadores relacionados con el uso.
+* Compruebe los valores del sistema global que afectan al rendimiento: notificaciones, tiempo de espera de visualización retroiluminación/activo, cuando se activa el GPS.
+* Consulte la [lista de teléfonos y relojes probados ](../Getting-Started/Phones#list-of-tested-phones) y [pregunta a la comunidad ](../Where-To-Go-For-Help/Connect-with-other-users.md) si duda de si su reloj será compatible.
+* **No podemos garantizar que los datos visualizados en la pantalla o que la compilación estén actualizados**. Al final, depende de Wear OS decidir cuándo actualizar una superposición o una compilación. Incluso cuando la aplicación de AAPS solicita actualizaciones, el sistema puede decidir posponer o ignorar actualizaciones para conservar la batería. Cuando está en duda y bajo en batería en el reloj - siempre haga doble verificación con la aplicación principal de AAPS en el teléfono.
+
 ## Resolución de problemas de app del reloj:
 
 * En Android Wear 2.0 la pantalla de reloj ya no se instala por sí misma. Necesitas ir a la playstore en el reloj (no es el mismo que el playstore del teléfono) y encontrarla en la categoría de aplicaciones instaladas en su teléfono, desde allí se puede activar. Habilite también la actualización automática. 
 * A veces ayuda re-sincronizar las aplicaciones para el reloj, ya que puede ser un poco lento para hacer lo mismo: Android Wear > ícono de la rueda Dentada > Reloj nombre > Sincronizar apps.
 * Habilite la depuración de ADB en las opciones de desarrollador (en el reloj), conecte el reloj a través de USB e inicie la aplicación Wear una vez en Android Studio.
+* Si la compilación no actualiza los datos - compruebe primero si reloj con AAPS esta funcionando.
 
 ## Ver datos de Nightscout
 
-Si estás usando otro sistema de lazo y quieres *ver* el detalle de tu lazo en el reloj Android Wear o quiere ver el bucle de tu hijo, entonces puedes construir/descargar sólo el APK NSClient. Para hacer esto siga las instrucciones de [compilar APK](../Installing-AndroidAPS/Building-APK.md) seleccionando la variante de compilación "NSClientRelease". Hay varias pantallas para elegir que incluyen datos como: delta promedio, IOB, dosis basal temporal activa, perfiles basales o gráfico de lecturas del medidor contínuo (CGM).
+Si estás usando otro sistema de lazo y quieres *ver* el detalle de tu lazo en el reloj Android Wear o quiere ver el lazo de tu hijo, entonces puedes construir/descargar sólo el APK NSClient. Para hacer esto siga las instrucciones de [compilar APK](../Installing-AndroidAPS/Building-APK.md) seleccionando la variante de compilación "NSClientRelease". Hay varias pantallas para elegir que incluyen datos como: delta promedio, IOB, dosis basal temporal activa, perfiles basales o gráfico de lecturas del medidor contínuo (CGM).
 
 # Pebble
 
-Los usuarios de Pebble pueden utilizar la [esfera del reloj Urchin](https://github.com/mddub/urchin-cgm) para *ver* los datos del lazos (si están cargados en nightscout), pero no podrá interactuar con AndroidAPS a través del reloj. Puede elegir campos para mostrar como, por ejemplo, IOB y la basal temporal activa y las predicciones. Si abre el lazo puede utilizar [IFTTT](https://ifttt.com/) para crear un applet que diga si la notificación se recibe de AndroidAPS, entonces envíe una notificación de SMS o pushover.
+Los usuarios de Pebble pueden utilizar la [esfera del reloj Urchin](https://github.com/mddub/urchin-cgm) para *ver* los datos del lazos (si están cargados en nightscout), pero no podrá interactuar con AndroidAPS a través del reloj. Puede elegir campos para mostrar como, por ejemplo, IOB y la frecuencia de basal temporal activa y las predicciones. Si abre el lazo puede utilizar [IFTTT](https://ifttt.com/) para crear un applet que diga si la notificación se recibe de AndroidAPS, entonces envíe una notificación de SMS o pushover.

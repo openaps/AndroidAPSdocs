@@ -1,8 +1,8 @@
-Resources
+Recursos
 ---------
 
 .. toctree::
    :maxdepth: 4
    :glob:
 
-   clinician-guide-to-AndroidAPS
+   guía-clínica-para-AndroidAPS
