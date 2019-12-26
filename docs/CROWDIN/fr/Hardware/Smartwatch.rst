@@ -1,8 +1,8 @@
-Smartwatches
+Montres connectées
 *************
 
-Smartwatches are optional, but very useful for some users.
-More details are here:
+Les montrées connectées sont optionnelles, mais très utiles pour certains utilisateurs.
+Plus de détails ici :
 
 
 .. toctree::

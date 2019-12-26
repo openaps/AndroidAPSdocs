@@ -36,7 +36,7 @@ There are safety limits in place based on age you selected in this setting. Se c
 
 * Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
     
-    ![Status lights - detail](../images/StatusLights_V2_5.png)
+    ![Luzes de estado - detalhe](../images/StatusLights_V2_5.png)
     
     Settings for status lights must be made in Nightscout settings. Set the following variables:
     
@@ -51,11 +51,11 @@ There are safety limits in place based on age you selected in this setting. Se c
 
 ## Segurança de tratamentos
 
-### Max allowed bolus [U]
+### Max bolus permitido [U]
 
 This is the maximum amount of bolus insulin that AAPS is allowed to deliver. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. This restriction is also applied to the results of the Bolus Calculator.
 
-### Max allowed carbs [g]
+### Max hidratos permitidos [g]
 
 This is the maximum amount of carbs that AAPS bolus calculator is allowed to dose for. This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
@@ -67,17 +67,17 @@ You can toggle between open and closed looping here. Open looping means TBR sugg
 
 OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. You can read more about the settings and [Autosens in the OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-### Max U/hr a Temp Basal can be set to
+### Max U/hr em que uma Temp Basal pode ser definida
 
 This setting exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. The value is measured in units per hour (u/hr). It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. For example, if the highest basal rate in your profile was 0.5u/hr you could multiply that by 4 to get a value of 2u/hr.
 
-### Maximum basal IOB OpenAPS can deliver [U]
+### Basal Máxima IOB que OpenAPS pode dar [U]
 
 Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
 
-* This value does not consider bolus IOB, only basal.
+* Este valor não considera o IOB bolus, apenas basal.
 * This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
-* This value is measured in insulin units (u).
+* Este valor é medido em unidades de insulina (u).
 
 When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia.
 
@@ -105,7 +105,7 @@ The options here will vary depending on which pump driver you have selected in '
 * [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
 * [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
 * [Bomba de Insulina Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
-* [Medtronic Pump](..//Configuration/MedtronicPump.md)
+* [Bomba Medtronic](..//Configuration/MedtronicPump.md)
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
