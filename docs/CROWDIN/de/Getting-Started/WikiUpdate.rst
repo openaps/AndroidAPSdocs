@@ -2,7 +2,7 @@ Wiki Updates & Änderungen
 **************************************************
 Dezember 2019
 ==================================================
-* `Android auto <../Usage/Android-auto.html>`_ - setup with screenshots
+* `Android Auto <../Usage/Android-auto.html>`_ - Setup mit Bildschirmfotos
 * `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_ - Workaround
 * `Glimp <../Configuration/Config-Builder.html#bz-quelle>`_ - Version 4.15.57 und neuer wird unterstützt
 * `Watchfaces <../Configuration/Watchfaces.html>`_ - große Überarbeitung mit zahlreichen Details
