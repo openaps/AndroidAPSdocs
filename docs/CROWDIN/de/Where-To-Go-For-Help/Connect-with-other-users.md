@@ -38,15 +38,15 @@ Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/group
 * [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
 * [Loopertreffen Deutschland & Österreich](http://loopertreffen.androidaps.de)
 
-### Netherlands
+### Niederlande
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
-* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Niederlänischsprachige Nutzer von OpenAPS, Loop und AndroidAPS
+* [CGM in the cloud Niederlande](https://www.facebook.com/groups/1764754560436596)
 
-### Sweden
+### Schweden
 
-* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/): Nutzer von OpenAPS, Loop und AndroidAPS in Schweden
 
-### UK
+### Großbritannien
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/): Nutzer von OpenAPS, Loop und AndroidAPS in Großbritannien
