@@ -32,7 +32,7 @@ AndroidAPS is designed to be *controlled* by Android Wear watches. If you want t
 
 The following functions can be triggered from the watch:
 
-* set a temporary target
+* definir um alvo temporário
 * administer a bolus
 * administer eCarbs
 * use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
@@ -53,11 +53,11 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 ## AAPSv2 watchface - Legend
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Legenda AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
 A - time since last loop run
 
-B - CGM reading
+B - Leitura CGM
 
 C - minutes since last CGM reading
 
@@ -65,7 +65,7 @@ D - change compared to last CGM reading (in mmol or mg/dl)
 
 E - average change CGM reading last 15 minutes
 
-F - phone battery
+F - bateria do telefone
 
 G - basal rate (shown in U/h during standard rate and in % during TBR)
 
@@ -193,7 +193,7 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
 
 ### Complication related settings
 
-* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
+* **Complicação de Toque** (default `Default`): Decides which dialog is opened when user taps complication: 
   * *Default*: action specific to complication type *(see list above)*
   * *Menu*: AAPS main menu
   * *Wizard*: bolus wizard - bolus calculator
@@ -230,12 +230,12 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Troubleshooting the wear app:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
+* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Também ativar a atualização automática. 
 * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
 
-## View Nightscout data
+## Ver dados do Nightscout
 
 If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
