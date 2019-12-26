@@ -1,19 +1,47 @@
 # Android Auto
 
-Πώς μοιάζει:
+![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
 
-![Screenshot 1](../images/Android-auto1.png)
+## AndroidAPS settings for Android Auto
 
-Πως να το χρησιμοποιήσεις:
+Use system notifications for alerts and notifications:
 
-* Εγκατέστησε το Android Auto
-* Στην εφαρμογή Android Auto, πατήστε το μενού Hamburger (τρεις οριζόντιες γραμμές)
-* Πατήστε Πληροφορίες.
-* Tap the version and permission info 10 times, until a toast appears that says "Developer mode enabled".
-* Τώρα μπορείτε να αποκτήσετε πρόσβαση στην κατάσταση προγραμματιστών επιλέγοντας τις τελείες του μενού υπερχείλισης στην επάνω δεξιά γωνία της φορητής οθόνης και μεταβείτε στις ρυθμίσεις των προγραμματιστών.
-* Επιλέξτε άγνωστες πηγές (μετακινηθείτε προς τα κάτω μέχρι το τέλος της λίστας).
-* Τώρα μπορείτε να κλείσετε τη λειτουργία ανάπτυξης, αν θέλετε. Πατήστε το μενού με τρία σημεία στην επάνω δεξιά γωνία για να το κάνετε.
+* Open 3-dot-menu on top right of home screen
+* Προτιμήσεις
+* Scroll all the way down
+* Activate "Use system notifications..."
 
-Αντιμετώπιση προβλημάτων:
+![Use system notifications for alerts and notifications](../images/AndroidAuto_01.png)
 
-* Αν δεν βλέπετε την ειδοποίηση, ελέγξτε αν επιτρέπεται η AAPS να εμφανίζει ειδοποιήσεις στο Android και αν το Android Auto έχει δικαιώματα πρόσβασης στις ειδοποιήσεις.
+## Settings in Android Auto app on your phone
+
+As AAPS is no official Android Auto app notifications have to be activated in Android Auto.
+
+* Open Android Auto app on your phone.
+* Tap hamburger menu
+* Select settings
+* Scroll down all the way to the bottom of the list and tap version no. 10 times until message "Developer mode enabled" is displayed.
+
+![Eable developer mode](../images/AndroidAuto_02.png)
+
+* Open 3-dot-menu on top right corner
+* Select "Developer settings"
+* Scroll down all the way to the bottom of the list and activate "Unknown sources"
+
+![Eable unknown sources](../images/AndroidAuto_03.png)
+
+* Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
+
+## Show notifications in car
+
+* Tap the bell icon on the lower menu bar in Android Auto in your car
+
+![Bell icon - Android Auto in car](../images/AndroidAuto_04.png)
+
+* CGM values wil be shown as follows:
+
+![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
+
+## Troubleshooting:
+
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidaps-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](#settings-in-android-auto-app-on-your-phone).
