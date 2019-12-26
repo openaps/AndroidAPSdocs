@@ -2,7 +2,7 @@ Actualizaciones y cambios de Wiki
 **************************************************
 Diciembre 2019
 ==================================================
-* `Android auto <../Usage/Android-auto.html>`_ - entrar en el modo de programador
+* `Android auto <../Usage/Android-auto.html>`_ - setup with screenshots
 * `Accu-Chek Insight & Autoajustar <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_ - solución para el uso
 * `Glimp <../Configuration/Config-Builder.html#bg-source>`_ - versión 4.15.57 y soporte más reciente
 * `Watchfaces <../Configuration/Watchfaces.html>`_ - major update, way more details
