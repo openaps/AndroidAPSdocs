@@ -1,8 +1,8 @@
-# Timezone traveling with pumps
+# Voyager avec différents fuseaux horaires avec une pompe
 
-## DanaR, Korean DanaR
+## DanaR, DanaR coréenne
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Il n'y a aucun problème avec le changement de fuseau horaire dans le téléphone car la pompe n'utilise pas l'historique
 
 ## DanaRv2, DanaRS
 

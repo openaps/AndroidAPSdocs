@@ -9,7 +9,7 @@ So geht's:
 * Android Auto installieren
 * Klicke in der Android Auto App auf das Hamburger Menü (drei horizontale Linien)
 * Info ("about") anklicken
-* Die Überschrift "Über Android Auto" (About Android Auto) zehnmal antippen bis das Popup "Entwicklereinstellungen zulassen?" erscheint und dieses mit Ok bestätigen.
+* Die Versions- und Berechtigungsinfo (version and permission info) zehnmal antippen bis das Popup "Entwicklereinstellungen zulassen?" erscheint und dieses mit Ok bestätigen.
 * Klicke auf die drei Punkte rechts oben und wähle "Entwicklereinstellungen".
 * Wähle "unbekannte Quellen", scrolle dazu bis ans Ende der Liste.
 * Jetzt kannst Du den Entwicklermodus wieder verlassen. Rufe dazu über die drei Punkte oben rechts das Menü auf.

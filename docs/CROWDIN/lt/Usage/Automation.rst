@@ -21,7 +21,7 @@ So make sure to deactivate Automation rules during these occations if neccessary
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activate and deactivaten automation rule
 
-General
+Bendrieji
 --------------------------------------------------
 There are some limits:
 

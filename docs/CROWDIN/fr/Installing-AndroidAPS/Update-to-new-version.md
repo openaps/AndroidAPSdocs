@@ -2,7 +2,7 @@
 
 ## Construire vous-même au lieu de télécharger
 
-**AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir [FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
+**AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
 ## Remarques importantes
 
@@ -16,11 +16,12 @@
 
 Veuillez sauter ce paragraphe si vous mettez à jour AAPS pour la première fois. L'accès rapide est destiné aux utilisateurs expérimentés. Votre étape suivante serait [d'installer git](../Installing-AndroidAPS/git-install.rst) si vous ne l'avez pas déjà.
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in three simple steps:
+If you already updated AAPS in previous versions and use a Windows PC you can update in four simple steps:
 
-1. [Mettez à jour la copie locale](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
-2. [Générez un APK signé](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Sélectionnez 'app' au lieu de 'wear' au passage !)
-3. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the patched Dexcom app from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+1. [Export your settings](../Usage/ExportImportSettings#how-to-export-settings) from the existing AAPS version on your phone to be on the save side
+2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
+3. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
+4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the patched Dexcom app from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Installer git (si vous ne l'avez pas)
 
@@ -38,10 +39,9 @@ Suivez le manuel sur la [page d'installation de git](../Installing-AndroidAPS/gi
 
 ## Générer un APK signé
 
-<!--- Text is maintained in page building-apk.md ---> Dans le menu , sélectionnez "Build" puis "Generate Signed Bundle / APK...". (Le menu d'Android Studio a changé en septembre 2018. Dans les anciennes versions, sélectionnez dans le menu « Build » puis « Generate Signed APK... ».)
+<!--- Text is maintained in page building-apk.md ---> Dans le menu , sélectionnez "Build" puis "Generate Signed Bundle / APK...". (Le menu d'Android Studio a changé en septembre 2018. Dans les versions plus anciennes, sélectionnez “Build” puis “Generate Signed APK...”.)
 
-  
-La signature signifie que vous signez votre application générée mais de manière numérique comme une sorte d’empreinte digitale dans l’application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez le lien [ici](https://developer.android.com/studio/publish/app-signing.html#generate-key). La sécurité est un sujet important et complexe et vous n'avez pas besoin de cela maintenant.
+Signer signifie que vous signez votre application générée mais de manière numérique comme une sorte d'empreinte digitale dans l'application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez le lien [ici](https://developer.android.com/studio/publish/app-signing.html#generate-key). La sécurité est un sujet important et complexe et vous n'avez pas besoin de cela maintenant.
 
 ![Capture d'écran 39a](../images/Installation_Screenshot_39a.PNG)
 
@@ -53,13 +53,13 @@ Sélectionnez "app" et cliquez sur "Next".
 
 ![Capture d'écran 40](../images/Installation_Screenshot_40.png)
 
-Entrez le chemin d'accès au fichier de clés, entrez le mot de passe du fichier, sélectionnez l'alias de clé et entrez le mot de passe de la clé.
+Enter your key store path, enter key store password, select key alias and enter key password.
 
-Sélectionnez 'Remember passwords'.
+Select 'Remember passwords'.
 
-Puis cliquez sur next.
+Then click next.
 
-![Chemin du fichier de clés](../images/KeystorePathUpdate.PNG)
+![Key store path](../images/KeystorePathUpdate.PNG)
 
 Sélectionnez "full" (ou "fullRelease") comme favori pour l'application générée. Sélectionnez V1 "Jar Signature" (V2 est optionnel) et cliquez sur "Finish". Les informations suivantes peuvent être importantes pour une utilisation ultérieure.
 
@@ -82,11 +82,13 @@ Cliquez sur le lien "locate" dans le journal des événements.
 
 ## Transférer le fichier APK sur le smartphone
 
+**[Export your settings](../Usage/ExportImportSettings#how-to-export-settings) from the existing AAPS version on your phone to be on the save side.**
+
 <!--- Text is maintained in page building-apk.md ---> Une fenêtre du gestionnaire de fichiers s'ouvre. Comme j'utilise Linux, il se peut que ce soit un peu différent sur votre système. Sur Windows, il y aura l'Explorateur de fichiers et sur Mac OS X le Finder. Vous devez voir le répertoire avec le fichier APK généré. Malheureusement, c'est le mauvais endroit car "wear-release.apk" n'est pas l'application signée "app" APK que nous recherchons.
 
 ![Capture d'écran 47](../images/Installation_Screenshot_47.png)
 
-Veuillez sélectionner le répertoire AndroidAPS/app/full/release pour trouver le fichier "app-full-release.apk". Transférez ce fichier sur votre smartphone Android. Vous pouvez le faire de votre façon préférée :
+Veuillez sélectionner le répertoire AndroidAPS/app/full/release pour trouver le fichier "app-full-release.apk". Transférez ce fichier sur votre smartphone Android. You can do it on your preferred way:
 
 * Bluetooth
 * envoi dans le cloud (Google Drive ou autres services cloud)
@@ -109,9 +111,9 @@ Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour vo
 
 ## Vérifier la version d'AAPS sur le téléphone
 
-Vous pouvez vérifier la version AAPS sur votre téléphone en cliquant sur le menu 3 points en haut à droite puis sur "à propos".
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![Version installée d'AAPS](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 ## Dépannage
 

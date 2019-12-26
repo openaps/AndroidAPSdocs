@@ -1,354 +1,354 @@
-# FAQ for loopers
+# Preguntas frecuentes para loopers
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+¿Como añadir preguntas a las FAQ?: Siga las siguientes [instrucciones](../make-a-PR.md)
 
 # General
 
-## Can I just download the AndroidAPS installation file?
+## ¿Puedo descargar directamente el archivo de instalación AndroidAPS?
 
-No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+No. No hay ningún archivo de apk descargable para AndroidAPS. Tienes que [montarlo](../Installing-AndroidAPS/Building-APK.md) tu mismo. Te explicamos el porqué:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AndroidAPS se utiliza para controlar tu bomba y para suministrar insulina. Según los reglamentos vigentes, en Europa todos los sistemas de clase IIa o IIb se consideran dispositivos médicos que requieren aprobación regulatoria (una marca CE) para la que se necesitan varios estudios y revisiones. La distribución de dispositivos no regulados es ilegal. Existen reglamentos similares en otras partes del mundo.
 
-This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+Esta reglamentación no se limita a la venta de material (en el sentido de obtener dinero para algo), sino que se aplica a cualquier forma de distribución (incluidas las distribuciones gratuitas). Construir un dispositivo médico para uno mismo es la única manera de no verse afectado por estas regulaciones.
 
-That’s why apks aren’t available.
+Esta es la razón por lo que las apks no están disponibles.
 
-## How to begin?
+## ¿Cómo empezar?
 
-First of all, you have to **get loopable hardware components**:
+En primer lugar, necesitas **obtener componentes de hardware utilizables**:
 
-* A [supported insulin pump](Pump-Choices.md), 
-* an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
+* Una [bomba de insulina compatible ](Pump-Choices.md), 
+* un [smartphone Android ](Phones.md) (Apple iOS no es compatible con AndroidAPS, puedes probar con [iOS Loop ](https://loopkit.github.io/loopdocs/)) y 
+* un [sistema de monitorización continua de glucosa](../Configuration/BG-Source.rst) (Mcg). 
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+En segundo lugar, tienes que **configurar el hardware **. Ver el ejemplo del [tutorial de configuración paso a paso](Sample-Setup.md).
 
-Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+En tercer lugar, tienes que **configurar los componentes de software **: AndroidAPS y la fuente MCG/FGM.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
+En cuarto lugar, tienes que aprender y **entender el "diseño de referencia" de OpenAPS para comprobar los parámetros de tu tratamiento **. El principio fundamental del lazo cerrado es que tu basal y tus ratios de hidratos sean precisos. Todas las recomendaciones presuponen que tus necesidades basales están ajustadas y que cualquier pico o bajada observados vienen provocados por otros factores y que por lo tanto requieren de ajustes esporádicos (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede realizar han sido limitados por seguridad (ver basal temporal máxima permitida en [OpenAPS Reference Design](https://openaps.org/reference-design/)), es preferible no utilizar las dosis disponibles para corregir basales mal ajustadas. Si por ejemplo usted frecuentemente esta bajo al aproximarse a una comida, entonces es probable que su basal tenga que ajustarse. Puedes usar [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para analizar tus registros de datos y comprobar si es necesario (y con que valores) modificar tus basales, tu factor de sensibilidad (ISF) o los ratios de hidratos. O puedes probar y establecer tu basal [con el método tradicional](http://integrateddiabetes.com/basal-testing/).
 
-## What practicalities of looping do I have?
+## ¿Qué aspectos prácticos de lazo tengo?
 
-### Password protection
+### Protección con contraseña
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+Si quieres proteger tus preferencias, dirígete al "Menú de Preferencias" y selecciona "Contraseña para ajustes", luego escribe la contraseña que elijas. La próxima vez que vayas al menú de preferencias, preguntará por esa contraseña antes de poder continuar. Si más adelante quieres eliminar ésta opción, vuelve a "Contraseña para ajustes" y suprime el texto.
 
-### Android Wear Smartwatches
+### Relojes inteligentes Android Wear
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+Si tienes previsto utilizar la aplicación "android wear" para suministrar bolos o cambiar configuraciones desde un smartwatch, debes asegurarte de que las notificaciones de AndroidAPS no están bloqueadas. La confirmación de la acción se realiza a través de la notificación.
 
-### Disconnect pump
+### Desconectando la bomba
 
-If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+Si te quitas la bomba para ducharte/bañarte/nadar/hacer deporte/ etc. debes indicarselo a AndroidAPS para que tenga en cuenta que no se ha suministrado insulina durante ese tiempo y mantener la IOB correcta.
 
-* Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
-* This will set your basal to zero for that time period.
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
-* AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
+* Mantén pulsado el botón "Lazo Cerrado" ( "Lazo Abierto" si aún no lo has cerrado) en la parte superior de la pantalla. 
+* Selecciona **'Desconectar bomba XY min'**
+* Esto establecerá tu basal a cero durante ese periodo de tiempo.
+* La duración mínima de la desconexión vendrá fijada por la duración mínima de basales temporales (TBR) que permita la bomba. Por lo tanto, si deseas desconectarte durante un periodo de tiempo más corto, deberás utilizar el tiempo de desconexión más corto disponible en tu bomba y volver a conectarte manualmente tal como se describe a continuación.
+* El botón 'Lazo Cerrado' (o 'Lazo Abierto') aparecerá en rojo con el texto 'Desconectado (xx m)' mostrando el tiempo restante de desconexión.
+* AAPS volverá a conectar la bomba, automáticamente, una vez haya transcurrido el tiempo seleccionado y el lazo cerrado empezará a funcionar de nuevo.
     
-    ![Disconnect pump](../images/PumpDisconnect.png)
+    ![Desconectando la bomba](../images/PumpDisconnect.png)
 
-* If the selected time was too long you can reconnect manually.
+* Es posible reconectar manualmente la bomba antes de que haya transcurrido el tiempo seleccionado.
 
-* Long-press on the red button 'Disconnected (xx m)'.
-* Select 'Reconnect pump'
+* Manten pulsado el botón rojo 'Desconectado (xx m)'.
+* Selecciona "Reconectar bomba"
     
-    ![Reconnect pump](../images/PumpReconnect.png)
+    ![Reconectando la bomba](../images/PumpReconnect.png)
 
-### Recommendations not only based on one single CGM reading
+### Las recomendaciones no se basan en lecturas aisladas del sensor
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+Por razones de seguridad, las recomendaciones no se basan en una sola lectura del sensor (MCG), sino en promedios de variaciones (delta). Por lo tanto, si se pierden algunas mediciones, puede pasar un tiempo entre que se vuelvan a recibir datos y que AndroidAPS vuelva a iniciar el lazo.
 
-### Further readings
+### Lecturas adicionales
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Hay varios blogs con buenos consejos y sugerencias para ayudarte a entender cómo funciona el lazo:
 
-* [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-* [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* ['Fine-tuning Settings'](http://seemycgm.com/2017/10/29/fine-tuning-settings/) en 'See my CGM'
+* ['Why DIA matters'](http://seemycgm.com/2017/08/09/why-dia-matters/) en 'See my CGM'
+* ['Limiting meal spikes'](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) en #DIYPS
+* ['Hormones and autosens'](http://seemycgm.com/2017/06/06/hormones-2/) en 'See my CGM'
 
-## What emergency equipment is recommended to take with me?
+## ¿Qué equipo de emergencia se recomienda llevar?
 
-First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
+En primer lugar, tienes que llevar el mismo equipo de emergencia que llevarías como T1D con terapia de bomba de insulina. Como usuario de AndroidAPS, se recomienda, encarecidamente, tener cerca el siguiente equipo adicional:
 
-* Battery pack for the energy of your smartphone, wear and (maybe) BT reader
-* Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
-* Pump batteries
+* Cargador extra para tu móvil, smartwatch y (quizá) lector de BlueTooth
+* Copia de seguridad en la nube (Dropbox, Google Drive...) de las aplicaciones que usas: la última apk de AndroidAPS y la contraseña de tu "key store", el fichero de preferencias AndroidAPS, el fichero de preferencias de xDrip, la app parcheada de Dexcom,....
+* Baterias para la bomba
 
-## How to safely attach the CGM/FGM?
+## ¿Cómo asegurar el sensor CGM/FGM?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Some loopers use the cheaper standard kinesiology tape or rocktape.
+Puedes pegarlo con cinta adhesiva: se venden parches adhersivos perforados para los sensores habituales (busca en Google o eBay). Algunos loopers utilizan la cinta de kinesiología estándar (más barata) o cinta Rocktape.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
+Puedes fijarlo: se venden brazaletes para la parte superior del brazo que sujetan el MCG/FGM con una banda de goma ( busca en Google o eBay).
 
-# AndroidAPS settings
+# Ajustes en AndroidAPS
 
-The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+La lista siguiente trata de ayudarte a optimizar los valores de tus ajustes. Quizás sea mejor empezar por los principales y bajar a detalle progresivamente. Trata de tener un ajuste correcto antes de pasar al siguiente. Procura realizar pequeñas modificaciones en lugar de hacer grande cambios de golpe. Puedes utilizar [Autotune ](https://autotuneweb.azurewebsites.net/) como orientación, aunque no se debe seguir ciegamente: puede que no funcione bien para ti en todas las circunstancias. Ten en cuenta que hay parámetros que interactuan con otros - puedes tener ajustes 'incorrectos' que en conjunto funcionan bien en algunas situaciones (p.e. si una basal demasiado alta coincide en el tiempo con CR demasiado alto) pero no en otras. Esto significa que es necesario tener en cuenta todos los valores y comprobar que trabajan juntos en una variedad de circunstancias.
 
-## Duration of insulin activity (DIA)
+## Duración de la actividad de la insulina (DIA)
 
-### Description & testing
+### Descripción & pruebas
 
-The length of time that insulin decays to zero.
+El tiempo que tarda la insulina en dejar de hacer efecto.
 
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+A menudo se elige un valor demasiado pequeño. Para la mayoría de gente estará en al menos 5 horas, y a veces 6 ó 7.
 
-### Impact
+### Impacto
 
-Too short DIA can lead to low BGs. And vice-versa.
+Un valor demasiado pequeño puede llevar a glucemias bajas. Y viceversa.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
+Si la DIA es demasiado pequeña, AAPS pensará antes de tiempo que la insulina del bolo anterior ya se ha consumido, y, estando con valores altos de glucemia, suministrará más insulina. (En realidad, no espera tanto tiempo, sino que predice lo que ocurriría, y sigue añadiendo la insulina). Básicamente, esto crea excedentes de insulina que AAPS no considerará en sus cálculos por considerar que ya se ha consumido.
 
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+Un ejemplo de DIA demasiado pequeña serían: valores altos de glucemia seguidos de sobre-correciones por parte de AAPS, provocando valores demasiado bajos de glucemia.
 
-## Basal rate schedule (U/h)
+## Programación de basales (U/h)
 
-### Description & testing
+### Descripción & pruebas
 
-The amount of insulin in a given hour time block to maintain BG at a stable level.
+Es el caudal de insulina (Unidades / hora) en una determinada franja horaria para mantener la BG a un nivel estable.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
+Prueba tus basales deteniendo el lazo, ayunando, esperando unas 5 horas después de comer (para asgurar que ya has digerido los hidratos) y viendo como evoluciona tu BG. Repite unas cuantas veces.
 
-If BG is dropping, basal rate is too high. And vice-versa.
+Si la BG va disminuyendo, la basal es demasiado alta. Y viceversa.
 
-### Impact
+### Impacto
 
-Too high basal rate can lead to low BGs. And vice-versa.
+Basales demasiado elevadas pueden provocar BG demasido bajas. Y viceversa.
 
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+AAPS toma como referencia las basales por defecto. Si una basal es demasiado alta, una "temporal a zero" (utilizadas para contrarrestar excesos de insulina) provocará que la IOB calculada disminuya más de lo que debería. Esto provocará que AAPS genere más correcciones de las que debería para llevar la IOB finalmente a cero.
 
-So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
+Por lo tanto, una basal demasiado alta generará BG bajas, mientras dure esa basal y algunas horas más hasta que AAPS corrija a objetivo.
 
-Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Por el contrario, una basal demasiado baja puede llevar a BG altas, y a la imposibilidad de reducir los niveles hasta el objetivo.
 
-## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+## Factor de sensibilidad a la insulina (ISF) (mmol/l/U o mg/dl/U)
 
-### Description & testing
+### Descripción & pruebas
 
-The drop in BG expected from dosing 1U of insulin.
+La disminución de BG esperada ante una dosis de 1U de insulina.
 
-Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Asumiendo una basal correcta, puedes comprobar este parámetro deteniendo el lazo, comprobando que la IOB esté a zero y tomando algunas tabletas de glucosa (o similar) hasta asegurar un nivel de BG alto y estable.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+A continuación, suministrate una cantidad determinada de insulina y observa la variación en tu BG (para acercarte a tu objetivo puedes probar con: [BG-Objetivo] * 1/ISF).
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado bajo, significa que 1 U bajará la BG más y más rápido de lo esperado!!.
 
-### Impact
+### Impacto
 
-**Lower ISF** (i.e. 40 instead of 50) = more aggressive / stronger leading to a bigger drop in BGs for each unit of insulin. If too low, this can lead to low BGs.
+**Menor ISF** (p.e. 40 en lugar de 50) = más agresivo / más fuerte provocando una caída más grande en BGs por cada unidad de insulina. Valores demasiado bajos pueden provocar glucemias demasiado bajas.
 
-**Higher ISF** (i.e. 45 instead of 35) = less aggressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
+**Mayor ISF** (p.e. 45 en lugar de 35) = menos agresivo / más débil - provocando descensos menores de BG por cada unidad de insulina. Valores demasiado altos pueden provocar glucemias demasiado altas.
 
-**Example:**
+**Ejemplo:**
 
-* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
-* So, you want correction of 90 mg/dl (= 190 - 110).
-* ISF = 30 -> 90 / 30 = 3 units of insulin
-* ISF = 45 -> 90 / 45 = 2 units of insulin
+* BG de 190 mg/dl (10,5 mmol) y el objetivo es de 100 mg/dl (5,6 mmol). 
+* Por lo tanto, necesitas una corrección de 90 mg/dl (= 190-100).
+* ISF = 30 => 90/30 = 3 unidades de insulina
+* ISF = 45 => 90/45 = 2 unidades de insulina
 
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+Un factos de sensibilidad a la insulina (ISF) demasiado bajo puede resultar en sobre-correcciones ya que AAPS piensa que necesita más insulina, para corregir BGs altas, de la que realmente necesita. Esto puede derivar en "montañas rusas" de BG ( especialmente en ayunas). En estas circunstancias necesitas aumentar tu ISF. Esto significará que AAPS corregirá con dosis más pequeñas, evitando que las sobre-correcciones de BG altas provoquen BG demasiado bajas This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
 Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
 
-## Insulin to carb ratio (IC) (g/U)
+## Ratio Carbohidratos/Insulina (IC) (g/U)
 
-### Description & testing
+### Descripción & pruebas
 
-The grams of carbohydrate for each unit of insulin.
+Gramos de carbohidratos por unidad de insulina.
 
-Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
+Algunas personas también utilizan I:C en lugar de IC o hablan de la proporción de carbohidratos (CR).
 
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
+Suponiendo una basal correcta, puedes comprobar el parámetro: con una IOB de cero, estando en rango, si comes una cantidad conocida de carbohidratos y tomas la cantidad de insulina calculada con el IC actual (es recomendable que comas en tu horario habitual y que cuentes los hidratos con precisión).
 
-> **NOTE:**
+> **NOTA:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equaled 12g of carbs, later some changed to 10g of carbs.
+> En algunos países Europeos raciones o unidades pan fueron utilizadas para la determinación de la cantidad de insulina que se necesita para la comida. En el principio 1 unidad de pan equivalen a 12 g de carbohidratos, más tarde algunos cambiaron a 10g de carbohidratos.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> En este modelo, la cantidad de carbohidratos se fijó y la cantidad de insulina era variable. ("¿Cuánta insulina se necesita para cubrir una sola unidad de pan?")
 > 
-> When using IC the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> Cuando se utiliza IC, la cantidad de insulina es fija y la cantidad de carbohidratos es variable. ("¿Cuántos gr de carbohidratos pueden estar cubiertos por una sola unidad de insulina?")
 > 
 > Example:
 > 
-> Bread unit facor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
+> Unidad factor de pan (BU = 12g carbs) de: 2,4 -> Se necesitan 2,4 unidades de insulina cuando se come una sola unidad de pan.
 > 
-> Corresponding IC: 12 / 2,4 = 5,2 -> 5,2g carbs can be covered with one unit of insulin.
+> IC correspondiente: 12/2,4 = 5,2 -> 5,2 g de carbohidratos pueden estar cubiertos con una sola unidad de insulina.
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Las tablas de conversión están disponibles en línea, por ejemplo, [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### Impacto
 
-**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
+**Menor IC** = menos comida por unidad, es decir, obtendrás más insulina por cantidad fija de hidratos. Podríamos decir que es "más agresiva".
 
-**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
+**Mayor IC** = más comida por unidad, es decir, obtendrás menos insulina por cantidad fija de hidratos. Podríamos decir que es "menos agresiva".
 
-If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
+Si, una vez digerida la comida y con la IOB a cero, tu BG continua más alta que antes de comer, es probable que tu IC sea demasiado grande. Por el contrario, si tu BG es menor que antes de comer, tu IC es demasiado pequeña.
 
-# APS algorithm
+# Algoritmo APS
 
-## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+## ¿Por qué se muestra "dia: 3" en la pestaña "OPENAPS AMA", a pesar de que tengo un DIA diferente en mi perfil?
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+En AMA, DIA en realidad no significa la "duración de la actividad de la insulina ". Es un parámetro que tiene cierta relacion con DIA. En este caso significa, "el tiempo en le que la corrección debería haber acabado". No participan en el cáclulo de la IOB. En OpenAPS SMB, este parámetro ya no es necesario.
 
-## Profile
+## Perfil
 
-### Why using min. 5h DIA (insulin end time) instead of 2-3h?
+### ¿Por qué usar una DIA de 5h como mínimo (duración de la actividad de la insulina) en lugar de 2-3h?
 
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Bien explicado en [este artículo ](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). No te olvides de `ACTIVAR EL PERFIL` después de modificar tu DIA.
 
-### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
+### ¿Por qué motivo mi lazo baja mis BG hasta valores de hipo-glucemia sin COB?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
+En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. Si están correctas, este comportamiento tendrá origen en un ISF demasiado bajo. El aspecto de un ISF demasiado bajo es como este:
 
-![ISF too low](../images/isf.jpg)
+![ISF demasiado bajo](../images/isf.jpg)
 
-### What causes high postprandial peaks in closed loop?
+### ¿Qué causa picos postprandiales elevados en lazo cerrado?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+En primer lugar, comprueba tu basal y realiza una prueba de basal sin hidratos. Si es correcta, y tu BG se acerca a tu objetivo una vez se han absorbido completamente los hidratos, prueba de poner un objetivo temporal "comida en breve" ('eating soon') en AndroidAPS un rato antes de comer, o piensa en un pre-bolus adecuando con la ayuda de tu endocrino. Si tu BG es demasiado alta despues de comer y aún demasiado alta despues de que los hidratos se hayan absorbido completamente, piensa en reducir tu IC con la ayuda de tu endocrino. Si tu BG es demasiado alta mientras haya COB y demasiado baja una vez absorbidos todos los hidratos, piensa en incrementar tu IC y en un pre-bolus apropiado con la ayuda de tu endocrino.
 
-# Other settings
+# Otros ajustes
 
-## Nightscout settings
+## Ajustes de Nightscout
 
-### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
+### NSClient de AndroidAPS indica "no permitido" y no carga datos. ¿Qué puedo hacer?
 
-In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+En NSClient compruebe 'Ajustes de conexión'. Quizás no estés conectado a una red de datos permitida, o bien tienes activada la opción "Sólo mientras este cargando" y el cable de carga no está enchufado.
 
-## CGM settings
+## Ajustes del sensor (MCG)
 
-### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
+### ¿Por qué AndroidAPS indica 'Origen de BG no soporta el filtrado avanzado'?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Si usas un CGM/FGM que no sea Dexcom G5 o G6 en modo nativo xDrip, recibirás esta alerta en la pestaña OpenAPS de AndroidAPS. Consulta [Suavizado de glucosa en la sangre de datos](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) para más detalles.
 
-## Pump
+## Bomba
 
-### Where to place the pump?
+### ¿Dónde colocar la bomba?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
+Hay un sinfín de posibilidades para colocar la bomba. No importa si estás con loop o no.
 
-### Batteries
+### Baterías
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+El lazo puede reducir la batería de la bomba más rápido que el uso normal porque el sistema interactúa a través de Bluetooth mucho más de lo que hace un usuario manual. Es mejor cambiar la batería en un 25%, ya que a partir de ese punto la comunicación puede fallar. Puedes establecer alarmas de aviso para la batería de la bomba utilizando la variable PUMP_WARN_BATT_P en la web de Nightscout. Algunos trucos para alargar la vida de la bateria:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
-* reduce the length of time the backlight stays on (within pump settings menu)
-* select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+* dismunir el tiempo que pasa la pantalla LCD encendida(desde el menú de configuración de la bomba)
+* reducir la duración de la iluminación de fondo (desde el menú de configuración de la bomba)
+* seleccionar los ajustes de notificación para que suene en lugar de que vibre (desde el menú de configuración de la bomba) 
+* sólo utilizar los botones de la bomba para recargar, usa AndroidAPS para visualizar el historial, el nivel de la bateria o la cantidad de insulina restante.
+* Puede que la app AndroidAPS se cierre a menudo para ahorrar bateria o liberar memoria RAM en algunos móvies. Cuando AndroidAPS se reinicializa en cada arranque, vueleve a establecer la conexión Bluetooth con la bomba y descarga la basal actual y el historial de bolus. Esto consume batería. Para ver si esto esta sucediendo, ve a Preferencias > NSClient y habilita "Registro de inicio de la app en NS'. Nightscout va a recibir un aviso en cada reinicio de AndroidAPS, lo que facilitará identificar el problema. Para evitar que esto suceda, añade AndroidAPS en la lista de excepciones en "ajustes de batería" de tu móvil, así el modo "Ahorro de batería" no cerrará la app.
     
-    For example, to whitelist on a Samsung phone running Android Pie:
+    Por ejemplo, para añadir la lista un teléfono de Samsung que ejecuta Android Pie:
     
-    * Go to Settings -> Device Care -> Battery 
-    * Scroll until you find AndroidAPS and select it 
-    * De-select "Put app to sleep"
-    * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    * Scroll to AndroidAPS and make sure it is de-selected.
+    * Vaya a Configuración -> Cuidado del Dispositivo -> Batería 
+    * Desplácese hasta que encuentre AndroidAPS y selecciónelo 
+    * Deselecciona "Poner aplicación a dormir"
+    * TAMBIÉN ir a Configuración -> Aplicaciones -> (Tres puntos símbolo en la parte superior derecha de la pantalla), seleccione "acceso especial" -> Optimizar el uso de la batería
+    * Desplácese hacia AndroidAPS y asegúrese de que está desseleccionado.
 
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+* limpia los terminales de la batería con alcohol para asegurar que no queden restos de cera/grasa.
 
-* for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+* para las bombas [Dana R/RS](../Configuration/DanaRS-Insulin-Pump.md) el procedimiento de inicio extrae una alta corriente a través de la batería para romper deliberadamente la película de pasivación (previene la pérdida de energía durante el almacenamiento), pero no siempre funciona para romperlo en un 100%. Retira y vuelve a insertar la batería 2-3 veces hasta aparezca un 100% en la pantalla, o, antes de colocarla, toca con una llave los dos terminales de la batería, pero solo un instante, para provocar un cortocircuito.
+* consulta más sugerencias para [otros tipos de batería](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
-### Changing reservoirs and cannulas
+### Cambiando cánulas y cartuchos
 
-The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
+El cambio de cartucho no puede realizarse desde AndroidAPS, debe llevarse a cabo, como siempre, directamente desde la bomba.
 
-* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-* Now disconnect the pump and change the reservoir as per pump instructions.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+* Mantén pulsado "Lazo Abierto"/"Lazo Cerrado" en la pestaña de inicio de AndroidAPS y selecciona "Detener Lazo 1h"
+* Ahora desconecta la bomba y cambia el cartucho según las instrucciones de la bomba.
+* Una vez que hayas vuelto a conectar a la bomba, continúa el lazo manteniendo pulsado "Suspendido (X m)".
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+El cambio de cánula no utiliza la función "cebado del equipo", pero se debe rellenar el equipo de infusión y/o la cánula con un bolo que no debe aparecer en el historial de bolos. Esto significa que no es necesario interrumpir la basal temporal que este funcionando. En la pestaña "Acciones (Act)", utilice el botón PRIME/FILL para establecer la cantidad de insulina que necesitas para rellenar el conjunto de infusión e iniciar el proceso de cebado. Si la cantidad no es suficiente, repite el llenado. Puedes establecer las cantidades predeterminadas de los botones en "Preferencias > Otros > Rellenar/Cebado cantidades de insulina standard". Consulta el folleto de instrucciones en tu caja de cánulas para saber cuántas unidades se deben utilizar para llenar las cánulas según la longitud de la aguja y la longitud del tubo.
 
-## Wallpaper
+## Fondo de pantalla
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+Puedes encontrar el fondo de pantalla AndroidAPS para tu teléfono en la página [teléfonos](../Getting-Started/Phones#phone-background).
 
-## Daily usage
+## Uso diario
 
-### Hygiene
+### Higiene
 
-#### What to do when taking a shower or bath?
+#### ¿Qué hacer al ducharse o bañarse?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
+Puede quitarte la bomba para ducharte o bañarte. Para periodos cortos de tiempo no viene a ser necesario, pero puedes indicarlo en AAPS para que los cálculos de IOB sean correctos. But you should tell it to AAPS so that the IOB calculations are right.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+Consulta el [procedimiento anterior ](../Getting-Started/FAQ#disconnect-pump).
 
-### Work
+### Trabajo
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Dependiendo del tipo de su trabajo, quizás uses pautas diferentes en los días de trabajo. Como "looper" deberias considerar: - un [cambio de perfil](../Usage/Profiles.md) para la duración de tu jornada de trabajo (p.e. más de un 100% durante 8 horas si estas sentado o menos de un 100% si estás activo) - objetivos temporales altos o bajos - [desplazamiento temporal de tu perfil](../Usage/Profiles#time-shift) cuando te levantes mucho más tarde o mucho más temprano de lo normal. Si estás usando [perfiles de Nightscout](../Configuration/Config-Builder#ns-profile), tienes la opción de crear un segundo perfil (p.e. "trabajo" y "casa") y realizar un cambio de perfil diario según lo que vayas a necesitar.
 
-## Leisure activities
+## Actividades de ocio
 
-### Sports
+### Deportes
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Tienes que rehacer tus viejos hábitos deportivos desde tiempos anteriores al lazo de vuelta. Si usted simplemente consume uno o más carbohidratos deportivos como antes, el sistema de circuito cerrado los reconocerá y corregirá en consecuencia.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Así que usted tendría más hidratos de carbono a bordo, pero al mismo tiempo el bucle contrarrestaría y liberaría insulina.
 
-When looping you should try these steps:
+Cuando utilices lazo, debe intentar estos pasos:
 
-* Make a [profile switch](../Usage/Profiles.md) < 100%.
-* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+* Haga un [cambio de perfil](../Usage/Profiles.md) < 100%.
+* Establecer una [objetivo de actividad temporal](../Usage/temptarget#activity-temp-target) por encima de su nivel objetivo.
+* Si utiliza SMB, asegúrese de que ["Habilitar SMB con objetivos temporales altas"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) y ["Habilitar SMB siempre"](../Usage/Open-APS-features#enable-smb-always) están inhabilitados.
 
-Pre- and postprocessing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+El pre y postprocesamiento de estos ajustes es importante. Realice los cambios en el tiempo antes del deporte y tenga en cuenta el efecto del relleno muscular.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+Si usted hace deportes regularmente al mismo tiempo (es decir, la clase deportiva en su gimnasio), puede considerar utilizar [automatización ](../Usage/Automation.rst) para el cambio de perfil y TT. La automatización basada en la ubicación también puede ser una idea, pero hace que el preproceso sea más difícil.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Los porcentajes del conmutador de perfil, el valor para el objetivo temporal de la actividad y el mejor tiempo para los cambios son individuales. Empiece en el lado seguro si está buscando el valor correcto para usted (empiece con un porcentaje más bajo y un TT superior).
 
-### Sex
+### Sexo
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
+Puede quitarte la bomba, pero deberías indicárselo a AAPS para tenerlo en cuenta en los cálculos de IOB.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+Consulta el [procedimiento anterior ](../Getting-Started/FAQ#disconnect-pump).
 
-### Drinking alcohol
+### Beber alcohol
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Beber alcohol es arriesgado en lazo cerrado ya que el algoritmo no puede predecir los efecto del alcohol en BG correctamente. Puedes encontrar tu propio método para tratar con ésto usando las siguientes funciones de AndroidAPS:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* Desactivando el modo lazo cerrado y tratando la diabetes manualmente o
+* estableciendo objetivos temporales altos y desactivando UAM para evitar que el bucle aumente la IOB debido a comida no indicadas o
+* hacer un cambio de perfil para que sea significativamente menor del 100% 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Cuando bebas alcohol debes estar pendiente de tu sensor para evitar, manualmente, hipoglucemias comiendo carbohidratos.
 
-### Sleeping
+### Suspendida
 
-#### How can I loop during the night without mobile and WIFI radiation?
+#### ¿Cómo puede funcionar por la noche sin radiación del móvil ni radiación WIFI?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
+Muchos usuarios ponen el teléfono en modo de avión por la noche. Si quieres que el lazo funcione mientras estás durmiendo, haz lo siguiente (ésto solo sirve si AAPS recibe los datos de una fuente local, como por ejemplo xDrip+ o la app parcheada de Dexcom, esto NO sirve si recibes los datos vía Nightscout):
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. Activa el modo avión en tu móvil.
+2. Espera hasta que el modo avión esté activo.
+3. Activar Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+No podrás recibir llamadas ni conectarte a internet. Pero el lazo sigue en marcha.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Algunas personas han descubierto problemas con la transmisión local (AAPS no recibe valores BG de xDrip+) cuando el teléfono está en modo avión. Vaya a "Ajustes > Configuración de Interapp > Identificar receptor" e introduzca `info.nightscout.androidaps`.
 
-![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+![xDrip+ Inter-app Ajustes Básicos Identificar receptor](../images/xDrip_InterApp_NS.png)
 
-### Travelling
+### Viajando
 
-#### How to deal with time zone changes?
+#### ¿Cómo tratar los cambios de la zona horaria?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+Con Dana R y Dana R Coreana no tienes que hacer nada. Para otras bombas ve a la página [cruzando zonas horarias](../Usage/Timezone-traveling.md) para más detalles.
 
-## Medical topics
+## Temas Médicos
 
-### Hospitalization
+### Hospitalización
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Si quieres compartir alguna información sobre AndroidAPS y lazos cerrados DIY con tus médicos, puedes imprimir la [guía a AndroidAPS para médicos de clínicas](../Resources/clinician-guide-to-AndroidAPS.md).
 
-### Medical appointment with your endocrinologist
+### Cita médica con tu endocrinólogo
 
-#### Reporting
+#### Informes
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Puedes mostrar tus informes de Nightscout (https://YOUR-NS-SITE.com/report) o comprobar [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).

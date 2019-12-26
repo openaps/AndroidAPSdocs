@@ -1,89 +1,89 @@
-# How to translate AndroidAPS and the documentation
+# Cómo traducir AndroidAPS y la documentación
 
-* Go to <https://translations.androidaps.org> or <https://wikitranslations.androidaps.org> and login using your Github account
+* Vaya a <https://translations.androidaps.org> o <https://wikitranslations.androidaps.org> e inicie sesión utilizando su cuenta de Github
 
-* Send a join request to the Wiki team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
+* Envíe una solicitud de unión al equipo de Wiki. Para ello, haz clic en la bandera del idioma deseado y luego el botón "Únete" en la esquina superior derecha de la siguiente página. Especifique un idioma, dé alguna información acerca de usted y su experiencia AAPS y si desea ser un traductor o un corrector de pruebas (sólo personas habilitadas para traducir + avanzados usuarios AndroidAPS).
 
-* When we approve you, click the flag ![When we approve you, click the flag](./images/translation_flags2019.png)
+* Cuando se apruebe, haga clic en la bandera ![Cuando se apruebe, haga clic en la bandera](./images/translation_flags2019.png)
 
-## Translate strings for AndroidAPS app
+## Traducir cadenas para AndroidAPS app
 
-* Click strings.xml
+* Haga clic en strings.xml
     
-    ![Click strings.xml](./images/translations-click-strings.png)
+    ![Haga clic en strings.xml](./images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion
+* Traducción de frases a la izquierda añadiendo un nuevo texto traducido o utilizando la sugerencia de edición &
     
-    ![Translation app](./images/translations-translate.png)
+    ![Traducción de app](./images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode
+* Los revisores tienen que cambiar al modo de revisión
     
-    ![Proofreading mode app](./images/translations-proofreading-mode.png)
+    ![Modo de revisión](./images/translations-proofreading-mode.png)
     
-    and approve translated texts
+    y aprobar los textos traducidos
     
-    ![approve text](./images/translations-proofreading.png)
+    ![aprobar texto](./images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
+Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente versión de AndroidAPS. En el principio sería bueno también repasar las traducciones existentes que aún no están aprobadas y comprobar si hay errores o aprobarlas si son correctas.
 
-## Translate wiki pages
+## Traducción de páginas de wiki
 
-* Click the name of the wiki page you want to translate
+* Pulse el nombre de la página de wiki que desea traducir
     
-    ![Click wiki page](./images/translation_WikiPage.png)
+    ![Editar página wiki](./images/translation_WikiPage.png)
 
-* Translate sentences by sentence
+* Traducir oración por oración
     
-    1 Untranslated text is shown with red background on the left side.
+    1 El texto no traducido se muestra con fondo rojo en el lado izquierdo.
     
-    2 You can copy a proposal to the edit field by clicking on the proposal.
+    2 Puede copiar una propuesta en el campo de edición haciendo clic en la propuesta.
     
-    3 Edit the proposal or write the translation yourself.
+    3 Editar la propuesta o escribir la traducción usted mismo.
     
-    4 Click save
+    4 Pulse Guardar
     
-    ![Translation wiki](./images/translation_WikiTranslate.png)
+    ![Traducción de la wiki](./images/translation_WikiTranslate.png)
 
-* A translated page will not be published in wiki before the translation is proofread.
+* La traducción de su página no va a ser publicado en la wiki antes de que la traducción sea revisada.
 
-### Translate headline links
+### Traducir enlaces de títulos
 
-* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
-* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
-* If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
+* Cuando un enlace interno sólo conduce a una determinada página (es decir ../Usage/Profiles.html), no es necesaria ninguna traducción.
+* Enlaces internos a un determinado título (es decir ..//Usage/Profiles.html#percentage) debe ser traducido como el titular en el otro idioma es diferente de la original en inglés.
+* Si traduce un encabezado puede transformar esto en el enlace de anclaje (parte siguiente a # - i.e. #porcentaje) cambiando todas las letras a minúsculas, transformando caracteres especiales a caracteres estándar, reemplazando espacios por - (signo menos) y saltando las marcas de puntuación.
     
-    Here are some examples:
+    Aquí tienes algunos ejemplos:
     
     * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
     * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
     * AAPS-.apk Datei \---> #aaps-apk-datei
 
-* Check your link if it is working as intended. If it is linking to a new translated headline you may have to wait until next build to be able to check correct link syntax. In this case do not forget to make a reminder in your calendar / todo app.
+* Compruebe el enlace si está trabajando como estaba previsto. Si está enlazando con un nuevo titular traducido, es posible que tenga que esperar hasta la próxima compilación para poder comprobar la sintaxis correcta del enlace. En este caso no te olvides de hacer un recordatorio en tu calendario/aplicación de tareas pendientes.
 
-#### Link translation in Markdown files (.md)
+#### Traducción de enlaces en archivos Markdown (.md)
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in wiki. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+En este momento se utilizan dos lenguajes de marcación [](./make-a-PR#code-syntax) en el wiki. Mientras que los archivos escritos en la sintaxis de reStructuredText (.rst) siempre muestran la dirección de enlace en Crowdin, para los archivos de la sintaxis de Markdown (.md), es posible que tenga que activar la visualización de códigos HTML con el fin de traducir la dirección de enlace.
 
-If links are displayed like this in Crowdin
+Si se visualizan enlaces como este en Crowdin
 
-![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+![Crowdin - no se visualiza ningún código HTML](./images/CrowdinShowURL1.png)
 
-click on the cogwheel to open settings, select "Show" and click "Save".
+haga clic en la rueda dentada para abrir la configuración, seleccione "Show" y haga clic en "Save".
 
-![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+A continuación, los enlaces se mostrarán en formato HTML estándar y se pueden traducir teniendo en cuenta las reglas mencionadas [arriba](./translations#translate-headline-links).
 
-![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL3.png)
 
-## Proofreading
+## Revisores
 
-* Proofreaders have to switch to Proofreading mode
+* Los revisores tienen que cambiar al modo de revisión
     
-    ![Proofreading mode wiki](./images/translation_WikiProofreading.png)
+    ![Wiki modo revisión](./images/translation_WikiProofreading.png)
     
-    and approve translated texts
+    y aprobar los textos traducidos
     
-    ![approve text](./images/translations-proofreading.png)
+    ![aprobar texto](./images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.
+* Cuando un corrector aprueba una traducción será añadido a la siguiente construcción de wiki. Para acelerar el proceso, puede informar al equipo de wiki sobre las nuevas traducciones.

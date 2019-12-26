@@ -2,7 +2,7 @@
 
 How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
 
-# General
+# Bendrieji
 
 ## Can I just download the AndroidAPS installation file?
 
