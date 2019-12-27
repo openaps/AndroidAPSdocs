@@ -53,7 +53,9 @@
 
 ## Ρυθμίσεις στο AAPS
 
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump.
+
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
@@ -97,8 +99,9 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 
 Configure alarms in the pump as follows:
 
-* Μενού> Ρυθμίσεις> Ρυθμίσεις συσκευής> Ρυθμίσεις λειτουργιών> Ήχος> Σήμανση> Μενού ήχου> Ρυθμίσεις> Ρυθμίσεις συσκευής> Ρυθμίσεις λειτουργίας>Ήχος>Ένταση>0 (διαγράψτε όλες τις μπάρες)
-* Μενού> Λειτουργίες> Λειτουργία σήματος> Σίγαση
+* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Modes > Signal mode > Quiet
 
 This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
