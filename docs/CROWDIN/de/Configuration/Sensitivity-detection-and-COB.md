@@ -2,7 +2,7 @@
 
 ## Sensitivitäts-Algorithmus
 
-Aktuell gibt es drei Modelle zur Empfindlichkeitserkennung:
+Aktuell gibt es 4 Modelle zur Empfindlichkeitserkennung:
 
 * Sensitivität Oref0
 * Sensitivität AAPS
