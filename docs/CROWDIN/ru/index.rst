@@ -88,7 +88,8 @@ AndroidAPS Usage
    Temp-targets <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
-  
+   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
  
 General Hints 
 --------------------------------------------------
@@ -110,16 +111,6 @@ AndroidAPS for children
    
    Remote monitoring <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-   
-
-Advanced 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android auto <./Usage/Android-auto.md>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
    
 
 Устранение неполадок
