@@ -29,7 +29,7 @@ Jestliže vytváření apk selže s chybou "on demand configuration", proveďte 
 
 Následují obecné kroky k sestavení souboru APK:
 
-* [Install git](../Installing-AndroidAPS/git-install.rst)
+* [Nainstalujte git](../Installing-AndroidAPS/git-install.rst)
 * Nainstalujte a nastavte Android Studio.
 * Použijte git, abyste si naklonovali zdrojové kódy z centrálního úložiště na Githubu, kam vývojáři umístili nejnovější zdrojové kódy aplikace.
 * Otevřete naklonovaný projekt v Android Studiu jako aktivní projekt.
@@ -104,7 +104,7 @@ Jakmile jsou stahování dokončena, klikněte na tlačítko „Finish“.
 
 ### Mac
 
-* Pokud instalujete git přes homebrew, není třeba měnit žádné předvolby. Just in case: They can be found here: Android Studio - Preferences.
+* Pokud instalujete git přes homebrew, není třeba měnit žádné předvolby. Pokud by bylo třeba: Najdete je zde: Android Studio - Preferences.
 
 ## Stáhněte si kód a další komponenty
 

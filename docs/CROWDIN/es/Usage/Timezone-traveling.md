@@ -1,80 +1,80 @@
-# Timezone traveling with pumps
+# Zona horaria viajando con bombas
 
 ## DanaR, Korean DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+No hay problema con cambiar el huso horario en el teléfono porque la bomba no utiliza el historial
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndoridAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+Estas bombas necesitan un cuidado especial porque AndoridAPS está usando la historia de la bomba, pero los registros en la bomba no tienen marca de huso horario. **Eso significa que si se cambia el huso horario en el teléfono, los registros se leerán con un huso horario diferente y se duplicarán.**
 
-To avoid this there are two possibilities:
+Para evitar esto, hay dos posibilidades:
 
-### Option 1: Keep home time and timeshift profile
+### Opción 1: Conservar la zona horaria original el perfil de tiempo
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
-* Phone must keep your standard time as at home for the whole travel period.
-* Time-shift your profile according to time difference between home time and destination time.
+* Apague Automático de fecha y hora "en la configuración del teléfono (cambio manual de zona horaria).
+* El teléfono debe mantener su tiempo estándar como en casa durante todo el período de viaje.
+* Cambie el tiempo de su perfil de acuerdo a la diferencia horaria entre la hora de su casa y la hora de destino.
    
-   * Long-press profile name (middle of top section on homescreen)
-   * Select 'Profile Switch'
-   * Set 'Time shift' according to your destination.
+   * Pulsación larga en el nombre del perfil (en el medio de la sección superior de la pantalla)
+   * Seleccione "Cambio de perfil"
+   * Establezca la 'Diferencia de horas' según el destino.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Cambio de perfil con cambio de tiempo](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: profile switch +6 hours
-   * i.e. Vienna -> Sydney: profile switch -8 hours
+   * p.e. Viena -> Nueva York: cambio de perfil +6 horas
+   * p.e. Viena -> Sydney: cambio de perfil -8 horas
 
-### Option 2: Delete pump history
+### Opción 2: Suprimir historial de bomba
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* Desactiva 'Fecha y hora automática' en la configuración de tu teléfono (cambio de zona horaria manual)
 
-When get out of plane:
+Cuando salga del avión:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* apague la bomba
+* cambiar huso horario por teléfono
+* apagar teléfono, encender bomba
+* borrar historial en la bomba
+* cambiar hora en la bomba
+* activar el teléfono
+* deje que el teléfono se conecte a la bomba y se ajuste de tiempo
 
 ## Combo
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+El controlador ajusta automáticamente el tiempo de la bomba a la hora del teléfono.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+El Insight también registra las entradas de historial en las que se modificó el tiempo y desde cual (antigua) hora a la que es (nueva) hora. Por lo tanto, el tiempo correcto se puede determinar en AAPS a pesar del cambio de tiempo.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+Puede provocar imprecisiones en los TDD. Pero esto no debería ser un problema.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skiped in calculation in AAPS as the correct time cannot be identified properly.
+Por lo tanto, el usuario de Insight no tiene que preocuparse por los cambios de huso horario y los cambios de hora. Hay una excepción a esta regla: la bomba de Insight tiene una pequeña batería interna a la hora de encendido, etc. mientras estás cambiando la batería "real". Si el cambio de la batería tarda demasiado tiempo, esta batería interna se puede quedar sin energía, se restablecerá el reloj y se le solicitará que introduzca una nueva hora y fecha después de insertar una nueva batería. En este caso todas las entradas antes de que el cambio de batería se saltean en el cálculo en AAPS porque la hora correcta no puede ser identificado correctamente.
 
-# Time adjustment daylight savings time (DST)
+# Ajuste horario de verano (DST)
 
-Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
+Dependiendo de la bomba y de la configuración de la MCG, los saltos en el tiempo pueden llevar a problemas. Con el Combo, por ejemplo, el historial de la bomba se vuelve a leer y se generan entradas duplicadas. Así que por favor, haga el ajuste mientras esté despierta y no durante la noche.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+Si usted se da bolos con la calculadora por favor no use COB y IOB a menos que esté seguro de que son absolutamente correctos - es mejor que no los use durante un par de horas después del interruptor DST.
 
 ## Accu-Check Combo
 
-AndroidAPS will issue an alarm if time between pump and phone differs to much. In case of DST time adjustment this would be in the middle of the night. To prevent this and enjoy your sleep instead follow these steps:
+AndroidAPS emitirá una alarma si el tiempo entre la bomba y el teléfono difiere mucho. En el caso del ajuste horario de DST, se haría en medio de la noche. Para evitar esto y disfrutar de su sueño, siga estos pasos:
 
-1) Switch off automatic time zone in your phone. 2) Find a time zone that has the target time but doesn't use DST. For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo. 3) In AndroidAPS refresh you pump. 4) Check the Treatments tab... If you see duplicate treatments:
+1) Desactive el huso horario automático en su teléfono. 2) Busque un huso horario que tenga el tiempo de destino pero no utilice DST. Para el Tiempo Central Europeo (CET) esto podría ser "Brazzaville" (Kongo). Cambia la zona horaria de tu teléfono a Kongo. 3) En AndroidAPS refresque la bomba. 4) Revisa la ficha Tratamientos... Si ve los tratamientos duplicados:
 
-* DON'T press "delete future treatments"
-* Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore. 5) If the state is unclear - please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+* No presione "suprímase futuros tratamientos"
+* Pulse "remove" en todos los tratamientos futuros y en los duplicados. Esto debe invalidar los tratamientos en lugar de eliminarlos para que ya no se tengan en cuenta para el IOB. 5) Si el estado no está claro, por favor desactive el lazo para por lo menos un DIA y Max-Carb-Time - para el que es más grande.
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal.
+Un buen momento para hacer este interruptor sería con un IOB bajo. Por ejemplo, una hora antes de una comida.
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* El cambio a DST se realiza automáticamente. No se requiere acción.
 
-## Other pumps - new as of AAPS version 2.2
+## Otras bombas de la nueva como de la AAPS versión 2.2
 
-**You have to update AAPS to use this feature!**
+**¡Tienes que actualizar AAPS para usar esta función!**
 
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Para evitar las dificultades, el Lazo se desactivará durante 3 horas después de que el conmutador DST se desactive. Esto se hace por razones de seguridad (IOB demasiado alto debido a duplicados en bolo antes del cambio de DST).
+* Recibirá una notificación en la pantalla principal 24 horas antes del cambio de DST que el lazo se inhabilitará temporalmente. Este mensaje aparecerá sin pitido, vibración o cualquier cosa.

@@ -32,6 +32,8 @@ There are safety limits in place based on age you selected in this setting. Se c
 
 * Option to enable [superbolus](../Getting-Started/Screenshots#section-a) in bolus wizard.
 
+### Status lights
+
 * Status lights give a visual warning for low reservoir and battery level as well as overdue site change. Extended version shows elapsed time / battery percentage.
     
     ![Luzes de estado - detalhe](../images/StatusLights_V2_5.png)

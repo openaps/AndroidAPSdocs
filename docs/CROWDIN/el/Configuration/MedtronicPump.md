@@ -106,7 +106,11 @@ When Medtronic driver is selected, 3 possible actions can be added to Actions Ta
 
 ## Σημαντικές σημειώσεις
 
-### Καταγραφή
+### OpenAPS users
+
+When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+
+### Logging
 
 Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
 
@@ -118,7 +122,7 @@ When you restart RileyLink or GNARL, you need to either do new TuneUp (action "W
 
 Medtronic CGMS is currently NOT supported.
 
-### Χειροκίνητη χρήση της αντλίας
+### Manual use of pump
 
 You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
 
@@ -132,24 +136,24 @@ We are aware of this problem, and we are already looking into possible solution 
 
 ## Συχνές ερωτήσεις
 
-### Μπορώ να δω τη δύναμη του RileyLink / GNARL;
+### Can I see the power of RileyLink/GNARL?
 
 Όχι. At the moment none of this devices support this and it probably won't even in the future.
 
-### Είναι το GNARL πλήρης αντικατάσταση για το RileyLink;
+### Is GNARL full replacement for RileyLink?
 
 Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
-### Πού μπορώ να βρω το RileyLink ή το GNARL;
+### Where can I get RileyLink or GNARL?
 
 Like mentioned before you can get devices here:
 
 - RileyLink - Μπορείτε να πάρετε τη συσκευή εδώ - [ getrileylink.org ](https://getrileylink.org/).
 - GNARL - Μπορείτε να λάβετε πληροφορίες εδώ, αλλά η συσκευή πρέπει να παραγγελθεί αλλού ([ github.com/ecc1/gnarl ](https://github.com/ecc1/gnarl)).
 
-### Τι πρέπει να κάνω εάν χάσω τη σύνδεση με το RileyLink ή / και την αντλία;
+### What to do if I loose connection to RileyLink and/or pump?
 
 1. Εκτελέστε τη λειτουργία "Ξυπνήστε και συντονίστε", αυτή θα προσπαθήσει να βρει τη σωστή συχνότητα για να επικοινωνήσει με την αντλία.
 2. Απενεργοποιήστε το Bluetooth, περιμένετε 10 δευτερόλεπτα και ενεργοποιήστε το ξανά. Αυτό θα αναγκάσει την επανασύνδεση με το RileyLink.
@@ -157,7 +161,7 @@ Like mentioned before you can get devices here:
 4. Δοκιμάστε 3 και 2 μαζί.
 5. Επαναφέρετε το RileyLink και επαναφέρετε το τηλέφωνο.
 
-### Πώς να καθορίσετε ποια συχνότητα χρησιμοποιεί η αντλία σας
+### How to determine what Frequency my pump uses
 
 ![Pump Model](../images/Medtronic06.png)
 

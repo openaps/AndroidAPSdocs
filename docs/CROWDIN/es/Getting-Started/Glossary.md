@@ -299,7 +299,7 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - perfil</a></td>
 </tr>
 <tr>
- <td>Profile switch</td>
+ <td>Cambio de perfil</td>
  <td>cambio de perfil utilizado (temporal), variación porcentual de aumento/disminución</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - conmutador de perfil</a></td>

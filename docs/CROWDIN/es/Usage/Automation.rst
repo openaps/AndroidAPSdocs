@@ -1,120 +1,120 @@
-Automation
+Automatización
 **************************************************
 
-What is Automation
+Qué es la automatización
 ==================================================
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. P.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Para los mismos sucesos frecuentes, es posible que siempre tenga que cambiar los mismos valores. Para evitar el trabajo extra, puede simplemente intentar automatizar el evento si puede especificarlo lo suficientemente bien y dejar que lo haga automáticamente. P.e. cuando su BG es demasiado bajo, puede decidir tener automáticamente un objetivo temporal alto. O si estás en tu centro de fitness, obtienes automáticamente un objetivo temporal. Antes de utilizar Automatización, debe tener confianza en los `objetivos temporales <./temptarget.html>` _ o en los conmutadores de perfil. 
 
-.. image:: ../images/Automation_ConditionAction_RC3.png
-  :alt: Automation condition + action
+.. imagen:: ../images/Automation_ConditionAction_RC3.png
+  :alt: Condición de automatización + acción
 
-How to use it
+Cómo se usa
 ==================================================
-To set up an automation, you have to give it a title, select at least one condition and one action. 
+Para configurar una automatización, tiene que darle un título, seleccionar al menos una condición y una acción. 
 
-Important note
+Nota importante
 --------------------------------------------------
-**Automation is still active when you disable loop!**
+**La automatización todavía está activa cuando se inhabilita el lazo.**
 
-So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
+Por lo tanto, asegúrese de desactivar las reglas de automatización durante estas ocaciones si es necesario. Puede hacerlo desmarcando la casilla izquierda del nombre de su regla de automatización.
 
-.. image:: ../images/Automation_ActivateDeactivate.png
-  :alt: Activate and deactivaten automation rule
+.. imagen:: ../images/Automation_ActivateDeactivate.png
+  :alt: Activación y desactivación de la regla de automatización
 
 General
 --------------------------------------------------
-There are some limits:
+Hay algunos límites:
 
-* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-* The profile percentage has to be between 70 % and 130%.
-* There is a 5 min. time limit between executions (and first execution).
+* El valor de la glucosa tiene que estar entre 72 y 270 mg/dl ó 4 y 15 mmol/l.
+* El porcentaje de perfil tiene que estar entre el 70% y el 130%.
+* Hay un mínimo de 5 min. de límite de tiempo entre ejecuciones (y la primera ejecución).
 
-**Please be careful:**
+**Por favor, tenga cuidado:**
 
-* **less than -2 means: -3 and lower (-4,-10, etc)**
-* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+* ** menos de -2 significa: -3 e inferiores (-4, -10, etc)**
+* ** más de 2 significa: -1 y superiores (-1, 0, + 10, etc)**
 
 
-Condition
+Condición
 --------------------------------------------------
-You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
+Usted puede elegir entre varias condiciones. Aquí están algunos componentes explicadas, pero la mayoría de ellos deben ser fácil de entender y no todo se describe aquí:
 
-* connect conditions: you can have several conditions and can connect them with 
+* Condiciones de conexión: puede tener varias condiciones y puede conectarlas con 
 
-   * "And"
-   * "Or"
-   * "Exclusive or" (which means that if one (and only one of the) conditions applies, the action(s) will happen)
+   * "Y"
+   * "O"
+   * "O exclusivo" (que significa que si se aplica una (y sólo una de las condiciones), se producirá la acción)
    
-* Time vs. recurring time
+* Tiempo vs. hora de Repetición
 
-   * time =  single time event
-   * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
+   * hora = suceso de una sola vez
+   * hora recurrente = algo que ocurre regulamente (por ejemplo. una vez a la semana, todos los días laborables, etc.)
    
-* location: in the config builder (Automation), you can select which location service you want to use:
+* ubicación: en el constructor de configuración (Automatización), puede seleccionar el servicio de ubicación que desea utilizar:
 
-  * Use passive location: AAPS only takes locations if other apps are requesting it
-  * Use network location: Location of your Wifi
-  * Use GPS location (Attention! May cause excessive battery drain!)
+  * Usar ubicación pasiva: AAPS sólo toma ubicaciones si otras aplicaciones lo están solicitando
+  * Usar la ubicación de la red: la ubicación de su Wifi
+  * Usar localización GPS (Atención! ¡ Puede provocar una descarga excesiva de la batería!)
   
-Action
+Acción
 --------------------------------------------------
-You can choose one or more actions: 
+Puede elegir una o varias acciones: 
 
-* start temp target 
+* iniciar objetivo temporal 
 
-   * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-   * works only if there is no previous temp target
+   * debe estar entre 72 mg/dl y 270 mg/dl (4 mmol/l y 15 mmol/l)
+   * sólo funciona si no hay ningún valor temporal anterior
    
-* stop temp target
-* notification
-* profile percentage
+* detener objetivo temporal
+* notificación
+* porcentaje de perfil
 
-   * must be between 70% and 130% 
-   * works only if the previous percentage is 100%
+   * debe estar entre el 70% y el 130% 
+   * sólo funciona si el porcentaje anterior es 100%
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+Después de añadir la acción, **no olvide cambiar los valores por defecto** a lo que necesita pulsando en los valores predeterminados.
  
-.. image:: ../images/Automation_Default_V2_5.png
-  :alt: Automation default vs. set values
+.. imagen:: ../images/Automation_Default_V2_5.png
+  :alt: Valor por omisión de automatización frente a. valores del usuario
 
-Good practice
+Buenas prácticas
 ==================================================
-* When you start using Automation or create a new rule add a notification until you are sure the rule is working well.
-* Whatch the rule results.
+* Cuando empiece a utilizar la automatización o cree una regla nueva, añada una notificación hasta que esté seguro de que la regla funciona bien.
+* Cuál es el resultado de las reglas.
 
-Examples
+Ejemplos
 ==================================================
-These are just set up examples, no advises. Don't reproduce it without being aware what you are actually doing or why you need these. See below for two examples with screenshots.
+Se trata simplemente de ejemplos y no de consejos. No los reproduzca sin ser consciente de lo que está haciendo realmente o por qué los necesita. Vea a continuación dos ejemplos con capturas de pantalla.
 
-* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-* Setting temp target for activities based on time, location...
-* Setting eating soon temp targets based on time, location...
+* Conmutar perfiles para sus actividades diarias (como escuela, gimnasio, fin de semana, día laboral...) usando geolocalización, wifi, tiempo, etc.
+* Estableciendo un objetivo temporal para las actividades basadas en el tiempo, la ubicación...
+* Establecer pronto objetivos temporales de comida basados en el tiempo, la ubicación...
 
-Low Glucose Temp Target
+Objetivo temporal de glucosa baja
 --------------------------------------------------
-.. image:: ../images/Automation2.png
+.. imagen:: ../images/Automation2.png
   :alt: Automation2
 
-This is made by a person that wants to get an automatically hypo temp target when having a hypo.
+Esto es realizado por una persona que quiere obtener un objetivo temporal para el caso de hipoglucemia cuando se tiene una hipoglucemia.
 
-Lunch Time Temp Target
+Objetivo temporal para hora de almuerzo
 --------------------------------------------------
-.. image:: ../images/Automation3.png
+.. imagen:: ../images/Automation3.png
   :alt: Automation3
   
-These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer. 
+Este ejemplo es realizado por una persona, que tiene el almuerzo a la misma hora durante la semana. Si se encuentra en un momento determinado en su lugar de almuerzo, obtiene un objetivo temporal más bajo (comer pronto) mientras espera a la comida. Debido a la conexión "And", sólo ocurre durante el tiempo y la ubicación. Así que no funciona en ningún otro momento en este lugar o en este momento cuando las personas se quedan en casa o trabajan más tiempo. 
 
-Incorrect use of Automation
+Uso incorrecto de la automatización
 --------------------------------------------------
-As every system Automation can be used incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
+Como cualquier Automatización de sistema se puede utilizar de forma incorrecta. Esto podría conducir a dificultades e incluso a un peligro para su salud. Por ejemplo, los ejemplos de uso incorrecto son:
 
-* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-* Setting profile to compensate food
-* Setting profile without duration
-* Creating one way rules (i.e. do something but don't undo it by another rule)
-* Creating long term rules
+* Tratar de alterar temporalmente el algoritmo en lugar de sólo ayuda (por ejemplo. cambiando el perfil en lugar de ajustar basal, IC, etc.)
+* Estableciendo perfil para compensar a los alimentos
+* Establecimiento de un perfil sin duración
+* Creación de reglas de un sentido (por ejemplo. hacer algo, pero no deshacerlo con otra regla)
+* Creando reglas a largo plazo
 
-Alternatives
+Alternativas
 ==================================================
 
-For advanced users there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
+Para los usuarios avanzados hay otras posibilidades para automatizar las tareas usando IFTTT o una aplicación de Android llamada Automate. Algunos ejemplos se pueden encontrar `aquí <./automationwithapp.html>`_.
