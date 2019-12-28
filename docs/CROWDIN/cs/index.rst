@@ -88,7 +88,8 @@ Použití AndroidAPS
    Dočasné cíle <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automatizace <./Usage/Automation.rst>
-  
+   Automatizace s aplikacemi třetích stran <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
  
 Obecné tipy 
 --------------------------------------------------
@@ -110,16 +111,6 @@ AndroidAPS pro děti
    
    Vzdálené monitorování <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-   
-
-Pokročilé 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android auto <./Usage/Android-auto.md>
-   Automatizace s aplikacemi třetích stran <./Usage/automationwithapp.md>
    
 
 Poradce při potížích

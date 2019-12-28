@@ -88,7 +88,8 @@ Utilisation d'AndroidAPS
    Cibles <./Usage/temptarget.md>   
    Glucides étendus <./Usage/Extended-Carbs.rst>
    Automatisation <./Usage/Automation.rst>
-  
+   Automatisation avec des applications tierces <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
  
 Conseils généraux 
 --------------------------------------------------
@@ -110,16 +111,6 @@ AndroidAPS pour les enfants
    
    Surveillance à distance <./Children/Children.rst>
    Commandes SMS <./Children/SMS-Commands.rst>
-   
-
-Avancé 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android auto <./Usage/Android-auto.md>
-   Automatisation avec des applications tierces <./Usage/automationwithapp.md>
    
 
 Dépannage

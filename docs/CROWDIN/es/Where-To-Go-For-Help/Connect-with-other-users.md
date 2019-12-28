@@ -38,11 +38,15 @@ Para obtener soporte en fuentes de CGM, utilice los grupos de Facebook o los can
 * [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
 * [Reuniones de Looper Alemania & Austria](http://loopertreffen.androidaps.de)
 
+### Netherlands
+
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
+* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+
+### Sweden
+
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+
 ### UK
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (usuarios basados en el Reino Unido de OpenAPS, Loop y AndroidAPS)
-
-### Países Bajos
-
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): usuarios de habla holandesa de OpenAPS, Loop y AndroidAPS
-* [CGM en la nube Países Bajos](https://www.facebook.com/groups/1764754560436596)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)

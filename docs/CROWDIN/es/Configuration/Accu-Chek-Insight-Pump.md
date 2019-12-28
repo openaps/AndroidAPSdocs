@@ -53,11 +53,13 @@ Nota: No habrá una conexión permanente entre la bomba y el teléfono. Sólo se
 
 ## Valores en AAPS
 
-Usted **no debe utilizar 'Siempre usar valores basales absolutos'** con la bomba Insight. En AAPS vaya a Preferencias > Nightscout-Client > Configuración Avanzada y asegúrese de que 'Siempre usar valores basales absolutos' está deshabilitado. Esto conduciría a valores de TBR falsos en la bomba Insight. Como consecuencia, no podrá utilizar el Autoajuste, pero no hay alternativa para inhabilitar esta opción al utilizar la bomba de Insight.
+Usted **no debe utilizar 'Siempre usar valores basales absolutos'** con la bomba Insight. En AAPS vaya a Preferencias > Nightscout-Client > Configuración Avanzada y asegúrese de que 'Siempre usar valores basales absolutos' está deshabilitado. Esto conduciría a valores de TBR falsos en la bomba Insight.
 
-![Pantalla de seteos de Insight](../images/Insight_pairing_V2_5.png)
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
 
-En los valores de Insight en AndroidAPS, puede habilitar las opciones siguientes:
+![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+
+In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Registrar cambios en el depósito": Esto registrará automáticamente un cambio de cartucho de insulina cuando se ejecute el programa de "llenar la cánula" en la bomba.
 * "Registro de cambios de tubo": Esto agrega una nota a la base de datos de AndroidAPS al ejecutar el programa de "llenado de tubo" de la bomba.
@@ -84,9 +86,9 @@ En los valores de Insight en AndroidAPS, puede habilitar las opciones siguientes
 
 * "Retraso de desconexión": Define cuánto tiempo (en segundos) AndroidAPS esperará a desconectarse de la bomba después de que finalice una operación. El valor predeterminado es de 5 segundos.
 
-Para los periodos en los que se ha detenido la bomba, AAPS registrará tasa basal con 0%. basal con 0%.
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
-En AndroidAPS, la pestaña Accu-Chek Insight muestra el estado actual de la bomba y tiene dos botones:
+In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
 * "Actualizar": Refresca el estado de la bomba
 * "Activar/Desactivar TBR notificación": Una bomba Insight estándar emite una alarma cuando un TBR está terminado. Este botón le permite habilitar o inhabilitar esta alarma sin necesidad de software de configuración.
@@ -95,35 +97,36 @@ En AndroidAPS, la pestaña Accu-Chek Insight muestra el estado actual de la bomb
 
 ## Configuración de la bomba
 
-Configure las alarmas en la bomba como se indica a continuación:
+Configure alarms in the pump as follows:
 
-* Menú > Ajustes > ajustes del equipo > configuración de Modo > Tranquilo > Señal > Sonido Menú > Ajustes > ajustes del equipo > configuración de Modo > Tranquilo > Volumen > 0 (quitar todas las barras)
-* Menú > Modos > modo de Señal > Tranquilo
+* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Modes > Signal mode > Quiet
 
-Esto silenciará todas las alarmas de la bomba, permitiendo que AndroidAPS decida si una alarma es relevante para usted. Si AndroidAPS no admite una alarma, su volumen se incrementará (primera señal, después vibración).
+This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-Las bombas de Insight con firmware más reciente vibrarán brevemente cada vez que se entrega un bolo (por ejemplo, cuando el AndroidAPS emite una emulación SMB o TBR entrega un bolo extendido). No se puede inhabilitar la vibración. Las bombas de modelos anteriores no vibran en estas circunstancias.
+Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
 
 ## Reemplazo de la batería
 
-La vida de la batería para la bomba Insight cuando se hace lazo está en el rango de 10 a 14 días, máx. 20 días. El usuario que informa de esto está utilizando las baterías de litio de Energizer.
+Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
-La bomba Insight tiene una batería interna pequeña para mantener las funciones esenciales como el reloj que se está ejecutando mientras cambia la batería extraíble. Si el cambio de la batería tarda demasiado tiempo, esta batería interna se puede quedar sin energía, se restablecerá el reloj y se le solicitará que introduzca una nueva hora y fecha después de insertar una nueva batería. Si esto ocurre, todas las entradas en AndroidAPS antes del cambio de la batería ya no se incluirán en los cálculos ya que no se puede identificar correctamente la hora correcta.
+The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 ## Errores específicos de Insight
 
 ### Bolo extendido
 
-Sólo utilice un bolo extendido, ya que múltiples bolos extendidos al mismo tiempo pueden causar errores.
+Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 
 ### Tiempo de espera agotado (Time out)
 
-A veces puede suceder que la bomba Insight no responda durante la configuración de la conexión. En este caso AAPS mostrará el siguiente mensaje: "tiempo de espera agotado durante la conexión (handshake) por bluetooth".
+Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
 
-![Pantalla de reseteo de Bluetooth de Insight](../images/Insight_ResetBT.png)
+![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-En este caso, desactive la función bluetooth en la bomba el smartphone por unos 10 segundos y vuelva a encenderlo.
+In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
 
 ## Cruzando zonas horarias con la bomba Insight
 
-Para obtener información sobre los viajes a través de zonas horarias, consulte la sección [Zonas horarias viajando con bombas](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).

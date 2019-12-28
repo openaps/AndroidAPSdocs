@@ -11,7 +11,7 @@ Op dit moment zijn er 4 algoritmes voor gevoeligheidsdetectie:
 
 ### Gevoeligheid Oref0
 
-De gevoeligheid wordt berekend op basis van gegevens van de afgelopen 24 uur en koolhydraten (indien niet geabsorbeerd) worden hiervan afgehaald, na de duur die is opgegeven in je Instellingen. Het algoritme is vergelijkbaar met OpenAPS Oref0, zoals beschreven in [de OpenAPS Oref0 documentatie](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html).
+De gevoeligheid wordt berekend op basis van gegevens van de afgelopen 24 uur en koolhydraten (indien niet geabsorbeerd) worden hiervan afgehaald, na de duur die is opgegeven in je Instellingen. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Gevoeligheid AAPS
 
@@ -23,7 +23,7 @@ De gevoeligheid wordt berekend als een gewogen gemiddelde van alle afwijkingen. 
 
 ### Gevoeligheid Oref1
 
-Deze moet je kiezen wanneer je SMB met UAM gebruikt. De gevoeligheid wordt berekend op basis van gegevens van de afgelopen 8 uur, of van de laatste infuuswissel als die minder dan 8 uur geleden is. Koolhydraten (indien niet geabsorbeerd) worden afgekapt (dwz, op nul gezet) na de tijd die je hebt opgegeven in je Instellingen. Het Oref1 algoritme ondersteunt als enige UAM (onaangekondigde maaltijden, unannounced meals). Dit betekent dat alle periodes waarbij UAM zijn gedetecteerd, niet worden meegenomen in de berekening. Vandaar dat je voor dit gevoeligheids-algoritme moet kiezen als je SMB met UAM gebruikt! Voor meer informatie lees de [OpenAPS Oref1 documentatie](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Deze moet je kiezen wanneer je SMB met UAM gebruikt. De gevoeligheid wordt berekend op basis van gegevens van de afgelopen 8 uur, of van de laatste infuuswissel als die minder dan 8 uur geleden is. Koolhydraten (indien niet geabsorbeerd) worden afgekapt (dwz, op nul gezet) na de tijd die je hebt opgegeven in je Instellingen. Het Oref1 algoritme ondersteunt als enige UAM (onaangekondigde maaltijden, unannounced meals). Dit betekent dat alle periodes waarbij UAM zijn gedetecteerd, niet worden meegenomen in de berekening. Vandaar dat je voor dit gevoeligheids-algoritme moet kiezen als je SMB met UAM gebruikt! For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## Gelijktijdige koolhydraten
 
