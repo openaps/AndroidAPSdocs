@@ -53,9 +53,9 @@ Opmerking: Er zal geen permanente verbinding zijn tussen pomp en telefoon. Een v
 
 ## Instellingen in AAPS
 
-Let op: je mag **'Gebruik altijd absolute basale waarden' ** niet ingeschakeld hebben met een Insight-pomp. Ga in AAPS naar Instellingen> Nightscout-Client > Geavanceerde instellingen en zorg ervoor dat 'Gebruik altijd absolute basale waarden' is uitgeschakeld. Bij de Insight pomp zou deze optie ervoor zorgen dat er verkeerde tijdelijke basaalstanden worden ingesteld.
+Let op: je mag **'Gebruik altijd absolute basale waarden' ** niet ingeschakeld hebben met een Insight-pomp. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. Bij de Insight pomp zou deze optie ervoor zorgen dat er verkeerde tijdelijke basaalstanden worden ingesteld.
 
-Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
