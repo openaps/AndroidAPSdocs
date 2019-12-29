@@ -53,9 +53,9 @@
 
 ## Настройки на AAPS
 
-** Не следует применять 'Всегда использовать абсолютные значения базала' ** на помпе Insight. В AAPS выберите Параметры > Nightscout-Client > Дополнительные параметры и убедитесь, что 'Всегда использовать абсолютные значения базала' выключено. Это привело бы к неверным настройкам временного базала TBR в помпе Insight.
+** Не следует применять 'Всегда использовать абсолютные значения базала' ** на помпе Insight. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. Это привело бы к неверным настройкам временного базала TBR в помпе Insight.
 
-Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
