@@ -97,7 +97,7 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 
 ## Configurações na bomba
 
-Configure alarms in the pump as follows:
+Configurar alarmes na bomba da seguinte forma:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
 * Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
