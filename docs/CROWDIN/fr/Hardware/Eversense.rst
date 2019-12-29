@@ -1,9 +1,9 @@
-For users of Eversense
+Pour les utilisateurs de Eversense
 **************************************************
-The easiest way to use Eversense with AndroidAPS is to install the modified `Eversense app <https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk>`_ (and unistall the original one first).
+La façon la plus simple d'utiliser Eversense avec AndroidAPS est d'installer l'application modifiée `Eversense  <https://github.com/BernhardRo/Esel/blob/master/apk/eversense_cgm_v1.0.409_com.senseonics.gen12androidapp-patched.apk>`_ (après avoir au préalable désinstallé l'application d'origine...).
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+**Attention : en désinstallant l'ancienne application, vos historiques de données de plus d'une semaine seront perdus !**
 
-To finally get your data to AndroidAPS, you need to install `ESEL <https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk>`_ and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the `Configuration Builder <../Configuration/Config-Builder.html>`_ in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
+Pour enfin obtenir vos données dans AndroidAPS, vous devez installer `ESEL <https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk>`_, activer "Send to AAPS and xDrip" dans ESEL et sélectionner "MM640g" comme source des glycémies dans le `Générateur de configuration <../Configuration/Config-Builder.html>`_ dans AndroidAPS. Comme les données de glycémie de Eversense peuvent parfois être incohérente, il est préférable d'activer "Smooth Data" dans ESEL, plutôt que d'activer "Utiliser delta basé sur moyenne courte" dans AAPS.
 
-You can find another instruction for using xDrip with an Eversense `here <https://github.com/BernhardRo/Esel/tree/master/apk>`_.
+Vous pouvez trouver d'autres instructions pour utiliser xDrip avec un Eversense `ici <https://github.com/BernhardRo/Esel/tree/master/apk>`_.
