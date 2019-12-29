@@ -53,9 +53,9 @@ Pastaba: tarp pompos ir telefono nebus nuolatinio ryšio. A connection will only
 
 ## AAPS nustatymai
 
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump.
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump.
 
-Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
