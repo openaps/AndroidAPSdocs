@@ -9,14 +9,14 @@ Segurança Em Primeiro Lugar
 Como funciona
 ==================================================
 * A maioria dos ajustes de alvos temporários, de acordo com AAPS etc. pode ser feito na ` app NSclient <../Children/Children.html> ` _ num telefone Android com ligação à internet.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
-* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
+* Os Bólus não podem ser enviados através do Nightscout, mas pode usar comandos SMS.
+* Se utiliza um iPhone como seguidor e, portanto, não consegue utilizar o NSclient, há comandos adicionais de SMS disponíveis.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
-* If you want to use more than one number:
+* Na configuração do seu smartphone Android vá a: Aplicativos > AndroidAPS > Permissões e habilite SMS
+* No AndroidAPS vá a Preferências> Comunicador de SMS e introduza o(s) telefone(s) que você permitirá que enviem os comandos SMS (separados por ponto e vírgula-ou seja, +4412345678;+4412345679) e habilite também 'Permitir comandos remotos via SMS'.
+* Se quiser usar mais de um número:
 
-  * Enter just one number.
+  * Insira apenas um número.
   * Make that single number work by sending and confirming a SMS command.
   * Enter additional number(s) separated by semicolon, no space.
   
@@ -28,7 +28,7 @@ Como funciona
 
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
-Commands
+Comandos
 ==================================================
 
 Upper and lower case is irrelevant when sending commands.
@@ -54,7 +54,7 @@ Loop
 * LOOP RESUME
    * Response: Loop resumed
 
-CGM data
+Dados do CGM
 --------------------------------------------------
 * GLIC
    * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
