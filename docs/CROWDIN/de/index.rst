@@ -88,7 +88,8 @@ AndroidAPS Nutzung
    Temporäre Ziele <./Usage/temptarget.md>   
    Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
-  
+   Automation mit Drittanbieter-Apps <./Usage/automationwithapp.md>
+   Android Auto <./Usage/Android-auto.md>  
  
 Allgemeine Hinweise 
 --------------------------------------------------
@@ -110,16 +111,6 @@ AndroidAPS für Kinder
    
    Kontrolle aus der Ferne <./Children/Children.rst>
    SMS-Befehle <./Children/SMS-Commands.rst>
-   
-
-Für Fortgeschrittene 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-       
-   
-   Android Auto <./Usage/Android-auto.md>
-   Automation mit Drittanbieter-Apps <./Usage/automationwithapp.md>
    
 
 Problembehandlung

@@ -1,24 +1,24 @@
-Install git
+Nainstalujte git
 **************************************************
 Windows
 ==================================================
 1. Download git
 --------------------------------------------------
 * **You have to be online all of the time as Android Studio downloads several updates!**
-* Any git version should work. For example `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
-* Make sure to note down the installation path. You will need it in the next step.
+* Měly by fungovat všechny verze gitu. For example `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
+* Poznačte si cestu instalace. Budete ji potřebovat v dalším kroku.
 
 .. image:: ../images/Update_GitPath.png
   :alt: Git installation path
 
 2. Set git path in Android Studio
 --------------------------------------------------
-* Let Studio know where is git.exe located: File - Settings 
+* Zadejte do Studia umístění souboru git.exe: File - Settings 
 
   .. image:: ../images/Update_GitSettings1.png
     :alt: Android Studio - open settings
 
-* In the next window: Version Control - Git
+* V dalším okně: Version Control - Git
 
 * Choose correct path: ... **/Git/bin** (including /bin)
 
@@ -46,7 +46,7 @@ Windows
 
 Mac
 ==================================================
-* Any git version should work. For example `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
+* Měly by fungovat všechny verze gitu. For example `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
 * Use homebrew to install git: ```$ brew install git```.
 * For details on installing git see the `official git documentation <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* Pokud instalujete git přes homebrew, není třeba měnit žádné předvolby. Pokud by bylo třeba: Najdete je zde: Android Studio - Preferences.

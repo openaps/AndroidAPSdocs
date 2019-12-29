@@ -88,7 +88,8 @@ AndroidAPS Χρήση
    Προσωρινοί στόχοι <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Αυτοματοποίηση <./Usage/Automation.rst>
-  
+   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
  
 Γενικές Συμβουλές 
 --------------------------------------------------
@@ -110,16 +111,6 @@ AndroidAPS για τα παιδιά
    
    * "Εξ αποστάσεως παρακολούθηση <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-   
-
-Για προχωρημένους 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android auto <./Usage/Android-auto.md>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
    
 
 Αντιμετώπιση προβλημάτων

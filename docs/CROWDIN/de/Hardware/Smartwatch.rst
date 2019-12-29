@@ -10,4 +10,6 @@ Mehr Infos hier
        
    
    Liste der getesteten Telefone und Smartphones <../Getting-Started/Phones.md>
-   Smartwatch-Integration <./Configuration/Watchfaces.md>
+   Hintergrundbild für das Samrtphone < ../Getting-Started/Phones.md#handy-hintergrundbild>
+   Watchfaces Wear OS <../Configuration/Watchfaces.md>
+   Pebble <../Configuration/Watchfaces.md#pebble>

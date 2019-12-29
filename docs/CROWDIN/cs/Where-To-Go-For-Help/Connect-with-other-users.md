@@ -38,11 +38,15 @@ Připojte se k hlavní skupině [AndroidAPS na Facebooku](https://www.facebook.c
 * [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
 * [Setkání uživatelů v Německu a Rakousku](http://loopertreffen.androidaps.de)
 
-### Velká Británie
+### Netherlands
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (Uživatelé OpenAPS, Loop a AndroidAPS z Británie)
-
-### Nizozemsko
-
-* [Looped-NL](https://www.facebook.com/groups/117102135652893): Holandsky mluvící uživatelé OpenAPS, Loop a AndroidAPS
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+
+### Sweden
+
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+
+### UK
+
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)

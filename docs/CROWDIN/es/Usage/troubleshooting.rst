@@ -1,41 +1,41 @@
-Troubleshooting
+Solución de problemas
 **************************************************
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
+Puede encontrar información de resolución de problemas en muchas páginas de la wiki. Esta página es una colección de enlaces que le ayudarán a encontrar la información para resolver su problema.
 
-Additional useful information might also be available in the `FAQ <../Getting-Started/FAQ.html>`_.
+También es posible que haya información útil adicional disponible en la publicación `FAQ <../Getting-Started/FAQ.html>`_.
 
-AndroidAPS app
+Aplicación AndroidAPS
 ==================================================
-Building & updating
+Construir y actualizar
 -----
-* `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
-* `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-Settings
+* "Perdida del almacén de claves <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
+* `Resolución de problemas de Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+Configuración
 --------------------------------------------------
-* `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
+* `Perfil <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
-    :alt: Error: Basal not aligned to hours
+  .. imagen:: ../images/BasalNotAlignedToHours2.png
+    :alt: Error: Basal no alineado con las horas
 
-* `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+* ` Nightscout Cliente <../Usage/Troubleshooting-NSClient.html>`_
 Uso
 --------------------------------------------------
-* `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+* `Valores de carbohidratos erróneos <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Error: Slow carb absorbtion
+  .. imagen:: ../images/Calculator_SlowCarbAbsorbtion.png
+    :alt: Error: absorbción lenta de carbohidratos
 
-* `SMS commands <../Children/SMS-Commands.html#troubleshooting>`_
+* `Comandos SMS <../Children/SMS-Commands.html#troubleshooting>`_
 
-CGM
+MCG
 ==================================================
 * `General <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
-* `xDrip - no CGM data <../Configuration/xdrip.html#identify-receiver>`_
-* `xDrip - Dexcom troubleshooting <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
+* `xDrip-no hay datos MCG <../Configuration/xdrip.html#identify-receiver>`_
+* `Solución de problemas de xDrip - Dexcom <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
 
-Pumps
+Bombas
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
 * `Accu-Chek Combo general <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
@@ -46,4 +46,4 @@ Pumps
 Teléfonos
 ==================================================
 * `Jelly <../Usage/jelly.html>`_
-* `Huawei bluetooth & battery optimization <../Usage/huawei.html>`_
+* `Optimización de batería y bluetooth de Huawei <../Usage/huawei.html>`_

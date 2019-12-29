@@ -2,7 +2,11 @@ Wiki Updates & Änderungen
 **************************************************
 Dezember 2019
 ==================================================
-* `Watchfaces <../Configuration/Watchfaces.html>`_ (viel mehr Details!)
+* `Android Auto <../Usage/Android-auto.html>`_ - Setup mit Bildschirmfotos
+* `Accu-Chek Insight & Autotune <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_ - Workaround
+* `Glimp <../Configuration/Config-Builder.html#bz-quelle>`_ - Version 4.15.57 und neuer wird unterstützt
+* `Watchfaces <../Configuration/Watchfaces.html>`_ - große Überarbeitung mit zahlreichen Details
+* `Watchface Komplikationen <../Configuration/Watchfaces.html#komplikationen>`_ - Dein Lieblings-Watchface mit AAPS-Daten
 November 2019
 ==================================================
 * `Automation - bei deaktiviertem Loop ausschalten <../Usage/Automation.html#wichtiger-hinweis>`_

@@ -1,3 +1,3 @@
-Enabling Engineering Mode in xDrip+ activates extended and experimental features within the app.
+La habilitación de la modalidad de ingeniería en xDrip+ activa las características ampliadas y experimentales dentro de la aplicación.
 
-To enable Engineering Mode, on the xDrip+ home screen tap the Treatment icon on the right side of the screen (this resembles a syringe). Then tap and hold the microphone icon on the bottom-right of the Treatment interface. In the text field that opens, type "enable engineering mode" and click Done. Or, when Google Speak engine is active, speak the command "enable engineering mode". Engineering Mode is now enabled.
+Para activar el Modo de Ingeniería, en la pantalla de inicio de xDrip+ toque el icono Tratamiento en el lado derecho de la pantalla (esto se asemeja a una jeringa). A continuación, toque y mantenga el icono del micrófono en la parte inferior derecha de la interfaz Tratamiento. En el recuadro de texto que abre escriba "enable engineering mode" y presione Hecho (Done). O, cuando el motor de Google Speak está activo, diga el comando "enable engineering mode". El modo de ingeniería está ahora activado.

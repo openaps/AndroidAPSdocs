@@ -1,15 +1,15 @@
-What is a closed loop system with AndroidAPS?
+¿Qué es un sistema de lazo cerrado con AndroidAPS?
 **************************************************
 
-AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. 
+AndroidAPS es una aplicación que actúa como un sistema de páncreas artificial (APS) en un smartphone Android. ¿Qué es un sistema de páncreas artificial? Se trata de un programa de software que tiene como objetivo hacer lo que un páncreas vivo hace: mantener los niveles de azúcar en la sangre dentro de límites saludables automáticamente. 
 
-An APS can't do the job as well as a biological pancreas does, but it can make type 1 diabetes easier to manage using devices that are commercially available and software that is simple and safe. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
+Un APS no puede hacer el trabajo tan bien como lo hace un páncreas biológico, pero puede hacer que la diabetes de tipo 1 sea más fácil de manejar usando dispositivos que están comercialmente disponibles y un software que es simple y seguro. Dichos dispositivos incluyen un monitor de glucosa continuo (MCG) para indicar a AndroidAPS sobre sus niveles de azúcar en la sangre y una bomba de insulina que controla AndroidAPS para administrar dosis apropiadas de insulina. La aplicación se comunica con esos dispositivos a través de Bluetooth. Hace sus cálculos de dosificación usando un algoritmo, o un conjunto de reglas, desarrollado para otro sistema de páncreas artificial, llamado OpenAPS, que tiene miles de usuarios y ha acumulado millones de horas de uso. 
 
-A note of caution: AndroidAPS is not regulated by any medical authority in any country. Using AndroidAPS is essentially carrying out a medical experiment on yourself. Setting up the system requires determination and technical knowledge. If you don't have the technical know-how at the beginning, you will by the end. All the information you need can be found in these documents, elsewhere online, or from others who have already done it -- you can ask them in Facebook groups or other forums. Many people have successfully built AndroidAPS and are now using it entirely safely, but it is essential that every user:
+Una nota de cautela: los AndroidAPS no están regulados por ninguna autoridad médica en ningún país. El uso de AndroidAPS es esencialmente llevar a cabo un experimento médico en sí mismo. La configuración del sistema requiere determinación y conocimientos técnicos. Si no tienes el know-how técnico al principio, al final lo tendrá. Toda la información que necesitas puede ser encontrada en estos documentos, en otros sitios en línea, o de otros que ya lo han hecho, puedes preguntarles en grupos de Facebook u otros foros. Muchas personas han construido con éxito AndroidAPS y ahora lo están utilizando por completo de forma segura, pero es esencial que cada usuario:
 
-* Builds the system themselves so that they thoroughly understand how it works
-* Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
-* Maintains and monitors the system to ensure it is working properly
+* Construya el sistema por sí mismo para que entiendan a fondo cómo funciona
+* Ajuste su algoritmo de dosificación individual con su equipo de diabetes para trabajar casi perfecto
+* Mantenga y supervise el sistema para asegurarse de que está funcionando correctamente
 
 .. note:: 
 	**Advertencia**
@@ -20,25 +20,25 @@ A note of caution: AndroidAPS is not regulated by any medical authority in any c
 
 	* Todos los productos y nombres de compañias, marcas, servicios, marcas registradas y servicios registrados son propiedad de sus respectivos tenedores. Su uso aquí es informativo y no implica afiliación o pago por ello.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_.
+	Tenga en cuenta que este proyecto no tiene ninguna relación con y no está respaldado por: ` SOOIL <http://www.sooil.com/eng/>` _, ` Dexcom <http://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>` _ o ` Medtronic <http://www.medtronic.com/>` _.
 	
-If you're ready for the challenge, please read on. 
+Si estás listo para el reto, por favor lee en. 
 
-Primary goals behind AndroidAPS
+Objetivos principales detrás de AndroidAPS
 ==================================================
 
-* An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
-* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
-* An app to which users can easily add or remove modules as needed
-* An app with different versions for specific locations and languages.
-* An app which can be used in open- and closed-loop mode
-* An app that is totally transparent: users can input parameters, see results, and make the final decision
-* An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
-* An app closely integrated with Nightscout
-* An app in which the user is in control of safety constraints 
+* Una aplicación con seguridad incorporada. Para leer acerca de las características de seguridad de los algoritmos, conocidos como oref0 y oref1, haga clic aquí (https: //openaps.org/reference-design/)
+* Una aplicación integral para la gestión de la diabetes tipo 1 con un páncreas artificial y Nightscout
+* Una aplicación a la que los usuarios pueden añadir o eliminar fácilmente módulos según sea necesario
+* Una aplicación con diferentes versiones para ubicaciones y lenguajes específicos.
+* Una aplicación que se puede utilizar en el lazo abierto y cerrado
+* Una aplicación que es totalmente transparente: los usuarios pueden entrar parámetros, ver resultados y tomar la decisión final
+* Una aplicación que es independiente de los drivers particulares de la bomba y contiene una "bomba virtual" para que los usuarios puedan experimentar con seguridad antes de usarlo en sí mismos 
+* Una aplicación que se integra estrechamente con Nightscout
+* Una aplicación en la que el usuario está en control de las restricciones de seguridad 
 
-How to start
+Como empezar
 ==================================================
-Of course, all of this content here is very important, but can be in the beginning quite confusing.
-A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
+Por supuesto, todo este contenido es muy importante, pero puede ser en el principio muy confuso.
+Se proporciona una buena orientación por medio de la ` Visión general del módulo <../Module/module.html>` _ y los ` Objetivos <../Usage/Objectives.html>` _. También puede echar un vistazo a la "configuración de ejemplo con Dana, Dexcom y Sony Smartwatch <../Getting-Started/Sample-Setup.html>` _.
  

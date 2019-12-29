@@ -2,7 +2,7 @@
 
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**AndroidAPS δεν είναι διαθέσιμο για κατέβασμα λόγω κανονισμού για τις ιατρικές συσκευές. Είναι νόμιμο να χτίσει η εφαρμογή για δική σας χρήση, αλλά δεν πρέπει να δώσετε αντίγραφο σε άλλους! See [FAQ page](../Getting-Started/FAQ.md) for dertails.**
+**AndroidAPS δεν είναι διαθέσιμο για κατέβασμα λόγω κανονισμού για τις ιατρικές συσκευές. Είναι νόμιμο να χτίσει η εφαρμογή για δική σας χρήση, αλλά δεν πρέπει να δώσετε αντίγραφο σε άλλους! Δείτε το [σελίδα FAQ](../Getting-Started/FAQ.md) για λεπτομέρειες.**
 
 ## Σημαντικές σημειώσεις
 
@@ -16,11 +16,12 @@
 
 Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
 
-If you already updated AAPS in previous versions and use a Windows PC you can update in three simple steps:
+If you already updated AAPS in previous versions and use a Windows PC you can update in four simple steps:
 
-1. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
-2. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
-3. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the patched Dexcom app from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+1. [Export your settings](../Usage/ExportImportSettings#how-to-export-settings) from the existing AAPS version on your phone to be on the save side
+2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
+3. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Select 'app' instead of 'wear' on your way!)
+4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the patched Dexcom app from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Εγκαταστήστε το git (αν δεν το έχετε)
 
@@ -40,7 +41,6 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
 <!--- Text is maintained in page building-apk.md ---> Στο μενού επιλέξτε "Δημιουργία" και, στη συνέχεια, "Δημιουργία υπογεγραμμένης δέσμης / APK...". (Το μενού στο Android Studio άλλαξε από τον Σεπτέμβριο του 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
-  
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. Αυτό είναι απαραίτητο επειδή το Android έχει έναν κανόνα ότι δέχεται μόνο υπογεγραμμένο κώδικα για εκτέλεση για λόγους ασφαλείας. Για περισσότερες πληροφορίες σχετικά με αυτό το θέμα, ακολουθήστε τον σύνδεσμο [ εδώ ](https://developer.android.com/studio/publish/app-signing.html#generate-key) Η ασφάλεια είναι ένα βαθύ και πολύπλοκο θέμα και δεν το χρειάζεστε τώρα.
 
 ![Στιγμιότυπο οθόνης 39α](../images/Installation_Screenshot_39a.PNG)
@@ -82,6 +82,8 @@ Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Ja
 
 ## Μεταφορά APK σε smartphone
 
+**[Export your settings](../Usage/ExportImportSettings#how-to-export-settings) from the existing AAPS version on your phone to be on the save side.**
+
 <!--- Text is maintained in page building-apk.md ---> Ανοίγει ένα παράθυρο διαχειριστή αρχείων. Μπορεί να φαίνεται λίγο διαφορετικό στο σύστημά σας καθώς χρησιμοποιώ το Linux. Στα Windows θα υπάρχει η Εξερεύνηση αρχείων και στο Mac OS X ο εξερευνητής. Εκεί θα πρέπει να δείτε τον κατάλογο με το αρχείο APK που δημιουργήθηκε. Δυστυχώς, αυτό είναι λάθος, καθώς το "wear-release.apk" δεν είναι η υπογεγραμμένη εφαρμογή APK που ψάχνουμε.
 
 ![Στιγμιότυπο οθόνης 47](../images/Installation_Screenshot_47.png)
@@ -109,9 +111,9 @@ In this example Gmail is used as it is fairly simple. To install the self-signed
 
 ## Check AAPS version on phone
 
-Μπορείτε να ελέγξετε την έκδοση AAPS στο τηλέφωνό σας κάνοντας κλικ στο μενού των τριών κουμπιών επάνω δεξιά και στη συνέχεια σχετικά με.
+You can check the AAPS version on your phone by clicking the three dots menu on the top right and then about.
 
-![Η έκδοση AAPS έχει εγκατασταθεί](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck.png)
 
 ## Αντιμετώπιση προβλημάτων
 

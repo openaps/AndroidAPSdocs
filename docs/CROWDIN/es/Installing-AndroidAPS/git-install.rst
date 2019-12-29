@@ -1,52 +1,52 @@
-Install git
+Instala Git
 **************************************************
 Windows
 ==================================================
-1. Download git
+1. Descargar git
 --------------------------------------------------
-* **You have to be online all of the time as Android Studio downloads several updates!**
-* Any git version should work. For example `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
-* Make sure to note down the installation path. You will need it in the next step.
+* ** Usted tiene que estar en línea todo el tiempo ya que Android Studio descarga varias actualizaciones! **
+* Cualquier versión de git sirve. Por ejemplo, `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
+* Asegúrese de tomar nota de la ruta de acceso de instalación. Lo necesitará en el siguiente paso.
 
-.. image:: ../images/Update_GitPath.png
-  :alt: Git installation path
+.. imagen:: ../images/Update_GitPath.png
+  :alt: Ruta de acceso de instalación de Git
 
-2. Set git path in Android Studio
+2. Establecer ruta de acceso de git en Android Studio
 --------------------------------------------------
-* Let Studio know where is git.exe located: File - Settings 
+* Deja que Studio sepa dónde se encuentra git.exe: Archivo - Ajustes 
 
-  .. image:: ../images/Update_GitSettings1.png
-    :alt: Android Studio - open settings
+  .. imagen:: ../images/Update_GitSettings1.png
+    :alt: Android Studio - abrir la configuración
 
-* In the next window: Version Control - Git
+* En la ventana siguiente: Versión Control - Git
 
-* Choose correct path: ... **/Git/bin** (including /bin)
+* Elegir la ruta correcta: ... **/Git/bin** (incluyendo /bin)
 
-* Make sure update method "Merge" is selected.
+* Asegúrese de que el método de actualización "Combinar" (Merge) está seleccionado.
 
-  .. image:: ../images/Update_GitSettings2a.png
-    :alt: Android Studio - GIT path
+  .. imagen:: ../images/Update_GitSettings2a.png
+    :alt: Android Studio - Ruta de GIT
    
-3. Reboot
+3. Reinicio
 --------------------------------------------------
-* Reboot your PC to update System Environment.
+* Rearranque el PC para actualizar el entorno del sistema.
 
-4. Check git settings in Android Studio
+4. Comprobar configuración de git en Android Studio
 --------------------------------------------------
-* Open Terminal window in Android Studio
-* Enter "git --version" (without quotation marks!) and press Return
+* Abrir ventana de terminal en Android Studio
+* Introduzca "git --version" (sin las comillas!) y presione la tecla de Retorno
 
-  .. image:: ../images/AndroidStudio_gitversion1.png
+  .. imagen:: ../images/AndroidStudio_gitversión1.png
     :alt: git --version
 
-* If git is installed and connected properly you will receive an information about the installed version that looks as follows:
+* Si git está instalado y conectado correctamente, recibirá una información sobre la versión instalada que se muestra de la siguiente manera:
 
-  .. image:: ../images/AndroidStudio_gitversion2.png
-    :alt: result git-version
+  .. imagen:: ../images/AndroidStudio_gitversión2.png
+    :alt: resultado git-version
 
 Mac
 ==================================================
-* Any git version should work. For example `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the `official git documentation <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* Cualquier versión de git sirve. Por ejemplo, `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
+* Utilice el homebrew para instalar git: ```$ brew install git```.
+* Para obtener detalles sobre la instalación de git, consulte la `documentación oficial del git <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
+* Si instala git a través de un homebrew, no es necesario cambiar ninguna preferencia. Solo por caso: se puedan encontrar aquí: Android Studio - Preferencias.

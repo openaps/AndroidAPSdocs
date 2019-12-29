@@ -88,7 +88,8 @@ AndroidAPS gebruik
    Tijdelijk streefdoel <./Usage/temptarget.md>   
    Vertraagde koolhydraten (eCarbs) <./Usage/Extended-Carbs.rst>
    Automatisering <./Usage/Automation.rst>
-  
+   Automatisering met andere apps <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
  
 Algemene Tips 
 --------------------------------------------------
@@ -110,16 +111,6 @@ AndroidAPS voor kinderen
    
    Monitoren op afstand <./Children/Children.rst>
    SMS Comando's <./Usage/SMS-Commands.rst>
-   
-
-Geavanceerd 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android auto <./Usage/Android-auto.md>
-   Automatisering met andere apps <./Usage/automationwithapp.md>
    
 
 Problemen oplossen

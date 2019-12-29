@@ -22,5 +22,6 @@ If using xdrip
 
 If using Glimp
 ==================================================
+* You will need Glimp version 4.15.57 or newer. Older versions are not supported.
 * If not already set up then download Glimp and follow instructions on `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_.
 * Select Glimp in ConfigBuilder (setting in AndroidAPS).
