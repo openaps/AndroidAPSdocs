@@ -53,9 +53,9 @@ Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. E
 
 ## Einstellungen in AndroidAPS
 
-Du darfst **‘Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout’ NICHT aktivieren **, wenn Du die Insight nutzt. Gehe in AAPS zu Einstellungen > Nightscout-Client > Erweiterte Einstellungen und stelle sicher, dass ‘Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout‘ deaktiviert ist. Es würde zu falschen Einstellungen der temporären Basalrate in der Insight-Pumpe führen.
+Du darfst **‘Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout’ NICHT aktivieren **, wenn Du die Insight nutzt. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. Es würde zu falschen Einstellungen der temporären Basalrate in der Insight-Pumpe führen.
 
-Um das Problem zu umgehen, kann derzeit **Zu Nightscout nur hochladen (keine Synchronisation)** genutzt werden, wenn du autotune verwenden musst.
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
