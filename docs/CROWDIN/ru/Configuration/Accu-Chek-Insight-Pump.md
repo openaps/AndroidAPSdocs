@@ -57,9 +57,9 @@
 
 Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
-![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+![Снимок экрана настроек Insight](../images/Insight_pairing_V2_5.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+В настройках Insight в AndroidAPS следует активировать следующие параметры:
 
 * "Отслеживать замены картриджа": При выполнении команды "заполнение инфузионного набора" на помпе, это действие автоматически внесется в журнал как замена картриджа.
 * "Отслеживать смену инфузионного набора": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AndroidAP добавляется соответствующая заметка.
