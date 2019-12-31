@@ -18,7 +18,7 @@
 
 Убедитесь, что и телефон, и Wear-версия AAPS подписаны одними ключами!
 
-Wear variant of APK need to be installed on watch in the same way you will install phone APK on phone. It may require enabling *developer mode* on watch and uploading and installing APK on watch with: `adb install wear-full-release.apk`
+На часах должно быть установлено приложение Wear аналогично установке приложений на телефоне. Для этого на часах требуется включить * режим разработчика * и загрузить на них APK с: ` adb install web-full-release.apk `
 
 When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync.
 
