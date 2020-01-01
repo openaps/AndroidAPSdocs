@@ -122,7 +122,11 @@ Here we see the status of the insulin pump - in this case an Accu-Chek Combo. Th
 
 ![Care Portal](../images/Screenshot_care_portal.png)
 
-This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus. 
+The AAPS Careportal is only for entries in the database and not for actual treatments. It corresponds to the functions that you find on Nightscout under the "+" symbol. These allow you to add additional notes to your records. Functions like changing catheters and reservoirs should be self-explanatory. 
+
+ATTENTION: No commands can be sent to your pump from the AAPS-Care Portal! So if you add a bolus via the Care Portal, only a corresponding note will be entered in Nightscout. The pump itself will NOT deliver a bolus. The distinction between snack, meal, and correction boluses is rather arbitrary, and the input dialogue is always the same. Possible uses: snack = snack between meals, meal = meal, correction = hypo-carbohydrates.
+Use of these buttons: only for documentation of insulin or carbs. Only some buttons, e.g. the profile switch button, have a functionality.
+Bolus and Carb Buttons make sense, for example, if you notice that you have misjudged the carbs. Using the Treatments tab, you can then declare the previous data invalid (delete it) and re-enter it via the Careportal. Or if you have used a pen to give insulin that AAPS does not know about.
 
 ## Loop, MA, AMA, SMB
 You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
