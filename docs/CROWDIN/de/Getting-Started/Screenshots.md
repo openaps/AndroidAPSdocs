@@ -131,7 +131,10 @@ Hier sehen wir den Status des Insulin-Pumpe - in diesem Fall eine Accu-Chek Comb
 
 ![Care Portal (Behandlungen)](../images/Screenshot_care_portal.png)
 
-Dies entspricht den Funktionen, die du bei Nightscout unter dem "+" Symbol findest. Diese erlauben dir, zusätzliche Notizen in deine Aufzeichnungen zu übernehmen. Funktionen wie Katheter- und Reservoirwechsel sollten selbsterklärend sein. ACHTUNG! Vom Care Portal können keine Kommandos an Deine Pumpe gesandt werden! Wenn du also über das Care Portal einen Bolus hinzufügst, so wird nur eine entsprechende Notiz in Nightscout eingetragen. Die Pumpe selbst wird keinen Bolus abgeben.
+Das AAPS-Careportal ist nur für Einträge in die Datenbank und nicht für tatsächliche Behandlungen gedacht. Es entspricht den Funktionen, die du bei Nightscout unter dem "+" Symbol findest. Diese erlauben dir, zusätzliche Notizen in deine Aufzeichnungen (=Nightscout-Datenbank) zu übernehmen. Funktionen wie Katheter- und Reservoirwechsel sollten selbsterklärend sein. 
+ACHTUNG! Vom AAPS-Care Portal können keine Kommandos an Deine Pumpe gesandt werden! Wenn du also über das Care Portal einen Bolus hinzufügst, so wird nur eine entsprechende Notiz in Nightscout eingetragen. Die Pumpe selbst wird keinen Bolus abgeben. Die Unterscheidung zwischen Snack-, Mahlzeiten- und Korrekturbolus ist eher willkürlich, der Erfassungsdialog ist immer der gleiche und hat auch immer die gleiche Bedeutung. Mögliche Verwendung: Snack = Zwischenmahlzeit, Mahlzeit = Mahlzeit, Korrektur = Hypo-Kohlenhydrate.
+Einsatz dieser Buttons: Dokumentation von Insulin- oder KH-Gaben in der Nightscout-Datenbank. Lediglich einzelne Buttons, z. B. der Profil-Switch-Button haben eine Funktionalität.
+Sinn haben Bolus und Carb Buttons z.B. dann, wenn man merkt dass man sich bei den KH verschätzt hat. Über den Behandlungen-Tab kann man dann die vorherigen Daten für ungültig erklären (löschen) und über das Careportal neu eingeben. Oder wenn man mit einem Pen Insulin gegeben hat, von dem AAPS nichts weiß.
 
 ## Loop, MA, AMA, SMB
 
