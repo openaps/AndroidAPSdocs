@@ -59,11 +59,11 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 
 ## Code syntax
 
-At the moment there are two languages used for wiki pages:
-* Markdown (.md) - the markup language originally used for wiki pages
+At the moment there are two languages used for docs pages:
+* Markdown (.md) - the markup language originally used for docs pages
 * reStructuredText (.rst) - the new markup language
 
-We will change all wiki pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
 
 ### Image size
 If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
