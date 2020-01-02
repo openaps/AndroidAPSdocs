@@ -22,13 +22,13 @@ Da AAPS keine offizielle Android Auto App ist, müssen die Benachrichtigungen ei
 * Wähle Einstellungen
 * Scrolle bis ganz nach unten und tippe die Versions-Nummer 10x an bis die Meldung "Entwicklermodus aktiviert" angezeigt wird.
 
-![Enable developer mode](../images/AndroidAuto_02.png)
+![Entwicklermodus aktivieren](../images/AndroidAuto_02.png)
 
 * 3-Punkt-Menü in der rechten oberen Ecke öffnen
 * Wähle "Entwicklereinstellungen"
 * Scrolle bis ganz nach unten und aktiviere "Unbekannte Quellen".
 
-![Enable unknown sources](../images/AndroidAuto_03.png)
+![Unbekannte Quellen aktivieren](../images/AndroidAuto_03.png)
 
 * Jetzt kannst Du den Entwicklermodus wieder verlassen. Rufe dazu über die drei Punkte oben rechts das Menü auf.
 

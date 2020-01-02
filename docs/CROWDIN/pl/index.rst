@@ -88,7 +88,8 @@ Użytkowanie AndroidAPS
    Cele tymczasowe TT <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automatyzacja <./Usage/Automation.rst>
-  
+   Automatyzacja z aplikacjami innych firm <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
  
 Porady ogólne 
 --------------------------------------------------
@@ -110,16 +111,6 @@ AndroidAPS dla dzieci
    
    Zdalne monitorowanie <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-   
-
-Zaawansowane 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android auto <./Usage/Android-auto.md>
-   Automatyzacja z aplikacjami innych firm <./Usage/automationwithapp.md>
    
 
 Rozwiązywanie problemów

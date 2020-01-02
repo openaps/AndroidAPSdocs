@@ -88,7 +88,8 @@ Uso AndroidAPS
    Alvos-Temporários <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
-  
+   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
  
 Dicas Gerais 
 --------------------------------------------------
@@ -110,16 +111,6 @@ AndroidAPS para crianças
    
    Remote monitoring <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-   
-
-Avançado 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android auto <./Usage/Android-auto.md>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
    
 
 Resolução de Problemas

@@ -88,7 +88,8 @@ Utilización de AndroidAPS
    Objetivos-temporales <./Usage/temptarget.md>   
    Carbohidratos extendidos <./Usage/Extended-Carbs.rst>
    Automatización <./Usage/Automation.rst>
-  
+   Automatización con aplicaciones de terceros <./Usage/automationwithapp.md>
+   Android automático <./Usage/Android-auto.md>  
  
 Consejos Generales 
 --------------------------------------------------
@@ -110,16 +111,6 @@ AndroidAPS para niños
    
    Supervisión remota <./Children/Children.rst>
    Comandos SMS <./Children/SMS-Commands.rst>
-   
-
-Avanzado 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android automático <./Usage/Android-auto.md>
-   Automatización con aplicaciones de terceros <./Usage/automationwithapp.md>
    
 
 Solución de problemas
