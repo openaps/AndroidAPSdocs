@@ -1,5 +1,9 @@
 Wiki updates & changes
 **************************************************
+January 2020
+==================================================
+* `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries
+* `Image size <../make-a-PR.html#image-size>`_ when editing wiki
 December 2019
 ==================================================
 * `Android auto <../Usage/Android-auto.html>`_ - setup with screenshots
