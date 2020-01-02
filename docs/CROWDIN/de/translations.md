@@ -2,7 +2,7 @@
 
 * Gehe zu <https://translations.androidaps.org> oder <https://wikitranslations.androidaps.org> und melde Dich mit Deinem Github Konto an.
 
-* Sende Deinen Beitrittswunsch an das Wiki-Team. Klicke dazu auf die Fahne der gewünschten Sprache und dann auf der nächsten Seite rechts oben auf den Button "Join". Gib die gewünschte(n) Sprach(n) an, ein paar Infos zu Dir und Deiner AAPS Erfahrung und auch ob Du als Übersetzter oder Lektor (nur Personen mit Übersetzungs- und längerer AAPS-Erfahrung ) unterstützen möchtest.
+* Send a join request to the docs team. Klicke dazu auf die Fahne der gewünschten Sprache und dann auf der nächsten Seite rechts oben auf den Button "Join". Gib die gewünschte(n) Sprach(n) an, ein paar Infos zu Dir und Deiner AAPS Erfahrung und auch ob Du als Übersetzter oder Lektor (nur Personen mit Übersetzungs- und längerer AAPS-Erfahrung ) unterstützen möchtest.
 
 * Wenn wir dich freigeschalten haben, klicke auf die entsprechende Landesflagge.![Sprachenübersicht Crowdin](./images/translation_flags2019.png)
 
@@ -26,11 +26,11 @@
 
 Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version von AndroidAPS hinzugefügt. Am Anfang wäre es gut, auch die vorhandenen Übersetzungen, die noch nicht genehmigt sind, durchzuschauen und zu korrigieren oder zu genehmigen, wenn sie korrekt sind.
 
-## Wiki-Seiten übersetzen
+## Translate docs pages
 
-* Klicke auf den Namen der Wiki-Seite, die Du übersetzen willst.
+* Click the name of the docs page you want to translate
     
-    ![Wiki-Seite klicken](./images/translation_WikiPage.png)
+    ![Click docs page](./images/translation_WikiPage.png)
 
 * Übersetze Satz für Satz:
     
@@ -42,9 +42,9 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
     
     4 Klicke auf 'save'.
     
-    ![Übersetzen des Wiki](./images/translation_WikiTranslate.png)
+    ![Translation docs](./images/translation_WikiTranslate.png)
 
-* Eine übersetzte Seite wird nicht im Wiki veröffentlicht, bevor die Übersetzung korrekturgelesen wurde.
+* A translated page will not be published in docs before the translation is proofread.
 
 ### Links zu Überschriften übersetzen
 
@@ -55,14 +55,14 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
     Hier einige Beispiele:
     
     * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
-    * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
+    * Docs Updates & Änderungen \---> #docs-updates-anderungen
     * AAPS-.apk Datei \---> #aaps-apk-datei
 
 * Prüfe den Link, ob er wie beabsichtigt funktioniert. Wenn es ein Link zu einer neu übersetzten Überschrift ist, musst Du abwarten, bis diese im Wiki erscheint, um dies zu testen. Vergiss nicht, Dir ggf. eine Erinnerung in Deinem Kalender oder Deiner ToDo App einzutragen.
 
 #### Link-Übersetzung in Markdown-Dateien (.md)
 
-Momentan werden im Wiki zwei [Markup Sprachen](./make-a-PR#code-syntax) verwendet. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.
+At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.
 
 Wenn bei Dir Links so in Crowdin angezeigt werden:
 
@@ -80,10 +80,10 @@ Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./tra
 
 * Lektoren müssen zum Proofreading-Modus wechseln
     
-    ![Proofreading mode wiki](./images/translation_WikiProofreading.png)
+    ![Proofreading mode docs](./images/translation_WikiProofreading.png)
     
     und übersetzte Texte freigeben.
     
     ![Übersetzung freigeben](./images/translations-proofreading.png)
 
-* Wenn ein Lektor eine Übersetzung freigibt, wird sie in das nächste 'Wiki Build' aufgenommen. Um den Prozess zu beschleunigen, kannst Du das Wiki-Team über neue Übersetzungen informieren.
+* When a proofreader approves a translation it will be added to the next docs build. To speed process you can inform docs team about new translations.
