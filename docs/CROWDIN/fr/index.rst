@@ -23,7 +23,7 @@ Pour commencer
    Sécurité avant tout <./Getting-Started/Safety-first.rst>
    Qu'est-ce qu'un système en boucle fermée <./Getting-Started/ClosedLoop.rst>
    Qu'est-ce qu'une boucle fermée avec AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki mises à jour et modifications <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
 Ce dont j'ai besoin 
@@ -148,7 +148,7 @@ Où chercher de l'aide
 
    Ressources utiles à lire avant de commencer <./Where-To-Go-For-Help/Background-reading.md>
    Où chercher de l'aide <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki mises à jour et modifications <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 Pour les professionnels de santé
 --------------------------------------------------
@@ -166,8 +166,8 @@ Comment aider
    :glob:
 
    Comment aider <./Getting-Started/How-can-I-help.md>
-   Comment traduire l'application et la documentation wiki <./translations.md>
-   Comment éditer le wiki <./make-a-PR>
+   How to translate the app and docs <./translations.md>
+   How to edit the docs <./make-a-PR>
 
 
 .. note:: 
