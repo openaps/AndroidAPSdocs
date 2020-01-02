@@ -69,7 +69,7 @@ Cette section est aussi configurable en utilisant les options de la section D.
 
 ### Section G
 
-Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calculatrice pour effectuer cette opération), de renseigner des glucides et d'ajouter une glycémie capillaire de calibration MGC. Un bouton d'assistant rapide s'affiche également ici s'il est configuré dans le [Générateur de configuration](../Configuration/Config-Builder#quickwizard-settings).
+Permet d'administrer un bolus (normalement, vous devriez utiliser le bouton Calculatrice pour effectuer cette opération), de renseigner des glucides et d'ajouter une glycémie capillaire de calibration MGC. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
 
 ## Calculatrice
 
@@ -105,7 +105,7 @@ Si vous faites un bolus aditionnel rapidement après un bolus de repas (par exem
 
 ![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Profil d'Insuline
 
@@ -125,13 +125,13 @@ Et plus encore : [Courbes d’insuline exponentielle + Fiasp](http://seemycgm.co
 
 ![Statut de la pompe](../images/Screenshot_pump_Combo.png)
 
-Nous voyons ici l'état de la pompe à insuline - dans ce cas, un Accu-Chek Combo. Les informations affichées sont explicites. Un appui long sur le bouton HISTORIQUE lira les données de votre historique de pompe, y compris votre profil basal. Mais n'oubliez pas qu'un seul profil de basal est supporté sur la pompe Combo.
+Nous voyons ici l'état de la pompe à insuline - dans ce cas, un Accu-Chek Combo. The information displayed is self-explanatory. Un appui long sur le bouton HISTORIQUE lira les données de votre historique de pompe, y compris votre profil basal. Mais n'oubliez pas qu'un seul profil de basal est supporté sur la pompe Combo.
 
 ## Careportal
 
 ![Careportal](../images/Screenshot_care_portal.png)
 
-Ceci reproduit les fonctions que vous trouverez sur votre écran Nightscout sous le symbole "+" qui vous permet d'ajouter des notes à vos enregistrements. Les fonctions telles que l'enregistrement lorsque vous modifiez de site d'injection ou une cartouche d'insuline doivent être explicites.
+Ceci reproduit les fonctions que vous trouverez sur votre écran Nightscout sous le symbole "+" qui vous permet d'ajouter des notes à vos enregistrements. Functions such as recording when you change a pump site, or insulin cartridge should be self-explanatory.
 
 **BUT this section does not issue any commands to your pump!** So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
 
@@ -139,13 +139,17 @@ Ceci reproduit les fonctions que vous trouverez sur votre écran Nightscout sous
 
 Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
-1. Check and remember actual COB on homescreen.
-2. Delete carbs in treatment tab.
-3. Make sure carbs are deleted successfully by checking COB on homescreen again.
+1. Check and remember actual COB and IOB on homescreen.
+2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+3. Delete the entry with the faulty carb amount.
+4. Make sure carbs are deleted successfully by checking COB on homescreen again.
+5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
    
-   -> If carbs are not deleted as intended and you add additional carbs as explained here (4.), COB will be too high and that might lead to too high inuslin delivery.
+   -> If carbs are not deleted as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
-4. Enter correct carb amount through care portal and make sure to set the correct event time.
+6. Enter correct carb amount through care portal and make sure to set the correct event time.
+
+7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 
 ## Boucle, AR, AAR, SMB
 
@@ -155,7 +159,7 @@ You don't normally need to worry about these, they show the results of the OpenA
 
 ![Profil](../images/Screenshot_profile.png)
 
-AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
+AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
 
 **DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
 
@@ -165,7 +169,7 @@ AndroidAPS can run using a number of different profile configuratons. Typically 
 
 **Basal:** is the basal profile programmed into your pump.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
 ## Traitement, xDrip, NSClient
 
@@ -175,7 +179,7 @@ These are simply logs of treatments (boluses and carbs), xDrip messages and mess
 
 ![Générateur de configuration](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
 The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
