@@ -53,6 +53,6 @@ Warum erkennt der Algorithmus COB nicht richtig?
 - Deine I:C-Einstellung ("BE-Faktor") sollte angepasst werden.
 - Dein Wert für min_5m_carbimpact ist falsch (für SMB wird 8 empfohlen, 3 für AMA).
 
-Manual correction of carbs entered
+Manuelle Korrektur der eingegebenen Kohlenhydrate
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and care portal as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Wenn Du die Menge der Kohlenhydrate über- oder unterschätzt hast, kannst Du diese über den Behandlungs-Tab und das Careportal wie `hier beschrieben <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_korrigieren.
