@@ -20,70 +20,70 @@
 
 На часах должно быть установлено приложение Wear аналогично установке приложений на телефоне. Для этого на часах требуется включить * режим разработчика * и загрузить на них APK с: ` adb install web-full-release.apk `
 
-When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync.
+При использовании AAPS в версии Wear всегда обновляйте его вместе с версией AAPS на телефоне.
 
-### Setup on the Phone
+### Настройка на телефоне
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
+В конфигураторе AndroidAPS нужно [активировать Wear](../Configuration/Config-Builder#wear).
 
-## Controlling AAPS from Watch
+## Контроль AAPS с часов
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. Если вы хотите подавать болюс и т. д. с часов, тогда в настройках часов Wear следует включить «Управление с часов».
+AndroidAPS предусматривает возможность *управления* часами Android Wear. Если вы хотите подавать болюс и т. д. с часов, тогда в настройках часов Wear следует включить «Управление с часов».
 
-The following functions can be triggered from the watch:
+Следующие функции могут быть запущены с часов:
 
-* set a temporary target
-* administer a bolus
-* administer eCarbs
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* установить временные целевые значения СК
+* подать болюс
+* расписать eCarbs
+* использовать калькулятор болюса (переменные могут быть определены в [настройках](../Configuration/Config-Builder#wear) на телефоне)
+* проверить работу алгоритма цикла и помпы
+* показать TDD (Общая суточная доза = болюс + базал в день)
 
-## AAPS Watchfaces
+## Циферблаты AAPS
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Есть несколько циферблатов, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Убедитесь, что уведомления от AndroidAPS не заблокированы на часах. Подтверждение действия (например, болюс, временные цели) происходит через уведомления, которые нужно смахнуть в сторону и нажать на галочку.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Чтобы быстрее попасть в меню AAPS, сделайте двойное нажатие на ГК. При двойном нажатии на кривую ГК можно изменить масштаб времени..
 
-## Watchfaces available
+## Доступные циферблаты
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
-## AAPSv2 watchface - Legend
+## Циферблат AAPSv2 - Legend
 
 ![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - time since last loop run
+О - время с запуска последнего цикла
 
-B - CGM reading
+B - данные ГК мониторинга
 
-C - minutes since last CGM reading
+C - минуты с последнего получения данных ГК
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - изменение по сравнению с последним полученным значением ГК (в mmol или mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - среднее изменение данных ГК за последние 15 минут
 
-F - phone battery
+F - состояние аккумулятора телефона
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - скорость подачи базала (в ед/ч во время стандартной подачи и в % при временном базале TBR)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (взаимодействие с глюкозой крови) -> Степень, с которой ГК “должна” расти или падать, основываясь только на активности инсулина (без учета других факторов).
 
-I - carbs (carbs on board | e-carbs in the future)
+I - углеводы (активные углеводы | e-carb в будущем)
 
-J - insulin on board (from bolus | from basal)
+J - активный инсулин (от болюсов | от базала)
 
-## Accessing main menu of AAPS
+## Доступ к главному меню AAPS
 
-To access main menu of AAPS you can use on of following options:
+Для доступа к главному меню AAPS можно использовать следующие опции:
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* дважды нажмите на значение ГК
+* выбрать значок AAPS в меню приложения часов
+* нажмите AAPS (если сконфигурировано в меню)
 
-## Settings (in wear watch)
+## Параметры (в часах Wear)
 
 To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
@@ -237,7 +237,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## View Nightscout data
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Есть несколько циферблатов, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
 
 # Pebble
 
