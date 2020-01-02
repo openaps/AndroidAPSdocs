@@ -69,7 +69,7 @@
 
 ### Секция G
 
-Позволяет подавать болюс (обычно это делается кнопкой Калькулятора болюса) и добавлять калибровку после замера глюкометром. Здесь также будет видна кнопка Quick Wizard, если она настроена в [ Конфигураторе](../Configuration/Config-Builder#quickwizard-settings).
+Позволяет подавать болюс (обычно это делается кнопкой Калькулятора болюса) и добавлять калибровку после замера глюкометром. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
 
 ## Калькулятор
 
@@ -105,7 +105,7 @@ SUPER BOLUS - это когда базальный инсулин следующ
 
 ![Медленное усваивание углеводов](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Если вы видите вышеприведенное предупреждение после использования болюс-мастера, это означает, что AndroidAPS обнаружил, что рассчетное значение активных углеводов COB может быть неправильным. Так что если вы хотите повторно подать болюс после предыдущей еды с учетом COB, учитывайте возможность передозировки! Подробнее см. подсказки на [странице расчета активных углеводов СOB](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Если вы видите вышеприведенное предупреждение после использования болюс-мастера, это означает, что AndroidAPS обнаружил, что рассчетное значение активных углеводов COB может быть неправильным. So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! Подробнее см. подсказки на [странице расчета активных углеводов СOB](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Профиль Инсулина
 
@@ -125,13 +125,13 @@ SUPER BOLUS - это когда базальный инсулин следующ
 
 ![Статус помпы](../images/Screenshot_pump_Combo.png)
 
-Здесь мы видим статус инсулиновой помпы - в нашем случае Акку-Чек Комбо. Отображаемая информация вполне понятна. Длительное нажатие на кнопку HISTORY/ИСТОРИЯ считывает данные из логов помпы, в том числе и ваш базальный профиль. Но помните, на помпе Combo поддерживается только один базальный профиль.
+Здесь мы видим статус инсулиновой помпы - в нашем случае Акку-Чек Комбо. The information displayed is self-explanatory. Длительное нажатие на кнопку HISTORY/ИСТОРИЯ считывает данные из логов помпы, в том числе и ваш базальный профиль. Но помните, на помпе Combo поддерживается только один базальный профиль.
 
 ## Портал лечения/назначений
 
 ![Портал лечения/назначений](../images/Screenshot_care_portal.png)
 
-Здесь повторяются функции, которые вы найдете на экране Nightscout под символом "+", который позволяет добавлять заметки к лечению/назначениям. Такие функции, как регистрация изменения места установки катетера или замена картриджа инсулина понятны без пояснений.
+Здесь повторяются функции, которые вы найдете на экране Nightscout под символом "+", который позволяет добавлять заметки к лечению/назначениям. Functions such as recording when you change a pump site, or insulin cartridge should be self-explanatory.
 
 **BUT this section does not issue any commands to your pump!** So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
 
@@ -139,13 +139,17 @@ SUPER BOLUS - это когда базальный инсулин следующ
 
 Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
-1. Check and remember actual COB on homescreen.
-2. Delete carbs in treatment tab.
-3. Make sure carbs are deleted successfully by checking COB on homescreen again.
+1. Check and remember actual COB and IOB on homescreen.
+2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+3. Delete the entry with the faulty carb amount.
+4. Make sure carbs are deleted successfully by checking COB on homescreen again.
+5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
    
-   -> If carbs are not deleted as intended and you add additional carbs as explained here (4.), COB will be too high and that might lead to too high inuslin delivery.
+   -> If carbs are not deleted as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
-4. Enter correct carb amount through care portal and make sure to set the correct event time.
+6. Enter correct carb amount through care portal and make sure to set the correct event time.
+
+7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 
 ## Состояние цикла/Loop, МА, АМА, SMB
 
@@ -155,7 +159,7 @@ You don't normally need to worry about these, they show the results of the OpenA
 
 ![Профиль](../images/Screenshot_profile.png)
 
-AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
+AndroidAPS can run using a number of different profile configurations. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nightscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
 
 **DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
 
@@ -165,7 +169,7 @@ AndroidAPS can run using a number of different profile configuratons. Typically 
 
 **Basal:** is the basal profile programmed into your pump.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for different times of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
 ## Лечение/назначения, xDrip, NSClient
 
@@ -175,7 +179,7 @@ These are simply logs of treatments (boluses and carbs), xDrip messages and mess
 
 ![Конфигуратор](../images/Screenshot_config_builder.png)
 
-This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
 The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
