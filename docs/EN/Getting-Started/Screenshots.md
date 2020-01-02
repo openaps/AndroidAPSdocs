@@ -122,7 +122,20 @@ Here we see the status of the insulin pump - in this case an Accu-Chek Combo. Th
 
 ![Care Portal](../images/Screenshot_care_portal.png)
 
-This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus. 
+This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. 
+
+**BUT this section does not issue any commands to your pump!** So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus. 
+
+
+### Carb correction
+
+Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+
+1. Check and remember actual COB on homescreen.
+2. Delete carbs in treatment tab.
+3. Make sure carbs are deleted successfully by checking COB on homescreen again.
+   -> If carbs are not deleted as intended and you add additional carbs as explained here (4.), COB will be to high and that might lead to too high inuslin delivery.
+4. Enter correct carb amount through care portal and make sure to set the correct event time.
 
 ## Loop, MA, AMA, SMB
 You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
