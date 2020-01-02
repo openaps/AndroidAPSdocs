@@ -131,40 +131,51 @@ Aquí vemos el estado de la bomba de insulina - en este caso un Combo Accu-Chek.
 
 ![Portal de Atención (Care Portal)](../images/Screenshot_care_portal.png)
 
-Este replica las funciones que encontrará en su Nightscout pantalla bajo el símbolo "+" que te permite añadir notas a sus registros. Las funciones tales como la grabación al cambiar un sitio de la bomba o el cartucho de insulina deben ser autoexplicativas. Pero esta sección no emite ningún comando a la bomba. Así que si añade un bolo usando esta pantalla simplemente hace una nota de esto en su registro de Nightscout, la bomba no será mandada para entregar un bolo.
+Este replica las funciones que encontrará en su Nightscout pantalla bajo el símbolo "+" que te permite añadir notas a sus registros. Las funciones tales como la grabación al cambiar un sitio de la bomba o el cartucho de insulina deben ser autoexplicativas.
+
+**BUT this section does not issue any commands to your pump!** So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
+
+### Carb correction
+
+Care portal can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+
+1. Check and remember actual COB on homescreen.
+2. Delete carbs in treatment tab.
+3. Make sure carbs are deleted successfully by checking COB on homescreen again. -> If carbs are not deleted as intended and you add additional carbs as explained here (4.), COB will be too high and that might lead to too high inuslin delivery.
+4. Enter correct carb amount through care portal and make sure to set the correct event time.
 
 ## Loop, MA, AMA, SMB
 
-Normalmente no tienes que preocuparte de esto, muestran los resultados del algoritmo OpenAPS que se ejecuta cada vez que el sistema recibe una nueva lectura de la CGM. Estos temas se debaten en otro lugar.
+You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
 
 ## Perfil
 
 ![Perfil](../images/Screenshot_profile.png)
 
-AndroidAPS se puede ejecutar utilizando un número de diferentes configuradores de perfil. Típicamente - como se muestra aquí - el perfil de Nightscout se ha descargado a través de Nighscout integrado y se visualiza aquí en forma de sólo lectura. Si desea realizar algún cambio, lo haría desde la interfaz el de Nightscout y, a continuación, realice un [Perfil Switch](../Usage/Profiles.md) en AndroidAPS para activar los cambios. Los datos, como el perfil basal, se copiarían entonces automáticamente en la bomba.
+AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a [Profile Switch](../Usage/Profiles.md) in AndroidAPS to activate the changes. Data such as the basal profile would then be automatically copied over to your pump.
 
-**DIA:** representa la Duración de la acción de insulina y se describe más arriba en la sección sobre perfiles de insulina.
+**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
 
-**IC:** es la proporción de Insulina a Carbohidratos. Este perfil tiene un número de valores diferentes establecidos para diferentes horas del día.
+**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
 
-**ISF:** es el factor de sensibilidad de la insulina - la cantidad de glucosa que una unidad de insulina reducirá, asumiendo que nada más cambia.
+**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
 
-**Basal:** es el perfil basal programado en la bomba.
+**Basal:** is the basal profile programmed into your pump.
 
-**Destino:** es el nivel de glucosa en sangre objetivo que desea para todo el tiempo. Si lo desea, puede establecer diferentes niveles para las diferentes horas del día, e incluso puede establecer un rango superior e inferior para que la plataforma empiece a hacer cambios cuando el valor de glucosa en sangre previsto cae fuera, pero si hace eso, la plataforma responderá más lentamente y es poco probable que consiga esa glucosa estables.
+**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
 
 ## Tratamiento, xDrip, NSClient
 
-Estos son registros de tratamientos (bolos y carbohidratos), mensajes de xDrip y mensajes enviados a Nightscout a través de Nightscout. Normalmente no tienes que preocuparte por nada de esto a menos que haya un problema.
+These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 
 ## Configuraciones
 
 ![Configuraciones](../images/Screenshot_config_builder.png)
 
-Aquí es donde se ajustará la configuración de su plataforma AndroidAPS. Esta captura de pantalla muestra una plataforma bastante típica usando una bomba Combo, un sensor Dexcom G5 CGM que se gestiona a través de xDrip + y que se ejecuta con la insulina NovoRapid en un perfil de Oref y conectado a un servidor basado en la nube de Nightscout.
+This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
-El cuadro de selección de la derecha determina si ese módulo en particular se visualizará en la barra de menús superior (consulte la sección A en la pantalla de inicio) y el símbolo de engranaje pequeño permite el acceso a la configuración de dicho módulo, si hay alguno.
+The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
 
 ## Ajustes y preferencias
 
-En la parte superior derecha de la barra de navegación encontrarás tres pequeños puntos verticales. Al pulsar en estos se va a las preferencias de la aplicación, al navegador de historial, al asistente de configuración, a la información de la aplicación y al botón de salida que cerrará AAPS.
+At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences, history browser, setup wizard, about the app information and the exit button that will close AAPS.
