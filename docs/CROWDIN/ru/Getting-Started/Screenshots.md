@@ -141,7 +141,10 @@ Care portal can be used to correct faulty carb entries (i.e. you over- or undere
 
 1. Check and remember actual COB on homescreen.
 2. Delete carbs in treatment tab.
-3. Make sure carbs are deleted successfully by checking COB on homescreen again. -> If carbs are not deleted as intended and you add additional carbs as explained here (4.), COB will be too high and that might lead to too high inuslin delivery.
+3. Make sure carbs are deleted successfully by checking COB on homescreen again.
+   
+   -> If carbs are not deleted as intended and you add additional carbs as explained here (4.), COB will be too high and that might lead to too high inuslin delivery.
+
 4. Enter correct carb amount through care portal and make sure to set the correct event time.
 
 ## Состояние цикла/Loop, МА, АМА, SMB
