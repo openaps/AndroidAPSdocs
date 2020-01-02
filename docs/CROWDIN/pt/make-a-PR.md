@@ -59,12 +59,16 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 
 ## Code syntax
 
-At the moment there are two languages used for wiki pages:
+At the moment there are two languages used for docs pages:
 
-* Markdown (.md) - the markup language originally used for wiki pages
+* Markdown (.md) - the markup language originally used for docs pages
 * reStructuredText (.rst) - the new markup language
 
-We will change all wiki pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+
+### Image size
+
+If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
 
 ### .md files
 
@@ -148,8 +152,8 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png".
-
+* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
+* Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
 * You can upload images in batches easily by:
   
   1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
