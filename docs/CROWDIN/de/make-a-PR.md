@@ -59,14 +59,18 @@ PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen Git
 
 ## Code-Syntax
 
-Momentan werden im Wiki zwei Code-Sprachen eingesetzt:
+At the moment there are two languages used for docs pages:
 
-* Markdown (.md) - die ursprünglich für Wiki-Seiten verwendete Markup-Sprache
+* Markdown (.md) - the markup language originally used for docs pages
 * reStructuredText (.rst) - die neue Markup-Sprache
 
-Wir werden schrittweise alle Wiki-Seiten auf reStructuredText umstellen. In der Zwischenzeit ist es wichtig, dass Du beim Formatieren von Text oder dem Setzen von Links den richtigen Syntax verwendest. Wenn Du Dir nicht sicher bist, schaue einfach bei existierenden Seiten wie dort formatiert bzw. die Links gesetzt wurden.
+We will change all docs pages from Markdown to reStructuredText bit by bit. In der Zwischenzeit ist es wichtig, dass Du beim Formatieren von Text oder dem Setzen von Links den richtigen Syntax verwendest. Wenn Du Dir nicht sicher bist, schaue einfach bei existierenden Seiten wie dort formatiert bzw. die Links gesetzt wurden.
 
-### .md Dateien
+### Image size
+
+If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+
+### .md files
 
 #### Textformatierung
 
@@ -87,7 +91,7 @@ Wir werden schrittweise alle Wiki-Seiten auf reStructuredText umstellen. In der 
 * Interner Link zu .rst Seiten: `[Linktext] (.../folder/file.rst)`
 * Interne Links zu Überschriften: `[Linktext](.../folder/file#headline)`
 
-### .rst Dateien
+### .rst files
 
 #### Textformatierung
 
@@ -122,9 +126,9 @@ Wir werden schrittweise alle Wiki-Seiten auf reStructuredText umstellen. In der 
 * Interne Links zu .rst Seiten: `` `Linktext <../folder/file.html>_` ``
 * Interne Links zu Überschriften: `` `Linktext <../folder/file.html#headline>_` ``
 
-### Interne Links
+### Internal links
 
-Wenn du einen internen Link in die AndroidAPS Dokumentation einfügen willst, benutze bitte nur **relative Links**. Nur dann funktioniert der Link auch in anderen Sprachen (Tschechisch, Russisch...).
+If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
 
 #### Dateien mit der Endung **.md**:
 
@@ -146,28 +150,28 @@ Wenn du einen internen Link in die AndroidAPS Dokumentation einfügen willst, be
 
 ## Mehrere Bilder zum Wiki hinzufügen
 
-Wenn du vor hast viele Änderungen zu machen, die auch das Hinzufügen von Bildern beinhalten, um Teile der Dokumentation zu illustrieren (Danke!), könnte dir folgende Möglichkeit helfen:
+If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
-* Wenn du Screenshots speicherst, benenne diese mit einem beschreibenden Namen - aber vermeide Leerzeichen, da dies GitHubs Syntax verwirrt. Verwende stattdessen Unterstriche. Z.B. Example_batch_images_upload.png statt "Example batch images upload.png".
-
-* Mehrere Bilder kannst du auf diese Art leicht hochladen:
+* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
+* Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+* You can upload images in batches easily by:
   
-  1. Navigiere zu dem Bilder Verzeichnis (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images) - aber vergewissere dich, dass du dich in deinem Fork / deiner Kopie des Bilderverzeichnisses befindest (ersetze "openaps" in der URL mit deinem GitHub Benutzernamen).
+  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
   
-  2. Klicke in die rechte obere Ecke wo "Upload files" steht
+  2. Click in the upper right corner where it says "Upload files"
   
-  3. Ziehe deine Bilder auf den Bildschirm
+  3. Drag and drop your images into the screen
   
-  4. Führe einen "Commit" auf deinen Branch aus
+  4. Commit these to your branch
   
-  5. Nun kannst Du die URL / den relativen Pfad jedes Bildes ermitteln, um darauf zu referenzieren, wenn Du das Bild in der Dokumentation verwenden willst.
+  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
   
-  6. Beispiele, wie man Bilder hinzufügt, kannst du dir im "rohen" Code von Seiten anschauen, in denen schon erfolgreich Bilder eingefügt wurden. Stelle sicher, dass Du den [richtigen Code-Syntax](./make-a-PR#code-syntax) für den aktuellen Seitentyp (.md oder .rst) verwendest. Hauptsächlich geht es darum, dass Du dem Linktext einen relativen Pfad wie folgt beschrieben zuweist:
+  6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
     
-    * Für .md Seiten: `![Beispiel zum Upload mehrerer Bilder](../images/Example_batch_images_upload.png)` (Dieser Code entspricht genau dem, um das untenstehende Bild einzubetten.)
-    * Für .rst Seiten: `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Beispiel zum Upload mehrerer Bilder`
+    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
+    * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`  
+      `:alt: Example of uploading images in batches`
 
-![Beispiel, um mehrere Bilder gleichzeitig hochzuladen](./images/Example_batch_images_upload.png)
+![Example of uploading images in batches](./images/Example_batch_images_upload.png)
 
 7. Nachdem du Bilder hinzugefügt oder Veränderungen vorgenommen hast, kannst du einen PR auf das master branch von AndroidAPSdocs machen.
