@@ -23,7 +23,7 @@ Erste Schritte
    Sicherheitshinweise <./Getting-Started/Safety-first.rst>
    Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
    Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
    
    
 Was brauche ich 
@@ -148,7 +148,7 @@ Hilfe durch die Community
 
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
 
 Für Mediziner & Fachpersonal
 --------------------------------------------------
