@@ -53,7 +53,7 @@ AndroidAPS предусматривает возможность *управле
 
 ## Циферблат AAPSv2 - Legend
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Циферблат Легенда AndroidAPSv2](../images/Watchface_Legend.png)
 
 О - время с запуска последнего цикла
 
@@ -91,12 +91,12 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### Сопутствующие параметры AAPS
 
 * **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Используется при установке временной цели ТТ с часов.
 
-### Watchface settings
+### Параметры циферблатов
 
 * **Show Date** (default `Off`): note, date is not available on all watchfaces
 * **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
@@ -193,7 +193,7 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
 
 ### Complication related settings
 
-* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
+* **Действия при нажатии кнопки расширений** (default `Default`): Decides which dialog is opened when user taps complication: 
   * *Default*: action specific to complication type *(see list above)*
   * *Menu*: AAPS main menu
   * *Wizard*: bolus wizard - bolus calculator
@@ -228,17 +228,17 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
-## Troubleshooting the wear app:
+## Устранение неполадок в приложении Wear:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* На Android Wear 2.0 экран часов больше не устанавливается сам собой. Вам нужно зайти в playstore - циферблаты для часов (не путать с Play Market для телефона), и найти его в категории приложений установленных на вашем телефоне, откуда вы можете его активировать. Также включите автообновление. 
+* Иногда помогает повторная синхронизация приложений с часами, поскольку этот процесс иногда затягивается: Android Wear > значок шестеренки > наименование часов > повторная синхронизация часов.
+* Включите отладку ADB в настройках разработчика (на часах), подключите часы через USB к компьютеру и запустите приложение Wear в Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
 
-## View Nightscout data
+## Просмотр данных Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Есть несколько циферблатов, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
+Если вы используете другую систему цикла (не AAPS) и хотите *просмотреть* детали работы контура на часах Android Wear, или хотите посмотреть работу контура вашего ребенка, то можете построить/загрузить только модуль NSClient APK. Для этого перейдите по ссылке [инструкции по созданию APK ](../Installing-AndroidAPS/Building-APK.md) выбрав вариант сборки "NSClientRelease". Есть несколько циферблатов, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
 
-# Pebble
+# Смарт-часы Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. Вы можете выбрать данные для отображения, такие как активный инсулин IOB, активный врем. базал и прогнозы. Если вы работаете с открытым циклом, вы можете пользоваться алгоритмом [IFTTT](https://ifttt.com/) для создания апплета, который, получив уведомление от AndroidAPS, отправляет SMS или создает push-уведомление.
