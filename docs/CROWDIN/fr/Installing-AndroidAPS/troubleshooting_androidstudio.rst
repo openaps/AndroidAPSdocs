@@ -115,7 +115,7 @@ App not installed
 .. image:: ../images/Update_AppNotInstalled.png
   :alt: phone app note installed
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
+* Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * If "App not installed" is displayed on your phone follow these steps:
   
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
