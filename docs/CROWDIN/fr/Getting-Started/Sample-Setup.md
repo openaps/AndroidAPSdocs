@@ -135,7 +135,7 @@ Sur votre Samsung Galaxy S7 allez dans Menu > Paramètres > Maintenance de l'app
 
 Avec une montre Android Wear, vivre avec son diabète peut être encore plus discrèt. La montre peut être utilisée pour afficher le niveau de glycémie actuel, l'état de la boucle, etc. sur le poignet. La montre peut même être utilisée pour contrôler AndroidAPS (par ex. pour lancer discrètement un bolus de repas). Pour ce faire, appuyez deux fois sur la valeur MGC du cadran d'AAPSv2. Le SWR50 fonctionne généralement pour une journée complète jusqu'à ce que la batterie ait besoin d'être rechargée (même chargeur que le Samsung Galaxy S7 : microUSB).
 
-![Smartwatch](../images/SampleSetupSmartwatch.png)
+![Montres connectées](../images/SampleSetupSmartwatch.png)
 
 Pour plus d'informations sur les informations affichées sur le cadran, voir [ici](../Configuration/Watchfaces.md).
 
