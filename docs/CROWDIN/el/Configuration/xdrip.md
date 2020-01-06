@@ -155,7 +155,7 @@ To learn more about the details and reasons for these recommendations read the [
    * In the text box that opens type "enable engineering mode" 
    * click "Done"
    * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and check `OB1 collector`.
+* Go to the G5 debug settings and check if `OB1 collector` is set.
 * Use the voice command: “hard reset transmitter”
 * The voice command will be executed with the next data receipt of the transmitter
 * Look at the system status (Hamburger menu -> system status) and see what happens
