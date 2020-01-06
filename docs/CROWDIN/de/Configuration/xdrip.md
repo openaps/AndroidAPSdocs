@@ -155,7 +155,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G oder 8H beginnt, verwende e
    * Gib in das Textfeld, das geöffnet wird, "enable engineering mode" ein und klicken auf OK. 
    * Klicke auf "Done".
    * Falls Du die Google Speak engine nutzt, kannst Du auch das Sprachkommando "enable engineering mode" nutzen. 
-* Wechsle zu den G5 Debugeinstellungen und prüfe den `OB1 collector`.
+* Go to the G5 debug settings and check if `OB1 collector` is set.
 * Benutze den Sprachbefehl: “hard reset transmitter”
 * Beim nächsten Dateneingang vom Transmitter wird der Reset durchgeführt.
 * Beobachte im Systemstatus (Hamburgermenü links oben -> Systemstatus) was passiert.
