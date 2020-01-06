@@ -1,7 +1,7 @@
-COB calculation
+Calcul GA
 **************************************************
 
-How does AndroidAPS calculate the COB value?
+Comment AndroidAPS calcul-il la valeur de GA?
 ==================================================
 
 Oref0 / Oref1
