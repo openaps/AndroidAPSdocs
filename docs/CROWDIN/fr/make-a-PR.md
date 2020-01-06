@@ -6,9 +6,9 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 ## Généralités
 
-For any questions, feedback or new ideas you can contact the documentation team via email (wiki@androidaps.org). Doing a PR isn't difficult, but we can help you editing the documentation.
+Pour toute question, commentaires ou idées nouvelles, vous pouvez contacter l'équipe de documentation par e-mail (wiki@androidaps.org). Faire un PR n'est pas difficile, mais nous pouvons vous aider à éditer la documentation.
 
-At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub. It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. There is always a review process before changes are merged into the "formal" AndroidAPS documentation repository. You can't mess up the originals through any accidents in the PR process. The general process is:
+À un moment donné, on vous suggère de faire un PR. PR est l'acronyme de Pull Request, et c'est une façon d'ajouter ou de modifier des informations enregistrées dans GitHub. En fait, ce n'est pas si difficile à faire et c'est une excellente façon de contribuer. Cette documentation est ici parce que les gens comme vous ont fait des PRs. Ne craignez pas de vous tromper ou d’éditer les mauvais documents. Il y a toujours un processus de vérification avant que les modifications ne soient fusionnées dans le référentiel "formel" de la documentation AndroidAPS. Vous ne pouvez pas endommager les originaux si vous faites des erreurs lors du processus de PR. The general process is:
 
 * Apportez des modifications au code ou à la documentation en modifiant le contenu existant.
 * Vérifiez deux fois que vos modifications vous semblent bonnes.
@@ -57,7 +57,7 @@ For our example we are going to make an edit to AndroidAPSdocs. This does NOT ne
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
-## Code syntax
+## Syntaxe du Code
 
 At the moment there are two languages used for docs pages:
 
@@ -66,11 +66,11 @@ At the moment there are two languages used for docs pages:
 
 We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
 
-### Image size
+### Taille des images
 
 If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
 
-### .md files
+### Fichiers .md
 
 #### Text format
 
@@ -84,14 +84,14 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 
 * images: `![alt text](../images/file.png)`
 
-#### Links
+#### Liens
 
 * external link: `[alt text](www.url.tld)`
 * internal link to .md page: `[alt text](.../folder/file.md)`
 * internal link to .rst page: `[alt text](.../folder/file.rst)`
 * internal link to headline: `[alt text](.../folder/file#headline)`
 
-### .rst files
+### Fichiers .rst
 
 #### Text format
 
@@ -119,7 +119,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
   `.. image:: ../images/modules.png`  
   `:alt: alt text`
 
-#### Links
+#### Liens
 
 * external link: `` `alt text <www.url.tld>_` ``
 * internal link to .md page: `` `alt text <../folder/file.html>_` ``
