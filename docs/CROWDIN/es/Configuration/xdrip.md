@@ -155,7 +155,7 @@ Si el número de serie de su transmisor Dexcom G6 Si el número de serie de su t
    * En el recuadro de texto que abre escriba "enable engineering mode" 
    * pulse "Terminado"
    * Si el motor de Google Speak está habilitado, también puede hablar el comando de voz: "enable engineering mode". 
-* Vaya a los valores de depuración G5 y compruebe `OB1 recopilador`.
+* Go to the G5 debug settings and check if `OB1 collector` is set.
 * Utilice el mandato de voz: "hard reset transmitter"
 * El comando de voz se ejecutará con la siguiente recepción de datos del transmisor
 * Examine el estado del sistema (menú Hamburgesa-> estado del sistema) y consulte lo que sucede
