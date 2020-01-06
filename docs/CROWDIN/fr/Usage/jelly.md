@@ -1,17 +1,17 @@
 # Jelly Pro
 
-## Advantage/Disadvantage
+## Avantage/Inconvénient
 
-### Advantages Jelly
+### Avantages de Jelly
 
-* It's really small.
-* Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
+* C'est vraiment petit.
+* Même si vous le dites aux gens, ils pourraient ne pas le considérer comme un smartphone normal et feront plus facilement une exception quand les téléphones ne sont normalement pas autorisés.
 
-### Disadvantages Jelly
+### Inconvénients de Jelly
 
-* Recommended only for experienced loopers (some settings are not recognizable, you have to know from experience with a big Android AAPS phone, how and where what is located. Some AAPS buttons are hard to touch with a lot of feeling, but not with stubby fingers.)
+* Recommandé uniquement pour des "boucleurs" expérimentés (certains paramètres ne sont pas reconnaissables, vous devez savoir par l'expérience acquise avec un smartphone android AAPS, comment et où ces paramètres sont situés. Certains boutons AAPS sont difficiles à toucher avec beaucoup de doigté, mais pas avec des gros doigts.)
 * Can only be used as LooperPhone. It's better to have a normal smartphone in your pocket. 
-* If you don't treat Jelly like a diva (Always (!) carry it with you!) Jelly shows its bitchy side, disconnects all Bluetooth and sulks until you restart. 
+* Si vous ne traitez pas Jelly comme une diva (Emportez-la toujours avec vous!) Jelly montre son côté garce, déconnecte tous les Bluetooth et boude jusqu'à ce que vous redémarriez. 
 
 ## Jelly Pro - battery life optimization
 
@@ -34,7 +34,7 @@ Follow these rules to stay with Andorid 7.0:
 
 ![Jelly settings](../images/jelly_02.jpg)
 
-### Settings
+### Paramètres
 
 * Use Jelly only for looping.
 * Set up wifi to install xDrip, AAPS and WearOS, otherwise wifi off. 
