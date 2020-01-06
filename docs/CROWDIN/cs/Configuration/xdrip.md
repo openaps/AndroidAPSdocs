@@ -155,7 +155,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H,
    * a do textového pole napište bez uvozovek „enable engineering mode“ 
    * klikněte na tlačítko „OK“
    * Pokud máte povoleny Google hlasové příkazy, můžete po klepnutí na symbol mikrofonu vyslovit „enable engeneering mode“. 
-* Přejděte do „Možnosti ladění pro G5/G6“ a zkontrolujte `OB1 collector`.
+* Go to the G5 debug settings and check if `OB1 collector` is set.
 * Použijte hlasový příkaz: „hard reset transmitter“
 * Hlasový příkaz bude proveden při následujícím odeslání dat do vysílače
 * Přejděte na stav systému (hamburger menu -> Stav systému) a sledujte, co se stalo
