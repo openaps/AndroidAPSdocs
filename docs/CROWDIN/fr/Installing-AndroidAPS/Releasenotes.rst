@@ -29,7 +29,7 @@ Remarques importantes
 --------------------------------------------------
 * Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
-* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Si vous utilisez Dexcom G6 avec l'application `Dexcom patchée <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ vous aurez besoin de la version du `Dossier 2.4<https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
 --------------------------------------------------
@@ -102,7 +102,7 @@ Nouvelles fonctionnalités majeures
 
 Version 2.1
 ==================================================
-Release date: 03-03-2019
+Date de sortie : 03-03-2019
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
@@ -115,14 +115,14 @@ Nouvelles fonctionnalités majeures
 * G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
 * Fixed disabling SMB from preferences (Johannes Mockenhaupt)
 
-Misc
+Divers
 --------------------------------------------------
 * If you are using non default `smbmaxminutes` value you have to setup this value again
 
 
 Version 2.0
 ==================================================
-Release date: 03-11-2018
+Date de sortie : 03-11-2018
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
@@ -130,17 +130,17 @@ Nouvelles fonctionnalités majeures
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ pump support
 * Setup wizard: guides you through the process of setting up AndroidAPS
 
-Settings to adjust when switching from AMA to SMB
+Paramètres à ajuster lors du passage d'AMA à SMB
 --------------------------------------------------
 * Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
 * min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
 * Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
 
-   * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-   * In the left pane, click Build, Execution, Deployment > Compiler.
-   * Uncheck the Configure on demand checkbox.
-   * Click Apply or OK.
+   * Ouvrez la fenêtre Préférences en cliquant sur File > Settings (sur Mac, Android Studio > Preferences).
+   * Dans le panneau de gauche, cliquez sur Build, Execution, Deployment > Compiler.
+   * Décochez la case Configure on demand.
+   * Cliquez sur Appliquer ou OK.
 
 Overview tab
 --------------------------------------------------
@@ -150,20 +150,20 @@ Overview tab
 * Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
 * Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
-Watch
+Montre
 --------------------------------------------------
 * Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
 * Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
 * confirmations and info dialogs now work on wear 2.0 as well
 * Added eCarbs menu entry
 
-New plugins
+Nouveaux plugins
 --------------------------------------------------
 * PocTech app as BG source
 * Dexcom patched app as BG source
 * oref1 sensitivity plugin
 
-Misc
+Divers
 --------------------------------------------------
 * App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
 * Overhaul for config builder and objectives tabs, adding descriptions
