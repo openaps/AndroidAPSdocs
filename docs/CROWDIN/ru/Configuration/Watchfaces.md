@@ -85,15 +85,15 @@ J - активный инсулин (от болюсов | от базала)
 
 ## Параметры (в часах Wear)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Чтобы получить доступ к настройкам циферблатов, войдите в главное меню AAPS, сдвиньте экран вверх и выберите "Настройки".
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+Заполненная звездочка соответствует включенному состоянию (**Вкл.**), а незаполненная указывает, что настройка отключена (**Выкл**):
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
 ### Сопутствующие параметры AAPS
 
-* **Vibrate on Bolus** (default `On`):
+* ** Вибрировать при болюсе ** (по умолчанию ` Вкл`):
 * **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Используется при установке временной цели ТТ с часов.
 
 ### Параметры циферблатов
