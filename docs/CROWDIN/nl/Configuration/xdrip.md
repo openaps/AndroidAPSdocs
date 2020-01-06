@@ -155,7 +155,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
    * In het tekstveld typ je in "enable engineering mode" (zonder de aanhalingstekens) 
    * klik op "OK"
    * Als je Google Speak engine hebt ingeschakeld, dan kun je ook kort op het microfoon-icoontje tikken en daarna de opdracht inspreken: "enable engineering mode". Het liefst in accentloos Engels;) 
-* Ga naar de G5 debug instellingen en zorg dat `OB1 collector` ingeschakeld is.
+* Go to the G5 debug settings and check if `OB1 collector` is set.
 * Geef via het microfoon-icoontje weer de spraakopdracht (op dezelfde manier als hierboven): “hard reset transmitter”
 * De opdracht om de zender te resetten zal worden verstuurd bij de eerstvolgende keer dat jouw telefoon contact heeft met de zender
 * Kijk vervolgens naar de systeemstatus (Hamburger menu > system status) en zie wat er gebeurt. Het kan even duren voordat de zender heeft terug gecommuniceerd naar je telefoon dat hij succesvol is gereset.
