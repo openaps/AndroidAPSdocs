@@ -8,7 +8,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 Pour toute question, commentaires ou idées nouvelles, vous pouvez contacter l'équipe de documentation par e-mail (wiki@androidaps.org). Faire un PR n'est pas difficile, mais nous pouvons vous aider à éditer la documentation.
 
-À un moment donné, on vous suggère de faire un PR. PR est l'acronyme de Pull Request, et c'est une façon d'ajouter ou de modifier des informations enregistrées dans GitHub. En fait, ce n'est pas si difficile à faire et c'est une excellente façon de contribuer. Cette documentation est ici parce que les gens comme vous ont fait des PRs. Ne craignez pas de vous tromper ou d’éditer les mauvais documents. Il y a toujours un processus de vérification avant que les modifications ne soient fusionnées dans le référentiel "formel" de la documentation AndroidAPS. Vous ne pouvez pas endommager les originaux si vous faites des erreurs lors du processus de PR. The general process is:
+À un moment donné, on vous suggère de faire un PR. PR est l'acronyme de Pull Request, et c'est une façon d'ajouter ou de modifier des informations enregistrées dans GitHub. En fait, ce n'est pas si difficile à faire et c'est une excellente façon de contribuer. Cette documentation est ici parce que les gens comme vous ont fait des PRs. Ne craignez pas de vous tromper ou d’éditer les mauvais documents. Il y a toujours un processus de vérification avant que les modifications ne soient fusionnées dans le référentiel "formel" de la documentation AndroidAPS. Vous ne pouvez pas endommager les originaux si vous faites des erreurs lors du processus de PR. Le processus général est :
 
 * Apportez des modifications au code ou à la documentation en modifiant le contenu existant.
 * Vérifiez deux fois que vos modifications vous semblent bonnes.
@@ -16,15 +16,15 @@ Pour toute question, commentaires ou idées nouvelles, vous pouvez contacter l'�
 * Créer un Pull Request, qui demande aux administrateurs d'utiliser vos modifications.
 * Ils feront une vérification et soit (1) ils fusionneront vos modifications, (2) ils vous feront un retour au sujet de vos modifications, ou (3) ils commenceront un nouveau document avec vos modifications.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Remarque : Si vous êtes un apprenant visuel, il y a une vidéo YouTube [ici](https://youtu.be/4b6tsL0_kzg) montrant le flux de travail PR.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This does NOT need to be done in the linux environment on your rig. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+Pour notre exemple, nous allons faire une modification à AndroidAPSdocs. Cela ne doit PAS être fait dans l'environnement linux de votre plateforme. Cela peut être fait sur n'importe quel PC Windows, Mac, etc. (n'importe quel ordinateur avec un accès à Internet).
 
-1. Go to https://github.com/openaps/AndroidAPSdocs and hit Fork in the upper right to make your own copy of the repository.
+1. Accédez à https://github.com/openaps/AndroidAPSdocs et appuyez sur Fork en haut à droite pour faire votre propre copie du référentiel.
 
 ![Fork repo](./images/PR0.png)
 
-2. Go to http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html or similar and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub. 
+2. Accédez à http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html ou autre et accédez à la page que vous souhaitez éditer. Cliquez sur la boîte noire en bas à gauche de la page avec le mot vert "v: latest" ou similaire. In the pop up window that appears, click the word "edit" for editing in GitHub. 
 
 ![edit doc](./images/PR1.png)
 
@@ -33,13 +33,13 @@ For our example we are going to make an edit to AndroidAPSdocs. This does NOT ne
 
 ![RTD io](./images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. L'une ou l'autre des options de l'étape 2 créera une nouvelle branche dans le référentiel où vos modifications seront enregistrées. Effectuez vos modifications dans le fichier.
   
   Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the two. Take care to use the correct syntax as [described below](./make-a-PR#code-syntax).
 
 ![Edit branch](./images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Vous avez travaillé dans l'onglet "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
 
 ![preview mode](./images/PR5.png)
 
@@ -72,7 +72,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 
 ### Fichiers .md
 
-#### Text format
+#### Formatage du texte
 
 * bold: `**text**`
 * italic: `*text*`
@@ -93,23 +93,23 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 
 ### Fichiers .rst
 
-#### Text format
+#### Formatage du texte
 
 * bold: `**text**`
 * italic: `*text*`
-* Headline 1:
+* Titre 1 :
   
-  `headline`  
+  `titre`  
   `*****`
 
-* Headline 2:
+* Titre 2 :
   
-  `headline`  
+  `titre`  
   `=====`
 
-* Headline 3:
+* Titre 3 :
   
-  `headline`  
+  `titre`  
   `-----`
 
 #### Images
@@ -126,7 +126,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * internal link to .rst page: `` `alt text <../folder/file.html>_` ``
 * internal link to headline: `` `alt text <../folder/file.html#headline>_` ``
 
-### Internal links
+### Liens internes
 
 If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
 
@@ -174,4 +174,4 @@ If you are planning to make a lot of edits, including adding images to help illu
 
 ![Example of uploading images in batches](./images/Example_batch_images_upload.png)
 
-7. After adding images or making adjustments, you can submit a PR to the master branch of AndroidAPSdocs.
+7. Après avoir ajouté des images ou effectué des modifications, vous pouvez soumettre un PR à la branche principale d'AndroidAPSdocs.
