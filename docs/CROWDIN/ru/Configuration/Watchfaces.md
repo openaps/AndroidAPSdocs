@@ -94,11 +94,11 @@ J - активный инсулин (от болюсов | от базала)
 ### Сопутствующие параметры AAPS
 
 * ** Вибрировать при болюсе ** (по умолчанию ` Вкл`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Используется при установке временной цели ТТ с часов.
+* ** Единицы для принятия действий ** (по умолчанию ` мг/дл `): если ** Вкл** то на основе ` мг/дл `, если ** Выкл ** то на основе ` ммоль/л `. Используется при установке временной цели ТТ с часов.
 
 ### Параметры циферблатов
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
+* ** Показать дату ** (значение по умолчанию `Выкл `): примечание: дата доступна не на всех циферблатах
 * **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
 * **Show COB** (default `On`): Display or not COB value
 * **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
