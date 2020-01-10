@@ -120,9 +120,9 @@ Here we see the status of the insulin pump - in this case an Accu-Chek Combo. Th
 
 ## Care Portal
 
-![Care Portal](../images/Screenshot_care_portal.png)
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. 
 
-This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus. 
+The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. Therefore, decision was made to remove careportal in AAPS version 2.6. See the [careportal page](../Usage/CPbefore26.rst) for details.
 
 ## Loop, MA, AMA, SMB
 You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
