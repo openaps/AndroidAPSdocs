@@ -10,13 +10,13 @@ Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wea
 * Certaines fonctions comme les *complications* nécessitent une version 2.0 ou plus récente de Wear OS
 * Google a rebaptisé *Android Wear 1.x* en *Wear OS* depuis la version 2.x, donc quand il est indiqué *Android Wear* il est possible que ce soit une ancienne version 1.x du système
 * Si la description indique seulement *Compatibilité avec Android* et *iOS* - cela **ne signifie pas** que la montre fonctionne sous *Wear OS* - cela peut tout à fait être une autre sorte de système d'exploitation spécifique au fournisseur **qui n'est pas compatible avec les cadrans AAPS !**
-* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* Vérifiez la [liste des téléphones et des montres testés](../Getting-Started/Phones#list-of-tested-phones) et [demandez à la communauté](../Where-To-Go-For-Help/Connect-with-other-users.md) si vous avez un doute si votre montre sera prise en charge
 
 ### Construction de la version Wear OS d'AAPS
 
-To build Wear OS version of AAPS you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping).
+Pour compiler la version Wear OS de AAPS vous devez choisir la version "fullRelease" quans vous [générez l'APK](../Installing-AndroidAPS/Building-APK.md) (ou "pumpRelease" qui permet juste de contrôler à distance la pompe sans boucle).
 
-Make sure both phone and wear versions of AAPS are signed with same keys!
+Assurez vous que les deux versions de AAPS (téléphone et montre) sont signées avec la même clé !
 
 Wear variant of APK need to be installed on watch in the same way you will install phone APK on phone. It may require enabling *developer mode* on watch and uploading and installing APK on watch with: `adb install wear-full-release.apk`
 
@@ -49,7 +49,7 @@ Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Ave
 
 ## Cadrans disponibles
 
-![Available watchfaces](../images/Watchface_Types.png)
+![Cadrans disponibles](../images/Watchface_Types.png)
 
 ## Cadran AAPSv2 - Légende
 
@@ -69,7 +69,7 @@ F - niveau de batterie du téléphone
 
 G - débits de basal (en U/h ou en % pendant un DBT)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - IG (BGI) Impact Glycémique -> l'augmentation ou diminution que "devrait" avoir la glycémie en fonction de l'activité de l'insuline seule.
 
 I - glucides (glucides actifs | e-glucides à venir)
 
@@ -89,7 +89,7 @@ Pour accéder aux paramètres du cadran, entrez dans le menu principal AAPS, fai
 
 L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique que le paramètre est désactivé (**Off**) :
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Paramètres On/Off](../images/Watchface_Settings_On_Off.png)
 
 ### Paramètres du compagnon AAPS
 
@@ -119,7 +119,7 @@ L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique q
 
 * **Design de saisie** : avec ce parametre, vous pouvez sélectionner la position des boutons "+" et "-" quand vous entrez des commandes pour AAPS (CT, Insuline, Glucides...)
 
-![Input design options](../images/Watchface_InputDesign.png)
+![Options interfaces d'entrée](../images/Watchface_InputDesign.png)
 
 ### Paramètres spécifiques à certains cadrans
 
@@ -127,14 +127,14 @@ L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique q
 
 * **Précision Delta** (par défaut `Moyenne`)
 
-![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
+![Jauge Steampunk](../images/Watchface_Steampunk_Gauge.png)
 
 #### Cadran Cercle
 
-* **Big Numbers** (default `Off`): Increase text size to improve visibility
-* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
-* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* **Gros chiffres** (par défaut `Off`) : Augmenter la taille du texte pour améliorer la visibilité
+* **Historique** (par défaut `Off`) : Afficher graphiquement l'historique des Gly avec des cercles gris à l'intérieur de l'anneau vert de l'heure
+* **Historique Léger** (par défaut `On`) : cercles plus discrets avec un gris foncé
+* **Animations** (par défaut `On`) : Si activé, sur les montres supportée et hors mode économie d'énergie basse résolution, le cercle du cadran est animé
 
 ### Paramètres des commandes
 
@@ -149,11 +149,11 @@ L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique q
 
 ## Complications
 
-*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+La *complication* est un terme issu de l'horlogerie traditionnelle, il décrit l'ajout à la montre principale d'une autre petite fenêtre ou sous-cadran (avec date, jour de la semaine, phase lunaire, etc.). Wear OS 2. apporte cette métaphore pour permettre aux fournisseurs de données personnalisés, comme la météo, les notifications, compteurs de fitness et plus encore, d'ajouter ces informations à tous les cadrans qui supportent les complications.
 
-AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+AndroidAPS Wear OS prend en charge les complications depuis la version `2.6`, et permet à tout les cadrans qui supporte les complications d'être configuré pour afficher les données liées à AAPS (Gly avec tendance, IA, GA, etc.).
 
-Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+Les complications servent également de **raccourci** aux fonctions AAPS. En appuyant dessus, vous pouvez ouvrir les menus et dialogues de AAPS (selon la complication et la configuration).
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
