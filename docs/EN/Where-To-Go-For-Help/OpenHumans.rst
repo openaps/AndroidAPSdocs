@@ -22,9 +22,9 @@ Setup
      :alt: Open Humans About + Terms of Use
 
 5. Login with the credentials created in step one.
-6. Decide whether you want to hide your AndroidAPS Uploader membership in your public Open Humans profile and then authorize the project by clicking the button. Authorization will be confirmed.
+6. Decide whether you want to hide your AndroidAPS Uploader membership in your public Open Humans profile and then authorize the project by clicking the button.
 
-   .. image:: ../images/OpenHumans_03.png
+   .. image:: ../images/OpenHumans_03a.png
      :alt: Open Humans Login and Authorization
 
 7. Returning to AAPS you will see your member ID. If not done in step 3 you can restrict upload to times when phone uses Wi-Fi and/or is charged. Click "Sign out" if you want to stop uploading data to Open Humans.
