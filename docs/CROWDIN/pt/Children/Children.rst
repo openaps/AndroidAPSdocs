@@ -9,7 +9,7 @@ AndroidAPS oferece várias opções para monitorização remota de crianças e t
 Funções
 ==================================================
 * A bomba da criança é controlada pelo telefone da criança usando o AndroidAPS.
-* Os pais podem seguir remotamente vendo todos os dados relevantes, como níveis de glicose, hidratos de carbono ativos (COB), insulina ativa (IOB), etc. usando **app NSClient** no seu telefone.
+* Os pais podem seguir remotamente vendo todos os dados relevantes, como níveis de glicemia (BG), hidratos de carbono ativos (COB), insulina ativa (IOB), etc. utilizando **app NSClient** no seu telefone.
 * Os pais podem ter alarmes usando o **xDrip no modo de seguidor** no seu telefone.
 * Controle remoto do AndroidAPS usando ` Comandos SMS <../Children/SMS-Commands.html> ` _.
 * Alternador de perfil remoto e metas temporárias através do aplicativo NSClient.
