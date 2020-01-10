@@ -104,8 +104,8 @@ J - активный инсулин (от болюсов | от базала)
 * ** Показать дельту ** (по умолчанию ` Вкл `): Показывать или не показывать изменение ГК за последние 5 минут
 * ** Показывать среднюю дельту ** (по умолчанию ` Вкл `): Показывать или не показывать среднее изменение ГК за последние 15 минут
 * ** Показывать заряд батареи телефона ** (по умолчанию ` Вкл `): Батарея телефона в%. Красная, если ниже 30%.
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
+* ** Показать батарею платформы ** (по умолчанию ` Выкл`): Батарея платформы - это интегральная величина заряда батареи телефона, помпы и трансмиттера (как правило, наименьшее из трех значений)
+* ** Показать базальную скорость ** (по умолчанию ` Вкл `): показывать на экране или нет текущую скорость базала (в ед/ч или в%, если TBR)
 * **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
 * **Show BG** (default `On`): Display or not last BG value
 * **Show Direction Arrow** (default `On`): Display or not BG trend arrow
