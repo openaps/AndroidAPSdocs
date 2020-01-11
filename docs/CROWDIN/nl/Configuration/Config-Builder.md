@@ -94,7 +94,7 @@ Selecteer de bloed glucose bron u gebruikt - Zie [BG bron](BG-Source.rst) pagina
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Dexcom App (aangepast)](https://github.com/dexcomapp/dexcomapp/) - Selecteer 'BG gegevens verzenden naar xDrip+' als je de alarmen van xDrip+ wilt gebruiken.
     
     ![Configurator BG bron](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ Een aantal knoppen voor snelle toegang tot algemene functies:
 * Tijdelijk streefdoel
 * Zet / annuleer Tijdelijke basaalstand
 * Vertraagde bolus (alleen DanaR/RS of Combo pomp)
-* Ontlucht / vul (alleen DanaR/RS of Combo pomp)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Historiek venster
 * TDD (Totale Dagelijkse Dosis = bolus + basale insuline per dag)
 
