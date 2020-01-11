@@ -127,6 +127,14 @@ Jiné
 
 Poradce při potížích
 ==================================================
+Multiple SMS
+--------------------------------------------------
+If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+
+If the other app is installed on multiple phones make sure to deactive upload on all of them.
+
+SMS commands not working on Samsung phones
+--------------------------------------------------
 Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti „odeslání zprávy jako konverzace“.
 
 .. image:: ../images/SMSdisableChat.png
