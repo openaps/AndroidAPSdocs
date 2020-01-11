@@ -13,10 +13,10 @@ Como funciona
 * Se utiliza um iPhone como seguidor e, portanto, não consegue utilizar o NSclient, há comandos adicionais de SMS disponíveis.
 
 * Na configuração do seu smartphone Android vá a: Aplicativos > AndroidAPS > Permissões e habilite SMS
-* No AndroidAPS vá a Preferências> Comunicador de SMS e introduza o(s) telefone(s) que você permitirá que enviem os comandos SMS (separados por ponto e vírgula-ou seja, +4412345678;+4412345679) e habilite também 'Permitir comandos remotos via SMS'.
+* No AndroidAPS vá a Preferências> Comunicador de SMS e introduza o numero de telefone que quer permitir que envie os comandos SMS .
 * Se quiser usar mais de um número:
 
-  * Insira apenas um número.
+  * Insira inicialmente apenas um número.
   * Make that single number work by sending and confirming a SMS command.
   * Enter additional number(s) separated by semicolon, no space.
   
