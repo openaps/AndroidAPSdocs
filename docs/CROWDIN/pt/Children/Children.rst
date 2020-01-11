@@ -16,15 +16,15 @@ Funções
 
 Ferramentas e aplicativos para monitorização remota
 --------------------------------------------------
-* `Nightscout <http://www.nightscout.info/>`_ in web browser (mainly data display)
-*	NSClient app
-*	Dexcom follow if you are using original Dexcom app (BG values only)
-*	`xDrip <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-*	`Spike <https://spike-app.com/>`_ on iPhone (mainly BG values and **alarms**)
+* `Nightscout <http://www.nightscout.info/>`_ no navegador da web (principalmente de visualização de dados)
+* Aplicação NSClient
+* O Dexcom Follow se estiver a usar a app original da Dexcom (apenas valores BG)
+* ` xDrip <../Configuration/xdrip.html> ` _ em modo seguidor (principalmente valores glicemia (BG) e ** alarms**)
+* ` Spike <https://spike-app.com/>` _ no iPhone (principalmente valores glicemia (BG) e ** alarms**)
 
-Things to consider
+Considerações a ter
 ==================================================
-* Setting the correct `treatment factors <../Getting-Started/FAQ.html#how-to-begin>`_ (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved. 
-* So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
-* What is your emergency plan when remote control does not work (i.e. network problems)?
-* Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the `files section of AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ on Facebook.
+* Definir os rácios corretos <../Getting-Started/FAQ.html#como começar>`_ (Basal, Fator de Sensibilidade...) é difícil nas crianças, especialmente na fase das hormonas de crescimento. 
+* Vai ser necessário algum tempo para configurar e confirmar os rácios corretamente, sempre próximo da criança, antes de iniciar a monitorização e tratamento remoto. As férias escolares podem ser uma boa ocasião para isso.
+* Qual é o seu plano de emergência para quando o controle remoto não funcionar (ex. problemas de rede)?
+* A monitorização e o tratamento remoto podem ser muito úteis entre o infantário e o ensino básico. Mas certifique-se de que os professores e educadores estão a par do plano de tratamento da sua criança. Exemplos de tais planos podem ser encontrados nos arquivos do AndroidAPS <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ no Facebook.
