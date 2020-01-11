@@ -287,9 +287,9 @@ The last step is to press on the APK file I got via Gmail and install the app. I
 
 Yeah, you got it and can now start with configuring AndroidAPS for your use (CGMS, insulin pump) etc.
 
-## Identify receiver if using xDrip
+## Identify receiver if using xDrip+
 
-[See xDrip page](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Rozwiązywanie problemów
 
