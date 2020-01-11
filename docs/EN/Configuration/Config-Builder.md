@@ -24,12 +24,37 @@ Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) p
 ### Local profile (recommended)
 Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
+![Local Profile settings](../images/LocalProfile_Settings.png)
+
+Buttons:
+* green plus: add
+* red X: delete
+* blue arrow: duplicate
+
+#### Clone profile switch
+You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+1. Go to treatments tab.
+2. Select ProfileSwitch.
+3. Press "Clone".
+4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+
+![Clone profile switch](../images/LocalProfile_ClonePS.png)
+
+If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+
+#### Upload loacal profiles to Nightscout
+Local profiles can also be uploaded to Nightscout. The settings can be found in NS Client preferences.
+
+![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+
 Advantage:
 * no internet connection necessary to change profile settings
 * profile changes can be made directly on the phone
+* new profile can be created from profile switch
+* local profiles can be uploaded to Nightscout
 
 Disadvantage: 
-* only one profile
+* none
 
 ### NS Profile
 NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
@@ -44,10 +69,6 @@ Advantage:
 Disadvantage: 
 * no local changes to profile settings
 * profile cannot be changed directly on the phone
-
-### Simple profile
-Simple profile with just one time block for DIA, IC, ISF, basal rate and target range (i.e. no basal rate changes during the day). More likely to be used for testing purposes unless you have the same factors over 24 hours. Once "Simple Profile" is selected, a new tab will appear in AAPS where you can enter the profile data.
-
 
 ## Insulin
 Select the type of insulin curve you are using. The options 'Rapid-Acting Oref', Ultra-Rapid Oref' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves), the curves will vary based on the DIA and the time to peak. 
