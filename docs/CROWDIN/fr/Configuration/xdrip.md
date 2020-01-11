@@ -1,10 +1,12 @@
 # Paramètres xDrip+
 
-S'il n'est pas déjà configuré, téléchargez [xDrip+](https://github.com/NightscoutFoundation/xDrip)
+If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip).
+
+**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
 Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) veuillez vous assurer d'utiliser au minimum la version [release du 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
-Si le numéro de série de votre émetteur Dexcom G6 commence par 8G... ou 8H... utilisez l'une des [dernières "Nightly build"](https://github.com/NightscoutFoundation/xDrip/releases).
+Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Paramètres de base pour tous les systèmes MGC & MGF
 
@@ -20,7 +22,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G... ou 8H...
 
 * Désactivez `Upload treatments` et `Back-fill data`.
    
-   **Avertissement de sécurité : Vous devez désactiver "Upload treatments" dans xDrip, sinon les traitements peuvent être doublés dans les AAPS conduisant à de faux GA et IA.**
+   **Safety warning : You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
 
 * L'option `Alert on failures` doit également être désactivée. Sinon, vous aurez une alarme toutes les 5 minutes dans le cas ou le wifi / réseau mobile est trop mauvais, ou si le serveur n'est pas disponible.
    
@@ -39,7 +41,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G... ou 8H...
 ### Identifier le récepteur
 
 * Si vous avez des problèmes de diffusion locale (AAPS ne recevant pas les valeurs Gly de xDrip +) allez dans Paramètres > Inter-app settings > Identify receiver et entrez `info.nightscout.androidaps`.
-* Attention: La correction automatique a parfois tendance à changer la lettre i en majuscules. Vous **ne devez utiliser que des minuscules** pour taper `info.nightscout.androidaps`. Un I majuscule empêcherait AAPS de recevoir les valeurs de Gly de xDrip.
+* Attention: La correction automatique a parfois tendance à changer la lettre i en majuscules. Vous **ne devez utiliser que des minuscules** pour taper `info.nightscout.androidaps`. Capital I would prevent AAPS from receiving BG values from xDrip+.
    
    ![xDrip+ Paramètres interapp basiques Identifier le récepteur](../images/xDrip_InterApp_NS.png)
 
@@ -72,9 +74,9 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G... ou 8H...
 
 ### Redémarrages préventifs non recommandés
 
-**Avec Dexcom les émetteurs dont le numéro de série commence par 8G ou 8H le redémarrage préventif ne fonctionnent pas et pourrait tuer complètement le capteur !**
+**With Dexcom transmitters whos serial no. is starting with 8G or 8H preemptive restarts do not work and might kill the sensor completely!**
 
-L'extension automatique des détecteurs Dexcom (`preemptive restarts`) n'est pas recommandée car cela peut entraîner des "sauts" dans les valeurs Gly le 9ème jour après le redémarrage.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
@@ -114,7 +116,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G ou 8H essay
    * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
    * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
    
-   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Start sensor (only if replacing)
    
@@ -186,7 +188,7 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G or 8H u
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
+* Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
    
    ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
 
@@ -205,7 +207,7 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G or 8H u
    
    * Preemptive Restart (disable!)
    * Restart sensor (disable!)
-   * Fallback to xDrip (disable!)
+   * Fallback to xDrip+ (disable!)
    
    ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
 
@@ -214,7 +216,7 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G or 8H u
    * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
    * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
    
-   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
    
@@ -310,7 +312,7 @@ Please note that the following method might likely not work if your Dexcom G6 tr
 * Arrêter le capteur
 * Start sensor with "real" code (printed on the adhesive protector)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xdrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ & Freestyle Libre
 
