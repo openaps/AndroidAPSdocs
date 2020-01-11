@@ -8,7 +8,7 @@ DexcomG5 앱(패치버전)을 사용할 경우, 혈당데이터는 부드럽고 
 
 ## xDrip+와 덱스콤 G5 사용시
 
-xDrip G5 'OB1 collector in native mode' 사용시에만 충분히 평활화된 데이터가 전송됩니다.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ## xDrip+와 프리스타일 리브레 사용시
 
