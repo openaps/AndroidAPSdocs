@@ -8,7 +8,7 @@ Wenn du die Dexcom G5 App (gepatched) verwendest, dann sind deine BZ-Daten glatt
 
 ## xDrip+ mit Dexcom G5
 
-Ausreichend glatte Daten werden nur geliefert, wenn du den xDrip G5 "OB1 Collector im nativen Modus" verwendest.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ## xDrip+ mit Freestyle Libre
 
