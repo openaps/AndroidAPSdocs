@@ -8,7 +8,7 @@ Lorsque vous utilisez l'application Dexcom G5 (patchée) vos données de glycém
 
 ## xDrip+ avec Dexcom G5
 
-Les glycémies ne sont suffisament lissées avec XDrip et G5 que si vous utilisez le 'OB1 collector in native mode'.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ## XDrip+ avec Freestyle Libre
 
