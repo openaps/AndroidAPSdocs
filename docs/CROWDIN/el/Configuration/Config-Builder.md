@@ -94,7 +94,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Dexcom app (patched)](https://github.com/dexcomapp/dexcomapp/) - επιλέξτε "Αποστολή δεδομένων BG στο xDrip+" αν θέλετε να χρησιμοποιήσετε τους συναγερμούς του xDrip+.
     
     ![Διαμόρφωση BG πηγή](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ Some buttons to quickly access common features:
 * Προσωρινοί στόχοι
 * Ρύθμιση / ακύρωση προσωρ. βασικός ρυθμός
 * Εκτεταμένο bolus (μόνο DanaR/RS ή Combo αντλία)
-* Prime/γέμισμα (μόνο DanaR/RS ή Combo αντλία)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Περιήγηση ιστορικού
 * TDD (Συνολική ημερήσια δόση = bolus + βασικός ρυθμός ανά ημέρα)
 
