@@ -94,7 +94,7 @@
 * [xDrip +](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * ГК с клиента Nightscout
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * Модифицированное приложение [Dexcom](https://github.com/dexcomapp/dexcomapp/) - выберите «Отправлять данные ГК на xDrip +», если хотите пользоваться оповещениями от xDrip +.
     
     ![Источник ГК в конфигураторе](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ AndroidAPS ставит перед вами ряд задач (целей), ко
 * Временные цели
 * Задать / отменить врем. скорость базала
 * Пролонгированный болюс (только для DanaR/RS или Combo)
-* Первичное заполнение / заправка картриджа (только для DanaR/RS или Combo)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Журнал
 * TDD (Общая суточная доза = болюс + базал за день)
 
