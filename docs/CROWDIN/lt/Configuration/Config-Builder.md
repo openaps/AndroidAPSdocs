@@ -94,7 +94,7 @@ Pasirinkite pagrindinį glikemijos duomenų šaltinį - daugiau informacijos api
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient KG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * Modifikuota programa [ Dexcom App ](https://github.com/dexcomapp/dexcomapp/) - pasirinkite „Siųsti KG duomenis į xDrip+“, jei norite gauti pranešimus iš xDrip+.
     
     ![Glikemijos šaltinis konfigūratoriuje](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ Mygtukai greitesniam pagrindinių funkcijų paleidimui:
 * Laikinas tikslas
 * Nustatyti / atšaukti laikiną valandinę bazę
 * Ištęstas bolusas (tik DanaR/RS arba Combo pompa)
-* Rezervuaro / kateterio pildymas (tik DanaR/RS arba Combo)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Istorija
 * BPD (Bendra paros dozė = bolusas + bazė per dieną)
 
