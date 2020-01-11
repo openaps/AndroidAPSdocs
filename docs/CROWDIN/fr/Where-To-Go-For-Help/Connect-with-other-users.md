@@ -33,10 +33,10 @@ Rejoindre le groupe Facebook principal [AndroidAPS](https://www.facebook.com/gro
 
 ### Allemagne
 
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/) : utilisateurs allemands d'OpenAPS, Loop et AndroidAPS
-* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/) : Libre comme MGC/MGF
-* [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
-* [Looper Meetings Germany & Austria](http://loopertreffen.androidaps.de)
+* [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
+* [Looper Meetings Germany, Austria & Switzerland](http://loopertreffen.androidaps.de)
+* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
+* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
 
 ### Pays-Bas
 
