@@ -94,7 +94,7 @@ Vyberte, který zdroj glykémií používáte – další informace k nastavení
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * Glykémie z NSClient
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Aplikace Dexcom G (upravená)](https://github.com/dexcomapp/dexcomapp/) – chcete-li používat alarmy xDrip+, vyberte v nastavení „Odesílat glykémie do xDrip+“.
     
     ![Konfigurace zdroje glykémie](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ Tlačítka k běžně používaným úkonům:
 * Dočasné cíle
 * Nastavit / zrušit dočasný bazál
 * Prodloužený bolus (pouze DanaR/RS nebo Combo)
-* Plnění/Doplňování (Pouze DanaR/RS nebo Combo)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Prohlížeč historie
 * CDD (Celková denní dávka = bolusy + bazály za celý den)
 
