@@ -6,7 +6,7 @@ If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high o
 When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
 
 ## xDrip+ with Dexcom G5
-Smooth enough data is only delivered if you use xDrip G5 'OB1 collector in native mode'.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ## xDrip+ with Freestyle Libre
 When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.

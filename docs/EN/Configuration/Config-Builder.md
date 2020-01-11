@@ -172,7 +172,7 @@ Some buttons to quickly access common features:
 * Temporary targets
 * Set / cancel temp. basal rate
 * Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * History browser
 * TDD (Total daily dose = bolus + basal per day)
 
