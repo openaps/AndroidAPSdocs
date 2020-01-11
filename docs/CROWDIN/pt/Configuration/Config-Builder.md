@@ -94,7 +94,7 @@ Selecione a fonte de glicose de sangue que utiliza - ver [Fonte de BG](BG-Source
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * Glic NSCliente
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ Alguns botões para aceder rapidamente a funções comuns:
 * Alvos temporário
 * Definir / cancelar temp. taxa basal
 * Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Navegador do histórico
 * TDD (Total daily dose = bolus + basal per day)
 
