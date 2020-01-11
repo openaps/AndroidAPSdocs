@@ -287,9 +287,9 @@ Der letzte Schritt ist es, auf die APK Datei zu klicken und die App zu installie
 
 Herzlichen Glückwunsch, du hast es geschafft! Nun kannst du AndroidAPS starten und einrichten.
 
-## Identify receiver if using xDrip+
+## Identifiziere den Empfänger falls Du xDrip verwendest+
 
-[See xDrip+ page](../Configuration/xdrip#identify-receiver)
+[Siehe xDrip+ Seite](../Configuration/xdrip#identify-receiver)
 
 ## Problembehandlung
 
