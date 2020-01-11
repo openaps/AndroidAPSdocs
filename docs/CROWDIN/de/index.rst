@@ -166,8 +166,8 @@ Mithelfen in der Community
        
 
    Wie ich helfen kann <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   App oder Docs übersetzen <./translations.md>
+   An den Docs mitschreiben <./make-a-PR>
 
 
 .. note:: 
