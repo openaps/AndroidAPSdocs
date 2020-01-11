@@ -287,9 +287,9 @@ In this example Gmail is used as it is fairly simple. To install the self-signed
 
 Да, все получилось, теперь можно начать настройку AndroidAPS (CGMS, помпа) и т. д.
 
-## Identify receiver if using xDrip
+## Identify receiver if using xDrip+
 
-[See xDrip page](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Устранение неполадок
 
