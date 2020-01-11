@@ -192,23 +192,19 @@ Some buttons to quickly access common features:
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
 * Temporary targets
 * Set / cancel temp. basal rate
-* Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
+#### Careportal
+Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+* BG check
+* Prime / fill - record pump site change and prime (if not done on pump)
+* CGM sensor insert
+* Pump battery change
+#### Tools
 * History browser
 * TDD (Total daily dose = bolus + basal per day)
 
 Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
-
-### Careportal
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
-
-Note: <b>No insulin</b> will be given if entered via careportal (i.e. meal bolus, correction bolus...)
-
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
-
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Actions tab](../images/ConfBuild_ConfBuild_Actions_a.png)
 
 ### SMS Communicator
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
