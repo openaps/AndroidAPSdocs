@@ -1,9 +1,9 @@
 Installez Git
-*****
+**************************************************
 Windows
-=====
+==================================================
 1. Download git
------
+--------------------------------------------------
 * **You have to be online all of the time as Android Studio downloads several updates!**
 * N’importe quelle version de git devrait fonctionner. For example `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
 * Assurez-vous de noter le chemin d’installation. Vous en aurez besoin dans la prochaine étape.
@@ -12,7 +12,7 @@ Windows
   :alt: Git installation path
 
 2. Set git path in Android Studio
------
+--------------------------------------------------
 * Renseignez dans Android tudio où le fichier git.exe est situé : File - Settings 
 
   .. image:: ../images/Update_GitSettings1.png
@@ -28,11 +28,11 @@ Windows
     :alt: Android Studio - GIT path
    
 3. Reboot
------
+--------------------------------------------------
 * Redémarrez votre PC pour mettre à jour l'environnement système.
 
 4. Check git settings in Android Studio
------
+--------------------------------------------------
 * Open Terminal window in Android Studio
 * Enter "git --version" (without quotation marks!) and press Return
 
@@ -45,7 +45,7 @@ Windows
     :alt: result git-version
 
 Mac
-=====
+==================================================
 * N’importe quelle version de git devrait fonctionner. For example `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
 * Use homebrew to install git: ```$ brew install git```.
 * For details on installing git see the `official git documentation <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.

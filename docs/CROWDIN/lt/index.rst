@@ -1,5 +1,5 @@
 Welcome to the AndroidAPS documentation
-==============================================
+==================================================
 
 AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. Main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
 
@@ -15,7 +15,7 @@ Main components are:
 For more details, please read on here.
 
 Getting started
-----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -27,7 +27,7 @@ Getting started
    
    
 What do I need 
------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -36,7 +36,7 @@ What do I need
 
    
 How to Install AndroidAPS
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -50,7 +50,7 @@ How to Install AndroidAPS
    
    
 Component Setup
----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -64,7 +64,7 @@ Component Setup
    
 
 Configuration 
----------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -74,7 +74,7 @@ Configuration
    
    
 AndroidAPS Usage
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -88,10 +88,11 @@ AndroidAPS Usage
    Temp-targets <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
    Automation <./Usage/Automation.rst>
-  
+   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
  
 General Hints 
----------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -103,7 +104,7 @@ General Hints
    
 
 AndroidAPS for children
-------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -112,18 +113,8 @@ AndroidAPS for children
    SMS commands <./Children/SMS-Commands.rst>
    
 
-Advanced 
-----------
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Android auto <./Usage/Android-auto.md>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
-   
-
 Troubleshooting
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -132,7 +123,7 @@ Troubleshooting
    
 
 FAQ 
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -141,7 +132,7 @@ FAQ
 
    
 Terminų žodynas
-------------------------------------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -150,7 +141,7 @@ Terminų žodynas
   
 
 Where to go for help 
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -160,7 +151,7 @@ Where to go for help
    Wiki updates & changes <./Getting-Started/WikiUpdate.rst>
 
 For Clinicians
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -169,7 +160,7 @@ For Clinicians
 
 
 How to help
-------------
+--------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:

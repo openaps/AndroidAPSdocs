@@ -1,13 +1,15 @@
-Смарт-часы
+Smartwatches
 *************
 
-Смарт-часы не обязательны, но полезны для некоторых пользователей.
-Более подробная информация здесь:
+Smartwatches are optional, but very useful for some users.
+More details are here:
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Список проверенных телефонов <../Getting-Started/Phones.md>
-   Циферблаты <../Configuration/Watchfaces.md>
+   List of tested phones and smartwatches <../Getting-Started/Phones.md>
+   Phone background <../Getting-Started/Phones.md#phone-background>
+   Watchfaces Wear OS <../Configuration/Watchfaces.md>
+   Pebble <../Configuration/Watchfaces.md#pebble>

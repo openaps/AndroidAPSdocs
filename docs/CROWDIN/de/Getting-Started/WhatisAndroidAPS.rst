@@ -1,5 +1,5 @@
 Was ist ein Closed Loop System mit AndroidAPS?
-****************************
+**************************************************
 
 AndroidAPS ist eine App, die als künstliche Bauchspeicheldrüse (artificial pancreas system - APS) auf einem Android-Smartphone arbeitet. Was ist eine künstliche Bauchspeicheldrüse? Es ist eine App, die darauf abzielt, das zu tun, was eine funktionierende Bauchspeicheldrüse tut: den Blutzuckerspiegel automatisch in gesunden Grenzen zu halten. 
 
@@ -25,7 +25,7 @@ Ein Hinweis zur Vorsicht: AndroidAPS wird nicht von einer medizinischen Aufsicht
 Wenn Du bereit bist, diese Herausforderung anzunehmen, lies bitte weiter. 
 
 Die primären Ziele von AndroidAPS
-===========================================
+==================================================
 
 * Eine App mit eingebauter Sicherheit. Um mehr über die Sicherheitsfunktionen der Algorithmen, die als oref0 und oref1 bekannt sind, zu lesen, klicke hier (https://openaps.org/reference-design/)
 * Eine All-in-one-App für das Management Deines Typ1-Diabetes mit einer künstlichen Bauchspeicheldrüse und Nightscout.
@@ -38,7 +38,7 @@ Die primären Ziele von AndroidAPS
 * Eine App, in der der Benutzer die Kontrolle über die Sicherheitseinschränkungen hat. 
 
 Wie lege ich los?
-===============
+==================================================
 Natürlich sind alle hier verfügbaren Informationen für Dein Closed Loop System sehr wichtig, es ist aber auch normal, dass die vielen neuen Dinge anfangs etwas verwirrend wirken.
 Gute Orientierung bieten die `Modul-Übersicht <../Module/module.html>`_ und die `Objectives (Ziele) <../Usage/Objectives.html>`_. Du kannst Dir zuerst auch einmal das `Sample Setup mit Dana, Dexcom und Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_ ansehen.
  

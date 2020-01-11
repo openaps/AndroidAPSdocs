@@ -28,7 +28,7 @@ you do with it.**
 ## Setup
 
 * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
-   
+  
    ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
    
 * In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
@@ -38,7 +38,7 @@ you do with it.**
 * Tap the cog-wheel to open Insight settings.
 * In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
 * On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
- 
+
    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
 * Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm. 
@@ -60,10 +60,12 @@ you do with it.**
 Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
 ## Settings in AAPS
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. 
+
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
    ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
-  
+
 In the Insight settings in AndroidAPS you can enable the following options:
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 * "Log tube changes": This adds a note to the AndroidAPS database when you run the "tube filling" program on the pump.
@@ -84,7 +86,7 @@ In the Insight settings in AndroidAPS you can enable the following options:
       <br>retry -> no connection -> wait <b>20</b> sec.
       <br>retry -> no connection -> wait <b>20</b> sec.
       <br>...
-      
+    
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
 For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
@@ -98,7 +100,8 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 ## Settings in the pump
 
 Configure alarms in the pump as follows:
-* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
 * Menu > Modes > Signal mode > Quiet
 
 This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).

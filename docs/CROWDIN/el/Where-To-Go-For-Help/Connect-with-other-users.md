@@ -38,11 +38,15 @@
 * [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
 * [Looper Meetings Germany & Austria](http://loopertreffen.androidaps.de)
 
-### Ηνωμένο Βασίλειο
+### Netherlands
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (για χρήστες από Ηνωμένο Βασίλειο OpenAPS, Loop και AndroidAPS)
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
+* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
 
-### Ολλανδία
+### Sweden
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Ολλανδόφωνοι χρήστες του OpenAPS, Loop and AndroidAPS
-* [CGM στο cloud της Ολλανδίας](https://www.facebook.com/groups/1764754560436596)
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+
+### UK
+
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)

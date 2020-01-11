@@ -1,8 +1,8 @@
 
 Export/Import des paramètres
-******
+**************************************************
 Quand dois-je exporter les paramètres ?
-=====
+==================================================
 Préparez-vous aux imprévus. Vous pouvez modifier des paramètres importants par accident et avoir des problèmes pour annuler les modifications. Votre téléphone pourrait se casser ou être volé. Pour revenir facilement à l'état où vous étiez, les paramètres doivent être exportés régulièrement.
 
 La meilleure pratique consiste à exporter les paramètres après un changement ou la réalisation d'un objectif. 
@@ -16,7 +16,7 @@ Sur un ordinateur Windows 10, cela ressemble à ceci :
 
 
 How to export settings
-=====
+==================================================
 * **Export settings** on your old phone
 
   * Menu Hamburger (coin supérieur gauche de l'écran)

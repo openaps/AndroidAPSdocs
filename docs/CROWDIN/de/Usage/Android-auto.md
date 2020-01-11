@@ -1,19 +1,47 @@
 # Android Auto
 
-So sieht es aus:
+![AAPS CGM-Daten in Android Auto](../images/AndroidAuto_05.png)
 
-![Screenshot 1](../images/Android-auto1.png)
+## AndroidAPS-Einstellungen für Android Auto
 
-So geht's:
+Benutze Systemmeldungen für Alarme und Meldungen:
 
-* Android Auto installieren
-* Klicke in der Android Auto App auf das Hamburger Menü (drei horizontale Linien)
-* Info ("about") anklicken
-* Die Überschrift "Über Android Auto" (About Android Auto) zehnmal antippen bis das Popup "Entwicklereinstellungen zulassen?" erscheint und dieses mit Ok bestätigen.
-* Klicke auf die drei Punkte rechts oben und wähle "Entwicklereinstellungen".
-* Wähle "unbekannte Quellen", scrolle dazu bis ans Ende der Liste.
+* 3-Punkt-Menü auf der rechten Seite des Home-Bildschirms öffnen
+* Einstellungen
+* Ganz nach unten scrollen
+* Aktiviere "Benutze Systemmeldungen für Alarme..."
+
+![Benutze Systemmeldungen für Alarme und Meldungen](../images/AndroidAuto_01.png)
+
+## Einstellungen in der Android Auto App auf dem Smartphone
+
+Da AAPS keine offizielle Android Auto App ist, müssen die Benachrichtigungen einmalig manuell aktiviert werden.
+
+* Start die Android Auto App auf Deinem Smartphone.
+* Tippe auf das Hamburger-Menü
+* Wähle Einstellungen
+* Scrolle bis ganz nach unten und tippe die Versions-Nummer 10x an bis die Meldung "Entwicklermodus aktiviert" angezeigt wird.
+
+![Entwicklermodus aktivieren](../images/AndroidAuto_02.png)
+
+* 3-Punkt-Menü in der rechten oberen Ecke öffnen
+* Wähle "Entwicklereinstellungen"
+* Scrolle bis ganz nach unten und aktiviere "Unbekannte Quellen".
+
+![Unbekannte Quellen aktivieren](../images/AndroidAuto_03.png)
+
 * Jetzt kannst Du den Entwicklermodus wieder verlassen. Rufe dazu über die drei Punkte oben rechts das Menü auf.
 
-Problembehandlung:
+## Benachrichtigung im Auto anzeigen
 
-* Falls keine Benachrichtigungen angezeigt werden: prüfe, ob Du in den Android-Einstellungen die Benachrichtigungsanzeige für AAPS aktviert hast und ob Android Auto Zugriffsrechte für die Benachrichtigungen hat.
+* Tippe auf das Glockensymbol in der unteren Menüleiste in Android Auto in Deinem Auto
+
+![Bell icon - Android Auto im Fahrzeug](../images/AndroidAuto_04.png)
+
+* Die CGM-Werte werden wie folgt angezeigt:
+
+![AAPS CGM-Daten in Android Auto](../images/AndroidAuto_05.png)
+
+## Problemlösungen
+
+* Falls die Benachrichtigungen nicht angezeigt werden: Prüfe, ob Du [AAPS Benachrichtigungen in Android zugelassen hast](#androidaps-einstellungen-fur-android-auto) und ob [Android Auto Benachrichtigungen anzeigen darf](#einstellungen-in-der-android-auto-app-auf-dem-smartphone).

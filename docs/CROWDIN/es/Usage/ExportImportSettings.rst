@@ -1,43 +1,43 @@
 
-Export & import settings
-******
-When should I export settings?
-=====
-Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
+Exportar e importar ajustes
+**************************************************
+¿Cuándo debo exportar los valores?
+==================================================
+Esté preparado para lo imprevisto. Es posible que cambie los valores importantes por accidente y que tenga problemas para deshacer los cambios. Tu teléfono podría romperse o ser robado. Para volver fácilmente al estado en el que ha estado, los valores deben exportarse de forma regular.
 
-Best practice is to export after change of settings or completing an objective. 
+La mejor práctica es la exportación después del cambio de valores o la finalización de un objetivo. 
 
-Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Los valores exportados deben copiarse en un almacenamiento en la nube o en su computadora. Así usted está preparado ante la pérdida o daño de su AAPS teléfono y no tiene que empezar desde cero.
 
-On a Windows 10 computer it looks like this:
+En un sistema Windows 10, se ve así:
   
-  .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS Preferences phone connected to computer
+  .. imagen:: ../images/SmartphoneRootLevelWin10.png
+    :alt: AndroidAPS Preferencias del teléfono conectado a una computadora
 
 
-How to export settings
-=====
-* **Export settings** on your old phone
+Cómo exportar valores
+==================================================
+* **Exportar configuración** en tu viejo teléfono
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
-  * File location will be shown
+  * Menú Hamburguesa (esquina superior izquierda de la pantalla)
+  * Mantenimiento
+  * Exportar ajustes
+  * La ubicación del archivo se mostrará
     
-.. image:: ../images/AAPS_ExportSettings.png
-  :alt: AndroidAPS export settings
+.. imagen:: ../images/AAPS_ExportSettings.png
+  :alt: Valores de exportación de AndroidAPS
        
-* **Transfer** settings from old to new phone using the file location shown during export
+* **Transferencia** configuración del viejo al nuevo teléfono utilizando la ubicación del archivo se muestra durante la exportación
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
+  El archivo exportado se denomina "AndroidAPSPreferences" y debe estar en su carpeta raíz en el almacenamiento principal del teléfono (tal como C: en su ordenador).
   
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone
+* **Instalar AndroidAPS** en el nuevo teléfono.
+* **Importar ajustes** en tu nuevo teléfono
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+  * Menú Hamburguesa (esquina superior izquierda de la pantalla)
+  * Mantenimiento
+  * Importar ajustes
 
-* **Note for Dana RS users:**
+* **Nota para los usuarios de Dana RS:**
 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Please pair new phone and pump manually.
+  * La configuración de conexión de la bomba y también se importa AAPS en su nuevo teléfono con esto ya "conoce" la bomba y por lo tanto no es necesario iniciar un escaneo bluetooth. Por favor, empareja el nuevo teléfono y la bomba manualmente.

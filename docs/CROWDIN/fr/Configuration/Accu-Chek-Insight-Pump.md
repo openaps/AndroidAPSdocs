@@ -53,7 +53,9 @@ Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléph
 
 ## Paramètres dans AAPS
 
-Vous **ne devez pas activer 'Utiliser toujours les valeurs absolues du basal'** avec la pompe Insight. Dans AAPS, allez dans Préférences > NSClient > Paramètres Avancés et assurez-vous que 'Utiliser toujours utiliser les valeurs absolues du basal' est désactivé. Cela conduirait à de mauvais réglages des DBT dans la pompe Insight. Par conséquent, vous ne pourrez pas utiliser Autotune mais il n'y a pas d'alternative pour désactiver cette fonction lors de l'utilisation de la pompe Insight.
+Vous **ne devez pas activer 'Utiliser toujours les valeurs absolues du basal'** avec la pompe Insight. Dans AAPS, allez dans Préférences > NSClient > Paramètres Avancés et assurez-vous que 'Utiliser toujours utiliser les valeurs absolues du basal' est désactivé. Cela conduirait à de mauvais réglages des DBT dans la pompe Insight.
+
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
 
 ![Copie d'écran paramètres Insight](../images/Insight_pairing_V2_5.png)
 
@@ -97,7 +99,8 @@ Dans AndroidAPS, l'onglet Accu-Chek Insight affiche le statut actuel de la pompe
 
 Configurez les alarmes dans la pompe comme suit :
 
-* Menu > Réglages > Réglages pompe > Réglages Mode > Silencieux > Signal > Sonore puis Menu > Réglages > Réglages pompe > Réglages Mode > Silencieux > Volume > 0 (supprimer toutes les barres)
+* Menu > Réglages > Réglages pompe > Réglages Mode > Silencieux > Signal > Sonore
+* Menu > Réglages > Réglages pompe > Réglages Mode > Silencieux > Volume > 0 (suppimez toutes les barres)
 * Menu > Modes > Type de signal > Silencieux
 
 Ceci supprimera toutes les alarmes de la pompe, permettant à AndroidAPS de décider si une alarme est pertinente pour vous. Si AndroidAPS ne reconnaît pas une alarme, son volume augmentera (d'abord bip, puis vibration).
@@ -108,7 +111,7 @@ Les pompes Insight avec un firmware plus récent vibreront brièvement chaque fo
 
 La durée de vie de la pile de l'Insight, lorsque vous bouclez, est comprise entre 10 et 14 jours, et au maximum 20 jours. L'utilisateur qui a déclaré cela utilise des piles Energizer ultimate lithium.
 
-La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer à nouveau la date et l'heure après avoir mis la nouvelle pile. Si cela se produit, toutes les entrées mémorisées dans AndroidAPS avant le changement de pile ne seront plus intégrées dans les calculs car l'heure réelle ne peut pas être identifiée correctement.
+La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer un nouveau la date et l'heure après avoir mis la nouvelle pile. Si cela se produit, toutes les entrées mémorisées dans AndroidAPS avant le changement de pile ne seront plus intégrées dans les calculs car le temps réel ne peut pas être identifié correctement.
 
 ## Erreurs spécifiques à Insight
 

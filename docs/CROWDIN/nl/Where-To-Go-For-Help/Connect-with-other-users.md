@@ -4,7 +4,7 @@ Dit project is vrijwilligerswerk. Om extra werk te voorkomen voor de mensen die 
 
 * niveau 1: Lees de Wiki - we hebben nu een zoekfunctie!
 * niveau 2: Zoek in de Facebook-groep, als er al niet een antwoord te vinden is, stel dan jouw vraag in de algemene [AndroidAPS gebruikers Facebook groep](https://www.facebook.com/groups/1900195340201874/). Of in de Nederlandstalige Looped-NL groep (zie onderaan deze pagina).
-* niveau 3: als je op Facebook geen antwoord vindt, stel je vraag dan in [gitter](https://gitter.im/MilosKozak/AndroidAPS). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Vergeet niet dat de meeste ontwikkelaars in Europa wonen, dus het kan goed zijn dat vragen niet 24/7 beantwoord worden; reken erop om enkele uren te moeten wachten, vooral in het weekend en op feestdagen.
+* niveau 3: als je op Facebook geen antwoord vindt, stel je vraag dan in [gitter](https://gitter.im/MilosKozak/AndroidAPS). Het gelijktijdig stellen van dezelfde vraag op beide platforms zal worden genegeerd of verwijderd om te voorkomen dat mensen dubbel werk hebben met beantwoorden. Vergeet niet dat de meeste ontwikkelaars in Europa wonen, dus het kan goed zijn dat vragen niet 24/7 beantwoord worden; reken erop om enkele uren te moeten wachten, vooral in het weekend en op feestdagen.
 * niveau 4: Maak een [issue](https://github.com/MilosKozak/AndroidAPS/issues) op gitter en voeg [log-bestanden](../Usage/Accessing-logfiles.md) toe
 * niveau 5: e-mail naar *developers@androidaps.org* (alleen als het om persoonlijke gegevens gaat die je niet wilt delen op een openbare plek en jouw problemen niet via andere wegen opgelost konden worden)
 
@@ -38,11 +38,15 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 * [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
 * [Looper bijeenkomsten Duitsland & Oostenrijk](http://loopertreffen.androidaps.de)
 
-### Groot-Brittannië
+### Netherlands
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (Gebruikers uit Groot-Brittanië en Nood-Ierland van OpenAPS, Loop en AndroidAPS)
-
-### Nederland, België
-
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Nederlandstalige gebruikers van OpenAPS, Loop en AndroidAPS
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+
+### Sweden
+
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+
+### UK
+
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)

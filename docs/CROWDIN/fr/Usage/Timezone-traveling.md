@@ -1,57 +1,57 @@
-# Timezone traveling with pumps
+# Voyager avec différents fuseaux horaires avec une pompe
 
-## DanaR, Korean DanaR
+## DanaR, DanaR coréenne
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Il n'y a aucun problème avec le changement de fuseau horaire dans le téléphone car la pompe n'utilise pas l'historique
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndoridAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+Ces pompes ont besoin d'une attention toute particulière, car AndoridAPS utilise l'historique de la pompe, mais les enregistrements de la pompe ne prend pas en compte le changement de fuseau horaire. **Cela signifie que si vous changez simplement de fuseau horaire dans le téléphone, les enregistrements seront lus avec un fuseau horaire différent et seront doublés.**
 
-To avoid this there are two possibilities:
+Pour éviter cela, il y a deux possibilités :
 
-### Option 1: Keep home time and timeshift profile
+### Option 1 : Garder l'heure du domicile et décaler temporairement le profil
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
-* Phone must keep your standard time as at home for the whole travel period.
-* Time-shift your profile according to time difference between home time and destination time.
+* Désactiver l'option 'Date et heure automatiques' dans les paramètres de votre téléphone (changement de fuseau horaire manuel).
+* Le téléphone doit conserver votre heure normale comme à la maison pendant toute la période de voyage.
+* Faites un décalage horaire de votre profil en fonction de la différence de temps entre l'heure de la maison et l'heure de destination.
    
-   * Long-press profile name (middle of top section on homescreen)
-   * Select 'Profile Switch'
-   * Set 'Time shift' according to your destination.
+   * Faites un appui long sur le nom du profil (au milieu de la section du haut sur la page d'accueil)
+   * Sélectionnez "Changement de profil"
+   * Définissez le 'Décalage horaire' en fonction de votre destination.
    
    ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: profile switch +6 hours
-   * i.e. Vienna -> Sydney: profile switch -8 hours
+   * par ex. Vienne -> New York : Changement de profil +6 heures
+   * par ex. Vienne -> Sydney : Changement de profil -8 heures
 
-### Option 2: Delete pump history
+### Option 2: Supprimer l'historique de la pompe
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* Désactiver l'option 'Date et heure automatiques' dans les paramètres de votre téléphone (changement de fuseau horaire manuel)
 
-When get out of plane:
+Quand vous sortez de l'avion :
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* éteignez la pompe
+* modifiez le fuseau horaire sur le téléphone
+* éteignez le téléphone, allumez la pompe
+* effacez l'historique de la pompe
+* changez l'heure de la pompe
+* allumez le telephone
+* laissez le téléphone se connecter à la pompe et ré-ajuster l'heure
 
 ## Combo
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Le driver Insight ajuste automatiquement l'heure de la pompe à l'heure du téléphone.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+L'Insight enregistre également dans l'historique quand l'heure a été modifiée, à partir de quelle (ancienne) heure et vers quelle (nouvelle) heure. Ainsi, l'heure correcte peut être déterminée dans AAPS malgré le changement d'heure.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+Cela peut causer des inexactitudes dans les DTI. Mais cela ne devrait pas être un problème.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skiped in calculation in AAPS as the correct time cannot be identified properly.
+L'utilisateur Insight n'a donc pas à s'inquiéter des changements de fuseau horaire et des changements d'heure. Il y a une exception à cette règle : la pompe Insight a une petite batterie interne pour sauvegarder l'heure, etc. lorsque vous changez la pile "réelle". Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer un nouveau la date et l'heure après avoir mis la nouvelle pile. Dans ce cas, toutes les entrées avant le changement de la pile sont ignorées dans les calculs de AAPS car l'heure exacte ne peut pas être identifiée correctement.
 
-# Time adjustment daylight savings time (DST)
+# Changements heure d'été / heure d'hiver
 
 Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
@@ -70,11 +70,11 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* Le changement d'heure est effectué automatiquement. Aucune action requise.
 
-## Other pumps - new as of AAPS version 2.2
+## Autres pompes - nouvelles depuis AAPS version 2.2
 
-**You have to update AAPS to use this feature!**
+**Vous devez mettre à jour AAPS pour utiliser cette fonctionnalité !**
 
 * To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
 * You will receive a notification on the main screen 24 hours prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.

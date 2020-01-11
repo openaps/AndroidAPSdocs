@@ -53,11 +53,13 @@ Pastaba: tarp pompos ir telefono nebus nuolatinio ryšio. A connection will only
 
 ## AAPS nustatymai
 
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump. As a consequence you will not be able to use Autotune but there is no alternative to disable this when using Insight pump.
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump.
 
-![Insight nustatymų ekrano vaizdas](../images/Insight_pairing_V2_5.png)
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
 
-AndroidAPS Insight nustatymuose suaktyvinkite šiuos parametrus:
+![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
+
+In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Log reservoir changes": This will automatically record an insulin cartridge change when you run the "fill cannula" program on the pump.
 * „Įrašyti infuzijos rinkinio pakeitimą“: Paleidus pompos funkciją „pradinis infuzijos rinkinio pildymas“, atitinkama pastaba pridedama prie AndroidAPS duomenų bazės.
@@ -84,9 +86,9 @@ AndroidAPS Insight nustatymuose suaktyvinkite šiuos parametrus:
 
 * „Atjungimo atidėjimas“: nusako, kiek laiko (sekundėmis) AndroidAPS lauks, kol atsijungs nuo pompos po veiksmo atlikimo. Numatytoji vertė yra 5 sekundės.
 
-Kol pompa sustabdyta, AAPS rodo laikiną bazės dydį 0%.
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
-AndroidAPS skirtuke „Accu-Chek Insight“ rodoma dabartinė pompos būklė ir du mygtukai:
+In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
 * Atnaujinti: Atnaujina pompos būklę
 * „Įgalinti / išjungti pranešimą apie LB“: Standartiškai Insight pompa siunčia aliarmą apie laikinos bazės LB pabaigą. Mygtukas leidžia įjungti arba išjungti šį perspėjimą nekeičiant programinės įrangos konfigūracijos.
@@ -95,14 +97,15 @@ AndroidAPS skirtuke „Accu-Chek Insight“ rodoma dabartinė pompos būklė ir 
 
 ## Pompos nustatymai
 
-Signalus pompoje nustatykite taip:
+Configure alarms in the pump as follows:
 
-* Meniu> Nustatymai> Įrenginio nustatymai> Režimo nustatymai> Tylus> Signalas> Garso meniu> Nustatymai> Įrenginio nustatymai> Režimo nustatymai> Tylus> Garsumas> 0 (pašalinti visas juostas)
-* Meniu> Režimo nustatymai> Signalo režimas> Tylus
+* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Modes > Signal mode > Quiet
 
-Tai pašalins visų pompos perspėjimų garsą ir leis AndroidAPS nuspręsti, kuris signalas jums aktualus. Jei AndroidAPS neatpažįsta signalo, padidės jo garsas (pirmiausia pypsėjimas, paskui vibracija).
+This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-Insight pompos su naujesne programine įranga visada vibruos, kai bus pateiktas bolusas (pvz., kai AndroidAPS siunčia SMB arba LB emuliaciją, nustato ištęstinį bolusą). Vibracija negali būti išjungta. Senesnės pompos šiais atvejais nevibruoja.
+Insight pumps with newer firmware will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus). Vibration cannot be disabled. Older pumps do not vibrate in these circumstances.
 
 ## Baterijos pakeitimas
 

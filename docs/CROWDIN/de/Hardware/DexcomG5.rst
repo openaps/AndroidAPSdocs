@@ -1,7 +1,7 @@
 Dexcom G5
-**********
+**************************************************
 Dexcom G5 mit xdrip+
-===========================
+==================================================
 * Lade `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
@@ -10,7 +10,7 @@ Dexcom G5 mit xdrip+
 * Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `Identify receiver` wie auf der Seite [xDrip+ settings page](../Configuration/xdrip.md) beschrieben.
 
 G5 mit der gepatchten Dexcom App
-=========================================================
+==================================================
 * Lade die APK von `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_ herunter  und wähle die Version, die Du benötigst (mg/dl oder mmol/l version, G5).
 
    * Im Ordner 2.3 befinden sich die APK für AndroidAPS 2.3 Anwender, entsprechend im Ordner 2.4 die für AAPS 2.5.
