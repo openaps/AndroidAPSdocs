@@ -140,16 +140,16 @@ Dies entspricht den Funktionen, die du bei Nightscout unter dem "+" Symbol finde
 Das Careportal kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge zu korrigieren (z.B. wenn Du die KH-Menge über- oder unterschätzt hast).
 
 1. Prüfe und merke Dir die aktuelle COB- und IOB-Menge, die auf dem Startbildschirm angezeigt wird.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+2. Je nach Pumpenmodell werden die Kohlenhydrate entweder zusammen mit dem Insulin in einer Zeile oder als separater Eintrag (z.B. bei der Dana RS) angezeigt.
    
-   ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+   ![Behandlung in einer oder zwei Zeilen](../images/Treatment_1or2_lines.png)
 
-3. Remove the entry with the faulty carb amount.
+3. Lösche den Eintrag mit der fehlerhaften KH-Menge.
 
-4. Make sure carbs are removed successfully by checking COB on homescreen again.
+4. Stelle sicher, dass die KH erfolgreich gelöscht wurden, indem Du COB auf dem Startbildschirm überprüfst.
 5. Mache das gleiche für IOB falls bei Dir im Tab 'Behandlungen' KH und Insulin zusammen in einer Zeile angezeigt werden.
    
-   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   -> Falls die KH nicht wie vorgesehen gelöscht werden und Du dennoch zusätzliche Kohlenhydrate eingibst, wird mit einem zu hohen COB gerechnet und dies kann zu überhöhter Insulinabgabe führen.
 
 6. Gib die korrekte Kohlenhydratmenge über das Careportal ein und achte dabei auf die Auswahl des richtigen Zeitpunkts.
 
