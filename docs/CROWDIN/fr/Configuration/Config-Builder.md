@@ -94,7 +94,7 @@ Sélectionnez la source de glycémie que vous utilisez - consultez la page [Sour
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * Glycémie NSClient
 * [Medtronic 640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [App Dexcom (patché)](https://github.com/dexcomapp/dexcomapp/) - Sélectionnez "Envoyer des données Gly à xDrip+" si vous voulez utiliser des alarmes xDrip+.
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ Quelques boutons pour accéder rapidement aux fonctions communes:
 * Temporary targets
 * Set / cancel temp. Débit de Base
 * Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Historique
 * TDD (Total daily dose = bolus + basal per day)
 
