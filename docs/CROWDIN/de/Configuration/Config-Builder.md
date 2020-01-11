@@ -94,7 +94,7 @@ Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. 
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * Nightscout-Client BZ
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - nur Version 4.15.57 und neuer werden unterstützt
 * [gepatchte Dexcom App](https://github.com/dexcomapp/dexcomapp/) - Wähle zusätzlich in den Einstellungen "Sende BZ-Werte zu xDrip+", wenn du die xDrip+ Alarme nutzen willst. 
     
     ![Konfigurations-Generator - BZ-Quelle](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ Einige Schaltflächen, um auf häufig verwendete Funktionen zugreifen zu können
 * Temporäres Ziel
 * Temporäre Basalrate starten / abbrechen
 * Verzögerter Bolus (nur für DanaR/RS und Combo)
-* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
+* Vorfüllen/Füllen (wenn von der Pumpe unterstützt [aktuell Dana R/RS, Combo und Insight])
 * Historie
 * TDD (Total daily dose = Bolus + Basal pro Tag)
 
