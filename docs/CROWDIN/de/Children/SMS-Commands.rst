@@ -127,13 +127,13 @@ Andere
 
 Problembehandlung
 ==================================================
-Multiple SMS
+Mehrfach-SMS
 --------------------------------------------------
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+Wenn Du die gleiche SMS immer und immer wieder empfängst (z.B. Profilwechsel), hast Du wahrscheinlich eine Endlosschleife mit einer anderen App eingerichtet. Das könnte zum Beispiel xDrip+ sein. Falls dies der Fall ist, stelle sicher, dass xDrip+ (oder eine andere App, die mit Nightscout verbunden ist), keine Behandlungsdaten hochlädt. 
 
-If the other app is installed on multiple phones make sure to deactive upload on all of them.
+Wenn die andere App auf mehreren Telefonen installiert ist, musst Du den Upload auf allen deaktivieren.
 
-SMS commands not working on Samsung phones
+SMS-Befehle funktionieren nicht auf Samsung-Smartphones
 --------------------------------------------------
 Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als chat message senden' behoben werden.
 
