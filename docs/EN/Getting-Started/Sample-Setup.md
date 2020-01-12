@@ -23,6 +23,9 @@ Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" wh
 2. [DanaR](http://www.sooil.com/eng/product/) or Dana RS insulin pump
  * Alternatives:  
    - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+   - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+   - [Medtronic pumps, older models](../Configuration/MedtronicPump.md)
+   - [Omnipod Eros, the original Omnipod version]((../Configuration/OmnipodEros.md)
    - Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
 
 3. [Dexcom G5](https://dexcom.com)

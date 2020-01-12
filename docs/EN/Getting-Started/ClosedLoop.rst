@@ -35,7 +35,8 @@ Compatible `pumps <../Hardware/pumps.html>`_ are:
 * DanaR / DanaRS
 * Accu-Chek Combo
 * Accu-Chek Insight
-* some old Medtronic pumps (as of version 2.4)
+* some old Medtronic pumps (as of version 2.5)
+* Omnipod Eros (the original version of Omnipod, expected to be supported in 2.6 version of AndroidAPS)
 
 OpenAPS
 --------------------------------------------------

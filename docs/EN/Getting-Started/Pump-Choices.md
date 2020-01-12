@@ -5,7 +5,9 @@ AndroidAPS currently works with
 - Accu-Chek Combo
 - Accu-Chek Insight
 - DanaR
-- DanaRS  
+- DanaRS
+- older model Medtronic pumps
+- OmnipodEros (development status, possibly in 2.6 version of AAPS) 
 
 pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
