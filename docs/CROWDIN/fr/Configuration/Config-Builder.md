@@ -199,15 +199,15 @@ Activer la fonction super bolus dans l'Assistant. Utilisez avec prudence et ne l
 
 Quelques boutons pour accéder rapidement aux fonctions communes:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
-* Set / cancel temp. basal rate
+* Changement de profils (voir la page [Changement de profil](../Usage/Profiles.md) pour plus d'informations sur la configuration)
+* Cibles temporaires
+* Définir/Annuler des débits de basal temporaires
 * Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
+* Amorcer/Remplir (si c'est supporté par la pompe [DanaR/RS, Combo et Insight])
 * Historique
-* TDD (Total daily dose = bolus + basal per day)
+* DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
 ![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
 
