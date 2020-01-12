@@ -52,48 +52,41 @@
 - Lisez bien le wiki pour comprendre comment configurer AndroidAPS.
 - Sélectionnez le plugin MDI dans AndroidAPS, surtout pas le plugin Combo à ce stade afin d'éviter que le plugin Combo n'interfère avec la Ruffy pendant le processus d'appairage.
 - Suivez le lien <http://ruffy.AndroidAPS.org> et clonez ruffy via git.
-- Installez la Ruffy et utilisez le pour appairer la pompe. Si elle ne fonctionne pas après plusieurs tentatives, passez à la branche `pairing`, appairez la pompe puis reprenez le fil de cette page. Notez que l'appairage doit seulement être lancé une fois, le traitement est un peu fragile et long car il peut y avoir plusieurs tentatives; Acquittez rapidement les notifications et si vous recommencez, supprimez de la liste Bluetooth du téléphone le dispositif pompe au préalable. Une autre option à essayer est d’aller dans le menu Bluetooth après l’initialisation du processus d’appairage (cela permet de maintenir le Bluetooth du téléphone détectable tant que le menu est affiché) et à revenir à Ruffy après la confirmation de l’appairage sur la pompe, lorsque la pompe affiche le code d’autorisation. Si vous n’avez pas réussi l’appairage de la pompe (disons après 10 tentatives), essayez d’attendre jusqu'à 10s avant de confirmer l’appairage sur la pompe (lorsque le nom du téléphone est affiché sur la pompe). If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
-- When AAPS is using ruffy, the ruffy app can't be used. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
-- If the pump is completely new, you need to do one bolus on the pump, so the pump creates a first history entry.
-- Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
-- To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+- Installez la Ruffy et utilisez le pour appairer la pompe. Si elle ne fonctionne pas après plusieurs tentatives, passez à la branche `pairing`, appairez la pompe puis reprenez le fil de cette page. Notez que l'appairage doit seulement être lancé une fois, le traitement est un peu fragile et long car il peut y avoir plusieurs tentatives; Acquittez rapidement les notifications et si vous recommencez, supprimez de la liste Bluetooth du téléphone le dispositif pompe au préalable. Une autre option à essayer est d’aller dans le menu Bluetooth après l’initialisation du processus d’appairage (cela permet de maintenir le Bluetooth du téléphone détectable tant que le menu est affiché) et à revenir à Ruffy après la confirmation de l’appairage sur la pompe, lorsque la pompe affiche le code d’autorisation. Si vous n’avez pas réussi l’appairage de la pompe (disons après 10 tentatives), essayez d’attendre jusqu'à 10s avant de confirmer l’appairage sur la pompe (lorsque le nom du téléphone est affiché sur la pompe). Si vous avez configuré ci-dessus le délai d'affichage du menu à 5s, vous devez l'augmenter à nouveau. Certains utilisateurs ont signalé qu'ils avaient eu besoin de le faire. Enfin, envisagez de passer dans une autre pièce en cas d’interférence avec des ondes radio. Au moins un utilisateur a immédiatement résolu les problèmes d'appairage en changeant simplement de pièce.
+- Quand AAPS utilise Ruffy, l'application Ruffy ne peut pas être utilisée. La façon la plus simple est de redémarrer le téléphone après le processus d'appairage et de laisser AAPS démarrer ruffy en arrière-plan.
+- Si la pompe est complètement nouvelle, vous devez faire un bolus sur la pompe pour que celle-ci crée une première entrée dans l'historique.
+- Avant d'activer le plugin Combo dans AAPS, assurez-vous que votre profil est bien configuré et activé et que votre profil de basal est à jour car AAPS synchronisera le profil basal à la pompe. Ensuite, activez le plugin Combo. Appuyez sur le bouton *Actualiser* dans l'onglet Combo pour initialiser la pompe.
+- Pour vérifier votre configuration, avec la pompe **déconnectée**, utilisez AAPS pour définir un DBT de 500% pendant 15 min et faite un bolus. La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
 
-## Why does pairing with the pump does not work with the app "ruffy"?
+## Pourquoi l'appairage avec la pompe ne fonctionne pas avec l'application "Ruffy"?
 
-There are serveral possible reasons. Try the following steps:
+Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 
-1. Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
+1. Insérer une **pile neuve ou un accu complètement chargé** dans la pompe. Consultez la section "Considérations relatives à la pile" pour plus de détails. Assurez-vous que la pompe est très proche du smartphone.
 
 ![Le Combo doit être proche du téléphone](../images/Combo_next_to_Phone.png)
 
-2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
+2. Désactivez ou supprimez tous les autres périphériques bluetooth afin qu'ils ne soient pas en mesure d'établir une connexion au téléphone pendant que l'appairage est en cours. Toute communication bluetooth parallèle ou demande de connexions peut perturber le processus d'appairage.
 
-3.     Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until 
-      **NO DEVICE** is shown.
+3.     Supprimez tous les appareils connectés dans le menu Bluetooth de la pompe : **RÉGLAGE BLUETOOTH / SUPPR. APPAREIL** jusqu'à ce que
+      **APPAREIL LIÉ AUCUN** soit affiché.
       
 
-4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
-5. Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
-6. Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
-7. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** * Step 5 and 6 have to be in a short timing.
-8.     Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
-      bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
+4. Supprimer une pompe déjà connecté le téléphone via Bluetooth : dans Paramètres / Bluetooth, retirez l'appareil couplé "**SpiritCombo**"
+5. Assurez-vous que AAPS n'exécute pas la boucle en arrière-plan. Désactiver la boucle dans AAPS.
+6. Maintenant, démarrez ruffy sur le téléphone. Vous pouvez appuyer sur Reset! et supprimer l'ancienne liaison. Puis appuyez sur Connect!.
+7. Dans le menu Bluetooth de la pompe, allez à **ADD DEVICE / ADD CONNECTION**. Appuyez sur *CONNECT!** * Les étapes 5 et 6 doivent être faite rapidement.
+8.     A présent, la pompe doit afficher le nom BT du téléphone à sélectionner pour l'appairage. Ici, il est important d'attendre au moins 5s avant de cliquer sur le bouton de sélection sur la pompe. Sinon, la Pompe n'enverra pas correctement la demande d'appairage au téléphone.
       
-      * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
-        between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
-        without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings.
-      * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
-        compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
-        possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
-        (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+      * Si le délai d'affichage de l'écran de la pompe Combo est défini sur 5s, vous pouvez faire le test avec 40s (paramètre d'origine). Par expérience la durée entre le moment ou la pompe est affichée dans le téléphone et celui où le téléphone est sélectionné est d'environ 5-10s. Dans de nombreux autres cas, le couplage expire sans succès. Plus tard, vous devrez le redéfinir sur 5 s pour répondre aux paramètrage du combo dans AAPS.
+      * Si la pompe n'affiche pas du tout le téléphone comme appareil de couplage, la puce Bluetooth de votre téléphone n'est probablement pas compatible avec la pompe. Assurez vous d'avoir au minimum **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. Si possible, essayez un autre smartphone. Vous pouvez trouver la liste des téléphones déjà utilisés avec succès sous [AAPS Phones] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
       
 
-9.     At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you 
-      should be ready to go.
+9.     Ensuite la pompe doit afficher un code de sécurité à 10 chiffres. Et Ruffy un écran pour le renseigner. Donc entrez le dans Ruffy et vous devriez être prêt à partir.
       
 
-10. Reboot the phone.
-11. Now you can restart AAPS loop.
+10. Redémarrer le téléphone.
+11. Maintenant, vous pouvez redémarrer la boucle AAPS.
 
 ## Utilisation
 
