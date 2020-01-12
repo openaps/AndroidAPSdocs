@@ -201,7 +201,7 @@ Quelques boutons pour accéder rapidement aux fonctions communes:
 
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
 * Temporary targets
-* Set / cancel temp. Débit de Base
+* Set / cancel temp. basal rate
 * Extended bolus (DanaR/RS or Combo pump only)
 * Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Historique
