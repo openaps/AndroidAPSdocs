@@ -127,13 +127,13 @@ Autres
 
 Dépannage
 ==================================================
-Multiple SMS
+SMS multiples
 --------------------------------------------------
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+Si vous recevez toujours le même message (par ex. changement de profil) vous avez probablement mis en place une boucle infinie avec d'autres applications. Cela peut être xDrip+, par exemple. Si c'est le cas, assurez-vous que xDrip + (ou toute autre application) ne télécharge pas les traitements dans NS. 
 
-If the other app is installed on multiple phones make sure to deactive upload on all of them.
+Si l'autre application est installée sur plusieurs téléphones assurez-vous de désactiver le téléchargement NS sur chacun d'eux.
 
-SMS commands not working on Samsung phones
+Les commandes SMS ne fonctionnent pas sur des téléphones Samsung
 --------------------------------------------------
 Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jour sur le téléphone Galaxy S10. Peut être résolu en désactivant 'envoyer en tant que message chat'.
 
