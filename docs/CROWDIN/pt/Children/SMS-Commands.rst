@@ -46,15 +46,15 @@ Loop
    * Response: Loop has been enabled
 * LOOP STATUS
    * Response depends on actual status
-      * Loop desactivado
-      * Loop activado
+      * Loop desactivado / Loop is disabled
+      * Loop activado / Loop is enabled
       * Suspended (10 min)
 * LOOP SUSPEND 20
    * Response: Loop suspended for 20 minutes
 * LOOP RESUME
    * Response: Loop resumed
 
-Dados do CGM
+Dados do CGM (Monitor Contínuo de Glicemia)
 --------------------------------------------------
 * GLIC
    * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
