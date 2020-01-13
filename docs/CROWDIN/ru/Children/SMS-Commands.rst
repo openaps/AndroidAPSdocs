@@ -127,13 +127,13 @@ AndroidAPS позволяет контролировать телефон реб
 
 Устранение неполадок
 ==================================================
-Multiple SMS
+Множество SMS
 --------------------------------------------------
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+Если вы получаете одно и то же сообщение снова и снова (напр. переключение профиля), вероятно, у вас произошло закольцовывание с другими приложениями. Это может быть xDrip+, например. Если это так, убедитесь, что xDrip+ (или любое другое приложение) не загружает назначения в NS. 
 
-If the other app is installed on multiple phones make sure to deactive upload on all of them.
+Если иное приложение установлено на нескольких телефонах, отключите выгрузку данных на всех этих телефонах.
 
-SMS commands not working on Samsung phones
+Команды SMS не работают на телефонах Samsung
 --------------------------------------------------
 Была жалоба на остановку работы SMS команд после обновления на телефоне Galaxy S10. Решается путем отключения опции "отправлять как сообщения чата".
 
