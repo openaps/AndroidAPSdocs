@@ -1,12 +1,14 @@
 # Definições xDrip+
 
-If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip).
+If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
 **This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
 For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) please make sure to use at least the [master dated 2019/05/18](https://jamorham.github.io/#xdrip-plus).
 
 If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+
+If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Basic settings for all CGM & FGM systems
 
