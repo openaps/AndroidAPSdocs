@@ -1,6 +1,6 @@
 # xDrip+ settings
 
-If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip). 
+If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus). 
 
 **This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
