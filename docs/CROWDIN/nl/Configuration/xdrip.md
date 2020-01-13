@@ -1,12 +1,14 @@
 # xDrip+ Instellingen
 
-If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip).
+If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
 **This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
 Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) zorg ervoor dat je de [master van 2019/05/18](https://jamorham.github.io/#xdrip-plus) gebruikt, of een recentere versie.
 
 Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+
+If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Basisinstellingen voor alle CGM-systemen & FSL
 
