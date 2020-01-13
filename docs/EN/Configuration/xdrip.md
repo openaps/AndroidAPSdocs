@@ -8,6 +8,7 @@ For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. startin
 
 If your Dexcom G6 transmitter's serial no. is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
+If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Basic settings for all CGM & FGM systems
 
