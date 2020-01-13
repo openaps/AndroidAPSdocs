@@ -106,9 +106,9 @@ J - активный инсулин (от болюсов | от базала)
 * ** Показывать заряд батареи телефона ** (по умолчанию ` Вкл `): Батарея телефона в%. Красная, если ниже 30%.
 * ** Показать батарею платформы ** (по умолчанию ` Выкл`): Батарея платформы - это интегральная величина заряда батареи телефона, помпы и трансмиттера (как правило, наименьшее из трех значений)
 * ** Показать базальную скорость ** (по умолчанию ` Вкл `): показывать на экране или нет текущую скорость базала (в ед/ч или в%, если TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
+* ** Показать состояние цикла ** (по умолчанию ` Вкл`): показывает время в мин после недавней работы цикла (стрелки вокруг значения покраснеют, если выше 15 ').
+* **Показать ГК** (по умолчанию `Вкл`): показывать или не показывать последнее значение ГК
+* **Показать стрелку тренда** (по умолчанию `Вкл`): показывать или не показывать стрелку тренда ГК
 * **Show Ago** (default `On`): show how many minutes since last reading.
 * **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
 * **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
