@@ -1,12 +1,14 @@
 # xDrip+ nastavení
 
-If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip).
+If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
 **This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
 Ujistěte se, že s vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající 80 nebo 81) používáte alespoň verzi [master ze dne 18. 05. 2019](https://jamorham.github.io/#xdrip-plus).
 
 Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+
+If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Základní nastavení pro všechny CGM & FGM systémy
 
