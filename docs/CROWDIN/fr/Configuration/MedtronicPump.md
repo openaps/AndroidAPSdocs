@@ -4,7 +4,7 @@
 
 * * *
 
-Fonctionne uniquement avec les anciennes pompes Medtronic (voir détails ci-dessous). Ne fonctionne pas avec Medtronic 640G ou 670G.
+Le pilote ne fonctionne qu'avec les anciennes pompes Medtronic (voir les détails ci-dessous). Ne fonctionne pas avec Medtronic 640G ou 670G.
 
 * * *
 
