@@ -74,8 +74,8 @@ Greitai veikiančio ir ypač greitai veikiančio insulino veikimo trukmė yra vi
 ### Ypač greito veikimo Oref
 
 * rekomenduojama FIASP
-* DIA = at least 5.0h
-* Max. pikas = 55 minutės po injekcijos (fiksuotas, nekeičiamas)
+* IVT = bent 5.0 val
+* Maks. pikas = 55 minutės po injekcijos (fiksuotas, nekeičiamas)
 
 Daugeliui žmonių FIASP poveikis beveik nepastebimas po 3–4 valandų, net jei paprastai lieka 0,0xx vienetų. Šis likutis gali būti jaučiamas, pavyzdžiui, sporto metu. Todėl AndroidAPS naudojama mažiausia IVT yra 5 val.
 
@@ -94,7 +94,7 @@ Pasirinkite pagrindinį glikemijos duomenų šaltinį - daugiau informacijos api
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient KG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - palaikoma versija 4.15.57 ir naujesnė
 * Modifikuota programa [ Dexcom App ](https://github.com/dexcomapp/dexcomapp/) - pasirinkite „Siųsti KG duomenis į xDrip+“, jei norite gauti pranešimus iš xDrip+.
     
     ![Glikemijos šaltinis konfigūratoriuje](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ Mygtukai greitesniam pagrindinių funkcijų paleidimui:
 * Laikinas tikslas
 * Nustatyti / atšaukti laikiną valandinę bazę
 * Ištęstas bolusas (tik DanaR/RS arba Combo pompa)
-* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
+* Pirminis užpildymas / kateterio užpildymas (jei palaiko pompa [DanaR/RS, Combo ir Insight])
 * Istorija
 * BPD (Bendra paros dozė = bolusas + bazė per dieną)
 
