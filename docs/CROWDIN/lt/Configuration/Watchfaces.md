@@ -1,95 +1,95 @@
-# AAPS on Wear OS smartwatch
+# AAPS išmaniajame laikrodyje su Wear OS
 
-You can install AndroidAPS app on your **Wear OS based** smartwatch. Watch version of AAPS allows you to:
+Galite instaliuoti AndroidAPS programėlę savo **Wear OS pagrindu** veikiančiame laikrodyje. AAPS versija laikrodžiui leidžia:
 
 * **display data on your watch**: by providing [custom watchfaces](#aaps-watchfaces) or in standard watchfaces with use of [complications](#complications)
-* **control AAPS on phone**: to bolus, set a temporary target etc. 
+* **valdyti AAPS telefone**: suleisti bolusą, nustatyti laikiną tikslą ir pan. 
 
-### Before you buy watch...
+### Prieš perkant laikrodį...
 
 * Some features like *complications* require Wear OS version 2.0 or newer to work
-* Google rebranded *Android Wear 1.x* to *Wear OS* from version 2.x, so when it says *Android Wear* it may indicate older 1.x version of system
-* If description of smartwatch indicates only compatibility with *Android* and *iOS* - it **does not** means it runs on *Wear OS* - it may as well be some other sort of Vendor specific OS **which is not compatible with AAPS wear!**
-* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* "Google" pervadino * Android Wear 1.x* į *Wear OS* iš versijos 2.x, todėl, jei nurodoma *Android Wear*, tai gali būti senesnė 1.x sistemos versija
+* Jei išmaniojo laikrodžio aprašyme nurodomas tik suderinamumas su *Android* ir *iOS* - tai **ne**reiškia, kad jis veikia su *Wear OS* - tai gali būti šiek tiek kitos rūšies gamintojo specifinė OS **, kuri nėra suderinama su AAPS!**
+* Patikrinkite [sąrašą išbandytų telefonų ir laikrodžių](../Getting-Started/Phones#list-of-tested-phones) ir [paklauskite bendruomenės](../Where-To-Go-For-Help/Connect-with-other-users.md), jei kyla abejonių ar jūsų laikrodis yra palaikomas
 
-### Building Wear OS version of AAPS
+### AAPS Wear OS versijos sukūrimas
 
-To build Wear OS version of AAPS you needed to select the build variant "fullRelease" when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpRelease" will allow you to just remote control the pump without looping).
+Norint sukurti AAPS Wear OS versiją, jums reikia pasirinkti variantą "fullRelease", kai [kuriate APK](../Installing-AndroidAPS/Building-APK.md) (arba versiją "pumpRelease", kuri leis jums tiesiog nuotoliniu būdu valdyti pompą be ciklo).
 
-Make sure both phone and wear versions of AAPS are signed with same keys!
+Įsitikinkite, kad telefono ir laikrodžio AAPS versijos yra pasirašytos tais pačiais raktais!
 
-Wear variant of APK need to be installed on watch in the same way you will install phone APK on phone. It may require enabling *developer mode* on watch and uploading and installing APK on watch with: `adb install wear-full-release.apk`
+Laikrodžio APK versija turi būti įdiegta laikrodyje tuo pačiu būdu, kaip ir telefono APK telefone. Tai gali pareikalauti įjungti *kūrėjo režimą* laikrodyje ir įkelti bei įdiegti APK laikrodyje su `adb install wear-full-release.apk`
 
-When using wear version of AAPS, always update it together with phone version of app - keep their versions in sync.
+Naudojant laikrodžio AAPS versiją, visada atnaujinkite ją kartu su telefono programėlės versija - paikykite jų versijas sinchroniškai.
 
-### Setup on the Phone
+### Nustatymas telefone
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
+AndroidAPS konfigūratoriuje turite [aktyvuoti Wear įskiepį](../Configuration/Config-Builder#wear).
 
-## Controlling AAPS from Watch
+## AAPS kontrolė laikrodyje
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
+AndroidAPS galima *valdyti* naudojant Android Wear išmanųjį laikrodį. Pavyzdžiui, jei norite suleisti boliusą, tuomet laikrodžio nustatymuose turėtumėte įjungti „Valdymas iš laikrodžio“.
 
-The following functions can be triggered from the watch:
+Iš laikrodžio galite paleisti šias funkcijas:
 
-* set a temporary target
-* administer a bolus
-* administer eCarbs
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* check the status of loop and pump
-* show TDD (Total daily dose = bolus + basal per day)
+* nustatyti laikiną tikslą
+* administruoti bolusą
+* administruoti iAV
+* naudoti boluso skaičiuoklę (skaičiavimo kintamieji gali būti apibrėžti telefono [nustatymuose](../Configuration/Config-Builder#wear))
+* patikrinti pompos ir ciklo būklę
+* parodyti TDD (Bendra paros dozė = bolusas + bazė per dieną)
 
-## AAPS Watchfaces
+## AAPS ciferblatai
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną IOB, esamą laikiną bazinę TBR ir bazinį profilį bei CGM duomenų grafiką.
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Įsitikinkite, kad AndroidAPS pranešimai nėra užblokuoti laikrodyje. Veiksmo patvirtinimas (pavyzdžiui, bolusas, laikini tikslai) įvyksta per pranešimus, kuriuos reikia patempti į šoną ir paspausti varnelę.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Norėdami greičiau patekti į AAPS meniu, du kartus spustelėkite ant glikemijos. Dukart spustelėję glikemijos kreivę, galite pakeisti laiko skalę.
 
-## Watchfaces available
+## Galimi ciferblatai
 
-![Available watchfaces](../images/Watchface_Types.png)
+![Galimi ciferblatai](../images/Watchface_Types.png)
 
-## AAPSv2 watchface - Legend
+## AAPSv2 laikrodžio ekranas - paaiškinimai
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![AndroidAPSv2 laikrodžio ekrano informacija](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - laikas nuo paskutinės ciklo veiklos
 
-B - CGM reading
+B - CGM duomenys
 
-C - minutes since last CGM reading
+C - minutės nuo paskutinių CGM duomenų
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - pokytis, palyginti su praėjusiais CGM duomenimis (mmol arba mg/dl),
 
-E - average change CGM reading last 15 minutes
+E - vidutinis CGM duomenų pokytis per pastarąsias 15 minučių
 
-F - phone battery
+F - telefono baterija
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - valandinė bazė (parodyta vv/h standartiniu suleidimu ir % per laikiną bazę TBR)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - kraujo glikemijos sąveika -> tikėtinas glikemijos pokytis, pagrįstas vien aktyviu insulinu.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - Angliavandeniai (aktyvūs angliavandeniai | e-angliavandeniai ateityje)
 
-J - insulin on board (from bolus | from basal)
+J - aktyvus insulinas (iš boluso | iš bazės)
 
-## Accessing main menu of AAPS
+## Pasiekti pagrindinį AAPS meniu
 
-To access main menu of AAPS you can use on of following options:
+Norėdami atidaryti pagrindinį AAPS meniu, galite naudoti šias parinktis:
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* dukart bakstelėkite į savo KG vertę
+* pasirinkite AAPS piktogramą laikrodžio programų meniu
+* bakstelėkite į AAPS funkciją (jei sukonfigūruota meniu)
 
-## Settings (in wear watch)
+## Nustatymai (išmaniajame laikrodyje)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Norint pasiekti laikrodžio ekrano nustatymus, įeikite į AAPS pagrindinį meniu, paslinkite aukštyn ir pasirinkite "Nustatymai".
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+Užpildyta žvaigždutė reiškia, kad būsena yra aktyvi (**Įjungta**), o tuščiavidurės žvaigžutės piktograma rodo, kad nustatymas yra išjungtas (**Išjungta**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Nustatymai įjung/išjung](../images/Watchface_Settings_On_Off.png)
 
 ### AAPS companion parameters
 
@@ -237,7 +237,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## View Nightscout data
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną IOB, esamą laikiną bazinę TBR ir bazinį profilį bei CGM duomenų grafiką.
 
 # Pebble
 
