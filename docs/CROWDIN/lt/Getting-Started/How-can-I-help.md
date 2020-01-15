@@ -1,48 +1,48 @@
-# How to help with AndroidAPS
+# Kaip padėti su AndroidAPS
 
-**AndroidAPS operates entirely on volunteer efforts and has no paid staff.**
+**AndroidAPS veikia tik savanorių pastangomis ir neturi apmokamų darbuotojų.**
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Tėvai, globėjai, artimieji ir diabetu sergantys žmonės dirba kartu, kad padėtų rasti labai bendros problemos sprendimą. Kūrėjai laisvu metu dirba nemokamai. Bet būtų šiek tiek nesąžininga tikėtis, kad jie išleis pinigus padarydami tokį fantastišką atviro kodo visiems prieinamą projektą.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Norėdami visiškai išbandyti naują įrenginį, kūrėjams reikia atsarginio telefono ir atsarginės pompos, nes tokių bandymų negalima atlikti žmonėms, kol AndroidAPS neveikia stabiliai. Naujesnius modelius reikia išbandyti, kai tik jie tampa prieinami. Dalis paaukotų pinigų taip pat bus skirti šiai bandymo įrangai išsiųsti kūrėjams visame pasaulyje. Kartais naudinga paaukoti, kad kūrėjai galėtų palikti savo tamsius kambarius ir susitikti vienas su kitu konferencijose ir renginiuose, kur galėtų leisti susidurti savo kūrybinėms ir analitinėms smegenims.*
 
-**I can write code! How do I participate?**
+**Aš galiu parašyti kodą! Kaip man dalyvauti?**
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Super! Tyrinėkite problemas, klauskite gitter kanale, visada yra daug ką nuveikti! Pirmiausia pasirinkite nedidelę užduotį ir pirmą kartą prisidėkite prie viso projekto! :)
 
-**I know the system and can write documentation!**
+**Aš žinau sistemą ir galiu parašyti dokumentaciją!**
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+Puiku, tai yra labai vertinama ir yra geras būdas dalyvauti!
 
-* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Instead, you can now also contact the documentation team via the new email address: wiki@androidaps.org.
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). Dabar galite susisiekti su dokumentacijos komanda nauju el. pašto adresu: wiki@androidaps.org.
+* Nurodymus, kaip pateikti aprašymus anglų kalba, galite rasti čia: [Kaip daryti PR](../make-a-PR.md). Kitos kalbos yra išverstos tik iš anglų kalbos ir dėl vientisumo ir nuoseklumo jų taisyti negalima.
 
-**I do speak multiple languages and whant to translate the app or the documentation**
+**Aš kalbu keliomis kalbomis ir noriu išversti programą ar dokumentus**
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://translations.androidaps.org).
-* If you want to translate **the wiki** to other languages (thank you), please use [crowdin](https://wikitranslations.androidaps.org). 
+* Jei norite versti **programą** į kitas kalbas (ačiū), naudokite [crowdin](https://translations.androidaps.org).
+* Jei norite išversti **AAPS wiki** į kitas kalbas (ačiū), naudokite [crowdin](https://wikitranslations.androidaps.org). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Tiesiog užsiregistruokite CROWDIN, pasirinkite savo kalbą, palaukite administratoriaus leidimo ir judėkite toliau!
 
-**I've got cash I'd like to donate, how do I do that?**
+**Aš turiu pinigų, aš norite paaukoti, kaip man tai padaryti?**
 
     PayPal: [donations@androidaps.org](donations@androidaps.org)  
     
 
-**What is the money used for?**
+**Kam yra naudojami pinigai?**
 
-The money is NOT paid to anyone for their work! It is used to keep the costs for the developers low when organizing meetings. We try to be very transparent. Here's an example from 2018:
+Pinigai už darbą niekam nemokami! Organizuojant konferencijas pinigai skiriami kūrėjų išlaidoms sumažinti. Mes stengiamės būti kuo atviresni. Štai pavyzdys iš 2018:
 
-* European Dev Meetup in Prague end of May 2018:
-* hiring a room plus internet
-* equipment
-* food / coffee
-* in the unlikely case the above will be fully covered and some money remains: travel expenses for those who have to travel a longer distance. (Some devs from other continents will attend but are in Europe already at that time, so travel costs will be kept low.)
+* Europos kūrėjų susitikimas Prahoje 2018 m. gegužės mėn. pabaigoje:
+* išsinuomoti kambarį plius internetas
+* įranga
+* maistas / kava
+* mažai tikėtinu atveju, jei viskas bus padengta ir liko šiek tiek pinigų: kelionių išlaidos tiems, kurie turi nukeliauti didelius atstumus. (Dalis kūrėjų iš kitų žemynų dalyvaus, bet šiuo metu jau yra Europoje, todėl kelionės išlaidos bus mažos.)
 
-**I've got spare equipment, where do I send it?**
+**Aš turiu atsarginės įrangos, kur man ją nusiųsti?**
 
-We are currently collecting "will be provided later" to begin distributing them for testing. At the end of the process, any leftover equipment will be donated to one of the Pay-it-Forward facebook groups that exist to support the T1 community. If you want to donate spare equipment, e-mail developers@androidaps.org and we'll send you an address.
+Šiuo metu renkame fondą „kurį reikia pateikti vėliau“, kad pradėtume platinti testavimo įrangą. Proceso pabaigoje likusi įranga bus perduota vienai iš „Pay-it-Forward“ grupių palaikyti T1 bendruomenę. Jei norite paaukoti papildomos įrangos, prašome susisiekti el. paštu developers@androidaps.org ir mes jums atsiųsime adresą, kurį turite atsiųsti.
 
-**I don't have cash or equipment, how can I help?**
+**Aš neturiu pinigų arba įrangos, kaip aš galiu padėti?**
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Mums reikalingi įgūdžiai: grafinis dizainas, UX dizainas, vertimai, wiki redagavimas ar tiesiog žmonės, pasirengę atsakyti į paprastus klausimus Facebook & gitter, kad kūrėjai galėtų sutelkti dėmesį į sudėtingesnius dalykus.
