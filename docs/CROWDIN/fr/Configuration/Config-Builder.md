@@ -213,11 +213,11 @@ Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de 
 
 ### Careportal
 
-Allows you to record any specific care entries and view the current sensor, insulin, canula and pump battery ages in the Careportal (CP) tab.
+Permet d'enregistrer toutes les entrées de soins spécifiques et d'afficher l'age du capteur, de l'insuline, de la canule et de la pompe dans l'onglet Careportal (CP).
 
-Note: **No insulin** will be given if entered via careportal (i.e. meal bolus, correction bolus...)
+Remarque : **Aucune insuline** ne sera donnée si elle est entrée via Careportal (par ex. Bolus Repas, Bolus de Correction...)
 
-Carbs entered in the careportal (i.e. correction carbs) will be used for COB calculation.
+Les glucides entrés dans Careportal (par ex. Ressucrage) seront utilisés pour le calcul des GA.
 
 ![Careportal tab](../images/ConfBuild_CarePortal.png)
 
@@ -229,7 +229,7 @@ Permet aux aidants à distance de contrôler certaines fonctionnalités d'Androi
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Remarque : Les entrées ne peuvent pas être utilisées dans la calculatrice AndroidAPS. (Affichage uniquement)
 
 ### Wear
 
@@ -242,11 +242,11 @@ Si vous voulez commander AAPS depuis la montre (bolus etc) vous devez activer "C
 Via l'onglet Wear ou le menu hamburger (en haut à gauche de l'écran, si l'onglet n'est pas affiché), vous pouvez
 
 * Renvoyer toutes les données. Cela peut être utile si la montre n'est pas connectée pendant un certain temps et que vous voulez envoyer toutes les informations à la montre.
-* Open settings on your watch directly from your phone.
+* Ouvrez le menu Paramètres de votre montre directement depuis votre téléphone.
 
 ### Barre d'état pour xDrip (Montre)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Affiche les informations de la boucle sur votre cadran xDrip+ (si vous n'utilisez pas les cadrans AAPS/[cadran AAPSv2](../Configuration/Watchfaces.md)
 
 ### Notification en cours
 
@@ -262,7 +262,7 @@ If **Log app start to NS** is activated each AndroidAPS will be visible in Night
 
 #### Options d'alarme
 
-Activate/deactivate AndroidAPS alarms
+Activez/désactivez les alarmes AndroidAPS
 
 ![Options d'alarme](../images/ConfBuild_NSClient_Alarms.png)
 
@@ -287,8 +287,8 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 ### Maintenance
 
-Email and number of logs to be send. Normally no change necessary.
+E-mail et le nombre de journaux à envoyer. Normalement pas de changement nécessaire.
 
 ### Générateur de configuration
 
-Use tab for config builder instead of hamburger menu.
+Utilisez l'onglet pour le générateur de configuration au lieu du menu hamburger.
