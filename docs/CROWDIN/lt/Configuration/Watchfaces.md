@@ -91,71 +91,71 @@ Užpildyta žvaigždutė reiškia, kad būsena yra aktyvi (**Įjungta**), o tuš
 
 ![Nustatymai įjung/išjung](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### AAPS lydinčios programėlės parametrai
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Vibruoti leidžiant bolusą** (numatytasis `Įjungta`):
+* **Vienetų Veiksmai** (numatytasis `mg/dl`): jei **Įjungta** vienetų veiksmai yra `mg/dl`, jei **Išjungta** vienetai yra `mmol/l`. Naudojama nustatant LT iš laikrodžio.
 
-### Watchface settings
+### Laikrodžio ekrano nustatymai
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
-* **Show Ago** (default `On`): show how many minutes since last reading.
-* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
-* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
-* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* **Rodyti datą** (numatyta - `Išjungta`): pastaba, data matoma ne visų laikrodžių ekranuose
+* **Rodyti AIO** (numatyta - `Įjungta`): rodyti arba ne AIO reikšmes (nustatyti išsamias vertes galite AAPS parametruose)
+* **Rodyti AIO** (numatyta `Įjungta`): Rodyti arba ne AIO vertę
+* **Rodyti delta** (numatyta -` Įjungta`): rodyti arba ne KG reišmių kitimus per paskutines 5 minutes
+* **Rodyti AVGdelta** (numatyta - `Įjungta`): rodyti arba ne vidutinius KG reišmių kitimus per paskutines 15 minučių
+* **Rodyti telefono bateriją** (numatyta `Įjungta`): Telefono baterija %. Raudona, jei mažiau nei 30% .
+* **Rodyti įrenginio bateriją** (numatyta - `Išjungta`): įrenginio baterija yra telefono, pompos bei sensoriaus baterijų sintezė (paparastai žemiausia iš 3 reikšmių)
+* **Rodyti valandinę bazę** (numatyta - `Įjungta`): rodyti arba ne dabartinę valandinę bazę (V/h arba %, jei LVB)
+* **Rodo ciklo būklę** (numatyta - `Įjungta`): rodyti kiek minučių praėjo nuo paskutinio ciklo suveikimo (rodyklės aplink reikšmę patampa raudonomis, jei virš 15'').
+* **Rodyti KG** (numatyta `Įjungta`): Rodyti arba ne KG vertę
+* **Rodyti krypties rodykles** (numatyta `Įjungta`): Rodyti arba ne KG kitimo rodyklę
+* **Rodyti Prieš** (numatytasis `Įjungta`): rodo, kiek minučių praėjo nuo paskutinio nuskaitymo.
+* **Tamsus** (numatyta `Įjungta`): galite perjungti iš juodo fono į baltą (išskyrus Cockpit ir Steampunk laikrodžio ekranus)
+* **Išryškinti valandinę bazę** (numatyta `Išjungta`): pagerinti valandinės bazės ir laikinos bazės matomumą
+* **Atitikimo daliklis** (numatyta `Išjungta`): AAPS, AAPSv2 ir AAPS(Didelis) laikrodžio ekranuose parodyti kontrastingą fono daliklį (**Išjungta**) arba atitikti daliklį su fono spalva (**Įjungta**)
+* **Diagramos laikotarpis** (numatyta `3 valandos`): galite pasirinkti iš papildomo meniu maksimalų laikotarpį tarp 1 ir 5 valandų.
 
-### User Interface setting
+### Vartotojo sąsajos nustatymas
 
-* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+* **Įvesties dizainas**: šiuo parametru galite pasirinkti "+" ir "-" mygtukų poziciją, kai įvedate komandas AAPS (LT, insulinas, angliavandeniai...)
 
-![Input design options](../images/Watchface_InputDesign.png)
+![Įvesties dizaino variantai](../images/Watchface_InputDesign.png)
 
-### Specific watchface parameters
+### Specifiniai laikrodžio ekrano parametrai
 
-#### Steampunk watchface
+#### Steampunk ciferblatas
 
-* **Delta Granularity** (default `Medium`)
+* **Delta detalumas** (numatytasis `Vidutinis`)
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
-#### Circle WF
+#### Apvalus ciferblatas
 
-* **Big Numbers** (default `Off`): Increase text size to improve visibility
-* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
-* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* **Dideli skaičiai** (numatytasis `Išjungta`): Padidinti teksto dydį, siekiant pagerinti matomumą
+* **Glikemijos Istorija** (numatytasis `Išjungta`): Peržiūrėti grafiškai BG istoriją su pilkais žiedais viduje žalio valandų žiedo
+* **Šviesi glikemijos storiją** (numatytasis `Įjungta`): Glikemijos istorija su daugiau tamsesnės pilkos spalvos
+* **Animacija** (numatytasis `Įjungta`): Kai įjungta, funkciją palaikančiuose laikrodžiuose ir ne energijos taupymo mažos rezoliucijos režime, ekrano vaizdas bus animuotas
 
-### Commands settings
+### Komandų nustatymai
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
-* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
-* **Single Target** (default `On`):
+* **Vedlys yra Meniu** (numatyta` Įjungta`): leisti vedlio sąsajai pagrindiniame meniu įvesti angliavandenius ir nustatyti bolusus iš laikrodžio
+* **Užpildymas per Meniu** (numatytasis `Išjungta`): Leisti užpildymą iš laikrodžio
+* **Vienas tikslas** (numatytasis `Įjungta`):
   
-  * `On`: you set a single value for TT
-  * `Off`: you set Low target and high target for TT
+  * `Įjungta`: nustatysite vieną reikšmę LT
+  * `Išjungta`: nustatysite LT žemą ir aukštą reikšmes
 
-* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+* **Vedlys procentais** (numatyta `Išjungta`): leisite boluso korekciją iš vedlio (reikšmė įvesta procentais prieš patvirtinimo pranešimą)
 
-## Complications
+## Komplikacijos (plėtiniai)
 
-*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+*Komplikacija* yra terminas iš tradicinės laikrodžių gamybos, aprašantis priedus prie pagrindinio ciferblato - kitas mažas langelis arba papildomas ciferblatas (su data, savaitės diena, mėnulio faze ir pan.). Paprastai kalbant, Wear OS 2.0 leidžia pritaikytų duomenų teikėjams, pvz., oras, pranešimai, fitneso skaitikliai ir pan. būti pridėtiems į bet kurį ciferblatą, palaikantį komplikacijas.
 
-AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+AndroidAPS Wear OS programėlė palaiko komplikacijas nuo versijos `2.6` ir leidžia bet kurių trečiųjų šalių ciferblatą, palaikantį komplikacijas, sukonfigūruoti rodyti su AAPS susijusius duomenis (KG tendenciją, AIO, AAO ir t. t.).
 
-Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+Komplikacijos gali atlikti **nuorodų** į AAPS funkcijas. Bakstelėję jas, galite atidaryti su AAPS susijusius meniu ir dialogus (priklauso nuo komplikacijų tipo ir konfigūracijos).
 
-![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Plėtiniai_ciferblate](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Complication Types
 
@@ -201,21 +201,21 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
   * *eCarb*: eCarb configuration dialog
   * *Status*: status sub-menu
   * *None*: Disables tap action on AAPS complications
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+* **Unicode komplikacijose** (numatytasis `Įjungta`): Kai `Įjungta`, plėtiniuose bus naudojami Unicode simboliai, tokie kaip: `Δ` Delta, `⁞` vertikalių taškų daliklis arba `⎍` bazės simbolis. Jų pateikimas priklauso nuo šrifto, kuris gali būti būdingas tik tam ciferblatui. Ši parinktis leidžia perjungti Unicode simbolius `Išjungta` kai reikia - jei šriftas, naudojamas parinktiniuose ciferblatuose nepalaiko šių simbolių - taip išvengiant grafinių trikdžių.
 
-## Performance and battery life tips
+## Patarimai dėl darbo ir baterijos gyvavimo
 
-Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+Wear OS laikrodžiai labai imlūs baterijos energijai. Laikrodžio dydis riboja baterijos talpą. Netgi su aparatinės dalies ir programinės įrangos patobulinimais, Wear OS laikrodžiai reikalauja kasdienės įkrovos.
 
-If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+Jei baterijos tarnavimo trukmė yra trumpesnė nei diena (nuo aušros iki sutemų), štai keletas patarimų sprendžiant sunkumus.
 
-Main battery-demanding areas are:
+Pagrindinės baterijos eikvojimo sritys:
 
-* Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-* Rendering on screen
-* Radio communication over Bluetooth
+* Aktyvus ekranas su apšvietimu (LED) arba visu intensyvumo režimu (OLED)
+* Atvaizdavimas ekrane
+* Radijo ryšys per Bluetooth
 
-Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
+Kadangi mes negalima nutraukti ryšio (mums reikia atnaujinti duomenis), ir norime turėti naujausius atvaizduotus duomenis, dauguma patobulinimų gali būti padaryta *laiko rodymo* srityje:
 
 * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
 * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
