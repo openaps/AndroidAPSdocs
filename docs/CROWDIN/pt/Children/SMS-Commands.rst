@@ -2,9 +2,9 @@ Comandos SMS
 **************************************************
 Segurança Em Primeiro Lugar
 ==================================================
-* AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code.
+* O AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. So always protect it at least by a PIN code.
 * AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+* ** Se o bolus for realizado através de Comandos SMS os hidratos de carbono (carbs) devem ser introduzidos através do Nightscout (NSClient, Website ...)! ** Se não o fizer a insulina ativa (IOB) seria correlacionada com hidratos restantes (COB) muito baixos, podendo levar o AAPS a não realizar um bolus de correção por assumir que insulina ativa (IOB) está demasiado elevada.
 
 Como funciona
 ==================================================
@@ -17,50 +17,50 @@ Como funciona
 * Se quiser usar mais de um número:
 
   * Insira inicialmente apenas um número.
-  * Make that single number work by sending and confirming a SMS command.
-  * Enter additional number(s) separated by semicolon, no space.
+  * Teste o número enviando e confirmando um comando SMS.
+  * Insira o(s) número(s) adicional(es) separados por ponto e vírgula, sem espaço.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
       :alt: SMS Commands Setup
 
 
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+* Envie um SMS para o telemóvel com o AndroidAPS a partir do seu número de telefone(s) aprovado, usando qualquer um dos comandos abaixo, o telemóvel responderá com uma SMS para confirmar o sucesso do comando ou status solicitado. Confirme o comando enviando uma SMS com código enviado do smartphone com o AAPS (quando pedido).
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**Dica**: Pode ser útil ter SMS ilimitados em ambos os telefones se um número elevado de SMS for enviado.
 
 Comandos
 ==================================================
 
-Upper and lower case is irrelevant when sending commands.
+É indiferente enviar os comandos em maiúsculas ou minúsculas.
 
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+Os comandos têm de ser enviados em inglês, a resposta será no idioma selecionado se a tradução já tiver sido realizada <../traduções.html#traduzir-cordas-de-androidaps-app>`_.
 
 .. image:: ../images/SMSCommands.png
-  :alt: SMS Commands Example
+  :alt: Exemplo de comandos SMS
 
 Loop
 --------------------------------------------------
 * LOOP STOP/DISABLE
-   * Response: Loop has been disabled
+   * Resposta: Loop foi desativado / Loop has been disabled
 * LOOP START/ENABLE
-   * Response: Loop has been enabled
+   * Resposta: Loop foi ativado / Loop has been enabled
 * LOOP STATUS
-   * Response depends on actual status
+   * Resposta depende do status atual
       * Loop desactivado / Loop is disabled
       * Loop activado / Loop is enabled
-      * Suspended (10 min)
+      * Suspenso (10 min) / Suspended (10 min)
 * LOOP SUSPEND 20
-   * Response: Loop suspended for 20 minutes
+   * Resposta: Loop suspenso por 20 minutes / Loop suspended for 20 minutes
 * LOOP RESUME
-   * Response: Loop resumed
+   * Resposta: Loop foi retomado / Loop resumed
 
 Dados do CGM (Monitor Contínuo de Glicemia)
 --------------------------------------------------
 * GLIC
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+   * Resposta: Última BG: 5,6 há 4 min, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * Resposta: Para enviar calibração 5,6 responda com Rrt
+   * Resposta após o código correto ter sido recebido: Calibração enviada (**Se xDrip estiver instalado. Aceitar calibração deve estar habilitado no xDrip+**)
 
 Basal
 --------------------------------------------------
