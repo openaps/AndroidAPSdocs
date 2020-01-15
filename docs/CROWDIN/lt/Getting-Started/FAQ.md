@@ -333,7 +333,7 @@ Dabar negausite skambučių ir nebūsite prisijungęs prie interneto. Bet ciklas
 
 Kai kuriems vartotojams kilo problemų naudojantis telefoną skrydžio režime (AAPS negavo glikemijos reikšmių iš xDrip+). Eikite į Parametrai > Inter-app nustatymai > Nustatyti gavėjus ir įrašyti `info.nightscout.androidaps`.
 
-![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
 ### Keliavimas
 
