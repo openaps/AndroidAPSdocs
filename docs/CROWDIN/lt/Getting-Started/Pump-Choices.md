@@ -1,25 +1,25 @@
-# Pump choices
+# Pompų pasirinkimas
 
-AndroidAPS currently works with
+AndroidAPS šiuo metu veikia su
 
 * Accu-Chek Combo
 * Accu-Chek Insight
 * DanaR
 * DanaRS 
 
-pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+pompomis. Informaciją apie kitas pompas, kurios ilgainiui gali veikti su AndroidAPS, galite rasti puslapyje [Ateityje galimai naudojamos pompos](Future-possible-Pump-Drivers.md).
 
-If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+Žmonės, kurie turi pasirinkti naują pompą, dažnai klausia, kurią pasirinkti. Išsamią informaciją apie įvairius platintojus galite rasti šioje [lentelėje](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Prašome užpildyti savo patirtį, jei jos dar nėra sąraše.
 
-The Combo and the Insight are solid pumps, and loopable. The advantages of the DanaR/RS as the pump of choice however are:
+Combo ir Insight yra puikios pompos, tinkamos uždaro ciklo sistemai. Tačiau DanaR/RS pranašumai yra šie:
 
-* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
+* DanaR RS gali prisijungti prie beveik bet kurio išmaniojo telefono, kuriame įdiegta Android> = 5.1. Nebūtina pakeisti gamyklinės programinės įrangos (pvz., Operacine sistema Lineage). Jei jūsų išmanusis telefonas sugenda arba yra pavogtas, galite greitai rasti kitą, kuris veiks su Dana </em> R/RS pompa... su Combo tai nėra taip lengva. bent jau tol, kol Android 8.1 diegiama tik keliuose telefonų modeliuose
 
-* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
+* Pirmą kartą nustatyti DanaR/RS ir išmaniojo telefono ryšį yra lengviau. Tačiau paprastai šio žingsnio reikia tik pradinio sąrankos metu.
 
-* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+* Kol kas Combo dirba su ekrano analizavimu. Iš esmės tai veikia gerai, bet, deja, lėtai. Tai nėra taip blogai, ko reikia ciklui, nes visa tai veikia fone. Tačiau tai leis lengviau atšaukti esamą Bluetooth ryšį. Tai gali būti nepatogu, jei inicijuojate bolusą ir vėliau būdami per daug toli nuo išmaniojo telefono, pvz.,& gamindami maistą.
 
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Combo vibruoja laikinos bazės TBR pabaigoje, Dana* R vibruoja (arba supypsi) dėl SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
 
 * Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 
