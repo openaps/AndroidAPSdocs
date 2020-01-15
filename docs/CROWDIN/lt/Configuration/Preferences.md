@@ -111,18 +111,18 @@ Jei AndroidAPS naudojate kaip atvirą ciklą, įsitikinkite, kad konfigūratoriu
 
 ## NS Client
 
-* Čia įveskite savo Nightscout URL (https://jususvetaine.herokuapp.com arba https://jususvetaine.azurewebsites.net) ir API paslaptį kodas (12 simbolių slaptažodis heroku arba azure nustatymuose). This enables data to be read and written between both the nightscout website and AndroidAPS. Double check for typos here if you are stuck in Objective 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+* Čia įveskite savo Nightscout URL (https://jususvetaine.herokuapp.com arba https://jususvetaine.azurewebsites.net) ir API paslaptį kodas (12 simbolių slaptažodis heroku arba azure nustatymuose). Tai leidžia AndroidAPS skaityti ir rašyti duomenis iš Nightscout. Jei įstrigote 1-ame tiksle, patikrinkite, ar įvedėte teisingus duomenis.
+* **Įsitikinkite, kad URL yra BE /api/v1/ pabaigoje.**
     
-    ![NSClient URL](../images/NSClientURL.png)
+    ![NSClient nuoroda](../images/NSClientURL.png)
 
-* 'Log app start to nightscout' will record a note in your careportal entries every time the app is started. The app should not be needing to start more than once a day; more frequently than this suggests a problem.
+* Parinktis „Įrašyti programos pradžią Nightscout" įveda pranešimus Priežiūros skirtuke kiekvieną kartą kai programa paleidžiama. Programa neturėtų būti paleista daugiau kaip kartą per dieną; jei tai darysite dažniau, gali kilti problemų.
 
-* 'Alarm options' allows you to select which default nightscout alarms to use through the app. For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [heroku or azure variables](http://www.nightscout.info/wiki/welcome/website-features#customalarms). They will only work whilst you have a connection to nightscout and are intended for parent/carers, if you have the CGM source on your phone then use those alarms instead (e.g. xdrip+).
-* 'Enable local broadcasts' will share your careportal data to other apps on the phone such as xdrip.
-* 'Always use basal absolute values' must be activated if you want to use Autotune properly.
+* „Įspėjimo nustatymai“ leidžia pasirinkti, kuriuos įspėjimus programa praneš. Kad suaktyvintumėte perspėjimus, [heroku ar azure](http://www.nightscout.info/wiki/welcome/website-features#customalarms) kintamųjų reikšmių laukuose turite nustatyti Labai aukštų, Aukštų, Žemų ir Labai žemų aliarmo reikšmes. Jie veiks tik tada, kai turėsite ryšį su Nightscout ir yra skirti tėvams / globėjams; jei stebėjimas vykdomas jūsų telefone, naudokite jame nurodytus pranešimus (pavyzdžiui, xdrip+).
+* „Įgalinti vietines transliacijas“ jūsų duomenimis iš priežiūros portalo dalinamasi su kitomis programomis išmaniajame telefone (pvz., xdrip+).
+* Jei norite tinkamai naudotis Autotune, reikia suaktyvinti „Visada naudokite absoliučias bazines reikšmes“.
     
-    **Do not activate this when using [Insight pump](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** It would lead to false TBR settings in Insight pump.
+    **Nejunkite šito, jei naudojate [Insight pompą](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** Tai lemtų klaidingus laikinos bazės nustatymus Insight pompoje.
 
 ## SMS komunikatorius
 
@@ -130,12 +130,12 @@ Jei AndroidAPS naudojate kaip atvirą ciklą, įsitikinkite, kad konfigūratoriu
 
 ## Kiti
 
-* You can set defaults for your temp targets here for the different types of temp target (eating soon and activity). When you select a temp target and then choose, for example, "Eating Soon" from the drop down box, it will automatically populate the duration and value for you based on the figures you provided here. For more information on use of Temp Targets see [OpenAPS features](../Usage/Open-APS-features.md). 
-* You can set default prime amounts - this will prime the pump the value specified and this insulin is counted as used from the reservoir but not counted in IOB calculations. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
-* You can change the display on the homescreen and watch for the values that are in range. Note that this is just how the graphs look and doesn't impact on your target or calculations.
-* 'Shorten tab titles' allows you to see more tab titles on screen, for example the 'Open APS' tab becomes 'OAPS', 'Objectives' becomes 'Obj' etc.
-* 'Local Alerts' lets you decide if you receive a warning and after how long for not receiving blood glucose values (stale data) or the pump being unreachable. If you frequently get pump unreachable alerts then enable BT Watchdog in the Advanced Settings.
+* Čia galite nustatyti numatytąsias vertes įvairių tipų laikiniems tikslams (tokiems kaip Greitai valgysiu ar Aktyvumas). Kai pasirinksite laikiną tikslą, pavyzdžiui, „Greitai valgysiu“, langas automatiškai užpildys laiką ir tikslą, atsižvelgiant į čia nustatytus parametrus. Daugiau informacijos apie laikinus tikslus, žr. [OpenAPS funkcijos](../Usage/Open-APS-features.md). 
+* Galite nustatyti pradinio užpildymo reikšmes - jie bus perduoti pompai, o insulinas, naudojamas jam užpildyti, bus išskaičiuotas iš rezervuaro lygio, bet neįtraukiamas į IOB skaičiavimus. Norėdami sužinoti, kiek vienetų turėtumėte naudoti, priklausomai nuo adatos ir vamzdelio ilgio, skaitykite kateterio (kaniulės) instrukcijas.
+* Galite pakeisti pagrindinio ekrano išvaizdą ir stebėti parametrus jūsų pasirinktame diapazone. Atminkite, kad tai tik rodymo metodas, kuris neturi įtakos jūsų tikslams ar skaičiavimams.
+* "Sutrumpinti skirtukų pavadinimus" leidžia matyti daugiau skirtukų pavadinimų ant ekrano, pavyzdžiui, "Atviro APS" skirtukas tampa "OAPS', 'Tikslai" tampa "Tiksl." ir pan.
+* „Vietiniai perspėjimai“ leidžia nuspręsti, ar gauti perspėjimus, o jei taip, tai kiek laiko po to, kai nėra glikemijos duomenų (seni duomenys), arba kai pompa nepasiekiama. Jei dažnai gaunate pranešimus apie tai, kad pompa nepasiekiama, išplėstiniuose nustatymuose įgalinkite BT Watchdog.
 
 ## Duomenų pasirinkimas
 
-* 'Fabric Upload' will send crash reporting and feature usage data to the developers.
+* „Fabric Upload“ išsiųs kūrėjams klaidų pranešimus ir naudojimo duomenis.
