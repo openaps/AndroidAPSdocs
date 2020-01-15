@@ -19,10 +19,10 @@ Combo ir Insight yra puikios pompos, tinkamos uždaro ciklo sistemai. Tačiau Da
 
 * Kol kas Combo dirba su ekrano analizavimu. Iš esmės tai veikia gerai, bet, deja, lėtai. Tai nėra taip blogai, ko reikia ciklui, nes visa tai veikia fone. Tačiau tai leis lengviau atšaukti esamą Bluetooth ryšį. Tai gali būti nepatogu, jei inicijuojate bolusą ir vėliau būdami per daug toli nuo išmaniojo telefono, pvz.,& gamindami maistą.
 
-* Combo vibruoja laikinos bazės TBR pabaigoje, Dana* R vibruoja (arba supypsi) dėl SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Combo vibruoja laikinos bazės TBR pabaigoje, Dana* R vibruoja (arba supypsi) dėl SMB. Naktį greičiausiai naudositės TBR, o ne SMB. Dana* RS gali būti sukonfigūruota nei vibruoti, nei pypsėti.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* RS istorijos skaitymas leidžia lengvai pakeisti telefonus neprisijungus ir toliau dirbti gaunant naujas CGM stebėjimo vertes.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* Visos pompos, palaikančio AndroidAPS, yra atsparios vandeniui (bent jau naujos). Tik Dana pompos taip pat turi „garantiją dėl vandens atsparumo“ dėl uždaro akumuliatoriaus ir rezervuaro užpildymo skyriaus.
 
-The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+Combo, be abejo, yra labai gera pompa ir gali būti naudojamas ciklui. Ji taip pat pranašesnė už daugelį kitų rūšių infuzinių rinkinių su standartiniais Luer jungties sriegiais. Ir tam naudojama įprasta baterija, kurią galite nusipirkti bet kurioje degalinėje ar jums patogioje parduotuvėje. Ir jei jums to tikrai reikia, galite pavogti / pasiskolinti iš nuotolinio valdymo pultelio iš viešbučio kambario ;-)
