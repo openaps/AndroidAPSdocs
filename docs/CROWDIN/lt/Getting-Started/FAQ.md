@@ -319,7 +319,7 @@ Drinking alcohol is risky in closed loop mode as the algorithm cannot predict th
 
 When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
-### Sleeping
+### Miegas
 
 #### How can I loop during the night without mobile and WIFI radiation?
 
