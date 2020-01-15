@@ -2,17 +2,17 @@ Comandos SMS
 **************************************************
 Segurança Em Primeiro Lugar
 ==================================================
-* O AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. So always protect it at least by a PIN code.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+* O AndroidAPS permite que você controle um telefone remotamente através de SMS. Se os comandos por SMS estiverem ativos, lembre-se sempre de que o telemóvel configurado para estes comandos remotos pode ser roubado. Então, proteja-o sempre pelo menos através de um código PIN.
+* O AndroidAPS responderá com uma mensagem de texto se os comandos remotos - como um bolus ou uma mudança de perfil - foram corretamente realizados.0//0. É aconselhável ao configurar que textos sejam enviados para, pelo menos, dois números de telefone distintos, para o caso de um dos telefones ser roubado.
 * ** Se o bolus for realizado através de Comandos SMS os hidratos de carbono (carbs) devem ser introduzidos através do Nightscout (NSClient, Website ...)! ** Se não o fizer a insulina ativa (IOB) seria correlacionada com hidratos restantes (COB) muito baixos, podendo levar o AAPS a não realizar um bolus de correção por assumir que insulina ativa (IOB) está demasiado elevada.
 
 Como funciona
 ==================================================
 * A maioria dos ajustes de alvos temporários, de acordo com AAPS etc. pode ser feito na ` app NSclient <../Children/Children.html> ` _ num telefone Android com ligação à internet.
 * Os Bólus não podem ser enviados através do Nightscout, mas pode usar comandos SMS.
-* Se utiliza um iPhone como seguidor e, portanto, não consegue utilizar o NSclient, há comandos adicionais de SMS disponíveis.
+* Se utiliza um iPhone como seguidor não conseguirá utilizar o NSclient.Temcomandos adicionais de SMS disponíveis.
 
-* Na configuração do seu smartphone Android vá a: Aplicativos > AndroidAPS > Permissões e habilite SMS
+* Na configuração do seu smartphone Android vá a: Aplicações > AndroidAPS > Permissões e habilite SMS
 * No AndroidAPS vá a Preferências> Comunicador de SMS e introduza o numero de telefone que quer permitir que envie os comandos SMS .
 * Se quiser usar mais de um número:
 
@@ -59,7 +59,7 @@ Dados do CGM (Monitor Contínuo de Glicemia)
 * GLIC
    * Resposta: Última BG: 5,6 há 4 min, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
-   * Resposta: Para enviar calibração 5,6 responda com Rrt
+   * Resposta: Para enviar calibração 5,6 responda com Rrt / To send calibration 5.6 reply with code Rrt
    * Resposta após o código correto ter sido recebido: Calibração enviada (**Se xDrip estiver instalado. Aceitar calibração deve estar habilitado no xDrip+**)
 
 Basal
