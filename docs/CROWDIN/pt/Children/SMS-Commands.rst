@@ -41,25 +41,25 @@ Os comandos têm de ser enviados em inglês, a resposta será no idioma selecion
 Loop
 --------------------------------------------------
 * LOOP STOP/DISABLE
-   * Resposta: Loop foi desativado / Loop has been disabled
+   * Resposta: Loop foi desativado
 * LOOP START/ENABLE
-   * Resposta: Loop foi ativado / Loop has been enabled
+   * Resposta: Loop foi ativado
 * LOOP STATUS
    * Resposta depende do status atual
-      * Loop desactivado / Loop is disabled
-      * Loop activado / Loop is enabled
-      * Suspenso (10 min) / Suspended (10 min)
+      * Loop desactivado
+      * Loop activado
+      * Suspenso (10 min)
 * LOOP SUSPEND 20
-   * Resposta: Loop suspenso por 20 minutes / Loop suspended for 20 minutes
+   * Resposta: Loop suspenso por 20 minutes
 * LOOP RESUME
-   * Resposta: Loop foi retomado / Loop resumed
+   * Resposta: Loop foi retomado
 
 Dados do CGM (Monitor Contínuo de Glicemia)
 --------------------------------------------------
 * GLIC
    * Resposta: Última BG: 5,6 há 4 min, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
-   * Resposta: Para enviar calibração 5,6 responda com Rrt / To send calibration 5.6 reply with code Rrt
+   * Resposta: Para enviar calibração 5,6 responda com Rrt
    * Resposta após o código correto ter sido recebido: Calibração enviada (**Se xDrip estiver instalado. Aceitar calibração deve estar habilitado no xDrip+**)
 
 Basal
