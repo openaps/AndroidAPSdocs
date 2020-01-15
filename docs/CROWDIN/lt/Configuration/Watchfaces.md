@@ -2,12 +2,12 @@
 
 Galite instaliuoti AndroidAPS programėlę savo **Wear OS pagrindu** veikiančiame laikrodyje. AAPS versija laikrodžiui leidžia:
 
-* **display data on your watch**: by providing [custom watchfaces](#aaps-watchfaces) or in standard watchfaces with use of [complications](#complications)
+* **pateikti duomenis jūsų laikrodyje**: naudojant [tinkintą ciferblatą](#aaps-watchfaces) arba standartiniame ekrane, naudojant [komplikacijas](#complications)
 * **valdyti AAPS telefone**: suleisti bolusą, nustatyti laikiną tikslą ir pan. 
 
 ### Prieš perkant laikrodį...
 
-* Some features like *complications* require Wear OS version 2.0 or newer to work
+* Kai kurioms funkcijoms, pavyzdžiui, *komplikacijoms*, reikia Wear OS 2.0 versijos " arba naujesnės
 * "Google" pervadino * Android Wear 1.x* į *Wear OS* iš versijos 2.x, todėl, jei nurodoma *Android Wear*, tai gali būti senesnė 1.x sistemos versija
 * Jei išmaniojo laikrodžio aprašyme nurodomas tik suderinamumas su *Android* ir *iOS* - tai **ne**reiškia, kad jis veikia su *Wear OS* - tai gali būti šiek tiek kitos rūšies gamintojo specifinė OS **, kuri nėra suderinama su AAPS!**
 * Patikrinkite [sąrašą išbandytų telefonų ir laikrodžių](../Getting-Started/Phones#list-of-tested-phones) ir [paklauskite bendruomenės](../Where-To-Go-For-Help/Connect-with-other-users.md), jei kyla abejonių ar jūsų laikrodis yra palaikomas
@@ -157,50 +157,50 @@ Komplikacijos gali atlikti **nuorodų** į AAPS funkcijas. Bakstelėję jas, gal
 
 ![Plėtiniai_ciferblate](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Complication Types
+### Komplikacijų tipai
 
-AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+AAPS Wear OS programėlė pateikia tik pirminius duomenis, pagal numatytus formatus. Priklauso nuo trečiųjų šalių ciferblato, kur ir kaip diegiamos komplikacijos, įskaitant išdėstymą, kraštelius, spalvą ir šriftą. Iš daugelio Wear OS komplikacijų, AAPS naudoja:
 
-* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-* `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-* `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
+* `TRUMPAS TEKSTAS` - Yra dvi teksto eilutės, 7 simboliai kiekvienoje, kartais vadinama reikšme ir pavadinimu. Paprastai parodoma viduje apskritimo ar mažo ovalo - vienas po kitu arba šalia. Tai yra labai erdvėje apribota komplikacija. Kad sutilptų, AAPS stengiasi pašalinti nereikalingus ženklus: apvalina reikšmes, pašalindamas nulius pradžioje ir pabaigoje iš reikšmių ir pan.
+* `ILGAS TEKSTAS` - Yra dvi teksto eilutės, apie 20 simbolių kiekvienoje. Paprastai rodomas stačiakampyje arba ilgame ovale - vienas po kitu. Naudojamas pateikti daugiau detalių ir tekstinę būseną.
+* `RIBINĖ VERTĖ` - Naudojamas pateikti reikšmes iš nustatytų ribų, pvz., procentus. Turi paveikslėlį, pavadinimą ir pateikiamas kaip progreso apskritimas.
+* `DIDELIS PAVEIKSLĖLIS` - Pasirinktinis fono paveikslėlis, kuris gali būti naudojamas (kai palaikoma ciferblate), kaip fonas.
 
-### Complication Setup
+### Komplikacijų diegimas
 
-To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+Norint pridėti komplikacijas į ciferblatą, sukonfigūruokite jas ilgu paspaudimu ir bakstelkite krumpliaratį apačioje. Priklausomai nuo to, kaip konkretūs ciferblatai yra konfigūruojami - arba spustelėkite vietos rezervavimo ženklus, arba eikite į ciferblato sąrankos komplikacijų meniu. AAPS komplikacijos yra sugrupuotos po AAPS meniu įrašu.
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+Konfigūruojant komplikacijas, Wear OS parodys iš išfiltruos sąrašą komplikacijų, kurios tilps į pasirinktų komplikacijų vietas ciferblate. Jei nerandate konkrečios komplikacijos sąraše, tikriausiai dėl savo savybių jos negali būti naudojamos šioje vietoje.
 
-### Complications provided by AAPS
+### AAPS teikiamos komplikacijos
 
-AndroidAPS provides following complications:
+AndroidAPS pateikia šias komplikacijas:
 
-![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+![AAPS_plėtinių_sąrašas](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
-* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
-* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
-* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
-* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
-* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
-* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
-* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
-* **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
-* **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
+* **VB, AAO & AIO** (`TRUMPAS TEKSTAS`, atsidaro *Meniu*): rodo *Valandinę bazę* pirmoje eilutėje ir *Aktyvius angliavandenius organizme* bei *Aktyvų insuliną organizme* antroje.
+* **Kraujo Gliukozė** (`TRUMPAS TEKSTAS`, atsidaro *Meniu*): rodo *Kraujo gliukozės* vertę ir *tendencijos* rodyklę pirmoje eilutėje ir *matavimo laikotarpį* bei *KG delta* antroje.
+* **AAO & AIO** (`TRUMPAS TEKSTAS`, atsidaro *Meniu*): rodo *Aktyvius angliavandenius organizme* pirmoje eilutėje ir *Aktyvų insuliną organizme* antroje.
+* **AAO išsamiai** (`TRUMPAS TEKSTAS`, atsidaro *Vedlys*): rodo dabartinius aktyvius *Angliavandenius organizme* pirmoje eilutėje ir planuojamus (būsimus, iAV) angliavandenius antroje.
+* **AAO piktograma** (`TRUMPAS TEKSTAS`, atsidaro *Vedlys*): rodo *Angliavandenių organizme* vertę su statine piktograma.
+* **Visa būsena** (`ILGAS TEKSTAS`, atsidaro *Meniu*): rodo dauguma duomenų vienu metu: *Kraujo gliukozės* vertę ir *tendencijos* rodyklę, *KG delta* ir *matavimo laikotarpį* pirmoje eilutėje. Antroje eilutėje *Angliavandenių organizme*, *Insuliną organizme* ir *valandinę bazę*.
+* **Visa būsena (pasukta)** (`ILGAS TEKSTAS`, atsidaro *Meniu*): tie patys duomenys, kaip ir standartinėje *Visoje būsenoje*, bet linijos yra pasuktos. Gali būti naudojama ciferblatuose, kurie ignoruoja vieną iš dviejų linijų `ILGAS TEKSTAS`
+* **AAO Išsamiai** (`TRUMPAS TEKSTAS`, atsidaro *Bolusas*): Rodo visą *aktyvų insuliną organizme* pirmoje eilutėje ir *AAO* dedamąsias *Boluso* ir *Bazės* dalis antroje eilutėje.
+* **AAO piktograma** (`TRUMPAS TEKSTAS`, atsidaro *Bolusas*): rodo *Angliavandenių organizme* vertę su statine piktograma.
+* **Siuntėjo/Telefono Baterija** (`RIBINĖ VERTĖ`, atsidaro *Būsena*): pateikia AAPS įdiegtame telefone baterijos procentą (siuntėjas) taip, kaip nurodo AAPS. Rodoma procentais, su akumuliatoriaus piktograma, kuri atspindi praneštą vertę. Gali būti neatnaujinama realiu laiku, o tik su kitais svarbiais AAPS duomenimis (paprastai kas ~5 minutes kartu su nauju *kraujo gliukozės* matavimu).
 
-Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
+Be to, yra trys komplikacijos `DIDELIS PAVEIKSLĖLIS` tokios kaip: **Tamsus fono paveikslėlis**, **Pilkas fono paveikslėlis** ir **Šviesus fono paveikslėlis**, rodančios statinį AAPS fono paveikslėlį.
 
-### Complication related settings
+### Su komplikacijomis susiję nustatymai
 
-* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
-  * *Default*: action specific to complication type *(see list above)*
-  * *Menu*: AAPS main menu
-  * *Wizard*: bolus wizard - bolus calculator
-  * *Bolus*: direct bolus value entry
-  * *eCarb*: eCarb configuration dialog
-  * *Status*: status sub-menu
-  * *None*: Disables tap action on AAPS complications
+* **Veiksmai paspaudus plėtinių mygtuką** (numatytoji reikšmė `Numatytasis`): Nusprendžia, kuris dialogo langas yra atidarytas, kai vartotojas baksteli į plėtinius: 
+  * *Numatytasis*: veiksmų, būdingų komplikacijų tipui *(žr. sąrašą aukščiau)*
+  * *Meniu*: AAPS pagrindinis meniu
+  * *Vedlys*: boluso vedlys - boluso skaičiuoklė
+  * *Bolusas*: tiesioginis boluso vertės įrašas
+  * *iAV*: iAV sąrankos dialogas
+  * *Būsena*: būsenos sub-meniu
+  * *Jokių*: Išjungia AAPS plėtinių veiksmus
 * **Unicode komplikacijose** (numatytasis `Įjungta`): Kai `Įjungta`, plėtiniuose bus naudojami Unicode simboliai, tokie kaip: `Δ` Delta, `⁞` vertikalių taškų daliklis arba `⎍` bazės simbolis. Jų pateikimas priklauso nuo šrifto, kuris gali būti būdingas tik tam ciferblatui. Ši parinktis leidžia perjungti Unicode simbolius `Išjungta` kai reikia - jei šriftas, naudojamas parinktiniuose ciferblatuose nepalaiko šių simbolių - taip išvengiant grafinių trikdžių.
 
 ## Patarimai dėl darbo ir baterijos gyvavimo
@@ -217,28 +217,28 @@ Pagrindinės baterijos eikvojimo sritys:
 
 Kadangi mes negalima nutraukti ryšio (mums reikia atnaujinti duomenis), ir norime turėti naujausius atvaizduotus duomenis, dauguma patobulinimų gali būti padaryta *laiko rodymo* srityje:
 
-* Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-* It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-* Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
-* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-* Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
-* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+* Gamykliniai ciferblatai paprastai yra geriau optimizuoti, nei tie, kuriuos atsisiunčiate iš parduotuvės.
+* Tai geriau naudoti ciferblatus, kurie atvaizduoja duomenis neaktyviu / blyškiu režimu.
+* Būkite atidūs, kai pridedate kitas komplikacijas tokias kaip oro valdikliai - jie naudojas duomenis iš išorinių šaltinių.
+* Pradėkite nuo paprastesnių ciferblatų. Pridėkite vieną plėtinį vienu metu ir stebėkite, kiek tai turi įtakos baterijos gyvavimui.
+* Pabandykite naudoti **Tamsią** temą AAPS ciferblate ir [**Atitikimo daliklį**](#watchface-settings). OLED įrenginiuose tai sumažins pikselių šviesį ir jų išdegimą.
+* Patikrinkite, kas veikia geriau jūsų laikrodyje: AAPS numatytasis ciferblatas ar kitas ciferblatas su AAPS plėtiniais.
+* Stebėkite kelias dienas, naudojant įvairius veiklos profilius. Daugelis laikrožių aktyvuoja ekraną, kai žiūrime į juos, judant ar dėl kitų priežasčių.
+* Patikrinkite bendrinius sistemos nustatymus, kurie gali turėti įtakos: pranešimai, apšvietimas/aktyvaus ekrano išsijungimas, kai GPS yra aktyvuotas.
+* Patikrinkite [sąrašą išbandytų telefonų ir laikrodžių](../Getting-Started/Phones#list-of-tested-phones) ir [paklauskite bendruomenės](../Where-To-Go-For-Help/Connect-with-other-users.md) apie kitų vartotojų patirtį bei baterijos gyvavimo būklę.
+* **Mes negalime garantuoti, kad duomenys rodomi ciferblate ar komplikacijoje yra atnaujinti**. Galų gale, tik nuo Wear OS priklauso, kada atnaujinti ciferblatą ar plėtinį. Net kai APPS programėlė užklausia atnaujinimo, sistema gali nuspręsti atidėti arba ignoruoti užklausą, siekdama tausoti bateriją. Jei abejojate ar baterija laikrodyje nusekusi - visada pasitikrinkite AAPS programėlę telefone.
 
-## Troubleshooting the wear app:
+## Wear programos trikčių šalinimas:
 
-* On Android Wear 2.0 the watch screen does not install by itself anymore. You need to go into the playstore on the watch (not the same as the phone playstore) and find it in the category apps installed on your phone, from there you can activate it. Also enable auto update. 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* Android Wear 2.0 laikrodžiuose ekranas nebeįsidiegia pats. Jūs turite eiti į laikrodžio Playstore (skiriasi nuo išmaniojo telefono Playstore!) Ir suaktyvinti AAPS kategorijoje "įdiegtos programos telefone“. Taip pat įjungti automatinį naujinimą. 
+* Kartais padeda pakartotinis programų sinchronizavimas su laikrodžiu, nes kartais jis gali tai atlikti per lėtai: Android Wear > krumpliaračio piktograma (apačia)> laikrodžio pavadinimas> sinchronizuoti programas dar kartą.
+* Laikrodžio kūrėjo parinktyse įjunkite ADB derinimo funkciją, prijunkite laikrodį prie kompiuterio per USB ir vieną kartą paleiskite Wear programoje Android Studio.
+* Jei komplikacijos neatnaujina duomenų, iš pradžių patikrinkite ar AAPS ciferblatas veikia iš viso.
 
-## View Nightscout data
+## Peržiūrėti Nightscout duomenis
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną IOB, esamą laikiną bazinę TBR ir bazinį profilį bei CGM duomenų grafiką.
+Jei naudojate kitokią ciklo sistemą arba norite *pamatyti* savo vaiko ciklo informaciją laikrodyje, galite tiesiog sukurti/parsisiųsti NSClient APK. Eikite į [APK kūrimo instrukcijos](../Installing-AndroidAPS/Building-APK.md) ir pasirinkite kūrimo variantą NSClientRelease. Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną IOB, esamą laikiną bazinę TBR ir bazinį profilį bei CGM duomenų grafiką.
 
 # Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Pebble vartotojai gali naudoti [Urchin laikrodžio ekraną](https://github.com/mddub/urchin-cgm), kad *peržiūrėtų* jų ciklo duomenis (jei įkelti į Nightscout), tačiau negalėsite valdyti pompos ir AndroidAPS iš laikrodžio. Galite pasirinkti rodomus laukus, tokius kaip AAO ir šiuo metu aktyvi laikina bazė bei prognozes. Jei dirbate su atviru ciklu, galite naudoti [IFTTT](https://ifttt.com/) algoritmą, kad sukurtumėte programėlę, kuri, gavusi pranešimą iš AndroidAPS, siunčia SMS arba sukuria tiesioginį pranešimą.
