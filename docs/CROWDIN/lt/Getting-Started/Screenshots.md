@@ -69,7 +69,7 @@ Jei pasirinkote, taip pat matysite gliukozės kitimo prognozės kreives.
 
 ### Sritis G
 
-Čia galite suleisti bolusą (įprastai tam naudosite Skaičiuotuvo mygtuką) ir įvesti kalibracijas. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
+Čia galite suleisti bolusą (įprastai tam naudosite Skaičiuotuvo mygtuką) ir įvesti kalibracijas. Čia taip pat bus matomas Greitojo vedlio mygtukas, jei jis sukonfigūruotas [Konfigūracijoje](../Configuration/Config-Builder#quickwizard-settings).
 
 ## Skaičiuotuvas
 
@@ -105,7 +105,7 @@ Jei norite suleisti bolusą papildomam maistui, kurį valgėte tuoj po jau įves
 
 ![Lėtas angliavandenių įsisavinimas](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Jei pasinaudoję skaičiuotuvu matote tokį perspėjimą, reiškia sistema nustatė galimai klaidingą AAO kiekį. So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! Išsamesnės informacijos ieškokite [AAO apskaičiavimo puslapyje](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Jei pasinaudoję skaičiuotuvu matote tokį perspėjimą, reiškia sistema nustatė galimai klaidingą AAO kiekį. Todėl suleisdami papildomą bolusą po paskutinio valgymo rizikuojate perdozuoti! Išsamesnės informacijos ieškokite [AAO apskaičiavimo puslapyje](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Insulino profilis
 
@@ -125,7 +125,7 @@ Ir dar daugiau čia: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/20
 
 ![Pompos statusas](../images/Screenshot_pump_Combo.png)
 
-Čia matome insulino pompos (pavyzdyje Accu-Chek Combo) statusą. The information displayed is self-explanatory. Jei ilgai prispausite ISTORIJOS mygtuką, sistema nuskaitys Jūsų pompos istoriją, taip pat ir bazės profilį. Prisiminkite, kad Combo pompoje galimas tik vienas bazės profilis.
+Čia matome insulino pompos (pavyzdyje Accu-Chek Combo) statusą. Informacija aiški savaime. Jei ilgai prispausite ISTORIJOS mygtuką, sistema nuskaitys Jūsų pompos istoriją, taip pat ir bazės profilį. Prisiminkite, kad Combo pompoje galimas tik vienas bazės profilis.
 
 ## Priežiūra
 
