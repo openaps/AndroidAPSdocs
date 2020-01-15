@@ -1,7 +1,7 @@
-What is a closed loop system with AndroidAPS?
+Kas yra uždaro ciklo sistema su AndroidAPS?
 **************************************************
 
-AndroidAPS is a app that acts as an artificial pancreas system (APS) on an Android smartphone. What is an artificial pancreas system? It is a software program that aims to do what a living pancreas does: keep blood sugar levels within healthy limits automatically. 
+AndroidAPS yra programa, veikianti kaip dirbtinė kasos sistema (DKS) Android išmaniajame telefone. Kas yra dirbtinės kasos sistema? Tai programa, kuria siekiama padaryti tai, ką daro funkcionuojanti kasa: automatiškai išlaikyti sveiką gliukozės kiekį kraujyje. 
 
 An APS can't do the job as well as a biological pancreas does, but it can make type 1 diabetes easier to manage using devices that are commercially available and software that is simple and safe. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
 
