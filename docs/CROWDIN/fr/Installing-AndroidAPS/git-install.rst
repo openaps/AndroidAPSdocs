@@ -22,7 +22,7 @@ Windows
 
 * Choose correct path: ... **/Git/bin** (including /bin)
 
-* Assurez-vous que la méthode de mise à jour "Fusion" (merge) est sélectionnée.
+* Assurez-vous que la méthode de mise à jour "Merge" est sélectionnée.
 
   .. image:: ../images/Update_GitSettings2a.png
     :alt: Android Studio - GIT path
