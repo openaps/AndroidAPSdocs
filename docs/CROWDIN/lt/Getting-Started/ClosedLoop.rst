@@ -1,4 +1,4 @@
-What is a Closed Loop System?
+Kas yra uždaro ciklo sistema?
 **************************************************
 
 .. image:: ../images/autopilot.png
