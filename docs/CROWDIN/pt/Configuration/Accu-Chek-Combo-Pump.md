@@ -19,8 +19,8 @@
 - Actualmente apenas basais desde 0.05 até 10u/h são suportadas. Isto também se aplica a quando modifica um perfil, i.e. ao aumentar para para 200% a basal temporária, o valor da basal máxima não deve exceder 5U/h ou duplicada ultrapassará o limite de 10U/h. Do mesmo modo, ao reduzir para 50%, a taxa menor da basal deverá ser no mínimo 0.10 U/h.
 - Se o Loop solicitar o cancelamento duma basal temporária em funcionamento, para cancelar a Combo irá programar uma DBT de 90% ou 110% durante 15 minutos. Isto porque ao cancelar uma DBT a bomba emitirá um alerta o que causa imensas vibrações.
 - Ocasionalmente (a cada dois ou três dias) AAPS pode falhar no cancelamento automático do alerta de DBT CANCELADA. O utilizador neste caso terá de lidar com isso premindo o botão actualizar na AAPS para transferir o aviso da AAPS ou confirmar o alerta na bomba.
-- A estabilidade da conexão Bluetooth varia de acordo com os diferentes telefones, causando alertas de 'bomba não localizada', onde a ligação à bomba foi perdida. Se esse erro ocorrer, certifique-se de que o Bluetooth está activo, prima o botão actualizar no separador Combo para verificar se a causa foi temporária ou se continua sem conexão. Reiniciar o telemóvel normalmente resolve o problema. Há uma outra questão onde o reiniciar do telefone não ajuda mas um botão na bomba pode ser pressionado ( que faz um reset ao Bluetooth da bomba), antes da bomba aceitar de novo ligações ao telemóvel. Neste momento muito pouco poderá ser feito para corrigir qualquer um destes problemas. Assim, se verificar estes erros com frequência a única opção nesta altura será arranjar outro telefone que trabalhe correctamente com AndroidAPS e a Combo (ver acima).
-- A emissão dum bolus desde a bomba nem sempre será detectado a tempo (apenas quando a AAPS de liga à bomba) e na pior das hipóteses demorá 20 minutos. Os bolus na bomba são sempre verificados antes de uma DBT alta ou um bolus efectuado pela AAPS e dos limites de segurança da AAPS irão recusar a DBT/Bolus dada a nova informação retirada da bomba. (-> Não dê bolus a partir da bomba! Ver capítulo *Utilização*)
+- Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. Se esse erro ocorrer, certifique-se de que o Bluetooth está activo, prima o botão actualizar no separador Combo para verificar se a causa foi temporária ou se continua sem conexão. Reiniciar o telemóvel normalmente resolve o problema. Há uma outra questão onde o reiniciar do telefone não ajuda mas um botão na bomba pode ser pressionado ( que faz um reset ao Bluetooth da bomba), antes da bomba aceitar de novo ligações ao telemóvel. Neste momento muito pouco poderá ser feito para corrigir qualquer um destes problemas. Assim, se verificar estes erros com frequência a única opção nesta altura será arranjar outro telefone que trabalhe correctamente com AndroidAPS e a Combo (ver acima).
+- Issuing a bolus from the pump will not always be detected in time (checked for whenever AAPS connects to the pump), and might take up to 20 minutes in the worst case. Os bolus na bomba são sempre verificados antes de uma DBT alta ou um bolus efectuado pela AAPS e dos limites de segurança da AAPS irão recusar a DBT/Bolus dada a nova informação retirada da bomba. (-> Não dê bolus a partir da bomba! Ver capítulo *Utilização*)
 - É de evitar programar uma DBT na bomba dado que o Loop assume o controlo das DBTs. Detectar uma nova DBT na bomba pode levar até 20 minutos e o efeito da DBT só será tido em conta a partir do momento em que é detectado, no pior dos casos poderão haver 20 minutos de DBT que não será reflectida na IOB (insulina activa). 
 
 ## Instalação
@@ -60,7 +60,7 @@
 
 ## Porque é que o emparelhar com a bomba não funciona com a app "ruffy"?
 
-Há várias razões possiveis. Tente os seguintes passos:
+There are several possible reasons. Tente os seguintes passos:
 
 1. Insira **pilha nova** na bomba. Para detalhes consulte a secção bateria. Certifique-se de que a bomba está muito perto do smartphone.
 
@@ -73,22 +73,16 @@ Há várias razões possiveis. Tente os seguintes passos:
       
 
 4. Apague uma bomba previamente ligada ao telemóvel via blutooth: definiçoes/blutooth, remover dispositivo emparelhado "**SpiritCombo**"
-5. Certifique se de que AAPS não está em background a correr o loop. Desactive Loop em AAPS.
+5. Certifique se de que AAPS não está em background a correr o loop. Disable Loop in AAPS.
 6. Inicie agora ruffy no telefone. Pode premir Reset! e remover a ligação antiga. Prima Connect!.
-7. No menu blutooth da bomba, ir a **Adicionar dispositivo / Adicionar ligação**. Prima *CONNECT!** * Passos 5 e 6 têm de ser feitos num curto espaço de tempo.
-8.     Agora a bomba deve mostrar o nome de BT do telefone para seleccionar para emparelhar. Aqui é importante que espere pelo menos 5s antes de premir o botão de selecção na bomba. Caso contrário a bomba não irá enviar o pedido de emparelhamento par ao telefone.
-      
-      * Se a bomba Combo tiver o écran configurado para estar ligado 5s, deverá testar com 40 s( configuração original). Pela experiência o tempo entre a bomba aparecer no telefone até seleccionar a mesma serão cerca de 5-10s. Em muitos outros casos o emparelhamento expira sem estar correctamente efectuado. Mais tarde deverá voltar a definir par a5s, para ir de encontro ás configurações AAPS Combo.
-      * Se a bomba não mostrar o telefone como dispositivo emparelhado, provavelmente o blutooth do seu telefone não é compativel com a bomba. Certifique-se de que está a usar o novo **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. Se possível tente com outro smartphone. Poderá encontrar uma lista de smartphones testados com sucesso em [AAPS telefones] 
-      
-      (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
-      
+7. No menu blutooth da bomba, ir a **Adicionar dispositivo / Adicionar ligação**. Press *CONNECT!** * Step 5 and 6 have to be done in a short timing.
+8. Now the Pump should show up the BT Name of phone to select for pairing. Here it is important to wait at least 5s before you hit the select button on Pump. Otherwise the Pump will not send the Pairing request to the Phone properly.
 
-9.     De seguida a bomba deverá indicar um código de segurança de 10 dígitos. E Ruffy um écran para introduzir esse código. Introduza-o em Ruffy e deverá estar tudo pronto.
-      
+* If Combo Pump is set to 5s Screen timeout, you may test it with 40s (original setting). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings. * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 
-10. Reinicie o telemóvel.
-11. Poderá agora iniciar o loop AAPS.
+9. At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you should be ready to go.
+10. Reboot the phone.
+11. Now you can restart AAPS loop.
 
 ## Utilização
 
@@ -100,7 +94,7 @@ Há várias razões possiveis. Tente os seguintes passos:
 - Não programe ou cancele uma DBT na bomba. O loop assume o controlo da DBT e não pode trabalhar em segurança, dado que não é possível determinar a hora de inicio da DBT que foi programada pelo utilizador na bomba.
 - O perfil inicial da taxa basal da bomba é lido no inicio da aplicação e vai sendo actualizado pela AAPS. A taxa basal não deverá ser manualmente alterada na bomba, mas será detectada e corrigida como medida de segurança ( não confie em medidas de segurança por defeito, isto foi concebido para detectar alterações involuntárias na bomba).
 - É recomendado activar o bloqueio de teclas na bomba para evitar eventuais bolus nao desejados, esp. quando a bomba foi usada anteriormente e o 'bolus padrão' era habitual. Além disso, com o bloqueio ativado, acidentalmente pressionar uma tecla não irá interromper comunicação ativa entre AAPS e bomba.
-- Quando um alerta de bolus/dbt cancelada surge na bomba durante o bolus ou a programação da DBT, isto é causado por uma desconexão entre a bomba e o telefone, o que acontece de tempos a tempos. AAPS irá tentar reconectar e confirmar o alerta e em seguida repetir a última acção ( bolus NÃO são repetidos por razões de segurança). Portanto, esse alarme poderá ser ignorado já que AAPS irá confirmar automaticamente, normalmente em 30 segundos ( cancelamento não é problema, mas irá conduzir para que a acção actual da bomba tenha de esperar até o ecrã se desligar antes de poder reconectar a bomba). Se o alarme da bomba continuar, confirmação automática falha, neste caso o utilizador necessita de confirmar o alarme manualmente.
+- Quando um alerta de bolus/dbt cancelada surge na bomba durante o bolus ou a programação da DBT, isto é causado por uma desconexão entre a bomba e o telefone, o que acontece de tempos a tempos. AAPS irá tentar reconectar e confirmar o alerta e em seguida repetir a última acção ( bolus NÃO são repetidos por razões de segurança). Portanto, esse alarme poderá ser ignorado já que AAPS irá confirmar automaticamente, normalmente em 30 segundos ( cancelamento não é problema, mas irá conduzir para que a acção actual da bomba tenha de esperar até o ecrã se desligar antes de poder reconectar a bomba). If the pump's alarm continues, automatic confirmation failed, in which case the user needs to confirm the alarm manually.
 - Quando um alarme de cartucho vazio ou bateria fraca soa durante um bolus, ele é confirmado e mostrado como notificação em AAPS. Se ocorrerem enquanto não houver ligação aberta á bomba, ir ao separador Combo e carregar no botão refresh irá fazer com que uma notificação seja apresentado em AAPS.
 - Quando a AAPS falhar na confirmação de um alerta de DBT cancelado, ou um alerta surgir por diferentes razões, premindo Refresh no separador Combo irá estabelever uma conexão, permite confirmar o alerta e mostrar uma notificação na AAPS. Isto pode facilmente ser feito, desde que esses alertas sejam benignos- uma DBT apropriada será novamente programada durante a próxima iteração Loop.
 - Para outros alertas gerados pela bomba: a ligação á bomba irá mostrar a mensagem de alerta no separador Combo, por exemplo "Erro: E4: Oclusão" assim como uma notificação será mostrada no écran. Um erro irá criar uma notificação urgente. AAPS nunca confirma erros graves na bomba, mas permite que a bomba vibre e toque para ter a certeza de que o utilizador é informado desta situação critica que precisa de intervenção.
