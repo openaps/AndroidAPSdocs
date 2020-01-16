@@ -153,13 +153,14 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G ou 8H essay
 * So far life cannot be extended for transmitters whos serial no. starts with 8G or 8H.
 * To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
 * Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* Stop sensor manually via hamburger menu.
 * Switch to the `engineering mode`: 
    * tap on the character on the right of the xDrip+ start screen that represents a syringe
    * then tap on the microphone icon in the lower right corner
    * In the text box that opens type "enable engineering mode" 
    * click "Done"
    * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and check if `OB1 collector` is set.
+* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
 * Use the voice command: “hard reset transmitter”
 * The voice command will be executed with the next data receipt of the transmitter
 * Look at the system status (Hamburger menu -> system status) and see what happens
