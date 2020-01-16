@@ -153,21 +153,22 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H,
 * Prozatím nelze prodloužit životnost vysílačů, jejichž výrobní číslo začíná znaky 8G nebo 8H.
 * V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
 * Při operaci prodloužení životnosti vysílače bude přerušena aktuální relace senzoru. Mějte to na paměti a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2 h zahřívání senzoru.
-* Přejděte do `engineering mode`: 
-   * klepněte na symbol injekční stříkačky v pravém horním roku hlavní obrazovky
-   * pak chvíli podržte symbol mikrofonu v dolním pravém rohu
-   * a do textového pole napište bez uvozovek „enable engineering mode“ 
-   * klikněte na tlačítko „OK“
-   * Pokud máte povoleny Google hlasové příkazy, můžete po klepnutí na symbol mikrofonu vyslovit „enable engeneering mode“. 
-* Go to the G5 debug settings and check if `OB1 collector` is set.
-* Použijte hlasový příkaz: „hard reset transmitter“
-* Hlasový příkaz bude proveden při následujícím odeslání dat do vysílače
-* Přejděte na stav systému (hamburger menu -> Stav systému) a sledujte, co se stalo
-* Když se na druhé systémové stránce objeví hláška „Phone Service State: Hard Reset maybe failed“, prostě spusťte senzor a zpráva by měla zmizet.
+* Stop sensor manually via hamburger menu.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
-   ![xDrip+ Hard Reset možná selhal](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Po úspěšném prodloužení vysílače a startu senzoru by se měla hodnota Transmitter days resetovat na 0.
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Výměna vysílače
 
