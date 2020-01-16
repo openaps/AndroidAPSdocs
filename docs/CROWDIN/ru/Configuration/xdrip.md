@@ -153,21 +153,22 @@ To learn more about the details and reasons for these recommendations read the [
 * Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G или 8H.
 * Для предотвращения трудностей при запуске сенсоров настоятельно рекомендуется продлить срок действия трансмиттера до 100-го дня первого использования.
 * При продлении срока действия трансмиттера работа сенсора будет остановлена. Поэтому проводить эту манипуляцию следует перед заменой сенсора или быть готовыми к тому, что состоится двухчасовая фаза его прогрева.
-* Переключитесь в `инженерный режим`: 
-   * нажмите на пиктограмму шприца на главном экране xDrip+ справа
-   * затем нажмите на значок микрофона в нижнем правом углу
-   * В открывшемся текстовом окне впечатайте "включить инженерный режим" 
-   * нажмите "Готово"
-   * Если включен Google Speak, вы можете дать голосовую команду: "enable engineering mode" ("включить инженерный режим"). 
-* Go to the G5 debug settings and check if `OB1 collector` is set.
-* Дайте голосовую команду: “hard reset transmitter”(«жесткий сброс трансмиттера»)
-* Голосовая команда будет выполнена при следующем получении данных трансмиттера
-* Посмотрите на статус системы (сэндвич-меню -> системный статус) и убедитесь в результате
-* Если вы видите сообщение "Состояние телефона: жесткий сброс возможно не произошел", просто перезапустите датчик на втором экране состояния системы и это сообщение должно исчезнуть.
+* Stop sensor manually via hamburger menu.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
-   ![xDrip+ Жесткий сброс возможно не произошел](../images/xDrip_HardResetMabeFailed.png)
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Срок работы трансмиттера будет сброшен до 0 в случае успеха.
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Замена трансмиттера
 
