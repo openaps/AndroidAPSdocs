@@ -153,21 +153,22 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H try [nightl
 * Kol kas nerastas būdas prailginti tarnavimo laiką siųstuvų, kurių serijos nr. starts with 8G or 8H.
 * Norint išvengti sunkumų paleidžiant sensorius, ypač rekomenduojama, kad siųstuvas veiktų iki 100-osios pirmojo naudojimo dienos.
 * Veikiančio sensoriaus seansas bus sustabdytas, jei tuo metu prailginsite siųstuvo veikimo laiką. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Įjunkite `Inžinieriaus režimą`: 
-   * pagrindiniame xDrip+ ekrane dešinėje spustelėkite švirkšto piktogramą
-   * tada spustelėkite mikrofono piktogramą apatiniame dešiniajame kampe
-   * Įveskite „enable engineering mode“ teksto laukelyje 
-   * spauskite Atlikta
-   * Jei įgalinta Google Speak, galite duoti balso komandą angliškai: „enable engineering mode“. 
-* Go to the G5 debug settings and check if `OB1 collector` is set.
-* Duokite balso komandą angliškai: „hard reset transmitter“ (kietas perkrovimas iš naujo)
-* Balso komanda bus įvykdyta su kitų siųstuvo duomenų gavimu
-* Pažvelkite į sistemos būseną (trijų linijų meniu -> sistemos būsena) ir pamatysite rezultatą
-* Jei matote pranešimą „Telefono būsena: Hard Reset maybe failed (Kietas perkrovimas iš naujo neįvyko)“, tiesiog paleiskite sensorių antrame sistemos būsenos ekrane ir šis pranešimas turėtų išnykti.
+* Stop sensor manually via hamburger menu.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Sėkmės atveju siųstuvo veikimo laikas bus nustatytas iš naujo į 0.
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Siųstuvo pakeitimas
 
