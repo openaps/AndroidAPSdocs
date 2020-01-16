@@ -163,6 +163,7 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G or 8H try [nightl
 * So far life cannot be extended for transmitters whos serial no. starts with 8G or 8H.
 * To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
 * Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
+* Stop sensor manually via hamburger menu.
 * Switch to the `engineering mode`:
    - tap on the character on the right of the xDrip+ start screen that represents a syringe
    - then tap on the microphone icon in the lower right corner
