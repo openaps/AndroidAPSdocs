@@ -77,51 +77,52 @@ Basal
 
 Bólus
 --------------------------------------------------
-Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+Bolus remoto não permitido durante 15 min após último comando bolus ou outros comandos remotos! Portanto, a resposta depende da altura em que foi dado o último bolus.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code Rrt
-   * Response B: Remote bolus not available. Try again later.
+   * Resposta A: Para dar bolus de 1.2U responda com código Rrt
+   * Resposta B: Bolus remoto não disponível. Volte a tentar mais tarde.
 * BOLUS 0.60 MEAL
-   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
-   * Response A: To deliver meal bolus 0.60U reply with code Rrt
+   * Se você especificar o parâmetro opcional MEAL (Refeição), este configura um objetivo temporário para Refeições (os valores padrão são: 90 mg/dL, 5,0 mmol / l para 45 mins).
+   * Resposta A: Para dar bolus de 0.60U responda com código Rrt
    * Response B: Remote bolus not available. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code EmF
+   * Resposta: Para inserir 5g às 12:45 responda com código EmF
+(Nota 12:45 são as horas de envio da mensagem)
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code EmF
+   * Resposta: Para inserir 5g às 17:35 responda com código EmF
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * Resposta: Para parar o bolus estendido responda com código EmF
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * Resposta: Para iniciar o bolus estendido 2U para 120 min resposta com código EmF
 
 Profile
 --------------------------------------------------
 * PROFILE STATUS
-   * Response: Profile1
+   * Resposta: Perfil1
 * PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
+   * Resposta: 1.`Perfil1` 2.`Perfil2`
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * Resposta: Para mudar o perfil para Perfil1 100% responda com código Any
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * Resposta: Para mudar o perfil para Perfil2 30% responda com código Any
 
 Outro
 --------------------------------------------------
 * TREATMENTS REFRESH
-   * Response: Refresh treatments from NS
+   * Resposta: Atualizar tratamentos do NS
 * NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
+   * Resposta: NSCLIENT REINICIAR 1 receptores
 * BOMBA
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * Resposta: Última ligação: 1 min atrás Temp: 0.00 U/h @11:38 5/30min IOB: 0.5 U Reserv: 34U Batt: 100
 * SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+   * Resposta: Para desativar o Serviço de Comandos SMS responda com código Any. Atenção que apenas o poderá reativar somente a partir do telemóvel que corre o AAPS.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+   * Resposta: Para definir os objetivos temporários para REFEIÇÃO/ATIVIDADE/HYPO responda com o código Any
 * TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code Any
+   * Resposta: Cancelar o objetivo Temp responder com código Any
 * HELP
-   * Response: BG, LOOP, TREATMENTS, .....
+   * Resposta: GLICEMIA, LOOP, TRATAMENTOS,.....
 * HELP BOLUS
    * Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
