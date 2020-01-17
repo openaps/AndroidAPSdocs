@@ -21,7 +21,7 @@ Como funciona
   * Insira o(s) número(s) adicional(es) separados por ponto e vírgula, sem espaço.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
-      :alt: SMS Commands Setup
+      :alt: Configuração de Comandos SMS
 
 
 * Envie um SMS para o telemóvel com o AndroidAPS a partir do seu número de telefone(s) aprovado, usando qualquer um dos comandos abaixo, o telemóvel responderá com uma SMS para confirmar o sucesso do comando ou status solicitado. Confirme o comando enviando uma SMS com código enviado do smartphone com o AAPS (quando pedido).
@@ -85,7 +85,7 @@ Bolus remoto não permitido durante 15 min após último comando bolus ou outros
 * BOLUS 0.60 MEAL
    * Se você especificar o parâmetro opcional MEAL (Refeição), este configura um objetivo temporário para Refeições (os valores padrão são: 90 mg/dL, 5,0 mmol / l para 45 mins).
    * Resposta A: Para dar bolus de 0.60U responda com código Rrt
-   * Response B: Remote bolus not available. 
+   * Resposta B: Bolus remoto não disponível. 
 * CARBS 5
    * Resposta: Para inserir 5g às 12:45 responda com código EmF
 (Nota 12:45 são as horas de envio da mensagem)
@@ -96,7 +96,7 @@ Bolus remoto não permitido durante 15 min após último comando bolus ou outros
 * EXTENDED 2 120
    * Resposta: Para iniciar o bolus estendido 2U para 120 min resposta com código EmF
 
-Profile
+Perfil
 --------------------------------------------------
 * PROFILE STATUS
    * Resposta: Perfil1
@@ -124,19 +124,19 @@ Outro
 * HELP
    * Resposta: GLICEMIA, LOOP, TRATAMENTOS,.....
 * HELP BOLUS
-   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
+   * Resposta: BOLUS 1.2 BOLUS 1.2 REFEIÇÃO
 
 Resolução de Problemas
 ==================================================
-Multiple SMS
+Múltiplos SMS
 --------------------------------------------------
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+Caso receba repetidamente a mesma mensagem, provavelmente foi configurada um circulo entre aplicações. Como por exemplo o xDrip+, Assim por favor assegure-se que o xDrip+ ou outra app para além do AAPS não está a enviar informação para o NS. 
 
-If the other app is installed on multiple phones make sure to deactive upload on all of them.
+Se a app que causa o circulo estiver instalada em múltiplos telemoveis, certifique-se que a definição foi desativada.
 
-SMS commands not working on Samsung phones
+Problemas com comandos SMS em telemóveis Samsung
 --------------------------------------------------
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+Uma atualização ao Samsung S10 em alguns casos provocou erros com os Comandos SMS. Estes podem ser resolvidos desabilitando a opção 'enviar como mensagem de chat'.
 
 .. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+  :alt: Desativar o SMS como mensagens de chat
