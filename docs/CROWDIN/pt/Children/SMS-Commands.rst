@@ -65,15 +65,15 @@ Dados do CGM (Monitor Contínuo de Glicemia)
 Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * Resposta: Para parar a basal temporária responda com o código EmF [Nota: o código EmF é apenas um exemplo]
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * Resposta: Para iniciar a basal 0.3U/h por 30 min responda com o código Swe
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   * Resposta: Para iniciar basal 0.3U/h por 20 minutos responda com o código Swe
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
+   * Resposta: Para iniciar a basal 30% por 30 min responda com o código Swe
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * Resposta: Para iniciar a basal 30U/h por 50 minutos responda com o código Swe
 
 Bólus
 --------------------------------------------------
