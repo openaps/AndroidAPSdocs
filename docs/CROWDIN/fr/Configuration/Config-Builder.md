@@ -113,7 +113,7 @@ Sélectionner la pompe que vous utilisez.
 * MIQ (Permet de recevoir des suggestions de AAPS pour des thérapies avec de Multiples Injection Quotidiennes)
 * Pompe virtuelle (boucle ouverte pour les pompes qui n'ont pas encore de pilote - suggestions AAPS uniquement)
 
-Use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Pour les pompes Dana, utilisez **Paramètres avancés** pour activer le "Watchdog BT" si nécessaire. Il éteint le Bluetooth pendant une seconde si aucune connexion à la pompe n'est possible. Cela peut être utile sur certains téléphones où la puce bluetooth se bloque.
 
 ## Estimation de Sensibilité
 
@@ -189,7 +189,7 @@ Créez un bouton pour un repas standard (Glucides et méthode de calcul pour le 
 
 Remarque : Le bouton ne sera pas visible si vous êtes en dehors de la plage de temps spécifiée ou si vous avez suffisamment d'IA pour couvrir les glucides définis dans le bouton d'assistant rapide.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Bouton Assistant rapide](../images/ConfBuild_QuickWizard.png)
 
 #### Paramètres Avancés
 
@@ -207,9 +207,9 @@ Quelques boutons pour accéder rapidement aux fonctions communes:
 * Historique
 * DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
 
-Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
 
-![Actions tab](../images/ConfBuild_ConfBuild_Actions.png)
+![Onglet Actions](../images/ConfBuild_ConfBuild_Actions.png)
 
 ### Careportal
 
@@ -219,7 +219,7 @@ Remarque : **Aucune insuline** ne sera donnée si elle est entrée via Careporta
 
 Les glucides entrés dans Careportal (par ex. Ressucrage) seront utilisés pour le calcul des GA.
 
-![Careportal tab](../images/ConfBuild_CarePortal.png)
+![Onglet Careportal](../images/ConfBuild_CarePortal.png)
 
 ### Communicateur SMS
 
@@ -227,7 +227,7 @@ Permet aux aidants à distance de contrôler certaines fonctionnalités d'Androi
 
 ### Aliments
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Affiche les préréglages alimentaires définis dans la base de données Nightscout, voir [Nightscout Lisez-moi](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pour plus d'informations sur la configuration.
 
 Remarque : Les entrées ne peuvent pas être utilisées dans la calculatrice AndroidAPS. (Affichage uniquement)
 
@@ -250,9 +250,9 @@ Affiche les informations de la boucle sur votre cadran xDrip+ (si vous n'utilise
 
 ### Notification en cours
 
-Displays a summary of current BG, delta, active TBR%, active basal u/h and profile, IOB and split into bolus IOB and basal IOB on the phones's dropdown screen and phone's lock screen.
+Affiche un récapitulatif des Gly, delta, %DBT actif, basale u/h et profil actif, IA décomposée en IA bolus et IA basal sur l'écran de veille et l'écran de verrouillage du téléphone.
 
-![AAPS widget](../images/ConfBuild_Widget.png)
+![Widget AAPS](../images/ConfBuild_Widget.png)
 
 ### NS Client
 
