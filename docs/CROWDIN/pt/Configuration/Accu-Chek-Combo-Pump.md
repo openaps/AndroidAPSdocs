@@ -19,8 +19,8 @@
 - Actualmente apenas basais desde 0.05 até 10u/h são suportadas. Isto também se aplica a quando modifica um perfil, i.e. ao aumentar para para 200% a basal temporária, o valor da basal máxima não deve exceder 5U/h ou duplicada ultrapassará o limite de 10U/h. Do mesmo modo, ao reduzir para 50%, a taxa menor da basal deverá ser no mínimo 0.10 U/h.
 - Se o Loop solicitar o cancelamento duma basal temporária em funcionamento, para cancelar a Combo irá programar uma DBT de 90% ou 110% durante 15 minutos. Isto porque ao cancelar uma DBT a bomba emitirá um alerta o que causa imensas vibrações.
 - Ocasionalmente (a cada dois ou três dias) AAPS pode falhar no cancelamento automático do alerta de DBT CANCELADA. O utilizador neste caso terá de lidar com isso premindo o botão actualizar na AAPS para transferir o aviso da AAPS ou confirmar o alerta na bomba.
-- Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. Se esse erro ocorrer, certifique-se de que o Bluetooth está activo, prima o botão actualizar no separador Combo para verificar se a causa foi temporária ou se continua sem conexão. Reiniciar o telemóvel normalmente resolve o problema. Há uma outra questão onde o reiniciar do telefone não ajuda mas um botão na bomba pode ser pressionado ( que faz um reset ao Bluetooth da bomba), antes da bomba aceitar de novo ligações ao telemóvel. Neste momento muito pouco poderá ser feito para corrigir qualquer um destes problemas. Assim, se verificar estes erros com frequência a única opção nesta altura será arranjar outro telefone que trabalhe correctamente com AndroidAPS e a Combo (ver acima).
-- Issuing a bolus from the pump will not always be detected in time (checked for whenever AAPS connects to the pump), and might take up to 20 minutes in the worst case. Os bolus na bomba são sempre verificados antes de uma DBT alta ou um bolus efectuado pela AAPS e dos limites de segurança da AAPS irão recusar a DBT/Bolus dada a nova informação retirada da bomba. (-> Não dê bolus a partir da bomba! Ver capítulo *Utilização*)
+- A estabilidade da conexão Bluetooth varia de acordo com os diferentes telefones, causando alertas de 'bomba não localizada', quando a ligação à bomba for perdida. Se esse erro ocorrer, certifique-se de que o Bluetooth está activo, prima o botão actualizar no separador Combo para verificar se a causa foi temporária ou se continua sem conexão. Reiniciar o telemóvel normalmente resolve o problema. Há uma outra questão onde o reiniciar do telefone não ajuda mas um botão na bomba pode ser pressionado ( que faz um reset ao Bluetooth da bomba), antes da bomba aceitar de novo ligações ao telemóvel. Neste momento muito pouco poderá ser feito para corrigir qualquer um destes problemas. Assim, se verificar estes erros com frequência a única opção nesta altura será arranjar outro telefone que trabalhe correctamente com AndroidAPS e a Combo (ver acima).
+- A emissão dum bolus apartir da bomba nem sempre será detectado a tempo (apenas quando o AAPS de conecta à bomba) e em pior caso poderá demorar 20 minutos. Os bolus na bomba são sempre verificados antes de uma DBT alta ou um bolus efectuado pela AAPS e dos limites de segurança da AAPS irão recusar a DBT/Bolus dada a nova informação retirada da bomba. (-> Não dê bolus a partir da bomba! Ver capítulo *Utilização*)
 - É de evitar programar uma DBT na bomba dado que o Loop assume o controlo das DBTs. Detectar uma nova DBT na bomba pode levar até 20 minutos e o efeito da DBT só será tido em conta a partir do momento em que é detectado, no pior dos casos poderão haver 20 minutos de DBT que não será reflectida na IOB (insulina activa). 
 
 ## Instalação
@@ -60,7 +60,7 @@
 
 ## Porque é que o emparelhar com a bomba não funciona com a app "ruffy"?
 
-There are several possible reasons. Tente os seguintes passos:
+Há várias razões possiveis. Tente os seguintes passos:
 
 1. Insira **pilha nova** na bomba. Para detalhes consulte a secção bateria. Certifique-se de que a bomba está muito perto do smartphone.
 
@@ -73,12 +73,12 @@ There are several possible reasons. Tente os seguintes passos:
       
 
 4. Apague uma bomba previamente ligada ao telemóvel via blutooth: definiçoes/blutooth, remover dispositivo emparelhado "**SpiritCombo**"
-5. Certifique se de que AAPS não está em background a correr o loop. Disable Loop in AAPS.
+5. Certifique se de que AAPS não está em background a correr o loop. Desactive Loop no AAPS.
 6. Inicie agora ruffy no telefone. Pode premir Reset! e remover a ligação antiga. Prima Connect!.
-7. No menu blutooth da bomba, ir a **Adicionar dispositivo / Adicionar ligação**. Press *CONNECT!** * Step 5 and 6 have to be done in a short timing.
-8. Now the Pump should show up the BT Name of phone to select for pairing. Here it is important to wait at least 5s before you hit the select button on Pump. Otherwise the Pump will not send the Pairing request to the Phone properly.
+7. No menu blutooth da bomba, ir a **Adicionar dispositivo / Adicionar ligação**. Pressione *CONNECT!** *Os passos 5 e 6 têm de ser realizados rapidamente.
+8. Agora a bomba deve mostrar o nome de BT do telefone para seleccionar para emparelhar. Aqui é importante que espere pelo menos 5s antes de premir o botão de selecção na bomba. Otherwise the Pump will not send the Pairing request to the Phone properly.
 
-* If Combo Pump is set to 5s Screen timeout, you may test it with 40s (original setting). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings. * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
+* Se o écran d a bomba estiver configurado para estar ligado 5s deverá testar com 40s ( configuração original). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings. * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 
 9. At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you should be ready to go.
 10. Reboot the phone.
