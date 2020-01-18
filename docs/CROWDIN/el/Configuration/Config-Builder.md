@@ -113,7 +113,7 @@ Select the pump you are using.
 * MDI (λάβετε τις προτάσεις του AAPS για τις πολλαπλές καθημερινές ενέσεις σας)
 * Εικονική αντλία (ανοικτό κύκλωμα για αντλία που δεν έχει ακόμα οδηγό - μόνο προτάσεις AAPS)
 
-Use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
 
 ## Ανίχνευση ευαισθησίας
 
@@ -130,8 +130,8 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS MA (βοήθεια γεύματος, κατάσταση του αλγορίθμου το 2016)
-* OpenAPS AMA (προηγμένη βοήθεια γεύματος, κατάσταση του αλγορίθμου το 2016)  
-    Περισσότερες λεπτομέρειες για το OpenAPS AMA μπορείτε να βρείτε στο [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
+    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
     Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) in order to use OpenAPS AMA.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
     Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
