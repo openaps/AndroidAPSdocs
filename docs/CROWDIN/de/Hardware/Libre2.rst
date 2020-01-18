@@ -77,7 +77,7 @@ Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen.
 * Ggf. unter Less Common Settings->Extra Logging Settings->Extra tags for logging „BgReading:d,xdrip libre_receiver:v“ eintragen. Damit werden evtl. Fehlermeldungen protokolliert.
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 * In xdrip gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
-* Um in AndroidAPS (ab Version 2.5) CGM-Werte von xDrip empfangen zu können, idetifiziere den Empfänger in xDrip (Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gebe info.nightscout.androidaps) <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
+* Um in AndroidAPS (ab Version 2.5) CGM-Werte von xDrip empfangen zu können, identifiziere den Empfänger in xDrip `(Einstellungen > Inter-App Einstellungen > Identifiziere Empfänger und gib info.nightscout.androidaps ein) <https://androidaps.readthedocs.io/en/latest/CROWDIN/de/Configuration/xdrip.html#identifiziere-empfanger>`_
 * Falls du mit AndroidAPS kalibrieren willst dann gehe in xdrip zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN.  Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 
 .. image:: ../images/fsl2pic7.jpg
@@ -138,7 +138,7 @@ Man kann den Libre2 kalibrieren, jedoch nur mit einen Offset von plus/minus 20 m
 
 Die Libre2 Sensoren enthalten Plausibilitätsprüfungen, um schlechte Sensorwerte zu erkennen. Sobald sich der Sensor am Arm bewegt oder leicht angehoben wird, können die Werte anfangen zu schwanken. Der Libre2 Sensor schaltet sich dann aus Sicherheitsgründen ab. Leider erfolgen beim Scannen mit der App weitere Prüfungen. Die App kann ebenfalls den Sensor deaktivieren, was zu einem frühen Ausfall führen kann, obwohl der Sensor in Ordnung ist. Derzeit ist der interne Test zu streng. Ich verzichte mittlerweile vollständig auf das Scannen und habe seitdem keinen Ausfall mehr gehabt.
 
-In anderen  `Zeitzonen <../Usage/Timezone-traveling.html>`_gibt es beim Loopen zwei Strategien: 
+In anderen `Zeitzonen <../Usage/Timezone-traveling.html>`_ gibt es beim Loopen zwei Strategien: 
 
 1. Entweder die Zeit des Smartphones unverändert lassen und das Basalprofil
 zeitverschieben (Smartphone im Flugmodus) oder 
