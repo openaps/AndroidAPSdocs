@@ -1,4 +1,4 @@
-# Construtor de Configuração
+# Configurador
 
 Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
 
@@ -289,6 +289,6 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 Email and number of logs to be send. Normally no change necessary.
 
-### Construtor de Configuração
+### Configurador
 
 Use tab for config builder instead of hamburger menu.
