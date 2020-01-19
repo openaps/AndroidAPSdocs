@@ -52,3 +52,7 @@ Warum erkennt der Algorithmus COB nicht richtig?
 - Sportliche Aktivität oder Bewegung nach der vorangegangenen Mahlzeit.
 - Deine I:C-Einstellung ("BE-Faktor") sollte angepasst werden.
 - Dein Wert für min_5m_carbimpact ist falsch (für SMB wird 8 empfohlen, 3 für AMA).
+
+Manuelle Korrektur der eingegebenen Kohlenhydrate
+==================================================
+Wenn Du die Menge der Kohlenhydrate über- oder unterschätzt hast, kannst Du diese über den Behandlungs-Tab und das Careportal wie `hier beschrieben <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_korrigieren.

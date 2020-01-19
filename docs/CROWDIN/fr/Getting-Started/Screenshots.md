@@ -105,7 +105,7 @@ Si vous faites un bolus aditionnel rapidement après un bolus de repas (par exem
 
 ![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-of-wrong-cob-values).
+Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-of-wrong-cob-values).
 
 ## Profil d'Insuline
 
@@ -131,7 +131,29 @@ Nous voyons ici l'état de la pompe à insuline - dans ce cas, un Accu-Chek Comb
 
 ![Careportal](../images/Screenshot_care_portal.png)
 
-Ceci reproduit les fonctions que vous trouverez sur votre écran Nightscout sous le symbole "+" qui vous permet d'ajouter des notes à vos enregistrements. Les fonctions telles que l'enregistrement lorsque vous modifiez de site d'injection ou une cartouche d'insuline doivent être explicites. MAIS cette section n'émet aucune commande à votre pompe. Donc, si vous ajoutez un bolus à l'aide de cet écran, cela ajoutera simplement une note dans vos enregistrements Nightscout, la pompe ne délivrera pas de bolus.
+Ceci reproduit les fonctions que vous trouverez sur votre écran Nightscout sous le symbole "+" qui vous permet d'ajouter des notes à vos enregistrements. Les fonctions telles que l'enregistrement lorsque vous changez le site d'injection ou une cartouche d'insuline doivent être explicites.
+
+**MAIS cette section n'émet aucune commande à votre pompe !** Donc, si vous ajoutez un bolus en utilisant cet écran, il fait simplement une note dans vos enregistrements Nightscout, la pompe ne délivrera pas de bolus.
+
+### Correction de Glucides
+
+Care Portal peut être utilisé pour corriger des entrées erronées de glucides (par ex. si vous avez sur-estimé ou sous-estimé vos glucides).
+
+1. Vérifiez et mémorisez les GA et IA actuels sur l'écran d'accueil.
+2. Selon la pompe, dans l'onglet Traitement, les glucides peuvent être affichés avec l'insuline sur une seule ligne ou dans deux lignes séparées (par ex. avec Dana RS).
+   
+   ![Traitement en 1 ou 2 lignes](../images/Treatment_1or2_lines.png)
+
+3. Supprimez l'entrée qui a la mauvaise quantité de glucides.
+
+4. Assurez-vous que les glucides ont bien été enlevés en vérifiant à nouveau les GA sur l'écran d'accueil.
+5. Vérifiez également l'IA s'il n'y a qu'une seule ligne dans l'onglet de Traitement contenant les glucides et l'insuline.
+   
+   -> Si les glucides ne sont pas enlevés comme prévu et que vous ajoutez des glucides supplémentaires comme expliqué ci-dessous (6.), les GA seront trop élevés et cela pourrait conduire à un surdosage d'insuline.
+
+6. Entrez la quantité corrigée de glucides via l'onglet Care Portal et assurez-vous de renseigner correctement l'heure de l'événement.
+
+7. S'il n'y a qu'une seule ligne dans l'onglet Traitement, contenant les glucides et l'insuline, vous devez remettre la quantité d'insuline qui a été injectée. Assurez-vous de régler correctement l'heure de l'événement et vérifiez bien l'IA sur l'écran d'accueil après avoir confirmé la nouvelle entrée.
 
 ## Boucle, AR, AAR, SMB
 
@@ -141,17 +163,17 @@ Vous n'avez pas besoin de vous en inquiéter, ils montrent les résultats de l'a
 
 ![Profil](../images/Screenshot_profile.png)
 
-AndroidAPS peut s'exécuter avec différentes configurations de profil. Typiquement - comme ici - le profil Nightscout a été téléchargé via le Client NS intégré et il est présenté ici en lecture seule. Si vous souhaitez effectuer des modifications, vous pouvez le faire à partir de votre interface utilisateur Nightscout, puis faire un [Changement de Profil](../Usage/Profiles.md) dans AndroidAPS pour activer les modifications. Les données telles que les débits de base du profil seront automatiquement copiés sur votre pompe.
+AndroidAPS peut être exécuté avec un certain nombre de configurations de profil différentes. Typiquement - comme ici - le profil Nightscout a été téléchargé via le Client Nightscout intégré et il est présenté ici en lecture seule. Si vous souhaitez effectuer des modifications, vous pouvez le faire à partir de votre interface utilisateur Nightscout, puis faire un [Changement de Profil](../Usage/Profiles.md) dans AndroidAPS pour activer les modifications. Les données telles que les débits de base du profil seront automatiquement copiés sur votre pompe.
 
-** DAI : ** représente la Durée d'Action de l'Insulin et il est détaillé plus haut dans la section sur les profils d'insuline.
+** DAI :** représente la Durée d'Action de l'Insuline et il est détaillé plus haut dans la section sur les profils d'insuline.
 
-** G/I : ** est le rapport quantité de glucides divisé par le nombre d'unité d'insuline. Ce profil comporte un certain nombre de valeurs différentes définies pour différentes périodes de la journée.
+** G/I :** est le rapport quantité de glucides divisé par le nombre d'unité d'Insuline. Ce profil comporte un certain nombre de valeurs différentes définies pour différentes périodes de la journée.
 
 ** SI :** est la Sensibilité à l'Insuline, elle correspond à la réduction de glycémie que permettra d'obtenir une unité d'insuline en supposant que rien d'autre ne change par ailleurs.
 
-**Basal : ** est le profil de basal programmé dans votre pompe.
+** Basal :** est le profil de basal programmé dans votre pompe.
 
-**Cible :** est l'objectif glycémique que vous souhaitez atteindre. Si vous le souhaitez, vous pouvez définir différents niveaux pour différentes heures de la journée. Vous pouvez même définir des limites supérieure et inférieure afin que le l'algorithme ne commence à effectuer des modifications que lorsque la valeur de glycémie prévue est en dehors dela plage, mais si vous le faites, la boucle réagira moins vite et il est peu probable que vous obteniez une glycémie aussi stable.
+** Cible :** est l'objectif glycémique que vous souhaitez atteindre. Si vous le souhaitez, vous pouvez définir différents niveaux pour différentes heures de la journée. Vous pouvez même définir des limites supérieures et inférieures afin que le l'algorithme ne commence à faire des changements que lorsque la glycémie sort de la plage, mais si vous le faites, la boucle réagira moins vite et il est peu probable que vous obteniez une glycémie aussi stable.
 
 ## Traitement, xDrip, NSClient
 
@@ -161,7 +183,7 @@ Il s'agit simplement des journaux de traitements (bolus et glucides), des messag
 
 ![Générateur de configuration](../images/Screenshot_config_builder.png)
 
-C'est ici que vous allez paramétrer la configuration de votre plate-forme AndroidAPS. Cette capture d'écran montre une configuration typique utilisant une pompe Combo, un capteur MGC Dexcom G5 géré par xDrip+ et fonctionnant avec de l'insuline NovoRapid sur un profil Oref et connecté à un serveur Nightscout hébergé sur le cloud.
+C'est ici que vous allez paramétrer la configuration de votre plate-forme AndroidAPS. Cette capture d'écran montre une configuration typique utilisant une pompe Combo, un capteur MGC Dexcom G5 géré par xDrip + et fonctionnant avec de l'insuline NovoRapid sur un profil Oref et connecté à un serveur Nightscout hébergé sur le cloud.
 
 La case à cocher à droite détermine si ce module sera affiché dans la barre de menu en haut (voir la section A dans Ecran d'accueil) et la roue crantée permet d'accèder aux paramètres du module, s'il y en a.
 

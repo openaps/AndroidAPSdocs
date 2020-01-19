@@ -94,7 +94,7 @@ Selecteer de bloed glucose bron u gebruikt - Zie [BG bron](BG-Source.rst) pagina
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Dexcom App (aangepast)](https://github.com/dexcomapp/dexcomapp/) - Selecteer 'BG gegevens verzenden naar xDrip+' als je de alarmen van xDrip+ wilt gebruiken.
     
     ![Configurator BG bron](../images/ConfBuild_BGSource.png)
@@ -113,7 +113,7 @@ Selecteer de pomp die jij gebruikt.
 * MDI (bedoeld voor mensen die pentherapie gebruiken, hiermee geeft AAPS suggesties voor jouw insulinedosis)
 * Virtuele pomp (open loop voor een pomp die niet automatisch kan worden aangestuurd door AAPS, hiermee geeft AAPS alleen suggesties die je zelf handmatig in je pomp moet invoeren)
 
-Gebruik **Geavanceerde instellingen** om de BT Watchdog te activeren, indien nodig. Het schakelt bluetooth uit gedurende één seconde als er geen verbinding met de pomp kan worden gemaakt. Dit kan helpen voor sommige telefoons waarbij problemen met de bluetooth verbinding optreden (meer specifiek: wanneer de bluetooth stack bevriest).
+For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. Het schakelt bluetooth uit gedurende één seconde als er geen verbinding met de pomp kan worden gemaakt. Dit kan helpen voor sommige telefoons waarbij problemen met de bluetooth verbinding optreden (meer specifiek: wanneer de bluetooth stack bevriest).
 
 ## Gevoeligheid detectie
 
@@ -130,8 +130,8 @@ Als je Oref1 met SMB gebruikt moet je **min_5m_carbimpact** op 8 instellen. Als 
 Selecteer het gewenste APS (Artificial Pancreas System, kunstmatig alvleesklier systeem) algoritme. Je kunt de actuele details van jouw gekozen algoritme laten weergeven op het tabblad OpenAPS(OAPS). Daar zie je het resultaat van de meest recente berekening die het algoritme maakte.
 
 * OpenAPS MA (Meal Assist, maaltijd hulp). Versie van het algoritme uit 2016.
-* OpenAPS AMA (Advanced Meal Assist, geavanceerde maaltijdhulp). Versie van het algoritme uit 2017.   
-    Meer details over OpenAPS AMA kun je vinden in de [OpenAPS documentatie](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Simpel gezegd helpt de geavanceerde maaltijdhulp je door nadat je jezelf een maaltijd bolus hebt gegeven, het systeem eerder een hogere basaalstand kan instellen ZOLANG je je koolhydraten correct invoert.   
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
+    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Simpel gezegd helpt de geavanceerde maaltijdhulp je door nadat je jezelf een maaltijd bolus hebt gegeven, het systeem eerder een hogere basaalstand kan instellen ZOLANG je je koolhydraten correct invoert.   
     NB: je moet minimaal in [Doel 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) zijn om OpenAPS AMA te kunnen gebruiken.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bolus). Dit is het meest recente algoritme, bedoeld voor gevorderde gebruikers.   
     Je moet minimaal in [Doel 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) zijn om OpenAPS SMB te gebruiken, en vergeet niet om je min_5m_carbimpact op 8 in te stellen via Configurator > gevoeligheid detectie > gevoeligheid Oref1 instellingen.
@@ -203,7 +203,7 @@ Een aantal knoppen voor snelle toegang tot algemene functies:
 * Tijdelijk streefdoel
 * Zet / annuleer Tijdelijke basaalstand
 * Vertraagde bolus (alleen DanaR/RS of Combo pomp)
-* Ontlucht / vul (alleen DanaR/RS of Combo pomp)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Historiek venster
 * TDD (Totale Dagelijkse Dosis = bolus + basale insuline per dag)
 

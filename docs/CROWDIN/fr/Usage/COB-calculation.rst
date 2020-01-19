@@ -1,7 +1,7 @@
-COB calculation
+Calcul GA
 **************************************************
 
-How does AndroidAPS calculate the COB value?
+Comment AndroidAPS calcul-il la valeur de GA?
 ==================================================
 
 Oref0 / Oref1
@@ -52,3 +52,7 @@ Why does the algorithm not detect COB correctly?
 - Activity / exercise after your previous meal
 - I:C needs adjustment
 - Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+
+Manual correction of carbs entered
+==================================================
+If you over- or underestimated carbs you can correct this though treatments tab and care portal as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

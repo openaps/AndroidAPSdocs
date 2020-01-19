@@ -10,6 +10,6 @@ Plus de détails ici :
    :glob:
    
    Liste des smartphones testé et des montrées connectées <../Getting-Started/Phones.md>
-   Phone background <../Getting-Started/Phones.md#phone-background>
-   Watchfaces Wear OS <../Configuration/Watchfaces.md>
+   Arrière plan du téléphone <../Getting-Started/Phones.md#phone-background>
+   AAPS sur montres Wear OS <../Configuration/Watchfaces.md>
    Pebble <../Configuration/Watchfaces.md#pebble>

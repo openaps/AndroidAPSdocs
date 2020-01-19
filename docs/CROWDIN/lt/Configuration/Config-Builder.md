@@ -74,8 +74,8 @@ Greitai veikiančio ir ypač greitai veikiančio insulino veikimo trukmė yra vi
 ### Ypač greito veikimo Oref
 
 * rekomenduojama FIASP
-* DIA = at least 5.0h
-* Max. pikas = 55 minutės po injekcijos (fiksuotas, nekeičiamas)
+* IVT = bent 5.0 val
+* Maks. pikas = 55 minutės po injekcijos (fiksuotas, nekeičiamas)
 
 Daugeliui žmonių FIASP poveikis beveik nepastebimas po 3–4 valandų, net jei paprastai lieka 0,0xx vienetų. Šis likutis gali būti jaučiamas, pavyzdžiui, sporto metu. Todėl AndroidAPS naudojama mažiausia IVT yra 5 val.
 
@@ -94,7 +94,7 @@ Pasirinkite pagrindinį glikemijos duomenų šaltinį - daugiau informacijos api
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient KG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - palaikoma versija 4.15.57 ir naujesnė
 * Modifikuota programa [ Dexcom App ](https://github.com/dexcomapp/dexcomapp/) - pasirinkite „Siųsti KG duomenis į xDrip+“, jei norite gauti pranešimus iš xDrip+.
     
     ![Glikemijos šaltinis konfigūratoriuje](../images/ConfBuild_BGSource.png)
@@ -113,7 +113,7 @@ Pasirinkite pompą, kurią naudojate.
 * MDI (AAPS pateikia insulino tiekimo patarimus naudojant insulino švirkštimo priemones)
 * Virtuali pompa (atviras ciklas pompai, kuri dar nėra palaikoma - AAPS teikia tik pasiūlymus)
 
-Jei reikia, eikite į ** Išplėstiniai nustatymai **, kad suaktyvintumėte BT Watchdog. Jei prisijungti prie pompos neįmanoma, jis vienai sekundei išjungia Bluetooth. Tai padeda kai kuriuose telefonuose, kur užstringa Bluetooth modulis.
+For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. Jei prisijungti prie pompos neįmanoma, jis vienai sekundei išjungia Bluetooth. Tai padeda kai kuriuose telefonuose, kur užstringa Bluetooth modulis.
 
 ## Jautrumo nustatymas
 
@@ -130,8 +130,8 @@ Jei naudojate „Oref1“ su SMB, turite nustatyti ** min_5m_ carbimpact** reik�
 Pasirinkite norimą APS algoritmą terapijos koregavimui. Išsamią informaciją apie pasirinktą algoritmą galite rasti skirtuke OpenAPS (OPAS).
 
 * OpenAPS MA (maisto asistentas, algoritmas nuo 2016 m.)
-* OpenAPS AMA (pažangusis maisto asistentas, algoritmas nuo 2016 m.)   
-    Išsamios informacijos apie OpenAPS AMA galima rasti [ OpenAPS dokumentacijoje ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Paprastai tariant nauda tokia, kad po suleisto maisto boluso sistema gali greičiau kelti bazę, JEI jūs teisingai įvedėte angliavandenius.  
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
+    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Paprastai tariant nauda tokia, kad po suleisto maisto boluso sistema gali greičiau kelti bazę, JEI jūs teisingai įvedėte angliavandenius.  
     Pastaba: jūs turite būti [9-ame tiksle](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama)norint naudoti OpenAPS AMA.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super mikro bolusas, naujausias algoritmas patyrusiems vartotojams)  
     Pastaba: jūs turite būti[ 10-ame tiksle ](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)norint naudoti OpenAPS SMB ir min_5m_carbimpact turi būti nustatyti į 8 Konfigūracijos generatorius> Jautrumo aptikimas> Jautrumo Oref1 nustatymai.
@@ -203,7 +203,7 @@ Mygtukai greitesniam pagrindinių funkcijų paleidimui:
 * Laikinas tikslas
 * Nustatyti / atšaukti laikiną valandinę bazę
 * Ištęstas bolusas (tik DanaR/RS arba Combo pompa)
-* Rezervuaro / kateterio pildymas (tik DanaR/RS arba Combo)
+* Pirminis užpildymas / kateterio užpildymas (jei palaiko pompa [DanaR/RS, Combo ir Insight])
 * Istorija
 * BPD (Bendra paros dozė = bolusas + bazė per dieną)
 

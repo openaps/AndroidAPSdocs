@@ -1,10 +1,14 @@
 # xDrip+ Instellingen
 
-Als je het nog niet had, download dan [xDrip+](https://github.com/NightscoutFoundation/xDrip)
+If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+
+**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
 Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) zorg ervoor dat je de [master van 2019/05/18](https://jamorham.github.io/#xdrip-plus) gebruikt, of een recentere versie.
 
-Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G... of 8H... gebruik dan een van de [meest recente 'nightly builds'](https://github.com/NightscoutFoundation/xDrip/releases).
+Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+
+If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Basisinstellingen voor alle CGM-systemen & FSL
 
@@ -20,7 +24,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G..
 
 * Deactiveer `Upload treatments` en `Backfill data`.
    
-   **Veiligheidswaarschuwing: Je moet "Upload behandelingen" deactiveren uit xDrip, anders kunnen de behandelingen dubbel in AAPS terecht komen, wat leidt tot foutieve COB en IOB!**
+   **Safety warning : You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.**
 
 * Optie `Alert on failures` moet ook gedeactiveerd worden. Anders krijg je elke 5 minuten een alarm als je wifi/mobiel netwerk te slecht is of de server niet beschikbaar is.
    
@@ -39,7 +43,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G..
 ### Identificeer ontvanger (Identify receiver)
 
 * Als je problemen hebt met de 'local broadcast' (AAPS ontvangt geen BG waarden van xDrip+), ga dan naar Instellingen > Inter-app instellingen > Identify receiver en voer in: `info.nightscout.androidaps`
-* Let op: Auto-correct past soms de beginletter aan naar een hoofdletter. Zorg dat er **alleen kleine letters** worden gebruikt bij het intypen van `info.nightscout.androidaps` Staat er toch een hoofdletter, dan zal AAPS nog steeds geen BG waardes ontvangen van xDrip+.
+* Let op: Auto-correct past soms de beginletter aan naar een hoofdletter. Zorg dat er **alleen kleine letters** worden gebruikt bij het intypen van `info.nightscout.androidaps` Capital I would prevent AAPS from receiving BG values from xDrip+.
    
    ![xDrip + Basic Inter-app Instellingen Ontvanger identificeren](../images/xDrip_InterApp_NS.png)
 
@@ -72,11 +76,11 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G..
 
 ### Pre-emptive restarts niet aanbevolen
 
-**Als jouw Dexcom zender een serienummer heeft dat begint met 8G of 8H dan zullen 'preemptive restarts' (automatische herstarts) niet werken en deze optie kan de zender volledig stukmaken!**
+**With Dexcom transmitters whos serial no. is starting with 8G or 8H preemptive restarts do not work and might kill the sensor completely!**
 
-Het wordt sowieso niet aangeraden om de automatische herstart optie voor Dexcom G6 sensoren (`pre-emptive restarts`) te gebruiken, omdat dit kan leiden tot een "sprong” in de BG waarden op dag 9, wanneer hij de herstart uitvoert.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ sprong na automatische herstart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht lijkt. Om de G6 veilig te gebruiken, moet je rekening houden met het volgende:
 
@@ -86,11 +90,11 @@ Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht l
 * Het zogenaamde "Pre-soaking" (de sensor alvast inbrengen, waarna je nog wacht met starten) van de G6 met kalibratiecode zal hoogstwaarschijnlijk leiden tot onnauwkeurigheden in je glucosewaardes na starten. Omdat het algoritme van de G6 rekent op weefselbeschadiging na inbrengen, terwijl je met Pre-soaken niet dezelfde mate van weefselbeschadiging zult hebben op het moment dat je de sensor start. Wanneer je Pre-soakt is het waarschijnlijk het beste om de sensor te kalibreren.
 * Als je om welke reden ook niet in staat bent om op te letten wat er gebeurt tijdens een herstart / na een Pre-soak, dan kun je beter de kalibratiecode niet gebruiken, en jouw sensor gebruiken met kalibraties, net als bij de G5.
 
-Lees het [volledige artikel](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) (Engelstalig) van Tim Street voor meer achtergrondinformatie en de redenen achter deze aanbevelingen.
+To learn more about the details and reasons for these recommendations read the [complete article](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](http://www.diabettech.com).
 
 ### G6-zender voor de eerste keer verbinden
 
-**Voor de tweede en volgende zender zie [Zender resetten](../Configuration/xdrip#extend-transmitter-life) hieronder.**
+**For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
 Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) zorg ervoor dat je de [master van 2019/05/18](https://jamorham.github.io/#xdrip-plus) gebruikt, of een recentere versie.
 
@@ -114,13 +118,13 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
    * Zendernummer beginnend met 80 of 81: "Got data hh:mm" (bijvoorbeeld "Got data 19:04")
    * Zendernummer beginnnend met 8G of 8H: "Got glucose hh:mm" (bijvoorbeeld "Got glucose 19:04") of "Got no raw hh:mm" (bijvoorbeeld "Got no raw 19:04")
    
-   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Start sensor (alleen indien je zojuist een nieuwe sensor hebt geplaatst)
    
    -> Ergens onderaan het scherm hoort na enkele minuten `Warm Up x,x hours left` te verschijnen.
 
--> Als je zendernummer niet begint met 8G of 8H én hij laat na een paar minuten nog geen tijdsspecificatie zien, dan moet je de sensor stoppen en weer starten.
+-> If your transmitter serial no. does not start with 8G or 8H and there is no time specification after a few minutes stop and restart the sensor.
 
 * Indien je de sensor niet zojuist hebt vervangen: ga naar het Hamburgermenu > System status > klik op de knop 'Restart collector'.
 * Zet de originele Dexcom ontvanger (indien je die gebruikt) niet terug aan voordat xDrip+ de eerste meetwaardes toont.
@@ -149,27 +153,28 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
 * Een zender kun je resetten zodat de teller van het aantal dagen dat hij in gebruik is, weer op nul komt te staan. Dan gaat hij langer mee dan de maximaal 100 dagen die Dexcom garandeert (na de 100 dagen is de zenderbatterij meestal nog niet leeg, maar hij is geprogrammeerd om te stoppen). Tot nu toe kan een zender niet gereset worden waarvan het serienummer begint met 8G of 8H. Onderstaande instructies werken dus helaas niet voor deze zenders, wel voor oudere modellen.
 * Het wordt aangeraden om de zender te resetten vóórdat hij 100 dagen in gebruik is. Dit om problemen met het starten van sensoren te voorkomen.
 * De actieve sensor sessie zal worden gestopt bij het resetten van de zender. Dat betekent dat je daarna weer de 2 uur opwarm-fase zult moeten uitzitten. Plan je zender reset dus gelijktijdig met een sensorwissel, of doe het op een moment dat het geen probleem is om 2 uur geen gegevens te hebben.
-* Schakel de `engineering mode` in: 
-   * tik op het injectiespuit-icoontje aan de rechterkant van het xDrip+ startscherm
-   * houdt het microfoon-icoontje rechtsonder lang ingedrukt
-   * In het tekstveld typ je in "enable engineering mode" (zonder de aanhalingstekens) 
-   * klik op "OK"
-   * Als je Google Speak engine hebt ingeschakeld, dan kun je ook kort op het microfoon-icoontje tikken en daarna de opdracht inspreken: "enable engineering mode". Het liefst in accentloos Engels;) 
-* Ga naar de G5 debug instellingen en zorg dat `OB1 collector` ingeschakeld is.
-* Geef via het microfoon-icoontje weer de spraakopdracht (op dezelfde manier als hierboven): “hard reset transmitter”
-* De opdracht om de zender te resetten zal worden verstuurd bij de eerstvolgende keer dat jouw telefoon contact heeft met de zender
-* Kijk vervolgens naar de systeemstatus (Hamburger menu > system status) en zie wat er gebeurt. Het kan even duren voordat de zender heeft terug gecommuniceerd naar je telefoon dat hij succesvol is gereset.
-* Als je een bericht ziet "Phone Service State: Hard Reset maybe failed" op het tweede systeemstatusscherm, start dan gewoon de sensor en dit bericht zou moeten verdwijnen.
+* Stop sensor manually via hamburger menu.
+* Switch to the `engineering mode`: 
+   * tap on the character on the right of the xDrip+ start screen that represents a syringe
+   * then tap on the microphone icon in the lower right corner
+   * In the text box that opens type "enable engineering mode" 
+   * click "Done"
+   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
+* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
+* Use the voice command: “hard reset transmitter”
+* The voice command will be executed with the next data receipt of the transmitter
+* Look at the system status (Hamburger menu -> system status) and see what happens
+* If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
-   ![xDrip+ Hard Reset mogelijk mislukt](../images/xDrip_HardResetMaybeFailed.png)
+   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days (ouderdom zender, in dagen) zal worden ingesteld op 0 nadat je succesvol de zender hebt gereset en weer een sensor hebt gestart.
+* Transmitter days will be set to 0 after successful extension and start of sensor.
 
 ### Zender vervangen
 
 Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) zorg ervoor dat je de [master van 2019/05/18](https://jamorham.github.io/#xdrip-plus) gebruikt, of een recentere versie.
 
-Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G of 8H gebruik dan een van de [meest recente 'nightly builds'](https://github.com/NightscoutFoundation/xDrip/releases).
+Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Zet originele Dexcom ontvanger uit (indien je die gebruikt).
 * Stop sensor (alleen als je van plan was om je sensor te vervangen)
@@ -186,7 +191,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Haal de zender weg uit de xDrip system status (knop Forget Device) en haal de zender ook weg uit de jouw telefooninstellingen (Instellingen-> Bluetooth-> selecteer Dexcom en kies Vergeten) De Dexcom zender staat als Dexcom?? bij jouw gekoppelde Bluetooth apparaten, waarbij de ?? de laatste twee cijfers/letters zijn van jouw Dexcom zender.
+* Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? De Dexcom zender staat als Dexcom?? bij jouw gekoppelde Bluetooth apparaten, waarbij de ?? de laatste twee cijfers/letters zijn van jouw Dexcom zender.
    
    ![xDrip+ Vergeet apparaat](../images/xDrip_Dexcom_ForgetDevice.png)
 
@@ -205,7 +210,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
    
    * Preemptive restart (Vroegtijdig herstarten) ->uitschakelen!
    * Restart sensor (Sensor herstarten) ->uitschakelen!
-   * Fallback to xDrip (Terugvallen op xDrip) ->uitschakelen!
+   * Fallback to xDrip+ (disable!)
    
    ![Instellingen voor Firefly zenders](../images/xDrip_Dexcom_FireflySettings.png)
 
@@ -214,7 +219,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
    * Zendernummer beginnend met 80 of 81: "Got data hh:mm" (bijvoorbeeld "Got data 19:04")
    * Zendernummer beginnnend met 8G of 8H: "Got glucose hh:mm" (bijvoorbeeld "Got glucose 19:04") of "Got no raw hh:mm" (bijvoorbeeld "Got no raw 19:04")
    
-   ![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 * Wacht 15 minuten, omdat de zender meerdere malen moet communiceren met xDrip voordat de nieuwe sensor wordt gestart. De batterij gegevens worden weergegeven onder Firmware informatie.
    
@@ -300,7 +305,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
 
 ### Probleem bij het starten van nieuwe sensor
 
-Houd er rekening mee dat de volgende methode waarschijnlijk niet werkt als jouw Dexcom G6 zender serienummer begint met 8G of 8H.
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G or 8H.
 
 * In Systeem status wordt sensor weergegeven als "FAILED: Sensor failed start"
 * Sensor stoppen
@@ -310,7 +315,7 @@ Houd er rekening mee dat de volgende methode waarschijnlijk niet werkt als jouw 
 * Sensor stoppen
 * Start sensor met "echte" code (staat op de papieren achterlaag van de pleister)
 
-Controleer in xDrip+ logs of xDrip+ begint met het tellen van de duur "Duration: 1 minute" (en ga zo maar door). Alleen in de xdrip+ logs kan je in een vroeg stadium zien of xdrip+ een sensor heeft gestopt. De nieuwste status wordt niet altijd correct weergegeven onderaan het startscherm.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## Freestyle Libre met xDrip+
 

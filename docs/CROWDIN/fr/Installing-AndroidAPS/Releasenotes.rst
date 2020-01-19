@@ -1,13 +1,13 @@
 Notes de Version
 **************************************************
-Please follow the instructions in the `update manual <../Installing-AndroidAPS/Update-to-new-version.html>`_. Vous pouvez également trouver une section de dépannage répondant aux difficultés les plus courantes lors de la mise à jour dans la page du manuel de mise à jour.
+Veuillez suivre les instructions de la page `Mise à jour vers une nouvelle version <../Installing-AndroidAPS/Update-to-new-version.html>`_. Vous pouvez également trouver une section de dépannage répondant aux difficultés les plus courantes lors de la mise à jour dans la page du manuel de mise à jour.
 
-You will receive the following information as soon as a new update is available:
+Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera disponible :
 
 .. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Update info
 
-Ensuite, vous avez 60 jours pour mettre à jour. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+Ensuite, vous avez 60 jours pour mettre à jour. Si vous ne faites pas de mise à jour au cours de ces 60 jours, AAPS retournera en mode AGB (Arrêt Glycémie Basse - cf. `glossaire <../Getting-Started/Glossary.html>`_) comme dans `l'objective 6 <../Usage/Objectives.html>`_.
 
 Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à partir de la nouvelle date de sortie), AAPS passe à Boucle Ouverte.
 
@@ -15,81 +15,81 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version 2.5.1
 ==================================================
-Release date: 31-10-2019
+Date de sortie : 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
-* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
-* New versioning that will allow to do minor updates without triggering the update-notification.
+Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#remarques-importantes>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+* Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie).
+* Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
 
 Version 2.5.0
 ==================================================
-Release date: 26-10-2019
+Date de sortie : 26-10-2019
 
 Remarques importantes
 --------------------------------------------------
-* Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-* If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
-* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+* Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
+* Si vous utilisez Dexcom G6 avec l'application `Dexcom patchée <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ vous aurez besoin de la version du `Dossier 2.4<https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
-Is this update for me? Currently is NOT supported
+Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
 --------------------------------------------------
-* Android 5 and lower
+* Android 5 and inférieurs
 * Poctech
 * 600SeriesUploader
 * Glimp
-   Glimp stopps working when offline. Glimp developer must update app to use SDK28 broadcast.
-* Patched Dexcom from 2.3 directory
+   Glimp cesse de fonctionner lorsque vous êtes hors ligne. Le développeur de Glimp doit mettre à jour l'application pour utiliser la diffusion SDK28 .
+* Dexcom patchés présents dans le répertoire 2.3
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
-* Internal change of targetSDK to 28 (Android 9), jetpack support
-* RxJava2, Okhttp3, Retrofit support
+* Changement interne de targetSDK à 28 (Android 9), prise en charge de jetpack
+* Prise en charge de RxJava2, Okhttp3, Retrofit
 * Old `Medtronic pumps <../Configuration/MedtronicPump.html>`_ support (RileyLink need)
 * New `Automation plugin <../Usage/Automation.html>`_
 * Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings>`_ from bolus wizard calculation
-* Rendering insulin activity
-* Adjusting IOB predictions by autosense result
+* Affichage de l'activité de l'insuline
+* Ajustement des prévisions de l'IA par le résultat autosense
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
-* Signature verifier
-* Allow to bypass objectives for OpenAPS users
+* Vérificateur de signature
+* Autorisation de contourner les objectifs pour les utilisateurs d'OpenAPS
 * New `objectives <../Usage/Objectives.html>`_ - exam, application handling
    
    (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
-* Fixed bug in Dana* drivers where false time difference was reported
+* Correction d'un bug dans les pilotes Dana*, où une différence de temps erronée a été signalée
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
 Version 2.3
 ==================================================
-Release date: 25-04-2019
+Date de sortie : 25-04-2019
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
-* Important safety fix for Insight (really important if you use Insight!)
-* Fix History-Browser
-* Fix delta calculations
-* Language updates
-* Check for GIT and warn on gradle upgrade
-* More automatic testing
-* Fixing potential crash in AlarmSound Service (thanks @lee-b !)
-* Fix broadcast of BG data (works independently of SMS permission now!)
-* New Version-Checker
+Correctif de sécurité important pour Insight (vraiment important si vous utilisez Insight !)
+* Correctif du Navigateur-Historique
+* Correction des Calculs Delta
+* Mises à jour des langues
+* Vérification de GIT et avertissement de la mise à niveau gradle
+* Plus de tests automatiques
+* Correction d'un crash potentiel dans le service d'Alarm Sonore (merci @lee-b !)
+* Correctif diffusion des glycémies (fonctionne maintenant independemment des autorisations SMS maintenant!)
+* Nouveau vérificateur de version
 
 
 Version 2.2.2
 ==================================================
-Release date: 07-04-2019
+Date de sortie : 07-04-2019
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
-* Autosens fix: deactivate TT raises/lowers target
-* New translations
-* Insight driver fixes
-* SMS plugin fix
+* Correctif Autosens : désactiver CT réhausse/diminue la cible
+* Nouvelles traductions&nbsp;
+* Correctifs du pilote Insight
+* Correction du plugin SMS
 
 
 Version 2.2
 ==================================================
-Release date: 29-03-2019
+Date de sortie : 29-03-2019
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
@@ -102,7 +102,7 @@ Nouvelles fonctionnalités majeures
 
 Version 2.1
 ==================================================
-Release date: 03-03-2019
+Date de sortie : 03-03-2019
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
@@ -115,14 +115,14 @@ Nouvelles fonctionnalités majeures
 * G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
 * Fixed disabling SMB from preferences (Johannes Mockenhaupt)
 
-Misc
+Divers
 --------------------------------------------------
 * If you are using non default `smbmaxminutes` value you have to setup this value again
 
 
 Version 2.0
 ==================================================
-Release date: 03-11-2018
+Date de sortie : 03-11-2018
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
@@ -130,17 +130,17 @@ Nouvelles fonctionnalités majeures
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ pump support
 * Setup wizard: guides you through the process of setting up AndroidAPS
 
-Settings to adjust when switching from AMA to SMB
+Paramètres à ajuster lors du passage d'AMA à SMB
 --------------------------------------------------
 * Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
 * min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
 * Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
 
-   * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-   * In the left pane, click Build, Execution, Deployment > Compiler.
-   * Uncheck the Configure on demand checkbox.
-   * Click Apply or OK.
+   * Ouvrez la fenêtre Préférences en cliquant sur File > Settings (sur Mac, Android Studio > Preferences).
+   * Dans le panneau de gauche, cliquez sur Build, Execution, Deployment > Compiler.
+   * Décochez la case Configure on demand.
+   * Cliquez sur Appliquer ou OK.
 
 Overview tab
 --------------------------------------------------
@@ -150,20 +150,20 @@ Overview tab
 * Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
 * Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
-Watch
+Montre
 --------------------------------------------------
 * Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
 * Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
 * confirmations and info dialogs now work on wear 2.0 as well
 * Added eCarbs menu entry
 
-New plugins
+Nouveaux plugins
 --------------------------------------------------
 * PocTech app as BG source
 * Dexcom patched app as BG source
 * oref1 sensitivity plugin
 
-Misc
+Divers
 --------------------------------------------------
 * App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
 * Overhaul for config builder and objectives tabs, adding descriptions

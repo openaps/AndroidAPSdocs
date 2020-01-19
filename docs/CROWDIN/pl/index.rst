@@ -23,7 +23,7 @@ Pierwsze kroki
    Bezpieczeństwo przede wszystkim <./Getting-Started/Safety-first.rst>
    Co to jest system zamkniętej pętli <./Getting-Started/ClosedLoop.rst>
    Co to jest system zamkniętej pętli AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Aktualizacje Wiki i zmiany <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
    
    
 Czego potrzebuję 
@@ -148,7 +148,7 @@ Gdzie szukać pomocy
 
    Przydatne zasoby do przeczytania zanim rozpoczniesz <./Where-To-Go-For-Help/Background-reading.md>
    Gdzie można znaleźć pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Aktualizacje Wiki i zmiany <./Getting-Started/WikiUpdate.rst>
+   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 Dla lekarzy specjalistów
 --------------------------------------------------
@@ -166,8 +166,8 @@ Jak pomóc
    :glob:
 
    Jak pomóc <./Getting-Started/How-can-I-help.md>
-   W jaki sposób przetłumaczyć aplikację i dokumentację wiki <./translations.md>
-   Jak edytować dokumentację Wiki <./make-a-PR>
+   How to translate the app and docs <./translations.md>
+   How to edit the docs <./make-a-PR>
 
 
 .. notatka:: 

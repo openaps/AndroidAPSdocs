@@ -115,7 +115,7 @@ App not installed
 .. image:: ../images/Update_AppNotInstalled.png
   :alt: phone app note installed
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
+* Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * If "App not installed" is displayed on your phone follow these steps:
   
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
@@ -144,6 +144,6 @@ Worst case scenario
 ==================================================
 In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-Make sure to uninstall all files associated with Android Studio. Manuals can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
 Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.

@@ -52,3 +52,7 @@ Proč algoritmus nedetekuje COB správně?
 - Aktivita / cvičení po předchozím jídle
 - Inzulínovosacharidový poměr vyžaduje úpravu
 - Hodnota pro min_5m_carbimpact je chybná (doporučeno je 8 s SMB, 3 s AMA)
+
+Manual correction of carbs entered
+==================================================
+If you over- or underestimated carbs you can correct this though treatments tab and care portal as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.

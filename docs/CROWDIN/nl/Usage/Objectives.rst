@@ -33,6 +33,9 @@ Doel 3: Bewijs jouw kennis
      :alt: Screenshot doel 3
 
 * Er staan links naar deze wiki om je op weg te helpen als je het antwoord niet meteen weet.
+
+Skip objectives
+--------------------------------------------------
 * Alleen als je al een tijd een closed loop hebt gehad met één van de volgende systemen (OpenAPS, iOS Loop, AndroidAPS) én je kunt dit bewijzen (dmv het laten zien van ten minste 3 maanden looping data in Nightscout), dan kun je een e-mail sturen naar `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ met jouw NS adres en request code om de rest van de doelstellingen te kunnen overslaan.
 
 Doel 4: Beginnen met een open loop

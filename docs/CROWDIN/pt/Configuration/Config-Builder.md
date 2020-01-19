@@ -1,10 +1,10 @@
-# Construtor de Configuração
+# Configurador
 
 Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
 
 ![Open config builder](../images/ConfBuild_Open.png)
 
-O Construtor de Configuração (Conf) é o separador onde ativa e desativa as configurações modulares. As caixas do lado esquerdo (A) permitem selecionar qual usar, as caixas do lado direito (C) permitem que as veja como um separador (E) no AndroidAPS. Caso a caixa direita não esteja ativada, pode chegar à função utilizando o menu hamburger (D) no topo esquerdo do ecrã.
+O Configurador (Conf) é o separador onde ativa e desativa os módulos de configurações. As caixas do lado esquerdo (A) permitem selecionar qual usar, as caixas do lado direito (C) permitem que as veja como um separador (E) no AndroidAPS. Caso a caixa direita não esteja ativada, pode chegar à função utilizando o menu hamburger (D) no topo esquerdo do ecrã.
 
 Onde existem configurações adicionais disponíveis dentro do módulo, pode clicar na roda dentada (B) que o levará para as configurações específicas dentro das preferências.
 
@@ -94,7 +94,7 @@ Selecione a fonte de glicose de sangue que utiliza - ver [Fonte de BG](BG-Source
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * Glic NSCliente
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
@@ -113,7 +113,7 @@ Selecione a bomba que está a utilizar.
 * MDI (receive AAPS suggestions for your multiple daily injections therapy)
 * Bomba Virtual (loop aberto para uma bomba que nao tenha ainda nenhum driver - apenas sugestões AAPS)
 
-Usar **Configurações avançadas** para ativar o watchdog BT se necessário. It switches off bluetooth for one second if no connection to the pump is possible. Isto pode ajudar em alguns telefones onde a pilha bluetooth congela.
+For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. Isto pode ajudar em alguns telefones onde a pilha bluetooth congela.
 
 ## Detecção de Sensibilidade
 
@@ -130,7 +130,7 @@ Se utilizar o Oref1 com SMB, deverá alterar **min_5m_carbimpact** para 8. The v
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS MA (meal assist, state of the algorithm in 2016)
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2016)  
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
     More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.  
     Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) in order to use OpenAPS AMA.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
@@ -203,7 +203,7 @@ Alguns botões para aceder rapidamente a funções comuns:
 * Alvos temporário
 * Definir / cancelar temp. taxa basal
 * Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (DanaR/RS or Combo pump only)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Navegador do histórico
 * TDD (Total daily dose = bolus + basal per day)
 
@@ -289,6 +289,6 @@ If you want to use only a specific WiFi network you can enter its **WiFi SSID **
 
 Email and number of logs to be send. Normally no change necessary.
 
-### Construtor de Configuração
+### Configurador
 
 Use tab for config builder instead of hamburger menu.
