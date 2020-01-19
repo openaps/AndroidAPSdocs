@@ -43,7 +43,7 @@ Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à
 
 If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
 
-![MDT Settings](../images/Medtronic01.png)
+![Paramètres MDT](../images/Medtronic01.png)
 
 You need to set following items: (see picture above)
 
@@ -59,9 +59,9 @@ You need to set following items: (see picture above)
 - **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
 - **RileyLink Configuration**: This will find your RileyLink/GNARL device.
 
-## MEDTRONIC (MDT) Tab
+## Onglet MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png)
+![Onglet MDT](../images/Medtronic02.png)
 
 On pump tab you can see several lines that are showing pumps (and connections) current status.
 
@@ -81,17 +81,17 @@ On lower end we have 3 buttons:
 - **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
 - **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
-## Pump History
+## Historique pompe
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Boîte de dialogue Historique pompe](../images/Medtronic03.png)
 
 Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
 
-## RL Status (RileyLink Status)
+## État RL (RileyLink État)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![État RileyLink - Paramètres](../images/Medtronic04.png) ![État RileyLink - Historique](../images/Medtronic05.png)
 
-Dialog has two tabs:
+La boîte de dialogue a deux onglets :
 
 - **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
 - **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
@@ -106,7 +106,7 @@ When Medtronic driver is selected, 3 possible actions can be added to Actions Ta
 
 ## Remarques importantes
 
-### OpenAPS users
+### Utilisateurs OpenAPS
 
 When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
 
@@ -118,15 +118,15 @@ Since Medtronic driver is very new, you need to enable logging, so that we can d
 
 When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
 
-### CGMS
+### MGC
 
-Medtronic CGMS is currently NOT supported.
+La MGC Medtronic n'est actuellement PAS prise en charge.
 
-### Manual use of pump
+### Utilisation manuelle de la pompe
 
 You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
 
-## Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
+## Modifications de fuseau horaire, changements d'heure ou Voyage avec la pompe Medtronic et AndroidAPS
 
 Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
 
@@ -163,7 +163,7 @@ Like mentioned before you can get devices here:
 
 ### Comment déterminer la fréquence utilisée par ma pompe
 
-![Pump Model](../images/Medtronic06.png)
+![Modèle de Pompe](../images/Medtronic06.png)
 
 If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
 
