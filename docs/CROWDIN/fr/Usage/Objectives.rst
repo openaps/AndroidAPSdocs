@@ -33,6 +33,9 @@ Objectif 3 : Prouver ses connaissances
      :alt: Screenshot objective 3
 
 * Links will be provided to guide you in case you are unsure about the correct answers yet.
+
+Skip objectives
+--------------------------------------------------
 * Only if you have been closed looping with another system (i.e. OpenAPS, iOS Loop) before and can proof this (i.e. at least 3 months of looping data in Nightscout), you can send an email to `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ with your NS address and request code to bypass the rest of objectives.
 
 Objectif 4 : Démarrage de la boucle ouverte
