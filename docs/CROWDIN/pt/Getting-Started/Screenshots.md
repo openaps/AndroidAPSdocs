@@ -179,9 +179,9 @@ AndroidAPS can run using a number of different profile configurations. Typically
 
 These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 
-## Construtor de Configuração
+## Configurador
 
-![Construtor de Configuração](../images/Screenshot_config_builder.png)
+![Configurador](../images/Screenshot_config_builder.png)
 
 This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
