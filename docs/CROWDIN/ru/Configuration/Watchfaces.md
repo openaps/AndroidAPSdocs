@@ -142,10 +142,10 @@ J - активный инсулин (от болюсов | от базала)
 * ** Первичное заполнение ** (по умолчанию ` Выкл. `): Разрешить действие Prime/Fill с часов
 * ** Единичная цель ** (по умолчанию ` Вкл `):
   
-  * `On`: you set a single value for TT
-  * `Off`: you set Low target and high target for TT
+  * ` Вкл. `: задается одно значение для временной цели TT
+  * ` Выкл. `: задается низкое и высокое значение временной цели TT
 
-* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+* **Процент мастера** (по умолчанию `Выкл.`): разрешить коррекцию болюса с мастера (значение вводится в процентах до уведомления подтверждения)
 
 ## Complications
 
