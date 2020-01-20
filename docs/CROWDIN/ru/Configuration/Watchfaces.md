@@ -132,15 +132,15 @@ J - активный инсулин (от болюсов | от базала)
 #### Круглый циферблат
 
 * ** Крупные цифры ** (по умолчанию ` Выкл.`): Увеличить размер текста для улучшения видимости
-* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
-* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* ** Кольца хронологии ** (значение по умолчанию ` Выкл.`): Графическое представление хронологии ГК серыми кольцами в зеленом кольце часа
+* ** Кольца хронологии неярко ** (значение по умолчанию ` Вкл.`): Графическое представление хронологии ГК более темными серыми кольцами в зеленом кольце часа
+* ** Анимация ** (по умолчанию ` Вкл. `): Во включенном состоянии, при поддержке циферблатом и не в режиме энергосбережения, анимация циферблата
 
-### Commands settings
+### Настройки команд
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
-* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
-* **Single Target** (default `On`):
+* ** Помощник в меню ** (по умолчанию ` Вкл. `): Разрешить интерфейс помощника в главном меню для ввода углеводов и подачи болюса с циферблата часов
+* ** Первичное заполнение ** (по умолчанию ` Выкл. `): Разрешить действие Prime/Fill с часов
+* ** Единичная цель ** (по умолчанию ` Вкл `):
   
   * `On`: you set a single value for TT
   * `Off`: you set Low target and high target for TT
