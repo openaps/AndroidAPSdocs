@@ -144,6 +144,6 @@ In anderen `Zeitzonen <../Usage/Timezone-traveling.html>`_ gibt es beim Loopen z
 zeitverschieben (Smartphone im Flugmodus) oder 
 2. die Pumpenhistorie löschen und die Zeit des Smartphones auf die lokale Zeit umstellen. 
 
-Methode 1. ist prima, solange man vor Ort keinen neuen Libre2 Sensor setzen muss. Im Zweifel Methode 2 wählen, insbesondere wenn die Reise länger dauert. Setzt man einen neuen Sensor muss leider die automatische Zeitzone gesetzt sein, damit würde Methode 1 gestört. würde Methode 1 gestört. Bitte vorher prüfen, wenn man erst woanders ist, kann man sonst schnell in Probleme laufen.
+Methode 1. ist prima, solange man vor Ort keinen neuen Libre2 Sensor setzen muss. Im Zweifel Methode 2 wählen, insbesondere wenn die Reise länger dauert. Setzt man einen neuen Sensor muss leider die automatische Zeitzone gesetzt sein, wodurch  Methode 1 gestört würde. Bitte vorher prüfen, wenn man erst woanders ist, kann man sonst schnell in Probleme laufen.
 
 Neben der gepatchten App können derzeit der Droplet oder (bald verfügbar) der neue OOP Algorithmus unter xDrip+ eingesetzt werden. Bisher funktionieren der MM2 und blucon NICHT.
