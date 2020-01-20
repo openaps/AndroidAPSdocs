@@ -60,7 +60,7 @@
 
 ## Почему утилите "ruffy" не удается установить сопряжение с помпой?
 
-There are several possible reasons. Попробуйте следующие действия:
+Существует несколько возможных причин. Попробуйте следующие действия:
 
 1. Вставьте в помпу **свежие или полностью заряженные батареи**. Подробнее см. в разделе "батарея". Убедитесь, что помпа находится вблизи смартфона.
 
@@ -73,7 +73,7 @@ There are several possible reasons. Попробуйте следующие де
       
 
 4. Удалите помпу, уже подключенную к телефону через Bluetooth: Параметры / Bluetooth, Удалить сопряженное устройство «**SpiritCombo**»
-5. Убедитесь, что AAPS не работает в фоновом режиме цикла. Disable Loop in AAPS.
+5. Убедитесь, что AAPS не работает в фоновом режиме цикла. Деактивируйте цикл в AAPS.
 6. Запустите утилиту ruffy на телефоне. Можно нажать Reset! (Перезапустить) и удалить старое сопряжение. Затем нажать Connect! (Подключиться).
 7. В меню Bluetooth помпы, перейдите к **Добавить устройство / добавить подключение**. Press *CONNECT!** * Step 5 and 6 have to be done in a short timing.
 8. Now the Pump should show up the BT Name of phone to select for pairing. Here it is important to wait at least 5s before you hit the select button on Pump. Otherwise the Pump will not send the Pairing request to the Phone properly.
