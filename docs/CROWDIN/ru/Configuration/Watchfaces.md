@@ -111,27 +111,27 @@ J - активный инсулин (от болюсов | от базала)
 * **Показать стрелку тренда** (по умолчанию `Вкл`): показывать или не показывать стрелку тренда ГК
 * ** Показать Истекшее время ** (по умолчанию ` Вкл `): показать, сколько минут прошло с момента последнего поступления данных.
 * **Темный фон ** (по умолчанию `Вкл`): Можно переключиться с темного фона на светлый фон (за исключением циферблатов Cockpit и Steampunk)
-* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
-* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* ** Выделять базал ** (по умолчанию ` Выкл `): Улучшить видимость скорости базала и временных базалов
+* **Разделитель в цвет** (по умолчанию `Выкл`): для циферблатов AAPS, AAPSv2 и AAPS(Крупный), показывать контрастный фон разделителя (**Выкл.**) или разделитель совпадает с цветом фона (**Вкл.**)
+* ** Охват времени графика ** (по умолчанию ` 3 часа `): в подменю можно выбрать максимальное время от 1 часа до 5 часов.
 
-### User Interface setting
+### Настройка интерфейса пользователя
 
-* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+* **Дизайн ввода**: этим параметром вы можете выбрать положение кнопок "+" и "-" при вводе команд для AAPS (TT, Insulin, Carbs...)
 
 ![Input design options](../images/Watchface_InputDesign.png)
 
-### Specific watchface parameters
+### Специфические параметры циферблатов
 
-#### Steampunk watchface
+#### Циферблат Стимпанк
 
-* **Delta Granularity** (default `Medium`)
+* **Зернистость** (по умолчанию `Средняя`)
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
-#### Circle WF
+#### Круглый циферблат
 
-* **Big Numbers** (default `Off`): Increase text size to improve visibility
+* ** Крупные цифры ** (по умолчанию ` Выкл.`): Увеличить размер текста для улучшения видимости
 * **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
 * **Light Ring History** (default `On`): Ring history more discreet with a darker gray
 * **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
