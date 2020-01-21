@@ -34,7 +34,7 @@ V tomto nastavení jsou stanoveny bezpečnostní limity v závislosti na vámi z
 
 ### Status lights
 
-* Status baterie a zásobníku vizuálně upozorňuje na nízkou hladinu inzulínu a baterie, a tak zajišťuje jejich včasnou výměnu. Extended version shows elapsed time / battery percentage.
+* Stavové indikátory vizuálně upozorňují na nízkou hladinu inzulínu a baterie a také na včasnou výměnu kanyly. Extended version shows elapsed time / battery percentage.
     
     ![Stavové indikátory – detail](../images/StatusLights_V2_5.png)
     
