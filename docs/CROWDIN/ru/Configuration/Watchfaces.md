@@ -157,9 +157,9 @@ J - активный инсулин (от болюсов | от базала)
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Complication Types
+### Типы усложнений (дополнительных функций)
 
-AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+Приложение AAPS Wear обеспечивает только необработанные данные в соответствии с заданными форматами. Решение о том, где и как отображать усложнения, включая их макет, границу, цвет и шрифт, зависит от авторов стороннего циферблата. Из многих доступных типов усложнений Wear AAPS использует:
 
 * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
 * `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
