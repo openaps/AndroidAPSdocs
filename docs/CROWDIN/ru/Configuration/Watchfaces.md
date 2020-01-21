@@ -153,7 +153,7 @@ J - активный инсулин (от болюсов | от базала)
 
 Приложение AndroidAPS Wear поддерживает усложнения начиная с версии ` 2.6 ` и позволяет использовать любые сторонние циферблаты, поддерживающие усложнения, для отображение данных AAPS (ГК с трендом, IOB, COB и т. д.).
 
-Кроме того, усложнения служат ** ярлыками ** для функций AAPS. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+Кроме того, усложнения служат ** ярлыками ** для функций AAPS. Нажав на них вы можете открывать меню и диалогоовые окна, связанные с AAPS (в зависимости от типа усложнения и конфигурации).
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
