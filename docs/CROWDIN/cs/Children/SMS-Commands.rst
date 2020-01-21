@@ -77,15 +77,15 @@ Bazál
 
 Bolus
 --------------------------------------------------
-Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+V případě, že jsou nastavena 2 telefonní čísla, není do 15 minut od poslání předchozího bolusu nebo vzdáleného příkazu povolen další bolus! Odpověď závisí na době, která uplynula od posledního podání bolusu.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code Rrt
-   * Response B: Remote bolus not available. Zkuste to později.
+   * Odpověď A: Pro poslání bolusu 1.2U odpovězte pomocí SMS s kódem Rrt
+   * Odpověď B: Vzdálený bolus není k dispozici. Zkuste to později.
 * BOLUS 0.60 MEAL
    * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
    * Response A: To deliver meal bolus 0.60U reply with code Rrt
-   * Response B: Remote bolus not available. 
+   * Odpověď B: Vzdálený bolus není k dispozici. 
 * CARBS 5
    * Response: To enter 5g at 12:45 reply with code EmF
 * CARBS 5 17:35/5:35PM
