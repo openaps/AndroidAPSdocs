@@ -63,7 +63,7 @@ To je maximální množství sacharidů, které AAPS kalkulačka bolusu dovolí 
 
 Zde můžete přepínat mezi otevřenou a uzavřenou smyčkou. Otevřená smyčka znamená, že návrhy na změny dočasného bazálu jsou sice prováděny na základě skutečných dat, zobrazí se jako upozornění, ale Vy je musíte ručně potvrdit a ručně zadat do pumpy. Uzavřená smyčka znamená, že dočasné bazály jsou automaticky, bez jakéhokoliv potvrzení z vaší strany, posílány přímo do pumpy. Na úvodní obrazovce se zobrazí v levém horním rohu, zda používáte smyčku otevřenou nebo uzavřenou. Stisknutím a podržením tohoto tlačítka je možno přepínat mezi smyčkami.
 
-## Pokročilý asistent jídla v OpenAPS (AMA)
+## OpenAPS AMA
 
 OpenAPS Advanced Meal Assist (AMA) umožňuje systému rychleji reagovat po bolusu na jídlo, pokud zadáte sacharidy správně. Turn it on in the Config tab to view the safety settings here, you will need to have completed [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature. O tomto nastavení a [ o Autosens si můžete přečíst více v dokumentaci k OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
@@ -104,7 +104,7 @@ V závislosti na ovladači pumpy vybraném v konfiguraci se zde mohou vyskytovat
 
 * [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) 
 * [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md) 
-* [Pumpa Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 
+* [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md) 
 * [Pumpa Medtronic](..//Configuration/MedtronicPump.md)
 
 Používáte-li AndroidAPS pouze jako otevřenou smyčku, vyberte v nastavení Virtuální pumpu.
