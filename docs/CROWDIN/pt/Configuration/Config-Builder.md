@@ -157,21 +157,21 @@ Consulte a pagina [Objetivos](../Usage/Objectives.rst) para mais informações.
 
 ## Tratamentos
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the Careportal (CP) tab.
+Se procurar o separador dos Tratamentos, poderá ver os tratamentos que foram enviados para nightscout. Caso deseje editar ou apagar uma entrada (por exemplo, caso tenha comido menos hidratos do que esperava) e então selecione 'Remover' e digite o novo valor (mude o hora se necessário) através do separador Careportal (CP).
 
 ## Geral
 
 ### Visão Geral
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Exibe o estado atual do seu loop e botões para a maioria das ações mais comuns (ver seção [ Ecrã Inicial ](../Getting-Started/Screenshots.md) para mais detalhes). Chega-se às configurações clicando no ícone de engrenagem.
 
 #### Manter ecrã ligado
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Opção 'Manter ecrã ligado' irá forçar o Android a manter o ecrã sempre ligado. Isto é útil para apresentações, etc. , mas consome muita bateria. Portanto, é recomendável conectar o telemóvel ao carregador sempre que este parâmetro esteja selecionado.
 
 #### Botões
 
-Define which Buttons are shown on the home screen.
+Defina quais botões são mostrados no ecrã inicial.
 
 * Tratamentos
 * Calculadora
