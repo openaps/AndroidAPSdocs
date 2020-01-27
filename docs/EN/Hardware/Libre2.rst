@@ -41,7 +41,7 @@ Mandatory settings for successful sensor start:
   
 The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different seetings before even think of changing the sensor.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. In few cases this is not a hard criteria. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
 
 .. image:: ../images/fsl2pic5.jpg
   :alt: LibreLink no connection
