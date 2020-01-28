@@ -172,7 +172,7 @@ Za předpokladu, že máte správný bazál, můžete tento parametr otestovat t
 > 
 > When using IC the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
 > 
-> Příklad:
+> Example:
 > 
 > Bread unit facor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
 > 
