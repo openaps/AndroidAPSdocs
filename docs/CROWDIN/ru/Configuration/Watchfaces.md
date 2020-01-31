@@ -168,13 +168,13 @@ J - активный инсулин (от болюсов | от базала)
 
 ### Настройка усложнений (дополнительных функций)
 
-Чтобы добавить дополнительные функции на циферблат, настройте его долгим нажатием на значок шестеренки внизу. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+Чтобы добавить дополнительные функции на циферблат, настройте его долгим нажатием на значок шестеренки внизу. В зависимости от конфигурации нажмите на соответствующее место на экране или войдите в меню настройки циферблата для настройки усложнений. Усложнения AAPS сгруппированы в меню AAPS.
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+При настройке усложнений на циферблате, Wear OS показывает и фильтрует список усложнений, которые могут быть помещены в выбранное место на экране. Если в списке не удается найти конкретные усложнения, то, вероятно, это связано с отсутствием достаточного места.
 
-### Complications provided by AAPS
+### Усложнения, предоставляемые AAPS
 
-AndroidAPS provides following complications:
+AndroidAPS обеспечивает следующие усложнения:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
