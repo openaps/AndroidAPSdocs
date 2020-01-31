@@ -139,7 +139,7 @@ Sei vorsichtig, da die Korrektur oftmals zu aggressiv eingestellt ist. D.h. eine
 
 ### Auswirkung
 
-**Niedrigerer ISF** (z.B. 40 statt 50) = aggressiver / stärker -> führt zu stärkerem Absinken des BZ pro Einheit Insulin. Ein zu kurzer DIA kann niedrige Glukose-Werte verursachen.
+**Niedrigerer ISF** (z.B. 40 statt 50) = aggressiver / stärker -> führt zu stärkerem Absinken des BZ pro Einheit Insulin. Ein zu niedriger ISF kann zu niedrige Glukose-Werte verursachen.
 
 **Höherer ISF** (z.B. 45 statt 35) = weniger aggressiv / schwächer -> führt zu geringerem Absinken des BZ pro Einheit Insulin. Ein zu hoher ISF kann zu hohe BZ-Werte zur Folge haben.
 
