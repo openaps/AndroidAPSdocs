@@ -1,14 +1,14 @@
-# Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
+# 셋업예시: 삼성 S7, DanaR, Dexcom G5 및 소니 스마트워치
 
 ![Sample Setup](../images/SampleSetup.png)
 
-## Description
+## 상세설명
 
-In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G5 CGM. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
+이 셋업에서는 삼성갤럭시 S7이 Loop를 제어하기 위해 사용되었습니다. (패치된) Dexcom 앱에서는 Dexcom G5 CGM으로부터 혈당치를 읽어들이게 됩니다. 수일개발에서 만들어진 DanaR인슐린 펌프제어는 블루투스를 통해이루어지며, 안드로이드앱을 통해 제어됩니다. 추가적인 장치는 요구되어지지 않습니다.
 
-As the Dexcom App only offers limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
+Dexcom앱은 제한된 알림기능을 제공함에 따라서, 오픈소스앱 xDrip+는 하이/로우 알림기능 외 개인적인 알람기능을 제공하게 됩니다.
 
-Optionally an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values on your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+추가적으로 안드로이드 스마트워치 또한 사용될 수 있습니다. 이 번 예시에서는 소니 스마트워치3 (SWR50)이 안드로이드 앱에서 혈당치를 보여주도록 설명됩니다. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
 
 The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
 
