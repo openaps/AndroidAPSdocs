@@ -8,37 +8,37 @@
 
 Dexcom앱은 제한된 알림기능을 제공함에 따라서, 오픈소스앱 xDrip+는 하이/로우 알림기능 외 개인적인 알람기능을 제공하게 됩니다.
 
-추가적으로 안드로이드 스마트워치 또한 사용될 수 있습니다. 이 번 예시에서는 소니 스마트워치3 (SWR50)이 안드로이드 앱에서 혈당치를 보여주도록 설명됩니다. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+추가적으로 안드로이드 스마트워치 또한 사용될 수 있습니다. 이 번 예시에서는 소니 스마트워치3 (SWR50)이 안드로이드 앱에서 혈당치를 보여주도록 설명됩니다. 스마트워치는 AndroidAPS을 제어할 수도 있습니다. (예를 들면 Bolus 주입도 할 수 있습니다.)
 
-The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
+시스템은 오프라인에서 작동됩니다. 이는 데이터 연결을 위해서 스마트폰이 인터넷에 연결될 필요가 없음을 의미합니다.
 
-Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" when a data connection is established. By doing so you can provide comprehensive reports for the doctor's visit or share the current values with family members at any time. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
+그럼에도 불구하고, 데이트는 인터넷 연결이 될 때, 자동으로 Nightscout에 업로드됩니다. 이렇게 함에 따라서, 병원방문시 사용되는 또는 가족들과 자료를 공유할 수 있는 다양한 보고서를 만들수 있습니다. 사전에 설정된 Wi-fi를 통해서 Nightscout로 데이터를 보낼 수도 있으며, 이는 기존의 Nightscout리포트를 갱신할 수 있습니다.
 
-## Required components
+## 요구사양.
 
-1. Samsung Galaxy S7
+1. 삼성 갤럭시 S7
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS
+    * 대안: AndroidAPS 사용을 위해 [테스트해본 폰과 워치의 리스트](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)를 확인하세요
 
-2. [DanaR](http://www.sooil.com/eng/product/) or Dana RS insulin pump
+2. [DanaR](http://www.sooil.com/eng/product/) 또는 Dana RS 인슐린펌프
     
-    * Alternatives: 
-    * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * 대안: 
+    * [아큐-첵 콤보](../Configuration/Accu-Chek-Combo-Pump.md)
+    * 다른 종류의 펌프 또한 향 후 이용가능할 수 있으며, [향후 가능할 수 있는 펌프 드라이버](Future-possible-Pump-Drivers.md)를 참조하세요.
 
-3. [Dexcom G5](https://dexcom.com)
+3. [덱스콤 G5](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
+    * 대안: 이용가능한 [혈당 소스](../Configuration/BG-Source.rst)리스트를 참조하세요
 
-4. Optional: Sony Smartwatch 3 (SWR50)
+4. 옵션: 소니 스마트워치3 (SWR50)
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * 대안: AndroidAPS 사용을 위해 [테스트해본 폰과 워치의 리스트](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)를 확인하세요 (OS는 안드로이드 웨어만 가능합니다)
 
-## Nightscout setup
+## Nightscout 설정
 
-See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
+[Nightscout 설정](../Installing-AndroidAPS/Nightscout.md)을 참조하세요.
 
-## Computer setup
+## 컴퓨터 설정
 
 To be able to create an Android app from the freely available AAPS open source code you need Android Studio on your computer or notebook (Windows, Mac, Linux). A detailed instruction can be found at [building the APK](../Installing-AndroidAPS/Building-APK.md).
 
@@ -133,7 +133,7 @@ On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery >
 
 ## Optional: Setup Sony Smartwatch 3 (SWR50)
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. 스마트워치는 AndroidAPS을 제어할 수도 있습니다. (예를 들면 Bolus 주입도 할 수 있습니다.) To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
 ![Smartwatch](../images/SampleSetupSmartwatch.png)
 
