@@ -199,7 +199,7 @@ Enable super bolus functionality in wizard. Use with caution and do not enable u
 Alguns botões para aceder rapidamente a funções comuns:
 
 * Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Alvos temporário
+* Temporary targets
 * Definir / cancelar temp. taxa basal
 * Extended bolus (DanaR/RS or Combo pump only)
 * Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
