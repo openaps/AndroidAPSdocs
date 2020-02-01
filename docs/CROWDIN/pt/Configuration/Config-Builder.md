@@ -180,33 +180,33 @@ Defina quais botões são mostrados no ecrã inicial.
 * CGM (abre xDrip+)
 * Calibração
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Além disso pode definir atalhos para os incrementos de insulina e carbs e decidir se o campo de notas deve ser mostrado nos diálogos de tratamento.
 
 #### Definições do Assistente Rápido
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Crie um botão para uma determinada refeição padrão (carbs e método de cálculo para o bolus) que será exibida no ecrã inicial. Use para refeições padrão que come frequentemente. Se ao longo do dia for variando o padrão, pode definir padrões adequados a cada hora e o botão estará configurado para o calculo associado a essa hora.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Observação: O botão não será visível se fora do intervalo de tempo especificado ou se você tiver IOB suficiente para cobrir os caras definidos no botão Assistente Rápido.
 
 ![Botão do Assistente Rápido](../images/ConfBuild_QuickWizard.png)
 
 #### Configurações Avançadas
 
-Enable super bolus functionality in wizard. Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Ative a funcionalidade super bolus no assistente. Use com cuidado e não ative até que compreenda o que realmente faz. Basicamente, a basal para as próximas duas horas é adicionado para o bolus e nessas duas horas a basal temporaria será de 0. As funções de looping do AAPS ** serão desativadas, portanto use com cuidado! Se você usar Super Micro Bolus (SMB) as funções de loop serão desativadas de acordo com as suas definições em ["Max minutos de basal para limitar o SMB para"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), o valor que está predefinido é de duas horas.** Detalhes sobre o SMB podem ser encontrados [aqui](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Ações
 
 Alguns botões para aceder rapidamente a funções comuns:
 
-* Profiles Switch (see [Profiles page](../Usage/Profiles.md) for more setup information)
-* Temporary targets
+* Mudar perfil (ver [Página de perfis](../Usage/Profiles.md) para obter mais informações de configuração)
+* Alvos temporário
 * Definir / cancelar temp. taxa basal
-* Extended bolus (DanaR/RS or Combo pump only)
-* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
+* Bólus Estendido (somente Bomba Combo ou DanaR/RS)
+* Prime / Enchimento (Canula) (suportado por bomba DanaR/RS, Combo e Insight)
 * Navegador do histórico
-* TDD (Total daily dose = bolus + basal per day)
+* DDT (Dose Diaria Total = bolus + insulina basal por dia)
 
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). Others prefer range of 32% to 37% of TDD for TBB. Like most of these rules-of-thumb it is of limited real validity. Nota: Sua diabetes pode variar!
+Alguns médicos usam - no inicio do uso de bomba - um rácio basal:bolus de 50:50. Portanto, o rácio é calculada como TDD / 2 = TBB (TBB (Total de Basal Base) = soma de taxa basal em 24 horas). Outros preferem uma rácio de 32% a 37% de DDT para TBB. Como a maioria regras padrão tem uma validade real limitada. Nota: Sua diabetes pode variar!
 
 ![Aba Accões](../images/ConfBuild_ConfBuild_Actions.png)
 
