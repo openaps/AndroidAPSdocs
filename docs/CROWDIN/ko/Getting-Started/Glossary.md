@@ -1,7 +1,7 @@
 # 용어<table style="width:100%" border=1>
 <tr>
  <th>Term</th>
- <th>Description</th>
+ <th>상세설명</th>
  <th>see also</th>
  <th>more details @</th>
 </tr>
