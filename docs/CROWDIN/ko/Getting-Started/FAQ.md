@@ -71,13 +71,13 @@ Loop를 사용하는데 있어서 실질적으로 필요한 사항에 대해 이
 * [식사후 혈당의 Spike(급등락) 제어하기](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 * [호르몬과 Autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
-## What emergency equipment is recommended to take with me?
+## 어떤 응급 장비가 준비되어 있어야 하나요?
 
-First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
+우선, 인슐린 펌프를 사용하는 다른 1형당뇨인에게 필요한 것과 동일한 응급 장비가 있어야 합니다. AndroidAPS에서 Loop를 사용한다면 다음과 같은 추가 장비를 휴대하거나 근처에 구비해도는 것을 강하게 추천합니다.
 
-* Battery pack for the energy of your smartphone, wear and (maybe) BT reader
-* Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
-* Pump batteries
+* 스마트 폰, 워치 및 (필요한 경우) 블루투스 리더기를 충전하기 위한 보조배터리
+* 당신이 사용하는 앱을 클라우드에 백업하세요: 최신 AndroidAPS-APK 설치파일, Key store 비밀번호, AndroidAPS 설정 파일, xDrip 설정파일, (패치된) Dexcom앱 등
+* 펌프 배터리
 
 ## How to safely attach the CGM/FGM?
 
