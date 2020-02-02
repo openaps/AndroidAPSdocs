@@ -40,12 +40,12 @@ Bolus를 주입하거나 설정을 변경하기 위해 안드로이드 워치앱
 
 ### 펌프 일시중지
 
-If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+샤워/목욕/수영/운동 등을 위해 펌프를 분리한다면. 그 기간동안 인슐린이 주입되지 않았다는 것을 AndroidAPS에게 알려 올바른 IOB를 유지시켜야합니다.
 
-* Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
-* This will set your basal to zero for that time period.
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
+* 홈 화면의 상단의 'Closed loop' (또는 'Open Loop') 버튼을 길게 누릅니다. 
+* **'X분(시간) 동안 펌프 일시중지'**을 선택합니다
+* 이는 해당 시간동안 Basal을 0으로 설정할 것입니다.
+* 일시중지를 위한 최소시간은 펌프에서 설정될 수 있는 최소시간의 임시Basal 시간으로 인한 것입니다. 따라서 짧은 기간 동안 연결을 끊으려면 펌프에 사용 가능한 가장 짧은 기간을 선택하십시오. 그런 다음 아래 설명에 따라 펌프를 수동으로 다시 연결하십시오.
 * Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
 * AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
     
