@@ -87,9 +87,9 @@ Loop를 사용하는데 있어서 실질적으로 필요한 사항에 대해 이
 
 # AndroidAPS 설정
 
-The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+다음 사항은 설정을 최적화하는데 도움을 주기 위한 것들입니다. 위에서 아래 순서대로 시작하는것이 가장 좋습니다. 다음번 설정을 변경하기 전에 현재의 설정이 제대로 되었는지 집중하세요. 한번에 모든 것을 완벽하게 설정하려하기 보단 조금씩 단계별로 진행하세요. [Autotune](https://autotuneweb.azurewebsites.net/) 기능을 사용할 수 있지만 맹목적으로 신뢰하여서는 안됩니다: 당신에게는 이 기능이 맞지 않을 수도 있고 또는 모든 환경에서 제대로 작동되지 않을 수도 있습니다. 각 설정이 상호 작용한다는 점을 명심하십시오. 특정 환경 (예: 너무 높은 Basal이 너무 높은 CR과 동시에 발생하는 경우)에서 제대로 작동하는 '잘못된' 설정이 있을 수 있지만 다른 환경에서는 그렇지 않습니다. 이는 당신이 모든 설정을 고려하고 다양한 환경에서 함께 잘 작동하는지 확인해야 함을 의미합니다.
 
-## Duration of insulin activity (DIA)
+## 인슐린 활동 기간(Duration of insulin activity : DIA)
 
 ### Description & testing
 
