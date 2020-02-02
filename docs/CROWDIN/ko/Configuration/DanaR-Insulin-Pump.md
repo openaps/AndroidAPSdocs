@@ -20,6 +20,6 @@
 * 펌프의 Basal 단위를 0.01U/h로 하세요.
 * 펌프에서 확장Bolus를 활성화하세요.
 
-## Timezone traveling with Dana R pump
+## 다나R 펌프 사용시 다른 시간대 국가로의 여행
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+다른 시간대의 나라로 여행하는 경우에 대한 정보는 [ 펌프와 함께 하는 다른 시간대 여행 ](../Usage/Timezone-traveling#danarv2-danars) 섹션을 참조하십시오.
