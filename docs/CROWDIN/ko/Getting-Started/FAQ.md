@@ -242,13 +242,13 @@ Loop사용은 펌프 배터리를 더 빠르게 소모시킬 수 있습니다. �
 * 교체시에만 펌프에 있는 버튼을 이용하세요. 이력, 배터리 및 주사기 용량들을 확인할땐 AndroidAPS를 이용하세요.
 * AndroidAPS가 특정스마트폰에서는 자원과 메모리를 절약하기 위해 자주 종료될 수도 있습니다. AndroidAPS 재시작될때마다 펌프와 블루투스로 연결이 될 것이고, 현재 Basal과 Bolus 이력을 다시 조회하게 됩니다. 이것이 배터리를 소모시키게 됩니다. 이러한 행동을 확인하고 싶으면 설정 > NSClient 로 가서 '앱시작을 NS에 기록하기'를 활성화 하세요. AndroidAPS가 재시작할때마다 Nightscout 이벤트를 기록하게 되며, 이 문제를 쉽게 추적할 수 있습니다. 이 문제를 해결하기 위해서 스마트폰 배터리 설정에서 AndroidAPS를 예외 허용케 하여, 폰이 스스로 배터리를 절약하기 위해 강제 종료를 못하도록 방지합니다.
     
-    For example, to whitelist on a Samsung phone running Android Pie:
+    예를 들면, Android Pie(안드로이드 9.0) 삼성폰에서 예외를 허용하기 위해서:
     
-    * Go to Settings -> Device Care -> Battery 
-    * Scroll until you find AndroidAPS and select it 
-    * De-select "Put app to sleep"
-    * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    * Scroll to AndroidAPS and make sure it is de-selected.
+    * 설정 -> 디바이스 관리 -> 배터리 에 들어갑니다 
+    * AndroidAPS가 나올때까지 스크롤하여 선택합니다 
+    * "앱을 휴면 상태로 두기" 를 선택 취소합니다.
+    * 또 설정 -> 앱 -> (화면 우측상단의 점 세개 기호) 에 들어간 후 "특별한 접근" -> 배터리 사용량 최적화에 들어갑니다
+    * AndroidAPS를 찾은 후 선택 해제되어있는지 확인합니다.
 
 * 알코올로 배터리 전극을 청소하여 왁스및 그리스 잔여 물이 남아 있지 않도록 합니다.
 
