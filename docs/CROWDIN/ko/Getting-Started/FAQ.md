@@ -107,7 +107,7 @@ Example of a too-short DIA is a high BG followed by AAPS over-correcting and giv
 
 ## Basal rate schedule (U/h)
 
-### Description & testing
+### 설명 & 테스트
 
 The amount of insulin in a given hour time block to maintain BG at a stable level.
 
