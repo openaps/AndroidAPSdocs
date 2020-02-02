@@ -58,18 +58,18 @@ Bolus를 주입하거나 설정을 변경하기 위해 안드로이드 워치앱
     
     ![Reconnect pump](../images/PumpReconnect.png)
 
-### Recommendations not only based on one single CGM reading
+### 단 하나의 CGM 혈당값을 기반으로 판단하는 것이 아닙니다.
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+안전상의 이유로, CGM에서 들어오는 하나의 혈당값뿐만 아니라 평균 혈당 증분까지 기반으로 하여 판단하게 됩니다. 따라서 센서에서 일부 혈당이 누락되면 AndroidAPS가 필요한 새 데이터를 수집한 다음를 Loop를 다시 시작하는 데 시간이 걸릴 수 있습니다.
 
-### Further readings
+### 추가 참고자료
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Loop를 사용하는데 있어서 실질적으로 필요한 사항에 대해 이해하는데 도움이 될만한 좋은 팁들이 있는 여러 블로그들이 있습니다.
 
-* [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-* [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [설정 미세 조정하기](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+* [왜 DIA가 중요한가요?](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [식사후 혈당의 Spike(급등락) 제어하기](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+* [호르몬과 Autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## What emergency equipment is recommended to take with me?
 
