@@ -91,33 +91,33 @@ Loop를 사용하는데 있어서 실질적으로 필요한 사항에 대해 이
 
 ## 인슐린 활동 기간(Duration of insulin activity : DIA)
 
-### Description & testing
+### 설명 & 테스트
 
-The length of time that insulin decays to zero.
+인슐린이 완전히 분해되어 0이 될때까지 걸리는 시간.
 
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+이 값은 때때로 너무 짧게 잘못설정하는 경우가 있습니다. 일반적인 경우 최소 5시간, 또는 6 혹은 7 시간으로 설정하게 됩니다.
 
-### Impact
+### 영향
 
-Too short DIA can lead to low BGs. And vice-versa.
+너무 짧은 DIA는 저혈당을 유발할 수 있습니다. 그리고 반대의 경우도 마찬가지입니다.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
+DIA가 너무 짧게 설정되면, AAPS가 당신이 직전에 주입한 Bolus가 모두 분해되었다고 너무 일찍 판단하게 되고 그 때 혈당이 높이 유지되고 있다면 적정양 이상으로 인슐린을 더 주입하게 될것입니다. (실제로는, 그렇게 오래 기다리지 않지만 어떤 일이 발생하고 인슐린을 추가를 유지할 것인지 예측합니다). 이것이 근본적으로 AAPS가 알지 못하는 '인슐린 축적'을 발생시키게 됩니다.
 
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+너무 짧은 DIA의 예는 고혈당에 이은 AAPS의 과도한 교정주입이고 이는 저혈당을 야기시키게 됩니다.
 
 ## Basal rate schedule (U/h)
 
 ### 설명 & 테스트
 
-The amount of insulin in a given hour time block to maintain BG at a stable level.
+안정적인 혈당을 유지하기 위해 특정 시간대에 설정되는 인슐린의 양.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
+Loop를 중지, 금식하고, 음식을 먹은 후 5 시간 동안 기다린 후 혈당이 어떻게 변하는 지 확인하여 Basal 양을 테스트하세요. 이를 몇번 더 반복해봅니다.
 
-If BG is dropping, basal rate is too high. And vice-versa.
+혈당이 떨어지면, Basal 양이 너무 높은 것입니다. 그리고 반대의 경우도 마찬가지입니다.
 
-### Impact
+### 영향
 
-Too high basal rate can lead to low BGs. And vice-versa.
+너무 높은 Basal 양은 저혈당을 유발할 수 있습니다. 그리고 반대의 경우도 마찬가지입니다.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
@@ -127,7 +127,7 @@ Conversely a basal rate too low can lead to high BGs, and a failure to bring lev
 
 ## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
 
-### Description & testing
+### 설명 & 테스트
 
 The drop in BG expected from dosing 1U of insulin.
 
@@ -137,7 +137,7 @@ Then take an estimated amount of insulin (as per current 1/ISF) to get to your t
 
 Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
 
-### Impact
+### 영향
 
 **Lower ISF** (i.e. 40 instead of 50) = more aggressive / stronger leading to a bigger drop in BGs for each unit of insulin. If too low, this can lead to low BGs.
 
@@ -156,7 +156,7 @@ Conversely, an ISF set too high can result in under-corrections, meaning your BG
 
 ## Insulin to carb ratio (IC) (g/U)
 
-### Description & testing
+### 설명 & 테스트
 
 The grams of carbohydrate for each unit of insulin.
 
@@ -180,7 +180,7 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 > 
 > Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### 영향
 
 **Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
 
@@ -232,15 +232,15 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 
 There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
 
-### Batteries
+### 배터리
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+Loop사용은 펌프 배터리를 더 빠르게 소모시킬 수 있습니다. 이는 일반적인 사용보다 더 빈번하게 블루투스 통신을 하기 때문입니다. 배터리를 25%가 되면 교체하는 것이 좋습니다. 그렇지 않으면 펌프 통신이 불안정 할 수 있습니다. Nightscout 사이트에 PUMP_WARN_BATT_P 변수를 사용하면 펌프배터리 경고 알람을 설정할 수 있습니다. 다음은 배터리 수명을 늘려줄 수 있는 요령입니다:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
-* reduce the length of time the backlight stays on (within pump settings menu)
-* select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+* 펌프 설정메뉴에서 LCD가 켜져있는 시간을 줄여주세요.
+* 펌프 설정메뉴에서 백라이트가 켜져있는 시간을 줄여주세요.
+* 펌프 설정메뉴에서 진동보다는 소리알람으로 설정하세요.
+* 교체시에만 펌프에 있는 버튼을 이용하세요. 이력, 배터리 및 주사기 용량들을 확인할땐 AndroidAPS를 이용하세요.
+* AndroidAPS가 특정스마트폰에서는 자원과 메모리를 절약하기 위해 자주 종료될 수도 있습니다. AndroidAPS 재시작될때마다 펌프와 블루투스로 연결이 될 것이고, 현재 Basal과 Bolus 이력을 다시 조회하게 됩니다. 이것이 배터리를 소모시키게 됩니다. 이러한 행동을 확인하고 싶으면 설정 > NSClient 로 가서 '앱시작을 NS에 기록하기'를 활성화 하세요. AndroidAPS가 재시작할때마다 Nightscout 이벤트를 기록하게 되며, 이 문제를 쉽게 추적할 수 있습니다. 이 문제를 해결하기 위해서 스마트폰 배터리 설정에서 AndroidAPS를 예외 허용케 하여, 폰이 스스로 배터리를 절약하기 위해 강제 종료를 못하도록 방지합니다.
     
     For example, to whitelist on a Samsung phone running Android Pie:
     
@@ -250,7 +250,7 @@ Looping can reduce the pump battery faster than normal use because the system in
     * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
     * Scroll to AndroidAPS and make sure it is de-selected.
 
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+* 알코올로 배터리 전극을 청소하여 왁스및 그리스 잔여 물이 남아 있지 않도록 합니다.
 
 * for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
 * see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
