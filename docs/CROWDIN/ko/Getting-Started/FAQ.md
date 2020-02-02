@@ -79,13 +79,13 @@ Loop를 사용하는데 있어서 실질적으로 필요한 사항에 대해 이
 * 당신이 사용하는 앱을 클라우드에 백업하세요: 최신 AndroidAPS-APK 설치파일, Key store 비밀번호, AndroidAPS 설정 파일, xDrip 설정파일, (패치된) Dexcom앱 등
 * 펌프 배터리
 
-## How to safely attach the CGM/FGM?
+## CGM/FGM을 어떻게 안전하게 부착하나요?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Some loopers use the cheaper standard kinesiology tape or rocktape.
+테이프를 부착할 수 있습니다: 일반적인 CGM 센서모양에 맞게 제작된 패치테이프가 판매되고 있습니다. (구글이나 이베이에서 찾아보세요). 일부 Loop사용자는 저렴한 일반 운동용 테이프를 사용하기도 합니다.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
+고정하는 방법이 있습니다: CGM/FGM을 고무 밴드로 고정시키는 팔뚝 밴드가 판매되고 있습니다 (구글이나 이베이에서 찾아보세요).
 
-# AndroidAPS settings
+# AndroidAPS 설정
 
 The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
