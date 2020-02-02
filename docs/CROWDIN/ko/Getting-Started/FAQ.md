@@ -46,15 +46,15 @@ Bolus를 주입하거나 설정을 변경하기 위해 안드로이드 워치앱
 * **'X분(시간) 동안 펌프 일시중지'**을 선택합니다
 * 이는 해당 시간동안 Basal을 0으로 설정할 것입니다.
 * 일시중지를 위한 최소시간은 펌프에서 설정될 수 있는 최소시간의 임시Basal 시간으로 인한 것입니다. 따라서 짧은 기간 동안 연결을 끊으려면 펌프에 사용 가능한 가장 짧은 기간을 선택하십시오. 그런 다음 아래 설명에 따라 펌프를 수동으로 다시 연결하십시오.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
-* AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
+* 'Closed Loop' (또는 'Open Loop') 버튼이 '연결 끊어짐(xx분)'으로 남은시간과 함께 변경되고 버튼의 색상도 붉은색으로 변합니다.
+* AAPS가 선택된 시간이후 자동으로 재연결되게 되고 Closed Loop 역시 자동으로 다시 작동됩니다.
     
     ![펌프 일시중지](../images/PumpDisconnect.png)
 
-* If the selected time was too long you can reconnect manually.
+* 선택된 시간이 너무 길다면 수동으로 재연결 할 수 있습니다.
 
-* Long-press on the red button 'Disconnected (xx m)'.
-* Select 'Reconnect pump'
+* 붉은색의 '연결 끊어짐(xx분)' 버튼을 길게 누릅니다.
+* '펌프 재연결'을 선택하세요
     
     ![Reconnect pump](../images/PumpReconnect.png)
 
