@@ -1,64 +1,64 @@
 Freestyle Libre 2
 **************************************************
 
-The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink App, you can continuously receive your blood sugar level on your smartphone. As they send them directly via bluetooth to your phone, you won't need to buy a bluetooth adapter like MiaoMiao or blucon anymore. 
+Freestyle Libre 2 sistema gali automatiškai pranešti apie pavojingus kraujo gliukozės kiekius kraujyje. Libre 2 jutiklis siunčia gliukozės kiekio kraujyje duomenis į imtuvą (skaitytuvą ar išmanųjį telefoną) kiekvieną minutę. Imtuvas įjungia pavojaus signalą, jeigu reikia. Su modifikuota LibreLink programėle, jūs galite nuolat gauti jūsų kraujo gliukozės duomenis išmaniajame telefone. Kadangi signalas siunčiamas Bluetooth ryšiu tiesiai į telefoną, jums nereikės įsigyti Bluetooth adapterio, pvz., Miaomiao ar Blucon. 
 
-Step 1: Build your own patched Librelink-App
+1 veiksmas: Sukurkite savo modifikuotą Librelink-App
 ==================================================
 
-For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links.
+Dėl teisinių priežasčių, taip vadinamas "pataisymas" turi būti atliekamas jūsų paties. Naudokite paieškos sistemas, norėdami rasti atitinkamas nuorodas.
 
-The patched app has to be installed instead of the original app. The next sensor started with it will wireless transmit its values to the smartphone.
+Modifikuota programa turi būti įdiegta vietoj originalios programos. Kitas jutiklis, aktyvuotas su ja, pradės siųsti belaidžiu ryšiu duomenis į jūsų telefoną.
 
-Important: First install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app. It can be identified by the foreground authorization notification. 
+Svarbu: Pirmiausia įdiekite ir pašalinkite originalią programą NFC turinčiame išmaniąjame telefone. NFC turi būti įjungtas. Tai neeikvoja baterijos. Tada įdiekite modifikuotą programą. Ji gali būti identifikuota autorizacijos pranešimu ekrane. 
 
-.. image:: ../images/fsl2pic1.jpg
-  :alt: LibreLink Foreground Service
+.. nuotrauka:: ../images/fsl2pic1.jpg
+  :alt: LibreLink pranešimų paslauga
 
-This significantly improves the connection stability compared to the original app. Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and timezone and set at least one alarm in the patched app. 
+Tai gerokai pagerina ryšio stabilumą, palyginus su originalia programa. Norint užtikrinti, kad NFC funkcija yra aktyvuota, įjunkite atminties ir vietos leidimus modifikuotoje programoje, automatinį laiko ir laiko juostos atnaujinimą ir nustatykite bent vieną aliarmą. 
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Follow the instructions. The sensor remembers the device it was started with. Only this device can receive alarms in the future.
+Dabar aktyvuokite Libre 2 jutiklį su modifikuota progrmėle, tiesiog skenuodami jutiklį. Sekite instrukcijas. Jutiklis atsimena įrenginį, kuriuo buvo aktyvuotas. Tik šis prietaisas gali priimti signalus ateityje.
 
-Mandatory settings for successful sensor start: 
+Privalomi parametrai norint sėkmingai aktyvuoti jutiklį: 
 
-* NFC enabled / BT enabled
-* memory permission enabled 
-* location enabled
-* automatic time and timezone setting
-* set at least one alarm in the patched app
+* NFC įjungtas / BT įjungtas
+* atminties leidimas įjungtas 
+* vieta įjungta
+* automatinis laiko ir laiko juostos nustatymas
+* nustatytas bent vieną aliarmas modifikuotoje programėlėje
 
-.. image:: ../images/fsl2pic2.jpg
-  :alt: LibreLink permissions memory & location
+.. nuotrauka:: ../images/fsl2pic2.jpg
+  :alt: LibreLink atminties & vietos teisės
   
-.. image:: ../images/fsl2pic3.jpg
-  :alt: Android settings location
+.. nuotrauka:: ../images/fsl2pic3.jpg
+  :alt: Android vietos nustatymai
   
-.. image:: ../images/fsl2pic4a.jpg
-  :alt: automatic time and timezone
+.. nuotrauka:: ../images/fsl2pic4a.jpg
+  :alt: automatinis laikas ir laiko juosta
   
-.. image:: ../images/fsl2pic4.jpg
-  :alt: LibreLink settings alarm
+.. nuotrauka:: ../images/fsl2pic4.jpg
+  :alt: LibreLink aliarmo nustatymai
   
-The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different seetings before even think of changing the sensor.
+Pirmas ryšio nustatymas su jutikliu yra ypač svarbus. LibreLink programėlė bando užmegzti belaidį ryšį su jutikliu kas 30 sekundžių. Jei trūksta vieno ar kelių privalomų parametrų, jie turi būti koreguojami. Galite tai atlikti bet kuriuo metu. Jutiklis nuolat bando nustatyti ryšį. Net jei tai trunka keletą valandų. Būkite kantrūs ir pabandykite kitus nustatymus prieš nuspręsdami keisti jutiklį.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLinks start screen there is no connection. Only when the exclamation mark is gone, the connection is established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+Kol matote raudoną šauktuką ("!") viršutiniame kairiajame kampe LibreLinks pradžios ekrane, vadinasi nėra ryšio. Tik tada, kai šauktukas dingsta, ryšys yra užmegztas ir kraujo gliukozės duomenys yra siunčiami į telefoną. Tai turėtų įvykti daugiausiai po 5 minučių.
 
-.. image:: ../images/fsl2pic5.jpg
-  :alt: LibreLink no connection
+.. nuotrauka:: ../images/fsl2pic5.jpg
+  :alt: LibreLink nėra ryšio
   
-If the exclamation mark remains or you get an error message, this can have several reasons:
+Jei šauktukas lieka arba gaunate klaidos pranešimą, tai gali būti dėl keletos priežasčių:
 
-- Android location service is not granted - please enable it in the system settings
-- automatic time and time zone is not set - please change the settings accordingly
-- activate alarms - at least one of the three alarms must be activated in LibreLink
-- Bluetooth is switched off - please switch on
+- Android vietos nustatymo paslauga nėra įgalinta - prašome įjungti tai sistemos nustatymuose
+- automatinio laiko ir laiko juostos nėra nustatytos - prašome pakeisti parametrus atitinkamai
+- įjunkite aliarmus - bent vienas iš trijų aliarmų turi būti įjungtas LibreLink
+- Bluetooth yra išjungtas - įjunkite
 
-Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Gali padėti telefono paleidimas iš naujo, jums gali tekti padaryti tai keletą kartų. Kai tik ryšys yra užmegztas, raudonas šauktukas dingsta ir svarbiausias žingsnis yra atliktas. Jutiklis ir telefonas dabar yra sujungti, kiekvieną minutę kraujo gliukozės reikšmės yra perduodamos.
 
-.. image:: ../images/fsl2pic6.jpg
-  :alt: LibreLink connection established
+.. nuotrauka:: ../images/fsl2pic6.jpg
+  :alt: LibreLink ryšys nustatytas
   
-Now the smartphone settings can be changed again if necessary, e.g. if you want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
+Dabar išmaniojo telefono parametrai gali būti keičiami dar kartą, jei yra būtina, pvz. jei norite taupyti energiją. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
 
 When starting the next sensor, however, all settings must be set again!
 
