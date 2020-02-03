@@ -154,25 +154,25 @@ AAPS가 고혈당을 잡기위해 실제로 필요한 양보다 더 많은 인�
 
 반대로, ISF가 너무 높으면 주입이 불충분하게 되고, 혈당이 높게 유지가 되게됩니다 - 특히 수면중에 이런 현상이 초래하게 됩니다.
 
-## Insulin to carb ratio (IC) (g/U)
+## 인슐린-탄수화물 비(IC) (g/U)
 
 ### 설명 & 테스트
 
-The grams of carbohydrate for each unit of insulin.
+인슐린 1U이 탄수화물 몇 그램(g)을 처리할 수 있는지에 대한 설정.
 
-Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
+IC대신 I:C라고도 하며, 탄수화물비율(CR)이라는 용어로 사용되기도 합니다.
 
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
+적정한 양의 Basal이 설정되어 있다고 가정하고, IOB가 0인 상태에서 혈당이 적정 범위내에 있고 탄수화물양을 확실히 알고 있는 음식을 섭취하고 현재 인슐린-탄수화물비에 기초로 추정된 인슐린을 주입함으로써 이를 테스트할 수 있습니다. 최선의 방법은 당신이 보통 먹는 시간대에 평소 먹는 음식을 섭취하고 정확한 탄수화물양을 계산하는 것입니다.
 
-> **NOTE:**
+> **참고:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equaled 12g of carbs, later some changed to 10g of carbs.
+> 일부 유럽 국가들에서는 얼마나 많은 인슐린이 필요한지 결정하기 위해 빵 단위(bread units)를 사용합니다. 초기엔 1 빵단위(bread unit)가 12g의 탄수화물에 해당하였었는데, 나중에 10g의 탄수화물로 변경되었습니다.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> 이 빵단위 모델에서는 탄수화물의 양은 고정되어있고 인슐린의 양이 가변적입니다. ("1 빵단위(bread unit)를 처리하기 위해 얼마나 많은 인슐린이 필요합니까?")
 > 
-> When using IC the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> 반대로 IC를 사용할땐 인슐린 양이 고정되어 있고 탄수화물 양이 가변적입니다. ("1유닛의 인슐린이 얼마나 많은 탄수화물(g)을 처리할 수 있습니까?")
 > 
-> Example:
+> 예:
 > 
 > Bread unit facor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
 > 
