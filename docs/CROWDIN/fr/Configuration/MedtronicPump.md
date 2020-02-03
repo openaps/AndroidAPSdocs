@@ -26,33 +26,33 @@ Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à
 
 ## Configuration de la pompe
 
-- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication.
-- **Set Max Basal** on your Pump to your "max basal entry in your STD profile" * 4 (if you want to have 400% TBR as max). This number must be under 35 (as you can see in pump).
-- **Set Max Bolus** on your Pump (max is 25)
-- **Set profile to STD**. This will be the only profile we will use. You can also disable.
-- **Set TBR type** to Absolute (not Percent)
+- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). Vous devez avoir au moins un ID dans cette liste d'identifiants distants. Ces options peuvent varier selon les différents modèles de pompe. Cette étape est importante, car une fois définie, la pompe écoutera plus souvent la communication à distance.
+- **Définir Basale Max** sur votre Pompe à votre "niveau de basale max entré dans votre profil STD" * 4 (si vous voulez avoir 400% DBT comme max). Ce nombre doit être inférieur à 35 (comme vous pouvez le voir dans la pompe).
+- **Définir Bolus Max** sur votre pompe (25 max)
+- **Définir profil sur STD**. Ce sera le seul profil que nous allons utiliser. Vous pouvez également désactiver.
+- **Définir type DBT** sur Absolu (pas pourcentage)
 
 ## Configuration du téléphone / AndroidAPS
 
-- **Do not pair RileyLink with your Phone.** If you paired your RileyLink, then AndroidAPS won't be able to find it in configuration.
-- Disable Auto-rotate on your phone (on some devices Auto-rotate restarts BT sessions, which is not something we would want).
-- You can configure pump in AndroidAPS two ways: 
+- **Ne pas associer RileyLink à votre téléphone.** Si vous avez appairé votre RileyLink, AndroidAPS ne pourra pas le trouver dans la configuration.
+- Désactiver la rotation automatique sur votre téléphone (sur certains appareils, la rotation automatique redémarre le BT, ce que nous ne voulons pas).
+- Vous pouvez configurer la pompe avec AndroidAPS de deux façons : 
 
-1. Use of Wizard (on new install)
-2. Directly in Config tab (Cog icon on Medtronic driver)
+1. Utilisation de l'assistant (sur une nouvelle installation)
+2. Directement dans l'onglet de configuration (roue crantée sur le pilote Medtronic)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Si vous faites une nouvelle installation, vous serez directement dans l'assistant. Parfois, si votre connexion BT ne fonctionne pas parfaitement (impossible de se connecter à la pompe), vous ne pourrez pas terminer la configuration. Dans ce cas, sélectionnez la pompe virtuelle et une fois l'assistant terminé, vous pouvez utiliser l'option 2, qui permet de contourner la détection de la pompe.
 
 ![Paramètres MDT](../images/Medtronic01.png)
 
-You need to set following items: (see picture above)
+Vous devez définir les éléments suivants : (voir photo ci-dessus)
 
-- **Pump Serial Number**: You can find that on back side, entry SN. You need to get only number, your serial is 6 numbers.
-- **Pump Type**: Which pump type you have (i.e. 522). 
-- **Pump Frequency**: According to pump frequency there were two versions of Medtronic pump made (if you are not sure what frequency your pump uses, look at [FAQ](../Configuration/MedtronicPump#faq)): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
-- **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. It limits how much insulin you can Bolus. If you go over this, Bolus won't be set and error will be returned. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
+- **Numéro de série de la pompe** : Vous pouvez trouver cela sur le côté arrière, entrée SN. Vous ne devez prendre que les chiffres, votre numéro de série est composé de 6 chiffres.
+- **Type de pompe** : quel type de pompe vous avez (i.e. 522). 
+- **Fréquence de la pompe** : Il y a deux versions de la pompe Medtronic utilisant des fréquences différentes (si vous n'êtes pas certain de quelle fréquence la pompe utilise, regardez [FAQ](../Configuration/MedtronicPump#faq)) : 
+    - pour les US & le Canada, la fréquence utilisée est 916 Mhz
+    - pour le reste du monde, la fréquence utilisée est de 868 Mhz
+- **Bolus Max sur la Pompe (U)** (en une heure) : doit avoir la même valeur que sur la pompe. Cela limite la quantité d'insuline que vous pouvez avoir en Bolus. Si vous allez au delà, le Bolus ne sera pas défini et une erreur sera retournée. Le Max qui peut être utilisé est 25, mais surtout veuillez définir une valeur correcte pour vous-même afin de ne pas avoir de surdose d'insuline.
 - **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
 - **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
 - **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
@@ -165,8 +165,8 @@ Like mentioned before you can get devices here:
 
 ![Modèle de Pompe](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Si vous tournez votre pompe, à droite de la première ligne, vous verrez un code spécial à 3 lettres. Les deux premières lettres déterminent le type de fréquence et la dernière détermine la couleur. Voici les valeurs possibles pour la fréquence :
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA - Amérique du Nord (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")
+- CA - Canada (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")
+- WW - Worldwide (pour la fréquence, vous devez sélectionner "Worldwide (868 Mhz)")
