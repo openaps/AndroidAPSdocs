@@ -1,8 +1,8 @@
 # Estimation de Sensibilité
 
-## Sensitvity algorithm
+## Algorithme de sensibilité
 
-Currently we have 4 sensitivity detection models:
+Actuellement, nous avons 4 modèles de détection de sensibilité:
 
 * Sensibilité Oref0
 * Sensibilité AAPS 
@@ -11,19 +11,19 @@ Currently we have 4 sensitivity detection models:
 
 ### Sensibilité Oref0
 
-Basically sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cut off after time specified in preferences. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+La sensibilité de base est calculée à partir des données des dernières 24h et les glucides (si non absorbés) sont coupés après le temps spécifié dans les préférences. L'algorithme est similiaire à celui de OpenAPS Oref0, décrit dans la documentation [OpenAPS Oref0](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 ### Sensibilité AAPS 
 
-Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+La sensibilité est calculée de la même façon que Oref0, mais vous pouvez spécifier la durée prise en compte. L'absorption minimale des glucides est calculée à partir du temps d'absorption maximale des glucides renseigné dans les préférences
 
 ### Sensibilité avec moyenne pondérée
 
-Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+La sensibilité est calculée par une moyenne pondérée des écarts. Vous pouvez spécifier la durée prise en compte. Les écarts les plus récents ont un poids plus élevé. L'absorption minimale des glucides est calculée à partir du temps d'absorption maximale des glucides renseigné dans les préférences. Cet algorithme est le plus rapide à suivre les changements de sensibilité.
 
 ### Sensibilité Oref1
 
-Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+La sensibilité est calculée à partir des données des 8 dernières heures ou à partir du dernier changement de site, si celui-ci date de moins de 8 heures. Les glucides (si non absorbés) sont coupés après la durée spécifiée dans les préférences. Seul l'algorithme Oref1 prend en charge les repas non signalés (RNS ou UAM). Cela signifie que les périodes avec des RNS détectés sont exclus du calcul de sensibilité. Donc, si vous utilisez les SMB avec RNS, vous devez choisir l'algorithme Oref1 pour que cela fonctionne correctement. Pour plus d'informations, lisez la documentation [OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## Simultaneous carbs
 
