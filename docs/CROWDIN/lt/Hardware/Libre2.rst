@@ -125,22 +125,22 @@ Jei jutiklis šiek tiek pasislinko ant odos ar buvo pastumtas, tai gali sąlygot
 
 Jutiklio keitimas vyksta nepertraukiamai: uždėkite naują jutiklį šiek tiek prieš aktyvavimą. Kai tik xDrip+ nebegaus duomenų iš seno jutiklio, aktyvuokite naują jutiklį su modifikuota programėle. Po vienos valandos naujos reikšmės turėtų automatiškai atsirasti xDrip+'e. 
 
-Jei ne, patikrinkite telefono nustatymus ir darykite taip, kaip su pirmuoju. Neturite laiko apribojimų. Pabandykite rasti teisingus nustatymus. Nėra reikalo iš karto keisti jutiklį, kol nepabandėte skirtingų derinių. Jutikliai yra atkaklūs ir nuolat bando užmegzti ryšį. Please take your time. In most cases you accidentially changed one setting which causes now problems. 
+Jei ne, patikrinkite telefono nustatymus ir darykite taip, kaip su pirmuoju. Neturite laiko apribojimų. Pabandykite rasti teisingus nustatymus. Nėra reikalo iš karto keisti jutiklį, kol nepabandėte skirtingų derinių. Jutikliai yra atkaklūs ir nuolat bando užmegzti ryšį. Neskubėkite. Dažniausiai problemas sukelia netyčia pakeistas koks vienas nustatymas. 
 
-Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! You do not need to start the sensor in xDrip.
+Pavykus, prašome xDrip'e pasirinkti "Sensor stop" ir "Delete calibration only". Tai nurodo xDrip'ui, kad naujas jutiklis siunčia naujus gliukozės kraujyje duomenis ir senos kalibaracijos daugiau netinkamos, todėl turi būti ištrintos. Čia nėra daroma jokios realios sąveikos su Libre2 jutikliu! Jums nereikia aktyvuoti jutiklio xDrip'e.
 
-.. image:: ../images/fsl2pic11.jpg
-  :alt: xDrip+ missing data when changing Libre 2 sensor
+.. nuotrauka:: ../images/fsl2pic11.jpg
+  :alt: xDrip+ trūksta duomenų, keičiant Libre 2 jutiklį
   
-You can calibrate the Libre2 with an offset of plus/minus 20 mg/dL (intercept), but no slope. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
+Galite kalibruoti Libre2 su plius/minus 1 mmol/l atsvara (intercept), bet ne nuokrypiu (slope).  Norint saugiai jaustis, kalibruokite kas 24-48 valandas. Vertės yra tikslios iki pat jutiklio pabaigos ir nešokinėja taip kaip Libre1. Tačiau, jei jutiklis rodo visiškai netiksliai, tai nepasikeis. Tada jutiklis turėtų būti nedelsiant pakeistas.
 
-The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Currently the internal test are too strict. I have completely stopped scanning and haven't had a failure since then.
+Libre2 jutikliai turi patikimumo patikrinimus, siekiant nustatyti blogas vertes. Kai tik jutiklis pajuda ant rankos ar yra šiek tiek pastumiamas, vertės gali pradėti svyruoti. Libre2 jutiklis tada išsijungs saugumo sumetimais. Deja, skenuojant su programėle, atliekami papildomi tikrinimai. Programėlė gali deaktyvuoti jutiklį, net jei su jutikliu viskas yra gerai. Šiuo metu vidinis testas yra per griežtas. Aš visiškai nustojau skenuoti ir nuo tada neturėjau sutrikimų.
 
-In other `time zones <../Usage/Timezone-traveling.html>`_ there are two strategies for looping: Either 
+Kitose laiko zonose <../Usage/Timezone-traveling.html>`_ yra dvi strategijos ciklui: Arba 
 
-1. leave the smartphone time unchanged and shift the basal profile (smartphone in flight mode) or 
-2. delete the pump history and change the smartphone time to local time. 
+1. nekeisti išmaniojo telefono laiko ir pastumti bazės profilį (telefonas skrydžio režimu) arba 
+2. ištrinti pompos istoriją ir pakeisti telefono laiką į vietinį. 
 
-Method 1. is great as long as you don't have to set a new Libre2 sensor on-site. If in doubt, choose method 2., especially if the trip takes longer. If you set a new sensor, the automatic time zone must be set, so method 1. would be disturbed. Please check before, if you are somewhere else, you can run otherwise fast into problems.
+1. būdas yra geras iki tol, kol nereikia keisti Libre2 jutiklio į naują. Jei abejojate, pasirinkite metodą 2., ypač, jei kelionė trunka ilgiau. Jei aktyvuojate naują jutiklį, automatinė laiko juosta turi būti nustatyta, taigi 1. metodas netinka. Prašome patikrinti tai prieš kelionę, kitaip galite greitai turėti problemų.
 
-Besides the patched app the new Droplet transmitter or (soon available) the new OOP algorithm of xDrip+ can be used to receive blood sugar values. MM2 and blucon do NOT work so far.
+Be to, modifikuota programėlė gali būti naudojama su Droplet siųstuvu arba (greit pasirodys) nauju OOP xDrip+ algoritmu, norint gauti gliukozės vertes. MM2 ir blucon neveikia iki šiol.
