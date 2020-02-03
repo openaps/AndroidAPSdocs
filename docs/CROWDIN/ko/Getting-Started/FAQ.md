@@ -125,34 +125,34 @@ So, a basal rate too high will create low BGs both with the default rate, but al
 
 Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
-## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+## 인슐린 민감도(ISF) (mmol/l/U 또는 mg/dl/U)
 
 ### 설명 & 테스트
 
-The drop in BG expected from dosing 1U of insulin.
+인슐린 1U 투여로 혈당이 얼마나 떨어지는지에 대한 설정
 
-Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+적정량의 Basal이 설정이 되어 있다고 가정하고, Loop를 중지 IOB가 0인지 확인한 다음 조금 더 '높은' 혈당 수치에 도달하도록 식염포도당 몇알을 복용하여 테스트할 수 있습니다.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+그런 다음 목표로한 혈당에 도달하기 위해 일정량의 인슐린 (현재 ISF를 기준으로) 을 주입하세요.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+이 설정이 종종 매우 낮게 설정되므로 주의하세요. 너무 낮게 설정되면 1U이 예상보다 더 빨리 혈당을 강하시키게 됩니다.
 
 ### 영향
 
-**Lower ISF** (i.e. 40 instead of 50) = more aggressive / stronger leading to a bigger drop in BGs for each unit of insulin. If too low, this can lead to low BGs.
+**낮은 ISF** (예: 50 대신 40) = 각 인슐린 단위에 대해 더 공격적이고/강하게 되어 더 크게 혈당을 강하시킵니다. 너무 낮다면, 저혈당을 유발할 수 있습니다.
 
-**Higher ISF** (i.e. 45 instead of 35) = less aggressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
+**높은 ISF** (예: 35 대신 45) = 각 인슐린 단위에 대해 덜 공격적이고/약하게 되어 더 작게 혈당을 강하시킵니다. 너무 높다면, 고혈당을 유발할 수 있습니다.
 
-**Example:**
+**예:**
 
-* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
-* So, you want correction of 90 mg/dl (= 190 - 110).
-* ISF = 30 -> 90 / 30 = 3 units of insulin
-* ISF = 45 -> 90 / 45 = 2 units of insulin
+* 혈당이 190 mg/dl 이고 목표는 100 mg/dl 라고 가정합니다. 
+* 따라서, 이는 90 mg/dl을 강하시켜야하는 상황입니다 (190 - 100).
+* ISF를 30으로 설정했을 경우 -> 90 / 30 = 3유닛의 인슐린
+* ISF = 45 -> 90 / 45 = 2유닛의 인슐린
 
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+AAPS가 고혈당을 잡기위해 실제로 필요한 양보다 더 많은 인슐린이 필요하다고 생각할 수 있기 때문에, 너무 낮은 ISF는 '인슐린 과잉 주입'을 유발 할 수 있습니다. 이는 '롤러 코스터' 혈당을 유발할 수 있습니다. (특히. 금식 중일 때). 이 상황에서는 ISF를 올려야합니다. 이는 AAPS가 더 적은양을 주입하게 하여, 고혈당일때 과도한 주입을 하지 않게 함으로써 저혈당을 방지하게 됩니다.
 
-Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+반대로, ISF가 너무 높으면 주입이 불충분하게 되고, 혈당이 높게 유지가 되게됩니다 - 특히 수면중에 이런 현상이 초래하게 됩니다.
 
 ## Insulin to carb ratio (IC) (g/U)
 
