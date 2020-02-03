@@ -202,7 +202,7 @@ Quelques boutons pour accéder rapidement aux fonctions communes:
 * Changement de profils (voir la page [Changement de profil](../Usage/Profiles.md) pour plus d'informations sur la configuration)
 * Cibles temporaires
 * Définir/Annuler des débits de basal temporaires
-* Extended bolus (DanaR/RS or Combo pump only)
+* Bolus étendu (pompe DanaR/RS ou Combo uniquement)
 * Amorcer/Remplir (si c'est supporté par la pompe [DanaR/RS, Combo et Insight])
 * Historique
 * DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
