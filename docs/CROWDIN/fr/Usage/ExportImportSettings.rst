@@ -7,37 +7,37 @@ Préparez-vous aux imprévus. Vous pouvez modifier des paramètres importants pa
 
 La meilleure pratique consiste à exporter les paramètres après un changement ou la réalisation d'un objectif. 
 
-Les paramètres exportés doivent être copiés sur un stockage cloud ou sur votre ordinateur. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Les paramètres exportés doivent être copiés sur un stockage cloud ou sur votre ordinateur. Ainsi vous serez prêt en cas de perte ou de dommages de votre téléphone AAPS et vous ne serez pas obligé de tout recommencer à partir de zéro.
 
 Sur un ordinateur Windows 10, cela ressemble à ceci :
   
   .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS Preferences phone connected to computer
+    :alt: AndroidAPS Préférences téléphone connecté à l'ordinateur
 
 
-How to export settings
+Comment exporter les paramètres
 ==================================================
-* **Export settings** on your old phone
+* **Exporter les paramètres** sur votre vieux téléphone
 
   * Menu Hamburger (coin supérieur gauche de l'écran)
   * Maintenance
   * Exporter les paramètres
-  * File location will be shown
+  * L'emplacement du fichier sera affiché
     
 .. image:: ../images/AAPS_ExportSettings.png
-  :alt: AndroidAPS export settings
+  :alt: AndroidAPS exporter les paramètres
        
-* **Transfer** settings from old to new phone using the file location shown during export
+* **Transferer** les paramètres de l'ancien au nouveau téléphone en utilisant l'emplacement du fichier indiqué lors de l'exportation
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
+  Le fichier exporté est appelé "AndroidAPSPreferences" et devrait se trouver dans votre dossier racine du stockage principal du téléphone (comme C: sur votre ordinateur).
   
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone
+* **Installez AndroidAPS** sur le nouveau téléphone.
+* **Importer les paramètres** sur votre nouveau téléphone
 
   * Menu Hamburger (coin supérieur gauche de l'écran)
   * Maintenance
   * Importez les paramètres
 
-* **Note for Dana RS users:**
+* **Remarque pour les utilisateurs de Dana RS :**
 
-  * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Please pair new phone and pump manually.
+  * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Veuillez associer manuellement le nouveau téléphone et la pompe.
