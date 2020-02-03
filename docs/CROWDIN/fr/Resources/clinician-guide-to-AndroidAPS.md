@@ -22,56 +22,56 @@ Si le périphérique exécutant AndroidAPS se brise ou devient hors de portée d
 
 ### Comment les données sont collectées :
 
-With AndroidAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AndroidAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+Avec AndroidAPS, un appareil Android exécute une application spéciale pour faire le calcul, l'appareil communique en Bluetooth avec une pompe prise en charge. AndroidAPS peut communiquer avec d'autres appareils ainsi que vers le cloud en utilisant le wifi ou les données mobiles pour recueillir des informations supplémentaires, et de faire des rapports au patient, aux soignants et à ses proches sur ce qu'il fait et pourquoi.
 
-The Android device needs to:
+Le périphérique Android doit :
 
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+* communiquer avec la pompe et lire l'historique - combien d'insuline a été délivrée
+* communiquer avec le capteur MGC (soit directement, soit via le cloud) - pour voir ce que les Glycémies font / ont fait
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+Lorsque l'appareil a collecté ces données, l'algorithme s'exécute et prend la décision en fonction des paramètres (SI, ratio glucides/insuline , DAI, cible, etc.). Si nécessaire, il émet alors des commandes à la pompe pour modifier le débit d'insuline.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+Il recueillera également toutes les informations sur les bolus, la consommation de glucides et les ajustements cibles temporaires de la pompe ou de Nightscout pour les utiliser pour le calcul des taux d'administration d'insuline.
 
 ### Comment sait-elle quoi faire?
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
+Le logiciel open source est conçu pour permettre à l'appareil de faire facilement le travail que les gens faisaient (en mode manuel) pour calculer comment la livraison d'insuline doit être ajustée. Il recueille d'abord les données de tous les appareils pris en charge ainsi que sur le cloud, prépare les données et exécute les calculs, fait des prévisions sur les niveaux de glycémie attendus au cours des prochaines heures dans différents scénarios et calcule les ajustements nécessaires pour conserver ou ramener la Glycémie dans la plage cible. Ensuite, il envoie des ajustements nécessaires à la pompe. Puis il lit les données en retour, et refait les calculs encore et encore.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+Comme le paramètre d'entrée le plus important est la glycémie provenant du capteur MGC, il est important d'avoir des données MGC de très bonne qualité.
 
-AndroidAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+AndroidAPS est conçu pour suivre de façon transparente toutes les données d'entrée qu'il recueille, la recommandation qui en résulte et toute mesure prise. Il est donc facile de répondre à la question à tout moment, "pourquoi est-ce que cela fait X ?" en examinant les journaux.
 
 ### Exemples de prise de décision de l'algorithme AndroidAPS :
 
-AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AndroidAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AndroidAPS utilise différentes couleurs pour séparer ces [lignes de prédiction](../Installing-AndroidAPS/Releasenotes#overview-tab). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
 
 #### Voici des exemples de lignes de prédiction pourpres et de la façon dont elles peuvent varier :
 
 ![Purple prediction line examples](../images/Prediction_lines.jpg)
 
-#### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+#### Voici des exemples de différents délais qui influencent les ajustements nécessaires à l'administration d'insuline :
 
 #### Scénario 1 - Zéro Temp pour la sécurité
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AndroidAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+Dans cet exemple, la Glycémie est en hausse à court terme ; cependant, il est prévu qu'elle sera faible sur une période plus longue. En effet, il est prévu de passer en dessous de la cible *et* sous le seuil de sécurité. Pour la sécurité et prévenir l'hypoglycémie, AndroidAPS émettra une "Zéro-temp" (débit de base temporaire à 0%), jusqu'à ce que la glycémie estimée (dans toute la période projetée) soit au dessus du seuil de sécurité.
 
 ![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
 
 #### Scénario 2 - Zéro temp pour la sécurité
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AndroidAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+Dans cet exemple, on prévoit que la glycémie sera faible à court terme, mais on prévoit qu'elle sera plus tard au-dessus de la cible. Cependant, comme le point bas à court terme est en dessous du seuil de sécurité, AndroidAPS émettra une zéro-temp, jusqu'à ce qu'il n'y ait plus aucun point de la ligne de prédiction qui soit inférieur au seuil.
 
 ![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
 
 #### Scénario 3 - Plus d'insuline nécessaire
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AndroidAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
+Dans cet exemple, une prévision à court terme montre une baisse en dessous de la cible. Toutefois, il n'est pas prévu qu'elle soit inférieure au seuil de sécurité. La glycémie finale est au-dessus de la cible. Par conséquent, AndroidAPS va s'abstenir de tout ajout à l'insuline qui contribuerait à court terme à une hypoglycémie (l'ajout d'insuline ferait passer la prédiction en-dessous du seuil de sécurité). Il évaluera plus tard s'il a besoin d'ajouter de l'insuline pour ramener le niveau de la glycémie prévisionnelle plus proche de la cible, une fois qu'il est sûr de pouvoir le faire sans risque. *(En fonction des paramètres, de la quantité et du moment où l'insuline est requise, cette insuline peut être administrée via des basales temporaires ou des SMB (super micro bolus)).*
 
 ![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
 
 #### Scénario 4 - Temporaire basse pour la sécurité
 
-In this example, AndroidAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AndroidAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+Dans cet exemple, AndroidAPS voit que la glycémie est bien au-dessus de la cible. Cependant, en raison de la durée d'action de l'insuline, il y a déjà assez d'insuline dans le corps pour amener la glycémie vers la cible. En fait, on prévoit même que la glycémie sera en dessous de la cible. Par conséquent, AndroidAPS ne fournira pas d'insuline supplémentaire, de sorte qu'elle ne contribuera pas à rallonger une période de glycémie basse. Bien que la glycémie soit élevée/en hausse, un faible débit de basal temporaire sera probable dans ce cas.
 
 ![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
 
