@@ -58,11 +58,11 @@ Gali padėti telefono paleidimas iš naujo, jums gali tekti padaryti tai keletą
 .. nuotrauka:: ../images/fsl2pic6.jpg
   :alt: LibreLink ryšys nustatytas
   
-Dabar išmaniojo telefono parametrai gali būti keičiami dar kartą, jei yra būtina, pvz. jei norite taupyti energiją. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The bloodsugar levels are transferred anyway.
+Dabar išmaniojo telefono parametrai gali būti keičiami dar kartą, jei yra būtina, pvz. jei norite taupyti energiją. Vietos nustatymo paslaugą galima išjungti, garsas gali būti nutildytas, aliarmai išjungti. Kraujo gliukozės duomenys yra perduodami bet kokiu atveju.
 
-When starting the next sensor, however, all settings must be set again!
+Tačiau aktyvuojant kitą jutiklį, visi parametrai turi būti nustatyti iš naujo!
 
-You can use a second NFC capable smartphone with the original LibreLink app for scanning via NFC. The Reader can NOT be used any more, it cannot be connected in parallel! The second phone can upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for the DiaDoc. There are many parents who absolutely need this. 
+Jūs galite naudoti antrą NFC turintį išmanųjį telefoną su originalia LibreLink programėle, jei norite nuskaitymo per NFC. Skaitytuvas NEGALI būti daugiau naudojamas, jis negali būti sujungtas kartu! Antras telefonas gali įkelti kraujo gliukozės vertes į Abbott debesį (LibreView). LibreView gali generuoti ataskaitas endokrinologui. There are many parents who absolutely need this. 
 
 Remark: The patched app does not have any connection to the Internet.
 
