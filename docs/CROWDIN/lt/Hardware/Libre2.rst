@@ -62,47 +62,47 @@ Dabar išmaniojo telefono parametrai gali būti keičiami dar kartą, jei yra b�
 
 Tačiau aktyvuojant kitą jutiklį, visi parametrai turi būti nustatyti iš naujo!
 
-Jūs galite naudoti antrą NFC turintį išmanųjį telefoną su originalia LibreLink programėle, jei norite nuskaitymo per NFC. Skaitytuvas NEGALI būti daugiau naudojamas, jis negali būti sujungtas kartu! Antras telefonas gali įkelti kraujo gliukozės vertes į Abbott debesį (LibreView). LibreView gali generuoti ataskaitas endokrinologui. There are many parents who absolutely need this. 
+Jūs galite naudoti antrą NFC turintį išmanųjį telefoną su originalia LibreLink programėle, jei norite nuskaitymo per NFC. Skaitytuvas NEGALI būti daugiau naudojamas, jis negali būti sujungtas kartu! Antras telefonas gali įkelti kraujo gliukozės vertes į Abbott debesį (LibreView). LibreView gali generuoti ataskaitas endokrinologui. Yra daug tėvų, kuriems to reikia. 
 
-Remark: The patched app does not have any connection to the Internet.
+Pastaba: modifikuota programėlė neturi jokio ryšio su internetu.
 
-Step 2: Install and configure xDrip+ app
+2 veiksmas: Įdiekite ir konfigūruokite xDrip+ programėlę
 ==================================================
 
-The blood sugar values are received on the smartphone by the xDrip+ App. 
+Kraujo gliukozės reikšmės išmaniąjame telefone gaunamos per xDrip+ programėlę. 
 
-* If not already set up then download xdrip app and install one of the latest nightly builts from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
-* In xDrip+ select "Libre2 (patched App)" as data source
-* If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+* Jei dar neįdiegėte, tada atsisiųskite xdrip programą ir įdiekite vieną iš naujausių versijų iš čia <https://github.com/NightscoutFoundation/xDrip/releases>`_.
+* xDrip+ pasirinkite "Libre2 (patched App)" kaip duomenų šaltinį
+* Jei reikia, įveskite "BgReading:d,xdrip libre_receiver:v" ties Less Common Settings->Extra Logging Settings->Extra tags for logging. Taip bus įrašomi papildomi klaidų pranešimai trikčių šalinimui.
 * xDrip eikite į Nustatymus > Programinės įrangos suderinamumas > Vietinis transliavimas ir pasirinkite Įjungta.
 * xDrip eikite į Nustatymus > Programinės įrangos suderinamumas > Priimti terapijas ir pasirinkite Išjungta.
-* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xdrip please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
+- norėdami įgalinti AAPS gauti kraujo gliukozės duomenis (versija 2.5x ir naujesnė), xdrip nustatykite `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <https://androidaps.readthedocs.io/en/latest/EN/Configuration/xdrip.html#identify-receiver>`_
 Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Nustatymus> Programinės įrangos suderinamumas> Priimti kalibracijas ir pasirinkite Įjungti.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
 
-.. image:: ../images/fsl2pic7.jpg
-  :alt: xDrip+ LibreLink logging
+.. nuotrauka:: ../images/fsl2pic7.jpg
+  :alt: xDrip+ LibreLink žurnalas
   
-.. image:: ../images/fsl2pic7a.jpg
-  :alt: xDrip+ log
+.. nuotrauka:: ../images/fsl2pic7a.jpg
+  :alt: xDrip+ žurnalas
   #
-Step 3: Start sensor
+3 žingsnis: aktyvuokite jutiklį
 ==================================================
 
-In xDrip+ start the sensor with "Start Sensor" and "not today". 
+xDrip+ aktyvuokite sensorių paspausdami "Start Sensor" ir pasirinkdami "not today". 
 
-In fact this will not start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+Iš tikrųjų tai neaktyvuos Libre2 jutiklio ar kažkaip kitaip jo nepaveiks. Tai tiesiog nurodo xDrip+'ui, kad naujas sensorius siunčia kraujo gliukozės lygius. Jei galite, įveskite dvi reikšmes, gautas iš gliukomačio, pradinei kalibracijai. Dabar kraujo gliukozės vertės turėtų būti rodomos xDrip+ kas 5 minutes. Praleistos vertės, pvz. nes buvote per toli nuo telefono, negali būti įrašytos atbuline data.
 
-Step 4: Configure AndroidAPS
+4 Žingsnis: konfigūruoti AndroidAPS
 ==================================================
-* In AndroidAPS go to Config Builder > BG Source and check 'xDrip+' 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html#identifiziere-empfanger>`_.
+* AndroidAPS eikite į Konfigūratorių>KG šaltinis ir pažymėkite xDrip+ 
+* Jei AndroidAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją 'Nustatyti gavėją', kaip aprašyta xDrip + nustatymų puslapyje <../Configuration/xdrip.html#identifiziere-empfanger>`_.
 
-Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
+Kol kas naudojant Libre 2 kaip KG šaltinį, negalite aktyvuoti 'Įjungti SMB visada' ir 'Įjungti SMB po angliavandenių' per SMB algoritmą. KG vertės Libre 2 nėra pakankamai tikslios, norint saugiai naudoti šias funkcijas. Žiūrėkite "Lyginti kraujo gliukozės duomenis <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_, jei norite sužinoti daugiau.
 
-Experiences and Troubleshooting
+Patirtis ir gedimų šalinimas
 ==================================================
 
-The connectivity is extraordinary good. With the exception of Huawei mobile phones, all current smartphones seems to work well. The reconnect in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone.
+Ryšys yra neįtikėtinai geras. With the exception of Huawei mobile phones, all current smartphones seems to work well. The reconnect in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone.
 
 Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor infos are available in the System menu.
 
