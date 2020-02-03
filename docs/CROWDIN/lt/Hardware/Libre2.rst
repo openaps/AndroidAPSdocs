@@ -102,30 +102,30 @@ Kol kas naudojant Libre 2 kaip KG šaltinį, negalite aktyvuoti 'Įjungti SMB vi
 Patirtis ir gedimų šalinimas
 ==================================================
 
-Ryšys yra neįtikėtinai geras. With the exception of Huawei mobile phones, all current smartphones seems to work well. The reconnect in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluettooth spreads over refections, no problems should occur. If you have connectivity problems please test another phone.
+Ryšys yra neįtikėtinai geras. Išskyrus "Huawei" mobiliojo ryšio telefonus, visi dabartiniai išmanieji telefonai, atrodo, gerai veikia. Pakartotinis bandymas prisijungti, nutrūkus ryšiui, yra puikus. Ryšys gali nutrūkti, jei mobilusis telefonas yra kišenėje, esančioje priešingoje pusėje nei jutiklis arba, jei esate lauke. Kai aš sode, nešioju telefoną toje pačioje pusėje kur ir jutiklis. Patalpose, kur Bluetooth ryšys sklinda atspindėdamas nuo paviršių, sunkumų neturėtų kilti. Jei jūs turite ryšio problemų, išbandykite kitą telefoną.
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings > Advanced Settings for Libre2 > "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor infos are available in the System menu.
+Techniškai, esama kraujo gliukozės vertė yra perduodama xDrip+ kiekvieną minutę. Svertinio vidurkio filtras apskaičiuoja išlygintą vertę per pastarąsias 25 minutes. Tai privaloma naudojant uždarą ciklą. Kreivės atrodo sklandžiai ir ciklo rezultatai yra puikūs. Neapdorotos vertės, kuriomis aktyvuojami aliarmai, šiek tiek šokinėja, tačiau atitinka vertes skaitytuve. Be to, neapdorotos vertės gali būti rodomos xDrip+ grafike, kad būtų galima sureaguoti laiku į staigius pokyčius. Įjunkite Less Common Settings > Advanced Settings for Libre2 > "show Raw values" ir "show Sensors Infos". Tada neapdorotos vertės bus atvaizduojamos papildomai kaip maži balti taškai, o papildoma jutiklio informacija bus matoma sistemos meniu.
 
-.. image:: ../images/fsl2pic8.jpg
-  :alt: xDrip+ advanced settings Libre 2
+.. nuotrauka:: ../images/fsl2pic8.jpg
+  :alt: xDrip+ išplėstiniai parametrai Libre 2
   
-.. image:: ../images/fsl2pic9.jpg
-  :alt: xDrip+ homescreen with raw data
+.. nuotrauka:: ../images/fsl2pic9.jpg
+  :alt: xDrip+ ekranas su neapdorotais duomenimis
   
-The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Avanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
+Jutiklio naudojimo trukmė yra nustatyta 14 dienų. 12 papildomų valandų kaip Libre1 nebėra. xDrip+ rodo papildomą jutiklio informaciją įjungus Avanced Settings for Libre2 > "show Sensors Infos" sistemos meniu, pvz., pradžios laiką. Likęs jutiklio laikas taip pat gali būti matomas modifikuotoje LibreLink programėlėje. Arba pagrindiniame ekrane rodomos likusios dienos arba jutiklio pradžio laiką rasite trijų taškų meniu->Help->Event log ties "New sensor found".
 
-.. image:: ../images/fsl2pic10.jpg
-  :alt: Libre 2 start time
+.. nuotrauka:: ../images/fsl2pic10.jpg
+  :alt: Libre 2 pradžios laikas
   
-Altogether it is one of the smallest CGM systems on the market. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dL the deviations are typical smaller than 10 md/dL. Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturbe the internal leveling mechanism.
+Apskritai, tai yra viena iš mažiausių NGJ sistemų rinkoje. Maža, nereikia siųstuvo ir dažniausiai labai tikslūs duomenys be svyravimų. Po maždaug 12 valandų "apšilimo", kai svyravimai siekia iki 1,6 mmol/l, vėliau svyravimai paprastai mažesni nei 0,5 mmol/l. Geriausi rezultatai būna užpakalinėje žąsto pusėje, kitur - atsargiai! Nėra būtinybės įdurti naują jutiklį dieną prieš "įmirkymui". Tai trukdys vidiniam išlyginimo mechanizmui.
 
-There seem to be bad sensors from time to time, which are far away from the blood values. It stays that way. These should be immediately replaced.
+Karts nuo karto pasitaiko blogų jutiklių, rodančių dideliu skirtumu palyginus su kraujo rodikliais. Taip būna. Tokie turėtų būti nedelsiant pakeisti.
 
-If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probabaly you will see jumping values in xDrip+. Or the difference to the bloody values change. Please replace the sensor immediately! The results are inaccurate now.
+Jei jutiklis šiek tiek pasislinko ant odos ar buvo pastumtas, tai gali sąlygoti neteisingus rezultatus. Siūlelis, esantis audinyje, šiek tiek ištraukiamas iš audinio ir tada matuoja skirtingus rezultatus. Greičiausiai pamatysite šokinėjančias vertes xDrip+. Arba bus skirtumas su rodikliais iš piršto. Prašome nedelsiant pakeisti jutiklį! Rezultatai dabar yra netikslūs.
 
-A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+. 
+Jutiklio keitimas vyksta nepertraukiamai: uždėkite naują jutiklį šiek tiek prieš aktyvavimą. Kai tik xDrip+ nebegaus duomenų iš seno jutiklio, aktyvuokite naują jutiklį su modifikuota programėle. Po vienos valandos naujos reikšmės turėtų automatiškai atsirasti xDrip+'e. 
 
-If not, please check the phone settings and proceed as with the first start. You have no time limit. Try to find the correct seetings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Please take your time. In most cases you accidentially changed one setting which causes now problems. 
+Jei ne, patikrinkite telefono nustatymus ir darykite taip, kaip su pirmuoju. Neturite laiko apribojimų. Pabandykite rasti teisingus nustatymus. Nėra reikalo iš karto keisti jutiklį, kol nepabandėte skirtingų derinių. Jutikliai yra atkaklūs ir nuolat bando užmegzti ryšį. Please take your time. In most cases you accidentially changed one setting which causes now problems. 
 
 Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! You do not need to start the sensor in xDrip.
 
