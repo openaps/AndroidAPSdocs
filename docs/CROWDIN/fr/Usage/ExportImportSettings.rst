@@ -7,7 +7,7 @@ Préparez-vous aux imprévus. Vous pouvez modifier des paramètres importants pa
 
 La meilleure pratique consiste à exporter les paramètres après un changement ou la réalisation d'un objectif. 
 
-Paramètres exportés doivent être copiés sur un stockage cloud ou sur votre ordinateur. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Les paramètres exportés doivent être copiés sur un stockage cloud ou sur votre ordinateur. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
 
 Sur un ordinateur Windows 10, cela ressemble à ceci :
   
