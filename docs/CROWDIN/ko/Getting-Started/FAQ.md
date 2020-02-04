@@ -283,25 +283,25 @@ See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
-## Leisure activities
+## 여가 활동
 
-### Sports
+### 스포츠
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Loop를 사용하기 전이 가졌던 오랜 운동 습관들을 고쳐야합니다. 운동시 예전과 같이 탄수화물을 섭취한다면, Closed Loop가 이를 인식하고 교정하려고 할 것입니다.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+따라서 당신의 체내에 탄수화물이 더 많이 있게될 것이지만, 동시에 Loop가 이에 대응하고 인슐린을 주입하게 됩니다.
 
-When looping you should try these steps:
+Loop시 아래 단계를 시도해보아야 합니다:
 
-* Make a [profile switch](../Usage/Profiles.md) < 100%.
-* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+* 100% 미만의 [프로파일 변경](../Usage/Profiles.md).
+* 표준 목표 이상으로 [활동 임시 목표](../Usage/temptarget#activity-temp-target) 설정.
+* SMB를 사용하고 있다면 ["높은 임시 목표에서 SMB 사용하기"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets)를 활성화하고 ["항상 SMB 사용하기"](../Usage/Open-APS-features#enable-smb-always)는 비활성화 하세요.
 
-Pre- and postprocessing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+이러한 설정의 사전 및 사후 처리가 중요합니다. 운동 전 미리 이러한 설정을 변경하고, 근력운동이 주는 영향도 고려하세요.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+같은 시간에 운동을 규칙적으로 한다면 (예: 운동 수업 등) 프로파일변경이나 임시목표를 설정하기 위해서 [자동화](../Usage/Automation.rst) 기능을 사용하는 것을 고려해봄직합니다. 위치 기반 자동화도 좋은 생각일 수 있지만 사전처리를 더 어렵게 할 수 있습니다.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+프로파일 변경의 퍼센트, 활동 임시 목표 설정 그리고 변경하는 최고의 시간은 모두 개개인에 따라 다릅니다. 당신에게 적합한 설정값을 찾을때 우선 보수적으로 시작하세요 (낮은 퍼센트의 프로파일 변경과 높은 임시목표로 시작해보세요).
 
 ### 성교
 
