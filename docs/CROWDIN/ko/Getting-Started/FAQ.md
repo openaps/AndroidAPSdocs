@@ -303,11 +303,11 @@ If you do sports regularly at the same time (i.e. sports class in your gym) you 
 
 The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
-### Sex
+### 성교
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
+방해받고 싶지 않다면 펌프를 떼어낼 수 있습니다만, IOB가 올바르게 계산되도록 AAPS에게 알려주세요.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+[위 설명](../Getting-Started/FAQ#disconnect-pump)을 확인하세요.
 
 ### 음주
 
@@ -319,27 +319,27 @@ See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 음주를 할때는, CGM을 항시 확인해서 스스로 저혈당이 예상될 경우 직접 탄수화물을 섭취하여 저혈당을 방지하여야 합니다.
 
-### Sleeping
+### 수면
 
 #### How can I loop during the night without mobile and WIFI radiation?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
+많은 사용자들이 야간에 폰을 비행기모드로 전환합니다. 수면중에 Loop 실행을 원한다면, 다음과 같이 진행하세요 (이 방법은 오직 xDrip+ 혹은 패치된 덱스콤 앱과 같은 로컬 혈당 소스만 사용가능하며, Nightscout로 부터 혈당을 받아오는 것은 불가능합니다):
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. 폰에서 비행기모드를 작동합니다.
+2. 비행기모드 활성화될때까지 기다립니다.
+3. 블루투스를 켭니다.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+이렇게 하면 전화가 오지 않고, 인터넷에도 연결되지 않습니다. 하지만 Loop는 작동합니다.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+일부 사용자들이 비행기 모드가 켜져있을 때 로컬 브로드캐스트에 문제가 있는 것을 발견하였습니다 (즉, AAPS가 xDrip +에서 혈당을 받지 못했습니다). 그럴 경우 xDrip+의 설정 > Inter-app settings > Identify receiver 에 들어가서 `info.nightscout.androidaps`를 입력하세요.
 
 ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-### Travelling
+### 여행
 
-#### How to deal with time zone changes?
+#### 시간대를 변경하는 방법은 무엇입니까?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+다나R 혹은 다나R(한글버전)을 사용한다면 아무것도 할 필요가 없습니다. 다른 펌프 사용자들은 [시간대 변경](../Usage/Timezone-traveling.md) 페이지를 확인하세요.
 
 ## Medical topics
 
