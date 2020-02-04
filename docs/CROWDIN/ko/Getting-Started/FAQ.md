@@ -214,13 +214,13 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 # Other settings
 
-## Nightscout settings
+## Nightscout 설정
 
 ### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
 
 In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
-## CGM settings
+## CGM 설정
 
 ### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
 
