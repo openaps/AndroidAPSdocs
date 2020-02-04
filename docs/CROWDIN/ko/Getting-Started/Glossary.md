@@ -90,7 +90,7 @@
 </tr>
 <tr>
  <td>BR</td>
- <td>basal rate</td>
+ <td>basal양</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
