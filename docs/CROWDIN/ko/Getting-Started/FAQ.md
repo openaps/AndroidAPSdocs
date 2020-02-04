@@ -341,14 +341,14 @@ Loop시 아래 단계를 시도해보아야 합니다:
 
 다나R 혹은 다나R(한글버전)을 사용한다면 아무것도 할 필요가 없습니다. 다른 펌프 사용자들은 [시간대 변경](../Usage/Timezone-traveling.md) 페이지를 확인하세요.
 
-## Medical topics
+## 의료 관련 주제
 
-### Hospitalization
+### 입원
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+AndroidAPS와 DIY Loop에 대한 정보를 당신의 의료진과 공유하길 원한다면 [의료진을 위한 AndroidAPS 가이드](../Resources/clinician-guide-to-AndroidAPS.md)를 출력해 의료진에게 보여주세요.
 
-### Medical appointment with your endocrinologist
+### 내분비과 의사와의 진료 예약
 
-#### Reporting
+#### 보고서
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Nightscout 리포트(https://당신의NS사이트주소.com/report) 혹은 or [Nightscout 리포터 사이트](https://nightscout-reporter.zreptil.de/)를 이용하세요.
