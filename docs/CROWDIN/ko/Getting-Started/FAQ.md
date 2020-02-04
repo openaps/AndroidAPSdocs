@@ -309,15 +309,15 @@ You can remove the pump to be 'free', but you should tell it to AAPS so that the
 
 See [description above](../Getting-Started/FAQ#disconnect-pump).
 
-### Drinking alcohol
+### 음주
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+알콜이 혈당에 어떤 영향을 줄지 알고리즘이 예측할 수 없기때문에 Closed Loop에서 음주하는것은 위험합니다. AndroidAPS에서 다음 기능들을 사용하여 음주시 어떻게 대처해야하는지 본인만의 방법을 찾아야합니다.
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* Closed Loop를 비활성화하고 수동으로 당뇨를 관리하거나
+* 높은 임시 목표를 설정하고 UAM을 비활성화하여 의도치 않고 섭취한 음식으로 인해 Loop가 IOB를 높이는 것을 방지하거나
+* 100%보다 훨씬 낮게 프로파일을 변경합니다. 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+음주를 할때는, CGM을 항시 확인해서 스스로 저혈당이 예상될 경우 직접 탄수화물을 섭취하여 저혈당을 방지하여야 합니다.
 
 ### Sleeping
 
