@@ -228,9 +228,9 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 
 ## 펌프
 
-### Where to place the pump?
+### 펌프를 어디에 착용해야합니까?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
+펌프를 착용할 위치로 여러 군데의 옵션이 있습니다. Loop를 사용하는데 있어서 영향을 주지 않습니다.
 
 ### 배터리
 
