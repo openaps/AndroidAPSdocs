@@ -19,10 +19,10 @@ AndroidAPS는 현재 아래의 펌프와 호환됩니다.
 
 * 지금까지 Combo는 screen parsing으로 동작합니다. 일반적으로 잘 동작하지만 아주 느립니다. Loop를 실행하기 위해서는 백그라운드에서 작업이 수행되는 것이 훨씬 많으므로 이것은 문제가 되지 않습니다. 그렇지만 여전히 블루투스 연결이 끊기거나 했을 때 좀더 많은 시간이 필요하며, 주입시나 요리시에는 당신이 폰으로 부터 떨어져 있는 경우 쉽지 않은 일입니다.
 
-* Combo는 TBRs의 마지막에 진동이 울리고 다나R은 SMB 상태에서 진동 또는 경고음이 울립니다. 야간에는 SMB보다는 TBRs를 더 많이 사용할 것입니다. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Combo는 TBRs의 마지막에 진동이 울리고 다나R은 SMB 상태에서 진동 또는 경고음이 울립니다. 야간에는 SMB보다는 TBRs를 더 많이 사용할 것입니다. 다나RS는 경고음이나 진동 모두 울리지 않게 구성할 수 있습니다.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* RS는 오프라인 상태에서도 몇초 이내에 탄수화물을 비롯한 펌프 이력을 읽은 내용이 폰으로 스위치 가능하고 CGM 값이 들어오자 마자 loop는 진행됩니다.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* AndroidAPS와 연동되는 모든 펌프들은 주입 중 방수가 됩니다. Dana 펌프가 배터리와 주사기 주입 시스템이 모두 봉인되어 "방수 보증"이 되는 유일한 펌프입니다.
 
-The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+물론 Combo도 아주 좋은 펌프이고 loop도 가능합니다. 그것은 표준 루어 락 장치를 가지고 있는 다양한 인퓨전 세트를 가지고 있다는 장점이 있습니다. 그리고 배터리는 24시간 편의점 등에서 쉽게 살 수 있고 만약 당신이 필요한 경우 호텔 방에 있는 리모컨에서 그것을 빼서 사용할 수도 있습니다. ;-)
