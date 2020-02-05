@@ -255,13 +255,13 @@ Loop사용은 펌프 배터리를 더 빠르게 소모시킬 수 있습니다. �
 * [Dana R/RS 펌프](../Configuration/DanaRS-Insulin-Pump.md)의 경우 배터리를 처음 삽입후 시동하게 되면 배터리에 고전류를 흐르게하여 산화피막 막을 의도적으로 파괴하게 됩니다. 이는 보관시 에너지의 손실을 방지하기 위함입니다. 하지만 이 작업이 100% 항상 성공하는 것은 아닙니다. 펌프화면에 배터리가 100%가 표시될때까지 배터리를 2-3차례 제거 및 재삽입하거나, 금속을 이용하여 배터리의 양극을 닿도록하여 쇼트하는 방법을 사용할 수 있습니다.
 * 더 많은 정보는 [특정 유형의 배터리](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)에서 확인하세요
 
-### Changing reservoirs and cannulas
+### 주사기 및 캐뉼라 교체
 
-The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
+카트리지 AndroidAPS를 통해 교체 할 수 없으므로 교체는 이전과 마찬가지로 펌프에서 수행해야합니다.
 
-* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-* Now disconnect the pump and change the reservoir as per pump instructions.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+* 홈 탭에서 "Open Loop"/"Closed Loop"를 길게 누르고 '1시간동안 Loop 일시 중지'를 선택하세요
+* 이제 펌프를 떼어내고 펌프의 지시에 따라 주사기를 교체합니다.
+* 펌프를 다시 연결하면 '일시중지중 (X분)'을 길게 눌러 Loop를 재실행합니다.
 
 The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
 
