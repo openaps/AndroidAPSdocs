@@ -105,7 +105,7 @@ DIA가 너무 짧게 설정되면, AAPS가 당신이 직전에 주입한 Bolus�
 
 너무 짧은 DIA의 예는 고혈당에 이은 AAPS의 과도한 교정주입이고 이는 저혈당을 야기시키게 됩니다.
 
-## Basal rate schedule (U/h)
+## Basal 양 설정(U/h)
 
 ### 설명 & 테스트
 
@@ -119,11 +119,11 @@ Loop를 중지, 금식하고, 음식을 먹은 후 5 시간 동안 기다린 후
 
 너무 높은 Basal 양은 저혈당을 유발할 수 있습니다. 그리고 반대의 경우도 마찬가지입니다.
 
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+AAPS는기본적으로 Basal 양을 기반으로 합니다. Basal 이 너무 높으면, '제로 임시'(임시 Basal 0)이 원래보다 큰 음의 IOB로 계산됩니다. 이로 인해 AAPS는 궁극적으로 제로 IOB에 도달하는 것보다 더 많은 후속 교정을 유발하게 될것입니다.
 
-So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
+따라서 Basal 양이 너무 높으면 기본 Basal 양과 AAPS의 교정을 통해 저혈당이 발생하게 됩니다.
 
-Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+반대로 Basal 양이 너무 낮으면, 목표까지 혈당을 떨어뜨리는데 실패하게 되어 고혈당이 발생하게 됩니다.
 
 ## 인슐린 민감도(ISF) (mmol/l/U 또는 mg/dl/U)
 
@@ -188,29 +188,29 @@ IC대신 I:C라고도 하며, 탄수화물비율(CR)이라는 용어로 사용�
 
 식사가 소화가 되고 IOB가 0으로 복귀했는데 혈당이 식사전 보다 더 높게 유지가 되었다면, IC가 너무 높이 설정되었을 가능성이 있습니다. 반대로 혈당이 식사전보다 낮다면, IC가 너무 작게 설정되었을 가능성이 있습니다.
 
-# APS algorithm
+# APS 알고리즘
 
-## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+## 프로파일의 설정엔 다른 DIA가 설정이 되어있음에도 불구하고 왜 "OPENAPS-AMA" 탭에서는 "dia:3"으로 표시되나요?
 
 ![AMA 3시간](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+AMA에서, DIA가 실제 '인슐린 활동 기간'을 의미하지 않습니다. 과거에 DIA와 관련된 매개 변수였습니다. 현재는 '교정이 완료되는 시간'를 의미합니다. IOB계산과는 관계가 없습니다. OpenAPS SMB에서는, 이 매개변수가 더 이상 필요로 하지 않습니다.
 
 ## 프로파일
 
-### Why using min. 5h DIA (insulin end time) instead of 2-3h?
+### DIA (인슐린 활동 시간)을 2-3시간 대신 최소 5시간 이상을 사용하는 이유가 무엇입니까?
 
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+[여기](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)에 잘 설명이 되어 있습니다. DIA 변경 후 `프로파일 활성화하기`하는 것을 잊지마세요.
 
-### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
+### 무엇 때문에 나의 혈당이 COB 없이 자주 저혈당이 발생하게 합니까?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
+우선, 당신의 Basal 양을 확인하고 탄수화물없이 Basal양을 테스트해보세요. 만약 Basal 양이 올바르다면, 일반적으로 너무 낮은 ISF가 원인일 수 있습니다. 너무 낮은 ISF의 일반적인 예는 다음과 같습니다:
 
 ![ISF too low](../images/isf.jpg)
 
 ### What causes high postprandial peaks in closed loop?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+우선, 당신의 Basal 양을 확인하고 탄수화물없이 Basal양을 테스트해보세요. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
 # Other settings
 
