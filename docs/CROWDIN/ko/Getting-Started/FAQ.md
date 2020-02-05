@@ -216,15 +216,15 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 ## Nightscout 설정
 
-### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
+### AndroidAPS NSClient가 '허가 되지 않았다'라 표시되며 데이터를 업로드하지 않습니다. 어떻게 해야 하나요?
 
-In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+NSClient에서 '연결 설정'을 확인하세요. 아마도 허가되지 않은 와이파이망에 연결되어 있거나 혹은 '충전중일때만'을 활성화하고 충전케이블을 연결하지 않았을것입니다.
 
 ## CGM 설정
 
-### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
+### 왜 AndroidAPS에서 '혈당 소스가 고급 필터링을 지원하지 않는다'라고 표시되나요?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+xDrip native 모드에서 Dexcom G5 또는 G6 이외의 CGM/FGM을 사용하는 경우 AndroidAPS의 OpenAPS 탭에 이 경고가 표시됩니다. 자세한 사항은 [혈당 데이터 평활화](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)을 확인하세요.
 
 ## 펌프
 
@@ -265,19 +265,19 @@ The change of cartridge cannot be done via AndroidAPS but must be carried out as
 
 The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
 
-## Wallpaper
+## 배경화면
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+스마트폰용 AndroidAPS 배경화면을 [폰 페이지](../Getting-Started/Phones#phone-background)에서 확인할 수 있습니다.
 
 ## Daily usage
 
-### Hygiene
+### 위생
 
-#### What to do when taking a shower or bath?
+#### 샤워나 목욕시 어떻게 하나요?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
+샤워나 목욕시 펌프를 떼어낼 수 있습니다. 짧은 시간동안은 펌프가 일반적으로 필요없을 것입니다. 하지만 올바른 IOB 계산을 위해서 AAPS에게 이러한 상황을 알려주어야 합니다.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+[위 설명](../Getting-Started/FAQ#disconnect-pump)을 확인하세요.
 
 ### Work
 
