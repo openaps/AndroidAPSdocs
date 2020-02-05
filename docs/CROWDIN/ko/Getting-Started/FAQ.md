@@ -206,13 +206,13 @@ AMA에서, DIA가 실제 '인슐린 활동 기간'을 의미하지 않습니다.
 
 우선, 당신의 Basal 양을 확인하고 탄수화물없이 Basal양을 테스트해보세요. 만약 Basal 양이 올바르다면, 일반적으로 너무 낮은 ISF가 원인일 수 있습니다. 너무 낮은 ISF의 일반적인 예는 다음과 같습니다:
 
-![ISF too low](../images/isf.jpg)
+![ISF가 너무 낮습니다](../images/isf.jpg)
 
-### What causes high postprandial peaks in closed loop?
+### Closed Loop에서 높은 식후 피크의 원인은 무엇입니까?
 
-우선, 당신의 Basal 양을 확인하고 탄수화물없이 Basal양을 테스트해보세요. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+우선, 당신의 Basal 양을 확인하고 탄수화물없이 Basal양을 테스트해보세요. 만약 Basal 양이 올바르고 탄수화물이 충분히 섭취된 이후에야 목표를 향해 혈당이 떨어진다면, 식사전에 AndroidAPS에서 '식사 직전' 임시 목표를 설정하거나 의사와 함께 적당한 사전 Bolus 시간에 대해 상의해보시기 바랍니다. 만약 식사후 혈당이 너무 높고 탄수화물이 충분히 흡수된 이후로도 여전히 높다면, 의사와 IC를 줄이는 것을 상담하여 보세요. COB가 활성상태에서 혈당이 너무 높고 탄수화물이 모두 흡수된 후 혈당이 너무 낮다면, IC를 늘리는 것과 적당한 사전 Bolus 시간에 대하여 의사와 상담해보세요.
 
-# Other settings
+# 기타 설정
 
 ## Nightscout 설정
 
@@ -269,7 +269,7 @@ Loop사용은 펌프 배터리를 더 빠르게 소모시킬 수 있습니다. �
 
 스마트폰용 AndroidAPS 배경화면을 [폰 페이지](../Getting-Started/Phones#phone-background)에서 확인할 수 있습니다.
 
-## Daily usage
+## 일상생활
 
 ### 위생
 
@@ -279,7 +279,7 @@ Loop사용은 펌프 배터리를 더 빠르게 소모시킬 수 있습니다. �
 
 [위 설명](../Getting-Started/FAQ#disconnect-pump)을 확인하세요.
 
-### Work
+### 업무
 
 당신의 직업의 종류에 따라서, 근무일에 다른 설정을 사용할 수 있습니다. Loop 사용자는 근무일에 [프로파일 변경](../Usage/Profiles.md)사용 하는 것(예. 사무실에 앉아 있는 경우라면 8시간동안 100% 이상 혹은 활동량이 많은 직업일 경우라면 100% 미만으로 설정), 높거나 낮은 임시목표 설정하는 것, 혹은 (평소보다 훨씬 빨리 또는 늦게 깨어 난 경우) 프로파일 시간 이동하는 것을 고려해보아야 합니다. [Nightscout 프로파일](../Configuration/Config-Builder#ns-profile)을 사용한다면, 다른 프로파일을 생성(예 '집' 혹은 '근무날')하고 실제 필요한 프로파일로 변경할 수 있습니다.
 
@@ -321,7 +321,7 @@ Loop시 아래 단계를 시도해보아야 합니다:
 
 ### 수면
 
-#### How can I loop during the night without mobile and WIFI radiation?
+#### 전화통화 및 WIFI 사용 없이 야간에 Loop를 어떻게 작동할 수 있습니까?
 
 많은 사용자들이 야간에 폰을 비행기모드로 전환합니다. 수면중에 Loop 실행을 원한다면, 다음과 같이 진행하세요 (이 방법은 오직 xDrip+ 혹은 패치된 덱스콤 앱과 같은 로컬 혈당 소스만 사용가능하며, Nightscout로 부터 혈당을 받아오는 것은 불가능합니다):
 
