@@ -230,7 +230,7 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 
 ### 펌프를 어디에 착용해야합니까?
 
-펌프를 착용할 위치로 여러 군데의 옵션이 있습니다. Loop를 사용하는데 있어서 영향을 주지 않습니다.
+펌프를 착용할 위치로 여러 군데의 옵션이 있습니다. 펌프 착용 위치가 Loop를 사용하는데 있어서 영향을 주진 않습니다.
 
 ### 배터리
 
