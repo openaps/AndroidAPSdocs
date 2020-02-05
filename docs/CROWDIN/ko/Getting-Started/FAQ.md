@@ -56,7 +56,7 @@ Bolus를 주입하거나 설정을 변경하기 위해 안드로이드 워치앱
 * 붉은색의 '연결 끊어짐(xx분)' 버튼을 길게 누릅니다.
 * '펌프 재연결'을 선택하세요
     
-    ![Reconnect pump](../images/PumpReconnect.png)
+    ![펌프 재연결](../images/PumpReconnect.png)
 
 ### 단 하나의 CGM 혈당값을 기반으로 판단하는 것이 아닙니다.
 
@@ -192,7 +192,7 @@ IC대신 I:C라고도 하며, 탄수화물비율(CR)이라는 용어로 사용�
 
 ## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 
-![AMA 3h](../images/Screenshot_AMA3h.png)
+![AMA 3시간](../images/Screenshot_AMA3h.png)
 
 In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
 
@@ -281,7 +281,7 @@ The change of a canula however does not use the "prime infusion set" function of
 
 ### Work
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+당신의 직업의 종류에 따라서, 근무일에 다른 설정을 사용할 수 있습니다. Loop 사용자는 근무일에 [프로파일 변경](../Usage/Profiles.md)사용 하는 것(예. 사무실에 앉아 있는 경우라면 8시간동안 100% 이상 혹은 활동량이 많은 직업일 경우라면 100% 미만으로 설정), 높거나 낮은 임시목표 설정하는 것, 혹은 (평소보다 훨씬 빨리 또는 늦게 깨어 난 경우) 프로파일 시간 이동하는 것을 고려해보아야 합니다. [Nightscout 프로파일](../Configuration/Config-Builder#ns-profile)을 사용한다면, 다른 프로파일을 생성(예 '집' 혹은 '근무날')하고 실제 필요한 프로파일로 변경할 수 있습니다.
 
 ## 여가 활동
 
