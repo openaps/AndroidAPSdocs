@@ -252,8 +252,8 @@ Loop사용은 펌프 배터리를 더 빠르게 소모시킬 수 있습니다. �
 
 * 알코올로 배터리 전극을 청소하여 왁스및 그리스 잔여 물이 남아 있지 않도록 합니다.
 
-* for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+* [Dana R/RS 펌프](../Configuration/DanaRS-Insulin-Pump.md)의 경우 배터리를 처음 삽입후 시동하게 되면 배터리에 고전류를 흐르게하여 산화피막 막을 의도적으로 파괴하게 됩니다. 이는 보관시 에너지의 손실을 방지하기 위함입니다. 하지만 이 작업이 100% 항상 성공하는 것은 아닙니다. 펌프화면에 배터리가 100%가 표시될때까지 배터리를 2-3차례 제거 및 재삽입하거나, 금속을 이용하여 배터리의 양극을 닿도록하여 쇼트하는 방법을 사용할 수 있습니다.
+* 더 많은 정보는 [특정 유형의 배터리](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)에서 확인하세요
 
 ### Changing reservoirs and cannulas
 
