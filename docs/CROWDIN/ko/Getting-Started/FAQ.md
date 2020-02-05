@@ -263,7 +263,7 @@ Loop사용은 펌프 배터리를 더 빠르게 소모시킬 수 있습니다. �
 * 이제 펌프를 떼어내고 펌프의 지시에 따라 주사기를 교체합니다.
 * 펌프를 다시 연결하면 '일시중지중 (X분)'을 길게 눌러 Loop를 재실행합니다.
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+캐뉼라 교체는 펌프의 "프라임 주입 세트" 기능을 사용하지 않지만, Bolus를 이용하여 주입세트 그리고/또는 캐뉼라를 채우는 것은 Bolus 이력에 나타나지 않습니다. 이는 임시 Basal 양을 중단하지 않음을 의미합니다. 실행(Act)탭에서, 교체/채움 버튼을 사용하여 필요한 인슐린양을 설정하여 주입세트를 채우고 교체를 시작하세요. 주입세트와 교체를 시작 양이 충분치 않으면, 다시 채움을 하세요. 기본 인슐린 양 버튼은 설정 > 기타 > 채움/교체에서 설정할 수 있습니다. 바늘 길이와 튜브 길이에 따라 얼마나 많은 유닛이 채워져야하는지 캐뉼라 상자안의 설명서를 확인하세요.
 
 ## 배경화면
 
