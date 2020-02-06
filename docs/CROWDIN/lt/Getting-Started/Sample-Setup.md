@@ -51,65 +51,65 @@ Diegdami Android Studio būkite kantrūs, nes programa į savo kompiuterį atsis
 ### Patikrinkite išmaniojo telefono programinę įrangą
 
 * Meniu > Nustatymai> Telefono informacija > Programinė įranga: bent jau Android Versija 7.0 (sėkmingai išbandytas iki Android versijos 8.0.0 Oreo - Samsung Patirties Versija 9.0) 
-* For firmware update: menu > Preferences > software update
+* Norėdami atnaujinti programinę įrangą: Meniu > Nustatymai > Programos atnaujinimas
 
-### Allow installation from unknown sources
+### Leisti diegti iš nežinomų šaltinių
 
-Menu > Settings > Device security > Unknown sources > slider to right side (= active)
+Meniu > Nustatymai> Įrenginio sauga > Nežinomi šaltiniai> slankiklis dešinėje (= aktyvus)
 
-For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
+Saugumo sumetimais šis nustatymas turėtų būti grąžintas į neaktyvų režimą, kai bus įdiegtos visos čia aprašytos programos.
 
 ### Įjunkite Bluetooth
 
-1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
-2. Menu > Settings > Connections > Location > slider to right side (= active)
+1. Meniu > Nustatymai > Ryšiai > Bluetooth > slankiklis dešinėje (= aktyvus)
+2. Meniu > Nustatymai > Ryšiai > Vieta > slankiklis dešinėje (= aktyvus)
 
-Location services ("GPS") must be activated in order for Bluetooth to work properly.
+Vietovės paslaugos („GPS“) turi būti suaktyvintos, kad Bluetooth tinkamai veiktų.
 
-### Install Dexcom App (modified version)
+### Įdiegti Dexcom App (modifikuota versija)
 
 ![Dexcom App patched](../images/SampleSetupDexApp.png)
 
-The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility). A mmol/l version and a mg/dl version of the modified Dexcom app are available at https://github.com/dexcomapp/dexcomapp?files=1.
+Originali Dexcom programa iš Google Play Store neveiks, nes ji neperduoda duomenų į kitas programas. Todėl reikalinga šiek tiek pakeista mūsų bendruomenės versija. Tik ši modifikuota Dexcom programa gali bendrauti su AAPS. Be to, modifikuota Dexcom programa gali veikti su visais Android išmaniaisiais telefonais, o ne tik su tais, kurie yra [ Dexcom suderinamumo sąraše](https://www.dexcom.com/dexcom-international-compatibility). Modifikuotos Dexcom programos mmol/l ir mg/dl versijas galite rasti adresu https://github.com/dexcomapp/dexcomapp?files=1.
 
-To do this perform the following steps on your smartphone:
+Norėdami tai padaryti, atlikite šiuos veiksmus savo išmaniajame telefone:
 
-1. If the original Dexcom app is already installed: 
-    * Stop sensor
-    * Uninstall app via Menu > Settings > Apps > Dexcom G5 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l according to your needs): <https://github.com/dexcomapp/dexcomapp?files=1>
-3. Install modified Dexcom app on your smartphone (= select the downloaded APK file)
-4. Start modified Dexcom app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-5. Once the first two calibrations have been entered successfully and the modified Dexcom app shows actual glucose value setup the warnings (hamburger menu on top left side of the screen) as follows: 
-    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
+1. Jei originali Dexcom programėlė yra įdiegta: 
+    * Sustabdykite sensorių
+    * Ištrinkite programas per Meniu > Nustatymai> Programos> Dexcom G5 Mobile > Išinstaliuoti
+2. Atsisiųskite modifikuotą Dexcom programą (prireikus patikrinkite matavimo vienetus mg/dl arba mmol/l): <https://github.com/dexcomapp/dexcomapp?files=1>
+3. Įdiekite modifikuotą Dexcom programą į savo išmanųjį telefoną (= pasirinkite atsisiųstą APK failą)
+4. Paleiskite modifikuotą Dexcom programą, suaktyvinkite / sukalibruokite sensorių pagal instrukcijas ir palaukite, kol baigsis apšilimo laikotarpis.
+5. Sėkmingai įvedę pirmuosius du kalibravimus ir modifikuotoje Dexcom programoje rodomos dabartinės glikemijos vertės, sukonfigūruokite perspėjimus (trijų linijų meniu kairėje ekrano pusėje) taip: 
+    * Urgent low `55 mg/dl ` / `3,1 mmol/l ` (negali būti išjungtas)
     * Low `OFF`
     * High `OFF`
     * Rise rate `OFF`
     * Fall rate `OFF`
     * Signal loss `OFF`
 
-## Install AndroidAPS
+## Įdiegti AndroidAPS
 
-1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Transfer](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) the generated APK to your phone
-3. [Configure AndroidAPS](../Configuration/Config-Builder.md) according to your needs using the setup assistant or manually
-4. In this sample setup we used (among others)
+1. Laikykitės instrukcijų, kad [sukurti APK failą](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
+2. [Perkelkite](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) sukurtą programą APK į savo telefoną
+3. [Konfigūruokite AndroidAPS](../Configuration/Config-Builder.md) pagal savo poreikius, naudodamiesi sąrankos vedliu arba rankiniu būdu
+4. Šiame pavyzdyje mes naudojome (be kita ko)
 
-* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* KG šaltinis: `Dexcom G5 App (modifikuota)` -- spustelėkite krumpliaračio piktogramą ir įjunkite `Įkelti KG duomenų NS` ir `Siųsti KG duomenis xDrip+` (žr. [KG šaltinis](../Configuration/BG-Source.rst))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS Client suaktyvintas (žr. [NS Client](../Configuration/Config-Builder#ns-profile) ir [Nightscout nustatymai](../Installing-AndroidAPS/Nightscout.md))
 
-## Install xDrip+
+## Įdiegti xDrip+
 
-xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G5, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+ yra puiki atvirojo kodo programa, siūlanti daugybę galimybių. Šiuose nustatymuose, priešingai nei pirmą kartą parašė xDrip+ kūrėjai, jis nėra naudojamas norint gauti glikemijos duomenis iš Dexcom G5, o tik rodyti įspėjimus ir rodyti dabartinę glikemijos vertę, įskaitant valdiklio kreivę Android pagrindiniame ekrane. Naudodamiesi xDrip+, perspėjimai gali būti konfigūruojami daug individualiau nei naudojant Dexcom programinę įrangą, AAPS ar Nightscout (be apribojimų garsų, dienos/nakties signalų pasirinkimui ir t.t.).
 
-1. Download the latest stable APK version of xDrip+ with your smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - not the version from the Google Play Store!
-2. Install xDrip+ by selecting the downloaded APK file.
-3. Start xDrip+ and make the following settings (hamburger menu at top left) 
-    * Settings > Alarms and Alerts > Glucose Level Alert List > Create Alerts (high and low) according to your needs. 
-    * The existing alarms can be changed with a long press on the alarm.
+1. Atsisiųskite naujausią stabilią APK xDrip+ versiją naudodamiesi savo išmaniuoju telefonu iš čia:[https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - tik ne versiją iš Google Play Store!
+2. Įdiekite xDrip+ pasirinkdami atsisiųstą APK failą.
+3. Paleiskite xDrip+ ir atlikite šiuos nustatymus (trijų linijų meniu viršuje kairėje) 
+    * Nustatymai> Aliarmai ir perspėjimai> Įspėjimų apie KG lygį sąrašas> Sukurkite įspėjimus (aukštus ir žemus) pagal jūsų poreikius. 
+    * Esamus įspėjimus galima pakeisti ilgai spustelėjus signalo piktogramą.
     * Settings > Alarms and Alerts > Calibration Alerts: disabled (reminded via the modified Dexcom app)
     * Settings > Hardware Data Source > 640G/EverSense
     * Settings > Inter-app settings > Accept Calibrations > `ON`
