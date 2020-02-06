@@ -1,56 +1,56 @@
-# Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
+# Pavyzdinė sąranka: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
 
 ![Sample Setup](../images/SampleSetup.png)
 
-## Description
+## Aprašymas
 
-In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G5 CGM. AndroidAPS is used to control the Dana R insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
+Šiame derinyje Samsung Galaxy S7 išmanusis telefonas naudojamas kaip ciklo valdymo centras. Šiek tiek pakeista Dexcom programa nuskaito glikemijos reikšmes iš Dexcom G5 sensoriaus. AndroidAPS Bluetooth ryšiu valdo korėjiečių gamintojo SOOIL Dana R pompą. Nereikia jokių papildomų įrenginių.
 
-As the Dexcom App only offers limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
+Kadangi Dexcom programa siūlo ribotas įspėjimo parinktis, atvirojo kodo xDrip + programa yra sukonfigūruota ne tik aukštos ir žemos glikemijos aliarmams, bet ir kitiems perspėjimams, atsižvelgiant į individualius poreikius.
 
-Optionally an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values on your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+Pasirinktinai galite naudoti Android išmanųjį laikrodį (šiame pavyzdyje naudojamas Sony Smartwatch 3 (SWR50)), norėdami matyti savo glikemijos duomenis ir AndroidAPS parametrus. Laikrodis netgi gali būti naudojamas valdyti AndroidAPS (pvz., diskretiškai nustatyti bolusą maistui).
 
-The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
+Sistema veikia neprisijungus. Tai reiškia, kad norint naudotis sistema nereikia prijungti savo išmaniojo telefono prie interneto.
 
-Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" when a data connection is established. By doing so you can provide comprehensive reports for the doctor's visit or share the current values with family members at any time. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
+Tačiau, kai yra interneto ryšys, duomenys automatiškai įkeliami į Nightscout „debesį“. Ši parinktis leidžia beveik bet kuriuo metu pateikti išsamų glikemijos ataskaitą gydytojui ar šeimos nariams. Taip pat galite siųsti duomenis į Nightscout tik naudodami (jei nustatėte) Wi-Fi ryšį, kad galėtumėte kurti įvairias Nightscout ataskaitas.
 
-## Required components
+## Būtini komponentai
 
 1. Samsung Galaxy S7
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS
+    * Alternatyvos: žr. [patikrintų telefonų ir išmaniųjų laikrodžių sąrašą](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)
 
-2. [DanaR](http://www.sooil.com/eng/product/) or Dana RS insulin pump
+2. [DanaR](http://www.sooil.com/eng/product/) ar Dana RS insulino pompa
     
-    * Alternatives: 
+    * Alternatyvos: 
     * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * Kiti pompos gali būti suderinamos ateityje, dėl išsamesnės informacijos žr. [ateityje galimos pompos ](Future-possible-Pump-Drivers.md).
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
+    * Alternatyvos: žr. galimų [glikemijos šaltinių](../Configuration/BG-Source.rst) sąrašą
 
-4. Optional: Sony Smartwatch 3 (SWR50)
+4. Pasirinktinai: Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * Alternatyvos: žr. AndroidAPS tinkamų ir [patikrintų telefonų ir išmaniųjų laikrodžių sąrašą](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) (OS turi būti Wear OS)
 
-## Nightscout setup
+## Nightscout nustatymas
 
-See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
+Žr. detaliau [Nightscout nustatymas](../Installing-AndroidAPS/Nightscout.md)
 
-## Computer setup
+## Kompiuterio nustatymas
 
-To be able to create an Android app from the freely available AAPS open source code you need Android Studio on your computer or notebook (Windows, Mac, Linux). A detailed instruction can be found at [building the APK](../Installing-AndroidAPS/Building-APK.md).
+Norėdami sukurti Android programą iš nemokamo AAPS kodo, savo kompiuteryje ar nešiojamajame kompiuteryje (Windows, Mac, Linux) turite įdiegti Android Studio. Išsamią instrukciją galima rasti čia [Android programos (APK) kūrimas](../Installing-AndroidAPS/Building-APK.md).
 
-Please be patient when installing Android Studio as the software downloads a lot of additional data once installed on your computer.
+Diegdami Android Studio būkite kantrūs, nes programa į savo kompiuterį atsisiunčia daug papildomų komponentų.
 
-## Smartphone setup
+## Išmanaus telefono nustatymas
 
 ![Smartphone](../images/SampleSetupSmartphone.png)
 
-### Check smartphone firmware
+### Patikrinkite išmaniojo telefono programinę įrangą
 
-* Menu > Settings > Phone info > Software info: At least "Android-Version 7.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
+* Meniu > Nustatymai> Telefono informacija > Programinė įranga: bent jau Android Versija 7.0 (sėkmingai išbandytas iki Android versijos 8.0.0 Oreo - Samsung Patirties Versija 9.0) 
 * For firmware update: menu > Preferences > software update
 
 ### Allow installation from unknown sources
@@ -133,7 +133,7 @@ On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery >
 
 ## Optional: Setup Sony Smartwatch 3 (SWR50)
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. Laikrodis netgi gali būti naudojamas valdyti AndroidAPS (pvz., diskretiškai nustatyti bolusą maistui). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
 ![Smartwatch](../images/SampleSetupSmartwatch.png)
 
