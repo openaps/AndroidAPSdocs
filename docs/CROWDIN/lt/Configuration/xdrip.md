@@ -308,11 +308,11 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H use one of 
 Atminkite, kad šis metodas gali neveikti, jei jūsų siųstuvo serijos Nr. is starting with 8G or 8H.
 
 * Natyvinis sensorius pažymimas kaip: „KLAIDA: Sensoriaus nepavyko startuoti“
-* Stop sensor
+* Sustabdykite sensorių
 * Paleiskite telefoną iš naujo
 * Startuokite sensorių su kodu 0000 (keturi nuliai)
 * Palaukite 15 min
-* Stop sensor
+* Sustabdykite sensorių
 * Startuokite sensorių su tikru kodu (atspausdintu ant apsauginės plėvelės)
 
 Patikrinkite xDrip+ žurnalus, ar xDrip+ pradeda skaičiuoti „Trukmė: 1 minutė“ (ir pan.). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Pradinio ekrano apačioje vėliausia būsena ne visada rodoma teisingai.
