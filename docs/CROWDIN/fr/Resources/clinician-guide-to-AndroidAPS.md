@@ -47,7 +47,7 @@ AndroidAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que Op
 
 #### Voici des exemples de lignes de prédiction pourpres et de la façon dont elles peuvent varier :
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Exemples de ligne de prédiction violette](../images/Prediction_lines.jpg)
 
 #### Voici des exemples de différents délais qui influencent les ajustements nécessaires à l'administration d'insuline :
 
@@ -55,25 +55,25 @@ AndroidAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que Op
 
 Dans cet exemple, la Glycémie est en hausse à court terme ; cependant, il est prévu qu'elle sera faible sur une période plus longue. En effet, il est prévu de passer en dessous de la cible *et* sous le seuil de sécurité. Pour la sécurité et prévenir l'hypoglycémie, AndroidAPS émettra une "Zéro-temp" (débit de base temporaire à 0%), jusqu'à ce que la glycémie estimée (dans toute la période projetée) soit au dessus du seuil de sécurité.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![Dosage scénario 1](../images/Dosing_scenario_1.jpg)
 
 #### Scénario 2 - Zéro temp pour la sécurité
 
 Dans cet exemple, on prévoit que la glycémie sera faible à court terme, mais on prévoit qu'elle sera plus tard au-dessus de la cible. Cependant, comme le point bas à court terme est en dessous du seuil de sécurité, AndroidAPS émettra une zéro-temp, jusqu'à ce qu'il n'y ait plus aucun point de la ligne de prédiction qui soit inférieur au seuil.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Dosage scénario 2](../images/Dosing_scenario_2.jpg)
 
 #### Scénario 3 - Plus d'insuline nécessaire
 
 Dans cet exemple, une prévision à court terme montre une baisse en dessous de la cible. Toutefois, il n'est pas prévu qu'elle soit inférieure au seuil de sécurité. La glycémie finale est au-dessus de la cible. Par conséquent, AndroidAPS va s'abstenir de tout ajout à l'insuline qui contribuerait à court terme à une hypoglycémie (l'ajout d'insuline ferait passer la prédiction en-dessous du seuil de sécurité). Il évaluera plus tard s'il a besoin d'ajouter de l'insuline pour ramener le niveau de la glycémie prévisionnelle plus proche de la cible, une fois qu'il est sûr de pouvoir le faire sans risque. *(En fonction des paramètres, de la quantité et du moment où l'insuline est requise, cette insuline peut être administrée via des basales temporaires ou des SMB (super micro bolus)).*
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Dosage scénario 3](../images/Dosing_scenario_3.jpg)
 
 #### Scénario 4 - Temporaire basse pour la sécurité
 
 Dans cet exemple, AndroidAPS voit que la glycémie est bien au-dessus de la cible. Cependant, en raison de la durée d'action de l'insuline, il y a déjà assez d'insuline dans le corps pour amener la glycémie vers la cible. En fait, on prévoit même que la glycémie sera en dessous de la cible. Par conséquent, AndroidAPS ne fournira pas d'insuline supplémentaire, de sorte qu'elle ne contribuera pas à rallonger une période de glycémie basse. Bien que la glycémie soit élevée/en hausse, un faible débit de basal temporaire sera probable dans ce cas.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Dosage scénario 4](../images/Dosing_scenario_4.jpg)
 
 ### Optimiser les paramètres et faire des modifications
 
@@ -83,19 +83,19 @@ La chose la plus importante pour les patients est de faire un seul changement à
 
 L'un des outils les plus puissants pour faire des changements de paramètres est un outil de calcul automatisé pour les débits de basale, SI et ratio G/I. Cela s'appelle « [Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) ». Il est conçu pour être exécuté indépendamment / manuellement et permet de vous guider, vous ou votre patient, dans la modification progressive des paramètres. Il est recommandé dans la communauté d'exécuter (ou de revoir) les rapports Autotune avant de tenter de faire des ajustements manuels des paramètres. Avec AndroidAPS, Autotune sera exécuté comme un "outil indépendant", bien qu'il y ait des efforts continus pour l'incorporer directement dans AndroidAPS également. Comme ces paramètres sont un pré-requis à la fois pour l'administration d'insuline par pompe standard et pour l'administration d'insuline en boucle fermée, la discussion des résultats de l'autotune et de l'ajustement de ces paramètres serait le lien naturel avec le professionnel de santé.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AndroidAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+En outre, le comportement humain (tiré des enseignements d'une gestion manuelle du diabète) influence souvent les résultats, même avec une boucle fermée DIY. Par exemple, si une hypoglycémie est prévue et que AndroidAPS réduit l'insuline pendant la baisse, seule une petite quantité de glucides (par exemple 3 à 4 g) peut être suffisante pour ramener la glycémie au dessus de 70 mg/dl (3,9 mmol). Toutefois, dans de nombreux cas, quelqu'un peut choisir de traiter avec beaucoup plus de glucides (par ex. en appliquant la règle des 15g), qui provoqueront un pic de la glycémie lié à la fois aux glucides pris en excédent et parce que l'insuline a été réduite dans la période ou la glycémie était en train de descendre.
 
 ### OpenAPS
 
-**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AndroidAPS, with the main difference being the hardware platform where each peace of software is run.
+**Ce guide a été adapté de [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS est un système développé pour fonctionner sur un tout petit ordinateur portable (généralement appelé le « Rig »). AndroidAPS utilise beaucoup des techniques mises en œuvre dans OpenAPS, et partage une grande partie de la logique et des algorithmes, c'est pourquoi ce guide est très similaire au guide original. Une grande partie des informations concernant OpenAPS peuvent être transposées à AndroidAPS, la principale différence étant la plate-forme matérielle sur laquelle est exécuté le logiciel.
 
 ### Résumé
 
-This is meant to be a high-level overview of how AndroidAPS works. For more details, ask your patient, reach out to the community, or read the full AndroidAPS documentation available online.
+Il s'agit d'un aperçu macroscopique de la façon dont AndroidAPS fonctionne. Pour plus de détails, demandez à votre patient, à la communauté, ou lisez la documentation complète de AndroidAPS disponible en ligne.
 
-Additional recommended reading:
+Autres lectures recommandées :
 
-* The [full AndroidAPS documentation](http://androidaps.readthedocs.io/en/latest/EN/index.html)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](http://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* La documentation [complète AndroidAPS](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* Le document [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), qui explique comment OpenAPS est conçu pour la sécurité : https://openaps.org/reference-design/
+* La [documentation complète OpenAPS](http://openaps.readthedocs.io/en/latest/index.html) 
+  * Plus de [détails sur les calculs d'OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
