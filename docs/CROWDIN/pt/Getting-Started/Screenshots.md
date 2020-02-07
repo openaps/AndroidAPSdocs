@@ -64,7 +64,7 @@ This section is also configurable using the options in section D.
    * **GREY** bars show a deviation due to carbs. 
    * **GREEN** bars show that BG is higher than the algorithm expected it to be. 
    * **RED** bars show that BG is lower than the algorithm expected.
-* **Sensitivity** (white line): It shows the sensitivity that Autosense has detected. Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 * **Activity** (yellow line): It shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). The value is higher for insulin closer to peak time. It would mean to be negative when IOB is decreasing. 
 
 ### Section G
@@ -179,9 +179,9 @@ AndroidAPS can run using a number of different profile configurations. Typically
 
 These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
 
-## Construtor de Configuração
+## Configurador
 
-![Construtor de Configuração](../images/Screenshot_config_builder.png)
+![Configurador](../images/Screenshot_config_builder.png)
 
 This is where you will set up the configuration of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
 
