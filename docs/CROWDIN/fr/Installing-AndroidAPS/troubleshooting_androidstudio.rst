@@ -118,31 +118,31 @@ Application non installée.
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * Si vous avez le message "Application non installée" affiché sur votre téléphone, suivez les étapes suivantes :
   
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
+1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`_ (dans la version AAPS déjà installée sur votre téléphone)
 2. Désinstaller AAPS sur votre téléphone.
-3. Enable airplane mode & turn off bluetooth.
+3. Activez le mode Avion & éteignez le bluetooth.
 4. Installer la nouvelle version (« app-full-release.apk »)
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+5. `Importer les paramètres <../Usage/ExportImportSettings.html>`_
 6. Activer le bluetooth et désactiver le mode avion
 
-App installed but old version
+Application installée mais ancienne version
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+Si vous avez compilé l'application, que vous l'avez transferrée dans votre téléphone et installée avec succès mais que le numéro de version est resté le même, vous avez peut-être opis de `meetre à jour votre copie locale <../Update-to-new-version.html#mettez-a-jour-votre-copie-locale>`.
 
-None of the above worked
+Rien ci-dessus n'a marché
 ==================================================
-If non of the above tips helped you might consider building the app from scratch:
+Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repartir de zéro pour reconstruire l'application :
 
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
-4.	When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`_ (dans la version AAPS déjà installée sur votre téléphone)
+2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main
+    Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit `ici <https://youtu.be/nS3wxnLgZOo>`_. Ou vous pouvez recréer un nouveau fichier de clés. 
+3. Construisez l'application à partir de zéro comme c'est décrit `ici <../Installing-AndroidAPS/Building-APK.html#telecharger-le-code-et-les-composants-supplementaires>`_.
+4.	Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
+5. `Importer les paramètres <../Usage/ExportImportSettings.html>`_
 
-Worst case scenario
+Pire scénario
 ==================================================
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+Dans le cas où même construire l'application à partir de rien ne résout pas votre problème, vous pouvez essayer de désinstaller complètement Android Studio. Certains utilisateurs ont signalé que cela a résolu leur problème.
 
 **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
