@@ -64,7 +64,7 @@ De weergave kun je aanpassen met de opties uit sectie D.
    * **GRIJZE** balken zijn een afwijking door koolhydraten. 
    * **GROEN** is wanneer de BG hoger is dan het algoritme verwacht. 
    * **ROOD** is wanneer de BG lager is dan het algoritme verwacht.
-* ** Gevoeligheid ** (witte lijn): Toont de insuline gevoeligheid die Autosense heeft gedetecteerd. Berekent veranderingen aan jouw insuline gevoeligheid veroorzaakt door sporten, hormonen, etc.
+* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. Berekent veranderingen aan jouw insuline gevoeligheid veroorzaakt door sporten, hormonen, etc.
 * ** Insuline activiteit ** (gele lijn): Toont de insuine activiteit, berekend aan de hand van het door jou gekozen insuline-profiel (het wordt niet afgeleid van IOB). De waarde is hoger wanneer het werkingsprofiel van jouw insuline dichter bij zijn piektijd zit. Wanneer de IOB afneemt dan wordt de waarde negatief. 
 
 ### Sectie G
