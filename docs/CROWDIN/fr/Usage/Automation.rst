@@ -77,23 +77,23 @@ Après avoir ajouté votre action, **n'oubliez pas de modifier les valeurs par d
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automatisation defaut vs. choisir valeur
 
-Good practice & caveats
+Bonnes pratiques et avertissements
 ==================================================
 * Lorsque vous commencez à utiliser l'automatisation ou que vous créez une nouvelle règle, ajoutez une notification jusqu'à ce que vous soyez certain que la règle fonctionne correctement.
 * Observez les résultats de la règle.
-* Try not make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+* Essayez de ne pas rendre les conditions trop faciles (par ex.: SI Glycémie > 80 mg/dl ET Glycémie < 180 mg/dl)
 
-    **Doubly important if action is a profile switch!**
+    **C'est doublement important si l'action est un changement de profil!**
  
-* Try and use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
-* Make sure Profile switches are made sparingly and preferably at a last resort.
+* Essayez et privilégiez l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Les Cibles temporaires ne réinitialisent pas `Autosens <../Usage/Open-APS-features.html#autosens>`_ à 0.
+* Assurez-vous que les cchangements de profil sont faits avec parcimonie et de préférence en dernier recours.
 
-    * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
+    * Les changements de profil rendent `Autosens <../Usage/Open-APS-features.html#autosens>`_ inutilisable pendant au minimum 6 heures.
 
-* Profile switching will not reset the profile back to your base profile
+* Un changement de profil ne remettra pas le profil standard initial
 
-    * You have to make another rule to set this back or do it manually!
-    * Increased risk of Hypoglycemia if profile switch does not expire or reset back to base profile.
+    * Vous devez faire une autre règle pour remettre le profil initial ou le faire manuellement !
+    * Il y a un risque d'hypoglycémie plus élevé si le changement de profil n'expire pas ou si le profil standard n'est pas remis en place.
 
 Exemples
 ==================================================
