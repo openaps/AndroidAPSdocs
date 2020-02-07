@@ -77,7 +77,7 @@ Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automation Standard-Werte vs.  eigene Werte
 
-Empfehlungen & Vorbehalte
+Empfehlungen und Vorbehalte
 ==================================================
 * Wenn Du Automation zum ersten Mal nutzt oder eine neue Regel erstellst, solltest Du zusätzlich eine Benachrichtigung erstellen bis Du sicher bist, dass die Regel so funktioniert, wie beabsichtigt.
 * Beobachte die Resultate Deiner Regel.
