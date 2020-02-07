@@ -119,7 +119,7 @@ Usar **Configurações avançadas** para ativar o BT watchdog se necessário. Es
 
 Selecione o tipo de deteção de sensibilidade. Os dados históricos serão analisados frequentemente e serão feitos ajustes se reconhecer se está mais sensível (ou inversamente, mais resistente) à insulina do que o habitual. Detalhes sobre o algoritmo de Oref0 de sensibilidade podem ser lido em [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Pode ver a sua sensibilidade no ecrã inicial selecionando SEN e observando a linha branca. Atenção, precisa estar no [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) para poder usar a Detecção de Sensibilidade/Autosens.
+Pode ver a sua sensibilidade no ecrã inicial selecionando SEN e observando a linha branca. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to use Sensitivity Detection/[Autosens](../Usage/Open-APS-features.html#autosens).
 
 ### Configurações de absorção
 
