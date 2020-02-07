@@ -73,50 +73,50 @@ Il y a beaucoup de liens sur Internet pour déterminer si vous avez un système 
 
 Aucune donnée MGC
 ==================================================
-* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
-* In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Si vous utilisez xDrip+ : identifiez le récepteur comme c'est indiqué dans la page `Paramètres xDrip+ <../Configuration/xdrip.html#identifier-le-recepteur>`_.
+* Si vous utilisez `l'application Dexcom G6 patchée <../Hardware/DexcomG6.html#si-vous-utilisez-le-G6-avec-l-application-dexcom-patchee>`_ : Assurez vous que vous utilisez bien la version provenant du `dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 
-Uncommitted changes
+Modifications non validées
 ==================================================
-If you receive failure message like
+Si vous recevez un message d'erreur comme ceci
 
 .. image:: ../images/GIT_TerminalCheckOut0.PNG
   :alt: Failure uncommitted changes
 
-Option 1 - Check git installation
+Option 1 - Vérifier l'installation de git
 --------------------------------------------------
-* git might be not installed correctly (must be globally available)
-* when on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
-* `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
-* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
+* git peut ne pas être installé correctement (doit être globalement disponible)
+* quand vous êtes sur Windows et que git vient juste d'être installés, vous devez redémarrer votre ordinateur ou au moins vous déconnecter et vous reconnecter une fois, pour rendre git disponible après l'installation
+* `Vérifiez l'installation de git <../Installing-AndroidAPS/git-install.html#verifier-les-parametres-de-git-dans-android-studio>`_
+* S'il n'y a aucune version de git indiquée mais que git est installé sur l'ordinateur, assurez vous que Android Studio sais où `git est installé <../Installing-AndroidAPS/git-install.html#definir-le-chemin-d-acces-git-dans-android-studio>`_ sur votre ordinateur.
 
-Option 2 - Reload source code
+Option 2 - Recharger le code source
 --------------------------------------------------
-* In Android Studio select VCS -> GIT -> Reset HEAD
+* Dans Android Studio selectionnez VCS -> GIT -> Reset HEAD
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
    
-Option 3 - Check for updates
+Option 3 - Vérifier les mises à jour
 --------------------------------------------------
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in Android Studio (lower left side of Android Studio window)
+* Copiez ‘git checkout --’ dans le presse-papiers (sans les guillemets)
+* Basculez dans le Terminal dans Android Studio (en bas à gauche dans la fenêtre Android Studio)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
   :alt: Android Studio Terminal
    
-* Paste copied text and press return
+* Collez le texte copié et appuyer sur entrer
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
     :alt: GIT checkout success
 
-App not installed
+Application non installée.
 ==================================================
 .. image:: ../images/Update_AppNotInstalled.png
   :alt: phone app note installed
 
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Si vous avez le message "Application non installée" affiché sur votre téléphone, suivez les étapes suivantes :
   
 1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
 2. Désinstaller AAPS sur votre téléphone.
