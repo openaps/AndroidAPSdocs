@@ -289,7 +289,7 @@ Yes, vous l'avez et pouvez maintenant commencer à configurer AndroidAPS pour vo
 
 ## Identifier le récepteur si vous utilisez xDrip+
 
-[Voir la page xDrip+](../Configuration/xdrip#identify-receiver)
+[Voir la page xDrip+](../Configuration/xdrip#identifier-le-recepteur)
 
 ## Dépannage
 
