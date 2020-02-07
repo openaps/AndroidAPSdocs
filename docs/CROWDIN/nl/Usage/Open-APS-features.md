@@ -1,5 +1,15 @@
 # OpenAPS functies
 
+## Autosens
+
+* Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
+* It will try and figure out how sensitive/resistant you are based on these deviations.
+* The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
+* AndroidAPS only runs off 8 (to enable UAM) or 24 hour as a user option.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Autosens adjusts your basal and ISF for you (i.e.: mimicking what a Profile shift does).
+* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
+
 ## Super Micro Bolus (SMB)
 
 SMB, de afkorting van 'super micro bolus', is de nieuwste OpenAPS functie (uit 2018) van het Oref1-algoritme. In tegenstelling tot AMA (geavanceerde maaltijdhulp), gebruikt SMB geen tijdelijke basaalstanden, maar vooral **kleine super microbolussen**. In gevallen waar AMA 1,0 Eenheid extra insuline zou geven door middel van een tijdelijke basaalstand, geeft SMB verschillende super microbolussen in kleine stapjes met **5 minuten ertussen**, bijvoorbeeld 0,4 E; 0,3 E; 0,2 E en 0,1 E. Tegelijkertijd wordt (uit veiligheidsredenen) de basaalstand op dat moment naar 0 E/uur gezet om een overdosis te voorkomen, dit heet **'zero-temp'**. Op deze manier kan het systeem je bloedsuikers sneller laten zakken dan met de tijdelijk hogere basaalstand die AMA gebruikt.
@@ -34,10 +44,10 @@ Maar je kunt niet iedere waarde kiezen. AAPS beperkt de waarde tot een 'harde li
 
 AndroidAPS beperkt de waarde als volgt:
 
-* Kind: 2
+* Child: 2
 * Tiener: 5
-* Volwassene: 10
-* Insuline-resistente volwassene: 12
+* Adult: 10
+* Insulin-resistant adult: 12
 
 ### Max totaal IOB dat OpenAPS niet kan overschrijden (OpenAPS "max-iob")
 
@@ -50,10 +60,10 @@ Wanneer je SMB gebruikt, wordt max-IOB anders berekend dan wannneer je AMA gebru
 
 Wees voorzichtig en geduldig en verander de instellingen stap voor stap. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is hoger dan in AMA.
 
-* Kind: 3
-* Tiener: 7
-* Volwassene: 12
-* Insuline-resistente volwassene: 25
+* Child: 3
+* Teenage: 7
+* Adult: 12
+* Insulin resistant adult: 25
 
 Zie ook [OpenAPS documentatie over SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
@@ -127,7 +137,7 @@ Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet w
 
 * * *
 
-## Geavanceerde maaltijdhulp (AMA)
+## Advanced Meal Assist (AMA)
 
 AMA (Advanced Meal Assist), oftewel "geavanceerde maaltijdhulp" is een OpenAPS functie uit 2017 (oref0). Dankzij AMA kan het systeem na een maaltijdbolus sneller een hogere tijdelijke basaalstand geven, zolang je wel je koolhydraten correct hebt ingevoerd.
 
@@ -143,9 +153,9 @@ Je kunt niet elke waarde kiezen: om veiligheidsredenen is er een 'harde limiet',
 
 AndroidAPS gebruikt de volgende 'harde limieten':
 
-* Kind: 2
+* Child: 2
 * Tiener: 5
-* Volwassene: 10
+* Adult: 10
 * Insuline-resistente volwassene: 12
 
 ### Max basaal IOB dat OpenAPS kan toedienen \[E\] (OpenAPS "max-iob")
@@ -154,9 +164,9 @@ Deze instelling beperkt het maximum van basaal IOB waar AndroidAPS nog steeds we
 
 De standaardinstelling is 2, je moet deze waarde in kleine stapjes ophogen om te zien wat de invloed is en welke waarde het beste bij jou past. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij AMA dan bij SMB.
 
-* Kind: 3
+* Child: 3
 * Tiener: 5
-* Volwassene: 7
+* Adult: 7
 * Insuline-resistente volwassene: 12
 
 ### Activeer AMA autosens
@@ -185,7 +195,7 @@ Standaardwaarde: 2
 
 * * *
 
-## Maaltijd Assistent (MA)
+## Meal Assist (MA)
 
 ### Maximale E/uur dat een tijdelijke basaalstand kan toedienen (OpenAPS "max-basal")
 
@@ -195,9 +205,9 @@ Je kunt niet elke waarde kiezen: om veiligheidsredenen is er een 'harde limiet',
 
 AndroidAPS gebruikt de volgende 'harde limieten':
 
-* Kind: 2
+* Child: 2
 * Tiener: 5
-* Volwassene: 10
+* Adult: 10
 * Insuline-resistente volwassene: 12
 
 ### Max basaal IOB dat OpenAPS kan toedienen \[E\] (OpenAPS "max-iob")
@@ -206,9 +216,9 @@ Deze instelling beperkt het maximum van basaal IOB waar AndroidAPS nog steeds we
 
 De standaardinstelling is 2, je moet deze waarde in kleine stapjes ophogen om te zien wat de invloed is en welke waarde het beste bij jou past. Dat is voor iedereen anders en hangt ook af van jouw gemiddelde totale dagdosis (TDD). Om veiligheidsredenen is er ook hier een grens, die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij MA dan bij SMB.
 
-* Kind: 3
+* Child: 3
 * Tiener: 5
-* Volwassene: 7
+* Adult: 7
 * Insuline-resistente volwassene: 12
 
 ### Geavanceerde instellingen
