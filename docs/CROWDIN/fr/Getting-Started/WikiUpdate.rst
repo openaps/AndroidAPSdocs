@@ -1,9 +1,9 @@
 Wiki mises à jour et modifications
 **************************************************
 
-February 2020
+Février 2020
 ==================================================
-* `Automation caveats <../Usage/Automation.html#good-practice--caveats>`_
+* `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
 Janvier 2020
 ==================================================
