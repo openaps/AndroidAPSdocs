@@ -85,10 +85,10 @@ Good practice & caveats
 
     **Doubly important if action is a profile switch!**
  
-* Try and use Temp Targets instead of Profile Switches. Temp Targets do not reset Autosens back to 0.
+* Try and use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
 * Make sure Profile switches are made sparingly and preferably at a last resort.
 
-    * Profile switching renders Autosens useless for a min of 6 hours.
+    * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
 
 * Profile switching will not reset the profile back to your base profile
 
