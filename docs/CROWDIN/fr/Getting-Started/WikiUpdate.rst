@@ -1,5 +1,10 @@
 Wiki mises à jour et modifications
 **************************************************
+
+February 2020
+==================================================
+* `Automation caveats <../Usage/Automation.html#good-practice--caveats>`_
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
 Janvier 2020
 ==================================================
 * `Correction manuelle des glucides <../Getting-Started/Screenshots.html#correction-de-glucides>`_ pour des entrées erronées de glucides
