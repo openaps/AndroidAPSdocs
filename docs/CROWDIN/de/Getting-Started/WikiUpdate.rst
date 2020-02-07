@@ -1,5 +1,10 @@
 Docs Updates & Änderungen
 **************************************************
+
+February 2020
+==================================================
+* `Automation caveats <../Usage/Automation.html#good-practice--caveats>`_
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
 Januar 2020
 ==================================================
 * `Kohlenhydrate manuell korrigieren <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_, falls diese falsch eingegeben wurden
