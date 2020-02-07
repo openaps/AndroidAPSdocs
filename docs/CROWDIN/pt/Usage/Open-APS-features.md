@@ -1,5 +1,15 @@
 # OpenAPS features
 
+## Autosens
+
+* Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
+* It will try and figure out how sensitive/resistant you are based on these deviations.
+* The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
+* AndroidAPS only runs off 8 (to enable UAM) or 24 hour as a user option.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Autosens adjusts your basal and ISF for you (i.e.: mimicking what a Profile shift does).
+* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
+
 ## Super Micro Bolus (SMB)
 
 SMB, the shortform of 'super micro bolus', is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super microboluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
@@ -34,10 +44,10 @@ But you cannot choose any value. AAPS limits the value as a 'hard limit' accordi
 
 AndroidAPS limits the value as follows:
 
-* Criança: 2
+* Child: 2
 * Adolescente: 5
-* Adulto: 10
-* Adulto insulino-resistente: 12
+* Adult: 10
+* Insulin-resistant adult: 12
 
 ### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
 
@@ -50,10 +60,10 @@ Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In
 
 Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in AMA.
 
-* Criança: 3
-* Adolescente: 7
-* Adulto: 12
-* Adulto insulino-resistente: 25
+* Child: 3
+* Teenage: 7
+* Adult: 12
+* Insulin resistant adult: 25
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
@@ -143,9 +153,9 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Criança: 2
+* Child: 2
 * Adolescente: 5
-* Adulto: 10
+* Adult: 10
 * Adulto insulino-resistente: 12
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
@@ -154,9 +164,9 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
-* Criança: 3
+* Child: 3
 * Adolescente: 5
-* Adulto: 7
+* Adult: 7
 * Adulto insulino-resistente: 12
 
 ### Enable AMA Autosense
@@ -195,9 +205,9 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Criança: 2
+* Child: 2
 * Adolescente: 5
-* Adulto: 10
+* Adult: 10
 * Adulto insulino-resistente: 12
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
@@ -206,9 +216,9 @@ This parameter limits the maximum of basal IOB where AndroidAPS still works. If 
 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in MA than in SMB.
 
-* Criança: 3
+* Child: 3
 * Adolescente: 5
-* Adulto: 7
+* Adult: 7
 * Adulto insulino-resistente: 12
 
 ### Configurações Avançadas
