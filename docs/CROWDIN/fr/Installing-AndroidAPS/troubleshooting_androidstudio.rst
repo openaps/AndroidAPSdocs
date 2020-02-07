@@ -1,77 +1,77 @@
-Troubleshooting Android Studio
+Dépannage d'Android Studio
 **************************************************
-Lost keystore
+Certificats perdus
 ==================================================
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+Si vous utilisez le même fichier de clés lors de la mise à jour d'AndroidAPS, vous n'avez pas besoin de désinstaller la version précédente sur votre smartphone. C'est pourquoi il est recommandé de stocker le fichier de clés dans un dossier de sauvegarde sûr.
 
-In case you cannot find your old keystore anymore, proceed as follows:
+Si vous ne trouvez plus votre ancien fichier de clés, procédez comme suit :
 
-1. `Export settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ on your phone.
-2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
-3. Make sure settings file "AndroidAPS Preferences" is stored safely.
-4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. `Import settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - if you can't find them on your phone copy them from the external storage.
-8. Keep on looping.
+1. `Exporter les paramètres <../Usage/ExportImportSettings.html#comment-exporter-les-parametres>`_ sur votre téléphone.
+2. Copiez les paramètres de votre téléphone vers un emplacement externe (par ex. dans votre ordinateur, un service de stockage cloud...).
+3. Assurez-vous que le fichier de paramètres "AndroidAPS Preferences" est stocké en toute sécurité.
+4. Générez un apk signé de la nouvelle version comme c'est décrit dans la page `Mise à jour vers une nouvelle version <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+5. Désinstaller la précédente version de AAPS sur votre téléphone.
+6. Installez la nouvelle version de AAPS sur votre téléphone.
+7. `Importez les les paramètres <../Usage/ExportImportSettings.html#comment-exporter-les-parametres>`_ - si vous ne trouvez pas le fichier sur votre téléphone, copiez le depuis votre stockage externe.
+8. Pousuivez la boucle.
 
-Kotlin compiler warning
+Avertissement du compilateur Kotlin
 ==================================================
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings. 
+Si la compilation a abouti mais que vous obtenez les avertissements de la part du compilateur Kotlin, ignorez ces avertissements. 
 
-App was build successfully and can be transferred to phone.
+L'application a été correctement compilée et peut être transférée au téléphone.
 
 .. image:: ../images/GIT_WarningIgnore.PNG
-  :alt: ignore Kotline compiler warning
+  :alt: ignorer les avertissement du compilateur Kotline
 
-Key was created with errors
+La clé a été créée avec des erreurs
 ==================================================
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+Lors de la création d'un fichier de clés pour pouvoir générer un APK signé, sous Windows, le message d'erreur suivant peut apparaître
 
 .. image:: ../images/AndroidStudio35SigningKeys.png
-  :alt: Key was created with errors
+  :alt: Clé créée avec des erreurs
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+Cela semble être un bug avec Android Studio 3.5.1 et son environnement Java livré sous Windows. La clé est créée correctement mais une recommandation est affichée à tort comme une erreur. Cela peut actuellement être ignoré.
 
-Could not download… / Offline Work
+Impossible de télécharger… / Travail hors-ligne
 ==================================================
-If you get a failure message like this
+Si vous recevez un message d'erreur comme ceci
 
 .. image:: ../images/GIT_Offline1.jpg
-  :alt: Warning could not download
+  :alt: Avertissement impossible de télécharger
 
-make sure that ‘Offline work’ is disabled.
+assuez vous que ‘Offline work’ est désactivé.
 
 File -> Settings
 
 .. image:: ../images/GIT_Offline2.jpg
   :alt: Settings offline work
 
-Error: buildOutput.apkData must not be null
+Erreur : buildOutput.apkData must not be null
 ==================================================
-Sometimes you might get an error message when building the apk saying
+Parfois, vous pouvez obtenir un message d'erreur lors de la compilation de l'apk disant
 
   `Errors while building APK.`
    
   `Cause: buildOutput.apkData must not be null`
 
-This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+Il s'agit d'un bug connu dans Android Studio 3.5 et qui ne sera probablement pas corrigé avant Android Studio 3.6. Trois options :
 
-1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
-2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
-3. Change apk destination folder (different location).
+1. Supprimez manuellement les trois dossiers de compilation ("build" normal, sous-dossier build dans "app" et sous-dossier build dans "wear") et générez à nouveau un fichier apk signé.
+2. Définissez le dossier de destination dans le dossier du projet à la pace du dossier app comme c'est décrit dans `cette vidéo <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
+3. Modifiez le dossier de destination apk (dans un emplacement différent).
 
-Unable to start daemon process
+Impossible de démarrer le processus daemon
 ==================================================
-If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
+Si vous voyez un message d'erreur ci-dessous, vous utilisez probablement un système Windows 10 32 bits. Ce n'est pas pris en charge par Android Studio 3.5.1 et supérieur. Si vous utilisez Windows 10, vous devez utiliser un système d'exploitation 64 bits.
 
-There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+Il y a beaucoup de liens sur Internet pour déterminer si vous avez un système d'exploitation 32 bits ou 64 bits, par ex. `celui-ci <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
 
 .. image:: ../images/AndroidStudioWin10_32bitError.png
   :alt: Screenshot Unable to start daemon process
   
 
-No CGM data
+Aucune donnée MGC
 ==================================================
 * In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
 * In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
