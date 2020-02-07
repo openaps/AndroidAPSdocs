@@ -77,10 +77,23 @@ Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automation Standard-Werte vs.  eigene Werte
 
-Empfehlung
+Good practice & caveats
 ==================================================
 * Wenn Du Automation zum ersten Mal nutzt oder eine neue Regel erstellst, solltest Du zusätzlich eine Benachrichtigung erstellen bis Du sicher bist, dass die Regel so funktioniert, wie beabsichtigt.
 * Beobachte die Resultate Deiner Regel.
+* Try not make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+
+    **Doubly important if action is a profile switch!**
+ 
+* Try and use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
+* Make sure Profile switches are made sparingly and preferably at a last resort.
+
+    * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
+
+* Profile switching will not reset the profile back to your base profile
+
+    * You have to make another rule to set this back or do it manually!
+    * Increased risk of Hypoglycemia if profile switch does not expire or reset back to base profile.
 
 Beispiele
 ==================================================
