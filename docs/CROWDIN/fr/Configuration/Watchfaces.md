@@ -1,6 +1,6 @@
 # AAPS sur montres Wear OS
 
-Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wear OS**. La version montre de AAPS vous permet de :
+Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wear OS**. La version montre de AAPS vous permet de:
 
 * **afficher les données sur votre montre** : en fournissant des [cadrans personnalisés](#aaps-watchfaces) ou dans des cadrans standards avec l'utilisation de [complications](#complications)
 * **contrôler AAPS du téléphone** : pour faire un bolus, définir une cible temporaire, etc. 
