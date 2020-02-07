@@ -26,7 +26,7 @@ Si vous avez commencé à utiliser le pilote Medtronic, merci de vous ajouter à
 
 ## Configuration de la pompe
 
-- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). Vous devez avoir au moins un ID dans cette liste d'identifiants distants. Ces options peuvent varier selon les différents modèles de pompe. Cette étape est importante, car une fois définie, la pompe écoutera plus souvent la communication à distance.
+- **Activer le mode distant sur la Pompe** (Utilitaires-> Remote Options, Sélectionnez Oui, et à l'écran suivant faites Ajouter ID et mettez un id factice (111111 par example). Vous devez avoir au moins un ID dans cette liste d'identifiants distants. Ces options peuvent varier selon les différents modèles de pompe. Cette étape est importante, car une fois définie, la pompe écoutera plus souvent la communication à distance.
 - **Définir Basale Max** sur votre Pompe à votre "niveau de basale max entré dans votre profil STD" * 4 (si vous voulez avoir 400% DBT comme max). Ce nombre doit être inférieur à 35 (comme vous pouvez le voir dans la pompe).
 - **Définir Bolus Max** sur votre pompe (25 max)
 - **Définir profil sur STD**. Ce sera le seul profil que nous allons utiliser. Vous pouvez également désactiver.
