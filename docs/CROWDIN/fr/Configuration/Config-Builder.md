@@ -119,7 +119,7 @@ Pour les pompes Dana, utilisez **Paramètres avancés** pour activer le "Watchdo
 
 Sélectionnez le type de calcul pour la sensibilité. Cela analysera les données historiques au fur et à mesure et fera des ajustements si elle détecte que vous réagissez de façon plus sensible (ou plus résistante) à l'insuline que d'habitude. Les détails sur l'algorithme de la Sensitibilité Oref0 peuvent être lus dans la [documentation OpenAPS](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
 
-Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Remarque : vous devez être à l'[Objectif 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) pour utiliser la détection de sensibilité / Autosens.
+Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Remarque, vous devez être à l'[Objectif 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) pour utiliser la détection de sensibilité / [Autosens](../Usage/Open-APS-features.html#autosens).
 
 ### Paramètres d’absorption
 
@@ -202,7 +202,7 @@ Quelques boutons pour accéder rapidement aux fonctions communes:
 * Changement de profils (voir la page [Changement de profil](../Usage/Profiles.md) pour plus d'informations sur la configuration)
 * Cibles temporaires
 * Définir/Annuler des débits de basal temporaires
-* Extended bolus (DanaR/RS or Combo pump only)
+* Bolus étendu (pompe DanaR/RS ou Combo uniquement)
 * Amorcer/Remplir (si c'est supporté par la pompe [DanaR/RS, Combo et Insight])
 * Historique
 * DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)

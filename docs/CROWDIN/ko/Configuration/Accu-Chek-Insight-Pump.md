@@ -115,7 +115,7 @@ The Insight pump has a small internal battery to keep essential functions like t
 
 ## Insight specific errors
 
-### Extended bolus
+### 확장 Bolus
 
 Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 

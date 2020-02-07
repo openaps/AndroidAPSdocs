@@ -1,5 +1,10 @@
 Wiki mises à jour et modifications
 **************************************************
+
+Février 2020
+==================================================
+* `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
 Janvier 2020
 ==================================================
 * `Correction manuelle des glucides <../Getting-Started/Screenshots.html#correction-de-glucides>`_ pour des entrées erronées de glucides

@@ -3,7 +3,7 @@ Automatisierung
 
 Was ist Automatisierung
 ==================================================
-Für gleichbleibende, mehrfach auftretende Ereignisse, kann es sein, dass man immer dieselben Einstellungen ändern muss. Um zusätzliche Arbeit zu vermeiden, kann man versuchen das ganze zu automatisieren (sofern man es genau genug spezifizieren kann). Zum Beispiel kann man ein automatisiertes Hypo-Temp-Target erstellen, das bei einem niedrigen Blutzucker automatisch aktiviert wird. Oder wenn man sich in seinem Sportstudio befindet, könnte automatisch ein temporäres Ziel aktiviert werden. Bevor Du Automatisierung nutzt, solltest Du Dich mit `Temporären Zielen <./temptarget.html>`_ und/oder `Profil Wechsel <./Profiles.html>`_ auseinander gesetzt haben. 
+Für gleichbleibende, mehrfach auftretende Ereignisse, kann es sein, dass man immer dieselben Einstellungen ändern muss. Um zusätzliche Arbeit zu vermeiden, kann man versuchen das Ganze zu automatisieren (sofern man es genau genug spezifizieren kann). Zum Beispiel kann man ein automatisiertes Hypo-Temp-Target erstellen, das bei einem niedrigen Blutzucker automatisch aktiviert wird. Oder wenn man sich in seinem Sportstudio befindet, könnte automatisch ein temporäres Ziel aktiviert werden. Bevor Du Automatisierung nutzt, solltest Du Dich mit `Temporären Zielen <./temptarget.html>`_ und/oder `Profil Wechsel <./Profiles.html>`_ auseinander gesetzt haben. 
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Automation Bedingung und Aktion
@@ -39,7 +39,7 @@ Bedingung
 --------------------------------------------------
 Man kann zwischen verschiedenen Bedingungen wählen. Hier sind nur ein paar erwähnt, aber die meisten sind selbsterklärend und werden daher hier nicht beschrieben:
 
-Verbundene Bedingunge: Du kannst mehrere Bedingungen verwenden und diese wie folgt verbinden: 
+Verbundene Bedingungen: Du kannst mehrere Bedingungen verwenden und diese wie folgt verbinden: 
 
    * "Und"
    * "Oder"
@@ -77,14 +77,27 @@ Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte
 .. image:: ../images/Automation_Default_V2_5.png
   :alt: Automation Standard-Werte vs.  eigene Werte
 
-Empfehlung
+Empfehlungen und Vorbehalte
 ==================================================
 * Wenn Du Automation zum ersten Mal nutzt oder eine neue Regel erstellst, solltest Du zusätzlich eine Benachrichtigung erstellen bis Du sicher bist, dass die Regel so funktioniert, wie beabsichtigt.
 * Beobachte die Resultate Deiner Regel.
+* Verwende keine zu einfachen Bedingungen (z.B. WENN BZ > 80 mg/dl UND BZ < 180 mg/dl).
+
+    **Doppelt wichtig, wenn die Aktion ein Profilwechsel ist!**
+ 
+* Verwende temporäre Ziele statt Profilwechseln. Temporäre Ziele setzen `Autosens <../Usage/Open-APS-features.html#autosens>`_ nicht auf 0 zurück.
+* Setze Profilwechsel sparsam und nur als letzte Möglichkeit ein.
+
+    * Durch einen Profilwechsel wird `Autosens <../Usage/Open-APS-features.html#autosens>`_ für mind. 6 Stunden unbrauchbar.
+
+* Profilwechsel setzen Dein Profil nicht automatisch auf das Standardprofil zurück.
+
+    * Dafür musst Du eine weitere Regel erstellen, um zum Standardprofil zurück zu wechseln, oder es manuell tun!
+    * Erhöhtes Hypo-Risiko, wenn der Profilwechsel zeitlich unbegrenzt läuft und nicht auf das Standardprofil zurückgesetzt wird.
 
 Beispiele
 ==================================================
-Dies sind nur Beispiele, keine Ratschäge. Du sollte diese nicht einfach kopieren ohne sicher zu sein, was Du wirklich tust und ohne zu wissen, warum man diese braucht. Weiter unten findest Du zwei Beispiele mit Bildschirmfotos.
+Dies sind nur Beispiele, keine Ratschläge. Du sollte diese nicht einfach kopieren ohne sicher zu sein, was Du wirklich tust und ohne zu wissen, warum man diese braucht. Weiter unten findest Du zwei Beispiele mit Bildschirmfotos.
 
 * Profilwechsel für Deine täglichen Aktivitäten (z. B. Schule, Sport, Wochenende vs. Arbeitstag) mit Standort, WLAN SSID, Zeit etc.
 * Temporäre Ziele für Aktivitäten auf Basis von Zeit, Standort,...

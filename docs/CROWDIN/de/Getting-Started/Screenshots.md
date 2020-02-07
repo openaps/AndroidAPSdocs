@@ -64,7 +64,7 @@ Dieser Abschnitt kann mit den Optionen in Abschnitt D konfiguriert werden.
    * **GRAUE** Balken zeigen eine Abweichung aufgrund von Kohlenhydraten. 
    * **GRÜNE** Balken zeigen, dass der BZ höher ist als der Algorithmus es erwartet. 
    * **ROTE** Balken zeigen, dass der BZ niedriger ist als der Algorithmus erwartet.
-* **Sensitivität** (weiße Linie): Von Autosense ermittelte Sensitivität. Die Sensitivität ist die Berechnung der Insulinempfindlichkeit, die auf Grund von Bewegung, Hormonen etc. schwankt.
+* **Sensitivität** (weiße Linie): Von [Autosens](../Usage/Open-APS-features#autosens) ermittelte Sensitivität. Die Sensitivität ist die Berechnung der Insulinempfindlichkeit, die auf Grund von Bewegung, Hormonen etc. schwankt. Die Sensitivität ist die Berechnung der Insulinempfindlichkeit, die auf Grund von Bewegung, Hormonen etc. schwankt.
 * **Aktivität** (gelbe Linie): Sie zeigt die Insulinaktivität. Berechnet wird sie auf Basis Deiner Einstellungen zum Insulinprofil, sie ist keine Ableitung des IOB. Der Wert ist umso höher, je näher Du Dich am Zeitpunkt des Insulin-Wirkmaximums befindest. Das bedeutet, er wird negativ, wenn das IOB abnimmt. 
 
 ### Abschnitt G

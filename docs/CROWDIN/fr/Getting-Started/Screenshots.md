@@ -64,7 +64,7 @@ Cette section est aussi configurable en utilisant les options de la section D.
    * barres **GRISES** montrent un écart dû aux glucides. 
    * barres **VERTES** montrent que la Gly est supérieure à l'attendu de l'algorithme 
    * barres **ROUGES** montrent que la Gly est inférieur à l'attendu de l'algorithme.
-* **Sensibilité** (ligne blanche) : Elle montre la sensibilité détectée par Autosense. C'est le résultat d'un calcul de la sensibilité à l'insuline suite à de l'exercice, aux hormones, etc.
+* **Sensibilité** (ligne blanche) : Cela montre la sensibilité que [Autosens](../Usage/Open-APS-features#autosens) a détectée. C'est le résultat d'un calcul de la sensibilité à l'insuline suite à de l'exercice, aux hormones, etc.
 * **Activité** (ligne jaune) : indique l'activité de l'insuline, calculée par votre profil d'insuline (elle n'est pas dérivée de l'IA). La valeur est plus élevée quand l'insuline délivrée est proche de son pic d'activité. Elle n'est pas dérivée de l'IA, car si c'était le cas elle serait négative quand l'IA diminue. 
 
 ### Section G

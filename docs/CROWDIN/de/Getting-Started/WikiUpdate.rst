@@ -1,5 +1,10 @@
 Docs Updates & Änderungen
 **************************************************
+
+Februar 2020
+==================================================
+* `Automation Vorbehalte <../Usage/Automation.html#empfehlungen-und-vorbehalte>`_
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ - kurze Erklärung
 Januar 2020
 ==================================================
 * `Kohlenhydrate manuell korrigieren <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_, falls diese falsch eingegeben wurden

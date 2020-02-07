@@ -1,6 +1,6 @@
 # Automatizace pomocí Automate – aplikace třetí strany pro Android
 
-**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.rst) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**Tato část vznikla v době před uvedením AndroidAPS verze 2.5. Ta již obsahuje modul [Automatizace v AndroidAPS](./Automation.rst). Pro některé uživatele může být tato kapitola přesto užitečná, měli by ji však používat pouze pokročilí uživatelé.**
 
 Vzhledem k tomu, že AndroidAPS je systém hybridní uzavřené smyčky, uživatel stále musí s aplikací do určité míry interagovat (např. říci smyčce, že se prochází, že se blíží jídlo nebo že leží na gauči...). Časté ruční zásahy uživatele lze automatizovat pomocí externích nástrojů, jako je Automate nebo IFTTT, které mohou rozšířit stávající funkce AndroidAPS.
 

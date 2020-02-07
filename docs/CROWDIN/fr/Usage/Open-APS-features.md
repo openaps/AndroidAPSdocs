@@ -1,4 +1,14 @@
-# OpenAPS features
+# Fonctions OpenAPS
+
+## Autosens
+
+* Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
+* It will try and figure out how sensitive/resistant you are based on these deviations.
+* The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
+* AndroidAPS only runs off 8 (to enable UAM) or 24 hour as a user option.
+* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
+* Autosens adjusts your basal and ISF for you (i.e.: mimicking what a Profile shift does).
+* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
 
 ## Super Micro Bolus (SMB)
 
@@ -26,7 +36,7 @@ See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/e
 
 This safety setting determines the maximum temporary basal rate the insulin pump may deliver. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.
 
-Example:
+Exemple :
 
 Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
 
@@ -57,7 +67,7 @@ Be careful and patient and only change the settings step by step. It is differen
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
-### Enable AMA Autosense
+### Activer AMA Autosense
 
 Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
 
@@ -103,7 +113,7 @@ Default value: 30 min.
 
 With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful, if you forget to tell AndroidAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
 
-**Therefore, UAM should always be activated when using SMB.**
+**Par conséquent, les RNS doivent toujours être activés lors de l'utilisation de SMB.**
 
 ### High temp-target raises sensitivity
 
@@ -127,9 +137,9 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 * * *
 
-## Advanced Meal Assist (AMA)
+## Assistance Améliorée Repas (AAR)
 
-AMA, the shortform of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AAR, la version abrégée de "Assistance Améliorée Repas" est une fonctionnalité OpenAPS de 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
 **You will need to have completed [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref0-features-for-daytime-use-such-as-advanced-meal-assist-ama) to use this feature**
 
@@ -159,7 +169,7 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Adult: 7
 * Insulin resistant adult: 12
 
-### Enable AMA Autosense
+### Activer AMA Autosense
 
 Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
 
