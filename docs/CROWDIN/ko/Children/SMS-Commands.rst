@@ -54,13 +54,13 @@ Loop
 * LOOP RESUME
    * 응답: Loop가 재실행되었습니다
 
-CGM data
+CGM 데이터
 --------------------------------------------------
 * BG
-   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
-* CAL 5.6
-   * Response: To send calibration 5.6 reply with code Rrt
-   * Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+   * 응답: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+* CAL 120
+   * 응답: 보정값 120을 전송하려면 Rrt 를 입력하고 답장하세요
+   * 코드 전송 후 응답: 보정 전송됨 (**xDrip이 설치되었다면 xDrip+에서 Accept Calibrations가 활성화 되어 있어야만 합니다**)
 
 Basal
 --------------------------------------------------
