@@ -29,7 +29,7 @@
 
 ## 식사 직전 임시 목표
 
-곧 식사를 할 예정이라면, 이 임시 목표를 활성화하여 식사 전에 IOB를 늘릴 수 있습니다. 특히 식사 전 bolus를 주입하지 않는 사용자에게 이미 혈당이 낮을 경우 좋은 대안이 될 수 있습니다. "식사 직전 모드"와 관련한 많은 정보를 ['“식사 직전” 모드 활용 방법'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) 또는 [이곳](https://diyps.org/tag/eating-soon-mode/)에서 확인할 수 있습니다.
+곧 식사를 할 예정이라면, 이 임시 목표를 활성화하여 식사 전에 IOB를 늘릴 수 있습니다. Especially for those who don’t do prebolusing, it might be a good alternative to already get the blood glucose to a lower target. "식사 직전 모드"와 관련한 많은 정보를 ['“식사 직전” 모드 활용 방법'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) 또는 [이곳](https://diyps.org/tag/eating-soon-mode/)에서 확인할 수 있습니다.
 
 상급 설정, [목표 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): OpenAPS SMB와 "낮은 임시 목표 설정이 민감도를 낮춤"을 사용하는 경우, AndroidAPS는 좀 더 공격적으로 작동합니다. 이 옵션은 임시 목표가 100mg/dl 또는 5.5mmol/l 미만일 때 사용 가능합니다.
 
