@@ -104,28 +104,28 @@ Bolus
 * PROFILE 1
    * 응답: 프로파일 Profile1 100%로 변경하려면 Any 를 입력하고 답장하세요
 * PROFILE 2 30
-   * Response: To switch profile to Profile2 30% reply with code Any
+   * 응답: 프로파일 Profile2 30%로 변경하려면 Any 를 입력하고 답장하세요
 
-Other
+기타
 --------------------------------------------------
 * TREATMENTS REFRESH
-   * Response: Refresh treatments from NS
+   * 응답: NS에서 관리 새로고침
 * NSCLIENT RESTART
-   * Response: NSCLIENT RESTART 1 receivers
+   * 응답: NSCLIENT RESTART 1 receivers
 * PUMP
-   * Response: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+   * 응답: Last conn: 1 minago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 * SMS DISABLE/STOP
-   * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+   * 응답: SMS 원격 기능을 비활성화려면 Any를 입력하고 답장하세요. AAPS 마스터폰을 통해서만 다시 활성화할 수 있습니다.
 * TARGET MEAL/ACTIVITY/HYPO   
-   * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code Any
+   * 응답: 임시목표 MEAL/ACTIVITY/HYPO를 설정하려면 Any를 입력하고 답장하세요
 * TARGET STOP/CANCEL   
-   * Response: To cancel Temp Target reply with code Any
+   * 응답: 임시목표를 취소하려면 Any를 입력하고 답장하세요
 * HELP
-   * Response: BG, LOOP, TREATMENTS, .....
+   * 응답: BG, LOOP, TREATMENTS, .....
 * HELP BOLUS
-   * Response: BOLUS 1.2 BOLUS 1.2 MEAL
+   * 응답: BOLUS 1.2 BOLUS 1.2 MEAL
 
-Troubleshooting
+문제해결
 ==================================================
 Multiple SMS
 --------------------------------------------------
