@@ -1,6 +1,6 @@
 # 혈당 데이터 평활화
 
-If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. '항상 SMB를 사용합니다'나 '탄수화물 이후 SMB를 사용합니다'와 같은 기능은 잘 필터링된 혈당데이터로만 사용할 수 있습니다.
+만약 혈당 데이타가 불안하거나 잡음이 심한경우, AAPS가 인슐린을 잘못 주입해 고혈당과 저혈당을 초래할 수 있습니다. 이러한 이유로 문제가 해결될 때 까지 Loop를 사용하지 않는 것이 중요합니다. CGM에 따라 이러한 문제는 CGM의 구성이나 센서 문제 혹은 사이트 문제로 인한 것일 수 있습니다. '항상 SMB를 사용합니다'나 '탄수화물 이후 SMB를 사용합니다'와 같은 기능은 잘 필터링된 혈당데이터로만 사용할 수 있습니다.
 
 ## DexcomG5 앱(패치버전)
 
@@ -8,7 +8,7 @@ DexcomG5 앱(패치버전)을 사용할 경우, 혈당데이터는 부드럽고 
 
 ## xDrip+와 덱스콤 G5 사용시
 
-Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
+XDrip G5 'OB1 collector in native mode' 사용하는 경우 충분히 평활화된 데이터가 전송됩니다.
 
 ## xDrip+와 프리스타일 리브레 사용시
 
@@ -16,4 +16,4 @@ xDrip+를 프리스타일 리브레의 데이터 소스로 사용한다면 혈�
 
 **Smooth Sensor Noise.** xDrip+에서 세팅 > xDrip+ 디스플레이 세팅에 가서 'Smooth Sensor Noise'를 활성화 하세요. 이것은 노이즈가 있는 데이터를 평활하게 해줍니다.
 
-**Smooth Sensor Noise (Ultrasensitive).** xDrip+에서 여전히 노이즈가 있는 데이터가 보여진다면, Smooth Sensor Noise (Ultrasensitive) setting에서 보다 적극적으로 평활하게 할 수 있습니다. 이것은 매우 낮은 노이즈 레벨을 감지하더라도 평활화 시킵니다. To do this, first [enable engineering mode in xDrip+](https://github.com/MilosKozak/AndroidAPS/wiki/Enabling-Engineering-Mode-in-xDrip). 이 후, 세팅 > xDrip+ 디스플레이 세팅에서 Smooth Sensor Noise (Ultrasensitive) 를 활성화 시키세요.
+**Smooth Sensor Noise (Ultrasensitive).** xDrip+에서 여전히 노이즈가 있는 데이터가 보여진다면, Smooth Sensor Noise (Ultrasensitive) setting에서 보다 적극적으로 평활하게 할 수 있습니다. 이것은 매우 낮은 노이즈 레벨을 감지하더라도 평활화 시킵니다. 이렇게 하려면 먼저[xdrip에서 엔지니어링 모드로 설정해야 합니다.](https://github.com/MilosKozak/AndroidAPS/wiki/Enabling-Engineering-Mode-in-xDrip). 이 후, 세팅 > xDrip+ 디스플레이 세팅에서 Smooth Sensor Noise (Ultrasensitive) 를 활성화 시키세요.
