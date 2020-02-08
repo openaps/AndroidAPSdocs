@@ -41,18 +41,18 @@ Commands must be send in English, response will be in your local language if the
 Loop
 --------------------------------------------------
 * LOOP STOP/DISABLE
-   * Response: Loop has been disabled
+   * 응답: Loop가 중지되었습니다
 * LOOP START/ENABLE
-   * Response: Loop has been enabled
+   * 응답: Loop가 실행되었습니다
 * LOOP STATUS
-   * Response depends on actual status
-      * Loop is disabled
-      * Loop is enabled
-      * Suspended (10 min)
+   * 현재의 Loop의 상태에 따라 응답됩니다
+      * Loop가 중지중입니다
+      * Loop가 실행중입니다
+      * 일시중지중 (10분)
 * LOOP SUSPEND 20
-   * Response: Loop suspended for 20 minutes
+   * 응답: Loop가 20분동안 일시중지되었습니다
 * LOOP RESUME
-   * Response: Loop resumed
+   * 응답: Loop가 재실행되었습니다
 
 CGM data
 --------------------------------------------------
