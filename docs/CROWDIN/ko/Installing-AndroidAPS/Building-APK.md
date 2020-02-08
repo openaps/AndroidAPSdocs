@@ -291,6 +291,6 @@ Yeah, you got it and can now start with configuring AndroidAPS for your use (CGM
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
-## Troubleshooting
+## 문제해결
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
