@@ -80,12 +80,12 @@ Bolus
 Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
 
 * BOLUS 1.2
-   * Response A: To deliver bolus 1.2U reply with code Rrt
-   * Response B: Remote bolus not available. Try again later.
+   * 응답 A: Bolus 1.2U을 주입하려면 Rrt를 입력하고 답장하세요
+   * 응답 B: 원격 주입이 불가능합니다. 나중에 다시 시도해주세요.
 * BOLUS 0.60 MEAL
-   * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
-   * Response A: To deliver meal bolus 0.60U reply with code Rrt
-   * Response B: Remote bolus not available. 
+   * MEAL 옵션을 지정하는 경우 MEAL 임시목표가 설정됩니다 (기본값은 45분동안 목표값 90 mg/dL입니다).
+   * 응답 A: MEAL Bolus 0.6U을 주입하려면 Rrt를 입력하고 답장하세요
+   * 응답 B: 원격 주입이 불가능합니다. 
 * CARBS 5
    * Response: To enter 5g at 12:45 reply with code EmF
 * CARBS 5 17:35/5:35PM
