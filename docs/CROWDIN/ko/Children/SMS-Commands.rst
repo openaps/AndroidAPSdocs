@@ -28,12 +28,12 @@ SMS 명령어
 
 **Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
 
-Commands
+명령어
 ==================================================
 
-Upper and lower case is irrelevant when sending commands.
+SMS 명령을 전송할때 대문자와 소문자는 구별하지 않습니다.
 
-Commands must be send in English, response will be in your local language if the response string is already `translated <../translations.html#translate-strings-for-androidaps-app>`_.
+SMS 명령어는 영어로만 전송하여야 하며, 응답이 `번역 <../translations.html#translate-strings-for-androidaps-app>`된 경우 번역문으로 응답을 받게 됩니다.
 
 .. image:: ../images/SMSCommands.png
   :alt: SMS Commands Example
@@ -65,15 +65,15 @@ CGM 데이터
 Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-   * Response: To stop temp basal reply with code EmF [Note: Code EmF is just an example]
+   * 응답: 임시Basal을 중지하려면 EmF 를 입력하고 답장하세요 [참고: 코드 EmF는 단순 예시일 뿐입니다]
 * BASAL 0.3
-   * Response: To start basal 0.3U/h for 30 min reply with code Swe
+   * 응답: 30분 동안 Basal 0.3U/h 주입하려면 Swe 를 입력하고 답장하세요
 * BASAL 0.3 20
-   * Response: To start basal 0.3U/h for 20 min reply with code Swe
+   * 응답: 20분 동안 Basal 0.3U/h 주입하려면 Swe 를 입력하고 답장하세요
 * BASAL 30%
-   * Response: To start basal 30% for 30 min reply with code Swe
+   * 응답: 30 분 동안 Basal 30% 주입하려면 Swe을 입력하고 답장하세요
 * BASAL 30% 50
-   * Response: To start basal 30% for 50 min reply with code Swe
+   * 응답: 50 분 동안 Basal 30% 주입하려면 Swe을 입력하고 답장하세요
 
 Bolus
 --------------------------------------------------
