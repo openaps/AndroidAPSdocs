@@ -77,7 +77,7 @@ Basal
 
 Bolus
 --------------------------------------------------
-Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
+원격 Bolus 주입은 15분 내에 허용되지 않습니다 - 이 값은 2개의 폰번호가 추가되었을 시만 수정가능합니다. 따라서 응답은 최근 Bolus 주입시간에 따라 달라지게 됩니다.
 
 * BOLUS 1.2
    * 응답 A: Bolus 1.2U을 주입하려면 Rrt를 입력하고 답장하세요
@@ -87,22 +87,22 @@ Remote bolus not allowed within 15 min -value editable only if 2 phone numbers a
    * 응답 A: MEAL Bolus 0.6U을 주입하려면 Rrt를 입력하고 답장하세요
    * 응답 B: 원격 주입이 불가능합니다. 
 * CARBS 5
-   * Response: To enter 5g at 12:45 reply with code EmF
+   * 응답: 12:45에 5g을 입력하려면 EmF를 입력하고 답장하세요
 * CARBS 5 17:35/5:35PM
-   * Response: To enter 5g at 17:35 reply with code EmF
+   * 응답: 17:35에 5g을 입력하려면 EmF를 입력하고 답장하세요
 * EXTENDED STOP/CANCEL
-   * Response: To stop extended bolus reply with code EmF
+   * 응답: 확장 Bolus를 중지하려면 EmF 를 입력하고 답장하세요
 * EXTENDED 2 120
-   * Response: To start extended bolus 2U for 120 min reply with code EmF
+   * 응답: 120분 동안 확장 Bolus 2U 주입하려면 EmF 를 입력하고 답장하세요
 
 프로파일
 --------------------------------------------------
 * PROFILE STATUS
-   * Response: Profile1
+   * 응답: Profile1
 * PROFILE LIST
-   * Response: 1.`Profile1` 2.`Profile2`
+   * 응답: 1.`Profile1` 2.`Profile2`
 * PROFILE 1
-   * Response: To switch profile to Profile1 100% reply with code Any
+   * 응답: 프로파일 Profile1 100%로 변경하려면 Any 를 입력하고 답장하세요
 * PROFILE 2 30
    * Response: To switch profile to Profile2 30% reply with code Any
 
