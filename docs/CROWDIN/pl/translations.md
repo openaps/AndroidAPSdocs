@@ -64,6 +64,14 @@ Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji
 
 At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
 
+* * *
+
+**Make sure not to use space character within HTML tags!**
+
+![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
+
+* * *
+
 If links are displayed like this in Crowdin
 
 ![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
