@@ -66,7 +66,7 @@ Momentan werden in den Docs zwei [Markup Sprachen](./make-a-PR#code-syntax) verw
 
 * * *
 
-**Make sure not to use space character at within HTML tags at the beginning or the end!**
+**Achte darauf, dass beim Text innerhalb der HTML-Tags am Anfang und Ende kein Leerzeichen steht!**
 
 ![Crodwin-HTML-Tag ohne Leerzeichen](./images/Crowdin_HTMLtag.png)
 
