@@ -66,23 +66,23 @@ Momentan werden in den Docs zwei [Markup Sprachen](./make-a-PR#code-syntax) verw
 
 * * *
 
-**Make sure not to use space character within HTML tags!**
+**Achte darauf, dass beim Text innerhalb der HTML-Tags am Anfang und Ende kein Leerzeichen steht!**
 
-![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
+![Crodwin-HTML-Tag ohne Leerzeichen](./images/Crowdin_HTMLtag.png)
 
 * * *
 
-If links are displayed like this in Crowdin
+Wenn bei Dir Links so in Crowdin angezeigt werden:
 
-![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+![Crowdin - keine Anzeige der Linkadressen](./images/CrowdinShowURL1.png)
 
-click on the cogwheel to open settings, select "Show" and click "Save".
+Klicke auf das Zahnrad, um die Einstellungen zu öffnen, wähle "Show" aus und klicke dann auf "Save".
 
-![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+![Crowdin - Anzeige der Linkadressen einschalten](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./translations#translate-headline-links) beschrieben übersetzt werden.
 
-![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+![Crowdin - Anzeige der Linkadressen](./images/CrowdinShowURL3.png)
 
 ## Korrekturlesen
 

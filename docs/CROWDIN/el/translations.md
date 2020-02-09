@@ -66,7 +66,7 @@ At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. 
 
 * * *
 
-**Make sure not to use space character within HTML tags!**
+**Make sure not to use space character at within HTML tags at the beginning or the end!**
 
 ![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
 
