@@ -44,19 +44,19 @@ Nouvelles fonctionnalités majeures
 --------------------------------------------------
 * Changement interne de targetSDK à 28 (Android 9), prise en charge de jetpack
 * Prise en charge de RxJava2, Okhttp3, Retrofit
-* Old `Medtronic pumps <../Configuration/MedtronicPump.html>`_ support (RileyLink need)
-* New `Automation plugin <../Usage/Automation.html>`_
-* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings>`_ from bolus wizard calculation
+* Support des anciennes `pompes Medtronic <../Configuration/MedtronicPump.html>`_ (besoin de RileyLink)
+* Nouveau `plugin d'Automatisation <../Usage/Automation.html>`_
+* Autoriser `uniquement la partie bolus <../Configuration/Preferences.html#advanced-settings>`_ à partir de l'assistant bolus (calculatrice)
 * Affichage de l'activité de l'insuline
 * Ajustement des prévisions de l'IA par le résultat autosense
-* New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
+* Nouveau support pour les apk des applications Dexcom patchées (`dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Vérificateur de signature
 * Autorisation de contourner les objectifs pour les utilisateurs d'OpenAPS
-* New `objectives <../Usage/Objectives.html>`_ - exam, application handling
+* Nouveau `objectifs <../Usage/Objectives.html>`_ - examen de connaissance de l'application
    
-   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+   (Si vous avez au minimum démarré l'objectif "Démarrer une boucle ouverte" dans les versions précédentes, l'examen est optionnel.)
 * Correction d'un bug dans les pilotes Dana*, où une différence de temps erronée a été signalée
-* Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
+* Correction d'un bug dans le `communicateur SMS <../Children/SMS-Commands.html>`_
 
 Version 2.3
 ==================================================
