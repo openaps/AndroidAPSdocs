@@ -37,7 +37,7 @@ Ziel 3: Belege Dein Wissen
 Objectives (Ziele) überspringen
 --------------------------------------------------
 * Nur falls Du bereits mit einem anderen System (z.B. OpenAPS, iOS Loop) geloopt hast und dies belegen kannst (z.B.  mind. drei Monate Loop-Daten in Nightscout), kannst Du eine E-Mail an `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ senden, um einen Code zu erhalten, um die restlichen Ziele (Objectives) zu überspringen. Füge dieser Mail Deine Nightscout-URL und den Code, der Dir in AAPS angezeigt wird, bei.
-* Please note that no support is provided through this mail account. Refer to the `support resources <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentioned in this documentation.
+* Bitte beachte, dass über diese Mail-Adresse kein Support geleistet werden kann. Nutze bitte die in dieser Dokumentation beschriebenen `Support-Angebote <../Where-To-Go-For-Help/Connect-with-other-users.html>`_.
 
 Ziel 4: Starte den Open Loop
 ==================================================
@@ -52,7 +52,7 @@ Anzahl der Benachrichtigungen reduzieren
 * In den Einstellungen kannst Du einen minimalen Prozentwert setzen, der erreicht werden muss, bevor eine Änderung der Basalrate vorgeschlagen wird.
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Open Loop minimal request change
+     :alt: Open Loop Mindeständerung
      
 * Auch musst Du nicht alle fünf Minuten auf jeden einzelnen Vorschlag reagieren...
 
@@ -68,7 +68,7 @@ Es ist möglicherweise sinnvoll, wenn du das Ziel höher als üblich ansetzt, bi
 
 Der Zielwert ist der Wert, auf dem die Berechnungen basieren und nicht der gleiche wie der, den du als Zuckerwert anstrebst.  Wenn Du einen sehr großen Zielbereich (z.B. 3 mmol / 50 mg/dl oder mehr) wirst Du kaum Aktivitäten von AndroidAPS feststellen. Der vorhergesagte Glukosewert wird mit hoher Wahrscheinlichkeit innerhalb Deines Zielbereichs liegen und daher nicht viele temporäre Änderungen an der Basalrate vorgeschlagen werden. 
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
+Vielleicht möchtest Du mit der Anpassung der Werte für einen engeren Zielbereich experimentieren (z.B. 1 mmol/l bzw. 20 mg/dl oder weniger) und beobachten, wie sich das Verhalten des Systems daraufhin ändert.  
 
 Auf dem Startbildschirm wird Dein Zielbereich mit grünen Linien im Diagramm dargestellt. Diesen kannst Du in den `Einstellungen <../Configuration/Preferences.html>`_ > unter 'Zielbereich für die Grafikanzeige' (scrolle weit nach unten) einstellen.
  
@@ -111,8 +111,8 @@ Ziel 7: Stelle den Closed Loop fein ein, erhöhe maxIOB über 0 und setze den Zi
 
 Ziel 8: Passe, falls notwendig, Basalraten und Faktoren an und aktiviere dann die Autosens-Funktion
 ====================================================================================================
-* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
-* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+* Du kannst  `Autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ verwenden, um dafür zu sorgen, dass Deine Basalraten korrekt bleiben oder einen traditionellen Basalratentest durchführen.
+* Schalte `Autosens <../Usage/Open-APS-features.html>`_ für einen Zeitraum von 7 Tagen ein und beobachte die weiße Linie auf der Grafik auf dem Hauptbildschirm, die anzeigt, dass deine Sensibilität gegenüber Insulin auf Grund von Aktivitäten oder Hormonen steigt oder fällt. Schaue auf dem OpenAPS-Tab nach, wie AndroidAPS die Basalraten und/oder Zielwerte entsprechend anpasst.
 
 *Vergiss nicht, dich als Looper in `diesem Formular <http://bit.ly/nowlooping>`_ zu registrieren, wenn du das bisher noch nicht getan hast. Gib AndroidAPS als Art deiner DIY Loop-Software an.*
 
@@ -127,4 +127,4 @@ Ziel 10: Aktiviere zusätzliche oref1 Funktionen zum täglichen Gebrauch, wie z.
 ====================================================================================================
 * Du musst das `SMB-Kapitel in diesem Wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ und das `Kapitel oref1 in der OpenAPS Dokumentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ lesen, um zu verstehen wie der SMB arbeitet, insbesondere was Sinn und Zweck des "zero-temping" ist.
 * Danach solltest Du `maxIOB erhöhen <../Usage/Open-APS-features.html#maximales-basal-iob-das-openaps-abgeben-darf-ie-openaps-max-iob>`_, damit SMB korrekt funktioniert. maxIOB enthält nun das gesamte IOB, nicht nur das hinzugefügte Basalinsulin. Das bedeutet, wenn Du einen Mahlzeiten-Bolus von 8 IE abgegeben willst und in den Einstellungen ein maxIOB von 7 IE hinterlegt hast, wird kein SMB abgegeben, bis das IOB wieder unter 7 IE gefallen ist. Beginne mit maxIOB = durchschnittlicher Mahlzeiten-Bolus + 3x die größte stündliche Basalrate (größte stündliche Basalrate = maximaler Basalwert pro Stunde innerhalb des 24-Stunden-Rasters eines Tages - bei  `Ziel 7 <../Usage/Objectives.html#ziel-7-stelle-den-closed-loop-fein-ein-erhohe-max-iob-uber-0-und-setze-den-zielbereich-langsam-herunter>`_  findest Du eine Grafik zu Erklärung).
-* Der Standardwert von min_5m_carbimpact in den Absorptions-Einstellungen muss von 3 auf 8 erhöht werden, wenn du von AMA zum SMB wechselst. If you are upgrading from AMA to SMB, you have to change it manually.
+* Der Standardwert von min_5m_carbimpact in den Absorptions-Einstellungen muss von 3 auf 8 erhöht werden, wenn du von AMA zum SMB wechselst. Wenn du also von AMA auf SMB umstellst, dann musst du den Wert manuell auf 8 erhöhen.
