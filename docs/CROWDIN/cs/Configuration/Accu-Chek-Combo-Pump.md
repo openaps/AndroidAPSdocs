@@ -19,8 +19,8 @@
 - Aktuální rozsah bazálních dávek je od 0,05 do 10 U/h. To platí i při úpravách profilu, například při zvýšení na 200 % nesmí nejvyšší bazál přesáhnout 5 U/h, protože tato hodnota bude zdvojnásobena. Obdobně platí, že při snížení na 50% musí být nejnižší bazální dávka 0,10 U/h.
 - Pokud smyčka požaduje zrušení spuštěného dočasného bazálu, Combo nastaví dočasný bazál na 90 % nebo 110 % na dobu 15 minut. Důvodem je, že zrušení dočasného bazálu vyvolá alarm na pumpě, což způsobuje četné vibrace.
 - Občas (jednou za pár dní) se může stát, že AAPS automaticky zruší alarm TBR CANCELLED. Funkci obnovíte stisknutím tlačítka pro obnovení v AAPS pro přenesení varování do AAPS nebo potvrzením alarmu na pumpě.
-- Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. Pokud se tato chyba objeví, ujistěte se, že Bluetooth je aktivní a stiskněte tlačítko pro obnovení na kartě Combo, abyste zjistili, jestli to bylo příčinou problému. Pokud chyba přetrvává, restartujte telefon, což většinou pomůže. Jestliže restart nepomůže, existuje ještě další možnost. Stiskněte tlačítko na pumpě (což resetuje Bluetooth na pumpě), pumpa by měla znovu navázat spojení. Pro odstranění některého z těchto problémů se toho v tomto okamžiku příliš mnoho udělat nedá. Pokud se tyto chyby budou často opakovat, jedinou možností je vybrat jiný doporučený telefon, který bude správně fungovat s AndroidAPS a Combem (viz výše).
-- Issuing a bolus from the pump will not always be detected in time (checked for whenever AAPS connects to the pump), and might take up to 20 minutes in the worst case. Bolusy na pumpě jsou kontrolovány před každým nastavením vyššího dočasného bazálu nebo bolusu pomocí AAPS, ale z důvodu omezení AAPS odmítne zapsat dočasný bazál / bolus, protože byl vypočítán podle falešných předpokladů. (-> nepodávejte bolus z pumpy! Viz kapitola *Používání*)
+- Stabilita připojení Bluetooth se u různých telefonů liší a může způsobovat výstrahu „pumpa nedostupná“, pokud spojení není opětovně obnoveno. Pokud se tato chyba objeví, ujistěte se, že Bluetooth je aktivní a stiskněte tlačítko pro obnovení na kartě Combo, abyste zjistili, jestli to bylo příčinou problému. Pokud chyba přetrvává, restartujte telefon, což většinou pomůže. Jestliže restart nepomůže, existuje ještě další možnost. Stiskněte tlačítko na pumpě (což resetuje Bluetooth na pumpě), pumpa by měla znovu navázat spojení. Pro odstranění některého z těchto problémů se toho v tomto okamžiku příliš mnoho udělat nedá. Pokud se tyto chyby budou často opakovat, jedinou možností je vybrat jiný doporučený telefon, který bude správně fungovat s AndroidAPS a Combem (viz výše).
+- Vydání bolusu z pumpy nebude vždy detekováno okamžitě (zaznamenává se při každém spojení s pumpou), v nejhorším případě to může trvat 20 minut. Bolusy na pumpě jsou kontrolovány před každým nastavením vyššího dočasného bazálu nebo bolusu pomocí AAPS, ale z důvodu omezení AAPS odmítne zapsat dočasný bazál / bolus, protože byl vypočítán podle falešných předpokladů. (-> nepodávejte bolus z pumpy! Viz kapitola *Používání*)
 - Vyhněte se tomu, abyste nastavovali dočasný bazál na pumpě, smyčka předpokládá, že dočasné bazály řídí ona. Zaznamenání nového dočasného bazálu na pumpě může trvat až 20 minut a délka dočasného bazálu bude vypočítána pouze od momentu, kdy je načtena. Což v nejhorším případě může být 20 minut, které nebudou započítány do IOB. 
 
 ## Nastavení
@@ -60,7 +60,7 @@
 
 ## Proč nefunguje párování pumpy pomocí aplikace „ruffy“ (tipy na řešení)?
 
-There are several possible reasons. Vyzkoušejte tyto kroky:
+Existuje několik možných důvodů. Vyzkoušejte tyto kroky:
 
 1. Vložte ** novou nebo nabitou baterii ** do pumpy. Podívejte se na podrobnosti do návodu do části Baterie. Ujistěte se, že pumpa je velmi blízko telefonu.
 
@@ -73,10 +73,10 @@ There are several possible reasons. Vyzkoušejte tyto kroky:
       
 
 4. Vymažte již spárovaný telefon z pumpy. Settings / Bluetooth, remove the paired device
-5. Ujistěte se, že na pozadí není spuštěna smyčka aplikace AAPS. Disable Loop in AAPS.
+5. Ujistěte se, že na pozadí není spuštěna smyčka aplikace AAPS. Deaktivuje smyčku v AAPS.
 6. Nyní spusťte aplikaci Ruffy v telefonu. Stiskněte tlačítko Reset a vymažte staré párování. Poté stiskněte tlačítko Connect.
-7. V Bluetooth menu pumpy přejděte na ** ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** * Step 5 and 6 have to be done in a short timing.
-8. Now the Pump should show up the BT Name of phone to select for pairing. Here it is important to wait at least 5s before you hit the select button on Pump. Otherwise the Pump will not send the Pairing request to the Phone properly.
+7. V Bluetooth menu pumpy přejděte na ** ADD DEVICE / ADD CONNECTION**. Stiskněte *CONNECT!** *Kroky 5 a 6 musí následovat za sebou v krátkém časovém intervalu.
+8. Nyní se na pumpě ukáže BT název telefonu a nabídne možnost párování. S potvrzením a stisknutím na pumpě je nutné počkat aspoň 5 s. Jinak pumpa neodešle požadavek pro párování korektně.
 
 * If Combo Pump is set to 5s Screen timeout, you may test it with 40s (original setting). From experience the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings. * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 

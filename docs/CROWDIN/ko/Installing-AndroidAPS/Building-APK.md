@@ -40,9 +40,9 @@ In general, the steps necessary to build the APK file:
 
 Detailed description of the steps necessary to build the APK file.
 
-## Install git (if you don't have it)
+## Git를 설치하세요. (미설치시)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+설치 페이지에 있는 매뉴얼을 따르세요.
 
 ## Install Android Studio
 
@@ -207,9 +207,9 @@ Yeah, the first build is successful but we are not finished.
 
 ![Screenshot 34](../images/Installation_Screenshot_34.png)
 
-## Generate signed APK
+## 서명된 Apk파일 설치하기
 
-In the menu select "Build" and then "Generate Signed Bundle / APK...". (The menu in Android Studio changed as of September 2018. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
+메뉴에서 "Build"를 선택 후 "Generate Signed Bundle / APK..."를 선택합니다. (Android 스튜디오의 메뉴는 2018년 9월에 변경되었습니다. In older versions select in the menu “Build” and then “Generate Signed APK...”.)
 
 Signing means that you sign your generated app but in a digital way as a kind of digital fingerprint in the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow the link [here](https://developer.android.com/studio/publish/app-signing.html#generate-key) Security is a deep and complex topic and you don't need this now.
 
@@ -243,12 +243,12 @@ Fill in the information of the last dialog in this dialog and click "Next".
 
 Select "full" (or "fullRelease") as flavour for the generated app. Select V1 "Jar Signature" (V2 is optional) and click "Finish". The following information might be important for later use.
 
-* 'Release' should be your default choice for "Build Type", 'Debug' is just for people coding.
-* Select the build type you want to build. 
-  * full / fullRelease (i.e. recommendations automatically enacted in closed looping)
-  * openloop (i.e. recommendations given to user to manually enact)
-  * pumpcontrol (i.e. remote control for pump, no looping)
-  * nsclient (i.e. looping data of another user is displayed and careportal entries can be added)
+* ○'릴리스' 는 "빌드 유형" 에 대한 선택사항이어야 하며, '디버그' 는 코딩을 위한 것입니다.
+* ○원하는 빌드유형을 선택하기 
+  * Full/ Fullrelease (clised loop 에서 자동으로 권장)
+  * openloop(수동모드 사용자를 위한 권장사항)
+  * pumpcontrol (예. loop 사용없이 펌프만 조종할때)
+  * nsclient (다른 사용자의 loop data가 표시되고 캐탈포털 항목이 추가될 수 있음)
 
 ![Screenshot 44](../images/Installation_Screenshot_44.png)
 
@@ -260,7 +260,7 @@ Click the "locate" link in the event log.
 
 ![Screenshot 46](../images/Installation_Screenshot_46.png)
 
-## Transfer APK to smartphone
+## 스마트폰에 apk파일을 보내기.
 
 A file manager window opens. It might look a bit different on your system as I am using Linux. On Windows there will be the File Explorer and on Mac OS X the Finder. There you should see the directory with the generated APK file. Unfortunately this is the wrong place as "wear-release.apk" is not the signed "app" APK we are searching for.
 
@@ -268,10 +268,10 @@ A file manager window opens. It might look a bit different on your system as I a
 
 Please change to the directory AndroidAPS/app/full/release to find the "app-full-release.apk" file. Transfer this file to your Android smartphone. You can do it on your preferred way, i.e.
 
-* Bluetooth
-* cloud upload (Google Drive or other cloud services)
-* connect computer and phone by cable 
-* by mail (Note that some mail apps do not allow apk attachments, in this case use other transfer method.)
+* 블루투스
+* 클라우드 업로드 (Google Drive 또는 기타 클라우드 서비스)
+* 케이블을 통해 컴퓨터 및 전화를 연결합니다. 
+* 메일로 (일부 메일 애플리케이션에서는 첨부를 허용하지 않습니다. 이 경우에는 다른 전송 방법을 사용하십시오.)
 
 In this example Gmail is used as it is fairly simple. To install the self-signed app you need to allow Android on your smartphone to do this installation even if this file is received via Gmail which is normally forbidden. If you use something other please proceed accordingly.
 
@@ -291,6 +291,6 @@ Yeah, you got it and can now start with configuring AndroidAPS for your use (CGM
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
-## Troubleshooting
+## 문제해결
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

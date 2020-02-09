@@ -113,7 +113,7 @@ AndroidAPS for children
    SMS commands <./Children/SMS-Commands.rst>
    
 
-Troubleshooting
+문제해결
 --------------------------------------------------
 .. toctree::
    :maxdepth: 1

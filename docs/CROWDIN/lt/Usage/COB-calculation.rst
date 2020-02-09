@@ -9,7 +9,7 @@ Oref0 / Oref1
 
 Neįsisavinti angliavandeniai yra nebeskaičiuojami po nustatyto laiko
 
-.. image:: ../images/cob_oref0_orange.png
+.. image:: ../images/cob_oref0_orange_II.png
   :alt: Oref0 / Oref1
 
 AAPS, SvertinisVidurkis
@@ -17,7 +17,7 @@ AAPS, SvertinisVidurkis
 
 įsisavinimas yra apskaičiuojamas, kad būtų `AAO == 0` po nustatyto laiko
 
-.. image:: ../images/cob_aaps2_orange.png
+.. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, SvertinisVidurkis
 
 Jei minimalus angliavandenių įsisavinimas (min_5m_carbimpact) yra naudojamas vietoj verčių, apskaičiuotų iš KG svyravimų, atsiranda oranžinis taškas AAO grafike.

@@ -64,17 +64,25 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
 
 Momentan werden in den Docs zwei [Markup Sprachen](./make-a-PR#code-syntax) verwendet. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.
 
-Wenn bei Dir Links so in Crowdin angezeigt werden:
+* * *
 
-![Crowdin - keine Anzeige der Linkadressen](./images/CrowdinShowURL1.png)
+**Make sure not to use space character within HTML tags!**
 
-Klicke auf das Zahnrad, um die Einstellungen zu öffnen, wähle "Show" aus und klicke dann auf "Save".
+![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
 
-![Crowdin - Anzeige der Linkadressen einschalten](./images/CrowdinShowURL2.png)
+* * *
 
-Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./translations#translate-headline-links) beschrieben übersetzt werden.
+If links are displayed like this in Crowdin
 
-![Crowdin - Anzeige der Linkadressen](./images/CrowdinShowURL3.png)
+![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+
+click on the cogwheel to open settings, select "Show" and click "Save".
+
+![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+
+![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
 
 ## Korrekturlesen
 

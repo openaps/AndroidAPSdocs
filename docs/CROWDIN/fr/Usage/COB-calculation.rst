@@ -9,7 +9,7 @@ Oref0 / Oref1
 
 Unabsorbed carbs are cut off after specified time
 
-.. image:: ../images/cob_oref0_orange.png
+.. image:: ../images/cob_oref0_orange_II.png
   :alt: Oref0 / Oref1
 
 AAPS, WeightedAverage
@@ -17,7 +17,7 @@ AAPS, WeightedAverage
 
 absorption is calculated to have `COB == 0` after specified time
 
-.. image:: ../images/cob_aaps2_orange.png
+.. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, WheitedAverage
 
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
