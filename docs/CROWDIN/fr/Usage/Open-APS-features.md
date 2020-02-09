@@ -2,13 +2,13 @@
 
 ## Autosens
 
-* Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
-* It will try and figure out how sensitive/resistant you are based on these deviations.
-* The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
-* AndroidAPS only runs off 8 (to enable UAM) or 24 hour as a user option.
-* Changing a cannula or changing a profile will reset Autosens ratio back to 0%.
-* Autosens adjusts your basal and ISF for you (i.e.: mimicking what a Profile shift does).
-* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
+* Autosens est un algorithme qui examine les écarts de glycémie (positives/négatives/neutres).
+* Il va essayer de déterminer à quel point vous êtes sensible/résistant en fonction de ces écarts.
+* L'implémentation oref dans **OpenAPS** utilise une combinaison de 24 et 8 heures de données. Il utilise celui qui le est plus sensible.
+* AndroidAPS n'exécute que la version 8 heures (pour activer les RNS) ou 24 heures en tant qu'option utilisateur.
+* Le changement de canule ou le changement de profil réinitialisera le ratio Autosens à 0%.
+* Autosens ajuste votre basal et votre SI pour vous (c.-à-d. qu'il imite ce que fait un changement de profil).
+* Si vous mangez continuellement des glucides sur une période prolongée, l'Autosens sera moins efficace pendant cette période car les glucides sont exclus les calculs des écarts de glycémie.
 
 ## Super Micro Bolus (SMB)
 
