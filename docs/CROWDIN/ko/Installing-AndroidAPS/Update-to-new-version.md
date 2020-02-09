@@ -1,20 +1,20 @@
-# Update to a new version or branch
+# 새로운 버젼 또는 브랜치 업데이트
 
-## Build yourself instead of download
+## 다운로드 대신에 당신 스스로 빌드하세요
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS는 의료기기 규정 때문에 다운로드 가능하지 않습니다. 당신 스스로 사용하기 위해 앱을 빌드하는 것은 합법입니다. 그러나 빌드 복사본을 다른 사람과 공유하시면 안됩니다! 세부사항은 [FAQ 페이지](../Getting-Started/FAQ.md)를 참고하세요**
 
-## Important notes
+## 중요사항
 
-* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
-* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
-* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* 버전 2.3에서는 업데이트에 git를 사용해야합니다. 압축 파일을 통한 업데이트는 더 이상 작동하지 않습니다.
+* apk 빌드를 위해서 [안드로이드 스튜디오 버전 3.5.1](https://developer.android.com/studio/) 또는 이후의 버전을 이용하세요.
+* Android Studio 3.5.1는 Windows 10 32-bit를 지원하지 않습니다.
+* XDrip을 사용하고 있다면, 반드시 리시버를 확인하세요.
+* [(패치된) 덱스콤 앱](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app)으로 덱스콤 G6를 사용중이라면 [2.4 폴더](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)이후의 버전이 필요합니다.
 
-## Quick walk-through for experienced users
+## 기존 사용자들을 위한 간단한 세부설명
 
-Please skip this paragraph if you update for the first time. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
+처음 업데이트하는 경우 이 단락을 건너뛰십시오. The quick walk-through is for experienced users. Your next step would be to [install git](../Installing-AndroidAPS/git-install.rst) if you do not have it already.
 
 If you already updated AAPS in previous versions and use a Windows PC you can update in four simple steps:
 
