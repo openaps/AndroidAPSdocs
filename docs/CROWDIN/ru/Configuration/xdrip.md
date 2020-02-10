@@ -4,9 +4,9 @@ If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-p
 
 **This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
 
-Если серийный номер трансмиттера Dexcom G6 is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -55,8 +55,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
-* Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
-* Если серийный номер трансмиттера Dexcom G6 начиная с 8G и 8Н попробуйте [ночные сборки от 2019/07/28 или позднее](https://github.com/NightscoutFoundation/xDrip/releases).
+* Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus). 
+* Если серийный номер трансмиттера Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Настройки для работы с Dexcom
 
@@ -76,7 +76,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Упреждающие перезапуски не рекомендуются
 
-**With Dexcom transmitters whos serial no. is starting with 8G or 8H preemptive restarts do not work and might kill the sensor completely!**
+**With Dexcom transmitters whos serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
 The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
@@ -96,9 +96,9 @@ To learn more about the details and reasons for these recommendations read the [
 
 **For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 начиная с 8G и 8Н попробуйте [ночные сборки от 2019/07/28 или позднее](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
 * Удерживайте на главном экране xDrip+ иконку капли крови для активации кнопки `Мастер выбора источника ГК`.
@@ -116,7 +116,7 @@ To learn more about the details and reasons for these recommendations read the [
 * Не запускайте новый сенсор прежде чем на классической странице состояния не появится следующая информация Страница-> Состояние G5/G6-> PhoneServiceState:
    
    * С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
-   * С трансмиттерами, серийный номер которых начинается с 8G или 8H: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
@@ -124,7 +124,7 @@ To learn more about the details and reasons for these recommendations read the [
    
    -> В нижней части экрана через несколько минут появится предупреждение о прогреве сенсора `Осталось x,x часов`.
 
--> If your transmitter serial no. does not start with 8G or 8H and there is no time specification after a few minutes stop and restart the sensor.
+-> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * Перезапустите коллектор (состояние системы - если не заменяете сенсор}
 * Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
@@ -150,7 +150,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Увеличение срока работы трансмиттера
 
-* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер начинается с 8G или 8H.
+* Пока что не найдено способа продлить жизнь трансмиттеров, чей серийный номер starts with 8G, 8H or 8J.
 * Для предотвращения трудностей при запуске сенсоров настоятельно рекомендуется продлить срок действия трансмиттера до 100-го дня первого использования.
 * При продлении срока действия трансмиттера работа сенсора будет остановлена. Поэтому проводить эту манипуляцию следует перед заменой сенсора или быть готовыми к тому, что состоится двухчасовая фаза его прогрева.
 * Stop sensor manually via hamburger menu.
@@ -172,9 +172,9 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Замена трансмиттера
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81), убедитесь, что вы используете версией не ранее чем [мастер от 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Выключите оригинальный ресивер Dexcom (если используете).
 * Остановить сенсор (только при смене сенсора)
@@ -205,8 +205,8 @@ To learn more about the details and reasons for these recommendations read the [
 * Введите серийный номер нового трансмиттера. Будьте внимательны и не перепутайте 0 (ноль) и O (заглавная буква o).
 * Вставьте новый сенсор (только при замене).
 * Поместите трансмиттер на сенсор - ** не запускайте сенсор немедленно!**
-* Новые "Трансмиттеры Firefly" (серийный номер начинающиеся с 8G или 8H) можно использовать только в нативном режиме.
-* Следующие опции не должны быть активированы для новых трансмиттеров "Firefly" (серийный номер начинается с 8G или 8H):
+* Новые "Трансмиттеры Firefly" (серийный номер starting with 8G, 8H or 8J) can only be used in native mode.
+* Следующие опции не должны быть активированы для новых трансмиттеров "Firefly" (серийный номер starting with 8G, 8H or 8J):
    
    * Упреждающий перезапуск (отключить!)
    * Перезапуск сенсора (отключить!)
@@ -217,7 +217,7 @@ To learn more about the details and reasons for these recommendations read the [
 * Проверьте в классическом меню страницу Состояние-> Состояние G5/G6-> PhoneServiceState, показано ли одно из следующих сведений:
    
    * С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
-   * С трансмиттерами, серийный номер которых начинается с 8G или 8H: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
@@ -262,7 +262,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 * Запустите сенсор
    
-   ** Для новых трансмиттеров Firefly ** (серийный номер начинается с 8G или 8H) ** это обязательно, для всех остальных трансмиттеров рекомендуется ждать около 15 минут между остановкой и запуском нового сенсора (до тех пор пока ` Sensor Status: Stopped ` не появится на втором экране состояния системы). НЕ НАСТРАИВАЙТЕ ЗАДНИМ ЧИСЛОМ!**
+   ** Для новых трансмиттеров Firefly ** (серийный номер starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). НЕ НАСТРАИВАЙТЕ ЗАДНИМ ЧИСЛОМ!**
 
 * Введите время установки
    
@@ -305,7 +305,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Проблемы при запуске нового сенсора
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G or 8H.
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
 
 * Запуск сенсора сопровождается сообщением: "ОШИБКА: Сенсор не удалось запустить"
 * Остановить сенсор
