@@ -4,9 +4,9 @@ If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-p
 
 **This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
-Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) zorg ervoor dat je de [master van 2019/05/18](https://jamorham.github.io/#xdrip-plus) gebruikt, of een recentere versie.
+Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
 
-Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting with 8G... or 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -55,8 +55,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### xDrip+ versie afhankelijk van G6-zendernummer
 
-* Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) zorg ervoor dat je de [master van 2019/05/18](https://jamorham.github.io/#xdrip-plus) gebruikt, of een recentere versie. 
-* Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G of 8H probeer de ['nightly build' van 2019/07/28 of later](https://github.com/NightscoutFoundation/xDrip/releases).
+* Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus). 
+* Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Specifieke instellingen voor Dexcom
 
@@ -76,7 +76,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Pre-emptive restarts niet aanbevolen
 
-**With Dexcom transmitters whos serial no. is starting with 8G or 8H preemptive restarts do not work and might kill the sensor completely!**
+**With Dexcom transmitters whos serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
 The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
@@ -96,9 +96,9 @@ To learn more about the details and reasons for these recommendations read the [
 
 **For second and following transmitters see [Extend transmitter life](../Configuration/xdrip#extend-transmitter-life) below.**
 
-Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) zorg ervoor dat je de [master van 2019/05/18](https://jamorham.github.io/#xdrip-plus) gebruikt, of een recentere versie.
+Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
 
-Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G of 8H probeer de ['nightly build' van 2019/07/28 of later](https://github.com/NightscoutFoundation/xDrip/releases).
+Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Zet originele Dexcom ontvanger uit (indien je die gebruikt).
 * Houdt het rode xDrip+ bloeddruppel-icoon op het hoofdscherm lang ingedrukt om de `Source Wizard knop` in beeld te krijgen.
@@ -116,7 +116,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
 * Start geen nieuwe sensor voordat de volgende informatie wordt weergegeven in Classic Status Page-> G5/G6 status-> PhoneServiceState:
    
    * Zendernummer beginnend met 80 of 81: "Got data hh:mm" (bijvoorbeeld "Got data 19:04")
-   * Zendernummer beginnnend met 8G of 8H: "Got glucose hh:mm" (bijvoorbeeld "Got glucose 19:04") of "Got no raw hh:mm" (bijvoorbeeld "Got no raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
@@ -124,7 +124,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
    
    -> Ergens onderaan het scherm hoort na enkele minuten `Warm Up x,x hours left` te verschijnen.
 
--> If your transmitter serial no. does not start with 8G or 8H and there is no time specification after a few minutes stop and restart the sensor.
+-> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * Indien je de sensor niet zojuist hebt vervangen: ga naar het Hamburgermenu > System status > klik op de knop 'Restart collector'.
 * Zet de originele Dexcom ontvanger (indien je die gebruikt) niet terug aan voordat xDrip+ de eerste meetwaardes toont.
@@ -150,7 +150,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
 
 ### Zender resetten
 
-* Een zender kun je resetten zodat de teller van het aantal dagen dat hij in gebruik is, weer op nul komt te staan. Dan gaat hij langer mee dan de maximaal 100 dagen die Dexcom garandeert (na de 100 dagen is de zenderbatterij meestal nog niet leeg, maar hij is geprogrammeerd om te stoppen). Tot nu toe kan een zender niet gereset worden waarvan het serienummer begint met 8G of 8H. Onderstaande instructies werken dus helaas niet voor deze zenders, wel voor oudere modellen.
+* Een zender kun je resetten zodat de teller van het aantal dagen dat hij in gebruik is, weer op nul komt te staan. Dan gaat hij langer mee dan de maximaal 100 dagen die Dexcom garandeert (na de 100 dagen is de zenderbatterij meestal nog niet leeg, maar hij is geprogrammeerd om te stoppen). Tot nu toe kan een zender niet gereset worden waarvan het serienummer starts with 8G, 8H or 8J.
 * Het wordt aangeraden om de zender te resetten vóórdat hij 100 dagen in gebruik is. Dit om problemen met het starten van sensoren te voorkomen.
 * De actieve sensor sessie zal worden gestopt bij het resetten van de zender. Dat betekent dat je daarna weer de 2 uur opwarm-fase zult moeten uitzitten. Plan je zender reset dus gelijktijdig met een sensorwissel, of doe het op een moment dat het geen probleem is om 2 uur geen gegevens te hebben.
 * Stop sensor manually via hamburger menu.
@@ -172,9 +172,9 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G o
 
 ### Zender vervangen
 
-Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) zorg ervoor dat je de [master van 2019/05/18](https://jamorham.github.io/#xdrip-plus) gebruikt, of een recentere versie.
+Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
 
-Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Zet originele Dexcom ontvanger uit (indien je die gebruikt).
 * Stop sensor (alleen als je van plan was om je sensor te vervangen)
@@ -205,8 +205,8 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
 * Zet serienummer van nieuwe zender in. Let erop dat je een 0 (nul) en O (hoofdletter o) niet met elkaar verwart.
 * Als je ook je sensor ging vervangen, plaatst dan nu de nieuwe sensor.
 * Klik de zender in de sensor maar **start de sensor nog niet!**
-* Nieuwe "Firefly" zenders (serienr. beginnend met 8G of 8H) kan alleen gebruikt worden in "native modus".
-* De volgende opties mogen niet worden geactiveerd voor nieuwe "Firefly" zender (serienr. beginnend met 8G of 8H):
+* Nieuwe "Firefly" zenders (serienr. starting with 8G, 8H or 8J) can only be used in native mode.
+* De volgende opties mogen niet worden geactiveerd voor nieuwe "Firefly" zender (serienr. starting with 8G, 8H or 8J):
    
    * Preemptive restart (Vroegtijdig herstarten) ->uitschakelen!
    * Restart sensor (Sensor herstarten) ->uitschakelen!
@@ -217,7 +217,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
 * Controleer op de Classic Status Pagina-> G5/G6 status-> PhoneServiceState of de volgende informatie wordt weergegeven:
    
    * Zendernummer beginnend met 80 of 81: "Got data hh:mm" (bijvoorbeeld "Got data 19:04")
-   * Zendernummer beginnnend met 8G of 8H: "Got glucose hh:mm" (bijvoorbeeld "Got glucose 19:04") of "Got no raw hh:mm" (bijvoorbeeld "Got no raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
@@ -262,7 +262,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
 
 * Start Sensor
    
-   ** Voor nieuwe Firefly-zenders ** (serienr. beginnend met 8G of 8H) **is wachten verplicht. Voor alle andere zenders wordt het aanbevolen om ongeveer 15 minuten te wachten tussen het stoppen en starten van de nieuwe sensor (tot `Sensor Status: Stopped` verschijnt op het tweede systeemstatusscherm). en geef GEEN datum in het verleden op!**
+   ** Voor nieuwe Firefly-zenders ** (serienr. starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). en geef GEEN datum in het verleden op!**
 
 * Stel tijd in dat de sensor was ingebracht (time inserted)
    
@@ -305,7 +305,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
 
 ### Probleem bij het starten van nieuwe sensor
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G or 8H.
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
 
 * In Systeem status wordt sensor weergegeven als "FAILED: Sensor failed start"
 * Sensor stoppen
