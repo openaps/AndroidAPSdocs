@@ -47,7 +47,7 @@ When switching to a new phone the following steps are neccessary:
 * **Export settings** on your old phone
   
   * Hamburger menu (top left corner of screen)
-  * 정비
+  * Maintenance
   * Export settings
     
     ![AAPS export settings](../images/AAPS_ExportSettings.png)
