@@ -25,7 +25,7 @@
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
-* 펌프에서 확장Bolus를 활성화하세요.
+* Enable extended boluses on pump
 
 ## Dana RS specific errors
 
