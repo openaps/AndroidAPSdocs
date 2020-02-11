@@ -9,8 +9,8 @@ AndroidAPS는 아이들을 모니터링 하기 위한 몇가지 옵션을 제공
 기능
 ==================================================
 AndroidAPS를 사용하면 아이들의 펌프는 아이들의 폰으로 제어될 수 있다.
-부모는 원격에서 혈당, COB 그리고 IOB 등과 같은 수치를 볼 수 있다. 부모폰의 **NSClient app**을 통해.
-부모 폰에 **xDrip앱의 팔로워 모드**를 사용하여 알람을 받을 수 있다.
+부모는 원격에서 혈당, COB 그리고 IOB 등과 같은 수치를 볼 수 있다. 부모폰의 **NSClient app**을 통해. Settings must be the same in AndroidAPS and NSClient.
+* Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
 `SMS 명령어를 사용한 AndroidAPS의 원격 제어 <../Children/SMS-Commands.html>`_.
 * NSClient 앱을 통해 원격 프로파일 변경, 임시 목표 변경.
 
@@ -19,12 +19,14 @@ AndroidAPS를 사용하면 아이들의 펌프는 아이들의 폰으로 제어�
 * `Nightscout 앱 <http://www.nightscout.info/>`_웹 브라우저 (주로 출력되는 데이터)
 *	NSClient 앱
 *	만약 Dexcom follow 앱을 이용한다면 (혈당 값만)
-*	`xDrip 앱 <../Configuration/xdrip.html>`_ 팔로워 모드에서 (주로 혈당과 **알람**)
+*	`xDrip+ <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
 *	`Spike 앱 <https://spike-app.com/>`_ iPhone 에서 (주로 혈당과 **알람**)
 
 고려해야 할 사항
 ==================================================
 * 아이들을 위한 '파라미터(Basal 양, DIA, ISF...)의 정확한 설정 <../Getting-Started/FAQ.html#how-to-begin>`_ 은 어렵다, 특별하게 성장 호르몬이 분비될 때. 
+* Settings must be the same in AndroidAPS and NSClient.
+* Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
 * 그래서 원격 모니터링과 원격 관리를 시작하기 전에 아이와 함께 실생활에서 테스트하고 정확하게 설정하는 시간을 가져야 한다. 방학은 그것들을 정하기에 좋은 시간이 될 것이다.
 * 원격 제어가 동작하지 않았을 때의 어떻게 대처할지에 대한 계획이 있는가? (예를 들면 네트워크 문제 등)
 * 원격 모니터링과 관리는 유치원이나 초등학교에서는 정말로 도움이 될 수 있다. 그러나 선생님과 교육자들이 아이의 관리 계획을 인지하고 있는지 확인해야 한다. 그러한 계획에 대한 예는 Facebook에서 'AndroidAPS 사용자들을 위한 파일 섹션 <https://www.facebook.com/groups/AndroidAPSUsers/files/>`을 통해 얻어질 수 있다.
