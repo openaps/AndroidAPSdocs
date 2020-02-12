@@ -59,9 +59,9 @@ When switching to a new phone the following steps are neccessary:
 * **Install AndroidAPS** on the new phone.
 * **Import settings** on your new phone 
   * Hamburger menu (top left corner of screen)
-  * 정비
+  * Maintenance
   * Import settings
 
 ## Timezone traveling with Dana RS pump
 
-다른 시간대의 나라로 여행하는 경우에 대한 정보는 [ 펌프와 함께 하는 다른 시간대 여행 ](../Usage/Timezone-traveling#danarv2-danars) 섹션을 참조하십시오.
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
