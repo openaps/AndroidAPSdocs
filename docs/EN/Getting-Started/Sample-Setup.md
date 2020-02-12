@@ -1,4 +1,4 @@
-# Sample setup: Samsung S7, DanaR, Dexcom G5 and Sony Smartwatch
+# Sample setup: Samsung S7, DanaRS, Dexcom G6 and Sony Smartwatch
 
 
 ![Sample Setup](../images/SampleSetup.png)
