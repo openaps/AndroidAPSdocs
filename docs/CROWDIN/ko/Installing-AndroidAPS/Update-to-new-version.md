@@ -6,11 +6,12 @@
 
 ## 중요사항
 
-* 버전 2.3에서는 업데이트에 git를 사용해야합니다. 압축 파일을 통한 업데이트는 더 이상 작동하지 않습니다.
-* apk 빌드를 위해서 [안드로이드 스튜디오 버전 3.5.1](https://developer.android.com/studio/) 또는 이후의 버전을 이용하세요.
-* Android Studio 3.5.1는 Windows 10 32-bit를 지원하지 않습니다.
-* XDrip을 사용하고 있다면, 반드시 리시버를 확인하세요.
-* [(패치된) 덱스콤 앱](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app)으로 덱스콤 G6를 사용중이라면 [2.4 폴더](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)이후의 버전이 필요합니다.
+* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.html#release-notes) about the new version.
+* As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
+* Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 3.5.1.
+* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
+* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## 기존 사용자들을 위한 간단한 세부설명
 
