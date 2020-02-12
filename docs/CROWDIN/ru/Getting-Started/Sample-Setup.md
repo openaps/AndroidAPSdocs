@@ -1,10 +1,10 @@
-# Пример настройки: Samsung S7, DanaR, Dexcom G5 и Sony Smartwatch
+# Sample setup: Samsung S7, DanaRS, Dexcom G6 and Sony Smartwatch
 
 ![Пример настройки](../images/SampleSetup.png)
 
 ## Описание
 
-В этой комбинации смартфон Samsung Galaxy S7 используется в качестве центра управления циклом. Слегка модифицированное приложение Dexcom считывает значения ГК из CGM Dexcom G5. AndroidAPS управляет помпой Dana R корейского производителя SOOIL через Bluetooth. Дополнительные устройства не требуются.
+В этой комбинации смартфон Samsung Galaxy S7 используется в качестве центра управления циклом. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Дополнительные устройства не требуются.
 
 Поскольку приложение Dexcom предлагает ограниченные параметры оповещений, приложение с открытым исходным кодом xDrip+ настраивается не только на высокие и низкие значения но и на другие оповещения под индивидуальные потребности.
 
@@ -20,19 +20,22 @@
     
     * Альтернативы: см. [список проверенных телефонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) для AndroidAPS
 
-2. Инсулиновая помпа [DanaR](http://www.sooil.com/eng/product/) или Dana RS
+2. [DanaRS](http://www.sooil.com/eng/product/)
     
     * Альтернативы: 
     * [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-    * Другие помпы могут быть доступны в будущем, см. [возможные будущие драйверы помп](Future-possible-Pump-Drivers.md) для подробной информации.
+    * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+    * [DanaR](../Configuration/DanaR-Insulin-Pump.md)
+    * [Some old Medtronic pumps (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
+    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
 
-3. [Dexcom G5](https://dexcom.com)
+3. [Dexcom G6](https://dexcom.com)
     
     * Альтернативы: см. список возможных [ источников ГК](../Configuration/BG-Source.rst)
 
 4. Дополнительно: Sony Smartwatch 3 (SWR50)
     
-    * Альтернативы: см. [список проверенных телефонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) для AndroidAPS (ОС должна быть Android Wear)
+    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
 
 ## Настройки Nightscout
 
@@ -70,17 +73,19 @@
 
 ![Приложение Dexcom G (модифицированное)](../images/SampleSetupDexApp.png)
 
-Оригинальное приложение Dexcom из Google Play Store не будет работать, так как оно не передает данные другим приложениям. Поэтому требуется немного модифицированная версия от нашего сообщества. Только это измененное приложение Dexcom может общаться с AAPS. Кроме того, модифицированное приложение Dexcom может работать со всеми смартфонами Android, а не только находящимися в списке совместимости [Dexcom](https://www.dexcom.com/dexcom-international-compatibility). Версия mmol/l и версия mg/dl измененного приложения Dexcom доступны на https://github.com/dexcomapp/dexcomapp?files=1.
+Оригинальное приложение Dexcom из Google Play Store не будет работать, так как оно не передает данные другим приложениям. Поэтому требуется немного модифицированная версия от нашего сообщества. Только это измененное приложение Dexcom может общаться с AAPS. Кроме того, модифицированное приложение Dexcom может работать со всеми смартфонами Android, а не только находящимися в списке совместимости [Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-Для этого выполните следующие шаги на вашем смартфоне:
+A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
+
+To do this perform the following steps on your smartphone:
 
 1. Если оригинальное приложение Dexcom уже установлено: 
     * Остановить сенсор
-    * Удалить приложения через меню > Настройки > Приложения > Dexcom G5 Mobile > Удалить
-2. Загрузить модифицированное приложение Dexcom (проверьте единицы измерения mg/dl или mmol/l в соответствии с потребностями): <https://github.com/dexcomapp/dexcomapp?files=1>
-3. Установить измененное приложение Dexcom на смартфоне (= выберите загруженный файл APK)
-4. Запустите модифицированное приложение Dexcom, активируйте/закалибруйте сенсор в соответствии с инструкциями и подождите, пока завершится процесс разогрева.
-5. После того как первые два калибровки введены успешно и измененное приложение Dexcom показывает текущие значения глюкозы, настройте оповещения (сэндвич-меню на левой стороне экрана) следующим образом: 
+    * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
+2. Download modified Dexcom app (check unit mg/dl or mmol/l and region according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
+4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
+5. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
     * Чрезвычайно низкий `55mg/dl` / `3.1mmol/l` (не может быть отключен)
     * Низкий `ВЫКЛ`
     * Высокий `ВЫКЛ`
@@ -95,15 +100,15 @@
 3. [Сконфигурируйте AndroidAPS](../Configuration/Config-Builder.md) в соответствии с Вашими потребностями, используя мастер настройки или вручную
 4. В этом примере мы использовали (среди прочего)
 
-* Источник ГК: `Dexcom G5 App (модифицированный)` -- нажмите на значок шестеренки и активируйте `Загружать данные ГК на NS` и `Отправлять данные ГК на xDrip+` (см. [источник ГК](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
 
-![Настройки G5](../images/SampleSetupG5Settings.png)
+![G5 Settings](../images/SampleSetupG5Settings.png)
 
 * NS клиент активирован (см. [Клиент NS](../Configuration/Config-Builder#ns-profile) и [Настройки Nightscout](../Installing-AndroidAPS/Nightscout.md))
 
 ## Установите xDrip+
 
-xDrip+ это великолепное приложение с открытым исходным кодом, предлагающее бесчисленные возможности. В этой настройке, вопреки тому, для чего разработчики xDrip+ написали приложение, оно не используется для получения данных ГК из Dexcom G5, а только для вывода оповещений и для отображения текущего значения ГК, включая кривую в виджете на домашнем экране Android. С xDrip+ оповещения могут быть настроены гораздо более индивидуально, чем с программным обеспечением Dexcom, AAPS или Nightscout (без ограничений в выборе звуков, сигналов для дня/ночи и т. д.).
+xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G6, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
 
 1. Скачайте последнюю стабильную версию APK xDrip+ с помощью смартфона <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - а не версию из Google Play Store!
 2. Установите xDrip+ при помощи выбора загруженного файла APK.
@@ -113,31 +118,31 @@ xDrip+ это великолепное приложение с открытым 
     * Настройки > Будильники и оповещения > Оповещения о калибровке: отключены (напоминание через измененное приложение Dexcom)
     * Настройки > Источник аппаратных данных > 640G/EverSense
     * Настройки > Настройки Inter-app > Принимать Калибровки > `включено`
-    * Меню > Запуск сенсора (только "pro forma", не имеет ничего общего с работающим датчиком G5.). Необходимо включить иначе будет регулярно появляться сообщение об ошибке.) 
+    * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. Необходимо включить иначе будет регулярно появляться сообщение об ошибке.) 
 
-Более подробную информацию о xDrip+, см. здесь: [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
 
 ### Пример настройки оповещения
 
-"Чрезвычайно низкая ГК" (ниже 55 мг/дл. 3,1 ммол) является стандартным оповещением модифицированного приложения Dexcom, которое не может быть отключено.
+The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
-![Оповещения xDrip](../images/SampleSetupxDripWarning.png)
+![xDrip alarms](../images/SampleSetupxDripWarning.png)
 
-Совет на случай переговоров / посещений церкви / кино и т. д..:
+Tip for meetings / church visits / cinema etc..:
 
-Если в Samsung Galaxy S7 активирован режим "Не беспокоить" (меню > Настройки > Звуки и вибрация > Не беспокоить: ползунок вправо сторону (= вкл)), телефон только вибрирует во время оповещения о чрезвычайно низкой ГК и не подает звукового сигнала. Для других оповещений, настроенных через xDrip+ можно выбрать, игнорировать ли звуковой режим.
+If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
 
 ## Отключите энергосбережение
 
-На Samsung Galaxy S7 перейдите в меню > Настройки > Поддержка устройства > Батарея > Неотслеживаемые приложения > + Добавить приложения: Выберите одно за другим приложения AndroidAPS, Dexcom G5 Mobile, xDrip+ и Android Wear (если пользуетесь часами).
+On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G6 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
 
 ## Дополнительно: настройте Sony Smartwatch 3 (SWR50)
 
-С Android Wear жизнь с диабетом можно сделать еще более незаметной для окружающих. Часы могут использоваться для отображения текущего уровня глюкозы, состояния цикла и т. д. на запястье. Часы могут даже применяться для контроля AndroidAPS (напр. для дискретной подачи болюса на еду). Для этого дважды нажмите на значение ГК на циферблате AAPSv2. SWR50 обычно работает полный день до подзарядки (то же зарядное устройство, что и для Samsung Galaxy S7: microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. Часы могут даже применяться для контроля AndroidAPS (напр. для дискретной подачи болюса на еду). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
 ![Смарт часы](../images/SampleSetupSmartwatch.png)
 
-Подробности о информации, отображаемой на экране часов, можно найти [здесь](../Configuration/Watchfaces.md).
+Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
 * Установите приложение "Android Wear" на вашем смартфоне через Google Play Store и подключите смартфон в соответствии с инструкциями.
 * В AAPS выберите сэндвич-меню (в верхнем левом углу) > Конфигуратор > Общее (в нижней части списка) > Wear > активировать, на левой стороне нажмите на шестеренку > Настройки Wear и активируйте `Управление c часов`
@@ -146,4 +151,4 @@ xDrip+ это великолепное приложение с открытым 
 
 ## Настройки помпы
 
-см [помпа DanaR ](../Configuration/DanaR-Insulin-Pump.md)
+see [DanaRS pump](../Configuration/DanaRS-Insulin-Pump.md)
