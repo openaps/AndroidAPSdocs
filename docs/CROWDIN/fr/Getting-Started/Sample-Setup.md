@@ -1,10 +1,10 @@
-# Sample setup: Samsung S7, DanaRS, Dexcom G6 and Sony Smartwatch
+# Exemple d'installation : Samsung S7, DanaRS, Dexcom G6 et montre connectée Sony
 
 ![Exemple de configuration](../images/SampleSetup.png)
 
 ## Description
 
-Dans cette configuration, le smartphone Samsung Galaxy S7 est utilisé comme centre de contrôle de la boucle. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. D'autres appareils ne sont pas requis.
+Dans cette configuration, le smartphone Samsung Galaxy S7 est utilisé comme centre de contrôle de la boucle. L'application Dexcom légèrement modifiée lit les valeurs de glycémie du MGC Dexcom G6. AndroidAPS est utilisé pour contrôler la pompe à insuline Dana RS du fabricant coréen SOOIL via bluetooth. D'autres appareils ne sont pas requis.
 
 Comme l'application Dexcom offre uniquement des options d'alarme limitées, l'application open source xDrip+ est utilisée pour définir non seulement des alarmes élevées et basses, mais aussi des alarmes supplémentaires selon les besoins individuels.
 
@@ -26,8 +26,8 @@ Néanmoins, les données sont automatiquement envoyées à Nightscout "in the cl
     * [Accu-Check Combo](../Configuration/Accu-Chek-Combo-Pump.md)
     * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
     * [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-    * [Some old Medtronic pumps (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * [Quelques anciennes pompes Medtronic (également nécessaire : RileyLink/Gnarl hardware, téléphone Android avec bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
+    * D'autres pompes pourraient être disponibles à l'avenir, voir [futures pompes possibles](Future-possible-Pump-Drivers.md) pour plus de détails.
 
 3. [Dexcom G6](https://dexcom.com)
     
@@ -35,7 +35,7 @@ Néanmoins, les données sont automatiquement envoyées à Nightscout "in the cl
 
 4. Optionnel : Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * Alternatives : Toutes les [montres avec Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) devraient fonctionner correctement, pour plus de détails, voir la [liste des téléphones et montres testés](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) pour AndroidAPS (l'OS doit être Android Wear ou Wear OS)
 
 ## Configuration de Nightscout
 
@@ -75,17 +75,17 @@ Les services de géolocalisation ("GPS") doivent être activés pour que Bluetoo
 
 L'application Dexcom originale du Google Play Store ne fonctionnera pas parce qu'elle ne diffuse pas de valeurs vers d'autres applications. Par conséquent, une version légèrement modifiée par la communauté est nécessaire. Seule cette application Dexcom modifiée peut communiquer avec AAPS. De plus, l'application Dexcom modifiée peut être utilisée avec tous les smartphones Android et non pas seulement ceux de [la liste de compatibilité Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
+Une version en mmol/l et une version en mg/dl de l'application Dexcom G6 patchée sont disponibles ici <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Vous devez choisir l'application G6 pour votre région.
 
-To do this perform the following steps on your smartphone:
+Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 
 1. Si l'application Dexcom originale est déjà installée : 
     * Arrêter le capteur
-    * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l and region according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
-3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
-4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-5. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
+    * Désinstallez l'application via Menu > Paramètres > Apps > Dexcom G6 Mobile > Désinstaller
+2. Téléchargez l'application Dexcom modifiée (vérifiez l'unité mg/dl ou mmol/l selon vos besoins) : <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+3. Installez l'application Dexcom G6 patchée sur votre smartphone (= selectionnez le fichier apk téléchargé)
+4. Démarrez l'application Dexcom G6 patchée, activez/calibrez le capteur selon les instructions données et attendez la fin de la phase de démarrage.
+5. Une fois que l'application Dexcom patchée affiche la valeur actuelle de la glycémie, configurez les alertes (menu hamburger sur le côté gauche de l'écran) comme suit : 
     * Urgent glycémie basse `55mg/dl` / `3.1mmol/l` (impossible à désactiver)
     * Glycémie basse `OFF`
     * Glyécmie haute `OFF`
@@ -100,7 +100,7 @@ To do this perform the following steps on your smartphone:
 3. [Configurez AndroidAPS](../Configuration/Config-Builder.md) selon vos besoins en utilisant l'assistant de configuration ou manuellement
 4. Dans cet exemple de configuration, nous avons utilisé (entre autres)
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* Source GLY : `App Dexcom G6 (patché)` -- cliquez sur la roue crantée et activez `Remonter les Gly vers NS` et `Transmettre les Gly vers xDrip+` (voir [ source GLY ](../Configuration/BG-Source.rst))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
