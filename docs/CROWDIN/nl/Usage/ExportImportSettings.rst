@@ -15,29 +15,29 @@ On a Windows 10 computer it looks like this:
     :alt: AndroidAPS Preferences phone connected to computer
 
 
-How to export settings
+Instellingen exporteren
 ==================================================
-* **Export settings** on your old phone
+* **Exporteer instellingen op je oude telefoon
 
-  * Hamburger menu (top left corner of screen)
+  * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Maintenance
-  * Export settings
-  * File location will be shown
+  * Exporteer instellingen
+  * Je ziet nu de locatie waar jouw instellingenbestand zal worden opgeslagen
     
 .. image:: ../images/AAPS_ExportSettings.png
   :alt: AndroidAPS export settings
        
-* **Transfer** settings from old to new phone using the file location shown during export
+* ** Instellingen overdragen** van je oude naar je nieuwe telefoon doe je door de bestandslocatie op je oude telefoon op te zoeken, en het instellingenbestand te kopiëren naar jouw nieuwe telefoon. Bijvoorbeeld via Bluetooth, email, of met een usb-kabeltje via je computer.
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
+  Het geëxporteerde bestand heet "AndroidAPSPreferences" en moet in de hoofdmap van de hoofdmap van de telefoon staan (net als C: op je computer).
   
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone
+* **Installeer AndroidAPS op je nieuwe telefoon.
+* **Importeer instellingen op je nieuwe telefoon
 
-  * Hamburger menu (top left corner of screen)
+  * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
   * Maintenance
-  * Import settings
+  * Importeer instellingen
 
-* **Note for Dana RS users:**
+* **Tip voor Dana RS gebruikers:**
 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Daarom moet je handmatig een Bluetooth verbinding maken (via de Bluetooth-instellingen van je telefoon) tussen jouw nieuwe telefoon en je pomp.
+  * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Please pair new phone and pump manually.
