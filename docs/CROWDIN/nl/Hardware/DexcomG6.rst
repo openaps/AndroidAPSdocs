@@ -29,7 +29,7 @@ If using G6 with xDrip+
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
 * If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
-If using G6 with patched Dexcom app
+G6 met aangepaste Dexcom app
 ==================================================
 * Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
 
