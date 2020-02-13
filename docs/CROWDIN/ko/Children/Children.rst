@@ -9,8 +9,8 @@ AndroidAPS는 아이들을 모니터링 하기 위한 몇가지 옵션을 제공
 기능
 ==================================================
 AndroidAPS를 사용하면 아이들의 펌프는 아이들의 폰으로 제어될 수 있다.
-부모는 원격에서 혈당, COB 그리고 IOB 등과 같은 수치를 볼 수 있다. 부모폰의 **NSClient app**을 통해. Settings must be the same in AndroidAPS and NSClient.
-* Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
+부모는 원격에서 혈당, COB 그리고 IOB 등과 같은 수치를 볼 수 있다. 부모폰의 **NSClient app**을 통해. AndroidAPS와 NSClient에서의 설정은 동일해야 합니다.
+* 부모님폰에서 **xDrip+의 팔로워 모드**를 이용하면 알람을 받을 수 있습니다.
 `SMS 명령어를 사용한 AndroidAPS의 원격 제어 <../Children/SMS-Commands.html>`_.
 * NSClient 앱을 통해 원격 프로파일 변경, 임시 목표 변경.
 
