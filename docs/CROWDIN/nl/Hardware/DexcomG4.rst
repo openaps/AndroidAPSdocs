@@ -1,8 +1,8 @@
 Dexcom G4
 **************************************************
 
-If using G4 with OTG cable ('traditional' Nightscout)
+Bij gebruik van G4 met OTG-kabel ('traditioneel' Nightscout)
 ========================================================
-* If not already set up then download Nightscout Uploader app from the Play Store and follow instructions on `Nightscout <http://www.nightscout.info/wiki/welcome/basic-requirements>`_.
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* Als dit nog niet is ingesteld download dan de Nightscout Uploader app vanuit de Play Store en volg de instructies op de website van 'Nightscout <http://www.nightscout.info/wiki/welcome/basic-requirements>`_.
+* In AndroidAPS Instellingen: vul jouw Nightscout website en geheime API code in.
+* Selecteer NSClient in ConfigBuilder (instelling in AndroidAPS).
