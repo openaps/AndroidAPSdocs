@@ -53,9 +53,9 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
     - pour les US & le Canada, la fréquence utilisée est 916 Mhz
     - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Bolus Max sur la Pompe (U)** (en une heure) : doit avoir la même valeur que sur la pompe. Cela limite la quantité d'insuline que vous pouvez avoir en Bolus. Si vous allez au delà, le Bolus ne sera pas défini et une erreur sera retournée. Le Max qui peut être utilisé est 25, mais surtout veuillez définir une valeur correcte pour vous-même afin de ne pas avoir de surdose d'insuline.
-- **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
-- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
-- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
+- **Basal Max sur la Pompe (U/h)** : Doit avoir la même valeur que sur la pompe. Cela limite la quantité de basal que vous pouvez avoir en une heure. Par exemple, si vous voulez avoir le DBT max fixé à 500% et que le débit de basal le plus élevé de votre profil est de 1.5 U, alors vous devez définir le Basal Max à au moins 7,5. Si ce paramètre est incorrect (par exemple, si l'un des débit de basal était au-dessus de cette valeur), la pompe renverrai une erreur.
+- **Délai avant de démarrer le Bolus (s)** : C'est le délai avant que le bolus ne soit envoyé à la pompe, ainsi si vous changez d'avis, vous pouvez l'annnuler. L'annulation d'un bolus lors le bolus est en cours d'administration n'est pas pris en charge par la pompe (si vous voulez arrêter de bolus lors de l'exécution, vous devez suspendre la pompe et la reprendre ensuite).
+- **Encodage Medtronic** : Ce paramètre défini si l'encodage 4b6b fait par les appareils Medtronic doit être fait dans AndroidAPS ou dans le RileyLink. Si vous avez un RileyLink avec un firmware 2.x, la valeur par défaut sera d'utiliser l'encodage matériel (= fait par le RileyLink), si vous avez un firmware 0.x, ce paramètre sera ignoré.
 - **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
 - **RileyLink Configuration**: This will find your RileyLink/GNARL device.
 
@@ -63,7 +63,7 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
 
 ![Onglet MDT](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+Sur l'onglet de la pompe, vous pouvez voir plusieurs lignes qui affichent l'état actuel des pompes (et des connexions).
 
 - **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
 - **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
