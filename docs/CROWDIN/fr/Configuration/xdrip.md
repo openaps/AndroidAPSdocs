@@ -229,7 +229,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
 
 * Redémarrez le transmetteur (état du système - si pas de remplacement du capteur)
 * Ne rallumez pas le récepteur Dexcom d'origine (si utilisé) avant que xDrip+ affiche les premières lectures.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Faites un appui long sur l'icône rouge xDrip+ sur l'écran principal pour désactiver `Source Wizard Button`.
    
    ![xDrip+ Transmetteur Dexcom 1](../images/xDrip_Dexcom_Transmitter01.png)
    
@@ -248,7 +248,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
    
    Sur le 2ème écran d'état "G5/G6 Status", regardez `Queue Items` à peu prèt au milieu - cela devrait afficher quelque chose comme `(1) Stop Sensor`
    
-   Wait until this goes - usually within a few minutes.
+   Attendez jusqu'à ce que cela arrive - en général en quelques minutes.
    
    ![xDrip+ Arrêt Capteur Dexcom 1](../images/xDrip_Dexcom_StopSensor.png)
    
@@ -272,29 +272,29 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
    * Conserver le code pour un usage ultérieur (par ex. pour redémarrer le transmetteur s'il a dû être retiré)
    * Le Code peut également être trouvé dans [les journaux xDrip+](../Configuration/xdrip#retrieve-sensor-code) : Cliquez sur les 3 points du menu sur xDrip+ sur l'écran d'accueil et choisissez `Afficher le journal d'événements`.
 * Aucune calibration n'est nécessaire si vous utilisez le G6 en "mode natif". xDrip+ affichera automatiquement les glycémies après les 2 heures de démarrage.
-* Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
+* Ne rallumez pas le récepteur Dexcom d'origine (s'il est utilisé) avant que xDrip+ n'affiche les premières lectures.
    
-   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
+   ![xDrip+ Démarrage Capteur Dexcom 1](../images/xDrip_Dexcom_SensorStart01.png)
    
-   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
+   ![xDrip+ Démarrage Capteur Dexcom 2](../images/xDrip_Dexcom_SensorStart02.png)
 
 ### Récupérez le code du capteur
 
 * In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
 * Balayez vers la gauche une fois pour voir le deuxième écran.
    
-   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+   ![xDrip+ Récupérer Code Capteur Dexcom 2](../images/xDrip_Dexcom_SensorCode2.png)
 
 * Dexcom sensor code can also be found in xDrip+ logs.
 
 * Tap 3 dot menu (top right side on homescreen)
 * Select `View Event Logs` and search for "code"
    
-   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip+ Récupérer Code Capteur Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
-## Troubleshooting Dexcom G5/G6 and xDrip+
+## Dépannage Dexcom G5/G6 et xDrip+
 
-### Problem connecting transmitter
+### Problème de connexion du transmetteur
 
 * Transmitter must be shown in your smartphone's bluetooth settings.
 * Transmitter will be shown as Dexcom?? où XX represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
@@ -323,7 +323,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 
 * Ouvrir les paramètres Bluetooth -> Menu Hamburger (en haut à gauche de l'homescreen) -> Paramètres -> défilement vers le bas -> Paramètres moins courants -> Bluetooth Settings
    
-   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+   ![Paramètres xDrip+ Libre Bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Activez les paramètres suivants
    
@@ -333,12 +333,12 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 
 * Toutes les autres options doivent être désactivées
    
-   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+   ![Paramètres xDrip+ Libre Bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
 ### Connectez l'émetteur du Freestyle Libre & démarrez le capteur
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Démarrer Transmetteur Libre & Capteur 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Démarrer Transmetteur Libre & Capteur 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Démarrer Transmetteur Libre & Capteur 3](../images/xDrip_Libre_Transmitter03.png)
