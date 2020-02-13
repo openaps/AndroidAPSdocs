@@ -8,8 +8,8 @@ SMS 명령어
 
 사용 방법
 ==================================================
-* Most of the adjustments of temp targets, following AAPS etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-Bolus는 Nightscout를 통해 주입되지 않지만, SMS 명령으로 가능합니다.
+* AAPS와 작동하는 임시 목표와 관련된 대부분의 조정들은 인터넷에 연결된 폰에서 'NSclient 앱 <../Children/Children.html>` _ 을 통해 원격 조종이 가능합니다.
+Bolus는 Nightscout를 통해 원격 주입되지 않지만, SMS 명령으로 가능합니다.
 * 팔로워폰으로 아이폰(iPhone)을 사용한다면 NSClient를 사용할 수 없고 SMS 명령으로 가능합니다.
 
 * 당신의 안드로이드폰의 환경설정에서 애플리케이션 > AndroidAPS > 권한에 들어간 뒤 SMS를 활성화하세요
