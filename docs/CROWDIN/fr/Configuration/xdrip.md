@@ -280,15 +280,15 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
 
 ### Récupérez le code du capteur
 
-* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
+* Dans la version master datée du 18/05/2019 et les dernière pre-releases le code du capteur est affiché dans l'état du système (menu Hamburger en haut à gauche de l'écran d'accueil).
 * Balayez vers la gauche une fois pour voir le deuxième écran.
    
    ![xDrip+ Récupérer Code Capteur Dexcom 2](../images/xDrip_Dexcom_SensorCode2.png)
 
-* Dexcom sensor code can also be found in xDrip+ logs.
+* Le code du capteur Dexcom peut également être trouvé dans les journaux de xDrip+.
 
-* Tap 3 dot menu (top right side on homescreen)
-* Select `View Event Logs` and search for "code"
+* Appuyez sur le menu 3 points (en haut à droite de l'écran d'accueil)
+* Selectionnez `View Event Logs` et cherchez "code"
    
    ![xDrip+ Récupérer Code Capteur Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
@@ -296,26 +296,26 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, 
 
 ### Problème de connexion du transmetteur
 
-* Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? où XX represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
-* Open system status in xDrip+ (hamburger menu on top left side of home screen).
-* Check if your transmitter is shown on first status page ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings and restart collector.
-* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+* Le transmetteur doit être affiché dans les paramètres bluetooth de votre smartphone.
+* Le transmetteur sera affiché comme DexcomXX où XX sont les deux derniers chiffres du numéro de série du transmetteur) (par ex. DexcomHY).
+* Ouvrez l'Etat du système dans xDrip+ (menu hamburger sur le côté gauche de l'écran).
+* Vérifiez si votre transmetteur est affiché sur la première page d'état ("Classic Status Page").
+* Si non : Supprimez le transmetteur dans les paramètres Bluetooth du smartphone et redémarrez le transmetteur.
+* Attendez environ 5 min. jusqu'à ce que le transmetteur Dexcom se reconnecte automatiquement.
 
-### Problem when starting new sensor
+### Problème lors du démarrage du nouveau capteur
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
+Veuillez noter que la méthode suivante risque de ne pas fonctionner si le numéro de série de votre transmetteur Dexcom G6 commence par 8G, 8H ou 8J.
 
-* Native sensor is marked as "FAILED: Sensor Failed Start"
+* Le capteur natif est indiqué comme "FAILED: Sensor Failed Start"
 * Arrêter le capteur
 * Redémarrez votre téléphone
-* Start sensor with code 0000 (four times zero)
-* Wait 15 minutes
+* Démarrez le capteur avec le code 0000 (quatre fois zéro)
+* Attendez 15 minutes
 * Arrêter le capteur
-* Start sensor with "real" code (printed on the adhesive protector)
+* Démarrez le capteur avec le code "réel" (imprimé sur la protection adhésive)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Vérifiez dans les journaux xDrip+ si xDrip+ commence à compter "Duration: 1 minute" (et ainsi de suite). Ce n'est que dans les journaux xDrip+ que vous pouvez détecter à un stade précoce si xdrip+ a arrêté un capteur. Le dernier état n'est pas toujours affiché correctement en bas de l'écran de démarrage.
 
 ## xDrip+ & Freestyle Libre
 
