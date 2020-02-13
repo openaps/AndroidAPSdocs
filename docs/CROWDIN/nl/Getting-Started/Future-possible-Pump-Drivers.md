@@ -6,13 +6,13 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Medtronic
 
-**Status:** Sommige oudere versies van Medtronic pompen zijn geschikt om mee te loopen. Met andere systemen gebeurt dit al volop. Aan AndroidAPS wordt gewerkt. Nieuwere Medtronic modellen zijn NIET geschikt (zie kopje "Loopbare versies" verderop)
+**Status:** Sommige oudere versies van Medtronic pompen zijn geschikt om mee te loopen, zie hieronder. Nieuwere Medtronic modellen zijn NIET geschikt (zie kopje "Loopbare versies" verderop)
 
-**Andere systemen:** Oudere modellen zijn al jaren geschikt voor OpenAPS en Loop. Over beide systemen is via Google een hoop informatie te vinden.
+**Andere systemen:** OpenAPS en Loop. Over beide systemen is via Google een hoop informatie te vinden.
 
 **Java implementaties:** Gedeeltelijk beschikbaar [Rountrip2](https://github.com/TC2013/Roundtrip2), en [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS)
 
-**AAPS implementatie status:** Werk in uitvoering. Zie [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Het meeste werk is gedaan op [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) om het framework en de commando's werkend te krijgen. Er is project (Medtronic) en tickets zijn geopend voor toekomstige ontwikkeling op die repository, ontwikkeling wordt gedaan op branch dev_medtronic (die daar de standaard branch is). Er is ook een gitter foom: RileyLinkAAPS/Lobby. AAPS. 0.10 test "release" is uit, met ongeveer 95% van alle functionaliteit, op dit moment ontbreken nog twee fucties: "Toediening gestopt" meldingen op de pomp en synchroninisatie van TBRs. Project zal waarschijnlijk eind juli 2019 worden samengevoegd met de hoofd repository van AndroidAPS. Voor details en timing zie [Andy's projectbord](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
+**AAPS implementatie status:** Afgerond, in de nieuwste versie van AAPS kun je oudere Medtronic pompen gebruiken. Zie [Andy's AndroidAPS fork](https://github.com/andyrozman/AndroidAPS), branch medtronic_andy. Het meeste werk is gedaan op [RileyLinkAAPS](https://github.com/andyrozman/RileyLinkAAPS) om het framework en de commando's werkend te krijgen. Er is project (Medtronic) en tickets zijn geopend voor toekomstige ontwikkeling op die repository, ontwikkeling wordt gedaan op branch dev_medtronic (die daar de standaard branch is). Er is ook een gitter foom: RileyLinkAAPS/Lobby. AAPS. 0.10 test "release" is uit, met ongeveer 95% van alle functionaliteit, op dit moment ontbreken nog twee fucties: "Toediening gestopt" meldingen op de pomp en synchroninisatie van TBRs. Project zal waarschijnlijk eind juli 2019 worden samengevoegd met de hoofd repository van AndroidAPS. Voor details en timing zie [Andy's projectbord](https://github.com/andyrozman/RileyLinkAAPS/projects/1).
 
 **Hardware eisen voor AAPS:** RileyLink (met 916MHz antenne) + Android telefoon met Bluetooth
 
@@ -30,7 +30,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 - OmniCore for AndroidAPS (not release yet, C# code running "natively" on Android, requires only RileyLink and specially modified AndroidAPS - next version of Omnipy project).
 - [iOS Loop](https://loopkit.github.io/loopdocs/) (stable, released, requires RileyLink).
 
-
+**Java implementaties:** Tot nu toe geen.
 
 **AAPS implementation status:** Work on a native Java driver for Omnipod on AAPS is progressing on [AAPS-Omnipod/AndroidAPS](https://github.com/AAPS-Omnipod/AndroidAPS) (omnipod_eros branch). It does not require a Raspberry Pi. You can follow progress on [the OmniAPS Slack](https://omniaps.slack.com/) on channel android-driver. A first public test version is expected to be released around January 2020.
 
