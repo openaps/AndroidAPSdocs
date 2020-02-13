@@ -150,7 +150,7 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G, 8H or 
 
 ### Étendre la durée de vie de l'émetteur
 
-* Jusqu'à présent la durée de vie des émetteurs dont le numéro de série commence par 8G ou 8H starts with 8G, 8H or 8J.
+* Jusqu'à présent la durée de vie des émetteurs dont le numéro de série starts with 8G, 8H or 8J.
 * Pour éviter les difficultés de démarrage de capteurs il est fortement recommandé d'étendre la durée de vie de l'émetteur avant le jour 100 de la première utilisation.
 * La session en cours du capteur sera stoppée lors de l'extension de la durée de vie de l'émetteur. Donc étendre la durée de vie avant un changement de capteur, ou soyez conscient qu'il y aura une nouvelle phase de démarrage du capteur d'une durée de 2h.
 * Arrêtez le capteur manuellement via le menu hamburger.
