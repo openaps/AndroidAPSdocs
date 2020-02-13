@@ -127,15 +127,15 @@ Bolus
 
 문제해결
 ==================================================
-Multiple SMS
+무한 SMS
 --------------------------------------------------
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+동일한 메세지를 끊임없이 계속 수신하는 경우 (예. 프로파일 변경) 아마도 다른 앱과 무한루프가 되게 설정되었을 가능성이 있습니다. 예를 들면 그 앱이 xDrip+일 수가 있습니다. 따라서 그런경우엔, xDrip+(또는 다른앱)이 treatments를 NS에 업로드하지 않도록 하세요. 
 
-If the other app is installed on multiple phones make sure to deactive upload on all of them.
+다른 앱이 여러 휴대 전화에 설치된 경우 모든 휴대 전화에서 업로드를 비활성화해야합니다.
 
-SMS commands not working on Samsung phones
+삼성폰에서 SMS 명령어가 작동하지 않을 경우
 --------------------------------------------------
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+갤럭시 S10 폰 업데이트 이후 SMS 명령어가 작동하지 않는다는 문제가 보고되었습니다. '채팅 메세지로 보내기'를 비활성화하면 해결될 수 있습니다.
 
 .. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+  :alt: 채팅 메세지로 보내기 비활성화하기
