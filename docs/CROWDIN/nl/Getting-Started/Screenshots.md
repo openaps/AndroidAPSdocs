@@ -27,7 +27,7 @@ Aanpassingen maak je door een veld lang ingedrukt te houden. Houd bijvoorbeeld d
 * Insuline aan boord (IOB)
 * koolhydraten aan boord (Carbs On Board, COB)
 
-De optionele [statusindicatoren](../Configuration/Preferences#overview) (CAN | INS | RES | SEN | BAT) geeft een visuele waarschuwing voor laag reservoir, batterij bijna leeg, en infuuswissel.
+De optionele [statusindicatoren](../Configuration/Preferences#statusindicatoren) (CAN | INS | RES | SEN | BAT) geeft een visuele waarschuwing voor laag reservoir, batterij bijna leeg, en infuuswissel.
 
 De nog werkzame insuline (IOB) staat op nul als de loop in de afgelopen tijd jouw ingestelde basaalstand heeft afgegeven en er geen insuline meer over is van een eerdere bolus. De getallen binnen de haakjes is hoeveel insuline er nog werkzaam is van een eerdere bolus, en hoeveel verschil er zit tussen de door jou ingestelde basaalstanden en de tijdelijke basaalstanden (TBRs, temporary basal rates) die AndroidAPS heeft gegeven. Dat tweede getal zal negatief zijn, als je afgelopen tijd lagere tijdelijke basaalstanden hebt gehad.
 
@@ -46,7 +46,7 @@ De verlengde lijnen zijn de voorspelde BG waardes en trends - wanneer je die heb
 * ** Oranje ** lijn: [COB](../Usage/COB-calculation.rst) (kleur wordt gebruikt om COB en koolhydraten weer te geven)
 * ** Donker blauwe ** lijn: IOB (kleur wordt gebruikt om IOB en insuline weer te geven)
 * **Licht blauwe** lijn: zero-temp (voorspelde BG als tijdelijke basaalstand op 0% zou worden ingesteld)
-* **Donker gele** lijn: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals, onaangekondigde maaltijden)
+* **Donker gele** lijn: [UAM](../Configuration/Sensitivity-detection-and-COB#gevoeligheid-oref1) (un-announced meals, onaangekondigde maaltijden)
 
 Deze lijnen laten voorspellingen zien aan de hand van verschillende scenario's. Dit zijn theoretische scenario's, gebaseerd op gegevens van dit moment. Omdat het systeem continu aanpassingen maakt, zullen de voorspellingen ook steeds worden aangepast. Dit betekent ook dat de kans klein is dat één van de voorspellingslijnen die je op een willekeurig moment ziet, ook het daadwerkelijke verloop zal zijn van je toekomstige bloedsuiker. De scenario's zijn: Eentje waarbij rekening wordt gehouden met de huidige absorptie van koolhydraten (COB). Eentje waarbij alleen met insuline rekening wordt gehouden (IOB). Eentje die laat zien wat er gebeurt als er vanaf nu een tijdelijke basaalstand van nul (zero-temp) wordt gegeven zonder verder rekening te houden met BG afwijkingen. En eentje waarbij het systeem een BG stijging heeft opgemerkt en ervan uitgaat dat je koolhydraten hebt gegeten zonder die ingevoerd te hebben (UAM, unannounced meal).
 
@@ -64,12 +64,12 @@ De weergave kun je aanpassen met de opties uit sectie D.
    * **GRIJZE** balken zijn een afwijking door koolhydraten. 
    * **GROEN** is wanneer de BG hoger is dan het algoritme verwacht. 
    * **ROOD** is wanneer de BG lager is dan het algoritme verwacht.
-* **Sensitivity** (white line): It shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. Berekent veranderingen aan jouw insuline gevoeligheid veroorzaakt door sporten, hormonen, etc.
+* **Gevoeligheid** (witte lijn): Toont de gevoeligheid die [Autosens](../Usage/Open-APS-features#gevoeligheidsdetectie_autosens) gedetecteerd heeft. Berekent veranderingen aan jouw insuline gevoeligheid veroorzaakt door sporten, hormonen, etc.
 * ** Insuline activiteit ** (gele lijn): Toont de insuine activiteit, berekend aan de hand van het door jou gekozen insuline-profiel (het wordt niet afgeleid van IOB). De waarde is hoger wanneer het werkingsprofiel van jouw insuline dichter bij zijn piektijd zit. Wanneer de IOB afneemt dan wordt de waarde negatief. 
 
 ### Sectie G
 
-Met deze knoppen kun je een bolus geven (zonder de bolus calculator te gebruiken), of een BG calibratie (met vingerprik) toevoegen. Also a Quick Wizard button would be displayed here if configured in [Config Builder](../Configuration/Config-Builder#quickwizard-settings).
+Met deze knoppen kun je een bolus geven (zonder de bolus calculator te gebruiken), of een BG calibratie (met vingerprik) toevoegen. Je kunt hier ook een Vaste Maaltijd-knop laten weergeven als je dat hebt ingesteld in de [ Configurator](../Configuration/Config-Builder#vaste-maaltijd-instellingen).
 
 ## Boluscalcuator
 
@@ -105,7 +105,7 @@ Wanneer je een bolus wilt geven voor extra koolhydraten, vlak na een maaltijdbol
 
 ![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorbtion.png)
 
-Als je de waarschuwing hierboven ziet na het gebruik van de boluswizard, dan heeft AndroidAPS vastgesteld dat de berekende COB-waarde misschien onjuist is. So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! Zie voor meer informatie de [COB Berekening](../Usage/COB-calculation#detection-of-wrong-cob-values) pagina.
+Als je de waarschuwing hierboven ziet na het gebruik van de boluswizard, dan heeft AndroidAPS vastgesteld dat de berekende COB-waarde misschien onjuist is. So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! Zie voor meer informatie de [COB Berekening](../Usage/COB-calculation#detectie-van-verkeerde-cob-waarden) pagina.
 
 ## Insuline curve
 
