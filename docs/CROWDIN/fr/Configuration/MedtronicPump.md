@@ -108,15 +108,15 @@ Lorsque le pilote Medtronic est sélectionné, 3 actions possibles peuvent être
 
 ### Utilisateurs OpenAPS
 
-When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+Lorsque vous commencez à utiliser AndroidAPS, le contrôleur principal est AndroidAPS et toutes les commandes doivent passer par lui. L'envoi de bolus doit passer par AAPS et ne pas être fait sur la pompe. Nous avons un code en place qui détecte n'importe quelle commande exécutée sur la pompe, mais si vous pouvez vous devez éviter cela (je pense que nous avons corrigé tous les problèmes avec l'historique de la pompe et la synchronisation avec l'historique AAPS, mais de petits problèmes peuvent encore arriver, surtout si vous utilisez la "configuration" comme elle n'était pas destinée à être utilisée). Depuis que j'ai commencé à utiliser AndroidAPS avec ma pompe, je n'ai pas touché la pompe, sauf quand je dois changer le réservoir, et c'est de cette façon qu'il faut utiliser AndroidAPS.
 
-### Logging
+### Journaux
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Étant donné que le pilote Medtronic est très récent, vous devez activer les journaux, afin que nous puissions déboguer et corriger les problèmes, si de nouveaux devaient se produire. Cliquez sur l'icône hamburger dans le coin supérieur gauche, sélectionnez Maintenance et Paramètres Journal. Les options Pump, PumpComm, PumpBTComm doivent être cochées.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+Lorsque vous redémarrez RileyLink ou GNARL, vous devez effectuer une nouvelle opération de Réglage (action "Réveil et Réglage"), ou renvoyer les paramètres de communication (action "Réinitialiser la config. RileyLink"), sinon la communication échouera.
 
 ### MGC
 
@@ -124,7 +124,7 @@ La MGC Medtronic n'est actuellement PAS prise en charge.
 
 ### Utilisation manuelle de la pompe
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Vous devez normalement éviter de faire des traitements manuels sur votre pompe. Toutes les commandes (bolus, DBT) doivent passer par AndroidAPS, mais s'il vous arrive de faire des commandes manuelles, n'exécutez PAS de commandes à une fréquence inférieure à 3 minutes (donc si vous voulez faire 2 bolus, pour quelque raison que ce soit, le deuxième doit être lancé au minimum 3 minutes après le premier).
 
 ## Modifications de fuseau horaire, changements d'heure ou Voyage avec la pompe Medtronic et AndroidAPS
 
@@ -148,18 +148,18 @@ Oui. L'auteur de GNARL a ajouté toutes les fonctions utilisées par le pilote M
 
 ### Où puis-je obtenir RileyLink ou GNARL ?
 
-Like mentioned before you can get devices here:
+Comme indiqué précédemment, vous pouvez obtenir ces appareils ici :
 
-- RileyLink - You can get device here - [getrileylink.org](https://getrileylink.org/).
-- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
+- RileyLink - Vous pouvez vous le procurer ici - [getrileylink.org](https://getrileylink.org/).
+- GNARL - Vous pouvez obtenir des informations ici, mais le matériel doit être commandé ailleurs ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
 
 ### Que faire si je perds la connexion à RileyLink et/ou à la pompe ?
 
-1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
-2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink.
-3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action.
-4. Try 3 and 2 together.
-5. Reset RileyLink and reset phone.
+1. Exécutez l'action "Réveil et Réglage", cela va essayer de trouver la bonne fréquence pour communiquer avec la pompe.
+2. Désactivez le Bluetooth, attendez 10s et réactivez-le. Cela va forcer la reconnexion au RileyLink.
+3. Réinitialisez le RileyLink, après cela, n'oubliez pas d'exécuter l'action "Réinitialiser la config. RileyLink".
+4. Essayez 3 et 2 ensemble.
+5. Réinitialisez RileyLink et réinitialisez le téléphone.
 
 ### Comment déterminer la fréquence utilisée par ma pompe
 
