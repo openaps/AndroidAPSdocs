@@ -56,8 +56,8 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
 - **Basal Max sur la Pompe (U/h)** : Doit avoir la même valeur que sur la pompe. Cela limite la quantité de basal que vous pouvez avoir en une heure. Par exemple, si vous voulez avoir le DBT max fixé à 500% et que le débit de basal le plus élevé de votre profil est de 1.5 U, alors vous devez définir le Basal Max à au moins 7,5. Si ce paramètre est incorrect (par exemple, si l'un des débit de basal était au-dessus de cette valeur), la pompe renverrai une erreur.
 - **Délai avant de démarrer le Bolus (s)** : C'est le délai avant que le bolus ne soit envoyé à la pompe, ainsi si vous changez d'avis, vous pouvez l'annnuler. L'annulation d'un bolus lors le bolus est en cours d'administration n'est pas pris en charge par la pompe (si vous voulez arrêter de bolus lors de l'exécution, vous devez suspendre la pompe et la reprendre ensuite).
 - **Encodage Medtronic** : Ce paramètre défini si l'encodage 4b6b fait par les appareils Medtronic doit être fait dans AndroidAPS ou dans le RileyLink. Si vous avez un RileyLink avec un firmware 2.x, la valeur par défaut sera d'utiliser l'encodage matériel (= fait par le RileyLink), si vous avez un firmware 0.x, ce paramètre sera ignoré.
-- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
-- **RileyLink Configuration**: This will find your RileyLink/GNARL device.
+- **Type de batterie (Power View)** : Si vous voulez voir la charge de la pile de votre pompe, vous devez sélectionner le type de pile que vous utilisez (actuellement Lithium ou Alkaline sont supportées), cela changera l'affichage pour afficher le pourcentage et la tension.
+- **Configuration RileyLink** : Vous trouverez votre appareil RileyLink/GNARL.
 
 ## Onglet MEDTRONIC (MDT)
 
@@ -65,27 +65,27 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
 
 Sur l'onglet de la pompe, vous pouvez voir plusieurs lignes qui affichent l'état actuel des pompes (et des connexions).
 
-- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
-- **Last connection**: Time when last connection to pump was successful.
-- **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
-- **Temp basal**: Temp basal that is running or empty.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **État RileyLink**: Il affiche l'état de la connexion RileyLink. Le téléphone doit être connecté en permanence au RileyLink.
+- **État de la pompe** : État de la connexion avec la pompe, il peut avoir plusieurs valeurs, mais surtout nous allons voir une icône de veille (lorsque la connexion à la pompe n'est pas active), lorsque la commande est en train de s'exécuter, nous pouvons voir "Réveil en cours", quand AAPS essaye se connecter à votre pompe ou une description de toute commande qui pourrait fonctionner sur la pompe (ex.: Obtenir l'heure de la pompe, Paramétrer TBR, etc).
+- **Niveau batterie** : Affiche l'état de la pile en fonction de votre configuration. Il peut s'agir d'une simple icône indiquant si la pile est vide ou pleine (rouge si la pile devient critique, moins de 20%), ou un pourcentage et une tension.
+- **Dernière connexion** : Heure de la dernière connexion réussie à la pompe.
+- **Dernier Bolus** : Heure du dernier bolus délivré.
+- **Taux du débit Basal** : Il s'agit du débit basal en cours sur la pompe à cette heure.
+- **Basal temporaire** : Basal temporaire en cours d'exécution ou vide.
+- **Réservoir** : Indique la quantité d'insuline présente dans le réservoir (mise à jour au minimum toutes les heures).
+- **Erreurs** : Affiche une erreur en cas d'incident (le plus souvent il s'agit d'une erreur dans la configuration).
 
-On lower end we have 3 buttons:
+Sur la partie inférieure, nous avons 3 boutons :
 
-- **Refresh** is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Actualiser** est pour rafraîchir l'état. Cette action ne doit être utilisée que lorsque la connexion n'a pas été établie pendant longtemps, car cette action va réinitialiser les données relatives à la pompe (extraction de l'historique, heure de la pompe, récupération du profil, état de la pile, etc).
+- **Historique de la Pompe** : Affiche l'historique de la pompe (voir [ci-dessous](../Configuration/MedtronicPump#pump-history))
+- **État du RileyLink**: Affiche l'état du RileyLink (voir [ci-dessous](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
 ## Historique pompe
 
 ![Boîte de dialogue Historique pompe](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+L'historique de la pompe est récupéré toutes les 5 minutes et stocké localement. L'historique est conservé sur les dernières 24 heures, donc les données les plus ancienne sont supprimées quand de nouvelles données sont ajoutées. Il s'agit d'un moyen simple de voir l'historique de la pompe (certaines entrées de la pompe peuvent ne pas être affichées, car elles ne sont pas pertinentes - par ex. la configuration des fonctions qui ne sont pas utilisées par AndroidAPS).
 
 ## État RL (RileyLink État)
 
