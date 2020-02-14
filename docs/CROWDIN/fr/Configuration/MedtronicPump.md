@@ -93,16 +93,16 @@ L'historique de la pompe est récupéré toutes les 5 minutes et stocké localem
 
 La boîte de dialogue a deux onglets :
 
-- **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Paramètres** : Affiche les paramètres relatifs au RileyLink : adresse configurée, périphérique connecté, état de connexion, erreur de connexion et versions du firmware RileyLink. Le type d'appareil est toujours Pompe Medtronic, Modèle affiche votre modèle de pompe, Numéro de série est le numéro de la pompe configuré, Fréquence de pompe indique la fréquence utilisée, Dernière fréquence est la dernière fréquence utilisée.
+- **Historique** : Affiche l'historique des communications, pour le RileyLink cela concerne les changements d'état et pour le Medtronic les commandes envoyées à la pompe.
 
 ## Actions
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Lorsque le pilote Medtronic est sélectionné, 3 actions possibles peuvent être ajoutées à l'onglet Actions :
 
-- **Wake and Tune Up** - If you see that your AndroidAPS hasn't contacted your pump in a while (it should contact it every 5 minutes), you can force Tune Up. This will try to contact your pump, by searching all sub frequencies on which Pump can be contacted. If it finds one it will set it as your default frequency. 
-- **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-- **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
+- **Réveil et Réglage** - Si vous voyez que AndroidAPS ne s'est pas connectée à votre pompe pendant un certain temps (il doit le faire toutes les 5 minutes), vous pouvez forcer la connexion. Cela tentera de communiquer avec la pompe, par la recherche de toutes les sous-fréquences sur laquelle la Pompe peut être contactée. S'il en trouve une, il la définira comme la fréquence par défaut. 
+- **Réinitialiser la config. RileyLink** - Si vous réinitialisez votre RileyLink/GNARL, vous devez utiliser cette action pour que le périphérique puisse être reconfiguré (jeu de fréquences, types de fréquence, type d'encodage).
+- **Effacer le bloc Bolus** - Lorsque vous démarrez le bolus, un bloc bolus est configuré, ce qui empêche l'envoi de toute commande à la pompe. Si vous arrêtez votre pompe et que vous la redémarrez (pour annuler le bolus), vous pouvez ensuite supprimer ce bloc. Cette option n'est présente que lorsqu'un bolus est en cours... 
 
 ## Remarques importantes
 
