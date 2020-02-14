@@ -22,12 +22,12 @@ Pour en savoir plus sur les détails et les raisons de ces recommandations, cons
 Si vous utilisez le G6 avec xdrip+
 ==================================================
 * L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
-* Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
-* Select xdrip in ConfigBuilder (setting in AndroidAPS).
-* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`_
-* If AAPS does not receive BG values when phone is in airplane mode use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter en même temps xDrip+ et l'application Dexcom avec le transmetteur !**
+* Si vous avez besoin de clarté et que vous voulez profiter des alertes xDrip+, utilisez `l'application Dexcom patchée </Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ avec la diffusion locale vers xDrip+.
+* Si vous ne l'avez pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* Sélectionnez xDrip+ dans le Générateur de configuration (Menu Paramètres dans AndroidAPS).
+* Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_
+* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez `Identify receiver` comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
 
 Si vous utilisez le G6 avec l'application Dexcom patchée
 ==================================================
@@ -53,9 +53,9 @@ Dépannages spécifiques à Dexcom G6
 * Transmetteurs avec les numéros de série commençant par 8G ont besoin de la version du 25 juillet ou plus récente.
 * xDrip+ et l'Application Dexcom ne peuvent pas être connectés à l'émetteur en même temps.
 * Attendre au moins 15 min. entre l'arrêt et le démarrage d'un capteur.
-* Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
-* Do not enable "restart sensors" while setting a new sensor
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* N'antidatez jamais l'heure de l'insertion. Répondez toujours à la question "Est-ce que vous l'avez inséré aujourd'hui?" par "Oui, aujourd'hui".
+* Ne pas activer "redémarrer capteurs" lorsque vous configurez un nouveau capteur
+* Ne démarrez pas un nouveau capteur avant que l'information suivante ne soit affichée dans la page Classic Status Page -> G5/G6 status -> PhoneServiceState :
 
   * Numéro de série du transmetteur commençant par 80 ou 81 : "Got data hh:mm" (par ex. "Got data 19:04")
   * Numéro de série du transmetteur commençant par 8G, 8H ou 8J : "Got glucose hh:mm" (par ex. "Got glucose 19:04") ou "Got now raw hh:mm" (par ex. "Got now raw 19:04")
