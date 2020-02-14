@@ -22,7 +22,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
 
-Detection of wrong COB values
+Detectie van verkeerde COB-waarden
 ==================================================
 
 As of version 2.4, AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard. 
