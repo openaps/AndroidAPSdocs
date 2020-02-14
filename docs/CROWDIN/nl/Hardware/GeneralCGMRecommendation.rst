@@ -37,10 +37,10 @@ Vaak kan een "Sensor fout" worden gecorrigeerd door te wachten en te zorgen dat 
 --------------------------------------------------
 Wanneer jouw waardes alle kanten op springen, zou je kunnen proberen om de instellingen voor Noise Blocking in xDrip+ te wijzigen (Settings - Inter-App Settings - Noise Blocking) d.w.z. "Block Very High noise and worse".  Zie ook Filteren van glucosewaardes <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
-Negative Sensor Age
+Negatieve sensorleeftijd
 --------------------------------------------------
 .. image:: ../images/Troubleshooting_SensorAge.png
-  :alt: Negative sensor age
+  :alt: Negatieve sensorleeftijd
 
-This occurs if there is either a double "CGM Sensor Insert" entry in careportal or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
+Dit gebeurt als er een dubbele "CGM Sensor Ingebracht"-invoer in Careportal is gedaan of wanneer eenverkeerde datum is ingevuld. Ga naar de Behandelingen tab > careportal en verwijder het verkeerde item.
 
