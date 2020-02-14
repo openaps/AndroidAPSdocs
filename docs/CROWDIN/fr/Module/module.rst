@@ -124,7 +124,7 @@ Que faire en attendant les modules
 ==================================================
 Il faut parfois un certain temps pour pouvoir activer tous les modules pour fermer la boucle. Mais pas de soucis, il y a beaucoup de choses que vous pouvez faire en attendant. Il est NECESSAIRE de vérifier et (le cas échéant) adapter les débits de basal (DB), ratio Glucide/Insulin (G/I), la sensibilité à l'insulin (SI) etc. Et la boucle ouverte peut être un bon moyen pour tester le système, et se familiariser avec AndroidAPS. En utilisant ce mode, AndroidAPS donne des conseils de traitement que vous pouvez exécuter manuellement.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Vous pouvez continuer à lire la documentation ici présente, entrer en contact avec d'autres boucleurs en ligne ou hors ligne, `lire les documentations <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ ou ce que d'autres boucleurs ont écrits (vous devez toutefois rester prudent, tout n'est pas correct ou adapté à votre situation).
 
-**Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
+**Fini ?**
+Si vous avez tous vos composants AAPS ensemble (bravo !) ou au moins suffisamment pour pouvoir démarrer en mode Boucle Ouverte, vous devez d'abord lire la page `Objectifs <../Usage/Objectives.html>`_ avant chaque nouvel objectif et configurer vos `composants <../index.html#configuration-des-composants>`_.
