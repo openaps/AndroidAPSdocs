@@ -3,8 +3,8 @@ Dexcom G6
 Les bases en premier
 ==================================================
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`_.
-* For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the `latest nightly built xDrip+ versions <https://github.com/NightscoutFoundation/xDrip/releases>`_. Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* Suivez les recommandations générales relatives à l'hygiène des MGG et du capteur `here <../Hardware/GeneralCGMRecommendation.html>`_.
+* Pour les transmetteurs G6 fabriqués après l'automne / fin 2018, veuillez vous assurez que vous utilisez bien l'une des dernières versions de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. Ces transmetteurs ont un nouveau firmware et la dernière version stable de xDrip+ (10/01/2019) ne fonctionne pas avec.
 
 Conseils généraux pour boucler avec un G6
 ==================================================
@@ -31,7 +31,7 @@ Si vous utilisez le G6 avec xdrip+
 
 Si vous utilisez le G6 avec l'application Dexcom patchée
 ==================================================
-* Download the apk from `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, and choose the version that fits your needs (mg/dl or mmol/l version, G6).
+* Téléchargez l'apk ici `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, et choisissez la version correspondant à vos besoins (version G6 en mg/dl ou mmol/l).
 
    * Le dossier 2.3 est destiné aux utilisateurs d'AndroidAPS 2.3, le dossier 2.4 pour les utilisateurs de AAPS 2.5.
    * Ouvrir https://play.google.com/store/search?q=dexcom%20g6 sur votre ordinateur. La région sera visible dans l'URL.
@@ -57,18 +57,18 @@ Dépannages spécifiques à Dexcom G6
 * Do not enable "restart sensors" while setting a new sensor
 * Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
 
-  * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-  * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+  * Numéro de série du transmetteur commençant par 80 ou 81 : "Got data hh:mm" (par ex. "Got data 19:04")
+  * Numéro de série du transmetteur commençant par 8G, 8H ou 8J : "Got glucose hh:mm" (par ex. "Got glucose 19:04") ou "Got now raw hh:mm" (par ex. "Got now raw 19:04")
 
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
 Dépannage général
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#Troubleshooting>`_.
+Les dépannages généraux concernant les MGC peuvent être trouvés `ici <./GeneralCGMRecommendation.html#depannage>`_.
 
 Nouvel émetteur avec capteur en cours
 --------------------------------------------------
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
+Si vous changez de transmetteur avec un capteur en cours d'exécution, vous pouvez essayer de retirer le transmetteur sans endommager le montage du capteur. Une vidéo peut être trouvée ici `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
 
 
