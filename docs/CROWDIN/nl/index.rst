@@ -166,11 +166,11 @@ Hoe je zelf kunt helpen
    :glob:
 
    Hoe kan je helpen <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   De app of wiki vertalen <./translations.md>
+   De wiki verbeteren <./make-a-PR>
 
 
-.. note:: 
+.. opmerking:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
