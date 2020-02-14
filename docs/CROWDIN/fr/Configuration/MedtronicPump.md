@@ -128,11 +128,11 @@ Vous devez normalement éviter de faire des traitements manuels sur votre pompe.
 
 ## Modifications de fuseau horaire, changements d'heure ou Voyage avec la pompe Medtronic et AndroidAPS
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+Une chose importante à savoir est que vous ne devez jamais désactiver la boucle quand vous voyagez (sauf si votre MGC ne marche pas en mode hors connexion). AAPS détecte automatiquement les changements d'heure et envoie une commande à la pompe pour la changer quand l'heure du téléphone est modifiée.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Maintenant si vous voyagez vers l'Est et vous changez de fuseau horaire avec l'ajout d'heures (par ex. de GMT+0 à GMT+2), l'historique de la pompe n'aura pas de problème et vous n'avez pas à vous inquiéter... Mais si vous voyagez vers l'ouest et que vos fuseaux horaires changent en supprimant les heures (de GMT +2 à GMT+0), alors la sychronisation peut poser des problèmes. En clair, cela signifie que pour les prochaines x heures, vous devez être prudent, parce que votre IA, peut être mal calculée.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Nous sommes conscient de ce problème, et nous étudions actuellement une solution possible (voir https://github.com/andyrozman/RileyLinkAAPS/issues/145), mais pour l'instant, ayez en tête cette information lorsque vous voyagez.
 
 ## Questions fréquentes
 
