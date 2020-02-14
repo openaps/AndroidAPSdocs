@@ -1,9 +1,9 @@
-Component Overview 
+De verschillende onderdelen 
 **************************************************
-AndroidAPS is not just a (self-built) application, it is just one of serveral modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_, too.
+AndroidAPS is meer dan de (zelfgebouwde) app alleen, er zijn ook andere onderdelen nodig om jouw closed loop systeem aan de praat te krijgen. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Wat heb ik nodig <https://androidaps.readthedocs.io/en/latest/CROWDIN/nl/index.html#wat-heb-ik-nodig>`_sectie.
    
 .. image:: ../images/modules.png
-  :alt: Compontents overview
+  :alt: Wat heb ik nodig
 
 .. note:: 
    **VOOR JE EIGEN VEILIGHEID**
@@ -14,117 +14,117 @@ AndroidAPS is not just a (self-built) application, it is just one of serveral mo
    
    Tensotte een belangrijke opmerking: je mag géén SGLT-2 inhibitors (glifozines) gebruiken wanneer je loopt. Omdat deze medicatie ook de bloedsuiker verlaagt.  Deze medicatie in combinatie met een systeem dat de basale insuline verlaagt om BG te verhogen is bijzonder gevaarlijk, omdat deze stijging in BG mogelijk niet zal gebeuren en daardoor een gevaarlijk gebrek aan insuline kan ontstaan.
 
-Necessary Modules
+Benodigde onderdelen
 ==================================================
-Good individual dosage algorithm for your diabetes therapy
+Correcte insulineprofiel instellingen voor jouw diabetesbehandeling
 --------------------------------------------------
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes.
-Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Dit is misschien niet het eerste waar je aan denkt bij een 'onderdeel'. Toch is het waarschijnlijk het meest belangrijke onderdeel van jouw closed loop. Wanneer je de behandeling van jouw diabetes overlaat aan een algoritme, dan is het cruciaal dat je dit algoritme de juiste instellingen geeft. Anders kunnen er grote fouten optreden in de beslissingen die het algoritme neemt.
+Wanneer je de andere onderdelen van jouw closed loop nog niet bij elkaar hebt, dan kun je de tussenliggende tijd benutten om, samen met jouw behandelaars, jouw instellingen te perfectioneren. 
+De meeste loopers maken gebruik van basaalstanden, ISF en KH ratios die zijn aangepast aan een variërende insulinegevoeligheid gedurende de dag (zgn. circadiaans ritme).
 
-The profile includes
+Het profiel bevat
 
-* BR (Basal rates)
-* ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
-* CR (carb ratio) is gramms carbohydrate per one unit insulin
-* DIA (duration of insulin acting).
+* Basaalstanden
+* ISF (Insuline Sensitivity Factor). De insuline gevoeligheidsfactor is hoeveel jouw bloedglucosespiegel daalt per eenheid insuline
+* KH ratio (koolhydraatratio). Hoeveel gram koolhydraten kun je eten per eenheid insuline
+* DIA (Duur van Insuline Activiteit)
 
-No use of SGLT-2 inhibitors
+Geen gebruik van SGLT-2-remmers
 --------------------------------------------------
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AndroidAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+SGLT-2 remmers, ook wel glifozines genoemd, remmen de herabsorptie van glucose in de nieren. Omdat ze de bloedsuikerspiegel verlagen met een voor het algoritme niet-berekenbare hoeveelheid, mag je ze ABSOLUUT NIET gebruiken wanneer je een closed loop systeem zoals AndroidAPS gebruikt! Dit vanwege het zeer grote risico op ketoacidose en/of ernstige hypo's. Deze medicatie in combinatie met een systeem dat de basale insuline verlaagt om BG te verhogen is bijzonder gevaarlijk, omdat er een gevaarlijk gebrek aan insuline kan ontstaan.
 
-Phone
+Telefoon
 --------------------------------------------------
-You need an Android smartphone with Google Android 6.0 or above. Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Je hebt een Android-smartphone met Android 6.0 of hoger nodig. Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
+Om een telefoon of horloge toe te voegen aan de lijst kun je dit 'formulier <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>'_ invullen.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, voor eventuele donaties van telefoon/smartwatch modellen die nog getest moeten worden kun je een e-mail sturen naar `donations@androidaps.org<mailto:hardware@androidaps.org>`_.
 
-Insulin pump
+Insulinepomp
 --------------------------------------------------
-AndroidAPS **currently** works with 
+AndroidAPS werkt momenteel met 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (extra nodig: Ruffy app, minimaal Android 8.1 of anders LineageOS op jouw telefoon)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_  
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)
+- `bepaalde oudere Medtronic modellen <../Configuration/MedtronicPump.html>`_ (extra nodig: RileyLink/Gnarl hardware, Android telefoon met Bluetooth Low Energy / BLE-chipset)
 
-**Other pumps** that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <../Getting-Started/Future-possible-Pump-Drivers.html>`_ page.
+**Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.
 
-If you need to **privately buy** a pump then you can find various distributors is in `this spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, please share the details of yours if not already listed.
+Als je en pomp **particulier wilt kopen** dan is hier een overzicht van verschillende distributeurs in `deze spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, eventuele aanvullingen op deze lijst zijn welkom.
 
-**So what's the best pump for looping with AndroidAPS?**
+**Dus wat is de beste pomp om te loopen met AndroidAPS?**
 
-The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+De Combo, de Insight en de oudere Medtronics zijn goede pompen en loopbaar. De Combo heeft ook als voordeel dat er veel meer keuze is in infuussets, aangezien hij een standaard luer-lock aansluiting heeft. Er gaat een normale batterij in, die je bij een tankstation of supermarkt kunt kopen en mocht het echt nodig zijn, kunt je hem altijd nog stelen/lenen van de afstandsbediening in een hotelkamer ;-).
 
-The advantages of the DanaR/RS vs. the Combo as the pump of choice however are:
+De voordelen van de DanaR/RS vs. de Combo zijn echter:
 
-- The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... Met de Combo is dat minder makkelijk. (Dit kan veranderen in de toekomst, als Android 8.1 populairder wordt)
-- Initial pairing is simpler with the Dana* RS. Maar dit doe je meestal eenmalig.
-- So far the Combo works with screen parsing. In het algemeen werkt dit prima, maar het is traag. Bij het loopen merk je dit vaak niet eens omdat alles op de achtergrond werkt. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
-- The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. Waarschijnlijk gebruikt de loop 's nachts vaker een TBR dan SMB.  De DanaRS kun je zo instellen dat de pomp niet piept of trilt wanneer een TBR of SMB wordt gegeven.
-- Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-- All pumps AndroidAPS can talk with are waterproof on delivery. Alleen de Dana pompen zijn ook gegarandeerd waterdicht tijdens gebruik, doordat de ruimtes voor batterij en reservoir volledig afgesealed zijn. 
+- De DanaR/RS is te gebruiken met vrijwel elke telefoon met Android versie 5.1 of hoger. Er hoeft dus geen Lineage besturingssysteem te worden geïnstalleerd. Mocht je telefoon stuk gaan of kwijtraken, dan is een vervangende telefoon die werkt met de DanaR/RS, snel gevonden. Met de Combo is dat minder makkelijk. (Dit kan veranderen in de toekomst, als Android 8.1 populairder wordt)
+- Initiële koppeling tussen telefoon en pomp is makkelijker met de DanaR/RS. Maar dit doe je meestal eenmalig.
+- Tot nu toe werkt de Combo door 'screen parsing': doorsturen wat er op het scherm staat. In het algemeen werkt dit prima, maar het is traag. Bij het loopen merk je dit vaak niet eens omdat alles op de achtergrond werkt. Wel kost het meer tijd, dus je moet langer een Bluetooth verbinding houden tussen telefoon en pomp. Dat kan lastig zijn, bijvoorbeeld wanneer je alvast bolust tijdens het koken, en je al wegloopt terwijl de bolus nog wordt gegeven. 
+- De Combo trilt aan het einde van TBRs, de DanaR trilt (of piept) bij een SMB. Waarschijnlijk gebruikt de loop 's nachts vaker een TBR dan SMB.  De DanaRS kun je zo instellen dat de pomp niet piept of trilt wanneer een TBR of SMB wordt gegeven.
+- Bij de DanaRS wordt de pompgeschiedenis in een paar seconden uitgelezen met COB. Daardoor is het makkelijk om even offline te wisselen van telefoon. Zodra er een paar CGM waardes binnenkomen, werkt de loop weer.
+- Alle pompen waar AndroidAPS op werkt, zijn waterdicht wanneer ze nieuw zijn. Alleen de Dana pompen zijn ook gegarandeerd waterdicht tijdens gebruik, doordat de ruimtes voor batterij en reservoir volledig afgesealed zijn. 
 
 BG bron
 --------------------------------------------------
-This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. Zie meer informatie 'hier <../Configuration/BG-Source.html>`_. Even kort samengevat: als je jouw glucosewaardes kunt laten weergeven in de xDrip+ app of op jouw Nightscout site, dan kun je in AAPS als "BG bron" kiezen voor xDrip+ (of voor Nightscout, maar dan heb je wel continu een internetverbinding nodig).
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-* `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-* `Enlite <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: Werkt met xDrip+ app of aangepaste Dexcom app
+* `Dexcom G5 <../Hardware/DexcomG5.html>`_: Werkt met xDrip+ app of aangepaste Dexcom app
+* `Dexcom G4 <../Hardware/DexcomG4.html>`_: Deze sensors zijn vrij oud, maar er zijn instructies te vinden om hem met de xDrip+ app te gebruiken
+* `Libre 2 <../Hardware/Libre2.html>`_: Werkt met xDrip+ (geen zender nodig), maar je moet je eigen gepatchte app bouwen.
+* `Libre 1 <../Hardware/Libre1.html>`_: Je hebt een zender nodig, zoals Bubble, Bluecon of MiaoMiao en de xDrip+ app.
+* `Eversense <../Hardware/Eversense.html>`_: Werkt tot nu toe alleen in combinatie met ESEL app en een gepatchte Eversense-App (werkt niet met Dana RS en LineageOS, maar DanaRS en Android of Combo en Lineage werken prima)
+* `Enlite <../Hardware/MM640g.html>`_: Vrij ingewikkeld met extra dingen om rond te zeulen
 
 
 Nightscout
 --------------------------------------------------
-Nightscout is a open source web application that can log and display your CGM data and AndroidAPS data and creates reports. You can find more information on the `website of the Nightscout project <http://www.nightscout.info/>`_. You can create your own Nightscout website `using Heroko <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout is een open source web-applicatie die jouw CGM-gegevens en AndroidAPS gegevens kan opslaan, weergeven en rapporten kan maken. Meer informatie vind je op de `website van het Nightscout project <http://www.nightscout.info/>`_. Je kunt je eigen Nightscout website `maken met Heroku <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_, gebruik de semi-geautomatiseerde Nightscout setup op `zehn.be <https://ns.10be.de/en/index.html>`_ of host het op jouw eigen server (dit laatste is voor IT experts).
 
-Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
+Nightscout werkt onafhankelijk van de andere onderdelen. Je hebt het nodig om voorbij Doel 1 te komen.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`_.
+Meer informatie over het instellen van Nightscout voor gebruik met AndroidAPS vind je 'hier <../Installing-AndroidAPS/Nightscout.html>`_.
 
-AAPS-.apk file
+AAPS-.apk-bestand
 --------------------------------------------------
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`_.  
+De basiscomponent van het systeem. Voordat je de app installeert, moet je eerst het apk-bestand (dat is de bestandsnaam extensie voor een Android app) maken. Instructies staan `hier <../Installing-AndroidAPS/Building-APK.html>`_.  
 
-Optional Modules
+Optionele onderdelen
 ==================================================
 Smartwatch
 --------------------------------------------------
-You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ for more details).
+Elke smartwatch met Android Wear 1.x en hoger is geschikt. Sommige loopers dragen een Sony Smartwatch 3 (SWR50) omdat het het enige horloge is dat elke 5 minuten een Dexcom G5/G6 ontvangt zonder de telefoon in de buurt te hebben. Dit wordt "stand alone" ontvanger genoemd. Sommige andere horloges kunnen worden gepatcht om te werken als een stand alone ontvanger (zie `deze documentatie <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ voor meer details).
 
-Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`_.
+Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij. Er zijn verschillende watchfaces voor gebruik met AndroidAPS, deze vind je `hier <../Configuration/Watchfaces.html>`_.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
+Om een telefoon of horloge toe te voegen aan de lijst kun je dit 'formulier <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>'_ invullen.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, voor eventuele donaties van telefoon/smartwatch modellen die nog getest moeten worden kun je een e-mail sturen naar `donations@androidaps.org<mailto:hardware@androidaps.org>`_.
 
 xDrip+
 --------------------------------------------------
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`_. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Zelfs als je de xDrip+ App niet als BG bron nodig hebt, kun je hem nog steeds gebruiken voor bijvoorbeeld alarmen of om jouw bloedglucose te laten weergeven op een smartwatch. Je kunt in xDrip+ zoveel alarmen aanmaken als je wilt, en zelf tijdvakken specificeren wanneer een alarm actief moet zijn, of het alarm toch moet afgaan wanneer de telefoon in 'stille modus' staat, etc. Meer informatie over xDrip+ vind je `hier <../Configuration/xdrip.html>`_. Houd er rekening mee dat de documentatie van deze app niet altijd up-to-date is, aangezien hij zeer regelmatig wordt geupdatet.
 
 Gebruiksvoorbeeld
 ==================================================
-If you want to get a step by step example, you might want to look at a sample setup. The first sample setup is quite old, but should be still up-to-date.
+Als je wilt weten hoe je stap voor stap een werkend systeem kunt maken, dan is hier een gebruiksvoorbeeld. Dit voorbeeld is al vrij oud, maar is als het goed is nog steeds up-to-date.
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Sample Setup <../Getting-Started/Sample-Setup.rst>
+   Gebruiksvoorbeeld <../Getting-Started/Sample-Setup.rst>
  
   
-What to do while waiting for modules
+Wat te doen tijdens het wachten op onderdelen
 ==================================================
-It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where approporiate) adapt basal rates (BR), insulin-carbration (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AndroidAPS. Using this mode, AndroidAPS gives treatment advices you can manually execute.
+Het duurt soms een tijdje voordat je alle onderdelen voor het maken van een closed loop bij elkaar hebt. Maar geen zorgen, er zijn een heleboel dingen die je kunt doen tijdens het wachten. Het is NOODZAKELIJK om jouw basaalstanden, koolhydraatratio (KH), insuline gevoeligheidsfactor (ISF) etc. te testen en (indien van toepassing) aan te passen. AndroidAPS gebruiken in open loop modus kan een goede manier zijn om jouw profielinstellingen te testen en vertrouwd te raken met het syteem. In de open loop modus geeft AndroidAPS behandelingsadviezen die je handmatig moet doorvoeren.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Verder kun je deze documentatie doorlezen, je kunt online of offline contact opnemen met andere loopers. Lees wat 'achtergrondinformatie <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ of bekijk welke vragen andere loopers stellen in de verschillende Facebook groepen (let hierbij wel op de kwaliteit van andermans suggesties, niet alles wat je leest is verstandig om blindelings na te doen).
 
-**Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
+** Klaar? **
+Als je jouw AAPS onderdelen bij elkaar hebt (gefeliciteerd!) of ten minste genoeg om te beginnen in de open loop modus, lees dan eerst de `Doelen <. /Usage/Objectives.html>`_ door en stel je `hardware <../index.html#component-setup>`_in.
