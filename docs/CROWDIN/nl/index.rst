@@ -23,7 +23,7 @@ Aan de slag
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
    Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
    Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
    
    
 Wat heb ik nodig 
@@ -32,7 +32,7 @@ Wat heb ik nodig
    :maxdepth: 1
    :glob:
    
-   Module <./Module/module.rst>
+   Onderdelen <./Module/module.rst>
 
    
 AndroidAPS installeren
@@ -148,7 +148,7 @@ Waar je hulp kunt vinden
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
 
 Zorgprofessionals
 --------------------------------------------------
