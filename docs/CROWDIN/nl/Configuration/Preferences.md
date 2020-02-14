@@ -30,7 +30,7 @@ AndroidAPS stelt veiligheidslimieten in op basis van de leeftijd die je hier heb
     
     ![Boluswizard 80%](../images/BolusWizardPartDelivery.png)
 
-* Inschakelen van [superbolus](../Getting-Started/Screenshots#section-a) in de boluswizard.
+* Inschakelen van [superbolus](../Getting-Started/Screenshots#sectie-a) in de boluswizard.
 
 ### Statusindicatoren
 
@@ -122,7 +122,7 @@ Als je AndroidAPS gebruikt in 'open loop' modus, zorg er dan voor dat je Virtuel
 * 'Activeer lokaal delen' onder de Geavanceerde Instellingen zal jouw careportal gegevens doorsturen naar andere apps op je telefoon, zoals xDrip+.
 * 'Gebruik altijd absolute basale waarden' moet geactiveerd worden als je Autotune correct wilt gebruiken.
     
-    ** Activeer dit niet bij het gebruik van een [Insight-pomp](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#settings-in-aaps)!** Dit geeft onjuiste TBR-instellingen in de Insight-pomp.
+    ** Activeer dit niet bij het gebruik van een [Insight-pomp](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Accu-Chek-Insight-Pump#instellingen-in-aaps)!** Dit geeft onjuiste TBR-instellingen in de Insight-pomp.
 
 ## SMS Communicator
 
