@@ -34,10 +34,10 @@ Doel 3: Bewijs jouw kennis
 
 * Er staan links naar deze wiki om je op weg te helpen als je het antwoord niet meteen weet.
 
-Skip objectives
+Doelen overslaan
 --------------------------------------------------
 * Alleen als je al een tijd een closed loop hebt gehad met één van de volgende systemen (OpenAPS, iOS Loop, AndroidAPS) én je kunt dit bewijzen (dmv het laten zien van ten minste 3 maanden looping data in Nightscout), dan kun je een e-mail sturen naar `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ met jouw NS adres en request code om de rest van de doelstellingen te kunnen overslaan.
-* Please note that no support is provided through this mail account. Refer to the `support resources <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentioned in this documentation.
+* Houd er rekening mee dat dit e-mailaccount niet bedoeld is voor vragen van gebruikers. Ga daarvoor naar de `Contact met anderen <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ pagina in deze documentatie.
 
 Doel 4: Beginnen met een open loop
 ==================================================
@@ -46,19 +46,19 @@ Doel 4: Beginnen met een open loop
 * Voer minstens 20 tijdelijke basaalstanden in over een periode van 7 dagen; voer ze in op jouw pomp en bevestig in AndroidAPS dat je ze hebt geaccepteerd.  Controleer dat deze gegevens zichtbaar zijn in AndroidAPS en Nightscout.
 * Stel 'tijdelijke streefdoelen <../Usage/temptarget.html>'_ in indien nodig. Gebruik bijvoorbeeld een tijdelijk hypo streefdoel om te voorkomen dat het systeem te sterk corrigeert voor een stijgende bloedsuiker na een hypo. 
 
-Reduce number of notifications
+Verminder het aantal meldingen
 --------------------------------------------------
-* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l. * You might even want to wider upper limit (or disable Open Loop) at night. 
-* In Preferences you can set a minimum percentage for suggestion of basal rate change.
+* Je kunt het aantal suggesties voor tijdelijke basalen dat je krijgt tijdens de Open Loop modus, verminderen. Doe dit bijvoorbeeld door bredere streefdoelen in te stellen, zoals 90-150 mg/dl of 5,0-8,5 mmol/l. * Voor 's nachts zou je de bovengrens van je streefdoel flink kunnen verhogen (of de Open Loop zelfs helemaal kunnen deactiveren) voor een ongestoorde nachtrust. 
+* Daarnaast kun je in de Instellingen een groter getal invullen bij "Minimale verzoek voor aanpassing[%]".
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Open Loop minimal request change
+     :alt: Open Loop Minimale verzoek voor aanpassing
      
-* Also, you do not need to act every 5 minutes on all suggestions...
+* En uiteraard kun je ervoor kiezen om niet elke 5 minuten alle suggesties daadwerkelijk uit te voeren...
 
 Doel 5: De Open Loop begrijpen, inclusief de voorgestelde tijdelijke basaalstanden
 ====================================================================================================
-* Leer de reden achter een suggestie voor tijdelijke basaalstand kennen. Kijk naar de 'determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>'_ en naar de 'voorspelling in de glucosegrafiek van het AndroidAPS Overzichts-scherm <../Getting-Started/Screenshots.html#section-e>`_ of Nightscout, en naar de berekening in je OpenAPS tab.
+* Leer de reden achter een suggestie voor tijdelijke basaalstand kennen. Kijk naar de 'determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>'_ en naar de 'voorspelling in de glucosegrafiek van het AndroidAPS Overzichts-scherm <../Getting-Started/Screenshots.html#sectie-e>`_ of Nightscout, en naar de berekening in je OpenAPS tab.
  
 Je wilt beginnen met een streefdoel dat hoger is dan normaal, totdat je vertrouwen in de berekeningen en de instellingen hebt gekregen.  Het systeem staat toe
 
@@ -68,7 +68,7 @@ Je wilt beginnen met een streefdoel dat hoger is dan normaal, totdat je vertrouw
 
 Het streefdoel is de waarde waar de berekeningen op zijn gebaseerd, en is niet hetzelfde als waar je jouw bloedglucose waarden binnen wilt houden.  Als je een erg brede range als streefdoel instelt, bijvoorbeeld een verschil van 3 mmol/l of meer (50 mg/dl of meer), dan zul je zien dat AAPS niet vaak in actie komt. Dit komt omdat de voorspelde bloedglucose meestal binnen dat brede bereik zal liggen en het systeem dus niet vaak een andere tijdelijk basaal voorstelt. 
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
+Je kunt experimenteren met je lage en hoge streefdoel en een nauwer bereik instellen, bijvoorbeeld 1 of minder mmol/l (20 mg/dl of minder) verschil, en observeren hoe het systeem daardoor zijn gedrag aanpast. De meesten vullen uiteindelijk hetzelfde getal in bij hoge en lage streefdoel, daarmee bereik je de strakste glucosegrafieken.  
 
 Deze tijdelijke streefdoelen zijn iets anders dan het 'groene gebied' dat je in je grafiek ziet. Je kunt waarden voor het groene gebied invoeren via 3 stipjes in rechterbovenhoek > Instellingen > Bereik voor Visualisatie.
  
@@ -111,8 +111,8 @@ Verhoog jouw 'Max totaal IOB dat OpenAPS niet kan overschrijden' (in OpenAPS hee
 
 Doel 8: Pas basaalstanden en de ratio's aan indien nodig, activeer hierna de Autosens optie
 ====================================================================================================
-* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
-* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+* Je kunt 'Autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>'_ gebruiken om eenmalig te laten berekenen of jouw basaalstanden goed zijn ingesteld, of een traditionele basaaltest doen. Zie ook de "Veelgestelde vragen" sectie van deze wiki.
+* Schakel 'Autosens <../Usage/Open-APS-features.html>'_ in gedurende een periode van 7 dagen en bekijk de witte lijn in de grafiek op het Overzichts-scherm. Die lijn geeft weer hoe jouw gevoeligheid voor insuline kan verhogen of verminderen als gevolg van beweging, hormonen etc. Bekijk ook af en toe de OpenAPS tab om te zien hoe AndroidAPS je basaalstanden en/of BG streefdoelen aanpast adhv jouw gevoeligheid op dat moment. en houd op de OpenAPS tab in de gaten hoe AndroidAPS de basaalstanden en/of streefdoelen dienovereenkomstig aanpast.
 
 *Vergeet niet om jezelf als nieuwe looper aan te melden via 'dit formulier <http://bit.ly/nowlooping>'_ en AndroidAPS als jouw type loop-software te kiezen, als je dat nog niet gedaan hebt.*
 
@@ -127,4 +127,4 @@ Doel 10: Activeren van extra functies overdag zoals SMB (Super Micro Bolus)
 ====================================================================================================
 Je moet het 'SMB hoofdstuk in deze wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>'_ en het 'hoofdstuk oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>'_ lezen om te begrijpen hoe SMB werkt, met name het idee achter de tijdelijke basaalstanden van nul (zero-temp).
 * Daarna kun je 'maxIOB verhogen <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>'_ zodat SMB goed kan functioneren. maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. Als je een bolus van 8E geeft voor een maaltijd en jouw maxIOB is 7E, dan zullen er geen SMBs worden afgegeven totdat IOB onder de 7E komt. Een goede start is maxIOB = gemiddelde maalbolus + 3x max dagelijkse basaal (max dagelijkse basaal = de hoogste waarde van jouw basaal (in eenheden per uur). Zie 'Doel 7 <../Usage/Objectives#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>'_ voor een afbeelding
-Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_carbimpact in de Opname instellingen veranderen van 3 naar 8. If you are upgrading from AMA to SMB, you have to change it manually.
+Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_carbimpact in de Opname instellingen veranderen van 3 naar 8. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
