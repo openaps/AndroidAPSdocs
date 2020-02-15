@@ -1,6 +1,6 @@
 Release notes
 **************************************************
-Please follow the instructions in the `update manual <../Installing-AndroidAPS/Update-to-new-version.html>`_. Daar vind je ook oplossingen voor veelvoorkomende problemen.
+Volg de instructies in de `handleiding <../Installing-AndroidAPS/Update-to-new-version.html>`_ voor het bijwerken van de app naar een nieuwe versie. Daar vind je ook oplossingen voor veelvoorkomende problemen.
 
 Zodra een nieuwe update beschikbaar is zie je de volgende melding:
 
