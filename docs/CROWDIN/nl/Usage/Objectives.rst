@@ -3,11 +3,11 @@ Doelen
 
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen.  De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 
-Als je een **andere telefoon gaat gebruiken**, dan kun je jouw 'instellingen exporteren<../Usage/ExportImportSettings.html>`_ om je voortgang door de doelstellingen te behouden. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen.  Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen.  Het is een goed idee om regelmatig een `back-up te maken van jouw instellingen <../Usage/ExportImportSettings.html>`_ voor het geval dat jouw telefoon iets overkomt.
+Als je een **andere telefoon gaat gebruiken**, dan kun je jouw `instellingen exporteren <../Usage/ExportImportSettings.html>`_ om je voortgang door de doelstellingen te behouden. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen.  Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen.  Het is een goed idee om regelmatig een `back-up te maken van jouw instellingen <../Usage/ExportImportSettings.html>`_ voor het geval dat er iets met jouw telefoon gebeurt.
  
 Doel 1: Instellen van visualisatie en monitoring en analyseren van basaal en ratio's
 ====================================================================================================
-* Selecteer de bloedglucose bron die jij gebruikt.  Zie 'BG Source <../Configuration/BG-Source.html>'_ voor meer informatie.
+* Selecteer de bloedglucose bron die jij gebruikt.  Zie `BG Source <../Configuration/BG-Source.html>`_ voor meer informatie.
 * Selecteer de juiste pomp in Configurator (Selecteer 'virtuele pomp' als je een pomp gebruikt waar geen AndroidAPS driver voor bestaat) om ervoor te zorgen dat jouw pomp kan communiceren met AndroidAPS.  
 * Als je de DanaR pomp gebruikt, volg dan de 'DanaR <../Configuration/DanaR-Insulin-Pump.html>'_ instructies om de pomp te koppelen aan AndroidAPS.
 * Volg de instructies van de 'Nightscout <../Installing-AndroidAPS/Nightscout.html>'_ pagina om ervoor te zorgen dat Nightscout gegevens kan ontvangen en weergeven.
