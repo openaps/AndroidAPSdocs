@@ -1,4 +1,4 @@
-# Sample setup: Samsung S7, DanaRS, Dexcom G6 and Sony Smartwatch
+# Sample setup: Samsung S7, Dana RS, Dexcom G6 and Sony Smartwatch
 
 ![Konfigurationsbeispiel](../images/SampleSetup.png)
 
@@ -51,9 +51,9 @@ Bei der Erstinstallation von Android Studio ist einige Geduld erforderlich, da d
 
 ![Smartphone](../images/SampleSetupSmartphone.png)
 
-### Firware des Smartphones prüfen
+### Firmware des Smartphones prüfen
 
-* Menü > Einstellungen > Telefoninfo > Softwareinfo: Hier sollte mindestens die Firmware-Version stehen: "Android-Version 7.0" (erfolgreich getestet bis Android-Version 8.0.0 Oreo - Samsung Experience Versoin 9.0) 
+* Menü > Einstellungen > Telefoninfo > Softwareinfo: Hier sollte mindestens die Firmware-Version stehen: "Android-Version 7.0" (erfolgreich getestet bis Android-Version 8.0.0 Oreo - Samsung Experience Version 9.0) 
 * Falls nicht: Menü > Einstellungen > Software-Update durchführen
 
 ### Installation von Apps aus unbekannten Quellen zulassen
@@ -75,14 +75,14 @@ Standortdienste ("GPS") müssen aktiviert sein, damit Bluetooth ordnungsgemäß 
 
 Die Original-App von Dexcom aus dem Google Play Store wird nicht funktionieren, weil sie die Werte nicht an andere Apps weitergibt. Darum ist eine von der Community leicht modifizierte Version erforderlich. Nur sie kann später mit AAPS kommunizieren. Außerdem kann die modifizierte Dexcom App mit allen Android Smartphones verwendet werden, nicht nur mit den in der [Dexcom Kompatibilitätsliste](https://www.dexcom.com/dexcom-international-compatibility) aufgeführten.
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
+A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
 
 To do this perform the following steps on your smartphone:
 
 1. Falls die Original-Dexcom-App bereits installiert sein sollte: 
     * Sensor stoppen
     * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l and region according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
 3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
 4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
 5. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
@@ -97,7 +97,7 @@ To do this perform the following steps on your smartphone:
 
 1. AndroidAPS APK-Datei wie [hier](../Installing-AndroidAPS/Building-APK#generate-signed-apk) ausführlich und mit Screenshots beschrieben erstellen.
 2. Die erstelle APK-Datei auf das Smartphone [übertragen](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone).
-3. AnroidAPS entsprechend den eigenen Anforderungen mit Hilfe des Einrichtungsassistenten oder manuell [konfigurieren](../Configuration/Config-Builder.md).
+3. AndroidAPS entsprechend den eigenen Anforderungen mit Hilfe des Einrichtungsassistenten oder manuell [konfigurieren](../Configuration/Config-Builder.md).
 4. In diesem Beispiel haben wir (unter anderem) folgende Einstellungen verwendet:
 
 * BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
@@ -151,4 +151,4 @@ Details about the information displayed on the watchface can be found [here](../
 
 ## Pumpe einrichten
 
-see [DanaRS pump](../Configuration/DanaRS-Insulin-Pump.md)
+see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
