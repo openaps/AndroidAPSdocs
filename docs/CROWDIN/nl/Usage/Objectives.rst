@@ -9,8 +9,8 @@ Doel 1: Instellen van visualisatie en monitoring en analyseren van basaal en rat
 ====================================================================================================
 * Selecteer de bloedglucose bron die jij gebruikt.  Zie `BG Source <../Configuration/BG-Source.html>`_ voor meer informatie.
 * Selecteer de juiste pomp in Configurator (Selecteer 'virtuele pomp' als je een pomp gebruikt waar geen AndroidAPS driver voor bestaat) om ervoor te zorgen dat jouw pomp kan communiceren met AndroidAPS.  
-* Als je de DanaR pomp gebruikt, volg dan de 'DanaR <../Configuration/DanaR-Insulin-Pump.html>'_ instructies om de pomp te koppelen aan AndroidAPS.
-* Volg de instructies van de 'Nightscout <../Installing-AndroidAPS/Nightscout.html>'_ pagina om ervoor te zorgen dat Nightscout gegevens kan ontvangen en weergeven.
+* Als je de DanaR pomp gebruikt, volg dan de `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ instructies om de pomp te koppelen aan AndroidAPS.
+* Volg de instructies van de `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ pagina om ervoor te zorgen dat Nightscout gegevens kan ontvangen en weergeven.
 * Opmerking: URL in NSClient moet worden ingevuld **ZONDER /api/v1/** aan het einde - zie `NSClient-instellingen in Instellingen <../Configuration/Preferences.html#ns-client>`_.
 
 *Het kan zijn dat je even moet wachten tot de volgende bloedglucose-waarde binnenkomt voordat AndroidAPS de wijzigingen opmerkt.*
