@@ -10,7 +10,7 @@ De app is niet verkrijgbaar in de Google Play store - om juridische redenen moet
 De belangrijkste onderdelen zijn:
 
 .. image:: images/modules-female.png
-  :alt: Components
+  :alt: Onderdelen
 
 Hieronder volgt de inhoudsopgave.
 
@@ -179,4 +179,4 @@ Hoe je zelf kunt helpen
 
 	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
 
-	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: 'SOOIL <http://www.sooil.com/eng/>'_, 'Dexcom<http://www.dexcom.com/>'_, 'Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>'_ of 'Medtronic</3>'_.
+	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ of `Medtronic <http://www.medtronic.com/>`_.
