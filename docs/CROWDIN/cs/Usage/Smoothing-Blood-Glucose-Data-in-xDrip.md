@@ -8,7 +8,7 @@ Používáte-li aplikaci upravenou aplikaci Dexcom G5 data jsou vyrovnaná a kon
 
 ## xDrip+ s Dexcom G5
 
-Dostatečně plynulá data jsou doručena jedině v případě, že používáte xDrip G5 OB1 kolektor v nativním módu (OB1 collector in native mode).
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ## xDrip+ s Freestyle Libre
 

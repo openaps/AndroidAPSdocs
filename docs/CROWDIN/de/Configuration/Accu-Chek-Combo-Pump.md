@@ -72,19 +72,14 @@ Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
       
 
 4. Entferne eine Pumpe, die bereits mit dem Smartphone per Bluetooth verbunden ist: Unter Einstellungen / Bluetooth das verbundene Gerät "**Spirit Combo**" entfernen
-5. Stelle sicher, dass die Loop in AAPS nicht im Hintergrund läuft. Schalte die Loop in AAPS aus.
+5. Stelle sicher, dass die Loop in AAPS nicht im Hintergrund läuft. Deaktiviere den Loop in AAPS.
 6. Starte jetzt ruffy auf dem Smartphone. Du kannst Reset! drücken und die alte Bindung zurücksetzen. Drücke anschliessend Connect!.
 7. Navigiere im Bluetooth-Menü der Pumpe zu **GERÄT HINZUFÜGEN / VERBINDUNG HINZUFÜGEN**. Drücke *VERBINDEN!** *Schritt 5 und 6 müssen innerhalb kurzer Zeit erfolgen.
-8.     Jetzt sollte die Pumpe den Bluetooth-Namen des Smartphones anzeigen, das für das Pairing vorgesehen ist. An dieser Stelle ist es wichtig, mindestens 5s zu warten, bevor Du den Auswählen Button an der Pumpe drückst. Ansonsten wird die Pumpe die Pairing Anforderung nicht korrekt an das Smartphone übertragen.
-      
-      * Wenn die Combo Pumpe einen 5s Timeout für die Anzeige hat, solltest Du es mit 40s ausprobieren (originale Einstellung). Erfahrungsgemäss beträgt die Zeit bis die Pumpe auf dem Smartphone angezeigt wird 5-10s. In vielen anderen Fällen läuft das Pairing ohne erfolgreiche Verbindung ab. Später solltest Du es zurück auf 5s setzen, damit es den AAPS Combo Einstellungen entspricht.
-      * Wenn die Pumpe das Smartphone nicht als Pairing Gerät anzeigt, ist das Bluetooth Protokoll des Smartphones eventuell nicht kompatibel mit dem der Pumpe. Stelle sicher, dass Du ein neues **LineageOS ≥ 14.1** oder **Android ≥ 8.1 (Oreo)** hast. Wenn möglich, versuche es mit einem anderen Smartphone. Eine Liste von bereits erfolgreich benutzten Smartphones befindet sich unter [AAPS Phones]
-       (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
-      
+8. Jetzt sollte die Pumpe den Bluetooth-Namen des Smartphones anzeigen, das für das Pairing vorgesehen ist. An dieser Stelle ist es wichtig, mindestens 5s zu warten, bevor Du den Auswählen Button an der Pumpe drückst. Ansonsten wird die Pumpe die Pairing Anforderung nicht korrekt an das Smartphone übertragen.
 
-9.     Danach sollte die Pumpe einen 10-stelligen Sicherheitscode anzeigen. Und ruffy einen Dialog, um ihn einzugeben. Gib diesen Code in ruffy ein und Du solltest loslegen können.
-      
+* Wenn die Combo Pumpe einen 5s Timeout für die Anzeige hat, solltest Du es mit 40s ausprobieren (originale Einstellung). Erfahrungsgemäss beträgt die Zeit bis die Pumpe auf dem Smartphone angezeigt wird 5-10s. In vielen anderen Fällen läuft das Pairing ohne erfolgreiche Verbindung ab. Später solltest Du es zurück auf 5s setzen, damit es den AAPS Combo Einstellungen entspricht. * Wenn die Pumpe das Smartphone nicht als Pairing Gerät anzeigt, ist das Bluetooth Protokoll des Smartphones eventuell nicht kompatibel mit dem der Pumpe. Stelle sicher, dass Du eine neue Version **lineageOS ≥ 14.1** oder **Android ≥ 8.1 (Oreo)** verwendest. Wenn möglich, versuche es mit einem anderen Smartphone. Eine Liste von bereits erfolgreich benutzten Smartphones befindet sich unter \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 
+9. Danach sollte die Pumpe einen 10-stelligen Sicherheitscode anzeigen. Und ruffy einen Dialog, um ihn einzugeben. Gib diesen Code in ruffy ein und Du solltest loslegen können.
 10. Starte das Smartphone neu.
 11. Jetzt kannst Du die AAPS Loop neu starten.
 

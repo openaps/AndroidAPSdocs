@@ -1,354 +1,354 @@
-# FAQ for loopers
+# AAPS dažnai užduodami klausimai
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+Kaip įtraukti klausimus į DUK: Sekite šias [instrukcijas](../make-a-PR.md)
 
 # Bendrieji
 
-## Can I just download the AndroidAPS installation file?
+## Ar galiu tiesiog atsisiųsti AndroidAPS įdiegimo failą?
 
-No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+Ne. AndroidAPS nepateikia atsisiunčiamo APK failo. Jūs turite [sukurti](../Installing-AndroidAPS/Building-APK.md) jį patys. Štai priežastis, kodėl:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AndroidAPS yra skirtas pompos valdymui ir insulino suleidimui. Remiantis galiojančiais Europos teisės aktais, visos sistemos, klasifikuojamos kaip IIa ar IIb, yra medicinos prietaisai, kuriuos privaloma sertifikuoti (gauti CE ženklą), kuriems, savo ruožtu, reikalingi atitinkami tyrimai ir patvirtinimas. Nesertifikuotų prietaisų platinimas yra neteisėtas. Panašios taisyklės yra kitose pasaulio šalyse.
 
-This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+Ši nuostata neapsiriboja prekyba, ji taikoma bet kokio tipo platinimui (net neatlygintinai). Kurkite medicinos prietaisą sau - vienintelė galimybė, kuriai šios taisyklės įtakos neturi.
 
-That’s why apks aren’t available.
+Štai kodėl negalima platinti paruoštų programų apk pavidalu.
 
-## How to begin?
+## Kaip pradėti?
 
-First of all, you have to **get loopable hardware components**:
+Pirmiausia turite **paruošti komponentus, kurie veikia su AAPS**:
 
-* A [supported insulin pump](Pump-Choices.md), 
-* an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
+* [palaikomą insulino pompą](Pump-Choices.md) 
+* [Android išmanusis telefonas](Phones.md) (Apple iOS nepalaiko„AndroidAPS“ - vietoj to pabandykite [iOS Loop](https://loopkit.github.io/loopdocs/)), ir 
+* [Nuolatinė gliukozės kiekio kraujyje (KG) stebėjimo sistema](../Configuration/BG-Source.rst). 
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+Antra, jūs turite **sukonfigūruoti savo įrangą**. Žr. [Diegimo pažingsniui pavyzdį](Sample-Setup.md).
 
-Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+Trečia, turite **konfigūruoti programinės įrangos komponentus**: AndroidAPS ir kraujo gliukozės monitoringo šaltinius.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](http://integrateddiabetes.com/basal-testing/).
+Ketvirta, jūs turite **išmokti ir suprasti rekomenduojamą OpenAPS struktūrą, kad galėtumėte patikrinti savo terapijos veiksnius**. Pagrindinis uždaro ciklo principas: tiksliai nustatytos valandinės bazės ir insulino - angliavandenių rodikliai. Visose rekomendacijose daroma prielaida, kad pagrindinį poreikį patenkina bazinis insulinas ir kad atsirandantys gliukozės kiekio kraujyje svyravimai atsiranda dėl kitų priežasčių (mankšta, stresas ir kt.), kurias tuo metu reikia koreguoti. Saugumo sumetimais koregavimai, kuriuos AAPS gali atlikti automatiškai, yra riboti (žr. „Maksimalus leistinas laikinas bazinis dažnis“ [OpenAPS struktūra](https://openaps.org/reference-design/)). Tai reiškia, kad neturėtumėte naudoti ciklo neteisingam bazinio greičio profiliui ištaisyti. Pvz., jei prieš valgį dažnai turite žemą glikemiją, tada tikriausiai turite pakoreguoti valandinę bazę. Naudodamiesi [Automatinis derinimas Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig), galite naudoti daugybę esamų terapijos duomenų norėdami sužinoti, ar reikia koreguoti bazes, IA ir JIF. Arba galite patikrinti ir nustatyti bazę [senuoju būdu](http://integrateddiabetes.com/basal-testing/).
 
-## What practicalities of looping do I have?
+## Svarbūs praktiniai aspektai?
 
-### Password protection
+### Apsauga slaptažodžiu
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+Jei nenorite, kad nustatymai būtų lengvai pakeičiami, nustatymų meniu galite apsaugoti slaptažodžiu. Norėdami tai padaryti, nustatymų meniu suaktyvinkite parinktį „Nustatymų slaptažodis“ ir įveskite norimą slaptažodį. Kitą kartą eidami į „Nustatymus“, turėsite įvesti slaptažodį, kad galėtumėte atlikti pakeitimus. Jei vėliau norite išjungti slaptažodį, eikite į „Nustatymų slaptažodį“ ir ištrinkite tekstą iš lauko.
 
-### Android Wear Smartwatches
+### Android Wear išmanieji laikrodžiai
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+Jei planuojate naudoti Android Wear programą norėdami suleisti bolusą ar pakeisti nustatymus, turite įsitikinti, kad pranešimai iš AndroidAPS nėra užblokuoti. Veiksmas patvirtinamas pateikiant pranešimą.
 
-### Disconnect pump
+### Atjungti pompą
 
-If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+Jei reikia išjungti pompą prieš dušą / maudymąsi / plaukiojimą / sportavimą ir pan. turite pranešti AndroidAPS, kad nėra tiekiamas insulinas, kad užtikrintumėte teisingą aktyvaus insulino AIO apskaičiavimą.
 
-* Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
-* This will set your basal to zero for that time period.
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
-* AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
+* Pagrindinio ekrano viršuje ilgai paspauskite mygtuką „Uždaras ciklas“ (kol neaktyvintas uždaras ciklas, vadinama „Atviras ciklas“). 
+* Pasirinkite **Atjungti pompą XY min**
+* Tai nustatys laikiną bazę 0% nustatytam laiko tarpui.
+* Minimali atjungimo trukmė yra mažiausia laikinos bazės TBR, kurią galima nustatyti pompoje, trukmė. Todėl, jei norite atsijungti trumpesniam laikotarpiui, vis tiek pasirinkite mažiausią turimą pompos išjungimo laiką ir prijunkite rankiniu būdu, kaip aprašyta toliau.
+* Mygtukas „Uždaras Ciklas“ (arba „Atviras ciklas“) pasidarys raudonas ir dabar bus pavadintas „Išjungta (xx min)“, rodantis likusį atsijungimo laiką.
+* Pasibaigus pasirinktam laikui, AAPS automatiškai vėl prisijungs, o uždaras ciklas vėl pasileis.
     
-    ![Disconnect pump](../images/PumpDisconnect.png)
+    ![Atjungti pompą](../images/PumpDisconnect.png)
 
-* If the selected time was too long you can reconnect manually.
+* Jei pasirinktas laikas buvo pernelyg ilgas, galite iš naujo prisijungti rankiniu būdu.
 
-* Long-press on the red button 'Disconnected (xx m)'.
-* Select 'Reconnect pump'
+* Ilgai paspauskite raudoną mygtuką 'Išjungta (xx min)".
+* Pasirinkite "Prijungti pompą"
     
-    ![Reconnect pump](../images/PumpReconnect.png)
+    ![Prijungti pompą](../images/PumpReconnect.png)
 
-### Recommendations not only based on one single CGM reading
+### Rekomendacijos grindžiamos daugiau nei viena stebėjimo indikacija
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+Saugumui užtikrinti sistemos rekomendacijos pateikiamos ne pagal vieną KG rodmenį, o pagal paskutinių verčių vidurkį (atsižvelgiant į pokyčio delta). Todėl, jei praleidžiami keli rodmenys, gali praeiti šiek tiek laiko, kol AndroidAPS vėl pradės koreguoti glikemiją uždarojo ciklo režimu.
 
-### Further readings
+### Papildoma informacija
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Čia yra keli tinklaraščiai su naudingais patarimais, kurie padės suprasti, kaip veikia uždaro ciklo sisemos:
 
 * [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
 * [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 * [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
-## What emergency equipment is recommended to take with me?
+## Kokią atsarginę įrangą rekomenduojama turėti su savimi?
 
-First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
+Žinoma, pirmiausia turite naudotis ta pačia įranga, kaip ir bet kuris kitas asmuo, sergantis 1 tipo cukriniu diabetu, su insulino pompa. Kai naudojatės AndroidAPS, mes primygtinai rekomenduojame visada ar netoliese turėti šią atsarginę įrangą:
 
-* Battery pack for the energy of your smartphone, wear and (maybe) BT reader
-* Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
-* Pump batteries
+* Baterijos, skirtos jūsų išmaniajam telefonui, išmaniajam laikrodžiui ir (galbūt) Bluetooth skaitytuvui
+* Atsarginių kopijų kūrimas debesyje (Dropbox, Google diskas ...) naudojamoms programoms: naujausią AndroidAPS APK ir Key Store slaptažodį, AndroidAPS nustatymų atsarginėms kopijoms, xDrip+ nustatymų atsarginėms kopijoms, modifikuotai Dexcom app, ...
+* Pompos baterijas
 
-## How to safely attach the CGM/FGM?
+## Kaip saugiai pritvirtinti CGM/FGM nuolatinio monitoringo sistemas?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Some loopers use the cheaper standard kinesiology tape or rocktape.
+Galite priklijuoti: parduodami iš anksto iškirpti pleistrai populiariausioms CGM sistemoms (paieškokite Google ar eBay). Kai kurie vartotojai naudoja pigesnius standartinius kineziteipus ar juostinius pleistrus.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
+Galite pritvirtinti: parduodami viršutinės rankos dalies laikikliai pritvirtinti CGM/FGM guminiu raiščiu (ieškoti Google ar ebay).
 
-# AndroidAPS settings
+# AndroidAPS parametrai
 
-The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+Šis sąrašas padės optimizuoti jūsų nustatymus. Pradėkite nuo viršaus ir judėkite žemyn. Prieš pradėdami spręsti kitą, įsitikinkite, kad pirmasis nustatymas tikrai teisingas. Judėkite mažais žingsneliais, tuoj pat neatlikite didelių pokyčių. Galite naudoti [Automatinį derinimą Autotune](https://autotuneweb.azurewebsites.net/), kuris nurodys bendrą kryptį, tačiau nepriimkite rekomendacijų aklai ir ne visose situacijose. Atkreipkite dėmesį, kad nustatymai papildo vienas kitą - galbūt turite „neteisingus“ nustatymus, kurie tam tikromis aplinkybėmis veikia gerai (pvz., Jei valandinė bazė yra nustatyta per didelė tuo pačiu metu, kai angliavandenių koeficientas IA yra per didelis), tačiau kitais atvejais jie neveikia. Tai reiškia, kad turite atsižvelgti į visus parametrus ir įsitikinti, kad jie veikia kartu skirtingomis aplinkybėmis.
 
-## Duration of insulin activity (DIA)
+## Insulino veikimo trukmė (IVT)
 
-### Description & testing
+### Aprašymas & bandymai
 
-The length of time that insulin decays to zero.
+Laikas, kol insulinas visiškai suyra.
 
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+Jis dažnai būna nustatomas per trumpas. Daugeliui žmonių reikia bent 5, kartais 6 ar 7 valandų.
 
-### Impact
+### Įtaka
 
-Too short DIA can lead to low BGs. And vice-versa.
+Per trumpas IVT gali sukelti hipoglikemiją. Ir atvirkščiai.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
+Jei insulino veikimo laikas per trumpas, AAPS numato per anksti, kad ankstesnis bolusas būtų visiškai „suvartotas“, ir, padidėjus glikemija, pateiks papildomo insulino. (Tiesą sakant, AAPS neišlaukia viso insulino veikimo laiko, bet prognozuoja gliukozės lygio kitimą ir atitinkamai suleidžia insuliną). Tai iš esmės lemia „insulino susikaupimą“, apie kurį AAPS nieko nežino.
 
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+Per trumpas insulino veikimo trukmės pavyzdys yra hiperglikemija, po kurios eina AAPS perteklinė korekcija ir vėliau seka hipoglikemija.
 
-## Basal rate schedule (U/h)
+## Valandinė bazė (vv/h)
 
-### Description & testing
+### Aprašymas & bandymai
 
-The amount of insulin in a given hour time block to maintain BG at a stable level.
+Insulino kiekis, tiekiamas per tam tikrą valandą, kad gliukozės lygis būtų stabilus.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
+Išbandykite valandinę bazę išjungdami ciklą, nevalgius, laukdami maždaug penkias valandas po valgymo ir patikrindami, kaip keičiasi glikemija. Pakartokite kelis kartus.
 
-If BG is dropping, basal rate is too high. And vice-versa.
+Jei glikemija krenta, bazė yra per didelė. Ir atvirkščiai.
 
-### Impact
+### Įtaka
 
-Too high basal rate can lead to low BGs. And vice-versa.
+Per aukšta bazė gali sukelti hipoglikemiją. Ir atvirkščiai.
 
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+Pagal numatytuosius nustatymus AAPS sukuria savo algoritmą, remdamasis bazės parametrais. Jei bazinė dalis per aukšta, tada nulinė laikina bazė bus nustatoma su didesne neigiama aktyvaus insulino AIO verte, nei reikalinga. Dėl to AAPS bus darys daugiau koregavimų, nei turėtų būti, kad aktyvusis insulinas AIO sumažėtų iki nulio.
 
-So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
+Taigi per didelė bazė lemia žemą glikemiją tiek per standartinę bazę, tiek vėliau dėl AAPS koregavimų.
 
-Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Priešingai, per maža bazė gali sukelti aukštą glikemiją ir trukdyti AAPS grąžinti ją į tikslinį diapazoną.
 
-## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+## Jautrumo insulinui faktorius (JIF) (mmol/l/U arba mg/dl/U)
 
-### Description & testing
+### Aprašymas & bandymai
 
-The drop in BG expected from dosing 1U of insulin.
+Tikėtinas KG sumažėjimas suleidus 1 vv insulino.
 
-Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Darant prielaidą, kad bazė yra teisinga, galite tai išbandyti taip: įsitikinkite, kad AIO yra lygus nuliui, išjunkite ciklą ir suvalgykite šiek tiek gliukozės, kad gautumėte stabiliai "aukštą" glikemiją.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+Tada susileiskite numatomą insulino kiekį (esant dabartiniam 1/JIF santykiui), kad gautumėte tikslinę glikemiją.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Būkite atsargūs, nes gana dažnai vertė yra per žema. Per žema reiškia, kad 1 vienetas sumažins glikemiją greičiau, nei tikėtasi.
 
-### Impact
+### Įtaka
 
-**Lower ISF** (i.e. 40 instead of 50) = more aggressive / stronger leading to a bigger drop in BGs for each unit of insulin. If too low, this can lead to low BGs.
+**Mažesnis JIF jautrumas** (pvz., 40 mg/dl/vienetui, o ne 50) = agresyvesnis algoritmas, lemiantis didesnį KG sumažėjimą kiekvienam insulino vienetui. Jei jis per mažas, tai gali sukelti hipoglikemiją.
 
-**Higher ISF** (i.e. 45 instead of 35) = less aggressive / weaker leading to a smaller drop in BGs for each unit of insulin. If too high, this can lead to high BGs.
+**Didesnis JIF jautrumas** (pvz., 45 mg/dl/vienetui vietoj 35) = mažiau agresyvus algoritmas, dėl kurio mažesnis KG kritimas kiekvienam insulino vienetui. Jei per didelis, tai gali sukelti hiperglikemiją.
 
-**Example:**
+**Pavyzdys:**
 
-* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
-* So, you want correction of 90 mg/dl (= 190 - 110).
-* ISF = 30 -> 90 / 30 = 3 units of insulin
-* ISF = 45 -> 90 / 45 = 2 units of insulin
+* KG yra 190 mg/dl (10,5 mmol) ir tikslas yra 100 mg/dl (5,6 mmol). 
+* Jums reikia sureguliuoti 90 mg/dl (= 190 - 100).
+* JIF = 30 -> 90 / 30 = 3 vienetai insulino
+* JIF = 45 -> 90 / 45 = 2 vienetai insulino
 
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+Per mažas nurodytas jautrumas JIF (dažnai) gali atlikti „per didelę korekciją“, nes AAPS darys prielaidą, kad norint koreguoti aukštą glikemiją reikia daugiau insulino, nei yra iš tikrųjų. Tai gali lemti "kalnelius"' (ypač nevalgius). Šiuo atveju jums reikia padidinti savo JIF. Tai reiškia, kad AAPS teiks mažesnes korekcijos dozes ir tai padės išvengti per didelio koregavimo, kuris baigiasi žema glikemija.
 
-Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+Priešingai, per mažas JIF gali sukelti „dalinius pataisymus“. Tai reiškia, kad jūsų KG vertės išliks didesnės nei jūsų tikslinė glikemija, ypač naktį.
 
-## Insulin to carb ratio (IC) (g/U)
+## Insulino angliavandenių santykis (IA) (g/U)
 
-### Description & testing
+### Aprašymas & bandymai
 
-The grams of carbohydrate for each unit of insulin.
+Gramai angliavandenių kiekvienam insulino vienetui.
 
-Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
+Kai kurie žmonės naudoja I:A vietoj IA arba turi omenyje angliavandenių santykį (CR).
 
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
+Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius nustatymus, jei jūsų AIO = 0 ir jūsų KG vertė yra normos ribose. Valgykite žinomą angliavandenių kiekį ir suleiskite reikiamą kiekį insulino, apskaičiuotą pagal jūsų IA santykį. Geriausia valgyti maisto produktus, kuriuos paprastai valgote tokiu dienos metu, ir tiksliai apskaičiuoti angliavandenių kiekį juose.
 
-> **NOTE:**
+> **PASTABA:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equaled 12g of carbs, later some changed to 10g of carbs.
+> Kai kuriose Europos šalyse duonos vienetai buvo naudojami nustatant, kiek insulino reikia maistui. Pradžioje 1 duonos vienetas prilygo 12g angliavandenių, vėliau buvo pakeista į 10g angliavandenių.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> Pagal šį modelį angliavandenių kiekis buvo nustatomas fiksuotas, insulino kiekis buvo kintamas. ("Kiek insulino reikia padengti vienam duonos vienetui?")
 > 
-> When using IC the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> Naudojant IA rodiklį, insulino kiekis yra fiksuotas, o angliavandenių kiekis yra kintamas. ("Kiek gramų angliavandenių padengia vienas vienetas insulino?")
 > 
 > Example:
 > 
-> Bread unit facor (BU = 12g carbs): 2,4 -> You need 2,4 units of insulin when you eat one bread unit.
+> Duonos vieneto faktorius (DV = 12g angliavandenių): 2,4 -> Jums reikia 2,4 vienetų insulino, kai jūs valgote vieną duonos vienetą.
 > 
-> Corresponding IC: 12 / 2,4 = 5,2 -> 5,2g carbs can be covered with one unit of insulin.
+> Atitinkamą IA: 12 / 2,4 = 5,2 -> 5,2 g angliavandenių gali būti padengta vienu vienetu insulino.
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Perskaičiavimo lentelės yra prieinamos internete, pvz., [čia](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### Įtaka
 
-**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
+**Žemesnis IA** = mažiau angliavandenių vienam insulino vienetui, t. y. jums reikia daugiau insulino konkrečiam angliavandenių kiekiui. Jis gali būti vadinamas "agresyvesniu".
 
-**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
+**Aukštesnis IA** = daugiau angliavandenių vienam insulino vienetui, t. y. jums reikia mažiau insulino konkrečiam angliavandenių kiekiui. Jis gali būti vadinamas "mažiau agresyvus".
 
-If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
+Jei po valgio angliavandeniai visiškai suskaidomi, AIO vėl tampa lygus nuliui, o jūsų KG vertė yra didesnė nei prieš valgį, tada jūsų IA tikriausiai yra per didelis. Ir atvirkščiai, IA yra per mažas, jei jūsų KG vertė yra mažesnė nei prieš valgant.
 
-# APS algorithm
+# APS algoritmas
 
-## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+## Kodėl skirtuke „OPENAPS AMA“ IVT insulino trukmė rodoma kaip 3 (dia:3), nors mano profilis turi kitokią vertę?
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter anymore.
+AMA kontekste „dia“ nereiškia „insulino veikimo trukmė“. Tai parametras, kuris naudojamas susijungimui su IVT. Tai reiškia, kada korekcinė dozė turėtų nustoti veikti. Tai neturi nieko bendro su aktyvaus insulino AIO skaičiavimais. OpenAPS SMB šis parametras nebenaudojamas.
 
 ## Profilis
 
-### Why using min. 5h DIA (insulin end time) instead of 2-3h?
+### Kodėl verta naudoti minimalią IVT (insulino veikimo trukmė) 5 valandas, o ne 2 ar 3 valandas?
 
-Well explained in [this article](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Išsamiai paaiškinta [šiame straipsnyje](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nepamirškite `AKTYVUOTI PROFILĮ` pakeitus savo insulino veikimo trukmę DIA.
 
-### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
+### Kas lemia, kad ciklas mažina mano glikemiją iki hipoglikemijos, nors aktyvių angliavandenių AAO nėra?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
+Pirmiausia turėtumėte patikrinti savo bazės nustatymus ir atlikti bazės testą nevartojus angliavandenių. Jei bazė nustatyta teisinga, tokį elgesį paprastai sukelia per mažas jautrumo insulinui faktorius JIF. Per mažas JIF paprastai atrodo taip:
 
-![ISF too low](../images/isf.jpg)
+![JIF per mažas](../images/isf.jpg)
 
-### What causes high postprandial peaks in closed loop?
+### Kas lemia aukštą glikemiją po valgio naudojant uždarą ciklą?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+Pirmiausia turėtumėte patikrinti savo bazės nustatymus ir atlikti bazės testą nevartojus angliavandenių. Jei tai teisinga ir jūsų KG vis tiek nenusileidžia iki tikslinės normos po visiško angliavandenių įsisavinimo, pabandykite nusistatyti laikiną tikslą „greitai valgysiu“ likus šiek tiek laiko prieš valgį arba aptarkite su savo endokrinologu, koks laiko tarpas nuo susileidimo iki valgymo būtų tinkamas. Jei po valgymo jūsų glikemija yra per didelė, net ir visiškai absorbavus angliavandenius, pasitarkite su savo endokrinologu, ar neturėtų sumažinti insulino:angliavandenių IA santykio. Jei jūsų KG lygis yra per aukštas esant aktyviems angliavandeniams AAO, ir per žemas, juos visiškai absorbavus, pasitarkite su savo endokrinologu, ar turėtumėte padidinti insulino:angliavandenių santykį IA bei koks laiko tarpas nuo susileidimo iki valgymo būtų tinkamas.
 
-# Other settings
+# Kiti nustatymai
 
-## Nightscout settings
+## Nightscout parametrai
 
-### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
+### AndroidAPS NSClient praneša „neleidžiama“ ir neįkelia jokių duomenų. Ką aš galiu padaryti?
 
-In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+NSClient patikrinkite "Ryšio parametrai". Galbūt nesate prisijungę prie leidžiamo WiFi tinklo arba turite įjungtą parinktį „Tik kraunant“, o įkrovimo laidas nėra prijungtas.
 
-## CGM settings
+## CGM parametrai
 
-### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
+### Kodėl AndroidAPS sako "KG šaltinis nepalaiko pažangaus filtravimo"?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Jei naudojate kitokią nuolatinio monitoringo sistemą, nei Dexcom G5 ar G6, xDrip natyvinėje būsenoje, šią pranešimą gausite skirtuke AndroidAPS OpenAPS. Norėdami gauti daugiau informacijos, žr. [Gliukozės kiekio kraujyje duomenų išlyginimas](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ## Pompa
 
-### Where to place the pump?
+### Kur turėčiau dėvėti pompą?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
+Yra daugybė būdų, kurioje vietoje dėvėti pompą. Nesvarbu, ar naudojate AAPS, ar ne.
 
-### Batteries
+### Baterijos
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+Silpna baterija gali išsikrauti greičiau nei įprasta, nes sistema su pompa veikia daug intensyviau nei paprastas vartotojas. Todėl rekomenduojama vėliausiai pakeisti baterija, kai ji pasiekia 25% įkrovos, nes tai gali apsunkinti duomenų perdavimą. Nightscout galite sukurti įspėjimą apie baterijos įkrovimą naudodami kintamąjį PUMP_WARN_BATT_P. Patarimai, kaip padidinti baterijos veikimo laiką:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
-* reduce the length of time the backlight stays on (within pump settings menu)
-* select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+* sutrumpinkite pompos ekrano išsijungimo laiką (pompos meniu)
+* sumažinkite pompos ekrano apšvietimo trukmę (pompos nustatymų meniu)
+* nustatykite garsinį, o ne vibracinį pompos pranešimą (pompos nustatymų meniu)
+* pompos mygtukus spauskite tik pompos užpildymui, visą kitą informaciją, pvz., peržiūrėti istoriją, akumuliatoriaus lygį ir rezervuaro lygį turėtumėte patikrinti AndroidAPS.
+* AndroidAPS programą dažnai gali išjungti telefono Android operacinė sistema, norėdama sutaupyti energijos ar atlaisvinti atmintį. Kai AndroidAPS vėl inicijuojamas, jis kiekvienu paleidimu užmezga Bluetooth ryšį su pompą ir perskaito esamą valandinę bazę ir boluso istoriją. Tam naudojama baterija. Norėdami sužinoti, ar taip atsitinka, eikite į Nustatymai> NSClient ir įgalinkite "Siųsti programų paleidimus NS". Nightscout gaus įvykio duomenis kiekvieną kartą, kai AndroidAPS bus paleista iš naujo, todėl bus lengviau sekti problemą. Norėdami sumažinti baterijos sunaudojimą tokių įvykių metu, į telefono akumuliatoriaus nustatymus įtraukite AndroidAPS į leidžiamų programų sąrašą ir tada energijos suvartojimo monitorius nustos uždarinėti AAPS.
     
-    For example, to whitelist on a Samsung phone running Android Pie:
+    Pavyzdžiui, norint įtraukti į sąrašą Samsung telefone, kuriame įdiegtas Android Pie:
     
-    * Go to Settings -> Device Care -> Battery 
-    * Scroll until you find AndroidAPS and select it 
-    * De-select "Put app to sleep"
-    * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    * Scroll to AndroidAPS and make sure it is de-selected.
+    * Eikite į Nustatymus -> Įrenginio priežiūra -> Akumuliatorius 
+    * Ieškokite kol rasite AndroidAPS ir pasirinkite ją 
+    * Nuimkite žymėjimą nuo "Įjungti programėlei miego režimą"
+    * TAIP PAT eikite į Parametrai -> Programos -> (Trys apskritimo ženklai viršutiniame dešiniajame kampe) pasirinkite "specialios prieigos" -> Optimizuoti baterijos naudojimą
+    * Pereikite prie AndroidAPS ir įsitikinkite, kad varnelė nepažymėta.
 
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+* nuvalykite baterijos kontaktus alkoholio servetėlėmis, kad ant jos neliktų gamyklinių riebalų pėdsakų.
 
-* for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+* [DanaR/RS pompose](../Configuration/DanaRS-Insulin-Pump.md) baterijos paleidimo procedūra siunčia aukštos įtampos impulsą, kad būtų pašalinta gamyklinė plėvelė (tai apsaugo nuo energijos praradimo saugojimo metu), tačiau tai ne visada suveikia 100 proc. Išimkite ir vėl įdėkite bateriją 2–3 kartus, kol ekrane pasirodys 100%, arba prieš dedant ją, baterijos raktu palieskite abu baterijos galus, tačiau tik labai trumpam, kad įvyktų trumpasis jungimas.
+* taip pat žiūrėkite patarimus apie [baterijų tipai](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
-### Changing reservoirs and cannulas
+### Rezervuaro ir kateterių keitimas
 
-The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
+Rezervuaro keitimo negali atlikti per AndroidAPS - tik tiesiogiai per pompą.
 
-* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-* Now disconnect the pump and change the reservoir as per pump instructions.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+* AndroidAPS pagrindinio ekrano skirtuke paspauskite ir palaikykite mygtuką Atviras ciklas / Uždaras ciklas ir pasirinkite "Sustabdyti ciklą 1 val."
+* Dabar atjunkite pompą, ir pakeiskite rezervuarą pagal pompos instrukciją.
+* Iš naujo prijungę pompą, pradėkite ciklą ilgai paspausdami mygtuką „Sustabdyta (X min.)“.
 
-The change of a canula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or canula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the PRIME/FILL button to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your canula box for how many units should be primed depending on needle length and tubing length.
+AndroidAPS nenaudoja pompos funkcijos „Pirminis kateterio užpildymas“, o užpildo kateterį įprastu bolusu, kuris į istoriją neįrašomas. Tai reiškia, kad jis nenutraukia tuo metu nustatytos laikinos valandinės bazės. AndroidAPS skirtuke VEIKLA naudokite mygtuką „Pirminis užpildymas / užpildymas“, kad nustatytumėte reikiamą insulino kiekį ir pradėtumėte pildyti. Jei kiekis nėra pakankamas, pakartokite užpildymą. Numatytuosius kiekius galite nustatyti trijų taškų meniu, esančiame skiltyje Nustatymai > Kita > Užpildymas / pirminio užpildymo standartiniai kiekiai. Norėdami sužinoti, kiek vienetų turėtumėte naudoti, priklausomai nuo adatos ir vamzdelio ilgio, skaitykite kateterio (kaniulės) instrukcijas.
 
-## Wallpaper
+## Fonas
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+Jūsų išmaniojo telefono AndroidAPS ekrano foną galite rasti [Išmaniųjų telefonų](../Getting-Started/Phones#phone-background) puslapyje.
 
-## Daily usage
+## Kasdienis naudojimas
 
-### Hygiene
+### Higiena
 
-#### What to do when taking a shower or bath?
+#### Ką daryti, kai prausiuosi po dušu ar vonioje?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
+Galite nusiimti pompą prieš maudantis duše ar vonioje. Per šį trumpą laiką pompos jums paprastai nereikia. Bet jūs apie tai turėtumėte pranešti AAPS, kad aktyvaus insulino IOB skaičiavimas išliktų teisingas.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+Žr. [aprašymą aukščiau](../Getting-Started/FAQ#disconnect-pump).
 
-### Work
+### Darbas
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Priklausomai nuo to, kokį darbą dirbate, gali būti, kad darbo dienomis naudojate skirtingus terapijos veiksnius. Turėtumėte pagalvoti apie [profilio pakeitimą](../Usage/Profiles.md) visos darbo dienos metu (pvz., daugiau nei 100% 8 valandas, jei dirbate sėdimą darbą, arba mažiau nei 100%, jei esate aktyvus), aukštą arba žemą laikiną tikslą arba nustatykite [laiko perstūmimą](../Usage/Profiles#time-shift) savo profilyje, jei atsikeliate daug anksčiau ar vėliau nei įprastai. Jei naudojate [Nightscout profilius](../Configuration/Config-Builder#ns-profile), tuomet galite ten sukurti antrą profilį (pvz., "Pagrindinis“ ir „Darbas“) ir pakeisti profilį į reikiamą.
 
-## Leisure activities
+## Laisvalaikio veikla
 
-### Sports
+### Sportas
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Turite pamiršti savo senus sportavimo įpročius, kuriuos turėjote prieš naudojantis AAPS ir išsiugdyti naujus. Jei tiesiog vartojate angliavandenius sportui, jūsų uždaro ciklo sistema tai atpažins ir atitinkamai suleis korekcijos bolusą.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Tuomet turite daugiau aktyvių angliavandenių, tačiau tuo pačiu ciklas įsikiš ir nurodys pompai suleisti daugiau insulino.
 
-When looping you should try these steps:
+Kai naudojate uždarą ciklą, turėtumėte pabandyti šiuos veiksmus:
 
-* Make a [profile switch](../Usage/Profiles.md) < 100%.
-* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+* Nustatyti [Profilį](../Usage/Profiles.md) mažiau nei 100%.
+* Nustatyti [Aktyvumo laikiną tikslą](../Usage/temptarget#activity-temp-target) virš jūsų įprastinio tikslo.
+* Jei naudojate SMB, įsitikinkite, kad funkcijos ["Įjungti SMB su aukštais tikslais"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) ir ["Įjungti SMB visada"](../Usage/Open-APS-features#enable-smb-always) yra išjungtos.
 
-Pre- and postprocessing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+Svarbus išankstinis ir vėlesnis šių parametrų apdorojimas. Prieš sportuodami atlikite pakeitimus ir įvertinkite raumenų darbo poveikį.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+Jei sportuojate reguliariai tuo pačiu metu (pvz., sportuojate sporto salėje), galite naudoti [Automatizavimą](../Usage/Automation.rst), kad pakeistumėte profilį ir laikinus tikslus. Geografine padėtimi pagrįsta automatizavimas taip pat yra gera idėja, tačiau apsunkina išankstinį apdorojimą.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Profilio pasikeitimo procentas, laikino tikslo dydis esant sportiniam aktyvumui bei pokyčių nustatymo geriausias laikas yra individualūs. Pradėkite nuo saugesnių parinkčių (pavyzdžiui, su mažu profilio procentu ir aukštesniais laikinais tikslais).
 
-### Sex
+### Seksas
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
+Galite nusiimti pompą, kad būtumėte laisvas, tačiau apie tai turite pranešti AAPS, kad aktyvaus insulino IOB skaičiavimai būtų teisingi.
 
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+Žr. [aprašymą aukščiau](../Getting-Started/FAQ#disconnect-pump).
 
-### Drinking alcohol
+### Alkoholio vartojimas
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Alkoholio vartojimas yra rizikingas su uždaru ciklu, nes algoritmas negali tinkamai numatyti alkoholio įtakos glikemijai. Turėsite rasti savo metodą, kaip tai padaryti, tačiau galite naudoti šias AndroidAPS funkcijas:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* Išjungti uždaro ciklo režimą išjungimas ir valdyti diabetą rankiniu būdu, arba
+* nustatykite aukštus laikinus tikslus ir išjunkite nepranešto valgymo UAM funkciją, kad ciklas nedidintų aktyvaus insulino IOB, dėl įtarimo, kad valgoma nepranešus, arba
+* pakeisti profilį į žymiai mažesnį nei 100% 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Jei vartojate alkoholį, visada turite stebėti savo glikemiją, kad išvengtumėte hipoglikemijos valgydami angliavandenius.
 
-### Sleeping
+### Miegas
 
-#### How can I loop during the night without mobile and WIFI radiation?
+#### Kaip užtikrinti ciklo veikimą naktį, neveikiant mobiliajai ir WIFI spinduliuotei?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or patched Dexcom app, it will NOT work if you get the BG-readings via Nightscout):
+Daugelis vartotojų naktį mobiliajame telefone įsijungia lėktuvo režimą. Jei norite, kad ciklas veiktų jūsų miego metu, atlikite šiuos veiksmus (tačiau tai veiks tik tada, jei naudojate vietinį glikemijos šaltinį, pvz., xDrip+ arba modifikuotą Dexcom programą, jis NEVEIKS, jei glikemijos duomenis gaunate per NIghtscout):
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. Įjunkite lėktuvo režimą mobiliajame telefone.
+2. Palaukite, kol lėktuvo režimas bus įjungtas.
+3. Įjunkite Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Dabar negausite skambučių ir nebūsite prisijungęs prie interneto. Bet ciklas veiks.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Kai kuriems vartotojams kilo problemų naudojantis telefoną skrydžio režime (AAPS negavo glikemijos reikšmių iš xDrip+). Eikite į Parametrai > Inter-app nustatymai > Nustatyti gavėjus ir įrašyti `info.nightscout.androidaps`.
 
-![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-### Travelling
+### Keliavimas
 
-#### How to deal with time zone changes?
+#### Kaip elgtis keičiantis laiko juostai?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+Su Dana R ir Dana R Korean jums nereikia daryti nieko. Kitoms pompoms - žr. puslapyje [Keliavimas per laiko juostas](../Usage/Timezone-traveling.md).
 
-## Medical topics
+## Medicininiai aspektai
 
-### Hospitalization
+### Hospitalizacija
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Jei norite suteikti gydytojui informaciją apie AndroidAPS ir šią "pasidaryk pats Dirbtinę kasą", tada galite atspausdinti [AndroidAPS vadovas medikams“](../Resources/clinician-guide-to-AndroidAPS.md).
 
-### Medical appointment with your endocrinologist
+### Vizitas pas endokrinologą
 
-#### Reporting
+#### Ataskaitos
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Galite parodyti savo Nightscout ataskaitas (https://jusu-nightscout-svetaine.com/report) arba naudoti [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).

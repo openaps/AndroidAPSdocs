@@ -2,7 +2,7 @@
 
 * Jděte na <https://translations.androidaps.org> nebo <https://wikitranslations.androidaps.org> a přihlaste se Vaším Github účtem
 
-* Odešlete žádost o připojení k Wiki týmu. Klikněte na vlajku požadovaného jazyka a poté na tlačítko "Join" vpravo nahoře na následující stránce. Specifikujte prosím svůj jazyk, uveďte nějaké informace o sobě a svých zkušenostech s AAPS a zda chcete být překladatel nebo korektor (pouze osoby se zkušeností s překlady + pokročilí uživatelé AndroidAPS).
+* Send a join request to the docs team. Klikněte na vlajku požadovaného jazyka a poté na tlačítko "Join" vpravo nahoře na následující stránce. Specifikujte prosím svůj jazyk, uveďte nějaké informace o sobě a svých zkušenostech s AAPS a zda chcete být překladatel nebo korektor (pouze osoby se zkušeností s překlady + pokročilí uživatelé AndroidAPS).
 
 * Jakmile vás schválíme, klikněte na vlajku ![Jakmile vás schválíme, klikněte na vlajku](./images/translation_flags2019.png)
 
@@ -26,11 +26,11 @@
 
 Když korektor schválí překlad, tak bude přidaný do příští verze AndroidAPS. Na úvod by také bylo dobré projít existující překlady, které ještě nebyly schválené, a ověřit v nich chyby nebo je schválit, pokud byly správné.
 
-## Překlad stránek Wiki
+## Translate docs pages
 
-* Klikněte na název stránky wiki, kterou chcete překládat
+* Click the name of the docs page you want to translate
     
-    ![Klikněte na stránku wiki](./images/translation_WikiPage.png)
+    ![Click docs page](./images/translation_WikiPage.png)
 
 * Překládejte větu za větou
     
@@ -42,9 +42,9 @@ Když korektor schválí překlad, tak bude přidaný do příští verze Androi
     
     4 Klikněte na tlačítko Save
     
-    ![Překlad wiki](./images/translation_WikiTranslate.png)
+    ![Translation docs](./images/translation_WikiTranslate.png)
 
-* A translated page will not be published in wiki before the translation is proofread.
+* A translated page will not be published in docs before the translation is proofread.
 
 ### Translate headline links
 
@@ -55,14 +55,22 @@ Když korektor schválí překlad, tak bude přidaný do příští verze Androi
     Here are some examples:
     
     * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
-    * Wiki Updates & Änderungen \---> #wiki-updates-anderungen
+    * Docs Updates & Änderungen \---> #docs-updates-anderungen
     * AAPS-.apk Datei \---> #aaps-apk-datei
 
 * Check your link if it is working as intended. If it is linking to a new translated headline you may have to wait until next build to be able to check correct link syntax. In this case do not forget to make a reminder in your calendar / todo app.
 
 #### Link translation in Markdown files (.md)
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in wiki. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+
+* * *
+
+**Make sure not to use space character at within HTML tags at the beginning or the end!**
+
+![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
+
+* * *
 
 If links are displayed like this in Crowdin
 
@@ -80,10 +88,10 @@ Links will then be shown in standard HTML format and can be translated consideri
 
 * Korektoři se musí přepnout do režimu Proofreading
     
-    ![Proofreading mode wiki](./images/translation_WikiProofreading.png)
+    ![Proofreading mode docs](./images/translation_WikiProofreading.png)
     
     a schválit přeložené texty
     
     ![schválit text](./images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next wiki build. To speed process you can inform wiki team about new translations.
+* When a proofreader approves a translation it will be added to the next docs build. To speed process you can inform docs team about new translations.

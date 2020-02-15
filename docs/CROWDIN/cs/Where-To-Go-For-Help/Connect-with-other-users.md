@@ -33,10 +33,10 @@ Připojte se k hlavní skupině [AndroidAPS na Facebooku](https://www.facebook.c
 
 ### Německo
 
-* [Looped-DE](https://www.facebook.com/groups/loopedDE/): Německy mluvící uživatelé OpenAPS, Loop a AndroidAPS
-* [Freestyle Libre Freaks](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre jako CGM/FGM
-* [NightscoutDE](https://www.facebook.com/groups/nightscoutDE/)
-* [Setkání uživatelů v Německu a Rakousku](http://loopertreffen.androidaps.de)
+* [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
+* [Looper Meetings Germany, Austria & Switzerland](http://loopertreffen.androidaps.de)
+* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
+* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
 
 ### Netherlands
 

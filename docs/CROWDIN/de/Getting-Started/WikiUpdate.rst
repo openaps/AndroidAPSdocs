@@ -1,5 +1,14 @@
-Wiki Updates & Änderungen
+Docs Updates & Änderungen
 **************************************************
+
+Februar 2020
+==================================================
+* `Automation Vorbehalte <../Usage/Automation.html#empfehlungen-und-vorbehalte>`_
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ - kurze Erklärung
+Januar 2020
+==================================================
+* `Kohlenhydrate manuell korrigieren <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_, falls diese falsch eingegeben wurden
+* `Bildgröße <../make-a-PR.html#bildgrose>`_ beim Bearbeiten des Docs
 Dezember 2019
 ==================================================
 * `Android Auto <../Usage/Android-auto.html>`_ - Setup mit Bildschirmfotos
@@ -22,7 +31,7 @@ November 2019
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Fehlerbehebungen - Linksammlung <../Usage/troubleshooting.html>`_
 * `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
-* Wiki - Update `Mitschreiben <../make-a-PR.md#code-syntax>`_ und `Übersetzen <../translations.html#wiki-seiten-ubersetzen>`_.
+* Docs - Update `Mitschreiben <../make-a-PR.md#code-syntax>`_ und `Übersetzen <../translations.html#wiki-seiten-ubersetzen>`_.
 
 Oktober 2019
 ==================================================

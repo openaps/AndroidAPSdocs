@@ -96,7 +96,7 @@ Dialog has two tabs:
 - **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
 - **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
 
-## Actions
+## 실행
 
 When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
 
@@ -138,7 +138,7 @@ We are aware of this problem, and we are already looking into possible solution 
 
 ### Can I see the power of RileyLink/GNARL?
 
-No. At the moment none of this devices support this and it probably won't even in the future.
+아니오. At the moment none of this devices support this and it probably won't even in the future.
 
 ### Is GNARL full replacement for RileyLink?
 

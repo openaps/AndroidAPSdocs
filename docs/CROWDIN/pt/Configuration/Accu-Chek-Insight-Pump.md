@@ -53,9 +53,9 @@ Note: There will be no permanent connection between pump and phone. A connection
 
 ## Configurações no AAPS
 
-You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > Nightscout-Client > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump.
+You **must not use ‘Always use basal absolute values’** with Insight pump. In AAPS go to Preferences > NSClient > Advanced Settings and make sure ‘Always use basal absolute values’ is disabled. It would lead to false TBR settings in Insight pump.
 
-Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune.
+Only workaround at the moment is to **disable sync** with Nightscout (upload only) if you need to use autotune. In AAPS go to Preferences > NSClient > Advanced Settings and Enable ‘NS upload only (disabled sync)‘.
 
 ![Screenshot of Insight Settings](../images/Insight_pairing_V2_5.png)
 
@@ -97,7 +97,7 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
 
 ## Configurações na bomba
 
-Configure alarms in the pump as follows:
+Configurar alarmes na bomba da seguinte forma:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
 * Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)

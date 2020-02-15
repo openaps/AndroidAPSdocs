@@ -287,9 +287,9 @@ De laatste stap is om op het APK bestand te tikken en de app te installeren. Als
 
 Van harte! Je hebt de app geïnstalleerd op je telefoon en nu kun je verder met het instellen van AndroidAPS.
 
-## Identify receiver (identificeer ontvanger) bij gebruik van xDrip
+## Identify receiver if using xDrip+
 
-[Zie xDrip pagina](../Configuration/xdrip#identify-receiver)
+[See xDrip+ page](../Configuration/xdrip#identify-receiver)
 
 ## Problemen oplossen
 

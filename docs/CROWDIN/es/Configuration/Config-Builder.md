@@ -94,7 +94,7 @@ Seleccione la fuente de glucosa en sangre que está utilizando: consulte la pág
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Dexcom App (parche) ](https://github.com/dexcomapp/dexcomapp/) -Seleccione 'Enviar datos de BG a xDrip +' si desea utilizar las alarmas xDrip +.
     
     ![Configurar origen de BG](../images/ConfBuild_BGSource.png)
@@ -203,7 +203,7 @@ Algunos botones para acceder rápidamente a funciones comunes:
 * Objetivos temporales
 * Establecer / cancelar temporal. dosis basal
 * Bolo extendido (sólo la bomba DanaR/RS o Combo)
-* Cebar / llenar (solo DanaR/RS o bomba de Combo)
+* Prime / fill (if supported by pump [DanaR/RS, Combo and Insight])
 * Navegador de Historial
 * TDD (dosis diaria total = bolo + basal por día)
 
