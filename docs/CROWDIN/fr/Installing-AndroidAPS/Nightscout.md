@@ -1,29 +1,29 @@
 # Nightscout
 
-## Security considerations
+## Remarques sur la sécurité
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+En complément des rapports, Nightscout peut également être utilisé pour contrôler AAPS. C'est-à-dire que vous pouvez définir des cibles temporaires ou ajouter des glucides futurs. Ces informations seront recueillies par AAPS qui agira en conséquence. Par conséquent, cela vaut la peine de penser à sécuriser votre site Nightscout.
 
 ### Paramètres Nightscout
 
-You can deny public access to your Nightscout site by using [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+Vous pouvez interdire l'accès public à votre site Nightscout en utilisant des [rôles d'authentification](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
 
 ### Paramètres AndroidAPS
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
+Il y a dans les paramètres AAPS une fonction "Remonter uniquement vers NS (sync désactivée)". En l'activant, AAPS ne prendra pas en compte les changement effectués dans Nightscout comme les cibles temp. ou les glucides renseignés. Si vous utilisez les [Profils NS](../Configuration/Config-Builder#ns-profile), les profils seront synchronisés entre AAPS et Nightscout malgré le paramètre "Remonter uniquement vers NS".
 
-* Tap 3-dot menu on top right corner on your AAPS homescreen.
-* Select "Preferences".
-* Scroll down and tap "Advanced settings".
-* Activate "NS upload only
+* Cliquez sur le menu 3 points en haut à droite de votre page d'accueil AAPS.
+* Sélectionnez "Préferences".
+* Faites défiler vers le bas et dans la section NSClient, appuyez sur "Paramètres Avancés".
+* Activez Remonter uniquement vers NS
 
-![Nightscout upload only](../images/NSsafety.png)
+![Remonter uniquement vers NS](../images/NSsafety.png)
 
-### Further security settings
+### Autres paramètres de sécurité
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.rst).
+Gardez votre téléphone à jour comme c'est décrit dans [La sécurité avant tout](../Getting-Started/Safety-first.rst).
 
-## Manual Nightscout setup
+## Manuel d'installation Nightscout
 
 Nous supposons que vous avez déjà un site Nightscout. Si ce n'est pas le cas, rendez-vous sur la page [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) pour suivre les instructions complètes sur la configuration. Les instructions ci-dessous sont les paramètres que vous devrez également ajouter à votre site Nightscout. Votre site Nightscout doit être au moins à la version 10 (affichée comme 0.10...), donc vérifiez que vous utilisez bien la [dernière version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) sinon vous recevrez un message d'erreur sur votre application AAPS. Certaines personnes trouvent que la boucle utilise plus que le quota gratuit d'azure, donc heroku est le choix à privilégier.
 
@@ -41,28 +41,28 @@ Nous supposons que vous avez déjà un site Nightscout. Si ce n'est pas le cas, 
   * Diverses alarmes peuvent être définies pour [surveiller la pompe](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), les alarmes concernant le niveau de batterie en particulier sont encouragées : 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
-  * Optional: The following 'timers' can be set for the coloring in the AAPS careportal: 
-    * `BAGE_WARN` = `480` (Warning after x hours since last Battery Changed Event in Careportal)
-  * `BAGE_URGENT` = `504` (Urgent warning after x hours since last Battery Changed Event in Careportal)
-  * `CAGE_WARN` = `40` (Warning after x hours since last Cannula Changed Event in Careportal)
-  * `CAGE_URGENT` = `48` (Urgent warning after x hours since last Cannula Changed Event in Careportal)
-  * `IAGE_WARN` = `144` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `IAGE_URGENT` = `192` (Warning after x hours since last Insulin Cartridge Changed Event in Careportal)
-  * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
-  * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
+  * Facultatif : Les 'minuteurs' suivants peuvent être définis pour changer les couleurs dans AAPS : 
+    * `BAGE_WARN` = `480` (Alerte x heures après le dernier changement de pile renseigné dans Careportal)
+  * `BAGE_URGENT` = `504` (Alerte urgente x heures après le dernier changement de pile renseigné dans Careportal)
+  * `CAGE_WARN` = `40` (Alerte x heures après le dernier changement de canule renseigné dans Careportal)
+  * `CAGE_URGENT` = `48` (Alerte urgente x heures après le dernier changement de canule renseigné dans Careportal)
+  * `IAGE_WARN` = `144` (Alerte x heures après le dernier changement de réservoir renseigné dans Careportal)
+  * `IAGE_URGENT` = `192` (Alerte urgente x heures après le dernier changement de réservoir renseigné dans Careportal)
+  * `SAGE_WARN` = `160` (Alerte x heures après le dernier changement de capteur renseigné dans Careportal)
+  * `SAGE_URGENT` = `168` (Alerte urgente x heures après le dernier changement de capteur renseigné dans Careportal)
 
 ![Azure](../../images/nightscout1.png)
 
 * Cliquez sur "Enregistrer" en haut du panneau.
 
-## Semi-automated Nightscout setup
+## Configuration de Nightscout semi-automatisée
 
-Ce service est offert gratuitement par Martin Schiftan, un utilisateur de la boucle fermée. If you like the service you can consider sending him a small donation (link in the navigation on the left side).
+Ce service est offert gratuitement par Martin Schiftan, un utilisateur de la boucle fermée. Si vous aimez le service, vous pouvez envisager de lui envoyer un petit don (lien dans la navigation sur le côté gauche).
 
-**Benefits**
+**Avantages**
 
 * Vous pouvez installer Nightscout en quelques clics et l'utiliser directement. 
-* Reduction of manual work as Martin tries to automate the administration.
+* Réduction du travail manuel car Martin essaye d'automatiser l'administration.
 * Tous les réglages peuvent être effectués via une interface web conviviale. 
 * Le service comprend une vérification automatique des taux basaux à l'aide d'Autotune. 
 * Le serveur est situé en Allemagne.
