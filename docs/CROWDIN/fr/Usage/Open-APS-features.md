@@ -67,7 +67,7 @@ Be careful and patient and only change the settings step by step. It is differen
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).
 
-### Activer AMA Autosense
+### Activer AMA Autosens
 
 Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' or not.
 
@@ -169,7 +169,7 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Adulte : 7
 * Adulte résistant à l'insuline : 12
 
-### Activer AMA Autosense
+### Activer AMA Autosens
 
 Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosense or not.
 
