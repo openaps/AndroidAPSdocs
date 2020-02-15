@@ -1,4 +1,4 @@
-# Sample setup: Samsung S7, DanaRS, Dexcom G6 and Sony Smartwatch
+# Sample setup: Samsung S7, Dana RS, Dexcom G6 and Sony Smartwatch
 
 ![Sample Setup](../images/SampleSetup.png)
 
@@ -75,14 +75,14 @@ Vietovės paslaugos („GPS“) turi būti suaktyvintos, kad Bluetooth tinkamai 
 
 Originali Dexcom programa iš Google Play Store neveiks, nes ji neperduoda duomenų į kitas programas. Todėl reikalinga šiek tiek pakeista mūsų bendruomenės versija. Tik ši modifikuota Dexcom programa gali bendrauti su AAPS. Be to, modifikuota Dexcom programa gali veikti su visais Android išmaniaisiais telefonais, o ne tik su tais, kurie yra [ Dexcom suderinamumo sąraše](https://www.dexcom.com/dexcom-international-compatibility).
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
+A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
 
 To do this perform the following steps on your smartphone:
 
 1. Jei originali Dexcom programėlė yra įdiegta: 
     * Sustabdykite sensorių
     * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l and region according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
 3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
 4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
 5. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
@@ -151,4 +151,4 @@ Details about the information displayed on the watchface can be found [here](../
 
 ## Pump setup
 
-see [DanaRS pump](../Configuration/DanaRS-Insulin-Pump.md)
+see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
