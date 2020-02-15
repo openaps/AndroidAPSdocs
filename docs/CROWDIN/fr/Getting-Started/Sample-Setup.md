@@ -1,4 +1,4 @@
-# Exemple d'installation : Samsung S7, DanaRS, Dexcom G6 et montre connectée Sony
+# Sample setup: Samsung S7, Dana RS, Dexcom G6 and Sony Smartwatch
 
 ![Exemple de configuration](../images/SampleSetup.png)
 
@@ -75,14 +75,14 @@ Les services de géolocalisation ("GPS") doivent être activés pour que Bluetoo
 
 L'application Dexcom originale du Google Play Store ne fonctionnera pas parce qu'elle ne diffuse pas de valeurs vers d'autres applications. Par conséquent, une version légèrement modifiée par la communauté est nécessaire. Seule cette application Dexcom modifiée peut communiquer avec AAPS. De plus, l'application Dexcom modifiée peut être utilisée avec tous les smartphones Android et non pas seulement ceux de [la liste de compatibilité Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-Une version en mmol/l et une version en mg/dl de l'application Dexcom G6 patchée sont disponibles ici <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Vous devez choisir l'application G6 pour votre région.
+Une version en mmol/l et une version en mg/dl de l'application Dexcom G6 patchée sont disponibles ici <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
 
 Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 
 1. Si l'application Dexcom originale est déjà installée : 
     * Arrêter le capteur
     * Désinstallez l'application via Menu > Paramètres > Apps > Dexcom G6 Mobile > Désinstaller
-2. Téléchargez l'application Dexcom modifiée (vérifiez l'unité mg/dl ou mmol/l selon vos besoins) : <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
 3. Installez l'application Dexcom G6 patchée sur votre smartphone (= selectionnez le fichier apk téléchargé)
 4. Démarrez l'application Dexcom G6 patchée, activez/calibrez le capteur selon les instructions données et attendez la fin de la phase de démarrage.
 5. Une fois que l'application Dexcom patchée affiche la valeur actuelle de la glycémie, configurez les alertes (menu hamburger sur le côté gauche de l'écran) comme suit : 
@@ -151,4 +151,4 @@ Pour plus d'informations sur les informations affichées sur le cadran, voir [ic
 
 ## Configuration de la pompe
 
-voir [Pompe DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
+see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
