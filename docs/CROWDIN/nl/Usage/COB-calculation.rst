@@ -40,7 +40,7 @@ In de bovenstaand screenshot werd de koolhydraat absorptie 41% van de tijd op wi
 Hoe om te gaan met deze waarschuwing? 
 --------------------------------------------------
 
--Overwegen om de behandeling te annuleren - druk op Annuleer in plaats van OK.
+- Overwegen om de behandeling te annuleren - druk op Annuleer in plaats van OK.
 - Gebruik de boluscalculator opnieuw maar haal het vinkje bij COB weg.
 - Als je denkt dat je een correctie bolus nodig hebt, voer hem handmatig in.
 - Pas in ieder geval op dat je geen overdosis geeft!
