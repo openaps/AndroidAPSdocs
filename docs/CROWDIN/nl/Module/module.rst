@@ -37,7 +37,7 @@ Telefoon
 --------------------------------------------------
 Je hebt een Android-smartphone met Android 6.0 of hoger nodig. Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij.
 
-Om een telefoon of horloge toe te voegen aan de lijst kun je dit 'formulier <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>'_ invullen.
+Om een telefoon of horloge toe te voegen aan de lijst kun je dit `formulier <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ invullen.
 
 Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, voor eventuele donaties van telefoon/smartwatch modellen die nog getest moeten worden kun je een e-mail sturen naar `donations@androidaps.org<mailto:hardware@androidaps.org>`_.
 
@@ -87,7 +87,7 @@ Nightscout is een open source web-applicatie die jouw CGM-gegevens en AndroidAPS
 
 Nightscout werkt onafhankelijk van de andere onderdelen. Je hebt het nodig om voorbij Doel 1 te komen.
 
-Meer informatie over het instellen van Nightscout voor gebruik met AndroidAPS vind je 'hier <../Installing-AndroidAPS/Nightscout.html>`_.
+Meer informatie over het instellen van Nightscout voor gebruik met AndroidAPS vind je `hier <../Installing-AndroidAPS/Nightscout.html>`_.
 
 AAPS-.apk-bestand
 --------------------------------------------------
@@ -101,7 +101,7 @@ Elke smartwatch met Android Wear 1.x en hoger is geschikt. Sommige loopers drage
 
 Gebruikers houden een `lijst van geteste telefoons en smartwatches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ bij. Er zijn verschillende watchfaces voor gebruik met AndroidAPS, deze vind je `hier <../Configuration/Watchfaces.html>`_.
 
-Om een telefoon of horloge toe te voegen aan de lijst kun je dit 'formulier <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>'_ invullen.
+Om een telefoon of horloge toe te voegen aan de lijst kun je dit `formulier <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ invullen.
 
 Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, voor eventuele donaties van telefoon/smartwatch modellen die nog getest moeten worden kun je een e-mail sturen naar `donations@androidaps.org<mailto:hardware@androidaps.org>`_.
 
@@ -124,7 +124,7 @@ Wat te doen tijdens het wachten op onderdelen
 ==================================================
 Het duurt soms een tijdje voordat je alle onderdelen voor het maken van een closed loop bij elkaar hebt. Maar geen zorgen, er zijn een heleboel dingen die je kunt doen tijdens het wachten. Het is NOODZAKELIJK om jouw basaalstanden, koolhydraatratio (KH), insuline gevoeligheidsfactor (ISF) etc. te testen en (indien van toepassing) aan te passen. AndroidAPS gebruiken in open loop modus kan een goede manier zijn om jouw profielinstellingen te testen en vertrouwd te raken met het syteem. In de open loop modus geeft AndroidAPS behandelingsadviezen die je handmatig moet doorvoeren.
 
-Verder kun je deze documentatie doorlezen, je kunt online of offline contact opnemen met andere loopers. Lees wat 'achtergrondinformatie <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ of bekijk welke vragen andere loopers stellen in de verschillende Facebook groepen (let hierbij wel op de kwaliteit van andermans suggesties, niet alles wat je leest is verstandig om blindelings na te doen).
+Verder kun je deze documentatie doorlezen, je kunt online of offline contact opnemen met andere loopers. Lees wat `achtergrondinformatie <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>`_ of bekijk welke vragen andere loopers stellen in de verschillende Facebook groepen (let hierbij wel op de kwaliteit van andermans suggesties, niet alles wat je leest is verstandig om blindelings na te doen).
 
 ** Klaar? **
 Als je jouw AAPS onderdelen bij elkaar hebt (gefeliciteerd!) of ten minste genoeg om te beginnen in de open loop modus, lees dan eerst de `Doelen <. /Usage/Objectives.html>`_ door en stel je `hardware <../index.html#component-setup>`_in.
