@@ -1,4 +1,4 @@
-# Gebruiksvoorbeeld: Samsung S7, DanaR, Dexcom G6 en Sony Smartwatch
+# Sample setup: Samsung S7, Dana RS, Dexcom G6 and Sony Smartwatch
 
 ![Gebruiksvoorbeeld](../images/SampleSetup.png)
 
@@ -75,14 +75,14 @@ Locatieservices (GPS) moet worden geactiveerd om Bluetooth goed te laten werken.
 
 De officiële Dexcom app uit de Google Play Store werkt niet omdat die geen glucosewaardes naar andere apps kan doorsturen. Daarom is er door mensen uit de doe-het-zelf looping community een aangepaste versie gemaakt. Deze aangepaste Dexcom app kan wel glucosewaardes naar AAPS sturen. Een ander voordeel is dat deze app met alle Android telefoons gebruikt kan worden, ook met telefoons die niet op de [Dexcom compatibiliteitslijst](https://www.dexcom.com/dexcom-international-compatibility) staan.
 
-Een mmol/l versie en een mg/dl versie van de aangepaste Dexcom G6 app zijn beschikbaar op <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Je moet de G6 app kiezen die hoort bij jouw regio.
+Een mmol/l versie en een mg/dl versie van de aangepaste Dexcom G6 app zijn beschikbaar op <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
 
 Volg onderstaande stappen om de aangepaste app op je telefoon te krijgen:
 
 1. Als je op dit moment de originele Dexcom app op je telefoon hebt: 
     * Sensor stoppen
     * App deinstalleren onder menu > instellingen > apps > Dexcom G6 Mobile > verwijderen
-2. Download de aangepaste Dexcom app (let op dat je de juiste versie hebt, mmol/l of mg/dl): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
 3. Installeer de aangepaste Dexcom app op je telefoon door op de gedownloade APK file te tikken
 4. Open de aangepaste Dexcom app, activeer/calibreer de sensor volgens de gebruikelijke instructies en wacht totdat het opwarmen is afgerond.
 5. Zodra de gemodificeerde Dexcom app de werkelijke glucosewaarde weergeeft, stel de waarschuwingen (hamburger menu aan de linkerzijde van het scherm) als volgt in: 
@@ -151,4 +151,4 @@ Meer details over wat er wordt weergegeven op de watchface kun je [hier](../Conf
 
 ## Pomp instellen
 
-Zie [DanaRS pomp](../Configuration/DanaRS-Insulin-Pump.md)
+see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
