@@ -35,7 +35,7 @@ Vaak kan een "Sensor fout" worden gecorrigeerd door te wachten en te zorgen dat 
 
 'Springende' waardes
 --------------------------------------------------
-Wanneer jouw waardes alle kanten op springen, zou je kunnen proberen om de instellingen voor Noise Blocking in xDrip+ te wijzigen (Settings - Inter-App Settings - Noise Blocking) d.w.z. "Block Very High noise and worse".  Zie ook Filteren van glucosewaardes <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Wanneer jouw waardes alle kanten op springen, zou je kunnen proberen om de instellingen voor Noise Blocking in xDrip+ te wijzigen (Settings - Inter-App Settings - Noise Blocking) d.w.z. "Block Very High noise and worse".  Zie ook `Filteren van glucosewaardes <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
 Negatieve sensorleeftijd
 --------------------------------------------------
