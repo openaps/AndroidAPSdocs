@@ -135,7 +135,7 @@ Přečtěte si okno „Tip of Day“ a kliknutím na „Close“ je zavřete.
 ![Snímek 17](../images/Installation_Screenshot_17.png)
 
 * Super, máte vlastní kopii zdrojového kódu a jste připraveni na vytvoření Apk.
-* Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení.
+* Nyní se blížíme k první chybové zprávě. Naštěstí nám Android Studio nabídne její řešení. (In case you do not receive the error message shown in next screenshot try closing and restarting Android Studio.)
 
 Klikněte na „Install missing platform(s) and sync project“, protože Android Studio potřebuje doinstalovat chybějící platformu.
 
