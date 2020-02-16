@@ -135,7 +135,7 @@ Lies und schließe den “Tip of the Day” von Android Studio, indem du auf “
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Perfekt, du hast jetzt deine eigene Kopie des Quellcodes erstellt und kannst mit dem Kompilieren beginnen.
-* Als nächstes erwartet uns die erste Fehlermeldung. Glücklicherweise schlägt Android Studio gleich die Lösung vor. (In case you do not receive the error message shown in next screenshot try closing and restarting Android Studio.)
+* Als nächstes erwartet uns die erste Fehlermeldung. Glücklicherweise schlägt Android Studio gleich die Lösung vor. (Falls keine Fehlermeldung angezeigt wird, schließe Android Studio und starte es neu.)
 
 Klicke auf “Install missing platform(s) and sync project”, da Android Studios noch einige Komponenten installieren muss.
 
