@@ -84,7 +84,7 @@ Nouvelles fonctionnalités majeures
 * Correctif Autosens : désactiver CT réhausse/diminue la cible
 * Nouvelles traductions&nbsp;
 * Correctifs du pilote Insight
-* Correction du plugin SMS
+* Correctif plugin SMS
 
 
 Version 2.2
