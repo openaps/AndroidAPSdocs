@@ -7,7 +7,7 @@
 Utiliser le système des notifications :
 
 * Open 3-dot-menu on top right of home screen
-* Préférences
+* Preferences
 * Scroll all the way down
 * Activate "Use system notifications..."
 
