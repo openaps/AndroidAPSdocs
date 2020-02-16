@@ -46,8 +46,8 @@ Ciklas
    * Response: Loop has been enabled
 * LOOP STATUS
    * Response depends on actual status
-      * Loop is disabled
-      * Loop is enabled
+      * Ciklas išjungtas
+      * Ciklas įjungtas
       * Suspended (10 min)
 * LOOP SUSPEND 20
    * Response: Loop suspended for 20 minutes
@@ -75,7 +75,7 @@ Basal
 * BASAL 30% 50
    * Response: To start basal 30% for 50 min reply with code Swe
 
-Bolus
+Bolusas
 --------------------------------------------------
 Remote bolus not allowed within 15 min -value editable only if 2 phone numbers added- after last bolus command or remote commands! Therefore response depends on time last bolus was given.
 

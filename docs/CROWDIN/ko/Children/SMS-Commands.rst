@@ -8,25 +8,25 @@ SMS 명령어
 
 사용 방법
 ==================================================
-* Most of the adjustments of temp targets, following AAPS etc. can be done on `NSclient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
-* If you use an iPhone as a follower and therefore cannot use NSclient, there are additional SMS commands available.
+* AAPS와 작동하는 임시 목표와 관련된 대부분의 조정들은 인터넷에 연결된 폰에서 'NSclient 앱 <../Children/Children.html>` _ 을 통해 원격 조종이 가능합니다.
+Bolus는 Nightscout를 통해 원격 주입되지 않지만, SMS 명령으로 가능합니다.
+* 팔로워폰으로 아이폰(iPhone)을 사용한다면 NSClient를 사용할 수 없고 SMS 명령으로 가능합니다.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
-* In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
-* If you want to use more than one number:
+* 당신의 안드로이드폰의 환경설정에서 애플리케이션 > AndroidAPS > 권한에 들어간 뒤 SMS를 활성화하세요
+* AndroidAPS의 설정 > SMS 통신기 > 허가된 전화번호에 SMS 명령을 사용할 폰번호를 입력하세요. (두개 이상의 폰번호를 입력하려면 세미콜론으로 구분해야합니다 - 예. 01012345678;01012345679) 그리고 'SMS 원격 명령 사용하기'를 활성화하세요.
+* 하나 이상의 전화번호 사용을 원한다면:
 
-  * Enter just one number.
-  * Make that single number work by sending and confirming a SMS command.
-  * Enter additional number(s) separated by semicolon, no space.
+  * 하나의 번호만 입력하세요.
+  * SMS 명령을 보내고 확인하여 해당 전화번호가 올바르게 작동하는지 확인하십시오.
+  * 다른 번호를 입력하세요. 세미콜론으로 구분하고 공백이 있으면 안됩니다.
   
     .. image:: ../images/SMSCommandsSetupSpace.png
-      :alt: SMS Commands Setup
+      :alt: SMS 명령 설정
 
 
-* Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
+* 아래 명령어 중 하나를 선택하여 허가된 폰에서 AndroidAPS가 설치된 폰으로 SMS를 보내어봅니다. 명령어 성공 혹은 상태와 관련된 답 문자를 받게될것입니다. 필요한 경우 AndroidAPS 에서 보낸 확인 코드를 답장하여 명령을 진행하세요.
 
-**Hint**: It can be useful to have SMS flat for both phones if a lot of SMS will be sent.
+**힌트**: 많은 SMS를 사용한다면 SMS 제한없는 요금제를 사용하면 좋습니다.
 
 명령어
 ==================================================
@@ -127,15 +127,15 @@ Bolus
 
 문제해결
 ==================================================
-Multiple SMS
+무한 SMS
 --------------------------------------------------
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not uploads treatments to NS. 
+동일한 메세지를 끊임없이 계속 수신하는 경우 (예. 프로파일 변경) 아마도 다른 앱과 무한루프가 되게 설정되었을 가능성이 있습니다. 예를 들면 그 앱이 xDrip+일 수가 있습니다. 따라서 그런경우엔, xDrip+(또는 다른앱)이 treatments를 NS에 업로드하지 않도록 하세요. 
 
-If the other app is installed on multiple phones make sure to deactive upload on all of them.
+다른 앱이 여러 휴대 전화에 설치된 경우 모든 휴대 전화에서 업로드를 비활성화해야합니다.
 
-SMS commands not working on Samsung phones
+삼성폰에서 SMS 명령어가 작동하지 않을 경우
 --------------------------------------------------
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
+갤럭시 S10 폰 업데이트 이후 SMS 명령어가 작동하지 않는다는 문제가 보고되었습니다. '채팅 메세지로 보내기'를 비활성화하면 해결될 수 있습니다.
 
 .. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+  :alt: 채팅 메세지로 보내기 비활성화하기

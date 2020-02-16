@@ -53,39 +53,39 @@ Vous devez définir les éléments suivants : (voir photo ci-dessus)
     - pour les US & le Canada, la fréquence utilisée est 916 Mhz
     - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Bolus Max sur la Pompe (U)** (en une heure) : doit avoir la même valeur que sur la pompe. Cela limite la quantité d'insuline que vous pouvez avoir en Bolus. Si vous allez au delà, le Bolus ne sera pas défini et une erreur sera retournée. Le Max qui peut être utilisé est 25, mais surtout veuillez définir une valeur correcte pour vous-même afin de ne pas avoir de surdose d'insuline.
-- **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
-- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
-- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
-- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
-- **RileyLink Configuration**: This will find your RileyLink/GNARL device.
+- **Basal Max sur la Pompe (U/h)** : Doit avoir la même valeur que sur la pompe. Cela limite la quantité de basal que vous pouvez avoir en une heure. Par exemple, si vous voulez avoir le DBT max fixé à 500% et que le débit de basal le plus élevé de votre profil est de 1.5 U, alors vous devez définir le Basal Max à au moins 7,5. Si ce paramètre est incorrect (par exemple, si l'un des débit de basal était au-dessus de cette valeur), la pompe renverrai une erreur.
+- **Délai avant de démarrer le Bolus (s)** : C'est le délai avant que le bolus ne soit envoyé à la pompe, ainsi si vous changez d'avis, vous pouvez l'annnuler. L'annulation d'un bolus lors le bolus est en cours d'administration n'est pas pris en charge par la pompe (si vous voulez arrêter de bolus lors de l'exécution, vous devez suspendre la pompe et la reprendre ensuite).
+- **Encodage Medtronic** : Ce paramètre défini si l'encodage 4b6b fait par les appareils Medtronic doit être fait dans AndroidAPS ou dans le RileyLink. Si vous avez un RileyLink avec un firmware 2.x, la valeur par défaut sera d'utiliser l'encodage matériel (= fait par le RileyLink), si vous avez un firmware 0.x, ce paramètre sera ignoré.
+- **Type de batterie (Power View)** : Si vous voulez voir la charge de la pile de votre pompe, vous devez sélectionner le type de pile que vous utilisez (actuellement Lithium ou Alkaline sont supportées), cela changera l'affichage pour afficher le pourcentage et la tension.
+- **Configuration RileyLink** : Vous trouverez votre appareil RileyLink/GNARL.
 
 ## Onglet MEDTRONIC (MDT)
 
 ![Onglet MDT](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+Sur l'onglet de la pompe, vous pouvez voir plusieurs lignes qui affichent l'état actuel des pompes (et des connexions).
 
-- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
-- **Last connection**: Time when last connection to pump was successful.
-- **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
-- **Temp basal**: Temp basal that is running or empty.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **État RileyLink**: Il affiche l'état de la connexion RileyLink. Le téléphone doit être connecté en permanence au RileyLink.
+- **État de la pompe** : État de la connexion avec la pompe, il peut avoir plusieurs valeurs, mais surtout nous allons voir une icône de veille (lorsque la connexion à la pompe n'est pas active), lorsque la commande est en train de s'exécuter, nous pouvons voir "Réveil en cours", quand AAPS essaye se connecter à votre pompe ou une description de toute commande qui pourrait fonctionner sur la pompe (ex.: Obtenir l'heure de la pompe, Paramétrer TBR, etc).
+- **Niveau batterie** : Affiche l'état de la pile en fonction de votre configuration. Il peut s'agir d'une simple icône indiquant si la pile est vide ou pleine (rouge si la pile devient critique, moins de 20%), ou un pourcentage et une tension.
+- **Dernière connexion** : Heure de la dernière connexion réussie à la pompe.
+- **Dernier Bolus** : Heure du dernier bolus délivré.
+- **Taux du débit Basal** : Il s'agit du débit basal en cours sur la pompe à cette heure.
+- **Basal temporaire** : Basal temporaire en cours d'exécution ou vide.
+- **Réservoir** : Indique la quantité d'insuline présente dans le réservoir (mise à jour au minimum toutes les heures).
+- **Erreurs** : Affiche une erreur en cas d'incident (le plus souvent il s'agit d'une erreur dans la configuration).
 
-On lower end we have 3 buttons:
+Sur la partie inférieure, nous avons 3 boutons :
 
-- **Refresh** is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Actualiser** est pour rafraîchir l'état. Cette action ne doit être utilisée que lorsque la connexion n'a pas été établie pendant longtemps, car cette action va réinitialiser les données relatives à la pompe (extraction de l'historique, heure de la pompe, récupération du profil, état de la pile, etc).
+- **Historique de la Pompe** : Affiche l'historique de la pompe (voir [ci-dessous](../Configuration/MedtronicPump#pump-history))
+- **État du RileyLink**: Affiche l'état du RileyLink (voir [ci-dessous](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
 ## Historique pompe
 
 ![Boîte de dialogue Historique pompe](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+L'historique de la pompe est récupéré toutes les 5 minutes et stocké localement. L'historique est conservé sur les dernières 24 heures, donc les données les plus ancienne sont supprimées quand de nouvelles données sont ajoutées. Il s'agit d'un moyen simple de voir l'historique de la pompe (certaines entrées de la pompe peuvent ne pas être affichées, car elles ne sont pas pertinentes - par ex. la configuration des fonctions qui ne sont pas utilisées par AndroidAPS).
 
 ## État RL (RileyLink État)
 
@@ -93,30 +93,30 @@ Pump history is retrieved every 5 minutes and stored localy. We keep history onl
 
 La boîte de dialogue a deux onglets :
 
-- **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Paramètres** : Affiche les paramètres relatifs au RileyLink : adresse configurée, périphérique connecté, état de connexion, erreur de connexion et versions du firmware RileyLink. Le type d'appareil est toujours Pompe Medtronic, Modèle affiche votre modèle de pompe, Numéro de série est le numéro de la pompe configuré, Fréquence de pompe indique la fréquence utilisée, Dernière fréquence est la dernière fréquence utilisée.
+- **Historique** : Affiche l'historique des communications, pour le RileyLink cela concerne les changements d'état et pour le Medtronic les commandes envoyées à la pompe.
 
 ## Actions
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Lorsque le pilote Medtronic est sélectionné, 3 actions possibles peuvent être ajoutées à l'onglet Actions :
 
-- **Wake and Tune Up** - If you see that your AndroidAPS hasn't contacted your pump in a while (it should contact it every 5 minutes), you can force Tune Up. This will try to contact your pump, by searching all sub frequencies on which Pump can be contacted. If it finds one it will set it as your default frequency. 
-- **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-- **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
+- **Réveil et Réglage** - Si vous voyez que AndroidAPS ne s'est pas connectée à votre pompe pendant un certain temps (il doit le faire toutes les 5 minutes), vous pouvez forcer la connexion. Cela tentera de communiquer avec la pompe, par la recherche de toutes les sous-fréquences sur laquelle la Pompe peut être contactée. S'il en trouve une, il la définira comme la fréquence par défaut. 
+- **Réinitialiser la config. RileyLink** - Si vous réinitialisez votre RileyLink/GNARL, vous devez utiliser cette action pour que le périphérique puisse être reconfiguré (jeu de fréquences, types de fréquence, type d'encodage).
+- **Effacer le bloc Bolus** - Lorsque vous démarrez le bolus, un bloc bolus est configuré, ce qui empêche l'envoi de toute commande à la pompe. Si vous arrêtez votre pompe et que vous la redémarrez (pour annuler le bolus), vous pouvez ensuite supprimer ce bloc. Cette option n'est présente que lorsqu'un bolus est en cours... 
 
 ## Remarques importantes
 
 ### Utilisateurs OpenAPS
 
-When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+Lorsque vous commencez à utiliser AndroidAPS, le contrôleur principal est AndroidAPS et toutes les commandes doivent passer par lui. L'envoi de bolus doit passer par AAPS et ne pas être fait sur la pompe. Nous avons un code en place qui détecte n'importe quelle commande exécutée sur la pompe, mais si vous pouvez vous devez éviter cela (je pense que nous avons corrigé tous les problèmes avec l'historique de la pompe et la synchronisation avec l'historique AAPS, mais de petits problèmes peuvent encore arriver, surtout si vous utilisez la "configuration" comme elle n'était pas destinée à être utilisée). Depuis que j'ai commencé à utiliser AndroidAPS avec ma pompe, je n'ai pas touché la pompe, sauf quand je dois changer le réservoir, et c'est de cette façon qu'il faut utiliser AndroidAPS.
 
-### Logging
+### Journaux
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Étant donné que le pilote Medtronic est très récent, vous devez activer les journaux, afin que nous puissions déboguer et corriger les problèmes, si de nouveaux devaient se produire. Cliquez sur l'icône hamburger dans le coin supérieur gauche, sélectionnez Maintenance et Paramètres Journal. Les options Pump, PumpComm, PumpBTComm doivent être cochées.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+Lorsque vous redémarrez RileyLink ou GNARL, vous devez effectuer une nouvelle opération de Réglage (action "Réveil et Réglage"), ou renvoyer les paramètres de communication (action "Réinitialiser la config. RileyLink"), sinon la communication échouera.
 
 ### MGC
 
@@ -124,15 +124,15 @@ La MGC Medtronic n'est actuellement PAS prise en charge.
 
 ### Utilisation manuelle de la pompe
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Vous devez normalement éviter de faire des traitements manuels sur votre pompe. Toutes les commandes (bolus, DBT) doivent passer par AndroidAPS, mais s'il vous arrive de faire des commandes manuelles, n'exécutez PAS de commandes à une fréquence inférieure à 3 minutes (donc si vous voulez faire 2 bolus, pour quelque raison que ce soit, le deuxième doit être lancé au minimum 3 minutes après le premier).
 
 ## Modifications de fuseau horaire, changements d'heure ou Voyage avec la pompe Medtronic et AndroidAPS
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+Une chose importante à savoir est que vous ne devez jamais désactiver la boucle quand vous voyagez (sauf si votre MGC ne marche pas en mode hors connexion). AAPS détecte automatiquement les changements d'heure et envoie une commande à la pompe pour la changer quand l'heure du téléphone est modifiée.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Maintenant si vous voyagez vers l'Est et vous changez de fuseau horaire avec l'ajout d'heures (par ex. de GMT+0 à GMT+2), l'historique de la pompe n'aura pas de problème et vous n'avez pas à vous inquiéter... Mais si vous voyagez vers l'ouest et que vos fuseaux horaires changent en supprimant les heures (de GMT +2 à GMT+0), alors la sychronisation peut poser des problèmes. En clair, cela signifie que pour les prochaines x heures, vous devez être prudent, parce que votre IA, peut être mal calculée.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Nous sommes conscient de ce problème, et nous étudions actuellement une solution possible (voir https://github.com/andyrozman/RileyLinkAAPS/issues/145), mais pour l'instant, ayez en tête cette information lorsque vous voyagez.
 
 ## Questions fréquentes
 
@@ -148,18 +148,18 @@ Oui. L'auteur de GNARL a ajouté toutes les fonctions utilisées par le pilote M
 
 ### Où puis-je obtenir RileyLink ou GNARL ?
 
-Like mentioned before you can get devices here:
+Comme indiqué précédemment, vous pouvez obtenir ces appareils ici :
 
-- RileyLink - You can get device here - [getrileylink.org](https://getrileylink.org/).
-- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
+- RileyLink - Vous pouvez vous le procurer ici - [getrileylink.org](https://getrileylink.org/).
+- GNARL - Vous pouvez obtenir des informations ici, mais le matériel doit être commandé ailleurs ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
 
 ### Que faire si je perds la connexion à RileyLink et/ou à la pompe ?
 
-1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
-2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink.
-3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action.
-4. Try 3 and 2 together.
-5. Reset RileyLink and reset phone.
+1. Exécutez l'action "Réveil et Réglage", cela va essayer de trouver la bonne fréquence pour communiquer avec la pompe.
+2. Désactivez le Bluetooth, attendez 10s et réactivez-le. Cela va forcer la reconnexion au RileyLink.
+3. Réinitialisez le RileyLink, après cela, n'oubliez pas d'exécuter l'action "Réinitialiser la config. RileyLink".
+4. Essayez 3 et 2 ensemble.
+5. Réinitialisez RileyLink et réinitialisez le téléphone.
 
 ### Comment déterminer la fréquence utilisée par ma pompe
 

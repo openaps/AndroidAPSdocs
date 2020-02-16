@@ -33,6 +33,7 @@ AndroidAPS είναι ένα open source εφαρμογή για τους ανθ
    :glob:
    
    Module <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 Πώς να Εγκαταστήσετε AndroidAPS

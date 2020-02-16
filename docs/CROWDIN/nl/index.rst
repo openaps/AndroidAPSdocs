@@ -10,7 +10,7 @@ De app is niet verkrijgbaar in de Google Play store - om juridische redenen moet
 De belangrijkste onderdelen zijn:
 
 .. image:: images/modules-female.png
-  :alt: Components
+  :alt: Onderdelen
 
 Hieronder volgt de inhoudsopgave.
 
@@ -23,7 +23,7 @@ Aan de slag
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
    Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
    Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
    
    
 Wat heb ik nodig 
@@ -32,7 +32,8 @@ Wat heb ik nodig
    :maxdepth: 1
    :glob:
    
-   Module <./Module/module.rst>
+   Onderdelen <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 AndroidAPS installeren
@@ -148,7 +149,7 @@ Waar je hulp kunt vinden
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
 
 Zorgprofessionals
 --------------------------------------------------
@@ -166,11 +167,11 @@ Hoe je zelf kunt helpen
    :glob:
 
    Hoe kan je helpen <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   De app of wiki vertalen <./translations.md>
+   De wiki verbeteren <./make-a-PR>
 
 
-.. note:: 
+.. opmerking:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
@@ -179,4 +180,4 @@ Hoe je zelf kunt helpen
 
 	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
 
-	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: 'SOOIL <http://www.sooil.com/eng/>'_, 'Dexcom<http://www.dexcom.com/>'_, 'Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>'_ of 'Medtronic</3>'_.
+	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ of `Medtronic <http://www.medtronic.com/>`_.

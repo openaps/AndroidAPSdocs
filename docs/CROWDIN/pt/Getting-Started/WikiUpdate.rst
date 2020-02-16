@@ -5,6 +5,7 @@ February 2020
 ==================================================
 * `Automation caveats <../Usage/Automation.html#good-practice--caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
+* `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
 January 2020
 ==================================================
 * `Manual carb correction <../Getting-Started/Screenshots.html#carb-correction>`_ for faulty carb entries

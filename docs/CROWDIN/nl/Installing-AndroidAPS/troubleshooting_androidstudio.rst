@@ -1,148 +1,148 @@
-Troubleshooting Android Studio
+Problemen met Android Studio oplossen
 **************************************************
-Lost keystore
+Keystore (digitale handtekening) kwijt
 ==================================================
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij het updaten van AndroidAPS, omdat jouw telefoon dan de nieuwe versie van de app herkent als update van jouw bestaande app. Je laat de bestaande app gewoon op je telefoon staan, je installeert de nieuwe eroverheen en al jouw instellingen blijven behouden. Daarom moet je jouw keystore bestand (eindigt op *.jks) opslaan en bewaren op jouw computer.
 
-In case you cannot find your old keystore anymore, proceed as follows:
+Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een paar extra stappen nodig bij het updaten van de app, om de instellingen in jouw AAPS app te behouden:
 
-1. `Export settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ on your phone.
-2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
-3. Make sure settings file "AndroidAPS Preferences" is stored safely.
-4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. `Import settings <../Usage/ExportImportSettings.html#how-to-export-settings>`_ - if you can't find them on your phone copy them from the external storage.
-8. Keep on looping.
+1. `Exporteer de instellingen <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ op jouw telefoon.
+2. Kopieer jouw instellingen bestand van jouw telefoon naar een externe locatie (zoals je computer, cloudopslag service...).
+3. Zorg ervoor dat je het bestand met instellingen "AndroidAPS Preferences" opslaat op een veilige plek die je later kunt terugvinden.
+4. Bouwen van de ondertekende apk zoals beschreven op de pagina `Bijwerken naar een nieuwe versie <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+5. Verwijder de vorige AAPS-versie van jouw telefoon.
+6. Installeer de nieuwe AAPS-versie op jouw telefoon.
+7. `Instellingen importeren <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ - mocht je ze op je telefoon niet kunnen vinden, kopieert ze dan vanaf de externe plek (computer, cloudopslag) waar je ze eerder had opgeslagen.
+8. En je kunt weer doorloopen!
 
 Kotlin compiler warning
 ==================================================
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings. 
+Als je de app succesvol hebt gebouwd, maar je krijgt een Kotlin compiler waarschuwing dan kun je deze negeren. 
 
-App was build successfully and can be transferred to phone.
+Je kunt verdergaan met het overzetten van de app (*.apk bestand) naar je telefoon.
 
 .. image:: ../images/GIT_WarningIgnore.PNG
-  :alt: ignore Kotline compiler warning
+  :alt: negeer Kotlin compiler waarschuwing
 
-Key was created with errors
+Key was created with errors (digitale handtekening bevat een fout)
 ==================================================
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+Bij het maken van een nieuw keystore-bestand (digitale handtekening) voor het bouwen van de ondertekende APK, kun je het volgende foutbericht krijgen (in Windows)
 
 .. image:: ../images/AndroidStudio35SigningKeys.png
-  :alt: Key was created with errors
+  :alt: Key was created with errors (digitale handtekening bevat een fout)
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+Dit lijkt een bug te zijn in Android Studio 3.5.1 en de meegeleverde Java-omgeving in Windows. Het keystore bestand wordt gewoon correct aangemaakt, maar een aanbeveling wordt ten onrechte als een fout weergegeven. Dit kun je nu gewoon negeren.
 
 Could not download… / Offline Work
 ==================================================
-If you get a failure message like this
+Als je een foutmelding krijgt over 'Kon niet downloaden/offline werken' zoals dit
 
 .. image:: ../images/GIT_Offline1.jpg
-  :alt: Warning could not download
+  :alt: Waarschuwing kon niet worden gedownload
 
-make sure that ‘Offline work’ is disabled.
+zorg ervoor dat “Offline work” uitgeschakeld is.
 
-File -> Settings
+File -> Settings (Bestand -> Instellingen)
 
 .. image:: ../images/GIT_Offline2.jpg
-  :alt: Settings offline work
+  :alt: Instellingen offline werken
 
 Error: buildOutput.apkData must not be null
 ==================================================
-Sometimes you might get an error message when building the apk saying
+Misschien krijg je de volgende foutmelding bij het bouwen van de apk:
 
-  `Errors while building APK.`
+  `Errors while building APK` (Fouten bij het bouwen van APK)
    
-  `Cause: buildOutput.apkData must not be null`
+  `Cause: buildOutput.apkData must not be null` (Oorzaak: buildOutput.apkData mag niet leeg zijn)
 
-This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+Dit is een bekende bug in Android Studio 3.5 en zal waarschijnlijk niet worden opgelost voordat Android Studio 3.6 uitkomt. Je hebt drie opties:
 
-1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
-2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
-3. Change apk destination folder (different location).
+1. Verwijder handmatig de drie 'build'-mappen (normale "build" map, build map in "app" en build map in "wear") en bouw vervolgens opnieuw de getekende apk.
+2. Doel map (Destination folder) instellen op project map in plaats van de app map zoals beschreven in `deze video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
+3. Wijzig de doel map (destination folder) voor jouw apk-bestand (naar een andere map op jouw computer).
 
-Unable to start daemon process
+Unable to start daemon process (Kan daemon proces niet starten)
 ==================================================
-If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
+Als je een foutmelding ziet zoals hieronder dan heb je waarschijnlijk een 32-bit versie van Windows 10. Deze versie werkt helaas niet met Android Studio 3.5.1 en hoger. Alleen de 64-bit versie van Windows 10 werkt. Je zult dus op jacht moeten naar een computer met de 64-bit versie, of op jouw eigen computer de 64-bit versie moeten installeren.
 
-There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+Er zijn veel handleidingen op internet te vinden hoe je kunt checken of jouw computer een 32-bit of 64-bit versie heeft, zoals `deze <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
 
 .. image:: ../images/AndroidStudioWin10_32bitError.png
   :alt: Screenshot Unable to start daemon process
   
 
-No CGM data
+Geen CGM gegevens
 ==================================================
-* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
-* In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Wanneer je xDrip+ gebruikt: Ontvanger identificeren zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html##identificeer-ontvanger-identify-receiver>`_.
+* Wanneer je de `aangepaste Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Zorg dat je de juiste versie uit de `2.4 map <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ gebruikt.
 
-Uncommitted changes
+Uncommitted changes (Niet-opgenomen wijzigingen)
 ==================================================
-If you receive failure message like
+Als je een foutmelding ziet zoals
 
 .. image:: ../images/GIT_TerminalCheckOut0.PNG
   :alt: Failure uncommitted changes
 
-Option 1 - Check git installation
+Optie 1 - Controleer of git correct geinstalleerd is
 --------------------------------------------------
-* git might be not installed correctly (must be globally available)
-* when on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
-* `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
-* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
+* git is wellicht niet correct geïnstalleerd (moet geïnstalleerd zijn op een locatie waar Android Studio bij kan)
+* wanneer je Windows gebruikt en je hebt git zonet geïnstalleerd, dan moet je je computer opnieuw opstarten of in ieder geval afmelden en opnieuw aanmelden, om git voor andere programma's beschikbaar te maken na de installatie
+* `Controleer git instellingen <../Installing-AndroidAPS/git-install.html#controleer-de-git-instellingen-in-android-studio>`_
+* Als je jouw git instellingen gecontroleerd hebt en je ziet geen git versie maar git is wel geïstalleerd op jouw computer, zorg dan dat Android Studio weet `waar git zich bevindt <../Installing-AndroidAPS/git-install.html#stel-git-path-in-android-studio-in>`_ op jouw computer.
 
-Option 2 - Reload source code
+Optie 2 - Broncode opnieuw laden
 --------------------------------------------------
-* In Android Studio select VCS -> GIT -> Reset HEAD
+* In Android Studio klik op VCS -> GIT -> Reset HEAD
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
    
-Option 3 - Check for updates
+Optie 3 - Controleren op updates
 --------------------------------------------------
-* Copy ‘git checkout --’ to clipboard (without quote signs)
-* Switch to Terminal in Android Studio (lower left side of Android Studio window)
+* Kopieer 'git checkout --' naar klembord (zonder aanhalingstekens)
+* Schakel over naar Terminal in Android Studio (linkerbenedenhoek van Android Studio venster)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
   :alt: Android Studio Terminal
    
-* Paste copied text and press return
+* Plak gekopieerde tekst en druk op return
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
-    :alt: GIT checkout success
+    :alt: GIT checkout succes
 
-App not installed
+App niet geïnstalleerd
 ==================================================
 .. image:: ../images/Update_AppNotInstalled.png
-  :alt: phone app note installed
+  :alt: phone app not installed
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Zorg ervoor dat je het bestand "app-full-release.apk" naar jouw telefoon hebt overgebracht.
+* Als "App niet geïnstalleerd" wordt weergegeven op jouw telefoon volg dan deze stappen:
   
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
+1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
 2. Verwijder de AndroidAPS app van jouw telefoon.
-3. Enable airplane mode & turn off bluetooth.
+3. Schakel vliegtuigmodus in & schakel bluetooth uit.
 4. Installeer nieuwe versie ("app-full-release.apk”)
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
 6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
 
-App installed but old version
+App geïnstalleerd maar oude versie
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`.
+Wanneer je de app succesvol hebt gebouwd, hem naar jouw telefoon hebt overgebracht en geïnstalleerd, maar het versienummer blijft hetzelfde, dan heb je waarschijnlijk de `bijwerken van jouw lokale kopie <../Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`_ stap gemist. Bouw de app opnieuw en vergeet deze stap niet;)
 
-None of the above worked
+Geen van de bovengenoemde
 ==================================================
-If non of the above tips helped you might consider building the app from scratch:
+Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
+1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
 2. Have your key password and key store password ready
     In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-code-and-additional-components>`_.
 4.	Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
 
-Worst case scenario
+In het ergste geval
 ==================================================
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+In het geval dat zelfs het bouwen van de app vanaf nul niet jouw probleem oplost, zou je kunnen proberen om Android Studio volledig te verwijderen. Sommige gebruikers hebben gemeld dat dit hun probleem heeft opgelost.
 
 **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 

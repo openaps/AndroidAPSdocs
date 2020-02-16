@@ -1,4 +1,4 @@
-# How to translate AndroidAPS and the documentation
+# De app of wiki vertalen
 
 * Wanneer je wilt meehelpen vertalen vanuit het Engels, dan gaan we ervan uit dat je er wel uitkomt met de Engelstalige instructies;) -> Go to <https://translations.androidaps.org> or <https://wikitranslations.androidaps.org> and login using your Github account
 

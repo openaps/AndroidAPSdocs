@@ -4,9 +4,9 @@ Jei dar jo nenustatėte, atsisiųskite [xDrip+](https://jamorham.github.io/#xdri
 
 **This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
-Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda skaičiais 80 ar 81) reikia bent [xDrip+ master nuo 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
 
-Jei jūsų Dexcom G6 siųstuvo serijos nr. pradeda su 8G... ar 8H... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -55,8 +55,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### xDrip+ versija, priklausomai nuo to G6 siųstuvo serijos nr.
 
-* Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda skaičiais 80 ar 81) reikia bent [xDrip+ master nuo 2019/05/18](https://jamorham.github.io/#xdrip-plus). 
-* Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+* Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus). 
+* Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ### Dexcom specialūs nustatymai
 
@@ -76,7 +76,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Pakartoninis paleidimas nerekomenduojamas
 
-**Su Dexcom siųstuvais, kurių serijos nr. pradeda su 8G ar 8H, pakartotinis paleidimas iš naujo neveikia ir gali sugadinti sensorių visiškai!**
+**Su Dexcom siųstuvais, kurių serijos nr. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
 The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
@@ -96,9 +96,9 @@ Norėdami gauti daugiau informacijos ir šių rekomendacijų priežastis, skaity
 
 **Apie antrą ir kitus siųstuvus skaitykite žemiau [Siųstuvo veikimo trukmės pratęsimas ](../Configuration/xdrip#extend-transmitter-life).**
 
-Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda skaičiais 80 ar 81) reikia bent [xDrip+ master nuo 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
 
-Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8J try [nightly build 2019/07/28 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Išjunkite originalų „Dexcom“ imtuvą (jei naudojate).
 * Ilgai spauskite kraujo lašo piktogramą pagrindiniame xDrip+ ekrane, kad suaktyvintumėte `Glikemijos šaltinio parinkimo vedlys (Source Wizard Button)` mygtuką.
@@ -116,7 +116,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H try [nightl
 * Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
    
    * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
@@ -124,7 +124,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H try [nightl
    
    -> Po kelių minučių ekrano apačioje pasirodys `Warm Up x, liko x valandų`.
 
--> Jei jūsų siųstuvo serijos nr. does not start with 8G or 8H and there is no time specification after a few minutes stop and restart the sensor.
+-> Jei jūsų siųstuvo serijos nr. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * Paleiskite kolektorių iš naujo (sistemos būsena - jei nekeičiamas sensorius}
 * Neįjunkite originalaus Dexcom imtuvo (jei jį naudojate), kol xDrip+ nepasirodys pirmieji duomenys.
@@ -150,7 +150,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H try [nightl
 
 ### Pailginkite siųstuvo veikimo laiką
 
-* Kol kas nerastas būdas prailginti tarnavimo laiką siųstuvų, kurių serijos nr. starts with 8G or 8H.
+* Kol kas nerastas būdas prailginti tarnavimo laiką siųstuvų, kurių serijos nr. starts with 8G, 8H or 8J.
 * Norint išvengti sunkumų paleidžiant sensorius, ypač rekomenduojama, kad siųstuvas veiktų iki 100-osios pirmojo naudojimo dienos.
 * Veikiančio sensoriaus seansas bus sustabdytas, jei tuo metu prailginsite siųstuvo veikimo laiką. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Stop sensor manually via hamburger menu.
@@ -172,9 +172,9 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H try [nightl
 
 ### Siųstuvo pakeitimas
 
-Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda skaičiais 80 ar 81) reikia bent [xDrip+ master nuo 2019/05/18](https://jamorham.github.io/#xdrip-plus).
+Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
 
-Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Išjunkite originalų „Dexcom“ imtuvą (jei naudojate).
 * Sustabdykite sensorių (tik keičiant sensorių)
@@ -205,8 +205,8 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H use one of 
 * Įveskite naujo siųstuvo serijos nr. Nesupainiokite 0 (nulis) ir O (didžiosios raidės o).
 * Įdėkite naują sensorių (tik keičiant).
 * Put transmitter into sensor - **Do not start sensor immediately!**
-* New "Firefly Transmitters" (serial no. starting with 8G or 8H) can only be used in native mode.
-* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G or 8H):
+* New "Firefly Transmitters" (serial no. starting with 8G, 8H or 8J) can only be used in native mode.
+* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G, 8H or 8J):
    
    * Preemptive Restart (disable!)
    * Restart sensor (disable!)
@@ -217,7 +217,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H use one of 
 * Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following informations is displayed:
    
    * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
@@ -262,7 +262,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H use one of 
 
 * Startuoti sensorių
    
-   **For new Firefly transmitters** (serial no. starting with 8G or 8H) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
+   **For new Firefly transmitters** (serial no. starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
 
 * Nustatyti įvedimo laiką
    
@@ -305,7 +305,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G or 8H use one of 
 
 ### Problemos paleidžiant naują sensorių
 
-Atminkite, kad šis metodas gali neveikti, jei jūsų siųstuvo serijos Nr. is starting with 8G or 8H.
+Atminkite, kad šis metodas gali neveikti, jei jūsų siųstuvo serijos Nr. is starting with 8G, 8H or 8J.
 
 * Natyvinis sensorius pažymimas kaip: „KLAIDA: Sensoriaus nepavyko startuoti“
 * Sustabdykite sensorių

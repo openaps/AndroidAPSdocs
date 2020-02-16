@@ -6,7 +6,7 @@
 
 * In AndroidAPS go to Config Builder and select 'DanaRS'
 
-* 오른쪽 상단에 있는 점 3개를 눌러 메뉴를 선택하세요. 설정을 선택하세요.
+* Select Menu by tapping the 3 dots in the top right. Select Preferences.
 
 * Select DanaRS Pair New Pump, and click your DanaRS serial number.
   
@@ -25,7 +25,7 @@
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
 
-* 펌프에서 확장Bolus를 활성화하세요.
+* Enable extended boluses on pump
 
 ## Dana RS specific errors
 
@@ -47,7 +47,7 @@ When switching to a new phone the following steps are neccessary:
 * **Export settings** on your old phone
   
   * Hamburger menu (top left corner of screen)
-  * 정비
+  * Maintenance
   * Export settings
     
     ![AAPS export settings](../images/AAPS_ExportSettings.png)
@@ -59,9 +59,9 @@ When switching to a new phone the following steps are neccessary:
 * **Install AndroidAPS** on the new phone.
 * **Import settings** on your new phone 
   * Hamburger menu (top left corner of screen)
-  * 정비
+  * Maintenance
   * Import settings
 
 ## Timezone traveling with Dana RS pump
 
-다른 시간대의 나라로 여행하는 경우에 대한 정보는 [ 펌프와 함께 하는 다른 시간대 여행 ](../Usage/Timezone-traveling#danarv2-danars) 섹션을 참조하십시오.
+For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
