@@ -33,6 +33,7 @@ What do I need
    :glob:
    
    Module <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 AndroidAPS 설치하기
