@@ -6,13 +6,13 @@ Vzhledem k tomu, že AndroidAPS je systém hybridní uzavřené smyčky, uživat
 
 ## Aplikace Automate pro Android
 
-Bezplatná aplikace Automate pro Android™ umožňuje automatizovat různé úkoly na vašem smartphonu. Své automatizace můžete vytvořit pomocí diagramů, vaše zařízení může automaticky měnit nastavení jako Bluetooth, Wi-Fi, NFC nebo provádět určité akce, např. odeslat SMS, e-mail na základě polohy, času nebo jakékoli jiné “spouštěcí události”. Na svém zařízení můžete automatizovat prakticky všechno. Automate dokonce podporuje plug-iny vytvořené pro aplikace Tasker a Locale.
+Bezplatná aplikace Automate pro Android™ umožňuje automatizovat různé úkoly na vašem smartphonu. Create your automations with flowcharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. Na svém zařízení můžete automatizovat prakticky všechno. Automate dokonce podporuje plug-iny vytvořené pro aplikace Tasker a Locale.
 
 Pomocí tohoto nástroje můžete snadno vytvořit automatizační diagramy pro automatickou léčbu svého diabetu založené na několika podmínkách podle principu 'jestliže nastane toto... a toto... nikoli toto..., pak udělej toto... a toto...'. Existují tisíce možností, které můžete nastavit.
 
 Aktuálně je **nezbytné používat smyčku s Nightscout profilem**, jelikož Automate provádí příkazy přes HTTP-požadavky přímo na vaší stránce nightscout a následně je synchronizuje s aplikací AndroidAPS.
 
-**Offline provoz smyčky (přímá komunikace mezi Automate a AnroidAPS) dosud není podporován**, je však technologicky proveditelný. Možná bude v budoucnu existovat řešení. Pokud jste našli způsob, jak to udělat, přidejte jej prosím do této dokumentace nebo kontaktujte vývojáře.
+**Offline looping (direct communication between Automate and AndroidAPS app) is not supported yet**, but technologically possible. Možná bude v budoucnu existovat řešení. Pokud jste našli způsob, jak to udělat, přidejte jej prosím do této dokumentace nebo kontaktujte vývojáře.
 
 ### Základní požadavky
 
@@ -20,17 +20,17 @@ Aktuálně je **nezbytné používat smyčku s Nightscout profilem**, jelikož A
 
 Stáhněte si aplikace Android Automate z Google Play Store nebo z <https://llamalab.com/automate/> a nainstalujte ji na smartphone, na kterém běží AndroidAPS.
 
-Přjděte do systémových nastavení smartphonu > Aplikace > Automate > Klepněte na ozubené kolo vpravo nahoře > Vyberte 'Spouštět při startu systému'. Toto automaticky spustí vaše automatizační diagramy při spuštění systému.
+In Automate, tap on hamburger menu on the upper left of the screen > Settings > Check 'Run on system startup'. Toto automaticky spustí vaše automatizační diagramy při spuštění systému.
 
 ![Automate HTTP požadavek](../images/automate-app2.png)
 
 #### AndroidAPS
 
-V NSClientu v AndroidAPS klepněte na ozubené kolo vpravo nahoře a přejděte do Nastavení připojení > Zrušte označení možnosti 'Používat pouze WiFi' a 'Pouze při nabíjení', protože automatizace léčby funguje pouze tehdy, když má AndroidAPS připojení k nightscoutu.
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
 
 ![Nastavení připojení Nightscoutu](../images/automate-aaps1.jpg)
 
-V NSClientu v AndroidAPS klepněte na ozubené kolo vpravo nahoře a přejděte do Rozšířená nastavení > Zrušte označení možnosti 'Pouze nahrávání do NS (zakázaná synchronizace)' a 'Zakázat nahrávání do NS'
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'
 
 ![Předvolby stahování Nightscoutu](../images/automate-aaps2.jpg)
 
@@ -38,7 +38,7 @@ V NSClientu v AndroidAPS klepněte na ozubené kolo vpravo nahoře a přejděte 
 
 #### Příklad 1: Jestliže je zjištěna aktivita (např. chůze nebo běh), nastav vyšší DC. A když aktivita skončí, počkej 20 minut a pak zruš DC
 
-Toto schéma bude využívat senzory smartphonu (krokoměr, G-senzor...), které detekují aktivitu. Jestliže bude zjištěna aktivita, jako např. chůze, běh nebo jízda na kole, pak Automate nastaví na nastavenou dobu uživatelem definovaný vyšší dočasný cíl. Až aktivita skončí, smartphone to detekuje, počká 20 minut a pak nastaví cíl zpět na normální hodnoty nastavené v profilu.
+Toto schéma bude využívat senzory smartphonu (krokoměr, G-senzor...), které detekují aktivitu. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. Až aktivita skončí, smartphone to detekuje, počká 20 minut a pak nastaví cíl zpět na normální hodnoty nastavené v profilu.
 
 Stáhněte si skript pro aplikaci Automate <https://llamalab.com/automate/community/flows/27808>.
 
@@ -51,7 +51,7 @@ Upravte schéma podle svého uvážení následovně:
 ![Automate sling](../images/automate-app6.png)
 
 1. = Nastavit vysoký DC
-2. = Přejít zpět na normální cíl 20 minut po skočení aktivity
+2. = Go back to normal target 20 minutes after the end of activity
 
 1 ![Automate sling](../images/automate-app1.png)
 
@@ -71,7 +71,7 @@ Start sling: Klepněte na tlačítko Play
 
 #### Příklad 2: Jestliže je aktivní výstraha xDripu+ na vysokou glykémii, pak nastav nízký TT na... minut.
 
-Automatizační schéma bude využívat notifikační kanál xDripu+. Jestliže bude spuštěna uživatelem definovaná výstraha xDrip+u na vysokou glykémii, Automate na nastavenou dobu spustí uživatelem definovaný nízký dočasný cíl. Po nastavené době může případná další výstraha prodloužit dobu trvání nízkého DC.
+Automatizační schéma bude využívat notifikační kanál xDripu+. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. Po nastavené době může případná další výstraha prodloužit dobu trvání nízkého DC.
 
 ##### xDrip+
 
@@ -79,7 +79,7 @@ Nejprve musíte přidat výstrahu na vysokou glykémii v aplikaci xDrip+:
 
 ![Nastavení výstrahy xDrip+](../images/automate-xdrip1.png)
 
-Název výstrahy: (Dávejte pozor!) Tento název je zásadní pro spuštění události. Měl by být nezaměnitelný a neměl by se podobat žádnému jinému názvu výstrahy. Příklad: 'Výstraha180' by neměla být hned vedle 'Výstraha80'.
+Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Příklad: 'Výstraha180' by neměla být hned vedle 'Výstraha80'.
 
 Limit: Hodnota glykémie, při které se spustí výstraha.
 
