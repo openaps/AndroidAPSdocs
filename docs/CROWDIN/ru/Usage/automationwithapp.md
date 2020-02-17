@@ -6,13 +6,13 @@ As AndroidAPS is a hybrid closed loop system, some user interaction is necessary
 
 ## Android Automate App
 
-The free Android™ application Automate lets you automate various tasks on your smartphone. Create your automations with flowscharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. You can automate almost everything on your device, Automate even support plug-ins made for Tasker and Locale.
+The free Android™ application Automate lets you automate various tasks on your smartphone. Create your automations with flowcharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. You can automate almost everything on your device, Automate even support plug-ins made for Tasker and Locale.
 
 Using this tool you can easily create workflows to auto-treat your diabetes based on several conditions according to the principle of 'if this... and this... not this..., then do that... and that...'. There are thousands of possibilities you can configure.
 
 Until now it is **necessary to loop via Nightscout Profile**, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AndroidAPS app.
 
-**Offline looping (direct communication between Automate and AnroidAPS app) is not supported yet**, but technologically possible. Maybe there will be a solution in future. If you have figured out a way to do this, please add it to this documentation or contact a developer.
+**Offline looping (direct communication between Automate and AndroidAPS app) is not supported yet**, but technologically possible. Maybe there will be a solution in future. If you have figured out a way to do this, please add it to this documentation or contact a developer.
 
 ### Basic requirements
 
@@ -20,17 +20,17 @@ Until now it is **necessary to loop via Nightscout Profile**, as Automate execut
 
 Download Android Automate in Google Play Store or at <https://llamalab.com/automate/> and install it on your smartphone where AndroidAPS runs.
 
-Go to smartphone system settings > Apps > Automate > Tap on the gear on the upper right of the screen > Check 'Run on system startup'. This will automatically run your workflows on system startup.
+In Automate, tap on hamburger menu on the upper left of the screen > Settings > Check 'Run on system startup'. This will automatically run your workflows on system startup.
 
 ![Automate HTTP request](../images/automate-app2.png)
 
 #### AndroidAPS
 
-In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
 
 ![Nightscout connection preferences](../images/automate-aaps1.jpg)
 
-In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Advanced Settings > Uncheck 'NS upload only (dosable sync)' and 'No upload to NS'
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 
@@ -38,7 +38,7 @@ In AndroidAPS NSClient, tap on the gear at the upper right screen and go to Adva
 
 #### Example 1: If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
 
-This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bycicle present, then Automate will set a user specified high temprorary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
+This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
 
 Download the Automate script <https://llamalab.com/automate/community/flows/27808>.
 
@@ -51,7 +51,7 @@ Customize the workflow according to your wishes as follows:
 ![Automate sling](../images/automate-app6.png)
 
 1. = Set high TT
-2. = Go back to normal target 20 minutes after the end of acitivity
+2. = Go back to normal target 20 minutes after the end of activity
 
 1 ![Automate sling](../images/automate-app1.png)
 
@@ -71,7 +71,7 @@ Start sling: Tap on Play button
 
 #### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes.
 
-This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temprorary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
+This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
 
 ##### xDrip +
 
@@ -79,7 +79,7 @@ First, you must add a BG high alert in xDrip+ as follows:
 
 ![xDrip+ alert settings](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for fireing the trigger. It should be unmistakeable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
+Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
 
 Threshold: BG value that should fire the high alert.
 
