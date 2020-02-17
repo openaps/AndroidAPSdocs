@@ -6,13 +6,13 @@
 
 ## Android Automate App
 
-Η δωρεάν εφαρμογή Android ™ Automate σάς επιτρέπει να αυτοματοποιήσετε διάφορες εργασίες στο smartphone σας. Δημιουργήστε τις αυτοματοποιήσεις σας με διαγράμματα ροής, κάνετε τη συσκευή σας να αλλάζει αυτόματα τις ρυθμίσεις όπως Bluetooth, Wi-Fi, NFC ή να εκτελεί ενέργειες όπως αποστολή μηνυμάτων SMS, e-mail, βάσει της θέσης σας, την ώρας της ημέρας ή οποιουδήποτε άλλου "ενεργοποιητή συμβάντων". Μπορείτε να αυτοματοποιήσετε σχεδόν τα πάντα στη συσκευή σας, Αυτοματοποιήστε ακόμη και τις προσθήκες υποστήριξης για Tasker και Locale.
+Η δωρεάν εφαρμογή Android ™ Automate σάς επιτρέπει να αυτοματοποιήσετε διάφορες εργασίες στο smartphone σας. Create your automations with flowcharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. Μπορείτε να αυτοματοποιήσετε σχεδόν τα πάντα στη συσκευή σας, Αυτοματοποιήστε ακόμη και τις προσθήκες υποστήριξης για Tasker και Locale.
 
 Χρησιμοποιώντας αυτό το εργαλείο μπορείτε εύκολα να δημιουργήσετε ροές εργασίας για την αυτόματη θεραπεία του σακχαρώδη διαβήτη σας με βάση διάφορες προϋποθέσεις σύμφωνα με την αρχή του «αν αυτό... και αυτό... όχι αυτό..., τότε κάνε αυτό... και αυτό...'. Υπάρχουν χιλιάδες δυνατότητες που μπορείτε να διαμορφώσετε.
 
 Μέχρι τώρα είναι απαραίτητο ** να γίνει κύκλωμα μέσω του προφίλ Nightscout **, καθώς το Automate εκτελεί τις εντολές μέσω HTTP αίτησης απευθείας στον ιστότοπό σας, ο οποίος στη συνέχεια συγχρονίζεται με την εφαρμογή AndroidAPS.
 
-** Το κύκλωμα εκτός σύνδεσης (άμεση επικοινωνία μεταξύ της εφαρμογής Automate και AnroidAPS) δεν υποστηρίζεται ακόμα **, αλλά είναι τεχνολογικά εφικτό. Ίσως θα υπάρξει λύση στο μέλλον. Εάν έχετε βρει έναν τρόπο να το κάνετε αυτό, παρακαλώ προσθέστε το σε αυτήν την τεκμηρίωση ή επικοινωνήστε με έναν προγραμματιστή.
+**Offline looping (direct communication between Automate and AndroidAPS app) is not supported yet**, but technologically possible. Ίσως θα υπάρξει λύση στο μέλλον. Εάν έχετε βρει έναν τρόπο να το κάνετε αυτό, παρακαλώ προσθέστε το σε αυτήν την τεκμηρίωση ή επικοινωνήστε με έναν προγραμματιστή.
 
 ### Βασικές απαιτήσεις
 
@@ -20,17 +20,17 @@
 
 Κάντε λήψη του Android Automate στο Google Play Store ή στη διεύθυνση [ https://llamalab.com/automate/ ](https://llamalab.com/automate/) και εγκαταστήστε το στο smartphone όπου εκτελείται το AndroidAPS.
 
-Μεταβείτε στις ρυθμίσεις συστήματος smartphone> Εφαρμογές> Αυτοματοποίηση> Αγγίξτε το γρανάζι στην επάνω δεξιά γωνία της οθόνης> Επιλέξτε "Εκτέλεση κατά την εκκίνηση του συστήματος". Αυτό θα εκτελέσει αυτόματα τις ροές εργασίας σας κατά την εκκίνηση του συστήματος.
+In Automate, tap on hamburger menu on the upper left of the screen > Settings > Check 'Run on system startup'. Αυτό θα εκτελέσει αυτόματα τις ροές εργασίας σας κατά την εκκίνηση του συστήματος.
 
 ![Αυτόματη ζήτηση HTTP](../images/automate-app2.png)
 
 #### AndroidAPS
 
-Στο AndroidAPS NSClient, αγγίξτε το γρανάζι στην επάνω δεξιά γωνία και μεταβείτε στις Ρυθμίσεις σύνδεσης> Αποεπιλέξτε το 'Χρήση μόνο σύνδεσης WiFi' και 'Μόνο αν φορτίζει' καθώς η αυτοματοποιημένη επεξεργασία λειτουργεί μόνο όταν το AndroidAPS έχει πραγματική σύνδεση με το nightcout.
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
 
 ![Προτιμήσεις σύνδεσης Nightscout](../images/automate-aaps1.jpg)
 
-Στο AndroidAPS NSClient, αγγίξτε το γρανάζι στην επάνω δεξιά γωνία και μεταβείτε στις Ρυθμίσεις για προχωρημένους> Αποεπιλέξτε "Μόνο μεταφόρτωση NS (δοσμένο συγχρονισμό)" και "Καμία μεταφόρτωση στο NS"
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'
 
 ![Προτιμήσεις λήψεων Nightscout](../images/automate-aaps2.jpg)
 
@@ -38,7 +38,7 @@
 
 #### Παράδειγμα 1: Αν εντοπιστεί δραστηριότητα (π.χ. περπάτημα ή τρέξιμο), τότε ορίστε ένα υψηλό TT. Και αν τελειώσει η δραστηριότητα, περιμένετε 20 λεπτά και στη συνέχεια ακυρώστε το TT
 
-Αυτή η ροή εργασίας θα ακούει τους αισθητήρες smartphone (βηματόμετρο, αισθητήρα βαρύτητας...) που ανιχνεύει τη συμπεριφορά της δραστηριότητας. Αν υπάρχει πρόσφατη δραστηριότητα όπως περπάτημα, τρέξιμο ή ποδήλατο, τότε το Automate θα ορίσει έναν υψηλό στόχο για το χρήστη που καθορίζεται από τον χρήστη για τον καθορισμένο χρόνο. Εάν λήξει η δραστηριότητα, το smartphone σας θα εντοπίσει αυτό, περιμένετε 20 λεπτά και στη συνέχεια ορίστε τον στόχο πίσω στην κανονική τιμή του προφίλ.
+Αυτή η ροή εργασίας θα ακούει τους αισθητήρες smartphone (βηματόμετρο, αισθητήρα βαρύτητας...) που ανιχνεύει τη συμπεριφορά της δραστηριότητας. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. Εάν λήξει η δραστηριότητα, το smartphone σας θα εντοπίσει αυτό, περιμένετε 20 λεπτά και στη συνέχεια ορίστε τον στόχο πίσω στην κανονική τιμή του προφίλ.
 
 Κάντε λήψη του αυτοματοποιημένου σεναρίου [ https://llamalab.com/automate/community/flows/27808 ](https://llamalab.com/automate/community/flows/27808).
 
@@ -51,7 +51,7 @@
 ![Αυτόματο sling](../images/automate-app6.png)
 
 1. = Ρυθμίστε το υψηλό TT
-2. = Επιστρέψτε στο κανονικό στόχο 20 λεπτά μετά το τέλος της δραστηριότητας
+2. = Go back to normal target 20 minutes after the end of activity
 
 1 ![Αυτόματο sling](../images/automate-app1.png)
 
@@ -71,7 +71,7 @@
 
 #### Παράδειγμα 2: Εάν το xDrip + ειδοποιεί για υψηλό συναγερμό BG, τότε ορίστε ένα χαμηλό TT για ... λεπτά.
 
-Αυτή η ροή εργασίας θα ακούσει το κανάλι ειδοποίησης xDrip +. Εάν ενεργοποιηθεί μια +xDrip προειδοποίηση υψηλού BG καθοριζόμενη από το χρήστη, τότε η ρύθμιση Automate θα ορίσει ένα χαμηλό στόχο ρυθμού που καθορίζεται από το χρήστη για τον καθορισμένο χρόνο. Μετά από λίγο, μια άλλη πιθανή προειδοποίηση θα επεκτείνει τη διάρκεια του χαμηλού TT.
+Αυτή η ροή εργασίας θα ακούσει το κανάλι ειδοποίησης xDrip +. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. Μετά από λίγο, μια άλλη πιθανή προειδοποίηση θα επεκτείνει τη διάρκεια του χαμηλού TT.
 
 ##### xDrip+
 
@@ -79,7 +79,7 @@
 
 ![xDrip + ρυθμίσεις ειδοποίησης](../images/automate-xdrip1.png)
 
-Όνομα προειδοποίησης: (Δώστε προσοχή σε αυτό!) Αυτό το όνομα είναι απαραίτητο για την πυροδότηση της αλληλουχίας. Θα πρέπει να είναι αδιαμφισβήτητο και όχι παρόμοιο με άλλα ονόματα συναγερμού. Παράδειγμα: 'συναγερμός 180' δεν πρέπει να υπάρχει δίπλα στο 'συναγερμός 80'.
+Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Παράδειγμα: 'συναγερμός 180' δεν πρέπει να υπάρχει δίπλα στο 'συναγερμός 80'.
 
 Κατώτατο όριο: τιμή BG που πρέπει να πυροδοτήσει την υψηλή ειδοποίηση.
 
