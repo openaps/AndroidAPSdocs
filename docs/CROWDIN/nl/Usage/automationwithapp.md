@@ -6,13 +6,13 @@ Aangezien AndroidAPS een hybride closed loop systeem is, is gebruikersinteractie
 
 ## Android Automate App
 
-De gratis Android™ app Automate kan allerlei taken op jouw smartphone automatiseren. Je kunt automatische acties aanmaken met flowcharts, bijvoorbeeld om je telefooninstellingen (zoals NFC Bluetooth, Wi-Fi) te wijzigen, of acties uit te voeren zoals het verzenden van SMS, e-mail, gebaseerd op jouw locatie, het tijdstip van de dag of andere eventuele "event triggers". Automate heeft ook plug-ins gemaakt, zodat hij kan samenwerken met andere apps zoals Tasker en Locale.
+De gratis Android™ app Automate kan allerlei taken op jouw smartphone automatiseren. Create your automations with flowcharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. Automate heeft ook plug-ins gemaakt, zodat hij kan samenwerken met andere apps zoals Tasker en Locale.
 
 Met behulp van deze tool kun je workflows aanmaken voor automatische behandel-acties voor jouw diabetes. Dat doe je op basis van meerdere voorwaarden volgens het principe 'als dit... en dit... niet dit..., doe dan dat... en dat...'. Er zijn duizenden mogelijkheden die je op deze manier kunt samenstellen.
 
 Tot nu toe is het **nodig om te loopen via een Nightscout profiel**, omdat Automate alle acties uitvoert via een HTTP-verzoek dat rechtstreeks naar jouw Nightscout website gaat. De info in jouw Nightscout website wordt vervolgens gesynchroniseerd met jouw AndroidAPS app.
 
-**Offline loopen (directe communicatie tussen Automate en AnroidAPS app) is nog niet ingeprogrammeerd**, maar is technisch gezien wel mogelijk. Misschien zal er in de toekomst een oplossing komen. Als je een manier hebt gevonden om dit te doen, voeg het dan toe aan deze documentatie of neem contact op met een ontwikkelaar.
+**Offline looping (direct communication between Automate and AndroidAPS app) is not supported yet**, but technologically possible. Misschien zal er in de toekomst een oplossing komen. Als je een manier hebt gevonden om dit te doen, voeg het dan toe aan deze documentatie of neem contact op met een ontwikkelaar.
 
 ### Wat heb je nodig:
 
@@ -20,17 +20,17 @@ Tot nu toe is het **nodig om te loopen via een Nightscout profiel**, omdat Autom
 
 Download Android automatiseren in de Google Play Store of op <https://llamalab.com/automate/> en installeer het op de smartphone waar AndroidAPS op staat.
 
-Ga naar smartphone systeem instellingen > Apps > Automate > Tik op het tandwiel-icoontje in de rechter bovenhoek van het scherm > en zet 'Uitvoeren bij opstarten van het systeem' aan. Dit zal automatisch jouw workflows uitvoeren bij het opstarten van het systeem.
+In Automate, tap on hamburger menu on the upper left of the screen > Settings > Check 'Run on system startup'. Dit zal automatisch jouw workflows uitvoeren bij het opstarten van het systeem.
 
 ![Automate HTTP verzoek](../images/automate-app2.png)
 
 #### AndroidAPS
 
-In AndroidAPS Instellingen, ga naar NSClient en kies Verbindingsinstellingen. Zorg dat 'Gebruik enkel de WiFi verbinding' en 'Enkel tijdens opladen' uit staan. Jouw automatische ingestelde behandelings-acties zullen alleen werken zolang AndroidAPS een verbinding heeft met Nightscout.
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
 
 ![Nightscout verbindingsinstellingen](../images/automate-aaps1.jpg)
 
-In AndroidAPS Instellingen, ga naar NSClient en kies Geavanceerde Instellingen. Zorg ervoor dat 'Alleen NS upload (sync. gedeactiveerd)' en 'Geen upload naar NS' uit staan.
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'
 
 ![Nightscout downloadinstellingen](../images/automate-aaps2.jpg)
 
@@ -38,7 +38,7 @@ In AndroidAPS Instellingen, ga naar NSClient en kies Geavanceerde Instellingen. 
 
 #### Voorbeeld 1: Als activiteit (bijv. wandelen of hardlopen) wordt gedetecteerd, stel dan een hoog tijdelijk streefdoel (Temporary Target, TT) in. En als de activiteit eindigt, wacht dan 20 minuten en annuleer het TT.
 
-Deze workflow zal gegevens gebruiken van je smartphone-sensoren (stappenteller, zwaartekracht sensor...) die jouw fysieke activiteit detecteren. Als er activiteit is zoals wandelen, hardlopen of fietsen wordt waargenomen, dan zal Automate een door jou ingesteld hoog tijdelijk streefdoel instellen gedurende de door jou opgegeven tijd. Wanneer de activiteit eindigt zal je smartphone dit detecteren, vervolgens 20 minuten wachten en zal dan het streefdoel terugzetten naar de normale waarde zoals in jouw profiel is aangegeven.
+Deze workflow zal gegevens gebruiken van je smartphone-sensoren (stappenteller, zwaartekracht sensor...) die jouw fysieke activiteit detecteren. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. Wanneer de activiteit eindigt zal je smartphone dit detecteren, vervolgens 20 minuten wachten en zal dan het streefdoel terugzetten naar de normale waarde zoals in jouw profiel is aangegeven.
 
 Download het Automate script <https://llamalab.com/automate/community/flows/27808>.
 
@@ -51,7 +51,7 @@ Je kunt de workflow aanpassen naar jouw wensen:
 ![Automate sling](../images/automate-app6.png)
 
 1. = Stel hoog tijdelijk streefdoel in (Temp Target, TT)
-2. = Ga terug naar normale streefdoel 20 minuten na het einde van de activiteit
+2. = Go back to normal target 20 minutes after the end of activity
 
 1 ![Automate sling](../images/automate-app1.png)
 
@@ -71,7 +71,7 @@ Start met Flow: Tik op de Play knop
 
 #### Voorbeeld 2: Als xDrip+ een hoog BG alarm geeft, stel dan een laag tijdelijk streefdoel (Temporary Target, TT) in gedurende... minuten.
 
-Deze workflow zal het xDrip+ notificatie kanaal op jouw telefoon in de gaten houden. Wanneer er een (eerder door jouzelf opgegeven) hoog BG alarm wordt afgegeven in xDrip+, dan zal Automate een door jou opgegeven laag tijdelijk streefdoel instellen voor de door jou opgegeven tijd. Zodra die tijd is verstreken, zou het laag tijdelijk streefdoel nog kunnen worden verlengd wanneer er een ander xDrip+ alarm is geweest.
+Deze workflow zal het xDrip+ notificatie kanaal op jouw telefoon in de gaten houden. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. Zodra die tijd is verstreken, zou het laag tijdelijk streefdoel nog kunnen worden verlengd wanneer er een ander xDrip+ alarm is geweest.
 
 ##### xDrip+
 
@@ -79,7 +79,7 @@ Stap één: maak het alarm voor een hoge BG in xDrip+ aan. Dat gaat als volgt:
 
 ![xDrip+ alarm instellingen](../images/automate-xdrip1.png)
 
-Alert name: (let op!) Deze naam is heb je nodig bij het laten ontstaan van de trigger. De naam moet eenduidig zijn en mag niet lijken op namen van andere alarmen. Voorbeeld: '180alarm' mag niet bestaan naast '80alarm'.
+Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Voorbeeld: '180alarm' mag niet bestaan naast '80alarm'.
 
 Threshold (drempel): de BG waarde die het hoge BG alarm doet afgaan.
 
