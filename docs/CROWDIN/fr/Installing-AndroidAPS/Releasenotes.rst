@@ -159,17 +159,17 @@ Montre
 
 Nouveaux plugins
 --------------------------------------------------
-* PocTech app as BG source
-* Dexcom patched app as BG source
-* oref1 sensitivity plugin
+* Application PocTech en tant que source GLY
+* Application Dexcom patchée en tant que source GLY
+* plugin de sensibilité oref1
 
 Divers
 --------------------------------------------------
-* App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
-* Overhaul for config builder and objectives tabs, adding descriptions
-* New app icon
-* Lots of improvements and bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
-* Option to keep screen on
-* Option to show notification as Android notification
-* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+* L'application utilise maintenant des tiroirs pour afficher tous les plugins; les plugins sélectionnés comme visibles dans le générateur de configuration sont affichés en tant qu'onglet en haut de l'écran (favoris)
+* Remplacement des onglets du générateur de configuration et des objectifs, ajout de descriptions
+* Nouvelle icône d'application
+* Beaucoup d'améliorations et de correctifs
+* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. si la pile de la pompe est à plat) et pour des lectures de GLY manquées (voir _Alertes locales_ dans les paramètres)
+* Option pour garder l'écran allumé
+* Option pour afficher les notifications AAPS comme des notifications Android
+* Filtrage avancé (permettant de toujours activer SMB et pendant 6h après les repas) pris en charge avec l'application Dexcom patchée ou xDrip+ avec le mode natif G5 en tant que source GLY.
