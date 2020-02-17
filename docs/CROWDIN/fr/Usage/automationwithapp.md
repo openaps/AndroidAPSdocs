@@ -6,13 +6,13 @@ Comme AndroidAPS est un système à boucle fermée hybride, une certaine interac
 
 ## Application Android Automate
 
-L'application gratuite Android™ Automate vous permet d'automatiser diverses tâches sur votre smartphone. Create your automations with flowcharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. Vous pouvez automatiser presque tout sur votre appareil, Automate même en charge les plug-ins conçus pour Tasker et Locale.
+L'application gratuite Android™ Automate vous permet d'automatiser diverses tâches sur votre smartphone. Créez vos automatisations avec des diagrammes, faites que votre appareil change automatiquement les paramètres tels que Bluetooth, Wifi, NFC ou exécute des actions comme l'envoi de SMS, d'e-mail, en fonction de votre localisation, de l'heure du jour, ou de tout autre "déclencheur d'événement". Vous pouvez automatiser presque tout sur votre appareil, Automate même en charge les plug-ins conçus pour Tasker et Locale.
 
 A l'aide de cet outil vous pouvez facilement créer des workflows pour traiter votre diabète à l'aide de plusieurs conditions selon le principe de 'si ... et ... et pas ..., alors fait ... et ...'. Il y a des milliers de possibilités que vous pouvez configurer.
 
-Until now it is **necessary to loop via Nightscout Profile**, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AndroidAPS app.
+Jusqu'à présent, il est **nécessaire de boucler via un profil Nightscout**, car Automate exécute les commandes via des requêtes HTTP directement dans votre site Web nightscout qui le synchronise ensuite avec votre application AndroidAPS.
 
-**Offline looping (direct communication between Automate and AndroidAPS app) is not supported yet**, but technologically possible. Maybe there will be a solution in future. If you have figured out a way to do this, please add it to this documentation or contact a developer.
+**La boucle hors ligne (communication directe entre Automate et AndroidAPS) n'est pas encore prise en charge**, mais est techniquement possible. Il y aura peut-être une solution à l'avenir. Si vous avez trouvé un moyen de le faire, veuillez l'ajouter à cette documentation ou contacter un développeur.
 
 ### Exigences de base
 
@@ -20,33 +20,33 @@ Until now it is **necessary to loop via Nightscout Profile**, as Automate execut
 
 Téléchargez Android Automate dans Google Play Store ou sur <https://llamalab.com/automate/> et installez la sur votre smartphone où AndroidAPS s'exécute.
 
-In Automate, tap on hamburger menu on the upper left of the screen > Settings > Check 'Run on system startup'. This will automatically run your workflows on system startup.
+Dans Automate, appuyez sur le menu hamburger en haut à gauche de l'écran > Settings > Cochez 'Run on system startup'. Cela exécutera automatiquement vos Workflows au démarrage du système.
 
-![Automate HTTP request](../images/automate-app2.png)
+![Automatiser requête HTTP](../images/automate-app2.png)
 
 #### AndroidAPS
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
+Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran et accédez à Paramètres > NSClient > Paramètres de connexion > Décochez la case "Utiliser uniquement la connexion WiFi" et "Uniquement si en charge" comme Automate ne fonctionne que lorsque AndroidAPS a une connexion avec Nightscout.
 
-![Nightscout connection preferences](../images/automate-aaps1.jpg)
+![Paramètres de connexion Nighscout](../images/automate-aaps1.jpg)
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'
+Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran et accédez à Paramètres > NSClient > Paramètres avancés > Décocher 'Remonter uniquement vers NS (sync désactivée)' et 'Pas de téléchargement vers NS'
 
-![Nightscout download preferences](../images/automate-aaps2.jpg)
+![Paramètres de téléchargement Nighscout](../images/automate-aaps2.jpg)
 
-### Workflow examples
+### Exemples de Workflow
 
-#### Example 1: If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
+#### Exemple 1: Si une activité (par ex. marche ou course) est détectée, définir une CT élevée. Et si l'activité se termine, attendre 20 minutes puis annuler la CT
 
-This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
+Ce workflow écoutera les capteurs du smartphone (pédomètre, capteur de gravité...) qui détecteront le comportement de l'activité. Si il est récent activité comme la marche, la course ou du vélo, alors Automate définira une cible temp élevée d'une durée spécifiée par l'utilisateur. Si l'activité se termine, votre smartphone le détectera, il attendra 20 minutes, puis il fixera la cible à la valeur normale du profil.
 
-Download the Automate script <https://llamalab.com/automate/community/flows/27808>.
+Téléchargez le script Automate <https://llamalab.com/automate/community/flows/27808>.
 
 Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Automate sling](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+Personnaliser le workflow en fonction de vos souhaits comme ceci :
 
 ![Automate sling](../images/automate-app6.png)
 
@@ -77,7 +77,7 @@ This workflow will listen to the xDrip+ notification channel. If there is trigge
 
 First, you must add a BG high alert in xDrip+ as follows:
 
-![xDrip+ alert settings](../images/automate-xdrip1.png)
+![Réglages d'alerte xDrip+](../images/automate-xdrip1.png)
 
 Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
 
@@ -85,7 +85,7 @@ Threshold: BG value that should fire the high alert.
 
 Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
 
-![xDrip+ alert settings](../images/automate-xdrip2.png)
+![Réglages d'alerte xDrip+](../images/automate-xdrip2.png)
 
 ##### Automate
 
@@ -95,7 +95,7 @@ Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Automate sling](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+Personnaliser le workflow en fonction de vos souhaits comme ceci :
 
 Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
 
