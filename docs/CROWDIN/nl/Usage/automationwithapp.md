@@ -30,23 +30,25 @@ In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preference
 
 ![Nightscout verbindingsinstellingen](../images/automate-aaps1.jpg)
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
-![Nightscout downloadinstellingen](../images/automate-aaps2.jpg)
+Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+
+![Nightscout download preferences](../images/automate-aaps2.jpg)
 
 ### Voorbeelden van workflows
 
 #### Voorbeeld 1: Als activiteit (bijv. wandelen of hardlopen) wordt gedetecteerd, stel dan een hoog tijdelijk streefdoel (Temporary Target, TT) in. En als de activiteit eindigt, wacht dan 20 minuten en annuleer het TT.
 
-Deze workflow zal gegevens gebruiken van je smartphone-sensoren (stappenteller, zwaartekracht sensor...) die jouw fysieke activiteit detecteren. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. Wanneer de activiteit eindigt zal je smartphone dit detecteren, vervolgens 20 minuten wachten en zal dan het streefdoel terugzetten naar de normale waarde zoals in jouw profiel is aangegeven.
+This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
 
-Download het Automate script <https://llamalab.com/automate/community/flows/27808>.
+Download the Automate script <https://llamalab.com/automate/community/flows/27808>.
 
-Bewerk de Flow door te tikken op het potlood-icoon > Flowchart
+Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Automate sling](../images/automate-app3.png)
 
-Je kunt de workflow aanpassen naar jouw wensen:
+Customize the workflow according to your wishes as follows:
 
 ![Automate sling](../images/automate-app6.png)
 
@@ -57,68 +59,68 @@ Je kunt de workflow aanpassen naar jouw wensen:
 
 2 ![Automate sling](../images/automate-app5.png)
 
-Request URL (URL voor aanvraag): Jouw Nightscout-URL eindigend met /api/v1/treatments.json (bijv. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-Request content (Inhoud opvragen):
+Request content:
 
 * targetTop / targetBottom: de waarde waarop jij het tijdelijke hoge streefdoel wilt zetten. Bij targetTop (bovengrens) en targetBottom (ondergrens) moet je hetzelfde getal invullen.
 * duration: De duur van het tijdelijk hoge streefdoel (nadat deze tijd is verstreken, zal het streefdoel weer terugvallen op het reguliere profiel tenzij de activiteit doorgaat). 
 * secret: Jouw API SHA1 hash. Dit is NIET jouw api sleutel! Je kunt jouw API-sleutel converteren naar SHA1 formaat op <http://www.sha1-online.com/>
 
-Opslaan: Tik op 'Done'
+Save: Tap on 'Done' and on the hook
 
-Start met Flow: Tik op de Play knop
+Start sling: Tap on Play button
 
 #### Voorbeeld 2: Als xDrip+ een hoog BG alarm geeft, stel dan een laag tijdelijk streefdoel (Temporary Target, TT) in gedurende... minuten.
 
-Deze workflow zal het xDrip+ notificatie kanaal op jouw telefoon in de gaten houden. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. Zodra die tijd is verstreken, zou het laag tijdelijk streefdoel nog kunnen worden verlengd wanneer er een ander xDrip+ alarm is geweest.
+This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
 
 ##### xDrip+
 
-Stap één: maak het alarm voor een hoge BG in xDrip+ aan. Dat gaat als volgt:
+First, you must add a BG high alert in xDrip+ as follows:
 
-![xDrip+ alarm instellingen](../images/automate-xdrip1.png)
+![xDrip+ alert settings](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Voorbeeld: '180alarm' mag niet bestaan naast '80alarm'.
+Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
 
-Threshold (drempel): de BG waarde die het hoge BG alarm doet afgaan.
+Threshold: BG value that should fire the high alert.
 
-Default Snooze (standaard snooze): Vul hier in hoe lang je wilt dat het tijdelijke streefdoel duurt, aangezien het alarm opnieuw kan afgaan en daardoor de duur van het tijdelijk lage streefdoel zal verlengen.
+Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
 
-![xDrip+ alarm instellingen](../images/automate-xdrip2.png)
+![xDrip+ alert settings](../images/automate-xdrip2.png)
 
 ##### Automate
 
-Stap twee: download het Automate script <https://llamalab.com/automate/community/flows/27809>.
+Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
 
-Bewerk de Flow door te tikken op het potlood-icoon > Flowchart
+Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Automate sling](../images/automate-app3.png)
 
-Je kunt de workflow aanpassen naar jouw wensen:
+Customize the workflow according to your wishes as follows:
 
-Binnen de trigger 'Notification posted?' (notificatie gestuurd?) moet je bij 'TITLE' de naam invullen van jouw xDrip+ alarm. Voeg een * variabele toe voor en na de naam.
+Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
 
 ![Automate sling](../images/automate-app7.png)
 
 ![Automate sling](../images/automate-app4.png)
 
-Request URL (URL voor aanvraag): Jouw Nightscout-URL eindigend met /api/v1/treatments.json (bijv. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-Request content (Inhoud opvragen):
+Request content:
 
 * targetTop / targetBottom: de waarde waarop jij het tijdelijke hoge streefdoel wilt zetten. Bij targetTop (bovengrens) en targetBottom (ondergrens) moet je hetzelfde getal invullen.
 * duration: De duur van het tijdelijk hoge streefdoel (nadat deze tijd is verstreken, zal het streefdoel weer terugvallen op het reguliere profiel). Het wordt aanbevolen om dezelfde duur te gebruiken als je zonet hebt ingevuld bij 'Standaard snooze' van jouw xDrip+ alarm.
 * secret: Jouw API SHA1 hash. Dit is NIET jouw api sleutel! Je kunt jouw API-sleutel converteren naar SHA1 formaat op <http://www.sha1-online.com/>
 
-Opslaan: Tik op 'Done'
+Save: Tap on 'Done' and on the hook
 
-Start met Flow: Tik op de Play knop
+Start sling: Tap on Play button
 
 #### Voorbeeld 3: Die mag je zelf maken én hier toevoegen!!!
 
-Voeg jouw eigen workflows toe door het uploaden van het .flo bestand naar de Automate community (gebruik als keyword 'Nightscout'). Voeg een beschrijving van jouw eigen workflow toe aan deze pagina door een [Pull Request in de AndroidAPSdocs repository](../make-a-PR.md) te doen.
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSdocs repository](../make-a-PR.md).
 
 ## If This, Then That (IFTTT) oftwel Als Dit, Dan Dat
 
-Je kunt ook IFTT gebruiken in plaats van Automate om allerlei handmatige invoer in AndroidAPS te automatiseren. Wanneer je weet hoe IFTTT werkt, en je wilt dit delen met anderen dan ben je van harte uitgenodigd om een uitleg hierover toe te voegen aan deze pagina via een Pull Request!
+Feel free to add a Howto by PR...
