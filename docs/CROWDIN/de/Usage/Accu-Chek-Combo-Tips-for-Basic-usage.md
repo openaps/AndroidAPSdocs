@@ -1,4 +1,4 @@
-# AkkuChek Combo Tipps zum Einstieg
+# Accu-Chek Combo Tips for basic usage
 
 ## Wie man einen reibungslosen Betrieb gewährleistet
 
@@ -13,7 +13,7 @@
 ### Alarm für "Pumpe nicht erreichbar" aktivieren
 
 * Navigiere in AndroidAPS zu **Einstellungen / Lokale Alarme**, aktiviere **Alarm, wenn die Pumpe nicht erreichbar ist** und setze **Pumpe ist nicht erreichbar Grenze [Min]** auf **31** Minuten. 
-* Das gibt dir genug Zeit, dass der Alarm nicht ausgelöst wird, wenn du das Smartphone auf dem Schreibtisch liegen lässt und das Zimmer verlässt, aber informiert dich, wenn die Pumpe für einen Zeitraum nicht erreichbar ist, der die Dauer einer temporären Basalrate übersteigt.
+* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
 
 ### Erreichbarkeit der Pumpe wiederherstellen
 
@@ -41,12 +41,12 @@
 * Nach einem **Batterie fast leer**-Alarm sollte die Batterie so bald wie möglich gewechselt werden, damit genug Leistung für eine zuverlässige Bluetooth-Verbindung mit dem Smartphone vorhanden ist, selbst wenn das Smartphone weiter von der Pumpe entfernt ist.
 * Selbst nach einem **Batterie fast leer**-Alarm kann die Batterie noch für einen längeren Zeitraum benutzt werden. Trotzdem ist es empfehlenswert immer eine neue Batterie griffbereit zu haben, nachdem der Alarm ausgelöst wurde.
 * Um die Batterie zu wechseln, klicke lange auf den Button **Closed Loop** links oben auf dem Hauptbildschirm und wähle dort **Pausiere Loop für 1 h**. 
-* Warte darauf, dass AndroidAPS die Kommunikation mit der Pumpe beendet und das Bluetooth Logo auf der Pumpe verschwunden ist.
+* Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
 
 ![Bluetooth aktiviert](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
 * Hebe die Tastensperre auf der Pumpe auf, versetze die Pumpe in den Stop-Modus, bestätige bei Bedarf den Abbruch einer temporären Basalrate und tausche die Batterie aus.
-* Dann versetze die Pumpe wieder in den Start-Modus, wähle **Fortfahren**, indem du auf dem Hauptbildschirm lange auf **Pausiert** drückst.
+* Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
 * AndroidAPS setzt dann erneut eine benötigte temporäre Basalrate mit Eintreffen des nächsten Zuckerwertes. 
 
 ### Batterieart und Ursachen für eine kurze Lebensdauer der Batterie
@@ -61,9 +61,9 @@ Die typische Lebensdauer für verschiedene Batterien ist wie folgt:
 * **Power One Alkaline** (Varta) aus dem Service-Pack: 2 bis 4 Wochen
 * **Eneloop wiederaufladbare** Batterien (BK-3MCCE): 1-3 Wochen
 
-Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegebenen Bereiche, überprüfe bitte folgende mögliche Ursachen:
+If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
-* Die neueste Version (März 2018) der [ruffy App](https://github.com/MilosKozak/ruffy) hat die Lebensdauer der Batterien deutlich erhöht. Versichere dich, dass du diese Version verwendest, wenn du Probleme mit kürzerer Lebensdauer der Batterien hast.
+* The latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Versichere dich, dass du diese Version verwendest, wenn du Probleme mit kürzerer Lebensdauer der Batterien hast.
 * Es gibt verschiedene Varianten der Batterie Abdeckung bei der Combo Pumpe, die teilweise einen Kurzschluss bei der Batterie verursachen und sie schnell entladen. Die Abdeckungen ohne dieses Problem kann man an den goldenen Metallkontakten erkennen.
 * Wenn die Uhr in der Pumpe einen kurzen Batteriewechsel nicht "überlebt", kann es sein, dass der Kondensator kaputt ist, der die Uhr nach einem kurzen Energieverlust weiter laufen lässt. In diesem Fall hilft nur ein Austausch der Pumpe durch Roche, was während der Garantiezeit kein Problem ist. 
 * Die Hardware des Smartphones und die Software (Android Betriebssystem und Bluetooth Protokoll) beeinflussen ebenfalls die Lebensdauer der Batterie in der Pumpe, wobei die genauen Faktoren bisher noch nicht bekannt sind. Wenn du die Möglichkeit hast, versuche es mit einem anderen Smartphone und vergleiche die Lebensdauer der Batterie.
@@ -78,15 +78,15 @@ Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegeben
 
 Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-Algorithmus unterstützt. Aber ein ähnlicher Effekt kann durch folgende Alternativen erreicht werden:
 
-* Gib die Kohlenhydrate ein ohne dafür einen Bolus abzugeben. Der Loop-Algorithmus wird "aggressiver" reagieren. Verwende **eCarbs** (extended carbs) falls erforderlich.
+* Gib die Kohlenhydrate ein ohne dafür einen Bolus abzugeben. The loop algorithm will react more aggressively. Verwende **eCarbs** (extended carbs) falls erforderlich.
 
-* Wenn du unbedingt den erweiterten oder Multiwave Bolus direkt an der Pumpe eingeben willst, wird AndroidAPS dich damit bestrafen, dass es den Closed Loop für die nächsten 6 Stunden aussetzt um zu gewährleisten, dass nicht zu viel Insulin berechnet und abgegeben wird.
+* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
 ![Loop nach Multiwave Bolus deaktiviert](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
 ## Alarme bei Bolusabgabe
 
-* Wenn AndroidAPS bemerkt, dass ein identischer Bolus erfolgreich in der gleichen Minute abgegeben wurde, wird die Bolusabgabe mit der gleichen Menge Insulin verhindert. Wenn du dieselbe Bolusmenge unbedingt innerhalb kurzer Zeit erneut abgeben möchtest, warte zwei Minuten und gib ihn dann ab. Wenn die erste Bolusabgabe unterbrochen wurde oder aus anderen Gründen nicht abgegeben wurde, kannst du den Bolus seit AAPS 2.0 direkt wieder abgeben.
+* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If you really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * Hintergrund für dieses Verhalten ist ein Sicherheitsmechanismus, der die Bolus-Historie der Pumpe liest, bevor ein neuer Bolus abgegeben wird, um das Insulin On Board (IOB) auch dann korrekt zu berechnen, wenn direkt an der Pumpe ein Bolus abgegeben wurde. An dieser Stelle müssen nicht zu unterscheidende Einträge verhindert werden.
 
 ![Doppelter Bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
