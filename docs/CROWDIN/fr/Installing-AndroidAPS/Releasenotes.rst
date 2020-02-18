@@ -109,7 +109,7 @@ Nouvelles fonctionnalités majeures
 * Support de l'`Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ (par Tebbe Ubben et JamOrHam)
 * Voyants d'état sur l'écran principal (Nico Schmitz)
 * Aide sur les changements d'heure (Roumen Georgiev)
-* Corectif des nom de profil venant de NS (Johannes Mockenhaupt)
+* Correctif des nom de profil venant de NS (Johannes Mockenhaupt)
 * Correctifs Interface utilisateur (Johannes Mockenhaupt)
 * Support de la mise à jour G5 (Tebbe Ubben et Milos Kozak)
 * Support des sources de GLY G6, Poctech, Tomato, Eversense (Tebbe Ubben et Milos Kozak)
@@ -144,32 +144,32 @@ Paramètres à ajuster lors du passage d'AMA à SMB
 
 Onglet Vue d'ensemble
 --------------------------------------------------
-* Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
-* Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
-* `Colored prediction lines <../Getting-Started/Screenshots.html#section-e>`_
-* Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
-* Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
+* Le ruban du haut donne accès à Suspendre/Désactiver la boucle, consulter/changer le profil et démarrer/arrêter les cibles temp. (CT). Les CT utilisent des paramètres par défauts configurés dans les préférences. La nouvelle option CT Hypo est une cible temp. haute pour empêcher la boucle de corriger trop agressivement les glucides de secours.
+* Boutons de traitement : l'ancien bouton de traitement est encore disponible, mais masqué par défaut. La visibilité des boutons peut maintenant être configurée. Ajout de deux nouveaux boutons insuline et glucides (qui inclut `eGluc/glucides étendus <../Usage/Extended-Carbs.html>`_)
+* `Lignes de prédiction colorées <../Getting-Started/Screenshots.html#section-e>`_
+* Option pour afficher un champ de notes dans les boites de dialogue insuline/glucides/calculatrice et amorcer+remplir, qui sont téléchargées dans NS
+* Mise à jour de la boîte de dialogue amorcer/remplir qui permet l'amorçage et créé une entrée Careportal pour le changement de site et le changement de cartouche
 
 Montre
 --------------------------------------------------
-* Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
-* Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
-* confirmations and info dialogs now work on wear 2.0 as well
-* Added eCarbs menu entry
+* Variante séparée de compilation supprimée, incluse maintenant dans la version complète standard. Pour utiliser des commandes bolus à partir de la montre, activez ce paramètre sur le téléphone
+* L'assistant ne demande maintenant que les glucides (et le pourcentage s'il est activé dans les paramètres de la montre). Les paramètres pris en comptes dans le calcul peuvent être configurés dans les paramètres du téléphone
+* les confirmations et boîtes de dialogue fonctionnent maintenant sous wear OS 2.0
+* Ajout des eGlucides dans le menu
 
 Nouveaux plugins
 --------------------------------------------------
-* PocTech app as BG source
-* Dexcom patched app as BG source
-* oref1 sensitivity plugin
+* Application PocTech en tant que source GLY
+* Application Dexcom patchée en tant que source GLY
+* plugin de sensibilité oref1
 
 Divers
 --------------------------------------------------
-* App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
-* Overhaul for config builder and objectives tabs, adding descriptions
-* New app icon
-* Lots of improvements and bugfixes
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
-* Option to keep screen on
-* Option to show notification as Android notification
-* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+* L'application utilise maintenant des tiroirs pour afficher tous les plugins; les plugins sélectionnés comme visibles dans le générateur de configuration sont affichés en tant qu'onglet en haut de l'écran (favoris)
+* Remplacement des onglets du générateur de configuration et des objectifs, ajout de descriptions
+* Nouvelle icône d'application
+* Beaucoup d'améliorations et de correctifs
+* Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. si la pile de la pompe est à plat) et pour des lectures de GLY manquées (voir _Alertes locales_ dans les paramètres)
+* Option pour garder l'écran allumé
+* Option pour afficher les notifications AAPS comme des notifications Android
+* Filtrage avancé (permettant de toujours activer SMB et pendant 6h après les repas) pris en charge avec l'application Dexcom patchée ou xDrip+ avec le mode natif G5 en tant que source GLY.
