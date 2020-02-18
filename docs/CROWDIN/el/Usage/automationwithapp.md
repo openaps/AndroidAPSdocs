@@ -30,23 +30,25 @@ In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preference
 
 ![Προτιμήσεις σύνδεσης Nightscout](../images/automate-aaps1.jpg)
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'
+In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
-![Προτιμήσεις λήψεων Nightscout](../images/automate-aaps2.jpg)
+Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+
+![Nightscout download preferences](../images/automate-aaps2.jpg)
 
 ### Παραδείγματα ροής εργασίας
 
 #### Παράδειγμα 1: Αν εντοπιστεί δραστηριότητα (π.χ. περπάτημα ή τρέξιμο), τότε ορίστε ένα υψηλό TT. Και αν τελειώσει η δραστηριότητα, περιμένετε 20 λεπτά και στη συνέχεια ακυρώστε το TT
 
-Αυτή η ροή εργασίας θα ακούει τους αισθητήρες smartphone (βηματόμετρο, αισθητήρα βαρύτητας...) που ανιχνεύει τη συμπεριφορά της δραστηριότητας. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. Εάν λήξει η δραστηριότητα, το smartphone σας θα εντοπίσει αυτό, περιμένετε 20 λεπτά και στη συνέχεια ορίστε τον στόχο πίσω στην κανονική τιμή του προφίλ.
+This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
 
-Κάντε λήψη του αυτοματοποιημένου σεναρίου [ https://llamalab.com/automate/community/flows/27808 ](https://llamalab.com/automate/community/flows/27808).
+Download the Automate script <https://llamalab.com/automate/community/flows/27808>.
 
-Επεξεργαστείτε το sling πιέζοντας το τροποποιημένο μολύβι> Διάγραμμα ροής
+Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Αυτόματο sling](../images/automate-app3.png)
 
-Προσαρμόστε τη ροή εργασίας σύμφωνα με τις επιθυμίες σας ως εξής:
+Customize the workflow according to your wishes as follows:
 
 ![Αυτόματο sling](../images/automate-app6.png)
 
@@ -57,68 +59,68 @@ In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preference
 
 2 ![Αυτόματο sling](../images/automate-app5.png)
 
-Διεύθυνση URL αιτήματος: Η διεύθυνση URL NS σας με λήξη /api/v1/treatments.json (π.χ. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-Αίτημα περιεχομένου:
+Request content:
 
 * υψηλός στοχος / χαμηλός στόχος: Η υψηλή τιμή TT (πάνω και κάτω πρέπει να είναι η ίδια τιμή)
 * διάρκεια: Η διάρκεια του υψηλού TT (μετά την πάροδο του χρόνου θα αντιστραφεί ο κανονικός στόχος προφίλ εκτός αν η δραστηριότητα συνεχιστεί). 
 * μυστικό: Το hash σας API SHA1. Δεν είναι το κλειδί API σας! Μπορείτε να μετατρέψετε το κλειδί API σας σε μορφή SHA1 στο [ http://www.sha1-online.com/ ](http://www.sha1-online.com/)
 
-Αποθήκευση: Πατήστε "Τέλος" στο γάντζο
+Save: Tap on 'Done' and on the hook
 
-Ξεκινήστε το sling: Πατήστε στο κουμπί Αναπαραγωγή
+Start sling: Tap on Play button
 
 #### Παράδειγμα 2: Εάν το xDrip + ειδοποιεί για υψηλό συναγερμό BG, τότε ορίστε ένα χαμηλό TT για ... λεπτά.
 
-Αυτή η ροή εργασίας θα ακούσει το κανάλι ειδοποίησης xDrip +. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. Μετά από λίγο, μια άλλη πιθανή προειδοποίηση θα επεκτείνει τη διάρκεια του χαμηλού TT.
+This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
 
 ##### xDrip+
 
-Αρχικά, πρέπει να προσθέσετε μια ειδοποίηση υψηλού BG στο xDrip + ως εξής:
+First, you must add a BG high alert in xDrip+ as follows:
 
-![xDrip + ρυθμίσεις ειδοποίησης](../images/automate-xdrip1.png)
+![xDrip+ alert settings](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Παράδειγμα: 'συναγερμός 180' δεν πρέπει να υπάρχει δίπλα στο 'συναγερμός 80'.
+Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
 
-Κατώτατο όριο: τιμή BG που πρέπει να πυροδοτήσει την υψηλή ειδοποίηση.
+Threshold: BG value that should fire the high alert.
 
-Προεπιλεγμένη αναβολή: Εισαγάγετε τη διάρκεια που σχεδιάζετε να ορίσετε για το χαμηλό σας TT εδώ, καθώς η ειδοποίηση θα επανέλθει και ίσως να παραταθεί η διάρκεια του χαμηλού TT.
+Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
 
-![xDrip + ρυθμίσεις ειδοποίησης](../images/automate-xdrip2.png)
+![xDrip+ alert settings](../images/automate-xdrip2.png)
 
 ##### Αυτοματοποιήστε
 
-Δεύτερον, κατεβάστε το σενάριο Automate [ https://llamalab.com/automate/community/flows/27809 ](https://llamalab.com/automate/community/flows/27809).
+Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
 
-Επεξεργαστείτε το sling πιέζοντας το τροποποιημένο μολύβι> Διάγραμμα ροής
+Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Αυτόματο sling](../images/automate-app3.png)
 
-Προσαρμόστε τη ροή εργασίας σύμφωνα με τις επιθυμίες σας ως εξής:
+Customize the workflow according to your wishes as follows:
 
-Εντός της "τοποθεσίας ειδοποίησης";, πρέπει να ρυθμίσετε το "Τίτλο" στο όνομα της ειδοποίησης xDrip + που θα έπρεπε να ενεργοποιήσει την ειδοποιήσει και να προσθέσει μια * μεταβλητή πριν και μετά από αυτό το όνομα.
+Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
 
 ![Αυτόματο sling](../images/automate-app7.png)
 
 ![Αυτόματο sling](../images/automate-app4.png)
 
-Διεύθυνση URL αιτήματος: Η διεύθυνση URL NS σας με λήξη /api/v1/treatments.json (π.χ. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-Αίτημα περιεχομένου:
+Request content:
 
 * υψηλός στόχος / Χαμηλός στόχος: Η χαμηλή τιμή TT (πάνω και κάτω πρέπει να είναι η ίδια τιμή)
 * διάρκεια: Η διάρκεια του χαμηλού TT (μετά από το χρόνο θα επιστρέψει ο κανονικός στόχος προφίλ). Συνιστάται να χρησιμοποιείτε την ίδια διάρκεια όπως στην xDrip + ειδοποίηση Standard snooze'
 * μυστικό: Το hash σας API SHA1. Δεν είναι το κλειδί API σας! Μπορείτε να μετατρέψετε το κλειδί API σας σε μορφή SHA1 στο [ http://www.sha1-online.com/ ](http://www.sha1-online.com/)
 
-Αποθήκευση: Πατήστε "Τέλος" στο γάντζο
+Save: Tap on 'Done' and on the hook
 
-Ξεκινήστε το sling: Πατήστε στο κουμπί Αναπαραγωγή
+Start sling: Tap on Play button
 
 #### Παράδειγμα 3: Ας προστεθεί από εσάς!!!
 
-Προσθέστε επιπλέον ροές εργασίας μεταφορτώντας το αρχείο .flo στην αυτοματοποίηση κοινότητας (με τη λέξη-κλειδί 'Nightscout') και περιγράψτε την εδώ κάνοντας [ pull request σε εναποθετήριο AndroidAPSdocs ](../make-a-PR.md).
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSdocs repository](../make-a-PR.md).
 
 ## Αν αυτό, τότε (IFTTT)
 
-Μη διστάσετε να προσθέσετε ένα ''πως να το κάνεις'' μέσω προσωπικού μηνύματος...
+Feel free to add a Howto by PR...
