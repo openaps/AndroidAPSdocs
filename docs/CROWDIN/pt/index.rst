@@ -33,6 +33,7 @@ O que é preciso
    :glob:
    
    Módulo <./Module/module.rst>
+   Sample Setup <./Getting-Started/Sample-Setup.md>
 
    
 Como Instalar AndroidAPS

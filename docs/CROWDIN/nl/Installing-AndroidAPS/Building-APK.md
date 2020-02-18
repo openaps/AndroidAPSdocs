@@ -135,7 +135,7 @@ Lees en sluit het scherm van de "Tip of the Day" (tip van de dag) van Android St
 ![Screenshot 17](../images/Installation_Screenshot_17.png)
 
 * Top! Je hebt jouw eigen kopie van de broncode en je bent klaar om de app te gaan bouwen.
-* Nu krijg je je eerste foutmelding. Gelukkig geeft Android Studio je direct de oplossing hiervoor.
+* Nu krijg je je eerste foutmelding. Gelukkig geeft Android Studio je direct de oplossing hiervoor. (In case you do not receive the error message shown in next screenshot try closing and restarting Android Studio.)
 
 Klik op "Install missing platform(s) and sync project" (ontbrekende platforms installeren en project synchroniseren). Android Studio zal nu een ontbrekend stuk software gaan installeren.
 

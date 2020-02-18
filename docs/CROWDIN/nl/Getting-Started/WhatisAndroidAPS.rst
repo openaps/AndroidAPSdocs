@@ -11,7 +11,7 @@ Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hu
 * Het doserings algoritme instelt. Vooral jouw individuele insulinebehoefte moet nagenoeg perfect zijn, om het systeem goed te laten werken. Werk samen met jouw behandelaars om jouw insulinebehoefte te bepalen.
 * Controleert wat het systeem doet en het zo nodig updatet om ervoor te zorgen dat het goed blijft werken.
 
-.. note:: 
+.. opmerking:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
@@ -20,7 +20,7 @@ Opmerking: AndroidAPS wordt in geen enkel land door regelgevers voor medische hu
 
 	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
 
-	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: 'SOOIL <http://www.sooil.com/eng/>'_, 'Dexcom<http://www.dexcom.com/>'_, 'Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>'_ of 'Medtronic</3>'_.
+	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ of `Medtronic <http://www.medtronic.com/>`_.
 	
 Als je klaar bent voor deze uitdaging, lees dan verder. 
 
@@ -40,5 +40,5 @@ Als je klaar bent voor deze uitdaging, lees dan verder.
 Hoe te beginnen
 ==================================================
 Natuurlijk is alles wat hier beschreven staat belangrijk, maar de grote hoeveelheid nieuwe informatie kan in het begin behoorlijk verwarrend zijn.
-Een goede oriëntatie wordt gegeven door het `Module Overzicht <../Module/module.html>'_ en de `Doelen <../Usage/Objectives.html>`_. Of bekijk het 'Gebruiksvoorbeeld <../Getting-Started/Sample-Setup.html>`_: met Dana pomp, Dexcom sensor en Sony Smartwatch.
+Een goede oriëntatie wordt gegeven door het `Module Overzicht <../Module/module.html>`_ en de `Doelen <../Usage/Objectives.html>`_. Of bekijk het `Gebruiksvoorbeeld <../Getting-Started/Sample-Setup.html>`_ met Dana pomp, Dexcom sensor en Sony Smartwatch.
  

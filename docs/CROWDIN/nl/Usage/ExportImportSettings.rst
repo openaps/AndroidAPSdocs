@@ -1,43 +1,43 @@
 
-Export & import settings
+Instellingen exporteren & importeren
 **************************************************
-When should I export settings?
+Wanneer zou ik mijn instellingen moeten exporteren?
 ==================================================
-Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
+Wees voorbereid op onvoorziene omstandigheden. Je kunt belangrijke instellingen per ongeluk veranderen en problemen hebben om weer terug te gaan naar de juiste instellingen. Je telefoon kan stuk gaan of gestolen worden. Om makkelijk terug te keren naar instellingen die voor jou goed werkten (en ook: als je de Doelen die je eerder hebt afgerond, niet opnieuw wilt moeten doen) dan moet je jouw instellingen regelmatig exporteren.
 
-Best practice is to export after change of settings or completing an objective. 
+Het is goed om jouw instellingen steeds te exporteren na het wijzigen van instellingen of na het voltooien van een Doel. 
 
-Exported settings should be copied to a cloud storage or your computer. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Geëxporteerde instellingen moet je vervolgens kopiëren naar een cloudopslag, naar je computer of emailen naar jezelf. Zodat je jouw instellingen-bestand nog hebt wanneer je AAPS telefoon stuk gaat of gestolen wordt.
 
-On a Windows 10 computer it looks like this:
+Op een Windows-10 computer ziet het er zo uit:
   
   .. image:: ../images/SmartphoneRootLevelWin10.png
-    :alt: AndroidAPS Preferences phone connected to computer
+    :alt: Telefoon-opslag bekijken via computer
 
 
-How to export settings
+Instellingen exporteren
 ==================================================
-* **Export settings** on your old phone
+* **Exporteer instellingen op je oude telefoon
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Export settings
-  * File location will be shown
+  * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
+  * Onderhoud
+  * Exporteer instellingen
+  * Je ziet nu de locatie waar jouw instellingenbestand zal worden opgeslagen
     
 .. image:: ../images/AAPS_ExportSettings.png
-  :alt: AndroidAPS export settings
+  :alt: AndroidAPS instellingen exporteren
        
-* **Transfer** settings from old to new phone using the file location shown during export
+* ** Instellingen overdragen** van je oude naar je nieuwe telefoon doe je door de bestandslocatie op je oude telefoon op te zoeken, en het instellingenbestand te kopiëren naar jouw nieuwe telefoon. Bijvoorbeeld via Bluetooth, email, of met een usb-kabeltje via je computer.
 
-  The exported file is called "AndroidAPSPreferences" and should be in your root folder in the main storage of the phone (just like C: on your computer).
+  Het geëxporteerde bestand heet "AndroidAPSPreferences" en moet in de hoofdmap van de hoofdmap van de telefoon staan (net als C: op je computer).
   
-* **Install AndroidAPS** on the new phone.
-* **Import settings** on your new phone
+* **Installeer AndroidAPS op je nieuwe telefoon.
+* **Importeer instellingen op je nieuwe telefoon
 
-  * Hamburger menu (top left corner of screen)
-  * Maintenance
-  * Import settings
+  * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
+  * Onderhoud
+  * Importeer instellingen
 
-* **Note for Dana RS users:**
+* **Tip voor Dana RS gebruikers:**
 
-  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Daarom moet je handmatig een Bluetooth verbinding maken (via de Bluetooth-instellingen van je telefoon) tussen jouw nieuwe telefoon en je pomp.
+  * Omdat ook de instellingen voor het verbinden met je pomp zijn mee-geïmporteerd, zal jouw nieuwe telefoon denken dat hij de pomp al "kent" en dus geen Bluetooth verbindingsverzoek doen. Daarom moet je handmatig een Bluetooth verbinding maken tussen jouw nieuwe telefoon en je pomp.

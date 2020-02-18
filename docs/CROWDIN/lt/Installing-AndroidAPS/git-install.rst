@@ -6,7 +6,7 @@ Windows
 --------------------------------------------------
 * **You have to be online all of the time as Android Studio downloads several updates!**
 * Any git version should work. For example `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
-* Make sure to note down the installation path. You will need it in the next step.
+* Įsitikinkite, kad žinote įdiegimo kelią. You will need it in the next step.
 
 .. image:: ../images/Update_GitPath.png
   :alt: Git installation path

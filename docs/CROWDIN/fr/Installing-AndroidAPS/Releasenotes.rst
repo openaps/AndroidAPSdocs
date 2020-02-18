@@ -84,7 +84,7 @@ Nouvelles fonctionnalités majeures
 * Correctif Autosens : désactiver CT réhausse/diminue la cible
 * Nouvelles traductions&nbsp;
 * Correctifs du pilote Insight
-* Correction du plugin SMS
+* Correctif plugin SMS
 
 
 Version 2.2
@@ -93,11 +93,11 @@ Date de sortie : 29-03-2019
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
-* `DST fix <../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst>`_
-* Wear Update
-* `SMS plugin <../Children/SMS-Commands.html>`_ update
-* Go back in objectives.
-* Stop loop if phone disk is full
+* `Correctif changement d'heure <../Usage/Timezone-traveling.html##changements-heure-d-ete-heure-d-hiver>`_
+* Correctif Wear
+* `Correctif plugin SMS <../Children/SMS-Commands.html>`_
+* Retour arrière dans les Objectifs.
+* Arrêt de la boucle si le téléphone est plein
 
 
 Version 2.1
@@ -106,18 +106,18 @@ Date de sortie : 03-03-2019
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
-* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ support (by Tebbe Ubben and JamOrHam)
-* Status lights on main screen (Nico Schmitz)
-* Daylight saving time helper (Roumen Georgiev)
-* Fix processing profile names comming from NS (Johannes Mockenhaupt)
-* Fix UI blocking (Johannes Mockenhaupt)
-* Support for updated G5 app (Tebbe Ubben and Milos Kozak)
-* G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
-* Fixed disabling SMB from preferences (Johannes Mockenhaupt)
+* Support de l'`Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ (par Tebbe Ubben et JamOrHam)
+* Voyants d'état sur l'écran principal (Nico Schmitz)
+* Aide sur les changements d'heure (Roumen Georgiev)
+* Corectif des nom de profil venant de NS (Johannes Mockenhaupt)
+* Correctifs Interface utilisateur (Johannes Mockenhaupt)
+* Support de la mise à jour G5 (Tebbe Ubben et Milos Kozak)
+* Support des sources de GLY G6, Poctech, Tomato, Eversense (Tebbe Ubben et Milos Kozak)
+* Correctifs désactivation des SMB à partir des préférences (Johannes Mockenhaupt)
 
 Divers
 --------------------------------------------------
-* If you are using non default `smbmaxminutes` value you have to setup this value again
+* Si vous n'utilisez pas la valeur par défaut de `smbmaxminutes` vous devez configurer à nouveau cette valeur
 
 
 Version 2.0
@@ -126,23 +126,23 @@ Date de sortie : 03-11-2018
 
 Nouvelles fonctionnalités majeures
 --------------------------------------------------
-* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
-* `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ pump support
-* Setup wizard: guides you through the process of setting up AndroidAPS
+* Support de oref1/SMB (`documentation oref1 <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Assurez-vous de bien lire la documentation pour savoir ce que vous pouvez attendre des SMB, comment il fonctionne, ce qu'il peut faire et comment l'utiliser pour qu'il marche en douceur.
+* Support de la pompe `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* Assistant de configuration : vous guide dans le processus de configuration d'AndroidAPS
 
 Paramètres à ajuster lors du passage d'AMA à SMB
 --------------------------------------------------
-* Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
-* maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
-* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manualy
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
+* L'objectif 10 doit être démarré pour pouvoir activer les SMB (l'onglet SMB montre généralement les restrictions appliquées)
+* maxIA inclu maintenant _tous_ les IA, plus seulement la basal ajoutée. En d'autres termes, s'il y a eu un bolus de 8 U pour un repas et maxIA est à 7 U, aucun SMB ne sera délivré jusqu'à ce que l'IA repasse en dessous de 7 U.
+* la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. Si vous effectuez une mise à niveau depuis AMA vers SMB, vous devez la modifier manuellement
+* Remarque lors de la construction de l'apk d'AndroidAPS 2.0 : Configuration on demand n'est pas supporté par la version actuelle du plugin Android Gradle ! Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
 
    * Ouvrez la fenêtre Préférences en cliquant sur File > Settings (sur Mac, Android Studio > Preferences).
    * Dans le panneau de gauche, cliquez sur Build, Execution, Deployment > Compiler.
    * Décochez la case Configure on demand.
    * Cliquez sur Appliquer ou OK.
 
-Overview tab
+Onglet Vue d'ensemble
 --------------------------------------------------
 * Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
 * Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
