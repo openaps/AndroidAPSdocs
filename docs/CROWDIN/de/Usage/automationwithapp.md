@@ -6,13 +6,13 @@ Da AndroidAPS ein hybrides Closed-Loop-System ist, muss der Benutzer noch einige
 
 ## Android Automate App
 
-Mit der kostenlosen Android™ Anwendung Automate kannst du verschiedene Aufgaben auf deinem Smartphone automatisieren. Create your automations with flowcharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. Du kannst fast alles auf deinem Gerät automatisieren, Automate unterstützt sogar Plug-Ins für Tasker und Locale.
+Mit der kostenlosen Android™ Anwendung Automate kannst du verschiedene Aufgaben auf deinem Smartphone automatisieren. Du kannst deine Automatisierungen mit Flowscharts erstellen, deinem Gerät Automatismen bei Bluetooth, WLAN, NFC erlauben oder Aktionen auslösen wie das Versenden von SMS, E-Mail basierend auf deinem Standort, der Tageszeit oder einem anderen „Trigger“. Du kannst fast alles auf deinem Gerät automatisieren, Automate unterstützt sogar Plug-Ins für Tasker und Locale.
 
 Mit diesem Tool kannst du leicht Workflows erstellen, mit denen dein Diabetes basierend auf mehreren Bedingungen automatisch behandelt wird nach dem Prinzip "Wenn dies... und dies... aber nicht dies..., dann mache das... und das...". Es gibt Tausende von Möglichkeiten, die du konfigurieren kannst.
 
 Bis jetzt ist es **notwendig, mit Nightscout Profilen**zu loopen, da Automate die Befehle über HTTP-Anfragen direkt in deiner Nightscout-Website ausführt, die sie anschließend mit deiner AndroidAPS-App synchronisiert.
 
-**Offline looping (direct communication between Automate and AndroidAPS app) is not supported yet**, but technologically possible. Vielleicht wird es in Zukunft dafür eine Lösung geben. Wenn du einen Weg dazu gefunden hast, füge ihn bitte dieser Dokumentation hinzu oder kontaktiere einen Entwickler.
+**Offline Looping (direkte Kommunikation zwischen Automate und AnroidAPS-App) wird noch nicht unterstützt**, ist aber technisch möglich. Vielleicht wird es in Zukunft dafür eine Lösung geben. Wenn du einen Weg dazu gefunden hast, füge ihn bitte dieser Dokumentation hinzu oder kontaktiere einen Entwickler.
 
 ### Grundvoraussetzungen
 
@@ -20,17 +20,17 @@ Bis jetzt ist es **notwendig, mit Nightscout Profilen**zu loopen, da Automate di
 
 Lade Android Automate im Google Play Store oder unter <https://llamalab.com/automate/> herunter und installiere es auf demselben Smartphone wie AndroidAPS.
 
-In Automate, tap on hamburger menu on the upper left of the screen > Settings > Check 'Run on system startup'. Dadurch werden deine Workflows automatisch nach dem Systemstart ausgeführt.
+Tippe in Automate auf das Hamburger Menü am Bildschirm oben links > Settings > Wähle 'Run on system startup'. Dadurch werden deine Workflows automatisch nach dem Systemstart ausgeführt.
 
 ![Automate HTTP request](../images/automate-app2.png)
 
 #### AndroidAPS
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
+Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und gehe auf Einstellungen > Nightscout-Client > Verbindungs-Einstellungen > deaktiviere "Benutze nur WLAN-Verbindung" und "Nur während des Ladens", da automatische Behandlungen nur funktionieren, wenn AndroidAPS eine Verbindung zu Nightscout hat.
 
 ![Nightscout connection preferences](../images/automate-aaps1.jpg)
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'
+Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und gehe auf Einstellungen > Nightscout-Client > Erweiterte Einstellungen und deaktivere 'Zu Nightscout nur hochladen (keine Synchronisation)' und 'kein Upload zu Nightscout'.
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 
@@ -38,7 +38,7 @@ In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preference
 
 #### Beispiel 1: Wenn Aktivität (z.B. Gehen oder Laufen) erkannt wird, dann setze ein hohes TT. Und wenn die Aktivität endet, dann warte 20 Minuten und brich anschließend das TT ab
 
-Dieser Workflow wird die Smartphone-Sensoren (Pedometer, Gravitationssensor...) überwachen, die das Aktivitätsverhalten erkennen. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. Wenn die Aktivität endet, erkennt das dein Smartphone, wartet 20 Minuten und setzt dann den Zielwert zurück auf den im Profil hinterlegten Standardwert.
+Dieser Workflow wird die Smartphone-Sensoren (Pedometer, Gravitationssensor...) überwachen, die das Aktivitätsverhalten erkennen. Wenn Aktivitäten wie Walken, Laufen oder Radfahren erkannt werden, setzt Automate ein benutzerdefiniertes hohes temporäres Ziel für die eingestellte Zeit. Wenn die Aktivität endet, erkennt das dein Smartphone, wartet 20 Minuten und setzt dann den Zielwert zurück auf den im Profil hinterlegten Standardwert.
 
 Lade das Automate script herunter <https://llamalab.com/automate/community/flows/27808>herunter.
 
@@ -51,7 +51,7 @@ Passe den Workflow nach deinen Wünschen wie folgt an:
 ![Automate sling](../images/automate-app6.png)
 
 1. = Hohes TT setzen
-2. = Go back to normal target 20 minutes after the end of activity
+2. = Zurück zum normalen Ziel 20 Minuten nach dem Ende der Aktivität
 
 1 ![Automate sling](../images/automate-app1.png)
 
@@ -71,7 +71,7 @@ Workflow starten: Tippe auf die Play-Taste
 
 #### Beispiel 2: Wenn xDrip+ einen "BG hoch"-Alarm meldet, dann setze ein niedriges TT für ... Minuten.
 
-Dieser Workflow wird die xDrip+ Benachrichtigungen überwachen. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. Nach Zeitablauf wird ggf. eine erneute Warnung die Dauer des niedrigen TT verlängern.
+Dieser Workflow wird die xDrip+ Benachrichtigungen überwachen. Wenn xDrip+ einen nutzerspezifischen "BG hoch"-Alarm ausgelöst hat, dann setzt Automate für die angegebene Zeit ein benutzerdefiniertes niedriges temporäres Ziel. Nach Zeitablauf wird ggf. eine erneute Warnung die Dauer des niedrigen TT verlängern.
 
 ##### xDrip+
 
@@ -79,7 +79,7 @@ Erstens musst du in xDrip+ eine "BG-hoch"-Warnung wie folgt einrichten:
 
 ![xDrip+ alert settings](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Beispiel: "180alarm" sollte nicht neben "80alarm" existieren.
+Alert name: (Achtung!) Dieser Name ist für das Auslösen des Triggers unerlässlich. Er sollte einzigartig und nicht mit anderen Warnnamen vergleichbar sein. Beispiel: "180alarm" sollte nicht neben "80alarm" existieren.
 
 Threshold: BG-Wert, der den hohen Alarm auslösen soll.
 
