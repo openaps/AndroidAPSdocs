@@ -36,11 +36,11 @@ Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-c
 
 ![Paramètres de téléchargement Nighscout](../images/automate-aaps2.jpg)
 
-### Exemples de Workflow
+### Exemples de Scripts
 
 #### Exemple 1: Si une activité (par ex. marche ou course) est détectée, définir une CT élevée. Et si l'activité se termine, attendre 20 minutes puis annuler la CT
 
-Ce workflow écoutera les capteurs du smartphone (pédomètre, capteur de gravité...) qui détecteront le comportement de l'activité. Si une activité récente comme la marche, la course ou du vélo est détectée, alors Automate définira une cible temp élevée d'une durée spécifiée par l'utilisateur. Si l'activité se termine, votre smartphone le détectera, il attendra 20 minutes, puis il fixera la cible à la valeur normale du profil.
+Ce script écoutera les capteurs du smartphone (pédomètre, capteur de gravité...) qui détecteront le comportement de l'activité. Si une activité récente comme la marche, la course ou du vélo est détectée, alors Automate définira une cible temp élevée d'une durée spécifiée par l'utilisateur. Si l'activité se termine, votre smartphone le détectera, il attendra 20 minutes, puis il fixera la cible à la valeur normale du profil.
 
 Téléchargez le script Automate <https://llamalab.com/automate/community/flows/27808>.
 
@@ -48,7 +48,7 @@ Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Automate sling](../images/automate-app3.png)
 
-Personnaliser le workflow en fonction de vos souhaits comme ceci :
+Personnaliser le script en fonction de vos souhaits comme ceci :
 
 ![Automate sling](../images/automate-app6.png)
 
@@ -97,7 +97,7 @@ Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Automate sling](../images/automate-app3.png)
 
-Personnaliser le workflow en fonction de vos souhaits comme ceci :
+Personnaliser le script en fonction de vos souhaits comme ceci :
 
 Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
 
