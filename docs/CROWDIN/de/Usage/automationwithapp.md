@@ -30,9 +30,9 @@ Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand u
 
 ![Nightscout connection preferences](../images/automate-aaps1.jpg)
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
+Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und gehe auf Einstellungen > Nightscout-Client > Erweiterte Einstellungen und deaktivere 'Zu Nightscout nur hochladen (keine Synchronisation)' und 'kein Upload zu Nightscout'.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Beachte die [Sicherheitsüberlegungen](../Installing-AndroidAPS/Nightscout#sicherheitsuberlegungen) und sei besonders vorsichtig, wenn Du eine [Insight Pumpe](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps) verwendest.
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 
@@ -40,15 +40,15 @@ Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-c
 
 #### Beispiel 1: Wenn Aktivität (z.B. Gehen oder Laufen) erkannt wird, dann setze ein hohes TT. Und wenn die Aktivität endet, dann warte 20 Minuten und brich anschließend das TT ab
 
-This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
+Dieser Workflow wird die Smartphone-Sensoren (Pedometer, Gravitationssensor...) überwachen, die das Aktivitätsverhalten erkennen. Wenn Aktivitäten wie Walken, Laufen oder Radfahren erkannt werden, setzt Automate ein benutzerdefiniertes hohes temporäres Ziel für die eingestellte Zeit. Wenn die Aktivität endet, erkennt das dein Smartphone, wartet 20 Minuten und setzt dann den Zielwert zurück auf den im Profil hinterlegten Standardwert.
 
-Download the Automate script <https://llamalab.com/automate/community/flows/27808>.
+Lade das Automate script herunter <https://llamalab.com/automate/community/flows/27808>herunter.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Bearbeite den "Sling", indem du auf das Stift-Symbol tippst > Flowchart
 
 ![Automate sling](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+Passe den Workflow nach deinen Wünschen wie folgt an:
 
 ![Automate sling](../images/automate-app6.png)
 
@@ -59,7 +59,7 @@ Customize the workflow according to your wishes as follows:
 
 2 ![Automate sling](../images/automate-app5.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+Request-URL: Deine NS-URL mit der Endung "/api/v1/treatments.json" (z.B. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
 Request content:
 
@@ -67,45 +67,45 @@ Request content:
 * duration: Die Dauer des hohen TT (nach Zeitablauf wird der Loop auf das reguläre Profilziel zurückgehen, es sei denn, die Aktivität geht weiter). 
 * secret: Deine API SHA1 Hash. Das ist NICHT dein API-Key! Du kannst deinen API-Key in das SHA1 Format konvertieren unter <http://www.sha1-online.com/>
 
-Save: Tap on 'Done' and on the hook
+Save: Tippe auf "Done" und auf den Haken
 
-Start sling: Tap on Play button
+Workflow starten: Tippe auf die Play-Taste
 
 #### Beispiel 2: Wenn xDrip+ einen "BG hoch"-Alarm meldet, dann setze ein niedriges TT für ... Minuten.
 
-This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
+Dieser Workflow wird die xDrip+ Benachrichtigungen überwachen. Wenn xDrip+ einen nutzerspezifischen "BG hoch"-Alarm ausgelöst hat, dann setzt Automate für die angegebene Zeit ein benutzerdefiniertes niedriges temporäres Ziel. Nach Zeitablauf wird ggf. eine erneute Warnung die Dauer des niedrigen TT verlängern.
 
 ##### xDrip+
 
-First, you must add a BG high alert in xDrip+ as follows:
+Erstens musst du in xDrip+ eine "BG-hoch"-Warnung wie folgt einrichten:
 
 ![xDrip+ alert settings](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
+Alert name: (Achtung!) Dieser Name ist für das Auslösen des Triggers unerlässlich. Er sollte einzigartig und nicht mit anderen Warnnamen vergleichbar sein. Beispiel: "180alarm" sollte nicht neben "80alarm" existieren.
 
-Threshold: BG value that should fire the high alert.
+Threshold: BG-Wert, der den hohen Alarm auslösen soll.
 
-Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
+Default Snooze: Gib hier an, für wie lange du das niedrige temporäre Ziel setzen wirst, da die Warnung sonst erneut auftauchen wird und dann die Dauer des niedrigen temporären Ziels verlängert.
 
 ![xDrip+ alert settings](../images/automate-xdrip2.png)
 
 ##### Automate
 
-Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
+Zweiens, downloade das Automate script <https://llamalab.com/automate/community/flows/27809>.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Bearbeite den "Sling", indem du auf das Stift-Symbol tippst > Flowchart
 
 ![Automate sling](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+Passe den Workflow nach deinen Wünschen wie folgt an:
 
-Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
+Unter "Notification posted?" musst du als "TITLE" den Namen derjenigen xDrip+ Warnung eingeben, die den Trigger auslösen soll. Am Wortanfang und am Wortende musst du als Variable einen * hinzufügen.
 
 ![Automate sling](../images/automate-app7.png)
 
 ![Automate sling](../images/automate-app4.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+Request-URL: Deine NS-URL mit der Endung "/api/v1/treatments.json" (z.B. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
 Request content:
 
@@ -113,14 +113,14 @@ Request content:
 * duration: Die Dauer des hohen TT (nach Zeitablauf wird der Loop auf das reguläre Profilziel zurückgehen, es sei denn, die Aktivität geht weiter). Es ist empfehlenswert, dass du hier dieselbe Dauer verwendest wie für "Standard snooze" in den Einstellungen der xDrip+Warnung
 * secret: Deine API SHA1 Hash. Das ist NICHT dein API-Key! Du kannst deinen API-Key in das SHA1 Format konvertieren unter <http://www.sha1-online.com/>
 
-Save: Tap on 'Done' and on the hook
+Save: Tippe auf "Done" und auf den Haken
 
-Start sling: Tap on Play button
+Workflow starten: Tippe auf die Play-Taste
 
 #### Beispiel 3: Kann von dir selbst hinzugefügt werden!!!
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSdocs repository](../make-a-PR.md).
+Bitte füge weitere Workflows hinzu, indem du die .flo-Datei in die Automate-Community hochlädst (unter dem Stichwort 'Nightscout') und beschreibe sie hier, indem du einen [Pull Request auf das AndroidAPSdocs Repository](../make-a-PR.md) machst.
 
 ## If this, then that (IFTTT)
 
-Feel free to add a Howto by PR...
+Zögere nicht, mit einem PR ein Tutorial hierfür hinzuzufügen...
