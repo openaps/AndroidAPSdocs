@@ -32,7 +32,7 @@ Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran e
 
 Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran et accédez à Paramètres > NSClient > Paramètres avancés > Décochez 'Remonter uniquement vers NS (sync désactivée)' et 'Pas de téléchargement vers NS'.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Soyez conscient des [problèmes de sécurité](../Installing-AndroidAPS/Nightscout#security-considerations) qui pourraient se produire et soyez très prudent si vous utilisez une [pompe Insight](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
 
 ![Paramètres de téléchargement Nighscout](../images/automate-aaps2.jpg)
 
@@ -44,7 +44,7 @@ Ce script écoutera les capteurs du smartphone (pédomètre, capteur de gravité
 
 Téléchargez le script Automate <https://llamalab.com/automate/community/flows/27808>.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Éditez le script en appuyant sur le crayon > Script
 
 ![Automate sling](../images/automate-app3.png)
 
@@ -52,24 +52,24 @@ Personnaliser le script en fonction de vos souhaits comme ceci :
 
 ![Automate sling](../images/automate-app6.png)
 
-1. = Set high TT
-2. = Go back to normal target 20 minutes after the end of activity
+1. = Définir CT élevée
+2. = Revenir à la cible normale 20 minutes après la fin de l'activité
 
 1 ![Automate sling](../images/automate-app1.png)
 
 2 ![Automate sling](../images/automate-app5.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+URL de la requête : Votre URL-NS se terminant par /api/v1/treatments.json (par ex. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-Request content:
+Contenu de la requête :
 
-* targetTop / targetBottom: The high TT value (top and bottom should be the same value)
-* duration: The duration of the high TT (after time it will fallback to regular profile target unless activity goes on). 
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* targetTop / targetBottom: La valeur de la CT haute (la valeur haute et basse doivent être les mêmes)
+* duration: La durée de la CT haute (Après cette durée, il reviendra à la cible du profil standard sauf si l'activité se poursuit). 
+* secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
 
 Save: Tap on 'Done' and on the hook
 
-Start sling: Tap on Play button
+Démarrer le script : Cliquez sur le bouton Start
 
 #### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes.
 
@@ -93,7 +93,7 @@ Default Snooze: Insert the duration you are planning to set for your low TT here
 
 Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Éditez le script en appuyant sur le crayon > Script
 
 ![Automate sling](../images/automate-app3.png)
 
@@ -105,17 +105,17 @@ Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the na
 
 ![Automate sling](../images/automate-app4.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+URL de la requête : Votre URL-NS se terminant par /api/v1/treatments.json (par ex. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
-Request content:
+Contenu de la requête :
 
 * targetTop / targetBottom: The low TT value (top and bottom should be the same value)
 * duration: The duration of the low TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
 
 Save: Tap on 'Done' and on the hook
 
-Start sling: Tap on Play button
+Démarrer le script : Cliquez sur le bouton Start
 
 #### Example 3: To be added by you!!!
 
