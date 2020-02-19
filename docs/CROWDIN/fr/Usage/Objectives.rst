@@ -68,14 +68,14 @@ Vous voudrez définir votre objectif plus haut que d'habitude jusqu'à ce que vo
 
 La cible est la valeur sur laquelle les calculs sont basés, et n'est pas la même que la page dans laquelle vous souhaitez avoir vos glycémies.  Si votre cible est très large (disons 50 mg/dl [3 mmol/l] ou plus de large), vous aurez souvent peu d'action de AAPS. C'est dû au fait que la glycémie devrait finalement se situer quelque part dans cette large plage, et par conséquent, peu de débits de base temporaires sont suggérés. 
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
+Vous pouvez essayer d'ajuster vos cibles pour qu'elles soient plus proches les unes des autres (disons 20 mg/dl [1 mmol/l] ou moins de large) et observer comment le comportement de votre système change en conséquence.  
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`_ > Range for Visualisation.
+Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour la zone dans laquelle vous souhaitez maintenir votre glycémie en entrant différentes valeurs dans `Préférences <../Configuration/Preferences.html>`_ > Fourchette de visualisation.
  
 .. image:: ../images/sign_stop.png
   :alt: Stop sign
 
-Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
+Arrêtez-vous ici si vous est en boucle ouverte avec une pompe virtuelle - ne cliquez pas sur Vérifier à la fin de cet objectif.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. image:: ./images/blank.png
@@ -86,16 +86,16 @@ Objectif 6 : Démarrage de la boucle fermée avec le système AGB ( Arrêt pour 
 .. image:: ../images/sign_warning.png
   :alt: Warning sign
   
-Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. High bg values have to be corrected manually by you!
+La boucle fermée ne corrigera pas les valeurs de glycémies élevées dans l'objectif 6, car elle est limitée à la suspension glycémie basse. Les hyperglycémies doivent être corrigées manuellement par vous !
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
-* Set your target range slightly higher than you usually aim for, just to be safe.
-* Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
-* You don't have to change your settings. During objective 6 maxIOB setting is internally set to zero automatically. This override will be reversed when moving to objective 7.
+* Sélectionnez Boucle Fermée soit dans `Préférences <../Configuration/Preferences.html>`_ soit en faisant un appui long sur le bouton Boucle Ouverte en haut à gauche de l'écran d'accueil.
+* Définissez votre plage cible légèrement au dessus de ce que vous visez habituellement, juste pour être en sécurité.
+* Surveillez comment les basales temporaires sont actives en regardant le texte bleu de la basale sur l'écran d'accueil, ou le rendu de la basale en bleu sur le graphique de l'écran d'accueil.
+* Assurez-vous que vos paramètres ont fonctionnés avec AndroidAPS pour éviter d'avoir à traiter des hypoglycémies sur une période de 5 jours.  Si vous avez encore des hypoglycémies sévères ou fréquentes, alors envisagez de réajuster votre DAI, basal, SI et ratio G/I.
+* Vous n'avez pas à changer vos paramètres. Au cours de l'objectif 6, le paramètre maxIA est automatiquement défini sur zéro. Le remplacement par zéro de ce paramètre sera annulé lorsque vous serez à l'objectif 7.
 
-*The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.*
+* Le système remplacera vos paramètres maxIA par zéro, ce qui signifie que si la glycémie diminue, il peut réduire le débit de base pour vous, mais si la glycémie augmente, il n'augmentera le débit de base que si l'IA est négative (liée à une suspension glycémie basse précédente), sinon les débits de base resteront les mêmes que ceux de votre profil sélectionné.  Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.*
 
 Objectif 7 : Réglage de la Boucle Fermée, augmentation de l'IA (Insuline Active) maximale au dessus de 0 et abaissement progressif des cibles glycémiques
 ====================================================================================================
