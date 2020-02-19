@@ -2,7 +2,7 @@
 
 Galite instaliuoti AndroidAPS programėlę savo **Wear OS pagrindu** veikiančiame laikrodyje. AAPS versija laikrodžiui leidžia:
 
-* **pateikti duomenis jūsų laikrodyje**: naudojant [tinkintą ciferblatą](#aaps-watchfaces) arba standartiniame ekrane, naudojant [komplikacijas](#complications)
+* **pateikti duomenis jūsų laikrodyje**: naudojant [pasirinktinį ciferblatą](#aaps-watchfaces) arba standartiniame ekrane, naudojant [ekrano elementus](#complications)
 * **valdyti AAPS telefone**: suleisti bolusą, nustatyti laikiną tikslą ir pan. 
 
 ### Prieš perkant laikrodį...
