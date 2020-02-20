@@ -27,17 +27,17 @@ Objectif 2 : Apprendre comment contrôler AndroidAPS
 Objectif 3 : Prouver ses connaissances
 ==================================================
 * Passez un examen à choix multiples pour tester vos connaissances d'AndroidAPS.
-* Click on the orange text "Not completed yet" to access the page with the question and answering options.
+* Cliquez sur le texte orange "Pas encore terminé" pour accéder à la page avec la question et répondre aux options.
 
    .. image:: ../images/Objective3_V2_5.png
      :alt: Screenshot objective 3
 
-* Links will be provided to guide you in case you are unsure about the correct answers yet.
+* Des liens sont fournis pour vous guider si vous n'êtes pas certain d'avoir les bonnes réponses.
 
-Skip objectives
+Ignorer les objectifs
 --------------------------------------------------
-* Only if you have been closed looping with another system (i.e. OpenAPS, iOS Loop) before and can proof this (i.e. at least 3 months of looping data in Nightscout), you can send an email to `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ with your NS address and request code to bypass the rest of objectives.
-* Please note that no support is provided through this mail account. Refer to the `support resources <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentioned in this documentation.
+* Uniquement si vous avez utilisez une boucle fermée sur un autre système (par ex. OpenAPS, iOS Loop) auparavant et que vous pouvez le prouver (par ex. avec au moins 3 mois de données de bouclage dans Nightscout), vous pouvez envoyer un email à `objectives@androidaps.org <mailto:objectives@androidaps.org>`_ avec votre adresse NS et demander un code pour contourner le reste des objectifs.
+* Veuillez noter qu'aucun support n'est fourni via ce compte de messagerie. Reportez-vous aux `ressources de support <../Where-To-Go-For-Help/Connect-with-other-users.html>`_ mentionnés dans cette documentation.
 
 Objectif 4 : Démarrage de la boucle ouverte
 ==================================================
@@ -46,36 +46,36 @@ Objectif 4 : Démarrage de la boucle ouverte
 * Adoptez manuellement au moins 20 suggestions de débits de base temporaires sur une période de 7 jours; saisissez-les sur votre pompe et confirmez dans AndroidAPS que vous les avez acceptés.  Assurez-vous que ces données apparaissent bien dans AndroidAPS et dans Nightscout.
 * Activez des `Cibles temporaires <../Usage/temptarget.html>`_, si nécessaire. Utilisez des cibles temp. hypo temp pour éviter que le système ne corrige trop fortement une augmentation de la glycémie après une hypo. 
 
-Reduce number of notifications
+Réduire le nombre de notifications
 --------------------------------------------------
-* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l. * You might even want to wider upper limit (or disable Open Loop) at night. 
-* In Preferences you can set a minimum percentage for suggestion of basal rate change.
+* Pour réduire le nombre de décisions à prendre en mode Boucle Ouverte, définissez une large plage cible comme 90 - 150 mg/dl ou 5,0 - 8,5 mmol/l. * Vous pouvez même augmenter encore la limite supérieure (ou désactiver la Boucle ouverte) pendant la nuit. 
+* Dans les Préférences, vous pouvez définir un pourcentage minimum pour suggérer un changement de débit de basal.
 
    .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-     :alt: Open Loop minimal request change
+     :alt: Boucle ouverte Changement minimum
      
-* Also, you do not need to act every 5 minutes on all suggestions...
+* De plus, vous n'avez pas besoin d'agir toutes les 5 minutes sur toutes les suggestions...
 
 Objectif 5 : Compréhension de la Boucle Ouverte, y compris les propositions de débits Basal temporaires
 ====================================================================================================
-* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#section-e>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Commencez à comprendre le raisonnement qu'il y a derrière chaque recommandation de basal temporaire en regardant `Comprendre la logique de détermination basale <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ ainsi que les `lignes de prédiction dans l'écran d'accueil AndroidAPS <../Getting-Started/Screenshots.html#section-e>`_/Nightscout et le résumé des résultats des calculs dans votre onglet OpenAPS.
  
-You will want to set your target higher than usual until you are confident in the calculations and settings.  System allows
+Vous voudrez définir votre objectif plus haut que d'habitude jusqu'à ce que vous ayez confiance dans les calculs et les paramètres.  Le système permet
 
-* a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl) 
-* a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-* a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+* une cible basse au minimum de 72 mg/dl (4 mmol/l) ou un maximum de 180 mg/dl (10 mmol/l) 
+* une cible haute au minimum de 90 mg/dl (5 mmol/l) et au maximum de 225 mg/dl (15 mmol/l)
+* une cible temporaire en tant que simple valeur peut être n'importe où entre 72 mg/dl et 225 mg/dl (4 mmol/l et 15 mmol/l)
 
-The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within.  If your target is very wide (say, 3 or more mmol [50 mg/dl or more] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested. 
+La cible est la valeur sur laquelle les calculs sont basés, et n'est pas la même que la page dans laquelle vous souhaitez avoir vos glycémies.  Si votre cible est très large (disons 50 mg/dl [3 mmol/l] ou plus de large), vous aurez souvent peu d'action de AAPS. C'est dû au fait que la glycémie devrait finalement se situer quelque part dans cette large plage, et par conséquent, peu de débits de base temporaires sont suggérés. 
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
+Vous pouvez essayer d'ajuster vos cibles pour qu'elles soient plus proches les unes des autres (disons 20 mg/dl [1 mmol/l] ou moins de large) et observer comment le comportement de votre système change en conséquence.  
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`_ > Range for Visualisation.
+Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour la zone dans laquelle vous souhaitez maintenir votre glycémie en entrant différentes valeurs dans `Préférences <../Configuration/Preferences.html>`_ > Fourchette de visualisation.
  
 .. image:: ../images/sign_stop.png
   :alt: Stop sign
 
-Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
+Arrêtez-vous ici si vous est en boucle ouverte avec une pompe virtuelle - ne cliquez pas sur Vérifier à la fin de cet objectif.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. image:: ./images/blank.png
@@ -86,16 +86,16 @@ Objectif 6 : Démarrage de la boucle fermée avec le système AGB ( Arrêt pour 
 .. image:: ../images/sign_warning.png
   :alt: Warning sign
   
-Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. High bg values have to be corrected manually by you!
+La boucle fermée ne corrigera pas les valeurs de glycémies élevées dans l'objectif 6, car elle est limitée à la suspension glycémie basse. Les hyperglycémies doivent être corrigées manuellement par vous !
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`_ or by pressing and holding the Open Loop button in the top left of the home screen.
-* Set your target range slightly higher than you usually aim for, just to be safe.
-* Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
-* You don't have to change your settings. During objective 6 maxIOB setting is internally set to zero automatically. This override will be reversed when moving to objective 7.
+* Sélectionnez Boucle Fermée soit dans `Préférences <../Configuration/Preferences.html>`_ soit en faisant un appui long sur le bouton Boucle Ouverte en haut à gauche de l'écran d'accueil.
+* Définissez votre plage cible légèrement au dessus de ce que vous visez habituellement, juste pour être en sécurité.
+* Surveillez comment les basales temporaires sont actives en regardant le texte bleu de la basale sur l'écran d'accueil, ou le rendu de la basale en bleu sur le graphique de l'écran d'accueil.
+* Assurez-vous que vos paramètres ont fonctionnés avec AndroidAPS pour éviter d'avoir à traiter des hypoglycémies sur une période de 5 jours.  Si vous avez encore des hypoglycémies sévères ou fréquentes, alors envisagez de réajuster votre DAI, basal, SI et ratio G/I.
+* Vous n'avez pas à changer vos paramètres. Au cours de l'objectif 6, le paramètre maxIA est automatiquement défini sur zéro. Le remplacement par zéro de ce paramètre sera annulé lorsque vous serez à l'objectif 7.
 
-*The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.*
+* Le système remplacera vos paramètres maxIA par zéro, ce qui signifie que si la glycémie diminue, il peut réduire le débit de base pour vous, mais si la glycémie augmente, il n'augmentera le débit de base que si l'IA est négative (liée à une suspension glycémie basse précédente), sinon les débits de base resteront les mêmes que ceux de votre profil sélectionné.  Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.*
 
 Objectif 7 : Réglage de la Boucle Fermée, augmentation de l'IA (Insuline Active) maximale au dessus de 0 et abaissement progressif des cibles glycémiques
 ====================================================================================================

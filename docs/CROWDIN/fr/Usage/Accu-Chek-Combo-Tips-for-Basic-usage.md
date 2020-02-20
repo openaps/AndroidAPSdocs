@@ -41,7 +41,7 @@
 * Après une alarme **Pile pompe faible**, la pile doit être changée le plus rapidement possible pour toujours avoir l'énergie nécessaire à une communication Bluetooth fiable avec le smartphone, même si le téléphone se trouve à une grande distance de la pompe.
 * Même après une alarme **Pile pompe faible**, la pile peut être utilisée pour une durée significative. Il est cependant recommandé de toujours avoir une pile neuve avec vous après une alarme "Niveau Batterie Bas".
 * Pour ce faire, faites un appui long sur **Boucle Fermée** dans l'écran principal et sélectionnez **Suspendre la Boucle pour 1h**. 
-* Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
+* Attendez que la pompe communique avec le téléphone et que le logo Bluetooth sur la pompe se soit estompé.
 
 ![Bluetooth activé](https://github.com/T-o-b-i-a-s/ComboLooping/blob/master/resources/Compo.png?raw=true)
 
@@ -63,10 +63,10 @@ Les durées de vie standards des différents types de batterie sont les suivante
 
 Si la durée de vie de votre pile est significativement inférieure à celle indiquée ci-dessus, vérifiez les causes possibles suivantes :
 
-* Die latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Make sure you are on that version if you have issues with a short battery lifetime.
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, only a replacement of the pump by Roche will help, which is not a problem during the warranty period. 
-* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+* La dernière version de [l'application Ruffy](https://github.com/MilosKozak/ruffy) (mars 2018) améliore significativement la durée de vie de la pile de la pompe. Assurez-vous que vous êtes sur cette version si vous avez des problèmes de durée de vie de la pile.
+* Il y a quelques variantes du capuchon de pile de la pompe Combo, qui court-circuite partiellement les piles et les vide rapidement. Les capuchons sans ce problème sont reconnaissables par les contacts dorés.
+* Si l'horloge interne de la pompe ne "survie" pas un changement de pile court, il est probable que le condensateur qui maintient l'horloge en marche soit cassé. Dans ce cas, seul un remplacement de la pompe par Roche vous aidera, ce qui n'est pas un problème pendant la période de garantie. 
+* Le hardwre et le software du smartphone (version de l'OS Android et de la puce bluetooth) ont aussi un impact sur la durée de vie de la pile de la pompe, même si les raisons exactes ne sont pas encore complètement connues actuellement. Si vous en avez l'occasion, essayez un autre smartphone et comparez la durée de vie de la pile.
 
 ## Changement d'heure (été ou hiver)
 
@@ -80,17 +80,17 @@ L'algorithme OpenAPS ne prend pas en charge un bolus carré étendu ou un bolus 
 
 * Entrez les glucides mais pas le bolus correspondant. L'algorithme de boucle réagira plus agressivement. Si nécessaire, utilisez **eCarbs** (glucides étendus).
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you wth disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Si vous êtes tenté d'utiliser les bolus étendus ou mixtes directement sur la pompe, AndroidAPS vous pénalisera avec la désactivation de la boucle fermée pendant les six heures suivantes afin de vous assurer qu'aucune dose excessive d'insuline n'est délivrée.
 
 ![Boucle désactivée après bolus mixte](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/master/resources/Multiwave_Bolus.png)
 
 ## Alarmes à l'administration du bolus
 
-* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If you really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
-* Background is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Here indistinguishable entries must be prevented.
+* Si AndroidAPS détecte qu'un bolus identique a été délivré avec succès pendant la même minute, le 2ème bolus avec la même quantité d'insuline ne sera pas injecté. Si vous voulez vraiment faire deux bolus de suite avec la même quantité d'insuline, il suffit d'attendre deux minutes de plus, puis refaire le nouveau bolus. Si le premier bolus a été interrompu ou n'a pas été délivré pour d'autres raisons, vous pouvez refaire immédiatement le bolus depuis AAPS 2.0.
+* La raison de ce mode de fonctionnement est un mécanisme de sécurité qui fonctionne en arrière plan, et qui va lire l'historique des bolus de la pompe avant d'administrer un nouveau bolus pour calculer correctement l'insuline active (IA), même quand un bolus est administré directement sur la pompe. Pour cela, il faut éviter les entrées multiples identiques.
 
 ![Double bolus](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/Doppelbolus.png)
 
-* This mechanism is also responsible for a second cause of the error: If during the use of the bolus calculator another bolus is delivered via the pump and thereby the bolus history changes, the basis of the bolus calculation is wrong and the bolus is aborted. 
+* Ce mécanisme est également responsable d'une deuxième source d'erreur: si, lors de l'utilisation de la calculatrice, un autre bolus est administré via la pompe et donc l'historique des bolus change, la base du calcul du bolus est erronée et le bolus est abandonné. 
 
 ![Bolus annulé](https://raw.githubusercontent.com/T-o-b-i-a-s/ComboLooping/f9c56c930dc564c1649cd8e3764e077ffc02c5ef/resources/History_changed.png)

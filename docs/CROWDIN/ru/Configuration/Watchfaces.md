@@ -184,8 +184,8 @@ AndroidAPS обеспечивает следующие усложнения:
 * **Акт Угл CoB Подробно ** (` КРАТКИЙ ТЕКСТ `, открывается через * Мастер *): Отображает актуальные * Активные углеводы COB * на первой строке и планируемые (e-Углеводы) на второй.
 * ** Значок CoB ** (`КРАТКИЙ ТЕКСТ`, открывает * Wizard *): Отображает значение *Активные углеводы* со статичной иконкой.
 * **Подробно** (` ПОЛНЫЙ ТЕКСТ `, открывает * Меню *): Содержит большую часть данных одновременно: * Глюкозу крови * и * тренд *, * дельту ГК* и * время от измерения * в первой строке. На второй строке * Активные углеводы *, *Активный инсулин * and * Базальную скорость *.
-* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
-* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
+* ** Полный статус (перевернут) ** (`ДЛИННЫЙ ТЕКСТ `, открывается через * Меню *): те же данные, что и для стандартного * Полного состояние *, но текст перевернут. Может быть использован в циферблатах, которые игнорируют одну из двух строк `ДЛИННОГО ТЕКСТА`
+* ** IOB Подробно ** (` КРАТКИЙ ТЕКСТ `, открывается через *Болюс*): Отображает суммарный * Активный инсулин IOB * на первой строке и разделение * IOB * на * Болюсный* и * Базальный* на второй.
 * **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
 * **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
 
