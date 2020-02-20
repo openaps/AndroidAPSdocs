@@ -101,27 +101,27 @@ Pour les autres MGC/MGF comme le Freestyle Libre, ‘SMB en permanence’ sera d
 
 ### Max. minutes de basal pour limiter le SMB
 
-C'est un paramètre de sécurité important. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
+C'est un paramètre de sécurité important. Cette valeur détermine la quantité de SMB qui peut être administrée en fonction de la quantité d'insuline basale diffusée sur une durée donnée, lorsqu'elle n'est pas couverte par des GA.
 
-This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
+Cela rend les SMB plus agressifs. Pour commencer, vous devez commencer par la valeur par défaut de 30 minutes. Avec de l''expérience, vous pouvez augmenter la valeur par pas de 15 minutes et voir l'impact de ces changements.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to adjust a decreasing BG with 0 IE/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which warns you before running into hypos.
+Il est recommandé de ne pas définir de valeur supérieure à 90 minutes, car c'est la limite au delà de laquelle l'algorithme peut ne plus pouvoir ajuster une baisse de GLY avec un DBT de 0 UI/h ('zéro-temp'). Vous devez également définir des alarmes, en particulier si vous testez encore de nouveaux paramétrages, pour vous alerter avant de tomber en hypo.
 
-Default value: 30 min.
+Valeur par défaut : 30 min.
 
 ### Activer RNS
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful, if you forget to tell AndroidAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasments caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
+Avec cette option activée, l'algorithme SMB peut détecter des repas non signalés. C'est utile si vous oubliez de dire à AndroidAPS que vous avez mangé, si vous avez mal estimé ou mal renseignés la quantité de glucides, ou encore si vous avez fait un repas avec beaucoup de graisses ou de protéines ayant une durée d'absoption plus longue que prévue. Sans aucun glucides renseignés, RNS peut reconnaitre une forte augmentation de la glycémie causée par des glucides, de l'adrénaline ou tout autre raison, et tente de l'ajuster avec les SMB. Cela fonctionne aussi dans l'autre sens : s'il y a une forte baisse de la glycémie, il peut arrêter les SMB plus tôt.
 
 **Par conséquent, les RNS doivent toujours être activés lors de l'utilisation de SMB.**
 
-### High temp-target raises sensitivity
+### Cible temp. haute élève la sensibilité
 
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target over 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease.
+Si vous activez cette option, la sensibilité à l'insuline sera augmentée avec une cible temp supérieure à 100 mg/dl ou 5,6 mmol/l. Cela signifie que la SI augmentera alors que le G/I et le débit de base diminueront.
 
-### Low temp-target lowers sensitivity
+### Cible temp. basse abaisse la sensibilité
 
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
+Si vous activez cette option, la sensibilité à l'insuline sera diminuée avec une cible temp inférieure à 100 mg/dl ou 5,6 mmol/l. Cela signifie que la SI diminuera alors que le G/I et le débit de base augmenteront.
 
 ### Paramètres Avancés
 
