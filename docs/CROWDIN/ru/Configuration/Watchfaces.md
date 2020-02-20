@@ -193,7 +193,7 @@ AndroidAPS обеспечивает следующие усложнения:
 
 ### Параметры, связанные с усложнениями
 
-* **Действия при нажатии кнопки усложнений** (default `Default`): Decides which dialog is opened when user taps complication: 
+* **Действия при шлепке по значку усложнений** (по умолчанию ` Default `): определяет, какой диалог открывается при нажатии на усложнение: 
   * *Default*: action specific to complication type *(see list above)*
   * *Menu*: AAPS main menu
   * *Wizard*: bolus wizard - bolus calculator
