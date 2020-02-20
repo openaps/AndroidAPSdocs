@@ -151,30 +151,30 @@ Užpildyta žvaigždutė reiškia, kad būsena yra aktyvi (**Įjungta**), o tuš
 
 *Ekrano elementai* yra terminas iš tradicinės laikrodžių gamybos, aprašantis priedus prie pagrindinio ciferblato - kitas mažas langelis arba papildomas ciferblatas (su data, savaitės diena, mėnulio faze ir pan.). Paprastai kalbant, Wear OS 2.0 leidžia pritaikytų duomenų teikėjams, pvz., oras, pranešimai, fitneso skaitikliai ir pan. būti pridėtiems į bet kurį ciferblatą, palaikantį ekrano elementus.
 
-AndroidAPS Wear OS programėlė palaiko ekrano elementus nuo versijos `2.6` ir leidžia bet kurių trečiųjų šalių ciferblatą, palaikantį komplikacijas, sukonfigūruoti rodyti su AAPS susijusius duomenis (KG tendenciją, AIO, AAO ir t. t.).
+AndroidAPS Wear OS programėlė palaiko ekrano elementus nuo versijos `2.6` ir leidžia bet kurių trečiųjų šalių ciferblatą, palaikantį ekrano elementus, sukonfigūruoti rodyti su AAPS susijusius duomenis (KG tendenciją, AIO, AAO ir t. t.).
 
-Ekrano elementai gali atlikti **nuorodų** į AAPS funkcijas. Bakstelėję jas, galite atidaryti su AAPS susijusius meniu ir dialogus (priklauso nuo komplikacijų tipo ir konfigūracijos).
+Ekrano elementai gali atlikti **nuorodų** į AAPS funkcijas. Bakstelėję jas, galite atidaryti su AAPS susijusius meniu ir dialogus (priklauso nuo ekrano elementų tipo ir konfigūracijos).
 
 ![Plėtiniai_ciferblate](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Ekrano elementų tipai
 
-AAPS Wear OS programėlė pateikia tik pirminius duomenis, pagal numatytus formatus. Priklauso nuo trečiųjų šalių ciferblato, kur ir kaip diegiamos komplikacijos, įskaitant išdėstymą, kraštelius, spalvą ir šriftą. Iš daugelio Wear OS komplikacijų, AAPS naudoja:
+AAPS Wear OS programėlė pateikia tik pirminius duomenis, pagal numatytus formatus. Priklauso nuo trečiųjų šalių ciferblato, kur ir kaip diegiami ekrano elementai, įskaitant išdėstymą, kraštelius, spalvą ir šriftą. Iš daugelio Wear OS ekrano elementų, AAPS naudoja:
 
-* `TRUMPAS TEKSTAS` - Yra dvi teksto eilutės, 7 simboliai kiekvienoje, kartais vadinama reikšme ir pavadinimu. Paprastai parodoma viduje apskritimo ar mažo ovalo - vienas po kitu arba šalia. Tai yra labai erdvėje apribota komplikacija. Kad sutilptų, AAPS stengiasi pašalinti nereikalingus ženklus: apvalina reikšmes, pašalindamas nulius pradžioje ir pabaigoje iš reikšmių ir pan.
+* `TRUMPAS TEKSTAS` - Yra dvi teksto eilutės, 7 simboliai kiekvienoje, kartais vadinama reikšme ir pavadinimu. Paprastai parodoma viduje apskritimo ar mažo ovalo - vienas po kitu arba šalia. Tai yra labai erdvėje apribotas ekrano elementas. Kad sutilptų, AAPS stengiasi pašalinti nereikalingus ženklus: apvalina reikšmes, pašalindamas nulius pradžioje ir pabaigoje iš reikšmių ir pan.
 * `ILGAS TEKSTAS` - Yra dvi teksto eilutės, apie 20 simbolių kiekvienoje. Paprastai rodomas stačiakampyje arba ilgame ovale - vienas po kitu. Naudojamas pateikti daugiau detalių ir tekstinę būseną.
 * `RIBINĖ VERTĖ` - Naudojamas pateikti reikšmes iš nustatytų ribų, pvz., procentus. Turi paveikslėlį, pavadinimą ir pateikiamas kaip progreso apskritimas.
 * `DIDELIS PAVEIKSLĖLIS` - Pasirinktinis fono paveikslėlis, kuris gali būti naudojamas (kai palaikoma ciferblate), kaip fonas.
 
-### Komplikacijų diegimas
+### Ekrano elementų diegimas
 
-Norint pridėti komplikacijas į ciferblatą, sukonfigūruokite jas ilgu paspaudimu ir bakstelkite krumpliaratį apačioje. Priklausomai nuo to, kaip konkretūs ciferblatai yra konfigūruojami - arba spustelėkite vietos rezervavimo ženklus, arba eikite į ciferblato sąrankos komplikacijų meniu. AAPS komplikacijos yra sugrupuotos po AAPS meniu įrašu.
+Norint pridėti ekrano elementus į ciferblatą, sukonfigūruokite jas ilgu paspaudimu ir bakstelkite krumpliaratį apačioje. Priklausomai nuo to, kaip konkretūs ciferblatai yra konfigūruojami - arba spustelėkite vietos rezervavimo ženklus, arba eikite į ciferblato sąrankos ekrano elementų meniu. AAPS ekrano elementai yra sugrupuoti po AAPS meniu įrašu.
 
-Konfigūruojant komplikacijas, Wear OS parodys iš išfiltruos sąrašą komplikacijų, kurios tilps į pasirinktų komplikacijų vietas ciferblate. Jei nerandate konkrečios komplikacijos sąraše, tikriausiai dėl savo savybių jos negali būti naudojamos šioje vietoje.
+Konfigūruojant ekrano elementus, Wear OS parodys iš išfiltruos sąrašą elementų, kurie tilps į pasirinktų elementų vietas ciferblate. Jei nerandate konkretaus ekrano elementų sąraše, tikriausiai dėl savo savybių jie negali būti naudojami šioje vietoje.
 
-### AAPS teikiamos komplikacijos
+### AAPS teikiami ekrano elementai
 
-AndroidAPS pateikia šias komplikacijas:
+AndroidAPS pateikia šiuos ekrano elementus:
 
 ![AAPS_plėtinių_sąrašas](../images/Watchface_Complications_List.png)
 
@@ -189,19 +189,19 @@ AndroidAPS pateikia šias komplikacijas:
 * **AAO piktograma** (`TRUMPAS TEKSTAS`, atsidaro *Bolusas*): rodo *Angliavandenių organizme* vertę su statine piktograma.
 * **Siuntėjo/Telefono Baterija** (`RIBINĖ VERTĖ`, atsidaro *Būsena*): pateikia AAPS įdiegtame telefone baterijos procentą (siuntėjas) taip, kaip nurodo AAPS. Rodoma procentais, su akumuliatoriaus piktograma, kuri atspindi praneštą vertę. Gali būti neatnaujinama realiu laiku, o tik su kitais svarbiais AAPS duomenimis (paprastai kas ~5 minutes kartu su nauju *kraujo gliukozės* matavimu).
 
-Be to, yra trys komplikacijos `DIDELIS PAVEIKSLĖLIS` tokios kaip: **Tamsus fono paveikslėlis**, **Pilkas fono paveikslėlis** ir **Šviesus fono paveikslėlis**, rodančios statinį AAPS fono paveikslėlį.
+Be to, yra trys ekrano elementai `DIDELIS PAVEIKSLĖLIS` tokios kaip: **Tamsus fono paveikslėlis**, **Pilkas fono paveikslėlis** ir **Šviesus fono paveikslėlis**, rodantys statinį AAPS fono paveikslėlį.
 
-### Su komplikacijomis susiję nustatymai
+### Su ekrano elementais susiję nustatymai
 
 * **Veiksmai paspaudus plėtinių mygtuką** (numatytoji reikšmė `Numatytasis`): Nusprendžia, kuris dialogo langas yra atidarytas, kai vartotojas baksteli į plėtinius: 
-  * *Numatytasis*: veiksmų, būdingų komplikacijų tipui *(žr. sąrašą aukščiau)*
+  * *Numatytasis*: veiksmų, būdingų ekrano elementų tipui *(žr. sąrašą aukščiau)*
   * *Meniu*: AAPS pagrindinis meniu
   * *Vedlys*: boluso vedlys - boluso skaičiuoklė
   * *Bolusas*: tiesioginis boluso vertės įrašas
   * *iAV*: iAV sąrankos dialogas
   * *Būsena*: būsenos sub-meniu
   * *Jokių*: Išjungia AAPS plėtinių veiksmus
-* **Unicode komplikacijose** (numatytasis `Įjungta`): Kai `Įjungta`, plėtiniuose bus naudojami Unicode simboliai, tokie kaip: `Δ` Delta, `⁞` vertikalių taškų daliklis arba `⎍` bazės simbolis. Jų pateikimas priklauso nuo šrifto, kuris gali būti būdingas tik tam ciferblatui. Ši parinktis leidžia perjungti Unicode simbolius `Išjungta` kai reikia - jei šriftas, naudojamas parinktiniuose ciferblatuose nepalaiko šių simbolių - taip išvengiant grafinių trikdžių.
+* **Unicode ekrano elementuose** (numatytasis `Įjungta`): Kai `Įjungta`, elementuose bus naudojami Unicode simboliai, tokie kaip: `Δ` Delta, `⁞` vertikalių taškų daliklis arba `⎍` bazės simbolis. Jų pateikimas priklauso nuo šrifto, kuris gali būti būdingas tik tam ciferblatui. Ši parinktis leidžia perjungti Unicode simbolius `Išjungta` kai reikia - jei šriftas, naudojamas parinktiniuose ciferblatuose nepalaiko šių simbolių - taip išvengiant grafinių trikdžių.
 
 ## Patarimai dėl darbo ir baterijos gyvavimo
 
@@ -219,21 +219,21 @@ Kadangi mes negalima nutraukti ryšio (mums reikia atnaujinti duomenis), ir nori
 
 * Gamykliniai ciferblatai paprastai yra geriau optimizuoti, nei tie, kuriuos atsisiunčiate iš parduotuvės.
 * Tai geriau naudoti ciferblatus, kurie atvaizduoja duomenis neaktyviu / blyškiu režimu.
-* Būkite atidūs, kai pridedate kitas komplikacijas tokias kaip oro valdikliai - jie naudojas duomenis iš išorinių šaltinių.
+* Būkite atidūs, kai pridedate kitus ekrano elementus, tokius kaip oro valdikliai - jie naudoja duomenis iš išorinių šaltinių.
 * Pradėkite nuo paprastesnių ciferblatų. Pridėkite vieną plėtinį vienu metu ir stebėkite, kiek tai turi įtakos baterijos gyvavimui.
 * Pabandykite naudoti **Tamsią** temą AAPS ciferblate ir [**Atitikimo daliklį**](#watchface-settings). OLED įrenginiuose tai sumažins pikselių šviesį ir jų išdegimą.
 * Patikrinkite, kas veikia geriau jūsų laikrodyje: AAPS numatytasis ciferblatas ar kitas ciferblatas su AAPS plėtiniais.
 * Stebėkite kelias dienas, naudojant įvairius veiklos profilius. Daugelis laikrožių aktyvuoja ekraną, kai žiūrime į juos, judant ar dėl kitų priežasčių.
 * Patikrinkite bendrinius sistemos nustatymus, kurie gali turėti įtakos: pranešimai, apšvietimas/aktyvaus ekrano išsijungimas, kai GPS yra aktyvuotas.
 * Patikrinkite [sąrašą išbandytų telefonų ir laikrodžių](../Getting-Started/Phones#list-of-tested-phones) ir [paklauskite bendruomenės](../Where-To-Go-For-Help/Connect-with-other-users.md) apie kitų vartotojų patirtį bei baterijos gyvavimo būklę.
-* **Mes negalime garantuoti, kad duomenys rodomi ciferblate ar komplikacijoje yra atnaujinti**. Galų gale, tik nuo Wear OS priklauso, kada atnaujinti ciferblatą ar plėtinį. Net kai APPS programėlė užklausia atnaujinimo, sistema gali nuspręsti atidėti arba ignoruoti užklausą, siekdama tausoti bateriją. Jei abejojate ar baterija laikrodyje nusekusi - visada pasitikrinkite AAPS programėlę telefone.
+* **Mes negalime garantuoti, kad duomenys rodomi ciferblate ar ekrano elemente yra atnaujinti**. Galų gale, tik nuo Wear OS priklauso, kada atnaujinti ciferblatą ar plėtinį. Net kai APPS programėlė užklausia atnaujinimo, sistema gali nuspręsti atidėti arba ignoruoti užklausą, siekdama tausoti bateriją. Jei abejojate ar baterija laikrodyje nusekusi - visada pasitikrinkite AAPS programėlę telefone.
 
 ## Wear programos trikčių šalinimas:
 
 * Android Wear 2.0 laikrodžiuose ekranas nebeįsidiegia pats. Jūs turite eiti į laikrodžio Playstore (skiriasi nuo išmaniojo telefono Playstore!) Ir suaktyvinti AAPS kategorijoje "įdiegtos programos telefone“. Taip pat įjungti automatinį naujinimą. 
 * Kartais padeda pakartotinis programų sinchronizavimas su laikrodžiu, nes kartais jis gali tai atlikti per lėtai: Android Wear > krumpliaračio piktograma (apačia)> laikrodžio pavadinimas> sinchronizuoti programas dar kartą.
 * Laikrodžio kūrėjo parinktyse įjunkite ADB derinimo funkciją, prijunkite laikrodį prie kompiuterio per USB ir vieną kartą paleiskite Wear programoje Android Studio.
-* Jei komplikacijos neatnaujina duomenų, iš pradžių patikrinkite ar AAPS ciferblatas veikia iš viso.
+* Jei ekrano elementai neatnaujina duomenų, iš pradžių patikrinkite ar AAPS ciferblatas veikia iš viso.
 
 ## Peržiūrėti Nightscout duomenis
 
