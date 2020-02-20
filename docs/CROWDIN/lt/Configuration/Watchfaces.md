@@ -7,7 +7,7 @@ Galite instaliuoti AndroidAPS programėlę savo **Wear OS pagrindu** veikiančia
 
 ### Prieš perkant laikrodį...
 
-* Kai kurioms funkcijoms, pavyzdžiui, *komplikacijoms*, reikia Wear OS 2.0 versijos " arba naujesnės
+* Kai kurioms funkcijoms, pavyzdžiui, *ekrano elementams*, reikia Wear OS 2.0 versijos " arba naujesnės
 * "Google" pervadino * Android Wear 1.x* į *Wear OS* iš versijos 2.x, todėl, jei nurodoma *Android Wear*, tai gali būti senesnė 1.x sistemos versija
 * Jei išmaniojo laikrodžio aprašyme nurodomas tik suderinamumas su *Android* ir *iOS* - tai **ne**reiškia, kad jis veikia su *Wear OS* - tai gali būti šiek tiek kitos rūšies gamintojo specifinė OS **, kuri nėra suderinama su AAPS!**
 * Patikrinkite [sąrašą išbandytų telefonų ir laikrodžių](../Getting-Started/Phones#list-of-tested-phones) ir [paklauskite bendruomenės](../Where-To-Go-For-Help/Connect-with-other-users.md), jei kyla abejonių ar jūsų laikrodis yra palaikomas
@@ -147,17 +147,17 @@ Užpildyta žvaigždutė reiškia, kad būsena yra aktyvi (**Įjungta**), o tuš
 
 * **Vedlys procentais** (numatyta `Išjungta`): leisite boluso korekciją iš vedlio (reikšmė įvesta procentais prieš patvirtinimo pranešimą)
 
-## Komplikacijos (plėtiniai)
+## Ekrano elementai
 
-*Komplikacija* yra terminas iš tradicinės laikrodžių gamybos, aprašantis priedus prie pagrindinio ciferblato - kitas mažas langelis arba papildomas ciferblatas (su data, savaitės diena, mėnulio faze ir pan.). Paprastai kalbant, Wear OS 2.0 leidžia pritaikytų duomenų teikėjams, pvz., oras, pranešimai, fitneso skaitikliai ir pan. būti pridėtiems į bet kurį ciferblatą, palaikantį komplikacijas.
+*Ekrano elementai* yra terminas iš tradicinės laikrodžių gamybos, aprašantis priedus prie pagrindinio ciferblato - kitas mažas langelis arba papildomas ciferblatas (su data, savaitės diena, mėnulio faze ir pan.). Paprastai kalbant, Wear OS 2.0 leidžia pritaikytų duomenų teikėjams, pvz., oras, pranešimai, fitneso skaitikliai ir pan. būti pridėtiems į bet kurį ciferblatą, palaikantį ekrano elementus.
 
-AndroidAPS Wear OS programėlė palaiko komplikacijas nuo versijos `2.6` ir leidžia bet kurių trečiųjų šalių ciferblatą, palaikantį komplikacijas, sukonfigūruoti rodyti su AAPS susijusius duomenis (KG tendenciją, AIO, AAO ir t. t.).
+AndroidAPS Wear OS programėlė palaiko ekrano elementus nuo versijos `2.6` ir leidžia bet kurių trečiųjų šalių ciferblatą, palaikantį komplikacijas, sukonfigūruoti rodyti su AAPS susijusius duomenis (KG tendenciją, AIO, AAO ir t. t.).
 
-Komplikacijos gali atlikti **nuorodų** į AAPS funkcijas. Bakstelėję jas, galite atidaryti su AAPS susijusius meniu ir dialogus (priklauso nuo komplikacijų tipo ir konfigūracijos).
+Ekrano elementai gali atlikti **nuorodų** į AAPS funkcijas. Bakstelėję jas, galite atidaryti su AAPS susijusius meniu ir dialogus (priklauso nuo komplikacijų tipo ir konfigūracijos).
 
 ![Plėtiniai_ciferblate](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Komplikacijų tipai
+### Ekrano elementų tipai
 
 AAPS Wear OS programėlė pateikia tik pirminius duomenis, pagal numatytus formatus. Priklauso nuo trečiųjų šalių ciferblato, kur ir kaip diegiamos komplikacijos, įskaitant išdėstymą, kraštelius, spalvą ir šriftą. Iš daugelio Wear OS komplikacijų, AAPS naudoja:
 
