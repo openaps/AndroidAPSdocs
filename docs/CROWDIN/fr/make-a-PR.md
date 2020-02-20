@@ -2,7 +2,7 @@
 
 **Cette description est juste pour l'édition de la documentation en anglais. Si vous voulez traduire la documentation dans d'autres langues (merci), utilisez [crowdin](https://wikitranslations.androidaps.org).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
+Pour savoir comment formater le texte (titre, gras ...) et définir les liens, reportez-vous à la section ["Syntaxe de code"](./make-a-PR#code-syntax) de cette page.
 
 ## Généralités
 
@@ -24,18 +24,18 @@ Pour notre exemple, nous allons faire une modification à AndroidAPSdocs. Cela n
 
 ![Fork repo](./images/PR0.png)
 
-2. Accédez à http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html ou autre et accédez à la page que vous souhaitez éditer. Cliquez sur la boîte noire en bas à gauche de la page avec le mot vert "v: latest" ou similaire. In the pop up window that appears, click the word "edit" for editing in GitHub. 
+2. Accédez à http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html ou autre et accédez à la page que vous souhaitez éditer. Cliquez sur la boîte noire en bas à gauche de la page avec le mot vert "v: latest" ou similaire. Dans la fenêtre pop up qui apparaît, cliquez sur le mot "edit" pour éditer dans GitHub. 
 
 ![edit doc](./images/PR1.png)
 
-     Or you can click on the "Edit in Github" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
+     Ou vous pouvez cliquer sur le lien "Edit in Github" dans le coin supérieur droit, puis cliquer sur l'icône en forme de crayon qui apparaît dans la barre supérieure de la page à éditer.
     
 
 ![RTD io](./images/PR2.png)
 
 3. L'une ou l'autre des options de l'étape 2 créera une nouvelle branche dans le référentiel où vos modifications seront enregistrées. Effectuez vos modifications dans le fichier.
   
-  Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the two. Take care to use the correct syntax as [described below](./make-a-PR#code-syntax).
+  Notez que nous utilisons différentes extensions de fichiers : .rst (ReStructuredText) et .md (Markdown) et la syntaxe varie un peu entre les deux. Prenez soin d'utiliser la bonne syntaxe [décrite ci-dessous](./make-a-PR#code-syntax).
 
 ![Edit branch](./images/PR3.png)
 
@@ -59,44 +59,44 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 
 ## Syntaxe du Code
 
-At the moment there are two languages used for docs pages:
+Pour le moment, il y a deux langages utilisés pour les pages de documents :
 
-* Markdown (.md) - the markup language originally used for docs pages
-* reStructuredText (.rst) - the new markup language
+* Markdown (.md) - le langage utilisé à l'origine pour les pages de documentation
+* reStructuredText (.rst) - le nouveau langage utilisé
 
 We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
 
 ### Taille des images
 
-If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+Si vous utilisez des images, veuillez utiliser des tailles raisonnables. Les images de capture d'écran doivent être de **250 pixels de largeur**.
 
 ### Fichiers .md
 
 #### Formatage du texte
 
-* bold: `**text**`
-* italic: `*text*`
-* Headline 1: `# headline`
-* Headline 2: `## headline`
-* Headline 3: `### headline`
+* gras : `**text**`
+* italique : `*text*`
+* Titre 1 : `# headline`
+* Titre 2 : `## headline`
+* Titre 3 : `### headline`
 
 #### Images
 
-* images: `![alt text](../images/file.png)`
+* images : `![alt text](../images/file.png)`
 
 #### Liens
 
-* external link: `[alt text](www.url.tld)`
-* internal link to .md page: `[alt text](.../folder/file.md)`
-* internal link to .rst page: `[alt text](.../folder/file.rst)`
-* internal link to headline: `[alt text](.../folder/file#headline)`
+* lien externe : `[alt text](www.url.tld)`
+* lien interne vers une page .md : `[texte alternatif](.../folder/file.md)`
+* lien interne vers une page .rst : `[texte alternatif](.../folder/file.rst)`
+* lien interne vers un titre : `[texte alternatif](.../folder/file#titre)`
 
 ### Fichiers .rst
 
 #### Formatage du texte
 
-* bold: `**text**`
-* italic: `*text*`
+* gras : `**text**`
+* italique : `*text*`
 * Titre 1 :
   
   `titre`  
@@ -117,14 +117,14 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * images:
   
   `.. image:: ../images/modules.png`  
-  `:alt: alt text`
+  `:alt: texte alternatif`
 
 #### Liens
 
-* external link: `` `alt text <www.url.tld>_` ``
-* internal link to .md page: `` `alt text <../folder/file.html>_` ``
-* internal link to .rst page: `` `alt text <../folder/file.html>_` ``
-* internal link to headline: `` `alt text <../folder/file.html#headline>_` ``
+* lien externe : `` `texte alternatif <www.url.tld>_` ``
+* lien interne vers une page .md : `` `texte alternatif <../folder/file.html>_` ``
+* lien interne vers une page .rst : `` `texte alternatif <../folder/file.html>_` ``
+* lien interne vers un titre : `` `texte alternatif <../folder/file.html#titre>_` ``
 
 ### Liens internes
 
@@ -153,7 +153,7 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
 * As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
-* Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+* Please use reasonable sizes. Les images de capture d'écran doivent être de **250 pixels de largeur**.
 * You can upload images in batches easily by:
   
   1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
@@ -168,8 +168,8 @@ If you are planning to make a lot of edits, including adding images to help illu
   
   6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
     
-    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
-    * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`  
+    * Pour les pages .md : `![Exemple de téléchargement d'images par lots](../images/Example_batch_images_upload.png)` (Ce code est exactement la façon dont l'image ci-dessous est intégrée pour être affichée.)
+    * Pour les pages .rst : `.. image:: ../images/Example_batch_images_upload.png`  
       `:alt: Example of uploading images in batches`
 
 ![Example of uploading images in batches](./images/Example_batch_images_upload.png)
