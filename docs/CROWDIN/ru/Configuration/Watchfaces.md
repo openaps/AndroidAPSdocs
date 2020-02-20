@@ -200,7 +200,7 @@ AndroidAPS обеспечивает следующие усложнения:
   * * Болюс *: прямой ввод величины болюса
   * * eCarb *: диалоговое окно конфигурации eCarb
   * * Состояние *: подменю состояния
-  * *None*: Disables tap action on AAPS complications
+  * * Отсутствует *: Отключает действие по шлепку для усложнений AAPS
 * **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
 ## Performance and battery life tips
