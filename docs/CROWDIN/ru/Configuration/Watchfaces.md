@@ -194,12 +194,12 @@ AndroidAPS обеспечивает следующие усложнения:
 ### Параметры, связанные с усложнениями
 
 * **Действия при шлепке по значку усложнений** (по умолчанию ` Default `): определяет, какой диалог открывается при нажатии на усложнение: 
-  * *Default*: action specific to complication type *(see list above)*
-  * *Menu*: AAPS main menu
-  * *Wizard*: bolus wizard - bolus calculator
-  * *Bolus*: direct bolus value entry
-  * *eCarb*: eCarb configuration dialog
-  * *Status*: status sub-menu
+  * * По умолчанию*: действия, связанные с типом усложнения * (см. список выше) *
+  * * Меню *: главное меню AAPS
+  * *мастер*: болюс мастер - калькулятор болюса
+  * * Болюс *: прямой ввод величины болюса
+  * * eCarb *: диалоговое окно конфигурации eCarb
+  * * Состояние *: подменю состояния
   * *None*: Disables tap action on AAPS complications
 * **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
