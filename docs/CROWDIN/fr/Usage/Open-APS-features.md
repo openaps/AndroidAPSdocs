@@ -85,23 +85,23 @@ SMB fonctionne quand il y a une cible temporaire faible ou élevée (Repas immin
 
 ### Activer SMB avec cibles temp. hautes
 
-SMB is working when there is a high temporary target active (activity, hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
+SMB fonctionne lorsqu'il existe une cible temporaire élevée active (activité, hypo). Cette option peut limiter d'autres paramètres SMB, par ex. si ‘SMB avec les cibles temporaires‘ est activé et que ‘SMB avec des cibles temp. hautes‘ est désactivé, SMB fonctionnera seulement avec des cibles temp basses et pas avec des cibles temp hautes. C'est la même chose pour Activer SMB avec les glucides : si 'SMB avec cible temp. hautes' est désactivé, il n'y aura pas de SMB avec une cible temp haute même s'il y a des glucides actifs.
 
 ### Activer en permanence les SMB
 
-SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
+SMB fonctionne en permanence (indépendamment des GA, des cibles temp ou des bolus). Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. Pour l'instant, cela ne fonctionne qu'avec un Dexcom G5, si vous utilisez l'application Dexcom (patchée) ou le "mode natif" dans xDrip+. Si une valeur de GLY a une variation trop importante, le G5 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
-For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Pour les autres MGC/MGF comme le Freestyle Libre, ‘SMB en permanence’ sera désactivé jusqu'à ce que xDrip+ ait un meilleur plugin de filtrage. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Activer SMB après ingestion de glucides
 
-SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5, if using the Dexcom App (patched) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
+Le SMB marche pendant 6 h après avoir manger des glucides, même si les GA sont à 0. Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. Pour l'instant, cela ne fonctionne qu'avec un Dexcom G5, si vous utilisez l'application Dexcom (patchée) ou le "mode natif" dans xDrip+. Si une valeur de GLY a une variation trop importante, le G5 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
-For other CGM/FGM like Freestyle Libre, 'SMB always' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Pour les autres MGC/MGF comme le Freestyle Libre, ‘SMB en permanence’ sera désactivé jusqu'à ce que xDrip+ ait un meilleur plugin de filtrage. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Max. minutes de basal pour limiter le SMB
 
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
+C'est un paramètre de sécurité important. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is not covered by COBs.
 
 This makes the SMB more aggressive. For the beginning, you should start with the default value of 30 minutes. After some experience, you can increase the value with 15 minutes steps and watch how these changes are affecting.
 
@@ -195,7 +195,7 @@ Default value: 2
 
 * * *
 
-## Meal Assist (MA)
+## Assistance Repas (AR)
 
 ### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
 
