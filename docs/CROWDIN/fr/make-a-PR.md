@@ -64,7 +64,7 @@ Pour le moment, il y a deux langages utilisés pour les pages de documents :
 * Markdown (.md) - le langage utilisé à l'origine pour les pages de documentation
 * reStructuredText (.rst) - le nouveau langage utilisé
 
-We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+Nous allons changer toutes les pages de documentation de Markdown à reStructuredText peu à peu. En attendant, il est important que vous utilisez la syntaxe correcte lors de la mise en forme du texte ou des liens. Si vous n'êtes pas sûr, regardez juste le code des formats/liens sur les pages existantes.
 
 ### Taille des images
 
@@ -128,14 +128,14 @@ Si vous utilisez des images, veuillez utiliser des tailles raisonnables. Les ima
 
 ### Liens internes
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
+Si vous voulez définir un lien interne dans la documentation AndroidAPS, n'utilisez que **liens relatifs**. C'est la seule façon d'avoir un lien qui marche également dans toutes les autres langues (Chèque, Allemand...).
 
-#### In files with **.md** ending:
+#### Dans les fichiers se terminant par **.md** :
 
-* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
-* To set the link to an **anchor** (i.e. a headline) you have to omit the file extension 
-  * `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+* `[texte](../Usage/Test.md)` va définir un lien hypertexte interne un répertoire au dessus de celui où vous êtes puis dans le sous-répertoire /Usage. La fin du fichier cible doit être .md ou .rst (pas .html)
+* `[texte](./Usage/Test.md)` va définir un lien hypertexte de là où vous êtes dans le sous-répertoire /Usage. La fin du fichier cible doit être .md ou .rst (pas .html)
+* Pour définir un lien vers une **ancre** (par ex. un titre) vous devez omettre l'extension du fichier 
+  * `[texte](../Usage/Test#ancre)` au lieu de `[texte](../Usage/Test.md#ancre)`
 
 #### Dans les fichiers se terminant par **.rst** :
 
@@ -152,9 +152,9 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 Si vous prévoyez de faire beaucoup de modifications, y compris d'ajouter des images pour illustrer certaines parties de la documentation (merci !), vous pouvez adopter l'approche suivante :
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
-* Please use reasonable sizes. Les images de capture d'écran doivent être de **250 pixels de largeur**.
-* You can upload images in batches easily by:
+* Au fur et à mesure que vous enregistrez des captures d'écran, renommez les avec un nom descriptif, mais n'utilisez pas d'espaces car Github n'aime pas cela. Utilisez à la place des underscores. Par ex. Exemple_lots_images_upload.png au lieu de "Exemple lots images upload.png". 
+* Veuillez utiliser des tailles raisonnables. Les images de capture d'écran doivent être de **250 pixels de largeur**.
+* Vous pouvez télécharger des images par lots facilement en :
   
   1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
   
