@@ -39,15 +39,15 @@ Pour notre exemple, nous allons faire une modification à AndroidAPSdocs. Cela n
 
 ![Edit branch](./images/PR3.png)
 
-4. Vous avez travaillé dans l'onglet "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Vous avez travaillé dans l'onglet "<>Edit file". Sélectionnez l'onglet "Preview changes" pour afficher une prévisualisation de votre page et vérifier que tous vos changements sont comme vous le vouliez. Si vous voyez que c'est perfectible, revenez à l'onglet d'édition pour faire vos améliorations. 
 
 ![preview mode](./images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Une fois vos modifications terminées, faites défiler jusqu'au bas de la page. Dans la zone du bas, indiquez vos commentaires dans le champ texte qui indique "Add an optional extended description...". Le titre par défaut est le nom de fichier. Essayez d'inclure une phrase expliquant la **raison** du la modification. Indiquer la raison permet d'aider les valideurs à comprendre ce que vous essayez de faire avec le PR.
 
 ![commit comments](./images/PR4.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Cliquez sur le bouton vert "Propose file changes" ou "Commit changes". Dans la page qui s'affiche, cliquez sur "Create Pull Request" et de nouveau dans la page suivante, cliquez sur "Create Pull Request".
 
 ![create pull request](./images/PR6.png)
 
@@ -137,20 +137,20 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 * To set the link to an **anchor** (i.e. a headline) you have to omit the file extension 
   * `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
 
-#### In files with **.rst** ending:
+#### Dans les fichiers se terminant par **.rst** :
 
-* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html.
+* `` `Texte <../Usage/Test.hmtl>`_ `` va définir un lien hypertexte un répertoire au dessus de celui où vous êtes puis dans le sous-répertoire /Usage. L'extension du fichier cible doit être .html.
   
-  Except you are in a toctree. Then you have to write it like this: `Text <../Usage/Test.md>` with .md or .rst (not .html).
+  Sauf si vous êtes dans un toctree. Dans ce cas vous devez l'écrire comme ceci : `Texte <../Usage/Test.md>` avec .md ou .rst (pas .html).
 
-* `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
+* `Texte <./Usage/Test.md>` va définir un lien hypertexte de là où vous êtes dans le dossier /Usage.
 
-* To set the link to an **anchor** (i.e. a headline) you have to add the anchor to the link 
-  * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test#anchor)`
+* Pour définir un lien vers une **ancre** (par ex. un titre) vous devez ajouter l'ancre au lien 
+  * `[texte](../Usage/Test.html#ancre)` au lieu de `[texte](../Usage/Test#ancre)`
 
-## Adding multiple images to documentation
+## Ajout de plusieurs images à la documentation
 
-If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
+Si vous prévoyez de faire beaucoup de modifications, y compris d'ajouter des images pour illustrer certaines parties de la documentation (merci !), vous pouvez adopter l'approche suivante :
 
 * As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
 * Please use reasonable sizes. Les images de capture d'écran doivent être de **250 pixels de largeur**.
@@ -170,7 +170,7 @@ If you are planning to make a lot of edits, including adding images to help illu
     
     * Pour les pages .md : `![Exemple de téléchargement d'images par lots](../images/Example_batch_images_upload.png)` (Ce code est exactement la façon dont l'image ci-dessous est intégrée pour être affichée.)
     * Pour les pages .rst : `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Example of uploading images in batches`
+      `:alt: Exemple de téléchargement d'images par lots`
 
 ![Example of uploading images in batches](./images/Example_batch_images_upload.png)
 
