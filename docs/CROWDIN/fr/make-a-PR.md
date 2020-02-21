@@ -143,7 +143,7 @@ If you want to set an internal link within the AndroidAPS documentation, please 
   
   Sauf si vous êtes dans un toctree. Dans ce cas vous devez l'écrire comme ceci : `Texte <../Usage/Test.md>` avec .md ou .rst (pas .html).
 
-* `Texte <./Usage/Test.md>` va définir un lien hypertexte de là où vous êtes dans le dossier /Usage.
+* `Texte <./Usage/Test.md>` va définir un lien hypertexte de là où vous êtes dans le sous-répertoire /Usage.
 
 * Pour définir un lien vers une **ancre** (par ex. un titre) vous devez ajouter l'ancre au lien 
   * `[texte](../Usage/Test.html#ancre)` au lieu de `[texte](../Usage/Test#ancre)`
