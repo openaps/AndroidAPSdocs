@@ -46,18 +46,18 @@ Téléchargez le script Automate <https://llamalab.com/automate/community/flows/
 
 Éditez le script en appuyant sur le crayon > Script
 
-![Automate sling](../images/automate-app3.png)
+![Script Automate](../images/automate-app3.png)
 
 Personnaliser le script en fonction de vos souhaits comme ceci :
 
-![Automate sling](../images/automate-app6.png)
+![Script Automate](../images/automate-app6.png)
 
 1. = Définir CT élevée
 2. = Revenir à la cible normale 20 minutes après la fin de l'activité
 
-1 ![Automate sling](../images/automate-app1.png)
+1 ![Script Automate](../images/automate-app1.png)
 
-2 ![Automate sling](../images/automate-app5.png)
+2 ![Script Automate](../images/automate-app5.png)
 
 URL de la requête : Votre URL-NS se terminant par /api/v1/treatments.json (par ex. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
@@ -67,7 +67,7 @@ Contenu de la requête :
 * duration: La durée de la CT haute (Après cette durée, il reviendra à la cible du profil standard sauf si l'activité se poursuit). 
 * secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
 
-Save: Tap on 'Done' and on the hook
+Sauvegarde : Appuyez sur 'Save' après chaque modification de bloc puis sur le flèche de retour arrière
 
 Démarrer le script : Cliquez sur le bouton Start
 
@@ -95,32 +95,32 @@ Ensuite, téléchargez le script d'automatisation <https://llamalab.com/automate
 
 Éditez le script en appuyant sur le crayon > Script
 
-![Automate sling](../images/automate-app3.png)
+![Script Automate](../images/automate-app3.png)
 
 Personnaliser le script en fonction de vos souhaits comme ceci :
 
 Dans le déclencheur 'Notification posted?', vous devez mettre dans 'Title' le nom de l'alerte xDrip+ qui doit déclencher le script et ajouter un caractère * avant et après ce nom.
 
-![Automate sling](../images/automate-app7.png)
+![Script Automate](../images/automate-app7.png)
 
-![Automate sling](../images/automate-app4.png)
+![Script Automate](../images/automate-app4.png)
 
 URL de la requête : Votre URL-NS se terminant par /api/v1/treatments.json (par ex. https://my-cgm.herokuapp.com/api/v1/treatments.json)
 
 Contenu de la requête :
 
-* targetTop / targetBottom: The low TT value (top and bottom should be the same value)
-* duration: The duration of the low TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
+* targetTop / targetBottom : la valeur de la CT faible (les 2 doivent avoir la même valeur)
+* duration : la durée de votre CT faible (après cette durée AAPS reviendra à la cible standard de votre profil). Il est recommandé de mettre la même valeur que 'Snooze par défaut' de l'alerte xDrip+
 * secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
 
-Save: Tap on 'Done' and on the hook
+Sauvegarde : Appuyez sur 'Save' après chaque modification de bloc puis sur le flèche de retour arrière
 
 Démarrer le script : Cliquez sur le bouton Start
 
-#### Example 3: To be added by you!!!
+#### Exemple 3: À vous de l'ajouter !!!
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSdocs repository](../make-a-PR.md).
+Veuillez ajouter d'autres scripts en remontant vos fichiers .flo file dans la communauté Automate (sous le mot clé 'Nightscout') et décrivez les ici en faisant un [Pull Request sur le répertoire AndroidAPSdocs](../make-a-PR.md).
 
-## If this, then that (IFTTT)
+## IF This, Then That (IFTTT)
 
-Feel free to add a Howto by PR...
+N'hésitez pas à ajouter une aide sur comment faire avec un PR...
