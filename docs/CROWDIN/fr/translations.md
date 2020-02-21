@@ -2,7 +2,7 @@
 
 * Allez à <https://translations.androidaps.org> ou <https://wikitranslations.androidaps.org> et connectez-vous à l'aide de votre compte Github
 
-* Send a join request to the docs team. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Veuillez renseigner la langue, donner quelques informations sur vous et votre expérience AAPS et si vous voulez être un traducteur ou un correcteur (seulement les personnes qualifiées pour traduire + les utilisateurs avancés d'AndroidAPS).
+* Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Veuillez renseigner la langue, donner quelques informations sur vous et votre expérience AAPS et si vous voulez être un traducteur ou un correcteur (seulement les personnes qualifiées pour traduire + les utilisateurs avancés d'AndroidAPS).
 
 * Lorsque nous vous approuvons, cliquez sur le drapeau ![Lorsque nous vous approuvons, cliquez sur le drapeau](./images/translation_flags2019.png)
 
@@ -28,7 +28,7 @@ Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine
 
 ## Traduire les pages wiki
 
-* Click the name of the docs page you want to translate
+* Cliquez sur le nom de la page que vous voulez traduire
     
     ![Click docs page](./images/translation_WikiPage.png)
 
@@ -40,27 +40,27 @@ Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine
     
     3 Modifiez la proposition ou écrivez vous-même la traduction.
     
-    4 Click save
+    4 Cliquez sur SAVE
     
     ![Translation docs](./images/translation_WikiTranslate.png)
 
-* A translated page will not be published in docs before the translation is proofread.
+* Une page traduite ne sera pas publiée dans la documentation avant la validation de la traduction (proofread).
 
-### Translate headline links
+### Traduire les liens de titre
 
-* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
-* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
-* If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
+* Lorsqu'un lien interne ne mène qu'à une page (par ex. ../Usage/Profiles.html), aucune traduction n'est nécessaire.
+* Les liens internes vers un titre spécifique (par ex. ..//Usage/Profiles.html#percentage) doivent être traduits car le titre de l'autre langue est différent de l'original anglais.
+* Si vous traduisez un titre, vous pouvez le transformer en lien d'ancrage (partie après # - par ex. #percentage) en transformant toutes les lettres en minuscules, en transformant les caractères spéciaux en caractères standard, en remplaçant les espaces par - (signe moins) et en ignorant les signes de ponctuation.
     
-    Here are some examples:
+    Voici quelques exemples :
     
-    * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
+    * Qu’est ce qu’un Système de boucle fermée ? \---> #qu-est-ce-qu-un-systeme-de-boucle-fermee
     * Docs Updates & Änderungen \---> #docs-updates-anderungen
     * AAPS-.apk Datei \---> #aaps-apk-datei
 
 * Check your link if it is working as intended. If it is linking to a new translated headline you may have to wait until next build to be able to check correct link syntax. In this case do not forget to make a reminder in your calendar / todo app.
 
-#### Link translation in Markdown files (.md)
+#### Traduction des liens dans les fichiers Markdown (.md)
 
 At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
 
