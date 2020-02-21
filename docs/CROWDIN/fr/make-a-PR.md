@@ -156,17 +156,17 @@ Si vous prévoyez de faire beaucoup de modifications, y compris d'ajouter des im
 * Veuillez utiliser des tailles raisonnables. Les images de capture d'écran doivent être de **250 pixels de largeur**.
 * Vous pouvez télécharger des images par lots facilement en :
   
-  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
+  1. Naviguez jusqu'au dossier images (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - mais vérifiez que vous êtes bien dans votre fork/copie du dossier Images de la documentation pour pouvoir faire ceci (remplacez "openaps" dans l'URL par votre nom d'utilisateur github)).
   
-  2. Click in the upper right corner where it says "Upload files"
+  2. Cliquez dans le coin supérieur droit là ou c'est écrit "Upload files"
   
-  3. Drag and drop your images into the screen
+  3. Glissez et déposez vos images dans la fenêtre
   
-  4. Commit these to your branch
+  4. Faitez un Commit de cela dans votre branche
   
-  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
+  5. Vous pouvez maintenant rechercher le chemin d'accès URL/relatif de chaque fichier et l'utiliser en référence pour ajouter les images dans une page de la documentation.
   
-  6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
+  6. Pour voir des exemples sur la façon d'ajouter des images, vous pouvez regarder le code "brut" d'une page qui contient déjà des images intégrées avec succès. Assurez-vous d'utiliser le [code correct](./make-a-PR#syntaxe-du-code) pour la page sur laquelle vous êtes (.md or .rst). L'essentiel est d'avoir une description en texte clair, suivie d'un lien avec un chemin relatif vers l'image, comme ceci :
     
     * Pour les pages .md : `![Exemple de téléchargement d'images par lots](../images/Example_batch_images_upload.png)` (Ce code est exactement la façon dont l'image ci-dessous est intégrée pour être affichée.)
     * Pour les pages .rst : `.. image:: ../images/Example_batch_images_upload.png`  
