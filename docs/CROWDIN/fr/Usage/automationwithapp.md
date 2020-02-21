@@ -71,9 +71,9 @@ Save: Tap on 'Done' and on the hook
 
 Démarrer le script : Cliquez sur le bouton Start
 
-#### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... minutes.
+#### Exemple 2 : Si xDrip+ envoie une alerte glycémie haute, alors définir une CT basse pendant xxx minutes.
 
-This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
+Ce script va écouter le canal de notification xDrip+. Si une alerte glycémie haute spécifiée par l'utilisateur est déclenchée, alors Automate définira une cible temp basse ayant un niveau et une durée spécifiée par l'utilisateur. Après un certain temps, une autre alerte prolongera si nécessaire la durée de la CT faible.
 
 ##### xDrip+
 
@@ -93,7 +93,7 @@ Default Snooze: Insert the duration you are planning to set for your low TT here
 
 Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
 
-Éditez le script en appuyant sur le crayon > Script
+Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Automate sling](../images/automate-app3.png)
 
