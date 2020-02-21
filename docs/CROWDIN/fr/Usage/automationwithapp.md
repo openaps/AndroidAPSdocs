@@ -77,29 +77,29 @@ Ce script va écouter le canal de notification xDrip+. Si une alerte glycémie h
 
 ##### xDrip+
 
-First, you must add a BG high alert in xDrip+ as follows:
+Vous devez d'abord ajouter une alerte haute dans xDrip + comme ceci :
 
 ![Réglages d'alerte xDrip+](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
+Nom de l'alerte : (Faire attention à lui !) Ce nom est essentiel pour déclencher le script. Il doit être clair et ne pas être similaire à tous les autres noms d'alertes. Par exemple : '180alarm' ne doit pas exister à côté d'une alerte '80alarm'.
 
-Threshold: BG value that should fire the high alert.
+Seuil : valeur GLY qui doit déclencher l'alerte élevé.
 
-Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
+Snooze par défaut : renseignez la durée souhaitée de votre CT ici, comme cela si après cette durée l'alerte revient à nouveau, cela prolongera peut-être la durée du CT faible.
 
 ![Réglages d'alerte xDrip+](../images/automate-xdrip2.png)
 
 ##### Automate
 
-Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
+Ensuite, téléchargez le script d'automatisation <https://llamalab.com/automate/community/flows/27809>.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Éditez le script en appuyant sur le crayon > Script
 
 ![Automate sling](../images/automate-app3.png)
 
 Personnaliser le script en fonction de vos souhaits comme ceci :
 
-Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
+Dans le déclencheur 'Notification posted?', vous devez définir 'TITLE' avec le nom de l'alerte xDrip+ qui doit déclencher le script et ajouter un * avant et après ce nom.
 
 ![Automate sling](../images/automate-app7.png)
 
