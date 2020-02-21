@@ -99,7 +99,7 @@ Ensuite, téléchargez le script d'automatisation <https://llamalab.com/automate
 
 Personnaliser le script en fonction de vos souhaits comme ceci :
 
-Dans le déclencheur 'Notification posted?', vous devez définir 'TITLE' avec le nom de l'alerte xDrip+ qui doit déclencher le script et ajouter un * avant et après ce nom.
+Dans le déclencheur 'Notification posted?', vous devez mettre dans 'Title' le nom de l'alerte xDrip+ qui doit déclencher le script et ajouter un caractère * avant et après ce nom.
 
 ![Automate sling](../images/automate-app7.png)
 
