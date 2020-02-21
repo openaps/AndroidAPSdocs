@@ -189,9 +189,9 @@ Valeur par défaut : 3 (ne doit pas être modifié sauf si vous en avez vraiment
 
 Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment besoin et que vous savez ce que vous faites)
 
-**Snooze bolus Diviseur de DAI** La fonction “Snooze bolus” marche après un bolus repas. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Snooze bolus Diviseur de DAI** La fonction “Snooze bolus” marche après un bolus repas. AAPS ne définit pas de débits de base temporaires bas après un repas pendant une durée égale à la DAI divisée par le paramètre « bolus snooze ». La valeur par défaut est 2. Cela signifie qu'avec un DAI de 5h, le "bolus snooze" serait d'une durée de 5h/2 = 2,5h.
 
-Default value: 2
+Valeur par défaut : 2
 
 * * *
 
@@ -225,6 +225,6 @@ La valeur par défaut est 2, mais vous pouvez augmenter ce paramètre lentement 
 
 **Utiliser delta basé sur moyenne courte** Si vous activez cette fonction, AndroidAPS utilise une moyenne courte des variations de glycémie sur les 15 dernières minutes, ce qui correspond généralement à la moyenne des trois dernières valeurs. Cela aide AndroidAPS à travailler plus régulièrement avec des sources de données bruyantes comme xDrip+ et Libre.
 
-**Snooze bolus Diviseur de DAI** La fonction “Snooze bolus” marche après un bolus repas. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2.That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Snooze bolus Diviseur de DAI** La fonction “Snooze bolus” marche après un bolus repas. AAPS ne définit pas de débits de base temporaires bas après un repas pendant une durée égale à la DAI divisée par le paramètre « bolus snooze ». La valeur par défaut est 2. Cela signifie qu'avec un DAI de 5h, le "bolus snooze" serait d'une durée de 5h/2 = 2,5h.
 
-Default value: 2
+Valeur par défaut : 2
