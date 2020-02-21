@@ -86,11 +86,11 @@ Links will then be shown in standard HTML format and can be translated consideri
 
 ## Proofreading
 
-* Les relecteurs doivent passer au mode Proofreading
+* Proofreaders have to switch to Proofreading mode
     
     ![Proofreading mode docs](./images/translation_WikiProofreading.png)
     
-    et approuver les textes traduits
+    and approve translated texts
     
     ![approuver le texte](./images/translations-proofreading.png)
 
