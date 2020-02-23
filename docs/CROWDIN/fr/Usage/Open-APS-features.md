@@ -20,7 +20,7 @@ La fonctionnalité SMB contient des mécanismes de sécurité:
 
 1. La plus grande dose de SMB ne peut être que la plus petite valeur entre :
     
-    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
+    * la valeur correspondant au débit de base actuel (ajusté par autosens) pour la durée définie dans "Max minutes de base pour limiter le SMB", par ex. la quantité de basale pour les 30 prochaines minutes, ou
     * la moitié de la quantité d'insuline actuellement requise, ou
     * la partie restante de votre maxIA renseignée dans les paramètres.
 
