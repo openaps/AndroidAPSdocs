@@ -201,11 +201,11 @@ AndroidAPS обеспечивает следующие усложнения:
   * * eCarb *: диалоговое окно конфигурации eCarb
   * * Состояние *: подменю состояния
   * * Отсутствует *: Отключает действие по шлепку для усложнений AAPS
-* **Unicode в усложнениях** (по умолчанию - `Вкл`): в положении `Вкл`, будут использоваться символы Unicode для таких величин как `Δ` суммарное изменение `⁞` вертикальный точечный разделитель или `⎍` символ базальной скорости. Отрисовка их зависит от шрифта, который специфичен для каждого циферблата. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+* **Unicode в усложнениях** (по умолчанию - `Вкл`): в положении `Вкл`, будут использоваться символы Unicode для таких величин как `Δ` суммарное изменение `⁞` вертикальный точечный разделитель или `⎍` символ базальной скорости. Отрисовка их зависит от шрифта, который специфичен для каждого циферблата. Эта опция позволяет при необходимости отключать символы Unicode (` Выкл `)- если шрифт, используемый циферблатом, их не поддерживает-чтобы избежать ошибок графики.
 
-## Performance and battery life tips
+## Советы по производительности и автономности батареи
 
-Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+Часы на операционной системе Wear OS очень ограничены в расходе батареи. Размер их корпуса ограничивает емкость встроенной батареи. Даже с последними достижениями в аппаратном и программном обеспечении часов Wear OS по-прежнему требуется ежедневная подзарядка.
 
 If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
 
