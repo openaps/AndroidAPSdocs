@@ -20,7 +20,7 @@ De SMB-functie heeft een aantal veiligheidsmaatregelen:
 
 1. De kleinste waarde van onderstaande opties is de maximale dosis die een SMB mag geven:
     
-    * waarde die hoort bij jouw huidige basaalstand (eventueel aangepast door autotune/autosens) voor de instelling "Maximum aantal minuten basaal om de SMB te limiteren tot", bijvoorbeeld de hoeveelheid basale insuline die je de komende 30 minuten zou krijgen, of
+    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
     * de helft van de insuline die je op dat moment nodig hebt, of
     * de overgebleven hoeveelheid van jouw maxIOB waarde in de instellingen.
 
@@ -181,11 +181,11 @@ Als je deze optie ingeschakeld hebt dan kan autosense ook jouw tijdelijke streef
 
 **Gebruik altijd korte gemiddeld verschil ipv gewone verschil** Wanneer je deze functie inschakelt, dan gebruikt AndroidAPS het korte gemiddelde (= gemiddelde vd afgelopen 15 minuten), wat meestal het gemiddelde is van de afgelopen drie waardes. Dit helpt AndroidAPS om stabieler te werken met bloedglucose bronnen met veel ruis, zoals xDrip+ en Libre.
 
-**Maximale dagelijkse veiligheids vermenigvuldigings factor** Dit is een belangrijke veiligheids-limiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat AndroidAPS nooit wordt toegestaan om een tijdelijke basaalstand in te stellen die groter is dan 3 x de hoogste basaalstand per uur, eventueel aangepast door autotune. Voorbeeld: als jouw hoogste basaalstand op een dag 1,0 E/uur is, en jouw maximale dagelijkse veiligheids vermenigvuldigingsfactor is 3, dan kan AndroidAPS maximaal een tijdelijke basaalstand geven van 3,0 E/uur (= 3 x 1,0 E/uur).
+**Maximale dagelijkse veiligheids vermenigvuldigings factor** Dit is een belangrijke veiligheids-limiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat AndroidAPS nooit wordt toegestaan om een tijdelijke basaalstand in te stellen die groter is dan 3 x de huidige basaalstand per uur. Voorbeeld: als jouw hoogste basaalstand op een dag 1,0 E/uur is, en jouw maximale dagelijkse veiligheids vermenigvuldigingsfactor is 3, dan kan AndroidAPS maximaal een tijdelijke basaalstand geven van 3,0 E/uur (= 3 x 1,0 E/uur).
 
 Standaardwaarde: 3 (mag niet worden gewijzigd, tenzij je het echt wilt en weet wat je doet)
 
-**Huidige basaalstand veiligheids vermenigvuldigings factor** Dit is ook een belangrijke veiligheids-limiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 4. Dit betekent dat AndroidAPS nooit wordt toegestaan om een tijdelijke basaalstand in te stellen die groter is dan 4 x de huidige basaalstand per uur, eventueel aangepast door autotune.
+**Huidige basaalstand veiligheids vermenigvuldigings factor** Dit is ook een belangrijke veiligheids-limiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 4. Dit betekent dat AndroidAPS nooit wordt toegestaan om een tijdelijke basaalstand in te stellen die groter is dan 4 x de huidige basaalstand per uur.
 
 Standaardwaarde: 4 (mag niet worden gewijzigd, tenzij je het echt wilt en weet wat je doet)
 
