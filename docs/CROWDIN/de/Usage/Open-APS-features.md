@@ -20,7 +20,7 @@ Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen:
 
 1. Die größte einzelne SMB-Dosis kann nur der kleinste Wert sein aus:
     
-    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
+    * Wert, der der aktuellen Basalrate (wie sie autosens angepasst haben) für die unter “SMB-Basal-Limit in Minuten” voreingestellte Dauer entspricht, z.B. Basalmenge der kommenden 30 Minuten, oder
     * die Hälfte der aktuell benötigten Insulinmenge oder
     * der verbleibende Anteil deines maxIOB-Wertes in den Einstellungen.
 
