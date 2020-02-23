@@ -1,8 +1,8 @@
 # Настройки xDrip+
 
-If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+Если это еще не сделано, скачайте [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+** Эта документация относится только к xDrip + для Android. ** Существует приложение "xDrip for iOS", которое не имеет ничего общего с исходным xDrip + для Android.
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
 
