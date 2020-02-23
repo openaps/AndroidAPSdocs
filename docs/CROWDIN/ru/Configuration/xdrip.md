@@ -4,11 +4,11 @@
 
 ** Эта документация относится только к xDrip + для Android. ** Существует приложение "xDrip for iOS", которое не имеет ничего общего с исходным xDrip + для Android.
 
-Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
+Для трансмиттеров G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81) пользуйтесь версией [ master ](https://jamorham.github.io/#xdrip-plus).
 
-Если серийный номер трансмиттера Dexcom G6 is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Если серийный номер трансмиттера Dexcom G6 начинается с 8G..., 8Н... или 8J... используйте одну из новейших [ночных сборок](https://github.com/NightscoutFoundation/xDrip/releases).
 
-If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Если в вашем телефоне работает Android 10 и у вас возникли трудности с xDrip + master попробуйте [ nightly build 2019/12/31 или новее ](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Основные настройки для всех систем мониторинга
 
