@@ -20,7 +20,7 @@ La fonctionnalité SMB contient des mécanismes de sécurité:
 
 1. La plus grande dose de SMB ne peut être que la plus petite valeur entre :
     
-    * la valeur correspondant au débit de base actuel (ajusté par autotune / autosens) pour la durée définie dans "Max minutes de base pour limiter le SMB", par ex. la quantité de basale pour les 30 prochaines minutes, ou
+    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
     * la moitié de la quantité d'insuline actuellement requise, ou
     * la partie restante de votre maxIA renseignée dans les paramètres.
 
@@ -185,7 +185,7 @@ Si cette option est activée, autosens peut également ajuster les cibles (à c�
 
 Valeur par défaut : 3 (ne doit pas être modifié sauf si vous en avez vraiment besoin et que vous savez ce que vous faites)
 
-**Multiplicateur de sécurité basale courante** C'est une autre limite de sécurité importante. Le paramètre par défaut (qui n'a normalement pas besoin d'être ajusté) est 4. Cela signifie qu'AndroidAPS ne sera jamais autorisé à fixer un débit de basal temporaire supérieur à 4 x le débit de base horaire le plus élevé programmé dans la pompe de l'utilisateur.
+**Multiplicateur de sécurité basale courante** C'est une autre limite de sécurité importante. Le paramètre par défaut (qui n'a normalement pas besoin d'être ajusté) est 4. Cela signifie qu'AndroidAPS ne sera jamais autorisé à fixer un débit de basal temporaire supérieur à 4 x le débit de base courant programmé dans la pompe de l'utilisateur.
 
 Valeur par défaut : 4 (ne doit pas être modifié sauf si vous en avez vraiment besoin et que vous savez ce que vous faites)
 
