@@ -20,7 +20,7 @@ SMB zahrnuje určité bezpečnostní mechanismy:
 
 1. Největší jednotlivý mikrobolus může být pouze nejmenší hodnota z:
     
-    * hodnota aktuálního bazálního inzulínu (upravená pomocí autotune a/nebo automatické detekce citlivosti) pro dobu přednastavenou ve volbě „Maximální počet minut bazálu, ke kterým se limituje SMB“, např. bazální dávka inzulínu pro následujících 30 minut, nebo
+    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
     * polovina aktuálně požadované dávky inzulínu, nebo
     * zbývající část nastavené hodnoty maxIOB.
 
@@ -181,11 +181,11 @@ Pokud máte tuto možnost povolenou, může autosense upravovat i dočasné cíl
 
 **Vždy používat krátkodobý průměrný rozdíl glykémií místo rozdílu posledních 2 hodnot** Jestliže povolíte tuto funkci, AndroidAPS bude používat krátkodobý průměrný rozdíl (delta) glykémií za posledních 15 minut, což je obvykle průměr z posledních tří hodnot. AndroidAPS tak bude moci pracovat stabilněji při použití zarušených zdrojů glykémie, jako např. xDrip+ nebo Libre.
 
-**Max. násobitel denního nejvyššího bazálu** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 3x nejvyšší bazální dávka ve vašem profilu naprogramovaném v pumpě nebo, je-li tato možnost povolena, která je určena pomocí autotune. Příklad: jestliže vaše nejvyšší bazální dávka v profilu je 1,0 U/h a max. násobitel denního nejvyššího bazálu je 3, pak může AndroidAPS nastavit maximální dočasný bazál 3,0 U/h (= 3 x 1,0 U/h).
+**Max. násobitel denního nejvyššího bazálu** Toto je důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně nebude potřeba upravovat) je 3. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 3x nejvyšší bazální dávka ve vašem profilu naprogramovaném v pumpě. Příklad: jestliže vaše nejvyšší bazální dávka v profilu je 1,0 U/h a max. násobitel denního nejvyššího bazálu je 3, pak může AndroidAPS nastavit maximální dočasný bazál 3,0 U/h (= 3 x 1,0 U/h).
 
 Výchozí hodnota: 3 (neměňte, pokud si opravdu nejste jisti tím, co děláte)
 
-**Max. násobitel současného bazálu** Toto je další důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně také nebude potřeba upravovat) je 4. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 4x aktuální bazální dávka ve vašem profilu naprogramovaném v pumpě nebo, je-li tato možnost povolena, která je určena pomocí autotune.
+**Max. násobitel současného bazálu** Toto je další důležité bezpečnostní omezení. Výchozí nastavení (které pravděpodobně také nebude potřeba upravovat) je 4. To znamená, že AndroidAPS nikdy nebude moci nastavit dočasnou bazální dávku, která je vyšší než 4x aktuální bazální dávka ve vašem profilu naprogramovaném v pumpě.
 
 Výchozí hodnota: 4 (neměňte, pokud si opravdu nejste jisti tím, co děláte)
 
